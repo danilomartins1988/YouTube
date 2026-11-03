@@ -1,0 +1,230 @@
+# Research dossier: How Dubai Really Makes Money
+
+Generated 2026-11-03T13:59:03+00:00.
+
+## Claims
+
+| ID | Claim | Status | Sources |
+|---|---|---|---|
+| `non_oil_share` | The Government of Dubai states that over 95% of Dubai's GDP is non-oil based. | **source_located** | dubai_ae_economy |
+| `pop_dubai_2025` | Dubai's population was about 4.58 million at the end of 2025 (DDSE estimate, revised methodology). | **source_located** | wam_population_2025 |
+| `dxb_pax_2025` | Dubai International Airport (DXB) handled 95.2 million passengers in 2025. | **source_located** | dmo_dxb_2025 |
+| `dxb_intl_rank_2025` | In ACI World's preliminary 2025 ranking, DXB was the world's busiest airport for international passengers. | **source_located** | aci_2025 |
+| `uae_seven` | The United Arab Emirates is a federation of seven emirates, of which Dubai is one; Abu Dhabi is the federal capital. | **source_located** | uae_constitution |
+| `art23_resources` | Under Article 23 of the UAE Constitution, the natural resources and wealth in each emirate are the public property of that emirate. | **source_located** | uae_constitution |
+| `reserves_split` | Abu Dhabi holds about 94% of the UAE's oil reserves and Dubai about 4% (US ITA citing the 2019 UAE State of Energy Report). | **source_located** | trade_gov_uae_energy |
+| `pearl_collapse` | The Gulf pearling industry declined after Japan developed cultured pearls from 1916 onward, compounded by the 1929 financial crash, from which it never fully recovered. | **source_located** | qdl_pearls |
+| `lingah_shift` | According to Lorimer's Gazetteer, Dubai grew rapidly after 1902, helped by the decline of Lingeh, and became the chief commercial emporium of the Trucial Coast. | **source_located** | qdl_lorimer |
+| `creek_dredging` | Dubai Creek was dredged from 1959, financed largely by a loan from Kuwait together with local 'creek bonds'. | **source_located** | gulfnews_creek |
+| `oil_discovery` | Oil was discovered offshore Dubai at the Fateh field in 1966. | **source_located** | gulfnews_oil |
+| `oil_first_export` | Dubai's first oil export shipment left in 1969. | **source_located** | gulfnews_oil |
+| `oil_peak` | Dubai's oil production peaked in 1991 and has declined since. | **source_located** | gulfnews_oil |
+| `jebel_ali_opened` | Jebel Ali Port was formally opened on 26 February 1979. | **source_located** | gulfnews_jebelali |
+| `jafza_firms` | Jebel Ali Free Zone (Jafza), established in 1985, started with 19 companies and now hosts over 11,000 businesses from 157 countries. | **source_located** | dmo_jafza_2025 |
+| `jafza_trade_2024` | Jafza recorded AED 713 billion in non-oil trade in 2024. | **source_located** | dmo_jafza_2025 |
+| `jafza_port_gdp` | According to the Dubai Media Office, Jafza and Jebel Ali Port together account for 36% of Dubai's GDP. | **source_located** | dmo_jafza_2025 |
+| `jebel_ali_teu_2025` | Jebel Ali handled about 15.55 million TEU in 2025 and was ranked ninth among world container ports by Lloyd's List. | **source_located** | lloyds_list_dubai, dmo_dpworld_2025 |
+| `dpworld_revenue_2025` | DP World reported revenue of $24.4 billion and gross throughput of 93.4 million TEU across its global portfolio in 2025. | **source_located** | dmo_dpworld_2025 |
+| `dpworld_owner` | In 2020 Port and Free Zone World, a wholly-owned subsidiary of the Dubai government's Dubai World, moved to buy out DP World's minority shareholders and delist it. | **source_located** | dmo_dpworld_delist |
+| `emirates_launch` | Emirates was launched in 1985 with about $10 million of start-up capital and two aircraft leased from Pakistan International Airlines. | **source_located** | gulfnews_emirates_launch |
+| `emirates_fy26` | In the year to 31 March 2026 the Emirates Group reported revenue of AED 150.5 billion and profit after tax of AED 21.0 billion, and paid a AED 3.5 billion dividend to its owner, the Investment Corporation of Dubai. | **source_located** | dmo_emirates_2026 |
+| `emirates_pax_fy26` | Emirates carried 53.2 million passengers in 2025-26, down 1%. | **source_located** | dmo_emirates_2026 |
+| `reach_claim` | Dubai's government says one-third of the world's population lives within four hours' flight of Dubai, and two-thirds within eight hours. | **source_located** | invest_dubai_hub |
+| `dwc_plan` | In April 2024 Dubai approved a AED 128 billion passenger terminal at Al Maktoum International Airport, with capacity of up to 260 million passengers. | **source_located** | dmo_dwc_2024 |
+| `visitors_2025` | Dubai received 19.59 million international overnight visitors in 2025, up from 18.72 million in 2024 and 16.73 million in 2019. | **source_located** | dmo_tourism_2025, wam_tourism_2019 |
+| `visitors_series` | International overnight visitors to Dubai (millions) - 2019 16.73, 2024 18.72, 2025 19.59. | **source_located** | dmo_tourism_2025, wam_tourism_2019 |
+| `hotel_occupancy_2025` | Average hotel occupancy in Dubai was 80.7% in 2025. | **source_located** | dmo_tourism_2025 |
+| `re_2025` | Dubai real estate recorded over 270,000 transactions worth AED 917 billion in 2025, up from AED 761 billion in 2024. | **source_located** | dmo_realestate_2025, dld_2024 |
+| `re_series` | Dubai real-estate transactions, AED billion - 2024 761, 2025 917. | **source_located** | dmo_realestate_2025, dld_2024 |
+| `imf_prices` | IMF (2025 Article IV) - Dubai prices rose 117.6% for villas and 46.2% for apartments between 2020Q1 and 2025Q2; 83.4% of 2024 residential transactions were non-mortgaged. | **source_located** | imf_cr25327 |
+| `imf_correction_risk` | The IMF warns the real estate sector may be affected by a slowdown or reversal of capital flows or a shift in investor sentiment that could lead to an unexpected price correction. | **source_located** | imf_cr25327 |
+| `imf_gre_info` | The IMF notes that limited information on the financial positions of individual GREs and the absence of aggregate public sector financial statements hinder comprehensive risk assessment. | **source_located** | imf_cr25327 |
+| `emaar_owner` | Since May 2026 Dubai Holding, a government-owned group, is Emaar Properties' largest shareholder with 29.73%, after buying the Investment Corporation of Dubai's 22.27% stake. | **source_located** | dmo_emaar_2026 |
+| `crash_2009` | Dubai property prices fell by about half from their mid-2008 peak by mid-2009 (Colliers International, as reported by Gulf News). | **source_located** | gulfnews_prices_2009 |
+| `standstill_2009` | On 25 November 2009 Dubai asked creditors of Dubai World and its property units for a standstill on about $26 billion of debt. | **source_located** | gulfnews_dubai_world_2009 |
+| `bailout_2009` | On 14 December 2009 Abu Dhabi provided $10 billion to Dubai, part of which repaid a maturing Nakheel Islamic bond. | **source_located** | ibtimes_bailout_2009 |
+| `burj_renamed` | The world's tallest building opened on 4 January 2010 and was renamed from Burj Dubai to Burj Khalifa, after Abu Dhabi's ruler and UAE President Sheikh Khalifa. | **source_located** | csm_burj_2010 |
+| `free_zones` | Dubai has more than 20 free zones (Invest in Dubai). | **source_located** | invest_dubai_hub |
+| `onshore_ownership` | Since 1 June 2021, foreign investors can own 100% of most onshore UAE companies, after the amendment of the Commercial Companies Law (Federal Decree-Law No. 26 of 2020). | **source_located** | wam_ownership_2021 |
+| `difc_courts` | The DIFC, created under Dubai law in 2004, has its own English-language common-law courts. | **source_located** | difc_courts_framework |
+| `difc_2025` | At the end of 2025 the DIFC had 8,844 active companies and a workforce of 50,200, including more than 290 banks and capital-markets firms. | **source_located** | dmo_difc_2025 |
+| `ct_rate` | The UAE corporate tax rate is 9% on taxable income above AED 375,000 (0% below), for financial years starting on or after 1 June 2023. | **source_located** | uae_ct, mof_tax |
+| `qfzp` | A Qualifying Free Zone Person pays 0% corporate tax on qualifying income and 9% on other income, subject to substance and other conditions. | **source_located** | fta_qfzp |
+| `dmtt` | Since financial years starting on or after 1 January 2025, large multinational groups (global revenue of EUR 750 million or more) pay a 15% domestic minimum top-up tax in the UAE. | **source_located** | mof_dmtt |
+| `vat` | VAT was introduced across the UAE on 1 January 2018 at a standard rate of 5%. | **source_located** | mof_tax |
+| `no_pit` | The UAE does not levy personal income tax on individuals' employment income (PwC, reviewed March 2026). | **source_located** | pwc_uae_individual |
+| `sectors_h1_2026` | Shares of Dubai's real GDP, H1 2026 (DDSE, revised series): wholesale and retail trade 20.5%, financial and insurance 14.0%, real estate 11.8%, transport and storage 10.7%. | **source_located** | wam_gdp_h1_2026, national_gdp_h1_2026 |
+| `migrant_share` | Human Rights Watch says migrant workers make up 88% of the UAE's population (2023). | **source_located** | hrw_2023 |
+| `hrw_findings` | HRW reports that the kafala sponsorship system ties migrant workers' visas to their employers, that interviewees paid recruitment fees, and that the UAE relies on a summer midday work ban to manage heat risk, which HRW calls ineffective; it cites 46,819 unpaid-wage cases handled by the labour ministry in 2022. | **source_located** | hrw_2023 |
+| `midday_break` | The UAE bans outdoor work in direct sun from 12:30 to 15:00 between 15 June and 15 September; 2025 was the 21st consecutive year. | **source_located** | mohre_midday_2025 |
+| `gdp_h1_2026` | Dubai's real GDP was AED 473 billion in H1 2026, 2.3% lower than a year earlier, according to DDSE. | **source_located** | wam_gdp_h1_2026, national_gdp_h1_2026 |
+| `war_2026` | Reporting by The National ties the 2026 slowdown to the regional war that began on 28 February 2026, which disrupted travel and trade; Q1 2026 real GDP still grew 2.4%. | **source_located** | national_iran_war_q1, dmo_gdp_q1_2026 |
+| `d33_goal` | The Dubai Economic Agenda D33 (January 2023) aims to double the size of Dubai's economy over the next decade. | **source_located** | dmo_d33 |
+
+## Claims that require verification before publishing
+
+- `non_oil_share` (source_located): The Government of Dubai states that over 95% of Dubai's GDP is non-oil based.  
+  _Note:_ Confirm the exact wording and page on dubai.ae. Do not upgrade to "under 1% oil" without a primary statistical table.
+- `pop_dubai_2025` (source_located): Dubai's population was about 4.58 million at the end of 2025 (DDSE estimate, revised methodology).  
+  _Note:_ DDSE changed method in 2026; the older population clock showed ~4.0m. Confirm the WAM article and wording.
+- `dxb_pax_2025` (source_located): Dubai International Airport (DXB) handled 95.2 million passengers in 2025.  
+  _Note:_ -
+- `dxb_intl_rank_2025` (source_located): In ACI World's preliminary 2025 ranking, DXB was the world's busiest airport for international passengers.  
+  _Note:_ Preliminary ranking, to be confirmed by ACI in July 2026. Check final status.
+- `uae_seven` (source_located): The United Arab Emirates is a federation of seven emirates, of which Dubai is one; Abu Dhabi is the federal capital.  
+  _Note:_ -
+- `art23_resources` (source_located): Under Article 23 of the UAE Constitution, the natural resources and wealth in each emirate are the public property of that emirate.  
+  _Note:_ -
+- `reserves_split` (source_located): Abu Dhabi holds about 94% of the UAE's oil reserves and Dubai about 4% (US ITA citing the 2019 UAE State of Energy Report).  
+  _Note:_ Secondary (US government) citing a 2019 UAE report. Look for a current UAE primary source.
+- `pearl_collapse` (source_located): The Gulf pearling industry declined after Japan developed cultured pearls from 1916 onward, compounded by the 1929 financial crash, from which it never fully recovered.  
+  _Note:_ -
+- `lingah_shift` (source_located): According to Lorimer's Gazetteer, Dubai grew rapidly after 1902, helped by the decline of Lingeh, and became the chief commercial emporium of the Trucial Coast.  
+  _Note:_ Phrase found in a QDL extract volume (IOR/R/15/1/729). Confirm in the Gazetteer's Dibai entry. Do not state the exact duty decree date (sources conflict 1894-1904).
+- `creek_dredging` (source_located): Dubai Creek was dredged from 1959, financed largely by a loan from Kuwait together with local 'creek bonds'.  
+  _Note:_ Loan amount varies across sources (GBP 400k-600k); the script does not state it.
+- `oil_discovery` (source_located): Oil was discovered offshore Dubai at the Fateh field in 1966.  
+  _Note:_ -
+- `oil_first_export` (source_located): Dubai's first oil export shipment left in 1969.  
+  _Note:_ -
+- `oil_peak` (source_located): Dubai's oil production peaked in 1991 and has declined since.  
+  _Note:_ The 410,000 b/d peak figure was not confirmed, so only the year is used.
+- `jebel_ali_opened` (source_located): Jebel Ali Port was formally opened on 26 February 1979.  
+  _Note:_ -
+- `jafza_firms` (source_located): Jebel Ali Free Zone (Jafza), established in 1985, started with 19 companies and now hosts over 11,000 businesses from 157 countries.  
+  _Note:_ -
+- `jafza_trade_2024` (source_located): Jafza recorded AED 713 billion in non-oil trade in 2024.  
+  _Note:_ -
+- `jafza_port_gdp` (source_located): According to the Dubai Media Office, Jafza and Jebel Ali Port together account for 36% of Dubai's GDP.  
+  _Note:_ Government claim (May 2025), likely on the pre-revision GDP series and including indirect effects. Attribute it on screen.
+- `jebel_ali_teu_2025` (source_located): Jebel Ali handled about 15.55 million TEU in 2025 and was ranked ninth among world container ports by Lloyd's List.  
+  _Note:_ -
+- `dpworld_revenue_2025` (source_located): DP World reported revenue of $24.4 billion and gross throughput of 93.4 million TEU across its global portfolio in 2025.  
+  _Note:_ -
+- `dpworld_owner` (source_located): In 2020 Port and Free Zone World, a wholly-owned subsidiary of the Dubai government's Dubai World, moved to buy out DP World's minority shareholders and delist it.  
+  _Note:_ The release announces the offer; confirm completion of the delisting.
+- `emirates_launch` (source_located): Emirates was launched in 1985 with about $10 million of start-up capital and two aircraft leased from Pakistan International Airlines.  
+  _Note:_ Secondary sources only; aircraft types differ between accounts, so types are not named.
+- `emirates_fy26` (source_located): In the year to 31 March 2026 the Emirates Group reported revenue of AED 150.5 billion and profit after tax of AED 21.0 billion, and paid a AED 3.5 billion dividend to its owner, the Investment Corporation of Dubai.  
+  _Note:_ -
+- `emirates_pax_fy26` (source_located): Emirates carried 53.2 million passengers in 2025-26, down 1%.  
+  _Note:_ -
+- `reach_claim` (source_located): Dubai's government says one-third of the world's population lives within four hours' flight of Dubai, and two-thirds within eight hours.  
+  _Note:_ Government marketing claim, not an independent calculation. Always attribute ("Dubai says").
+- `dwc_plan` (source_located): In April 2024 Dubai approved a AED 128 billion passenger terminal at Al Maktoum International Airport, with capacity of up to 260 million passengers.  
+  _Note:_ -
+- `visitors_2025` (source_located): Dubai received 19.59 million international overnight visitors in 2025, up from 18.72 million in 2024 and 16.73 million in 2019.  
+  _Note:_ -
+- `visitors_series` (source_located): International overnight visitors to Dubai (millions) - 2019 16.73, 2024 18.72, 2025 19.59.  
+  _Note:_ -
+- `hotel_occupancy_2025` (source_located): Average hotel occupancy in Dubai was 80.7% in 2025.  
+  _Note:_ -
+- `re_2025` (source_located): Dubai real estate recorded over 270,000 transactions worth AED 917 billion in 2025, up from AED 761 billion in 2024.  
+  _Note:_ AED 917bn covers all transaction types (sales and other deals) per DLD; sales alone were lower. Label as "transactions".
+- `re_series` (source_located): Dubai real-estate transactions, AED billion - 2024 761, 2025 917.  
+  _Note:_ -
+- `imf_prices` (source_located): IMF (2025 Article IV) - Dubai prices rose 117.6% for villas and 46.2% for apartments between 2020Q1 and 2025Q2; 83.4% of 2024 residential transactions were non-mortgaged.  
+  _Note:_ -
+- `imf_correction_risk` (source_located): The IMF warns the real estate sector may be affected by a slowdown or reversal of capital flows or a shift in investor sentiment that could lead to an unexpected price correction.  
+  _Note:_ -
+- `imf_gre_info` (source_located): The IMF notes that limited information on the financial positions of individual GREs and the absence of aggregate public sector financial statements hinder comprehensive risk assessment.  
+  _Note:_ -
+- `emaar_owner` (source_located): Since May 2026 Dubai Holding, a government-owned group, is Emaar Properties' largest shareholder with 29.73%, after buying the Investment Corporation of Dubai's 22.27% stake.  
+  _Note:_ -
+- `crash_2009` (source_located): Dubai property prices fell by about half from their mid-2008 peak by mid-2009 (Colliers International, as reported by Gulf News).  
+  _Note:_ -
+- `standstill_2009` (source_located): On 25 November 2009 Dubai asked creditors of Dubai World and its property units for a standstill on about $26 billion of debt.  
+  _Note:_ -
+- `bailout_2009` (source_located): On 14 December 2009 Abu Dhabi provided $10 billion to Dubai, part of which repaid a maturing Nakheel Islamic bond.  
+  _Note:_ -
+- `burj_renamed` (source_located): The world's tallest building opened on 4 January 2010 and was renamed from Burj Dubai to Burj Khalifa, after Abu Dhabi's ruler and UAE President Sheikh Khalifa.  
+  _Note:_ -
+- `free_zones` (source_located): Dubai has more than 20 free zones (Invest in Dubai).  
+  _Note:_ Commercial sites say 25-30+; government wording "20+". Confirm the page.
+- `onshore_ownership` (source_located): Since 1 June 2021, foreign investors can own 100% of most onshore UAE companies, after the amendment of the Commercial Companies Law (Federal Decree-Law No. 26 of 2020).  
+  _Note:_ -
+- `difc_courts` (source_located): The DIFC, created under Dubai law in 2004, has its own English-language common-law courts.  
+  _Note:_ -
+- `difc_2025` (source_located): At the end of 2025 the DIFC had 8,844 active companies and a workforce of 50,200, including more than 290 banks and capital-markets firms.  
+  _Note:_ -
+- `ct_rate` (source_located): The UAE corporate tax rate is 9% on taxable income above AED 375,000 (0% below), for financial years starting on or after 1 June 2023.  
+  _Note:_ -
+- `qfzp` (source_located): A Qualifying Free Zone Person pays 0% corporate tax on qualifying income and 9% on other income, subject to substance and other conditions.  
+  _Note:_ -
+- `dmtt` (source_located): Since financial years starting on or after 1 January 2025, large multinational groups (global revenue of EUR 750 million or more) pay a 15% domestic minimum top-up tax in the UAE.  
+  _Note:_ -
+- `vat` (source_located): VAT was introduced across the UAE on 1 January 2018 at a standard rate of 5%.  
+  _Note:_ -
+- `no_pit` (source_located): The UAE does not levy personal income tax on individuals' employment income (PwC, reviewed March 2026).  
+  _Note:_ Secondary; find an official UAE statement before publishing.
+- `sectors_h1_2026` (source_located): Shares of Dubai's real GDP, H1 2026 (DDSE, revised series): wholesale and retail trade 20.5%, financial and insurance 14.0%, real estate 11.8%, transport and storage 10.7%.  
+  _Note:_ Read the DDSE table; confirm that shares are of real GDP for H1 2026 on the revised series.
+- `migrant_share` (source_located): Human Rights Watch says migrant workers make up 88% of the UAE's population (2023).  
+  _Note:_ NGO figure for the whole UAE. Always attribute to HRW.
+- `hrw_findings` (source_located): HRW reports that the kafala sponsorship system ties migrant workers' visas to their employers, that interviewees paid recruitment fees, and that the UAE relies on a summer midday work ban to manage heat risk, which HRW calls ineffective; it cites 46,819 unpaid-wage cases handled by the labour ministry in 2022.  
+  _Note:_ -
+- `midday_break` (source_located): The UAE bans outdoor work in direct sun from 12:30 to 15:00 between 15 June and 15 September; 2025 was the 21st consecutive year.  
+  _Note:_ -
+- `gdp_h1_2026` (source_located): Dubai's real GDP was AED 473 billion in H1 2026, 2.3% lower than a year earlier, according to DDSE.  
+  _Note:_ -
+- `war_2026` (source_located): Reporting by The National ties the 2026 slowdown to the regional war that began on 28 February 2026, which disrupted travel and trade; Q1 2026 real GDP still grew 2.4%.  
+  _Note:_ Cause attribution is from press reporting, not DDSE. Narration attributes it ("amid", not "because of").
+- `d33_goal` (source_located): The Dubai Economic Agenda D33 (January 2023) aims to double the size of Dubai's economy over the next decade.  
+  _Note:_ -
+
+## Sources
+
+| ID | Title | Publisher | Published | Accessed | Kind | URL |
+|---|---|---|---|---|---|---|
+| `natural_earth` | Natural Earth 1:50m Admin 0 Countries and 1:10m Admin 1 States/Provinces | Natural Earth | n/a | 2026-11-03 | dataset | https://www.naturalearthdata.com/downloads/ |
+| `dubai_ae_economy` | Dubai Economy | Government of Dubai (dubai.ae portal) | page modified 2026-04-03 | 2026-11-03 | primary | https://www.dubai.ae/en/w/dubai-economy |
+| `wam_gdp_h1_2026` | Dubai's GDP reaches AED473 billion in H1 2026 | Emirates News Agency (WAM), citing Dubai Data and Statistics Establishment | 2026-10-18 | 2026-11-03 | primary | https://www.wam.ae/en/article/17has35 |
+| `national_gdp_h1_2026` | Dubai's economy reaches Dh473 billion in first half of 2026 as key sectors expand | The National | 2026-10-18 | 2026-11-03 | secondary | https://www.thenationalnews.com/business/economy/2026/10/18/dubais-economy-reaches-dh473bn-in-first-half-of-2026-as-key-sectors-expand/ |
+| `dmo_gdp_q1_2026` | Dubai GDP reaches AED232 billion in Q1 2026, recording 2.4% growth | Government of Dubai Media Office | 2026-07-08 | 2026-11-03 | primary | https://www.mediaoffice.ae/en/news/2026/july/08-07/dubai-gdp-reaches-aed232-billion-in-q1-2026-recording-2-growth |
+| `wam_population_2025` | Dubai population reaches 4.58 million at end of 2025 (DDSE) | Emirates News Agency (WAM) | 2026-07-30 | 2026-11-03 | primary | https://www.wam.ae/en/article/c1hd5qo |
+| `dmo_d33` | Mohammed bin Rashid launches Dubai Economic Agenda 'D33' | Government of Dubai Media Office | 2023-01-04 | 2026-11-03 | primary | https://www.mediaoffice.ae/en/news/2023/january/04-01/mohammed-bin-rashid-launches-dubai-economic-agenda-d33 |
+| `uae_constitution` | United Arab Emirates's Constitution of 1971 with Amendments through 2009 (Art. 1 and Art. 23) | Constitute Project | n/a | 2026-11-03 | primary | https://www.constituteproject.org/constitution/United_Arab_Emirates_2009 |
+| `trade_gov_uae_energy` | United Arab Emirates - Energy Resource Guide (oil and gas) | International Trade Administration, U.S. Department of Commerce | 2021 | 2026-11-03 | secondary | https://www.trade.gov/energy-resource-guide-united-arab-emirates-oil-and-gas |
+| `uae_ct` | Corporate tax | The UAE Government portal (u.ae) | last updated 2026-10-28 | 2026-11-03 | primary | https://u.ae/en/information-and-services/finance-and-investment/taxation/corporate-tax |
+| `mof_tax` | Tax (public finance) - VAT and Corporate Tax overview | UAE Ministry of Finance | n/a | 2026-11-03 | primary | https://mof.gov.ae/en/public-finance/tax/ |
+| `mof_dmtt` | Top-up Tax (Domestic Minimum Top-up Tax) | UAE Ministry of Finance | n/a | 2026-11-03 | primary | https://mof.gov.ae/en/public-finance/tax/top-up-tax/ |
+| `fta_qfzp` | Federal Tax Authority issues Corporate Tax guide on Free Zone Persons | UAE Federal Tax Authority | 2024-05-26 | 2026-11-03 | primary | https://tax.gov.ae/en/media.centre/news/federal.tax.authority.issues.corporate.tax.guide.on.free.zone.persons.aspx |
+| `pwc_uae_individual` | United Arab Emirates - Individual - Taxes on personal income | PwC Worldwide Tax Summaries | reviewed March 2026 | 2026-11-03 | secondary | https://taxsummaries.pwc.com/united-arab-emirates/individual/taxes-on-personal-income |
+| `wam_ownership_2021` | Full foreign ownership of onshore companies takes effect from 1 June 2021 | Emirates News Agency (WAM) / UAE Ministry of Economy | 2021-05 | 2026-11-03 | primary | https://wam.ae/en/details/1395302935804 |
+| `mohre_midday_2025` | MoHRE to implement midday break for the 21st consecutive year from 15 June to 15 September 2025 | UAE Ministry of Human Resources and Emiratisation | 2025-06-03 | 2026-11-03 | primary | https://mohre.gov.ae/en/media-center/news/3/6/2025/mohre-to-implement-midday-break-for-the-21st-consecutive-year-from-15-june-to-15-september-2025 |
+| `dmo_jafza_2025` | Hamdan bin Mohammed highlights Jafza's significant contribution to Dubai's economy over 4 decades | Government of Dubai Media Office | 2025-05-05 | 2026-11-03 | primary | https://mediaoffice.ae/en/news/2025/may/05-05/hamdan-bin-mohammed-highlights-jafzas-significant-contribution-to-dubais-economy-over-4-decades |
+| `gulfnews_jebelali` | Jebel Ali Port completes 40 years | Gulf News | n/a | 2026-11-03 | secondary | https://gulfnews.com/business/shipping/jebel-ali-port-completes-40-years |
+| `lloyds_list_dubai` | One Hundred Container Ports: 09 Dubai, United Arab Emirates | Lloyd's List | n/a | 2026-11-03 | secondary | https://www.lloydslist.com/LL1157897/09-Dubai-United-Arab-Emirates |
+| `dmo_dpworld_2025` | DP World financial results (full year 2025) | Government of Dubai Media Office | 2026-03-12 | 2026-11-03 | primary | https://mediaoffice.ae/en/news/2026/march/12-03/dp-world-financial-results |
+| `dmo_dpworld_delist` | DP World to delist from Nasdaq Dubai | Government of Dubai Media Office | 2020-02-17 | 2026-11-03 | primary | https://mediaoffice.ae/en/news/2020/feb/17-02/dp-world-to-delist-from-nasdaq-dubai |
+| `dmo_emirates_2026` | Emirates Group achieves record profit in 2025-26 | Government of Dubai Media Office | 2026-05-07 | 2026-11-03 | primary | https://mediaoffice.ae/en/news/2026/may/07-05/emirates-group-achieves-record-profit-in-2025-26 |
+| `gulfnews_emirates_launch` | 40 years of UAE: The launch of Emirates Airline | Gulf News | n/a | 2026-11-03 | secondary | https://gulfnews.com/news/uae/government/40-years-of-uae-the-launch-of-emirates-airline-1.920215 |
+| `dmo_dxb_2025` | DXB sets new global record with 95.2 million guests in 2025 | Government of Dubai Media Office | 2026-02-11 | 2026-11-03 | primary | https://www.mediaoffice.ae/en/news/2026/february/11-02/dxb-sets-new-global |
+| `aci_2025` | World's busiest airports revealed in latest global rankings | Airports Council International (ACI World) | 2026-04-14 | 2026-11-03 | primary | https://aci.aero/2026/04/14/worlds-busiest-airports-revealed-in-latest-global-rankings/ |
+| `dmo_dwc_2024` | Mohammed bin Rashid approves designs for new passenger terminal at Al Maktoum International Airport | Government of Dubai Media Office | 2024-04-28 | 2026-11-03 | primary | https://www.mediaoffice.ae/en/news/2024/april/28-04/al-maktoum-international-airport |
+| `invest_dubai_hub` | Dubai's role as a logistics hub in the airline industry | Invest in Dubai (Government of Dubai) | n/a | 2026-11-03 | primary | https://www.investindubai.gov.ae/en/insights-and-resources/news-insights/dubai-logistics-hub-role-airline-industry |
+| `dmo_tourism_2025` | Dubai's tourism industry achieves third successive record-breaking year | Government of Dubai Media Office (Department of Economy and Tourism data) | 2026-02-09 | 2026-11-03 | primary | https://www.mediaoffice.ae/en/news/2026/february/09-02/dubais-tourism-industry-achieves-third-successive-record-breaking-year |
+| `wam_tourism_2019` | Dubai delivers all-time high of 16.73 million overnight visitors in 2019 | Emirates News Agency (WAM) | 2020-01 | 2026-11-03 | primary | https://wam.ae/en/details/1395302817871 |
+| `dmo_realestate_2025` | Dubai's real estate market records new historic milestone | Government of Dubai Media Office (Dubai Land Department data) | 2026-01-12 | 2026-11-03 | primary | https://www.mediaoffice.ae/en/news/2026/january/12-01/dubais-real-estate-market-records-new-historic-milestone |
+| `dld_2024` | Dubai's real estate sector records AED761 billion in transactions in 2024 | Dubai Land Department | 2025-01-26 | 2026-11-03 | primary | https://dubailand.gov.ae/en/news-media/dubai-s-real-estate-sector-records-aed761-billion-in-transactions-in-2024 |
+| `imf_cr25327` | United Arab Emirates: 2025 Article IV Consultation - Staff Report (IMF Country Report No. 25/327) | International Monetary Fund | 2025-12 | 2026-11-03 | primary | https://www.imf.org/-/media/files/publications/cr/2025/english/1areea2025001-source-pdf.pdf |
+| `dmo_emaar_2026` | Dubai Holding and ICD announce completion of strategic transaction in Emaar Properties | Government of Dubai Media Office | 2026-05-12 | 2026-11-03 | primary | https://mediaoffice.ae/en/news/2026/may/12-05/dubai-holding-and-icd-announce-completion-of-strategic-transaction-in-emaar-properties |
+| `dmo_difc_2025` | Dubai International Financial Centre announces landmark annual results for 2025 | Government of Dubai Media Office | 2026-02-05 | 2026-11-03 | primary | https://www.mediaoffice.ae/en/news/2026/february/05-02/dubai-international-financial-centre-announces-landmark-annual-results-for-2025 |
+| `difc_courts_framework` | DIFC Courts - Legal framework | DIFC Courts | n/a | 2026-11-03 | primary | https://www.difccourts.ae/about/legal-framework |
+| `qdl_pearls` | Finding Aid: Sources on the Gulf's Pearl Industry and Trade | Qatar Digital Library | n/a | 2026-11-03 | secondary | https://qdl.qa/en/finding-aid-sources-gulf%E2%80%99s-pearl-industry-and-trade |
+| `qdl_lorimer` | Gazetteer of the Persian Gulf, J. G. Lorimer (1908/1915) - extracts on Dibai (IOR/R/15/1/729) | Qatar Digital Library / British Library | n/a | 2026-11-03 | primary | https://qdl.qa/en/archive/81055/vdc_100022770472.0x000068 |
+| `gulfnews_creek` | Dubai Creek in the 1950s - a glimpse into global city's humble beginnings | Gulf News | n/a | 2026-11-03 | secondary | https://gulfnews.com/uae/dubai-creek-in-the-1950s-a-glimpse-into-global-citys-humble-beginnings-1.500218048 |
+| `gulfnews_oil` | Oil in Dubai: History & timeline | Gulf News | updated 2018-09-15 | 2026-11-03 | secondary | https://gulfnews.com/business/energy/oil-in-dubai-history--timeline-1.578333 |
+| `agbi_never_oil_rich` | Contrary to urban myth, Dubai was never an oil-rich emirate | AGBI (Arabian Gulf Business Insight) | 2026-01 | 2026-11-03 | secondary | https://www.agbi.com/oil-and-gas/2026/01/contrary-to-urban-myth-dubai-was-never-an-oil-rich-emirate/ |
+| `gulfnews_dubai_world_2009` | Dubai World announces restructuring plans | Gulf News | 2009-12 | 2026-11-03 | secondary | https://gulfnews.com/business/dubai-world-announces-restructuring-plans-1.542850 |
+| `ibtimes_bailout_2009` | Abu Dhabi gives Dubai $10 billion in surprise bailout | International Business Times (Reuters) | 2009-12-14 | 2026-11-03 | secondary | https://www.ibtimes.com/abu-dhabi-gives-dubai-10-billion-surprise-bailout-353046 |
+| `csm_burj_2010` | World's tallest building opens in Dubai with a new name | Christian Science Monitor | 2010-01-04 | 2026-11-03 | secondary | https://www.csmonitor.com/World/2010/0104/World-s-tallest-building-opens-in-Dubai-with-a-new-name |
+| `gulfnews_prices_2009` | Dubai property prices near bottom and set to recover | Gulf News | 2009 | 2026-11-03 | secondary | https://gulfnews.com/business/property/dubai-property-prices-near-bottom-and-set-to-recover-1.587163 |
+| `hrw_2023` | UAE: Migrant Worker Abuses Linked to Broader Climate Harms | Human Rights Watch (NGO) | 2023-11-21 | 2026-11-03 | secondary | https://www.hrw.org/news/2023/11/21/uae-migrant-worker-abuses-linked-broader-climate-harms |
+| `national_iran_war_q1` | Dubai's GDP grew to Dh232bn in first quarter despite Iran war | The National | 2026-07-08 | 2026-11-03 | secondary | https://www.thenationalnews.com/business/economy/2026/07/08/dubai-gdp-climbs-to-dh232bn-in-q1-as-non-oil-sectors-drive-expansion/ |
+
+## Open research questions
+
+- Current Dubai government + GRE debt on the revised (2026) GDP series. None found; the film avoids a debt ratio.
+- Dubai-only trade split (imports / exports / re-exports) and partner ranking after 2019.
+- Official confirmation of 'no personal income tax' on a UAE government page.

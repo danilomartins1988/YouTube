@@ -46,6 +46,27 @@ def credits(dossier: Dossier, script: Script, timed: list[TimedScene], tts_name:
     return src, cred
 
 
+def fit_description(head: list[str], src: list[str], tail: list[str],
+                    limit: int = DESCRIPTION_LIMIT) -> tuple[str, bool]:
+    """Keep the description under YouTube's limit: full source lines, else compact 'publisher - URL'
+    lines, else as many as fit plus a pointer to the pinned comment. Returns (text, overflowed)."""
+    def join(lines):
+        return "\n".join(head + ["Sources", *lines] + tail)
+    if len(join(src)) <= limit:
+        return join(src), False
+    compact = [ln.split(": ", 1)[0] + " - " + ln.rsplit(" - ", 1)[-1] for ln in src]
+    if len(join(compact)) <= limit:
+        return join(compact), False
+    kept = []
+    for ln in compact:
+        trial = kept + [ln, f"+ {len(compact) - len(kept) - 1} more sources in the pinned comment"]
+        if len(join(trial)) > limit:
+            break
+        kept.append(ln)
+    kept.append(f"+ {len(compact) - len(kept)} more sources in the pinned comment")
+    return join(kept), True
+
+
 def build(deliverable: Deliverable, meta: dict, script: Script, dossier: Dossier, timed: list[TimedScene],
           tts_name: str, out_dir: Path) -> Path:
     src, cred = credits(dossier, script, timed, tts_name)
@@ -62,10 +83,13 @@ def build(deliverable: Deliverable, meta: dict, script: Script, dossier: Dossier
         desc = [meta.get("description_intro", script.logline), ""]
         if not note:
             desc += ["Chapters", *chap, ""]
-        desc += ["Sources", *src, "", "Credits & licences", *cred, "",
-                 "Some statements are the channel's interpretation; these are marked in the script notes.", "",
-                 " ".join(meta.get("hashtags", []))]
-        text = "\n".join(desc)
+        tail = ["", "Credits & licences", *cred, "",
+                "Some statements are the channel's interpretation; these are marked in the script notes.", "",
+                " ".join(meta.get("hashtags", []))]
+        text, overflow = fit_description(desc, src, tail)
+        if overflow:   # full list goes in a pinned comment (YouTube comments allow 10,000 characters)
+            (out_dir / "pinned_comment.md").write_text("Sources (full list)\n" + "\n".join(src) + "\n",
+                                                        encoding="utf-8")
         md += ["## Title options", ""] + [f"{i}. {t} ({len(t)} chars)" for i, t in enumerate(titles, 1)]
         md += ["", f"## Description ({len(text)} chars)", "", "```", text, "```", ""]
         if note:

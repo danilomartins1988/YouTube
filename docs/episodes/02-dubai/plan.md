@@ -1,6 +1,6 @@
 # Episode 02 - "How Dubai Really Makes Money": outline, research and production plan
 
-Status: **awaiting editor approval** (nothing rendered, nothing spent). Prepared 2026-11-03.
+Status: **approved and produced** (see `production_report.md`). Prepared 2026-11-03.
 
 Central question: *How did Dubai turn itself into a global centre for trade, aviation, tourism, real
 estate and finance, and what actually drives its economy today?*

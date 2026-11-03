@@ -2,6 +2,7 @@
 dossier values. Concept types are reusable layouts; the words and numbers are per video."""
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from PIL import Image
@@ -98,7 +99,7 @@ def illustrated_headline(st: Style, c: dict) -> Image.Image:
     pw = W // len(panels)
     for i, kind in enumerate(panels):
         tile = st.background().resize((W, H))
-        illustrate.compose(tile, kind, st.palette, t=float(c.get("t", 2.0)), horizon=float(c.get("horizon", 0.9)))
+        illustrate.compose(tile, kind, st.palette, t=0.0, horizon=float(c.get("horizon", 0.9)), pan=False)
         x0 = int(W / 2 - pw / 2) if len(panels) > 1 else 0
         img.paste(tile.crop((x0, 0, x0 + pw, H)), (i * pw, 0))
         if i:
@@ -111,11 +112,11 @@ def illustrated_headline(st: Style, c: dict) -> Image.Image:
     x = 60 if side == "left" else W - 60
     anchor = "ls" if side == "left" else "rs"
     headline = c["headline"]
-    lines = headline.split("\n") if "\n" in headline else [headline]
+    lines = [ln for ln in re.split(r"\\n|\n", headline) if ln]   # YAML may give a literal backslash-n
     size = int(c.get("font_size", 190 if W > H else 220))
     y = int(H * float(c.get("y", 0.42)))
     for ln in lines:
-        fnt = _fit(st, ln, "display", size, int(W * 0.62))
+        fnt = _fit(st, ln, "display", size, int(W * (0.5 if c.get("bars") else 0.62)))
         draw_text(img, ln, fnt, st.c(c.get("colour", "ink")), (x, y), anchor)
         y += int(fnt.size * 1.0)
     if c.get("accent_line"):
@@ -123,19 +124,24 @@ def illustrated_headline(st: Style, c: dict) -> Image.Image:
         draw_text(img, c["accent_line"], fnt, st.c("accent2"), (x, y + 10), anchor)
         y += int(fnt.size * 1.1)
     if c.get("kicker"):
-        draw_text(img, c["kicker"].upper(), st.f("body_bold", 34), st.c("accent"), (x, int(H * 0.14)), anchor,
+        draw_text(img, c["kicker"].upper(), st.f("body_bold", 34), st.c("accent"), (x, int(H * (0.14 if W > H else 0.08))), anchor,
                   tracking=6)
     if c.get("bars"):
         bars = c["bars"]
-        bx0, by1, bw, gap = int(W * 0.60), int(H * 0.86), int(W * 0.07), int(W * 0.02)
+        n = len(bars)
+        bw, gap = int(W * 0.085), int(W * 0.014)
+        bx0 = W - 50 - n * bw - (n - 1) * gap
+        by1 = int(H * 0.84)
         vmax = max(float(b["value"]) for b in bars)
         for i, b in enumerate(bars):
-            h = int(H * 0.5 * float(b["value"]) / vmax)
+            h = int(H * 0.36 * float(b["value"]) / vmax)
             xx = bx0 + i * (bw + gap)
             fill_rect(img, (xx, by1 - h, xx + bw, by1), st.c("accent2") if i == 0 else st.c("accent"), 0.92)
-            draw_text(img, f"{float(b['value']):.0f}%", st.f("display", 44), st.c("ink"), (xx + bw / 2, by1 - h - 18), "ms")
-            draw_text(img, b["label"].split(" (")[0].split(" &")[0].upper(), st.f("body_bold", 20), st.c("ink"), (xx + bw / 2, by1 + 30), "ms",
-                      tracking=1)
+            draw_text(img, f"{float(b['value']):.1f}%", st.f("display", 36), st.c("ink"), (xx + bw / 2, by1 - h - 14), "ms")
+            label = b["label"].split(" (")[0].split(" &")[0].upper()
+            for k, part in enumerate(label.split(" ")):
+                draw_text(img, part, _fit(st, part, "body_bold", 18, bw), st.c("ink"), (xx + bw / 2, by1 + 26 + k * 20),
+                          "ms", tracking=1)
     if c.get("footer"):
         draw_text(img, c["footer"].upper(), st.f("body_bold", 24), st.c("muted"), (x, H - 44), anchor, tracking=5)
     return img

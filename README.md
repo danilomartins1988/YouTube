@@ -26,6 +26,12 @@ that highlight each word as it is spoken. Previews, QC reports, cost reports and
 
 ---
 
+**Episode 02: "How Dubai Really Makes Money"** (`projects/how-dubai-really-makes-money`): an 11:30
+documentary (1920x1080) plus a YouTube Short (44 s), an Instagram Reel (44 s) and a TikTok (89 s), with
+original code-drawn illustrations, a world map split into the UAE's emirates, animated trade and flight
+routes and 54 sourced claims. Outline, dossier, scripts, metadata, QC and cost reports are in
+[`docs/episodes/02-dubai/`](docs/episodes/02-dubai). Paid narration: $0.33 of a $0.60 cap.
+
 ## Principles
 
 1. **No invented facts.** Narration and on-screen numbers are placeholders such as

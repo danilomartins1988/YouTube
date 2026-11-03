@@ -117,3 +117,13 @@ def test_provider_can_disable_voice_polish(tmp_path):
     a, _ = A.read_wav(tmp_path / "a.wav")
     b, _ = A.read_wav(tmp_path / "b.wav")
     assert not np.allclose(a[: len(b)], b[: len(a)], atol=1e-3)
+
+
+def test_description_never_exceeds_youtube_limit():
+    from hiddeneco.metadata import DESCRIPTION_LIMIT, fit_description
+    src = [f"- Publisher {i}: A fairly long source title number {i} - https://example.org/path/{i}/" + "x" * 40
+           for i in range(120)]
+    text, overflow = fit_description(["Intro"], src, ["", "Credits", "#tags"])
+    assert len(text) <= DESCRIPTION_LIMIT and overflow and "pinned comment" in text
+    short, overflow2 = fit_description(["Intro"], src[:3], [""])
+    assert not overflow2 and "A fairly long source title number 0" in short
