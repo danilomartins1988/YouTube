@@ -99,17 +99,29 @@ def _data_claim(spec: dict, cache: dict) -> tuple[Claim, dict]:
     return claim, {k: data[k].__dict__ for k in codes}
 
 
+def _collect_data_claims(spec: dict) -> tuple[list[Claim], dict]:
+    claims, datasets, cache = [], {}, {}
+    for dc in spec.get("data_claims", []):
+        claim, raw = _data_claim(dc, cache)
+        claims.append(claim)
+        datasets[dc["id"]] = raw
+    return claims, datasets
+
+
 def build_dossier(paths: ProjectPaths) -> Dossier:
     spec = yaml.safe_load((paths.project_dir / "sources.yaml").read_text(encoding="utf-8"))
     project = yaml.safe_load((paths.project_dir / "project.yaml").read_text(encoding="utf-8"))
     sources = [Source(**s) for s in spec["sources"]]
     claims = [Claim(**c) for c in spec.get("claims", [])]
-    datasets: dict = {}
-    cache: dict = {}
-    for dc in spec.get("data_claims", []):
-        claim, raw = _data_claim(dc, cache)
-        claims.append(claim)
-        datasets[dc["id"]] = raw
+    data_sources.reset_run()
+    data_claims, datasets = _collect_data_claims(spec)
+    if data_sources.sources_used() == {"api", "snapshot"}:
+        # The API failed part-way: mixing data vintages would put two different values for the
+        # same statistic on screen (e.g. a live 2023 figure next to an older snapshot one).
+        log("data.mixed_sources", action="rebuilding every data claim from the committed snapshot")
+        data_sources.force_snapshot()
+        data_claims, datasets = _collect_data_claims(spec)
+    claims += data_claims
     dossier = Dossier(slug=paths.slug, title=project["title"],
                       generated_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
                       sources=sources, claims=claims, datasets=datasets,

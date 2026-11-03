@@ -56,3 +56,34 @@ def test_difficulty_lowers_score():
     easy = TopicScore(**base, production_difficulty=1)
     hard = TopicScore(**base, production_difficulty=5)
     assert composite(easy) > composite(hard)
+
+
+def test_api_failing_midway_never_mixes_data_vintages(paths, monkeypatch):
+    """If the live API answers some requests and then fails, every data claim must come from the
+    snapshot; otherwise one statistic can show two different values in the same video."""
+    from hiddeneco.research import data_sources
+    from hiddeneco.research.dossier import build_dossier
+
+    calls = {"n": 0}
+
+    def flaky_api(codes, year, timeout=15):
+        calls["n"] += 1
+        if calls["n"] > 1:
+            raise TimeoutError("simulated read timeout")
+        snap = data_sources._from_snapshot(codes, year)
+        for v in snap.values():   # a different "live" vintage
+            v.gdp_per_capita_usd *= 1.05
+            v.method = "worldbank_api:NY.GDP.PCAP.CD"
+        return snap
+
+    monkeypatch.setattr(data_sources, "offline", lambda: False)
+    monkeypatch.setattr(data_sources, "_from_worldbank_api", flaky_api)
+    monkeypatch.setattr(data_sources.requests, "get",
+                        lambda *a, **k: (_ for _ in ()).throw(TimeoutError("simulated")))
+    d = build_dossier(paths)
+    methods = {c.get("method") for raw in d.datasets.values() for c in (raw.values() if isinstance(raw, dict) else [])
+               if isinstance(c, dict) and "method" in c}
+    assert calls["n"] >= 2
+    assert data_sources.sources_used() == {"snapshot"}
+    assert not any(str(m).startswith("worldbank_api") for m in methods)
+    data_sources.reset_run()

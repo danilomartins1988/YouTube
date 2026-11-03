@@ -71,6 +71,25 @@ def _from_snapshot(codes: list[str], year: int, path: Path = SNAPSHOT) -> dict[s
 
 
 _API_FAILED = False
+_USED: set[str] = set()     # "api" / "snapshot": which kinds of source this run has drawn from
+
+
+def reset_run() -> None:
+    """Start a fresh run: retry the API and forget which sources were used."""
+    global _API_FAILED
+    _API_FAILED = False
+    _USED.clear()
+
+
+def force_snapshot() -> None:
+    """Use only the committed snapshot for the rest of this run."""
+    global _API_FAILED
+    _API_FAILED = True
+    _USED.clear()
+
+
+def sources_used() -> set[str]:
+    return set(_USED)
 
 
 def gdp_population(codes: list[str], year: int, prefer_api: bool = True) -> dict[str, CountryYear]:
@@ -79,6 +98,7 @@ def gdp_population(codes: list[str], year: int, prefer_api: bool = True) -> dict
         try:
             data = _from_worldbank_api(codes, year)
             if set(codes) <= set(data):
+                _USED.add("api")
                 log("data.source", method="worldbank_api", year=year, codes=codes)
                 return data
         except Exception as exc:  # network blocked, API down, schema change...
@@ -88,6 +108,7 @@ def gdp_population(codes: list[str], year: int, prefer_api: bool = True) -> dict
     missing = sorted(set(codes) - set(data))
     if missing:
         raise KeyError(f"No data for {missing} in {year}; run `python -m hiddeneco data refresh`")
+    _USED.add("snapshot")
     log("data.source", method="snapshot", year=year, codes=codes)
     return data
 
@@ -137,6 +158,7 @@ def gdp_per_capita_series(codes: list[str], y0: int, y1: int) -> tuple[dict[str,
                     out[c].append({"year": int(r["date"]), "value": r["value"]})
                     names[c] = r["country"]["value"]
             if all(len(v) == y1 - y0 + 1 for v in out.values()):
+                _USED.add("api")
                 return {c: sorted(v, key=lambda x: x["year"]) for c, v in out.items()}, \
                     "worldbank_api:NY.GDP.PCAP.CD", names
         except Exception as exc:
@@ -152,5 +174,6 @@ def gdp_per_capita_series(codes: list[str], y0: int, y1: int) -> tuple[dict[str,
     missing = [c for c, v in out.items() if len(v) != y1 - y0 + 1]
     if missing:
         raise KeyError(f"Incomplete series for {missing} in {y0}-{y1}")
+    _USED.add("snapshot")
     return {c: sorted(v, key=lambda x: x["year"]) for c, v in out.items()}, \
         "derived:NY.GDP.MKTP.CD / SP.POP.TOTL (committed snapshot)", names
