@@ -65,10 +65,15 @@ tts:
     openai:
       api_key_env: OPENAI_API_KEY
       model: gpt-4o-mini-tts       # or tts-1-hd (no style instructions)
-      voice: onyx
+      voice: ash                   # chosen by the editor in a blind A/B (onyx/ash/sage), 2026-11-03
+      unit: paragraph              # one request per segment: intonation flows across sentences
+      voice_polish: none           # the global EQ/echo chain was tuned for Kokoro; it made this voice metallic
       instructions: >-
-        Voice: a calm, authoritative documentary narrator. Warm and clear, measured pace,
-        natural pauses at commas and full stops. Confident but never exaggerated or salesy.
+        Voice: an engaging documentary storyteller, warm, curious and human, like a presenter talking to one
+        listener. Pacing: unhurried but alive; vary the rhythm, slow down slightly before and on key numbers,
+        and let sentences flow into each other. Intonation: natural rises and falls, no sing-song, no announcer
+        voice. Pauses: short natural breaths at commas, a beat after a striking fact. Tone: confident and
+        understated, never salesy.
     silent:
       words_per_minute: 150
 

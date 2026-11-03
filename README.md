@@ -101,7 +101,7 @@ cp .env.example .env
 
 # 4. Check
 python -m hiddeneco tts-check
-python -m pytest -q                       # 51 tests, offline
+python -m pytest -q                       # 57 tests, offline
 ```
 
 ### Default voice: Kokoro (free, local, Apache-2.0)
@@ -120,6 +120,23 @@ cp .env.example .env    # KOKORO_MODEL_PATH / KOKORO_VOICES_PATH already point a
 
 Change the voice in `config/settings.yaml` (`tts.providers.kokoro.voice`, e.g. `af_heart`,
 `am_onyx`, or `bm_george` with `lang: en-gb`). `models/` is git-ignored.
+
+### Premium voice: OpenAI (paid, opt-in)
+
+The editor's choice for new topics is OpenAI `gpt-4o-mini-tts` with voice **`ash`** (picked from
+an A/B of `onyx`, `ash` and `sage` on 2026-11-03), configured in `tts.providers.openai`:
+
+- `unit: paragraph`: each script segment goes out as **one** request, so intonation carries
+  across sentences instead of resetting at every full stop. Sentence boundaries for captions
+  and cues are then found in the audio's own pauses (`timing.paragraph_word_timings`).
+- `voice_polish: none`: the global EQ/compression/short-echo chain was tuned for Kokoro and
+  made this voice sound metallic.
+- `instructions`: storyteller direction (varied rhythm, a beat on key numbers).
+
+`ash` speaks about 15% slower than `onyx`, so new scripts should be written about 15% shorter
+for the same runtime. Run it with `--tts openai --allow-paid`; the topic budget cap still applies.
+Changing any of these options changes the audio cache key, so rebuilding Topic 1 with them would
+pay for the full narration again (~$0.29).
 
 ## Commands
 
@@ -190,8 +207,9 @@ marked unverified; check them on the vendor's site before approving paid use. Se
 ## Known limitations of the pilot
 
 - **Voice.** Kokoro `af_heart` is the best free voice that runs locally, but it is still recognisably
-  synthetic. A paid premium voice (ElevenLabs/OpenAI, opt-in with `--allow-paid`) or a human
-  narrator is the realistic upgrade once the format is validated.
+  synthetic. Topic 1 was narrated with OpenAI `onyx` sentence by sentence, which the editor found
+  robotic; new topics use `ash` with paragraph-level synthesis (see "Premium voice" above).
+  ElevenLabs or a human narrator remain options.
 - **Fact-checking.** All web-located claims (16 for this topic) are still `source_located`. The build environment
   couldn't reach admin.ch, wipo.int, ige.ch, bazg.admin.ch or api.worldbank.org, so a person
   needs to read those pages before publishing. GDP and population figures are

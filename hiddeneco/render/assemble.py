@@ -47,13 +47,21 @@ def _sentence_audio(tts: TTSProvider, text: str, cache_dir: Path, rate: int) -> 
     return samples, fresh
 
 
+def synthesis_units(tts: TTSProvider, text: str) -> list[str]:
+    """What is sent to the provider per request: each sentence (default) or the whole segment
+    (`unit: paragraph`), which keeps intonation flowing across sentences."""
+    if tts.options.get("unit") == "paragraph":
+        return [text] if text.strip() else []
+    return timing.sentences(text)
+
+
 def uncached_chars(script: Script, dossier: Dossier, storyboard: Storyboard, tts: TTSProvider,
                    cache_dir: Path) -> int:
     """Characters that would actually be sent to the provider (cached sentences cost nothing)."""
     by_id = {s.id: s for s in script.segments}
     total = 0
     for scene in storyboard.scenes:
-        for sent in timing.sentences(render_text(by_id[scene.segment].narration, dossier)):
+        for sent in synthesis_units(tts, render_text(by_id[scene.segment].narration, dossier)):
             say = spoken(sent)
             key = hashlib.sha256(json.dumps([tts.name, tts.options, say], sort_keys=True).encode()).hexdigest()[:20]
             if not (cache_dir / f"{key}.wav").exists():
@@ -75,14 +83,18 @@ def synthesize_narration(script: Script, dossier: Dossier, storyboard: Storyboar
     for scene in storyboard.scenes:
         text = render_text(by_id[scene.segment].narration, dossier)
         parts, words, t = [], [], lead
-        for i, sent in enumerate(timing.sentences(text)):
+        for i, unit in enumerate(synthesis_units(tts, text)):
             if i:
                 parts.append(gap)
                 t += len(gap) / rate
-            samples, fresh = _sentence_audio(tts, sent, cache, rate)
-            fresh_chars += len(sent) if fresh else 0
+            samples, fresh = _sentence_audio(tts, unit, cache, rate)
+            fresh_chars += len(unit) if fresh else 0
             dur = len(samples) / rate
-            words += timing.word_timings(sent, t, dur)
+            sents = timing.sentences(unit)
+            if len(sents) > 1:   # paragraph: find sentence boundaries in the audio's own pauses
+                words += timing.paragraph_word_timings(sents, samples, rate, t)
+            else:
+                words += timing.word_timings(unit, t, dur)
             parts.append(samples)
             t += dur
         voice = np.concatenate(parts) if parts else np.zeros(1, np.float32)

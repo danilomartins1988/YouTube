@@ -79,3 +79,41 @@ def test_paid_provider_without_budget_never_calls_api(tmp_path, dossier):
     with pytest.raises(RuntimeError, match="without a budget"):
         _sentence_audio(FakePaid(), "Hello there.", tmp_path, 48000)
     assert FakePaid.calls == 0
+
+
+def test_paragraph_timings_snap_to_real_pauses():
+    """Three 'sentences' of tone separated by silences at known places: boundaries must land there."""
+    import numpy as np
+    from hiddeneco import timing
+    rate = 16000
+    tone = lambda s: (0.3 * np.sin(np.arange(int(s * rate)) * 0.2)).astype(np.float32)
+    gap = lambda s: np.zeros(int(s * rate), np.float32)
+    # deliberately uneven lengths so a pure syllable estimate would be off
+    audio = np.concatenate([tone(1.0), gap(0.4), tone(3.0), gap(0.5), tone(1.5)])
+    sents = ["One two three four.", "Five six seven eight.", "Nine ten eleven twelve."]
+    words = timing.paragraph_word_timings(sents, audio, rate, start=10.0)
+    starts = [w["start"] for w in words]
+    assert abs(starts[4] - (10.0 + 1.4)) < 0.05      # "Five" starts after the first pause
+    assert abs(starts[8] - (10.0 + 4.9)) < 0.05      # "Nine" starts after the second pause
+    assert words[-1]["end"] <= 10.0 + len(audio) / rate + 1e-6
+
+
+def test_paragraph_unit_sends_one_request_per_segment():
+    from hiddeneco.render.assemble import synthesis_units
+    from hiddeneco.tts.providers import SilentProvider
+    text = "First sentence. Second one? Third!"
+    assert synthesis_units(SilentProvider({}), text) == ["First sentence.", "Second one?", "Third!"]
+    assert synthesis_units(SilentProvider({"unit": "paragraph"}), text) == [text]
+
+
+def test_provider_can_disable_voice_polish(tmp_path):
+    import numpy as np
+    from hiddeneco import audio as A
+    from hiddeneco.tts.base import normalise_wav
+    src = tmp_path / "in.wav"
+    A.write_wav(src, (0.2 * np.sin(np.arange(48000) * 0.05)).astype(np.float32), 48000)
+    normalise_wav(src, tmp_path / "a.wav", polish="none")
+    normalise_wav(src, tmp_path / "b.wav")
+    a, _ = A.read_wav(tmp_path / "a.wav")
+    b, _ = A.read_wav(tmp_path / "b.wav")
+    assert not np.allclose(a[: len(b)], b[: len(a)], atol=1e-3)

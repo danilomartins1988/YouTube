@@ -45,7 +45,8 @@ class TTSProvider(abc.ABC):
         # network providers can fail transiently; local ones simply succeed first time
         raw = retry(lambda: self._synthesize(text, raw_path), attempts=4 if self.paid else 1,
                     what=f"tts:{self.name}")
-        normalise_wav(raw, out_wav, sample_rate, tempo=float(self.options.get("tempo", 1.0)))
+        normalise_wav(raw, out_wav, sample_rate, tempo=float(self.options.get("tempo", 1.0)),
+                      polish=self.options.get("voice_polish"))
         if raw != out_wav:
             raw.unlink(missing_ok=True)
         return wav_seconds(out_wav)
@@ -56,7 +57,8 @@ class TTSProvider(abc.ABC):
         return tts_cost(self.name, chars)
 
 
-def normalise_wav(src: Path, dst: Path, sample_rate: int = 48000, tempo: float = 1.0) -> None:
+def normalise_wav(src: Path, dst: Path, sample_rate: int = 48000, tempo: float = 1.0,
+                  polish: str | None = None) -> None:
     """Resample to mono 16-bit PCM, trim leading/trailing silence, optionally change tempo
     without changing pitch."""
     if not shutil.which("ffmpeg"):
@@ -66,9 +68,13 @@ def normalise_wav(src: Path, dst: Path, sample_rate: int = 48000, tempo: float =
     if abs(tempo - 1.0) > 1e-3:
         trim += f",atempo={tempo:.3f}"
     # voice polish (configurable in settings: tts.voice_polish): EQ, gentle compression, soft room
-    from hiddeneco.config import settings
-    trim += "," + settings()["tts"].get("voice_polish",
-                                         "highpass=f=70,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120:makeup=2")
+    # A provider can override it (tts.providers.<name>.voice_polish); "none" disables it.
+    if polish is None:
+        from hiddeneco.config import settings
+        polish = settings()["tts"].get("voice_polish",
+                                       "highpass=f=70,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120:makeup=2")
+    if polish and polish.strip().lower() != "none":
+        trim += "," + polish
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-af", trim,
                     "-ac", "1", "-ar", str(sample_rate), "-sample_fmt", "s16", str(dst)], check=True)
 
