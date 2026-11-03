@@ -583,8 +583,20 @@ class TimelineScene(BaseScene):
             else:
                 draw_text(img, p["end_label"].upper(), s.f("body_bold", 28), s.c("ink"), (ax1, ay - 40), "rm",
                           alpha=end_a, tracking=3)
+        items_all = p.get("items", [])
+        packed = []
+        if not self.v and items_all:            # forward pass keeps order/spacing, backward pass keeps it on screen
+            block_w0 = 520
+            prev = -1e9
+            for it in items_all:
+                prev = max(ax0 + (ax1 - ax0) * (float(it["year"]) - y0) / (y1 - y0) - 10, prev + block_w0 + 40)
+                packed.append(prev)
+            limit = self.W - 120 - block_w0
+            for i in range(len(packed) - 1, -1, -1):
+                limit_i = limit - (len(packed) - 1 - i) * (block_w0 + 40)
+                packed[i] = max(120, min(packed[i], limit_i))
         prev_text_x = -1e9
-        for item in p.get("items", []):
+        for idx_item, item in enumerate(items_all):
             ia = ease_out(prog(t, self.when(item, 0.1), 0.5))
             yr = float(item["year"])
             if self.v:
@@ -601,8 +613,7 @@ class TimelineScene(BaseScene):
                          lambda d, ss: d.ellipse((0, 0, 32 * ss - 1, 32 * ss - 1), fill=255), alpha=ia)
                 block_w = 520
                 # keep text blocks apart and inside the frame; a leader line links text to its dot
-                tx = max(px - 10, prev_text_x + block_w + 40)
-                tx = min(tx, self.W - 120 - block_w)
+                tx = packed[idx_item]
                 prev_text_x = tx
                 if abs(tx - (px - 10)) > 4:
                     fill_rect(img, (min(px, tx + 10), ay - 230, max(px, tx + 10) + 2, ay - 228), s.c("border"), ia)
