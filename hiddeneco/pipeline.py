@@ -18,7 +18,7 @@ from hiddeneco.render import assemble
 from hiddeneco.render.style import Style
 from hiddeneco.research import dossier as dossier_mod
 from hiddeneco.script import render_value
-from hiddeneco.tts.providers import get_provider
+from hiddeneco.tts.providers import default_provider_name, get_provider
 
 
 class BuildError(RuntimeError):
@@ -85,7 +85,7 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
 
     sc, sb = prepare(paths, d)
 
-    tts_name = tts_name or cfg["tts"]["default_provider"]
+    tts_name = tts_name or default_provider_name(cfg)
     tts = get_provider(tts_name, cfg, allow_paid=allow_paid)
     ledger.replace_step("tts (pre-build estimate)", tts_cost(tts_name, estimate_chars(paths, d),
                                                               "tts (pre-build estimate)", estimated=True))

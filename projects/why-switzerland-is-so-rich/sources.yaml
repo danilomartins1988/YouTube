@@ -139,10 +139,10 @@ data_claims:
 # NOT yet been confirmed by a person reading the primary document - hence source_located.
 claims:
   - id: geo_landlocked
-    text: Switzerland is a landlocked, mountainous country.
+    text: Switzerland is landlocked (it has no sea coast).
     source_ids: [natural_earth]
     status: source_located
-    verification_note: Landlocked status is visible in the Natural Earth boundaries. 'Mountainous' needs a citation (e.g. Swiss Federal Statistical Office land-use statistics) or should be cut.
+    verification_note: Visible in the Natural Earth boundaries used for the map; a reviewer only needs to confirm and sign off. ('Mountainous' was cut from the script because it had no citation.)
   - id: neutrality_1815
     text: Europe's great powers formally recognised Swiss neutrality in 1815 (Congress of Vienna and the Second Treaty of Paris).
     spoken: In 1815

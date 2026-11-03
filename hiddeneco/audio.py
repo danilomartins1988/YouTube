@@ -147,6 +147,16 @@ def write_wav(path: Path, x: np.ndarray, rate: int = RATE) -> Path:
 
 
 def loudnorm(src: Path, dst: Path, lufs: float, rate: int = RATE) -> Path:
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-af",
-                    f"loudnorm=I={lufs}:TP=-1.5:LRA=11", "-ar", str(rate), str(dst)], check=True)
+    """Two-pass EBU R128 normalisation: measure, then apply linear gain to hit the target."""
+    import json
+    target = f"I={lufs}:TP=-1.5:LRA=11"
+    probe = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(src), "-af",
+                            f"loudnorm={target}:print_format=json", "-f", "null", "-"],
+                           capture_output=True, text=True, check=True).stderr
+    m = json.loads(probe[probe.rindex("{"):probe.rindex("}") + 1])
+    second = (f"loudnorm={target}:measured_I={m['input_i']}:measured_TP={m['input_tp']}"
+              f":measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}"
+              f":offset={m['target_offset']}:linear=true")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-af", second, "-ar", str(rate),
+                    str(dst)], check=True)
     return dst

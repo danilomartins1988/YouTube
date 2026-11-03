@@ -49,12 +49,12 @@
 ## Roadmap
 
 ### Phase 1: working pilot (done)
-Horizontal 16:9 film (82 s) and vertical 9:16 short (33 s) with burned-in captions, from one
+Horizontal 16:9 film (87.7 s) and vertical 9:16 short (36.1 s), Kokoro narration, with burned-in captions, from one
 dossier. Includes QC, export drafts, a cost report, a build manifest and 39 tests.
 
 **Open items before anything is published:**
 - Verify the 6 `source_located` claims by reading the primary pages.
-- Optionally switch the voice to Kokoro.
+- Listen to the narration and pick the final Kokoro voice (samples provided).
 
 ### Phase 2: reusable production engine
 1. **Full documentary.** Five or six acts, 8-12 minutes, with a cold open and a counterpoint act.

@@ -1,20 +1,23 @@
 # QC report: why-switzerland-is-so-rich / horizontal (long_16x9)
 
-- Runtime: **82.37 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 42.1 MB
-- Loudness: -16.6 LUFS integrated, true peak -4.2 dBFS
-- Errors: **0**, warnings: **1**
+- Runtime: **87.73 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 44.6 MB
+- Loudness: -16.4 LUFS integrated, true peak -3.9 dBFS
+- Errors: **0**, warnings: **4**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [WARNING] (timing) Segment compare pace 194 wpm (numerals count as one word)
+- [WARNING] (timing) Segment hook pace 105 wpm (numerals count as one word)
+- [WARNING] (timing) Segment compare pace 193 wpm (numerals count as one word)
+- [WARNING] (timing) Segment stability pace 117 wpm (numerals count as one word)
+- [WARNING] (timing) Segment innovation pace 105 wpm (numerals count as one word)
 
 ## Publish blockers - claims needing human verification
 
-- `geo_landlocked` (source_located): Switzerland is a landlocked, mountainous country.  
-  Landlocked status is visible in the Natural Earth boundaries. 'Mountainous' needs a citation (e.g. Swiss Federal Statistical Office land-use statistics) or should be cut.
+- `geo_landlocked` (source_located): Switzerland is landlocked (it has no sea coast).  
+  Visible in the Natural Earth boundaries used for the map; a reviewer only needs to confirm and sign off. ('Mountainous' was cut from the script because it had no citation.)
 - `gii_2025_rank` (source_located): In the Global Innovation Index 2025, WIPO ranked Switzerland first of 139 economies.  
   Confirm 139 economies and rank in WIPO's press release. Secondary sources disagree on the length of the streak (14th vs 15th year), so the script deliberately does not mention it.
 - `gii_2025_top5` (source_located): GII 2025 top five: Switzerland, Sweden, United States, Republic of Korea, Singapore.  

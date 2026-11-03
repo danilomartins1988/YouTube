@@ -77,7 +77,7 @@ class KokoroProvider(TTSProvider):
         m, v = self._paths()
         samples, rate = Kokoro(str(m), str(v)).create(
             text, voice=self.options.get("voice", "am_michael"),
-            speed=float(self.options.get("speed", 1.0)), lang="en-us")
+            speed=float(self.options.get("speed", 1.0)), lang=self.options.get("lang", "en-us"))
         pcm = (np.clip(samples, -1, 1) * 32767).astype("<i2")
         with wave.open(str(out_path), "wb") as w:
             w.setnchannels(1)
@@ -193,3 +193,14 @@ def get_provider(name: str, settings: dict, allow_paid: bool = False) -> TTSProv
                               "the cost estimate (python -m hiddeneco estimate <slug> --tts "
                               f"{name}).")
     return cls(settings["tts"]["providers"].get(name, {}))
+
+
+def default_provider_name(settings: dict) -> str:
+    """First *available* provider from tts.default_provider (a name or a list of names)."""
+    choice = settings["tts"]["default_provider"]
+    names = [choice] if isinstance(choice, str) else list(choice)
+    for name in names:
+        cls = PROVIDERS[name]
+        if not cls.paid and cls(settings["tts"]["providers"].get(name, {})).available()[0]:
+            return name
+    raise RuntimeError(f"None of the default TTS providers is available: {names}. Run `python -m hiddeneco tts-check`.")

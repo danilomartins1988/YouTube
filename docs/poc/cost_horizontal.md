@@ -2,7 +2,7 @@
 
 | Kind | Step | Provider | Units | USD | Note |
 |---|---|---|---|---|---|
-| estimate | tts (pre-build estimate) | festival | 1218 characters | $0.0000 | pricing verified_on: n/a (open source, local) |
-| actual | render | local_cpu | 0.0062 cpu_hours | $0.0000 | assumed negligible on your own machine |
-| actual | tts (characters actually synthesised) | festival | 0 characters | $0.0000 | pricing verified_on: n/a (open source, local); cached sentences are free |
+| estimate | tts (pre-build estimate) | kokoro | 1180 characters | $0.0000 | pricing verified_on: n/a (open source, local) |
+| actual | render | local_cpu | 0.0637 cpu_hours | $0.0000 | assumed negligible on your own machine |
+| actual | tts (characters actually synthesised) | kokoro | 28 characters | $0.0000 | pricing verified_on: n/a (open source, local); cached sentences are free |
 | **actual total** | | | | **$0.0000** | |

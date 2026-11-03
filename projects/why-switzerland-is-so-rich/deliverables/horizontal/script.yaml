@@ -7,7 +7,7 @@ segments:
   - id: hook
     chapter: The puzzle
     narration: >-
-      Picture a small, landlocked, mountainous country of {{pop_che_2023}} people.
+      Picture a small, landlocked country of {{pop_che_2023}} people.
       In {{gdppc_che_2023.year}}, it produced {{gdppc_che_2023}} of output for every single resident.
     claims: [geo_landlocked, pop_che_2023, gdppc_che_2023]
     source_note: Population and GDP per capita are World Bank WDI values computed by the pipeline.
@@ -16,7 +16,7 @@ segments:
     chapter: The puzzle
     narration: >-
       That is {{ratio_che_deu_2023}} Germany's figure, and {{ratio_che_euu_2023}} the European Union average.
-      So how did a country with no coastline get this rich?
+      So how did it get this rich?
     claims: [ratio_che_deu_2023, ratio_che_euu_2023, gdppc_chart_2023]
     source_note: Ratios computed from the same World Bank series; EU average is the World Bank 'European Union' aggregate.
 

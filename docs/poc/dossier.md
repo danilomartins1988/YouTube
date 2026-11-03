@@ -1,12 +1,12 @@
 # Research dossier: Why Switzerland Is So Rich
 
-Generated 2026-11-03T01:26:06+00:00.
+Generated 2026-11-03T01:45:27+00:00.
 
 ## Claims
 
 | ID | Claim | Status | Sources |
 |---|---|---|---|
-| `geo_landlocked` | Switzerland is a landlocked, mountainous country. | **source_located** | natural_earth |
+| `geo_landlocked` | Switzerland is landlocked (it has no sea coast). | **source_located** | natural_earth |
 | `neutrality_1815` | Europe's great powers formally recognised Swiss neutrality in 1815 (Congress of Vienna and the Second Treaty of Paris). | **source_located** | admin_neutrality, eda_neutrality |
 | `pharma_share_2024` | Chemical and pharmaceutical products accounted for 52.7% of Swiss (goods) exports in 2024 (CHF 149,058 million). | **source_located** | bazg_trade_2024, kmu_pharma_exports |
 | `vet_share` | About two-thirds of young people in Switzerland enter vocational education and training (VET); the most common form is dual-track VET combining classroom instruction with workplace training. | **source_located** | seri_vet |
@@ -20,8 +20,8 @@ Generated 2026-11-03T01:26:06+00:00.
 
 ## Claims that require verification before publishing
 
-- `geo_landlocked` (source_located): Switzerland is a landlocked, mountainous country.  
-  _Note:_ Landlocked status is visible in the Natural Earth boundaries. 'Mountainous' needs a citation (e.g. Swiss Federal Statistical Office land-use statistics) or should be cut.
+- `geo_landlocked` (source_located): Switzerland is landlocked (it has no sea coast).  
+  _Note:_ Visible in the Natural Earth boundaries used for the map; a reviewer only needs to confirm and sign off. ('Mountainous' was cut from the script because it had no citation.)
 - `neutrality_1815` (source_located): Europe's great powers formally recognised Swiss neutrality in 1815 (Congress of Vienna and the Second Treaty of Paris).  
   _Note:_ admin.ch dates the recognition to 1815 via the Congress of Vienna and the Treaty of Paris. Check exact wording on both pages.
 - `pharma_share_2024` (source_located): Chemical and pharmaceutical products accounted for 52.7% of Swiss (goods) exports in 2024 (CHF 149,058 million).  

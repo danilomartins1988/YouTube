@@ -11,8 +11,8 @@ formats:
     width: 1920
     height: 1080
     loudness_lufs: -16       # long-form: a little more headroom
-    scene_lead_in: 0.45
-    scene_tail: 0.6
+    scene_lead_in: 0.35
+    scene_tail: 0.5
     fade: 0.35
   short_9x16:
     width: 1080
@@ -33,7 +33,8 @@ formats:
     safe_zone: {top: 250, bottom: 480, left: 60, right: 140}
 
 tts:
-  default_provider: festival   # festival | kokoro | piper | espeak | elevenlabs | openai | silent
+  # First available free provider is used. Paid providers are never chosen automatically.
+  default_provider: [kokoro, festival, espeak]   # kokoro | festival | piper | espeak | elevenlabs | openai | silent
   sentence_gap: 0.22           # seconds of silence between sentences
   providers:
     festival:
@@ -42,8 +43,9 @@ tts:
     kokoro:
       model_path_env: KOKORO_MODEL_PATH     # kokoro-v1.0.onnx (Apache-2.0)
       voices_path_env: KOKORO_VOICES_PATH   # voices-v1.0.bin
-      voice: am_michael
-      speed: 1.0
+      voice: am_michael      # US male narrator; samples of others: af_heart, am_onyx, bm_george, bm_fable
+      lang: en-us            # en-gb for b* (British) voices
+      speed: 1.1
     espeak:
       voice: en-gb-x-rp
       words_per_minute: 176

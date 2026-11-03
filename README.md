@@ -9,11 +9,11 @@ shared research dossier.
 
 | Deliverable | Format | Length | Notes |
 |---|---|---|---|
-| `horizontal` | 1920x1080, 16:9, H.264/AAC stereo | 82.4 s | Animated map, bar chart, timeline, ring chart, pictogram, ranking, end card; SRT captions; −16.6 LUFS |
-| `vertical` | 1080x1920, 9:16, H.264/AAC stereo | 33.0 s | Its own story ("one industry"); burned-in word-highlight captions inside the safe zone; −14.5 LUFS |
+| `horizontal` | 1920x1080, 16:9, H.264/AAC stereo | 87.7 s | Animated map, bar chart, timeline, ring chart, pictogram, ranking, end card; SRT captions; −16.4 LUFS |
+| `vertical` | 1080x1920, 9:16, H.264/AAC stereo | 36.1 s | Its own story ("one industry"); burned-in word-highlight captions inside the safe zone; −15.3 LUFS |
 
-Both include English narration synchronised to the visuals, an original music bed and original
-sound effects. Previews, QC reports, cost reports and the dossier are in [`docs/poc/`](docs/poc).
+Both include English narration (Kokoro-82M neural TTS, voice `am_michael`, run locally for free)
+synchronised to the visuals, an original music bed and original sound effects. Previews, QC reports, cost reports and the dossier are in [`docs/poc/`](docs/poc).
 The videos themselves are not committed; rebuild them with one command (below).
 
 ---
@@ -69,8 +69,8 @@ on cue phrases (`cue: "In 1815"`).
 
 ## Setup
 
-Requirements: Python 3.10+, FFmpeg, and Festival with the CMU ARCTIC `slt` voice. espeak-ng is
-the fallback voice.
+Requirements: Python 3.10+ and FFmpeg. Voices are tried in order: **Kokoro** (best, needs the model
+files below), Festival with the CMU ARCTIC `slt` voice, then espeak-ng.
 
 ```bash
 # 1. System tools
@@ -91,20 +91,22 @@ python -m hiddeneco tts-check
 python -m pytest -q                       # 39 tests, offline
 ```
 
-### Recommended voice upgrade: Kokoro (free, Apache-2.0)
-
-Kokoro-82M sounds much more natural than Festival. Its model files couldn't be downloaded in
-the cloud session used to build the pilot (Hugging Face and GitHub release downloads were
-blocked), but it works anywhere with normal internet:
+### Default voice: Kokoro (free, local, Apache-2.0)
 
 ```bash
 pip install kokoro-onnx
-mkdir -p models/kokoro && cd models/kokoro
-# Download kokoro-v1.0.onnx and voices-v1.0.bin from the kokoro-onnx GitHub releases page
-# (https://github.com/thewh1teagle/kokoro-onnx/releases) and set KOKORO_MODEL_PATH /
-# KOKORO_VOICES_PATH in .env
-python -m hiddeneco build why-switzerland-is-so-rich --tts kokoro
+mkdir -p models/kokoro
+B=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+curl -L -o models/kokoro/kokoro-v1.0.onnx  $B/kokoro-v1.0.onnx    # ~325 MB
+curl -L -o models/kokoro/voices-v1.0.bin   $B/voices-v1.0.bin     # ~28 MB
+# sha256 used for the pilot:
+#   7d5df8ecf7d4b1878015a32686053fd0eebe2bc377234608764cc0ef3636a6c5  kokoro-v1.0.onnx
+#   bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d  voices-v1.0.bin
+cp .env.example .env    # KOKORO_MODEL_PATH / KOKORO_VOICES_PATH already point at models/kokoro/
 ```
+
+Change the voice in `config/settings.yaml` (`tts.providers.kokoro.voice`, e.g. `af_heart`,
+`am_onyx`, or `bm_george` with `lang: en-gb`). `models/` is git-ignored.
 
 ## Commands
 
@@ -173,8 +175,8 @@ marked unverified; check them on the vendor's site before approving paid use. Se
 
 ## Known limitations of the pilot
 
-- **Voice.** Festival `slt` (female, US) is clear but still synthetic. Kokoro (above) is the
-  intended free voice and was blocked only by the build environment's network policy.
+- **Voice.** Kokoro is good but still recognisably synthetic in places (names, numbers). Listen
+  before approving; a paid premium voice is an option once the format is validated.
 - **Fact-checking.** The 6 web-located claims are still `source_located`. The build environment
   couldn't reach admin.ch, wipo.int, ige.ch, bazg.admin.ch or api.worldbank.org, so a person
   needs to read those pages before publishing. GDP and population figures are
