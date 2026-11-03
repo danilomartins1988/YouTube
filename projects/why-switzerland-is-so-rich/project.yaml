@@ -1,0 +1,28 @@
+title: Why Switzerland Is So Rich
+slug: why-switzerland-is-so-rich
+format: proof_of_concept        # proof_of_concept (60-90 s) | documentary (8-12 min)
+target_seconds: {min: 60, max: 90}
+language: en
+# Per-video visual identity. Each episode gets its own palette, type pairing and motifs so the
+# channel never looks like a template farm. QC compares scene grammar against earlier projects.
+style:
+  name: alpine-ledger
+  palette:
+    bg: "#0F1B24"
+    bg2: "#16283A"
+    ink: "#F3EEE4"
+    muted: "#7D8E9B"
+    land: "#24394B"
+    border: "#3C566B"
+    accent: "#E0453A"      # Swiss red
+    accent2: "#E9B44C"     # gold
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  motifs: [ledger-rules, chapter-tags, film-grain]
+youtube:
+  category: Education
+  default_language: en
+  made_for_kids: false

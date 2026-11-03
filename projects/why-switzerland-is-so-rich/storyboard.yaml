@@ -1,0 +1,99 @@
+# One scene per narration segment. Scene duration = narration length + lead-in + tail,
+# so picture and voice can never drift apart. Text in params may use {{claim}} placeholders;
+# a value that is exactly "{{id.value}}" is replaced by the raw value (number/list).
+scenes:
+  - id: s01_map
+    segment: hook
+    type: map
+    params:
+      title: Why Switzerland Is So Rich
+      focus: CHE
+      start_view: {lon: 9.0, lat: 50.0, span_deg: 46}
+      end_view: {lon: 8.25, lat: 46.8, span_deg: 7.5}
+      neighbours: {DEU: Germany, FRA: France, ITA: Italy, AUT: Austria}
+      focus_label: Switzerland
+      callouts:
+        - {label: Landlocked, cue: landlocked}
+        - {label: "Population, {{pop_che_2023.year}}", value: "{{pop_che_2023.display}}", cue: "million people"}
+        - {label: "GDP per person, {{gdppc_che_2023.year}}", value: "{{gdppc_che_2023.display}}", cue: "it produced", accent: true}
+    sources: [natural_earth, wb_pop_mirror, wb_gdppc_indicator]
+    assets: ["geo:europe_50m", "font:inter", "data:worldbank_gdp_population"]
+    note: Open on a wide Europe view with the title, slow push-in to Switzerland, Swiss red fill.
+
+  - id: s02_bars
+    segment: compare
+    type: bar_chart
+    params:
+      title: GDP per person, {{gdppc_chart_2023.year}}
+      subtitle: Current US dollars
+      data: "{{gdppc_chart_2023.value}}"
+      highlight: CHE
+      reference: DEU
+      callout: "{{ratio_che_deu_2023.display}} Germany  ·  {{ratio_che_euu_2023.display}} EU average"
+    sources: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
+    assets: ["font:inter", "data:worldbank_gdp_population"]
+
+  - id: s03_1815
+    segment: stability
+    type: kinetic_text
+    params:
+      chapter: "01 · Stability"
+      lines:
+        - {text: "{{neutrality_1815.display}}", size: 260, style: display, color: accent2, cue: "In 1815"}
+        - {text: Congress of Vienna, size: 64, style: heading, cue: "great powers"}
+        - {text: Great powers recognise Swiss neutrality, size: 44, style: body, color: muted, cue: "neutrality"}
+        - {text: "Predictability \u2192 economic asset", size: 52, style: heading, color: accent, cue: predictability}
+    sources: [admin_neutrality, eda_neutrality]
+    assets: ["font:inter"]
+
+  - id: s04_ring
+    segment: specialisation
+    type: ring_stat
+    params:
+      chapter: "02 · Specialisation"
+      cue: chemical
+      value: "{{pharma_share_2024.value}}"
+      display: "{{pharma_share_2024.display}}"
+      label: of Swiss exports, {{pharma_share_2024.year}}
+      sublabel: Chemical & pharmaceutical products
+    sources: [bazg_trade_2024]
+    assets: ["font:inter"]
+
+  - id: s05_people
+    segment: skills
+    type: pictogram
+    params:
+      chapter: "03 · Skills"
+      cue: "of young people"
+      fraction: "{{vet_share.value}}"
+      columns: 3
+      headline: "{{vet_share.display}}"
+      label: young people enter vocational education & training
+      sublabel: Most often a dual-track apprenticeship - school plus work in a company
+    sources: [seri_vet]
+    assets: ["font:inter"]
+
+  - id: s06_rank
+    segment: innovation
+    type: ranking
+    params:
+      chapter: "04 · The payoff"
+      title: Global Innovation Index {{gii_2025_rank.year}}
+      subtitle: World Intellectual Property Organization (WIPO)
+      cue: "In 2025"
+      items: "{{gii_2025_top5.value}}"
+      badge: "#{{gii_2025_rank.value}}"
+      badge_label: "{{gii_2025_rank.economies}} economies ranked"
+      highlight: Switzerland
+    sources: [wipo_gii_2025]
+    assets: ["font:inter"]
+
+  - id: s07_end
+    segment: close
+    type: end_card
+    params:
+      words: [Stability., Specialisation., Skills.]
+      brand: The Hidden Economics
+      teaser: "Full documentary: banks, gold and the hidden costs"
+    sources: []
+    assets: ["font:inter"]

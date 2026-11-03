@@ -1,0 +1,62 @@
+# Narration template. {{claim_id}} inserts the claim's spoken form; {{claim_id.display}},
+# {{claim_id.value}} and {{claim_id.<field>}} are also available. Digits typed directly into
+# narration fail QC: every number must come from the dossier.
+title: Why Switzerland Is So Rich
+logline: How did a small, landlocked country get this rich? Three forces behind Swiss wealth, in under ninety seconds.
+segments:
+  - id: hook
+    chapter: The puzzle
+    narration: >-
+      Picture a small, landlocked, mountainous country of {{pop_che_2023}} people.
+      In {{gdppc_che_2023.year}}, it produced {{gdppc_che_2023}} of output for every single resident.
+    claims: [geo_landlocked, pop_che_2023, gdppc_che_2023]
+    source_note: Population and GDP per capita are World Bank WDI values computed by the pipeline.
+
+  - id: compare
+    chapter: The puzzle
+    narration: >-
+      That is {{ratio_che_deu_2023}} Germany's figure, and {{ratio_che_euu_2023}} the European Union average.
+      So how did a country with no coastline get this rich?
+    claims: [ratio_che_deu_2023, ratio_che_euu_2023, gdppc_chart_2023]
+    source_note: Ratios computed from the same World Bank series; EU average is the World Bank 'European Union' aggregate.
+
+  - id: stability
+    chapter: Stability
+    narration: >-
+      Part of the answer is stability. {{neutrality_1815}}, Europe's great powers formally recognised Swiss neutrality.
+      For a small country between big powers, predictability became an economic asset.
+    claims: [neutrality_1815]
+    analysis: true
+    source_note: Second sentence is the channel's interpretation, not a sourced fact.
+
+  - id: specialisation
+    chapter: Specialisation
+    narration: >-
+      Part of it is specialisation. In {{pharma_share_2024.year}}, chemical and pharmaceutical products made up
+      {{pharma_share_2024}} of Swiss exports. Switzerland sells things that are hard to copy.
+    claims: [pharma_share_2024]
+    analysis: true
+    source_note: Last sentence is interpretation.
+
+  - id: skills
+    chapter: Skills
+    narration: >-
+      And part of it is skills. {{vet_share}} of young people in Switzerland go into vocational education and training,
+      usually apprenticeships that mix the classroom with real work in a company.
+    claims: [vet_share]
+
+  - id: innovation
+    chapter: The payoff
+    narration: >-
+      The payoff shows up in innovation. {{gii_2025_rank}} in its Global Innovation Index.
+    claims: [gii_2025_rank, gii_2025_top5]
+
+  - id: close
+    chapter: ""
+    narration: >-
+      Stability. Specialisation. Skills. Switzerland did not dig its wealth out of the ground. It built it.
+      Next, in the full documentary: the banks, the gold, and the hidden costs.
+      This is The Hidden Economics.
+    claims: []
+    analysis: true
+    source_note: Closing interpretation; teaser topics are listed as open research questions in the dossier.

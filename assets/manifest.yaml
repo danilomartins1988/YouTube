@@ -1,0 +1,23 @@
+# Every non-generated asset used by any video must be listed here with its licence.
+# QC fails if a scene references an asset that is missing here or not on the allowlist.
+assets:
+  geo:europe_50m:
+    path: assets/geo/europe_50m.geojson
+    title: Natural Earth 1:50m Admin 0 Countries (Europe subset, coordinates rounded to 0.001 deg)
+    origin: https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson
+    homepage: https://www.naturalearthdata.com/about/terms-of-use/
+    license: public-domain
+    attribution: "Map data: Natural Earth (public domain)"
+  font:inter:
+    path: null          # system font; see README for install. Falls back to DejaVu Sans.
+    title: Inter typeface by Rasmus Andersson
+    origin: https://rsms.me/inter/
+    license: OFL-1.1
+    attribution: "Typeface: Inter (SIL Open Font License 1.1)"
+  data:worldbank_gdp_population:
+    path: data/snapshots/worldbank_gdp_population.csv
+    title: World Bank WDI GDP (current US$) and population, via datasets/gdp and datasets/population
+    origin: https://github.com/datasets/gdp
+    homepage: https://datacatalog.worldbank.org/public-licenses
+    license: CC-BY-4.0
+    attribution: "Data: World Bank, World Development Indicators (CC BY 4.0)"
