@@ -152,11 +152,11 @@ claims:
     status: source_located
     verification_note: admin.ch dates the recognition to 1815 via the Congress of Vienna and the Treaty of Paris. Check exact wording on both pages.
   - id: pharma_share_2024
-    text: Chemical and pharmaceutical products accounted for 52.7% of Swiss exports in 2024 (CHF 149,058 million).
+    text: Chemical and pharmaceutical products accounted for 52.7% of Swiss (goods) exports in 2024 (CHF 149,058 million).
     spoken: more than half
     display: "52.7%"
     value: 52.7
-    fields: {year: 2024}
+    fields: {year: 2024, spoken_exact: "52.7 percent"}
     source_ids: [bazg_trade_2024, kmu_pharma_exports]
     status: source_located
     verification_note: Figure taken from a search summary of the FOCBS 2024 annual report. Confirm the 52.7% and which export total it refers to (FOCBS 'Total 1' business-cycle total excludes gold and other precious metals) and word the on-screen label accordingly.

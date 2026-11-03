@@ -3,10 +3,16 @@ from hiddeneco import storyboard as sb
 from hiddeneco.models import Script, Segment
 
 
-def test_project_script_has_no_sourcing_errors(paths, dossier):
-    sc = s.load_script(paths.project_dir)
-    errors = [i for i in s.sourcing_issues(sc, dossier) if i["severity"] == "error"]
-    assert errors == []
+def test_project_scripts_have_no_sourcing_errors(paths, dossier):
+    assert paths.deliverables() == ["horizontal", "vertical"]
+    for name in paths.deliverables():
+        sc = s.load_script(paths.for_deliverable(name).deliverable_dir)
+        errors = [i for i in s.sourcing_issues(sc, dossier) if i["severity"] == "error"]
+        assert errors == [], name
+
+
+def test_cap_filter(dossier):
+    assert s.render_text("{{pharma_share_2024|cap}} of it", dossier) == "More than half of it"
 
 
 def test_numbers_come_from_dossier(dossier):
@@ -31,8 +37,10 @@ def test_undeclared_placeholder_is_error(dossier):
     assert any("not listed" in i["message"] for i in s.sourcing_issues(sc, dossier))
 
 
-def test_storyboard_values_resolve(paths, dossier):
-    board = sb.rendered(sb.load_storyboard(paths.project_dir), dossier)
+def test_storyboard_values_resolve(hpaths, vpaths, dossier):
+    board = sb.rendered(sb.load_storyboard(hpaths.deliverable_dir), dossier)
     bars = next(x for x in board.scenes if x.type == "bar_chart")
     assert isinstance(bars.params["data"], list) and bars.params["data"][0]["code"] == "CHE"
-    assert sb.check_alignment(board, s.load_script(paths.project_dir)) == []
+    for p in (hpaths, vpaths):
+        board = sb.load_storyboard(p.deliverable_dir)
+        assert sb.check_alignment(board, s.load_script(p.deliverable_dir)) == []

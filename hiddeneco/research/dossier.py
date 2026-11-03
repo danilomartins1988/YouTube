@@ -135,7 +135,7 @@ def to_markdown(d: Dossier) -> str:
 
 
 def write(d: Dossier, paths: ProjectPaths) -> Path:
-    out = paths.out_sub("research")
+    out = paths.research_out
     (out / "dossier.json").write_text(d.model_dump_json(indent=2), encoding="utf-8")
     (out / "dossier.md").write_text(to_markdown(d), encoding="utf-8")
     log("dossier.written", claims=len(d.claims), unverified=len(unverified(d)), path=str(out))
@@ -143,4 +143,4 @@ def write(d: Dossier, paths: ProjectPaths) -> Path:
 
 
 def load(paths: ProjectPaths) -> Dossier:
-    return Dossier(**json.loads((paths.out / "research" / "dossier.json").read_text(encoding="utf-8")))
+    return Dossier(**json.loads((paths.research_out / "dossier.json").read_text(encoding="utf-8")))

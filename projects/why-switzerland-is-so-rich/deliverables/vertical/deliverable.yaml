@@ -1,0 +1,27 @@
+id: vertical
+format: short_9x16
+title: More Than Half of Swiss Exports Come From One Industry
+target_seconds: {min: 30, max: 45}
+captions: {burn_in: true, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [youtube_shorts, instagram_reels]
+
+thumbnails:
+  - id: cover
+    type: ring_text
+    size: [1080, 1920]
+    value: "{{pharma_share_2024.value}}"
+    display: "{{pharma_share_2024.display}}"
+    lines: [ONE INDUSTRY., MORE THAN HALF, OF SWISS EXPORTS]
+    highlight_line: 1
+    footer: THE HIDDEN ECONOMICS
+    why: Reels/Shorts cover frame; the ring shows the real share revealed in the video.
+
+metadata:
+  titles:
+    - More Than Half of Swiss Exports Come From One Industry
+    - Switzerland's Biggest Export Isn't Chocolate
+  caption: >-
+    More than half of Switzerland's goods exports come from one industry - and it isn't chocolate or watches.
+    The numbers behind Swiss wealth, sourced.
+  hashtags: ["#economics", "#switzerland", "#pharma", "#shorts"]

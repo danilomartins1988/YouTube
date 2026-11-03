@@ -82,8 +82,9 @@ class Scene(BaseModel):
     id: str
     segment: str
     type: Literal["title_card", "map", "bar_chart", "kinetic_text", "ring_stat",
-                  "pictogram", "ranking", "end_card"]
+                  "pictogram", "ranking", "end_card", "big_number", "timeline"]
     params: dict[str, Any] = Field(default_factory=dict)
+    sfx: list[dict[str, Any]] = Field(default_factory=list)   # e.g. {kind: pop, cue: "In 1815"}
     sources: list[str] = Field(default_factory=list)
     assets: list[str] = Field(default_factory=list)
     note: str = ""
@@ -100,6 +101,21 @@ class TimedScene(BaseModel):
     audio_seconds: float
     start: float
     duration: float
+    words: list[dict[str, Any]] = Field(default_factory=list)  # times relative to scene start
+
+
+class Deliverable(BaseModel):
+    id: str
+    format: Literal["long_16x9", "short_9x16", "extended_9x16"]
+    title: str
+    target_seconds: dict[str, float]
+    captions: dict[str, bool] = Field(default_factory=lambda: {"burn_in": False, "sidecar": True})
+    audio: dict[str, bool] = Field(default_factory=lambda: {"music": True, "sfx": True})
+    platforms: list[str] = Field(default_factory=list)
+
+    @property
+    def vertical(self) -> bool:
+        return self.format.endswith("9x16")
 
 
 class CostLine(BaseModel):

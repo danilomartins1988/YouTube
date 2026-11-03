@@ -35,14 +35,24 @@ scenes:
 
   - id: s03_1815
     segment: stability
-    type: kinetic_text
+    type: timeline
     params:
-      chapter: "01 · Stability"
-      lines:
-        - {text: "{{neutrality_1815.display}}", size: 260, style: display, color: accent2, cue: "In 1815"}
-        - {text: Congress of Vienna, size: 64, style: heading, cue: "great powers"}
-        - {text: Great powers recognise Swiss neutrality, size: 44, style: body, color: muted, cue: "neutrality"}
-        - {text: "Predictability \u2192 economic asset", size: 52, style: heading, color: accent, cue: predictability}
+      chapter: "01 \u00b7 Stability"
+      start_year: 1800
+      end_year: 2025
+      end_label: Today
+      tick_every: 50
+      cue: "Part of the answer"
+      draw_seconds: 3.0
+      items:
+        - year: "{{neutrality_1815.value}}"
+          display: "{{neutrality_1815.display}}"
+          label: Great powers formally recognise Swiss neutrality
+          cue: "In 1815"
+      footer: "Predictability \u2192 economic asset"
+      footer_cue: predictability
+    sfx:
+      - {kind: pop, cue: "In 1815"}
     sources: [admin_neutrality, eda_neutrality]
     assets: ["font:inter"]
 
@@ -56,6 +66,8 @@ scenes:
       display: "{{pharma_share_2024.display}}"
       label: of Swiss exports, {{pharma_share_2024.year}}
       sublabel: Chemical & pharmaceutical products
+    sfx:
+      - {kind: pop, cue: "chemical", offset: 1.6}
     sources: [bazg_trade_2024]
     assets: ["font:inter"]
 
@@ -70,6 +82,9 @@ scenes:
       headline: "{{vet_share.display}}"
       label: young people enter vocational education & training
       sublabel: Most often a dual-track apprenticeship - school plus work in a company
+    sfx:
+      - {kind: tick, cue: "of young people", offset: 1.2}
+      - {kind: tick, cue: "of young people", offset: 1.4}
     sources: [seri_vet]
     assets: ["font:inter"]
 
@@ -85,6 +100,8 @@ scenes:
       badge: "#{{gii_2025_rank.value}}"
       badge_label: "{{gii_2025_rank.economies}} economies ranked"
       highlight: Switzerland
+    sfx:
+      - {kind: pop, cue: "In 2025", offset: 2.1}
     sources: [wipo_gii_2025]
     assets: ["font:inter"]
 

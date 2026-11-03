@@ -45,16 +45,40 @@ def offline() -> bool:
 
 @dataclass(frozen=True)
 class ProjectPaths:
+    """Paths for one topic (slug) and, optionally, one deliverable of it.
+
+    projects/<slug>/                      topic-level: project.yaml, sources.yaml
+    projects/<slug>/deliverables/<id>/    deliverable.yaml, script.yaml, storyboard.yaml
+    output/<slug>/research/               shared dossier
+    output/<slug>/<id>/                   everything rendered for that deliverable
+    """
     slug: str
     root: Path
+    deliverable: str | None = None
 
     @property
     def project_dir(self) -> Path:
         return self.root / "projects" / self.slug
 
     @property
-    def out(self) -> Path:
+    def deliverable_dir(self) -> Path:
+        if self.deliverable is None:
+            return self.project_dir
+        return self.project_dir / "deliverables" / self.deliverable
+
+    @property
+    def topic_out(self) -> Path:
         return self.root / "output" / self.slug
+
+    @property
+    def research_out(self) -> Path:
+        p = self.topic_out / "research"
+        p.mkdir(parents=True, exist_ok=True)
+        return p
+
+    @property
+    def out(self) -> Path:
+        return self.topic_out if self.deliverable is None else self.topic_out / self.deliverable
 
     def out_sub(self, name: str) -> Path:
         p = self.out / name
@@ -63,8 +87,16 @@ class ProjectPaths:
 
     @property
     def final_video(self) -> Path:
-        return self.out / f"{self.slug}.mp4"
+        suffix = f"--{self.deliverable}" if self.deliverable else ""
+        return self.out / f"{self.slug}{suffix}.mp4"
+
+    def for_deliverable(self, deliverable: str) -> "ProjectPaths":
+        return ProjectPaths(self.slug, self.root, deliverable)
+
+    def deliverables(self) -> list[str]:
+        d = self.project_dir / "deliverables"
+        return sorted(p.name for p in d.iterdir() if (p / "deliverable.yaml").exists()) if d.exists() else []
 
 
-def project_paths(slug: str, root: Path | None = None) -> ProjectPaths:
-    return ProjectPaths(slug=slug, root=root or REPO_ROOT)
+def project_paths(slug: str, root: Path | None = None, deliverable: str | None = None) -> ProjectPaths:
+    return ProjectPaths(slug=slug, root=root or REPO_ROOT, deliverable=deliverable)

@@ -1,0 +1,48 @@
+id: horizontal
+format: long_16x9            # see config/settings.yaml -> formats
+title: Why Switzerland Is So Rich
+target_seconds: {min: 60, max: 90}   # pilot length; a full documentary uses 480-720
+captions: {burn_in: false, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [youtube]
+
+# Three thumbnail concepts (1280x720). Text may use {{claim}} placeholders.
+thumbnails:
+  - id: a_the_number
+    type: number_over_map
+    size: [1280, 720]
+    focus: CHE
+    view: {lon: 8.25, lat: 46.8, span_deg: 9.5}
+    number: "{{gdppc_che_2023.display}}"
+    kicker: "PER PERSON · {{gdppc_che_2023.year}}"
+    hook: HOW?
+    why: One huge sourced number over a red Switzerland; the question is what the video answers.
+  - id: b_versus
+    type: versus_bars
+    size: [1280, 720]
+    data: "{{gdppc_chart_2023.value}}"
+    a: CHE
+    b: DEU
+    number: "{{ratio_che_deu_2023.display}}"
+    line1: GERMANY'S
+    line2: INCOME PER PERSON
+    why: Two-bar comparison with a familiar benchmark; instantly readable on mobile.
+  - id: c_what_it_sells
+    type: ring_text
+    size: [1280, 720]
+    value: "{{pharma_share_2024.value}}"
+    display: "{{pharma_share_2024.display}}"
+    lines: [WHAT, SWITZERLAND, REALLY SELLS]
+    highlight_line: 1
+    why: Teases the export answer covered in the video without stating it.
+
+metadata:
+  titles:
+    - Why Switzerland Is So Rich
+    - How Did Switzerland Get So Rich?
+    - Switzerland Has No Coastline. So Why Is It This Rich?
+    - The Three Things That Made Switzerland Rich
+    - Switzerland's Wealth, Explained in 90 Seconds
+  description_intro: How did a small, landlocked country get this rich? Stability, specialisation and skills - the three forces behind Swiss wealth, in under ninety seconds.
+  tags: [Switzerland, Swiss economy, economics explained, GDP per capita, why is Switzerland rich, economic history, documentary]
+  hashtags: ["#economics", "#switzerland", "#documentary"]

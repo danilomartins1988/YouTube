@@ -31,6 +31,62 @@ class EspeakProvider(TTSProvider):
         return out_path
 
 
+class FestivalProvider(TTSProvider):
+    """Festival with the CMU ARCTIC 'slt' HTS voice: free, offline, clearer than espeak.
+    Install: apt install festival festvox-us-slt-hts (Debian/Ubuntu)."""
+    name = "festival"
+
+    def available(self):
+        if not shutil.which("text2wave"):
+            return False, "festival not installed (apt install festival festvox-us-slt-hts)"
+        return True, ""
+
+    def _synthesize(self, text, out_path):
+        txt = out_path.with_suffix(".txt")
+        txt.write_text(text, encoding="utf-8")
+        voice = self.options.get("voice", "cmu_us_slt_arctic_hts")
+        subprocess.run(["text2wave", "-eval", f"(voice_{voice})", str(txt), "-o", str(out_path)],
+                       check=True, capture_output=True)
+        txt.unlink(missing_ok=True)
+        return out_path
+
+
+class KokoroProvider(TTSProvider):
+    """Kokoro-82M via kokoro-onnx: free, local, natural-sounding (Apache-2.0 weights).
+    pip install kokoro-onnx; download kokoro-v1.0.onnx + voices-v1.0.bin and set the env vars."""
+    name = "kokoro"
+
+    def _paths(self):
+        m = env(self.options.get("model_path_env", "KOKORO_MODEL_PATH"))
+        v = env(self.options.get("voices_path_env", "KOKORO_VOICES_PATH"))
+        return (Path(m) if m else None), (Path(v) if v else None)
+
+    def available(self):
+        try:
+            import kokoro_onnx  # noqa: F401
+        except ImportError:
+            return False, "pip install kokoro-onnx"
+        m, v = self._paths()
+        if not (m and m.exists() and v and v.exists()):
+            return False, "set KOKORO_MODEL_PATH and KOKORO_VOICES_PATH to the downloaded model files"
+        return True, ""
+
+    def _synthesize(self, text, out_path):
+        import numpy as np
+        from kokoro_onnx import Kokoro
+        m, v = self._paths()
+        samples, rate = Kokoro(str(m), str(v)).create(
+            text, voice=self.options.get("voice", "am_michael"),
+            speed=float(self.options.get("speed", 1.0)), lang="en-us")
+        pcm = (np.clip(samples, -1, 1) * 32767).astype("<i2")
+        with wave.open(str(out_path), "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(rate)
+            w.writeframes(pcm.tobytes())
+        return out_path
+
+
 class PiperProvider(TTSProvider):
     """Piper: free local neural TTS (https://github.com/rhasspy/piper). Needs a downloaded voice;
     check each voice's MODEL_CARD for its licence before commercial use."""
@@ -124,7 +180,7 @@ class SilentProvider(TTSProvider):
         return out_path
 
 
-PROVIDERS = {p.name: p for p in (EspeakProvider, PiperProvider, ElevenLabsProvider,
+PROVIDERS = {p.name: p for p in (FestivalProvider, KokoroProvider, EspeakProvider, PiperProvider, ElevenLabsProvider,
                                  OpenAIProvider, SilentProvider)}
 
 

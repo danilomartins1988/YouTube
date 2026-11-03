@@ -8,7 +8,7 @@ import yaml
 
 from hiddeneco.models import Dossier, Script
 
-PLACEHOLDER = re.compile(r"\{\{\s*([a-zA-Z0-9_]+)(?:\.([a-zA-Z0-9_]+))?\s*\}\}")
+PLACEHOLDER = re.compile(r"\{\{\s*([a-zA-Z0-9_]+)(?:\.([a-zA-Z0-9_]+))?\s*(\|cap)?\s*\}\}")
 NUMBER_WORDS = re.compile(
     r"\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|twenty|thirty|forty|fifty|"
     r"hundred|thousand|million|billion|trillion|percent|half|third|thirds|quarter|twice|double|"
@@ -21,8 +21,8 @@ class ScriptError(ValueError):
     pass
 
 
-def load_script(project_dir: Path) -> Script:
-    return Script(**yaml.safe_load((project_dir / "script.yaml").read_text(encoding="utf-8")))
+def load_script(deliverable_dir: Path) -> Script:
+    return Script(**yaml.safe_load((deliverable_dir / "script.yaml").read_text(encoding="utf-8")))
 
 
 def resolve(dossier: Dossier, claim_id: str, field: str | None):
@@ -38,8 +38,14 @@ def resolve(dossier: Dossier, claim_id: str, field: str | None):
     raise ScriptError(f"Claim '{claim_id}' has no field '{field}'")
 
 
+def _sub(m, dossier: Dossier) -> str:
+    text = str(resolve(dossier, m.group(1), m.group(2)))
+    return text[:1].upper() + text[1:] if m.group(3) else text
+
+
 def render_text(template: str, dossier: Dossier) -> str:
-    return PLACEHOLDER.sub(lambda m: str(resolve(dossier, m.group(1), m.group(2))), template)
+    """Fill {{claim}}, {{claim.field}} and {{claim|cap}} (capitalise first letter)."""
+    return PLACEHOLDER.sub(lambda m: _sub(m, dossier), template)
 
 
 def render_value(obj, dossier: Dossier):

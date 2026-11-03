@@ -92,6 +92,9 @@ def aa_shape(img: Image.Image, box, color, draw_fn, alpha: float = 1.0, ss: int 
 
 
 def wrap(text: str, fnt, max_width: int) -> list[str]:
+    """Greedy word wrap; explicit newlines force breaks."""
+    if "\n" in text:
+        return [ln for part in text.split("\n") for ln in wrap(part, fnt, max_width)]
     lines, cur = [], ""
     for word in text.split():
         trial = f"{cur} {word}".strip()

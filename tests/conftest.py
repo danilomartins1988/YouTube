@@ -18,6 +18,16 @@ def paths(tmp_path_factory):
 
 
 @pytest.fixture(scope="session")
+def hpaths(paths):
+    return paths.for_deliverable("horizontal")
+
+
+@pytest.fixture(scope="session")
+def vpaths(paths):
+    return paths.for_deliverable("vertical")
+
+
+@pytest.fixture(scope="session")
 def dossier(paths):
     from hiddeneco.research.dossier import build_dossier
     return build_dossier(paths)

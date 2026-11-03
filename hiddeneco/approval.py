@@ -64,12 +64,18 @@ def check_approved(paths: ProjectPaths) -> dict:
 
 def package_for_upload(paths: ProjectPaths) -> str:
     rec = check_approved(paths)
-    pkg = paths.out_sub("publish_package")
-    shutil.copy2(paths.final_video, pkg / paths.final_video.name)
-    for rel in ("subtitles.srt", "youtube_metadata.md", "approval.json"):
-        if (paths.out / rel).exists():
-            shutil.copy2(paths.out / rel, pkg / rel)
-    for t in (paths.out / "thumbnails").glob("*.png"):
-        shutil.copy2(t, pkg / t.name)
-    return (f"Approved by {rec['reviewer']} at {rec['at']}. Upload package ready at {pkg}. "
-            "Automatic upload is intentionally not implemented; upload manually in YouTube Studio.")
+    drafts = paths.out / "exports_draft"
+    if not drafts.exists():
+        raise ApprovalError("No export drafts found. Rebuild first.")
+    pkg = paths.out / "publish_package"
+    if pkg.exists():
+        shutil.rmtree(pkg)
+    shutil.copytree(drafts, pkg)
+    for platform_dir in pkg.iterdir():
+        shutil.copy2(paths.out / "approval.json", platform_dir / "approval.json")
+        cl = platform_dir / "CHECKLIST.md"
+        if cl.exists():
+            cl.write_text(cl.read_text().replace("DRAFT (not approved)", f"APPROVED by {rec['reviewer']}"))
+    return (f"Approved by {rec['reviewer']} at {rec['at']}. Packages ready at {pkg} "
+            f"({', '.join(sorted(p.name for p in pkg.iterdir()))}). Automatic upload is intentionally "
+            "not implemented; upload manually after re-checking each CHECKLIST.md.")

@@ -40,8 +40,12 @@ class TTSProvider(abc.ABC):
         if not ok:
             raise TTSUnavailable(f"{self.name}: {reason}")
         out_wav.parent.mkdir(parents=True, exist_ok=True)
-        raw = self._synthesize(text, out_wav.with_suffix(".raw" + self.raw_suffix))
-        normalise_wav(raw, out_wav, sample_rate)
+        from hiddeneco.retry import retry
+        raw_path = out_wav.with_suffix(".raw" + self.raw_suffix)
+        # network providers can fail transiently; local ones simply succeed first time
+        raw = retry(lambda: self._synthesize(text, raw_path), attempts=4 if self.paid else 1,
+                    what=f"tts:{self.name}")
+        normalise_wav(raw, out_wav, sample_rate, tempo=float(self.options.get("tempo", 1.0)))
         if raw != out_wav:
             raw.unlink(missing_ok=True)
         return wav_seconds(out_wav)
@@ -52,12 +56,15 @@ class TTSProvider(abc.ABC):
         return tts_cost(self.name, chars)
 
 
-def normalise_wav(src: Path, dst: Path, sample_rate: int = 48000) -> None:
-    """Resample to mono 16-bit PCM and trim leading/trailing silence."""
+def normalise_wav(src: Path, dst: Path, sample_rate: int = 48000, tempo: float = 1.0) -> None:
+    """Resample to mono 16-bit PCM, trim leading/trailing silence, optionally change tempo
+    without changing pitch."""
     if not shutil.which("ffmpeg"):
         raise TTSUnavailable("ffmpeg not found on PATH")
     trim = ("silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.05,"
             "areverse,silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.08,areverse")
+    if abs(tempo - 1.0) > 1e-3:
+        trim += f",atempo={tempo:.3f}"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-af", trim,
                     "-ac", "1", "-ar", str(sample_rate), "-sample_fmt", "s16", str(dst)], check=True)
 

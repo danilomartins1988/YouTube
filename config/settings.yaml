@@ -1,17 +1,49 @@
 # Global pipeline settings. Per-video choices live in projects/<slug>/project.yaml.
-video:
-  width: 1920
-  height: 1080
+video:                # shared by all formats; width/height/lead/tail come from `formats`
   fps: 30
   crf: 20            # x264 quality (lower = better/larger)
   preset: medium
   audio_sample_rate: 48000
-  scene_lead_in: 0.45   # seconds of picture before narration starts in each scene
-  scene_tail: 0.6       # seconds of picture after narration ends
+
+# Output formats. A deliverable picks one in its deliverable.yaml.
+formats:
+  long_16x9:
+    width: 1920
+    height: 1080
+    loudness_lufs: -16       # long-form: a little more headroom
+    scene_lead_in: 0.45
+    scene_tail: 0.6
+    fade: 0.35
+  short_9x16:
+    width: 1080
+    height: 1920
+    loudness_lufs: -14       # mobile feeds play louder
+    scene_lead_in: 0.2
+    scene_tail: 0.3
+    fade: 0.18
+    # Areas platform UI tends to cover (px). Key content and captions stay out of them.
+    safe_zone: {top: 250, bottom: 480, left: 60, right: 140}
+  extended_9x16:
+    width: 1080
+    height: 1920
+    loudness_lufs: -14
+    scene_lead_in: 0.25
+    scene_tail: 0.4
+    fade: 0.2
+    safe_zone: {top: 250, bottom: 480, left: 60, right: 140}
 
 tts:
-  default_provider: espeak     # espeak | piper | elevenlabs | openai | silent
+  default_provider: festival   # festival | kokoro | piper | espeak | elevenlabs | openai | silent
+  sentence_gap: 0.22           # seconds of silence between sentences
   providers:
+    festival:
+      voice: cmu_us_slt_arctic_hts   # apt: festival festvox-us-slt-hts (free, CMU ARCTIC licence)
+      tempo: 1.12                    # pitch-preserving speed-up applied with FFmpeg atempo
+    kokoro:
+      model_path_env: KOKORO_MODEL_PATH     # kokoro-v1.0.onnx (Apache-2.0)
+      voices_path_env: KOKORO_VOICES_PATH   # voices-v1.0.bin
+      voice: am_michael
+      speed: 1.0
     espeak:
       voice: en-gb-x-rp
       words_per_minute: 176
@@ -34,6 +66,8 @@ tts:
 # page before relying on them, and update `verified_on`. `null` means "unknown" and
 # the cost report will say so instead of guessing.
 pricing:
+  festival:   {usd_per_1k_chars: 0.0,   verified_on: "n/a (open source, local)"}
+  kokoro:     {usd_per_1k_chars: 0.0,   verified_on: "n/a (open source, local)"}
   espeak:     {usd_per_1k_chars: 0.0,   verified_on: "n/a (open source, local)"}
   piper:      {usd_per_1k_chars: 0.0,   verified_on: "n/a (open source, local)"}
   silent:     {usd_per_1k_chars: 0.0,   verified_on: "n/a"}
@@ -50,9 +84,13 @@ licensing:
     - CC-BY-4.0
     - OFL-1.1
     - GPL-3.0-or-later-output   # e.g. espeak-ng speech output (output is not GPL-encumbered)
+    - CMU-ARCTIC                # Festival slt voice data: free use incl. commercial, keep notice
   attribution_required: [CC-BY-4.0]
 
 qc:
   narration_wpm_min: 120
   narration_wpm_max: 185
   max_scene_similarity: 0.80    # editorial distinctiveness vs. previous projects
+
+# Used only to show costs in BRL alongside USD. Not live - update when you need precision.
+brl_per_usd: null

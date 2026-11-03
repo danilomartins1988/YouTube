@@ -1,0 +1,43 @@
+# Vertical short (30-45 s). Its own story, not a cut-down of the horizontal film.
+# Angle: one industry makes up more than half of Swiss goods exports.
+title: More Than Half of Swiss Exports Come From One Industry
+logline: More than half of the goods Switzerland exports come from one industry. Here's which one, and why it matters.
+segments:
+  - id: hook
+    chapter: ""
+    narration: >-
+      {{pharma_share_2024|cap}} of the goods Switzerland exports come from one single industry.
+      It isn't chocolate. And it isn't watches.
+    claims: [pharma_share_2024]
+    source_note: >-
+      'It isn't chocolate / watches' follows logically: if one category is more than half of exports,
+      no other category can also be more than half. No separate statistic is implied.
+
+  - id: reveal
+    chapter: ""
+    narration: >-
+      It's chemicals and pharmaceuticals. In {{pharma_share_2024.year}}, they made up
+      {{pharma_share_2024.spoken_exact}} of Swiss exports.
+    claims: [pharma_share_2024]
+
+  - id: why
+    chapter: ""
+    narration: >-
+      Medicines are small, valuable and hard to copy. So a landlocked country can sell them anywhere in the world.
+    claims: [geo_landlocked]
+    analysis: true
+    source_note: Interpretation by the channel, not a sourced statistic.
+
+  - id: payoff
+    chapter: ""
+    narration: >-
+      It's one reason Switzerland produced {{gdppc_che_2023}} of output per person in {{gdppc_che_2023.year}}.
+    claims: [gdppc_che_2023]
+    analysis: true
+    source_note: '"One reason" is interpretation; the figure is World Bank data.'
+
+  - id: outro
+    chapter: ""
+    narration: >-
+      Want the full story of how Switzerland got this rich? Follow The Hidden Economics.
+    claims: []

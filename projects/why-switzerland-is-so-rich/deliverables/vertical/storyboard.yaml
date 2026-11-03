@@ -1,0 +1,79 @@
+# 9:16 storyboard. Captions are burned in by the renderer (deliverable.yaml: captions.burn_in).
+scenes:
+  - id: v01_hook
+    segment: hook
+    type: kinetic_text
+    params:
+      lines:
+        - {text: MORE THAN HALF, size: 150, style: display, color: accent2, at: 0.0}
+        - {text: of Swiss goods exports, size: 64, style: heading, cue: "of the goods"}
+        - {text: = one industry, size: 64, style: heading, color: accent, cue: "one single industry"}
+        - {text: "Chocolate?", size: 96, style: display, cue: "It isn't", strike_cue: {cue: chocolate, offset: 0.25}}
+        - {text: "Watches?", size: 96, style: display, cue: "And it", strike_cue: {cue: watches, offset: 0.25}}
+    sfx:
+      - {kind: tick, cue: "chocolate", offset: 0.25}
+      - {kind: tick, cue: "watches", offset: 0.25}
+    sources: [bazg_trade_2024]
+    assets: ["font:inter"]
+
+  - id: v02_reveal
+    segment: reveal
+    type: ring_stat
+    params:
+      cue: "they made up"
+      value: "{{pharma_share_2024.value}}"
+      display: "{{pharma_share_2024.display}}"
+      sublabel: Chemicals & pharmaceuticals
+      label: Share of Swiss exports, {{pharma_share_2024.year}}
+    sfx:
+      - {kind: pop, cue: "they made up", offset: 1.6}
+    sources: [bazg_trade_2024]
+    assets: ["font:inter"]
+
+  - id: v03_why
+    segment: why
+    type: map
+    params:
+      focus: CHE
+      start_view: {lon: 8.25, lat: 46.8, span_deg: 22}
+      end_view: {lon: 8.25, lat: 46.8, span_deg: 9}
+      zoom_start: 0.0
+      zoom_fraction: 0.4
+      focus_label: Switzerland
+      arrows: [280, 312, 344, 16, 48, 80]
+      arrows_cue: "So a landlocked"
+      headline: "Small. Valuable.\nHard to copy."
+      headline_cue: "Medicines"
+      subline: Easy to ship from a landlocked country.
+      subline_cue: "So a landlocked"
+    sfx:
+      - {kind: whoosh, cue: "So a landlocked", gain: 0.18}
+    sources: [natural_earth]
+    assets: ["geo:europe_50m", "font:inter"]
+
+  - id: v04_payoff
+    segment: payoff
+    type: big_number
+    params:
+      cue: "Switzerland produced"
+      kicker: Switzerland, {{gdppc_che_2023.year}}
+      value: "{{gdppc_che_2023.value}}"
+      display: "{{gdppc_che_2023.display}}"
+      label: GDP per person, current US$
+      sublabel: World Bank data
+    sfx:
+      - {kind: pop, cue: "Switzerland produced", offset: 1.4}
+    sources: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
+    assets: ["font:inter", "data:worldbank_gdp_population"]
+
+  - id: v05_outro
+    segment: outro
+    type: end_card
+    params:
+      words: []
+      brand: The Hidden Economics
+      brand_cue: "Follow"
+      teaser: Follow for the full documentary
+      teaser_cue: "Follow"
+    sources: []
+    assets: ["font:inter"]

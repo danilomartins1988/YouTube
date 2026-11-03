@@ -1,4 +1,5 @@
-"""Three deliberately different thumbnail concepts, drawn from dossier values only."""
+"""Thumbnail / cover concepts defined in each deliverable.yaml (`thumbnails:`), rendered from
+dossier values. Concept types are reusable layouts; the words and numbers are per video."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -6,87 +7,97 @@ from pathlib import Path
 from PIL import Image
 
 from hiddeneco.config import REPO_ROOT
-from hiddeneco.models import Dossier
 from hiddeneco.render import geo
-from hiddeneco.render.primitives import aa_shape, draw_text, fill_rect
+from hiddeneco.render.primitives import aa_shape, draw_text, fill_rect, text_size
 from hiddeneco.render.style import Style
 
-W, H = 1280, 720
+
+def _fit(st: Style, text: str, role: str, size: int, max_w: int):
+    while size > 20 and text_size(text, st.f(role, size))[0] > max_w:
+        size -= 4
+    return st.f(role, size)
 
 
-def _style(style_cfg: dict) -> Style:
-    st = Style({**style_cfg, "motifs": [m for m in style_cfg.get("motifs", []) if m != "film-grain"]}, W, H)
-    return st
-
-
-def concept_number(st: Style, d: Dossier) -> Image.Image:
+def number_over_map(st: Style, c: dict) -> Image.Image:
     img = st.background()
+    W, H = st.W, st.H
     countries = geo.load_countries(str(REPO_ROOT / "assets" / "geo" / "europe_50m.geojson"))
-    view = geo.View(8.25, 46.8, 9.5, W, H, anchor=(0.74, 0.5))
-    geo.draw_map(img, countries, view, st.c("land"), st.c("border"), {"CHE": st.c("accent")}, border_px=1.5)
-    fill_rect(img, (0, 0, 640, H), st.c("bg"), 0.82)
-    gd = d.claim("gdppc_che_2023")
-    draw_text(img, gd.display, st.f("display", 132), st.c("accent2"), (60, 330), "ls")
-    draw_text(img, f"PER PERSON · {gd.fields['year']}", st.f("body_bold", 38), st.c("ink"), (66, 400), "ls",
-              tracking=4)
-    draw_text(img, "HOW?", st.f("display", 120), st.c("ink"), (60, 600), "ls")
+    v = c["view"]
+    vertical = H > W
+    view = geo.View(v["lon"], v["lat"], v["span_deg"], W, H, anchor=(0.5, 0.3) if vertical else (0.74, 0.5))
+    geo.draw_map(img, countries, view, st.c("land"), st.c("border"), {c["focus"]: st.c("accent")}, border_px=1.5)
+    if vertical:
+        fill_rect(img, (0, H * 0.55, W, H), st.c("bg"), 0.85)
+        x, y = 70, int(H * 0.66)
+    else:
+        fill_rect(img, (0, 0, W * 0.5, H), st.c("bg"), 0.82)
+        x, y = 60, 330
+    draw_text(img, c["number"], _fit(st, c["number"], "display", 150, int(W * 0.45 if not vertical else W - 140)),
+              st.c("accent2"), (x, y), "ls")
+    draw_text(img, c.get("kicker", ""), st.f("body_bold", 38), st.c("ink"), (x + 6, y + 70), "ls", tracking=4)
+    draw_text(img, c.get("hook", ""), st.f("display", 120), st.c("ink"), (x, y + 270), "ls")
     return img
 
 
-def concept_versus(st: Style, d: Dossier) -> Image.Image:
+def versus_bars(st: Style, c: dict) -> Image.Image:
     img = st.background()
-    rows = {r["code"]: r for r in d.claim("gdppc_chart_2023").value}
-    che, deu = rows["CHE"]["value"], rows["DEU"]["value"]
-    base, maxh = 640, 470
-    for i, (code, v, col) in enumerate((("CHE", che, st.c("accent")), ("DEU", deu, st.c("muted")))):
-        x = 760 + i * 230
-        h = maxh * v / che
-        fill_rect(img, (x, base - h, x + 180, base), col)
-        draw_text(img, rows[code]["name"].upper(), st.f("body_bold", 30), st.c("ink"), (x + 90, base + 40), "mm",
-                  tracking=2)
-    draw_text(img, d.claim("ratio_che_deu_2023").display, st.f("display", 210), st.c("accent2"), (60, 330), "ls")
-    draw_text(img, "GERMANY'S", st.f("display", 80), st.c("ink"), (66, 430), "ls")
-    draw_text(img, "INCOME PER PERSON", st.f("heading", 44), st.c("ink"), (66, 495), "ls")
+    W, H = st.W, st.H
+    rows = {r["code"]: r for r in c["data"]}
+    va, vb = rows[c["a"]]["value"], rows[c["b"]]["value"]
+    base, maxh = int(H * 0.89), int(H * 0.65)
+    for i, (code, v, col) in enumerate(((c["a"], va, st.c("accent")), (c["b"], vb, st.c("muted")))):
+        x = int(W * 0.6) + i * int(W * 0.18)
+        h = maxh * v / max(va, vb)
+        fill_rect(img, (x, base - h, x + int(W * 0.14), base), col)
+        draw_text(img, rows[code]["name"].upper(), st.f("body_bold", 30), st.c("ink"),
+                  (x + int(W * 0.07), base + 40), "mm", tracking=2)
+    draw_text(img, c["number"], st.f("display", 210), st.c("accent2"), (60, 330), "ls")
+    draw_text(img, c.get("line1", ""), st.f("display", 80), st.c("ink"), (66, 430), "ls")
+    draw_text(img, c.get("line2", ""), st.f("heading", 44), st.c("ink"), (66, 495), "ls")
     return img
 
 
-def concept_ring(st: Style, d: Dossier) -> Image.Image:
+def ring_text(st: Style, c: dict) -> Image.Image:
     img = st.background()
-    c = d.claim("pharma_share_2024")
-    cx, cy, r, th = 1035, 360, 195, 52
+    W, H = st.W, st.H
+    vertical = H > W
+    if vertical:
+        cx, cy, r, th = W // 2, int(H * 0.58), 300, 70
+        tx, ty, size, max_w = 70, int(H * 0.17), 120, W - 140
+    else:
+        cx, cy, r, th = int(W * 0.81), H // 2, 195, 52
+        tx, ty, size, max_w = 60, 260, 100, int(W * 0.58)
     box = (cx - r, cy - r, cx + r, cy + r)
 
     def arc(ext):
         return lambda dr, ss: dr.arc((0, 0, 2 * r * ss, 2 * r * ss), -90, -90 + 360 * ext, fill=255, width=th * ss)
     aa_shape(img, box, st.c("land"), arc(1.0))
-    aa_shape(img, box, st.c("accent"), arc(float(c.value) / 100))
-    draw_text(img, c.display, st.f("display", 84), st.c("ink"), (cx, cy), "mm")
-    draw_text(img, "WHAT", st.f("display", 100), st.c("ink"), (60, 260), "ls")
-    draw_text(img, "SWITZERLAND", st.f("display", 100), st.c("accent2"), (60, 370), "ls")
-    draw_text(img, "REALLY SELLS", st.f("display", 100), st.c("ink"), (60, 480), "ls")
+    aa_shape(img, box, st.c("accent"), arc(float(c["value"]) / 100))
+    draw_text(img, c["display"], st.f("display", 120 if vertical else 84), st.c("ink"), (cx, cy), "mm")
+    for i, line in enumerate(c.get("lines", [])):
+        colour = st.c("accent2") if i == c.get("highlight_line", -1) else st.c("ink")
+        draw_text(img, line, _fit(st, line, "display", size, max_w), colour, (tx, ty + i * size * 1.1), "ls")
+    if c.get("footer"):
+        draw_text(img, c["footer"], st.f("body_bold", 40), st.c("muted"), (W // 2, cy + r + 120), "mm", tracking=3)
     return img
 
 
-CONCEPTS = [
-    ("a_the_number", concept_number,
-     "Single huge number over a red Switzerland. Curiosity gap: the figure plus 'HOW?'."),
-    ("b_versus", concept_versus,
-     "Two-bar comparison with Germany - instantly readable on mobile; relies on a familiar benchmark."),
-    ("c_what_it_sells", concept_ring,
-     "Ring chart teasing the export answer (chemicals & pharma) without stating it in the text."),
-]
+CONCEPTS = {"number_over_map": number_over_map, "versus_bars": versus_bars, "ring_text": ring_text}
 
 
-def make_thumbnails(style_cfg: dict, dossier: Dossier, out_dir: Path) -> list[Path]:
+def make_thumbnails(style_cfg: dict, concepts: list[dict], out_dir: Path) -> list[Path]:
+    """concepts: rendered (placeholder-free) specs: {id, type, size: [w, h], why, ...}."""
     out_dir.mkdir(parents=True, exist_ok=True)
-    st = _style(style_cfg)
-    paths, md = [], ["# Thumbnail concepts", ""]
-    for name, fn, why in CONCEPTS:
-        p = out_dir / f"thumb_{name}.png"
-        fn(st, dossier).save(p, optimize=True)
+    cfg = {**style_cfg, "motifs": [m for m in style_cfg.get("motifs", []) if m != "film-grain"]}
+    paths, md = [], ["# Thumbnail / cover concepts", ""]
+    for c in concepts:
+        w, h = c.get("size", [1280, 720])
+        st = Style(cfg, w, h)
+        p = out_dir / f"thumb_{c['id']}.png"
+        CONCEPTS[c["type"]](st, c).save(p, optimize=True)
         paths.append(p)
-        md.append(f"- **{p.name}** - {why}")
-    md += ["", "All numbers are pulled from the dossier; all graphics are original. "
-           "Run an A/B test (YouTube 'Test & compare') only after approval."]
+        md.append(f"- **{p.name}** ({w}x{h}) - {c.get('why', '')}")
+    md += ["", "All numbers come from the dossier and every graphic is original. Each concept must "
+           "describe what the video actually shows (no misleading clickbait)."]
     (out_dir / "thumbnails.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     return paths

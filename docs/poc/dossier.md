@@ -1,6 +1,6 @@
 # Research dossier: Why Switzerland Is So Rich
 
-Generated 2026-11-03T00:31:22+00:00.
+Generated 2026-11-03T01:26:06+00:00.
 
 ## Claims
 
@@ -8,7 +8,7 @@ Generated 2026-11-03T00:31:22+00:00.
 |---|---|---|---|
 | `geo_landlocked` | Switzerland is a landlocked, mountainous country. | **source_located** | natural_earth |
 | `neutrality_1815` | Europe's great powers formally recognised Swiss neutrality in 1815 (Congress of Vienna and the Second Treaty of Paris). | **source_located** | admin_neutrality, eda_neutrality |
-| `pharma_share_2024` | Chemical and pharmaceutical products accounted for 52.7% of Swiss exports in 2024 (CHF 149,058 million). | **source_located** | bazg_trade_2024, kmu_pharma_exports |
+| `pharma_share_2024` | Chemical and pharmaceutical products accounted for 52.7% of Swiss (goods) exports in 2024 (CHF 149,058 million). | **source_located** | bazg_trade_2024, kmu_pharma_exports |
 | `vet_share` | About two-thirds of young people in Switzerland enter vocational education and training (VET); the most common form is dual-track VET combining classroom instruction with workplace training. | **source_located** | seri_vet |
 | `gii_2025_rank` | In the Global Innovation Index 2025, WIPO ranked Switzerland first of 139 economies. | **source_located** | wipo_gii_2025, ige_gii_2025 |
 | `gii_2025_top5` | GII 2025 top five: Switzerland, Sweden, United States, Republic of Korea, Singapore. | **source_located** | wipo_gii_2025 |
@@ -24,7 +24,7 @@ Generated 2026-11-03T00:31:22+00:00.
   _Note:_ Landlocked status is visible in the Natural Earth boundaries. 'Mountainous' needs a citation (e.g. Swiss Federal Statistical Office land-use statistics) or should be cut.
 - `neutrality_1815` (source_located): Europe's great powers formally recognised Swiss neutrality in 1815 (Congress of Vienna and the Second Treaty of Paris).  
   _Note:_ admin.ch dates the recognition to 1815 via the Congress of Vienna and the Treaty of Paris. Check exact wording on both pages.
-- `pharma_share_2024` (source_located): Chemical and pharmaceutical products accounted for 52.7% of Swiss exports in 2024 (CHF 149,058 million).  
+- `pharma_share_2024` (source_located): Chemical and pharmaceutical products accounted for 52.7% of Swiss (goods) exports in 2024 (CHF 149,058 million).  
   _Note:_ Figure taken from a search summary of the FOCBS 2024 annual report. Confirm the 52.7% and which export total it refers to (FOCBS 'Total 1' business-cycle total excludes gold and other precious metals) and word the on-screen label accordingly.
 - `vet_share` (source_located): About two-thirds of young people in Switzerland enter vocational education and training (VET); the most common form is dual-track VET combining classroom instruction with workplace training.  
   _Note:_ SERI states that two-thirds of young people benefit from VET. Confirm exact phrasing; do not conflate with annual 'Transition Barometer' interest percentages.
