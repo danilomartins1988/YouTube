@@ -99,7 +99,7 @@ scenes:
       emphasis: [DEU]
       cue: "Follow the data"
       draw_seconds: 5.5
-      callout: "Above Germany & EU average: {{che_above_deu_euu_2000_2023.display}}"
+      callout: "Ahead of Germany & EU: every year"
       callout_cue: "stays ahead"
     sources: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
     assets: ["font:inter", "data:worldbank_gdp_population"]
@@ -247,6 +247,7 @@ scenes:
     params:
       chapter: "03 · Money"
       cue: "drew a line"
+      count: false
       kicker: "Swiss National Bank · {{snb_floor_2011.year}}"
       value: "{{snb_floor_2011.value}}"
       display: "{{snb_floor_2011.display}}"
@@ -308,7 +309,7 @@ scenes:
       chapter: "04 · Specialisation"
       focus: CHE
       start_view: {lon: 8.25, lat: 46.8, span_deg: 9}
-      end_view: {lon: 8.2, lat: 47.3, span_deg: 4.2}
+      end_view: {lon: 8.3, lat: 46.9, span_deg: 9.5}
       zoom_start: 0.3
       zoom_fraction: 0.3
       focus_label: Switzerland

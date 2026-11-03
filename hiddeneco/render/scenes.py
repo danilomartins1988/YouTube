@@ -114,8 +114,11 @@ class BaseScene:
         draw_text(img, "THE HIDDEN ECONOMICS", s.f("body_bold", 20), s.c("muted"), (self.W - 120, 94),
                   "rm", alpha=0.8 * a, tracking=4)
         if self.credits:
-            draw_text(img, "Source: " + "  ·  ".join(self.credits), s.f("body", 22), s.c("muted"),
-                      (120, self.H - 64), "ls", alpha=0.9 * a)
+            text = "Source: " + "  ·  ".join(self.credits)
+            if getattr(self, "credit_backing", False):   # keep credits legible over map fills
+                w, _ = text_size(text, s.f("body", 22))
+                fill_rect(img, (108, self.H - 92, 132 + w, self.H - 54), s.c("bg"), 0.75 * a)
+            draw_text(img, text, s.f("body", 22), s.c("muted"), (120, self.H - 64), "ls", alpha=0.9 * a)
 
     def draw_captions(self, img: Image.Image, t: float) -> None:
         """Short caption chunks with the word being spoken highlighted."""
@@ -169,6 +172,8 @@ class TitleCard(BaseScene):
 
 
 class MapScene(BaseScene):
+    credit_backing = True
+
     def __init__(self, *a, **k):
         super().__init__(*a, **k)
         self.countries = geo.load_countries(str(REPO_ROOT / "assets" / "geo" / "europe_50m.geojson"))
@@ -486,7 +491,7 @@ class BigNumberScene(BaseScene):
         decimals = len(m.group().split(".")[1]) if (m and "." in m.group()) else 0
         value = float(p["value"])
         start = self.when(p.get("cue"), 0.1)
-        u = ease_out(prog(t, start, 1.4))
+        u = ease_out(prog(t, start, 1.4)) if p.get("count", True) else (1.0 if t >= start - 0.2 else 0.0)
         shown = disp if u >= 1 else f"{prefix}{value * u:,.{decimals}f}{suffix}"
         a = ease_out(prog(t, start - 0.2, 0.4))
         size = 190 if self.v else 230
@@ -539,13 +544,15 @@ class TimelineScene(BaseScene):
                 fill_rect(img, (pos(yr) - 1, ay - 12, pos(yr) + 1, ay + 12), s.c("muted"), ta)
                 draw_text(img, str(yr), s.f("body", 24), s.c("muted"), (pos(yr), ay + 44), "mm", alpha=ta)
         end_a = ease_out(prog(t, start + float(p.get("draw_seconds", 2.2)) - 0.3, 0.5))
-        if p.get("end_label"):
+        crowded = any((float(it["year"]) - y0) / (y1 - y0) > 0.8 for it in p.get("items", []))
+        if p.get("end_label") and not (crowded and not self.v):
             if self.v:
                 draw_text(img, p["end_label"].upper(), s.f("body_bold", 28), s.c("ink"), (ax + 30, bot), "lm",
                           alpha=end_a, tracking=3)
             else:
                 draw_text(img, p["end_label"].upper(), s.f("body_bold", 28), s.c("ink"), (ax1, ay - 40), "rm",
                           alpha=end_a, tracking=3)
+        prev_text_x = -1e9
         for item in p.get("items", []):
             ia = ease_out(prog(t, self.when(item, 0.1), 0.5))
             yr = float(item["year"])
@@ -561,10 +568,18 @@ class TimelineScene(BaseScene):
                 px = pos(yr)
                 aa_shape(img, (px - 16, ay - 16, px + 16, ay + 16), s.c("accent"),
                          lambda d, ss: d.ellipse((0, 0, 32 * ss - 1, 32 * ss - 1), fill=255), alpha=ia)
+                block_w = 520
+                # keep text blocks apart and inside the frame; a leader line links text to its dot
+                tx = max(px - 10, prev_text_x + block_w + 40)
+                tx = min(tx, self.W - 120 - block_w)
+                prev_text_x = tx
+                if abs(tx - (px - 10)) > 4:
+                    fill_rect(img, (min(px, tx + 10), ay - 230, max(px, tx + 10) + 2, ay - 228), s.c("border"), ia)
+                    fill_rect(img, (px - 1, ay - 230, px + 1, ay - 16), s.c("border"), ia)
                 draw_text(img, str(item.get("display", int(yr))), s.f("display", 150), s.c("accent2"),
-                          (px - 10, ay - 70), "ls", alpha=ia)
-                draw_paragraph(img, item.get("label", ""), s.f("heading", 40), s.c("ink"), (px, ay + 120), 700,
-                               alpha=ia)
+                          (tx, ay - 70), "ls", alpha=ia)
+                draw_paragraph(img, item.get("label", ""), s.f("heading", 40), s.c("ink"), (tx + 10, ay + 120),
+                               block_w, alpha=ia)
         if p.get("footer"):
             fa = ease_out(prog(t, self.when(p.get("footer_cue"), 0.7), 0.5))
             if self.v:

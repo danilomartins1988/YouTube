@@ -1,16 +1,16 @@
-# QC report: why-switzerland-is-so-rich / vertical (short_9x16)
+# QC report: why-switzerland-is-so-rich / short_exports (short_9x16)
 
-- Runtime: **36.13 s**
-- Video: 1080x1920 @ 30/1 h264, audio aac 48000 Hz, 18.4 MB
-- Loudness: -15.3 LUFS integrated, true peak -4.3 dBFS
+- Runtime: **34.63 s**
+- Video: 1080x1920 @ 30/1 h264, audio aac 48000 Hz, 17.4 MB
+- Loudness: -14.4 LUFS integrated, true peak -4.3 dBFS
 - Errors: **0**, warnings: **4**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [WARNING] (timing) Segment reveal pace 96 wpm (numerals count as one word)
-- [WARNING] (timing) Segment payoff pace 101 wpm (numerals count as one word)
+- [WARNING] (timing) Segment reveal pace 106 wpm (numerals count as one word)
+- [WARNING] (timing) Segment payoff pace 106 wpm (numerals count as one word)
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 

@@ -4,6 +4,7 @@ scenes:
     type: big_number
     params:
       cue: "one number"
+      count: false
       kicker: Swiss francs per euro
       value: "{{snb_floor_2011.value}}"
       display: "{{snb_floor_2011.display}}"

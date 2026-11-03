@@ -9,7 +9,7 @@ dossier:
 
 | Deliverable | Format | Length | Story |
 |---|---|---|---|
-| `documentary` | 1920x1080, 16:9 | 8-12 min target | Cold open + 6 acts: puzzle, stability, money, specialisation, skills, hidden costs |
+| `documentary` | 1920x1080, 16:9 | 8 min 07 s | Cold open + 6 acts + conclusion: puzzle, stability, money, specialisation, skills, hidden costs |
 | `short_exports` | 1080x1920, 9:16 | 34.6 s | "More than half of Swiss exports come from one industry" |
 | `short_secrecy` | 1080x1920, 9:16 | 40.1 s | Banking secrecy is still law, yet account data is shared since 2018 |
 | `extended_franc` | 1080x1920, 9:16 (TikTok) | 68.7 s | The SNB's 1.20 franc floor, 2011-2015 |
