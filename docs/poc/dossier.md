@@ -1,6 +1,6 @@
 # Research dossier: Why Switzerland Is So Rich
 
-Generated 2026-11-03T02:54:26+00:00.
+Generated 2026-11-03T10:40:12+00:00.
 
 ## Claims
 
@@ -23,10 +23,10 @@ Generated 2026-11-03T02:54:26+00:00.
 | `price_level_2024` | In 2024 Switzerland had the highest price level among the countries compared by Eurostat, with a price level index of 158.8 (EU = 100) at GDP level. | **source_located** | eurostat_price_levels, bluewin_price_2024 |
 | `pharma_hq_basel` | Roche and Novartis both have their global headquarters in Basel. | **source_located** | swissinfo_roche_hq, swissinfo_roche_rd |
 | `pop_che_2023` | Switzerland's population in 2023 was 8,888,822. | **data_derived** | wb_pop_mirror |
-| `gdppc_che_2023` | Switzerland's GDP per capita in 2023 was $99,557 (current US$). | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
-| `ratio_che_deu_2023` | In 2023, Switzerland's GDP per capita was 1.86 times that of Germany ($99,557 vs $53,503). | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
-| `ratio_che_euu_2023` | In 2023, Switzerland's GDP per capita was 2.44 times that of European Union ($99,557 vs $40,877). | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
-| `gdppc_chart_2023` | GDP per capita (current US$), 2023: Switzerland $99,557; United States $81,249; Austria $56,510; Germany $53,503; United Kingdom $48,741; France $44,329; EU average $40,877; Italy $38,228 | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
+| `gdppc_che_2023` | Switzerland's GDP per capita in 2023 was $104,450 (current US$). | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
+| `ratio_che_deu_2023` | In 2023, Switzerland's GDP per capita was 1.91 times that of Germany ($104,450 vs $54,777). | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
+| `ratio_che_euu_2023` | In 2023, Switzerland's GDP per capita was 2.51 times that of European Union ($104,450 vs $41,567). | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
+| `gdppc_chart_2023` | GDP per capita (current US$), 2023: Switzerland $104,450; United States $82,587; Austria $56,580; Germany $54,777; United Kingdom $49,920; France $44,700; EU average $41,567; Italy $39,280 | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
 | `gdppc_series_2000_2023` | GDP per capita (current US$), 2000-2023, for Switzerland, United States, Germany, EU average. | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
 | `che_above_deu_euu_2000_2023` | In every year from 2000 to 2023, Switzerland's GDP per capita exceeded that of Germany and the EU average. | **data_derived** | wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror |
 

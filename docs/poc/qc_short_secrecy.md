@@ -1,15 +1,17 @@
 # QC report: why-switzerland-is-so-rich / short_secrecy (short_9x16)
 
-- Runtime: **40.1 s**
-- Video: 1080x1920 @ 30/1 h264, audio aac 48000 Hz, 19.6 MB
-- Loudness: -14.4 LUFS integrated, true peak -4.4 dBFS
-- Errors: **0**, warnings: **0**
-- Technical QC passed: **True**
+- Runtime: **46.93 s**
+- Video: 1080x1920 @ 30/1 h264, audio aac 48000 Hz, 22.5 MB
+- Loudness: -14.4 LUFS integrated, true peak -4.3 dBFS
+- Errors: **1**, warnings: **2**
+- Technical QC passed: **False**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-None.
+- [ERROR] (timing) Runtime 46.9s outside target 30-45s
+- [WARNING] (timing) Segment law pace 110 wpm (numerals count as one word)
+- [WARNING] (timing) Segment number pace 100 wpm (numerals count as one word)
 
 ## Publish blockers - claims needing human verification
 

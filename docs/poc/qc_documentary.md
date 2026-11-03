@@ -1,17 +1,16 @@
 # QC report: why-switzerland-is-so-rich / documentary (long_16x9)
 
-- Runtime: **487.23 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 250.7 MB
-- Loudness: -16.0 LUFS integrated, true peak -3.4 dBFS
-- Errors: **0**, warnings: **10**
+- Runtime: **534.9 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 272.8 MB
+- Loudness: -16.0 LUFS integrated, true peak -4.2 dBFS
+- Errors: **0**, warnings: **9**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [WARNING] (timing) Segment puzzle_caveat pace 187 wpm (numerals count as one word)
-- [WARNING] (timing) Segment spec_why pace 185 wpm (numerals count as one word)
-- [WARNING] (timing) Segment skills_gii pace 115 wpm (numerals count as one word)
+- [WARNING] (timing) Segment puzzle_caveat pace 193 wpm (numerals count as one word)
+- [WARNING] (timing) Segment skills_gii pace 104 wpm (numerals count as one word)
 - [WARNING] (sources) Number word 'four' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'two' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.

@@ -1,14 +1,15 @@
 # QC report: why-switzerland-is-so-rich / extended_franc (extended_9x16)
 
-- Runtime: **68.67 s**
-- Video: 1080x1920 @ 30/1 h264, audio aac 48000 Hz, 35.4 MB
-- Loudness: -14.5 LUFS integrated, true peak -4.1 dBFS
-- Errors: **0**, warnings: **2**
+- Runtime: **76.87 s**
+- Video: 1080x1920 @ 30/1 h264, audio aac 48000 Hz, 38.2 MB
+- Loudness: -14.6 LUFS integrated, true peak -4.3 dBFS
+- Errors: **0**, warnings: **3**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
+- [WARNING] (timing) Segment break pace 118 wpm (numerals count as one word)
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
 
