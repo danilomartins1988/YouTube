@@ -1,0 +1,65 @@
+scenes:
+  - id: s01_hook
+    segment: hook
+    type: ring_stat
+    params:
+      value: "{{non_oil_share.value}}"
+      display: "{{non_oil_share.display}}"
+      cue: "Its own government"
+      sublabel: of Dubai's economy is not oil
+      label: "Government of Dubai: 'over 95% non-oil'"
+    sfx: [{kind: hit, at: 0.0, gain: 0.3}]
+    sources: [dubai_ae_economy]
+    assets: ["font:inter"]
+  - id: s02_why
+    segment: why
+    type: map
+    params:
+      geo: world_emirates_50m
+      focus: AE-DU
+      highlights: {AE-AZ: {colour: accent2, cue: "Abu Dhabi"}}
+      start_view: {lon: 54.0, lat: 24.5, span_deg: 12}
+      end_view: {lon: 54.6, lat: 24.4, span_deg: 4.4}
+      focus_label: Dubai
+      labels:
+        - {lon: 53.7, lat: 23.6, text: Abu Dhabi, colour: ink, size: 34, cue: "Abu Dhabi"}
+      zoom_start: 0.2
+      zoom_fraction: 0.4
+      headline: "Abu Dhabi: {{reserves_split.display}} of UAE oil reserves"
+      headline_cue: "Abu Dhabi holds"
+      subline: "Dubai: {{reserves_split.dubai_display}}"
+      subline_cue: "something else"
+    sources: [trade_gov_uae_energy, natural_earth]
+    assets: ["geo:world_emirates_50m", "font:inter"]
+  - id: s03_reveal
+    segment: reveal
+    type: sector_share
+    params:
+      title: What pays Dubai's bills
+      subtitle: "Share of real GDP, {{sectors_h1_2026.year}}"
+      segments: "{{sectors_h1_2026.value}}"
+      other_label: "Everything else (incl. oil)"
+      cue: "Trade is"
+    sources: [wam_gdp_h1_2026]
+    assets: ["font:inter"]
+  - id: s04_proof
+    segment: proof
+    type: illustration
+    params:
+      kind: airport
+      kicker: "Dubai International, {{dxb_pax_2025.year}}"
+      value: "{{dxb_pax_2025.display}}"
+      value_cue: "passengers"
+      subtitle: passengers in one year
+    sources: [dmo_dxb_2025]
+    assets: ["font:inter"]
+  - id: s05_outro
+    segment: outro
+    type: end_card
+    params:
+      words: [Not oil., A place to meet.]
+      brand: The Hidden Economics
+      teaser: "Full documentary on the channel"
+      brand_cue: {cue: "More on"}
+    sources: []
+    assets: ["font:inter"]

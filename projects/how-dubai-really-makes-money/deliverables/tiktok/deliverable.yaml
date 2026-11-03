@@ -1,0 +1,29 @@
+id: tiktok
+format: extended_9x16
+title: "The Real Business Behind Dubai's Skyscrapers"
+target_seconds: {min: 65, max: 90}
+captions: {burn_in: true, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [tiktok]
+output_alias: output/dubai_tiktok.mp4
+
+thumbnails:
+  - id: cover
+    type: illustrated_headline
+    size: [1080, 1920]
+    kind: skyline_wide
+    horizon: 0.74
+    y: 0.2
+    headline: "{{re_2025.display}}"
+    accent_line: IN ONE YEAR
+    kicker: "Dubai property, {{re_2025.year}}"
+    footer: "Dubai Land Department"
+    why: Cover; one sourced figure, the story explains who builds, who buys and the risks.
+
+metadata:
+  titles:
+    - "The Real Business Behind Dubai's Skyscrapers"
+  caption: >-
+    917 billion dirhams of Dubai property changed hands in 2025. Who builds it, who buys it, what happened in
+    2009 - and what the IMF is warning about now.
+  hashtags: ["#economics", "#dubai", "#realestate", "#finance"]

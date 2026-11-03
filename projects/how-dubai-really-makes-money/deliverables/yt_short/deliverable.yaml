@@ -1,0 +1,30 @@
+id: yt_short
+format: short_9x16
+title: "Dubai Doesn't Make Its Money the Way You Think"
+target_seconds: {min: 30, max: 45}
+captions: {burn_in: true, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [youtube_shorts]
+output_alias: output/dubai_youtube_short.mp4
+
+thumbnails:
+  - id: cover
+    type: illustrated_headline
+    size: [1080, 1920]
+    kind: skyline
+    horizon: 0.72
+    y: 0.2
+    font_size: 230
+    headline: NOT\nOIL
+    kicker: Dubai's real money
+    footer: "{{non_oil_share.display}} non-oil · Government of Dubai"
+    why: Cover frame; states the sourced answer.
+
+metadata:
+  titles:
+    - "Dubai Doesn't Make Its Money the Way You Think"
+    - "Dubai Isn't an Oil Economy"
+  caption: >-
+    Dubai's own government says more than 95% of its economy is not oil. So what pays the bills? Trade, finance,
+    property and transport - and a location the whole world flies through.
+  hashtags: ["#economics", "#dubai", "#shorts"]

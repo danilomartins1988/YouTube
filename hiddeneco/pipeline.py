@@ -30,7 +30,7 @@ def load_project(paths: ProjectPaths) -> dict:
 
 def load_deliverable(paths: ProjectPaths) -> tuple[Deliverable, dict]:
     raw = yaml.safe_load((paths.deliverable_dir / "deliverable.yaml").read_text(encoding="utf-8"))
-    extras = {k: raw.pop(k) for k in ("thumbnails", "metadata") if k in raw}
+    extras = {k: raw.pop(k) for k in ("thumbnails", "metadata", "output_alias") if k in raw}
     return Deliverable(**raw), extras
 
 
@@ -88,7 +88,8 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
     tts = get_provider(tts_name, cfg, allow_paid=allow_paid)
     if tts.paid:
         from hiddeneco.budget import Budget
-        tts.budget = Budget(paths.topic_out / "paid_spend.json", cfg["budget"]["max_paid_usd_per_topic"],
+        cap = (project.get("budget") or {}).get("max_paid_usd", cfg["budget"]["max_paid_usd_per_topic"])
+        tts.budget = Budget(paths.topic_out / "paid_spend.json", cap,
                             cfg["pricing"][tts_name].get("usd_per_1k_chars"), tts_name)
         need = assemble.uncached_chars(sc, d, sb, tts, paths.out_sub("audio") / "cache")
         tts.budget.check(need, what=f"{deliverable.id} narration ({need} chars)")   # whole deliverable, up front
@@ -140,6 +141,13 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
     (paths.out / "cost_report.md").write_text(
         f"# Cost report: {paths.slug} / {deliverable.id}\n\n" + ledger.markdown(cfg.get("brl_per_usd")) + "\n",
         encoding="utf-8")
+    if extras.get("output_alias"):     # e.g. output/dubai_documentary.mp4 for hand-off
+        import shutil
+        from hiddeneco.config import REPO_ROOT
+        alias = REPO_ROOT / extras["output_alias"]
+        alias.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(paths.final_video, alias)
+        log("output.alias", path=str(alias))
     log("deliverable.done", deliverable=deliverable.id, qc_errors=report["errors"],
         blockers=len(report["publish_blockers"]))
     return report

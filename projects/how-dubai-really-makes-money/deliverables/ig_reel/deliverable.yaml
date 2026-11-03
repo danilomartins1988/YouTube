@@ -1,0 +1,28 @@
+id: ig_reel
+format: short_9x16
+title: How Dubai Became a Global Business Hub
+target_seconds: {min: 30, max: 45}
+captions: {burn_in: true, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [instagram_reels]
+output_alias: output/dubai_instagram_reel.mp4
+
+thumbnails:
+  - id: cover
+    type: illustrated_headline
+    size: [1080, 1920]
+    kind: port
+    horizon: 0.75
+    y: 0.22
+    headline: RULES\nFOR SALE
+    kicker: How Dubai became a business hub
+    footer: "Jafza: {{jafza_firms.start_display}} firms -> {{jafza_firms.display}}"
+    why: Cover; the reel argues Dubai turned its rulebook into a product.
+
+metadata:
+  titles:
+    - How Dubai Became a Global Business Hub
+  caption: >-
+    In 1985 Jebel Ali Free Zone started with 19 companies. Today it hosts more than 11,000. Free zones, full
+    foreign ownership, common-law courts and a 9% corporate tax: how Dubai turned its rulebook into a product.
+  hashtags: ["#economics", "#dubai", "#business", "#reels"]

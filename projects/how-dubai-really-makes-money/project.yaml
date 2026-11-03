@@ -1,0 +1,29 @@
+title: How Dubai Really Makes Money
+slug: how-dubai-really-makes-money
+language: en
+# Episode 02. Per-video visual identity: Gulf night palette (deep navy, sunset orange, Gulf turquoise),
+# original code-drawn illustrations instead of photos. QC compares scene grammar against Episode 01.
+style:
+  name: gulf-nocturne
+  palette:
+    bg: "#0A1520"
+    bg2: "#13293A"
+    ink: "#F5EFE4"
+    muted: "#8C99A5"
+    land: "#2B3D4C"
+    border: "#46596A"
+    accent: "#F08A3C"      # sunset orange
+    accent2: "#3FC7BE"     # Gulf turquoise
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  motifs: [chapter-tags, film-grain]
+# Editor-approved cap for paid narration on this episode (overrides config budget.max_paid_usd_per_topic).
+budget:
+  max_paid_usd: 0.60
+youtube:
+  category: Education
+  default_language: en
+  made_for_kids: false

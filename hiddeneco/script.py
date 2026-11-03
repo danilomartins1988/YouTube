@@ -54,6 +54,10 @@ def render_value(obj, dossier: Dossier):
         m = PLACEHOLDER.fullmatch(obj.strip())
         if m and m.group(2) == "value":
             return resolve(dossier, m.group(1), "value")
+        if m and m.group(2) and not m.group(3):      # a whole-string field keeps its type (e.g. a number)
+            raw = resolve(dossier, m.group(1), m.group(2))
+            if not isinstance(raw, str):
+                return raw
         return render_text(obj, dossier)
     if isinstance(obj, list):
         return [render_value(x, dossier) for x in obj]

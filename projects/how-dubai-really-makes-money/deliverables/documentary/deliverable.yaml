@@ -1,0 +1,55 @@
+id: documentary
+format: long_16x9
+title: How Dubai Really Makes Money
+target_seconds: {min: 600, max: 720}
+captions: {burn_in: false, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [youtube]
+output_alias: output/dubai_documentary.mp4
+
+thumbnails:
+  - id: 1_not_oil
+    type: illustrated_headline
+    size: [1280, 720]
+    kind: skyline
+    horizon: 0.88
+    headline: NOT OIL?
+    kicker: How Dubai really makes money
+    footer: "{{non_oil_share.display}} of GDP is non-oil · Government of Dubai"
+    why: The film's central question. The footer states the sourced figure that answers it, so the question mark is honest.
+  - id: 2_the_real_money
+    type: illustrated_headline
+    size: [1280, 720]
+    panels: [port, airport, skyline]
+    horizon: 0.9
+    headline: THE REAL\nMONEY
+    kicker: Ports · flights · property
+    why: Port, airport and towers are the three engines the film examines. No logos or liveries.
+  - id: 3_dubais_secret
+    type: illustrated_headline
+    size: [1280, 720]
+    kind: skyline_wide
+    horizon: 0.92
+    headline: DUBAI'S\nSECRET
+    kicker: What drives the economy
+    bars: "{{sectors_h1_2026.value}}"
+    text_side: left
+    footer: "Shares of real GDP, {{sectors_h1_2026.year}} · DDSE"
+    why: >-
+      The 'secret' is shown, not hidden: the bars are the sourced GDP shares (trade, finance, real estate,
+      transport). The tower is a generic stylised supertall, not a replica of any real building.
+
+metadata:
+  titles:
+    - How Dubai Really Makes Money
+    - "Dubai Isn't Rich Because of Oil. Here's What Pays the Bills"
+    - "Ports, Planes and Property: The Real Dubai Economy"
+    - Why Dubai Doesn't Need Oil (And What Could Break It)
+  description_intro: >-
+    Dubai has almost no oil of its own - so how did a small trading town on a creek become a global hub?
+    Pearls and open trade, oil as seed money, Jebel Ali and DP World, Emirates and the airport, tourism and
+    property, free zones, the DIFC and the new corporate tax - and the costs: migrant labour, debt, property
+    cycles and the 2026 shock. Every figure is sourced below.
+  tags: [Dubai, Dubai economy, how Dubai makes money, UAE economy, Abu Dhabi, Jebel Ali, DP World, Emirates airline,
+         Dubai real estate, DIFC, free zones, UAE corporate tax, economics documentary, The Hidden Economics]
+  hashtags: ["#economics", "#dubai", "#documentary"]

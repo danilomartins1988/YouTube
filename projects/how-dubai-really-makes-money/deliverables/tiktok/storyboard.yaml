@@ -1,0 +1,80 @@
+scenes:
+  - id: t01_hook
+    segment: hook
+    type: illustration
+    params:
+      kind: skyline
+      kicker: "Dubai real estate, {{re_2025.year}}"
+      value: "{{re_2025.display}}"
+      value_cue: "worth of property"
+      subtitle: of transactions in one year
+      subtitle_cue: "That isn't"
+    sfx: [{kind: hit, at: 0.0, gain: 0.3}]
+    sources: [dmo_realestate_2025]
+    assets: ["font:inter"]
+  - id: t02_builders
+    segment: builders
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Who builds it?", size: 92, style: display, cue: "Who builds"}
+        - {text: "Emaar", size: 72, style: heading, cue: "Emaar"}
+        - {text: "Largest shareholder: Dubai Holding", size: 56, style: heading, color: accent2, cue: "Dubai Holding"}
+        - {text: "(government-owned)", size: 48, style: body, color: muted, cue: "largest shareholder"}
+    sources: [dmo_emaar_2026]
+    assets: ["font:inter"]
+  - id: t03_buyers
+    segment: buyers
+    type: big_number
+    params:
+      cue: "villa prices"
+      kicker: "Villa prices, {{imf_prices.period_display}}"
+      value: "{{imf_prices.value}}"
+      display: "{{imf_prices.display}}"
+      label: "Who buys? Mostly cash"
+      sublabel: "{{imf_prices.cash_display}} of {{imf_prices.cash_year}} purchases: no mortgage · IMF"
+    sources: [imf_cr25327]
+    assets: ["font:inter"]
+  - id: t04_crash
+    segment: crash
+    type: timeline
+    params:
+      title: The last bust
+      start_year: 2007
+      end_year: 2011
+      tick_every: 1
+      draw_seconds: 1.6
+      items:
+        - {year: 2008.6, display: "{{crash_2009.display}}", label: "{{crash_2009.label}}", cue: "prices fell"}
+        - {year: 2009.9, display: "{{standstill_2009.display}}", label: "Dubai World debt standstill", cue: "asked to pause"}
+    sources: [gulfnews_prices_2009, gulfnews_dubai_world_2009]
+    assets: ["font:inter"]
+  - id: t05_bailout
+    segment: bailout
+    type: split_compare
+    params:
+      title: Rescued by the neighbour
+      left: {kicker: "From Abu Dhabi", value: "{{bailout_2009.display}}", label: in support, cue: "Abu Dhabi provided"}
+      right: {kicker: "Weeks later", value: "{{burj_renamed.display}}", label: "Burj Dubai opens as Burj Khalifa", cue: "Weeks later"}
+    sources: [ibtimes_bailout_2009, csm_burj_2010]
+    assets: ["font:inter"]
+  - id: t06_warning
+    segment: warning
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "IMF warning:", size: 56, style: body_bold, color: muted, cue: "the IMF warns"}
+        - {text: "\"an unexpected price correction\"", size: 78, style: display, color: accent2, cue: "unexpected"}
+        - {text: "if capital flows reverse", size: 54, style: heading, cue: "capital flows"}
+    sources: [imf_cr25327]
+    assets: ["font:inter"]
+  - id: t07_outro
+    segment: outro
+    type: end_card
+    params:
+      words: [A business., With cycles.]
+      brand: The Hidden Economics
+      teaser: "Full documentary on the channel"
+      brand_cue: {cue: "Follow The Hidden Economics"}
+    sources: []
+    assets: ["font:inter"]

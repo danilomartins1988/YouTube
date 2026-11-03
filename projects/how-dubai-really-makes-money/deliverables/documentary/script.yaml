@@ -1,0 +1,375 @@
+# Full documentary (target 10-12 min). Cold open + nine acts.
+# Every number comes from the dossier. Segments marked analysis contain the channel's interpretation.
+title: How Dubai Really Makes Money
+logline: >-
+  A desert city with almost no oil of its own became a global hub for trade, flights, property and money.
+  How the model works, who it rewards, and what could break it.
+segments:
+  # ---------------------------------------------------------------- cold open
+  - id: open_hook
+    chapter: The city that looks impossible
+    narration: >-
+      Most people assume Dubai got rich on oil. Its own government says {{non_oil_share}} of its economy
+      has nothing to do with oil. So where does the money actually come from?
+    claims: [non_oil_share]
+
+  - id: open_puzzle
+    chapter: The city that looks impossible
+    narration: >-
+      This desert city of {{pop_dubai_2025}} people runs {{dxb_intl_rank_2025}}. In {{dxb_pax_2025.year}},
+      {{dxb_pax_2025}} passengers passed through it.
+    claims: [pop_dubai_2025, dxb_intl_rank_2025, dxb_pax_2025]
+
+  - id: open_promise
+    chapter: The city that looks impossible
+    narration: >-
+      Dubai sells something harder to see than oil, and much harder to copy. To find it, we will follow the
+      ships, the planes, the buildings and the rules. And we will look at who pays the bill. This is
+      The Hidden Economics.
+    claims: []
+    analysis: true
+    source_note: Framing of the film's thesis; developed and sourced in the acts that follow.
+
+  # ---------------------------------------------------------------- act 1
+  - id: act1_card
+    chapter: The city that looks impossible
+    narration: ""
+    claims: []
+
+  - id: a1_map
+    chapter: The city that looks impossible
+    narration: >-
+      First, a common mistake. Dubai is not a country. It is one of the {{uae_seven}} emirates that form the
+      United Arab Emirates. Its bigger neighbour, Abu Dhabi, is the federal capital.
+    claims: [uae_seven]
+
+  - id: a1_oil_split
+    chapter: The city that looks impossible
+    narration: >-
+      That difference matters. Under the UAE constitution, each emirate owns its own natural resources. And
+      Abu Dhabi holds {{reserves_split}} of the country's oil reserves. Dubai holds {{reserves_split.dubai_spoken}}.
+    claims: [art23_resources, reserves_split]
+
+  - id: a1_question
+    chapter: The city that looks impossible
+    narration: >-
+      So Dubai never had Abu Dhabi's oil wealth. It needed another business model. To see where that model
+      came from, we have to go back to a time before the skyscrapers.
+    claims: [reserves_split]
+    analysis: true
+    source_note: Follows from the reserve split above (AGBI 2026 makes the same point).
+
+  # ---------------------------------------------------------------- act 2
+  - id: act2_card
+    chapter: Dubai before the skyscrapers
+    narration: ""
+    claims: []
+
+  - id: a2_creek
+    chapter: Dubai before the skyscrapers
+    narration: >-
+      Long before the towers, Dubai was a small trading town on a saltwater creek. Its economy floated on
+      pearls, gathered by divers and sold on to distant markets.
+    claims: [pearl_collapse]
+    analysis: true
+    source_note: General description of the pre-oil Gulf pearling economy (QDL finding aid).
+
+  - id: a2_pearls
+    chapter: Dubai before the skyscrapers
+    narration: >-
+      Then the pearl trade collapsed. Japan began producing {{pearl_collapse}} from
+      {{pearl_collapse.cultured_year}}, and the crash of {{pearl_collapse.crash_year}} finished what was left
+      of the old market.
+    claims: [pearl_collapse]
+
+  - id: a2_merchants
+    chapter: Dubai before the skyscrapers
+    narration: >-
+      But Dubai had already learned a different trick. In the years {{lingah_shift}}, as the Persian port of
+      Lingeh declined, merchants moved across the water, and Dubai became the main trading centre of its
+      coast. Its advantage was openness, not natural resources.
+    claims: [lingah_shift]
+    analysis: true
+    source_note: >-
+      Lorimer: Dubai grew "assisted by the decadence of Lingeh". 'Openness' is our interpretation; sources
+      describe duty cuts around 1901-1904 but disagree on the date, so no date is given.
+
+  - id: a2_dredge
+    chapter: Dubai before the skyscrapers
+    narration: >-
+      {{creek_dredging|cap}}, Dubai borrowed money, largely from Kuwait, to dredge its silting creek so that
+      bigger ships could reach the town. It was investing in trade infrastructure before it had found any oil
+      at all.
+    claims: [creek_dredging, oil_discovery]
+    source_note: Oil was discovered in 1966 (oil_discovery), after the dredging.
+
+  # ---------------------------------------------------------------- act 3
+  - id: act3_card
+    chapter: "Oil: the seed money"
+    narration: ""
+    claims: []
+
+  - id: a3_offshore
+    chapter: "Oil: the seed money"
+    narration: >-
+      {{oil_discovery|cap}}, oil was finally found, offshore, in the Fateh field. The first cargo left
+      {{oil_first_export}}.
+    claims: [oil_discovery, oil_first_export]
+
+  - id: a3_peak
+    chapter: "Oil: the seed money"
+    narration: >-
+      But Dubai's oil was never going to last. Production peaked {{oil_peak}} and has declined ever since.
+      The money it did earn went into things more permanent than wells: roads, a modern port, and, opened
+      {{jebel_ali_opened}}, a vast new harbour at Jebel Ali.
+    claims: [oil_peak, jebel_ali_opened]
+
+  - id: a3_insight
+    chapter: "Oil: the seed money"
+    narration: >-
+      That is the first key to Dubai. Oil was not the business. It was the seed money for a business built on
+      moving other people's goods.
+    claims: []
+    analysis: true
+    source_note: Channel interpretation of the sequence above.
+
+  # ---------------------------------------------------------------- act 4
+  - id: act4_card
+    chapter: Jebel Ali and the trading machine
+    narration: ""
+    claims: []
+
+  - id: a4_routes
+    chapter: Jebel Ali and the trading machine
+    narration: >-
+      Look at the map. Dubai sits between the factories of Asia, the consumers of Europe and the growing
+      markets of East Africa. Ships can unload here, and goods can be shipped on across the whole region.
+    claims: []
+    analysis: true
+    source_note: Geography shown on the Natural Earth map; routes are illustrative, not traffic data.
+
+  - id: a4_jafza
+    chapter: Jebel Ali and the trading machine
+    narration: >-
+      Next to the port, Dubai created the Jebel Ali Free Zone, in {{jafza_firms.year_founded}}. It started
+      with {{jafza_firms.start_spoken}} companies. Today it hosts {{jafza_firms}} businesses.
+    claims: [jafza_firms]
+
+  - id: a4_trade
+    chapter: Jebel Ali and the trading machine
+    narration: >-
+      In {{jafza_trade_2024.year}}, the zone handled {{jafza_trade_2024}} of non-oil trade. By the Dubai
+      government's own estimate, the zone and the port together account for {{jafza_port_gdp}} of the
+      emirate's economy.
+    claims: [jafza_trade_2024, jafza_port_gdp]
+
+  - id: a4_port
+    chapter: Jebel Ali and the trading machine
+    narration: >-
+      Jebel Ali handled {{jebel_ali_teu_2025}} in {{jebel_ali_teu_2025.year}}, which made it the
+      {{jebel_ali_teu_2025.rank_spoken}} busiest container port in the world, according to Lloyd's List.
+    claims: [jebel_ali_teu_2025]
+
+  - id: a4_dpworld
+    chapter: Jebel Ali and the trading machine
+    narration: >-
+      And the company that runs it, DP World, is no longer just Dubai's port operator. It is a global
+      business, owned by the Dubai government, that reported {{dpworld_revenue_2025}} of revenue in
+      {{dpworld_revenue_2025.year}}.
+    claims: [dpworld_revenue_2025, dpworld_owner]
+
+  # ---------------------------------------------------------------- act 5
+  - id: act5_card
+    chapter: Emirates and the hub strategy
+    narration: ""
+    claims: []
+
+  - id: a5_launch
+    chapter: Emirates and the hub strategy
+    narration: >-
+      Aviation followed the same logic. Emirates was launched in {{emirates_launch.year}} with
+      {{emirates_launch}} and {{emirates_launch.planes_spoken}} leased planes.
+    claims: [emirates_launch]
+
+  - id: a5_reach
+    chapter: Emirates and the hub strategy
+    narration: >-
+      The pitch was geography. Dubai says {{reach_claim}} lives within {{reach_claim.near_spoken}} of its
+      airport. So instead of flying people to Dubai, Emirates could fly them through it.
+    claims: [reach_claim]
+
+  - id: a5_results
+    chapter: Emirates and the hub strategy
+    narration: >-
+      It worked. In its latest financial year, the Emirates Group made {{emirates_fy26}} of profit after tax,
+      on revenue of {{emirates_fy26.revenue_spoken}}. And it paid its owner, a Dubai government investment
+      fund, a dividend of {{emirates_fy26.dividend_spoken}}.
+    claims: [emirates_fy26]
+
+  - id: a5_dxb
+    chapter: Emirates and the hub strategy
+    narration: >-
+      Dubai's airport is already full of ambition. The city has approved a {{dwc_plan}} terminal at Al Maktoum
+      International, designed for up to {{dwc_plan.capacity_spoken}}.
+    claims: [dwc_plan]
+
+  # ---------------------------------------------------------------- act 6
+  - id: act6_card
+    chapter: Tourism, luxury and real estate
+    narration: ""
+    claims: []
+
+  - id: a6_visitors
+    chapter: Tourism, luxury and real estate
+    narration: >-
+      All those flights fill hotels. Dubai received {{visitors_2025}} international overnight visitors in
+      {{visitors_2025.year}}, and average hotel occupancy reached {{hotel_occupancy_2025}}.
+    claims: [visitors_2025, visitors_series, hotel_occupancy_2025]
+
+  - id: a6_property
+    chapter: Tourism, luxury and real estate
+    narration: >-
+      Then there is property, the most visible engine of all. In {{re_2025.year}}, real estate transactions in
+      Dubai were worth {{re_2025}}, up from {{re_2025.prev_spoken}} the year before.
+    claims: [re_2025, re_series]
+
+  - id: a6_who
+    chapter: Tourism, luxury and real estate
+    narration: >-
+      The state is never far away. Emaar, the city's biggest listed developer, counts Dubai Holding, a
+      government-owned group, as its largest shareholder. And buyers mostly pay cash: the IMF found that
+      {{imf_prices.cash_spoken}} of home purchases in {{imf_prices.cash_year}} used no mortgage.
+    claims: [emaar_owner, imf_prices]
+    source_note: '"Biggest listed developer" needs confirmation (market capitalisation); drop the adjective if unverified.'
+
+  - id: a6_prices
+    chapter: Tourism, luxury and real estate
+    narration: >-
+      Prices have soared. According to the IMF, villa prices {{imf_prices}} {{imf_prices.period_spoken}}.
+    claims: [imf_prices]
+    source_note: Period 2020Q1-2025Q2 from IMF CR 25/327; years spelled out because they are the claim's own period.
+
+  # ---------------------------------------------------------------- act 7
+  - id: act7_card
+    chapter: Free zones, finance and foreign capital
+    narration: ""
+    claims: []
+
+  - id: a7_freezones
+    chapter: Free zones, finance and foreign capital
+    narration: >-
+      Dubai's other export is its rulebook. The emirate has {{free_zones}} free zones, where foreign companies
+      can be wholly foreign-owned. And {{onshore_ownership}}, full foreign ownership has been allowed for most
+      businesses outside them too.
+    claims: [free_zones, onshore_ownership]
+
+  - id: a7_difc
+    chapter: Free zones, finance and foreign capital
+    narration: >-
+      In finance, Dubai went further. {{difc_courts|cap}}, it created the Dubai International Financial
+      Centre, a zone with its own English-language, common-law courts. By the end of {{difc_2025.year}}, it
+      had {{difc_2025}} active companies.
+    claims: [difc_courts, difc_2025]
+
+  - id: a7_tax
+    chapter: Free zones, finance and foreign capital
+    narration: >-
+      And taxes, long close to zero, are no longer zero. Most companies now pay {{ct_rate}} corporate tax on
+      profits above {{ct_rate.threshold_spoken}}. Qualifying free-zone companies can still pay {{qfzp}} on
+      qualifying income. Large multinationals face a {{dmtt}} minimum tax, and VAT of {{vat}} applies to most
+      spending. Individuals still pay no income tax on their salaries.
+    claims: [ct_rate, qfzp, dmtt, vat, no_pit]
+
+  - id: a7_sectors
+    chapter: Free zones, finance and foreign capital
+    narration: >-
+      Put it all together, and this is what Dubai's economy looks like today. Trade is the largest slice, at
+      {{sectors_h1_2026.trade_spoken}} of output, followed by finance, real estate and transport. Oil is a
+      small part of everything else.
+    claims: [sectors_h1_2026, non_oil_share]
+
+  # ---------------------------------------------------------------- act 8
+  - id: act8_card
+    chapter: Who benefits, and what are the risks?
+    narration: ""
+    claims: []
+
+  - id: a8_workers
+    chapter: Who benefits, and what are the risks?
+    narration: >-
+      This model runs on people from somewhere else. Human Rights Watch says migrant workers make up
+      {{migrant_share}} of the UAE's population. They build the towers, staff the hotels and drive the city.
+    claims: [migrant_share]
+
+  - id: a8_labour
+    chapter: Who benefits, and what are the risks?
+    narration: >-
+      The group has documented recruitment fees, unpaid wages, and a sponsorship system, known as kafala, that
+      ties workers' visas to their employers. The labour ministry handled {{hrw_findings}} unpaid-wage cases in
+      {{hrw_findings.year}}. The government points to measures such as a summer ban on outdoor work
+      {{midday_break}}. Human Rights Watch says that is not enough.
+    claims: [hrw_findings, midday_break]
+
+  - id: a8_crash
+    chapter: Who benefits, and what are the risks?
+    narration: >-
+      The second risk is debt. When the global financial crisis hit, Dubai property prices fell by
+      {{crash_2009}}. In November {{standstill_2009.year}}, Dubai asked creditors of Dubai World, a
+      state-owned conglomerate, for a pause on {{standstill_2009}} of debt.
+    claims: [crash_2009, standstill_2009]
+
+  - id: a8_bailout
+    chapter: Who benefits, and what are the risks?
+    narration: >-
+      Abu Dhabi stepped in with {{bailout_2009}}. Weeks later, {{burj_renamed}}, the world's tallest tower
+      opened, and its name changed from Burj Dubai to Burj Khalifa, after Abu Dhabi's ruler.
+    claims: [bailout_2009, burj_renamed]
+
+  - id: a8_imf
+    chapter: Who benefits, and what are the risks?
+    narration: >-
+      Today, the IMF warns that a reversal of capital flows, or a shift in investor sentiment, could trigger an
+      unexpected price correction. It also notes that the finances of government-related companies are hard to
+      assess, because the data are not published in full.
+    claims: [imf_correction_risk, imf_gre_info]
+
+  - id: a8_war
+    chapter: Who benefits, and what are the risks?
+    narration: >-
+      Then came a real test. A regional war broke out {{war_2026}}, disrupting travel and trade. In the first
+      half of the year, Dubai's economy was {{gdp_h1_2026}} smaller than a year earlier.
+    claims: [war_2026, gdp_h1_2026]
+    source_note: Attribution of the slowdown to the war comes from press reporting (The National); worded as sequence, not proven cause.
+
+  # ---------------------------------------------------------------- act 9
+  - id: act9_card
+    chapter: The real economic engine
+    narration: ""
+    claims: []
+
+  - id: a9_engine
+    chapter: The real economic engine
+    narration: >-
+      So how does Dubai really make money? Not mainly from oil. It makes money by being the place in between:
+      where goods change ships, passengers change planes, capital finds a home and companies set up under rules
+      they trust. The state builds the hub, through companies it owns. Foreign money and foreign workers fill it.
+    claims: [non_oil_share]
+    analysis: true
+    source_note: Conclusion drawn from acts 3-7.
+
+  - id: a9_balance
+    chapter: The real economic engine
+    narration: >-
+      That model has proved remarkably adaptable. It survived the end of pearling, the decline of oil and the
+      debt crisis. Its own plan aims to {{d33_goal}} the size of the economy within a decade. But it depends on
+      flows Dubai does not control: of people, of capital and of trade.
+    claims: [d33_goal]
+    analysis: true
+
+  - id: a9_end
+    chapter: The real economic engine
+    narration: >-
+      Dubai's real product is connection. And connection is only as strong as the world around it.
+      This is The Hidden Economics.
+    claims: []
+    analysis: true

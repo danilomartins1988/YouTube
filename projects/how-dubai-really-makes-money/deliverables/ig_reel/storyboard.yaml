@@ -1,0 +1,53 @@
+scenes:
+  - id: r01_hook
+    segment: hook
+    type: split_compare
+    params:
+      title: Jebel Ali Free Zone
+      left: {kicker: "{{jafza_firms.year_founded}}", value: "{{jafza_firms.start_display}}", label: companies, cue: "this free zone"}
+      right: {kicker: Today, value: "{{jafza_firms.display}}", label: businesses, cue: "Today"}
+    sfx: [{kind: hit, at: 0.0, gain: 0.3}]
+    sources: [dmo_jafza_2025]
+    assets: ["font:inter"]
+  - id: r02_rules
+    segment: rules
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Rules, not resources", size: 86, style: display, cue: "The trick"}
+        - {text: "{{free_zones.display}} free zones: full foreign ownership", size: 56, style: heading, color: accent2, cue: "Free zones"}
+        - {text: "Mainland: since {{onshore_ownership.display}}", size: 56, style: heading, cue: "mainland"}
+    sources: [invest_dubai_hub, wam_ownership_2021]
+    assets: ["font:inter"]
+  - id: r03_courts
+    segment: courts
+    type: big_number
+    params:
+      cue: "The DIFC"
+      kicker: "DIFC, {{difc_2025.year}}"
+      value: "{{difc_2025.value}}"
+      display: "{{difc_2025.display}}"
+      label: active companies
+      sublabel: "Own common-law courts since {{difc_courts.display}}"
+    sources: [dmo_difc_2025, difc_courts_framework]
+    assets: ["font:inter"]
+  - id: r04_tax
+    segment: tax
+    type: split_compare
+    params:
+      title: "Not tax-free any more"
+      left: {kicker: Corporate tax, value: "{{ct_rate.display}}", label: "above {{ct_rate.threshold_display}}", cue: "Most firms"}
+      right: {kicker: Qualifying free-zone income, value: "{{qfzp.display}}", label: "if conditions are met", cue: "qualifying"}
+      dim_left_after: false
+    sources: [uae_ct, fta_qfzp]
+    assets: ["font:inter"]
+  - id: r05_outro
+    segment: outro
+    type: end_card
+    params:
+      words: [Rules., As a product.]
+      brand: The Hidden Economics
+      teaser: "Full documentary on the channel"
+      brand_cue: {cue: "The full story"}
+    sources: []
+    assets: ["font:inter"]

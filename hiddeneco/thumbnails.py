@@ -85,6 +85,65 @@ def ring_text(st: Style, c: dict) -> Image.Image:
 CONCEPTS = {"number_over_map": number_over_map, "versus_bars": versus_bars, "ring_text": ring_text}
 
 
+def illustrated_headline(st: Style, c: dict) -> Image.Image:
+    """Original illustration (skyline / port / airport...) with one big headline.
+
+    Optional `panels`: several illustration kinds side by side (e.g. port | airport | skyline).
+    Optional `bars`: sourced shares [{label, value}] drawn as a small chart (values from the dossier).
+    """
+    from hiddeneco.render import illustrate
+    W, H = st.W, st.H
+    img = st.background()
+    panels = c.get("panels") or [c.get("kind", "skyline")]
+    pw = W // len(panels)
+    for i, kind in enumerate(panels):
+        tile = st.background().resize((W, H))
+        illustrate.compose(tile, kind, st.palette, t=float(c.get("t", 2.0)), horizon=float(c.get("horizon", 0.9)))
+        x0 = int(W / 2 - pw / 2) if len(panels) > 1 else 0
+        img.paste(tile.crop((x0, 0, x0 + pw, H)), (i * pw, 0))
+        if i:
+            fill_rect(img, (i * pw - 3, 0, i * pw + 3, H), st.c("bg"))
+    # darken the text side for legibility
+    side = c.get("text_side", "left")
+    grad = Image.linear_gradient("L").rotate(90 if side == "left" else -90, expand=True).resize((W, H))
+    shade = Image.new("RGB", (W, H), st.c("bg"))
+    img.paste(shade, (0, 0), grad.point(lambda v: int(v * 0.85)))
+    x = 60 if side == "left" else W - 60
+    anchor = "ls" if side == "left" else "rs"
+    headline = c["headline"]
+    lines = headline.split("\n") if "\n" in headline else [headline]
+    size = int(c.get("font_size", 190 if W > H else 220))
+    y = int(H * float(c.get("y", 0.42)))
+    for ln in lines:
+        fnt = _fit(st, ln, "display", size, int(W * 0.62))
+        draw_text(img, ln, fnt, st.c(c.get("colour", "ink")), (x, y), anchor)
+        y += int(fnt.size * 1.0)
+    if c.get("accent_line"):
+        fnt = _fit(st, c["accent_line"], "display", int(size * 0.6), int(W * 0.6))
+        draw_text(img, c["accent_line"], fnt, st.c("accent2"), (x, y + 10), anchor)
+        y += int(fnt.size * 1.1)
+    if c.get("kicker"):
+        draw_text(img, c["kicker"].upper(), st.f("body_bold", 34), st.c("accent"), (x, int(H * 0.14)), anchor,
+                  tracking=6)
+    if c.get("bars"):
+        bars = c["bars"]
+        bx0, by1, bw, gap = int(W * 0.60), int(H * 0.86), int(W * 0.07), int(W * 0.02)
+        vmax = max(float(b["value"]) for b in bars)
+        for i, b in enumerate(bars):
+            h = int(H * 0.5 * float(b["value"]) / vmax)
+            xx = bx0 + i * (bw + gap)
+            fill_rect(img, (xx, by1 - h, xx + bw, by1), st.c("accent2") if i == 0 else st.c("accent"), 0.92)
+            draw_text(img, f"{float(b['value']):.0f}%", st.f("display", 44), st.c("ink"), (xx + bw / 2, by1 - h - 18), "ms")
+            draw_text(img, b["label"].split(" (")[0].split(" &")[0].upper(), st.f("body_bold", 20), st.c("ink"), (xx + bw / 2, by1 + 30), "ms",
+                      tracking=1)
+    if c.get("footer"):
+        draw_text(img, c["footer"].upper(), st.f("body_bold", 24), st.c("muted"), (x, H - 44), anchor, tracking=5)
+    return img
+
+
+CONCEPTS["illustrated_headline"] = illustrated_headline
+
+
 def make_thumbnails(style_cfg: dict, concepts: list[dict], out_dir: Path) -> list[Path]:
     """concepts: rendered (placeholder-free) specs: {id, type, size: [w, h], why, ...}."""
     out_dir.mkdir(parents=True, exist_ok=True)

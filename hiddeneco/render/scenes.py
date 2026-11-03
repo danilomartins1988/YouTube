@@ -26,6 +26,24 @@ NUM = re.compile(r"[\d][\d,]*(?:\.\d+)?")
 _WARNED: set[str] = set()
 
 
+def fmt_value(v: float, p: dict) -> str:
+    """Bar/line value labels. Defaults reproduce the original US$ labels."""
+    dec = int(p.get("value_decimals", 0))
+    return f"{p.get('value_prefix', '$')}{v:,.{dec}f}{p.get('value_suffix', '')}"
+
+
+def fmt_axis(v: float, p: dict) -> str:
+    div = float(p.get("axis_divisor", 1000))
+    dec = int(p.get("axis_decimals", 0))
+    return f"{p.get('axis_prefix', '$')}{v / div:,.{dec}f}{p.get('axis_suffix', 'k')}"
+
+
+def axis_step(vmax: float, p: dict) -> float:
+    if p.get("axis_step"):
+        return float(p["axis_step"])
+    return 20000 if vmax > 60000 else 10000
+
+
 class BaseScene:
     def __init__(self, style: Style, params: dict, duration: float, narration: str = "",
                  lead: float = 0.0, speech: float | None = None, credits: list[str] | None = None,
@@ -176,7 +194,8 @@ class MapScene(BaseScene):
 
     def __init__(self, *a, **k):
         super().__init__(*a, **k)
-        self.countries = geo.load_countries(str(REPO_ROOT / "assets" / "geo" / "europe_50m.geojson"))
+        name = self.p.get("geo", "europe_50m")
+        self.countries = geo.load_countries(str(REPO_ROOT / "assets" / "geo" / f"{name}.geojson"))
 
     def draw(self, img, t):
         s, p = self.s, self.p
@@ -189,7 +208,17 @@ class MapScene(BaseScene):
         view = geo.interpolate_view(sv, ev, u, self.W, self.H, a0, a1)
         hl = ease_in_out(prog(t, zoom_start + 0.4 * (zoom_end - zoom_start), 1.0))
         fills = {p["focus"]: lerp(s.c("land"), s.c("accent"), hl)}
+        for code, spec in (p.get("highlights") or {}).items():   # {code: colour} or {code: {colour, cue}}
+            spec = spec if isinstance(spec, dict) else {"colour": spec}
+            u2 = ease_in_out(prog(t, self.when(spec.get("cue"), 0.0) if spec.get("cue") else zoom_end - 0.4, 0.8))
+            fills[code] = lerp(s.c("land"), s.c(spec.get("colour", "accent2")), u2)
         geo.draw_map(img, self.countries, view, s.c("land"), s.c("border"), fills)
+        for lb in p.get("labels", []):                             # free labels at lon/lat
+            la = ease_out(prog(t, self.when(lb, 0.0) if (lb.get("cue") or "at" in lb) else zoom_end - 0.2, 0.6))
+            x, y = view.project(np.array([lb["lon"], lb["lat"]]))
+            draw_text(img, lb["text"].upper() if lb.get("upper", True) else lb["text"],
+                      s.f(lb.get("font", "body_bold"), lb.get("size", 26)), s.c(lb.get("colour", "ink")),
+                      (x, y), "mm", alpha=la, tracking=3)
         if self.v:  # fade the map out under the text area
             grad = Image.linear_gradient("L").resize((self.W, 360))
             img.paste(self.s.background().crop((0, 860, self.W, 1220)), (0, 860), grad)
@@ -301,12 +330,14 @@ class BarChartScene(BaseScene):
         else:
             x0, x1, top = 540, 1600, 340
             row_h = min(78, 600 / len(rows))
-            step = 20000 if vmax > 60000 else 10000
-            for gx in range(0, int(vmax) + 1, step):
+            step = axis_step(vmax, p)
+            gx = 0.0
+            while gx <= vmax + 1e-9:
                 xx = x0 + (x1 - x0) * gx / vmax
                 fill_rect(img, (xx, top - 20, xx + 1, top + row_h * len(rows)), s.c("border"), 0.6 * a0)
-                draw_text(img, f"${gx // 1000}k", s.f("body", 20), s.c("muted"),
+                draw_text(img, fmt_axis(gx, p), s.f("body", 20), s.c("muted"),
                           (xx, top + row_h * len(rows) + 14), "ma", alpha=a0)
+                gx += step
         for i, r in enumerate(rows):
             start = self.lead * 0.5 + 0.3 + i * 0.12
             u = ease_out(prog(t, start, 1.1))
@@ -325,7 +356,7 @@ class BarChartScene(BaseScene):
             w = (x1 - x0) * r["value"] / vmax * u
             fill_rect(img, (x0, bar[0], x0 + w, bar[1]), colour, 0.95 if hl else 0.75)
             if u > 0.02:
-                draw_text(img, f"${r['value'] * u:,.0f}", s.f("body_bold", 28),
+                draw_text(img, fmt_value(r['value'] * u, p), s.f("body_bold", 28),
                           s.c("accent2") if hl else s.c("ink"), (x0 + w + 14, (bar[0] + bar[1]) / 2), "lm", alpha=u)
         if p.get("callout"):
             ca = ease_out(prog(t, self.when(p.get("callout_cue", {"cue": "That is"})) + 0.3, 0.7))
@@ -640,15 +671,18 @@ class LineChartScene(BaseScene):
             x0, x1, y0, y1 = 260, 1500, 300, 900
         years = [pt["year"] for pt in series[0]["points"]]
         vmax = max(pt["value"] for sr in series for pt in sr["points"])
-        step = 20000 if vmax > 60000 else 10000
+        step = axis_step(vmax, p)
         top = math.ceil(vmax / step) * step
         X = lambda yr: x0 + (x1 - x0) * (yr - years[0]) / (years[-1] - years[0])  # noqa: E731
         Y = lambda v: y1 - (y1 - y0) * v / top  # noqa: E731
-        for gv in range(0, int(top) + 1, step):
+        gv = 0.0
+        while gv <= top + 1e-9:
             fill_rect(img, (x0, Y(gv), x1, Y(gv) + 1), s.c("border"), 0.6 * a0)
-            draw_text(img, f"${gv // 1000}k", s.f("body", 22), s.c("muted"), (x0 - 14, Y(gv)), "rm", alpha=a0)
+            draw_text(img, fmt_axis(gv, p), s.f("body", 22), s.c("muted"), (x0 - 14, Y(gv)), "rm", alpha=a0)
+            gv += step
+        every = int(p.get("year_label_every", 5))
         for yr in years:
-            if yr % 5 == 0 or yr == years[-1]:
+            if yr % every == 0 or yr == years[-1] or yr == years[0]:
                 draw_text(img, str(yr), s.f("body", 22), s.c("muted"), (X(yr), y1 + 30), "mm", alpha=a0)
         start = self.when(p.get("cue"), 0.05)
         u = ease_in_out(prog(t, start, float(p.get("draw_seconds", 4.0))))
@@ -686,7 +720,7 @@ class LineChartScene(BaseScene):
         for ly, name, val, colour, hl in labels:
             draw_text(img, name, s.f("body_bold" if hl else "body", 26), colour if hl else s.c("ink"),
                       (ex + 16, ly - 4), "ls", alpha=u)
-            draw_text(img, f"${val:,.0f}", s.f("body", 22), s.c("accent2") if hl else s.c("muted"),
+            draw_text(img, fmt_value(val, p), s.f("body", 22), s.c("accent2") if hl else s.c("muted"),
                       (ex + 16, ly + 22), "ls", alpha=u)
         if p.get("callout"):
             ca = ease_out(prog(t, self.when(p.get("callout_cue"), 0.7), 0.6))
@@ -719,7 +753,7 @@ class SplitCompareScene(BaseScene):
         for i, (side, (cx, cy)) in enumerate(zip(sides, centres)):
             a = ease_out(prog(t, self.when(side, 0.05 if i == 0 else 0.5), 0.5))
             dim = 0.45 if (i == 0 and div >= 1 and p.get("dim_left_after", True)) else 1.0
-            draw_text(img, side.get("kicker", "").upper(), s.f("body_bold", 28), s.c("muted"), (cx, cy - 130), "mm",
+            draw_text(img, str(side.get("kicker", "")).upper(), s.f("body_bold", 28), s.c("muted"), (cx, cy - 130), "mm",
                       alpha=a * dim, tracking=4)
             size = 150 if self.v else 170
             val = str(side.get("value", ""))
@@ -758,8 +792,163 @@ class ActTitleScene(BaseScene):
                 yy += 46
 
 
+class IllustrationScene(BaseScene):
+    """Original code-drawn illustration (skyline, port, airport, creek, offshore) with slow parallax
+    and an optional text block or single sourced figure."""
+
+    def draw(self, img, t):
+        from hiddeneco.render import illustrate
+        s, p = self.s, self.p
+        horizon = float(p.get("horizon_vertical", 0.66) if self.v else p.get("horizon", 0.82))
+        illustrate.compose(img, p.get("kind", "skyline"), s.palette, t=t, horizon=horizon)
+        a = ease_out(prog(t, self.when(p.get("cue"), 0.0) if p.get("cue") else 0.3, 0.7))
+        if self.v:
+            x, y, w = self.box[0], self.box[1] + 120, self.box[2] - self.box[0]
+        else:
+            x, y, w = 120, 230, 980
+        if p.get("kicker"):
+            draw_text(img, p["kicker"].upper(), s.f("body_bold", 28), s.c("accent2"), (x, y), "ls", alpha=a,
+                      tracking=5)
+            y += 30
+        if p.get("title"):
+            y = draw_paragraph(img, p["title"], s.f("display", 92 if not self.v else 84), s.c("ink"),
+                               (x, y + 70), w, 1.05, alpha=a)
+        if p.get("value"):
+            va = ease_out(prog(t, self.when(p.get("value_cue"), 0.25), 0.6))
+            draw_text(img, str(p["value"]), s.f("display", 150 if not self.v else 140), s.c("accent2"),
+                      (x - 4, y + 130), "ls", alpha=va)
+            y += 150
+        if p.get("subtitle"):
+            sa = ease_out(prog(t, self.when(p.get("subtitle_cue"), 0.35), 0.6))
+            draw_paragraph(img, p["subtitle"], s.f("body", 38), s.c("ink"), (x + 2, y + 20), w, alpha=0.9 * sa)
+
+
+class RouteMapScene(MapScene):
+    """Map with animated sea lanes (through waypoints) and flight arcs from a hub."""
+
+    def draw(self, img, t):
+        super().draw(img, t)
+        s, p = self.s, self.p
+        zoom_start = float(p.get("zoom_start", 1.0 if not self.v else 0.3))
+        zoom_end = max(zoom_start + 1.0, self.lead + float(p.get("zoom_fraction", 0.55)) * self.speech)
+        u = ease_in_out(prog(t, zoom_start, zoom_end - zoom_start))
+        sv = p.get("start_view_vertical", p["start_view"]) if self.v else p["start_view"]
+        ev = p.get("end_view_vertical", p["end_view"]) if self.v else p["end_view"]
+        a0, a1 = ((0.5, 0.32), (0.5, 0.33)) if self.v else ((0.5, 0.52), (0.31, 0.52))
+        view = geo.interpolate_view(sv, ev, u, self.W, self.H, a0, a1)
+        hub = p.get("hub")
+        for i, r in enumerate(p.get("routes", [])):
+            start = self.when(r, 0.2 + 0.08 * i) if (r.get("cue") or "at" in r) else self.lead + (0.2 + 0.08 * i) * self.speech
+            ur = ease_in_out(prog(t, start, float(r.get("seconds", 1.6))))
+            if ur <= 0:
+                continue
+            if r.get("kind", "sea") == "air":
+                (ax, ay), (bx, by) = view.project(np.array([hub["lon"], hub["lat"]])), \
+                    view.project(np.array(r["points"][-1]))
+                mx, my = (ax + bx) / 2, (ay + by) / 2
+                dist = math.hypot(bx - ax, by - ay)
+                cxp, cyp = mx - (by - ay) * 0.18, my - abs(bx - ax) * 0.12 - dist * 0.12
+                pts = [((1 - q) ** 2 * ax + 2 * (1 - q) * q * cxp + q * q * bx,
+                        (1 - q) ** 2 * ay + 2 * (1 - q) * q * cyp + q * q * by) for q in np.linspace(0, 1, 60)]
+            else:
+                pts = [tuple(xy) for xy in view.project(np.array(r["points"], dtype=float))]
+                dense = []
+                for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+                    n = max(2, int(math.hypot(x1 - x0, y1 - y0) / 6))
+                    dense += [(x0 + (x1 - x0) * q, y0 + (y1 - y0) * q) for q in np.linspace(0, 1, n, endpoint=False)]
+                pts = dense + [pts[-1]]
+            k = max(2, int(len(pts) * ur))
+            drawn = pts[:k]
+            colour = s.c(r.get("colour", "accent2" if r.get("kind", "sea") == "sea" else "ink"))
+            width = 6 if r.get("kind", "sea") == "sea" else 4
+            d = ImageDraw.Draw(img)
+            if r.get("kind") == "air":
+                for j in range(0, len(drawn) - 1, 2):
+                    d.line([drawn[j], drawn[j + 1]], fill=colour, width=width)
+            else:
+                d.line(drawn, fill=colour, width=width, joint="curve")
+            hx, hy = drawn[-1]
+            d.ellipse((hx - 8, hy - 8, hx + 8, hy + 8), fill=colour)
+            if ur >= 1 and r.get("label"):
+                la = ease_out(prog(t, start + float(r.get("seconds", 1.6)), 0.5))
+                ex, ey = pts[-1]
+                anchor = r.get("anchor", "lm")
+                off = 16 if anchor[0] == "l" else -16
+                draw_text(img, r["label"].upper(), s.f("body_bold", 26), s.c("ink"), (ex + off, ey), anchor,
+                          alpha=la, tracking=3)
+        if hub:
+            hx, hy = view.project(np.array([hub["lon"], hub["lat"]]))
+            ha = ease_out(prog(t, zoom_end - 0.4, 0.6))
+            pulse = 1 + 0.25 * math.sin(t * 3)
+            aa_shape(img, (hx - 22 * pulse, hy - 22 * pulse, hx + 22 * pulse, hy + 22 * pulse), s.c("accent"),
+                     lambda d, ss, pr=pulse: d.ellipse((0, 0, 44 * pr * ss - 1, 44 * pr * ss - 1), fill=255),
+                     alpha=0.35 * ha)
+            aa_shape(img, (hx - 11, hy - 11, hx + 11, hy + 11), s.c("accent"),
+                     lambda d, ss: d.ellipse((0, 0, 22 * ss - 1, 22 * ss - 1), fill=255), alpha=ha)
+            if hub.get("label"):
+                draw_text(img, hub["label"].upper(), s.f("heading", 36), s.c("ink"), (hx + 26, hy - 30), "lm",
+                          alpha=ha, tracking=5)
+
+
+class SectorShareScene(BaseScene):
+    """Composition of a whole (e.g. GDP by activity): one 100% bar split into sourced shares,
+    the remainder labelled explicitly. Shares are percentages from the dossier."""
+
+    def draw(self, img, t):
+        s, p = self.s, self.p
+        segs = [dict(x) for x in p["segments"]]
+        rest = 100.0 - sum(float(x["value"]) for x in segs)
+        if rest > 0.5:
+            segs.append({"label": p.get("other_label", "Everything else"), "value": rest, "other": True})
+        a0 = ease_out(prog(t, 0.2, 0.6))
+        x_left = self.box[0]
+        y = draw_paragraph(img, p.get("title", ""), s.f("display", 60 if not self.v else 56), s.c("ink"),
+                           (x_left, self.box[1] + 90), self.box[2] - x_left, 1.1, alpha=a0)
+        draw_text(img, p.get("subtitle", ""), s.f("body", 30), s.c("muted"), (x_left + 2, y - 18), "ls", alpha=a0)
+        shades = [s.c("accent"), s.c("accent2"), lerp(s.c("accent2"), s.c("land"), 0.45),
+                  lerp(s.c("accent"), s.c("land"), 0.45), s.c("muted"), lerp(s.c("muted"), s.c("land"), 0.5)]
+        start = self.when(p.get("cue"), 0.05)
+        dec = int(p.get("value_decimals", 1))
+        if self.v:
+            top, row_h, x0, x1 = y + 60, 118, x_left, self.box[2] - 20
+            for i, sg in enumerate(segs):
+                u = ease_out(prog(t, self.when(sg, 0.0) if (sg.get("cue")) else start + i * 0.35, 0.8))
+                colour = s.c("land") if sg.get("other") else shades[i % len(shades)]
+                yy = top + i * row_h
+                draw_text(img, sg["label"], s.f("body_bold", 32), s.c("ink"), (x0, yy + 30), "ls", alpha=u)
+                w = (x1 - x0 - 150) * float(sg["value"]) / 100 * 2.2 * u
+                fill_rect(img, (x0, yy + 46, x0 + max(4, w), yy + 86), colour, 0.95)
+                draw_text(img, f"{float(sg['value']) * u:.{dec}f}%", s.f("display", 40),
+                          s.c("ink"), (x0 + max(4, w) + 14, yy + 66), "lm", alpha=u)
+            return
+        bx0, bx1, by0, by1 = 120, self.W - 120, 360, 470
+        x = bx0
+        legend_y = 560
+        for i, sg in enumerate(segs):
+            u = ease_out(prog(t, self.when(sg, 0.0) if sg.get("cue") else start + i * 0.35, 0.8))
+            colour = s.c("land") if sg.get("other") else shades[i % len(shades)]
+            w = (bx1 - bx0) * float(sg["value"]) / 100
+            fill_rect(img, (x, by0, x + w * u - 3, by1), colour, 0.95)
+            if w > 150 and u > 0.6:
+                draw_text(img, f"{float(sg['value']):.{dec}f}%", s.f("display", 40),
+                          s.c("bg") if not sg.get("other") else s.c("ink"), (x + 18, (by0 + by1) / 2), "lm",
+                          alpha=ease_out(prog(u, 0.6, 0.4)))
+            col, row = i % 2, i // 2
+            lx, ly = 140 + col * 840, legend_y + row * 92
+            fill_rect(img, (lx, ly - 16, lx + 30, ly + 14), colour, u)
+            draw_text(img, sg["label"], s.f("heading", 36), s.c("ink"), (lx + 50, ly), "lm", alpha=u)
+            draw_text(img, f"{float(sg['value']):.{dec}f}%", s.f("body_bold", 34), s.c("muted"),
+                      (lx + 760, ly), "rm", alpha=u)
+            x += w
+        if p.get("callout"):
+            ca = ease_out(prog(t, self.when(p.get("callout_cue"), 0.7), 0.6))
+            ly = legend_y + ((len(segs) + 1) // 2) * 92 + 40
+            draw_text(img, p["callout"], s.f("heading", 44), s.c("accent2"), (140, ly), "lm", alpha=ca)
+
+
 SCENES = {"title_card": TitleCard, "map": MapScene, "bar_chart": BarChartScene,
           "kinetic_text": KineticTextScene, "ring_stat": RingStatScene, "pictogram": PictogramScene,
           "ranking": RankingScene, "end_card": EndCardScene, "big_number": BigNumberScene,
           "timeline": TimelineScene, "line_chart": LineChartScene, "split_compare": SplitCompareScene,
-          "act_title": ActTitleScene}
+          "act_title": ActTitleScene, "illustration": IllustrationScene, "route_map": RouteMapScene,
+          "sector_share": SectorShareScene}

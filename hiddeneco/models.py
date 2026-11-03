@@ -83,7 +83,8 @@ class Scene(BaseModel):
     segment: str
     type: Literal["title_card", "map", "bar_chart", "kinetic_text", "ring_stat",
                   "pictogram", "ranking", "end_card", "big_number", "timeline",
-                  "line_chart", "split_compare", "act_title"]
+                  "line_chart", "split_compare", "act_title", "illustration", "route_map",
+                  "sector_share"]
     params: dict[str, Any] = Field(default_factory=dict)
     sfx: list[dict[str, Any]] = Field(default_factory=list)   # e.g. {kind: pop, cue: "In 1815"}
     sources: list[str] = Field(default_factory=list)
