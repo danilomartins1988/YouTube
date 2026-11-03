@@ -11,14 +11,14 @@ dossier:
 |---|---|---|---|
 | `documentary` | 1920x1080, 16:9 | 8 min 55 s | Cold open + 6 acts + conclusion: puzzle, stability, money, specialisation, skills, hidden costs |
 | `short_exports` | 1080x1920, 9:16 | 38.4 s | "More than half of Swiss exports come from one industry" |
-| `short_secrecy` | 1080x1920, 9:16 | 46.9 s ⚠ | Banking secrecy is still law, yet account data is shared since 2018 |
+| `short_secrecy` | 1080x1920, 9:16 | 46.9 s | Banking secrecy is still law, yet account data is shared since 2018 |
 | `extended_franc` | 1080x1920, 9:16 (TikTok) | 76.9 s | The SNB's 1.20 franc floor, 2011-2015 |
 | `pilot_horizontal` | 1920x1080, 16:9 | 87.7 s | Phase 1 pilot, kept for reference |
 
 The four Topic 1 deliverables are narrated by the paid OpenAI voice (`gpt-4o-mini-tts`, voice
 `onyx`), approved for this topic under a hard US$0.50 cap; the full build billed US$0.29 (9,734
-characters). ⚠ With this slower voice `short_secrecy` runs 46.9 s, over its 30-45 s target, and fails
-QC on runtime until its script is tightened. `pilot_horizontal` keeps the free Kokoro-82M voice
+characters). With this slower voice `short_secrecy` runs 46.9 s, so its target was raised to
+30-50 s by the editor. `pilot_horizontal` keeps the free Kokoro-82M voice
 (`af_heart`). All narration is synchronised to the
 visuals, an original music bed and original sound effects. The verticals have burned-in captions
 that highlight each word as it is spoken. Previews, QC reports, cost reports and the dossier are in

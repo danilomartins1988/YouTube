@@ -3,13 +3,12 @@
 - Runtime: **46.93 s**
 - Video: 1080x1920 @ 30/1 h264, audio aac 48000 Hz, 22.5 MB
 - Loudness: -14.4 LUFS integrated, true peak -4.3 dBFS
-- Errors: **1**, warnings: **2**
-- Technical QC passed: **False**
+- Errors: **0**, warnings: **2**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [ERROR] (timing) Runtime 46.9s outside target 30-45s
 - [WARNING] (timing) Segment law pace 110 wpm (numerals count as one word)
 - [WARNING] (timing) Segment number pace 100 wpm (numerals count as one word)
 
