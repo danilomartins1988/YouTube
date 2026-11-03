@@ -32,6 +32,8 @@ def check_timing(timed: list[TimedScene], deliverable: Deliverable) -> list[dict
         out.append(_issue("timing", "error", f"Runtime {total:.1f}s outside target {lo:g}-{hi:g}s"))
     for t in timed:
         if t.audio_seconds <= 0:
+            if not t.narration.strip():
+                continue   # intentional silent scene (act card), carried by music
             out.append(_issue("timing", "error", f"Segment {t.scene.segment} has no audio"))
             continue
         wpm = word_count(t.narration) / t.audio_seconds * 60

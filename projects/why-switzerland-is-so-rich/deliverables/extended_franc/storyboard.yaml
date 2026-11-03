@@ -1,0 +1,76 @@
+scenes:
+  - id: e01_hook
+    segment: hook
+    type: big_number
+    params:
+      cue: "one number"
+      kicker: Swiss francs per euro
+      value: "{{snb_floor_2011.value}}"
+      display: "{{snb_floor_2011.display}}"
+      label: The line that ruled the franc
+      sublabel: "{{snb_floor_2011.year}} – {{snb_floor_end_2015.year}}"
+    sfx: [{kind: hit, at: 0.0, gain: 0.35}, {kind: pop, cue: "one number", offset: 1.4}]
+    sources: [ecb_snb_2011, bis_jordan_2015]
+    assets: ["font:inter"]
+
+  - id: e02_problem
+    segment: problem
+    type: kinetic_text
+    params:
+      lines:
+        - {text: Crisis, size: 120, style: display, cue: "In a crisis"}
+        - {text: "→ investors buy francs", size: 64, style: heading, cue: "pile into"}
+        - {text: "→ franc gets stronger", size: 64, style: heading, cue: "gets stronger"}
+        - {text: "→ exports get pricier", size: 64, style: heading, color: accent, cue: "more expensive"}
+    sfx: [{kind: tick, cue: "pile into"}, {kind: tick, cue: "gets stronger"}, {kind: tick, cue: "more expensive"}]
+    sources: []
+    assets: ["font:inter"]
+
+  - id: e03_line
+    segment: line
+    type: timeline
+    params:
+      start_year: 2010
+      end_year: 2016
+      tick_every: 1
+      cue: "So on"
+      draw_seconds: 1.8
+      items:
+        - {year: "{{snb_floor_2011.year}}", display: "{{snb_floor_2011.year}}", label: "Floor set at {{snb_floor_2011.display}} francs per euro", cue: "drew a line"}
+    sfx: [{kind: pop, cue: "drew a line"}]
+    sources: [ecb_snb_2011]
+    assets: ["font:inter"]
+
+  - id: e04_cost
+    segment: cost
+    type: kinetic_text
+    params:
+      lines:
+        - {text: Buy foreign currency., size: 76, style: display, cue: "buying foreign"}
+        - {text: Again., size: 76, style: display, color: muted, cue: "again and again"}
+        - {text: And again., size: 76, style: display, color: muted, cue: "and again"}
+        - {text: Interventions of rapidly increasing size, size: 52, style: heading, color: accent2, cue: "rapidly increasing"}
+    sources: [snb_speech_2015_04]
+    assets: ["font:inter"]
+
+  - id: e05_break
+    segment: break
+    type: split_compare
+    params:
+      left: {kicker: "From {{snb_floor_2011.year}}", value: "{{snb_floor_2011.display}}", label: Floor defended, at: 0.0}
+      right: {kicker: "{{snb_floor_end_2015.date_spoken}}", value: Let go, label: With immediate effect, cue: "it let go"}
+    sfx: [{kind: whoosh, cue: "it let go", gain: 0.3}, {kind: hit, cue: "The franc jumped", gain: 0.35}]
+    sources: [bis_jordan_2015, swissinfo_floor_2015]
+    assets: ["font:inter"]
+
+  - id: e06_lesson
+    segment: lesson
+    type: end_card
+    params:
+      words: ["Trusted.", "Until everyone wants your money."]
+      brand: The Hidden Economics
+      brand_cue: "Follow"
+      teaser: Follow for the full documentary
+      teaser_cue: "Follow"
+    sources: []
+    assets: ["font:inter"]

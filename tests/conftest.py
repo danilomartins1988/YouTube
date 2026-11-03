@@ -19,12 +19,12 @@ def paths(tmp_path_factory):
 
 @pytest.fixture(scope="session")
 def hpaths(paths):
-    return paths.for_deliverable("horizontal")
+    return paths.for_deliverable("pilot_horizontal")
 
 
 @pytest.fixture(scope="session")
 def vpaths(paths):
-    return paths.for_deliverable("vertical")
+    return paths.for_deliverable("short_exports")
 
 
 @pytest.fixture(scope="session")

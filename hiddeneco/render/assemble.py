@@ -16,6 +16,7 @@ from hiddeneco.models import Deliverable, Dossier, Script, Storyboard, TimedScen
 from hiddeneco.render.scenes import SCENES
 from hiddeneco.render.style import Style
 from hiddeneco.script import render_text
+from hiddeneco.speech_text import spoken
 from hiddeneco.tts.base import TTSProvider
 
 
@@ -27,11 +28,12 @@ def require_ffmpeg() -> None:
 
 def _sentence_audio(tts: TTSProvider, text: str, cache_dir: Path, rate: int) -> tuple[np.ndarray, bool]:
     """Synthesise one sentence, cached by (provider, options, text). Returns (samples, fresh)."""
-    key = hashlib.sha256(json.dumps([tts.name, tts.options, text], sort_keys=True).encode()).hexdigest()[:20]
+    say = spoken(text)   # numbers/years/currency written out the way a narrator says them
+    key = hashlib.sha256(json.dumps([tts.name, tts.options, say], sort_keys=True).encode()).hexdigest()[:20]
     wav = cache_dir / f"{key}.wav"
     fresh = not wav.exists()
     if fresh:
-        tts.synthesize(text, wav, rate)
+        tts.synthesize(say, wav, rate)
     samples, r = audio_mod.read_wav(wav)
     if r != rate:
         raise ValueError(f"{wav} has rate {r}, expected {rate}")
@@ -64,8 +66,9 @@ def synthesize_narration(script: Script, dossier: Dossier, storyboard: Storyboar
             t += dur
         voice = np.concatenate(parts) if parts else np.zeros(1, np.float32)
         wav = audio_mod.write_wav(audio_dir / f"{scene.segment}.wav", voice, rate)
-        seconds = len(voice) / rate
-        duration = round((lead + seconds + tail) * fps) / fps   # whole frames keep A/V locked
+        seconds = len(voice) / rate if parts else 0.0      # silent scenes (e.g. act cards) allowed
+        duration = max(lead + seconds + tail, float(scene.params.get("min_seconds", 0)))
+        duration = round(duration * fps) / fps   # whole frames keep A/V locked
         timed.append(TimedScene(scene=scene, narration=text, audio_path=str(wav), audio_seconds=seconds,
                                 start=cursor, duration=duration, words=words))
         log("tts.segment", segment=scene.segment, seconds=round(seconds, 2), provider=tts.name)
@@ -125,6 +128,7 @@ def render_scene(ts: TimedScene, style: Style, credits: list[str], out_path: Pat
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
            "-s", f"{style.W}x{style.H}", "-r", str(fps), "-i", "-", "-c:v", "libx264",
            "-preset", vcfg["preset"], "-crf", str(vcfg["crf"]), "-pix_fmt", "yuv420p",
+           "-threads", str(vcfg.get("encoder_threads", 0)),
            "-r", str(fps), str(out_path)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     try:
@@ -137,6 +141,25 @@ def render_scene(ts: TimedScene, style: Style, credits: list[str], out_path: Pat
         raise RuntimeError(f"ffmpeg failed rendering {ts.scene.id}")
     log("render.scene", scene=ts.scene.id, frames=n, seconds=round(ts.duration, 2))
     return out_path
+
+
+def _render_job(args):
+    ts_json, style_cfg, size, credits, out_path, vcfg, fmt, captions = args
+    ts = TimedScene.model_validate_json(ts_json)
+    style = Style(style_cfg, size[0], size[1], vcfg["fps"])
+    return str(render_scene(ts, style, credits, Path(out_path), vcfg, fmt, captions))
+
+
+def render_scenes_parallel(jobs: list[tuple], workers: int) -> None:
+    """Render scenes in separate processes (each also runs its own x264 encoder)."""
+    if workers <= 1 or len(jobs) <= 1:
+        for j in jobs:
+            _render_job(j)
+        return
+    import multiprocessing as mp
+    with mp.get_context("spawn").Pool(workers) as pool:
+        for _ in pool.imap_unordered(_render_job, jobs):
+            pass
 
 
 def concat_and_mux(scene_files: list[Path], audio: Path, out_mp4: Path, work: Path) -> Path:

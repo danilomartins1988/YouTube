@@ -4,7 +4,7 @@ from hiddeneco.models import Script, Segment
 
 
 def test_project_scripts_have_no_sourcing_errors(paths, dossier):
-    assert paths.deliverables() == ["horizontal", "vertical"]
+    assert {"documentary", "short_exports", "short_secrecy", "extended_franc"} <= set(paths.deliverables())
     for name in paths.deliverables():
         sc = s.load_script(paths.for_deliverable(name).deliverable_dir)
         errors = [i for i in s.sourcing_issues(sc, dossier) if i["severity"] == "error"]

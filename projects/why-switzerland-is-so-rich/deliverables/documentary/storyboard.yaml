@@ -1,0 +1,439 @@
+# Documentary storyboard: one scene per script segment. Act cards are silent (music only).
+scenes:
+  # ---------------- cold open
+  - id: d01_open_map
+    segment: open_map
+    type: map
+    params:
+      title: Why Switzerland Is So Rich
+      focus: CHE
+      start_view: {lon: 9.0, lat: 50.0, span_deg: 46}
+      end_view: {lon: 8.25, lat: 46.8, span_deg: 7.5}
+      neighbours: {DEU: Germany, FRA: France, ITA: Italy, AUT: Austria}
+      focus_label: Switzerland
+      zoom_start: 1.6
+      zoom_fraction: 0.75
+      callouts:
+        - {label: Landlocked, cue: landlocked}
+        - {label: "Population, {{pop_che_2023.year}}", value: "{{pop_che_2023.display}}", cue: "people"}
+    sfx: [{kind: hit, at: 0.0, gain: 0.35}]
+    sources: [natural_earth, wb_pop_mirror]
+    assets: ["geo:europe_50m", "font:inter", "data:worldbank_gdp_population"]
+
+  - id: d02_open_number
+    segment: open_number
+    type: big_number
+    params:
+      cue: "this country produced"
+      kicker: "Output per person, {{gdppc_che_2023.year}}"
+      value: "{{gdppc_che_2023.value}}"
+      display: "{{gdppc_che_2023.display}}"
+      label: GDP per person, current US$
+      sublabel: "{{ratio_che_deu_2023.display}} Germany  ·  {{ratio_che_euu_2023.display}} EU average"
+    sfx: [{kind: pop, cue: "this country produced", offset: 1.4}]
+    sources: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
+    assets: ["font:inter", "data:worldbank_gdp_population"]
+
+  - id: d03_open_promise
+    segment: open_promise
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Banks?", size: 110, style: display, cue: "banks", strike_cue: {cue: "The real story"}}
+        - {text: "Chocolate?", size: 110, style: display, cue: "chocolate", strike_cue: {cue: "The real story", offset: 0.15}}
+        - {text: "Watches?", size: 110, style: display, cue: "watches", strike_cue: {cue: "The real story", offset: 0.3}}
+        - {text: The real story is stranger., size: 56, style: heading, color: accent2, cue: "The real story"}
+    sfx:
+      - {kind: tick, cue: "The real story"}
+      - {kind: tick, cue: "The real story", offset: 0.15}
+      - {kind: tick, cue: "The real story", offset: 0.3}
+    sources: []
+    assets: ["font:inter"]
+
+  - id: d03b_roadmap
+    segment: open_roadmap
+    type: kinetic_text
+    params:
+      lines:
+        - {text: Stability, size: 92, style: display, cue: "Stability, built"}
+        - {text: Money, size: 92, style: display, cue: "Money, and"}
+        - {text: Specialisation, size: 92, style: display, cue: "Specialisation, in"}
+        - {text: Skills, size: 92, style: display, cue: "And skills"}
+        - {text: "… and the hidden costs", size: 60, style: heading, color: accent, cue: "the bill"}
+    sfx: [{kind: tick, cue: "Stability, built"}, {kind: tick, cue: "Money, and"}, {kind: tick, cue: "Specialisation, in"}, {kind: tick, cue: "And skills"}]
+    sources: []
+    assets: ["font:inter"]
+
+  # ---------------- act 1
+  - id: d04_act1
+    segment: act1_card
+    type: act_title
+    params: {number: Part 1, title: The Puzzle, subtitle: What the data says, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d05_bars
+    segment: puzzle_bars
+    type: bar_chart
+    params:
+      chapter: "01 · The puzzle"
+      title: GDP per person, {{gdppc_chart_2023.year}}
+      subtitle: Current US dollars
+      data: "{{gdppc_chart_2023.value}}"
+      highlight: CHE
+      reference: DEU
+      callout_cue: "Austria"
+      callout: "{{ratio_che_deu_2023.display}} Germany  ·  {{ratio_che_euu_2023.display}} EU average"
+    sources: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
+    assets: ["font:inter", "data:worldbank_gdp_population"]
+
+  - id: d06_line
+    segment: puzzle_line
+    type: line_chart
+    params:
+      chapter: "01 · The puzzle"
+      title: GDP per person, {{gdppc_series_2000_2023.start_year}}–{{gdppc_series_2000_2023.end_year}}
+      subtitle: Current US dollars
+      series: "{{gdppc_series_2000_2023.value}}"
+      highlight: CHE
+      emphasis: [DEU]
+      cue: "Follow the data"
+      draw_seconds: 5.5
+      callout: "Above Germany & EU average: {{che_above_deu_euu_2000_2023.display}}"
+      callout_cue: "stays ahead"
+    sources: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
+    assets: ["font:inter", "data:worldbank_gdp_population"]
+
+  - id: d06b_caveat
+    segment: puzzle_caveat
+    type: kinetic_text
+    params:
+      chapter: "01 · The puzzle"
+      lines:
+        - {text: Output per person, size: 96, style: display, cue: "Output per person"}
+        - {text: "= what an economy produces ÷ everyone who lives there", size: 46, style: heading, cue: "divided by"}
+        - {text: "≠ money in your pocket", size: 72, style: display, color: accent, cue: "not the same"}
+        - {text: Measured in US dollars, so exchange rates move it, size: 40, style: body, color: muted, cue: "US dollars"}
+    sources: [wb_gdppc_indicator]
+    assets: ["font:inter"]
+
+  # ---------------- act 2
+  - id: d07_act2
+    segment: act2_card
+    type: act_title
+    params: {number: Part 2, title: Stability, subtitle: Two centuries of predictability, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d08_timeline
+    segment: stab_timeline
+    type: timeline
+    params:
+      chapter: "02 · Stability"
+      start_year: 1800
+      end_year: 2025
+      end_label: Today
+      tick_every: 50
+      cue: "The first force"
+      draw_seconds: 3.0
+      items:
+        - {year: "{{neutrality_1815.value}}", display: "{{neutrality_1815.display}}", label: Great powers recognise Swiss neutrality, cue: "great powers"}
+        - {year: "{{constitution_1848.value}}", display: "{{constitution_1848.display}}", label: Federal constitution creates the federal state, cue: "a new constitution"}
+    sfx:
+      - {kind: pop, cue: "great powers"}
+      - {kind: pop, cue: "a new constitution"}
+    sources: [admin_neutrality, eda_neutrality, parlament_constitution, bar_new_authorities]
+    assets: ["font:inter"]
+
+  - id: d09_eu_map
+    segment: stab_eu
+    type: map
+    params:
+      chapter: "02 · Stability"
+      focus: CHE
+      start_view: {lon: 9.0, lat: 48.5, span_deg: 30}
+      end_view: {lon: 8.6, lat: 47.0, span_deg: 15}
+      zoom_start: 0.4
+      zoom_fraction: 0.35
+      neighbours: {DEU: Germany, FRA: France, ITA: Italy, AUT: Austria}
+      focus_label: Switzerland
+      callouts:
+        - {label: Not an EU member, cue: "not a member"}
+        - {label: Bilateral agreements, cue: "bilateral", accent: true}
+    sources: [eda_bilateral, natural_earth]
+    assets: ["geo:europe_50m", "font:inter"]
+
+  - id: d10_meaning
+    segment: stab_meaning
+    type: kinetic_text
+    params:
+      chapter: "02 · Stability"
+      lines:
+        - {text: Capital hates surprises., size: 96, style: display, cue: "capital hates"}
+        - {text: Rules change slowly, size: 60, style: heading, cue: "rules change slowly"}
+        - {text: "… and in public.", size: 60, style: heading, cue: "in public"}
+        - {text: Predictability, size: 110, style: display, color: accent2, cue: "Predictability"}
+    sources: []
+    assets: ["font:inter"]
+
+  # ---------------- act 3
+  - id: d11_act3
+    segment: act3_card
+    type: act_title
+    params: {number: Part 3, title: Money, subtitle: "Secrecy, a famous currency floor, and a bank rescue", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d12_1934
+    segment: money_1934
+    type: kinetic_text
+    params:
+      chapter: "03 · Money"
+      lines:
+        - {text: "{{banking_act_1934.display}}", size: 240, style: display, color: accent2, cue: "In 1934"}
+        - {text: Federal Banking Act, size: 64, style: heading, cue: "banking law"}
+        - {text: Revealing client secrets becomes a crime, size: 46, style: body, color: muted, cue: "criminal offence"}
+    sfx: [{kind: pop, cue: "In 1934"}]
+    sources: [iheid_banking_secrecy, goldblum_secrecy]
+    assets: ["font:inter"]
+
+  - id: d13_pressure
+    segment: money_pressure
+    type: kinetic_text
+    params:
+      chapter: "03 · Money"
+      lines:
+        - {text: Discretion, size: 120, style: display, cue: "discretion"}
+        - {text: protects privacy…, size: 60, style: heading, cue: "protects privacy"}
+        - {text: …and hidden money., size: 60, style: heading, color: accent, cue: "hiding money"}
+        - {text: Pressure from abroad grows, size: 46, style: body, color: muted, cue: "pressure from abroad"}
+    sources: []
+    assets: ["font:inter"]
+
+  - id: d14_aeoi
+    segment: money_aeoi
+    type: timeline
+    params:
+      chapter: "03 · Money"
+      start_year: 1925
+      end_year: 2025
+      end_label: Today
+      tick_every: 25
+      cue: "The turning point"
+      draw_seconds: 2.5
+      items:
+        - {year: "{{banking_act_1934.value}}", display: "{{banking_act_1934.display}}", label: Secrecy protected by criminal law, cue: "The turning point"}
+        - {year: "{{aeoi_2018.year}}", display: "{{aeoi_2018.year}}", label: "First automatic exchange: {{aeoi_2018.display}} accounts", cue: "for the first time"}
+    sfx: [{kind: pop, cue: "for the first time"}]
+    sources: [fta_aeoi_2018, iheid_banking_secrecy]
+    assets: ["font:inter"]
+
+  - id: d14b_haven
+    segment: money_haven
+    type: kinetic_text
+    params:
+      chapter: "03 · Money"
+      lines:
+        - {text: In a crisis, investors look for, size: 56, style: heading, cue: "In times of crisis"}
+        - {text: Political stability, size: 84, style: display, cue: "politically stable"}
+        - {text: Low risk of inflation, size: 84, style: display, cue: "inflate it"}
+        - {text: "= a safe haven", size: 96, style: display, color: accent2, cue: "safe haven"}
+    sources: []
+    assets: ["font:inter"]
+
+  - id: d15_floor
+    segment: money_floor_2011
+    type: big_number
+    params:
+      chapter: "03 · Money"
+      cue: "drew a line"
+      kicker: "Swiss National Bank · {{snb_floor_2011.year}}"
+      value: "{{snb_floor_2011.value}}"
+      display: "{{snb_floor_2011.display}}"
+      label: Minimum francs per euro
+      sublabel: Below this, the central bank would step in
+    sfx: [{kind: hit, cue: "drew a line", offset: 0.2, gain: 0.3}]
+    sources: [ecb_snb_2011]
+    assets: ["font:inter"]
+
+  - id: d16_floor_end
+    segment: money_floor_2015
+    type: split_compare
+    params:
+      chapter: "03 · Money"
+      left: {kicker: "From {{snb_floor_2011.year}}", value: "{{snb_floor_2011.display}}", label: Minimum rate defended, at: 0.0}
+      right: {kicker: "{{snb_floor_end_2015.date_spoken}}", value: Floor dropped, label: With immediate effect, cue: "it abandoned"}
+    sfx: [{kind: whoosh, cue: "it abandoned", gain: 0.3}, {kind: hit, cue: "The franc jumped", gain: 0.3}]
+    sources: [snb_speech_2015_04, bis_jordan_2015, swissinfo_floor_2015]
+    assets: ["font:inter"]
+
+  - id: d17_cs
+    segment: money_cs
+    type: split_compare
+    params:
+      chapter: "03 · Money"
+      title: "{{cs_ubs_2023.month_spoken}}"
+      left: {kicker: Troubled bank, value: Credit Suisse, label: Taken over, cue: "Credit Suisse"}
+      right: {kicker: Rival, value: UBS, label: Backed by government and central bank, cue: "its rival UBS"}
+      dim_left_after: true
+    sources: [finma_cs_ubs, efd_cs_timeline]
+    assets: ["font:inter"]
+
+  # ---------------- act 4
+  - id: d18_act4
+    segment: act4_card
+    type: act_title
+    params: {number: Part 4, title: Specialisation, subtitle: What Switzerland really sells, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d19_ring
+    segment: spec_ring
+    type: ring_stat
+    params:
+      chapter: "04 · Specialisation"
+      cue: "chemical and pharmaceutical"
+      value: "{{pharma_share_2024.value}}"
+      display: "{{pharma_share_2024.display}}"
+      sublabel: Chemical & pharmaceutical products
+      label: Share of Swiss exports, {{pharma_share_2024.year}}
+    sfx: [{kind: pop, cue: "chemical and pharmaceutical", offset: 1.6}]
+    sources: [bazg_trade_2024]
+    assets: ["font:inter"]
+
+  - id: d20_basel
+    segment: spec_basel
+    type: map
+    params:
+      chapter: "04 · Specialisation"
+      focus: CHE
+      start_view: {lon: 8.25, lat: 46.8, span_deg: 9}
+      end_view: {lon: 8.2, lat: 47.3, span_deg: 4.2}
+      zoom_start: 0.3
+      zoom_fraction: 0.3
+      focus_label: Switzerland
+      neighbours: {DEU: Germany, FRA: France}
+      markers:
+        - {lon: 7.59, lat: 47.56, label: Basel, sublabel: Roche & Novartis headquarters, cue: "Basel"}
+    sfx: [{kind: pop, cue: "Basel"}]
+    sources: [swissinfo_roche_hq, natural_earth]
+    assets: ["geo:europe_50m", "font:inter"]
+
+  - id: d21_why
+    segment: spec_why
+    type: kinetic_text
+    params:
+      chapter: "04 · Specialisation"
+      lines:
+        - {text: Light., size: 110, style: display, cue: "they are light"}
+        - {text: Valuable., size: 110, style: display, cue: "valuable"}
+        - {text: Protected by patents., size: 76, style: display, cue: "protected by patents"}
+        - {text: Hard to copy., size: 110, style: display, color: accent2, cue: "hard to copy"}
+    sfx: [{kind: tick, cue: "they are light"}, {kind: tick, cue: "valuable"}, {kind: tick, cue: "protected by"}]
+    sources: []
+    assets: ["font:inter"]
+
+  # ---------------- act 5
+  - id: d22_act5
+    segment: act5_card
+    type: act_title
+    params: {number: Part 5, title: Skills, subtitle: People who are hard to replace, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d23_vet
+    segment: skills_vet
+    type: pictogram
+    params:
+      chapter: "05 · Skills"
+      cue: "of young people"
+      fraction: "{{vet_share.value}}"
+      columns: 3
+      headline: "{{vet_share.display}}"
+      label: young people enter vocational education & training
+      sublabel: Most often a dual-track apprenticeship - school plus work in a company
+    sfx: [{kind: tick, cue: "of young people", offset: 1.2}, {kind: tick, cue: "of young people", offset: 1.4}]
+    sources: [seri_vet]
+    assets: ["font:inter"]
+
+  - id: d24_gii
+    segment: skills_gii
+    type: ranking
+    params:
+      chapter: "05 · Skills"
+      title: Global Innovation Index {{gii_2025_rank.year}}
+      subtitle: World Intellectual Property Organization (WIPO)
+      cue: "Skills feed ideas"
+      items: "{{gii_2025_top5.value}}"
+      highlight: Switzerland
+      badge: "#{{gii_2025_rank.value}}"
+      badge_label: "{{gii_2025_rank.economies}} economies ranked"
+    sfx: [{kind: pop, cue: "Global Innovation Index"}]
+    sources: [wipo_gii_2025]
+    assets: ["font:inter"]
+
+  # ---------------- act 6
+  - id: d25_act6
+    segment: act6_card
+    type: act_title
+    params: {number: Part 6, title: The Hidden Costs, subtitle: What success costs a small country, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.3}]
+    assets: ["font:inter"]
+
+  - id: d26_prices
+    segment: cost_prices
+    type: big_number
+    params:
+      chapter: "06 · The hidden costs"
+      cue: "Switzerland had the highest"
+      kicker: "Price level, {{price_level_2024.year}}"
+      value: "{{price_level_2024.value}}"
+      display: "{{price_level_2024.display}}"
+      label: "EU average = 100"
+      sublabel: Highest of all countries compared by Eurostat
+    sfx: [{kind: pop, cue: "Switzerland had the highest", offset: 1.4}]
+    sources: [eurostat_price_levels, bluewin_price_2024]
+    assets: ["font:inter"]
+
+  - id: d27_franc
+    segment: cost_franc
+    type: kinetic_text
+    params:
+      chapter: "06 · The hidden costs"
+      lines:
+        - {text: High prices, size: 96, style: display, cue: "High prices"}
+        - {text: + a strong franc, size: 96, style: display, cue: "strong franc"}
+        - {text: = pressure on exporters, size: 72, style: display, color: accent, cue: "squeeze"}
+        - {text: "Safe haven: a privilege with a bill", size: 46, style: body, color: muted, cue: "safe haven"}
+    sources: []
+    assets: ["font:inter"]
+
+  - id: d28_concentration
+    segment: cost_concentration
+    type: kinetic_text
+    params:
+      chapter: "06 · The hidden costs"
+      lines:
+        - {text: Concentration cuts both ways., size: 76, style: display, cue: "concentration"}
+        - {text: "{{pharma_share_2024.display}} of exports: one industry", size: 56, style: heading, color: accent2, cue: "of your exports"}
+        - {text: "{{cs_ubs_2023.month_spoken}}: one bank rescue", size: 56, style: heading, color: accent, cue: "Credit Suisse rescue"}
+    sources: [bazg_trade_2024, finma_cs_ubs]
+    assets: ["font:inter"]
+
+  # ---------------- conclusion
+  - id: d29_act7
+    segment: act7_card
+    type: act_title
+    params: {number: Conclusion, title: "So Why Is Switzerland Rich?", min_seconds: 3.0}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d30_close
+    segment: close
+    type: end_card
+    params:
+      words: [Stability., Specialisation., Skills.]
+      brand: The Hidden Economics
+      teaser: "Next: more hidden forces behind countries, companies and power"
+    sources: []
+    assets: ["font:inter"]

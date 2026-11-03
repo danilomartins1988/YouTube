@@ -1,0 +1,39 @@
+# Vertical short (30-45 s). Story: banking secrecy is still law, yet data now flows to foreign tax authorities.
+title: Swiss Bank Secrecy Still Exists. So Why Does Switzerland Share Account Data?
+logline: The rise and quiet transformation of Swiss banking secrecy, in under a minute.
+segments:
+  - id: hook
+    narration: >-
+      In Switzerland, a banker who reveals a client's secrets can still face criminal charges.
+      So why does the country now hand account data to foreign tax authorities?
+    claims: [banking_act_1934, aeoi_2018]
+    analysis: true
+    source_note: '"Can still face criminal charges" relies on Article 47 still being in force (secondary sources; verify on fedlex).'
+
+  - id: law
+    narration: >-
+      {{banking_act_1934}}, a federal banking law made breaking client confidentiality a crime.
+      Secrecy became part of the Swiss brand.
+    claims: [banking_act_1934]
+    analysis: true
+    source_note: '"Part of the Swiss brand" is interpretation.'
+
+  - id: shift
+    narration: >-
+      But other countries wanted to know what their taxpayers held abroad. Under a global standard, Switzerland agreed
+      to share account information automatically.
+    claims: [aeoi_2018]
+    analysis: true
+    source_note: Motivation of partner countries is general framing; the exchange under the global AEOI standard is sourced.
+
+  - id: number
+    narration: >-
+      In {{aeoi_2018.year}}, the first exchange covered {{aeoi_2018}} financial accounts.
+    claims: [aeoi_2018]
+
+  - id: outro
+    narration: >-
+      Secret at home, transparent for tax. That's the new Swiss deal. Follow The Hidden Economics for the full story.
+    claims: []
+    analysis: true
+    source_note: Summary framing by the channel.

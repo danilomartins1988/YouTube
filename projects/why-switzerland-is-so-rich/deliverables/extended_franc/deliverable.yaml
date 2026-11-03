@@ -1,0 +1,27 @@
+id: extended_franc
+format: extended_9x16
+title: "The 1.20 Line: When Switzerland Fought Its Own Currency"
+target_seconds: {min: 65, max: 90}
+captions: {burn_in: true, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [tiktok]
+
+thumbnails:
+  - id: cover
+    type: ring_text
+    size: [1080, 1920]
+    value: 100
+    display: "{{snb_floor_2011.display}}"
+    lines: [THE NUMBER, THAT RULED, THE SWISS FRANC]
+    highlight_line: 1
+    footer: THE HIDDEN ECONOMICS
+    why: Cover frame built around the 1.20 floor that the video explains.
+
+metadata:
+  titles:
+    - "The 1.20 Line: When Switzerland Fought Its Own Currency"
+    - Why Switzerland Tried to Make Its Currency Weaker
+  caption: >-
+    In 2011 Switzerland's central bank drew a line at 1.20 francs per euro - and defended it for more than three
+    years. Then, one January morning in 2015, it let go. The story of a currency that was too popular.
+  hashtags: ["#economics", "#switzerland", "#currency", "#finance"]

@@ -1,0 +1,51 @@
+id: documentary
+format: long_16x9
+title: Why Switzerland Is So Rich
+target_seconds: {min: 480, max: 720}
+captions: {burn_in: false, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [youtube]
+
+thumbnails:
+  - id: a_the_number
+    type: number_over_map
+    size: [1280, 720]
+    focus: CHE
+    view: {lon: 8.25, lat: 46.8, span_deg: 9.5}
+    number: "{{gdppc_che_2023.display}}"
+    kicker: "PER PERSON · {{gdppc_che_2023.year}}"
+    hook: HOW?
+    why: One sourced number over a red Switzerland; the film answers the question.
+  - id: b_versus
+    type: versus_bars
+    size: [1280, 720]
+    data: "{{gdppc_chart_2023.value}}"
+    a: CHE
+    b: DEU
+    number: "{{ratio_che_deu_2023.display}}"
+    line1: GERMANY'S
+    line2: INCOME PER PERSON
+    why: Familiar benchmark, instantly readable on mobile.
+  - id: c_what_it_sells
+    type: ring_text
+    size: [1280, 720]
+    value: "{{pharma_share_2024.value}}"
+    display: "{{pharma_share_2024.display}}"
+    lines: [WHAT, SWITZERLAND, REALLY SELLS]
+    highlight_line: 1
+    why: Teases act 4 (specialisation) without stating the answer.
+
+metadata:
+  titles:
+    - Why Switzerland Is So Rich
+    - "Switzerland's Wealth Isn't What You Think"
+    - How a Landlocked Country Became One of the Richest on Earth
+    - "Stability, Secrecy and Medicine: How Switzerland Got Rich"
+    - The Hidden Costs of Swiss Success
+  description_intro: >-
+    How did a small, landlocked country end up producing almost twice Germany's output per person?
+    Neutrality and stability, banking secrecy and its end, the Swiss franc's 1.20 floor, the pharmaceutical
+    industry, apprenticeships, innovation - and the hidden costs of Swiss success. Every figure is sourced below.
+  tags: [Switzerland, Swiss economy, why is Switzerland rich, Swiss franc, Swiss banks, banking secrecy,
+         Swiss National Bank, pharmaceutical industry, economics documentary, economic history]
+  hashtags: ["#economics", "#switzerland", "#documentary"]

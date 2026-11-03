@@ -119,3 +119,38 @@ def refresh_snapshot(codes: list[str] | None = None, path: Path = SNAPSHOT, time
 
 def dump(data: dict[str, CountryYear]) -> str:
     return json.dumps({k: v.__dict__ for k, v in data.items()}, indent=2)
+
+
+def gdp_per_capita_series(codes: list[str], y0: int, y1: int) -> tuple[dict[str, list[dict]], str, dict]:
+    """{code: [{year, value}]} plus the method used and country names. API first, snapshot fallback."""
+    global _API_FAILED
+    if not offline() and not _API_FAILED:
+        try:
+            url = WB_API.format(codes=";".join(codes), indicator="NY.GDP.PCAP.CD", year=f"{y0}:{y1}")
+            resp = requests.get(url, timeout=15)
+            resp.raise_for_status()
+            rows = resp.json()[1]
+            out, names = {c: [] for c in codes}, {}
+            for r in rows:
+                c = r["countryiso3code"]
+                if c in out and r["value"] is not None:
+                    out[c].append({"year": int(r["date"]), "value": r["value"]})
+                    names[c] = r["country"]["value"]
+            if all(len(v) == y1 - y0 + 1 for v in out.values()):
+                return {c: sorted(v, key=lambda x: x["year"]) for c, v in out.items()}, \
+                    "worldbank_api:NY.GDP.PCAP.CD", names
+        except Exception as exc:
+            _API_FAILED = True
+            log("data.api_unavailable", error=repr(exc)[:200])
+    out, names = {c: [] for c in codes}, {}
+    with open(SNAPSHOT, newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            c, y = row["country_code"], int(row["year"])
+            if c in out and y0 <= y <= y1:
+                out[c].append({"year": y, "value": float(row["gdp_current_usd"]) / float(row["population"])})
+                names[c] = row["country_name"]
+    missing = [c for c, v in out.items() if len(v) != y1 - y0 + 1]
+    if missing:
+        raise KeyError(f"Incomplete series for {missing} in {y0}-{y1}")
+    return {c: sorted(v, key=lambda x: x["year"]) for c, v in out.items()}, \
+        "derived:NY.GDP.MKTP.CD / SP.POP.TOTL (committed snapshot)", names

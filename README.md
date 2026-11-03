@@ -4,17 +4,21 @@ A local-first system that turns a researched topic into original, sourced docume
 vertical videos using Python and FFmpeg. Nothing is bought, published or sent to a paid API
 without explicit human approval.
 
-**Phase 1 pilot: "Why Switzerland Is So Rich".** It produces two real, verified MP4s from one
-shared research dossier.
+**Topic 1: "Why Switzerland Is So Rich".** It produces five real MP4s from one shared research
+dossier:
 
-| Deliverable | Format | Length | Notes |
+| Deliverable | Format | Length | Story |
 |---|---|---|---|
-| `horizontal` | 1920x1080, 16:9, H.264/AAC stereo | 87.7 s | Animated map, bar chart, timeline, ring chart, pictogram, ranking, end card; SRT captions; −16.4 LUFS |
-| `vertical` | 1080x1920, 9:16, H.264/AAC stereo | 36.1 s | Its own story ("one industry"); burned-in word-highlight captions inside the safe zone; −15.3 LUFS |
+| `documentary` | 1920x1080, 16:9 | 8-12 min target | Cold open + 6 acts: puzzle, stability, money, specialisation, skills, hidden costs |
+| `short_exports` | 1080x1920, 9:16 | 34.6 s | "More than half of Swiss exports come from one industry" |
+| `short_secrecy` | 1080x1920, 9:16 | 40.1 s | Banking secrecy is still law, yet account data is shared since 2018 |
+| `extended_franc` | 1080x1920, 9:16 (TikTok) | 68.7 s | The SNB's 1.20 franc floor, 2011-2015 |
+| `pilot_horizontal` | 1920x1080, 16:9 | 87.7 s | Phase 1 pilot, kept for reference |
 
-Both include English narration (Kokoro-82M neural TTS, voice `am_michael`, run locally for free)
-synchronised to the visuals, an original music bed and original sound effects. Previews, QC reports, cost reports and the dossier are in [`docs/poc/`](docs/poc).
-The videos themselves are not committed; rebuild them with one command (below).
+All five have English narration (Kokoro-82M, free and local, voice `af_heart`) synchronised to the
+visuals, an original music bed and original sound effects. The verticals have burned-in captions
+that highlight each word as it is spoken. Previews, QC reports, cost reports and the dossier are in
+[`docs/poc/`](docs/poc). The videos themselves are not committed; rebuild them with one command (below).
 
 ---
 
@@ -51,8 +55,9 @@ script.py / storyboard.py  (placeholders filled from the dossier; unsourced-numb
         │
 tts/  festival · kokoro · piper · espeak · elevenlabs* · openai* · silent    (*paid, opt-in)
         │  one WAV per sentence (cached) → exact sentence times → word timings (timing.py)
-render/scenes.py  map · bar_chart · timeline · kinetic_text · ring_stat · pictogram ·
-        │         ranking · big_number · end_card · title_card    (16:9 and 9:16 layouts)
+render/scenes.py  map (+markers, arrows) · bar_chart · line_chart · timeline · kinetic_text ·
+        │         ring_stat · pictogram · ranking · big_number · split_compare · act_title ·
+        │         end_card · title_card    (16:9 and 9:16 layouts; scenes render in parallel)
         │         + burned-in captions with the spoken word highlighted (vertical)
 render/assemble.py  Pillow frames → FFmpeg x264 per scene → concat
 audio.py           narration + original music bed (ducked) + original sound effects → loudness norm
@@ -61,6 +66,10 @@ thumbnails.py · metadata.py · exports.py (platform drafts) · qc.py · manifes
         │
 approval.py  approve (named reviewer + video hash) → publish (platform packages, no upload)
 ```
+
+**Spoken text.** Before synthesis, numbers are written out the way a narrator says them:
+"1815" becomes "eighteen fifteen", "$99,557" becomes "ninety-nine thousand five hundred fifty-seven
+dollars", and "52.7%" becomes "fifty-two point seven percent". Captions keep the written form.
 
 **Sync.** Each scene lasts lead-in + speech + tail, rounded to whole frames. Sentences are
 synthesised one at a time, so sentence boundaries are exact. Word times inside a sentence are
@@ -88,7 +97,7 @@ cp .env.example .env
 
 # 4. Check
 python -m hiddeneco tts-check
-python -m pytest -q                       # 39 tests, offline
+python -m pytest -q                       # 51 tests, offline
 ```
 
 ### Default voice: Kokoro (free, local, Apache-2.0)
@@ -114,7 +123,8 @@ Change the voice in `config/settings.yaml` (`tts.providers.kokoro.voice`, e.g. `
 python -m hiddeneco topics                                    # ranked topic proposals
 python -m hiddeneco estimate why-switzerland-is-so-rich       # cost estimate BEFORE building
 python -m hiddeneco research why-switzerland-is-so-rich       # dossier only
-python -m hiddeneco build why-switzerland-is-so-rich          # all deliverables (~6 min on 4 CPUs)
+python -m hiddeneco build why-switzerland-is-so-rich          # all deliverables (~30-40 min on 4 CPUs)
+python -m hiddeneco build why-switzerland-is-so-rich -d documentary   # the long film only
 python -m hiddeneco build why-switzerland-is-so-rich -d vertical            # one deliverable
 python -m hiddeneco build why-switzerland-is-so-rich -d horizontal --scenes s03_1815   # re-render one scene
 python -m hiddeneco build why-switzerland-is-so-rich --scenes                # reuse all rendered scenes
@@ -175,9 +185,10 @@ marked unverified; check them on the vendor's site before approving paid use. Se
 
 ## Known limitations of the pilot
 
-- **Voice.** Kokoro is good but still recognisably synthetic in places (names, numbers). Listen
-  before approving; a paid premium voice is an option once the format is validated.
-- **Fact-checking.** The 6 web-located claims are still `source_located`. The build environment
+- **Voice.** Kokoro `af_heart` is the best free voice that runs locally, but it is still recognisably
+  synthetic. A paid premium voice (ElevenLabs/OpenAI, opt-in with `--allow-paid`) or a human
+  narrator is the realistic upgrade once the format is validated.
+- **Fact-checking.** All web-located claims (16 for this topic) are still `source_located`. The build environment
   couldn't reach admin.ch, wipo.int, ige.ch, bazg.admin.ch or api.worldbank.org, so a person
   needs to read those pages before publishing. GDP and population figures are
   computed from a CC BY 4.0 mirror of World Bank data. On a normal connection the pipeline uses

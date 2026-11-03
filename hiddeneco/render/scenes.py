@@ -23,6 +23,7 @@ from hiddeneco.render.primitives import (aa_shape, clamp, draw_paragraph, draw_t
 from hiddeneco.render.style import Style
 
 NUM = re.compile(r"[\d][\d,]*(?:\.\d+)?")
+_WARNED: set[str] = set()
 
 
 class BaseScene:
@@ -69,7 +70,9 @@ class BaseScene:
             if t is None:
                 idx = self.narration.lower().find(str(spec["cue"]).lower())
                 if idx < 0:
-                    log("render.cue_missing", cue=spec["cue"])
+                    if spec["cue"] not in _WARNED:
+                        _WARNED.add(spec["cue"])
+                        log("render.cue_missing", cue=spec["cue"], narration=self.narration[:60])
                     idx = 0
                 t = self.lead + self.speech * idx / max(1, len(self.narration))
             return t + float(spec.get("offset", 0.0))
@@ -219,7 +222,22 @@ class MapScene(BaseScene):
                 d.polygon([tip, (x1 + px * 16, y1 + py * 16), (x1 - px * 16, y1 - py * 16)], fill=s.c("accent2"))
 
         draw_text(img, p.get("focus_label", "").upper(), s.f("heading", 40 if self.v else 44), s.c("ink"),
-                  (fx, fy), "mm", alpha=ease_out(prog(t, zoom_end - 0.6, 0.8)), tracking=8)
+                  (fx, fy), "mm", alpha=ease_out(prog(t, zoom_end - 0.6, 0.8)) * (0.35 if p.get("markers") else 1),
+                  tracking=8)
+        for mk in p.get("markers", []):
+            ma = ease_out(prog(t, max(self.when(mk, 0.3), zoom_end - 0.3), 0.5))
+            if ma <= 0:
+                continue
+            mx, my = view.project(np.array([mk["lon"], mk["lat"]]))
+            rr = 14 + 10 * (1 - ma)
+            aa_shape(img, (mx - 26, my - 26, mx + 26, my + 26), s.c("bg"),
+                     lambda d, ss: d.ellipse((0, 0, 52 * ss - 1, 52 * ss - 1), fill=255), alpha=0.6 * ma)
+            aa_shape(img, (mx - rr, my - rr, mx + rr, my + rr), s.c("accent2"),
+                     lambda d, ss, rr=rr: d.ellipse((0, 0, 2 * rr * ss - 1, 2 * rr * ss - 1), fill=255), alpha=ma)
+            draw_text(img, mk["label"], s.f("heading", 46 if not self.v else 40), s.c("ink"),
+                      (mx + 34, my), "lm", alpha=ma)
+            if mk.get("sublabel"):
+                draw_text(img, mk["sublabel"], s.f("body", 28), s.c("ink"), (mx + 36, my + 42), "lm", alpha=0.85 * ma)
 
         ta = ease_out(prog(t, 0.15, 0.6)) * (1 - ease_in_out(prog(t, zoom_start + 0.5, 0.7)))
         if p.get("title"):
@@ -567,7 +585,10 @@ class EndCardScene(BaseScene):
         y = self.cy - step * (len(words) - 1) / 2
         for i, w in enumerate(words):
             a = ease_out(prog(t, self.when({"cue": w.rstrip(".")}, 0.0), 0.45)) * (1 - out)
-            draw_text(img, w, s.f("display", size), s.c("accent2") if i == len(words) - 1 else s.c("ink"),
+            wsize = size
+            while text_size(w, s.f("display", wsize))[0] > (self.box[2] - self.box[0]) and wsize > 30:
+                wsize -= 4
+            draw_text(img, w, s.f("display", wsize), s.c("accent2") if i == len(words) - 1 else s.c("ink"),
                       (self.cx, y + i * step + 20 * (1 - a)), "mm", alpha=a)
         ba = ease_out(prog(t, brand_t, 0.8))
         bsize = 62 if self.v else 84
@@ -587,7 +608,143 @@ class EndCardScene(BaseScene):
             yy += 46
 
 
+class LineChartScene(BaseScene):
+    """Time series drawn left to right; highlighted series in accent, end labels follow the pen."""
+
+    def draw(self, img, t):
+        s, p = self.s, self.p
+        series = p["series"]
+        a0 = ease_out(prog(t, 0.2, 0.6))
+        x_left = self.box[0]
+        y = draw_paragraph(img, p.get("title", ""), s.f("display", 60 if not self.v else 56), s.c("ink"),
+                           (x_left, self.box[1] + 90), self.box[2] - x_left, 1.1, alpha=a0)
+        draw_text(img, p.get("subtitle", ""), s.f("body", 30), s.c("muted"), (x_left + 2, y - 18), "ls", alpha=a0)
+        if self.v:
+            x0, x1, y0, y1 = x_left + 70, self.box[2] - 230, y + 60, self.box[3] - 60
+        else:
+            x0, x1, y0, y1 = 260, 1500, 300, 900
+        years = [pt["year"] for pt in series[0]["points"]]
+        vmax = max(pt["value"] for sr in series for pt in sr["points"])
+        step = 20000 if vmax > 60000 else 10000
+        top = math.ceil(vmax / step) * step
+        X = lambda yr: x0 + (x1 - x0) * (yr - years[0]) / (years[-1] - years[0])  # noqa: E731
+        Y = lambda v: y1 - (y1 - y0) * v / top  # noqa: E731
+        for gv in range(0, int(top) + 1, step):
+            fill_rect(img, (x0, Y(gv), x1, Y(gv) + 1), s.c("border"), 0.6 * a0)
+            draw_text(img, f"${gv // 1000}k", s.f("body", 22), s.c("muted"), (x0 - 14, Y(gv)), "rm", alpha=a0)
+        for yr in years:
+            if yr % 5 == 0 or yr == years[-1]:
+                draw_text(img, str(yr), s.f("body", 22), s.c("muted"), (X(yr), y1 + 30), "mm", alpha=a0)
+        start = self.when(p.get("cue"), 0.05)
+        u = ease_in_out(prog(t, start, float(p.get("draw_seconds", 4.0))))
+        pos = u * (len(years) - 1)
+        n_full = int(pos)
+        frac = pos - n_full
+        box = (x0 - 10, y0 - 20, x1 + 10, y1 + 10)
+        order = sorted(series, key=lambda sr: sr["code"] == p.get("highlight"))
+        labels = []
+        for sr in order:
+            pts = [(X(pt["year"]), Y(pt["value"])) for pt in sr["points"]]
+            drawn = pts[: n_full + 1]
+            if n_full + 1 < len(pts):
+                (ax, ay), (bx, by) = pts[n_full], pts[n_full + 1]
+                drawn.append((ax + (bx - ax) * frac, ay + (by - ay) * frac))
+            if len(drawn) < 2 or u <= 0:
+                continue
+            hl = sr["code"] == p.get("highlight")
+            ref = sr["code"] in p.get("emphasis", [])
+            colour = s.c("accent") if hl else (s.c("ink") if ref else s.c("muted"))
+            width = 7 if hl else 4
+            rel = [((x - box[0]), (yy - box[1])) for x, yy in drawn]
+
+            def line(d, ss, rel=rel, width=width):
+                d.line([(x * ss, yy * ss) for x, yy in rel], fill=255, width=width * ss, joint="curve")
+            aa_shape(img, box, colour, line, ss=2)
+            ex, ey = drawn[-1]
+            idx = min(len(sr["points"]) - 1, n_full + (1 if frac > 0.5 else 0))
+            labels.append([ey, sr["name"], sr["points"][idx]["value"], colour, hl])
+        labels.sort(key=lambda lb: lb[0])
+        for i in range(1, len(labels)):           # keep end labels from overlapping
+            if labels[i][0] - labels[i - 1][0] < 44:
+                labels[i][0] = labels[i - 1][0] + 44
+        ex = X(years[0]) + (X(years[-1]) - X(years[0])) * u
+        for ly, name, val, colour, hl in labels:
+            draw_text(img, name, s.f("body_bold" if hl else "body", 26), colour if hl else s.c("ink"),
+                      (ex + 16, ly - 4), "ls", alpha=u)
+            draw_text(img, f"${val:,.0f}", s.f("body", 22), s.c("accent2") if hl else s.c("muted"),
+                      (ex + 16, ly + 22), "ls", alpha=u)
+        if p.get("callout"):
+            ca = ease_out(prog(t, self.when(p.get("callout_cue"), 0.7), 0.6))
+            if self.v:
+                draw_paragraph(img, p["callout"], s.f("heading", 42), s.c("accent2"), (x_left, self.box[3] + 10),
+                               self.box[2] - x_left, alpha=ca)
+            else:
+                draw_text(img, p["callout"], s.f("heading", 44), s.c("accent2"), (self.W - 120, 210), "rm", alpha=ca)
+
+
+class SplitCompareScene(BaseScene):
+    """Two states side by side (16:9) or stacked (9:16): before/after, then/now, A vs B."""
+
+    def draw(self, img, t):
+        s, p = self.s, self.p
+        a0 = ease_out(prog(t, 0.2, 0.5))
+        if p.get("title"):
+            draw_paragraph(img, p["title"], s.f("display", 56), s.c("ink"), (self.box[0], self.box[1] + 90),
+                           self.box[2] - self.box[0], alpha=a0)
+        sides = [p["left"], p["right"]]
+        if self.v:
+            centres = [(self.cx, self.box[1] + 300), (self.cx, self.box[1] + 690)]
+        else:
+            centres = [(self.W * 0.29, self.cy + 30), (self.W * 0.71, self.cy + 30)]
+        div = ease_out(prog(t, self.when(sides[1], 0.5) - 0.3, 0.5))
+        if self.v:
+            fill_rect(img, (self.cx - 160 * div, self.box[1] + 495, self.cx + 160 * div, self.box[1] + 499), s.c("accent"))
+        else:
+            fill_rect(img, (self.W / 2 - 2, self.cy - 200 * div + 30, self.W / 2 + 2, self.cy + 200 * div + 30), s.c("accent"))
+        for i, (side, (cx, cy)) in enumerate(zip(sides, centres)):
+            a = ease_out(prog(t, self.when(side, 0.05 if i == 0 else 0.5), 0.5))
+            dim = 0.45 if (i == 0 and div >= 1 and p.get("dim_left_after", True)) else 1.0
+            draw_text(img, side.get("kicker", "").upper(), s.f("body_bold", 28), s.c("muted"), (cx, cy - 130), "mm",
+                      alpha=a * dim, tracking=4)
+            size = 150 if self.v else 170
+            val = str(side.get("value", ""))
+            while text_size(val, s.f("display", size))[0] > (self.box[2] - self.box[0] - 40 if self.v else 760) \
+                    and size > 40:
+                size -= 6
+            draw_text(img, val, s.f("display", size), s.c("accent2") if i == 1 else s.c("ink"),
+                      (cx, cy - 10 + 20 * (1 - a)), "mm", alpha=a * dim)
+            yy = cy + 100
+            for line in wrap(side.get("label", ""), s.f("heading", 40), 760 if not self.v else self.box[2] - self.box[0]):
+                draw_text(img, line, s.f("heading", 40), s.c("ink"), (cx, yy), "mm", alpha=a * dim)
+                yy += 50
+
+
+class ActTitleScene(BaseScene):
+    """Chapter card between acts: number, title, optional one-line promise. Usually silent."""
+
+    def draw(self, img, t):
+        s, p = self.s, self.p
+        a = ease_out(prog(t, 0.15, 0.6))
+        r = ease_in_out(prog(t, 0.3, 0.8))
+        draw_text(img, str(p.get("number", "")).upper(), s.f("body_bold", 30), s.c("accent"),
+                  (self.cx, self.cy - 120), "mm", alpha=a, tracking=8)
+        size = 120 if not self.v else 104
+        title = p.get("title", "")
+        while text_size(title, s.f("display", size))[0] > (self.box[2] - self.box[0]) and size > 40:
+            size -= 6
+        draw_text(img, title, s.f("display", size), s.c("ink"), (self.cx, self.cy + 10 * (1 - a)), "mm", alpha=a)
+        fill_rect(img, (self.cx - 120 * r, self.cy + size * 0.6, self.cx + 120 * r, self.cy + size * 0.6 + 4),
+                  s.c("accent"))
+        if p.get("subtitle"):
+            yy = self.cy + size * 0.6 + 60
+            for line in wrap(p["subtitle"], s.f("body", 36), self.box[2] - self.box[0]):
+                draw_text(img, line, s.f("body", 36), s.c("muted"), (self.cx, yy), "mm",
+                          alpha=ease_out(prog(t, 0.6, 0.6)))
+                yy += 46
+
+
 SCENES = {"title_card": TitleCard, "map": MapScene, "bar_chart": BarChartScene,
           "kinetic_text": KineticTextScene, "ring_stat": RingStatScene, "pictogram": PictogramScene,
           "ranking": RankingScene, "end_card": EndCardScene, "big_number": BigNumberScene,
-          "timeline": TimelineScene}
+          "timeline": TimelineScene, "line_chart": LineChartScene, "split_compare": SplitCompareScene,
+          "act_title": ActTitleScene}

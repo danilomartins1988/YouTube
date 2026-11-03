@@ -27,7 +27,37 @@ class DossierError(ValueError):
     pass
 
 
+def _series_claim(spec: dict) -> tuple[Claim, dict]:
+    y0, y1 = int(spec["start_year"]), int(spec["end_year"])
+    codes = list(spec.get("countries") or [spec["country"], *spec["others"]])
+    series, method, names = data_sources.gdp_per_capita_series(codes, y0, y1)
+    labels = {**names, **spec.get("labels", {})}
+    if spec["metric"] == "gdp_per_capita_usd_series":
+        value = [{"code": c, "name": labels.get(c, c), "points": series[c]} for c in codes]
+        text = (f"GDP per capita (current US$), {y0}-{y1}, for " + ", ".join(labels.get(c, c) for c in codes) + ".")
+        claim = Claim(id=spec["id"], text=text, value=value, source_ids=spec["source_ids"], status="data_derived",
+                      fields={"start_year": y0, "end_year": y1},
+                      derived_from={"metric": spec["metric"], "method": [method]})
+        return claim, {"series": series}
+    if spec["metric"] == "series_always_above":
+        c = spec["country"]
+        ok = all(series[c][i]["value"] > series[o][i]["value"] for o in spec["others"] for i in range(y1 - y0 + 1))
+        if not ok:
+            raise DossierError(f"{spec['id']}: {c} was NOT above {spec['others']} in every year {y0}-{y1}; "
+                               "the script must not claim it.")
+        others = " and ".join(labels.get(o, o) for o in spec["others"])
+        text = f"In every year from {y0} to {y1}, {labels.get(c, c)}'s GDP per capita exceeded that of {others}."
+        claim = Claim(id=spec["id"], text=text, value=True, source_ids=spec["source_ids"], status="data_derived",
+                      spoken=f"in every single year from {y0} to {y1}", display=f"Every year, {y0}\u2013{y1}",
+                      fields={"start_year": y0, "end_year": y1},
+                      derived_from={"metric": spec["metric"], "method": [method]})
+        return claim, {"series": series}
+    raise DossierError(f"Unknown series metric {spec['metric']}")
+
+
 def _data_claim(spec: dict, cache: dict) -> tuple[Claim, dict]:
+    if spec["metric"] in ("gdp_per_capita_usd_series", "series_always_above"):
+        return _series_claim(spec)
     year = int(spec["year"])
     codes = list(spec.get("countries") or [c for c in (spec.get("country"), spec.get("other")) if c])
     key = (tuple(sorted(codes)), year)

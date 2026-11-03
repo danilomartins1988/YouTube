@@ -15,7 +15,6 @@ from hiddeneco.costs import CostLedger, compute_cost, tts_cost
 from hiddeneco.logging_setup import attach_run_log, log, step
 from hiddeneco.models import Deliverable, TimedScene
 from hiddeneco.render import assemble
-from hiddeneco.render.style import Style
 from hiddeneco.research import dossier as dossier_mod
 from hiddeneco.script import render_value
 from hiddeneco.tts.providers import default_provider_name, get_provider
@@ -98,17 +97,18 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
         (paths.out / "timeline.json").write_text(json.dumps([t.model_dump() for t in timed], indent=2),
                                                  encoding="utf-8")
 
-    style = Style(project["style"], fmt["width"], fmt["height"], fps)
     t0 = time.perf_counter()
     with step("render.scenes", deliverable=deliverable.id):
         scene_dir = paths.out_sub("scenes")
-        files = []
+        files, jobs = [], []
         for ts in timed:
             out = scene_dir / f"{ts.scene.id}.mp4"
             if only_scenes is None or ts.scene.id in only_scenes or not out.exists():
                 credits = list(dict.fromkeys(d.source(s).credit or d.source(s).publisher for s in ts.scene.sources))
-                assemble.render_scene(ts, style, credits, out, vcfg, fmt, deliverable.captions.get("burn_in", False))
+                jobs.append((ts.model_dump_json(), project["style"], (fmt["width"], fmt["height"]), credits,
+                             str(out), vcfg, fmt, deliverable.captions.get("burn_in", False)))
             files.append(out)
+        assemble.render_scenes_parallel(jobs, int(vcfg.get("render_workers", 1)))
     with step("render.assemble", deliverable=deliverable.id):
         mix, _voice = assemble.build_audio_track(timed, paths.out_sub("audio"), deliverable, fmt, rate)
         assemble.concat_and_mux(files, mix, paths.final_video, paths.out_sub("work"))

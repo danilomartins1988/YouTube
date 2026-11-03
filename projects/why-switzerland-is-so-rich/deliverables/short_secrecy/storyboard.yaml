@@ -1,0 +1,65 @@
+scenes:
+  - id: s01_hook
+    segment: hook
+    type: kinetic_text
+    params:
+      lines:
+        - {text: Swiss bank secrecy, size: 120, style: display, color: accent2, at: 0.0}
+        - {text: still a crime to break, size: 64, style: heading, cue: "can still face"}
+        - {text: "So why share account data?", size: 76, style: display, color: accent, cue: "So why"}
+    sfx: [{kind: hit, at: 0.0, gain: 0.3}]
+    sources: [goldblum_secrecy]
+    assets: ["font:inter"]
+
+  - id: s02_law
+    segment: law
+    type: timeline
+    params:
+      start_year: 1925
+      end_year: 2025
+      end_label: Today
+      tick_every: 25
+      cue: "a federal banking law"
+      draw_seconds: 2.0
+      items:
+        - {year: "{{banking_act_1934.value}}", display: "{{banking_act_1934.display}}", label: Banking law makes breaking secrecy a crime, cue: "In 1934"}
+    sfx: [{kind: pop, cue: "In 1934"}]
+    sources: [iheid_banking_secrecy, goldblum_secrecy]
+    assets: ["font:inter"]
+
+  - id: s03_shift
+    segment: shift
+    type: kinetic_text
+    params:
+      lines:
+        - {text: Foreign tax authorities, size: 84, style: display, cue: "other countries"}
+        - {text: want to know, size: 64, style: heading, cue: "wanted to know"}
+        - {text: "Global standard → automatic sharing", size: 60, style: heading, color: accent2, cue: "Under a global standard"}
+    sources: [fta_aeoi_2018]
+    assets: ["font:inter"]
+
+  - id: s04_number
+    segment: number
+    type: big_number
+    params:
+      cue: "the first exchange"
+      kicker: "First automatic exchange, {{aeoi_2018.year}}"
+      value: "{{aeoi_2018.value}}"
+      display: "{{aeoi_2018.display}}"
+      label: financial accounts
+      sublabel: Federal Tax Administration
+    sfx: [{kind: pop, cue: "the first exchange", offset: 1.4}]
+    sources: [fta_aeoi_2018]
+    assets: ["font:inter"]
+
+  - id: s05_outro
+    segment: outro
+    type: end_card
+    params:
+      words: ["Secret at home.", "Transparent for tax."]
+      brand: The Hidden Economics
+      brand_cue: "Follow"
+      teaser: Follow for the full documentary
+      teaser_cue: "Follow"
+    sources: []
+    assets: ["font:inter"]

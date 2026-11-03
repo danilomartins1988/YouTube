@@ -1,0 +1,47 @@
+# Extended vertical (65-90 s) for TikTok. Its own story: the SNB's minimum exchange rate, 2011-2015.
+title: "The 1.20 Line: When Switzerland Fought Its Own Currency"
+logline: Why a central bank tried to stop its own currency from getting stronger - and what happened when it stopped.
+segments:
+  - id: hook
+    narration: >-
+      For more than three years, one number ruled Switzerland's currency. {{snb_floor_2011|cap}}.
+      And the country's own central bank was the one defending it.
+    claims: [snb_floor_2011, snb_floor_end_2015]
+    analysis: true
+    source_note: '"More than three years" = 6 Sep 2011 to 15 Jan 2015, derived from the two sourced dates.'
+
+  - id: problem
+    narration: >-
+      Here's the problem with being a safe haven. In a crisis, investors pile into your currency. It gets stronger,
+      and everything you sell abroad gets more expensive. For an exporting country like Switzerland, that hurts.
+    claims: []
+    analysis: true
+    source_note: General economics framing; no statistic asserted.
+
+  - id: line
+    narration: >-
+      So on {{snb_floor_2011.date_spoken}}, the Swiss National Bank drew a line. It would no longer tolerate a euro
+      worth less than {{snb_floor_2011}}, and it was ready to buy foreign currency to enforce it.
+    claims: [snb_floor_2011, snb_floor_end_2015]
+    source_note: Enforcement through foreign currency purchases is stated in the SNB's 2015 discontinuation text (BIS).
+
+  - id: cost
+    narration: >-
+      Holding that line meant buying foreign currency, again and again. The central bank later said the floor could
+      only have been kept with interventions of rapidly increasing size.
+    claims: [snb_floor_interventions, snb_floor_end_2015]
+
+  - id: break
+    narration: >-
+      Then, on {{snb_floor_end_2015.date_spoken}}, it let go, with immediate effect. The franc jumped, and markets were
+      caught completely off guard.
+    claims: [snb_floor_end_2015]
+
+  - id: lesson
+    narration: >-
+      The lesson? Being trusted is valuable, until everyone wants your money at the same time. Then even a strong
+      currency becomes a problem to manage. Follow The Hidden
+      Economics for the full story of Swiss wealth.
+    claims: []
+    analysis: true
+    source_note: Interpretation by the channel.

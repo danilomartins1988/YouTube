@@ -56,20 +56,18 @@ dossier. Includes QC, export drafts, a cost report, a build manifest and 39 test
 - Verify the 6 `source_located` claims by reading the primary pages.
 - Listen to the narration and pick the final Kokoro voice (samples provided).
 
-### Phase 2: reusable production engine
-1. **Full documentary.** Five or six acts, 8-12 minutes, with a cold open and a counterpoint act.
-   It reuses the deliverable structure (`format: long_16x9`, `target_seconds: {min: 480, max: 720}`).
-2. **Three vertical videos per topic.** Two 30-45 s shorts and one 65-90 s `extended_9x16` for
-   TikTok, each with its own hook and story.
-3. **Forced alignment** (for example a local whisper.cpp model) for word-exact captions and cues.
-4. **New scenes:** line chart over time (the snapshot already holds 2000-2023), flow or Sankey for
-   trade, route map, document-quote card for primary-source excerpts, comparison split-screen.
-5. **Research assistant.** Optional LLM drafting for topic ideas and script first drafts. Its
-   output enters as `needs_verification` and can never bypass the claim gate. It runs only behind
-   an explicit cost approval.
-6. **Topic discovery signals.** Use official APIs only (YouTube Data API search results,
-   Google Trends where permitted), stored with timestamps. Without them, the report keeps saying
-   "editorial judgement", never invented numbers.
+### Phase 2: reusable production engine (done)
+- **Per topic:** one 8-12 minute documentary plus three vertical videos: two 30-45 s shorts and one
+  65-90 s extended video for TikTok. Each has its own script and story.
+- **New scenes:** line chart (time series from World Bank data), split comparison, act/chapter
+  cards (silent, music only), map markers. Scenes render in parallel.
+- **Speech:** numbers, years, currency and percentages are written out before synthesis. Kokoro
+  `af_heart` runs at natural speed with light voice processing (high-pass filter, gentle
+  compression).
+- **Data-backed patterns:** `series_always_above` claims are computed from the data, and the
+  build refuses to state them if they are false.
+- **Still open:** forced alignment (blocked here because speech-recognition models can't be
+  downloaded) and a document-quote card. Quotes stay out until primary pages can be read verbatim.
 
 ### Phase 3: web dashboard
 FastAPI + HTMX + SQLite, running locally or on one small server. Features:

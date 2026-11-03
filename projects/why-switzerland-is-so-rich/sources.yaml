@@ -95,6 +95,125 @@ sources:
     kind: secondary
     credit: "IPI"
 
+  - id: parlament_constitution
+    title: The Federal Constitution
+    publisher: The Federal Assembly - The Swiss Parliament
+    url: https://www.parlament.ch/en/über-das-parlament/Pages/bundesverfassung.aspx
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "Swiss Parliament"
+  - id: bar_new_authorities
+    title: The Confederation's new authorities
+    publisher: Swiss Federal Archives
+    url: https://www.bar.admin.ch/en/the-confederations-new-authorities
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "Swiss Federal Archives"
+  - id: eda_bilateral
+    title: Overview of the bilateral path
+    publisher: Federal Department of Foreign Affairs (FDFA)
+    url: https://www.europa.eda.admin.ch/en/overview-bilateral-path
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "FDFA"
+  - id: iheid_banking_secrecy
+    title: Swiss banking secrecy - origins of the 1934 Banking Act (academic chapter)
+    publisher: Graduate Institute Geneva (OpenEdition Books)
+    url: https://books.openedition.org/iheid/322
+    accessed: "2026-11-03"
+    kind: secondary
+    credit: "Graduate Institute Geneva"
+  - id: goldblum_secrecy
+    title: Bank secrecy in Switzerland
+    publisher: Goldblum and Partners (law firm knowledge base)
+    url: https://goldblum.ch/knowledgebase/bank-secrecy-in-switzerland/
+    accessed: "2026-11-03"
+    kind: secondary
+    credit: "Goldblum and Partners"
+  - id: fta_aeoi_2018
+    title: First exchange of information on around 2 million financial accounts
+    publisher: Swiss Federal Administration - Federal Tax Administration (admin.ch)
+    url: https://admin.ch/gov/en/start/documentation/media-releases.msg-id-72420.html
+    published: "2018-10-05"
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "Federal Tax Administration"
+  - id: ecb_snb_2011
+    title: Statement of the Governing Council of the ECB on the decision of the Swiss National Bank
+    publisher: European Central Bank
+    url: https://www.ecb.europa.eu/press/pr/date/2011/html/pr110906.en.html
+    published: "2011-09-06"
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "ECB"
+  - id: bis_jordan_2015
+    title: "Thomas Jordan: The rationale for discontinuing the minimum exchange rate and lowering interest rates"
+    publisher: Bank for International Settlements (central bankers' speeches)
+    url: https://www.bis.org/review/r150116a.htm
+    published: "2015-01-15"
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "SNB via BIS"
+  - id: snb_speech_2015_04
+    title: SNB monetary policy after the discontinuation of the minimum exchange rate
+    publisher: Swiss National Bank
+    url: https://www.snb.ch/en/mmr/speeches/id/ref_20150424_tjn
+    published: "2015-04-24"
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "Swiss National Bank"
+  - id: swissinfo_floor_2015
+    title: Swiss National Bank scraps exchange rate ceiling
+    publisher: swissinfo.ch
+    url: https://www.swissinfo.ch/eng/euro-floor_swiss-national-bank-scraps-exchange-rate-ceiling/41217364
+    published: "2015-01-15"
+    accessed: "2026-11-03"
+    kind: secondary
+    credit: "swissinfo.ch"
+  - id: finma_cs_ubs
+    title: FINMA approves merger of UBS and Credit Suisse
+    publisher: Swiss Financial Market Supervisory Authority FINMA
+    url: https://www.finma.ch/en/news/2023/03/20230319-mm-cs-ubs/
+    published: "2023-03-19"
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "FINMA"
+  - id: efd_cs_timeline
+    title: Timeline Credit Suisse / UBS
+    publisher: Federal Department of Finance
+    url: https://www.efd.admin.ch/en/timeline-credit-suisse-ubs
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "Federal Department of Finance"
+  - id: eurostat_price_levels
+    title: Comparative price levels of consumer goods and services (Statistics Explained)
+    publisher: Eurostat
+    url: https://ec.europa.eu/eurostat/statistics-explained/index.php/comparative_price_levels_of_consumer_goods_and_services
+    accessed: "2026-11-03"
+    kind: primary
+    credit: "Eurostat"
+  - id: bluewin_price_2024
+    title: "Price comparison with the EU: The Swiss pay 80 percent more for the same products"
+    publisher: blue News (bluewin.ch)
+    url: https://www.bluewin.ch/en/news/switzerland/swiss-have-to-pay-80-percent-more-for-the-same-products-3017192.html
+    accessed: "2026-11-03"
+    kind: secondary
+    credit: "blue News / Eurostat"
+  - id: swissinfo_roche_hq
+    title: Roche headquarters to redefine Basel skyline
+    publisher: swissinfo.ch
+    url: https://www.swissinfo.ch/eng/roche-headquarters-to-redefine-basel-skyline/5445664
+    accessed: "2026-11-03"
+    kind: secondary
+    credit: "swissinfo.ch"
+  - id: swissinfo_roche_rd
+    title: Roche inaugurates new CHF1.2 billion R&D centre in Basel
+    publisher: swissinfo.ch
+    url: https://www.swissinfo.ch/eng/archive-multinational-companies/roche-inaugurates-new-chf1-2-billion-rd-centre-in-basel/87527703
+    accessed: "2026-11-03"
+    kind: secondary
+    credit: "swissinfo.ch"
+
 # Computed by the pipeline from the datasets above. Do not hand-edit values.
 data_claims:
   - id: pop_che_2023
@@ -133,6 +252,22 @@ data_claims:
     labels: {CHE: Switzerland, USA: United States, AUT: Austria, DEU: Germany, GBR: United Kingdom,
              FRA: France, EUU: EU average, ITA: Italy}
     year: 2023
+    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
+
+  - id: gdppc_series_2000_2023
+    metric: gdp_per_capita_usd_series
+    countries: [CHE, USA, DEU, EUU]
+    labels: {CHE: Switzerland, USA: United States, DEU: Germany, EUU: EU average}
+    start_year: 2000
+    end_year: 2023
+    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
+  - id: che_above_deu_euu_2000_2023
+    metric: series_always_above
+    country: CHE
+    others: [DEU, EUU]
+    labels: {CHE: Switzerland, DEU: Germany, EUU: the EU average}
+    start_year: 2000
+    end_year: 2023
     source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
 
 # Hand-curated claims. Values below were located via web search on 2026-11-03 and have
@@ -183,6 +318,77 @@ claims:
     source_ids: [wipo_gii_2025]
     status: source_located
     verification_note: Confirm order in WIPO's ranking table.
+
+  - id: constitution_1848
+    text: The Federal Constitution of 12 September 1848 established the Swiss federal state, turning a group of cantons into a federal state with new federal authorities.
+    spoken: In 1848
+    display: "1848"
+    value: 1848
+    source_ids: [parlament_constitution, bar_new_authorities]
+    status: source_located
+    verification_note: parlament.ch reportedly says the present constitution's basis is the Constitution of 12 September 1848, which established the Swiss federal state. Confirm wording.
+  - id: eu_bilateral
+    text: Switzerland is not a member of the European Union; it pursues its European policy through bilateral sectoral agreements.
+    source_ids: [eda_bilateral]
+    status: source_located
+    verification_note: Confirm on the FDFA 'bilateral path' page.
+  - id: banking_act_1934
+    text: The 1934 Federal Act on Banks and Savings Banks (in force 1 March 1935) made breaching banking secrecy a criminal offence (Article 47); before that, banking secrecy was protected by civil law.
+    spoken: In 1934
+    display: "1934"
+    value: 1934
+    source_ids: [iheid_banking_secrecy, goldblum_secrecy]
+    status: source_located
+    verification_note: Secondary sources (academic chapter + law firm). Ideally confirm against the Act's text on fedlex.admin.ch (Article 47) and cite it.
+  - id: aeoi_2018
+    text: In 2018 Switzerland exchanged financial account information automatically with partner states for the first time, covering around 2 million financial accounts (FTA release, 5 October 2018), under the global AEOI standard.
+    spoken: around two million
+    display: "~2 million"
+    value: 2000000
+    fields: {year: 2018}
+    source_ids: [fta_aeoi_2018]
+    status: source_located
+    verification_note: Title of the FTA release says 'around 2 million financial accounts'. Partner count differs between sources (36 vs 38) - deliberately not used.
+  - id: snb_floor_2011
+    text: On 6 September 2011 the Swiss National Bank set a minimum exchange rate of CHF 1.20 per euro, saying it would no longer tolerate a EUR/CHF rate below it.
+    spoken: one franc twenty
+    display: "1.20"
+    value: 1.20
+    fields: {date_spoken: "September 6th, 2011", year: 2011}
+    source_ids: [ecb_snb_2011, bis_jordan_2015]
+    status: source_located
+    verification_note: The ECB statement of 6 Sep 2011 quotes the SNB decision. Locate and cite the SNB's own press release of that date if possible.
+  - id: snb_floor_end_2015
+    text: On 15 January 2015 the Swiss National Bank discontinued the minimum exchange rate of CHF 1.20 per euro with immediate effect and ceased the associated foreign currency purchases; the franc appreciated sharply and markets were surprised.
+    fields: {date_spoken: "January 15th, 2015", year: 2015}
+    source_ids: [bis_jordan_2015, swissinfo_floor_2015]
+    status: source_located
+    verification_note: Decision wording from SNB press-conference text (BIS). 'Appreciated sharply / surprise' is press coverage - keep it qualitative, no magnitude.
+  - id: snb_floor_interventions
+    text: According to the SNB (April 2015), the minimum exchange rate could only have been enforced through permanent currency interventions of rapidly increasing magnitude.
+    source_ids: [snb_speech_2015_04]
+    status: source_located
+    verification_note: Confirm wording in the SNB speech of 24 April 2015.
+  - id: cs_ubs_2023
+    text: On 19 March 2023 FINMA approved the takeover of Credit Suisse by UBS; the Swiss Confederation and the SNB supported the deal (federal guarantee for additional SNB liquidity assistance, emergency law).
+    fields: {month_spoken: "March 2023"}
+    source_ids: [finma_cs_ubs, efd_cs_timeline]
+    status: source_located
+    verification_note: Confirm on FINMA release and the Federal Department of Finance timeline.
+  - id: price_level_2024
+    text: In 2024 Switzerland had the highest price level among the countries compared by Eurostat, with a price level index of 158.8 (EU = 100) at GDP level.
+    spoken: almost 60 percent above the EU average
+    display: "158.8"
+    value: 158.8
+    fields: {year: 2024}
+    source_ids: [eurostat_price_levels, bluewin_price_2024]
+    status: source_located
+    verification_note: 158.8 comes from press reports of Eurostat data (GDP-level price index). Confirm in Eurostat dataset prc_ppp_ind and which aggregate (GDP vs household consumption) before publishing; adjust the on-screen label.
+  - id: pharma_hq_basel
+    text: Roche and Novartis both have their global headquarters in Basel.
+    source_ids: [swissinfo_roche_hq, swissinfo_roche_rd]
+    status: source_located
+    verification_note: Sources are news articles; confirm on roche.com and novartis.com (Novartis HQ is only implied by the found sources).
 
 open_questions:
   - For the full documentary - role of banking secrecy and its erosion (1934 Banking Act, automatic exchange of information). Needs primary legal sources.

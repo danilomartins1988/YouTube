@@ -23,13 +23,14 @@ def style(style_cfg):
     return Style(style_cfg)
 
 
-@pytest.mark.parametrize("deliv,size", [("horizontal", (1920, 1080)), ("vertical", (1080, 1920))])
+@pytest.mark.parametrize("deliv,size", [("documentary", (1920, 1080)), ("short_exports", (1080, 1920)),
+                                        ("short_secrecy", (1080, 1920)), ("extended_franc", (1080, 1920))])
 def test_every_scene_renders_in_its_format(paths, dossier, style_cfg, deliv, size):
     from hiddeneco import timing
     st = Style(style_cfg, *size)
     p = paths.for_deliverable(deliv)
     board = sb.rendered(sb.load_storyboard(p.deliverable_dir), dossier)
-    words = timing.word_timings("In 1815 chemical of young people they made up", 0.4, 4.0)
+    words = timing.word_timings("In 1815 chemical of young people they made up drew a line", 0.4, 4.0)
     safe = settings()["formats"]["short_9x16"]["safe_zone"] if size[1] > size[0] else None
     for scene in board.scenes:
         r = SCENES[scene.type](st, scene.params, 6.0, narration="In 1815 chemical of young people",
@@ -44,7 +45,7 @@ def test_all_scene_types_covered(paths):
     for name in paths.deliverables():
         used |= {s.type for s in sb.load_storyboard(paths.for_deliverable(name).deliverable_dir).scenes}
     assert {"map", "bar_chart", "kinetic_text", "ring_stat", "pictogram", "ranking", "end_card",
-            "big_number", "timeline"} <= used
+            "big_number", "timeline", "line_chart", "split_compare", "act_title"} <= used
 
 
 @requires_ffmpeg
