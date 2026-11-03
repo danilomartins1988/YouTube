@@ -151,8 +151,12 @@ class OpenAIProvider(TTSProvider):
         resp = requests.post(
             "https://api.openai.com/v1/audio/speech",
             headers={"Authorization": f"Bearer {env(o.get('api_key_env', 'OPENAI_API_KEY'))}"},
-            json={"model": o.get("model", "tts-1-hd"), "voice": o.get("voice", "onyx"),
-                  "input": text, "response_format": "wav"}, timeout=120)
+            json={"model": o.get("model", "tts-1-hd"), "voice": o.get("voice", "onyx"), "input": text,
+                  "response_format": "wav",
+                  # style direction is only supported by the gpt-4o family of TTS models
+                  **({"instructions": o["instructions"]} if o.get("instructions")
+                     and str(o.get("model", "")).startswith("gpt-4o") else {})},
+            timeout=120)
         resp.raise_for_status()
         out_path.write_bytes(resp.content)
         return out_path

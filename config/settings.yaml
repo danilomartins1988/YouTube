@@ -61,8 +61,11 @@ tts:
       model_id: eleven_multilingual_v2
     openai:
       api_key_env: OPENAI_API_KEY
-      model: tts-1-hd
+      model: gpt-4o-mini-tts       # or tts-1-hd (no style instructions)
       voice: onyx
+      instructions: >-
+        Voice: a calm, authoritative documentary narrator. Warm and clear, measured pace,
+        natural pauses at commas and full stops. Confident but never exaggerated or salesy.
     silent:
       words_per_minute: 150
 
@@ -75,7 +78,9 @@ pricing:
   espeak:     {usd_per_1k_chars: 0.0,   verified_on: "n/a (open source, local)"}
   piper:      {usd_per_1k_chars: 0.0,   verified_on: "n/a (open source, local)"}
   silent:     {usd_per_1k_chars: 0.0,   verified_on: "n/a"}
-  openai:     {usd_per_1k_chars: 0.030, verified_on: "unverified - check https://openai.com/api/pricing (tts-1-hd was listed at $30 / 1M chars)"}
+  # Conservative: tts-1-hd is $30/1M chars; gpt-4o-mini-tts is token-priced (~$0.015/min of audio,
+  # roughly $15-17/1M chars). Using $30/1M for both keeps the budget cap on the safe side.
+  openai:     {usd_per_1k_chars: 0.030, verified_on: "2026-11-03 via search results (not OpenAI's page) - confirm at https://openai.com/api/pricing"}
   elevenlabs: {usd_per_1k_chars: null,  verified_on: "unverified - depends on your plan, see https://elevenlabs.io/pricing"}
   local_compute: {usd_per_cpu_hour: 0.0, verified_on: "assumed negligible on your own machine"}
 
@@ -95,6 +100,11 @@ qc:
   narration_wpm_min: 120
   narration_wpm_max: 185
   max_scene_similarity: 0.80    # editorial distinctiveness vs. previous projects
+
+# Hard limit for paid APIs, per topic, enforced before every request (see hiddeneco/budget.py).
+budget:
+  currency: USD
+  max_paid_usd_per_topic: 0.50
 
 # Used only to show costs in BRL alongside USD. Not live - update when you need precision.
 brl_per_usd: null

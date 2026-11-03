@@ -86,6 +86,14 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
 
     tts_name = tts_name or default_provider_name(cfg)
     tts = get_provider(tts_name, cfg, allow_paid=allow_paid)
+    if tts.paid:
+        from hiddeneco.budget import Budget
+        tts.budget = Budget(paths.topic_out / "paid_spend.json", cfg["budget"]["max_paid_usd_per_topic"],
+                            cfg["pricing"][tts_name].get("usd_per_1k_chars"), tts_name)
+        need = assemble.uncached_chars(sc, d, sb, tts, paths.out_sub("audio") / "cache")
+        tts.budget.check(need, what=f"{deliverable.id} narration ({need} chars)")   # whole deliverable, up front
+        log("budget.preflight", deliverable=deliverable.id, chars=need, usd=round(tts.budget.cost(need), 4),
+            spent=tts.budget.spent, cap=tts.budget.cap)
     ledger.replace_step("tts (pre-build estimate)", tts_cost(tts_name, estimate_chars(paths, d),
                                                               "tts (pre-build estimate)", estimated=True))
     with step("tts", provider=tts_name, deliverable=deliverable.id):

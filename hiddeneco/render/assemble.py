@@ -33,11 +33,32 @@ def _sentence_audio(tts: TTSProvider, text: str, cache_dir: Path, rate: int) -> 
     wav = cache_dir / f"{key}.wav"
     fresh = not wav.exists()
     if fresh:
+        budget = getattr(tts, "budget", None)
+        if tts.paid:
+            if budget is None:
+                raise RuntimeError("Paid TTS provider used without a budget; refusing.")
+            budget.check(len(say), what=say[:40])        # refuse BEFORE the request is sent
         tts.synthesize(say, wav, rate)
+        if tts.paid:
+            budget.charge(len(say), what=say)
     samples, r = audio_mod.read_wav(wav)
     if r != rate:
         raise ValueError(f"{wav} has rate {r}, expected {rate}")
     return samples, fresh
+
+
+def uncached_chars(script: Script, dossier: Dossier, storyboard: Storyboard, tts: TTSProvider,
+                   cache_dir: Path) -> int:
+    """Characters that would actually be sent to the provider (cached sentences cost nothing)."""
+    by_id = {s.id: s for s in script.segments}
+    total = 0
+    for scene in storyboard.scenes:
+        for sent in timing.sentences(render_text(by_id[scene.segment].narration, dossier)):
+            say = spoken(sent)
+            key = hashlib.sha256(json.dumps([tts.name, tts.options, say], sort_keys=True).encode()).hexdigest()[:20]
+            if not (cache_dir / f"{key}.wav").exists():
+                total += len(say)
+    return total
 
 
 def synthesize_narration(script: Script, dossier: Dossier, storyboard: Storyboard, tts: TTSProvider,

@@ -47,3 +47,35 @@ def test_silent_scene_duration(paths, dossier):
     timed, chars = synthesize_narration(sc, dossier, sb, get_provider("silent", settings()), paths.out_sub("a"),
                                         fmt, 48000, 30, 0.2)
     assert chars == 0 and timed[0].audio_seconds == 0 and abs(timed[0].duration - 3.0) < 0.04
+
+
+def test_budget_refuses_before_overspending(tmp_path):
+    from hiddeneco.budget import Budget, BudgetExceeded
+    b = Budget(tmp_path / "spend.json", 0.50, 0.030, "openai")
+    b.check(9000)                      # $0.27 fits
+    b.charge(9000, "topic")
+    assert abs(b.spent - 0.27) < 1e-9
+    with pytest.raises(BudgetExceeded):
+        b.check(8000)                  # +$0.24 would exceed $0.50
+    b2 = Budget(tmp_path / "spend.json", 0.50, 0.030, "openai")   # persists across runs
+    assert abs(b2.remaining() - 0.23) < 1e-9
+    with pytest.raises(BudgetExceeded):
+        Budget(tmp_path / "x.json", 0.50, None, "elevenlabs")   # unknown price -> refuse
+
+
+def test_paid_provider_without_budget_never_calls_api(tmp_path, dossier):
+    from hiddeneco.render.assemble import _sentence_audio
+    from hiddeneco.tts.base import TTSProvider
+
+    class FakePaid(TTSProvider):
+        name, paid, calls = "fake", True, 0
+
+        def available(self):
+            return True, ""
+
+        def _synthesize(self, text, out_path):
+            FakePaid.calls += 1
+            raise AssertionError("must not be called")
+    with pytest.raises(RuntimeError, match="without a budget"):
+        _sentence_audio(FakePaid(), "Hello there.", tmp_path, 48000)
+    assert FakePaid.calls == 0
