@@ -65,8 +65,10 @@ def normalise_wav(src: Path, dst: Path, sample_rate: int = 48000, tempo: float =
             "areverse,silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.08,areverse")
     if abs(tempo - 1.0) > 1e-3:
         trim += f",atempo={tempo:.3f}"
-    # light voice polish: remove rumble, even out level (gentle 2.5:1 compression)
-    trim += ",highpass=f=70,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120:makeup=2"
+    # voice polish (configurable in settings: tts.voice_polish): EQ, gentle compression, soft room
+    from hiddeneco.config import settings
+    trim += "," + settings()["tts"].get("voice_polish",
+                                         "highpass=f=70,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120:makeup=2")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-af", trim,
                     "-ac", "1", "-ar", str(sample_rate), "-sample_fmt", "s16", str(dst)], check=True)
 

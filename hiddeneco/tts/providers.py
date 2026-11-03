@@ -51,6 +51,16 @@ class FestivalProvider(TTSProvider):
         return out_path
 
 
+def kokoro_voice(k, spec: str):
+    """'am_fenrir' or a weighted blend like 'am_fenrir:0.5+am_michael:0.5' (weights normalised)."""
+    if "+" not in spec and ":" not in spec:
+        return spec
+    import numpy as np
+    parts = [(p.split(":")[0].strip(), float(p.split(":")[1]) if ":" in p else 1.0) for p in spec.split("+")]
+    total = sum(w for _, w in parts)
+    return (sum(w / total * k.get_voice_style(name) for name, w in parts)).astype(np.float32)
+
+
 class KokoroProvider(TTSProvider):
     """Kokoro-82M via kokoro-onnx: free, local, natural-sounding (Apache-2.0 weights).
     pip install kokoro-onnx; download kokoro-v1.0.onnx + voices-v1.0.bin and set the env vars."""
@@ -75,8 +85,9 @@ class KokoroProvider(TTSProvider):
         import numpy as np
         from kokoro_onnx import Kokoro
         m, v = self._paths()
-        samples, rate = Kokoro(str(m), str(v)).create(
-            text, voice=self.options.get("voice", "am_michael"),
+        k = Kokoro(str(m), str(v))
+        samples, rate = k.create(
+            text, voice=kokoro_voice(k, self.options.get("voice", "am_michael")),
             speed=float(self.options.get("speed", 1.0)), lang=self.options.get("lang", "en-us"))
         pcm = (np.clip(samples, -1, 1) * 32767).astype("<i2")
         with wave.open(str(out_path), "wb") as w:
