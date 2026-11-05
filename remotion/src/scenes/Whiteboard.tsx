@@ -34,8 +34,8 @@ const CAR_STROKES = (ox: number, oy: number, s: number): Stroke[] => {
 };
 
 const REVENUE_STROKES: Stroke[] = [
-  {d: 'M 820 430 L 1100 430 L 1100 560 L 820 560 Z', fill: 'accent', cue: 'business model'},
-  {text: 'FORMULA 1', x: 842, y: 508, size: 44, cue: 'business model'},
+  {d: 'M 820 430 L 1100 430 L 1100 560 L 820 560 Z', fill: 'accent', cue: 'business model', speed: 280},
+  {text: 'FORMULA 1', x: 842, y: 508, size: 44, cue: 'business model', speed: 260},
   {d: 'M 160 170 L 470 170 L 470 280 L 160 280 Z', fill: 'accent2', cue: 'broadcasters'},
   {text: 'BROADCASTERS', x: 176, y: 238, size: 31, cue: 'broadcasters'},
   {d: 'M 480 250 C 620 300 700 360 812 440', w: 6, cue: 'broadcasters'},
@@ -89,6 +89,28 @@ export const Whiteboard: React.FC = () => {
       else hand = [(s.x || 0) + sc.len * u, (s.y || 0) + 6];
     }
   });
+  // between strokes the hand glides from where it stopped towards the start of the next stroke
+  if (!hand && t > scene.lead) {
+    const startOf = (i: number): [number, number] => {
+      const s = strokes[i];
+      if (s.d) { const q = pointAt(s.d, 0); return [q.x, q.y]; }
+      return [s.x || 0, (s.y || 0) + 6];
+    };
+    const endOf = (i: number): [number, number] => {
+      const s = strokes[i];
+      if (s.d) { const q = pointAt(s.d, sched[i].len); return [q.x, q.y]; }
+      return [(s.x || 0) + sched[i].len, (s.y || 0) + 6];
+    };
+    const next = sched.findIndex((sc) => sc.at > t);
+    if (next >= 0) {
+      const prevEnd = next > 0 ? sched[next - 1].at + sched[next - 1].dur : scene.lead;
+      const from: [number, number] = next > 0 ? endOf(next - 1) : [W * 0.75, H * 0.85];
+      const to = startOf(next);
+      const u = easeInOut(Math.min(1, (t - prevEnd) / Math.max(0.4, sched[next].at - prevEnd)));
+      const hover = 1 - Math.abs(2 * u - 1);
+      hand = [lerp(from[0], to[0], u) + Math.sin(t * 2.3) * 14, lerp(from[1], to[1], u) - 60 * hover + Math.cos(t * 1.9) * 10];
+    }
+  }
   const lastPt: [number, number] = hand || [W * 0.75, H * 0.85];
   const handOut = eo(t, doneT, 0.6);
   const paper = '#F7F5EF';
