@@ -31,11 +31,15 @@ const L1 = 150, L2 = 145;
 /** Two-bone IK: returns elbow point for shoulder s reaching target t (elbow bends down/back). */
 const ik = (s: Pt, t: Pt, bendSign = 1): {e: Pt; h: Pt} => {
   const dx = t[0] - s[0], dy = t[1] - s[1];
-  const d = clamp(Math.hypot(dx, dy), 20, L1 + L2 - 2);
+  const raw = Math.hypot(dx, dy);
+  // cartoon stretch: a far target lengthens both bones (up to 1.5x) so the hand stays ON the drawing path
+  const k = clamp(raw / (L1 + L2 - 2), 1, 1.5);
+  const l1 = L1 * k, l2 = L2 * k;
+  const d = clamp(raw, 20, l1 + l2 - 2);
   const a = Math.atan2(dy, dx);
-  const cosB = clamp((L1 * L1 + d * d - L2 * L2) / (2 * L1 * d), -1, 1);
+  const cosB = clamp((l1 * l1 + d * d - l2 * l2) / (2 * l1 * d), -1, 1);
   const b = Math.acos(cosB) * bendSign;
-  const e: Pt = [s[0] + Math.cos(a + b) * L1, s[1] + Math.sin(a + b) * L1];
+  const e: Pt = [s[0] + Math.cos(a + b) * l1, s[1] + Math.sin(a + b) * l1];
   const h: Pt = [s[0] + Math.cos(a) * d, s[1] + Math.sin(a) * d];
   return {e, h};
 };
@@ -63,7 +67,11 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
   const shL: Pt = [-58, -428], shR: Pt = [58, -428];
   // arms: front arm (facing side) draws/points; back arm hangs or gestures
   const front = drawHand || pointHand;
-  const frontTarget: Pt = front ? toLocal(front) : [70 + Math.sin(walk) * 30 * moving, -170];
+  let frontTarget: Pt = front ? toLocal(front) : [70 + Math.sin(walk) * 30 * moving, -170];
+  if (drawHand) {                                       // marker tip (not the hand) touches the path
+    const v = [frontTarget[0] - 58, frontTarget[1] + 428], n = Math.hypot(v[0], v[1]) || 1;
+    frontTarget = [frontTarget[0] - (v[0] / n) * 36, frontTarget[1] - (v[1] / n) * 36];
+  }
   const backTarget: Pt = [-62 - Math.sin(walk) * 30 * moving, -175 + (talking > 0.5 && !front ? -40 * Math.sin(talking * 3) : 0)];
   const armF = ik(shR, frontTarget, front ? 1 : -1);
   const armB = ik(shL, backTarget, -1);
@@ -239,7 +247,17 @@ export const PresenterScene: React.FC = () => {
       if (tt < a.walkAt) return x;
       if (tt < walkEnd) return lerp(a.walkFrom, a.bodyA, easeInOut((tt - a.walkAt) / (walkEnd - a.walkAt)));
       if (tt < a.at) return a.bodyA;
-      if (tt < a.at + a.dur) return lerp(a.bodyA, a.bodyB, easeInOut((tt - a.at) / a.dur));
+      if (tt < a.at + a.dur) {
+        // while drawing/writing the body follows the pen so the hand can stay on the path
+        if (a.kind === 'draw' || a.kind === 'write') {
+          const u = (tt - a.at) / a.dur;
+          const pen: Pt = a.kind === 'draw' ? (() => { const q = pointAt(a.d!, easeInOut(u) * a.len!); return [q.x, q.y] as Pt; })() : [a.x! + a.len! * u, a.y!];
+          const follow = bodyFor(pen, a.bodyA > a.anchor[0] ? 1 : -1);
+          const blend = clamp(u * 6, 0, 1);              // ease from the start spot into following
+          return lerp(a.bodyA, follow, blend);
+        }
+        return lerp(a.bodyA, a.bodyB, easeInOut((tt - a.at) / a.dur));
+      }
       x = a.bodyB;
     }
     const exAt = p.exit ? cue(p.exit, 0.95) : Infinity;
@@ -275,7 +293,7 @@ export const PresenterScene: React.FC = () => {
     if (!target) return [x, floor - 430 * S];
     const sh: Pt = [x + 58 * S * (target[0] >= x ? 1 : -1), floor - 428 * S];
     const ang = Math.atan2(target[1] - sh[1], target[0] - sh[0]);
-    const d = Math.min(Math.hypot(target[0] - sh[0], target[1] - sh[1]), (L1 + L2 - 2) * S);
+    const d = Math.min(Math.hypot(target[0] - sh[0], target[1] - sh[1]), (L1 + L2 - 2) * 1.5 * S);
     return [sh[0] + Math.cos(ang) * (d + 26 * S), sh[1] + Math.sin(ang) * (d + 26 * S)];
   })();
   const facing: 1 | -1 = moving > 0.3 ? (v > 0 ? 1 : -1) : target ? (target[0] >= x ? 1 : -1) : 1;

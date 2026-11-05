@@ -163,63 +163,68 @@ scenes:
     items:
     - box:
       - 560
-      - 250
+      - 340
       - 560
       - 330
       colour: accent2
       cue: one frame
       w: 6
-    - stroke: M 560 360 L 1120 360 M 560 470 L 1120 470 M 747 250 L 747 580 M 933 250 L 933 580
+    - stroke: M 560 450 L 1120 450 M 560 560 L 1120 560 M 747 340 L 747 670 M 933 340 L 933 670
       colour: accent2
       w: 3
       cue: millions of pixels
       speed: 1600
     - text: MILLIONS OF PIXELS
       x: 610
-      y: 650
+      y: 740
       size: 40
       colour: accent3
       cue: each pixel
-    - stroke: M 1300 330 A 70 70 0 1 0 1440 330 A 70 70 0 1 0 1300 330
+    - stroke: M 1300 420 A 70 70 0 1 0 1440 420 A 70 70 0 1 0 1300 420
       colour: ink
       w: 6
       cue: few very fast
     - text: A FEW FAST WORKERS
       x: 1240
-      y: 450
+      y: 540
       size: 32
       cue: few very fast
-    - stroke: M 1230 560 A 20 20 0 1 0 1270 560 A 20 20 0 1 0 1230 560 M 1300 560 A 20 20 0 1 0 1340 560 A 20 20 0 1 0 1300 560 M 1370 560 A 20 20 0 1 0 1410 560 A 20 20 0 1 0 1370 560
-        M 1440 560 A 20 20 0 1 0 1480 560 A 20 20 0 1 0 1440 560 M 1510 560 A 20 20 0 1 0 1550 560 A 20 20 0 1 0 1510 560 M 1230 630 A 20 20 0 1 0 1270 630 A 20 20 0 1 0 1230 630 M 1300
-        630 A 20 20 0 1 0 1340 630 A 20 20 0 1 0 1300 630 M 1370 630 A 20 20 0 1 0 1410 630 A 20 20 0 1 0 1370 630 M 1440 630 A 20 20 0 1 0 1480 630 A 20 20 0 1 0 1440 630 M 1510 630
-        A 20 20 0 1 0 1550 630 A 20 20 0 1 0 1510 630
+    - stroke: M 1230 650 A 20 20 0 1 0 1270 650 A 20 20 0 1 0 1230 650 M 1300 650 A 20 20 0 1 0 1340 650 A 20 20 0 1 0 1300 650 M 1370 650 A 20 20 0 1 0 1410 650 A 20 20 0 1 0 1370 650
+        M 1440 650 A 20 20 0 1 0 1480 650 A 20 20 0 1 0 1440 650 M 1510 650 A 20 20 0 1 0 1550 650 A 20 20 0 1 0 1510 650 M 1230 720 A 20 20 0 1 0 1270 720 A 20 20 0 1 0 1230 720 M 1300
+        720 A 20 20 0 1 0 1340 720 A 20 20 0 1 0 1300 720 M 1370 720 A 20 20 0 1 0 1410 720 A 20 20 0 1 0 1370 720 M 1440 720 A 20 20 0 1 0 1480 720 A 20 20 0 1 0 1440 720 M 1510 720
+        A 20 20 0 1 0 1550 720 A 20 20 0 1 0 1510 720
       colour: accent
       w: 5
       cue: huge number
       speed: 2200
     - text: MANY SIMPLE WORKERS
       x: 1225
-      y: 720
+      y: 810
       size: 32
       colour: accent
       cue: simpler ones
     - arrow:
       - - 1130
-        - 420
+        - 510
       - - 1220
-        - 560
+        - 650
       bend: 0.1
       colour: ink
       cue: same time
     - point:
       - 1390
-      - 595
+      - 685
       label: all at once
       colour: accent
       hold: 1.4
       cue: working at
     scale: 0.86
     floor: 1040
+    board:
+      x: 470
+      y: 230
+      w: 1370
+      h: 800
   assets:
   - font:inter
 - id: s08_cpu_gpu
@@ -466,24 +471,30 @@ scenes:
     items:
     - text: FISCAL YEARS END IN LATE JANUARY
       x: 560
-      y: 240
+      y: 330
       size: 26
       colour: muted
       cue: year ends
-    - stroke: M 560 860 L 1800 860
+    - text: FY26 = MOSTLY CALENDAR 2025
+      x: 560
+      y: 380
+      size: 34
+      colour: accent3
+      cue: mostly calendar
+    - stroke: M 560 950 L 1800 950
       colour: border
       w: 3
       cue: For a decade
       speed: 2400
     - bars: '{{revenue_columns.value}}'
       x: 560
-      base: 860
+      base: 950
       width: 1220
       max_h: 470
       colour: accent3
     - point:
       - 1428
-      - 800
+      - 890
       label: 'FY23: $27.0bn'
       colour: accent3
       hold: 1.6
@@ -493,7 +504,7 @@ scenes:
       cue: exploded
     - point:
       - 1739
-      - 392
+      - 482
       label: 'FY26: $215.9bn'
       colour: accent
       hold: 2.2
@@ -501,6 +512,11 @@ scenes:
       laser: true
     scale: 0.86
     floor: 1040
+    board:
+      x: 470
+      y: 230
+      w: 1370
+      h: 800
   sources:
   - nvda_xbrl
   assets:
@@ -552,7 +568,7 @@ scenes:
     items:
     - box:
       - 560
-      - 430
+      - 520
       - 300
       - 120
       label: NVIDIA
@@ -561,7 +577,7 @@ scenes:
       cue: Those buyers
     - box:
       - 1180
-      - 250
+      - 340
       - 520
       - 110
       label: CLOUD GIANTS
@@ -570,15 +586,15 @@ scenes:
       cue: cloud giants
     - arrow:
       - - 870
-        - 470
+        - 560
       - - 1170
-        - 310
+        - 400
       bend: -0.12
       colour: accent
       cue: cloud giants
     - box:
       - 1180
-      - 440
+      - 530
       - 520
       - 110
       label: AI LABS
@@ -587,15 +603,15 @@ scenes:
       cue: AI labs
     - arrow:
       - - 870
-        - 490
+        - 580
       - - 1170
-        - 495
+        - 585
       bend: 0.0
       colour: accent
       cue: AI labs
     - box:
       - 1180
-      - 630
+      - 720
       - 520
       - 110
       label: AI FACTORIES
@@ -604,33 +620,38 @@ scenes:
       cue: AI factories
     - arrow:
       - - 870
-        - 520
+        - 610
       - - 1170
-        - 680
+        - 770
       bend: 0.12
       colour: accent
       cue: AI factories
     - text: 'ONE DIRECT CUSTOMER: 22%'
       x: 560
-      y: 830
+      y: 920
       size: 34
       colour: accent3
       cue: one direct customer
     - text: 'ANOTHER: 14%'
       x: 1180
-      y: 830
+      y: 920
       size: 34
       colour: accent3
       cue: another for
     - point:
       - 790
-      - 815
+      - 905
       label: 36% from two customers
       colour: risk
       hold: 1.6
       laser: true
     scale: 0.86
     floor: 1040
+    board:
+      x: 470
+      y: 230
+      w: 1370
+      h: 800
   sources:
   - nvda_10k_fy2026
   assets:
@@ -1462,7 +1483,7 @@ scenes:
     items:
     - box:
       - 560
-      - 300
+      - 390
       - 330
       - 120
       label: TRAINING
@@ -1471,21 +1492,21 @@ scenes:
       cue: trained once
     - text: ONCE
       x: 660
-      y: 470
+      y: 560
       size: 28
       colour: muted
       cue: trained once
     - arrow:
       - - 900
-        - 360
+        - 450
       - - 1060
-        - 360
+        - 450
       bend: 0.0
       colour: ink
       cue: runs every time
     - box:
       - 1070
-      - 300
+      - 390
       - 300
       - 120
       label: MODEL
@@ -1494,15 +1515,15 @@ scenes:
       cue: runs every time
     - arrow:
       - - 1380
-        - 360
+        - 450
       - - 1520
-        - 360
+        - 450
       bend: 0.0
       colour: ink
       cue: called inference
     - box:
       - 1530
-      - 300
+      - 390
       - 280
       - 120
       label: INFERENCE
@@ -1511,19 +1532,19 @@ scenes:
       cue: called inference
     - text: EVERY QUESTION
       x: 1545
-      y: 470
+      y: 560
       size: 26
       colour: muted
       cue: called inference
     - text: COST PER ANSWER MATTERS
       x: 1080
-      y: 640
+      y: 730
       size: 36
       colour: risk
       cue: cost of each answer
     - point:
       - 1670
-      - 425
+      - 515
       label: custom chips compete here
       colour: risk
       hold: 1.8
@@ -1531,7 +1552,7 @@ scenes:
       laser: true
     - text: 'NVIDIA: A NEW PLATFORM EVERY YEAR (NEXT: {{rubin.display}})'
       x: 560
-      y: 790
+      y: 880
       size: 30
       colour: accent
       cue: keep moving
@@ -1539,6 +1560,11 @@ scenes:
       cue: cut the cost
     scale: 0.86
     floor: 1040
+    board:
+      x: 470
+      y: 230
+      w: 1370
+      h: 800
   sources:
   - nvda_q4fy26
   assets:
