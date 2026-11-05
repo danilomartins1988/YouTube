@@ -3,7 +3,7 @@ import {AbsoluteFill} from 'remotion';
 import {eo, rand, useCtx} from '../lib/anim';
 
 /** Navy gradient with slow-drifting particles and a faint grid: never a dead static background. */
-export const Background: React.FC<{grid?: boolean; particles?: number}> = ({grid = true, particles = 40}) => {
+export const Background: React.FC<{grid?: boolean; particles?: number; style?: string}> = ({grid = true, particles = 40, style}) => {
   const {t, W, H, pal} = useCtx();
   const dots = Array.from({length: particles}, (_, i) => {
     const x = (rand(i) * W + t * (6 + rand(i + 7) * 14)) % W;
@@ -40,6 +40,15 @@ export const Background: React.FC<{grid?: boolean; particles?: number}> = ({grid
             <line key={'h' + i} x1={0} y1={i * 80} x2={W} y2={i * 80} stroke={pal.border} strokeOpacity={0.1} />
           ))}
         {dots}
+        {style === 'speed' && Array.from({length: 26}, (_, i) => {
+          // diagonal speed streaks drifting right-to-left at different depths
+          const depth = 0.4 + rand(i + 3) * 1.2;
+          const x = W + 300 - ((t * 420 * depth + rand(i) * (W + 600)) % (W + 600));
+          const y = rand(i + 8) * H;
+          const len = 120 + rand(i + 2) * 260;
+          const col = [pal.accent, pal.accent2, pal.accent3 || pal.accent, pal.ink][i % 4];
+          return <line key={'s' + i} x1={x} y1={y} x2={x + len} y2={y - len * 0.18} stroke={col} strokeWidth={2 + depth * 2} strokeOpacity={0.10 + 0.08 * depth} strokeLinecap="round" />;
+        })}
       </svg>
     </AbsoluteFill>
   );

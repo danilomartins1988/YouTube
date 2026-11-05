@@ -87,7 +87,7 @@ class Scene(BaseModel):
                   "sector_share",
                   # Remotion-only scene types (renderer: remotion)
                   "big_counter", "donut", "compare", "people_ratio", "oil_platform", "fund_flow",
-                  "isometric"]
+                  "isometric", "race_track", "circuit", "whiteboard"]
     params: dict[str, Any] = Field(default_factory=dict)
     sfx: list[dict[str, Any]] = Field(default_factory=list)   # e.g. {kind: pop, cue: "In 1815"}
     sources: list[str] = Field(default_factory=list)

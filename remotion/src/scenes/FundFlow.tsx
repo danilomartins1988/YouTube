@@ -66,6 +66,49 @@ export const FundFlow: React.FC = () => {
             {[-25, 0, 25].map((y, i) => <rect key={y} x={-45 * s} y={(y - 4) * s} width={(40 + 40 * ((i + 1) / 3)) * s} height={8 * s} fill={c} opacity={0.8} />)}
           </g>
         );
+      case 'tv':
+        return (
+          <g>
+            <rect x={-75 * s} y={-50 * s} width={150 * s} height={95 * s} rx={10 * s} fill={pal.bg2} stroke={c} strokeWidth={4} />
+            <rect x={-60 * s} y={-38 * s} width={120 * s} height={70 * s} fill={c} opacity={0.25 + 0.15 * Math.sin(t * 6)} />
+            <polygon points={`${-12 * s},${-18 * s} ${18 * s},${-3 * s} ${-12 * s},${12 * s}`} fill={pal.ink} />
+            <rect x={-20 * s} y={46 * s} width={40 * s} height={10 * s} fill={c} />
+          </g>
+        );
+      case 'flag': {
+        const wave = (k: number) => Math.sin(t * 6 + k) * 6 * s;
+        return (
+          <g>
+            <rect x={-60 * s} y={-70 * s} width={6 * s} height={140 * s} fill={pal.ink} />
+            <path d={`M ${-54 * s} ${-70 * s} Q ${0} ${-70 * s + wave(0)} ${60 * s} ${-70 * s} L ${60 * s} ${-10 * s} Q 0 ${-10 * s + wave(1)} ${-54 * s} ${-10 * s} Z`} fill="#fff" />
+            {Array.from({length: 12}, (_, i) => <rect key={i} x={(-54 + (i % 6) * 19) * s} y={(-70 + Math.floor(i / 6) * 30 + ((i % 6) % 2) * 0) * s}
+              width={19 * s} height={30 * s} fill="#111" opacity={(i + Math.floor(i / 6)) % 2 ? 1 : 0} />)}
+          </g>
+        );
+      }
+      case 'sponsor':
+        return (
+          <g>
+            <rect x={-85 * s} y={-45 * s} width={170 * s} height={90 * s} rx={12 * s} fill={c} />
+            <text x={0} y={10 * s} textAnchor="middle" fill={pal.bg} fontFamily={font.display} fontWeight={800} fontSize={30 * s}>BRAND</text>
+          </g>
+        );
+      case 'car':
+        return (
+          <g transform={`translate(${-70 * s} ${30 * s}) scale(${0.28 * s})`}>
+            <path d="M -30 -46 L 470 -46 L 540 -60 L 545 -70 L 420 -78 L 300 -84 L 230 -118 L 150 -120 L 90 -108 L 10 -104 L -30 -90 Z" fill={c} />
+            <circle cx={0} cy={-58} r={58} fill="#111" /><circle cx={430} cy={-50} r={50} fill="#111" />
+            <rect x={-58} y={-178} width={70} height={16} fill="#111" />
+          </g>
+        );
+      case 'f1':
+        return (
+          <g>
+            <circle r={78 * s} fill={pal.accent} />
+            <circle r={78 * s + 10 + 6 * Math.sin(t * 4)} fill="none" stroke={pal.accent} strokeOpacity={0.5} strokeWidth={3} />
+            <text x={0} y={16 * s} textAnchor="middle" fill="#fff" fontFamily={font.display} fontWeight={800} fontSize={46 * s}>F1</text>
+          </g>
+        );
       default:
         return <rect x={-90 * s} y={-45 * s} width={180 * s} height={90 * s} rx={12 * s} fill={pal.bg2} stroke={c} strokeWidth={4} />;
     }

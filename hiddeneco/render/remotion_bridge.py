@@ -44,7 +44,8 @@ def build_props(timed: list[TimedScene], style: dict, credits: dict[str, list[st
         })
     geo = {name: json.loads((GEO_DIR / f"remotion_{name}.json").read_text()) for name in geo_layers}
     return {"fps": fps, "width": fmt["width"], "height": fmt["height"], "palette": style["palette"], "fonts": fonts,
-            "brand": "The Hidden Economics", "scenes": scenes, "geo": geo}
+            "brand": "The Hidden Economics", "scenes": scenes, "geo": geo,
+            "transition": style.get("transition", "fade"), "background": style.get("background", "grid")}
 
 
 def ensure_installed() -> None:

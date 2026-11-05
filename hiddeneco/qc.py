@@ -92,9 +92,11 @@ def check_media(timed: list[TimedScene], paths: ProjectPaths, deliverable: Deliv
                 out.append(_issue("media", "error", f"Scene {t.scene.id} uses unlisted asset '{a}'"))
             elif entry.get("path") and not (REPO_ROOT / entry["path"]).exists():
                 out.append(_issue("media", "error", f"Asset file missing: {entry['path']}"))
-    expected = ["subtitles.srt", "metadata.md"]
-    if not list((paths.out / "thumbnails").glob("*.png")):
+    raw_deliv = yaml.safe_load((paths.deliverable_dir / "deliverable.yaml").read_text())
+    wants_thumbs = raw_deliv.get("thumbnails") is None or bool(raw_deliv.get("thumbnails"))
+    if wants_thumbs and not list((paths.out / "thumbnails").glob("*.png")):
         out.append(_issue("media", "error", "No thumbnail/cover rendered"))
+    expected = ["subtitles.srt"] + ([] if raw_deliv.get("metadata") is False else ["metadata.md"])
     for name in expected:
         if not (paths.out / name).exists():
             out.append(_issue("media", "error", f"Missing deliverable {name}"))

@@ -9,14 +9,17 @@ import {OilPlatform} from './scenes/Platform';
 import {MapScene} from './scenes/MapScene';
 import {FundFlow} from './scenes/FundFlow';
 import {Isometric} from './scenes/Isometric';
+import {Circuit, RaceTrack} from './scenes/RaceScenes';
+import {Whiteboard} from './scenes/Whiteboard';
 
 export const SCENES: Record<string, React.FC> = {
   act_title: ActTitle, kinetic_text: KineticText, big_counter: BigCounter, line_chart: LineChart, bar_chart: BarChart,
   donut: Donut, timeline: Timeline, compare: Compare, people_ratio: PeopleRatio, end_card: EndCard,
   oil_platform: OilPlatform, map: MapScene, fund_flow: FundFlow, isometric: Isometric,
+  race_track: RaceTrack, circuit: Circuit, whiteboard: Whiteboard,
 };
 // Scene types that paint their own full-frame background.
-const OWN_BG = new Set(['oil_platform', 'map']);
+const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard']);
 
 const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) => {
   const frame = useCurrentFrame();
@@ -32,7 +35,7 @@ const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) =
   return (
     <SceneCtx.Provider value={ctx}>
       <AbsoluteFill style={{backgroundColor: props.palette.bg}}>
-        {!OWN_BG.has(scene.type) && <Background />}
+        {!OWN_BG.has(scene.type) && <Background style={props.background} />}
         <AbsoluteFill style={{opacity: a, transform: `translateX(${push}px)`}}>
           <Comp />
         </AbsoluteFill>
@@ -40,6 +43,7 @@ const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) =
           <Chrome />
         </AbsoluteFill>
         <Finish />
+        {props.transition === 'race' && <RaceWipe t={t} dur={scene.duration} pal={props.palette} W={width} H={height} />}
       </AbsoluteFill>
     </SceneCtx.Provider>
   );
@@ -64,3 +68,18 @@ export const Documentary: React.FC<Props> = (props) => {
     </GeoCtx.Provider>
   );
 };
+
+/** Racing transition: three diagonal colour bands sweep across, covering the cut between scenes. */
+const RaceWipe: React.FC<{t: number; dur: number; pal: Props['palette']; W: number; H: number}> = ({t, dur, pal, W, H}) => {
+  const cols = [pal.accent, pal.accent2, pal.accent3 || '#FFD21F'];
+  const band = (u: number, i: number) => {
+    const x = lerpN(-W * 0.9, W * 1.3, u) - i * 140;
+    return <polygon key={i} points={`${x},0 ${x + 260},0 ${x + 260 - 420},${H} ${x - 420},${H}`} fill={cols[i]} />;
+  };
+  const inU = t / 0.45, outU = (t - (dur - 0.45)) / 0.45;
+  const els: React.ReactNode[] = [];
+  if (inU >= 0 && inU < 1) [0, 1, 2].forEach((i) => els.push(band(0.5 + inU * 0.5, i)));      // bands leave on entry
+  if (outU >= 0 && outU < 1) [0, 1, 2].forEach((i) => els.push(band(outU * 0.5, i)));          // bands arrive on exit
+  return els.length ? <AbsoluteFill><svg width={W} height={H}>{els}</svg></AbsoluteFill> : null;
+};
+const lerpN = (a: number, b: number, u: number) => a + (b - a) * u;

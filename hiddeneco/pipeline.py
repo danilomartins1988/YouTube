@@ -139,11 +139,14 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
             assemble.write_srt(timed, paths.out / "subtitles.srt")
     ledger.replace_step("render", compute_cost(time.perf_counter() - t0, "render"))
 
-    with step("thumbnails", deliverable=deliverable.id):
-        concepts = render_value(extras.get("thumbnails", []), d)
-        thumbnails.make_thumbnails(project["style"], concepts, paths.out_sub("thumbnails"))
-    with step("metadata", deliverable=deliverable.id):
-        metadata.build(deliverable, render_value(extras.get("metadata", {}), d), sc, d, timed, tts_name, paths.out)
+    # `thumbnails: []` / `metadata: false` = video-only hand-off (no publishing materials)
+    if extras.get("thumbnails", None) != []:
+        with step("thumbnails", deliverable=deliverable.id):
+            concepts = render_value(extras.get("thumbnails", []), d)
+            thumbnails.make_thumbnails(project["style"], concepts, paths.out_sub("thumbnails"))
+    if extras.get("metadata", {}) is not False:
+        with step("metadata", deliverable=deliverable.id):
+            metadata.build(deliverable, render_value(extras.get("metadata", {}), d), sc, d, timed, tts_name, paths.out)
     with step("exports.draft", deliverable=deliverable.id):
         exports.build_drafts(paths, deliverable)
     with step("qc", deliverable=deliverable.id):

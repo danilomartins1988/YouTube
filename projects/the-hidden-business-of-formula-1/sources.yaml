@@ -1,0 +1,654 @@
+# Sources and claims for "The Hidden Business Behind Formula 1" (Episode 05).
+#
+# Status meanings (see hiddeneco/models.py):
+#   data_derived       computed by the pipeline from a cited dataset (never typed by hand)
+#   human_verified     a named person read the primary source and confirmed it (set verified_by)
+#   source_located     located via web research on 2026-11-05; NOT yet read in full by a human
+#   needs_verification no adequate source yet
+#
+# Three kinds of money are kept apart throughout, as the brief requires:
+#   F1 GROUP revenue  - Formula 1 (Liberty Media segment): media rights, race promotion, sponsorship, other.
+#   TEAM revenue      - each team's own accounts: F1 prize/team payments + the team's own sponsors, etc.
+#   PROMOTER economics - race organisers / host governments: they PAY F1 a fee and keep (most) ticket income.
+#
+# Currency rule (2026-11-05): money is shown and spoken in US dollars. Figures reported in other currencies
+# are converted by us with the US Federal Reserve H.10 annual average of daily rates for the year concerned
+# (source fed_h10) and labelled "about"; the original amount stays in `text` for audit.
+#
+# Liberty Media's Q3 2026 results were due on 5 Nov 2026 (day of research) and were not yet available;
+# the latest verified period is the first half of 2026.
+
+sources:
+  # ---------------------------------------------------------------- Liberty Media / Formula 1 filings
+  - id: liberty_fy2025
+    title: Liberty Media Corporation Reports Fourth Quarter and Year End 2025 Financial and Operating Results
+    publisher: Liberty Media Corporation
+    url: https://www.libertymedia.com/news/detail/579/liberty-media-corporation-reports-fourth-quarter-and-year
+    published: "2026-02-26"
+    accessed: "2026-11-05"
+    credit: "Liberty Media FY2025 results"
+  - id: liberty_10k_2025
+    title: Liberty Media Corporation Form 10-K for the fiscal year ended 31 December 2025
+    publisher: Liberty Media Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1560385/000110465926020653/lmca-20251231x10k.htm
+    published: "2026-02"
+    accessed: "2026-11-05"
+    credit: "Liberty Media 10-K 2025"
+  - id: liberty_fy2024
+    title: Liberty Media Reports Fourth Quarter and Year End 2024 Financial Results (8-K Ex. 99.1)
+    publisher: Liberty Media Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1560385/000156038525000006/lmca-20250227xex99d1.htm
+    published: "2025-02-27"
+    accessed: "2026-11-05"
+    credit: "Liberty Media FY2024 results"
+  - id: liberty_fy2023
+    title: Liberty Media Corporation Reports Fourth Quarter and Year End 2023 Financial Results
+    publisher: Liberty Media Corporation
+    url: https://libertymedia.com/news/detail/525/liberty-media-corporation-reports-fourth-quarter-and-year
+    published: "2024-02-28"
+    accessed: "2026-11-05"
+    credit: "Liberty Media FY2023 results"
+  - id: liberty_q2_2026
+    title: Liberty Media Corporation Reports Second Quarter 2026 Financial Results (8-K Ex. 99.1)
+    publisher: Liberty Media Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/0001560385/000156038526000022/lmca-20260806xex99d1.htm
+    published: "2026-08-06"
+    accessed: "2026-11-05"
+    credit: "Liberty Media Q2 2026 results"
+  - id: liberty_deal_2016
+    title: Liberty Media Corporation to Acquire Formula 1 (8-K Ex. 99.1)
+    publisher: Liberty Media Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/0001560385/000110465916143533/a16-18039_1ex99d1.htm
+    published: "2016-09-07"
+    accessed: "2026-11-05"
+    credit: "Liberty Media, 7 Sep 2016"
+  - id: liberty_close_2017
+    title: Liberty Media Corporation Completes Acquisition of Formula 1
+    publisher: Liberty Media Corporation
+    url: https://www.libertymedia.com/news/detail/305/liberty-media-corporation-completes-acquisition-of-formula-1
+    published: "2017-01-23"
+    accessed: "2026-11-05"
+    credit: "Liberty Media, 23 Jan 2017"
+  - id: cvc_case
+    title: "Case study: Formula One"
+    publisher: CVC Capital Partners
+    url: https://www.cvc.com/portfolio/case-studies/formula-one/
+    accessed: "2026-11-05"
+    notes: The former owner's own (undated) account of its tenure; treated as a self-reported claim.
+    credit: "CVC Capital Partners"
+
+  # ---------------------------------------------------------------- official F1 / FIA
+  - id: f1_cost_cap_2026
+    title: "EXPLAINED: What is the F1 cost cap and why has it gone up?"
+    publisher: Formula 1 (formula1.com)
+    url: https://www.formula1.com/en/latest/article/explained-what-is-the-f1-cost-cap-and-why-has-it-gone-up.2tYtDIe5SbE5utjThctBT3
+    published: "2026-04-10"
+    accessed: "2026-11-05"
+    credit: "formula1.com"
+  - id: fia_rbr_2022
+    title: Accepted Breach Agreement between Red Bull Racing team and FIA (2021 Financial Regulations)
+    publisher: FIA
+    url: https://api.fia.com/news/accepted-breach-agreement-between-red-bull-racing-team-and-fia-breach-2021-fia-formula-one
+    published: "2022-10-28"
+    accessed: "2026-11-05"
+    credit: "FIA"
+  - id: autosport_rbr_2022
+    title: FIA hands Red Bull $7m fine, aero testing reduction for cost cap breach
+    publisher: Autosport
+    url: https://www.autosport.com/f1/news/fia-hands-red-bull-7m-fine-aero-testing-reduction-for-cost-cap-breach/10391599/
+    published: "2022-10-28"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "Autosport"
+  - id: f1_concorde_2025
+    title: Formula 1, the FIA and all 11 teams confirm signing of 2026 Concorde Governance Agreement
+    publisher: Formula 1 (formula1.com)
+    url: https://www.formula1.com/en/latest/article/formula-1-the-fia-and-all-11-teams-confirm-signing-of-2026-concorde.79MABMiuGyslBK1107y7Ig
+    published: "2025-12-12"
+    accessed: "2026-11-05"
+    credit: "formula1.com"
+  - id: f1_lvmh_2024
+    title: Formula 1 and LVMH announce historic 10-year Global Partnership
+    publisher: Formula 1 (formula1.com)
+    url: https://www.formula1.com/en/latest/article/formula-1-and-lvmh-announce-historic-10-year-global-partnership.3A03yF7XdLrngV6XNLjLoP
+    published: "2024-10-02"
+    accessed: "2026-11-05"
+    credit: "formula1.com"
+  - id: f1_aramco_2020
+    title: Formula 1 announces long-term global partnership with Aramco
+    publisher: Formula 1 (formula1.com)
+    url: https://www.formula1.com/en/latest/article/formula-1-announces-long-term-global-partnership-with-aramco.6GwAyvFOyBtqkyHwdXj0NA
+    published: "2020-03-10"
+    accessed: "2026-11-05"
+    credit: "formula1.com"
+  - id: f1_2025_numbers
+    title: Formula 1's record-breaking 2025 season in numbers
+    publisher: Formula 1 (formula1.com)
+    url: https://www.formula1.com/en/latest/article/formula-1s-record-breaking-2025-season-in-numbers.irq7aR8PcyAw7ysO72vJn
+    published: "2025-12-19"
+    accessed: "2026-11-05"
+    credit: "formula1.com"
+  - id: f1_dts_2019
+    title: "Formula 1: Drive to Survive premieres on Netflix March 8"
+    publisher: Motor Authority
+    url: https://www.motorauthority.com/news/1121601_formula-1-drive-to-survive-premiers-on-netflix-march-8
+    published: "2019-02"
+    accessed: "2026-11-05"
+    kind: secondary
+    notes: F1 announced the series on 20 Feb 2019 (formula1.com announcement not retrievable by URL).
+    credit: "Motor Authority"
+  - id: apple_f1_2025
+    title: Apple is the exclusive new broadcast partner for Formula 1 in the US
+    publisher: Apple Newsroom
+    url: https://www.apple.com/newsroom/2025/10/apple-is-the-exclusive-new-broadcast-partner-for-formula-1-in-the-us/
+    published: "2025-10-17"
+    accessed: "2026-11-05"
+    credit: "Apple Newsroom"
+  - id: cnbc_apple_value
+    title: Apple clinches exclusive US media rights for F1 races under five-year deal (cites CNBC's $140m-a-year report)
+    publisher: Reuters (via Yahoo News)
+    url: https://www.yahoo.com/news/articles/apple-clinches-exclusive-us-media-130352332.html
+    published: "2025-10-17"
+    accessed: "2026-11-05"
+    kind: secondary
+    notes: Unofficial estimate; other outlets report about $150m a year. Always said as 'reportedly'.
+    credit: "Press reports (unofficial)"
+  - id: f1_rwanda_2026
+    title: Formula 1 returns to Africa with 10-year agreement to race in Rwanda
+    publisher: Formula 1 (formula1.com)
+    url: https://www.formula1.com/en/latest/article/formula-1-returns-africa-with-10-year-agreement-to-race-in-rwanda.13xs9VMK7cGFiBd2IplyES
+    published: "2026-10-13"
+    accessed: "2026-11-05"
+    credit: "formula1.com"
+  - id: f1_madrid_2024
+    title: Madrid to host Spanish Grand Prix from 2026 (agreement with IFEMA to 2035)
+    publisher: Formula 1 (formula1.com)
+    url: https://www.formula1.com/en/latest/article/madrid-formula-1-calendar-2026-spanish-grand-prix.rKwSPJ74MczwzDhHVxdQz
+    published: "2024-01-23"
+    accessed: "2026-11-05"
+    credit: "formula1.com"
+  - id: f1_netzero_2022
+    title: Formula 1 announces plan to be Net Zero Carbon by 2030
+    publisher: Formula 1 (formula1.com)
+    url: https://www.formula1.com/en/latest/article/formula-1-announces-plan-to-be-net-zero-carbon-by-2030.5IaX2AZHyy7jqxl6wra6CZ
+    published: "2019-11-12"
+    accessed: "2026-11-05"
+    credit: "formula1.com"
+
+  # ---------------------------------------------------------------- audiences
+  - id: espn_2025
+    title: ESPN finishes final Formula 1 season with all-time viewership record
+    publisher: ESPN Press Room
+    url: http://espnpressroom.com/press-release/espn-finishes-final-formula-1-season-with-all-time-viewership-record/
+    published: "2025-12-10"
+    accessed: "2026-11-05"
+    credit: "ESPN Press Room"
+  - id: boxofficemojo_f1
+    title: "F1 (2025) - worldwide box office"
+    publisher: Box Office Mojo (IMDbPro)
+    url: https://www.boxofficemojo.com/title/tt16311594/
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "Box Office Mojo"
+
+  # ---------------------------------------------------------------- teams
+  - id: blackbook_mercedes_2024
+    title: Mercedes F1 profit and revenue, 2024 financial results (Companies House accounts)
+    publisher: Blackbook Motorsport
+    url: https://www.blackbookmotorsport.com/news/f1-mercedes-profit-revenue-financial-results-2024-june-2025/
+    published: "2025-06-24"
+    accessed: "2026-11-05"
+    kind: secondary
+    notes: Reports the filed accounts of Mercedes-Benz Grand Prix Ltd.
+    credit: "Blackbook Motorsport (team accounts)"
+  - id: forbes_teams_2025
+    title: "Formula 1's Most Valuable Teams 2025"
+    publisher: Forbes (Brett Knight)
+    url: https://www.forbes.com.au/?p=167194
+    published: "2025-11-21"
+    accessed: "2026-11-05"
+    kind: secondary
+    notes: Forbes estimates (enterprise values), not audited figures.
+    credit: "Forbes estimates"
+  - id: theRace_antidilution
+    title: "Revealed: The eye-watering anti-dilution fee GM will pay to enter F1 2026 ($450m vs the $200m in the existing rules; BBC report)"
+    publisher: PlanetF1 (press report)
+    url: https://www.planetf1.com/news/general-motors-cadillac-entry-fee-f1-2026-cost
+    published: "2024-11"
+    accessed: "2026-11-05"
+    kind: secondary
+    notes: No official confirmation of either figure; always attributed as 'reported'.
+    credit: "Press reports"
+  - id: f1_cadillac_2025
+    title: Cadillac's 2026 F1 entry gets final green light at last (joint F1 / FIA statement)
+    publisher: The Race
+    url: https://www.the-race.com/formula-1/cadillac-gm-general-motors-f1-2026-entry-approved/
+    published: "2025-03-07"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "F1 / FIA statement"
+
+  # ---------------------------------------------------------------- hosts
+  - id: mti_singapore_2023
+    title: Written reply to parliamentary question on costs of F1 (Minister Gan Kim Yong)
+    publisher: Ministry of Trade and Industry, Singapore
+    url: https://www.meti.gov.sg/newsroom/written-reply-to-pq-on-costs-of-f1/
+    published: "2023-08-02"
+    accessed: "2026-11-05"
+    credit: "Singapore MTI"
+  - id: aap_agp_2024
+    title: Cost of big races revealed right at the finish line (Australian Grand Prix Corporation annual report 2023-24)
+    publisher: AAP
+    url: https://aapnews.aap.com.au/news/cost-of-big-races-revealed-right-at-the-finish-line
+    published: "2024-11-28"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "AAP / AGPC annual report"
+  - id: vago_2007
+    title: State Investment in Major Events
+    publisher: Victorian Auditor-General's Office
+    url: https://www.audit.vic.gov.au/sites/default/files/20070523-Investment-in-Major-Events.pdf
+    published: "2007-05-23"
+    accessed: "2026-11-05"
+    credit: "Victorian Auditor-General"
+  - id: matheson_2006
+    title: Mega-Events - The effect of the world's biggest sporting events on local, regional and national economies
+    publisher: Victor Matheson, College of the Holy Cross
+    url: https://college.holycross.edu/hcs/RePEc/spe/Matheson_MegaEvents.pdf
+    published: "2006"
+    accessed: "2026-11-05"
+    credit: "Matheson (2006)"
+  - id: lvgp_impact_2024
+    title: Las Vegas Grand Prix 2024 Economic Impact (Applied Analysis, commissioned by Formula 1)
+    publisher: Applied Analysis
+    url: https://static.poder360.com.br/2025/03/lvgp-2024-economic-impact-final-1.pdf
+    published: "2025-03"
+    accessed: "2026-11-05"
+    notes: Industry-commissioned study; gross figures.
+    credit: "Applied Analysis (for F1)"
+  - id: vegas_land_2022
+    title: F1 pays $240m to acquire city site for Las Vegas GP paddock (Maffei, Q1 2022 earnings call)
+    publisher: Autosport
+    url: https://www.autosport.com/f1/news/f1-pays-240m-to-acquire-city-site-for-las-vegas-paddock/10297459/
+    published: "2022-05-06"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "CoStar"
+  - id: vegas_settle_2025
+    title: F1 Las Vegas Grand Prix settles lawsuit with disrupted businesses
+    publisher: Casino.org
+    url: https://www.casino.org/news/f1-las-vegas-grand-prix-settles-lawsuit-with-disrupted-businesses/
+    published: "2025-08"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "KTNV"
+  - id: gulf_cancel_2026
+    title: F1 officially cancels Bahrain and Saudi Arabia Grands Prix
+    publisher: The National (and Reuters)
+    url: https://www.thenationalnews.com/sport/f1/2026/03/15/f1-officially-cancels-bahrain-and-saudi-arabia-grands-prix-due-to-iran-war/
+    published: "2026-03-15"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "The National / Reuters"
+  - id: hrw_2020
+    title: "Saudi Arabia: Formula 1 Deal Despite Abuses"
+    publisher: Human Rights Watch
+    url: https://www.hrw.org/news/2020/11/08/saudi-arabia-formula-1-deal-despite-abuses
+    published: "2020-11-08"
+    accessed: "2026-11-05"
+    credit: "Human Rights Watch"
+
+  # ---------------------------------------------------------------- data, maps, exchange rates
+  - id: fed_h10
+    title: "Foreign Exchange Rates - H.10, historical daily rates (AUD, SGD, GBP), release of 2 Nov 2026"
+    publisher: Board of Governors of the US Federal Reserve System
+    url: https://www.federalreserve.gov/releases/h10/hist/
+    published: "2026-11-02"
+    accessed: "2026-11-05"
+    kind: dataset
+    license: public-domain
+    notes: "Annual averages of daily rates computed by us: 2022 SGD 1.3787 per USD; 2024 USD 0.6597 per AUD; 2024 USD 1.2781 per GBP."
+    credit: "US Federal Reserve H.10 (conversion: our calculation)"
+  - id: natural_earth
+    title: Natural Earth 1:50m Admin 0 Countries
+    publisher: Natural Earth
+    url: https://www.naturalearthdata.com/downloads/
+    accessed: "2026-11-05"
+    kind: dataset
+    license: public-domain
+    credit: "Natural Earth (public domain)"
+
+claims:
+  # ---------------------------------------------------------------- F1 group revenue
+  - id: f1_revenue_2025
+    text: Formula 1's total revenue in 2025 was $3,873 million, up 14% from $3,411 million in 2024 (Liberty Media).
+    spoken: 3.9 billion dollars
+    display: "$3.87bn"
+    value: 3873
+    fields: {year: 2025, prev_spoken: 3.4 billion, prev_display: "$3.41bn", growth_spoken: 14 percent, growth_display: "+14%", races_spoken: 24}
+    source_ids: [liberty_fy2025]
+    status: source_located
+  - id: f1_revenue_series
+    text: "Formula 1 total revenue (Liberty Media, $ million): 2023 3,222; 2024 3,411; 2025 3,873."
+    value:
+      - {code: Y2023, name: "2023", value: 3222}
+      - {code: Y2024, name: "2024", value: 3411}
+      - {code: Y2025, name: "2025", value: 3873}
+    source_ids: [liberty_fy2025, liberty_fy2024]
+    status: source_located
+  - id: revenue_mix_2025
+    text: "In 2025 media rights were 31.3% of Formula 1's total revenue, race promotion 26.7%, sponsorship 21.7% and other revenue (hospitality, freight, licensing) 20.3%."
+    value:
+      - {label: Media rights, value: 31.3}
+      - {label: Race promotion, value: 26.7}
+      - {label: Sponsorship, value: 21.7}
+      - {label: "Other (hospitality, freight...)", value: 20.3}
+    fields:
+      media_spoken: 31 percent
+      media_display: "31.3%"
+      promo_spoken: about 27 percent
+      promo_display: "26.7%"
+      spons_spoken: about 22 percent
+      spons_display: "21.7%"
+      spons_prev_display: "18.6%"
+      other_spoken: about 20 percent
+      other_display: "20.3%"
+      other_usd_spoken: 787 million dollars
+      other_usd_display: "$787m"
+    source_ids: [liberty_10k_2025, liberty_fy2025]
+    status: source_located
+    verification_note: The three named shares plus other revenue ($787m of $3,873m = 20.3%) add to 100%, which confirms the base is total F1 revenue.
+  - id: revenue_usd_2025
+    text: "Our calculation: applying Liberty's 2025 shares to total revenue of $3,873m gives about $1.21bn from media rights, $1.03bn from race promotion and $0.84bn from sponsorship."
+    spoken: about 1.2 billion dollars
+    display: "≈ $1.21bn"
+    value: 1212
+    fields: {promo_spoken: about 1 billion dollars, promo_display: "≈ $1.03bn", spons_spoken: about 840 million dollars, spons_display: "≈ $0.84bn"}
+    source_ids: [liberty_10k_2025, liberty_fy2025]
+    status: source_located
+    verification_note: Derived figures (Liberty does not publish these in dollars). Label 'our calculation'.
+  - id: h1_2026
+    text: In the first half of 2026 Formula 1 revenue was $1,381m against $1,629m a year earlier (-15%), with eight races held against eleven; Liberty attributes the fall to fewer races and the timing of the calendar.
+    spoken: 15 percent
+    display: "-15%"
+    value: -15
+    fields: {races_now_spoken: eight, races_prev_spoken: eleven}
+    source_ids: [liberty_q2_2026]
+    status: source_located
+
+  # ---------------------------------------------------------------- history / ownership
+  - id: cvc_2006
+    text: In early 2006 funds managed by CVC acquired a majority share of Formula One; CVC says that during its ownership the calendar grew from 16 to 22 races.
+    spoken: In 2006
+    display: "2006"
+    value: 2006
+    fields: {races_from_spoken: sixteen, races_to_spoken: twenty-two}
+    source_ids: [cvc_case]
+    status: source_located
+    verification_note: Former owner's own account; say 'according to CVC'.
+  - id: liberty_deal
+    text: On 7 September 2016 Liberty Media agreed to acquire Formula 1 at an enterprise value of $8.0 billion (equity value $4.4 billion); the deal completed on 23 January 2017.
+    spoken: 8 billion dollars
+    display: "$8.0bn"
+    value: 8.0
+    fields: {equity_spoken: 4.4 billion, equity_display: "$4.4bn", year_spoken: In 2016, year_display: "2016", close_spoken: January 2017, close_display: "Jan 2017"}
+    source_ids: [liberty_deal_2016, liberty_close_2017]
+    status: source_located
+  - id: liberty_motogp
+    text: In July 2025 Liberty Media completed the acquisition of about 84% of MotoGP.
+    spoken: In 2025
+    display: "2025"
+    value: 2025
+    source_ids: [liberty_fy2025]
+    status: source_located
+  - id: fia_role
+    text: "Liberty's 10-K states that the FIA, the sport's regulator, 'must place safety and other sporting concerns over Formula 1's commercial interests'."
+    spoken: the FIA
+    display: "FIA"
+    source_ids: [liberty_10k_2025]
+    status: source_located
+
+  # ---------------------------------------------------------------- media rights
+  - id: media_share
+    text: Media rights were the largest single revenue stream, at 31.3% of total Formula 1 revenue in 2025 (32.8% in 2024).
+    spoken: 31 percent
+    display: "31.3%"
+    value: 31.3
+    source_ids: [liberty_10k_2025]
+    status: source_located
+  - id: apple_deal
+    text: Apple became the exclusive US broadcast partner of Formula 1 for five years from 2026 (announced 17 Oct 2025); the fee was not disclosed and is reported at about $140 million a year.
+    spoken: about 140 million dollars a year
+    display: "≈ $140m / yr"
+    value: 140
+    fields: {years_spoken: five years, years_display: "5 years", from_display: "2026"}
+    source_ids: [apple_f1_2025, cnbc_apple_value]
+    status: source_located
+    verification_note: The value is an unofficial press estimate (other reports say about $150m); always say 'reportedly'.
+  - id: espn_audience
+    text: ESPN's average US audience per Formula 1 race rose from 554,000 in 2018 to 1.3 million in 2025, an increase of 135 percent.
+    spoken: 1.3 million
+    display: "1.3m"
+    value:
+      - code: ESPN
+        name: ESPN avg
+        points:
+          - {year: 2018, value: 0.554}
+          - {year: 2021, value: 0.949}
+          - {year: 2022, value: 1.21}
+          - {year: 2024, value: 1.11}
+          - {year: 2025, value: 1.3}
+    fields: {base_spoken: "554,000", base_display: "554k", growth_spoken: 135 percent, growth_display: "+135%"}
+    source_ids: [espn_2025]
+    status: source_located
+    verification_note: 2021 and 2022 points from ESPN PR (Nov 2022), 2024 from ESPN PR (Dec 2024); no 2019-2020 or 2023 point plotted.
+  - id: dts_2019
+    text: Netflix's 'Formula 1 - Drive to Survive' premiered on 8 March 2019 with all ten episodes released at once.
+    spoken: In March 2019
+    display: "Mar 2019"
+    value: 2019
+    source_ids: [f1_dts_2019]
+    status: source_located
+  - id: fanbase_2025
+    text: "Formula 1 says its fanbase reached 827 million in 2025, up 12% year on year and 63% since 2018; 42% of fans are female and 43% are under 35; 6.7 million people attended races."
+    spoken: 827 million
+    display: "827m"
+    value: 827
+    fields: {growth_spoken: 63 percent, growth_display: "+63% since 2018", female_spoken: 42 percent, female_display: "42%", young_display: "43%", attend_spoken: 6.7 million, attend_display: "6.7m"}
+    source_ids: [f1_2025_numbers]
+    status: source_located
+    verification_note: F1's own measure of 'fans' (survey-based). Attribute as 'F1 says'.
+  - id: f1_movie
+    text: The film 'F1' (Apple Original Films, 2025) grossed $634.1 million worldwide (Box Office Mojo).
+    spoken: more than 630 million dollars
+    display: "$634m"
+    value: 634
+    source_ids: [boxofficemojo_f1]
+    status: source_located
+
+  # ---------------------------------------------------------------- promoters and hosts
+  - id: promoter_terms
+    text: "Liberty's 10-K says race promotion contracts typically have an initial term of three to seven years, with annual fee increases tied to inflation or fixed rates of up to 5% per year; some counterparties are governments or their agencies."
+    spoken: up to 5 percent a year
+    display: "up to 5% / yr"
+    value: 5
+    fields: {term_spoken: three to seven years, term_display: "3-7 years"}
+    source_ids: [liberty_10k_2025]
+    status: source_located
+  - id: singapore_2022
+    text: "Singapore's 2022 Grand Prix cost S$135-140 million to organise, of which the government paid 60% (MTI, 2 Aug 2023). At the 2022 average rate of S$1.3787 per US dollar that is about $98-102 million (our conversion)."
+    spoken: about 100 million dollars
+    display: "≈ $100m"
+    value: 100
+    fields: {gov_spoken: 60 percent, gov_display: "60%", year: 2022}
+    source_ids: [mti_singapore_2023, fed_h10]
+    status: source_located
+    verification_note: Converted by us (Fed H.10 2022 annual average); the original figure is in Singapore dollars.
+  - id: australia_2024
+    text: "The 2024 Australian Grand Prix cost Victorian taxpayers A$102.3 million (AGPC annual report 2023-24, via AAP). At the 2024 average rate of US$0.6597 per Australian dollar that is about $67 million (our conversion)."
+    spoken: about 67 million dollars
+    display: "≈ $67m"
+    value: 67
+    fields: {year: 2024}
+    source_ids: [aap_agp_2024, fed_h10]
+    status: source_located
+    verification_note: Converted by us (Fed H.10 2024 annual average); the original figure is in Australian dollars.
+  - id: vago_2005
+    text: The Victorian Auditor-General estimated that for the 2005 Australian Grand Prix the costs exceeded the benefits; the Grand Prix Corporation disputed parts of the method.
+    spoken: costs exceeded the benefits
+    display: "Costs > benefits"
+    fields: {year_spoken: In 2005}
+    source_ids: [vago_2007]
+    status: source_located
+  - id: matheson_view
+    text: "Economists Robert Baade and Victor Matheson report that independent researchers 'nearly unanimously' find that boosters' projections exaggerate the economic impact of mega-events."
+    spoken: nearly unanimously
+    source_ids: [matheson_2006]
+    status: source_located
+  - id: vegas_self
+    text: The Las Vegas Grand Prix was the only Formula 1 event directly promoted by Formula 1 itself; F1 owns land and a building next to the Las Vegas Strip, bought for about $240 million (39 acres, per 2022 earnings-call remarks).
+    spoken: about 240 million dollars
+    display: "≈ $240m"
+    value: 240
+    source_ids: [liberty_10k_2025, vegas_land_2022]
+    status: source_located
+    verification_note: Land price is from secondary reports of an earnings call.
+  - id: vegas_impact_2024
+    text: An F1-commissioned study by Applied Analysis put the 2024 Las Vegas Grand Prix's economic impact at $934 million and direct tax revenue at $45 million; economists note such totals are gross spending, not net gains.
+    spoken: 934 million dollars
+    display: "$934m"
+    value: 934
+    fields: {tax_spoken: 45 million dollars, tax_display: "$45m"}
+    source_ids: [lvgp_impact_2024]
+    status: source_located
+  - id: vegas_settle
+    text: In August 2025 the Las Vegas Grand Prix said it had resolved disputes with three local businesses (two of which had sued) that said race construction had cost them trade.
+    spoken: three
+    display: "3 lawsuits settled"
+    source_ids: [vegas_settle_2025]
+    status: source_located
+  - id: gulf_cancel
+    text: In March 2026 the Bahrain and Saudi Arabian Grands Prix scheduled for April were called off because of the conflict in the Middle East (later Liberty assumed 23 races for 2026).
+    spoken: two
+    display: "2 races called off"
+    fields: {races_spoken: 23}
+    source_ids: [gulf_cancel_2026, liberty_q2_2026]
+    status: source_located
+  - id: madrid_rwanda
+    text: Madrid hosts the Spanish Grand Prix from 2026 under a deal to 2035; on 13 Oct 2026 F1 announced a 10-year agreement to race in Rwanda from the early 2030s.
+    spoken: ten-year
+    display: "10-year deal"
+    source_ids: [f1_madrid_2024, f1_rwanda_2026]
+    status: source_located
+
+  # ---------------------------------------------------------------- sponsorship
+  - id: lvmh_deal
+    text: LVMH became a 10-year Global Partner of Formula 1 from 2025 (announced 2 Oct 2024); the value was not disclosed.
+    spoken: ten-year
+    display: "10 years"
+    source_ids: [f1_lvmh_2024]
+    status: source_located
+  - id: aramco_deal
+    text: "Aramco became a Formula 1 Global Partner in March 2020; F1 said the deal would connect Aramco to 'an engaged audience of 500 million fans'."
+    spoken: 500 million fans
+    display: "500 million fans"
+    value: 500
+    source_ids: [f1_aramco_2020]
+    status: source_located
+
+  # ---------------------------------------------------------------- teams
+  - id: team_payments
+    text: Formula 1 paid the teams $1,400 million in 2025 (plus a one-off $50m Concorde incentive), up from $1,266m in 2024; team payments were 59.7% of pre-team-payment Adjusted OIBDA.
+    spoken: 1.4 billion dollars
+    display: "$1.40bn"
+    value: 1400
+    fields: {share_spoken: about 60 percent, share_display: "59.7%"}
+    source_ids: [liberty_fy2025]
+    status: source_located
+  - id: team_payments_series
+    text: "Team payments by Formula 1 ($ million, Liberty Media): 2022 1,157; 2023 1,215; 2024 1,266; 2025 1,400."
+    value:
+      - {code: Y2022, name: "2022", value: 1157}
+      - {code: Y2023, name: "2023", value: 1215}
+      - {code: Y2024, name: "2024", value: 1266}
+      - {code: Y2025, name: "2025", value: 1400}
+    source_ids: [liberty_fy2025, liberty_fy2023]
+    status: source_located
+  - id: mercedes_2024
+    text: "Mercedes-Benz Grand Prix Ltd reported 2024 revenue of £636m and profit of £120.3m, with sponsorship and licensing over 60% of income. At the 2024 average of US$1.2781 per pound that is about $813m of revenue and $154m of profit (our conversion)."
+    spoken: about 810 million dollars
+    display: "≈ $813m"
+    value: 813
+    fields: {profit_spoken: about 150 million dollars, profit_display: "≈ $154m", spons_spoken: more than 60 percent, spons_display: "60%+"}
+    source_ids: [blackbook_mercedes_2024, fed_h10]
+    status: source_located
+    verification_note: Team accounts reported by Blackbook (secondary); USD conversion by us.
+  - id: cost_cap
+    text: "The F1 cost cap was $145m in 2021, $140m in 2022 and $135m in 2023-2025; from 2026 it is $215m with a much wider scope (now including items previously outside it). Driver salaries, the three highest-paid staff and marketing are excluded."
+    spoken: 135 million dollars
+    display: "$135m"
+    value:
+      - {code: Y2021, name: "2021", value: 145}
+      - {code: Y2022, name: "2022", value: 140}
+      - {code: Y2023, name: "2023-25", value: 135}
+      - {code: Y2026, name: "2026*", value: 215}
+    fields: {first_spoken: 145 million dollars, first_display: "$145m", new_spoken: 215 million dollars, new_display: "$215m"}
+    source_ids: [f1_cost_cap_2026]
+    status: source_located
+    verification_note: Headline caps before per-race adjustments. 2026 figure covers more costs, so not directly comparable.
+  - id: redbull_breach
+    text: "The FIA found Red Bull Racing over the 2021 cap by 1.6% ('Minor Overspend Breach'); under an Accepted Breach Agreement it paid a $7 million fine and lost 10% of its aerodynamic testing allowance."
+    spoken: 7-million-dollar
+    display: "$7m fine"
+    value: 7
+    fields: {over_spoken: 1.6 percent, over_display: "1.6%", aero_spoken: 10 percent, aero_display: "-10% aero testing"}
+    source_ids: [fia_rbr_2022, autosport_rbr_2022]
+    status: source_located
+  - id: forbes_values
+    text: Forbes estimated the average F1 team was worth $3.6 billion in 2025 (up 89% since 2023), with Ferrari the most valuable at $6.5 billion and the lowest at $1.5 billion.
+    spoken: 3.6 billion dollars
+    display: "$3.6bn"
+    value: 3.6
+    fields: {top_spoken: 6.5 billion, top_display: "$6.5bn", low_display: "$1.5bn", growth_spoken: 89 percent}
+    source_ids: [forbes_teams_2025]
+    status: source_located
+    verification_note: Forbes estimates (secondary); Sportico's figures differ slightly.
+  - id: cadillac_entry
+    text: F1 and the FIA approved Cadillac as an 11th team for 2026 (7 Mar 2025); new teams pay an anti-dilution fee to existing teams, $200m under the 2021 Concorde terms and reportedly $450m for Cadillac.
+    spoken: 450 million dollars
+    display: "≈ $450m (reported)"
+    value: 450
+    fields: {old_spoken: 200 million dollars, old_display: "$200m"}
+    source_ids: [f1_cadillac_2025, theRace_antidilution]
+    status: source_located
+    verification_note: Fee figures are unofficial press reports; say 'reportedly'.
+  - id: concorde_2025
+    text: The ninth Concorde Agreement (governance) was signed by Formula 1, the FIA and all 11 teams in December 2025 and runs to 2030.
+    spoken: eleven
+    display: "to 2030"
+    source_ids: [f1_concorde_2025]
+    status: source_located
+
+  # ---------------------------------------------------------------- risks
+  - id: sportswashing
+    text: "In November 2020 Human Rights Watch criticised F1's Saudi Arabia deal, describing such events as a way to 'sportswash' serious human rights abuses; rights groups have made similar complaints about Bahrain."
+    spoken: sportswashing
+    source_ids: [hrw_2020]
+    status: source_located
+  - id: net_zero
+    text: In November 2019 F1 committed to becoming Net Zero Carbon by 2030, including sustainable fuels for its hybrid power units.
+    spoken: "2030"
+    display: "Net zero by 2030"
+    source_ids: [f1_netzero_2022]
+    status: source_located
+  - id: recession_risk
+    text: "Liberty's 10-K warns that discretionary spending (including sponsorship, hospitality and tickets) 'typically falls during times of economic recession or instability'."
+    spoken: recession
+    source_ids: [liberty_10k_2025]
+    status: source_located
+  - id: ecclestone_role
+    text: Bernie Ecclestone ran Formula 1's commercial business for decades until Liberty Media's takeover in January 2017, when he became Chairman Emeritus.
+    spoken: Bernie Ecclestone
+    source_ids: [liberty_close_2017]
+    status: source_located
+    verification_note: The 2017 Liberty release confirms the handover and his new title; his earlier role is widely documented but was not verified from a primary source this session.
