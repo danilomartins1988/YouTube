@@ -221,7 +221,7 @@ def check_output(paths: ProjectPaths, timed: list[TimedScene], fmt: dict) -> tup
 
 
 FOREIGN_CURRENCY = re.compile(r"(?<![A-Za-z])(NOK|SEK|DKK|EUR|GBP|CHF|AED|JPY|CNY|INR|BRL|CAD|AUD)(?![A-Za-z])|[€£¥₹]|"
-                              r"\b(kroner|krone|krona|kronor|euros?|pounds? sterling|francs?|dirhams?|yen|yuan|rupees?|reais|real)\b",
+                              r"\b(kroner|krone|krona|kronor|euros?|pounds? sterling|francs?|dirhams?|yen|yuan|rupees?|reais)\b",
                               re.IGNORECASE)
 
 
