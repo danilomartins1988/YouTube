@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | output/nvidia_documentary_presenter.mp4 (174.6 MB) |
+| File exists | PASS | output/nvidia_documentary_presenter.mp4 (175.3 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -22,7 +22,7 @@
 # QC report: how-nvidia-took-over-the-ai-economy / documentary_presenter (long_16x9)
 
 - Runtime: **703.77 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 174.6 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 175.3 MB
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
 - Errors: **0**, warnings: **42**
 - Technical QC passed: **True**

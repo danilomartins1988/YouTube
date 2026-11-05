@@ -1,0 +1,41 @@
+# Storyboard - How Nvidia Took Over the AI Economy
+
+Total 11:44 (703.8 s), 35 scenes. Timestamps come from the narration timing of the build that produced `timeline.json`. Engine: Remotion (React + SVG), 1920x1080, 30 fps.
+
+| # | Start | Dur | Scene | Type | Animation | Narration (start) | Sources |
+|---|---|---|---|---|---|---|---|
+| 1 | 0:00 | 18.8s | `s01_network` | ai_network | Ecosystem graph assembles group by group (apps, labs, clouds, data centers); packets flow; the shared supplier at the centre is revealed | Every time you ask an AI chatbot a question, a machine somewhere does the math. Behind the... | - |
+| 2 | 0:19 | 5.0s | `intro` | channel_intro |  | (music only) | - |
+| 3 | 0:24 | 10.3s | `s02_value` | big_counter | Counter rolls up to the figure inside an orbiting tick ring; label and context rise in | In October twenty twenty-five, that supplier, Nvidia, became the first company in history ... | ap_5tn |
+| 4 | 0:34 | 12.6s | `s03_revenue` | compare | Side-by-side figures count up; bars rise | In its last full fiscal year, it sold 215.9 billion dollars worth of products, about eight... | nvda_q4fy26, nvda_xbrl |
+| 5 | 0:47 | 15.1s | `s04_question` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | For most of its life, Nvidia was known for video game graphics cards. So how did a gaming ... | - |
+| 6 | 1:02 | 3.0s | `s05_act2` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
+| 7 | 1:05 | 21.9s | `s06_origins` | timeline | Axis draws; dated markers drop in on cues with ripple | Nvidia was founded in 1993 in California by Jensen Huang and two fellow engineers, to make... | nvda_10k_fy2026 |
+| 8 | 1:27 | 20.0s | `p07_draw_parallel` | presenter |  | Here is the key idea. To draw one frame of a game, a chip has to color millions of pixels,... | - |
+| 9 | 1:47 | 29.9s | `s08_cpu_gpu` | cpu_gpu | CPU vs GPU: a pool of independent tasks flies into a few big cores (rounds) vs many small cores (one step); then a step-by-step chain shows the opposite trade-off | Give both kinds of chip the same job: a pile of small tasks that don't depend on each othe... | - |
+| 10 | 2:17 | 31.1s | `s09_alexnet` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | And training a neural network turns out to look a lot like graphics: enormous piles of mul... | alexnet_2012 |
+| 11 | 2:48 | 3.0s | `s10_act3` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
+| 12 | 2:51 | 36.9s | `s11_stack` | stack | Layered software ecosystem builds bottom-up with data pulses; optional developer counter; switching-cost panel fills item by item | But the chip was only half the story. Years before AI took off, in 2006, Nvidia released C... | nvda_10k_fy2026 |
+| 13 | 3:28 | 26.0s | `s12_switch` | stack | Layered software ecosystem builds bottom-up with data pulses; optional developer counter; switching-cost panel fills item by item | That creates what economists call switching costs. A company can move to another chip, but... | - |
+| 14 | 3:54 | 21.6s | `s13_flywheel` | whiteboard | Whiteboard hand-drawing: an original hand traces each stroke and writes labels progressively, then the sketch colours in and comes alive | It is also a network effect. More developers write more software for Nvidia chips. More so... | - |
+| 15 | 4:15 | 3.0s | `s14_act4` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
+| 16 | 4:18 | 25.6s | `p15_build_revenue` | presenter |  | Now, the money. Nvidia's year ends in late January, so its fiscal twenty twenty-six is mos... | nvda_xbrl |
+| 17 | 4:44 | 22.8s | `s16_mix` | stacked_columns | Fiscal-year columns grow chronologically by business segment, then morph into a 100% share view | What changed is who buys. In fiscal twenty twenty, gaming was the biggest business, and da... | nvda_10k_fy2022, nvda_10k_fy2025, nvda_10k_fy2026 |
+| 18 | 5:07 | 19.8s | `p17_customers` | presenter |  | Those buyers are cloud giants, AI labs and large companies building what Nvidia calls AI f... | nvda_10k_fy2026 |
+| 19 | 5:26 | 29.1s | `s18_margin` | line_chart | Line chart draws progressively with the narration; event annotations pop on cues | Then look at the margin. Gross margin is what is left from each dollar of sales after the ... | nvda_xbrl, nvda_10k_fy2026 |
+| 20 | 5:56 | 31.1s | `s19_why` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | Why so profitable? Demand ran far ahead of supply. The product was hard to replace. And cu... | nvda_10k_fy2026 |
+| 21 | 6:27 | 17.8s | `s20_latest` | big_counter | Counter rolls up to the figure inside an orbiting tick ring; label and context rise in | And it is still growing. In the quarter that ended in July twenty twenty-six, Nvidia broug... | nvda_q2fy27 |
+| 22 | 6:45 | 3.0s | `s21_act5` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
+| 23 | 6:48 | 35.3s | `s22_chain` | supply_chain | World map with camera moves: supply stages light up in order, packets flow along arcs, process strip tracks the stage; optional bottleneck chokes everything downstream | Here is the surprising part. Nvidia designs its chips, but it does not make them. Its engi... | nvda_10k_fy2026, natural_earth |
+| 24 | 7:23 | 18.7s | `s23_bottleneck` | supply_chain | World map with camera moves: supply stages light up in order, packets flow along arcs, process strip tracks the stage; optional bottleneck chokes everything downstream | A chain like this is only as fast as its slowest link. Nvidia's own annual report warns th... | nvda_10k_fy2026, natural_earth |
+| 25 | 7:42 | 25.4s | `s24_arizona` | map | Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts | Most of this chain is concentrated in Asia, above all in Taiwan. Nvidia is trying to sprea... | nvda_10k_fy2026, arizona_wafer, natural_earth |
+| 26 | 8:07 | 3.0s | `s25_act6` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
+| 27 | 8:10 | 18.7s | `s26_rivals` | fund_flow | Animated flow diagram: nodes pop in on cues, links draw and carry moving coins | So who could challenge Nvidia? Its annual report names them: chipmakers like AMD, Intel an... | nvda_10k_fy2026 |
+| 28 | 8:29 | 27.2s | `s27_amd` | compare | Side-by-side figures count up; bars rise | AMD sells data center GPUs too, with its own open software platform, called ROCm. In calen... | amd_fy2025, nvda_10k_fy2026 |
+| 29 | 8:56 | 26.9s | `s28_custom` | compare | Side-by-side figures count up; bars rise | Then there are custom chips. Google builds its own TPUs, now in their seventh-generation. ... | google_ironwood, aws_rainier, anthropic_tpu |
+| 30 | 9:23 | 32.7s | `s29_landscape` | landscape | Competitive matrix: a cursor selects each dimension and cells type in; then options slide onto a conceptual flexibility-vs-specialisation axis | Why build your own chip? Economics. A general-purpose GPU can run almost any AI workload, ... | nvda_10k_fy2026, google_ironwood, aws_rainier |
+| 31 | 9:55 | 3.0s | `s30_act7` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
+| 32 | 9:58 | 19.2s | `s31_capex` | big_counter | Counter rolls up to the figure inside an orbiting tick ring; label and context rise in | The whole boom rests on one thing: customers spending. Trackers estimate that Amazon, Micr... | capex_tracker |
+| 33 | 10:18 | 28.4s | `s32_risks` | compare | Side-by-side figures count up; bars rise | That is also the risk. If that spending slows, so does Nvidia. Its biggest customers are b... | capex_tracker, nvda_10k_fy2026, nvda_q2fy27 |
+| 34 | 10:46 | 28.7s | `p33_inference` | presenter |  | The market is shifting, too. A model is trained once, but it runs every time someone uses ... | nvda_q4fy26 |
+| 35 | 11:15 | 29.0s | `s34_outro` | map | Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts | Nvidia's real advantage was never one chip. It was a stack: hardware, software, developers... | nvda_10k_fy2026, natural_earth |
