@@ -57,6 +57,7 @@ export const KineticText: React.FC = () => {
         const now = spokenAt(scene, t);
         const yy = y + size * 1.02; // baseline of this line
         y += size * 1.35;
+        const ghost = 0.22 * eo(t, scene.lead + 0.3 + i * 0.25, 0.5); // the whole block is visible early, lines light up on cue
         const strike = ln.strike_cue ? eo(t, cue(ln.strike_cue), 0.35) : 0;
         const colour = ln.color ? pal[ln.color] || ln.color : pal.ink;
         return (
@@ -67,7 +68,7 @@ export const KineticText: React.FC = () => {
                 const u = eo(t, start + j * 0.07, 0.35);
                 const hot = u > 0.9 && now && norm(w) === now;
                 return (
-                  <tspan key={j} opacity={u} dy={0} fill={hot ? pal.accent : undefined}>
+                  <tspan key={j} opacity={Math.max(ghost, u)} dy={0} fill={hot ? pal.accent : undefined}>
                     {(j ? ' ' : '') + w}
                   </tspan>
                 );
@@ -90,8 +91,8 @@ export const BigCounter: React.FC = () => {
   const p = scene.params;
   const start = cue(p.cue, 0.1);
   const u = p.count === false ? (t >= start - 0.2 ? 1 : 0) : eo(t, start, 1.6);
-  const a = eo(t, start - 0.3, 0.4);
-  const shown = countDisplay(String(p.display), u);
+  const a = eo(t, Math.min(start - 0.3, scene.lead + 0.2), 0.5);
+  const shown = t >= start - 0.2 ? countDisplay(String(p.display), u) : '';
   const cx = W / 2, cy = H / 2 - 40;
   const ticks = Array.from({length: 72}, (_, i) => {
     const ang = (i / 72) * Math.PI * 2 + t * 0.45;
@@ -134,7 +135,7 @@ export const LineChart: React.FC = () => {
   const Y = (v: number) => y1 - ((y1 - y0) * v) / vmax;
   const a0 = eo(t, 0.2, 0.6);
   const start = cue(p.cue, 0.05);
-  const u = eio(t, start, p.draw_seconds || Math.max(3, scene.speech * 0.6));
+  const u = eio(t, start, p.draw_seconds || Math.max(3, scene.speech * 0.85));
   const steps = p.y_steps || 5;
   const fmt = (v: number) => `${p.axis_prefix ?? ''}${fmtNum(v / (p.axis_divisor || 1), p.axis_decimals || 0)}${p.axis_suffix ?? ''}`;
   const head: React.ReactNode[] = [];
@@ -212,7 +213,7 @@ export const BarChart: React.FC = () => {
   const a0 = eo(t, 0.2, 0.6);
   const x0 = 560, x1 = 1600, top = 330;
   const rowH = Math.min(96, 560 / rows.length);
-  const start = cue(p.cue, 0.05);
+  const start = Math.min(cue(p.cue, 0.05), scene.lead + 0.8);
   return (
     <svg width={W} height={H}>
       <text x={120} y={200} fill={pal.ink} fontFamily={font.display} fontWeight={700} fontSize={56} opacity={a0}>{p.title}</text>
@@ -255,7 +256,7 @@ export const Donut: React.FC = () => {
   const cx = 640, cy = 560, r = 270, th = 70;
   const cols = [pal.accent, pal.ink, pal.accent2, pal.muted, pal.border];
   let acc = 0;
-  const start = cue(p.cue, 0.05);
+  const start = Math.min(cue(p.cue, 0.05), scene.lead + 0.8);
   const settled = start + segs.length * 0.5 + 1.0;
   const fi = focusIndex(scene, t, segs.map((x) => keywords(x.label)), settled);
   const arcs = segs.map((s, i) => {
@@ -319,10 +320,15 @@ export const Timeline: React.FC = () => {
         <line x1={200} x2={200 + span * grow} y1={ay} y2={ay} stroke={pal.border} strokeWidth={4} />
         {(() => {
           // playhead: glides from event to event as they are narrated, then keeps sweeping to 'today'
-          let hx = 200;
-          items.forEach((it, i) => { hx = lerp(hx, X(it.year), eio(t, times[i] - 0.4, 0.8)); });
-          const lastT = times[times.length - 1];
-          hx = lerp(hx, 200 + span, eio(t, lastT + 1.2, Math.max(1, scene.duration - lastT - 1.2)));
+          // the playhead moves continuously: towards each event in the time before it is narrated, then on to 'today'
+          const keysT = [scene.lead, ...times, scene.duration];
+          const keysX = [200, ...items.map((it) => X(it.year)), 200 + span];
+          let hx = keysX[0];
+          for (let i = 1; i < keysT.length; i++) {
+            if (t >= keysT[i]) { hx = keysX[i]; continue; }
+            hx = lerp(keysX[i - 1], keysX[i], eio(t, keysT[i - 1], Math.max(0.5, keysT[i] - keysT[i - 1])));
+            break;
+          }
           return <g><line x1={200} x2={hx} y1={ay} y2={ay} stroke={pal.accent} strokeWidth={4} />
             <circle cx={hx} cy={ay} r={9 + 3 * Math.sin(t * 5)} fill={pal.ink} /></g>;
         })()}
@@ -369,7 +375,8 @@ export const Compare: React.FC = () => {
       {p.title && <text x={120} y={200} fill={pal.ink} fontFamily={font.display} fontWeight={700} fontSize={56} opacity={a}>{p.title}</text>}
       {sides.map((s, i) => {
         const at = cue(s, (i + 0.3) / sides.length);
-        const u = eo(t, at, 0.6);
+        const enter = Math.min(at, scene.lead + 0.5 + i * 0.6);
+        const u = eo(t, enter, 0.6);
         const settled = Math.max(...sides.map((x, k) => cue(x, (k + 0.3) / sides.length))) + 1.4;
         const fi = focusIndex(scene, t, sides.map((x) => keywords(`${x.kicker} ${x.label}`)), settled, 2.8);
         const glow = fi === i ? eo(t, settled - 0.2, 0.4) : 0;

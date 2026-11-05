@@ -23,6 +23,14 @@ export const Background: React.FC<{grid?: boolean; particles?: number}> = ({grid
           </radialGradient>
         </defs>
         <rect width={W} height={H} fill="url(#bgv)" />
+        <defs>
+          <radialGradient id="bokeh"><stop offset="0%" stopColor={pal.accent} stopOpacity={0.10} /><stop offset="100%" stopColor={pal.accent} stopOpacity={0} /></radialGradient>
+          <radialGradient id="bokeh2"><stop offset="0%" stopColor={pal.accent2 || pal.ink} stopOpacity={0.08} /><stop offset="100%" stopColor={pal.accent2 || pal.ink} stopOpacity={0} /></radialGradient>
+        </defs>
+        {[0, 1, 2].map((i) => (
+          <circle key={'g' + i} cx={W * (0.2 + 0.3 * i) + Math.sin(t * 0.21 + i * 2) * 260} cy={H * (0.35 + 0.2 * (i % 2)) + Math.cos(t * 0.17 + i) * 140}
+            r={360 + 80 * Math.sin(t * 0.3 + i)} fill={i === 1 ? 'url(#bokeh2)' : 'url(#bokeh)'} />
+        ))}
         {grid &&
           Array.from({length: Math.ceil(W / 80) + 2}, (_, i) => (
             <line key={'v' + i} x1={i * 80 - gx} y1={0} x2={i * 80 - gx} y2={H} stroke={pal.border} strokeOpacity={0.12} />
