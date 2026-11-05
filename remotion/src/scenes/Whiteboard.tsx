@@ -34,8 +34,8 @@ const CAR_STROKES = (ox: number, oy: number, s: number): Stroke[] => {
 };
 
 const REVENUE_STROKES: Stroke[] = [
-  {d: 'M 820 430 L 1100 430 L 1100 560 L 820 560 Z', fill: 'accent', cue: 'Formula One'},
-  {text: 'FORMULA 1', x: 842, y: 508, size: 44, cue: 'Formula One'},
+  {d: 'M 820 430 L 1100 430 L 1100 560 L 820 560 Z', fill: 'accent', cue: 'business model'},
+  {text: 'FORMULA 1', x: 842, y: 508, size: 44, cue: 'business model'},
   {d: 'M 160 170 L 470 170 L 470 280 L 160 280 Z', fill: 'accent2', cue: 'broadcasters'},
   {text: 'BROADCASTERS', x: 176, y: 238, size: 31, cue: 'broadcasters'},
   {d: 'M 480 250 C 620 300 700 360 812 440', w: 6, cue: 'broadcasters'},

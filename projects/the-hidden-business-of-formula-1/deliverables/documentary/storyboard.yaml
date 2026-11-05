@@ -42,7 +42,7 @@ scenes:
     params:
       align: center
       lines:
-        - {text: "Who pays?", size: 84, cue: "Who pays"}
+        - {text: "Who pays?", size: 84, cue: "So where"}
         - {text: "Who gets paid?", size: 84, color: accent2, cue: "who gets paid"}
         - {text: "Why do cities line up to host a race?", size: 54, color: accent3, style: body, cue: "why do cities"}
     assets: ["font:inter"]
@@ -217,7 +217,7 @@ scenes:
     params:
       align: center
       lines:
-        - {text: "United States, from 2026", size: 46, color: accent3, style: body, cue: "in America"}
+        - {text: "United States, from 2026", size: 46, color: accent3, style: body, cue: "biggest new deal"}
         - {text: "One exclusive broadcaster", size: 78, cue: "exclusive broadcaster"}
         - {text: "{{apple_deal.years_display}}", size: 64, color: accent2, cue: "for five"}
         - {text: "Reportedly {{apple_deal.display}} (undisclosed)", size: 60, color: accent, cue: "reportedly"}
@@ -380,7 +380,7 @@ scenes:
       nodes:
         - {id: f1, shape: f1, x: 360, y: 330, label: F1 team payments, cue: "Second"}
         - {id: sp, shape: sponsor, x: 360, y: 760, label: Own sponsors and licensing, sub_colour: accent3, sublabel: "{{mercedes_2024.spons_display}} of income", cue: "their own sponsors"}
-        - {id: team, shape: car, x: 1360, y: 560, label: "Revenue {{mercedes_2024.display}}", sublabel: "Profit {{mercedes_2024.profit_display}} (converted from GBP)", size: 1.6, cue: "Mercedes"}
+        - {id: team, shape: car, x: 1360, y: 560, label: "Revenue {{mercedes_2024.display}}", sublabel: "Profit {{mercedes_2024.profit_display}} (converted to US$)", size: 1.6, cue: "Mercedes"}
       links:
         - {from: f1, to: team, cue: "Mercedes", bend: 0.2, coins: 4}
         - {from: sp, to: team, cue: "sponsorship and licensing", bend: -0.2, colour: accent3, coins: 7}
