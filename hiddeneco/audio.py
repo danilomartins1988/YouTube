@@ -55,6 +55,9 @@ def sfx(kind: str, rate: int = RATE, seed: int = 0) -> np.ndarray:
         n = int(0.035 * rate)
         t = np.arange(n) / rate
         y = np.sin(2 * np.pi * 2400 * t) * np.exp(-t * 160)
+    elif kind == "intro":                                    # the channel's 5-second sonic signature
+        from hiddeneco.intro import signature
+        y = signature(rate)
     elif kind == "hit":
         n = int(0.9 * rate)
         t = np.arange(n) / rate
@@ -116,6 +119,12 @@ def mix(voice: np.ndarray, events: list[tuple[float, str, float]], music: bool, 
         env = envelope(voice, rate)
         speaking = np.clip(env / (np.percentile(env, 90) * 0.35 + 1e-9), 0, 1)
         gain = music_level - (music_level - duck_to) * speaking
+        for sec, kind, _g in events:                       # the intro carries its own music: bed out underneath
+            if kind == "intro":
+                s0, s1 = int(max(0.0, sec - 0.3) * rate), int((sec + 5.3) * rate)
+                ramp = np.ones(len(gain))
+                ramp[s0:s1] = 0.0
+                gain = gain * np.convolve(ramp, np.ones(int(0.3 * rate)) / int(0.3 * rate), mode="same")
         out[: len(bed)] += bed * gain[: len(bed)]
     for i, (sec, kind, g) in enumerate(events):
         clip = sfx(kind, rate, seed=i) * g

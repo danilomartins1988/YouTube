@@ -44,6 +44,40 @@ reusable standard. `README.md` covers how to run the pipeline; this file covers 
 
   Add new components when a story needs them and register them in `remotion/src/Documentary.tsx`, `hiddeneco/models.py` and `tools/export_episode_docs.py`.
 
+## 1a. Channel intro (permanent, default on)
+
+- **Structure.** Every episode runs: opening hook, then the channel intro, then the documentary, then the conclusion.
+- **What it is.** `TheHiddenEconomicsIntro` (`remotion/src/brand/TheHiddenEconomicsIntro.tsx`, composition `Intro`). It is 5 s at 1920x1080 and 30 fps, in a fixed brand palette of navy, charcoal, metallic gold and white.
+- **Sound.** An original 5 s sonic signature generated in code by `hiddeneco/intro.py` and stored at `assets/brand/intro_signature.wav`. The music bed is muted underneath it.
+- **Placement.**
+  - `hiddeneco/intro.py:insert_intro()` adds it automatically at the first scene boundary after about 10 s of narration, which is the natural end of the hook.
+  - It never goes before the hook, never inside a sentence, and never twice.
+  - To place it after a specific segment, set `intro: {after_segment: <id>}`. To leave it out, set `intro: {enabled: false}` in `project.yaml`, or `intro: false` in a `deliverable.yaml`.
+- **Standalone version.** `python tools/render_intro.py` writes `output/brand/the_hidden_economics_intro.mp4`.
+- **Already rendered episodes.** `python tools/splice_intro.py <mp4> <timeline.json> <out.mp4>` inserts the intro at the hook boundary under a new filename. The original is never overwritten.
+
+## 1b. Presenter (mandatory: an animated character who explains by drawing)
+
+- **The character.** An original minimalist economist (navy blazer, gold tie, round glasses), drawn with the `presenter` scene type (`remotion/src/presenter/Presenter.tsx`). Its moves:
+  - walks in and leaves;
+  - walks to the board and draws with a marker whose tip follows the real SVG path;
+  - writes labels and builds bar charts bar by bar;
+  - points at figures, either by hand or with a laser for distant ones;
+  - reacts with a small "aha".
+- **Built-in motion.** Inverse-kinematic arms, a walk cycle driven by distance travelled, blinking, and a mouth that moves with the narration.
+- **Board items.** Each item is gated by a narration cue:
+  - `stroke`, `arrow` and `box` for drawn diagrams, flowcharts, timelines and supply chains;
+  - `text` for written labels;
+  - `bars` for a chart built bar by bar;
+  - `point` (with `laser`) for pointing;
+  - `react` for the reaction.
+- **Frequency** (documentaries of 10-15 min, enforced by QC in `hiddeneco/qc.py:check_presenter`). An episode needs at least **3** presenter sequences of about 10-25 s each, spread through the film and not back to back, including:
+  - one that draws a diagram (boxes, strokes or arrows);
+  - one that builds or interacts with a chart (bars);
+  - one that explains a business or economic relationship (at least two boxes joined by an arrow).
+- **Exemptions.** Missing sequences fail QC. Only projects marked `presenter_exempt: true` (the episodes published before this standard) or deliverables with `presenter: false` are exempt.
+- **Demo.** `python tools/render_presenter_demo.py` writes `output/brand/presenter_demo.mp4`.
+
 ## 2. Story
 
 - **Hook.** Grab attention in the first 10 seconds with a picture, a surprising fact and an open question. No channel intro.
@@ -94,6 +128,7 @@ reusable standard. `README.md` covers how to run the pipeline; this file covers 
    - Simplify any chart that is hard to read.
    - Then render again. Layout previews are free: `rpreview`-style one-frame-per-scene renders through Remotion.
 4. **Full decode:** `ffmpeg -v error -i <mp4> -f null -`.
+5. **Intro and presenter check:** the intro appears exactly once, after the hook. The presenter appears, visibly moves, and draws with the hand on the path in at least three sequences. Inspect those sheets in `tools/visual_qc.py --scenes ...`. If any of this is missing, the episode is not delivered.
 
 ## 6. Delivery and growth
 

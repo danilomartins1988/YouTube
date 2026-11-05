@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
-import {eio, makeCue, SceneCtx} from './lib/anim';
+import {eio, makeCue, SceneCtx, useCtx} from './lib/anim';
 import {GeoCtx} from './lib/geo';
 import type {Props, SceneSpec} from './lib/types';
 import {Background, Chrome, Finish} from './components/Chrome';
@@ -11,6 +11,8 @@ import {FundFlow} from './scenes/FundFlow';
 import {Isometric} from './scenes/Isometric';
 import {Circuit, RaceTrack} from './scenes/RaceScenes';
 import {Whiteboard} from './scenes/Whiteboard';
+import {IntroArt} from './brand/TheHiddenEconomicsIntro';
+import {PresenterScene} from './presenter/Presenter';
 import {AINetwork, CpuGpu, Landscape, Stack, StackedColumns, SupplyChain} from './scenes/TechScenes';
 
 export const SCENES: Record<string, React.FC> = {
@@ -18,10 +20,14 @@ export const SCENES: Record<string, React.FC> = {
   donut: Donut, timeline: Timeline, compare: Compare, people_ratio: PeopleRatio, end_card: EndCard,
   oil_platform: OilPlatform, map: MapScene, fund_flow: FundFlow, isometric: Isometric,
   race_track: RaceTrack, circuit: Circuit, whiteboard: Whiteboard,
+  channel_intro: () => { const {t, W, H} = useCtx(); return <IntroArt t={t} W={W} H={H} />; },
+  presenter: PresenterScene,
   ai_network: AINetwork, cpu_gpu: CpuGpu, stack: Stack, supply_chain: SupplyChain, stacked_columns: StackedColumns, landscape: Landscape,
 };
 // Scene types that paint their own full-frame background.
-const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard', 'supply_chain']);
+const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard', 'supply_chain', 'channel_intro']);
+// Scene types that are self-contained (no chrome, no scene fades or wipes): the channel intro.
+const BARE = new Set(['channel_intro']);
 
 const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) => {
   const frame = useCurrentFrame();
@@ -31,7 +37,8 @@ const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) =
   if (!Comp) throw new Error(`Unknown scene type ${scene.type}`);
   const ctx = {t, frame, fps, W: width, H: height, pal: props.palette, font: props.fonts, scene, cue: makeCue(scene)};
   // transitions: soft fade + slight push at both ends of every scene
-  const fin = eio(t, 0, 0.45), fout = eio(scene.duration - t, 0, 0.4);
+  const bare = BARE.has(scene.type);
+  const fin = bare ? 1 : eio(t, 0, 0.45), fout = bare ? 1 : eio(scene.duration - t, 0, 0.4);
   const a = Math.min(fin, fout);
   const push = (1 - fin) * 30 - (1 - fout) * 30;
   return (
@@ -41,12 +48,12 @@ const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) =
         <AbsoluteFill style={{opacity: a, transform: `translateX(${push}px)`}}>
           <Comp />
         </AbsoluteFill>
-        <AbsoluteFill style={{opacity: a}}>
+        {!bare && <AbsoluteFill style={{opacity: a}}>
           <Chrome />
-        </AbsoluteFill>
-        <Finish />
-        {props.transition === 'race' && <RaceWipe t={t} dur={scene.duration} pal={props.palette} W={width} H={height} />}
-        {props.transition === 'scan' && <ScanWipe t={t} dur={scene.duration} pal={props.palette} W={width} H={height} />}
+        </AbsoluteFill>}
+        {!bare && <Finish />}
+        {!bare && props.transition === 'race' && <RaceWipe t={t} dur={scene.duration} pal={props.palette} W={width} H={height} />}
+        {!bare && props.transition === 'scan' && <ScanWipe t={t} dur={scene.duration} pal={props.palette} W={width} H={height} />}
       </AbsoluteFill>
     </SceneCtx.Provider>
   );

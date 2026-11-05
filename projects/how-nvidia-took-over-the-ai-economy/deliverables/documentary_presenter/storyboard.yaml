@@ -1,0 +1,1585 @@
+# Revised storyboard (documentary_presenter): identical to ../documentary/storyboard.yaml except four
+# presenter sequences (p07, p15, p17, p33). The channel intro is inserted automatically after the hook.
+scenes:
+- id: s01_network
+  segment: open_network
+  type: ai_network
+  params:
+    no_chrome: true
+    kicker: The Hidden Economics
+    kicker_cue: Every time
+    groups:
+    - label: AI apps
+      colour: accent2
+      cue: AI chatbot
+      nodes:
+      - Chatbots
+      - Coding assistants
+      - Image tools
+      - Search
+    - label: AI labs
+      colour: accent3
+      cue: AI labs
+      nodes:
+      - OpenAI
+      - Anthropic
+      - Google DeepMind
+      - Meta AI
+    - label: Clouds
+      colour: accent2
+      cue: cloud companies
+      nodes:
+      - AWS
+      - Microsoft Azure
+      - Google Cloud
+      - Oracle Cloud
+    - label: Data centers
+      colour: accent3
+      cue: data centers
+      nodes:
+      - Enterprises
+      - Startups
+      - Sovereign AI
+      - Research labs
+    hub: NVIDIA
+    hub_cue: one supplier
+    hub_label: One supplier
+  sfx:
+  - kind: hit
+    at: 0.0
+    gain: 0.3
+  - kind: pop
+    cue: one supplier
+    offset: 0.4
+  assets:
+  - font:inter
+- id: s02_value
+  segment: open_value
+  type: big_counter
+  params:
+    chapter: The supplier
+    cue: worth
+    kicker: Stock market value, 29 October 2025
+    display: '{{market_cap_5tn.display}}'
+    label: First company ever to close above it
+    sublabel: NVIDIA
+  sfx:
+  - kind: pop
+    cue: worth
+    offset: 1.2
+  sources:
+  - ap_5tn
+  assets:
+  - font:inter
+- id: s03_revenue
+  segment: open_revenue
+  type: compare
+  params:
+    chapter: The supplier
+    title: NVIDIA revenue, three fiscal years apart
+    sides:
+    - kicker: Fiscal 2023
+      value: '{{revenue_fy2023.display}}'
+      label: year to Jan 2023
+      bar: 27.0
+      cue: three years
+    - kicker: Fiscal 2026
+      value: '{{revenue_fy2026.display}}'
+      label: year to Jan 2026 ({{revenue_fy2023.multiple_display}})
+      bar: 215.9
+      cue: it sold
+  sources:
+  - nvda_q4fy26
+  - nvda_xbrl
+  assets:
+  - font:inter
+- id: s04_question
+  segment: open_question
+  type: kinetic_text
+  params:
+    align: center
+    lines:
+    - text: Known for video game graphics
+      size: 60
+      style: body
+      cue: For most
+    - text: Now at the center of the AI economy
+      size: 74
+      color: accent
+      cue: how did
+    - text: Can it stay there?
+      size: 64
+      color: accent3
+      cue: Can it stay
+  assets:
+  - font:inter
+- id: s05_act2
+  segment: a2_card
+  type: act_title
+  params:
+    number: Act 2
+    title: From Gaming to AI
+    subtitle: Why graphics chips suit artificial intelligence
+    min_seconds: 3.0
+  sfx:
+  - kind: hit
+    at: 0.1
+    gain: 0.25
+  assets:
+  - font:inter
+- id: s06_origins
+  segment: a2_origins
+  type: timeline
+  params:
+    chapter: 02 · From gaming to AI
+    title: A graphics company
+    start_year: 1992
+    end_year: 2001
+    tick_every: 1
+    items:
+    - year: '{{founded_1993.value}}'
+      label: NVIDIA founded in California
+      cue: was founded
+    - year: '{{gpu_1999.value}}'
+      label: Launches what it calls the first GPU
+      cue: first GPU
+    - year: 2000
+      display: PC gaming
+      label: 'Business: drawing video games, fast'
+      cue: drawing video games
+  sources:
+  - nvda_10k_fy2026
+  assets:
+  - font:inter
+- id: p07_draw_parallel
+  segment: a2_sketch
+  type: presenter
+  params:
+    title: Why graphics chips work in parallel
+    title_cue: key idea
+    enter:
+      from: left
+      cue: Here is
+    items:
+    - box:
+      - 560
+      - 250
+      - 560
+      - 330
+      colour: accent2
+      cue: one frame
+      w: 6
+    - stroke: M 560 360 L 1120 360 M 560 470 L 1120 470 M 747 250 L 747 580 M 933 250 L 933 580
+      colour: accent2
+      w: 3
+      cue: millions of pixels
+      speed: 1600
+    - text: MILLIONS OF PIXELS
+      x: 610
+      y: 650
+      size: 40
+      colour: accent3
+      cue: each pixel
+    - stroke: M 1300 330 A 70 70 0 1 0 1440 330 A 70 70 0 1 0 1300 330
+      colour: ink
+      w: 6
+      cue: few very fast
+    - text: A FEW FAST WORKERS
+      x: 1240
+      y: 450
+      size: 32
+      cue: few very fast
+    - stroke: M 1230 560 A 20 20 0 1 0 1270 560 A 20 20 0 1 0 1230 560 M 1300 560 A 20 20 0 1 0 1340 560 A 20 20 0 1 0 1300 560 M 1370 560 A 20 20 0 1 0 1410 560 A 20 20 0 1 0 1370 560
+        M 1440 560 A 20 20 0 1 0 1480 560 A 20 20 0 1 0 1440 560 M 1510 560 A 20 20 0 1 0 1550 560 A 20 20 0 1 0 1510 560 M 1230 630 A 20 20 0 1 0 1270 630 A 20 20 0 1 0 1230 630 M 1300
+        630 A 20 20 0 1 0 1340 630 A 20 20 0 1 0 1300 630 M 1370 630 A 20 20 0 1 0 1410 630 A 20 20 0 1 0 1370 630 M 1440 630 A 20 20 0 1 0 1480 630 A 20 20 0 1 0 1440 630 M 1510 630
+        A 20 20 0 1 0 1550 630 A 20 20 0 1 0 1510 630
+      colour: accent
+      w: 5
+      cue: huge number
+      speed: 2200
+    - text: MANY SIMPLE WORKERS
+      x: 1225
+      y: 720
+      size: 32
+      colour: accent
+      cue: simpler ones
+    - arrow:
+      - - 1130
+        - 420
+      - - 1220
+        - 560
+      bend: 0.1
+      colour: ink
+      cue: same time
+    - point:
+      - 1390
+      - 595
+      label: all at once
+      colour: accent
+      hold: 1.4
+      cue: working at
+    scale: 0.86
+    floor: 1040
+  assets:
+  - font:inter
+- id: s08_cpu_gpu
+  segment: a2_cpu_gpu
+  type: cpu_gpu
+  params:
+    title: Same job, two designs
+    title_cue: Give both
+    cpu_cue: same job
+    gpu_cue: same job
+    run_cue: work through them
+    gpu_run_cue: The GPU gives
+    workload_label: 192 INDEPENDENT TASKS
+    serial_cue: flip the problem
+    serial_label: 'A STEP-BY-STEP JOB: EACH STEP WAITS FOR THE LAST ONE'
+    note_cue: Real performance
+  sfx:
+  - kind: pop
+    cue: The GPU gives
+    offset: 0.6
+  assets:
+  - font:inter
+- id: s09_alexnet
+  segment: a2_alexnet
+  type: kinetic_text
+  params:
+    align: center
+    lines:
+    - text: Neural networks = piles of multiplications
+      size: 54
+      style: body
+      cue: enormous piles
+    - text: '{{alexnet.display}}: AlexNet'
+      size: 88
+      color: accent
+      cue: AlexNet
+    - text: trained on 2 NVIDIA gaming GPUs
+      size: 56
+      color: accent2
+      cue: trained on
+    - text: wins the ImageNet contest
+      size: 56
+      color: accent3
+      cue: won a famous
+    - text: '{{tensor_2017.display}}: first Tensor Core GPU, built for AI'
+      size: 48
+      color: accent
+      style: body
+      cue: Tensor Cores
+  sources:
+  - alexnet_2012
+  assets:
+  - font:inter
+- id: s10_act3
+  segment: a3_card
+  type: act_title
+  params:
+    number: Act 3
+    title: The CUDA Advantage
+    subtitle: Software that turned chips into a platform
+    min_seconds: 3.0
+  sfx:
+  - kind: hit
+    at: 0.1
+    gain: 0.25
+  assets:
+  - font:inter
+- id: s11_stack
+  segment: a3_stack
+  type: stack
+  params:
+    title: The NVIDIA stack
+    title_cue: only half
+    layer_h: 82
+    layer_gap: 10
+    base_pad: 110
+    layers:
+    - label: GPU hardware
+      sub: the chip
+      colour: accent
+      cue: the chip was only
+    - label: Drivers
+      sub: talk to the hardware
+      colour: accent
+      cue: Years before
+    - label: CUDA ({{cuda_2006.display}})
+      sub: general-purpose GPU programming
+      colour: accent
+      cue: released CUDA
+    - label: Libraries
+      colour: accent
+      items:
+      - cuBLAS (math)
+      - cuDNN (neural nets)
+      - NCCL (multi-chip)
+      cue: libraries for math
+    - label: AI frameworks
+      colour: accent2
+      items:
+      - PyTorch
+      - TensorFlow
+      - JAX
+      cue: frameworks plugged
+    - label: Developers
+      colour: accent2
+      cue: Developers learned
+    - label: AI applications
+      colour: accent3
+      cue: applications were built
+    counter: '{{developers.display}}'
+    counter_label: Developers using NVIDIA tools
+    counter_sub: NVIDIA 10-K, fiscal 2026
+    counter_cue: Today Nvidia says
+  sources:
+  - nvda_10k_fy2026
+  assets:
+  - font:inter
+- id: s12_switch
+  segment: a3_switch
+  type: stack
+  params:
+    title: Switching costs
+    title_cue: switching costs
+    layer_h: 82
+    layer_gap: 10
+    base_pad: 110
+    layers:
+    - label: GPU hardware
+      colour: accent
+      at: 0
+    - label: Drivers
+      colour: accent
+      at: 0
+    - label: CUDA
+      colour: accent
+      at: 0
+    - label: Libraries
+      colour: accent
+      at: 0
+    - label: AI frameworks
+      colour: accent2
+      at: 0
+    - label: Developers
+      colour: accent2
+      at: 0
+    - label: AI applications
+      colour: accent3
+      at: 0
+    switch_cue: move to another chip
+    switch_label: What moving can cost
+    rival: Another chip + its software
+    costs:
+    - label: Port and retest code
+      cue: port and retest
+      weight: 0.9
+    - label: Tune performance again
+      cue: tune its performance
+      weight: 0.7
+    - label: Change tools
+      cue: change its tools
+      weight: 0.6
+    - label: Retrain teams
+      cue: retrain its teams
+      weight: 0.8
+    caption: 'Possible, but costly: the friction protects the incumbent'
+    caption_cue: friction
+  assets:
+  - font:inter
+- id: s13_flywheel
+  segment: a3_flywheel
+  type: whiteboard
+  params:
+    speed: 900
+    caption: 'A network effect: the wheel feeds itself'
+    caption_cue: feeds itself
+    caption_y: 1030
+    strokes:
+    - text: DEVELOPERS
+      x: 820
+      y: 250
+      size: 48
+      cue: More developers
+    - d: M 1120 300 A 300 300 0 0 1 1255 470 M 1235 445 L 1255 472 L 1270 440
+      w: 7
+      cue: write more software
+    - text: SOFTWARE
+      x: 1290
+      y: 600
+      size: 48
+      cue: More software
+    - d: M 1245 690 A 300 300 0 0 1 1090 840 M 1120 838 L 1088 842 L 1105 815
+      w: 7
+      cue: attracts more customers
+    - text: CUSTOMERS
+      x: 830
+      y: 930
+      size: 48
+      cue: More customers
+    - d: M 830 840 A 300 300 0 0 1 675 690 M 672 722 L 674 688 L 700 706
+      w: 7
+      cue: more money
+    - text: MONEY FOR R&D
+      x: 270
+      y: 600
+      size: 48
+      cue: new chips
+    - d: M 670 470 A 300 300 0 0 1 805 300 M 776 304 L 807 299 L 795 328
+      w: 7
+      cue: even more developers
+    - d: M 800 520 L 1120 520 L 1120 640 L 800 640 Z
+      fill: accent
+      w: 6
+      cue: feeds itself
+    - text: NETWORK EFFECT
+      x: 822
+      y: 598
+      size: 40
+      cue: feeds itself
+  assets:
+  - font:inter
+- id: s14_act4
+  segment: a4_card
+  type: act_title
+  params:
+    number: Act 4
+    title: How Nvidia Makes Money
+    subtitle: Revenue, customers and margins
+    min_seconds: 3.0
+  sfx:
+  - kind: hit
+    at: 0.1
+    gain: 0.25
+  assets:
+  - font:inter
+- id: p15_build_revenue
+  segment: a4_revenue
+  type: presenter
+  params:
+    title: NVIDIA revenue by fiscal year (US$ bn, 10-K)
+    title_cue: the money
+    enter:
+      from: left
+      cue: Now
+    items:
+    - text: FISCAL YEARS END IN LATE JANUARY
+      x: 560
+      y: 240
+      size: 26
+      colour: muted
+      cue: year ends
+    - stroke: M 560 860 L 1800 860
+      colour: border
+      w: 3
+      cue: For a decade
+      speed: 2400
+    - bars: '{{revenue_columns.value}}'
+      x: 560
+      base: 860
+      width: 1220
+      max_h: 470
+      colour: accent3
+    - point:
+      - 1428
+      - 800
+      label: 'FY23: $27.0bn'
+      colour: accent3
+      hold: 1.6
+      cue: fiscal twenty twenty-three
+      laser: true
+    - react: true
+      cue: exploded
+    - point:
+      - 1739
+      - 392
+      label: 'FY26: $215.9bn'
+      colour: accent
+      hold: 2.2
+      cue: fiscal twenty twenty-six.
+      laser: true
+    scale: 0.86
+    floor: 1040
+  sources:
+  - nvda_xbrl
+  assets:
+  - font:inter
+- id: s16_mix
+  segment: a4_mix
+  type: stacked_columns
+  params:
+    title: 'Who buys: revenue by market'
+    subtitle: US$ billion, fiscal years · NVIDIA 10-K
+    mix_title: Data Center's share of revenue
+    mix_subtitle: Share of each fiscal year's total
+    title_cue: who buys
+    years: '{{segments.value}}'
+    series:
+    - key: dc
+      label: Data Center
+      colour: accent
+    - key: gaming
+      label: Gaming
+      colour: accent2
+    - key: other
+      label: Pro visualization, auto, other
+      colour: muted
+    grow_cue: In fiscal twenty twenty
+    step_seconds: 0.5
+    y_max: 230
+    ticks:
+    - 50
+    - 100
+    - 150
+    - 200
+    mix_cue: That is
+  sources:
+  - nvda_10k_fy2022
+  - nvda_10k_fy2025
+  - nvda_10k_fy2026
+  assets:
+  - font:inter
+- id: p17_customers
+  segment: a4_customers
+  type: presenter
+  params:
+    title: Who pays NVIDIA (fiscal 2026, 10-K)
+    title_cue: Those buyers
+    enter:
+      from: left
+      cue: Those buyers
+    items:
+    - box:
+      - 560
+      - 430
+      - 300
+      - 120
+      label: NVIDIA
+      colour: accent
+      size: 38
+      cue: Those buyers
+    - box:
+      - 1180
+      - 250
+      - 520
+      - 110
+      label: CLOUD GIANTS
+      colour: accent2
+      size: 30
+      cue: cloud giants
+    - arrow:
+      - - 870
+        - 470
+      - - 1170
+        - 310
+      bend: -0.12
+      colour: accent
+      cue: cloud giants
+    - box:
+      - 1180
+      - 440
+      - 520
+      - 110
+      label: AI LABS
+      colour: accent2
+      size: 30
+      cue: AI labs
+    - arrow:
+      - - 870
+        - 490
+      - - 1170
+        - 495
+      bend: 0.0
+      colour: accent
+      cue: AI labs
+    - box:
+      - 1180
+      - 630
+      - 520
+      - 110
+      label: AI FACTORIES
+      colour: accent2
+      size: 30
+      cue: AI factories
+    - arrow:
+      - - 870
+        - 520
+      - - 1170
+        - 680
+      bend: 0.12
+      colour: accent
+      cue: AI factories
+    - text: 'ONE DIRECT CUSTOMER: 22%'
+      x: 560
+      y: 830
+      size: 34
+      colour: accent3
+      cue: one direct customer
+    - text: 'ANOTHER: 14%'
+      x: 1180
+      y: 830
+      size: 34
+      colour: accent3
+      cue: another for
+    - point:
+      - 790
+      - 815
+      label: 36% from two customers
+      colour: risk
+      hold: 1.6
+      laser: true
+    scale: 0.86
+    floor: 1040
+  sources:
+  - nvda_10k_fy2026
+  assets:
+  - font:inter
+- id: s18_margin
+  segment: a4_margin
+  type: line_chart
+  params:
+    chapter: 04 · How Nvidia makes money
+    title: Gross margin
+    subtitle: GAAP, by fiscal year · our calculation from 10-K gross profit ÷ revenue
+    series: '{{gross_margin_series.value}}'
+    highlight: GM
+    cue: Then look
+    draw_seconds: 8
+    y_max: 80
+    y_steps: 4
+    axis_suffix: '%'
+    value_suffix: '%'
+    value_decimals: 1
+    year_every: 2
+    year_prefix: FY
+    events:
+    - year: 2023
+      label: 'FY23: 56.9%'
+      cue: fiscal twenty twenty-three
+    - year: 2025
+      label: 'FY25: 75.0%'
+      cue: fiscal twenty twenty-five
+    - year: 2026
+      label: 'FY26: 71.1% ($4.5bn charge)'
+      cue: charge
+      dx: -330
+      dy: 70
+  sources:
+  - nvda_xbrl
+  - nvda_10k_fy2026
+  assets:
+  - font:inter
+- id: s19_why
+  segment: a4_why
+  type: kinetic_text
+  params:
+    align: center
+    lines:
+    - text: Why so profitable?
+      size: 76
+      cue: Why so
+    - text: Demand ran ahead of supply
+      size: 54
+      color: accent3
+      style: body
+      cue: Demand ran
+    - text: A product that is hard to replace
+      size: 54
+      color: accent
+      style: body
+      cue: hard to replace
+    - text: Whole systems, not just chips
+      size: 54
+      color: accent2
+      style: body
+      cue: whole systems
+    - text: 'Networking: {{dc_fy2026.networking_display}} in fiscal 2026'
+      size: 50
+      color: accent2
+      style: body
+      cue: Networking alone
+    - text: 'R&D since founding: {{rnd_total.display}}'
+      size: 50
+      color: accent3
+      style: body
+      cue: keeps reinvesting
+  sources:
+  - nvda_10k_fy2026
+  assets:
+  - font:inter
+- id: s20_latest
+  segment: a4_latest
+  type: big_counter
+  params:
+    chapter: 04 · How Nvidia makes money
+    cue: brought in
+    kicker: Quarter ended 26 July 2026 (Q2 fiscal 2027)
+    display: '{{q2fy27.display}}'
+    label: Revenue in one quarter · +{{q2fy27.growth_spoken}}
+    sublabel: Data Center {{q2fy27.dc_display}} · gross margin {{q2fy27.gm_display}} · next-quarter outlook {{q2fy27.guide_display}}
+  sfx:
+  - kind: pop
+    cue: brought in
+    offset: 1.2
+  sources:
+  - nvda_q2fy27
+  assets:
+  - font:inter
+- id: s21_act5
+  segment: a5_card
+  type: act_title
+  params:
+    number: Act 5
+    title: The Global Supply Chain
+    subtitle: Designed in California, made in Asia
+    min_seconds: 3.0
+  sfx:
+  - kind: hit
+    at: 0.1
+    gain: 0.25
+  assets:
+  - font:inter
+- id: s22_chain
+  segment: a5_chain
+  type: supply_chain
+  params:
+    title: From design to data center
+    subtitle: Company locations are headquarters or named sites · NVIDIA 10-K
+    title_cue: surprising part
+    views:
+    - lon: -10
+      lat: 32
+      span: 300
+    - lon: 124
+      lat: 30
+      span: 48
+      cue: in Taiwan
+    - lon: 10
+      lat: 25
+      span: 320
+      cue: Contract manufacturers
+    anchor_y: 0.46
+    nodes:
+    - id: nvda
+      label: NVIDIA
+      role: Design · Santa Clara, CA
+      lon: -121.96
+      lat: 37.37
+      colour: accent
+      cue: designs its chips
+      dx: -26
+      dy: 24
+    - id: tsmc
+      hide_wide: true
+      label: TSMC
+      role: Wafer fabrication · Hsinchu
+      lon: 120.99
+      lat: 24.78
+      colour: accent2
+      country: TWN
+      cue: send the designs
+      dx: 26
+      dy: -10
+    - id: skh
+      label: SK Hynix · Samsung
+      role: HBM memory · Korea
+      lon: 127.3
+      lat: 37.2
+      colour: accent3
+      country: KOR
+      cue: high bandwidth memory
+      dx: 26
+    - id: mu
+      label: Micron
+      role: HBM memory · HQ Boise, ID
+      lon: -116.2
+      lat: 43.6
+      colour: accent3
+      cue: Micron
+      dx: 26
+      dy: -34
+    - id: cowos
+      hide_wide: true
+      label: CoWoS packaging
+      role: TSMC advanced packaging · Taiwan
+      lon: 120.45
+      lat: 23.48
+      colour: accent2
+      cue: advanced packaging
+      dx: -26
+      dy: 20
+    - id: asm
+      hide_wide: true
+      label: Server assembly
+      role: Contract manufacturers (e.g. Hon Hai)
+      lon: 121.45
+      lat: 25.06
+      colour: accent2
+      cue: Contract manufacturers
+      dx: 26
+      dy: 36
+    - id: twc
+      wide_only: true
+      label: Taiwan
+      role: fab · CoWoS · assembly
+      lon: 121.0
+      lat: 23.8
+      colour: accent2
+      cue: Contract manufacturers
+      dx: 26
+      dy: 34
+    - id: dc1
+      label: Data centers
+      role: US
+      lon: -78.5
+      lat: 38.9
+      colour: accent
+      cue: data centers around
+      dx: 26
+    - id: dc2
+      label: Data centers
+      role: Europe
+      lon: 8.7
+      lat: 50.1
+      colour: accent
+      cue: around the world
+      dx: 26
+    - id: dc3
+      label: Data centers
+      role: Asia
+      lon: 103.8
+      lat: 1.35
+      colour: accent
+      cue: around the world
+      offset: 0.3
+      dx: 26
+    links:
+    - from: nvda
+      to: tsmc
+      lift: 0.15
+    - from: tsmc
+      to: cowos
+      lift: 0.4
+    - from: skh
+      to: cowos
+      lift: 0.3
+    - from: mu
+      to: cowos
+      lift: 0.12
+    - from: cowos
+      to: asm
+      lift: 0.5
+    - from: asm
+      to: dc1
+      lift: 0.15
+    - from: asm
+      to: dc2
+      lift: 0.2
+    - from: asm
+      to: dc3
+      lift: 0.3
+    steps:
+    - label: Design
+      colour: accent
+      cue: designs its chips
+    - label: Wafer fab
+      colour: accent2
+      cue: silicon wafers
+    - label: HBM memory
+      colour: accent3
+      cue: high bandwidth memory
+    - label: CoWoS packaging
+      colour: accent2
+      cue: packaging technique
+      node: cowos
+    - label: Assembly
+      colour: accent2
+      cue: assemble them
+    - label: Data centers
+      colour: accent
+      cue: data centers around
+  sources:
+  - nvda_10k_fy2026
+  - natural_earth
+  assets:
+  - geo:remotion_world
+  - font:inter
+- id: s23_bottleneck
+  segment: a5_bottleneck
+  type: supply_chain
+  params:
+    title: One slow link holds up the chain
+    title_cue: slowest link
+    views:
+    - lon: 40
+      lat: 30
+      span: 280
+    - lon: 124
+      lat: 28
+      span: 60
+      cue: advanced packaging
+    anchor_y: 0.46
+    nodes:
+    - id: nvda
+      label: NVIDIA
+      role: Design
+      lon: -121.96
+      lat: 37.37
+      colour: accent
+      at: 0
+      dx: -26
+      dy: 24
+    - id: tsmc
+      hide_wide: true
+      label: TSMC
+      role: Wafers
+      lon: 120.99
+      lat: 24.78
+      colour: accent2
+      country: TWN
+      at: 0
+      dx: 26
+      dy: -10
+    - id: skh
+      label: SK Hynix · Samsung
+      role: HBM memory
+      lon: 127.3
+      lat: 37.2
+      colour: accent3
+      country: KOR
+      at: 0
+      dx: 26
+    - id: mu
+      label: Micron
+      role: HBM memory
+      lon: -116.2
+      lat: 43.6
+      colour: accent3
+      at: 0
+      dx: 26
+      dy: -34
+    - id: cowos
+      hide_wide: true
+      label: CoWoS packaging
+      role: Taiwan
+      lon: 120.45
+      lat: 23.48
+      colour: accent2
+      at: 0
+      dx: -26
+      dy: 20
+    - id: asm
+      hide_wide: true
+      label: Server assembly
+      role: Taiwan
+      lon: 121.45
+      lat: 25.06
+      colour: accent2
+      at: 0
+      dx: 26
+      dy: 36
+    - id: twc
+      wide_only: true
+      label: Taiwan
+      role: fab · CoWoS · assembly
+      lon: 121.0
+      lat: 23.8
+      colour: accent2
+      at: 0
+      dx: 26
+      dy: 34
+    - id: dc1
+      label: Data centers
+      role: US
+      lon: -78.5
+      lat: 38.9
+      colour: accent
+      at: 0
+      dx: 26
+    - id: dc2
+      label: Data centers
+      role: Europe
+      lon: 8.7
+      lat: 50.1
+      colour: accent
+      at: 0
+      dx: 26
+    - id: dc3
+      label: Data centers
+      role: Asia
+      lon: 103.8
+      lat: 1.35
+      colour: accent
+      at: 0
+      dx: 26
+    links:
+    - from: nvda
+      to: tsmc
+      lift: 0.15
+    - from: tsmc
+      to: cowos
+      lift: 0.4
+    - from: skh
+      to: cowos
+      lift: 0.3
+    - from: mu
+      to: cowos
+      lift: 0.12
+    - from: cowos
+      to: asm
+      lift: 0.5
+    - from: asm
+      to: dc1
+      lift: 0.15
+    - from: asm
+      to: dc2
+      lift: 0.2
+    - from: asm
+      to: dc3
+      lift: 0.3
+    bottleneck:
+      node: cowos
+      label: SHORTAGE
+      cue: runs short
+    steps:
+    - label: Design
+      colour: accent
+      at: 0
+    - label: Wafer fab
+      colour: accent2
+      at: 0
+    - label: HBM memory
+      colour: accent3
+      at: 0
+    - label: CoWoS packaging
+      colour: accent2
+      at: 0
+      node: cowos
+    - label: Assembly
+      colour: accent2
+      at: 0
+    - label: Data centers
+      colour: accent
+      at: 0
+  sources:
+  - nvda_10k_fy2026
+  - natural_earth
+  assets:
+  - geo:remotion_world
+  - font:inter
+- id: s24_arizona
+  segment: a5_arizona
+  type: map
+  params:
+    chapter: 05 · The global supply chain
+    geo: world
+    views:
+    - lon: 115
+      lat: 28
+      span: 95
+    - lon: -20
+      lat: 32
+      span: 330
+      cue: spread it out
+    move: 2.6
+    highlights:
+      TWN:
+        colour: accent2
+        cue: concentrated in Asia
+      KOR:
+        colour: accent2
+        cue: concentrated in Asia
+        offset: 0.2
+      JPN:
+        colour: accent2
+        cue: concentrated in Asia
+        offset: 0.4
+        strength: 0.6
+      USA:
+        colour: accent
+        cue: United States
+    markers:
+    - lon: 120.99
+      lat: 24.78
+      label: Taiwan
+      sublabel: wafers, packaging, assembly
+      cue: above all
+      size: 34
+      anchor: end
+    - lon: -112.07
+      lat: 33.45
+      label: Arizona
+      sublabel: first US Blackwell wafer · Oct 2025
+      cue: factory in
+      size: 34
+    callouts:
+    - label: NVIDIA supply chain
+      value: Mainly Asia
+      cue: concentrated in Asia
+    - label: US wafers, packaged in
+      value: Taiwan
+      cue: travel back
+    callout_x: 1350
+    callout_y: 640
+  sources:
+  - nvda_10k_fy2026
+  - arizona_wafer
+  - natural_earth
+  assets:
+  - geo:remotion_world
+  - font:inter
+- id: s25_act6
+  segment: a6_card
+  type: act_title
+  params:
+    number: Act 6
+    title: The Competition
+    subtitle: Rival GPUs and custom chips
+    min_seconds: 3.0
+  sfx:
+  - kind: hit
+    at: 0.1
+    gain: 0.25
+  assets:
+  - font:inter
+- id: s26_rivals
+  segment: a6_rivals
+  type: fund_flow
+  params:
+    chapter: 06 · The competition
+    title: Rivals named in NVIDIA's 10-K
+    nodes:
+    - id: nv
+      shape: box
+      x: 960
+      y: 560
+      label: NVIDIA
+      colour: accent
+      size: 1.2
+      at: 0.0
+    - id: amd
+      shape: box
+      x: 360
+      y: 330
+      label: AMD
+      sublabel: chipmaker
+      colour: accent2
+      cue: chipmakers like
+    - id: intel
+      shape: box
+      x: 360
+      y: 560
+      label: Intel
+      sublabel: chipmaker
+      colour: accent2
+      cue: Intel
+    - id: hw
+      shape: box
+      x: 360
+      y: 790
+      label: Huawei
+      sublabel: chipmaker
+      colour: accent2
+      cue: Huawei
+    - id: goog
+      shape: box
+      x: 1560
+      y: 330
+      label: Google
+      sublabel: customer + own chips
+      colour: accent3
+      cue: Google
+    - id: amzn
+      shape: box
+      x: 1560
+      y: 560
+      label: Amazon
+      sublabel: customer + own chips
+      colour: accent3
+      cue: Amazon
+    - id: msft
+      shape: box
+      x: 1560
+      y: 790
+      label: Microsoft
+      sublabel: customer + own chips
+      colour: accent3
+      cue: Microsoft
+    links:
+    - from: nv
+      to: goog
+      colour: accent
+      cue: biggest customers
+      coins: 4
+      bend: 0.15
+    - from: nv
+      to: amzn
+      colour: accent
+      cue: biggest customers
+      offset: 0.2
+      coins: 4
+    - from: nv
+      to: msft
+      colour: accent
+      cue: biggest customers
+      offset: 0.4
+      coins: 4
+      bend: -0.15
+    caption: Some of its biggest customers are also rivals
+    caption_cue: design AI chips
+  sources:
+  - nvda_10k_fy2026
+  assets:
+  - font:inter
+- id: s27_amd
+  segment: a6_amd
+  type: compare
+  params:
+    chapter: 06 · The competition
+    title: Data center revenue (different periods and scopes)
+    sides:
+    - kicker: AMD · calendar 2025
+      value: '{{amd_dc_2025.display}}'
+      label: incl. EPYC server CPUs
+      bar: 16.6
+      cue: brought in
+    - kicker: NVIDIA · fiscal 2026
+      value: '{{dc_fy2026.display}}'
+      label: year to Jan 2026
+      bar: 193.7
+      cue: Nvidia's data center
+  sources:
+  - amd_fy2025
+  - nvda_10k_fy2026
+  assets:
+  - font:inter
+- id: s28_custom
+  segment: a6_custom
+  type: compare
+  params:
+    chapter: 06 · The competition
+    title: Custom chips from the clouds
+    sides:
+    - kicker: Google TPU
+      value: 7th gen
+      label: Ironwood (GA Nov 2025)
+      cue: Google builds
+    - kicker: AWS Trainium
+      value: ≈ 500k
+      label: Trainium2 in Project Rainier
+      cue: Amazon builds
+    - kicker: Anthropic plans
+      value: 1M TPUs
+      label: up to · also uses Trainium + NVIDIA
+      cue: Anthropic said
+  sources:
+  - google_ironwood
+  - aws_rainier
+  - anthropic_tpu
+  assets:
+  - font:inter
+- id: s29_landscape
+  segment: a6_landscape
+  type: landscape
+  params:
+    title: The AI chip landscape
+    subtitle: Qualitative comparison · no benchmarks · there is no universal winner
+    title_cue: Why build
+    players:
+    - name: NVIDIA GPU
+      short: NVIDIA
+      kind: general-purpose GPU
+      colour: accent
+      axis: 0.12
+    - name: AMD GPU
+      short: AMD
+      kind: general-purpose GPU
+      colour: accent2
+      axis: 0.22
+    - name: Google TPU
+      short: TPU
+      kind: custom accelerator
+      colour: accent3
+      axis: 0.78
+    - name: AWS Trainium
+      short: Trainium
+      kind: custom accelerator
+      colour: accent3
+      axis: 0.86
+    rows:
+    - label: Built for
+      cue: general-purpose GPU
+      cells:
+      - 'almost any
+
+        AI workload'
+      - 'almost any
+
+        AI workload'
+      - 'Google''s own
+
+        workloads'
+      - 'Amazon''s own
+
+        workloads'
+    - label: Software
+      cue: widest software
+      cells:
+      - 'CUDA: widest
+
+        support'
+      - 'ROCm: open,
+
+        growing'
+      - 'JAX / XLA
+
+        focus'
+      - Neuron SDK
+    - label: Where to get it
+      cue: rented from many
+      cells:
+      - 'most clouds
+
+        + buy servers'
+      - 'several clouds
+
+        + buy servers'
+      - 'mainly
+
+        Google Cloud'
+      - mainly AWS
+    - label: Cost at scale
+      cue: cheaper to run
+      cells:
+      - 'premium
+
+        pricing'
+      - 'competes
+
+        on price'
+      - 'designed to cut
+
+        owner''s costs'
+      - 'designed to cut
+
+        owner''s costs'
+    - label: Switching cost
+      cue: software has to be adapted
+      cells:
+      - 'low if you
+
+        stay on CUDA'
+      - 'port from
+
+        CUDA'
+      - 'adapt code
+
+        to TPU'
+      - 'adapt code
+
+        to Neuron'
+    axis_cue: Different jobs
+    axis_label: 'Conceptual: flexibility versus specialisation'
+    axis_left: General-purpose
+    axis_right: Specialised
+  sources:
+  - nvda_10k_fy2026
+  - google_ironwood
+  - aws_rainier
+  assets:
+  - font:inter
+- id: s30_act7
+  segment: a7_card
+  type: act_title
+  params:
+    number: Act 7
+    title: The Future of Nvidia
+    subtitle: Spending, rivals and the next bottleneck
+    min_seconds: 3.0
+  sfx:
+  - kind: hit
+    at: 0.1
+    gain: 0.25
+  assets:
+  - font:inter
+- id: s31_capex
+  segment: a7_capex
+  type: big_counter
+  params:
+    chapter: 07 · The future of Nvidia
+    cue: plan to spend
+    kicker: 2026 capital spending plans (trackers' estimates)
+    display: '{{capex_2026.display}}'
+    label: Amazon + Microsoft + Alphabet + Meta
+    sublabel: Much of it for AI data centers · estimates range ≈ $690-760bn
+  sfx:
+  - kind: pop
+    cue: plan to spend
+    offset: 1.2
+  sources:
+  - capex_tracker
+  assets:
+  - font:inter
+- id: s32_risks
+  segment: a7_risks
+  type: compare
+  params:
+    chapter: 07 · The future of Nvidia
+    title: What could slow Nvidia
+    sides:
+    - kicker: Spending
+      value: Capex
+      label: if AI budgets slow
+      cue: spending slows
+    - kicker: Customers
+      value: '{{customers_fy2026.display}} + {{customers_fy2026.second_display}}'
+      label: two direct customers
+      cue: biggest customers
+    - kicker: Supply chain
+      value: Asia
+      label: a handful of factories
+      cue: supply chain
+    - kicker: China
+      value: Excluded
+      label: from data center guidance
+      cue: export rules
+  sources:
+  - capex_tracker
+  - nvda_10k_fy2026
+  - nvda_q2fy27
+  assets:
+  - font:inter
+- id: p33_inference
+  segment: a7_inference
+  type: presenter
+  params:
+    title: Training once, inference every time
+    title_cue: shifting
+    enter:
+      from: left
+      cue: The market
+    items:
+    - box:
+      - 560
+      - 300
+      - 330
+      - 120
+      label: TRAINING
+      colour: accent
+      size: 34
+      cue: trained once
+    - text: ONCE
+      x: 660
+      y: 470
+      size: 28
+      colour: muted
+      cue: trained once
+    - arrow:
+      - - 900
+        - 360
+      - - 1060
+        - 360
+      bend: 0.0
+      colour: ink
+      cue: runs every time
+    - box:
+      - 1070
+      - 300
+      - 300
+      - 120
+      label: MODEL
+      colour: accent3
+      size: 34
+      cue: runs every time
+    - arrow:
+      - - 1380
+        - 360
+      - - 1520
+        - 360
+      bend: 0.0
+      colour: ink
+      cue: called inference
+    - box:
+      - 1530
+      - 300
+      - 280
+      - 120
+      label: INFERENCE
+      colour: accent2
+      size: 30
+      cue: called inference
+    - text: EVERY QUESTION
+      x: 1545
+      y: 470
+      size: 26
+      colour: muted
+      cue: called inference
+    - text: COST PER ANSWER MATTERS
+      x: 1080
+      y: 640
+      size: 36
+      colour: risk
+      cue: cost of each answer
+    - point:
+      - 1670
+      - 425
+      label: custom chips compete here
+      colour: risk
+      hold: 1.8
+      cue: custom chips compete
+      laser: true
+    - text: 'NVIDIA: A NEW PLATFORM EVERY YEAR (NEXT: {{rubin.display}})'
+      x: 560
+      y: 790
+      size: 30
+      colour: accent
+      cue: keep moving
+    - react: true
+      cue: cut the cost
+    scale: 0.86
+    floor: 1040
+  sources:
+  - nvda_q4fy26
+  assets:
+  - font:inter
+- id: s34_outro
+  segment: outro
+  type: map
+  params:
+    chapter: 'Next: Why Taiwan matters'
+    geo: world
+    views:
+    - lon: 20
+      lat: 25
+      span: 330
+    - lon: 124.5
+      lat: 23.7
+      span: 16
+      cue: single island
+    move: 3.4
+    highlights:
+      TWN:
+        colour: accent3
+        cue: single island
+    markers:
+    - lon: 120.99
+      lat: 24.78
+      label: Taiwan
+      sublabel: 'Next episode: why it matters so much'
+      cue: Next time
+      size: 44
+    title: The stack is the advantage
+    title_cue: real advantage
+    subtitle: Hardware · software · developers · suppliers
+    subtitle_cue: It was a stack
+  sfx:
+  - kind: hit
+    cue: This was
+    gain: 0.25
+  sources:
+  - nvda_10k_fy2026
+  - natural_earth
+  assets:
+  - geo:remotion_world
+  - font:inter

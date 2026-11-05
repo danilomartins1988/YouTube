@@ -117,6 +117,8 @@ def sfx_events(timed: list[TimedScene], enabled: bool) -> list[tuple[float, str,
     for i, ts in enumerate(timed):
         if i == 0:
             events.append((ts.start + 0.05, "hit", 0.32))
+        elif ts.scene.type == "channel_intro":
+            pass                                   # the intro has its own sound; no transition whoosh
         else:
             events.append((ts.start - 0.2, "whoosh", 0.22))
         for fx in ts.scene.sfx:

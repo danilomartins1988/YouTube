@@ -61,6 +61,15 @@ def prepare(paths: ProjectPaths, d):
         if problems:
             raise BuildError("; ".join(problems))
         sb = sb_mod.rendered(raw, d)
+        # permanent channel intro after the opening hook (project.yaml `intro: {enabled: false}` turns it off)
+        from hiddeneco.intro import insert_intro
+        proj = load_project(paths)
+        draw = yaml.safe_load((paths.deliverable_dir / "deliverable.yaml").read_text(encoding="utf-8")) or {}
+        if draw.get("intro") is not None:              # a deliverable may override the project setting
+            proj = {**proj, "intro": draw["intro"] if isinstance(draw["intro"], dict) else {"enabled": bool(draw["intro"])}}
+        sc, sb, intro_after = insert_intro(proj, sc, sb, render=lambda x: script_mod.render_text(x, d))
+        if intro_after:
+            log("intro.inserted", after=intro_after)
         (paths.out_sub("storyboard") / "storyboard.md").write_text(sb_mod.to_markdown(sb, d), encoding="utf-8")
         (paths.out / "storyboard" / "storyboard.json").write_text(sb.model_dump_json(indent=2), encoding="utf-8")
     return sc, sb

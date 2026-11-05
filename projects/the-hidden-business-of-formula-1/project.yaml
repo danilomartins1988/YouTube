@@ -31,3 +31,8 @@ style:
 # Editor instruction (Episode 05 brief): strict cumulative cap for ALL OpenAI voice work on this episode.
 budget:
   max_paid_usd: 1.00
+
+# Published before the channel-intro and presenter standards (2026-11-05): kept exactly as released.
+# For a future re-edit, set intro.enabled: true (and add presenter scenes or keep presenter_exempt).
+intro: {enabled: false}
+presenter_exempt: true

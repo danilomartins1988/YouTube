@@ -1,0 +1,13 @@
+id: documentary_presenter
+format: long_16x9
+title: "How Nvidia Took Over the AI Economy"
+target_seconds: {min: 660, max: 800}
+captions: {burn_in: false, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: []
+output_alias: output/nvidia_documentary_presenter.mp4
+# Revised version (2026-11-05): same script and cached narration as `documentary`, plus the permanent channel
+# intro (automatic, after the opening hook) and four presenter sequences (character draws / builds a chart /
+# explains relationships). The original `documentary` render is untouched.
+thumbnails: []
+metadata: false

@@ -2,6 +2,7 @@ import React from 'react';
 import {Composition} from 'remotion';
 import {Documentary} from './Documentary';
 import {Thumbnail} from './Thumbnail';
+import {INTRO_SECONDS, TheHiddenEconomicsIntro} from './brand/TheHiddenEconomicsIntro';
 import type {Props} from './lib/types';
 
 const defaults: Props = {
@@ -22,6 +23,14 @@ export const RemotionRoot: React.FC = () => (
     width={1920}
     height={1080}
     durationInFrames={1}
+  />
+  <Composition
+    id="Intro"
+    component={TheHiddenEconomicsIntro}
+    fps={30}
+    width={1920}
+    height={1080}
+    durationInFrames={INTRO_SECONDS * 30}
   />
   <Composition
     id="Documentary"

@@ -243,6 +243,39 @@ def check_currency(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
     return out
 
 
+def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
+    """Mandatory presenter sequences (standard of 2026-11-05): >= 3 character-assisted explanations of ~10-25 s,
+    spread through the film, including one real drawing, one chart interaction and one business relationship."""
+    project = yaml.safe_load((paths.project_dir / "project.yaml").read_text())
+    raw = yaml.safe_load((paths.deliverable_dir / "deliverable.yaml").read_text()) or {}
+    if project.get("presenter_exempt") or raw.get("presenter") is False or raw.get("format", "long_16x9") != "long_16x9":
+        return []
+    total = sum(t.duration for t in timed) or 1.0
+    if total < 480:                                   # the rule applies to 10-15 minute documentaries
+        return []
+    seqs = [t for t in timed if t.scene.type == "presenter"]
+    out = []
+    if len(seqs) < 3:
+        out.append(_issue("presenter", "error", f"Only {len(seqs)} presenter sequences; at least 3 are required"))
+    for t in seqs:
+        if not 8 <= t.duration <= 30:
+            out.append(_issue("presenter", "warning", f"Presenter scene {t.scene.id} lasts {t.duration:.1f}s (target 10-25 s)"))
+    kinds = [set(k for it in t.scene.params.get("items", []) for k in it) for t in seqs]
+    if not any(k & {"stroke", "arrow", "box"} for k in kinds):
+        out.append(_issue("presenter", "error", "No presenter sequence draws a diagram (stroke/arrow/box)"))
+    if not any("bars" in k for k in kinds):
+        out.append(_issue("presenter", "error", "No presenter sequence interacts with a chart (bars)"))
+    if not any(sum(1 for it in t.scene.params.get("items", []) if "box" in it) >= 2 and any("arrow" in it for it in t.scene.params.get("items", []))
+               for t in seqs):
+        out.append(_issue("presenter", "error", "No presenter sequence explains a relationship (two boxes joined by an arrow)"))
+    if len(seqs) >= 2 and (seqs[-1].start - seqs[0].start) < 0.4 * total:
+        out.append(_issue("presenter", "error", "Presenter sequences are bunched together; spread them through the film"))
+    for a_, b_ in zip(seqs, seqs[1:]):
+        if abs(b_.start - (a_.start + a_.duration)) < 1.0:
+            out.append(_issue("presenter", "warning", f"Presenter scenes {a_.scene.id} and {b_.scene.id} are back to back"))
+    return out
+
+
 def run_qc(paths: ProjectPaths, deliverable: Deliverable, fmt: dict, script: Script, dossier: Dossier,
            storyboard: Storyboard, timed: list[TimedScene]) -> dict:
     total = sum(t.duration for t in timed)
@@ -250,6 +283,7 @@ def run_qc(paths: ProjectPaths, deliverable: Deliverable, fmt: dict, script: Scr
     issues += check_timing(timed, deliverable)
     issues += check_captions(timed, total, deliverable, fmt)
     issues += check_media(timed, paths, deliverable)
+    issues += check_presenter(paths, timed)
     src, blockers = check_sources(script, dossier, storyboard)
     issues += src
     issues += check_licensing(storyboard, dossier)
