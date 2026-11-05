@@ -1,0 +1,83 @@
+id: documentary
+format: long_16x9
+title: "Why Norway Is So Rich — The Secret Behind Its Oil Fortune"
+target_seconds: {min: 600, max: 720}
+captions: {burn_in: false, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: [youtube]
+output_alias: output/norway_documentary.mp4
+
+thumbnails:
+  - id: "01"
+    type: illustrated_headline
+    size: [1280, 720]
+    kind: offshore
+    horizon: 0.86
+    headline: "{{fund_value_q3_2026.display}}"
+    accent_line: FROM OIL
+    kicker: "Norway's fund · {{fund_value_q3_2026.date_display}}"
+    footer: "Source: NBIM"
+    why: One sourced number over an original offshore-platform illustration; the film explains how.
+  - id: "02"
+    type: illustrated_headline
+    size: [1280, 720]
+    kind: offshore
+    horizon: 0.88
+    headline: THE OIL\nSECRET
+    kicker: Why Norway is so rich
+    why: Promise of the film (it is about what Norway did with its oil, not just the oil). No logos.
+  - id: "03"
+    type: illustrated_headline
+    size: [1280, 720]
+    kind: skyline_wide
+    horizon: 0.92
+    headline: "{{fund_ownership_share.display}} OF\nEVERYTHING"
+    kicker: "Average stake in the world's listed companies"
+    footer: "NBIM, end of {{fund_ownership_share.year}}"
+    why: The most surprising sourced fact; the wording says 'average stake', not ownership of everything.
+
+metadata:
+  titles:
+    - "Why Norway Is So Rich — The Secret Behind Its Oil Fortune"
+    - "How Norway Turned Oil Into a 22 Trillion Kroner Fortune"
+    - "Norway's Oil Fund Explained: Why Norway Is So Rich"
+  description_intro: >-
+    Norway found oil in 1969 - but plenty of countries have oil. What made Norway different is what it decided
+    to do with it: own it, tax it, save it abroad, and spend only the expected return. The North Sea discovery,
+    Statoil and the 78% petroleum tax, the Government Pension Fund Global and how it invests, the fiscal rule,
+    Norway's productivity and social model - and the risks ahead. Every figure is sourced below.
+  tags: [Norway, Norway economy, why is Norway rich, Norway oil fund, Government Pension Fund Global, NBIM,
+         sovereign wealth fund, North Sea oil, Ekofisk, Equinor, fiscal rule, economics documentary, The Hidden Economics]
+  hashtags: ["#economics", "#norway", "#documentary"]
+
+# YouTube thumbnail candidates rendered with Remotion (tools/render_remotion_thumbnails.py): a frozen frame of
+# a storyboard scene + a headline. Numbers come from the dossier.
+remotion_thumbnails:
+  - id: "01"
+    scene: n01_hook
+    at: 6.0
+    params: {platform_x: 0.7, mode: dawn}
+    headline: ["{{fund_value_q3_2026.display}}", "FROM OIL"]
+    accent_line: 0
+    kicker: "Norway's oil fund"
+    footer: "NBIM · value on {{fund_value_q3_2026.date_display}}"
+    why: The film's headline number over the animated North Sea platform.
+  - id: "02"
+    scene: n20_exports
+    at: 12.0
+    params:
+      views: [{lon: 4.5, lat: 58.5, span: 30}]
+      anchor_x: 0.42
+      markers: [{lon: 3.21, lat: 56.55, label: Ekofisk, at: 0.0, size: 34}]
+    headline: ["THE OIL", "SECRET"]
+    accent_line: 1
+    kicker: "Why Norway is so rich"
+    why: Norway in gold with its North Sea export routes and Ekofisk; the film explains the 'secret' (rules, not luck).
+  - id: "03"
+    scene: n03_stake
+    at: 9.0
+    headline: ["{{fund_ownership_share.display}} OF EVERY", "LISTED COMPANY"]
+    accent_line: 0
+    kicker: "On average · Norway's fund"
+    footer: "NBIM, end of {{fund_ownership_share.year}}"
+    why: The most surprising sourced fact; 'on average' keeps it accurate.

@@ -15,6 +15,20 @@ assets:
     homepage: https://www.naturalearthdata.com/about/terms-of-use/
     license: public-domain
     attribution: "Map data: Natural Earth (public domain)"
+  geo:remotion_europe:
+    path: assets/geo/remotion_europe.json
+    title: Natural Earth 1:10m Admin 0 Countries (Europe/North Atlantic), pre-projected to Web Mercator SVG paths
+    origin: https://github.com/nvkelso/natural-earth-vector/tree/master/geojson
+    homepage: https://www.naturalearthdata.com/about/terms-of-use/
+    license: public-domain
+    attribution: "Map data: Natural Earth (public domain)"
+  geo:remotion_world:
+    path: assets/geo/remotion_world.json
+    title: Natural Earth 1:50m Admin 0 Countries (world), pre-projected to Web Mercator SVG paths
+    origin: https://github.com/nvkelso/natural-earth-vector/tree/master/geojson
+    homepage: https://www.naturalearthdata.com/about/terms-of-use/
+    license: public-domain
+    attribution: "Map data: Natural Earth (public domain)"
   font:inter:
     path: null          # system font; see README for install. Falls back to DejaVu Sans.
     title: Inter typeface by Rasmus Andersson

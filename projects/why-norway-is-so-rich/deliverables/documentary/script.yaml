@@ -1,0 +1,369 @@
+# Documentary (target 10-12 min). Cold open + eight parts + conclusion.
+# Every number comes from the dossier. Segments marked analysis contain the channel's interpretation.
+title: "Why Norway Is So Rich — The Secret Behind Its Oil Fortune"
+logline: >-
+  Norway struck oil in 1969. What made it rich was not the oil itself, but a set of decisions about who owns it,
+  how it is taxed, where the money is kept and how little of it is spent.
+segments:
+  # ---------------------------------------------------------------- cold open
+  - id: open_hook
+    chapter: The fortune
+    narration: >-
+      Somewhere in the North Sea, a platform pumps oil from beneath the seabed. The money it earns ends up in
+      one of the largest investment funds on Earth.
+    claims: [fund_value_q3_2026]
+    analysis: true
+    source_note: '"One of the largest" is supported by the fund value below; no ranking is stated.'
+
+  - id: open_value
+    chapter: The fortune
+    narration: >-
+      Norway's oil fund was worth {{fund_value_q3_2026}} {{fund_value_q3_2026.date_spoken}}. Divide that by every
+      person in the country, and it comes to {{fund_per_person}} each.
+    claims: [fund_value_q3_2026, fund_per_person]
+
+  - id: open_stake
+    chapter: The fortune
+    narration: >-
+      Through that fund, Norway owns on average {{fund_ownership_share}} of every listed company in the world.
+      {{fund_companies|cap}} companies, in {{fund_companies.countries_spoken}} countries.
+    claims: [fund_ownership_share, fund_companies]
+
+  - id: open_question
+    chapter: The fortune
+    narration: >-
+      Plenty of countries have found oil. Few have ended up like this. So what did Norway do differently?
+      This is The Hidden Economics.
+    claims: []
+    analysis: true
+    source_note: Framing question; answered in the parts that follow.
+
+  # ---------------------------------------------------------------- part 1: before oil
+  - id: p1_card
+    chapter: Before the oil
+    narration: ""
+    claims: []
+
+  - id: p1_economy
+    chapter: Before the oil
+    narration: >-
+      Before the oil, Norway lived from the sea and the mountains. Fishing boats worked the coast. By the
+      nineteen-fifties its merchant fleet was described as the {{merchant_fleet_1956}} in the world. And
+      {{hydro_1905}}, Norsk Hydro began turning waterfalls into fertiliser.
+    claims: [merchant_fleet_1956, hydro_1905]
+    source_note: '"Lived from the sea and the mountains" is a summary of fishing, shipping and hydropower-based industry.'
+
+  - id: p1_neighbours
+    chapter: Before the oil
+    narration: >-
+      It was a modest, hard-working economy, but not an especially rich one. In {{maddison_1970.year}}, Norway's
+      income per person was only {{maddison_1970}} of Sweden's, and behind Denmark's too.
+    claims: [maddison_1970]
+
+  # ---------------------------------------------------------------- part 2: discovery
+  - id: p2_card
+    chapter: The discovery
+    narration: ""
+    claims: []
+
+  - id: p2_doubt
+    chapter: The discovery
+    narration: >-
+      Few believed there was oil under Norway's seabed at all. {{geology_1958|cap}}, the national geological
+      survey told the government the chances could be discounted.
+    claims: [geology_1958]
+
+  - id: p2_shelf
+    chapter: The discovery
+    narration: >-
+      Still, Norway claimed its continental shelf. {{shelf_1965|cap}}, it agreed a median line through the North
+      Sea with Britain and Denmark, and handed out its first {{shelf_1965.licences_spoken}} production licences.
+    claims: [shelf_1965]
+
+  - id: p2_ekofisk
+    chapter: The discovery
+    narration: >-
+      The first wells came up dry. Then, {{ekofisk_1969}}, the American company Phillips Petroleum reported a
+      find called Ekofisk. At the time, it was the largest offshore oil field ever discovered.
+    claims: [ekofisk_1969]
+
+  - id: p2_production
+    chapter: The discovery
+    narration: >-
+      Oil started flowing from Ekofisk {{ekofisk_production}}. Norway had become an oil nation almost overnight.
+    claims: [ekofisk_production]
+
+  # ---------------------------------------------------------------- part 3: who owns the oil
+  - id: p3_card
+    chapter: Who owns the oil
+    narration: ""
+    claims: []
+
+  - id: p3_commandments
+    chapter: Who owns the oil
+    narration: >-
+      Norway's first big decision was about control. {{ten_commandments|cap}}, parliament adopted
+      {{ten_commandments.n_spoken}} principles, later called the oil commandments, to keep the resource under
+      national control and the industry serving the country.
+    claims: [ten_commandments]
+
+  - id: p3_statoil
+    chapter: Who owns the oil
+    narration: >-
+      {{statoil_1972|cap}}, it created a state oil company, Statoil, and a regulator, the Petroleum Directorate.
+      {{sdfi_1985|cap}}, the state also began holding direct stakes in oil fields itself. Today the government
+      still owns {{equinor_67}} of Statoil's successor, Equinor.
+    claims: [statoil_1972, sdfi_1985, equinor_67]
+
+  - id: p3_tax
+    chapter: Who owns the oil
+    narration: >-
+      The second decision was tax. Oil companies pay the normal {{petroleum_tax.ordinary_spoken}} company tax,
+      plus a special petroleum tax of {{petroleum_tax.special_spoken}}. Together, the state takes
+      {{petroleum_tax}} of the profit at the margin.
+    claims: [petroleum_tax]
+
+  - id: p3_streams
+    chapter: Who owns the oil
+    narration: >-
+      So the oil pays the state three ways: taxes on company profits, its own share of the fields, and dividends
+      from Equinor.
+    claims: [cashflow_series, equinor_67]
+    source_note: Three components of the net cash flow as reported by Statistics Norway (taxes, SDFI, Equinor dividend).
+
+  # ---------------------------------------------------------------- part 4: the money machine
+  - id: p4_card
+    chapter: The money machine
+    narration: ""
+    claims: []
+
+  - id: p4_cashflow
+    chapter: The money machine
+    narration: >-
+      Those streams are enormous. In {{cashflow_2022.year}}, when energy prices spiked, the state's net cash
+      flow from petroleum hit a record {{cashflow_2022}}. Even in a calmer year like last year, it was
+      {{cashflow_2022.y2025_spoken}}.
+    claims: [cashflow_2022, cashflow_series]
+    source_note: '"Last year" = 2025 (film produced in November 2026).'
+
+  - id: p4_exports
+    chapter: The money machine
+    narration: >-
+      Oil and gas made up {{petroleum_exports_share}} of the value of everything Norway exported in
+      {{petroleum_exports_share.year}}. And through about {{gas_share_europe.km_spoken}} of pipelines, Norway's
+      gas now covers {{gas_share_europe}} of all the gas used in the European Union and Britain.
+    claims: [petroleum_exports_share, gas_share_europe]
+
+  - id: p4_problem
+    chapter: The money machine
+    narration: >-
+      That much money arriving that fast is dangerous. Spend it all at home, and wages and prices surge, the
+      currency soars, and every other industry struggles to compete. Economists call it the resource curse.
+    claims: []
+    analysis: true
+    source_note: Standard economics (Dutch disease / resource curse); no statistic stated.
+
+  # ---------------------------------------------------------------- part 5: the fund
+  - id: p5_card
+    chapter: The fund
+    narration: ""
+    claims: []
+
+  - id: p5_law
+    chapter: The fund
+    narration: >-
+      Norway's answer was to park the money abroad. {{fund_law_1990|cap}}, parliament created a petroleum fund.
+      {{first_transfer_1996.date_spoken}}, the first {{first_transfer_1996}} went in.
+    claims: [fund_law_1990, first_transfer_1996]
+
+  - id: p5_governance
+    chapter: The fund
+    narration: >-
+      Parliament sets the rules. The finance ministry owns the fund on the people's behalf. And the central
+      bank's investment arm, created {{nbim_1998}}, manages it. One rule matters most: the fund is not allowed to
+      invest in Norway at all.
+    claims: [governance, nbim_1998, no_norway_investment]
+
+  - id: p5_growth
+    chapter: The fund
+    narration: >-
+      Then the money compounded. Here is the value of the fund at the end of each year, in billions of kroner.
+      The line barely moves in the beginning, then it climbs, and climbs, past twenty thousand billion.
+    claims: [fund_value_series]
+
+  - id: p5_returns
+    chapter: The fund
+    narration: >-
+      Here is the surprising part. According to the fund's manager, the oil money paid in accounts for
+      {{deposits_less_than_half}} of its value today. The rest has been earned by the investments themselves.
+    claims: [deposits_less_than_half]
+
+  # ---------------------------------------------------------------- part 6: how it invests
+  - id: p6_card
+    chapter: How the fund invests
+    narration: ""
+    claims: []
+
+  - id: p6_allocation
+    chapter: How the fund invests
+    narration: >-
+      Most of the money, {{allocation_q3_2026.equity_spoken}}, is in shares. Around a quarter is in bonds. A small
+      slice is in property and in renewable energy infrastructure.
+    claims: [allocation_q3_2026]
+    source_note: '"Around a quarter" = 25.8% fixed income (allocation_q3_2026).'
+
+  - id: p6_world
+    chapter: How the fund invests
+    narration: >-
+      And it is spread across the planet. The biggest share, {{us_share}}, is invested in the United States.
+      Its largest single holdings are {{top_holdings}}.
+    claims: [us_share, top_holdings, fund_companies]
+
+  - id: p6_returns
+    chapter: How the fund invests
+    narration: >-
+      Since it began buying shares, the fund has returned an average of {{returns_since_1998}}, or
+      {{returns_since_1998.real_spoken}} after inflation and costs. But it is not a smooth ride: it lost
+      {{bad_years}} in the financial crisis, and {{bad_years.y2022_spoken}} in {{bad_years.y2022_year}}.
+    claims: [returns_since_1998, bad_years]
+    source_note: '2008 = -23.3% (NBIM history); 2022 = -14.1% (annual report 2025).'
+
+  # ---------------------------------------------------------------- part 7: the fiscal rule
+  - id: p7_card
+    chapter: The fiscal rule
+    narration: ""
+    claims: []
+
+  - id: p7_rule
+    chapter: The fiscal rule
+    narration: >-
+      The real secret is a rule about spending. Since {{fiscal_rule.start_year}}, the government may only take out,
+      over time, what the fund is expected to earn after inflation. That was set at
+      {{fiscal_rule.old_spoken}}, and cut to {{fiscal_rule}} in {{fiscal_rule.cut_year}}.
+    claims: [fiscal_rule]
+
+  - id: p7_budget
+    chapter: The fiscal rule
+    narration: >-
+      In the budget for this year, the government planned to use {{budget_2026_deficit}} of oil money, about
+      {{budget_2026_deficit.pct_fund_spoken}} of the fund. The IMF estimates that money from the fund now pays for
+      {{budget_share}} of all public spending.
+    claims: [budget_2026_deficit, budget_share]
+    source_note: '"This year" = budget year 2026 (film produced in November 2026). IMF 2026 vs NBIM (almost 20%) differ; IMF used.'
+
+  - id: p7_why
+    chapter: The fiscal rule
+    narration: >-
+      Spending only the return means the capital is never used up. The oil is converted into shares, bonds and
+      buildings around the world, and Norwegians who are not yet born will share in it too.
+    claims: [fiscal_rule]
+    analysis: true
+    source_note: Interpretation of the rule's purpose; consistent with the Ministry's framework description.
+
+  - id: p7_insulate
+    chapter: The fiscal rule
+    narration: >-
+      It also protects the economy at home. Because spending is tied to the fund, not to this year's oil price,
+      the IMF concluded that the rule and the fund would largely insulate Norway from a fall in oil revenue.
+    claims: [imf_insulate]
+
+  # ---------------------------------------------------------------- part 8: the model
+  - id: p8_card
+    chapter: Beyond oil
+    narration: ""
+    claims: []
+
+  - id: p8_mainland
+    chapter: Beyond oil
+    narration: >-
+      Oil is still big, but it is not the whole story. In {{mainland_share.year}}, about four-fifths of Norway's
+      output came from the mainland economy: the industries, services and public sector outside oil, gas and
+      shipping.
+    claims: [mainland_share]
+
+  - id: p8_model
+    chapter: Beyond oil
+    narration: >-
+      That economy runs on an unusual model. About half of workers belong to a union. In wage talks, the
+      industries that compete internationally negotiate first, and everyone else follows their lead, so pay
+      keeps in step with what exporters can afford.
+    claims: [union_density, frontfag]
+
+  - id: p8_trust
+    chapter: Beyond oil
+    narration: >-
+      Income is spread evenly, and trust is high. In the latest OECD survey, {{trust_2025}} of Norwegians said
+      they trusted their national government, against {{trust_2025.oecd_spoken}} across the OECD. Trust makes
+      long-term rules, like the fund's, easier to keep.
+    claims: [trust_2025, gini_2024]
+    source_note: '"Trust makes long-term rules easier to keep" is the channel''s interpretation.'
+    analysis: true
+
+  - id: p8_productivity
+    chapter: Beyond oil
+    narration: >-
+      But there is a warning sign. The OECD says Norway's productivity growth is now {{oecd_productivity}}, and
+      its lead in living standards over other rich countries has narrowed, from about
+      {{oecd_productivity.from_display}} to {{oecd_productivity.to_display}} in fifteen years.
+    claims: [oecd_productivity]
+
+  # ---------------------------------------------------------------- part 9: the risks
+  - id: p9_card
+    chapter: The risks
+    narration: ""
+    claims: []
+
+  - id: p9_volatility
+    chapter: The risks
+    narration: >-
+      The first risk is the oil price. After the summer of twenty fourteen, oil fell to {{oil_crash_2014}} of its
+      level. The krone weakened by about {{oil_crash_2014.krone_spoken}}, and unemployment rose
+      {{unemployment_2014_16}}.
+    claims: [oil_crash_2014, unemployment_2014_16]
+
+  - id: p9_decline
+    chapter: The risks
+    narration: >-
+      The second is time. More than half of Norway's known oil and gas, {{resources_produced}}, has already been
+      produced. Output is forecast to fall by the end of the decade, as the world tries to move away from fossil
+      fuels.
+    claims: [resources_produced, production_forecast]
+
+  - id: p9_ageing
+    chapter: The risks
+    narration: >-
+      The third is age. Today there are {{ageing.now_spoken}} people of working age for every Norwegian over
+      sixty-five. By {{ageing.future_year}}, official projections imply {{ageing.future_spoken}}. Pensions and care
+      will cost more, just as oil money starts to shrink.
+    claims: [ageing]
+
+  - id: p9_markets
+    chapter: The risks
+    narration: >-
+      And the fund itself is exposed to the world's markets. In the manager's own stress test, a fragmented world
+      economy could knock {{stress_test}} off its value.
+    claims: [stress_test]
+
+  # ---------------------------------------------------------------- conclusion
+  - id: p10_card
+    chapter: The real secret
+    narration: ""
+    claims: []
+
+  - id: p10_secret
+    chapter: The real secret
+    narration: >-
+      So why is Norway so rich? Not just because it found oil. Because of what it decided to do next. It kept
+      control of the resource. It taxed it heavily. It saved the money abroad, and it spends only the return.
+    claims: [ten_commandments, petroleum_tax, fiscal_rule]
+    analysis: true
+    source_note: Summary of parts 3-7.
+
+  - id: p10_end
+    chapter: The real secret
+    narration: >-
+      The oil will run out one day. The rules are designed so that the fortune does not. In the IMF's words,
+      Norway faces the future from a position of strength. This is The Hidden Economics.
+    claims: [imf_strength]
+    analysis: true
+    source_note: '"The rules are designed so that the fortune does not [run out]" interprets the spend-the-return rule.'

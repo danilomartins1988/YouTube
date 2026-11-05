@@ -1,0 +1,34 @@
+title: "Why Norway Is So Rich"
+slug: why-norway-is-so-rich
+language: en
+# Episode 04. Animated with the Remotion (React + SVG) engine in remotion/; Python owns research,
+# narration, timing, audio, QC and packaging (hiddeneco/render/remotion_bridge.py).
+renderer: remotion
+remotion_geo: [europe, world]
+style:
+  name: nordic-ledger
+  palette:            # dark navy, white, restrained gold (brief)
+    bg: "#07111F"
+    bg2: "#0E1D33"
+    ink: "#F4F1EA"
+    muted: "#8B98AA"
+    land: "#18283D"
+    border: "#33475F"
+    accent: "#D4AF5A"     # restrained gold
+    accent2: "#9FB7D0"    # cold steel blue, used sparingly for contrast
+  fonts:              # used by the Python thumbnail renderer
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:          # used by Remotion (system Inter, OFL)
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  motifs: [chapter-tags]
+# Editor instruction (2026-11-05): cumulative cap for ALL OpenAI voice work on this episode.
+budget:
+  max_paid_usd: 1.00
+youtube:
+  category: Education
+  default_language: en
+  made_for_kids: false

@@ -1,0 +1,753 @@
+# Storyboard for the Remotion renderer (remotion/src/scenes/*). One scene per script segment.
+# Animation is cue-driven: `cue` phrases are matched against the narration's word timings.
+scenes:
+  # ---------------- cold open
+  - id: n01_hook
+    segment: open_hook
+    type: oil_platform
+    params:
+      no_chrome: true
+      mode: night
+      kicker: The Hidden Economics
+      title: Why Norway Is So Rich
+      title_cue: "Somewhere in"
+      heli_cue: "pumps oil"
+      pipeline: true
+      pipeline_cue: "The money it earns"
+      subtitle: The secret behind its oil fortune
+      subtitle_cue: "investment funds"
+    sfx: [{kind: hit, at: 0.0, gain: 0.3}]
+    sources: []
+    assets: ["font:inter"]
+
+  - id: n02_value
+    segment: open_value
+    type: big_counter
+    params:
+      chapter: "The fortune"
+      cue: "was worth"
+      kicker: "Government Pension Fund Global, {{fund_value_q3_2026.date_display}}"
+      display: "{{fund_value_q3_2026.display}}"
+      label: "Norway's oil fund"
+      sublabel: "{{fund_per_person.display}} per Norwegian (our calculation: fund value ÷ population)"
+    sfx: [{kind: pop, cue: "was worth", offset: 1.6}]
+    sources: [nbim_q3_2026, ssb_population]
+    assets: ["font:inter"]
+
+  - id: n03_stake
+    segment: open_stake
+    type: map
+    params:
+      chapter: "The fortune"
+      geo: world
+      views:
+        - {lon: 10.7, lat: 59.9, span: 40}
+        - {lon: 20, lat: 30, span: 330, cue: "every listed company"}
+      move: 3.0
+      highlights: {NOR: {colour: accent, at: 0.0}}
+      origin: {lon: 10.75, lat: 59.91}
+      arcs:
+        - {lon: -74.0, lat: 40.7, label: New York, cue: "every listed company"}
+        - {lon: -0.1, lat: 51.5, label: London, cue: "every listed company", offset: 0.2}
+        - {lon: 2.35, lat: 48.86, cue: "every listed company", offset: 0.35}
+        - {lon: 8.55, lat: 47.37, cue: "listed company", offset: 0.2}
+        - {lon: 139.7, lat: 35.7, label: Tokyo, cue: "in the world"}
+        - {lon: 121.5, lat: 25.0, cue: "in the world", offset: 0.2}
+        - {lon: 72.9, lat: 19.1, cue: "in the world", offset: 0.4}
+        - {lon: 151.2, lat: -33.9, label: Sydney, cue: "companies"}
+        - {lon: -46.6, lat: -23.5, cue: "companies", offset: 0.2}
+        - {lon: -122.4, lat: 37.8, label: San Francisco, cue: "companies", offset: 0.3}
+        - {lon: 103.8, lat: 1.35, cue: "countries"}
+        - {lon: 18.4, lat: -33.9, cue: "countries", offset: 0.2}
+      callouts:
+        - {label: "Average stake in world's listed companies", value: "{{fund_ownership_share.display}}", cue: "on average"}
+        - {label: "Companies held (end of {{fund_companies.year}})", value: "{{fund_companies.display}}", cue: "companies, in"}
+      callout_x: 1420
+      callout_y: 640
+    sources: [nbim_ar2025, natural_earth]
+    assets: ["geo:remotion_world", "font:inter"]
+
+  - id: n04_question
+    segment: open_question
+    type: kinetic_text
+    params:
+      align: center
+      lines:
+        - {text: "Plenty of countries found oil.", size: 72, cue: "Plenty"}
+        - {text: "Few ended up like this.", size: 72, color: accent, cue: "Few have"}
+        - {text: "What did Norway do differently?", size: 52, style: body, cue: "So what"}
+    sources: []
+    assets: ["font:inter"]
+
+  # ---------------- part 1
+  - id: n05_p1
+    segment: p1_card
+    type: act_title
+    params: {number: Part 1, title: Before the Oil, subtitle: "Fish, ships and waterfalls", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n06_economy
+    segment: p1_economy
+    type: isometric
+    params:
+      chapter: "01 · Before the oil"
+      cols: 8
+      rows: 7
+      water_from_x: 5
+      zoom_start: 1.55
+      zoom_end: 1.75
+      cx: 0.66
+      cy: 0.42
+      kicker: Norway before petroleum
+      title: Sea and mountains
+      objects:
+        - {kind: boat, x: 5, y: 1, cue: "Fishing boats"}
+        - {kind: boat, x: 6, y: 3, cue: "Fishing boats", offset: 0.3}
+        - {kind: boat, x: 5, y: 5, cue: "the coast"}
+        - {kind: ship, x: 6, y: 5, speed: 14, cue: "merchant fleet", label: "Merchant fleet"}
+        - {kind: house, x: 3, y: 1, cue: "lived from"}
+        - {kind: house, x: 4, y: 2, cue: "lived from", offset: 0.2}
+        - {kind: house, x: 3, y: 4, cue: "the mountains"}
+        - {kind: dam, x: 0, y: 2, cue: "waterfalls", label: "Hydropower"}
+        - {kind: factory, x: 1, y: 4, cue: "fertiliser", label: "Norsk Hydro"}
+      notes:
+        - {text: "Fishing along the coast", cue: "Fishing boats"}
+        - {text: "Merchant fleet: {{merchant_fleet_1956.display}} in the world (1950s)", cue: "merchant fleet"}
+        - {text: "Hydropower industry since {{hydro_1905.display}}", cue: "Norsk Hydro", colour: accent}
+    sources: [usni_merchant_1956, hydro_history]
+    assets: ["font:inter"]
+
+  - id: n07_neighbours
+    segment: p1_neighbours
+    type: bar_chart
+    params:
+      chapter: "01 · Before the oil"
+      title: "Income per person, {{maddison_1970.year}}"
+      subtitle: "GDP per capita, 2011 international dollars (Maddison Project)"
+      data: "{{maddison_1970.value}}"
+      highlight: NOR
+      reference: SWE
+      value_prefix: "$"
+      callout: "Norway: {{maddison_1970.display}} of Sweden"
+      callout_cue: "of Sweden"
+    sources: [maddison_owid]
+    assets: ["font:inter"]
+
+  # ---------------- part 2
+  - id: n08_p2
+    segment: p2_card
+    type: act_title
+    params: {number: Part 2, title: The Discovery, subtitle: "The North Sea, 1960s", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n09_doubt
+    segment: p2_doubt
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "{{geology_1958.display}}", size: 140, color: accent, cue: "Few believed"}
+        - {text: "Oil on Norway's shelf?", size: 64, cue: "under Norway's"}
+        - {text: "\"could be discounted\"", size: 64, style: body, cue: "could be discounted"}
+        - {text: "Geological Survey of Norway", size: 36, style: body, color: muted, cue: "geological"}
+    sources: [np_history]
+    assets: ["font:inter"]
+
+  - id: n10_shelf
+    segment: p2_shelf
+    type: map
+    params:
+      chapter: "02 · The discovery"
+      geo: europe
+      views:
+        - {lon: 10, lat: 61, span: 34}
+        - {lon: 3.0, lat: 58.0, span: 18, cue: "median line"}
+      highlights:
+        NOR: {colour: accent, cue: "claimed"}
+        GBR: {colour: accent2, cue: "Britain", strength: 0.55}
+        DNK: {colour: accent2, cue: "Denmark", strength: 0.55}
+      routes:
+        - {points: [[1.6, 62.0], [1.8, 60.0], [2.2, 58.5], [3.0, 57.3], [3.8, 56.5], [4.3, 56.0]], dashed: true, colour: ink, width: 4,
+           label: "Median line (approx.)", cue: "median line", seconds: 1.6}
+      labels:
+        - {lon: 2.5, lat: 59.4, text: North Sea, size: 30, cue: "continental shelf"}
+      callouts:
+        - {label: "Shelf boundaries agreed", value: "{{shelf_1965.display}}", cue: "it agreed"}
+        - {label: "First production licences", value: "{{shelf_1965.licences_display}}", cue: "production licences"}
+      callout_x: 1380
+    sources: [np_history, natural_earth]
+    assets: ["geo:remotion_europe", "font:inter"]
+
+  - id: n11_ekofisk
+    segment: p2_ekofisk
+    type: map
+    params:
+      chapter: "02 · The discovery"
+      geo: europe
+      views:
+        - {lon: 3.0, lat: 58.0, span: 18}
+        - {lon: 4.8, lat: 57.6, span: 11, cue: "Ekofisk"}
+      highlights: {NOR: {colour: accent, at: 0.0, strength: 0.6}}
+      markers:
+        - {lon: 3.21, lat: 56.55, label: Ekofisk, sublabel: "Phillips Petroleum", cue: "a find called"}
+      labels:
+        - {lon: 1.2, lat: 57.9, text: "dry well", size: 20, colour: muted, cue: "came up dry"}
+        - {lon: 2.4, lat: 58.6, text: "dry well", size: 20, colour: muted, cue: "came up dry", offset: 0.3}
+        - {lon: 4.6, lat: 57.4, text: "dry well", size: 20, colour: muted, cue: "came up dry", offset: 0.6}
+      callouts:
+        - {label: "Discovery reported", value: "{{ekofisk_1969.display}}", cue: "reported"}
+        - {label: "Largest offshore field found to date", cue: "largest offshore", accent: true}
+      callout_x: 1240
+    sfx: [{kind: pop, cue: "a find called", offset: 0.2}]
+    sources: [np_history, ekofisk_museum, natural_earth]
+    assets: ["geo:remotion_europe", "font:inter"]
+
+  - id: n12_production
+    segment: p2_production
+    type: oil_platform
+    params:
+      mode: dawn
+      kicker: Ekofisk
+      title: First oil
+      value: "{{ekofisk_production.display}}"
+      value_cue: "Oil started flowing"
+      subtitle: "Norway becomes an oil nation"
+      subtitle_cue: "oil nation"
+      pipeline: true
+      pipeline_cue: "Oil started"
+      heli_cue: "overnight"
+    sources: [np_history]
+    assets: ["font:inter"]
+
+  # ---------------- part 3
+  - id: n13_p3
+    segment: p3_card
+    type: act_title
+    params: {number: Part 3, title: Who Owns the Oil, subtitle: "Control first, then tax", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n14_commandments
+    segment: p3_commandments
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "{{ten_commandments.display}} · Parliament", size: 44, style: body, color: muted, cue: "parliament adopted"}
+        - {text: "The 10 oil commandments", size: 88, color: accent, cue: "principles"}
+        - {text: "National control of the resource", size: 56, cue: "national control"}
+        - {text: "An industry that serves the country", size: 56, cue: "serving the country"}
+    sources: [storting_oljebud]
+    assets: ["font:inter"]
+
+  - id: n15_statoil
+    segment: p3_statoil
+    type: timeline
+    params:
+      chapter: "03 · Who owns the oil"
+      title: Building state ownership
+      start_year: 1965
+      end_year: 2025
+      tick_every: 10
+      items:
+        - {year: "{{statoil_1972.value}}", label: "Statoil + Petroleum Directorate", cue: "state oil company"}
+        - {year: "{{sdfi_1985.value}}", label: "State takes direct field stakes", cue: "direct stakes"}
+        - {year: 2018, display: "{{equinor_67.display}}", label: "State share of Equinor today", cue: "still owns"}
+    sources: [sodir_50, np_history, np_state_org]
+    assets: ["font:inter"]
+
+  - id: n16_tax
+    segment: p3_tax
+    type: compare
+    params:
+      chapter: "03 · Who owns the oil"
+      title: Tax on oil company profits, at the margin
+      sides:
+        - {kicker: Company tax, value: "{{petroleum_tax.ordinary_display}}", label: "the normal rate", bar: 22, cue: "the normal"}
+        - {kicker: Special petroleum tax, value: "{{petroleum_tax.special_display}}", label: "of the remaining base", bar: 56, cue: "special petroleum"}
+        - {kicker: Combined, value: "{{petroleum_tax.display}}", label: "taken by the state", bar: 78, cue: "Together"}
+    sources: [np_revenues, np_tax]
+    assets: ["font:inter"]
+
+  - id: n17_streams
+    segment: p3_streams
+    type: fund_flow
+    params:
+      chapter: "03 · Who owns the oil"
+      title: Three ways the oil pays the state
+      nodes:
+        - {id: oil, shape: platform, x: 330, y: 560, label: Oil & gas fields, size: 1.6, at: 0.0}
+        - {id: tax, shape: box, x: 960, y: 330, label: Taxes, sublabel: on company profits, cue: "taxes"}
+        - {id: sdfi, shape: box, x: 960, y: 580, label: State's own share, sublabel: of the fields (SDFI), cue: "its own share"}
+        - {id: div, shape: box, x: 960, y: 830, label: Dividends, sublabel: "Equinor ({{equinor_67.display}} state-owned)", cue: "dividends"}
+        - {id: state, shape: state, x: 1560, y: 560, label: The state, size: 1.4, cue: "pays the state"}
+      links:
+        - {from: oil, to: tax, cue: "taxes", bend: 0.3}
+        - {from: oil, to: sdfi, cue: "its own share"}
+        - {from: oil, to: div, cue: "dividends", bend: -0.3}
+        - {from: tax, to: state, cue: "dividends", offset: 0.4, bend: -0.2}
+        - {from: sdfi, to: state, cue: "dividends", offset: 0.6}
+        - {from: div, to: state, cue: "dividends", offset: 0.8, bend: 0.2}
+    sources: [ssb_cashflow, np_state_org]
+    assets: ["font:inter"]
+
+  # ---------------- part 4
+  - id: n18_p4
+    segment: p4_card
+    type: act_title
+    params: {number: Part 4, title: The Money Machine, subtitle: "And its danger", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n19_cashflow
+    segment: p4_cashflow
+    type: bar_chart
+    params:
+      chapter: "04 · The money machine"
+      title: "State's net cash flow from petroleum"
+      subtitle: NOK billion per year (Statistics Norway)
+      data: "{{cashflow_series.value}}"
+      sort: false
+      highlight: y2022
+      reference: y2025
+      value_prefix: "NOK "
+      value_suffix: "bn"
+      cue: "Those streams"
+      callout: "Record: {{cashflow_2022.display}} in {{cashflow_2022.year}}"
+      callout_cue: "hit a record"
+    sources: [ssb_cashflow]
+    assets: ["font:inter"]
+
+  - id: n20_exports
+    segment: p4_exports
+    type: map
+    params:
+      chapter: "04 · The money machine"
+      geo: europe
+      views:
+        - {lon: 6, lat: 58, span: 16}
+        - {lon: 6, lat: 55.5, span: 26, cue: "pipelines"}
+      highlights: {NOR: {colour: accent, at: 0.0, strength: 0.7}}
+      routes:
+        - {points: [[5.0, 60.0], [2.5, 58.5], [1.5, 56.0], [0.1, 53.65]], label: UK, anchor: end, cue: "pipelines", seconds: 1.6}
+        - {points: [[5.6, 59.0], [4.5, 57.0], [6.0, 55.0], [7.2, 53.5]], label: Germany, cue: "pipelines", offset: 0.3, seconds: 1.6}
+        - {points: [[5.0, 59.2], [3.6, 56.5], [3.0, 53.5], [3.2, 51.33]], label: Belgium, cue: "pipelines", offset: 0.6, seconds: 1.6}
+        - {points: [[5.0, 59.3], [3.2, 56.0], [2.3, 53.0], [2.3, 51.05]], label: France, anchor: end, cue: "gas now covers", seconds: 1.6}
+        - {points: [[5.6, 59.0], [7.5, 56.5], [9.5, 55.4], [12.5, 55.0], [14.6, 54.1]], label: Poland, cue: "European Union", seconds: 1.8}
+      labels:
+        - {lon: 2.0, lat: 50.2, text: "Main gas export routes (illustrative)", size: 20, colour: muted, cue: "pipelines"}
+      callouts:
+        - {label: "Oil & gas share of goods exports, {{petroleum_exports_share.year}}", value: "{{petroleum_exports_share.display}}", cue: "made up"}
+        - {label: "Of EU + UK gas consumption", value: "{{gas_share_europe.display}}", cue: "gas now covers"}
+      callout_x: 1380
+    sources: [np_front, np_exports, natural_earth]
+    assets: ["geo:remotion_europe", "font:inter"]
+
+  - id: n21_problem
+    segment: p4_problem
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Spend it all at home, and…", size: 60, style: body, color: muted, cue: "Spend it all"}
+        - {text: "Wages and prices surge", size: 72, cue: "wages and prices"}
+        - {text: "The currency soars", size: 72, cue: "currency soars"}
+        - {text: "Other industries struggle", size: 72, cue: "every other industry"}
+        - {text: "The resource curse", size: 96, color: accent, cue: "resource curse"}
+    sources: []
+    assets: ["font:inter"]
+
+  # ---------------- part 5
+  - id: n22_p5
+    segment: p5_card
+    type: act_title
+    params: {number: Part 5, title: The Fund, subtitle: "Park the money abroad", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n23_law
+    segment: p5_law
+    type: timeline
+    params:
+      chapter: "05 · The fund"
+      title: From law to first krone
+      start_year: 1985
+      end_year: 2010
+      tick_every: 5
+      items:
+        - {year: "{{fund_law_1990.value}}", label: "Petroleum Fund law", cue: "parliament created"}
+        - {year: "{{first_transfer_1996.year}}", display: "{{first_transfer_1996.year}}", label: "First transfer: {{first_transfer_1996.display}}", cue: "went in"}
+    sources: [nbim_history, nbim_25yrs]
+    assets: ["font:inter"]
+
+  - id: n24_governance
+    segment: p5_governance
+    type: fund_flow
+    params:
+      chapter: "05 · The fund"
+      title: Who runs the fund
+      nodes:
+        - {id: parl, shape: state, x: 300, y: 520, label: Parliament, sublabel: sets the rules, cue: "Parliament sets"}
+        - {id: mof, shape: box, x: 760, y: 520, label: Ministry of Finance, sublabel: owner on the people's behalf, cue: "finance ministry"}
+        - {id: nbim, shape: vault, x: 1220, y: 520, label: Norges Bank (NBIM), sublabel: "manages it, since {{nbim_1998.display}}", cue: "investment arm"}
+        - {id: world, shape: globe, x: 1640, y: 520, label: World markets, sublabel: "Not allowed: Norway", sub_colour: accent, cue: "not allowed"}
+      links:
+        - {from: parl, to: mof, cue: "finance ministry"}
+        - {from: mof, to: nbim, cue: "manages it"}
+        - {from: nbim, to: world, cue: "not allowed"}
+      caption: "The fund may not invest in Norway"
+      caption_cue: "not allowed to invest"
+    sources: [nbim_about, nbim_history, nbim_ar2025]
+    assets: ["font:inter"]
+
+  - id: n25_growth
+    segment: p5_growth
+    type: line_chart
+    params:
+      chapter: "05 · The fund"
+      title: "Value of the fund, end of year"
+      subtitle: NOK billion (NBIM)
+      series: "{{fund_value_series.value}}"
+      highlight: GPFG
+      cue: "Here is the value"
+      draw_seconds: 9
+      y_max: 24000
+      y_steps: 4
+      axis_prefix: ""
+      axis_suffix: ""
+      value_prefix: "NOK "
+      value_suffix: "bn"
+      year_every: 5
+      events:
+        - {year: 2008, label: "Financial crisis", cue: "barely moves"}
+        - {year: 2019, label: "Passes NOK 10,000bn", cue: "and climbs"}
+    sources: [nbim_history, nbim_2025_results]
+    assets: ["font:inter"]
+
+  - id: n26_returns
+    segment: p5_returns
+    type: compare
+    params:
+      chapter: "05 · The fund"
+      title: Where the fund's value came from
+      sides:
+        - {kicker: Oil money paid in, value: "< 1/2", label: "of today's value", bar: 45, cue: "oil money paid in"}
+        - {kicker: Investment returns, value: "The rest", label: "earned by the investments", bar: 55, cue: "The rest"}
+    sources: [nbim_about]
+    assets: ["font:inter"]
+
+  # ---------------- part 6
+  - id: n27_p6
+    segment: p6_card
+    type: act_title
+    params: {number: Part 6, title: How the Fund Invests, subtitle: "A slice of the world economy", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n28_allocation
+    segment: p6_allocation
+    type: donut
+    params:
+      chapter: "06 · How the fund invests"
+      title: What the fund owns
+      subtitle: "Allocation at 30 September 2026 (NBIM)"
+      segments: "{{allocation_q3_2026.value}}"
+      center: GPFG
+      cue: "Most of the money"
+    sources: [nbim_q3_2026]
+    assets: ["font:inter"]
+
+  - id: n29_world
+    segment: p6_world
+    type: map
+    params:
+      chapter: "06 · How the fund invests"
+      geo: world
+      views:
+        - {lon: 10, lat: 35, span: 300}
+      highlights:
+        USA: {colour: accent, cue: "United States"}
+        NOR: {colour: accent2, at: 0.0, strength: 0.6}
+      origin: {lon: 10.75, lat: 59.91}
+      arcs:
+        - {lon: -77.0, lat: 39.0, label: United States, value: "{{us_share.display}}", r: 40, cue: "United States"}
+        - {lon: 2.35, lat: 48.86, cue: "spread across", offset: 0.1}
+        - {lon: -0.1, lat: 51.5, cue: "spread across", offset: 0.3}
+        - {lon: 139.7, lat: 35.7, cue: "the planet"}
+        - {lon: 114.2, lat: 22.3, cue: "the planet", offset: 0.2}
+        - {lon: 77.2, lat: 28.6, cue: "the planet", offset: 0.4}
+      callouts:
+        - {label: "Largest holdings, {{top_holdings.date_display}}", value: "{{top_holdings.display}}", cue: "largest single"}
+      callout_x: 120
+      callout_y: 820
+    sources: [nbim_ar2025, nbim_home, natural_earth]
+    assets: ["geo:remotion_world", "font:inter"]
+
+  - id: n30_returns
+    segment: p6_returns
+    type: compare
+    params:
+      chapter: "06 · How the fund invests"
+      title: Returns, 1998-2025
+      sides:
+        - {kicker: Average per year, value: "{{returns_since_1998.display}}", label: "{{returns_since_1998.real_display}} after inflation & costs", bar: 6.6, cue: "average of"}
+        - {kicker: "2008", value: "{{bad_years.display}}", label: financial crisis, bar: 23.3, cue: "financial crisis"}
+        - {kicker: "2022", value: "{{bad_years.y2022_display}}", label: "a bad year", bar: 14.1, cue: "twenty twenty-two"}
+    sources: [nbim_ar2025, nbim_history]
+    assets: ["font:inter"]
+
+  # ---------------- part 7
+  - id: n31_p7
+    segment: p7_card
+    type: act_title
+    params: {number: Part 7, title: The Fiscal Rule, subtitle: "Spend the return, not the capital", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n32_rule
+    segment: p7_rule
+    type: fund_flow
+    params:
+      chapter: "07 · The fiscal rule"
+      title: The spending rule
+      nodes:
+        - {id: oil, shape: platform, x: 300, y: 560, label: Oil revenue, size: 1.4, at: 0.0}
+        - {id: fund, shape: vault, x: 900, y: 560, label: The fund, size: 1.4, at: 0.05}
+        - {id: budget, shape: budget, x: 1560, y: 560, label: State budget, size: 1.3, cue: "take out"}
+      links:
+        - {from: oil, to: fund, at: 0.05, coins: 7}
+        - {from: fund, to: budget, cue: "take out", coins: 2, label: "{{fiscal_rule.old_display}} → {{fiscal_rule.display}} expected real return", label_dy: -40, colour: ink}
+      caption: "Only the expected return: {{fiscal_rule.display}} since {{fiscal_rule.cut_year}}"
+      caption_cue: "cut to"
+    sources: [mof_framework]
+    assets: ["font:inter"]
+
+  - id: n33_budget
+    segment: p7_budget
+    type: big_counter
+    params:
+      chapter: "07 · The fiscal rule"
+      cue: "planned to use"
+      kicker: "Oil money in the 2026 budget"
+      display: "{{budget_2026_deficit.display}}"
+      label: "= {{budget_2026_deficit.pct_fund_display}} of the fund"
+      sublabel: "The fund finances {{budget_share.display}} of the state budget (NBIM)"
+    sources: [mof_budget_2026, nbim_about]
+    assets: ["font:inter"]
+
+  - id: n34_why
+    segment: p7_why
+    type: isometric
+    params:
+      chapter: "07 · The fiscal rule"
+      cols: 8
+      rows: 7
+      water_from_x: 6
+      zoom_start: 1.55
+      zoom_end: 1.78
+      cx: 0.74
+      cy: 0.44
+      kicker: The oil, converted
+      title: Shares, bonds, buildings
+      objects:
+        - {kind: coin, x: 1, y: 1, n: 7, cue: "the capital"}
+        - {kind: tower, x: 3, y: 1, h: 190, cue: "shares", label: "Shares"}
+        - {kind: tower, x: 4, y: 2, h: 140, cue: "shares", offset: 0.3}
+        - {kind: factory, x: 2, y: 4, cue: "bonds", label: "Bonds"}
+        - {kind: tower, x: 4, y: 4, h: 220, colour: accent, cue: "buildings", label: "Real estate"}
+        - {kind: turbine, x: 0, y: 5, cue: "around the world"}
+        - {kind: turbine, x: 1, y: 6, cue: "around the world", offset: 0.3}
+        - {kind: ship, x: 6, y: 4, speed: 16, cue: "not yet born"}
+      notes:
+        - {text: "Spend only the return", cue: "Spending only"}
+        - {text: "Keep the capital for future generations", cue: "not yet born", colour: accent}
+    sources: [mof_framework]
+    assets: ["font:inter"]
+
+  - id: n35_insulate
+    segment: p7_insulate
+    type: line_chart
+    params:
+      chapter: "07 · The fiscal rule"
+      title: "Spending follows the fund, not the oil price"
+      subtitle: "Illustration of the principle: fund value (NBIM), NOK billion"
+      series: "{{fund_value_series.value}}"
+      highlight: GPFG
+      cue: "protects the economy"
+      draw_seconds: 5
+      y_max: 24000
+      y_steps: 4
+      axis_prefix: ""
+      axis_suffix: ""
+      value_prefix: "NOK "
+      value_suffix: "bn"
+      year_every: 5
+      events:
+        - {year: 2014, label: "Oil price falls", cue: "fall in oil revenue"}
+    sources: [imf_2014, nbim_history]
+    assets: ["font:inter"]
+
+  # ---------------- part 8
+  - id: n36_p8
+    segment: p8_card
+    type: act_title
+    params: {number: Part 8, title: Beyond Oil, subtitle: "The Norwegian model", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n37_mainland
+    segment: p8_mainland
+    type: donut
+    params:
+      chapter: "08 · Beyond oil"
+      title: "Where Norway's output came from, {{mainland_share.year}}"
+      subtitle: "Share of GDP (our calculation from Statistics Norway table 09189)"
+      segments:
+        - {label: Mainland economy, value: 79.8}
+        - {label: "Petroleum & ocean transport", value: 20.2}
+      center: GDP
+      cue: "about four-fifths"
+    sources: [ssb_09189]
+    assets: ["font:inter"]
+
+  - id: n38_model
+    segment: p8_model
+    type: fund_flow
+    params:
+      chapter: "08 · Beyond oil"
+      title: How wages are set
+      nodes:
+        - {id: exp, shape: box, x: 420, y: 560, label: Export industries, sublabel: negotiate first, cue: "compete internationally"}
+        - {id: norm, shape: budget, x: 960, y: 560, label: Wage norm, sublabel: what exporters can afford, cue: "lead"}
+        - {id: rest, shape: state, x: 1500, y: 560, label: Everyone else, sublabel: follows, cue: "everyone else"}
+      links:
+        - {from: exp, to: norm, cue: "negotiate first"}
+        - {from: norm, to: rest, cue: "everyone else"}
+      caption: "Union density {{union_density.display}} ({{union_density.year}})"
+      caption_cue: "belong to a union"
+    sources: [fafo_2025, ssb_frontfag]
+    assets: ["font:inter"]
+
+  - id: n39_trust
+    segment: p8_trust
+    type: compare
+    params:
+      chapter: "08 · Beyond oil"
+      title: "Trust in national government, {{trust_2025.year}}"
+      sides:
+        - {kicker: OECD average, value: "{{trust_2025.oecd_display}}", label: high or moderately high, bar: 40, cue: "across the OECD"}
+        - {kicker: Norway, value: "{{trust_2025.display}}", label: high or moderately high, bar: 57, cue: "Norwegians said"}
+    sources: [oecd_trust_2026, ssb_gini]
+    assets: ["font:inter"]
+
+  - id: n40_productivity
+    segment: p8_productivity
+    type: compare
+    params:
+      chapter: "08 · Beyond oil"
+      title: "Norway's living-standards lead over the richer half of the OECD"
+      sides:
+        - {kicker: 15 years earlier, value: "{{oecd_productivity.from_display}}", label: ahead, bar: 42, cue: "from about"}
+        - {kicker: Recently, value: "{{oecd_productivity.to_display}}", label: ahead, bar: 27, cue: "fifteen years"}
+    sources: [oecd_blog_2024]
+    assets: ["font:inter"]
+
+  # ---------------- part 9
+  - id: n41_p9
+    segment: p9_card
+    type: act_title
+    params: {number: Part 9, title: The Risks, subtitle: "Prices, time, age and markets", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n42_volatility
+    segment: p9_volatility
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Oil price after mid-2014", size: 44, style: body, color: muted, cue: "After the summer"}
+        - {text: "Fell to a third", size: 96, color: accent, cue: "oil fell"}
+        - {text: "Krone {{oil_crash_2014.krone_display}}", size: 64, cue: "krone weakened"}
+        - {text: "Unemployment {{unemployment_2014_16.display}}", size: 64, cue: "unemployment rose"}
+    sources: [nb_papers_2016, ssb_08517]
+    assets: ["font:inter"]
+
+  - id: n43_decline
+    segment: p9_decline
+    type: bar_chart
+    params:
+      chapter: "09 · The risks"
+      title: Norwegian petroleum production
+      subtitle: "Million Sm³ oil equivalents (Offshore Directorate; 2030 is a forecast)"
+      data: "{{production_forecast.value}}"
+      sort: false
+      highlight: y2030
+      reference: y2004
+      value_prefix: ""
+      value_suffix: "m"
+      value_decimals: 1
+      cue: "Output is forecast"
+      callout: "{{resources_produced.display}} of known resources already produced"
+      callout_cue: "already been"
+    sources: [np_resources, np_forecast]
+    assets: ["font:inter"]
+
+  - id: n44_ageing
+    segment: p9_ageing
+    type: people_ratio
+    params:
+      chapter: "09 · The risks"
+      title: "People aged 20-64 per person aged 65+"
+      caption: "Statistics Norway projections (our calculation)"
+      states:
+        - {label: "{{ageing.now_display}}", active: 3, total: 4, at: 0.0}
+        - {label: "{{ageing.future_display}} by {{ageing.future_year}}", active: 2, total: 4, cue: "official projections"}
+    sources: [ssb_14288]
+    assets: ["font:inter"]
+
+  - id: n45_markets
+    segment: p9_markets
+    type: big_counter
+    params:
+      chapter: "09 · The risks"
+      cue: "could knock"
+      kicker: "NBIM stress test, 'fragmented world'"
+      display: "{{stress_test.display}}"
+      label: possible fall in the fund's value
+      sublabel: "Replay of the 2008 financial crisis: {{stress_test.gfc_display}}"
+    sources: [nbim_stress_2025]
+    assets: ["font:inter"]
+
+  # ---------------- conclusion
+  - id: n46_p10
+    segment: p10_card
+    type: act_title
+    params: {number: Conclusion, title: The Real Secret, subtitle: "Decisions, not just oil", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: n47_secret
+    segment: p10_secret
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Keep control.", size: 92, cue: "kept control"}
+        - {text: "Tax it heavily.", size: 92, cue: "taxed it"}
+        - {text: "Save it abroad.", size: 92, cue: "saved the money"}
+        - {text: "Spend only the return.", size: 92, color: accent, cue: "spends only"}
+    sources: []
+    assets: ["font:inter"]
+
+  - id: n48_end
+    segment: p10_end
+    type: oil_platform
+    params:
+      mode: night
+      no_chrome: true
+      kicker: The Hidden Economics
+      title: "The oil will run out."
+      title_cue: "The oil will run out"
+      subtitle: "The rules are built so the fortune does not."
+      subtitle_cue: "The rules are designed"
+      heli_cue: "position of strength"
+    sources: [imf_2026]
+    assets: ["font:inter"]

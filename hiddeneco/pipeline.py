@@ -107,21 +107,36 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
                                                  encoding="utf-8")
 
     t0 = time.perf_counter()
-    with step("render.scenes", deliverable=deliverable.id):
-        scene_dir = paths.out_sub("scenes")
-        files, jobs = [], []
-        for ts in timed:
-            out = scene_dir / f"{ts.scene.id}.mp4"
-            if only_scenes is None or ts.scene.id in only_scenes or not out.exists():
-                credits = list(dict.fromkeys(d.source(s).credit or d.source(s).publisher for s in ts.scene.sources))
-                jobs.append((ts.model_dump_json(), project["style"], (fmt["width"], fmt["height"]), credits,
-                             str(out), vcfg, fmt, deliverable.captions.get("burn_in", False)))
-            files.append(out)
-        assemble.render_scenes_parallel(jobs, int(vcfg.get("render_workers", 1)))
-    with step("render.assemble", deliverable=deliverable.id):
-        mix, _voice = assemble.build_audio_track(timed, paths.out_sub("audio"), deliverable, fmt, rate)
-        assemble.concat_and_mux(files, mix, paths.final_video, paths.out_sub("work"))
-        assemble.write_srt(timed, paths.out / "subtitles.srt")
+    if project.get("renderer") == "remotion":
+        from hiddeneco.render import remotion_bridge
+        with step("render.remotion", deliverable=deliverable.id):
+            credits = {ts.scene.id: list(dict.fromkeys(d.source(s).credit or d.source(s).publisher
+                                                       for s in ts.scene.sources)) for ts in timed}
+            props = remotion_bridge.build_props(timed, project["style"], credits, fmt, fps,
+                                                project.get("remotion_geo", []))
+            silent = paths.out_sub("work") / "remotion_video.mp4"
+            remotion_bridge.render_video(props, paths.out_sub("work"), silent,
+                                         concurrency=int(vcfg.get("remotion_concurrency", 4)))
+        with step("render.assemble", deliverable=deliverable.id):
+            mix, _voice = assemble.build_audio_track(timed, paths.out_sub("audio"), deliverable, fmt, rate)
+            remotion_bridge.mux(silent, mix, paths.final_video)
+            assemble.write_srt(timed, paths.out / "subtitles.srt")
+    else:
+        with step("render.scenes", deliverable=deliverable.id):
+            scene_dir = paths.out_sub("scenes")
+            files, jobs = [], []
+            for ts in timed:
+                out = scene_dir / f"{ts.scene.id}.mp4"
+                if only_scenes is None or ts.scene.id in only_scenes or not out.exists():
+                    credits = list(dict.fromkeys(d.source(s).credit or d.source(s).publisher for s in ts.scene.sources))
+                    jobs.append((ts.model_dump_json(), project["style"], (fmt["width"], fmt["height"]), credits,
+                                 str(out), vcfg, fmt, deliverable.captions.get("burn_in", False)))
+                files.append(out)
+            assemble.render_scenes_parallel(jobs, int(vcfg.get("render_workers", 1)))
+        with step("render.assemble", deliverable=deliverable.id):
+            mix, _voice = assemble.build_audio_track(timed, paths.out_sub("audio"), deliverable, fmt, rate)
+            assemble.concat_and_mux(files, mix, paths.final_video, paths.out_sub("work"))
+            assemble.write_srt(timed, paths.out / "subtitles.srt")
     ledger.replace_step("render", compute_cost(time.perf_counter() - t0, "render"))
 
     with step("thumbnails", deliverable=deliverable.id):

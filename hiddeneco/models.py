@@ -84,7 +84,10 @@ class Scene(BaseModel):
     type: Literal["title_card", "map", "bar_chart", "kinetic_text", "ring_stat",
                   "pictogram", "ranking", "end_card", "big_number", "timeline",
                   "line_chart", "split_compare", "act_title", "illustration", "route_map",
-                  "sector_share"]
+                  "sector_share",
+                  # Remotion-only scene types (renderer: remotion)
+                  "big_counter", "donut", "compare", "people_ratio", "oil_platform", "fund_flow",
+                  "isometric"]
     params: dict[str, Any] = Field(default_factory=dict)
     sfx: list[dict[str, Any]] = Field(default_factory=list)   # e.g. {kind: pop, cue: "In 1815"}
     sources: list[str] = Field(default_factory=list)
