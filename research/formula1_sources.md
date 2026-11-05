@@ -1,6 +1,6 @@
 # Research dossier - The Hidden Business Behind Formula 1
 
-Generated 2026-11-05T10:59:03+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-05T11:37:32+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 
