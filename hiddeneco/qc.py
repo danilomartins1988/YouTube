@@ -77,10 +77,14 @@ def check_captions(timed: list[TimedScene], total: float, deliverable: Deliverab
 def check_media(timed: list[TimedScene], paths: ProjectPaths, deliverable: Deliverable) -> list[dict]:
     out = []
     manifest = yaml.safe_load((REPO_ROOT / "assets" / "manifest.yaml").read_text())["assets"]
+    project = yaml.safe_load((paths.project_dir / "project.yaml").read_text())
+    remotion = project.get("renderer") == "remotion"   # one picture file instead of one file per scene
+    if remotion and not (paths.out / "work" / "remotion_video.mp4").exists():
+        out.append(_issue("media", "error", "Missing Remotion picture work/remotion_video.mp4"))
     for t in timed:
-        if not Path(t.audio_path).exists():
+        if t.audio_seconds and not Path(t.audio_path).exists():
             out.append(_issue("media", "error", f"Missing narration audio {t.audio_path}"))
-        if not (paths.out / "scenes" / f"{t.scene.id}.mp4").exists():
+        if not remotion and not (paths.out / "scenes" / f"{t.scene.id}.mp4").exists():
             out.append(_issue("media", "error", f"Missing rendered scene {t.scene.id}.mp4"))
         for a in t.scene.assets:
             entry = manifest.get(a)

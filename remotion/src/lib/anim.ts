@@ -86,3 +86,29 @@ export const countDisplay = (display: string, u: number) => {
 };
 
 export {interpolate};
+
+
+/** Normalised word being spoken at time t (scene-relative), or '' between words. */
+export const spokenAt = (scene: SceneSpec, t: number) => {
+  const w = scene.words.find((x) => x.start <= t && t < x.end + 0.05);
+  return w ? norm(w.word) : '';
+};
+
+/**
+ * Which of several items should be in focus at time t: the one whose keyword was spoken most recently
+ * (within `hold` seconds), otherwise a steady cycle every `period` seconds after `start`. This keeps data
+ * scenes changing every few seconds and ties the change to the narration when possible.
+ */
+export const focusIndex = (scene: SceneSpec, t: number, keys: string[][], start: number, period = 3.2, hold = 4) => {
+  let best = -1, bestT = -1;
+  for (const w of scene.words) {
+    if (w.start > t || w.start < t - hold) continue;
+    const n = norm(w.word);
+    keys.forEach((k, i) => { if (k.includes(n) && w.start > bestT) { best = i; bestT = w.start; } });
+  }
+  if (best >= 0) return best;
+  if (t < start) return -1;
+  return Math.floor((t - start) / period) % Math.max(1, keys.length);
+};
+
+export const keywords = (label: string) => String(label).split(/[\s(),&/+-]+/).map(norm).filter((x) => x.length > 2);

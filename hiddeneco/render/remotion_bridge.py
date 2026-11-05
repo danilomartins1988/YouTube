@@ -76,8 +76,14 @@ def render_video(props: dict, work: Path, out_mp4: Path, concurrency: int = 4, c
     return out_mp4
 
 
-def mux(video: Path, audio: Path, out_mp4: Path) -> Path:
+def mux(video: Path, audio: Path, out_mp4: Path, crf: int = 18) -> Path:
+    """Final encode: Remotion's JPEG frames come out as full-range yuvj420p; convert to standard limited-range
+    yuv420p BT.709 H.264 (what YouTube and most players expect) and add the AAC mix."""
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(video), "-i", str(audio),
-                    "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ac", "2",
-                    "-ar", "48000", "-shortest", "-movflags", "+faststart", str(out_mp4)], check=True)
+                    "-map", "0:v:0", "-map", "1:a:0",
+                    "-vf", "scale=in_range=full:out_range=tv,format=yuv420p",
+                    "-c:v", "libx264", "-preset", "medium", "-crf", str(crf), "-profile:v", "high",
+                    "-color_range", "tv", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
+                    "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-ar", "48000", "-shortest", "-movflags", "+faststart",
+                    str(out_mp4)], check=True)
     return out_mp4

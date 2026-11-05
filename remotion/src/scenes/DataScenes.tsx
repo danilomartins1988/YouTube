@@ -1,5 +1,5 @@
 import React from 'react';
-import {countDisplay, eio, eo, easeBack, fmtNum, lerp, mix, prog, rand, useCtx} from '../lib/anim';
+import {countDisplay, eio, eo, easeBack, focusIndex, fmtNum, keywords, lerp, mix, norm, prog, rand, spokenAt, useCtx} from '../lib/anim';
 import {RiseText} from '../components/Chrome';
 
 const W0 = 1920;
@@ -40,15 +40,21 @@ export const KineticText: React.FC = () => {
   const x0 = align === 'center' ? W / 2 : 240;
   let y = H / 2 - (lines.reduce((s, l) => s + (l.size || 64) * 1.35, 0)) / 2; // top of the block
   const first = cue(lines[0], 0);
-  const bar = eo(t, first, 0.8);
+  const bar = eo(t, Math.min(first, scene.lead + 0.4), 0.8);
   const total = lines.reduce((s, l) => s + (l.size || 64) * 1.35, 0);
   return (
     <svg width={W} height={H}>
       {align !== 'center' && <rect x={x0 - 50} y={H / 2 - total / 2} width={8} height={total * bar} fill={pal.accent} />}
+      {align !== 'center' && bar >= 1 && (() => {
+        // a gold pulse travels down the accent bar every few seconds
+        const q = ((t - first) % 3.5) / 3.5;
+        return <rect x={x0 - 54} y={H / 2 - total / 2 + q * (total - 60)} width={16} height={60} rx={6} fill={pal.accent} opacity={0.9 * (1 - q)} />;
+      })()}
       {lines.map((ln, i) => {
         const size = ln.size || 64;
-        const start = cue(ln, i * 0.15);
+        const start = i === 0 ? Math.min(cue(ln, 0), scene.lead + 0.4) : cue(ln, i * 0.15);
         const words = String(ln.text).split(' ');
+        const now = spokenAt(scene, t);
         const yy = y + size * 1.02; // baseline of this line
         y += size * 1.35;
         const strike = ln.strike_cue ? eo(t, cue(ln.strike_cue), 0.35) : 0;
@@ -59,8 +65,9 @@ export const KineticText: React.FC = () => {
               fontWeight={ln.style === 'body' ? 400 : 700} fontSize={size} fill={colour}>
               {words.map((w, j) => {
                 const u = eo(t, start + j * 0.07, 0.35);
+                const hot = u > 0.9 && now && norm(w) === now;
                 return (
-                  <tspan key={j} opacity={u} dy={0}>
+                  <tspan key={j} opacity={u} dy={0} fill={hot ? pal.accent : undefined}>
                     {(j ? ' ' : '') + w}
                   </tspan>
                 );
@@ -87,16 +94,24 @@ export const BigCounter: React.FC = () => {
   const shown = countDisplay(String(p.display), u);
   const cx = W / 2, cy = H / 2 - 40;
   const ticks = Array.from({length: 72}, (_, i) => {
-    const ang = (i / 72) * Math.PI * 2 + t * 0.15;
+    const ang = (i / 72) * Math.PI * 2 + t * 0.45;
     const on = i / 72 <= u;
     const r1 = 360, r2 = on ? 382 : 372;
     return <line key={i} x1={cx + r1 * Math.cos(ang)} y1={cy + r1 * Math.sin(ang) * 0.42} x2={cx + r2 * Math.cos(ang)} y2={cy + r2 * Math.sin(ang) * 0.42}
       stroke={on ? pal.accent : pal.border} strokeWidth={3} opacity={a * (on ? 0.8 : 0.35)} />;
   });
   const size = Math.min(230, (1500 / Math.max(4, String(p.display).length)) * 1.6);
+  const arcU = eio(t, start + 1.6, Math.max(1, scene.lead + scene.speech - start - 1.6));
+  const pulse = u >= 1 ? ((t - start - 1.6) % 3) / 3 : 0;
+  const arc = (r: number, f: number) => {
+    const a1 = -Math.PI / 2 + f * Math.PI * 2;
+    return `M ${cx} ${cy - r * 0.42} A ${r} ${r * 0.42} 0 ${f > 0.5 ? 1 : 0} 1 ${cx + r * Math.cos(a1)} ${cy + r * 0.42 * Math.sin(a1)}`;
+  };
   return (
     <svg width={W} height={H}>
       {ticks}
+      {arcU > 0 && arcU < 1 && <path d={arc(400, arcU)} fill="none" stroke={pal.accent} strokeWidth={4} opacity={0.7} />}
+      {u >= 1 && <ellipse cx={cx} cy={cy} rx={360 + 120 * pulse} ry={(360 + 120 * pulse) * 0.42} fill="none" stroke={pal.accent} strokeWidth={2} opacity={0.5 * (1 - pulse)} />}
       {p.kicker && <text x={cx} y={cy - size * 0.72} textAnchor="middle" fill={pal.muted} fontFamily={font.body} fontWeight={600}
         fontSize={30} letterSpacing={5} opacity={a}>{String(p.kicker).toUpperCase()}</text>}
       <text x={cx} y={cy + size * 0.35} textAnchor="middle" fill={pal.accent} fontFamily={font.display} fontWeight={700} fontSize={size}
@@ -205,13 +220,21 @@ export const BarChart: React.FC = () => {
       {rows.map((r, i) => {
         const u = eo(t, start + i * 0.22, 1.1);
         const yy = top + i * rowH;
+        const settled = start + rows.length * 0.22 + 1.2;
+        const fi = focusIndex(scene, t, rows.map((x) => keywords(x.name)), settled);
+        const focus = fi === i;
         const hl = r.code === p.highlight;
         const colour = hl ? pal.accent : r.code === p.reference ? pal.ink : pal.muted;
         const w = ((x1 - x0) * r.value) / vmax;
         return (
           <g key={r.code} opacity={eo(t, start + i * 0.22 - 0.1, 0.4)}>
             <text x={x0 - 28} y={yy + rowH * 0.5} textAnchor="end" fill={hl ? pal.ink : pal.muted} fontFamily={font.body} fontWeight={hl ? 700 : 400} fontSize={30}>{r.name}</text>
-            <rect x={x0} y={yy + rowH * 0.18} width={w * u} height={rowH * 0.55} rx={4} fill={colour} opacity={hl ? 1 : 0.75} />
+            <rect x={x0} y={yy + rowH * 0.18} width={w * u} height={rowH * 0.55} rx={4} fill={colour} opacity={hl ? 1 : focus ? 0.95 : 0.7} />
+            {focus && (() => {
+              const q = ((t - settled) % 3.2) / 3.2;
+              return <rect x={x0 + w * u * q - 40} y={yy + rowH * 0.18} width={80} height={rowH * 0.55} fill="#ffffff" opacity={0.25 * Math.sin(q * Math.PI)} />;
+            })()}
+            {focus && <rect x={x0 - 8} y={yy + rowH * 0.12} width={4} height={rowH * 0.67} fill={pal.accent} />}
             <text x={x0 + w * u + 16} y={yy + rowH * 0.56} fill={hl ? pal.accent : pal.ink} fontFamily={font.body} fontWeight={700} fontSize={28}>
               {`${p.value_prefix ?? ''}${fmtNum(r.value * u, p.value_decimals || 0)}${p.value_suffix ?? ''}`}
             </text>
@@ -233,6 +256,8 @@ export const Donut: React.FC = () => {
   const cols = [pal.accent, pal.ink, pal.accent2, pal.muted, pal.border];
   let acc = 0;
   const start = cue(p.cue, 0.05);
+  const settled = start + segs.length * 0.5 + 1.0;
+  const fi = focusIndex(scene, t, segs.map((x) => keywords(x.label)), settled);
   const arcs = segs.map((s, i) => {
     const a0 = (acc / total) * Math.PI * 2 - Math.PI / 2;
     acc += s.value;
@@ -241,7 +266,9 @@ export const Donut: React.FC = () => {
     const a1 = a0 + (a1full - a0) * u;
     if (u <= 0) return null;
     const large = a1 - a0 > Math.PI ? 1 : 0;
-    const P = (a: number, rr: number) => `${cx + rr * Math.cos(a)},${cy + rr * Math.sin(a)}`;
+    const pop = fi === i ? 22 * eo(t, settled, 0.4) : 0;
+    const mid = (a0 + a1) / 2;
+    const P = (a: number, rr: number) => `${cx + pop * Math.cos(mid) + rr * Math.cos(a)},${cy + pop * Math.sin(mid) + rr * Math.sin(a)}`;
     const d = `M${P(a0, r)} A${r},${r} 0 ${large} 1 ${P(a1, r)} L${P(a1, r - th)} A${r - th},${r - th} 0 ${large} 0 ${P(a0, r - th)} Z`;
     return <path key={i} d={d} fill={cols[i % cols.length]} opacity={0.95} />;
   });
@@ -257,7 +284,8 @@ export const Donut: React.FC = () => {
         const u = eo(t, start + i * 0.5 + 0.3, 0.5);
         const yy = 380 + i * 100;
         return (
-          <g key={i} opacity={u} transform={`translate(${40 * (1 - u)} 0)`}>
+          <g key={i} opacity={u * (fi < 0 || fi === i ? 1 : 0.55)} transform={`translate(${40 * (1 - u) + (fi === i ? 16 : 0)} 0)`}>
+            {fi === i && <rect x={1060} y={yy - 50} width={760} height={76} rx={10} fill={pal.bg2} stroke={pal.accent} strokeOpacity={0.5} />}
             <rect x={1080} y={yy - 30} width={36} height={36} rx={6} fill={cols[i % cols.length]} />
             <text x={1140} y={yy} fill={pal.ink} fontFamily={font.body} fontWeight={600} fontSize={36}>{s.label}</text>
             <text x={1780} y={yy} textAnchor="end" fill={pal.accent} fontFamily={font.display} fontWeight={700} fontSize={40}>
@@ -289,6 +317,15 @@ export const Timeline: React.FC = () => {
       <text x={120} y={200} fill={pal.ink} fontFamily={font.display} fontWeight={700} fontSize={56} opacity={eo(t, 0.2, 0.5)}>{p.title}</text>
       <g transform={`translate(${-camX} 0)`}>
         <line x1={200} x2={200 + span * grow} y1={ay} y2={ay} stroke={pal.border} strokeWidth={4} />
+        {(() => {
+          // playhead: glides from event to event as they are narrated, then keeps sweeping to 'today'
+          let hx = 200;
+          items.forEach((it, i) => { hx = lerp(hx, X(it.year), eio(t, times[i] - 0.4, 0.8)); });
+          const lastT = times[times.length - 1];
+          hx = lerp(hx, 200 + span, eio(t, lastT + 1.2, Math.max(1, scene.duration - lastT - 1.2)));
+          return <g><line x1={200} x2={hx} y1={ay} y2={ay} stroke={pal.accent} strokeWidth={4} />
+            <circle cx={hx} cy={ay} r={9 + 3 * Math.sin(t * 5)} fill={pal.ink} /></g>;
+        })()}
         {Array.from({length: Math.floor((y1 - y0) / (p.tick_every || 10)) + 1}, (_, i) => {
           const yr = y0 + i * (p.tick_every || 10);
           return (
@@ -333,17 +370,25 @@ export const Compare: React.FC = () => {
       {sides.map((s, i) => {
         const at = cue(s, (i + 0.3) / sides.length);
         const u = eo(t, at, 0.6);
+        const settled = Math.max(...sides.map((x, k) => cue(x, (k + 0.3) / sides.length))) + 1.4;
+        const fi = focusIndex(scene, t, sides.map((x) => keywords(`${x.kicker} ${x.label}`)), settled, 2.8);
+        const glow = fi === i ? eo(t, settled - 0.2, 0.4) : 0;
         const cx = 120 + colW * (i + 0.5);
         const barH = s.bar !== undefined ? (380 * Number(s.bar)) / vmax : 0;
         const hl = i === sides.length - 1 || s.highlight;
         return (
           <g key={i} opacity={u}>
             {i > 0 && <line x1={120 + colW * i} x2={120 + colW * i} y1={330} y2={330 + 520 * u} stroke={pal.accent} strokeOpacity={0.5} strokeWidth={2} />}
+            {glow > 0 && <ellipse cx={cx} cy={420} rx={260} ry={110} fill={pal.accent} opacity={0.08 + 0.05 * Math.sin(t * 4)} />}
             <text x={cx} y={330} textAnchor="middle" fill={pal.muted} fontFamily={font.body} fontWeight={600} fontSize={28} letterSpacing={4}>{String(s.kicker || '').toUpperCase()}</text>
             <text x={cx} y={460} textAnchor="middle" fill={hl ? pal.accent : pal.ink} fontFamily={font.display} fontWeight={700}
               fontSize={Math.min(150, 1100 / sides.length / Math.max(3, String(s.value).length) * 1.7)}>{countDisplay(String(s.value), eo(t, at, 1.2))}</text>
             <text x={cx} y={530} textAnchor="middle" fill={pal.ink} fontFamily={font.body} fontSize={34}>{s.label}</text>
             {barH > 0 && <rect x={cx - 70} y={930 - barH * eo(t, at + 0.2, 1.0)} width={140} height={barH * eo(t, at + 0.2, 1.0)} rx={6} fill={hl ? pal.accent : pal.muted} opacity={0.85} />}
+            {barH > 0 && glow > 0 && (() => {
+              const q = ((t - settled) % 2.8) / 2.8;
+              return <rect x={cx - 70} y={930 - barH * q} width={140} height={10} fill="#ffffff" opacity={0.35 * (1 - q)} />;
+            })()}
           </g>
         );
       })}
@@ -357,9 +402,9 @@ export const PeopleRatio: React.FC = () => {
   const p = scene.params;
   const states: any[] = p.states; // [{label, active, total, cue}]
   const n = states[0].total;
-  let cur = states[0].active;
+  let cur = states[0].active, prev = states[0].active, changeAt = -99;
   let label = states[0].label;
-  states.forEach((s, i) => { if (i && t >= cue(s, 0.5)) { cur = s.active; label = s.label; } });
+  states.forEach((s, i) => { if (i && t >= cue(s, 0.5)) { prev = cur; cur = s.active; label = s.label; changeAt = cue(s, 0.5); } });
   const cols = Math.min(10, n);
   return (
     <svg width={W} height={H}>
@@ -367,10 +412,11 @@ export const PeopleRatio: React.FC = () => {
       {Array.from({length: n}, (_, i) => {
         const x = 260 + (i % cols) * 200, y = 640 + Math.floor(i / cols) * 300;
         const appear = easeBack(prog(t, 0.3 + i * 0.05, 0.5)) * 1.8;
-        const on = i < cur;
+        const flipT = changeAt + (n - 1 - i) * 0.35;           // recolour from the right, one by one
+        const on = i < (t >= flipT ? cur : prev);
         const colour = on ? pal.accent : pal.muted;
         return (
-          <g key={i} transform={`translate(${x} ${y}) scale(${appear})`}>
+          <g key={i} transform={`translate(${x} ${y + Math.sin(t * 2.2 + i) * 6}) scale(${appear})`}>
             <circle cx={0} cy={-62} r={22} fill={colour} />
             <rect x={-30} y={-34} width={60} height={92} rx={26} fill={colour} />
           </g>

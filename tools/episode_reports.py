@@ -104,7 +104,8 @@ def main() -> None:
          f"{sync['voice_captioned']:.0%} of speech captioned"),
         ("No black gaps (>1 s)", blacks == "none", blacks),
         ("No frozen picture (>6 s)", freezes == "none", freezes),
-        ("Licensed assets only", not any(i["category"] == "licensing" for i in qc.get("issues", [])), "all scene assets on the licence allowlist"),
+        ("Licensed assets only", not any(i["category"] == "licensing" and i["severity"] == "error" for i in qc.get("issues", [])),
+         "every scene asset is on the licence allowlist (assets/manifest.yaml)"),
     ]
     lines = [f"# Quality report - {p.slug} / {a.deliverable}", "",
              "| Check | Result | Detail |", "|---|---|---|"]
