@@ -2,16 +2,16 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | output/norway_documentary.mp4 (145.4 MB) |
+| File exists | PASS | output/norway_documentary.mp4 (131.7 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
-| H.264 video | PASS | h264 High, yuvj420p, 30/1 fps |
+| H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
 | Duration 10-12 min | PASS | 654.70 s (10:54) |
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 275 cues; median cue-start offset 0.05 s, p90 0.39 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>6 s) | FAIL | 14.2s, 77.4s, 95.3s, 154.7s, 177.0s, 229.4s, 278.0s, 294.6s, 355.6s, 386.8s, 428.6s, 461.3s, 475.6s, 483.1s, 512.2s, 532.6s, 570.7s, 587.9s, 597.6s, 605.2s, 622.4s |
-| Licensed assets only | FAIL | all scene assets on the licence allowlist |
+| No frozen picture (>6 s) | FAIL | 95.2s, 155.8s, 176.8s, 267.9s, 294.7s, 386.8s, 462.2s, 475.4s, 512.6s, 531.5s, 570.6s, 605.3s, 623.0s |
+| Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
 - Scenes: 48; types: act_title x10, bar_chart x3, big_counter x3, compare x5, donut x2, fund_flow x4, isometric x2, kinetic_text x6, line_chart x2, map x5, oil_platform x3, people_ratio x1, timeline x2
@@ -22,9 +22,9 @@
 # QC report: why-norway-is-so-rich / documentary (long_16x9)
 
 - Runtime: **654.7 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 145.4 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 131.7 MB
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Errors: **0**, warnings: **61**
+- Errors: **0**, warnings: **54**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
@@ -59,38 +59,31 @@
 - [WARNING] (sources) Number word 'five' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'third' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (licensing) Dataset ssb_09189 has no licence recorded
-- [WARNING] (licensing) Dataset ssb_gini has no licence recorded
-- [WARNING] (licensing) Dataset ssb_08517 has no licence recorded
-- [WARNING] (licensing) Dataset ssb_14288 has no licence recorded
-- [WARNING] (render) Picture static for >4 s from 44.33s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 77.53s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 154.67s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 164.83s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 96.07s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 156.23s (pacing?)
 - [WARNING] (render) Picture static for >4 s from 177.00s (pacing?)
 - [WARNING] (render) Picture static for >4 s from 187.50s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 229.77s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 238.50s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 266.77s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 278.17s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 192.50s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 197.87s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 230.13s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 267.97s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 278.30s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 289.60s (pacing?)
 - [WARNING] (render) Picture static for >4 s from 294.80s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 336.57s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 358.30s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 386.93s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 464.17s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 476.00s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 483.10s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 492.90s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 498.00s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 512.30s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 336.63s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 342.20s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 387.20s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 464.20s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 475.47s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 483.90s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 493.50s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 497.93s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 512.40s (pacing?)
 - [WARNING] (render) Picture static for >4 s from 520.33s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 531.37s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 536.80s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 571.40s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 581.40s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 597.63s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 605.80s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 622.10s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 531.40s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 570.80s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 605.50s (pacing?)
+- [WARNING] (render) Picture static for >4 s from 624.90s (pacing?)
 
 ## Publish blockers - claims needing human verification
 
