@@ -63,16 +63,18 @@ def main() -> None:
                                capture_output=True, text=True, check=True).stdout)
     f = 0.25
     fc = (
-        f"[0:v]trim=0:{cut},setpts=PTS-STARTPTS,format=yuv420p[v0];"
+        f"[0:v]setpts=PTS-STARTPTS,format=yuv420p[v0];"
         f"[1:v]setpts=PTS-STARTPTS,format=yuv420p,fps=30[v1];"
-        f"[0:v]trim=start={cut},setpts=PTS-STARTPTS,format=yuv420p[v2];"
-        f"[0:a]atrim=0:{cut},asetpts=PTS-STARTPTS,afade=t=out:st={cut - f}:d={f}[a0];"
+        f"[2:v]setpts=PTS-STARTPTS,format=yuv420p[v2];"
+        f"[0:a]asetpts=PTS-STARTPTS,afade=t=out:st={cut - f}:d={f}[a0];"
         f"[1:a]aresample=48000,asetpts=PTS-STARTPTS[a1];"
-        f"[0:a]atrim=start={cut},asetpts=PTS-STARTPTS,afade=t=in:st=0:d={f}[a2];"
+        f"[2:a]asetpts=PTS-STARTPTS,afade=t=in:st=0:d={f}[a2];"
         f"[v0][a0][v1][a1][v2][a2]concat=n=3:v=1:a=1[v][a]"
     )
     out.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(src), "-i", str(intro), "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
+    # three separate decoders (head, intro, tail): nothing is buffered, so memory stays flat
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-t", f"{cut:.3f}", "-i", str(src), "-i", str(intro), "-ss", f"{cut:.3f}", "-i", str(src),
+                    "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-threads", "2",
                     "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-color_range", "tv",
                     "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
                     "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", str(out)], check=True)

@@ -1,0 +1,1781 @@
+{
+  "slug": "how-nvidia-took-over-the-ai-economy",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_network",
+      "segment": "open_network",
+      "type": "ai_network",
+      "start_s": 0.0,
+      "end_s": 18.83,
+      "duration_s": 18.83,
+      "visual_objective": "Ecosystem graph assembles group by group (apps, labs, clouds, data centers); packets flow; the shared supplier at the centre is revealed",
+      "narration": "Every time you ask an AI chatbot a question, a machine somewhere does the math. Behind the apps are the AI labs. Behind the labs are the cloud companies and the data centers. And behind almost all of them, there is one supplier.",
+      "keyframes": [
+        {
+          "param": "kicker_cue",
+          "cue": "Every time",
+          "label": "The Hidden Economics",
+          "scene_time_s": 0.35,
+          "absolute_s": 0.35
+        },
+        {
+          "param": "groups[0].cue",
+          "cue": "AI chatbot",
+          "label": "AI apps",
+          "scene_time_s": 2.22,
+          "absolute_s": 2.22
+        },
+        {
+          "param": "groups[1].cue",
+          "cue": "AI labs",
+          "label": "AI labs",
+          "scene_time_s": 9.19,
+          "absolute_s": 9.19
+        },
+        {
+          "param": "groups[2].cue",
+          "cue": "cloud companies",
+          "label": "Clouds",
+          "scene_time_s": 11.81,
+          "absolute_s": 11.81
+        },
+        {
+          "param": "groups[3].cue",
+          "cue": "data centers",
+          "label": "Data centers",
+          "scene_time_s": 13.16,
+          "absolute_s": 13.16
+        },
+        {
+          "param": "hub_cue",
+          "cue": "one supplier",
+          "label": "The Hidden Economics",
+          "scene_time_s": 17.59,
+          "absolute_s": 17.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_value",
+      "segment": "open_value",
+      "type": "big_counter",
+      "start_s": 18.83,
+      "end_s": 29.17,
+      "duration_s": 10.33,
+      "visual_objective": "Counter rolls up to the figure inside an orbiting tick ring; label and context rise in",
+      "narration": "In October twenty twenty-five, that supplier, Nvidia, became the first company in history to be worth more than 5 trillion dollars.",
+      "keyframes": [
+        {
+          "param": "cue",
+          "cue": "worth",
+          "label": "First company ever to close above it",
+          "scene_time_s": 7.71,
+          "absolute_s": 26.54
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "ap_5tn"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s03_revenue",
+      "segment": "open_revenue",
+      "type": "compare",
+      "start_s": 29.17,
+      "end_s": 41.77,
+      "duration_s": 12.6,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "In its last full fiscal year, it sold 215.9 billion dollars worth of products, about eight times what it sold just three years earlier.",
+      "keyframes": [
+        {
+          "param": "sides[1].cue",
+          "cue": "it sold",
+          "label": "year to Jan 2026 (×8)",
+          "scene_time_s": 2.69,
+          "absolute_s": 31.85
+        },
+        {
+          "param": "sides[0].cue",
+          "cue": "three years",
+          "label": "year to Jan 2023",
+          "scene_time_s": 10.91,
+          "absolute_s": 40.08
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_q4fy26",
+        "nvda_xbrl"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s04_question",
+      "segment": "open_question",
+      "type": "kinetic_text",
+      "start_s": 41.77,
+      "end_s": 56.87,
+      "duration_s": 15.1,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "For most of its life, Nvidia was known for video game graphics cards. So how did a gaming company end up at the center of the AI economy? And can it stay there? This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "For most",
+          "label": "Known for video game graphics",
+          "scene_time_s": 0.35,
+          "absolute_s": 42.12
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "how did",
+          "label": "Now at the center of the AI economy",
+          "scene_time_s": 5.87,
+          "absolute_s": 47.63
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "Can it stay",
+          "label": "Can it stay there?",
+          "scene_time_s": 10.74,
+          "absolute_s": 52.5
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s05_act2",
+      "segment": "a2_card",
+      "type": "act_title",
+      "start_s": 56.87,
+      "end_s": 59.87,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s06_origins",
+      "segment": "a2_origins",
+      "type": "timeline",
+      "start_s": 59.87,
+      "end_s": 81.77,
+      "duration_s": 21.9,
+      "visual_objective": "Axis draws; dated markers drop in on cues with ripple",
+      "narration": "Nvidia was founded in 1993 in California by Jensen Huang and two fellow engineers, to make chips for computer graphics. In 1999, it launched what it calls the first GPU, a graphics processing unit. Its business was drawing video games, fast.",
+      "keyframes": [
+        {
+          "param": "items[0].cue",
+          "cue": "was founded",
+          "label": "NVIDIA founded in California",
+          "scene_time_s": 0.85,
+          "absolute_s": 60.71
+        },
+        {
+          "param": "items[1].cue",
+          "cue": "first GPU",
+          "label": "Launches what it calls the first GPU",
+          "scene_time_s": 14.44,
+          "absolute_s": 74.31
+        },
+        {
+          "param": "items[2].cue",
+          "cue": "drawing video games",
+          "label": "Business: drawing video games, fast",
+          "scene_time_s": 19.21,
+          "absolute_s": 79.08
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s07_sketch",
+      "segment": "a2_sketch",
+      "type": "whiteboard",
+      "start_s": 81.77,
+      "end_s": 101.77,
+      "duration_s": 20.0,
+      "visual_objective": "Whiteboard hand-drawing: an original hand traces each stroke and writes labels progressively, then the sketch colours in and comes alive",
+      "narration": "Here is the key idea. To draw one frame of a game, a chip has to color millions of pixels, and each pixel can be worked out on its own. So instead of a few very fast workers, a graphics chip uses a huge number of simpler ones, all working at the same time.",
+      "keyframes": [
+        {
+          "param": "strokes[0].cue",
+          "cue": "one frame",
+          "label": "strokes[0].cue",
+          "scene_time_s": 3.51,
+          "absolute_s": 85.28
+        },
+        {
+          "param": "strokes[1].cue",
+          "cue": "millions of pixels",
+          "label": "strokes[1].cue",
+          "scene_time_s": 6.26,
+          "absolute_s": 88.02
+        },
+        {
+          "param": "strokes[2].cue",
+          "cue": "each pixel",
+          "label": "MILLIONS OF PIXELS",
+          "scene_time_s": 7.85,
+          "absolute_s": 89.62
+        },
+        {
+          "param": "strokes[3].cue",
+          "cue": "few very fast",
+          "label": "strokes[3].cue",
+          "scene_time_s": 12.53,
+          "absolute_s": 94.29
+        },
+        {
+          "param": "strokes[4].cue",
+          "cue": "few very fast",
+          "label": "A FEW FAST WORKERS",
+          "scene_time_s": 12.53,
+          "absolute_s": 94.29
+        },
+        {
+          "param": "strokes[5].cue",
+          "cue": "huge number",
+          "label": "strokes[5].cue",
+          "scene_time_s": 15.78,
+          "absolute_s": 97.54
+        },
+        {
+          "param": "strokes[6].cue",
+          "cue": "simpler ones",
+          "label": "strokes[6].cue",
+          "scene_time_s": 16.71,
+          "absolute_s": 98.48
+        },
+        {
+          "param": "strokes[7].cue",
+          "cue": "simpler ones",
+          "label": "MANY SIMPLE WORKERS",
+          "scene_time_s": 16.71,
+          "absolute_s": 98.48
+        },
+        {
+          "param": "caption_cue",
+          "cue": "same time",
+          "label": "caption_cue",
+          "scene_time_s": 19.02,
+          "absolute_s": 100.79
+        },
+        {
+          "param": "strokes[8].cue",
+          "cue": "same time",
+          "label": "strokes[8].cue",
+          "scene_time_s": 19.02,
+          "absolute_s": 100.79
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s08_cpu_gpu",
+      "segment": "a2_cpu_gpu",
+      "type": "cpu_gpu",
+      "start_s": 101.77,
+      "end_s": 131.7,
+      "duration_s": 29.93,
+      "visual_objective": "CPU vs GPU: a pool of independent tasks flies into a few big cores (rounds) vs many small cores (one step); then a step-by-step chain shows the opposite trade-off",
+      "narration": "Give both kinds of chip the same job: a pile of small tasks that don't depend on each other. The CPU's few powerful cores work through them in rounds. The GPU gives one to each of its many cores, and finishes in a few steps. But flip the problem. In a step-by-step job, where each step needs the result of the last one, the CPU's faster cores win. Real performance always depends on the workload.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "Give both",
+          "label": "title_cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 102.12
+        },
+        {
+          "param": "cpu_cue",
+          "cue": "same job",
+          "label": "cpu_cue",
+          "scene_time_s": 2.01,
+          "absolute_s": 103.78
+        },
+        {
+          "param": "gpu_cue",
+          "cue": "same job",
+          "label": "gpu_cue",
+          "scene_time_s": 2.01,
+          "absolute_s": 103.78
+        },
+        {
+          "param": "run_cue",
+          "cue": "work through them",
+          "label": "run_cue",
+          "scene_time_s": 9.97,
+          "absolute_s": 111.74
+        },
+        {
+          "param": "gpu_run_cue",
+          "cue": "The GPU gives",
+          "label": "gpu_run_cue",
+          "scene_time_s": 12.16,
+          "absolute_s": 113.93
+        },
+        {
+          "param": "serial_cue",
+          "cue": "flip the problem",
+          "label": "serial_cue",
+          "scene_time_s": 18.16,
+          "absolute_s": 119.93
+        },
+        {
+          "param": "note_cue",
+          "cue": "Real performance",
+          "label": "note_cue",
+          "scene_time_s": 26.62,
+          "absolute_s": 128.39
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s09_alexnet",
+      "segment": "a2_alexnet",
+      "type": "kinetic_text",
+      "start_s": 131.7,
+      "end_s": 162.8,
+      "duration_s": 31.1,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "And training a neural network turns out to look a lot like graphics: enormous piles of multiplications that can run side by side. In 2012, a network called AlexNet, trained on two Nvidia gaming cards, won a famous image recognition contest. Researchers took notice, and so did Nvidia. In 2017, it launched its first chip with Tensor Cores, built from the ground up for AI.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "enormous piles",
+          "label": "Neural networks = piles of multiplications",
+          "scene_time_s": 5.08,
+          "absolute_s": 136.78
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "AlexNet",
+          "label": "2012: AlexNet",
+          "scene_time_s": 13.35,
+          "absolute_s": 145.04
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "trained on",
+          "label": "trained on 2 NVIDIA gaming GPUs",
+          "scene_time_s": 14.19,
+          "absolute_s": 145.89
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "won a famous",
+          "label": "wins the ImageNet contest",
+          "scene_time_s": 16.35,
+          "absolute_s": 148.05
+        },
+        {
+          "param": "lines[4].cue",
+          "cue": "Tensor Cores",
+          "label": "2017: first Tensor Core GPU, built for AI",
+          "scene_time_s": 27.48,
+          "absolute_s": 159.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "alexnet_2012"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s10_act3",
+      "segment": "a3_card",
+      "type": "act_title",
+      "start_s": 162.8,
+      "end_s": 165.8,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s11_stack",
+      "segment": "a3_stack",
+      "type": "stack",
+      "start_s": 165.8,
+      "end_s": 202.67,
+      "duration_s": 36.87,
+      "visual_objective": "Layered software ecosystem builds bottom-up with data pulses; optional developer counter; switching-cost panel fills item by item",
+      "narration": "But the chip was only half the story. Years before AI took off, in 2006, Nvidia released CUDA, software that let programmers use its graphics chips for general computing. On top of it, Nvidia built libraries for math, for neural networks and for linking chips together. The popular AI frameworks plugged into those libraries. Developers learned them. And applications were built on top. Today Nvidia says more than 7.5 million developers use CUDA and its other tools.",
+      "keyframes": [
+        {
+          "param": "layers[0].cue",
+          "cue": "the chip was only",
+          "label": "GPU hardware",
+          "scene_time_s": 0.61,
+          "absolute_s": 166.41
+        },
+        {
+          "param": "title_cue",
+          "cue": "only half",
+          "label": "title_cue",
+          "scene_time_s": 1.39,
+          "absolute_s": 167.19
+        },
+        {
+          "param": "layers[1].cue",
+          "cue": "Years before",
+          "label": "Drivers",
+          "scene_time_s": 3.78,
+          "absolute_s": 169.58
+        },
+        {
+          "param": "layers[2].cue",
+          "cue": "released CUDA",
+          "label": "CUDA (2006)",
+          "scene_time_s": 7.87,
+          "absolute_s": 173.67
+        },
+        {
+          "param": "layers[3].cue",
+          "cue": "libraries for math",
+          "label": "Libraries",
+          "scene_time_s": 16.39,
+          "absolute_s": 182.19
+        },
+        {
+          "param": "layers[4].cue",
+          "cue": "frameworks plugged",
+          "label": "AI frameworks",
+          "scene_time_s": 22.71,
+          "absolute_s": 188.51
+        },
+        {
+          "param": "layers[5].cue",
+          "cue": "Developers learned",
+          "label": "Developers",
+          "scene_time_s": 25.4,
+          "absolute_s": 191.2
+        },
+        {
+          "param": "layers[6].cue",
+          "cue": "applications were built",
+          "label": "AI applications",
+          "scene_time_s": 27.26,
+          "absolute_s": 193.06
+        },
+        {
+          "param": "counter_cue",
+          "cue": "Today Nvidia says",
+          "label": "counter_cue",
+          "scene_time_s": 29.57,
+          "absolute_s": 195.37
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s12_switch",
+      "segment": "a3_switch",
+      "type": "stack",
+      "start_s": 202.67,
+      "end_s": 228.67,
+      "duration_s": 26.0,
+      "visual_objective": "Layered software ecosystem builds bottom-up with data pulses; optional developer counter; switching-cost panel fills item by item",
+      "narration": "That creates what economists call switching costs. A company can move to another chip, but first it may have to port and retest its code, tune its performance again, change its tools, and retrain its teams. None of this is impossible. Other chips run AI every day. But every step costs time and money, and that friction is valuable to Nvidia.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "switching costs",
+          "label": "title_cue",
+          "scene_time_s": 2.79,
+          "absolute_s": 205.45
+        },
+        {
+          "param": "switch_cue",
+          "cue": "move to another chip",
+          "label": "switch_cue",
+          "scene_time_s": 5.52,
+          "absolute_s": 208.19
+        },
+        {
+          "param": "costs[0].cue",
+          "cue": "port and retest",
+          "label": "Port and retest code",
+          "scene_time_s": 8.67,
+          "absolute_s": 211.34
+        },
+        {
+          "param": "costs[1].cue",
+          "cue": "tune its performance",
+          "label": "Tune performance again",
+          "scene_time_s": 10.36,
+          "absolute_s": 213.02
+        },
+        {
+          "param": "costs[2].cue",
+          "cue": "change its tools",
+          "label": "Change tools",
+          "scene_time_s": 12.29,
+          "absolute_s": 214.95
+        },
+        {
+          "param": "costs[3].cue",
+          "cue": "retrain its teams",
+          "label": "Retrain teams",
+          "scene_time_s": 13.48,
+          "absolute_s": 216.15
+        },
+        {
+          "param": "caption_cue",
+          "cue": "friction",
+          "label": "caption_cue",
+          "scene_time_s": 23.1,
+          "absolute_s": 225.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s13_flywheel",
+      "segment": "a3_flywheel",
+      "type": "whiteboard",
+      "start_s": 228.67,
+      "end_s": 250.27,
+      "duration_s": 21.6,
+      "visual_objective": "Whiteboard hand-drawing: an original hand traces each stroke and writes labels progressively, then the sketch colours in and comes alive",
+      "narration": "It is also a network effect. More developers write more software for Nvidia chips. More software attracts more customers. More customers bring in more money for new chips and new tools, which attract even more developers. The wheel feeds itself.",
+      "keyframes": [
+        {
+          "param": "strokes[0].cue",
+          "cue": "More developers",
+          "label": "DEVELOPERS",
+          "scene_time_s": 3.48,
+          "absolute_s": 232.15
+        },
+        {
+          "param": "strokes[1].cue",
+          "cue": "write more software",
+          "label": "strokes[1].cue",
+          "scene_time_s": 5.05,
+          "absolute_s": 233.72
+        },
+        {
+          "param": "strokes[2].cue",
+          "cue": "More software",
+          "label": "SOFTWARE",
+          "scene_time_s": 5.37,
+          "absolute_s": 234.03
+        },
+        {
+          "param": "strokes[3].cue",
+          "cue": "attracts more customers",
+          "label": "strokes[3].cue",
+          "scene_time_s": 9.22,
+          "absolute_s": 237.88
+        },
+        {
+          "param": "strokes[4].cue",
+          "cue": "More customers",
+          "label": "CUSTOMERS",
+          "scene_time_s": 9.81,
+          "absolute_s": 238.47
+        },
+        {
+          "param": "strokes[5].cue",
+          "cue": "more money",
+          "label": "strokes[5].cue",
+          "scene_time_s": 13.28,
+          "absolute_s": 241.95
+        },
+        {
+          "param": "strokes[6].cue",
+          "cue": "new chips",
+          "label": "MONEY FOR R&D",
+          "scene_time_s": 14.35,
+          "absolute_s": 243.01
+        },
+        {
+          "param": "strokes[7].cue",
+          "cue": "even more developers",
+          "label": "strokes[7].cue",
+          "scene_time_s": 16.72,
+          "absolute_s": 245.39
+        },
+        {
+          "param": "caption_cue",
+          "cue": "feeds itself",
+          "label": "caption_cue",
+          "scene_time_s": 19.91,
+          "absolute_s": 248.57
+        },
+        {
+          "param": "strokes[8].cue",
+          "cue": "feeds itself",
+          "label": "strokes[8].cue",
+          "scene_time_s": 19.91,
+          "absolute_s": 248.57
+        },
+        {
+          "param": "strokes[9].cue",
+          "cue": "feeds itself",
+          "label": "NETWORK EFFECT",
+          "scene_time_s": 19.91,
+          "absolute_s": 248.57
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s14_act4",
+      "segment": "a4_card",
+      "type": "act_title",
+      "start_s": 250.27,
+      "end_s": 253.27,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s15_revenue",
+      "segment": "a4_revenue",
+      "type": "stacked_columns",
+      "start_s": 253.27,
+      "end_s": 278.9,
+      "duration_s": 25.63,
+      "visual_objective": "Fiscal-year columns grow chronologically by business segment, then morph into a 100% share view",
+      "narration": "Now, the money. Nvidia's year ends in late January, so its fiscal twenty twenty-six is mostly calendar twenty twenty-five. For a decade, revenue grew steadily. Then it exploded: from 27 billion dollars in fiscal twenty twenty-three, to 215.9 billion dollars in fiscal twenty twenty-six.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "the money",
+          "label": "title_cue",
+          "scene_time_s": 0.91,
+          "absolute_s": 254.18
+        },
+        {
+          "param": "grow_cue",
+          "cue": "For a decade",
+          "label": "grow_cue",
+          "scene_time_s": 10.71,
+          "absolute_s": 263.98
+        },
+        {
+          "param": "notes[0].cue",
+          "cue": "fiscal twenty twenty-three",
+          "label": "FY23: $27.0bn",
+          "scene_time_s": 18.06,
+          "absolute_s": 271.32
+        },
+        {
+          "param": "notes[1].cue",
+          "cue": "to",
+          "label": "FY26: $215.9bn",
+          "scene_time_s": 20.0,
+          "absolute_s": 273.26
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_xbrl"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s16_mix",
+      "segment": "a4_mix",
+      "type": "stacked_columns",
+      "start_s": 278.9,
+      "end_s": 301.7,
+      "duration_s": 22.8,
+      "visual_objective": "Fiscal-year columns grow chronologically by business segment, then morph into a 100% share view",
+      "narration": "What changed is who buys. In fiscal twenty twenty, gaming was the biggest business, and data center sales were about a quarter of the total. By fiscal twenty twenty-six, data center revenue had reached 193.7 billion dollars. That is about 90 percent of everything Nvidia sold.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "who buys",
+          "label": "title_cue",
+          "scene_time_s": 1.79,
+          "absolute_s": 280.69
+        },
+        {
+          "param": "grow_cue",
+          "cue": "In fiscal twenty twenty",
+          "label": "grow_cue",
+          "scene_time_s": 3.15,
+          "absolute_s": 282.05
+        },
+        {
+          "param": "mix_cue",
+          "cue": "That is",
+          "label": "mix_cue",
+          "scene_time_s": 18.7,
+          "absolute_s": 297.6
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2022",
+        "nvda_10k_fy2025",
+        "nvda_10k_fy2026"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s17_customers",
+      "segment": "a4_customers",
+      "type": "donut",
+      "start_s": 301.7,
+      "end_s": 321.47,
+      "duration_s": 19.77,
+      "visual_objective": "Allocation arcs sweep one after another; legend counts in",
+      "narration": "Those buyers are cloud giants, AI labs and large companies building what Nvidia calls AI factories. And they are concentrated. In fiscal twenty twenty-six, one direct customer accounted for 22 percent of Nvidia's revenue, and another for 14 percent.",
+      "keyframes": [
+        {
+          "param": "cue",
+          "cue": "one direct customer",
+          "label": "cue",
+          "scene_time_s": 12.4,
+          "absolute_s": 314.1
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s18_margin",
+      "segment": "a4_margin",
+      "type": "line_chart",
+      "start_s": 321.47,
+      "end_s": 350.6,
+      "duration_s": 29.13,
+      "visual_objective": "Line chart draws progressively with the narration; event annotations pop on cues",
+      "narration": "Then look at the margin. Gross margin is what is left from each dollar of sales after the cost of making the product. Nvidia's rose from about 57 percent in fiscal twenty twenty-three to 75 percent in fiscal twenty twenty-five. Last year it slipped to 71 percent, partly because of a 4.5 billion dollar charge on chips it could no longer sell to China.",
+      "keyframes": [
+        {
+          "param": "cue",
+          "cue": "Then look",
+          "label": "cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 321.82
+        },
+        {
+          "param": "events[0].cue",
+          "cue": "fiscal twenty twenty-three",
+          "label": "FY23: 56.9%",
+          "scene_time_s": 12.66,
+          "absolute_s": 334.13
+        },
+        {
+          "param": "events[1].cue",
+          "cue": "fiscal twenty twenty-five",
+          "label": "FY25: 75.0%",
+          "scene_time_s": 16.25,
+          "absolute_s": 337.72
+        },
+        {
+          "param": "events[2].cue",
+          "cue": "charge",
+          "label": "FY26: 71.1% ($4.5bn charge)",
+          "scene_time_s": 25.68,
+          "absolute_s": 347.14
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_xbrl",
+        "nvda_10k_fy2026"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s19_why",
+      "segment": "a4_why",
+      "type": "kinetic_text",
+      "start_s": 350.6,
+      "end_s": 381.73,
+      "duration_s": 31.13,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Why so profitable? Demand ran far ahead of supply. The product was hard to replace. And customers were not just buying chips, but whole systems: processors, networking and software that work together. Networking alone brought in 31 billion dollars last fiscal year. And Nvidia keeps reinvesting: it says it has spent more than 76 billion dollars on research and development since it was founded.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Why so",
+          "label": "Why so profitable?",
+          "scene_time_s": 0.35,
+          "absolute_s": 350.95
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Demand ran",
+          "label": "Demand ran ahead of supply",
+          "scene_time_s": 2.62,
+          "absolute_s": 353.22
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "hard to replace",
+          "label": "A product that is hard to replace",
+          "scene_time_s": 6.42,
+          "absolute_s": 357.01
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "whole systems",
+          "label": "Whole systems, not just chips",
+          "scene_time_s": 10.78,
+          "absolute_s": 361.38
+        },
+        {
+          "param": "lines[4].cue",
+          "cue": "Networking alone",
+          "label": "Networking: $31.4bn in fiscal 2026",
+          "scene_time_s": 16.75,
+          "absolute_s": 367.35
+        },
+        {
+          "param": "lines[5].cue",
+          "cue": "keeps reinvesting",
+          "label": "R&D since founding: $76.7bn+",
+          "scene_time_s": 22.71,
+          "absolute_s": 373.31
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s20_latest",
+      "segment": "a4_latest",
+      "type": "big_counter",
+      "start_s": 381.73,
+      "end_s": 399.53,
+      "duration_s": 17.8,
+      "visual_objective": "Counter rolls up to the figure inside an orbiting tick ring; label and context rise in",
+      "narration": "And it is still growing. In the quarter that ended in July twenty twenty-six, Nvidia brought in 96.2 billion dollars, up 106 percent from a year earlier, and it expected about 108 billion dollars in the quarter after that.",
+      "keyframes": [
+        {
+          "param": "cue",
+          "cue": "brought in",
+          "label": "Revenue in one quarter · +106 percent",
+          "scene_time_s": 6.41,
+          "absolute_s": 388.14
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_q2fy27"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s21_act5",
+      "segment": "a5_card",
+      "type": "act_title",
+      "start_s": 399.53,
+      "end_s": 402.53,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s22_chain",
+      "segment": "a5_chain",
+      "type": "supply_chain",
+      "start_s": 402.53,
+      "end_s": 437.87,
+      "duration_s": 35.33,
+      "visual_objective": "World map with camera moves: supply stages light up in order, packets flow along arcs, process strip tracks the stage; optional bottleneck chokes everything downstream",
+      "narration": "Here is the surprising part. Nvidia designs its chips, but it does not make them. Its engineers in California send the designs to TSMC in Taiwan, which prints them onto silicon wafers. The chips are then joined with stacks of high bandwidth memory from SK Hynix, Micron and Samsung, using an advanced packaging technique called CoWoS. Contract manufacturers assemble them into servers, and the servers ship to data centers around the world.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "surprising part",
+          "label": "title_cue",
+          "scene_time_s": 1.15,
+          "absolute_s": 403.68
+        },
+        {
+          "param": "nodes[0].cue",
+          "cue": "designs its chips",
+          "label": "NVIDIA",
+          "scene_time_s": 3.57,
+          "absolute_s": 406.1
+        },
+        {
+          "param": "steps[0].cue",
+          "cue": "designs its chips",
+          "label": "Design",
+          "scene_time_s": 3.57,
+          "absolute_s": 406.1
+        },
+        {
+          "param": "nodes[1].cue",
+          "cue": "send the designs",
+          "label": "TSMC",
+          "scene_time_s": 9.82,
+          "absolute_s": 412.36
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "in Taiwan",
+          "label": "views[1].cue",
+          "scene_time_s": 11.42,
+          "absolute_s": 413.95
+        },
+        {
+          "param": "steps[1].cue",
+          "cue": "silicon wafers",
+          "label": "Wafer fab",
+          "scene_time_s": 13.78,
+          "absolute_s": 416.31
+        },
+        {
+          "param": "nodes[2].cue",
+          "cue": "high bandwidth memory",
+          "label": "SK Hynix · Samsung",
+          "scene_time_s": 18.55,
+          "absolute_s": 421.08
+        },
+        {
+          "param": "steps[2].cue",
+          "cue": "high bandwidth memory",
+          "label": "HBM memory",
+          "scene_time_s": 18.55,
+          "absolute_s": 421.08
+        },
+        {
+          "param": "nodes[3].cue",
+          "cue": "Micron",
+          "label": "Micron",
+          "scene_time_s": 21.45,
+          "absolute_s": 423.98
+        },
+        {
+          "param": "nodes[4].cue",
+          "cue": "advanced packaging",
+          "label": "CoWoS packaging",
+          "scene_time_s": 23.81,
+          "absolute_s": 426.35
+        },
+        {
+          "param": "steps[3].cue",
+          "cue": "packaging technique",
+          "label": "CoWoS packaging",
+          "scene_time_s": 24.61,
+          "absolute_s": 427.14
+        },
+        {
+          "param": "views[2].cue",
+          "cue": "Contract manufacturers",
+          "label": "views[2].cue",
+          "scene_time_s": 28.19,
+          "absolute_s": 430.72
+        },
+        {
+          "param": "nodes[5].cue",
+          "cue": "Contract manufacturers",
+          "label": "Server assembly",
+          "scene_time_s": 28.19,
+          "absolute_s": 430.72
+        },
+        {
+          "param": "nodes[6].cue",
+          "cue": "Contract manufacturers",
+          "label": "Taiwan",
+          "scene_time_s": 28.19,
+          "absolute_s": 430.72
+        },
+        {
+          "param": "steps[4].cue",
+          "cue": "assemble them",
+          "label": "Assembly",
+          "scene_time_s": 29.74,
+          "absolute_s": 432.28
+        },
+        {
+          "param": "nodes[7].cue",
+          "cue": "data centers around",
+          "label": "Data centers",
+          "scene_time_s": 33.05,
+          "absolute_s": 435.58
+        },
+        {
+          "param": "steps[5].cue",
+          "cue": "data centers around",
+          "label": "Data centers",
+          "scene_time_s": 33.05,
+          "absolute_s": 435.58
+        },
+        {
+          "param": "nodes[8].cue",
+          "cue": "around the world",
+          "label": "Data centers",
+          "scene_time_s": 33.93,
+          "absolute_s": 436.47
+        },
+        {
+          "param": "nodes[9].cue",
+          "cue": "around the world",
+          "label": "Data centers",
+          "scene_time_s": 34.23,
+          "absolute_s": 436.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s23_bottleneck",
+      "segment": "a5_bottleneck",
+      "type": "supply_chain",
+      "start_s": 437.87,
+      "end_s": 456.53,
+      "duration_s": 18.67,
+      "visual_objective": "World map with camera moves: supply stages light up in order, packets flow along arcs, process strip tracks the stage; optional bottleneck chokes everything downstream",
+      "narration": "A chain like this is only as fast as its slowest link. Nvidia's own annual report warns that a shortage of any one component can hold back its sales. When advanced packaging or memory runs short, everything downstream has to wait.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "slowest link",
+          "label": "title_cue",
+          "scene_time_s": 3.57,
+          "absolute_s": 441.44
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "advanced packaging",
+          "label": "views[1].cue",
+          "scene_time_s": 12.75,
+          "absolute_s": 450.61
+        },
+        {
+          "param": "bottleneck.cue",
+          "cue": "runs short",
+          "label": "SHORTAGE",
+          "scene_time_s": 15.23,
+          "absolute_s": 453.1
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s24_arizona",
+      "segment": "a5_arizona",
+      "type": "map",
+      "start_s": 456.53,
+      "end_s": 481.97,
+      "duration_s": 25.43,
+      "visual_objective": "Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts",
+      "narration": "Most of this chain is concentrated in Asia, above all in Taiwan. Nvidia is trying to spread it out. In October twenty twenty-five, it showed the first Blackwell wafer made in the United States, at TSMC's factory in Arizona. But reports say those wafers still travel back to Taiwan to be packaged.",
+      "keyframes": [
+        {
+          "param": "highlights.TWN.cue",
+          "cue": "concentrated in Asia",
+          "label": "highlights.TWN.cue",
+          "scene_time_s": 1.73,
+          "absolute_s": 458.26
+        },
+        {
+          "param": "callouts[0].cue",
+          "cue": "concentrated in Asia",
+          "label": "NVIDIA supply chain",
+          "scene_time_s": 1.73,
+          "absolute_s": 458.26
+        },
+        {
+          "param": "highlights.KOR.cue",
+          "cue": "concentrated in Asia",
+          "label": "highlights.KOR.cue",
+          "scene_time_s": 1.93,
+          "absolute_s": 458.46
+        },
+        {
+          "param": "highlights.JPN.cue",
+          "cue": "concentrated in Asia",
+          "label": "highlights.JPN.cue",
+          "scene_time_s": 2.13,
+          "absolute_s": 458.66
+        },
+        {
+          "param": "markers[0].cue",
+          "cue": "above all",
+          "label": "Taiwan",
+          "scene_time_s": 3.91,
+          "absolute_s": 460.45
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "spread it out",
+          "label": "views[1].cue",
+          "scene_time_s": 7.59,
+          "absolute_s": 464.13
+        },
+        {
+          "param": "highlights.USA.cue",
+          "cue": "United States",
+          "label": "highlights.USA.cue",
+          "scene_time_s": 14.85,
+          "absolute_s": 471.38
+        },
+        {
+          "param": "markers[1].cue",
+          "cue": "factory in",
+          "label": "Arizona",
+          "scene_time_s": 16.82,
+          "absolute_s": 473.35
+        },
+        {
+          "param": "callouts[1].cue",
+          "cue": "travel back",
+          "label": "US wafers, packaged in",
+          "scene_time_s": 21.9,
+          "absolute_s": 478.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026",
+        "arizona_wafer",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s25_act6",
+      "segment": "a6_card",
+      "type": "act_title",
+      "start_s": 481.97,
+      "end_s": 484.97,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s26_rivals",
+      "segment": "a6_rivals",
+      "type": "fund_flow",
+      "start_s": 484.97,
+      "end_s": 503.7,
+      "duration_s": 18.73,
+      "visual_objective": "Animated flow diagram: nodes pop in on cues, links draw and carry moving coins",
+      "narration": "So who could challenge Nvidia? Its annual report names them: chipmakers like AMD, Intel and Huawei, and also some of its own biggest customers. Google, Amazon and Microsoft all design AI chips of their own.",
+      "keyframes": [
+        {
+          "param": "nodes[1].cue",
+          "cue": "chipmakers like",
+          "label": "AMD",
+          "scene_time_s": 5.63,
+          "absolute_s": 490.6
+        },
+        {
+          "param": "nodes[2].cue",
+          "cue": "Intel",
+          "label": "Intel",
+          "scene_time_s": 7.31,
+          "absolute_s": 492.28
+        },
+        {
+          "param": "nodes[3].cue",
+          "cue": "Huawei",
+          "label": "Huawei",
+          "scene_time_s": 8.17,
+          "absolute_s": 493.13
+        },
+        {
+          "param": "links[0].cue",
+          "cue": "biggest customers",
+          "label": "links[0].cue",
+          "scene_time_s": 10.99,
+          "absolute_s": 495.95
+        },
+        {
+          "param": "links[1].cue",
+          "cue": "biggest customers",
+          "label": "links[1].cue",
+          "scene_time_s": 11.19,
+          "absolute_s": 496.15
+        },
+        {
+          "param": "links[2].cue",
+          "cue": "biggest customers",
+          "label": "links[2].cue",
+          "scene_time_s": 11.39,
+          "absolute_s": 496.35
+        },
+        {
+          "param": "nodes[4].cue",
+          "cue": "Google",
+          "label": "Google",
+          "scene_time_s": 13.18,
+          "absolute_s": 498.15
+        },
+        {
+          "param": "nodes[5].cue",
+          "cue": "Amazon",
+          "label": "Amazon",
+          "scene_time_s": 14.0,
+          "absolute_s": 498.96
+        },
+        {
+          "param": "nodes[6].cue",
+          "cue": "Microsoft",
+          "label": "Microsoft",
+          "scene_time_s": 15.12,
+          "absolute_s": 500.09
+        },
+        {
+          "param": "caption_cue",
+          "cue": "design AI chips",
+          "label": "caption_cue",
+          "scene_time_s": 16.25,
+          "absolute_s": 501.22
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s27_amd",
+      "segment": "a6_amd",
+      "type": "compare",
+      "start_s": 503.7,
+      "end_s": 530.87,
+      "duration_s": 27.17,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "AMD sells data center GPUs too, with its own open software platform, called ROCm. In calendar twenty twenty-five, AMD's whole data center business, including its server processors, brought in 16.6 billion dollars. Nvidia's data center revenue in its latest fiscal year was 193.7 billion dollars.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "brought in",
+          "label": "incl. EPYC server CPUs",
+          "scene_time_s": 15.61,
+          "absolute_s": 519.31
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "Nvidia's data center",
+          "label": "year to Jan 2026",
+          "scene_time_s": 19.84,
+          "absolute_s": 523.54
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amd_fy2025",
+        "nvda_10k_fy2026"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s28_custom",
+      "segment": "a6_custom",
+      "type": "compare",
+      "start_s": 530.87,
+      "end_s": 557.73,
+      "duration_s": 26.87,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "Then there are custom chips. Google builds its own TPUs, now in their seventh-generation. Amazon builds Trainium, and its Project Rainier cluster runs nearly half a million of them. In late twenty twenty-five, the AI lab Anthropic said it plans to use up to one million Google TPUs, while still using Amazon's chips and Nvidia's GPUs.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "Google builds",
+          "label": "Ironwood (GA Nov 2025)",
+          "scene_time_s": 3.11,
+          "absolute_s": 533.98
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "Amazon builds",
+          "label": "Trainium2 in Project Rainier",
+          "scene_time_s": 7.63,
+          "absolute_s": 538.5
+        },
+        {
+          "param": "sides[2].cue",
+          "cue": "Anthropic said",
+          "label": "up to · also uses Trainium + NVIDIA",
+          "scene_time_s": 17.59,
+          "absolute_s": 548.46
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "google_ironwood",
+        "aws_rainier",
+        "anthropic_tpu"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s29_landscape",
+      "segment": "a6_landscape",
+      "type": "landscape",
+      "start_s": 557.73,
+      "end_s": 590.47,
+      "duration_s": 32.73,
+      "visual_objective": "Competitive matrix: a cursor selects each dimension and cells type in; then options slide onto a conceptual flexibility-vs-specialisation axis",
+      "narration": "Why build your own chip? Economics. A general-purpose GPU can run almost any AI workload, has the widest software support, and can be rented from many clouds. A custom accelerator is designed around one company's own workloads. At enormous scale it can be cheaper to run, but it is mostly available inside that company's cloud, and software has to be adapted to it. Different jobs favor different chips. There is no single winner.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "Why build",
+          "label": "title_cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 558.08
+        },
+        {
+          "param": "rows[0].cue",
+          "cue": "general-purpose GPU",
+          "label": "Built for",
+          "scene_time_s": 4.35,
+          "absolute_s": 562.09
+        },
+        {
+          "param": "rows[1].cue",
+          "cue": "widest software",
+          "label": "Software",
+          "scene_time_s": 7.66,
+          "absolute_s": 565.39
+        },
+        {
+          "param": "rows[2].cue",
+          "cue": "rented from many",
+          "label": "Where to get it",
+          "scene_time_s": 9.48,
+          "absolute_s": 567.22
+        },
+        {
+          "param": "rows[3].cue",
+          "cue": "cheaper to run",
+          "label": "Cost at scale",
+          "scene_time_s": 20.25,
+          "absolute_s": 577.99
+        },
+        {
+          "param": "rows[4].cue",
+          "cue": "software has to be adapted",
+          "label": "Switching cost",
+          "scene_time_s": 24.85,
+          "absolute_s": 582.59
+        },
+        {
+          "param": "axis_cue",
+          "cue": "Different jobs",
+          "label": "axis_cue",
+          "scene_time_s": 27.84,
+          "absolute_s": 585.57
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026",
+        "google_ironwood",
+        "aws_rainier"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s30_act7",
+      "segment": "a7_card",
+      "type": "act_title",
+      "start_s": 590.47,
+      "end_s": 593.47,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s31_capex",
+      "segment": "a7_capex",
+      "type": "big_counter",
+      "start_s": 593.47,
+      "end_s": 612.67,
+      "duration_s": 19.2,
+      "visual_objective": "Counter rolls up to the figure inside an orbiting tick ring; label and context rise in",
+      "narration": "The whole boom rests on one thing: customers spending. Trackers estimate that Amazon, Microsoft, Alphabet and Meta plan to spend roughly 700 billion dollars on capital projects in twenty twenty-six, much of it on AI data centers.",
+      "keyframes": [
+        {
+          "param": "cue",
+          "cue": "plan to spend",
+          "label": "Amazon + Microsoft + Alphabet + Meta",
+          "scene_time_s": 10.32,
+          "absolute_s": 603.79
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "capex_tracker"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s32_risks",
+      "segment": "a7_risks",
+      "type": "compare",
+      "start_s": 612.67,
+      "end_s": 641.03,
+      "duration_s": 28.37,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "That is also the risk. If that spending slows, so does Nvidia. Its biggest customers are building rival chips. And when a customer that large pauses its orders, it shows up directly in Nvidia's revenue. Its supply chain runs through a handful of factories in Asia. And export rules have shut much of the China market: Nvidia's latest forecast assumes no data center compute sales there at all.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "spending slows",
+          "label": "if AI budgets slow",
+          "scene_time_s": 3.37,
+          "absolute_s": 616.03
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "biggest customers",
+          "label": "two direct customers",
+          "scene_time_s": 6.38,
+          "absolute_s": 619.04
+        },
+        {
+          "param": "sides[2].cue",
+          "cue": "supply chain",
+          "label": "a handful of factories",
+          "scene_time_s": 15.87,
+          "absolute_s": 628.54
+        },
+        {
+          "param": "sides[3].cue",
+          "cue": "export rules",
+          "label": "from data center guidance",
+          "scene_time_s": 19.77,
+          "absolute_s": 632.44
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "capex_tracker",
+        "nvda_10k_fy2026",
+        "nvda_q2fy27"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s33_inference",
+      "segment": "a7_inference",
+      "type": "fund_flow",
+      "start_s": 641.03,
+      "end_s": 669.73,
+      "duration_s": 28.7,
+      "visual_objective": "Animated flow diagram: nodes pop in on cues, links draw and carry moving coins",
+      "narration": "The market is shifting, too. A model is trained once, but it runs every time someone uses it. That second part is called inference, and as it grows, the cost of each answer matters more. That is exactly where custom chips compete. Nvidia's response is to keep moving, with new systems every year, like its next platform, Rubin, which it says will cut the cost of inference again.",
+      "keyframes": [
+        {
+          "param": "nodes[0].cue",
+          "cue": "trained once",
+          "label": "Training",
+          "scene_time_s": 4.13,
+          "absolute_s": 645.16
+        },
+        {
+          "param": "nodes[1].cue",
+          "cue": "trained once",
+          "label": "The model",
+          "scene_time_s": 4.63,
+          "absolute_s": 645.66
+        },
+        {
+          "param": "links[1].cue",
+          "cue": "runs every time",
+          "label": "links[1].cue",
+          "scene_time_s": 5.44,
+          "absolute_s": 646.48
+        },
+        {
+          "param": "nodes[2].cue",
+          "cue": "called inference",
+          "label": "Inference",
+          "scene_time_s": 9.6,
+          "absolute_s": 650.64
+        },
+        {
+          "param": "nodes[3].cue",
+          "cue": "cost of each answer",
+          "label": "Cost per answer",
+          "scene_time_s": 12.42,
+          "absolute_s": 653.45
+        },
+        {
+          "param": "links[2].cue",
+          "cue": "custom chips compete",
+          "label": "links[2].cue",
+          "scene_time_s": 16.36,
+          "absolute_s": 657.4
+        },
+        {
+          "param": "caption_cue",
+          "cue": "keep moving",
+          "label": "caption_cue",
+          "scene_time_s": 19.77,
+          "absolute_s": 660.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_q4fy26"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s34_outro",
+      "segment": "outro",
+      "type": "map",
+      "start_s": 669.73,
+      "end_s": 698.77,
+      "duration_s": 29.03,
+      "visual_objective": "Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts",
+      "narration": "Nvidia's real advantage was never one chip. It was a stack: hardware, software, developers and suppliers, built over three decades. In an economy hungry for computing power, whoever controls the bottleneck captures the profit. And one of the biggest bottlenecks of all sits on a single island. Next time: why Taiwan matters so much to the global economy. This was The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "real advantage",
+          "label": "title_cue",
+          "scene_time_s": 0.91,
+          "absolute_s": 670.65
+        },
+        {
+          "param": "subtitle_cue",
+          "cue": "It was a stack",
+          "label": "subtitle_cue",
+          "scene_time_s": 3.92,
+          "absolute_s": 673.65
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "single island",
+          "label": "views[1].cue",
+          "scene_time_s": 20.59,
+          "absolute_s": 690.32
+        },
+        {
+          "param": "highlights.TWN.cue",
+          "cue": "single island",
+          "label": "highlights.TWN.cue",
+          "scene_time_s": 20.59,
+          "absolute_s": 690.32
+        },
+        {
+          "param": "markers[0].cue",
+          "cue": "Next time",
+          "label": "Taiwan",
+          "scene_time_s": 22.02,
+          "absolute_s": 691.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026",
+        "natural_earth"
+      ],
+      "transition_out": "end"
+    }
+  ]
+}
