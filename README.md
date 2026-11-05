@@ -32,6 +32,8 @@ original code-drawn illustrations, a world map split into the UAE's emirates, an
 routes and 54 sourced claims. Outline, dossier, scripts, metadata, QC and cost reports are in
 [`docs/episodes/02-dubai/`](docs/episodes/02-dubai). Paid narration: $0.33 of a $0.60 cap.
 
+> **Production standard:** every episode follows [`docs/PRODUCTION_STANDARD.md`](docs/PRODUCTION_STANDARD.md) (animated explanation, narration-driven motion, scene manifest, visual QC, US$1 voice cap, manual publishing).
+
 ## Principles
 
 1. **No invented facts.** Narration and on-screen numbers are placeholders such as

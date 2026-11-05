@@ -1,0 +1,303 @@
+# Documentary (target 11-13 min). Cold open + six acts + conclusion.
+# Every number comes from the dossier (sources.yaml). Nvidia figures are FISCAL years (FY ends late January).
+title: "How Nvidia Took Over the AI Economy"
+logline: >-
+  A graphics-card company became the main supplier of the AI boom by combining parallel chips, a software
+  ecosystem and a global supply chain. Here is how it makes money, and what could break its grip.
+segments:
+  # ---------------------------------------------------------------- ACT 1: the company behind the AI revolution
+  - id: open_network
+    chapter: The supplier
+    narration: >-
+      Every time you ask an AI chatbot a question, a machine somewhere does the math. Behind the apps are the
+      AI labs. Behind the labs are the cloud companies and the data centers. And behind almost all of them,
+      there is one supplier.
+    claims: [customers_fy2026]
+    analysis: true
+    source_note: '"Behind almost all of them" is our characterisation, supported by Nvidia''s scale and customer list in the 10-K.'
+
+  - id: open_value
+    chapter: The supplier
+    narration: >-
+      In October twenty twenty-five, that supplier, Nvidia, became the first company in history to be worth
+      more than {{market_cap_5tn}}.
+    claims: [market_cap_5tn]
+
+  - id: open_revenue
+    chapter: The supplier
+    narration: >-
+      In its last full fiscal year, it sold {{revenue_fy2026}} worth of products, about
+      {{revenue_fy2023.multiple_spoken}} what it sold just three years earlier.
+    claims: [revenue_fy2026, revenue_fy2023]
+
+  - id: open_question
+    chapter: The supplier
+    narration: >-
+      For most of its life, Nvidia was known for video game graphics cards. So how did a gaming company end up
+      at the center of the AI economy? And can it stay there? This is The Hidden Economics.
+    claims: []
+    analysis: true
+    source_note: Framing questions, answered in the acts that follow.
+
+  # ---------------------------------------------------------------- ACT 2: from gaming to AI
+  - id: a2_card
+    chapter: From gaming to AI
+    narration: ""
+    claims: []
+
+  - id: a2_origins
+    chapter: From gaming to AI
+    narration: >-
+      Nvidia was founded {{founded_1993.mid_spoken}} in California by Jensen Huang and two fellow engineers, to make
+      chips for computer graphics. {{gpu_1999|cap}}, it launched what it calls the first GPU, a graphics
+      processing unit. Its business was drawing video games, fast.
+    claims: [founded_1993, gpu_1999]
+    source_note: '"Two fellow engineers" refers to Nvidia''s other co-founders; "what it calls the first GPU" attributes the claim to Nvidia.'
+
+  - id: a2_sketch
+    chapter: From gaming to AI
+    narration: >-
+      Here is the key idea. To draw one frame of a game, a chip has to color millions of pixels, and each
+      pixel can be worked out on its own. So instead of a few very fast workers, a graphics chip uses a huge
+      number of simpler ones, all working at the same time.
+    claims: []
+    analysis: true
+    source_note: General explanation of parallel graphics processing; no figures.
+
+  - id: a2_cpu_gpu
+    chapter: From gaming to AI
+    narration: >-
+      Give both kinds of chip the same job: a pile of small tasks that don't depend on each other. The CPU's
+      few powerful cores work through them in rounds. The GPU gives one to each of its many cores, and finishes
+      in a few steps. But flip the problem. In a step-by-step job, where each step needs the result of the last
+      one, the CPU's faster cores win. Real performance always depends on the workload.
+    claims: []
+    analysis: true
+    source_note: Conceptual illustration of serial versus parallel work; the animation is labelled as not a benchmark.
+
+  - id: a2_alexnet
+    chapter: From gaming to AI
+    narration: >-
+      And training a neural network turns out to look a lot like graphics: enormous piles of multiplications
+      that can run side by side. {{alexnet|cap}}, a network called AlexNet, trained on {{alexnet.gpus_spoken}}
+      Nvidia gaming cards, won a famous image recognition contest. Researchers took notice, and so did Nvidia.
+      {{tensor_2017|cap}}, it launched its first chip with Tensor Cores, built from the ground up for AI.
+    claims: [alexnet, tensor_2017]
+
+  # ---------------------------------------------------------------- ACT 3: the CUDA advantage
+  - id: a3_card
+    chapter: The CUDA advantage
+    narration: ""
+    claims: []
+
+  - id: a3_stack
+    chapter: The CUDA advantage
+    narration: >-
+      But the chip was only half the story. Years before AI took off, {{cuda_2006}}, Nvidia released CUDA,
+      software that let programmers use its graphics chips for general computing. On top of it, Nvidia built
+      libraries for math, for neural networks and for linking chips together. The popular AI frameworks plugged
+      into those libraries. Developers learned them. And applications were built on top. Today Nvidia says
+      {{developers}} developers use CUDA and its other tools.
+    claims: [cuda_2006, developers]
+    source_note: Layer names (cuDNN, cuBLAS, NCCL; PyTorch, TensorFlow, JAX) are examples of the libraries and frameworks described.
+
+  - id: a3_switch
+    chapter: The CUDA advantage
+    narration: >-
+      That creates what economists call switching costs. A company can move to another chip, but first it may
+      have to port and retest its code, tune its performance again, change its tools, and retrain its teams.
+      None of this is impossible. Other chips run AI every day. But every step costs time and money, and that
+      friction is valuable to Nvidia.
+    claims: []
+    analysis: true
+    source_note: Economic explanation of switching costs; it does not claim rivals cannot run AI workloads.
+
+  - id: a3_flywheel
+    chapter: The CUDA advantage
+    narration: >-
+      It is also a network effect. More developers write more software for Nvidia chips. More software attracts
+      more customers. More customers bring in more money for new chips and new tools, which attract even more
+      developers. The wheel feeds itself.
+    claims: []
+    analysis: true
+    source_note: Our description of the network effect; Nvidia's 10-K says its developer base "strengthens our ecosystem".
+
+  # ---------------------------------------------------------------- ACT 4: how Nvidia makes money
+  - id: a4_card
+    chapter: How Nvidia makes money
+    narration: ""
+    claims: []
+
+  - id: a4_revenue
+    chapter: How Nvidia makes money
+    narration: >-
+      Now, the money. Nvidia's year ends in late January, so its fiscal twenty twenty-six is mostly calendar
+      twenty twenty-five. For a decade, revenue grew steadily. Then it exploded: from {{revenue_fy2023}} in
+      fiscal twenty twenty-three, to {{revenue_fy2026}} in fiscal twenty twenty-six.
+    claims: [revenue_series, revenue_fy2023, revenue_fy2026]
+
+  - id: a4_mix
+    chapter: How Nvidia makes money
+    narration: >-
+      What changed is who buys. In fiscal twenty twenty, gaming was the biggest business, and data center sales
+      were {{dc_fy2026.share_2020_spoken}} of the total. By fiscal twenty twenty-six, data center revenue had
+      reached {{dc_fy2026}}. That is {{dc_fy2026.share_spoken}} of everything Nvidia sold.
+    claims: [segments, dc_fy2026]
+
+  - id: a4_customers
+    chapter: How Nvidia makes money
+    narration: >-
+      Those buyers are cloud giants, AI labs and large companies building what Nvidia calls AI factories. And
+      they are concentrated. In fiscal twenty twenty-six, one direct customer accounted for {{customers_fy2026}}
+      of Nvidia's revenue, and another for {{customers_fy2026.second_spoken}}.
+    claims: [customers_fy2026]
+
+  - id: a4_margin
+    chapter: How Nvidia makes money
+    narration: >-
+      Then look at the margin. Gross margin is what is left from each dollar of sales after the cost of making
+      the product. Nvidia's rose from {{gross_margin_series.fy23_spoken}} in fiscal twenty twenty-three to
+      {{gross_margin_series.fy25_spoken}} in fiscal twenty twenty-five. Last year it slipped to
+      {{gross_margin_series.fy26_spoken}}, partly because of a {{gm_fy2026_reason}} charge on chips it could no
+      longer sell to China.
+    claims: [gross_margin_series, gm_fy2026_reason]
+
+  - id: a4_why
+    chapter: How Nvidia makes money
+    narration: >-
+      Why so profitable? Demand ran far ahead of supply. The product was hard to replace. And customers were not
+      just buying chips, but whole systems: processors, networking and software that work together. Networking
+      alone brought in {{dc_fy2026.networking_spoken}} last fiscal year. And Nvidia keeps reinvesting: it says it
+      has spent {{rnd_total}} on research and development since it was founded.
+    claims: [dc_fy2026, supply_risk, rnd_total]
+    analysis: true
+    source_note: Our reading of the drivers; networking revenue is from the FY2026 10-K.
+
+  - id: a4_latest
+    chapter: How Nvidia makes money
+    narration: >-
+      And it is still growing. In the quarter that ended in July twenty twenty-six, Nvidia brought in
+      {{q2fy27}}, up {{q2fy27.growth_spoken}} from a year earlier, and it expected {{q2fy27.guide_spoken}} in
+      the quarter after that.
+    claims: [q2fy27]
+
+  # ---------------------------------------------------------------- ACT 5: the global supply chain
+  - id: a5_card
+    chapter: The global supply chain
+    narration: ""
+    claims: []
+
+  - id: a5_chain
+    chapter: The global supply chain
+    narration: >-
+      Here is the surprising part. Nvidia designs its chips, but it does not make them. Its engineers in
+      California send the designs to {{suppliers}} in Taiwan, which prints them onto silicon wafers. The chips are
+      then joined with stacks of high bandwidth memory from SK Hynix, Micron and Samsung, using an advanced
+      packaging technique called CoWoS. Contract manufacturers assemble them into servers, and the servers ship
+      to data centers around the world.
+    claims: [suppliers]
+
+  - id: a5_bottleneck
+    chapter: The global supply chain
+    narration: >-
+      A chain like this is only as fast as its slowest link. Nvidia's own annual report warns that a shortage of
+      {{supply_risk}} can hold back its sales. When advanced packaging or memory runs short, everything
+      downstream has to wait.
+    claims: [supply_risk]
+
+  - id: a5_arizona
+    chapter: The global supply chain
+    narration: >-
+      Most of this chain is concentrated in Asia, above all in Taiwan. Nvidia is trying to spread it out. In
+      October twenty twenty-five, it showed the first Blackwell wafer made in the United States, at TSMC's factory
+      in {{arizona}}. But reports say those wafers still travel back to Taiwan to be packaged.
+    claims: [arizona, suppliers]
+
+  # ---------------------------------------------------------------- ACT 6: the competition
+  - id: a6_card
+    chapter: The competition
+    narration: ""
+    claims: []
+
+  - id: a6_rivals
+    chapter: The competition
+    narration: >-
+      So who could challenge Nvidia? Its annual report names them: chipmakers like {{competitors_10k}}, Intel and
+      Huawei, and also some of its own biggest customers. Google, Amazon and Microsoft all design AI chips of
+      their own.
+    claims: [competitors_10k]
+
+  - id: a6_amd
+    chapter: The competition
+    narration: >-
+      AMD sells data center GPUs too, with its own open software platform, called ROCm. In calendar twenty
+      twenty-five, AMD's whole data center business, including its server processors, brought in
+      {{amd_dc_2025}}. Nvidia's data center revenue in its latest fiscal year was {{dc_fy2026}}.
+    claims: [amd_dc_2025, dc_fy2026]
+    source_note: Different fiscal periods and scopes; labelled on screen.
+
+  - id: a6_custom
+    chapter: The competition
+    narration: >-
+      Then there are custom chips. Google builds its own TPUs, now in their {{google_tpu.gen_spoken}}. Amazon
+      builds Trainium, and its Project Rainier cluster runs {{aws_trainium}} of them. In late twenty twenty-five,
+      the AI lab Anthropic said it plans to use {{google_tpu}} Google TPUs, while still using Amazon's chips and
+      Nvidia's GPUs.
+    claims: [google_tpu, aws_trainium]
+
+  - id: a6_landscape
+    chapter: The competition
+    narration: >-
+      Why build your own chip? Economics. A general-purpose GPU can run almost any AI workload, has the widest
+      software support, and can be rented from many clouds. A custom accelerator is designed around one company's
+      own workloads. At enormous scale it can be cheaper to run, but it is mostly available inside that company's
+      cloud, and software has to be adapted to it. Different jobs favor different chips. There is no single winner.
+    claims: [competitors_10k, google_tpu, aws_trainium]
+    analysis: true
+    source_note: Qualitative comparison of general-purpose GPUs and custom accelerators; no benchmarks or rankings are implied.
+
+  # ---------------------------------------------------------------- ACT 7: the future
+  - id: a7_card
+    chapter: The future of Nvidia
+    narration: ""
+    claims: []
+
+  - id: a7_capex
+    chapter: The future of Nvidia
+    narration: >-
+      The whole boom rests on one thing: customers spending. Trackers estimate that Amazon, Microsoft, Alphabet and
+      Meta plan to spend {{capex_2026}} on capital projects in twenty twenty-six, much of it on AI data centers.
+    claims: [capex_2026]
+
+  - id: a7_risks
+    chapter: The future of Nvidia
+    narration: >-
+      That is also the risk. If that spending slows, so does Nvidia. Its biggest customers are building rival
+      chips. And when a customer that large pauses its orders, it shows up directly in Nvidia's revenue. Its supply
+      chain runs through a handful of factories in Asia. And export rules have shut much of the
+      China market: Nvidia's latest forecast assumes {{china_guidance}} there at all.
+    claims: [china_guidance, customers_fy2026, suppliers]
+    analysis: true
+    source_note: Risk summary drawn from Nvidia's 10-K risk factors and guidance.
+
+  - id: a7_inference
+    chapter: The future of Nvidia
+    narration: >-
+      The market is shifting, too. A model is trained once, but it runs every time someone uses it. That second
+      part is called inference, and as it grows, the cost of each answer matters more. That is exactly where custom
+      chips compete. Nvidia's response is to keep moving, with new systems every year, like its next platform,
+      {{rubin}}, which it says will cut the cost of inference again.
+    claims: [rubin]
+    analysis: true
+    source_note: Training versus inference explained generally; the Rubin cost claim is Nvidia's own.
+
+  - id: outro
+    chapter: The future of Nvidia
+    narration: >-
+      Nvidia's real advantage was never one chip. It was a stack: hardware, software, developers and suppliers,
+      built over three decades. In an economy hungry for computing power, whoever controls the bottleneck captures
+      the profit. And one of the biggest bottlenecks of all sits on a single island. Next time: why Taiwan matters
+      so much to the global economy. This was The Hidden Economics.
+    claims: [suppliers]
+    analysis: true
+    source_note: Concluding interpretation and next-episode teaser.

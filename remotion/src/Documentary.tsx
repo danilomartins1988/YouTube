@@ -11,15 +11,17 @@ import {FundFlow} from './scenes/FundFlow';
 import {Isometric} from './scenes/Isometric';
 import {Circuit, RaceTrack} from './scenes/RaceScenes';
 import {Whiteboard} from './scenes/Whiteboard';
+import {AINetwork, CpuGpu, Landscape, Stack, StackedColumns, SupplyChain} from './scenes/TechScenes';
 
 export const SCENES: Record<string, React.FC> = {
   act_title: ActTitle, kinetic_text: KineticText, big_counter: BigCounter, line_chart: LineChart, bar_chart: BarChart,
   donut: Donut, timeline: Timeline, compare: Compare, people_ratio: PeopleRatio, end_card: EndCard,
   oil_platform: OilPlatform, map: MapScene, fund_flow: FundFlow, isometric: Isometric,
   race_track: RaceTrack, circuit: Circuit, whiteboard: Whiteboard,
+  ai_network: AINetwork, cpu_gpu: CpuGpu, stack: Stack, supply_chain: SupplyChain, stacked_columns: StackedColumns, landscape: Landscape,
 };
 // Scene types that paint their own full-frame background.
-const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard']);
+const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard', 'supply_chain']);
 
 const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) => {
   const frame = useCurrentFrame();
@@ -44,6 +46,7 @@ const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) =
         </AbsoluteFill>
         <Finish />
         {props.transition === 'race' && <RaceWipe t={t} dur={scene.duration} pal={props.palette} W={width} H={height} />}
+        {props.transition === 'scan' && <ScanWipe t={t} dur={scene.duration} pal={props.palette} W={width} H={height} />}
       </AbsoluteFill>
     </SceneCtx.Provider>
   );
@@ -83,3 +86,21 @@ const RaceWipe: React.FC<{t: number; dur: number; pal: Props['palette']; W: numb
   return els.length ? <AbsoluteFill><svg width={W} height={H}>{els}</svg></AbsoluteFill> : null;
 };
 const lerpN = (a: number, b: number, u: number) => a + (b - a) * u;
+
+/** Tech transition: a thin bright scan line with a soft glow sweeps across the cut (in on entry, out on exit). */
+const ScanWipe: React.FC<{t: number; dur: number; pal: Props['palette']; W: number; H: number}> = ({t, dur, pal, W, H}) => {
+  const inU = t / 0.5, outU = (t - (dur - 0.5)) / 0.5;
+  const at = inU >= 0 && inU < 1 ? 0.5 + inU * 0.5 : outU >= 0 && outU < 1 ? outU * 0.5 : -1;
+  if (at < 0) return null;
+  const x = lerpN(-200, W + 200, at);
+  const col = pal.accent2 || pal.accent;
+  return (
+    <AbsoluteFill>
+      <svg width={W} height={H}>
+        <defs><linearGradient id="scanG" x1="0" x2="1"><stop offset="0%" stopColor={col} stopOpacity={0} /><stop offset="100%" stopColor={col} stopOpacity={0.35} /></linearGradient></defs>
+        <rect x={x - 260} y={0} width={260} height={H} fill="url(#scanG)" />
+        <rect x={x - 3} y={0} width={6} height={H} fill="#FFFFFF" opacity={0.9} />
+      </svg>
+    </AbsoluteFill>
+  );
+};

@@ -16,7 +16,7 @@ type View = {lon: number; lat: number; span: number};
 type Ring = {pts: Float64Array; x0: number; y0: number; x1: number; y1: number};
 const PARSED = new Map<string, Record<string, Ring[]>>();
 /** Parse 'Mx,y x,y ...Z' world-unit paths once per layer into typed arrays with bounding boxes. */
-const parseLayer = (name: string, paths: Record<string, string>) => {
+export const parseLayer = (name: string, paths: Record<string, string>) => {
   const hit = PARSED.get(name);
   if (hit) return hit;
   const out: Record<string, Ring[]> = {};
@@ -37,7 +37,7 @@ const parseLayer = (name: string, paths: Record<string, string>) => {
 
 /** Screen-space path for the current camera: cull off-screen rings, clamp to a margin, drop sub-pixel steps.
  * (Scaling world-unit paths with an SVG transform made Chrome rasterise enormous geometry: ~4 s/frame.) */
-const screenPath = (rings: Ring[], cx: number, cy: number, k: number, ox: number, oy: number, W: number, H: number) => {
+export const screenPath = (rings: Ring[], cx: number, cy: number, k: number, ox: number, oy: number, W: number, H: number) => {
   const m = 60;
   let d = '';
   for (const r of rings) {
@@ -89,7 +89,7 @@ export const MapScene: React.FC = () => {
   const fills: Record<string, string> = {};
   for (const [code, spec] of Object.entries<any>(p.highlights || {})) {
     const u = eio(t, cue(spec, 0.05), 0.9);
-    fills[code] = mix(pal.land, pal[spec.colour || 'accent'] || spec.colour, u * (spec.strength ?? 1));
+    fills[code] = mixHex2(pal.land, pal[spec.colour || 'accent'] || spec.colour, u * (spec.strength ?? 1));
   }
   const routeEls = (p.routes || []).map((r: any, i: number) => {
     const pts = r.points.map((q: [number, number]) => toScreen(q[0], q[1]));
@@ -213,7 +213,7 @@ export const MapScene: React.FC = () => {
   );
 };
 
-const mix = (a: string, b: string, u: number) => {
+export const mixHex2 = (a: string, b: string, u: number) => {
   const p = (h: string) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
   const [x, y] = [p(a), p(b)];
   return '#' + x.map((v, i) => Math.round(v + (y[i] - v) * u).toString(16).padStart(2, '0')).join('');

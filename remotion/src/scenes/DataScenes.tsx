@@ -154,7 +154,7 @@ export const LineChart: React.FC = () => {
         );
       })}
       {years.filter((yr, i) => i === 0 || i === years.length - 1 || yr % (p.year_every || 10) === 0).map((yr) => (
-        <text key={yr} x={X(yr)} y={y1 + 40} textAnchor="middle" fill={pal.muted} fontFamily={font.body} fontSize={22} opacity={a0}>{yr}</text>
+        <text key={yr} x={X(yr)} y={y1 + 40} textAnchor="middle" fill={pal.muted} fontFamily={font.body} fontSize={22} opacity={a0}>{`${p.year_prefix ?? ''}${yr}`}</text>
       ))}
       {series.map((s, si) => {
         const pts = s.points.map((q) => [X(q.year), Y(q.value)]);
@@ -194,8 +194,8 @@ export const LineChart: React.FC = () => {
         return (
           <g key={i} opacity={e}>
             <line x1={ex} x2={ex} y1={y0 - 10} y2={y1} stroke={pal.accent} strokeDasharray="6 8" strokeOpacity={0.7} />
-            <rect x={ex - 6} y={y0 - 64} width={Math.max(160, ev.label.length * 13)} height={44} rx={6} fill={pal.bg2} stroke={pal.accent} strokeOpacity={0.6} />
-            <text x={ex + 8} y={y0 - 34} fill={pal.ink} fontFamily={font.body} fontWeight={600} fontSize={22}>{ev.label}</text>
+            <rect x={ex - 6 + (ev.dx || 0)} y={y0 - 64 + (ev.dy || 0)} width={Math.max(160, ev.label.length * 13)} height={44} rx={6} fill={pal.bg2} stroke={pal.accent} strokeOpacity={0.6} />
+            <text x={ex + 8 + (ev.dx || 0)} y={y0 - 34 + (ev.dy || 0)} fill={pal.ink} fontFamily={font.body} fontWeight={600} fontSize={22}>{ev.label}</text>
           </g>
         );
       })}

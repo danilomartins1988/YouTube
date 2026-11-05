@@ -1,0 +1,398 @@
+# Sources and claims for "How Nvidia Took Over the AI Economy" (Episode 06).
+#
+# Status meanings (see hiddeneco/models.py):
+#   data_derived       computed by the pipeline from a cited dataset (never typed by hand)
+#   human_verified     a named person read the primary source and confirmed it (set verified_by)
+#   source_located     located via research on 2026-11-05; NOT yet read in full by a human
+#   needs_verification no adequate source yet
+#
+# FISCAL YEARS: Nvidia's fiscal year ends on the last Sunday of January. "Fiscal 2026" (FY2026) = the
+# 52 weeks ended 25 January 2026, i.e. mostly calendar 2025. Every Nvidia figure below names its fiscal
+# period; AMD and other companies report on calendar years and are labelled as such.
+#
+# Nvidia annual revenue and gross profit were read from SEC XBRL company facts (10-K values) and from the
+# FY2022, FY2025 and FY2026 Form 10-K "revenue by specialized markets" tables, retrieved 2026-11-05.
+# Nvidia's Q3 FY2027 results (quarter ending Oct 2026) had not been published at research time; the latest
+# reported quarter is Q2 FY2027 (ended 26 July 2026).
+
+sources:
+  # ---------------------------------------------------------------- Nvidia filings
+  - id: nvda_10k_fy2026
+    title: NVIDIA Corporation Form 10-K for fiscal year ended 25 January 2026
+    publisher: NVIDIA Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm
+    published: "2026-02"
+    accessed: "2026-11-05"
+    credit: "NVIDIA 10-K FY2026"
+  - id: nvda_10k_fy2025
+    title: NVIDIA Corporation Form 10-K for fiscal year ended 26 January 2025
+    publisher: NVIDIA Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm
+    published: "2025-02"
+    accessed: "2026-11-05"
+    credit: "NVIDIA 10-K FY2025"
+  - id: nvda_10k_fy2022
+    title: NVIDIA Corporation Form 10-K for fiscal year ended 30 January 2022
+    publisher: NVIDIA Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm
+    published: "2022-03"
+    accessed: "2026-11-05"
+    credit: "NVIDIA 10-K FY2022"
+  - id: nvda_xbrl
+    title: "NVIDIA Corporation - SEC XBRL company facts (Revenues, GrossProfit; annual 10-K values FY2008-FY2026)"
+    publisher: US Securities and Exchange Commission (data.sec.gov)
+    url: https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json
+    accessed: "2026-11-05"
+    kind: dataset
+    license: public-domain
+    credit: "SEC filings (XBRL)"
+  - id: nvda_q4fy26
+    title: NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026 (8-K Ex. 99.1)
+    publisher: NVIDIA Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm
+    published: "2026-02-25"
+    accessed: "2026-11-05"
+    credit: "NVIDIA Q4 FY2026 results"
+  - id: nvda_q2fy27
+    title: NVIDIA Announces Financial Results for Second Quarter Fiscal 2027
+    publisher: NVIDIA Newsroom
+    url: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027
+    published: "2026-08-26"
+    accessed: "2026-11-05"
+    notes: SEC copy https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm
+    credit: "NVIDIA Q2 FY2027 results"
+  - id: alexnet_2012
+    title: ImageNet Classification with Deep Convolutional Neural Networks (Krizhevsky, Sutskever, Hinton; NIPS 2012)
+    publisher: Advances in Neural Information Processing Systems 25
+    url: https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks
+    published: "2012"
+    accessed: "2026-11-05"
+    credit: "Krizhevsky et al. (2012)"
+
+  # ---------------------------------------------------------------- market and supply chain
+  - id: ap_5tn
+    title: Nvidia becomes the first company worth $5 trillion
+    publisher: Associated Press (via The Washington Times)
+    url: https://m.washingtontimes.com/news/2025/oct/29/nvidia-ai-chipmaker-first-5-trillion-company/
+    published: "2025-10-29"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "Associated Press"
+  - id: arizona_wafer
+    title: Nvidia unveils first Blackwell chip wafer made with TSMC in US (Reuters)
+    publisher: The Star (Reuters report)
+    url: https://www.thestar.com.my/tech/tech-news/2025/10/18/nvidia-and-tsmc-unveil-first-blackwell-chip-wafer-made-in-us-axios-reports
+    published: "2025-10-18"
+    accessed: "2026-11-05"
+    kind: secondary
+    notes: Reports note the wafers still go to Taiwan for CoWoS packaging.
+    credit: "Reuters"
+
+  # ---------------------------------------------------------------- competitors
+  - id: amd_fy2025
+    title: AMD Reports Fourth Quarter and Full Year 2025 Financial Results
+    publisher: Advanced Micro Devices (ir.amd.com)
+    url: https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results
+    published: "2026-02-03"
+    accessed: "2026-11-05"
+    credit: "AMD FY2025 results"
+  - id: google_ironwood
+    title: Google Cloud announces general availability of Ironwood, its seventh-generation TPU
+    publisher: insideHPC (report of Google Cloud announcement)
+    url: https://insidehpc.com/2025/11/google-cloud-announces-iga-of-ironwood-tpus-and-axion-vms-for-ai-nference/
+    published: "2025-11"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "Google Cloud (via insideHPC)"
+  - id: anthropic_tpu
+    title: Anthropic expands use of Google Cloud TPUs, targeting up to one million units
+    publisher: Converge Digest (report of Anthropic / Google announcement)
+    url: https://convergedigest.com/anthropic-expands-use-of-google-cloud-tpus-targeting-one-million-units/
+    published: "2025-10-23"
+    accessed: "2026-11-05"
+    kind: secondary
+    notes: Anthropic said it uses Google TPUs, Amazon Trainium and NVIDIA GPUs.
+    credit: "Anthropic / Google (via Converge Digest)"
+  - id: aws_rainier
+    title: AWS activates Project Rainier, an AI compute cluster with nearly 500,000 Trainium2 chips
+    publisher: Converge Digest (report of AWS announcement)
+    url: https://convergedigest.com/aws-activates-project-rainier-data-center-campus/
+    published: "2025-10-29"
+    accessed: "2026-11-05"
+    kind: secondary
+    credit: "AWS (via Converge Digest)"
+  - id: capex_tracker
+    title: "Big Tech AI capex 2026: Amazon, Microsoft, Alphabet and Meta guidance (tracker)"
+    publisher: Statista / company guidance compiled by trackers
+    url: https://www.statista.com/chart/35046/capital-expenditure-of-meta-alphabet-amazon-and-microsoft/
+    published: "2026"
+    accessed: "2026-11-05"
+    kind: secondary
+    notes: Trackers put combined 2026 guidance at roughly $690-760bn depending on date and method.
+    credit: "Company guidance (Statista)"
+  - id: natural_earth
+    title: Natural Earth 1:50m Admin 0 Countries
+    publisher: Natural Earth
+    url: https://www.naturalearthdata.com/downloads/
+    accessed: "2026-11-05"
+    kind: dataset
+    license: public-domain
+    credit: "Natural Earth (public domain)"
+
+claims:
+  # ---------------------------------------------------------------- history
+  - id: founded_1993
+    text: NVIDIA was incorporated in California in April 1993; Jen-Hsun (Jensen) Huang co-founded it and has been CEO since inception.
+    spoken: In 1993
+    display: "1993"
+    value: 1993
+    fields: {mid_spoken: in 1993}
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: gpu_1999
+    text: "NVIDIA's 10-K says its 'invention of the GPU in 1999 sparked the growth of the PC gaming market and redefined computer graphics'."
+    spoken: In 1999
+    display: "1999"
+    value: 1999
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+    verification_note: Company's own description; say "what Nvidia calls the first GPU".
+  - id: cuda_2006
+    text: "NVIDIA introduced CUDA in 2006, opening 'the parallel processing capabilities of our GPU to a broad range of compute-intensive applications' (10-K)."
+    spoken: in 2006
+    display: "2006"
+    value: 2006
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: alexnet
+    text: In 2012 the AlexNet neural network, trained on two NVIDIA GTX 580 GPUs, won the ImageNet image-recognition competition; training took five to six days.
+    spoken: In 2012
+    display: "2012"
+    value: 2012
+    fields: {gpus_spoken: two, days_spoken: five to six days}
+    source_ids: [alexnet_2012, nvda_10k_fy2026]
+    status: source_located
+  - id: tensor_2017
+    text: NVIDIA introduced its first Tensor Core GPU, built for AI, in 2017 (10-K).
+    spoken: in 2017
+    display: "2017"
+    value: 2017
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: developers
+    text: "NVIDIA's FY2026 10-K says there are over 7.5 million developers worldwide using CUDA and its other software tools."
+    spoken: more than 7.5 million
+    display: "7.5M+"
+    value: 7.5
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: rnd_total
+    text: NVIDIA says it has invested over $76.7 billion in research and development since its inception (FY2026 10-K).
+    spoken: more than 76 billion dollars
+    display: "$76.7bn+"
+    value: 76.7
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+
+  # ---------------------------------------------------------------- financials
+  - id: revenue_fy2026
+    text: NVIDIA revenue for fiscal 2026 (year ended 25 Jan 2026) was $215.9 billion, up 65% from $130.5 billion in fiscal 2025.
+    spoken: 215.9 billion dollars
+    display: "$215.9bn"
+    value: 215.9
+    fields: {growth_spoken: 65 percent, growth_display: "+65%", prev_spoken: 130.5 billion dollars, prev_display: "$130.5bn"}
+    source_ids: [nvda_q4fy26, nvda_10k_fy2026]
+    status: source_located
+  - id: revenue_fy2023
+    text: NVIDIA revenue for fiscal 2023 (year ended 29 Jan 2023) was $26.97 billion; fiscal 2026 revenue was about eight times higher (our calculation, 215.9 / 26.97 = 8.0).
+    spoken: 27 billion dollars
+    display: "$27.0bn"
+    value: 27.0
+    fields: {multiple_spoken: eight times, multiple_display: "×8"}
+    source_ids: [nvda_10k_fy2025, nvda_xbrl]
+    status: source_located
+  - id: revenue_series
+    text: "NVIDIA revenue by fiscal year, US$ billion (10-K / XBRL): FY2016 5.0; FY2017 6.9; FY2018 9.7; FY2019 11.7; FY2020 10.9; FY2021 16.7; FY2022 26.9; FY2023 27.0; FY2024 60.9; FY2025 130.5; FY2026 215.9."
+    value:
+      - {code: FY16, name: FY16, value: 5.0}
+      - {code: FY17, name: FY17, value: 6.9}
+      - {code: FY18, name: FY18, value: 9.7}
+      - {code: FY19, name: FY19, value: 11.7}
+      - {code: FY20, name: FY20, value: 10.9}
+      - {code: FY21, name: FY21, value: 16.7}
+      - {code: FY22, name: FY22, value: 26.9}
+      - {code: FY23, name: FY23, value: 27.0}
+      - {code: FY24, name: FY24, value: 60.9}
+      - {code: FY25, name: FY25, value: 130.5}
+      - {code: FY26, name: FY26, value: 215.9}
+    source_ids: [nvda_xbrl]
+    status: source_located
+  - id: segments
+    text: "NVIDIA revenue by market, US$ billion (10-K): FY2020 Data Center 2.98, Gaming 5.52, other 2.42; FY2021 6.70 / 7.76 / 2.22; FY2022 10.61 / 12.46 / 3.84; FY2023 15.01 / 9.07 / 2.90; FY2024 47.53 / 10.45 / 2.95; FY2025 115.19 / 11.35 / 3.96; FY2026 193.74 / 16.04 / 6.16. 'Other' = Professional Visualization + Automotive + OEM and other (our sum)."
+    value:
+      - {label: FY20, total: 10.9, display: "$10.9bn", parts: {dc: 2.98, gaming: 5.52, other: 2.42}}
+      - {label: FY21, total: 16.7, display: "$16.7bn", parts: {dc: 6.70, gaming: 7.76, other: 2.22}}
+      - {label: FY22, total: 26.9, display: "$26.9bn", parts: {dc: 10.61, gaming: 12.46, other: 3.84}}
+      - {label: FY23, total: 27.0, display: "$27.0bn", parts: {dc: 15.01, gaming: 9.07, other: 2.90}}
+      - {label: FY24, total: 60.9, display: "$60.9bn", parts: {dc: 47.53, gaming: 10.45, other: 2.95}}
+      - {label: FY25, total: 130.5, display: "$130.5bn", parts: {dc: 115.19, gaming: 11.35, other: 3.96}}
+      - {label: FY26, total: 215.9, display: "$215.9bn", parts: {dc: 193.74, gaming: 16.04, other: 6.16}}
+    source_ids: [nvda_10k_fy2022, nvda_10k_fy2025, nvda_10k_fy2026]
+    status: source_located
+  - id: dc_fy2026
+    text: "Data Center revenue was $193.7 billion in fiscal 2026 (up 68%), about 90% of total revenue (our calculation: 193.7 / 215.9 = 89.7%); in fiscal 2020 it was $2.98 billion, about 27% (2.98 / 10.92)."
+    spoken: 193.7 billion dollars
+    display: "$193.7bn"
+    value: 193.7
+    fields: {share_spoken: about 90 percent, share_display: "≈ 90%", share_2020_spoken: about a quarter, share_2020_display: "≈ 27%", networking_spoken: 31 billion dollars, networking_display: "$31.4bn"}
+    source_ids: [nvda_10k_fy2026, nvda_10k_fy2022]
+    status: source_located
+  - id: gaming_fy2026
+    text: Gaming revenue was a record $16.0 billion in fiscal 2026, up 41%.
+    spoken: 16 billion dollars
+    display: "$16.0bn"
+    value: 16.0
+    source_ids: [nvda_q4fy26]
+    status: source_located
+  - id: gross_margin_series
+    text: "NVIDIA GAAP gross margin by fiscal year (our calculation from 10-K gross profit / revenue, XBRL): FY2016 56.1%; FY2017 58.8%; FY2018 59.9%; FY2019 61.2%; FY2020 62.0%; FY2021 62.3%; FY2022 64.9%; FY2023 56.9%; FY2024 72.7%; FY2025 75.0%; FY2026 71.1%."
+    value:
+      - code: GM
+        name: Gross margin
+        points:
+          - {year: 2016, value: 56.1}
+          - {year: 2017, value: 58.8}
+          - {year: 2018, value: 59.9}
+          - {year: 2019, value: 61.2}
+          - {year: 2020, value: 62.0}
+          - {year: 2021, value: 62.3}
+          - {year: 2022, value: 64.9}
+          - {year: 2023, value: 56.9}
+          - {year: 2024, value: 72.7}
+          - {year: 2025, value: 75.0}
+          - {year: 2026, value: 71.1}
+    fields: {fy25_spoken: 75 percent, fy25_display: "75.0%", fy26_spoken: 71 percent, fy26_display: "71.1%", fy23_spoken: about 57 percent}
+    source_ids: [nvda_xbrl, nvda_10k_fy2026]
+    status: source_located
+    verification_note: Years on the chart are fiscal years (FY2016 = year ended Jan 2016). FY2024-26 values match the 10-K reported GAAP margins.
+  - id: gm_fy2026_reason
+    text: "NVIDIA says fiscal 2026 gross margin fell as its business moved from Hopper HGX systems to Blackwell full-scale datacenter solutions, and because of a $4.5 billion charge for H20 excess inventory and purchase obligations after new US export licence requirements for China (April 2025)."
+    spoken: 4.5 billion dollar
+    display: "$4.5bn charge"
+    value: 4.5
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: q2fy27
+    text: "For the quarter ended 26 July 2026 (Q2 fiscal 2027) NVIDIA reported revenue of $96.2 billion (up 106% year over year), Data Center revenue of $89.0 billion, a 75.0% gross margin, and guided to about $108 billion for the next quarter, assuming no Data Center compute revenue from China."
+    spoken: 96.2 billion dollars
+    display: "$96.2bn"
+    value: 96.2
+    fields: {dc_spoken: 89 billion dollars, dc_display: "$89.0bn", gm_display: "75.0%", guide_spoken: about 108 billion dollars, guide_display: "≈ $108bn", growth_spoken: 106 percent}
+    source_ids: [nvda_q2fy27]
+    status: source_located
+  - id: customers_fy2026
+    text: In fiscal 2026 sales to one direct customer were 22% of NVIDIA's total revenue and sales to another were 14% (10-K); the customers are not named.
+    spoken: 22 percent
+    display: "22%"
+    value: 22
+    fields: {second_spoken: 14 percent, second_display: "14%", both_display: "36%"}
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: market_cap_5tn
+    text: On 29 October 2025 NVIDIA became the first company to close with a stock market value above $5 trillion.
+    spoken: 5 trillion dollars
+    display: "$5 trillion"
+    value: 5
+    source_ids: [ap_5tn]
+    status: source_located
+
+  # ---------------------------------------------------------------- supply chain
+  - id: suppliers
+    text: "NVIDIA's 10-K: it uses foundries such as TSMC and Samsung to produce its wafers, buys memory from SK Hynix, Micron and Samsung, uses CoWoS technology for packaging, and uses contract manufacturers such as Hon Hai, Wistron and Fabrinet for assembly, testing and packaging; its supply chain is 'mainly concentrated in Asia' while it expands into the US and Latin America."
+    spoken: TSMC
+    display: "TSMC"
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: supply_risk
+    text: "NVIDIA's 10-K warns that 'supply constraints or availability issues with respect to any one component' can have a broader revenue impact because its products are part of a complex data center buildout."
+    spoken: any one component
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: arizona
+    text: In October 2025 NVIDIA and TSMC showed the first Blackwell wafer produced in the United States, at TSMC's Arizona fab; reports say the wafers still go to Taiwan for advanced packaging.
+    spoken: Arizona
+    display: "Oct 2025"
+    source_ids: [arizona_wafer]
+    status: source_located
+
+  # ---------------------------------------------------------------- competition
+  - id: competitors_10k
+    text: "NVIDIA's 10-K lists competitors including AMD, Huawei and Intel, and large cloud companies designing their own AI hardware, such as Alibaba, Alphabet, Amazon, Baidu, Huawei and Microsoft."
+    spoken: AMD
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: amd_dc_2025
+    text: AMD's Data Center segment revenue (EPYC CPUs and Instinct GPUs) was $16.6 billion in calendar 2025, up 32%.
+    spoken: 16.6 billion dollars
+    display: "$16.6bn"
+    value: 16.6
+    source_ids: [amd_fy2025]
+    status: source_located
+    verification_note: Calendar 2025 and includes CPUs; not directly comparable with NVIDIA's fiscal-year Data Center figure.
+  - id: google_tpu
+    text: Google made Ironwood, its seventh-generation TPU, generally available in November 2025; in October 2025 Anthropic said it plans to access up to one million Google TPUs, while continuing to use Amazon Trainium and NVIDIA GPUs.
+    spoken: up to one million
+    display: "up to 1M TPUs"
+    fields: {gen_spoken: seventh-generation}
+    source_ids: [google_ironwood, anthropic_tpu]
+    status: source_located
+  - id: aws_trainium
+    text: In October 2025 AWS activated Project Rainier, a cluster with nearly 500,000 of its own Trainium2 chips, used by Anthropic.
+    spoken: nearly half a million
+    display: "≈ 500,000 Trainium2"
+    source_ids: [aws_rainier]
+    status: source_located
+  - id: capex_2026
+    text: "Trackers of company guidance put 2026 capital spending by Amazon, Microsoft, Alphabet and Meta at roughly $700 billion combined (estimates range from about $690bn to $760bn), much of it for AI data centers."
+    spoken: roughly 700 billion dollars
+    display: "≈ $700bn"
+    value: 700
+    source_ids: [capex_tracker]
+    status: source_located
+    verification_note: Secondary compilation of company guidance; say "roughly" and "estimates".
+  - id: rubin
+    text: "In its Q4 FY2026 results NVIDIA said it unveiled the Rubin platform (six new chips) and claimed up to a 10x reduction in inference token cost compared with Blackwell; AWS, Google Cloud, Microsoft Azure and Oracle Cloud are to be among the first to deploy it."
+    spoken: Rubin
+    display: "Rubin"
+    source_ids: [nvda_q4fy26]
+    status: source_located
+    verification_note: Company performance claim; attribute to NVIDIA.
+  - id: china_guidance
+    text: NVIDIA's outlook for Q3 FY2027 (and earlier for Q1 FY2027) assumes no Data Center compute revenue from China.
+    spoken: no data center compute sales
+    source_ids: [nvda_q2fy27, nvda_q4fy26]
+    status: source_located
+  - id: revenue_columns
+    text: "Same series as revenue_series (NVIDIA revenue by fiscal year, US$ billion, 10-K / XBRL), in column-chart form."
+    value:
+      - {label: FY16, total: 5.0, display: "$5.0bn", parts: {total: 5.0}}
+      - {label: FY17, total: 6.9, display: "$6.9bn", parts: {total: 6.9}}
+      - {label: FY18, total: 9.7, display: "$9.7bn", parts: {total: 9.7}}
+      - {label: FY19, total: 11.7, display: "$11.7bn", parts: {total: 11.7}}
+      - {label: FY20, total: 10.9, display: "$10.9bn", parts: {total: 10.9}}
+      - {label: FY21, total: 16.7, display: "$16.7bn", parts: {total: 16.7}}
+      - {label: FY22, total: 26.9, display: "$26.9bn", parts: {total: 26.9}}
+      - {label: FY23, total: 27.0, display: "$27.0bn", parts: {total: 27.0}}
+      - {label: FY24, total: 60.9, display: "$60.9bn", parts: {total: 60.9}}
+      - {label: FY25, total: 130.5, display: "$130.5bn", parts: {total: 130.5}}
+      - {label: FY26, total: 215.9, display: "$215.9bn", parts: {total: 215.9}}
+    source_ids: [nvda_xbrl]
+    status: source_located
+  - id: customer_split
+    text: "FY2026 revenue split (10-K): direct customer A 22%, direct customer B 14%, all other customers 64% (our calculation: 100 - 22 - 14)."
+    value:
+      - {label: "Direct customer A", value: 22}
+      - {label: "Direct customer B", value: 14}
+      - {label: "All other customers", value: 64}
+    source_ids: [nvda_10k_fy2026]
+    status: source_located

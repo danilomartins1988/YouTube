@@ -59,7 +59,7 @@ const REVENUE_STROKES: Stroke[] = [
 export const Whiteboard: React.FC = () => {
   const {t, W, H, pal, font, scene, cue} = useCtx();
   const p = scene.params;
-  const kind = p.drawing || 'car';
+  const kind = p.drawing || (p.strokes ? 'custom' : 'car');
   const strokes: Stroke[] = useMemo(() => (kind === 'car' ? CAR_STROKES(560, 760, 1.25)
     : kind === 'circuit' ? [{d: CIRCUIT, w: 10, speed: 650}]
       : kind === 'revenue' ? REVENUE_STROKES : (p.strokes || [])), [kind, p.strokes]);
@@ -172,7 +172,7 @@ export const Whiteboard: React.FC = () => {
       {hand && handOut < 1 && <g opacity={1 - handOut}><Hand x={hand[0]} y={hand[1]} tilt={-8 + Math.sin(t * 6) * 2} /></g>}
       {!hand && handOut < 1 && t < doneT + 0.6 && t > scene.lead && <g opacity={1 - handOut}><Hand x={lastPt[0]} y={lastPt[1]} /></g>}
       {p.caption && (
-        <text x={W / 2} y={H - 130} textAnchor="middle" fill={transform > 0.5 ? pal.ink : '#1A1C22'} fontFamily={font.display} fontWeight={800}
+        <text x={W / 2} y={p.caption_y || H - 130} textAnchor="middle" fill={transform > 0.5 ? pal.ink : '#1A1C22'} fontFamily={font.display} fontWeight={800}
           fontSize={48} opacity={eo(t, cue(p.caption_cue, 0.85), 0.5)}>{p.caption}</text>
       )}
     </svg>

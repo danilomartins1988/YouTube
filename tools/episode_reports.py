@@ -38,7 +38,7 @@ def loudness(path: Path) -> str:
 
 
 def black_or_frozen(path: Path) -> tuple[str, str]:
-    err = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-vf", "blackdetect=d=1.0:pix_th=0.05,freezedetect=n=0.002:d=6",
+    err = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-vf", "blackdetect=d=1.0:pix_th=0.05,freezedetect=n=0.002:d=5",
                           "-an", "-f", "null", "-"], capture_output=True, text=True).stderr
     blacks = re.findall(r"black_start:([\d.]+) black_end:([\d.]+)", err)
     freezes = re.findall(r"freeze_start: ([\d.]+)", err)
@@ -103,7 +103,7 @@ def main() -> None:
          f"{sync['cues']} cues; median cue-start offset {sync['median']:.2f} s, p90 {sync['p90']:.2f} s; "
          f"{sync['voice_captioned']:.0%} of speech captioned"),
         ("No black gaps (>1 s)", blacks == "none", blacks),
-        ("No frozen picture (>6 s)", freezes == "none", freezes),
+        ("No frozen picture (>5 s)", freezes == "none", freezes),
         ("Licensed assets only", not any(i["category"] == "licensing" and i["severity"] == "error" for i in qc.get("issues", [])),
          "every scene asset is on the licence allowlist (assets/manifest.yaml)"),
     ]

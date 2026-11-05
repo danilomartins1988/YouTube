@@ -36,7 +36,7 @@ export type Props = {
   palette: Palette;
   fonts: {display: string; body: string};
   brand: string;
-  transition?: 'fade' | 'race';
+  transition?: 'fade' | 'race' | 'scan';
   background?: 'grid' | 'speed';
   scenes: SceneSpec[];
   geo?: Record<string, {view: [number, number, number, number]; paths: Record<string, string>; labels?: Record<string, [number, number]>}>;

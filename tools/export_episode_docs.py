@@ -35,6 +35,12 @@ DESCRIBE = {
     "isometric": "Isometric diorama builds itself: objects rise into place and keep moving (boats bob, smoke drifts, turbines spin)",
     "people_ratio": "People icons recolour to show a changing ratio",
     "end_card": "Closing words land; brand line draws",
+    "ai_network": "Ecosystem graph assembles group by group (apps, labs, clouds, data centers); packets flow; the shared supplier at the centre is revealed",
+    "cpu_gpu": "CPU vs GPU: a pool of independent tasks flies into a few big cores (rounds) vs many small cores (one step); then a step-by-step chain shows the opposite trade-off",
+    "stack": "Layered software ecosystem builds bottom-up with data pulses; optional developer counter; switching-cost panel fills item by item",
+    "supply_chain": "World map with camera moves: supply stages light up in order, packets flow along arcs, process strip tracks the stage; optional bottleneck chokes everything downstream",
+    "stacked_columns": "Fiscal-year columns grow chronologically by business segment, then morph into a 100% share view",
+    "landscape": "Competitive matrix: a cursor selects each dimension and cells type in; then options slide onto a conceptual flexibility-vs-specialisation axis",
 }
 
 
