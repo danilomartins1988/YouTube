@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | output/norway_documentary.mp4 (131.7 MB) |
+| File exists | PASS | output/norway_documentary.mp4 (182.1 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -10,7 +10,7 @@
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 275 cues; median cue-start offset 0.05 s, p90 0.39 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>6 s) | FAIL | 95.2s, 155.8s, 176.8s, 267.9s, 294.7s, 386.8s, 462.2s, 475.4s, 512.6s, 531.5s, 570.6s, 605.3s, 623.0s |
+| No frozen picture (>6 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
@@ -22,9 +22,9 @@
 # QC report: why-norway-is-so-rich / documentary (long_16x9)
 
 - Runtime: **654.7 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 131.7 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 182.1 MB
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Errors: **0**, warnings: **54**
+- Errors: **0**, warnings: **29**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
@@ -59,31 +59,6 @@
 - [WARNING] (sources) Number word 'five' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'third' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (render) Picture static for >4 s from 96.07s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 156.23s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 177.00s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 187.50s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 192.50s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 197.87s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 230.13s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 267.97s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 278.30s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 289.60s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 294.80s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 336.63s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 342.20s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 387.20s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 464.20s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 475.47s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 483.90s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 493.50s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 497.93s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 512.40s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 520.33s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 531.40s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 570.80s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 605.50s (pacing?)
-- [WARNING] (render) Picture static for >4 s from 624.90s (pacing?)
 
 ## Publish blockers - claims needing human verification
 
