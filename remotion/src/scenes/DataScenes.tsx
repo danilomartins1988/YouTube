@@ -389,6 +389,7 @@ export const Compare: React.FC = () => {
             {glow > 0 && <ellipse cx={cx} cy={420} rx={260} ry={110} fill={pal.accent} opacity={0.08 + 0.05 * Math.sin(t * 4)} />}
             <text x={cx} y={330} textAnchor="middle" fill={pal.muted} fontFamily={font.body} fontWeight={600} fontSize={28} letterSpacing={4}>{String(s.kicker || '').toUpperCase()}</text>
             <text x={cx} y={460} textAnchor="middle" fill={hl ? pal.accent : pal.ink} fontFamily={font.display} fontWeight={700}
+              opacity={eo(t, at - 0.15, 0.3)}
               fontSize={Math.min(150, 1100 / sides.length / Math.max(3, String(s.value).length) * 1.7)}>{countDisplay(String(s.value), eo(t, at, 1.2))}</text>
             <text x={cx} y={530} textAnchor="middle" fill={pal.ink} fontFamily={font.body} fontSize={34}>{s.label}</text>
             {barH > 0 && <rect x={cx - 70} y={930 - barH * eo(t, at + 0.2, 1.0)} width={140} height={barH * eo(t, at + 0.2, 1.0)} rx={6} fill={hl ? pal.accent : pal.muted} opacity={0.85} />}
