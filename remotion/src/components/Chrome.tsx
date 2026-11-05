@@ -67,23 +67,18 @@ export const Chrome: React.FC = () => {
   );
 };
 
-/** Subtle film grain + vignette for a filmic finish (deterministic per frame). */
+/** Vignette for a filmic finish. (Per-frame SVG turbulence grain was removed: it dominated render time.) */
 export const Finish: React.FC = () => {
-  const {W, H, frame} = useCtx();
+  const {W, H} = useCtx();
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
       <svg width={W} height={H} style={{position: 'absolute'}}>
         <defs>
-          <filter id="grain">
-            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed={frame % 7} />
-            <feColorMatrix type="saturate" values="0" />
-          </filter>
           <radialGradient id="vig" cx="50%" cy="50%" r="70%">
             <stop offset="60%" stopColor="#000" stopOpacity={0} />
             <stop offset="100%" stopColor="#000" stopOpacity={0.45} />
           </radialGradient>
         </defs>
-        <rect width={W} height={H} filter="url(#grain)" opacity={0.035} />
         <rect width={W} height={H} fill="url(#vig)" />
       </svg>
     </AbsoluteFill>

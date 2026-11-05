@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import {easeBack, eio, eo, lerp, prog, useCtx} from '../lib/anim';
 import {RiseText} from '../components/Chrome';
 import {useGeo} from '../lib/geo';
@@ -13,6 +13,51 @@ export const merc = (lon: number, lat: number): [number, number] => {
 
 type View = {lon: number; lat: number; span: number};
 
+type Ring = {pts: Float64Array; x0: number; y0: number; x1: number; y1: number};
+const PARSED = new Map<string, Record<string, Ring[]>>();
+/** Parse 'Mx,y x,y ...Z' world-unit paths once per layer into typed arrays with bounding boxes. */
+const parseLayer = (name: string, paths: Record<string, string>) => {
+  const hit = PARSED.get(name);
+  if (hit) return hit;
+  const out: Record<string, Ring[]> = {};
+  for (const [code, d] of Object.entries(paths)) {
+    out[code] = d.split('M').filter(Boolean).map((r) => {
+      const nums = r.replace('Z', '').trim().split(/[ ,]/).map(Number);
+      const pts = new Float64Array(nums);
+      let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+      for (let i = 0; i < pts.length; i += 2) {
+        x0 = Math.min(x0, pts[i]); x1 = Math.max(x1, pts[i]); y0 = Math.min(y0, pts[i + 1]); y1 = Math.max(y1, pts[i + 1]);
+      }
+      return {pts, x0, y0, x1, y1};
+    });
+  }
+  PARSED.set(name, out);
+  return out;
+};
+
+/** Screen-space path for the current camera: cull off-screen rings, clamp to a margin, drop sub-pixel steps.
+ * (Scaling world-unit paths with an SVG transform made Chrome rasterise enormous geometry: ~4 s/frame.) */
+const screenPath = (rings: Ring[], cx: number, cy: number, k: number, ox: number, oy: number, W: number, H: number) => {
+  const m = 60;
+  let d = '';
+  for (const r of rings) {
+    const sx0 = (r.x0 - cx) * k + ox, sx1 = (r.x1 - cx) * k + ox, sy0 = (r.y0 - cy) * k + oy, sy1 = (r.y1 - cy) * k + oy;
+    if (sx1 < -m || sx0 > W + m || sy1 < -m || sy0 > H + m) continue;
+    if ((sx1 - sx0) < 0.8 && (sy1 - sy0) < 0.8) continue;
+    let lx = NaN, ly = NaN, n = 0, seg = '';
+    for (let i = 0; i < r.pts.length; i += 2) {
+      let x = (r.pts[i] - cx) * k + ox, y = (r.pts[i + 1] - cy) * k + oy;
+      x = x < -m ? -m : x > W + m ? W + m : x;
+      y = y < -m ? -m : y > H + m ? H + m : y;
+      if (n && Math.abs(x - lx) + Math.abs(y - ly) < 1.2) continue;
+      seg += (n ? ' ' : 'M') + x.toFixed(1) + ',' + y.toFixed(1);
+      lx = x; ly = y; n++;
+    }
+    if (n >= 3) d += seg + 'Z';
+  }
+  return d;
+};
+
 /**
  * Camera-driven vector map. Countries are pre-projected paths; the camera interpolates between views
  * (optionally keyed to narration cues). Layers: highlighted countries, field markers with pulses,
@@ -23,6 +68,7 @@ export const MapScene: React.FC = () => {
   const {t, W, H, pal, font, scene, cue} = useCtx();
   const p = scene.params;
   const geo = useGeo(p.geo || 'europe');
+  const rings = useMemo(() => parseLayer(p.geo || 'europe', geo.paths), [geo, p.geo]);
   const views: (View & {cue?: any; at?: number})[] = p.views || [p.start_view, p.end_view].filter(Boolean);
   // camera: hop between successive views, each move eased over `move` seconds
   let v: View = views[0];
@@ -138,11 +184,10 @@ export const MapScene: React.FC = () => {
   return (
     <svg width={W} height={H}>
       <rect width={W} height={H} fill={pal.bg} />
-      <g transform={`translate(${W * (p.anchor_x ?? 0.5)} ${H * (p.anchor_y ?? 0.52)}) scale(${k}) translate(${-cx} ${-cy})`}>
-        {Object.entries(geo.paths).map(([code, d]) => (
-          <path key={code} d={d} fill={fills[code] || pal.land} stroke={pal.border} strokeWidth={1.1} vectorEffect="non-scaling-stroke" />
-        ))}
-      </g>
+      {Object.entries(rings).map(([code, rs]) => {
+        const d = screenPath(rs, cx, cy, k, W * (p.anchor_x ?? 0.5), H * (p.anchor_y ?? 0.52), W, H);
+        return d ? <path key={code} d={d} fill={fills[code] || pal.land} stroke={pal.border} strokeWidth={1.1} /> : null;
+      })}
       {labelEls}
       {routeEls}
       {arcEls}

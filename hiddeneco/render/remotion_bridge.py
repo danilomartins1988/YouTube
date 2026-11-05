@@ -65,7 +65,7 @@ def render_video(props: dict, work: Path, out_mp4: Path, concurrency: int = 4, c
     props_path.write_text(json.dumps(props), encoding="utf-8")
     cmd = ["npx", "remotion", "render", "src/index.ts", "Documentary", str(out_mp4.resolve()),
            f"--props={props_path.resolve()}", "--codec=h264", f"--crf={crf}", "--muted", "--pixel-format=yuv420p",
-           f"--concurrency={concurrency}", "--log=error", "--timeout=120000"]
+           f"--concurrency={concurrency}", "--log=error", "--timeout=120000", "--gl=angle"]
     if frames:
         cmd.append(f"--frames={frames}")
     b = browser_executable()
