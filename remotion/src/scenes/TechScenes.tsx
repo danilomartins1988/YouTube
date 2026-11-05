@@ -428,7 +428,7 @@ export const StackedColumns: React.FC = () => {
   const x0 = 220, x1 = W - 160, yb = H - 190, top = 310;
   const maxV = p.y_max || Math.max(...years.map((y) => y.total));
   const colW = (x1 - x0) / years.length;
-  const growAt = cue(p.grow_cue, 0.05);
+  const growAt = Math.min(cue(p.grow_cue, 0.05), scene.lead + 0.8);
   const step = p.step_seconds || 0.55;
   const mixU = p.mix_cue ? eio(t, cue(p.mix_cue, 0.75), 1.6) : 0;
   const sc = (v: number) => ((yb - top) * v) / maxV;

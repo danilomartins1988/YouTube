@@ -90,9 +90,11 @@ export const BigCounter: React.FC = () => {
   const {t, pal, font, scene, cue, W, H} = useCtx();
   const p = scene.params;
   const start = cue(p.cue, 0.1);
-  const u = p.count === false ? (t >= start - 0.2 ? 1 : 0) : eo(t, start, 1.6);
+  // the count starts early (no empty opening) and lands on the moment the number is spoken
+  const s0 = Math.min(start, scene.lead + 0.8);
+  const u = p.count === false ? (t >= start - 0.2 ? 1 : 0) : eo(t, s0, Math.max(1.6, start - s0 + 0.6));
   const a = eo(t, Math.min(start - 0.3, scene.lead + 0.2), 0.5);
-  const shown = t >= start - 0.2 ? countDisplay(String(p.display), u) : '';
+  const shown = t >= Math.min(start - 0.2, s0) ? countDisplay(String(p.display), u) : '';
   const cx = W / 2, cy = H / 2 - 40;
   const ticks = Array.from({length: 72}, (_, i) => {
     const ang = (i / 72) * Math.PI * 2 + t * 0.45;
@@ -134,7 +136,7 @@ export const LineChart: React.FC = () => {
   const X = (yr: number) => x0 + ((x1 - x0) * (yr - years[0])) / (years[years.length - 1] - years[0]);
   const Y = (v: number) => y1 - ((y1 - y0) * v) / vmax;
   const a0 = eo(t, 0.2, 0.6);
-  const start = cue(p.cue, 0.05);
+  const start = Math.min(cue(p.cue, 0.05), scene.lead + 0.8);
   const u = eio(t, start, p.draw_seconds || Math.max(3, scene.speech * 0.85));
   const steps = p.y_steps || 5;
   const fmt = (v: number) => `${p.axis_prefix ?? ''}${fmtNum(v / (p.axis_divisor || 1), p.axis_decimals || 0)}${p.axis_suffix ?? ''}`;
