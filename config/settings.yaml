@@ -104,6 +104,12 @@ licensing:
     - CMU-ARCTIC                # Festival slt voice data: free use incl. commercial, keep notice
   attribution_required: [CC-BY-4.0]
 
+# Editorial rule set by the editor on 2026-11-05: from Episode 05 on, every monetary figure in narration and on
+# screen is in US dollars (convert local-currency figures with an official, dated exchange rate and cite it).
+# Projects made before the rule opt out with `currency_exempt: true` in project.yaml.
+editorial:
+  display_currency: USD
+
 qc:
   narration_wpm_min: 120
   narration_wpm_max: 185

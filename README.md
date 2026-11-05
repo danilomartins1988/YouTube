@@ -47,7 +47,10 @@ routes and 54 sourced claims. Outline, dossier, scripts, metadata, QC and cost r
 5. **Humans decide.** `approve` needs a named reviewer, a clean QC report and no unverified
    claims. The approval is tied to the video's SHA-256 hash. `publish` only assembles
    platform folders and never uploads.
-6. **Costs and secrets are controlled.** Paid providers refuse to run without `--allow-paid`.
+6. **Money is shown in US dollars.** From Episode 05 on, every amount in narration and on screen is in US$
+   (local-currency figures are converted with an official, dated exchange rate that is cited). QC fails a
+   build that shows another currency; earlier episodes are marked `currency_exempt`.
+7. **Costs and secrets are controlled.** Paid providers refuse to run without `--allow-paid`.
    Unknown prices are reported as "unknown", never guessed. Keys live only in environment
    variables or `.env`, which git ignores.
 

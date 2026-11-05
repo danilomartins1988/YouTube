@@ -220,6 +220,27 @@ def check_output(paths: ProjectPaths, timed: list[TimedScene], fmt: dict) -> tup
     return out, facts
 
 
+FOREIGN_CURRENCY = re.compile(r"(?<![A-Za-z])(NOK|SEK|DKK|EUR|GBP|CHF|AED|JPY|CNY|INR|BRL|CAD|AUD)(?![A-Za-z])|[€£¥₹]|"
+                              r"\b(kroner|krone|krona|kronor|euros?|pounds? sterling|francs?|dirhams?|yen|yuan|rupees?|reais|real)\b",
+                              re.IGNORECASE)
+
+
+def check_currency(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
+    """Editorial rule (settings.editorial.display_currency): money is shown and spoken in US dollars."""
+    project = yaml.safe_load((paths.project_dir / "project.yaml").read_text())
+    if project.get("currency_exempt") or settings().get("editorial", {}).get("display_currency", "USD") != "USD":
+        return []
+    out = []
+    for t in timed:
+        on_screen = json.dumps(t.scene.params, ensure_ascii=False)
+        for where, text in (("narration", t.narration), ("on-screen text", on_screen)):
+            m = FOREIGN_CURRENCY.search(text)
+            if m:
+                out.append(_issue("currency", "error", f"Scene {t.scene.id}: non-USD amount in {where} ('{m.group(0)}'); "
+                                  "convert to US dollars with a cited official exchange rate"))
+    return out
+
+
 def run_qc(paths: ProjectPaths, deliverable: Deliverable, fmt: dict, script: Script, dossier: Dossier,
            storyboard: Storyboard, timed: list[TimedScene]) -> dict:
     total = sum(t.duration for t in timed)
@@ -231,6 +252,7 @@ def run_qc(paths: ProjectPaths, deliverable: Deliverable, fmt: dict, script: Scr
     issues += src
     issues += check_licensing(storyboard, dossier)
     issues += check_distinctiveness(paths, storyboard)
+    issues += check_currency(paths, timed)
     out_issues, facts = check_output(paths, timed, fmt)
     issues += out_issues
     errors = [i for i in issues if i["severity"] == "error"]

@@ -5,6 +5,8 @@ language: en
 # narration, timing, audio, QC and packaging (hiddeneco/render/remotion_bridge.py).
 renderer: remotion
 remotion_geo: [europe, world]
+# Made before the US-dollar rule (2026-11-05); keeps its local-currency figures.
+currency_exempt: true
 style:
   name: nordic-ledger
   palette:            # dark navy, white, restrained gold (brief)

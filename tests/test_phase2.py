@@ -127,3 +127,11 @@ def test_description_never_exceeds_youtube_limit():
     assert len(text) <= DESCRIPTION_LIMIT and overflow and "pinned comment" in text
     short, overflow2 = fit_description(["Intro"], src[:3], [""])
     assert not overflow2 and "A fairly long source title number 0" in short
+
+
+def test_currency_rule_detects_non_usd_amounts():
+    from hiddeneco.qc import FOREIGN_CURRENCY
+    for bad in ["NOK 22,014bn", "worth 22 trillion kroner", "AED 917bn", "€3bn", "1.2 billion euros", "dirhams"]:
+        assert FOREIGN_CURRENCY.search(bad), bad
+    for ok in ["$24.4bn", "US$ 3 trillion", "about 3.9 million dollars", "Norway", "Euronext", "real return", "real GDP"]:
+        assert not FOREIGN_CURRENCY.search(ok), ok
