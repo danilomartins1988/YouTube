@@ -38,7 +38,7 @@ const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) =
   const t = scene.preview_t ?? frame / fps; // preview_t: render one representative frame (layout checks)
   const Comp = SCENES[scene.type];
   if (!Comp) throw new Error(`Unknown scene type ${scene.type}`);
-  const ctx = {t, frame, fps, W: width, H: height, pal: props.palette, font: props.fonts, scene, cue: makeCue(scene)};
+  const ctx = {t, frame, fps, W: width, H: height, pal: props.palette, font: props.fonts, scene, cue: makeCue(scene), hud: props.hud};
   // transitions: soft fade + slight push at both ends of every scene
   const bare = BARE.has(scene.type);
   const fin = bare ? 1 : eio(t, 0, 0.45), fout = bare ? 1 : eio(scene.duration - t, 0, 0.4);

@@ -60,6 +60,8 @@ export const Chrome: React.FC = () => {
   const a = eo(t, 0.15, 0.5);
   const chapter = scene.params.chapter ?? scene.chapter;
   const credits = scene.credits.filter(Boolean);
+  const {hud} = useCtx();
+  const hudOn = !!(hud && scene.params.mission && !scene.params.no_chrome);
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
       <svg width={W} height={H} style={{position: 'absolute'}}>
@@ -71,16 +73,77 @@ export const Chrome: React.FC = () => {
             </text>
           </g>
         ) : null}
+        {hudOn ? <MissionHud a={a} /> : (
         <text x={W - 120} y={100} textAnchor="end" fill={pal.muted} fontFamily={font.body} fontWeight={600} fontSize={18} letterSpacing={4} opacity={0.8 * a}>
           THE HIDDEN ECONOMICS
-        </text>
+        </text>)}
         {credits.length ? (
           <text x={120} y={H - 60} fill={pal.muted} fontFamily={font.body} fontSize={20} opacity={0.9 * a}>
             {'Source: ' + credits.join('  ·  ')}
           </text>
         ) : null}
       </svg>
+      {hudOn && scene.params.stamp ? <MissionStamp /> : null}
     </AbsoluteFill>
+  );
+};
+
+/**
+ * Game HUD (top right): "MISSION 2/5", one pip per mission (done = filled with a check, current = pulsing
+ * ring, next = outline) and the current objective. A scene with params.stamp completes its mission at the stamp.
+ */
+const stampAt = (ctx: ReturnType<typeof useCtx>) => ctx.scene.params.stamp ? ctx.cue(ctx.scene.params.stamp_cue ?? 0.55) : Infinity;
+const MissionHud: React.FC<{a: number}> = ({a}) => {
+  const ctx = useCtx();
+  const {t, W, pal, font, scene, hud} = ctx;
+  const n = hud!.missions.length, m = Number(scene.params.mission);
+  const doneNow = t >= stampAt(ctx) || scene.params.mission_done ? m : m - 1;               // missions completed at this moment
+  const allDone = m > n;
+  const right = W - 120, gap = 34, x0 = right - (n - 1) * gap;
+  const obj = allDone ? 'ALL OBJECTIVES COMPLETE' : (hud!.objectives?.[m - 1] ? 'OBJECTIVE · ' + hud!.objectives[m - 1] : hud!.missions[m - 1]);
+  const pulse = 0.5 + 0.5 * Math.sin(t * 4);
+  return (
+    <g opacity={a}>
+      <text x={x0 - 26} y={92} textAnchor="end" fill={allDone || doneNow >= m ? pal.accent3 || pal.accent : pal.accent} fontFamily={font.body} fontWeight={800} fontSize={22} letterSpacing={3}>
+        {allDone ? 'MISSIONS ' + n + '/' + n : 'MISSION ' + m + '/' + n}
+      </text>
+      {Array.from({length: n}, (_, i) => {
+        const cx = x0 + i * gap, done = i < doneNow || allDone, cur = !allDone && i === m - 1 && !done;
+        return <g key={i}>
+          {cur && <circle cx={cx} cy={84} r={14 + 3 * pulse} fill="none" stroke={pal.accent} strokeOpacity={0.25 + 0.35 * pulse} strokeWidth={2} />}
+          <circle cx={cx} cy={84} r={10} fill={done ? pal.accent3 || pal.accent : cur ? pal.accent : 'none'} fillOpacity={done ? 0.95 : cur ? 0.35 : 0}
+            stroke={done ? pal.accent3 || pal.accent : cur ? pal.accent : pal.muted} strokeWidth={2.5} />
+          {done && <path d={`M ${cx - 5} ${84} L ${cx - 1} ${88} L ${cx + 6} ${79}`} fill="none" stroke={pal.bg} strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" />}
+        </g>;
+      })}
+      <text x={right + 10} y={128} textAnchor="end" fill={pal.muted} fontFamily={font.body} fontWeight={600} fontSize={17} letterSpacing={2.5}>
+        {String(obj).toUpperCase()}
+      </text>
+    </g>
+  );
+};
+
+/** "MISSION n COMPLETE" stamp: slams in at the stamp cue, slightly rotated, with a ring burst. */
+const MissionStamp: React.FC = () => {
+  const ctx = useCtx();
+  const {t, W, H, pal, font, scene} = ctx;
+  const at = stampAt(ctx);
+  if (t < at) return null;
+  const u = Math.min(1, (t - at) / 0.35);
+  const sc = 1 + 1.4 * Math.pow(1 - u, 3);                       // big -> 1 with a hard landing
+  const burst = Math.min(1, (t - at) / 0.8);
+  const col = pal.accent3 || pal.accent;
+  const label = String(scene.params.stamp).toUpperCase();
+  const w = Math.max(520, label.length * 30 + 120), cx = W / 2, cy = scene.params.stamp_y ?? H - 210;
+  return (
+    <svg width={W} height={H} style={{position: 'absolute'}}>
+      <circle cx={cx} cy={cy} r={60 + 320 * burst} fill="none" stroke={col} strokeWidth={4} strokeOpacity={0.5 * (1 - burst)} />
+      <g transform={`translate(${cx} ${cy}) rotate(-5) scale(${sc})`} opacity={u}>
+        <rect x={-w / 2} y={-52} width={w} height={104} rx={10} fill={pal.bg} fillOpacity={0.82} stroke={col} strokeWidth={6} />
+        <rect x={-w / 2 + 12} y={-40} width={w - 24} height={80} rx={6} fill="none" stroke={col} strokeWidth={2} strokeOpacity={0.6} />
+        <text x={0} y={16} textAnchor="middle" fill={col} fontFamily={font.display} fontWeight={800} fontSize={46} letterSpacing={6}>{label}</text>
+      </g>
+    </svg>
   );
 };
 

@@ -118,6 +118,10 @@ Documentaries are animated explanations, not narrated slideshows. Use the reusab
 - **Pacing.** Alternate macro context with detailed mechanism. Build curiosity, pause before the reveals, and cut redundant explanation.
 - **Balance.** Cover both strengths and risks. Never make it a corporate advert.
 - **Ending.** Close on a memorable economic insight and a natural link to the next episode.
+- **Teaser rule (from 2026-11-06, user decision).** The closing teaser is **generic** ("Next time, we follow the money
+  behind another hidden link of the world economy") unless the user has explicitly chosen the next topic. Never
+  promise a specific next episode on Claude's own initiative. (Episode 08 is the exception: its teaser, undersea
+  cables, was kept and became Episode 09.)
 
 ## 3. Facts and money
 

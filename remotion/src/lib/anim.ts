@@ -34,6 +34,8 @@ export type Ctx = {
   pal: Palette;
   font: {display: string; body: string};
   scene: SceneSpec;
+  /** optional game HUD (project style.hud): mission objectives */
+  hud?: {missions: string[]; objectives?: string[]};
   /** seconds at which a cue phrase is spoken; falls back to fraction of speech */
   cue: (spec: any, fallback?: number) => number;
 };

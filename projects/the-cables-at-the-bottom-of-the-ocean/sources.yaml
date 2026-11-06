@@ -1,0 +1,245 @@
+# Sources and claims for "The Cables at the Bottom of the Ocean That Carry the Internet" (Episode 09).
+# Every claim was read in its source on 2026-11-06 by an AI fact-check (quotes in docs/episodes/09-cables/FACT_CHECK.md).
+# Status stays source_located: the channel rule requires a named human reviewer before publishing.
+# All money in the sources is already in US dollars.
+sources:
+  - id: itu_2025
+    title: "ITU press release: International Submarine Cable Resilience Summit, Abuja (more than 99 per cent of international data traffic; about 500 cables; over 1.7 million km)"
+    publisher: International Telecommunication Union (ITU)
+    url: https://www.itu.int/en/mediacentre/Pages/PR-2025-02-27-submarine-cables-summit-nigeria.aspx
+    published: "2025-02-27"
+    accessed: "2026-11-06"
+    credit: "ITU"
+  - id: tg_faq
+    title: "Submarine Cable FAQs (garden hose, design life, owners, faults, satellites)"
+    publisher: TeleGeography
+    url: https://www2.telegeography.com/submarine-cable-faqs-frequently-asked-questions
+    published: "2026"
+    accessed: "2026-11-06"
+    credit: "TeleGeography"
+  - id: tg_myth_2023
+    title: "2023 Mythbusting, Part 3 (do submarine cables carry over 99% of intercontinental traffic?)"
+    publisher: TeleGeography
+    url: https://resources.telegeography.com/2023-mythbusting-part-3
+    published: "2023-05-04"
+    accessed: "2026-11-06"
+    credit: "TeleGeography"
+  - id: tg_bandwidth_2025
+    title: "International Bandwidth Demand Surpasses 6.4 Pbps"
+    publisher: TeleGeography
+    url: https://resources.telegeography.com/used-international-bandwidth-reaches-new-heights
+    published: "2025-05-12"
+    accessed: "2026-11-06"
+    credit: "TeleGeography"
+  - id: meta_2africa
+    title: "Building 2Africa, a transformative subsea cable to better connect Africa"
+    publisher: Meta Engineering
+    url: https://engineering.fb.com/2020/05/13/connectivity/2africa/
+    published: "2020-05-13"
+    accessed: "2026-11-06"
+    credit: "Meta Engineering"
+  - id: icpc_media
+    title: "ICPC media enquiries and factsheet (faults per year, causes, repair ships, Baltic 2024)"
+    publisher: International Cable Protection Committee (ICPC)
+    url: https://www.iscpc.org/news/media-enquiries/
+    published: "2026-05-20"
+    accessed: "2026-11-06"
+    credit: "ICPC"
+  - id: redsea_2024
+    title: "Red Sea cable damage (Seacom, AAE-1, EIG; Rubymar anchor; about 25% of traffic in the region)"
+    publisher: Bloomberg via Insurance Journal
+    url: https://www.insurancejournal.com/news/international/2024/03/07/763869.htm
+    published: "2024-03-07"
+    accessed: "2026-11-06"
+    credit: "Bloomberg"
+  - id: tonga_aljazeera
+    title: "Tonga internet reconnected five weeks after volcanic eruption"
+    publisher: Al Jazeera
+    url: https://www.aljazeera.com/news/2022/2/23/tonga-internet-reconnected-five-weeks-of-volcanic-eruption
+    published: "2022-02-23"
+    accessed: "2026-11-06"
+    credit: "Al Jazeera"
+  - id: tonga_techxplore
+    title: "Tonga back online after undersea cable repaired (January 15 eruption, 80 km of cable mangled)"
+    publisher: TechXplore (AFP)
+    url: https://techxplore.com/news/2022-02-tonga-online-undersea-cable.amp
+    published: "2022-02-22"
+    accessed: "2026-11-06"
+    credit: "TechXplore"
+  - id: reuters_smw6
+    title: "U.S. wins battle against China over undersea cable (SEA-ME-WE 6, HMN Tech, SubCom, PLCN)"
+    publisher: Reuters (via Prothom Alo)
+    url: https://en.prothomalo.com/amp/story/international/americas/tctl51xyq7
+    published: "2023-03-25"
+    accessed: "2026-11-06"
+    credit: "Reuters"
+  - id: lightreading_smw6
+    title: "US hardball drove Chinese vendor from huge cable project - reports"
+    publisher: Light Reading
+    url: https://www.lightreading.com/cable-technology/us-hardball-drove-chinese-vendor-from-huge-cable-project-reports
+    published: "2023-03-27"
+    accessed: "2026-11-06"
+    credit: "Light Reading"
+  - id: natural_earth
+    title: "Natural Earth 1:50m Admin 0 Countries"
+    publisher: Natural Earth (public domain)
+    url: https://www.naturalearthdata.com/downloads/
+    accessed: "2026-11-06"
+    credit: "Natural Earth (public domain)"
+
+claims:
+  - id: itu_99
+    text: "ITU (Feb 2025): more than 99 per cent of international data traffic is carried by a network of about 500 submarine telecommunications cables spanning over 1.7 million kilometres worldwide."
+    spoken: more than 99 percent
+    display: "> 99%"
+    value: 99
+    fields: {cables_spoken: about 500, cables_display: "≈ 500", km_spoken: more than 1.7 million kilometers, km_display: "1.7m km"}
+    source_ids: [itu_2025]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer). TeleGeography (2026) gives 1.5 million km in service; the film attributes the 1.7 million figure to the ITU.
+
+  - id: tg_check
+    text: "TeleGeography (May 2023) confirms that submarine cables carry over 99% of intercontinental data traffic, but says precise calculations are impossible without satellite data."
+    spoken: over 99 percent
+    display: "> 99%"
+    value: 99
+    source_ids: [tg_myth_2023]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: satellite
+    text: "TeleGeography: satellites carry a very small percentage of international traffic; FCC statistics indicate satellites account for just 0.37% of all U.S. international capacity."
+    spoken: just 0.37 percent
+    display: "0.37%"
+    value: 0.37
+    source_ids: [tg_faq]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check). The 0.37% is U.S.-only and is said as such.
+
+  - id: cable_size
+    text: "TeleGeography: for most of its journey a cable is typically as wide as a garden hose; the fibres are roughly the diameter of a human hair, wrapped in layers of plastic (and sometimes steel wire); cables near shore get extra armouring."
+    spoken: a garden hose
+    display: "garden hose"
+    source_ids: [tg_faq]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: design_life
+    text: "TeleGeography: cables are engineered with a minimum design life of 25 years, but are often retired earlier because they become economically obsolete."
+    spoken: 25 years
+    display: "25 years"
+    value: 25
+    source_ids: [tg_faq]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: cable_count
+    text: "TeleGeography: as of 2026 it tracks more than 600 active and planned submarine cables."
+    spoken: more than 600
+    display: "600+"
+    value: 600
+    source_ids: [tg_faq]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: owners_model
+    text: "TeleGeography: cables were traditionally owned by telecom carriers forming a consortium; in the late 1990s entrepreneurial companies built private cables; both models exist today, and content providers such as Google, Meta, Microsoft and Amazon are major investors in new cable."
+    spoken: Google, Meta, Microsoft and Amazon
+    display: "Google · Meta · Microsoft · Amazon"
+    source_ids: [tg_faq, tg_bandwidth_2025]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: content_share
+    text: "TeleGeography (May 2025): in 2024 content and cloud networks accounted for almost three-quarters of all international bandwidth demand; as recently as 2016 internet backbone providers accounted for the majority."
+    spoken: almost three quarters
+    display: "≈ ¾"
+    value: 75
+    fields: {year_spoken: In 2016}
+    source_ids: [tg_bandwidth_2025]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check). The source says "almost three-quarters"; the display "≈ ¾" is not a precise share.
+
+  - id: demand_2024
+    text: "TeleGeography (May 2025): international bandwidth demand tripled between 2020 and 2024, surpassing 6.4 Pbps."
+    spoken: 6.4 petabits per second
+    display: "6.4 Pbps"
+    value: 6.4
+    source_ids: [tg_bandwidth_2025]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: africa2
+    text: "Meta (May 2020): 2Africa, planned at 37,000 kilometres, nearly equal to the circumference of the Earth, to interconnect 23 countries in Africa, the Middle East and Europe, built with African and global operators."
+    spoken: 37,000 kilometers
+    display: "37,000 km"
+    value: 37000
+    fields: {countries_spoken: 23 countries, countries_display: "23"}
+    source_ids: [meta_2africa]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check). These are the plan figures at the 2020 announcement; the film says "planned".
+
+  - id: faults
+    text: "ICPC (May 2026): approximately 150-200 submarine cable faults occur globally each year; around 70-80% are caused by accidental human activity such as commercial fishing and ships' anchors, rather than sabotage."
+    spoken: 150 to 200
+    display: "150-200"
+    value: 150
+    fields: {human_spoken: 70 to 80 percent, human_display: "70-80%"}
+    source_ids: [icpc_media]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check). TeleGeography's FAQ says "roughly 200" and "two-thirds"; the film uses the ICPC figures.
+
+  - id: repair_ships
+    text: "ICPC: faults are repaired by cable repair ships that are strategically located around the world; in the November 2024 Baltic incidents two cables were damaged and both were repaired within 2 weeks."
+    spoken: within 2 weeks
+    display: "< 2 weeks"
+    value: 2
+    source_ids: [icpc_media]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: redsea
+    text: "Bloomberg (Mar 2024): three of more than a dozen cables running through the Red Sea (Seacom, AAE-1 and EIG) were knocked offline in late February 2024; US NSC spokesman John Kirby said most likely by an anchor dragging from the Rubymar as it sank; HGC estimated these cables carry about 25% of traffic in the region."
+    spoken: about 25 percent
+    display: "≈ 25%"
+    value: 25
+    fields: {cables_spoken: three, cables_display: "3"}
+    source_ids: [redsea_2024]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check). The 25% is HGC's estimate for "the region", said as such.
+
+  - id: tonga
+    text: "The January 15, 2022 eruption near Tonga mangled an 80-kilometre stretch of its undersea cable; the main internet connection was restored on February 22, more than five weeks later; about 90 km of cable was replaced."
+    spoken: 80 kilometers
+    display: "80 km"
+    value: 80
+    fields: {weeks_spoken: more than five weeks, weeks_display: "5+ weeks", replaced_spoken: about 90 kilometers, replaced_display: "≈ 90 km"}
+    source_ids: [tonga_techxplore, tonga_aljazeera]
+    status: source_located
+    verification_note: Read in both sources on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: big_three
+    text: "Reuters (Mar 2023): three companies have dominated the construction and laying of subsea cables for decades: America's SubCom, Japan's NEC and France's Alcatel Submarine Networks; China's HMN Tech is the fastest-growing, according to TeleGeography data."
+    spoken: three companies
+    display: "3"
+    value: 3
+    source_ids: [reuters_smw6, lightreading_smw6]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check; needs a named human reviewer).
+
+  - id: smw6
+    text: "Reuters/Light Reading (Mar 2023): HMN Tech (predecessor majority-owned by Huawei) was selected in early 2020 to build SEA-ME-WE 6; after US pressure SubCom won the contract (announced February 2022), with a bid about a third higher than HMN's; China Telecom and China Mobile pulled out, China Unicom stayed."
+    spoken: about a third
+    display: "≈ +⅓"
+    fields: {year_spoken: twenty twenty-two}
+    source_ids: [reuters_smw6, lightreading_smw6]
+    status: source_located
+    verification_note: Read in both sources on 2026-11-06 (AI fact-check). "About a third higher" is Light Reading's figure.
+
+  - id: plcn
+    text: "Reuters (Mar 2023): after Team Telecom recommended that the FCC reject the Hong Kong leg, the Pacific Light Cable Network, owned by Google and Meta, will only transmit data from the United States to Taiwan and the Philippines."
+    spoken: Hong Kong
+    display: "Hong Kong leg blocked"
+    source_ids: [reuters_smw6]
+    status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check). No date for the recommendation is given in the film (the DOJ page could not be read).

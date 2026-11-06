@@ -39,5 +39,7 @@ export type Props = {
   transition?: 'fade' | 'race' | 'scan';
   background?: 'grid' | 'speed';
   scenes: SceneSpec[];
+  /** game HUD: mission names and objectives (scene.params.mission = 1..N; N+1 = all complete) */
+  hud?: {missions: string[]; objectives?: string[]};
   geo?: Record<string, {view: [number, number, number, number]; paths: Record<string, string>; labels?: Record<string, [number, number]>}>;
 };
