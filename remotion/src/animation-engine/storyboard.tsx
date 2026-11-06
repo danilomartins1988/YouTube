@@ -9,6 +9,7 @@ import {DrawOnCanvas, DrawStroke, buildDrawTimeline} from './DrawOnCanvas/DrawOn
 import {EconomicFlow} from './EconomicFlow/EconomicFlow';
 import {ExplodedDiagram} from './ExplodedDiagram/ExplodedDiagram';
 import {DigitalBoard, Studio} from './transitions';
+import {CartoonOcean} from './CartoonOcean/CartoonOcean';
 import {fromEpisodePalette} from './motion';
 
 /**
@@ -83,7 +84,13 @@ export const EngineExplodedScene: React.FC = () => {
   return <svg width={ctx.W} height={ctx.H}><ExplodedDiagram t={ctx.t} {...(p as any)} /><Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} /></svg>;
 };
 
+/** engine_cartoon: cartoon ocean world (ships, anchors, cables with light, volcano, callouts), camera tracking. */
+export const EngineCartoonScene: React.FC = () => {
+  const {ctx, p} = useParams();
+  return <CartoonOcean t={ctx.t} W={ctx.W} H={ctx.H} {...(p as any)} />;
+};
+
 export const ENGINE_SCENES: Record<string, React.FC> = {
   engine_draw: EngineDrawScene, engine_flow: EngineFlowScene, engine_map: EngineMapScene,
-  engine_chart: EngineChartScene, engine_exploded: EngineExplodedScene,
+  engine_chart: EngineChartScene, engine_exploded: EngineExplodedScene, engine_cartoon: EngineCartoonScene,
 };

@@ -1,7 +1,7 @@
 """Generates projects/the-cables-at-the-bottom-of-the-ocean/deliverables/documentary/storyboard.yaml (Episode 09).
 
-Built on the animation engine (engine_* scene types) plus the game HUD (style.hud in project.yaml): every scene
-carries params.mission (1-5; 6 = all complete) and each mission's last scene carries a "MISSION n COMPLETE" stamp.
+Built on the animation engine: cartoon ocean scenes (engine_cartoon), presenter boards, pen drawings, maps and flows.
+The five parts are an internal structure only: nothing on screen or in the narration says "mission".
 Times are narration cues ({cue: "..."}) wherever possible. Run: python tools/gen_cables_storyboard.py
 """
 from __future__ import annotations
@@ -39,11 +39,6 @@ def add(id_, segment, type_, params, sources=(), assets=INTER, sfx=None, stamp=N
             d = st["d"]
             if "kind" not in st:
                 st["kind"] = "box" if d.rstrip().endswith("Z") and d.count(" L ") == 3 else ("arrow" if " Q " in d and d.count("M ") == 2 else "stroke")
-    m = mission_of(segment)
-    if m:
-        params["mission"] = m
-    if stamp:
-        params["stamp"], params["stamp_cue"] = stamp[0], stamp[1]
     s = {"id": id_, "segment": segment, "type": type_, "params": params}
     if sfx:
         s["sfx"] = sfx
@@ -54,7 +49,7 @@ def add(id_, segment, type_, params, sources=(), assets=INTER, sfx=None, stamp=N
 
 
 def card(id_, seg, number, title, sub):
-    add(id_, seg, "act_title", {"number": number, "title": title, "subtitle": sub, "min_seconds": 3.0}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
+    add(id_, seg, "act_title", {"number": "", "title": title, "subtitle": sub, "min_seconds": 3.0}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
 
 
 def question(id_, seg, chapter, q, why, q_cue, why_cue):
@@ -70,8 +65,6 @@ def kinetic(id_, seg, lines, chapter=None, stamp=None, sfx=None):
                                       for tx, sz, cu, co, st in lines]}
     if chapter:
         p["chapter"] = chapter
-    if stamp:
-        p["stamp_y"] = 900
     add(id_, seg, "kinetic_text", p, stamp=stamp, sfx=sfx)
 
 
@@ -79,7 +72,7 @@ def transition(id_, seg, n, l1, l2, c1, c2, nxt, ncue, stamp_cue):
     lines = [(l1, 56, c1, None, True), (l2, 74, c2, "accent", False)]
     if nxt:
         lines.append((nxt, 44, ncue, "muted", False))
-    kinetic(id_, seg, lines, stamp=(f"Mission {n} complete", stamp_cue), sfx=[{"kind": "hit", "cue": stamp_cue, "gain": 0.35}])
+    kinetic(id_, seg, lines)
 
 
 def rect(x, y, w, h):
@@ -143,9 +136,9 @@ kinetic("s03_missions", "h_missions", [
 
 # ====================================================================== MISSION 1
 card("s04_m1", "m1_card", "Mission 1", "How the Internet Crosses the Ocean", "Follow the light")
-question("s05_m1q", "m1_question", "Mission 1 · How the internet crosses the ocean", "How does the internet cross an ocean?",
+question("s05_m1q", "m1_question", "How the internet crosses the ocean", "How does the internet cross an ocean?",
          "Most people think it goes through satellites", "How does", "It matters")
-add("s06_sat", "m1_satellite", "compare", {"chapter": "Mission 1 · Not satellites", "title": "Cables, not satellites", "sides": [
+add("s06_sat", "m1_satellite", "compare", {"chapter": "Not satellites", "title": "Cables, not satellites", "sides": [
     {"kicker": "Satellites, U.S. international capacity", "value": "{{satellite.display}}", "label": "FCC statistics, via TeleGeography", "cue": "government"},
     {"kicker": "Traffic between continents", "value": "{{tg_check.display}}", "label": "carried by cables (TeleGeography)", "cue": "between continents"}]},
     sources=["tg_faq", "tg_myth_2023"])
@@ -181,16 +174,16 @@ add("s08_light", "m1_light", "engine_draw", {
         {"d": " ".join(f"M 420 {820 + i * 22} L 1700 {820 + i * 22}" for i in range(6)), "color": "accent2", "width": 3, "flow": 260, "start": C("many fibers"),
          "label": lbl("MANY FIBERS IN ONE CABLE", 960, 1000, 28, "accent2")},
     ]}, sources=["tg_faq"])
-add("s09_size", "m1_discovery", "compare", {"chapter": "Mission 1 · The discovery", "title": "One cable", "sides": [
+add("s09_size", "m1_discovery", "compare", {"chapter": "The discovery", "title": "One cable", "sides": [
     {"kicker": "Width, in the deep ocean", "value": "Garden hose", "label": "for most of its journey", "cue": "as wide as"},
     {"kicker": "Near the shore", "value": "+ armor", "label": "against fishing gear and anchors", "cue": "extra armor"},
     {"kicker": "Built to last at least", "value": "{{design_life.display}}", "label": "minimum design life", "cue": "built to last"}]},
     sources=["tg_faq"])
-transition("s10_m1t", "m1_transition", 1, "Something this important", "belongs to someone", "So something", "belong to", "Mission 2 →", "mission two", "But who")
+transition("s10_m1t", "m1_transition", 1, "Something this important", "belongs to someone", "So something", "belong to", None, None, "But who")
 
 # ====================================================================== MISSION 2
 card("s11_m2", "m2_card", "Mission 2", "Who Owns the Cables", "From phone clubs to tech giants")
-question("s12_m2q", "m2_question", "Mission 2 · Who owns the cables", "Who owns the cables at the bottom of the ocean?",
+question("s12_m2q", "m2_question", "Who owns the cables", "Who owns the cables at the bottom of the ocean?",
          "Whoever owns the road decides who uses it, and what it costs", "Who owns", "It matters")
 # ---- PRESENTER B: the consortium model
 add("p13_club", "m2_draw", "engine_draw", {
@@ -211,7 +204,7 @@ add("p13_club", "m2_draw", "engine_draw", {
     ],
     "actions": [{"kind": "explain", "at": C("Several of them", 0.3), "dur": 3.0}, {"kind": "point", "at": C("new companies", 0.6), "dur": 1.2, "target": [740, 905]}],
     "scale": 0.86, "floor": 1040}, sources=["tg_faq"])
-add("s14_shift", "m2_shift", "compare", {"chapter": "Mission 2 · The users changed", "title": "Who uses the international bandwidth", "sides": [
+add("s14_shift", "m2_shift", "compare", {"chapter": "The users changed", "title": "Who uses the international bandwidth", "sides": [
     {"kicker": "2016", "value": "Majority", "label": "internet backbone providers", "cue": "backbone companies"},
     {"kicker": "2024", "value": "{{content_share.display}}", "label": "content and cloud companies", "cue": "content and"},
     {"kicker": "A handful of names", "value": "4", "label": "Google · Meta · Microsoft · Amazon", "cue": "handful"}]},
@@ -220,7 +213,7 @@ kinetic("s15_demand", "m2_demand", [
     ("International bandwidth demand", 44, "demand keeps", None, True),
     ("× 3", 120, "tripled", "accent2", False),
     ("2020 → 2024 · more than {{demand_2024.display}}", 44, "more than", None, True),
-    ("streaming · cloud · AI", 40, "Streaming", "muted", True)], chapter="Mission 2 · Demand")
+    ("streaming · cloud · AI", 40, "Streaming", "muted", True)], chapter="Demand")
 AFR = [("marseille", "lagos"), ("lagos", "capetown"), ("capetown", "mombasa"), ("mombasa", "oman"), ("oman", "suez"), ("suez", "marseille")]
 add("s16_africa", "m2_africa", "engine_map", {
     "title": "2Africa (as planned in 2020)", "subtitle": "{{africa2.display}} · {{africa2.countries_display}} countries · Africa, Middle East, Europe",
@@ -241,11 +234,11 @@ add("s17_private", "m2_discovery", "engine_flow", {
     "items": {"starts": [C("fill the cables"), C("fill the cables", 0.8), C("Owning the cable")], "route": ["u", "c", "k", "d"], "travel": 0.7, "process": 0.8},
     "money": [{"from": "c", "to": "k", "starts": [C("paying to lay"), C("paying to lay", 0.4)], "travel": 1.0, "label": "PAYS TO BUILD", "lift": 0.2}]},
     sources=["tg_faq", "tg_bandwidth_2025"])
-transition("s18_m2t", "m2_transition", 2, "Owning a cable is one thing", "Building and fixing one is another", "But owning", "Building one", "Mission 3 →", "mission three", "is another")
+transition("s18_m2t", "m2_transition", 2, "Owning a cable is one thing", "Building and fixing one is another", "But owning", "Building one", None, None, "is another")
 
 # ====================================================================== MISSION 3
 card("s19_m3", "m3_card", "Mission 3", "Who Builds and Fixes Them", "A few factories, a small fleet")
-question("s20_m3q", "m3_question", "Mission 3 · Who builds and fixes them", "Who builds these cables, and who fixes them?",
+question("s20_m3q", "m3_question", "Who builds and fixes them", "Who builds these cables, and who fixes them?",
          "Very few companies on Earth can do it", "Who builds", "It matters")
 # ---- pen drawing: cable cross-section (schematic)
 add("s21_layers", "m3_layers", "engine_draw", {
@@ -286,14 +279,14 @@ add("s23_repair", "m3_repair", "engine_flow", {
 kinetic("s23b_m3d", "m3_discovery", [
     ("A handful of factories", 58, "handful of factories", None, True),
     ("+ a small fleet of ships", 58, "small fleet", "accent2", True),
-    ("Control the builder → a say in who connects", 50, "control who builds", "accent", False)], chapter="Mission 3 · The discovery")
-transition("s24_m3t", "m3_transition", 3, "And those ships are busy", "Cables break more often than you think", "And those ships", "break far", "Mission 4 →", "mission four", "you might think")
+    ("Control the builder → a say in who connects", 50, "control who builds", "accent", False)], chapter="The discovery")
+transition("s24_m3t", "m3_transition", 3, "Repair ships are busy", "Cables break more often than you think", "And those repair ships", "break far", None, None, "you might think")
 
 # ====================================================================== MISSION 4
 card("s25_m4", "m4_card", "Mission 4", "When a Cable Breaks", "Anchors, nets and a volcano")
-question("s26_m4q", "m4_question", "Mission 4 · When a cable breaks", "What happens when a cable breaks?",
+question("s26_m4q", "m4_question", "When a cable breaks", "What happens when a cable breaks?",
          "One cut can slow down, or switch off, a whole region", "What happens", "It matters")
-add("s27_faults", "m4_faults", "compare", {"chapter": "Mission 4 · How often", "title": "Cables break all the time", "sides": [
+add("s27_faults", "m4_faults", "compare", {"chapter": "How often", "title": "Cables break all the time", "sides": [
     {"kicker": "Faults every year", "value": "{{faults.display}}", "label": "worldwide (ICPC)", "cue": "cable faults"},
     {"kicker": "Caused by accidents", "value": "{{faults.human_display}}", "label": "mostly fishing gear and anchors", "cue": "accidents"},
     {"kicker": "Sabotage", "value": "Rare", "label": "not the main cause", "cue": "Not sabotage"}]},
@@ -337,11 +330,11 @@ add("s30_tonga", "m4_tonga", "engine_map", {
     "caption": "Real location (Natural Earth, public domain)"},
     sources=["tonga_techxplore", "tonga_aljazeera", "natural_earth"], assets=GEO, sfx=[{"kind": "hit", "cue": "erupted", "gain": 0.35}])
 transition("s31_m4t", "m4_discovery", 4, "Many cables: an inconvenience", "One cable: a blackout", "many cables", "Where there is one", None, None, "a blackout")
-kinetic("s32_m4n", "m4_transition", [("Governments want a say", 64, "governments", "accent", False), ("Mission 5 →", 44, "mission five", "muted", False)])
+kinetic("s32_m4n", "m4_transition", [("Governments want a say", 64, "governments", "accent", False), ("…and where they go", 44, "where they go", "muted", True)])
 
 # ====================================================================== MISSION 5
 card("s33_m5", "m5_card", "Mission 5", "The Fight over the Seabed", "Who builds it, who lands it")
-question("s34_m5q", "m5_question", "Mission 5 · The fight over the seabed", "Why are governments fighting over the seabed?",
+question("s34_m5q", "m5_question", "The fight over the seabed", "Why are governments fighting over the seabed?",
          "Your data passes through, and lands in, other countries", "Why are", "It matters")
 add("s35_smw6", "m5_smw6", "engine_map", {
     "title": "SEA-ME-WE 6", "subtitle": "Southeast Asia · Middle East · Western Europe",
@@ -391,8 +384,8 @@ add("p37_split", "m5_draw", "engine_draw", {
 kinetic("s38_count", "m5_count", [
     ("Active and planned cables", 44, "TeleGeography", None, True),
     ("{{cable_count.display}}", 130, "active and planned", "accent2", False),
-    ("Who builds it · who pays · where it lands", 40, "Every new", None, True)], chapter="Mission 5 · The stakes",
-    stamp=("Mission 5 complete", C("where it lands", 0.3)), sfx=[{"kind": "hit", "cue": "where it lands", "gain": 0.35}])
+    ("Who builds it · who pays · where it lands", 40, "Every new", None, True)], chapter="The stakes",
+    sfx=[{"kind": "hit", "cue": "where it lands", "gain": 0.35}])
 
 # ====================================================================== PAYOFF
 add("s39_payoff", "payoff", "engine_map", {
@@ -400,19 +393,12 @@ add("s39_payoff", "payoff", "engine_map", {
                 {"at": C("Every time"), "lon": 20, "lat": 20, "span": 330, "dur": 3.0}],
     "drift": {"lon": 0.25, "zoom": 0.004}, "tilt": [[0, 16], [30, 4]],
     "routes": web_routes(C("It is glass"), 0.3),
-    "caption": "All missions complete · schematic links, not actual cable routes"},
+    "caption": "Schematic links, not actual cable routes"},
     sources=["itu_2025", "natural_earth"], assets=GEO)
 add("s40_end", "teaser", "end_card", {"words": ["Next time:", "another hidden link of the world economy"], "brand": "The Hidden Economics",
     "teaser": "Every figure in this film is sourced in the description", "brand_cue": {"cue": "This is The Hidden Economics"}})
 
-# once a mission's stamp has landed, the rest of that mission's scenes show it as complete in the HUD
-done = set()
-for s in scenes:
-    m = s["params"].get("mission")
-    if m in done:
-        s["params"]["mission_done"] = True
-    if s["params"].get("stamp"):
-        done.add(m)
+exec(open(Path(__file__).with_name('gen_cables_cartoons.py')).read())
 OUT.write_text("# GENERATED by tools/gen_cables_storyboard.py; edit the generator, not this file.\n"
                "# Episode 09 storyboard on the animation engine with the game HUD. The channel intro is inserted automatically after the hook.\n"
                + yaml.safe_dump({"scenes": scenes}, sort_keys=False, allow_unicode=True, width=200))

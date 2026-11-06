@@ -284,7 +284,7 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
 
 
 # scene types that are explanatory animations (objects move, build or transform), not decoration
-EXPLANATORY = {"engine_draw", "engine_flow", "engine_map", "engine_chart", "engine_exploded", "presenter", "timeline_network",
+EXPLANATORY = {"engine_draw", "engine_cartoon", "engine_flow", "engine_map", "engine_chart", "engine_exploded", "presenter", "timeline_network",
                "domino", "supply_chain", "stacked_columns", "cpu_gpu", "stack", "fund_flow", "landscape", "ai_network", "line_chart"}
 
 

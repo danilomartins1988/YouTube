@@ -1,351 +1,288 @@
-# Documentary (target 11-13 min). Mission model: hook -> channel intro (automatic) -> five missions -> payoff -> teaser.
-# Every number comes from sources.yaml via {{placeholders}}; years are written in words. The teaser is generic
-# (channel rule from 2026-11-06: never promise a specific next topic).
-title: "The Cables at the Bottom of the Ocean That Carry the Internet"
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}}; years are written in words. Generic teaser (channel rule).
 logline: >-
-  Almost all the internet traffic that crosses borders travels through cables lying on the ocean floor. Five
-  missions explain how they work, who owns them, who builds and repairs them, what happens when one breaks, and
-  why governments now fight over them.
+  Almost all the internet traffic that crosses borders travels through cables on the ocean floor: how they work,
+  who owns them, who builds and repairs them, what happens when one breaks, and why governments fight over them.
+title: The Cables at the Bottom of the Ocean That Carry the Internet
 segments:
-  # ---------------------------------------------------------------- HOOK
-  - id: h_question
-    chapter: The cables
-    narration: >-
-      What if the internet you use every day wasn't in the sky, but at the bottom of the ocean?
-    claims: []
-    analysis: true
-    source_note: Hook question.
-
-  - id: h_stakes
-    chapter: The cables
-    narration: >-
-      It is. According to the United Nations' telecom agency, {{itu_99}} of international data traffic travels
-      through {{itu_99.cables_spoken}} cables lying on the seabed, stretching {{itu_99.km_spoken}}. Every video
-      call, every bank transfer, every message to another country.
-    claims: [itu_99]
-
-  - id: h_missions
-    chapter: The cables
-    narration: >-
-      Today we have five missions. Follow the light across the ocean, find out who owns the cables, meet the
-      people who build and fix them, see what happens when one breaks, and discover why governments now fight
-      over the seabed.
-    claims: []
-    analysis: true
-    source_note: Episode roadmap.
-
-  # ---------------------------------------------------------------- MISSION 1: how the internet crosses the ocean
-  - id: m1_card
-    chapter: How the internet crosses the ocean
-    narration: ""
-    claims: []
-
-  - id: m1_question
-    chapter: How the internet crosses the ocean
-    narration: >-
-      Mission one. How does the internet actually cross an ocean? It matters because most people think it goes
-      through satellites. It mostly doesn't.
-    claims: []
-    analysis: true
-    source_note: Mission question and stakes.
-
-  - id: m1_satellite
-    chapter: How the internet crosses the ocean
-    narration: >-
-      Satellites carry only a very small share of international traffic. In the United States, government
-      statistics put satellites at {{satellite}} of the country's international capacity. The cable research firm
-      TeleGeography has checked the famous ninety nine percent claim for traffic between continents, and says it
-      holds, even if nobody can measure it exactly.
-    claims: [satellite, tg_check]
-
-  - id: m1_draw
-    chapter: How the internet crosses the ocean
-    narration: >-
-      Let me draw how it works. Your data leaves a data center and reaches the coast, at a landing station. From
-      there it enters a cable on the seabed. Inside, the data travels as pulses of light through glass fibers, and
-      comes out at another landing station, on another continent. Then it goes on to its destination.
-    claims: []
-    analysis: true
-    source_note: General explanation of fibre-optic transmission and landing stations; no figures.
-
-  - id: m1_light
-    chapter: How the internet crosses the ocean
-    narration: >-
-      Why light? Because light in glass can carry an enormous amount of data over very long distances. Each
-      fiber is roughly as thin as a human hair. Switch the light on and off extremely fast, and every
-      flash becomes part of a message. Put many fibers in one cable, and one cable can carry the traffic of
-      whole countries.
-    claims: [cable_size]
-    analysis: true
-    source_note: Fibre thickness from TeleGeography (tg_faq); the rest is general explanation, no figures.
-
-  - id: m1_discovery
-    chapter: How the internet crosses the ocean
-    narration: >-
-      Here is the discovery. For most of its journey across the ocean, a cable is about as wide as {{cable_size}}.
-      The thin glass fibers are wrapped in layers of plastic, and sometimes steel wire. Near the shore, where
-      fishing boats and anchors are, the cable gets extra armor. And it is built to last at least {{design_life}}.
-    claims: [cable_size, design_life]
-
-  - id: m1_transition
-    chapter: How the internet crosses the ocean
-    narration: >-
-      So something this important must belong to someone. But who? That is mission two.
-    claims: []
-
-  # ---------------------------------------------------------------- MISSION 2: who owns the cables
-  - id: m2_card
-    chapter: Who owns the cables
-    narration: ""
-    claims: []
-
-  - id: m2_question
-    chapter: Who owns the cables
-    narration: >-
-      Mission two. Who owns the cables at the bottom of the ocean? It matters because whoever owns the road
-      decides who can use it, and how much it costs.
-    claims: []
-    analysis: true
-    source_note: Mission question.
-
-  - id: m2_draw
-    chapter: Who owns the cables
-    narration: >-
-      Let me draw the old way. For decades, cables were owned by telephone companies. Several of them would form
-      a club, called a consortium. Each member paid for a share of the cable, and got a share of its capacity.
-      Then, in the late nineteen nineties, new companies started building private cables, and selling the
-      capacity to anyone who wanted it.
-    claims: [owners_model]
-
-  - id: m2_shift
-    chapter: Who owns the cables
-    narration: >-
-      Then the users changed. {{content_share.year_spoken}}, internet backbone companies, the carriers that move
-      traffic between networks, still used most of the international bandwidth. By twenty twenty-four, content and
-      cloud companies used {{content_share}} of it. That means a handful of names: {{owners_model}}.
-    claims: [content_share, owners_model]
-
-  - id: m2_demand
-    chapter: Who owns the cables
-    narration: >-
-      And demand keeps exploding. Between twenty twenty and twenty twenty-four, international bandwidth demand
-      tripled, to more than {{demand_2024}}. Streaming, cloud computing and now artificial intelligence all need
-      more capacity than ever.
-    claims: [demand_2024]
-
-  - id: m2_africa
-    chapter: Who owns the cables
-    narration: >-
-      So the tech giants stopped renting and started building. One example: a cable called Two Africa. Announced by Meta in
-      twenty twenty with African and global telecom partners, it was planned at {{africa2}}, almost the
-      circumference of the Earth, to connect {{africa2.countries_spoken}} in Africa, the Middle East and Europe.
-    claims: [africa2]
-
-  - id: m2_discovery
-    chapter: Who owns the cables
-    narration: >-
-      Here is the discovery. The companies that fill the cables with data are now the ones paying to lay them.
-      Owning the cable means they don't have to wait, or pay someone else, for capacity. The internet's
-      underwater roads are becoming private highways.
-    claims: [owners_model, content_share]
-    analysis: true
-    source_note: Interpretation of the ownership shift reported by TeleGeography (tg_faq, tg_bandwidth_2025).
-
-  - id: m2_transition
-    chapter: Who owns the cables
-    narration: >-
-      But owning a cable is one thing. Building one, and fixing it at the bottom of the sea, is another. That is
-      mission three.
-    claims: []
-
-  # ---------------------------------------------------------------- MISSION 3: who builds and fixes them
-  - id: m3_card
-    chapter: Who builds and fixes them
-    narration: ""
-    claims: []
-
-  - id: m3_question
-    chapter: Who builds and fixes them
-    narration: >-
-      Mission three. Who builds these cables, and who fixes them? It matters because very few companies on Earth
-      can do it.
-    claims: []
-    analysis: true
-    source_note: Mission question.
-
-  - id: m3_layers
-    chapter: Who builds and fixes them
-    narration: >-
-      Let's open one up. At the center, the glass fibers that carry the light. Around them, layers of plastic
-      that protect them. Sometimes, steel wire for strength. And near the coast, extra armor against anchors and
-      fishing gear. Simple in theory. Very hard to make in one piece across an entire ocean, so that it survives
-      for decades under the sea.
-    claims: [cable_size, design_life]
-
-  - id: m3_builders
-    chapter: Who builds and fixes them
-    narration: >-
-      For decades, {{big_three}} have dominated building and laying these cables. SubCom from the United
-      States, NEC from Japan, and Alcatel Submarine Networks from France. And one newcomer is growing faster than
-      all of them: HMN Tech, from China.
-    claims: [big_three]
-
-  - id: m3_repair
-    chapter: Who builds and fixes them
-    narration: >-
-      Then there are the repairs. When a cable breaks, a specialized cable repair ship has to sail to the spot,
-      find the damaged section on the seabed, bring it up and repair it at sea. These ships are stationed around
-      the world, ready to go. When two cables were damaged in the Baltic Sea in November twenty twenty-four, both
-      were repaired {{repair_ships}}.
-    claims: [repair_ships]
-    source_note: General description of a repair; the Baltic example and strategically located ships are from the ICPC.
-
-  - id: m3_discovery
-    chapter: Who builds and fixes them
-    narration: >-
-      Here is the discovery. The world's data runs through a handful of factories and a small fleet of ships.
-      If you control who builds the cable, you have a say in who connects to whom.
-    claims: [big_three]
-    analysis: true
-    source_note: Interpretation drawn from the sourced facts in mission three.
-
-  - id: m3_transition
-    chapter: Who builds and fixes them
-    narration: >-
-      And those ships are busy. Because cables break far more often than you might think. That is mission four.
-    claims: []
-
-  # ---------------------------------------------------------------- MISSION 4: when a cable breaks
-  - id: m4_card
-    chapter: When a cable breaks
-    narration: ""
-    claims: []
-
-  - id: m4_question
-    chapter: When a cable breaks
-    narration: >-
-      Mission four. What happens when a cable breaks? It matters because one cut can slow down, or switch off,
-      the internet of a whole region.
-    claims: []
-    analysis: true
-    source_note: Mission question.
-
-  - id: m4_faults
-    chapter: When a cable breaks
-    narration: >-
-      According to the International Cable Protection Committee, there are {{faults}} cable faults around the
-      world every year. And {{faults.human_spoken}} of them are accidents caused by people, mostly fishing gear
-      and ships' anchors. Not sabotage. Just everyday activity at sea.
-    claims: [faults]
-
-  - id: m4_redsea
-    chapter: When a cable breaks
-    narration: >-
-      In February twenty twenty-four, it happened in the Red Sea. A cargo ship called the Rubymar was hit by a
-      missile attack and later sank. American officials said its dragging anchor most likely cut {{redsea.cables_spoken}}
-      cables: Seacom, A A E one, and E I G. One internet provider estimated these cables carried {{redsea}} of the
-      traffic in the region.
-    claims: [redsea]
-
-  - id: m4_backup
-    chapter: When a cable breaks
-    narration: >-
-      Let me draw why that wasn't a disaster. The Red Sea has more than a dozen cables. When three go down,
-      traffic is sent around the break, through the others. It gets slower and more expensive, but it keeps
-      flowing. But what if a country has only one cable?
-    claims: [redsea]
-    source_note: More than a dozen cables in the Red Sea is from Bloomberg (redsea_2024); rerouting is a general explanation.
-
-  - id: m4_tonga
-    chapter: When a cable breaks
-    narration: >-
-      That is what happened to Tonga. On January fifteenth, twenty twenty-two, a huge undersea volcano erupted.
-      The eruption tore {{tonga}} of its cable into pieces. Tonga's main link to the rest of the world was gone.
-      It took {{tonga.weeks_spoken}} to bring it back, and {{tonga.replaced_spoken}} of new cable.
-    claims: [tonga]
-
-  - id: m4_discovery
-    chapter: When a cable breaks
-    narration: >-
-      Here is the discovery. The internet is only as strong as its number of routes. Where there are many cables,
-      a cut is an inconvenience. Where there is one, it is a blackout.
-    claims: [redsea, tonga]
-    analysis: true
-    source_note: Conclusion drawn from the Red Sea and Tonga cases.
-
-  - id: m4_transition
-    chapter: When a cable breaks
-    narration: >-
-      And if cables are this important, governments want a say in where they go. That is mission five.
-    claims: []
-
-  # ---------------------------------------------------------------- MISSION 5: the fight over the seabed
-  - id: m5_card
-    chapter: The fight over the seabed
-    narration: ""
-    claims: []
-
-  - id: m5_question
-    chapter: The fight over the seabed
-    narration: >-
-      Mission five. Why are governments fighting over the seabed? It matters because the cable that carries your
-      data passes through, and lands in, other countries.
-    claims: []
-    analysis: true
-    source_note: Mission question.
-
-  - id: m5_smw6
-    chapter: The fight over the seabed
-    narration: >-
-      Take a cable called SEA-ME-WE six, from Southeast Asia, through the Middle East, to Western Europe. In early
-      twenty twenty, the Chinese company HMN Tech was chosen to build it. Then the United States government
-      pressed the members to drop it. In the end, the American company SubCom won the contract, with a
-      bid that was {{smw6}} more expensive, according to Light Reading. Two Chinese carriers, China Telecom and
-      China Mobile, left the project.
-    claims: [smw6]
-
-  - id: m5_plcn
-    chapter: The fight over the seabed
-    narration: >-
-      It also happened across the Pacific. The Pacific Light Cable Network, owned by Google and Meta, was meant to
-      link the United States with {{plcn}}. After an American security review recommended rejecting that leg, it was dropped. The
-      cable now carries data from the United States only to Taiwan and the Philippines.
-    claims: [plcn]
-
-  - id: m5_draw
-    chapter: The fight over the seabed
-    narration: >-
-      Let me draw what is happening. On one side, cables built and owned by American, Japanese and European
-      companies. On the other, a growing network built by Chinese companies. Each country decides who may land a
-      cable on its coast. Slowly, the seabed is splitting into two networks.
-    claims: [big_three, smw6]
-    analysis: true
-    source_note: Interpretation of the SEA-ME-WE 6 and PLCN cases reported by Reuters.
-
-  - id: m5_count
-    chapter: The fight over the seabed
-    narration: >-
-      And the stakes keep growing. TeleGeography now tracks {{cable_count}} active and planned cables. Every new
-      one is a choice: who builds it, who pays for it, and where it lands.
-    claims: [cable_count]
-
-  # ---------------------------------------------------------------- PAYOFF + TEASER
-  - id: payoff
-    chapter: Mission complete
-    narration: >-
-      So, mission complete. The internet is not a cloud. It is glass, plastic and steel, lying on the ocean floor,
-      built by a few companies, paid for more and more by the biggest tech firms, repaired by a small fleet of
-      ships, and argued over by governments. Every time you send a message to another country, it takes this
-      journey, as pulses of light, at the bottom of the sea.
-    claims: [itu_99, big_three, owners_model]
-    analysis: true
-    source_note: Conclusion drawn from the sourced missions.
-
-  - id: teaser
-    chapter: Mission complete
-    narration: >-
-      Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
-      This is The Hidden Economics.
-    claims: []
-    analysis: true
-    source_note: Generic teaser (channel rule).
+- id: h_question
+  chapter: The cables
+  narration: What if the internet you use every day wasn't in the sky, but at the bottom of the ocean?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_stakes
+  chapter: The cables
+  narration: It is. According to the United Nations' telecom agency, {{itu_99}} of international data traffic travels
+    through {{itu_99.cables_spoken}} cables lying on the seabed, stretching {{itu_99.km_spoken}}. Every video call,
+    every bank transfer, every message to another country.
+  claims:
+  - itu_99
+- id: m1_card
+  chapter: How the internet crosses the ocean
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: How the internet crosses the ocean
+  narration: So how does the internet actually cross an ocean? Most people think it goes through satellites. It
+    mostly doesn't.
+  claims: []
+  analysis: true
+  source_note: Question and stakes.
+- id: m1_satellite
+  chapter: How the internet crosses the ocean
+  narration: Satellites carry only a very small share of international traffic. In the United States, government
+    statistics put satellites at {{satellite}} of the country's international capacity. The cable research firm
+    TeleGeography has checked the famous ninety nine percent claim for traffic between continents, and says it holds,
+    even if nobody can measure it exactly.
+  claims:
+  - satellite
+  - tg_check
+- id: m1_draw
+  chapter: How the internet crosses the ocean
+  narration: Let me draw how it works. Your data leaves a data center and reaches the coast, at a landing station.
+    From there it enters a cable on the seabed. Inside, the data travels as pulses of light through glass fibers,
+    and comes out at another landing station, on another continent. Then it goes on to its destination.
+  claims: []
+  analysis: true
+  source_note: General explanation of fibre-optic transmission and landing stations; no figures.
+- id: m1_light
+  chapter: How the internet crosses the ocean
+  narration: Why light? Because light in glass can carry an enormous amount of data over very long distances. Each
+    fiber is roughly as thin as a human hair. Switch the light on and off extremely fast, and every flash becomes
+    part of a message. Put many fibers in one cable, and one cable can carry the traffic of whole countries.
+  claims:
+  - cable_size
+  analysis: true
+  source_note: Fibre thickness from TeleGeography (tg_faq); the rest is general explanation, no figures.
+- id: m1_discovery
+  chapter: How the internet crosses the ocean
+  narration: For most of its journey across the ocean, a cable is about as wide as {{cable_size}}. The thin glass
+    fibers are wrapped in layers of plastic, and sometimes steel wire. Near the shore, where fishing boats and anchors
+    are, the cable gets extra armor. And it is built to last at least {{design_life}}.
+  claims:
+  - cable_size
+  - design_life
+- id: m1_transition
+  chapter: How the internet crosses the ocean
+  narration: So something this important must belong to someone. But who?
+  claims: []
+- id: m2_card
+  chapter: Who owns the cables
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: Who owns the cables
+  narration: Who owns the cables at the bottom of the ocean? It matters, because whoever owns the road decides who
+    can use it, and how much it costs.
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_draw
+  chapter: Who owns the cables
+  narration: Let me draw the old way. For decades, cables were owned by telephone companies. Several of them would
+    form a club, called a consortium. Each member paid for a share of the cable, and got a share of its capacity.
+    Then, in the late nineteen nineties, new companies started building private cables, and selling the capacity
+    to anyone who wanted it.
+  claims:
+  - owners_model
+- id: m2_shift
+  chapter: Who owns the cables
+  narration: 'Then the users changed. {{content_share.year_spoken}}, internet backbone companies, the carriers that
+    move traffic between networks, still used most of the international bandwidth. By twenty twenty-four, content
+    and cloud companies used {{content_share}} of it. That means a handful of names: {{owners_model}}.'
+  claims:
+  - content_share
+  - owners_model
+- id: m2_demand
+  chapter: Who owns the cables
+  narration: And demand keeps exploding. Between twenty twenty and twenty twenty-four, international bandwidth demand
+    tripled, to more than {{demand_2024}}. Streaming, cloud computing and now artificial intelligence all need more
+    capacity than ever.
+  claims:
+  - demand_2024
+- id: m2_africa
+  chapter: Who owns the cables
+  narration: 'So the tech giants stopped renting and started building. One example: a cable called Two Africa. Announced
+    by Meta in twenty twenty with African and global telecom partners, it was planned at {{africa2}}, almost the
+    circumference of the Earth, to connect {{africa2.countries_spoken}} in Africa, the Middle East and Europe.'
+  claims:
+  - africa2
+- id: m2_discovery
+  chapter: Who owns the cables
+  narration: The companies that fill the cables with data are now the ones paying to lay them. Owning the cable
+    means they don't have to wait, or pay someone else, for capacity. The internet's underwater roads are becoming
+    private highways.
+  claims:
+  - owners_model
+  - content_share
+  analysis: true
+  source_note: Interpretation of the ownership shift reported by TeleGeography (tg_faq, tg_bandwidth_2025).
+- id: m2_transition
+  chapter: Who owns the cables
+  narration: But owning a cable is one thing. Building one, and fixing it at the bottom of the sea, is another.
+  claims: []
+- id: m3_card
+  chapter: Who builds and fixes them
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: Who builds and fixes them
+  narration: So who builds these cables, and who fixes them? Very few companies on Earth can do it.
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_layers
+  chapter: Who builds and fixes them
+  narration: Let's open one up. At the center, the glass fibers that carry the light. Around them, layers of plastic
+    that protect them. Sometimes, steel wire for strength. And near the coast, extra armor against anchors and fishing
+    gear. Simple in theory. Very hard to make in one piece across an entire ocean, so that it survives for decades
+    under the sea.
+  claims:
+  - cable_size
+  - design_life
+- id: m3_builders
+  chapter: Who builds and fixes them
+  narration: 'For decades, {{big_three}} have dominated building and laying these cables. SubCom from the United
+    States, NEC from Japan, and Alcatel Submarine Networks from France. And one newcomer is growing faster than
+    all of them: HMN Tech, from China.'
+  claims:
+  - big_three
+- id: m3_repair
+  chapter: Who builds and fixes them
+  narration: Then there are the repairs. When a cable breaks, a specialized cable repair ship has to sail to the
+    spot, find the damaged section on the seabed, bring it up and repair it at sea. These ships are stationed around
+    the world, ready to go. When two cables were damaged in the Baltic Sea in November twenty twenty-four, both
+    were repaired {{repair_ships}}.
+  claims:
+  - repair_ships
+  source_note: General description of a repair; the Baltic example and strategically located ships are from the
+    ICPC.
+- id: m3_discovery
+  chapter: Who builds and fixes them
+  narration: The world's data runs through a handful of factories and a small fleet of ships. If you control who
+    builds the cable, you have a say in who connects to whom.
+  claims:
+  - big_three
+  analysis: true
+  source_note: Interpretation drawn from the sourced facts in this part.
+- id: m3_transition
+  chapter: Who builds and fixes them
+  narration: And those repair ships are busy. Because cables break far more often than you might think.
+  claims: []
+- id: m4_card
+  chapter: When a cable breaks
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: When a cable breaks
+  narration: So what happens when a cable breaks? One cut can slow down, or switch off, the internet of a whole
+    region.
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_faults
+  chapter: When a cable breaks
+  narration: According to the International Cable Protection Committee, there are {{faults}} cable faults around
+    the world every year. And {{faults.human_spoken}} of them are accidents caused by people, mostly fishing gear
+    and ships' anchors. Not sabotage. Just everyday activity at sea.
+  claims:
+  - faults
+- id: m4_redsea
+  chapter: When a cable breaks
+  narration: 'In February twenty twenty-four, it happened in the Red Sea. A cargo ship called the Rubymar was hit
+    by a missile attack and later sank. American officials said its dragging anchor most likely cut {{redsea.cables_spoken}}
+    cables: Seacom, A A E one, and E I G. One internet provider estimated these cables carried {{redsea}} of the
+    traffic in the region.'
+  claims:
+  - redsea
+- id: m4_backup
+  chapter: When a cable breaks
+  narration: Let me draw why that wasn't a disaster. The Red Sea has more than a dozen cables. When three go down,
+    traffic is sent around the break, through the others. It gets slower and more expensive, but it keeps flowing.
+    But what if a country has only one cable?
+  claims:
+  - redsea
+  source_note: More than a dozen cables in the Red Sea is from Bloomberg (redsea_2024); rerouting is a general explanation.
+- id: m4_tonga
+  chapter: When a cable breaks
+  narration: That is what happened to Tonga. On January fifteenth, twenty twenty-two, a huge volcano erupted near its islands.
+    The eruption tore {{tonga}} of its cable into pieces. Tonga's main link to the rest of the world was gone. It
+    took {{tonga.weeks_spoken}} to bring it back, and {{tonga.replaced_spoken}} of new cable.
+  claims:
+  - tonga
+- id: m4_discovery
+  chapter: When a cable breaks
+  narration: The internet is only as strong as its number of routes. Where there are many cables, a cut is an inconvenience.
+    Where there is one, it is a blackout.
+  claims:
+  - redsea
+  - tonga
+  analysis: true
+  source_note: Conclusion drawn from the Red Sea and Tonga cases.
+- id: m4_transition
+  chapter: When a cable breaks
+  narration: And if cables are this important, governments want a say in where they go.
+  claims: []
+- id: m5_card
+  chapter: The fight over the seabed
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: The fight over the seabed
+  narration: Which is why governments are now fighting over the seabed. The cable that carries your data passes
+    through, and lands in, other countries.
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_smw6
+  chapter: The fight over the seabed
+  narration: Take a cable called SEA-ME-WE six, from Southeast Asia, through the Middle East, to Western Europe.
+    In early twenty twenty, the Chinese company HMN Tech was chosen to build it. Then the United States government
+    pressed the members to drop it. In the end, the American company SubCom won the contract, with a bid that was
+    {{smw6}} more expensive, according to Light Reading. Two Chinese carriers, China Telecom and China Mobile, left
+    the project.
+  claims:
+  - smw6
+- id: m5_plcn
+  chapter: The fight over the seabed
+  narration: It also happened across the Pacific. The Pacific Light Cable Network, owned by Google and Meta, was
+    meant to link the United States with {{plcn}}. After an American security review recommended rejecting that
+    leg, it was dropped. The cable now carries data from the United States only to Taiwan and the Philippines.
+  claims:
+  - plcn
+- id: m5_draw
+  chapter: The fight over the seabed
+  narration: Let me draw what is happening. On one side, cables built and owned by American, Japanese and European
+    companies. On the other, a growing network built by Chinese companies. Each country decides who may land a cable
+    on its coast. Slowly, the seabed is splitting into two networks.
+  claims:
+  - big_three
+  - smw6
+  analysis: true
+  source_note: Interpretation of the SEA-ME-WE 6 and PLCN cases reported by Reuters.
+- id: m5_count
+  chapter: The fight over the seabed
+  narration: 'And the stakes keep growing. TeleGeography now tracks {{cable_count}} active and planned cables. Every
+    new one is a choice: who builds it, who pays for it, and where it lands.'
+  claims:
+  - cable_count
+- id: payoff
+  chapter: The journey
+  narration: The internet is not a cloud. It is glass, plastic and steel, lying on the ocean floor, built by a few
+    companies, paid for more and more by the biggest tech firms, repaired by a small fleet of ships, and argued
+    over by governments. Every time you send a message to another country, it takes this journey, as pulses of light,
+    at the bottom of the sea.
+  claims:
+  - itu_99
+  - big_three
+  - owners_model
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The journey
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

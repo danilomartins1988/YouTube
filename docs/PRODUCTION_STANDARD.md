@@ -106,14 +106,17 @@ Documentaries are animated explanations, not narrated slideshows. Use the reusab
 ## 2. Story
 
 - **Hook.** Grab attention in the first 10-15 seconds with a picture, a surprising fact and an open question. The channel intro follows the hook (see 1a), never before it.
-- **Structure: the mission model (default from Episode 07).** After the hook, announce the missions in one line ("Today we have five missions..."). Then each act is a *mission* with its own act card ("Mission 1") and these beats, in order:
-  1. **Question:** the mission's question, stated on screen (`THE QUESTION`).
-  2. **Why it matters:** one sentence of stakes (`WHY IT MATTERS`).
-  3. **Conflict:** the obstacle, the old rule or the paradox.
-  4. **Investigation:** the evidence, ideally a presenter sequence or a signature animation.
-  5. **Discovery:** the sourced answer, often a counter-intuitive number.
-  6. **Transition:** a line that opens the next mission's question.
-  After the last mission: a **payoff** that answers the hook ("Mission complete"), then a **teaser** for the next episode. Episode 07 (`projects/why-taiwan-matters`) is the reference implementation; `tools/gen_taiwan_storyboard.py` shows the card and question helpers.
+- **Structure: five parts, used internally only (user decision of 2026-11-06, from Episode 09).** Each part still has
+  a question, stakes, a conflict, an investigation, a discovery and a transition, but this is a **writing structure,
+  not something the viewer is told about**. Never narrate "Mission one", "That is mission two", "Today we have five
+  missions", "Here is the discovery" or "Mission complete". Never show a mission HUD, "MISSION n COMPLETE" stamps,
+  mission lists or `THE QUESTION / WHY IT MATTERS` labels. Chapter cards show only the chapter title (no "Mission n").
+  Episodes 07 and 08 used the older, spoken mission model; do not copy that part from them.
+- **Visual style: cartoon first (user decision of 2026-11-06).** The user wants episodes "like a cartoon": bright,
+  flat colours, thick outlines, characters and objects that move (ships, anchors, fish, a smiling sun, speech-bubble
+  callouts), camera tracking shots. Use `engine_cartoon` (`remotion/src/animation-engine/CartoonOcean/`) or new
+  cartoon worlds built the same way for most beats; keep maps for geography and the presenter boards for
+  explanations. Plain text cards should be the exception.
 - **Hypotheticals.** Any scenario that has not happened is said to be hypothetical in the narration and labelled on screen (red "Hypothetical scenario" banner). Show a real precedent next to it when one exists.
 - **Pacing.** Alternate macro context with detailed mechanism. Build curiosity, pause before the reveals, and cut redundant explanation.
 - **Balance.** Cover both strengths and risks. Never make it a corporate advert.

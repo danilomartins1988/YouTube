@@ -3,69 +3,73 @@
 scenes:
 - id: s01_seabed
   segment: h_question
-  type: engine_draw
+  type: engine_cartoon
   params:
-    title: Not in the sky
-    presenter: false
-    studio: false
-    push: 0.004
-    draw_start: 0.3
-    speed: 1500
-    strokes:
-    - d: M 200 330 Q 520 300 840 330 Q 1160 360 1480 330 Q 1640 315 1720 330
-      color: accent2
-      width: 4
-      flow: 90
-      start: 0.3
-      label:
-        text: SEA SURFACE
-        x: 220
-        y: 300
-        size: 24
-        color: accent2
-        anchor: start
-      kind: stroke
-    - d: M 1500 160 L 1560 200 M 1530 180 L 1590 140
-      color: muted
-      width: 4
-      start:
-        cue: in the sky
-      label:
-        text: SATELLITE?
-        x: 1600
-        y: 130
-        size: 24
-        color: muted
-        anchor: start
-      kind: stroke
-    - d: M 200 900 Q 600 860 960 920 Q 1320 970 1720 900
-      color: border
-      width: 5
-      start:
+    worldW: 3840
+    coasts:
+      left: true
+      right: true
+    fish: 5
+    cam:
+    - at: 0
+      x: 1500
+      y: -260
+      zoom: 1.0
+    - at:
         cue: but at the bottom
-      label:
-        text: SEABED
-        x: 220
-        y: 960
-        size: 24
-        color: muted
-        anchor: start
-      kind: stroke
-    - d: M 200 880 Q 600 840 960 900 Q 1320 950 1720 880
-      color: accent2
-      width: 7
-      flow: 320
-      pulse: true
-      start:
+        offset: -0.4
+      x: 1700
+      y: 640
+      zoom: 1.1
+      dur: 2.6
+    drift: 10
+    cables:
+    - lightAt: 0.0
+    actors:
+    - kind: satellite
+      x: 1450
+      y: -420
+      beamAt:
+        cue: in the sky
+    - kind: whale
+      x:
+      - - 0
+        - 2400
+      - - 12
+        - 1500
+      y: 720
+      flip: true
+    - kind: cargo
+      x:
+      - - 0
+        - 900
+      - - 12
+        - 1400
+      scale: 0.8
+    callouts:
+    - text: In the sky?
+      x: 1700
+      y: -480
+      at:
+        cue: in the sky
+      tail:
+      - 1520
+      - -420
+      color: gold
+    - text: 'No: down here!'
+      sub: the internet's cables
+      x: 1950
+      y: 780
+      at:
         cue: bottom of the ocean
-      label:
-        text: THE INTERNET
-        x: 960
-        y: 820
-        size: 40
-        color: accent2
-        anchor: middle
-      kind: stroke
+      tail:
+      - 1880
+      - 905
+      color: green
+  sfx:
+  - kind: hit
+    cue: bottom of the ocean
+    gain: 0.3
   assets:
   - font:inter
 - id: s02_web
@@ -97,7 +101,7 @@ scenes:
     - from: &id001
       - -74.0
       - 40.7
-      to: &id025
+      to:
       - -4.5
       - 50.8
       at: &id002
@@ -119,7 +123,7 @@ scenes:
       tokens: 4
       tokenEvery: 0.5
       lift: 0.18
-    - from: &id027
+    - from:
       - -38.5
       - -3.7
       to: *id003
@@ -245,49 +249,14 @@ scenes:
   assets:
   - geo:remotion_world
   - font:inter
-- id: s03_missions
-  segment: h_missions
-  type: kinetic_text
-  params:
-    align: center
-    lines:
-    - text: 'Today: five missions'
-      size: 64
-      cue: five missions
-      color: accent
-    - text: 1 · Follow the light across the ocean
-      size: 40
-      cue: Follow the light
-      style: body
-    - text: 2 · Find out who owns the cables
-      size: 40
-      cue: who owns
-      style: body
-    - text: 3 · Meet who builds and fixes them
-      size: 40
-      cue: build and fix
-      style: body
-    - text: 4 · See what happens when one breaks
-      size: 40
-      cue: one breaks
-      style: body
-    - text: 5 · The fight over the seabed
-      size: 40
-      cue: fight
-      color: risk
-      style: body
-    chapter: Five missions
-  assets:
-  - font:inter
 - id: s04_m1
   segment: m1_card
   type: act_title
   params:
-    number: Mission 1
+    number: ''
     title: How the Internet Crosses the Ocean
     subtitle: Follow the light
     min_seconds: 3.0
-    mission: 1
   sfx:
   - kind: hit
     at: 0.1
@@ -296,50 +265,115 @@ scenes:
   - font:inter
 - id: s05_m1q
   segment: m1_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 1 · How the internet crosses the ocean
-    lines:
-    - text: THE QUESTION
-      size: 34
-      style: body
-      color: muted
-      cue: How does
-    - text: How does the internet cross an ocean?
-      size: 64
-      color: accent
-      cue: How does
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: Most people think it goes through satellites
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
-    mission: 1
+    worldW: 1920
+    coasts:
+      left: true
+      right: true
+    fish: 3
+    sea: 420
+    cam:
+    - at: 0
+      x: 960
+      y: 380
+      zoom: 1.0
+    - at:
+        cue: It mostly
+      x: 960
+      y: 560
+      zoom: 1.05
+      dur: 2.0
+    cables:
+    - lightAt: 0.3
+    actors:
+    - kind: satellite
+      x: 960
+      y: 130
+      beamAt:
+        cue: satellites
+    - kind: fishing
+      x:
+      - - 0
+        - 700
+      - - 10
+        - 1100
+      scale: 0.8
+    callouts:
+    - text: Satellites?
+      x: 1300
+      y: 120
+      at:
+        cue: satellites
+      tail:
+      - 1060
+      - 130
+      color: gold
+    - text: Mostly not!
+      x: 960
+      y: 820
+      at:
+        cue: mostly doesn't
+      tail:
+      - 960
+      - 920
+      color: green
+      size: 44
   assets:
   - font:inter
 - id: s06_sat
   segment: m1_satellite
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Mission 1 · Not satellites
-    title: Cables, not satellites
-    sides:
-    - kicker: Satellites, U.S. international capacity
-      value: '{{satellite.display}}'
-      label: FCC statistics, via TeleGeography
-      cue: government
-    - kicker: Traffic between continents
-      value: '{{tg_check.display}}'
-      label: carried by cables (TeleGeography)
-      cue: between continents
-    mission: 1
+    worldW: 1920
+    coasts:
+      left: true
+      right: true
+    fish: 3
+    cam:
+    - at: 0
+      x: 960
+      y: 330
+      zoom: 1.1
+    - at:
+        cue: TeleGeography
+      x: 960
+      y: 640
+      zoom: 1.1
+      dur: 2.4
+    cables:
+    - lightAt: 0.0
+    - lightAt: 0.4
+      dy: 26
+    actors:
+    - kind: satellite
+      x: 960
+      y: 140
+      beamAt:
+        cue: Satellites carry
+    callouts:
+    - text: '{{satellite.display}}'
+      sub: satellites' share of U.S. international capacity (FCC)
+      x: 1320
+      y: 160
+      at:
+        cue: government
+      tail:
+      - 1060
+      - 140
+      color: gold
+      size: 52
+    - text: '{{tg_check.display}}'
+      sub: 'of traffic between continents: by cable (TeleGeography)'
+      x: 960
+      y: 760
+      at:
+        cue: between continents
+      tail:
+      - 960
+      - 905
+      color: green
+      size: 52
   sources:
   - tg_faq
   - tg_myth_2023
@@ -494,7 +528,6 @@ scenes:
       dur: 2.5
     scale: 0.86
     floor: 1040
-    mission: 1
   sources:
   - tg_faq
   assets:
@@ -581,31 +614,99 @@ scenes:
         color: accent2
         anchor: middle
       kind: stroke
-    mission: 1
   sources:
   - tg_faq
   assets:
   - font:inter
 - id: s09_size
   segment: m1_discovery
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Mission 1 · The discovery
-    title: One cable
-    sides:
-    - kicker: Width, in the deep ocean
-      value: Garden hose
-      label: for most of its journey
-      cue: as wide as
-    - kicker: Near the shore
-      value: + armor
-      label: against fishing gear and anchors
-      cue: extra armor
-    - kicker: Built to last at least
-      value: '{{design_life.display}}'
-      label: minimum design life
-      cue: built to last
-    mission: 1
+    worldW: 2600
+    coasts:
+      left: true
+    fish: 3
+    cam:
+    - at: 0
+      x: 1700
+      y: 760
+      zoom: 1.5
+    - at:
+        cue: Near the shore
+        offset: -0.3
+      x: 620
+      y: 520
+      zoom: 1.3
+      dur: 2.6
+    - at:
+        cue: built to last
+      x: 1200
+      y: 560
+      zoom: 1.0
+      dur: 2.4
+    cables:
+    - lightAt: 0.0
+      color: '#2B3A5C'
+    actors:
+    - kind: fishing
+      x:
+      - - 0
+        - 900
+      - - 20
+        - 600
+      scale: 0.8
+      flip: true
+    - kind: cargo
+      x:
+      - - 0
+        - 160
+      - - 20
+        - 260
+      scale: 0.6
+      anchorAt:
+        cue: anchors are
+    callouts:
+    - text: ≈ a garden hose
+      sub: for most of the journey
+      x: 1700
+      y: 760
+      at:
+        cue: as wide as
+      until:
+        cue: Near the shore
+        offset: -0.5
+      tail:
+      - 1700
+      - 910
+      color: white
+    - text: glass + plastic + steel wire
+      x: 1700
+      y: 680
+      at:
+        cue: thin glass
+      until:
+        cue: Near the shore
+        offset: -0.5
+      color: white
+      size: 26
+    - text: Extra armor
+      sub: 'near the shore: fishing boats and anchors'
+      x: 760
+      y: 470
+      at:
+        cue: extra armor
+      tail:
+      - 640
+      - 560
+      color: gold
+    - text: Built to last {{design_life.display}}+
+      x: 1300
+      y: 220
+      at:
+        cue: built to last
+      color: green
+      screen: true
+      size: 44
   sources:
   - tg_faq
   assets:
@@ -624,29 +725,16 @@ scenes:
       size: 74
       cue: belong to
       color: accent
-    - text: Mission 2 →
-      size: 44
-      cue: mission two
-      color: muted
-    stamp_y: 900
-    mission: 1
-    stamp: Mission 1 complete
-    stamp_cue: But who
-  sfx:
-  - kind: hit
-    cue: But who
-    gain: 0.35
   assets:
   - font:inter
 - id: s11_m2
   segment: m2_card
   type: act_title
   params:
-    number: Mission 2
+    number: ''
     title: Who Owns the Cables
     subtitle: From phone clubs to tech giants
     min_seconds: 3.0
-    mission: 2
   sfx:
   - kind: hit
     at: 0.1
@@ -655,32 +743,56 @@ scenes:
   - font:inter
 - id: s12_m2q
   segment: m2_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 2 · Who owns the cables
-    lines:
-    - text: THE QUESTION
+    worldW: 1920
+    coasts:
+      left: true
+      right: true
+      leftLabel: '?'
+      rightLabel: '?'
+    fish: 3
+    cam:
+    - at: 0
+      x: 960
+      y: 600
+      zoom: 1.15
+    - at:
+        cue: whoever owns
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.2
+    cables:
+    - lightAt: 0.2
+    actors:
+    - kind: cargo
+      x:
+      - - 0
+        - 1300
+      - - 14
+        - 700
+      scale: 0.7
+      flip: true
+    callouts:
+    - text: Whose cable is this?
+      x: 960
+      y: 760
+      at:
+        cue: Who owns
+      tail:
+      - 960
+      - 905
+      color: gold
+      size: 40
+    - text: 'The owner decides: who uses it + what it costs'
+      x: 960
+      y: 250
+      at:
+        cue: whoever owns
+      color: white
+      screen: true
       size: 34
-      style: body
-      color: muted
-      cue: Who owns
-    - text: Who owns the cables at the bottom of the ocean?
-      size: 64
-      color: accent
-      cue: Who owns
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: Whoever owns the road decides who uses it, and what it costs
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
-    mission: 2
   assets:
   - font:inter
 - id: p13_club
@@ -830,7 +942,6 @@ scenes:
       - 905
     scale: 0.86
     floor: 1040
-    mission: 2
   sources:
   - tg_faq
   assets:
@@ -839,7 +950,7 @@ scenes:
   segment: m2_shift
   type: compare
   params:
-    chapter: Mission 2 · The users changed
+    chapter: The users changed
     title: Who uses the international bandwidth
     sides:
     - kicker: '2016'
@@ -854,7 +965,6 @@ scenes:
       value: '4'
       label: Google · Meta · Microsoft · Amazon
       cue: handful
-    mission: 2
   sources:
   - tg_bandwidth_2025
   assets:
@@ -882,8 +992,7 @@ scenes:
       cue: Streaming
       color: muted
       style: body
-    chapter: Mission 2 · Demand
-    mission: 2
+    chapter: Demand
   assets:
   - font:inter
 - id: s16_africa
@@ -985,7 +1094,6 @@ scenes:
       tokenEvery: 0.5
       lift: 0.12
     caption: Planned loop shown schematically (Natural Earth basemap)
-    mission: 2
   sources:
   - meta_2africa
   - natural_earth
@@ -1070,7 +1178,6 @@ scenes:
       travel: 1.0
       label: PAYS TO BUILD
       lift: 0.2
-    mission: 2
   sources:
   - tg_faq
   - tg_bandwidth_2025
@@ -1090,29 +1197,16 @@ scenes:
       size: 74
       cue: Building one
       color: accent
-    - text: Mission 3 →
-      size: 44
-      cue: mission three
-      color: muted
-    stamp_y: 900
-    mission: 2
-    stamp: Mission 2 complete
-    stamp_cue: is another
-  sfx:
-  - kind: hit
-    cue: is another
-    gain: 0.35
   assets:
   - font:inter
 - id: s19_m3
   segment: m3_card
   type: act_title
   params:
-    number: Mission 3
+    number: ''
     title: Who Builds and Fixes Them
     subtitle: A few factories, a small fleet
     min_seconds: 3.0
-    mission: 3
   sfx:
   - kind: hit
     at: 0.1
@@ -1121,32 +1215,46 @@ scenes:
   - font:inter
 - id: s20_m3q
   segment: m3_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 3 · Who builds and fixes them
-    lines:
-    - text: THE QUESTION
-      size: 34
-      style: body
-      color: muted
-      cue: Who builds
-    - text: Who builds these cables, and who fixes them?
-      size: 64
-      color: accent
-      cue: Who builds
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: Very few companies on Earth can do it
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
-    mission: 3
+    worldW: 3000
+    coasts:
+      left: true
+    fish: 3
+    cam:
+    - at: 0
+      x: 1000
+      y: 560
+      zoom: 1.0
+    drift: 40
+    cables:
+    - follow: 0
+      lightAt: 0.5
+    actors:
+    - kind: layer
+      x:
+      - - 0
+        - 1100
+      - - 14
+        - 2000
+      name: Cable ship
+    callouts:
+    - text: Laying a cable
+      sub: spooled out from the ship onto the seabed
+      x: 1100
+      y: 230
+      at:
+        cue: who builds
+      color: gold
+      screen: true
+    - text: Very few companies can do it
+      x: 960
+      y: 1000
+      at:
+        cue: Very few
+      color: white
+      screen: true
+      size: 36
   assets:
   - font:inter
 - id: s21_layers
@@ -1238,7 +1346,6 @@ scenes:
         color: muted
         anchor: middle
       kind: stroke
-    mission: 3
   sources:
   - tg_faq
   assets:
@@ -1288,7 +1395,7 @@ scenes:
       strength: 0.7
     hubs:
     - id: s
-      at: &id022
+      at: &id018
       - -77.0
       - 38.9
       label: SubCom
@@ -1316,7 +1423,7 @@ scenes:
       time:
         cue: Alcatel
     - id: h
-      at: &id021
+      at: &id017
       - 116.4
       - 39.9
       label: HMN Tech
@@ -1326,7 +1433,6 @@ scenes:
         cue: HMN
       anchor: end
     caption: Markers show the company's country, not a site · Natural Earth
-    mission: 3
   sources:
   - reuters_smw6
   - lightreading_smw6
@@ -1336,85 +1442,90 @@ scenes:
   - font:inter
 - id: s23_repair
   segment: m3_repair
-  type: engine_flow
+  type: engine_cartoon
   params:
-    title: How a broken cable gets fixed
-    subtitle: repair ships are stationed around the world (ICPC)
-    cardW: 270
-    cardH: 220
-    stages:
-    - id: f
-      label: Cable breaks
-      sub: traffic rerouted
-      x: 230
-      y: 580
-      kind: warehouse
+    worldW: 2800
+    coasts:
+      left: true
+    fish: 3
+    cam:
+    - at: 0
+      x: 1400
+      y: 640
+      zoom: 1.0
+    - at:
+        cue: find the damaged
+      x: 1350
+      y: 640
+      zoom: 1.15
+      dur: 2.0
+    - at:
+        cue: bring it up
+      x: 1350
+      y: 470
+      zoom: 1.25
+      dur: 2.2
+    - at:
+        cue: stationed around
+      x: 1300
+      y: 560
+      zoom: 1.0
+      dur: 2.4
+    cables:
+    - lightAt: 0.0
+      breakAt: 0.0
+      breakX: 1350
+      repairAt:
+        cue: repair it at sea
+        offset: 2.2
+    actors:
+    - kind: repair
+      x:
+      - - 0
+        - 2700
+      - - cue: to the spot
+        - 1230
+      name: Repair ship
+      grapple:
+        at:
+          cue: find the damaged
+        lift:
+          cue: bring it up
+        splice:
+          cue: repair it at sea
+        lower:
+          cue: stationed around
+    callouts:
+    - text: Broken!
+      x: 1350
+      y: 800
+      at: 0.4
+      until:
+        cue: has to sail
+      tail:
+      - 1350
+      - 905
       color: risk
-      appear: 0.3
-      output: packet
-    - id: s
-      label: Ship sails
-      sub: repair vessel
-      x: 595
-      y: 580
-      kind: company
-      color: accent
-      appear: 0.45
-      output: box
-    - id: l
-      label: Find + lift
-      sub: damaged section
+    - text: Fixed at sea
+      x: 1650
+      y: 300
+      at:
+        cue: repair it at sea
+        offset: 1.0
+      until:
+        cue: stationed around
+      tail:
+      - 1400
+      - 400
+      color: green
+    - text: Baltic Sea, Nov 2024
+      sub: two cables damaged · both repaired {{repair_ships.display}}
       x: 960
-      y: 580
-      kind: warehouse
-      color: accent2
-      appear: 0.6
-      output: box
-    - id: r
-      label: Repair at sea
-      sub: new section
-      x: 1325
-      y: 580
-      kind: fab
-      color: accent
-      appear: 0.75
-      output: packet
-    - id: o
-      label: Back online
-      sub: 'Baltic 2024: {{repair_ships.display}}'
-      x: 1690
-      y: 580
-      kind: datacenter
-      color: accent3
-      appear: 0.9
-      output: packet
-    links:
-    - from: f
-      to: s
-      appear: 1.0
-    - from: s
-      to: l
-      appear: 1.1
-    - from: l
-      to: r
-      appear: 1.2
-    - from: r
-      to: o
-      appear: 1.3
-    items:
-      starts:
-      - cue: has to sail
-      - cue: bring it up
-      - cue: ready to go
-      route:
-      - f
-      - s
-      - l
-      - r
-      - o
-      travel: 0.7
-      process: 1.0
-    mission: 3
+      y: 230
+      at:
+        cue: Baltic Sea
+      color: gold
+      screen: true
   sources:
   - icpc_media
   assets:
@@ -1438,8 +1549,7 @@ scenes:
       size: 50
       cue: control who builds
       color: accent
-    chapter: Mission 3 · The discovery
-    mission: 3
+    chapter: The discovery
   assets:
   - font:inter
 - id: s24_m3t
@@ -1448,37 +1558,24 @@ scenes:
   params:
     align: center
     lines:
-    - text: And those ships are busy
+    - text: Repair ships are busy
       size: 56
-      cue: And those ships
+      cue: And those repair ships
       style: body
     - text: Cables break more often than you think
       size: 74
       cue: break far
       color: accent
-    - text: Mission 4 →
-      size: 44
-      cue: mission four
-      color: muted
-    stamp_y: 900
-    mission: 3
-    stamp: Mission 3 complete
-    stamp_cue: you might think
-  sfx:
-  - kind: hit
-    cue: you might think
-    gain: 0.35
   assets:
   - font:inter
 - id: s25_m4
   segment: m4_card
   type: act_title
   params:
-    number: Mission 4
+    number: ''
     title: When a Cable Breaks
     subtitle: Anchors, nets and a volcano
     min_seconds: 3.0
-    mission: 4
   sfx:
   - kind: hit
     at: 0.1
@@ -1487,179 +1584,220 @@ scenes:
   - font:inter
 - id: s26_m4q
   segment: m4_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 4 · When a cable breaks
-    lines:
-    - text: THE QUESTION
-      size: 34
-      style: body
-      color: muted
-      cue: What happens
-    - text: What happens when a cable breaks?
-      size: 64
-      color: accent
-      cue: What happens
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: One cut can slow down, or switch off, a whole region
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
-    mission: 4
+    worldW: 1920
+    coasts:
+      left: true
+      right: true
+      darkAt:
+        cue: switch off
+        offset: 0.3
+    fish: 3
+    cam:
+    - at: 0
+      x: 960
+      y: 560
+      zoom: 1.0
+    - at:
+        cue: switch off
+      x: 1400
+      y: 420
+      zoom: 1.15
+      dur: 2.0
+    cables:
+    - lightAt: 0.0
+      breakAt:
+        cue: One cut
+      breakX: 900
+    actors:
+    - kind: fishing
+      x:
+      - - 0
+        - 1300
+      - - 8
+        - 760
+      flip: true
+      netAt: 0.6
+    callouts:
+    - text: Snap!
+      x: 900
+      y: 790
+      at:
+        cue: One cut
+      until:
+        cue: switch off
+      tail:
+      - 900
+      - 905
+      color: risk
+      size: 44
+    - text: Lights out
+      x: 1590
+      y: 160
+      at:
+        cue: switch off
+        offset: 0.3
+      tail:
+      - 1590
+      - 290
+      color: risk
   assets:
   - font:inter
 - id: s27_faults
   segment: m4_faults
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Mission 4 · How often
-    title: Cables break all the time
-    sides:
-    - kicker: Faults every year
-      value: '{{faults.display}}'
-      label: worldwide (ICPC)
-      cue: cable faults
-    - kicker: Caused by accidents
-      value: '{{faults.human_display}}'
-      label: mostly fishing gear and anchors
-      cue: accidents
-    - kicker: Sabotage
-      value: Rare
-      label: not the main cause
-      cue: Not sabotage
-    mission: 4
+    worldW: 2400
+    coasts:
+      left: true
+    fish: 3
+    cam:
+    - at: 0
+      x: 1300
+      y: 560
+      zoom: 1.0
+    drift: 14
+    cables:
+    - lightAt: 0.0
+      breakAt:
+        cue: Just everyday
+        offset: 0.6
+      breakX: 1500
+    actors:
+    - kind: fishing
+      x:
+      - - 0
+        - 900
+      - - 20
+        - 1300
+      netAt:
+        cue: fishing gear
+    - kind: cargo
+      x:
+      - - 0
+        - 1750
+      - - cue: Just everyday
+        - 1750
+      - - cue: Just everyday
+          offset: 3
+        - 1560
+      scale: 0.8
+      anchorAt:
+        cue: ships' anchors
+    callouts:
+    - text: '{{faults.display}} faults a year'
+      sub: worldwide (ICPC)
+      x: 960
+      y: 220
+      at:
+        cue: cable faults
+      color: gold
+      screen: true
+      size: 44
+    - text: '{{faults.human_display}}: accidents'
+      sub: mostly fishing gear and ships' anchors
+      x: 960
+      y: 1000
+      at:
+        cue: accidents
+      color: white
+      screen: true
+    - text: Sabotage? Rare.
+      x: 1560
+      y: 380
+      at:
+        cue: Not sabotage
+      until:
+        cue: Just everyday
+        offset: 2.0
+      color: green
+      screen: true
   sources:
   - icpc_media
   assets:
   - font:inter
 - id: s28_redsea
   segment: m4_redsea
-  type: engine_map
+  type: engine_cartoon
   params:
-    title: Red Sea, February 2024
-    subtitle: three of more than a dozen cables cut · {{redsea.display}} of the region's traffic (HGC estimate)
-    cameras:
+    worldW: 2400
+    fish: 2
+    banner:
+      text: Red Sea, February 2024
+      sub: a cargo ship's dragging anchor
+    cam:
     - at: 0
-      lon: 40
-      lat: 22
-      span: 60
+      x: 1100
+      y: 420
+      zoom: 1.0
     - at:
-        cue: Rubymar
-      lon: 39.0
-      lat: 20.5
-      span: 42
+        cue: dragging anchor
+      x: 1250
+      y: 640
+      zoom: 1.05
       dur: 2.4
-    drift:
-      lon: 0.05
-      zoom: 0.006
-    tilt:
-    - - 0
-      - 12
-    - - 20
-      - 6
-    hubs:
-    - id: r
-      at:
-      - 41.0
-      - 16.5
-      label: Rubymar
-      sub: sank, dragging its anchor
-      color: risk
-      time:
+    cables:
+    - lightAt: 0.0
+      breakAt:
+        cue: cut three
+        offset: 0.0
+      breakX: 1250
+      color: '#2B3A5C'
+    - lightAt: 0.2
+      dy: -30
+      breakAt:
+        cue: Seacom
+      breakX: 1290
+    - lightAt: 0.4
+      dy: -60
+      breakAt:
+        cue: E I G
+      breakX: 1330
+      color: '#3A2B5C'
+    - lightAt: 0.1
+      dy: 40
+      color: '#1E4A44'
+    actors:
+    - kind: cargo
+      name: Rubymar
+      x:
+      - - 0
+        - 900
+      - - cue: dragging anchor
+        - 1080
+      - - cue: E I G
+          offset: 1
+        - 1420
+      smokeAt:
+        cue: missile attack
+      anchorAt:
         cue: later sank
-    routes:
-    - from: *id016
-      to: &id017
-      - 43.1
-      - 11.6
+        offset: -1.5
+      sinkAt:
+        cue: later sank
+    callouts:
+    - text: Seacom · AAE-1 · EIG
+      x: 1290
+      y: 1000
       at:
-        cue: it happened
-        offset: 0.0
-      dur: 1.0
-      color: accent2
-      blocked: false
-      tokenShape: packet
-      tokens: 3
-      lift: 0.04
-    - from: *id016
-      to: &id018
-      - 45.0
-      - 12.8
+        cue: Seacom
+      color: risk
+    - text: '{{redsea.display}} of the region''s traffic'
+      sub: estimate by internet provider HGC
+      x: 1300
+      y: 240
       at:
-        cue: cut
-        offset: 0.3
-      dur: 1.0
-      color: accent2
-      blocked: true
-      tokenShape: packet
-      tokens: 3
-      lift: 0.07
-    - from: &id019
-      - 39.2
-      - 21.5
-      to: *id017
-      at:
-        cue: cut
-        offset: 0.6
-      dur: 1.0
-      color: accent2
-      blocked: true
-      tokenShape: packet
-      tokens: 3
-      lift: 0.1
-    - from: &id020
-      - 37.2
-      - 19.6
-      to: *id018
-      at:
-        cue: cut
-        offset: 0.0
-      dur: 1.0
-      color: accent2
-      blocked: true
-      tokenShape: packet
-      tokens: 3
-      lift: 0.04
-    - from: *id019
-      to: *id018
-      at:
-        cue: it happened
-        offset: 1.0
-      dur: 1.0
-      color: accent2
-      blocked: false
-      tokenShape: packet
-      tokens: 3
-      lift: 0.07
-    - from: *id020
-      to: *id017
-      at:
-        cue: it happened
-        offset: 1.25
-      dur: 1.0
-      color: accent2
-      blocked: false
-      tokenShape: packet
-      tokens: 3
-      lift: 0.1
-    caption: 'Cut cables: Seacom, AAE-1, EIG · routes schematic (Natural Earth basemap)'
-    mission: 4
+        cue: estimated
+      color: gold
+      screen: true
   sfx:
   - kind: hit
-    cue: cut
+    cue: cut three
     gain: 0.3
   sources:
   - redsea_2024
-  - natural_earth
   assets:
-  - geo:remotion_world
   - font:inter
 - id: p29_backup
   segment: m4_backup
@@ -1826,63 +1964,116 @@ scenes:
         offset: 1.3
     scale: 0.86
     floor: 1040
-    mission: 4
   sources:
   - redsea_2024
   assets:
   - font:inter
 - id: s30_tonga
   segment: m4_tonga
-  type: engine_map
+  type: engine_cartoon
   params:
-    title: Tonga, January 2022
-    subtitle: an eruption tore {{tonga.display}} of its cable · offline {{tonga.weeks_display}}
-    cameras:
+    worldW: 2400
+    fish: 2
+    banner:
+      text: Tonga, January 2022
+      sub: an eruption tore its cable apart
+    cam:
     - at: 0
-      lon: 175
-      lat: -15
-      span: 120
+      x: 1300
+      y: 420
+      zoom: 1.0
     - at:
-        cue: Tonga
-      lon: -176
-      lat: -20
-      span: 22
-      dur: 2.6
-    drift:
-      lon: 0.03
-      zoom: 0.008
-    tilt:
-    - - 0
-      - 14
-    - - 20
-      - 6
-    highlights:
-    - iso: TON
-      color: risk
-      at:
+        cue: tore
+      x: 1150
+      y: 640
+      zoom: 1.05
+      dur: 2.0
+    - at:
+        cue: was gone
+      x: 1400
+      y: 380
+      zoom: 1.1
+      dur: 2.0
+    - at:
+        cue: It took
+      x: 1300
+      y: 520
+      zoom: 0.95
+      dur: 2.0
+    shake:
+    - at:
         cue: erupted
-    hubs:
-    - id: t
+      dur: 2.0
+      amp: 16
+    cables:
+    - from: 1480
+      to: 2700
+      lightAt: 0.0
+      breakAt:
+        cue: tore
+      breakX: 1900
+      shred: true
+      repairAt:
+        cue: new cable
+    actors:
+    - kind: island
+      x: 1400
+      w: 380
+      darkAt:
+        cue: was gone
+      lightAt:
+        cue: new cable
+    - kind: volcano
+      x: 700
+      eruptAt:
+        cue: erupted
+      scale: 1.1
+    - kind: repair
       at:
-      - -175.2
-      - -21.1
-      label: Tonga
-      sub: main link cut · {{tonga.replaced_display}} of new cable
+        cue: It took
+      x:
+      - - 0
+        - 2600
+      - - cue: It took
+          offset: 4
+        - 1950
+      flip: true
+    callouts:
+    - text: '{{tonga.display}} of cable torn'
+      x: 1950
+      y: 780
+      at:
+        cue: tore
+        offset: 0.6
+      until:
+        cue: It took
+      tail:
+      - 1950
+      - 900
       color: risk
-      time:
-        cue: Tonga's main
-    caption: Real location (Natural Earth, public domain)
-    mission: 4
+    - text: Offline {{tonga.weeks_display}}
+      x: 1400
+      y: 150
+      at:
+        cue: It took
+      color: gold
+    - text: '{{tonga.replaced_display}} of new cable'
+      x: 1950
+      y: 780
+      at:
+        cue: new cable
+      tail:
+      - 1950
+      - 900
+      color: green
   sfx:
   - kind: hit
     cue: erupted
-    gain: 0.35
+    gain: 0.4
   sources:
   - tonga_techxplore
   - tonga_aljazeera
-  - natural_earth
   assets:
-  - geo:remotion_world
   - font:inter
 - id: s31_m4t
   segment: m4_discovery
@@ -1898,14 +2089,6 @@ scenes:
       size: 74
       cue: Where there is one
       color: accent
-    stamp_y: 900
-    mission: 4
-    stamp: Mission 4 complete
-    stamp_cue: a blackout
-  sfx:
-  - kind: hit
-    cue: a blackout
-    gain: 0.35
   assets:
   - font:inter
 - id: s32_m4n
@@ -1918,23 +2101,21 @@ scenes:
       size: 64
       cue: governments
       color: accent
-    - text: Mission 5 →
+    - text: …and where they go
       size: 44
-      cue: mission five
+      cue: where they go
       color: muted
-    mission: 4
-    mission_done: true
+      style: body
   assets:
   - font:inter
 - id: s33_m5
   segment: m5_card
   type: act_title
   params:
-    number: Mission 5
+    number: ''
     title: The Fight over the Seabed
     subtitle: Who builds it, who lands it
     min_seconds: 3.0
-    mission: 5
   sfx:
   - kind: hit
     at: 0.1
@@ -1946,29 +2127,20 @@ scenes:
   type: kinetic_text
   params:
     align: center
-    chapter: Mission 5 · The fight over the seabed
     lines:
-    - text: THE QUESTION
-      size: 34
+    - text: Why governments now fight
+      size: 56
       style: body
-      color: muted
-      cue: Why are
-    - text: Why are governments fighting over the seabed?
-      size: 64
+      cue: Which is why
+    - text: over the seabed
+      size: 84
       color: accent
-      cue: Why are
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
+      cue: over the seabed
+    - text: your data passes through, and lands in, other countries
+      size: 38
       style: body
       color: muted
-      cue: It matters
-    - text: Your data passes through, and lands in, other countries
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
-    mission: 5
+      cue: passes through
   assets:
   - font:inter
 - id: s35_smw6
@@ -2009,14 +2181,14 @@ scenes:
       time: 0.8
       anchor: end
     - id: h
-      at: *id021
+      at: *id017
       label: HMN Tech
       sub: chosen in 2020
       color: risk
       time:
         cue: HMN Tech
     - id: u
-      at: *id022
+      at: *id018
       label: SubCom
       sub: won the contract · bid ≈ ⅓ higher
       color: accent
@@ -2036,14 +2208,14 @@ scenes:
       dur: 1.2
       color: border
       lift: 0.12
-    - from: *id021
+    - from: *id017
       to: *id006
       at:
         cue: pressed the members
       dur: 1.0
       blocked: true
       lift: 0.2
-    - from: *id022
+    - from: *id018
       to: *id013
       at:
         cue: SubCom won
@@ -2070,7 +2242,6 @@ scenes:
       tokenShape: packet
       lift: 0.12
     caption: Route schematic · markers show countries, not sites (Natural Earth)
-    mission: 5
   sfx:
   - kind: hit
     cue: pressed the members
@@ -2123,7 +2294,7 @@ scenes:
         cue: Hong Kong
       anchor: end
     - id: t
-      at: &id023
+      at: &id019
       - 121.0
       - 25.0
       label: Taiwan
@@ -2131,7 +2302,7 @@ scenes:
       time:
         cue: only to Taiwan
     - id: p
-      at: &id024
+      at: &id020
       - 121.0
       - 14.6
       label: Philippines
@@ -2147,7 +2318,7 @@ scenes:
       blocked: true
       lift: 0.18
     - from: *id009
-      to: *id023
+      to: *id019
       at:
         cue: only to Taiwan
       dur: 1.4
@@ -2155,7 +2326,7 @@ scenes:
       tokenShape: packet
       lift: 0.16
     - from: *id009
-      to: *id024
+      to: *id020
       at:
         cue: Philippines
       dur: 1.4
@@ -2163,7 +2334,6 @@ scenes:
       tokenShape: packet
       lift: 0.12
     caption: Route schematic (Natural Earth basemap)
-    mission: 5
   sfx:
   - kind: hit
     cue: review recommended
@@ -2316,7 +2486,6 @@ scenes:
       dur: 2.4
     scale: 0.86
     floor: 1040
-    mission: 5
   sources:
   - reuters_smw6
   assets:
@@ -2339,13 +2508,7 @@ scenes:
       size: 40
       cue: Every new
       style: body
-    chapter: Mission 5 · The stakes
-    stamp_y: 900
-    mission: 5
-    stamp: Mission 5 complete
-    stamp_cue:
-      cue: where it lands
-      offset: 0.3
+    chapter: The stakes
   sfx:
   - kind: hit
     cue: where it lands
@@ -2354,159 +2517,152 @@ scenes:
   - font:inter
 - id: s39_payoff
   segment: payoff
-  type: engine_map
+  type: engine_cartoon
   params:
-    cameras:
+    worldW: 5200
+    coasts:
+      left: true
+      right: true
+    fish: 7
+    cam:
     - at: 0
-      lon: 140
-      lat: 10
-      span: 200
+      x: 300
+      y: 230
+      zoom: 1.2
+    - at:
+        cue: glass, plastic
+      x: 900
+      y: 760
+      zoom: 1.25
+      dur: 2.6
     - at:
         cue: built by a few
-      lon: 60
-      lat: 20
-      span: 280
+      x: 1800
+      y: 600
+      zoom: 1.0
+      dur: 3.0
+    - at:
+        cue: repaired by
+      x: 2900
+      y: 520
+      zoom: 1.0
       dur: 3.0
     - at:
         cue: Every time
-      lon: 20
-      lat: 20
-      span: 330
+      x: 4100
+      y: 600
+      zoom: 1.0
       dur: 3.0
-    drift:
-      lon: 0.25
-      zoom: 0.004
-    tilt:
-    - - 0
-      - 16
-    - - 30
-      - 4
-    routes:
-    - from: *id001
-      to: *id025
-      at: &id026
-        cue: It is glass
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id001
-      to: *id003
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id027
-      to: *id003
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id004
-      to: *id003
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id011
-      to: *id004
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id013
-      to: *id005
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id005
-      to: *id006
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id006
-      to: *id007
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id007
-      to: *id008
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id008
-      to: *id009
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id009
-      to: *id010
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id006
-      to: *id010
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    - from: *id011
-      to: *id005
-      at: *id026
-      dur: 1.2
-      color: accent2
-      tokenShape: packet
-      tokens: 4
-      tokenEvery: 0.5
-      lift: 0.18
-    caption: All missions complete · schematic links, not actual cable routes
-    mission: 6
+    - at:
+        cue: as pulses
+      x: 4850
+      y: 260
+      zoom: 1.2
+      dur: 3.0
+    drift: 0
+    cables:
+    - lightAt: 0.0
+    actors:
+    - kind: layer
+      x:
+      - - 0
+        - 1700
+      - - 40
+        - 2200
+      scale: 0.8
+    - kind: repair
+      x:
+      - - 0
+        - 3200
+      - - 40
+        - 2700
+      flip: true
+      scale: 0.8
+    - kind: whale
+      x:
+      - - 0
+        - 3900
+      - - 40
+        - 3300
+      y: 700
+      flip: true
+    - kind: cargo
+      x:
+      - - 0
+        - 4200
+      - - 40
+        - 4600
+      scale: 0.7
+    callouts:
+    - text: Not a cloud
+      x: 300
+      y: 120
+      at:
+        cue: not a cloud
+      until:
+        cue: glass, plastic
+        offset: 0.5
+      color: white
+    - text: glass · plastic · steel
+      x: 900
+      y: 790
+      at:
+        cue: glass, plastic
+        offset: 0.5
+      until:
+        cue: built by a few
+        offset: 0.5
+      tail:
+      - 900
+      - 880
+      color: white
+    - text: Built by a few companies
+      x: 1900
+      y: 230
+      at:
+        cue: built by a few
+        offset: 0.8
+      until:
+        cue: repaired by
+        offset: 0.4
+      color: gold
+    - text: Paid for by tech giants
+      x: 1900
+      y: 330
+      at:
+        cue: paid for
+      until:
+        cue: repaired by
+        offset: 0.4
+      color: gold
+    - text: Fixed by a small fleet
+      x: 2900
+      y: 200
+      at:
+        cue: repaired by
+        offset: 0.8
+      until:
+        cue: Every time
+      color: green
+    - text: Argued over by governments
+      x: 2900
+      y: 300
+      at:
+        cue: argued over
+      until:
+        cue: Every time
+      color: risk
+    - text: Your message, as light
+      x: 4850
+      y: 110
+      at:
+        cue: as pulses
+      color: green
+      size: 40
   sources:
   - itu_2025
-  - natural_earth
+  - tg_faq
   assets:
-  - geo:remotion_world
   - font:inter
 - id: s40_end
   segment: teaser
@@ -2519,6 +2675,5 @@ scenes:
     teaser: Every figure in this film is sourced in the description
     brand_cue:
       cue: This is The Hidden Economics
-    mission: 6
   assets:
   - font:inter

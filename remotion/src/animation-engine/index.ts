@@ -15,3 +15,5 @@ export type {Datum, BarChartProps, LineChartProps, DonutProps} from './AnimatedC
 export {ExplodedDiagram} from './ExplodedDiagram/ExplodedDiagram';
 export type {Layer, LayerKind} from './ExplodedDiagram/ExplodedDiagram';
 export {LightSweep, Iris, Burst, Studio, DigitalBoard, TitleReveal} from './transitions';
+export {CartoonOcean} from './CartoonOcean/CartoonOcean';
+export type {CartoonOceanProps, CartoonActor, CartoonCable, CartoonCallout} from './CartoonOcean/CartoonOcean';

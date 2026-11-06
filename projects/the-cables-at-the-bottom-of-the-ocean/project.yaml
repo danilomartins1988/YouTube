@@ -1,7 +1,7 @@
 title: "The Cables at the Bottom of the Ocean That Carry the Internet"
 slug: the-cables-at-the-bottom-of-the-ocean
 language: en
-# Episode 09 (undersea internet cables). Mission model + animation engine + game HUD (style.hud).
+# Episode 09 (undersea internet cables). Five-part structure (internal only) + animation engine + cartoon ocean scenes.
 # All money already in US dollars in the sources; no conversion needed.
 renderer: remotion
 remotion_geo: [world]
@@ -29,9 +29,6 @@ style:
   transition: scan
   background: grid
   motifs: [chapter-tags]
-  hud:
-    missions: ["How the internet crosses the ocean", "Who owns the cables", "Who builds and fixes them", "When a cable breaks", "The fight over the seabed"]
-    objectives: ["Follow the light", "Find the owners", "Meet the builders", "Survive a cut", "Map the rivals"]
 budget:
   max_paid_usd: 1.00
 presenter_min: 4
