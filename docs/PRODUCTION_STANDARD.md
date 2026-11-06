@@ -70,18 +70,31 @@ reusable standard. `README.md` covers how to run the pipeline; this file covers 
   - `text` for written labels;
   - `bars` for a chart built bar by bar;
   - `point` (with `laser`) for pointing;
-  - `react` for the reaction.
-- **Frequency** (documentaries of 10-15 min, enforced by QC in `hiddeneco/qc.py:check_presenter`). An episode needs at least **3** presenter sequences of about 10-25 s each, spread through the film and not back to back, including:
+  - `react` for the reaction;
+  - `map` (the hand traces country outlines; later items can use `ll: true` to place on lon/lat);
+  - `pin` and `bubble` (a marker or a value-sized circle grows while the hand points at it);
+  - `shock` (a red disruption travels along a path; boxes it passes turn red and shake);
+  - `carry` (the hand moves a labelled token from one place to another).
+- **Frequency** (documentaries of 10-15 min, enforced by QC in `hiddeneco/qc.py:check_presenter`). An episode needs at least **3** presenter sequences (an episode brief can raise this with `presenter_min` in `project.yaml`; Episode 07 uses 4) of about 10-25 s each, spread through the film and not back to back, including:
   - one that draws a diagram (boxes, strokes or arrows);
-  - one that builds or interacts with a chart (bars);
+  - one that builds or interacts with a chart or a map (`bars`, `map` or `bubble`);
   - one that explains a business or economic relationship (at least two boxes joined by an arrow).
 - **Exemptions.** Missing sequences fail QC. Only projects marked `presenter_exempt: true` (the episodes published before this standard) or deliverables with `presenter: false` are exempt.
 - **Demo.** `python tools/render_presenter_demo.py` writes `output/brand/presenter_demo.mp4`.
 
 ## 2. Story
 
-- **Hook.** Grab attention in the first 10 seconds with a picture, a surprising fact and an open question. No channel intro.
-- **Structure.** Acts that alternate macro context with detailed mechanism. Build curiosity, pause before the reveals, and cut redundant explanation.
+- **Hook.** Grab attention in the first 10-15 seconds with a picture, a surprising fact and an open question. The channel intro follows the hook (see 1a), never before it.
+- **Structure: the mission model (default from Episode 07).** After the hook, announce the missions in one line ("Today we have five missions..."). Then each act is a *mission* with its own act card ("Mission 1") and these beats, in order:
+  1. **Question:** the mission's question, stated on screen (`THE QUESTION`).
+  2. **Why it matters:** one sentence of stakes (`WHY IT MATTERS`).
+  3. **Conflict:** the obstacle, the old rule or the paradox.
+  4. **Investigation:** the evidence, ideally a presenter sequence or a signature animation.
+  5. **Discovery:** the sourced answer, often a counter-intuitive number.
+  6. **Transition:** a line that opens the next mission's question.
+  After the last mission: a **payoff** that answers the hook ("Mission complete"), then a **teaser** for the next episode. Episode 07 (`projects/why-taiwan-matters`) is the reference implementation; `tools/gen_taiwan_storyboard.py` shows the card and question helpers.
+- **Hypotheticals.** Any scenario that has not happened is said to be hypothetical in the narration and labelled on screen (red "Hypothetical scenario" banner). Show a real precedent next to it when one exists.
+- **Pacing.** Alternate macro context with detailed mechanism. Build curiosity, pause before the reveals, and cut redundant explanation.
 - **Balance.** Cover both strengths and risks. Never make it a corporate advert.
 - **Ending.** Close on a memorable economic insight and a natural link to the next episode.
 
@@ -128,7 +141,7 @@ reusable standard. `README.md` covers how to run the pipeline; this file covers 
    - Simplify any chart that is hard to read.
    - Then render again. Layout previews are free: `rpreview`-style one-frame-per-scene renders through Remotion.
 4. **Full decode:** `ffmpeg -v error -i <mp4> -f null -`.
-5. **Intro and presenter check:** the intro appears exactly once, after the hook. The presenter appears, visibly moves, and draws with the hand on the path in at least three sequences. Inspect those sheets in `tools/visual_qc.py --scenes ...`. If any of this is missing, the episode is not delivered.
+5. **Intro and presenter check:** the intro appears exactly once, after the hook. The presenter appears, visibly moves, and draws with the hand on the path in at least three sequences (or the episode's `presenter_min`). Inspect those sheets in `tools/visual_qc.py --scenes ...`. If any of this is missing, the episode is not delivered.
 
 ## 6. Delivery and growth
 

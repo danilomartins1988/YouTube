@@ -181,14 +181,21 @@ export const PresenterScene: React.FC = () => {
     let proj: ((lon: number, lat: number) => Pt) | null = null;
     const LL = (q: any, ll?: boolean): Pt => (ll && proj ? proj(q[0], q[1]) : q);
     let tEnd = enterAt + 1.3;
+    let lastCue = 0;
     let bx = bodyFor([board.x + 260, 0]);
     const firstX = bx;
-    const push = (a: Omit<Action, 'at' | 'bodyA' | 'bodyB' | 'walkFrom' | 'walkAt'>, cueSpec: any, side = -1) => {
+    const push = (a0: Omit<Action, 'at' | 'bodyA' | 'bodyB' | 'walkFrom' | 'walkAt'>, cueSpec: any, side = -1) => {
+      let a = a0;
       const bA = a.kind === 'react' || (a as any).laser ? bx : bodyFor(a.anchor, side);
       const bB = a.kind === 'draw' || a.kind === 'write' ? bodyFor(a.end, side) : bA;
-      const walk = Math.abs(bA - bx) / (520 * S);
+      let walk = Math.abs(bA - bx) / (520 * S);
       const walkAt = tEnd;
-      const at = Math.max(tEnd + walk, cueSpec !== undefined ? cue(cueSpec, 0) : 0);
+      const cueT = cueSpec !== undefined ? cue(cueSpec, 0) : 0;
+      // catch-up: when the character is behind the narration, it walks and draws faster (never skips an item)
+      const late = cueSpec !== undefined ? Math.max(0, tEnd + walk - cueT) : Math.max(0, tEnd - lastCue);
+      if (late > 0) { walk *= 0.5; a = {...a, dur: a.dur * clamp(1 - late / 2.5, 0.35, 1)}; }
+      if (cueSpec !== undefined) lastCue = cueT;
+      const at = Math.max(tEnd + walk, cueT);
       out.push({...a, at, bodyA: bA, bodyB: bB, walkFrom: bx, walkAt} as Action);
       tEnd = at + a.dur;
       bx = bB;
@@ -281,6 +288,13 @@ export const PresenterScene: React.FC = () => {
         const len = Math.hypot(a1[0] - a0[0], a1[1] - a0[1]);
         push({kind: 'carry', dur: 0.4 + len / (it.speed || 420), anchor: a0, end: a1, len, label: it.label, colour: it.colour}, cs, it.side === 'right' ? 1 : -1);
       }
+    }
+    const endBy = (scene.duration || 1e9) - 1.0;
+    const last = out.length ? out[out.length - 1].at + out[out.length - 1].dur : 0;
+    if (last > endBy && out.length) {
+      const t0 = Math.min(...out.map((o) => o.at));
+      const f = Math.max(0.5, (endBy - t0) / Math.max(0.1, last - t0));
+      out.forEach((o) => { o.at = t0 + (o.at - t0) * f; o.walkAt = t0 + (o.walkAt - t0) * f; o.dur *= f; });
     }
     return {out, firstX};
   }, [scene, geoAll]);
@@ -402,7 +416,7 @@ export const PresenterScene: React.FC = () => {
     if (a.kind === 'write') {
       return (
         <g key={i}>
-          <clipPath id={`pw-${scene.id}-${i}`}><rect x={a.x! - 6} y={a.y! - a.size! * 1.1} width={a.len! * u + 10} height={a.size! * 1.5} /></clipPath>
+          <clipPath id={`pw-${scene.id}-${i}`}><rect x={a.x! - 6} y={a.y! - a.size! * 1.1} width={u >= 0.999 ? a.len! * 1.6 + 40 : a.len! * u * 1.12 + 10} height={a.size! * 1.5} /></clipPath>
           <text x={a.x} y={a.y} clipPath={`url(#pw-${scene.id}-${i})`} fill={a.colour ? col : pal.ink} fontFamily={font.display} fontWeight={800} fontSize={a.size}>{a.text}</text>
         </g>
       );

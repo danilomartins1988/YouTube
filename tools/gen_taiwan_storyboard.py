@@ -163,13 +163,13 @@ add("p12_process", "m2_process", "presenter", {
         {"arrow": [[1130, 445], [1195, 445]], "bend": 0.0, "colour": "ink", "cue": "cut into chips"},
         {"box": [1200, 380, 270, 130], "label": "PACKAGE", "colour": "accent3", "cue": "cut into chips"},
         {"stroke": "M 1255 645 L 1325 645 L 1325 725 L 1255 725 Z M 1340 645 L 1390 645 L 1390 680 L 1340 680 Z M 1340 690 L 1390 690 L 1390 725 L 1340 725 Z M 1235 745 L 1410 745",
-         "colour": "accent3", "w": 4, "speed": 1300, "cue": "packaged together"},
+         "colour": "accent3", "w": 4, "speed": 1300, "cue": "packaged with"},
         {"text": "CHIP + MEMORY", "x": 1245, "y": 820, "size": 24, "colour": "muted", "cue": "with memory"},
         {"arrow": [[1480, 445], [1545, 445]], "bend": 0.0, "colour": "ink", "cue": "and tested"},
         {"box": [1550, 380, 230, 130], "label": "TEST", "colour": "accent2", "cue": "and tested"},
         {"stroke": "M 1615 690 L 1655 730 L 1730 645", "colour": "accent", "w": 8, "cue": "and tested", "offset": 0.4},
         {"text": "EVERY STEP: CLOSE TO PERFECT", "x": 790, "y": 930, "size": 40, "colour": "accent", "cue": "and tested", "offset": 1.2},
-        {"point": [1180, 915], "label": "no step can fail", "colour": "accent", "hold": 1.6, "laser": True, "cue": "every single step"},
+        {"point": [1180, 915], "label": "no step can fail", "colour": "accent", "hold": 1.6, "laser": True, "cue": "Every step"},
     ],
     "scale": 0.86, "floor": 1040, "board": BOARD, "speed": 1500,
 }, sources=["sia_bcg_2024"])
@@ -197,6 +197,9 @@ add("s14_yield", "m2_yield", "whiteboard", {
         {"text": "YEARS OF PRACTICE", "x": 1250, "y": 620, "size": 34, "cue": "years of practice"},
         {"text": "THOUSANDS OF ENGINEERS", "x": 1250, "y": 680, "size": 34, "cue": "thousands of engineers"},
         {"text": "LEARNING FROM MISTAKES", "x": 1250, "y": 740, "size": 34, "colour": "accent", "cue": "endless learning"},
+        {"text": "NEW FAB ≠ EXPERIENCED FAB", "x": 1250, "y": 830, "size": 34, "colour": "risk", "cue": "brand-new factory"},
+        {"d": "M 1250 850 L 1700 850", "w": 5, "colour": "risk", "cue": "same machines"},
+        {"text": "KNOW-HOW: HARD TO COPY", "x": 1250, "y": 910, "size": 38, "colour": "accent", "cue": "hard to buy"},
     ]})
 
 add("s15_capex", "m2_capex", "compare", {"chapter": "Mission 2 · Obstacle 3: money", "title": "The cost of staying at the top", "sides": [
@@ -416,11 +419,14 @@ add("s39_why", "m5_why", "kinetic_text", {"align": "center", "chapter": "Mission
 # ====================================================================== PAYOFF
 add("s40_payoff", "payoff", "map", {
     "chapter": "Mission complete", "geo": "world",
-    "views": [{"lon": 20, "lat": 25, "span": 330}, {"lon": 121.0, "lat": 23.7, "span": 14, "cue": "smaller than Switzerland"}],
-    "move": 4.0,
+    "views": [{"lon": 20, "lat": 25, "span": 330}, {"lon": 121.0, "lat": 23.7, "span": 14, "cue": "smaller than Switzerland"},
+              {"lon": 121.0, "lat": 25.0, "span": 70, "cue": "weak point"}, {"lon": 40, "lat": 28, "span": 300, "cue": "whole world is watching"}],
+    "move": 3.0,
     "highlights": {"TWN": {"colour": "accent", "cue": "mission complete"}},
     "markers": [{"lon": 121.0, "lat": 23.7, "label": "Not every chip", "sublabel": "the hardest ones, at unmatched scale",
-                 "cue": "hardest", "size": 40}],
+                 "cue": "hardest", "size": 40},
+                {"lon": 121.0, "lat": 23.7, "label": "", "sublabel": "the world's weak point: the cutting edge in one place",
+                 "cue": "weak point", "size": 30, "anchor": "end"}],
 }, sources=["sia_bcg_2024", "natural_earth"], assets=GEO)
 add("s41_end", "teaser", "end_card", {
     "words": ["Next time:", "another hidden link"], "brand": "The Hidden Economics",

@@ -104,7 +104,7 @@ segments:
     narration: >-
       Let's draw what it takes. First, engineers design the chip, billions of tiny switches. Then a fab prints
       that design onto a silicon wafer, layer after layer, using light. Then the wafer is cut into chips,
-      packaged together with memory, and tested. And every single step has to be close to perfect.
+      packaged with memory, and tested. Every step has to be close to perfect.
     claims: []
     analysis: true
     source_note: General description of the semiconductor value chain (design, fabrication, assembly, packaging and test), as in SIA/BCG.
@@ -307,10 +307,10 @@ segments:
   - id: m5_race
     chapter: The race to diversify
     narration: >-
-      Let's map the race. The United States passed the CHIPS Act, with {{chips_act_figs}} for semiconductors,
-      including {{chips_act_figs.mfg_spoken}} dollars for manufacturing. TSMC itself plans to invest
-      {{tsmc_us_165}} in Arizona. In Japan, its Kumamoto venture will cost {{japan_jasm}}. In Germany, a TSMC
-      joint venture is rising in {{germany_esmc}}.
+      Let's map the race. America's CHIPS Act offers {{chips_act_figs}} for semiconductors,
+      {{chips_act_figs.mfg_spoken}} dollars of it for manufacturing. TSMC plans to invest {{tsmc_us_165}} in
+      Arizona. In Japan, its Kumamoto venture costs {{japan_jasm}}. In Germany, a TSMC joint venture is rising in
+      {{germany_esmc}}.
     claims: [chips_act_figs, tsmc_us_165, japan_jasm, germany_esmc]
 
   - id: m5_europe

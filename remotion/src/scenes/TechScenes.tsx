@@ -751,8 +751,8 @@ export const Domino: React.FC = () => {
       {p.title && <RiseText x={120} y={140} at={cue(p.title_cue, 0)} size={48} weight={800} display>{p.title}</RiseText>}
       {p.banner && (
         <g opacity={eo(t, scene.lead, 0.5)}>
-          <rect x={W - 640} y={100} width={520} height={52} rx={26} fill={risk} opacity={0.18} stroke={risk} strokeWidth={2} />
-          <text x={W - 380} y={134} textAnchor="middle" fill={risk} fontFamily={font.body} fontWeight={800} fontSize={22} letterSpacing={3}>{String(p.banner).toUpperCase()}</text>
+          <rect x={W - 640} y={150} width={520} height={52} rx={26} fill={risk} opacity={0.18} stroke={risk} strokeWidth={2} />
+          <text x={W - 380} y={184} textAnchor="middle" fill={risk} fontFamily={font.body} fontWeight={800} fontSize={22} letterSpacing={3}>{String(p.banner).toUpperCase()}</text>
         </g>
       )}
       {p.precedent && (() => {
