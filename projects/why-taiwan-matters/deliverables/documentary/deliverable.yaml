@@ -1,0 +1,12 @@
+id: documentary
+format: long_16x9
+title: "Why Taiwan Matters So Much to the Global Economy"
+target_seconds: {min: 660, max: 800}
+captions: {burn_in: false, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: []
+output_alias: output/taiwan_documentary.mp4
+# The YouTube package is written by hand into docs/episodes/07-taiwan/ (no thumbnails or Shorts were requested).
+# The channel intro is on by default and is inserted automatically after the hook.
+thumbnails: []
+metadata: false

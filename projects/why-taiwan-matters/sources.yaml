@@ -1,0 +1,337 @@
+# Sources and claims for "Why Taiwan Matters So Much to the Global Economy" (Episode 07).
+#
+# Status meanings (see hiddeneco/models.py):
+#   data_derived       computed by the pipeline from a cited dataset (never typed by hand)
+#   human_verified     a named person read the primary source and confirmed it (set verified_by)
+#   source_located     located via research on 2026-11-06; NOT yet read in full by a human
+#   needs_verification no adequate source yet
+#
+# CATEGORIES ARE NOT INTERCHANGEABLE. This dossier keeps apart:
+#   foundry services (TSMC's share of contract-manufacturing revenue),
+#   leading-edge logic capacity (<10 nm) by country,
+#   total wafer-fabrication capacity by country (all chip types), and
+#   memory (DRAM), where South Korea, not Taiwan, leads.
+# All money in US dollars. Disruption numbers are scenario ESTIMATES and are labelled hypothetical.
+
+sources:
+  - id: cia_taiwan
+    title: "The World Factbook: Taiwan (Geography: area)"
+    publisher: US Central Intelligence Agency
+    url: https://www.cia.gov/the-world-factbook/countries/taiwan/
+    accessed: "2026-11-06"
+    credit: "CIA World Factbook"
+  - id: cia_switzerland
+    title: "The World Factbook: Switzerland (Geography: area)"
+    publisher: US Central Intelligence Agency
+    url: https://www.cia.gov/the-world-factbook/countries/switzerland/
+    accessed: "2026-11-06"
+    credit: "CIA World Factbook"
+  - id: tsmc_about
+    title: "About TSMC: established in 1987, the world's first dedicated semiconductor foundry"
+    publisher: TSMC
+    url: https://www.tsmc.com/english/aboutTSMC
+    accessed: "2026-11-06"
+    credit: "TSMC"
+  - id: tsmc_history
+    title: TSMC founding as a joint venture of the Taiwanese government (National Development Fund), Philips and private investors (company history summaries)
+    publisher: Quartr (company history) / TSMC corporate history
+    url: https://quartr.com/insights/edge/the-silicon-empire-tsmcs-revolution-and-morris-changs-legacy
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "Quartr"
+  - id: tsmc_4q25
+    title: TSMC Reports Fourth Quarter EPS of NT$19.50 (Form 6-K, 15 Jan 2026)
+    publisher: TSMC (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1046179/000104617926000008/a4q25e_withguidancexfinal.htm
+    published: "2026-01-15"
+    accessed: "2026-11-06"
+    credit: "TSMC 4Q25 results"
+  - id: tsmc_4q25_call
+    title: TSMC 4Q25 earnings conference call transcript (full-year 2025 revenue, 2026 capex guidance)
+    publisher: TSMC Investor Relations
+    url: https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf
+    published: "2026-01-15"
+    accessed: "2026-11-06"
+    credit: "TSMC 4Q25 call"
+  - id: tsmc_customers_2025
+    title: TSMC 2025 annual report customer concentration ('client A' 19%, 'client B' 17%), as reported by CNA / Taiwan News
+    publisher: Taiwan News (CNA)
+    url: https://www.taiwannews.com.tw/news/6310676
+    published: "2026-03"
+    accessed: "2026-11-06"
+    kind: secondary
+    notes: TSMC does not name the clients; Nvidia's CEO has said Nvidia is TSMC's largest customer.
+    credit: "TSMC annual report (via CNA)"
+  - id: trendforce_2q26
+    title: "2Q26 foundry revenue ranking: TSMC 72.5% share"
+    publisher: TrendForce
+    url: https://www.trendforce.com/presscenter/news/20260909-13225.html
+    published: "2026-09-09"
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "TrendForce"
+  - id: sia_bcg_2024
+    title: Emerging Resilience in the Semiconductor Supply Chain (Exhibits 5 and 6)
+    publisher: Semiconductor Industry Association and Boston Consulting Group
+    url: https://www.semiconductors.org/wp-content/uploads/2024/05/Report_Emerging-Resilience-in-the-Semiconductor-Supply-Chain.pdf
+    published: "2024-05"
+    accessed: "2026-11-06"
+    credit: "SIA / BCG (2024)"
+  - id: asml_euv
+    title: EUV lithography systems
+    publisher: ASML
+    url: https://www.asml.com/en/products/euv-lithography-systems
+    accessed: "2026-11-06"
+    credit: "ASML"
+  - id: asml_2025
+    title: ASML 2025 results coverage (48 EUV systems shipped in 2025)
+    publisher: Tom's Hardware (report of ASML results)
+    url: https://www.tomshardware.com/tech-industry/semiconductors/asml-projects-usd71-billion-in-revenue-by-2030-as-demand-for-euv-lithography-machines-intensifies-due-to-ai-boom-china-sales-lag-behind-while-company-cashes-in-on-high-end-twinscan-systems
+    published: "2026-01"
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "ASML (via Tom's Hardware)"
+  - id: nvda_10k_fy2026
+    title: NVIDIA Corporation Form 10-K for fiscal year ended 25 January 2026 (suppliers)
+    publisher: NVIDIA Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm
+    published: "2026-02"
+    accessed: "2026-11-06"
+    credit: "NVIDIA 10-K FY2026"
+  - id: apple_arizona
+    title: Apple and TSMC Arizona (Apple chips produced at TSMC's Arizona fab)
+    publisher: Arizona Technology Council (report of Apple announcement)
+    url: https://www.aztechcouncil.org/apple-chips-tsmc-fab/
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "Apple (via AZ Tech Council)"
+  - id: taiwan_exports_2025
+    title: Taiwan's 2025 exports hit record US$640.75 billion (Ministry of Finance data)
+    publisher: Focus Taiwan (CNA)
+    url: https://focustaiwan.tw/business/202601090021
+    published: "2026-01-09"
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "Ministry of Finance (via Focus Taiwan)"
+  - id: alix_2021
+    title: Chip shortage to cost auto industry $210 billion in 2021 (AlixPartners forecast)
+    publisher: TechSpot (report of AlixPartners release)
+    url: https://www.techspot.com/news/91403-chip-shortage-hits-auto-industry-hard-210-billion.html
+    published: "2021-09"
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "AlixPartners (via TechSpot)"
+  - id: bloomberg_2024
+    title: If China Invades Taiwan, It Would Cost World Economy $10 Trillion (Bloomberg Economics scenario analysis)
+    publisher: Bloomberg
+    url: https://www.bloomberg.com/news/features/2024-01-09/if-china-invades-taiwan-it-would-cost-world-economy-10-trillion
+    published: "2024-01-09"
+    accessed: "2026-11-06"
+    notes: Scenario estimates; Bloomberg notes the results depend heavily on assumptions.
+    credit: "Bloomberg Economics (scenario estimate)"
+  - id: tsmc_165bn
+    title: TSMC intends to expand its investment in the United States to US$165 billion
+    publisher: TSMC (press release, via Business Facilities)
+    url: https://businessfacilities.com/tsmc-to-expand-u-s-investment-to-165b
+    published: "2025-03-03"
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "TSMC"
+  - id: chips_act
+    title: "What Is the CHIPS Act? ($52.7 billion, incl. $39 billion in manufacturing incentives)"
+    publisher: Council on Foreign Relations
+    url: https://www.cfr.org/in-brief/what-chips-act
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "CFR"
+  - id: oecd_chips
+    title: "Economic security in a changing world: special focus on semiconductor value chains (US CHIPS Act; European Chips Act target of 20% global share by 2030)"
+    publisher: OECD
+    url: https://www.oecd.org/en/publications/2025/09/economic-security-in-a-changing-world_78f3b129/full-report/special-focus-semiconductor-value-chains_dc772986.html
+    published: "2025-09"
+    accessed: "2026-11-06"
+    credit: "OECD"
+  - id: jasm
+    title: JASM Set to Expand in Kumamoto, Japan (total investment to exceed US$20 billion)
+    publisher: TSMC
+    url: https://pr.tsmc.com/english/news/3105
+    published: "2024-02-06"
+    accessed: "2026-11-06"
+    credit: "TSMC"
+  - id: esmc
+    title: TSMC, Bosch, Infineon and NXP to invest in ESMC, Dresden (production targeted for end-2027)
+    publisher: TrendForce (overview of TSMC's global expansion)
+    url: https://www.trendforce.com/news/2024/02/24/news-latest-overview-on-tsmcs-global-expansion-initiatives/
+    published: "2024-02-24"
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "TSMC (via TrendForce)"
+  - id: natural_earth
+    title: Natural Earth 1:50m Admin 0 Countries
+    publisher: Natural Earth
+    url: https://www.naturalearthdata.com/downloads/
+    accessed: "2026-11-06"
+    kind: dataset
+    license: public-domain
+    credit: "Natural Earth (public domain)"
+
+claims:
+  - id: taiwan_area
+    text: "Taiwan's total area is 35,980 sq km and Switzerland's 41,277 sq km (CIA World Factbook): Taiwan is smaller."
+    spoken: about 36,000 square kilometers
+    display: "35,980 km²"
+    value: 35980
+    fields: {ch_display: "41,277 km²", ch_spoken: "about 41,000 square kilometers"}
+    source_ids: [cia_taiwan, cia_switzerland]
+    status: source_located
+  - id: tsmc_1987
+    text: TSMC was established in 1987 as the world's first dedicated semiconductor foundry, with backing from Taiwan's government and Philips.
+    spoken: In 1987
+    display: "1987"
+    value: 1987
+    fields: {mid_spoken: in 1987}
+    source_ids: [tsmc_about, tsmc_history]
+    status: source_located
+  - id: nvda_1993
+    text: NVIDIA was incorporated in California in April 1993; it designs chips and relies on foundry partners such as TSMC to manufacture them (10-K).
+    spoken: in 1993
+    display: "1993"
+    value: 1993
+    source_ids: [nvda_10k_fy2026]
+    status: source_located
+  - id: foundry_share
+    text: TSMC held 72.5% of global foundry revenue among the top ten foundries in the second quarter of 2026 (TrendForce).
+    spoken: about 72 percent
+    display: "72.5%"
+    value: 72.5
+    fields: {period_display: "2Q 2026"}
+    source_ids: [trendforce_2q26]
+    status: source_located
+    verification_note: Share of FOUNDRY revenue (contract manufacturing), not of all chipmaking.
+  - id: tsmc_revenue_2025
+    text: TSMC's 2025 revenue was US$122.42 billion, up 35.9% in US dollar terms (4Q25 earnings call).
+    spoken: 122 billion dollars
+    display: "$122.4bn"
+    value: 122.4
+    source_ids: [tsmc_4q25_call]
+    status: source_located
+  - id: advanced_q4
+    text: In Q4 2025, technologies of 7 nanometers and more advanced accounted for 77% of TSMC's wafer revenue (3nm 28%, 5nm 35%, 7nm 14%).
+    spoken: 77 percent
+    display: "77%"
+    value: 77
+    source_ids: [tsmc_4q25]
+    status: source_located
+  - id: capex_2026
+    text: In January 2026 TSMC guided 2026 capital spending of US$52-56 billion (later reports say the range was raised).
+    spoken: more than 50 billion dollars
+    display: "$52-56bn"
+    value: 54
+    source_ids: [tsmc_4q25_call]
+    status: source_located
+  - id: lt10_capacity
+    text: "SIA/BCG: in 2022 Taiwan held 69% of global wafer-fab capacity for logic chips below 10 nm, South Korea 31% and the US 0%; in its 2032 forecast Taiwan has 47% and the US 28%."
+    spoken: 69 percent
+    display: "69%"
+    value:
+      - {code: TWN, name: Taiwan, value: 69}
+      - {code: KOR, name: South Korea, value: 31}
+      - {code: USA, name: United States, value: 0}
+    fields: {kor_spoken: 31 percent, tw32_spoken: 47 percent, tw32_display: "47%", us32_spoken: 28 percent, us32_display: "28%", us22_display: "0%", year: "2022"}
+    source_ids: [sia_bcg_2024]
+    status: source_located
+  - id: total_capacity
+    text: "SIA/BCG: in 2022 Taiwan held 18% of total global wafer-fabrication capacity across all chip types (China 24%, Korea 17%, Japan 17%, US 10%), and South Korea held 52% of DRAM memory capacity."
+    spoken: 18 percent
+    display: "18%"
+    value: 18
+    fields: {dram_kor_spoken: about half, dram_kor_display: "52%"}
+    source_ids: [sia_bcg_2024]
+    status: source_located
+  - id: fab_investment
+    text: SIA/BCG project about $2.3 trillion of wafer-fab capital expenditure worldwide in 2024-2032.
+    spoken: 2.3 trillion dollars
+    display: "$2.3tn"
+    value: 2.3
+    source_ids: [sia_bcg_2024]
+    status: source_located
+  - id: asml_only
+    text: ASML is the only company that makes EUV lithography systems, the machines used to print the smallest chip features; it shipped 48 EUV systems in 2025.
+    spoken: "48"
+    display: "48 EUV systems (2025)"
+    value: 48
+    source_ids: [asml_euv, asml_2025]
+    status: source_located
+    verification_note: Sole-supplier status from ASML; shipment count from coverage of ASML's 2025 results.
+  - id: tsmc_customers
+    text: TSMC's 2025 annual report shows its largest customer at 19% of revenue and the second at 17%; Nvidia's CEO has said Nvidia is the largest, and the second is widely reported to be Apple. Nvidia's 10-K lists TSMC as a wafer supplier.
+    spoken: 19 percent
+    display: "19% + 17%"
+    value: 19
+    fields: {second_spoken: 17 percent, first_display: "19%", second_display: "17%"}
+    source_ids: [tsmc_customers_2025, nvda_10k_fy2026]
+    status: source_located
+  - id: apple_tsmc
+    text: Apple-designed chips are manufactured by TSMC, including at its Arizona fab.
+    spoken: Apple
+    source_ids: [apple_arizona]
+    status: source_located
+  - id: exports_2025
+    text: Taiwan's exports reached a record US$640.75 billion in 2025, up 34.9%, with the United States taking 30.9%.
+    spoken: 640 billion dollars
+    display: "$640.8bn"
+    value: 640.75
+    fields: {growth_spoken: 35 percent}
+    source_ids: [taiwan_exports_2025]
+    status: source_located
+  - id: auto_2021
+    text: AlixPartners forecast that the 2021 chip shortage would cost the global auto industry $210 billion in revenue and 7.7 million vehicles of lost production.
+    spoken: 210 billion dollars
+    display: "$210bn"
+    value: 210
+    fields: {cars_spoken: 7.7 million, cars_display: "7.7M vehicles"}
+    source_ids: [alix_2021]
+    status: source_located
+  - id: bloomberg_scenarios
+    text: "Bloomberg Economics' January 2024 scenarios: a war over Taiwan could cut world GDP by about 10% (roughly $10 trillion) in the first year; a yearlong blockade by about 5%. Bloomberg stresses the results depend heavily on assumptions."
+    spoken: about 10 trillion dollars
+    display: "≈ $10tn (estimate)"
+    value: 10
+    fields: {pct_spoken: about 10 percent, blockade_spoken: about 5 percent, blockade_display: "≈ 5% of world GDP", pct_display: "≈ 10% of world GDP", blockade_short: "≈ 5%"}
+    source_ids: [bloomberg_2024]
+    status: source_located
+  - id: tsmc_us_165
+    text: In March 2025 TSMC said it would expand its US investment to $165 billion, for six fabs, two advanced packaging plants and an R&D center in Arizona.
+    spoken: 165 billion dollars
+    display: "$165bn"
+    value: 165
+    source_ids: [tsmc_165bn]
+    status: source_located
+  - id: chips_act_figs
+    text: The 2022 US CHIPS and Science Act provides $52.7 billion for semiconductors, including $39 billion in manufacturing incentives.
+    spoken: 52.7 billion dollars
+    display: "$52.7bn"
+    value: 52.7
+    fields: {mfg_spoken: 39 billion, mfg_display: "$39bn"}
+    source_ids: [chips_act]
+    status: source_located
+  - id: eu_target
+    text: The European Chips Act aims to double the EU's share of global chip production to 20% by 2030.
+    spoken: 20 percent
+    display: "20% by 2030"
+    value: 20
+    source_ids: [oecd_chips]
+    status: source_located
+  - id: japan_jasm
+    text: TSMC's Japanese venture JASM opened its first fab in Kumamoto in February 2024; total investment is to exceed $20 billion.
+    spoken: more than 20 billion dollars
+    display: "$20bn+"
+    value: 20
+    source_ids: [jasm]
+    status: source_located
+  - id: germany_esmc
+    text: TSMC, Bosch, Infineon and NXP are building ESMC in Dresden, Germany, with production targeted for the end of 2027.
+    spoken: Dresden
+    display: "Dresden"
+    source_ids: [esmc]
+    status: source_located

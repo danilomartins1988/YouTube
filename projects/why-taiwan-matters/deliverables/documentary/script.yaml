@@ -1,0 +1,362 @@
+# Documentary (target 11-13 min). Mission-based structure (docs/PRODUCTION_STANDARD.md, "Mission model"):
+# hook -> channel intro (automatic) -> five missions -> payoff -> teaser.
+# Each mission: question, why it matters, conflict, investigation, discovery, transition.
+# Every number comes from the dossier (sources.yaml) through {{placeholders}}; years are written in words.
+title: "Why Taiwan Matters So Much to the Global Economy"
+logline: >-
+  An island smaller than Switzerland makes most of the world's most advanced chips. Five missions explain how
+  that happened, why it is so hard to copy, who depends on it, what a disruption could cost, and whether the
+  world can spread the risk.
+segments:
+  # ---------------------------------------------------------------- HOOK (the intro is inserted after it)
+  - id: h_question
+    chapter: The island
+    narration: >-
+      What if one of the world's most important industries depended on an island smaller than Switzerland?
+    claims: [taiwan_area]
+    analysis: true
+    source_note: Framing question. Taiwan (35,980 sq km) is smaller than Switzerland (41,277 sq km), CIA World Factbook.
+
+  - id: h_stakes
+    chapter: The island
+    narration: >-
+      Taiwan covers {{taiwan_area}}. Yet most of the world's most advanced chips are made right here.
+    claims: [taiwan_area, lt10_capacity]
+    source_note: '"Most of the most advanced chips" = 69% of logic capacity below 10 nm in 2022 (SIA/BCG).'
+
+  - id: h_missions
+    chapter: The island
+    narration: >-
+      Today we have five missions. Find out how Taiwan became so important, why nobody can simply copy it,
+      who depends on it, what a disruption could cost, and whether the world can spread the risk.
+    claims: []
+    analysis: true
+    source_note: Episode roadmap; each mission is sourced below.
+
+  # ---------------------------------------------------------------- MISSION 1: how Taiwan became important
+  - id: m1_card
+    chapter: How Taiwan became essential
+    narration: ""
+    claims: []
+
+  - id: m1_question
+    chapter: How Taiwan became essential
+    narration: >-
+      Mission one. How did a small island become the center of chipmaking? It matters because almost
+      everything we use now runs on chips, and someone has to make them.
+    claims: []
+    analysis: true
+    source_note: Mission question and stakes; no figures.
+
+  - id: m1_conflict
+    chapter: How Taiwan became essential
+    narration: >-
+      For a long time, the chip business had one rule. If you designed chips, you also built the factory
+      that made them, called a fab. And fabs were brutally expensive. So only giants could play.
+    claims: []
+    analysis: true
+    source_note: General history of the integrated device manufacturer model, as described by TSMC's own history page.
+
+  - id: m1_tsmc
+    chapter: How Taiwan became essential
+    narration: >-
+      {{tsmc_1987}}, with backing from Taiwan's government and the Dutch company Philips, a new company called
+      TSMC tried something different. It would design nothing. It would only manufacture chips, for anyone. It
+      became the world's first dedicated chip foundry. That one idea rewired the industry. A small team with a
+      great design no longer needed its own factory. Nvidia, founded {{nvda_1993}}, became one of those
+      designers, and so did Apple and AMD. They focus on design and send their blueprints to Taiwan. The
+      timeline turned into a network, and Taiwan sat at the center of it.
+    claims: [tsmc_1987, nvda_1993, tsmc_customers, apple_tsmc]
+    source_note: Nvidia (10-K) and Apple name TSMC as a manufacturer; AMD is a fabless designer that uses TSMC.
+
+  - id: m1_discovery
+    chapter: How Taiwan became essential
+    narration: >-
+      Here is the discovery. Today TSMC takes {{foundry_share}} of all the revenue earned by the world's top
+      ten contract chipmakers. In twenty twenty-five alone, it brought in {{tsmc_revenue_2025}}. And at the
+      end of that year, {{advanced_q4}} of its wafer revenue came from its most advanced processes, seven
+      nanometers and smaller. Taiwan didn't just join the industry. It took over the hardest part of it.
+    claims: [foundry_share, tsmc_revenue_2025, advanced_q4]
+
+  - id: m1_transition
+    chapter: How Taiwan became essential
+    narration: >-
+      But if the idea was that simple, why didn't everyone copy it? That is mission two.
+    claims: []
+
+  # ---------------------------------------------------------------- MISSION 2: why everyone can't make chips
+  - id: m2_card
+    chapter: Why chips are so hard to make
+    narration: ""
+    claims: []
+
+  - id: m2_question
+    chapter: Why chips are so hard to make
+    narration: >-
+      Mission two. Why can't every country just build its own chip factories? It matters because, if they
+      could, Taiwan would not be special at all.
+    claims: []
+    analysis: true
+    source_note: Mission question; no figures.
+
+  - id: m2_process
+    chapter: Why chips are so hard to make
+    narration: >-
+      Let's draw what it takes. First, engineers design the chip, billions of tiny switches. Then a fab prints
+      that design onto a silicon wafer, layer after layer, using light. Then the wafer is cut into chips,
+      packaged together with memory, and tested. And every single step has to be close to perfect.
+    claims: []
+    analysis: true
+    source_note: General description of the semiconductor value chain (design, fabrication, assembly, packaging and test), as in SIA/BCG.
+
+  - id: m2_euv
+    chapter: Why chips are so hard to make
+    narration: >-
+      Here is the first obstacle. To print the smallest features, a fab needs extreme ultraviolet lithography
+      machines. Only one company in the world makes them, the Dutch firm A S M L. In twenty twenty-five, it
+      shipped {{asml_only}} of them.
+    claims: [asml_only]
+
+  - id: m2_yield
+    chapter: Why chips are so hard to make
+    narration: >-
+      And owning the machines is not enough. The real secret is yield, the share of chips on each wafer that
+      actually work. Raising yield takes years of practice, thousands of engineers, and endless learning from
+      mistakes. A brand-new factory, even with the very same machines, can take a long time to match the yields
+      of an experienced one. That know-how is hard to buy, and even harder to copy.
+    claims: []
+    analysis: true
+    source_note: Explanation of manufacturing yield; no figures.
+
+  - id: m2_capex
+    chapter: Why chips are so hard to make
+    narration: >-
+      Then there is the money. TSMC planned to spend {{capex_2026}} on factories and equipment in twenty
+      twenty-six alone. Across the industry, chipmakers are expected to invest about {{fab_investment}} in new
+      fabs between twenty twenty-four and twenty thirty-two.
+    claims: [capex_2026, fab_investment]
+
+  - id: m2_discovery
+    chapter: Why chips are so hard to make
+    narration: >-
+      So here is the discovery, and it is subtle. Taiwan does not make most of the world's chips. In twenty
+      twenty-two it had {{total_capacity}} of all chipmaking capacity, less than China. But for the most
+      advanced logic chips, below ten nanometers, Taiwan had {{lt10_capacity}}. South Korea had
+      {{lt10_capacity.kor_spoken}}. The United States had none.
+    claims: [total_capacity, lt10_capacity]
+
+  - id: m2_layers
+    chapter: Why chips are so hard to make
+    narration: >-
+      And chips are not one market. Memory is a different game, led by South Korea, which had
+      {{total_capacity.dram_kor_spoken}} of the world's DRAM capacity. Advanced packaging, the step that
+      joins chips and memory, has become a bottleneck of its own. So Taiwan's edge is narrow, but it sits at
+      the very top.
+    claims: [total_capacity]
+    source_note: '"About half" = 52% of DRAM capacity in 2022 (SIA/BCG). Packaging as a bottleneck is described in Episode 06''s sources (Nvidia 10-K).'
+
+  - id: m2_transition
+    chapter: Why chips are so hard to make
+    narration: >-
+      Which raises the next question. Who depends on that top?
+    claims: []
+
+  # ---------------------------------------------------------------- MISSION 3: who depends on Taiwan
+  - id: m3_card
+    chapter: Who depends on Taiwan
+    narration: ""
+    claims: []
+
+  - id: m3_question
+    chapter: Who depends on Taiwan
+    narration: >-
+      Mission three. Who actually depends on Taiwan? It matters because dependence is where economic power,
+      and economic risk, come from.
+    claims: []
+    analysis: true
+    source_note: Mission question; no figures.
+
+  - id: m3_map
+    chapter: Who depends on Taiwan
+    narration: >-
+      Let me draw it. Here is Taiwan. And here, across the Pacific, is California, home to Nvidia, Apple and
+      AMD. They design chips, but they don't make their most advanced chips themselves. TSMC does. So the lines
+      run from California to Taiwan, and back again as finished chips.
+    claims: [tsmc_customers, apple_tsmc]
+    source_note: Nvidia's 10-K lists TSMC as a wafer supplier; Apple says TSMC makes Apple-designed chips.
+
+  - id: m3_customers
+    chapter: Who depends on Taiwan
+    narration: >-
+      How concentrated is it? In twenty twenty-five, TSMC's largest customer alone made up {{tsmc_customers}}
+      of its revenue, and the second largest {{tsmc_customers.second_spoken}}. Nvidia's chief executive has
+      said Nvidia is the biggest, and the second is widely reported to be Apple. But notice that this
+      dependence runs both ways. TSMC needs its biggest customers almost as much as they need TSMC.
+    claims: [tsmc_customers]
+
+  - id: m3_network
+    chapter: Who depends on Taiwan
+    narration: >-
+      Now follow the chips further. Cloud companies in the United States, Europe and Asia fill their data
+      centers with AI chips made in Taiwan. Phone makers, PC makers and carmakers buy chips too. In twenty
+      twenty-five, Taiwan's exports hit a record {{exports_2025}}, up {{exports_2025.growth_spoken}} in a single
+      year.
+    claims: [exports_2025]
+
+  - id: m3_designers
+    chapter: Who depends on Taiwan
+    narration: >-
+      Here is the key distinction. Companies that design chips depend on the companies that make them. And
+      the makers depend on Dutch machines, Japanese materials and American design software. Everyone depends on
+      someone.
+    claims: [asml_only]
+    analysis: true
+    source_note: Regional specialisation of the chip supply chain as described by SIA/BCG; ASML as sole EUV supplier.
+
+  - id: m3_unequal
+    chapter: Who depends on Taiwan
+    narration: >-
+      But not every industry depends on Taiwan equally. A cutting-edge AI chip or a new phone processor needs
+      the most advanced factories, and that is where Taiwan dominates. A car or a washing machine mostly uses
+      older, simpler chips that are made in many countries. Even so, a missing cheap chip can still stop a car
+      factory.
+    claims: [lt10_capacity, total_capacity]
+    analysis: true
+    source_note: Contrast between leading-edge share (69%) and total capacity share (18%), SIA/BCG.
+
+  - id: m3_transition
+    chapter: Who depends on Taiwan
+    narration: >-
+      So what would happen if the flow of chips from Taiwan were suddenly interrupted? Mission four.
+    claims: []
+
+  # ---------------------------------------------------------------- MISSION 4: hypothetical disruption
+  - id: m4_card
+    chapter: A hypothetical disruption
+    narration: ""
+    claims: []
+
+  - id: m4_question
+    chapter: A hypothetical disruption
+    narration: >-
+      Mission four is a thought experiment. What if chip shipments from Taiwan were seriously disrupted? To be
+      clear, this is a hypothetical scenario, not a prediction.
+    claims: []
+    analysis: true
+    source_note: Explicitly labelled hypothetical; no forecast is made.
+
+  - id: m4_precedent
+    chapter: A hypothetical disruption
+    narration: >-
+      We do have one real clue. In twenty twenty-one, a chip shortage caused by the pandemic, not by Taiwan,
+      hit carmakers hard. One forecast put the cost to the global auto industry at {{auto_2021}} in lost
+      revenue, and {{auto_2021.cars_spoken}} vehicles that were never built.
+    claims: [auto_2021]
+
+  - id: m4_domino
+    chapter: A hypothetical disruption
+    narration: >-
+      Now imagine a disruption at the source. Advanced chip supply stops. New phones and computers slip.
+      Cloud companies can't add AI servers. Carmakers idle their lines. Prices rise, and the shock spreads to
+      industries that never thought of themselves as tech. A shortage of the most advanced chips would be very
+      hard to replace quickly, because the alternative factories simply don't exist yet at that scale.
+    claims: [lt10_capacity]
+    analysis: true
+    source_note: Illustrative chain of effects in a hypothetical scenario; no figures.
+
+  - id: m4_chain
+    chapter: A hypothetical disruption
+    narration: >-
+      Let's draw that chain. Taiwan's fabs. Then packaging. Then the device makers. Then the stores and the data
+      centers. Now break the very first link, and watch the shock travel down the line. Every box after the
+      break turns red.
+    claims: []
+    analysis: true
+    source_note: Conceptual drawing of a hypothetical disruption.
+
+  - id: m4_estimate
+    chapter: A hypothetical disruption
+    narration: >-
+      How big could it get? In twenty twenty-four, Bloomberg Economics estimated that a war over Taiwan could
+      cut world output by {{bloomberg_scenarios.pct_spoken}} in the first year, {{bloomberg_scenarios}}. Even a
+      blockade could cost {{bloomberg_scenarios.blockade_spoken}}. Bloomberg stresses these are scenarios, and
+      they depend heavily on assumptions.
+    claims: [bloomberg_scenarios]
+
+  - id: m4_transition
+    chapter: A hypothetical disruption
+    narration: >-
+      Numbers like that explain why governments are now racing to make chips at home. Mission five.
+    claims: []
+
+  # ---------------------------------------------------------------- MISSION 5: diversification and its limits
+  - id: m5_card
+    chapter: The race to diversify
+    narration: ""
+    claims: []
+
+  - id: m5_question
+    chapter: The race to diversify
+    narration: >-
+      Mission five. Can the world spread the risk? It matters because diversification is expensive, and it is
+      slow.
+    claims: []
+    analysis: true
+    source_note: Mission question; no figures.
+
+  - id: m5_race
+    chapter: The race to diversify
+    narration: >-
+      Let's map the race. The United States passed the CHIPS Act, with {{chips_act_figs}} for semiconductors,
+      including {{chips_act_figs.mfg_spoken}} dollars for manufacturing. TSMC itself plans to invest
+      {{tsmc_us_165}} in Arizona. In Japan, its Kumamoto venture will cost {{japan_jasm}}. In Germany, a TSMC
+      joint venture is rising in {{germany_esmc}}.
+    claims: [chips_act_figs, tsmc_us_165, japan_jasm, germany_esmc]
+
+  - id: m5_europe
+    chapter: The race to diversify
+    narration: >-
+      Europe wants {{eu_target}} of global chip production by twenty thirty. South Korea keeps pouring money
+      into memory and its own foundries. And Taiwan keeps building its newest fabs at home.
+    claims: [eu_target, capex_2026]
+    source_note: Korea and Taiwan sentences are qualitative; TSMC's capex guidance is in the dossier.
+
+  - id: m5_limits
+    chapter: The race to diversify
+    narration: >-
+      But here is the limit. Even with all this spending, the forecast from the industry's own trade group and
+      Boston Consulting Group still has Taiwan holding {{lt10_capacity.tw32_spoken}} of advanced logic capacity
+      in twenty thirty-two, with the United States at {{lt10_capacity.us32_spoken}}. Diversification reduces
+      the risk. It doesn't remove it.
+    claims: [lt10_capacity]
+
+  - id: m5_why
+    chapter: The race to diversify
+    narration: >-
+      Why so slow? Because the hard part isn't the building. It is the engineers, the suppliers, and the years
+      of yield learning that come with them. Taiwan has spent decades on that. A new fab abroad can be built in
+      a few years. Building the whole ecosystem around it takes much longer.
+    claims: []
+    analysis: true
+    source_note: Interpretation drawn from Mission two; no figures.
+
+  # ---------------------------------------------------------------- PAYOFF + TEASER
+  - id: payoff
+    chapter: Mission complete
+    narration: >-
+      So, mission complete. Taiwan matters not because it makes every chip, but because it makes the hardest
+      ones, at a scale nobody else has matched. An island smaller than Switzerland ended up holding one of the
+      most important keys to the global economy. Its strength is also the world's weak point: so much of the
+      cutting edge in one place. And that is why the whole world is watching it.
+    claims: [lt10_capacity, taiwan_area]
+    analysis: true
+    source_note: Conclusion drawn from the sourced missions.
+
+  - id: teaser
+    chapter: Mission complete
+    narration: >-
+      Next time on The Hidden Economics, we follow the money behind another hidden link the world economy
+      can't live without. This is The Hidden Economics.
+    claims: []
+    analysis: true
+    source_note: Channel sign-off.

@@ -3,6 +3,8 @@ import {getLength} from '@remotion/paths';
 import {pointAt} from '../lib/pathsafe';
 import {clamp, easeInOut, eo, lerp, prog, spokenAt, useCtx} from '../lib/anim';
 import {RiseText} from '../components/Chrome';
+import {useGeo} from '../lib/geo';
+import {merc, parseLayer} from '../scenes/MapScene';
 
 /*
  * THE HIDDEN ECONOMICS presenter: an original, minimalist 2D economist (navy blazer, gold tie, round glasses)
@@ -149,9 +151,10 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
   );
 };
 
-type Action = {kind: 'draw' | 'write' | 'point' | 'react'; at: number; dur: number; d?: string; len?: number; text?: string; x?: number; y?: number;
+type Action = {kind: 'draw' | 'write' | 'point' | 'react' | 'grow' | 'shock' | 'carry'; at: number; dur: number; d?: string; len?: number; text?: string; x?: number; y?: number;
   size?: number; colour?: string; w?: number; fill?: string; anchor: Pt; end: Pt; bodyA: number; bodyB: number; walkFrom: number; walkAt: number;
-  label?: string; hold?: number; group?: number; laser?: boolean; barH?: number; barRect?: [number, number, number, number]};
+  label?: string; hold?: number; group?: number; laser?: boolean; barH?: number; barRect?: [number, number, number, number];
+  boxRect?: [number, number, number, number]; fillOpacity?: number; r?: number; pts?: Pt[]; display?: string};
 
 const arrowPath = (a: Pt, b: Pt, bend = 0.18) => {
   const mx = (a[0] + b[0]) / 2 - (b[1] - a[1]) * bend, my = (a[1] + b[1]) / 2 + (b[0] - a[0]) * bend;
@@ -171,8 +174,12 @@ export const PresenterScene: React.FC = () => {
   const enterAt = cue(p.enter, 0) - 0.2;
   const reach = 210 * S;
   const bodyFor = (pt: Pt, side = -1): number => clamp(pt[0] + side * reach, 140, W - 140);
+  const geoAll = useGeo('world');
   const acts = useMemo(() => {
     const out: Action[] = [];
+    // board-space projection of the most recent `map` item (lon/lat items are placed with it)
+    let proj: ((lon: number, lat: number) => Pt) | null = null;
+    const LL = (q: any, ll?: boolean): Pt => (ll && proj ? proj(q[0], q[1]) : q);
     let tEnd = enterAt + 1.3;
     let bx = bodyFor([board.x + 260, 0]);
     const firstX = bx;
@@ -190,7 +197,7 @@ export const PresenterScene: React.FC = () => {
     for (const it of p.items || []) {
       const cs = it.cue !== undefined ? {cue: it.cue, offset: it.offset} : undefined;
       if (it.stroke || it.arrow) {
-        const d: string = it.stroke || arrowPath(it.arrow[0], it.arrow[1], it.bend ?? 0.18);
+        const d: string = it.stroke || arrowPath(LL(it.arrow[0], it.ll), LL(it.arrow[1], it.ll), it.bend ?? 0.18);
         const len = getLength(d);
         const a0 = pointAt(d, 0), a1 = pointAt(d, len);
         push({kind: 'draw', dur: Math.max(0.4, len / (it.speed || speed)), d, len, colour: it.colour, w: it.w, fill: it.fill,
@@ -199,7 +206,7 @@ export const PresenterScene: React.FC = () => {
         const [x, y, w, h] = it.box;
         const d = `M ${x} ${y} L ${x + w} ${y} L ${x + w} ${y + h} L ${x} ${y + h} Z`;
         push({kind: 'draw', dur: Math.max(0.5, (2 * (w + h)) / (it.speed || speed * 1.3)), d, len: 2 * (w + h), colour: it.colour, w: it.w || 5, fill: it.fill,
-          anchor: [x, y], end: [x, y + h]}, cs);
+          anchor: [x, y], end: [x, y + h], boxRect: [x, y, w, h]}, cs);
         if (it.label) {
           const size = it.size || 34;
           const len = String(it.label).length * size * 0.62;
@@ -227,15 +234,77 @@ export const PresenterScene: React.FC = () => {
             it.side === 'left' ? -1 : 1);
         });
       } else if (it.point) {
-        push({kind: 'point', dur: it.hold || 1.6, anchor: it.point, end: it.point, label: it.label, colour: it.colour, laser: !!it.laser}, cs,
+        const pp = LL(it.point, it.ll);
+        push({kind: 'point', dur: it.hold || 1.6, anchor: pp, end: pp, label: it.label, colour: it.colour, laser: !!it.laser}, cs,
           it.side === 'right' ? 1 : -1);
       } else if (it.react) {
         push({kind: 'react', dur: 0.8, anchor: [0, 0], end: [0, 0]}, cs);
+      } else if (it.map) {
+        // the presenter DRAWS a map: each country's main outline is traced by the marker, then tinted
+        const [rx, ry, rw, rh] = it.rect || [board.x + 40, board.y + 40, board.w - 80, board.h - 80];
+        const v = it.map;
+        const Sz = 4096;
+        const [mcx, mcy] = merc(v.lon, v.lat);
+        const k = rw / ((v.span / 360) * Sz);
+        proj = (lon: number, lat: number): Pt => { const [mx, my] = merc(lon, lat); return [rx + rw / 2 + (mx - mcx) * k, ry + rh / 2 + (my - mcy) * k]; };
+        const rings = geoAll && geoAll.paths ? parseLayer('world', geoAll.paths) : {};
+        (it.countries || []).forEach((code: string, ci: number) => {
+          const rs = (rings as any)[code] as {pts: Float64Array; x0: number; y0: number; x1: number; y1: number}[] | undefined;
+          if (!rs || !rs.length) return;
+          const big = rs.slice().sort((a, b) => (b.x1 - b.x0) * (b.y1 - b.y0) - (a.x1 - a.x0) * (a.y1 - a.y0))[0];
+          const n = big.pts.length / 2, step = Math.max(1, Math.floor(n / (it.points || 140)));
+          let d = '';
+          for (let i = 0; i < n; i += step) {
+            const X = rx + rw / 2 + (big.pts[2 * i] - mcx) * k, Y = ry + rh / 2 + (big.pts[2 * i + 1] - mcy) * k;
+            d += (d ? ' L ' : 'M ') + X.toFixed(1) + ' ' + Y.toFixed(1);
+          }
+          d += ' Z';
+          const len = getLength(d);
+          const a0 = pointAt(d, 0), a1 = pointAt(d, len);
+          const hl = it.highlight?.[code];
+          push({kind: 'draw', dur: Math.max(0.5, len / (it.speed || speed * 1.4)), d, len, colour: hl || it.colour || 'muted', w: hl ? 4 : 3,
+            fill: hl || it.fill || 'muted', fillOpacity: hl ? 0.55 : 0.18, anchor: [a0.x, a0.y], end: [a1.x, a1.y]},
+            ci === 0 ? cs : (it.country_cues?.[code] !== undefined ? {cue: it.country_cues[code]} : undefined));
+        });
+      } else if (it.pin || it.bubble) {
+        const pos = LL(it.pin || it.bubble, it.ll);
+        const r = it.bubble ? Math.max(10, (it.max_r || 70) * Math.sqrt((it.value || 1) / (it.max_value || it.value || 1))) : (it.r || 12);
+        push({kind: 'grow', dur: it.hold || 1.0, anchor: pos, end: pos, label: it.label, colour: it.colour, r, display: it.display, laser: !!it.laser}, cs,
+          it.side === 'right' ? 1 : -1);
+      } else if (it.shock) {
+        const pts: Pt[] = it.shock.map((q: any) => LL(q, it.ll));
+        let len = 0;
+        for (let i = 1; i < pts.length; i++) len += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
+        push({kind: 'shock', dur: Math.max(1.2, len / (it.speed || 380)), anchor: pts[0], end: pts[0], pts, len, colour: it.colour || 'risk', label: it.label, laser: true}, cs);
+      } else if (it.carry) {
+        const a0 = LL(it.carry[0], it.ll), a1 = LL(it.carry[1], it.ll);
+        const len = Math.hypot(a1[0] - a0[0], a1[1] - a0[1]);
+        push({kind: 'carry', dur: 0.4 + len / (it.speed || 420), anchor: a0, end: a1, len, label: it.label, colour: it.colour}, cs, it.side === 'right' ? 1 : -1);
       }
     }
     return {out, firstX};
-  }, [scene]);
+  }, [scene, geoAll]);
   const {out: actions, firstX} = acts;
+  const carryPos = (a: Action, tt: number): Pt => {
+    const u = easeInOut(clamp((tt - a.at - 0.3) / Math.max(0.1, a.dur - 0.3)));
+    return [lerp(a.anchor[0], a.end[0], u), lerp(a.anchor[1], a.end[1], u) - Math.sin(Math.PI * u) * 40];
+  };
+  const shockPos = (a: Action, u: number): Pt => {
+    const pts = a.pts!; let d = u * a.len!;
+    for (let i = 1; i < pts.length; i++) {
+      const sl = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
+      if (d <= sl) { const f = d / Math.max(1e-6, sl); return [lerp(pts[i - 1][0], pts[i][0], f), lerp(pts[i - 1][1], pts[i][1], f)]; }
+      d -= sl;
+    }
+    return pts[pts.length - 1];
+  };
+  // when does a shock reach each point (for boxes turning red)
+  const shockHits: {t: number; p: Pt}[] = [];
+  actions.forEach((a) => {
+    if (a.kind !== 'shock') return;
+    let acc = 0;
+    a.pts!.forEach((q, i) => { if (i) acc += Math.hypot(q[0] - a.pts![i - 1][0], q[1] - a.pts![i - 1][1]); shockHits.push({t: a.at + (acc / a.len!) * a.dur, p: q}); });
+  });
   // ------------------------------------------------------------------ body position over time
   const bodyX = (tt: number): number => {
     if (tt < enterAt) return enterFrom;
@@ -249,9 +318,10 @@ export const PresenterScene: React.FC = () => {
       if (tt < a.at) return a.bodyA;
       if (tt < a.at + a.dur) {
         // while drawing/writing the body follows the pen so the hand can stay on the path
-        if (a.kind === 'draw' || a.kind === 'write') {
+        if (a.kind === 'draw' || a.kind === 'write' || a.kind === 'carry') {
           const u = (tt - a.at) / a.dur;
-          const pen: Pt = a.kind === 'draw' ? (() => { const q = pointAt(a.d!, easeInOut(u) * a.len!); return [q.x, q.y] as Pt; })() : [a.x! + a.len! * u, a.y!];
+          const pen: Pt = a.kind === 'draw' ? (() => { const q = pointAt(a.d!, easeInOut(u) * a.len!); return [q.x, q.y] as Pt; })()
+            : a.kind === 'carry' ? carryPos(a, tt) : [a.x! + a.len! * u, a.y!];
           const follow = bodyFor(pen, a.bodyA > a.anchor[0] ? 1 : -1);
           const blend = clamp(u * 6, 0, 1);              // ease from the start spot into following
           return lerp(a.bodyA, follow, blend);
@@ -286,7 +356,9 @@ export const PresenterScene: React.FC = () => {
     }
     if (a.kind === 'draw') { const q = pointAt(a.d!, easeInOut(u) * a.len!); drawHand = [q.x, q.y]; target = drawHand; }
     else if (a.kind === 'write') { drawHand = [a.x! + a.len! * u, a.y! + 4 + Math.sin(u * 40) * 5]; target = drawHand; }
-    else if (a.kind === 'point') { pointHand = a.anchor; target = a.anchor; }
+    else if (a.kind === 'point' || a.kind === 'grow') { pointHand = a.anchor; target = a.anchor; }
+    else if (a.kind === 'shock') { const q = shockPos(a, u); pointHand = q; target = q; }
+    else if (a.kind === 'carry') { const q = carryPos(a, t); drawHand = q; target = q; }
     else if (a.kind === 'react') { const q = u; surprise = Math.sin(Math.PI * q); hop = 24 * Math.sin(Math.PI * clamp(q * 1.6)); }
   }
   const laserFrom: Pt = (() => {
@@ -311,7 +383,14 @@ export const PresenterScene: React.FC = () => {
         <g key={i}>
           {a.barRect && fillU > 0 && <rect x={a.barRect[0]} y={a.barRect[1] + a.barRect[3] * (1 - fillU)} width={a.barRect[2]} height={a.barRect[3] * fillU}
             fill={pal[a.fill!] || a.fill} opacity={0.85} />}
-          {!a.barRect && a.fill && fillU > 0 && <path d={a.d} fill={pal[a.fill] || a.fill} opacity={0.22 * fillU} />}
+          {!a.barRect && a.fill && fillU > 0 && <path d={a.d} fill={pal[a.fill] || a.fill} opacity={(a.fillOpacity ?? 0.22) * fillU} />}
+          {a.boxRect && (() => {
+            const hit = shockHits.find((h) => h.p[0] >= a.boxRect![0] - 4 && h.p[0] <= a.boxRect![0] + a.boxRect![2] + 4 && h.p[1] >= a.boxRect![1] - 4 && h.p[1] <= a.boxRect![1] + a.boxRect![3] + 4);
+            if (!hit || t < hit.t) return null;
+            const q = eo(t, hit.t, 0.4);
+            return <rect x={a.boxRect![0]} y={a.boxRect![1]} width={a.boxRect![2]} height={a.boxRect![3]} fill={pal.risk || '#FF5A5F'} opacity={0.28 * q}
+              stroke={pal.risk || '#FF5A5F'} strokeWidth={5} transform={`translate(${Math.sin((t - hit.t) * 40) * 4 * (1 - q)} 0)`} />;
+          })()}
           <path d={a.d} fill="none" stroke={col} strokeWidth={a.w || 6} strokeLinecap="round" strokeLinejoin="round" strokeDasharray={a.len} strokeDashoffset={a.len! * (1 - u)} />
           {a.barRect && a.label && <text x={a.barRect[0] + a.barRect[2] / 2} y={a.barRect[1] + a.barRect[3] + 34} textAnchor="middle" fill={pal.muted}
             fontFamily={font.body} fontWeight={600} fontSize={22} opacity={eo(t, a.at, 0.4)}>{a.label}</text>}
@@ -343,6 +422,54 @@ export const PresenterScene: React.FC = () => {
             <rect x={a.anchor[0] + 24} y={a.anchor[1] - 74} width={String(a.label).length * 16 + 28} height={50} rx={10} fill={pal.bg} stroke={c} strokeWidth={2} />
             <text x={a.anchor[0] + 38} y={a.anchor[1] - 40} fill={c} fontFamily={font.body} fontWeight={700} fontSize={26}>{a.label}</text>
           </g>}
+        </g>
+      );
+    }
+    if (a.kind === 'grow') {
+      if (t < a.at) return null;
+      const c = a.colour ? pal[a.colour] || a.colour : pal.accent;
+      const g = eo(t, a.at, 0.7);
+      const q = ((t - a.at) % 1.6) / 1.6;
+      return (
+        <g key={i}>
+          <circle cx={a.anchor[0]} cy={a.anchor[1]} r={a.r! * g} fill={c} opacity={0.35} stroke={c} strokeWidth={3} />
+          <circle cx={a.anchor[0]} cy={a.anchor[1]} r={(a.r! + 22 * q) * g} fill="none" stroke={c} strokeWidth={2} opacity={0.6 * (1 - q)} />
+          <circle cx={a.anchor[0]} cy={a.anchor[1]} r={6} fill={c} />
+          {(a.label || a.display) && <g opacity={eo(t, a.at + 0.3, 0.4)}>
+            <text x={a.anchor[0]} y={a.anchor[1] - a.r! - 14} textAnchor="middle" fill={pal.ink} fontFamily={font.body} fontWeight={700} fontSize={22}>{a.label}</text>
+            {a.display && <text x={a.anchor[0]} y={a.anchor[1] + a.r! + 30} textAnchor="middle" fill={c} fontFamily={font.display} fontWeight={800} fontSize={26}>{a.display}</text>}
+          </g>}
+        </g>
+      );
+    }
+    if (a.kind === 'shock') {
+      if (t < a.at) return null;
+      const c = pal[a.colour!] || a.colour || '#FF5A5F';
+      const uu = clamp((t - a.at) / a.dur);
+      const head = shockPos(a, uu);
+      const trail = Array.from({length: 14}, (_, k) => shockPos(a, Math.max(0, uu - k * 0.012)));
+      const fade = 1 - eo(t, a.at + a.dur + 1.5, 1);
+      return (
+        <g key={i} opacity={fade}>
+          {trail.map((q, k) => <circle key={k} cx={q[0]} cy={q[1]} r={14 - k * 0.8} fill={c} opacity={(1 - k / 14) * 0.7} />)}
+          {uu < 1 && <circle cx={head[0]} cy={head[1]} r={18 + 6 * Math.sin(t * 20)} fill="none" stroke={c} strokeWidth={4} />}
+          {shockHits.filter((h) => t >= h.t && t < h.t + 0.9).map((h, k) => {
+            const q = (t - h.t) / 0.9;
+            return <circle key={'b' + k} cx={h.p[0]} cy={h.p[1]} r={20 + 70 * q} fill="none" stroke={c} strokeWidth={5} opacity={1 - q} />;
+          })}
+          {a.label && <text x={a.pts![0][0]} y={a.pts![0][1] - 40} textAnchor="middle" fill={c} fontFamily={font.display} fontWeight={800} fontSize={28}
+            opacity={eo(t, a.at, 0.4)}>{a.label}</text>}
+        </g>
+      );
+    }
+    if (a.kind === 'carry') {
+      const c = a.colour ? pal[a.colour] || a.colour : pal.accent;
+      const pos = t < a.at ? a.anchor : t > a.at + a.dur ? a.end : carryPos(a, t);
+      const w2 = Math.max(110, String(a.label || '').length * 15 + 30);
+      return (
+        <g key={i} transform={`translate(${pos[0]} ${pos[1]})`} opacity={eo(t, a.at - 0.8, 0.5)}>
+          <rect x={-w2 / 2} y={-26} width={w2} height={52} rx={12} fill={pal.bg} stroke={c} strokeWidth={3} />
+          <text y={9} textAnchor="middle" fill={c} fontFamily={font.body} fontWeight={800} fontSize={24}>{a.label}</text>
         </g>
       );
     }

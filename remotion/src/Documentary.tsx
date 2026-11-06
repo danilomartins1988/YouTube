@@ -13,7 +13,7 @@ import {Circuit, RaceTrack} from './scenes/RaceScenes';
 import {Whiteboard} from './scenes/Whiteboard';
 import {IntroArt} from './brand/TheHiddenEconomicsIntro';
 import {PresenterScene} from './presenter/Presenter';
-import {AINetwork, CpuGpu, Landscape, Stack, StackedColumns, SupplyChain} from './scenes/TechScenes';
+import {AINetwork, CpuGpu, Domino, Landscape, Stack, StackedColumns, SupplyChain, TimelineNetwork} from './scenes/TechScenes';
 
 export const SCENES: Record<string, React.FC> = {
   act_title: ActTitle, kinetic_text: KineticText, big_counter: BigCounter, line_chart: LineChart, bar_chart: BarChart,
@@ -23,6 +23,7 @@ export const SCENES: Record<string, React.FC> = {
   channel_intro: () => { const {t, W, H} = useCtx(); return <IntroArt t={t} W={W} H={H} />; },
   presenter: PresenterScene,
   ai_network: AINetwork, cpu_gpu: CpuGpu, stack: Stack, supply_chain: SupplyChain, stacked_columns: StackedColumns, landscape: Landscape,
+  timeline_network: TimelineNetwork, domino: Domino,
 };
 // Scene types that paint their own full-frame background.
 const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard', 'supply_chain', 'channel_intro']);

@@ -255,16 +255,17 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
         return []
     seqs = [t for t in timed if t.scene.type == "presenter"]
     out = []
-    if len(seqs) < 3:
-        out.append(_issue("presenter", "error", f"Only {len(seqs)} presenter sequences; at least 3 are required"))
+    need = int(raw.get("presenter_min", project.get("presenter_min", 3)))   # an episode brief may raise the minimum
+    if len(seqs) < need:
+        out.append(_issue("presenter", "error", f"Only {len(seqs)} presenter sequences; at least {need} are required"))
     for t in seqs:
         if not 8 <= t.duration <= 30:
             out.append(_issue("presenter", "warning", f"Presenter scene {t.scene.id} lasts {t.duration:.1f}s (target 10-25 s)"))
     kinds = [set(k for it in t.scene.params.get("items", []) for k in it) for t in seqs]
     if not any(k & {"stroke", "arrow", "box"} for k in kinds):
         out.append(_issue("presenter", "error", "No presenter sequence draws a diagram (stroke/arrow/box)"))
-    if not any("bars" in k for k in kinds):
-        out.append(_issue("presenter", "error", "No presenter sequence interacts with a chart (bars)"))
+    if not any(k & {"bars", "map", "bubble"} for k in kinds):
+        out.append(_issue("presenter", "error", "No presenter sequence interacts with a chart or map (bars/map/bubble)"))
     if not any(sum(1 for it in t.scene.params.get("items", []) if "box" in it) >= 2 and any("arrow" in it for it in t.scene.params.get("items", []))
                for t in seqs):
         out.append(_issue("presenter", "error", "No presenter sequence explains a relationship (two boxes joined by an arrow)"))

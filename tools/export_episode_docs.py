@@ -40,6 +40,10 @@ DESCRIBE = {
     "stack": "Layered software ecosystem builds bottom-up with data pulses; optional developer counter; switching-cost panel fills item by item",
     "supply_chain": "World map with camera moves: supply stages light up in order, packets flow along arcs, process strip tracks the stage; optional bottleneck chokes everything downstream",
     "stacked_columns": "Fiscal-year columns grow chronologically by business segment, then morph into a 100% share view",
+    "timeline_network": "Historical timeline whose milestones fly onto a world map and link into a production network",
+    "domino": "Hypothetical disruption: a red wave leaves the source node and each connected industry turns red, shakes and tips; impact tags and a real precedent panel",
+    "presenter": "Animated presenter walks to the board and draws (marker tip on the path), writes, builds charts, draws maps, pins, carries objects and points",
+    "channel_intro": "The channel's 5-second cinematic intro",
     "landscape": "Competitive matrix: a cursor selects each dimension and cells type in; then options slide onto a conceptual flexibility-vs-specialisation axis",
 }
 

@@ -584,3 +584,190 @@ export const Landscape: React.FC = () => {
     </svg>
   );
 };
+
+// ------------------------------------------------------------------ timeline_network
+/**
+ * A historical timeline that TRANSFORMS into a geographic network: milestones appear on a time axis on their
+ * cues, then (morph_cue) each milestone's dot flies to its place on the map and links draw between them.
+ * params: title, items: [{year, label, lon, lat, colour, cue}], links: [[i, j]], morph_cue, view {lon, lat, span},
+ *         start_year, end_year, network_title
+ */
+export const TimelineNetwork: React.FC = () => {
+  const {t, W, H, pal, font, scene, cue} = useCtx();
+  const p = scene.params;
+  const geo = useGeo('world');
+  const rings = useMemo(() => parseLayer('world', geo.paths), [geo]);
+  const items: any[] = p.items || [];
+  const yrs = items.filter((i) => i.year != null).map((i) => i.year);
+  const y0 = p.start_year ?? Math.min(...yrs), y1 = p.end_year ?? Math.max(...yrs);
+  const ax0 = 170, ax1 = W - 170, ay = H * 0.62;
+  const X = (yr: number) => ax0 + ((ax1 - ax0) * (yr - y0)) / Math.max(1, y1 - y0);
+  const morphAt = cue(p.morph_cue, 0.6);
+  const m = eio(t, morphAt, 2.0);
+  const v = p.view || {lon: 60, lat: 25, span: 300};
+  const S = 4096;
+  const [mcx, mcy] = merc(v.lon, v.lat);
+  const k = (W / ((v.span / 360) * S)) * lerp(0.92, 1, m);
+  const ox = W / 2, oy = H * 0.52;
+  const toS = (lon: number, lat: number): [number, number] => { const [x, y] = merc(lon, lat); return [(x - mcx) * k + ox, (y - mcy) * k + oy]; };
+  const axisU = eo(t, Math.min(cue(p.axis_cue, 0), scene.lead + 0.4), 1.0);
+  return (
+    <svg width={W} height={H}>
+      {/* the world fades in under the timeline as it becomes a network */}
+      {m > 0 && Object.entries(rings).map(([code, rs]) => {
+        const d = screenPath(rs as any, mcx, mcy, k, ox, oy, W, H);
+        if (!d) return null;
+        const hl = p.highlight?.[code];
+        return <path key={code} d={d} fill={hl ? mixHex2(pal.land, pal[hl] || hl, 0.55) : pal.land} stroke={pal.border} strokeWidth={1} opacity={m} />;
+      })}
+      {/* time axis */}
+      <g opacity={axisU * (1 - m)}>
+        <line x1={ax0} y1={ay} x2={lerp(ax0, ax1, axisU)} y2={ay} stroke={pal.border} strokeWidth={4} />
+        {Array.from({length: Math.floor((y1 - y0) / (p.tick_every || 10)) + 1}, (_, i) => y0 + i * (p.tick_every || 10)).map((yr) => (
+          <g key={yr}>
+            <line x1={X(yr)} y1={ay - 10} x2={X(yr)} y2={ay + 10} stroke={pal.border} strokeWidth={2} />
+            <text x={X(yr)} y={ay + 44} textAnchor="middle" fill={pal.muted} fontFamily={font.body} fontSize={22}>{yr}</text>
+          </g>
+        ))}
+      </g>
+      {/* links appear after the morph */}
+      {(p.links || []).map(([a, b]: [number, number], i: number) => {
+        const u = eio(t, morphAt + 1.6 + i * 0.18, 1.0);
+        if (u <= 0) return null;
+        const A = items[a], B = items[b];
+        const [x1, yA] = toS(A.lon, A.lat), [x2, yB] = toS(B.lon, B.lat);
+        const mx = (x1 + x2) / 2, my = (yA + yB) / 2 - Math.hypot(x2 - x1, yB - yA) * 0.22;
+        const Bz = (q: number): [number, number] => [(1 - q) ** 2 * x1 + 2 * (1 - q) * q * mx + q * q * x2, (1 - q) ** 2 * yA + 2 * (1 - q) * q * my + q * q * yB];
+        const pts = Array.from({length: 30}, (_, j) => Bz((j / 29) * u));
+        const pk = Bz((t * 0.35 + i * 0.21) % 1);
+        return (
+          <g key={i}>
+            <path d={'M' + pts.map((q) => q.map((z) => z.toFixed(1)).join(',')).join(' L')} fill="none" stroke={pal.accent} strokeWidth={2.5} opacity={0.7} />
+            {u >= 1 && <circle cx={pk[0]} cy={pk[1]} r={5} fill={pal.accent3 || pal.accent} />}
+          </g>
+        );
+      })}
+      {/* milestones: on the axis first, then on the map */}
+      {items.map((it, i) => {
+        // items without a year are network-only: they appear on the map after the morph
+        const netOnly = it.year === undefined || it.year === null;
+        const at = netOnly ? Math.max(cue(it, 0), morphAt + 1.2 + i * 0.15) : cue(it, 0.05 + i * 0.1);
+        const u = easeBack(prog(t, at, 0.6));
+        if (u <= 0) return null;
+        const [gx, gy0] = toS(it.lon, it.lat);
+        const gy = gy0;
+        const tx = netOnly ? gx : X(it.year), ty = netOnly ? gy : ay - 70 - (i % 2) * 120;
+        const mi = netOnly ? 1 : eio(t, morphAt + i * 0.08, 1.6);
+        const ldy = mi >= 0.5 ? (it.label_dy || 0) : 0;
+        const x = lerp(tx, gx, mi), y = lerp(ty, gy, mi);
+        const col = pal[it.colour] || it.colour || pal.accent;
+        const pulse = (t * 0.8 + i * 0.3) % 1;
+        return (
+          <g key={i}>
+            {mi < 1 && <line x1={x} y1={y} x2={lerp(tx, gx, mi)} y2={lerp(ay, gy, mi)} stroke={col} strokeWidth={2} opacity={0.5 * (1 - mi)} />}
+            <circle cx={x} cy={y} r={(12 + 6 * (1 - mi)) * Math.min(1, u)} fill={col} stroke={pal.bg} strokeWidth={3} />
+            <circle cx={x} cy={y} r={14 + 26 * pulse} fill="none" stroke={col} opacity={0.6 * (1 - pulse)} />
+            <text x={x + (mi >= 0.5 ? it.label_dx || 0 : 0)} y={y - 26 + ldy} textAnchor={mi >= 0.5 && it.label_dx ? (it.label_dx < 0 ? 'end' : 'start') : 'middle'} fill={pal.ink} fontFamily={font.display} fontWeight={800} fontSize={lerp(34, 22, mi)}>
+              {mi < 0.5 ? it.year : it.place || it.label}</text>
+            <text x={x + (mi >= 0.5 ? it.label_dx || 0 : 0)} y={y + (mi < 0.5 ? 46 : 40) + ldy} textAnchor={mi >= 0.5 && it.label_dx ? (it.label_dx < 0 ? 'end' : 'start') : 'middle'} fill={mi < 0.5 ? pal.ink : col} fontFamily={font.body} fontWeight={600}
+              fontSize={lerp(24, 18, mi)} opacity={0.95}>{mi < 0.5 ? it.label : it.role || ''}</text>
+          </g>
+        );
+      })}
+      <RiseText x={120} y={150} at={cue(p.title_cue, 0)} size={50} weight={800} display opacity={1 - m}>{p.title}</RiseText>
+      {p.network_title && <RiseText x={120} y={150} at={morphAt + 0.8} size={50} weight={800} display>{p.network_title}</RiseText>}
+      {p.subtitle && <RiseText x={122} y={192} at={cue(p.title_cue, 0.03)} size={26} color={pal.muted}>{p.subtitle}</RiseText>}
+    </svg>
+  );
+};
+
+// ------------------------------------------------------------------ domino
+/**
+ * HYPOTHETICAL disruption propagating through connected industries. Nodes and edges build on cues; at shock_cue
+ * a red wave leaves the source and each node it reaches turns red, shakes and tips, depth by depth; impact
+ * tags appear on cues. A banner states the scenario is illustrative. Optional side panel with a real precedent.
+ * params: title, nodes: [{id, label, x, y, colour, cue, tag}], edges: [[from, to]], source, shock_cue,
+ *         banner, precedent: {title, value, label, cue}
+ */
+export const Domino: React.FC = () => {
+  const {t, W, H, pal, font, scene, cue} = useCtx();
+  const p = scene.params;
+  const nodes: any[] = p.nodes || [];
+  const byId: Record<string, any> = {};
+  nodes.forEach((n, i) => (byId[n.id] = {...n, i, at: cue(n, 0.03 + i * 0.05)}));
+  const edges: [string, string][] = p.edges || [];
+  const shockAt = cue(p.shock_cue, 0.5);
+  // BFS depth from the source
+  const depth: Record<string, number> = {[p.source]: 0};
+  const q = [p.source];
+  while (q.length) { const c = q.shift()!; edges.forEach(([a, b]) => { if (a === c && depth[b] === undefined) { depth[b] = depth[c] + 1; q.push(b); } }); }
+  const hitT = (id: string) => (depth[id] === undefined ? Infinity : shockAt + depth[id] * (p.step || 1.1));
+  const risk = pal.risk || '#FF5A5F';
+  return (
+    <svg width={W} height={H}>
+      {edges.map(([a, b], i) => {
+        const A = byId[a], B = byId[b];
+        if (!A || !B) return null;
+        const u = eio(t, Math.max(A.at, B.at) + 0.3, 0.8);
+        if (u <= 0) return null;
+        const x2 = lerp(A.x, B.x, u), y2 = lerp(A.y, B.y, u);
+        const t0 = hitT(a), t1 = hitT(b);
+        const wave = t >= t0 ? clamp((t - t0) / Math.max(0.1, t1 - t0)) : 0;
+        const wx = lerp(A.x, B.x, wave), wy = lerp(A.y, B.y, wave);
+        return (
+          <g key={i}>
+            <line x1={A.x} y1={A.y} x2={x2} y2={y2} stroke={pal.border} strokeWidth={4} />
+            {u >= 1 && t < t0 && Array.from({length: 3}, (_, k) => {
+              const f = (t * 0.5 + k / 3 + i * 0.1) % 1;
+              return <circle key={k} cx={lerp(A.x, B.x, f)} cy={lerp(A.y, B.y, f)} r={6} fill={pal.accent} opacity={0.9} />;
+            })}
+            {wave > 0 && <line x1={A.x} y1={A.y} x2={wx} y2={wy} stroke={risk} strokeWidth={7} strokeLinecap="round" />}
+            {wave > 0 && wave < 1 && <circle cx={wx} cy={wy} r={14} fill={risk} />}
+          </g>
+        );
+      })}
+      {nodes.map((n0) => {
+        const n = byId[n0.id];
+        const u = easeBack(prog(t, n.at, 0.6));
+        if (u <= 0) return null;
+        const h = hitT(n.id);
+        const hit = t >= h ? eo(t, h, 0.5) : 0;
+        const shake = t >= h && t < h + 0.6 ? Math.sin((t - h) * 50) * 6 * (1 - (t - h) / 0.6) : 0;
+        const tilt = hit * (n.id === p.source ? 0 : 8 * (n.i % 2 ? 1 : -1));
+        const col = pal[n.colour] || n.colour || pal.accent2;
+        const w = n.w || 250;
+        return (
+          <g key={n.id} transform={`translate(${n.x + shake} ${n.y}) rotate(${tilt}) scale(${u})`}>
+            <rect x={-w / 2} y={-46} width={w} height={92} rx={14} fill={pal.bg2} stroke={hit > 0 ? risk : col} strokeWidth={hit > 0 ? 5 : 3} />
+            <rect x={-w / 2} y={-46} width={w} height={92} rx={14} fill={risk} opacity={0.25 * hit} />
+            <text y={10} textAnchor="middle" fill={pal.ink} fontFamily={font.display} fontWeight={800} fontSize={n.size || 28}>{n.label}</text>
+            {n.tag && hit > 0 && <g opacity={eo(t, h + 0.4, 0.4)}>
+              <rect x={-w / 2} y={56} width={w} height={40} rx={8} fill={risk} opacity={0.9} />
+              <text y={84} textAnchor="middle" fill="#fff" fontFamily={font.body} fontWeight={700} fontSize={20}>{n.tag}</text>
+            </g>}
+          </g>
+        );
+      })}
+      {p.title && <RiseText x={120} y={140} at={cue(p.title_cue, 0)} size={48} weight={800} display>{p.title}</RiseText>}
+      {p.banner && (
+        <g opacity={eo(t, scene.lead, 0.5)}>
+          <rect x={W - 640} y={100} width={520} height={52} rx={26} fill={risk} opacity={0.18} stroke={risk} strokeWidth={2} />
+          <text x={W - 380} y={134} textAnchor="middle" fill={risk} fontFamily={font.body} fontWeight={800} fontSize={22} letterSpacing={3}>{String(p.banner).toUpperCase()}</text>
+        </g>
+      )}
+      {p.precedent && (() => {
+        const at = cue(p.precedent, 0.8);
+        const u = eo(t, at, 0.6);
+        if (u <= 0) return null;
+        return (
+          <g opacity={u} transform={`translate(${40 * (1 - u)} 0)`}>
+            <rect x={W - 560} y={H - 330} width={460} height={220} rx={18} fill={pal.bg} stroke={pal.accent3 || pal.accent} strokeWidth={2} opacity={0.96} />
+            <text x={W - 530} y={H - 288} fill={pal.muted} fontFamily={font.body} fontWeight={700} fontSize={20} letterSpacing={3}>{String(p.precedent.title).toUpperCase()}</text>
+            <text x={W - 530} y={H - 205} fill={pal.accent3 || pal.accent} fontFamily={font.display} fontWeight={800} fontSize={66}>{p.precedent.value}</text>
+            <text x={W - 530} y={H - 155} fill={pal.ink} fontFamily={font.body} fontSize={22}>{p.precedent.label}</text>
+          </g>
+        );
+      })()}
+    </svg>
+  );
+};
