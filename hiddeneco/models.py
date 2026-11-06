@@ -89,7 +89,9 @@ class Scene(BaseModel):
                   "big_counter", "donut", "compare", "people_ratio", "oil_platform", "fund_flow",
                   "isometric", "race_track", "circuit", "whiteboard",
                   "ai_network", "cpu_gpu", "stack", "supply_chain", "stacked_columns", "landscape",
-                  "channel_intro", "presenter", "timeline_network", "domino"]
+                  "channel_intro", "presenter", "timeline_network", "domino",
+                  # animation engine (remotion/src/animation-engine)
+                  "engine_draw", "engine_flow", "engine_map", "engine_chart", "engine_exploded"]
     params: dict[str, Any] = Field(default_factory=dict)
     sfx: list[dict[str, Any]] = Field(default_factory=list)   # e.g. {kind: pop, cue: "In 1815"}
     sources: list[str] = Field(default_factory=list)

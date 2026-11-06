@@ -1,0 +1,231 @@
+{
+ "video": "output/engine/engine_demo_30s.mp4",
+ "exists": true,
+ "probe": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "frames": 900,
+  "duration_s": 30.0,
+  "codec": "h264"
+ },
+ "checks": {
+  "duration_30s": true,
+  "resolution_1920x1080": true,
+  "fps_30": true,
+  "no_unexpected_black": true,
+  "no_frozen_over_1s": true,
+  "no_static_half_seconds": true,
+  "no_edge_clipping": true,
+  "text_contrast_AA": true,
+  "min_font_18px": true,
+  "no_svg_runtime_errors": true,
+  "presenter_walks": true,
+  "presenter_anticipation_lean": true,
+  "marker_tip_on_path": true,
+  "arm_moves_while_drawing": true,
+  "body_follows_pen": true,
+  "drawing_reveals_progressively": true,
+  "pointing_reaches_target": true,
+  "map_camera_moves": true
+ },
+ "black_segments": [],
+ "frozen_segments": [],
+ "motion_energy_windows": [
+  2.411,
+  0.856,
+  2.517,
+  1.664,
+  2.147,
+  1.597,
+  1.406,
+  1.758,
+  1.505,
+  1.788,
+  0.413,
+  0.298,
+  3.751,
+  2.377,
+  2.279,
+  0.655,
+  0.359,
+  0.724,
+  0.971,
+  0.901,
+  1.169,
+  0.889,
+  0.756,
+  1.442,
+  1.196,
+  0.565,
+  0.659,
+  1.369,
+  0.255,
+  4.067,
+  7.385,
+  5.232,
+  1.542,
+  1.531,
+  4.799,
+  7.387,
+  3.399,
+  0.583,
+  1.301,
+  2.977,
+  2.225,
+  1.255,
+  0.406,
+  0.775,
+  3.415,
+  1.998,
+  1.023,
+  0.952,
+  0.467,
+  0.307,
+  0.338,
+  0.742,
+  0.799,
+  0.887,
+  0.171,
+  1.243,
+  1.48,
+  0.962,
+  9.069
+ ],
+ "static_windows_s": [],
+ "scene_motion": {
+  "1 presenter draws": {
+   "mean": 1.53,
+   "quietest_window": 0.298
+  },
+  "2 economic flow": {
+   "mean": 1.356,
+   "quietest_window": 0.359
+  },
+  "3 world map": {
+   "mean": 2.999,
+   "quietest_window": 0.255
+  },
+  "4 exploded chip": {
+   "mean": 1.693,
+   "quietest_window": 0.406
+  },
+  "5 network -> chart -> title": {
+   "mean": 1.497,
+   "quietest_window": 0.171
+  }
+ },
+ "edge_bright_times_s": [],
+ "contrast_on_bg": {
+  "panel": 1.1,
+  "ink": 16.79,
+  "muted": 6.46,
+  "gold": 9.09,
+  "blue": 7.41,
+  "teal": 9.79
+ },
+ "contrast_on_panel": {
+  "ink": 15.28,
+  "muted": 5.89,
+  "gold": 8.27
+ },
+ "min_font_px_in_code": 18,
+ "svg_runtime_errors": [],
+ "motion_probe": {
+  "presenter_walk_x": [
+   -260,
+   -117,
+   433,
+   540
+  ],
+  "presenter_lean_deg": [
+   -1.09,
+   -4.18,
+   4.09,
+   2.59,
+   0,
+   -7
+  ],
+  "draw_frames_checked": 57,
+  "draw_tip_error_px": {
+   "mean": 0.21,
+   "max": 9.05
+  },
+  "draw_elbow_range_px": {
+   "x": 842,
+   "y": 275
+  },
+  "draw_body_range_px": 839,
+  "draw_reveal_monotonic": true,
+  "draw_timeline": {
+   "start": 1.75,
+   "end": 4.47,
+   "strokes": 5
+  },
+  "point_hand_to_target_px": 0,
+  "point_state_active": true,
+  "map_camera": [
+   [
+    178,
+    33,
+    150
+   ],
+   [
+    178,
+    33,
+    150
+   ],
+   [
+    31.3,
+    33,
+    225.8
+   ],
+   [
+    18,
+    33,
+    340
+   ],
+   [
+    71.8,
+    28.5,
+    182.4
+   ]
+  ],
+  "map_taiwan_screen": [
+   [
+    230,
+    660
+   ],
+   [
+    637,
+    654
+   ],
+   [
+    1542,
+    593
+   ],
+   [
+    1478,
+    584
+   ]
+  ]
+ },
+ "filmstrips": [
+  "docs/engine/qa/filmstrips/1_presenter_draws.jpg",
+  "docs/engine/qa/filmstrips/1_presenter_points.jpg",
+  "docs/engine/qa/filmstrips/1_presenter_walk.jpg",
+  "docs/engine/qa/filmstrips/2_chart_to_flow.jpg",
+  "docs/engine/qa/filmstrips/2_flow_processing.jpg",
+  "docs/engine/qa/filmstrips/2_payments.jpg",
+  "docs/engine/qa/filmstrips/3_camera_pan.jpg",
+  "docs/engine/qa/filmstrips/3_flow_to_map.jpg",
+  "docs/engine/qa/filmstrips/3_routes.jpg",
+  "docs/engine/qa/filmstrips/4_dive.jpg",
+  "docs/engine/qa/filmstrips/4_explode.jpg",
+  "docs/engine/qa/filmstrips/4_reassemble.jpg",
+  "docs/engine/qa/filmstrips/5_bars.jpg",
+  "docs/engine/qa/filmstrips/5_network.jpg",
+  "docs/engine/qa/filmstrips/5_title.jpg"
+ ],
+ "passed": true
+}

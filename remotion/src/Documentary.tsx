@@ -1,3 +1,4 @@
+import {ENGINE_SCENES} from './animation-engine/storyboard';
 import React from 'react';
 import {AbsoluteFill, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
 import {eio, makeCue, SceneCtx, useCtx} from './lib/anim';
@@ -24,9 +25,10 @@ export const SCENES: Record<string, React.FC> = {
   presenter: PresenterScene,
   ai_network: AINetwork, cpu_gpu: CpuGpu, stack: Stack, supply_chain: SupplyChain, stacked_columns: StackedColumns, landscape: Landscape,
   timeline_network: TimelineNetwork, domino: Domino,
+  ...ENGINE_SCENES,
 };
 // Scene types that paint their own full-frame background.
-const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard', 'supply_chain', 'channel_intro']);
+const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard', 'supply_chain', 'channel_intro', 'engine_draw', 'engine_map']);
 // Scene types that are self-contained (no chrome, no scene fades or wipes): the channel intro.
 const BARE = new Set(['channel_intro']);
 

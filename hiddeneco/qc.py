@@ -253,7 +253,8 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
     total = sum(t.duration for t in timed) or 1.0
     if total < 480:                                   # the rule applies to 10-15 minute documentaries
         return []
-    seqs = [t for t in timed if t.scene.type == "presenter"]
+    # engine_draw scenes contain the animated presenter drawing on a board, so they count as presenter sequences
+    seqs = [t for t in timed if t.scene.type in ("presenter", "engine_draw")]
     out = []
     need = int(raw.get("presenter_min", project.get("presenter_min", 3)))   # an episode brief may raise the minimum
     if len(seqs) < need:
@@ -261,7 +262,8 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
     for t in seqs:
         if not 8 <= t.duration <= 30:
             out.append(_issue("presenter", "warning", f"Presenter scene {t.scene.id} lasts {t.duration:.1f}s (target 10-25 s)"))
-    kinds = [set(k for it in t.scene.params.get("items", []) for k in it) for t in seqs]
+    kinds = [set(k for it in t.scene.params.get("items", []) for k in it) | ({"stroke"} if t.scene.type == "engine_draw" else set())
+             for t in seqs]
     if not any(k & {"stroke", "arrow", "box"} for k in kinds):
         out.append(_issue("presenter", "error", "No presenter sequence draws a diagram (stroke/arrow/box)"))
     if not any(k & {"bars", "map", "bubble"} for k in kinds):
@@ -277,6 +279,23 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
     return out
 
 
+# scene types that are explanatory animations (objects move, build or transform), not decoration
+EXPLANATORY = {"engine_draw", "engine_flow", "engine_map", "engine_chart", "engine_exploded", "presenter", "timeline_network",
+               "domino", "supply_chain", "stacked_columns", "cpu_gpu", "stack", "fund_flow", "landscape", "ai_network", "line_chart"}
+
+
+def check_animation_density(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
+    """Standard of 2026-11-06 (animation engine): a 10-15 minute documentary needs at least five substantial
+    explanatory animation sequences besides the presenter sequences. Warning only (editorial relevance first)."""
+    total = sum(t.duration for t in timed) or 1.0
+    if total < 480:
+        return []
+    n = sum(1 for t in timed if t.scene.type in EXPLANATORY and t.scene.type not in ("presenter", "engine_draw"))
+    if n < 5:
+        return [_issue("animation", "warning", f"Only {n} explanatory animation sequences (target: 5+ besides the presenter)")]
+    return []
+
+
 def run_qc(paths: ProjectPaths, deliverable: Deliverable, fmt: dict, script: Script, dossier: Dossier,
            storyboard: Storyboard, timed: list[TimedScene]) -> dict:
     total = sum(t.duration for t in timed)
@@ -285,6 +304,7 @@ def run_qc(paths: ProjectPaths, deliverable: Deliverable, fmt: dict, script: Scr
     issues += check_captions(timed, total, deliverable, fmt)
     issues += check_media(timed, paths, deliverable)
     issues += check_presenter(paths, timed)
+    issues += check_animation_density(paths, timed)
     src, blockers = check_sources(script, dossier, storyboard)
     issues += src
     issues += check_licensing(storyboard, dossier)

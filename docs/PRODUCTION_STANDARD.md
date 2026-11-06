@@ -82,6 +82,27 @@ reusable standard. `README.md` covers how to run the pipeline; this file covers 
 - **Exemptions.** Missing sequences fail QC. Only projects marked `presenter_exempt: true` (the episodes published before this standard) or deliverables with `presenter: false` are exempt.
 - **Demo.** `python tools/render_presenter_demo.py` writes `output/brand/presenter_demo.mp4`.
 
+## 1c. Animation engine (default from 2026-11-06)
+
+Documentaries are animated explanations, not narrated slideshows. Use the reusable engine in
+`remotion/src/animation-engine/` (docs: its `README.md`; integration: `docs/engine/INTEGRATION.md`):
+
+- Storyboard scene types:
+  - `engine_draw`: the presenter really draws (the marker tip follows the path; IK arm; the body side-steps).
+  - `engine_flow`: objects travel and are transformed by each stage; money can flow back.
+  - `engine_map`: real geography; routes draw and carry tokens; camera, tilt and parallax.
+  - `engine_chart`: build, compare periods, highlight growth, morph into a diagram.
+  - `engine_exploded`: a schematic layered object that explodes and reassembles.
+- Every time field accepts a narration cue: `{cue: "phrase"}`.
+- **For an 11–13 minute documentary:** at least four character-assisted sequences and at least five
+  substantial explanatory animations, subject to editorial relevance. QC enforces the first and warns on the
+  second.
+- **Continuity:** objects morph between scenes (point → stage → city → product). Do not cover a scene change
+  with a zoom or slide transition.
+- **Charts:** they use only supplied data; label illustrative values on screen.
+- **QA:** run `tools/engine_qa.py` (motion energy, frozen and black frames, edges, contrast, motion probe) on
+  engine-heavy cuts, and inspect the filmstrips.
+
 ## 2. Story
 
 - **Hook.** Grab attention in the first 10-15 seconds with a picture, a surprising fact and an open question. The channel intro follows the hook (see 1a), never before it.

@@ -4,6 +4,13 @@ import {Documentary} from './Documentary';
 import {Thumbnail} from './Thumbnail';
 import {INTRO_SECONDS, TheHiddenEconomicsIntro} from './brand/TheHiddenEconomicsIntro';
 import type {Props} from './lib/types';
+import {DEMO_SECONDS, EngineDemo} from './animation-engine/examples/EngineDemo';
+import {ChartsLinePreview, ChartsPreview, DrawPreview, ExplodedPreview, FlowPreview, MapPreview, PresenterPreview} from './animation-engine/examples/Previews';
+
+const ENGINE_COMPS: {id: string; c: React.FC<any>; s: number}[] = [
+  {id: 'EnginePresenter', c: PresenterPreview, s: 10}, {id: 'EngineDraw', c: DrawPreview, s: 8}, {id: 'EngineMap', c: MapPreview, s: 9},
+  {id: 'EngineFlow', c: FlowPreview, s: 9}, {id: 'EngineCharts', c: ChartsPreview, s: 9}, {id: 'EngineChartsLine', c: ChartsLinePreview, s: 7},
+  {id: 'EngineExploded', c: ExplodedPreview, s: 8}];
 
 const defaults: Props = {
   fps: 30, width: 1920, height: 1080, brand: 'The Hidden Economics',
@@ -46,5 +53,10 @@ export const RemotionRoot: React.FC = () => (
       return {durationInFrames: frames, fps: p.fps, width: p.width, height: p.height};
     }}
   />
+  {/* animation engine: 30 s demo + one preview per component (geo passed via --props) */}
+  <Composition id="EngineDemo" component={EngineDemo as unknown as React.FC<Record<string, unknown>>} defaultProps={{geo: {paths: {}}}}
+    fps={30} width={1920} height={1080} durationInFrames={DEMO_SECONDS * 30} />
+  {ENGINE_COMPS.map((e) => <Composition key={e.id} id={e.id} component={e.c as unknown as React.FC<Record<string, unknown>>}
+    defaultProps={{geo: {paths: {}}}} fps={30} width={1920} height={1080} durationInFrames={e.s * 30} />)}
   </>
 );

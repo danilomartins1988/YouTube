@@ -47,7 +47,29 @@ const ik = (s: Pt, t: Pt, bendSign = 1): {e: Pt; h: Pt} => {
 };
 
 export type Pose = {x: number; floor: number; facing: 1 | -1; walk: number; moving: number; hop: number;
-  drawHand: Pt | null; pointHand: Pt | null; talking: number; blink: number; surprise: number; scale: number; holdingMarker: boolean};
+  drawHand: Pt | null; pointHand: Pt | null; talking: number; blink: number; surprise: number; scale: number; holdingMarker: boolean;
+  /** optional (animation engine): body lean in degrees (anticipation / follow-through), back-hand world target
+   * for explaining gestures, smile 0..1 */
+  lean?: number; backHand?: Pt | null; smile?: number};
+
+/** QA helper: world positions of the front shoulder, elbow, hand and marker tip for a pose (same maths as the
+ * renderer), so tests can measure whether the drawing instrument really sits on the path. */
+export const frontArmWorld = (pose: Pose) => {
+  const {x, floor, facing, walk, moving, hop, drawHand, pointHand, scale: S} = pose;
+  const bob = -Math.abs(Math.sin(walk)) * 7 * moving - hop;
+  const W = (lx: number, ly: number): Pt => [x + lx * S * facing, floor + (ly + bob / S) * S];
+  const toLocal = (p: Pt): Pt => [((p[0] - x) / S) * facing, (p[1] - floor) / S - bob / S];
+  const front = drawHand || pointHand;
+  let ft: Pt = front ? toLocal(front) : [70 + Math.sin(walk) * 30 * moving, -170];
+  if (drawHand) { const v = [ft[0] - 58, ft[1] + 428], n = Math.hypot(v[0], v[1]) || 1; ft = [ft[0] - (v[0] / n) * 36, ft[1] - (v[1] / n) * 36]; }
+  const arm = ik([58, -428], ft, front ? 1 : -1);
+  const hand = W(arm.h[0], arm.h[1]);
+  const dir = Math.atan2(arm.h[1] - arm.e[1], arm.h[0] - arm.e[0]);
+  // marker tip: 36 local units beyond the hand along shoulder->target
+  const v = [toLocal(front || hand)[0] - 58, toLocal(front || hand)[1] + 428], n = Math.hypot(v[0], v[1]) || 1;
+  const tipL: Pt = [arm.h[0] + (v[0] / n) * 36, arm.h[1] + (v[1] / n) * 36];
+  return {shoulder: W(58, -428), elbow: W(arm.e[0], arm.e[1]), hand, tip: W(tipL[0], tipL[1]), forearmAngle: dir};
+};
 
 /** The character, drawn in world coordinates. Hand targets are world points. */
 export const Character: React.FC<{pose: Pose}> = ({pose}) => {
@@ -74,7 +96,8 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
     const v = [frontTarget[0] - 58, frontTarget[1] + 428], n = Math.hypot(v[0], v[1]) || 1;
     frontTarget = [frontTarget[0] - (v[0] / n) * 36, frontTarget[1] - (v[1] / n) * 36];
   }
-  const backTarget: Pt = [-62 - Math.sin(walk) * 30 * moving, -175 + (talking > 0.5 && !front ? -40 * Math.sin(talking * 3) : 0)];
+  const backTarget: Pt = pose.backHand ? toLocal(pose.backHand)
+    : [-62 - Math.sin(walk) * 30 * moving, -175 + (talking > 0.5 && !front ? -40 * Math.sin(talking * 3) : 0)];
   const armF = ik(shR, frontTarget, front ? 1 : -1);
   const armB = ik(shL, backTarget, -1);
   const P = (p: Pt) => W(p[0], p[1]).join(',');
@@ -87,8 +110,9 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
   const hand = armF.h;
   const handW = W(hand[0], hand[1]);
   const dirF = Math.atan2(armF.h[1] - armF.e[1], armF.h[0] - armF.e[0]);
+  const smile = pose.smile || 0;
   return (
-    <g>
+    <g transform={pose.lean ? `rotate(${pose.lean} ${x} ${floor})` : undefined}>
       {/* shadow */}
       <ellipse cx={x} cy={floor + 6} rx={90 * S * (1 - 0.15 * Math.min(1, hop / 20))} ry={12 * S} fill="#000" opacity={0.28} />
       {/* back arm */}
@@ -125,7 +149,9 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
       ))}
       <path d={`M ${P([1, eyeY])} L ${P([27, eyeY])}`} stroke={BRAND.glasses} strokeWidth={2.5 * S} />
       {/* mouth: talks with the narration, opens on surprise */}
-      <ellipse cx={W(18, -478)[0]} cy={W(18, -478)[1]} rx={(8 + 2 * surprise) * S} ry={(1.6 + 4 * talking + 5 * surprise) * S} fill="#6B2E2A" />
+      {smile > 0.05 && talking < 0.3 && surprise < 0.3
+        ? <path d={`M ${P([6, -482])} Q ${P([18, -482 + 10 * smile])} ${P([30, -482])}`} fill="none" stroke="#6B2E2A" strokeWidth={4 * S} strokeLinecap="round" />
+        : <ellipse cx={W(18, -478)[0]} cy={W(18, -478)[1]} rx={(8 + 2 * surprise) * S} ry={(1.6 + 4 * talking + 5 * surprise) * S} fill="#6B2E2A" />}
       {/* front arm + hand + marker */}
       {limb(shR, armF.e, armF.h, BRAND.jacket, 30)}
       <circle cx={handW[0]} cy={handW[1]} r={16 * S} fill={BRAND.skin} />
