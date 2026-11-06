@@ -379,12 +379,9 @@ add("p36_race", "m5_race", "presenter", {
          "highlight": {"JPN": "accent2"}, "points": 120, "cue": "In Japan"},
         {"bubble": [130.7, 32.8], "ll": True, "value": 20, "max_value": 165, "max_r": 78, "label": "KUMAMOTO",
          "display": "{{japan_jasm.display}}", "colour": "accent", "hold": 1.4, "cue": "Kumamoto venture"},
-        {"map": {"lon": 5, "lat": 28, "span": 300}, "rect": [520, 330, 1280, 600], "countries": ["DEU"],
-         "highlight": {"DEU": "accent2"}, "points": 100, "cue": "In Germany"},
-        {"pin": [13.7, 51.05], "ll": True, "label": "ESMC DRESDEN", "display": "end-2027 target", "colour": "accent", "r": 16, "cue": "rising in"},
     ],
     "scale": 0.86, "floor": 1040, "board": BOARD, "speed": 1500,
-}, sources=["chips_act", "tsmc_165bn", "jasm", "esmc", "natural_earth"], assets=GEO)
+}, sources=["chips_act", "tsmc_165bn", "jasm", "natural_earth"], assets=GEO)
 
 # ---- Race-to-diversify map (signature animation 5, part 2)
 add("s37_race_map", "m5_europe", "map", {
@@ -392,17 +389,18 @@ add("s37_race_map", "m5_europe", "map", {
     "views": [{"lon": 10, "lat": 48, "span": 60}, {"lon": 124, "lat": 30, "span": 48, "cue": "South Korea"}],
     "move": 3.0,
     "highlights": {
-        "DEU": {"colour": "accent2", "cue": "Europe wants"}, "FRA": {"colour": "accent2", "cue": "Europe wants", "offset": 0.2},
+        "DEU": {"colour": "accent2", "cue": "In Germany"}, "FRA": {"colour": "accent2", "cue": "Europe wants", "offset": 0.2},
         "ITA": {"colour": "accent2", "cue": "Europe wants", "offset": 0.3}, "NLD": {"colour": "accent2", "cue": "Europe wants", "offset": 0.4},
         "IRL": {"colour": "accent2", "cue": "Europe wants", "offset": 0.5},
         "KOR": {"colour": "accent3", "cue": "South Korea"}, "TWN": {"colour": "accent", "cue": "Taiwan keeps"},
     },
     "markers": [
-        {"lon": 10.0, "lat": 50.0, "label": "EU target", "sublabel": "{{eu_target.display}} of global production", "cue": "Europe wants", "size": 40},
+        {"lon": 13.7, "lat": 51.05, "label": "ESMC Dresden", "sublabel": "TSMC joint venture · end-2027 target", "cue": "In Germany", "size": 34},
+        {"lon": 2.0, "lat": 47.0, "label": "EU target", "sublabel": "{{eu_target.display}} of global production", "cue": "Europe wants", "size": 40, "anchor": "end"},
         {"lon": 127.5, "lat": 36.5, "label": "South Korea", "sublabel": "memory + its own foundries", "cue": "South Korea", "size": 34},
         {"lon": 121.0, "lat": 23.7, "label": "Taiwan", "sublabel": "newest fabs stay at home", "cue": "Taiwan keeps", "size": 34, "anchor": "end"},
     ],
-}, sources=["oecd_chips", "tsmc_4q25_call", "natural_earth"], assets=GEO)
+}, sources=["esmc", "oecd_chips", "tsmc_4q25_call", "natural_earth"], assets=GEO)
 
 add("s38_limits", "m5_limits", "compare", {"chapter": "Mission 5 · The limit", "title": "Logic below 10 nm: share of global capacity (SIA/BCG)", "sides": [
     {"kicker": "Taiwan", "value": "{{lt10_capacity.display}} → {{lt10_capacity.tw32_display}}", "label": "2022 → 2032 forecast", "bar": 47, "cue": "still has Taiwan"},
@@ -421,7 +419,7 @@ add("s40_payoff", "payoff", "map", {
     "chapter": "Mission complete", "geo": "world",
     "views": [{"lon": 20, "lat": 25, "span": 330}, {"lon": 121.0, "lat": 23.7, "span": 14, "cue": "smaller than Switzerland"},
               {"lon": 121.0, "lat": 25.0, "span": 70, "cue": "weak point"}, {"lon": 40, "lat": 28, "span": 300, "cue": "whole world is watching"}],
-    "move": 3.0,
+    "move": 6.0,
     "highlights": {"TWN": {"colour": "accent", "cue": "mission complete"}},
     "markers": [{"lon": 121.0, "lat": 23.7, "label": "Not every chip", "sublabel": "the hardest ones, at unmatched scale",
                  "cue": "hardest", "size": 40},

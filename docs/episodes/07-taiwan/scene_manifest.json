@@ -1,0 +1,2232 @@
+{
+  "slug": "why-taiwan-matters",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_island",
+      "segment": "h_question",
+      "type": "map",
+      "start_s": 0.0,
+      "end_s": 7.7,
+      "duration_s": 7.7,
+      "visual_objective": "Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts",
+      "narration": "What if one of the world's most important industries depended on an island smaller than Switzerland?",
+      "keyframes": [
+        {
+          "param": "highlights.TWN.cue",
+          "cue": "an island",
+          "label": "highlights.TWN.cue",
+          "scene_time_s": 4.82,
+          "absolute_s": 4.82
+        },
+        {
+          "param": "markers[0].cue",
+          "cue": "an island",
+          "label": "Taiwan",
+          "scene_time_s": 4.82,
+          "absolute_s": 4.82
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "smaller than",
+          "label": "views[1].cue",
+          "scene_time_s": 5.61,
+          "absolute_s": 5.61
+        },
+        {
+          "param": "highlights.CHE.cue",
+          "cue": "Switzerland",
+          "label": "highlights.CHE.cue",
+          "scene_time_s": 6.4,
+          "absolute_s": 6.4
+        },
+        {
+          "param": "markers[1].cue",
+          "cue": "Switzerland",
+          "label": "Switzerland",
+          "scene_time_s": 6.4,
+          "absolute_s": 6.4
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "cia_taiwan",
+        "cia_switzerland",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_stakes",
+      "segment": "h_stakes",
+      "type": "map",
+      "start_s": 7.7,
+      "end_s": 16.9,
+      "duration_s": 9.2,
+      "visual_objective": "Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts",
+      "narration": "Taiwan covers about 36,000 square kilometers. Yet most of the world's most advanced chips are made right here.",
+      "keyframes": [
+        {
+          "param": "highlights.TWN.cue",
+          "cue": "Taiwan covers",
+          "label": "highlights.TWN.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 8.05
+        },
+        {
+          "param": "markers[0].cue",
+          "cue": "most advanced chips",
+          "label": "Taiwan",
+          "scene_time_s": 6.12,
+          "absolute_s": 13.82
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "most of the world",
+          "label": "views[1].cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        "most of the world"
+      ],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "cia_taiwan",
+        "sia_bcg_2024",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 16.9,
+      "end_s": 21.9,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s03_missions",
+      "segment": "h_missions",
+      "type": "kinetic_text",
+      "start_s": 21.9,
+      "end_s": 38.43,
+      "duration_s": 16.53,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Today we have five missions. Find out how Taiwan became so important, why nobody can simply copy it, who depends on it, what a disruption could cost, and whether the world can spread the risk.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "five missions",
+          "label": "Today: five missions",
+          "scene_time_s": 1.61,
+          "absolute_s": 23.51
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "how Taiwan became",
+          "label": "1 · How Taiwan became essential",
+          "scene_time_s": 3.94,
+          "absolute_s": 25.84
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "simply copy",
+          "label": "2 · Why nobody can simply copy it",
+          "scene_time_s": 8.07,
+          "absolute_s": 29.97
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "who depends",
+          "label": "3 · Who depends on it",
+          "scene_time_s": 9.71,
+          "absolute_s": 31.61
+        },
+        {
+          "param": "lines[4].cue",
+          "cue": "what a disruption",
+          "label": "4 · What a disruption could cost",
+          "scene_time_s": 11.34,
+          "absolute_s": 33.24
+        },
+        {
+          "param": "lines[5].cue",
+          "cue": "spread the risk",
+          "label": "5 · Can the world spread the risk?",
+          "scene_time_s": 15.19,
+          "absolute_s": 37.09
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s04_m1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 38.43,
+      "end_s": 41.43,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s05_m1q",
+      "segment": "m1_question",
+      "type": "kinetic_text",
+      "start_s": 41.43,
+      "end_s": 54.27,
+      "duration_s": 12.83,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission one. How did a small island become the center of chipmaking? It matters because almost everything we use now runs on chips, and someone has to make them.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "How did",
+          "label": "THE QUESTION",
+          "scene_time_s": 2.05,
+          "absolute_s": 43.48
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "How did",
+          "label": "How did a small island become the center of chipmaking?",
+          "scene_time_s": 2.45,
+          "absolute_s": 43.88
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 5.73,
+          "absolute_s": 47.16
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "Almost everything now runs on chips",
+          "scene_time_s": 6.13,
+          "absolute_s": 47.56
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s06_oldrule",
+      "segment": "m1_conflict",
+      "type": "compare",
+      "start_s": 54.27,
+      "end_s": 68.93,
+      "duration_s": 14.67,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "For a long time, the chip business had one rule. If you designed chips, you also built the factory that made them, called a fab. And fabs were brutally expensive. So only giants could play.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "one rule",
+          "label": "you built your own factory",
+          "scene_time_s": 2.82,
+          "absolute_s": 57.09
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "brutally expensive",
+          "label": "so only giants could play",
+          "scene_time_s": 10.01,
+          "absolute_s": 64.28
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s07_timeline_network",
+      "segment": "m1_tsmc",
+      "type": "timeline_network",
+      "start_s": 68.93,
+      "end_s": 112.93,
+      "duration_s": 44.0,
+      "visual_objective": "Historical timeline whose milestones fly onto a world map and link into a production network",
+      "narration": "In 1987, with backing from Taiwan's government and the Dutch company Philips, a new company called TSMC tried something different. It would design nothing. It would only manufacture chips, for anyone. It became the world's first dedicated chip foundry. That one idea rewired the industry. A small team with a great design no longer needed its own factory. Nvidia, founded in 1993, became one of those designers, and so did Apple and AMD. They focus on design and send their blueprints to Taiwan. The timeline turned into a network, and Taiwan sat at the center of it.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "with backing",
+          "label": "title_cue",
+          "scene_time_s": 2.28,
+          "absolute_s": 71.22
+        },
+        {
+          "param": "axis_cue",
+          "cue": "with backing",
+          "label": "axis_cue",
+          "scene_time_s": 2.28,
+          "absolute_s": 71.22
+        },
+        {
+          "param": "items[1].cue",
+          "cue": "Dutch company Philips",
+          "label": "Backed by Taiwan's government + Philips",
+          "scene_time_s": 4.84,
+          "absolute_s": 73.78
+        },
+        {
+          "param": "items[0].cue",
+          "cue": "a new company",
+          "label": "TSMC: first dedicated foundry",
+          "scene_time_s": 6.45,
+          "absolute_s": 75.38
+        },
+        {
+          "param": "items[2].cue",
+          "cue": "Nvidia, founded",
+          "label": "NVIDIA founded: a designer, no fab",
+          "scene_time_s": 27.1,
+          "absolute_s": 96.03
+        },
+        {
+          "param": "items[3].cue",
+          "cue": "so did Apple",
+          "label": "items[3].cue",
+          "scene_time_s": 32.56,
+          "absolute_s": 101.49
+        },
+        {
+          "param": "morph_cue",
+          "cue": "They focus on design",
+          "label": "morph_cue",
+          "scene_time_s": 34.66,
+          "absolute_s": 103.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "tsmc_about",
+        "tsmc_history",
+        "nvda_10k_fy2026",
+        "apple_arizona",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s08_share",
+      "segment": "m1_discovery",
+      "type": "compare",
+      "start_s": 112.93,
+      "end_s": 143.17,
+      "duration_s": 30.23,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "Here is the discovery. Today TSMC takes about 72 percent of all the revenue earned by the world's top ten contract chipmakers. In twenty twenty-five alone, it brought in 122 billion dollars. And at the end of that year, 77 percent of its wafer revenue came from its most advanced processes, seven nanometers and smaller. Taiwan didn't just join the industry. It took over the hardest part of it.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "TSMC takes",
+          "label": "of the top-10 contract chipmakers",
+          "scene_time_s": 2.59,
+          "absolute_s": 115.53
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "it brought in",
+          "label": "in US dollars",
+          "scene_time_s": 11.7,
+          "absolute_s": 124.63
+        },
+        {
+          "param": "sides[2].cue",
+          "cue": "most advanced processes",
+          "label": "of wafer revenue at 7 nm or smaller",
+          "scene_time_s": 20.03,
+          "absolute_s": 132.97
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "trendforce_2q26",
+        "tsmc_4q25_call",
+        "tsmc_4q25"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s09_m1t",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 143.17,
+      "end_s": 150.9,
+      "duration_s": 7.73,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "But if the idea was that simple, why didn't everyone copy it? That is mission two.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "But if",
+          "label": "If the idea was that simple…",
+          "scene_time_s": 0.35,
+          "absolute_s": 143.52
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "why didn't",
+          "label": "why didn't everyone copy it?",
+          "scene_time_s": 2.69,
+          "absolute_s": 145.86
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "mission two",
+          "label": "Mission 2 →",
+          "scene_time_s": 6.09,
+          "absolute_s": 149.26
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s10_m2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 150.9,
+      "end_s": 153.9,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_m2q",
+      "segment": "m2_question",
+      "type": "kinetic_text",
+      "start_s": 153.9,
+      "end_s": 165.0,
+      "duration_s": 11.1,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission two. Why can't every country just build its own chip factories? It matters because, if they could, Taiwan would not be special at all.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Why can't",
+          "label": "THE QUESTION",
+          "scene_time_s": 1.95,
+          "absolute_s": 155.85
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Why can't",
+          "label": "Why can't every country build its own fabs?",
+          "scene_time_s": 2.35,
+          "absolute_s": 156.25
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 5.89,
+          "absolute_s": 159.79
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "If they could, Taiwan would not be special",
+          "scene_time_s": 6.29,
+          "absolute_s": 160.19
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "p12_process",
+      "segment": "m2_process",
+      "type": "presenter",
+      "start_s": 165.0,
+      "end_s": 187.93,
+      "duration_s": 22.93,
+      "visual_objective": "Animated presenter walks to the board and draws (marker tip on the path), writes, builds charts, draws maps, pins, carries objects and points",
+      "narration": "Let's draw what it takes. First, engineers design the chip, billions of tiny switches. Then a fab prints that design onto a silicon wafer, layer after layer, using light. Then the wafer is cut into chips, packaged with memory, and tested. Every step has to be close to perfect.",
+      "keyframes": [
+        {
+          "param": "enter.cue",
+          "cue": "Let's draw",
+          "label": "enter.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 165.35
+        },
+        {
+          "param": "title_cue",
+          "cue": "what it takes",
+          "label": "title_cue",
+          "scene_time_s": 0.89,
+          "absolute_s": 165.89
+        },
+        {
+          "param": "items[0].cue",
+          "cue": "engineers design",
+          "label": "DESIGN",
+          "scene_time_s": 3.2,
+          "absolute_s": 168.2
+        },
+        {
+          "param": "items[1].cue",
+          "cue": "tiny switches",
+          "label": "items[1].cue",
+          "scene_time_s": 6.02,
+          "absolute_s": 171.02
+        },
+        {
+          "param": "items[2].cue",
+          "cue": "tiny switches",
+          "label": "BILLIONS OF SWITCHES",
+          "scene_time_s": 6.62,
+          "absolute_s": 171.62
+        },
+        {
+          "param": "items[3].cue",
+          "cue": "Then a fab",
+          "label": "items[3].cue",
+          "scene_time_s": 7.77,
+          "absolute_s": 172.77
+        },
+        {
+          "param": "items[4].cue",
+          "cue": "Then a fab",
+          "label": "WAFER FAB",
+          "scene_time_s": 7.77,
+          "absolute_s": 172.77
+        },
+        {
+          "param": "items[5].cue",
+          "cue": "silicon wafer",
+          "label": "items[5].cue",
+          "scene_time_s": 10.25,
+          "absolute_s": 175.25
+        },
+        {
+          "param": "items[6].cue",
+          "cue": "layer after layer",
+          "label": "items[6].cue",
+          "scene_time_s": 11.71,
+          "absolute_s": 176.71
+        },
+        {
+          "param": "items[7].cue",
+          "cue": "using light",
+          "label": "PRINTED WITH LIGHT",
+          "scene_time_s": 12.93,
+          "absolute_s": 177.93
+        },
+        {
+          "param": "items[8].cue",
+          "cue": "cut into chips",
+          "label": "items[8].cue",
+          "scene_time_s": 15.65,
+          "absolute_s": 180.65
+        },
+        {
+          "param": "items[9].cue",
+          "cue": "cut into chips",
+          "label": "PACKAGE",
+          "scene_time_s": 15.65,
+          "absolute_s": 180.65
+        },
+        {
+          "param": "items[10].cue",
+          "cue": "packaged with",
+          "label": "items[10].cue",
+          "scene_time_s": 16.73,
+          "absolute_s": 181.73
+        },
+        {
+          "param": "items[11].cue",
+          "cue": "with memory",
+          "label": "CHIP + MEMORY",
+          "scene_time_s": 17.4,
+          "absolute_s": 182.4
+        },
+        {
+          "param": "items[12].cue",
+          "cue": "and tested",
+          "label": "items[12].cue",
+          "scene_time_s": 18.48,
+          "absolute_s": 183.49
+        },
+        {
+          "param": "items[13].cue",
+          "cue": "and tested",
+          "label": "TEST",
+          "scene_time_s": 18.48,
+          "absolute_s": 183.49
+        },
+        {
+          "param": "items[14].cue",
+          "cue": "and tested",
+          "label": "items[14].cue",
+          "scene_time_s": 18.88,
+          "absolute_s": 183.89
+        },
+        {
+          "param": "items[15].cue",
+          "cue": "and tested",
+          "label": "EVERY STEP: CLOSE TO PERFECT",
+          "scene_time_s": 19.68,
+          "absolute_s": 184.69
+        },
+        {
+          "param": "items[16].cue",
+          "cue": "Every step",
+          "label": "no step can fail",
+          "scene_time_s": 19.87,
+          "absolute_s": 184.87
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "sia_bcg_2024"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_euv",
+      "segment": "m2_euv",
+      "type": "map",
+      "start_s": 187.93,
+      "end_s": 206.37,
+      "duration_s": 18.43,
+      "visual_objective": "Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts",
+      "narration": "Here is the first obstacle. To print the smallest features, a fab needs extreme ultraviolet lithography machines. Only one company in the world makes them, the Dutch firm A S M L. In twenty twenty-five, it shipped 48 of them.",
+      "keyframes": [
+        {
+          "param": "markers[0].cue",
+          "cue": "Only one company",
+          "label": "ASML",
+          "scene_time_s": 9.46,
+          "absolute_s": 197.39
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "Dutch firm",
+          "label": "views[1].cue",
+          "scene_time_s": 12.57,
+          "absolute_s": 200.5
+        },
+        {
+          "param": "highlights.NLD.cue",
+          "cue": "Dutch firm",
+          "label": "highlights.NLD.cue",
+          "scene_time_s": 12.57,
+          "absolute_s": 200.5
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "asml_euv",
+        "asml_2025",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_yield",
+      "segment": "m2_yield",
+      "type": "whiteboard",
+      "start_s": 206.37,
+      "end_s": 237.37,
+      "duration_s": 31.0,
+      "visual_objective": "Whiteboard hand-drawing: an original hand traces each stroke and writes labels progressively, then the sketch colours in and comes alive",
+      "narration": "And owning the machines is not enough. The real secret is yield, the share of chips on each wafer that actually work. Raising yield takes years of practice, thousands of engineers, and endless learning from mistakes. A brand-new factory, even with the very same machines, can take a long time to match the yields of an experienced one. That know-how is hard to buy, and even harder to copy.",
+      "keyframes": [
+        {
+          "param": "strokes[0].cue",
+          "cue": "owning the machines",
+          "label": "strokes[0].cue",
+          "scene_time_s": 0.6,
+          "absolute_s": 206.97
+        },
+        {
+          "param": "strokes[1].cue",
+          "cue": "owning the machines",
+          "label": "strokes[1].cue",
+          "scene_time_s": 1.4,
+          "absolute_s": 207.77
+        },
+        {
+          "param": "strokes[2].cue",
+          "cue": "owning the machines",
+          "label": "ONE WAFER",
+          "scene_time_s": 2.0,
+          "absolute_s": 208.37
+        },
+        {
+          "param": "caption_cue",
+          "cue": "The real secret",
+          "label": "caption_cue",
+          "scene_time_s": 3.73,
+          "absolute_s": 210.1
+        },
+        {
+          "param": "strokes[3].cue",
+          "cue": "actually work",
+          "label": "strokes[3].cue",
+          "scene_time_s": 8.19,
+          "absolute_s": 214.55
+        },
+        {
+          "param": "strokes[4].cue",
+          "cue": "actually work",
+          "label": "✗ = DEFECTIVE CHIP",
+          "scene_time_s": 8.59,
+          "absolute_s": 214.95
+        },
+        {
+          "param": "strokes[5].cue",
+          "cue": "years of practice",
+          "label": "YEARS OF PRACTICE",
+          "scene_time_s": 11.17,
+          "absolute_s": 217.54
+        },
+        {
+          "param": "strokes[6].cue",
+          "cue": "thousands of engineers",
+          "label": "THOUSANDS OF ENGINEERS",
+          "scene_time_s": 12.43,
+          "absolute_s": 218.8
+        },
+        {
+          "param": "strokes[7].cue",
+          "cue": "endless learning",
+          "label": "LEARNING FROM MISTAKES",
+          "scene_time_s": 14.46,
+          "absolute_s": 220.82
+        },
+        {
+          "param": "strokes[8].cue",
+          "cue": "brand-new factory",
+          "label": "NEW FAB ≠ EXPERIENCED FAB",
+          "scene_time_s": 17.39,
+          "absolute_s": 223.76
+        },
+        {
+          "param": "strokes[9].cue",
+          "cue": "same machines",
+          "label": "strokes[9].cue",
+          "scene_time_s": 20.25,
+          "absolute_s": 226.62
+        },
+        {
+          "param": "strokes[10].cue",
+          "cue": "hard to buy",
+          "label": "KNOW-HOW: HARD TO COPY",
+          "scene_time_s": 27.07,
+          "absolute_s": 233.44
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_capex",
+      "segment": "m2_capex",
+      "type": "compare",
+      "start_s": 237.37,
+      "end_s": 257.33,
+      "duration_s": 19.97,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "Then there is the money. TSMC planned to spend more than 50 billion dollars on factories and equipment in twenty twenty-six alone. Across the industry, chipmakers are expected to invest about 2.3 trillion dollars in new fabs between twenty twenty-four and twenty thirty-two.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "TSMC planned",
+          "label": "in a single year",
+          "scene_time_s": 2.57,
+          "absolute_s": 239.94
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "Across the industry",
+          "label": "SIA/BCG projection",
+          "scene_time_s": 9.76,
+          "absolute_s": 247.13
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tsmc_4q25_call",
+        "sia_bcg_2024"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_capacity",
+      "segment": "m2_discovery",
+      "type": "bar_chart",
+      "start_s": 257.33,
+      "end_s": 283.5,
+      "duration_s": 26.17,
+      "visual_objective": "Bars grow in a stagger with counting values",
+      "narration": "So here is the discovery, and it is subtle. Taiwan does not make most of the world's chips. In twenty twenty-two it had 18 percent of all chipmaking capacity, less than China. But for the most advanced logic chips, below ten nanometers, Taiwan had 69 percent. South Korea had 31 percent. The United States had none.",
+      "keyframes": [
+        {
+          "param": "callout_cue.cue",
+          "cue": "below ten nanometers",
+          "label": "callout_cue.cue",
+          "scene_time_s": 16.56,
+          "absolute_s": 273.89
+        },
+        {
+          "param": "callout_cue",
+          "cue": {
+            "cue": "below ten nanometers"
+          },
+          "label": "callout_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "below ten nanometers"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "sia_bcg_2024"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_layers",
+      "segment": "m2_layers",
+      "type": "compare",
+      "start_s": 283.5,
+      "end_s": 304.93,
+      "duration_s": 21.43,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "And chips are not one market. Memory is a different game, led by South Korea, which had about half of the world's DRAM capacity. Advanced packaging, the step that joins chips and memory, has become a bottleneck of its own. So Taiwan's edge is narrow, but it sits at the very top.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "not one market",
+          "label": "Taiwan · <10 nm",
+          "scene_time_s": 1.25,
+          "absolute_s": 284.75
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "not one market",
+          "label": "Taiwan · all chips",
+          "scene_time_s": 1.85,
+          "absolute_s": 285.35
+        },
+        {
+          "param": "sides[2].cue",
+          "cue": "led by South Korea",
+          "label": "South Korea · DRAM",
+          "scene_time_s": 5.36,
+          "absolute_s": 288.86
+        },
+        {
+          "param": "sides[3].cue",
+          "cue": "Advanced packaging",
+          "label": "chips + memory",
+          "scene_time_s": 10.56,
+          "absolute_s": 294.06
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "sia_bcg_2024"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_m2t",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 304.93,
+      "end_s": 310.53,
+      "duration_s": 5.6,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Which raises the next question. Who depends on that top?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Which raises",
+          "label": "A narrow edge, at the very top",
+          "scene_time_s": 0.35,
+          "absolute_s": 305.28
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Who depends",
+          "label": "Who depends on that top?",
+          "scene_time_s": 3.34,
+          "absolute_s": 308.27
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_m3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 310.53,
+      "end_s": 313.53,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_m3q",
+      "segment": "m3_question",
+      "type": "kinetic_text",
+      "start_s": 313.53,
+      "end_s": 324.67,
+      "duration_s": 11.13,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission three. Who actually depends on Taiwan? It matters because dependence is where economic power, and economic risk, come from.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Who actually",
+          "label": "THE QUESTION",
+          "scene_time_s": 1.8,
+          "absolute_s": 315.33
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Who actually",
+          "label": "Who actually depends on Taiwan?",
+          "scene_time_s": 2.2,
+          "absolute_s": 315.73
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 4.54,
+          "absolute_s": 318.07
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "Dependence = economic power, and economic risk",
+          "scene_time_s": 4.94,
+          "absolute_s": 318.47
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "p21_map",
+      "segment": "m3_map",
+      "type": "presenter",
+      "start_s": 324.67,
+      "end_s": 349.33,
+      "duration_s": 24.67,
+      "visual_objective": "Animated presenter walks to the board and draws (marker tip on the path), writes, builds charts, draws maps, pins, carries objects and points",
+      "narration": "Let me draw it. Here is Taiwan. And here, across the Pacific, is California, home to Nvidia, Apple and AMD. They design chips, but they don't make their most advanced chips themselves. TSMC does. So the lines run from California to Taiwan, and back again as finished chips.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "Let me draw",
+          "label": "title_cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 325.02
+        },
+        {
+          "param": "enter.cue",
+          "cue": "Let me draw",
+          "label": "enter.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 325.02
+        },
+        {
+          "param": "items[0].cue",
+          "cue": "Here is Taiwan",
+          "label": "items[0].cue",
+          "scene_time_s": 2.22,
+          "absolute_s": 326.89
+        },
+        {
+          "param": "items[1].cue",
+          "cue": "home to Nvidia",
+          "label": "NVIDIA · APPLE · AMD",
+          "scene_time_s": 8.46,
+          "absolute_s": 333.13
+        },
+        {
+          "param": "items[2].cue",
+          "cue": "TSMC does",
+          "label": "TSMC",
+          "scene_time_s": 16.55,
+          "absolute_s": 341.22
+        },
+        {
+          "param": "items[3].cue",
+          "cue": "So the lines",
+          "label": "items[3].cue",
+          "scene_time_s": 18.44,
+          "absolute_s": 343.11
+        },
+        {
+          "param": "items[4].cue",
+          "cue": "So the lines",
+          "label": "DESIGNS →",
+          "scene_time_s": 18.44,
+          "absolute_s": 343.11
+        },
+        {
+          "param": "items[5].cue",
+          "cue": "from California to Taiwan",
+          "label": "items[5].cue",
+          "scene_time_s": 20.29,
+          "absolute_s": 344.96
+        },
+        {
+          "param": "items[6].cue",
+          "cue": "and back again",
+          "label": "← FINISHED CHIPS",
+          "scene_time_s": 21.91,
+          "absolute_s": 346.58
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "nvda_10k_fy2026",
+        "apple_arizona",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_customers",
+      "segment": "m3_customers",
+      "type": "compare",
+      "start_s": 349.33,
+      "end_s": 377.7,
+      "duration_s": 28.37,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "How concentrated is it? In twenty twenty-five, TSMC's largest customer alone made up 19 percent of its revenue, and the second largest 17 percent. Nvidia's chief executive has said Nvidia is the biggest, and the second is widely reported to be Apple. But notice that this dependence runs both ways. TSMC needs its biggest customers almost as much as they need TSMC.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "largest customer alone",
+          "label": "of TSMC revenue · said to be NVIDIA",
+          "scene_time_s": 4.49,
+          "absolute_s": 353.82
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "second largest",
+          "label": "of TSMC revenue · reported to be Apple",
+          "scene_time_s": 9.39,
+          "absolute_s": 358.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tsmc_customers_2025"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_dependency",
+      "segment": "m3_network",
+      "type": "supply_chain",
+      "start_s": 377.7,
+      "end_s": 401.47,
+      "duration_s": 23.77,
+      "visual_objective": "World map with camera moves: supply stages light up in order, packets flow along arcs, process strip tracks the stage; optional bottleneck chokes everything downstream",
+      "narration": "Now follow the chips further. Cloud companies in the United States, Europe and Asia fill their data centers with AI chips made in Taiwan. Phone makers, PC makers and carmakers buy chips too. In twenty twenty-five, Taiwan's exports hit a record 640 billion dollars, up 35 percent in a single year.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "follow the chips",
+          "label": "title_cue",
+          "scene_time_s": 0.62,
+          "absolute_s": 378.32
+        },
+        {
+          "param": "nodes[0].cue",
+          "cue": "follow the chips",
+          "label": "Taiwan",
+          "scene_time_s": 0.62,
+          "absolute_s": 378.32
+        },
+        {
+          "param": "steps[0].cue",
+          "cue": "follow the chips",
+          "label": "Chips made in Taiwan",
+          "scene_time_s": 0.62,
+          "absolute_s": 378.32
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "Cloud companies",
+          "label": "views[1].cue",
+          "scene_time_s": 2.85,
+          "absolute_s": 380.55
+        },
+        {
+          "param": "steps[1].cue",
+          "cue": "Cloud companies",
+          "label": "Cloud data centers",
+          "scene_time_s": 2.85,
+          "absolute_s": 380.55
+        },
+        {
+          "param": "nodes[1].cue",
+          "cue": "United States",
+          "label": "Clouds · US",
+          "scene_time_s": 4.21,
+          "absolute_s": 381.91
+        },
+        {
+          "param": "nodes[2].cue",
+          "cue": "Europe",
+          "label": "Clouds · Europe",
+          "scene_time_s": 5.54,
+          "absolute_s": 383.24
+        },
+        {
+          "param": "nodes[3].cue",
+          "cue": "and Asia",
+          "label": "Clouds · Asia",
+          "scene_time_s": 5.99,
+          "absolute_s": 383.69
+        },
+        {
+          "param": "nodes[4].cue",
+          "cue": "Phone makers",
+          "label": "Phone & PC makers",
+          "scene_time_s": 10.37,
+          "absolute_s": 388.07
+        },
+        {
+          "param": "steps[2].cue",
+          "cue": "Phone makers",
+          "label": "Phones · PCs · cars",
+          "scene_time_s": 10.37,
+          "absolute_s": 388.07
+        },
+        {
+          "param": "nodes[5].cue",
+          "cue": "carmakers",
+          "label": "Carmakers",
+          "scene_time_s": 12.56,
+          "absolute_s": 390.26
+        },
+        {
+          "param": "nodes[6].cue",
+          "cue": "carmakers",
+          "label": "Carmakers",
+          "scene_time_s": 12.86,
+          "absolute_s": 390.56
+        },
+        {
+          "param": "steps[3].cue",
+          "cue": "exports hit",
+          "label": "Exports $640.8bn (2025)",
+          "scene_time_s": 17.07,
+          "absolute_s": 394.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "taiwan_exports_2025",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_designers",
+      "segment": "m3_designers",
+      "type": "compare",
+      "start_s": 401.47,
+      "end_s": 418.63,
+      "duration_s": 17.17,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "Here is the key distinction. Companies that design chips depend on the companies that make them. And the makers depend on Dutch machines, Japanese materials and American design software. Everyone depends on someone.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "Companies that design",
+          "label": "depend on the makers",
+          "scene_time_s": 3.13,
+          "absolute_s": 404.6
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "the makers depend",
+          "label": "depend on suppliers",
+          "scene_time_s": 7.76,
+          "absolute_s": 409.23
+        },
+        {
+          "param": "sides[2].cue",
+          "cue": "Dutch machines",
+          "label": "machines · materials · software",
+          "scene_time_s": 9.23,
+          "absolute_s": 410.7
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_euv",
+        "sia_bcg_2024"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_unequal",
+      "segment": "m3_unequal",
+      "type": "compare",
+      "start_s": 418.63,
+      "end_s": 443.23,
+      "duration_s": 24.6,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "But not every industry depends on Taiwan equally. A cutting-edge AI chip or a new phone processor needs the most advanced factories, and that is where Taiwan dominates. A car or a washing machine mostly uses older, simpler chips that are made in many countries. Even so, a missing cheap chip can still stop a car factory.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "cutting-edge AI chip",
+          "label": "need leading-edge fabs (Taiwan 69%)",
+          "scene_time_s": 4.7,
+          "absolute_s": 423.34
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "washing machine",
+          "label": "mostly older chips, made in many countries",
+          "scene_time_s": 14.04,
+          "absolute_s": 432.67
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "sia_bcg_2024"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_m3t",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 443.23,
+      "end_s": 451.2,
+      "duration_s": 7.97,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So what would happen if the flow of chips from Taiwan were suddenly interrupted? Mission four.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "So what would",
+          "label": "What if the flow of chips",
+          "scene_time_s": 0.35,
+          "absolute_s": 443.58
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "suddenly interrupted",
+          "label": "were suddenly interrupted?",
+          "scene_time_s": 4.04,
+          "absolute_s": 447.27
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "Mission four",
+          "label": "Mission 4 →",
+          "scene_time_s": 6.52,
+          "absolute_s": 449.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_m4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 451.2,
+      "end_s": 454.2,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_m4q",
+      "segment": "m4_question",
+      "type": "kinetic_text",
+      "start_s": 454.2,
+      "end_s": 467.4,
+      "duration_s": 13.2,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission four is a thought experiment. What if chip shipments from Taiwan were seriously disrupted? To be clear, this is a hypothetical scenario, not a prediction.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "thought experiment",
+          "label": "HYPOTHETICAL SCENARIO",
+          "scene_time_s": 1.6,
+          "absolute_s": 455.81
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "What if",
+          "label": "What if chip shipments from Taiwan were seriously disrupted?",
+          "scene_time_s": 3.75,
+          "absolute_s": 457.95
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "not a prediction",
+          "label": "Not a prediction",
+          "scene_time_s": 11.63,
+          "absolute_s": 465.83
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_precedent",
+      "segment": "m4_precedent",
+      "type": "compare",
+      "start_s": 467.4,
+      "end_s": 489.63,
+      "duration_s": 22.23,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "We do have one real clue. In twenty twenty-one, a chip shortage caused by the pandemic, not by Taiwan, hit carmakers hard. One forecast put the cost to the global auto industry at 210 billion dollars in lost revenue, and 7.7 million vehicles that were never built.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "lost",
+          "label": "global auto industry, 2021",
+          "scene_time_s": 17.05,
+          "absolute_s": 484.45
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "never built",
+          "label": "AlixPartners",
+          "scene_time_s": 21.01,
+          "absolute_s": 488.41
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "alix_2021"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_domino",
+      "segment": "m4_domino",
+      "type": "domino",
+      "start_s": 489.63,
+      "end_s": 519.83,
+      "duration_s": 30.2,
+      "visual_objective": "Hypothetical disruption: a red wave leaves the source node and each connected industry turns red, shakes and tips; impact tags and a real precedent panel",
+      "narration": "Now imagine a disruption at the source. Advanced chip supply stops. New phones and computers slip. Cloud companies can't add AI servers. Carmakers idle their lines. Prices rise, and the shock spreads to industries that never thought of themselves as tech. A shortage of the most advanced chips would be very hard to replace quickly, because the alternative factories simply don't exist yet at that scale.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "Now imagine",
+          "label": "title_cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 489.98
+        },
+        {
+          "param": "nodes[0].cue",
+          "cue": "Now imagine",
+          "label": "Advanced chips",
+          "scene_time_s": 0.35,
+          "absolute_s": 489.98
+        },
+        {
+          "param": "nodes[1].cue",
+          "cue": "Now imagine",
+          "label": "Phones & PCs",
+          "scene_time_s": 0.75,
+          "absolute_s": 490.38
+        },
+        {
+          "param": "nodes[2].cue",
+          "cue": "Now imagine",
+          "label": "Cloud & AI",
+          "scene_time_s": 1.05,
+          "absolute_s": 490.68
+        },
+        {
+          "param": "nodes[3].cue",
+          "cue": "Now imagine",
+          "label": "Carmakers",
+          "scene_time_s": 1.35,
+          "absolute_s": 490.98
+        },
+        {
+          "param": "nodes[4].cue",
+          "cue": "Now imagine",
+          "label": "Prices",
+          "scene_time_s": 1.65,
+          "absolute_s": 491.28
+        },
+        {
+          "param": "nodes[5].cue",
+          "cue": "Now imagine",
+          "label": "Consumers",
+          "scene_time_s": 1.95,
+          "absolute_s": 491.58
+        },
+        {
+          "param": "nodes[6].cue",
+          "cue": "Now imagine",
+          "label": "Other industries",
+          "scene_time_s": 2.25,
+          "absolute_s": 491.88
+        },
+        {
+          "param": "shock_cue",
+          "cue": "supply stops",
+          "label": "shock_cue",
+          "scene_time_s": 5.09,
+          "absolute_s": 494.73
+        },
+        {
+          "param": "precedent.cue",
+          "cue": "industries that never",
+          "label": "auto revenue lost (forecast)",
+          "scene_time_s": 16.53,
+          "absolute_s": 506.17
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "alix_2021"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "p31_chain",
+      "segment": "m4_chain",
+      "type": "presenter",
+      "start_s": 519.83,
+      "end_s": 541.37,
+      "duration_s": 21.53,
+      "visual_objective": "Animated presenter walks to the board and draws (marker tip on the path), writes, builds charts, draws maps, pins, carries objects and points",
+      "narration": "Let's draw that chain. Taiwan's fabs. Then packaging. Then the device makers. Then the stores and the data centers. Now break the very first link, and watch the shock travel down the line. Every box after the break turns red.",
+      "keyframes": [
+        {
+          "param": "enter.cue",
+          "cue": "Let's draw",
+          "label": "enter.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 520.18
+        },
+        {
+          "param": "items[0].cue",
+          "cue": "Let's draw",
+          "label": "HYPOTHETICAL SCENARIO",
+          "scene_time_s": 0.35,
+          "absolute_s": 520.18
+        },
+        {
+          "param": "title_cue",
+          "cue": "draw that chain",
+          "label": "title_cue",
+          "scene_time_s": 0.78,
+          "absolute_s": 520.61
+        },
+        {
+          "param": "items[1].cue",
+          "cue": "Taiwan's fabs",
+          "label": "TAIWAN FABS",
+          "scene_time_s": 2.81,
+          "absolute_s": 522.64
+        },
+        {
+          "param": "items[2].cue",
+          "cue": "Then packaging",
+          "label": "items[2].cue",
+          "scene_time_s": 4.76,
+          "absolute_s": 524.59
+        },
+        {
+          "param": "items[3].cue",
+          "cue": "Then packaging",
+          "label": "PACKAGING",
+          "scene_time_s": 4.76,
+          "absolute_s": 524.59
+        },
+        {
+          "param": "items[4].cue",
+          "cue": "device makers",
+          "label": "items[4].cue",
+          "scene_time_s": 6.89,
+          "absolute_s": 526.72
+        },
+        {
+          "param": "items[5].cue",
+          "cue": "device makers",
+          "label": "DEVICE MAKERS",
+          "scene_time_s": 6.89,
+          "absolute_s": 526.72
+        },
+        {
+          "param": "items[6].cue",
+          "cue": "the stores",
+          "label": "items[6].cue",
+          "scene_time_s": 8.78,
+          "absolute_s": 528.61
+        },
+        {
+          "param": "items[7].cue",
+          "cue": "the stores",
+          "label": "STORES",
+          "scene_time_s": 8.78,
+          "absolute_s": 528.61
+        },
+        {
+          "param": "items[8].cue",
+          "cue": "data centers",
+          "label": "items[8].cue",
+          "scene_time_s": 10.16,
+          "absolute_s": 529.99
+        },
+        {
+          "param": "items[9].cue",
+          "cue": "data centers",
+          "label": "DATA CENTERS",
+          "scene_time_s": 10.16,
+          "absolute_s": 529.99
+        },
+        {
+          "param": "items[10].cue",
+          "cue": "break the very first",
+          "label": "items[10].cue",
+          "scene_time_s": 12.41,
+          "absolute_s": 532.24
+        },
+        {
+          "param": "items[11].cue",
+          "cue": "watch the shock",
+          "label": "items[11].cue",
+          "scene_time_s": 14.84,
+          "absolute_s": 534.68
+        },
+        {
+          "param": "items[12].cue",
+          "cue": "down the line",
+          "label": "items[12].cue",
+          "scene_time_s": 16.39,
+          "absolute_s": 536.22
+        },
+        {
+          "param": "items[13].cue",
+          "cue": "down the line",
+          "label": "EVERY BOX AFTER THE BREAK TURNS RED",
+          "scene_time_s": 16.39,
+          "absolute_s": 536.22
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_estimate",
+      "segment": "m4_estimate",
+      "type": "compare",
+      "start_s": 541.37,
+      "end_s": 564.07,
+      "duration_s": 22.7,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "How big could it get? In twenty twenty-four, Bloomberg Economics estimated that a war over Taiwan could cut world output by about 10 percent in the first year, about 10 trillion dollars. Even a blockade could cost about 5 percent. Bloomberg stresses these are scenarios, and they depend heavily on assumptions.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "a war over Taiwan",
+          "label": "≈ 10% of world GDP · estimate",
+          "scene_time_s": 6.44,
+          "absolute_s": 547.81
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "Even a",
+          "label": "of world GDP · estimate",
+          "scene_time_s": 14.4,
+          "absolute_s": 555.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "bloomberg_2024"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_m4t",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 564.07,
+      "end_s": 572.1,
+      "duration_s": 8.03,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Numbers like that explain why governments are now racing to make chips at home. Mission five.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Numbers like",
+          "label": "Numbers like that explain",
+          "scene_time_s": 0.35,
+          "absolute_s": 564.42
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "racing",
+          "label": "the race to make chips at home",
+          "scene_time_s": 3.75,
+          "absolute_s": 567.81
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "Mission five",
+          "label": "Mission 5 →",
+          "scene_time_s": 6.4,
+          "absolute_s": 570.47
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_m5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 572.1,
+      "end_s": 575.1,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_m5q",
+      "segment": "m5_question",
+      "type": "kinetic_text",
+      "start_s": 575.1,
+      "end_s": 584.73,
+      "duration_s": 9.63,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission five. Can the world spread the risk? It matters because diversification is expensive, and it is slow.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Can the world",
+          "label": "THE QUESTION",
+          "scene_time_s": 2.2,
+          "absolute_s": 577.3
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Can the world",
+          "label": "Can the world spread the risk?",
+          "scene_time_s": 2.6,
+          "absolute_s": 577.7
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 4.83,
+          "absolute_s": 579.93
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "Diversification is expensive, and slow",
+          "scene_time_s": 5.23,
+          "absolute_s": 580.33
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "p36_race",
+      "segment": "m5_race",
+      "type": "presenter",
+      "start_s": 584.73,
+      "end_s": 607.83,
+      "duration_s": 23.1,
+      "visual_objective": "Animated presenter walks to the board and draws (marker tip on the path), writes, builds charts, draws maps, pins, carries objects and points",
+      "narration": "Let's map the race. America's CHIPS Act offers 52.7 billion dollars for semiconductors, 39 billion dollars of it for manufacturing. TSMC plans to invest 165 billion dollars in Arizona. In Japan, its Kumamoto venture costs more than 20 billion dollars.",
+      "keyframes": [
+        {
+          "param": "enter.cue",
+          "cue": "Let's map",
+          "label": "enter.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 585.08
+        },
+        {
+          "param": "title_cue",
+          "cue": "map the race",
+          "label": "title_cue",
+          "scene_time_s": 0.7,
+          "absolute_s": 585.44
+        },
+        {
+          "param": "items[0].cue",
+          "cue": "map the race",
+          "label": "items[0].cue",
+          "scene_time_s": 0.7,
+          "absolute_s": 585.44
+        },
+        {
+          "param": "items[1].cue",
+          "cue": "CHIPS Act",
+          "label": "CHIPS ACT: $52.7bn",
+          "scene_time_s": 3.23,
+          "absolute_s": 587.97
+        },
+        {
+          "param": "items[2].cue",
+          "cue": "for manufacturing",
+          "label": "$39bn FOR FACTORIES",
+          "scene_time_s": 9.71,
+          "absolute_s": 594.44
+        },
+        {
+          "param": "items[3].cue",
+          "cue": "in Arizona",
+          "label": "TSMC ARIZONA",
+          "scene_time_s": 15.52,
+          "absolute_s": 600.26
+        },
+        {
+          "param": "items[4].cue",
+          "cue": "In Japan",
+          "label": "items[4].cue",
+          "scene_time_s": 17.65,
+          "absolute_s": 602.38
+        },
+        {
+          "param": "items[5].cue",
+          "cue": "Kumamoto venture",
+          "label": "KUMAMOTO",
+          "scene_time_s": 18.8,
+          "absolute_s": 603.53
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "chips_act",
+        "tsmc_165bn",
+        "jasm",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_race_map",
+      "segment": "m5_europe",
+      "type": "map",
+      "start_s": 607.83,
+      "end_s": 627.1,
+      "duration_s": 19.27,
+      "visual_objective": "Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts",
+      "narration": "In Germany, a TSMC joint venture is rising in Dresden, and Europe wants 20 percent of global chip production by twenty thirty. South Korea keeps pouring money into memory and its own foundries. And Taiwan keeps building its newest fabs at home.",
+      "keyframes": [
+        {
+          "param": "highlights.DEU.cue",
+          "cue": "In Germany",
+          "label": "highlights.DEU.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 608.18
+        },
+        {
+          "param": "markers[0].cue",
+          "cue": "In Germany",
+          "label": "ESMC Dresden",
+          "scene_time_s": 0.35,
+          "absolute_s": 608.18
+        },
+        {
+          "param": "markers[1].cue",
+          "cue": "Europe wants",
+          "label": "EU target",
+          "scene_time_s": 4.73,
+          "absolute_s": 612.56
+        },
+        {
+          "param": "highlights.FRA.cue",
+          "cue": "Europe wants",
+          "label": "highlights.FRA.cue",
+          "scene_time_s": 4.93,
+          "absolute_s": 612.76
+        },
+        {
+          "param": "highlights.ITA.cue",
+          "cue": "Europe wants",
+          "label": "highlights.ITA.cue",
+          "scene_time_s": 5.03,
+          "absolute_s": 612.86
+        },
+        {
+          "param": "highlights.NLD.cue",
+          "cue": "Europe wants",
+          "label": "highlights.NLD.cue",
+          "scene_time_s": 5.13,
+          "absolute_s": 612.96
+        },
+        {
+          "param": "highlights.IRL.cue",
+          "cue": "Europe wants",
+          "label": "highlights.IRL.cue",
+          "scene_time_s": 5.23,
+          "absolute_s": 613.06
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "South Korea",
+          "label": "views[1].cue",
+          "scene_time_s": 10.45,
+          "absolute_s": 618.28
+        },
+        {
+          "param": "highlights.KOR.cue",
+          "cue": "South Korea",
+          "label": "highlights.KOR.cue",
+          "scene_time_s": 10.45,
+          "absolute_s": 618.28
+        },
+        {
+          "param": "markers[2].cue",
+          "cue": "South Korea",
+          "label": "South Korea",
+          "scene_time_s": 10.45,
+          "absolute_s": 618.28
+        },
+        {
+          "param": "highlights.TWN.cue",
+          "cue": "Taiwan keeps",
+          "label": "highlights.TWN.cue",
+          "scene_time_s": 15.53,
+          "absolute_s": 623.36
+        },
+        {
+          "param": "markers[3].cue",
+          "cue": "Taiwan keeps",
+          "label": "Taiwan",
+          "scene_time_s": 15.53,
+          "absolute_s": 623.36
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "esmc",
+        "oecd_chips",
+        "tsmc_4q25_call",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_limits",
+      "segment": "m5_limits",
+      "type": "compare",
+      "start_s": 627.1,
+      "end_s": 650.17,
+      "duration_s": 23.07,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "But here is the limit. Even with all this spending, the forecast from the industry's own trade group and Boston Consulting Group still has Taiwan holding 47 percent of advanced logic capacity in twenty thirty-two, with the United States at 28 percent. Diversification reduces the risk. It doesn't remove it.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "still has Taiwan",
+          "label": "2022 → 2032 forecast",
+          "scene_time_s": 8.26,
+          "absolute_s": 635.36
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "United States at",
+          "label": "2022 → 2032 forecast",
+          "scene_time_s": 14.96,
+          "absolute_s": 642.07
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "sia_bcg_2024"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "s39_why",
+      "segment": "m5_why",
+      "type": "kinetic_text",
+      "start_s": 650.17,
+      "end_s": 672.87,
+      "duration_s": 22.7,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Why so slow? Because the hard part isn't the building. It is the engineers, the suppliers, and the years of yield learning that come with them. Taiwan has spent decades on that. A new fab abroad can be built in a few years. Building the whole ecosystem around it takes much longer.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Why so slow",
+          "label": "The hard part isn't the building",
+          "scene_time_s": 0.35,
+          "absolute_s": 650.52
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "the engineers",
+          "label": "Engineers",
+          "scene_time_s": 5.83,
+          "absolute_s": 656.0
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "the suppliers",
+          "label": "Suppliers",
+          "scene_time_s": 7.09,
+          "absolute_s": 657.26
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "yield learning",
+          "label": "Years of yield learning",
+          "scene_time_s": 9.12,
+          "absolute_s": 659.28
+        },
+        {
+          "param": "lines[4].cue",
+          "cue": "spent decades",
+          "label": "Taiwan: decades of it",
+          "scene_time_s": 12.42,
+          "absolute_s": 662.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 41,
+      "id": "s40_payoff",
+      "segment": "payoff",
+      "type": "map",
+      "start_s": 672.87,
+      "end_s": 700.9,
+      "duration_s": 28.03,
+      "visual_objective": "Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts",
+      "narration": "So, mission complete. Taiwan matters not because it makes every chip, but because it makes the hardest ones, at a scale nobody else has matched. An island smaller than Switzerland ended up holding one of the most important keys to the global economy. Its strength is also the world's weak point: so much of the cutting edge in one place. And that is why the whole world is watching it.",
+      "keyframes": [
+        {
+          "param": "highlights.TWN.cue",
+          "cue": "mission complete",
+          "label": "highlights.TWN.cue",
+          "scene_time_s": 0.97,
+          "absolute_s": 673.83
+        },
+        {
+          "param": "markers[0].cue",
+          "cue": "hardest",
+          "label": "Not every chip",
+          "scene_time_s": 7.42,
+          "absolute_s": 680.28
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "smaller than Switzerland",
+          "label": "views[1].cue",
+          "scene_time_s": 12.09,
+          "absolute_s": 684.95
+        },
+        {
+          "param": "views[2].cue",
+          "cue": "weak point",
+          "label": "views[2].cue",
+          "scene_time_s": 20.93,
+          "absolute_s": 693.8
+        },
+        {
+          "param": "markers[1].cue",
+          "cue": "weak point",
+          "label": "markers[1].cue",
+          "scene_time_s": 20.93,
+          "absolute_s": 693.8
+        },
+        {
+          "param": "views[3].cue",
+          "cue": "whole world is watching",
+          "label": "views[3].cue",
+          "scene_time_s": 25.95,
+          "absolute_s": 698.81
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "sia_bcg_2024",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 42,
+      "id": "s41_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 700.9,
+      "end_s": 713.5,
+      "duration_s": 12.6,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link the world economy can't live without. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 9.61,
+          "absolute_s": 710.51
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}

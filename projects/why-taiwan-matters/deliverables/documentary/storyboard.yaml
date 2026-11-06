@@ -1443,30 +1443,6 @@ scenes:
       colour: accent
       hold: 1.4
       cue: Kumamoto venture
-    - map:
-        lon: 5
-        lat: 28
-        span: 300
-      rect:
-      - 520
-      - 330
-      - 1280
-      - 600
-      countries:
-      - DEU
-      highlight:
-        DEU: accent2
-      points: 100
-      cue: In Germany
-    - pin:
-      - 13.7
-      - 51.05
-      ll: true
-      label: ESMC DRESDEN
-      display: end-2027 target
-      colour: accent
-      r: 16
-      cue: rising in
     scale: 0.86
     floor: 1040
     board: *id001
@@ -1475,7 +1451,6 @@ scenes:
   - chips_act
   - tsmc_165bn
   - jasm
-  - esmc
   - natural_earth
   assets:
   - geo:remotion_world
@@ -1498,7 +1473,7 @@ scenes:
     highlights:
       DEU:
         colour: accent2
-        cue: Europe wants
+        cue: In Germany
       FRA:
         colour: accent2
         cue: Europe wants
@@ -1522,12 +1497,19 @@ scenes:
         colour: accent
         cue: Taiwan keeps
     markers:
-    - lon: 10.0
-      lat: 50.0
+    - lon: 13.7
+      lat: 51.05
+      label: ESMC Dresden
+      sublabel: TSMC joint venture · end-2027 target
+      cue: In Germany
+      size: 34
+    - lon: 2.0
+      lat: 47.0
       label: EU target
       sublabel: '{{eu_target.display}} of global production'
       cue: Europe wants
       size: 40
+      anchor: end
     - lon: 127.5
       lat: 36.5
       label: South Korea
@@ -1542,6 +1524,7 @@ scenes:
       size: 34
       anchor: end
   sources:
+  - esmc
   - oecd_chips
   - tsmc_4q25_call
   - natural_earth
@@ -1620,7 +1603,7 @@ scenes:
       lat: 28
       span: 300
       cue: whole world is watching
-    move: 3.0
+    move: 6.0
     highlights:
       TWN:
         colour: accent

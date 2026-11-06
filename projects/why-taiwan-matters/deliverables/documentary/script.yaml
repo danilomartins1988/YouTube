@@ -309,16 +309,16 @@ segments:
     narration: >-
       Let's map the race. America's CHIPS Act offers {{chips_act_figs}} for semiconductors,
       {{chips_act_figs.mfg_spoken}} dollars of it for manufacturing. TSMC plans to invest {{tsmc_us_165}} in
-      Arizona. In Japan, its Kumamoto venture costs {{japan_jasm}}. In Germany, a TSMC joint venture is rising in
-      {{germany_esmc}}.
-    claims: [chips_act_figs, tsmc_us_165, japan_jasm, germany_esmc]
+      Arizona. In Japan, its Kumamoto venture costs {{japan_jasm}}.
+    claims: [chips_act_figs, tsmc_us_165, japan_jasm]
 
   - id: m5_europe
     chapter: The race to diversify
     narration: >-
-      Europe wants {{eu_target}} of global chip production by twenty thirty. South Korea keeps pouring money
-      into memory and its own foundries. And Taiwan keeps building its newest fabs at home.
-    claims: [eu_target, capex_2026]
+      In Germany, a TSMC joint venture is rising in {{germany_esmc}}, and Europe wants {{eu_target}} of global
+      chip production by twenty thirty. South Korea keeps pouring money into memory and its own foundries. And
+      Taiwan keeps building its newest fabs at home.
+    claims: [germany_esmc, eu_target, capex_2026]
     source_note: Korea and Taiwan sentences are qualitative; TSMC's capex guidance is in the dossier.
 
   - id: m5_limits

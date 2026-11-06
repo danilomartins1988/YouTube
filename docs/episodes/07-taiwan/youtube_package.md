@@ -24,7 +24,13 @@ Taiwan covers about 36,000 square kilometers, less than Switzerland. Yet in 2022
 In five missions we find out how Taiwan became so important (TSMC and the foundry model), why nobody can simply copy it (lithography, yield, and tens of billions of dollars a year), who depends on it (Nvidia, Apple, AMD, cloud companies, carmakers) and why not every industry depends on it equally, what a disruption could cost (a clearly labelled hypothetical, next to the real 2021 chip shortage), and whether the US, Japan, Europe and Korea can spread the risk.
 
 CHAPTERS
-{{CHAPTERS}}
+0:00 The island smaller than Switzerland
+0:38 Mission 1: How Taiwan became essential
+2:30 Mission 2: Why chips are so hard to make
+5:10 Mission 3: Who depends on Taiwan
+7:31 Mission 4: A hypothetical disruption
+9:32 Mission 5: The race to diversify
+11:12 Mission complete
 
 KEY SOURCES
 - SIA / Boston Consulting Group (2024), "Emerging Resilience in the Semiconductor Supply Chain" (capacity shares, 2022 and 2032 forecast; $2.3 trillion fab investment)
