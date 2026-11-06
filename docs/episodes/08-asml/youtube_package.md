@@ -19,9 +19,14 @@ title option 1.
 ## Description
 
 ```
-Every advanced chip in the world, in AI data centers and new phones, is printed by a machine that only one company can build: ASML, from Veldhoven in the Netherlands. Each one costs about $250 million.
+Every advanced chip in the world, from AI data centers to new phones, is printed by a machine that only one company on Earth can build: ASML, from Veldhoven in the Netherlands. Each one costs about $250 million.
 
-In five missions we find out what the machine actually does (printing chips with extreme ultraviolet light made by hitting up to 50,000 tin droplets a second with lasers), how one company ended up alone (its own customers bought 23% of it to fund the bet), who builds it with them (Zeiss optics, Cymer light sources, about 5,100 suppliers), how it makes money (about $37 billion of sales in 2025, 48 EUV machines), and why governments now decide where it may go.
+In five missions we find out:
+1. What the machine actually does: printing chips with extreme ultraviolet light, made by hitting up to 50,000 droplets of molten tin every second with lasers
+2. How one company ended up alone: its own customers, Intel, TSMC and Samsung, bought 23% of it to fund the bet
+3. Who builds it: Zeiss optics, Cymer light sources and about 5,100 suppliers
+4. How it makes money: about $37 billion of sales in 2025, including 48 EUV machines
+5. Where the machine may go: export controls, China and the price of the gate
 
 CHAPTERS
 0:00 One machine, one company
@@ -33,24 +38,24 @@ CHAPTERS
 10:21 Mission complete
 
 KEY SOURCES
-- ASML Q4 and full-year 2025 results and investor presentation (SEC 6-K, January 2026): net sales €32.7bn, net income €9.6bn, 48 EUV systems, EUV system sales €11.6bn, backlog €38.8bn
-- ASML 2025 Annual Report (20-F): about 5,100 suppliers, more than 44,000 employees, R&D €4.7bn, Carl Zeiss SMT as sole optics supplier (€4.41bn of purchases)
-- ASML Q4 2024 results (2024 net sales €28.3bn)
-- ASML company history; ASML EUV product pages; "The hottest thing about ASML machines"
-- ASML 6-K (2012), Customer Co-Investment Program (Intel, TSMC, Samsung: 23%)
+- ASML Q4 and full-year 2025 results and investor presentation (SEC 6-K, Jan 2026): net sales $37.0bn, net income $10.8bn, 48 EUV systems, EUV system sales $13.1bn, order backlog $43.8bn
+- ASML 2025 Annual Report (Form 20-F): about 5,100 suppliers, more than 44,000 employees, R&D $5.3bn, Carl Zeiss SMT as sole supplier of optics ($5.0bn of purchases), optics made only in Oberkochen and Wetzlar, sales by customer location (China 29.1%, Taiwan 25.5%, South Korea 25.0%, US 12.5%, Japan 4.3%; China 36.1% in 2024)
+- ASML Q4 2024 results (2025 sales up 16%)
+- ASML company history; ASML, "The hottest thing about ASML machines" (tin droplets, two laser pulses, 13.5 nm light, up to 50,000 times per second)
+- ASML 6-K (2012): Customer Co-Investment Program, Intel, TSMC and Samsung take 23%
 - Associated Press (2012): ASML offers around $2.55 billion for Cymer
-- Reuters (January 2026): "The $250 million ASML printer behind Nvidia's chips" (school-bus size, 150 tons, ~40 containers, Europe's most valuable company)
-- Tom's Hardware: High-NA EUV estimated at $300-400 million; first shipped to Intel (Dec 2023)
 - ASML/ZEISS (2016): ASML takes a 24.9% stake in Carl Zeiss SMT
-- ASML, "The hottest thing about ASML machines": tin droplets, two laser pulses, 13.5 nm light, up to 50,000 times per second
-- ASML 2025 Annual Report: sales by customer location (China 29.1%, Taiwan 25.5%, South Korea 25.0%, US 12.5%, Japan 4.3%); Caixin: China expected at about 20% of 2026 sales
-- Reuters (2020) via Tom's Hardware: EUV export licence for China expired in 2019 and was not renewed; CNBC (2024): no EUV ever shipped to China; IO+ and The Register: DUV licence rules from September 2023 and September 2024
-- ECB 2025 average reference rate (1.13 USD per EUR), via the Bank of Finland
+- Reuters (Jan 2026): "The $250 million ASML printer behind Nvidia's chips" (school-bus size, 150 tons, around 40 containers, Europe's most valuable company)
+- Tom's Hardware: High-NA EUV estimated at $300-400 million; first shipped to Intel in December 2023
+- Reuters (2020) via Tom's Hardware: EUV export licence for China expired in 2019 and was not renewed; CNBC (2024): no EUV machine ever shipped to China
+- IO+ and The Register: Dutch licence rules for DUV machines from September 2023 and September 2024
+- Caixin (Jan 2026): ASML expects China at about 20% of 2026 sales
+- ECB 2025 average reference rate, via the Bank of Finland
 
 NOTES
-- Euro figures were converted at the ECB 2025 average of 1.13 dollars per euro.
-- "About $273 million per EUV machine" is our calculation (EUV system sales ÷ 48 systems); Reuters puts the price at about $250 million.
-- Regional shares are of ASML's 2025 total net sales by customer location (Annual Report).
+- ASML reports in euros; all amounts are converted to US dollars at the ECB 2025 average rate of 1.13.
+- "About $273 million per EUV machine" is our calculation (EUV system sales divided by 48 systems); Reuters puts the price at about $250 million.
+- The High-NA price is a press estimate.
 - The machine is shown as a schematic of its main modules, not its physical layout.
 
 This is an independent educational documentary. It is not affiliated with, endorsed by or sponsored by ASML, Zeiss, Cymer, Intel, TSMC, Samsung or any government. All visuals are original animations; no logos, product photos or footage are used. Narration voice is AI-generated.
@@ -61,7 +66,7 @@ This is an independent educational documentary. It is not affiliated with, endor
 ## Keywords / tags
 
 ```
-ASML, ASML explained, EUV, EUV lithography, extreme ultraviolet, chip machine, lithography machine, how chips are made, semiconductors, chip supply chain, Zeiss, Cymer, Veldhoven, High-NA EUV, TSMC, Intel, Samsung, export controls, China chips, chip war, AI chips, monopoly, economics documentary, The Hidden Economics
+ASML, ASML explained, EUV, EUV lithography, extreme ultraviolet, how chips are made, chip machine, lithography machine, semiconductors, chip supply chain, Zeiss, Cymer, Veldhoven, High-NA EUV, TSMC, Intel, Samsung, Nvidia chips, AI chips, export controls, China chips, chip war, monopoly, economics documentary, The Hidden Economics
 ```
 
 ## Hashtags
