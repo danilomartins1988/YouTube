@@ -262,14 +262,18 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
     for t in seqs:
         if not 8 <= t.duration <= 30:
             out.append(_issue("presenter", "warning", f"Presenter scene {t.scene.id} lasts {t.duration:.1f}s (target 10-25 s)"))
-    kinds = [set(k for it in t.scene.params.get("items", []) for k in it) | ({"stroke"} if t.scene.type == "engine_draw" else set())
-             for t in seqs]
+    # engine_draw strokes carry semantic tags (kind: box/arrow/bar/map) that map onto the presenter item names
+    TAG = {"box": "box", "arrow": "arrow", "bar": "bars", "map": "map", "bubble": "bubble"}
+    def items_of(t):
+        if t.scene.type == "engine_draw":
+            return [{TAG.get(st.get("kind", ""), "stroke"): True} for st in t.scene.params.get("strokes", [])]
+        return t.scene.params.get("items", [])
+    kinds = [set(k for it in items_of(t) for k in it) | ({"stroke"} if t.scene.type == "engine_draw" else set()) for t in seqs]
     if not any(k & {"stroke", "arrow", "box"} for k in kinds):
         out.append(_issue("presenter", "error", "No presenter sequence draws a diagram (stroke/arrow/box)"))
     if not any(k & {"bars", "map", "bubble"} for k in kinds):
         out.append(_issue("presenter", "error", "No presenter sequence interacts with a chart or map (bars/map/bubble)"))
-    if not any(sum(1 for it in t.scene.params.get("items", []) if "box" in it) >= 2 and any("arrow" in it for it in t.scene.params.get("items", []))
-               for t in seqs):
+    if not any(sum(1 for it in items_of(t) if "box" in it) >= 2 and any("arrow" in it for it in items_of(t)) for t in seqs):
         out.append(_issue("presenter", "error", "No presenter sequence explains a relationship (two boxes joined by an arrow)"))
     if len(seqs) >= 2 and (seqs[-1].start - seqs[0].start) < 0.4 * total:
         out.append(_issue("presenter", "error", "Presenter sequences are bunched together; spread them through the film"))

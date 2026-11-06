@@ -22,6 +22,11 @@ scenes: list[dict] = []
 
 
 def add(id_, segment, type_, params, sources=(), assets=INTER, sfx=None):
+    if type_ == "engine_draw":
+        for st in params.get("strokes", []):
+            d = st["d"]
+            if "kind" not in st:
+                st["kind"] = "box" if d.rstrip().endswith("Z") and d.count(" L ") == 3 else ("arrow" if " Q " in d and d.count("M ") == 2 else "stroke")
     s = {"id": id_, "segment": segment, "type": type_, "params": params}
     if sfx:
         s["sfx"] = sfx
@@ -133,14 +138,15 @@ add("s08_light", "m1_light", "engine_draw", {
     "title": "Making light that nature doesn't", "subtitle": "{{droplets.nm_display}} extreme ultraviolet", "presenter": False, "studio": False,
     "draw_start": C("ASML's answer"), "speed": 1400,
     "strokes": [
+        {"d": "M 420 540 L 900 540", "color": "border", "width": 3, "start": C("molten tin"), "flow": 140},
         {"d": drops, "color": "muted", "width": 4, "start": C("tiny drops"), "label": lbl("MOLTEN TIN · {{droplets.display}}", 420, 490, 28, "muted", "start")},
-        {"d": "M 920 900 L 920 560", "color": "accent2", "width": 6, "start": C("A laser flattens"), "label": lbl("LASER PRE-PULSE", 945, 860, 26, "accent2", "start")},
+        {"d": "M 920 900 L 920 560", "color": "accent2", "width": 6, "flow": 260, "start": C("A laser flattens"), "label": lbl("LASER PRE-PULSE", 895, 880, 26, "accent2", "end")},
         {"d": ellipse(920, 540, 26, 9), "color": "ink", "width": 4, "start": C("each drop")},
-        {"d": "M 1010 900 L 930 560", "color": "risk", "width": 9, "start": C("stronger pulse"), "label": lbl("MAIN PULSE", 1030, 860, 26, "risk", "start")},
+        {"d": "M 1010 900 L 930 560", "color": "risk", "width": 9, "flow": 320, "start": C("stronger pulse"), "label": lbl("MAIN PULSE", 1035, 900, 26, "risk", "start")},
         {"d": "M 920 470 L 920 400 M 920 610 L 920 680 M 850 540 L 780 540 M 990 540 L 1060 540 M 870 490 L 830 450 M 970 590 L 1010 630 M 970 490 L 1010 450 M 870 590 L 830 630",
-         "color": "gold", "width": 6, "start": C("plasma"), "label": lbl("PLASMA → EUV LIGHT", 920, 370, 30, "gold")},
+         "color": "gold", "width": 6, "pulse": True, "start": C("plasma"), "label": lbl("PLASMA → EUV LIGHT", 920, 370, 30, "gold")},
         {"d": "M 760 330 Q 640 540 760 750", "color": "teal", "width": 8, "start": C("special mirror"), "label": lbl("COLLECTOR MIRROR", 640, 800, 26, "teal")},
-        {"d": "M 930 520 L 1560 430 M 930 560 L 1560 650 M 1560 430 L 1700 540 L 1560 650", "color": "gold", "width": 4, "start": C("sends it"), "label": lbl("INTO THE MACHINE →", 1640, 400, 26, "gold")},
+        {"d": "M 930 520 L 1560 430 M 930 560 L 1560 650 M 1560 430 L 1700 540 L 1560 650", "color": "gold", "width": 4, "flow": 220, "start": C("sends it"), "label": lbl("INTO THE MACHINE →", 1640, 400, 26, "gold")},
         {"d": "M 420 960 L 1700 960", "color": "border", "width": 3, "start": C("again and again"), "label": lbl("REPEATED NONSTOP, FOR HOURS", 1060, 1010, 26, "muted")},
     ]}, sources=["asml_hot", "ieee_euv", "bits_1000w"])
 # ---- pen drawing: mirrors in a vacuum
@@ -148,8 +154,8 @@ add("s09_mirrors", "m1_mirrors", "engine_draw", {
     "title": "Mirrors, in a vacuum", "presenter": False, "studio": False, "draw_start": C("absorbed"), "speed": 1600,
     "strokes": [
         {"d": rect(260, 300, 1400, 620), "color": "border", "width": 4, "dash": "14 10", "start": C("even air"), "label": lbl("VACUUM CHAMBER", 300, 345, 26, "muted", "start")},
-        {"d": "M 470 800 Q 520 770 570 800 M 770 410 Q 820 440 870 410 M 1070 800 Q 1120 770 1170 800 M 1370 410 Q 1420 440 1470 410", "color": "teal", "width": 7, "start": C("ultra smooth"), "label": lbl("MIRRORS", 820, 380, 26, "teal")},
-        {"d": "M 300 600 L 520 790 L 820 420 L 1120 790 L 1420 420 L 1560 760", "color": "gold", "width": 5, "start": C("bounces off", 0.3)},
+        {"d": "M 470 800 Q 520 770 570 800 M 770 410 Q 820 440 870 410 M 1070 800 Q 1120 770 1170 800 M 1370 410 Q 1420 440 1470 410", "color": "teal", "width": 7, "pulse": True, "start": C("ultra smooth"), "label": lbl("MIRRORS", 820, 380, 26, "teal")},
+        {"d": "M 300 600 L 520 790 L 820 420 L 1120 790 L 1420 420 L 1560 760", "color": "gold", "width": 5, "flow": 300, "start": C("bounces off", 0.3)},
         {"d": ellipse(1580, 800, 110, 26), "color": "ink", "width": 5, "fill": "accent2", "fillOpacity": 0.2, "start": C("reaches the wafer"), "label": lbl("WAFER", 1580, 870, 26)},
     ]}, sources=["asml_euv", "ieee_euv"])
 add("s10_size", "m1_discovery", "compare", {"chapter": "Mission 1 · The discovery", "title": "One machine", "sides": [
@@ -174,6 +180,7 @@ add("p15_bet", "m2_bet", "engine_draw", {
     "title": "The customers became owners", "board": BOARD, "draw_start": C("biggest customers"), "speed": 1300,
     "enter": {"from": 2200, "to": 1500, "at": C("The conflict", -0.3), "dur": 1.3},
     "strokes": [
+        {"d": "M 1150 300 L 1150 300", "color": "risk", "width": 1, "start": C("took decades"), "label": lbl("DECADES · BILLIONS · NO GUARANTEE", 1150, 300, 30, "risk")},
         {"d": rect(560, 380, 260, 100), "color": "accent2", "width": 5, "start": C("Intel"), "label": lbl("INTEL", 690, 442)},
         {"d": rect(560, 530, 260, 100), "color": "accent2", "width": 5, "start": C("TSMC"), "label": lbl("TSMC", 690, 592)},
         {"d": rect(560, 680, 260, 100), "color": "accent2", "width": 5, "start": C("Samsung"), "label": lbl("SAMSUNG", 690, 742)},
@@ -182,9 +189,9 @@ add("p15_bet", "m2_bet", "engine_draw", {
         {"d": arrow((830, 580), (1320, 580), 0), "color": "ink", "width": 4},
         {"d": arrow((830, 730), (1320, 620), 0.08), "color": "ink", "width": 4},
         {"d": "M 960 420 L 960 420", "color": "gold", "width": 1, "start": C("of the company", 0.6), "label": lbl("{{ccip_2012.display}} STAKE", 1075, 380, 34, "gold")},
-        {"d": "M 960 800 L 960 800", "color": "gold", "width": 1, "start": C("pay for the research"), "label": lbl("+ RESEARCH FUNDING", 1075, 850, 32, "gold")},
+        {"d": "M 960 800 L 960 800", "color": "gold", "width": 1, "start": C("helped pay"), "label": lbl("+ RESEARCH FUNDING", 1075, 850, 32, "gold")},
     ],
-    "actions": [{"kind": "walk", "at": C("pay for the research", 0.5), "dur": 1.1, "to": 1790}, {"kind": "point", "at": C("pay for the research", 1.7), "dur": 1.2, "target": [1560, 600]}],
+    "actions": [{"kind": "explain", "at": C("The conflict", 1.2), "dur": 4.0}, {"kind": "walk", "at": C("pay for the research", 0.5), "dur": 1.1, "to": 1790}, {"kind": "point", "at": C("pay for the research", 1.7), "dur": 1.2, "target": [1560, 600]}],
     "scale": 0.86, "floor": 1040}, sources=["ccip_2012", "samsung_ccip"])
 kinetic("s16_insurance", "m2_insurance", [
     ("For the customers: insurance", 58, "insurance", "accent", False),
@@ -218,8 +225,11 @@ add("s22_inside", "m3_inside", "engine_exploded", {
     sources=["asml_euv"])
 add("s23_suppliers", "m3_map", "engine_map", {
     "title": "Where the parts come from", "subtitle": "{{suppliers.display}} suppliers in total",
-    "cameras": [{"at": 0, "lon": 7.5, "lat": 50.2, "span": 12}, {"at": C("San Diego", -0.6), "lon": -55, "lat": 44, "span": 165, "dur": 2.0},
+    "cameras": [{"at": 0, "lon": 7.5, "lat": 50.2, "span": 12}, {"at": C("In fact"), "lon": 9.2, "lat": 49.6, "span": 6, "dur": 1.8},
+                {"at": C("San Diego", -0.6), "lon": -55, "lat": 44, "span": 165, "dur": 2.0},
+                {"at": C("In total"), "lon": -20, "lat": 42, "span": 120, "dur": 2.0},
                 {"at": C("comes together"), "lon": 6.5, "lat": 50.5, "span": 10, "dur": 1.8}],
+    "drift": {"lon": 0.25, "zoom": 0.004}, "tilt": [[0, 12], [20, 4], [40, 12]],
     "highlights": [{"iso": "NLD", "color": "gold", "at": 0.3}, {"iso": "DEU", "color": "teal", "at": C("Zeiss")}, {"iso": "USA", "color": "accent2", "at": C("San Diego")}],
     "hubs": [
         {"id": "v", "at": LL["veldhoven"], "label": "Veldhoven", "sub": "ASML assembly", "color": "gold", "time": 0.5, "anchor": "end"},
@@ -227,9 +237,9 @@ add("s23_suppliers", "m3_map", "engine_map", {
         {"id": "w", "at": LL["wetzlar"], "label": "Wetzlar", "sub": "Zeiss optics", "color": "teal", "time": C("Wetzlar")},
         {"id": "s", "at": LL["sandiego"], "label": "San Diego", "sub": "Cymer light source", "color": "accent2", "time": C("San Diego")}],
     "routes": [
-        {"from": LL["oberkochen"], "to": LL["veldhoven"], "at": C("mirrors come from", 0.5), "dur": 1.0, "color": "teal", "tokenShape": "box", "tokens": 3, "lift": 0.3},
-        {"from": LL["wetzlar"], "to": LL["veldhoven"], "at": C("Wetzlar", 0.4), "dur": 0.8, "color": "teal", "tokenShape": "box", "tokens": 2, "lift": 0.3},
-        {"from": LL["sandiego"], "to": LL["veldhoven"], "at": C("San Diego", 0.6), "dur": 1.4, "color": "accent2", "tokenShape": "box", "tokens": 3, "lift": 0.25}],
+        {"from": LL["oberkochen"], "to": LL["veldhoven"], "at": C("mirrors come from", 0.5), "dur": 1.0, "color": "teal", "tokenShape": "box", "tokens": 6, "tokenEvery": 0.35, "lift": 0.3},
+        {"from": LL["wetzlar"], "to": LL["veldhoven"], "at": C("Wetzlar", 0.4), "dur": 0.8, "color": "teal", "tokenShape": "box", "tokens": 5, "tokenEvery": 0.35, "lift": 0.3},
+        {"from": LL["sandiego"], "to": LL["veldhoven"], "at": C("San Diego", 0.6), "dur": 1.4, "color": "accent2", "tokenShape": "box", "tokens": 6, "tokenEvery": 0.35, "lift": 0.25}],
     "caption": "Real locations (Natural Earth) · routes are schematic"},
     sources=["asml_ar_2025", "zeiss_capacity", "cymer_2012", "natural_earth"], assets=GEO)
 add("s24_ship", "m3_shipping", "engine_flow", {
@@ -254,19 +264,24 @@ add("p28_sales", "m4_sales", "engine_draw", {
     "title": "ASML in 2025 (US dollars)", "board": BOARD, "draw_start": C("ASML sold"), "speed": 1400,
     "enter": {"from": -260, "to": 520, "at": C("Let me draw", -0.3), "dur": 1.3},
     "strokes": [
-        {"d": rect(560, 370, 560, 170), "color": "gold", "width": 6, "start": C("ASML sold"), "label": lbl("{{sales_2025.display}} SALES", 840, 472, 44, "gold")},
-        {"d": "M 600 590 L 600 590", "color": "ink", "width": 1, "start": C("up"), "label": lbl("{{sales_2025.growth_display}} IN ONE YEAR", 840, 600, 30, "ink")},
-        {"d": rect(560, 650, 560, 150), "color": "accent3", "width": 6, "start": C("as profit"), "label": lbl("{{sales_2025.ni_display}} PROFIT", 840, 740, 40, "accent3")},
-        {"d": rect(1230, 370, 520, 430), "color": "accent2", "width": 6, "start": C("the star"), "label": lbl("EXTREME UV", 1490, 440, 34, "accent2")},
-        {"d": "M 1300 520 L 1300 520", "color": "ink", "width": 1, "start": C("machines,"), "label": lbl("{{euv_sales_2025.display}} MACHINES", 1490, 560, 40, "ink")},
-        {"d": "M 1300 660 L 1300 660", "color": "ink", "width": 1, "start": C("bringing in"), "label": lbl("= {{euv_sales_2025.usd_display}}", 1490, 690, 52, "gold")},
+        {"d": "M 600 900 L 1760 900", "color": "border", "width": 4, "start": C("draw the numbers"), "kind": "stroke"},
+        {"d": "M 660 900 L 660 438 L 860 438 L 860 900", "color": "gold", "width": 5, "fill": "gold", "fillOpacity": 0.35, "kind": "bar", "start": C("ASML sold"),
+         "label": lbl("{{sales_2025.display}}", 760, 416, 40, "gold")},
+        {"d": "M 760 945 L 760 945", "color": "ink", "width": 1, "start": C("ASML sold", 0.6), "label": lbl("SALES", 760, 945, 26, "muted")},
+        {"d": "M 760 400 L 760 400", "color": "ink", "width": 1, "start": C("up"), "label": lbl("{{sales_2025.growth_display}} IN ONE YEAR", 760, 350, 26, "ink")},
+        {"d": "M 1010 900 L 1010 765 L 1210 765 L 1210 900", "color": "accent3", "width": 5, "fill": "accent3", "fillOpacity": 0.35, "kind": "bar", "start": C("as profit"),
+         "label": lbl("{{sales_2025.ni_display}}", 1110, 743, 36, "accent3")},
+        {"d": "M 1110 945 L 1110 945", "color": "ink", "width": 1, "start": C("as profit", 0.5), "label": lbl("PROFIT", 1110, 945, 26, "muted")},
+        {"d": "M 1360 900 L 1360 736 L 1560 736 L 1560 900", "color": "accent2", "width": 5, "fill": "accent2", "fillOpacity": 0.35, "kind": "bar", "start": C("the star"),
+         "label": lbl("{{euv_sales_2025.usd_display}}", 1460, 714, 36, "accent2")},
+        {"d": "M 1460 945 L 1460 945", "color": "ink", "width": 1, "start": C("bringing in", -1.0), "label": lbl("{{euv_sales_2025.display}} EUV MACHINES", 1460, 945, 26, "muted")},
     ],
-    "actions": [{"kind": "walk", "at": C("bringing in", 0.8), "dur": 1.0, "to": 1820}, {"kind": "point", "at": C("bringing in", 1.9), "dur": 1.3, "target": [1650, 680]}, {"kind": "react", "at": C("bringing in", 3.3)}],
+    "actions": [{"kind": "walk", "at": C("bringing in", 0.8), "dur": 1.0, "to": 1820}, {"kind": "point", "at": C("bringing in", 1.9), "dur": 1.3, "target": [1460, 820]}, {"kind": "react", "at": C("bringing in", 3.3)}],
     "scale": 0.86, "floor": 1040}, sources=["asml_q4_2025", "asml_q4_2025_deck", "asml_q4_2024", "ecb_2025_avg"])
 add("s29_avg", "m4_average", "compare", {"chapter": "Mission 4 · Per machine", "title": "What one EUV machine brings in", "sides": [
     {"kicker": "EUV sales, 2025", "value": "{{euv_sales_2025.usd_display}}", "label": "{{euv_sales_2025.display}} machines", "cue": "average"},
     {"kicker": "Average per machine", "value": "{{euv_sales_2025.avg_display}}", "label": "our calculation", "cue": "per machine"},
-    {"kicker": "Conversion rate", "value": "{{eur_usd.display}}", "label": "ECB average for 2025", "cue": "converted"}]},
+    {"kicker": "Exchange rate used", "value": "{{eur_usd.display}}", "label": "ECB average rate, 2025", "cue": "converted"}]},
     sources=["asml_q4_2025_deck", "ecb_2025_avg"])
 add("s30_regions", "m4_customers", "engine_chart", {"chart": "bar", "data": "{{regions.value}}", "box": {"x": 300, "y": 330, "w": 1320, "h": 500},
     "start": C("who buys"), "stagger": 0.25, "title": "Who buys ASML's machines", "note": "Share of 2025 net system sales",
@@ -290,7 +305,9 @@ question("s34_m5q", "m5_question", "Mission 5 · Where the machine may go", "Who
          "Control the machine, control the most advanced chips", "Who decides", "It matters")
 add("s35_export", "m5_map", "engine_map", {
     "title": "Where EUV machines can go", "subtitle": "export rules set by the Netherlands, under pressure from the United States",
-    "cameras": [{"at": 0, "lon": 35, "lat": 38, "span": 300}],
+    "cameras": [{"at": 0, "lon": 35, "lat": 38, "span": 300}, {"at": C("not to China"), "lon": 80, "lat": 38, "span": 170, "dur": 2.0},
+                {"at": C("older machines"), "lon": 45, "lat": 38, "span": 260, "dur": 2.4}],
+    "drift": {"lon": 0.15, "zoom": 0.003}, "tilt": [[0, 14], [22, 6]],
     "highlights": [{"iso": "NLD", "color": "gold", "at": 0.3}, {"iso": "TWN", "color": "accent2", "at": C("Taiwan")}, {"iso": "KOR", "color": "accent2", "at": C("South Korea")},
                    {"iso": "USA", "color": "accent2", "at": C("United States")}, {"iso": "CHN", "color": "risk", "at": C("not to China"), "strength": 0.7}],
     "hubs": [{"id": "v", "at": LL["veldhoven"], "label": "Veldhoven", "color": "gold", "time": 0.4, "anchor": "end"},
@@ -327,7 +344,9 @@ add("s37_cost", "m5_cost", "compare", {"chapter": "Mission 5 · The price of the
 
 # ====================================================================== PAYOFF
 add("s38_payoff", "payoff", "engine_map", {
-    "cameras": [{"at": 0, "lon": 40, "lat": 35, "span": 300}, {"at": C("small town"), "lon": 5.43, "lat": 51.6, "span": 6, "dur": 2.4}],
+    "cameras": [{"at": 0, "lon": 40, "lat": 35, "span": 300}, {"at": C("forty years"), "lon": 20, "lat": 45, "span": 150, "dur": 2.4},
+                {"at": C("small town"), "lon": 5.43, "lat": 51.6, "span": 6, "dur": 2.4}, {"at": C("drop of tin"), "lon": 5.43, "lat": 51.5, "span": 2.5, "dur": 3.0}],
+    "drift": {"lon": 0.1, "zoom": 0.006}, "tilt": [[0, 16], [30, 4]],
     "highlights": [{"iso": "NLD", "color": "gold", "at": 0.2}],
     "hubs": [{"id": "v", "at": LL["veldhoven"], "label": "Veldhoven", "sub": "one Dutch machine", "color": "gold", "time": 0.3},
              {"id": "z", "at": LL["oberkochen"], "label": "Zeiss", "color": "teal", "time": C("network of suppliers")},

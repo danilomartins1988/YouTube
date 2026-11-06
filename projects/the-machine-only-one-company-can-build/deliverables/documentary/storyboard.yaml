@@ -215,11 +215,13 @@ scenes:
         size: 30
         color: ink
         anchor: middle
+      kind: box
     - d: M 790 440 Q 950 440 1110 440 M 1088 450 L 1110 440 L 1088 430
       color: gold
       width: 5
       start:
         cue: Light shines
+      kind: arrow
     - d: M 1120 370 L 1180 370 L 1180 520 L 1120 520 Z
       color: accent2
       width: 5
@@ -232,6 +234,7 @@ scenes:
         size: 26
         color: accent2
         anchor: middle
+      kind: box
     - d: M 1040 640 Q 1150 600 1260 640 Q 1150 680 1040 640
       color: teal
       width: 5
@@ -244,11 +247,13 @@ scenes:
         size: 26
         color: teal
         anchor: start
+      kind: stroke
     - d: M 1130 525 L 1080 640 L 1145 880 M 1170 525 L 1220 640 L 1155 880
       color: gold
       width: 4
       start:
         cue: shrink that image
+      kind: stroke
     - d: M 930 890 A 220 46 0 1 0 1370 890 A 220 46 0 1 0 930 890
       color: ink
       width: 5
@@ -263,6 +268,7 @@ scenes:
         size: 28
         color: ink
         anchor: middle
+      kind: stroke
     actions:
     - kind: walk
       at:
@@ -321,6 +327,13 @@ scenes:
       cue: ASML's answer
     speed: 1400
     strokes:
+    - d: M 420 540 L 900 540
+      color: border
+      width: 3
+      start:
+        cue: molten tin
+      flow: 140
+      kind: stroke
     - d: M 413 540 A 7 7 0 1 0 427 540 A 7 7 0 1 0 413 540 M 465 540 A 7 7 0 1 0 479 540 A 7 7 0 1 0 465 540 M 517 540 A 7 7 0 1 0 531 540 A 7 7 0 1 0 517 540 M 569 540 A 7 7 0 1 0 583 540 A 7 7 0 1 0 569
         540 M 621 540 A 7 7 0 1 0 635 540 A 7 7 0 1 0 621 540 M 673 540 A 7 7 0 1 0 687 540 A 7 7 0 1 0 673 540 M 725 540 A 7 7 0 1 0 739 540 A 7 7 0 1 0 725 540 M 777 540 A 7 7 0 1 0 791 540 A 7 7 0 1
         0 777 540 M 829 540 A 7 7 0 1 0 843 540 A 7 7 0 1 0 829 540
@@ -335,38 +348,45 @@ scenes:
         size: 28
         color: muted
         anchor: start
+      kind: stroke
     - d: M 920 900 L 920 560
       color: accent2
       width: 6
+      flow: 260
       start:
         cue: A laser flattens
       label:
         text: LASER PRE-PULSE
-        x: 945
-        y: 860
+        x: 895
+        y: 880
         size: 26
         color: accent2
-        anchor: start
+        anchor: end
+      kind: stroke
     - d: M 894 540 A 26 9 0 1 0 946 540 A 26 9 0 1 0 894 540
       color: ink
       width: 4
       start:
         cue: each drop
+      kind: stroke
     - d: M 1010 900 L 930 560
       color: risk
       width: 9
+      flow: 320
       start:
         cue: stronger pulse
       label:
         text: MAIN PULSE
-        x: 1030
-        y: 860
+        x: 1035
+        y: 900
         size: 26
         color: risk
         anchor: start
+      kind: stroke
     - d: M 920 470 L 920 400 M 920 610 L 920 680 M 850 540 L 780 540 M 990 540 L 1060 540 M 870 490 L 830 450 M 970 590 L 1010 630 M 970 490 L 1010 450 M 870 590 L 830 630
       color: gold
       width: 6
+      pulse: true
       start:
         cue: plasma
       label:
@@ -376,6 +396,7 @@ scenes:
         size: 30
         color: gold
         anchor: middle
+      kind: stroke
     - d: M 760 330 Q 640 540 760 750
       color: teal
       width: 8
@@ -388,9 +409,11 @@ scenes:
         size: 26
         color: teal
         anchor: middle
+      kind: stroke
     - d: M 930 520 L 1560 430 M 930 560 L 1560 650 M 1560 430 L 1700 540 L 1560 650
       color: gold
       width: 4
+      flow: 220
       start:
         cue: sends it
       label:
@@ -400,6 +423,7 @@ scenes:
         size: 26
         color: gold
         anchor: middle
+      kind: stroke
     - d: M 420 960 L 1700 960
       color: border
       width: 3
@@ -412,6 +436,7 @@ scenes:
         size: 26
         color: muted
         anchor: middle
+      kind: stroke
   sources:
   - asml_hot
   - ieee_euv
@@ -442,9 +467,11 @@ scenes:
         size: 26
         color: muted
         anchor: start
+      kind: box
     - d: M 470 800 Q 520 770 570 800 M 770 410 Q 820 440 870 410 M 1070 800 Q 1120 770 1170 800 M 1370 410 Q 1420 440 1470 410
       color: teal
       width: 7
+      pulse: true
       start:
         cue: ultra smooth
       label:
@@ -454,12 +481,15 @@ scenes:
         size: 26
         color: teal
         anchor: middle
+      kind: stroke
     - d: M 300 600 L 520 790 L 820 420 L 1120 790 L 1420 420 L 1560 760
       color: gold
       width: 5
+      flow: 300
       start:
         cue: bounces off
         offset: 0.3
+      kind: stroke
     - d: M 1470 800 A 110 26 0 1 0 1690 800 A 110 26 0 1 0 1470 800
       color: ink
       width: 5
@@ -474,6 +504,7 @@ scenes:
         size: 26
         color: ink
         anchor: middle
+      kind: stroke
   sources:
   - asml_euv
   - ieee_euv
@@ -607,6 +638,19 @@ scenes:
         offset: -0.3
       dur: 1.3
     strokes:
+    - d: M 1150 300 L 1150 300
+      color: risk
+      width: 1
+      start:
+        cue: took decades
+      label:
+        text: DECADES · BILLIONS · NO GUARANTEE
+        x: 1150
+        y: 300
+        size: 30
+        color: risk
+        anchor: middle
+      kind: stroke
     - d: M 560 380 L 820 380 L 820 480 L 560 480 Z
       color: accent2
       width: 5
@@ -619,6 +663,7 @@ scenes:
         size: 30
         color: ink
         anchor: middle
+      kind: box
     - d: M 560 530 L 820 530 L 820 630 L 560 630 Z
       color: accent2
       width: 5
@@ -631,6 +676,7 @@ scenes:
         size: 30
         color: ink
         anchor: middle
+      kind: box
     - d: M 560 680 L 820 680 L 820 780 L 560 780 Z
       color: accent2
       width: 5
@@ -643,6 +689,7 @@ scenes:
         size: 30
         color: ink
         anchor: middle
+      kind: box
     - d: M 1330 500 L 1630 500 L 1630 660 L 1330 660 Z
       color: gold
       width: 6
@@ -655,17 +702,21 @@ scenes:
         size: 40
         color: gold
         anchor: middle
+      kind: box
     - d: M 830 430 Q 1084 446 1320 540 M 1296 542 L 1320 540 L 1304 522
       color: ink
       width: 4
       start:
         cue: of the company
+      kind: arrow
     - d: M 830 580 Q 1075 580 1320 580 M 1298 590 L 1320 580 L 1298 570
       color: ink
       width: 4
+      kind: arrow
     - d: M 830 730 Q 1084 714 1320 620 M 1304 638 L 1320 620 L 1296 618
       color: ink
       width: 4
+      kind: arrow
     - d: M 960 420 L 960 420
       color: gold
       width: 1
@@ -679,11 +730,12 @@ scenes:
         size: 34
         color: gold
         anchor: middle
+      kind: stroke
     - d: M 960 800 L 960 800
       color: gold
       width: 1
       start:
-        cue: pay for the research
+        cue: helped pay
       label:
         text: + RESEARCH FUNDING
         x: 1075
@@ -691,7 +743,13 @@ scenes:
         size: 32
         color: gold
         anchor: middle
+      kind: stroke
     actions:
+    - kind: explain
+      at:
+        cue: The conflict
+        offset: 1.2
+      dur: 4.0
     - kind: walk
       at:
         cue: pay for the research
@@ -942,6 +1000,12 @@ scenes:
       lat: 50.2
       span: 12
     - at:
+        cue: In fact
+      lon: 9.2
+      lat: 49.6
+      span: 6
+      dur: 1.8
+    - at:
         cue: San Diego
         offset: -0.6
       lon: -55
@@ -949,11 +1013,27 @@ scenes:
       span: 165
       dur: 2.0
     - at:
+        cue: In total
+      lon: -20
+      lat: 42
+      span: 120
+      dur: 2.0
+    - at:
         cue: comes together
       lon: 6.5
       lat: 50.5
       span: 10
       dur: 1.8
+    drift:
+      lon: 0.25
+      zoom: 0.004
+    tilt:
+    - - 0
+      - 12
+    - - 20
+      - 4
+    - - 40
+      - 12
     highlights:
     - iso: NLD
       color: gold
@@ -1010,7 +1090,8 @@ scenes:
       dur: 1.0
       color: teal
       tokenShape: box
-      tokens: 3
+      tokens: 6
+      tokenEvery: 0.35
       lift: 0.3
     - from: *id005
       to: *id003
@@ -1020,7 +1101,8 @@ scenes:
       dur: 0.8
       color: teal
       tokenShape: box
-      tokens: 2
+      tokens: 5
+      tokenEvery: 0.35
       lift: 0.3
     - from: *id006
       to: *id003
@@ -1030,7 +1112,8 @@ scenes:
       dur: 1.4
       color: accent2
       tokenShape: box
-      tokens: 3
+      tokens: 6
+      tokenEvery: 0.35
       lift: 0.25
     caption: Real locations (Natural Earth) · routes are schematic
   sources:
@@ -1212,78 +1295,112 @@ scenes:
         offset: -0.3
       dur: 1.3
     strokes:
-    - d: M 560 370 L 1120 370 L 1120 540 L 560 540 Z
+    - d: M 600 900 L 1760 900
+      color: border
+      width: 4
+      start:
+        cue: draw the numbers
+      kind: stroke
+    - d: M 660 900 L 660 438 L 860 438 L 860 900
       color: gold
-      width: 6
+      width: 5
+      fill: gold
+      fillOpacity: 0.35
+      kind: bar
       start:
         cue: ASML sold
       label:
-        text: '{{sales_2025.display}} SALES'
-        x: 840
-        y: 472
-        size: 44
+        text: '{{sales_2025.display}}'
+        x: 760
+        y: 416
+        size: 40
         color: gold
         anchor: middle
-    - d: M 600 590 L 600 590
+    - d: M 760 945 L 760 945
+      color: ink
+      width: 1
+      start:
+        cue: ASML sold
+        offset: 0.6
+      label:
+        text: SALES
+        x: 760
+        y: 945
+        size: 26
+        color: muted
+        anchor: middle
+      kind: stroke
+    - d: M 760 400 L 760 400
       color: ink
       width: 1
       start:
         cue: up
       label:
         text: '{{sales_2025.growth_display}} IN ONE YEAR'
-        x: 840
-        y: 600
-        size: 30
+        x: 760
+        y: 350
+        size: 26
         color: ink
         anchor: middle
-    - d: M 560 650 L 1120 650 L 1120 800 L 560 800 Z
+      kind: stroke
+    - d: M 1010 900 L 1010 765 L 1210 765 L 1210 900
       color: accent3
-      width: 6
+      width: 5
+      fill: accent3
+      fillOpacity: 0.35
+      kind: bar
       start:
         cue: as profit
       label:
-        text: '{{sales_2025.ni_display}} PROFIT'
-        x: 840
-        y: 740
-        size: 40
+        text: '{{sales_2025.ni_display}}'
+        x: 1110
+        y: 743
+        size: 36
         color: accent3
         anchor: middle
-    - d: M 1230 370 L 1750 370 L 1750 800 L 1230 800 Z
-      color: accent2
-      width: 6
-      start:
-        cue: the star
-      label:
-        text: EXTREME UV
-        x: 1490
-        y: 440
-        size: 34
-        color: accent2
-        anchor: middle
-    - d: M 1300 520 L 1300 520
+    - d: M 1110 945 L 1110 945
       color: ink
       width: 1
       start:
-        cue: machines,
+        cue: as profit
+        offset: 0.5
       label:
-        text: '{{euv_sales_2025.display}} MACHINES'
-        x: 1490
-        y: 560
-        size: 40
-        color: ink
+        text: PROFIT
+        x: 1110
+        y: 945
+        size: 26
+        color: muted
         anchor: middle
-    - d: M 1300 660 L 1300 660
+      kind: stroke
+    - d: M 1360 900 L 1360 736 L 1560 736 L 1560 900
+      color: accent2
+      width: 5
+      fill: accent2
+      fillOpacity: 0.35
+      kind: bar
+      start:
+        cue: the star
+      label:
+        text: '{{euv_sales_2025.usd_display}}'
+        x: 1460
+        y: 714
+        size: 36
+        color: accent2
+        anchor: middle
+    - d: M 1460 945 L 1460 945
       color: ink
       width: 1
       start:
         cue: bringing in
+        offset: -1.0
       label:
-        text: = {{euv_sales_2025.usd_display}}
-        x: 1490
-        y: 690
-        size: 52
-        color: gold
+        text: '{{euv_sales_2025.display}} EUV MACHINES'
+        x: 1460
+        y: 945
+        size: 26
+        color: muted
         anchor: middle
+      kind: stroke
     actions:
     - kind: walk
       at:
@@ -1297,8 +1414,8 @@ scenes:
         offset: 1.9
       dur: 1.3
       target:
-      - 1650
-      - 680
+      - 1460
+      - 820
     - kind: react
       at:
         cue: bringing in
@@ -1327,9 +1444,9 @@ scenes:
       value: '{{euv_sales_2025.avg_display}}'
       label: our calculation
       cue: per machine
-    - kicker: Conversion rate
+    - kicker: Exchange rate used
       value: '{{eur_usd.display}}'
-      label: ECB average for 2025
+      label: ECB average rate, 2025
       cue: converted
   sources:
   - asml_q4_2025_deck
@@ -1513,6 +1630,26 @@ scenes:
       lon: 35
       lat: 38
       span: 300
+    - at:
+        cue: not to China
+      lon: 80
+      lat: 38
+      span: 170
+      dur: 2.0
+    - at:
+        cue: older machines
+      lon: 45
+      lat: 38
+      span: 260
+      dur: 2.4
+    drift:
+      lon: 0.15
+      zoom: 0.003
+    tilt:
+    - - 0
+      - 14
+    - - 22
+      - 6
     highlights:
     - iso: NLD
       color: gold
@@ -1649,6 +1786,7 @@ scenes:
         size: 30
         color: gold
         anchor: middle
+      kind: box
     - d: M 1440 360 L 1760 360 L 1760 480 L 1440 480 Z
       color: accent2
       width: 5
@@ -1661,6 +1799,7 @@ scenes:
         size: 30
         color: ink
         anchor: middle
+      kind: box
     - d: M 1440 640 L 1760 640 L 1760 760 L 1440 760 Z
       color: accent2
       width: 5
@@ -1674,6 +1813,7 @@ scenes:
         size: 30
         color: ink
         anchor: middle
+      kind: box
     - d: M 1130 350 L 1130 800 M 1190 350 L 1190 800 M 1130 350 L 1190 350 M 1130 800 L 1190 800
       color: ink
       width: 6
@@ -1686,22 +1826,26 @@ scenes:
         size: 28
         color: ink
         anchor: middle
+      kind: stroke
     - d: M 880 520 Q 1149 437 1430 420 M 1409 432 L 1430 420 L 1408 411
       color: accent3
       width: 6
       start:
         cue: Open it
+      kind: arrow
     - d: M 880 600 Q 996 657 1120 690 M 1096 695 L 1120 690 L 1102 674
       color: risk
       width: 6
       start:
         cue: Close it
+      kind: arrow
     - d: M 1090 650 L 1130 730 M 1130 650 L 1090 730
       color: risk
       width: 8
       start:
         cue: Close it
         offset: 0.6
+      kind: stroke
     - d: M 1600 780 L 1600 780
       color: risk
       width: 1
@@ -1714,6 +1858,7 @@ scenes:
         size: 26
         color: risk
         anchor: middle
+      kind: stroke
     actions:
     - kind: point
       at:
@@ -1758,11 +1903,31 @@ scenes:
       lat: 35
       span: 300
     - at:
+        cue: forty years
+      lon: 20
+      lat: 45
+      span: 150
+      dur: 2.4
+    - at:
         cue: small town
       lon: 5.43
       lat: 51.6
       span: 6
       dur: 2.4
+    - at:
+        cue: drop of tin
+      lon: 5.43
+      lat: 51.5
+      span: 2.5
+      dur: 3.0
+    drift:
+      lon: 0.1
+      zoom: 0.006
+    tilt:
+    - - 0
+      - 16
+    - - 30
+      - 4
     highlights:
     - iso: NLD
       color: gold

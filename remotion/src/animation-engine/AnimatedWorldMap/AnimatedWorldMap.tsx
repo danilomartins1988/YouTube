@@ -35,6 +35,8 @@ export type AnimatedWorldMapProps = Themed & {
   /** perspective tilt in degrees over time: [[t, deg], ...] (CSS 3D on the map plane) */
   tilt?: [number, number][];
   parallax?: boolean;
+  /** slow continuous camera drift layered on the keyframes (per second): {lon, lat, zoom (fraction of span)} */
+  drift?: {lon?: number; lat?: number; zoom?: number};
   opacity?: number;
   caption?: string;
 };
@@ -87,7 +89,10 @@ export const AnimatedWorldMap: React.FC<AnimatedWorldMapProps> = (props) => {
   const {t, geo, width: W = 1920, height: H = 1080, cameras, highlights = [], hubs = [], routes = [], opacity = 1, parallax = true} = props;
   const P = pal(props.palette);
   const rings = useMemo(() => parseLayer('engine-world', geo.paths), [geo]);
-  const cam = cameraAt(cameras, t);
+  const cam0 = cameraAt(cameras, t);
+  const dr = props.drift;
+  const cam = dr ? {lon: cam0.lon + (dr.lon ?? 0) * t * cam0.span / 100, lat: cam0.lat + (dr.lat ?? 0) * t * cam0.span / 100,
+    span: cam0.span * Math.max(0.3, 1 - (dr.zoom ?? 0) * t)} : cam0;
   const [ccx, ccy] = merc(cam.lon, cam.lat);
   const k = W / ((cam.span / 360) * WS);
   const proj = (lon: number, lat: number): Vec => {
@@ -205,7 +210,7 @@ export const AnimatedWorldMap: React.FC<AnimatedWorldMapProps> = (props) => {
       <svg width={W} height={H} style={{position: 'absolute', inset: 0, pointerEvents: 'none'}}>
         <defs><radialGradient id="eng-vig" cx="50%" cy="50%" r="70%"><stop offset="55%" stopColor={P.bg} stopOpacity={0} /><stop offset="100%" stopColor={P.bg} stopOpacity={0.85} /></radialGradient></defs>
         <rect width={W} height={H} fill="url(#eng-vig)" />
-        {props.caption && <text x={60} y={H - 46} fill={P.muted} fontFamily={FONT.body} fontSize={20}>{props.caption}</text>}
+        {props.caption && <text x={60} y={H - 84} fill={P.muted} fontFamily={FONT.body} fontSize={20}>{props.caption}</text>}
       </svg>
     </div>
   );

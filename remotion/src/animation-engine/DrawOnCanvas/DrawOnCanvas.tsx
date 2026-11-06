@@ -27,6 +27,12 @@ export type DrawStroke = {
   fillOpacity?: number;
   dash?: string;           // a dashed style applied once drawn (e.g. '10 8')
   ease?: (u: number) => number;
+  /** after drawing: dashes keep flowing along the stroke (px/s; e.g. light, money, a stream) */
+  flow?: number;
+  /** after drawing: the stroke pulses (glow + width), e.g. a plasma or a hot spot */
+  pulse?: boolean;
+  /** semantic tag for QC (box, arrow, bar, map, text); has no visual effect */
+  kind?: string;
   /** text label written along with the stroke (appears progressively) */
   label?: {text: string; x: number; y: number; size?: number; color?: string; anchor?: 'start' | 'middle' | 'end'};
 };
@@ -115,8 +121,11 @@ export const DrawOnCanvas: React.FC<DrawOnCanvasProps> = ({t, timeline, showPen,
             {s.fill && fillU > 0 && <path d={s.d} fill={col(P, s.fill)} opacity={(s.fillOpacity ?? 0.25) * fillU} stroke="none" />}
             {glow && !done && <path d={s.d} fill="none" stroke={c} strokeWidth={w * 3} strokeOpacity={0.18} strokeLinecap="round"
               strokeDasharray={`${s.len} ${s.len}`} strokeDashoffset={s.len * (1 - u)} />}
-            <path d={s.d} fill="none" stroke={c} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round"
+            <path d={s.d} fill="none" stroke={c} strokeWidth={w * (s.pulse && done ? 1 + 0.35 * Math.abs(Math.sin((t - s.t1) * 6)) : 1)} strokeLinecap="round" strokeLinejoin="round"
               strokeDasharray={done && s.dash ? s.dash : `${s.len} ${s.len}`} strokeDashoffset={done && s.dash ? 0 : s.len * (1 - u)} />
+            {done && s.flow ? <path d={s.d} fill="none" stroke="#FFFFFF" strokeOpacity={0.75} strokeWidth={Math.max(2, w * 0.6)} strokeLinecap="round"
+              strokeDasharray="4 26" strokeDashoffset={-(t - s.t1) * s.flow} /> : null}
+            {done && s.pulse ? <path d={s.d} fill="none" stroke={c} strokeOpacity={0.35 * Math.abs(Math.sin((t - s.t1) * 6))} strokeWidth={w * 4} strokeLinecap="round" /> : null}
             {s.label && (() => {
               const L = s.label!, size = L.size || 30;
               const n = L.text.length, shown = Math.ceil(n * clamp((t - s.t0) / Math.max(0.2, s.t1 - s.t0)));
