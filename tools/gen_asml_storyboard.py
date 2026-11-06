@@ -138,7 +138,8 @@ add("s08_light", "m1_light", "engine_draw", {
     "title": "Making light that nature doesn't", "subtitle": "{{droplets.nm_display}} extreme ultraviolet", "presenter": False, "studio": False,
     "draw_start": C("ASML's answer"), "speed": 1400,
     "strokes": [
-        {"d": "M 420 540 L 900 540", "color": "border", "width": 3, "start": C("molten tin"), "flow": 140},
+        {"d": "M 420 260 L 1500 260", "color": "accent2", "width": 3, "start": C("ASML's answer"), "flow": 180, "label": lbl("WAVELENGTH {{droplets.nm_display}}", 960, 240, 30, "accent2")},
+        {"d": "M 420 540 L 900 540", "color": "border", "width": 3, "start": C("makes its own"), "flow": 140},
         {"d": drops, "color": "muted", "width": 4, "start": C("tiny drops"), "label": lbl("MOLTEN TIN · {{droplets.display}}", 420, 490, 28, "muted", "start")},
         {"d": "M 920 900 L 920 560", "color": "accent2", "width": 6, "flow": 260, "start": C("A laser flattens"), "label": lbl("LASER PRE-PULSE", 895, 880, 26, "accent2", "end")},
         {"d": ellipse(920, 540, 26, 9), "color": "ink", "width": 4, "start": C("each drop")},
@@ -148,21 +149,21 @@ add("s08_light", "m1_light", "engine_draw", {
         {"d": "M 760 330 Q 640 540 760 750", "color": "teal", "width": 8, "start": C("special mirror"), "label": lbl("COLLECTOR MIRROR", 640, 800, 26, "teal")},
         {"d": "M 930 520 L 1560 430 M 930 560 L 1560 650 M 1560 430 L 1700 540 L 1560 650", "color": "gold", "width": 4, "flow": 220, "start": C("sends it"), "label": lbl("INTO THE MACHINE →", 1640, 400, 26, "gold")},
         {"d": "M 420 960 L 1700 960", "color": "border", "width": 3, "start": C("again and again"), "label": lbl("REPEATED NONSTOP, FOR HOURS", 1060, 1010, 26, "muted")},
-    ]}, sources=["asml_hot", "ieee_euv", "bits_1000w"])
+    ]}, sources=["asml_hot", "asml_ar_2025"])
 # ---- pen drawing: mirrors in a vacuum
 add("s09_mirrors", "m1_mirrors", "engine_draw", {
     "title": "Mirrors, in a vacuum", "presenter": False, "studio": False, "draw_start": C("absorbed"), "speed": 1600,
     "strokes": [
-        {"d": rect(260, 300, 1400, 620), "color": "border", "width": 4, "dash": "14 10", "start": C("even air"), "label": lbl("VACUUM CHAMBER", 300, 345, 26, "muted", "start")},
+        {"d": rect(260, 300, 1400, 620), "color": "border", "width": 4, "dash": "14 10", "flow": 120, "start": C("absorbed"), "label": lbl("VACUUM CHAMBER", 300, 345, 26, "muted", "start")},
         {"d": "M 470 800 Q 520 770 570 800 M 770 410 Q 820 440 870 410 M 1070 800 Q 1120 770 1170 800 M 1370 410 Q 1420 440 1470 410", "color": "teal", "width": 7, "pulse": True, "start": C("ultra smooth"), "label": lbl("MIRRORS", 820, 380, 26, "teal")},
         {"d": "M 300 600 L 520 790 L 820 420 L 1120 790 L 1420 420 L 1560 760", "color": "gold", "width": 5, "flow": 300, "start": C("bounces off", 0.3)},
         {"d": ellipse(1580, 800, 110, 26), "color": "ink", "width": 5, "fill": "accent2", "fillOpacity": 0.2, "start": C("reaches the wafer"), "label": lbl("WAFER", 1580, 870, 26)},
     ]}, sources=["asml_euv", "ieee_euv"])
 add("s10_size", "m1_discovery", "compare", {"chapter": "Mission 1 · The discovery", "title": "One machine", "sides": [
-    {"kicker": "Weight", "value": "{{machine_size.display}}", "label": "about the size of a bus", "cue": "weighing"},
-    {"kicker": "Parts", "value": "{{machine_size.parts_display}}", "label": "in one machine", "cue": "parts"},
+    {"kicker": "Size", "value": "School bus", "label": "one machine", "cue": "school bus"},
+    {"kicker": "Weight", "value": "{{machine_size.display}}", "label": "per machine", "cue": "weighing"},
     {"kicker": "To deliver one", "value": "{{machine_size.containers_display}}", "label": "containers + cargo planes", "cue": "shipping containers"}]},
-    sources=["reuters_explainer", "intel_euv"])
+    sources=["reuters_explainer"])
 kinetic("s11_m1t", "m1_transition", [("Why can only one company", 60, "So why", None, True), ("build it?", 80, "build it", "accent", False), ("Mission 2 →", 44, "mission two", "muted", False)])
 
 # ====================================================================== MISSION 2
@@ -202,17 +203,17 @@ add("s17_pieces", "m2_pieces", "timeline_network", {
     "start_year": 1980, "end_year": 2025, "tick_every": 5, "axis_cue": "missing pieces",
     "items": [
         {"year": "{{founded_1984.value}}", "label": "ASML founded", "place": "ASML · Veldhoven", "role": "design + assembly", "lon": LL["veldhoven"][0], "lat": LL["veldhoven"][1], "colour": "accent", "cue": "missing pieces", "label_dx": -18},
-        {"year": 2012, "label": "Agrees to buy Cymer", "place": "Cymer · San Diego", "role": "light source", "lon": LL["sandiego"][0], "lat": LL["sandiego"][1], "colour": "accent2", "cue": "Cymer"},
+        {"year": 2012, "label": "Moves to buy Cymer", "place": "Cymer · San Diego", "role": "light source", "lon": LL["sandiego"][0], "lat": LL["sandiego"][1], "colour": "accent2", "cue": "Cymer"},
         {"year": 2016, "label": "24.9% of Zeiss SMT", "place": "Zeiss · Oberkochen", "role": "mirrors", "lon": LL["oberkochen"][0], "lat": LL["oberkochen"][1], "colour": "accent3", "cue": "Carl Zeiss", "label_dx": 18, "label_dy": 40},
         {"year": "{{euv_2020.value}}", "label": "EUV in high-volume production", "place": "", "role": "", "lon": LL["veldhoven"][0], "lat": LL["veldhoven"][1], "colour": "accent", "cue": "high volume"},
     ],
     "links": [[1, 0], [2, 0]], "morph_cue": "production", "view": {"lon": -55, "lat": 45, "span": 160},
     "highlight": {"NLD": "accent", "USA": "accent2", "DEU": "accent3"}, "network_title": "One machine, three companies"},
-    sources=["cymer_2012", "asml_ar_2025", "asml_history", "natural_earth"], assets=GEO)
-add("s18_share", "m2_discovery", "engine_chart", {"chart": "donut", "title": "Who makes lithography machines?", "subtitle": "Analyst estimate (Reuters) · for EUV, ASML is the only maker",
-    "data": [{"label": "ASML", "value": 90}, {"label": "Everyone else", "value": 10}], "cx": 960, "cy": 600, "r": 230, "thick": 80,
-    "start": C("analysts estimate"), "sweep": 1.6, "center": "{{market_90.display}}", "centerSub": "ASML (estimate)"},
-    sources=["reuters_explainer"])
+    sources=["cymer_2012", "zeiss_2016", "asml_history", "natural_earth"], assets=GEO)
+add("s18_share", "m2_discovery", "compare", {"chapter": "Mission 2 · The discovery", "title": "Alone at the top", "sides": [
+    {"kicker": "Makers of EUV machines", "value": "1", "label": "ASML, in the whole world", "cue": "the only company"},
+    {"kicker": "Market value", "value": "{{market_90.display}}", "label": "Europe's most valuable company (Reuters)", "cue": "most valuable"}]},
+    sources=["reuters_explainer", "asml_euv"])
 kinetic("s19_m2t", "m2_transition", [("Never built by one company", 56, "never built", None, True), ("Who else is inside it?", 76, "Who else", "accent", False), ("Mission 3 →", 44, "Mission three", "muted", False)])
 
 # ====================================================================== MISSION 3
@@ -241,7 +242,7 @@ add("s23_suppliers", "m3_map", "engine_map", {
         {"from": LL["wetzlar"], "to": LL["veldhoven"], "at": C("Wetzlar", 0.4), "dur": 0.8, "color": "teal", "tokenShape": "box", "tokens": 5, "tokenEvery": 0.35, "lift": 0.3},
         {"from": LL["sandiego"], "to": LL["veldhoven"], "at": C("San Diego", 0.6), "dur": 1.4, "color": "accent2", "tokenShape": "box", "tokens": 6, "tokenEvery": 0.35, "lift": 0.25}],
     "caption": "Real locations (Natural Earth) · routes are schematic"},
-    sources=["asml_ar_2025", "zeiss_capacity", "cymer_2012", "natural_earth"], assets=GEO)
+    sources=["asml_ar_2025", "cymer_2012", "natural_earth"], assets=GEO)
 add("s24_ship", "m3_shipping", "engine_flow", {
     "title": "Built twice", "subtitle": "assembled and tested in the Netherlands, rebuilt at the customer", "cardW": 280, "cardH": 230,
     "stages": [
@@ -252,8 +253,8 @@ add("s24_ship", "m3_shipping", "engine_flow", {
         {"id": "r", "label": "Rebuild", "sub": "customer's fab", "x": 1690, "y": 560, "kind": "fab", "color": "gold", "appear": 0.9, "output": "wafer"}],
     "links": [{"from": "b", "to": "t", "appear": 1.0}, {"from": "t", "to": "p", "appear": 1.1}, {"from": "p", "to": "f", "appear": 1.2}, {"from": "f", "to": "r", "appear": 1.3}],
     "items": {"starts": [C("built and tested")], "route": ["b", "t", "p", "f", "r"], "travel": 0.7, "process": 1.2},
-    "money": [{"from": "r", "to": "b", "starts": [C("paying"), C("paying", 0.3), C("paying", 0.6)], "travel": 1.2, "label": "FULL PAYMENT", "lift": 0.18}]},
-    sources=["reuters_explainer", "intel_euv"])
+    "money": [{"from": "r", "to": "b", "starts": [C("paying"), C("paying", 0.3), C("paying", 0.6)], "travel": 1.2, "label": "PAYMENT", "lift": 0.18}]},
+    sources=["reuters_explainer"])
 kinetic("s25_m3t", "m3_transition", [("Where does all the money go?", 60, "So where", None, True), ("Mission 4 →", 44, "Mission four", "muted", False)])
 
 # ====================================================================== MISSION 4
@@ -284,9 +285,9 @@ add("s29_avg", "m4_average", "compare", {"chapter": "Mission 4 · Per machine", 
     {"kicker": "Exchange rate used", "value": "{{eur_usd.display}}", "label": "ECB average rate, 2025", "cue": "converted"}]},
     sources=["asml_q4_2025_deck", "ecb_2025_avg"])
 add("s30_regions", "m4_customers", "engine_chart", {"chart": "bar", "data": "{{regions.value}}", "box": {"x": 300, "y": 330, "w": 1320, "h": 500},
-    "start": C("who buys"), "stagger": 0.25, "title": "Who buys ASML's machines", "note": "Share of 2025 net system sales",
+    "start": C("who buys"), "stagger": 0.25, "title": "Who buys from ASML", "note": "Share of 2025 sales, by customer location",
     "valueSuffix": "%", "highlight": 0, "highlightAt": C("China took"), "color": "accent2", "highlightColor": "risk"},
-    sources=["regions_2025"])
+    sources=["asml_ar_2025"])
 add("s31_loop", "m4_flywheel", "engine_flow", {
     "title": "The money loop", "subtitle": "order backlog at the end of 2025: {{backlog.display}}", "cardW": 290, "cardH": 220,
     "stages": [
@@ -320,7 +321,7 @@ add("s35_export", "m5_map", "engine_map", {
                {"from": LL["veldhoven"], "to": LL["hillsboro"], "at": C("United States"), "dur": 1.0, "color": "accent2", "tokenShape": "box", "lift": 0.25},
                {"from": LL["veldhoven"], "to": LL["shanghai"], "at": C("not to China"), "dur": 1.2, "blocked": True, "lift": 0.26}],
     "caption": "Real locations (Natural Earth) · routes are schematic"},
-    sources=["cnbc_export", "ioplus_2024", "natural_earth"], assets=GEO, sfx=[{"kind": "hit", "cue": "not to China", "gain": 0.3}])
+    sources=["reuters_2019_licence", "cnbc_export", "ioplus_2024", "dutch_2024", "natural_earth"], assets=GEO, sfx=[{"kind": "hit", "cue": "not to China", "gain": 0.3}])
 # ---- PRESENTER D: draws the gate
 add("p36_gate", "m5_gate", "engine_draw", {
     "title": "An export license is a gate", "board": BOARD, "draw_start": C("On one side"), "speed": 1300,
@@ -338,9 +339,9 @@ add("p36_gate", "m5_gate", "engine_draw", {
     "actions": [{"kind": "point", "at": C("Close it", 1.0), "dur": 1.2, "target": [1110, 690]}],
     "scale": 0.86, "floor": 1040})
 add("s37_cost", "m5_cost", "compare", {"chapter": "Mission 5 · The price of the gate", "title": "The gate cuts both ways", "sides": [
-    {"kicker": "China, share of ASML sales", "value": "{{regions.display}} → {{china_2026.display}}", "label": "2025 → 2026 (CFO expectation)", "cue": "chief financial officer"},
-    {"kicker": "Next generation (High-NA)", "value": "{{highna_price.display}}", "label": "first one went to Intel, Dec 2023", "cue": "next"}]},
-    sources=["regions_2025", "caixin_china", "highna_reuters"])
+    {"kicker": "China, share of ASML sales", "value": "{{regions.display}} → {{china_2026.display}}", "label": "2025 → 2026 (company expectation)", "cue": "chief financial officer"},
+    {"kicker": "Next generation (High-NA)", "value": "{{highna_price.display}}", "label": "estimate · first one shipped to Intel, Dec 2023", "cue": "next"}]},
+    sources=["asml_ar_2025", "caixin_china", "highna_2023"])
 
 # ====================================================================== PAYOFF
 add("s38_payoff", "payoff", "engine_map", {

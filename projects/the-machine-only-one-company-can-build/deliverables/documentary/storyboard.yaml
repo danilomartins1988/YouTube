@@ -327,11 +327,25 @@ scenes:
       cue: ASML's answer
     speed: 1400
     strokes:
+    - d: M 420 260 L 1500 260
+      color: accent2
+      width: 3
+      start:
+        cue: ASML's answer
+      flow: 180
+      label:
+        text: WAVELENGTH {{droplets.nm_display}}
+        x: 960
+        y: 240
+        size: 30
+        color: accent2
+        anchor: middle
+      kind: stroke
     - d: M 420 540 L 900 540
       color: border
       width: 3
       start:
-        cue: molten tin
+        cue: makes its own
       flow: 140
       kind: stroke
     - d: M 413 540 A 7 7 0 1 0 427 540 A 7 7 0 1 0 413 540 M 465 540 A 7 7 0 1 0 479 540 A 7 7 0 1 0 465 540 M 517 540 A 7 7 0 1 0 531 540 A 7 7 0 1 0 517 540 M 569 540 A 7 7 0 1 0 583 540 A 7 7 0 1 0 569
@@ -439,8 +453,7 @@ scenes:
       kind: stroke
   sources:
   - asml_hot
-  - ieee_euv
-  - bits_1000w
+  - asml_ar_2025
   assets:
   - font:inter
 - id: s09_mirrors
@@ -458,8 +471,9 @@ scenes:
       color: border
       width: 4
       dash: 14 10
+      flow: 120
       start:
-        cue: even air
+        cue: absorbed
       label:
         text: VACUUM CHAMBER
         x: 300
@@ -517,21 +531,20 @@ scenes:
     chapter: Mission 1 · The discovery
     title: One machine
     sides:
+    - kicker: Size
+      value: School bus
+      label: one machine
+      cue: school bus
     - kicker: Weight
       value: '{{machine_size.display}}'
-      label: about the size of a bus
+      label: per machine
       cue: weighing
-    - kicker: Parts
-      value: '{{machine_size.parts_display}}'
-      label: in one machine
-      cue: parts
     - kicker: To deliver one
       value: '{{machine_size.containers_display}}'
       label: containers + cargo planes
       cue: shipping containers
   sources:
   - reuters_explainer
-  - intel_euv
   assets:
   - font:inter
 - id: s11_m1t
@@ -816,7 +829,7 @@ scenes:
       cue: missing pieces
       label_dx: -18
     - year: 2012
-      label: Agrees to buy Cymer
+      label: Moves to buy Cymer
       place: Cymer · San Diego
       role: light source
       lon: -117.16
@@ -858,7 +871,7 @@ scenes:
     network_title: One machine, three companies
   sources:
   - cymer_2012
-  - asml_ar_2025
+  - zeiss_2016
   - asml_history
   - natural_earth
   assets:
@@ -866,27 +879,22 @@ scenes:
   - font:inter
 - id: s18_share
   segment: m2_discovery
-  type: engine_chart
+  type: compare
   params:
-    chart: donut
-    title: Who makes lithography machines?
-    subtitle: Analyst estimate (Reuters) · for EUV, ASML is the only maker
-    data:
-    - label: ASML
-      value: 90
-    - label: Everyone else
-      value: 10
-    cx: 960
-    cy: 600
-    r: 230
-    thick: 80
-    start:
-      cue: analysts estimate
-    sweep: 1.6
-    center: '{{market_90.display}}'
-    centerSub: ASML (estimate)
+    chapter: Mission 2 · The discovery
+    title: Alone at the top
+    sides:
+    - kicker: Makers of EUV machines
+      value: '1'
+      label: ASML, in the whole world
+      cue: the only company
+    - kicker: Market value
+      value: '{{market_90.display}}'
+      label: Europe's most valuable company (Reuters)
+      cue: most valuable
   sources:
   - reuters_explainer
+  - asml_euv
   assets:
   - font:inter
 - id: s19_m2t
@@ -1118,7 +1126,6 @@ scenes:
     caption: Real locations (Natural Earth) · routes are schematic
   sources:
   - asml_ar_2025
-  - zeiss_capacity
   - cymer_2012
   - natural_earth
   assets:
@@ -1212,11 +1219,10 @@ scenes:
       - cue: paying
         offset: 0.6
       travel: 1.2
-      label: FULL PAYMENT
+      label: PAYMENT
       lift: 0.18
   sources:
   - reuters_explainer
-  - intel_euv
   assets:
   - font:inter
 - id: s25_m3t
@@ -1467,8 +1473,8 @@ scenes:
     start:
       cue: who buys
     stagger: 0.25
-    title: Who buys ASML's machines
-    note: Share of 2025 net system sales
+    title: Who buys from ASML
+    note: Share of 2025 sales, by customer location
     valueSuffix: '%'
     highlight: 0
     highlightAt:
@@ -1476,7 +1482,7 @@ scenes:
     color: accent2
     highlightColor: risk
   sources:
-  - regions_2025
+  - asml_ar_2025
   assets:
   - font:inter
 - id: s31_loop
@@ -1751,8 +1757,10 @@ scenes:
     cue: not to China
     gain: 0.3
   sources:
+  - reuters_2019_licence
   - cnbc_export
   - ioplus_2024
+  - dutch_2024
   - natural_earth
   assets:
   - geo:remotion_world
@@ -1881,16 +1889,16 @@ scenes:
     sides:
     - kicker: China, share of ASML sales
       value: '{{regions.display}} → {{china_2026.display}}'
-      label: 2025 → 2026 (CFO expectation)
+      label: 2025 → 2026 (company expectation)
       cue: chief financial officer
     - kicker: Next generation (High-NA)
       value: '{{highna_price.display}}'
-      label: first one went to Intel, Dec 2023
+      label: estimate · first one shipped to Intel, Dec 2023
       cue: next
   sources:
-  - regions_2025
+  - asml_ar_2025
   - caixin_china
-  - highna_reuters
+  - highna_2023
   assets:
   - font:inter
 - id: s38_payoff

@@ -88,6 +88,8 @@ sources:
     published: "2012-08"
     accessed: "2026-11-06"
     credit: "ASML 6-K 2012"
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: samsung_ccip
     title: Samsung joins ASML's Customer Co-Investment Program for Innovation, completing the program
     publisher: ASML
@@ -102,6 +104,8 @@ sources:
     published: "2012-10-17"
     accessed: "2026-11-06"
     credit: "AP"
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: zeiss_capacity
     title: Zeiss expands German site that caps ASML's EUV scanner output (Oberkochen and Wetzlar optics)
     publisher: Tom's Hardware
@@ -143,6 +147,34 @@ sources:
     published: "2026-01"
     accessed: "2026-11-06"
     credit: "ECB rates via Bank of Finland"
+  - id: reuters_2019_licence
+    title: "U.S. government pressured Dutch officials against giving Chinese access to 7nm EUV technology (EUV licence expired June 2019, not renewed)"
+    publisher: Tom's Hardware (reporting Reuters, 6 January 2020)
+    url: https://www.tomshardware.com/news/us-government-stops-chinese-from-7nm-tech
+    published: "2020-01"
+    accessed: "2026-11-06"
+    credit: "Reuters via Tom's Hardware"
+  - id: dutch_2024
+    title: Netherlands expands export controls to ASML NXT:1970i and 1980i DUV systems from 7 September 2024
+    publisher: The Register
+    url: https://www.theregister.com/2024/09/06/dutch_asml_export_controls/
+    published: "2024-09-06"
+    accessed: "2026-11-06"
+    credit: "The Register"
+  - id: highna_2023
+    title: "ASML to ship first High-NA EUV tool this year: $300 million per scanner"
+    publisher: Tom's Hardware
+    url: https://tomshardware.com/news/asml-to-ship-first-high-na-euv-tool-this-year-dollar300-million-per-scanner
+    published: "2023"
+    accessed: "2026-11-06"
+    credit: "Tom's Hardware"
+  - id: zeiss_2016
+    title: ZEISS and ASML strengthen partnership for next generation of EUV lithography (ASML to acquire 24.9% of Carl Zeiss SMT)
+    publisher: ASML (joint press release, 3 November 2016)
+    url: https://www.asml.com/news/press-releases/2016/zeiss-and-asml-strengthen-partnership-for-next-generation-of-euv-lithography
+    published: "2016-11-03"
+    accessed: "2026-11-06"
+    credit: "ASML / ZEISS"
   - id: natural_earth
     title: "Natural Earth 1:50m Admin 0 Countries"
     publisher: Natural Earth (public domain)
@@ -157,6 +189,8 @@ claims:
     display: "1 maker"
     source_ids: [asml_euv, reuters_explainer]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: euv_price
     text: Reuters describes ASML's EUV lithography machines as costing about $250 million each (January 2026).
     spoken: about 250 million dollars
@@ -164,21 +198,26 @@ claims:
     value: 250
     source_ids: [reuters_explainer]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: highna_price
-    text: ASML's CEO said the next-generation High-NA EUV machine would cost more than $300 million; the first was shipped to Intel in December 2023.
-    spoken: more than 300 million dollars
-    display: "$300m+"
+    text: High-NA EUV scanners are estimated to cost about $300-400 million each; ASML began shipping the first one to Intel in December 2023.
+    spoken: 300 to 400 million dollars
+    display: "$300-400m (est.)"
     value: 300
-    source_ids: [highna_reuters]
+    source_ids: [highna_2023, highna_reuters]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: machine_size
-    text: "Reuters: the machines are the size of a school bus and weigh about 150 tons; shipping one takes about 40 containers on 747 cargo planes. Intel: about 40 freight containers, 3 cargo planes and 20 trucks; about 100,000 parts."
-    spoken: about 150 tons
-    display: "≈ 150 t"
+    text: "Reuters (Jan 2026): the machines are the size of a school bus and weigh 150 tons; they are assembled in the Netherlands, packed into around 40 containers and taken on 747 cargo planes."
+    spoken: 150 tons
+    display: "150 t"
     value: 150
-    fields: {containers_spoken: about 40, containers_display: "≈ 40", parts_spoken: "100,000", parts_display: "100,000+", planes_display: "3 cargo planes", trucks_display: "20 trucks"}
-    source_ids: [reuters_explainer, intel_euv]
+    fields: {containers_spoken: around 40, containers_display: "≈ 40"}
+    source_ids: [reuters_explainer]
     status: source_located
+    verification_note: Read in the source on 2026-11-06 (AI fact-check, not a named human). The 100,000-parts figure was dropped (no primary source confirmed).
     verification_note: Weight estimates vary between sources (150-200 t); the film says "about 150 tons" with Reuters as source.
   - id: founded_1984
     text: ASML was founded in 1984 as a joint venture of Philips and ASM International, and has been based in Veldhoven, the Netherlands.
@@ -188,6 +227,8 @@ claims:
     fields: {mid_spoken: in 1984}
     source_ids: [asml_history]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: ipo_1995
     text: In 1995 ASML became a fully independent public company, listed on the Amsterdam and New York stock exchanges.
     spoken: In 1995
@@ -196,6 +237,8 @@ claims:
     fields: {mid_spoken: in 1995}
     source_ids: [asml_history]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: ccip_2012
     text: In 2012 Intel, TSMC and Samsung bought minority stakes totalling 23% of ASML and committed €1.38 billion of R&D funding for EUV and 450mm lithography.
     spoken: 23 percent
@@ -204,19 +247,19 @@ claims:
     source_ids: [ccip_2012, samsung_ccip]
     status: source_located
   - id: cymer_2012
-    text: In October 2012 ASML agreed to buy Cymer, the San Diego maker of lithography light sources, for about $2.5 billion in cash and shares, to accelerate EUV.
-    spoken: about 2.5 billion dollars
-    display: "≈ $2.5bn"
-    value: 2.5
+    text: In October 2012 ASML offered to buy Cymer, the US maker of lithography light sources, for around $2.55 billion in cash and shares (AP).
+    spoken: about 2.55 billion dollars
+    display: "≈ $2.55bn"
+    value: 2.55
     source_ids: [cymer_2012]
     status: source_located
   - id: zeiss
-    text: Carl Zeiss SMT is ASML's sole supplier of lenses, mirrors and other critical optics; ASML owns a 24.9% stake (2016) and bought €4.41bn from Zeiss in 2025 (about $5.0bn at 1.13).
+    text: "Carl Zeiss SMT is ASML's sole supplier of lenses, mirrors, illuminators, collectors and other critical optics (exclusive arrangement); ASML holds a 24.9% interest (agreed November 2016); total purchases from Zeiss SMT were €4,406.9m in 2025 (about $5.0bn at 1.13)."
     spoken: almost 25 percent
     display: "24.9%"
     value: 24.9
     fields: {buy_spoken: about 5 billion dollars, buy_display: "$5.0bn", buy_eur: "€4.41bn"}
-    source_ids: [asml_ar_2025, zeiss_capacity]
+    source_ids: [asml_ar_2025, zeiss_2016]
     status: source_located
   - id: euv_2020
     text: At the beginning of 2020 EUV moved into high-volume manufacturing and ASML shipped its 100th EUV system.
@@ -226,26 +269,34 @@ claims:
     fields: {mid_spoken: in 2020}
     source_ids: [asml_history]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: droplets
-    text: "Current EUV sources hit about 50,000 molten tin droplets per second with laser pulses, creating a plasma that emits 13.5 nm EUV light; ASML has demonstrated 100,000 per second in a 1,000 W prototype."
+    text: "ASML: molten tin droplets are flattened by a low-intensity laser pulse, then vaporised by a more powerful pulse (hotter than the surface of the sun) into a plasma that emits 13.5 nm light; the process repeats up to 50,000 times per second."
     spoken: "50,000"
     display: "50,000 / s"
     value: 50000
     fields: {nm_spoken: 13.5 nanometers, nm_display: "13.5 nm"}
     source_ids: [asml_hot, ieee_euv, bits_1000w]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: zeiss_sites
     text: Zeiss's Oberkochen and Wetzlar sites are the only places where the optical columns for ASML's EUV machines are built, which caps how many scanners ASML can produce; Zeiss is expanding Oberkochen.
     spoken: Oberkochen
     display: "Oberkochen + Wetzlar"
-    source_ids: [zeiss_capacity, asml_ar_2025]
+    source_ids: [asml_ar_2025]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: highna_intel
-    text: ASML shipped the first High-NA EUV system to Intel in December 2023; Intel had ordered the pilot EXE:5000 in 2018.
+    text: ASML began shipping the first High-NA EUV system to Intel in December 2023 (pilot EXE:5000).
     spoken: Intel
     display: "Intel, Dec 2023"
     source_ids: [highna_reuters]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: suppliers
     text: ASML had about 5,100 suppliers and more than 44,000 employees (FTE) in 2025.
     spoken: "5,100"
@@ -254,6 +305,8 @@ claims:
     fields: {staff_spoken: "44,000", staff_display: "44,000+"}
     source_ids: [asml_ar_2025]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: sales_2025
     text: ASML's 2025 total net sales were €32.7 billion (about $37.0bn at 1.13), up from €28.3 billion in 2024 (+16%); net income €9.6bn (about $10.8bn).
     spoken: about 37 billion dollars
@@ -262,6 +315,8 @@ claims:
     fields: {eur_display: "€32.7bn", growth_spoken: 16 percent, growth_display: "+16%", ni_spoken: almost 11 billion dollars, ni_display: "$10.8bn"}
     source_ids: [asml_q4_2025, asml_q4_2024, ecb_2025_avg]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: euv_sales_2025
     text: In 2025 ASML recognised revenue on 48 EUV systems; EUV system sales were €11.6 billion (about $13.1bn at 1.13).
     spoken: "48"
@@ -270,6 +325,8 @@ claims:
     fields: {usd_spoken: about 13 billion dollars, usd_display: "$13.1bn", eur_display: "€11.6bn", avg_spoken: roughly 270 million dollars, avg_display: "≈ $273m"}
     source_ids: [asml_q4_2025_deck, ecb_2025_avg]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: backlog
     text: ASML's order backlog at the end of 2025 was €38.8 billion (about $43.8bn at 1.13).
     spoken: almost 44 billion dollars
@@ -277,6 +334,8 @@ claims:
     value: 43.8
     source_ids: [asml_q4_2025, ecb_2025_avg]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: rd_2025
     text: ASML spent €4.7 billion on R&D in 2025 (about $5.3bn at 1.13).
     spoken: about 5.3 billion dollars
@@ -284,46 +343,56 @@ claims:
     value: 5.3
     source_ids: [asml_ar_2025, ecb_2025_avg]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: regions
-    text: "ASML 2025 net system sales by region: China 33% (41% in 2024), South Korea 25%, Taiwan 22%, US 12%, Japan 5%, EMEA 1%."
-    spoken: 33 percent
-    display: "33%"
+    text: "ASML 2025 total net sales by customer location (20-F): China €9,519.7m (29.1%), Taiwan €8,337.9m (25.5%), South Korea €8,159.6m (25.0%), United States €4,089.1m (12.5%), Japan €1,420.9m (4.3%) of €32,667.3m; China was 36.1% in 2024."
+    spoken: 29 percent
+    display: "29.1%"
     value:
-      - {code: CHN, name: China, value: 33}
-      - {code: KOR, name: South Korea, value: 25}
-      - {code: TWN, name: Taiwan, value: 22}
-      - {code: USA, name: United States, value: 12}
-      - {code: JPN, name: Japan, value: 5}
-    fields: {china24_spoken: 41 percent, china24_display: "41%"}
-    source_ids: [regions_2025]
+      - {code: CHN, name: China, value: 29.1}
+      - {code: TWN, name: Taiwan, value: 25.5}
+      - {code: KOR, name: South Korea, value: 25.0}
+      - {code: USA, name: United States, value: 12.5}
+      - {code: JPN, name: Japan, value: 4.3}
+    fields: {china24_spoken: 36 percent, china24_display: "36.1%"}
+    source_ids: [asml_ar_2025]
     status: source_located
-    verification_note: Share of net SYSTEM sales (not total sales); secondary source summarising ASML's reporting.
+    verification_note: Read in ASML's 2025 20-F (geographic table and risk factor 'Customers in China represented 29.1%'). Replaces a secondary system-sales split.
   - id: china_2026
-    text: ASML's CFO expects China to fall to about 20% of 2026 sales.
+    text: ASML expects revenue from China to fall to about 20% of total sales in 2026 (Caixin, January 2026).
     spoken: about 20 percent
     display: "≈ 20%"
     value: 20
     source_ids: [caixin_china]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: export_euv
-    text: ASML has been barred from exporting EUV machines to China since 2019 and has never shipped one there.
+    text: ASML's export licence for an EUV machine for a Chinese customer expired unused in June 2019 and was not renewed; ASML has never shipped an EUV machine to China (CNBC, January 2024).
     spoken: since 2019
     display: "since 2019"
-    source_ids: [cnbc_export]
+    source_ids: [reuters_2019_licence, cnbc_export]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: export_duv
     text: Dutch export controls on the most advanced DUV machines took effect in September 2023 and were extended to two more DUV immersion systems from 7 September 2024.
     spoken: In 2023
     display: "2023-2024"
-    source_ids: [cnbc_export, ioplus_2024]
+    source_ids: [ioplus_2024, dutch_2024]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: market_90
-    text: Analysts estimate ASML controls about 90% of the market for lithography systems, and it has become Europe's most valuable company (Reuters, January 2026).
-    spoken: about 90 percent
-    display: "≈ 90%"
-    value: 90
+    text: ASML holds a monopoly on EUV machines and has become Europe's most valuable company (Reuters, January 2026).
+    spoken: Europe's most valuable company
+    display: "Europe's #1"
+    value: 1
     source_ids: [reuters_explainer]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
+
   - id: eur_usd
     text: The ECB 2025 average reference rate was 1.1300 US dollars per euro.
     spoken: "1.13"
@@ -331,3 +400,4 @@ claims:
     value: 1.13
     source_ids: [ecb_2025_avg]
     status: source_located
+    verification_note: Read in the cited source(s) on 2026-11-06 (AI fact-check; still needs a named human reviewer).
