@@ -256,7 +256,7 @@ scenes:
     number: ''
     title: How the Internet Crosses the Ocean
     subtitle: Follow the light
-    min_seconds: 3.0
+    min_seconds: 4.2
   sfx:
   - kind: hit
     at: 0.1
@@ -681,7 +681,7 @@ scenes:
       color: white
     - text: glass + plastic + steel wire
       x: 1700
-      y: 680
+      y: 630
       at:
         cue: thin glass
       until:
@@ -734,7 +734,7 @@ scenes:
     number: ''
     title: Who Owns the Cables
     subtitle: From phone clubs to tech giants
-    min_seconds: 3.0
+    min_seconds: 4.2
   sfx:
   - kind: hit
     at: 0.1
@@ -1206,7 +1206,7 @@ scenes:
     number: ''
     title: Who Builds and Fixes Them
     subtitle: A few factories, a small fleet
-    min_seconds: 3.0
+    min_seconds: 4.2
   sfx:
   - kind: hit
     at: 0.1
@@ -1575,7 +1575,7 @@ scenes:
     number: ''
     title: When a Cable Breaks
     subtitle: Anchors, nets and a volcano
-    min_seconds: 3.0
+    min_seconds: 4.2
   sfx:
   - kind: hit
     at: 0.1
@@ -2115,7 +2115,7 @@ scenes:
     number: ''
     title: The Fight over the Seabed
     subtitle: Who builds it, who lands it
-    min_seconds: 3.0
+    min_seconds: 4.2
   sfx:
   - kind: hit
     at: 0.1
@@ -2653,12 +2653,13 @@ scenes:
         cue: Every time
       color: risk
     - text: Your message, as light
-      x: 4850
-      y: 110
+      x: 960
+      y: 230
       at:
         cue: as pulses
       color: green
-      size: 40
+      size: 44
+      screen: true
   sources:
   - itu_2025
   - tg_faq

@@ -49,7 +49,7 @@ def add(id_, segment, type_, params, sources=(), assets=INTER, sfx=None, stamp=N
 
 
 def card(id_, seg, number, title, sub):
-    add(id_, seg, "act_title", {"number": "", "title": title, "subtitle": sub, "min_seconds": 3.0}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
+    add(id_, seg, "act_title", {"number": "", "title": title, "subtitle": sub, "min_seconds": 4.2}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
 
 
 def question(id_, seg, chapter, q, why, q_cue, why_cue):

@@ -47,7 +47,7 @@ CART = [
         "cables": [{"lightAt": 0.0, "color": "#2B3A5C"}],
         "actors": [{"kind": "fishing", "x": [[0, 900], [20, 600]], "scale": 0.8, "flip": True}, {"kind": "cargo", "x": [[0, 160], [20, 260]], "scale": 0.6, "anchorAt": C("anchors are")}],
         "callouts": [{"text": "≈ a garden hose", "sub": "for most of the journey", "x": 1700, "y": 760, "at": C("as wide as"), "until": C("Near the shore", -0.5), "tail": [1700, 910], "color": "white"},
-                     {"text": "glass + plastic + steel wire", "x": 1700, "y": 680, "at": C("thin glass"), "until": C("Near the shore", -0.5), "color": "white", "size": 26},
+                     {"text": "glass + plastic + steel wire", "x": 1700, "y": 630, "at": C("thin glass"), "until": C("Near the shore", -0.5), "color": "white", "size": 26},
                      {"text": "Extra armor", "sub": "near the shore: fishing boats and anchors", "x": 760, "y": 470, "at": C("extra armor"), "tail": [640, 560], "color": "gold"},
                      {"text": "Built to last {{design_life.display}}+", "x": 1300, "y": 220, "at": C("built to last"), "color": "green", "screen": True, "size": 44}]},
         sources=["tg_faq"]),
@@ -140,7 +140,7 @@ CART = [
                      {"text": "Paid for by tech giants", "x": 1900, "y": 330, "at": C("paid for"), "until": C("repaired by", 0.4), "color": "gold"},
                      {"text": "Fixed by a small fleet", "x": 2900, "y": 200, "at": C("repaired by", 0.8), "until": C("Every time"), "color": "green"},
                      {"text": "Argued over by governments", "x": 2900, "y": 300, "at": C("argued over"), "until": C("Every time"), "color": "risk"},
-                     {"text": "Your message, as light", "x": 4850, "y": 110, "at": C("as pulses"), "color": "green", "size": 40}]},
+                     {"text": "Your message, as light", "x": 960, "y": 230, "at": C("as pulses"), "color": "green", "size": 44, "screen": True}]},
         sources=["itu_2025", "tg_faq"]),
 ]
 
