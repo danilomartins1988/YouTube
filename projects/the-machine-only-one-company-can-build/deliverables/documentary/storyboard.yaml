@@ -323,6 +323,7 @@ scenes:
     subtitle: '{{droplets.nm_display}} extreme ultraviolet'
     presenter: false
     studio: false
+    push: 0.0028
     draw_start:
       cue: ASML's answer
     speed: 1400
@@ -388,7 +389,7 @@ scenes:
       width: 9
       flow: 320
       start:
-        cue: stronger pulse
+        cue: more powerful pulse
       label:
         text: MAIN PULSE
         x: 1035
@@ -463,6 +464,7 @@ scenes:
     title: Mirrors, in a vacuum
     presenter: false
     studio: false
+    push: 0.006
     draw_start:
       cue: absorbed
     speed: 1600
@@ -621,12 +623,11 @@ scenes:
     tick_every: 5
     items:
     - year: '{{founded_1984.value}}'
-      label: Philips + ASM International set up ASML
-      cue: joint venture
-    - year: 1990
-      display: Late 1980s
-      label: A newcomer against bigger Japanese rivals
-      cue: Japanese rivals
+      label: Philips + ASM International create ASML
+      cue: created a small
+    - year: 1985
+      label: Moves to Veldhoven · a small newcomer
+      cue: moved to Veldhoven
     - year: '{{ipo_1995.value}}'
       label: Independent, listed in Amsterdam + New York
       cue: fully independent
@@ -843,7 +844,7 @@ scenes:
       lon: 10.1
       lat: 48.78
       colour: accent3
-      cue: Carl Zeiss
+      cue: chip optics
       label_dx: 18
       label_dy: 40
     - year: '{{euv_2020.value}}'
@@ -1213,10 +1214,10 @@ scenes:
     - from: r
       to: b
       starts:
-      - cue: paying
-      - cue: paying
+      - cue: start printing
+      - cue: start printing
         offset: 0.3
-      - cue: paying
+      - cue: start printing
         offset: 0.6
       travel: 1.2
       label: PAYMENT
@@ -1478,7 +1479,7 @@ scenes:
     valueSuffix: '%'
     highlight: 0
     highlightAt:
-      cue: China took
+      cue: customers in China
     color: accent2
     highlightColor: risk
   sources:
@@ -1890,7 +1891,7 @@ scenes:
     - kicker: China, share of ASML sales
       value: '{{regions.display}} → {{china_2026.display}}'
       label: 2025 → 2026 (company expectation)
-      cue: chief financial officer
+      cue: The company expects
     - kicker: Next generation (High-NA)
       value: '{{highna_price.display}}'
       label: estimate · first one shipped to Intel, Dec 2023

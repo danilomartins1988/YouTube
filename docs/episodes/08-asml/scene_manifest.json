@@ -1,0 +1,2088 @@
+{
+  "slug": "the-machine-only-one-company-can-build",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_machine",
+      "segment": "h_question",
+      "type": "engine_exploded",
+      "start_s": 0.0,
+      "end_s": 9.2,
+      "duration_s": 9.2,
+      "visual_objective": "",
+      "narration": "What if the most advanced chips on Earth could only be printed by one machine, and only one company knew how to build it?",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_euv"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_town",
+      "segment": "h_stakes",
+      "type": "engine_map",
+      "start_s": 9.2,
+      "end_s": 19.47,
+      "duration_s": 10.27,
+      "visual_objective": "",
+      "narration": "That company exists. Each machine costs about 250 million dollars. And it comes from a small town in the Netherlands.",
+      "keyframes": [
+        {
+          "param": "highlights[0].at.cue",
+          "cue": "That company",
+          "label": "highlights[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 9.55
+        },
+        {
+          "param": "hubs[0].time.cue",
+          "cue": "Each machine",
+          "label": "hubs[0].time.cue",
+          "scene_time_s": 2.62,
+          "absolute_s": 11.82
+        },
+        {
+          "param": "cameras[1].at.cue",
+          "cue": "small town",
+          "label": "cameras[1].at.cue",
+          "scene_time_s": 8.06,
+          "absolute_s": 17.27
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_explainer",
+        "asml_history",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 19.47,
+      "end_s": 24.47,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s03_missions",
+      "segment": "h_missions",
+      "type": "kinetic_text",
+      "start_s": 24.47,
+      "end_s": 39.3,
+      "duration_s": 14.83,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Today we have five missions. Find out what this machine actually does, how one company ended up alone, who helps build it, how it makes money, and why governments now fight over where it is allowed to go.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "five missions",
+          "label": "Today: five missions",
+          "scene_time_s": 1.74,
+          "absolute_s": 26.21
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "what this machine",
+          "label": "1 · What the machine actually does",
+          "scene_time_s": 3.77,
+          "absolute_s": 28.23
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "ended up alone",
+          "label": "2 · How one company ended up alone",
+          "scene_time_s": 6.79,
+          "absolute_s": 31.26
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "who helps",
+          "label": "3 · Who helps build it",
+          "scene_time_s": 8.07,
+          "absolute_s": 32.54
+        },
+        {
+          "param": "lines[4].cue",
+          "cue": "makes money",
+          "label": "4 · How it makes money",
+          "scene_time_s": 9.57,
+          "absolute_s": 34.04
+        },
+        {
+          "param": "lines[5].cue",
+          "cue": "allowed to go",
+          "label": "5 · Where it is allowed to go",
+          "scene_time_s": 13.25,
+          "absolute_s": 37.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s04_m1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 39.3,
+      "end_s": 42.3,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s05_m1q",
+      "segment": "m1_question",
+      "type": "kinetic_text",
+      "start_s": 42.3,
+      "end_s": 54.07,
+      "duration_s": 11.77,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission one. What does this machine actually do? It matters because every phone, every laptop and every AI data center depends on what it prints.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "What does",
+          "label": "THE QUESTION",
+          "scene_time_s": 1.81,
+          "absolute_s": 44.11
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "What does",
+          "label": "What does this machine actually do?",
+          "scene_time_s": 2.21,
+          "absolute_s": 44.51
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 4.21,
+          "absolute_s": 46.51
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "Every phone, laptop and AI data center depends on it",
+          "scene_time_s": 4.61,
+          "absolute_s": 46.91
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "p06_draw",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 54.07,
+      "end_s": 69.27,
+      "duration_s": 15.2,
+      "visual_objective": "",
+      "narration": "Let me draw it. A chip is built by printing patterns onto a silicon wafer with light, a bit like a projector. Light shines through a mask with the circuit design, then lenses or mirrors shrink that image onto the wafer.",
+      "keyframes": [
+        {
+          "param": "enter.at.cue",
+          "cue": "Let me draw",
+          "label": "enter.at.cue",
+          "scene_time_s": 0.05,
+          "absolute_s": 54.12
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "A chip is built",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.06,
+          "absolute_s": 56.13
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "with light",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 5.56,
+          "absolute_s": 59.63
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Light shines",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 8.41,
+          "absolute_s": 62.48
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "through a mask",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 9.09,
+          "absolute_s": 63.15
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "lenses or mirrors",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.54,
+          "absolute_s": 65.6
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "shrink that image",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 12.66,
+          "absolute_s": 66.73
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "onto the wafer",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 13.56,
+          "absolute_s": 67.63
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "onto the wafer",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 14.26,
+          "absolute_s": 68.33
+        },
+        {
+          "param": "actions[1].at.cue",
+          "cue": "onto the wafer",
+          "label": "actions[1].at.cue",
+          "scene_time_s": 15.36,
+          "absolute_s": 69.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_euv"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s07_shrink",
+      "segment": "m1_shrink",
+      "type": "kinetic_text",
+      "start_s": 69.27,
+      "end_s": 88.93,
+      "duration_s": 19.67,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "The catch: you can't print details much smaller than the light you use. And smaller details mean more transistors on every chip, which means faster, cheaper and more efficient computers. So to keep shrinking chips, the industry needed light with a much shorter wavelength than ever before.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "The catch",
+          "label": "You can't print details much smaller than the light",
+          "scene_time_s": 0.35,
+          "absolute_s": 69.62
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "more transistors",
+          "label": "Smaller details = more transistors per chip",
+          "scene_time_s": 6.89,
+          "absolute_s": 76.16
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "faster",
+          "label": "faster · cheaper · more efficient",
+          "scene_time_s": 9.57,
+          "absolute_s": 78.84
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "much shorter",
+          "label": "Needed: much shorter wavelength",
+          "scene_time_s": 16.78,
+          "absolute_s": 86.05
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s08_light",
+      "segment": "m1_light",
+      "type": "engine_draw",
+      "start_s": 88.93,
+      "end_s": 131.97,
+      "duration_s": 43.03,
+      "visual_objective": "",
+      "narration": "ASML's answer is extreme ultraviolet light, with a wavelength of just 13.5 nanometers. Nothing on Earth makes it naturally. So the machine makes its own. It fires tiny drops of molten tin, up to 50,000 of them every second. A laser flattens each drop, and a second, far more powerful pulse, hotter than the surface of the sun, turns it into a plasma that gives off the light. A special mirror collects that light and sends it into the rest of the machine. All of this happens again and again, every second, for hours, without stopping.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "ASML's answer",
+          "label": "draw_start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 89.28
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "ASML's answer",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 89.28
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "makes its own",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 13.18,
+          "absolute_s": 102.11
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "tiny drops",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 15.45,
+          "absolute_s": 104.39
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "A laser flattens",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 21.3,
+          "absolute_s": 110.23
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "each drop",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 22.46,
+          "absolute_s": 111.39
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "more powerful pulse",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 24.5,
+          "absolute_s": 113.43
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "plasma",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 29.32,
+          "absolute_s": 118.25
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "special mirror",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 32.35,
+          "absolute_s": 121.28
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "sends it",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 34.3,
+          "absolute_s": 123.24
+        },
+        {
+          "param": "strokes[9].start.cue",
+          "cue": "again and again",
+          "label": "strokes[9].start.cue",
+          "scene_time_s": 38.36,
+          "absolute_s": 127.29
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_hot",
+        "asml_ar_2025"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s09_mirrors",
+      "segment": "m1_mirrors",
+      "type": "engine_draw",
+      "start_s": 131.97,
+      "end_s": 146.77,
+      "duration_s": 14.8,
+      "visual_objective": "",
+      "narration": "But this light is absorbed by almost everything, even air. So the whole path runs in a vacuum, and instead of lenses, it bounces off a chain of ultra smooth mirrors before it reaches the wafer.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "absorbed",
+          "label": "draw_start.cue",
+          "scene_time_s": 1.27,
+          "absolute_s": 133.23
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "absorbed",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 1.27,
+          "absolute_s": 133.23
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "bounces off",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 10.06,
+          "absolute_s": 142.03
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "ultra smooth",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 11.19,
+          "absolute_s": 143.16
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "reaches the wafer",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 13.1,
+          "absolute_s": 145.07
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_euv",
+        "ieee_euv"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s10_size",
+      "segment": "m1_discovery",
+      "type": "compare",
+      "start_s": 146.77,
+      "end_s": 163.6,
+      "duration_s": 16.83,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "Here is the discovery. The result is a machine the size of a school bus, weighing 150 tons. To deliver one, ASML packs it into around 40 shipping containers and flies it across the world on cargo planes.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "school bus",
+          "label": "one machine",
+          "scene_time_s": 5.13,
+          "absolute_s": 151.89
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "weighing",
+          "label": "per machine",
+          "scene_time_s": 5.85,
+          "absolute_s": 152.62
+        },
+        {
+          "param": "sides[2].cue",
+          "cue": "shipping containers",
+          "label": "containers + cargo planes",
+          "scene_time_s": 12.26,
+          "absolute_s": 159.02
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_explainer"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_m1t",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 163.6,
+      "end_s": 169.63,
+      "duration_s": 6.03,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So why is there only one company that can build it? That is mission two.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "So why",
+          "label": "Why can only one company",
+          "scene_time_s": 0.35,
+          "absolute_s": 163.95
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "build it",
+          "label": "build it?",
+          "scene_time_s": 3.31,
+          "absolute_s": 166.91
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "mission two",
+          "label": "Mission 2 →",
+          "scene_time_s": 4.72,
+          "absolute_s": 168.32
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_m2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 169.63,
+      "end_s": 172.63,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_m2q",
+      "segment": "m2_question",
+      "type": "kinetic_text",
+      "start_s": 172.63,
+      "end_s": 185.97,
+      "duration_s": 13.33,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission two. How did a small Dutch company end up as the only one? It matters because, in a normal market, monopolies like this don't last.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "How did",
+          "label": "THE QUESTION",
+          "scene_time_s": 2.31,
+          "absolute_s": 174.94
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "How did",
+          "label": "How did a small Dutch company end up as the only one?",
+          "scene_time_s": 2.71,
+          "absolute_s": 175.34
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 6.75,
+          "absolute_s": 179.38
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "Monopolies like this usually don't last",
+          "scene_time_s": 7.15,
+          "absolute_s": 179.78
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_origin",
+      "segment": "m2_origin",
+      "type": "timeline",
+      "start_s": 185.97,
+      "end_s": 221.33,
+      "duration_s": 35.37,
+      "visual_objective": "Axis draws; dated markers drop in on cues with ripple",
+      "narration": "The story starts in 1984, when the electronics giant Philips and a chip equipment maker called A S M International created a small new company near Eindhoven. A year later it moved to Veldhoven. Its early years were rough: a small, unknown newcomer in a market full of bigger, established competitors. In 1995, it became a fully independent company, listed in Amsterdam and New York, and it kept pouring money into one idea: printing with ever shorter light.",
+      "keyframes": [
+        {
+          "param": "items[0].cue",
+          "cue": "created a small",
+          "label": "Philips + ASM International create ASML",
+          "scene_time_s": 9.55,
+          "absolute_s": 195.52
+        },
+        {
+          "param": "items[1].cue",
+          "cue": "moved to Veldhoven",
+          "label": "Moves to Veldhoven · a small newcomer",
+          "scene_time_s": 13.89,
+          "absolute_s": 199.86
+        },
+        {
+          "param": "items[2].cue",
+          "cue": "fully independent",
+          "label": "Independent, listed in Amsterdam + New York",
+          "scene_time_s": 25.78,
+          "absolute_s": 211.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_history"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "p15_bet",
+      "segment": "m2_bet",
+      "type": "engine_draw",
+      "start_s": 221.33,
+      "end_s": 245.37,
+      "duration_s": 24.03,
+      "visual_objective": "",
+      "narration": "The conflict came with extreme ultraviolet light. Making it work took decades and billions, and nobody was sure it ever would. So in twenty twelve, ASML did something unusual. Its own biggest customers, Intel, TSMC and Samsung, bought 23 percent of the company and helped pay for the research.",
+      "keyframes": [
+        {
+          "param": "enter.at.cue",
+          "cue": "The conflict",
+          "label": "enter.at.cue",
+          "scene_time_s": 0.05,
+          "absolute_s": 221.38
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "The conflict",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 1.55,
+          "absolute_s": 222.88
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "took decades",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 5.23,
+          "absolute_s": 226.56
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "biggest customers",
+          "label": "draw_start.cue",
+          "scene_time_s": 15.25,
+          "absolute_s": 236.59
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Intel",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 16.74,
+          "absolute_s": 238.07
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "TSMC",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 17.46,
+          "absolute_s": 238.8
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Samsung",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 17.97,
+          "absolute_s": 239.3
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "bought",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 18.7,
+          "absolute_s": 240.03
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "of the company",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 20.25,
+          "absolute_s": 241.59
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "of the company",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 20.86,
+          "absolute_s": 242.19
+        },
+        {
+          "param": "strokes[9].start.cue",
+          "cue": "helped pay",
+          "label": "strokes[9].start.cue",
+          "scene_time_s": 21.76,
+          "absolute_s": 243.1
+        },
+        {
+          "param": "actions[1].at.cue",
+          "cue": "pay for the research",
+          "label": "actions[1].at.cue",
+          "scene_time_s": 22.77,
+          "absolute_s": 244.1
+        },
+        {
+          "param": "actions[2].at.cue",
+          "cue": "pay for the research",
+          "label": "actions[2].at.cue",
+          "scene_time_s": 23.97,
+          "absolute_s": 245.3
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "ccip_2012",
+        "samsung_ccip"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_insurance",
+      "segment": "m2_insurance",
+      "type": "kinetic_text",
+      "start_s": 245.37,
+      "end_s": 256.03,
+      "duration_s": 10.67,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "For them, it was insurance. If the machine never arrived, their own roadmaps would stall. If it did, they would be first in line.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "insurance",
+          "label": "For the customers: insurance",
+          "scene_time_s": 1.65,
+          "absolute_s": 247.01
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "never arrived",
+          "label": "No machine → their roadmaps stall",
+          "scene_time_s": 4.13,
+          "absolute_s": 249.5
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "first in",
+          "label": "Machine arrives → first in line",
+          "scene_time_s": 9.32,
+          "absolute_s": 254.69
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_pieces",
+      "segment": "m2_pieces",
+      "type": "timeline_network",
+      "start_s": 256.03,
+      "end_s": 282.5,
+      "duration_s": 26.47,
+      "visual_objective": "Historical timeline whose milestones fly onto a world map and link into a production network",
+      "narration": "Then ASML went after the missing pieces. It moved to buy Cymer, the American maker of its light source, in a deal worth about 2.55 billion dollars. Later it took almost 25 percent of Carl Zeiss's chip optics business, the German company that makes its mirrors. In 2020, extreme ultraviolet machines finally went into high volume production.",
+      "keyframes": [
+        {
+          "param": "title_cue",
+          "cue": "missing pieces",
+          "label": "title_cue",
+          "scene_time_s": 2.28,
+          "absolute_s": 258.31
+        },
+        {
+          "param": "axis_cue",
+          "cue": "missing pieces",
+          "label": "axis_cue",
+          "scene_time_s": 2.28,
+          "absolute_s": 258.31
+        },
+        {
+          "param": "items[0].cue",
+          "cue": "missing pieces",
+          "label": "ASML founded",
+          "scene_time_s": 2.28,
+          "absolute_s": 258.31
+        },
+        {
+          "param": "items[1].cue",
+          "cue": "Cymer",
+          "label": "Moves to buy Cymer",
+          "scene_time_s": 5.13,
+          "absolute_s": 261.17
+        },
+        {
+          "param": "items[2].cue",
+          "cue": "chip optics",
+          "label": "24.9% of Zeiss SMT",
+          "scene_time_s": 14.86,
+          "absolute_s": 270.9
+        },
+        {
+          "param": "items[3].cue",
+          "cue": "high volume",
+          "label": "EUV in high-volume production",
+          "scene_time_s": 24.7,
+          "absolute_s": 280.73
+        },
+        {
+          "param": "morph_cue",
+          "cue": "production",
+          "label": "morph_cue",
+          "scene_time_s": 25.34,
+          "absolute_s": 281.37
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "cymer_2012",
+        "zeiss_2016",
+        "asml_history",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_share",
+      "segment": "m2_discovery",
+      "type": "compare",
+      "start_s": 282.5,
+      "end_s": 301.73,
+      "duration_s": 19.23,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "The discovery: ASML didn't win alone. It won by tying its customers and its suppliers to the same bet. Today it is the only company in the world that makes extreme ultraviolet machines, and it has become Europe's most valuable company.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "the only company",
+          "label": "ASML, in the whole world",
+          "scene_time_s": 9.12,
+          "absolute_s": 291.62
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "most valuable",
+          "label": "Europe's most valuable company (Reuters)",
+          "scene_time_s": 16.91,
+          "absolute_s": 299.4
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_explainer",
+        "asml_euv"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_m2t",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 301.73,
+      "end_s": 310.83,
+      "duration_s": 9.1,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "But a machine this complex is never built by one company. Who else is inside it? Mission three.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "never built",
+          "label": "Never built by one company",
+          "scene_time_s": 2.5,
+          "absolute_s": 304.24
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Who else",
+          "label": "Who else is inside it?",
+          "scene_time_s": 5.59,
+          "absolute_s": 307.32
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "Mission three",
+          "label": "Mission 3 →",
+          "scene_time_s": 7.46,
+          "absolute_s": 309.19
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_m3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 310.83,
+      "end_s": 313.83,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_m3q",
+      "segment": "m3_question",
+      "type": "kinetic_text",
+      "start_s": 313.83,
+      "end_s": 323.3,
+      "duration_s": 9.47,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission three. Who actually builds this machine? It matters because the monopoly is not one company. It is a network.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Who actually",
+          "label": "THE QUESTION",
+          "scene_time_s": 1.9,
+          "absolute_s": 315.73
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Who actually",
+          "label": "Who actually builds this machine?",
+          "scene_time_s": 2.3,
+          "absolute_s": 316.13
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 4.2,
+          "absolute_s": 318.03
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "The monopoly is a network, not one company",
+          "scene_time_s": 4.6,
+          "absolute_s": 318.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_inside",
+      "segment": "m3_inside",
+      "type": "engine_exploded",
+      "start_s": 323.3,
+      "end_s": 343.43,
+      "duration_s": 20.13,
+      "visual_objective": "",
+      "narration": "Let's open it up. At the bottom, the stage that holds the wafer and moves it with incredible precision. Above it, the projection mirrors. Then the mask with the chip design. Then the optics that shape the light. And feeding it all, the light source, where the tin turns into plasma.",
+      "keyframes": [
+        {
+          "param": "explodeAt.cue",
+          "cue": "open it up",
+          "label": "explodeAt.cue",
+          "scene_time_s": 0.96,
+          "absolute_s": 324.26
+        },
+        {
+          "param": "labelsAt.cue",
+          "cue": "At the bottom",
+          "label": "labelsAt.cue",
+          "scene_time_s": 1.95,
+          "absolute_s": 325.25
+        },
+        {
+          "param": "assembleAt.cue",
+          "cue": "where the tin",
+          "label": "assembleAt.cue",
+          "scene_time_s": 19.1,
+          "absolute_s": 342.4
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_euv"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_suppliers",
+      "segment": "m3_map",
+      "type": "engine_map",
+      "start_s": 343.43,
+      "end_s": 389.97,
+      "duration_s": 46.53,
+      "visual_objective": "",
+      "narration": "Now follow the parts on a map. The mirrors come from Zeiss, in southern Germany. ASML bought about 5 billion dollars of parts from Zeiss in twenty twenty-five alone, and Zeiss is its only supplier for them. In fact, Zeiss's sites in Oberkochen and Wetzlar are the only places where these optics can be built, so their capacity limits how many machines ASML can ship. The light source is developed by Cymer, in San Diego. In total, ASML works with about 5,100 suppliers, and employs more than 44,000 people. Everything comes together in Veldhoven.",
+      "keyframes": [
+        {
+          "param": "routes[0].at.cue",
+          "cue": "mirrors come from",
+          "label": "routes[0].at.cue",
+          "scene_time_s": 4.26,
+          "absolute_s": 347.69
+        },
+        {
+          "param": "highlights[1].at.cue",
+          "cue": "Zeiss",
+          "label": "highlights[1].at.cue",
+          "scene_time_s": 4.71,
+          "absolute_s": 348.14
+        },
+        {
+          "param": "hubs[1].time.cue",
+          "cue": "Zeiss",
+          "label": "hubs[1].time.cue",
+          "scene_time_s": 4.71,
+          "absolute_s": 348.14
+        },
+        {
+          "param": "cameras[1].at.cue",
+          "cue": "In fact",
+          "label": "cameras[1].at.cue",
+          "scene_time_s": 17.43,
+          "absolute_s": 360.86
+        },
+        {
+          "param": "hubs[2].time.cue",
+          "cue": "Wetzlar",
+          "label": "hubs[2].time.cue",
+          "scene_time_s": 20.68,
+          "absolute_s": 364.11
+        },
+        {
+          "param": "routes[1].at.cue",
+          "cue": "Wetzlar",
+          "label": "routes[1].at.cue",
+          "scene_time_s": 21.08,
+          "absolute_s": 364.51
+        },
+        {
+          "param": "cameras[2].at.cue",
+          "cue": "San Diego",
+          "label": "cameras[2].at.cue",
+          "scene_time_s": 31.9,
+          "absolute_s": 375.33
+        },
+        {
+          "param": "highlights[2].at.cue",
+          "cue": "San Diego",
+          "label": "highlights[2].at.cue",
+          "scene_time_s": 32.5,
+          "absolute_s": 375.93
+        },
+        {
+          "param": "hubs[3].time.cue",
+          "cue": "San Diego",
+          "label": "hubs[3].time.cue",
+          "scene_time_s": 32.5,
+          "absolute_s": 375.93
+        },
+        {
+          "param": "routes[2].at.cue",
+          "cue": "San Diego",
+          "label": "routes[2].at.cue",
+          "scene_time_s": 33.1,
+          "absolute_s": 376.53
+        },
+        {
+          "param": "cameras[3].at.cue",
+          "cue": "In total",
+          "label": "cameras[3].at.cue",
+          "scene_time_s": 33.13,
+          "absolute_s": 376.56
+        },
+        {
+          "param": "cameras[4].at.cue",
+          "cue": "comes together",
+          "label": "cameras[4].at.cue",
+          "scene_time_s": 44.2,
+          "absolute_s": 387.63
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "asml_ar_2025",
+        "cymer_2012",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_ship",
+      "segment": "m3_shipping",
+      "type": "engine_flow",
+      "start_s": 389.97,
+      "end_s": 405.5,
+      "duration_s": 15.53,
+      "visual_objective": "",
+      "narration": "Then comes the strangest part. Each machine is built and tested in the Netherlands, taken apart, packed into crates, flown to the customer's fab, and rebuilt there. Only then does it start printing chips.",
+      "keyframes": [
+        {
+          "param": "items.starts[0].cue",
+          "cue": "built and tested",
+          "label": "items.starts[0].cue",
+          "scene_time_s": 4.09,
+          "absolute_s": 394.05
+        },
+        {
+          "param": "money[0].starts[0].cue",
+          "cue": "start printing",
+          "label": "money[0].starts[0].cue",
+          "scene_time_s": 13.99,
+          "absolute_s": 403.95
+        },
+        {
+          "param": "money[0].starts[1].cue",
+          "cue": "start printing",
+          "label": "money[0].starts[1].cue",
+          "scene_time_s": 14.29,
+          "absolute_s": 404.25
+        },
+        {
+          "param": "money[0].starts[2].cue",
+          "cue": "start printing",
+          "label": "money[0].starts[2].cue",
+          "scene_time_s": 14.59,
+          "absolute_s": 404.55
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_explainer"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_m3t",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 405.5,
+      "end_s": 412.6,
+      "duration_s": 7.1,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So where does all that money go, and how much is there? Mission four.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "So where",
+          "label": "Where does all the money go?",
+          "scene_time_s": 0.35,
+          "absolute_s": 405.85
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Mission four",
+          "label": "Mission 4 →",
+          "scene_time_s": 5.66,
+          "absolute_s": 411.16
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_m4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 412.6,
+      "end_s": 415.6,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_m4q",
+      "segment": "m4_question",
+      "type": "kinetic_text",
+      "start_s": 415.6,
+      "end_s": 426.13,
+      "duration_s": 10.53,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission four. How does ASML make money? It matters because this one company sits in the middle of the whole AI boom.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "How does",
+          "label": "THE QUESTION",
+          "scene_time_s": 2.06,
+          "absolute_s": 417.66
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "How does",
+          "label": "How does ASML make money?",
+          "scene_time_s": 2.46,
+          "absolute_s": 418.06
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 5.2,
+          "absolute_s": 420.8
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "It sits in the middle of the AI boom",
+          "scene_time_s": 5.6,
+          "absolute_s": 421.2
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "p28_sales",
+      "segment": "m4_sales",
+      "type": "engine_draw",
+      "start_s": 426.13,
+      "end_s": 449.77,
+      "duration_s": 23.63,
+      "visual_objective": "",
+      "narration": "Let me draw the numbers. In twenty twenty-five, ASML sold about 37 billion dollars worth of machines and services, up 16 percent in a year. It kept almost 11 billion dollars as profit. Extreme ultraviolet was the star: 48 machines, bringing in about 13 billion dollars.",
+      "keyframes": [
+        {
+          "param": "enter.at.cue",
+          "cue": "Let me draw",
+          "label": "enter.at.cue",
+          "scene_time_s": 0.05,
+          "absolute_s": 426.18
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "draw the numbers",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.9,
+          "absolute_s": 427.04
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "ASML sold",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.2,
+          "absolute_s": 430.34
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "ASML sold",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.2,
+          "absolute_s": 430.34
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "ASML sold",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 4.8,
+          "absolute_s": 430.94
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "up",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 9.41,
+          "absolute_s": 435.54
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "as profit",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 14.73,
+          "absolute_s": 440.86
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "as profit",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 15.23,
+          "absolute_s": 441.36
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "the star",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 17.77,
+          "absolute_s": 443.9
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "bringing in",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 19.22,
+          "absolute_s": 445.36
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "bringing in",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 21.02,
+          "absolute_s": 447.16
+        },
+        {
+          "param": "actions[1].at.cue",
+          "cue": "bringing in",
+          "label": "actions[1].at.cue",
+          "scene_time_s": 22.12,
+          "absolute_s": 448.26
+        },
+        {
+          "param": "actions[2].at.cue",
+          "cue": "bringing in",
+          "label": "actions[2].at.cue",
+          "scene_time_s": 23.52,
+          "absolute_s": 449.66
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_q4_2025",
+        "asml_q4_2025_deck",
+        "asml_q4_2024",
+        "ecb_2025_avg"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_avg",
+      "segment": "m4_average",
+      "type": "compare",
+      "start_s": 449.77,
+      "end_s": 464.5,
+      "duration_s": 14.73,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "That is an average of roughly 270 million dollars per machine, by our calculation. We show every figure in US dollars, converted at the official average exchange rate for the year.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "average",
+          "label": "48 machines",
+          "scene_time_s": 1.06,
+          "absolute_s": 450.83
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "per machine",
+          "label": "our calculation",
+          "scene_time_s": 4.56,
+          "absolute_s": 454.33
+        },
+        {
+          "param": "sides[2].cue",
+          "cue": "converted",
+          "label": "ECB average rate, 2025",
+          "scene_time_s": 10.48,
+          "absolute_s": 460.24
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_q4_2025_deck",
+        "ecb_2025_avg"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_regions",
+      "segment": "m4_customers",
+      "type": "engine_chart",
+      "start_s": 464.5,
+      "end_s": 489.5,
+      "duration_s": 25.0,
+      "visual_objective": "",
+      "narration": "And who buys them? In twenty twenty-five, customers in China made up 29 percent of ASML's sales, none of it the newest machines, because China cannot buy them. A year earlier it was 36 percent. Then come Taiwan, South Korea and the United States, home to the chipmakers we met in the last episode.",
+      "keyframes": [
+        {
+          "param": "start.cue",
+          "cue": "who buys",
+          "label": "start.cue",
+          "scene_time_s": 0.64,
+          "absolute_s": 465.14
+        },
+        {
+          "param": "highlightAt.cue",
+          "cue": "customers in China",
+          "label": "highlightAt.cue",
+          "scene_time_s": 4.0,
+          "absolute_s": 468.5
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_ar_2025"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_loop",
+      "segment": "m4_flywheel",
+      "type": "engine_flow",
+      "start_s": 489.5,
+      "end_s": 517.4,
+      "duration_s": 27.9,
+      "visual_objective": "",
+      "narration": "Here is the discovery. The money flows in a loop. Chipmakers pay for machines. ASML spends about 5.3 billion dollars a year on research. That research makes the next machine, which chipmakers need to stay ahead, so they order again. At the end of twenty twenty-five, ASML already had almost 44 billion dollars of orders waiting.",
+      "keyframes": [
+        {
+          "param": "items.starts[0].cue",
+          "cue": "Chipmakers pay",
+          "label": "items.starts[0].cue",
+          "scene_time_s": 5.35,
+          "absolute_s": 494.85
+        },
+        {
+          "param": "items.starts[1].cue",
+          "cue": "order again",
+          "label": "items.starts[1].cue",
+          "scene_time_s": 17.93,
+          "absolute_s": 507.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_ar_2025",
+        "asml_q4_2025",
+        "ecb_2025_avg"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_m4t",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 517.4,
+      "end_s": 524.33,
+      "duration_s": 6.93,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "A machine this valuable is also a weapon. Mission five.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "A machine",
+          "label": "A machine this valuable",
+          "scene_time_s": 0.35,
+          "absolute_s": 517.75
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "weapon",
+          "label": "is also a weapon",
+          "scene_time_s": 3.54,
+          "absolute_s": 520.94
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "Mission five",
+          "label": "Mission 5 →",
+          "scene_time_s": 5.23,
+          "absolute_s": 522.63
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_m5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 524.33,
+      "end_s": 527.33,
+      "duration_s": 3.0,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_m5q",
+      "segment": "m5_question",
+      "type": "kinetic_text",
+      "start_s": 527.33,
+      "end_s": 540.07,
+      "duration_s": 12.73,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Mission five. Who decides where these machines are allowed to go? It matters because whoever controls the machine controls who can make the most advanced chips.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Who decides",
+          "label": "THE QUESTION",
+          "scene_time_s": 2.05,
+          "absolute_s": 529.38
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Who decides",
+          "label": "Who decides where these machines can go?",
+          "scene_time_s": 2.45,
+          "absolute_s": 529.78
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "It matters",
+          "label": "WHY IT MATTERS",
+          "scene_time_s": 5.75,
+          "absolute_s": 533.08
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "It matters",
+          "label": "Control the machine, control the most advanced chips",
+          "scene_time_s": 6.15,
+          "absolute_s": 533.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_export",
+      "segment": "m5_map",
+      "type": "engine_map",
+      "start_s": 540.07,
+      "end_s": 566.03,
+      "duration_s": 25.97,
+      "visual_objective": "",
+      "narration": "Extreme ultraviolet machines flow to Taiwan, South Korea and the United States. But not to China. The Dutch government has not let ASML send them there since 2019, and it has never shipped one. In 2023, the Dutch government also began restricting some of the older machines, and extended the rules a year later.",
+      "keyframes": [
+        {
+          "param": "highlights[1].at.cue",
+          "cue": "Taiwan",
+          "label": "highlights[1].at.cue",
+          "scene_time_s": 3.25,
+          "absolute_s": 543.32
+        },
+        {
+          "param": "hubs[1].time.cue",
+          "cue": "Taiwan",
+          "label": "hubs[1].time.cue",
+          "scene_time_s": 3.25,
+          "absolute_s": 543.32
+        },
+        {
+          "param": "routes[0].at.cue",
+          "cue": "Taiwan",
+          "label": "routes[0].at.cue",
+          "scene_time_s": 3.25,
+          "absolute_s": 543.32
+        },
+        {
+          "param": "highlights[2].at.cue",
+          "cue": "South Korea",
+          "label": "highlights[2].at.cue",
+          "scene_time_s": 4.02,
+          "absolute_s": 544.09
+        },
+        {
+          "param": "hubs[2].time.cue",
+          "cue": "South Korea",
+          "label": "hubs[2].time.cue",
+          "scene_time_s": 4.02,
+          "absolute_s": 544.09
+        },
+        {
+          "param": "routes[1].at.cue",
+          "cue": "South Korea",
+          "label": "routes[1].at.cue",
+          "scene_time_s": 4.02,
+          "absolute_s": 544.09
+        },
+        {
+          "param": "highlights[3].at.cue",
+          "cue": "United States",
+          "label": "highlights[3].at.cue",
+          "scene_time_s": 5.34,
+          "absolute_s": 545.41
+        },
+        {
+          "param": "hubs[3].time.cue",
+          "cue": "United States",
+          "label": "hubs[3].time.cue",
+          "scene_time_s": 5.34,
+          "absolute_s": 545.41
+        },
+        {
+          "param": "routes[2].at.cue",
+          "cue": "United States",
+          "label": "routes[2].at.cue",
+          "scene_time_s": 5.34,
+          "absolute_s": 545.41
+        },
+        {
+          "param": "cameras[1].at.cue",
+          "cue": "not to China",
+          "label": "cameras[1].at.cue",
+          "scene_time_s": 7.7,
+          "absolute_s": 547.77
+        },
+        {
+          "param": "highlights[4].at.cue",
+          "cue": "not to China",
+          "label": "highlights[4].at.cue",
+          "scene_time_s": 7.7,
+          "absolute_s": 547.77
+        },
+        {
+          "param": "hubs[4].time.cue",
+          "cue": "not to China",
+          "label": "hubs[4].time.cue",
+          "scene_time_s": 7.7,
+          "absolute_s": 547.77
+        },
+        {
+          "param": "routes[3].at.cue",
+          "cue": "not to China",
+          "label": "routes[3].at.cue",
+          "scene_time_s": 7.7,
+          "absolute_s": 547.77
+        },
+        {
+          "param": "cameras[2].at.cue",
+          "cue": "older machines",
+          "label": "cameras[2].at.cue",
+          "scene_time_s": 21.89,
+          "absolute_s": 561.95
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_2019_licence",
+        "cnbc_export",
+        "ioplus_2024",
+        "dutch_2024",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "p36_gate",
+      "segment": "m5_gate",
+      "type": "engine_draw",
+      "start_s": 566.03,
+      "end_s": 587.37,
+      "duration_s": 21.33,
+      "visual_objective": "",
+      "narration": "Let me draw the gate. On one side, the supply network in Europe and the United States. On the other, the buyers. Each export license is a gate. Open it, and a country gets the tools for the most advanced chips. Close it, and it has to try to build its own, which could take many years.",
+      "keyframes": [
+        {
+          "param": "enter.at.cue",
+          "cue": "Let me draw",
+          "label": "enter.at.cue",
+          "scene_time_s": 0.05,
+          "absolute_s": 566.08
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "On one side",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.3,
+          "absolute_s": 568.33
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "On one side",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.3,
+          "absolute_s": 568.33
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "the buyers",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 7.71,
+          "absolute_s": 573.74
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "the buyers",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.11,
+          "absolute_s": 574.14
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "is a gate",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 10.03,
+          "absolute_s": 576.06
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Open it",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 11.4,
+          "absolute_s": 577.43
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "Close it",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 15.79,
+          "absolute_s": 581.82
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Close it",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 16.39,
+          "absolute_s": 582.42
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "Close it",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 16.79,
+          "absolute_s": 582.82
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "build its own",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 18.18,
+          "absolute_s": 584.21
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_cost",
+      "segment": "m5_cost",
+      "type": "compare",
+      "start_s": 587.37,
+      "end_s": 621.03,
+      "duration_s": 33.67,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "The gate has a price for ASML too. The company expects China to fall to about 20 percent of its sales in twenty twenty-six. And China is now racing to build its own lithography machines, while the next generation of ASML's machines is estimated to cost 300 to 400 million dollars. The first of those went to Intel, at the end of twenty twenty-three. So the gap between those who have the machine and those who don't may keep growing.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "The company expects",
+          "label": "2025 → 2026 (company expectation)",
+          "scene_time_s": 4.45,
+          "absolute_s": 591.82
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "next",
+          "label": "estimate · first one shipped to Intel, Dec 2023",
+          "scene_time_s": 15.51,
+          "absolute_s": 602.87
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "asml_ar_2025",
+        "caixin_china",
+        "highna_2023"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_payoff",
+      "segment": "payoff",
+      "type": "engine_map",
+      "start_s": 621.03,
+      "end_s": 653.3,
+      "duration_s": 32.27,
+      "visual_objective": "",
+      "narration": "So, mission complete. The machine only one company can build is not a single invention. It is forty years of bets, a network of suppliers no one else can copy, and customers who paid to make it real. That is why a small town in the Netherlands holds one of the most important keys to the future of computing. And the smallest details on the most powerful chips in the world all begin as a drop of tin, hit by a laser, inside one Dutch machine.",
+      "keyframes": [
+        {
+          "param": "cameras[1].at.cue",
+          "cue": "forty years",
+          "label": "cameras[1].at.cue",
+          "scene_time_s": 7.93,
+          "absolute_s": 628.97
+        },
+        {
+          "param": "hubs[1].time.cue",
+          "cue": "network of suppliers",
+          "label": "hubs[1].time.cue",
+          "scene_time_s": 9.57,
+          "absolute_s": 630.6
+        },
+        {
+          "param": "routes[0].at.cue",
+          "cue": "network of suppliers",
+          "label": "routes[0].at.cue",
+          "scene_time_s": 9.57,
+          "absolute_s": 630.6
+        },
+        {
+          "param": "hubs[2].time.cue",
+          "cue": "network of suppliers",
+          "label": "hubs[2].time.cue",
+          "scene_time_s": 9.87,
+          "absolute_s": 630.9
+        },
+        {
+          "param": "routes[1].at.cue",
+          "cue": "network of suppliers",
+          "label": "routes[1].at.cue",
+          "scene_time_s": 9.87,
+          "absolute_s": 630.9
+        },
+        {
+          "param": "routes[2].at.cue",
+          "cue": "customers who paid",
+          "label": "routes[2].at.cue",
+          "scene_time_s": 12.62,
+          "absolute_s": 633.65
+        },
+        {
+          "param": "routes[3].at.cue",
+          "cue": "customers who paid",
+          "label": "routes[3].at.cue",
+          "scene_time_s": 12.82,
+          "absolute_s": 633.85
+        },
+        {
+          "param": "routes[4].at.cue",
+          "cue": "customers who paid",
+          "label": "routes[4].at.cue",
+          "scene_time_s": 13.02,
+          "absolute_s": 634.05
+        },
+        {
+          "param": "cameras[2].at.cue",
+          "cue": "small town",
+          "label": "cameras[2].at.cue",
+          "scene_time_s": 16.41,
+          "absolute_s": 637.44
+        },
+        {
+          "param": "cameras[3].at.cue",
+          "cue": "drop of tin",
+          "label": "cameras[3].at.cue",
+          "scene_time_s": 27.62,
+          "absolute_s": 648.65
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "asml_history",
+        "natural_earth"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "s39_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 653.3,
+      "end_s": 665.07,
+      "duration_s": 11.77,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the cables at the bottom of the ocean that carry the world's internet. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 8.83,
+          "absolute_s": 662.13
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}

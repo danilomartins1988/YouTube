@@ -135,7 +135,7 @@ kinetic("s07_shrink", "m1_shrink", [
 # ---- pen drawing: the EUV light source
 drops = " ".join(circle(420 + i * 52, 540, 7) for i in range(9))
 add("s08_light", "m1_light", "engine_draw", {
-    "title": "Making light that nature doesn't", "subtitle": "{{droplets.nm_display}} extreme ultraviolet", "presenter": False, "studio": False,
+    "title": "Making light that nature doesn't", "subtitle": "{{droplets.nm_display}} extreme ultraviolet", "presenter": False, "studio": False, "push": 0.0028,
     "draw_start": C("ASML's answer"), "speed": 1400,
     "strokes": [
         {"d": "M 420 260 L 1500 260", "color": "accent2", "width": 3, "start": C("ASML's answer"), "flow": 180, "label": lbl("WAVELENGTH {{droplets.nm_display}}", 960, 240, 30, "accent2")},
@@ -143,7 +143,7 @@ add("s08_light", "m1_light", "engine_draw", {
         {"d": drops, "color": "muted", "width": 4, "start": C("tiny drops"), "label": lbl("MOLTEN TIN · {{droplets.display}}", 420, 490, 28, "muted", "start")},
         {"d": "M 920 900 L 920 560", "color": "accent2", "width": 6, "flow": 260, "start": C("A laser flattens"), "label": lbl("LASER PRE-PULSE", 895, 880, 26, "accent2", "end")},
         {"d": ellipse(920, 540, 26, 9), "color": "ink", "width": 4, "start": C("each drop")},
-        {"d": "M 1010 900 L 930 560", "color": "risk", "width": 9, "flow": 320, "start": C("stronger pulse"), "label": lbl("MAIN PULSE", 1035, 900, 26, "risk", "start")},
+        {"d": "M 1010 900 L 930 560", "color": "risk", "width": 9, "flow": 320, "start": C("more powerful pulse"), "label": lbl("MAIN PULSE", 1035, 900, 26, "risk", "start")},
         {"d": "M 920 470 L 920 400 M 920 610 L 920 680 M 850 540 L 780 540 M 990 540 L 1060 540 M 870 490 L 830 450 M 970 590 L 1010 630 M 970 490 L 1010 450 M 870 590 L 830 630",
          "color": "gold", "width": 6, "pulse": True, "start": C("plasma"), "label": lbl("PLASMA → EUV LIGHT", 920, 370, 30, "gold")},
         {"d": "M 760 330 Q 640 540 760 750", "color": "teal", "width": 8, "start": C("special mirror"), "label": lbl("COLLECTOR MIRROR", 640, 800, 26, "teal")},
@@ -152,7 +152,7 @@ add("s08_light", "m1_light", "engine_draw", {
     ]}, sources=["asml_hot", "asml_ar_2025"])
 # ---- pen drawing: mirrors in a vacuum
 add("s09_mirrors", "m1_mirrors", "engine_draw", {
-    "title": "Mirrors, in a vacuum", "presenter": False, "studio": False, "draw_start": C("absorbed"), "speed": 1600,
+    "title": "Mirrors, in a vacuum", "presenter": False, "studio": False, "push": 0.006, "draw_start": C("absorbed"), "speed": 1600,
     "strokes": [
         {"d": rect(260, 300, 1400, 620), "color": "border", "width": 4, "dash": "14 10", "flow": 120, "start": C("absorbed"), "label": lbl("VACUUM CHAMBER", 300, 345, 26, "muted", "start")},
         {"d": "M 470 800 Q 520 770 570 800 M 770 410 Q 820 440 870 410 M 1070 800 Q 1120 770 1170 800 M 1370 410 Q 1420 440 1470 410", "color": "teal", "width": 7, "pulse": True, "start": C("ultra smooth"), "label": lbl("MIRRORS", 820, 380, 26, "teal")},
@@ -172,8 +172,8 @@ question("s13_m2q", "m2_question", "Mission 2 · How one company ended up alone"
          "Monopolies like this usually don't last", "How did", "It matters")
 add("s14_origin", "m2_origin", "timeline", {"chapter": "Mission 2 · The origin", "title": "A small joint venture in Veldhoven",
     "start_year": 1980, "end_year": 2000, "tick_every": 5, "items": [
-        {"year": "{{founded_1984.value}}", "label": "Philips + ASM International set up ASML", "cue": "joint venture"},
-        {"year": 1990, "display": "Late 1980s", "label": "A newcomer against bigger Japanese rivals", "cue": "Japanese rivals"},
+        {"year": "{{founded_1984.value}}", "label": "Philips + ASM International create ASML", "cue": "created a small"},
+        {"year": 1985, "label": "Moves to Veldhoven · a small newcomer", "cue": "moved to Veldhoven"},
         {"year": "{{ipo_1995.value}}", "label": "Independent, listed in Amsterdam + New York", "cue": "fully independent"}]},
     sources=["asml_history"])
 # ---- PRESENTER B: the customers' bet (relationship)
@@ -204,7 +204,7 @@ add("s17_pieces", "m2_pieces", "timeline_network", {
     "items": [
         {"year": "{{founded_1984.value}}", "label": "ASML founded", "place": "ASML · Veldhoven", "role": "design + assembly", "lon": LL["veldhoven"][0], "lat": LL["veldhoven"][1], "colour": "accent", "cue": "missing pieces", "label_dx": -18},
         {"year": 2012, "label": "Moves to buy Cymer", "place": "Cymer · San Diego", "role": "light source", "lon": LL["sandiego"][0], "lat": LL["sandiego"][1], "colour": "accent2", "cue": "Cymer"},
-        {"year": 2016, "label": "24.9% of Zeiss SMT", "place": "Zeiss · Oberkochen", "role": "mirrors", "lon": LL["oberkochen"][0], "lat": LL["oberkochen"][1], "colour": "accent3", "cue": "Carl Zeiss", "label_dx": 18, "label_dy": 40},
+        {"year": 2016, "label": "24.9% of Zeiss SMT", "place": "Zeiss · Oberkochen", "role": "mirrors", "lon": LL["oberkochen"][0], "lat": LL["oberkochen"][1], "colour": "accent3", "cue": "chip optics", "label_dx": 18, "label_dy": 40},
         {"year": "{{euv_2020.value}}", "label": "EUV in high-volume production", "place": "", "role": "", "lon": LL["veldhoven"][0], "lat": LL["veldhoven"][1], "colour": "accent", "cue": "high volume"},
     ],
     "links": [[1, 0], [2, 0]], "morph_cue": "production", "view": {"lon": -55, "lat": 45, "span": 160},
@@ -253,7 +253,7 @@ add("s24_ship", "m3_shipping", "engine_flow", {
         {"id": "r", "label": "Rebuild", "sub": "customer's fab", "x": 1690, "y": 560, "kind": "fab", "color": "gold", "appear": 0.9, "output": "wafer"}],
     "links": [{"from": "b", "to": "t", "appear": 1.0}, {"from": "t", "to": "p", "appear": 1.1}, {"from": "p", "to": "f", "appear": 1.2}, {"from": "f", "to": "r", "appear": 1.3}],
     "items": {"starts": [C("built and tested")], "route": ["b", "t", "p", "f", "r"], "travel": 0.7, "process": 1.2},
-    "money": [{"from": "r", "to": "b", "starts": [C("paying"), C("paying", 0.3), C("paying", 0.6)], "travel": 1.2, "label": "PAYMENT", "lift": 0.18}]},
+    "money": [{"from": "r", "to": "b", "starts": [C("start printing"), C("start printing", 0.3), C("start printing", 0.6)], "travel": 1.2, "label": "PAYMENT", "lift": 0.18}]},
     sources=["reuters_explainer"])
 kinetic("s25_m3t", "m3_transition", [("Where does all the money go?", 60, "So where", None, True), ("Mission 4 →", 44, "Mission four", "muted", False)])
 
@@ -286,7 +286,7 @@ add("s29_avg", "m4_average", "compare", {"chapter": "Mission 4 · Per machine", 
     sources=["asml_q4_2025_deck", "ecb_2025_avg"])
 add("s30_regions", "m4_customers", "engine_chart", {"chart": "bar", "data": "{{regions.value}}", "box": {"x": 300, "y": 330, "w": 1320, "h": 500},
     "start": C("who buys"), "stagger": 0.25, "title": "Who buys from ASML", "note": "Share of 2025 sales, by customer location",
-    "valueSuffix": "%", "highlight": 0, "highlightAt": C("China took"), "color": "accent2", "highlightColor": "risk"},
+    "valueSuffix": "%", "highlight": 0, "highlightAt": C("customers in China"), "color": "accent2", "highlightColor": "risk"},
     sources=["asml_ar_2025"])
 add("s31_loop", "m4_flywheel", "engine_flow", {
     "title": "The money loop", "subtitle": "order backlog at the end of 2025: {{backlog.display}}", "cardW": 290, "cardH": 220,
@@ -339,7 +339,7 @@ add("p36_gate", "m5_gate", "engine_draw", {
     "actions": [{"kind": "point", "at": C("Close it", 1.0), "dur": 1.2, "target": [1110, 690]}],
     "scale": 0.86, "floor": 1040})
 add("s37_cost", "m5_cost", "compare", {"chapter": "Mission 5 · The price of the gate", "title": "The gate cuts both ways", "sides": [
-    {"kicker": "China, share of ASML sales", "value": "{{regions.display}} → {{china_2026.display}}", "label": "2025 → 2026 (company expectation)", "cue": "chief financial officer"},
+    {"kicker": "China, share of ASML sales", "value": "{{regions.display}} → {{china_2026.display}}", "label": "2025 → 2026 (company expectation)", "cue": "The company expects"},
     {"kicker": "Next generation (High-NA)", "value": "{{highna_price.display}}", "label": "estimate · first one shipped to Intel, Dec 2023", "cue": "next"}]},
     sources=["asml_ar_2025", "caixin_china", "highna_2023"])
 

@@ -47,7 +47,10 @@ export const EngineDrawScene: React.FC = () => {
     <svg width={ctx.W} height={ctx.H}>
       {p.studio !== false && <Studio t={ctx.t} floorY={p.floor ?? 960} palette={p.palette} />}
       {p.board && <DigitalBoard t={ctx.t} at={p.board.at ?? 0.3} x={p.board.x} y={p.board.y} w={p.board.w} h={p.board.h} palette={p.palette} />}
-      <DrawOnCanvas t={ctx.t} timeline={tl} showPen={p.presenter === false} palette={p.palette} />
+      {/* optional slow camera push (scale per second) so long pen drawings never sit still */}
+      <g transform={p.push ? `translate(${ctx.W / 2} ${ctx.H / 2}) scale(${1 + p.push * ctx.t}) translate(${-ctx.W / 2} ${-ctx.H / 2})` : undefined}>
+        <DrawOnCanvas t={ctx.t} timeline={tl} showPen={p.presenter === false} palette={p.palette} />
+      </g>
       {p.presenter !== false && <AnimatedPresenter t={ctx.t} actions={actions} floor={p.floor ?? 960} scale={p.scale ?? 0.9}
         startX={p.enter?.from ?? -260} talk={[[ctx.scene.lead, ctx.scene.lead + ctx.scene.speech]]} />}
       <Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} />

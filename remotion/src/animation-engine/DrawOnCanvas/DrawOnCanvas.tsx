@@ -123,8 +123,8 @@ export const DrawOnCanvas: React.FC<DrawOnCanvasProps> = ({t, timeline, showPen,
               strokeDasharray={`${s.len} ${s.len}`} strokeDashoffset={s.len * (1 - u)} />}
             <path d={s.d} fill="none" stroke={c} strokeWidth={w * (s.pulse && done ? 1 + 0.35 * Math.abs(Math.sin((t - s.t1) * 6)) : 1)} strokeLinecap="round" strokeLinejoin="round"
               strokeDasharray={done && s.dash ? s.dash : `${s.len} ${s.len}`} strokeDashoffset={done && s.dash ? 0 : s.len * (1 - u)} />
-            {done && s.flow ? <path d={s.d} fill="none" stroke="#FFFFFF" strokeOpacity={0.75} strokeWidth={Math.max(2, w * 0.6)} strokeLinecap="round"
-              strokeDasharray="4 26" strokeDashoffset={-(t - s.t1) * s.flow} /> : null}
+            {done && s.flow ? <path d={s.d} fill="none" stroke="#FFFFFF" strokeOpacity={0.8} strokeWidth={Math.max(5, w * 1.1)} strokeLinecap="round"
+              strokeDasharray="10 24" strokeDashoffset={-(t - s.t1) * s.flow} /> : null}
             {done && s.pulse ? <path d={s.d} fill="none" stroke={c} strokeOpacity={0.35 * Math.abs(Math.sin((t - s.t1) * 6))} strokeWidth={w * 4} strokeLinecap="round" /> : null}
             {s.label && (() => {
               const L = s.label!, size = L.size || 30;
