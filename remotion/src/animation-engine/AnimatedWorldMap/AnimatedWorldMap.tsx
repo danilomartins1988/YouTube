@@ -20,6 +20,8 @@ export type TokenShape = 'packet' | 'box' | 'chip' | 'coin' | 'dot';
 export type MapRoute = {
   from: LonLat; to: LonLat; at: number; dur?: number; color?: string; lift?: number;
   tokens?: number; tokenShape?: TokenShape; tokenEvery?: number; tokenSpeed?: number; label?: string; width?: number;
+  /** a blocked route draws part of the way, stops at a red barrier and carries no tokens (export bans, closures) */
+  blocked?: boolean;
 };
 
 export type AnimatedWorldMapProps = Themed & {
@@ -140,9 +142,10 @@ export const AnimatedWorldMap: React.FC<AnimatedWorldMapProps> = (props) => {
           const [, yt] = merc(Lt, r.to[1]);
           const b0: Vec = [(mx(Lt) - mx(cam.lon)) * k + W / 2, (yt - ccy) * k + H / 2];
           const dur = r.dur ?? 1.2;
-          const u = E.inOut(win(t, r.at, dur));
+          const stop = r.blocked ? 0.55 : 1;
+          const u = E.inOut(win(t, r.at, dur)) * stop;
           if (u <= 0) return null;
-          const color = col(P, r.color);
+          const color = r.blocked ? P.risk : col(P, r.color);
           return [-1, 0, 1].map((off) => {
             const dx = off * WS * k;
             const a: Vec = [a0[0] + dx, a0[1]], b: Vec = [b0[0] + dx, b0[1]];
@@ -158,8 +161,13 @@ export const AnimatedWorldMap: React.FC<AnimatedWorldMapProps> = (props) => {
               <g key={i + ':' + off}>
                 <polyline points={pts.join(' ')} fill="none" stroke={color} strokeWidth={(r.width ?? 3) * 3} strokeOpacity={0.15} strokeLinecap="round" />
                 <polyline points={pts.join(' ')} fill="none" stroke={color} strokeWidth={r.width ?? 3} strokeLinecap="round" strokeDasharray={u >= 1 ? '2 10' : undefined} />
-                {u < 1 && <circle cx={head[0]} cy={head[1]} r={9} fill={color} />}
-                {u >= 1 && Array.from({length: tokens}, (_, j) => {
+                {u < stop && <circle cx={head[0]} cy={head[1]} r={9} fill={color} />}
+                {r.blocked && u >= stop && (() => { const g = E.outBack(win(t, r.at + dur, 0.4)), sh = Math.sin(Math.max(0, t - r.at - dur) * 30) * 4 * (1 - win(t, r.at + dur, 0.6));
+                  return <g transform={`translate(${head[0] + sh} ${head[1]}) scale(${g})`}>
+                    <circle r={22} fill={P.bg} stroke={P.risk} strokeWidth={4} />
+                    <path d="M -10 -10 L 10 10 M 10 -10 L -10 10" stroke={P.risk} strokeWidth={5} strokeLinecap="round" />
+                  </g>; })()}
+                {!r.blocked && u >= 1 && Array.from({length: tokens}, (_, j) => {
                   const q = (t - r.at - dur) * speed - j * every * speed;
                   if (q < 0) return null;
                   const f = q % 1;
@@ -167,7 +175,7 @@ export const AnimatedWorldMap: React.FC<AnimatedWorldMapProps> = (props) => {
                   const fade = Math.min(1, f * 8, (1 - f) * 8);
                   return <g key={j} opacity={fade}><Token shape={r.tokenShape || 'dot'} x={pp[0]} y={pp[1]} ang={quadTan(a, c, b, f)} c={color} /></g>;
                 })}
-                {r.label && u >= 1 && mid[0] > 80 && mid[0] < W - 80 && (
+                {r.label && u >= stop && mid[0] > 80 && mid[0] < W - 80 && (
                   <text x={mid[0]} y={mid[1] - 18} textAnchor="middle" fill={color} fontFamily={FONT.body} fontWeight={700} fontSize={22}
                     opacity={E.out(win(t, r.at + dur, 0.4))} letterSpacing={2}>{r.label}</text>)}
               </g>

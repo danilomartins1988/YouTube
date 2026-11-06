@@ -9,6 +9,7 @@ import {DrawOnCanvas, DrawStroke, buildDrawTimeline} from './DrawOnCanvas/DrawOn
 import {EconomicFlow} from './EconomicFlow/EconomicFlow';
 import {ExplodedDiagram} from './ExplodedDiagram/ExplodedDiagram';
 import {DigitalBoard, Studio} from './transitions';
+import {fromEpisodePalette} from './motion';
 
 /**
  * Storyboard adapters: lets hiddeneco storyboards (YAML) use the engine directly, timed to the narration.
@@ -28,7 +29,7 @@ const resolve = (v: any, cue: (s: any, f?: number) => number): any => {
 };
 const useParams = () => {
   const ctx = useCtx();
-  const p = useMemo(() => resolve(ctx.scene.params, ctx.cue), [ctx.scene]);
+  const p = useMemo(() => ({palette: fromEpisodePalette(ctx.pal as any), ...resolve(ctx.scene.params, ctx.cue)}), [ctx.scene]);
   return {ctx, p};
 };
 
@@ -44,9 +45,9 @@ export const EngineDrawScene: React.FC = () => {
   ];
   return (
     <svg width={ctx.W} height={ctx.H}>
-      {p.studio !== false && <Studio t={ctx.t} floorY={p.floor ?? 960} />}
-      {p.board && <DigitalBoard t={ctx.t} at={p.board.at ?? 0.3} x={p.board.x} y={p.board.y} w={p.board.w} h={p.board.h} />}
-      <DrawOnCanvas t={ctx.t} timeline={tl} showPen={p.presenter === false} />
+      {p.studio !== false && <Studio t={ctx.t} floorY={p.floor ?? 960} palette={p.palette} />}
+      {p.board && <DigitalBoard t={ctx.t} at={p.board.at ?? 0.3} x={p.board.x} y={p.board.y} w={p.board.w} h={p.board.h} palette={p.palette} />}
+      <DrawOnCanvas t={ctx.t} timeline={tl} showPen={p.presenter === false} palette={p.palette} />
       {p.presenter !== false && <AnimatedPresenter t={ctx.t} actions={actions} floor={p.floor ?? 960} scale={p.scale ?? 0.9}
         startX={p.enter?.from ?? -260} talk={[[ctx.scene.lead, ctx.scene.lead + ctx.scene.speech]]} />}
       <Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} />
@@ -71,7 +72,7 @@ export const EngineMapScene: React.FC = () => {
 export const EngineChartScene: React.FC = () => {
   const {ctx, p} = useParams();
   const C = p.chart === 'line' ? LineChart : p.chart === 'donut' ? Donut : BarChart;
-  return <svg width={ctx.W} height={ctx.H}><C t={ctx.t} {...(p as any)} /></svg>;
+  return <svg width={ctx.W} height={ctx.H}><C t={ctx.t} {...(p as any)} />{p.chart === 'donut' && <Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} />}</svg>;
 };
 
 export const EngineExplodedScene: React.FC = () => {

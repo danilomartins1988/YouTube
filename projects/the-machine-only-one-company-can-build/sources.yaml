@@ -1,0 +1,333 @@
+# Sources and claims for "The Machine Only One Company on Earth Can Build" (Episode 08: ASML and EUV).
+# Status: source_located = located via research on 2026-11-06, NOT yet read in full by a human.
+# MONEY: ASML reports in euros. Per channel rule every amount is shown in US dollars, converted at the ECB
+# 2025 average reference rate of 1.1300 USD per EUR (source ecb_2025_avg); the euro figure is kept in `fields`.
+sources:
+  - id: asml_q4_2025
+    title: "ASML reports €32.7 billion total net sales and €9.6 billion net income in 2025 (Q4 and FY 2025 results)"
+    publisher: ASML Holding NV (Form 6-K, SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/pressreleasefinancialresul.htm
+    published: "2026-01-28"
+    accessed: "2026-11-06"
+    credit: "ASML Q4 2025 results"
+  - id: asml_q4_2025_deck
+    title: ASML 2025 fourth-quarter and full-year results, investor presentation (48 EUV systems, EUV sales €11.6bn)
+    publisher: ASML Holding NV
+    url: https://ourbrand.asml.com/m/3136300aa4999bc1/original/2026_01_28_Presentation-Investor-Relations-Q4-2025.pdf
+    published: "2026-01-28"
+    accessed: "2026-11-06"
+    credit: "ASML Q4 2025 presentation"
+  - id: asml_q4_2024
+    title: "ASML reports €28.3 billion total net sales and €7.6 billion net income in 2024"
+    publisher: ASML Holding NV
+    url: https://www.asml.com/en/news/press-releases/2025/q4-2024-financial-results
+    published: "2025-01-29"
+    accessed: "2026-11-06"
+    credit: "ASML Q4 2024 results"
+  - id: asml_ar_2025
+    title: ASML 2025 Annual Report (Form 20-F) - employees, suppliers, R&D, Carl Zeiss SMT sole optics supplier
+    publisher: ASML Holding NV (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/0000937966/000162828026011378/asml-20251231.htm
+    published: "2026-02"
+    accessed: "2026-11-06"
+    credit: "ASML 2025 Annual Report"
+  - id: asml_history
+    title: ASML history (founded 1984 by Philips and ASM International; EUV in high-volume manufacturing from 2020)
+    publisher: ASML
+    url: https://www.asml.com/en/company/about-asml/history
+    accessed: "2026-11-06"
+    credit: "ASML company history"
+  - id: asml_euv
+    title: EUV lithography systems
+    publisher: ASML
+    url: https://www.asml.com/en/products/euv-lithography-systems
+    accessed: "2026-11-06"
+    credit: "ASML"
+  - id: asml_hot
+    title: The hottest thing about ASML machines (tin droplets, laser pre-pulse, plasma, EUV light)
+    publisher: ASML
+    url: https://www.asml.com/en/discover/hot-machines
+    accessed: "2026-11-06"
+    credit: "ASML"
+  - id: ieee_euv
+    title: "EUV lithography is brightening up (tin droplets, CO2 laser, 13.5 nm light)"
+    publisher: IEEE Spectrum
+    url: https://spectrum.ieee.org/euv-lithography-is-brightening-up
+    accessed: "2026-11-06"
+    credit: "IEEE Spectrum"
+  - id: bits_1000w
+    title: ASML hits 1,000 W in EUV source proof of concept (droplet rate from 50,000 to 100,000 per second)
+    publisher: Bits&Chips
+    url: https://bits-chips.com/article/asml-hits-1000-w-in-euv-source-proof-of-concept/
+    accessed: "2026-11-06"
+    credit: "Bits&Chips"
+  - id: reuters_explainer
+    title: "Explainer: The $250 million ASML 'printer' behind Nvidia's chips"
+    publisher: Reuters (via Yahoo Finance)
+    url: https://finance.yahoo.com/news/explainer-250-million-asml-printer-050227041.html
+    published: "2026-01-28"
+    accessed: "2026-11-06"
+    credit: "Reuters"
+  - id: intel_euv
+    title: "EUV: The Most Precise, Complex Machine at Intel (shipping: 40 containers, 3 cargo planes, 20 trucks)"
+    publisher: Intel Newsroom
+    url: https://www.intel.com/content/www/us/en/newsroom/news/euv-most-precise-complex-machine.html
+    accessed: "2026-11-06"
+    credit: "Intel"
+  - id: highna_reuters
+    title: High-NA EUV will cost more than $300 million (ASML CEO), first shipped to Intel in December 2023
+    publisher: Tom's Hardware / Reuters
+    url: https://www.tomshardware.com/pc-components/cpus/asml-ships-groundbreaking-new-chipmaking-tool-to-intel-high-na-lithography-tool-needed-for-next-gen-process-nodes-could-cost-dollar400-million
+    published: "2023-12"
+    accessed: "2026-11-06"
+    credit: "Tom's Hardware"
+  - id: ccip_2012
+    title: ASML Customer Co-Investment Program (Intel, TSMC, Samsung; 23% equity, €1.38bn R&D for EUV and 450mm)
+    publisher: ASML Holding NV (Form 6-K, SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/0000937966/000119312512370598/d402810dex991.htm
+    published: "2012-08"
+    accessed: "2026-11-06"
+    credit: "ASML 6-K 2012"
+  - id: samsung_ccip
+    title: Samsung joins ASML's Customer Co-Investment Program for Innovation, completing the program
+    publisher: ASML
+    url: https://www.asml.com/news/press-releases/2012/samsung-joins-asmls-customer-co-investment-program-for-innovation-completing-the-program
+    published: "2012-08-27"
+    accessed: "2026-11-06"
+    credit: "ASML"
+  - id: cymer_2012
+    title: Dutch firm ASML offers to buy US light beam maker Cymer for around $2.55 billion
+    publisher: Associated Press (via Fox News)
+    url: https://www.foxnews.com/world/dutch-firm-asml-offers-to-buy-us-light-beam-maker-cymer-for-around-2-55-billion
+    published: "2012-10-17"
+    accessed: "2026-11-06"
+    credit: "AP"
+  - id: zeiss_capacity
+    title: Zeiss expands German site that caps ASML's EUV scanner output (Oberkochen and Wetzlar optics)
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/tech-industry/zeiss-expands-german-site-that-caps-asmls-euv-scanner-output
+    accessed: "2026-11-06"
+    credit: "Tom's Hardware"
+  - id: regions_2025
+    title: "ASML's revenue mix is changing (2025 net system sales by region)"
+    publisher: Zacks via Nasdaq
+    url: https://www.nasdaq.com/articles/asmls-revenue-mix-changing-what-are-latest-growth-drivers
+    published: "2026-02"
+    accessed: "2026-11-06"
+    credit: "Zacks/Nasdaq"
+  - id: caixin_china
+    title: "ASML expects China revenue drop following backlog-fueled surge (CFO: China about 20% of 2026 sales)"
+    publisher: Caixin Global
+    url: https://www.caixinglobal.com/2026-01-29/asml-expects-china-revenue-drop-following-backlog-fueled-surge-102409285.html
+    published: "2026-01-29"
+    accessed: "2026-11-06"
+    credit: "Caixin"
+  - id: cnbc_export
+    title: ASML blocked from exporting some critical chipmaking tools to China (no EUV to China since 2019)
+    publisher: CNBC
+    url: https://www.cnbc.com/2024/01/02/asml-blocked-from-exporting-some-critical-chipmaking-tools-to-china.html
+    published: "2024-01-02"
+    accessed: "2026-11-06"
+    credit: "CNBC"
+  - id: ioplus_2024
+    title: New restriction on ASML's exports from September (two more DUV immersion systems, from 7 Sept 2024)
+    publisher: IO+
+    url: https://ioplus.nl/archive/en/new-restriction-on-asmls-exports-from-september/
+    published: "2024-09"
+    accessed: "2026-11-06"
+    credit: "IO+"
+  - id: ecb_2025_avg
+    title: Average annual exchange rates for the year 2025 (ECB euro reference rates; USD 1.1300)
+    publisher: Bank of Finland
+    url: https://www.suomenpankki.fi/en/statistics/interest-rates-and-exchange-rates/exchange-rates/average-annual-exchange-rates-for-the-year-2025/
+    published: "2026-01"
+    accessed: "2026-11-06"
+    credit: "ECB rates via Bank of Finland"
+  - id: natural_earth
+    title: "Natural Earth 1:50m Admin 0 Countries"
+    publisher: Natural Earth (public domain)
+    url: https://www.naturalearthdata.com/downloads/
+    accessed: "2026-11-06"
+    credit: "Natural Earth (public domain)"
+
+claims:
+  - id: euv_only
+    text: ASML is the only company that makes EUV lithography systems, used to print the smallest features on the most advanced chips.
+    spoken: only one company
+    display: "1 maker"
+    source_ids: [asml_euv, reuters_explainer]
+    status: source_located
+  - id: euv_price
+    text: Reuters describes ASML's EUV lithography machines as costing about $250 million each (January 2026).
+    spoken: about 250 million dollars
+    display: "≈ $250m"
+    value: 250
+    source_ids: [reuters_explainer]
+    status: source_located
+  - id: highna_price
+    text: ASML's CEO said the next-generation High-NA EUV machine would cost more than $300 million; the first was shipped to Intel in December 2023.
+    spoken: more than 300 million dollars
+    display: "$300m+"
+    value: 300
+    source_ids: [highna_reuters]
+    status: source_located
+  - id: machine_size
+    text: "Reuters: the machines are the size of a school bus and weigh about 150 tons; shipping one takes about 40 containers on 747 cargo planes. Intel: about 40 freight containers, 3 cargo planes and 20 trucks; about 100,000 parts."
+    spoken: about 150 tons
+    display: "≈ 150 t"
+    value: 150
+    fields: {containers_spoken: about 40, containers_display: "≈ 40", parts_spoken: "100,000", parts_display: "100,000+", planes_display: "3 cargo planes", trucks_display: "20 trucks"}
+    source_ids: [reuters_explainer, intel_euv]
+    status: source_located
+    verification_note: Weight estimates vary between sources (150-200 t); the film says "about 150 tons" with Reuters as source.
+  - id: founded_1984
+    text: ASML was founded in 1984 as a joint venture of Philips and ASM International, and has been based in Veldhoven, the Netherlands.
+    spoken: In 1984
+    display: "1984"
+    value: 1984
+    fields: {mid_spoken: in 1984}
+    source_ids: [asml_history]
+    status: source_located
+  - id: ipo_1995
+    text: In 1995 ASML became a fully independent public company, listed on the Amsterdam and New York stock exchanges.
+    spoken: In 1995
+    display: "1995"
+    value: 1995
+    fields: {mid_spoken: in 1995}
+    source_ids: [asml_history]
+    status: source_located
+  - id: ccip_2012
+    text: In 2012 Intel, TSMC and Samsung bought minority stakes totalling 23% of ASML and committed €1.38 billion of R&D funding for EUV and 450mm lithography.
+    spoken: 23 percent
+    display: "23%"
+    value: 23
+    source_ids: [ccip_2012, samsung_ccip]
+    status: source_located
+  - id: cymer_2012
+    text: In October 2012 ASML agreed to buy Cymer, the San Diego maker of lithography light sources, for about $2.5 billion in cash and shares, to accelerate EUV.
+    spoken: about 2.5 billion dollars
+    display: "≈ $2.5bn"
+    value: 2.5
+    source_ids: [cymer_2012]
+    status: source_located
+  - id: zeiss
+    text: Carl Zeiss SMT is ASML's sole supplier of lenses, mirrors and other critical optics; ASML owns a 24.9% stake (2016) and bought €4.41bn from Zeiss in 2025 (about $5.0bn at 1.13).
+    spoken: almost 25 percent
+    display: "24.9%"
+    value: 24.9
+    fields: {buy_spoken: about 5 billion dollars, buy_display: "$5.0bn", buy_eur: "€4.41bn"}
+    source_ids: [asml_ar_2025, zeiss_capacity]
+    status: source_located
+  - id: euv_2020
+    text: At the beginning of 2020 EUV moved into high-volume manufacturing and ASML shipped its 100th EUV system.
+    spoken: In 2020
+    display: "2020"
+    value: 2020
+    fields: {mid_spoken: in 2020}
+    source_ids: [asml_history]
+    status: source_located
+  - id: droplets
+    text: "Current EUV sources hit about 50,000 molten tin droplets per second with laser pulses, creating a plasma that emits 13.5 nm EUV light; ASML has demonstrated 100,000 per second in a 1,000 W prototype."
+    spoken: "50,000"
+    display: "50,000 / s"
+    value: 50000
+    fields: {nm_spoken: 13.5 nanometers, nm_display: "13.5 nm"}
+    source_ids: [asml_hot, ieee_euv, bits_1000w]
+    status: source_located
+  - id: zeiss_sites
+    text: Zeiss's Oberkochen and Wetzlar sites are the only places where the optical columns for ASML's EUV machines are built, which caps how many scanners ASML can produce; Zeiss is expanding Oberkochen.
+    spoken: Oberkochen
+    display: "Oberkochen + Wetzlar"
+    source_ids: [zeiss_capacity, asml_ar_2025]
+    status: source_located
+  - id: highna_intel
+    text: ASML shipped the first High-NA EUV system to Intel in December 2023; Intel had ordered the pilot EXE:5000 in 2018.
+    spoken: Intel
+    display: "Intel, Dec 2023"
+    source_ids: [highna_reuters]
+    status: source_located
+  - id: suppliers
+    text: ASML had about 5,100 suppliers and more than 44,000 employees (FTE) in 2025.
+    spoken: "5,100"
+    display: "5,100"
+    value: 5100
+    fields: {staff_spoken: "44,000", staff_display: "44,000+"}
+    source_ids: [asml_ar_2025]
+    status: source_located
+  - id: sales_2025
+    text: ASML's 2025 total net sales were €32.7 billion (about $37.0bn at 1.13), up from €28.3 billion in 2024 (+16%); net income €9.6bn (about $10.8bn).
+    spoken: about 37 billion dollars
+    display: "$37.0bn"
+    value: 37.0
+    fields: {eur_display: "€32.7bn", growth_spoken: 16 percent, growth_display: "+16%", ni_spoken: almost 11 billion dollars, ni_display: "$10.8bn"}
+    source_ids: [asml_q4_2025, asml_q4_2024, ecb_2025_avg]
+    status: source_located
+  - id: euv_sales_2025
+    text: In 2025 ASML recognised revenue on 48 EUV systems; EUV system sales were €11.6 billion (about $13.1bn at 1.13).
+    spoken: "48"
+    display: "48"
+    value: 48
+    fields: {usd_spoken: about 13 billion dollars, usd_display: "$13.1bn", eur_display: "€11.6bn", avg_spoken: roughly 270 million dollars, avg_display: "≈ $273m"}
+    source_ids: [asml_q4_2025_deck, ecb_2025_avg]
+    status: source_located
+  - id: backlog
+    text: ASML's order backlog at the end of 2025 was €38.8 billion (about $43.8bn at 1.13).
+    spoken: almost 44 billion dollars
+    display: "$43.8bn"
+    value: 43.8
+    source_ids: [asml_q4_2025, ecb_2025_avg]
+    status: source_located
+  - id: rd_2025
+    text: ASML spent €4.7 billion on R&D in 2025 (about $5.3bn at 1.13).
+    spoken: about 5.3 billion dollars
+    display: "$5.3bn"
+    value: 5.3
+    source_ids: [asml_ar_2025, ecb_2025_avg]
+    status: source_located
+  - id: regions
+    text: "ASML 2025 net system sales by region: China 33% (41% in 2024), South Korea 25%, Taiwan 22%, US 12%, Japan 5%, EMEA 1%."
+    spoken: 33 percent
+    display: "33%"
+    value:
+      - {code: CHN, name: China, value: 33}
+      - {code: KOR, name: South Korea, value: 25}
+      - {code: TWN, name: Taiwan, value: 22}
+      - {code: USA, name: United States, value: 12}
+      - {code: JPN, name: Japan, value: 5}
+    fields: {china24_spoken: 41 percent, china24_display: "41%"}
+    source_ids: [regions_2025]
+    status: source_located
+    verification_note: Share of net SYSTEM sales (not total sales); secondary source summarising ASML's reporting.
+  - id: china_2026
+    text: ASML's CFO expects China to fall to about 20% of 2026 sales.
+    spoken: about 20 percent
+    display: "≈ 20%"
+    value: 20
+    source_ids: [caixin_china]
+    status: source_located
+  - id: export_euv
+    text: ASML has been barred from exporting EUV machines to China since 2019 and has never shipped one there.
+    spoken: since 2019
+    display: "since 2019"
+    source_ids: [cnbc_export]
+    status: source_located
+  - id: export_duv
+    text: Dutch export controls on the most advanced DUV machines took effect in September 2023 and were extended to two more DUV immersion systems from 7 September 2024.
+    spoken: In 2023
+    display: "2023-2024"
+    source_ids: [cnbc_export, ioplus_2024]
+    status: source_located
+  - id: market_90
+    text: Analysts estimate ASML controls about 90% of the market for lithography systems, and it has become Europe's most valuable company (Reuters, January 2026).
+    spoken: about 90 percent
+    display: "≈ 90%"
+    value: 90
+    source_ids: [reuters_explainer]
+    status: source_located
+  - id: eur_usd
+    text: The ECB 2025 average reference rate was 1.1300 US dollars per euro.
+    spoken: "1.13"
+    display: "$1.13 per €"
+    value: 1.13
+    source_ids: [ecb_2025_avg]
+    status: source_located

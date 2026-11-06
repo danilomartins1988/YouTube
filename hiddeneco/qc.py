@@ -254,7 +254,7 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
     if total < 480:                                   # the rule applies to 10-15 minute documentaries
         return []
     # engine_draw scenes contain the animated presenter drawing on a board, so they count as presenter sequences
-    seqs = [t for t in timed if t.scene.type in ("presenter", "engine_draw")]
+    seqs = [t for t in timed if t.scene.type == "presenter" or (t.scene.type == "engine_draw" and t.scene.params.get("presenter", True) is not False)]
     out = []
     need = int(raw.get("presenter_min", project.get("presenter_min", 3)))   # an episode brief may raise the minimum
     if len(seqs) < need:
@@ -290,7 +290,8 @@ def check_animation_density(paths: ProjectPaths, timed: list[TimedScene]) -> lis
     total = sum(t.duration for t in timed) or 1.0
     if total < 480:
         return []
-    n = sum(1 for t in timed if t.scene.type in EXPLANATORY and t.scene.type not in ("presenter", "engine_draw"))
+    n = sum(1 for t in timed if t.scene.type in EXPLANATORY and t.scene.type != "presenter"
+            and not (t.scene.type == "engine_draw" and t.scene.params.get("presenter", True) is not False))
     if n < 5:
         return [_issue("animation", "warning", f"Only {n} explanatory animation sequences (target: 5+ besides the presenter)")]
     return []

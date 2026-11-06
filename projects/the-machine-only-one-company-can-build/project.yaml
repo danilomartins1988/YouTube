@@ -1,0 +1,34 @@
+title: "The Machine Only One Company on Earth Can Build"
+slug: the-machine-only-one-company-can-build
+language: en
+# Episode 08 (ASML / EUV lithography). Mission model + the animation engine (engine_* scene types).
+# Money in US dollars, converted from ASML's euro reporting at the ECB 2025 average (1.13).
+renderer: remotion
+remotion_geo: [world]
+style:
+  name: light-ledger
+  palette:            # navy/charcoal base, gold = value, violet-blue = EUV light, teal = suppliers, red = restrictions
+    bg: "#07111F"
+    bg2: "#0E1A2C"
+    ink: "#F4F1EA"
+    muted: "#8B98AA"
+    land: "#18283D"
+    border: "#33475F"
+    accent: "#D4AF5A"
+    accent2: "#8F8CFF"
+    accent3: "#7FC8B8"
+    risk: "#FF5A5F"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 4

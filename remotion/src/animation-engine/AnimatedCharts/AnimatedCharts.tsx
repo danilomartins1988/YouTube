@@ -13,7 +13,7 @@ import type {Themed, Vec} from '../types';
  *   <LineChart>  the line is drawn progressively (real path length), points pop, area fills, a value marker rides
  *   <Donut>      arcs sweep in segment by segment and can re-balance to new shares
  */
-export type Datum = {label: string; value: number; display?: string};
+export type Datum = {label: string; value: number; display?: string; name?: string};
 export type Box = {x: number; y: number; w: number; h: number};
 
 export type BarChartProps = Themed & {
@@ -81,7 +81,7 @@ export const BarChart: React.FC<BarChartProps> = (p) => {
             {isHi && hiU > 0 && mU < 0.5 && <rect x={R.x - 10} y={R.y - 10} width={R.w + 20} height={R.h + 20} rx={10} fill={hc} opacity={0.16 * hiU * (1 + 0.3 * Math.sin(t * 6))} />}
             <rect x={R.x} y={R.y} width={R.w} height={Math.max(0, R.h)} rx={lerp(6, 18, mU)} fill={mU > 0.5 ? P.panel : fillC}
               stroke={mU > 0 ? fillC : 'none'} strokeWidth={3} opacity={0.95} />
-            <text x={x + bw / 2} y={baseY + 38} textAnchor="middle" fill={P.muted} fontFamily={FONT.body} fontWeight={600} fontSize={24} opacity={(1 - mU) * clamp(g)}>{d.label}</text>
+            <text x={x + bw / 2} y={baseY + 38} textAnchor="middle" fill={P.muted} fontFamily={FONT.body} fontWeight={600} fontSize={24} opacity={(1 - mU) * clamp(g)}>{d.label ?? d.name}</text>
             <text x={x + bw / 2} y={baseY - h - 16} textAnchor="middle" fill={isHi && hiU > 0 ? hc : P.ink} fontFamily={FONT.display} fontWeight={800} fontSize={30}
               opacity={(1 - mU) * clamp(g * 1.5 - 0.5)}>{shown}</text>
             {mb && mU > 0.6 && <g opacity={E.out(win(mU, 0.6, 0.4))}>
