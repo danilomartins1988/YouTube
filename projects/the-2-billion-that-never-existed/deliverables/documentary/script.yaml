@@ -1,0 +1,258 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}}; years are written in words. Generic teaser (channel rule).
+# LEGAL CARE: Braun's trial is ongoing and he denies all charges; Marsalek is wanted, not convicted. Say "accused".
+logline: A German payments company joined the country's top stock index, was worth billions, and then admitted that
+  almost two billion euros in its accounts probably never existed. How it rose, who warned, where the money "was",
+  how it collapsed, and who failed to see it.
+title: The $2 Billion That Never Existed
+segments:
+- id: h_question
+  chapter: The missing billions
+  narration: What if one of Europe's most celebrated tech companies said it had billions in the bank, and then,
+    one day, admitted that the money had probably never existed?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_stakes
+  chapter: The missing billions
+  narration: That happened in June twenty twenty. The German payments company Wirecard said that cash worth {{missing}},
+    converted at that year's average exchange rate, was most likely not there at all. Days later, it was bankrupt.
+  claims:
+  - missing
+  - insolvency
+- id: m1_card
+  chapter: The rocket
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The rocket
+  narration: So how does a small payments firm near Munich become a star of the stock market?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_origin
+  chapter: The rocket
+  narration: 'Wirecard was founded {{founded}}, in Aschheim, a suburb of Munich, during the first internet boom.
+    Its job sounded simple: process card payments for websites. Its early customers were businesses many banks saw
+    as high risk, such as online gambling and adult sites. {{founded.listing_spoken}}, it got onto the stock market
+    without a classic listing, by merging into a company that was already listed in Frankfurt.'
+  claims:
+  - founded
+- id: m1_draw
+  chapter: The rocket
+  narration: Let me draw what a payment processor does. You buy something online and tap your card. The shop sends
+    the payment to a processor. The processor checks it, talks to the card network and the banks, and makes sure
+    the shop gets paid. For each payment, it keeps a tiny fee. Millions of tiny fees can become a very big business.
+  claims: []
+  analysis: true
+  source_note: General explanation of card payment processing; no figures.
+- id: m1_asia
+  chapter: The rocket
+  narration: And Wirecard grew fast, especially far from home. By early twenty sixteen, about {{asia}} of its revenue
+    came from Southeast Asia and the Middle East. In twenty seventeen it reported revenue of {{asia.rev_spoken}}
+    for the first time.
+  claims:
+  - asia
+- id: m1_dax
+  chapter: The rocket
+  narration: Then came the big moment. In {{dax}}, Wirecard entered the DAX, Germany's index of its top companies,
+    and it pushed out Commerzbank, one of the country's biggest banks. Wirecard had {{dax.staff_spoken}} employees,
+    a tenth of the bank's, but was worth twice as much. At its peak, it was valued at about {{peak}}.
+  claims:
+  - dax
+  - peak
+- id: m1_transition
+  chapter: The rocket
+  narration: 'A German fintech champion, at last. But some people were already asking a simple question: where does
+    all this money actually come from?'
+  claims: []
+- id: m2_card
+  chapter: The warnings
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: The warnings
+  narration: Who saw the problems first? And why did almost nobody listen?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_ft
+  chapter: The warnings
+  narration: '{{ft_2015}}, a journalist at the Financial Times, Dan McCrum, began asking questions about Wirecard''s
+    acquisitions and its accounts. In January twenty nineteen, the paper went further. Based on a whistleblower,
+    a former head of legal for Wirecard in Asia, it reported suspicions about the company''s business in Singapore.'
+  claims:
+  - ft_2015
+- id: m2_bafin
+  chapter: The warnings
+  narration: What happened next was extraordinary. Germany's financial regulator, BaFin, did not turn on the company.
+    It banned investors from betting against Wirecard's shares for {{short_ban}}, the first time it had ever done
+    that for a single stock. And prosecutors in Munich opened an investigation into a Financial Times journalist,
+    after a criminal complaint. The newspaper rejected the allegations as baseless and false.
+  claims:
+  - short_ban
+- id: m2_draw
+  chapter: The warnings
+  narration: 'Let me draw how strange that was. On one side, the journalists and the short sellers, saying: look
+    at these numbers. On the other, the company, saying: we are being attacked. And in the middle, the watchdog
+    that is supposed to protect investors. It pointed its finger at the critics.'
+  claims:
+  - short_ban
+  analysis: true
+  source_note: Conceptual diagram; the regulator's actions are from Reuters and the Irish Times.
+- id: m2_transition
+  chapter: The warnings
+  narration: So the critics were wrong? To find out, someone had to go and find the money.
+  claims: []
+- id: m3_card
+  chapter: The money that wasn't there
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The money that wasn't there
+  narration: Where was Wirecard's money supposed to be? And why couldn't anyone see it?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_tpa
+  chapter: The money that wasn't there
+  narration: 'An important part of Wirecard''s business ran through so-called third-party partners: other companies
+    in Asia and the Middle East that processed payments for Wirecard''s customers. Wirecard booked the revenue.
+    And the cash from that business, it said, sat in special trust accounts, held for it by a trustee.'
+  claims:
+  - kpmg
+  - missing
+  source_note: Description of the third-party acquiring business and trust accounts as reported (Wirecard release,
+    Irish Times, Al Jazeera).
+- id: m3_kpmg
+  chapter: The money that wasn't there
+  narration: In April twenty twenty, a special investigation by the auditor {{kpmg}} was supposed to settle the
+    question. It did not. According to Wirecard's own statement, not all the data needed to prove the revenues of
+    that business could be obtained, because it was in the hands of the partners. Wirecard, for its part, said the
+    investigation had found no incriminating evidence of balance sheet forgery.
+  claims:
+  - kpmg
+- id: m3_ey
+  chapter: The money that wasn't there
+  narration: Then, on June eighteenth, twenty twenty, Wirecard's regular auditor, EY, refused to sign the accounts.
+    Cash worth {{missing}} could not be confirmed. There were indications, the company said, that a trustee had
+    tried to deceive the auditor. That day, the shares fell by as much as {{missing.drop_spoken}}.
+  claims:
+  - missing
+- id: m3_banks
+  chapter: The money that wasn't there
+  narration: 'The search ended in the Philippines, where the money was supposed to be held in two banks. Both said
+    the documents were false, and that Wirecard was not even a client. The Philippine central bank said the money
+    did not seem to have entered the country at all. Four days later, Wirecard admitted it: the money most likely
+    did not exist. That was {{missing.assets_spoken}} of everything the company said it owned.'
+  claims:
+  - missing
+- id: m3_transition
+  chapter: The money that wasn't there
+  narration: A company worth billions had built its success, at least in part, on cash that wasn't there. What happened
+    next took one week.
+  claims:
+  - missing
+- id: m4_card
+  chapter: The collapse
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The collapse
+  narration: How fast can a star company fall?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_week
+  chapter: The collapse
+  narration: Very fast. On June nineteenth, the chief executive, Markus Braun, resigned. On June twenty-fifth, Wirecard
+    filed for insolvency. It became the first company in the DAX ever to go out of business, leaving creditors owed
+    {{insolvency}}. A company once valued at {{peak}} was gone.
+  claims:
+  - missing
+  - insolvency
+  - peak
+- id: m4_marsalek
+  chapter: The collapse
+  narration: And one man vanished. Jan Marsalek, Wirecard's chief operating officer, is wanted by German authorities.
+    His whereabouts are unknown, but he is {{marsalek}}. In twenty twenty-five, a court in London convicted members
+    of a spy ring working for Russia. According to British prosecutors, its leader reported to Marsalek. Between
+    twenty twenty and twenty twenty-three, prosecutors said, the group gathered information about people and places
+    of interest to the Russian state.
+  claims:
+  - marsalek
+- id: m4_trial
+  chapter: The collapse
+  narration: 'Markus Braun went on trial in Munich in {{trial}}, accused of commercial gang fraud, false accounting
+    and breach of trust. If convicted, he faces {{trial.max_spoken}} in prison. He rejects all the charges, and
+    has blamed Marsalek. The trial has gone on for years: the court set new hearing dates until the end of twenty
+    twenty-six. Until there is a verdict, he is presumed innocent.'
+  claims:
+  - trial
+- id: m4_transition
+  chapter: The collapse
+  narration: But a fraud of this size does not happen without many people looking the other way. So who failed?
+  claims: []
+  analysis: true
+  source_note: Framing; prosecutors' allegations are not presented as proven.
+- id: m5_card
+  chapter: Who failed
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Who failed
+  narration: 'Auditors, regulators, investors: who was supposed to catch it?'
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_auditor
+  chapter: Who failed
+  narration: First, the auditor. EY had signed off Wirecard's accounts without objections for {{ey_ban.decade_spoken}}.
+    In twenty twenty-three, the German audit watchdog banned it from taking on new listed audit clients in Germany
+    for {{ey_ban}}, and fined the firm and several current and former employees.
+  claims:
+  - ey_ban
+- id: m5_regulator
+  chapter: Who failed
+  narration: Then, the regulator. In {{hufeld}}, the head of BaFin, Felix Hufeld, left his post. The finance minister
+    at the time, Olaf Scholz, said it would allow a fresh start at an organisation that had overlooked Germany's
+    greatest postwar accounting fraud.
+  claims:
+  - hufeld
+- id: m5_draw
+  chapter: Who failed
+  narration: Let me draw the safety net that was supposed to work. The company reports its numbers. The auditor
+    checks them. The regulator watches the market. Journalists and investors ask hard questions. At Wirecard, the
+    last line, the critics, was the one that worked. The official checks, the ones everyone trusted, came too late.
+  claims:
+  - ey_ban
+  - hufeld
+  - ft_2015
+  analysis: true
+  source_note: Conceptual diagram of the checks; conclusions drawn from the sourced facts.
+- id: m5_lesson
+  chapter: Who failed
+  narration: The lesson is not only about one company. When a story is exciting, a national champion, a tech success,
+    a rising share price, people want to believe it. And the questions that could ruin the story are the ones nobody
+    wants to ask. Every check in the system assumed that someone else had already checked. And for years, the people
+    who did ask were treated as the problem.
+  claims:
+  - short_ban
+  analysis: true
+  source_note: Conclusion.
+- id: payoff
+  chapter: The lesson
+  narration: So, the two billion dollars that never existed were not stolen from a vault. They were never in one.
+    They lived in documents, in trust and in confidence, until someone finally asked to see them. And when they
+    looked, there was nothing there.
+  claims:
+  - missing
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts; the title rounds the converted US$2.2bn to $2 billion.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
