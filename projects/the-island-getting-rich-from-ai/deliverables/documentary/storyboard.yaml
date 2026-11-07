@@ -1889,89 +1889,112 @@ scenes:
   - font:inter
 - id: s36_tv
   segment: m5_tv
-  type: engine_map
+  type: engine_cartoon
   params:
-    title: .tv · Tuvalu
-    subtitle: a hit with video sites, including Twitch · {{tv_io.display}} names at its peak, now in decline (Afnic)
-    cameras:
+    worldW: 2800
+    coasts:
+      left: true
+      leftLabel: VIDEO SITES
+    cam:
     - at: 0
-      lon: -120
-      lat: 10
-      span: 200
+      x: 1700
+      y: 380
+      zoom: 1.15
     - at:
-        cue: Tuvalu
-      lon: 179.2
-      lat: -8.5
-      span: 30
+        cue: video sites
+      x: 1250
+      y: 420
+      zoom: 0.85
       dur: 2.6
     - at:
-        cue: Twitch
-      lon: 175
-      lat: -6
-      span: 60
-      dur: 3.0
-    - at:
         cue: in decline
-      lon: 179.2
-      lat: -8.5
-      span: 22
-      dur: 3.0
-    drift:
-      lon: 0.1
-      zoom: 0.012
-    tilt:
-    - - 0
-      - 12
-    - - 12
-      - 4
-    highlights:
-    - iso: TUV
-      color: accent2
+      x: 1800
+      y: 380
+      zoom: 1.1
+      dur: 2.0
+    drift: 0
+    actors:
+    - kind: island
+      x: 1900
+      w: 440
+      text: TUVALU
+    - kind: letters
+      text: .tv
+      x: 1860
+      y: 150
+      at:
+        cue: owns dot T V
+      size: 140
+      color: blue
+    - kind: office
+      x: 150
+      text: VIDEO SITE
+      color: blue
+      scale: 1.0
+    - kind: office
+      x: 310
+      text: STREAMING
+      color: purple
+      scale: 0.8
+    - kind: coins
+      x: 250
+      y: 100
+      to:
+      - 1900
+      - 260
+      at:
+        cue: video sites
+      rate: 8
+      until:
+        cue: Today
+    - kind: coins
+      x: 250
+      y: 100
+      to:
+      - 1900
+      - 260
+      at:
+        cue: Today
+        offset: 0.5
+      rate: 1.0
+    callouts:
+    - text: Tuvalu, in the Pacific
+      x: 1900
+      y: 120
       at:
         cue: Tuvalu
-    hubs:
-    - id: t
-      at: &id003
-      - 179.2
-      - -8.5
-      label: Tuvalu
-      sub: .tv
-      color: accent2
-      time:
-        cue: owns dot T V
-    routes:
-    - from:
-      - -122.4
-      - 37.8
-      to: *id003
-      at:
-        cue: owns dot T V
-        offset: 0.5
-      dur: 1.6
-      color: accent2
-      tokenShape: coin
-      tokens: 40
-      tokenEvery: 0.45
-      lift: 0.2
-    - from:
-      - 139.7
-      - 35.7
-      to: *id003
+      color: white
+      until:
+        cue: video sites
+    - text: A hit with video sites, incl. Twitch
+      x: 960
+      y: 960
       at:
         cue: Twitch
-      dur: 1.4
-      color: accent2
-      tokenShape: coin
-      tokens: 40
-      tokenEvery: 0.45
-      lift: 0.2
-    caption: Real location (Natural Earth, public domain)
+      color: gold
+      screen: true
+    - text: '{{tv_io.display}} names at its peak'
+      x: 960
+      y: 160
+      at:
+        cue: At its peak
+      color: green
+      sub: Afnic
+      size: 40
+      screen: true
+    - text: Now in decline
+      x: 960
+      y: 260
+      at:
+        cue: in decline
+      color: risk
+      size: 40
+      screen: true
+    fish: 3
   sources:
   - afnic_2025
   - theworld_tv
-  - natural_earth
   assets:
-  - geo:remotion_world
   - font:inter
 - id: s37_io
   segment: m5_io
@@ -2005,7 +2028,7 @@ scenes:
         cue: Mauritius
     hubs:
     - id: c
-      at: &id004
+      at: &id003
       - 72.4
       - -7.3
       label: British Indian Ocean Territory
@@ -2014,7 +2037,7 @@ scenes:
       time:
         cue: belongs to
     - id: m
-      at: &id005
+      at: &id004
       - 57.55
       - -20.2
       label: Mauritius
@@ -2022,8 +2045,8 @@ scenes:
       time:
         cue: Mauritius
     routes:
-    - from: *id004
-      to: *id005
+    - from: *id003
+      to: *id004
       at:
         cue: Mauritius
         offset: 0.3

@@ -340,17 +340,18 @@ cart("s35_renew", "m5_renewals", {
     "callouts": [co("Renewals = the real test", 1000, 160, C("real test"), "gold", size=44),
                  co("Stop renewing → less money, two years later", 1000, 270, C("owners stop"), "risk"),
                  co("A slow leak?", 1500, 400, C("slow leak"), "white")]})
-add("s36_tv", "m5_tv", "engine_map", {
-    "title": ".tv · Tuvalu", "subtitle": "a hit with video sites, including Twitch · {{tv_io.display}} names at its peak, now in decline (Afnic)",
-    "cameras": [{"at": 0, "lon": -120, "lat": 10, "span": 200}, {"at": C("Tuvalu"), "lon": 179.2, "lat": -8.5, "span": 30, "dur": 2.6},
-                {"at": C("Twitch"), "lon": 175, "lat": -6, "span": 60, "dur": 3.0}, {"at": C("in decline"), "lon": 179.2, "lat": -8.5, "span": 22, "dur": 3.0}],
-    "drift": {"lon": 0.1, "zoom": 0.012}, "tilt": [[0, 12], [12, 4]],
-    "highlights": [{"iso": "TUV", "color": "accent2", "at": C("Tuvalu")}],
-    "hubs": [{"id": "t", "at": LL["tuvalu"], "label": "Tuvalu", "sub": ".tv", "color": "accent2", "time": C("owns dot T V")}],
-    "routes": [{"from": [-122.4, 37.8], "to": LL["tuvalu"], "at": C("owns dot T V", 0.5), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 40, "tokenEvery": 0.45, "lift": 0.2},
-               {"from": [139.7, 35.7], "to": LL["tuvalu"], "at": C("Twitch"), "dur": 1.4, "color": "accent2", "tokenShape": "coin", "tokens": 40, "tokenEvery": 0.45, "lift": 0.2}],
-    "caption": "Real location (Natural Earth, public domain)"},
-    sources=["afnic_2025", "theworld_tv", "natural_earth"], assets=GEO)
+cart("s36_tv", "m5_tv", {
+    "worldW": 2800, "coasts": {"left": True, "leftLabel": "VIDEO SITES"},
+    "cam": [{"at": 0, "x": 1700, "y": 380, "zoom": 1.15}, {"at": C("video sites"), "x": 1250, "y": 420, "zoom": 0.85, "dur": 2.6},
+            {"at": C("in decline"), "x": 1800, "y": 380, "zoom": 1.1, "dur": 2.0}], "drift": 0,
+    "actors": [island(x=1900, text="TUVALU"), letters(x=1860, y=150, at=C("owns dot T V"), size=140, text=".tv", color="blue"),
+               office(150, "VIDEO SITE", "blue"), office(310, "STREAMING", "purple", scale=0.8),
+               coins(250, 100, [1900, 260], C("video sites"), rate=8, until=C("Today")), coins(250, 100, [1900, 260], C("Today", 0.5), rate=1.0)],
+    "callouts": [co("Tuvalu, in the Pacific", 1900, 120, C("Tuvalu"), "white", until=C("video sites")),
+                 co("A hit with video sites, incl. Twitch", 960, 960, C("Twitch"), "gold", screen=True),
+                 co("{{tv_io.display}} names at its peak", 960, 160, C("At its peak"), "green", screen=True, size=40, sub="Afnic"),
+                 co("Now in decline", 960, 260, C("in decline"), "risk", screen=True, size=40)]},
+    sources=["afnic_2025", "theworld_tv"])
 add("s37_io", "m5_io", "engine_map", {
     "title": ".io · British Indian Ocean Territory", "subtitle": "loved by tech start-ups · the territory is being transferred to Mauritius (Afnic)",
     "cameras": [{"at": 0, "lon": 60, "lat": 0, "span": 120}, {"at": C("British Indian"), "lon": 66, "lat": -13, "span": 40, "dur": 2.4}],
