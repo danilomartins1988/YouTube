@@ -17,7 +17,10 @@ export type CartoonCable = {dy?: number; color?: string; lightAt?: number; break
   /** index of a 'layer' actor: the cable ends at that ship and rises to its stern (cable being laid) */
   follow?: number};
 export type CartoonActor = {
-  kind: 'cargo' | 'fishing' | 'repair' | 'layer' | 'satellite' | 'volcano' | 'whale' | 'island';
+  kind: 'cargo' | 'fishing' | 'repair' | 'layer' | 'satellite' | 'volcano' | 'whale' | 'island'
+    | 'letters' | 'coins' | 'plane' | 'storm' | 'office' | 'piggy';
+  /** letters/office/plane: the text shown; coins: [x2, y2] target, rate per second, until */
+  text?: string; to?: [number, number]; rate?: number; until?: number; size?: number;
   at?: number; x?: number | [number, number][]; y?: number; name?: string; color?: string; scale?: number;
   flip?: boolean;
   anchorAt?: number; sinkAt?: number; smokeAt?: number; netAt?: number;
@@ -220,6 +223,8 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
         return <g key={i}><path d={`M ${hx - 36} ${hy} L ${hx} ${hy - 36} L ${hx + 36} ${hy} Z`} fill="#E2504C" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
           <rect x={hx - 28} y={hy} width={56} height={44} fill={K.cream} stroke={OL} strokeWidth={4} />
           <rect x={hx - 10} y={hy + 10} width={20} height={18} fill={dark ? '#2A3550' : K.gold} stroke={OL} strokeWidth={3} /></g>; })}
+      {a.text && <g transform={`translate(${x - 40} ${sea + 4})`}><rect x={-90} y={-4} width={180} height={34} rx={17} fill={K.white} stroke={OL} strokeWidth={3} />
+        <text x={0} y={21} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={20} fill={OL}>{a.text}</text></g>}
       {dark && <text x={x - 30} y={top - 120} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={54} fill={K.white} stroke={OL} strokeWidth={3}>?!</text>}
     </g>;
   };
@@ -234,11 +239,89 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
     </g>;
   };
 
+
+  /** giant bouncy letters (e.g. ".ai") that land with squash and stretch, then wobble */
+  const Letters: React.FC<{a: CartoonActor}> = ({a}) => {
+    const x = xOf(a, t), y = a.y ?? sea - 200, size = a.size ?? 150, at = a.at ?? 0;
+    const fall = E.in(win(t, at, 0.5)), land = win(t, at + 0.5, 0.5);
+    const sq = land > 0 && land < 1 ? Math.sin(land * Math.PI) * 0.25 : 0;
+    const yy = lerp(y - 700, y, fall) + Math.sin(t * 2) * 6 * (land >= 1 ? 1 : 0);
+    const col = a.color === 'blue' ? '#3D7BE0' : a.color === 'green' ? '#2EAD63' : a.color === 'grey' ? '#B8C1CF' : K.gold;
+    return <g transform={`translate(${x} ${yy}) scale(${1 + sq} ${1 - sq}) rotate(${Math.sin(t * 1.6) * 3})`}>
+      <text x={6} y={8} textAnchor="middle" fontFamily="Inter Display, Inter, sans-serif" fontWeight={900} fontSize={size} fill={OL}>{a.text}</text>
+      <text x={0} y={0} textAnchor="middle" fontFamily="Inter Display, Inter, sans-serif" fontWeight={900} fontSize={size} fill={col} stroke={OL} strokeWidth={6} paintOrder="stroke">{a.text}</text>
+      {land >= 1 && [0, 1, 2, 3].map((i) => <path key={i} d={`M ${-size * 0.9 + i * size * 0.6} ${-size * 0.95} l ${8 * Math.sin(t * 4 + i)} -22`} stroke={K.white} strokeWidth={6} strokeLinecap="round" opacity={0.5 + 0.5 * Math.sin(t * 5 + i)} />)}
+    </g>;
+  };
+  /** a stream of gold coins arcing from one point to another (money flowing to the island) */
+  const Coins: React.FC<{a: CartoonActor}> = ({a}) => {
+    const x0 = xOf(a, t), y0 = a.y ?? sea - 300, [x1, y1] = a.to ?? [x0 + 600, sea - 100], at = a.at ?? 0;
+    const rate = a.rate ?? 4, end = a.until ?? 1e9, fly = 1.6, out: React.ReactNode[] = [];
+    const n = Math.min(200, Math.floor((Math.min(t, end) - at) * rate) + 1);
+    for (let k = Math.max(0, n - Math.ceil(rate * fly) - 1); k < n; k++) {
+      const u = (t - (at + k / rate)) / fly; if (u < 0 || u > 1) continue;
+      const cx = lerp(x0, x1, u) + Math.sin(k * 1.7) * 30 * (1 - u), cy = lerp(y0, y1, u) - Math.sin(Math.PI * u) * 220;
+      const spin = Math.abs(Math.cos(t * 8 + k));
+      out.push(<g key={k} transform={`translate(${cx} ${cy}) scale(${0.3 + 0.7 * spin} 1)`}><circle r={18} fill={K.gold} stroke={OL} strokeWidth={4} />
+        <text x={0} y={7} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={20} fill={OL}>$</text></g>);
+    }
+    return <g>{out}</g>;
+  };
+  const Plane: React.FC<{a: CartoonActor}> = ({a}) => {
+    const x = xOf(a, t), y = (a.y ?? 160) + Math.sin(t * 2) * 8, f = a.flip ? -1 : 1, s = a.scale ?? 1;
+    return <g>
+      {a.text && <g><path d={`M ${x - f * 150 * s} ${y} L ${x - f * 220 * s} ${y}`} stroke={OL} strokeWidth={3} />
+        <rect x={f > 0 ? x - 220 * s - a.text.length * 15 - 30 : x + 220 * s} y={y - 24} width={a.text.length * 15 + 30} height={48} rx={8} fill={K.white} stroke={OL} strokeWidth={4} transform={`rotate(${Math.sin(t * 3) * 2} ${x} ${y})`} />
+        <text x={f > 0 ? x - 220 * s - (a.text.length * 15 + 30) / 2 : x + 220 * s + (a.text.length * 15 + 30) / 2} y={y + 8} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={24} fill={OL}>{a.text}</text></g>}
+      <g transform={`translate(${x} ${y}) scale(${f * s} ${s})`}>
+        <path d="M -150 0 Q -140 -30 -60 -30 L 110 -30 Q 160 -28 170 0 Q 160 26 110 28 L -60 28 Q -140 28 -150 0 Z" fill={K.white} stroke={OL} strokeWidth={5} />
+        <path d="M -20 -10 L -80 -90 L -40 -90 L 40 -10 Z M -120 -20 L -150 -70 L -125 -70 L -95 -25 Z" fill="#3D7BE0" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+        {[0, 1, 2, 3, 4].map((i) => <circle key={i} cx={-40 + i * 32} cy={-6} r={8} fill={K.light} stroke={OL} strokeWidth={3} />)}
+      </g></g>;
+  };
+  const Storm: React.FC<{a: CartoonActor}> = ({a}) => {
+    const x = xOf(a, t), y = a.y ?? 150, s = a.scale ?? 1, at = a.at ?? 0, o = a.until !== undefined ? 1 - win(t, a.until, 0.8) : 1;
+    return <g opacity={o}>
+      {Array.from({length: 26}, (_, i) => { const u = ((t * 1.4 + i / 26) % 1); const rx = x - 260 * s + (i * 37) % (520 * s);
+        return <path key={i} d={`M ${rx + u * 40} ${y + 40 + u * (sea - y - 40)} l -12 34`} stroke="#9ED0FF" strokeWidth={4} strokeLinecap="round" opacity={0.8} />; })}
+      <g transform={`translate(${x} ${y}) rotate(${(t - at) * 160}) scale(${s})`}>
+        {[0, 1, 2].map((i) => <path key={i} d={`M 0 0 Q ${60 + i * 50} -${40 + i * 20} ${120 + i * 70} ${10 + i * 20}`} transform={`rotate(${i * 120})`} fill="none" stroke="#6E7F99" strokeWidth={30 - i * 6} strokeLinecap="round" />)}
+        <circle r={34} fill="#55627A" stroke={OL} strokeWidth={4} /></g>
+      {Array.from({length: 5}, (_, i) => { const u = ((t * 0.9 + i / 5) % 1);
+        return <path key={'w' + i} d={`M ${x + 200 + u * 500} ${y + 120 + i * 40} q 40 -20 80 0`} fill="none" stroke={K.white} strokeWidth={5} strokeLinecap="round" opacity={1 - u} />; })}
+    </g>;
+  };
+  const Office: React.FC<{a: CartoonActor}> = ({a}) => {
+    const x = xOf(a, t), base = a.y ?? sea - 76, s = a.scale ?? 1, h = 190 * s, w = 130 * s;
+    const col = a.color === 'blue' ? '#7FB3FF' : a.color === 'green' ? '#8FE3A8' : a.color === 'gold' ? '#FFD66B' : '#C9B8FF';
+    return <g>
+      <rect x={x - w / 2} y={base - h} width={w} height={h} rx={10} fill={col} stroke={OL} strokeWidth={5} />
+      {Array.from({length: 4}, (_, r) => [0, 1, 2].map((c2) => <rect key={`${r}${c2}`} x={x - w / 2 + 16 + c2 * (w - 32) / 3} y={base - h + 50 + r * 34} width={(w - 32) / 3 - 10} height={20} rx={3}
+        fill={Math.sin(t * 3 + r * 2 + c2) > -0.2 ? K.light : '#2A3550'} stroke={OL} strokeWidth={2} />))}
+      <rect x={x - w / 2 - 20} y={base - h - 46} width={w + 40} height={42} rx={10} fill={K.white} stroke={OL} strokeWidth={4} />
+      <text x={x} y={base - h - 17} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={22 * Math.min(1, 12 / Math.max(6, (a.text || '').length))} fill={OL}>{a.text}</text>
+    </g>;
+  };
+  const Piggy: React.FC<{a: CartoonActor}> = ({a}) => {
+    const x = xOf(a, t), y = a.y ?? sea - 130, s = (a.scale ?? 1) * (1 + 0.03 * Math.sin(t * 4)), at = a.at ?? 0;
+    const fill = clamp((t - at) / 6);
+    return <g transform={`translate(${x} ${y}) scale(${s})`}>
+      <ellipse cx={0} cy={0} rx={120} ry={90} fill="#FF9EB5" stroke={OL} strokeWidth={6} />
+      <rect x={-30} y={-96} width={60} height={12} rx={6} fill={OL} />
+      <ellipse cx={112} cy={6} rx={28} ry={22} fill="#FF86A3" stroke={OL} strokeWidth={5} /><circle cx={106} cy={4} r={4} fill={OL} /><circle cx={120} cy={4} r={4} fill={OL} />
+      <circle cx={60} cy={-30} r={9} fill={OL} />
+      <path d="M -60 -70 L -40 -110 L -20 -76 Z" fill="#FF86A3" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+      {[-70, -20, 30, 70].map((lx) => <rect key={lx} x={lx - 12} y={70} width={24} height={36} rx={8} fill="#FF86A3" stroke={OL} strokeWidth={5} />)}
+      <rect x={-80} y={110} width={160} height={14} rx={7} fill={K.white} stroke={OL} strokeWidth={3} /><rect x={-80} y={110} width={160 * fill} height={14} rx={7} fill={K.gold} />
+    </g>;
+  };
+
   const actorNode = (a: CartoonActor, i: number) => {
     if (a.at !== undefined && t < a.at) return null;
-    const pop = a.at !== undefined ? E.outBack(win(t, a.at, 0.6)) : 1;
+    const pop = a.at !== undefined && !['letters', 'coins', 'storm'].includes(a.kind) ? E.outBack(win(t, a.at, 0.6)) : 1;
     const node = a.kind === 'satellite' ? <Satellite a={a} /> : a.kind === 'volcano' ? <Volcano a={a} /> : a.kind === 'island' ? <Island a={a} />
-      : a.kind === 'whale' ? <Whale a={a} /> : <Ship a={a} />;
+      : a.kind === 'whale' ? <Whale a={a} /> : a.kind === 'letters' ? <Letters a={a} /> : a.kind === 'coins' ? <Coins a={a} /> : a.kind === 'plane' ? <Plane a={a} />
+      : a.kind === 'storm' ? <Storm a={a} /> : a.kind === 'office' ? <Office a={a} /> : a.kind === 'piggy' ? <Piggy a={a} /> : <Ship a={a} />;
     return <g key={i} opacity={clamp(pop * 1.4)}>{node}</g>;
   };
 

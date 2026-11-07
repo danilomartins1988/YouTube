@@ -1,0 +1,246 @@
+# Sources and claims for "The Tiny Island Getting Rich From AI" (Episode 10: Anguilla and the .ai domain).
+# Every claim was read in its source on 2026-11-07 by an AI fact-check (quotes in docs/episodes/10-anguilla/FACT_CHECK.md).
+# Status stays source_located: the channel rule requires a named human reviewer before publishing.
+# MONEY: Anguilla reports in Eastern Caribbean dollars (EC$), pegged at EC$2.70 = US$1 since 1976 (source eccb_peg).
+# Each US$ figure below is the one the source itself gives; it matches the official peg.
+sources:
+  - id: imf_2024
+    title: "An AI-Powered Boost to Anguilla's Revenues (2023 .ai revenue, share of revenue, registrations, price, tourism)"
+    publisher: International Monetary Fund (IMF)
+    url: https://www.imf.org/en/news/articles/2024/05/15/cf-an-ai-powered-boost-to-anguillas-revenues
+    published: "2024-05-15"
+    accessed: "2026-11-07"
+    credit: "IMF"
+  - id: ap_2024
+    title: "How the tiny Caribbean island of Anguilla has turned the AI boom into a digital gold mine"
+    publisher: Associated Press (via WLRN)
+    url: https://www.wlrn.org/americas/2024-10-15/how-the-tiny-caribbean-island-of-anguilla-has-turned-the-ai-boom-into-a-digital-gold-mine
+    published: "2024-10-15"
+    accessed: "2026-11-07"
+    credit: "AP"
+  - id: ieee_2024
+    title: "Why the AI Boom is a Windfall for Tiny Anguilla (interview with Vince Cate)"
+    publisher: IEEE Spectrum
+    url: https://spectrum.ieee.org/ai-domains
+    published: "2024-01-30"
+    accessed: "2026-11-07"
+    credit: "IEEE Spectrum"
+  - id: iana_ai
+    title: "Delegation Record for .AI (manager: Government of Anguilla)"
+    publisher: IANA
+    url: https://www.iana.org/domains/root/db/ai.html
+    accessed: "2026-11-07"
+    credit: "IANA"
+  - id: afnic_2025
+    title: ".AI, .IO and .TV and their surprising stories"
+    publisher: Afnic
+    url: https://www.afnic.fr/en/observatory-and-resources/expert-papers/ai-io-and-tv-and-their-surprising-stories/
+    published: "2025-08-09"
+    accessed: "2026-11-07"
+    credit: "Afnic"
+  - id: focus_2025
+    title: ".ai domain surge brings EC$230m windfall to Anguilla in 2025"
+    publisher: Anguilla Focus
+    url: https://anguillafocus.com/ai-domain-surge-brings-ec230m-windfall-to-anguilla-in-2025/
+    published: "2026-03-25"
+    accessed: "2026-11-07"
+    credit: "Anguilla Focus"
+  - id: gleaner_2026
+    title: "Anguilla's AI domain registration earns US$80m year-to-date, more than all taxes from productive sector"
+    publisher: The Gleaner
+    url: https://jamaica-gleaner.com/article/business/20261009/anguillas-ai-domain-registration-earns-us80m-year-date-more-all-taxes
+    published: "2026-10-09"
+    accessed: "2026-11-07"
+    credit: "The Gleaner"
+  - id: dnw_2026
+    title: ".AI namespace hits 1 million domain names"
+    publisher: Domain Name Wire
+    url: https://domainnamewire.com/2026/01/28/ai-namespace-hits-1-million-domain-names/
+    published: "2026-01-28"
+    accessed: "2026-11-07"
+    credit: "Domain Name Wire"
+  - id: theworld_tv
+    title: "Tuvalu cashes in on coveted internet domain (.tv, Twitch, GoDaddy)"
+    publisher: The World
+    url: https://theworld.org/segments/2024/04/04/pacific-nation-of-tuvalu-making-money-off-twitch-tv-domain
+    published: "2022-01-24"
+    accessed: "2026-11-07"
+    credit: "The World"
+  - id: eccb_peg
+    title: "ECCB celebrates 49 years of strength and stability of EC dollar peg (EC$2.70 = US$1.00 since 7 July 1976)"
+    publisher: Eastern Caribbean Central Bank
+    url: https://www.eccb-centralbank.org/news/eccb-celebrates-49-years-of-strength-and-stability-of-ec-dollar-peg
+    published: "2025-07"
+    accessed: "2026-11-07"
+    credit: "ECCB"
+  - id: focus_budget_2026
+    title: "Anguilla's 2026 Budget: 'A call to unity, shared purpose and common good'"
+    publisher: Anguilla Focus
+    url: https://anguillafocus.com/anguillas-2026-budget-a-call-to-unity-shared-purpose-and-common-good/
+    published: "2025-11-12"
+    accessed: "2026-11-07"
+    credit: "Anguilla Focus"
+  - id: natural_earth
+    title: "Natural Earth 1:50m Admin 0 Countries"
+    publisher: Natural Earth (public domain)
+    url: https://www.naturalearthdata.com/downloads/
+    accessed: "2026-11-07"
+    credit: "Natural Earth (public domain)"
+
+claims:
+  - id: island
+    text: "AP (Oct 2024): Anguilla has a population of about 16,000 and covers just 35 square miles (91 square kilometers)."
+    spoken: about 16,000 people
+    display: "≈ 16,000"
+    value: 16000
+    fields: {km_spoken: 91 square kilometers, km_display: "91 km²"}
+    source_ids: [ap_2024]
+    status: source_located
+    verification_note: Read on 2026-11-07 (AI fact-check). IEEE Spectrum says about 15,000 and Afnic "less than 20,000"; the film uses AP's figure.
+
+  - id: assigned
+    text: "Anguilla was assigned the .ai domain in 1995 (Premier Webster via AP; Afnic: available since 1995); IANA lists the Government of Anguilla as its manager."
+    spoken: In 1995
+    display: "1995"
+    value: 1995
+    source_ids: [ap_2024, afnic_2025, iana_ai]
+    status: source_located
+    verification_note: Read on 2026-11-07. IEEE Spectrum's article describes the assignment more loosely; the film says 1995.
+
+  - id: cate
+    text: "IEEE Spectrum (Jan 2024): software developer Vince Cate, who came to Anguilla in 1994, ran .ai sales for the government; he recounts that Jon Postel asked him whether he wanted to run .ai, that it was later handed to a company in Taiwan which disappeared, and that the domain was recovered."
+    spoken: In 1994
+    display: "1994"
+    value: 1994
+    source_ids: [ieee_2024]
+    status: source_located
+    verification_note: This is Cate's own account in an interview; the film attributes it to him.
+
+  - id: price
+    text: "IMF (May 2024): the pricing model is US$140 for a two-year registration; litigate.ai was auctioned for US$13,000 in 2023. AP: the fee of $140 for two years won't change under the new manager."
+    spoken: 140 dollars
+    display: "$140"
+    value: 140
+    fields: {auction_spoken: "13,000 dollars", auction_display: "$13,000"}
+    source_ids: [imf_2024, ap_2024]
+    status: source_located
+    verification_note: Read on 2026-11-07 (AI fact-check; needs a named human reviewer).
+
+  - id: regs
+    text: "IMF: registrations rose from 144,000 in 2022 to 354,000 in 2023. Domain Name Wire: the official count was 598,007 on 2 January 2025, and the Government of Anguilla announced in January 2026 that .ai passed one million domain names."
+    spoken: 144,000
+    display: "144,000"
+    value: 144000
+    fields: {y2023_spoken: "354,000", y2025_spoken: "about 600,000", million_spoken: one million}
+    source_ids: [imf_2024, dnw_2026]
+    status: source_located
+    verification_note: Read on 2026-11-07. "About 600,000" rounds the official 598,007.
+
+  - id: rev_2023
+    text: "IMF: in 2023 .ai registrations generated EC$87 million (approximately US$32 million), just over 20 percent of the government's total revenue; before the surge it hovered around 5 percent."
+    spoken: about 32 million dollars
+    display: "$32m"
+    value: 32
+    fields: {share_spoken: just over 20 percent, share_display: "> 20%", before_spoken: around 5 percent}
+    source_ids: [imf_2024, eccb_peg]
+    status: source_located
+    verification_note: Read on 2026-11-07. US$ figure as given by the IMF (consistent with the EC$2.70 peg).
+
+  - id: rev_2025
+    text: "Anguilla Focus (Mar 2026): Anguilla earned EC$230 million (US$85.3m) from .ai registrations in 2025, far exceeding the government's projection (EC$132 million in the draft estimates)."
+    spoken: about 85 million dollars
+    display: "$85m"
+    value: 85.3
+    fields: {proj_display: "$49m"}
+    source_ids: [focus_2025, eccb_peg]
+    status: source_located
+    verification_note: Read on 2026-11-07. The projection is stated as "$132m" in local currency in the article; US$49m is our conversion at the official peg (132 / 2.70 = 48.9).
+
+  - id: rev_2026
+    text: "The Gleaner (Oct 2026): .ai fees brought in EC$217 million (US$80 million) in the first seven months of 2026, 47.5 per cent of all government revenue to date, more than the EC$203 million in tax revenue from the territory's entire productive sector, according to Premier Cora Richardson Hodge."
+    spoken: 80 million dollars
+    display: "$80m"
+    value: 80
+    fields: {share_spoken: 47.5 percent, share_display: "47.5%", tax_display: "$75m"}
+    source_ids: [gleaner_2026, eccb_peg]
+    status: source_located
+    verification_note: Read on 2026-11-07. The productive-sector taxes (EC$203m) are shown as US$75m, our conversion at the official peg (203 / 2.70 = 75.2).
+
+  - id: per_person
+    text: "Our calculation: 2025 .ai revenue of US$85.3 million divided by a population of about 16,000 is roughly US$5,300 per resident."
+    spoken: about 5,300 dollars
+    display: "≈ $5,300"
+    value: 5300
+    source_ids: [focus_2025, ap_2024]
+    status: data_derived
+    verification_note: Simple division of two sourced figures; labelled "our calculation" on screen.
+
+  - id: uses
+    text: "Government of Anguilla (via Domain Name Wire): .ai revenue has supported airport and road development, tax relief for locals and increased health services for the young and elderly; AP: airport expansion and free medical care for senior citizens; IMF: pay down debt."
+    spoken: the airport
+    display: "airport · roads · health · tax relief"
+    source_ids: [dnw_2026, ap_2024, imf_2024]
+    status: source_located
+    verification_note: Read on 2026-11-07 (AI fact-check; needs a named human reviewer).
+
+  - id: manager
+    text: "AP (Oct 2024): Anguilla signed a deal with U.S.-based Identity Digital to manage .ai registrations, which the government said would mean more revenue and better resilience and security."
+    spoken: Identity Digital
+    display: "Identity Digital"
+    source_ids: [ap_2024, iana_ai]
+    status: source_located
+    verification_note: Read on 2026-11-07. The revenue split is not public; the film does not give one.
+
+  - id: tourism
+    text: "IMF (May 2024): tourism accounts for 37 percent of GDP. AP: tourism has been battered by the pandemic and, before that, a powerful hurricane."
+    spoken: 37 percent
+    display: "37%"
+    value: 37
+    source_ids: [imf_2024, ap_2024]
+    status: source_located
+    verification_note: Read on 2026-11-07. The hurricane is not named in the source, so the film does not name it.
+
+  - id: risk_quote
+    text: "AP (Oct 2024): Premier Ellis Webster said 'You can't predict how long this is going to last' and 'we can't rely on it solely'. IMF: the government expected .ai revenue to stabilize at around 15 percent of revenue."
+    spoken: around 15 percent
+    display: "≈ 15%"
+    value: 15
+    source_ids: [ap_2024, imf_2024]
+    status: source_located
+    verification_note: Read on 2026-11-07. The 15 percent was the government's 2024 expectation; later figures came in far higher.
+
+  - id: tv_io
+    text: "Afnic (Aug 2025): .tv (Tuvalu) reached over 500,000 names at its peak and is now in decline; .io belongs to the British Indian Ocean Territory, popular with start-ups since 2010, and the territory was recently transferred to Mauritius. The World: .tv was adopted by Twitch and became a major revenue source for Tuvalu, which struck a deal with GoDaddy."
+    spoken: 500,000
+    display: "500,000+"
+    value: 500000
+    source_ids: [afnic_2025, theworld_tv]
+    status: source_located
+    verification_note: Read on 2026-11-07. Tuvalu's revenue figures were not readable, so the film gives none.
+
+  - id: cate_sales
+    text: "IEEE Spectrum (Jan 2024), Vince Cate: 'It's about US $3 million per month' and 'our sales went up by almost a factor of four'."
+    spoken: about 3 million dollars a month
+    display: "$3m / month"
+    value: 3
+    source_ids: [ieee_2024]
+    status: source_located
+    verification_note: Cate's own statement, attributed to him.
+
+  - id: budget_2026
+    text: "Anguilla Focus (Nov 2025): total revenue for 2026 is projected at EC$597.4 million, up 6% from 2025; about US$221 million at the official peg (597.4 / 2.70)."
+    spoken: about 221 million dollars
+    display: "$221m"
+    value: 221
+    source_ids: [focus_budget_2026, eccb_peg]
+    status: source_located
+    verification_note: US$ figure is our conversion at the official EC$2.70 peg.
+
+  - id: surplus_2025
+    text: "Anguilla Focus (Nov 2025): the Premier cited a 2025 surplus of EC$87.3 million, largely driven by below-budget capital spending and non-tax revenue from .ai domain sales; domain sales help reduce public debt. About US$32 million at the official peg (87.3 / 2.70)."
+    spoken: about 32 million dollars
+    display: "$32m"
+    value: 32
+    source_ids: [focus_budget_2026, eccb_peg]
+    status: source_located
+    verification_note: US$ figure is our conversion at the official EC$2.70 peg.

@@ -52,16 +52,19 @@ export const Burst: React.FC<Themed & {t: number; at: number; cx: number; cy: nu
 /** Dark studio set: back wall with soft light panels, floor with reflection gradient, slow ambient light drift. */
 export const Studio: React.FC<Themed & {t: number; W?: number; H?: number; floorY?: number; opacity?: number}> = ({t, W = 1920, H = 1080, floorY = 960, opacity = 1, palette}) => {
   const P = pal(palette);
+  // a light episode palette (cartoon style) gets a sunny studio: sky-blue wall, sandy floor
+  const hex = (P.bg || '#000000').replace('#', ''), lum = (parseInt(hex.slice(0, 2), 16) * 0.3 + parseInt(hex.slice(2, 4), 16) * 0.59 + parseInt(hex.slice(4, 6), 16) * 0.11) / 255;
+  const light = lum > 0.6;
   const drift = Math.sin(t * 0.4) * 40;
   return (
     <g opacity={opacity}>
       <defs>
-        <linearGradient id="st-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#0A1628" /><stop offset="1" stopColor="#0C1A2E" /></linearGradient>
-        <linearGradient id="st-floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#111D30" /><stop offset="1" stopColor="#060C16" /></linearGradient>
+        <linearGradient id="st-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={light ? P.bg2 : '#0A1628'} /><stop offset="1" stopColor={light ? P.bg : '#0C1A2E'} /></linearGradient>
+        <linearGradient id="st-floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={light ? '#E9C98A' : '#111D30'} /><stop offset="1" stopColor={light ? '#C9A266' : '#060C16'} /></linearGradient>
         <radialGradient id="st-spot" cx="50%" cy="0%" r="80%"><stop offset="0" stopColor={P.gold} stopOpacity={0.12} /><stop offset="1" stopColor={P.gold} stopOpacity={0} /></radialGradient>
       </defs>
       <rect width={W} height={floorY} fill="url(#st-wall)" />
-      {[0, 1, 2, 3, 4].map((i) => <rect key={i} x={120 + i * 360 + drift * (i % 2 ? 1 : -1) * 0.2} y={60} width={6} height={floorY - 120} fill={P.grid} opacity={0.7} />)}
+      {[0, 1, 2, 3, 4].map((i) => <rect key={i} x={120 + i * 360 + drift * (i % 2 ? 1 : -1) * 0.2} y={60} width={6} height={floorY - 120} fill={light ? P.border : P.grid} opacity={light ? 0.12 : 0.7} />)}
       <rect width={W} height={floorY} fill="url(#st-spot)" transform={`translate(${drift} 0)`} />
       <rect y={floorY} width={W} height={H - floorY} fill="url(#st-floor)" />
       <line x1={0} x2={W} y1={floorY} y2={floorY} stroke={P.border} strokeWidth={2} />

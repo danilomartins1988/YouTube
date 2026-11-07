@@ -1,0 +1,276 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}}; years are written in words. Generic teaser (channel rule).
+logline: A tiny Caribbean island was handed two letters by chance in the nineteen nineties. Today those letters,
+  .ai, bring in almost half of its government's money. How it works, how big it got, what it pays for, and whether
+  it can last.
+title: The Tiny Island Getting Rich From AI
+segments:
+- id: h_question
+  chapter: The island
+  narration: What if a tiny island got rich from artificial intelligence, without building a single AI? No factories,
+    no data centers, no tech giants. Just two letters.
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_stakes
+  chapter: The island
+  narration: 'It''s happening. Anguilla, a Caribbean island of {{island}}, now earns {{rev_2026}} in just seven
+    months of twenty twenty-six from two letters: dot A I. That is {{rev_2026.share_spoken}} of all the money its
+    government collects.'
+  claims:
+  - island
+  - rev_2026
+- id: m1_card
+  chapter: The lucky letters
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The lucky letters
+  narration: So how did an island with no tech industry end up owning the most wanted letters on the internet?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_what
+  chapter: The lucky letters
+  narration: First, what is a domain name? Every website lives at a number, a bit like a phone number, that computers
+    use to find it. A domain name is the easy name that points to that number. And the last part, after the final
+    dot, is called the ending.
+  claims: []
+  analysis: true
+  source_note: General explanation of the domain name system; no figures.
+- id: m1_codes
+  chapter: The lucky letters
+  narration: Let me draw it. Every country on the internet gets its own two-letter ending. Brazil is dot B R. Japan
+    is dot J P. The letters come from each country's official code, not from what they might mean one day. And Anguilla's
+    code is A I.
+  claims: []
+  analysis: true
+  source_note: General explanation of country-code domains (ccTLDs follow ISO 3166 two-letter codes); no figures.
+- id: m1_assigned
+  chapter: The lucky letters
+  narration: '{{assigned}}, Anguilla was assigned dot A I. Back then, artificial intelligence was a niche idea in
+    labs, and the letters were worth almost nothing. Its official manager today is the Government of Anguilla. Nobody
+    on the island could have guessed what those two letters would one day be worth.'
+  claims:
+  - assigned
+- id: m1_cate
+  chapter: The lucky letters
+  narration: The early years were improvised. A software developer called Vince Cate, who moved to the island in
+    nineteen ninety-four, says he was asked by one of the internet's founders whether he wanted to run dot A I.
+    For a while the domain was even handed to a company in Taiwan that later disappeared, and it had to be recovered.
+    For years, Cate ran the sales for the government.
+  claims:
+  - cate
+  source_note: Cate's own account in IEEE Spectrum; attributed to him in the narration ("says").
+- id: m1_transition
+  chapter: The lucky letters
+  narration: Two letters, given away almost by accident. So how do they turn into money?
+  claims: []
+- id: m2_card
+  chapter: The money machine
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: The money machine
+  narration: Who actually pays Anguilla? And why would anyone pay for two letters?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_draw
+  chapter: The money machine
+  narration: Let me draw the money machine. A start-up anywhere in the world wants a name that ends in dot A I.
+    It buys it from a website that sells domain names. That seller passes the order to the registry, the system
+    that keeps the master list of every dot A I name. And the registry pays the Government of Anguilla.
+  claims:
+  - manager
+  analysis: true
+  source_note: General description of the domain registration chain; the registry operator is from AP.
+- id: m2_price
+  chapter: The money machine
+  narration: The price is simple. A new name costs about {{price}} for two years. Then you pay again to keep it,
+    every time it comes up for renewal. And the best names are auctioned. In twenty twenty-three, litigate dot A
+    I went for {{price.auction_spoken}}. And when a name expires and nobody renews it, it can be sold again, and
+    the island is paid once more.
+  claims:
+  - price
+- id: m2_renew
+  chapter: The money machine
+  narration: Here is the clever part. A domain name is never really bought. It is rented. Stop paying, and you lose
+    it. So every name sold today comes back as money two years later, and two years after that. For Anguilla, the
+    AI boom became a subscription.
+  claims: []
+  analysis: true
+  source_note: Interpretation of the renewal model described by the IMF and AP; no figures.
+- id: m2_why
+  chapter: The money machine
+  narration: Why pay? Because for an AI company, a name that ends in dot A I tells the world what it does in two
+    letters. It works like a brand. And with so many new AI start-ups, everyone wants one.
+  claims: []
+  analysis: true
+  source_note: Interpretation of demand; no figures.
+- id: m2_manager
+  chapter: The money machine
+  narration: In twenty twenty-four, as the rush grew, Anguilla signed a deal with an American company, Identity
+    Digital, to run the registry. The government said it would bring more money, and make the system safer.
+  claims:
+  - manager
+- id: m2_transition
+  chapter: The money machine
+  narration: A small fee, paid again and again. Now multiply it by the AI boom.
+  claims: []
+- id: m3_card
+  chapter: The boom
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The boom
+  narration: So how big did it get? When chatbots went mainstream, the world suddenly wanted dot A I.
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_regs
+  chapter: The boom
+  narration: In twenty twenty-two, there were {{regs}} registered dot A I names. A year later, {{regs.y2023_spoken}}.
+    By the start of twenty twenty-five, {{regs.y2025_spoken}}. And in January twenty twenty-six, the government
+    announced that dot A I had passed {{regs.million_spoken}} names.
+  claims:
+  - regs
+- id: m3_cate
+  chapter: The boom
+  narration: Vince Cate watched it happen from his office. At the start of twenty twenty-four he said sales had
+    gone up almost four times, to {{cate_sales}}.
+  claims:
+  - cate_sales
+- id: m3_revenue
+  chapter: The boom
+  narration: The money followed. Before the boom, the domain brought in {{rev_2023.before_spoken}} of the government's
+    revenue. In twenty twenty-three, it was {{rev_2023}}, {{rev_2023.share_spoken}} of everything the government
+    collected. In twenty twenty-five, {{rev_2025}}, far more than the government itself had planned.
+  claims:
+  - rev_2023
+  - rev_2025
+- id: m3_peak
+  chapter: The boom
+  narration: And in the first seven months of twenty twenty-six, {{rev_2026}}. That is {{rev_2026.share_spoken}}
+    of all government revenue, and more than all the taxes paid by the island's entire productive sector in the
+    same period.
+  claims:
+  - rev_2026
+- id: m3_transition
+  chapter: The boom
+  narration: So what does a tiny island do with that much money?
+  claims: []
+- id: m4_card
+  chapter: What the money buys
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: What the money buys
+  narration: Where does all this money go? And how much is it for the people who actually live there?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_uses
+  chapter: What the money buys
+  narration: The government says dot A I money has helped pay for the airport, new roads, tax relief for locals,
+    and more health services for the young and the elderly, including free medical care for senior citizens. Part
+    of it was also used to pay down debt.
+  claims:
+  - uses
+- id: m4_person
+  chapter: What the money buys
+  narration: Now do the math. In twenty twenty-five, the island earned {{rev_2025}} from the domain. Divide it by
+    {{island}}, and it is {{per_person}} for every resident, from two letters on a screen.
+  claims:
+  - rev_2025
+  - island
+  - per_person
+  source_note: Per-person figure is our calculation (per_person, data_derived).
+- id: m4_budget
+  chapter: What the money buys
+  narration: For comparison, the whole government of Anguilla plans to collect {{budget_2026}} in twenty twenty-six.
+    A big part of that now depends on how many people, all over the world, want a name that ends in dot A I.
+  claims:
+  - budget_2026
+- id: m4_tourism
+  chapter: What the money buys
+  narration: For an island like this, that changes everything. Tourism makes up {{tourism}} of the economy, and
+    it has been hit hard, by a powerful hurricane and then by the pandemic. The domain gives the government a second
+    engine, one that no storm can blow away.
+  claims:
+  - tourism
+  source_note: '"No storm can blow away" is a figure of speech: the revenue comes from abroad and online.'
+- id: m4_transition
+  chapter: What the money buys
+  narration: But money that falls from the sky can also stop falling. Can it last?
+  claims: []
+- id: m5_card
+  chapter: Can it last
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Can it last
+  narration: What happens to Anguilla if the AI boom cools down? Its own leaders have asked the same question.
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_quote
+  chapter: Can it last
+  narration: 'In twenty twenty-four, the island''s premier said: "You can''t predict how long this is going to last."
+    And, "we can''t rely on it solely." At the time, the government expected the domain to settle at {{risk_quote}}
+    of its revenue. Instead, it shot far higher.'
+  claims:
+  - risk_quote
+- id: m5_renewals
+  chapter: Can it last
+  narration: The real test is renewals. Many names were bought in the rush. If AI start-ups close, or the hype fades,
+    owners stop renewing, and the money shrinks two years later. The boom could turn into a slow leak.
+  claims: []
+  analysis: true
+  source_note: Interpretation of the renewal risk; no figures.
+- id: m5_tv
+  chapter: Can it last
+  narration: There is a warning from the other side of the world. Tuvalu, in the Pacific, owns dot T V. It became
+    a hit with video sites, including the streaming platform Twitch. At its peak it had more than {{tv_io}} names.
+    Today, it is in decline.
+  claims:
+  - tv_io
+- id: m5_io
+  chapter: Can it last
+  narration: And dot I O, loved by tech start-ups, belongs to the British Indian Ocean Territory, a group of islands
+    that is being transferred to Mauritius. Lucky letters can change hands, and fashions can change.
+  claims:
+  - tv_io
+- id: m5_save
+  chapter: Can it last
+  narration: So far, Anguilla is saving part of it. In twenty twenty-five, the government ended the year with a
+    surplus of {{surplus_2025}}, largely thanks to the domain. And it has used dot A I money to cut its debt.
+  claims:
+  - surplus_2025
+- id: m5_draw
+  chapter: Can it last
+  narration: 'Let me draw the choice Anguilla faces. On one side, spend the windfall as if it will last forever.
+    On the other, save part of it and invest in things that will still matter when the hype is over: an airport,
+    roads, health care, and a cushion for the next storm.'
+  claims:
+  - uses
+  analysis: true
+  source_note: Conceptual diagram of a windfall-revenue choice; no figures.
+- id: payoff
+  chapter: The lucky island
+  narration: 'So, Anguilla didn''t invent artificial intelligence. It didn''t build a single data center. It simply
+    owned the right two letters at the right moment in history. And every time someone, somewhere, names a new AI
+    company, a little piece of that idea travels across the ocean, to a small island in the Caribbean. The lesson
+    is not only about luck. It is about what you do when luck arrives: spend it, or turn it into something that
+    lasts.'
+  claims:
+  - rev_2026
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lucky island
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

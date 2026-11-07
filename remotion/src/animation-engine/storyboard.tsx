@@ -54,14 +54,14 @@ export const EngineDrawScene: React.FC = () => {
       </g>
       {p.presenter !== false && <AnimatedPresenter t={ctx.t} actions={actions} floor={p.floor ?? 960} scale={p.scale ?? 0.9}
         startX={p.enter?.from ?? -260} talk={[[ctx.scene.lead, ctx.scene.lead + ctx.scene.speech]]} />}
-      <Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} />
+      <Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} palette={p.palette} />
     </svg>
   );
 };
 
 export const EngineFlowScene: React.FC = () => {
   const {ctx, p} = useParams();
-  return <svg width={ctx.W} height={ctx.H}><EconomicFlow t={ctx.t} {...p} /><Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} /></svg>;
+  return <svg width={ctx.W} height={ctx.H}><EconomicFlow t={ctx.t} {...p} /><Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} palette={p.palette} /></svg>;
 };
 
 export const EngineMapScene: React.FC = () => {
@@ -69,19 +69,19 @@ export const EngineMapScene: React.FC = () => {
   const geo = useGeo(p.geo || 'world');
   return <div style={{position: 'absolute', inset: 0}}>
     <AnimatedWorldMap t={ctx.t} geo={geo} {...p} />
-    <svg width={ctx.W} height={ctx.H} style={{position: 'absolute', inset: 0}}><Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} /></svg>
+    <svg width={ctx.W} height={ctx.H} style={{position: 'absolute', inset: 0}}><Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} palette={p.palette} /></svg>
   </div>;
 };
 
 export const EngineChartScene: React.FC = () => {
   const {ctx, p} = useParams();
   const C = p.chart === 'line' ? LineChart : p.chart === 'donut' ? Donut : BarChart;
-  return <svg width={ctx.W} height={ctx.H}><C t={ctx.t} {...(p as any)} />{p.chart === 'donut' && <Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} />}</svg>;
+  return <svg width={ctx.W} height={ctx.H}><C t={ctx.t} {...(p as any)} />{p.chart === 'donut' && <Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} palette={p.palette} />}</svg>;
 };
 
 export const EngineExplodedScene: React.FC = () => {
   const {ctx, p} = useParams();
-  return <svg width={ctx.W} height={ctx.H}><ExplodedDiagram t={ctx.t} {...(p as any)} /><Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} /></svg>;
+  return <svg width={ctx.W} height={ctx.H}><ExplodedDiagram t={ctx.t} {...(p as any)} /><Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} palette={p.palette} /></svg>;
 };
 
 /** engine_cartoon: cartoon ocean world (ships, anchors, cables with light, volcano, callouts), camera tracking. */

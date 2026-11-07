@@ -182,7 +182,7 @@ export const Donut: React.FC<DonutProps> = (p) => {
           <path d={arc(a0, Math.max(a0 + 0.001, a1 - 0.01))} fill="none" stroke={colors[i % colors.length]} strokeWidth={thick} />
           <text x={cx + (r + thick) * Math.cos(mid)} y={cy + (r + thick) * Math.sin(mid)} textAnchor={Math.cos(mid) > 0 ? 'start' : 'end'}
             fill={P.ink} fontFamily={FONT.body} fontWeight={700} fontSize={24} opacity={E.out(win(t, start + sweep, 0.4))}>
-            {p.data[i].label} {fmt((v / tot) * 100, 0)}%</text>
+            {p.data[i].label} {p.data[i].display ?? `${fmt((v / tot) * 100, 0)}%`}</text>
         </g>;
       })}
       {p.center && <text x={cx} y={cy + 16} textAnchor="middle" fill={P.ink} fontFamily={FONT.display} fontWeight={800} fontSize={56}>{p.center}</text>}
