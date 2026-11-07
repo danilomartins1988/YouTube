@@ -34,7 +34,8 @@ segments:
 - id: m1_flag
   chapter: Whose ship is it
   narration: 'Every ship must be registered in one country, its flag state. That flag decides which country''s laws
-    apply on board: safety rules, labor rules and taxes. It works like the ship''s passport.'
+    apply on board: safety rules, labor rules and taxes. It works like the ship''s passport. In theory, the flag
+    state is also the one that must inspect the ship and make sure those rules are followed, wherever it sails.'
   claims: []
   analysis: true
   source_note: General explanation of flag-state jurisdiction; no figures.
@@ -42,7 +43,8 @@ segments:
   chapter: Whose ship is it
   narration: Remember the giant ship that got stuck in the Suez Canal in twenty twenty-one, the Ever Given? It was
     owned by a Japanese company, operated by a Taiwanese shipping line, flagged in {{evergiven}}, and stuck in Egypt.
-    One ship, four countries.
+    One ship, four countries. As the Associated Press put it at the time, matters quickly became an international
+    morass.
   claims:
   - evergiven
 - id: m1_owners
@@ -50,7 +52,7 @@ segments:
   narration: And it is not an exception. Greek owners control the biggest share of the world's fleet, about {{owners}}
     of all carrying capacity. Asian companies own more than half of it, European companies about a third. But look
     at the flags, and the top three are small countries most people could not find on a map. That is true across
-    a world fleet of {{regs_2026.vessels_spoken}} vessels.
+    a world fleet of {{regs_2026.vessels_spoken}} vessels. Greece, China and Japan together own {{owners.top3_spoken}} of the world's carrying capacity.
   claims:
   - owners
   - regs_2026
@@ -72,7 +74,8 @@ segments:
   chapter: How it started
   narration: 'In the nineteen twenties, alcohol was banned in the United States. Ship owners who wanted to serve
     drinks to their passengers found a way out: they registered their ships in Panama. Panama became the first open
-    registry, a flag that anyone, from any country, could fly.'
+    registry, a flag that anyone, from any country, could fly. And as American shipping laws grew stricter, more
+    and more owners followed them there.'
   claims:
   - panama_1920s
 - id: m2_liberia
@@ -86,9 +89,11 @@ segments:
 - id: m2_term
   chapter: How it started
   narration: 'The idea spread so fast that it got its own name. In the nineteen fifties, people started calling
-    it a flag of convenience: a flag chosen not for where the ship comes from, but for what it saves.'
+    it a flag of convenience: a flag chosen not for where the ship comes from, but for what it saves. One historian
+    described it more bluntly: a haven from high standards.'
   claims:
   - term_1950s
+  - liberia_1948
 - id: m2_draw
   chapter: How it started
   narration: Let me draw how an open registry works. A ship owner in Athens, Shanghai or Tokyo picks a flag from
@@ -135,7 +140,9 @@ segments:
   chapter: Why owners do it
   narration: So what does Liberia earn? Registration fees, yearly tonnage taxes, inspections and certificates. A
     local researcher estimates the country's maritime revenue at {{liberia_rev}} in twenty twenty-six. For a country
-    like Liberia, that matters. But it is a tiny slice of an industry that carries the world's trade.
+    like Liberia, that matters. But it is a tiny slice of an industry that carries the world's trade. And exactly
+    how much? The researcher says only the registry and Liberia's maritime authority hold the full records, which
+    is why he is calling for more transparency.
   claims:
   - liberia_rev
 - id: m3_transition
@@ -163,8 +170,7 @@ segments:
 - id: m4_ships
   chapter: The dark side
   narration: In total, {{abandon.ships_display}} ships were abandoned in twenty twenty-four, more than twice as
-    many as the year before. Each one is a crew stuck in a foreign port, waiting for someone
-    to take responsibility.
+    many as the year before. Each one is a crew stuck in a foreign port, waiting for someone to take responsibility.
   claims:
   - abandon
 - id: m4_foc
@@ -184,9 +190,11 @@ segments:
   source_note: Conceptual diagram of fragmented responsibility; no figures.
 - id: m4_falseflags
   chapter: The dark side
-  narration: Some ships go further, and fly flags that are not real at all. Researchers at the Centre for Research
+  narration: 'Some ships go further, and fly flags that are not real at all. Researchers at the Centre for Research
     on Energy and Clean Air counted {{falseflags}} Russian vessels flying a false flag in the first nine months
-    of twenty twenty-five, often to dodge sanctions on oil.
+    of twenty twenty-five, often to dodge sanctions on oil. And the shadow fleet keeps finding new homes: {{falseflags.regs_spoken}}
+    registries that had never flagged a Russian ship before the invasion of Ukraine were flying {{falseflags.shadow_spoken}}
+    shadow vessels between them by September.'
   claims:
   - falseflags
 - id: m4_transition
@@ -207,7 +215,8 @@ segments:
   chapter: Why it survives
   narration: Because almost everyone gains something. Owners save money. Small countries earn fees. Shipping stays
     cheap, and so do the goods it carries, all the way to your local store. The world's fleet now carries {{regs_2026}}
-    of cargo capacity, and most of it moves under a flag of choice.
+    of cargo capacity, and most of it moves under a flag of choice. Changing that would mean higher costs for owners,
+    less income for small countries, and, in the end, higher prices for everyone.
   claims:
   - regs_2026
   source_note: '"Most of it" summarises the UNCTAD finding that flag and owner usually differ; no new figure.'
@@ -228,9 +237,10 @@ segments:
   source_note: Conclusion.
 - id: payoff
   chapter: The journey
-  narration: So, next time you see a giant ship on the horizon, look at the back of it. The name of a port will
+  narration: 'So, next time you see a giant ship on the horizon, look at the back of it. The name of a port will
     be painted there, Monrovia, Panama or Majuro, far from its owners, its crew and its cargo. A flag that was chosen
-    like a product, for a world that runs on cheap shipping.
+    like a product, for a world that runs on cheap shipping. Three small flags, almost half of the world''s shipping
+    capacity, and a question that still has no simple answer: who is really in charge out there?'
   claims:
   - top3
   analysis: true

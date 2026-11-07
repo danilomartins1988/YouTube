@@ -37,7 +37,7 @@ def cart(id_, seg, params, sources=(), sfx=None):
 
 
 def card(id_, seg, title, sub):
-    add(id_, seg, "act_title", {"number": "", "title": title, "subtitle": sub, "min_seconds": 4.2}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
+    add(id_, seg, "act_title", {"number": "", "title": title, "subtitle": sub, "min_seconds": 5.0}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
 
 
 def kinetic(id_, seg, lines, chapter=None):

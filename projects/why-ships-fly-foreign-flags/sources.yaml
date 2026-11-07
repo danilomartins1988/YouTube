@@ -95,7 +95,7 @@ claims:
     spoken: 16 percent
     display: "16.4%"
     value: 16.4
-    fields: {top3_display: "40.7%"}
+    fields: {top3_display: "40.7%", top3_spoken: more than 40 percent}
     source_ids: [unctad_2025]
     status: source_located
     verification_note: Read in the UNCTAD PDF text on 2026-11-07.
@@ -121,7 +121,7 @@ claims:
     verification_note: Read on 2026-11-07 (AI fact-check; needs a named human reviewer).
 
   - id: liberia_rev
-    text: "AllAfrica (July 2026): maritime revenue is an important contributor to Liberia's national budget, estimated at approximately US$30 million in 2026; income includes registration fees, recurring annual tonnage taxes and inspection and certification fees (researcher George Tengbeh)."
+    text: "AllAfrica (July 2026): maritime revenue is an important contributor to Liberia's national budget, estimated at approximately US$30 million in 2026; income includes registration fees, recurring annual tonnage taxes and inspection and certification fees (researcher George Tengbeh). Only the Liberia Maritime Authority and LISCR hold full financial records; he calls for transparency."
     spoken: about 30 million dollars
     display: "≈ $30m"
     value: 30
@@ -138,7 +138,7 @@ claims:
     verification_note: Read on 2026-11-07. Windward is a commercial maritime-risk firm; the film attributes the list of reasons.
 
   - id: panama_1920s
-    text: "Windward: Panama was the first open registry; during Prohibition in the 1920s ship owners who wanted to serve alcohol registered their ships in Panama."
+    text: "Windward: Panama was the first open registry; facing tightening shipping laws in the United States, many owners registered there; during Prohibition in the 1920s ship owners who wanted to serve alcohol registered their ships in Panama."
     spoken: In the 1920s
     display: "1920s"
     source_ids: [windward_foc]
@@ -146,7 +146,7 @@ claims:
     verification_note: Read on 2026-11-07. Narration says "the nineteen twenties".
 
   - id: liberia_1948
-    text: "Windward: in 1948 former U.S. Secretary of State Edward Stettinius worked with the Liberian government to open its registry, which is operated out of Virginia. Carlisle (1980): Panamanian officials came to demand such private tribute after World War II that a new flag of convenience was needed; Stettinius's development company provided it under the flag of Liberia in the late 1940s."
+    text: "Windward: in 1948 former U.S. Secretary of State Edward Stettinius worked with the Liberian government to open its registry, which is operated out of Virginia. Carlisle (1980) describes a flag of convenience as one 'whereunder a nation exploits the need of operators for a haven from high standards'; Panamanian officials came to demand such private tribute after World War II that a new flag of convenience was needed; Stettinius's development company provided it under the flag of Liberia in the late 1940s."
     spoken: In 1948
     display: "1948"
     value: 1948
@@ -155,7 +155,7 @@ claims:
     verification_note: Windward gives 1948; the Carlisle abstract says "late 1940s". The film says nineteen forty-eight.
 
   - id: evergiven
-    text: "AP (March 2021): the Ever Given that blocked the Suez Canal was owned by a Japanese firm, operated by a Taiwanese shipper, flagged in Panama and stuck in Egypt."
+    text: "AP (March 2021): the Ever Given that blocked the Suez Canal was owned by a Japanese firm, operated by a Taiwanese shipper, flagged in Panama and stuck in Egypt, so 'matters quickly become an international morass'."
     spoken: Panama
     display: "Panama flag"
     source_ids: [ap_evergiven]
@@ -173,10 +173,11 @@ claims:
     verification_note: Read on 2026-11-07. Figures are the ITF's, as reported to the IMO.
 
   - id: falseflags
-    text: "Al Jazeera (Nov 2025), citing the Centre for Research on Energy and Clean Air (CREA): a total of 113 Russian vessels flew a false flag in the first nine months of 2025."
+    text: "Al Jazeera (Nov 2025), citing the Centre for Research on Energy and Clean Air (CREA): a total of 113 Russian vessels flew a false flag in the first nine months of 2025; 96 sanctioned vessels had flown a false flag at least once by the end of September; six registries that had not flagged a Russian ship before February 2022 had at least 10 such vessels each, 162 shadow vessels in total."
     spoken: "113"
     display: "113"
     value: 113
+    fields: {regs_spoken: six, shadow_spoken: "162"}
     source_ids: [crea_2025]
     status: source_located
     verification_note: Read on 2026-11-07. CREA built its count from Equasis registry records.

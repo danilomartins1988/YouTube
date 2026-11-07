@@ -42,7 +42,7 @@ def cart(id_, seg, params, sources=(), sfx=None):
 
 
 def card(id_, seg, title, sub):
-    add(id_, seg, "act_title", {"number": "", "title": title, "subtitle": sub, "min_seconds": 4.2}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
+    add(id_, seg, "act_title", {"number": "", "title": title, "subtitle": sub, "min_seconds": 5.0}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
 
 
 def kinetic(id_, seg, lines, chapter=None):
@@ -115,8 +115,9 @@ cart("s01_island", "h_question", {
     sfx=[{"kind": "hit", "cue": "Just two letters", "gain": 0.35}])
 add("s02_map", "h_stakes", "engine_map", {
     "title": "Anguilla", "subtitle": "{{island.display}} people · {{rev_2026.display}} from .ai in 7 months of 2026 ({{rev_2026.share_display}} of revenue)",
-    "cameras": [{"at": 0, "lon": -40, "lat": 25, "span": 120}, {"at": C("Anguilla"), "lon": -63.05, "lat": 18.3, "span": 9, "dur": 2.6}],
-    "drift": {"lon": 0.02, "zoom": 0.01}, "tilt": [[0, 14], [10, 4]],
+    "cameras": [{"at": 0, "lon": -40, "lat": 25, "span": 120}, {"at": C("Anguilla"), "lon": -63.05, "lat": 18.3, "span": 9, "dur": 2.6},
+                {"at": C("two letters"), "lon": -62.5, "lat": 18.0, "span": 26, "dur": 3.0}, {"at": C("of all the money"), "lon": -63.05, "lat": 18.25, "span": 12, "dur": 3.0}],
+    "drift": {"lon": 0.08, "zoom": 0.012}, "tilt": [[0, 14], [10, 4]],
     "highlights": [{"iso": "AIA", "color": "gold", "at": C("Anguilla")}],
     "hubs": [{"id": "a", "at": AXA, "label": "Anguilla", "sub": "British Overseas Territory · 91 km²", "color": "gold", "time": C("a Caribbean island")}],
     "caption": "Real location (Natural Earth, public domain)"},
@@ -338,8 +339,9 @@ cart("s35_renew", "m5_renewals", {
                  co("A slow leak?", 1500, 400, C("slow leak"), "white")]})
 add("s36_tv", "m5_tv", "engine_map", {
     "title": ".tv · Tuvalu", "subtitle": "a hit with video sites, including Twitch · {{tv_io.display}} names at its peak, now in decline (Afnic)",
-    "cameras": [{"at": 0, "lon": -120, "lat": 10, "span": 200}, {"at": C("Tuvalu"), "lon": 179.2, "lat": -8.5, "span": 30, "dur": 2.6}],
-    "drift": {"lon": 0.03, "zoom": 0.008}, "tilt": [[0, 12], [12, 4]],
+    "cameras": [{"at": 0, "lon": -120, "lat": 10, "span": 200}, {"at": C("Tuvalu"), "lon": 179.2, "lat": -8.5, "span": 30, "dur": 2.6},
+                {"at": C("Twitch"), "lon": 175, "lat": -6, "span": 60, "dur": 3.0}, {"at": C("in decline"), "lon": 179.2, "lat": -8.5, "span": 22, "dur": 3.0}],
+    "drift": {"lon": 0.1, "zoom": 0.012}, "tilt": [[0, 12], [12, 4]],
     "highlights": [{"iso": "TUV", "color": "accent2", "at": C("Tuvalu")}],
     "hubs": [{"id": "t", "at": LL["tuvalu"], "label": "Tuvalu", "sub": ".tv", "color": "accent2", "time": C("owns dot T V")}],
     "caption": "Real location (Natural Earth, public domain)"},

@@ -89,9 +89,21 @@ scenes:
       lat: 18.3
       span: 9
       dur: 2.6
+    - at:
+        cue: two letters
+      lon: -62.5
+      lat: 18.0
+      span: 26
+      dur: 3.0
+    - at:
+        cue: of all the money
+      lon: -63.05
+      lat: 18.25
+      span: 12
+      dur: 3.0
     drift:
-      lon: 0.02
-      zoom: 0.01
+      lon: 0.08
+      zoom: 0.012
     tilt:
     - - 0
       - 14
@@ -127,7 +139,7 @@ scenes:
     number: ''
     title: The Lucky Letters
     subtitle: How an island got .ai
-    min_seconds: 4.2
+    min_seconds: 5.0
   sfx:
   - kind: hit
     at: 0.1
@@ -547,7 +559,7 @@ scenes:
     number: ''
     title: The Money Machine
     subtitle: Two letters, paid again and again
-    min_seconds: 4.2
+    min_seconds: 5.0
   sfx:
   - kind: hit
     at: 0.1
@@ -1047,7 +1059,7 @@ scenes:
     number: ''
     title: The Boom
     subtitle: When the world wanted .ai
-    min_seconds: 4.2
+    min_seconds: 5.0
   sfx:
   - kind: hit
     at: 0.1
@@ -1301,7 +1313,7 @@ scenes:
     number: ''
     title: What the Money Buys
     subtitle: Airport, roads, health
-    min_seconds: 4.2
+    min_seconds: 5.0
   sfx:
   - kind: hit
     at: 0.1
@@ -1687,7 +1699,7 @@ scenes:
     number: ''
     title: Can It Last?
     subtitle: When the hype cools
-    min_seconds: 4.2
+    min_seconds: 5.0
   sfx:
   - kind: hit
     at: 0.1
@@ -1852,9 +1864,21 @@ scenes:
       lat: -8.5
       span: 30
       dur: 2.6
+    - at:
+        cue: Twitch
+      lon: 175
+      lat: -6
+      span: 60
+      dur: 3.0
+    - at:
+        cue: in decline
+      lon: 179.2
+      lat: -8.5
+      span: 22
+      dur: 3.0
     drift:
-      lon: 0.03
-      zoom: 0.008
+      lon: 0.1
+      zoom: 0.012
     tilt:
     - - 0
       - 12
