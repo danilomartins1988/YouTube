@@ -17,9 +17,11 @@ segments:
   chapter: The missing billions
   narration: That happened in June twenty twenty. The German payments company Wirecard said that cash worth {{missing}},
     converted at that year's average exchange rate, was most likely not there at all. Days later, it was bankrupt.
+    Germany's own finance minister would later call it the country's greatest postwar accounting fraud.
   claims:
   - missing
   - insolvency
+  - hufeld
 - id: m1_card
   chapter: The rocket
   narration: ''
@@ -50,7 +52,8 @@ segments:
   chapter: The rocket
   narration: And Wirecard grew fast, especially far from home. By early twenty sixteen, about {{asia}} of its revenue
     came from Southeast Asia and the Middle East. In twenty seventeen it reported revenue of {{asia.rev_spoken}}
-    for the first time.
+    for the first time. By then, its shares had risen roughly eight hundred percent since its stock market debut
+    in twenty oh five.
   claims:
   - asia
 - id: m1_dax
@@ -167,7 +170,8 @@ segments:
   chapter: The collapse
   narration: Very fast. On June nineteenth, the chief executive, Markus Braun, resigned. On June twenty-fifth, Wirecard
     filed for insolvency. It became the first company in the DAX ever to go out of business, leaving creditors owed
-    {{insolvency}}. A company once valued at {{peak}} was gone.
+    {{insolvency}}. A company once valued at {{peak}} was gone. Two years earlier, it had pushed one of Germany's
+    biggest banks out of the DAX. Now it had fallen out of existence.
   claims:
   - missing
   - insolvency
@@ -216,7 +220,7 @@ segments:
   chapter: Who failed
   narration: Then, the regulator. In {{hufeld}}, the head of BaFin, Felix Hufeld, left his post. The finance minister
     at the time, Olaf Scholz, said it would allow a fresh start at an organisation that had overlooked Germany's
-    greatest postwar accounting fraud.
+    greatest postwar accounting fraud. His deputy in charge of securities supervision left too.
   claims:
   - hufeld
 - id: m5_draw
@@ -242,9 +246,10 @@ segments:
   source_note: Conclusion.
 - id: payoff
   chapter: The lesson
-  narration: So, the two billion dollars that never existed were not stolen from a vault. They were never in one.
+  narration: 'So, the two billion dollars that never existed were not stolen from a vault. They were never in one.
     They lived in documents, in trust and in confidence, until someone finally asked to see them. And when they
-    looked, there was nothing there.
+    looked, there was nothing there. The most expensive question in this story was also the simplest one: can I
+    see the money?'
   claims:
   - missing
   analysis: true
