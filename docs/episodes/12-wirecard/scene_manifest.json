@@ -1,0 +1,1752 @@
+{
+  "slug": "the-2-billion-that-never-existed",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_hook",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 12.73,
+      "duration_s": 12.73,
+      "visual_objective": "",
+      "narration": "What if one of Europe's most celebrated tech companies said it had billions in the bank, and then, one day, admitted that the money had probably never existed?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "billions in the bank",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.19,
+          "absolute_s": 5.19
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "admitted",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.17,
+          "absolute_s": 8.17
+        },
+        {
+          "param": "actors[3].until.cue",
+          "cue": "admitted",
+          "label": "actors[3].until.cue",
+          "scene_time_s": 8.17,
+          "absolute_s": 8.17
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "never existed",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 10.97,
+          "absolute_s": 10.97
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 12.73,
+      "end_s": 17.73,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s02_stakes",
+      "segment": "h_stakes",
+      "type": "engine_cartoon",
+      "start_s": 17.73,
+      "end_s": 41.97,
+      "duration_s": 24.23,
+      "visual_objective": "",
+      "narration": "That happened in June twenty twenty. The German payments company Wirecard said that cash worth about 2.2 billion dollars, converted at that year's average exchange rate, was most likely not there at all. Days later, it was bankrupt. Germany's own finance minister would later call it the country's greatest postwar accounting fraud.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "June twenty twenty",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.51,
+          "absolute_s": 19.25
+        },
+        {
+          "param": "actors[3].at.cue",
+          "cue": "most likely",
+          "label": "actors[3].at.cue",
+          "scene_time_s": 12.97,
+          "absolute_s": 30.7
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "most likely",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 12.97,
+          "absolute_s": 30.7
+        },
+        {
+          "param": "coasts.darkAt.cue",
+          "cue": "bankrupt",
+          "label": "coasts.darkAt.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 34.74
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "bankrupt",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 34.74
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "aljazeera_2020",
+        "reuters_insolvency",
+        "bbk_rates"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s03_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 41.97,
+      "end_s": 47.37,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s04_q1",
+      "segment": "m1_question",
+      "type": "engine_cartoon",
+      "start_s": 47.37,
+      "end_s": 56.37,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "So how does a small payments firm near Munich become a star of the stock market?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "small payments firm",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.47,
+          "absolute_s": 48.84
+        },
+        {
+          "param": "actors[1].at.cue",
+          "cue": "star of the stock market",
+          "label": "actors[1].at.cue",
+          "scene_time_s": 4.28,
+          "absolute_s": 51.65
+        },
+        {
+          "param": "actors[2].at.cue",
+          "cue": "star of the stock market",
+          "label": "actors[2].at.cue",
+          "scene_time_s": 4.28,
+          "absolute_s": 51.65
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s05_origin",
+      "segment": "m1_origin",
+      "type": "engine_cartoon",
+      "start_s": 56.37,
+      "end_s": 85.83,
+      "duration_s": 29.47,
+      "visual_objective": "",
+      "narration": "Wirecard was founded In 1999, in Aschheim, a suburb of Munich, during the first internet boom. Its job sounded simple: process card payments for websites. Its early customers were businesses many banks saw as high risk, such as online gambling and adult sites. In 2005, it got onto the stock market without a classic listing, by merging into a company that was already listed in Frankfurt.",
+      "keyframes": [
+        {
+          "param": "actors[0].at.cue",
+          "cue": "Wirecard was founded",
+          "label": "actors[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 56.72
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Wirecard was founded",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 56.72
+        },
+        {
+          "param": "actors[3].at.cue",
+          "cue": "process card payments",
+          "label": "actors[3].at.cue",
+          "scene_time_s": 10.45,
+          "absolute_s": 66.82
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "process card payments",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 10.45,
+          "absolute_s": 66.82
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "early customers",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.69,
+          "absolute_s": 70.06
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "early customers",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 13.69,
+          "absolute_s": 70.06
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "merging into",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 24.91,
+          "absolute_s": 81.27
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "quartr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "p06_processor",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 85.83,
+      "end_s": 109.1,
+      "duration_s": 23.27,
+      "visual_objective": "",
+      "narration": "Let me draw what a payment processor does. You buy something online and tap your card. The shop sends the payment to a processor. The processor checks it, talks to the card network and the banks, and makes sure the shop gets paid. For each payment, it keeps a tiny fee. Millions of tiny fees can become a very big business.",
+      "keyframes": [
+        {
+          "param": "enter.at.cue",
+          "cue": "Let me draw",
+          "label": "enter.at.cue",
+          "scene_time_s": 0.05,
+          "absolute_s": 85.88
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "You buy something",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.85,
+          "absolute_s": 89.68
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "tap your card",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 5.71,
+          "absolute_s": 91.54
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "The shop sends",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.85,
+          "absolute_s": 92.68
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "The shop sends",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 7.15,
+          "absolute_s": 92.98
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "to a processor",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 8.16,
+          "absolute_s": 93.99
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "to a processor",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 8.46,
+          "absolute_s": 94.29
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "card network",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 12.02,
+          "absolute_s": 97.86
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "and the banks",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 12.67,
+          "absolute_s": 98.51
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "gets paid",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 14.82,
+          "absolute_s": 100.65
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "tiny fee",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 17.7,
+          "absolute_s": 103.53
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "tiny fee",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 18.0,
+          "absolute_s": 103.83
+        },
+        {
+          "param": "strokes[9].start.cue",
+          "cue": "Millions of tiny",
+          "label": "strokes[9].start.cue",
+          "scene_time_s": 18.93,
+          "absolute_s": 104.76
+        },
+        {
+          "param": "actions[1].at.cue",
+          "cue": "very big business",
+          "label": "actions[1].at.cue",
+          "scene_time_s": 21.32,
+          "absolute_s": 107.16
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s07_asia",
+      "segment": "m1_asia",
+      "type": "engine_cartoon",
+      "start_s": 109.1,
+      "end_s": 134.37,
+      "duration_s": 25.27,
+      "visual_objective": "",
+      "narration": "And Wirecard grew fast, especially far from home. By early twenty sixteen, about 40 percent of its revenue came from Southeast Asia and the Middle East. In twenty seventeen it reported revenue of more than 1.1 billion dollars for the first time. By then, its shares had risen roughly eight hundred percent since its stock market debut in twenty oh five.",
+      "keyframes": [
+        {
+          "param": "actors[3].at.cue",
+          "cue": "far from home",
+          "label": "actors[3].at.cue",
+          "scene_time_s": 3.18,
+          "absolute_s": 112.28
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Southeast Asia",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.99,
+          "absolute_s": 118.09
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Southeast Asia",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 8.99,
+          "absolute_s": 118.09
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "twenty seventeen",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.65,
+          "absolute_s": 120.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "quartr",
+        "bbk_rates"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s08_dax",
+      "segment": "m1_dax",
+      "type": "engine_cartoon",
+      "start_s": 134.37,
+      "end_s": 160.87,
+      "duration_s": 26.5,
+      "visual_objective": "",
+      "narration": "Then came the big moment. In September 2018, Wirecard entered the DAX, Germany's index of its top companies, and it pushed out Commerzbank, one of the country's biggest banks. Wirecard had fewer than 5,000 employees, a tenth of the bank's, but was worth twice as much. At its peak, it was valued at about 28 billion dollars.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "entered the DAX",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.2,
+          "absolute_s": 140.56
+        },
+        {
+          "param": "actors[2].x[1][0].cue",
+          "cue": "pushed out",
+          "label": "actors[2].x[1][0].cue",
+          "scene_time_s": 10.85,
+          "absolute_s": 145.22
+        },
+        {
+          "param": "actors[2].x[2][0].cue",
+          "cue": "pushed out",
+          "label": "actors[2].x[2][0].cue",
+          "scene_time_s": 12.85,
+          "absolute_s": 147.22
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "employees",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 17.94,
+          "absolute_s": 152.31
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "twice as much",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 20.71,
+          "absolute_s": 155.07
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "At its peak",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 21.99,
+          "absolute_s": 156.36
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_dax",
+        "reuters_insolvency",
+        "quartr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s09_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 160.87,
+      "end_s": 172.03,
+      "duration_s": 11.17,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "A German fintech champion, at last. But some people were already asking a simple question: where does all this money actually come from?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "A German fintech",
+          "label": "A German fintech champion",
+          "scene_time_s": 0.35,
+          "absolute_s": 161.22
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "where does all",
+          "label": "Where does the money come from?",
+          "scene_time_s": 7.98,
+          "absolute_s": 168.85
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s10_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 172.03,
+      "end_s": 177.43,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_q2",
+      "segment": "m2_question",
+      "type": "engine_cartoon",
+      "start_s": 177.43,
+      "end_s": 186.43,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Who saw the problems first? And why did almost nobody listen?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Who saw",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 177.78
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "nobody listen",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 3.91,
+          "absolute_s": 181.35
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_ft",
+      "segment": "m2_ft",
+      "type": "engine_cartoon",
+      "start_s": 186.43,
+      "end_s": 209.47,
+      "duration_s": 23.03,
+      "visual_objective": "",
+      "narration": "In 2015, a journalist at the Financial Times, Dan McCrum, began asking questions about Wirecard's acquisitions and its accounts. In January twenty nineteen, the paper went further. Based on a whistleblower, a former head of legal for Wirecard in Asia, it reported suspicions about the company's business in Singapore.",
+      "keyframes": [
+        {
+          "param": "actors[3].at.cue",
+          "cue": "began asking",
+          "label": "actors[3].at.cue",
+          "scene_time_s": 5.18,
+          "absolute_s": 191.62
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "began asking",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.18,
+          "absolute_s": 191.62
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "January twenty nineteen",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.26,
+          "absolute_s": 196.69
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "whistleblower",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 14.71,
+          "absolute_s": 201.14
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "quartr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_bafin",
+      "segment": "m2_bafin",
+      "type": "engine_cartoon",
+      "start_s": 209.47,
+      "end_s": 239.0,
+      "duration_s": 29.53,
+      "visual_objective": "",
+      "narration": "What happened next was extraordinary. Germany's financial regulator, BaFin, did not turn on the company. It banned investors from betting against Wirecard's shares for two months, the first time it had ever done that for a single stock. And prosecutors in Munich opened an investigation into a Financial Times journalist, after a criminal complaint. The newspaper rejected the allegations as baseless and false.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "banned investors",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 8.41,
+          "absolute_s": 217.88
+        },
+        {
+          "param": "actors[2].x[1][0].cue",
+          "cue": "prosecutors",
+          "label": "actors[2].x[1][0].cue",
+          "scene_time_s": 17.43,
+          "absolute_s": 226.89
+        },
+        {
+          "param": "actors[2].at.cue",
+          "cue": "prosecutors",
+          "label": "actors[2].at.cue",
+          "scene_time_s": 17.43,
+          "absolute_s": 226.89
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "prosecutors",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 17.43,
+          "absolute_s": 226.89
+        },
+        {
+          "param": "actors[2].x[2][0].cue",
+          "cue": "prosecutors",
+          "label": "actors[2].x[2][0].cue",
+          "scene_time_s": 19.43,
+          "absolute_s": 228.89
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "baseless",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 27.83,
+          "absolute_s": 237.3
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_short",
+        "irish_2021"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "p14_finger",
+      "segment": "m2_draw",
+      "type": "engine_draw",
+      "start_s": 239.0,
+      "end_s": 260.9,
+      "duration_s": 21.9,
+      "visual_objective": "",
+      "narration": "Let me draw how strange that was. On one side, the journalists and the short sellers, saying: look at these numbers. On the other, the company, saying: we are being attacked. And in the middle, the watchdog that is supposed to protect investors. It pointed its finger at the critics.",
+      "keyframes": [
+        {
+          "param": "enter.at.cue",
+          "cue": "Let me draw",
+          "label": "enter.at.cue",
+          "scene_time_s": 0.05,
+          "absolute_s": 239.05
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "On one side",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.7,
+          "absolute_s": 242.7
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "On one side",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.7,
+          "absolute_s": 242.7
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "look at these",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.69,
+          "absolute_s": 245.69
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "On the other",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 7.97,
+          "absolute_s": 246.97
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "being attacked",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 12.29,
+          "absolute_s": 251.29
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "in the middle",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 14.37,
+          "absolute_s": 253.37
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "pointed its finger",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 19.11,
+          "absolute_s": 258.11
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "pointed its finger",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 19.41,
+          "absolute_s": 258.41
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "at the critics",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 20.38,
+          "absolute_s": 259.38
+        },
+        {
+          "param": "actions[1].at.cue",
+          "cue": "at the critics",
+          "label": "actions[1].at.cue",
+          "scene_time_s": 20.88,
+          "absolute_s": 259.88
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_short",
+        "irish_2021"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 260.9,
+      "end_s": 267.4,
+      "duration_s": 6.5,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So the critics were wrong? To find out, someone had to go and find the money.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "So the critics",
+          "label": "So the critics were wrong?",
+          "scene_time_s": 0.35,
+          "absolute_s": 261.25
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "find the money",
+          "label": "Someone had to find the money",
+          "scene_time_s": 5.03,
+          "absolute_s": 265.93
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 267.4,
+      "end_s": 272.8,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_q3",
+      "segment": "m3_question",
+      "type": "engine_cartoon",
+      "start_s": 272.8,
+      "end_s": 281.8,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Where was Wirecard's money supposed to be? And why couldn't anyone see it?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Where was",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 273.15
+        },
+        {
+          "param": "actors[2].at.cue",
+          "cue": "couldn't anyone",
+          "label": "actors[2].at.cue",
+          "scene_time_s": 4.83,
+          "absolute_s": 277.63
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "p18_tpa",
+      "segment": "m3_tpa",
+      "type": "engine_draw",
+      "start_s": 281.8,
+      "end_s": 303.0,
+      "duration_s": 21.2,
+      "visual_objective": "",
+      "narration": "An important part of Wirecard's business ran through so-called third-party partners: other companies in Asia and the Middle East that processed payments for Wirecard's customers. Wirecard booked the revenue. And the cash from that business, it said, sat in special trust accounts, held for it by a trustee.",
+      "keyframes": [
+        {
+          "param": "enter.at.cue",
+          "cue": "An important part",
+          "label": "enter.at.cue",
+          "scene_time_s": 0.05,
+          "absolute_s": 281.85
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "third-party partners",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.25,
+          "absolute_s": 286.05
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "third-party partners",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.25,
+          "absolute_s": 286.05
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Asia and",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 7.04,
+          "absolute_s": 288.84
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "booked the revenue",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 12.61,
+          "absolute_s": 294.41
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "booked the revenue",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 13.01,
+          "absolute_s": 294.81
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "trust accounts",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 17.86,
+          "absolute_s": 299.66
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "trust accounts",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 18.26,
+          "absolute_s": 300.06
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "held for it",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 19.13,
+          "absolute_s": 300.93
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "held for it",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 19.53,
+          "absolute_s": 301.33
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wirecard_kpmg",
+        "irish_2020",
+        "aljazeera_2020"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_kpmg",
+      "segment": "m3_kpmg",
+      "type": "engine_cartoon",
+      "start_s": 303.0,
+      "end_s": 331.37,
+      "duration_s": 28.37,
+      "visual_objective": "",
+      "narration": "In April twenty twenty, a special investigation by the auditor KPMG was supposed to settle the question. It did not. According to Wirecard's own statement, not all the data needed to prove the revenues of that business could be obtained, because it was in the hands of the partners. Wirecard, for its part, said the investigation had found no incriminating evidence of balance sheet forgery.",
+      "keyframes": [
+        {
+          "param": "actors[1].at.cue",
+          "cue": "special investigation",
+          "label": "actors[1].at.cue",
+          "scene_time_s": 2.42,
+          "absolute_s": 305.42
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "special investigation",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.42,
+          "absolute_s": 305.42
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "in the hands",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 18.44,
+          "absolute_s": 321.44
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "for its part",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 21.5,
+          "absolute_s": 324.5
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wirecard_kpmg"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_ey",
+      "segment": "m3_ey",
+      "type": "engine_cartoon",
+      "start_s": 331.37,
+      "end_s": 356.1,
+      "duration_s": 24.73,
+      "visual_objective": "",
+      "narration": "Then, on June eighteenth, twenty twenty, Wirecard's regular auditor, EY, refused to sign the accounts. Cash worth about 2.2 billion dollars could not be confirmed. There were indications, the company said, that a trustee had tried to deceive the auditor. That day, the shares fell by as much as 71 percent.",
+      "keyframes": [
+        {
+          "param": "actors[2].at.cue",
+          "cue": "refused to sign",
+          "label": "actors[2].at.cue",
+          "scene_time_s": 6.41,
+          "absolute_s": 337.77
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "refused to sign",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.41,
+          "absolute_s": 337.77
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "could not be confirmed",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 12.23,
+          "absolute_s": 343.6
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "shares fell",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 21.11,
+          "absolute_s": 352.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "irish_2020",
+        "bbk_rates"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_banks",
+      "segment": "m3_banks",
+      "type": "engine_cartoon",
+      "start_s": 356.1,
+      "end_s": 383.63,
+      "duration_s": 27.53,
+      "visual_objective": "",
+      "narration": "The search ended in the Philippines, where the money was supposed to be held in two banks. Both said the documents were false, and that Wirecard was not even a client. The Philippine central bank said the money did not seem to have entered the country at all. Four days later, Wirecard admitted it: the money most likely did not exist. That was about a quarter of everything the company said it owned.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "documents were false",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.79,
+          "absolute_s": 362.89
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "not even a client",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 9.73,
+          "absolute_s": 365.83
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "central bank",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 12.57,
+          "absolute_s": 368.67
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "most likely did not exist",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 20.83,
+          "absolute_s": 376.93
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "aljazeera_2020"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 383.63,
+      "end_s": 394.7,
+      "duration_s": 11.07,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "A company worth billions had built its success, at least in part, on cash that wasn't there. What happened next took one week.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "A company worth",
+          "label": "Built, at least in part,",
+          "scene_time_s": 0.35,
+          "absolute_s": 383.98
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "wasn't there",
+          "label": "on cash that wasn't there",
+          "scene_time_s": 6.77,
+          "absolute_s": 390.41
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "one week",
+          "label": "What happened next took one week",
+          "scene_time_s": 9.98,
+          "absolute_s": 393.61
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 394.7,
+      "end_s": 400.1,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_q4",
+      "segment": "m4_question",
+      "type": "engine_cartoon",
+      "start_s": 400.1,
+      "end_s": 409.1,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "How fast can a star company fall?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "How fast",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 400.45
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_week",
+      "segment": "m4_week",
+      "type": "engine_cartoon",
+      "start_s": 409.1,
+      "end_s": 439.63,
+      "duration_s": 30.53,
+      "visual_objective": "",
+      "narration": "Very fast. On June nineteenth, the chief executive, Markus Braun, resigned. On June twenty-fifth, Wirecard filed for insolvency. It became the first company in the DAX ever to go out of business, leaving creditors owed nearly 4 billion dollars. A company once valued at 28 billion dollars was gone. Two years earlier, it had pushed one of Germany's biggest banks out of the DAX. Now it had fallen out of existence.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "resigned",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.25,
+          "absolute_s": 414.35
+        },
+        {
+          "param": "coasts.darkAt.cue",
+          "cue": "filed for insolvency",
+          "label": "coasts.darkAt.cue",
+          "scene_time_s": 8.39,
+          "absolute_s": 417.49
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "filed for insolvency",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 8.39,
+          "absolute_s": 417.49
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "first company in the DAX",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 11.33,
+          "absolute_s": 420.43
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "creditors owed",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 15.06,
+          "absolute_s": 424.16
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "aljazeera_2020",
+        "reuters_insolvency"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_marsalek",
+      "segment": "m4_marsalek",
+      "type": "engine_cartoon",
+      "start_s": 439.63,
+      "end_s": 474.63,
+      "duration_s": 35.0,
+      "visual_objective": "",
+      "narration": "And one man vanished. Jan Marsalek, Wirecard's chief operating officer, is wanted by German authorities. His whereabouts are unknown, but he is believed to be in Russia. In twenty twenty-five, a court in London convicted members of a spy ring working for Russia. According to British prosecutors, its leader reported to Marsalek. Between twenty twenty and twenty twenty-three, prosecutors said, the group gathered information about people and places of interest to the Russian state.",
+      "keyframes": [
+        {
+          "param": "actors[1].x[1][0].cue",
+          "cue": "vanished",
+          "label": "actors[1].x[1][0].cue",
+          "scene_time_s": 1.32,
+          "absolute_s": 440.95
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "is wanted",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.64,
+          "absolute_s": 446.27
+        },
+        {
+          "param": "actors[1].x[2][0].cue",
+          "cue": "vanished",
+          "label": "actors[1].x[2][0].cue",
+          "scene_time_s": 9.32,
+          "absolute_s": 448.95
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "whereabouts",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.79,
+          "absolute_s": 449.43
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "believed to be",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.71,
+          "absolute_s": 451.34
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "a court in London",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 15.62,
+          "absolute_s": 455.25
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reuters_spies",
+        "cps_spies"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_trial",
+      "segment": "m4_trial",
+      "type": "kinetic_text",
+      "start_s": 474.63,
+      "end_s": 506.27,
+      "duration_s": 31.63,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Markus Braun went on trial in Munich in December 2022, accused of commercial gang fraud, false accounting and breach of trust. If convicted, he faces up to 15 years in prison. He rejects all the charges, and has blamed Marsalek. The trial has gone on for years: the court set new hearing dates until the end of twenty twenty-six. Until there is a verdict, he is presumed innocent.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "went on trial",
+          "label": "Munich: trial since since Dec 2022",
+          "scene_time_s": 1.17,
+          "absolute_s": 475.81
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "accused of",
+          "label": "Accused: commercial gang fraud · false accounting · breach of trust",
+          "scene_time_s": 5.91,
+          "absolute_s": 480.55
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "rejects all the charges",
+          "label": "“I reject all the charges”",
+          "scene_time_s": 16.08,
+          "absolute_s": 490.71
+        },
+        {
+          "param": "lines[3].cue",
+          "cue": "presumed innocent",
+          "label": "Hearings scheduled to the end of 2026 · presumed innocent until a verdict",
+          "scene_time_s": 29.95,
+          "absolute_s": 504.58
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 506.27,
+      "end_s": 514.5,
+      "duration_s": 8.23,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "But a fraud of this size does not happen without many people looking the other way. So who failed?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "But a fraud",
+          "label": "A fraud this size needs people looking away",
+          "scene_time_s": 0.35,
+          "absolute_s": 506.62
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "who failed",
+          "label": "So who failed?",
+          "scene_time_s": 6.85,
+          "absolute_s": 513.11
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 514.5,
+      "end_s": 519.9,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_q5",
+      "segment": "m5_question",
+      "type": "engine_cartoon",
+      "start_s": 519.9,
+      "end_s": 528.9,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Auditors, regulators, investors: who was supposed to catch it?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "supposed to catch",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.69,
+          "absolute_s": 523.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_auditor",
+      "segment": "m5_auditor",
+      "type": "compare",
+      "start_s": 528.9,
+      "end_s": 549.3,
+      "duration_s": 20.4,
+      "visual_objective": "Side-by-side figures count up; bars rise",
+      "narration": "First, the auditor. EY had signed off Wirecard's accounts without objections for more than a decade. In twenty twenty-three, the German audit watchdog banned it from taking on new listed audit clients in Germany for two years, and fined the firm and several current and former employees.",
+      "keyframes": [
+        {
+          "param": "sides[0].cue",
+          "cue": "without objections",
+          "label": "more than a decade (FT)",
+          "scene_time_s": 5.22,
+          "absolute_s": 534.12
+        },
+        {
+          "param": "sides[1].cue",
+          "cue": "banned it",
+          "label": "no new listed audit clients",
+          "scene_time_s": 11.69,
+          "absolute_s": 540.59
+        },
+        {
+          "param": "sides[2].cue",
+          "cue": "fined the firm",
+          "label": "current and former employees",
+          "scene_time_s": 16.57,
+          "absolute_s": 545.47
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "irish_2023"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_regulator",
+      "segment": "m5_regulator",
+      "type": "engine_cartoon",
+      "start_s": 549.3,
+      "end_s": 573.77,
+      "duration_s": 24.47,
+      "visual_objective": "",
+      "narration": "Then, the regulator. In January 2021, the head of BaFin, Felix Hufeld, left his post. The finance minister at the time, Olaf Scholz, said it would allow a fresh start at an organisation that had overlooked Germany's greatest postwar accounting fraud. His deputy in charge of securities supervision left too.",
+      "keyframes": [
+        {
+          "param": "coasts.darkAt.cue",
+          "cue": "left his post",
+          "label": "coasts.darkAt.cue",
+          "scene_time_s": 7.97,
+          "absolute_s": 557.27
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "left his post",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.97,
+          "absolute_s": 557.27
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "overlooked",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.15,
+          "absolute_s": 565.45
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "irish_2021"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "p33_net",
+      "segment": "m5_draw",
+      "type": "engine_draw",
+      "start_s": 573.77,
+      "end_s": 597.57,
+      "duration_s": 23.8,
+      "visual_objective": "",
+      "narration": "Let me draw the safety net that was supposed to work. The company reports its numbers. The auditor checks them. The regulator watches the market. Journalists and investors ask hard questions. At Wirecard, the last line, the critics, was the one that worked. The official checks, the ones everyone trusted, came too late.",
+      "keyframes": [
+        {
+          "param": "enter.at.cue",
+          "cue": "Let me draw",
+          "label": "enter.at.cue",
+          "scene_time_s": 0.05,
+          "absolute_s": 573.82
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "The company reports",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.38,
+          "absolute_s": 578.15
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "The company reports",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.38,
+          "absolute_s": 578.15
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "The auditor checks",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.48,
+          "absolute_s": 580.25
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "The regulator watches",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.01,
+          "absolute_s": 581.78
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "ask hard questions",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 12.28,
+          "absolute_s": 586.05
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "the one that worked",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 17.4,
+          "absolute_s": 591.17
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the one that worked",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 17.7,
+          "absolute_s": 591.47
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "came too late",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 22.62,
+          "absolute_s": 596.39
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "came too late",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 22.92,
+          "absolute_s": 596.69
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "irish_2023",
+        "irish_2021",
+        "quartr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_lesson",
+      "segment": "m5_lesson",
+      "type": "kinetic_text",
+      "start_s": 597.57,
+      "end_s": 624.9,
+      "duration_s": 27.33,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "The lesson is not only about one company. When a story is exciting, a national champion, a tech success, a rising share price, people want to believe it. And the questions that could ruin the story are the ones nobody wants to ask. Every check in the system assumed that someone else had already checked. And for years, the people who did ask were treated as the problem.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "a national champion",
+          "label": "A national champion · a tech success · a rising share price",
+          "scene_time_s": 5.49,
+          "absolute_s": 603.06
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "want to believe",
+          "label": "people want to believe",
+          "scene_time_s": 10.21,
+          "absolute_s": 607.78
+        },
+        {
+          "param": "lines[2].cue",
+          "cue": "treated as the problem",
+          "label": "the critics were treated as the problem",
+          "scene_time_s": 25.31,
+          "absolute_s": 622.88
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 624.9,
+      "end_s": 649.4,
+      "duration_s": 24.5,
+      "visual_objective": "",
+      "narration": "So, the two billion dollars that never existed were not stolen from a vault. They were never in one. They lived in documents, in trust and in confidence, until someone finally asked to see them. And when they looked, there was nothing there. The most expensive question in this story was also the simplest one: can I see the money?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "never in one",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.73,
+          "absolute_s": 631.63
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "They lived",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.1,
+          "absolute_s": 633.0
+        },
+        {
+          "param": "actors[3].until.cue",
+          "cue": "asked to see",
+          "label": "actors[3].until.cue",
+          "scene_time_s": 13.28,
+          "absolute_s": 638.18
+        },
+        {
+          "param": "actors[4].at.cue",
+          "cue": "nothing there",
+          "label": "actors[4].at.cue",
+          "scene_time_s": 16.85,
+          "absolute_s": 641.75
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "nothing there",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.85,
+          "absolute_s": 641.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "aljazeera_2020"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 649.4,
+      "end_s": 660.13,
+      "duration_s": 10.73,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 7.85,
+          "absolute_s": 657.25
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}

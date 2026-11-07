@@ -26,7 +26,13 @@ In this animated documentary:
 - Who failed: the auditor, the regulator, and the checks everyone trusted
 
 CHAPTERS
-CHAPTER_LINES
+0:00 The billions that weren't there
+0:41 The rocket
+2:52 The warnings
+4:27 The money that wasn't there
+6:34 The collapse
+8:34 Who failed
+10:24 Can I see the money?
 
 KEY SOURCES
 - Al Jazeera (22 June 2020): missing 1.9bn ($2.13bn), "prevailing likelihood" the balances do not exist; Philippine banks and central bank
