@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/the-cables-at-the-bottom-of-the-ocean/documentary/the-cables-at-the-bottom-of-the-ocean--documentary.mp4 (180.7 MB) |
+| File exists | PASS | /home/user/YouTube/output/the-cables-at-the-bottom-of-the-ocean/documentary/the-cables-at-the-bottom-of-the-ocean--documentary.mp4 (181.1 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -10,7 +10,7 @@
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 317 cues; median cue-start offset 0.06 s, p90 0.36 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>5 s) | FAIL | 567.1s |
+| No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
@@ -22,7 +22,7 @@
 # QC report: the-cables-at-the-bottom-of-the-ocean / documentary (long_16x9)
 
 - Runtime: **663.8 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 180.7 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 181.1 MB
 - Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
 - Errors: **0**, warnings: **36**
 - Technical QC passed: **True**

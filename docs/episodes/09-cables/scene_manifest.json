@@ -2168,6 +2168,20 @@
       "narration": "It also happened across the Pacific. The Pacific Light Cable Network, owned by Google and Meta, was meant to link the United States with Hong Kong. After an American security review recommended rejecting that leg, it was dropped. The cable now carries data from the United States only to Taiwan and the Philippines.",
       "keyframes": [
         {
+          "param": "cameras[1].at.cue",
+          "cue": "across the Pacific",
+          "label": "cameras[1].at.cue",
+          "scene_time_s": 1.48,
+          "absolute_s": 567.28
+        },
+        {
+          "param": "routes[0].at.cue",
+          "cue": "Google and Meta",
+          "label": "routes[0].at.cue",
+          "scene_time_s": 6.12,
+          "absolute_s": 571.92
+        },
+        {
           "param": "hubs[1].time.cue",
           "cue": "Hong Kong",
           "label": "hubs[1].time.cue",
@@ -2175,16 +2189,16 @@
           "absolute_s": 575.62
         },
         {
-          "param": "cameras[1].at.cue",
+          "param": "cameras[2].at.cue",
           "cue": "review recommended",
-          "label": "cameras[1].at.cue",
+          "label": "cameras[2].at.cue",
           "scene_time_s": 13.21,
           "absolute_s": 579.01
         },
         {
-          "param": "routes[0].at.cue",
+          "param": "routes[1].at.cue",
           "cue": "review recommended",
-          "label": "routes[0].at.cue",
+          "label": "routes[1].at.cue",
           "scene_time_s": 13.21,
           "absolute_s": 579.01
         },
@@ -2196,9 +2210,9 @@
           "absolute_s": 586.29
         },
         {
-          "param": "routes[1].at.cue",
+          "param": "routes[2].at.cue",
           "cue": "only to Taiwan",
-          "label": "routes[1].at.cue",
+          "label": "routes[2].at.cue",
           "scene_time_s": 20.49,
           "absolute_s": 586.29
         },
@@ -2210,9 +2224,9 @@
           "absolute_s": 587.9
         },
         {
-          "param": "routes[2].at.cue",
+          "param": "routes[3].at.cue",
           "cue": "Philippines",
-          "label": "routes[2].at.cue",
+          "label": "routes[3].at.cue",
           "scene_time_s": 22.1,
           "absolute_s": 587.9
         }
