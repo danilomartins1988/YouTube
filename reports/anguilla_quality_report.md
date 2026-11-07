@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/the-island-getting-rich-from-ai/documentary/the-island-getting-rich-from-ai--documentary.mp4 (164.7 MB) |
+| File exists | PASS | /home/user/YouTube/output/the-island-getting-rich-from-ai/documentary/the-island-getting-rich-from-ai--documentary.mp4 (166.5 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -10,11 +10,11 @@
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 313 cues; median cue-start offset 0.07 s, p90 0.40 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>5 s) | FAIL | 23.7s, 541.0s |
+| No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
-- Scenes: 42; types: act_title x5, channel_intro x1, compare x1, end_card x1, engine_cartoon x18, engine_chart x3, engine_draw x4, engine_flow x1, engine_map x3, kinetic_text x5
+- Scenes: 42; types: act_title x5, channel_intro x1, compare x1, end_card x1, engine_cartoon x19, engine_chart x3, engine_draw x4, engine_flow x1, engine_map x2, kinetic_text x5
 - Average scene length: 15.8 s; act cards are music-only.
 
 ## Pipeline QC report
@@ -22,7 +22,7 @@
 # QC report: the-island-getting-rich-from-ai / documentary (long_16x9)
 
 - Runtime: **661.57 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 164.7 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 166.5 MB
 - Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
 - Errors: **0**, warnings: **54**
 - Technical QC passed: **True**
