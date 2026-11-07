@@ -347,8 +347,8 @@ add("s36_tv", "m5_tv", "engine_map", {
     "drift": {"lon": 0.1, "zoom": 0.012}, "tilt": [[0, 12], [12, 4]],
     "highlights": [{"iso": "TUV", "color": "accent2", "at": C("Tuvalu")}],
     "hubs": [{"id": "t", "at": LL["tuvalu"], "label": "Tuvalu", "sub": ".tv", "color": "accent2", "time": C("owns dot T V")}],
-    "routes": [{"from": [-122.4, 37.8], "to": LL["tuvalu"], "at": C("owns dot T V", 0.5), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.4, "lift": 0.2},
-               {"from": [139.7, 35.7], "to": LL["tuvalu"], "at": C("Twitch"), "dur": 1.4, "color": "accent2", "tokenShape": "coin", "tokens": 6, "tokenEvery": 0.4, "lift": 0.2}],
+    "routes": [{"from": [-122.4, 37.8], "to": LL["tuvalu"], "at": C("owns dot T V", 0.5), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 40, "tokenEvery": 0.45, "lift": 0.2},
+               {"from": [139.7, 35.7], "to": LL["tuvalu"], "at": C("Twitch"), "dur": 1.4, "color": "accent2", "tokenShape": "coin", "tokens": 40, "tokenEvery": 0.45, "lift": 0.2}],
     "caption": "Real location (Natural Earth, public domain)"},
     sources=["afnic_2025", "theworld_tv", "natural_earth"], assets=GEO)
 add("s37_io", "m5_io", "engine_map", {
