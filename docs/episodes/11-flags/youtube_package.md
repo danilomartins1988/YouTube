@@ -1,0 +1,75 @@
+# YouTube package: "Why Almost Half the World's Ships Fly Three Small Flags" (Episode 11)
+
+Prepared for manual publishing. Nothing has been uploaded. Every number comes from the dossier
+(`research/flags_sources.md`); all amounts are in US dollars.
+
+## Title options
+
+1. **Why Almost Half the World's Ships Fly Three Small Flags** (recommended: the episode title)
+2. **Why Your Stuff Travels on Ships From Liberia, Panama and the Marshall Islands**
+3. **Flags of Convenience: The Hidden Trick Behind World Shipping**
+
+## Description
+
+```
+The biggest ship owners in the world are Greek, Chinese and Japanese. Yet just three flags, Liberia, Panama and the Marshall Islands, carry 45% of the world's shipping capacity (UNCTAD). How did that happen, and who pays when things go wrong?
+
+In this animated documentary:
+- Why every ship needs a flag, and why the flag decides the rules, the taxes and who protects the crew
+- How it started: Prohibition in the 1920s, Panama, and a new registry in Liberia in 1948, run from Virginia
+- Why owners choose a "flag of convenience", and what a country like Liberia earns from it
+- The dark side: a record 3,133 sailors abandoned in 2024, and ships flying flags that are not real
+- Why the system survives
+
+CHAPTERS
+0:00 Three small flags
+0:40 Whose ship is it?
+2:30 How it started
+4:34 Why owners do it
+6:30 The dark side
+8:50 Why it survives
+10:19 The flags on the horizon
+
+KEY SOURCES
+- UNCTAD, Review of Maritime Transport 2025: Liberia, Panama and the Marshall Islands 45.1% of world carrying capacity (Liberia 17.4%); Greece, China and Japan over 40.7% (Greece 16.4%)
+- UNCTADstat (June 2026): world fleet 2.5 billion dwt, about 116,000 vessels; Asian owners 56%, European 34%
+- AP (March 2021): Ever Given owned in Japan, operated from Taiwan, flagged in Panama, stuck in Egypt
+- Windward, flag of convenience glossary: Panama the first open registry, Prohibition in the 1920s, Liberia 1948, registry run from Virginia, reasons owners choose these flags
+- Rodney Carlisle, Business History Review (1980): Stettinius and the Liberian flag of convenience
+- FrontPage Africa (June 2026): Liberia the first registry above 300 million gross tons, 6,092 ships
+- LISCR: about 26% of newbuildings and 24% of container ships (registry's own figures)
+- AllAfrica (July 2026): Liberia's maritime revenue estimated at about $30 million in 2026
+- ITF via gCaptain (January 2025): 3,133 seafarers abandoned in 2024 (1,676 in 2023), 312 ships, 81% under flags of convenience, $20.1 million unpaid wages
+- Al Jazeera / CREA (November 2025): 113 Russian vessels flew false flags in the first nine months of 2025
+
+NOTES
+- Map arrows are schematic. Ship pennants show country names as text, not national flag designs.
+- Liberia's $30 million is a researcher's estimate; only the registry holds full records.
+
+This is an independent educational documentary. It is not affiliated with, endorsed by or sponsored by any company, registry, organization or government named in it. All visuals are original animations; no logos, flags, photos or footage are used. Narration voice is AI-generated.
+
+#shipping #economics #globaltrade
+```
+
+## Keywords / tags
+
+```
+flags of convenience, ship registry, why ships fly Liberia flag, Liberia flag, Panama flag, Marshall Islands, shipping explained, global trade, container ships, Ever Given, maritime economics, open registry, seafarers abandoned, shadow fleet, false flags, UNCTAD, economics documentary, animated documentary, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Every figure is sourced in the description. Three notes:
+1) "Almost half" = 45.1% of world shipping capacity (UNCTAD, 1 January 2025).
+2) Liberia's maritime revenue (about $30 million in 2026) is a researcher's estimate; only the registry holds full records.
+3) The pennants on the cartoon ships are text labels, not real flag designs, and map arrows are schematic.
+Think a number is wrong? Reply with a source and we'll check it and update this comment.
+```
+
+## End screen
+
+- **Last 20 seconds:** generic teaser. Link Episode 10 (Anguilla and .ai) or Episode 09 (undersea cables).
+- **Second slot:** Episode 09.
+- **Subscribe element** on the final card.
+- In YouTube Studio, mark the AI-generated narration as altered/synthetic content.

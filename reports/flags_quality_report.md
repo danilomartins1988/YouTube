@@ -2,39 +2,39 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/why-ships-fly-foreign-flags/documentary/why-ships-fly-foreign-flags--documentary.mp4 (175.3 MB) |
+| File exists | PASS | /home/user/YouTube/output/why-ships-fly-foreign-flags/documentary/why-ships-fly-foreign-flags--documentary.mp4 (186.9 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 10-12 min | PASS | 627.73 s (10:27) |
-| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
-| Caption/voice sync | PASS | 297 cues; median cue-start offset 0.08 s, p90 0.40 s; 100% of speech captioned |
+| Duration 10-12 min | PASS | 662.00 s (11:02) |
+| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
+| Caption/voice sync | PASS | 311 cues; median cue-start offset 0.08 s, p90 0.40 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>5 s) | FAIL | 68.9s, 537.3s |
+| No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
-- Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
+- Loudness: -16.2 LUFS integrated, true peak -3.9 dBFS
 - Scenes: 37; types: act_title x5, channel_intro x1, compare x2, end_card x1, engine_cartoon x13, engine_chart x3, engine_draw x4, engine_map x2, kinetic_text x6
-- Average scene length: 17.0 s; act cards are music-only.
+- Average scene length: 17.9 s; act cards are music-only.
 
 ## Pipeline QC report
 
 # QC report: why-ships-fly-foreign-flags / documentary (long_16x9)
 
-- Runtime: **627.73 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 175.3 MB
-- Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
-- Errors: **1**, warnings: **31**
-- Technical QC passed: **False**
+- Runtime: **662.0 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 186.9 MB
+- Loudness: -16.2 LUFS integrated, true peak -3.9 dBFS
+- Errors: **0**, warnings: **32**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [ERROR] (timing) Runtime 627.7s outside target 660-800s
 - [WARNING] (timing) Segment h_stakes pace 111 wpm (numerals count as one word)
 - [WARNING] (timing) Segment m3_transition pace 117 wpm (numerals count as one word)
 - [WARNING] (timing) Segment m4_abandon pace 117 wpm (numerals count as one word)
 - [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
+- [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'four' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
