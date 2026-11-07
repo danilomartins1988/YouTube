@@ -116,7 +116,7 @@ scenes:
         cue: Anguilla
     hubs:
     - id: a
-      at:
+      at: &id001
       - -63.05
       - 18.22
       label: Anguilla
@@ -124,7 +124,46 @@ scenes:
       color: gold
       time:
         cue: a Caribbean island
-    caption: Real location (Natural Earth, public domain)
+    routes:
+    - from:
+      - -77.0
+      - 38.9
+      to: *id001
+      at:
+        cue: from two letters
+      dur: 1.4
+      color: accent2
+      tokenShape: coin
+      tokens: 8
+      tokenEvery: 0.35
+      lift: 0.25
+    - from:
+      - -0.1
+      - 51.5
+      to: *id001
+      at:
+        cue: from two letters
+        offset: 0.4
+      dur: 1.6
+      color: accent2
+      tokenShape: coin
+      tokens: 8
+      tokenEvery: 0.35
+      lift: 0.25
+    - from:
+      - -122.4
+      - 37.8
+      to: *id001
+      at:
+        cue: from two letters
+        offset: 0.8
+      dur: 1.6
+      color: accent2
+      tokenShape: coin
+      tokens: 8
+      tokenEvery: 0.35
+      lift: 0.25
+    caption: 'Real location (Natural Earth) · arrows schematic: payments arrive from buyers worldwide'
   sources:
   - ap_2024
   - gleaner_2026
@@ -139,7 +178,7 @@ scenes:
     number: ''
     title: The Lucky Letters
     subtitle: How an island got .ai
-    min_seconds: 5.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -195,7 +234,7 @@ scenes:
   type: engine_draw
   params:
     title: What is a domain name?
-    board: &id001
+    board: &id002
       x: 470
       y: 230
       w: 1370
@@ -559,7 +598,7 @@ scenes:
     number: ''
     title: The Money Machine
     subtitle: Two letters, paid again and again
-    min_seconds: 5.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -625,7 +664,7 @@ scenes:
   type: engine_draw
   params:
     title: The money machine
-    board: *id001
+    board: *id002
     draw_start:
       cue: A start-up
     speed: 1400
@@ -1059,7 +1098,7 @@ scenes:
     number: ''
     title: The Boom
     subtitle: When the world wanted .ai
-    min_seconds: 5.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -1313,7 +1352,7 @@ scenes:
     number: ''
     title: What the Money Buys
     subtitle: Airport, roads, health
-    min_seconds: 5.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -1439,7 +1478,7 @@ scenes:
   type: engine_draw
   params:
     title: Do the math (our calculation)
-    board: *id001
+    board: *id002
     draw_start:
       cue: In twenty twenty-five
     speed: 1400
@@ -1699,7 +1738,7 @@ scenes:
     number: ''
     title: Can It Last?
     subtitle: When the hype cools
-    min_seconds: 5.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -1891,7 +1930,7 @@ scenes:
         cue: Tuvalu
     hubs:
     - id: t
-      at:
+      at: &id003
       - 179.2
       - -8.5
       label: Tuvalu
@@ -1899,6 +1938,31 @@ scenes:
       color: accent2
       time:
         cue: owns dot T V
+    routes:
+    - from:
+      - -122.4
+      - 37.8
+      to: *id003
+      at:
+        cue: video sites
+      dur: 1.6
+      color: accent2
+      tokenShape: coin
+      tokens: 8
+      tokenEvery: 0.4
+      lift: 0.2
+    - from:
+      - 139.7
+      - 35.7
+      to: *id003
+      at:
+        cue: Twitch
+      dur: 1.4
+      color: accent2
+      tokenShape: coin
+      tokens: 6
+      tokenEvery: 0.4
+      lift: 0.2
     caption: Real location (Natural Earth, public domain)
   sources:
   - afnic_2025
@@ -1939,7 +2003,7 @@ scenes:
         cue: Mauritius
     hubs:
     - id: c
-      at: &id002
+      at: &id004
       - 72.4
       - -7.3
       label: British Indian Ocean Territory
@@ -1948,7 +2012,7 @@ scenes:
       time:
         cue: belongs to
     - id: m
-      at: &id003
+      at: &id005
       - 57.55
       - -20.2
       label: Mauritius
@@ -1956,8 +2020,8 @@ scenes:
       time:
         cue: Mauritius
     routes:
-    - from: *id002
-      to: *id003
+    - from: *id004
+      to: *id005
       at:
         cue: Mauritius
         offset: 0.3
@@ -2029,7 +2093,7 @@ scenes:
   type: engine_draw
   params:
     title: The windfall choice
-    board: *id001
+    board: *id002
     draw_start:
       cue: On one side
     speed: 1300
