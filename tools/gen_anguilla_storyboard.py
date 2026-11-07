@@ -120,9 +120,9 @@ add("s02_map", "h_stakes", "engine_map", {
     "drift": {"lon": 0.08, "zoom": 0.012}, "tilt": [[0, 14], [10, 4]],
     "highlights": [{"iso": "AIA", "color": "gold", "at": C("Anguilla")}],
     "hubs": [{"id": "a", "at": AXA, "label": "Anguilla", "sub": "British Overseas Territory · 91 km²", "color": "gold", "time": C("a Caribbean island")}],
-    "routes": [{"from": [-77.0, 38.9], "to": AXA, "at": C("from two letters"), "dur": 1.4, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.35, "lift": 0.25},
-               {"from": [-0.1, 51.5], "to": AXA, "at": C("from two letters", 0.4), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.35, "lift": 0.25},
-               {"from": [-122.4, 37.8], "to": AXA, "at": C("from two letters", 0.8), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.35, "lift": 0.25}],
+    "routes": [{"from": [-77.0, 38.9], "to": AXA, "at": C("a Caribbean island", 1.0), "dur": 1.4, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.35, "lift": 0.25},
+               {"from": [-0.1, 51.5], "to": AXA, "at": C("a Caribbean island", 1.6), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.35, "lift": 0.25},
+               {"from": [-122.4, 37.8], "to": AXA, "at": C("a Caribbean island", 2.2), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.35, "lift": 0.25}],
     "caption": "Real location (Natural Earth) · arrows schematic: payments arrive from buyers worldwide"},
     sources=["ap_2024", "gleaner_2026", "natural_earth"], assets=GEO)
 
@@ -347,7 +347,7 @@ add("s36_tv", "m5_tv", "engine_map", {
     "drift": {"lon": 0.1, "zoom": 0.012}, "tilt": [[0, 12], [12, 4]],
     "highlights": [{"iso": "TUV", "color": "accent2", "at": C("Tuvalu")}],
     "hubs": [{"id": "t", "at": LL["tuvalu"], "label": "Tuvalu", "sub": ".tv", "color": "accent2", "time": C("owns dot T V")}],
-    "routes": [{"from": [-122.4, 37.8], "to": LL["tuvalu"], "at": C("video sites"), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.4, "lift": 0.2},
+    "routes": [{"from": [-122.4, 37.8], "to": LL["tuvalu"], "at": C("owns dot T V", 0.5), "dur": 1.6, "color": "accent2", "tokenShape": "coin", "tokens": 8, "tokenEvery": 0.4, "lift": 0.2},
                {"from": [139.7, 35.7], "to": LL["tuvalu"], "at": C("Twitch"), "dur": 1.4, "color": "accent2", "tokenShape": "coin", "tokens": 6, "tokenEvery": 0.4, "lift": 0.2}],
     "caption": "Real location (Natural Earth, public domain)"},
     sources=["afnic_2025", "theworld_tv", "natural_earth"], assets=GEO)

@@ -37,7 +37,7 @@ add("s02_share", "h_stakes", "engine_chart", {"chart": "donut", "cx": 960, "cy":
 
 # ====================================================================== PART 1: whose ship is it
 card("s03_c1", "m1_card", "Whose Ship Is It?", "One ship, many countries")
-cart("s04_q1", "m1_question", {
+cart("s04_q1", "m1_question", {"min_seconds": 9.0, 
     "worldW": 2400, "cam": [{"at": 0, "x": 1200, "y": 400, "zoom": 1.3}], "drift": 0,
     "actors": [ship(x=[[0, 900], [12, 1500]], flag="?", crew=4)],
     "callouts": [co("Whose ship is it?", 1200, 160, C("Whose ship"), "gold", size=48), co("Stranger than you think", 1200, 260, C("stranger"), "white")]})
@@ -56,7 +56,8 @@ add("p05_flag", "m1_flag", "engine_draw", {
         {"d": rect(1250, 610, 420, 90), "color": "accent", "width": 5, "start": C("and taxes"), "label": lbl("TAXES", 1460, 668, 30, "accent")},
         {"d": dot(800, 760), "color": "ink", "width": 1, "start": C("passport"), "label": lbl("= THE SHIP'S PASSPORT", 800, 760, 34, "risk")},
     ],
-    "actions": [{"kind": "point", "at": C("passport", 0.2), "dur": 1.4, "target": [800, 610]}, {"kind": "smile", "at": C("passport", 1.6), "dur": 1.5}],
+    "push": 0.004, "actions": [{"kind": "point", "at": C("passport", 0.2), "dur": 1.4, "target": [800, 610]}, {"kind": "smile", "at": C("passport", 1.6), "dur": 1.5},
+                {"kind": "walk", "at": C("In theory"), "dur": 1.4, "to": 1780}, {"kind": "explain", "at": C("make sure"), "dur": 2.5}, {"kind": "point", "at": C("wherever it sails"), "dur": 1.4, "target": [1460, 520]}],
     "scale": 0.86, "floor": 1040})
 cart("s06_evergiven", "m1_evergiven", {
     "worldW": 1920, "coasts": {"port": True, "left": True, "right": True, "leftLabel": "EGYPT", "rightLabel": "EGYPT"}, "sea": 420,
@@ -89,7 +90,7 @@ kinetic("s08_t1", "m1_transition", [("How did a few small countries", 54, "So ho
 
 # ====================================================================== PART 2: how it started
 card("s09_c2", "m2_card", "How It Started", "A drink, a war and an office in Virginia")
-cart("s10_q2", "m2_question", {
+cart("s10_q2", "m2_question", {"min_seconds": 9.0, 
     "worldW": 2400, "cam": [{"at": 0, "x": 1200, "y": 400, "zoom": 1.1}], "drift": 20,
     "actors": [ship(x=[[0, 700], [10, 1300]], flag=[[0, "HOME"], [{"cue": "borrowing"}, "???"]], crew=3)],
     "callouts": [co("Borrow a flag?", 1200, 170, C("borrowing"), "gold", size=48)]})
@@ -138,7 +139,7 @@ kinetic("s15_t2", "m2_transition", [("A flag you choose like a product", 58, "A 
 
 # ====================================================================== PART 3: why owners do it
 card("s16_c3", "m3_card", "Why Owners Do It", "Lighter rules, lower costs")
-cart("s17_q3", "m3_question", {
+cart("s17_q3", "m3_question", {"min_seconds": 9.0, 
     "worldW": 2600, "coasts": {"port": True, "left": True, "leftLabel": "OWNER"},
     "cam": [{"at": 0, "x": 1200, "y": 400, "zoom": 0.9}], "drift": 0,
     "actors": [office(160, "SHIP OWNER", "blue"), island(x=2000, text="FLAG STATE"), ship(x=[[0, 700], [12, 1300]], flag="FLAG STATE", crew=3),
@@ -169,7 +170,7 @@ kinetic("s21_t3", "m3_transition", [("Cheaper · simpler · lighter rules", 52, 
 
 # ====================================================================== PART 4: the dark side
 card("s22_c4", "m4_card", "The Dark Side", "Abandoned crews and false flags")
-cart("s23_q4", "m4_question", {
+cart("s23_q4", "m4_question", {"min_seconds": 9.0, 
     "worldW": 2400, "night": True, "cam": [{"at": 0, "x": 1200, "y": 420, "zoom": 1.3}], "drift": 0,
     "actors": [ship(x=1200, flag="???", flagColor="grey", crew=5, sadAt=C("disappears"), anchorAt=0.3)],
     "callouts": [co("The owner disappears…", 1200, 180, C("disappears"), "risk", size=44)]})
@@ -220,7 +221,7 @@ kinetic("s29_t4", "m4_transition", [("So why doesn't the world", 56, "So why", N
 
 # ====================================================================== PART 5: why it survives
 card("s30_c5", "m5_card", "Why It Survives", "Everyone gains something")
-cart("s31_q5", "m5_question", {
+cart("s31_q5", "m5_question", {"min_seconds": 9.0, 
     "worldW": 3000, "cam": [{"at": 0, "x": 1500, "y": 400, "zoom": 0.8}], "drift": 30,
     "actors": [ship(x=[[0, 400 + i * 700], [16, 1100 + i * 700]], flag=FLAGS3[i % 3], scale=0.7 + 0.1 * (i % 2)) for i in range(4)],
     "callouts": [co("…and they keep growing", 1500, 160, C("keep growing"), "gold", size=44)]})
@@ -236,7 +237,8 @@ add("p32_gains", "m5_everyone", "engine_draw", {
         {"d": dot(990, 950), "color": "muted", "width": 1, "start": C("local store"), "label": lbl("schematic, not to scale", 990, 950, 22, "muted")},
         {"d": dot(990, 360), "color": "ink", "width": 1, "start": C("cargo capacity"), "label": lbl("world fleet: {{regs_2026.display}}", 990, 360, 34, "ink")},
     ],
-    "actions": [{"kind": "point", "at": C("stays cheap", 0.6), "dur": 1.3, "target": [1270, 700]}],
+    "push": 0.004, "actions": [{"kind": "point", "at": C("stays cheap", 0.6), "dur": 1.3, "target": [1270, 700]},
+                {"kind": "walk", "at": C("Changing that"), "dur": 1.3, "to": 400}, {"kind": "explain", "at": C("less income"), "dur": 2.5}, {"kind": "react", "at": C("higher prices")}],
     "scale": 0.86, "floor": 1040}, sources=["unctadstat_2026"])
 add("s33_quality", "m5_quality", "compare", {"chapter": "Why it survives", "title": "Safe choice, or not?", "sides": [
     {"kicker": "New ships choosing Liberia", "value": "{{liberia_new.display}}", "label": "the registry's own figure", "cue": "newly built"},

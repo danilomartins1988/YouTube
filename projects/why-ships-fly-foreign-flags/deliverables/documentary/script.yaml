@@ -27,7 +27,8 @@ segments:
   claims: []
 - id: m1_question
   chapter: Whose ship is it
-  narration: So whose ship is it, really? The answer is stranger than you might think.
+  narration: So whose ship is it, really? The answer is stranger than you might think. Let's start with one famous
+    ship.
   claims: []
   analysis: true
   source_note: Part question.
@@ -52,7 +53,8 @@ segments:
   narration: And it is not an exception. Greek owners control the biggest share of the world's fleet, about {{owners}}
     of all carrying capacity. Asian companies own more than half of it, European companies about a third. But look
     at the flags, and the top three are small countries most people could not find on a map. That is true across
-    a world fleet of {{regs_2026.vessels_spoken}} vessels. Greece, China and Japan together own {{owners.top3_spoken}} of the world's carrying capacity.
+    a world fleet of {{regs_2026.vessels_spoken}} vessels. Greece, China and Japan together own {{owners.top3_spoken}}
+    of the world's carrying capacity.
   claims:
   - owners
   - regs_2026
@@ -83,9 +85,10 @@ segments:
   narration: After the Second World War, a historian found, Panama's officials started demanding so much in private
     payments that ship owners wanted an alternative. {{liberia_1948}}, a former American Secretary of State, Edward
     Stettinius, worked with the government of Liberia to open a new registry. And to this day, the Liberian registry
-    is run from an office in Virginia, in the United States.
+    is run from an office in Virginia, in the United States. That registry would grow into the biggest in the world.
   claims:
   - liberia_1948
+  - top3
 - id: m2_term
   chapter: How it started
   narration: 'The idea spread so fast that it got its own name. In the nineteen fifties, people started calling
@@ -155,7 +158,8 @@ segments:
   claims: []
 - id: m4_question
   chapter: The dark side
-  narration: What happens to the people on board when the owner simply disappears?
+  narration: What happens to the people on board when the owner simply disappears? On paper, the flag state should
+    step in. In practice, it often doesn't.
   claims: []
   analysis: true
   source_note: Part question.
@@ -207,7 +211,8 @@ segments:
   claims: []
 - id: m5_question
   chapter: Why it survives
-  narration: If flags of convenience cause so many problems, why do they keep growing?
+  narration: If flags of convenience cause so many problems, why do they keep growing? And why does the system survive
+    every scandal?
   claims: []
   analysis: true
   source_note: Part question.
@@ -230,8 +235,9 @@ segments:
   - abandon
 - id: m5_lesson
   chapter: Why it survives
-  narration: The real question is not where a ship is registered. It is whether anyone, anywhere, is truly responsible
-    for it.
+  narration: 'The real question is not where a ship is registered. It is whether anyone, anywhere, is truly responsible
+    for it. Because a flag is supposed to be a promise: that someone will check the ship, protect the crew, and
+    answer when things go wrong.'
   claims: []
   analysis: true
   source_note: Conclusion.
