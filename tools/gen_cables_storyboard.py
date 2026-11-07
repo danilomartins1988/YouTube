@@ -354,13 +354,14 @@ add("s35_smw6", "m5_smw6", "engine_map", {
     sources=["reuters_smw6", "lightreading_smw6", "natural_earth"], assets=GEO, sfx=[{"kind": "hit", "cue": "pressed the members", "gain": 0.3}])
 add("s36_plcn", "m5_plcn", "engine_map", {
     "title": "Pacific Light Cable Network", "subtitle": "owned by Google and Meta",
-    "cameras": [{"at": 0, "lon": -150, "lat": 28, "span": 150}, {"at": C("review recommended"), "lon": 172, "lat": 25, "span": 175, "dur": 2.0}],
-    "drift": {"lon": 0.1, "zoom": 0.003}, "tilt": [[0, 12], [20, 6]],
+    "cameras": [{"at": 0, "lon": -130, "lat": 30, "span": 120}, {"at": C("across the Pacific"), "lon": -160, "lat": 28, "span": 160, "dur": 3.0}, {"at": C("review recommended"), "lon": 172, "lat": 25, "span": 175, "dur": 2.0}],
+    "drift": {"lon": 0.5, "zoom": 0.008}, "tilt": [[0, 16], [20, 6]],
     "hubs": [{"id": "u", "at": LL["losangeles"], "label": "United States", "color": "accent2", "time": 0.4, "anchor": "end"},
              {"id": "h", "at": LL["hongkong"], "label": "Hong Kong", "sub": "leg dropped", "color": "risk", "time": C("Hong Kong"), "anchor": "end"},
              {"id": "t", "at": LL["taiwan"], "label": "Taiwan", "color": "accent3", "time": C("only to Taiwan")},
              {"id": "p", "at": LL["manila"], "label": "Philippines", "color": "accent3", "time": C("Philippines")}],
-    "routes": [{"from": LL["losangeles"], "to": LL["hongkong"], "at": C("review recommended"), "dur": 1.4, "blocked": True, "lift": 0.18},
+    "routes": [{"from": LL["losangeles"], "to": LL["taiwan"], "at": C("Google and Meta"), "dur": 1.4, "color": "border", "lift": 0.16},
+               {"from": LL["losangeles"], "to": LL["hongkong"], "at": C("review recommended"), "dur": 1.4, "blocked": True, "lift": 0.18},
                {"from": LL["losangeles"], "to": LL["taiwan"], "at": C("only to Taiwan"), "dur": 1.4, "color": "accent3", "tokenShape": "packet", "lift": 0.16},
                {"from": LL["losangeles"], "to": LL["manila"], "at": C("Philippines"), "dur": 1.4, "color": "accent3", "tokenShape": "packet", "lift": 0.12}],
     "caption": "Route schematic (Natural Earth basemap)"},

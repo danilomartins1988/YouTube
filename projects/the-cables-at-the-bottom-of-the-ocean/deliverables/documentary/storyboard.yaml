@@ -2261,9 +2261,15 @@ scenes:
     subtitle: owned by Google and Meta
     cameras:
     - at: 0
-      lon: -150
+      lon: -130
+      lat: 30
+      span: 120
+    - at:
+        cue: across the Pacific
+      lon: -160
       lat: 28
-      span: 150
+      span: 160
+      dur: 3.0
     - at:
         cue: review recommended
       lon: 172
@@ -2271,11 +2277,11 @@ scenes:
       span: 175
       dur: 2.0
     drift:
-      lon: 0.1
-      zoom: 0.003
+      lon: 0.5
+      zoom: 0.008
     tilt:
     - - 0
-      - 12
+      - 16
     - - 20
       - 6
     hubs:
@@ -2310,6 +2316,13 @@ scenes:
       time:
         cue: Philippines
     routes:
+    - from: *id009
+      to: *id019
+      at:
+        cue: Google and Meta
+      dur: 1.4
+      color: border
+      lift: 0.16
     - from: *id009
       to: *id007
       at:
