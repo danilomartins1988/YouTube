@@ -25,6 +25,8 @@ export type CartoonActor = {
   flag?: string | [number, string][]; flagColor?: string;
   /** ships: crew on deck; sadAt makes them sad (abandoned) */
   crew?: number; sadAt?: number;
+  /** coins: draw chips instead of coins */
+  shape?: 'coin' | 'chip';
   at?: number; x?: number | [number, number][]; y?: number; name?: string; color?: string; scale?: number;
   flip?: boolean;
   anchorAt?: number; sinkAt?: number; smokeAt?: number; netAt?: number;
@@ -38,7 +40,9 @@ export type CartoonOceanProps = {
   worldW?: number; sea?: number; bed?: number;
   cam?: Key[]; drift?: number; shake?: {at: number; dur?: number; amp?: number}[];
   /** port: a container crane and box stacks instead of the data center (shipping stories) */
-  coasts?: {left?: boolean; right?: boolean; leftLabel?: string; rightLabel?: string; darkAt?: number; port?: boolean};
+  coasts?: {left?: boolean; right?: boolean; leftLabel?: string; rightLabel?: string; darkAt?: number; port?: boolean;
+    /** plain: land only, no data center or landing station (when the scene places its own buildings) */
+    plain?: boolean};
   cables?: CartoonCable[];
   actors?: CartoonActor[];
   callouts?: CartoonCallout[];
@@ -288,7 +292,12 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
       const u = (t - (at + k / rate)) / fly; if (u < 0 || u > 1) continue;
       const cx = lerp(x0, x1, u) + Math.sin(k * 1.7) * 30 * (1 - u), cy = lerp(y0, y1, u) - Math.sin(Math.PI * u) * 220;
       const spin = Math.abs(Math.cos(t * 8 + k));
-      out.push(<g key={k} transform={`translate(${cx} ${cy}) scale(${0.3 + 0.7 * spin} 1)`}><circle r={18} fill={K.gold} stroke={OL} strokeWidth={4} />
+      out.push(a.shape === 'chip'
+        ? <g key={k} transform={`translate(${cx} ${cy}) rotate(${(t * 90 + k * 40) % 360})`}>
+            {[-10, 0, 10].map((q) => <path key={q} d={`M ${q} -22 L ${q} 22 M -22 ${q} L 22 ${q}`} stroke={OL} strokeWidth={3} />)}
+            <rect x={-15} y={-15} width={30} height={30} rx={4} fill="#2F3A56" stroke={OL} strokeWidth={3} />
+            <rect x={-7} y={-7} width={14} height={14} rx={2} fill={K.gold} /></g>
+        : <g key={k} transform={`translate(${cx} ${cy}) scale(${0.3 + 0.7 * spin} 1)`}><circle r={18} fill={K.gold} stroke={OL} strokeWidth={4} />
         <text x={0} y={7} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={20} fill={OL}>$</text></g>);
     }
     return <g>{out}</g>;
@@ -397,7 +406,7 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
     return <g key={side}>
       <path d={slope} fill={K.sand2} stroke={OL} strokeWidth={5} />
       <rect x={x0} y={top - 16} width={x1 - x0} height={26} fill={K.land} stroke={OL} strokeWidth={4} />
-      {coasts.port ? <g transform={`translate(${dc} ${top - 16})`}>
+      {coasts.plain ? null : coasts.port ? <g transform={`translate(${dc} ${top - 16})`}>
         {[0, 1, 2].map((r) => [0, 1, 2, 3].map((c2) => <rect key={`${r}${c2}`} x={-90 + c2 * 44} y={-34 - r * 32} width={42} height={30} rx={3}
           fill={['#4FB3F6', '#FFC93C', '#7BD389', '#FF8A65'][(r + c2) % 4]} stroke={OL} strokeWidth={3} />))}
         <g transform={`translate(${L ? 110 : -110} 0)`}>

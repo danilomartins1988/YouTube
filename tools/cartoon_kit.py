@@ -76,8 +76,10 @@ def letters(x=1260, y=150, at=0.0, size=150, **kw):
     return {"kind": "letters", "text": ".ai", "x": x, "y": y, "at": at, "size": size, **kw}
 
 
-def coins(x, y, to, at, rate=4, until=None):
+def coins(x, y, to, at, rate=4, until=None, shape=None):
     c = {"kind": "coins", "x": x, "y": y, "to": to, "at": at, "rate": rate}
+    if shape:
+        c["shape"] = shape
     if until is not None:
         c["until"] = until
     return c
