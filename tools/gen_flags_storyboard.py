@@ -19,14 +19,14 @@ FLAGS3 = ["LIBERIA", "PANAMA", "MARSHALL IS."]
 
 # ====================================================================== HOOK
 cart("s01_ships", "h_question", {
-    "worldW": 3600, "coasts": {"left": True, "leftLabel": "YOUR CITY"},
+    "worldW": 3600, "coasts": {"port": True, "left": True, "leftLabel": "YOUR CITY"},
     "cam": [{"at": 0, "x": 2400, "y": 420, "zoom": 1.0}, {"at": C("registered"), "x": 1500, "y": 400, "zoom": 0.85, "dur": 3.0},
             {"at": C("choice of flag"), "x": 1200, "y": 360, "zoom": 1.1, "dur": 2.4}],
     "drift": 0,
     "actors": [ship(x=[[0, 3000], [20, 1500]], flag="LIBERIA", flip=True, crew=3), ship(x=[[0, 2200], [20, 900]], flag="PANAMA", flip=True, scale=0.8),
                ship(x=[[0, 3500], [20, 2300]], flag="MARSHALL IS.", flip=True, scale=0.9)],
     "callouts": [co("your phone · your clothes · your coffee", 960, 960, C("your phone"), "white", screen=True, size=36),
-                 co("Registered… where?", 1500, 180, C("registered"), "gold", size=44),
+                 co("Registered… where?", 1500, 180, C("registered"), "gold", size=44, until=C("choice of flag", -0.4)),
                  co("Rules · taxes · crew", 1200, 180, C("choice of flag"), "risk", size=40)]},
     sfx=[{"kind": "hit", "cue": "registered", "gain": 0.3}])
 add("s02_share", "h_stakes", "engine_chart", {"chart": "donut", "cx": 960, "cy": 600, "r": 250, "thick": 90, "start": C("just three flags"),
@@ -59,7 +59,7 @@ add("p05_flag", "m1_flag", "engine_draw", {
     "actions": [{"kind": "point", "at": C("passport", 0.2), "dur": 1.4, "target": [800, 610]}, {"kind": "smile", "at": C("passport", 1.6), "dur": 1.5}],
     "scale": 0.86, "floor": 1040})
 cart("s06_evergiven", "m1_evergiven", {
-    "worldW": 1920, "coasts": {"left": True, "right": True, "leftLabel": "EGYPT", "rightLabel": "EGYPT"}, "sea": 420,
+    "worldW": 1920, "coasts": {"port": True, "left": True, "right": True, "leftLabel": "EGYPT", "rightLabel": "EGYPT"}, "sea": 420,
     "cam": [{"at": 0, "x": 960, "y": 420, "zoom": 0.9}, {"at": C("One ship"), "x": 960, "y": 380, "zoom": 1.1, "dur": 2.0}], "drift": 0,
     "shake": [{"at": C("stuck in the Suez"), "dur": 1.0, "amp": 10}],
     "actors": [ship(x=960, flag="PANAMA", name="EVER GIVEN", crew=5)],
@@ -94,7 +94,7 @@ cart("s10_q2", "m2_question", {
     "actors": [ship(x=[[0, 700], [10, 1300]], flag=[[0, "HOME"], [{"cue": "borrowing"}, "???"]], crew=3)],
     "callouts": [co("Borrow a flag?", 1200, 170, C("borrowing"), "gold", size=48)]})
 cart("s11_prohibition", "m2_prohibition", {
-    "worldW": 2600, "coasts": {"left": True, "leftLabel": "UNITED STATES"},
+    "worldW": 2600, "coasts": {"port": True, "left": True, "leftLabel": "UNITED STATES"},
     "cam": [{"at": 0, "x": 900, "y": 400, "zoom": 1.0}, {"at": C("open registry"), "x": 1500, "y": 400, "zoom": 0.95, "dur": 2.4}], "drift": 0,
     "actors": [ship(x=[[0, 700], [20, 1900]], flag=[[0, "UNITED STATES"], [{"cue": "registered their ships"}, "PANAMA"]], crew=6, name="PASSENGER SHIP")],
     "callouts": [co("1920s: alcohol banned in the U.S.", 960, 150, C("alcohol was banned"), "risk", screen=True, size=40),
@@ -139,7 +139,7 @@ kinetic("s15_t2", "m2_transition", [("A flag you choose like a product", 58, "A 
 # ====================================================================== PART 3: why owners do it
 card("s16_c3", "m3_card", "Why Owners Do It", "Lighter rules, lower costs")
 cart("s17_q3", "m3_question", {
-    "worldW": 2600, "coasts": {"left": True, "leftLabel": "OWNER"},
+    "worldW": 2600, "coasts": {"port": True, "left": True, "leftLabel": "OWNER"},
     "cam": [{"at": 0, "x": 1200, "y": 400, "zoom": 0.9}], "drift": 0,
     "actors": [office(160, "SHIP OWNER", "blue"), island(x=2000, text="FLAG STATE"), ship(x=[[0, 700], [12, 1300]], flag="FLAG STATE", crew=3),
                coins(200, 120, [2000, 260], C("in return"), rate=2)],
@@ -179,7 +179,7 @@ add("s24_abandon", "m4_abandon", "engine_chart", {"chart": "bar", "box": {"x": 4
     "highlight": 1, "highlightAt": C("Left on board"), "color": "accent2", "highlightColor": "risk"},
     sources=["itf_2024"])
 cart("s25_ships", "m4_ships", {
-    "worldW": 2400, "coasts": {"right": True, "rightLabel": "FOREIGN PORT"},
+    "worldW": 2400, "coasts": {"port": True, "right": True, "rightLabel": "FOREIGN PORT"},
     "cam": [{"at": 0, "x": 1300, "y": 400, "zoom": 1.1}], "drift": 0,
     "actors": [ship(x=1500, flag="FLAG ?", flagColor="grey", crew=5, sadAt=0.0, anchorAt=0.0), ship(x=800, flag="FLAG ?", flagColor="grey", crew=3, sadAt=0.0, anchorAt=0.5, scale=0.7)],
     "callouts": [co("{{abandon.ships_display}} ships abandoned in 2024", 960, 150, C("In total"), "risk", screen=True, size=44),
@@ -246,7 +246,7 @@ kinetic("s34_lesson", "m5_lesson", [("Not where a ship is registered", 54, "The 
 
 # ====================================================================== PAYOFF
 cart("s35_payoff", "payoff", {
-    "worldW": 4200, "coasts": {"left": True, "leftLabel": "YOUR CITY"},
+    "worldW": 4200, "coasts": {"port": True, "left": True, "leftLabel": "YOUR CITY"},
     "cam": [{"at": 0, "x": 600, "y": 380, "zoom": 1.1}, {"at": C("look at the back"), "x": 1700, "y": 400, "zoom": 1.15, "dur": 2.6},
             {"at": C("Monrovia"), "x": 2600, "y": 400, "zoom": 0.85, "dur": 3.0}, {"at": C("chosen like a product"), "x": 3200, "y": 380, "zoom": 0.95, "dur": 3.0}],
     "drift": 0,

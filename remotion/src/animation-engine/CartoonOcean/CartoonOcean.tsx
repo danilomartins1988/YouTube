@@ -37,7 +37,8 @@ export type CartoonOceanProps = {
   t: number; W?: number; H?: number;
   worldW?: number; sea?: number; bed?: number;
   cam?: Key[]; drift?: number; shake?: {at: number; dur?: number; amp?: number}[];
-  coasts?: {left?: boolean; right?: boolean; leftLabel?: string; rightLabel?: string; darkAt?: number};
+  /** port: a container crane and box stacks instead of the data center (shipping stories) */
+  coasts?: {left?: boolean; right?: boolean; leftLabel?: string; rightLabel?: string; darkAt?: number; port?: boolean};
   cables?: CartoonCable[];
   actors?: CartoonActor[];
   callouts?: CartoonCallout[];
@@ -396,6 +397,15 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
     return <g key={side}>
       <path d={slope} fill={K.sand2} stroke={OL} strokeWidth={5} />
       <rect x={x0} y={top - 16} width={x1 - x0} height={26} fill={K.land} stroke={OL} strokeWidth={4} />
+      {coasts.port ? <g transform={`translate(${dc} ${top - 16})`}>
+        {[0, 1, 2].map((r) => [0, 1, 2, 3].map((c2) => <rect key={`${r}${c2}`} x={-90 + c2 * 44} y={-34 - r * 32} width={42} height={30} rx={3}
+          fill={['#4FB3F6', '#FFC93C', '#7BD389', '#FF8A65'][(r + c2) % 4]} stroke={OL} strokeWidth={3} />))}
+        <g transform={`translate(${L ? 110 : -110} 0)`}>
+          <path d="M -30 0 L -30 -230 M 30 0 L 30 -230 M -30 -230 L 30 -230 M -30 -120 L 30 -120 M -30 -60 L 30 -10 M 30 -60 L -30 -10" fill="none" stroke="#E2504C" strokeWidth={10} strokeLinecap="round" />
+          <path d={`M ${L ? -60 : 60} -230 L ${L ? 230 : -230} -230`} stroke="#E2504C" strokeWidth={12} strokeLinecap="round" />
+          <path d={`M ${L ? 150 + 40 * Math.sin(t * 0.6) : -150 - 40 * Math.sin(t * 0.6)} -230 L ${L ? 150 + 40 * Math.sin(t * 0.6) : -150 - 40 * Math.sin(t * 0.6)} ${-150 + 30 * Math.sin(t * 0.9)}`} stroke={OL} strokeWidth={3} />
+          <rect x={(L ? 150 + 40 * Math.sin(t * 0.6) : -150 - 40 * Math.sin(t * 0.6)) - 21} y={-150 + 30 * Math.sin(t * 0.9)} width={42} height={28} rx={3} fill="#B39DDB" stroke={OL} strokeWidth={3} />
+        </g></g> : <>
       <g transform={`translate(${dc} ${top - 16})`}>
         <rect x={-70} y={-130} width={140} height={130} rx={10} fill="#DDE3EE" stroke={OL} strokeWidth={5} />
         {[0, 1, 2].map((r) => [0, 1, 2].map((c2) => <circle key={`${r}${c2}`} cx={-36 + c2 * 36} cy={-100 + r * 34} r={7} fill={dark ? '#2A3550' : blink(r * 3 + c2)} stroke={OL} strokeWidth={2} />))}
@@ -406,7 +416,8 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
         <path d="M -48 -60 L 0 -92 L 48 -60 Z" fill="#E2504C" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
       </g>
       <path d={`M ${dc + (L ? 70 : -70)} ${top - 40} L ${ls + (L ? -40 : 40)} ${top - 40}`} stroke={K.light} strokeWidth={5} strokeDasharray="10 8" strokeDashoffset={-t * 60} />
-      {(L ? coasts.leftLabel : coasts.rightLabel) && <text x={(dc + ls) / 2} y={top + 70} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={30} fill={K.white} stroke={OL} strokeWidth={1.5}>{L ? coasts.leftLabel : coasts.rightLabel}</text>}
+      </>}
+      {(L ? coasts.leftLabel : coasts.rightLabel) && <text x={(dc + ls) / 2} y={top + 140} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={30} fill={K.white} stroke={OL} strokeWidth={1.5}>{L ? coasts.leftLabel : coasts.rightLabel}</text>}
     </g>;
   };
 

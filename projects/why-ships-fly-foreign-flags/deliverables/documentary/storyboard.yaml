@@ -7,6 +7,7 @@ scenes:
   params:
     worldW: 3600
     coasts:
+      port: true
       left: true
       leftLabel: YOUR CITY
     cam:
@@ -70,6 +71,9 @@ scenes:
       at:
         cue: registered
       color: gold
+      until:
+        cue: choice of flag
+        offset: -0.4
       size: 44
     - text: Rules · taxes · crew
       x: 1200
@@ -305,6 +309,7 @@ scenes:
   params:
     worldW: 1920
     coasts:
+      port: true
       left: true
       right: true
       leftLabel: EGYPT
@@ -595,6 +600,7 @@ scenes:
   params:
     worldW: 2600
     coasts:
+      port: true
       left: true
       leftLabel: UNITED STATES
     cam:
@@ -950,6 +956,7 @@ scenes:
   params:
     worldW: 2600
     coasts:
+      port: true
       left: true
       leftLabel: OWNER
     cam:
@@ -1254,6 +1261,7 @@ scenes:
   params:
     worldW: 2400
     coasts:
+      port: true
       right: true
       rightLabel: FOREIGN PORT
     cam:
@@ -1767,6 +1775,7 @@ scenes:
   params:
     worldW: 4200
     coasts:
+      port: true
       left: true
       leftLabel: YOUR CITY
     cam:
