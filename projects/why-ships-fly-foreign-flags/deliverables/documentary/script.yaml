@@ -1,0 +1,245 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}}; years are written in words. Generic teaser (channel rule).
+logline: Greek, Chinese and Japanese owners control the biggest fleets, yet almost half of the world's shipping
+  capacity flies the flags of Liberia, Panama and the Marshall Islands. How it started, why owners do it, what the
+  small countries earn, and who pays when things go wrong.
+title: Why Almost Half the World's Ships Fly Three Small Flags
+segments:
+- id: h_question
+  chapter: The flags
+  narration: What if most of the giant ships that carry your phone, your clothes and your coffee were registered
+    in countries they almost never visit? And what if that choice of flag decided the rules on board, the taxes
+    the owner pays, and who protects the crew?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_stakes
+  chapter: The flags
+  narration: They are. According to the United Nations' trade agency, just three flags, Liberia, Panama and the
+    Marshall Islands, carry {{top3}} of the world's shipping capacity. Yet the biggest ship owners are Greek, Chinese
+    and Japanese.
+  claims:
+  - top3
+  - owners
+- id: m1_card
+  chapter: Whose ship is it
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: Whose ship is it
+  narration: So whose ship is it, really? The answer is stranger than you might think.
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_flag
+  chapter: Whose ship is it
+  narration: 'Every ship must be registered in one country, its flag state. That flag decides which country''s laws
+    apply on board: safety rules, labor rules and taxes. It works like the ship''s passport.'
+  claims: []
+  analysis: true
+  source_note: General explanation of flag-state jurisdiction; no figures.
+- id: m1_evergiven
+  chapter: Whose ship is it
+  narration: Remember the giant ship that got stuck in the Suez Canal in twenty twenty-one, the Ever Given? It was
+    owned by a Japanese company, operated by a Taiwanese shipping line, flagged in {{evergiven}}, and stuck in Egypt.
+    One ship, four countries.
+  claims:
+  - evergiven
+- id: m1_owners
+  chapter: Whose ship is it
+  narration: And it is not an exception. Greek owners control the biggest share of the world's fleet, about {{owners}}
+    of all carrying capacity. Asian companies own more than half of it, European companies about a third. But look
+    at the flags, and the top three are small countries most people could not find on a map. That is true across
+    a world fleet of {{regs_2026.vessels_spoken}} vessels.
+  claims:
+  - owners
+  - regs_2026
+- id: m1_transition
+  chapter: Whose ship is it
+  narration: So how did a few small countries end up flying the world's fleet? It started with a drink.
+  claims: []
+- id: m2_card
+  chapter: How it started
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: How it started
+  narration: Where did the idea of borrowing another country's flag come from?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_prohibition
+  chapter: How it started
+  narration: 'In the nineteen twenties, alcohol was banned in the United States. Ship owners who wanted to serve
+    drinks to their passengers found a way out: they registered their ships in Panama. Panama became the first open
+    registry, a flag that anyone, from any country, could fly.'
+  claims:
+  - panama_1920s
+- id: m2_liberia
+  chapter: How it started
+  narration: After the Second World War, a historian found, Panama's officials started demanding so much in private
+    payments that ship owners wanted an alternative. {{liberia_1948}}, a former American Secretary of State, Edward
+    Stettinius, worked with the government of Liberia to open a new registry. And to this day, the Liberian registry
+    is run from an office in Virginia, in the United States.
+  claims:
+  - liberia_1948
+- id: m2_term
+  chapter: How it started
+  narration: 'The idea spread so fast that it got its own name. In the nineteen fifties, people started calling
+    it a flag of convenience: a flag chosen not for where the ship comes from, but for what it saves.'
+  claims:
+  - term_1950s
+- id: m2_draw
+  chapter: How it started
+  narration: Let me draw how an open registry works. A ship owner in Athens, Shanghai or Tokyo picks a flag from
+    a menu. The registry, often a private company working for the flag country, signs the ship up, collects the
+    fees, and sends part of the money to the government. The ship never has to visit the country at all.
+  claims:
+  - liberia_1948
+  - liberia_rev
+  analysis: true
+  source_note: General description of an open registry; registry fees and the government's revenue from AllAfrica.
+- id: m2_transition
+  chapter: How it started
+  narration: A flag you can choose like a product. But why would an owner choose a faraway flag over its own?
+  claims: []
+- id: m3_card
+  chapter: Why owners do it
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: Why owners do it
+  narration: What does a ship owner actually gain? And what does the small country get in return?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_reasons
+  chapter: Why owners do it
+  narration: According to the maritime analytics firm Windward, owners choose a flag of convenience to escape stricter
+    rules at home, to cut operating costs, to avoid high taxes, and, in the worst cases, to get around the laws
+    that protect sailors' wages and working conditions. Panama, for example, offers registration online and lets
+    owners hire low-cost crews from anywhere.
+  claims:
+  - definition
+- id: m3_scale
+  chapter: Why owners do it
+  narration: And it works at an enormous scale. In twenty twenty-six, Liberia became the first registry in history
+    to pass {{liberia_2026}} of ships, with {{liberia_2026.ships_spoken}} flying its flag. Liberia alone carries
+    {{top3.liberia_spoken}} of the world's shipping capacity. It says it flies almost a quarter of all the world's
+    container ships, the ones that carry the boxes with your online orders.
+  claims:
+  - liberia_2026
+  - top3
+  - liberia_new
+- id: m3_money
+  chapter: Why owners do it
+  narration: So what does Liberia earn? Registration fees, yearly tonnage taxes, inspections and certificates. A
+    local researcher estimates the country's maritime revenue at {{liberia_rev}} in twenty twenty-six. For a country
+    like Liberia, that matters. But it is a tiny slice of an industry that carries the world's trade.
+  claims:
+  - liberia_rev
+- id: m3_transition
+  chapter: Why owners do it
+  narration: Cheaper, simpler, lighter rules. But when something goes wrong far out at sea, who is responsible?
+  claims: []
+- id: m4_card
+  chapter: The dark side
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The dark side
+  narration: What happens to the people on board when the owner simply disappears?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_abandon
+  chapter: The dark side
+  narration: It happens more and more. According to the International Transport Workers' Federation, {{abandon}}
+    sailors were abandoned by their ship owners in twenty twenty-four, up from {{abandon.prev_spoken}} the year
+    before. Left on board, far from home, often without pay, food or a way back. They were owed more than {{abandon.wages_spoken}}
+    in unpaid wages.
+  claims:
+  - abandon
+- id: m4_ships
+  chapter: The dark side
+  narration: In total, {{abandon.ships_display}} ships were abandoned in twenty twenty-four, more than twice as
+    many as the year before. Each one is a crew stuck in a foreign port, waiting for someone
+    to take responsibility.
+  claims:
+  - abandon
+- id: m4_foc
+  chapter: The dark side
+  narration: And {{abandon.foc_spoken}} of the abandoned ships were flying a flag of convenience. When the owner
+    hides behind a company in one country and a flag in another, the crew has almost no one to call. The flag with
+    the most abandoned ships was Panama.
+  claims:
+  - abandon
+- id: m4_draw
+  chapter: The dark side
+  narration: 'Let me draw why this is so hard to fix. The owner lives in one country. The company that legally owns
+    the ship is registered in a second. The flag belongs to a third. The crew comes from a fourth. And the ship
+    is stuck in the port of a fifth. Each one can say: it''s not my problem.'
+  claims: []
+  analysis: true
+  source_note: Conceptual diagram of fragmented responsibility; no figures.
+- id: m4_falseflags
+  chapter: The dark side
+  narration: Some ships go further, and fly flags that are not real at all. Researchers at the Centre for Research
+    on Energy and Clean Air counted {{falseflags}} Russian vessels flying a false flag in the first nine months
+    of twenty twenty-five, often to dodge sanctions on oil.
+  claims:
+  - falseflags
+- id: m4_transition
+  chapter: The dark side
+  narration: So why doesn't the world simply ban it?
+  claims: []
+- id: m5_card
+  chapter: Why it survives
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Why it survives
+  narration: If flags of convenience cause so many problems, why do they keep growing?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_everyone
+  chapter: Why it survives
+  narration: Because almost everyone gains something. Owners save money. Small countries earn fees. Shipping stays
+    cheap, and so do the goods it carries, all the way to your local store. The world's fleet now carries {{regs_2026}}
+    of cargo capacity, and most of it moves under a flag of choice.
+  claims:
+  - regs_2026
+  source_note: '"Most of it" summarises the UNCTAD finding that flag and owner usually differ; no new figure.'
+- id: m5_quality
+  chapter: Why it survives
+  narration: 'And the big registries compete hard to look like the safe choice. Liberia says {{liberia_new}} of
+    the world''s newly built ships are joining its flag. But the list of abandoned ships tells a mixed story: Panama
+    tops it, followed by smaller flags like Palau, Tanzania, Comoros, Cameroon and Bahrain.'
+  claims:
+  - liberia_new
+  - abandon
+- id: m5_lesson
+  chapter: Why it survives
+  narration: The real question is not where a ship is registered. It is whether anyone, anywhere, is truly responsible
+    for it.
+  claims: []
+  analysis: true
+  source_note: Conclusion.
+- id: payoff
+  chapter: The journey
+  narration: So, next time you see a giant ship on the horizon, look at the back of it. The name of a port will
+    be painted there, Monrovia, Panama or Majuro, far from its owners, its crew and its cargo. A flag that was chosen
+    like a product, for a world that runs on cheap shipping.
+  claims:
+  - top3
+  analysis: true
+  source_note: Port of registry is painted on the stern (general maritime practice); Monrovia, Panama and Majuro
+    are the registry ports.
+- id: teaser
+  chapter: The journey
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

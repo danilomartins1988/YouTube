@@ -21,6 +21,10 @@ export type CartoonActor = {
     | 'letters' | 'coins' | 'plane' | 'storm' | 'office' | 'piggy';
   /** letters/office/plane: the text shown; coins: [x2, y2] target, rate per second, until */
   text?: string; to?: [number, number]; rate?: number; until?: number; size?: number;
+  /** ships: a text pennant on the stern mast (a label, never a real national flag design); keyframes switch it */
+  flag?: string | [number, string][]; flagColor?: string;
+  /** ships: crew on deck; sadAt makes them sad (abandoned) */
+  crew?: number; sadAt?: number;
   at?: number; x?: number | [number, number][]; y?: number; name?: string; color?: string; scale?: number;
   flip?: boolean;
   anchorAt?: number; sinkAt?: number; smokeAt?: number; netAt?: number;
@@ -177,8 +181,29 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
     }
     if (sink > 0) out.push(<g key="bub">{Array.from({length: 8}, (_, i) => { const u = ((t - a.sinkAt!) * 0.7 + i / 8) % 1;
       return <circle key={i} cx={x + (rnd(i) - 0.5) * 200} cy={y - u * (y - sea)} r={6 + rnd(i + 3) * 8} fill="none" stroke={K.white} strokeWidth={3} opacity={0.7 * (1 - u)} />; })}</g>);
+    const flagTxt = Array.isArray(a.flag) ? (a.flag.filter((k) => t >= k[0]).slice(-1)[0]?.[1] ?? a.flag[0]?.[1]) : a.flag;
+    const flagSwap = Array.isArray(a.flag) ? Math.max(0, ...a.flag.map((k) => (t >= k[0] && t < k[0] + 0.5 ? 1 - (t - k[0]) / 0.5 : 0))) : 0;
+    const sad = a.sadAt !== undefined && t >= a.sadAt;
+    const crewN = a.crew ?? 0;
+    const fw = flagTxt ? flagTxt.length * 14 + 30 : 0;
     return <g>{out}
-      <g transform={`translate(${x} ${y}) rotate(${f * tilt}) scale(${f * s} ${s})`}>{body}</g>
+      <g transform={`translate(${x} ${y}) rotate(${f * tilt}) scale(${f * s} ${s})`}>
+        {crewN > 0 && Array.from({length: crewN}, (_, i) => { const cxp = -120 + i * 34, hop = sad ? 0 : Math.abs(Math.sin(t * 3 + i)) * 4;
+          return <g key={'c' + i} transform={`translate(${cxp} ${-34 - hop})`}>
+            <rect x={-9} y={-6} width={18} height={20} rx={6} fill={['#FF8A65', '#4FC3F7', '#FFD54A', '#81C784'][i % 4]} stroke={OL} strokeWidth={3} />
+            <circle cx={0} cy={-16} r={11} fill="#F2C29B" stroke={OL} strokeWidth={3} />
+            <circle cx={-4} cy={-18} r={2} fill={OL} /><circle cx={4} cy={-18} r={2} fill={OL} />
+            <path d={sad ? 'M -4 -9 Q 0 -13 4 -9' : 'M -4 -12 Q 0 -8 4 -12'} fill="none" stroke={OL} strokeWidth={2} strokeLinecap="round" />
+          </g>; })}
+        {body}
+        {flagTxt && <g transform="translate(-178 -24)">
+          <path d="M 0 0 L 0 -120" stroke={OL} strokeWidth={5} strokeLinecap="round" />
+          <g transform={`translate(0 -118) scale(${(1 - flagSwap * 0.9) * f} 1) rotate(${Math.sin(t * 4) * 2})`}>
+            <path d={`M 0 0 L ${-fw} 4 Q ${-fw - 12} 24 ${-fw} 44 L 0 46 Z`}
+              fill={a.flagColor === 'risk' ? '#FF5A5F' : a.flagColor === 'grey' ? '#B8C1CF' : '#FFC93C'} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+            <text x={-fw / 2} y={31} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={22} fill={OL}>{flagTxt}</text>
+          </g></g>}
+      </g>
       {a.name && <g transform={`translate(${x} ${y + 60 * s})`} opacity={1 - sink}><rect x={-80} y={-20} width={160} height={36} rx={18} fill={K.white} stroke={OL} strokeWidth={3} />
         <text x={0} y={7} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={800} fontSize={20} fill={OL}>{a.name}</text></g>}
     </g>;

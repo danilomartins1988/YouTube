@@ -1,0 +1,200 @@
+# Sources and claims for "Why Almost Half the World's Ships Fly Three Small Flags" (Episode 11: flags of convenience).
+# Every claim was read in its source on 2026-11-07 by an AI fact-check (quotes in docs/episodes/11-flags/FACT_CHECK.md).
+# Status stays source_located: the channel rule requires a named human reviewer before publishing.
+# All amounts in the sources are already in US dollars.
+sources:
+  - id: unctad_2025
+    title: "Review of Maritime Transport 2025, overview (top flags and ship-owning nations, 1 January 2025)"
+    publisher: UNCTAD
+    url: https://unctad.org/system/files/official-document/rmt2025overview_en.pdf
+    published: "2025-09"
+    accessed: "2026-11-07"
+    credit: "UNCTAD"
+  - id: unctadstat_2026
+    title: "Maritime and other transport: insights (registers and owners at the start of 2026)"
+    publisher: UNCTADstat
+    url: https://unctadstat.unctad.org/insights/theme/25
+    published: "2026-06-18"
+    accessed: "2026-11-07"
+    credit: "UNCTADstat"
+  - id: fpa_2026
+    title: "Liberia becomes first ship registry to surpass 300 million gross tons"
+    publisher: FrontPage Africa
+    url: https://frontpageafricaonline.com/liberia-becomes-first-ship-registry-to-surpass-300-million-gross-tons/
+    published: "2026-06-11"
+    accessed: "2026-11-07"
+    credit: "FrontPage Africa"
+  - id: allafrica_2026
+    title: "Researcher calls for transparency and jobs as Liberia leads world's largest ship registry"
+    publisher: AllAfrica (The Liberian Investigator)
+    url: https://allafrica.com/stories/202607220279.html
+    published: "2026-07-22"
+    accessed: "2026-11-07"
+    credit: "AllAfrica"
+  - id: windward_foc
+    title: "Flag of convenience (glossary): definition, Panama, Prohibition, Liberia 1948, reasons"
+    publisher: Windward (maritime risk analytics)
+    url: https://windward.ai/glossary/flag-of-convenience/
+    accessed: "2026-11-07"
+    credit: "Windward"
+  - id: carlisle_1980
+    title: "The 'American Century' Implemented: Stettinius and the Liberian Flag of Convenience (Business History Review 54(2))"
+    publisher: Rodney Carlisle, Business History Review (abstract via RePEc)
+    url: https://ideas.repec.org/a/cup/buhirw/v54y1980i02p175-191_04.html
+    published: "1980-07"
+    accessed: "2026-11-07"
+    credit: "Business History Review"
+  - id: itf_2024
+    title: "ITF: Seafarer abandonments skyrocket in 2024 to record highs"
+    publisher: gCaptain (ITF report to the IMO)
+    url: https://gcaptain.com/itf-seafarer-abandonments-skyrocket-in-2024-to-record-highs
+    published: "2025-01-27"
+    accessed: "2026-11-07"
+    credit: "ITF via gCaptain"
+  - id: ap_evergiven
+    title: "With ship now freed, a probe into Suez Canal blockage begins"
+    publisher: Associated Press (via WCIV)
+    url: https://abcnews4.com/news/nation-world/with-ship-now-freed-a-probe-into-suez-canal-blockage-begins
+    published: "2021-03-30"
+    accessed: "2026-11-07"
+    credit: "AP"
+  - id: crea_2025
+    title: "Russia's 'shadow vessels' using false flags to skirt sanctions, report says (CREA)"
+    publisher: Al Jazeera
+    url: https://www.aljazeera.com/economy/2025/11/27/russias-shadow-vessels-using-false-flags-to-skirt-sanctions-report-says
+    published: "2025-11-27"
+    accessed: "2026-11-07"
+    credit: "Al Jazeera / CREA"
+  - id: liscr_2026
+    title: "Largest Flag Worldwide (fleet share, container ships, newbuildings)"
+    publisher: Liberian International Ship and Corporate Registry (LISCR)
+    url: https://liscr.com/about-us/largest-flag-worldwide
+    published: "2026-09"
+    accessed: "2026-11-07"
+    credit: "LISCR"
+  - id: natural_earth
+    title: "Natural Earth 1:50m Admin 0 Countries"
+    publisher: Natural Earth (public domain)
+    url: https://www.naturalearthdata.com/downloads/
+    accessed: "2026-11-07"
+    credit: "Natural Earth (public domain)"
+
+claims:
+  - id: top3
+    text: "UNCTAD (RMT 2025): as of 1 January 2025 the top three flag States, Liberia, Panama and the Marshall Islands, together accounted for 45.1 per cent of world ship carrying capacity; Liberia alone 17.4 per cent."
+    spoken: 45 percent
+    display: "45.1%"
+    value: 45.1
+    fields: {liberia_spoken: 17 percent, liberia_display: "17.4%"}
+    source_ids: [unctad_2025]
+    status: source_located
+    verification_note: Read in the UNCTAD PDF text on 2026-11-07. "Almost half" in the title rounds 45.1%.
+
+  - id: owners
+    text: "UNCTAD (RMT 2025): the top three ship-owning nations, Greece, China and Japan, accounted for over 40.7 per cent; Greece was the top ship-owning nation with 16.4 per cent of global fleet capacity."
+    spoken: 16 percent
+    display: "16.4%"
+    value: 16.4
+    fields: {top3_display: "40.7%"}
+    source_ids: [unctad_2025]
+    status: source_located
+    verification_note: Read in the UNCTAD PDF text on 2026-11-07.
+
+  - id: regs_2026
+    text: "UNCTADstat (June 2026): at the start of 2026 Liberia (447 million dwt), Panama (350 million dwt) and the Marshall Islands (318 million dwt) were the largest registries; world fleet capacity 2.5 billion dwt, around 116,000 vessels of at least 100 GT; Greece owns 397 million dwt, China 377 million, Japan 243 million; Asian companies own 56% of capacity, European 34%, North American 4%."
+    spoken: 2.5 billion tons
+    display: "2.5bn dwt"
+    value: 2.5
+    fields: {asia_display: "56%", europe_display: "34%", na_display: "4%", vessels_spoken: "about 116,000", vessels_display: "≈ 116,000"}
+    source_ids: [unctadstat_2026]
+    status: source_located
+    verification_note: Read on 2026-11-07. dwt = dead weight tons (carrying capacity).
+
+  - id: liberia_2026
+    text: "FrontPage Africa (June 2026): the Liberian registry became the first to surpass 300 million gross tons, reaching 307.3 million GT as of June 8 (Clarksons), with 6,092 vessels (IHS)."
+    spoken: 300 million tons
+    display: "300m+ GT"
+    value: 300
+    fields: {ships_spoken: "about 6,000 ships", ships_display: "6,092"}
+    source_ids: [fpa_2026]
+    status: source_located
+    verification_note: Read on 2026-11-07 (AI fact-check; needs a named human reviewer).
+
+  - id: liberia_rev
+    text: "AllAfrica (July 2026): maritime revenue is an important contributor to Liberia's national budget, estimated at approximately US$30 million in 2026; income includes registration fees, recurring annual tonnage taxes and inspection and certification fees (researcher George Tengbeh)."
+    spoken: about 30 million dollars
+    display: "≈ $30m"
+    value: 30
+    source_ids: [allafrica_2026]
+    status: source_located
+    verification_note: An estimate reported in the article; only the registry holds full records. Windward's "25% of national income" was not used (no year or source).
+
+  - id: definition
+    text: "Windward: a flag of convenience means a ship is registered in a different country than the one where its owner resides; owners choose it to avoid strict rules and safety standards, reduce operating costs, avoid high taxes and bypass laws that protect workers' wages and conditions."
+    spoken: a flag of convenience
+    display: "flag of convenience"
+    source_ids: [windward_foc]
+    status: source_located
+    verification_note: Read on 2026-11-07. Windward is a commercial maritime-risk firm; the film attributes the list of reasons.
+
+  - id: panama_1920s
+    text: "Windward: Panama was the first open registry; during Prohibition in the 1920s ship owners who wanted to serve alcohol registered their ships in Panama."
+    spoken: In the 1920s
+    display: "1920s"
+    source_ids: [windward_foc]
+    status: source_located
+    verification_note: Read on 2026-11-07. Narration says "the nineteen twenties".
+
+  - id: liberia_1948
+    text: "Windward: in 1948 former U.S. Secretary of State Edward Stettinius worked with the Liberian government to open its registry, which is operated out of Virginia. Carlisle (1980): Panamanian officials came to demand such private tribute after World War II that a new flag of convenience was needed; Stettinius's development company provided it under the flag of Liberia in the late 1940s."
+    spoken: In 1948
+    display: "1948"
+    value: 1948
+    source_ids: [windward_foc, carlisle_1980]
+    status: source_located
+    verification_note: Windward gives 1948; the Carlisle abstract says "late 1940s". The film says nineteen forty-eight.
+
+  - id: evergiven
+    text: "AP (March 2021): the Ever Given that blocked the Suez Canal was owned by a Japanese firm, operated by a Taiwanese shipper, flagged in Panama and stuck in Egypt."
+    spoken: Panama
+    display: "Panama flag"
+    source_ids: [ap_evergiven]
+    status: source_located
+    verification_note: Read on 2026-11-07. Crew nationality is not in this article, so the film does not give it.
+
+  - id: abandon
+    text: "ITF via gCaptain (Jan 2025): flags with most abandonments: Panama (43), Palau (37), Tanzania (30), Comoros (29), Cameroon (20), Bahrain (16). About 3,133 seafarers were abandoned by shipowners in 2024 versus 1,676 in 2023; 312 vessels (132 in 2023); 81 percent (253) of abandoned vessels sailed under a flag of convenience; Panama had the most (43); US$20.1 million owed in unpaid wages."
+    spoken: about 3,100
+    display: "3,133"
+    value: 3133
+    fields: {prev_spoken: "about 1,700", prev_display: "1,676", foc_spoken: 81 percent, foc_display: "81%", wages_spoken: 20 million dollars, wages_display: "$20.1m", ships_display: "312"}
+    source_ids: [itf_2024]
+    status: source_located
+    verification_note: Read on 2026-11-07. Figures are the ITF's, as reported to the IMO.
+
+  - id: falseflags
+    text: "Al Jazeera (Nov 2025), citing the Centre for Research on Energy and Clean Air (CREA): a total of 113 Russian vessels flew a false flag in the first nine months of 2025."
+    spoken: "113"
+    display: "113"
+    value: 113
+    source_ids: [crea_2025]
+    status: source_located
+    verification_note: Read on 2026-11-07. CREA built its count from Equasis registry records.
+
+  - id: liberia_new
+    text: "LISCR (Sept 2026 data, Clarksons/IHS): 25.94% of the world's newbuilding fleet is flagged with the Liberian Registry; Liberia has over 23.96% of the world's container ships."
+    spoken: about a quarter
+    display: "≈ 26%"
+    value: 25.94
+    fields: {container_display: "≈ 24%"}
+    source_ids: [liscr_2026]
+    status: source_located
+    verification_note: The registry's own figures; the film says "Liberia says".
+
+  - id: term_1950s
+    text: "Windward: the term 'flag of convenience' was coined in the 1950s."
+    spoken: In the 1950s
+    display: "1950s"
+    source_ids: [windward_foc]
+    status: source_located
+    verification_note: Read on 2026-11-07.
