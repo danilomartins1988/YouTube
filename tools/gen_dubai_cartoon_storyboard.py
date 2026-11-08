@@ -370,7 +370,9 @@ stage("d44_war", "a8_war", {
     "callouts": [co("A regional war: {{war_2026.display}}", 960, 150, C("regional war"), "risk", screen=True)]},
     sources=["wam_gdp_h1_2026", "dmo_gdp_q1_2026", "national_iran_war_q1"])
 card("d45_act9", "act9_card", "The Real Economic Engine", "The place in between")
-board("p46_engine", "a9_engine", "The place in between", C("the place in between"), [
+board("p46_engine", "a9_engine", "The place in between", C("really make money"), [
+    {"d": dot(960, 300), "color": "ink", "width": 1, "start": C("really make money"), "label": lbl("HOW DOES DUBAI MAKE MONEY?", 960, 300, 30, "ink")},
+    {"d": "M 1480 560 L 1700 560 M 1480 600 L 1700 540", "color": "risk", "width": 6, "start": C("Not mainly from oil"), "label": lbl("OIL", 1590, 520, 34, "risk")},
     {"d": "M 960 580 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0", "color": "accent", "width": 7, "fill": "accent", "fillOpacity": 0.25, "start": C("the place in between"), "label": lbl("DUBAI", 960, 590, 30, "ink")},
     {"d": rect(540, 330, 260, 80), "color": "accent2", "width": 5, "start": C("goods change ships"), "label": lbl("GOODS CHANGE SHIPS", 670, 378, 20, "accent2")},
     {"d": rect(1120, 330, 260, 80), "color": "accent2", "width": 5, "start": C("passengers change planes"), "label": lbl("PEOPLE CHANGE PLANES", 1250, 378, 20, "accent2")},
@@ -378,7 +380,8 @@ board("p46_engine", "a9_engine", "The place in between", C("the place in between
     {"d": rect(1120, 760, 260, 80), "color": "accent2", "width": 5, "start": C("rules they trust"), "label": lbl("RULES THEY TRUST", 1250, 808, 20, "accent2")},
     {"d": "M 800 410 L 890 510 M 1120 410 L 1030 510 M 800 760 L 890 650 M 1120 760 L 1030 650", "color": "ink", "width": 4, "start": C("rules they trust", 0.4)},
     {"d": dot(960, 940), "color": "accent3", "width": 1, "start": C("The state builds"), "label": lbl("THE STATE BUILDS THE HUB · FOREIGN MONEY + WORKERS FILL IT", 960, 945, 22, "accent3")}],
-    [{"kind": "point", "at": C("the place in between", 0.4), "dur": 1.3, "target": [960, 580]}], sources=[])
+    [{"kind": "point", "at": C("Not mainly from oil", 0.3), "dur": 1.2, "target": [1590, 560]},
+     {"kind": "point", "at": C("the place in between", 0.4), "dur": 1.3, "target": [960, 580]}], sources=[])
 stage("d47_balance", "a9_balance", {
     "zones": [CREEK(-1600, 900), GULF(900, 6000, cx=1700)], "worldW": 2600,
     "cam": [{"at": 0, "x": 760, "y": 480, "zoom": 1.0}, {"at": C("Its own plan"), "x": 1700, "y": 460, "zoom": 1.0, "dur": 2.6}], "drift": 0,
