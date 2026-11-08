@@ -25,3 +25,17 @@ The summaries below are the owner's pitch. Every number in them must be checked 
 | 9 | The Hamburger That Became a Symbol of the Cold War's End | Queued | McDonald's Moscow, 31 Jan 1990: no logo, no arches; generic cartoon burger. Ruble figures converted with an official rate or left out. |
 | 10 | The Day Oil Was Worth Less Than Nothing | Queued | WTI May 2020 contract settled at −$37.63 on 20 Apr 2020 (verify on CME/EIA); storage at Cushing; how futures expire. |
 | 11 | How Big Tech Really Makes Money From AI | Queued (added 2026-11-08) | Microsoft, Alphabet, Amazon, Meta: cloud AI revenue, capex, chips, ads; use 10-K/10-Q and earnings releases only; separate reported figures from estimates; no logos. |
+
+## Chip series (added 2026-11-08, owner's research brief). Order: 1 first
+
+The numbers in the pitch ($8.70 → $48 for a 16GB DDR5 chip, ~8% CXMT share, $119bn Terafab, Canon's machine cost, India's 90%
+imported equipment) are **leads, not facts**: each one is verified on a primary source before it goes into a script.
+
+| # | Working title | Status | Notes |
+|---|---|---|---|
+| C1 | The Three Companies That Decide How Much Your Memory Costs | **Next in production (priority)** | Micron, Samsung, SK Hynix; HBM taking wafer capacity from consumer DRAM; DDR5 contract prices (TrendForce/DRAMeXchange); CXMT share; the coming glut is a forecast (label it). Tone: crisis → strategy. One product on a shelf as the through-line. |
+| C2 | The Machine That Could Break ASML's Monopoly | Queued | Canon nanoimprint lithography (NIL) vs EUV; previous challengers; cost/power claims from Canon/ASML only; follow-up to Ep 08 without repeating it. |
+| C3 | Why the World's Richest Man Is Building His Own Chip Factory | Queued | Tesla "Terafab": verify announcement, cost and capacity on Tesla filings or official statements; the economics of vertical integration in chips. Names in text only, no likeness. |
+| C4 | India Is Building Chip Factories That Can't Make Chips | Queued | Back-end (assembly/test/packaging) vs front-end fabs; plants in production; imported equipment share (verify); why packaging is the entry door. |
+| C5 | The Chemicals Nobody Talks About That Decide Who Makes Chips | Queued | Photoresists, specialty gases, dichlorosilane; Japanese supplier shares; China's export leverage; materials vs machines as chokepoints. |
+
