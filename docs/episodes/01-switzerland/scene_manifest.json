@@ -1,0 +1,1995 @@
+{
+  "slug": "why-switzerland-is-so-rich",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "d01_open_map",
+      "segment": "open_map",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 15.6,
+      "duration_s": 15.6,
+      "visual_objective": "",
+      "narration": "Picture a small, landlocked country of about 8.9 million people. It has no coastline, no direct access to the sea, and it sits in the middle of a continent full of larger, louder neighbours.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "people",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.12,
+          "absolute_s": 5.12
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "no coastline",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 6.97,
+          "absolute_s": 6.97
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "no coastline",
+          "label": "items[0].at.cue",
+          "scene_time_s": 6.97,
+          "absolute_s": 6.97
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "in the middle",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.78,
+          "absolute_s": 10.78
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "larger, louder",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.43,
+          "absolute_s": 13.43
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "larger, louder",
+          "label": "items[3].at.cue",
+          "scene_time_s": 13.43,
+          "absolute_s": 13.43
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "larger, louder",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.43,
+          "absolute_s": 13.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wb_pop_mirror"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 2,
+      "id": "d02_open_number",
+      "segment": "open_number",
+      "type": "engine_cartoon",
+      "start_s": 15.6,
+      "end_s": 32.87,
+      "duration_s": 17.27,
+      "visual_objective": "",
+      "narration": "And yet, in 2023, this country produced roughly 104,000 dollars of economic output for every person living there. That is almost twice Germany's figure, and about two and a half times the average across the European Union.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "And yet",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 15.95
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "this country produced",
+          "label": "items[0].at.cue",
+          "scene_time_s": 1.56,
+          "absolute_s": 17.16
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "this country produced",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 1.56,
+          "absolute_s": 17.16
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "this country produced",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 4.36,
+          "absolute_s": 19.96
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Germany's figure",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 27.01
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "European Union",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.77,
+          "absolute_s": 31.37
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wb_gdppc_indicator",
+        "wb_gdp_mirror",
+        "wb_pop_mirror"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 3,
+      "id": "d03_open_promise",
+      "segment": "open_promise",
+      "type": "engine_cartoon",
+      "start_s": 32.87,
+      "end_s": 51.57,
+      "duration_s": 18.7,
+      "visual_objective": "",
+      "narration": "How did Switzerland get this rich? The usual answers are banks, chocolate and watches. The real story is stranger, more deliberate, and it comes with costs that rarely make the postcards. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "How did",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 33.22
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "chocolate",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.15,
+          "absolute_s": 39.01
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "watches",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.27,
+          "absolute_s": 40.14
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The real story",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.52,
+          "absolute_s": 41.39
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "stranger",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.72,
+          "absolute_s": 42.59
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "costs that rarely",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.04,
+          "absolute_s": 45.9
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 4,
+      "id": "p03b_roadmap",
+      "segment": "open_roadmap",
+      "type": "engine_draw",
+      "start_s": 51.57,
+      "end_s": 78.27,
+      "duration_s": 26.7,
+      "visual_objective": "",
+      "narration": "In this film, we will follow the money through four forces. Stability, built over two centuries. Money, and the rise and fall of banking secrecy. Specialisation, in products the rest of the world finds hard to copy. And skills, built in classrooms and workshops. Then we will look at the bill: the hidden costs of being this successful.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "four forces",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.4,
+          "absolute_s": 54.97
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Stability",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.8,
+          "absolute_s": 56.37
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Money, and",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 8.57,
+          "absolute_s": 60.14
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Specialisation",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 12.83,
+          "absolute_s": 64.4
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "And skills",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 17.78,
+          "absolute_s": 69.35
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "the bill",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 22.92,
+          "absolute_s": 74.49
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the bill",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 23.22,
+          "absolute_s": 74.79
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 5,
+      "id": "d04_act1",
+      "segment": "act1_card",
+      "type": "act_title",
+      "start_s": 78.27,
+      "end_s": 83.67,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 6,
+      "id": "d05_bars",
+      "segment": "puzzle_bars",
+      "type": "engine_chart",
+      "start_s": 83.67,
+      "end_s": 99.3,
+      "duration_s": 15.63,
+      "visual_objective": "",
+      "narration": "Let's start with the numbers. Measured as output per person, Switzerland sits well above its neighbours. Austria, Germany, France and Italy all trail behind, and so does the United States.",
+      "keyframes": [
+        {
+          "param": "start.cue",
+          "cue": "Measured as output",
+          "label": "start.cue",
+          "scene_time_s": 1.81,
+          "absolute_s": 85.48
+        },
+        {
+          "param": "highlightAt.cue",
+          "cue": "well above",
+          "label": "highlightAt.cue",
+          "scene_time_s": 5.81,
+          "absolute_s": 89.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wb_gdppc_indicator",
+        "wb_gdp_mirror",
+        "wb_pop_mirror"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 7,
+      "id": "d06_line",
+      "segment": "puzzle_line",
+      "type": "engine_chart",
+      "start_s": 99.3,
+      "end_s": 120.83,
+      "duration_s": 21.53,
+      "visual_objective": "",
+      "narration": "And this is not a lucky year. Follow the data back to the start of the century, and Switzerland stays ahead of Germany and the European Union average in every single year from 2000 to 2023. Whatever is driving Swiss wealth, it is structural.",
+      "keyframes": [
+        {
+          "param": "start.cue",
+          "cue": "Follow the data",
+          "label": "start.cue",
+          "scene_time_s": 4.22,
+          "absolute_s": 103.52
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wb_gdppc_indicator",
+        "wb_gdp_mirror",
+        "wb_pop_mirror"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 8,
+      "id": "p06b_caveat",
+      "segment": "puzzle_caveat",
+      "type": "engine_draw",
+      "start_s": 120.83,
+      "end_s": 149.53,
+      "duration_s": 28.7,
+      "visual_objective": "",
+      "narration": "A quick but important note on what this number means. Output per person measures how much an economy produces, divided by everyone who lives there. It is not the same as the money in an ordinary person's pocket, and it is measured in US dollars, so exchange rates move it too. We will come back to what that means for everyday prices later. But as a measure of how productive an economy is, it tells a clear story.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Output per person measures",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.25,
+          "absolute_s": 125.08
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "how much an economy produces",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 5.78,
+          "absolute_s": 126.61
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "not the same",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 11.2,
+          "absolute_s": 132.03
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "measured in US dollars",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 15.54,
+          "absolute_s": 136.38
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "everyday prices",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 21.36,
+          "absolute_s": 142.2
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "productive",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 25.06,
+          "absolute_s": 145.89
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "productive",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 25.46,
+          "absolute_s": 146.29
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 9,
+      "id": "d07_act2",
+      "segment": "act2_card",
+      "type": "act_title",
+      "start_s": 149.53,
+      "end_s": 154.93,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 10,
+      "id": "d08_timeline",
+      "segment": "stab_timeline",
+      "type": "engine_cartoon",
+      "start_s": 154.93,
+      "end_s": 181.33,
+      "duration_s": 26.4,
+      "visual_objective": "",
+      "narration": "The first force is stability, and it is old. In 1815, at the end of the Napoleonic wars, Europe's great powers formally recognised Swiss neutrality. Then, In 1848, a new constitution turned a loose group of cantons into a federal state, with a parliament, a government and a federal court.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The first force",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 155.28
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "formally recognised",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.65,
+          "absolute_s": 165.59
+        },
+        {
+          "param": "items[0].pages[1][0].cue",
+          "cue": "a new constitution",
+          "label": "items[0].pages[1][0].cue",
+          "scene_time_s": 16.67,
+          "absolute_s": 171.6
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "a parliament",
+          "label": "items[2].at.cue",
+          "scene_time_s": 22.27,
+          "absolute_s": 177.2
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "admin_neutrality",
+        "eda_neutrality",
+        "parlament_constitution",
+        "bar_new_authorities"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 11,
+      "id": "d09_eu_map",
+      "segment": "stab_eu",
+      "type": "engine_cartoon",
+      "start_s": 181.33,
+      "end_s": 197.1,
+      "duration_s": 15.77,
+      "visual_objective": "",
+      "narration": "That independent streak never went away. Switzerland is not a member of the European Union. Instead, it manages its relationship with the bloc through a web of bilateral agreements, negotiated sector by sector.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "independent streak",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.61,
+          "absolute_s": 181.94
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "not a member",
+          "label": "items[0].at.cue",
+          "scene_time_s": 4.56,
+          "absolute_s": 185.89
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "bilateral agreements",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.02,
+          "absolute_s": 192.36
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "negotiated",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.27,
+          "absolute_s": 194.6
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "negotiated",
+          "label": "items[3].at.cue",
+          "scene_time_s": 13.27,
+          "absolute_s": 194.6
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "sector by sector",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 14.15,
+          "absolute_s": 195.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eda_bilateral"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 12,
+      "id": "p10_meaning",
+      "segment": "stab_meaning",
+      "type": "engine_draw",
+      "start_s": 197.1,
+      "end_s": 220.07,
+      "duration_s": 22.97,
+      "visual_objective": "",
+      "narration": "Why does this matter for money? Because capital hates surprises. A country where rules change slowly, and in public, is a country where a factory, a laboratory or a savings account can plan for decades. Predictability is hard to measure, but it may be the most valuable thing Switzerland has ever produced.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "capital hates surprises",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.92,
+          "absolute_s": 200.02
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "rules change slowly",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 6.24,
+          "absolute_s": 203.34
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "in public",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 7.74,
+          "absolute_s": 204.84
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "a factory",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 9.68,
+          "absolute_s": 206.78
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "a laboratory",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 10.75,
+          "absolute_s": 207.85
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "savings account",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 12.49,
+          "absolute_s": 209.59
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "can plan",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 13.36,
+          "absolute_s": 210.46
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "plan for decades",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 13.58,
+          "absolute_s": 210.68
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "plan for decades",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 13.88,
+          "absolute_s": 210.98
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 13,
+      "id": "d11_act3",
+      "segment": "act3_card",
+      "type": "act_title",
+      "start_s": 220.07,
+      "end_s": 225.47,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 14,
+      "id": "d12_1934",
+      "segment": "money_1934",
+      "type": "engine_cartoon",
+      "start_s": 225.47,
+      "end_s": 248.53,
+      "duration_s": 23.07,
+      "visual_objective": "",
+      "narration": "Stability attracted money, and Switzerland learned to protect it. In 1934, a new federal banking law made it a criminal offence for bankers to reveal their clients' secrets. Before that, confidentiality had been a matter of civil law. Now, breaking it could mean prosecution.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "federal banking law",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.22,
+          "absolute_s": 233.68
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "criminal offence",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 10.84,
+          "absolute_s": 236.3
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Before that",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 15.19,
+          "absolute_s": 240.66
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iheid_banking_secrecy",
+        "goldblum_secrecy"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 15,
+      "id": "d13_pressure",
+      "segment": "money_pressure",
+      "type": "engine_cartoon",
+      "start_s": 248.53,
+      "end_s": 261.4,
+      "duration_s": 12.87,
+      "visual_objective": "",
+      "narration": "For decades, discretion became part of the Swiss brand. But secrecy that protects privacy can also protect people hiding money from their own governments, and pressure from abroad kept growing.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "hiding money",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 8.13,
+          "absolute_s": 256.66
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "pressure from abroad",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.66,
+          "absolute_s": 259.2
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "pressure from abroad",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.66,
+          "absolute_s": 259.2
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "pressure from abroad",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.66,
+          "absolute_s": 259.2
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "pressure from abroad",
+          "label": "items[4].at.cue",
+          "scene_time_s": 10.66,
+          "absolute_s": 259.2
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 16,
+      "id": "d14_aeoi",
+      "segment": "money_aeoi",
+      "type": "engine_cartoon",
+      "start_s": 261.4,
+      "end_s": 286.53,
+      "duration_s": 25.13,
+      "visual_objective": "",
+      "narration": "The turning point came quietly. In 2018, under a global standard for tax transparency, Switzerland automatically shared financial account information with other countries for the first time. That first exchange covered around two million accounts. The law on secrecy still exists at home, but foreign tax authorities now get the data.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "turning point",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.68,
+          "absolute_s": 262.08
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "automatically shared",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 8.59,
+          "absolute_s": 269.99
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "first exchange",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.97,
+          "absolute_s": 276.37
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "first exchange",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 14.97,
+          "absolute_s": 276.37
+        },
+        {
+          "param": "items[1].steps[2][0].cue",
+          "cue": "first exchange",
+          "label": "items[1].steps[2][0].cue",
+          "scene_time_s": 17.47,
+          "absolute_s": 278.87
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "foreign tax",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 21.94,
+          "absolute_s": 283.34
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "foreign tax",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 21.94,
+          "absolute_s": 283.34
+        },
+        {
+          "param": "items[2].x[2][0].cue",
+          "cue": "foreign tax",
+          "label": "items[2].x[2][0].cue",
+          "scene_time_s": 27.94,
+          "absolute_s": 289.34
+        },
+        {
+          "param": "items[2].y[1][0].cue",
+          "cue": "foreign tax",
+          "label": "items[2].y[1][0].cue",
+          "scene_time_s": 27.94,
+          "absolute_s": 289.34
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fta_aeoi_2018",
+        "iheid_banking_secrecy"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 17,
+      "id": "d14b_haven",
+      "segment": "money_haven",
+      "type": "engine_cartoon",
+      "start_s": 286.53,
+      "end_s": 306.3,
+      "duration_s": 19.77,
+      "visual_objective": "",
+      "narration": "There is another way Switzerland attracts money, and it does not require a bank account at all. In times of crisis, investors look for places to park their wealth that are politically stable and unlikely to inflate it away. Economists call that a safe haven, and the Swiss franc is often described as one.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "In times of crisis",
+          "label": "items[0].at.cue",
+          "scene_time_s": 6.33,
+          "absolute_s": 292.86
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "park their wealth",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.4,
+          "absolute_s": 295.93
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "politically stable",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.43,
+          "absolute_s": 296.96
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "safe haven",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.19,
+          "absolute_s": 302.73
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 18,
+      "id": "d15_floor",
+      "segment": "money_floor_2011",
+      "type": "engine_cartoon",
+      "start_s": 306.3,
+      "end_s": 328.33,
+      "duration_s": 22.03,
+      "visual_objective": "",
+      "narration": "Safety has a side effect. When investors trust a country, they buy its currency, and a strong currency makes everything that country sells abroad more expensive. On September 6th, 2011, the Swiss National Bank drew a line in the sand. It would no longer tolerate a euro worth less than one franc twenty.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "strong currency",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.75,
+          "absolute_s": 313.05
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "line in the sand",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 16.03,
+          "absolute_s": 322.33
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "line in the sand",
+          "label": "items[1].at.cue",
+          "scene_time_s": 16.33,
+          "absolute_s": 322.63
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "ecb_snb_2011"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 19,
+      "id": "d16_floor_end",
+      "segment": "money_floor_2015",
+      "type": "engine_cartoon",
+      "start_s": 328.33,
+      "end_s": 351.97,
+      "duration_s": 23.63,
+      "visual_objective": "",
+      "narration": "Defending that line meant buying foreign currency again and again. The central bank later said it could only have been held with interventions of rapidly increasing size. On January 15th, 2015, it abandoned the minimum rate with immediate effect. The franc jumped, and markets were caught off guard.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "again and again",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.67,
+          "absolute_s": 332.0
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "rapidly increasing",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.67,
+          "absolute_s": 339.0
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "abandoned",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.89,
+          "absolute_s": 344.22
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "abandoned",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.99,
+          "absolute_s": 344.32
+        },
+        {
+          "param": "shake[0].at.cue",
+          "cue": "abandoned",
+          "label": "shake[0].at.cue",
+          "scene_time_s": 16.29,
+          "absolute_s": 344.62
+        },
+        {
+          "param": "items[0].crashAt.cue",
+          "cue": "abandoned",
+          "label": "items[0].crashAt.cue",
+          "scene_time_s": 16.29,
+          "absolute_s": 344.62
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "abandoned",
+          "label": "items[1].until.cue",
+          "scene_time_s": 16.29,
+          "absolute_s": 344.62
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "abandoned",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.29,
+          "absolute_s": 344.62
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "snb_speech_2015_04",
+        "bis_jordan_2015",
+        "swissinfo_floor_2015"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 20,
+      "id": "d16b_after",
+      "segment": "money_after",
+      "type": "engine_cartoon",
+      "start_s": 351.97,
+      "end_s": 381.53,
+      "duration_s": 29.57,
+      "visual_objective": "",
+      "narration": "The battle over the franc never really ended. In twenty twenty-two and twenty twenty-three, the central bank did the opposite: it sold foreign currency to strengthen the franc and make imports cheaper, to dampen inflation. In twenty twenty-three alone, it sold about 148 billion dollars worth. In twenty twenty-four, it was buying again, but only about 1.4 billion dollars.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "never really ended",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.14,
+          "absolute_s": 354.1
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "sold",
+          "label": "items[0].at.cue",
+          "scene_time_s": 10.33,
+          "absolute_s": 362.3
+        },
+        {
+          "param": "items[0].h[1][0].cue",
+          "cue": "sold",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 10.33,
+          "absolute_s": 362.3
+        },
+        {
+          "param": "items[0].h[2][0].cue",
+          "cue": "sold",
+          "label": "items[0].h[2][0].cue",
+          "scene_time_s": 12.83,
+          "absolute_s": 364.8
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "buying again",
+          "label": "items[1].at.cue",
+          "scene_time_s": 24.96,
+          "absolute_s": 376.93
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "buying again",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 24.96,
+          "absolute_s": 376.93
+        },
+        {
+          "param": "items[1].h[2][0].cue",
+          "cue": "buying again",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 26.46,
+          "absolute_s": 378.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "swi_snb_2024"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 21,
+      "id": "d17_cs",
+      "segment": "money_cs",
+      "type": "engine_cartoon",
+      "start_s": 381.53,
+      "end_s": 398.23,
+      "duration_s": 16.7,
+      "visual_objective": "",
+      "narration": "Even Swiss banking is not immune to crisis. In March 2023, Credit Suisse was taken over by its rival UBS, in a deal approved by the financial regulator and backed by the federal government and the central bank.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "not immune",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.95,
+          "absolute_s": 383.48
+        },
+        {
+          "param": "items[0].crumbleAt.cue",
+          "cue": "taken over",
+          "label": "items[0].crumbleAt.cue",
+          "scene_time_s": 7.1,
+          "absolute_s": 388.63
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "taken over",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 7.1,
+          "absolute_s": 388.63
+        },
+        {
+          "param": "items[1].h[2][0].cue",
+          "cue": "taken over",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 9.1,
+          "absolute_s": 390.63
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "backed by",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.86,
+          "absolute_s": 394.4
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "finma_cs_ubs",
+        "efd_cs_timeline"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 22,
+      "id": "d18_act4",
+      "segment": "act4_card",
+      "type": "act_title",
+      "start_s": 398.23,
+      "end_s": 403.63,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 23,
+      "id": "d19_ring",
+      "segment": "spec_ring",
+      "type": "engine_chart",
+      "start_s": 403.63,
+      "end_s": 424.67,
+      "duration_s": 21.03,
+      "visual_objective": "",
+      "narration": "But here is the twist. Look at what Switzerland physically ships abroad, and banks barely appear. In 2024, chemical and pharmaceutical products made up 52.7 percent of Swiss exports. More than half of everything the country sold abroad came from one industry.",
+      "keyframes": [
+        {
+          "param": "start.cue",
+          "cue": "chemical and pharmaceutical",
+          "label": "start.cue",
+          "scene_time_s": 9.91,
+          "absolute_s": 413.54
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "bazg_trade_2024"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 24,
+      "id": "d20_basel",
+      "segment": "spec_basel",
+      "type": "engine_cartoon",
+      "start_s": 424.67,
+      "end_s": 437.1,
+      "duration_s": 12.43,
+      "visual_objective": "",
+      "narration": "The centre of gravity is Basel, a city on the Rhine, close to the borders with France and Germany. The drug makers Roche and Novartis both have their global headquarters here.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "Basel",
+          "label": "items[2].at.cue",
+          "scene_time_s": 1.97,
+          "absolute_s": 426.63
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "Roche",
+          "label": "items[0].at.cue",
+          "scene_time_s": 8.55,
+          "absolute_s": 433.21
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Novartis",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.03,
+          "absolute_s": 433.7
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "global headquarters",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.48,
+          "absolute_s": 435.14
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "swissinfo_roche_hq"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 25,
+      "id": "d21_why",
+      "segment": "spec_why",
+      "type": "engine_cartoon",
+      "start_s": 437.1,
+      "end_s": 458.6,
+      "duration_s": 21.5,
+      "visual_objective": "",
+      "narration": "Medicines are almost the perfect product for a small, landlocked, expensive country. They are light, they are valuable, and they are protected by patents and know-how that take years to build. Switzerland does not compete on what is cheap to make. It competes on what is hard to copy.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "they are light",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.05,
+          "absolute_s": 444.15
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "valuable",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.57,
+          "absolute_s": 445.67
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "patents",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.38,
+          "absolute_s": 448.48
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "hard to copy",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 20.19,
+          "absolute_s": 457.29
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 26,
+      "id": "d21b_watches",
+      "segment": "spec_watches",
+      "type": "engine_cartoon",
+      "start_s": 458.6,
+      "end_s": 483.33,
+      "duration_s": 24.73,
+      "visual_objective": "",
+      "narration": "And the watches? They are real, and they are big business. In twenty twenty-four, Swiss watch exports were worth about 29.4 billion dollars, down 2.8 percent on the year, according to the watch industry's federation. It is the same lesson as medicine: small, light, expensive objects that are very hard to copy.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "exports were worth",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.11,
+          "absolute_s": 465.71
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "exports were worth",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 7.11,
+          "absolute_s": 465.71
+        },
+        {
+          "param": "items[1].h[2][0].cue",
+          "cue": "exports were worth",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 9.61,
+          "absolute_s": 468.21
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "same lesson",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 18.16,
+          "absolute_s": 476.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "swi_watches_2024"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 27,
+      "id": "d22_act5",
+      "segment": "act5_card",
+      "type": "act_title",
+      "start_s": 483.33,
+      "end_s": 488.73,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 28,
+      "id": "d23_vet",
+      "segment": "skills_vet",
+      "type": "engine_cartoon",
+      "start_s": 488.73,
+      "end_s": 514.0,
+      "duration_s": 25.27,
+      "visual_objective": "",
+      "narration": "Hard-to-copy products need people who are hard to replace. About two thirds of young people in Switzerland go into vocational education and training, usually apprenticeships that combine the classroom with real work inside a company. In many countries, that path is seen as a fallback. Here, it is the mainstream.",
+      "keyframes": [
+        {
+          "param": "items[6].at.cue",
+          "cue": "of young people",
+          "label": "items[6].at.cue",
+          "scene_time_s": 6.85,
+          "absolute_s": 495.58
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "young people",
+          "label": "items[0].at.cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 495.82
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "young people",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 495.82
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "young people",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 495.82
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "young people",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 495.82
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "young people",
+          "label": "items[4].at.cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 495.82
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "young people",
+          "label": "items[5].at.cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 495.82
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "combine the classroom",
+          "label": "items[7].at.cue",
+          "scene_time_s": 14.4,
+          "absolute_s": 503.13
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "the mainstream",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 23.81,
+          "absolute_s": 512.55
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "seri_vet"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 29,
+      "id": "d24_gii",
+      "segment": "skills_gii",
+      "type": "engine_cartoon",
+      "start_s": 514.0,
+      "end_s": 534.57,
+      "duration_s": 20.57,
+      "visual_objective": "",
+      "narration": "Skills feed ideas. In 2025, the World Intellectual Property Organization ranked Switzerland first out of 139 economies in its Global Innovation Index. Sweden, the United States, South Korea and Singapore completed the top five.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Skills feed ideas",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 514.35
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Global Innovation Index",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 11.43,
+          "absolute_s": 525.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wipo_gii_2025",
+        "ige_gii_2025"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 30,
+      "id": "d24b_jobs",
+      "segment": "skills_jobs",
+      "type": "engine_cartoon",
+      "start_s": 534.57,
+      "end_s": 570.7,
+      "duration_s": 36.13,
+      "visual_objective": "",
+      "narration": "Skills also keep people in work. In twenty twenty-four, the average unemployment rate in Switzerland was 2.4 percent, according to the economics ministry, SECO. A year earlier, at 2.0 percent, it had been at its lowest level since two thousand and one. And the jobs pull people in from across the borders: around 403,000 cross-border commuters, most of them living in France, Italy and Germany, were working in Switzerland at the end of September twenty twenty-four.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "keep people in work",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.24,
+          "absolute_s": 535.81
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "average unemployment",
+          "label": "items[0].at.cue",
+          "scene_time_s": 4.98,
+          "absolute_s": 539.55
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "average unemployment",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 4.98,
+          "absolute_s": 539.55
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "average unemployment",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 6.98,
+          "absolute_s": 541.55
+        },
+        {
+          "param": "items[1].x[1][0].cue",
+          "cue": "pull people in",
+          "label": "items[1].x[1][0].cue",
+          "scene_time_s": 21.2,
+          "absolute_s": 555.77
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "pull people in",
+          "label": "items[1].at.cue",
+          "scene_time_s": 21.2,
+          "absolute_s": 555.77
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "pull people in",
+          "label": "items[2].at.cue",
+          "scene_time_s": 21.2,
+          "absolute_s": 555.77
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "pull people in",
+          "label": "items[3].at.cue",
+          "scene_time_s": 21.2,
+          "absolute_s": 555.77
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "pull people in",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 21.7,
+          "absolute_s": 556.27
+        },
+        {
+          "param": "items[3].x[1][0].cue",
+          "cue": "pull people in",
+          "label": "items[3].x[1][0].cue",
+          "scene_time_s": 22.2,
+          "absolute_s": 556.77
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "cross-border commuters",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 26.3,
+          "absolute_s": 560.86
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "cross-border commuters",
+          "label": "items[4].at.cue",
+          "scene_time_s": 26.3,
+          "absolute_s": 560.86
+        },
+        {
+          "param": "items[1].x[2][0].cue",
+          "cue": "pull people in",
+          "label": "items[1].x[2][0].cue",
+          "scene_time_s": 27.2,
+          "absolute_s": 561.77
+        },
+        {
+          "param": "items[2].x[2][0].cue",
+          "cue": "pull people in",
+          "label": "items[2].x[2][0].cue",
+          "scene_time_s": 27.7,
+          "absolute_s": 562.27
+        },
+        {
+          "param": "items[3].x[2][0].cue",
+          "cue": "pull people in",
+          "label": "items[3].x[2][0].cue",
+          "scene_time_s": 28.2,
+          "absolute_s": 562.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "swi_unemployment_2024",
+        "swi_crossborder_2024"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 31,
+      "id": "d25_act6",
+      "segment": "act6_card",
+      "type": "act_title",
+      "start_s": 570.7,
+      "end_s": 576.1,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 32,
+      "id": "d26_prices",
+      "segment": "cost_prices",
+      "type": "engine_cartoon",
+      "start_s": 576.1,
+      "end_s": 595.17,
+      "duration_s": 19.07,
+      "visual_objective": "",
+      "narration": "Now for the part that rarely makes the brochures. Success is expensive, literally. In 2024, Switzerland had the highest price level of all the countries compared by Eurostat, almost 60 percent above the EU average.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "Success is expensive",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.43,
+          "absolute_s": 580.53
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Success is expensive",
+          "label": "items[3].at.cue",
+          "scene_time_s": 4.43,
+          "absolute_s": 580.53
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Success is expensive",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 4.43,
+          "absolute_s": 580.53
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "highest price level",
+          "label": "items[0].at.cue",
+          "scene_time_s": 11.2,
+          "absolute_s": 587.3
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "highest price level",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.6,
+          "absolute_s": 587.7
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eurostat_price_levels",
+        "bluewin_price_2024"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 33,
+      "id": "p27_franc",
+      "segment": "cost_franc",
+      "type": "engine_draw",
+      "start_s": 595.17,
+      "end_s": 615.6,
+      "duration_s": 20.43,
+      "visual_objective": "",
+      "narration": "High prices and a strong franc squeeze anyone who has to compete from Switzerland. That pressure is exactly what the central bank was fighting between 2011 and 2015. Being a safe haven is a privilege, but the bill arrives in the export sector.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "High prices",
+          "label": "draw_start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 595.52
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "High prices",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 595.52
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "a strong franc",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 1.68,
+          "absolute_s": 596.85
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "squeeze",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 2.68,
+          "absolute_s": 597.85
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "compete from Switzerland",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 4.68,
+          "absolute_s": 599.85
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "central bank was fighting",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 9.36,
+          "absolute_s": 604.52
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "the bill arrives",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 17.41,
+          "absolute_s": 612.57
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the bill arrives",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 17.71,
+          "absolute_s": 612.87
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 34,
+      "id": "d27b_tariff",
+      "segment": "cost_tariff",
+      "type": "engine_cartoon",
+      "start_s": 615.6,
+      "end_s": 653.2,
+      "duration_s": 37.6,
+      "visual_objective": "",
+      "narration": "Then, in twenty twenty-five, the risk of depending on a few big customers became very real. From August seventh, Swiss exports to the United States faced a tariff of 39 percent. The Swiss government called it unjustified and a heavy burden for exporters. In November, the two countries signed a non-binding memorandum: the extra tariff would fall to 15 percent, in line with the European Union, and Swiss companies planned 200 billion dollars of investment in the United States by the end of twenty twenty-eight.",
+      "keyframes": [
+        {
+          "param": "items[0].closeAt.cue",
+          "cue": "faced a tariff",
+          "label": "items[0].closeAt.cue",
+          "scene_time_s": 11.14,
+          "absolute_s": 626.75
+        },
+        {
+          "param": "items[1].x[1][0].cue",
+          "cue": "faced a tariff",
+          "label": "items[1].x[1][0].cue",
+          "scene_time_s": 11.14,
+          "absolute_s": 626.75
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "faced a tariff",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.14,
+          "absolute_s": 626.75
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "called it unjustified",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 15.6,
+          "absolute_s": 631.2
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "In November",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 19.89,
+          "absolute_s": 635.49
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In November",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 20.19,
+          "absolute_s": 635.79
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "non-binding",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 22.74,
+          "absolute_s": 638.34
+        },
+        {
+          "param": "items[0].openAt.cue",
+          "cue": "would fall",
+          "label": "items[0].openAt.cue",
+          "scene_time_s": 25.57,
+          "absolute_s": 641.17
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "would fall",
+          "label": "items[2].until.cue",
+          "scene_time_s": 25.57,
+          "absolute_s": 641.17
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "would fall",
+          "label": "items[3].at.cue",
+          "scene_time_s": 25.57,
+          "absolute_s": 641.17
+        },
+        {
+          "param": "items[1].x[2][0].cue",
+          "cue": "would fall",
+          "label": "items[1].x[2][0].cue",
+          "scene_time_s": 26.57,
+          "absolute_s": 642.17
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Swiss companies planned",
+          "label": "items[4].at.cue",
+          "scene_time_s": 29.86,
+          "absolute_s": 645.46
+        },
+        {
+          "param": "items[1].x[3][0].cue",
+          "cue": "would fall",
+          "label": "items[1].x[3][0].cue",
+          "scene_time_s": 34.57,
+          "absolute_s": 650.17
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "kmu_tariff_2025",
+        "swi_tariff15_2025"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 35,
+      "id": "d28_concentration",
+      "segment": "cost_concentration",
+      "type": "engine_cartoon",
+      "start_s": 653.2,
+      "end_s": 672.67,
+      "duration_s": 19.47,
+      "visual_objective": "",
+      "narration": "And concentration cuts both ways. When more than half of your exports come from one industry, a shock to that industry is a shock to the whole country. The Credit Suisse rescue was a reminder that a great financial centre can also become a national risk.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "cuts both ways",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.12,
+          "absolute_s": 655.32
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "a shock to that industry",
+          "label": "items[4].at.cue",
+          "scene_time_s": 7.31,
+          "absolute_s": 660.51
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Credit Suisse rescue",
+          "label": "items[5].at.cue",
+          "scene_time_s": 12.41,
+          "absolute_s": 665.61
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "bazg_trade_2024",
+        "finma_cs_ubs"
+      ],
+      "transition_out": "fade"
+    },
+    {
+      "index": 36,
+      "id": "d29_act7",
+      "segment": "act7_card",
+      "type": "act_title",
+      "start_s": 672.67,
+      "end_s": 678.07,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "fade"
+    },
+    {
+      "index": 37,
+      "id": "d30_close",
+      "segment": "close",
+      "type": "engine_cartoon",
+      "start_s": 678.07,
+      "end_s": 724.63,
+      "duration_s": 46.57,
+      "visual_objective": "",
+      "narration": "So, why is Switzerland so rich? Not because of what lies under its ground, but because of what it built on top of it. Stability that investors trust, earned over two centuries and defended, sometimes at great cost. A financial system that had to reinvent itself when secrecy stopped being acceptable. Specialisation in products that are hard to copy. And skills that keep them that way. None of these forces is guaranteed. A strong currency, high prices and a dependence on a few giants are the price of the model. The question for the next decade is whether a small country can keep it running in a world of bigger, louder powers. Thanks for watching. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Not because",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.33,
+          "absolute_s": 681.4
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Stability that investors",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.1,
+          "absolute_s": 686.17
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Stability that investors",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.4,
+          "absolute_s": 686.47
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "Stability that investors",
+          "label": "items[0].at.cue",
+          "scene_time_s": 8.4,
+          "absolute_s": 686.47
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "A financial system",
+          "label": "items[1].at.cue",
+          "scene_time_s": 15.71,
+          "absolute_s": 693.78
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Specialisation in products",
+          "label": "items[2].at.cue",
+          "scene_time_s": 21.33,
+          "absolute_s": 699.4
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And skills",
+          "label": "items[3].at.cue",
+          "scene_time_s": 24.56,
+          "absolute_s": 702.63
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "the price of the model",
+          "label": "items[4].at.cue",
+          "scene_time_s": 33.56,
+          "absolute_s": 711.63
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "The question for the next decade",
+          "label": "items[5].at.cue",
+          "scene_time_s": 35.62,
+          "absolute_s": 713.69
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}
