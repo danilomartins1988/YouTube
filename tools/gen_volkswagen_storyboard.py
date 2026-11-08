@@ -126,21 +126,21 @@ stage("s06_why", "m1_why", {
                  co("Looks like a perfect short", 960, 150, C("If you wanted"), "gold", screen=True, size=44)]},
     sources=["ib_squeeze"])
 stage("s07_porsche", "m1_porsche", {
-    "zones": [Z("city", label="nochurch")], "worldW": 3400,
+    "zones": [Z("district", -1600, 1900), Z("parliament", 1900, 6000, cx=2400)], "worldW": 3400, "night": True,
     "cam": [{"at": 0, "x": 900, "y": 540, "zoom": 1.0}, {"at": C("By March"), "x": 1300, "y": 500, "zoom": 0.95, "dur": 2.4},
             {"at": C("The state of Lower Saxony", -0.4), "x": 2350, "y": 540, "zoom": 1.0, "dur": 2.6}], "drift": 0,
     "items": [it("building", x=520, style="office", color="#FFE082", text="PORSCHE", scale=0.55, at=C("Porsche the sports car")),
               it("device", type="car", x=760, y=F, at=C("sports car maker"), scale=0.8, color="red"),
               VW(1400, scale=1.2, h=620),
               it("coins", **{"from": [520, 520], "to": [1400, 360]}, at=C("kept buying"), rate=4, arc=220),
-              it("counter", x=1400, y=170, at=C("By March"), steps=[[{"cue": "By March"}, 0], [{"cue": "By March", "offset": 2.2}, 31]], suffix="%", text="PORSCHE'S STAKE"),
-              it("letters", x=900, y=330, text="75%?", at=C("seventy-five percent"), size=90, color="gold", until=C("The state of Lower Saxony")),
-              it("building", x=2350, style="gov", color="#C8E6C9", text="LOWER SAXONY", scale=0.75, at=C("The state of Lower Saxony", -0.2)),
-              it("sign", x=2350, y=330, text="20% OF VOLKSWAGEN", at=C("owned"), color="#C8E6C9", size=34),
+              it("counter", x=1400, y=330, at=C("By March"), steps=[[{"cue": "By March"}, 0], [{"cue": "By March", "offset": 2.2}, 31]], suffix="%", text="PORSCHE'S STAKE"),
+              it("letters", x=820, y=230, text="75%?", at=C("seventy-five percent"), size=90, color="gold", until=C("The state of Lower Saxony")),
+              it("sign", x=2400, y=200, text="LOWER SAXONY", sub="state parliament", at=C("The state of Lower Saxony", -0.2), color="#C8E6C9", size=40),
+              it("sign", x=2400, y=360, text="20% OF VOLKSWAGEN", at=C("owned"), color="#FFF59D", size=34),
               *crowd([2800], "shrug", at=C("simply weren't enough"), tie=True)],
     "callouts": [co("Porsche keeps buying", 960, 150, C("kept buying"), "gold", screen=True, until=C("By March", -0.3)),
-                 co("March 2008: {{march.display}} of Volkswagen", 960, 960, C("By March"), "gold", screen=True, size=42, until=C("The state of Lower Saxony", -0.3)),
-                 co("Porsche: 75% is very unlikely", 960, 150, C("Porsche said"), "white", screen=True, until=C("The state of Lower Saxony", -0.3)),
+                 co("March 2008: {{march.display}} of Volkswagen", 960, 960, C("By March"), "gold", screen=True, size=42, until=C("Porsche said", -0.3)),
+                 co("Porsche: 75% is very unlikely", 960, 960, C("Porsche said"), "white", screen=True, until=C("The state of Lower Saxony", -0.3)),
                  co("Lower Saxony owns {{march.lsax_display}}", 960, 150, C("The state of Lower Saxony"), "white", screen=True, size=42, sub="Volkswagen's second largest shareholder")]},
     sources=["ib_squeeze"])
 kinetic("s08_t1", "m1_transition", [("A weak carmaker · a crisis · plenty of shares", 48, "A weak carmaker", None, True), ("Or so everyone thought", 80, "Or so everyone", "risk", False)])
@@ -207,7 +207,7 @@ stage("s17_spike", "m3_spike", {
     "cam": [{"at": 0, "x": 900, "y": 540, "zoom": 1.0}, {"at": C("Short sellers were not buying"), "x": 1400, "y": 560, "zoom": 1.0, "dur": 2.4}], "drift": 0,
     "shake": [{"at": C("it touched"), "dur": 1.6, "amp": 10}],
     "items": [it("counter", x=700, y=300, at=0.3, prefix="$", steps=[[0, 266], [{"cue": "By Tuesday"}, 266], [{"cue": "it touched", "offset": 1.0}, 1250]], text="ONE VW SHARE"),
-              it("calendar", x=1300, y=280, at=0.3, pages=[[0, "FRI", "24 OCT"], [C("By Tuesday"), "TUE", "28 OCT"]], scale=0.75),
+              it("calendar", x=1120, y=280, at=0.3, pages=[[0, "FRI", "24 OCT"], [C("By Tuesday"), "TUE", "28 OCT"]], scale=0.75),
               it("chart", x=1700, y=360, w=640, h=380, at=C("By Tuesday", -0.5), dur=3, text="VW", pts=[0.08, 0.1, 0.12, 0.3, 0.55, 0.96]),
               *crowd([620, 740, 860, 980, 1100, 1220], "run", at=C("Short sellers were not buying"), tie=True),
               it("coins", **{"from": [900, 600], "to": [1700, 400]}, at=C("they had to"), rate=6, until=C("even bigger", 1.5))],
@@ -217,7 +217,7 @@ stage("s17_spike", "m3_spike", {
                  co("Every purchase pushes the price higher", 960, 960, C("Every purchase"), "risk", screen=True)]},
     sources=["risk_options", "porsche_oct29", "fed_h10"], sfx=[{"kind": "hit", "cue": "it touched", "gain": 0.35}])
 stage("s18_top", "m3_top", {
-    "zones": [Z("city", label="nochurch")], "worldW": 2600,
+    "zones": [Z("district")], "worldW": 2600, "night": True,
     "cam": [{"at": 0, "x": 1100, "y": 420, "zoom": 0.9}, {"at": C("A carmaker in the middle"), "x": 1100, "y": 380, "zoom": 0.82, "dur": 2.8}], "drift": 0,
     "items": [it("tower", x=1500, text="EXXONMOBIL", color="#B0BEC5", h=480, scale=1.0, at=C("ExxonMobil the giant", -0.4)),
               VW(800, scale=1.0, h=[[0, 260], [{"cue": "were worth"}, 260], [{"cue": "were worth", "offset": 3}, 540]]),
@@ -230,7 +230,7 @@ stage("s18_top", "m3_top", {
                  co("On paper: #1 on the planet", 960, 960, C("on paper"), "gold", screen=True, size=46, sub="very briefly (International Banker)")]},
     sources=["ib_squeeze", "fed_h10"], sfx=[{"kind": "hit", "cue": "on paper", "gain": 0.3}])
 stage("s19_tears", "m3_tears", {
-    "zones": [Z("office", -1600, 1700, night=True), Z("city", 1700, 6000, night=True, label="nochurch")], "worldW": 3600, "night": True,
+    "zones": [Z("office", -1600, 1700, night=True), Z("district", 1700, 6000)], "worldW": 3600, "night": True,
     "cam": [{"at": 0, "x": 900, "y": 540, "zoom": 1.05}, {"at": C("And Germany's financial regulator", -0.5), "x": 2500, "y": 540, "zoom": 1.0, "dur": 2.6}], "drift": 0,
     "items": [it("desk", x=560, glow="red"), it("desk", x=1160, glow="red"),
               *crowd([490, 1090], "phone", at=0.2, tie=True), *crowd([800], "worry", at=C("in tears"), tie=True),
@@ -253,7 +253,7 @@ stage("s22_q4", "m4_question", {
               it("letters", x=1500, y=260, text="?", at=C("How do you stop"), size=140, color="gold")],
     "callouts": [co("How do you stop a squeeze?", 960, 960, C("How do you stop"), "gold", screen=True, size=46)]})
 stage("s23_porsche", "m4_porsche", {
-    "zones": [Z("city", label="nochurch")], "worldW": 2800,
+    "zones": [Z("district")], "worldW": 2800, "night": True,
     "cam": [{"at": 0, "x": 800, "y": 540, "zoom": 1.05}, {"at": C("it would settle"), "x": 1350, "y": 540, "zoom": 1.0, "dur": 2.6}], "drift": 0,
     "items": [it("calendar", x=330, y=300, at=0.2, pages=[[0, "WED", "29 OCT"]], scale=0.75),
               it("building", x=760, style="office", color="#FFE082", text="PORSCHE", scale=0.65),
@@ -300,8 +300,8 @@ stage("s26_fall", "m4_fall", {
     "items": [it("chart", x=900, y=380, w=760, h=420, at=0.2, dur=2, text="VW", pts=[0.1, 0.12, 0.5, 0.95], crashAt=C("closed at")),
               it("counter", x=900, y=760, at=C("closed at"), prefix="$", steps=[[{"cue": "closed at"}, 1250], [{"cue": "closed at", "offset": 2}, 660]], text="WEDNESDAY CLOSE",
                  until=C("Within four days", 3)),
-              it("letters", x=1300, y=200, text="−58%", at=C("Within four days"), size=80, color="risk", until=C("A month later")),
-              it("letters", x=1300, y=200, text="−70%", at=C("A month later"), size=80, color="risk"),
+              it("letters", x=1300, y=320, text="−58%", at=C("Within four days"), size=80, color="risk", until=C("A month later")),
+              it("letters", x=1300, y=320, text="−70%", at=C("A month later"), size=80, color="risk"),
               it("desk", x=2300, glow="red"), *crowd([2230], "worry", at=0.3, tie=True),
               it("coins", **{"from": [2300, 600], "to": [3300, 200]}, at=C("lost"), rate=7),
               it("piggy", x=2800, at=C("already bought back"), crackAt=C("lost"), text="HEDGE FUND", scale=0.85)],
@@ -315,13 +315,13 @@ kinetic("s27_t4", "m4_transition", [("Porsche seemed to be winning", 60, "Porsch
 # ====================================================================== PART 5: the hunter and the hunted
 card("s28_c5", "m5_card", "The Hunter and the Hunted", "Who really won?")
 stage("s29_q5", "m5_question", {
-    "zones": [Z("city", label="nochurch")], "worldW": 1920, "min_seconds": 9.0,
+    "zones": [Z("district")], "worldW": 1920, "night": True, "min_seconds": 9.0,
     "cam": [{"at": 0, "x": 960, "y": 560, "zoom": 1.2}, {"at": 3.0, "x": 960, "y": 540, "zoom": 1.0, "dur": 2.6}], "drift": 3,
     "items": [it("building", x=520, style="office", color="#FFE082", text="PORSCHE", scale=0.6), VW(1350, scale=1.1, h=560),
               it("letters", x=940, y=300, text="?", at=C("who really won"), size=150, color="gold")],
     "callouts": [co("Who really won?", 960, 150, C("who really won"), "gold", screen=True, size=48)]})
 stage("s30_gain", "m5_gain", {
-    "zones": [Z("city", label="nochurch")], "worldW": 2400,
+    "zones": [Z("district")], "worldW": 2400, "night": True,
     "cam": [{"at": 0, "x": 900, "y": 540, "zoom": 1.05}, {"at": C("A large part"), "x": 1200, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
     "items": [it("building", x=640, style="office", color="#FFE082", text="PORSCHE", scale=0.7),
               it("stack", x=1250, at=C("a gain of"), h=[[{"cue": "a gain of"}, 40], [{"cue": "a gain of", "offset": 3}, 250]], text="OPTION GAINS", sub="business year 2007/08"),
@@ -333,7 +333,7 @@ stage("s30_gain", "m5_gain", {
                  co("A large part from financial contracts", 960, 150, C("A large part"), "gold", screen=True)]},
     sources=["risk_options", "fed_h10"])
 stage("s31_merger", "m5_merger", {
-    "zones": [Z("city", label="nochurch")], "worldW": 3000,
+    "zones": [Z("carplant", -1600, 1100, idle=99), Z("district", 1100, 6000)], "worldW": 3000, "night": True,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("the roles were reversed"), "x": 1400, "y": 500, "zoom": 0.95, "dur": 2.4},
             {"at": C("The hunter had become"), "x": 1500, "y": 540, "zoom": 1.08, "dur": 2.4}], "drift": 0,
     "items": [it("storm", x=[[0, 400], [14, 1400]], y=140, at=C("the crisis made that")),

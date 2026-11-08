@@ -703,11 +703,15 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: city
+    - set: district
       x0: -1600
-      x1: 4600
-      label: nochurch
+      x1: 1900
+    - set: parliament
+      x0: 1900
+      x1: 6000
+      cx: 2400
     worldW: 3400
+    night: true
     cam:
     - at: 0
       x: 900
@@ -763,7 +767,7 @@ scenes:
       arc: 220
     - kind: counter
       x: 1400
-      y: 170
+      y: 330
       at:
         cue: By March
       steps:
@@ -775,8 +779,8 @@ scenes:
       suffix: '%'
       text: PORSCHE'S STAKE
     - kind: letters
-      x: 900
-      y: 330
+      x: 820
+      y: 230
       text: 75%?
       at:
         cue: seventy-five percent
@@ -784,22 +788,23 @@ scenes:
       color: gold
       until:
         cue: The state of Lower Saxony
-    - kind: building
-      x: 2350
-      style: gov
-      color: '#C8E6C9'
+    - kind: sign
+      x: 2400
+      y: 200
       text: LOWER SAXONY
-      scale: 0.75
+      sub: state parliament
       at:
         cue: The state of Lower Saxony
         offset: -0.2
+      color: '#C8E6C9'
+      size: 40
     - kind: sign
-      x: 2350
-      y: 330
+      x: 2400
+      y: 360
       text: 20% OF VOLKSWAGEN
       at:
         cue: owned
-      color: '#C8E6C9'
+      color: '#FFF59D'
       size: 34
     - kind: person
       x: 2800
@@ -828,13 +833,13 @@ scenes:
         cue: By March
       color: gold
       until:
-        cue: The state of Lower Saxony
+        cue: Porsche said
         offset: -0.3
       size: 42
       screen: true
     - text: 'Porsche: 75% is very unlikely'
       x: 960
-      y: 150
+      y: 960
       at:
         cue: Porsche said
       color: white
@@ -1453,7 +1458,7 @@ scenes:
         - 1250
       text: ONE VW SHARE
     - kind: calendar
-      x: 1300
+      x: 1120
       y: 280
       at: 0.3
       pages:
@@ -1599,11 +1604,11 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: city
+    - set: district
       x0: -1600
       x1: 4600
-      label: nochurch
     worldW: 2600
+    night: true
     cam:
     - at: 0
       x: 1100
@@ -1715,11 +1720,9 @@ scenes:
       x0: -1600
       x1: 1700
       night: true
-    - set: city
+    - set: district
       x0: 1700
       x1: 6000
-      night: true
-      label: nochurch
     worldW: 3600
     night: true
     cam:
@@ -1938,11 +1941,11 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: city
+    - set: district
       x0: -1600
       x1: 4600
-      label: nochurch
     worldW: 2800
+    night: true
     cam:
     - at: 0
       x: 800
@@ -2370,7 +2373,7 @@ scenes:
         offset: 3
     - kind: letters
       x: 1300
-      y: 200
+      y: 320
       text: −58%
       at:
         cue: Within four days
@@ -2380,7 +2383,7 @@ scenes:
         cue: A month later
     - kind: letters
       x: 1300
-      y: 200
+      y: 320
       text: −70%
       at:
         cue: A month later
@@ -2503,11 +2506,11 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: city
+    - set: district
       x0: -1600
       x1: 4600
-      label: nochurch
     worldW: 1920
+    night: true
     min_seconds: 9.0
     cam:
     - at: 0
@@ -2557,11 +2560,11 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: city
+    - set: district
       x0: -1600
       x1: 4600
-      label: nochurch
     worldW: 2400
+    night: true
     cam:
     - at: 0
       x: 900
@@ -2660,11 +2663,15 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: city
+    - set: carplant
       x0: -1600
-      x1: 4600
-      label: nochurch
+      x1: 1100
+      idle: 99
+    - set: district
+      x0: 1100
+      x1: 6000
     worldW: 3000
+    night: true
     cam:
     - at: 0
       x: 900

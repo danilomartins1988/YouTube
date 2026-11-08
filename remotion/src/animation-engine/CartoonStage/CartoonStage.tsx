@@ -307,6 +307,43 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 100)}, (_, k) => <rect key={'ft' + k} x={z.x0 + k * 100} y={f} width={4} height={600} fill={OL} opacity={0.08} />)}
     </g>;
   },
+  /** Financial district at night: dark glass towers with lit windows, a distant skyline, wet street with reflections. */
+  district: (t, z, f) => {
+    const w = z.x1 - z.x0;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#0E1424" />
+      {Array.from({length: Math.ceil(w / 120)}, (_, k) => { const x = z.x0 + k * 120, h = 260 + 220 * rnd(k + 40);
+        return <rect key={'bg' + k} x={x} y={f - 140 - h} width={110} height={h} fill="#141C30" />; })}
+      {Array.from({length: Math.ceil(w / 340)}, (_, k) => { const x = z.x0 + 40 + k * 340, h = 420 + 320 * rnd(k + 7), bw = 200 + 60 * rnd(k + 2);
+        return <g key={'tw' + k}>
+          <rect x={x} y={f - 60 - h} width={bw} height={h} fill={['#1B2640', '#202B47', '#18223A'][k % 3]} stroke="#2E3B5C" strokeWidth={3} />
+          <path d={`M ${x} ${f - 60 - h} L ${x + bw} ${f - 60 - h} L ${x + bw * 0.7} ${f - 60 - h - 50} L ${x + bw * 0.3} ${f - 60 - h - 50} Z`} fill="#1B2640" stroke="#2E3B5C" strokeWidth={3} />
+          {Array.from({length: Math.floor(h / 44)}, (_, r) => Array.from({length: Math.floor(bw / 34)}, (_, c) => {
+            const on = rnd(k * 131 + r * 17 + c) > 0.55; const fl = on && rnd(k + r + c + Math.floor(t * 0.5)) > 0.97;
+            return <rect key={r + '-' + c} x={x + 10 + c * 34} y={f - 40 - h + 20 + r * 44} width={20} height={24} fill={on ? (fl ? '#FFFFFF' : '#F2C76E') : '#26324F'} opacity={on ? 0.85 : 1} />; }))}
+        </g>; })}
+      <rect x={z.x0} y={f - 60} width={w} height={60} fill="#0A0F1C" />
+      <rect x={z.x0} y={f} width={w} height={600} fill="#0B111F" />
+      {Array.from({length: Math.ceil(w / 340)}, (_, k) => <rect key={'rf' + k} x={z.x0 + 60 + k * 340} y={f + 10} width={160} height={120 + 40 * rnd(k)} fill="#F2C76E" opacity={0.06} />)}
+      {Array.from({length: Math.ceil(w / 160)}, (_, k) => <rect key={'ln' + k} x={z.x0 + k * 160} y={f + 150} width={80} height={6} fill="#C9D2E0" opacity={0.25} />)}
+    </g>;
+  },
+  /** A state parliament chamber: curved rows of benches, a speaker's desk, tall windows, a public gallery. */
+  parliament: (t, z, f) => {
+    const w = z.x1 - z.x0, cx = (z as any).cx ?? z.x0 + w / 2;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#E8E2D6" />
+      {Array.from({length: Math.ceil(w / 260)}, (_, k) => <g key={'wn' + k}><rect x={z.x0 + 60 + k * 260} y={f - 720} width={120} height={360} rx={60} fill="#BFD3E6" stroke={OL} strokeWidth={4} />
+        <path d={`M ${z.x0 + 120 + k * 260} ${f - 720} L ${z.x0 + 120 + k * 260} ${f - 360}`} stroke={OL} strokeWidth={3} /></g>)}
+      <rect x={z.x0} y={f - 340} width={w} height={18} fill="#8D6E63" />
+      <rect x={cx - 180} y={f - 300} width={360} height={140} fill="#6D4C41" stroke={OL} strokeWidth={5} />
+      <rect x={cx - 40} y={f - 360} width={80} height={60} fill="#8D6E63" stroke={OL} strokeWidth={4} />
+      {[0, 1, 2].map((r) => <path key={r} d={`M ${cx - 860 + r * 90} ${f - 40 - r * 40} Q ${cx} ${f - 200 - r * 40} ${cx + 860 - r * 90} ${f - 40 - r * 40}`} fill="none" stroke="#5D4037" strokeWidth={28} />)}
+      {Array.from({length: 26}, (_, k) => { const r = k % 3, u = (Math.floor(k / 3) + 0.5) / 9, x = cx - 800 + r * 90 + u * (1600 - r * 180), y = f - 70 - r * 40 - Math.sin(u * Math.PI) * 120;
+        return <circle key={k} cx={x} cy={y - 26} r={16} fill={K.skin[k % 4]} stroke={OL} strokeWidth={3} />; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill="#7B5E57" />
+    </g>;
+  },
   /** Car plant interior: steel trusses, orange welding robots with sparks in the back. */
   carplant: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -687,7 +724,7 @@ const SETS: Record<string, SetFn> = {
     </g>;
   },
 };
-const INDOOR = new Set(['shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set(['parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};

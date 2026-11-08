@@ -1,0 +1,55 @@
+# Visual direction for the-day-volkswagen-became-the-most-valuable-company (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Draft from tools/visual_direction.py: edit tones per chapter, add turning_points [{segment, cue, to}], then commit.
+primary_tone: thriller
+secondary_tones:
+- crisis
+- strategy
+- reflective
+palette:
+  bg: '#0D1220'
+  bg2: '#18203A'
+  ink: '#EEF2F8'
+  muted: '#8F9BB3'
+  land: '#26324D'
+  border: '#3A4A6E'
+  accent: '#FFC21A'
+  accent2: '#64B5F6'
+  accent3: '#39D98A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 4
+chapters:
+- chapter: The impossible day
+  tone: thriller
+- chapter: The bet against Volkswagen
+  tone: thriller
+- chapter: The Sunday announcement
+  tone: thriller
+- chapter: The squeeze
+  tone: crisis
+- chapter: Letting the air out
+  tone: crisis
+- chapter: The hunter and the hunted
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m2_options
+  cue: very different
+  to: crisis
+  why: the hidden position becomes visible
+- segment: m5_court
+  cue: acquitted
+  to: reflective
+  why: the legal ending
+thumbnail:
+  tone: thriller
+  headline:
+  - VOLKSWAGEN
+  - FOR ONE DAY
+  idea: 'a giant gold #1 above a generic hatchback'
+requirements:
+- Financial district at night, trading floors, hedge-fund rooms; no smiling sun, no colourful city
+- The share grid (Porsche 74 / Lower Saxony 20 / < 6 for sale / ≈ 12 owed) is the visual key of the squeeze
+- Presenter neutral, no smiles in the squeeze
