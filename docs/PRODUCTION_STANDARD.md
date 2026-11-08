@@ -127,6 +127,17 @@ Documentaries are animated explanations, not narrated slideshows. Use the reusab
   (towers, boards, charts, people, a watchdog, wafers, an EUV machine, conveyors, dominoes, cranes, browsers,
   ships with text pennants, a passport...). Add a new set or item when a story needs one; the ocean world
   (CartoonOcean) is for stories that really happen at sea.
+## 2-0. Quality over savings (owner's decision, 2026-11-08)
+
+Graphic quality decides the channel's success. Never cut originality to save time or credits:
+- do not recycle scenes, worlds or compositions from earlier episodes to make a new one cheaper;
+- build the sets, items and subjects each story needs, even if that means new engine work;
+- iterate on previews until every scene looks premium.
+
+Shared engine code (sets, items, tones) may be reused only as a toolbox, with each episode composing its own
+worlds, never as a template. Budget limits still apply to paid services (narration ≤ US$1.00 per episode); they never
+justify lower visual quality.
+
 ## 2a. Adaptive visual storytelling (permanent, from 2026-11-08)
 
 The story sets the visual atmosphere; the cartoon style never sets the emotional tone. The channel keeps one identity
