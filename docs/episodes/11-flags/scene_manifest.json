@@ -49,11 +49,25 @@
           "absolute_s": 9.55
         },
         {
-          "param": "callouts[2].at.cue",
-          "cue": "choice of flag",
-          "label": "callouts[2].at.cue",
-          "scene_time_s": 9.55,
-          "absolute_s": 9.55
+          "param": "items[3].at.cue",
+          "cue": "the rules on board",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.98,
+          "absolute_s": 10.98
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "the taxes",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.39,
+          "absolute_s": 12.39
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "protects the crew",
+          "label": "items[5].at.cue",
+          "scene_time_s": 14.76,
+          "absolute_s": 14.76
         }
       ],
       "unresolved_cues": [],
@@ -140,11 +154,53 @@
       "narration": "So whose ship is it, really? The answer is stranger than you might think. Let's start with one famous ship.",
       "keyframes": [
         {
+          "param": "items[1].at.cue",
+          "cue": "Whose ship",
+          "label": "items[1].at.cue",
+          "scene_time_s": 0.72,
+          "absolute_s": 47.06
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "Whose ship",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.72,
           "absolute_s": 47.06
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "really",
+          "label": "items[2].at.cue",
+          "scene_time_s": 2.55,
+          "absolute_s": 48.88
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "really",
+          "label": "items[3].at.cue",
+          "scene_time_s": 2.85,
+          "absolute_s": 49.18
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "really",
+          "label": "items[4].at.cue",
+          "scene_time_s": 3.15,
+          "absolute_s": 49.48
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "stranger",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 4.97,
+          "absolute_s": 51.31
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "stranger",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.27,
+          "absolute_s": 51.61
         },
         {
           "param": "callouts[1].at.cue",
@@ -304,39 +360,60 @@
       "narration": "Remember the giant ship that got stuck in the Suez Canal in twenty twenty-one, the Ever Given? It was owned by a Japanese company, operated by a Taiwanese shipping line, flagged in Panama, and stuck in Egypt. One ship, four countries. As the Associated Press put it at the time, matters quickly became an international morass.",
       "keyframes": [
         {
-          "param": "shake[0].at.cue",
-          "cue": "stuck in the Suez",
-          "label": "shake[0].at.cue",
-          "scene_time_s": 2.59,
-          "absolute_s": 84.59
+          "param": "callouts[0].at.cue",
+          "cue": "Suez Canal",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.43,
+          "absolute_s": 85.43
         },
         {
-          "param": "callouts[0].at.cue",
+          "param": "items[1].at.cue",
           "cue": "Japanese company",
-          "label": "callouts[0].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 9.51,
           "absolute_s": 91.51
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[2].at.cue",
           "cue": "Taiwanese",
-          "label": "callouts[1].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 12.39,
           "absolute_s": 94.39
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[0].flag[1][0].cue",
           "cue": "flagged in",
-          "label": "callouts[2].at.cue",
+          "label": "items[0].flag[1][0].cue",
           "scene_time_s": 13.93,
           "absolute_s": 95.93
         },
         {
-          "param": "callouts[3].at.cue",
+          "param": "items[3].at.cue",
+          "cue": "flagged in",
+          "label": "items[3].at.cue",
+          "scene_time_s": 13.93,
+          "absolute_s": 95.93
+        },
+        {
+          "param": "items[4].at.cue",
           "cue": "stuck in Egypt",
-          "label": "callouts[3].at.cue",
+          "label": "items[4].at.cue",
           "scene_time_s": 15.7,
           "absolute_s": 97.7
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "One ship",
+          "label": "items[5].at.cue",
+          "scene_time_s": 16.87,
+          "absolute_s": 98.87
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "One ship",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 16.97,
+          "absolute_s": 98.97
         },
         {
           "param": "cam[1].at.cue",
@@ -346,11 +423,32 @@
           "absolute_s": 99.27
         },
         {
-          "param": "callouts[4].at.cue",
+          "param": "items[5].openAt.cue",
           "cue": "One ship",
-          "label": "callouts[4].at.cue",
+          "label": "items[5].openAt.cue",
           "scene_time_s": 17.27,
           "absolute_s": 99.27
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "One ship",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 17.27,
+          "absolute_s": 99.27
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "morass",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 25.04,
+          "absolute_s": 107.04
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "morass",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 25.44,
+          "absolute_s": 107.44
         }
       ],
       "unresolved_cues": [],
@@ -570,9 +668,9 @@
       "narration": "Where did the idea of borrowing another country's flag come from?",
       "keyframes": [
         {
-          "param": "actors[0].flag[1][0].cue",
+          "param": "items[0].flag[1][0].cue",
           "cue": "borrowing",
-          "label": "actors[0].flag[1][0].cue",
+          "label": "items[0].flag[1][0].cue",
           "scene_time_s": 1.87,
           "absolute_s": 157.4
         },
@@ -582,6 +680,13 @@
           "label": "callouts[0].at.cue",
           "scene_time_s": 1.87,
           "absolute_s": 157.4
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "borrowing",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.37,
+          "absolute_s": 157.9
         }
       ],
       "unresolved_cues": [],
@@ -603,25 +708,116 @@
       "narration": "In the nineteen twenties, alcohol was banned in the United States. Ship owners who wanted to serve drinks to their passengers found a way out: they registered their ships in Panama. Panama became the first open registry, a flag that anyone, from any country, could fly. And as American shipping laws grew stricter, more and more owners followed them there.",
       "keyframes": [
         {
-          "param": "callouts[0].at.cue",
+          "param": "items[0].at.cue",
           "cue": "alcohol was banned",
-          "label": "callouts[0].at.cue",
+          "label": "items[0].at.cue",
           "scene_time_s": 2.04,
           "absolute_s": 166.57
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[1].at.cue",
           "cue": "serve drinks",
-          "label": "callouts[1].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 6.92,
           "absolute_s": 171.46
         },
         {
-          "param": "actors[0].flag[1][0].cue",
+          "param": "items[2].at.cue",
+          "cue": "serve drinks",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.92,
+          "absolute_s": 171.46
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "serve drinks",
+          "label": "items[3].at.cue",
+          "scene_time_s": 6.92,
+          "absolute_s": 171.46
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "serve drinks",
+          "label": "items[4].at.cue",
+          "scene_time_s": 6.92,
+          "absolute_s": 171.46
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "serve drinks",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.92,
+          "absolute_s": 171.46
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "registered their ships",
-          "label": "actors[0].flag[1][0].cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.68,
+          "absolute_s": 174.22
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "registered their ships",
+          "label": "cam[1].at.cue",
           "scene_time_s": 9.98,
           "absolute_s": 174.52
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "registered their ships",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 9.98,
+          "absolute_s": 174.52
+        },
+        {
+          "param": "items[5].flag[1][0].cue",
+          "cue": "registered their ships",
+          "label": "items[5].flag[1][0].cue",
+          "scene_time_s": 10.58,
+          "absolute_s": 175.12
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "registered their ships",
+          "label": "items[1].until.cue",
+          "scene_time_s": 10.98,
+          "absolute_s": 175.52
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "registered their ships",
+          "label": "items[2].until.cue",
+          "scene_time_s": 10.98,
+          "absolute_s": 175.52
+        },
+        {
+          "param": "items[3].until.cue",
+          "cue": "registered their ships",
+          "label": "items[3].until.cue",
+          "scene_time_s": 10.98,
+          "absolute_s": 175.52
+        },
+        {
+          "param": "items[4].until.cue",
+          "cue": "registered their ships",
+          "label": "items[4].until.cue",
+          "scene_time_s": 10.98,
+          "absolute_s": 175.52
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "first open registry",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 14.16,
+          "absolute_s": 178.7
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "first open registry",
+          "label": "items[7].at.cue",
+          "scene_time_s": 14.46,
+          "absolute_s": 179.0
         },
         {
           "param": "callouts[2].at.cue",
@@ -631,11 +827,32 @@
           "absolute_s": 179.0
         },
         {
-          "param": "cam[1].at.cue",
-          "cue": "open registry",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 14.68,
-          "absolute_s": 179.21
+          "param": "cam[2].at.cue",
+          "cue": "more and more owners",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 22.36,
+          "absolute_s": 186.89
+        },
+        {
+          "param": "items[6].x[1][0].cue",
+          "cue": "more and more owners",
+          "label": "items[6].x[1][0].cue",
+          "scene_time_s": 22.36,
+          "absolute_s": 186.89
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "more and more owners",
+          "label": "items[6].at.cue",
+          "scene_time_s": 22.36,
+          "absolute_s": 186.89
+        },
+        {
+          "param": "items[6].x[2][0].cue",
+          "cue": "more and more owners",
+          "label": "items[6].x[2][0].cue",
+          "scene_time_s": 27.36,
+          "absolute_s": 191.89
         }
       ],
       "unresolved_cues": [],
@@ -950,6 +1167,13 @@
       "narration": "What does a ship owner actually gain? And what does the small country get in return?",
       "keyframes": [
         {
+          "param": "items[2].stampAt.cue",
+          "cue": "actually gain",
+          "label": "items[2].stampAt.cue",
+          "scene_time_s": 1.86,
+          "absolute_s": 281.6
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "actually gain",
           "label": "callouts[0].at.cue",
@@ -957,9 +1181,30 @@
           "absolute_s": 281.6
         },
         {
-          "param": "actors[3].at.cue",
+          "param": "items[4].at.cue",
+          "cue": "small country",
+          "label": "items[4].at.cue",
+          "scene_time_s": 4.51,
+          "absolute_s": 284.24
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "in return",
-          "label": "actors[3].at.cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 5.27,
+          "absolute_s": 285.01
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "in return",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.57,
+          "absolute_s": 285.31
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "in return",
+          "label": "items[5].at.cue",
           "scene_time_s": 5.57,
           "absolute_s": 285.31
         },
@@ -990,46 +1235,95 @@
       "narration": "According to the maritime analytics firm Windward, owners choose a flag of convenience to escape stricter rules at home, to cut operating costs, to avoid high taxes, and, in the worst cases, to get around the laws that protect sailors' wages and working conditions. Panama, for example, offers registration online and lets owners hire low-cost crews from anywhere.",
       "keyframes": [
         {
-          "param": "actors[0].flag[1][0].cue",
-          "cue": "flag of convenience",
-          "label": "actors[0].flag[1][0].cue",
-          "scene_time_s": 5.29,
-          "absolute_s": 294.02
+          "param": "callouts[0].at.cue",
+          "cue": "According to",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 289.08
         },
         {
-          "param": "callouts[0].at.cue",
+          "param": "items[1].at.cue",
           "cue": "stricter rules",
-          "label": "callouts[0].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 7.27,
           "absolute_s": 296.0
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[2].at.cue",
           "cue": "operating costs",
-          "label": "callouts[1].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 9.48,
           "absolute_s": 298.21
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[3].at.cue",
           "cue": "high taxes",
-          "label": "callouts[2].at.cue",
+          "label": "items[3].at.cue",
           "scene_time_s": 11.69,
           "absolute_s": 300.42
         },
         {
-          "param": "callouts[3].at.cue",
+          "param": "items[4].at.cue",
           "cue": "worst cases",
-          "label": "callouts[3].at.cue",
+          "label": "items[4].at.cue",
           "scene_time_s": 13.62,
           "absolute_s": 302.35
         },
         {
-          "param": "callouts[4].at.cue",
+          "param": "callouts[0].until.cue",
           "cue": "Panama, for example",
-          "label": "callouts[4].at.cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 20.16,
+          "absolute_s": 308.89
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Panama, for example",
+          "label": "cam[1].at.cue",
           "scene_time_s": 20.46,
           "absolute_s": 309.19
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Panama, for example",
+          "label": "items[5].at.cue",
+          "scene_time_s": 20.46,
+          "absolute_s": 309.19
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Panama, for example",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 20.46,
+          "absolute_s": 309.19
+        },
+        {
+          "param": "items[5].typeAt.cue",
+          "cue": "registration online",
+          "label": "items[5].typeAt.cue",
+          "scene_time_s": 23.08,
+          "absolute_s": 311.81
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "low-cost crews",
+          "label": "items[6].at.cue",
+          "scene_time_s": 25.75,
+          "absolute_s": 314.48
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "low-cost crews",
+          "label": "items[7].at.cue",
+          "scene_time_s": 25.75,
+          "absolute_s": 314.48
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "low-cost crews",
+          "label": "items[8].at.cue",
+          "scene_time_s": 25.75,
+          "absolute_s": 314.48
         }
       ],
       "unresolved_cues": [],
@@ -1045,38 +1339,66 @@
       "index": 20,
       "id": "s19_scale",
       "segment": "m3_scale",
-      "type": "compare",
+      "type": "engine_cartoon",
       "start_s": 316.7,
       "end_s": 343.47,
       "duration_s": 26.77,
-      "visual_objective": "Side-by-side figures count up; bars rise",
+      "visual_objective": "",
       "narration": "And it works at an enormous scale. In twenty twenty-six, Liberia became the first registry in history to pass 300 million tons of ships, with about 6,000 ships flying its flag. Liberia alone carries 17 percent of the world's shipping capacity. It says it flies almost a quarter of all the world's container ships, the ones that carry the boxes with your online orders.",
       "keyframes": [
         {
-          "param": "sides[0].cue",
+          "param": "items[3].at.cue",
           "cue": "first registry",
-          "label": "first registry ever to pass it",
+          "label": "items[3].at.cue",
           "scene_time_s": 6.44,
           "absolute_s": 323.14
         },
         {
-          "param": "sides[1].cue",
-          "cue": "flying its flag",
-          "label": "flying the flag (IHS)",
-          "scene_time_s": 12.94,
-          "absolute_s": 329.64
+          "param": "callouts[0].at.cue",
+          "cue": "first registry",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.44,
+          "absolute_s": 323.14
         },
         {
-          "param": "sides[2].cue",
+          "param": "items[3].steps[1][0].cue",
+          "cue": "flying its flag",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 12.44,
+          "absolute_s": 329.14
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "Liberia alone",
-          "label": "Liberia alone (UNCTAD, 2025)",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.21,
+          "absolute_s": 330.91
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Liberia alone",
+          "label": "cam[1].at.cue",
           "scene_time_s": 14.51,
           "absolute_s": 331.21
         },
         {
-          "param": "sides[3].cue",
+          "param": "items[4].at.cue",
+          "cue": "Liberia alone",
+          "label": "items[4].at.cue",
+          "scene_time_s": 14.51,
+          "absolute_s": 331.21
+        },
+        {
+          "param": "items[3].steps[2][0].cue",
+          "cue": "flying its flag",
+          "label": "items[3].steps[2][0].cue",
+          "scene_time_s": 14.94,
+          "absolute_s": 331.64
+        },
+        {
+          "param": "items[5].at.cue",
           "cue": "container ships",
-          "label": "the registry's own figure",
+          "label": "items[5].at.cue",
           "scene_time_s": 21.95,
           "absolute_s": 338.65
         }
@@ -1104,18 +1426,39 @@
       "narration": "So what does Liberia earn? Registration fees, yearly tonnage taxes, inspections and certificates. A local researcher estimates the country's maritime revenue at about 30 million dollars in twenty twenty-six. For a country like Liberia, that matters. But it is a tiny slice of an industry that carries the world's trade. And exactly how much? The researcher says only the registry and Liberia's maritime authority hold the full records, which is why he is calling for more transparency.",
       "keyframes": [
         {
-          "param": "actors[1].at.cue",
-          "cue": "Registration fees",
-          "label": "actors[1].at.cue",
-          "scene_time_s": 3.52,
-          "absolute_s": 346.99
-        },
-        {
           "param": "callouts[0].at.cue",
           "cue": "Registration fees",
           "label": "callouts[0].at.cue",
           "scene_time_s": 3.52,
           "absolute_s": 346.99
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "inspections",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 6.01,
+          "absolute_s": 349.48
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "maritime revenue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.06,
+          "absolute_s": 354.52
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "maritime revenue",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.36,
+          "absolute_s": 354.82
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "maritime revenue",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 11.36,
+          "absolute_s": 354.82
         },
         {
           "param": "callouts[1].at.cue",
@@ -1125,14 +1468,72 @@
           "absolute_s": 354.82
         },
         {
+          "param": "items[1].h[2][0].cue",
+          "cue": "maritime revenue",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 13.36,
+          "absolute_s": 356.82
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "tiny slice",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 21.81,
+          "absolute_s": 365.28
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "tiny slice",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 22.11,
+          "absolute_s": 365.58
+        },
+        {
           "param": "callouts[2].at.cue",
           "cue": "tiny slice",
           "label": "callouts[2].at.cue",
           "scene_time_s": 22.11,
           "absolute_s": 365.58
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "exactly how much",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 25.98,
+          "absolute_s": 369.45
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "exactly how much",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 26.28,
+          "absolute_s": 369.75
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "full records",
+          "label": "items[4].at.cue",
+          "scene_time_s": 33.54,
+          "absolute_s": 377.01
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "transparency",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 36.4,
+          "absolute_s": 379.87
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "carries the world",
+          "label": "items[3].at.cue",
+          "scene_time_s": null,
+          "absolute_s": null
         }
       ],
-      "unresolved_cues": [],
+      "unresolved_cues": [
+        "carries the world"
+      ],
       "assets": [
         "font:inter"
       ],
@@ -1204,9 +1605,9 @@
       "narration": "What happens to the people on board when the owner simply disappears? On paper, the flag state should step in. In practice, it often doesn't.",
       "keyframes": [
         {
-          "param": "actors[0].sadAt.cue",
+          "param": "items[3].at.cue",
           "cue": "disappears",
-          "label": "actors[0].sadAt.cue",
+          "label": "items[3].at.cue",
           "scene_time_s": 3.91,
           "absolute_s": 399.64
         },
@@ -1216,6 +1617,34 @@
           "label": "callouts[0].at.cue",
           "scene_time_s": 3.91,
           "absolute_s": 399.64
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "On paper",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.36,
+          "absolute_s": 401.09
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "On paper",
+          "label": "items[4].at.cue",
+          "scene_time_s": 5.36,
+          "absolute_s": 401.09
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "In practice",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 7.9,
+          "absolute_s": 403.63
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "In practice",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 8.2,
+          "absolute_s": 403.93
         }
       ],
       "unresolved_cues": [],
@@ -1272,11 +1701,39 @@
       "narration": "In total, 312 ships were abandoned in twenty twenty-four, more than twice as many as the year before. Each one is a crew stuck in a foreign port, waiting for someone to take responsibility.",
       "keyframes": [
         {
+          "param": "items[2].at.cue",
+          "cue": "In total",
+          "label": "items[2].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 435.75
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "In total",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 435.75
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "In total",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
           "absolute_s": 435.75
+        },
+        {
+          "param": "items[2].steps[2][0].cue",
+          "cue": "In total",
+          "label": "items[2].steps[2][0].cue",
+          "scene_time_s": 2.85,
+          "absolute_s": 438.25
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "twice as many",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 5.33,
+          "absolute_s": 440.73
         },
         {
           "param": "callouts[1].at.cue",
@@ -1286,11 +1743,46 @@
           "absolute_s": 441.03
         },
         {
+          "param": "callouts[1].until.cue",
+          "cue": "Each one",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 8.24,
+          "absolute_s": 443.64
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Each one",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.54,
+          "absolute_s": 443.94
+        },
+        {
           "param": "callouts[2].at.cue",
-          "cue": "waiting",
+          "cue": "Each one",
           "label": "callouts[2].at.cue",
+          "scene_time_s": 8.54,
+          "absolute_s": 443.94
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "waiting",
+          "label": "items[3].at.cue",
           "scene_time_s": 11.18,
           "absolute_s": 446.58
+        },
+        {
+          "param": "items[3].pages[1][0].cue",
+          "cue": "waiting",
+          "label": "items[3].pages[1][0].cue",
+          "scene_time_s": 12.18,
+          "absolute_s": 447.58
+        },
+        {
+          "param": "items[3].pages[2][0].cue",
+          "cue": "waiting",
+          "label": "items[3].pages[2][0].cue",
+          "scene_time_s": 13.38,
+          "absolute_s": 448.78
         }
       ],
       "unresolved_cues": [],
@@ -1452,9 +1944,9 @@
       "narration": "Some ships go further, and fly flags that are not real at all. Researchers at the Centre for Research on Energy and Clean Air counted 113 Russian vessels flying a false flag in the first nine months of twenty twenty-five, often to dodge sanctions on oil. And the shadow fleet keeps finding new homes: six registries that had never flagged a Russian ship before the invasion of Ukraine were flying 162 shadow vessels between them by September.",
       "keyframes": [
         {
-          "param": "actors[0].flag[1][0].cue",
+          "param": "items[0].flag[1][0].cue",
           "cue": "not real",
-          "label": "actors[0].flag[1][0].cue",
+          "label": "items[0].flag[1][0].cue",
           "scene_time_s": 3.62,
           "absolute_s": 495.89
         },
@@ -1466,39 +1958,102 @@
           "absolute_s": 495.89
         },
         {
-          "param": "actors[0].flag[2][0].cue",
+          "param": "items[1].at.cue",
+          "cue": "Researchers",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.59,
+          "absolute_s": 497.86
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "counted",
-          "label": "actors[0].flag[2][0].cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.42,
+          "absolute_s": 501.69
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "counted",
+          "label": "items[3].at.cue",
           "scene_time_s": 9.72,
           "absolute_s": 501.99
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "counted",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 9.72,
+          "absolute_s": 501.99
+        },
+        {
+          "param": "items[3].steps[2][0].cue",
+          "cue": "counted",
+          "label": "items[3].steps[2][0].cue",
+          "scene_time_s": 11.72,
+          "absolute_s": 503.99
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "false flag",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 13.03,
+          "absolute_s": 505.29
+        },
+        {
+          "param": "items[0].flag[2][0].cue",
+          "cue": "dodge sanctions",
+          "label": "items[0].flag[2][0].cue",
+          "scene_time_s": 17.39,
+          "absolute_s": 509.66
         },
         {
           "param": "callouts[1].at.cue",
-          "cue": "counted",
-          "label": "callouts[1].at.cue",
-          "scene_time_s": 9.72,
-          "absolute_s": 501.99
-        },
-        {
-          "param": "actors[0].flag[3][0].cue",
-          "cue": "first nine months",
-          "label": "actors[0].flag[3][0].cue",
-          "scene_time_s": 14.06,
-          "absolute_s": 506.32
-        },
-        {
-          "param": "actors[0].flag[4][0].cue",
           "cue": "dodge sanctions",
-          "label": "actors[0].flag[4][0].cue",
+          "label": "callouts[1].at.cue",
           "scene_time_s": 17.39,
           "absolute_s": 509.66
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "shadow fleet",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 19.83,
+          "absolute_s": 512.09
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "shadow fleet",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 20.13,
+          "absolute_s": 512.39
         },
         {
           "param": "callouts[2].at.cue",
-          "cue": "dodge sanctions",
+          "cue": "shadow fleet",
           "label": "callouts[2].at.cue",
-          "scene_time_s": 17.39,
-          "absolute_s": 509.66
+          "scene_time_s": 20.13,
+          "absolute_s": 512.39
+        },
+        {
+          "param": "items[0].flag[3][0].cue",
+          "cue": "new homes",
+          "label": "items[0].flag[3][0].cue",
+          "scene_time_s": 21.62,
+          "absolute_s": 513.89
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "new homes",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 21.62,
+          "absolute_s": 513.89
+        },
+        {
+          "param": "items[2].x[2][0].cue",
+          "cue": "new homes",
+          "label": "items[2].x[2][0].cue",
+          "scene_time_s": 27.62,
+          "absolute_s": 519.89
         }
       ],
       "unresolved_cues": [],
@@ -1573,11 +2128,53 @@
       "narration": "If flags of convenience cause so many problems, why do they keep growing? And why does the system survive every scandal?",
       "keyframes": [
         {
+          "param": "items[2].at.cue",
+          "cue": "so many problems",
+          "label": "items[2].at.cue",
+          "scene_time_s": 2.07,
+          "absolute_s": 537.81
+        },
+        {
           "param": "callouts[0].at.cue",
-          "cue": "keep growing",
+          "cue": "so many problems",
           "label": "callouts[0].at.cue",
+          "scene_time_s": 2.07,
+          "absolute_s": 537.81
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "keep growing",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 3.96,
+          "absolute_s": 539.7
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "keep growing",
+          "label": "cam[1].at.cue",
           "scene_time_s": 4.26,
           "absolute_s": 540.0
+        },
+        {
+          "param": "items[1].x[1][0].cue",
+          "cue": "keep growing",
+          "label": "items[1].x[1][0].cue",
+          "scene_time_s": 4.26,
+          "absolute_s": 540.0
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "keep growing",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 4.26,
+          "absolute_s": 540.0
+        },
+        {
+          "param": "items[1].x[2][0].cue",
+          "cue": "keep growing",
+          "label": "items[1].x[2][0].cue",
+          "scene_time_s": 10.26,
+          "absolute_s": 546.0
         }
       ],
       "unresolved_cues": [],
@@ -1696,26 +2293,75 @@
       "index": 34,
       "id": "s33_quality",
       "segment": "m5_quality",
-      "type": "compare",
+      "type": "engine_cartoon",
       "start_s": 574.53,
       "end_s": 599.47,
       "duration_s": 24.93,
-      "visual_objective": "Side-by-side figures count up; bars rise",
+      "visual_objective": "",
       "narration": "And the big registries compete hard to look like the safe choice. Liberia says about a quarter of the world's newly built ships are joining its flag. But the list of abandoned ships tells a mixed story: Panama tops it, followed by smaller flags like Palau, Tanzania, Comoros, Cameroon and Bahrain.",
       "keyframes": [
         {
-          "param": "sides[0].cue",
+          "param": "callouts[0].at.cue",
+          "cue": "compete hard",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.23,
+          "absolute_s": 576.77
+        },
+        {
+          "param": "items[0].openAt.cue",
           "cue": "newly built",
-          "label": "the registry's own figure",
+          "label": "items[0].openAt.cue",
+          "scene_time_s": 8.39,
+          "absolute_s": 582.92
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "newly built",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.69,
+          "absolute_s": 583.22
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "newly built",
+          "label": "callouts[1].at.cue",
           "scene_time_s": 8.99,
           "absolute_s": 583.52
         },
         {
-          "param": "sides[1].cue",
-          "cue": "Panama tops",
-          "label": "then Palau 37 · Tanzania 30 · Comoros 29 (ITF)",
-          "scene_time_s": 16.63,
-          "absolute_s": 591.16
+          "param": "items[0].stampAt.cue",
+          "cue": "joining its flag",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 10.3,
+          "absolute_s": 584.83
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "abandoned ships tells",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 13.22,
+          "absolute_s": 587.75
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "abandoned ships tells",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.52,
+          "absolute_s": 588.05
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "abandoned ships tells",
+          "label": "items[1].at.cue",
+          "scene_time_s": 13.52,
+          "absolute_s": 588.05
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "abandoned ships tells",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 13.52,
+          "absolute_s": 588.05
         }
       ],
       "unresolved_cues": [],
@@ -1787,18 +2433,11 @@
           "absolute_s": 623.87
         },
         {
-          "param": "cam[2].at.cue",
-          "cue": "Monrovia",
-          "label": "cam[2].at.cue",
-          "scene_time_s": 10.11,
-          "absolute_s": 629.17
-        },
-        {
           "param": "callouts[0].until.cue",
           "cue": "Monrovia",
           "label": "callouts[0].until.cue",
-          "scene_time_s": 10.11,
-          "absolute_s": 629.17
+          "scene_time_s": 9.91,
+          "absolute_s": 628.97
         },
         {
           "param": "callouts[1].at.cue",
@@ -1808,9 +2447,30 @@
           "absolute_s": 629.17
         },
         {
-          "param": "cam[3].at.cue",
+          "param": "callouts[1].until.cue",
           "cue": "chosen like a product",
-          "label": "cam[3].at.cue",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 17.45,
+          "absolute_s": 636.52
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "chosen like a product",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 17.75,
+          "absolute_s": 636.82
+        },
+        {
+          "param": "items[1].x[1][0].cue",
+          "cue": "chosen like a product",
+          "label": "items[1].x[1][0].cue",
+          "scene_time_s": 17.75,
+          "absolute_s": 636.82
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "chosen like a product",
+          "label": "items[2].x[1][0].cue",
           "scene_time_s": 17.75,
           "absolute_s": 636.82
         },
@@ -1820,6 +2480,62 @@
           "label": "callouts[2].at.cue",
           "scene_time_s": 17.75,
           "absolute_s": 636.82
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "Three small flags",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 22.13,
+          "absolute_s": 641.2
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "Three small flags",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 22.43,
+          "absolute_s": 641.5
+        },
+        {
+          "param": "items[1].x[2][0].cue",
+          "cue": "chosen like a product",
+          "label": "items[1].x[2][0].cue",
+          "scene_time_s": 23.75,
+          "absolute_s": 642.82
+        },
+        {
+          "param": "items[2].x[2][0].cue",
+          "cue": "chosen like a product",
+          "label": "items[2].x[2][0].cue",
+          "scene_time_s": 23.75,
+          "absolute_s": 642.82
+        },
+        {
+          "param": "callouts[3].until.cue",
+          "cue": "who is really",
+          "label": "callouts[3].until.cue",
+          "scene_time_s": 29.85,
+          "absolute_s": 648.91
+        },
+        {
+          "param": "cam[3].at.cue",
+          "cue": "who is really",
+          "label": "cam[3].at.cue",
+          "scene_time_s": 30.15,
+          "absolute_s": 649.21
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "who is really",
+          "label": "items[3].at.cue",
+          "scene_time_s": 30.15,
+          "absolute_s": 649.21
+        },
+        {
+          "param": "callouts[4].at.cue",
+          "cue": "who is really",
+          "label": "callouts[4].at.cue",
+          "scene_time_s": 30.15,
+          "absolute_s": 649.21
         }
       ],
       "unresolved_cues": [],

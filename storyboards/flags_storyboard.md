@@ -23,7 +23,7 @@ Total 11:02 (662.0 s), 37 scenes. Timestamps come from the narration timing of t
 | 17 | 4:34 | 5.4s | `s16_c3` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
 | 18 | 4:40 | 9.0s | `s17_q3` | engine_cartoon |  | What does a ship owner actually gain? And what does the small country get in return? | - |
 | 19 | 4:49 | 28.0s | `s18_reasons` | engine_cartoon |  | According to the maritime analytics firm Windward, owners choose a flag of convenience to ... | windward_foc |
-| 20 | 5:17 | 26.8s | `s19_scale` | compare | Side-by-side figures count up; bars rise | And it works at an enormous scale. In twenty twenty-six, Liberia became the first registry... | fpa_2026, unctad_2025, liscr_2026 |
+| 20 | 5:17 | 26.8s | `s19_scale` | engine_cartoon |  | And it works at an enormous scale. In twenty twenty-six, Liberia became the first registry... | fpa_2026, unctad_2025, liscr_2026 |
 | 21 | 5:43 | 37.8s | `s20_money` | engine_cartoon |  | So what does Liberia earn? Registration fees, yearly tonnage taxes, inspections and certif... | allafrica_2026 |
 | 22 | 6:21 | 9.1s | `s21_t3` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | Cheaper, simpler, lighter rules. But when something goes wrong far out at sea, who is resp... | - |
 | 23 | 6:30 | 5.4s | `s22_c4` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
@@ -37,7 +37,7 @@ Total 11:02 (662.0 s), 37 scenes. Timestamps come from the narration timing of t
 | 31 | 8:50 | 5.4s | `s30_c5` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
 | 32 | 8:56 | 9.0s | `s31_q5` | engine_cartoon |  | If flags of convenience cause so many problems, why do they keep growing? And why does the... | - |
 | 33 | 9:05 | 29.8s | `p32_gains` | engine_draw |  | Because almost everyone gains something. Owners save money. Small countries earn fees. Shi... | unctadstat_2026 |
-| 34 | 9:35 | 24.9s | `s33_quality` | compare | Side-by-side figures count up; bars rise | And the big registries compete hard to look like the safe choice. Liberia says about a qua... | liscr_2026, itf_2024 |
+| 34 | 9:35 | 24.9s | `s33_quality` | engine_cartoon |  | And the big registries compete hard to look like the safe choice. Liberia says about a qua... | liscr_2026, itf_2024 |
 | 35 | 9:59 | 19.6s | `s34_lesson` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | The real question is not where a ship is registered. It is whether anyone, anywhere, is tr... | - |
 | 36 | 10:19 | 32.7s | `s35_payoff` | engine_cartoon |  | So, next time you see a giant ship on the horizon, look at the back of it. The name of a p... | unctad_2025 |
 | 37 | 10:52 | 10.2s | `s36_end` | end_card | Closing words land; brand line draws | Next time on The Hidden Economics, we follow the money behind another hidden link of the w... | - |

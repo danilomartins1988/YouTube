@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/why-ships-fly-foreign-flags/documentary/why-ships-fly-foreign-flags--documentary.mp4 (186.9 MB) |
+| File exists | PASS | /home/user/YouTube/output/why-ships-fly-foreign-flags/documentary/why-ships-fly-foreign-flags--documentary.mp4 (210.6 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -14,7 +14,7 @@
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.2 LUFS integrated, true peak -3.9 dBFS
-- Scenes: 37; types: act_title x5, channel_intro x1, compare x2, end_card x1, engine_cartoon x13, engine_chart x3, engine_draw x4, engine_map x2, kinetic_text x6
+- Scenes: 37; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x15, engine_chart x3, engine_draw x4, engine_map x2, kinetic_text x6
 - Average scene length: 17.9 s; act cards are music-only.
 
 ## Pipeline QC report
@@ -22,7 +22,7 @@
 # QC report: why-ships-fly-foreign-flags / documentary (long_16x9)
 
 - Runtime: **662.0 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 186.9 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 210.6 MB
 - Loudness: -16.2 LUFS integrated, true peak -3.9 dBFS
 - Errors: **0**, warnings: **32**
 - Technical QC passed: **True**

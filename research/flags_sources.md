@@ -1,6 +1,6 @@
 # Research dossier - Why Almost Half the World's Ships Fly Three Small Flags
 
-Generated 2026-11-07T13:50:21+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-08T11:02:01+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 
