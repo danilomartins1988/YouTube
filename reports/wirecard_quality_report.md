@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/the-2-billion-that-never-existed/documentary/the-2-billion-that-never-existed--documentary.mp4 (162.5 MB) |
+| File exists | PASS | /home/user/YouTube/output/the-2-billion-that-never-existed/documentary/the-2-billion-that-never-existed--documentary.mp4 (221.0 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -14,7 +14,7 @@
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
-- Scenes: 37; types: act_title x5, channel_intro x1, compare x1, end_card x1, engine_cartoon x19, engine_draw x4, kinetic_text x6
+- Scenes: 37; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x21, engine_draw x4, kinetic_text x5
 - Average scene length: 17.8 s; act cards are music-only.
 
 ## Pipeline QC report
@@ -22,7 +22,7 @@
 # QC report: the-2-billion-that-never-existed / documentary (long_16x9)
 
 - Runtime: **660.13 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 162.5 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 221.0 MB
 - Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
 - Errors: **0**, warnings: **34**
 - Technical QC passed: **True**

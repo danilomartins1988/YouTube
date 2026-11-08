@@ -5,63 +5,91 @@ scenes:
   segment: h_question
   type: engine_cartoon
   params:
-    worldW: 3000
-    coasts:
-      plain: true
-      left: true
-      leftLabel: THE WORLD
+    zones:
+    - set: sciencepark
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 1500
-      y: 380
-      zoom: 1.3
+      x: 760
+      y: 640
+      zoom: 1.5
     - at:
         cue: depended on
-      x: 1100
-      y: 400
-      zoom: 0.85
+      x: 960
+      y: 540
+      zoom: 1.0
       dur: 3.0
     drift: 0
-    actors:
-    - kind: island
-      x: 1500
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 1480
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
-    - kind: office
-      x: 140
-      text: PHONES
-      color: blue
-      scale: 1.0
-    - kind: office
+    items:
+    - kind: conveyor
+      x0: 1100
+      x1: 1800
+      y: 830
+      goods: chip
+      n: 6
+      speed: 140
+    - kind: plane
+      x:
+      - - 0
+        - 1250
+      - - cue: depended on
+        - 1250
+      - - cue: depended on
+          offset: 6
+        - 2600
+      y:
+      - - 0
+        - 420
+      - - cue: depended on
+          offset: 6
+        - 150
+      text: ''
+      scale: 0.6
+      tilt: -10
+    - kind: device
+      type: phone
       x: 300
-      text: AI SERVERS
-      color: purple
-      scale: 0.85
-    - kind: coins
-      x: 1500
-      y: 200
-      to:
-      - 250
-      - 160
+      y: 520
       at:
         cue: most important
-      rate: 6
-      shape: chip
-    callouts:
-    - text: Smaller than Switzerland
+      scale: 0.7
+    - kind: device
+      type: laptop
+      x: 520
+      y: 540
+      at:
+        cue: most important
+        offset: 0.3
+      scale: 0.7
+    - kind: device
+      type: car
       x: 1500
-      y: 120
+      y: 560
+      at:
+        cue: most important
+        offset: 0.6
+      scale: 0.6
+    callouts:
+    - text: One of the world's most important industries
+      x: 960
+      y: 150
+      at:
+        cue: most important
+      color: white
+      until:
+        cue: smaller than Switzerland
+        offset: -0.3
+      screen: true
+    - text: …on an island smaller than Switzerland?
+      x: 960
+      y: 150
       at:
         cue: smaller than Switzerland
       color: gold
       size: 44
-    fish: 3
+      screen: true
   assets:
   - font:inter
 - id: s02_map
@@ -161,45 +189,94 @@ scenes:
   segment: m1_question
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     min_seconds: 9.0
     cam:
     - at: 0
-      x: 1300
-      y: 400
-      zoom: 1.2
+      x: 960
+      y: 470
+      zoom: 1.3
+    - at:
+        cue: runs on chips
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 1280
-      text: FAB
-      color: gold
-      scale: 0.8
-      at:
-        cue: center of chipmaking
-      y: 314
-    - kind: coins
-      x: 2500
-      y: -100
-      to:
-      - 1300
-      - 260
+    items:
+    - kind: wafer
+      x: 960
+      y: 430
+      r: 190
+      at: 0.3
+      spin: 8
+      n: 9
+    - kind: pod
+      x:
+      - - 0
+        - -100
+      - - 8
+        - 2000
+      dropAt: 99
+    - kind: person
+      x: 520
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 1
+      skin: 0
+      suit: true
+    - kind: person
+      x: 1400
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 2
+      skin: 1
+      suit: true
+    - kind: device
+      type: phone
+      x: 380
+      y: 420
       at:
         cue: runs on chips
-      rate: 4
-      shape: chip
+      scale: 0.55
+    - kind: device
+      type: laptop
+      x: 1560
+      y: 440
+      at:
+        cue: runs on chips
+        offset: 0.3
+      scale: 0.55
+    - kind: device
+      type: car
+      x: 1500
+      y: 860
+      at:
+        cue: someone has to
+      scale: 0.55
+    - kind: device
+      type: washer
+      x: 420
+      y: 860
+      at:
+        cue: someone has to
+        offset: 0.3
+      scale: 0.5
     callouts:
     - text: A small island… the center of chipmaking?
-      x: 1300
+      x: 960
       y: 140
       at:
         cue: small island
       color: gold
       size: 40
+      screen: true
     - text: Almost everything runs on chips
       x: 960
       y: 960
@@ -207,7 +284,6 @@ scenes:
         cue: runs on chips
       color: white
       screen: true
-    fish: 3
   assets:
   - font:inter
 - id: p05_oldrule
@@ -458,59 +534,68 @@ scenes:
   segment: m2_question
   type: engine_cartoon
   params:
+    zones:
+    - set: site
+      x0: -1600
+      x1: 1500
+    - set: sciencepark
+      x0: 1500
+      x1: 5000
     worldW: 3000
     min_seconds: 9.0
-    coasts:
-      plain: true
-      left: true
-      leftLabel: OTHER COUNTRIES
     cam:
     - at: 0
-      x: 1300
-      y: 400
+      x: 760
+      y: 540
+      zoom: 1.0
+    - at:
+        cue: not be special
+      x: 1700
+      y: 540
       zoom: 0.85
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: office
-      x: 150
+    items:
+    - kind: crane
+      x: 500
       text: NEW FAB?
-      color: gold
+      at:
+        cue: build its own
+      progress:
+      - - 0
+        - 0.05
+      - - 12
+        - 0.2
       scale: 1.0
+    - kind: person
+      x: 1050
+      pose: shrug
       at:
         cue: build its own
-    - kind: office
-      x: 320
-      text: NEW FAB?
-      color: gold
+        offset: 0.6
       scale: 0.8
-      at:
-        cue: build its own
-        offset: 0.4
-    - kind: island
-      x: 2100
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 2080
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
+      hair: 1
+      skin: 0
+      hat: '#FFC93C'
     callouts:
     - text: Just copy it?
-      x: 1100
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: build its own
       color: gold
+      until:
+        cue: not be special
+        offset: -0.3
       size: 48
+      screen: true
     - text: Then Taiwan wouldn't be special
-      x: 1100
-      y: 270
+      x: 960
+      y: 150
       at:
         cue: not be special
       color: white
-    fish: 3
+      screen: true
   assets:
   - font:inter
 - id: p11_process
@@ -647,64 +732,78 @@ scenes:
   segment: m2_euv
   type: engine_cartoon
   params:
-    worldW: 3400
-    coasts:
-      port: true
-      left: true
-      leftLabel: NETHERLANDS
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+      label: yellow
+    worldW: 1920
     cam:
     - at: 0
-      x: 900
-      y: 400
-      zoom: 0.95
+      x: 960
+      y: 470
+      zoom: 1.25
     - at:
-        cue: In twenty twenty-five
-      x: 1900
-      y: 400
-      zoom: 0.9
-      dur: 3.0
+        cue: Only one company
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: office
-      x: 150
-      text: ASML
-      color: blue
-      scale: 1.0
-    - kind: cargo
-      x:
-      - - 0
-        - 600
-      - - 24
-        - 2300
-      name: MACHINE SHIP
-      flag: EUV MACHINE
-    - kind: island
-      x: 2800
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 2780
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
-    callouts:
-    - text: Only one maker in the world
-      x: 900
-      y: 160
+    items:
+    - kind: litho
+      x: 760
+      at: 0.2
+      fireAt:
+        cue: smallest features
+      text: EUV MACHINE
+      sub: extreme ultraviolet light
+    - kind: sign
+      x: 1500
+      y: 340
+      text: ONLY ONE MAKER
+      sub: ASML · the Netherlands
       at:
         cue: Only one company
-      color: gold
-      sub: ASML, the Netherlands
-      size: 42
+      color: '#FFF59D'
+      size: 40
+    - kind: conveyor
+      x0: 1250
+      x1: 1800
+      y: 830
+      goods: box
+      label: EUV
+      n: 4
+      speed: 60
+      at:
+        cue: it shipped
+    - kind: person
+      x: 1150
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 1
+      skin: 0
+      suit: true
+    callouts:
+    - text: To print the smallest features…
+      x: 960
+      y: 150
+      at:
+        cue: smallest features
+      color: white
+      until:
+        cue: Only one company
+        offset: -0.3
+      screen: true
     - text: '{{asml_only.display}}'
-      x: 1900
-      y: 170
+      x: 960
+      y: 960
       at:
         cue: it shipped
       color: green
       size: 44
-    fish: 3
+      screen: true
   sources:
   - asml_euv
   - asml_2025
@@ -712,344 +811,167 @@ scenes:
   - font:inter
 - id: s13_yield
   segment: m2_yield
-  type: engine_draw
+  type: engine_cartoon
   params:
-    title: 'Yield: the real secret'
-    subtitle: share of chips on a wafer that work (schematic)
-    presenter: false
-    studio: false
-    push: 0.004
-    draw_start:
-      cue: The real secret
-    speed: 1600
-    strokes:
-    - d: M 960 580 m -330 0 a 330 330 0 1 0 660 0 a 330 330 0 1 0 -660 0
-      color: accent
-      width: 6
-      start:
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 760
+      y: 500
+      zoom: 1.15
+    - at:
+        cue: brand-new factory
+      x: 1500
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: wafer
+      x: 700
+      y: 430
+      r: 230
+      at: 0.3
+      n: 11
+      revealAt:
+        cue: actually work
+      fail:
+      - - 0
+        - 0.45
+      - - cue: endless learning
+        - 0.45
+      - - cue: endless learning
+          offset: 4
+        - 0.08
+      text: GREEN = WORKS · RED = FAILS
+    - kind: person
+      x: 1080
+      pose: read
+      at: 0.2
+      scale: 1.0
+      hair: 1
+      skin: 0
+      suit: true
+    - kind: chart
+      x: 1650
+      y: 380
+      w: 560
+      h: 330
+      at:
+        cue: brand-new factory
+      dur: 5
+      text: YIELD OVER TIME (schematic)
+      pts:
+      - 0.1
+      - 0.15
+      - 0.25
+      - 0.4
+      - 0.55
+      - 0.7
+      - 0.8
+      - 0.88
+    - kind: sign
+      x: 1650
+      y: 720
+      text: NEW FAB
+      sub: same machines, lower yield at first
+      at:
+        cue: same machines
+      color: '#FFCDD2'
+      size: 30
+    callouts:
+    - text: 'Yield: the share of chips that work'
+      x: 960
+      y: 150
+      at:
         cue: The real secret
-      label:
-        text: WAFER
-        x: 960
-        y: 220
-        size: 30
-        color: accent
-        anchor: middle
-      kind: stroke
-    - d: M 700 360 L 770 360 L 770 430 L 700 430 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.0
-      kind: box
-    - d: M 790 360 L 860 360 L 860 430 L 790 430 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.05
-      kind: box
-    - d: M 880 360 L 950 360 L 950 430 L 880 430 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.1
-      kind: box
-    - d: M 970 360 L 1040 360 L 1040 430 L 970 430 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.15000000000000002
-      kind: box
-    - d: M 1060 360 L 1130 360 L 1130 430 L 1060 430 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.2
-      kind: box
-    - d: M 1150 360 L 1220 360 L 1220 430 L 1150 430 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.25
-      kind: box
-    - d: M 700 450 L 770 450 L 770 520 L 700 520 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.30000000000000004
-      kind: box
-    - d: M 790 450 L 860 450 L 860 520 L 790 520 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.35000000000000003
-      kind: box
-    - d: M 880 450 L 950 450 L 950 520 L 880 520 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.4
-      kind: box
-    - d: M 970 450 L 1040 450 L 1040 520 L 970 520 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.45
-      kind: box
-    - d: M 1060 450 L 1130 450 L 1130 520 L 1060 520 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.5
-      kind: box
-    - d: M 1150 450 L 1220 450 L 1220 520 L 1150 520 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.55
-      kind: box
-    - d: M 700 540 L 770 540 L 770 610 L 700 610 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.6000000000000001
-      kind: box
-    - d: M 790 540 L 860 540 L 860 610 L 790 610 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.65
-      kind: box
-    - d: M 880 540 L 950 540 L 950 610 L 880 610 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.7000000000000001
-      kind: box
-    - d: M 970 540 L 1040 540 L 1040 610 L 970 610 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.75
-      kind: box
-    - d: M 1060 540 L 1130 540 L 1130 610 L 1060 610 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.8
-      kind: box
-    - d: M 1150 540 L 1220 540 L 1220 610 L 1150 610 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.8500000000000001
-      kind: box
-    - d: M 700 630 L 770 630 L 770 700 L 700 700 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.9
-      kind: box
-    - d: M 790 630 L 860 630 L 860 700 L 790 700 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 0.9500000000000001
-      kind: box
-    - d: M 880 630 L 950 630 L 950 700 L 880 700 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.0
-      kind: box
-    - d: M 970 630 L 1040 630 L 1040 700 L 970 700 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.05
-      kind: box
-    - d: M 1060 630 L 1130 630 L 1130 700 L 1060 700 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.1
-      kind: box
-    - d: M 1150 630 L 1220 630 L 1220 700 L 1150 700 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.1500000000000001
-      kind: box
-    - d: M 700 720 L 770 720 L 770 790 L 700 790 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.2000000000000002
-      kind: box
-    - d: M 790 720 L 860 720 L 860 790 L 790 790 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.25
-      kind: box
-    - d: M 880 720 L 950 720 L 950 790 L 880 790 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.3
-      kind: box
-    - d: M 970 720 L 1040 720 L 1040 790 L 970 790 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.35
-      kind: box
-    - d: M 1060 720 L 1130 720 L 1130 790 L 1060 790 Z
-      color: accent3
-      width: 4
-      fill: accent3
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.4000000000000001
-      kind: box
-    - d: M 1150 720 L 1220 720 L 1220 790 L 1150 790 Z
-      color: risk
-      width: 4
-      fill: risk
-      fillOpacity: 0.3
-      start:
-        cue: actually work
-        offset: 1.4500000000000002
-      kind: box
-    - d: M 960 1010 L 960 1010
-      color: ink
-      width: 1
-      start:
-        cue: years of practice
-      label:
-        text: RED = FAILED · GREEN = WORKS
-        x: 960
-        y: 1010
-        size: 28
-        color: ink
-        anchor: middle
-      kind: stroke
-    - d: M 1380 900 Q 1500 700 1700 450
-      color: accent3
-      width: 8
-      flow: 260
-      start:
-        cue: endless learning
-      label:
-        text: YIELD LEARNING → YEARS
-        x: 1560
-        y: 420
-        size: 26
-        color: accent3
-        anchor: middle
-      kind: stroke
+      color: gold
+      until:
+        cue: brand-new factory
+        offset: -0.3
+      size: 40
+      screen: true
+    - text: 'Know-how: hard to buy, harder to copy'
+      x: 960
+      y: 150
+      at:
+        cue: hard to buy
+      color: white
+      screen: true
   assets:
   - font:inter
 - id: s14_capex
   segment: m2_capex
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Why chips are so hard to make
-    title: The price of the game
-    sides:
-    - kicker: TSMC capital spending, 2026 plan
-      value: '{{capex_2026.display}}'
-      label: January 2026 guidance
-      cue: TSMC planned
-    - kicker: New fabs worldwide, 2024–2032
-      value: '{{fab_investment.display}}'
-      label: SIA/BCG projection
-      cue: Across the industry
+    zones:
+    - set: sciencepark
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 760
+      y: 520
+      zoom: 1.1
+    - at:
+        cue: Across the industry
+      x: 960
+      y: 480
+      zoom: 0.9
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: stack
+      x: 560
+      at:
+        cue: TSMC planned
+      h:
+      - - 0
+        - 40
+      - - cue: TSMC planned
+        - 40
+      - - cue: TSMC planned
+          offset: 3
+        - 260
+      text: '{{capex_2026.display}}'
+      sub: TSMC, 2026 plan
+    - kind: stack
+      x: 1350
+      at:
+        cue: Across the industry
+      h:
+      - - 0
+        - 40
+      - - cue: Across the industry
+        - 40
+      - - cue: Across the industry
+          offset: 4
+        - 640
+      text: '{{fab_investment.display}}'
+      sub: new fabs worldwide, 2024–2032
+      color: gold
+    - kind: crane
+      x: 1800
+      progress:
+      - - 0
+        - 0.2
+      - - 20
+        - 0.9
+      scale: 1.0
+    callouts:
+    - text: The price of the game
+      x: 960
+      y: 150
+      at:
+        cue: the money
+      color: gold
+      size: 44
+      screen: true
   sources:
   - tsmc_4q25_call
   - sia_bcg_2024
@@ -1089,23 +1011,106 @@ scenes:
   - font:inter
 - id: s16_layers
   segment: m2_layers
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Why chips are so hard to make
-    title: Chips are not one market
-    sides:
-    - kicker: Memory (DRAM) capacity
-      value: '{{total_capacity.dram_kor_display}}'
-      label: South Korea
-      cue: led by South Korea
-    - kicker: Advanced packaging
-      value: Bottleneck
-      label: joining chips and memory
-      cue: Advanced packaging
-    - kicker: Taiwan's edge
-      value: The top
-      label: narrow, but at the very top
-      cue: very top
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+    worldW: 3000
+    cam:
+    - at: 0
+      x: 700
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Advanced packaging
+      x: 1550
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    - at:
+        cue: narrow
+      x: 2300
+      y: 500
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: device
+      type: chip
+      x: 600
+      y: 640
+      at:
+        cue: Memory
+      color: cyan
+      text: MEMORY (DRAM)
+    - kind: sign
+      x: 600
+      y: 280
+      text: 'SOUTH KOREA: {{total_capacity.dram_kor_display}}'
+      sub: of world DRAM capacity
+      at:
+        cue: led by South Korea
+      color: '#BBDEFB'
+      size: 32
+    - kind: conveyor
+      x0: 1200
+      x1: 1900
+      y: 830
+      goods: chip
+      n: 9
+      speed: 30
+      at:
+        cue: Advanced packaging
+        offset: -0.5
+    - kind: sign
+      x: 1550
+      y: 380
+      text: BOTTLENECK
+      sub: packaging joins chips + memory
+      at:
+        cue: bottleneck
+      color: '#FFCDD2'
+      size: 40
+      hang: true
+      swing: true
+    - kind: device
+      type: chip
+      x: 2300
+      y: 560
+      at:
+        cue: Taiwan's edge
+      color: gold
+      text: THE MOST ADVANCED
+      scale: 1.2
+    - kind: letters
+      x: 2300
+      y: 230
+      text: TOP
+      at:
+        cue: very top
+      size: 110
+      color: gold
+    callouts:
+    - text: Chips are not one market
+      x: 960
+      y: 150
+      at:
+        cue: not one market
+      color: white
+      until:
+        cue: Advanced packaging
+        offset: -0.3
+      size: 40
+      screen: true
+    - text: 'Taiwan''s edge: narrow, but at the very top'
+      x: 960
+      y: 150
+      at:
+        cue: narrow
+      color: gold
+      screen: true
   sources:
   - sia_bcg_2024
   assets:
@@ -1144,63 +1149,73 @@ scenes:
   segment: m3_question
   type: engine_cartoon
   params:
-    worldW: 3000
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 1200
+    - set: datacenter
+      x0: 1200
+      x1: 5000
+    worldW: 2600
     min_seconds: 9.0
-    coasts:
-      plain: true
-      left: true
-      leftLabel: CUSTOMERS
     cam:
     - at: 0
-      x: 1400
-      y: 400
-      zoom: 0.85
+      x: 760
+      y: 540
+      zoom: 1.05
+    - at:
+        cue: economic power
+      x: 1500
+      y: 540
+      zoom: 0.95
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: office
-      x: 140
-      text: CLOUD
-      color: blue
-      scale: 1.0
-    - kind: office
+    items:
+    - kind: wafer
+      x: 600
+      y: 430
+      r: 170
+      at: 0.2
+      spin: 6
+    - kind: person
       x: 300
-      text: PHONES
-      color: green
-      scale: 0.8
-    - kind: island
-      x: 2200
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 2180
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 1
+      skin: 0
+      suit: true
     - kind: coins
-      x: 2200
-      y: 220
+      from:
+      - 800
+      - 520
       to:
-      - 250
-      - 160
-      at: 0.4
-      rate: 5
+      - 1900
+      - 520
+      at: 0.6
+      rate: 4
       shape: chip
+      arc: 200
     callouts:
     - text: Who depends on Taiwan?
-      x: 1300
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: Who actually
       color: gold
+      until:
+        cue: economic power
+        offset: -0.3
       size: 46
-    - text: Power + risk
-      x: 1300
-      y: 270
+      screen: true
+    - text: Dependence = power + risk
+      x: 960
+      y: 150
       at:
         cue: economic power
       color: risk
-    fish: 3
+      size: 42
+      screen: true
   assets:
   - font:inter
 - id: p20_map
@@ -1340,90 +1355,125 @@ scenes:
   segment: m3_network
   type: engine_cartoon
   params:
-    worldW: 3600
-    coasts:
-      plain: true
-      left: true
-      right: true
-      leftLabel: UNITED STATES
-      rightLabel: EUROPE · ASIA
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 1300
+    - set: datacenter
+      x0: 1300
+      x1: 2900
+    - set: carplant
+      x0: 2900
+      x1: 7000
+    worldW: 4300
     cam:
     - at: 0
-      x: 1800
-      y: 400
+      x: 900
+      y: 540
       zoom: 1.0
     - at:
+        cue: Cloud companies
+      x: 2100
+      y: 540
+      zoom: 1.0
+      dur: 2.6
+    - at:
         cue: Phone makers
-      x: 1800
-      y: 400
-      zoom: 0.6
+      x: 3550
+      y: 540
+      zoom: 1.0
+      dur: 2.6
+    - at:
+        cue: Taiwan's exports
+      x: 2200
+      y: 520
+      zoom: 0.55
       dur: 3.0
     drift: 0
-    actors:
-    - kind: island
-      x: 1800
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 1780
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
-    - kind: office
-      x: 140
-      text: CLOUD
-      color: blue
-      scale: 1.0
-    - kind: office
-      x: 300
-      text: AI
-      color: purple
-      scale: 0.8
-    - kind: office
-      x: 3300
-      text: PHONES
-      color: green
-      scale: 1.0
-    - kind: office
-      x: 3460
-      text: CARS
-      color: gold
-      scale: 0.8
+    items:
+    - kind: conveyor
+      x0: 200
+      x1: 1150
+      y: 830
+      goods: chip
+      n: 7
+      speed: 160
     - kind: coins
-      x: 1800
-      y: 220
+      from:
+      - 1150
+      - 500
       to:
-      - 250
-      - 160
+      - 2100
+      - 420
       at:
         cue: Cloud companies
-      rate: 6
+      rate: 5
       shape: chip
-    - kind: coins
-      x: 1800
-      y: 220
-      to:
-      - 3380
-      - 160
+    - kind: device
+      type: server
+      x: 2100
+      y: 860
+      at:
+        cue: data centers
+      text: AI SERVERS
+    - kind: conveyor
+      x0: 3100
+      x1: 4100
+      y: 830
+      goods: car
+      n: 5
+      speed: 90
       at:
         cue: Phone makers
-      rate: 6
-      shape: chip
+        offset: -1
+    - kind: device
+      type: phone
+      x: 3200
+      y: 560
+      at:
+        cue: Phone makers
+      scale: 0.8
+    - kind: device
+      type: laptop
+      x: 3500
+      y: 560
+      at:
+        cue: PC makers
+      scale: 0.8
     - kind: plane
       x:
       - - 0
-        - 2400
-      - - 24
-        - 600
-      y: 150
+        - 2600
+      - - 26
+        - 300
+      y: 180
       flip: true
-      text: CHIPS
-      scale: 0.7
+      text: ''
+      scale: 0.6
     callouts:
+    - text: 'Cloud: data centers full of AI chips'
+      x: 960
+      y: 150
+      at:
+        cue: Cloud companies
+      color: white
+      until:
+        cue: Phone makers
+        offset: -0.3
+      screen: true
+    - text: Phones · PCs · cars
+      x: 960
+      y: 150
+      at:
+        cue: Phone makers
+      color: white
+      until:
+        cue: Taiwan's exports
+        offset: -0.3
+      screen: true
     - text: 'Exports 2025: {{exports_2025.display}}'
       x: 960
-      y: 160
+      y: 150
       at:
         cue: Taiwan's exports
       color: gold
@@ -1432,12 +1482,11 @@ scenes:
       screen: true
     - text: +35% in one year
       x: 960
-      y: 270
+      y: 960
       at:
         cue: in a single year
       color: green
       screen: true
-    fish: 3
   sources:
   - taiwan_exports_2025
   assets:
@@ -1523,23 +1572,111 @@ scenes:
   - font:inter
 - id: s24_unequal
   segment: m3_unequal
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Who depends on Taiwan
-    title: Not every chip is equal
-    sides:
-    - kicker: AI chip · phone processor
-      value: Cutting edge
-      label: where Taiwan dominates
-      cue: cutting-edge
-    - kicker: Car · washing machine
-      value: Older chips
-      label: made in many countries
-      cue: older, simpler
-    - kicker: But…
-      value: 1 chip
-      label: a missing cheap chip can stop a car factory
-      cue: Even so
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 1500
+    - set: carplant
+      x0: 1500
+      x1: 5000
+    worldW: 3200
+    cam:
+    - at: 0
+      x: 800
+      y: 540
+      zoom: 1.0
+    - at:
+        cue: older, simpler
+        offset: -0.6
+      x: 2300
+      y: 540
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: device
+      type: chip
+      x: 560
+      y: 600
+      at:
+        cue: cutting-edge
+      color: gold
+      text: AI CHIP
+      scale: 1.1
+    - kind: device
+      type: phone
+      x: 960
+      y: 640
+      at:
+        cue: phone processor
+      text: NEW PHONE
+    - kind: sign
+      x: 760
+      y: 280
+      text: MOST ADVANCED FABS
+      sub: where Taiwan dominates
+      at:
+        cue: that is where
+      color: '#FFF59D'
+      size: 32
+    - kind: device
+      type: car
+      x: 1900
+      y: 560
+      at:
+        cue: A car
+      scale: 0.8
+    - kind: device
+      type: washer
+      x: 2250
+      y: 560
+      at:
+        cue: washing machine
+      scale: 0.8
+    - kind: sign
+      x: 2080
+      y: 280
+      text: OLDER, SIMPLER CHIPS
+      sub: made in many countries
+      at:
+        cue: older, simpler
+      color: '#C8E6C9'
+      size: 32
+    - kind: conveyor
+      x0: 2500
+      x1: 3300
+      y: 830
+      goods: car
+      n: 4
+      speed: 90
+      at:
+        cue: Even so
+        offset: -1.0
+      stopAt:
+        cue: stop a car factory
+      gapAt:
+        cue: missing cheap chip
+    callouts:
+    - text: Not every chip is equal
+      x: 960
+      y: 150
+      at:
+        cue: not every industry
+      color: white
+      until:
+        cue: Even so
+        offset: -0.3
+      size: 40
+      screen: true
+    - text: One missing cheap chip can stop a car factory
+      x: 960
+      y: 150
+      at:
+        cue: Even so
+      color: risk
+      screen: true
   assets:
   - font:inter
 - id: s25_t3
@@ -1576,124 +1713,144 @@ scenes:
   segment: m4_question
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: sciencepark
+      x0: -1600
+      x1: 4600
+      night: true
+    worldW: 1920
     min_seconds: 10.0
-    banner: &id003
+    banner: &id004
       text: Hypothetical scenario
       sub: not a prediction
     night: true
     cam:
     - at: 0
-      x: 1300
-      y: 400
-      zoom: 1.1
+      x: 960
+      y: 560
+      zoom: 1.15
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 1280
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
-    - kind: cargo
-      x:
-      - - 0
-        - 1700
-      - - 12
-        - 2000
-      flag: CHIPS
-      crew: 2
-    - kind: coins
-      x: 1300
-      y: 220
-      to:
-      - 2400
-      - 100
-      at: 0.3
-      rate: 4
-      shape: chip
-      until:
+    items:
+    - kind: conveyor
+      x0: 1000
+      x1: 1750
+      y: 830
+      goods: chip
+      n: 6
+      speed: 130
+      stopAt:
         cue: seriously disrupted
+    - kind: letters
+      x: 1380
+      y: 420
+      text: '?'
+      at:
+        cue: seriously disrupted
+        offset: 0.4
+      size: 130
+      color: gold
     callouts:
     - text: What if shipments stopped?
-      x: 1300
-      y: 170
+      x: 960
+      y: 960
       at:
         cue: What if
       color: risk
       size: 44
-    fish: 3
+      screen: true
   assets:
   - font:inter
 - id: s28_precedent
   segment: m4_precedent
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      plain: true
-      left: true
-      leftLabel: CAR FACTORIES
-      darkAt:
-        cue: hit carmakers
+    zones:
+    - set: carplant
+      x0: -1600
+      x1: 4000
+      idle: null
+    worldW: 1920
     cam:
     - at: 0
-      x: 900
-      y: 400
+      x: 960
+      y: 500
+      zoom: 1.15
+    - at:
+        cue: lost revenue
+      x: 960
+      y: 540
       zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: office
-      x: 150
-      text: CAR PLANT
-      color: blue
-      scale: 1.0
-    - kind: office
-      x: 310
-      text: CAR PLANT
-      color: green
+    items:
+    - kind: conveyor
+      x0: 250
+      x1: 1650
+      y: 830
+      goods: car
+      n: 7
+      speed: 100
+      stopAt:
+        cue: hit carmakers
+        offset: 0.4
+      gapAt:
+        cue: hit carmakers
+    - kind: person
+      x: 500
+      pose: worry
+      at: &id003
+        cue: hit carmakers
+        offset: 0.6
       scale: 0.8
-    - kind: island
-      x: 2000
-      w: 440
-      text: TAIWAN
-    - kind: coins
-      x: 2000
-      y: 220
-      to:
-      - 250
-      - 160
-      at: 0.3
-      rate: 0.8
-      shape: chip
+      hair: 1
+      skin: 0
+      hat: '#FFC93C'
+    - kind: person
+      x: 1400
+      pose: worry
+      at: *id003
+      scale: 0.8
+      hair: 2
+      skin: 1
+      hat: '#FFC93C'
+    - kind: calendar
+      x: 330
+      y: 300
+      at: 0.2
+      pages:
+      - - 0
+        - '2021'
+        - THE SHORTAGE
+      scale: 0.75
     callouts:
     - text: '2021: a real chip shortage'
-      x: 1000
+      x: 960
       y: 150
       at:
         cue: In twenty twenty-one
       color: white
       sub: caused by the pandemic, not by Taiwan
+      until:
+        cue: lost revenue
+        offset: -0.3
       size: 40
+      screen: true
     - text: '{{auto_2021.display}} lost revenue'
-      x: 1000
-      y: 270
+      x: 960
+      y: 150
       at:
         cue: lost revenue
       color: risk
       sub: AlixPartners forecast
       size: 42
+      screen: true
     - text: '{{auto_2021.cars_display}} never built'
-      x: 1000
-      y: 390
+      x: 960
+      y: 960
       at:
         cue: never built
       color: risk
-    fish: 3
+      screen: true
   sources:
   - alix_2021
   assets:
@@ -1702,105 +1859,104 @@ scenes:
   segment: m4_domino
   type: engine_cartoon
   params:
-    worldW: 3600
-    banner: *id003
-    coasts:
-      plain: true
-      left: true
-      right: true
-      leftLabel: DEVICE MAKERS
-      rightLabel: DATA CENTERS
-      darkAt:
-        cue: Prices rise
+    zones:
+    - set: sciencepark
+      x0: -1600
+      x1: 4600
+      night: true
+    worldW: 2600
+    banner: *id004
+    night: true
     cam:
     - at: 0
-      x: 1800
-      y: 400
-      zoom: 1.0
+      x: 760
+      y: 540
+      zoom: 1.05
     - at:
         cue: Carmakers
-      x: 1800
-      y: 400
-      zoom: 0.6
+      x: 1350
+      y: 520
+      zoom: 0.9
       dur: 3.0
     drift: 0
-    actors:
-    - kind: island
-      x: 1800
-      w: 440
-      text: TAIWAN
-      darkAt:
-        cue: supply stops
-    - kind: office
-      x: 1780
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
-    - kind: office
-      x: 140
-      text: PHONES
-      color: green
-      scale: 1.0
-    - kind: office
-      x: 3460
-      text: CLOUD
-      color: blue
-      scale: 1.0
-    - kind: cargo
-      x: 1200
-      flagColor: risk
-      sadAt:
-        cue: supply stops
-      anchorAt:
-        cue: supply stops
-      flag: STOPPED
-      crew: 3
-    - kind: cargo
-      x: 2500
-      flagColor: risk
-      sadAt:
-        cue: supply stops
-      anchorAt:
-        cue: supply stops
-        offset: 0.4
-      flip: true
-      scale: 0.8
-      flag: STOPPED
-      crew: 2
+    items:
+    - kind: domino
+      x: 300
+      gap: 300
+      h: 400
+      at: 0.3
+      labels:
+      - CHIP SUPPLY
+      - PHONES + PCs
+      - AI SERVERS
+      - CAR LINES
+      - PRICES
+      - OTHER INDUSTRIES
+      fallAt:
+      - cue: supply stops
+      - cue: New phones
+      - cue: Cloud companies
+      - cue: Carmakers
+      - cue: Prices rise
+      - cue: never thought
     callouts:
-    - text: Phones slip
-      x: 600
-      y: 200
+    - text: Supply stops
+      x: 960
+      y: 150
+      at:
+        cue: supply stops
+      color: risk
+      until:
+        cue: New phones
+        offset: -0.2
+      screen: true
+    - text: Phones and computers slip
+      x: 960
+      y: 150
       at:
         cue: New phones
       color: risk
+      until:
+        cue: Cloud companies
+        offset: -0.2
+      screen: true
     - text: No new AI servers
-      x: 3000
-      y: 200
+      x: 960
+      y: 150
       at:
         cue: Cloud companies
       color: risk
+      until:
+        cue: Carmakers
+        offset: -0.2
+      screen: true
     - text: Car lines idle
-      x: 600
-      y: 310
+      x: 960
+      y: 150
       at:
         cue: Carmakers
       color: risk
-    - text: Prices rise
-      x: 3000
-      y: 310
+      until:
+        cue: Prices rise
+        offset: -0.2
+      screen: true
+    - text: Prices rise… the shock spreads
+      x: 960
+      y: 150
       at:
         cue: Prices rise
       color: risk
+      until:
+        cue: very hard to replace
+        offset: -0.3
+      screen: true
     - text: Hard to replace quickly
       x: 960
-      y: 960
+      y: 150
       at:
         cue: very hard to replace
       color: white
       screen: true
-    fish: 3
   assets:
   - font:inter
 - id: p30_chain
@@ -2005,59 +2161,81 @@ scenes:
   segment: m5_question
   type: engine_cartoon
   params:
-    worldW: 3000
+    zones:
+    - set: site
+      x0: -1600
+      x1: 4600
+    worldW: 2400
     min_seconds: 9.0
-    coasts:
-      plain: true
-      left: true
-      leftLabel: NEW FABS
     cam:
     - at: 0
-      x: 1400
-      y: 400
-      zoom: 0.85
-    drift: 0
-    actors:
-    - kind: office
-      x: 150
-      text: FAB
-      color: gold
-      scale: 1.0
+      x: 960
+      y: 540
+      zoom: 1.0
+    - at:
+        cue: expensive
+      x: 1300
+      y: 520
+      zoom: 0.9
+      dur: 2.6
+    drift: 4
+    items:
+    - kind: crane
+      x: 500
+      text: NEW FAB
       at:
         cue: spread the risk
-    - kind: office
-      x: 320
-      text: FAB
-      color: gold
-      scale: 0.8
+      progress:
+      - - 0
+        - 0.1
+      - - 14
+        - 0.35
+      scale: 1.0
+    - kind: crane
+      x: 1500
+      text: NEW FAB
       at:
         cue: spread the risk
         offset: 0.5
-    - kind: island
-      x: 2200
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 2180
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
+      progress:
+      - - 0
+        - 0.05
+      - - 14
+        - 0.3
+      scale: 1.0
+    - kind: stack
+      x: 2100
+      at:
+        cue: expensive
+      h:
+      - - 0
+        - 40
+      - - cue: expensive
+        - 40
+      - - cue: expensive
+          offset: 3
+        - 360
+      text: $$$
     callouts:
     - text: Spread the risk?
-      x: 1300
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: spread the risk
       color: gold
+      until:
+        cue: expensive
+        offset: -0.3
       size: 48
+      screen: true
     - text: Expensive · slow
-      x: 1300
-      y: 270
+      x: 960
+      y: 150
       at:
         cue: expensive
       color: risk
-    fish: 3
+      size: 44
+      screen: true
   assets:
   - font:inter
 - id: s35_race
@@ -2110,7 +2288,7 @@ scenes:
       color: accent
       time: 0.3
     - id: a
-      at: &id004
+      at: &id005
       - -112.07
       - 33.45
       label: Arizona
@@ -2120,7 +2298,7 @@ scenes:
         cue: in Arizona
       anchor: end
     - id: k
-      at: &id005
+      at: &id006
       - 130.7
       - 32.8
       label: Kumamoto
@@ -2130,7 +2308,7 @@ scenes:
         cue: In Japan
     routes:
     - from: *id001
-      to: *id004
+      to: *id005
       at:
         cue: TSMC plans
       dur: 2.0
@@ -2140,7 +2318,7 @@ scenes:
       tokenEvery: 0.5
       lift: 0.2
     - from: *id001
-      to: *id005
+      to: *id006
       at:
         cue: In Japan
       dur: 1.0
@@ -2162,87 +2340,111 @@ scenes:
   segment: m5_europe
   type: engine_cartoon
   params:
+    zones:
+    - set: site
+      x0: -1600
+      x1: 1700
+    - set: sciencepark
+      x0: 1700
+      x1: 5000
     worldW: 3400
-    coasts:
-      plain: true
-      left: true
-      leftLabel: EUROPE
     cam:
     - at: 0
       x: 900
-      y: 400
+      y: 540
       zoom: 1.0
     - at:
         cue: And Taiwan keeps
-      x: 2400
-      y: 400
-      zoom: 0.9
+      x: 2500
+      y: 540
+      zoom: 1.0
       dur: 3.0
     drift: 0
-    actors:
-    - kind: office
-      x: 150
-      text: DRESDEN
-      color: gold
-      scale: 1.0
+    items:
+    - kind: sign
+      x: 230
+      y: 560
+      text: DRESDEN, GERMANY
+      post: true
       at:
         cue: In Germany
-    - kind: office
-      x: 320
-      text: EU 20%
-      color: blue
-      scale: 0.8
+      color: '#FFF59D'
+      size: 28
+    - kind: crane
+      x: 800
+      text: ESMC
+      at:
+        cue: In Germany
+      progress:
+      - - 0
+        - 0.2
+      - - cue: South Korea
+        - 0.55
+      scale: 1.05
+    - kind: sign
+      x: 1300
+      y: 360
+      text: 'EU GOAL: {{eu_target.display}}'
+      sub: of global chip production
       at:
         cue: Europe wants
-    - kind: island
+      color: '#BBDEFB'
+      size: 34
+    - kind: crane
       x: 2700
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 2680
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
-    - kind: office
-      x: 2850
       text: NEW FAB
-      color: gold
-      scale: 0.6
       at:
         cue: newest fabs
-      y: 314
+        offset: -0.4
+      progress:
+      - - 0
+        - 0.3
+      - - cue: newest fabs
+        - 0.3
+      - - cue: newest fabs
+          offset: 4
+        - 0.85
+      scale: 1.0
     callouts:
     - text: 'Dresden: ESMC (TSMC + Bosch + Infineon + NXP)'
       x: 960
-      y: 160
+      y: 150
       at:
         cue: In Germany
       color: white
       sub: production targeted end-2027
+      until:
+        cue: Europe wants
+        offset: -0.3
       screen: true
     - text: 'EU goal: {{eu_target.display}}'
       x: 960
-      y: 270
+      y: 150
       at:
         cue: Europe wants
       color: gold
+      until:
+        cue: South Korea
+        offset: -0.3
       size: 40
       screen: true
-    - text: 'South Korea: memory + foundries'
+    - text: 'South Korea: memory + its own foundries'
       x: 960
-      y: 960
+      y: 150
       at:
         cue: South Korea
       color: white
+      until:
+        cue: And Taiwan keeps
+        offset: -0.3
       screen: true
-    - text: …and Taiwan keeps building
-      x: 2400
-      y: 180
+    - text: …and Taiwan keeps building at home
+      x: 960
+      y: 150
       at:
         cue: And Taiwan keeps
       color: green
-    fish: 3
+      screen: true
   sources:
   - esmc
   - oecd_chips
@@ -2282,189 +2484,268 @@ scenes:
   segment: m5_why
   type: engine_cartoon
   params:
-    worldW: 3000
-    coasts:
-      plain: true
-      left: true
-      leftLabel: NEW FAB ABROAD
+    zones:
+    - set: site
+      x0: -1600
+      x1: 1500
+    - set: fab
+      x0: 1500
+      x1: 5000
+    worldW: 3200
     cam:
     - at: 0
-      x: 900
-      y: 400
+      x: 760
+      y: 540
       zoom: 1.0
     - at:
         cue: Taiwan has spent
-      x: 2200
-      y: 400
-      zoom: 0.9
+      x: 2300
+      y: 540
+      zoom: 0.95
       dur: 3.0
     drift: 0
-    actors:
-    - kind: office
-      x: 180
+    items:
+    - kind: crane
+      x: 700
       text: NEW FAB
-      color: gold
+      at: 0.2
+      progress:
+      - - 0
+        - 0.2
+      - - cue: can be built
+        - 0.25
+      - - cue: can be built
+          offset: 3
+        - 1.0
       scale: 1.0
+    - kind: sign
+      x: 1150
+      y: 330
+      text: EMPTY INSIDE?
+      sub: engineers · suppliers · yield learning
       at:
-        cue: can be built
-    - kind: island
-      x: 2300
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 2280
-      text: FAB
-      color: gold
-      scale: 0.8
-      y: 314
-    - kind: office
-      x: 2500
-      text: SUPPLIERS
-      color: blue
-      scale: 0.6
-      y: 314
-    - kind: coins
-      x: 2300
-      y: 220
-      to:
-      - 2500
-      - 180
-      at: 0.4
-      rate: 4
-      shape: chip
+        cue: the engineers
+      color: '#FFCDD2'
+      size: 30
+    - kind: person
+      x: 1800
+      pose: stand
+      at: &id007
+        cue: decades
+      scale: 1.0
+      hair: 1
+      skin: 0
+      suit: true
+    - kind: person
+      x: 1950
+      pose: stand
+      at: *id007
+      scale: 1.0
+      hair: 2
+      skin: 1
+      suit: true
+    - kind: person
+      x: 2100
+      pose: stand
+      at: *id007
+      scale: 1.0
+      hair: 3
+      skin: 2
+      suit: true
+    - kind: person
+      x: 2250
+      pose: stand
+      at: *id007
+      scale: 1.0
+      hair: 4
+      skin: 3
+      suit: true
+    - kind: person
+      x: 2400
+      pose: stand
+      at: *id007
+      scale: 1.0
+      hair: 5
+      skin: 4
+      suit: true
+    - kind: person
+      x: 2550
+      pose: stand
+      at: *id007
+      scale: 1.0
+      hair: 6
+      skin: 5
+      suit: true
+    - kind: person
+      x: 2700
+      pose: stand
+      at: *id007
+      scale: 1.0
+      hair: 7
+      skin: 6
+      suit: true
+    - kind: arm
+      x: 2950
+      at:
+        cue: decades
+    - kind: pod
+      x:
+      - - 0
+        - 1700
+      - - 30
+        - 3100
+      dropAt:
+        cue: ecosystem
     callouts:
-    - text: 'The hard part: people + suppliers + yield'
+    - text: The hard part isn't the building
       x: 960
-      y: 160
+      y: 150
       at:
         cue: the hard part
       color: gold
+      until:
+        cue: can be built
+        offset: -0.3
       size: 40
       screen: true
-    - text: 'Building a fab: a few years'
-      x: 900
-      y: 280
+    - text: 'A fab: a few years'
+      x: 960
+      y: 150
       at:
         cue: can be built
       color: green
+      until:
+        cue: much longer
+        offset: -0.3
+      screen: true
     - text: 'The whole ecosystem: much longer'
-      x: 2200
-      y: 180
+      x: 960
+      y: 150
       at:
         cue: much longer
       color: risk
-    fish: 3
+      screen: true
   assets:
   - font:inter
 - id: s39_payoff
   segment: payoff
   type: engine_cartoon
   params:
-    worldW: 4400
-    coasts:
-      plain: true
-      left: true
-      right: true
-      leftLabel: THE WORLD
-      rightLabel: THE WORLD
+    zones:
+    - set: sciencepark
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 2200
-      y: 380
-      zoom: 1.3
+      x: 960
+      y: 470
+      zoom: 1.4
     - at:
         cue: at a scale
-      x: 2200
-      y: 400
-      zoom: 0.5
-      dur: 4.0
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 3.5
     - at:
         cue: the whole world is watching
-      x: 2200
-      y: 380
-      zoom: 1.0
+      x: 960
+      y: 520
+      zoom: 1.08
       dur: 3.0
     drift: 0
-    actors:
-    - kind: island
-      x: 2200
-      w: 440
-      text: TAIWAN
-    - kind: office
-      x: 2180
-      text: FAB
+    items:
+    - kind: device
+      type: chip
+      x: 960
+      y: 520
+      at: 0.3
       color: gold
-      scale: 0.8
-      y: 314
-    - kind: office
-      x: 140
-      text: AI
-      color: purple
-      scale: 1.0
-    - kind: office
-      x: 300
-      text: PHONES
-      color: green
-      scale: 0.8
-    - kind: office
-      x: 4100
-      text: CARS
-      color: gold
-      scale: 1.0
-    - kind: office
-      x: 4260
-      text: CLOUD
-      color: blue
-      scale: 0.8
+      text: THE HARDEST CHIPS
+      scale: 1.3
     - kind: coins
-      x: 2200
-      y: 220
+      from:
+      - 960
+      - 420
       to:
-      - 250
-      - 160
+      - 200
+      - 200
       at:
         cue: hardest ones
-      rate: 6
+      rate: 4
       shape: chip
     - kind: coins
-      x: 2200
-      y: 220
+      from:
+      - 960
+      - 420
       to:
-      - 4180
-      - 160
+      - 1750
+      - 200
       at:
         cue: hardest ones
         offset: 0.3
-      rate: 6
+      rate: 4
       shape: chip
-    - kind: plane
-      x:
-      - - 0
-        - 2600
-      - - 30
-        - 700
-      y: 140
-      flip: true
-      text: CHIPS
-      scale: 0.7
+    - kind: person
+      x: 180
+      pose: point
+      at: &id008
+        cue: the whole world is watching
+      scale: 0.8
+      hair: 1
+      skin: 0
+    - kind: person
+      x: 300
+      pose: point
+      at: *id008
+      scale: 0.8
+      hair: 2
+      skin: 1
+    - kind: person
+      x: 1620
+      pose: point
+      at: *id008
+      scale: 0.8
+      hair: 3
+      skin: 2
+    - kind: person
+      x: 1740
+      pose: point
+      at: *id008
+      scale: 0.8
+      hair: 4
+      skin: 3
     callouts:
-    - text: Not every chip, the hardest ones
+    - text: 'Not every chip: the hardest ones'
       x: 960
-      y: 160
+      y: 150
       at:
         cue: hardest ones
       color: gold
+      until:
+        cue: weak point
+        offset: -0.3
       size: 42
       screen: true
     - text: Strength… and weak point
       x: 960
-      y: 270
+      y: 150
       at:
         cue: weak point
       color: risk
+      until:
+        cue: the whole world is watching
+        offset: -0.3
       size: 40
       screen: true
-    fish: 3
+    - text: The whole world is watching
+      x: 960
+      y: 960
+      at:
+        cue: the whole world is watching
+      color: white
+      size: 44
+      screen: true
   sources:
   - trendforce_2q26
   - sia_bcg_2024

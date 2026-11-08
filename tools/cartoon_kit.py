@@ -119,3 +119,13 @@ def write(out, header):
             s["params"].setdefault("coasts", {})["darkAt"] = d
     out.write_text(header + yaml.safe_dump({"scenes": scenes}, sort_keys=False, allow_unicode=True, width=200))
     print(f"{len(scenes)} scenes -> {out}")
+
+
+def stage(id_, seg, params, sources=(), sfx=None):
+    """A CartoonStage world (topic-specific sets + items) rendered through the engine_cartoon scene type."""
+    add(id_, seg, "engine_cartoon", params, sources, sfx=sfx)
+
+
+def it(kind, **kw):
+    """Shorthand for a CartoonStage item."""
+    return {"kind": kind, **kw}

@@ -1,7 +1,7 @@
 """Generates projects/the-island-getting-rich-from-ai/deliverables/documentary/storyboard.yaml (Episode 10).
 
-Cartoon-first (user decision of 2026-11-06): most beats are engine_cartoon worlds (island, ".ai" letters, coins,
-offices, planes, a storm, a piggy bank); presenter boards, charts and maps use the bright cartoon palette of the
+Bespoke CartoonStage worlds: a Caribbean beach (pastel houses, palms, a sailboat), a cartoon internet where browser
+windows type ".ai" names, renewal clocks, auctions, a registry data center, a hurricane, savings and debt stacks; presenter boards, charts and maps use the bright cartoon palette of the
 project. The five parts are an internal structure only. Run: python tools/gen_anguilla_storyboard.py
 """
 from __future__ import annotations
@@ -105,14 +105,42 @@ def co(text, x, y, at, color="white", sub=None, tail=None, until=None, size=None
     return c
 
 
+def stage(id_, seg, params, sources=(), sfx=None):
+    """A bespoke CartoonStage world (beach, cartoon web, browser windows, office, data center, airport)."""
+    add(id_, seg, "engine_cartoon", params, sources, sfx=sfx)
+
+
+def it(kind, **kw):
+    return {"kind": kind, **kw}
+
+
+F = 860
+Z = lambda s, x0=-1600, x1=4600, **kw: {"set": s, "x0": x0, "x1": x1, **kw}
+BEACH = lambda x0=-1600, x1=4600, **kw: Z("beach", x0, x1, **kw)
+
+
+def crowd(xs, pose, at=0.0, until=None, scale=0.8, **kw):
+    out = []
+    for k, x in enumerate(xs):
+        d = {"x": x, "pose": pose, "at": at, "scale": scale, "hair": k + 1, "skin": k, **kw}
+        if until is not None:
+            d["until"] = until
+        out.append(it("person", **d))
+    return out
+
+
 # ====================================================================== HOOK
-cart("s01_island", "h_question", {
-    "worldW": 2600, "cam": [{"at": 0, "x": 1300, "y": 420, "zoom": 1.25}, {"at": C("Just two letters"), "x": 1300, "y": 360, "zoom": 1.0, "dur": 2.0}],
-    "drift": 0, "actors": [island(), letters(at=C("Just two letters")), coins(2100, -60, [1300, 300], C("Just two letters", 0.8), rate=5)],
-    "callouts": [co("No factories", 600, 200, C("No factories"), "risk", until=C("Just two letters")),
-                 co("No data centers", 960, 140, C("no data centers"), "risk", until=C("Just two letters")),
-                 co("No tech giants", 1320, 200, C("no tech giants"), "risk", until=C("Just two letters"))]},
-    sfx=[{"kind": "hit", "cue": "Just two letters", "gain": 0.35}])
+stage("s01_island", "h_question", {
+    "zones": [BEACH()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 560, "zoom": 1.2}, {"at": C("Just two letters"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("sign", x=480, y=430, text="NO FACTORIES", at=C("No factories"), until=C("Just two letters"), color="#FFCDD2", size=36),
+              it("sign", x=960, y=330, text="NO DATA CENTERS", at=C("no data centers"), until=C("Just two letters"), color="#FFCDD2", size=36),
+              it("sign", x=1440, y=430, text="NO TECH GIANTS", at=C("no tech giants"), until=C("Just two letters"), color="#FFCDD2", size=36),
+              it("letters", x=960, y=380, text=".ai", at=C("Just two letters"), size=260, color="gold"),
+              it("burst", x=960, y=380, at=C("Just two letters", 0.2)),
+              *crowd([300, 1650], "cheer", at=C("Just two letters", 0.3))],
+    "callouts": [co("An island getting rich from AI?", 960, 150, C("tiny island"), "gold", screen=True, size=44, until=C("No factories", -0.3))]},
+    sources=["ap_2024", "gleaner_2026"])
 add("s02_map", "h_stakes", "engine_map", {
     "title": "Anguilla", "subtitle": "{{island.display}} people · {{rev_2026.display}} from .ai in 7 months of 2026 ({{rev_2026.share_display}} of revenue)",
     "cameras": [{"at": 0, "lon": -40, "lat": 25, "span": 120}, {"at": C("Anguilla"), "lon": -63.05, "lat": 18.3, "span": 9, "dur": 2.6},
@@ -128,11 +156,13 @@ add("s02_map", "h_stakes", "engine_map", {
 
 # ====================================================================== PART 1: the lucky letters
 card("s03_c1", "m1_card", "The Lucky Letters", "How an island got .ai")
-cart("s04_q1", "m1_question", {
-    "worldW": 2600, "cam": [{"at": 0, "x": 1300, "y": 420, "zoom": 1.15}], "drift": 8,
-    "actors": [island(), letters(at=C("most wanted"), color="blue")],
-    "callouts": [co("No tech industry?", 1650, 230, C("no tech industry"), "gold", tail=[1420, 300]),
-                 co("The most wanted letters online", 960, 860, C("most wanted"), "white", screen=True)]})
+stage("s04_q1", "m1_question", {
+    "zones": [Z("web")], "worldW": 1920, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 470, "zoom": 1.2}, {"at": C("most wanted"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("browser", x=960, y=470, at=0.2, url="the-most-wanted-letters.ai", typeAt=0.6, typeDur=3.0),
+              it("letters", x=1600, y=260, text="?", at=C("no tech industry"), size=130, color="purple")],
+    "callouts": [co("No tech industry?", 960, 150, C("no tech industry"), "gold", screen=True, until=C("most wanted", -0.3)),
+                 co("The most wanted letters online", 960, 960, C("most wanted"), "white", screen=True)]})
 # ---- PRESENTER A: what a domain name is
 add("p05_what", "m1_what", "engine_draw", {
     "title": "What is a domain name?", "board": BOARD, "draw_start": C("Every website"), "speed": 1300,
@@ -147,47 +177,56 @@ add("p05_what", "m1_what", "engine_draw", {
     ],
     "actions": [{"kind": "point", "at": C("the last part", 0.5), "dur": 1.4, "target": [880, 560]}, {"kind": "smile", "at": C("is called", 0.2), "dur": 2.0}],
     "scale": 0.86, "floor": 1040})
-cart("s06_codes", "m1_codes", {
-    "worldW": 2600, "coasts": {"left": True, "right": True, "leftLabel": "BRAZIL", "rightLabel": "JAPAN"},
-    "cam": [{"at": 0, "x": 1300, "y": 420, "zoom": 0.75}], "drift": 0,
-    "actors": [island(), letters(x=330, y=120, at=C("Brazil is"), size=110, text=".br", color="green"),
-               letters(x=2270, y=120, at=C("Japan is"), size=110, text=".jp", color="blue"),
-               letters(x=1260, y=150, at=C("Anguilla's"), size=150)],
-    "callouts": [co("Every country gets two letters", 960, 960, C("Every country"), "white", screen=True, size=40),
-                 co("from its official country code", 960, 1030, C("official code"), "gold", screen=True, size=28)]},
-    sfx=[{"kind": "hit", "cue": "And Anguilla's", "gain": 0.3}])
-cart("s07_1995", "m1_assigned", {
-    "worldW": 2600, "cam": [{"at": 0, "x": 1300, "y": 400, "zoom": 1.1}], "drift": 6,
-    "actors": [island(), letters(at=0.6, color="grey")],
-    "callouts": [co("1995", 700, 180, C("Anguilla was assigned"), "gold", size=60),
-                 co("AI = a niche lab idea", 1880, 200, C("niche idea"), "white", until=C("Its official")),
-                 co("Worth almost nothing", 1880, 300, C("almost nothing"), "risk", until=C("Its official")),
-                 co("Manager: Government of Anguilla", 1880, 250, C("Its official"), "green", sub="IANA delegation record")]},
+stage("s06_codes", "m1_codes", {
+    "zones": [Z("web")], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.05}, {"at": C("Anguilla's code"), "x": 1400, "y": 520, "zoom": 1.15, "dur": 2.4}], "drift": 0,
+    "items": [it("browser", x=480, y=470, w=520, h=330, at=C("Brazil"), url="example.br", typeAt=C("Brazil", 0.2), typeDur=1.0, scale=0.9),
+              it("browser", x=960, y=470, w=520, h=330, at=C("Japan"), url="example.jp", typeAt=C("Japan", 0.2), typeDur=1.0, scale=0.9),
+              it("browser", x=1440, y=470, w=520, h=330, at=C("Anguilla's code"), url="example.ai", typeAt=C("Anguilla's code", 0.2), typeDur=1.0, scale=0.9),
+              it("sign", x=480, y=760, text="BRAZIL", at=C("Brazil"), size=30), it("sign", x=960, y=760, text="JAPAN", at=C("Japan"), size=30),
+              it("sign", x=1440, y=760, text="ANGUILLA", at=C("Anguilla's code"), color="#FFF59D", size=30)],
+    "callouts": [co("Every country gets two letters", 960, 150, C("Every country"), "white", screen=True, size=40, until=C("official code", -0.3)),
+                 co("…from its official country code", 960, 150, C("official code"), "gold", screen=True, size=40)]},
+    sources=["iana_ai"])
+stage("s07_1995", "m1_assigned", {
+    "zones": [BEACH()], "worldW": 2600,
+    "cam": [{"at": 0, "x": 760, "y": 520, "zoom": 1.05}, {"at": C("Its official"), "x": 1700, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("calendar", x=330, y=320, at=0.2, pages=[[0, "{{assigned.display}}", "ASSIGNED"]], scale=0.8),
+              it("letters", x=800, y=360, text=".ai", at=C("Anguilla was assigned"), size=180, color="gold"),
+              it("sign", x=800, y=590, text="WORTH ALMOST NOTHING", at=C("almost nothing"), color="#FFCDD2", size=28),
+              it("sign", x=1250, y=300, text="“AI” = A NICHE LAB IDEA", at=C("niche idea"), color="#E1BEE7", size=28, hang=True, swing=True),
+              it("building", x=1850, style="gov", color="#FFE082", text="GOVERNMENT OF ANGUILLA", at=C("Its official"), scale=0.75)],
+    "callouts": [co("Manager today: Government of Anguilla", 960, 150, C("Its official"), "green", screen=True, sub="IANA delegation record")]},
     sources=["ap_2024", "afnic_2025", "iana_ai"])
-cart("s08_cate", "m1_cate", {
-    "worldW": 3400, "coasts": {"right": True, "rightLabel": "TAIWAN"},
-    "cam": [{"at": 0, "x": 1300, "y": 400, "zoom": 1.0}, {"at": C("company in Taiwan"), "x": 2300, "y": 400, "zoom": 0.85, "dur": 2.2},
-            {"at": C("recovered"), "x": 1400, "y": 400, "zoom": 1.0, "dur": 2.0}],
-    "drift": 0,
-    "actors": [island(), {"kind": "plane", "x": [[0, -400], [{"cue": "moved to the island", "offset": 1.0}, 1100]], "y": 170, "text": "1994", "scale": 0.8},
-               {"kind": "letters", "text": ".ai", "y": 150, "at": 0.4, "size": 130,
-                "x": [[0, 1260], [{"cue": "company in Taiwan"}, 1260], [{"cue": "company in Taiwan", "offset": 2.0}, 3000], [{"cue": "recovered", "offset": -1.0}, 3000], [{"cue": "recovered", "offset": 1.0}, 1260]]}],
-    "callouts": [co("Vince Cate, software developer", 960, 960, C("Vince Cate"), "white", sub="his own account (IEEE Spectrum)", screen=True),
-                 co("“Do you want to run .ai?”", 1300, 300, C("whether he wanted"), "gold", until=C("For a while")),
-                 co("A company in Taiwan…", 2700, 230, C("company in Taiwan", 1.2), "white", until=C("disappeared", 1.5)),
-                 co("…disappeared!", 2700, 330, C("disappeared"), "risk", until=C("recovered")),
-                 co("Recovered", 1700, 220, C("recovered", 1.0), "green")]},
+stage("s08_cate", "m1_cate", {
+    "zones": [Z("beach", -1600, 1500), Z("office", 1500, 6000)], "worldW": 3400,
+    "cam": [{"at": 0, "x": 800, "y": 520, "zoom": 1.0}, {"at": C("whether he wanted"), "x": 2050, "y": 520, "zoom": 1.0, "dur": 2.4},
+            {"at": C("For a while"), "x": 2700, "y": 520, "zoom": 1.0, "dur": 2.4}, {"at": C("For years"), "x": 2050, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("plane", x=[[0, -300], [{"cue": "moved to the island"}, -300], [{"cue": "moved to the island", "offset": 5}, 1300]], y=[[0, 200], [{"cue": "moved to the island", "offset": 5}, 520]], tilt=8, scale=0.6),
+              it("calendar", x=330, y=320, at=C("moved to the island"), pages=[[0, "1994", "ARRIVES"]], scale=0.7),
+              it("desk", x=2050, glow="green", pile=True), it("person", x=1980, pose="type", glasses=True, at=C("whether he wanted", -0.6), hair=1),
+              it("letters", x=2150, y=330, text=".ai", at=C("run dot"), size=120, color="gold"),
+              it("building", x=2900, style="office", color="#B0BEC5", text="A COMPANY IN TAIWAN", at=C("company in Taiwan"), until=C("disappeared", 0.6), scale=0.7),
+              it("letters", x=2900, y=330, text="?!", at=C("disappeared"), until=C("recovered", 0.5), size=120, color="risk"),
+              it("arrow", **{"from": [2850, 300], "to": [2250, 300]}, at=C("recovered"), until=C("For years"), color="green", text="RECOVERED"),
+              it("sign", x=2450, y=300, text="GOVERNMENT = OFFICIAL CONTACT", at=C("official contact"), color="#C8E6C9", size=28)],
+    "callouts": [co("Vince Cate, software developer", 960, 960, C("Vince Cate"), "white", sub="his own account (IEEE Spectrum)", screen=True, until=C("For a while", -0.3)),
+                 co("“Do you want to run .ai?”", 960, 150, C("whether he wanted"), "gold", screen=True, until=C("For a while", -0.3)),
+                 co("Handed to a company in Taiwan… that disappeared", 960, 150, C("For a while"), "risk", screen=True, until=C("For years", -0.3)),
+                 co("He ran sales for the government", 960, 150, C("For years"), "white", screen=True)]},
     sources=["ieee_2024"])
 kinetic("s09_t1", "m1_transition", [("Two letters, given away almost by accident", 50, "Two letters", None, True), ("How do they turn into money?", 76, "turn into money", "accent", False)])
 
 # ====================================================================== PART 2: the money machine
 card("s10_c2", "m2_card", "The Money Machine", "Two letters, paid again and again")
-cart("s11_q2", "m2_question", {
-    "worldW": 2600, "coasts": {"left": True},
-    "cam": [{"at": 0, "x": 1000, "y": 420, "zoom": 0.9}], "drift": 10,
-    "actors": [office(140, "START-UP", "purple"), office(300, "AI LAB", "blue", scale=0.8), island(x=1700),
-               coins(260, 120, [1700, 260], C("Who actually"), rate=3)],
-    "callouts": [co("Who pays?", 1000, 160, C("Who actually"), "gold", size=44), co("For two letters?!", 1000, 260, C("two letters"), "white")]})
+stage("s11_q2", "m2_question", {
+    "zones": [Z("web")], "worldW": 1920, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 500, "zoom": 1.15}, {"at": C("two letters"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("browser", x=700, y=470, at=0.2, url="checkout.ai", typeAt=0.5, page="price", text="PAY", sub="for two letters?", button="PAY"),
+              it("coins", **{"from": [800, 560], "to": [1700, 300]}, at=1.2, rate=3),
+              it("letters", x=1650, y=280, text=".ai", at=C("two letters"), size=130, color="gold")],
+    "callouts": [co("Who pays?", 960, 150, C("Who actually"), "gold", screen=True, size=44, until=C("two letters", -0.3)),
+                 co("For two letters?!", 960, 150, C("two letters"), "white", screen=True, size=44)]})
 # ---- PRESENTER B: the money machine
 add("p12_chain", "m2_draw", "engine_draw", {
     "title": "The money machine", "board": BOARD, "draw_start": C("A start-up"), "speed": 1400,
@@ -204,15 +243,21 @@ add("p12_chain", "m2_draw", "engine_draw", {
     ],
     "actions": [{"kind": "point", "at": C("Government of Anguilla", 0.8), "dur": 1.4, "target": [660, 880]}, {"kind": "smile", "at": C("Government of Anguilla", 2.2), "dur": 1.5}],
     "scale": 0.86, "floor": 1040}, sources=["ap_2024"])
-cart("s13_price", "m2_price", {
-    "worldW": 2600, "coasts": {"left": True},
-    "cam": [{"at": 0, "x": 1100, "y": 420, "zoom": 0.95}, {"at": C("auctioned"), "x": 1500, "y": 400, "zoom": 1.05, "dur": 2.0}], "drift": 6,
-    "actors": [office(160, "START-UP", "green"), island(x=1800), coins(260, 120, [1800, 260], C("The price"), rate=2),
-               coins(260, 120, [1800, 260], C("auctioned"), rate=8, until=C("auctioned", 3.0))],
-    "callouts": [co("{{price.display}} for 2 years", 560, 170, C("costs about"), "gold", size=48, sub="a new .ai name (IMF)", screen=True),
-                 co("…then pay again to keep it", 560, 290, C("pay again"), "white", screen=True),
-                 co("litigate.ai: {{price.auction_display}}", 1360, 170, C("litigate"), "green", sub="auction, 2023 (IMF)", size=40, screen=True),
-                 co("Expired names resold → paid again", 1360, 290, C("expires"), "white", screen=True)]},
+stage("s13_price", "m2_price", {
+    "zones": [Z("web")], "worldW": 2800,
+    "cam": [{"at": 0, "x": 760, "y": 520, "zoom": 1.0}, {"at": C("auctioned"), "x": 1650, "y": 520, "zoom": 1.0, "dur": 2.4},
+            {"at": C("expires"), "x": 2300, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("browser", x=640, y=470, at=0.2, url="your-name.ai", page="price", text="{{price.display}}", sub="for two years", button="BUY", w=640),
+              it("clock", x=1150, y=560, at=C("pay again"), period=2.5, text="RENEW", scale=0.8),
+              it("gavel", x=1650, y=F - 20, hits=[C("litigate"), C("litigate", 0.8)], scale=1.3),
+              it("sign", x=1650, y=380, text="litigate.ai", sub="auctioned in 2023", at=C("litigate"), color="#FFF59D", size=40),
+              it("browser", x=2300, y=470, at=C("expires"), url="old-name.ai", page="expired", w=560, h=400,
+                 pages=[[0, "expired"], [{"cue": "sold again"}, "sold"]], text="SOLD AGAIN", button="PAID"),
+              it("coins", **{"from": [2300, 400], "to": [2900, 100]}, at=C("paid once more"), rate=4)],
+    "callouts": [co("{{price.display}} for 2 years", 960, 150, C("costs about"), "gold", screen=True, size=48, sub="a new .ai name (IMF)", until=C("pay again", -0.3)),
+                 co("…then pay again to keep it", 960, 150, C("pay again"), "white", screen=True, until=C("auctioned", -0.3)),
+                 co("litigate.ai: {{price.auction_display}}", 960, 150, C("litigate"), "green", sub="auction, 2023 (IMF)", size=40, screen=True, until=C("expires", -0.3)),
+                 co("Expired names resold → paid again", 960, 150, C("expires"), "white", screen=True)]},
     sources=["imf_2024", "ap_2024"])
 add("s14_renew", "m2_renew", "engine_flow", {
     "title": "Rented, not bought", "subtitle": "every renewal pays the island again", "cardW": 280, "cardH": 220,
@@ -224,42 +269,54 @@ add("s14_renew", "m2_renew", "engine_flow", {
     "links": [{"from": "b", "to": "w", "appear": 0.9}, {"from": "w", "to": "r", "appear": 1.0}, {"from": "r", "to": "g", "appear": 1.1}, {"from": "g", "to": "b", "appear": 1.2}],
     "items": {"starts": [C("never really bought"), C("comes back"), C("two years after")], "route": ["b", "w", "r", "g", "b"], "travel": 0.8, "process": 0.9}},
     sources=["imf_2024", "ap_2024"])
-cart("s15_why", "m2_why", {
-    "worldW": 2600, "coasts": {"left": True},
-    "cam": [{"at": 0, "x": 500, "y": 330, "zoom": 1.2}, {"at": C("everyone wants"), "x": 1200, "y": 400, "zoom": 0.9, "dur": 2.4}], "drift": 0,
-    "actors": [office(180, "yourco.ai", "blue", scale=1.2), office(560, "START-UP", "purple", at=C("so many")), office(800, "NEW APP", "green", at=C("so many", 0.4)),
-               island(x=1900), coins(560, 100, [1900, 260], C("everyone wants"), rate=6)],
-    "callouts": [co("“We do AI” in two letters", 600, 160, C("two letters"), "gold", size=40), co("A brand", 900, 260, C("like a brand"), "green")]})
-cart("s16_manager", "m2_manager", {
-    "worldW": 2600, "coasts": {"right": True, "rightLabel": "UNITED STATES"},
-    "cam": [{"at": 0, "x": 1100, "y": 420, "zoom": 0.9}], "drift": 12,
-    "actors": [island(x=800), office(2300, "IDENTITY DIGITAL", "gold", at=C("Identity")),
-               coins(2300, 160, [800, 260], C("more money"), rate=4)],
-    "cables": [{"from": 900, "to": 2400, "lightAt": C("run the registry")}],
-    "callouts": [co("2024: a U.S. company runs the registry", 1300, 150, C("signed a deal"), "white", sub="Identity Digital (AP)"),
-                 co("More money + a safer system", 1300, 260, C("more money"), "green", sub="the government's words")]},
+stage("s15_why", "m2_why", {
+    "zones": [Z("office")], "worldW": 1920,
+    "cam": [{"at": 0, "x": 760, "y": 520, "zoom": 1.15}, {"at": C("so many new"), "x": 960, "y": 520, "zoom": 0.95, "dur": 2.4}], "drift": 0,
+    "items": [it("desk", x=560, glow="purple"), it("person", x=490, pose="type", at=0.2, hair=2),
+              it("browser", x=560, y=330, w=520, h=300, at=C("for an AI company"), url="robot-chef.ai", typeAt=C("for an AI company", 0.3), scale=0.75),
+              it("sign", x=1150, y=330, text="“WE DO AI”", sub="in two letters", at=C("two letters"), color="#FFF59D", size=40, hang=True, swing=True),
+              it("letters", x=1150, y=560, text="BRAND", at=C("like a brand"), size=80, color="green"),
+              *crowd([1400, 1520, 1640, 1760], "cheer", at=C("so many new"), scale=0.7)],
+    "callouts": [co("Everyone wants one", 960, 150, C("everyone wants"), "gold", screen=True, size=44)]})
+stage("s16_manager", "m2_manager", {
+    "zones": [BEACH(x1=1300), Z("datacenter", 1300, 5000)], "worldW": 2800,
+    "cam": [{"at": 0, "x": 800, "y": 520, "zoom": 1.0}, {"at": C("American company"), "x": 1900, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "items": [it("building", x=650, style="gov", color="#FFE082", text="GOVERNMENT", at=0.2, scale=0.75),
+              it("device", type="server", x=1700, y=F, at=C("run the registry"), text="REGISTRY"),
+              it("sign", x=2150, y=330, text="IDENTITY DIGITAL", sub="American company · since 2024", at=C("Identity Digital"), color="#BBDEFB", size=34),
+              it("arrow", **{"from": [900, 400], "to": [1550, 400]}, at=C("signed a deal"), color="gold", text="DEAL"),
+              it("letters", x=2400, y=640, text=".au", at=C("dot A U"), size=100, color="cyan")],
+    "callouts": [co("2024: a U.S. company runs the registry", 960, 150, C("signed a deal"), "white", screen=True, sub="Identity Digital (AP)", until=C("more money", -0.3)),
+                 co("More money + a safer system", 960, 150, C("more money"), "green", screen=True, sub="the government's words", until=C("Australia", -0.3)),
+                 co("It also runs Australia's .au", 960, 150, C("Australia"), "white", screen=True)]},
     sources=["ap_2024", "iana_ai"])
 kinetic("s17_t2", "m2_transition", [("A small fee, paid again and again", 54, "A small fee", None, True), ("× the AI boom", 96, "multiply", "accent", False)])
 
 # ====================================================================== PART 3: the boom
 card("s18_c3", "m3_card", "The Boom", "When the world wanted .ai")
-cart("s19_q3", "m3_question", {
-    "worldW": 2600, "coasts": {"left": True},
-    "cam": [{"at": 0, "x": 900, "y": 420, "zoom": 0.85}], "drift": 14,
-    "actors": [office(120 + i * 0, n, c, at=C("chatbots", i * 0.35), scale=0.75) | {"x": 90 + i * 70} for i, (n, c) in enumerate([("BOT", "blue"), ("CHAT", "green"), ("LAB", "purple"), ("APP", "gold")])]
-              + [island(x=1900), coins(300, 80, [1900, 260], C("suddenly wanted"), rate=9)],
-    "callouts": [co("How big did it get?", 1150, 160, C("How big"), "gold", size=46)]})
+stage("s19_q3", "m3_question", {
+    "zones": [Z("web")], "worldW": 1920, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 480, "zoom": 1.15}, {"at": C("wanted dot"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("browser", x=700, y=470, at=0.2, url="chatbot.ai", page="chat", w=700),
+              it("browser", x=1450, y=380, at=C("wanted dot"), url="new-startup.ai", scale=0.6, tilt=4),
+              it("browser", x=1500, y=700, at=C("wanted dot", 0.5), url="ai-anything.ai", scale=0.55, tilt=-3)],
+    "callouts": [co("How big did it get?", 960, 150, C("How big"), "gold", screen=True, size=46)]})
 add("s20_regs", "m3_regs", "engine_chart", {"chart": "bar", "box": {"x": 300, "y": 330, "w": 1320, "h": 500}, "start": C("In twenty twenty-two"), "stagger": 1.6,
     "title": "Registered .ai names", "note": "IMF (2022, 2023) · official count (Jan 2025) · government announcement (Jan 2026)",
     "data": [{"label": "2022", "value": 144, "display": "{{regs.display}}"}, {"label": "2023", "value": 354, "display": "354,000"},
              {"label": "Jan 2025", "value": 598, "display": "598,007"}, {"label": "Jan 2026", "value": 1000, "display": "1 million+"}],
     "highlight": 3, "highlightAt": C("passed"), "color": "accent2", "highlightColor": "accent"},
     sources=["imf_2024", "dnw_2026"])
-cart("s21_cate", "m3_cate", {
-    "worldW": 2600, "cam": [{"at": 0, "x": 1300, "y": 420, "zoom": 1.1}], "drift": 0,
-    "actors": [island(), office(1200, "REGISTRY", "gold", scale=0.8) | {"y": 314}, coins(2400, -100, [1250, 200], 0.5, rate=7)],
-    "callouts": [co("Sales ≈ ×4", 750, 200, C("almost four times"), "green", size=48),
-                 co("“about {{cate_sales.display}}”", 1800, 200, C("about 3 million"), "gold", sub="Vince Cate, early 2024 (IEEE Spectrum)", size=40)]},
+stage("s21_cate", "m3_cate", {
+    "zones": [Z("office")], "worldW": 2200,
+    "cam": [{"at": 0, "x": 760, "y": 520, "zoom": 1.05}, {"at": C("premier said"), "x": 1300, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("desk", x=560, glow="green", pile=True), it("person", x=490, pose="cheer", glasses=True, at=0.2, hair=1),
+              it("chart", x=1250, y=380, w=600, h=340, at=C("almost four times", -0.6), dur=2.5, text="MONTHLY SALES", pts=[0.1, 0.12, 0.15, 0.25, 0.4, 0.6]),
+              it("letters", x=1250, y=640, text="×4", at=C("almost four times"), size=110, color="green"),
+              it("sign", x=1800, y=330, text="“COULD EVEN DOUBLE”", sub="the premier, 2024", at=C("premier said"), color="#FFF59D", size=30),
+              it("letters", x=1800, y=600, text="×3", at=C("nearly tripled"), size=110, color="gold")],
+    "callouts": [co("Sales ≈ ×4: about {{cate_sales.display}}", 960, 150, C("almost four times"), "green", screen=True, sub="Vince Cate, early 2024 (IEEE Spectrum)", until=C("premier said", -0.3)),
+                 co("By 2025: nearly tripled", 960, 150, C("nearly tripled"), "gold", screen=True)]},
     sources=["ieee_2024"])
 add("s22_rev", "m3_revenue", "engine_chart", {"chart": "bar", "box": {"x": 360, "y": 330, "w": 1200, "h": 500}, "start": C("In twenty twenty-three"), "stagger": 1.8,
     "title": ".ai revenue (US dollars)", "note": "IMF (2023) · draft estimates and Anguilla Focus (2025) · converted at EC$2.70 = US$1",
@@ -277,16 +334,30 @@ kinetic("s24_t3", "m3_transition", [("So what does a tiny island do", 56, "So wh
 
 # ====================================================================== PART 4: what the money buys
 card("s25_c4", "m4_card", "What the Money Buys", "Airport, roads, health")
-cart("s26_q4", "m4_question", {
-    "worldW": 2600, "cam": [{"at": 0, "x": 1300, "y": 380, "zoom": 1.35}], "drift": 0,
-    "actors": [island(), coins(2400, -120, [1300, 260], 0.3, rate=4)],
-    "callouts": [co("Where does it go?", 1300, 120, C("Where does"), "gold", size=46), co("…and how much per person?", 1300, 210, C("how much"), "white")]})
-cart("s27_uses", "m4_uses", {
-    "worldW": 2600, "cam": [{"at": 0, "x": 1300, "y": 380, "zoom": 1.0}], "drift": 0,
-    "actors": [island(), {"kind": "plane", "x": [[0, 2900], [{"cue": "the airport", "offset": 2.5}, 1500]], "y": 160, "flip": True, "text": "AIRPORT", "scale": 0.8}],
-    "callouts": [co("Airport", 600, 150, C("the airport"), "gold"), co("Roads", 600, 250, C("new roads"), "gold"),
-                 co("Tax relief", 1950, 150, C("tax relief"), "green"), co("Health services", 1950, 250, C("health services"), "green"),
-                 co("Free care for seniors", 1300, 870, C("free medical"), "white", screen=True), co("Debt paid down", 1300, 960, C("pay down debt"), "white", screen=True)]},
+stage("s26_q4", "m4_question", {
+    "zones": [BEACH()], "worldW": 1920, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.2}, {"at": C("how much"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("coins", **{"from": [960, -200], "to": [960, 760]}, at=0.3, rate=5, arc=0),
+              it("letters", x=960, y=300, text="?", at=C("Where does"), size=140, color="gold"),
+              *crowd([600, 720, 1200, 1320], "stand", at=C("people"))],
+    "callouts": [co("Where does it go?", 960, 150, C("Where does"), "gold", screen=True, size=46, until=C("how much", -0.3)),
+                 co("…and how much per person?", 960, 150, C("how much"), "white", screen=True, size=44)]})
+stage("s27_uses", "m4_uses", {
+    "zones": [Z("airport", -1600, 1400), BEACH(1400, 3200), Z("site", 3200, 7000)], "worldW": 4600,
+    "cam": [{"at": 0, "x": 700, "y": 520, "zoom": 1.0}, {"at": C("health services", -0.5), "x": 2300, "y": 520, "zoom": 1.0, "dur": 2.6},
+            {"at": C("pay down debt", -0.5), "x": 2300, "y": 500, "zoom": 0.9, "dur": 2.4}, {"at": C("vocational"), "x": 3900, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "items": [it("plane", x=[[0, -300], [{"cue": "the airport"}, -300], [{"cue": "the airport", "offset": 5}, 900]], y=[[0, 300], [{"cue": "the airport", "offset": 5}, 790]], tilt=6, scale=0.6),
+              it("sign", x=1150, y=560, text="NEW ROADS", at=C("new roads"), post=True, color="#FFF59D", size=28),
+              it("sign", x=1700, y=330, text="TAX RELIEF", at=C("tax relief"), color="#C8E6C9", size=34, hang=True, swing=True),
+              it("device", type="hospital", x=2200, y=F + 40, at=C("health services"), text="HEALTH"),
+              *crowd([2500, 2620], "cheer", at=C("free medical"), scale=0.7, hair=4),
+              it("stack", x=2900, at=C("pay down debt", -0.5), h=[[0, 500], [{"cue": "pay down debt"}, 500], [{"cue": "pay down debt", "offset": 3}, 200]], text="DEBT", color="#FFCDD2"),
+              it("crane", x=3900, text="TRAINING CENTER", at=C("vocational"), progress=[[0, 0.5], [30, 0.95]])],
+    "callouts": [co("Airport · roads", 960, 150, C("the airport"), "gold", screen=True, until=C("tax relief", -0.3)),
+                 co("Tax relief · health services", 960, 150, C("tax relief"), "green", screen=True, until=C("free medical", -0.3)),
+                 co("Free care for seniors", 960, 150, C("free medical"), "white", screen=True, until=C("pay down debt", -0.3)),
+                 co("Debt paid down", 960, 150, C("pay down debt"), "white", screen=True, until=C("vocational", -0.3)),
+                 co("A new vocational training center", 960, 150, C("vocational"), "gold", screen=True)]},
     sources=["dnw_2026", "ap_2024", "imf_2024"])
 # ---- PRESENTER C: the per-person maths
 add("p28_person", "m4_person", "engine_draw", {
@@ -304,53 +375,64 @@ add("p28_person", "m4_person", "engine_draw", {
     ],
     "actions": [{"kind": "point", "at": C("for every resident", 0.8), "dur": 1.5, "target": [1625, 690]}, {"kind": "react", "at": C("two letters on a screen")}],
     "scale": 0.86, "floor": 1040}, sources=["focus_2025", "ap_2024"])
-add("s29_budget", "m4_budget", "compare", {"chapter": "What the money buys", "title": "How big is that?", "sides": [
-    {"kicker": "Whole government revenue, 2026 plan", "value": "{{budget_2026.display}}", "label": "converted at EC$2.70 = US$1", "cue": "plans to collect"},
-    {"kicker": ".ai alone, Jan–Jul 2026", "value": "{{rev_2026.display}}", "label": "The Gleaner", "cue": "A big part"}]},
+stage("s29_budget", "m4_budget", {
+    "zones": [BEACH()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.05}, {"at": C("A big part"), "x": 960, "y": 470, "zoom": 0.92, "dur": 2.4}], "drift": 0,
+    "items": [it("stack", x=600, at=C("plans to collect"), h=[[0, 40], [{"cue": "plans to collect"}, 40], [{"cue": "plans to collect", "offset": 3}, 620]], text="{{budget_2026.display}}", sub="all government revenue, 2026 plan"),
+              it("stack", x=1300, at=C("A big part"), h=[[0, 40], [{"cue": "A big part"}, 40], [{"cue": "A big part", "offset": 3}, 225]], text="{{rev_2026.display}}", sub=".ai alone, Jan–Jul 2026", color="gold"),
+              it("letters", x=1300, y=820, text=".ai", at=C("dot A I"), size=90, color="gold")],
+    "callouts": [co("How big is that?", 960, 150, C("For comparison"), "white", screen=True, size=44, until=C("A big part", -0.3)),
+                 co("converted at EC$2.70 = US$1", 960, 1010, C("plans to collect"), "white", screen=True, size=24)]},
     sources=["focus_budget_2026", "gleaner_2026", "eccb_peg"])
-cart("s30_tourism", "m4_tourism", {
-    "worldW": 3000, "cam": [{"at": 0, "x": 1300, "y": 400, "zoom": 1.0}, {"at": C("second engine"), "x": 1700, "y": 480, "zoom": 0.9, "dur": 2.2}], "drift": 0,
-    "actors": [island(darkAt=C("powerful hurricane"), lightAt=C("then by the pandemic", 1.5)),
-               {"kind": "plane", "x": [[0, -300], [{"cue": "Tourism makes up", "offset": 3}, 900], [{"cue": "powerful hurricane"}, 900], [{"cue": "powerful hurricane", "offset": 2}, -400]], "y": 160, "text": "TOURISTS", "scale": 0.8},
-               {"kind": "storm", "x": [[0, 2300], [{"cue": "powerful hurricane", "offset": 2}, 1400]], "y": 120, "at": C("powerful hurricane"), "until": C("then by the pandemic", 1.5)},
-               coins(2900, 300, [1400, 300], C("second engine"), rate=5)],
-    "cables": [{"from": 1400, "to": 3200, "lightAt": C("second engine")}],
-    "callouts": [co("Tourism = {{tourism.display}} of the economy", 960, 960, C("Tourism makes up"), "gold", screen=True, size=40, sub="IMF"),
-                 co("Hurricane, then pandemic", 960, 1040, C("powerful hurricane"), "risk", screen=True, until=C("second engine")),
-                 co("A second engine, online", 2100, 230, C("second engine"), "green")]},
+stage("s30_tourism", "m4_tourism", {
+    "zones": [BEACH(x1=1800), Z("web", 1800, 5000)], "worldW": 3000,
+    "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("second engine"), "x": 2300, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "shake": [{"at": C("powerful hurricane"), "dur": 1.6, "amp": 12}],
+    "items": [*crowd([500, 640, 1150], "cheer", at=C("Tourism makes up"), until=C("powerful hurricane"), hat="#FFC93C"),
+              *crowd([500, 640, 1150], "worry", at=C("powerful hurricane", 0.3), hat="#FFC93C"),
+              it("storm", x=[[0, 1500], [{"cue": "powerful hurricane"}, 1500], [{"cue": "powerful hurricane", "offset": 6}, 700]], y=170, at=C("powerful hurricane"), scale=1.3),
+              it("sign", x=900, y=330, text="PANDEMIC: NO TOURISTS", at=C("the pandemic"), color="#FFCDD2", size=30, hang=True, swing=True),
+              it("browser", x=2300, y=450, at=C("second engine", -0.4), url="island-money.ai", w=620, h=380, scale=0.9),
+              it("coins", **{"from": [2300, 300], "to": [1200, 500]}, at=C("no storm"), rate=4)],
+    "callouts": [co("Tourism = {{tourism.display}} of the economy", 960, 150, C("Tourism makes up"), "gold", screen=True, size=40, sub="IMF", until=C("powerful hurricane", -0.3)),
+                 co("Hurricane, then pandemic", 960, 150, C("powerful hurricane"), "risk", screen=True, until=C("second engine", -0.3)),
+                 co("A second engine, online", 960, 150, C("second engine"), "green", screen=True)]},
     sources=["imf_2024", "ap_2024"], sfx=[{"kind": "hit", "cue": "powerful hurricane", "gain": 0.3}])
 kinetic("s31_t4", "m4_transition", [("Money that falls from the sky", 56, "But money", None, True), ("can stop falling", 80, "stop falling", "risk", False)])
 
 # ====================================================================== PART 5: can it last?
 card("s32_c5", "m5_card", "Can It Last?", "When the hype cools")
-cart("s33_q5", "m5_question", {
-    "worldW": 2600, "cam": [{"at": 0, "x": 1300, "y": 400, "zoom": 1.1}], "drift": 0, "night": True,
-    "actors": [island(), letters(at=0.3, color="grey"), coins(2400, -100, [1300, 260], 0.2, rate=1.5)],
-    "callouts": [co("What if the AI boom cools?", 1300, 120, C("What happens"), "gold", size=44)]})
+stage("s33_q5", "m5_question", {
+    "zones": [BEACH(night=True)], "worldW": 1920, "night": True, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.15}, {"at": C("Its own leaders"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("chart", x=960, y=380, w=620, h=340, at=0.3, dur=4, text=".ai MONEY: WHAT NEXT?", pts=[0.1, 0.2, 0.4, 0.7, 0.85, 0.8]),
+              it("letters", x=1450, y=280, text="?", at=C("cools down"), size=120, color="gold")],
+    "callouts": [co("What if the AI boom cools?", 960, 960, C("What happens"), "gold", screen=True, size=44)]})
 kinetic("s34_quote", "m5_quote", [
     ("“You can't predict how long this", 50, "You can't predict", None, False), ("is going to last.”", 50, "going to last", None, False),
     ("Premier Ellis Webster, 2024 (AP)", 30, "we can't rely", "muted", True),
     ("Expected ≈ {{risk_quote.display}} of revenue → actual {{rev_2026.share_display}} (Jan–Jul 2026)", 38, "shot far higher", "accent", True)], chapter="Can it last")
-cart("s35_renew", "m5_renewals", {
-    "worldW": 2600, "coasts": {"left": True},
-    "cam": [{"at": 0, "x": 1000, "y": 420, "zoom": 0.9}], "drift": 0,
-    "actors": [office(140, "START-UP", "purple"), office(300, "AI APP", "green", scale=0.8), island(x=1800),
-               coins(260, 120, [1800, 260], 0.2, rate=8, until=C("hype fades")), coins(260, 120, [1800, 260], C("hype fades", 1.0), rate=1.2)],
-    "coasts_dark": C("owners stop renewing"),
-    "callouts": [co("Renewals = the real test", 1000, 160, C("real test"), "gold", size=44),
-                 co("Stop renewing → less money, two years later", 1000, 270, C("owners stop"), "risk"),
-                 co("A slow leak?", 1500, 400, C("slow leak"), "white")]})
-cart("s36_tv", "m5_tv", {
-    "worldW": 2800, "coasts": {"left": True, "leftLabel": "VIDEO SITES"},
-    "cam": [{"at": 0, "x": 1700, "y": 380, "zoom": 1.15}, {"at": C("video sites"), "x": 1250, "y": 420, "zoom": 0.85, "dur": 2.6},
-            {"at": C("in decline"), "x": 1800, "y": 380, "zoom": 1.1, "dur": 2.0}], "drift": 0,
-    "actors": [island(x=1900, text="TUVALU"), letters(x=1860, y=150, at=C("owns dot T V"), size=140, text=".tv", color="blue"),
-               office(150, "VIDEO SITE", "blue"), office(310, "STREAMING", "purple", scale=0.8),
-               coins(250, 100, [1900, 260], C("video sites"), rate=8, until=C("Today")), coins(250, 100, [1900, 260], C("Today", 0.5), rate=1.0)],
-    "callouts": [co("Tuvalu, in the Pacific", 1900, 120, C("Tuvalu"), "white", until=C("video sites")),
-                 co("A hit with video sites, incl. Twitch", 960, 960, C("Twitch"), "gold", screen=True),
-                 co("{{tv_io.display}} names at its peak", 960, 160, C("At its peak"), "green", screen=True, size=40, sub="Afnic"),
-                 co("Now in decline", 960, 260, C("in decline"), "risk", screen=True, size=40)]},
+stage("s35_renew", "m5_renewals", {
+    "zones": [Z("web")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.0}, {"at": C("owners stop"), "x": 1300, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("clock", x=560, y=430, at=0.3, period=2.4, stopAt=C("owners stop"), text="RENEWAL", stopText="NOT RENEWED"),
+              it("browser", x=1000, y=380, w=520, h=320, scale=0.8, at=C("bought in the rush"), url="rush-buy.ai", pages=[[0, "site"], [{"cue": "owners stop"}, "expired"]]),
+              it("browser", x=1550, y=380, w=520, h=320, scale=0.8, at=C("bought in the rush", 0.4), url="hype-bot.ai", pages=[[0, "site"], [{"cue": "the hype fades"}, "expired"]]),
+              it("coins", **{"from": [1300, 600], "to": [2300, 700]}, at=0.5, until=C("money shrinks"), rate=5),
+              it("sign", x=1300, y=760, text="POSSIBLE RISK", sub="not a forecast", at=C("If AI"), color="#FFF59D", size=28)],
+    "callouts": [co("Renewals = the real test", 960, 150, C("real test"), "gold", screen=True, size=44, until=C("owners stop", -0.3)),
+                 co("Stop renewing → less money, two years later", 960, 150, C("owners stop"), "risk", screen=True, until=C("slow leak", -0.3)),
+                 co("A slow leak?", 960, 150, C("slow leak"), "white", screen=True, size=44)]})
+stage("s36_tv", "m5_tv", {
+    "zones": [BEACH()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.15}, {"at": C("At its peak"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("sign", x=330, y=560, text="TUVALU, PACIFIC", post=True, at=C("Tuvalu"), color="#FFF59D", size=28),
+              it("device", type="tv", x=760, y=760, at=C("dot T V"), text=".tv", redAt=C("in decline"), scale=1.2),
+              it("chart", x=1350, y=380, w=560, h=330, at=C("video sites"), dur=4, text=".tv NAMES (schematic)", pts=[0.1, 0.3, 0.6, 0.85, 0.9], crashAt=C("in decline"))],
+    "callouts": [co("Tuvalu owns .tv", 960, 150, C("Tuvalu"), "white", screen=True, until=C("Twitch", -0.3)),
+                 co("A hit with video sites, incl. Twitch", 960, 150, C("Twitch"), "gold", screen=True, until=C("At its peak", -0.3)),
+                 co("{{tv_io.display}} names at its peak", 960, 150, C("At its peak"), "green", screen=True, size=40, sub="Afnic", until=C("in decline", -0.3)),
+                 co("Now in decline", 960, 150, C("in decline"), "risk", screen=True, size=44)]},
     sources=["afnic_2025", "theworld_tv"])
 add("s37_io", "m5_io", "engine_map", {
     "title": ".io · British Indian Ocean Territory", "subtitle": "loved by tech start-ups · the territory is being transferred to Mauritius (Afnic)",
@@ -362,12 +444,14 @@ add("s37_io", "m5_io", "engine_map", {
     "routes": [{"from": LL["chagos"], "to": LL["mauritius"], "at": C("Mauritius", 0.3), "dur": 1.4, "color": "accent", "tokenShape": "box", "lift": 0.2}],
     "caption": "Real locations (Natural Earth) · arrow is schematic"},
     sources=["afnic_2025", "natural_earth"], assets=GEO)
-cart("s38_save", "m5_save", {
-    "worldW": 2600, "cam": [{"at": 0, "x": 1300, "y": 380, "zoom": 1.1}], "drift": 0,
-    "actors": [island(), {"kind": "piggy", "x": 1700, "y": 230, "at": C("saving part"), "scale": 0.9},
-               coins(2400, -100, [1700, 200], C("saving part"), rate=5)],
-    "callouts": [co("2025 surplus ≈ {{surplus_2025.display}}", 800, 170, C("surplus"), "green", size=42, sub="converted at EC$2.70 = US$1"),
-                 co("Debt cut with .ai money", 800, 290, C("cut its debt"), "gold")]},
+stage("s38_save", "m5_save", {
+    "zones": [BEACH()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.1}, {"at": C("cut its debt"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("piggy", x=700, at=0.2, text="SAVINGS", scale=1.1),
+              it("coins", **{"from": [960, -100], "to": [700, 620]}, at=0.6, rate=4),
+              it("stack", x=1350, at=0.3, h=[[0, 480], [{"cue": "cut its debt"}, 480], [{"cue": "cut its debt", "offset": 3}, 200]], text="DEBT", color="#FFCDD2")],
+    "callouts": [co("2025 surplus ≈ {{surplus_2025.display}}", 960, 150, C("surplus"), "green", screen=True, size=42, sub="converted at EC$2.70 = US$1", until=C("cut its debt", -0.3)),
+                 co("Debt cut with .ai money", 960, 150, C("cut its debt"), "gold", screen=True, size=42)]},
     sources=["focus_budget_2026", "eccb_peg"])
 # ---- PRESENTER D: the choice
 add("p39_choice", "m5_draw", "engine_draw", {
@@ -386,19 +470,19 @@ add("p39_choice", "m5_draw", "engine_draw", {
     "scale": 0.86, "floor": 1040})
 
 # ====================================================================== PAYOFF
-cart("s40_payoff", "payoff", {
-    "worldW": 4200, "coasts": {"left": True},
-    "cam": [{"at": 0, "x": 2600, "y": 380, "zoom": 1.1}, {"at": C("every time someone"), "x": 600, "y": 400, "zoom": 1.0, "dur": 2.6},
-            {"at": C("travels across"), "x": 2300, "y": 380, "zoom": 0.8, "dur": 4.0}, {"at": C("The lesson"), "x": 3300, "y": 380, "zoom": 1.05, "dur": 2.6}],
-    "drift": 0,
-    "actors": [office(140, "NEW AI CO", "blue"), office(300, "START-UP", "purple", scale=0.8), island(x=3300), letters(x=3260, y=150, at=0.5),
-               coins(300, 100, [3300, 260], C("every time someone"), rate=5), {"kind": "piggy", "x": 3650, "y": 230, "at": C("The lesson"), "scale": 0.7},
-               {"kind": "whale", "x": [[0, 2600], [40, 1600]], "y": 720, "flip": True}],
-    "cables": [{"from": 330, "to": 3100, "lightAt": C("every time someone")}],
-    "callouts": [co("No AI invented", 2600, 150, C("didn't invent"), "white", until=C("every time someone")),
-                 co("No data center", 2600, 250, C("data center"), "white", until=C("every time someone")),
-                 co("Right letters, right moment", 2300, 150, C("right two letters"), "gold", until=C("every time someone")),
-                 co("Spend it, or make it last?", 3300, 120, C("spend it"), "green", size=44)]},
+stage("s40_payoff", "payoff", {
+    "zones": [Z("web", -1600, 1400), BEACH(1400, 5000)], "worldW": 3000,
+    "cam": [{"at": 0, "x": 2200, "y": 520, "zoom": 1.1}, {"at": C("every time someone"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.6},
+            {"at": C("travels across"), "x": 1700, "y": 500, "zoom": 0.8, "dur": 3.0}, {"at": C("The lesson"), "x": 2200, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "items": [it("sign", x=1900, y=330, text="NO AI INVENTED", at=C("didn't invent"), until=C("every time someone"), color="#FFCDD2", size=30),
+              it("sign", x=2500, y=430, text="NO DATA CENTER", at=C("data center"), until=C("every time someone"), color="#FFCDD2", size=30),
+              it("letters", x=2200, y=330, text=".ai", at=C("right two letters"), size=200, color="gold"),
+              it("browser", x=700, y=420, at=C("every time someone"), url="next-big-thing.ai", typeAt=C("names a new"), scale=0.8),
+              it("coins", **{"from": [900, 400], "to": [2300, 700]}, at=C("travels across"), rate=4, arc=300),
+              it("piggy", x=2000, at=C("spend it"), text="SAVE", scale=0.8), it("stack", x=2450, at=C("spend it", 0.4), h=260, text="SPEND"),
+              it("counter", x=2200, y=280, at=C("more than a million"), steps=[[0, 0], [{"cue": "more than a million"}, 0], [{"cue": "more than a million", "offset": 2.5}, 1000000]], prefix="", suffix="+ names")],
+    "callouts": [co("Right letters, right moment", 960, 150, C("right two letters"), "gold", screen=True, until=C("every time someone", -0.3)),
+                 co("Spend it, or make it last?", 960, 150, C("spend it"), "green", screen=True, size=44)]},
     sources=["gleaner_2026"])
 add("s41_end", "teaser", "end_card", {"words": ["Next time:", "another hidden link of the world economy"], "brand": "The Hidden Economics",
     "teaser": "Every figure in this film is sourced in the description", "brand_cue": {"cue": "This is The Hidden Economics"}})

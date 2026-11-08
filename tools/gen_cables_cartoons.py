@@ -53,12 +53,15 @@ CART = [
         sources=["tg_faq"]),
     # ---------------------------------------------------------------- part 2
     cart("s12_m2q", "m2_question", {
-        "worldW": 1920, "coasts": {"left": True, "right": True, "leftLabel": "?", "rightLabel": "?"}, "fish": 3,
-        "cam": [{"at": 0, "x": 960, "y": 600, "zoom": 1.15}, {"at": C("whoever owns"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.2}],
-        "cables": [{"lightAt": 0.2}],
-        "actors": [{"kind": "cargo", "x": [[0, 1300], [14, 700]], "scale": 0.7, "flip": True}],
-        "callouts": [{"text": "Whose cable is this?", "x": 960, "y": 760, "at": C("Who owns"), "tail": [960, 905], "color": "gold", "size": 40},
-                     {"text": "The owner decides: who uses it + what it costs", "x": 960, "y": 250, "at": C("whoever owns"), "color": "white", "screen": True, "size": 34}]}),
+        "zones": [{"set": "beach", "x0": -1600, "x1": 1300}, {"set": "datacenter", "x0": 1300, "x1": 5000}], "worldW": 2600,
+        "cam": [{"at": 0, "x": 800, "y": 520, "zoom": 1.1}, {"at": C("whoever owns"), "x": 1300, "y": 520, "zoom": 0.9, "dur": 2.4}], "drift": 0,
+        "items": [{"kind": "sign", "x": 420, "y": 640, "text": "CABLE LANDS HERE", "post": True, "color": "#FFF59D", "size": 28, "at": 0.2},
+                  {"kind": "arrow", "from": [300, 940], "to": [1700, 940], "at": 0.4, "color": "cyan"},
+                  {"kind": "letters", "x": 900, "y": 300, "text": "OWNER?", "size": 90, "color": "gold", "at": C("Who owns")},
+                  {"kind": "device", "type": "server", "x": 1800, "y": 860, "at": 0.5, "text": "DATA CENTER"},
+                  {"kind": "sign", "x": 1300, "y": 420, "text": "WHO CAN USE IT?", "sub": "and how much it costs", "at": C("whoever owns"), "color": "#FFCDD2", "size": 34, "hang": True, "swing": True}],
+        "callouts": [{"text": "Whose cable is this?", "x": 960, "y": 150, "at": C("Who owns"), "color": "gold", "size": 44, "screen": True, "until": C("whoever owns", -0.3)},
+                     {"text": "The owner decides: who uses it + what it costs", "x": 960, "y": 150, "at": C("whoever owns"), "color": "white", "screen": True, "size": 38}]}),
     # ---------------------------------------------------------------- part 3
     cart("s20_m3q", "m3_question", {
         "worldW": 3000, "coasts": {"left": True}, "fish": 3,

@@ -745,54 +745,89 @@ scenes:
   segment: m2_question
   type: engine_cartoon
   params:
-    worldW: 1920
-    coasts:
-      left: true
-      right: true
-      leftLabel: '?'
-      rightLabel: '?'
-    fish: 3
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 1300
+    - set: datacenter
+      x0: 1300
+      x1: 5000
+    worldW: 2600
     cam:
     - at: 0
-      x: 960
-      y: 600
-      zoom: 1.15
+      x: 800
+      y: 520
+      zoom: 1.1
     - at:
         cue: whoever owns
-      x: 960
+      x: 1300
       y: 520
-      zoom: 1.0
-      dur: 2.2
-    cables:
-    - lightAt: 0.2
-    actors:
-    - kind: cargo
-      x:
-      - - 0
-        - 1300
-      - - 14
-        - 700
-      scale: 0.7
-      flip: true
+      zoom: 0.9
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: sign
+      x: 420
+      y: 640
+      text: CABLE LANDS HERE
+      post: true
+      color: '#FFF59D'
+      size: 28
+      at: 0.2
+    - kind: arrow
+      from:
+      - 300
+      - 940
+      to:
+      - 1700
+      - 940
+      at: 0.4
+      color: cyan
+    - kind: letters
+      x: 900
+      y: 300
+      text: OWNER?
+      size: 90
+      color: gold
+      at:
+        cue: Who owns
+    - kind: device
+      type: server
+      x: 1800
+      y: 860
+      at: 0.5
+      text: DATA CENTER
+    - kind: sign
+      x: 1300
+      y: 420
+      text: WHO CAN USE IT?
+      sub: and how much it costs
+      at:
+        cue: whoever owns
+      color: '#FFCDD2'
+      size: 34
+      hang: true
+      swing: true
     callouts:
     - text: Whose cable is this?
       x: 960
-      y: 760
+      y: 150
       at:
         cue: Who owns
-      tail:
-      - 960
-      - 905
       color: gold
-      size: 40
+      size: 44
+      screen: true
+      until:
+        cue: whoever owns
+        offset: -0.3
     - text: 'The owner decides: who uses it + what it costs'
       x: 960
-      y: 250
+      y: 150
       at:
         cue: whoever owns
       color: white
       screen: true
-      size: 34
+      size: 38
   assets:
   - font:inter
 - id: p13_club

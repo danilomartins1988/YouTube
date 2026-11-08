@@ -12,6 +12,9 @@ remotion/src/animation-engine/
   EconomicFlow/        stages that process and transform travelling objects; money flowing back
   AnimatedCharts/      BarChart (build / compare / highlight / morph to diagram), LineChart, Donut
   ExplodedDiagram/     layered isometric object that explodes, turns, gets labelled and reassembles
+  CartoonOcean/        side-view cartoon sea (ships, cables with light, volcano): stories that happen at sea
+  CartoonStage/        topic-specific cartoon worlds: `zones` of sets (city, exchange, newsroom, vault, court, fab,
+                       sciencepark, datacenter, beach, web, port, cabin...) + items; used via engine_cartoon `zones`
   transitions/         LightSweep, Iris, Burst, Studio set, DigitalBoard, TitleReveal
   motion/              easing, springs, windows, arcs, deterministic noise, palette
   types/               shared types

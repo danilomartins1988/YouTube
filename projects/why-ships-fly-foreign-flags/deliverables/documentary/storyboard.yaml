@@ -5,57 +5,88 @@ scenes:
   segment: h_question
   type: engine_cartoon
   params:
-    worldW: 3600
-    coasts:
-      port: true
-      left: true
-      leftLabel: YOUR CITY
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+    worldW: 2400
     cam:
     - at: 0
-      x: 2400
-      y: 420
-      zoom: 1.0
+      x: 1500
+      y: 520
+      zoom: 1.1
     - at:
         cue: registered
-      x: 1500
-      y: 400
-      zoom: 0.85
+      x: 1200
+      y: 500
+      zoom: 0.9
       dur: 3.0
     - at:
         cue: choice of flag
-      x: 1200
-      y: 360
-      zoom: 1.1
+      x: 1000
+      y: 520
+      zoom: 1.05
       dur: 2.4
     drift: 0
-    actors:
-    - kind: cargo
+    items:
+    - kind: ship
       x:
       - - 0
-        - 3000
+        - 2700
       - - 20
-        - 1500
-      flip: true
+        - 1300
       flag: LIBERIA
+      flip: true
       crew: 3
-    - kind: cargo
+    - kind: ship
       x:
       - - 0
-        - 2200
-      - - 20
-        - 900
-      flip: true
-      scale: 0.8
-      flag: PANAMA
-    - kind: cargo
-      x:
-      - - 0
-        - 3500
-      - - 20
+        - 3600
+      - - 24
         - 2300
+      flag: PANAMA
       flip: true
-      scale: 0.9
+      type: tanker
+      scale: 0.8
+    - kind: ship
+      x:
+      - - 0
+        - 1300
+      - - 24
+        - 200
       flag: MARSHALL IS.
+      flip: true
+      scale: 0.75
+    - kind: sign
+      x: 600
+      y: 330
+      text: RULES ON BOARD
+      at:
+        cue: the rules on board
+      color: '#FFF59D'
+      size: 30
+      hang: true
+      swing: true
+    - kind: sign
+      x: 1000
+      y: 250
+      text: TAXES
+      at:
+        cue: the taxes
+      color: '#FFF59D'
+      size: 30
+      hang: true
+      swing: true
+    - kind: sign
+      x: 1400
+      y: 330
+      text: WHO PROTECTS THE CREW?
+      at:
+        cue: protects the crew
+      color: '#FFCDD2'
+      size: 30
+      hang: true
+      swing: true
     callouts:
     - text: your phone · your clothes · your coffee
       x: 960
@@ -66,8 +97,8 @@ scenes:
       size: 36
       screen: true
     - text: Registered… where?
-      x: 1500
-      y: 180
+      x: 960
+      y: 150
       at:
         cue: registered
       color: gold
@@ -75,14 +106,7 @@ scenes:
         cue: choice of flag
         offset: -0.4
       size: 44
-    - text: Rules · taxes · crew
-      x: 1200
-      y: 180
-      at:
-        cue: choice of flag
-      color: risk
-      size: 40
-    fish: 3
+      screen: true
   sfx:
   - kind: hit
     cue: registered
@@ -134,37 +158,80 @@ scenes:
   type: engine_cartoon
   params:
     min_seconds: 9.0
-    worldW: 2400
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 1200
-      y: 400
-      zoom: 1.3
+      x: 960
+      y: 470
+      zoom: 1.2
+    - at:
+        cue: stranger
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: cargo
-      x:
-      - - 0
-        - 900
-      - - 12
-        - 1500
+    items:
+    - kind: ship
+      x: 1050
       flag: '?'
-      crew: 4
+      flip: true
+      crew: 2
+    - kind: letters
+      x: 960
+      y: 200
+      text: '?'
+      at:
+        cue: Whose ship
+      size: 150
+      color: gold
+    - kind: sign
+      x: 420
+      y: 420
+      text: OWNER?
+      at:
+        cue: really
+      size: 30
+    - kind: sign
+      x: 960
+      y: 420
+      text: FLAG?
+      at:
+        cue: really
+        offset: 0.3
+      size: 30
+    - kind: sign
+      x: 1500
+      y: 420
+      text: CREW?
+      at:
+        cue: really
+        offset: 0.6
+      size: 30
     callouts:
     - text: Whose ship is it?
-      x: 1200
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: Whose ship
       color: gold
+      until:
+        cue: stranger
+        offset: -0.3
       size: 48
+      screen: true
     - text: Stranger than you think
-      x: 1200
-      y: 260
+      x: 960
+      y: 150
       at:
         cue: stranger
       color: white
-    fish: 3
+      size: 44
+      screen: true
   assets:
   - font:inter
 - id: p05_flag
@@ -172,7 +239,7 @@ scenes:
   type: engine_draw
   params:
     title: A flag is a ship's passport
-    board: &id008
+    board: &id010
       x: 470
       y: 230
       w: 1370
@@ -325,72 +392,116 @@ scenes:
   segment: m1_evergiven
   type: engine_cartoon
   params:
-    worldW: 1920
-    coasts:
-      port: true
-      left: true
-      right: true
-      leftLabel: EGYPT
-      rightLabel: EGYPT
-    sea: 420
+    zones:
+    - set: canal
+      x0: -1600
+      x1: 4600
+    worldW: 2400
     cam:
     - at: 0
       x: 960
-      y: 420
-      zoom: 0.9
+      y: 520
+      zoom: 1.05
     - at:
         cue: One ship
-      x: 960
-      y: 380
-      zoom: 1.1
-      dur: 2.0
+      x: 1350
+      y: 500
+      zoom: 0.9
+      dur: 2.4
     drift: 0
-    shake:
-    - at:
-        cue: stuck in the Suez
-      dur: 1.0
-      amp: 10
-    actors:
-    - kind: cargo
-      x: 960
+    items:
+    - kind: ship
+      x: 900
+      flag:
+      - - 0
+        - ''
+      - - cue: flagged in
+        - PANAMA
       name: EVER GIVEN
-      flag: PANAMA
-      crew: 5
-    callouts:
-    - text: 'Owner: Japan'
-      x: 520
-      y: 150
+      scale: 1.0
+      smoke: false
+      crew: 2
+    - kind: sign
+      x: 330
+      y: 300
+      text: 'OWNER: JAPAN'
       at:
         cue: Japanese company
-      color: white
-    - text: 'Operator: Taiwan'
-      x: 960
-      y: 110
+      size: 30
+    - kind: sign
+      x: 780
+      y: 220
+      text: 'OPERATOR: TAIWAN'
       at:
         cue: Taiwanese
-      color: white
-    - text: 'Flag: Panama'
-      x: 1400
-      y: 150
+      size: 30
+    - kind: sign
+      x: 1250
+      y: 300
+      text: 'FLAG: PANAMA'
       at:
         cue: flagged in
-      color: gold
-    - text: 'Stuck in: Egypt'
-      x: 960
-      y: 960
+      color: '#FFF59D'
+      size: 30
+    - kind: sign
+      x: 1700
+      y: 740
+      text: 'STUCK IN: EGYPT'
       at:
         cue: stuck in Egypt
-      color: risk
+      color: '#FFCDD2'
+      size: 30
+      post: true
+    - kind: passport
+      x: 2000
+      y: 420
+      at:
+        cue: One ship
+        offset: -0.4
+      openAt:
+        cue: One ship
+      scale: 0.8
+      fields:
+      - - SHIP
+        - EVER GIVEN
+      - - OWNER
+        - Japan
+      - - OPERATOR
+        - Taiwan
+      - - FLAG
+        - Panama
+      - - STUCK IN
+        - Egypt
+    callouts:
+    - text: Suez Canal, 2021
+      x: 960
+      y: 150
+      at:
+        cue: Suez Canal
+      color: white
+      until:
+        cue: One ship
+        offset: -0.3
       screen: true
     - text: One ship, four countries
       x: 960
-      y: 230
+      y: 150
       at:
         cue: One ship
       color: green
+      until:
+        cue: morass
+        offset: -0.4
       size: 44
       screen: true
-    fish: 3
+    - text: “An international morass”
+      x: 960
+      y: 150
+      at:
+        cue: morass
+      color: gold
+      sub: Associated Press
+      screen: true
   sources:
   - ap_evergiven
   assets:
@@ -582,96 +693,191 @@ scenes:
   type: engine_cartoon
   params:
     min_seconds: 9.0
-    worldW: 2400
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 1200
-      y: 400
-      zoom: 1.1
-    drift: 20
-    actors:
-    - kind: cargo
-      x:
-      - - 0
-        - 700
-      - - 10
-        - 1300
+      x: 960
+      y: 480
+      zoom: 1.15
+    - at: 4
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 3
+    drift: 0
+    items:
+    - kind: ship
+      x: 1000
       flag:
       - - 0
-        - HOME
+        - MY OWN FLAG
       - - cue: borrowing
-        - ???
-      crew: 3
+        - BORROWED?
+      flip: true
+      crew: 2
+    - kind: letters
+      x: 1500
+      y: 260
+      text: '?'
+      at:
+        cue: borrowing
+        offset: 0.5
+      size: 130
+      color: gold
     callouts:
-    - text: Borrow a flag?
-      x: 1200
-      y: 170
+    - text: Borrow another country's flag?
+      x: 960
+      y: 150
       at:
         cue: borrowing
       color: gold
-      size: 48
-    fish: 3
+      size: 44
+      screen: true
   assets:
   - font:inter
 - id: s11_prohibition
   segment: m2_prohibition
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      port: true
-      left: true
-      leftLabel: UNITED STATES
+    zones:
+    - set: saloon
+      x0: -1600
+      x1: 1700
+    - set: port
+      x0: 1700
+      x1: 6000
+    worldW: 3600
     cam:
     - at: 0
       x: 900
-      y: 400
+      y: 520
       zoom: 1.0
     - at:
-        cue: open registry
-      x: 1500
-      y: 400
-      zoom: 0.95
-      dur: 2.4
+        cue: registered their ships
+      x: 2600
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    - at:
+        cue: more and more owners
+      x: 2700
+      y: 500
+      zoom: 0.85
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: cargo
-      x:
-      - - 0
-        - 700
-      - - 20
-        - 1900
-      name: PASSENGER SHIP
+    items:
+    - kind: sign
+      x: 900
+      y: 240
+      text: '1920s · U.S.: ALCOHOL BANNED'
+      at:
+        cue: alcohol was banned
+      color: '#FFCDD2'
+      size: 34
+      hang: true
+      swing: true
+    - kind: person
+      x: 500
+      pose: cheer
+      at: &id007
+        cue: serve drinks
+      scale: 0.9
+      hair: 1
+      skin: 0
+      until: &id008
+        cue: registered their ships
+        offset: 1.0
+    - kind: person
+      x: 700
+      pose: cheer
+      at: *id007
+      scale: 0.9
+      hair: 2
+      skin: 1
+      until: *id008
+    - kind: person
+      x: 1100
+      pose: cheer
+      at: *id007
+      scale: 0.9
+      hair: 3
+      skin: 2
+      until: *id008
+    - kind: person
+      x: 1300
+      pose: cheer
+      at: *id007
+      scale: 0.9
+      hair: 4
+      skin: 3
+      until: *id008
+    - kind: ship
+      x: 2500
+      type: liner
       flag:
       - - 0
-        - UNITED STATES
+        - U.S.
       - - cue: registered their ships
+          offset: 0.6
         - PANAMA
-      crew: 6
+      flip: true
+      crew: 3
+    - kind: ship
+      x:
+      - - 0
+        - 4200
+      - - cue: more and more owners
+        - 4200
+      - - cue: more and more owners
+          offset: 5
+        - 3300
+      flag: PANAMA
+      flip: true
+      scale: 0.7
+      at:
+        cue: more and more owners
+    - kind: sign
+      x: 2500
+      y: 200
+      text: THE FIRST OPEN REGISTRY
+      sub: any owner, from any country
+      at:
+        cue: first open registry
+      color: '#C8E6C9'
+      size: 32
     callouts:
-    - text: '1920s: alcohol banned in the U.S.'
+    - text: Drinks on board!
       x: 960
       y: 150
       at:
-        cue: alcohol was banned
-      color: risk
-      size: 40
-      screen: true
-    - text: Drinks on board!
-      x: 1300
-      y: 260
-      at:
         cue: serve drinks
       color: gold
+      until:
+        cue: registered their ships
+        offset: -0.3
+      screen: true
+    - text: Re-registered in Panama
+      x: 960
+      y: 150
+      at:
+        cue: registered their ships
+      color: white
+      until:
+        cue: first open registry
+        offset: -0.3
+      screen: true
     - text: 'Panama: the first open registry'
       x: 960
       y: 960
       at:
         cue: first open registry
       color: green
-      sub: any owner, any country (Windward)
+      sub: Windward
       screen: true
-    fish: 3
   sources:
   - windward_foc
   assets:
@@ -727,7 +933,7 @@ scenes:
       time:
         cue: government of Liberia
     - id: v
-      at: &id007
+      at: &id009
       - -77.45
       - 38.95
       label: Virginia, U.S.
@@ -744,7 +950,7 @@ scenes:
       color: accent
       tokenShape: box
       lift: 0.2
-    - from: *id007
+    - from: *id009
       to: *id002
       at:
         cue: Virginia
@@ -787,7 +993,7 @@ scenes:
   type: engine_draw
   params:
     title: How an open registry works
-    board: *id008
+    board: *id010
     draw_start:
       cue: A ship owner
     speed: 1400
@@ -974,146 +1180,325 @@ scenes:
   type: engine_cartoon
   params:
     min_seconds: 9.0
-    worldW: 2600
-    coasts:
-      port: true
-      left: true
-      leftLabel: OWNER
+    zones:
+    - set: office
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 1200
-      y: 400
-      zoom: 0.9
+      x: 960
+      y: 500
+      zoom: 1.15
+    - at:
+        cue: in return
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: office
-      x: 160
+    items:
+    - kind: person
+      x: 480
+      pose: point
+      at: 0.2
+      scale: 0.8
+      hair: 1
+      skin: 0
+      tie: true
+    - kind: sign
+      x: 480
+      y: 470
       text: SHIP OWNER
-      color: blue
-      scale: 1.0
-    - kind: island
-      x: 2000
-      w: 440
-      text: FLAG STATE
-    - kind: cargo
-      x:
-      - - 0
-        - 700
-      - - 12
-        - 1300
-      flag: FLAG STATE
-      crew: 3
+      at: 0.4
+      size: 26
+    - kind: docs
+      x: 960
+      y: 860
+      at: 0.5
+      text: REGISTRATION
+      stampAt:
+        cue: actually gain
+      stamp: REGISTERED
+      color: green
+    - kind: person
+      x: 1440
+      pose: read
+      at: 0.3
+      scale: 0.8
+      hair: 3
+      skin: 0
+      glasses: true
+    - kind: sign
+      x: 1440
+      y: 470
+      text: SMALL COUNTRY
+      at:
+        cue: small country
+      size: 26
     - kind: coins
-      x: 200
-      y: 120
+      from:
+      - 520
+      - 560
       to:
-      - 2000
-      - 260
+      - 1400
+      - 560
       at:
         cue: in return
-      rate: 2
+      rate: 4
     callouts:
     - text: What does the owner gain?
-      x: 1100
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: actually gain
       color: gold
+      until:
+        cue: in return
+        offset: -0.3
       size: 42
+      screen: true
     - text: …and the small country?
-      x: 1100
-      y: 260
+      x: 960
+      y: 150
       at:
         cue: in return
       color: white
-    fish: 3
+      size: 42
+      screen: true
   assets:
   - font:inter
 - id: s18_reasons
   segment: m3_reasons
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: port
+      x0: -1600
+      x1: 1900
+    - set: office
+      x0: 1900
+      x1: 6000
+    worldW: 3200
     cam:
     - at: 0
-      x: 1300
-      y: 400
+      x: 960
+      y: 520
       zoom: 1.0
+    - at:
+        cue: Panama, for example
+      x: 2500
+      y: 520
+      zoom: 1.0
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: cargo
-      x:
-      - - 0
-        - 900
-      - - 24
-        - 1700
-      flag:
-      - - 0
-        - HOME
-      - - cue: flag of convenience
-        - LIBERIA
-      crew: 4
-    callouts:
-    - text: Fewer rules
-      x: 500
-      y: 160
+    items:
+    - kind: ship
+      x: 1000
+      flag: FLAG OF CONVENIENCE
+      flip: true
+      crew: 2
+      scale: 0.9
+    - kind: sign
+      x: 330
+      y: 430
+      text: FEWER RULES
       at:
         cue: stricter rules
-      color: green
-    - text: Lower costs
-      x: 500
-      y: 260
+      color: '#C8E6C9'
+      size: 30
+      hang: true
+      swing: true
+    - kind: sign
+      x: 760
+      y: 520
+      text: LOWER COSTS
       at:
         cue: operating costs
-      color: green
-    - text: Lower taxes
-      x: 2100
-      y: 160
+      color: '#C8E6C9'
+      size: 30
+      hang: true
+      swing: true
+    - kind: sign
+      x: 1200
+      y: 430
+      text: LOWER TAXES
       at:
         cue: high taxes
-      color: green
-    - text: Weaker crew protection
-      x: 2100
-      y: 260
+      color: '#C8E6C9'
+      size: 30
+      hang: true
+      swing: true
+    - kind: sign
+      x: 1620
+      y: 520
+      text: WEAKER CREW PROTECTION
       at:
         cue: worst cases
-      color: risk
+      color: '#FFCDD2'
+      size: 30
+      hang: true
+      swing: true
+    - kind: browser
+      x: 2400
+      y: 420
+      at:
+        cue: Panama, for example
+      url: register-a-ship.online
+      typeAt:
+        cue: registration online
+      w: 600
+      h: 360
+      page: price
+      text: REGISTER
+      sub: online
+      button: SUBMIT
+      scale: 0.9
+    - kind: person
+      x: 2850
+      pose: stand
+      at: &id011
+        cue: low-cost crews
+      scale: 0.7
+      hair: 1
+      skin: 0
+      hat: '#1E3A6E'
+    - kind: person
+      x: 2960
+      pose: stand
+      at: *id011
+      scale: 0.7
+      hair: 2
+      skin: 1
+      hat: '#1E3A6E'
+    - kind: person
+      x: 3070
+      pose: stand
+      at: *id011
+      scale: 0.7
+      hair: 3
+      skin: 2
+      hat: '#1E3A6E'
+    callouts:
+    - text: Why owners choose it
+      x: 960
+      y: 150
+      at:
+        cue: According to
+      color: white
+      sub: Windward
+      until:
+        cue: Panama, for example
+        offset: -0.3
+      screen: true
     - text: 'Panama: register online, hire low-cost crews'
       x: 960
-      y: 960
+      y: 150
       at:
         cue: Panama, for example
       color: white
       sub: Windward
       screen: true
-    fish: 3
   sources:
   - windward_foc
   assets:
   - font:inter
 - id: s19_scale
   segment: m3_scale
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Why owners do it
-    title: The Liberian flag, 2026
-    sides:
-    - kicker: Fleet size
-      value: '{{liberia_2026.display}}'
-      label: first registry ever to pass it
-      cue: first registry
-    - kicker: Ships
-      value: '{{liberia_2026.ships_display}}'
-      label: flying the flag (IHS)
-      cue: flying its flag
-    - kicker: World capacity
-      value: '{{top3.liberia_display}}'
-      label: Liberia alone (UNCTAD, 2025)
-      cue: Liberia alone
-    - kicker: Container ships
-      value: '{{liberia_new.container_display}}'
-      label: the registry's own figure
-      cue: container ships
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+    worldW: 2600
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: Liberia alone
+      x: 1500
+      y: 480
+      zoom: 0.85
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: ship
+      x:
+      - - 0
+        - 2900
+      - - 14
+        - 600
+      flag: LIBERIA
+      flip: true
+      scale: 0.8
+    - kind: ship
+      x:
+      - - 0
+        - 3800
+      - - 20
+        - 1500
+      flag: LIBERIA
+      flip: true
+      type: tanker
+      scale: 0.7
+    - kind: ship
+      x:
+      - - 0
+        - 4800
+      - - 26
+        - 2400
+      flag: LIBERIA
+      flip: true
+      scale: 0.75
+    - kind: counter
+      x: 960
+      y: 260
+      at:
+        cue: first registry
+      steps:
+      - - 0
+        - 0
+      - - cue: flying its flag
+          offset: -0.5
+        - 0
+      - - cue: flying its flag
+          offset: 2
+        - 6092
+      suffix: ' ships'
+      text: flying Liberia's flag, 2026 (IHS)
+    - kind: sign
+      x: 1900
+      y: 280
+      text: '{{top3.liberia_display}} OF WORLD CAPACITY'
+      sub: Liberia alone (UNCTAD)
+      at:
+        cue: Liberia alone
+      color: '#FFF59D'
+      size: 30
+    - kind: sign
+      x: 1900
+      y: 480
+      text: ≈ A QUARTER OF CONTAINER SHIPS
+      sub: 'the registry''s own figure: {{liberia_new.container_display}}'
+      at:
+        cue: container ships
+      color: '#BBDEFB'
+      size: 28
+    callouts:
+    - text: '2026: first registry ever past {{liberia_2026.display}}'
+      x: 960
+      y: 150
+      at:
+        cue: first registry
+      color: gold
+      until:
+        cue: Liberia alone
+        offset: -0.3
+      size: 40
+      screen: true
   sources:
   - fpa_2026
   - unctad_2025
@@ -1124,60 +1509,121 @@ scenes:
   segment: m3_money
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: office
+      x0: -1600
+      x1: 1500
+    - set: port
+      x0: 1500
+      x1: 6000
+    worldW: 3400
     cam:
     - at: 0
-      x: 1300
-      y: 400
-      zoom: 1.05
+      x: 800
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: tiny slice
+      x: 2300
+      y: 500
+      zoom: 0.85
+      dur: 2.8
+    - at:
+        cue: exactly how much
+      x: 800
+      y: 520
+      zoom: 1.0
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: LIBERIA
-    - kind: coins
-      x: 2500
-      y: -80
-      to:
-      - 1300
-      - 260
+    items:
+    - kind: docs
+      x: 500
+      y: 860
+      at: 0.3
+      text: FEES · TONNAGE TAX
+      stampAt:
+        cue: inspections
+      stamp: PAID
+      color: green
+      scale: 0.8
+    - kind: stack
+      x: 1050
       at:
-        cue: Registration fees
-      rate: 3
-    - kind: cargo
-      x:
+        cue: maritime revenue
+      h:
       - - 0
-        - 2300
-      - - 20
-        - 1900
-      flip: true
-      scale: 1.3
+        - 20
+      - - cue: maritime revenue
+        - 20
+      - - cue: maritime revenue
+          offset: 2
+        - 110
+      text: '{{liberia_rev.display}}'
+      sub: a year (researcher's estimate)
+      color: gold
+    - kind: ship
+      x: 2400
       flag: LIBERIA
+      flip: true
+      scale: 1.15
+      crew: 2
+    - kind: sign
+      x: 2400
+      y: 180
+      text: THE WORLD'S TRADE
+      at:
+        cue: carries the world
+      color: '#BBDEFB'
+      size: 32
+    - kind: sign
+      x: 700
+      y: 300
+      text: FULL RECORDS?
+      sub: only the registry + the maritime authority
+      at:
+        cue: full records
+      color: '#FFCDD2'
+      size: 34
     callouts:
-    - text: fees · tonnage taxes · inspections
+    - text: Fees · tonnage taxes · inspections
       x: 960
       y: 150
       at:
         cue: Registration fees
       color: white
+      until:
+        cue: maritime revenue
+        offset: -0.3
       screen: true
     - text: '{{liberia_rev.display}} a year'
-      x: 700
-      y: 250
+      x: 960
+      y: 150
       at:
         cue: maritime revenue
       color: gold
       sub: researcher's estimate, 2026 (AllAfrica)
-      size: 48
+      until:
+        cue: tiny slice
+        offset: -0.3
+      size: 46
+      screen: true
     - text: A tiny slice of world shipping
       x: 960
-      y: 960
+      y: 150
       at:
         cue: tiny slice
       color: risk
+      until:
+        cue: exactly how much
+        offset: -0.3
       screen: true
-    fish: 3
+    - text: He calls for more transparency
+      x: 960
+      y: 150
+      at:
+        cue: transparency
+      color: white
+      screen: true
   sources:
   - allafrica_2026
   assets:
@@ -1217,32 +1663,87 @@ scenes:
   type: engine_cartoon
   params:
     min_seconds: 9.0
-    worldW: 2400
+    zones:
+    - set: cabin
+      x0: -1600
+      x1: 4600
+      night: true
+    worldW: 1920
     night: true
     cam:
     - at: 0
-      x: 1200
-      y: 420
-      zoom: 1.3
+      x: 960
+      y: 520
+      zoom: 1.15
+    - at:
+        cue: On paper
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: cargo
-      x: 1200
-      flagColor: grey
-      sadAt:
+    items:
+    - kind: person
+      x: 500
+      pose: worry
+      at: 0.3
+      scale: 0.95
+      hair: 1
+      skin: 0
+      hat: '#1E3A6E'
+    - kind: person
+      x: 640
+      pose: worry
+      at: 0.3
+      scale: 0.95
+      hair: 2
+      skin: 1
+      hat: '#1E3A6E'
+    - kind: person
+      x: 1300
+      pose: worry
+      at: 0.3
+      scale: 0.95
+      hair: 3
+      skin: 2
+      hat: '#1E3A6E'
+    - kind: sign
+      x: 960
+      y: 260
+      text: 'OWNER: ???'
+      at:
         cue: disappears
-      anchorAt: 0.3
-      flag: ???
-      crew: 5
+      color: '#FFCDD2'
+      size: 40
+      hang: true
+      swing: true
+    - kind: sign
+      x: 960
+      y: 430
+      text: 'FLAG STATE: ON PAPER'
+      at:
+        cue: On paper
+      color: '#FFF59D'
+      size: 28
     callouts:
     - text: The owner disappears…
-      x: 1200
-      y: 180
+      x: 960
+      y: 150
       at:
         cue: disappears
       color: risk
+      until:
+        cue: In practice
+        offset: -0.3
       size: 44
-    fish: 3
+      screen: true
+    - text: In practice, often no one steps in
+      x: 960
+      y: 150
+      at:
+        cue: In practice
+      color: white
+      screen: true
   assets:
   - font:inter
 - id: s24_abandon
@@ -1280,56 +1781,104 @@ scenes:
   segment: m4_ships
   type: engine_cartoon
   params:
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
     worldW: 2400
-    coasts:
-      port: true
-      right: true
-      rightLabel: FOREIGN PORT
     cam:
     - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Each one
       x: 1300
-      y: 400
-      zoom: 1.1
+      y: 540
+      zoom: 1.2
+      dur: 3.0
     drift: 0
-    actors:
-    - kind: cargo
-      x: 1500
-      flagColor: grey
-      sadAt: 0.0
-      anchorAt: 0.0
-      flag: FLAG ?
-      crew: 5
-    - kind: cargo
-      x: 800
-      flagColor: grey
-      sadAt: 0.0
-      anchorAt: 0.5
-      scale: 0.7
-      flag: FLAG ?
+    items:
+    - kind: ship
+      x: 700
+      flag: '?'
+      rustAt: 0.5
+      sadAt: 0.3
       crew: 3
+      smoke: false
+      scale: 0.85
+    - kind: ship
+      x: 1700
+      flag: '?'
+      rustAt: 1.5
+      sadAt: 1.0
+      crew: 2
+      smoke: false
+      flip: true
+      type: tanker
+      scale: 0.8
+    - kind: counter
+      x: 1200
+      y: 260
+      at:
+        cue: In total
+      steps:
+      - - 0
+        - 0
+      - - cue: In total
+        - 0
+      - - cue: In total
+          offset: 2.5
+        - 312
+      suffix: ' ships'
+      text: abandoned in 2024 (ITF)
+    - kind: calendar
+      x: 330
+      y: 300
+      at:
+        cue: waiting
+      pages:
+      - - 0
+        - DAY 1
+        - STILL WAITING
+      - - cue: waiting
+          offset: 1
+        - DAY 90
+        - STILL WAITING
+      - - cue: waiting
+          offset: 2.2
+        - DAY 300
+        - STILL WAITING
+      scale: 0.7
     callouts:
     - text: '{{abandon.ships_display}} ships abandoned in 2024'
       x: 960
-      y: 150
+      y: 960
       at:
         cue: In total
       color: risk
+      until:
+        cue: twice as many
+        offset: -0.3
       size: 44
       screen: true
     - text: more than twice 2023
       x: 960
-      y: 250
+      y: 960
       at:
         cue: twice as many
       color: white
+      until:
+        cue: Each one
+        offset: -0.3
       screen: true
-    - text: Waiting…
-      x: 1500
-      y: 330
+    - text: 'Each one: a crew stuck in a foreign port'
+      x: 960
+      y: 960
       at:
-        cue: waiting
+        cue: Each one
       color: white
-    fish: 3
+      screen: true
   sources:
   - itf_2024
   assets:
@@ -1365,7 +1914,7 @@ scenes:
   type: engine_draw
   params:
     title: Five countries, no one responsible
-    board: *id008
+    board: *id010
     draw_start:
       cue: The owner lives
     speed: 1500
@@ -1501,60 +2050,113 @@ scenes:
   segment: m4_falseflags
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+      night: true
+    worldW: 2400
     night: true
     cam:
     - at: 0
-      x: 1300
-      y: 420
-      zoom: 1.05
+      x: 960
+      y: 520
+      zoom: 1.1
+    - at:
+        cue: shadow fleet
+      x: 1400
+      y: 500
+      zoom: 0.9
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: cargo
+    items:
+    - kind: ship
       x:
       - - 0
-        - 2200
-      - - 22
-        - 900
+        - 1300
+      - - 30
+        - 800
+      type: tanker
       flip: true
-      flagColor: risk
-      name: TANKER
+      smoke: false
       flag:
       - - 0
         - FLAG A
       - - cue: not real
-        - FAKE
-      - - cue: counted
-        - ???
-      - - cue: first nine months
-        - FAKE
+        - NOT REAL
       - - cue: dodge sanctions
-        - ???
+        - FLAG B?
+      - - cue: new homes
+        - FLAG C?
+    - kind: docs
+      x: 360
+      y: 860
+      at:
+        cue: Researchers
+      text: SHIP REGISTER CHECK
+      stampAt:
+        cue: false flag
+      stamp: FALSE FLAG
+      scale: 0.8
+    - kind: ship
+      x:
+      - - 0
+        - 3200
+      - - cue: new homes
+        - 3200
+      - - cue: new homes
+          offset: 6
+        - 2000
+      type: tanker
+      flip: true
+      smoke: false
+      scale: 0.7
+      flag: NEW HOME?
+    - kind: counter
+      x: 1500
+      y: 360
+      at:
+        cue: counted
+      steps:
+      - - 0
+        - 0
+      - - cue: counted
+        - 0
+      - - cue: counted
+          offset: 2
+        - 113
+      suffix: ' vessels'
+      text: Russian, false flags, Jan–Sep 2025 (CREA)
     callouts:
     - text: Flags that aren't real
-      x: 1300
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: not real
       color: risk
-      size: 44
-    - text: '{{falseflags.display}} Russian vessels'
-      x: 960
-      y: 960
-      at:
+      until:
         cue: counted
-      color: gold
-      sub: false flags, Jan–Sep 2025 (CREA)
+        offset: -0.3
       size: 44
       screen: true
-    - text: …to dodge oil sanctions
+    - text: …often to dodge oil sanctions
       x: 960
-      y: 1040
+      y: 150
       at:
         cue: dodge sanctions
       color: white
+      until:
+        cue: shadow fleet
+        offset: -0.3
       screen: true
-    fish: 3
+    - text: 6 new registries · 162 shadow vessels
+      x: 960
+      y: 150
+      at:
+        cue: shadow fleet
+      color: gold
+      sub: registries that had never flagged a Russian ship before the invasion (CREA)
+      screen: true
   sources:
   - crea_2025
   assets:
@@ -1594,55 +2196,75 @@ scenes:
   type: engine_cartoon
   params:
     min_seconds: 9.0
-    worldW: 3000
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+    worldW: 2200
     cam:
     - at: 0
-      x: 1500
-      y: 400
-      zoom: 0.8
-    drift: 30
-    actors:
-    - kind: cargo
-      x:
-      - - 0
-        - 400
-      - - 16
-        - 1100
-      scale: 0.7
-      flag: LIBERIA
-    - kind: cargo
-      x:
-      - - 0
-        - 1100
-      - - 16
-        - 1800
-      scale: 0.7999999999999999
-      flag: PANAMA
-    - kind: cargo
-      x:
-      - - 0
-        - 1800
-      - - 16
-        - 2500
-      scale: 0.7
-      flag: MARSHALL IS.
-    - kind: cargo
+      x: 960
+      y: 520
+      zoom: 1.1
+    - at:
+        cue: keep growing
+      x: 1100
+      y: 500
+      zoom: 0.9
+      dur: 3
+    drift: 0
+    items:
+    - kind: ship
       x:
       - - 0
         - 2500
-      - - 16
-        - 3200
-      scale: 0.7999999999999999
-      flag: LIBERIA
+      - - 14
+        - 700
+      flag: OPEN REGISTRY
+      flip: true
+      scale: 0.8
+    - kind: ship
+      x:
+      - - 0
+        - 3400
+      - - cue: keep growing
+        - 3400
+      - - cue: keep growing
+          offset: 6
+        - 1700
+      flag: OPEN REGISTRY
+      flip: true
+      type: tanker
+      scale: 0.7
+    - kind: sign
+      x: 700
+      y: 260
+      text: SCANDALS
+      at:
+        cue: so many problems
+      color: '#FFCDD2'
+      size: 34
+      hang: true
+      swing: true
     callouts:
+    - text: So many problems…
+      x: 960
+      y: 150
+      at:
+        cue: so many problems
+      color: risk
+      until:
+        cue: keep growing
+        offset: -0.3
+      screen: true
     - text: …and they keep growing
-      x: 1500
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: keep growing
       color: gold
       size: 44
-    fish: 3
+      screen: true
   assets:
   - font:inter
 - id: p32_gains
@@ -1650,7 +2272,7 @@ scenes:
   type: engine_draw
   params:
     title: Who gains?
-    board: *id008
+    board: *id010
     draw_start:
       cue: Owners save
     speed: 1400
@@ -1770,19 +2392,105 @@ scenes:
   - font:inter
 - id: s33_quality
   segment: m5_quality
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Why it survives
-    title: Safe choice, or not?
-    sides:
-    - kicker: New ships choosing Liberia
-      value: '{{liberia_new.display}}'
-      label: the registry's own figure
-      cue: newly built
-    - kicker: Most abandonments, 2024
-      value: Panama · 43
-      label: then Palau 37 · Tanzania 30 · Comoros 29 (ITF)
-      cue: Panama tops
+    zones:
+    - set: office
+      x0: -1600
+      x1: 1500
+    - set: port
+      x0: 1500
+      x1: 6000
+    worldW: 3400
+    cam:
+    - at: 0
+      x: 800
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: abandoned ships tells
+      x: 2400
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: passport
+      x: 700
+      y: 470
+      at: 0.3
+      openAt:
+        cue: newly built
+        offset: -0.6
+      stampAt:
+        cue: joining its flag
+      stamp: NEW SHIP
+      scale: 0.85
+      fields:
+      - - SHIP
+        - brand new
+      - - FLAG
+        - Liberia
+      - - SHARE OF NEW SHIPS
+        - '{{liberia_new.display}}'
+    - kind: board
+      x: 2400
+      y: 80
+      w: 820
+      at:
+        cue: abandoned ships tells
+      text: MOST ABANDONED SHIPS, 2024
+      rows:
+      - name: PANAMA
+        value: '43'
+        color: red
+      - name: PALAU
+        value: '37'
+        color: red
+      - name: TANZANIA
+        value: '30'
+        color: red
+      - name: COMOROS
+        value: '29'
+        color: red
+    - kind: ship
+      x: 2400
+      flag: '?'
+      rust: true
+      smoke: false
+      crew: 2
+      sadAt: 0
+      scale: 0.6
+    callouts:
+    - text: Registries compete to look safe
+      x: 960
+      y: 150
+      at:
+        cue: compete hard
+      color: white
+      until:
+        cue: newly built
+        offset: -0.3
+      screen: true
+    - text: 'Liberia: {{liberia_new.display}} of new ships'
+      x: 960
+      y: 150
+      at:
+        cue: newly built
+      color: green
+      sub: the registry's own figure
+      until:
+        cue: abandoned ships tells
+        offset: -0.3
+      screen: true
+    - text: 'Abandonments: a mixed story'
+      x: 960
+      y: 960
+      at:
+        cue: abandoned ships tells
+      color: risk
+      sub: ITF, 2024
+      screen: true
   sources:
   - liscr_2026
   - itf_2024
@@ -1808,101 +2516,133 @@ scenes:
   segment: payoff
   type: engine_cartoon
   params:
-    worldW: 4200
-    coasts:
-      port: true
-      left: true
-      leftLabel: YOUR CITY
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+    worldW: 3000
     cam:
     - at: 0
-      x: 600
-      y: 380
-      zoom: 1.1
+      x: 1500
+      y: 500
+      zoom: 0.9
     - at:
         cue: look at the back
-      x: 1700
-      y: 400
-      zoom: 1.15
+      x: 900
+      y: 760
+      zoom: 1.5
       dur: 2.6
     - at:
-        cue: Monrovia
-      x: 2600
-      y: 400
+        cue: chosen like a product
+      x: 1500
+      y: 500
       zoom: 0.85
       dur: 3.0
     - at:
-        cue: chosen like a product
-      x: 3200
-      y: 380
-      zoom: 0.95
+        cue: who is really
+      x: 1500
+      y: 480
+      zoom: 1.0
       dur: 3.0
     drift: 0
-    actors:
-    - kind: cargo
+    items:
+    - kind: ship
       x:
       - - 0
-        - 2000
-      - - 40
         - 1300
-      name: MONROVIA
-      flip: true
+      - - 40
+        - 1500
       flag: LIBERIA
-      crew: 3
-    - kind: cargo
+      port: MONROVIA
+      scale: 1.0
+      crew: 2
+    - kind: ship
       x:
       - - 0
-        - 2900
-      - - 40
-        - 2300
-      name: PANAMA
-      flip: true
-      scale: 0.9
+        - 3600
+      - - cue: chosen like a product
+        - 3600
+      - - cue: chosen like a product
+          offset: 6
+        - 2500
       flag: PANAMA
-      crew: 2
-    - kind: cargo
+      port: PANAMA
+      flip: true
+      scale: 0.7
+      type: tanker
+    - kind: ship
       x:
       - - 0
-        - 3700
-      - - 40
-        - 3100
-      name: MAJURO
-      flip: true
-      scale: 0.9
+        - -800
+      - - cue: chosen like a product
+        - -800
+      - - cue: chosen like a product
+          offset: 6
+        - 300
       flag: MARSHALL IS.
-      crew: 2
-    - kind: whale
-      x:
-      - - 0
-        - 3400
-      - - 40
-        - 2600
-      y: 720
-      flip: true
+      port: MAJURO
+      scale: 0.65
+    - kind: letters
+      x: 1500
+      y: 200
+      text: '?'
+      at:
+        cue: who is really
+      size: 150
+      color: gold
     callouts:
     - text: Look at the stern
-      x: 1700
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: look at the back
       color: gold
       until:
         cue: Monrovia
+        offset: -0.2
       size: 44
+      screen: true
     - text: Monrovia · Panama · Majuro
-      x: 2600
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: Monrovia
       color: white
+      until:
+        cue: chosen like a product
+        offset: -0.3
       size: 44
+      screen: true
     - text: A flag chosen like a product
-      x: 3200
-      y: 270
+      x: 960
+      y: 150
       at:
         cue: chosen like a product
       color: green
+      until:
+        cue: Three small flags
+        offset: -0.3
       size: 44
-    fish: 3
+      screen: true
+    - text: 3 small flags ≈ almost half of capacity
+      x: 960
+      y: 150
+      at:
+        cue: Three small flags
+      color: gold
+      sub: '{{top3.display}} (UNCTAD)'
+      until:
+        cue: who is really
+        offset: -0.3
+      screen: true
+    - text: Who is really in charge out there?
+      x: 960
+      y: 960
+      at:
+        cue: who is really
+      color: white
+      size: 44
+      screen: true
   sources:
   - unctad_2025
   assets:

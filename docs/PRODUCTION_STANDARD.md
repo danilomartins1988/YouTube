@@ -117,6 +117,15 @@ Documentaries are animated explanations, not narrated slideshows. Use the reusab
   callouts), camera tracking shots. Use `engine_cartoon` (`remotion/src/animation-engine/CartoonOcean/`) or new
   cartoon worlds built the same way for most beats; keep maps for geography and the presenter boards for
   explanations. Plain text cards should be the exception.
+- **Bespoke worlds per topic (user decision of 2026-11-08).** Never reuse one scenery for every story (the user
+  objected to Germany/Wirecard being drawn as a building by the sea with an island opposite). Each episode gets
+  cartoon worlds that match what the narration talks about, as Dubai and F1 had their own scenes. Use
+  `engine_cartoon` with `zones` (CartoonStage, `remotion/src/animation-engine/CartoonStage/`): sets such as `city`
+  (Bavarian street), `exchange`, `newsroom`, `vault`, `court`, `airport`, `office`, `fab` (clean room),
+  `sciencepark`, `carplant`, `datacenter`, `site`, `beach`, `web`, `port`, `cabin`, `saloon`, `canal`, plus items
+  (towers, boards, charts, people, a watchdog, wafers, an EUV machine, conveyors, dominoes, cranes, browsers,
+  ships with text pennants, a passport...). Add a new set or item when a story needs one; the ocean world
+  (CartoonOcean) is for stories that really happen at sea.
 - **Hypotheticals.** Any scenario that has not happened is said to be hypothetical in the narration and labelled on screen (red "Hypothetical scenario" banner). Show a real precedent next to it when one exists.
 - **Pacing.** Alternate macro context with detailed mechanism. Build curiosity, pause before the reveals, and cut redundant explanation.
 - **Balance.** Cover both strengths and risks. Never make it a corporate advert.

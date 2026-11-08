@@ -5,71 +5,99 @@ scenes:
   segment: h_question
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 1300
-      y: 420
-      zoom: 1.25
+      x: 960
+      y: 560
+      zoom: 1.2
     - at:
         cue: Just two letters
-      x: 1300
-      y: 360
+      x: 960
+      y: 520
       zoom: 1.0
-      dur: 2.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
-    - kind: letters
-      text: .ai
-      x: 1260
-      y: 150
-      at:
-        cue: Just two letters
-      size: 150
-    - kind: coins
-      x: 2100
-      y: -60
-      to:
-      - 1300
-      - 300
-      at:
-        cue: Just two letters
-        offset: 0.8
-      rate: 5
-    callouts:
-    - text: No factories
-      x: 600
-      y: 200
+    items:
+    - kind: sign
+      x: 480
+      y: 430
+      text: NO FACTORIES
       at:
         cue: No factories
-      color: risk
       until:
         cue: Just two letters
-    - text: No data centers
+      color: '#FFCDD2'
+      size: 36
+    - kind: sign
       x: 960
-      y: 140
+      y: 330
+      text: NO DATA CENTERS
       at:
         cue: no data centers
-      color: risk
       until:
         cue: Just two letters
-    - text: No tech giants
-      x: 1320
-      y: 200
+      color: '#FFCDD2'
+      size: 36
+    - kind: sign
+      x: 1440
+      y: 430
+      text: NO TECH GIANTS
       at:
         cue: no tech giants
-      color: risk
       until:
         cue: Just two letters
-    fish: 3
-  sfx:
-  - kind: hit
-    cue: Just two letters
-    gain: 0.35
+      color: '#FFCDD2'
+      size: 36
+    - kind: letters
+      x: 960
+      y: 380
+      text: .ai
+      at:
+        cue: Just two letters
+      size: 260
+      color: gold
+    - kind: burst
+      x: 960
+      y: 380
+      at:
+        cue: Just two letters
+        offset: 0.2
+    - kind: person
+      x: 300
+      pose: cheer
+      at: &id001
+        cue: Just two letters
+        offset: 0.3
+      scale: 0.8
+      hair: 1
+      skin: 0
+    - kind: person
+      x: 1650
+      pose: cheer
+      at: *id001
+      scale: 0.8
+      hair: 2
+      skin: 1
+    callouts:
+    - text: An island getting rich from AI?
+      x: 960
+      y: 150
+      at:
+        cue: tiny island
+      color: gold
+      until:
+        cue: No factories
+        offset: -0.3
+      size: 44
+      screen: true
+  sources:
+  - ap_2024
+  - gleaner_2026
   assets:
   - font:inter
 - id: s02_map
@@ -116,7 +144,7 @@ scenes:
         cue: Anguilla
     hubs:
     - id: a
-      at: &id001
+      at: &id002
       - -63.05
       - 18.22
       label: Anguilla
@@ -128,7 +156,7 @@ scenes:
     - from:
       - -77.0
       - 38.9
-      to: *id001
+      to: *id002
       at:
         cue: a Caribbean island
         offset: 1.0
@@ -141,7 +169,7 @@ scenes:
     - from:
       - -0.1
       - 51.5
-      to: *id001
+      to: *id002
       at:
         cue: a Caribbean island
         offset: 1.6
@@ -154,7 +182,7 @@ scenes:
     - from:
       - -122.4
       - 37.8
-      to: *id001
+      to: *id002
       at:
         cue: a Caribbean island
         offset: 2.2
@@ -190,44 +218,58 @@ scenes:
   segment: m1_question
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: web
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    min_seconds: 9.0
     cam:
     - at: 0
-      x: 1300
-      y: 420
-      zoom: 1.15
-    drift: 8
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
-    - kind: letters
-      text: .ai
-      x: 1260
-      y: 150
-      at:
+      x: 960
+      y: 470
+      zoom: 1.2
+    - at:
         cue: most wanted
-      size: 150
-      color: blue
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: browser
+      x: 960
+      y: 470
+      at: 0.2
+      url: the-most-wanted-letters.ai
+      typeAt: 0.6
+      typeDur: 3.0
+    - kind: letters
+      x: 1600
+      y: 260
+      text: '?'
+      at:
+        cue: no tech industry
+      size: 130
+      color: purple
     callouts:
     - text: No tech industry?
-      x: 1650
-      y: 230
+      x: 960
+      y: 150
       at:
         cue: no tech industry
       color: gold
-      tail:
-      - 1420
-      - 300
+      until:
+        cue: most wanted
+        offset: -0.3
+      screen: true
     - text: The most wanted letters online
       x: 960
-      y: 860
+      y: 960
       at:
         cue: most wanted
       color: white
       screen: true
-    fish: 3
   assets:
   - font:inter
 - id: p05_what
@@ -235,7 +277,7 @@ scenes:
   type: engine_draw
   params:
     title: What is a domain name?
-    board: &id002
+    board: &id003
       x: 470
       y: 230
       w: 1370
@@ -344,125 +386,183 @@ scenes:
   segment: m1_codes
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      left: true
-      right: true
-      leftLabel: BRAZIL
-      rightLabel: JAPAN
+    zones:
+    - set: web
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 1300
-      y: 420
-      zoom: 0.75
+      x: 960
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Anguilla's code
+      x: 1400
+      y: 520
+      zoom: 1.15
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
+    items:
+    - kind: browser
+      x: 480
+      y: 470
+      w: 520
+      h: 330
+      at:
+        cue: Brazil
+      url: example.br
+      typeAt:
+        cue: Brazil
+        offset: 0.2
+      typeDur: 1.0
+      scale: 0.9
+    - kind: browser
+      x: 960
+      y: 470
+      w: 520
+      h: 330
+      at:
+        cue: Japan
+      url: example.jp
+      typeAt:
+        cue: Japan
+        offset: 0.2
+      typeDur: 1.0
+      scale: 0.9
+    - kind: browser
+      x: 1440
+      y: 470
+      w: 520
+      h: 330
+      at:
+        cue: Anguilla's code
+      url: example.ai
+      typeAt:
+        cue: Anguilla's code
+        offset: 0.2
+      typeDur: 1.0
+      scale: 0.9
+    - kind: sign
+      x: 480
+      y: 760
+      text: BRAZIL
+      at:
+        cue: Brazil
+      size: 30
+    - kind: sign
+      x: 960
+      y: 760
+      text: JAPAN
+      at:
+        cue: Japan
+      size: 30
+    - kind: sign
+      x: 1440
+      y: 760
       text: ANGUILLA
-    - kind: letters
-      text: .br
-      x: 330
-      y: 120
       at:
-        cue: Brazil is
-      size: 110
-      color: green
-    - kind: letters
-      text: .jp
-      x: 2270
-      y: 120
-      at:
-        cue: Japan is
-      size: 110
-      color: blue
-    - kind: letters
-      text: .ai
-      x: 1260
-      y: 150
-      at:
-        cue: Anguilla's
-      size: 150
+        cue: Anguilla's code
+      color: '#FFF59D'
+      size: 30
     callouts:
     - text: Every country gets two letters
       x: 960
-      y: 960
+      y: 150
       at:
         cue: Every country
       color: white
+      until:
+        cue: official code
+        offset: -0.3
       size: 40
       screen: true
-    - text: from its official country code
+    - text: …from its official country code
       x: 960
-      y: 1030
+      y: 150
       at:
         cue: official code
       color: gold
-      size: 28
+      size: 40
       screen: true
-    fish: 3
-  sfx:
-  - kind: hit
-    cue: And Anguilla's
-    gain: 0.3
+  sources:
+  - iana_ai
   assets:
   - font:inter
 - id: s07_1995
   segment: m1_assigned
   type: engine_cartoon
   params:
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 4600
     worldW: 2600
     cam:
     - at: 0
-      x: 1300
-      y: 400
-      zoom: 1.1
-    drift: 6
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
+      x: 760
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Its official
+      x: 1700
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: calendar
+      x: 330
+      y: 320
+      at: 0.2
+      pages:
+      - - 0
+        - '{{assigned.display}}'
+        - ASSIGNED
+      scale: 0.8
     - kind: letters
+      x: 800
+      y: 360
       text: .ai
-      x: 1260
-      y: 150
-      at: 0.6
-      size: 150
-      color: grey
-    callouts:
-    - text: '1995'
-      x: 700
-      y: 180
       at:
         cue: Anguilla was assigned
+      size: 180
       color: gold
-      size: 60
-    - text: AI = a niche lab idea
-      x: 1880
-      y: 200
-      at:
-        cue: niche idea
-      color: white
-      until:
-        cue: Its official
-    - text: Worth almost nothing
-      x: 1880
-      y: 300
+    - kind: sign
+      x: 800
+      y: 590
+      text: WORTH ALMOST NOTHING
       at:
         cue: almost nothing
-      color: risk
-      until:
+      color: '#FFCDD2'
+      size: 28
+    - kind: sign
+      x: 1250
+      y: 300
+      text: “AI” = A NICHE LAB IDEA
+      at:
+        cue: niche idea
+      color: '#E1BEE7'
+      size: 28
+      hang: true
+      swing: true
+    - kind: building
+      x: 1850
+      style: gov
+      color: '#FFE082'
+      text: GOVERNMENT OF ANGUILLA
+      at:
         cue: Its official
-    - text: 'Manager: Government of Anguilla'
-      x: 1880
-      y: 250
+      scale: 0.75
+    callouts:
+    - text: 'Manager today: Government of Anguilla'
+      x: 960
+      y: 150
       at:
         cue: Its official
       color: green
       sub: IANA delegation record
-    fish: 3
+      screen: true
   sources:
   - ap_2024
   - afnic_2025
@@ -473,62 +573,129 @@ scenes:
   segment: m1_cate
   type: engine_cartoon
   params:
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 1500
+    - set: office
+      x0: 1500
+      x1: 6000
     worldW: 3400
-    coasts:
-      right: true
-      rightLabel: TAIWAN
     cam:
     - at: 0
-      x: 1300
-      y: 400
+      x: 800
+      y: 520
       zoom: 1.0
     - at:
-        cue: company in Taiwan
-      x: 2300
-      y: 400
-      zoom: 0.85
-      dur: 2.2
-    - at:
-        cue: recovered
-      x: 1400
-      y: 400
+        cue: whether he wanted
+      x: 2050
+      y: 520
       zoom: 1.0
-      dur: 2.0
+      dur: 2.4
+    - at:
+        cue: For a while
+      x: 2700
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    - at:
+        cue: For years
+      x: 2050
+      y: 520
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
+    items:
     - kind: plane
       x:
       - - 0
-        - -400
+        - -300
       - - cue: moved to the island
-          offset: 1.0
-        - 1100
-      y: 170
-      text: '1994'
-      scale: 0.8
-    - kind: letters
-      text: .ai
-      y: 150
-      at: 0.4
-      size: 130
-      x:
+        - -300
+      - - cue: moved to the island
+          offset: 5
+        - 1300
+      y:
       - - 0
-        - 1260
-      - - cue: company in Taiwan
-        - 1260
-      - - cue: company in Taiwan
-          offset: 2.0
-        - 3000
-      - - cue: recovered
-          offset: -1.0
-        - 3000
-      - - cue: recovered
-          offset: 1.0
-        - 1260
+        - 200
+      - - cue: moved to the island
+          offset: 5
+        - 520
+      tilt: 8
+      scale: 0.6
+    - kind: calendar
+      x: 330
+      y: 320
+      at:
+        cue: moved to the island
+      pages:
+      - - 0
+        - '1994'
+        - ARRIVES
+      scale: 0.7
+    - kind: desk
+      x: 2050
+      glow: green
+      pile: true
+    - kind: person
+      x: 1980
+      pose: type
+      glasses: true
+      at:
+        cue: whether he wanted
+        offset: -0.6
+      hair: 1
+    - kind: letters
+      x: 2150
+      y: 330
+      text: .ai
+      at:
+        cue: run dot
+      size: 120
+      color: gold
+    - kind: building
+      x: 2900
+      style: office
+      color: '#B0BEC5'
+      text: A COMPANY IN TAIWAN
+      at:
+        cue: company in Taiwan
+      until:
+        cue: disappeared
+        offset: 0.6
+      scale: 0.7
+    - kind: letters
+      x: 2900
+      y: 330
+      text: ?!
+      at:
+        cue: disappeared
+      until:
+        cue: recovered
+        offset: 0.5
+      size: 120
+      color: risk
+    - kind: arrow
+      from:
+      - 2850
+      - 300
+      to:
+      - 2250
+      - 300
+      at:
+        cue: recovered
+      until:
+        cue: For years
+      color: green
+      text: RECOVERED
+    - kind: sign
+      x: 2450
+      y: 300
+      text: GOVERNMENT = OFFICIAL CONTACT
+      at:
+        cue: official contact
+      color: '#C8E6C9'
+      size: 28
     callouts:
     - text: Vince Cate, software developer
       x: 960
@@ -537,41 +704,37 @@ scenes:
         cue: Vince Cate
       color: white
       sub: his own account (IEEE Spectrum)
+      until:
+        cue: For a while
+        offset: -0.3
       screen: true
     - text: “Do you want to run .ai?”
-      x: 1300
-      y: 300
+      x: 960
+      y: 150
       at:
         cue: whether he wanted
       color: gold
       until:
         cue: For a while
-    - text: A company in Taiwan…
-      x: 2700
-      y: 230
+        offset: -0.3
+      screen: true
+    - text: Handed to a company in Taiwan… that disappeared
+      x: 960
+      y: 150
       at:
-        cue: company in Taiwan
-        offset: 1.2
-      color: white
-      until:
-        cue: disappeared
-        offset: 1.5
-    - text: …disappeared!
-      x: 2700
-      y: 330
-      at:
-        cue: disappeared
+        cue: For a while
       color: risk
       until:
-        cue: recovered
-    - text: Recovered
-      x: 1700
-      y: 220
+        cue: For years
+        offset: -0.3
+      screen: true
+    - text: He ran sales for the government
+      x: 960
+      y: 150
       at:
-        cue: recovered
-        offset: 1.0
-      color: green
-    fish: 3
+        cue: For years
+      color: white
+      screen: true
   sources:
   - ieee_2024
   assets:
@@ -610,54 +773,72 @@ scenes:
   segment: m2_question
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      left: true
+    zones:
+    - set: web
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    min_seconds: 9.0
     cam:
     - at: 0
-      x: 1000
-      y: 420
-      zoom: 0.9
-    drift: 10
-    actors:
-    - kind: office
-      x: 140
-      text: START-UP
-      color: purple
-      scale: 1.0
-    - kind: office
-      x: 300
-      text: AI LAB
-      color: blue
-      scale: 0.8
-    - kind: island
-      x: 1700
-      w: 440
-      text: ANGUILLA
+      x: 960
+      y: 500
+      zoom: 1.15
+    - at:
+        cue: two letters
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: browser
+      x: 700
+      y: 470
+      at: 0.2
+      url: checkout.ai
+      typeAt: 0.5
+      page: price
+      text: PAY
+      sub: for two letters?
+      button: PAY
     - kind: coins
-      x: 260
-      y: 120
+      from:
+      - 800
+      - 560
       to:
       - 1700
-      - 260
-      at:
-        cue: Who actually
+      - 300
+      at: 1.2
       rate: 3
+    - kind: letters
+      x: 1650
+      y: 280
+      text: .ai
+      at:
+        cue: two letters
+      size: 130
+      color: gold
     callouts:
     - text: Who pays?
-      x: 1000
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: Who actually
       color: gold
+      until:
+        cue: two letters
+        offset: -0.3
       size: 44
+      screen: true
     - text: For two letters?!
-      x: 1000
-      y: 260
+      x: 960
+      y: 150
       at:
         cue: two letters
       color: white
-    fish: 3
+      size: 44
+      screen: true
   assets:
   - font:inter
 - id: p12_chain
@@ -665,7 +846,7 @@ scenes:
   type: engine_draw
   params:
     title: The money machine
-    board: *id002
+    board: *id003
     draw_start:
       cue: A start-up
     speed: 1400
@@ -784,86 +965,133 @@ scenes:
   segment: m2_price
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      left: true
+    zones:
+    - set: web
+      x0: -1600
+      x1: 4600
+    worldW: 2800
     cam:
     - at: 0
-      x: 1100
-      y: 420
-      zoom: 0.95
+      x: 760
+      y: 520
+      zoom: 1.0
     - at:
         cue: auctioned
-      x: 1500
-      y: 400
-      zoom: 1.05
-      dur: 2.0
-    drift: 6
-    actors:
-    - kind: office
-      x: 160
-      text: START-UP
-      color: green
-      scale: 1.0
-    - kind: island
-      x: 1800
-      w: 440
-      text: ANGUILLA
-    - kind: coins
-      x: 260
-      y: 120
-      to:
-      - 1800
-      - 260
+      x: 1650
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    - at:
+        cue: expires
+      x: 2300
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: browser
+      x: 640
+      y: 470
+      at: 0.2
+      url: your-name.ai
+      page: price
+      text: '{{price.display}}'
+      sub: for two years
+      button: BUY
+      w: 640
+    - kind: clock
+      x: 1150
+      y: 560
       at:
-        cue: The price
-      rate: 2
-    - kind: coins
-      x: 260
-      y: 120
-      to:
-      - 1800
-      - 260
+        cue: pay again
+      period: 2.5
+      text: RENEW
+      scale: 0.8
+    - kind: gavel
+      x: 1650
+      y: 840
+      hits:
+      - cue: litigate
+      - cue: litigate
+        offset: 0.8
+      scale: 1.3
+    - kind: sign
+      x: 1650
+      y: 380
+      text: litigate.ai
+      sub: auctioned in 2023
       at:
-        cue: auctioned
-      rate: 8
-      until:
-        cue: auctioned
-        offset: 3.0
+        cue: litigate
+      color: '#FFF59D'
+      size: 40
+    - kind: browser
+      x: 2300
+      y: 470
+      at:
+        cue: expires
+      url: old-name.ai
+      page: expired
+      w: 560
+      h: 400
+      pages:
+      - - 0
+        - expired
+      - - cue: sold again
+        - sold
+      text: SOLD AGAIN
+      button: PAID
+    - kind: coins
+      from:
+      - 2300
+      - 400
+      to:
+      - 2900
+      - 100
+      at:
+        cue: paid once more
+      rate: 4
     callouts:
     - text: '{{price.display}} for 2 years'
-      x: 560
-      y: 170
+      x: 960
+      y: 150
       at:
         cue: costs about
       color: gold
       sub: a new .ai name (IMF)
+      until:
+        cue: pay again
+        offset: -0.3
       size: 48
       screen: true
     - text: …then pay again to keep it
-      x: 560
-      y: 290
+      x: 960
+      y: 150
       at:
         cue: pay again
       color: white
+      until:
+        cue: auctioned
+        offset: -0.3
       screen: true
     - text: 'litigate.ai: {{price.auction_display}}'
-      x: 1360
-      y: 170
+      x: 960
+      y: 150
       at:
         cue: litigate
       color: green
       sub: auction, 2023 (IMF)
+      until:
+        cue: expires
+        offset: -0.3
       size: 40
       screen: true
     - text: Expired names resold → paid again
-      x: 1360
-      y: 290
+      x: 960
+      y: 150
       at:
         cue: expires
       color: white
       screen: true
-    fish: 3
   sources:
   - imf_2024
   - ap_2024
@@ -949,128 +1177,200 @@ scenes:
   segment: m2_why
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      left: true
+    zones:
+    - set: office
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 500
-      y: 330
-      zoom: 1.2
+      x: 760
+      y: 520
+      zoom: 1.15
     - at:
-        cue: everyone wants
-      x: 1200
-      y: 400
-      zoom: 0.9
+        cue: so many new
+      x: 960
+      y: 520
+      zoom: 0.95
       dur: 2.4
     drift: 0
-    actors:
-    - kind: office
-      x: 180
-      text: yourco.ai
-      color: blue
-      scale: 1.2
-    - kind: office
+    items:
+    - kind: desk
       x: 560
-      text: START-UP
-      color: purple
-      scale: 1.0
-      at:
-        cue: so many
-    - kind: office
-      x: 800
-      text: NEW APP
-      color: green
-      scale: 1.0
-      at:
-        cue: so many
-        offset: 0.4
-    - kind: island
-      x: 1900
-      w: 440
-      text: ANGUILLA
-    - kind: coins
+      glow: purple
+    - kind: person
+      x: 490
+      pose: type
+      at: 0.2
+      hair: 2
+    - kind: browser
       x: 560
-      y: 100
-      to:
-      - 1900
-      - 260
+      y: 330
+      w: 520
+      h: 300
       at:
-        cue: everyone wants
-      rate: 6
-    callouts:
-    - text: “We do AI” in two letters
-      x: 600
-      y: 160
+        cue: for an AI company
+      url: robot-chef.ai
+      typeAt:
+        cue: for an AI company
+        offset: 0.3
+      scale: 0.75
+    - kind: sign
+      x: 1150
+      y: 330
+      text: “WE DO AI”
+      sub: in two letters
       at:
         cue: two letters
-      color: gold
+      color: '#FFF59D'
       size: 40
-    - text: A brand
-      x: 900
-      y: 260
+      hang: true
+      swing: true
+    - kind: letters
+      x: 1150
+      y: 560
+      text: BRAND
       at:
         cue: like a brand
+      size: 80
       color: green
-    fish: 3
+    - kind: person
+      x: 1400
+      pose: cheer
+      at: &id004
+        cue: so many new
+      scale: 0.7
+      hair: 1
+      skin: 0
+    - kind: person
+      x: 1520
+      pose: cheer
+      at: *id004
+      scale: 0.7
+      hair: 2
+      skin: 1
+    - kind: person
+      x: 1640
+      pose: cheer
+      at: *id004
+      scale: 0.7
+      hair: 3
+      skin: 2
+    - kind: person
+      x: 1760
+      pose: cheer
+      at: *id004
+      scale: 0.7
+      hair: 4
+      skin: 3
+    callouts:
+    - text: Everyone wants one
+      x: 960
+      y: 150
+      at:
+        cue: everyone wants
+      color: gold
+      size: 44
+      screen: true
   assets:
   - font:inter
 - id: s16_manager
   segment: m2_manager
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      right: true
-      rightLabel: UNITED STATES
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 1300
+    - set: datacenter
+      x0: 1300
+      x1: 5000
+    worldW: 2800
     cam:
     - at: 0
-      x: 1100
-      y: 420
-      zoom: 0.9
-    drift: 12
-    actors:
-    - kind: island
       x: 800
-      w: 440
-      text: ANGUILLA
-    - kind: office
-      x: 2300
-      text: IDENTITY DIGITAL
-      color: gold
-      scale: 1.0
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: American company
+      x: 1900
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: building
+      x: 650
+      style: gov
+      color: '#FFE082'
+      text: GOVERNMENT
+      at: 0.2
+      scale: 0.75
+    - kind: device
+      type: server
+      x: 1700
+      y: 860
       at:
-        cue: Identity
-    - kind: coins
-      x: 2300
-      y: 160
-      to:
-      - 800
-      - 260
-      at:
-        cue: more money
-      rate: 4
-    cables:
-    - from: 900
-      to: 2400
-      lightAt:
         cue: run the registry
+      text: REGISTRY
+    - kind: sign
+      x: 2150
+      y: 330
+      text: IDENTITY DIGITAL
+      sub: American company · since 2024
+      at:
+        cue: Identity Digital
+      color: '#BBDEFB'
+      size: 34
+    - kind: arrow
+      from:
+      - 900
+      - 400
+      to:
+      - 1550
+      - 400
+      at:
+        cue: signed a deal
+      color: gold
+      text: DEAL
+    - kind: letters
+      x: 2400
+      y: 640
+      text: .au
+      at:
+        cue: dot A U
+      size: 100
+      color: cyan
     callouts:
     - text: '2024: a U.S. company runs the registry'
-      x: 1300
+      x: 960
       y: 150
       at:
         cue: signed a deal
       color: white
       sub: Identity Digital (AP)
+      until:
+        cue: more money
+        offset: -0.3
+      screen: true
     - text: More money + a safer system
-      x: 1300
-      y: 260
+      x: 960
+      y: 150
       at:
         cue: more money
       color: green
       sub: the government's words
-    fish: 3
+      until:
+        cue: Australia
+        offset: -0.3
+      screen: true
+    - text: It also runs Australia's .au
+      x: 960
+      y: 150
+      at:
+        cue: Australia
+      color: white
+      screen: true
   sources:
   - ap_2024
   - iana_ai
@@ -1110,70 +1410,58 @@ scenes:
   segment: m3_question
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      left: true
+    zones:
+    - set: web
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    min_seconds: 9.0
     cam:
     - at: 0
-      x: 900
-      y: 420
-      zoom: 0.85
-    drift: 14
-    actors:
-    - kind: office
-      x: 90
-      text: BOT
-      color: blue
-      scale: 0.75
+      x: 960
+      y: 480
+      zoom: 1.15
+    - at:
+        cue: wanted dot
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: browser
+      x: 700
+      y: 470
+      at: 0.2
+      url: chatbot.ai
+      page: chat
+      w: 700
+    - kind: browser
+      x: 1450
+      y: 380
       at:
-        cue: chatbots
-        offset: 0.0
-    - kind: office
-      x: 160
-      text: CHAT
-      color: green
-      scale: 0.75
+        cue: wanted dot
+      url: new-startup.ai
+      scale: 0.6
+      tilt: 4
+    - kind: browser
+      x: 1500
+      y: 700
       at:
-        cue: chatbots
-        offset: 0.35
-    - kind: office
-      x: 230
-      text: LAB
-      color: purple
-      scale: 0.75
-      at:
-        cue: chatbots
-        offset: 0.7
-    - kind: office
-      x: 300
-      text: APP
-      color: gold
-      scale: 0.75
-      at:
-        cue: chatbots
-        offset: 1.0499999999999998
-    - kind: island
-      x: 1900
-      w: 440
-      text: ANGUILLA
-    - kind: coins
-      x: 300
-      y: 80
-      to:
-      - 1900
-      - 260
-      at:
-        cue: suddenly wanted
-      rate: 9
+        cue: wanted dot
+        offset: 0.5
+      url: ai-anything.ai
+      scale: 0.55
+      tilt: -3
     callouts:
     - text: How big did it get?
-      x: 1150
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: How big
       color: gold
       size: 46
-    fish: 3
+      screen: true
   assets:
   - font:inter
 - id: s20_regs
@@ -1218,49 +1506,95 @@ scenes:
   segment: m3_cate
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: office
+      x0: -1600
+      x1: 4600
+    worldW: 2200
     cam:
     - at: 0
+      x: 760
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: premier said
       x: 1300
-      y: 420
-      zoom: 1.1
+      y: 520
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
-    - kind: office
-      x: 1200
-      text: REGISTRY
+    items:
+    - kind: desk
+      x: 560
+      glow: green
+      pile: true
+    - kind: person
+      x: 490
+      pose: cheer
+      glasses: true
+      at: 0.2
+      hair: 1
+    - kind: chart
+      x: 1250
+      y: 380
+      w: 600
+      h: 340
+      at:
+        cue: almost four times
+        offset: -0.6
+      dur: 2.5
+      text: MONTHLY SALES
+      pts:
+      - 0.1
+      - 0.12
+      - 0.15
+      - 0.25
+      - 0.4
+      - 0.6
+    - kind: letters
+      x: 1250
+      y: 640
+      text: ×4
+      at:
+        cue: almost four times
+      size: 110
+      color: green
+    - kind: sign
+      x: 1800
+      y: 330
+      text: “COULD EVEN DOUBLE”
+      sub: the premier, 2024
+      at:
+        cue: premier said
+      color: '#FFF59D'
+      size: 30
+    - kind: letters
+      x: 1800
+      y: 600
+      text: ×3
+      at:
+        cue: nearly tripled
+      size: 110
       color: gold
-      scale: 0.8
-      y: 314
-    - kind: coins
-      x: 2400
-      y: -100
-      to:
-      - 1250
-      - 200
-      at: 0.5
-      rate: 7
     callouts:
-    - text: Sales ≈ ×4
-      x: 750
-      y: 200
+    - text: 'Sales ≈ ×4: about {{cate_sales.display}}'
+      x: 960
+      y: 150
       at:
         cue: almost four times
       color: green
-      size: 48
-    - text: “about {{cate_sales.display}}”
-      x: 1800
-      y: 200
-      at:
-        cue: about 3 million
-      color: gold
       sub: Vince Cate, early 2024 (IEEE Spectrum)
-      size: 40
-    fish: 3
+      until:
+        cue: premier said
+        offset: -0.3
+      screen: true
+    - text: 'By 2025: nearly tripled'
+      x: 960
+      y: 150
+      at:
+        cue: nearly tripled
+      color: gold
+      screen: true
   sources:
   - ieee_2024
   assets:
@@ -1364,110 +1698,267 @@ scenes:
   segment: m4_question
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    min_seconds: 9.0
     cam:
     - at: 0
-      x: 1300
-      y: 380
-      zoom: 1.35
+      x: 960
+      y: 520
+      zoom: 1.2
+    - at:
+        cue: how much
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
+    items:
     - kind: coins
-      x: 2400
-      y: -120
+      from:
+      - 960
+      - -200
       to:
-      - 1300
-      - 260
+      - 960
+      - 760
       at: 0.3
-      rate: 4
+      rate: 5
+      arc: 0
+    - kind: letters
+      x: 960
+      y: 300
+      text: '?'
+      at:
+        cue: Where does
+      size: 140
+      color: gold
+    - kind: person
+      x: 600
+      pose: stand
+      at: &id005
+        cue: people
+      scale: 0.8
+      hair: 1
+      skin: 0
+    - kind: person
+      x: 720
+      pose: stand
+      at: *id005
+      scale: 0.8
+      hair: 2
+      skin: 1
+    - kind: person
+      x: 1200
+      pose: stand
+      at: *id005
+      scale: 0.8
+      hair: 3
+      skin: 2
+    - kind: person
+      x: 1320
+      pose: stand
+      at: *id005
+      scale: 0.8
+      hair: 4
+      skin: 3
     callouts:
     - text: Where does it go?
-      x: 1300
-      y: 120
+      x: 960
+      y: 150
       at:
         cue: Where does
       color: gold
+      until:
+        cue: how much
+        offset: -0.3
       size: 46
+      screen: true
     - text: …and how much per person?
-      x: 1300
-      y: 210
+      x: 960
+      y: 150
       at:
         cue: how much
       color: white
-    fish: 3
+      size: 44
+      screen: true
   assets:
   - font:inter
 - id: s27_uses
   segment: m4_uses
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: airport
+      x0: -1600
+      x1: 1400
+    - set: beach
+      x0: 1400
+      x1: 3200
+    - set: site
+      x0: 3200
+      x1: 7000
+    worldW: 4600
     cam:
     - at: 0
-      x: 1300
-      y: 380
+      x: 700
+      y: 520
       zoom: 1.0
+    - at:
+        cue: health services
+        offset: -0.5
+      x: 2300
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    - at:
+        cue: pay down debt
+        offset: -0.5
+      x: 2300
+      y: 500
+      zoom: 0.9
+      dur: 2.4
+    - at:
+        cue: vocational
+      x: 3900
+      y: 520
+      zoom: 1.0
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
+    items:
     - kind: plane
       x:
       - - 0
-        - 2900
+        - -300
       - - cue: the airport
-          offset: 2.5
-        - 1500
-      y: 160
-      flip: true
-      text: AIRPORT
-      scale: 0.8
+        - -300
+      - - cue: the airport
+          offset: 5
+        - 900
+      y:
+      - - 0
+        - 300
+      - - cue: the airport
+          offset: 5
+        - 790
+      tilt: 6
+      scale: 0.6
+    - kind: sign
+      x: 1150
+      y: 560
+      text: NEW ROADS
+      at:
+        cue: new roads
+      post: true
+      color: '#FFF59D'
+      size: 28
+    - kind: sign
+      x: 1700
+      y: 330
+      text: TAX RELIEF
+      at:
+        cue: tax relief
+      color: '#C8E6C9'
+      size: 34
+      hang: true
+      swing: true
+    - kind: device
+      type: hospital
+      x: 2200
+      y: 900
+      at:
+        cue: health services
+      text: HEALTH
+    - kind: person
+      x: 2500
+      pose: cheer
+      at: &id006
+        cue: free medical
+      scale: 0.7
+      hair: 4
+      skin: 0
+    - kind: person
+      x: 2620
+      pose: cheer
+      at: *id006
+      scale: 0.7
+      hair: 4
+      skin: 1
+    - kind: stack
+      x: 2900
+      at:
+        cue: pay down debt
+        offset: -0.5
+      h:
+      - - 0
+        - 500
+      - - cue: pay down debt
+        - 500
+      - - cue: pay down debt
+          offset: 3
+        - 200
+      text: DEBT
+      color: '#FFCDD2'
+    - kind: crane
+      x: 3900
+      text: TRAINING CENTER
+      at:
+        cue: vocational
+      progress:
+      - - 0
+        - 0.5
+      - - 30
+        - 0.95
     callouts:
-    - text: Airport
-      x: 600
+    - text: Airport · roads
+      x: 960
       y: 150
       at:
         cue: the airport
       color: gold
-    - text: Roads
-      x: 600
-      y: 250
-      at:
-        cue: new roads
-      color: gold
-    - text: Tax relief
-      x: 1950
+      until:
+        cue: tax relief
+        offset: -0.3
+      screen: true
+    - text: Tax relief · health services
+      x: 960
       y: 150
       at:
         cue: tax relief
       color: green
-    - text: Health services
-      x: 1950
-      y: 250
-      at:
-        cue: health services
-      color: green
+      until:
+        cue: free medical
+        offset: -0.3
+      screen: true
     - text: Free care for seniors
-      x: 1300
-      y: 870
+      x: 960
+      y: 150
       at:
         cue: free medical
       color: white
+      until:
+        cue: pay down debt
+        offset: -0.3
       screen: true
     - text: Debt paid down
-      x: 1300
-      y: 960
+      x: 960
+      y: 150
       at:
         cue: pay down debt
       color: white
+      until:
+        cue: vocational
+        offset: -0.3
       screen: true
-    fish: 3
+    - text: A new vocational training center
+      x: 960
+      y: 150
+      at:
+        cue: vocational
+      color: gold
+      screen: true
   sources:
   - dnw_2026
   - ap_2024
@@ -1479,7 +1970,7 @@ scenes:
   type: engine_draw
   params:
     title: Do the math (our calculation)
-    board: *id002
+    board: *id003
     draw_start:
       cue: In twenty twenty-five
     speed: 1400
@@ -1593,19 +2084,83 @@ scenes:
   - font:inter
 - id: s29_budget
   segment: m4_budget
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: What the money buys
-    title: How big is that?
-    sides:
-    - kicker: Whole government revenue, 2026 plan
-      value: '{{budget_2026.display}}'
-      label: converted at EC$2.70 = US$1
-      cue: plans to collect
-    - kicker: .ai alone, Jan–Jul 2026
-      value: '{{rev_2026.display}}'
-      label: The Gleaner
-      cue: A big part
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: A big part
+      x: 960
+      y: 470
+      zoom: 0.92
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: stack
+      x: 600
+      at:
+        cue: plans to collect
+      h:
+      - - 0
+        - 40
+      - - cue: plans to collect
+        - 40
+      - - cue: plans to collect
+          offset: 3
+        - 620
+      text: '{{budget_2026.display}}'
+      sub: all government revenue, 2026 plan
+    - kind: stack
+      x: 1300
+      at:
+        cue: A big part
+      h:
+      - - 0
+        - 40
+      - - cue: A big part
+        - 40
+      - - cue: A big part
+          offset: 3
+        - 225
+      text: '{{rev_2026.display}}'
+      sub: .ai alone, Jan–Jul 2026
+      color: gold
+    - kind: letters
+      x: 1300
+      y: 820
+      text: .ai
+      at:
+        cue: dot A I
+      size: 90
+      color: gold
+    callouts:
+    - text: How big is that?
+      x: 960
+      y: 150
+      at:
+        cue: For comparison
+      color: white
+      until:
+        cue: A big part
+        offset: -0.3
+      size: 44
+      screen: true
+    - text: converted at EC$2.70 = US$1
+      x: 960
+      y: 1010
+      at:
+        cue: plans to collect
+      color: white
+      size: 24
+      screen: true
   sources:
   - focus_budget_2026
   - gleaner_2026
@@ -1616,97 +2171,160 @@ scenes:
   segment: m4_tourism
   type: engine_cartoon
   params:
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 1800
+    - set: web
+      x0: 1800
+      x1: 5000
     worldW: 3000
     cam:
     - at: 0
-      x: 1300
-      y: 400
+      x: 900
+      y: 520
       zoom: 1.0
     - at:
         cue: second engine
-      x: 1700
-      y: 480
-      zoom: 0.9
-      dur: 2.2
+      x: 2300
+      y: 520
+      zoom: 1.0
+      dur: 2.6
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
-      darkAt:
+    shake:
+    - at:
         cue: powerful hurricane
-      lightAt:
-        cue: then by the pandemic
-        offset: 1.5
-    - kind: plane
-      x:
-      - - 0
-        - -300
-      - - cue: Tourism makes up
-          offset: 3
-        - 900
-      - - cue: powerful hurricane
-        - 900
-      - - cue: powerful hurricane
-          offset: 2
-        - -400
-      y: 160
-      text: TOURISTS
+      dur: 1.6
+      amp: 12
+    items:
+    - kind: person
+      x: 500
+      pose: cheer
+      at: &id007
+        cue: Tourism makes up
       scale: 0.8
+      hair: 1
+      skin: 0
+      hat: '#FFC93C'
+      until: &id008
+        cue: powerful hurricane
+    - kind: person
+      x: 640
+      pose: cheer
+      at: *id007
+      scale: 0.8
+      hair: 2
+      skin: 1
+      hat: '#FFC93C'
+      until: *id008
+    - kind: person
+      x: 1150
+      pose: cheer
+      at: *id007
+      scale: 0.8
+      hair: 3
+      skin: 2
+      hat: '#FFC93C'
+      until: *id008
+    - kind: person
+      x: 500
+      pose: worry
+      at: &id009
+        cue: powerful hurricane
+        offset: 0.3
+      scale: 0.8
+      hair: 1
+      skin: 0
+      hat: '#FFC93C'
+    - kind: person
+      x: 640
+      pose: worry
+      at: *id009
+      scale: 0.8
+      hair: 2
+      skin: 1
+      hat: '#FFC93C'
+    - kind: person
+      x: 1150
+      pose: worry
+      at: *id009
+      scale: 0.8
+      hair: 3
+      skin: 2
+      hat: '#FFC93C'
     - kind: storm
       x:
       - - 0
-        - 2300
+        - 1500
       - - cue: powerful hurricane
-          offset: 2
-        - 1400
-      y: 120
+        - 1500
+      - - cue: powerful hurricane
+          offset: 6
+        - 700
+      y: 170
       at:
         cue: powerful hurricane
-      until:
-        cue: then by the pandemic
-        offset: 1.5
-    - kind: coins
-      x: 2900
-      y: 300
-      to:
-      - 1400
-      - 300
+      scale: 1.3
+    - kind: sign
+      x: 900
+      y: 330
+      text: 'PANDEMIC: NO TOURISTS'
+      at:
+        cue: the pandemic
+      color: '#FFCDD2'
+      size: 30
+      hang: true
+      swing: true
+    - kind: browser
+      x: 2300
+      y: 450
       at:
         cue: second engine
-      rate: 5
-    cables:
-    - from: 1400
-      to: 3200
-      lightAt:
-        cue: second engine
+        offset: -0.4
+      url: island-money.ai
+      w: 620
+      h: 380
+      scale: 0.9
+    - kind: coins
+      from:
+      - 2300
+      - 300
+      to:
+      - 1200
+      - 500
+      at:
+        cue: no storm
+      rate: 4
     callouts:
     - text: Tourism = {{tourism.display}} of the economy
       x: 960
-      y: 960
+      y: 150
       at:
         cue: Tourism makes up
       color: gold
       sub: IMF
+      until:
+        cue: powerful hurricane
+        offset: -0.3
       size: 40
       screen: true
     - text: Hurricane, then pandemic
       x: 960
-      y: 1040
+      y: 150
       at:
         cue: powerful hurricane
       color: risk
       until:
         cue: second engine
+        offset: -0.3
       screen: true
     - text: A second engine, online
-      x: 2100
-      y: 230
+      x: 960
+      y: 150
       at:
         cue: second engine
       color: green
-    fish: 3
+      screen: true
   sfx:
   - kind: hit
     cue: powerful hurricane
@@ -1750,43 +2368,59 @@ scenes:
   segment: m5_question
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 4600
+      night: true
+    worldW: 1920
+    night: true
+    min_seconds: 9.0
     cam:
     - at: 0
-      x: 1300
-      y: 400
-      zoom: 1.1
+      x: 960
+      y: 520
+      zoom: 1.15
+    - at:
+        cue: Its own leaders
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    night: true
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
-    - kind: letters
-      text: .ai
-      x: 1260
-      y: 150
+    items:
+    - kind: chart
+      x: 960
+      y: 380
+      w: 620
+      h: 340
       at: 0.3
-      size: 150
-      color: grey
-    - kind: coins
-      x: 2400
-      y: -100
-      to:
-      - 1300
-      - 260
-      at: 0.2
-      rate: 1.5
+      dur: 4
+      text: '.ai MONEY: WHAT NEXT?'
+      pts:
+      - 0.1
+      - 0.2
+      - 0.4
+      - 0.7
+      - 0.85
+      - 0.8
+    - kind: letters
+      x: 1450
+      y: 280
+      text: '?'
+      at:
+        cue: cools down
+      size: 120
+      color: gold
     callouts:
     - text: What if the AI boom cools?
-      x: 1300
-      y: 120
+      x: 960
+      y: 960
       at:
         cue: What happens
       color: gold
       size: 44
-    fish: 3
+      screen: true
   assets:
   - font:inter
 - id: s34_quote
@@ -1818,179 +2452,213 @@ scenes:
   segment: m5_renewals
   type: engine_cartoon
   params:
-    worldW: 2600
-    coasts:
-      left: true
-      darkAt:
-        cue: owners stop renewing
+    zones:
+    - set: web
+      x0: -1600
+      x1: 4600
+    worldW: 2400
     cam:
     - at: 0
-      x: 1000
-      y: 420
-      zoom: 0.9
+      x: 960
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: owners stop
+      x: 1300
+      y: 520
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: office
-      x: 140
-      text: START-UP
-      color: purple
-      scale: 1.0
-    - kind: office
-      x: 300
-      text: AI APP
-      color: green
+    items:
+    - kind: clock
+      x: 560
+      y: 430
+      at: 0.3
+      period: 2.4
+      stopAt:
+        cue: owners stop
+      text: RENEWAL
+      stopText: NOT RENEWED
+    - kind: browser
+      x: 1000
+      y: 380
+      w: 520
+      h: 320
       scale: 0.8
-    - kind: island
-      x: 1800
-      w: 440
-      text: ANGUILLA
-    - kind: coins
-      x: 260
-      y: 120
-      to:
-      - 1800
-      - 260
-      at: 0.2
-      rate: 8
-      until:
-        cue: hype fades
-    - kind: coins
-      x: 260
-      y: 120
-      to:
-      - 1800
-      - 260
       at:
-        cue: hype fades
-        offset: 1.0
-      rate: 1.2
+        cue: bought in the rush
+      url: rush-buy.ai
+      pages:
+      - - 0
+        - site
+      - - cue: owners stop
+        - expired
+    - kind: browser
+      x: 1550
+      y: 380
+      w: 520
+      h: 320
+      scale: 0.8
+      at:
+        cue: bought in the rush
+        offset: 0.4
+      url: hype-bot.ai
+      pages:
+      - - 0
+        - site
+      - - cue: the hype fades
+        - expired
+    - kind: coins
+      from:
+      - 1300
+      - 600
+      to:
+      - 2300
+      - 700
+      at: 0.5
+      until:
+        cue: money shrinks
+      rate: 5
+    - kind: sign
+      x: 1300
+      y: 760
+      text: POSSIBLE RISK
+      sub: not a forecast
+      at:
+        cue: If AI
+      color: '#FFF59D'
+      size: 28
     callouts:
     - text: Renewals = the real test
-      x: 1000
-      y: 160
+      x: 960
+      y: 150
       at:
         cue: real test
       color: gold
+      until:
+        cue: owners stop
+        offset: -0.3
       size: 44
+      screen: true
     - text: Stop renewing → less money, two years later
-      x: 1000
-      y: 270
+      x: 960
+      y: 150
       at:
         cue: owners stop
       color: risk
+      until:
+        cue: slow leak
+        offset: -0.3
+      screen: true
     - text: A slow leak?
-      x: 1500
-      y: 400
+      x: 960
+      y: 150
       at:
         cue: slow leak
       color: white
-    fish: 3
+      size: 44
+      screen: true
   assets:
   - font:inter
 - id: s36_tv
   segment: m5_tv
   type: engine_cartoon
   params:
-    worldW: 2800
-    coasts:
-      left: true
-      leftLabel: VIDEO SITES
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 1700
-      y: 380
+      x: 960
+      y: 520
       zoom: 1.15
     - at:
-        cue: video sites
-      x: 1250
-      y: 420
-      zoom: 0.85
-      dur: 2.6
-    - at:
-        cue: in decline
-      x: 1800
-      y: 380
-      zoom: 1.1
-      dur: 2.0
+        cue: At its peak
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: island
-      x: 1900
-      w: 440
-      text: TUVALU
-    - kind: letters
-      text: .tv
-      x: 1860
-      y: 150
+    items:
+    - kind: sign
+      x: 330
+      y: 560
+      text: TUVALU, PACIFIC
+      post: true
       at:
-        cue: owns dot T V
-      size: 140
-      color: blue
-    - kind: office
-      x: 150
-      text: VIDEO SITE
-      color: blue
-      scale: 1.0
-    - kind: office
-      x: 310
-      text: STREAMING
-      color: purple
-      scale: 0.8
-    - kind: coins
-      x: 250
-      y: 100
-      to:
-      - 1900
-      - 260
+        cue: Tuvalu
+      color: '#FFF59D'
+      size: 28
+    - kind: device
+      type: tv
+      x: 760
+      y: 760
+      at:
+        cue: dot T V
+      text: .tv
+      redAt:
+        cue: in decline
+      scale: 1.2
+    - kind: chart
+      x: 1350
+      y: 380
+      w: 560
+      h: 330
       at:
         cue: video sites
-      rate: 8
-      until:
-        cue: Today
-    - kind: coins
-      x: 250
-      y: 100
-      to:
-      - 1900
-      - 260
-      at:
-        cue: Today
-        offset: 0.5
-      rate: 1.0
+      dur: 4
+      text: .tv NAMES (schematic)
+      pts:
+      - 0.1
+      - 0.3
+      - 0.6
+      - 0.85
+      - 0.9
+      crashAt:
+        cue: in decline
     callouts:
-    - text: Tuvalu, in the Pacific
-      x: 1900
-      y: 120
+    - text: Tuvalu owns .tv
+      x: 960
+      y: 150
       at:
         cue: Tuvalu
       color: white
       until:
-        cue: video sites
+        cue: Twitch
+        offset: -0.3
+      screen: true
     - text: A hit with video sites, incl. Twitch
       x: 960
-      y: 960
+      y: 150
       at:
         cue: Twitch
       color: gold
+      until:
+        cue: At its peak
+        offset: -0.3
       screen: true
     - text: '{{tv_io.display}} names at its peak'
       x: 960
-      y: 160
+      y: 150
       at:
         cue: At its peak
       color: green
       sub: Afnic
+      until:
+        cue: in decline
+        offset: -0.3
       size: 40
       screen: true
     - text: Now in decline
       x: 960
-      y: 260
+      y: 150
       at:
         cue: in decline
       color: risk
-      size: 40
+      size: 44
       screen: true
-    fish: 3
   sources:
   - afnic_2025
   - theworld_tv
@@ -2028,7 +2696,7 @@ scenes:
         cue: Mauritius
     hubs:
     - id: c
-      at: &id003
+      at: &id010
       - 72.4
       - -7.3
       label: British Indian Ocean Territory
@@ -2037,7 +2705,7 @@ scenes:
       time:
         cue: belongs to
     - id: m
-      at: &id004
+      at: &id011
       - 57.55
       - -20.2
       label: Mauritius
@@ -2045,8 +2713,8 @@ scenes:
       time:
         cue: Mauritius
     routes:
-    - from: *id003
-      to: *id004
+    - from: *id010
+      to: *id011
       at:
         cue: Mauritius
         offset: 0.3
@@ -2065,49 +2733,72 @@ scenes:
   segment: m5_save
   type: engine_cartoon
   params:
-    worldW: 2600
+    zones:
+    - set: beach
+      x0: -1600
+      x1: 4600
+    worldW: 1920
     cam:
     - at: 0
-      x: 1300
-      y: 380
+      x: 960
+      y: 520
       zoom: 1.1
+    - at:
+        cue: cut its debt
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
     drift: 0
-    actors:
-    - kind: island
-      x: 1300
-      w: 440
-      text: ANGUILLA
+    items:
     - kind: piggy
-      x: 1700
-      y: 230
-      at:
-        cue: saving part
-      scale: 0.9
+      x: 700
+      at: 0.2
+      text: SAVINGS
+      scale: 1.1
     - kind: coins
-      x: 2400
-      y: -100
+      from:
+      - 960
+      - -100
       to:
-      - 1700
-      - 200
-      at:
-        cue: saving part
-      rate: 5
+      - 700
+      - 620
+      at: 0.6
+      rate: 4
+    - kind: stack
+      x: 1350
+      at: 0.3
+      h:
+      - - 0
+        - 480
+      - - cue: cut its debt
+        - 480
+      - - cue: cut its debt
+          offset: 3
+        - 200
+      text: DEBT
+      color: '#FFCDD2'
     callouts:
     - text: 2025 surplus ≈ {{surplus_2025.display}}
-      x: 800
-      y: 170
+      x: 960
+      y: 150
       at:
         cue: surplus
       color: green
       sub: converted at EC$2.70 = US$1
+      until:
+        cue: cut its debt
+        offset: -0.3
       size: 42
+      screen: true
     - text: Debt cut with .ai money
-      x: 800
-      y: 290
+      x: 960
+      y: 150
       at:
         cue: cut its debt
       color: gold
-    fish: 3
+      size: 42
+      screen: true
   sources:
   - focus_budget_2026
   - eccb_peg
@@ -2118,7 +2809,7 @@ scenes:
   type: engine_draw
   params:
     title: The windfall choice
-    board: *id002
+    board: *id003
     draw_start:
       cue: On one side
     speed: 1300
@@ -2218,115 +2909,134 @@ scenes:
   segment: payoff
   type: engine_cartoon
   params:
-    worldW: 4200
-    coasts:
-      left: true
+    zones:
+    - set: web
+      x0: -1600
+      x1: 1400
+    - set: beach
+      x0: 1400
+      x1: 5000
+    worldW: 3000
     cam:
     - at: 0
-      x: 2600
-      y: 380
+      x: 2200
+      y: 520
       zoom: 1.1
     - at:
         cue: every time someone
-      x: 600
-      y: 400
+      x: 960
+      y: 520
       zoom: 1.0
       dur: 2.6
     - at:
         cue: travels across
-      x: 2300
-      y: 380
+      x: 1700
+      y: 500
       zoom: 0.8
-      dur: 4.0
+      dur: 3.0
     - at:
         cue: The lesson
-      x: 3300
-      y: 380
-      zoom: 1.05
+      x: 2200
+      y: 520
+      zoom: 1.0
       dur: 2.6
     drift: 0
-    actors:
-    - kind: office
-      x: 140
-      text: NEW AI CO
-      color: blue
-      scale: 1.0
-    - kind: office
-      x: 300
-      text: START-UP
-      color: purple
-      scale: 0.8
-    - kind: island
-      x: 3300
-      w: 440
-      text: ANGUILLA
-    - kind: letters
-      text: .ai
-      x: 3260
-      y: 150
-      at: 0.5
-      size: 150
-    - kind: coins
-      x: 300
-      y: 100
-      to:
-      - 3300
-      - 260
-      at:
-        cue: every time someone
-      rate: 5
-    - kind: piggy
-      x: 3650
-      y: 230
-      at:
-        cue: The lesson
-      scale: 0.7
-    - kind: whale
-      x:
-      - - 0
-        - 2600
-      - - 40
-        - 1600
-      y: 720
-      flip: true
-    cables:
-    - from: 330
-      to: 3100
-      lightAt:
-        cue: every time someone
-    callouts:
-    - text: No AI invented
-      x: 2600
-      y: 150
+    items:
+    - kind: sign
+      x: 1900
+      y: 330
+      text: NO AI INVENTED
       at:
         cue: didn't invent
-      color: white
       until:
         cue: every time someone
-    - text: No data center
-      x: 2600
-      y: 250
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 2500
+      y: 430
+      text: NO DATA CENTER
       at:
         cue: data center
-      color: white
       until:
         cue: every time someone
+      color: '#FFCDD2'
+      size: 30
+    - kind: letters
+      x: 2200
+      y: 330
+      text: .ai
+      at:
+        cue: right two letters
+      size: 200
+      color: gold
+    - kind: browser
+      x: 700
+      y: 420
+      at:
+        cue: every time someone
+      url: next-big-thing.ai
+      typeAt:
+        cue: names a new
+      scale: 0.8
+    - kind: coins
+      from:
+      - 900
+      - 400
+      to:
+      - 2300
+      - 700
+      at:
+        cue: travels across
+      rate: 4
+      arc: 300
+    - kind: piggy
+      x: 2000
+      at:
+        cue: spend it
+      text: SAVE
+      scale: 0.8
+    - kind: stack
+      x: 2450
+      at:
+        cue: spend it
+        offset: 0.4
+      h: 260
+      text: SPEND
+    - kind: counter
+      x: 2200
+      y: 280
+      at:
+        cue: more than a million
+      steps:
+      - - 0
+        - 0
+      - - cue: more than a million
+        - 0
+      - - cue: more than a million
+          offset: 2.5
+        - 1000000
+      prefix: ''
+      suffix: + names
+    callouts:
     - text: Right letters, right moment
-      x: 2300
+      x: 960
       y: 150
       at:
         cue: right two letters
       color: gold
       until:
         cue: every time someone
+        offset: -0.3
+      screen: true
     - text: Spend it, or make it last?
-      x: 3300
-      y: 120
+      x: 960
+      y: 150
       at:
         cue: spend it
       color: green
       size: 44
-    fish: 3
+      screen: true
   sources:
   - gleaner_2026
   assets:

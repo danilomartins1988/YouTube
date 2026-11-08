@@ -10,6 +10,7 @@ import {EconomicFlow} from './EconomicFlow/EconomicFlow';
 import {ExplodedDiagram} from './ExplodedDiagram/ExplodedDiagram';
 import {DigitalBoard, Studio} from './transitions';
 import {CartoonOcean} from './CartoonOcean/CartoonOcean';
+import {CartoonStage} from './CartoonStage/CartoonStage';
 import {fromEpisodePalette} from './motion';
 
 /**
@@ -87,6 +88,7 @@ export const EngineExplodedScene: React.FC = () => {
 /** engine_cartoon: cartoon ocean world (ships, anchors, cables with light, volcano, callouts), camera tracking. */
 export const EngineCartoonScene: React.FC = () => {
   const {ctx, p} = useParams();
+  if (p.world || p.zones) return <CartoonStage t={ctx.t} W={ctx.W} H={ctx.H} {...(p as any)} />;
   return <CartoonOcean t={ctx.t} W={ctx.W} H={ctx.H} {...(p as any)} />;
 };
 

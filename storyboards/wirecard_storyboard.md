@@ -6,7 +6,7 @@ Total 11:00 (660.1 s), 37 scenes. Timestamps come from the narration timing of t
 |---|---|---|---|---|---|---|---|
 | 1 | 0:00 | 12.7s | `s01_hook` | engine_cartoon |  | What if one of Europe's most celebrated tech companies said it had billions in the bank, a... | - |
 | 2 | 0:13 | 5.0s | `intro` | channel_intro | The channel's 5-second cinematic intro | (music only) | - |
-| 3 | 0:18 | 24.2s | `s02_stakes` | engine_cartoon |  | That happened in June twenty twenty. The German payments company Wirecard said that cash w... | aljazeera_2020, reuters_insolvency, bbk_rates |
+| 3 | 0:18 | 24.2s | `s02_stakes` | engine_cartoon |  | That happened in June twenty twenty. The German payments company Wirecard said that cash w... | aljazeera_2020, reuters_insolvency, bbk_rates, irish_2021 |
 | 4 | 0:42 | 5.4s | `s03_c1` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
 | 5 | 0:47 | 9.0s | `s04_q1` | engine_cartoon |  | So how does a small payments firm near Munich become a star of the stock market? | - |
 | 6 | 0:56 | 29.5s | `s05_origin` | engine_cartoon |  | Wirecard was founded In 1999, in Aschheim, a suburb of Munich, during the first internet b... | quartr |
@@ -31,11 +31,11 @@ Total 11:00 (660.1 s), 37 scenes. Timestamps come from the narration timing of t
 | 25 | 6:40 | 9.0s | `s24_q4` | engine_cartoon |  | How fast can a star company fall? | - |
 | 26 | 6:49 | 30.5s | `s25_week` | engine_cartoon |  | Very fast. On June nineteenth, the chief executive, Markus Braun, resigned. On June twenty... | aljazeera_2020, reuters_insolvency |
 | 27 | 7:20 | 35.0s | `s26_marsalek` | engine_cartoon |  | And one man vanished. Jan Marsalek, Wirecard's chief operating officer, is wanted by Germa... | reuters_spies, cps_spies |
-| 28 | 7:55 | 31.6s | `s27_trial` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | Markus Braun went on trial in Munich in December 2022, accused of commercial gang fraud, f... | - |
+| 28 | 7:55 | 31.6s | `s27_trial` | engine_cartoon |  | Markus Braun went on trial in Munich in December 2022, accused of commercial gang fraud, f... | lto_2025, enca_2023, bavaria_2026 |
 | 29 | 8:26 | 8.2s | `s28_t4` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | But a fraud of this size does not happen without many people looking the other way. So who... | - |
 | 30 | 8:34 | 5.4s | `s29_c5` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
 | 31 | 8:40 | 9.0s | `s30_q5` | engine_cartoon |  | Auditors, regulators, investors: who was supposed to catch it? | - |
-| 32 | 8:49 | 20.4s | `s31_auditor` | compare | Side-by-side figures count up; bars rise | First, the auditor. EY had signed off Wirecard's accounts without objections for more than... | irish_2023 |
+| 32 | 8:49 | 20.4s | `s31_auditor` | engine_cartoon |  | First, the auditor. EY had signed off Wirecard's accounts without objections for more than... | irish_2023 |
 | 33 | 9:09 | 24.5s | `s32_regulator` | engine_cartoon |  | Then, the regulator. In January 2021, the head of BaFin, Felix Hufeld, left his post. The ... | irish_2021 |
 | 34 | 9:34 | 23.8s | `p33_net` | engine_draw |  | Let me draw the safety net that was supposed to work. The company reports its numbers. The... | irish_2023, irish_2021, quartr |
 | 35 | 9:58 | 27.3s | `s34_lesson` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | The lesson is not only about one company. When a story is exciting, a national champion, a... | - |

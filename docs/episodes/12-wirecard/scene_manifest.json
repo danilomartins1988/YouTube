@@ -14,6 +14,27 @@
       "narration": "What if one of Europe's most celebrated tech companies said it had billions in the bank, and then, one day, admitted that the money had probably never existed?",
       "keyframes": [
         {
+          "param": "cam[1].at.cue",
+          "cue": "billions in the bank",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.19,
+          "absolute_s": 5.19
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "billions in the bank",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.19,
+          "absolute_s": 5.19
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "billions in the bank",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.19,
+          "absolute_s": 5.19
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "billions in the bank",
           "label": "callouts[0].at.cue",
@@ -21,18 +42,60 @@
           "absolute_s": 5.19
         },
         {
-          "param": "cam[1].at.cue",
-          "cue": "admitted",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 8.17,
-          "absolute_s": 8.17
+          "param": "items[3].until.cue",
+          "cue": "one day",
+          "label": "items[3].until.cue",
+          "scene_time_s": 7.43,
+          "absolute_s": 7.43
         },
         {
-          "param": "actors[3].until.cue",
-          "cue": "admitted",
-          "label": "actors[3].until.cue",
-          "scene_time_s": 8.17,
-          "absolute_s": 8.17
+          "param": "items[4].until.cue",
+          "cue": "one day",
+          "label": "items[4].until.cue",
+          "scene_time_s": 7.43,
+          "absolute_s": 7.43
+        },
+        {
+          "param": "items[5].until.cue",
+          "cue": "one day",
+          "label": "items[5].until.cue",
+          "scene_time_s": 7.43,
+          "absolute_s": 7.43
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "one day",
+          "label": "items[6].at.cue",
+          "scene_time_s": 7.73,
+          "absolute_s": 7.73
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "one day",
+          "label": "items[7].at.cue",
+          "scene_time_s": 7.73,
+          "absolute_s": 7.73
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "one day",
+          "label": "items[8].at.cue",
+          "scene_time_s": 7.73,
+          "absolute_s": 7.73
+        },
+        {
+          "param": "items[1].crackAt.cue",
+          "cue": "never existed",
+          "label": "items[1].crackAt.cue",
+          "scene_time_s": 10.97,
+          "absolute_s": 10.97
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "never existed",
+          "label": "items[2].until.cue",
+          "scene_time_s": 10.97,
+          "absolute_s": 10.97
         },
         {
           "param": "callouts[1].at.cue",
@@ -80,39 +143,81 @@
       "narration": "That happened in June twenty twenty. The German payments company Wirecard said that cash worth about 2.2 billion dollars, converted at that year's average exchange rate, was most likely not there at all. Days later, it was bankrupt. Germany's own finance minister would later call it the country's greatest postwar accounting fraud.",
       "keyframes": [
         {
-          "param": "callouts[0].at.cue",
-          "cue": "June twenty twenty",
-          "label": "callouts[0].at.cue",
-          "scene_time_s": 1.51,
-          "absolute_s": 19.25
-        },
-        {
-          "param": "actors[3].at.cue",
+          "param": "items[0].darkAt.cue",
           "cue": "most likely",
-          "label": "actors[3].at.cue",
+          "label": "items[0].darkAt.cue",
           "scene_time_s": 12.97,
           "absolute_s": 30.7
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "most likely",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.97,
+          "absolute_s": 30.7
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "most likely",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 12.97,
+          "absolute_s": 30.7
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "bankrupt",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 34.74
+        },
+        {
+          "param": "shake[0].at.cue",
+          "cue": "bankrupt",
+          "label": "shake[0].at.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 34.74
+        },
+        {
+          "param": "items[0].crumbleAt.cue",
+          "cue": "bankrupt",
+          "label": "items[0].crumbleAt.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 34.74
         },
         {
           "param": "callouts[1].at.cue",
-          "cue": "most likely",
-          "label": "callouts[1].at.cue",
-          "scene_time_s": 12.97,
-          "absolute_s": 30.7
-        },
-        {
-          "param": "coasts.darkAt.cue",
           "cue": "bankrupt",
-          "label": "coasts.darkAt.cue",
+          "label": "callouts[1].at.cue",
           "scene_time_s": 17.0,
           "absolute_s": 34.74
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "bankrupt",
+          "label": "items[3].at.cue",
+          "scene_time_s": 17.6,
+          "absolute_s": 35.34
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "bankrupt",
+          "label": "items[4].at.cue",
+          "scene_time_s": 17.6,
+          "absolute_s": 35.34
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "greatest postwar",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 21.5,
+          "absolute_s": 39.24
         },
         {
           "param": "callouts[2].at.cue",
-          "cue": "bankrupt",
+          "cue": "greatest postwar",
           "label": "callouts[2].at.cue",
-          "scene_time_s": 17.0,
-          "absolute_s": 34.74
+          "scene_time_s": 21.9,
+          "absolute_s": 39.64
         }
       ],
       "unresolved_cues": [],
@@ -122,7 +227,8 @@
       "sources": [
         "aljazeera_2020",
         "reuters_insolvency",
-        "bbk_rates"
+        "bbk_rates",
+        "irish_2021"
       ],
       "transition_out": "scan"
     },
@@ -163,18 +269,46 @@
           "absolute_s": 48.84
         },
         {
-          "param": "actors[1].at.cue",
+          "param": "cam[1].at.cue",
           "cue": "star of the stock market",
-          "label": "actors[1].at.cue",
+          "label": "cam[1].at.cue",
           "scene_time_s": 4.28,
           "absolute_s": 51.65
         },
         {
-          "param": "actors[2].at.cue",
+          "param": "items[0].h[1][0].cue",
           "cue": "star of the stock market",
-          "label": "actors[2].at.cue",
+          "label": "items[0].h[1][0].cue",
           "scene_time_s": 4.28,
           "absolute_s": 51.65
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "star of the stock market",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.28,
+          "absolute_s": 51.65
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "star of the stock market",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.28,
+          "absolute_s": 52.65
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "star of the stock market",
+          "label": "items[3].at.cue",
+          "scene_time_s": 5.28,
+          "absolute_s": 52.65
+        },
+        {
+          "param": "items[0].h[2][0].cue",
+          "cue": "star of the stock market",
+          "label": "items[0].h[2][0].cue",
+          "scene_time_s": 6.28,
+          "absolute_s": 53.65
         }
       ],
       "unresolved_cues": [],
@@ -196,9 +330,9 @@
       "narration": "Wirecard was founded In 1999, in Aschheim, a suburb of Munich, during the first internet boom. Its job sounded simple: process card payments for websites. Its early customers were businesses many banks saw as high risk, such as online gambling and adult sites. In 2005, it got onto the stock market without a classic listing, by merging into a company that was already listed in Frankfurt.",
       "keyframes": [
         {
-          "param": "actors[0].at.cue",
+          "param": "items[0].at.cue",
           "cue": "Wirecard was founded",
-          "label": "actors[0].at.cue",
+          "label": "items[0].at.cue",
           "scene_time_s": 0.35,
           "absolute_s": 56.72
         },
@@ -210,9 +344,30 @@
           "absolute_s": 56.72
         },
         {
-          "param": "actors[3].at.cue",
+          "param": "items[1].at.cue",
+          "cue": "Aschheim",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.85,
+          "absolute_s": 60.21
+        },
+        {
+          "param": "items[2].at.cue",
           "cue": "process card payments",
-          "label": "actors[3].at.cue",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.95,
+          "absolute_s": 66.32
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "process card payments",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 10.15,
+          "absolute_s": 66.52
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "process card payments",
+          "label": "cam[1].at.cue",
           "scene_time_s": 10.45,
           "absolute_s": 66.82
         },
@@ -224,9 +379,30 @@
           "absolute_s": 66.82
         },
         {
-          "param": "cam[1].at.cue",
+          "param": "items[2].taps[0].cue",
+          "cue": "process card payments",
+          "label": "items[2].taps[0].cue",
+          "scene_time_s": 10.85,
+          "absolute_s": 67.22
+        },
+        {
+          "param": "items[2].taps[1].cue",
+          "cue": "process card payments",
+          "label": "items[2].taps[1].cue",
+          "scene_time_s": 12.85,
+          "absolute_s": 69.22
+        },
+        {
+          "param": "callouts[1].until.cue",
           "cue": "early customers",
-          "label": "cam[1].at.cue",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 13.39,
+          "absolute_s": 69.76
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "early customers",
+          "label": "cam[2].at.cue",
           "scene_time_s": 13.69,
           "absolute_s": 70.06
         },
@@ -238,11 +414,67 @@
           "absolute_s": 70.06
         },
         {
+          "param": "items[2].taps[2].cue",
+          "cue": "high risk",
+          "label": "items[2].taps[2].cue",
+          "scene_time_s": 16.42,
+          "absolute_s": 72.79
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "online gambling",
+          "label": "items[3].at.cue",
+          "scene_time_s": 17.31,
+          "absolute_s": 73.68
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "adult sites",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.22,
+          "absolute_s": 74.59
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "without a classic",
+          "label": "items[5].at.cue",
+          "scene_time_s": 22.91,
+          "absolute_s": 79.27
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "merging into",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 24.61,
+          "absolute_s": 80.97
+        },
+        {
+          "param": "cam[3].at.cue",
+          "cue": "merging into",
+          "label": "cam[3].at.cue",
+          "scene_time_s": 24.91,
+          "absolute_s": 81.27
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "merging into",
+          "label": "items[6].at.cue",
+          "scene_time_s": 24.91,
+          "absolute_s": 81.27
+        },
+        {
           "param": "callouts[3].at.cue",
           "cue": "merging into",
           "label": "callouts[3].at.cue",
           "scene_time_s": 24.91,
           "absolute_s": 81.27
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "merging into",
+          "label": "items[7].at.cue",
+          "scene_time_s": 25.41,
+          "absolute_s": 81.77
         }
       ],
       "unresolved_cues": [],
@@ -383,18 +615,39 @@
       "narration": "And Wirecard grew fast, especially far from home. By early twenty sixteen, about 40 percent of its revenue came from Southeast Asia and the Middle East. In twenty seventeen it reported revenue of more than 1.1 billion dollars for the first time. By then, its shares had risen roughly eight hundred percent since its stock market debut in twenty oh five.",
       "keyframes": [
         {
-          "param": "actors[3].at.cue",
+          "param": "items[1].x[1][0].cue",
           "cue": "far from home",
-          "label": "actors[3].at.cue",
+          "label": "items[1].x[1][0].cue",
           "scene_time_s": 3.18,
           "absolute_s": 112.28
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "far from home",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.18,
+          "absolute_s": 112.28
+        },
+        {
+          "param": "items[1].x[2][0].cue",
+          "cue": "far from home",
+          "label": "items[1].x[2][0].cue",
+          "scene_time_s": 7.18,
+          "absolute_s": 116.28
+        },
+        {
+          "param": "items[1].y[1][0].cue",
+          "cue": "far from home",
+          "label": "items[1].y[1][0].cue",
+          "scene_time_s": 7.18,
+          "absolute_s": 116.28
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Southeast Asia",
           "label": "cam[1].at.cue",
-          "scene_time_s": 8.99,
-          "absolute_s": 118.09
+          "scene_time_s": 7.99,
+          "absolute_s": 117.09
         },
         {
           "param": "callouts[0].at.cue",
@@ -404,11 +657,74 @@
           "absolute_s": 118.09
         },
         {
+          "param": "items[2].at.cue",
+          "cue": "Southeast Asia",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.49,
+          "absolute_s": 118.59
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Middle East",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.19,
+          "absolute_s": 119.28
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Middle East",
+          "label": "items[4].at.cue",
+          "scene_time_s": 10.99,
+          "absolute_s": 120.08
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "twenty seventeen",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.35,
+          "absolute_s": 120.45
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "twenty seventeen",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 11.65,
+          "absolute_s": 120.75
+        },
+        {
+          "param": "items[0].h[1][0].cue",
+          "cue": "twenty seventeen",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 11.65,
+          "absolute_s": 120.75
+        },
+        {
           "param": "callouts[1].at.cue",
           "cue": "twenty seventeen",
           "label": "callouts[1].at.cue",
           "scene_time_s": 11.65,
           "absolute_s": 120.75
+        },
+        {
+          "param": "items[0].h[2][0].cue",
+          "cue": "twenty seventeen",
+          "label": "items[0].h[2][0].cue",
+          "scene_time_s": 14.65,
+          "absolute_s": 123.75
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "eight hundred percent",
+          "label": "items[5].at.cue",
+          "scene_time_s": 19.64,
+          "absolute_s": 128.74
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "eight hundred percent",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 20.64,
+          "absolute_s": 129.74
         }
       ],
       "unresolved_cues": [],
@@ -440,18 +756,32 @@
           "absolute_s": 140.56
         },
         {
-          "param": "actors[2].x[1][0].cue",
+          "param": "items[0].swap.at.cue",
           "cue": "pushed out",
-          "label": "actors[2].x[1][0].cue",
+          "label": "items[0].swap.at.cue",
           "scene_time_s": 10.85,
           "absolute_s": 145.22
         },
         {
-          "param": "actors[2].x[2][0].cue",
-          "cue": "pushed out",
-          "label": "actors[2].x[2][0].cue",
-          "scene_time_s": 12.85,
-          "absolute_s": 147.22
+          "param": "callouts[0].until.cue",
+          "cue": "employees",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 17.64,
+          "absolute_s": 152.01
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "employees",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.94,
+          "absolute_s": 152.31
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "employees",
+          "label": "items[1].at.cue",
+          "scene_time_s": 17.94,
+          "absolute_s": 152.31
         },
         {
           "param": "callouts[1].at.cue",
@@ -461,16 +791,107 @@
           "absolute_s": 152.31
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[2].at.cue",
+          "cue": "employees",
+          "label": "items[2].at.cue",
+          "scene_time_s": 18.14,
+          "absolute_s": 152.51
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "a tenth",
+          "label": "items[3].at.cue",
+          "scene_time_s": 18.62,
+          "absolute_s": 152.99
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "a tenth",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "a tenth",
+          "label": "items[5].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "a tenth",
+          "label": "items[6].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "a tenth",
+          "label": "items[7].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "a tenth",
+          "label": "items[8].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "a tenth",
+          "label": "items[9].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[10].at.cue",
+          "cue": "a tenth",
+          "label": "items[10].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[11].at.cue",
+          "cue": "a tenth",
+          "label": "items[11].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[12].at.cue",
+          "cue": "a tenth",
+          "label": "items[12].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[13].at.cue",
+          "cue": "a tenth",
+          "label": "items[13].at.cue",
+          "scene_time_s": 18.82,
+          "absolute_s": 153.19
+        },
+        {
+          "param": "items[14].at.cue",
           "cue": "twice as much",
-          "label": "callouts[2].at.cue",
+          "label": "items[14].at.cue",
           "scene_time_s": 20.71,
           "absolute_s": 155.07
         },
         {
-          "param": "callouts[3].at.cue",
+          "param": "callouts[1].until.cue",
           "cue": "At its peak",
-          "label": "callouts[3].at.cue",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 21.69,
+          "absolute_s": 156.06
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "At its peak",
+          "label": "callouts[2].at.cue",
           "scene_time_s": 21.99,
           "absolute_s": 156.36
         }
@@ -556,6 +977,13 @@
           "absolute_s": 177.78
         },
         {
+          "param": "cam[1].at.cue",
+          "cue": "nobody listen",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.91,
+          "absolute_s": 181.35
+        },
+        {
           "param": "callouts[1].at.cue",
           "cue": "nobody listen",
           "label": "callouts[1].at.cue",
@@ -582,18 +1010,25 @@
       "narration": "In 2015, a journalist at the Financial Times, Dan McCrum, began asking questions about Wirecard's acquisitions and its accounts. In January twenty nineteen, the paper went further. Based on a whistleblower, a former head of legal for Wirecard in Asia, it reported suspicions about the company's business in Singapore.",
       "keyframes": [
         {
-          "param": "actors[3].at.cue",
-          "cue": "began asking",
-          "label": "actors[3].at.cue",
-          "scene_time_s": 5.18,
-          "absolute_s": 191.62
-        },
-        {
           "param": "callouts[0].at.cue",
           "cue": "began asking",
           "label": "callouts[0].at.cue",
           "scene_time_s": 5.18,
           "absolute_s": 191.62
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "began asking",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.58,
+          "absolute_s": 192.02
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "January twenty nineteen",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.96,
+          "absolute_s": 196.39
         },
         {
           "param": "cam[1].at.cue",
@@ -603,11 +1038,53 @@
           "absolute_s": 196.69
         },
         {
+          "param": "items[2].until.cue",
+          "cue": "January twenty nineteen",
+          "label": "items[2].until.cue",
+          "scene_time_s": 10.26,
+          "absolute_s": 196.69
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "went further",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.11,
+          "absolute_s": 198.54
+        },
+        {
+          "param": "items[3].runAt.cue",
+          "cue": "went further",
+          "label": "items[3].runAt.cue",
+          "scene_time_s": 12.61,
+          "absolute_s": 199.04
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "whistleblower",
+          "label": "items[4].at.cue",
+          "scene_time_s": 14.71,
+          "absolute_s": 201.14
+        },
+        {
           "param": "callouts[1].at.cue",
           "cue": "whistleblower",
           "label": "callouts[1].at.cue",
           "scene_time_s": 14.71,
           "absolute_s": 201.14
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "whistleblower",
+          "label": "items[5].at.cue",
+          "scene_time_s": 15.01,
+          "absolute_s": 201.44
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "suspicions",
+          "label": "items[6].at.cue",
+          "scene_time_s": 19.38,
+          "absolute_s": 205.82
         }
       ],
       "unresolved_cues": [],
@@ -631,6 +1108,27 @@
       "narration": "What happened next was extraordinary. Germany's financial regulator, BaFin, did not turn on the company. It banned investors from betting against Wirecard's shares for two months, the first time it had ever done that for a single stock. And prosecutors in Munich opened an investigation into a Financial Times journalist, after a criminal complaint. The newspaper rejected the allegations as baseless and false.",
       "keyframes": [
         {
+          "param": "items[2].barks[0].cue",
+          "cue": "did not turn on",
+          "label": "items[2].barks[0].cue",
+          "scene_time_s": 6.45,
+          "absolute_s": 215.92
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "banned investors",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.41,
+          "absolute_s": 217.88
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "banned investors",
+          "label": "items[6].at.cue",
+          "scene_time_s": 8.41,
+          "absolute_s": 217.88
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "banned investors",
           "label": "callouts[0].at.cue",
@@ -638,16 +1136,37 @@
           "absolute_s": 217.88
         },
         {
-          "param": "actors[2].x[1][0].cue",
-          "cue": "prosecutors",
-          "label": "actors[2].x[1][0].cue",
-          "scene_time_s": 17.43,
-          "absolute_s": 226.89
+          "param": "items[2].barks[1].cue",
+          "cue": "banned investors",
+          "label": "items[2].barks[1].cue",
+          "scene_time_s": 8.71,
+          "absolute_s": 218.18
         },
         {
-          "param": "actors[2].at.cue",
+          "param": "items[4].at.cue",
+          "cue": "betting against",
+          "label": "items[4].at.cue",
+          "scene_time_s": 9.86,
+          "absolute_s": 219.32
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "betting against",
+          "label": "items[5].at.cue",
+          "scene_time_s": 9.86,
+          "absolute_s": 219.32
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "prosecutors",
-          "label": "actors[2].at.cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 17.13,
+          "absolute_s": 226.59
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "prosecutors",
+          "label": "cam[2].at.cue",
           "scene_time_s": 17.43,
           "absolute_s": 226.89
         },
@@ -659,16 +1178,51 @@
           "absolute_s": 226.89
         },
         {
-          "param": "actors[2].x[2][0].cue",
+          "param": "items[2].barks[2].cue",
           "cue": "prosecutors",
-          "label": "actors[2].x[2][0].cue",
-          "scene_time_s": 19.43,
-          "absolute_s": 228.89
+          "label": "items[2].barks[2].cue",
+          "scene_time_s": 17.73,
+          "absolute_s": 227.19
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[7].at.cue",
+          "cue": "Financial Times journalist",
+          "label": "items[7].at.cue",
+          "scene_time_s": 20.45,
+          "absolute_s": 229.92
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "Financial Times journalist",
+          "label": "items[8].at.cue",
+          "scene_time_s": 20.75,
+          "absolute_s": 230.22
+        },
+        {
+          "param": "items[8].x[1][0].cue",
+          "cue": "Financial Times journalist",
+          "label": "items[8].x[1][0].cue",
+          "scene_time_s": 20.95,
+          "absolute_s": 230.42
+        },
+        {
+          "param": "items[8].x[2][0].cue",
+          "cue": "Financial Times journalist",
+          "label": "items[8].x[2][0].cue",
+          "scene_time_s": 23.95,
+          "absolute_s": 233.42
+        },
+        {
+          "param": "items[8].until.cue",
           "cue": "baseless",
-          "label": "callouts[2].at.cue",
+          "label": "items[8].until.cue",
+          "scene_time_s": 27.83,
+          "absolute_s": 237.3
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "baseless",
+          "label": "items[9].at.cue",
           "scene_time_s": 27.83,
           "absolute_s": 237.3
         }
@@ -852,11 +1406,25 @@
           "absolute_s": 273.15
         },
         {
-          "param": "actors[2].at.cue",
-          "cue": "couldn't anyone",
-          "label": "actors[2].at.cue",
-          "scene_time_s": 4.83,
-          "absolute_s": 277.63
+          "param": "cam[1].at.cue",
+          "cue": "see it",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.78,
+          "absolute_s": 278.58
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "see it",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.78,
+          "absolute_s": 278.58
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "see it",
+          "label": "items[3].at.cue",
+          "scene_time_s": 6.08,
+          "absolute_s": 278.88
         }
       ],
       "unresolved_cues": [],
@@ -971,9 +1539,16 @@
       "narration": "In April twenty twenty, a special investigation by the auditor KPMG was supposed to settle the question. It did not. According to Wirecard's own statement, not all the data needed to prove the revenues of that business could be obtained, because it was in the hands of the partners. Wirecard, for its part, said the investigation had found no incriminating evidence of balance sheet forgery.",
       "keyframes": [
         {
-          "param": "actors[1].at.cue",
+          "param": "items[1].at.cue",
           "cue": "special investigation",
-          "label": "actors[1].at.cue",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.42,
+          "absolute_s": 305.42
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "special investigation",
+          "label": "items[2].at.cue",
           "scene_time_s": 2.42,
           "absolute_s": 305.42
         },
@@ -985,11 +1560,67 @@
           "absolute_s": 305.42
         },
         {
+          "param": "items[3].at.cue",
+          "cue": "special investigation",
+          "label": "items[3].at.cue",
+          "scene_time_s": 2.92,
+          "absolute_s": 305.92
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "not all the data",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 12.29,
+          "absolute_s": 315.29
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "not all the data",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.59,
+          "absolute_s": 315.59
+        },
+        {
           "param": "callouts[1].at.cue",
-          "cue": "in the hands",
+          "cue": "not all the data",
           "label": "callouts[1].at.cue",
-          "scene_time_s": 18.44,
-          "absolute_s": 321.44
+          "scene_time_s": 12.59,
+          "absolute_s": 315.59
+        },
+        {
+          "param": "items[3].stampAt.cue",
+          "cue": "could be obtained",
+          "label": "items[3].stampAt.cue",
+          "scene_time_s": 16.37,
+          "absolute_s": 319.37
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "for its part",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 21.2,
+          "absolute_s": 324.2
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "for its part",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 21.5,
+          "absolute_s": 324.5
+        },
+        {
+          "param": "items[4].until.cue",
+          "cue": "for its part",
+          "label": "items[4].until.cue",
+          "scene_time_s": 21.5,
+          "absolute_s": 324.5
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "for its part",
+          "label": "items[6].at.cue",
+          "scene_time_s": 21.5,
+          "absolute_s": 324.5
         },
         {
           "param": "callouts[2].at.cue",
@@ -1020,9 +1651,16 @@
       "narration": "Then, on June eighteenth, twenty twenty, Wirecard's regular auditor, EY, refused to sign the accounts. Cash worth about 2.2 billion dollars could not be confirmed. There were indications, the company said, that a trustee had tried to deceive the auditor. That day, the shares fell by as much as 71 percent.",
       "keyframes": [
         {
-          "param": "actors[2].at.cue",
+          "param": "items[1].refuseAt.cue",
           "cue": "refused to sign",
-          "label": "actors[2].at.cue",
+          "label": "items[1].refuseAt.cue",
+          "scene_time_s": 6.41,
+          "absolute_s": 337.77
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "refused to sign",
+          "label": "items[2].at.cue",
           "scene_time_s": 6.41,
           "absolute_s": 337.77
         },
@@ -1034,6 +1672,20 @@
           "absolute_s": 337.77
         },
         {
+          "param": "callouts[0].until.cue",
+          "cue": "could not be confirmed",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.93,
+          "absolute_s": 343.3
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "could not be confirmed",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.23,
+          "absolute_s": 343.6
+        },
+        {
           "param": "callouts[1].at.cue",
           "cue": "could not be confirmed",
           "label": "callouts[1].at.cue",
@@ -1042,8 +1694,43 @@
         },
         {
           "param": "callouts[2].at.cue",
-          "cue": "shares fell",
+          "cue": "indications",
           "label": "callouts[2].at.cue",
+          "scene_time_s": 14.75,
+          "absolute_s": 346.12
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "That day",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 20.12,
+          "absolute_s": 351.49
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "shares fell",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 20.81,
+          "absolute_s": 352.18
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "shares fell",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 20.81,
+          "absolute_s": 352.18
+        },
+        {
+          "param": "items[4].crashAt.cue",
+          "cue": "shares fell",
+          "label": "items[4].crashAt.cue",
+          "scene_time_s": 21.11,
+          "absolute_s": 352.48
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "shares fell",
+          "label": "callouts[3].at.cue",
           "scene_time_s": 21.11,
           "absolute_s": 352.48
         }
@@ -1070,6 +1757,20 @@
       "narration": "The search ended in the Philippines, where the money was supposed to be held in two banks. Both said the documents were false, and that Wirecard was not even a client. The Philippine central bank said the money did not seem to have entered the country at all. Four days later, Wirecard admitted it: the money most likely did not exist. That was about a quarter of everything the company said it owned.",
       "keyframes": [
         {
+          "param": "items[3].at.cue",
+          "cue": "two banks",
+          "label": "items[3].at.cue",
+          "scene_time_s": 5.08,
+          "absolute_s": 361.18
+        },
+        {
+          "param": "items[3].stampAt.cue",
+          "cue": "documents were false",
+          "label": "items[3].stampAt.cue",
+          "scene_time_s": 6.79,
+          "absolute_s": 362.89
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "documents were false",
           "label": "callouts[0].at.cue",
@@ -1077,25 +1778,116 @@
           "absolute_s": 362.89
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[4].at.cue",
           "cue": "not even a client",
-          "label": "callouts[1].at.cue",
+          "label": "items[4].at.cue",
           "scene_time_s": 9.73,
           "absolute_s": 365.83
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[5].at.cue",
+          "cue": "not even a client",
+          "label": "items[5].at.cue",
+          "scene_time_s": 9.73,
+          "absolute_s": 365.83
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "not even a client",
+          "label": "items[6].at.cue",
+          "scene_time_s": 9.73,
+          "absolute_s": 365.83
+        },
+        {
+          "param": "items[7].at.cue",
           "cue": "central bank",
-          "label": "callouts[2].at.cue",
+          "label": "items[7].at.cue",
+          "scene_time_s": 12.07,
+          "absolute_s": 368.17
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "central bank",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 12.27,
+          "absolute_s": 368.37
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "central bank",
+          "label": "cam[1].at.cue",
           "scene_time_s": 12.57,
           "absolute_s": 368.67
         },
         {
-          "param": "callouts[3].at.cue",
+          "param": "items[8].at.cue",
+          "cue": "central bank",
+          "label": "items[8].at.cue",
+          "scene_time_s": 12.57,
+          "absolute_s": 368.67
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "central bank",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 12.57,
+          "absolute_s": 368.67
+        },
+        {
+          "param": "items[8].until.cue",
+          "cue": "entered the country",
+          "label": "items[8].until.cue",
+          "scene_time_s": 14.58,
+          "absolute_s": 370.68
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "entered the country",
+          "label": "items[9].at.cue",
+          "scene_time_s": 14.58,
+          "absolute_s": 370.68
+        },
+        {
+          "param": "items[10].at.cue",
+          "cue": "Four days later",
+          "label": "items[10].at.cue",
+          "scene_time_s": 16.32,
+          "absolute_s": 372.42
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Four days later",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 16.62,
+          "absolute_s": 372.72
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Four days later",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 16.92,
+          "absolute_s": 373.02
+        },
+        {
+          "param": "items[10].crackAt.cue",
           "cue": "most likely did not exist",
-          "label": "callouts[3].at.cue",
+          "label": "items[10].crackAt.cue",
           "scene_time_s": 20.83,
           "absolute_s": 376.93
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "most likely did not exist",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 20.83,
+          "absolute_s": 376.93
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "of everything",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 24.74,
+          "absolute_s": 380.84
         }
       ],
       "unresolved_cues": [],
@@ -1182,6 +1974,13 @@
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
           "absolute_s": 400.45
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "How fast",
+          "label": "items[2].at.cue",
+          "scene_time_s": 0.95,
+          "absolute_s": 401.05
         }
       ],
       "unresolved_cues": [],
@@ -1203,6 +2002,13 @@
       "narration": "Very fast. On June nineteenth, the chief executive, Markus Braun, resigned. On June twenty-fifth, Wirecard filed for insolvency. It became the first company in the DAX ever to go out of business, leaving creditors owed nearly 4 billion dollars. A company once valued at 28 billion dollars was gone. Two years earlier, it had pushed one of Germany's biggest banks out of the DAX. Now it had fallen out of existence.",
       "keyframes": [
         {
+          "param": "items[1].spinAt.cue",
+          "cue": "resigned",
+          "label": "items[1].spinAt.cue",
+          "scene_time_s": 5.25,
+          "absolute_s": 414.35
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "resigned",
           "label": "callouts[0].at.cue",
@@ -1210,9 +2016,37 @@
           "absolute_s": 414.35
         },
         {
-          "param": "coasts.darkAt.cue",
+          "param": "cam[1].at.cue",
           "cue": "filed for insolvency",
-          "label": "coasts.darkAt.cue",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.39,
+          "absolute_s": 416.49
+        },
+        {
+          "param": "items[0].x[1][0].cue",
+          "cue": "filed for insolvency",
+          "label": "items[0].x[1][0].cue",
+          "scene_time_s": 7.39,
+          "absolute_s": 416.49
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "filed for insolvency",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.09,
+          "absolute_s": 417.19
+        },
+        {
+          "param": "items[0].pages[1][0].cue",
+          "cue": "filed for insolvency",
+          "label": "items[0].pages[1][0].cue",
+          "scene_time_s": 8.39,
+          "absolute_s": 417.49
+        },
+        {
+          "param": "items[2].darkAt.cue",
+          "cue": "filed for insolvency",
+          "label": "items[2].darkAt.cue",
           "scene_time_s": 8.39,
           "absolute_s": 417.49
         },
@@ -1224,6 +2058,34 @@
           "absolute_s": 417.49
         },
         {
+          "param": "shake[0].at.cue",
+          "cue": "filed for insolvency",
+          "label": "shake[0].at.cue",
+          "scene_time_s": 8.79,
+          "absolute_s": 417.89
+        },
+        {
+          "param": "items[2].crumbleAt.cue",
+          "cue": "filed for insolvency",
+          "label": "items[2].crumbleAt.cue",
+          "scene_time_s": 8.79,
+          "absolute_s": 417.89
+        },
+        {
+          "param": "items[0].x[2][0].cue",
+          "cue": "filed for insolvency",
+          "label": "items[0].x[2][0].cue",
+          "scene_time_s": 9.99,
+          "absolute_s": 419.09
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "first company in the DAX",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 11.03,
+          "absolute_s": 420.13
+        },
+        {
           "param": "callouts[2].at.cue",
           "cue": "first company in the DAX",
           "label": "callouts[2].at.cue",
@@ -1231,11 +2093,67 @@
           "absolute_s": 420.43
         },
         {
+          "param": "callouts[2].until.cue",
+          "cue": "creditors owed",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 14.76,
+          "absolute_s": 423.86
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "creditors owed",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.06,
+          "absolute_s": 424.16
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "creditors owed",
+          "label": "items[4].at.cue",
+          "scene_time_s": 15.06,
+          "absolute_s": 424.16
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "creditors owed",
+          "label": "items[5].at.cue",
+          "scene_time_s": 15.06,
+          "absolute_s": 424.16
+        },
+        {
           "param": "callouts[3].at.cue",
           "cue": "creditors owed",
           "label": "callouts[3].at.cue",
           "scene_time_s": 15.06,
           "absolute_s": 424.16
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "creditors owed",
+          "label": "items[6].at.cue",
+          "scene_time_s": 15.26,
+          "absolute_s": 424.36
+        },
+        {
+          "param": "callouts[4].at.cue",
+          "cue": "once valued",
+          "label": "callouts[4].at.cue",
+          "scene_time_s": 19.04,
+          "absolute_s": 428.14
+        },
+        {
+          "param": "callouts[3].until.cue",
+          "cue": "Two years earlier",
+          "label": "callouts[3].until.cue",
+          "scene_time_s": 22.45,
+          "absolute_s": 431.55
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Two years earlier",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 22.75,
+          "absolute_s": 431.85
         }
       ],
       "unresolved_cues": [],
@@ -1260,11 +2178,25 @@
       "narration": "And one man vanished. Jan Marsalek, Wirecard's chief operating officer, is wanted by German authorities. His whereabouts are unknown, but he is believed to be in Russia. In twenty twenty-five, a court in London convicted members of a spy ring working for Russia. According to British prosecutors, its leader reported to Marsalek. Between twenty twenty and twenty twenty-three, prosecutors said, the group gathered information about people and places of interest to the Russian state.",
       "keyframes": [
         {
-          "param": "actors[1].x[1][0].cue",
+          "param": "items[0].x[1][0].cue",
           "cue": "vanished",
-          "label": "actors[1].x[1][0].cue",
+          "label": "items[0].x[1][0].cue",
           "scene_time_s": 1.32,
           "absolute_s": 440.95
+        },
+        {
+          "param": "items[0].y[1][0].cue",
+          "cue": "vanished",
+          "label": "items[0].y[1][0].cue",
+          "scene_time_s": 3.32,
+          "absolute_s": 442.95
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "is wanted",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.64,
+          "absolute_s": 446.27
         },
         {
           "param": "callouts[0].at.cue",
@@ -1274,18 +2206,32 @@
           "absolute_s": 446.27
         },
         {
-          "param": "actors[1].x[2][0].cue",
+          "param": "items[0].x[2][0].cue",
           "cue": "vanished",
-          "label": "actors[1].x[2][0].cue",
-          "scene_time_s": 9.32,
-          "absolute_s": 448.95
+          "label": "items[0].x[2][0].cue",
+          "scene_time_s": 8.32,
+          "absolute_s": 447.95
         },
         {
-          "param": "cam[1].at.cue",
+          "param": "items[0].y[2][0].cue",
+          "cue": "vanished",
+          "label": "items[0].y[2][0].cue",
+          "scene_time_s": 8.32,
+          "absolute_s": 447.95
+        },
+        {
+          "param": "items[2].at.cue",
           "cue": "whereabouts",
-          "label": "cam[1].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 9.79,
           "absolute_s": 449.43
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "believed to be",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 451.04
         },
         {
           "param": "callouts[1].at.cue",
@@ -1295,11 +2241,81 @@
           "absolute_s": 451.34
         },
         {
+          "param": "cam[1].at.cue",
+          "cue": "a court in London",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.02,
+          "absolute_s": 454.65
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "a court in London",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 15.32,
+          "absolute_s": 454.95
+        },
+        {
           "param": "callouts[2].at.cue",
           "cue": "a court in London",
           "label": "callouts[2].at.cue",
           "scene_time_s": 15.62,
           "absolute_s": 455.25
+        },
+        {
+          "param": "items[3].hits[0].cue",
+          "cue": "convicted",
+          "label": "items[3].hits[0].cue",
+          "scene_time_s": 16.74,
+          "absolute_s": 456.37
+        },
+        {
+          "param": "items[3].hits[1].cue",
+          "cue": "convicted",
+          "label": "items[3].hits[1].cue",
+          "scene_time_s": 17.64,
+          "absolute_s": 457.27
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "spy ring",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.31,
+          "absolute_s": 457.94
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "spy ring",
+          "label": "items[5].at.cue",
+          "scene_time_s": 18.31,
+          "absolute_s": 457.94
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "spy ring",
+          "label": "items[6].at.cue",
+          "scene_time_s": 18.31,
+          "absolute_s": 457.94
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "reported to",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 23.23,
+          "absolute_s": 462.86
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "Between",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 25.02,
+          "absolute_s": 464.65
+        },
+        {
+          "param": "callouts[4].at.cue",
+          "cue": "Between",
+          "label": "callouts[4].at.cue",
+          "scene_time_s": 25.32,
+          "absolute_s": 464.95
         }
       ],
       "unresolved_cues": [],
@@ -1316,47 +2332,107 @@
       "index": 28,
       "id": "s27_trial",
       "segment": "m4_trial",
-      "type": "kinetic_text",
+      "type": "engine_cartoon",
       "start_s": 474.63,
       "end_s": 506.27,
       "duration_s": 31.63,
-      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "visual_objective": "",
       "narration": "Markus Braun went on trial in Munich in December 2022, accused of commercial gang fraud, false accounting and breach of trust. If convicted, he faces up to 15 years in prison. He rejects all the charges, and has blamed Marsalek. The trial has gone on for years: the court set new hearing dates until the end of twenty twenty-six. Until there is a verdict, he is presumed innocent.",
       "keyframes": [
         {
-          "param": "lines[0].cue",
+          "param": "callouts[0].at.cue",
           "cue": "went on trial",
-          "label": "Munich: trial since since Dec 2022",
+          "label": "callouts[0].at.cue",
           "scene_time_s": 1.17,
           "absolute_s": 475.81
         },
         {
-          "param": "lines[1].cue",
+          "param": "items[0].hits[0].cue",
+          "cue": "went on trial",
+          "label": "items[0].hits[0].cue",
+          "scene_time_s": 1.47,
+          "absolute_s": 476.11
+        },
+        {
+          "param": "items[2].at.cue",
           "cue": "accused of",
-          "label": "Accused: commercial gang fraud · false accounting · breach of trust",
+          "label": "items[2].at.cue",
           "scene_time_s": 5.91,
           "absolute_s": 480.55
         },
         {
-          "param": "lines[2].cue",
-          "cue": "rejects all the charges",
-          "label": "“I reject all the charges”",
+          "param": "callouts[0].until.cue",
+          "cue": "If convicted",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.32,
+          "absolute_s": 485.95
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "If convicted",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.62,
+          "absolute_s": 486.25
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "If convicted",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.62,
+          "absolute_s": 486.25
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "rejects all",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 15.78,
+          "absolute_s": 490.41
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "rejects all",
+          "label": "callouts[2].at.cue",
           "scene_time_s": 16.08,
           "absolute_s": 490.71
         },
         {
-          "param": "lines[3].cue",
+          "param": "items[1].pages[1][0].cue",
+          "cue": "gone on for years",
+          "label": "items[1].pages[1][0].cue",
+          "scene_time_s": 21.32,
+          "absolute_s": 495.96
+        },
+        {
+          "param": "callouts[2].until.cue",
           "cue": "presumed innocent",
-          "label": "Hearings scheduled to the end of 2026 · presumed innocent until a verdict",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 29.65,
+          "absolute_s": 504.28
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "presumed innocent",
+          "label": "items[3].at.cue",
           "scene_time_s": 29.95,
           "absolute_s": 504.58
+        },
+        {
+          "param": "items[0].hits[1].cue",
+          "cue": "presumed innocent",
+          "label": "items[0].hits[1].cue",
+          "scene_time_s": 30.35,
+          "absolute_s": 504.98
         }
       ],
       "unresolved_cues": [],
       "assets": [
         "font:inter"
       ],
-      "sources": [],
+      "sources": [
+        "lto_2025",
+        "enca_2023",
+        "bavaria_2026"
+      ],
       "transition_out": "scan"
     },
     {
@@ -1422,11 +2498,81 @@
       "narration": "Auditors, regulators, investors: who was supposed to catch it?",
       "keyframes": [
         {
+          "param": "items[0].at.cue",
+          "cue": "Auditors",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 520.25
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Auditors",
+          "label": "items[1].at.cue",
+          "scene_time_s": 0.55,
+          "absolute_s": 520.45
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "regulators",
+          "label": "items[2].at.cue",
+          "scene_time_s": 1.22,
+          "absolute_s": 521.12
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "regulators",
+          "label": "items[3].at.cue",
+          "scene_time_s": 1.42,
+          "absolute_s": 521.32
+        },
+        {
+          "param": "items[2].barks[0].cue",
+          "cue": "regulators",
+          "label": "items[2].barks[0].cue",
+          "scene_time_s": 1.72,
+          "absolute_s": 521.62
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "investors",
+          "label": "items[4].at.cue",
+          "scene_time_s": 2.31,
+          "absolute_s": 522.21
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "investors",
+          "label": "items[5].at.cue",
+          "scene_time_s": 2.51,
+          "absolute_s": 522.41
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "who was supposed",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.24,
+          "absolute_s": 523.14
+        },
+        {
+          "param": "items[6].x[1][0].cue",
+          "cue": "who was supposed",
+          "label": "items[6].x[1][0].cue",
+          "scene_time_s": 3.24,
+          "absolute_s": 523.14
+        },
+        {
           "param": "callouts[0].at.cue",
-          "cue": "supposed to catch",
+          "cue": "who was supposed",
           "label": "callouts[0].at.cue",
-          "scene_time_s": 3.69,
-          "absolute_s": 523.59
+          "scene_time_s": 3.24,
+          "absolute_s": 523.14
+        },
+        {
+          "param": "items[6].x[2][0].cue",
+          "cue": "who was supposed",
+          "label": "items[6].x[2][0].cue",
+          "scene_time_s": 8.24,
+          "absolute_s": 528.14
         }
       ],
       "unresolved_cues": [],
@@ -1440,31 +2586,80 @@
       "index": 32,
       "id": "s31_auditor",
       "segment": "m5_auditor",
-      "type": "compare",
+      "type": "engine_cartoon",
       "start_s": 528.9,
       "end_s": 549.3,
       "duration_s": 20.4,
-      "visual_objective": "Side-by-side figures count up; bars rise",
+      "visual_objective": "",
       "narration": "First, the auditor. EY had signed off Wirecard's accounts without objections for more than a decade. In twenty twenty-three, the German audit watchdog banned it from taking on new listed audit clients in Germany for two years, and fined the firm and several current and former employees.",
       "keyframes": [
         {
-          "param": "sides[0].cue",
+          "param": "items[0].stampAt.cue",
           "cue": "without objections",
-          "label": "more than a decade (FT)",
+          "label": "items[0].stampAt.cue",
           "scene_time_s": 5.22,
           "absolute_s": 534.12
         },
         {
-          "param": "sides[1].cue",
+          "param": "callouts[0].at.cue",
+          "cue": "without objections",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.22,
+          "absolute_s": 534.12
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "without objections",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.02,
+          "absolute_s": 534.92
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "banned it",
-          "label": "no new listed audit clients",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.39,
+          "absolute_s": 540.29
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "banned it",
+          "label": "cam[1].at.cue",
           "scene_time_s": 11.69,
           "absolute_s": 540.59
         },
         {
-          "param": "sides[2].cue",
+          "param": "items[3].at.cue",
+          "cue": "banned it",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.69,
+          "absolute_s": 540.59
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "banned it",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.69,
+          "absolute_s": 540.59
+        },
+        {
+          "param": "callouts[1].until.cue",
           "cue": "fined the firm",
-          "label": "current and former employees",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 16.27,
+          "absolute_s": 545.17
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "fined the firm",
+          "label": "items[4].at.cue",
+          "scene_time_s": 16.57,
+          "absolute_s": 545.47
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "fined the firm",
+          "label": "callouts[2].at.cue",
           "scene_time_s": 16.57,
           "absolute_s": 545.47
         }
@@ -1490,9 +2685,9 @@
       "narration": "Then, the regulator. In January 2021, the head of BaFin, Felix Hufeld, left his post. The finance minister at the time, Olaf Scholz, said it would allow a fresh start at an organisation that had overlooked Germany's greatest postwar accounting fraud. His deputy in charge of securities supervision left too.",
       "keyframes": [
         {
-          "param": "coasts.darkAt.cue",
+          "param": "items[1].x[1][0].cue",
           "cue": "left his post",
-          "label": "coasts.darkAt.cue",
+          "label": "items[1].x[1][0].cue",
           "scene_time_s": 7.97,
           "absolute_s": 557.27
         },
@@ -1504,11 +2699,67 @@
           "absolute_s": 557.27
         },
         {
+          "param": "items[4].at.cue",
+          "cue": "fresh start",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.7,
+          "absolute_s": 563.0
+        },
+        {
+          "param": "items[1].x[2][0].cue",
+          "cue": "left his post",
+          "label": "items[1].x[2][0].cue",
+          "scene_time_s": 13.97,
+          "absolute_s": 563.27
+        },
+        {
+          "param": "items[3].barks[0].cue",
+          "cue": "fresh start",
+          "label": "items[3].barks[0].cue",
+          "scene_time_s": 14.0,
+          "absolute_s": 563.3
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "overlooked",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.85,
+          "absolute_s": 565.15
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "overlooked",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.15,
+          "absolute_s": 565.45
+        },
+        {
           "param": "callouts[1].at.cue",
           "cue": "overlooked",
           "label": "callouts[1].at.cue",
           "scene_time_s": 16.15,
           "absolute_s": 565.45
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "left too",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 23.53,
+          "absolute_s": 572.83
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "left too",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 23.53,
+          "absolute_s": 572.83
+        },
+        {
+          "param": "items[2].x[2][0].cue",
+          "cue": "left too",
+          "label": "items[2].x[2][0].cue",
+          "scene_time_s": 28.53,
+          "absolute_s": 577.83
         }
       ],
       "unresolved_cues": [],
@@ -1672,25 +2923,46 @@
           "absolute_s": 631.63
         },
         {
-          "param": "cam[1].at.cue",
-          "cue": "They lived",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 8.1,
-          "absolute_s": 633.0
+          "param": "items[1].at.cue",
+          "cue": "lived in documents",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.33,
+          "absolute_s": 633.23
         },
         {
-          "param": "actors[3].until.cue",
+          "param": "cam[1].at.cue",
           "cue": "asked to see",
-          "label": "actors[3].until.cue",
+          "label": "cam[1].at.cue",
           "scene_time_s": 13.28,
           "absolute_s": 638.18
         },
         {
-          "param": "actors[4].at.cue",
-          "cue": "nothing there",
-          "label": "actors[4].at.cue",
-          "scene_time_s": 16.85,
-          "absolute_s": 641.75
+          "param": "items[2].x[1][0].cue",
+          "cue": "asked to see",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 13.28,
+          "absolute_s": 638.18
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "when they",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.02,
+          "absolute_s": 639.92
+        },
+        {
+          "param": "items[0].openAt.cue",
+          "cue": "when they",
+          "label": "items[0].openAt.cue",
+          "scene_time_s": 15.32,
+          "absolute_s": 640.22
+        },
+        {
+          "param": "items[2].x[2][0].cue",
+          "cue": "asked to see",
+          "label": "items[2].x[2][0].cue",
+          "scene_time_s": 16.28,
+          "absolute_s": 641.18
         },
         {
           "param": "callouts[1].at.cue",
@@ -1698,6 +2970,27 @@
           "label": "callouts[1].at.cue",
           "scene_time_s": 16.85,
           "absolute_s": 641.75
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "can I",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 22.19,
+          "absolute_s": 647.09
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "can I",
+          "label": "items[3].at.cue",
+          "scene_time_s": 22.59,
+          "absolute_s": 647.49
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "can I",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 22.59,
+          "absolute_s": 647.49
         }
       ],
       "unresolved_cues": [],
