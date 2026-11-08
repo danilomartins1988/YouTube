@@ -1,0 +1,135 @@
+# YouTube package: "How Dubai Really Makes Money" (Episode 02, cartoon redo)
+
+Prepared for manual publishing. Nothing has been uploaded. Video: `output/dubai_documentary.mp4` (11:49, cartoon redo
+of 2026-11-08). Amounts in US dollars (see `CURRENCY.md`).
+
+## Title options
+
+1. How Dubai Really Makes Money (28 chars)
+2. Dubai Isn't Rich Because of Oil. Here's What Pays the Bills (59 chars)
+3. Ports, Planes and Property: The Real Dubai Economy (50 chars)
+4. Why Dubai Doesn't Need Oil (And What Could Break It) (52 chars)
+
+## Description (4864 chars, YouTube limit 5,000)
+
+```
+Dubai has almost no oil of its own - so how did a small trading town on a creek become a global hub? Pearls and open trade, oil as seed money, Jebel Ali and DP World, Emirates and the airport, tourism and property, free zones, the DIFC and the new corporate tax - and the costs: migrant labour, debt, property cycles and the 2026 shock. Every figure is sourced below. Amounts are in US dollars (dirhams converted at the official peg, 3.6725 per dollar).
+
+Chapters
+0:00 The city that looks impossible
+1:37 Dubai before the skyscrapers
+2:45 Oil: the seed money
+3:34 Jebel Ali and the trading machine
+4:58 Emirates and the hub strategy
+6:04 Tourism, luxury and real estate
+7:12 Free zones, finance and foreign capital
+8:39 Who benefits, and what are the risks?
+10:45 The real economic engine
+
+Sources
+- Airports Council International (ACI World) - https://aci.aero/2026/04/14/worlds-busiest-airports-revealed-in-latest-global-rankings/
+- Christian Science Monitor - https://www.csmonitor.com/World/2010/0104/World-s-tallest-building-opens-in-Dubai-with-a-new-name
+- DIFC Courts - https://www.difccourts.ae/about/legal-framework
+- Dubai Land Department - https://dubailand.gov.ae/en/news-media/dubai-s-real-estate-sector-records-aed761-billion-in-transactions-in-2024
+- Government of Dubai Media Office - https://www.mediaoffice.ae/en/news/2023/january/04-01/mohammed-bin-rashid-launches-dubai-economic-agenda-d33
+- Government of Dubai Media Office - https://www.mediaoffice.ae/en/news/2026/february/05-02/dubai-international-financial-centre-announces-landmark-annual-results-for-2025
+- Government of Dubai Media Office - https://mediaoffice.ae/en/news/2026/march/12-03/dp-world-financial-results
+- Government of Dubai Media Office - https://mediaoffice.ae/en/news/2020/feb/17-02/dp-world-to-delist-from-nasdaq-dubai
+- Government of Dubai Media Office - https://www.mediaoffice.ae/en/news/2024/april/28-04/al-maktoum-international-airport
+- Government of Dubai Media Office - https://www.mediaoffice.ae/en/news/2026/february/11-02/dxb-sets-new-global
+- Government of Dubai Media Office - https://mediaoffice.ae/en/news/2026/may/12-05/dubai-holding-and-icd-announce-completion-of-strategic-transaction-in-emaar-properties
+- Government of Dubai Media Office - https://mediaoffice.ae/en/news/2026/may/07-05/emirates-group-achieves-record-profit-in-2025-26
+- Government of Dubai Media Office - https://www.mediaoffice.ae/en/news/2026/july/08-07/dubai-gdp-reaches-aed232-billion-in-q1-2026-recording-2-growth
+- Government of Dubai Media Office - https://mediaoffice.ae/en/news/2025/may/05-05/hamdan-bin-mohammed-highlights-jafzas-significant-contribution-to-dubais-economy-over-4-decades
+- Government of Dubai Media Office (Dubai Land Department data) - https://www.mediaoffice.ae/en/news/2026/january/12-01/dubais-real-estate-market-records-new-historic-milestone
+- Government of Dubai Media Office (Department of Economy and Tourism data) - https://www.mediaoffice.ae/en/news/2026/february/09-02/dubais-tourism-industry-achieves-third-successive-record-breaking-year
+- Government of Dubai (dubai.ae portal) - https://www.dubai.ae/en/w/dubai-economy
+- UAE Federal Tax Authority - https://tax.gov.ae/en/media.centre/news/federal.tax.authority.issues.corporate.tax.guide.on.free.zone.persons.aspx
+- Gulf News - https://gulfnews.com/uae/dubai-creek-in-the-1950s-a-glimpse-into-global-citys-humble-beginnings-1.500218048
+- Gulf News - https://gulfnews.com/business/dubai-world-announces-restructuring-plans-1.542850
+- Gulf News - https://gulfnews.com/news/uae/government/40-years-of-uae-the-launch-of-emirates-airline-1.920215
+- Gulf News - https://gulfnews.com/business/shipping/jebel-ali-port-completes-40-years
+- Gulf News - https://gulfnews.com/business/energy/oil-in-dubai-history--timeline-1.578333
+- Human Rights Watch (NGO) - https://www.hrw.org/news/2023/11/21/uae-migrant-worker-abuses-linked-broader-climate-harms
+- International Business Times (Reuters) - https://www.ibtimes.com/abu-dhabi-gives-dubai-10-billion-surprise-bailout-353046
+- International Monetary Fund - https://www.imf.org/-/media/files/publications/cr/2025/english/1areea2025001-source-pdf.pdf
+- Invest in Dubai (Government of Dubai) - https://www.investindubai.gov.ae/en/insights-and-resources/news-insights/dubai-logistics-hub-role-airline-industry
+- UAE Ministry of Finance - https://mof.gov.ae/en/public-finance/tax/top-up-tax/
+- UAE Ministry of Finance - https://mof.gov.ae/en/public-finance/tax/
++ 16 more sources in the pinned comment
+
+Credits & licences
+- Typeface: Inter (SIL Open Font License 1.1)
+- Map data: Natural Earth (public domain)
+- Graphics, animation, music and sound effects: original, made by The Hidden Economics
+- Narration: synthetic voice (openai)
+
+Some statements are the channel's interpretation; these are marked in the script notes.
+
+#economics #dubai #documentary
+```
+
+## Tags
+
+```
+Dubai, Dubai economy, how Dubai makes money, UAE economy, Abu Dhabi, Jebel Ali, DP World, Emirates airline, Dubai real estate, DIFC, free zones, UAE corporate tax, economics documentary, The Hidden Economics
+```
+
+## Subtitles
+
+`subtitles_en.srt` (English, from the final narration timing).
+
+## End screen
+
+- Last 20 seconds: generic teaser ("another hidden link of the world economy"). Link Episode 04 (Norway) or 01 (Switzerland).
+
+## Pinned comment
+
+```
+Sources (full list)
+- Airports Council International (ACI World): World's busiest airports revealed in latest global rankings - https://aci.aero/2026/04/14/worlds-busiest-airports-revealed-in-latest-global-rankings/
+- Christian Science Monitor: World's tallest building opens in Dubai with a new name - https://www.csmonitor.com/World/2010/0104/World-s-tallest-building-opens-in-Dubai-with-a-new-name
+- DIFC Courts: DIFC Courts - Legal framework - https://www.difccourts.ae/about/legal-framework
+- Dubai Land Department: Dubai's real estate sector records AED761 billion in transactions in 2024 - https://dubailand.gov.ae/en/news-media/dubai-s-real-estate-sector-records-aed761-billion-in-transactions-in-2024
+- Government of Dubai Media Office: Mohammed bin Rashid launches Dubai Economic Agenda 'D33' - https://www.mediaoffice.ae/en/news/2023/january/04-01/mohammed-bin-rashid-launches-dubai-economic-agenda-d33
+- Government of Dubai Media Office: Dubai International Financial Centre announces landmark annual results for 2025 - https://www.mediaoffice.ae/en/news/2026/february/05-02/dubai-international-financial-centre-announces-landmark-annual-results-for-2025
+- Government of Dubai Media Office: DP World financial results (full year 2025) - https://mediaoffice.ae/en/news/2026/march/12-03/dp-world-financial-results
+- Government of Dubai Media Office: DP World to delist from Nasdaq Dubai - https://mediaoffice.ae/en/news/2020/feb/17-02/dp-world-to-delist-from-nasdaq-dubai
+- Government of Dubai Media Office: Mohammed bin Rashid approves designs for new passenger terminal at Al Maktoum International Airport - https://www.mediaoffice.ae/en/news/2024/april/28-04/al-maktoum-international-airport
+- Government of Dubai Media Office: DXB sets new global record with 95.2 million guests in 2025 - https://www.mediaoffice.ae/en/news/2026/february/11-02/dxb-sets-new-global
+- Government of Dubai Media Office: Dubai Holding and ICD announce completion of strategic transaction in Emaar Properties - https://mediaoffice.ae/en/news/2026/may/12-05/dubai-holding-and-icd-announce-completion-of-strategic-transaction-in-emaar-properties
+- Government of Dubai Media Office: Emirates Group achieves record profit in 2025-26 - https://mediaoffice.ae/en/news/2026/may/07-05/emirates-group-achieves-record-profit-in-2025-26
+- Government of Dubai Media Office: Dubai GDP reaches AED232 billion in Q1 2026, recording 2.4% growth - https://www.mediaoffice.ae/en/news/2026/july/08-07/dubai-gdp-reaches-aed232-billion-in-q1-2026-recording-2-growth
+- Government of Dubai Media Office: Hamdan bin Mohammed highlights Jafza's significant contribution to Dubai's economy over 4 decades - https://mediaoffice.ae/en/news/2025/may/05-05/hamdan-bin-mohammed-highlights-jafzas-significant-contribution-to-dubais-economy-over-4-decades
+- Government of Dubai Media Office (Dubai Land Department data): Dubai's real estate market records new historic milestone - https://www.mediaoffice.ae/en/news/2026/january/12-01/dubais-real-estate-market-records-new-historic-milestone
+- Government of Dubai Media Office (Department of Economy and Tourism data): Dubai's tourism industry achieves third successive record-breaking year - https://www.mediaoffice.ae/en/news/2026/february/09-02/dubais-tourism-industry-achieves-third-successive-record-breaking-year
+- Government of Dubai (dubai.ae portal): Dubai Economy - https://www.dubai.ae/en/w/dubai-economy
+- UAE Federal Tax Authority: Federal Tax Authority issues Corporate Tax guide on Free Zone Persons - https://tax.gov.ae/en/media.centre/news/federal.tax.authority.issues.corporate.tax.guide.on.free.zone.persons.aspx
+- Gulf News: Dubai Creek in the 1950s - a glimpse into global city's humble beginnings - https://gulfnews.com/uae/dubai-creek-in-the-1950s-a-glimpse-into-global-citys-humble-beginnings-1.500218048
+- Gulf News: Dubai World announces restructuring plans - https://gulfnews.com/business/dubai-world-announces-restructuring-plans-1.542850
+- Gulf News: 40 years of UAE: The launch of Emirates Airline - https://gulfnews.com/news/uae/government/40-years-of-uae-the-launch-of-emirates-airline-1.920215
+- Gulf News: Jebel Ali Port completes 40 years - https://gulfnews.com/business/shipping/jebel-ali-port-completes-40-years
+- Gulf News: Oil in Dubai: History & timeline - https://gulfnews.com/business/energy/oil-in-dubai-history--timeline-1.578333
+- Gulf News: Dubai property prices near bottom and set to recover - https://gulfnews.com/business/property/dubai-property-prices-near-bottom-and-set-to-recover-1.587163
+- Human Rights Watch (NGO): UAE: Migrant Worker Abuses Linked to Broader Climate Harms - https://www.hrw.org/news/2023/11/21/uae-migrant-worker-abuses-linked-broader-climate-harms
+- International Business Times (Reuters): Abu Dhabi gives Dubai $10 billion in surprise bailout - https://www.ibtimes.com/abu-dhabi-gives-dubai-10-billion-surprise-bailout-353046
+- International Monetary Fund: United Arab Emirates: 2025 Article IV Consultation - Staff Report (IMF Country Report No. 25/327) - https://www.imf.org/-/media/files/publications/cr/2025/english/1areea2025001-source-pdf.pdf
+- Invest in Dubai (Government of Dubai): Dubai's role as a logistics hub in the airline industry - https://www.investindubai.gov.ae/en/insights-and-resources/news-insights/dubai-logistics-hub-role-airline-industry
+- Lloyd's List: One Hundred Container Ports: 09 Dubai, United Arab Emirates - https://www.lloydslist.com/LL1157897/09-Dubai-United-Arab-Emirates
+- UAE Ministry of Finance: Top-up Tax (Domestic Minimum Top-up Tax) - https://mof.gov.ae/en/public-finance/tax/top-up-tax/
+- UAE Ministry of Finance: Tax (public finance) - VAT and Corporate Tax overview - https://mof.gov.ae/en/public-finance/tax/
+- UAE Ministry of Human Resources and Emiratisation: MoHRE to implement midday break for the 21st consecutive year from 15 June to 15 September 2025 - https://mohre.gov.ae/en/media-center/news/3/6/2025/mohre-to-implement-midday-break-for-the-21st-consecutive-year-from-15-june-to-15-september-2025
+- The National: Dubai's economy reaches Dh473 billion in first half of 2026 as key sectors expand - https://www.thenationalnews.com/business/economy/2026/10/18/dubais-economy-reaches-dh473bn-in-first-half-of-2026-as-key-sectors-expand/
+- The National: Dubai's GDP grew to Dh232bn in first quarter despite Iran war - https://www.thenationalnews.com/business/economy/2026/07/08/dubai-gdp-climbs-to-dh232bn-in-q1-as-non-oil-sectors-drive-expansion/
+- Natural Earth: Natural Earth 1:50m Admin 0 Countries and 1:10m Admin 1 States/Provinces - https://www.naturalearthdata.com/downloads/
+- PwC Worldwide Tax Summaries: United Arab Emirates - Individual - Taxes on personal income - https://taxsummaries.pwc.com/united-arab-emirates/individual/taxes-on-personal-income
+- Qatar Digital Library / British Library: Gazetteer of the Persian Gulf, J. G. Lorimer (1908/1915) - extracts on Dibai (IOR/R/15/1/729) - https://qdl.qa/en/archive/81055/vdc_100022770472.0x000068
+- Qatar Digital Library: Finding Aid: Sources on the Gulf's Pearl Industry and Trade - https://qdl.qa/en/finding-aid-sources-gulf%E2%80%99s-pearl-industry-and-trade
+- International Trade Administration, U.S. Department of Commerce: United Arab Emirates - Energy Resource Guide (oil and gas) - https://www.trade.gov/energy-resource-guide-united-arab-emirates-oil-and-gas
+- Constitute Project: United Arab Emirates's Constitution of 1971 with Amendments through 2009 (Art. 1 and Art. 23) - https://www.constituteproject.org/constitution/United_Arab_Emirates_2009
+- The UAE Government portal (u.ae): Corporate tax - https://u.ae/en/information-and-services/finance-and-investment/taxation/corporate-tax
+- Emirates News Agency (WAM), citing Dubai Data and Statistics Establishment: Dubai's GDP reaches AED473 billion in H1 2026 - https://www.wam.ae/en/article/17has35
+- Emirates News Agency (WAM) / UAE Ministry of Economy: Full foreign ownership of onshore companies takes effect from 1 June 2021 - https://wam.ae/en/details/1395302935804
+- Emirates News Agency (WAM): Dubai population reaches 4.58 million at end of 2025 (DDSE) - https://www.wam.ae/en/article/c1hd5qo
+- Emirates News Agency (WAM): Dubai delivers all-time high of 16.73 million overnight visitors in 2019 - https://wam.ae/en/details/1395302817871
+```
