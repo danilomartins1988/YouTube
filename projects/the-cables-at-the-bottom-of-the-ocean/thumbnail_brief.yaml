@@ -1,0 +1,90 @@
+# Thumbnail creative brief for the-cables-at-the-bottom-of-the-ocean (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: The Cables at the Bottom of the Ocean That Carry the Internet
+docs_dir: docs/episodes/09-cables
+video: output/cables_documentary.mp4
+analysis:
+  mystery: 'The internet is not in the sky: it runs along the seabed'
+  surprising_fact: Submarine cables carry more than 99% of international data traffic (ITU)
+  subject: a glowing cable across the ocean floor
+  tone: trade
+  metaphor: the hidden wires of the world
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - THE HIDDEN
+  - WIRES
+  accent_line: 1
+  text_side: left
+  text_style: plain
+  claim_basis: 'No number; itu_99: >99% of international data traffic travels by cable'
+  scene:
+    palette:
+      sky0: '#010309'
+      sky1: '#062238'
+      haze: '#1FA2C9'
+      key: '#9BE9FF'
+      accent: '#3FE0FF'
+      ink: '#FFFFFF'
+    backdrop: deep
+    subject:
+      kind: cable
+      x: 1000
+      y: 700
+      s: 1.0
+    beams:
+    - x: 1300
+      y: -80
+      angle: 4
+      width: 700
+      length: 1000
+      opacity: 0.2
+    particles:
+      n: 90
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - 150+ BREAKS
+  - A YEAR
+  accent_line: 0
+  text_side: left
+  claim_basis: 'faults: about 150-200 submarine cable faults a year (ICPC, May 2026)'
+  scene:
+    palette:
+      sky0: '#060305'
+      sky1: '#1A0A12'
+      haze: '#FF5A6E'
+      key: '#FFB3BE'
+      accent: '#FF5A6E'
+      ink: '#FFFFFF'
+    backdrop: deep
+    subject:
+      kind: cable
+      x: 1100
+      y: 720
+      s: 1.0
+    support:
+    - kind: glitch
+      x: 1300
+      y: 700
+      s: 0.6
+      opacity: 0.35
+    particles:
+      n: 70
+      region:
+      - 600
+      - 0
+      - 1920
+      - 1080
+      size: 3
+    brand: tl
+status: completed
+deliverable: documentary

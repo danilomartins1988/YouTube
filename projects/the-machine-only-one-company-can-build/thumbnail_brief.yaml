@@ -1,0 +1,83 @@
+# Thumbnail creative brief for the-machine-only-one-company-can-build (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: The Machine Only One Company on Earth Can Build
+docs_dir: docs/episodes/08-asml
+video: output/asml_documentary.mp4
+analysis:
+  mystery: Why only one company on Earth can build the machine that prints advanced chips
+  surprising_fact: ASML is the only maker of EUV lithography machines; each costs about $250m (Reuters estimate)
+  subject: a colossal EUV lithography machine with a glowing light-source core
+  tone: tech
+  metaphor: a lone machine in a dark clean room
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - ONLY ONE
+  - COMPANY
+  accent_line: 1
+  text_side: left
+  claim_basis: asml_only / monopoly claim in sources.yaml (only maker of EUV systems)
+  scene:
+    palette:
+      sky0: '#020611'
+      sky1: '#0A1A33'
+      haze: '#3FD0FF'
+      key: '#B0ECFF'
+      accent: '#3FD0FF'
+      ink: '#FFFFFF'
+    backdrop: cleanroom
+    subject:
+      kind: euv
+      x: 1340
+      y: 560
+      s: 0.62
+    beams:
+    - x: 1340
+      y: -50
+      angle: 0
+      width: 900
+      length: 1100
+      opacity: 0.22
+    particles:
+      n: 70
+      region:
+      - 700
+      - 80
+      - 1900
+      - 900
+      size: 2
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - $250M
+  - MACHINE
+  accent_line: 0
+  text_side: right
+  claim_basis: 'Reuters (Jan 2026): ''The $250 million ASML printer'' (an estimate, as the film says)'
+  scene:
+    palette:
+      sky0: '#060410'
+      sky1: '#1A1236'
+      haze: '#9B8CFF'
+      key: '#D8D0FF'
+      accent: '#FFC93C'
+      ink: '#FFFFFF'
+    backdrop: cleanroom
+    subject:
+      kind: euv
+      x: 600
+      y: 600
+      s: 0.55
+    particles:
+      n: 50
+      region:
+      - 0
+      - 80
+      - 1200
+      - 900
+      size: 2
+    brand: tr
+status: completed
+deliverable: documentary

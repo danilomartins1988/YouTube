@@ -1,0 +1,84 @@
+# Thumbnail creative brief for the-island-getting-rich-from-ai (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: The Tiny Island Getting Rich From AI
+docs_dir: docs/episodes/10-anguilla
+video: output/anguilla_documentary.mp4
+analysis:
+  mystery: How an island of 16,000 people earns millions from artificial intelligence
+  surprising_fact: Anguilla earned about $85m from .ai domain registrations in 2025
+  subject: a small island under a giant glowing .ai
+  tone: trade
+  metaphor: a two-letter jackpot
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - THE .AI
+  - JACKPOT
+  accent_line: 1
+  text_side: left
+  claim_basis: 'rev_2025: ≈ $85.3m from .ai registrations in 2025 (Anguilla Focus)'
+  scene:
+    palette:
+      sky0: '#05121F'
+      sky1: '#0D4252'
+      haze: '#2EC4B6'
+      key: '#B8FFF5'
+      accent: '#FFD24A'
+      ink: '#FFFFFF'
+    backdrop: sea
+    subject:
+      kind: island
+      x: 1320
+      y: 700
+      s: 0.9
+      sign: .ai
+      signX: 40
+      signY: -300
+      signSize: 380
+    particles:
+      n: 60
+      region:
+      - 800
+      - 0
+      - 1920
+      - 600
+      size: 2
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - $85M FROM
+  - TWO LETTERS
+  accent_line: 0
+  text_side: right
+  claim_basis: 'rev_2025: EC$230m ≈ US$85.3m in 2025'
+  scene:
+    palette:
+      sky0: '#0A0612'
+      sky1: '#2A1440'
+      haze: '#C77DFF'
+      key: '#EBD4FF'
+      accent: '#FFD24A'
+      ink: '#FFFFFF'
+    backdrop: sea
+    subject:
+      kind: island
+      x: 600
+      y: 720
+      s: 0.8
+      sign: .ai
+      signX: 0
+      signY: -300
+      signSize: 360
+    particles:
+      n: 70
+      region:
+      - 0
+      - 0
+      - 1200
+      - 600
+      size: 2
+    brand: tr
+status: completed
+deliverable: documentary

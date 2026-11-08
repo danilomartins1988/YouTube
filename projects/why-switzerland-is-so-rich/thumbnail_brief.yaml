@@ -1,0 +1,85 @@
+# Thumbnail creative brief for why-switzerland-is-so-rich (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: Why Switzerland Is So Rich
+docs_dir: docs/episodes/01-switzerland
+video: output/switzerland_documentary.mp4
+analysis:
+  mystery: A small landlocked country among the richest on Earth
+  surprising_fact: 'Switzerland ranks #1 of 139 in the Global Innovation Index 2025; it has no sea coast'
+  subject: a gold vault inside the Alps
+  tone: strategy
+  metaphor: wealth hidden in the mountains
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - WHY SO
+  - RICH?
+  accent_line: 1
+  text_side: left
+  claim_basis: 'No factual claim: a question.'
+  scene:
+    palette:
+      sky0: '#081120'
+      sky1: '#2A3E5C'
+      haze: '#C9D6E8'
+      key: '#EEF4FB'
+      accent: '#E6C25A'
+      ink: '#FFFFFF'
+    backdrop: alps
+    subject:
+      kind: goldvault
+      x: 1320
+      y: 700
+      s: 0.9
+    beams:
+    - x: 1320
+      y: -60
+      angle: 0
+      width: 600
+      length: 900
+      opacity: 0.3
+      color: '#FFE7A0'
+    particles:
+      n: 40
+      region:
+      - 800
+      - 200
+      - 1900
+      - 900
+      size: 2
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - NO SEA.
+  - STILL RICH.
+  accent_line: 1
+  text_side: right
+  claim_basis: 'geo_landlocked: Switzerland is landlocked; its income level is the film''s premise (World Bank data)'
+  scene:
+    palette:
+      sky0: '#0B0E14'
+      sky1: '#1E2A3A'
+      haze: '#9FB7D0'
+      key: '#DCE6F2'
+      accent: '#FFD24A'
+      ink: '#FFFFFF'
+    backdrop: alps
+    subject:
+      kind: coin
+      x: 560
+      y: 460
+      s: 1.1
+      symbol: $
+    particles:
+      n: 30
+      region:
+      - 100
+      - 100
+      - 1100
+      - 800
+      size: 3
+    brand: tr
+status: completed
+deliverable: documentary

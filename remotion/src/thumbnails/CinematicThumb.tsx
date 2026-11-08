@@ -1,0 +1,316 @@
+import React from 'react';
+import {AbsoluteFill} from 'remotion';
+
+/**
+ * CinematicThumb: a YouTube thumbnail designed as a documentary cover, NOT a frame of the film and NOT the cartoon
+ * look. Original vector illustration with cinematic lighting (volumetric beams, haze, rim light, glow, particles,
+ * vignette, film grain), one dominant SUBJECT built for the story, and typography composited on top from an exact
+ * layout computed in Python (tools/thumbnails.py), so text never clips and QC knows every text box.
+ *
+ * Canvas 1920x1080 (rendered with --scale=2 for a 3840x2160 master). No logos, no real flag designs, no likeness of
+ * real people, no photographs: subjects are generic, story-specific objects.
+ */
+export type ThumbText = {text: string; x: number; y: number; size: number; width: number; color: string; anchor: 'start' | 'middle' | 'end';
+  box?: string; boxPad?: number; underline?: string; rotate?: number};
+export type CinematicProps = {
+  palette: {sky0: string; sky1: string; haze: string; key: string; accent: string; ink: string};
+  backdrop: 'room' | 'sky' | 'sea' | 'deep' | 'desert' | 'alps' | 'track' | 'cleanroom' | 'void';
+  subject: {kind: string; x: number; y: number; s: number; [k: string]: any};
+  support?: {kind: string; x: number; y: number; s: number; [k: string]: any}[];
+  beams?: {x: number; y: number; angle: number; width: number; length: number; opacity?: number; color?: string}[];
+  particles?: {n: number; color?: string; region?: [number, number, number, number]; size?: number};
+  text: ThumbText[];
+  hideText?: boolean;
+  brand?: 'tl' | 'tr' | 'bl';
+  grain?: number; vignette?: number;
+};
+
+const W = 1920, H = 1080;
+const rnd = (i: number) => { const s = Math.sin(i * 127.1 + 311.7) * 43758.5453; return s - Math.floor(s); };
+const FONT = 'Inter Display, Inter, sans-serif';
+
+/* ------------------------------------------------------------------------------------------------ backdrops */
+const Backdrop: React.FC<{p: CinematicProps}> = ({p}) => {
+  const P = p.palette;
+  const horizon = p.backdrop === 'sea' ? 700 : p.backdrop === 'desert' ? 780 : p.backdrop === 'alps' ? 760 : p.backdrop === 'track' ? 760 : 1080;
+  return <g>
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={P.sky0} /><stop offset="1" stopColor={P.sky1} /></linearGradient>
+      <radialGradient id="hz" cx="62%" cy="55%" r="65%"><stop offset="0" stopColor={P.haze} stopOpacity={0.55} /><stop offset="1" stopColor={P.haze} stopOpacity={0} /></radialGradient>
+      <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={P.haze} stopOpacity={0.55} /><stop offset="0.08" stopColor={P.sky1} /><stop offset="1" stopColor="#02060C" /></linearGradient>
+    </defs>
+    <rect width={W} height={H} fill="url(#bg)" />
+    <rect width={W} height={H} fill="url(#hz)" />
+    {p.backdrop === 'sea' && <g>
+      <rect y={horizon} width={W} height={H - horizon} fill="url(#sea)" />
+      {Array.from({length: 26}, (_, k) => <path key={k} d={`M ${-100 + rnd(k) * 2100} ${horizon + 18 + k * k * 0.55} q 60 -6 120 0`} stroke={P.haze} strokeOpacity={0.25 - k * 0.006} strokeWidth={2 + k * 0.12} fill="none" />)}
+    </g>}
+    {p.backdrop === 'desert' && <g>
+      <path d={`M 0 ${horizon} Q 480 ${horizon - 40} 960 ${horizon - 10} T 1920 ${horizon - 30} L 1920 1080 L 0 1080 Z`} fill="#2A1A0E" />
+      <path d={`M 0 ${horizon + 60} Q 600 ${horizon + 10} 1200 ${horizon + 70} T 1920 ${horizon + 40} L 1920 1080 L 0 1080 Z`} fill="#1A0F08" />
+    </g>}
+    {p.backdrop === 'alps' && <g>
+      <path d="M 0 760 L 220 520 L 360 640 L 560 380 L 760 600 L 900 470 L 1120 690 L 1300 430 L 1520 650 L 1700 500 L 1920 700 L 1920 1080 L 0 1080 Z" fill="#1C2A3E" />
+      <path d="M 560 380 L 620 450 L 590 445 L 560 470 L 530 440 L 500 450 Z M 1300 430 L 1360 500 L 1330 495 L 1300 515 L 1270 490 L 1240 500 Z" fill="#DCE6F2" opacity={0.85} />
+      <path d="M 0 860 L 300 760 L 640 840 L 980 740 L 1300 850 L 1620 770 L 1920 840 L 1920 1080 L 0 1080 Z" fill="#0E1726" />
+    </g>}
+    {p.backdrop === 'track' && <g>
+      <path d={`M 0 ${horizon} L 1920 ${horizon - 40} L 1920 1080 L 0 1080 Z`} fill="#141820" />
+      {Array.from({length: 9}, (_, k) => <path key={k} d={`M ${k * 260 - 100} 1080 L ${960 + (k - 4) * 40} ${horizon - 20}`} stroke="#FFFFFF" strokeOpacity={0.05} strokeWidth={3} />)}
+      <path d={`M 0 ${horizon + 40} L 1920 ${horizon}`} stroke="#E53935" strokeWidth={10} strokeDasharray="60 60" opacity={0.6} />
+    </g>}
+    {p.backdrop === 'room' && <g>
+      <path d="M 0 840 L 1920 840 L 1920 1080 L 0 1080 Z" fill="#000" opacity={0.45} />
+      {Array.from({length: 12}, (_, k) => <rect key={k} x={k * 170 - 20} y={0} width={4} height={840} fill={P.haze} opacity={0.05} />)}
+    </g>}
+    {p.backdrop === 'cleanroom' && <g>
+      {Array.from({length: 7}, (_, k) => <rect key={k} x={140 + k * 260} y={20} width={200} height={14} rx={7} fill="#E8F6FF" opacity={0.65} />)}
+      <path d="M 0 860 L 1920 860 L 1920 1080 L 0 1080 Z" fill="#050B18" opacity={0.7} />
+      {Array.from({length: 22}, (_, k) => <path key={k} d={`M ${k * 96} 860 L ${960 + (k - 11) * 160} 1080`} stroke={P.haze} strokeOpacity={0.12} strokeWidth={2} />)}
+    </g>}
+    {p.backdrop === 'deep' && <g>
+      {Array.from({length: 8}, (_, k) => <path key={k} d={`M ${200 + k * 230} 0 L ${120 + k * 260} 1080`} stroke={P.haze} strokeOpacity={0.05} strokeWidth={60} />)}
+      <path d="M 0 900 Q 500 860 960 900 T 1920 880 L 1920 1080 L 0 1080 Z" fill="#03070C" />
+    </g>}
+  </g>;
+};
+
+/* ------------------------------------------------------------------------------------------------ helpers */
+const Beam: React.FC<{b: NonNullable<CinematicProps['beams']>[number]; i: number; color: string}> = ({b, i, color}) => {
+  const a = (b.angle * Math.PI) / 180, ex = b.x + Math.sin(a) * b.length, ey = b.y + Math.cos(a) * b.length;
+  const nx = Math.cos(a) * b.width / 2, ny = -Math.sin(a) * b.width / 2;
+  return <g>
+    <defs><linearGradient id={`bm${i}`} x1={b.x} y1={b.y} x2={ex} y2={ey} gradientUnits="userSpaceOnUse">
+      <stop offset="0" stopColor={b.color || color} stopOpacity={b.opacity ?? 0.5} /><stop offset="1" stopColor={b.color || color} stopOpacity={0} /></linearGradient></defs>
+    <path d={`M ${b.x - nx * 0.12} ${b.y - ny * 0.12} L ${b.x + nx * 0.12} ${b.y + ny * 0.12} L ${ex + nx} ${ey + ny} L ${ex - nx} ${ey - ny} Z`} fill={`url(#bm${i})`} filter="url(#soft)" />
+  </g>;
+};
+const Particles: React.FC<{p: NonNullable<CinematicProps['particles']>; color: string}> = ({p, color}) => {
+  const [x0, y0, x1, y1] = p.region || [0, 0, W, H];
+  return <g>{Array.from({length: p.n}, (_, k) => { const r = (p.size ?? 3) * (0.4 + rnd(k + 9) * 1.2);
+    return <circle key={k} cx={x0 + rnd(k) * (x1 - x0)} cy={y0 + rnd(k + 3) * (y1 - y0)} r={r} fill={p.color || color} opacity={0.25 + 0.6 * rnd(k + 5)} filter={r > 3 ? 'url(#soft)' : undefined} />; })}</g>;
+};
+const metal = (id: string, a: string, b: string) => <linearGradient id={id} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={a} /><stop offset="0.5" stopColor={b} /><stop offset="1" stopColor={a} /></linearGradient>;
+
+/* ------------------------------------------------------------------------------------------------ subjects */
+type SubjectFn = (o: any, P: CinematicProps['palette']) => React.ReactNode;
+const SUBJECTS: Record<string, SubjectFn> = {
+  /** A massive open vault door; the chamber behind is empty; bills dissolving into dust. */
+  vault: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs>{metal('vm', '#5A6270', '#A9B3C2')}<radialGradient id="vin" cx="50%" cy="45%" r="60%"><stop offset="0" stopColor={P.key} stopOpacity={0.55} /><stop offset="1" stopColor="#05070B" /></radialGradient></defs>
+    <circle r={360} fill="#07090D" stroke="url(#vm)" strokeWidth={46} />
+    <circle r={330} fill="url(#vin)" />
+    {[-120, 0, 120].map((y) => <rect key={y} x={-260} y={y} width={520} height={10} fill="#2A3140" />)}
+    <g transform="translate(330 0) skewY(-12) scale(0.42 1)">
+      <circle r={350} fill="url(#vm)" stroke="#1A1E26" strokeWidth={12} />
+      {Array.from({length: 12}, (_, k) => <circle key={k} cx={Math.cos(k * 0.5236) * 300} cy={Math.sin(k * 0.5236) * 300} r={16} fill="#2C323D" />)}
+      <circle r={110} fill="#2C323D" /><path d="M -90 0 L 90 0 M 0 -90 L 0 90" stroke="#C9D2DE" strokeWidth={20} strokeLinecap="round" />
+    </g>
+    {o.empty !== false && <text x={0} y={30} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={110} fill={P.accent} opacity={0.9} filter="url(#glow)">{o.mark || '?'}</text>}
+    {Array.from({length: o.bills ?? 9}, (_, k) => { const u = rnd(k + 2), x = -420 - u * 260 + k * 18, y = -260 + rnd(k + 7) * 420;
+      return <g key={k} transform={`translate(${x} ${y}) rotate(${-30 + rnd(k) * 60})`} opacity={0.85 - u * 0.6}>
+        <rect x={-70} y={-32} width={140} height={64} rx={6} fill="#3E6B48" stroke="#9FD3A8" strokeWidth={3} />
+        <circle r={18} fill="none" stroke="#9FD3A8" strokeWidth={3} /></g>; })}
+  </g>,
+  /** A ledger / bank confirmation with one line redacted and a magnifier over it. */
+  ledger: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -6})`}>
+    <rect x={-330} y={-430} width={660} height={860} rx={10} fill="#E9E3D4" />
+    <rect x={-330} y={-430} width={660} height={860} rx={10} fill="url(#paperShade)" />
+    <text x={-280} y={-340} fontFamily={FONT} fontWeight={900} fontSize={44} fill="#1B1F27">{o.heading || 'BANK CONFIRMATION'}</text>
+    {Array.from({length: 11}, (_, k) => <rect key={k} x={-280} y={-280 + k * 56} width={480 - rnd(k) * 200} height={14} rx={7} fill="#1B1F27" opacity={0.18} />)}
+    <rect x={-290} y={20} width={580} height={86} fill="#0B0D12" />
+    <text x={0} y={80} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={56} fill={P.accent}>{o.amount || '$ 2,000,000,000'}</text>
+    {o.stamp && <g transform="translate(120 280) rotate(-14)"><rect x={-190} y={-60} width={380} height={120} rx={12} fill="none" stroke="#D3302B" strokeWidth={12} />
+      <text x={0} y={30} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={84} fill="#D3302B">{o.stamp}</text></g>}
+    {o.magnifier !== false && <g transform="translate(150 60)"><circle r={150} fill={P.key} fillOpacity={0.12} stroke="#C9D2DE" strokeWidth={22} />
+      <rect x={100} y={100} width={46} height={230} rx={20} transform="rotate(-45)" fill="#2C323D" /></g>}
+  </g>,
+  /** A colossal EUV lithography machine with a glowing light-source core and a laser line. */
+  euv: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs>{metal('em', '#C8D3E0', '#F4F8FC')}<radialGradient id="core" cx="50%" cy="50%" r="50%"><stop offset="0" stopColor="#FFFFFF" /><stop offset="0.25" stopColor={P.accent} /><stop offset="1" stopColor={P.accent} stopOpacity={0} /></radialGradient></defs>
+    <rect x={-560} y={-300} width={1120} height={600} rx={28} fill="url(#em)" />
+    <rect x={-560} y={-300} width={1120} height={600} rx={28} fill="#0A1426" opacity={0.38} />
+    <rect x={-560} y={-300} width={1120} height={70} rx={20} fill={P.key} opacity={0.85} />
+    {[-380, -130, 120, 370].map((x, k) => <g key={k}><rect x={x - 100} y={-200} width={200} height={380} rx={12} fill="#0B1730" opacity={0.85} />
+      <rect x={x - 80} y={-180} width={160} height={8} rx={4} fill={P.accent} opacity={0.6} /></g>)}
+    <rect x={-240} y={-170} width={480} height={330} rx={20} fill="#030814" />
+    <circle cx={0} cy={0} r={150} fill="url(#core)" filter="url(#glow)" />
+    <path d="M -560 -40 L -40 -10" stroke="#FF4D6D" strokeWidth={10} filter="url(#glow)" />
+    {Array.from({length: 6}, (_, k) => <circle key={k} cx={-20 + k * 2} cy={-140 + k * 26} r={7} fill="#FFFFFF" />)}
+    <path d="M -160 120 Q 0 40 160 120" stroke="#E6F7FF" strokeWidth={10} fill="none" />
+    <rect x={-600} y={300} width={1200} height={30} rx={10} fill="#05090F" opacity={0.8} />
+  </g>,
+  /** A container ship seen from a low bow angle, flying three blank flags (no real designs). */
+  ship: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs><linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#2B3A55" /><stop offset="1" stopColor="#0B111C" /></linearGradient></defs>
+    <path d="M -700 0 L 520 -60 L 640 40 L 560 220 L -640 260 Z" fill="url(#hull)" />
+    <path d="M 520 -60 L 640 40 L 560 220 Z" fill="#000" opacity={0.35} />
+    {Array.from({length: 7}, (_, c) => Array.from({length: 5}, (_, r) => { const x = -620 + c * 160, y = -40 - r * 70 + c * -6;
+      return <rect key={c + '-' + r} x={x} y={y - 64} width={150} height={64} fill={['#B5452F', '#2F6E9E', '#C79A2A', '#3E7D55', '#6D4C8E', '#9E3D52'][(c * 5 + r) % 6]} stroke="#0B111C" strokeWidth={4} opacity={0.92} />; }))}
+    <rect x={420} y={-330} width={110} height={270} fill="#E7ECF2" /><rect x={430} y={-310} width={90} height={16} fill="#0B111C" opacity={0.6} />
+    {(o.flags || ['?', '?', '?']).map((f: string, k: number) => { const x = -560 + k * 360, y = -470 - k * 30, c = ['#C8CED8', '#B9C1CD', '#D3D8E0'][k];
+      return <g key={k}><rect x={x} y={y} width={10} height={260} fill="#0B111C" />
+        <path d={`M ${x + 10} ${y} q 90 -20 180 10 q 40 14 60 0 l 0 110 q -20 14 -60 0 q -90 -30 -180 -10 Z`} fill={c} stroke="#0B111C" strokeWidth={4} />
+        <text x={x + 130} y={y + 82} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={76} fill="#0B111C">{f}</text></g>; })}
+    <path d="M -700 260 Q 0 300 640 230" stroke="#FFFFFF" strokeOpacity={0.35} strokeWidth={10} fill="none" />
+  </g>,
+  /** An offshore oil platform at dusk, gas flare burning. */
+  oilrig: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {[-300, -120, 120, 300].map((x) => <path key={x} d={`M ${x} 0 L ${x * 0.8} 420`} stroke="#0A0F17" strokeWidth={34} />)}
+    <path d="M -300 120 L 300 260 M 300 120 L -300 260 M -260 300 L 260 300" stroke="#0A0F17" strokeWidth={12} />
+    <rect x={-380} y={-60} width={760} height={80} fill="#0A0F17" />
+    <rect x={-340} y={-200} width={300} height={140} fill="#0E1520" /><rect x={20} y={-170} width={240} height={110} fill="#0E1520" />
+    <path d="M 160 -170 L 210 -560 L 260 -170 Z" fill="none" stroke="#0A0F17" strokeWidth={14} />
+    {Array.from({length: 8}, (_, k) => <path key={k} d={`M ${160 + k * 6} ${-170 - k * 48} L ${260 - k * 6} ${-170 - k * 48}`} stroke="#0A0F17" strokeWidth={8} />)}
+    <path d="M -360 -200 L -560 -420 L -540 -430 L -340 -210 Z" fill="#0A0F17" />
+    <ellipse cx={-575} cy={-470} rx={45} ry={90} fill="#FFB347" filter="url(#glow)" /><ellipse cx={-575} cy={-460} rx={22} ry={50} fill="#FFF3C4" />
+    {Array.from({length: 10}, (_, k) => <rect key={k} x={-320 + k * 64} y={-30} width={22} height={12} fill={P.accent} opacity={0.9} />)}
+    <rect x={-600} y={420} width={1200} height={14} fill={P.accent} opacity={0.25} filter="url(#soft)" />
+  </g>,
+  /** A rising stock line that shoots up through the frame, a generic car silhouette riding it. */
+  surge: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {Array.from({length: 7}, (_, k) => <path key={k} d={`M -700 ${-k * 110 + 300} L 700 ${-k * 110 + 300}`} stroke={P.haze} strokeOpacity={0.12} strokeWidth={2} />)}
+    <path d="M -700 300 L -500 280 L -320 300 L -150 270 L 0 290 L 120 250 L 220 -40 L 300 -520" stroke={P.accent} strokeWidth={20} fill="none" strokeLinejoin="round" filter="url(#glow)" />
+    <path d="M -700 300 L -500 280 L -320 300 L -150 270 L 0 290 L 120 250 L 220 -40 L 300 -520 L 300 420 L -700 420 Z" fill={P.accent} opacity={0.12} />
+    <path d="M 300 -520 l -60 40 m 60 -40 l 20 70" stroke={P.accent} strokeWidth={20} strokeLinecap="round" filter="url(#glow)" />
+    <g transform="translate(-120 230) rotate(-6) scale(1.2)">
+      <path d="M -190 0 L -170 -50 Q -120 -110 -30 -112 L 60 -112 Q 130 -100 170 -50 L 200 -40 Q 220 -20 210 10 L -200 10 Z" fill="#0B0F16" />
+      <path d="M -110 -60 Q -70 -98 -20 -100 L 40 -100 Q 90 -92 120 -60 Z" fill={P.key} opacity={0.35} />
+      <circle cx={-110} cy={14} r={38} fill="#05070A" stroke="#3A4250" strokeWidth={8} /><circle cx={120} cy={14} r={38} fill="#05070A" stroke="#3A4250" strokeWidth={8} />
+    </g>
+    {o.label && <text x={340} y={-560} fontFamily={FONT} fontWeight={900} fontSize={64} fill={P.accent}>{o.label}</text>}
+  </g>,
+  /** A crashing line (consequence) */
+  crash: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {Array.from({length: 7}, (_, k) => <path key={k} d={`M -700 ${-k * 110 + 300} L 700 ${-k * 110 + 300}`} stroke={P.haze} strokeOpacity={0.12} strokeWidth={2} />)}
+    <path d="M -700 200 L -520 120 L -360 40 L -220 -60 L -100 -200 L 0 -320 L 80 -380 L 160 120 L 300 300 L 700 360" stroke={P.accent} strokeWidth={20} fill="none" strokeLinejoin="round" filter="url(#glow)" />
+    <path d="M 80 -380 L 160 120 L 300 300 L 700 360 L 700 420 L 80 420 Z" fill={P.accent} opacity={0.14} />
+  </g>,
+  /** A low-angle open-wheel race car (generic) with light streaks. */
+  racecar: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {Array.from({length: 9}, (_, k) => <path key={k} d={`M ${-900 - k * 40} ${-120 + k * 30} L ${-240} ${-120 + k * 30}`} stroke={P.accent} strokeOpacity={0.5 - k * 0.04} strokeWidth={6} filter="url(#soft)" />)}
+    <path d="M -520 40 L -440 -40 L -120 -60 L 40 -150 L 160 -150 L 220 -60 L 520 -40 L 560 30 L -520 50 Z" fill="#11151C" />
+    <path d="M 40 -150 L 160 -150 L 200 -90 L 60 -90 Z" fill={P.key} opacity={0.4} />
+    <path d="M -560 -120 L -420 -120 L -420 -20 L -560 -20 Z" fill="#0B0E13" /><path d="M 480 -10 L 640 -10 L 640 40 L 480 40 Z" fill="#0B0E13" />
+    <path d="M -440 -40 L 520 -40" stroke={P.accent} strokeWidth={8} />
+    {[-340, 360].map((x) => <g key={x}><circle cx={x} cy={40} r={110} fill="#05070A" stroke="#2C323D" strokeWidth={14} /><circle cx={x} cy={40} r={34} fill="#3A4250" /></g>)}
+  </g>,
+  /** A trophy surrounded by money (who earns from the sport) */
+  trophy: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs>{metal('gold', '#8A6414', '#FFE08A')}</defs>
+    <path d="M -180 -380 L 180 -380 Q 170 -120 0 -40 Q -170 -120 -180 -380 Z" fill="url(#gold)" />
+    <path d="M -180 -340 Q -320 -320 -240 -200 Q -200 -150 -140 -150 M 180 -340 Q 320 -320 240 -200 Q 200 -150 140 -150" stroke="url(#gold)" strokeWidth={26} fill="none" />
+    <rect x={-30} y={-40} width={60} height={160} fill="url(#gold)" /><rect x={-170} y={120} width={340} height={70} rx={8} fill="url(#gold)" />
+    {Array.from({length: 14}, (_, k) => <rect key={k} x={-520 + rnd(k) * 1040} y={-420 + rnd(k + 4) * 640} width={120} height={56} rx={6} transform={`rotate(${-40 + rnd(k + 1) * 80})`}
+      fill="#3E6B48" stroke="#9FD3A8" strokeWidth={3} opacity={0.75} />)}
+  </g>,
+  /** A supertall desert tower skyline at golden hour, a jet overhead and a ship below. */
+  skyline: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <path d="M -20 0 L -20 -560 L -8 -760 L 0 -980 L 8 -760 L 20 -560 L 20 0 Z" fill="#0B0F17" />
+    <path d="M -60 0 L -60 -360 L -20 -420 L -20 0 Z M 60 0 L 60 -300 L 20 -380 L 20 0 Z" fill="#0E131C" />
+    {[-420, -320, -230, 180, 280, 380, 470].map((x, k) => <rect key={x} x={x} y={-160 - rnd(k) * 260} width={70} height={160 + rnd(k) * 260} fill="#0E131C" />)}
+    {Array.from({length: 40}, (_, k) => <rect key={k} x={-420 + rnd(k) * 960} y={-380 + rnd(k + 2) * 360} width={8} height={10} fill={P.accent} opacity={0.6} />)}
+    <g transform="translate(-360 -760) rotate(-8)"><path d="M -90 0 L 90 0 L 110 -8 L 90 -16 L -60 -16 Z M -10 -10 L -50 -60 L -20 -60 L 30 -12 Z" fill="#0B0F17" /></g>
+  </g>,
+  /** A small bright island with a giant glowing domain sign. */
+  island: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <ellipse cx={0} cy={60} rx={520} ry={70} fill="#000" opacity={0.4} />
+    <path d="M -480 40 Q -300 -40 -80 -30 Q 160 -60 360 -10 Q 480 20 470 50 Q 200 80 -460 70 Z" fill="#1B3A2A" />
+    <path d="M -470 50 Q -200 30 470 50" stroke="#E8D9A8" strokeWidth={14} fill="none" opacity={0.8} />
+    {[-260, -120, 40].map((x, k) => <g key={x}><path d={`M ${x} -20 Q ${x + 10} -140 ${x + 30} -220`} stroke="#0E1A12" strokeWidth={12} fill="none" />
+      <path d={`M ${x + 30} -220 q -90 10 -130 60 M ${x + 30} -220 q 90 0 130 50 M ${x + 30} -220 q -20 -70 -80 -100 M ${x + 30} -220 q 40 -70 100 -90`} stroke="#0E1A12" strokeWidth={14} fill="none" strokeLinecap="round" /></g>)}
+    {o.sign && <text x={o.signX ?? 220} y={o.signY ?? -260} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={o.signSize ?? 330} fill={P.accent} filter="url(#glow)">{o.sign}</text>}
+  </g>,
+  /** A glowing processor die with traces and heat. */
+  chip: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? 0})`}>
+    {Array.from({length: 24}, (_, k) => { const side = k % 4, j = Math.floor(k / 4), off = -250 + j * 100;
+      const d = side === 0 ? `M ${off} -300 L ${off} -560` : side === 1 ? `M ${off} 300 L ${off} 560` : side === 2 ? `M -300 ${off} L -620 ${off}` : `M 300 ${off} L 620 ${off}`;
+      return <path key={k} d={d} stroke={P.accent} strokeWidth={8} opacity={0.75} filter="url(#glow)" />; })}
+    <rect x={-300} y={-300} width={600} height={600} rx={30} fill="#0D1117" stroke="#3A4250" strokeWidth={10} />
+    <rect x={-220} y={-220} width={440} height={440} rx={14} fill={P.accent} opacity={0.18} />
+    <rect x={-220} y={-220} width={440} height={440} rx={14} fill="none" stroke={P.accent} strokeWidth={6} filter="url(#glow)" />
+    {Array.from({length: 49}, (_, k) => <rect key={k} x={-200 + (k % 7) * 58} y={-200 + Math.floor(k / 7) * 58} width={44} height={44} fill={P.accent} opacity={0.15 + 0.5 * rnd(k)} />)}
+    {o.label && <text x={0} y={30} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={90} fill="#FFFFFF" opacity={0.92}>{o.label}</text>}
+  </g>,
+  /** An island outline glowing like a circuit (a chip-making island) */
+  chipisland: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <path d="M 120 -440 Q 190 -430 205 -360 Q 215 -250 190 -120 Q 170 0 120 130 Q 70 260 10 380 Q -20 440 -45 420 Q -70 330 -120 230 Q -180 120 -200 0 Q -215 -130 -170 -250 Q -120 -360 -40 -410 Q 40 -450 120 -440 Z" fill="#0D1520" stroke={P.accent} strokeWidth={12} filter="url(#glow)" />
+    {Array.from({length: 14}, (_, k) => <path key={k} d={`M ${-120 + rnd(k) * 220} ${-320 + k * 50} l ${40 + rnd(k + 1) * 60} 0 l 0 ${30}`} stroke={P.accent} strokeWidth={5} fill="none" opacity={0.75} />)}
+    {Array.from({length: 10}, (_, k) => <circle key={k} cx={-110 + rnd(k + 3) * 220} cy={-300 + rnd(k + 6) * 620} r={8} fill="#FFFFFF" />)}
+  </g>,
+  /** An undersea cable crossing the deep, pulses of light travelling along it. */
+  cable: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <path d="M -1000 220 C -500 120 -200 340 200 200 S 700 60 1000 120" stroke="#1B2433" strokeWidth={46} fill="none" />
+    <path d="M -1000 220 C -500 120 -200 340 200 200 S 700 60 1000 120" stroke={P.accent} strokeWidth={10} fill="none" filter="url(#glow)" />
+    {Array.from({length: 7}, (_, k) => { const t = k / 7; const x = -1000 + t * 2000, y = 220 - 100 * Math.sin(t * Math.PI * 2) * 0.6;
+      return <circle key={k} cx={x} cy={y} r={20} fill="#FFFFFF" filter="url(#glow)" />; })}
+    <ellipse cx={0} cy={340} rx={1000} ry={60} fill="#000" opacity={0.5} />
+  </g>,
+  /** A gold-bar stack inside a mountain vault (Swiss story) */
+  goldvault: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs>{metal('gb', '#9A6E12', '#FFE7A0')}</defs>
+    <path d="M -520 260 L -520 -160 Q 0 -520 520 -160 L 520 260 Z" fill="#0B0E14" stroke="#2A3140" strokeWidth={20} />
+    {Array.from({length: 15}, (_, k) => { const row = k < 6 ? 0 : k < 11 ? 1 : k < 14 ? 2 : 3, inRow = [6, 5, 3, 1][row], i = k - [0, 6, 11, 14][row];
+      const x = (i - (inRow - 1) / 2) * 140, y = 200 - row * 70;
+      return <path key={k} d={`M ${x - 60} ${y} L ${x - 44} ${y - 60} L ${x + 44} ${y - 60} L ${x + 60} ${y} Z`} fill="url(#gb)" stroke="#6E4E0C" strokeWidth={3} />; })}
+  </g>,
+  /** A big coin / currency symbol glowing (fund, money). */
+  coin: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs>{metal('cg', '#8A6414', '#FFE08A')}</defs>
+    <ellipse cx={0} cy={18} rx={200} ry={200} fill="#5A410C" /><circle r={200} fill="url(#cg)" />
+    <circle r={160} fill="none" stroke="#8A6414" strokeWidth={8} />
+    <text x={0} y={70} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={200} fill="#6B4C0E">{o.symbol || '$'}</text>
+  </g>,
+  /** A row of numbers glitching (cyber) */
+  glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}
+  </g>,
+};
+
+/* ------------------------------------------------------------------------------------------------ text */
+const TextLine: React.FC<{t: ThumbText}> = ({t}) => {
+  const left = t.anchor === 'start' ? t.x : t.anchor === 'end' ? t.x - t.width : t.x - t.width / 2;
+  const pad = t.boxPad ?? 22;
+  return <g transform={t.rotate ? `rotate(${t.rotate} ${t.x} ${t.y})` : undefined}>
+    {t.box && <rect x={left - pad} y={t.y - t.size * 0.86 - pad * 0.5} width={t.width + pad * 2} height={t.size * 1.02 + pad} fill={t.box} />}
+    <text x={t.x} y={t.y} textAnchor={t.anchor} fontFamily={FONT} fontWeight={900} fontSize={t.size} textLength={t.width} lengthAdjust="spacingAndGlyphs"
+      fill="#000" opacity={0.55} transform={`translate(6 10)`} filter="url(#soft)">{t.text}</text>
+    <text x={t.x} y={t.y} textAnchor={t.anchor} fontFamily={FONT} fontWeight={900} fontSize={t.size} textLength={t.width} lengthAdjust="spacingAndGlyphs"
+      fill={t.color} stroke={t.box ? 'none' : '#05070B'} strokeWidth={t.box ? 0 : Math.max(6, t.size * 0.07)} paintOrder="stroke" strokeLinejoin="round">{t.text}</text>
+    {t.underline && <rect x={left} y={t.y + t.size * 0.12} width={t.width} height={Math.max(8, t.size * 0.08)} fill={t.underline} />}
+  </g>;
+};
+
+export const CinematicThumb: React.FC<CinematicProps> = (p) => {
+  const P = p.palette, S = SUBJECTS[p.subject.kind];
+  const brand = p.brand || 'tl';
+  const bx = brand === 'tr' ? W - 64 - 420 : 64, by = brand === 'bl' ? H - 64 - 44 : 56;
+  return (
+    <AbsoluteFill style={{backgroundColor: P.sky1}}>
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+          <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" /></filter>
+          <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves={2} seed={3} /><feColorMatrix type="saturate" values="0" /></filter>
+          <linearGradient id="paperShade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFFFFF" stopOpacity={0.2} /><stop offset="1" stopColor="#000" stopOpacity={0.35} /></linearGradient>
+          <radialGradient id="vig" cx="50%" cy="50%" r="72%"><stop offset="55%" stopColor="#000" stopOpacity={0} /><stop offset="100%" stopColor="#000" stopOpacity={p.vignette ?? 0.75} /></radialGradient>
+          <radialGradient id="rim" cx="50%" cy="50%" r="50%"><stop offset="0" stopColor={P.key} stopOpacity={0.35} /><stop offset="1" stopColor={P.key} stopOpacity={0} /></radialGradient>
+        </defs>
+        <Backdrop p={p} />
+        {(p.beams || []).map((b, i) => <Beam key={i} b={b} i={i} color={P.key} />)}
+        <ellipse cx={p.subject.x} cy={p.subject.y} rx={700 * p.subject.s} ry={520 * p.subject.s} fill="url(#rim)" />
+        {(p.support || []).map((s, i) => { const F = SUBJECTS[s.kind]; return F ? <g key={i} opacity={s.opacity ?? 1}>{F(s, P)}</g> : null; })}
+        {S ? S(p.subject, P) : null}
+        {p.particles && <Particles p={p.particles} color={P.key} />}
+        <rect width={W} height={H} fill="url(#vig)" />
+        <rect width={W} height={H} filter="url(#grain)" opacity={p.grain ?? 0.07} style={{mixBlendMode: 'overlay'}} />
+        {!p.hideText && p.text.map((t, i) => <TextLine key={i} t={t} />)}
+        {/* channel mark: identical on every thumbnail, small (identity without competing) */}
+        <g transform={`translate(${bx} ${by})`} opacity={0.92}>
+          <rect width={8} height={44} fill="#D4AF5A" />
+          <text x={22} y={33} fontFamily="Inter, sans-serif" fontWeight={800} fontSize={26} letterSpacing={5} fill="#F4F1EA">THE HIDDEN ECONOMICS</text>
+        </g>
+      </svg>
+    </AbsoluteFill>
+  );
+};

@@ -1,0 +1,325 @@
+{
+  "title": "How Dubai Really Makes Money",
+  "docs_dir": "docs/episodes/02-dubai",
+  "video": "output/dubai_documentary.mp4",
+  "analysis": {
+    "mystery": "A desert city famous for oil wealth that barely runs on oil",
+    "surprising_fact": "Over 95% of Dubai's GDP is non-oil (Government of Dubai)",
+    "subject": "a supertall tower skyline in the desert",
+    "tone": "strategy",
+    "metaphor": "the city that looks impossible"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "how-dubai-really-makes-money",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "NOT OIL"
+      ],
+      "accent_line": 0,
+      "text_side": "left",
+      "claim_basis": "non_oil_share: over 95% of Dubai's GDP is non-oil",
+      "scene": {
+        "palette": {
+          "sky0": "#120A06",
+          "sky1": "#7A3E16",
+          "haze": "#FF9A3C",
+          "key": "#FFD08A",
+          "accent": "#FFD24A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "desert",
+        "subject": {
+          "kind": "skyline",
+          "x": 1300,
+          "y": 800,
+          "s": 0.82
+        },
+        "beams": [
+          {
+            "x": 1800,
+            "y": 640,
+            "angle": -75,
+            "width": 400,
+            "length": 1500,
+            "opacity": 0.25,
+            "color": "#FFB45A"
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            700,
+            300,
+            1900,
+            900
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "NOT OIL",
+          "x": 90,
+          "y": 604.3,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFD24A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.46 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 465, 890, 615)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.057",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 41",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.30)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "non_oil_share: over 95% of Dubai's GDP is non-oil",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.715,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "95%",
+        "NOT OIL"
+      ],
+      "accent_line": 0,
+      "text_side": "right",
+      "claim_basis": "non_oil_share: over 95% of Dubai's GDP is non-oil (Government of Dubai)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070C",
+          "sky1": "#1B1A2E",
+          "haze": "#C9A0FF",
+          "key": "#E8D9FF",
+          "accent": "#FFC93C",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "desert",
+        "subject": {
+          "kind": "skyline",
+          "x": 500,
+          "y": 820,
+          "s": 0.68
+        },
+        "particles": {
+          "n": 80,
+          "region": [
+            0,
+            0,
+            1200,
+            700
+          ],
+          "size": 2
+        },
+        "brand": "tr"
+      },
+      "layout": [
+        {
+          "text": "95%",
+          "x": 1830,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 342.9,
+          "anchor": "end",
+          "color": "#FFC93C"
+        },
+        {
+          "text": "NOT OIL",
+          "x": 1830,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.47 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1487, 372, 1830, 522), (1030, 558, 1830, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.062",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 26",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-machine-only-one-company-can-build (distance 0.37)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "non_oil_share: over 95% of Dubai's GDP is non-oil (Government of Dubai)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.752,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-machine-only-one-company-can-build"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:22:10Z",
+  "master": "output/how-dubai-really-makes-money/thumbnails/master_B.png"
+}

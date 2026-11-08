@@ -1,0 +1,92 @@
+# Thumbnail creative brief for why-ships-fly-foreign-flags (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: Why Almost Half the World's Ships Fly Three Small Flags
+docs_dir: docs/episodes/11-flags
+video: output/flags_documentary.mp4
+analysis:
+  mystery: Why giant ships are registered in small countries far from their owners
+  surprising_fact: Almost half of world shipping by tonnage flies the flags of Panama, Liberia and the Marshall Islands
+  subject: a container ship flying three blank flags
+  tone: trade
+  metaphor: a flag chosen like a product
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - WHY THESE
+  - FLAGS?
+  accent_line: 1
+  text_side: left
+  claim_basis: 'No factual claim: a question. Flags are blank (no real designs).'
+  scene:
+    palette:
+      sky0: '#0A1A2E'
+      sky1: '#2B4A6A'
+      haze: '#F2A65A'
+      key: '#FFD3A0'
+      accent: '#FFC93C'
+      ink: '#FFFFFF'
+    backdrop: sea
+    subject:
+      kind: ship
+      x: 1420
+      y: 650
+      s: 0.72
+      flags:
+      - '?'
+      - '?'
+      - '?'
+    beams:
+    - x: 1700
+      y: 420
+      angle: -70
+      width: 500
+      length: 1400
+      opacity: 0.25
+      color: '#FFB066'
+    particles:
+      n: 25
+      region:
+      - 0
+      - 600
+      - 1920
+      - 1000
+      size: 2
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - NOT THEIR
+  - FLAG
+  accent_line: 1
+  text_side: right
+  claim_basis: 'Episode facts: ships owned in one country, registered in another (Windward/UNCTAD in sources.yaml)'
+  scene:
+    palette:
+      sky0: '#05080F'
+      sky1: '#14243A'
+      haze: '#5E86B0'
+      key: '#BFD6F0'
+      accent: '#FF6B4A'
+      ink: '#FFFFFF'
+    backdrop: sea
+    subject:
+      kind: ship
+      x: 560
+      y: 660
+      s: 0.7
+      flags:
+      - '?'
+      - '?'
+      - '?'
+    particles:
+      n: 80
+      region:
+      - 0
+      - 0
+      - 1920
+      - 700
+      size: 2
+    brand: tr
+status: completed
+deliverable: documentary

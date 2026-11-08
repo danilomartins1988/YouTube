@@ -1,0 +1,346 @@
+{
+  "title": "The Hidden Business of Formula 1",
+  "docs_dir": "docs/episodes/03-formula1",
+  "video": "output/formula1_documentary.mp4",
+  "analysis": {
+    "mystery": "Who really makes the money in Formula 1?",
+    "surprising_fact": "Formula 1's revenue was $3.87bn in 2025 (Liberty Media)",
+    "subject": "a low-angle race car streaking through the night",
+    "tone": "strategy",
+    "metaphor": "speed as a money machine"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "the-hidden-business-of-formula-1",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "WHO GETS",
+        "PAID?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "No factual claim: a question.",
+      "scene": {
+        "palette": {
+          "sky0": "#04050A",
+          "sky1": "#1A0D10",
+          "haze": "#E53935",
+          "key": "#FF8A80",
+          "accent": "#FF3B30",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "track",
+        "subject": {
+          "kind": "racecar",
+          "x": 1300,
+          "y": 690,
+          "s": 0.95
+        },
+        "beams": [
+          {
+            "x": 1300,
+            "y": -60,
+            "angle": 0,
+            "width": 800,
+            "length": 900,
+            "opacity": 0.18,
+            "color": "#FFFFFF"
+          }
+        ],
+        "particles": {
+          "n": 30,
+          "region": [
+            600,
+            200,
+            1900,
+            700
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "WHO GETS",
+          "x": 90,
+          "y": 515.0,
+          "size": 156.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "PAID?",
+          "x": 90,
+          "y": 677.5,
+          "size": 156.2,
+          "width": 500.0,
+          "anchor": "start",
+          "color": "#FF3B30"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.47 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 393, 890, 524), (90, 556, 590, 687)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.4:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.050",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 28",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters (distance 0.50)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "No factual claim: a question.",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.721,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "$3.9 BILLION",
+        "SPORT"
+      ],
+      "accent_line": 0,
+      "text_side": "right",
+      "claim_basis": "f1_revenue_2025: $3,873m (Liberty Media), rounded to $3.9bn",
+      "scene": {
+        "palette": {
+          "sky0": "#060506",
+          "sky1": "#2A1A08",
+          "haze": "#E6C25A",
+          "key": "#FFE7A0",
+          "accent": "#FFD24A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "room",
+        "subject": {
+          "kind": "trophy",
+          "x": 560,
+          "y": 600,
+          "s": 1.0
+        },
+        "beams": [
+          {
+            "x": 560,
+            "y": -60,
+            "angle": 0,
+            "width": 600,
+            "length": 900,
+            "opacity": 0.3,
+            "color": "#FFE7A0"
+          }
+        ],
+        "particles": {
+          "n": 40,
+          "region": [
+            100,
+            100,
+            1100,
+            900
+          ],
+          "size": 3
+        },
+        "brand": "tr"
+      },
+      "layout": [
+        {
+          "text": "$3.9 BILLION",
+          "x": 1830,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "end",
+          "color": "#FFD24A"
+        },
+        {
+          "text": "SPORT",
+          "x": 1830,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 333.3,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.60 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1030, 442, 1830, 530), (1497, 550, 1830, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.058",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 37",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.75)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "f1_revenue_2025: $3,873m (Liberty Media), rounded to $3.9bn",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.634,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:24:47Z",
+  "master": "output/the-hidden-business-of-formula-1/thumbnails/master_A.png"
+}

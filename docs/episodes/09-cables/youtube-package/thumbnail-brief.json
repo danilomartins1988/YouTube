@@ -1,0 +1,344 @@
+{
+  "title": "The Cables at the Bottom of the Ocean That Carry the Internet",
+  "docs_dir": "docs/episodes/09-cables",
+  "video": "output/cables_documentary.mp4",
+  "analysis": {
+    "mystery": "The internet is not in the sky: it runs along the seabed",
+    "surprising_fact": "Submarine cables carry more than 99% of international data traffic (ITU)",
+    "subject": "a glowing cable across the ocean floor",
+    "tone": "trade",
+    "metaphor": "the hidden wires of the world"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "the-cables-at-the-bottom-of-the-ocean",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "THE HIDDEN",
+        "WIRES"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "text_style": "plain",
+      "claim_basis": "No number; itu_99: >99% of international data traffic travels by cable",
+      "scene": {
+        "palette": {
+          "sky0": "#010309",
+          "sky1": "#062238",
+          "haze": "#1FA2C9",
+          "key": "#9BE9FF",
+          "accent": "#3FE0FF",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "deep",
+        "subject": {
+          "kind": "cable",
+          "x": 1000,
+          "y": 700,
+          "s": 1.0
+        },
+        "beams": [
+          {
+            "x": 1300,
+            "y": -80,
+            "angle": 4,
+            "width": 700,
+            "length": 1000,
+            "opacity": 0.2
+          }
+        ],
+        "particles": {
+          "n": 90,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "THE HIDDEN",
+          "x": 90,
+          "y": 520.0,
+          "size": 125.0,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "WIRES",
+          "x": 90,
+          "y": 650.0,
+          "size": 125.0,
+          "width": 400.0,
+          "anchor": "start",
+          "color": "#3FE0FF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 422, 890, 528), (90, 552, 490, 658)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 7.3:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.052",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 10",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters-cartoon (distance 0.36)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "No number; itu_99: >99% of international data traffic travels by cable",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.733,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters-cartoon"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "150+ BREAKS",
+        "A YEAR"
+      ],
+      "accent_line": 0,
+      "text_side": "left",
+      "claim_basis": "faults: about 150-200 submarine cable faults a year (ICPC, May 2026)",
+      "scene": {
+        "palette": {
+          "sky0": "#060305",
+          "sky1": "#1A0A12",
+          "haze": "#FF5A6E",
+          "key": "#FFB3BE",
+          "accent": "#FF5A6E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "deep",
+        "subject": {
+          "kind": "cable",
+          "x": 1100,
+          "y": 720,
+          "s": 1.0
+        },
+        "support": [
+          {
+            "kind": "glitch",
+            "x": 1300,
+            "y": 700,
+            "s": 0.6,
+            "opacity": 0.35
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            600,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "150+ BREAKS",
+          "x": 90,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FF5A6E"
+        },
+        {
+          "text": "A YEAR",
+          "x": 90,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 436.4,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.53 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 433, 890, 529), (90, 551, 526, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.3:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.050",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 10",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hidden-business-of-formula-1 (distance 0.76)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "faults: about 150-200 submarine cable faults a year (ICPC, May 2026)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.582,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hidden-business-of-formula-1"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:23:45Z",
+  "master": "output/the-cables-at-the-bottom-of-the-ocean/thumbnails/master_A.png"
+}

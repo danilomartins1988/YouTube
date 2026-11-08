@@ -183,6 +183,18 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
         alias = REPO_ROOT / extras["output_alias"]
         alias.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(paths.final_video, alias)
+    # YouTube thumbnail (mandatory package stage, standard of 2026-11-08): RENDER -> VIDEO QC -> THUMBNAIL -> THUMBNAIL QC
+    # -> PACKAGE READY. Never fails the build: problems are logged and the package is marked not ready.
+    if deliverable.format == "long_16x9" and extras.get("youtube_thumbnail", True) is not False:
+        with step("youtube_thumbnail", deliverable=deliverable.id):
+            try:
+                from hiddeneco import youtube_thumbnail as ytt
+                if ytt.load_brief(paths.slug) is None:
+                    ytt.draft_brief(paths.slug, deliverable.id, project, extras.get("output_alias"))
+                r = ytt.generate(paths.slug, others=ytt.channel_thumbnails(exclude=paths.slug))
+                log("youtube_thumbnail.done", default=r.get("default_concept"), qc=r.get("thumbnail_qc"), ready=r.get("package_ready"))
+            except Exception as e:                     # noqa: BLE001
+                log("youtube_thumbnail.failed", error=str(e)[:300])
         log("output.alias", path=str(alias))
     log("deliverable.done", deliverable=deliverable.id, qc_errors=report["errors"],
         blockers=len(report["publish_blockers"]))

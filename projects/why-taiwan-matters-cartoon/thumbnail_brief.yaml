@@ -1,0 +1,77 @@
+# Thumbnail creative brief for why-taiwan-matters-cartoon (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: Why Taiwan Matters So Much to the Global Economy
+docs_dir: docs/episodes/07-taiwan-v2
+video: output/taiwan_v2_documentary.mp4
+analysis:
+  mystery: Why a small island sits at the centre of the world economy
+  surprising_fact: TSMC held 72.5% of global foundry revenue (top ten, Q2 2026)
+  subject: an island outline glowing like a circuit
+  tone: tech
+  metaphor: the chip island
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - ONE SMALL
+  - ISLAND
+  accent_line: 1
+  text_side: left
+  claim_basis: 'taiwan_area: 35,980 km² (smaller than Switzerland); the island shape is stylised'
+  scene:
+    palette:
+      sky0: '#03060E'
+      sky1: '#0B1D33'
+      haze: '#4FB3F6'
+      key: '#BFE3FF'
+      accent: '#FF5A5F'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: chipisland
+      x: 1340
+      y: 540
+      s: 1.0
+    particles:
+      n: 80
+      region:
+      - 800
+      - 60
+      - 1900
+      - 1020
+      size: 2
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - THE CHIP
+  - ISLAND
+  accent_line: 0
+  text_side: right
+  claim_basis: foundry_share 72.5% of foundry revenue; lt10_capacity 69% of <10nm logic capacity (2022)
+  scene:
+    palette:
+      sky0: '#05030A'
+      sky1: '#1F0E1E'
+      haze: '#FF5A5F'
+      key: '#FFC2C4'
+      accent: '#FF5A5F'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: chip
+      x: 560
+      y: 540
+      s: 0.7
+      rot: -6
+    particles:
+      n: 60
+      region:
+      - 0
+      - 60
+      - 1200
+      - 1020
+      size: 2
+    brand: tr
+status: completed
+deliverable: documentary

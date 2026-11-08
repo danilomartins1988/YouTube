@@ -1,0 +1,97 @@
+# Thumbnail creative brief for the-2-billion-that-never-existed (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: The $2 Billion That Never Existed
+docs_dir: docs/episodes/12-wirecard
+video: output/wirecard_documentary.mp4
+analysis:
+  mystery: Billions on the balance sheet that nobody could find
+  surprising_fact: Cash worth about $2.2bn (€1.9bn) 'most likely did not exist' (Wirecard, June 2020)
+  subject: an empty bank vault / a bank confirmation marked false
+  tone: thriller
+  metaphor: a vault that opens on nothing
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - $2 BILLION?
+  accent_line: 0
+  text_side: left
+  claim_basis: 'missing: ≈ $2.2bn of cash Wirecard admitted most likely did not exist (title rounds to $2bn)'
+  scene:
+    palette:
+      sky0: '#040609'
+      sky1: '#141B26'
+      haze: '#6E89A8'
+      key: '#B9D2F0'
+      accent: '#E8B04A'
+      ink: '#F4EFE4'
+    backdrop: room
+    subject:
+      kind: vault
+      x: 1440
+      y: 560
+      s: 0.95
+      mark: '?'
+      bills: 10
+    beams:
+    - x: 1440
+      y: -40
+      angle: 0
+      width: 700
+      length: 1150
+      opacity: 0.35
+    particles:
+      n: 60
+      region:
+      - 700
+      - 100
+      - 1900
+      - 1000
+      size: 3
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - NEVER
+  - EXISTED
+  accent_line: 1
+  text_side: left
+  text_style: plain
+  claim_basis: 'aljazeera_2020: the banks said the confirmations were false; Wirecard: the money most likely did not exist'
+  scene:
+    palette:
+      sky0: '#070506'
+      sky1: '#1E1215'
+      haze: '#A8574E'
+      key: '#FFB4A8'
+      accent: '#E5443A'
+      ink: '#F4EFE4'
+    backdrop: room
+    subject:
+      kind: ledger
+      x: 1350
+      y: 560
+      s: 1.0
+      rot: -7
+      heading: BANK CONFIRMATION
+      amount: $ ?,???,???,???
+      stamp: 'FALSE'
+      magnifier: false
+    beams:
+    - x: 1450
+      y: -60
+      angle: 8
+      width: 640
+      length: 1150
+      opacity: 0.3
+    particles:
+      n: 40
+      region:
+      - 800
+      - 100
+      - 1900
+      - 1000
+      size: 2
+    brand: tl
+status: completed
+deliverable: documentary

@@ -1,0 +1,345 @@
+{
+  "title": "Why Almost Half the World's Ships Fly Three Small Flags",
+  "docs_dir": "docs/episodes/11-flags",
+  "video": "output/flags_documentary.mp4",
+  "analysis": {
+    "mystery": "Why giant ships are registered in small countries far from their owners",
+    "surprising_fact": "Almost half of world shipping by tonnage flies the flags of Panama, Liberia and the Marshall Islands",
+    "subject": "a container ship flying three blank flags",
+    "tone": "trade",
+    "metaphor": "a flag chosen like a product"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "why-ships-fly-foreign-flags",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "WHY THESE",
+        "FLAGS?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "No factual claim: a question. Flags are blank (no real designs).",
+      "scene": {
+        "palette": {
+          "sky0": "#0A1A2E",
+          "sky1": "#2B4A6A",
+          "haze": "#F2A65A",
+          "key": "#FFD3A0",
+          "accent": "#FFC93C",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "sea",
+        "subject": {
+          "kind": "ship",
+          "x": 1420,
+          "y": 650,
+          "s": 0.72,
+          "flags": [
+            "?",
+            "?",
+            "?"
+          ]
+        },
+        "beams": [
+          {
+            "x": 1700,
+            "y": 420,
+            "angle": -70,
+            "width": 500,
+            "length": 1400,
+            "opacity": 0.25,
+            "color": "#FFB066"
+          }
+        ],
+        "particles": {
+          "n": 25,
+          "region": [
+            0,
+            600,
+            1920,
+            1000
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "WHY THESE",
+          "x": 90,
+          "y": 517.8,
+          "size": 138.9,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "FLAGS?",
+          "x": 90,
+          "y": 662.2,
+          "size": 138.9,
+          "width": 533.3,
+          "anchor": "start",
+          "color": "#FFC93C"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.51 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 409, 890, 526), (90, 554, 623, 671)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "11.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.097",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 36",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-switzerland-is-so-rich (distance 0.62)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "No factual claim: a question. Flags are blank (no real designs).",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.695,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-switzerland-is-so-rich"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "NOT THEIR",
+        "FLAG"
+      ],
+      "accent_line": 1,
+      "text_side": "right",
+      "claim_basis": "Episode facts: ships owned in one country, registered in another (Windward/UNCTAD in sources.yaml)",
+      "scene": {
+        "palette": {
+          "sky0": "#05080F",
+          "sky1": "#14243A",
+          "haze": "#5E86B0",
+          "key": "#BFD6F0",
+          "accent": "#FF6B4A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "sea",
+        "subject": {
+          "kind": "ship",
+          "x": 560,
+          "y": 660,
+          "s": 0.7,
+          "flags": [
+            "?",
+            "?",
+            "?"
+          ]
+        },
+        "particles": {
+          "n": 80,
+          "region": [
+            0,
+            0,
+            1920,
+            700
+          ],
+          "size": 2
+        },
+        "brand": "tr"
+      },
+      "layout": [
+        {
+          "text": "NOT THEIR",
+          "x": 1830,
+          "y": 517.8,
+          "size": 138.9,
+          "width": 800,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "FLAG",
+          "x": 1830,
+          "y": 662.2,
+          "size": 138.9,
+          "width": 355.6,
+          "anchor": "end",
+          "color": "#FF6B4A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.47 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1030, 409, 1830, 526), (1474, 554, 1830, 671)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "11.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.084",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 31",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-switzerland-is-so-rich (distance 0.44)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "Episode facts: ships owned in one country, registered in another (Windward/UNCTAD in sources.yaml)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.616,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-switzerland-is-so-rich"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:26:45Z",
+  "master": "output/why-ships-fly-foreign-flags/thumbnails/master_A.png"
+}

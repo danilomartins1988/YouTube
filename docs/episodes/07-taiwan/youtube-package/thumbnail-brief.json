@@ -1,0 +1,333 @@
+{
+  "title": "Why Taiwan Matters So Much to the Global Economy (original cut)",
+  "docs_dir": "docs/episodes/07-taiwan",
+  "video": "output/taiwan_documentary.mp4",
+  "analysis": {
+    "mystery": "Why a small island sits at the centre of the world economy",
+    "surprising_fact": "Taiwan held 69% of global capacity for the most advanced logic chips (<10 nm, 2022, SIA/BCG)",
+    "subject": "a chip with an island inside",
+    "tone": "tech",
+    "metaphor": "the world's chip workshop"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "why-taiwan-matters",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "WORLD'S",
+        "CHIP SHOP"
+      ],
+      "accent_line": 1,
+      "text_side": "right",
+      "claim_basis": "lt10_capacity: 69% of <10 nm logic capacity (SIA/BCG, 2022)",
+      "scene": {
+        "palette": {
+          "sky0": "#020812",
+          "sky1": "#0A2238",
+          "haze": "#2EC4D6",
+          "key": "#B3F2FA",
+          "accent": "#2EC4D6",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chipisland",
+          "x": 600,
+          "y": 540,
+          "s": 0.95
+        },
+        "support": [
+          {
+            "kind": "chip",
+            "x": 600,
+            "y": 540,
+            "s": 0.9,
+            "opacity": 0.25
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            0,
+            60,
+            1200,
+            1020
+          ],
+          "size": 2
+        },
+        "brand": "tr"
+      },
+      "layout": [
+        {
+          "text": "WORLD'S",
+          "x": 1830,
+          "y": 517.8,
+          "size": 138.9,
+          "width": 622.2,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "CHIP SHOP",
+          "x": 1830,
+          "y": 662.2,
+          "size": 138.9,
+          "width": 800,
+          "anchor": "end",
+          "color": "#2EC4D6"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1208, 409, 1830, 526), (1030, 554, 1830, 671)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "11.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.058",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 36",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-cables-at-the-bottom-of-the-ocean (distance 0.27)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "lt10_capacity: 69% of <10 nm logic capacity (SIA/BCG, 2022)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.556,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-cables-at-the-bottom-of-the-ocean"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "IF IT",
+        "STOPS?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "A question; the film shows Bloomberg Economics' scenario (\u2248 10% of world GDP, an estimate, labelled hypothetical)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0306",
+          "sky1": "#2A0B12",
+          "haze": "#FF4B3E",
+          "key": "#FFB0A8",
+          "accent": "#FF4B3E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chipisland",
+          "x": 1340,
+          "y": 540,
+          "s": 0.95
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            60,
+            1900,
+            1020
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "IF IT",
+          "x": 90,
+          "y": 506.7,
+          "size": 208.3,
+          "width": 666.7,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "STOPS?",
+          "x": 90,
+          "y": 723.3,
+          "size": 208.3,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FF4B3E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.49 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 344, 757, 519), (90, 561, 890, 736)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "17.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.056",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 37",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.47)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "A question; the film shows Bloomberg Economics' scenario (\u2248 10% of world GDP, an estimate, labelled hypothetical)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.705,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:27:44Z",
+  "master": "output/why-taiwan-matters/thumbnails/master_B.png"
+}

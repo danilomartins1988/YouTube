@@ -3,6 +3,7 @@ import {Composition} from 'remotion';
 import {Documentary} from './Documentary';
 import {Thumbnail} from './Thumbnail';
 import {ToneThumbnail} from './ToneThumbnail';
+import {CinematicThumb} from './thumbnails/CinematicThumb';
 import {INTRO_SECONDS, TheHiddenEconomicsIntro} from './brand/TheHiddenEconomicsIntro';
 import type {Props} from './lib/types';
 import {DEMO_SECONDS, EngineDemo} from './animation-engine/examples/EngineDemo';
@@ -27,6 +28,16 @@ export const RemotionRoot: React.FC = () => (
     id="Thumbnail"
     component={Thumbnail as unknown as React.FC<Record<string, unknown>>}
     defaultProps={{...defaults, thumb: {scene: defaults.scenes[0], at: 1, headline: ['DEMO']}} as unknown as Record<string, unknown>}
+    fps={30}
+    width={1920}
+    height={1080}
+    durationInFrames={1}
+  />
+  <Composition
+    id="CinematicThumb"
+    component={CinematicThumb as unknown as React.FC<Record<string, unknown>>}
+    defaultProps={{palette: {sky0: '#05070B', sky1: '#141B26', haze: '#7FA6C9', key: '#9FC3E8', accent: '#D9A441', ink: '#F4EFE4'}, backdrop: 'room',
+      subject: {kind: 'vault', x: 1250, y: 520, s: 1}, text: []} as unknown as Record<string, unknown>}
     fps={30}
     width={1920}
     height={1080}

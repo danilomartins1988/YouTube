@@ -1,0 +1,82 @@
+# Thumbnail creative brief for why-taiwan-matters (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: Why Taiwan Matters So Much to the Global Economy (original cut)
+docs_dir: docs/episodes/07-taiwan
+video: output/taiwan_documentary.mp4
+analysis:
+  mystery: Why a small island sits at the centre of the world economy
+  surprising_fact: Taiwan held 69% of global capacity for the most advanced logic chips (<10 nm, 2022, SIA/BCG)
+  subject: a chip with an island inside
+  tone: tech
+  metaphor: the world's chip workshop
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - WORLD'S
+  - CHIP SHOP
+  accent_line: 1
+  text_side: right
+  claim_basis: 'lt10_capacity: 69% of <10 nm logic capacity (SIA/BCG, 2022)'
+  scene:
+    palette:
+      sky0: '#020812'
+      sky1: '#0A2238'
+      haze: '#2EC4D6'
+      key: '#B3F2FA'
+      accent: '#2EC4D6'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: chipisland
+      x: 600
+      y: 540
+      s: 0.95
+    support:
+    - kind: chip
+      x: 600
+      y: 540
+      s: 0.9
+      opacity: 0.25
+    particles:
+      n: 60
+      region:
+      - 0
+      - 60
+      - 1200
+      - 1020
+      size: 2
+    brand: tr
+- id: B
+  angle: consequence
+  text:
+  - IF IT
+  - STOPS?
+  accent_line: 1
+  text_side: left
+  claim_basis: A question; the film shows Bloomberg Economics' scenario (≈ 10% of world GDP, an estimate, labelled hypothetical)
+  scene:
+    palette:
+      sky0: '#0A0306'
+      sky1: '#2A0B12'
+      haze: '#FF4B3E'
+      key: '#FFB0A8'
+      accent: '#FF4B3E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: chipisland
+      x: 1340
+      y: 540
+      s: 0.95
+    particles:
+      n: 60
+      region:
+      - 800
+      - 60
+      - 1900
+      - 1020
+      size: 2
+    brand: tl
+status: completed
+deliverable: documentary

@@ -1,0 +1,325 @@
+{
+  "title": "Why Taiwan Matters So Much to the Global Economy",
+  "docs_dir": "docs/episodes/07-taiwan-v2",
+  "video": "output/taiwan_v2_documentary.mp4",
+  "analysis": {
+    "mystery": "Why a small island sits at the centre of the world economy",
+    "surprising_fact": "TSMC held 72.5% of global foundry revenue (top ten, Q2 2026)",
+    "subject": "an island outline glowing like a circuit",
+    "tone": "tech",
+    "metaphor": "the chip island"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "why-taiwan-matters-cartoon",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "ONE SMALL",
+        "ISLAND"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "taiwan_area: 35,980 km\u00b2 (smaller than Switzerland); the island shape is stylised",
+      "scene": {
+        "palette": {
+          "sky0": "#03060E",
+          "sky1": "#0B1D33",
+          "haze": "#4FB3F6",
+          "key": "#BFE3FF",
+          "accent": "#FF5A5F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chipisland",
+          "x": 1340,
+          "y": 540,
+          "s": 1.0
+        },
+        "particles": {
+          "n": 80,
+          "region": [
+            800,
+            60,
+            1900,
+            1020
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "ONE SMALL",
+          "x": 90,
+          "y": 517.8,
+          "size": 138.9,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "ISLAND",
+          "x": 90,
+          "y": 662.2,
+          "size": 138.9,
+          "width": 533.3,
+          "anchor": "start",
+          "color": "#FF5A5F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 409, 890, 526), (90, 554, 623, 671)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "11.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.053",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 44",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-cables-at-the-bottom-of-the-ocean (distance 0.35)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "taiwan_area: 35,980 km\u00b2 (smaller than Switzerland); the island shape is stylised",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.653,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-cables-at-the-bottom-of-the-ocean"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "THE CHIP",
+        "ISLAND"
+      ],
+      "accent_line": 0,
+      "text_side": "right",
+      "claim_basis": "foundry_share 72.5% of foundry revenue; lt10_capacity 69% of <10nm logic capacity (2022)",
+      "scene": {
+        "palette": {
+          "sky0": "#05030A",
+          "sky1": "#1F0E1E",
+          "haze": "#FF5A5F",
+          "key": "#FFC2C4",
+          "accent": "#FF5A5F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 560,
+          "y": 540,
+          "s": 0.7,
+          "rot": -6
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            0,
+            60,
+            1200,
+            1020
+          ],
+          "size": 2
+        },
+        "brand": "tr"
+      },
+      "layout": [
+        {
+          "text": "THE CHIP",
+          "x": 1830,
+          "y": 515.0,
+          "size": 156.2,
+          "width": 800,
+          "anchor": "end",
+          "color": "#FF5A5F"
+        },
+        {
+          "text": "ISLAND",
+          "x": 1830,
+          "y": 677.5,
+          "size": 156.2,
+          "width": 600.0,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.50 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1030, 393, 1830, 524), (1230, 556, 1830, 687)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.065",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 24",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters (distance 0.78)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "foundry_share 72.5% of foundry revenue; lt10_capacity 69% of <10nm logic capacity (2022)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.646,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:28:14Z",
+  "master": "output/why-taiwan-matters-cartoon/thumbnails/master_A.png"
+}

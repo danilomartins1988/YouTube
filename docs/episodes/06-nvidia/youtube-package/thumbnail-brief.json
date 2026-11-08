@@ -1,0 +1,335 @@
+{
+  "title": "How Nvidia Took Over the AI Economy",
+  "docs_dir": "docs/episodes/06-nvidia",
+  "video": "output/nvidia_documentary_presenter.mp4",
+  "deliverable": "documentary_presenter",
+  "analysis": {
+    "mystery": "How a gaming-chip company became the centre of the AI economy",
+    "surprising_fact": "On 29 Oct 2025 Nvidia became the first company to close above $5 trillion in market value",
+    "subject": "a glowing AI processor",
+    "tone": "tech",
+    "metaphor": "the chip everything runs through"
+  },
+  "status": "completed",
+  "slug": "how-nvidia-took-over-the-ai-economy",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "$5 TRILLION",
+        "CHIP"
+      ],
+      "accent_line": 0,
+      "text_side": "left",
+      "claim_basis": "market_cap_5tn: first company to close above $5 trillion (29 Oct 2025)",
+      "scene": {
+        "palette": {
+          "sky0": "#030603",
+          "sky1": "#0C1A0E",
+          "haze": "#76D13A",
+          "key": "#C8F5A0",
+          "accent": "#8BE04E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 1330,
+          "y": 540,
+          "s": 0.85,
+          "rot": -8
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            700,
+            80,
+            1900,
+            1000
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "$5 TRILLION",
+          "x": 90,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#8BE04E"
+        },
+        {
+          "text": "CHIP",
+          "x": 90,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 290.9,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.50 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 433, 890, 529), (90, 551, 381, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.060",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 33",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-2-billion-that-never-existed (distance 0.89)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "market_cap_5tn: first company to close above $5 trillion (29 Oct 2025)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.726,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-2-billion-that-never-existed"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "FROM GAMES",
+        "TO AI"
+      ],
+      "accent_line": 1,
+      "text_side": "right",
+      "claim_basis": "gpu_1999 (GPU for PC gaming), cuda_2006, dc_fy2026 (data center \u2248 90% of revenue)",
+      "scene": {
+        "palette": {
+          "sky0": "#05040A",
+          "sky1": "#16102A",
+          "haze": "#9B8CFF",
+          "key": "#DCD4FF",
+          "accent": "#76D13A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 580,
+          "y": 540,
+          "s": 0.7,
+          "rot": 10
+        },
+        "support": [
+          {
+            "kind": "glitch",
+            "x": 600,
+            "y": 540,
+            "s": 0.7,
+            "opacity": 0.35
+          }
+        ],
+        "particles": {
+          "n": 50,
+          "region": [
+            0,
+            80,
+            1200,
+            1000
+          ],
+          "size": 2
+        },
+        "brand": "tr"
+      },
+      "layout": [
+        {
+          "text": "FROM GAMES",
+          "x": 1830,
+          "y": 520.0,
+          "size": 125.0,
+          "width": 800,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "TO AI",
+          "x": 1830,
+          "y": 650.0,
+          "size": 125.0,
+          "width": 400.0,
+          "anchor": "end",
+          "color": "#76D13A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1030, 422, 1830, 528), (1430, 552, 1830, 658)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.066",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 28",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-dubai-really-makes-money (distance 0.50)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "gpu_1999 (GPU for PC gaming), cuda_2006, dc_fy2026 (data center \u2248 90% of revenue)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.682,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-dubai-really-makes-money"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:22:40Z",
+  "master": "output/how-nvidia-took-over-the-ai-economy/thumbnails/master_A.png"
+}

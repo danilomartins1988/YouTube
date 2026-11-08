@@ -1,0 +1,332 @@
+{
+  "title": "The Tiny Island Getting Rich From AI",
+  "docs_dir": "docs/episodes/10-anguilla",
+  "video": "output/anguilla_documentary.mp4",
+  "analysis": {
+    "mystery": "How an island of 16,000 people earns millions from artificial intelligence",
+    "surprising_fact": "Anguilla earned about $85m from .ai domain registrations in 2025",
+    "subject": "a small island under a giant glowing .ai",
+    "tone": "trade",
+    "metaphor": "a two-letter jackpot"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "the-island-getting-rich-from-ai",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "THE .AI",
+        "JACKPOT"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "rev_2025: \u2248 $85.3m from .ai registrations in 2025 (Anguilla Focus)",
+      "scene": {
+        "palette": {
+          "sky0": "#05121F",
+          "sky1": "#0D4252",
+          "haze": "#2EC4B6",
+          "key": "#B8FFF5",
+          "accent": "#FFD24A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "sea",
+        "subject": {
+          "kind": "island",
+          "x": 1320,
+          "y": 700,
+          "s": 0.9,
+          "sign": ".ai",
+          "signX": 40,
+          "signY": -300,
+          "signSize": 380
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            600
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "THE .AI",
+          "x": 90,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "JACKPOT",
+          "x": 90,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFD24A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 372, 890, 522), (90, 558, 890, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.084",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 35",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-cables-at-the-bottom-of-the-ocean (distance 0.47)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "rev_2025: \u2248 $85.3m from .ai registrations in 2025 (Anguilla Focus)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.728,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-cables-at-the-bottom-of-the-ocean"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "$85M FROM",
+        "TWO LETTERS"
+      ],
+      "accent_line": 0,
+      "text_side": "right",
+      "claim_basis": "rev_2025: EC$230m \u2248 US$85.3m in 2025",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0612",
+          "sky1": "#2A1440",
+          "haze": "#C77DFF",
+          "key": "#EBD4FF",
+          "accent": "#FFD24A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "sea",
+        "subject": {
+          "kind": "island",
+          "x": 600,
+          "y": 720,
+          "s": 0.8,
+          "sign": ".ai",
+          "signX": 0,
+          "signY": -300,
+          "signSize": 360
+        },
+        "particles": {
+          "n": 70,
+          "region": [
+            0,
+            0,
+            1200,
+            600
+          ],
+          "size": 2
+        },
+        "brand": "tr"
+      },
+      "layout": [
+        {
+          "text": "$85M FROM",
+          "x": 1830,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 654.5,
+          "anchor": "end",
+          "color": "#FFD24A"
+        },
+        {
+          "text": "TWO LETTERS",
+          "x": 1830,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.53 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1176, 433, 1830, 529), (1030, 551, 1830, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.073",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 29",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-machine-only-one-company-can-build (distance 0.51)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "rev_2025: EC$230m \u2248 US$85.3m in 2025",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.694,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-machine-only-one-company-can-build"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:25:17Z",
+  "master": "output/the-island-getting-rich-from-ai/thumbnails/master_A.png"
+}

@@ -1,0 +1,91 @@
+# Thumbnail creative brief for why-norway-is-so-rich (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: Why Norway Is So Rich — The Secret Behind Its Oil Fortune
+docs_dir: docs/episodes/04-norway
+video: output/norway_documentary.mp4
+analysis:
+  mystery: Plenty of countries have oil; why did Norway end up with a $2 trillion fund?
+  surprising_fact: The oil fund is worth about $2.12 trillion (≈ $375,000 per person)
+  subject: an offshore oil platform at dusk
+  tone: strategy
+  metaphor: oil turned into a fortune at sea
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - THE OIL
+  - FORTUNE
+  accent_line: 1
+  text_side: left
+  claim_basis: No number; the fund's size is in the film (fund_value ≈ $2.12tn)
+  scene:
+    palette:
+      sky0: '#0B1222'
+      sky1: '#5A3048'
+      haze: '#F28C38'
+      key: '#FFC27A'
+      accent: '#FFC93C'
+      ink: '#FFFFFF'
+    backdrop: sea
+    subject:
+      kind: oilrig
+      x: 1330
+      y: 520
+      s: 0.95
+    beams:
+    - x: 760
+      y: 600
+      angle: -80
+      width: 300
+      length: 1200
+      opacity: 0.2
+      color: '#FFB066'
+    particles:
+      n: 20
+      region:
+      - 900
+      - 100
+      - 1900
+      - 600
+      size: 2
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - $2 TRILLION
+  - FUND
+  accent_line: 0
+  text_side: right
+  claim_basis: 'fund_value: NOK 22,014bn ≈ $2.12tn (Fed H.10 2025 average), CURRENCY.md'
+  scene:
+    palette:
+      sky0: '#060A12'
+      sky1: '#13233A'
+      haze: '#E6C25A'
+      key: '#FFE7A0'
+      accent: '#FFD24A'
+      ink: '#FFFFFF'
+    backdrop: sea
+    subject:
+      kind: coin
+      x: 560
+      y: 470
+      s: 1.25
+      symbol: $
+    support:
+    - kind: oilrig
+      x: 560
+      y: 760
+      s: 0.45
+      opacity: 0.85
+    particles:
+      n: 40
+      region:
+      - 100
+      - 100
+      - 1100
+      - 800
+      size: 3
+    brand: tr
+status: completed
+deliverable: documentary

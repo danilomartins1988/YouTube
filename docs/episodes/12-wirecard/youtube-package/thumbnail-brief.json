@@ -1,0 +1,342 @@
+{
+  "title": "The $2 Billion That Never Existed",
+  "docs_dir": "docs/episodes/12-wirecard",
+  "video": "output/wirecard_documentary.mp4",
+  "analysis": {
+    "mystery": "Billions on the balance sheet that nobody could find",
+    "surprising_fact": "Cash worth about $2.2bn (\u20ac1.9bn) 'most likely did not exist' (Wirecard, June 2020)",
+    "subject": "an empty bank vault / a bank confirmation marked false",
+    "tone": "thriller",
+    "metaphor": "a vault that opens on nothing"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "the-2-billion-that-never-existed",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "$2 BILLION?"
+      ],
+      "accent_line": 0,
+      "text_side": "left",
+      "claim_basis": "missing: \u2248 $2.2bn of cash Wirecard admitted most likely did not exist (title rounds to $2bn)",
+      "scene": {
+        "palette": {
+          "sky0": "#040609",
+          "sky1": "#141B26",
+          "haze": "#6E89A8",
+          "key": "#B9D2F0",
+          "accent": "#E8B04A",
+          "ink": "#F4EFE4"
+        },
+        "backdrop": "room",
+        "subject": {
+          "kind": "vault",
+          "x": 1440,
+          "y": 560,
+          "s": 0.95,
+          "mark": "?",
+          "bills": 10
+        },
+        "beams": [
+          {
+            "x": 1440,
+            "y": -40,
+            "angle": 0,
+            "width": 700,
+            "length": 1150,
+            "opacity": 0.35
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            700,
+            100,
+            1900,
+            1000
+          ],
+          "size": 3
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "$2 BILLION?",
+          "x": 90,
+          "y": 580.9,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#E8B04A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.57 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 492, 890, 588)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 6.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.069",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 32",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-switzerland-is-so-rich (distance 0.40)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "missing: \u2248 $2.2bn of cash Wirecard admitted most likely did not exist (title rounds to $2bn)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.69,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-switzerland-is-so-rich"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "NEVER",
+        "EXISTED"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "text_style": "plain",
+      "claim_basis": "aljazeera_2020: the banks said the confirmations were false; Wirecard: the money most likely did not exist",
+      "scene": {
+        "palette": {
+          "sky0": "#070506",
+          "sky1": "#1E1215",
+          "haze": "#A8574E",
+          "key": "#FFB4A8",
+          "accent": "#E5443A",
+          "ink": "#F4EFE4"
+        },
+        "backdrop": "room",
+        "subject": {
+          "kind": "ledger",
+          "x": 1350,
+          "y": 560,
+          "s": 1.0,
+          "rot": -7,
+          "heading": "BANK CONFIRMATION",
+          "amount": "$ ?,???,???,???",
+          "stamp": "FALSE",
+          "magnifier": false
+        },
+        "beams": [
+          {
+            "x": 1450,
+            "y": -60,
+            "angle": 8,
+            "width": 640,
+            "length": 1150,
+            "opacity": 0.3
+          }
+        ],
+        "particles": {
+          "n": 40,
+          "region": [
+            800,
+            100,
+            1900,
+            1000
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "NEVER",
+          "x": 90,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 571.4,
+          "anchor": "start",
+          "color": "#F4EFE4"
+        },
+        {
+          "text": "EXISTED",
+          "x": 90,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#E5443A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.57 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 372, 661, 522), (90, 558, 890, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.096",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 71",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.52)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "aljazeera_2020: the banks said the confirmations were false; Wirecard: the money most likely did not exist",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.702,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:23:12Z",
+  "master": "output/the-2-billion-that-never-existed/thumbnails/master_B.png"
+}

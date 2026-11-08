@@ -1,0 +1,76 @@
+# Thumbnail creative brief for the-day-volkswagen-became-the-most-valuable-company (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: The Day Volkswagen Became the World's Most Valuable Company
+docs_dir: docs/episodes/13-volkswagen
+video: output/volkswagen_documentary.mp4
+status: in_production
+analysis:
+  mystery: How a carmaker in crisis became the world's most valuable company for a day
+  surprising_fact: On 28 Oct 2008 VW was briefly worth ≈ $370bn, more than ExxonMobil's $343bn
+  subject: a share-price line shooting straight up with a generic car riding it
+  tone: thriller
+  metaphor: the impossible surge
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - IMPOSSIBLE
+  - SURGE
+  accent_line: 1
+  text_side: left
+  claim_basis: 'price: ≈ $266 to ≈ $1,250 per share in two trading days (Risk.net, Fed H.10 day rates)'
+  scene:
+    palette:
+      sky0: '#040507'
+      sky1: '#101620'
+      haze: '#4D8BD6'
+      key: '#BFD8FF'
+      accent: '#33D17A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: surge
+      x: 1300
+      y: 600
+      s: 0.85
+    particles:
+      n: 50
+      region:
+      - 700
+      - 60
+      - 1900
+      - 1000
+      size: 2
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - "#1 FOR"
+  - A DAY
+  accent_line: 0
+  text_side: right
+  claim_basis: 'top: briefly the world''s largest company by market value on 28 Oct 2008 (International Banker)'
+  scene:
+    palette:
+      sky0: '#070405'
+      sky1: '#1E0D10'
+      haze: '#E5443A'
+      key: '#FFB4A8'
+      accent: '#FFD24A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: crash
+      x: 620
+      y: 560
+      s: 0.8
+    particles:
+      n: 40
+      region:
+      - 0
+      - 60
+      - 1200
+      - 1000
+      size: 2
+    brand: tr
+deliverable: documentary

@@ -187,6 +187,65 @@ gets its own emotional personality. Premium animated documentary for adults, not
 - **Reference plans:** Wirecard (thriller), flags (trade), ASML (tech): `docs/episodes/{12-wirecard,11-flags,08-asml}/
   VISUAL_DIRECTION.md`, `visual_direction_preview.jpg`, `thumbnail_tone.png`.
 
+## 2c. YouTube thumbnails (mandatory package stage, from 2026-11-08)
+
+Pipeline order:
+
+RESEARCH → SCRIPT → STORYBOARD → ANIMATION → NARRATION → RENDER → VIDEO QC → **THUMBNAIL GENERATION → THUMBNAIL QC** →
+YOUTUBE PACKAGE READY.
+
+- **A cover, not a frame.** The thumbnail is designed separately as a premium documentary cover:
+  - cinematic vector art (`remotion/src/thumbnails/CinematicThumb.tsx`) with dramatic light, haze, rim light, glow,
+    grain and vignette;
+  - one dominant story subject (vault, ledger, EUV machine, ship, oil rig, chip, island, cable, race car, skyline,
+    surge or crash chart…) plus at most one supporting element;
+  - 0-4 words.
+  
+  It never uses the film's cartoon characters, a smiling sun, clouds or a generic city. No logos, no real flag
+  designs, no likeness of real people, no photographs and no fake "documentary photos".
+- **Brief first.** Write `projects/<slug>/thumbnail_brief.yaml` once the title and the visual direction are approved:
+  - the analysis: mystery, the most surprising verified fact, subject, tone and metaphor;
+  - two concepts: A (mystery) and B (consequence);
+  - each concept's scene, words and `claim_basis` (the verified claim behind any number, or "a question").
+  
+  If no brief exists, the build writes a `draft: true` brief. A package built from a draft brief is never "ready"
+  until the director replaces the draft.
+- **Generation.** `hiddeneco/youtube_thumbnail.py` runs automatically at the end of every long-form build, and with
+  `python tools/thumbnails.py generate <slug>`. It:
+  - renders a 3840x2160 master (kept in `output/<slug>/thumbnails/`, not committed);
+  - writes a 1280x720 PNG under 2 MB;
+  - lays out the typography exactly (`textLength`), so text never clips;
+  - re-renders only when the spec changed, so retries are safe and never duplicate output;
+  - logs every run to `output/thumbnails/log.jsonl`.
+  
+  The backend is `svg-composite`, at US$0.00. No AI image service is used: the channel rule is free/open tools only,
+  and adding a paid image backend requires the owner's approval and a budget.
+- **Package** (`docs/episodes/NN-name/youtube-package/`):
+  - `thumbnail.png`, `thumbnail-preview.jpg` (with the phone-size view) and `thumbnail-brief.json` (brief, layout, QC);
+  - `thumbnail-alt-<id>.png` (the other concept, kept for future A/B tests);
+  - `title.txt`, `description.txt`, `tags.txt` and `chapters.txt` (copied unchanged from `youtube_package.md`);
+  - `video.txt` (the MP4 stays in `output/`) and `PACKAGE_STATUS.json`.
+  
+  A different existing `thumbnail.png` is moved to `versions/`; nothing is deleted. Older thumbnails elsewhere are
+  left untouched.
+- **Thumbnail QC**. A critical failure blocks "package ready". The automated checks are:
+  - 1280x720, 16:9, RGB, a valid PNG under 2 MB;
+  - text inside safe margins and clear of the duration badge (bottom-right);
+  - legible at 160 px wide;
+  - text contrast of at least 3:1;
+  - 0-4 words;
+  - a claim basis for the words;
+  - clutter (edge density), subject contrast, and distinctness from every other channel thumbnail (perceptual hash +
+    colour histogram).
+  
+  A human still checks that the subject reads at a glance, that the tone fits, that the image is not misleading and
+  that the spelling is right. The internal design score picks the default concept; it does not predict CTR.
+- **Channel review.** `python tools/thumbnails.py all` refreshes `docs/thumbnails/INVENTORY.md`, `REPORT.md`,
+  `contact_sheet.jpg` (default | alternative per episode) and `contact_sheet_phone.jpg` (every default at phone size).
+  Use them to spot repetition before approving.
+- **Never** upload, replace a thumbnail on YouTube, change titles or descriptions, or touch the MP4 without the owner's
+  explicit authorisation.
+
 ## 2b. Story details (continued)
 
 - **Hypotheticals.** Any scenario that has not happened is said to be hypothetical in the narration and labelled on screen (red "Hypothetical scenario" banner). Show a real precedent next to it when one exists.

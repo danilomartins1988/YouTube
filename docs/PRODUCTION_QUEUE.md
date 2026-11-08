@@ -24,3 +24,4 @@ The summaries below are the owner's pitch. Every number in them must be checked 
 | 8 | The Metal Trade That Broke a Billion-Dollar Market | Queued | LME nickel, March 2022 (Tsingshan, trades cancelled, suspension): use LME and FCA material. Careful wording on legal cases. |
 | 9 | The Hamburger That Became a Symbol of the Cold War's End | Queued | McDonald's Moscow, 31 Jan 1990: no logo, no arches; generic cartoon burger. Ruble figures converted with an official rate or left out. |
 | 10 | The Day Oil Was Worth Less Than Nothing | Queued | WTI May 2020 contract settled at −$37.63 on 20 Apr 2020 (verify on CME/EIA); storage at Cushing; how futures expire. |
+| 11 | How Big Tech Really Makes Money From AI | Queued (added 2026-11-08) | Microsoft, Alphabet, Amazon, Meta: cloud AI revenue, capex, chips, ads; use 10-K/10-Q and earnings releases only; separate reported figures from estimates; no logos. |

@@ -1,0 +1,83 @@
+# Thumbnail creative brief for how-dubai-really-makes-money (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
+# Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
+title: How Dubai Really Makes Money
+docs_dir: docs/episodes/02-dubai
+video: output/dubai_documentary.mp4
+analysis:
+  mystery: A desert city famous for oil wealth that barely runs on oil
+  surprising_fact: Over 95% of Dubai's GDP is non-oil (Government of Dubai)
+  subject: a supertall tower skyline in the desert
+  tone: strategy
+  metaphor: the city that looks impossible
+concepts:
+- id: A
+  angle: mystery
+  text:
+  - NOT OIL
+  accent_line: 0
+  text_side: left
+  claim_basis: 'non_oil_share: over 95% of Dubai''s GDP is non-oil'
+  scene:
+    palette:
+      sky0: '#120A06'
+      sky1: '#7A3E16'
+      haze: '#FF9A3C'
+      key: '#FFD08A'
+      accent: '#FFD24A'
+      ink: '#FFFFFF'
+    backdrop: desert
+    subject:
+      kind: skyline
+      x: 1300
+      y: 800
+      s: 0.82
+    beams:
+    - x: 1800
+      y: 640
+      angle: -75
+      width: 400
+      length: 1500
+      opacity: 0.25
+      color: '#FFB45A'
+    particles:
+      n: 60
+      region:
+      - 700
+      - 300
+      - 1900
+      - 900
+      size: 2
+    brand: tl
+- id: B
+  angle: consequence
+  text:
+  - 95%
+  - NOT OIL
+  accent_line: 0
+  text_side: right
+  claim_basis: 'non_oil_share: over 95% of Dubai''s GDP is non-oil (Government of Dubai)'
+  scene:
+    palette:
+      sky0: '#05070C'
+      sky1: '#1B1A2E'
+      haze: '#C9A0FF'
+      key: '#E8D9FF'
+      accent: '#FFC93C'
+      ink: '#FFFFFF'
+    backdrop: desert
+    subject:
+      kind: skyline
+      x: 500
+      y: 820
+      s: 0.68
+    particles:
+      n: 80
+      region:
+      - 0
+      - 0
+      - 1200
+      - 700
+      size: 2
+    brand: tr
+status: completed
+deliverable: documentary

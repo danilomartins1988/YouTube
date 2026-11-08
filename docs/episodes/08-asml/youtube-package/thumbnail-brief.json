@@ -1,0 +1,334 @@
+{
+  "title": "The Machine Only One Company on Earth Can Build",
+  "docs_dir": "docs/episodes/08-asml",
+  "video": "output/asml_documentary.mp4",
+  "analysis": {
+    "mystery": "Why only one company on Earth can build the machine that prints advanced chips",
+    "surprising_fact": "ASML is the only maker of EUV lithography machines; each costs about $250m (Reuters estimate)",
+    "subject": "a colossal EUV lithography machine with a glowing light-source core",
+    "tone": "tech",
+    "metaphor": "a lone machine in a dark clean room"
+  },
+  "status": "completed",
+  "deliverable": "documentary",
+  "slug": "the-machine-only-one-company-can-build",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery",
+      "text": [
+        "ONLY ONE",
+        "COMPANY"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "asml_only / monopoly claim in sources.yaml (only maker of EUV systems)",
+      "scene": {
+        "palette": {
+          "sky0": "#020611",
+          "sky1": "#0A1A33",
+          "haze": "#3FD0FF",
+          "key": "#B0ECFF",
+          "accent": "#3FD0FF",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "cleanroom",
+        "subject": {
+          "kind": "euv",
+          "x": 1340,
+          "y": 560,
+          "s": 0.62
+        },
+        "beams": [
+          {
+            "x": 1340,
+            "y": -50,
+            "angle": 0,
+            "width": 900,
+            "length": 1100,
+            "opacity": 0.22
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            700,
+            80,
+            1900,
+            900
+          ],
+          "size": 2
+        },
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "ONLY ONE",
+          "x": 90,
+          "y": 515.0,
+          "size": 156.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "COMPANY",
+          "x": 90,
+          "y": 677.5,
+          "size": 156.2,
+          "width": 700.0,
+          "anchor": "start",
+          "color": "#3FD0FF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.53 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 393, 890, 524), (90, 556, 790, 687)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.086",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 67",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-cables-at-the-bottom-of-the-ocean (distance 0.30)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "asml_only / monopoly claim in sources.yaml (only maker of EUV systems)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.719,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-cables-at-the-bottom-of-the-ocean"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence",
+      "text": [
+        "$250M",
+        "MACHINE"
+      ],
+      "accent_line": 0,
+      "text_side": "right",
+      "claim_basis": "Reuters (Jan 2026): 'The $250 million ASML printer' (an estimate, as the film says)",
+      "scene": {
+        "palette": {
+          "sky0": "#060410",
+          "sky1": "#1A1236",
+          "haze": "#9B8CFF",
+          "key": "#D8D0FF",
+          "accent": "#FFC93C",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "cleanroom",
+        "subject": {
+          "kind": "euv",
+          "x": 600,
+          "y": 600,
+          "s": 0.55
+        },
+        "particles": {
+          "n": 50,
+          "region": [
+            0,
+            80,
+            1200,
+            900
+          ],
+          "size": 2
+        },
+        "brand": "tr"
+      },
+      "layout": [
+        {
+          "text": "$250M",
+          "x": 1830,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 571.4,
+          "anchor": "end",
+          "color": "#FFC93C"
+        },
+        {
+          "text": "MACHINE",
+          "x": 1830,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.51 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1259, 372, 1830, 522), (1030, 558, 1830, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 6.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.087",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 65",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-dubai-really-makes-money (distance 0.37)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "Reuters (Jan 2026): 'The $250 million ASML printer' (an estimate, as the film says)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.794,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-dubai-really-makes-money"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T15:25:46Z",
+  "master": "output/the-machine-only-one-company-can-build/thumbnails/master_B.png"
+}
