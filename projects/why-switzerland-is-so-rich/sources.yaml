@@ -9,475 +9,613 @@
 # Publishing is blocked until every claim used in the script is data_derived or human_verified.
 
 sources:
-  - id: wb_gdp_mirror
-    title: "GDP (current US$) - World Bank WDI, normalised CSV (datasets/gdp)"
-    publisher: World Bank (via Datahub datasets/gdp)
-    url: https://github.com/datasets/gdp
-    published: "2026-04-08 (datapackage last_updated)"
-    accessed: "2026-11-03"
-    kind: dataset
-    license: CC-BY-4.0
-    credit: "World Bank WDI (CC BY 4.0)"
-  - id: wb_pop_mirror
-    title: "Population, total - World Bank WDI, normalised CSV (datasets/population)"
-    publisher: World Bank (via Datahub datasets/population)
-    url: https://github.com/datasets/population
-    accessed: "2026-11-03"
-    kind: dataset
-    license: CC-BY-4.0
-    credit: "World Bank WDI (CC BY 4.0)"
-  - id: wb_gdppc_indicator
-    title: "GDP per capita (current US$), indicator NY.GDP.PCAP.CD"
-    publisher: World Bank
-    url: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
-    accessed: "2026-11-03"
-    kind: dataset
-    license: CC-BY-4.0
-    credit: "World Bank WDI (CC BY 4.0)"
-    notes: Official per-capita series. The build used it if the API was reachable, otherwise GDP/population from the mirrors (see dossier derived_from.method).
-  - id: natural_earth
-    title: Natural Earth 1:50m Cultural Vectors - Admin 0 Countries
-    publisher: Natural Earth
-    url: https://www.naturalearthdata.com/downloads/50m-cultural-vectors/
-    accessed: "2026-11-03"
-    kind: dataset
-    license: public-domain
-    credit: "Natural Earth (public domain)"
-  - id: admin_neutrality
-    title: Switzerland's policy of neutrality
-    publisher: Swiss Federal Administration (admin.ch)
-    url: https://www.admin.ch/en/switzerlands-policy-of-neutrality
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "Swiss Federal Administration"
-  - id: eda_neutrality
-    title: Neutrality (About Switzerland)
-    publisher: Federal Department of Foreign Affairs (FDFA)
-    url: https://www.aboutswitzerland.eda.admin.ch/en/neutrality
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "FDFA"
-  - id: bazg_trade_2024
-    title: Swiss Foreign Trade 2024 - annual report (912.5-02)
-    publisher: Federal Office for Customs and Border Security (FOCBS / BAZG)
-    url: https://www.bazg.admin.ch/dam/en/sd-web/1TnZbTRz4WOh/912.5-02_jb_2024_1.1_en.pdf
-    published: "2025"
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "FOCBS, Swiss Foreign Trade 2024"
-  - id: kmu_pharma_exports
-    title: Record exports driven by chemicals and pharmaceuticals
-    publisher: State Secretariat for Economic Affairs SECO (kmu.admin.ch)
-    url: https://www.kmu.admin.ch/en/record-exports-driven-by-chemicals-and-pharmaceuticals
-    accessed: "2026-11-03"
-    kind: secondary
-    credit: "SECO / kmu.admin.ch"
-  - id: seri_vet
-    title: Vocational education and training (VET)
-    publisher: State Secretariat for Education, Research and Innovation (SERI / SBFI)
-    url: https://www.sbfi.admin.ch/en/vocational-education-and-training-vet
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "SERI"
-  - id: wipo_gii_2025
-    title: Global Innovation Index 2025 press release
-    publisher: World Intellectual Property Organization (WIPO)
-    url: https://www.wipo.int/pressroom/en/articles/2025/article_0009.html
-    published: "2025-09-16"
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "WIPO, Global Innovation Index 2025"
-  - id: ige_gii_2025
-    title: "Global Innovation Index 2025: Switzerland retains top position"
-    publisher: Swiss Federal Institute of Intellectual Property (IGE/IPI)
-    url: https://www.ige.ch/en/services/newsroom/news/news-details/global-innovation-index-2025-schweiz-behauptet-den-spitzenplatz
-    accessed: "2026-11-03"
-    kind: secondary
-    credit: "IPI"
-
-  - id: parlament_constitution
-    title: The Federal Constitution
-    publisher: The Federal Assembly - The Swiss Parliament
-    url: https://www.parlament.ch/en/über-das-parlament/Pages/bundesverfassung.aspx
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "Swiss Parliament"
-  - id: bar_new_authorities
-    title: The Confederation's new authorities
-    publisher: Swiss Federal Archives
-    url: https://www.bar.admin.ch/en/the-confederations-new-authorities
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "Swiss Federal Archives"
-  - id: eda_bilateral
-    title: Overview of the bilateral path
-    publisher: Federal Department of Foreign Affairs (FDFA)
-    url: https://www.europa.eda.admin.ch/en/overview-bilateral-path
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "FDFA"
-  - id: iheid_banking_secrecy
-    title: Swiss banking secrecy - origins of the 1934 Banking Act (academic chapter)
-    publisher: Graduate Institute Geneva (OpenEdition Books)
-    url: https://books.openedition.org/iheid/322
-    accessed: "2026-11-03"
-    kind: secondary
-    credit: "Graduate Institute Geneva"
-  - id: goldblum_secrecy
-    title: Bank secrecy in Switzerland
-    publisher: Goldblum and Partners (law firm knowledge base)
-    url: https://goldblum.ch/knowledgebase/bank-secrecy-in-switzerland/
-    accessed: "2026-11-03"
-    kind: secondary
-    credit: "Goldblum and Partners"
-  - id: fta_aeoi_2018
-    title: First exchange of information on around 2 million financial accounts
-    publisher: Swiss Federal Administration - Federal Tax Administration (admin.ch)
-    url: https://admin.ch/gov/en/start/documentation/media-releases.msg-id-72420.html
-    published: "2018-10-05"
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "Federal Tax Administration"
-  - id: ecb_snb_2011
-    title: Statement of the Governing Council of the ECB on the decision of the Swiss National Bank
-    publisher: European Central Bank
-    url: https://www.ecb.europa.eu/press/pr/date/2011/html/pr110906.en.html
-    published: "2011-09-06"
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "ECB"
-  - id: bis_jordan_2015
-    title: "Thomas Jordan: The rationale for discontinuing the minimum exchange rate and lowering interest rates"
-    publisher: Bank for International Settlements (central bankers' speeches)
-    url: https://www.bis.org/review/r150116a.htm
-    published: "2015-01-15"
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "SNB via BIS"
-  - id: snb_speech_2015_04
-    title: SNB monetary policy after the discontinuation of the minimum exchange rate
-    publisher: Swiss National Bank
-    url: https://www.snb.ch/en/mmr/speeches/id/ref_20150424_tjn
-    published: "2015-04-24"
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "Swiss National Bank"
-  - id: swissinfo_floor_2015
-    title: Swiss National Bank scraps exchange rate ceiling
-    publisher: swissinfo.ch
-    url: https://www.swissinfo.ch/eng/euro-floor_swiss-national-bank-scraps-exchange-rate-ceiling/41217364
-    published: "2015-01-15"
-    accessed: "2026-11-03"
-    kind: secondary
-    credit: "swissinfo.ch"
-  - id: finma_cs_ubs
-    title: FINMA approves merger of UBS and Credit Suisse
-    publisher: Swiss Financial Market Supervisory Authority FINMA
-    url: https://www.finma.ch/en/news/2023/03/20230319-mm-cs-ubs/
-    published: "2023-03-19"
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "FINMA"
-  - id: efd_cs_timeline
-    title: Timeline Credit Suisse / UBS
-    publisher: Federal Department of Finance
-    url: https://www.efd.admin.ch/en/timeline-credit-suisse-ubs
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "Federal Department of Finance"
-  - id: eurostat_price_levels
-    title: Comparative price levels of consumer goods and services (Statistics Explained)
-    publisher: Eurostat
-    url: https://ec.europa.eu/eurostat/statistics-explained/index.php/comparative_price_levels_of_consumer_goods_and_services
-    accessed: "2026-11-03"
-    kind: primary
-    credit: "Eurostat"
-  - id: bluewin_price_2024
-    title: "Price comparison with the EU: The Swiss pay 80 percent more for the same products"
-    publisher: blue News (bluewin.ch)
-    url: https://www.bluewin.ch/en/news/switzerland/swiss-have-to-pay-80-percent-more-for-the-same-products-3017192.html
-    accessed: "2026-11-03"
-    kind: secondary
-    credit: "blue News / Eurostat"
-  - id: swissinfo_roche_hq
-    title: Roche headquarters to redefine Basel skyline
-    publisher: swissinfo.ch
-    url: https://www.swissinfo.ch/eng/roche-headquarters-to-redefine-basel-skyline/5445664
-    accessed: "2026-11-03"
-    kind: secondary
-    credit: "swissinfo.ch"
-  - id: swissinfo_roche_rd
-    title: Roche inaugurates new CHF1.2 billion R&D centre in Basel
-    publisher: swissinfo.ch
-    url: https://www.swissinfo.ch/eng/archive-multinational-companies/roche-inaugurates-new-chf1-2-billion-rd-centre-in-basel/87527703
-    accessed: "2026-11-03"
-    kind: secondary
-    credit: "swissinfo.ch"
-
-# Computed by the pipeline from the datasets above. Do not hand-edit values.
-  - id: swi_watches_2024
-    title: "Swiss watch exports down 2.8% in 2024 (Keystone-SDA, citing the Federation of the Swiss Watch Industry FH)"
-    publisher: SWI swissinfo.ch
-    url: https://www.swissinfo.ch/eng/archive-swiss-made/watch-exports-down-2-8-in-2024/88801991
-    published: "2025-01-30"
-    accessed: "2026-11-08"
-    credit: "FH via swissinfo.ch"
-  - id: swi_unemployment_2024
-    title: "Unemployment rises in Switzerland (SECO annual figures for 2024)"
-    publisher: SWI swissinfo.ch
-    url: https://www.swissinfo.ch/eng/workplace-switzerland/unemployment-rises-in-switzerland-in-december/88701842
-    published: "2025-01-10"
-    accessed: "2026-11-08"
-    credit: "SECO via swissinfo.ch"
-  - id: swi_crossborder_2024
-    title: "Over 400,000 cross-border commuters now work in Switzerland (Keystone-SDA, citing the FSO)"
-    publisher: SWI swissinfo.ch
-    url: https://www.swissinfo.ch/eng/workplace-switzerland/over-400000-cross-border-commuters-now-work-in-switzerland/88038932
-    published: "2024-11-08"
-    accessed: "2026-11-08"
-    credit: "FSO via swissinfo.ch"
-  - id: swi_snb_2024
-    title: "SNB Held Off on FX Interventions After Trump Won Election (Bloomberg, citing the SNB annual report 2024)"
-    publisher: SWI swissinfo.ch / Bloomberg
-    url: https://www.swissinfo.ch/eng/snb-held-off-on-fx-interventions-after-trump-won-election/89025505
-    published: "2025-03-18"
-    accessed: "2026-11-08"
-    credit: "SNB via swissinfo.ch"
-  - id: kmu_tariff_2025
-    title: "High US tariffs threaten Swiss exports"
-    publisher: Swiss Confederation, SME Portal (kmu.admin.ch)
-    url: https://www.kmu.admin.ch/en/high-us-tariffs-threaten-swiss-exports
-    published: "2025-08-11"
-    accessed: "2026-11-08"
-    credit: "Swiss SME Portal (admin.ch)"
-  - id: swi_tariff15_2025
-    title: "Switzerland secures US tariff rate cut to 15%"
-    publisher: SWI swissinfo.ch
-    url: https://www.swissinfo.ch/eng/foreign-affairs/swiss-government-us-tariffs-will-be-cut-to-15/90335075
-    published: "2025-11-14"
-    accessed: "2026-11-08"
-    credit: "swissinfo.ch"
+- id: wb_gdp_mirror
+  title: GDP (current US$) - World Bank WDI, normalised CSV (datasets/gdp)
+  publisher: World Bank (via Datahub datasets/gdp)
+  url: https://github.com/datasets/gdp
+  published: 2026-04-08 (datapackage last_updated)
+  accessed: '2026-11-03'
+  kind: dataset
+  license: CC-BY-4.0
+  credit: World Bank WDI (CC BY 4.0)
+- id: wb_pop_mirror
+  title: Population, total - World Bank WDI, normalised CSV (datasets/population)
+  publisher: World Bank (via Datahub datasets/population)
+  url: https://github.com/datasets/population
+  accessed: '2026-11-03'
+  kind: dataset
+  license: CC-BY-4.0
+  credit: World Bank WDI (CC BY 4.0)
+- id: wb_gdppc_indicator
+  title: GDP per capita (current US$), indicator NY.GDP.PCAP.CD
+  publisher: World Bank
+  url: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
+  accessed: '2026-11-03'
+  kind: dataset
+  license: CC-BY-4.0
+  credit: World Bank WDI (CC BY 4.0)
+  notes: Official per-capita series. The build used it if the API was reachable, otherwise GDP/population from the mirrors
+    (see dossier derived_from.method).
+- id: natural_earth
+  title: Natural Earth 1:50m Cultural Vectors - Admin 0 Countries
+  publisher: Natural Earth
+  url: https://www.naturalearthdata.com/downloads/50m-cultural-vectors/
+  accessed: '2026-11-03'
+  kind: dataset
+  license: public-domain
+  credit: Natural Earth (public domain)
+- id: admin_neutrality
+  title: Switzerland's policy of neutrality
+  publisher: Swiss Federal Administration (admin.ch)
+  url: https://www.admin.ch/en/switzerlands-policy-of-neutrality
+  accessed: '2026-11-03'
+  kind: primary
+  credit: Swiss Federal Administration
+- id: eda_neutrality
+  title: Neutrality (About Switzerland)
+  publisher: Federal Department of Foreign Affairs (FDFA)
+  url: https://www.aboutswitzerland.eda.admin.ch/en/neutrality
+  accessed: '2026-11-03'
+  kind: primary
+  credit: FDFA
+- id: bazg_trade_2024
+  title: Swiss Foreign Trade 2024 - annual report (912.5-02)
+  publisher: Federal Office for Customs and Border Security (FOCBS / BAZG)
+  url: https://www.bazg.admin.ch/dam/en/sd-web/1TnZbTRz4WOh/912.5-02_jb_2024_1.1_en.pdf
+  published: '2025'
+  accessed: '2026-11-03'
+  kind: primary
+  credit: FOCBS, Swiss Foreign Trade 2024
+- id: kmu_pharma_exports
+  title: Record exports driven by chemicals and pharmaceuticals
+  publisher: State Secretariat for Economic Affairs SECO (kmu.admin.ch)
+  url: https://www.kmu.admin.ch/en/record-exports-driven-by-chemicals-and-pharmaceuticals
+  accessed: '2026-11-03'
+  kind: secondary
+  credit: SECO / kmu.admin.ch
+- id: seri_vet
+  title: Vocational education and training (VET)
+  publisher: State Secretariat for Education, Research and Innovation (SERI / SBFI)
+  url: https://www.sbfi.admin.ch/en/vocational-education-and-training-vet
+  accessed: '2026-11-03'
+  kind: primary
+  credit: SERI
+- id: wipo_gii_2025
+  title: Global Innovation Index 2025 press release
+  publisher: World Intellectual Property Organization (WIPO)
+  url: https://www.wipo.int/pressroom/en/articles/2025/article_0009.html
+  published: '2025-09-16'
+  accessed: '2026-11-03'
+  kind: primary
+  credit: WIPO, Global Innovation Index 2025
+- id: ige_gii_2025
+  title: 'Global Innovation Index 2025: Switzerland retains top position'
+  publisher: Swiss Federal Institute of Intellectual Property (IGE/IPI)
+  url: https://www.ige.ch/en/services/newsroom/news/news-details/global-innovation-index-2025-schweiz-behauptet-den-spitzenplatz
+  accessed: '2026-11-03'
+  kind: secondary
+  credit: IPI
+- id: parlament_constitution
+  title: The Federal Constitution
+  publisher: The Federal Assembly - The Swiss Parliament
+  url: https://www.parlament.ch/en/über-das-parlament/Pages/bundesverfassung.aspx
+  accessed: '2026-11-03'
+  kind: primary
+  credit: Swiss Parliament
+- id: bar_new_authorities
+  title: The Confederation's new authorities
+  publisher: Swiss Federal Archives
+  url: https://www.bar.admin.ch/en/the-confederations-new-authorities
+  accessed: '2026-11-03'
+  kind: primary
+  credit: Swiss Federal Archives
+- id: eda_bilateral
+  title: Overview of the bilateral path
+  publisher: Federal Department of Foreign Affairs (FDFA)
+  url: https://www.europa.eda.admin.ch/en/overview-bilateral-path
+  accessed: '2026-11-03'
+  kind: primary
+  credit: FDFA
+- id: iheid_banking_secrecy
+  title: Swiss banking secrecy - origins of the 1934 Banking Act (academic chapter)
+  publisher: Graduate Institute Geneva (OpenEdition Books)
+  url: https://books.openedition.org/iheid/322
+  accessed: '2026-11-03'
+  kind: secondary
+  credit: Graduate Institute Geneva
+- id: goldblum_secrecy
+  title: Bank secrecy in Switzerland
+  publisher: Goldblum and Partners (law firm knowledge base)
+  url: https://goldblum.ch/knowledgebase/bank-secrecy-in-switzerland/
+  accessed: '2026-11-03'
+  kind: secondary
+  credit: Goldblum and Partners
+- id: fta_aeoi_2018
+  title: First exchange of information on around 2 million financial accounts
+  publisher: Swiss Federal Administration - Federal Tax Administration (admin.ch)
+  url: https://admin.ch/gov/en/start/documentation/media-releases.msg-id-72420.html
+  published: '2018-10-05'
+  accessed: '2026-11-03'
+  kind: primary
+  credit: Federal Tax Administration
+- id: ecb_snb_2011
+  title: Statement of the Governing Council of the ECB on the decision of the Swiss National Bank
+  publisher: European Central Bank
+  url: https://www.ecb.europa.eu/press/pr/date/2011/html/pr110906.en.html
+  published: '2011-09-06'
+  accessed: '2026-11-03'
+  kind: primary
+  credit: ECB
+- id: bis_jordan_2015
+  title: 'Thomas Jordan: The rationale for discontinuing the minimum exchange rate and lowering interest rates'
+  publisher: Bank for International Settlements (central bankers' speeches)
+  url: https://www.bis.org/review/r150116a.htm
+  published: '2015-01-15'
+  accessed: '2026-11-03'
+  kind: primary
+  credit: SNB via BIS
+- id: snb_speech_2015_04
+  title: SNB monetary policy after the discontinuation of the minimum exchange rate
+  publisher: Swiss National Bank
+  url: https://www.snb.ch/en/mmr/speeches/id/ref_20150424_tjn
+  published: '2015-04-24'
+  accessed: '2026-11-03'
+  kind: primary
+  credit: Swiss National Bank
+- id: swissinfo_floor_2015
+  title: Swiss National Bank scraps exchange rate ceiling
+  publisher: swissinfo.ch
+  url: https://www.swissinfo.ch/eng/euro-floor_swiss-national-bank-scraps-exchange-rate-ceiling/41217364
+  published: '2015-01-15'
+  accessed: '2026-11-03'
+  kind: secondary
+  credit: swissinfo.ch
+- id: finma_cs_ubs
+  title: FINMA approves merger of UBS and Credit Suisse
+  publisher: Swiss Financial Market Supervisory Authority FINMA
+  url: https://www.finma.ch/en/news/2023/03/20230319-mm-cs-ubs/
+  published: '2023-03-19'
+  accessed: '2026-11-03'
+  kind: primary
+  credit: FINMA
+- id: efd_cs_timeline
+  title: Timeline Credit Suisse / UBS
+  publisher: Federal Department of Finance
+  url: https://www.efd.admin.ch/en/timeline-credit-suisse-ubs
+  accessed: '2026-11-03'
+  kind: primary
+  credit: Federal Department of Finance
+- id: eurostat_price_levels
+  title: Comparative price levels of consumer goods and services (Statistics Explained)
+  publisher: Eurostat
+  url: https://ec.europa.eu/eurostat/statistics-explained/index.php/comparative_price_levels_of_consumer_goods_and_services
+  accessed: '2026-11-03'
+  kind: primary
+  credit: Eurostat
+- id: bluewin_price_2024
+  title: 'Price comparison with the EU: The Swiss pay 80 percent more for the same products'
+  publisher: blue News (bluewin.ch)
+  url: https://www.bluewin.ch/en/news/switzerland/swiss-have-to-pay-80-percent-more-for-the-same-products-3017192.html
+  accessed: '2026-11-03'
+  kind: secondary
+  credit: blue News / Eurostat
+- id: swissinfo_roche_hq
+  title: Roche headquarters to redefine Basel skyline
+  publisher: swissinfo.ch
+  url: https://www.swissinfo.ch/eng/roche-headquarters-to-redefine-basel-skyline/5445664
+  accessed: '2026-11-03'
+  kind: secondary
+  credit: swissinfo.ch
+- id: swissinfo_roche_rd
+  title: Roche inaugurates new CHF1.2 billion R&D centre in Basel
+  publisher: swissinfo.ch
+  url: https://www.swissinfo.ch/eng/archive-multinational-companies/roche-inaugurates-new-chf1-2-billion-rd-centre-in-basel/87527703
+  accessed: '2026-11-03'
+  kind: secondary
+  credit: swissinfo.ch
+- id: swi_watches_2024
+  title: Swiss watch exports down 2.8% in 2024 (Keystone-SDA, citing the Federation of the Swiss Watch Industry FH)
+  publisher: SWI swissinfo.ch
+  url: https://www.swissinfo.ch/eng/archive-swiss-made/watch-exports-down-2-8-in-2024/88801991
+  published: '2025-01-30'
+  accessed: '2026-11-08'
+  credit: FH via swissinfo.ch
+- id: swi_unemployment_2024
+  title: Unemployment rises in Switzerland (SECO annual figures for 2024)
+  publisher: SWI swissinfo.ch
+  url: https://www.swissinfo.ch/eng/workplace-switzerland/unemployment-rises-in-switzerland-in-december/88701842
+  published: '2025-01-10'
+  accessed: '2026-11-08'
+  credit: SECO via swissinfo.ch
+- id: swi_crossborder_2024
+  title: Over 400,000 cross-border commuters now work in Switzerland (Keystone-SDA, citing the FSO)
+  publisher: SWI swissinfo.ch
+  url: https://www.swissinfo.ch/eng/workplace-switzerland/over-400000-cross-border-commuters-now-work-in-switzerland/88038932
+  published: '2024-11-08'
+  accessed: '2026-11-08'
+  credit: FSO via swissinfo.ch
+- id: swi_snb_2024
+  title: SNB Held Off on FX Interventions After Trump Won Election (Bloomberg, citing the SNB annual report 2024)
+  publisher: SWI swissinfo.ch / Bloomberg
+  url: https://www.swissinfo.ch/eng/snb-held-off-on-fx-interventions-after-trump-won-election/89025505
+  published: '2025-03-18'
+  accessed: '2026-11-08'
+  credit: SNB via swissinfo.ch
+- id: kmu_tariff_2025
+  title: High US tariffs threaten Swiss exports
+  publisher: Swiss Confederation, SME Portal (kmu.admin.ch)
+  url: https://www.kmu.admin.ch/en/high-us-tariffs-threaten-swiss-exports
+  published: '2025-08-11'
+  accessed: '2026-11-08'
+  credit: Swiss SME Portal (admin.ch)
+- id: swi_tariff15_2025
+  title: Switzerland secures US tariff rate cut to 15%
+  publisher: SWI swissinfo.ch
+  url: https://www.swissinfo.ch/eng/foreign-affairs/swiss-government-us-tariffs-will-be-cut-to-15/90335075
+  published: '2025-11-14'
+  accessed: '2026-11-08'
+  credit: swissinfo.ch
+- id: fed_h10
+  title: 'Foreign exchange rates (H.10), annual averages: Swiss francs per US dollar (AEXSZUS)'
+  publisher: Board of Governors of the Federal Reserve System (via FRED)
+  url: https://fred.stlouisfed.org/series/AEXSZUS
+  accessed: '2026-11-08'
+  credit: Federal Reserve H.10
 data_claims:
-  - id: pop_che_2023
-    metric: population
-    country: CHE
-    year: 2023
-    spoken_format: millions_words
-    display_format: millions
-    source_ids: [wb_pop_mirror]
-  - id: gdppc_che_2023
-    metric: gdp_per_capita_usd
-    country: CHE
-    year: 2023
-    spoken_format: usd_rough
-    display_format: usd
-    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
-  - id: ratio_che_deu_2023
-    metric: ratio_gdp_per_capita
-    country: CHE
-    other: DEU
-    year: 2023
-    spoken_format: ratio_words
-    display_format: ratio
-    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
-  - id: ratio_che_euu_2023
-    metric: ratio_gdp_per_capita
-    country: CHE
-    other: EUU
-    year: 2023
-    spoken_format: ratio_words
-    display_format: ratio
-    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
-  - id: gdppc_chart_2023
-    metric: gdp_per_capita_usd_table
-    countries: [CHE, USA, AUT, DEU, GBR, FRA, EUU, ITA]
-    labels: {CHE: Switzerland, USA: United States, AUT: Austria, DEU: Germany, GBR: United Kingdom,
-             FRA: France, EUU: EU average, ITA: Italy}
-    year: 2023
-    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
-
-  - id: gdppc_series_2000_2023
-    metric: gdp_per_capita_usd_series
-    countries: [CHE, USA, DEU, EUU]
-    labels: {CHE: Switzerland, USA: United States, DEU: Germany, EUU: EU average}
-    start_year: 2000
-    end_year: 2023
-    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
-  - id: che_above_deu_euu_2000_2023
-    metric: series_always_above
-    country: CHE
-    others: [DEU, EUU]
-    labels: {CHE: Switzerland, DEU: Germany, EUU: the EU average}
-    start_year: 2000
-    end_year: 2023
-    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
-
-# Hand-curated claims. Values below were located via web search on 2026-11-03 and have
-# NOT yet been confirmed by a person reading the primary document - hence source_located.
+- id: pop_che_2023
+  metric: population
+  country: CHE
+  year: 2023
+  spoken_format: millions_words
+  display_format: millions
+  source_ids:
+  - wb_pop_mirror
+- id: gdppc_che_2023
+  metric: gdp_per_capita_usd
+  country: CHE
+  year: 2023
+  spoken_format: usd_rough
+  display_format: usd
+  source_ids:
+  - wb_gdppc_indicator
+  - wb_gdp_mirror
+  - wb_pop_mirror
+- id: ratio_che_deu_2023
+  metric: ratio_gdp_per_capita
+  country: CHE
+  other: DEU
+  year: 2023
+  spoken_format: ratio_words
+  display_format: ratio
+  source_ids:
+  - wb_gdppc_indicator
+  - wb_gdp_mirror
+  - wb_pop_mirror
+- id: ratio_che_euu_2023
+  metric: ratio_gdp_per_capita
+  country: CHE
+  other: EUU
+  year: 2023
+  spoken_format: ratio_words
+  display_format: ratio
+  source_ids:
+  - wb_gdppc_indicator
+  - wb_gdp_mirror
+  - wb_pop_mirror
+- id: gdppc_chart_2023
+  metric: gdp_per_capita_usd_table
+  countries:
+  - CHE
+  - USA
+  - AUT
+  - DEU
+  - GBR
+  - FRA
+  - EUU
+  - ITA
+  labels:
+    CHE: Switzerland
+    USA: United States
+    AUT: Austria
+    DEU: Germany
+    GBR: United Kingdom
+    FRA: France
+    EUU: EU average
+    ITA: Italy
+  year: 2023
+  source_ids:
+  - wb_gdppc_indicator
+  - wb_gdp_mirror
+  - wb_pop_mirror
+- id: gdppc_series_2000_2023
+  metric: gdp_per_capita_usd_series
+  countries:
+  - CHE
+  - USA
+  - DEU
+  - EUU
+  labels:
+    CHE: Switzerland
+    USA: United States
+    DEU: Germany
+    EUU: EU average
+  start_year: 2000
+  end_year: 2023
+  source_ids:
+  - wb_gdppc_indicator
+  - wb_gdp_mirror
+  - wb_pop_mirror
+- id: che_above_deu_euu_2000_2023
+  metric: series_always_above
+  country: CHE
+  others:
+  - DEU
+  - EUU
+  labels:
+    CHE: Switzerland
+    DEU: Germany
+    EUU: the EU average
+  start_year: 2000
+  end_year: 2023
+  source_ids:
+  - wb_gdppc_indicator
+  - wb_gdp_mirror
+  - wb_pop_mirror
 claims:
-  - id: geo_landlocked
-    text: Switzerland is landlocked (it has no sea coast).
-    source_ids: [natural_earth]
-    status: source_located
-    verification_note: Visible in the Natural Earth boundaries used for the map; a reviewer only needs to confirm and sign off. ('Mountainous' was cut from the script because it had no citation.)
-  - id: neutrality_1815
-    text: Europe's great powers formally recognised Swiss neutrality in 1815 (Congress of Vienna and the Second Treaty of Paris).
-    spoken: In 1815
-    display: "1815"
-    value: 1815
-    source_ids: [admin_neutrality, eda_neutrality]
-    status: source_located
-    verification_note: admin.ch dates the recognition to 1815 via the Congress of Vienna and the Treaty of Paris. Check exact wording on both pages.
-  - id: pharma_share_2024
-    text: Chemical and pharmaceutical products accounted for 52.7% of Swiss (goods) exports in 2024 (CHF 149,058 million).
-    spoken: more than half
-    display: "52.7%"
-    value: 52.7
-    fields: {year: 2024, spoken_exact: "52.7 percent"}
-    source_ids: [bazg_trade_2024, kmu_pharma_exports]
-    status: source_located
-    verification_note: Figure taken from a search summary of the FOCBS 2024 annual report. Confirm the 52.7% and which export total it refers to (FOCBS 'Total 1' business-cycle total excludes gold and other precious metals) and word the on-screen label accordingly.
-  - id: vet_share
-    text: About two-thirds of young people in Switzerland enter vocational education and training (VET); the most common form is dual-track VET combining classroom instruction with workplace training.
-    spoken: About two thirds
-    display: "2 in 3"
-    value: 0.6667
-    source_ids: [seri_vet]
-    status: source_located
-    verification_note: SERI states that two-thirds of young people benefit from VET. Confirm exact phrasing; do not conflate with annual 'Transition Barometer' interest percentages.
-  - id: gii_2025_rank
-    text: In the Global Innovation Index 2025, WIPO ranked Switzerland first of 139 economies.
-    spoken: In 2025, the World Intellectual Property Organization ranked Switzerland first out of 139 economies
-    display: "#1 of 139"
-    value: 1
-    fields: {year: 2025, economies: 139}
-    source_ids: [wipo_gii_2025, ige_gii_2025]
-    status: source_located
-    verification_note: Confirm 139 economies and rank in WIPO's press release. Secondary sources disagree on the length of the streak (14th vs 15th year), so the script deliberately does not mention it.
-  - id: gii_2025_top5
-    text: "GII 2025 top five: Switzerland, Sweden, United States, Republic of Korea, Singapore."
-    value: [Switzerland, Sweden, United States, "Rep. of Korea", Singapore]
-    source_ids: [wipo_gii_2025]
-    status: source_located
-    verification_note: Confirm order in WIPO's ranking table.
-
-  - id: constitution_1848
-    text: The Federal Constitution of 12 September 1848 established the Swiss federal state, turning a group of cantons into a federal state with new federal authorities.
-    spoken: In 1848
-    display: "1848"
-    value: 1848
-    source_ids: [parlament_constitution, bar_new_authorities]
-    status: source_located
-    verification_note: parlament.ch reportedly says the present constitution's basis is the Constitution of 12 September 1848, which established the Swiss federal state. Confirm wording.
-  - id: eu_bilateral
-    text: Switzerland is not a member of the European Union; it pursues its European policy through bilateral sectoral agreements.
-    source_ids: [eda_bilateral]
-    status: source_located
-    verification_note: Confirm on the FDFA 'bilateral path' page.
-  - id: banking_act_1934
-    text: The 1934 Federal Act on Banks and Savings Banks (in force 1 March 1935) made breaching banking secrecy a criminal offence (Article 47); before that, banking secrecy was protected by civil law.
-    spoken: In 1934
-    display: "1934"
-    value: 1934
-    source_ids: [iheid_banking_secrecy, goldblum_secrecy]
-    status: source_located
-    verification_note: Secondary sources (academic chapter + law firm). Ideally confirm against the Act's text on fedlex.admin.ch (Article 47) and cite it.
-  - id: aeoi_2018
-    text: In 2018 Switzerland exchanged financial account information automatically with partner states for the first time, covering around 2 million financial accounts (FTA release, 5 October 2018), under the global AEOI standard.
-    spoken: around two million
-    display: "~2 million"
-    value: 2000000
-    fields: {year: 2018}
-    source_ids: [fta_aeoi_2018]
-    status: source_located
-    verification_note: Title of the FTA release says 'around 2 million financial accounts'. Partner count differs between sources (36 vs 38) - deliberately not used.
-  - id: snb_floor_2011
-    text: On 6 September 2011 the Swiss National Bank set a minimum exchange rate of CHF 1.20 per euro, saying it would no longer tolerate a EUR/CHF rate below it.
-    spoken: one franc twenty
-    display: "1.20"
-    value: 1.20
-    fields: {date_spoken: "September 6th, 2011", year: 2011}
-    source_ids: [ecb_snb_2011, bis_jordan_2015]
-    status: source_located
-    verification_note: The ECB statement of 6 Sep 2011 quotes the SNB decision. Locate and cite the SNB's own press release of that date if possible.
-  - id: snb_floor_end_2015
-    text: On 15 January 2015 the Swiss National Bank discontinued the minimum exchange rate of CHF 1.20 per euro with immediate effect and ceased the associated foreign currency purchases; the franc appreciated sharply and markets were surprised.
-    fields: {date_spoken: "January 15th, 2015", year: 2015}
-    source_ids: [bis_jordan_2015, swissinfo_floor_2015]
-    status: source_located
-    verification_note: Decision wording from SNB press-conference text (BIS). 'Appreciated sharply / surprise' is press coverage - keep it qualitative, no magnitude.
-  - id: snb_floor_interventions
-    text: According to the SNB (April 2015), the minimum exchange rate could only have been enforced through permanent currency interventions of rapidly increasing magnitude.
-    source_ids: [snb_speech_2015_04]
-    status: source_located
-    verification_note: Confirm wording in the SNB speech of 24 April 2015.
-  - id: cs_ubs_2023
-    text: On 19 March 2023 FINMA approved the takeover of Credit Suisse by UBS; the Swiss Confederation and the SNB supported the deal (federal guarantee for additional SNB liquidity assistance, emergency law).
-    fields: {month_spoken: "March 2023"}
-    source_ids: [finma_cs_ubs, efd_cs_timeline]
-    status: source_located
-    verification_note: Confirm on FINMA release and the Federal Department of Finance timeline.
-  - id: price_level_2024
-    text: In 2024 Switzerland had the highest price level among the countries compared by Eurostat, with a price level index of 158.8 (EU = 100) at GDP level.
-    spoken: almost 60 percent above the EU average
-    display: "158.8"
-    value: 158.8
-    fields: {year: 2024}
-    source_ids: [eurostat_price_levels, bluewin_price_2024]
-    status: source_located
-    verification_note: 158.8 comes from press reports of Eurostat data (GDP-level price index). Confirm in Eurostat dataset prc_ppp_ind and which aggregate (GDP vs household consumption) before publishing; adjust the on-screen label.
-  - id: pharma_hq_basel
-    text: Roche and Novartis both have their global headquarters in Basel.
-    source_ids: [swissinfo_roche_hq, swissinfo_roche_rd]
-    status: source_located
-    verification_note: Sources are news articles; confirm on roche.com and novartis.com (Novartis HQ is only implied by the found sources).
-
-  - id: watches_2024
-    text: "Swiss watch exports reached CHF 25.9 billion in 2024, down 2.8% (FH statistics, via Keystone-SDA/swissinfo: 'which reached a volume of CHF25.9 billion')."
-    spoken: 25.9 billion francs
-    display: "CHF 25.9bn"
-    value: 25.9
-    fields: {change_spoken: 2.8 percent, change_display: "-2.8%"}
-    source_ids: [swi_watches_2024]
-    status: source_located
-    verification_note: Read on the page 2026-11-08. FH's own table gives CHF 25,993.1m (press release rounds to 26.0bn); the film uses the article's 25.9bn.
-  - id: unemployment_2024
-    text: "SECO: the average unemployment rate for 2024 was 2.4%, 0.4 points higher than the previous year; at 2.0% the 2023 figure was the lowest since 2001."
-    spoken: 2.4 percent
-    display: "2.4%"
-    value: 2.4
-    fields: {prev_spoken: 2.0 percent, prev_display: "2.0%"}
-    source_ids: [swi_unemployment_2024]
-    status: source_located
-    verification_note: Read on the page 2026-11-08 (quoted).
-  - id: crossborder_2024
-    text: "Around 403,000 people with a G permit (cross-border commuters) were working in Switzerland at the end of September 2024 (FSO); about 57% lived in France, 23% in Italy and about 16% in Germany."
-    spoken: around 403,000
-    display: "≈ 403,000"
-    value: 403000
-    source_ids: [swi_crossborder_2024]
-    status: source_located
-    verification_note: Read on the page 2026-11-08 (quoted).
-  - id: snb_fx_2024
-    text: "For all of 2024 the SNB purchased CHF 1.2bn of foreign currency, compared with sales of CHF 132.9bn the previous year; in 2022 and 2023 it boosted the franc this way to dampen inflation."
-    spoken: 1.2 billion francs
-    display: "CHF 1.2bn"
-    value: 1.2
-    fields: {sold_spoken: 132.9 billion francs, sold_display: "CHF 132.9bn"}
-    source_ids: [swi_snb_2024]
-    status: source_located
-    verification_note: Read on the page 2026-11-08 (quoted, citing the SNB annual report).
-  - id: tariff_2025
-    text: "Since 7 August 2025, Swiss exports to the US were subject to a 39% tariff (SME Portal, 11.08.2025). On 14 November 2025 Switzerland and Liechtenstein signed a non-binding memorandum of understanding; the US would reduce the country-specific additional tariff to 15%, in line with the EU; Swiss companies plan USD 200bn of direct investment in the US by the end of 2028."
-    spoken: 39 percent
-    display: "39%"
-    value: 39
-    fields: {new_spoken: 15 percent, new_display: "15%", invest_spoken: 200 billion dollars, invest_display: "$200bn"}
-    source_ids: [kmu_tariff_2025, swi_tariff15_2025]
-    status: source_located
-    verification_note: Both pages read 2026-11-08 (quoted). Later changes to US tariffs (after Dec 2025) were not checked; the narration speaks of 2025 only.
+- id: geo_landlocked
+  text: Switzerland is landlocked (it has no sea coast).
+  source_ids:
+  - natural_earth
+  status: source_located
+  verification_note: Visible in the Natural Earth boundaries used for the map; a reviewer only needs to confirm and sign off.
+    ('Mountainous' was cut from the script because it had no citation.)
+- id: neutrality_1815
+  text: Europe's great powers formally recognised Swiss neutrality in 1815 (Congress of Vienna and the Second Treaty of Paris).
+  spoken: In 1815
+  display: '1815'
+  value: 1815
+  source_ids:
+  - admin_neutrality
+  - eda_neutrality
+  status: source_located
+  verification_note: admin.ch dates the recognition to 1815 via the Congress of Vienna and the Treaty of Paris. Check exact
+    wording on both pages.
+- id: pharma_share_2024
+  text: Chemical and pharmaceutical products accounted for 52.7% of Swiss (goods) exports in 2024 (CHF 149,058 million).
+  spoken: more than half
+  display: 52.7%
+  value: 52.7
+  fields:
+    year: 2024
+    spoken_exact: 52.7 percent
+  source_ids:
+  - bazg_trade_2024
+  - kmu_pharma_exports
+  status: source_located
+  verification_note: Figure taken from a search summary of the FOCBS 2024 annual report. Confirm the 52.7% and which export
+    total it refers to (FOCBS 'Total 1' business-cycle total excludes gold and other precious metals) and word the on-screen
+    label accordingly.
+- id: vet_share
+  text: About two-thirds of young people in Switzerland enter vocational education and training (VET); the most common form
+    is dual-track VET combining classroom instruction with workplace training.
+  spoken: About two thirds
+  display: 2 in 3
+  value: 0.6667
+  source_ids:
+  - seri_vet
+  status: source_located
+  verification_note: SERI states that two-thirds of young people benefit from VET. Confirm exact phrasing; do not conflate
+    with annual 'Transition Barometer' interest percentages.
+- id: gii_2025_rank
+  text: In the Global Innovation Index 2025, WIPO ranked Switzerland first of 139 economies.
+  spoken: In 2025, the World Intellectual Property Organization ranked Switzerland first out of 139 economies
+  display: '#1 of 139'
+  value: 1
+  fields:
+    year: 2025
+    economies: 139
+  source_ids:
+  - wipo_gii_2025
+  - ige_gii_2025
+  status: source_located
+  verification_note: Confirm 139 economies and rank in WIPO's press release. Secondary sources disagree on the length of the
+    streak (14th vs 15th year), so the script deliberately does not mention it.
+- id: gii_2025_top5
+  text: 'GII 2025 top five: Switzerland, Sweden, United States, Republic of Korea, Singapore.'
+  value:
+  - Switzerland
+  - Sweden
+  - United States
+  - Rep. of Korea
+  - Singapore
+  source_ids:
+  - wipo_gii_2025
+  status: source_located
+  verification_note: Confirm order in WIPO's ranking table.
+- id: constitution_1848
+  text: The Federal Constitution of 12 September 1848 established the Swiss federal state, turning a group of cantons into
+    a federal state with new federal authorities.
+  spoken: In 1848
+  display: '1848'
+  value: 1848
+  source_ids:
+  - parlament_constitution
+  - bar_new_authorities
+  status: source_located
+  verification_note: parlament.ch reportedly says the present constitution's basis is the Constitution of 12 September 1848,
+    which established the Swiss federal state. Confirm wording.
+- id: eu_bilateral
+  text: Switzerland is not a member of the European Union; it pursues its European policy through bilateral sectoral agreements.
+  source_ids:
+  - eda_bilateral
+  status: source_located
+  verification_note: Confirm on the FDFA 'bilateral path' page.
+- id: banking_act_1934
+  text: The 1934 Federal Act on Banks and Savings Banks (in force 1 March 1935) made breaching banking secrecy a criminal
+    offence (Article 47); before that, banking secrecy was protected by civil law.
+  spoken: In 1934
+  display: '1934'
+  value: 1934
+  source_ids:
+  - iheid_banking_secrecy
+  - goldblum_secrecy
+  status: source_located
+  verification_note: Secondary sources (academic chapter + law firm). Ideally confirm against the Act's text on fedlex.admin.ch
+    (Article 47) and cite it.
+- id: aeoi_2018
+  text: In 2018 Switzerland exchanged financial account information automatically with partner states for the first time,
+    covering around 2 million financial accounts (FTA release, 5 October 2018), under the global AEOI standard.
+  spoken: around two million
+  display: ~2 million
+  value: 2000000
+  fields:
+    year: 2018
+  source_ids:
+  - fta_aeoi_2018
+  status: source_located
+  verification_note: Title of the FTA release says 'around 2 million financial accounts'. Partner count differs between sources
+    (36 vs 38) - deliberately not used.
+- id: snb_floor_2011
+  text: On 6 September 2011 the Swiss National Bank set a minimum exchange rate of CHF 1.20 per euro, saying it would no longer
+    tolerate a EUR/CHF rate below it.
+  spoken: one franc twenty
+  display: '1.20'
+  value: 1.2
+  fields:
+    date_spoken: September 6th, 2011
+    year: 2011
+  source_ids:
+  - ecb_snb_2011
+  - bis_jordan_2015
+  status: source_located
+  verification_note: The ECB statement of 6 Sep 2011 quotes the SNB decision. Locate and cite the SNB's own press release
+    of that date if possible.
+- id: snb_floor_end_2015
+  text: On 15 January 2015 the Swiss National Bank discontinued the minimum exchange rate of CHF 1.20 per euro with immediate
+    effect and ceased the associated foreign currency purchases; the franc appreciated sharply and markets were surprised.
+  fields:
+    date_spoken: January 15th, 2015
+    year: 2015
+  source_ids:
+  - bis_jordan_2015
+  - swissinfo_floor_2015
+  status: source_located
+  verification_note: Decision wording from SNB press-conference text (BIS). 'Appreciated sharply / surprise' is press coverage
+    - keep it qualitative, no magnitude.
+- id: snb_floor_interventions
+  text: According to the SNB (April 2015), the minimum exchange rate could only have been enforced through permanent currency
+    interventions of rapidly increasing magnitude.
+  source_ids:
+  - snb_speech_2015_04
+  status: source_located
+  verification_note: Confirm wording in the SNB speech of 24 April 2015.
+- id: cs_ubs_2023
+  text: On 19 March 2023 FINMA approved the takeover of Credit Suisse by UBS; the Swiss Confederation and the SNB supported
+    the deal (federal guarantee for additional SNB liquidity assistance, emergency law).
+  fields:
+    month_spoken: March 2023
+  source_ids:
+  - finma_cs_ubs
+  - efd_cs_timeline
+  status: source_located
+  verification_note: Confirm on FINMA release and the Federal Department of Finance timeline.
+- id: price_level_2024
+  text: In 2024 Switzerland had the highest price level among the countries compared by Eurostat, with a price level index
+    of 158.8 (EU = 100) at GDP level.
+  spoken: almost 60 percent above the EU average
+  display: '158.8'
+  value: 158.8
+  fields:
+    year: 2024
+  source_ids:
+  - eurostat_price_levels
+  - bluewin_price_2024
+  status: source_located
+  verification_note: 158.8 comes from press reports of Eurostat data (GDP-level price index). Confirm in Eurostat dataset
+    prc_ppp_ind and which aggregate (GDP vs household consumption) before publishing; adjust the on-screen label.
+- id: pharma_hq_basel
+  text: Roche and Novartis both have their global headquarters in Basel.
+  source_ids:
+  - swissinfo_roche_hq
+  - swissinfo_roche_rd
+  status: source_located
+  verification_note: Sources are news articles; confirm on roche.com and novartis.com (Novartis HQ is only implied by the
+    found sources).
+- id: watches_2024
+  text: 'Swiss watch exports reached CHF 25.9 billion in 2024, down 2.8% (FH statistics, via Keystone-SDA/swissinfo: ''which
+    reached a volume of CHF25.9 billion'').'
+  spoken: about 29.4 billion dollars
+  display: $29.4bn
+  value: 29.4
+  fields:
+    change_spoken: 2.8 percent
+    change_display: -2.8%
+  source_ids:
+  - swi_watches_2024
+  - fed_h10
+  status: source_located
+  verification_note: 'Read on the page 2026-11-08. FH''s own table gives CHF 25,993.1m (press release rounds to 26.0bn); the
+    film uses the article''s 25.9bn. USD: CHF 25.9bn / 0.8808 (2024 average) = $29.41bn.'
+- id: unemployment_2024
+  text: 'SECO: the average unemployment rate for 2024 was 2.4%, 0.4 points higher than the previous year; at 2.0% the 2023
+    figure was the lowest since 2001.'
+  spoken: 2.4 percent
+  display: 2.4%
+  value: 2.4
+  fields:
+    prev_spoken: 2.0 percent
+    prev_display: 2.0%
+  source_ids:
+  - swi_unemployment_2024
+  status: source_located
+  verification_note: Read on the page 2026-11-08 (quoted).
+- id: crossborder_2024
+  text: Around 403,000 people with a G permit (cross-border commuters) were working in Switzerland at the end of September
+    2024 (FSO); about 57% lived in France, 23% in Italy and about 16% in Germany.
+  spoken: around 403,000
+  display: ≈ 403,000
+  value: 403000
+  source_ids:
+  - swi_crossborder_2024
+  status: source_located
+  verification_note: Read on the page 2026-11-08 (quoted).
+- id: snb_fx_2024
+  text: For all of 2024 the SNB purchased CHF 1.2bn of foreign currency, compared with sales of CHF 132.9bn the previous year;
+    in 2022 and 2023 it boosted the franc this way to dampen inflation.
+  spoken: about 1.4 billion dollars
+  display: $1.4bn
+  value: 1.4
+  fields:
+    sold_spoken: about 148 billion dollars
+    sold_display: $148bn
+  source_ids:
+  - swi_snb_2024
+  - fed_h10
+  status: source_located
+  verification_note: 'Read on the page 2026-11-08 (quoted, citing the SNB annual report). USD: CHF 1.2bn / 0.8808; CHF 132.9bn
+    / 0.8984 = $147.9bn.'
+- id: tariff_2025
+  text: Since 7 August 2025, Swiss exports to the US were subject to a 39% tariff (SME Portal, 11.08.2025). On 14 November
+    2025 Switzerland and Liechtenstein signed a non-binding memorandum of understanding; the US would reduce the country-specific
+    additional tariff to 15%, in line with the EU; Swiss companies plan USD 200bn of direct investment in the US by the end
+    of 2028.
+  spoken: 39 percent
+  display: 39%
+  value: 39
+  fields:
+    new_spoken: 15 percent
+    new_display: 15%
+    invest_spoken: 200 billion dollars
+    invest_display: $200bn
+  source_ids:
+  - kmu_tariff_2025
+  - swi_tariff15_2025
+  status: source_located
+  verification_note: Both pages read 2026-11-08 (quoted). Later changes to US tariffs (after Dec 2025) were not checked; the
+    narration speaks of 2025 only.
 open_questions:
-  - For the full documentary - role of banking secrecy and its erosion (1934 Banking Act, automatic exchange of information). Needs primary legal sources.
-  - Swiss franc and the Swiss National Bank's balance sheet - SNB annual reports.
-  - Counterpoints - cost of living, inequality measures, dependence on a few large firms. Needs balanced sources.
-  - Is GDP per capita the right lens? Compare GNI per capita and PPP-adjusted measures (World Bank NY.GNP.PCAP.CD, NY.GDP.PCAP.PP.CD).
+- For the full documentary - role of banking secrecy and its erosion (1934 Banking Act, automatic exchange of information).
+  Needs primary legal sources.
+- Swiss franc and the Swiss National Bank's balance sheet - SNB annual reports.
+- Counterpoints - cost of living, inequality measures, dependence on a few large firms. Needs balanced sources.
+- Is GDP per capita the right lens? Compare GNI per capita and PPP-adjusted measures (World Bank NY.GNP.PCAP.CD, NY.GDP.PCAP.PP.CD).

@@ -211,7 +211,7 @@ stage("d20_trade", "a4_trade", {
               it("letters", x=1350, y=360, text="{{jafza_port_gdp.display}}", at=C("account for"), size=120, color="green"),
               it("sign", x=1350, y=520, text="OF DUBAI'S ECONOMY", sub="zone + port (government estimate)", at=C("account for", 0.3), size=28)],
     "callouts": [co("The zone and the port: a third of the economy", 960, 960, C("account for"), "white", screen=True)]},
-    sources=["dmo_jafza_2025"])
+    sources=["dmo_jafza_2025", "national_peg"])
 stage("d21_port", "a4_port", {
     "zones": [PORT()], "worldW": 2200,
     "cam": [{"at": 0, "x": 960, "y": 500, "zoom": 1.05}, {"at": C("busiest container"), "x": 1200, "y": 480, "zoom": 0.92, "dur": 2.4}], "drift": 0,
@@ -247,17 +247,17 @@ board("p25_reach", "a5_reach", "Fly them through, not to", C("The pitch"), [
     [{"kind": "point", "at": C("through it", 0.4), "dur": 1.3, "target": [960, 560]}], enter_from=2200, enter_to=1620,
     sources=["invest_dubai_hub"], min_s=12.0)
 add("d26_results", "a5_results", "engine_chart", {"chart": "bar", "box": {"x": 360, "y": 330, "w": 1200, "h": 480}, "start": C("Emirates Group made"), "stagger": 1.2,
-    "title": "Emirates Group, {{emirates_fy26.year}}", "note": "AED billion · dividend paid to its owner, the Investment Corporation of Dubai",
-    "valuePrefix": "AED ", "valueSuffix": "bn", "data": [{"label": "Revenue", "value": 150.5}, {"label": "Profit after tax", "value": 21.0}, {"label": "Dividend to owner", "value": 3.5}],
-    "highlight": 1, "highlightAt": C("profit after tax"), "color": "accent2", "highlightColor": "accent"}, sources=["dmo_emirates_2026"])
+    "title": "Emirates Group, {{emirates_fy26.year}}", "note": "US$ billion at the official peg (3.6725 per US dollar) · dividend paid to its owner, the Investment Corporation of Dubai",
+    "valuePrefix": "$", "valueSuffix": "bn", "decimals": 1, "data": [{"label": "Revenue", "value": 41.0}, {"label": "Profit after tax", "value": 5.7}, {"label": "Dividend to owner", "value": 0.95}],
+    "highlight": 1, "highlightAt": C("profit after tax"), "color": "accent2", "highlightColor": "accent"}, sources=["dmo_emirates_2026", "national_peg"])
 stage("d27_dwc", "a5_dxb", {
     "zones": [Z("site")], "worldW": 1920,
     "cam": [{"at": 0, "x": 960, "y": 480, "zoom": 1.0}], "drift": 4,
     "items": [it("crane", x=700, text="NEW TERMINAL · AL MAKTOUM", at=0.2, progress=[[0, 0.1], [20, 0.6]], scale=1.0),
-              it("counter", x=1350, y=230, at=C("approved"), steps=[[0, 0], [{"cue": "approved"}, 0], [{"cue": "approved", "offset": 2.5}, 128]], prefix="AED ", suffix="bn", text="approved terminal ({{dwc_plan.year}})"),
+              it("counter", x=1350, y=230, at=C("approved"), steps=[[0, 0], [{"cue": "approved"}, 0], [{"cue": "approved", "offset": 2.5}, 34.9]], prefix="$", suffix="bn", decimals=1, text="approved terminal ({{dwc_plan.year}}, at the official dollar peg)"),
               it("sign", x=1350, y=520, text="UP TO {{dwc_plan.capacity_display}} PASSENGERS / YEAR", at=C("designed for"), color="#FFF59D", size=28),
               PLANE([[0, 2200], [20, -300]], 180, flip=True)]},
-    sources=["dmo_dwc_2024", "dmo_dxb_2025"])
+    sources=["dmo_dwc_2024", "dmo_dxb_2025", "national_peg"])
 card("d28_act6", "act6_card", "Tourism, Luxury, Real Estate", "The most visible engines")
 add("d29_visitors", "a6_visitors", "engine_chart", {"chart": "bar", "box": {"x": 460, "y": 330, "w": 1000, "h": 480}, "start": C("All those flights"), "stagger": 1.0,
     "title": "Overnight visitors to Dubai", "note": "millions per year · hotel occupancy {{visitors_2025.year}}: {{hotel_occupancy_2025.display}}",
@@ -267,9 +267,9 @@ stage("d30_property", "a6_property", {
     "zones": [GULF(cx=600)], "worldW": 1920,
     "cam": [{"at": 0, "x": 960, "y": 450, "zoom": 1.0}], "drift": 4,
     "items": [it("crane", x=1450, text="NEW TOWER", at=0.2, progress=[[0, 0.3], [20, 0.95]], scale=0.9),
-              it("counter", x=960, y=200, at=C("were worth"), steps=[[0, 761], [{"cue": "were worth"}, 761], [{"cue": "were worth", "offset": 2.5}, 917]], prefix="AED ", suffix="bn", text="real estate transactions, 2024 → 2025")],
+              it("counter", x=960, y=200, at=C("were worth"), steps=[[0, 207.2], [{"cue": "were worth"}, 207.2], [{"cue": "were worth", "offset": 2.5}, 249.7]], prefix="$", suffix="bn", decimals=1, text="real estate transactions, 2024 → 2025 (at the official dollar peg)")],
     "callouts": [co("Property: the most visible engine", 960, 960, C("most visible"), "gold", screen=True)]},
-    sources=["dmo_realestate_2025", "dld_2024"])
+    sources=["dmo_realestate_2025", "dld_2024", "national_peg"])
 stage("d31_who", "a6_who", {
     "zones": [GULF(cx=500)], "worldW": 1920,
     "cam": [{"at": 0, "x": 960, "y": 470, "zoom": 1.0}], "drift": 4,

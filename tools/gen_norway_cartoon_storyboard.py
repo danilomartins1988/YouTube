@@ -27,9 +27,23 @@ FJORD = lambda x0=-1600, x1=4600, **kw: Z("fjord", x0, x1, **kw)
 SEA = lambda x0=-1600, x1=4600, **kw: Z("northsea", x0, x1, **kw)
 
 
+USD_FIX = {   # kept first-cut charts: values are now US dollars (converted in sources.yaml, Fed H.10 annual averages)
+    "n19_cashflow": {"subtitle": "US$ billion per year · converted at each year's average rate (Statistics Norway, Fed H.10)", "value_prefix": "$"},
+    "n25_growth": {"subtitle": "US$ billion · converted at each year's average rate (NBIM, Fed H.10)", "value_prefix": "$", "y_max": 2400},
+    "n35_insulate": {"subtitle": "Illustration of the principle: fund value (NBIM), US$ billion", "value_prefix": "$", "y_max": 2400},
+}
+
+
 def keep(*ids):
     for i in ids:
-        cartoon_kit.scenes.append(BASE[i])
+        sc = BASE[i]
+        if i in USD_FIX:
+            sc["params"].update(USD_FIX[i])
+            for ev in sc["params"].get("events", []) or []:
+                if isinstance(ev, dict) and "NOK" in str(ev.get("label", "")):
+                    ev["label"], ev["year"] = "Passes $1 trillion", 2014   # first year >= $1,000bn in the converted series
+            sc["sources"] = list(sc.get("sources", [])) + ["fed_h10"]
+        cartoon_kit.scenes.append(sc)
 
 
 def crowd(xs, pose, at=0.0, until=None, scale=0.8, **kw):
@@ -65,12 +79,12 @@ stage("n01_hook", "open_hook", {
 stage("n02_value", "open_value", {
     "zones": [FJORD()], "worldW": 1920,
     "cam": [{"at": 0, "x": 960, "y": 470, "zoom": 1.1}, {"at": C("Divide that"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.4}], "drift": 0,
-    "items": [it("counter", x=960, y=260, at=0.3, steps=[[0, 0], [0.6, 0], [3.4, 22014]], prefix="NOK ", suffix="bn", text="the oil fund, {{fund_value_q3_2026.date_display}}"),
+    "items": [it("counter", x=960, y=260, at=0.3, steps=[[0, 0], [0.6, 0], [3.4, 2.12]], prefix="$", suffix=" trillion", decimals=2, text="the oil fund, {{fund_value_q3_2026.date_display}} (at the 2025 average rate)"),
               *crowd([360, 480, 600, 1320, 1440, 1560], "cheer", at=C("every person")),
               it("coins", **{"from": [960, 340], "to": [480, 640]}, at=C("every person"), rate=4),
               it("coins", **{"from": [960, 340], "to": [1440, 640]}, at=C("every person", 0.2), rate=4)],
     "callouts": [co("{{fund_per_person.display}} for every Norwegian", 960, 960, C("Divide that"), "gold", screen=True, size=42)]},
-    sources=["nbim_q3_2026", "ssb_population"])
+    sources=["nbim_q3_2026", "ssb_population", "fed_h10"])
 keep("n03_stake")
 stage("n04_question", "open_question", {
     "zones": [FJORD(-1600, 1300), SEA(1300, 6000)], "worldW": 2800, "min_seconds": 9.0,
@@ -228,10 +242,10 @@ stage("n33_budget", "p7_budget", {
     "zones": [FJORD()], "worldW": 1920,
     "cam": [{"at": 0, "x": 960, "y": 480, "zoom": 1.05}], "drift": 4,
     "items": [it("building", x=480, style="gov", color="#FFE0B2", text="GOVERNMENT", at=0.2, scale=0.7),
-              it("counter", x=1200, y=260, at=C("planned to use"), steps=[[0, 0], [{"cue": "planned to use"}, 0], [{"cue": "planned to use", "offset": 2.5}, 579.4]], prefix="NOK ", suffix="bn", decimals=1, text="oil money in this year's budget"),
+              it("counter", x=1200, y=260, at=C("planned to use"), steps=[[0, 0], [{"cue": "planned to use"}, 0], [{"cue": "planned to use", "offset": 2.5}, 55.8]], prefix="$", suffix="bn", decimals=1, text="oil money in this year's budget (2025 average rate)"),
               it("sign", x=1200, y=560, text="≈ 1/4 OF ALL PUBLIC SPENDING", sub="IMF estimate", at=C("IMF estimates"), color="#FFF59D", size=30)],
     "callouts": [co("About {{budget_2026_deficit.pct_fund_display}} of the fund", 960, 960, C("of the fund"), "gold", screen=True)]},
-    sources=["mof_budget_2026", "nbim_about"])
+    sources=["mof_budget_2026", "nbim_about", "fed_h10"])
 stage("n34_why", "p7_why", {
     "zones": [FJORD()], "worldW": 1920,
     "cam": [{"at": 0, "x": 960, "y": 480, "zoom": 1.05}], "drift": 4,
@@ -276,7 +290,7 @@ stage("n42_volatility", "p9_volatility", {
     "cam": [{"at": 0, "x": 960, "y": 480, "zoom": 1.0}], "drift": 4,
     "items": [it("rig", x=480, at=0.2, scale=0.75, night=True),
               it("chart", x=1300, y=360, w=640, h=360, at=0.3, dur=1.5, text="OIL PRICE", pts=[0.8, 0.85], crashAt=C("oil fell")),
-              it("sign", x=1150, y=650, text="KRONE {{oil_crash_2014.krone_display}}", at=C("krone weakened"), color="#FFCDD2", size=28),
+              it("sign", x=1150, y=650, text="CURRENCY {{oil_crash_2014.krone_display}}", at=C("currency weakened"), color="#FFCDD2", size=28),
               it("sign", x=1550, y=650, text="JOBLESS {{unemployment_2014_16.display}}", at=C("unemployment rose"), color="#FFCDD2", size=28),
               it("storm", x=[[0, 1700], [14, 900]], y=150, at=C("oil fell"))],
     "callouts": [co("Risk 1: the oil price", 960, 150, C("The first risk"), "risk", screen=True, until=C("oil fell", -0.2)),

@@ -6,7 +6,7 @@ language: en
 # Per-video visual identity. Each episode gets its own palette, type pairing and motifs so the
 # channel never looks like a template farm. QC compares scene grammar against earlier projects.
 # Made before the US-dollar rule (2026-11-05); keeps its local-currency figures.
-currency_exempt: true
+currency_exempt: true   # 2026-11-08: every AMOUNT is in US dollars; the franc and euro appear only as the subject of the story (safe haven, the 1.20 floor), which the currency check cannot tell apart
 # 2026-11-08 cartoon redo: animated with the Remotion engine (CartoonStage worlds).
 renderer: remotion
 remotion_geo: [world]

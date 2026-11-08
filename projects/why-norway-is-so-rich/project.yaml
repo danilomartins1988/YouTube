@@ -6,7 +6,7 @@ language: en
 renderer: remotion
 remotion_geo: [europe, world]
 # Made before the US-dollar rule (2026-11-05); keeps its local-currency figures.
-currency_exempt: true
+currency_exempt: false   # 2026-11-08: all amounts converted to US dollars (user rule)
 style:
   name: nordic-ledger
   palette:            # bright cartoon day (2026-11-08 cartoon redo): sky base, gold = money, blue, green = growth, red = risk

@@ -11,757 +11,973 @@
 # directly on nbim.no and in the 2025 annual report.
 
 sources:
-  # ---------------------------------------------------------------- data and maps
-  - id: wb_gdppc_indicator
-    title: GDP per capita (current US$), indicator NY.GDP.PCAP.CD
-    publisher: World Bank
-    url: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
-    accessed: "2026-11-05"
-    kind: dataset
-    license: CC-BY-4.0
-    credit: "World Bank WDI (CC BY 4.0)"
-  - id: wb_gdp_mirror
-    title: "GDP (current US$) - World Bank WDI, normalised CSV (datasets/gdp)"
-    publisher: World Bank (via Datahub datasets/gdp)
-    url: https://github.com/datasets/gdp
-    accessed: "2026-11-05"
-    kind: dataset
-    license: CC-BY-4.0
-    credit: "World Bank WDI (CC BY 4.0)"
-  - id: wb_pop_mirror
-    title: "Population, total - World Bank WDI, normalised CSV (datasets/population)"
-    publisher: World Bank (via Datahub datasets/population)
-    url: https://github.com/datasets/population
-    accessed: "2026-11-05"
-    kind: dataset
-    license: CC-BY-4.0
-    credit: "World Bank WDI (CC BY 4.0)"
-  - id: natural_earth
-    title: Natural Earth 1:10m and 1:50m Admin 0 Countries
-    publisher: Natural Earth
-    url: https://www.naturalearthdata.com/downloads/
-    accessed: "2026-11-05"
-    kind: dataset
-    license: public-domain
-    credit: "Natural Earth (public domain)"
-  - id: maddison_owid
-    title: GDP per capita, Maddison Project Database 2023 (Bolt and van Zanden), via Our World in Data
-    publisher: Maddison Project / University of Groningen (Our World in Data grapher)
-    url: https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database
-    published: "2023 release"
-    accessed: "2026-11-05"
-    kind: dataset
-    license: CC-BY-4.0
-    credit: "Maddison Project Database 2023"
-
-  # ---------------------------------------------------------------- pre-oil economy
-  - id: hydro_history
-    title: "1905: A new working day (company history)"
-    publisher: Norsk Hydro
-    url: https://www.hydro.com/en/global/about-hydro/company-history/1900---1917/1905-a-new-working-day--2-december-1905/
-    accessed: "2026-11-05"
-    credit: "Hydro"
-  - id: usni_merchant_1956
-    title: The Norwegian Merchant Marine (Proceedings, September 1956)
-    publisher: U.S. Naval Institute
-    url: https://www.usni.org/magazines/proceedings/1956/september/norwegian-merchant-marine-1945
-    published: "1956-09"
-    accessed: "2026-11-05"
-    kind: secondary
-    credit: "U.S. Naval Institute Proceedings"
-
-  # ---------------------------------------------------------------- petroleum (Ministry of Energy / Offshore Directorate)
-  - id: np_history
-    title: Norway's petroleum history
-    publisher: norskpetroleum.no (Norwegian Ministry of Energy and Norwegian Offshore Directorate)
-    url: https://www.norskpetroleum.no/en/framework/norways-petroleum-history/
-    published: "updated 2026-10-08"
-    accessed: "2026-11-05"
-    credit: "Norwegian Ministry of Energy (norskpetroleum.no)"
-  - id: ekofisk_museum
-    title: The discovery which changed Norway
-    publisher: Norwegian Petroleum Museum (Ekofisk industrial heritage)
-    url: https://ekofisk.industriminne.no/en/the-discovery-which-changed-norway
-    accessed: "2026-11-05"
-    kind: secondary
-    credit: "Norwegian Petroleum Museum"
-  - id: storting_oljebud
-    title: De ti oljebud vedtatt for 50 år siden
-    publisher: Stortinget (Norwegian Parliament)
-    url: https://stortinget.no/no/Hva-skjer-pa-Stortinget/Nyhetsarkiv/Hva-skjer-nyheter/2020-2021/de-ti-oljebud-vedtatt-for-50-ar-siden/
-    published: "2021-06"
-    accessed: "2026-11-05"
-    credit: "Stortinget"
-  - id: sodir_50
-    title: The NPD celebrates its 50th anniversary today
-    publisher: Norwegian Offshore Directorate (Sodir)
-    url: https://www.sodir.no/en/whats-new/news/general-news/2022/the-npd-celebrates-its-50th-anniversary-today
-    published: "2022-06-14"
-    accessed: "2026-11-05"
-    credit: "Norwegian Offshore Directorate"
-  - id: np_state_org
-    title: State organisation of petroleum activities
-    publisher: norskpetroleum.no
-    url: https://www.norskpetroleum.no/en/framework/state-organisation-of-petroleum-activites
-    accessed: "2026-11-05"
-    credit: "norskpetroleum.no"
-  - id: np_revenues
-    title: The government's revenues
-    publisher: norskpetroleum.no
-    url: https://www.norskpetroleum.no/en/economy/governments-revenues/
-    published: "updated 2026-10-08"
-    accessed: "2026-11-05"
-    credit: "norskpetroleum.no"
-  - id: np_tax
-    title: The petroleum tax system
-    publisher: norskpetroleum.no
-    url: https://www.norskpetroleum.no/en/economy/petroleum-tax/
-    accessed: "2026-11-05"
-    credit: "norskpetroleum.no"
-  - id: np_production
-    title: Historical production / Production forecasts
-    publisher: norskpetroleum.no
-    url: https://www.norskpetroleum.no/en/facts/historical-production/
-    published: "updated 2026-03-03"
-    accessed: "2026-11-05"
-    credit: "norskpetroleum.no"
-  - id: np_front
-    title: Norwegian petroleum (front page key figures)
-    publisher: norskpetroleum.no
-    url: https://www.norskpetroleum.no/en/
-    accessed: "2026-11-05"
-    credit: "norskpetroleum.no"
-  - id: np_exports
-    title: Exports of oil and gas
-    publisher: norskpetroleum.no
-    url: https://www.norskpetroleum.no/en/production-and-exports/exports-of-oil-and-gas/
-    published: "updated 2026-10-07"
-    accessed: "2026-11-05"
-    credit: "norskpetroleum.no"
-  - id: np_resources
-    title: Resource accounts (as of 31 December 2025)
-    publisher: norskpetroleum.no
-    url: https://www.norskpetroleum.no/en/facts/resource-accounts/
-    published: "updated 2026-05-11"
-    accessed: "2026-11-05"
-    credit: "norskpetroleum.no"
-  - id: ssb_cashflow
-    title: Central government revenue and expenditure (Table 5, net cash flow from petroleum activities)
-    publisher: Statistics Norway (SSB)
-    url: https://www.ssb.no/en/offentlig-sektor/statlige-finanser/statistikk/statsregnskapets-inntekter-og-utgifter
-    published: "updated 2026-09-09"
-    accessed: "2026-11-05"
-    credit: "Statistics Norway"
-
-  # ---------------------------------------------------------------- the fund (NBIM)
-  - id: nbim_history
-    title: The history (of the fund)
-    publisher: Norges Bank Investment Management (NBIM)
-    url: https://www.nbim.no/en/about-us/about-the-fund/the-history/
-    accessed: "2026-11-05"
-    credit: "NBIM"
-  - id: nbim_25yrs
-    title: "Government Pension Fund Global: Twenty-fifth anniversary"
-    publisher: NBIM
-    url: https://www.nbim.no/en/news-and-insights/the-press/press-releases/2021/government-pension-fund-global-twenty-fifth-anniversary
-    published: "2021-05-30"
-    accessed: "2026-11-05"
-    credit: "NBIM"
-  - id: nbim_about
-    title: About the fund
-    publisher: NBIM
-    url: https://www.nbim.no/en/about-us/about-the-fund/
-    accessed: "2026-11-05"
-    credit: "NBIM"
-  - id: nbim_q3_2026
-    title: Negative return in the third quarter
-    publisher: NBIM
-    url: https://www.nbim.no/en/news-and-insights/the-press/press-releases/2026/negative-return-in-the-third-quarter/
-    published: "2026-10-22"
-    accessed: "2026-11-05"
-    credit: "NBIM"
-  - id: nbim_ar2025
-    title: Government Pension Fund Global - Annual report 2025
-    publisher: NBIM
-    url: https://www.nbim.no/contentassets/6db259ec684645ebbf171cacbe7cc7de/annual-report-2025.pdf
-    published: "2026-02-27"
-    accessed: "2026-11-05"
-    credit: "NBIM Annual Report 2025"
-  - id: nbim_2025_results
-    title: Strong return in 2025
-    publisher: NBIM
-    url: https://www.nbim.no/en/news-and-insights/the-press/press-releases/2026/strong-return-in-2025/
-    published: "2026-01-29"
-    accessed: "2026-11-05"
-    credit: "NBIM"
-    notes: URL slug reconstructed from the release title; reviewer to confirm.
-  - id: nbim_home
-    title: NBIM front page (largest holdings, at 30 June 2026)
-    publisher: NBIM
-    url: https://www.nbim.no/
-    accessed: "2026-11-05"
-    credit: "NBIM"
-  - id: mof_framework
-    title: The Norwegian Fiscal Policy Framework
-    publisher: Norwegian Ministry of Finance (regjeringen.no)
-    url: https://www.regjeringen.no/en/topics/the-economy/economic-policy/id418083/
-    accessed: "2026-11-05"
-    credit: "Norwegian Ministry of Finance"
-    notes: Page returned 403 to automated access; wording from search snippet.
-  - id: mof_budget_2026
-    title: "The National Budget 2026: key figures"
-    publisher: Norwegian Ministry of Finance (regjeringen.no)
-    url: https://www.regjeringen.no/en/whats-new/key-figures-in-the-national-budget-for-2026/id3124365
-    published: "2025-10"
-    accessed: "2026-11-05"
-    credit: "Norwegian Ministry of Finance"
-    notes: Page returned 403 to automated access; figures from search snippet.
-  - id: ssb_population
-    title: Population (quarterly)
-    publisher: Statistics Norway (SSB)
-    url: https://www.ssb.no/en/befolkning/folketall/statistikk/befolkning
-    accessed: "2026-11-05"
-    credit: "Statistics Norway"
-
-  # ---------------------------------------------------------------- economy, model, risks
-  - id: ssb_09189
-    title: "Table 09189: Final expenditure and gross domestic product (Mainland Norway and petroleum activities)"
-    publisher: Statistics Norway (SSB)
-    url: https://data.ssb.no/api/v0/en/table/09189
-    published: "updated 2026-05-28"
-    accessed: "2026-11-05"
-    kind: dataset
-    license: "SSB open data (free re-use with attribution; confirm NLOD/CC BY terms)"
-    credit: "Statistics Norway"
-  - id: oecd_blog_2024
-    title: "Norway: Rougher waters ahead"
-    publisher: OECD ECOSCOPE (H. Blöchliger)
-    url: https://oecdecoscope.blog/2024/06/20/norway-rougher-waters-ahead/
-    published: "2024-06-20"
-    accessed: "2026-11-05"
-    credit: "OECD"
-  - id: ssb_gini
-    title: "Table 07756: Income inequality (Gini coefficient, equivalised household income)"
-    publisher: Statistics Norway (SSB)
-    url: https://www.ssb.no/en/statbank/table/07756
-    published: "updated 2026-01-16"
-    accessed: "2026-11-05"
-    kind: dataset
-    license: "SSB open data (free re-use with attribution; confirm NLOD/CC BY terms)"
-    credit: "Statistics Norway"
-  - id: fafo_2025
-    title: "Organisasjonsgrader, tariffavtaledekning og arbeidskonflikter 2024 (Fafo-notat 2025:15)"
-    publisher: Fafo (K. Nergaard)
-    url: https://fafo.no/images/pub/2025/10432.pdf
-    published: "2025-12-19"
-    accessed: "2026-11-05"
-    kind: secondary
-    credit: "Fafo"
-  - id: ssb_frontfag
-    title: Wage formation in Norway (SSB Rapport 2023/47)
-    publisher: Statistics Norway (SSB)
-    url: https://www.ssb.no/en/arbeid-og-lonn/lonn-og-arbeidskraftkostnader/artikler/wage-formation-in-norway
-    published: "2023"
-    accessed: "2026-11-05"
-    credit: "Statistics Norway"
-    notes: URL of the report page to be confirmed by the reviewer; quote taken from the report.
-  - id: oecd_trust_2026
-    title: "OECD Trust Survey: country note Norway"
-    publisher: OECD
-    url: https://www.oecd.org/en/publications/oecd-survey-on-drivers-of-trust-in-public-institutions-2026-results-country-notes_norway.html
-    published: "2026"
-    accessed: "2026-11-05"
-    credit: "OECD Trust Survey"
-    notes: oecd.org returned 403; figures from search snippet. URL to be confirmed.
-  - id: nb_papers_2016
-    title: Norges Bank Papers 3/2016 (the oil price fall and the Norwegian economy)
-    publisher: Norges Bank
-    url: https://www.norges-bank.no/en/news-events/publications/Norges-Bank-Papers/
-    published: "2016"
-    accessed: "2026-11-05"
-    credit: "Norges Bank"
-    notes: Series page; reviewer to link the specific paper.
-  - id: ssb_08517
-    title: "Table 08517: Labour force survey, unemployment (LFS)"
-    publisher: Statistics Norway (SSB)
-    url: https://www.ssb.no/en/statbank/table/08517
-    accessed: "2026-11-05"
-    kind: dataset
-    license: "SSB open data (free re-use with attribution; confirm NLOD/CC BY terms)"
-    credit: "Statistics Norway"
-  - id: np_forecast
-    title: Production forecasts
-    publisher: norskpetroleum.no (Norwegian Offshore Directorate forecast)
-    url: https://norskpetroleum.no/en/production-and-exports/production-forecasts
-    published: "charts updated 2026-10-07"
-    accessed: "2026-11-05"
-    credit: "Norwegian Offshore Directorate"
-  - id: ssb_14288
-    title: "Table 14288: Projected population by age (2024-based projections, main alternative)"
-    publisher: Statistics Norway (SSB)
-    url: https://www.ssb.no/en/statbank/table/14288
-    published: "2024-09-13"
-    accessed: "2026-11-05"
-    kind: dataset
-    license: "SSB open data (free re-use with attribution; confirm NLOD/CC BY terms)"
-    credit: "Statistics Norway"
-  - id: nbim_stress_2025
-    title: "Stress testing the fund (data as at 31 December 2025)"
-    publisher: NBIM
-    url: https://www.nbim.no/contentassets/d2359913e3a64cdc866bf19fa16782ab/gpfg_stresstesting-2025.pdf
-    published: "2026"
-    accessed: "2026-11-05"
-    credit: "NBIM"
-  - id: imf_2026
-    title: "Norway: Staff Concluding Statement of the 2026 Article IV Mission"
-    publisher: International Monetary Fund
-    url: https://www.imf.org/en/news/articles/2026/09/03/mcs090326-norway-staff-concluding-statement-of-the-2026-article-iv-mission
-    published: "2026-09-03"
-    accessed: "2026-11-05"
-    credit: "IMF"
-  - id: imf_2014
-    title: "Norway: 2014 Article IV Consultation, Concluding Statement"
-    publisher: International Monetary Fund
-    url: https://www.imf.org/external/np/ms/2014/052314.htm
-    published: "2014-05-23"
-    accessed: "2026-11-05"
-    credit: "IMF"
-
+- id: wb_gdppc_indicator
+  title: GDP per capita (current US$), indicator NY.GDP.PCAP.CD
+  publisher: World Bank
+  url: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD
+  accessed: '2026-11-05'
+  kind: dataset
+  license: CC-BY-4.0
+  credit: World Bank WDI (CC BY 4.0)
+- id: wb_gdp_mirror
+  title: GDP (current US$) - World Bank WDI, normalised CSV (datasets/gdp)
+  publisher: World Bank (via Datahub datasets/gdp)
+  url: https://github.com/datasets/gdp
+  accessed: '2026-11-05'
+  kind: dataset
+  license: CC-BY-4.0
+  credit: World Bank WDI (CC BY 4.0)
+- id: wb_pop_mirror
+  title: Population, total - World Bank WDI, normalised CSV (datasets/population)
+  publisher: World Bank (via Datahub datasets/population)
+  url: https://github.com/datasets/population
+  accessed: '2026-11-05'
+  kind: dataset
+  license: CC-BY-4.0
+  credit: World Bank WDI (CC BY 4.0)
+- id: natural_earth
+  title: Natural Earth 1:10m and 1:50m Admin 0 Countries
+  publisher: Natural Earth
+  url: https://www.naturalearthdata.com/downloads/
+  accessed: '2026-11-05'
+  kind: dataset
+  license: public-domain
+  credit: Natural Earth (public domain)
+- id: maddison_owid
+  title: GDP per capita, Maddison Project Database 2023 (Bolt and van Zanden), via Our World in Data
+  publisher: Maddison Project / University of Groningen (Our World in Data grapher)
+  url: https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database
+  published: 2023 release
+  accessed: '2026-11-05'
+  kind: dataset
+  license: CC-BY-4.0
+  credit: Maddison Project Database 2023
+- id: hydro_history
+  title: '1905: A new working day (company history)'
+  publisher: Norsk Hydro
+  url: https://www.hydro.com/en/global/about-hydro/company-history/1900---1917/1905-a-new-working-day--2-december-1905/
+  accessed: '2026-11-05'
+  credit: Hydro
+- id: usni_merchant_1956
+  title: The Norwegian Merchant Marine (Proceedings, September 1956)
+  publisher: U.S. Naval Institute
+  url: https://www.usni.org/magazines/proceedings/1956/september/norwegian-merchant-marine-1945
+  published: 1956-09
+  accessed: '2026-11-05'
+  kind: secondary
+  credit: U.S. Naval Institute Proceedings
+- id: np_history
+  title: Norway's petroleum history
+  publisher: norskpetroleum.no (Norwegian Ministry of Energy and Norwegian Offshore Directorate)
+  url: https://www.norskpetroleum.no/en/framework/norways-petroleum-history/
+  published: updated 2026-10-08
+  accessed: '2026-11-05'
+  credit: Norwegian Ministry of Energy (norskpetroleum.no)
+- id: ekofisk_museum
+  title: The discovery which changed Norway
+  publisher: Norwegian Petroleum Museum (Ekofisk industrial heritage)
+  url: https://ekofisk.industriminne.no/en/the-discovery-which-changed-norway
+  accessed: '2026-11-05'
+  kind: secondary
+  credit: Norwegian Petroleum Museum
+- id: storting_oljebud
+  title: De ti oljebud vedtatt for 50 år siden
+  publisher: Stortinget (Norwegian Parliament)
+  url: https://stortinget.no/no/Hva-skjer-pa-Stortinget/Nyhetsarkiv/Hva-skjer-nyheter/2020-2021/de-ti-oljebud-vedtatt-for-50-ar-siden/
+  published: 2021-06
+  accessed: '2026-11-05'
+  credit: Stortinget
+- id: sodir_50
+  title: The NPD celebrates its 50th anniversary today
+  publisher: Norwegian Offshore Directorate (Sodir)
+  url: https://www.sodir.no/en/whats-new/news/general-news/2022/the-npd-celebrates-its-50th-anniversary-today
+  published: '2022-06-14'
+  accessed: '2026-11-05'
+  credit: Norwegian Offshore Directorate
+- id: np_state_org
+  title: State organisation of petroleum activities
+  publisher: norskpetroleum.no
+  url: https://www.norskpetroleum.no/en/framework/state-organisation-of-petroleum-activites
+  accessed: '2026-11-05'
+  credit: norskpetroleum.no
+- id: np_revenues
+  title: The government's revenues
+  publisher: norskpetroleum.no
+  url: https://www.norskpetroleum.no/en/economy/governments-revenues/
+  published: updated 2026-10-08
+  accessed: '2026-11-05'
+  credit: norskpetroleum.no
+- id: np_tax
+  title: The petroleum tax system
+  publisher: norskpetroleum.no
+  url: https://www.norskpetroleum.no/en/economy/petroleum-tax/
+  accessed: '2026-11-05'
+  credit: norskpetroleum.no
+- id: np_production
+  title: Historical production / Production forecasts
+  publisher: norskpetroleum.no
+  url: https://www.norskpetroleum.no/en/facts/historical-production/
+  published: updated 2026-03-03
+  accessed: '2026-11-05'
+  credit: norskpetroleum.no
+- id: np_front
+  title: Norwegian petroleum (front page key figures)
+  publisher: norskpetroleum.no
+  url: https://www.norskpetroleum.no/en/
+  accessed: '2026-11-05'
+  credit: norskpetroleum.no
+- id: np_exports
+  title: Exports of oil and gas
+  publisher: norskpetroleum.no
+  url: https://www.norskpetroleum.no/en/production-and-exports/exports-of-oil-and-gas/
+  published: updated 2026-10-07
+  accessed: '2026-11-05'
+  credit: norskpetroleum.no
+- id: np_resources
+  title: Resource accounts (as of 31 December 2025)
+  publisher: norskpetroleum.no
+  url: https://www.norskpetroleum.no/en/facts/resource-accounts/
+  published: updated 2026-05-11
+  accessed: '2026-11-05'
+  credit: norskpetroleum.no
+- id: ssb_cashflow
+  title: Central government revenue and expenditure (Table 5, net cash flow from petroleum activities)
+  publisher: Statistics Norway (SSB)
+  url: https://www.ssb.no/en/offentlig-sektor/statlige-finanser/statistikk/statsregnskapets-inntekter-og-utgifter
+  published: updated 2026-09-09
+  accessed: '2026-11-05'
+  credit: Statistics Norway
+- id: nbim_history
+  title: The history (of the fund)
+  publisher: Norges Bank Investment Management (NBIM)
+  url: https://www.nbim.no/en/about-us/about-the-fund/the-history/
+  accessed: '2026-11-05'
+  credit: NBIM
+- id: nbim_25yrs
+  title: 'Government Pension Fund Global: Twenty-fifth anniversary'
+  publisher: NBIM
+  url: https://www.nbim.no/en/news-and-insights/the-press/press-releases/2021/government-pension-fund-global-twenty-fifth-anniversary
+  published: '2021-05-30'
+  accessed: '2026-11-05'
+  credit: NBIM
+- id: nbim_about
+  title: About the fund
+  publisher: NBIM
+  url: https://www.nbim.no/en/about-us/about-the-fund/
+  accessed: '2026-11-05'
+  credit: NBIM
+- id: nbim_q3_2026
+  title: Negative return in the third quarter
+  publisher: NBIM
+  url: https://www.nbim.no/en/news-and-insights/the-press/press-releases/2026/negative-return-in-the-third-quarter/
+  published: '2026-10-22'
+  accessed: '2026-11-05'
+  credit: NBIM
+- id: nbim_ar2025
+  title: Government Pension Fund Global - Annual report 2025
+  publisher: NBIM
+  url: https://www.nbim.no/contentassets/6db259ec684645ebbf171cacbe7cc7de/annual-report-2025.pdf
+  published: '2026-02-27'
+  accessed: '2026-11-05'
+  credit: NBIM Annual Report 2025
+- id: nbim_2025_results
+  title: Strong return in 2025
+  publisher: NBIM
+  url: https://www.nbim.no/en/news-and-insights/the-press/press-releases/2026/strong-return-in-2025/
+  published: '2026-01-29'
+  accessed: '2026-11-05'
+  credit: NBIM
+  notes: URL slug reconstructed from the release title; reviewer to confirm.
+- id: nbim_home
+  title: NBIM front page (largest holdings, at 30 June 2026)
+  publisher: NBIM
+  url: https://www.nbim.no/
+  accessed: '2026-11-05'
+  credit: NBIM
+- id: mof_framework
+  title: The Norwegian Fiscal Policy Framework
+  publisher: Norwegian Ministry of Finance (regjeringen.no)
+  url: https://www.regjeringen.no/en/topics/the-economy/economic-policy/id418083/
+  accessed: '2026-11-05'
+  credit: Norwegian Ministry of Finance
+  notes: Page returned 403 to automated access; wording from search snippet.
+- id: mof_budget_2026
+  title: 'The National Budget 2026: key figures'
+  publisher: Norwegian Ministry of Finance (regjeringen.no)
+  url: https://www.regjeringen.no/en/whats-new/key-figures-in-the-national-budget-for-2026/id3124365
+  published: 2025-10
+  accessed: '2026-11-05'
+  credit: Norwegian Ministry of Finance
+  notes: Page returned 403 to automated access; figures from search snippet.
+- id: ssb_population
+  title: Population (quarterly)
+  publisher: Statistics Norway (SSB)
+  url: https://www.ssb.no/en/befolkning/folketall/statistikk/befolkning
+  accessed: '2026-11-05'
+  credit: Statistics Norway
+- id: ssb_09189
+  title: 'Table 09189: Final expenditure and gross domestic product (Mainland Norway and petroleum activities)'
+  publisher: Statistics Norway (SSB)
+  url: https://data.ssb.no/api/v0/en/table/09189
+  published: updated 2026-05-28
+  accessed: '2026-11-05'
+  kind: dataset
+  license: SSB open data (free re-use with attribution; confirm NLOD/CC BY terms)
+  credit: Statistics Norway
+- id: oecd_blog_2024
+  title: 'Norway: Rougher waters ahead'
+  publisher: OECD ECOSCOPE (H. Blöchliger)
+  url: https://oecdecoscope.blog/2024/06/20/norway-rougher-waters-ahead/
+  published: '2024-06-20'
+  accessed: '2026-11-05'
+  credit: OECD
+- id: ssb_gini
+  title: 'Table 07756: Income inequality (Gini coefficient, equivalised household income)'
+  publisher: Statistics Norway (SSB)
+  url: https://www.ssb.no/en/statbank/table/07756
+  published: updated 2026-01-16
+  accessed: '2026-11-05'
+  kind: dataset
+  license: SSB open data (free re-use with attribution; confirm NLOD/CC BY terms)
+  credit: Statistics Norway
+- id: fafo_2025
+  title: Organisasjonsgrader, tariffavtaledekning og arbeidskonflikter 2024 (Fafo-notat 2025:15)
+  publisher: Fafo (K. Nergaard)
+  url: https://fafo.no/images/pub/2025/10432.pdf
+  published: '2025-12-19'
+  accessed: '2026-11-05'
+  kind: secondary
+  credit: Fafo
+- id: ssb_frontfag
+  title: Wage formation in Norway (SSB Rapport 2023/47)
+  publisher: Statistics Norway (SSB)
+  url: https://www.ssb.no/en/arbeid-og-lonn/lonn-og-arbeidskraftkostnader/artikler/wage-formation-in-norway
+  published: '2023'
+  accessed: '2026-11-05'
+  credit: Statistics Norway
+  notes: URL of the report page to be confirmed by the reviewer; quote taken from the report.
+- id: oecd_trust_2026
+  title: 'OECD Trust Survey: country note Norway'
+  publisher: OECD
+  url: https://www.oecd.org/en/publications/oecd-survey-on-drivers-of-trust-in-public-institutions-2026-results-country-notes_norway.html
+  published: '2026'
+  accessed: '2026-11-05'
+  credit: OECD Trust Survey
+  notes: oecd.org returned 403; figures from search snippet. URL to be confirmed.
+- id: nb_papers_2016
+  title: Norges Bank Papers 3/2016 (the oil price fall and the Norwegian economy)
+  publisher: Norges Bank
+  url: https://www.norges-bank.no/en/news-events/publications/Norges-Bank-Papers/
+  published: '2016'
+  accessed: '2026-11-05'
+  credit: Norges Bank
+  notes: Series page; reviewer to link the specific paper.
+- id: ssb_08517
+  title: 'Table 08517: Labour force survey, unemployment (LFS)'
+  publisher: Statistics Norway (SSB)
+  url: https://www.ssb.no/en/statbank/table/08517
+  accessed: '2026-11-05'
+  kind: dataset
+  license: SSB open data (free re-use with attribution; confirm NLOD/CC BY terms)
+  credit: Statistics Norway
+- id: np_forecast
+  title: Production forecasts
+  publisher: norskpetroleum.no (Norwegian Offshore Directorate forecast)
+  url: https://norskpetroleum.no/en/production-and-exports/production-forecasts
+  published: charts updated 2026-10-07
+  accessed: '2026-11-05'
+  credit: Norwegian Offshore Directorate
+- id: ssb_14288
+  title: 'Table 14288: Projected population by age (2024-based projections, main alternative)'
+  publisher: Statistics Norway (SSB)
+  url: https://www.ssb.no/en/statbank/table/14288
+  published: '2024-09-13'
+  accessed: '2026-11-05'
+  kind: dataset
+  license: SSB open data (free re-use with attribution; confirm NLOD/CC BY terms)
+  credit: Statistics Norway
+- id: nbim_stress_2025
+  title: Stress testing the fund (data as at 31 December 2025)
+  publisher: NBIM
+  url: https://www.nbim.no/contentassets/d2359913e3a64cdc866bf19fa16782ab/gpfg_stresstesting-2025.pdf
+  published: '2026'
+  accessed: '2026-11-05'
+  credit: NBIM
+- id: imf_2026
+  title: 'Norway: Staff Concluding Statement of the 2026 Article IV Mission'
+  publisher: International Monetary Fund
+  url: https://www.imf.org/en/news/articles/2026/09/03/mcs090326-norway-staff-concluding-statement-of-the-2026-article-iv-mission
+  published: '2026-09-03'
+  accessed: '2026-11-05'
+  credit: IMF
+- id: imf_2014
+  title: 'Norway: 2014 Article IV Consultation, Concluding Statement'
+  publisher: International Monetary Fund
+  url: https://www.imf.org/external/np/ms/2014/052314.htm
+  published: '2014-05-23'
+  accessed: '2026-11-05'
+  credit: IMF
+- id: fed_h10
+  title: 'Foreign exchange rates (H.10), annual averages: Norwegian kroner per US dollar (AEXNOUS)'
+  publisher: Board of Governors of the Federal Reserve System (via FRED)
+  url: https://fred.stlouisfed.org/series/AEXNOUS
+  accessed: '2026-11-08'
+  credit: Federal Reserve H.10
 data_claims:
-  - id: gdppc_series
-    metric: gdp_per_capita_usd_series
-    countries: [NOR, SWE, DNK, USA, GBR]
-    start_year: 1970
-    end_year: 2023
-    labels: {NOR: Norway, SWE: Sweden, DNK: Denmark, USA: United States, GBR: United Kingdom}
-    source_ids: [wb_gdppc_indicator]
-  - id: gdppc_nor_2023
-    metric: gdp_per_capita_usd
-    country: NOR
-    year: 2023
-    spoken_format: usd_rough
-    display_format: usd
-    source_ids: [wb_gdppc_indicator, wb_gdp_mirror, wb_pop_mirror]
-
+- id: gdppc_series
+  metric: gdp_per_capita_usd_series
+  countries:
+  - NOR
+  - SWE
+  - DNK
+  - USA
+  - GBR
+  start_year: 1970
+  end_year: 2023
+  labels:
+    NOR: Norway
+    SWE: Sweden
+    DNK: Denmark
+    USA: United States
+    GBR: United Kingdom
+  source_ids:
+  - wb_gdppc_indicator
+- id: gdppc_nor_2023
+  metric: gdp_per_capita_usd
+  country: NOR
+  year: 2023
+  spoken_format: usd_rough
+  display_format: usd
+  source_ids:
+  - wb_gdppc_indicator
+  - wb_gdp_mirror
+  - wb_pop_mirror
 claims:
-  # ---------------------------------------------------------------- hook
-  - id: fund_value_q3_2026
-    text: The Government Pension Fund Global was valued at NOK 22,014 billion on 30 September 2026.
-    spoken: 22 trillion kroner
-    display: "NOK 22,014bn"
-    value: 22014
-    fields: {date_spoken: at the end of September 2026, date_display: "30 Sep 2026", year: 2026}
-    source_ids: [nbim_q3_2026]
-    status: source_located
-  - id: fund_per_person
-    text: "Our calculation: NOK 22,014bn (30 Sep 2026) divided by Norway's population of 5,636,904 (1 July 2026, SSB) is about NOK 3.9 million per person."
-    spoken: about 3.9 million kroner
-    display: "≈ NOK 3.9m"
-    value: 3.9
-    source_ids: [nbim_q3_2026, ssb_population]
-    status: source_located
-    verification_note: Derived figure (not published by NBIM). Label 'our calculation' on screen.
-  - id: fund_ownership_share
-    text: At the end of 2025 the fund's average holding in the world's listed companies was 1.5 percent.
-    spoken: 1.5 percent
-    display: "1.5%"
-    value: 1.5
-    fields: {year: 2025}
-    source_ids: [nbim_ar2025]
-    status: source_located
-  - id: fund_companies
-    text: At the end of 2025 the fund held shares in 7,201 companies, with investments in 68 countries.
-    spoken: 7,201
-    display: "7,201"
-    value: 7201
-    fields: {year: 2025, countries_spoken: 68, countries_display: "68"}
-    source_ids: [nbim_ar2025]
-    status: source_located
-
-  # ---------------------------------------------------------------- before oil
-  - id: maddison_1970
-    text: "Maddison Project 2023, GDP per capita in 2011 international dollars, 1970: Norway 15,983, Sweden 20,269, Denmark 20,221 (Norway about 79% of Sweden)."
-    spoken: about four-fifths
-    display: "≈ 79%"
-    value:
-      - {code: NOR, name: Norway, value: 15983}
-      - {code: SWE, name: Sweden, value: 20269}
-      - {code: DNK, name: Denmark, value: 20221}
-    fields: {year: 1970, nor_display: "$15,983", swe_display: "$20,269", dnk_display: "$20,221"}
-    source_ids: [maddison_owid]
-    status: source_located
-    verification_note: Ratio is our arithmetic from the 1970 values. Use decade points (the annual Swedish series has a jump 1960-65).
-  - id: hydro_1905
-    text: Norsk Hydro was founded on 2 December 1905, using hydropower to produce nitrogen fertiliser.
-    spoken: In 1905
-    display: "1905"
-    value: 1905
-    source_ids: [hydro_history]
-    status: source_located
-  - id: merchant_fleet_1956
-    text: In 1956 the US Naval Institute described Norway's merchant fleet as the third largest in the world, behind the United States and the British Commonwealth.
-    spoken: third largest
-    display: "#3"
-    value: 3
-    fields: {year: 1956}
-    source_ids: [usni_merchant_1956]
-    status: source_located
-    verification_note: Secondary (1956 article). Attribute as 'by the mid-1950s'.
-
-  # ---------------------------------------------------------------- discovery
-  - id: geology_1958
-    text: In 1958 the Geological Survey of Norway told the Foreign Ministry that the chance of finding coal, oil or sulphur on the continental shelf could be discounted.
-    spoken: In 1958
-    display: "1958"
-    value: 1958
-    source_ids: [np_history]
-    status: source_located
-  - id: shelf_1965
-    text: In March 1965 Norway agreed median-line shelf boundaries with the UK and Denmark, and on 13 April 1965 announced its first licensing round with 22 production licences.
-    spoken: In 1965
-    display: "1965"
-    value: 1965
-    fields: {licences_spoken: 22, licences_display: "22"}
-    source_ids: [np_history]
-    status: source_located
-  - id: ekofisk_1969
-    text: Phillips Petroleum reported the Ekofisk discovery to the Norwegian government just before Christmas 1969 (23 December); it was then the world's largest offshore field.
-    spoken: just before Christmas 1969
-    display: "Dec 1969"
-    value: 1969
-    source_ids: [np_history, ekofisk_museum]
-    status: source_located
-    verification_note: Discovery (October 1969) vs announcement (23 December). The script uses the announcement. 'World's largest offshore field' is from the Petroleum Museum (secondary).
-  - id: ekofisk_production
-    text: Production from Ekofisk started on 15 June 1971.
-    spoken: in June 1971
-    display: "1971"
-    value: 1971
-    source_ids: [np_history]
-    status: source_located
-
-  # ---------------------------------------------------------------- ownership and tax
-  - id: ten_commandments
-    text: On 14 June 1971 the Storting adopted the 'ten oil commandments', principles for national control of petroleum activities.
-    spoken: In 1971
-    display: "1971"
-    value: 1971
-    fields: {n_spoken: ten}
-    source_ids: [storting_oljebud]
-    status: source_located
-  - id: statoil_1972
-    text: On 14 June 1972 the Storting decided to establish the state oil company Statoil and the Norwegian Petroleum Directorate, both in Stavanger.
-    spoken: In 1972
-    display: "1972"
-    value: 1972
-    source_ids: [sodir_50]
-    status: source_located
-  - id: sdfi_1985
-    text: From 1 January 1985 the state's interests were split between Statoil and the State's Direct Financial Interest (SDFI), managed by Petoro since 2001.
-    spoken: In 1985
-    display: "1985"
-    value: 1985
-    source_ids: [np_history]
-    status: source_located
-  - id: equinor_67
-    text: The Norwegian state owns 67% of the shares in Equinor (formerly Statoil).
-    spoken: 67 percent
-    display: "67%"
-    value: 67
-    source_ids: [np_state_org]
-    status: source_located
-  - id: petroleum_tax
-    text: Oil and gas companies pay the ordinary 22% company tax plus a 71.8% special tax, for a combined marginal rate of 78%.
-    spoken: 78 percent
-    display: "78%"
-    value: 78
-    fields: {ordinary_display: "22%", special_display: "71.8%", ordinary_spoken: 22 percent, special_spoken: 71.8 percent}
-    source_ids: [np_revenues, np_tax]
-    status: source_located
-
-  # ---------------------------------------------------------------- the money machine
-  - id: cashflow_series
-    text: "Net government cash flow from petroleum activities, NOK billion (SSB): 2022 1,285; 2023 978; 2024 702; 2025 664."
-    value:
-      - {code: y2022, name: "2022", value: 1285}
-      - {code: y2023, name: "2023", value: 978}
-      - {code: y2024, name: "2024", value: 702}
-      - {code: y2025, name: "2025", value: 664}
-    source_ids: [ssb_cashflow]
-    status: source_located
-  - id: cashflow_2022
-    text: In 2022 the state's net cash flow from petroleum activities reached a record NOK 1,285 billion.
-    spoken: about 1.3 trillion kroner
-    display: "NOK 1,285bn"
-    value: 1285
-    fields: {year: 2022, y2025_spoken: 664 billion kroner, y2025_display: "NOK 664bn"}
-    source_ids: [ssb_cashflow]
-    status: source_located
-  - id: petroleum_exports_share
-    text: In 2025 crude oil, natural gas and condensate exports were worth about NOK 1,000 billion, 57% of the value of Norway's goods exports.
-    spoken: 57 percent
-    display: "57%"
-    value: 57
-    fields: {year: 2025}
-    source_ids: [np_front]
-    status: source_located
-  - id: gas_share_europe
-    text: Norway's gas exports in 2025 equalled more than 30% of the total gas consumption of the EU and the UK, through a pipeline network of about 8,800 km.
-    spoken: more than 30 percent
-    display: "30%+"
-    value: 30
-    fields: {year: 2025, km_spoken: "8,800 kilometres", km_display: "8,800 km"}
-    source_ids: [np_exports]
-    status: source_located
-  - id: production_2025
-    text: In 2025 Norway produced 239.2 million Sm3 of oil equivalents, about 10% below the 2004 record of 264.2 million; gas was about half of output.
-    spoken: about 10 percent below
-    display: "239.2m Sm³ o.e."
-    value: 239.2
-    fields: {year: 2025, peak_year: 2004, fields_spoken: 97, fields_display: "97"}
-    source_ids: [np_production, np_front]
-    status: source_located
-  - id: resources_produced
-    text: Of Norway's total expected recoverable petroleum resources (about 15.72 billion Sm3 o.e.), 57% had been produced by the end of 2025.
-    spoken: 57 percent
-    display: "57%"
-    value: 57
-    fields: {year: 2025}
-    source_ids: [np_resources]
-    status: source_located
-
-  # ---------------------------------------------------------------- the fund
-  - id: fund_law_1990
-    text: In 1990 the Storting passed a law establishing the Government Petroleum Fund to receive petroleum revenue.
-    spoken: In 1990
-    display: "1990"
-    value: 1990
-    source_ids: [nbim_history]
-    status: source_located
-  - id: first_transfer_1996
-    text: On 30 May 1996 the Ministry of Finance made the first transfer, of almost 2 billion kroner, to the Government Petroleum Fund.
-    spoken: almost 2 billion kroner
-    display: "NOK ~2bn"
-    value: 2
-    fields: {year: 1996, date_spoken: In May 1996}
-    source_ids: [nbim_25yrs]
-    status: source_located
-  - id: nbim_1998
-    text: Norges Bank Investment Management was established on 1 January 1998, when the fund began investing in equities; it was renamed the Government Pension Fund Global in 2006.
-    spoken: In 1998
-    display: "1998"
-    value: 1998
-    fields: {renamed_year: 2006}
-    source_ids: [nbim_history]
-    status: source_located
-  - id: governance
-    text: The Storting sets the fund's framework in the Government Pension Fund Act, the Ministry of Finance has overall responsibility and issues guidelines, and Norges Bank manages it.
-    source_ids: [nbim_about]
-    status: source_located
-  - id: no_norway_investment
-    text: The fund cannot invest in securities issued by Norwegian entities, in Norwegian kroner, or in real estate and infrastructure located in Norway.
-    source_ids: [nbim_ar2025]
-    status: source_located
-  - id: fund_value_series
-    text: "Fund market value at year end, NOK billion (NBIM): 1996 47.4; 1999 222.4; 2001 613.7; 2005 1,399.1; 2008 2,275.4; 2010 3,077.4; 2012 3,815.8; 2014 6,430.7; 2016 7,510.5; 2018 8,256.0; 2020 10,913.8; 2022 12,429.1; 2023 15,764.8; 2024 19,755.0; 2025 21,268."
-    value:
-      - code: GPFG
-        name: Fund value
-        points:
-          - {year: 1996, value: 47.4}
-          - {year: 1999, value: 222.4}
-          - {year: 2001, value: 613.7}
-          - {year: 2003, value: 845.3}
-          - {year: 2005, value: 1399.1}
-          - {year: 2007, value: 2018.6}
-          - {year: 2008, value: 2275.4}
-          - {year: 2010, value: 3077.4}
-          - {year: 2012, value: 3815.8}
-          - {year: 2014, value: 6430.7}
-          - {year: 2016, value: 7510.5}
-          - {year: 2018, value: 8256.0}
-          - {year: 2020, value: 10913.8}
-          - {year: 2022, value: 12429.1}
-          - {year: 2023, value: 15764.8}
-          - {year: 2024, value: 19755.0}
-          - {year: 2025, value: 21268.0}
-    source_ids: [nbim_history, nbim_2025_results]
-    status: source_located
-    verification_note: >-
-      Read from the NBIM history timeline, which lists each value against the following year; confirm the
-      year mapping with NBIM's key-figures data. nbim.no market-value page gives 15,757 (2023) and 19,742 (2024).
-      Points are uneven years, so the chart interpolates between them.
-  - id: deposits_less_than_half
-    text: According to NBIM, petroleum-revenue deposits account for less than half of the fund's value; the rest is investment return.
-    spoken: less than half
-    source_ids: [nbim_about]
-    status: source_located
-  - id: allocation_q3_2026
-    text: "Fund allocation at 30 September 2026: equities 72.1%, fixed income 25.8%, unlisted real estate 1.6%, unlisted renewable energy infrastructure 0.5%."
-    value:
-      - {label: Equities, value: 72.1}
-      - {label: Fixed income, value: 25.8}
-      - {label: Unlisted real estate, value: 1.6}
-      - {label: Renewable infrastructure, value: 0.5}
-    fields: {equity_spoken: about 72 percent, equity_display: "72.1%"}
-    source_ids: [nbim_q3_2026]
-    status: source_located
-  - id: us_share
-    text: The United States was the fund's largest country exposure, 52.9% of the fund at the end of 2025.
-    spoken: 52.9 percent
-    display: "52.9%"
-    value: 52.9
-    fields: {year: 2025}
-    source_ids: [nbim_ar2025]
-    status: source_located
-  - id: top_holdings
-    text: "The fund's largest holdings at 30 June 2026: NVIDIA (NOK 612bn), Apple (NOK 522bn), Alphabet (NOK 499bn)."
-    spoken: Nvidia, Apple and Alphabet
-    display: "NVIDIA · Apple · Alphabet"
-    value:
-      - {code: nvda, name: NVIDIA, value: 612}
-      - {code: aapl, name: Apple, value: 522}
-      - {code: googl, name: Alphabet, value: 499}
-    fields: {date_display: "30 Jun 2026"}
-    source_ids: [nbim_home]
-    status: source_located
-  - id: returns_since_1998
-    text: Between 1998 and 2025 the fund's average annual return was 6.6%; the annual net real return, after inflation and management costs, was 4.3%.
-    spoken: 6.6 percent a year
-    display: "6.6%"
-    value: 6.6
-    fields: {real_spoken: 4.3 percent, real_display: "4.3%"}
-    source_ids: [nbim_ar2025]
-    status: source_located
-  - id: bad_years
-    text: The fund returned -23.3% in 2008 (financial crisis) and -14.1% in 2022; it returned 15.1% in 2025.
-    spoken: minus 23 percent
-    display: "-23.3%"
-    value: -23.3
-    fields: {y2022_year: 2022, y2022_display: "-14.1%", y2022_spoken: minus 14 percent, y2025_display: "+15.1%", y2025_spoken: 15.1 percent}
-    source_ids: [nbim_history, nbim_ar2025]
-    status: source_located
-
-  # ---------------------------------------------------------------- the fiscal rule
-  - id: fiscal_rule
-    text: Under the fiscal rule (since 2001), transfers from the fund to the budget shall over time follow the expected real return on the fund, set at 4% in 2001 and reduced to 3% in 2017.
-    spoken: 3 percent
-    display: "3%"
-    value: 3
-    fields: {start_year: 2001, old_spoken: 4 percent, old_display: "4%", cut_year: 2017}
-    source_ids: [mof_framework]
-    status: source_located
-    verification_note: Ministry page returned 403; wording from snippet. Reviewer to read the page.
-  - id: budget_2026_deficit
-    text: The 2026 budget's structural non-oil deficit is NOK 579.4 billion, 2.8% of the fund's value and 13.1% of mainland trend GDP.
-    spoken: 579 billion kroner
-    display: "NOK 579.4bn"
-    value: 579.4
-    fields: {pct_fund_spoken: 2.8 percent, pct_fund_display: "2.8%", pct_gdp_display: "13.1%"}
-    source_ids: [mof_budget_2026]
-    status: source_located
-    verification_note: From search snippet of the Ministry page (403). The revised budget restates it as NOK 584.0bn (price basis).
-  - id: budget_share
-    text: According to the IMF (2026 Article IV), withdrawals from the fund finance about a fourth of public expenditure; NBIM's own page says almost 20 percent of the government budget.
-    spoken: about a quarter
-    display: "≈ 1/4"
-    source_ids: [imf_2026, nbim_about]
-    status: source_located
-    verification_note: Sources differ (IMF 2026 'about a fourth' of expenditure; NBIM undated 'almost 20 percent' of the budget). Narration attributes to the IMF.
-  - id: imf_insulate
-    text: "IMF (2014): the fiscal rule and the Government Pension Fund Global would largely insulate the economy from the direct effects of lower oil revenue."
-    source_ids: [imf_2014]
-    status: source_located
-
-  # ---------------------------------------------------------------- part 8: productivity and model
-  - id: mainland_share
-    text: "In 2025, Mainland Norway (excluding petroleum activities and ocean transport) produced 79.8% of GDP: NOK 4,397,716m of NOK 5,511,334m (our calculation from SSB table 09189)."
-    spoken: about four-fifths
-    display: "79.8%"
-    value: 79.8
-    fields: {year: 2025, petro_display: "20.2%", petro_2022_display: "34.9%"}
-    source_ids: [ssb_09189]
-    status: source_located
-    verification_note: Derived shares (petroleum activities and ocean transport = 20.2% in 2025, 34.9% in 2022). Official norskpetroleum figure for the petroleum sector alone is 19.6% (2025) / 34.1% (2022).
-  - id: oecd_productivity
-    text: The OECD (2024) says Norway's productivity growth is among the lowest in the OECD, and its living-standards lead over the richer half of OECD countries has shrunk from around 42% to 27% over 15 years.
-    spoken: among the lowest in the OECD
-    display: "42% → 27%"
-    fields: {from_display: "42%", to_display: "27%"}
-    source_ids: [oecd_blog_2024]
-    status: source_located
-  - id: gini_2024
-    text: Norway's Gini coefficient for equivalised household income was 0.256 in 2024 (SSB).
-    spoken: one of the most equal
-    display: "0.256"
-    value: 0.256
-    fields: {year: 2024}
-    source_ids: [ssb_gini]
-    status: source_located
-    verification_note: '"One of the most equal" is comparative; confirm against OECD income distribution data before publishing, or drop the comparison.'
-  - id: union_density
-    text: Union density in Norway was 52% in 2024 (Fafo), and collective agreements covered 71% of employees in 2019.
-    spoken: about half
-    display: "52%"
-    value: 52
-    fields: {year: 2024, coverage_display: "71%", coverage_year: 2019}
-    source_ids: [fafo_2025]
-    status: source_located
-  - id: frontfag
-    text: "In Norwegian wage bargaining, industries exposed to international competition negotiate first, setting a norm for the rest of the economy (SSB, 2023)."
-    source_ids: [ssb_frontfag]
-    status: source_located
-  - id: trust_2025
-    text: In the OECD Trust Survey, 57% of Norwegians had high or moderately high trust in the national government in 2025, against an OECD average of 40%.
-    spoken: 57 percent
-    display: "57%"
-    value: 57
-    fields: {year: 2025, oecd_display: "40%", oecd_spoken: 40 percent}
-    source_ids: [oecd_trust_2026]
-    status: source_located
-    verification_note: From search snippet of the OECD country note (403). Confirm figures and year.
-
-  # ---------------------------------------------------------------- part 9: risks
-  - id: oil_crash_2014
-    text: After mid-2014 the oil price fell below USD 40 a barrel, around a third of its summer-2014 level; the krone was 30% weaker at the end of 2015 than two years earlier (Norges Bank).
-    spoken: around a third
-    display: "-2/3"
-    fields: {krone_display: "-30%", krone_spoken: 30 percent}
-    source_ids: [nb_papers_2016]
-    status: source_located
-  - id: unemployment_2014_16
-    text: Norway's LFS unemployment rate rose from 3.6% in 2014 to 4.7% in 2016 (SSB).
-    spoken: from 3.6 to 4.7 percent
-    display: "3.6% → 4.7%"
-    fields: {from_display: "3.6%", to_display: "4.7%"}
-    source_ids: [ssb_08517]
-    status: source_located
-  - id: production_forecast
-    text: The Norwegian Offshore Directorate forecasts petroleum production of 239.3 million Sm3 o.e. in 2025 and 205.2 million in 2030.
-    value:
-      - {code: y2004, name: "2004 (peak)", value: 264.2}
-      - {code: y2025, name: "2025", value: 239.3}
-      - {code: y2030, name: "2030 (forecast)", value: 205.2}
-    fields: {y2030_display: "205.2m"}
-    source_ids: [np_forecast, np_production]
-    status: source_located
-  - id: ageing
-    text: "SSB's 2024-based projections (main alternative) imply 3.2 people aged 20-64 for every person aged 65+ in 2024, falling to 2.1 by 2050 (31.7 and 47.6 people aged 65+ per 100 aged 20-64)."
-    spoken: about three
-    display: "3.2 → 2.1"
-    fields: {now_spoken: about three, future_spoken: about two, now_display: "3.2", future_display: "2.1", future_year: 2050}
-    source_ids: [ssb_14288]
-    status: source_located
-    verification_note: Ratios are our calculation from SSB table 14288.
-  - id: stress_test
-    text: "NBIM's stress test (data at 31 Dec 2025): the 'Fragmented world' scenario gives a 37% drawdown of the fund; a replay of the global financial crisis gives -29.8%."
-    spoken: 37 percent
-    display: "-37%"
-    value: 37
-    fields: {gfc_display: "-29.8%"}
-    source_ids: [nbim_stress_2025]
-    status: source_located
-  - id: imf_strength
-    text: "IMF (3 Sep 2026): Norway 'faces a challenging global environment from a position of strength'."
-    source_ids: [imf_2026]
-    status: source_located
+- id: fund_value_q3_2026
+  text: The Government Pension Fund Global was valued at NOK 22,014 billion on 30 September 2026.
+  spoken: about 2.1 trillion dollars
+  display: $2.12tn
+  value: 2119.7
+  fields:
+    date_spoken: at the end of September 2026
+    date_display: 30 Sep 2026
+    year: 2026
+    nok_display: NOK 22,014bn
+  source_ids:
+  - nbim_q3_2026
+  status: source_located
+  verification_note: 'USD: NOK 22,014bn / 10.3852 (Fed H.10 2025 annual average, latest full year) = $2120bn.'
+- id: fund_per_person
+  text: 'Our calculation: NOK 22,014bn (30 Sep 2026) divided by Norway''s population of 5,636,904 (1 July 2026, SSB) is about
+    NOK 3.9 million per person.'
+  spoken: about 375,000 dollars
+  display: ≈ $375,534
+  value: 375534
+  source_ids:
+  - nbim_q3_2026
+  - ssb_population
+  status: source_located
+  verification_note: 'Derived figure (not published by NBIM). Label ''our calculation'' on screen. USD: NOK 3.9m / 10.3852
+    = $375,534.'
+- id: fund_ownership_share
+  text: At the end of 2025 the fund's average holding in the world's listed companies was 1.5 percent.
+  spoken: 1.5 percent
+  display: 1.5%
+  value: 1.5
+  fields:
+    year: 2025
+  source_ids:
+  - nbim_ar2025
+  status: source_located
+- id: fund_companies
+  text: At the end of 2025 the fund held shares in 7,201 companies, with investments in 68 countries.
+  spoken: 7,201
+  display: 7,201
+  value: 7201
+  fields:
+    year: 2025
+    countries_spoken: 68
+    countries_display: '68'
+  source_ids:
+  - nbim_ar2025
+  status: source_located
+- id: maddison_1970
+  text: 'Maddison Project 2023, GDP per capita in 2011 international dollars, 1970: Norway 15,983, Sweden 20,269, Denmark
+    20,221 (Norway about 79% of Sweden).'
+  spoken: about four-fifths
+  display: ≈ 79%
+  value:
+  - code: NOR
+    name: Norway
+    value: 15983
+  - code: SWE
+    name: Sweden
+    value: 20269
+  - code: DNK
+    name: Denmark
+    value: 20221
+  fields:
+    year: 1970
+    nor_display: $15,983
+    swe_display: $20,269
+    dnk_display: $20,221
+  source_ids:
+  - maddison_owid
+  status: source_located
+  verification_note: Ratio is our arithmetic from the 1970 values. Use decade points (the annual Swedish series has a jump
+    1960-65).
+- id: hydro_1905
+  text: Norsk Hydro was founded on 2 December 1905, using hydropower to produce nitrogen fertiliser.
+  spoken: In 1905
+  display: '1905'
+  value: 1905
+  source_ids:
+  - hydro_history
+  status: source_located
+- id: merchant_fleet_1956
+  text: In 1956 the US Naval Institute described Norway's merchant fleet as the third largest in the world, behind the United
+    States and the British Commonwealth.
+  spoken: third largest
+  display: '#3'
+  value: 3
+  fields:
+    year: 1956
+  source_ids:
+  - usni_merchant_1956
+  status: source_located
+  verification_note: Secondary (1956 article). Attribute as 'by the mid-1950s'.
+- id: geology_1958
+  text: In 1958 the Geological Survey of Norway told the Foreign Ministry that the chance of finding coal, oil or sulphur
+    on the continental shelf could be discounted.
+  spoken: In 1958
+  display: '1958'
+  value: 1958
+  source_ids:
+  - np_history
+  status: source_located
+- id: shelf_1965
+  text: In March 1965 Norway agreed median-line shelf boundaries with the UK and Denmark, and on 13 April 1965 announced its
+    first licensing round with 22 production licences.
+  spoken: In 1965
+  display: '1965'
+  value: 1965
+  fields:
+    licences_spoken: 22
+    licences_display: '22'
+  source_ids:
+  - np_history
+  status: source_located
+- id: ekofisk_1969
+  text: Phillips Petroleum reported the Ekofisk discovery to the Norwegian government just before Christmas 1969 (23 December);
+    it was then the world's largest offshore field.
+  spoken: just before Christmas 1969
+  display: Dec 1969
+  value: 1969
+  source_ids:
+  - np_history
+  - ekofisk_museum
+  status: source_located
+  verification_note: Discovery (October 1969) vs announcement (23 December). The script uses the announcement. 'World's largest
+    offshore field' is from the Petroleum Museum (secondary).
+- id: ekofisk_production
+  text: Production from Ekofisk started on 15 June 1971.
+  spoken: in June 1971
+  display: '1971'
+  value: 1971
+  source_ids:
+  - np_history
+  status: source_located
+- id: ten_commandments
+  text: On 14 June 1971 the Storting adopted the 'ten oil commandments', principles for national control of petroleum activities.
+  spoken: In 1971
+  display: '1971'
+  value: 1971
+  fields:
+    n_spoken: ten
+  source_ids:
+  - storting_oljebud
+  status: source_located
+- id: statoil_1972
+  text: On 14 June 1972 the Storting decided to establish the state oil company Statoil and the Norwegian Petroleum Directorate,
+    both in Stavanger.
+  spoken: In 1972
+  display: '1972'
+  value: 1972
+  source_ids:
+  - sodir_50
+  status: source_located
+- id: sdfi_1985
+  text: From 1 January 1985 the state's interests were split between Statoil and the State's Direct Financial Interest (SDFI),
+    managed by Petoro since 2001.
+  spoken: In 1985
+  display: '1985'
+  value: 1985
+  source_ids:
+  - np_history
+  status: source_located
+- id: equinor_67
+  text: The Norwegian state owns 67% of the shares in Equinor (formerly Statoil).
+  spoken: 67 percent
+  display: 67%
+  value: 67
+  source_ids:
+  - np_state_org
+  status: source_located
+- id: petroleum_tax
+  text: Oil and gas companies pay the ordinary 22% company tax plus a 71.8% special tax, for a combined marginal rate of 78%.
+  spoken: 78 percent
+  display: 78%
+  value: 78
+  fields:
+    ordinary_display: 22%
+    special_display: 71.8%
+    ordinary_spoken: 22 percent
+    special_spoken: 71.8 percent
+  source_ids:
+  - np_revenues
+  - np_tax
+  status: source_located
+- id: cashflow_series
+  text: 'Net government cash flow from petroleum activities, NOK billion (SSB): 2022 1,285; 2023 978; 2024 702; 2025 664.'
+  value:
+  - code: y2022
+    name: '2022'
+    value: 133.7
+  - code: y2023
+    name: '2023'
+    value: 92.6
+  - code: y2024
+    name: '2024'
+    value: 65.3
+  - code: y2025
+    name: '2025'
+    value: 63.9
+  source_ids:
+  - ssb_cashflow
+  status: source_located
+  verification_note: Converted to USD bn at Fed H.10 annual average of each year.
+- id: cashflow_2022
+  text: In 2022 the state's net cash flow from petroleum activities reached a record NOK 1,285 billion.
+  spoken: about 134 billion dollars
+  display: $133.7bn
+  value: 133.7
+  fields:
+    year: 2022
+    y2025_spoken: about 64 billion dollars
+    y2025_display: $63.9bn
+  source_ids:
+  - ssb_cashflow
+  status: source_located
+  verification_note: 'USD at Fed H.10 annual averages: 2022 9.6138, 2025 10.3852.'
+- id: petroleum_exports_share
+  text: In 2025 crude oil, natural gas and condensate exports were worth about NOK 1,000 billion, 57% of the value of Norway's
+    goods exports.
+  spoken: 57 percent
+  display: 57%
+  value: 57
+  fields:
+    year: 2025
+  source_ids:
+  - np_front
+  status: source_located
+- id: gas_share_europe
+  text: Norway's gas exports in 2025 equalled more than 30% of the total gas consumption of the EU and the UK, through a pipeline
+    network of about 8,800 km.
+  spoken: more than 30 percent
+  display: 30%+
+  value: 30
+  fields:
+    year: 2025
+    km_spoken: 8,800 kilometres
+    km_display: 8,800 km
+  source_ids:
+  - np_exports
+  status: source_located
+- id: production_2025
+  text: In 2025 Norway produced 239.2 million Sm3 of oil equivalents, about 10% below the 2004 record of 264.2 million; gas
+    was about half of output.
+  spoken: about 10 percent below
+  display: 239.2m Sm³ o.e.
+  value: 239.2
+  fields:
+    year: 2025
+    peak_year: 2004
+    fields_spoken: 97
+    fields_display: '97'
+  source_ids:
+  - np_production
+  - np_front
+  status: source_located
+- id: resources_produced
+  text: Of Norway's total expected recoverable petroleum resources (about 15.72 billion Sm3 o.e.), 57% had been produced by
+    the end of 2025.
+  spoken: 57 percent
+  display: 57%
+  value: 57
+  fields:
+    year: 2025
+  source_ids:
+  - np_resources
+  status: source_located
+- id: fund_law_1990
+  text: In 1990 the Storting passed a law establishing the Government Petroleum Fund to receive petroleum revenue.
+  spoken: In 1990
+  display: '1990'
+  value: 1990
+  source_ids:
+  - nbim_history
+  status: source_located
+- id: first_transfer_1996
+  text: On 30 May 1996 the Ministry of Finance made the first transfer, of almost 2 billion kroner, to the Government Petroleum
+    Fund.
+  spoken: about 300 million dollars
+  display: ≈ $310m
+  value: 310
+  fields:
+    year: 1996
+    date_spoken: In May 1996
+  source_ids:
+  - nbim_25yrs
+  status: source_located
+  verification_note: 'USD: NOK ~2bn / 6.4594 (1996 average) = $310m.'
+- id: nbim_1998
+  text: Norges Bank Investment Management was established on 1 January 1998, when the fund began investing in equities; it
+    was renamed the Government Pension Fund Global in 2006.
+  spoken: In 1998
+  display: '1998'
+  value: 1998
+  fields:
+    renamed_year: 2006
+  source_ids:
+  - nbim_history
+  status: source_located
+- id: governance
+  text: The Storting sets the fund's framework in the Government Pension Fund Act, the Ministry of Finance has overall responsibility
+    and issues guidelines, and Norges Bank manages it.
+  source_ids:
+  - nbim_about
+  status: source_located
+- id: no_norway_investment
+  text: The fund cannot invest in securities issued by Norwegian entities, in Norwegian kroner, or in real estate and infrastructure
+    located in Norway.
+  source_ids:
+  - nbim_ar2025
+  status: source_located
+- id: fund_value_series
+  text: 'Fund market value at year end, NOK billion (NBIM): 1996 47.4; 1999 222.4; 2001 613.7; 2005 1,399.1; 2008 2,275.4;
+    2010 3,077.4; 2012 3,815.8; 2014 6,430.7; 2016 7,510.5; 2018 8,256.0; 2020 10,913.8; 2022 12,429.1; 2023 15,764.8; 2024
+    19,755.0; 2025 21,268.'
+  value:
+  - code: GPFG
+    name: Fund value
+    points:
+    - year: 1996
+      value: 7.3
+    - year: 1999
+      value: 28.5
+    - year: 2001
+      value: 68.2
+    - year: 2003
+      value: 119.4
+    - year: 2005
+      value: 217.2
+    - year: 2007
+      value: 344.7
+    - year: 2008
+      value: 403.7
+    - year: 2010
+      value: 509.1
+    - year: 2012
+      value: 655.8
+    - year: 2014
+      value: 1021.2
+    - year: 2016
+      value: 894.8
+    - year: 2018
+      value: 1015.3
+    - year: 2020
+      value: 1157.6
+    - year: 2022
+      value: 1292.8
+    - year: 2023
+      value: 1492.0
+    - year: 2024
+      value: 1836.4
+    - year: 2025
+      value: 2047.9
+  source_ids:
+  - nbim_history
+  - nbim_2025_results
+  status: source_located
+  verification_note: Read from the NBIM history timeline, which lists each value against the following year; confirm the year
+    mapping with NBIM's key-figures data. nbim.no market-value page gives 15,757 (2023) and 19,742 (2024). Points are uneven
+    years, so the chart interpolates between them. Converted to USD bn at the Fed H.10 annual average of each year.
+- id: deposits_less_than_half
+  text: According to NBIM, petroleum-revenue deposits account for less than half of the fund's value; the rest is investment
+    return.
+  spoken: less than half
+  source_ids:
+  - nbim_about
+  status: source_located
+- id: allocation_q3_2026
+  text: 'Fund allocation at 30 September 2026: equities 72.1%, fixed income 25.8%, unlisted real estate 1.6%, unlisted renewable
+    energy infrastructure 0.5%.'
+  value:
+  - label: Equities
+    value: 72.1
+  - label: Fixed income
+    value: 25.8
+  - label: Unlisted real estate
+    value: 1.6
+  - label: Renewable infrastructure
+    value: 0.5
+  fields:
+    equity_spoken: about 72 percent
+    equity_display: 72.1%
+  source_ids:
+  - nbim_q3_2026
+  status: source_located
+- id: us_share
+  text: The United States was the fund's largest country exposure, 52.9% of the fund at the end of 2025.
+  spoken: 52.9 percent
+  display: 52.9%
+  value: 52.9
+  fields:
+    year: 2025
+  source_ids:
+  - nbim_ar2025
+  status: source_located
+- id: top_holdings
+  text: 'The fund''s largest holdings at 30 June 2026: NVIDIA (NOK 612bn), Apple (NOK 522bn), Alphabet (NOK 499bn).'
+  spoken: Nvidia, Apple and Alphabet
+  display: NVIDIA · Apple · Alphabet
+  value:
+  - code: nvda
+    name: NVIDIA
+    value: 612
+  - code: aapl
+    name: Apple
+    value: 522
+  - code: googl
+    name: Alphabet
+    value: 499
+  fields:
+    date_display: 30 Jun 2026
+  source_ids:
+  - nbim_home
+  status: source_located
+- id: returns_since_1998
+  text: Between 1998 and 2025 the fund's average annual return was 6.6%; the annual net real return, after inflation and management
+    costs, was 4.3%.
+  spoken: 6.6 percent a year
+  display: 6.6%
+  value: 6.6
+  fields:
+    real_spoken: 4.3 percent
+    real_display: 4.3%
+  source_ids:
+  - nbim_ar2025
+  status: source_located
+- id: bad_years
+  text: The fund returned -23.3% in 2008 (financial crisis) and -14.1% in 2022; it returned 15.1% in 2025.
+  spoken: minus 23 percent
+  display: -23.3%
+  value: -23.3
+  fields:
+    y2022_year: 2022
+    y2022_display: -14.1%
+    y2022_spoken: minus 14 percent
+    y2025_display: +15.1%
+    y2025_spoken: 15.1 percent
+  source_ids:
+  - nbim_history
+  - nbim_ar2025
+  status: source_located
+- id: fiscal_rule
+  text: Under the fiscal rule (since 2001), transfers from the fund to the budget shall over time follow the expected real
+    return on the fund, set at 4% in 2001 and reduced to 3% in 2017.
+  spoken: 3 percent
+  display: 3%
+  value: 3
+  fields:
+    start_year: 2001
+    old_spoken: 4 percent
+    old_display: 4%
+    cut_year: 2017
+  source_ids:
+  - mof_framework
+  status: source_located
+  verification_note: Ministry page returned 403; wording from snippet. Reviewer to read the page.
+- id: budget_2026_deficit
+  text: The 2026 budget's structural non-oil deficit is NOK 579.4 billion, 2.8% of the fund's value and 13.1% of mainland
+    trend GDP.
+  spoken: about 56 billion dollars
+  display: $55.8bn
+  value: 55.8
+  fields:
+    pct_fund_spoken: 2.8 percent
+    pct_fund_display: 2.8%
+    pct_gdp_display: 13.1%
+  source_ids:
+  - mof_budget_2026
+  status: source_located
+  verification_note: 'From search snippet of the Ministry page (403). The revised budget restates it as NOK 584.0bn (price
+    basis). USD: NOK 579.4bn / 10.3852 (2025 average) = $55.8bn.'
+- id: budget_share
+  text: According to the IMF (2026 Article IV), withdrawals from the fund finance about a fourth of public expenditure; NBIM's
+    own page says almost 20 percent of the government budget.
+  spoken: about a quarter
+  display: ≈ 1/4
+  source_ids:
+  - imf_2026
+  - nbim_about
+  status: source_located
+  verification_note: Sources differ (IMF 2026 'about a fourth' of expenditure; NBIM undated 'almost 20 percent' of the budget).
+    Narration attributes to the IMF.
+- id: imf_insulate
+  text: 'IMF (2014): the fiscal rule and the Government Pension Fund Global would largely insulate the economy from the direct
+    effects of lower oil revenue.'
+  source_ids:
+  - imf_2014
+  status: source_located
+- id: mainland_share
+  text: 'In 2025, Mainland Norway (excluding petroleum activities and ocean transport) produced 79.8% of GDP: NOK 4,397,716m
+    of NOK 5,511,334m (our calculation from SSB table 09189).'
+  spoken: about four-fifths
+  display: 79.8%
+  value: 79.8
+  fields:
+    year: 2025
+    petro_display: 20.2%
+    petro_2022_display: 34.9%
+  source_ids:
+  - ssb_09189
+  status: source_located
+  verification_note: Derived shares (petroleum activities and ocean transport = 20.2% in 2025, 34.9% in 2022). Official norskpetroleum
+    figure for the petroleum sector alone is 19.6% (2025) / 34.1% (2022).
+- id: oecd_productivity
+  text: The OECD (2024) says Norway's productivity growth is among the lowest in the OECD, and its living-standards lead over
+    the richer half of OECD countries has shrunk from around 42% to 27% over 15 years.
+  spoken: among the lowest in the OECD
+  display: 42% → 27%
+  fields:
+    from_display: 42%
+    to_display: 27%
+  source_ids:
+  - oecd_blog_2024
+  status: source_located
+- id: gini_2024
+  text: Norway's Gini coefficient for equivalised household income was 0.256 in 2024 (SSB).
+  spoken: one of the most equal
+  display: '0.256'
+  value: 0.256
+  fields:
+    year: 2024
+  source_ids:
+  - ssb_gini
+  status: source_located
+  verification_note: '"One of the most equal" is comparative; confirm against OECD income distribution data before publishing,
+    or drop the comparison.'
+- id: union_density
+  text: Union density in Norway was 52% in 2024 (Fafo), and collective agreements covered 71% of employees in 2019.
+  spoken: about half
+  display: 52%
+  value: 52
+  fields:
+    year: 2024
+    coverage_display: 71%
+    coverage_year: 2019
+  source_ids:
+  - fafo_2025
+  status: source_located
+- id: frontfag
+  text: In Norwegian wage bargaining, industries exposed to international competition negotiate first, setting a norm for
+    the rest of the economy (SSB, 2023).
+  source_ids:
+  - ssb_frontfag
+  status: source_located
+- id: trust_2025
+  text: In the OECD Trust Survey, 57% of Norwegians had high or moderately high trust in the national government in 2025,
+    against an OECD average of 40%.
+  spoken: 57 percent
+  display: 57%
+  value: 57
+  fields:
+    year: 2025
+    oecd_display: 40%
+    oecd_spoken: 40 percent
+  source_ids:
+  - oecd_trust_2026
+  status: source_located
+  verification_note: From search snippet of the OECD country note (403). Confirm figures and year.
+- id: oil_crash_2014
+  text: After mid-2014 the oil price fell below USD 40 a barrel, around a third of its summer-2014 level; the krone was 30%
+    weaker at the end of 2015 than two years earlier (Norges Bank).
+  spoken: around a third
+  display: -2/3
+  fields:
+    krone_display: -30%
+    krone_spoken: 30 percent
+  source_ids:
+  - nb_papers_2016
+  status: source_located
+- id: unemployment_2014_16
+  text: Norway's LFS unemployment rate rose from 3.6% in 2014 to 4.7% in 2016 (SSB).
+  spoken: from 3.6 to 4.7 percent
+  display: 3.6% → 4.7%
+  fields:
+    from_display: 3.6%
+    to_display: 4.7%
+  source_ids:
+  - ssb_08517
+  status: source_located
+- id: production_forecast
+  text: The Norwegian Offshore Directorate forecasts petroleum production of 239.3 million Sm3 o.e. in 2025 and 205.2 million
+    in 2030.
+  value:
+  - code: y2004
+    name: 2004 (peak)
+    value: 264.2
+  - code: y2025
+    name: '2025'
+    value: 239.3
+  - code: y2030
+    name: 2030 (forecast)
+    value: 205.2
+  fields:
+    y2030_display: 205.2m
+  source_ids:
+  - np_forecast
+  - np_production
+  status: source_located
+- id: ageing
+  text: SSB's 2024-based projections (main alternative) imply 3.2 people aged 20-64 for every person aged 65+ in 2024, falling
+    to 2.1 by 2050 (31.7 and 47.6 people aged 65+ per 100 aged 20-64).
+  spoken: about three
+  display: 3.2 → 2.1
+  fields:
+    now_spoken: about three
+    future_spoken: about two
+    now_display: '3.2'
+    future_display: '2.1'
+    future_year: 2050
+  source_ids:
+  - ssb_14288
+  status: source_located
+  verification_note: Ratios are our calculation from SSB table 14288.
+- id: stress_test
+  text: 'NBIM''s stress test (data at 31 Dec 2025): the ''Fragmented world'' scenario gives a 37% drawdown of the fund; a
+    replay of the global financial crisis gives -29.8%.'
+  spoken: 37 percent
+  display: -37%
+  value: 37
+  fields:
+    gfc_display: -29.8%
+  source_ids:
+  - nbim_stress_2025
+  status: source_located
+- id: imf_strength
+  text: 'IMF (3 Sep 2026): Norway ''faces a challenging global environment from a position of strength''.'
+  source_ids:
+  - imf_2026
+  status: source_located

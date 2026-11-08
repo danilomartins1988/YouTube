@@ -1295,6 +1295,7 @@ scenes:
       screen: true
   sources:
   - dmo_jafza_2025
+  - national_peg
   assets:
   - font:inter
 - id: d21_port
@@ -1620,16 +1621,17 @@ scenes:
       cue: Emirates Group made
     stagger: 1.2
     title: Emirates Group, {{emirates_fy26.year}}
-    note: AED billion · dividend paid to its owner, the Investment Corporation of Dubai
-    valuePrefix: 'AED '
+    note: US$ billion at the official peg (3.6725 per US dollar) · dividend paid to its owner, the Investment Corporation of Dubai
+    valuePrefix: $
     valueSuffix: bn
+    decimals: 1
     data:
     - label: Revenue
-      value: 150.5
+      value: 41.0
     - label: Profit after tax
-      value: 21.0
+      value: 5.7
     - label: Dividend to owner
-      value: 3.5
+      value: 0.95
     highlight: 1
     highlightAt:
       cue: profit after tax
@@ -1637,6 +1639,7 @@ scenes:
     highlightColor: accent
   sources:
   - dmo_emirates_2026
+  - national_peg
   assets:
   - font:inter
 - id: d27_dwc
@@ -1677,10 +1680,11 @@ scenes:
         - 0
       - - cue: approved
           offset: 2.5
-        - 128
-      prefix: 'AED '
+        - 34.9
+      prefix: $
       suffix: bn
-      text: approved terminal ({{dwc_plan.year}})
+      decimals: 1
+      text: approved terminal ({{dwc_plan.year}}, at the official dollar peg)
     - kind: sign
       x: 1350
       y: 520
@@ -1702,6 +1706,7 @@ scenes:
   sources:
   - dmo_dwc_2024
   - dmo_dxb_2025
+  - national_peg
   assets:
   - font:inter
 - id: d28_act6
@@ -1785,15 +1790,16 @@ scenes:
         cue: were worth
       steps:
       - - 0
-        - 761
+        - 207.2
       - - cue: were worth
-        - 761
+        - 207.2
       - - cue: were worth
           offset: 2.5
-        - 917
-      prefix: 'AED '
+        - 249.7
+      prefix: $
       suffix: bn
-      text: real estate transactions, 2024 → 2025
+      decimals: 1
+      text: real estate transactions, 2024 → 2025 (at the official dollar peg)
     callouts:
     - text: 'Property: the most visible engine'
       x: 960
@@ -1805,6 +1811,7 @@ scenes:
   sources:
   - dmo_realestate_2025
   - dld_2024
+  - national_peg
   assets:
   - font:inter
 - id: d31_who

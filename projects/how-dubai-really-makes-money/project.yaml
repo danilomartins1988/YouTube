@@ -4,7 +4,7 @@ language: en
 # Episode 02. Per-video visual identity: Gulf night palette (deep navy, sunset orange, Gulf turquoise),
 # original code-drawn illustrations instead of photos. QC compares scene grammar against Episode 01.
 # Made before the US-dollar rule (2026-11-05); keeps its local-currency figures.
-currency_exempt: true
+currency_exempt: false   # 2026-11-08: all amounts converted to US dollars (user rule)
 # 2026-11-08 cartoon redo: animated with the Remotion engine (CartoonStage worlds), like Episodes 03-12.
 renderer: remotion
 remotion_geo: [world]

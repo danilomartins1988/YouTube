@@ -107,10 +107,11 @@ scenes:
       - - 0.6
         - 0
       - - 3.4
-        - 22014
-      prefix: 'NOK '
-      suffix: bn
-      text: the oil fund, {{fund_value_q3_2026.date_display}}
+        - 2.12
+      prefix: $
+      suffix: ' trillion'
+      decimals: 2
+      text: the oil fund, {{fund_value_q3_2026.date_display}} (at the 2025 average rate)
     - kind: person
       x: 360
       pose: cheer
@@ -187,6 +188,7 @@ scenes:
   sources:
   - nbim_q3_2026
   - ssb_population
+  - fed_h10
   assets:
   - font:inter
 - id: n03_stake
@@ -1126,18 +1128,19 @@ scenes:
   params:
     chapter: 04 · The money machine
     title: State's net cash flow from petroleum
-    subtitle: NOK billion per year (Statistics Norway)
+    subtitle: US$ billion per year · converted at each year's average rate (Statistics Norway, Fed H.10)
     data: '{{cashflow_series.value}}'
     sort: false
     highlight: y2022
     reference: y2025
-    value_prefix: 'NOK '
+    value_prefix: $
     value_suffix: bn
     cue: Those streams
     callout: 'Record: {{cashflow_2022.display}} in {{cashflow_2022.year}}'
     callout_cue: hit a record
   sources:
   - ssb_cashflow
+  - fed_h10
   assets:
   - font:inter
 - id: n20_exports
@@ -1567,28 +1570,29 @@ scenes:
   params:
     chapter: 05 · The fund
     title: Value of the fund, end of year
-    subtitle: NOK billion (NBIM)
+    subtitle: US$ billion · converted at each year's average rate (NBIM, Fed H.10)
     series: '{{fund_value_series.value}}'
     highlight: GPFG
     cue: Here is the value
     draw_seconds: 9
-    y_max: 24000
+    y_max: 2400
     y_steps: 4
     axis_prefix: ''
     axis_suffix: ''
-    value_prefix: 'NOK '
+    value_prefix: $
     value_suffix: bn
     year_every: 5
     events:
     - year: 2008
       label: Financial crisis
       cue: barely moves
-    - year: 2019
-      label: Passes NOK 10,000bn
+    - year: 2014
+      label: Passes $1 trillion
       cue: and climbs
   sources:
   - nbim_history
   - nbim_2025_results
+  - fed_h10
   assets:
   - font:inter
 - id: n26_returns
@@ -1973,11 +1977,11 @@ scenes:
         - 0
       - - cue: planned to use
           offset: 2.5
-        - 579.4
-      prefix: 'NOK '
+        - 55.8
+      prefix: $
       suffix: bn
       decimals: 1
-      text: oil money in this year's budget
+      text: oil money in this year's budget (2025 average rate)
     - kind: sign
       x: 1200
       y: 560
@@ -1998,6 +2002,7 @@ scenes:
   sources:
   - mof_budget_2026
   - nbim_about
+  - fed_h10
   assets:
   - font:inter
 - id: n34_why
@@ -2080,15 +2085,15 @@ scenes:
   params:
     chapter: 07 · The fiscal rule
     title: Spending follows the fund, not the oil price
-    subtitle: 'Illustration of the principle: fund value (NBIM), NOK billion'
+    subtitle: 'Illustration of the principle: fund value (NBIM), US$ billion'
     series: '{{fund_value_series.value}}'
     highlight: GPFG
     cue: protects the economy
-    y_max: 24000
+    y_max: 2400
     y_steps: 4
     axis_prefix: ''
     axis_suffix: ''
-    value_prefix: 'NOK '
+    value_prefix: $
     value_suffix: bn
     year_every: 5
     events:
@@ -2098,6 +2103,7 @@ scenes:
   sources:
   - imf_2014
   - nbim_history
+  - fed_h10
   assets:
   - font:inter
 - id: n36_p8
@@ -2468,9 +2474,9 @@ scenes:
     - kind: sign
       x: 1150
       y: 650
-      text: KRONE {{oil_crash_2014.krone_display}}
+      text: CURRENCY {{oil_crash_2014.krone_display}}
       at:
-        cue: krone weakened
+        cue: currency weakened
       color: '#FFCDD2'
       size: 28
     - kind: sign

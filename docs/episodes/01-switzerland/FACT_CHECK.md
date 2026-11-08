@@ -24,3 +24,10 @@ written. They stay `source_located` until a named human reviewer signs off. The 
 
 The pilot was voiced with older settings, so the whole narration is re-voiced with the current voice (≈ US$0.28).
 Projected total for the episode: ≈ US$0.57, under the US$1.00 per-episode cap.
+
+## Amounts in US dollars (user rule, 2026-11-08)
+
+Franc amounts are converted at the **Federal Reserve H.10 annual average** (CHF per USD, FRED AEXSZUS):
+watch exports 2024 CHF 25.9bn / 0.8808 ≈ **$29.4bn**; SNB sales 2023 CHF 132.9bn / 0.8984 ≈ **$148bn**; SNB purchases
+2024 CHF 1.2bn / 0.8808 ≈ **$1.4bn**. The franc and the euro still appear as the *subject* of the story (the safe
+haven, the 1.20 floor, "a strong franc"), never as the unit of an amount.
