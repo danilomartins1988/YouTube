@@ -1,0 +1,28 @@
+{
+  "batch_id": "US_AUDIENCE_BATCH_001",
+  "registered": "2026-11-08",
+  "purpose": "Editorial batch of 20 subjects selected for U.S. viewers. Produced with the existing pipeline unchanged.",
+  "position": "appended after all previously scheduled work in docs/PRODUCTION_QUEUE.md (existing order and priorities unchanged)",
+  "items": [
+    {"n": 1,  "title": "Why Americans Pay So Much for Healthcare",            "category": "A", "status": "approved",  "verify": ["CMS National Health Expenditure", "OECD Health Statistics", "hospital price transparency research"]},
+    {"n": 2,  "title": "The Hidden Business Behind Your Credit Card",          "category": "A/B", "status": "approved", "verify": ["Federal Reserve interchange data (Reg II)", "CFPB credit card market report", "issuer 10-Ks"]},
+    {"n": 3,  "title": "Why American Homes Became So Expensive",               "category": "A", "status": "approved",  "verify": ["Census/HUD", "FHFA HPI / Case-Shiller", "Freddie Mac PMMS", "local vs national split"]},
+    {"n": 4,  "title": "How Costco Makes Money Selling Things Cheap",          "category": "B", "status": "approved",  "verify": ["Costco 10-K: membership fees, gross margin, renewal rate"]},
+    {"n": 5,  "title": "Why AI Is Making Your Computer More Expensive",        "category": "D", "status": "duplicate", "duplicate_of": "Episode 14 'The Three Companies That Decide How Much Your Memory Costs' (AI/HBM taking wafer capacity, consumer DRAM prices; render in progress)", "action": "replacement topic requested"},
+    {"n": 6,  "title": "The Business Behind America's Student Debt",           "category": "A", "status": "approved",  "verify": ["Dept. of Education / FSA portfolio data", "Federal Reserve G.19", "federal vs private lending split"]},
+    {"n": 7,  "title": "How Car Dealerships Really Make Money",                "category": "A/B", "status": "approved", "verify": ["NADA Data", "public dealer groups' 10-Ks (AutoNation, Lithia): gross profit by segment"]},
+    {"n": 8,  "title": "Why America's Electricity Bills Are Rising",           "category": "A", "status": "approved",  "verify": ["EIA retail prices by state", "FERC/ISO capacity auctions", "data-center share stated only where sourced"]},
+    {"n": 9,  "title": "The Bank That Accidentally Sent $900 Million",         "category": "C", "status": "already_scheduled", "duplicate_of": "Top-10 queue #4 (Citibank / Revlon)", "action": "produce once; counts for both lists"},
+    {"n": 10, "title": "Why Your Car Insurance Keeps Getting More Expensive",  "category": "A", "status": "approved",  "verify": ["BLS CPI motor vehicle insurance", "NAIC state data", "insurer loss ratios (10-Ks)"]},
+    {"n": 11, "title": "The Hidden Economics of Amazon Prime",                 "category": "B", "status": "approved",  "verify": ["Amazon 10-K subscription services revenue", "no invented Prime profitability (not disclosed)"]},
+    {"n": 12, "title": "Why America's Airports Make Money Before You Fly",     "category": "B", "status": "approved",  "verify": ["FAA CATS airport financial reports", "ownership models (public authorities)"]},
+    {"n": 13, "title": "The Day Oil Was Worth Less Than Nothing",              "category": "C", "status": "already_scheduled", "duplicate_of": "Top-10 queue #10 (WTI May 2020 contract)", "action": "produce once; counts for both lists"},
+    {"n": 14, "title": "The Streaming App That Burned $1.75 Billion",          "category": "C", "status": "already_in_production", "duplicate_of": "Top-10 queue #2 (Quibi, Episode 19: sources and script written)", "note": "title corrected to 'The $1.75 Billion Streaming App That Lasted Six Months': Quibi raised $1.75bn but had ~$350M left at shutdown (Deadline)"},
+    {"n": 15, "title": "How One Company Made Diamonds a Symbol of Love",       "category": "B/C", "status": "already_scheduled", "duplicate_of": "Top-10 queue #7 (De Beers)", "action": "produce once; counts for both lists"},
+    {"n": 16, "title": "The Machine That Could Challenge ASML",                "category": "D", "status": "duplicate", "duplicate_of": "Episode 15 'The Stamp That Could Break ASML's Monopoly' (Canon nanoimprint; scripted, queued for render)", "action": "replacement topic requested"},
+    {"n": 17, "title": "Why the World's Memory Supply Depends on Three Companies", "category": "D", "status": "duplicate", "duplicate_of": "Episode 14 (three-company DRAM oligopoly, barriers to entry, CXMT, boom-and-bust cycle)", "action": "replacement topic requested"},
+    {"n": 18, "title": "How Visa and Mastercard Became Financial Gatekeepers", "category": "B", "status": "approved_with_overlap_watch", "overlap_with": "#2", "note": "#2 = one transaction's money flow; #18 = history, network effects, competition and regulation. Scripts checked for overlap before production; if they overlap, #18 is replaced."},
+    {"n": 19, "title": "Why Japan's Property Bubble Became a Lost Decade",     "category": "C", "status": "overlap_decision_needed", "overlap_with": "Top-10 queue #6 'When Tokyo's Land Was Worth More Than Entire Countries'", "note": "same bubble; #6 = the land-value boom, #19 = mechanisms of the stagnation. Recommendation: merge into one episode (boom + bust), or keep #19 and drop #6."},
+    {"n": 20, "title": "The Hidden Business Behind America's Grocery Prices",  "category": "A", "status": "approved",  "verify": ["USDA ERS Food Dollar Series", "BLS CPI food at home", "retailer 10-K margins; no assumption of abnormal profits"]}
+  ]
+}

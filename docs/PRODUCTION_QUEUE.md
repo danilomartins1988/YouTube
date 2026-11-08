@@ -39,3 +39,31 @@ imported equipment) are **leads, not facts**: each one is verified on a primary 
 | C4 | India's Chip Plants Don't Make Chips. That's the Plan | **In production**: scripted, fact-checked, storyboarded (new `osat` line), thumbnail made, render queued (`docs/episodes/17-india-chips`) | Back-end (assembly/test/packaging) vs front-end fabs; plants in production; imported equipment share (verify); why packaging is the entry door. |
 | C5 | The Chemicals Nobody Talks About That Decide Who Makes Chips | **In production**: scripted, fact-checked, storyboarded (new `vessel` piece), thumbnail made, render queued (`docs/episodes/18-chip-chemicals`) | Photoresists, specialty gases, dichlorosilane; Japanese supplier shares; China's export leverage; materials vs machines as chokepoints. |
 
+
+## Batch US_AUDIENCE_BATCH_001 (registered 2026-11-08, appended after all work above)
+
+Owner's editorial batch of 20 subjects aimed at U.S. viewers. Produced with the existing pipeline and standard, unchanged.
+Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.json`. Order below is the owner's order.
+
+| # | Working title | Status |
+|---|---|---|
+| 01 | Why Americans Pay So Much for Healthcare | Approved, queued |
+| 02 | The Hidden Business Behind Your Credit Card | Approved, queued |
+| 03 | Why American Homes Became So Expensive | Approved, queued |
+| 04 | How Costco Makes Money Selling Things Cheap | Approved, queued |
+| 05 | Why AI Is Making Your Computer More Expensive | **Duplicate** of Ep 14 (memory prices); replacement topic requested |
+| 06 | The Business Behind America's Student Debt | Approved, queued |
+| 07 | How Car Dealerships Really Make Money | Approved, queued |
+| 08 | Why America's Electricity Bills Are Rising | Approved, queued |
+| 09 | The Bank That Accidentally Sent $900 Million | Already scheduled (top-10 #4); produced once |
+| 10 | Why Your Car Insurance Keeps Getting More Expensive | Approved, queued |
+| 11 | The Hidden Economics of Amazon Prime | Approved, queued |
+| 12 | Why America's Airports Make Money Before You Fly | Approved, queued |
+| 13 | The Day Oil Was Worth Less Than Nothing | Already scheduled (top-10 #10); produced once |
+| 14 | The Streaming App That Burned $1.75 Billion | Already in production (Ep 19, Quibi); title corrected for accuracy |
+| 15 | How One Company Made Diamonds a Symbol of Love | Already scheduled (top-10 #7); produced once |
+| 16 | The Machine That Could Challenge ASML | **Duplicate** of Ep 15 (Canon nanoimprint); replacement topic requested |
+| 17 | Why the World's Memory Supply Depends on Three Companies | **Duplicate** of Ep 14; replacement topic requested |
+| 18 | How Visa and Mastercard Became Financial Gatekeepers | Approved with overlap watch vs #02 |
+| 19 | Why Japan's Property Bubble Became a Lost Decade | **Overlaps** top-10 #6 (Tokyo land); owner decision: merge or keep one |
+| 20 | The Hidden Business Behind America's Grocery Prices | Approved, queued |
