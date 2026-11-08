@@ -1,0 +1,664 @@
+# Documentary storyboard: one scene per script segment. Act cards are silent (music only).
+# All illustrations are original code-drawn art (hiddeneco/render/illustrate.py); maps are Natural Earth.
+scenes:
+  # ---------------- cold open
+  - id: d01_hook
+    segment: open_hook
+    type: illustration
+    params:
+      kind: skyline
+      kicker: The Hidden Economics
+      title: How Dubai Really Makes Money
+      value: "{{non_oil_share.display}}"
+      value_cue: "Its own government"
+      subtitle: of Dubai's GDP is non-oil, says the Government of Dubai
+      subtitle_cue: "nothing to do"
+    sfx: [{kind: hit, at: 0.0, gain: 0.35}]
+    sources: [dubai_ae_economy]
+    assets: ["font:inter"]
+
+  - id: d02_puzzle
+    segment: open_puzzle
+    type: big_number
+    params:
+      cue: "passengers passed"
+      kicker: "Dubai International (DXB), {{dxb_pax_2025.year}}"
+      value: "{{dxb_pax_2025.value}}"
+      display: "{{dxb_pax_2025.display}}"
+      label: passengers in one year
+      sublabel: "{{dxb_intl_rank_2025.display}} in the world for international passengers (ACI, preliminary)  ·  city population {{pop_dubai_2025.display}}"
+    sfx: [{kind: pop, cue: "passengers passed", offset: 1.4}]
+    sources: [dmo_dxb_2025, aci_2025, wam_population_2025]
+    assets: ["font:inter"]
+
+  - id: d03_promise
+    segment: open_promise
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Ships.", size: 96, style: display, cue: "ships"}
+        - {text: "Planes.", size: 96, style: display, cue: "the planes"}
+        - {text: "Buildings.", size: 96, style: display, cue: "the buildings"}
+        - {text: "Rules.", size: 96, style: display, color: accent2, cue: "the rules"}
+        - {text: "And who pays the bill.", size: 54, style: heading, color: accent, cue: "who pays"}
+    sources: []
+    assets: ["font:inter"]
+
+  # ---------------- act 1
+  - id: d04_act1
+    segment: act1_card
+    type: act_title
+    params: {number: Part 1, title: The City That Looks Impossible, subtitle: Dubai is not the UAE, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d05_emirates_map
+    segment: a1_map
+    type: map
+    params:
+      chapter: "01 · The city"
+      geo: world_emirates_50m
+      focus: AE-DU
+      highlights: {AE-AZ: {colour: accent2, cue: "Abu Dhabi"}}
+      start_view: {lon: 52.0, lat: 25.0, span_deg: 42}
+      end_view: {lon: 54.6, lat: 24.6, span_deg: 6.2}
+      start_view_vertical: {lon: 52.0, lat: 25.0, span_deg: 30}
+      end_view_vertical: {lon: 54.6, lat: 24.6, span_deg: 4.6}
+      neighbours: {SAU: Saudi Arabia, OMN: Oman, QAT: Qatar, IRN: Iran}
+      focus_label: Dubai
+      labels:
+        - {lon: 53.6, lat: 23.6, text: Abu Dhabi, colour: ink, size: 34, cue: "Abu Dhabi"}
+        - {lon: 55.9, lat: 25.75, text: "Northern emirates", colour: muted, size: 22, cue: "emirates"}
+      zoom_start: 0.6
+      zoom_fraction: 0.6
+      callouts:
+        - {label: "Emirates in the UAE", value: "{{uae_seven.display}}", cue: "emirates that form"}
+        - {label: "Federal capital: Abu Dhabi", cue: "federal capital", accent: true}
+    sfx: [{kind: whoosh, cue: "Abu Dhabi", gain: 0.2}]
+    sources: [natural_earth, uae_constitution]
+    assets: ["geo:world_emirates_50m", "font:inter"]
+
+  - id: d06_oil_split
+    segment: a1_oil_split
+    type: split_compare
+    params:
+      chapter: "01 · The city"
+      title: Who has the oil?
+      left: {kicker: "Abu Dhabi", value: "{{reserves_split.display}}", label: "of UAE oil reserves", cue: "Abu Dhabi holds"}
+      right: {kicker: "Dubai", value: "{{reserves_split.dubai_display}}", label: "of UAE oil reserves", cue: "Dubai holds"}
+      dim_left_after: false
+    sources: [uae_constitution, trade_gov_uae_energy]
+    assets: ["font:inter"]
+
+  - id: d07_question
+    segment: a1_question
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "No oil fortune.", size: 92, style: display, cue: "never had"}
+        - {text: "A different business model.", size: 64, style: heading, color: accent2, cue: "another business"}
+    sources: [trade_gov_uae_energy]
+    assets: ["font:inter"]
+
+  # ---------------- act 2
+  - id: d08_act2
+    segment: act2_card
+    type: act_title
+    params: {number: Part 2, title: Before the Skyscrapers, subtitle: Pearls, merchants and a creek, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d09_creek
+    segment: a2_creek
+    type: illustration
+    params:
+      chapter: "02 · Before the skyscrapers"
+      kind: creek
+      kicker: Before oil
+      title: A trading town on a creek
+      subtitle: Pearls were the economy
+      subtitle_cue: pearls
+    sources: [qdl_pearls]
+    assets: ["font:inter"]
+
+  - id: d10_pearls
+    segment: a2_pearls
+    type: timeline
+    params:
+      chapter: "02 · Before the skyscrapers"
+      title: The end of the pearl economy
+      start_year: 1900
+      end_year: 1940
+      tick_every: 10
+      draw_seconds: 2.0
+      items:
+        - {year: "{{pearl_collapse.cultured_year}}", label: "Japanese cultured pearls reach the market", cue: "Japan began"}
+        - {year: "{{pearl_collapse.crash_year}}", label: "Global crash hits demand", cue: "the crash"}
+    sources: [qdl_pearls]
+    assets: ["font:inter"]
+
+  - id: d11_merchants
+    segment: a2_merchants
+    type: route_map
+    params:
+      chapter: "02 · Before the skyscrapers"
+      geo: world_emirates_50m
+      focus: AE-DU
+      start_view: {lon: 55.0, lat: 26.0, span_deg: 14}
+      end_view: {lon: 55.6, lat: 25.9, span_deg: 7.5}
+      start_view_vertical: {lon: 55.0, lat: 26.0, span_deg: 9}
+      end_view_vertical: {lon: 55.2, lat: 25.9, span_deg: 4.5}
+      neighbours: {IRN: Persia (Iran)}
+      zoom_start: 0.4
+      zoom_fraction: 0.35
+      hub: {lon: 55.30, lat: 25.26, label: Dubai}
+      routes:
+        - {kind: sea, label: "Lingeh", anchor: lm, points: [[54.88, 26.56], [55.10, 26.0], [55.30, 25.27]], cue: "merchants moved", seconds: 2.0}
+      callouts:
+        - {label: "Lorimer's Gazetteer", value: "{{lingah_shift.display}}", cue: "In the years"}
+        - {label: "Openness, not resources", cue: "Its advantage", accent: true}
+    sources: [qdl_lorimer, natural_earth]
+    assets: ["geo:world_emirates_50m", "font:inter"]
+
+  - id: d12_dredge
+    segment: a2_dredge
+    type: big_number
+    params:
+      cue: "Dubai borrowed"
+      kicker: Dredging Dubai Creek
+      value: "{{creek_dredging.value}}"
+      display: "{{creek_dredging.display}}"
+      count: false
+      label: Borrowed money to deepen the creek - before oil
+      sublabel: "Financed largely by a loan from Kuwait · Oil found only in {{oil_discovery.display}}"
+    sources: [gulfnews_creek, gulfnews_oil]
+    assets: ["font:inter"]
+
+  # ---------------- act 3
+  - id: d13_act3
+    segment: act3_card
+    type: act_title
+    params: {number: Part 3, title: "Oil: The Seed Money", subtitle: A small endowment spent on permanence, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d14_offshore
+    segment: a3_offshore
+    type: illustration
+    params:
+      chapter: "03 · Oil"
+      kind: offshore
+      kicker: Fateh field, offshore
+      title: "Oil, at last"
+      value: "{{oil_discovery.display}}"
+      value_cue: "oil was finally"
+      subtitle: "First export cargo: {{oil_first_export.display}}"
+      subtitle_cue: "first cargo"
+    sources: [gulfnews_oil]
+    assets: ["font:inter"]
+
+  - id: d15_peak
+    segment: a3_peak
+    type: timeline
+    params:
+      chapter: "03 · Oil"
+      title: Oil money, spent on infrastructure
+      start_year: 1960
+      end_year: 2000
+      tick_every: 10
+      draw_seconds: 2.4
+      items:
+        - {year: "{{oil_first_export.value}}", label: First oil export, at: 0.02}
+        - {year: "{{jebel_ali_opened.value}}", label: Jebel Ali port opens, cue: "a vast new harbour"}
+        - {year: "{{oil_peak.value}}", label: "Oil output peaks, then declines", cue: "Production peaked"}
+      footer: Oil was never going to last
+      footer_cue: "never going"
+    sources: [gulfnews_oil, gulfnews_jebelali]
+    assets: ["font:inter"]
+
+  - id: d16_insight
+    segment: a3_insight
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Oil was not the business.", size: 84, style: display, cue: "Oil was not"}
+        - {text: "It was the seed money", size: 64, style: heading, cue: "seed money"}
+        - {text: "for moving other people's goods.", size: 64, style: heading, color: accent2, cue: "moving other"}
+    sources: []
+    assets: ["font:inter"]
+
+  # ---------------- act 4
+  - id: d17_act4
+    segment: act4_card
+    type: act_title
+    params: {number: Part 4, title: The Trading Machine, subtitle: Jebel Ali and DP World, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d18_routes
+    segment: a4_routes
+    type: route_map
+    params:
+      chapter: "04 · The trading machine"
+      geo: world_emirates_50m
+      focus: AE-DU
+      start_view: {lon: 55.3, lat: 25.2, span_deg: 16}
+      end_view: {lon: 38.0, lat: 27.6, span_deg: 150}
+      start_view_vertical: {lon: 55.3, lat: 25.2, span_deg: 10}
+      end_view_vertical: {lon: 60.0, lat: 20.0, span_deg: 80}
+      zoom_start: 0.3
+      zoom_fraction: 0.3
+      hub: {lon: 55.27, lat: 25.0, label: Jebel Ali}
+      routes:
+        - {kind: sea, label: Shanghai, anchor: lm, cue: "factories of Asia", seconds: 2.2,
+           points: [[55.0, 25.1], [56.4, 26.4], [58.5, 23.8], [62, 20], [72, 10], [80, 5.5], [95, 6], [100, 3.5],
+                    [103.8, 1.2], [108, 8], [115, 18], [122, 28], [121.5, 31.2]]}
+        - {kind: sea, label: Rotterdam, anchor: lm, cue: "consumers of Europe", seconds: 2.6,
+           points: [[55.0, 25.1], [56.4, 26.4], [58.5, 23.8], [60, 18], [51, 12.5], [43.3, 12.6], [38.5, 18.5],
+                    [34, 27.5], [32.5, 30], [32.3, 31.3], [28, 33.5], [15, 36.5], [11, 37.3], [-5.6, 36],
+                    [-9.5, 38.5], [-9.5, 43], [-5, 48.5], [1.5, 50.5], [4.1, 51.95]]}
+        - {kind: sea, label: Mombasa, anchor: lm, cue: "East Africa", seconds: 1.8,
+           points: [[55.0, 25.1], [56.4, 26.4], [58.5, 23.8], [56, 15], [51.5, 11], [48, 5], [42, -1], [39.7, -4.05]]}
+        - {kind: sea, label: Mumbai, anchor: lm, cue: "shipped on", seconds: 1.2,
+           points: [[55.0, 25.1], [56.4, 26.4], [58.5, 23.8], [65, 21], [72.8, 18.9]]}
+    sources: [natural_earth]
+    assets: ["geo:world_emirates_50m", "font:inter"]
+
+  - id: d19_jafza
+    segment: a4_jafza
+    type: split_compare
+    params:
+      chapter: "04 · The trading machine"
+      title: Jebel Ali Free Zone (Jafza)
+      left: {kicker: "At launch, {{jafza_firms.year_founded}}", value: "{{jafza_firms.start_display}}", label: companies, cue: "It started"}
+      right: {kicker: Today, value: "{{jafza_firms.display}}", label: businesses, cue: "Today it hosts"}
+    sources: [dmo_jafza_2025]
+    assets: ["font:inter"]
+
+  - id: d20_trade
+    segment: a4_trade
+    type: big_number
+    params:
+      cue: "the zone handled"
+      kicker: "Jafza non-oil trade, {{jafza_trade_2024.year}}"
+      value: "{{jafza_trade_2024.value}}"
+      display: "{{jafza_trade_2024.display}}"
+      label: of non-oil trade through one free zone
+      sublabel: "Zone + port: {{jafza_port_gdp.display}} of Dubai's economy (Dubai government estimate)"
+    sfx: [{kind: pop, cue: "the zone handled", offset: 1.4}]
+    sources: [dmo_jafza_2025]
+    assets: ["font:inter"]
+
+  - id: d21_port
+    segment: a4_port
+    type: illustration
+    params:
+      chapter: "04 · The trading machine"
+      kind: port
+      horizon: 0.93
+      kicker: "Jebel Ali, {{jebel_ali_teu_2025.year}}"
+      value: "{{jebel_ali_teu_2025.display}}"
+      value_cue: "Jebel Ali handled"
+      subtitle: "{{jebel_ali_teu_2025.rank_display}} container port in the world (Lloyd's List)"
+      subtitle_cue: "busiest container"
+    sources: [lloyds_list_dubai, dmo_dpworld_2025]
+    assets: ["font:inter"]
+
+  - id: d22_dpworld
+    segment: a4_dpworld
+    type: big_number
+    params:
+      cue: "that reported"
+      kicker: "DP World revenue, {{dpworld_revenue_2025.year}}"
+      value: "{{dpworld_revenue_2025.value}}"
+      display: "{{dpworld_revenue_2025.display}}"
+      label: A Dubai port operator turned global, state-owned business
+      sublabel: "Gross throughput worldwide: {{dpworld_revenue_2025.teu_display}}"
+    sources: [dmo_dpworld_2025, dmo_dpworld_delist]
+    assets: ["font:inter"]
+
+  # ---------------- act 5
+  - id: d23_act5
+    segment: act5_card
+    type: act_title
+    params: {number: Part 5, title: The Hub Strategy, subtitle: Emirates and the airport, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d24_launch
+    segment: a5_launch
+    type: illustration
+    params:
+      chapter: "05 · The hub strategy"
+      kind: airport
+      kicker: "Emirates, {{emirates_launch.year}}"
+      value: "{{emirates_launch.display}}"
+      value_cue: "Emirates was launched"
+      subtitle: "and {{emirates_launch.planes_display}} leased aircraft"
+      subtitle_cue: "leased planes"
+    sources: [gulfnews_emirates_launch]
+    assets: ["font:inter"]
+
+  - id: d25_reach
+    segment: a5_reach
+    type: route_map
+    params:
+      chapter: "05 · The hub strategy"
+      geo: world_emirates_50m
+      focus: AE-DU
+      start_view: {lon: 55.3, lat: 25.2, span_deg: 30}
+      end_view: {lon: 44.0, lat: 20.0, span_deg: 150}
+      start_view_vertical: {lon: 55.3, lat: 25.2, span_deg: 20}
+      end_view_vertical: {lon: 60.0, lat: 18.0, span_deg: 95}
+      zoom_start: 0.3
+      zoom_fraction: 0.3
+      hub: {lon: 55.36, lat: 25.25, label: DXB}
+      routes:
+        - {kind: air, label: London, anchor: lm, points: [[-0.45, 51.47]], cue: "The pitch", seconds: 1.2}
+        - {kind: air, label: Cairo, anchor: rm, points: [[31.4, 30.1]], cue: "geography", seconds: 1.0}
+        - {kind: air, label: Lagos, anchor: lm, points: [[3.3, 6.6]], cue: "Dubai says", seconds: 1.2}
+        - {kind: air, label: Nairobi, anchor: rm, points: [[36.9, -1.3]], cue: "population", seconds: 1.0}
+        - {kind: air, label: Mumbai, anchor: lm, points: [[72.9, 19.1]], cue: "lives within", seconds: 1.0}
+        - {kind: air, label: Singapore, anchor: lm, points: [[103.9, 1.35]], cue: "of its airport", seconds: 1.2}
+        - {kind: air, label: Beijing, anchor: lm, points: [[116.6, 40.1]], cue: "instead of", seconds: 1.2}
+      callouts:
+        - {label: "Dubai's claim", value: "{{reach_claim.display}}", cue: "Dubai says", accent: true}
+    sources: [invest_dubai_hub, natural_earth]
+    assets: ["geo:world_emirates_50m", "font:inter"]
+
+  - id: d26_results
+    segment: a5_results
+    type: bar_chart
+    params:
+      chapter: "05 · The hub strategy"
+      title: "Emirates Group, {{emirates_fy26.year}}"
+      subtitle: AED billion
+      data:
+        - {code: rev, name: Revenue, value: "{{emirates_fy26.revenue_value}}"}
+        - {code: pat, name: Profit after tax, value: "{{emirates_fy26.value}}"}
+        - {code: div, name: Dividend to owner (ICD), value: "{{emirates_fy26.dividend_value}}"}
+      highlight: pat
+      reference: div
+      value_prefix: "AED "
+      value_suffix: "bn"
+      value_decimals: 1
+      axis_step: 50
+      axis_prefix: ""
+      axis_divisor: 1
+      axis_suffix: ""
+      callout: "Owner: Investment Corporation of Dubai"
+      callout_cue: {cue: "paid its owner"}
+    sources: [dmo_emirates_2026]
+    assets: ["font:inter"]
+
+  - id: d27_dwc
+    segment: a5_dxb
+    type: big_number
+    params:
+      cue: "approved a"
+      kicker: "Al Maktoum International, approved {{dwc_plan.year}}"
+      value: "{{dwc_plan.value}}"
+      display: "{{dwc_plan.display}}"
+      label: for a new passenger terminal
+      sublabel: "Designed for up to {{dwc_plan.capacity_display}} passengers a year · DXB {{dxb_pax_2025.year}}: {{dxb_pax_2025.display}}"
+    sfx: [{kind: pop, cue: "approved a", offset: 1.4}]
+    sources: [dmo_dwc_2024, dmo_dxb_2025]
+    assets: ["font:inter"]
+
+  # ---------------- act 6
+  - id: d28_act6
+    segment: act6_card
+    type: act_title
+    params: {number: Part 6, title: "Tourism, Luxury, Real Estate", subtitle: The most visible engines, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d29_visitors
+    segment: a6_visitors
+    type: bar_chart
+    params:
+      chapter: "06 · Tourism and property"
+      title: Overnight visitors to Dubai
+      subtitle: Millions per year
+      data: "{{visitors_series.value}}"
+      highlight: v2025
+      reference: v2019
+      value_prefix: ""
+      value_suffix: "m"
+      value_decimals: 2
+      axis_step: 5
+      axis_prefix: ""
+      axis_divisor: 1
+      axis_suffix: "m"
+      callout: "Hotel occupancy {{visitors_2025.year}}: {{hotel_occupancy_2025.display}}"
+      callout_cue: {cue: "average hotel"}
+    sources: [dmo_tourism_2025, wam_tourism_2019]
+    assets: ["font:inter"]
+
+  - id: d30_property
+    segment: a6_property
+    type: split_compare
+    params:
+      chapter: "06 · Tourism and property"
+      title: Dubai real estate transactions
+      left: {kicker: "{{re_2025.prev_year}}", value: "{{re_2025.prev_display}}", label: total value, cue: "up from"}
+      right: {kicker: "{{re_2025.year}}", value: "{{re_2025.display}}", label: total value, cue: "were worth"}
+    sources: [dmo_realestate_2025, dld_2024]
+    assets: ["font:inter"]
+
+  - id: d31_who
+    segment: a6_who
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Emaar's largest shareholder:", size: 56, style: heading, cue: "Emaar"}
+        - {text: "Dubai Holding (government-owned)", size: 72, style: display, color: accent2, cue: "government-owned"}
+        - {text: "{{imf_prices.cash_display}} of {{imf_prices.cash_year}} home purchases: no mortgage (IMF)", size: 52, style: heading, color: accent, cue: "buyers mostly"}
+    sources: [dmo_emaar_2026, imf_cr25327]
+    assets: ["font:inter"]
+
+  - id: d32_prices
+    segment: a6_prices
+    type: illustration
+    params:
+      chapter: "06 · Tourism and property"
+      kind: skyline_wide
+      kicker: "Dubai villa prices, {{imf_prices.period_display}}"
+      value: "{{imf_prices.display}}"
+      value_cue: "villa prices"
+      subtitle: "Apartments {{imf_prices.apartments_display}} · IMF Article IV"
+      subtitle_cue: "between"
+    sources: [imf_cr25327]
+    assets: ["font:inter"]
+
+  # ---------------- act 7
+  - id: d33_act7
+    segment: act7_card
+    type: act_title
+    params: {number: Part 7, title: Rules as a Product, subtitle: "Free zones, finance and tax", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d34_freezones
+    segment: a7_freezones
+    type: split_compare
+    params:
+      chapter: "07 · Rules as a product"
+      title: Who can own a company in Dubai?
+      left: {kicker: Free zones, value: "{{free_zones.display}}", label: zones with full foreign ownership, cue: "free zones"}
+      right: {kicker: "Mainland, since", value: "{{onshore_ownership.display}}", label: full foreign ownership for most activities, cue: "outside them"}
+      dim_left_after: false
+    sources: [invest_dubai_hub, wam_ownership_2021]
+    assets: ["font:inter"]
+
+  - id: d35_difc
+    segment: a7_difc
+    type: big_number
+    params:
+      cue: "it had"
+      kicker: "DIFC, end of {{difc_2025.year}}"
+      value: "{{difc_2025.value}}"
+      display: "{{difc_2025.display}}"
+      label: active companies in Dubai's financial centre
+      sublabel: "Own common-law courts since {{difc_courts.display}} · workforce {{difc_2025.workforce_display}}"
+    sfx: [{kind: pop, cue: "it had", offset: 1.4}]
+    sources: [dmo_difc_2025, difc_courts_framework]
+    assets: ["font:inter"]
+
+  - id: d36_tax
+    segment: a7_tax
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Corporate tax {{ct_rate.display}} above {{ct_rate.threshold_display}}", size: 58, style: heading, cue: "Most companies"}
+        - {text: "Qualifying free-zone income {{qfzp.display}}", size: 58, style: heading, color: accent2, cue: "Qualifying"}
+        - {text: "Large multinationals {{dmtt.display}} minimum", size: 58, style: heading, cue: "Large multinationals"}
+        - {text: "VAT {{vat.display}}", size: 58, style: heading, cue: "VAT"}
+        - {text: "No tax on salaries", size: 58, style: heading, color: accent, cue: "Individuals"}
+    sources: [uae_ct, fta_qfzp, mof_dmtt, mof_tax, pwc_uae_individual]
+    assets: ["font:inter"]
+
+  - id: d37_sectors
+    segment: a7_sectors
+    type: sector_share
+    params:
+      chapter: "07 · Rules as a product"
+      title: "What Dubai's economy is made of"
+      subtitle: "Share of real GDP, {{sectors_h1_2026.year}} (revised series)"
+      segments: "{{sectors_h1_2026.value}}"
+      other_label: "Everything else (incl. oil)"
+      callout: "Oil: a small part of 'everything else'"
+      callout_cue: "Oil is"
+    sources: [wam_gdp_h1_2026, dubai_ae_economy]
+    assets: ["font:inter"]
+
+  # ---------------- act 8
+  - id: d38_act8
+    segment: act8_card
+    type: act_title
+    params: {number: Part 8, title: Who Benefits - and the Risks, subtitle: "Workers, debt, property, shocks", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d39_workers
+    segment: a8_workers
+    type: big_number
+    params:
+      cue: "migrant workers"
+      kicker: "UAE population, {{migrant_share.year}}"
+      value: "{{migrant_share.value}}"
+      display: "{{migrant_share.display}}"
+      label: are migrant workers, according to Human Rights Watch
+      sublabel: NGO figure for the whole UAE
+    sources: [hrw_2023]
+    assets: ["font:inter"]
+
+  - id: d40_labour
+    segment: a8_labour
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "Recruitment fees", size: 60, style: heading, cue: "recruitment fees"}
+        - {text: "Unpaid wages: {{hrw_findings.display}} cases ({{hrw_findings.year}})", size: 60, style: heading, cue: "unpaid-wage cases"}
+        - {text: "Kafala: visa tied to employer", size: 60, style: heading, cue: "kafala"}
+        - {text: "Midday work ban {{midday_break.display}}, summer", size: 52, style: body, color: accent2, cue: "summer ban"}
+        - {text: "HRW: \"not enough\"", size: 52, style: body, color: accent, cue: "not enough"}
+    sources: [hrw_2023, mohre_midday_2025]
+    assets: ["font:inter"]
+
+  - id: d41_crash
+    segment: a8_crash
+    type: timeline
+    params:
+      chapter: "08 · The risks"
+      title: Boom, bust and bailout
+      start_year: 2007
+      end_year: 2011
+      tick_every: 1
+      draw_seconds: 1.6
+      items:
+        - {year: 2008.6, display: "{{crash_2009.display}}", label: "{{crash_2009.label}}", cue: "prices fell"}
+        - {year: 2009.9, display: "{{standstill_2009.display}}", label: "Dubai World asks for a debt standstill", cue: "asked creditors"}
+    sources: [gulfnews_prices_2009, gulfnews_dubai_world_2009]
+    assets: ["font:inter"]
+
+  - id: d42_bailout
+    segment: a8_bailout
+    type: split_compare
+    params:
+      chapter: "08 · The risks"
+      title: Rescued by the neighbour
+      left: {kicker: "Abu Dhabi, Dec {{standstill_2009.year}}", value: "{{bailout_2009.display}}", label: support for Dubai, cue: "stepped in"}
+      right: {kicker: "Weeks later", value: "{{burj_renamed.display}}", label: "Burj Dubai opens as Burj Khalifa", cue: "Weeks later"}
+    sources: [ibtimes_bailout_2009, csm_burj_2010]
+    assets: ["font:inter"]
+
+  - id: d43_imf
+    segment: a8_imf
+    type: kinetic_text
+    params:
+      lines:
+        - {text: "IMF Article IV:", size: 44, style: body_bold, color: muted, cue: "the IMF warns"}
+        - {text: "\"an unexpected price correction\"", size: 70, style: display, color: accent2, cue: "unexpected"}
+        - {text: "Government companies' finances: limited information", size: 50, style: heading, cue: "government-related"}
+    sources: [imf_cr25327]
+    assets: ["font:inter"]
+
+  - id: d44_war
+    segment: a8_war
+    type: big_number
+    params:
+      cue: "economy was"
+      kicker: "Dubai real GDP, {{gdp_h1_2026.year}} vs a year earlier"
+      value: "{{gdp_h1_2026.value}}"
+      display: "{{gdp_h1_2026.display}}"
+      label: after a regional war began in {{war_2026.display}}
+      sublabel: "Q1 was still {{war_2026.q1_display}} · Source: DDSE"
+    sfx: [{kind: hit, cue: "economy was", offset: 1.2, gain: 0.3}]
+    sources: [wam_gdp_h1_2026, dmo_gdp_q1_2026, national_iran_war_q1]
+    assets: ["font:inter"]
+
+  # ---------------- act 9
+  - id: d45_act9
+    segment: act9_card
+    type: act_title
+    params: {number: Part 9, title: The Real Economic Engine, subtitle: The place in between, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: d46_engine
+    segment: a9_engine
+    type: illustration
+    params:
+      chapter: "09 · The real engine"
+      kind: skyline_wide
+      horizon: 0.9
+      kicker: The place in between
+      title: "Goods change ships. Passengers change planes."
+      subtitle: "Capital finds a home. Companies trust the rules."
+      subtitle_cue: "capital finds"
+    sources: []
+    assets: ["font:inter"]
+
+  - id: d47_balance
+    segment: a9_balance
+    type: split_compare
+    params:
+      chapter: "09 · The real engine"
+      title: Strength and vulnerability
+      left: {kicker: Strength, value: "Adaptable", label: "Survived pearls, oil's decline, the debt crisis", cue: "adaptable"}
+      right: {kicker: Vulnerability, value: "Flows", label: "of people, capital and trade it does not control", cue: "But it depends"}
+      dim_left_after: false
+    sources: [dmo_d33]
+    assets: ["font:inter"]
+
+  - id: d48_end
+    segment: a9_end
+    type: end_card
+    params:
+      words: [Connection., Is the product.]
+      brand: The Hidden Economics
+      teaser: "Every figure in this film is sourced in the description"
+      brand_cue: {cue: "This is The Hidden Economics"}
+    sources: []
+    assets: ["font:inter"]

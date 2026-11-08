@@ -5,17 +5,22 @@ language: en
 # original code-drawn illustrations instead of photos. QC compares scene grammar against Episode 01.
 # Made before the US-dollar rule (2026-11-05); keeps its local-currency figures.
 currency_exempt: true
+# 2026-11-08 cartoon redo: animated with the Remotion engine (CartoonStage worlds), like Episodes 03-12.
+renderer: remotion
+remotion_geo: [world]
 style:
   name: gulf-nocturne
-  palette:
-    bg: "#0A1520"
-    bg2: "#13293A"
-    ink: "#F5EFE4"
-    muted: "#8C99A5"
-    land: "#2B3D4C"
-    border: "#46596A"
+  palette:            # bright cartoon day with sunset orange + Gulf turquoise (2026-11-08 cartoon redo)
+    bg: "#BFE8FA"
+    bg2: "#EAF8FF"
+    ink: "#10213A"
+    muted: "#4F6B80"
+    land: "#F2D29B"
+    border: "#2E5A73"
     accent: "#F08A3C"      # sunset orange
-    accent2: "#3FC7BE"     # Gulf turquoise
+    accent2: "#1E9C95"     # Gulf turquoise (darker for contrast on light)
+    accent3: "#23995A"
+    risk: "#E53935"
   fonts:
     display: InterDisplay-Bold
     heading: InterDisplay-SemiBold
