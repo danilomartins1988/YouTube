@@ -1,0 +1,272 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# estimates attributed (Sensor Tower), Quibi's disputes mentioned; the lawsuit as allegations. Generic teaser.
+logline: Hollywood's biggest names raised one point seven five billion dollars for a streaming app built for ten-minute
+  shows on your phone. Six months after launch, it was gone. What the money bought, why nobody stayed, and the lesson
+  hidden in its failure.
+title: The $1.75 Billion Streaming App That Lasted Six Months
+segments:
+- id: h_question
+  chapter: The billion-dollar bet
+  narration: How do you raise almost two billion dollars, hire the biggest stars in Hollywood, and still lose everything
+    in six months?
+  claims:
+  - raised
+  - shut
+  analysis: true
+  source_note: Hook question; 'almost two billion' = $1.75bn raised; shut down six months after launch.
+- id: h_stakes
+  chapter: The billion-dollar bet
+  narration: The app was called Quibi. It raised {{raised}} before it had a single customer. It launched in April twenty
+    twenty and announced it was shutting down in October. And the strangest part is that the idea behind it was not
+    crazy at all.
+  claims:
+  - raised
+  - shut
+- id: m1_card
+  chapter: Quick bites
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: Quick bites
+  narration: What exactly were investors buying?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_idea
+  chapter: Quick bites
+  narration: The idea came from Jeffrey Katzenberg, the former chairman of Disney's film studio, with Meg Whitman, the
+    former head of eBay and HP, as chief executive. The name meant quick bites. Hollywood quality shows, cut into episodes
+    of ten minutes or less, made only for your phone. Something to watch on the bus, in a queue, or between meetings.
+  claims:
+  - raised
+  - pandemic
+- id: m1_money
+  chapter: Quick bites
+  narration: Hollywood loved it. In twenty eighteen, the first funding round alone raised {{raised.first_spoken}}. The
+    investors read like a guest list of the entertainment industry. Disney, NBCUniversal, Sony, WarnerMedia, Viacom,
+    Lionsgate, MGM, plus Alibaba and the banks Goldman Sachs and JPMorgan. And before launch, advertisers bought its entire
+    first year of ads, worth {{ads}}.
+  claims:
+  - raised
+  - ads
+- id: m1_warning
+  chapter: Quick bites
+  narration: There was a warning sign. The same summer Quibi raised its first billion, the phone company Verizon shut
+    down its own short video service for phones, called Go90. It had never found an audience, and Verizon wrote off
+    {{go90}}, mostly because of it. Katzenberg insisted his service would be fundamentally different, built from the ground
+    up for watching on a phone.
+  claims:
+  - go90
+- id: m1_draw
+  chapter: Quick bites
+  narration: 'Let me draw the bet. On one side, a huge number: billions of people with phones and a few spare minutes
+    every day. On the other side, a simple price, a few dollars a month. If even a small slice of those people paid, the
+    business would be enormous. That was the math. The question was whether people would actually pay for minutes they
+    were already filling for free.'
+  claims:
+  - launch
+  analysis: true
+  source_note: Explanation of the business case; prices from TechCrunch; no invented market sizes.
+- id: m1_transition
+  chapter: Quick bites
+  narration: Then, just before launch, the whole world stopped commuting.
+  claims: []
+- id: m2_card
+  chapter: The worst launch date
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: The worst launch date
+  narration: What happens to an app for busy people when nobody is busy?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_launch
+  chapter: The worst launch date
+  narration: Quibi launched on April sixth, twenty twenty, just as the pandemic was locking people inside their homes.
+    It offered a free trial of ninety days, then cost four ninety-nine a month with ads or seven ninety-nine without.
+    On launch day, according to the analytics firm Sensor Tower, it was downloaded about {{launch}} times. That sounds
+    like a lot. But Disney's new streaming service had seen about four million installs at its own launch.
+  claims:
+  - launch
+- id: m2_stars
+  chapter: The worst launch date
+  narration: The launch line-up was full of famous names, from Jennifer Lopez to Liam Hemsworth, with projects promised
+    from directors like Steven Spielberg and Guillermo del Toro. Apple promoted the app across its store, and it climbed
+    to {{stars}} on the App Store. For a few days, Quibi looked like the hit Hollywood had paid for.
+  claims:
+  - stars
+- id: m2_phone
+  chapter: The worst launch date
+  narration: And Quibi had a bigger problem. It only worked on phones. People stuck at home wanted to watch on the big
+    television in the living room, and at first Quibi could not be sent to a TV at all. Its showpiece technology, called
+    Turnstyle, let you rotate your phone and switch between a horizontal and a vertical version of the same scene. Clever.
+    But it was built for a commuter who no longer existed.
+  claims:
+  - turnstyle
+  - pandemic
+- id: m2_lawsuit
+  chapter: The worst launch date
+  narration: Even that clever feature came with a fight. Before launch, an interactive video company called Eko sued
+    Quibi, alleging that Turnstyle infringed its patent and used its trade secrets. Quibi said the claims had absolutely
+    no merit, and pointed out that it held its own patent. A legal battle was the last thing a new app needed.
+  claims:
+  - turnstyle
+- id: m2_transition
+  chapter: The worst launch date
+  narration: The downloads came. The question was whether anyone would stay.
+  claims: []
+- id: m3_card
+  chapter: The free trial
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The free trial
+  narration: How many people actually paid?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_may
+  chapter: The free trial
+  narration: By May, CNN reported that Quibi had about {{may}} active users, most of them still on the free trial. Disney's
+    service had more than fifty million customers. Netflix had a hundred and eighty-three million. Next to them, Quibi
+    was a rounding error.
+  claims:
+  - may
+- id: m3_convert
+  chapter: The free trial
+  narration: Then the trials ended. Sensor Tower estimated that of about {{convert.signed_spoken}} people who signed up
+    in the first few days, only about {{convert}} kept paying after the free three months. That is {{convert.pct_spoken}}.
+    Quibi said the estimate was wrong by an order of magnitude, and that {{convert.quibi_spoken}} people had downloaded
+    the app. But it never published its number of paying subscribers.
+  claims:
+  - convert
+- id: m3_ads
+  chapter: The free trial
+  narration: The advertisers noticed too. They had paid for short ads of six, ten or fifteen seconds, with {{adfmt}},
+    expecting a young audience glued to their phones. Instead, the audience was smaller than promised, and according
+    to Broadcasting and Cable, the big brands that had bought {{ads}} of advertising were disappointed.
+  claims:
+  - adfmt
+  - ads
+- id: m3_draw
+  chapter: The free trial
+  narration: 'Let me draw why a free trial can hide a problem. Imagine a funnel. At the top, everyone who downloads.
+    In the middle, those who try a few shows. At the bottom, the few who pay when the free months end. A free trial makes
+    the top look huge. But a business lives on the bottom. Quibi had a wide top and a very narrow bottom.'
+  claims:
+  - convert
+  analysis: true
+  source_note: Funnel illustration of the sourced trial and conversion figures.
+- id: m3_transition
+  chapter: The free trial
+  narration: And all this time, the money kept going out.
+  claims: []
+- id: m4_card
+  chapter: The money
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The money
+  narration: Where did the money go?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_spend
+  chapter: The money
+  narration: Mostly into shows. Quibi paid Hollywood prices for stars and directors, for episodes that were only a few
+    minutes long. According to reports in June twenty twenty, the company expected to have spent {{burn}} of its money
+    by the autumn, and that it would need another {{burn.more_spoken}} by mid twenty twenty-one to keep going.
+  claims:
+  - burn
+  - raised
+- id: m4_rights
+  chapter: The money
+  narration: And there was a catch in the contracts. Quibi's deals with the creators gave it exclusive rights to each
+    show for only {{roku.window_spoken}}. So it was spending fortunes on shows it would not keep to itself for long. When
+    it came time to sell, a buyer would get a short window, not a library.
+  claims:
+  - roku
+  analysis: true
+  source_note: Rights arrangement as reflected in the Roku deal terms (exclusivity window, then rights to 2027); see verge_roku.
+- id: m4_try
+  chapter: The money
+  narration: Quibi tried to adapt. It added ways to cast shows to the TV, and in October it finally released apps for
+    televisions. In September, with more than {{burn.sep_spoken}} still in the bank, it started looking for a
+    buyer. It did not find one.
+  claims:
+  - burn
+  - pandemic
+- id: m4_buyer
+  chapter: The money
+  narration: What would a buyer even get? According to Recode, the pitch was some cash, the Turnstyle technology for
+    rotating video, and a slate of shows that Quibi would only control for a short time. For a big streaming company,
+    it was cheaper to wait and see what would be left after the shutdown than to buy the whole company.
+  claims:
+  - burn
+  - turnstyle
+  analysis: true
+  source_note: Recode lists the cash and Turnstyle; the short rights window is from verge_roku; the last sentence is analysis.
+- id: m4_transition
+  chapter: The money
+  narration: And so, barely six months after launch, the founders made a decision.
+  claims: []
+- id: m5_card
+  chapter: The end
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: The end
+  narration: When do you stop?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_shut
+  chapter: The end
+  narration: On October twenty-first, twenty twenty, Quibi announced it was shutting down. Katzenberg said its standalone
+    business model was no longer viable. The company still had around {{burn.bank_spoken}} in the bank, and about {{burn.staff_spoken}}
+    employees. Instead of spending the rest, the founders chose to close and return as much money as they could to the
+    investors.
+  claims:
+  - shut
+  - burn
+- id: m5_quote
+  chapter: The end
+  narration: Katzenberg explained it simply. Keeping Quibi going, he said, would not have changed the outcome. It would
+    only have spent {{quote_stop}} without any value to show for it. The founders said that in the weeks before, they had
+    looked at every option, partners, buyers and new funding. Every one of those stones, they said, was turned.
+  claims:
+  - quote_stop
+- id: m5_blame
+  chapter: The end
+  narration: At first, Katzenberg had blamed the pandemic for almost everything. In their farewell letter, the founders
+    were more honest. Other businesses had faced the pandemic and found their way through it. They had not.
+  claims:
+  - pandemic
+- id: m5_roku
+  chapter: The end
+  narration: In January twenty twenty-one, the streaming company Roku bought Quibi's library of more than seventy-five
+    shows. The price was reportedly {{roku}}. A company that had spent around a billion dollars sold its shows for
+    a small fraction of that.
+  claims:
+  - roku
+  - burn
+- id: payoff
+  chapter: The lesson
+  narration: So what killed Quibi? Not one thing. The pandemic, a phone-only design, and shows nobody felt they had to
+    see. But underneath was a bigger mistake. Quibi raised the money first and found out what people wanted later. It
+    bet that money could buy an audience. In streaming, money buys shows. Only habits buy viewers. And short videos on
+    phones did become a huge business. Just not one that people paid a subscription for.
+  claims:
+  - raised
+  - convert
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
