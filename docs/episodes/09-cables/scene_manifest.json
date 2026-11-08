@@ -640,6 +640,13 @@
       "narration": "Who owns the cables at the bottom of the ocean? It matters, because whoever owns the road decides who can use it, and how much it costs.",
       "keyframes": [
         {
+          "param": "items[2].at.cue",
+          "cue": "Who owns",
+          "label": "items[2].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 156.95
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "Who owns",
           "label": "callouts[0].at.cue",
@@ -647,9 +654,23 @@
           "absolute_s": 156.95
         },
         {
+          "param": "callouts[0].until.cue",
+          "cue": "whoever owns",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 4.63,
+          "absolute_s": 161.23
+        },
+        {
           "param": "cam[1].at.cue",
           "cue": "whoever owns",
           "label": "cam[1].at.cue",
+          "scene_time_s": 4.93,
+          "absolute_s": 161.53
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "whoever owns",
+          "label": "items[4].at.cue",
           "scene_time_s": 4.93,
           "absolute_s": 161.53
         },

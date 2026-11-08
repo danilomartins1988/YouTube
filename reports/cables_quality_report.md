@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/the-cables-at-the-bottom-of-the-ocean/documentary/the-cables-at-the-bottom-of-the-ocean--documentary.mp4 (181.1 MB) |
+| File exists | PASS | /home/user/YouTube/output/the-cables-at-the-bottom-of-the-ocean/documentary/the-cables-at-the-bottom-of-the-ocean--documentary.mp4 (181.4 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -22,7 +22,7 @@
 # QC report: the-cables-at-the-bottom-of-the-ocean / documentary (long_16x9)
 
 - Runtime: **663.8 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 181.1 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 181.4 MB
 - Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
 - Errors: **0**, warnings: **36**
 - Technical QC passed: **True**

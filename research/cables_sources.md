@@ -1,6 +1,6 @@
 # Research dossier - The Cables at the Bottom of the Ocean That Carry the Internet
 
-Generated 2026-11-07T00:28:11+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-08T11:16:10+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 
