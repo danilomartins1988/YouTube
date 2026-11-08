@@ -14,9 +14,10 @@ concepts:
 - id: A
   angle: mystery
   text:
+  - VOLKSWAGEN
   - IMPOSSIBLE
   - SURGE
-  accent_line: 1
+  accent_line: 2
   text_side: left
   claim_basis: 'price: ≈ $266 to ≈ $1,250 per share in two trading days (Risk.net, Fed H.10 day rates)'
   scene:
@@ -45,9 +46,9 @@ concepts:
 - id: B
   angle: consequence
   text:
-  - '#1 FOR'
-  - A DAY
-  accent_line: 0
+  - VOLKSWAGEN
+  - 'WORLD''S #1?'
+  accent_line: 1
   text_side: right
   claim_basis: 'top: briefly the world''s largest company by market value on 28 Oct 2008 (International Banker)'
   scene:
@@ -76,9 +77,10 @@ concepts:
 - id: C
   angle: mystery (bold)
   text:
+  - VOLKSWAGEN
   - $266 →
   - $1,250
-  accent_line: 1
+  accent_line: 2
   text_side: left
   claim_basis: 'price: €210.52 (24 Oct) → €1,005.01 (28 Oct 2008), Risk.net; Fed H.10 day rates ≈ $266 → ≈ $1,250'
   scene:
@@ -110,8 +112,8 @@ concepts:
 - id: D
   angle: consequence (bold)
   text:
-  - FOR ONE
-  - DAY
+  - VOLKSWAGEN
+  - FOR ONE DAY
   accent_line: 1
   text_side: left
   claim_basis: 'top: briefly the world''s largest company by market value on 28 Oct 2008 (≈ $370bn vs ExxonMobil $343bn)'
@@ -126,17 +128,17 @@ concepts:
     backdrop: void
     subject:
       kind: bignum
-      x: 1380
-      y: 520
-      s: 1.0
+      x: 1420
+      y: 420
+      s: 0.78
       label: '#1'
       rot: -6
     support:
-    - kind: crash
-      x: 1350
-      y: 760
-      s: 0.55
-      opacity: 0.55
+    - kind: hatch
+      x: 1420
+      y: 800
+      s: 0.95
+      body: '#DDE6F2'
     particles:
       n: 60
       region:

@@ -18,10 +18,11 @@
       "id": "A",
       "angle": "mystery",
       "text": [
+        "VOLKSWAGEN",
         "IMPOSSIBLE",
         "SURGE"
       ],
-      "accent_line": 1,
+      "accent_line": 2,
       "text_side": "left",
       "claim_basis": "price: \u2248 $266 to \u2248 $1,250 per share in two trading days (Risk.net, Fed H.10 day rates)",
       "scene": {
@@ -54,9 +55,18 @@
       },
       "layout": [
         {
+          "text": "VOLKSWAGEN",
+          "x": 90,
+          "y": 455.0,
+          "size": 125.0,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
           "text": "IMPOSSIBLE",
           "x": 90,
-          "y": 520.0,
+          "y": 585.0,
           "size": 125.0,
           "width": 800,
           "anchor": "start",
@@ -65,7 +75,7 @@
         {
           "text": "SURGE",
           "x": 90,
-          "y": 650.0,
+          "y": 715.0,
           "size": 125.0,
           "width": 400.0,
           "anchor": "start",
@@ -89,7 +99,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.53 MB",
+            "detail": "0.55 MB",
             "critical": true
           },
           {
@@ -101,13 +111,13 @@
           {
             "check": "0-4 words",
             "pass": true,
-            "detail": "2 words",
+            "detail": "3 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 422, 890, 528), (90, 552, 490, 658)]",
+            "detail": "[(90, 358, 890, 462), (90, 488, 890, 592), (90, 618, 490, 722)]",
             "critical": true
           },
           {
@@ -131,7 +141,7 @@
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.049",
+            "detail": "0.069",
             "critical": false
           },
           {
@@ -143,7 +153,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-switzerland-is-so-rich (distance 0.52)",
+            "detail": "nearest why-switzerland-is-so-rich (distance 0.50)",
             "critical": false
           },
           {
@@ -154,7 +164,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.817,
+        "design_score": 0.798,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -169,10 +179,10 @@
       "id": "B",
       "angle": "consequence",
       "text": [
-        "#1 FOR",
-        "A DAY"
+        "VOLKSWAGEN",
+        "WORLD'S #1?"
       ],
-      "accent_line": 0,
+      "accent_line": 1,
       "text_side": "right",
       "claim_basis": "top: briefly the world's largest company by market value on 28 Oct 2008 (International Banker)",
       "scene": {
@@ -205,22 +215,22 @@
       },
       "layout": [
         {
-          "text": "#1 FOR",
+          "text": "VOLKSWAGEN",
           "x": 1830,
-          "y": 506.7,
-          "size": 208.3,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 727.3,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "WORLD'S #1?",
+          "x": 1830,
+          "y": 640.0,
+          "size": 113.6,
           "width": 800,
           "anchor": "end",
           "color": "#FFD24A"
-        },
-        {
-          "text": "A DAY",
-          "x": 1830,
-          "y": 723.3,
-          "size": 208.3,
-          "width": 666.7,
-          "anchor": "end",
-          "color": "#FFFFFF"
         }
       ],
       "qc": {
@@ -240,7 +250,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.52 MB",
+            "detail": "0.54 MB",
             "critical": true
           },
           {
@@ -252,13 +262,13 @@
           {
             "check": "0-4 words",
             "pass": true,
-            "detail": "4 words",
+            "detail": "3 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(1030, 344, 1830, 519), (1163, 561, 1830, 736)]",
+            "detail": "[(1103, 433, 1830, 529), (1030, 551, 1830, 647)]",
             "critical": true
           },
           {
@@ -270,19 +280,19 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": true,
-            "detail": "17.4px font at 160px wide",
+            "detail": "9.5px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 7.7:1 (dark outline adds more)",
+            "detail": "worst 6.4:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.063",
+            "detail": "0.055",
             "critical": false
           },
           {
@@ -294,7 +304,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-norway-is-so-rich (distance 0.46)",
+            "detail": "nearest why-norway-is-so-rich (distance 0.47)",
             "critical": false
           },
           {
@@ -305,7 +315,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.869,
+        "design_score": 0.74,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -320,10 +330,11 @@
       "id": "C",
       "angle": "mystery (bold)",
       "text": [
+        "VOLKSWAGEN",
         "$266 \u2192",
         "$1,250"
       ],
-      "accent_line": 1,
+      "accent_line": 2,
       "text_side": "left",
       "claim_basis": "price: \u20ac210.52 (24 Oct) \u2192 \u20ac1,005.01 (28 Oct 2008), Risk.net; Fed H.10 day rates \u2248 $266 \u2192 \u2248 $1,250",
       "scene": {
@@ -359,20 +370,29 @@
       },
       "layout": [
         {
+          "text": "VOLKSWAGEN",
+          "x": 90,
+          "y": 455.0,
+          "size": 125.0,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
           "text": "$266 \u2192",
           "x": 90,
-          "y": 506.7,
-          "size": 208.3,
-          "width": 800,
+          "y": 585.0,
+          "size": 125.0,
+          "width": 480.0,
           "anchor": "start",
           "color": "#FFFFFF"
         },
         {
           "text": "$1,250",
           "x": 90,
-          "y": 723.3,
-          "size": 208.3,
-          "width": 800,
+          "y": 715.0,
+          "size": 125.0,
+          "width": 480.0,
           "anchor": "start",
           "color": "#39FF88"
         }
@@ -394,7 +414,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.49 MB",
+            "detail": "0.50 MB",
             "critical": true
           },
           {
@@ -406,13 +426,13 @@
           {
             "check": "0-4 words",
             "pass": true,
-            "detail": "3 words",
+            "detail": "4 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 344, 890, 519), (90, 561, 890, 736)]",
+            "detail": "[(90, 358, 890, 462), (90, 488, 570, 592), (90, 618, 570, 722)]",
             "critical": true
           },
           {
@@ -424,19 +444,19 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": true,
-            "detail": "17.4px font at 160px wide",
+            "detail": "10.4px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 5.5:1 (dark outline adds more)",
+            "detail": "worst 7.6:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.085",
+            "detail": "0.080",
             "critical": false
           },
           {
@@ -448,7 +468,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-switzerland-is-so-rich (distance 0.96)",
+            "detail": "nearest why-switzerland-is-so-rich (distance 0.95)",
             "critical": false
           },
           {
@@ -459,7 +479,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.809,
+        "design_score": 0.843,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -474,8 +494,8 @@
       "id": "D",
       "angle": "consequence (bold)",
       "text": [
-        "FOR ONE",
-        "DAY"
+        "VOLKSWAGEN",
+        "FOR ONE DAY"
       ],
       "accent_line": 1,
       "text_side": "left",
@@ -492,19 +512,19 @@
         "backdrop": "void",
         "subject": {
           "kind": "bignum",
-          "x": 1380,
-          "y": 520,
-          "s": 1.0,
+          "x": 1420,
+          "y": 420,
+          "s": 0.78,
           "label": "#1",
           "rot": -6
         },
         "support": [
           {
-            "kind": "crash",
-            "x": 1350,
-            "y": 760,
-            "s": 0.55,
-            "opacity": 0.55
+            "kind": "hatch",
+            "x": 1420,
+            "y": 800,
+            "s": 0.95,
+            "body": "#DDE6F2"
           }
         ],
         "particles": {
@@ -523,20 +543,20 @@
       },
       "layout": [
         {
-          "text": "FOR ONE",
+          "text": "VOLKSWAGEN",
           "x": 90,
-          "y": 511.4,
-          "size": 178.6,
-          "width": 800,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 727.3,
           "anchor": "start",
           "color": "#FFFFFF"
         },
         {
-          "text": "DAY",
+          "text": "FOR ONE DAY",
           "x": 90,
-          "y": 697.1,
-          "size": 178.6,
-          "width": 342.9,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 800,
           "anchor": "start",
           "color": "#FFC21A"
         }
@@ -558,7 +578,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.59 MB",
+            "detail": "0.61 MB",
             "critical": true
           },
           {
@@ -570,13 +590,13 @@
           {
             "check": "0-4 words",
             "pass": true,
-            "detail": "3 words",
+            "detail": "4 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 372, 890, 522), (90, 558, 433, 708)]",
+            "detail": "[(90, 433, 817, 529), (90, 551, 890, 647)]",
             "critical": true
           },
           {
@@ -588,19 +608,19 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": true,
-            "detail": "14.9px font at 160px wide",
+            "detail": "9.5px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 9.2:1 (dark outline adds more)",
+            "detail": "worst 7.2:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.070",
+            "detail": "0.078",
             "critical": false
           },
           {
@@ -612,7 +632,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest the-2-billion-that-never-existed (distance 0.55)",
+            "detail": "nearest why-taiwan-matters (distance 0.48)",
             "critical": false
           },
           {
@@ -623,7 +643,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.909,
+        "design_score": 0.776,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -631,12 +651,12 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "the-2-billion-that-never-existed"
+        "nearest": "why-taiwan-matters"
       }
     }
   ],
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T16:38:17Z",
+  "generated": "2026-11-08T16:41:06Z",
   "master": "output/the-day-volkswagen-became-the-most-valuable-company/thumbnails/master_D.png"
 }

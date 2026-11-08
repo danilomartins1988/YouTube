@@ -205,6 +205,16 @@ const SUBJECTS: Record<string, SubjectFn> = {
     {Array.from({length: 18}, (_, k) => <path key={k} d={`M 0 0 L ${Math.cos(k * 0.349) * 900} ${Math.sin(k * 0.349) * 900}`} stroke={P.accent} strokeOpacity={0.12} strokeWidth={60} />)}
     <text x={0} y={190} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={o.size ?? 560} fill="url(#bng)" stroke="#2A1A00" strokeWidth={18} paintOrder="stroke" filter="url(#glow)">{o.label || '#1'}</text>
   </g>,
+  /** A generic compact hatchback, side view, rim-lit (no real model's design, no badge). */
+  hatch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s * (o.flip ? -1 : 1)} ${o.s})`}>
+    <defs><linearGradient id="hb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={o.body || '#C9D2DE'} /><stop offset="1" stopColor="#3A4250" /></linearGradient></defs>
+    <ellipse cx={0} cy={118} rx={420} ry={26} fill="#000" opacity={0.6} />
+    <path d="M -400 80 L -390 20 Q -380 -10 -330 -20 L -170 -40 L -60 -150 Q -30 -170 20 -170 L 210 -170 Q 260 -168 290 -120 L 360 -30 Q 400 -20 405 20 L 410 80 Q 410 96 390 96 L -385 96 Q -402 96 -400 80 Z" fill="url(#hb)" stroke={P.key} strokeWidth={5} />
+    <path d="M -40 -140 L 40 -150 L 40 -50 L -150 -40 Z M 70 -152 L 200 -152 Q 240 -150 262 -112 L 300 -48 L 70 -48 Z" fill="#0B1220" opacity={0.92} />
+    <path d="M -380 0 L 400 -10" stroke={P.key} strokeWidth={4} opacity={0.6} />
+    {[-250, 250].map((x) => <g key={x}><circle cx={x} cy={90} r={70} fill="#05070A" stroke="#2C323D" strokeWidth={12} /><circle cx={x} cy={90} r={30} fill="#9AA6B8" /></g>)}
+    <path d="M 380 0 l 26 4 l -4 22 l -28 -6 Z" fill="#FFE7A0" filter="url(#glow)" />
+  </g>,
   /** A crashing line (consequence) */
   crash: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 7}, (_, k) => <path key={k} d={`M -700 ${-k * 110 + 300} L 700 ${-k * 110 + 300}`} stroke={P.haze} strokeOpacity={0.12} strokeWidth={2} />)}
