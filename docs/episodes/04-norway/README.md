@@ -6,7 +6,7 @@ Produced 2026-11-05 with the Remotion (React + SVG) engine. Nothing was uploaded
 
 | File | Status |
 |---|---|
-| `output/norway_documentary.mp4` | 1920x1080, H.264 High yuv420p 30 fps, AAC 48 kHz stereo, 654.7 s (10:54), 182 MB. Not in git (too large); see "Retrieving the video". |
+| `output/norway_documentary.mp4` | 1920x1080, H.264 High yuv420p 30 fps, AAC 48 kHz stereo, 680.6 s (11:21), 229 MB; cartoon redo of 2026-11-08, all amounts in US dollars (`CURRENCY.md`); YouTube package in `youtube_package.md`. Not in git (too large); see "Retrieving the video". |
 | `output/norway_thumbnail_01.png` … `_03.png` | 1280x720, rendered with Remotion (copies in this folder) |
 | `research/norway_sources.md` | 42 sources and 52 claims (2 computed from World Bank data) with URLs, dates, reference periods and status |
 | `scripts/norway_documentary.md` | Full narration with the claim behind every number |

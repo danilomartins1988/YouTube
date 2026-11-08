@@ -12,7 +12,7 @@ Somewhere in the North Sea, a platform pumps oil from beneath the seabed. The mo
 
 ## open_value - The fortune
 
-Norway's oil fund was worth 22 trillion kroner at the end of September 2026. Divide that by every person in the country, and it comes to about 3.9 million kroner each.
+Norway's oil fund was worth about 2.1 trillion dollars at the end of September 2026. Divide that by every person in the country, and it comes to about 375,000 dollars each.
 
 > `fund_value_q3_2026` [source_located] The Government Pension Fund Global was valued at NOK 22,014 billion on 30 September 2026. (sources: nbim_q3_2026)  
 > `fund_per_person` [source_located] Our calculation: NOK 22,014bn (30 Sep 2026) divided by Norway's population of 5,636,904 (1 July 2026, SSB) is about NOK 3.9 million per person. (sources: nbim_q3_2026, ssb_population)  
@@ -119,7 +119,7 @@ So the oil pays the state three ways: taxes on company profits, its own share of
 
 ## p4_cashflow - The money machine
 
-Those streams are enormous. In 2022, when energy prices spiked, the state's net cash flow from petroleum hit a record about 1.3 trillion kroner. Even in a calmer year like last year, it was 664 billion kroner.
+Those streams are enormous. In 2022, when energy prices spiked, the state's net cash flow from petroleum hit a record about 134 billion dollars. Even in a calmer year like last year, it was about 64 billion dollars.
 
 > `cashflow_2022` [source_located] In 2022 the state's net cash flow from petroleum activities reached a record NOK 1,285 billion. (sources: ssb_cashflow)  
 > `cashflow_series` [source_located] Net government cash flow from petroleum activities, NOK billion (SSB): 2022 1,285; 2023 978; 2024 702; 2025 664. (sources: ssb_cashflow)  
@@ -146,7 +146,7 @@ That much money arriving that fast is dangerous. Spend it all at home, and wages
 
 ## p5_law - The fund
 
-Norway's answer was to park the money abroad. In 1990, parliament created a petroleum fund. In May 1996, the first almost 2 billion kroner went in.
+Norway's answer was to park the money abroad. In 1990, parliament created a petroleum fund. In May 1996, the first transfer, worth about 300 million dollars, went in.
 
 > `fund_law_1990` [source_located] In 1990 the Storting passed a law establishing the Government Petroleum Fund to receive petroleum revenue. (sources: nbim_history)  
 > `first_transfer_1996` [source_located] On 30 May 1996 the Ministry of Finance made the first transfer, of almost 2 billion kroner, to the Government Petroleum Fund. (sources: nbim_25yrs)  
@@ -161,7 +161,7 @@ Parliament sets the rules. The finance ministry owns the fund on the people's be
 
 ## p5_growth - The fund
 
-Then the money compounded. Here is the value of the fund at the end of each year, in billions of kroner. The line barely moves in the beginning, then it climbs, and climbs, past twenty thousand billion.
+Then the money compounded. Here is the value of the fund at the end of each year, in billions of dollars. The line barely moves in the beginning, then it climbs, and climbs, past two thousand billion.
 
 > `fund_value_series` [source_located] Fund market value at year end, NOK billion (NBIM): 1996 47.4; 1999 222.4; 2001 613.7; 2005 1,399.1; 2008 2,275.4; 2010 3,077.4; 2012 3,815.8; 2014 6,430.7; 2016 7,510.5; 2018 8,256.0; 2020 10,913.8; 2022 12,429.1; 2023 15,764.8; 2024 19,755.0; 2025 21,268. (sources: nbim_history, nbim_2025_results)  
 
@@ -212,7 +212,7 @@ The real secret is a rule about spending. Since 2001, the government may only ta
 
 ## p7_budget - The fiscal rule
 
-In the budget for this year, the government planned to use 579 billion kroner of oil money, about 2.8 percent of the fund. The IMF estimates that money from the fund now pays for about a quarter of all public spending.
+In the budget for this year, the government planned to use about 56 billion dollars of oil money, about 2.8 percent of the fund. The IMF estimates that money from the fund now pays for about a quarter of all public spending.
 
 > `budget_2026_deficit` [source_located] The 2026 budget's structural non-oil deficit is NOK 579.4 billion, 2.8% of the fund's value and 13.1% of mainland trend GDP. (sources: mof_budget_2026)  
 > `budget_share` [source_located] According to the IMF (2026 Article IV), withdrawals from the fund finance about a fourth of public expenditure; NBIM's own page says almost 20 percent of the government budget. (sources: imf_2026, nbim_about)  
@@ -272,7 +272,7 @@ But there is a warning sign. The OECD says Norway's productivity growth is now a
 
 ## p9_volatility - The risks
 
-The first risk is the oil price. After the summer of twenty fourteen, oil fell to around a third of its level. The krone weakened by about 30 percent, and unemployment rose from 3.6 to 4.7 percent.
+The first risk is the oil price. After the summer of twenty fourteen, oil fell to around a third of its level. Norway's currency weakened by about 30 percent, and unemployment rose from 3.6 to 4.7 percent.
 
 > `oil_crash_2014` [source_located] After mid-2014 the oil price fell below USD 40 a barrel, around a third of its summer-2014 level; the krone was 30% weaker at the end of 2015 than two years earlier (Norges Bank). (sources: nb_papers_2016)  
 > `unemployment_2014_16` [source_located] Norway's LFS unemployment rate rose from 3.6% in 2014 to 4.7% in 2016 (SSB). (sources: ssb_08517)  

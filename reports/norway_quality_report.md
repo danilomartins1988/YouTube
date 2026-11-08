@@ -2,29 +2,29 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | output/norway_documentary.mp4 (182.1 MB) |
+| File exists | PASS | /home/user/YouTube/output/why-norway-is-so-rich/documentary/why-norway-is-so-rich--documentary.mp4 (228.6 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 10-12 min | PASS | 654.70 s (10:54) |
+| Duration 10-12 min | PASS | 680.57 s (11:20) |
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
-| Caption/voice sync | PASS | 275 cues; median cue-start offset 0.05 s, p90 0.39 s; 100% of speech captioned |
+| Caption/voice sync | PASS | 278 cues; median cue-start offset 0.06 s, p90 0.39 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>6 s) | PASS | none |
+| No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
-- Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Scenes: 48; types: act_title x10, bar_chart x3, big_counter x3, compare x5, donut x2, fund_flow x4, isometric x2, kinetic_text x6, line_chart x2, map x5, oil_platform x3, people_ratio x1, timeline x2
-- Average scene length: 13.6 s; act cards are music-only.
+- Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
+- Scenes: 48; types: act_title x10, bar_chart x3, donut x2, engine_cartoon x23, engine_draw x4, line_chart x2, map x4
+- Average scene length: 14.2 s; act cards are music-only.
 
 ## Pipeline QC report
 
 # QC report: why-norway-is-so-rich / documentary (long_16x9)
 
-- Runtime: **654.7 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 182.1 MB
-- Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Errors: **0**, warnings: **29**
+- Runtime: **680.57 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 228.6 MB
+- Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
+- Errors: **0**, warnings: **30**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
@@ -39,18 +39,19 @@
 - [WARNING] (timing) Segment p3_commandments pace 101 wpm (numerals count as one word)
 - [WARNING] (timing) Segment p3_statoil pace 94 wpm (numerals count as one word)
 - [WARNING] (timing) Segment p3_tax pace 114 wpm (numerals count as one word)
-- [WARNING] (timing) Segment p4_cashflow pace 117 wpm (numerals count as one word)
+- [WARNING] (timing) Segment p4_cashflow pace 113 wpm (numerals count as one word)
 - [WARNING] (timing) Segment p4_exports pace 114 wpm (numerals count as one word)
 - [WARNING] (timing) Segment p4_problem pace 115 wpm (numerals count as one word)
-- [WARNING] (timing) Segment p5_law pace 101 wpm (numerals count as one word)
+- [WARNING] (timing) Segment p5_law pace 108 wpm (numerals count as one word)
 - [WARNING] (timing) Segment p6_world pace 105 wpm (numerals count as one word)
+- [WARNING] (timing) Segment p9_volatility pace 119 wpm (numerals count as one word)
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'billion' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'thousand' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
+- [WARNING] (sources) Number word 'two' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'quarter' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'four' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'half' outside a placeholder - confirm it is not an unsourced statistic.
@@ -69,13 +70,13 @@
 - `bad_years` (source_located): The fund returned -23.3% in 2008 (financial crisis) and -14.1% in 2022; it returned 15.1% in 2025.  
   
 - `budget_2026_deficit` (source_located): The 2026 budget's structural non-oil deficit is NOK 579.4 billion, 2.8% of the fund's value and 13.1% of mainland trend GDP.  
-  From search snippet of the Ministry page (403). The revised budget restates it as NOK 584.0bn (price basis).
+  From search snippet of the Ministry page (403). The revised budget restates it as NOK 584.0bn (price basis). USD: NOK 579.4bn / 10.3852 (2025 average) = $55.8bn.
 - `budget_share` (source_located): According to the IMF (2026 Article IV), withdrawals from the fund finance about a fourth of public expenditure; NBIM's own page says almost 20 percent of the government budget.  
   Sources differ (IMF 2026 'about a fourth' of expenditure; NBIM undated 'almost 20 percent' of the budget). Narration attributes to the IMF.
 - `cashflow_2022` (source_located): In 2022 the state's net cash flow from petroleum activities reached a record NOK 1,285 billion.  
-  
+  USD at Fed H.10 annual averages: 2022 9.6138, 2025 10.3852.
 - `cashflow_series` (source_located): Net government cash flow from petroleum activities, NOK billion (SSB): 2022 1,285; 2023 978; 2024 702; 2025 664.  
-  
+  Converted to USD bn at Fed H.10 annual average of each year.
 - `deposits_less_than_half` (source_located): According to NBIM, petroleum-revenue deposits account for less than half of the fund's value; the rest is investment return.  
   
 - `ekofisk_1969` (source_located): Phillips Petroleum reported the Ekofisk discovery to the Norwegian government just before Christmas 1969 (23 December); it was then the world's largest offshore field.  
@@ -85,7 +86,7 @@
 - `equinor_67` (source_located): The Norwegian state owns 67% of the shares in Equinor (formerly Statoil).  
   
 - `first_transfer_1996` (source_located): On 30 May 1996 the Ministry of Finance made the first transfer, of almost 2 billion kroner, to the Government Petroleum Fund.  
-  
+  USD: NOK ~2bn / 6.4594 (1996 average) = $310m.
 - `fiscal_rule` (source_located): Under the fiscal rule (since 2001), transfers from the fund to the budget shall over time follow the expected real return on the fund, set at 4% in 2001 and reduced to 3% in 2017.  
   Ministry page returned 403; wording from snippet. Reviewer to read the page.
 - `frontfag` (source_located): In Norwegian wage bargaining, industries exposed to international competition negotiate first, setting a norm for the rest of the economy (SSB, 2023).  
@@ -97,11 +98,11 @@
 - `fund_ownership_share` (source_located): At the end of 2025 the fund's average holding in the world's listed companies was 1.5 percent.  
   
 - `fund_per_person` (source_located): Our calculation: NOK 22,014bn (30 Sep 2026) divided by Norway's population of 5,636,904 (1 July 2026, SSB) is about NOK 3.9 million per person.  
-  Derived figure (not published by NBIM). Label 'our calculation' on screen.
+  Derived figure (not published by NBIM). Label 'our calculation' on screen. USD: NOK 3.9m / 10.3852 = $375,534.
 - `fund_value_q3_2026` (source_located): The Government Pension Fund Global was valued at NOK 22,014 billion on 30 September 2026.  
-  
+  USD: NOK 22,014bn / 10.3852 (Fed H.10 2025 annual average, latest full year) = $2120bn.
 - `fund_value_series` (source_located): Fund market value at year end, NOK billion (NBIM): 1996 47.4; 1999 222.4; 2001 613.7; 2005 1,399.1; 2008 2,275.4; 2010 3,077.4; 2012 3,815.8; 2014 6,430.7; 2016 7,510.5; 2018 8,256.0; 2020 10,913.8; 2022 12,429.1; 2023 15,764.8; 2024 19,755.0; 2025 21,268.  
-  Read from the NBIM history timeline, which lists each value against the following year; confirm the year mapping with NBIM's key-figures data. nbim.no market-value page gives 15,757 (2023) and 19,742 (2024). Points are uneven years, so the chart interpolates between them.
+  Read from the NBIM history timeline, which lists each value against the following year; confirm the year mapping with NBIM's key-figures data. nbim.no market-value page gives 15,757 (2023) and 19,742 (2024). Points are uneven years, so the chart interpolates between them. Converted to USD bn at the Fed H.10 annual average of each year.
 - `gas_share_europe` (source_located): Norway's gas exports in 2025 equalled more than 30% of the total gas consumption of the EU and the UK, through a pipeline network of about 8,800 km.  
   
 - `geology_1958` (source_located): In 1958 the Geological Survey of Norway told the Foreign Ministry that the chance of finding coal, oil or sulphur on the continental shelf could be discounted.  
