@@ -166,15 +166,17 @@ stage("s14_scramble", "m2_scramble", {
                  co("Soulbrain races to match Japanese purity", 960, 960, C("Soulbrain"), "gold", screen=True, size=38, until=C("For the first time", -0.3)),
                  co("A supply of chemicals turned into a lever", 960, 960, C("For the first time"), "risk", screen=True, size=40)]},
     sources=["aj_2019"])
-stage("s15_after", "m2_after", {
-    "zones": [Z("fab", label="yellow")], "worldW": 2600,
-    "cam": [{"at": 0, "x": 900, "y": 540, "zoom": 1.0}, {"at": C("But for the most advanced"), "x": 1600, "y": 540, "zoom": 0.9, "dur": 2.4}], "drift": 3,
-    "items": [it("chart", x=900, y=420, w=520, h=300, at=C("makes more of the ordinary"), dur=2.5, text="KOREA: HOME-MADE ORDINARY MATERIALS", pts=[0.2, 0.35, 0.5, 0.6, 0.7], color="green"),
-              it("chart", x=1700, y=420, w=520, h=300, at=C("But for the most advanced"), dur=2.5, text="ADVANCED: DEPENDENCE ON JAPAN", pts=[0.5, 0.4, 0.55, 0.7, 0.85], color="risk"),
-              it("arrow", **{"from": [1300, 760], "to": [2100, 760]}, at=C("moves the finish line"), text="FINISH LINE MOVES", color="gold")],
-    "callouts": [co("Ordinary materials: more made in Korea", 960, 960, C("makes more of the ordinary"), "white", screen=True, size=38, sub="Digital Today", until=C("But for the most advanced", -0.3)),
-                 co("Most advanced: dependence rises again", 960, 960, C("But for the most advanced"), "risk", screen=True, size=40)]},
-    sources=["dt_japan"])
+add("p15_after", "m2_after", "engine_draw", {
+    "title": "Did Korea break free?", "board": BOARD, "draw_start": C("Did Korea break free"), "speed": 1400, "push": 0.003,
+    "enter": {"from": 2200, "to": 1620, "at": 0.2, "dur": 1.3},
+    "strokes": [
+        {"d": "M 560 820 L 1500 820 M 560 820 L 560 330", "color": "ink", "width": 4, "start": C("Did Korea break free"), "label": lbl("2019 → today", 1420, 860, 22, "ink")},
+        {"d": "M 600 760 Q 900 700 1050 560 Q 1200 440 1450 400", "color": "accent3", "width": 7, "start": C("makes more of the ordinary"), "label": lbl("ORDINARY: MADE IN KOREA", 1250, 380, 22, "accent3")},
+        {"d": "M 600 520 Q 800 600 950 560 Q 1150 470 1450 330", "color": "risk", "width": 7, "start": C("But for the most advanced"), "label": lbl("ADVANCED: JAPAN AGAIN", 1250, 310, 22, "risk")},
+        {"d": "M 1300 880 L 1460 880 M 1430 860 L 1460 880 L 1430 900", "color": "accent", "width": 5, "start": C("moves the finish line"), "label": lbl("finish line moves", 1180, 885, 22, "accent")},
+    ],
+    "actions": [{"kind": "point", "at": C("the more Korea depends", 0.2), "dur": 1.4, "target": [1450, 330]}],
+    "scale": 0.86, "floor": 1040}, sources=["dt_japan"])
 kinetic("s16_t2", "m2_transition", [("A chemical can be restricted", 60, "A chemical can", None, False), ("A gas can simply disappear", 66, "A gas can", "risk", False)])
 
 # ====================================================================== PART 3: the gas

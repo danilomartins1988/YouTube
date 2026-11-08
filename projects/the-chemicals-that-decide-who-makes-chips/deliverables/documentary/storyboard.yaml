@@ -1183,93 +1183,85 @@ scenes:
   - aj_2019
   assets:
   - font:inter
-- id: s15_after
+- id: p15_after
   segment: m2_after
-  type: engine_cartoon
+  type: engine_draw
   params:
-    zones:
-    - set: fab
-      x0: -1600
-      x1: 4600
-      label: yellow
-    worldW: 2600
-    cam:
-    - at: 0
-      x: 900
-      y: 540
-      zoom: 1.0
-    - at:
-        cue: But for the most advanced
-      x: 1600
-      y: 540
-      zoom: 0.9
-      dur: 2.4
-    drift: 3
-    items:
-    - kind: chart
-      x: 900
-      y: 420
-      w: 520
-      h: 300
-      at:
+    title: Did Korea break free?
+    board: *id003
+    draw_start:
+      cue: Did Korea break free
+    speed: 1400
+    push: 0.003
+    enter:
+      from: 2200
+      to: 1620
+      at: 0.2
+      dur: 1.3
+    strokes:
+    - d: M 560 820 L 1500 820 M 560 820 L 560 330
+      color: ink
+      width: 4
+      start:
+        cue: Did Korea break free
+      label:
+        text: 2019 → today
+        x: 1420
+        y: 860
+        size: 22
+        color: ink
+        anchor: middle
+      kind: stroke
+    - d: M 600 760 Q 900 700 1050 560 Q 1200 440 1450 400
+      color: accent3
+      width: 7
+      start:
         cue: makes more of the ordinary
-      dur: 2.5
-      text: 'KOREA: HOME-MADE ORDINARY MATERIALS'
-      pts:
-      - 0.2
-      - 0.35
-      - 0.5
-      - 0.6
-      - 0.7
-      color: green
-    - kind: chart
-      x: 1700
-      y: 420
-      w: 520
-      h: 300
-      at:
-        cue: But for the most advanced
-      dur: 2.5
-      text: 'ADVANCED: DEPENDENCE ON JAPAN'
-      pts:
-      - 0.5
-      - 0.4
-      - 0.55
-      - 0.7
-      - 0.85
+      label:
+        text: 'ORDINARY: MADE IN KOREA'
+        x: 1250
+        y: 380
+        size: 22
+        color: accent3
+        anchor: middle
+      kind: stroke
+    - d: M 600 520 Q 800 600 950 560 Q 1150 470 1450 330
       color: risk
-    - kind: arrow
-      from:
-      - 1300
-      - 760
-      to:
-      - 2100
-      - 760
-      at:
+      width: 7
+      start:
+        cue: But for the most advanced
+      label:
+        text: 'ADVANCED: JAPAN AGAIN'
+        x: 1250
+        y: 310
+        size: 22
+        color: risk
+        anchor: middle
+      kind: stroke
+    - d: M 1300 880 L 1460 880 M 1430 860 L 1460 880 L 1430 900
+      color: accent
+      width: 5
+      start:
         cue: moves the finish line
-      text: FINISH LINE MOVES
-      color: gold
-    callouts:
-    - text: 'Ordinary materials: more made in Korea'
-      x: 960
-      y: 960
+      label:
+        text: finish line moves
+        x: 1180
+        y: 885
+        size: 22
+        color: accent
+        anchor: middle
+      kind: stroke
+    actions:
+    - kind: point
       at:
-        cue: makes more of the ordinary
-      color: white
-      sub: Digital Today
-      until:
-        cue: But for the most advanced
-        offset: -0.3
-      size: 38
-      screen: true
-    - text: 'Most advanced: dependence rises again'
-      x: 960
-      y: 960
-      at:
-        cue: But for the most advanced
-      color: risk
-      size: 40
-      screen: true
+        cue: the more Korea depends
+        offset: 0.2
+      dur: 1.4
+      target:
+      - 1450
+      - 330
+    scale: 0.86
+    floor: 1040
   sources:
   - dt_japan
   assets:
