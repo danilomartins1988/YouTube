@@ -12,46 +12,8 @@ Use this package for `output/taiwan_v2_documentary.mp4`; the original v1 keeps i
 
 ## Recommended hook
 
-Keep the opening as rendered: the cartoon island with its chip factory sending chips across the ocean, "Smaller than
-Switzerland", then the map zoom onto Taiwan before the channel intro.
-
-## Description
-
-```
-Taiwan covers about 36,000 square kilometers, less than Switzerland. Yet in 2022 it held 69% of the world's capacity to make the most advanced logic chips, those below 10 nanometers.
-
-In this animated documentary we find out how Taiwan became so important (TSMC and the foundry model), why nobody can simply copy it (lithography, yield, and tens of billions of dollars a year), who depends on it (Nvidia, Apple, AMD, cloud companies, carmakers) and why not every industry depends on it equally, what a disruption could cost (a clearly labelled hypothetical, next to the real 2021 chip shortage), and whether the US, Japan, Europe and Korea can spread the risk.
-
-CHAPTERS
-0:00 The island smaller than Switzerland
-0:23 How Taiwan became essential
-2:14 Why chips are so hard to make
-4:56 Who depends on Taiwan
-7:21 A hypothetical disruption
-9:16 The race to diversify
-10:56 The island at the center
-
-KEY SOURCES
-- SIA / Boston Consulting Group (2024), "Emerging Resilience in the Semiconductor Supply Chain" (capacity shares, 2022 and 2032 forecast; $2.3 trillion fab investment)
-- TrendForce, 2Q 2026 foundry ranking (TSMC 72.5%)
-- TSMC: 4Q 2025 results and earnings call; US$165bn US investment press release (March 2025) (2025 revenue $122.4bn; 77% of wafer revenue at 7 nm or below; 2026 capex guidance $52-56bn); 2025 annual report as reported by CNA/Taiwan News (largest customers 19% and 17%); US investment of $165bn; JASM (Kumamoto)
-- NVIDIA Form 10-K, fiscal 2026 (suppliers)
-- ASML (EUV systems; 48 shipped in 2025, as reported)
-- Taiwan Ministry of Finance, 2025 exports, via AmCham Taiwan and Focus Taiwan ($640.8bn, +35%)
-- AlixPartners press release, 23 September 2021 ($210bn auto revenue, 7.7 million vehicles)
-- Bloomberg Economics (January 2024 scenarios: ≈10% of world GDP for a war, ≈5% for a blockade)
-- US CHIPS and Science Act (CFR explainer: about $53bn, $39bn for manufacturing); OECD on the European Chips Act (20% by 2030); ESMC Dresden coverage
-- CIA World Factbook, 2023 archive (areas of Taiwan and Switzerland)
-
-NOTES
-- "Foundry share" is the share of contract chipmaking revenue, not of all chipmaking.
-- Taiwan's share of TOTAL chipmaking capacity (all chip types) was 18% in 2022; its dominance is at the leading edge.
-- The Bloomberg figures are scenario estimates that depend heavily on assumptions. The disruption part is a thought experiment, not a forecast.
-
-This is an independent educational documentary. It is not affiliated with, endorsed by or sponsored by TSMC, any government or any company mentioned. All visuals are original animations; no logos, flags, product photos or footage are used. Narration voice is AI-generated.
-
-#Taiwan #semiconductors #economics
-```
+Keep the opening as rendered: the cartoon science park (fabs, scooters, a conveyor of chips, a plane taking off),
+"smaller than Switzerland", then the map zoom onto Taiwan before the channel intro.
 
 ## Keywords / tags
 

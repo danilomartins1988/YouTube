@@ -25,11 +25,11 @@ In this animated documentary:
 CHAPTERS
 0:00 The island that got rich from two letters
 0:40 The lucky letters
-2:33 The money machine
-4:38 The boom
-6:23 What the money buys
-8:04 Can it last?
-10:08 The lucky island
+2:34 The money machine
+4:42 The boom
+6:27 What the money buys
+8:11 Can it last?
+10:16 The lucky island
 
 KEY SOURCES
 - IMF (May 2024): 2023 revenue EC$87m (about $32m), just over 20% of government revenue (about 5% before the boom); 144,000 names in 2022, 354,000 in 2023; $140 for a two-year registration; litigate.ai auctioned for $13,000; tourism 37% of GDP
