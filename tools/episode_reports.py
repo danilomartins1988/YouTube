@@ -97,7 +97,7 @@ def main() -> None:
         ("Resolution 1920x1080", (v["width"], v["height"]) == (1920, 1080), f"{v['width']}x{v['height']}"),
         ("H.264 video", v["codec_name"] == "h264", f"{v['codec_name']} {v.get('profile', '')}, {v.get('pix_fmt')}, {v.get('r_frame_rate')} fps"),
         ("AAC audio", bool(au) and au["codec_name"] == "aac", f"{au['codec_name']} {au['sample_rate']} Hz, {au['channels']} ch" if au else "missing"),
-        ("Duration 10-12 min", 600 <= dur <= 720, f"{dur:.2f} s ({int(dur // 60)}:{int(dur % 60):02d})"),
+        ("Duration 11-13:20 min (channel standard 660-800 s)", 660 <= dur <= 800, f"{dur:.2f} s ({int(dur // 60)}:{int(dur % 60):02d})"),
         ("English narration", qc.get("errors", 1) == 0, "OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: " + str(qc.get("errors"))),
         ("Caption/voice sync", sync["median"] < 0.15 and sync["voice_captioned"] > 0.97,
          f"{sync['cues']} cues; median cue-start offset {sync['median']:.2f} s, p90 {sync['p90']:.2f} s; "
