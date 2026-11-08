@@ -1,6 +1,6 @@
 # The Machine Only One Company on Earth Can Build
 
-_Every advanced chip in the world is printed by a machine that only one company can build: ASML, from a small town in the Netherlands. Five missions explain what the machine does, how one company ended up alone, who builds it with them, how it makes money, and why governments now fight over where it can go._
+_Every advanced chip in the world is printed by a machine that only one company can build: ASML, from a small town in the Netherlands. The film explains what the machine does, how one company ended up alone, who builds it with them, how it makes money, and why governments now fight over where it can go._
 
 ## h_question - The machine
 
@@ -15,13 +15,6 @@ That company exists. Each machine costs about 250 million dollars. And it comes 
 > `euv_price` [source_located] Reuters describes ASML's EUV lithography machines as costing about $250 million each (January 2026). (sources: reuters_explainer)  
 > `founded_1984` [source_located] ASML was founded in 1984 as a joint venture of Philips and ASM International, and has been based in Veldhoven, the Netherlands. (sources: asml_history)  
 
-## h_missions - The machine
-
-Today we have five missions. Find out what this machine actually does, how one company ended up alone, who helps build it, how it makes money, and why governments now fight over where it is allowed to go.
-
-> Contains editorial interpretation (marked analysis).  
-> Episode roadmap.  
-
 ## m1_card - What the machine does
 
 
@@ -29,7 +22,7 @@ Today we have five missions. Find out what this machine actually does, how one c
 
 ## m1_question - What the machine does
 
-Mission one. What does this machine actually do? It matters because every phone, every laptop and every AI data center depends on what it prints.
+What does this machine actually do? It matters because every phone, every laptop and every AI data center depends on what it prints.
 
 > Contains editorial interpretation (marked analysis).  
 > Mission question and stakes.  
@@ -65,13 +58,13 @@ But this light is absorbed by almost everything, even air. So the whole path run
 
 ## m1_discovery - What the machine does
 
-Here is the discovery. The result is a machine the size of a school bus, weighing 150 tons. To deliver one, ASML packs it into around 40 shipping containers and flies it across the world on cargo planes.
+The result is a machine the size of a school bus, weighing 150 tons. To deliver one, ASML packs it into around 40 shipping containers and flies it across the world on cargo planes.
 
 > `machine_size` [source_located] Reuters (Jan 2026): the machines are the size of a school bus and weigh 150 tons; they are assembled in the Netherlands, packed into around 40 containers and taken on 747 cargo planes. (sources: reuters_explainer)  
 
 ## m1_transition - What the machine does
 
-So why is there only one company that can build it? That is mission two.
+So why is there only one company that can build it?
 
 
 ## m2_card - How one company ended up alone
@@ -81,7 +74,7 @@ So why is there only one company that can build it? That is mission two.
 
 ## m2_question - How one company ended up alone
 
-Mission two. How did a small Dutch company end up as the only one? It matters because, in a normal market, monopolies like this don't last.
+How did a small Dutch company end up as the only one? It matters because, in a normal market, monopolies like this don't last.
 
 > Contains editorial interpretation (marked analysis).  
 > Mission question.  
@@ -118,14 +111,14 @@ Then ASML went after the missing pieces. It moved to buy Cymer, the American mak
 
 ## m2_discovery - How one company ended up alone
 
-The discovery: ASML didn't win alone. It won by tying its customers and its suppliers to the same bet. Today it is the only company in the world that makes extreme ultraviolet machines, and it has become Europe's most valuable company.
+In the end, ASML didn't win alone. It won by tying its customers and its suppliers to the same bet. Today it is the only company in the world that makes extreme ultraviolet machines, and it has become Europe's most valuable company.
 
 > `market_90` [source_located] ASML holds a monopoly on EUV machines and has become Europe's most valuable company (Reuters, January 2026). (sources: reuters_explainer)  
 > `euv_only` [source_located] ASML is the only company that makes EUV lithography systems, used to print the smallest features on the most advanced chips. (sources: asml_euv, reuters_explainer)  
 
 ## m2_transition - How one company ended up alone
 
-But a machine this complex is never built by one company. Who else is inside it? Mission three.
+But a machine this complex is never built by one company. Who else is inside it?
 
 
 ## m3_card - Who builds it
@@ -135,7 +128,7 @@ But a machine this complex is never built by one company. Who else is inside it?
 
 ## m3_question - Who builds it
 
-Mission three. Who actually builds this machine? It matters because the monopoly is not one company. It is a network.
+Who actually builds this machine? It matters because the monopoly is not one company. It is a network.
 
 > Contains editorial interpretation (marked analysis).  
 > Mission question.  
@@ -166,7 +159,7 @@ Then comes the strangest part. Each machine is built and tested in the Netherlan
 
 ## m3_transition - Who builds it
 
-So where does all that money go, and how much is there? Mission four.
+So where does all that money go, and how much is there?
 
 
 ## m4_card - How it makes money
@@ -176,7 +169,7 @@ So where does all that money go, and how much is there? Mission four.
 
 ## m4_question - How it makes money
 
-Mission four. How does ASML make money? It matters because this one company sits in the middle of the whole AI boom.
+How does ASML make money? It matters because this one company sits in the middle of the whole AI boom.
 
 > Contains editorial interpretation (marked analysis).  
 > Mission question.  
@@ -204,14 +197,14 @@ And who buys them? In twenty twenty-five, customers in China made up 29 percent 
 
 ## m4_flywheel - How it makes money
 
-Here is the discovery. The money flows in a loop. Chipmakers pay for machines. ASML spends about 5.3 billion dollars a year on research. That research makes the next machine, which chipmakers need to stay ahead, so they order again. At the end of twenty twenty-five, ASML already had almost 44 billion dollars of orders waiting.
+The money flows in a loop. Chipmakers pay for machines. ASML spends about 5.3 billion dollars a year on research. That research makes the next machine, which chipmakers need to stay ahead, so they order again. At the end of twenty twenty-five, ASML already had almost 44 billion dollars of orders waiting.
 
 > `rd_2025` [source_located] ASML spent €4.7 billion on R&D in 2025 (about $5.3bn at 1.13). (sources: asml_ar_2025, ecb_2025_avg)  
 > `backlog` [source_located] ASML's order backlog at the end of 2025 was €38.8 billion (about $43.8bn at 1.13). (sources: asml_q4_2025, ecb_2025_avg)  
 
 ## m4_transition - How it makes money
 
-A machine this valuable is also a weapon. Mission five.
+A machine this valuable is also a weapon.
 
 > Contains editorial interpretation (marked analysis).  
 > Framing line.  
@@ -223,7 +216,7 @@ A machine this valuable is also a weapon. Mission five.
 
 ## m5_question - Where the machine may go
 
-Mission five. Who decides where these machines are allowed to go? It matters because whoever controls the machine controls who can make the most advanced chips.
+Who decides where these machines are allowed to go? It matters because whoever controls the machine controls who can make the most advanced chips.
 
 > Contains editorial interpretation (marked analysis).  
 > Mission question.  
@@ -252,9 +245,9 @@ The gate has a price for ASML too. The company expects China to fall to about 20
 > `regions` [source_located] ASML 2025 total net sales by customer location (20-F): China €9,519.7m (29.1%), Taiwan €8,337.9m (25.5%), South Korea €8,159.6m (25.0%), United States €4,089.1m (12.5%), Japan €1,420.9m (4.3%) of €32,667.3m; China was 36.1% in 2024. (sources: asml_ar_2025)  
 > Chinese efforts to build alternatives are reported by Reuters (reuters_explainer).  
 
-## payoff - Mission complete
+## payoff - The lesson
 
-So, mission complete. The machine only one company can build is not a single invention. It is forty years of bets, a network of suppliers no one else can copy, and customers who paid to make it real. That is why a small town in the Netherlands holds one of the most important keys to the future of computing. And the smallest details on the most powerful chips in the world all begin as a drop of tin, hit by a laser, inside one Dutch machine.
+So, the machine only one company can build is not a single invention. It is forty years of bets, a network of suppliers no one else can copy, and customers who paid to make it real. That is why a small town in the Netherlands holds one of the most important keys to the future of computing. And the smallest details on the most powerful chips in the world all begin as a drop of tin, hit by a laser, inside one Dutch machine.
 
 > `founded_1984` [source_located] ASML was founded in 1984 as a joint venture of Philips and ASM International, and has been based in Veldhoven, the Netherlands. (sources: asml_history)  
 > `suppliers` [source_located] ASML had about 5,100 suppliers and more than 44,000 employees (FTE) in 2025. (sources: asml_ar_2025)  
@@ -262,9 +255,9 @@ So, mission complete. The machine only one company can build is not a single inv
 > Contains editorial interpretation (marked analysis).  
 > Conclusion drawn from the sourced missions; forty years = 1984 to 2025.  
 
-## teaser - Mission complete
+## teaser - The lesson
 
-Next time on The Hidden Economics, we follow the cables at the bottom of the ocean that carry the world's internet. This is The Hidden Economics.
+Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
 
 > Contains editorial interpretation (marked analysis).  
 > Teaser; the next episode's claims will be sourced in its own dossier.  

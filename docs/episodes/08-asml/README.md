@@ -7,36 +7,38 @@ human reviewer should still sign off the claims (see `FACT_CHECK.md`).
 
 | File | What it is | Length |
 |---|---|---|
-| `output/asml_documentary.mp4` | Final cut: 1920x1080, 30 fps, H.264/AAC, −16.2 LUFS. Intro after the hook; subtitles in `output/the-machine-only-one-company-can-build/documentary/subtitles.srt` | 11:05 |
-| `output/asml_documentary_light.mp4` | 1280x720 copy for download | 11:05 |
+| `output/asml_documentary.mp4` | Final cut: 1920x1080, 30 fps, H.264/AAC, −16.2 LUFS. Intro after the hook; subtitles in `output/the-machine-only-one-company-can-build/documentary/subtitles.srt` | 11:12 |
+| `output/asml_documentary_light.mp4` | 1280x720 copy for download | 11:12 |
 
-First episode built on the **animation engine** (`remotion/src/animation-engine/`, scene types `engine_*`).
+**Cartoon redo (2026-11-08):** 19 scenes rebuilt as bespoke CartoonStage worlds (chip fab, Dutch town, tin-droplet
+light source, supplier map, export gate). Mission sentences removed from the narration (structure internal only);
+payoff chapter "The lesson"; generic teaser. Numbers unchanged. Generator: `tools/gen_asml_storyboard.py`.
 
-## Mission structure
+## Structure (internal; cards show the title only)
 
 | Time | Part |
 |---|---|
-| 0:00 | Hook: "What if the most advanced chips on Earth could only be printed by one machine…" (turning schematic machine, zoom into Veldhoven) |
+| 0:00 | Hook: "What if the most advanced chips on Earth could only be printed by one machine…" (cartoon fab, one huge machine) |
 | 0:19 | Channel intro (once) |
-| 0:39 | Mission 1, what the machine does: presenter draws lithography; pen drawings of the tin-plasma light source and the mirror path in vacuum |
-| 2:49 | Mission 2, how one company ended up alone: timeline; presenter draws the 2012 customer co-investment; timeline → network (Cymer, Zeiss) |
-| 5:10 | Mission 3, who builds it: exploded machine (schematic modules); supplier map (Zeiss Oberkochen/Wetzlar, Cymer San Diego); "built twice" flow |
-| 6:52 | Mission 4, how it makes money: presenter draws a bar chart (sales, profit, EUV); per-machine maths; sales by customer location; money loop |
-| 8:44 | Mission 5, where the machine may go: export map with a blocked route to China; presenter draws the export-licence gate; cost of the gate |
-| 10:21 | Payoff ("mission complete") and teaser (undersea cables) |
+| 0:24 | What the machine does |
+| 2:45 | How one company ended up alone |
+| 5:05 | Who builds it |
+| 6:52 | How it makes money |
+| 8:46 | Where the machine may go |
+| 10:26 | The lesson (payoff) and generic teaser |
 
 ## Presenter sequences (4, `engine_draw`, all drawing on the board)
 
 | Time | Scene | Length | What the character does |
 |---|---|---|---|
-| 0:54 | `p06_draw` | 15.2 s | draws light → mask → lens → wafer, then steps aside and points |
-| 3:41 | `p15_bet` | 24.0 s | explains, then draws Intel/TSMC/Samsung → ASML with "23% stake + research funding" |
+| 0:41 | `p06_draw` | 15.2 s | draws light → mask → lens → wafer, then steps aside and points |
+| 3:40 | `p15_bet` | 24.0 s | explains, then draws Intel/TSMC/Samsung → ASML with "23% stake + research funding" |
 | 7:06 | `p28_sales` | 23.6 s | draws a bar chart: $37.0bn sales, $10.8bn profit, $13.1bn from 48 EUV machines |
-| 9:26 | `p36_gate` | 21.3 s | draws supply network → gate → buyers, one arrow crossed out |
+| 9:28 | `p36_gate` | 21.3 s | draws supply network → gate → buyers, one arrow crossed out |
 
 ## Explanatory animations (engine and signature scenes)
 
-Exploded machine (×2), pen-drawn light source and mirror path, timeline → network, supplier map, export map with a blocked route, payoff map, "built twice" flow, money loop, sales-by-location bar chart.
+Cartoon fab with the lithography machine, tin droplets hit by lasers, mirror path in vacuum, Dutch town, timeline → network, supplier map, export map with a blocked route, money loop, presenter bar chart.
 
 ## Deliverables
 

@@ -1,6 +1,6 @@
 # Research dossier - The Machine Only One Company on Earth Can Build
 
-Generated 2026-11-06T19:04:57+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-08T12:17:56+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 

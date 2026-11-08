@@ -11,8 +11,8 @@ Prepared for manual publishing. Nothing has been uploaded. Every number below co
 
 ## Recommended hook
 
-Keep the opening as rendered: the slowly turning schematic machine with "One machine. One company.", then
-the zoom from the globe into Veldhoven with "≈ $250m per machine", before the channel intro. The first spoken
+Keep the opening as rendered (cartoon redo, 2026-11-08): a cartoon chip fab where one huge lithography machine
+prints a wafer, with "The most advanced chips on Earth…" / "…printed by one machine", before the channel intro. The first spoken
 line ("What if the most advanced chips on Earth could only be printed by one machine…") is the promise of
 title option 1.
 
@@ -21,7 +21,7 @@ title option 1.
 ```
 Every advanced chip in the world, from AI data centers to new phones, is printed by a machine that only one company on Earth can build: ASML, from Veldhoven in the Netherlands. Each one costs about $250 million.
 
-In five missions we find out:
+In this episode:
 1. What the machine actually does: printing chips with extreme ultraviolet light, made by hitting up to 50,000 droplets of molten tin every second with lasers
 2. How one company ended up alone: its own customers, Intel, TSMC and Samsung, bought 23% of it to fund the bet
 3. Who builds it: Zeiss optics, Cymer light sources and about 5,100 suppliers
@@ -30,12 +30,12 @@ In five missions we find out:
 
 CHAPTERS
 0:00 One machine, one company
-0:39 Mission 1: What the machine does
-2:49 Mission 2: How one company ended up alone
-5:10 Mission 3: Who builds it
-6:52 Mission 4: How it makes money
-8:44 Mission 5: Where the machine may go
-10:21 Mission complete
+0:24 What the machine does
+2:45 How one company ended up alone
+5:05 Who builds it
+6:52 How it makes money
+8:46 Where the machine may go
+10:26 The lesson
 
 KEY SOURCES
 - ASML Q4 and full-year 2025 results and investor presentation (SEC 6-K, Jan 2026): net sales $37.0bn, net income $10.8bn, 48 EUV systems, EUV system sales $13.1bn, order backlog $43.8bn
@@ -56,7 +56,7 @@ NOTES
 - ASML reports in euros; all amounts are converted to US dollars at the ECB 2025 average rate of 1.13.
 - "About $273 million per EUV machine" is our calculation (EUV system sales divided by 48 systems); Reuters puts the price at about $250 million.
 - The High-NA price is a press estimate.
-- The machine is shown as a schematic of its main modules, not its physical layout.
+- The machine is shown as a cartoon of its main modules, not its physical layout.
 
 This is an independent educational documentary. It is not affiliated with, endorsed by or sponsored by ASML, Zeiss, Cymer, Intel, TSMC, Samsung or any government. All visuals are original animations; no logos, product photos or footage are used. Narration voice is AI-generated.
 
@@ -79,13 +79,13 @@ ASML, ASML explained, EUV, EUV lithography, extreme ultraviolet, how chips are m
 Every figure is sourced in the description. Three notes:
 1) ASML reports in euros; we converted at the ECB 2025 average (1.13 dollars per euro).
 2) "About $273 million per EUV machine" is our own division (EUV sales ÷ 48 machines); Reuters estimates about $250 million.
-3) The machine in the animation is a schematic of its main modules, not its real layout.
+3) The machine in the animation is a cartoon of its main modules, not its real layout.
 Think a number is wrong? Reply with a source and we'll check it and update this comment.
 ```
 
 ## End screen
 
-- **Last 20 seconds:** the teaser (undersea internet cables). Link that episode once published; until then link
+- **Last 20 seconds:** the generic teaser ("another hidden link of the world economy"). Link
   Episode 07 ("Why Taiwan Matters So Much to the Global Economy"), which this film follows directly.
 - **Second slot:** Episode 06 (Nvidia).
 - **Subscribe element** on the final card.
@@ -95,7 +95,7 @@ Think a number is wrong? Reply with a source and we'll check it and update this 
 | When | Metric | What it tells you |
 |---|---|---|
 | 48 h | Retention at 0:15, 0:30 and 1:00 | Whether the "one machine, one company" hook holds through the intro |
-| 7 days | Retention in Mission 1 (the light source and mirrors) | Whether the technical explanation keeps viewers or needs to be shorter |
-| 7 days | Rewatches on the engine sequences (exploded machine, shipping flow, export map) | Whether the new animation engine is the strongest material |
+| 7 days | Retention in the first chapter (the light source and mirrors) | Whether the technical explanation keeps viewers or needs to be shorter |
+| 7 days | Rewatches on the cartoon sequences (fab, tin droplets, supplier map, export gate) | Whether the new animation engine is the strongest material |
 | 7 days | Traffic from Episodes 06 and 07 (suggested) | Whether the series links work |
 | 28 days | Comments on currency or price | Correct the pinned comment if needed |

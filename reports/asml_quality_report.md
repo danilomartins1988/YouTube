@@ -2,56 +2,47 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/the-machine-only-one-company-can-build/documentary/the-machine-only-one-company-can-build--documentary.mp4 (164.1 MB) |
+| File exists | PASS | /home/user/YouTube/output/the-machine-only-one-company-can-build/documentary/the-machine-only-one-company-can-build--documentary.mp4 (225.7 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 10-12 min | PASS | 665.07 s (11:05) |
+| Duration 10-12 min | PASS | 671.57 s (11:11) |
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
-| Caption/voice sync | PASS | 305 cues; median cue-start offset 0.05 s, p90 0.41 s; 100% of speech captioned |
+| Caption/voice sync | PASS | 285 cues; median cue-start offset 0.07 s, p90 0.42 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
-- Scenes: 40; types: act_title x5, channel_intro x1, compare x4, end_card x1, engine_chart x1, engine_draw x6, engine_exploded x2, engine_flow x2, engine_map x4, kinetic_text x12, timeline x1, timeline_network x1
-- Average scene length: 16.6 s; act cards are music-only.
+- Scenes: 39; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x19, engine_chart x1, engine_draw x4, engine_exploded x1, engine_map x2, kinetic_text x4, timeline_network x1
+- Average scene length: 17.2 s; act cards are music-only.
 
 ## Pipeline QC report
 
 # QC report: the-machine-only-one-company-can-build / documentary (long_16x9)
 
-- Runtime: **665.07 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 164.1 MB
+- Runtime: **671.57 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 225.7 MB
 - Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
-- Errors: **0**, warnings: **38**
+- Errors: **0**, warnings: **27**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
+- [WARNING] (timing) Segment m1_discovery pace 118 wpm (numerals count as one word)
 - [WARNING] (timing) Segment m4_sales pace 111 wpm (numerals count as one word)
-- [WARNING] (timing) Segment m4_transition pace 99 wpm (numerals count as one word)
-- [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'five' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'two' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'two' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twelve' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'five' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'four' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'four' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'five' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
@@ -59,8 +50,6 @@
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'five' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'five' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (sources) Number word 'five' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'six' outside a placeholder - confirm it is not an unsourced statistic.
