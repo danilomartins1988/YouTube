@@ -1677,6 +1677,84 @@ const mirrors: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** Nanoimprint lithography (step and repeat): an inkjet head drops resist on one field of the wafer, the quartz mold presses
+ *  down like a stamp, a UV lamp flashes, the mold lifts and the field shows its printed lines; then the wafer steps on.
+ *  `rate` = imprints per second; `defectAt` lands a dust particle (that field prints red); `stopAt` freezes the cycle. */
+const imprint: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.7);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const st = (a.at ?? 0) + 0.6, per = 1 / (a.rate ?? 0.5), tt = Math.max(0, (a.stopAt !== undefined ? Math.min(t, a.stopAt) : t) - st);
+  const cyc = Math.floor(tt / per), u = (tt % per) / per, running = t >= st;
+  const drop = running && u < 0.25, press = running ? (u < 0.25 ? 0 : u < 0.45 ? E.inOut((u - 0.25) / 0.2) : u < 0.7 ? 1 : 1 - E.inOut((u - 0.7) / 0.2)) : 0;
+  const uv = running && u > 0.48 && u < 0.66, n = 7, cell = 64, done = running ? Math.min(cyc + (u > 0.7 ? 1 : 0), n * 2) : 0;
+  const defect = a.defectAt !== undefined && t >= a.defectAt, defCell = a.defectCell ?? 5;
+  const fields: React.ReactNode[] = [];
+  for (let k = 0; k < n * 2; k++) {
+    const fx = -((n - 1) * cell) / 2 + (k % n) * cell, fy = k < n ? -22 : 22, on = k < done, bad = defect && k === defCell;
+    fields.push(<g key={k}><rect x={fx - 28} y={fy - 18} width={56} height={36} rx={3} fill={on ? (bad ? '#FF7B7B' : '#2A3550') : '#C5CAE9'} stroke={OL} strokeWidth={2} />
+      {on && !bad && [0, 1, 2, 3].map((l) => <path key={l} d={`M ${fx - 22 + l * 13} ${fy - 13} L ${fx - 22 + l * 13} ${fy + 13}`} stroke="#7DF29A" strokeWidth={3} />)}</g>);
+  }
+  const cur = Math.min(done, n * 2 - 1), hx = -((n - 1) * cell) / 2 + (cur % n) * cell, hy = cur < n ? -22 : 22;
+  const mb = lerp(-400, -150 + hy - 16, press);   // mold bottom (world y inside the machine)
+  return <g key={'ni' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    <rect x={-470} y={-560} width={940} height={560} rx={26} fill="#EEF1F6" stroke={OL} strokeWidth={6} />
+    <rect x={-470} y={-560} width={940} height={60} rx={26} fill={col(a.color, '#C62828')} stroke={OL} strokeWidth={6} />
+    <T x={0} y={-518} s={30} c={K.white}>{a.text || 'NANOIMPRINT'}</T>
+    <rect x={-400} y={-480} width={800} height={400} rx={16} fill="#1B2438" stroke={OL} strokeWidth={5} />
+    {/* wafer stage (top view squashed) */}
+    <g transform="translate(0 -150)">
+      <ellipse cx={0} cy={0} rx={300} ry={70} fill="url(#wafg3)" stroke={OL} strokeWidth={5} />
+      <defs><linearGradient id="wafg3" x1="0" x2="1"><stop offset="0%" stopColor="#B39DDB" /><stop offset="50%" stopColor="#80DEEA" /><stop offset="100%" stopColor="#F48FB1" /></linearGradient></defs>
+      {fields}
+      {defect && <circle cx={-((n - 1) * cell) / 2 + (defCell % n) * cell} cy={defCell < n ? -22 : 22} r={7 + 2 * Math.sin(t * 9)} fill="#FFEB3B" stroke={OL} strokeWidth={2} />}
+      {drop && [0, 1, 2, 3, 4].map((d) => { const v = clamp((u - d * 0.03) / 0.18); return v > 0 && v < 1 ? <circle key={d} cx={hx - 20 + d * 10} cy={lerp(-200, hy, v) - hy + hy} r={5} fill="#80D8FF" /> : null; })}
+    </g>
+    {/* inkjet head on a rail */}
+    <rect x={-380} y={-460} width={760} height={14} rx={6} fill="#90A4AE" />
+    <rect x={hx - 34} y={-452} width={68} height={40} rx={8} fill="#FFB300" stroke={OL} strokeWidth={3} />
+    <T x={hx} y={-426} s={14}>INK</T>
+    {/* quartz mold (stamp) */}
+    <path d={`M ${hx} -478 L ${hx} ${mb - 62}`} stroke="#B0BEC5" strokeWidth={18} />
+    <rect x={hx - 80} y={mb - 70} width={160} height={58} rx={8} fill="#B3E5FC" stroke={OL} strokeWidth={5} opacity={0.95} />
+    <path d={`M ${hx - 70} ${mb - 58} L ${hx + 70} ${mb - 58}`} stroke={K.white} strokeWidth={4} opacity={0.8} />
+    {Array.from({length: 9}, (_, k) => <rect key={k} x={hx - 68 + k * 16} y={mb - 12} width={8} height={12} fill="#81D4FA" stroke={OL} strokeWidth={2} />)}
+    <T x={hx + 130} y={mb - 30} s={18} c="#B3E5FC" a="start">QUARTZ MOLD</T>
+    {uv && <g><path d={`M ${hx - 120} -470 L ${hx - 60} ${mb - 70} M ${hx + 120} -470 L ${hx + 60} ${mb - 70} M ${hx - 40} -470 L ${hx - 20} ${mb - 70} M ${hx + 40} -470 L ${hx + 20} ${mb - 70}`} stroke="#E1BEE7" strokeWidth={6} opacity={0.85} />
+      <circle cx={hx - 150} cy={-462} r={20} fill="#EA80FC" stroke={OL} strokeWidth={3} /></g>}
+    <T x={330} y={-440} s={18} c="#B0BEC5">{uv ? 'UV LAMP' : press > 0.9 ? 'PRESS' : drop ? 'RESIST' : ''}</T>
+    {a.sub && <g><rect x={-250} y={-70} width={500} height={50} rx={10} fill={K.gold} stroke={OL} strokeWidth={4} /><T x={0} y={-35} s={24}>{a.sub}</T></g>}
+  </g>;
+};
+
+/** A compact accelerator (mode 'xray') or a helium-atom source (mode 'atoms') firing a beam down onto a small wafer. */
+const beamsrc: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const atoms = a.mode === 'atoms', on = t >= (a.fireAt ?? (a.at ?? 0) + 0.8), c = atoms ? '#FFD54F' : '#80D8FF';
+  const ang = t * 4.2;
+  return <g key={'bm' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    {atoms ? <g>
+      <path d="M -90 -260 L 90 -260 L 60 -80 L -60 -80 Z" fill="#455A64" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+      <ellipse cx={0} cy={-80} rx={60} ry={16} fill="#263238" stroke={OL} strokeWidth={4} />
+      {[0, 1, 2].map((k) => <path key={k} d={`M -70 ${-220 + k * 45} L 70 ${-220 + k * 45}`} stroke="#90A4AE" strokeWidth={5} />)}
+      <T x={0} y={-285} s={24} c={K.white}>HELIUM ATOMS</T>
+    </g> : <g>
+      <ellipse cx={0} cy={-200} rx={230} ry={90} fill="none" stroke="#546E7A" strokeWidth={30} />
+      <ellipse cx={0} cy={-200} rx={230} ry={90} fill="none" stroke="#90A4AE" strokeWidth={10} />
+      {Array.from({length: 8}, (_, k) => <rect key={k} x={230 * Math.cos(k * Math.PI / 4) - 16} y={-200 + 90 * Math.sin(k * Math.PI / 4) - 22} width={32} height={44} rx={6} fill="#FF7043" stroke={OL} strokeWidth={3} />)}
+      <circle cx={230 * Math.cos(ang)} cy={-200 + 90 * Math.sin(ang)} r={12} fill={K.white} stroke={c} strokeWidth={5} />
+      <T x={0} y={-195} s={24} c={K.white}>ACCELERATOR</T>
+    </g>}
+    {on && (atoms
+      ? Array.from({length: 14}, (_, k) => { const v = ((t * 1.3 + k / 14) % 1); return <circle key={k} cx={(rnd(k) - 0.5) * 40 * (1 - v)} cy={lerp(-80, 140, v)} r={6} fill={c} stroke={OL} strokeWidth={1.5} />; })
+      : <g><path d="M 0 -110 L 0 140" stroke={c} strokeWidth={14} opacity={0.35 + 0.3 * Math.sin(t * 18)} /><path d="M 0 -110 L 0 140" stroke={K.white} strokeWidth={4} /></g>)}
+    <ellipse cx={0} cy={160} rx={150} ry={30} fill="url(#wafg2)" stroke={OL} strokeWidth={4} />
+    {on && <circle cx={0} cy={156} r={10 + 5 * Math.sin(t * 12)} fill={K.white} opacity={0.9} />}
+    {a.text && <g><rect x={-190} y={215} width={380} height={52} rx={12} fill={col(a.color, K.gold)} stroke={OL} strokeWidth={4} /><T x={0} y={251} s={26}>{a.text}</T></g>}
+    {a.sub && <T x={0} y={300} s={22} c={a.subc || OL}>{a.sub}</T>}
+  </g>;
+};
+
 /** A school bus (for size comparisons). */
 const bus: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
@@ -1784,8 +1862,8 @@ const watch: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm};
-const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm', 'shares']);
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc};
+const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
 export const CartoonStage: React.FC<CartoonStageProps> = (p) => {

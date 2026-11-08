@@ -1,0 +1,34 @@
+title: "The Stamp That Could Break ASML's Monopoly"
+slug: the-stamp-that-could-break-asmls-monopoly
+language: en
+# Episode 15 (chip series C2: the challengers to ASML's EUV monopoly). Visual direction: visual_direction.yaml (tech -> strategy -> thriller).
+# Five-part structure internal only. Money: all amounts in US dollars as published by the sources.
+renderer: remotion
+remotion_geo: [world]
+style:
+  name: cartoon-day
+  palette:
+    bg: "#C4E4FA"
+    bg2: "#EEF8FF"
+    ink: "#0F1E36"
+    muted: "#4D6680"
+    land: "#8BD47A"
+    border: "#2B5573"
+    accent: "#E89A00"
+    accent2: "#1565C0"
+    accent3: "#23995A"
+    risk: "#E53935"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 3

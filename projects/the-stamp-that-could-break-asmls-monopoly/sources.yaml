@@ -1,0 +1,198 @@
+# Sources and claims for "The Stamp That Could Break ASML's Monopoly" (Episode 15, chip series C2).
+# Every claim was read on its source page on 2026-11-08 (AI fact-check; quotes in docs/episodes/15-nanoimprint/FACT_CHECK.md).
+# Status stays source_located until a named human reviewer signs off.
+# MONEY: all amounts in US dollars as published by the sources (MIT Technology Review, Reuters, IEEE Spectrum, Tom's Hardware).
+# COMPANY CLAIMS (Canon's energy, cost and sales targets; startups' goals) are attributed to the company in the narration.
+# FORECASTS / GOALS (China 2028, Substrate 2030, Lace 2029-2030, Canon 10-20 units a year) are labelled as such.
+sources:
+  - id: mit_asml
+    title: "The $400 million machine powering the future of chipmaking"
+    publisher: MIT Technology Review
+    url: https://www.technologyreview.com/2026/06/23/1138837/asml-400-million-dollar-machine-powering-future-of-chipmaking/
+    published: "2026-06-23"
+    accessed: "2026-11-08"
+    credit: "MIT Technology Review"
+  - id: reuters_cn_euv
+    title: "Shenzhen team completed a working prototype of a EUV machine in early 2025, sources say (Reuters, reprinted)"
+    publisher: Taiwan News (Reuters)
+    url: https://www.taiwannews.com.tw/en/news/6267628
+    published: "2025-12-17"
+    accessed: "2026-11-08"
+    credit: "Reuters"
+  - id: engadget_cn_euv
+    title: "China reportedly has a prototype EUV machine built by ex-ASML employees"
+    publisher: Engadget
+    url: https://www.engadget.com/big-tech/china-reportedly-has-a-prototype-euv-machine-built-by-ex-asml-employees-235833756.html
+    published: "2025-12-17"
+    accessed: "2026-11-08"
+    credit: "Engadget / Reuters"
+  - id: thw_cn_tools
+    title: "Chinese chipmaking tool roadmaps examined: DUV production at five machines a year, and an EUV prototype with no chips"
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/tech-industry/semiconductors/chinese-chipmaking-tool-roadmap-examined
+    published: "2026-08-04"
+    accessed: "2026-11-08"
+    credit: "Tom's Hardware"
+  - id: ieee_nil
+    title: "Canon Delivers Nanoimprint Lithography to Compete With EUV"
+    publisher: IEEE Spectrum
+    url: https://spectrum.ieee.org/nanoimprint-lithography
+    published: "2025-01-02"
+    accessed: "2026-11-08"
+    credit: "IEEE Spectrum"
+  - id: register_nil
+    title: "Canon ships its first nanoimprint lithography machine to the Texas Institute for Electronics"
+    publisher: The Register
+    url: https://www.theregister.com/offbeat/2024/10/01/canon-ships-nanoimprint-chipmaking-machine-to-rd-lab/601787
+    published: "2024-10-01"
+    accessed: "2026-11-08"
+    credit: "The Register"
+  - id: jt_mitarai
+    title: "Canon plans to price its new chipmaking gear at a fraction of ASML's best (Bloomberg)"
+    publisher: The Japan Times (Bloomberg)
+    url: https://www.japantimes.co.jp/business/2023/11/06/companies/canon-chipmaking-nanoimprint-technology/
+    published: "2023-11-06"
+    accessed: "2026-11-08"
+    credit: "Bloomberg"
+  - id: thw_nil_price
+    title: "Canon's nanoimprint litho tool could disrupt wafer fab equipment market"
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/tech-industry/canons-nanoimprint-litho-tool-could-disrupt-wafer-fab-equipment-market
+    published: "2023-11"
+    accessed: "2026-11-08"
+    credit: "Tom's Hardware"
+  - id: tf_nil
+    title: "Canon's nano-imprint lithography reduces production costs for advanced processes (TrendForce News)"
+    publisher: TrendForce
+    url: https://www.trendforce.com/news/2023/12/26/news-canons-nano-imprint-lithography-reduces-production-costs-for-advanced-processes-narrowing-the-gap-with-asml/
+    published: "2023-12-26"
+    accessed: "2026-11-08"
+    credit: "TrendForce / Nikkei"
+claims:
+  - id: high_na
+    text: "MIT Technology Review (Jun 2026): ASML's new high-NA EUV machines (8 nm resolution) are shipping to fabs at $400 million each."
+    spoken: four hundred million dollars
+    display: "$400M"
+    source_ids: [mit_asml]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: euv_price
+    text: "Reuters (17 Dec 2025): ASML's EUV machines cost around $250 million; ASML is the only company that has mastered EUV; no EUV system has ever been sold to a customer in China (ASML to Reuters)."
+    spoken: around two hundred and fifty million dollars
+    display: "≈ $250M"
+    source_ids: [reuters_cn_euv]
+    status: source_located
+    verification_note: Read in the Reuters text reprinted by Taiwan News.
+
+  - id: euv_history
+    text: "MIT Technology Review: around 2001 ASML, then a smaller player, bet on EUV; Nikon and Canon were working on it as well but dropped out; it took 16 years and about $10 billion in research; first EUV machines went on the market in 2017 at well over $100 million each; EUV light is made by shooting lasers at molten tin drops tens of thousands of times a second; in 2025 ASML sold nearly 50 EUV machines and had nearly $40 billion in revenue."
+    spoken: about ten billion dollars
+    display: "≈ $10bn"
+    fields: {years_spoken: sixteen years, years_display: "16 years", sold_spoken: nearly fifty, sold_display: "≈ 50",
+             rev_spoken: nearly forty billion dollars, rev_display: "≈ $40bn", first_spoken: well over one hundred million dollars, first_display: "> $100M"}
+    source_ids: [mit_asml]
+    status: source_located
+    verification_note: Read on 2026-11-08. Revenue as given by MIT Technology Review in dollars.
+
+  - id: nil_how
+    text: "IEEE Spectrum (Jan 2025): NIL writes the pattern on a quartz master mask with an electron beam, makes replica masks, presses a replica onto a wafer coated with liquid resist like a stamp, and hardens the resist with UV light from a mercury lamp, the kind used in the 1970s; it patterns features as small as 14 nm. The Register: Canon says 14 nm line width is equivalent to the 5 nm process; it does not require a light source like EUV. Canon began NIL work in 2004, bought Molecular Imprints (Austin, Texas) in 2014; it took 20 years to reach the market."
+    spoken: fourteen nanometers
+    display: "14 nm"
+    fields: {node_spoken: five nanometer, node_display: "≈ 5 nm process", years_spoken: twenty years, years_display: "20 years"}
+    source_ids: [ieee_nil, register_nil]
+    status: source_located
+    verification_note: Read on 2026-11-08. The 5 nm equivalence is Canon's claim, attributed.
+
+  - id: nil_ship
+    text: "IEEE Spectrum / The Register: in September 2024 Canon shipped its first commercial NIL system (FPA-1200NZ2C) to the Texas Institute for Electronics for R&D and prototypes; Kioxia has tested NIL for years and is evaluating it for prototype memory chips."
+    spoken: September twenty twenty-four
+    display: "Sep 2024"
+    source_ids: [ieee_nil, register_nil]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: nil_price
+    text: "Bloomberg via The Japan Times (6 Nov 2023): Canon CEO Fujio Mitarai: 'The price will have one digit less than ASML's EUVs'; a final pricing decision hasn't been made. Tom's Hardware: Mitarai: 'I do not expect nanoimprint technology to overtake EUVs, but I'm confident this will create new opportunities'."
+    spoken: one digit less
+    display: "one digit less"
+    source_ids: [jt_mitarai, thw_nil_price, tf_nil]
+    status: source_located
+    verification_note: Price not final (said in the film). We do not state a dollar figure for the Canon tool.
+
+  - id: nil_energy
+    text: "IEEE Spectrum: Canon estimates NIL consumes one-tenth the energy of an EUV system with a 250-watt light source; EUV systems are as big as double-decker buses, about 200 cubic meters; a cluster of four NIL systems takes less than half that volume (plus a 50 m3 mask-replication tool)."
+    spoken: one tenth
+    display: "1/10"
+    fields: {vol_spoken: about two hundred cubic meters, vol_display: "≈ 200 m³"}
+    source_ids: [ieee_nil]
+    status: source_located
+    verification_note: Canon's estimate, attributed as such.
+
+  - id: nil_speed
+    text: "IEEE Spectrum: each replica mask can make up to 80 lots of 25 wafers, i.e. one circuit layer for 2,000 wafers; Canon's comparison uses an NIL system at 80 wafers per hour and targets 100 wph. MIT Technology Review: ASML's EUV machines crank out about 200 wafers an hour."
+    spoken: eighty wafers an hour
+    display: "80 / hour"
+    fields: {euv_spoken: about two hundred, euv_display: "≈ 200 / hour", mask_spoken: two thousand wafers, mask_display: "2,000 wafers", target_spoken: one hundred}
+    source_ids: [ieee_nil, mit_asml]
+    status: source_located
+    verification_note: The two throughput numbers come from different sources and are not a like-for-like benchmark; the film says 'about'.
+
+  - id: nil_problems
+    text: "Tom's Hardware: NIL tends to pick up defects because the mold touches the wafer; any particle can introduce flaws. IEEE Spectrum: Canon had to stop air bubbles and control overlay between layers. The Register: Gartner's Gaurav Gupta saw 'a big gap between research and development at leading-edge nodes versus high-volume execution'."
+    spoken: a big gap
+    display: "defects · bubbles · alignment"
+    source_ids: [thw_nil_price, ieee_nil, register_nil]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: nil_sales
+    text: "The Register (Oct 2024): Canon's Kazunori Iwamoto expects to sell around 10 to 20 nanoimprint lithography units annually within five years."
+    spoken: ten to twenty
+    display: "10-20 a year"
+    source_ids: [register_nil]
+    status: source_located
+    verification_note: Company target, labelled as such.
+
+  - id: cn_euv
+    text: "Reuters (17 Dec 2025): a prototype EUV machine in a high-security Shenzhen lab, completed in early 2025 and under testing, fills nearly an entire factory floor, built by former ASML engineers who reverse-engineered ASML's machines (two people with knowledge of the project); parts from older ASML machines came from secondary markets; goal of working chips by 2028. Engadget/Reuters: it generates EUV light but is not yet making chips; experts see 2030 as more likely. ASML told Reuters its first EUV prototype was built in 2001 and it took nearly two decades before chips in 2019."
+    spoken: twenty twenty-eight
+    display: "2028 goal"
+    fields: {likely_spoken: twenty thirty, likely_display: "2030?"}
+    source_ids: [reuters_cn_euv, engadget_cn_euv]
+    status: source_located
+    verification_note: Anonymous sources via Reuters; the film says 'according to Reuters'. Goals labelled.
+
+  - id: cn_light
+    text: "Tom's Hardware (Aug 2026): one Chinese light-source team (Harbin Institute of Technology) has reached around 100 W of EUV output against the roughly 600 W that ASML's production sources deliver; the prototype generates EUV photons but has not yet exposed a wafer. China's domestic lithography output is about five machines in 2026, against roughly 130 immersion systems ASML deploys in a typical year; many critical components are still imported from Japan; the Chinese tool reaches finer nodes through multipatterning, the route SMIC already runs on its ASML fleet. MIT Technology Review: China will lean hard on DUV with multi-patterning."
+    spoken: around one hundred watts
+    display: "≈ 100 W"
+    fields: {asml_spoken: roughly six hundred, asml_display: "≈ 600 W", five_spoken: about five, asml_n_spoken: about one hundred and thirty}
+    source_ids: [thw_cn_tools, mit_asml]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: substrate
+    text: "MIT Technology Review: Substrate, a San Francisco startup founded four years ago, works on lithography with x-ray light from a compact particle accelerator; goal: chips at scale by 2030 in its own fab; it predicts finished wafers at $10,000, a tenth of where its CEO says the industry is heading (toward $100,000). Marc Hijink thinks mastering both a new lithography and fab techniques is probably 'unachievable and impossible'."
+    spoken: twenty thirty
+    display: "2030 goal"
+    fields: {wafer_spoken: ten thousand dollars, wafer_display: "$10,000", ind_spoken: one hundred thousand dollars}
+    source_ids: [mit_asml]
+    status: source_located
+    verification_note: Company goals and predictions, labelled as such.
+
+  - id: lace
+    text: "MIT Technology Review: Lace Lithography (Norway) uses a beam of helium atoms instead of light, with a precision of 0.1 nm against EUV's 13.5 nm wavelength; it aims to have machines ready to sell by 2029 or 2030."
+    spoken: twenty twenty-nine or twenty thirty
+    display: "2029-2030 goal"
+    source_ids: [mit_asml]
+    status: source_located
+    verification_note: Company goal, labelled.
+
+  - id: china_wafer
+    text: "MIT Technology Review: Jeff Koch, a former ASML employee and SemiAnalysis analyst: China 'would be very happy to have a tool that does one wafer per hour and it costs them a fortune to run'; they would build a fab with a thousand of those."
+    spoken: one wafer per hour
+    display: "1 wafer / hour"
+    source_ids: [mit_asml]
+    status: source_located
+    verification_note: An expert's opinion, attributed.

@@ -1,0 +1,58 @@
+# Visual direction for the-stamp-that-could-break-asmls-monopoly (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a high-tech monopoly under siege. Clean-room tech blue, strategy for the business, a night thriller for the secret lab.
+primary_tone: tech
+secondary_tones:
+- strategy
+- thriller
+- reflective
+palette:
+  bg: '#07101F'
+  bg2: '#0F1D33'
+  ink: '#EEF4FF'
+  muted: '#9DB0CC'
+  land: '#1C2C46'
+  border: '#2E4A72'
+  accent: '#FFC21A'
+  accent2: '#5BC0FF'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The impossible machine
+  tone: tech
+- chapter: The machine nobody else can build
+  tone: tech
+- chapter: The stamp
+  tone: tech
+- chapter: The catch
+  tone: strategy
+- chapter: The secret lab
+  tone: thriller
+- chapter: New kinds of light
+  tone: tech
+- chapter: The lesson
+  tone: reflective
+segments:
+  m1_money: strategy
+  m3_touch: crisis
+turning_points:
+- segment: m1_bet
+  cue: Both dropped out
+  to: strategy
+  why: the rivals give up; the business bet becomes the story
+- segment: m4_gap
+  cue: Remember
+  to: history
+  why: looking back at ASML's own two decades
+thumbnail:
+  tone: tech
+  headline: []
+  idea: a glowing quartz stamp pressing onto a wafer, next to a giant EUV machine
+requirements:
+- 'Canon nanoimprint machine as the through-line: resin drops, mold presses, UV flash, step and repeat'
+- ASML's EUV machine (clean room, tin light source, double-decker scale), never a logo
+- 'Secret lab at night: a prototype that glows but prints no chips'
+- 'New light: X-ray accelerator, helium atom beam on a fjord'
+- No smiling sun, no generic colourful city; clean room, R&D office, night lab, science park, fjord only

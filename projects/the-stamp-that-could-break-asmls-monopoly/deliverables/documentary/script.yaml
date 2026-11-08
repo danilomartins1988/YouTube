@@ -1,0 +1,254 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# company claims attributed; goals and forecasts said to be goals and forecasts. Generic teaser.
+logline: Only one company on Earth can build the machines that print the most advanced chips. Canon wants to do the same
+  job with a stamp, China with a secret prototype, and two startups with new kinds of light. Why breaking ASML's monopoly
+  is so hard, and what would have to happen for it to fall.
+title: The Stamp That Could Break ASML's Monopoly
+segments:
+- id: h_question
+  chapter: The impossible machine
+  narration: What if the most expensive machine in the chip industry could be replaced by something that works like a
+    rubber stamp?
+  claims: []
+  analysis: true
+  source_note: Hook question; the stamp comparison follows IEEE Spectrum's description of nanoimprint ('as though it were a stamp').
+- id: h_stakes
+  chapter: The impossible machine
+  narration: Every one of the most advanced chips in the world, the ones inside AI servers and the newest phones, is printed by machines
+    from a single company, ASML. Its newest machine costs {{high_na}}. Nobody else can build one. But a camera company,
+    a secret lab and two startups are each trying to break that monopoly in a completely different way.
+  claims:
+  - high_na
+  - euv_price
+- id: m1_card
+  chapter: The machine nobody else can build
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The machine nobody else can build
+  narration: How did one company end up alone at the top of chipmaking?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_print
+  chapter: The machine nobody else can build
+  narration: First, what the machine actually does. A chip starts as a disc of silicon called a wafer. To make it, you
+    shine light through a pattern and print billions of tiny circuits onto the wafer, layer after layer, like a photograph.
+    The smaller the light's wavelength, the smaller the circuits. And the smallest circuits need extreme ultraviolet light,
+    or EUV. ASML makes that light by firing lasers at tiny drops of molten tin, tens of thousands of times a second.
+  claims:
+  - euv_history
+- id: m1_bet
+  chapter: The machine nobody else can build
+  narration: Around twenty oh one, ASML, then a smaller player, bet on EUV. Two Japanese giants, Nikon and Canon, were
+    working on it too. Both dropped out. ASML kept going. It took {{euv_history.years_spoken}} and {{euv_history}} in research
+    before the first machines went on sale in twenty seventeen, at {{euv_history.first_spoken}} each.
+  claims:
+  - euv_history
+- id: m1_money
+  chapter: The machine nobody else can build
+  narration: Then artificial intelligence arrived, and every AI chip needed EUV. In twenty twenty-five, ASML sold {{euv_history.sold_spoken}}
+    EUV machines and brought in {{euv_history.rev_spoken}} in revenue. A standard EUV machine costs {{euv_price}}. The new
+    high-NA version, which prints even finer lines, costs {{high_na}}. And because of export rules, no EUV machine has
+    ever been sold to a customer in China.
+  claims:
+  - euv_history
+  - euv_price
+  - high_na
+- id: m1_draw
+  chapter: The machine nobody else can build
+  narration: 'Let me draw why this monopoly is so hard to attack. On one side, decades of research and billions of dollars.
+    In the middle, one machine that only one company can build. On the other side, every chipmaker that needs it. Any challenger
+    has to cross that whole gap at once. Or find a way around it.'
+  claims:
+  - euv_history
+  analysis: true
+  source_note: Explanation of the barrier to entry; built on the sourced R&D time and cost.
+- id: m1_transition
+  chapter: The machine nobody else can build
+  narration: One of the companies that dropped out of EUV decided to go around it.
+  claims: []
+- id: m2_card
+  chapter: The stamp
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: The stamp
+  narration: Can you print a chip without light at all?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_how
+  chapter: The stamp
+  narration: Canon says yes. Its idea is called nanoimprint lithography. Instead of projecting a pattern with light, Canon
+    carves the circuit pattern into a mold made of quartz. Then it presses the mold onto the wafer, coated with a liquid
+    resin, like a stamp. A flash of ultraviolet light from an ordinary mercury lamp, the kind chipmakers used in the nineteen
+    seventies, hardens the resin. The mold lifts, and the pattern stays behind. Canon says it can print lines just {{nil_how}}
+    wide, which it says matches the {{nil_how.node_spoken}} process used for many of today's most advanced chips.
+  claims:
+  - nil_how
+- id: m2_road
+  chapter: The stamp
+  narration: It was not easy. Canon began working on it in twenty oh four, and in twenty fourteen it bought an American
+    pioneer of the technology, Molecular Imprints, in Austin, Texas. It took {{nil_how.years_spoken}} to reach the market.
+    In {{nil_ship}}, Canon shipped its first commercial machine to the Texas Institute for Electronics, a research consortium.
+    And the memory maker Kioxia is testing it for prototype memory chips.
+  claims:
+  - nil_how
+  - nil_ship
+- id: m2_pitch
+  chapter: The stamp
+  narration: The pitch is all about cost. Canon's chief executive, Fujio Mitarai, said the price will have {{nil_price}}
+    than ASML's EUV machines. In other words, roughly a tenth, although Canon has not announced a final price. With no
+    giant light source, Canon estimates its machine uses about {{nil_energy}} of the energy. And it is smaller. An EUV
+    machine is about the size of a double-decker bus, {{nil_energy.vol_spoken}}. Four of Canon's machines fit in less than
+    half that space.
+  claims:
+  - nil_price
+  - nil_energy
+- id: m2_transition
+  chapter: The stamp
+  narration: Cheaper, smaller and greener. So why is every chipmaker not buying one?
+  claims: []
+- id: m3_card
+  chapter: The catch
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The catch
+  narration: What is the problem with printing chips like a stamp?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_touch
+  chapter: The catch
+  narration: The problem is the touch itself. Light never touches the wafer. A stamp does. So a single speck of dust caught
+    between the mold and the wafer can ruin the chips underneath it. Canon had to invent ways to stop tiny air bubbles,
+    to drop the resin precisely with inkjet printing, and to line up each new layer with the ones already printed, at a
+    scale of a few nanometers. The analyst firm Gartner warned that there is {{nil_problems}} between working in a lab
+    and producing chips in high volume.
+  claims:
+  - nil_problems
+- id: m3_draw
+  chapter: The catch
+  narration: 'Let me draw the speed problem. An EUV machine prints {{nil_speed.euv_spoken}} wafers an hour. Canon''s comparison
+    uses a machine printing {{nil_speed}}, with a target of {{nil_speed.target_spoken}}. And every mold wears out. One
+    copy of the mold prints one layer on about {{nil_speed.mask_spoken}}, then it has to be replaced. For a giant factory
+    making millions of chips, every slow step and every worn mold costs money.'
+  claims:
+  - nil_speed
+  analysis: true
+  source_note: Comparison built from two sources (IEEE Spectrum, MIT Technology Review); not a like-for-like benchmark, said with 'about'.
+- id: m3_niche
+  chapter: The catch
+  narration: Canon itself is careful. Mitarai said he does not expect nanoimprint to overtake EUV, only to create new
+    opportunities. Its target is to sell {{nil_sales}} machines a year within five years. That is a goal, not a sale.
+    Compare that with the {{euv_history.sold_spoken}} EUV machines ASML sold in twenty twenty-five alone. Canon is not
+    trying to take the throne. It wants the chips that do not need it, like memory, where the same patterns repeat again
+    and again.
+  claims:
+  - nil_price
+  - nil_sales
+  - euv_history
+- id: m3_transition
+  chapter: The catch
+  narration: But one country cannot wait for a cheaper alternative. It is trying to build EUV itself, in secret.
+  claims: []
+- id: m4_card
+  chapter: The secret lab
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The secret lab
+  narration: Can a country copy the hardest machine ever sold?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_lab
+  chapter: The secret lab
+  narration: In December twenty twenty-five, Reuters reported that Chinese scientists had built a prototype EUV machine
+    in a high-security laboratory in Shenzhen. According to two people with knowledge of the project, it was built by
+    former ASML engineers who reverse-engineered ASML's machines, partly with parts from older machines bought on secondary
+    markets. It fills nearly an entire factory floor. And it already makes EUV light. But it has not made a single chip.
+  claims:
+  - cn_euv
+- id: m4_gap
+  chapter: The secret lab
+  narration: The distance is still huge. According to Tom's Hardware, one Chinese team's light source reaches {{cn_light}}
+    of EUV power. ASML's production machines deliver {{cn_light.asml_spoken}}. The government's goal is working chips by
+    {{cn_euv}}. People close to the project told Reuters that {{cn_euv.likely_spoken}} is more realistic. Remember, ASML
+    built its first EUV prototype in twenty oh one, and it took nearly two decades to make chips with it.
+  claims:
+  - cn_light
+  - cn_euv
+- id: m4_draw
+  chapter: The secret lab
+  narration: 'Let me draw why China might not care about speed. A Western chipmaker needs a machine that earns money,
+    hundreds of wafers an hour. A country cut off from the machine only needs one that works. As one former ASML employee,
+    now an analyst, put it, China would be very happy with a tool that makes {{china_wafer}}, even if it costs a fortune, and would build
+    a factory with a thousand of them.'
+  claims:
+  - china_wafer
+  analysis: true
+  source_note: Quote from Jeff Koch (SemiAnalysis) in MIT Technology Review, paraphrased and attributed.
+- id: m4_duv
+  chapter: The secret lab
+  narration: Even the older kind of machine is a struggle. China's own makers of deep ultraviolet machines, the generation
+    before EUV, are expected to deliver {{cn_light.five_spoken}} machines this year, according to Tom's Hardware. ASML deploys
+    {{cn_light.asml_n_spoken}} of its comparable machines in a typical year. Many key parts for the Chinese machines still
+    come from Japan. So for now, China squeezes everything it can out of the older machines it already owns, printing the
+    same layer several times to fake a finer line.
+  claims:
+  - cn_light
+- id: m4_transition
+  chapter: The secret lab
+  narration: Canon is changing the method. China is copying the light. Two startups want to change the light itself.
+  claims: []
+- id: m5_card
+  chapter: New kinds of light
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: New kinds of light
+  narration: What comes after extreme ultraviolet?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_substrate
+  chapter: New kinds of light
+  narration: In San Francisco, a startup called Substrate wants to print chips with X-rays, made by a compact particle
+    accelerator. It does not plan to sell machines at all. It wants to build its own factory and produce chips at scale
+    by {{substrate}}. That is its goal. It even predicts it can make a finished wafer for {{substrate.wafer_spoken}}, about
+    a tenth of where it says the industry is heading. But it has shared few details. One author who has written a book
+    on ASML called the plan probably unachievable.
+  claims:
+  - substrate
+- id: m5_lace
+  chapter: New kinds of light
+  narration: In Norway, a startup called Lace Lithography skips light completely. It fires a beam of helium atoms through
+    the pattern. It says the atoms offer a precision of a tenth of a nanometer, and it aims to have machines ready to sell
+    by {{lace}}. Again, a goal. Meanwhile, ASML is not standing still. Its high-NA machines are already shipping to factories.
+  claims:
+  - lace
+  - high_na
+- id: payoff
+  chapter: The lesson
+  narration: So could a stamp break ASML's monopoly? Not soon. Canon's machine works, but for now it is a tool for the
+    chips that do not need the very best. China's prototype makes light, not chips. The startups have goals, not factories.
+    And that is the real lesson. ASML's monopoly was never just a machine. It was a bet held for {{euv_history.years_spoken}},
+    while everyone else gave up. Breaking it will take the same thing. Not a cheaper trick, but years of patience nobody
+    else has yet shown.
+  claims:
+  - euv_history
+  - nil_ship
+  - cn_euv
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

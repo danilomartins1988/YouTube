@@ -231,6 +231,23 @@ const SUBJECTS: Record<string, SubjectFn> = {
         <rect x={cx - 40} y={-80} width={80} height={10} rx={4} fill="#FFFFFF" opacity={0.18} /></g>; })}
     <rect x={-90} y={-160} width={180} height={44} rx={8} fill="#E9EDF3" /><text x={0} y={-128} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill="#14171D">16 GB</text>
   </g>,
+  /** Nanoimprint: a glowing quartz stamp about to press onto a patterned wafer, UV light leaking from the gap. */
+  stamp: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? 0})`}>
+    <defs><radialGradient id="wafr" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stopColor="#B9C7E8" /><stop offset="0.45" stopColor="#5B6E99" /><stop offset="1" stopColor="#1A2440" /></radialGradient>
+      <linearGradient id="quartz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#F2FBFF" stopOpacity="0.95" /><stop offset="1" stopColor="#8FD3FF" stopOpacity="0.75" /></linearGradient></defs>
+    <ellipse cx={0} cy={250} rx={560} ry={150} fill="#000" opacity={0.55} filter="url(#soft)" />
+    <ellipse cx={0} cy={210} rx={540} ry={140} fill="url(#wafr)" stroke={P.key} strokeWidth={4} />
+    {Array.from({length: 9}, (_, r) => Array.from({length: 13}, (_, c) => { const x = -480 + c * 80, y = 120 + r * 22, dx = x / 540, dy = (y - 210) / 140;
+      if (dx * dx + dy * dy > 0.82) return null; const hot = Math.abs(x) < 170 && Math.abs(y - 210) < 50;
+      return <rect key={r * 20 + c} x={x - 30} y={y - 8} width={60} height={14} rx={2} fill={hot ? P.accent : '#2A3657'} opacity={hot ? 0.95 : 0.8} stroke="#0A0F1E" strokeWidth={1.5} />; }))}
+    <ellipse cx={0} cy={205} rx={260} ry={46} fill={P.haze} opacity={0.55} filter="url(#glow)" />
+    {Array.from({length: 7}, (_, k) => <path key={'r' + k} d={`M ${-200 + k * 66} 40 L ${-240 + k * 80} 190`} stroke="#E6B3FF" strokeWidth={6} opacity={0.55} filter="url(#glow)" />)}
+    <path d="M 0 -520 L 0 -150" stroke="#9FB2C8" strokeWidth={46} />
+    <rect x={-60} y={-520} width={120} height={60} rx={10} fill="#5E6E84" />
+    <path d="M -250 -150 L 250 -150 L 220 20 L -220 20 Z" fill="url(#quartz)" stroke="#FFFFFF" strokeWidth={5} filter="url(#glow)" />
+    <path d="M -230 -120 L 230 -120" stroke="#FFFFFF" strokeWidth={4} opacity={0.7} />
+    {Array.from({length: 11}, (_, k) => <path key={'t' + k} d={`M ${-190 + k * 38} 20 L ${-190 + k * 38} 44`} stroke="#DFF4FF" strokeWidth={9} />)}
+  </g>,
   /** A crashing line (consequence) */
   crash: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 7}, (_, k) => <path key={k} d={`M -700 ${-k * 110 + 300} L 700 ${-k * 110 + 300}`} stroke={P.haze} strokeOpacity={0.12} strokeWidth={2} />)}
