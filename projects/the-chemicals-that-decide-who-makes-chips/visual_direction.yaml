@@ -1,0 +1,53 @@
+# Visual direction for the-chemicals-that-decide-who-makes-chips (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: hidden leverage. Amber resist light in a dark clean room, thriller for the chokepoints, crisis for the war and the
+# gallium ban, strategy for the governments' answer, reflective close.
+primary_tone: thriller
+secondary_tones:
+- tech
+- crisis
+- strategy
+- reflective
+palette:
+  bg: '#0C0A08'
+  bg2: '#1C1610'
+  ink: '#FBF4EA'
+  muted: '#BCA98F'
+  land: '#2E2418'
+  border: '#4E3E2A'
+  accent: '#FFB300'
+  accent2: '#5BC0FF'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: serious
+  min_sequences: 2
+chapters:
+- chapter: The bottle
+  tone: thriller
+- chapter: The liquid that draws circuits
+  tone: tech
+- chapter: The test
+  tone: thriller
+- chapter: The gas
+  tone: crisis
+- chapter: The metal
+  tone: crisis
+- chapter: Owning the bottle
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m3_now
+  cue: In fact
+  to: strategy
+  why: the industry had already diversified
+thumbnail:
+  tone: thriller
+  headline: []
+  idea: one glowing amber bottle of resist with a padlock, in a dark clean room
+requirements:
+- 'The vessel (resist bottle, neon cylinder, gallium bars) is the through-line, locked or drained at each chokepoint'
+- 'The 2019 curbs as a barrier at a port with three padlocked materials'
+- 'Neon: lithography laser, two Ukrainian plants that go dark, gauges falling'
+- 'Gallium: a price chart and a padlocked stack at a night port'
+- No flags, no logos, no smiling sun, no generic city

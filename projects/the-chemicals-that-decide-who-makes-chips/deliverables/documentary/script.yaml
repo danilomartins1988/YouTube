@@ -1,0 +1,270 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# market shares said as estimates; policies with end dates said as of November 2026. Generic teaser.
+logline: Everyone talks about the machines that make chips. But the most advanced factory in the world can be stopped
+  by a bottle of liquid, a tank of gas or a silver metal. Who makes those materials, and how three countries have already
+  used them as weapons.
+title: The Chemicals Nobody Talks About That Decide Who Makes Chips
+segments:
+- id: h_question
+  chapter: The bottle
+  narration: What if the most advanced chip factory on Earth could be stopped, not by a broken machine, but by a missing
+    bottle of liquid?
+  claims: []
+  analysis: true
+  source_note: Hook question; developed by the 2019 resist curbs and the neon and gallium episodes.
+- id: h_stakes
+  chapter: The bottle
+  narration: It has almost happened, more than once. A chemical from Japan, a gas from Ukraine, a metal from China. Each
+    time, the chip industry discovered that its weakest link was not a machine worth hundreds of millions of dollars, but
+    something that fits in a truck.
+  claims:
+  - korea2019
+  - neon
+  - gallium
+- id: m1_card
+  chapter: The liquid that draws circuits
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The liquid that draws circuits
+  narration: What is the most important chemical in a chip factory?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_resist
+  chapter: The liquid that draws circuits
+  narration: A strong candidate is photoresist. It is a light-sensitive liquid spread across the silicon wafer. When the
+    lithography machine shines its pattern of light, the resist changes wherever the light hits it. Wash it, and the
+    circuit design is left behind on the wafer, ready to be etched. No resist, no pattern. No pattern, no chip.
+  claims:
+  - resist
+- id: m1_recipe
+  chapter: The liquid that draws circuits
+  narration: And resist is not a commodity. Every new generation of chips needs a new recipe, tuned to the light, the
+    machine and the chemistry of one factory. That takes hundreds of test cycles between the resist maker and the chipmaker.
+    One of the biggest suppliers says developing a new resist can take {{resist}}.
+  claims:
+  - resist
+- id: m1_japan
+  chapter: The liquid that draws circuits
+  narration: For the most advanced chips, made with extreme ultraviolet light, the market belongs to Japan. According to
+    the research firm QYResearch, three Japanese companies, Tokyo Ohka Kogyo, JSR and Shin-Etsu Chemical, hold {{euv_share}}
+    of the world market for EUV resist. It is an estimate. But it means the most advanced factories in Taiwan, Korea and
+    America all depend on a few chemical plants in Japan. And this resist sells for {{euv_share.gal_spoken}} a gallon.
+  claims:
+  - euv_share
+- id: m1_layers
+  chapter: The liquid that draws circuits
+  narration: And the dependence grows with every generation. Moving from three nanometer chips to two nanometer chips
+    adds {{layers}} more layers printed with extreme ultraviolet light, according to Korean industry figures. Each layer
+    needs its own coat of resist, and its own mask, printed on blank plates from yet another Japanese specialist, Hoya.
+    The smaller the chip, the more of these materials it eats.
+  claims:
+  - layers
+- id: m1_draw
+  chapter: The liquid that draws circuits
+  narration: 'Let me draw why a tiny market can hold so much power. The machine that prints the chip is worth hundreds
+    of millions of dollars. The resist on a wafer costs very little by comparison. But the factory needs both. If either
+    one is missing, the whole line stops. So the cheapest ingredient can carry the same power as the most expensive machine.'
+  claims:
+  - euv_share
+  analysis: true
+  source_note: Explanation of a chokepoint (complementary inputs); no figures beyond the sourced ones.
+- id: m1_transition
+  chapter: The liquid that draws circuits
+  narration: In twenty nineteen, one country tested exactly that idea.
+  claims: []
+- id: m2_card
+  chapter: The test
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: The test
+  narration: What happens when a supplier closes the tap?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_curbs
+  chapter: The test
+  narration: On July first, twenty nineteen, in a decades-old dispute with South Korea over wartime forced labour, Japan announced it would restrict
+    exports of three materials to Korea. Fluorinated polyimide, used in phone screens. Photoresist. And ultra-pure hydrogen
+    fluoride, used to clean and etch wafers. Korea is home to two of the world's biggest memory makers, Samsung and SK
+    hynix. And Japan supplied, by one estimate, {{korea2019}} of these materials to the whole world.
+  claims:
+  - korea2019
+- id: m2_scramble
+  chapter: The test
+  narration: Korea scrambled. Samsung stepped up testing of resists and hydrogen fluoride from other suppliers. A Korean
+    chemical maker, Soulbrain, raced to match the purity of the Japanese gas. Shipments from Japan now needed case-by-case
+    permission. For the first time, the chip industry saw a supply of chemicals turned into a lever.
+  claims:
+  - korea2019
+- id: m2_after
+  chapter: The test
+  narration: Did Korea break free? Partly. According to Korean industry reports, it now makes more of the ordinary materials
+    at home. But for the most advanced chips, the pattern repeats. The finer the circuits, the more Korea depends on Japanese
+    materials again. Every new generation of chips moves the finish line.
+  claims:
+  - korea_after
+- id: m2_transition
+  chapter: The test
+  narration: A chemical can be restricted. A gas can simply disappear.
+  claims: []
+- id: m3_card
+  chapter: The gas
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The gas
+  narration: Why would a war in Ukraine threaten chip factories in Taiwan?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_neon
+  chapter: The gas
+  narration: Because of neon. Chipmakers use ultra-pure neon gas inside the lasers of their lithography machines. And
+    in early twenty twenty-two, two Ukrainian companies, Ingas in Mariupol and Cryoin in Odessa, produced, by Reuters'
+    calculation, {{neon}} of the world's neon for chipmaking. When Russia invaded, both shut down.
+  claims:
+  - neon
+- id: m3_steel
+  chapter: The gas
+  narration: Why Ukraine? Because neon is a by-product. It is collected from steelmaking, and historically {{neon.steel_spoken}}
+    of the neon for the chip industry came as a by-product of Russian steel plants, with companies in Ukraine turning
+    it into the ultra-pure gas chipmakers need. The whole chip industry used about {{neon.tons_spoken}} of it in twenty twenty-one.
+  claims:
+  - neon
+- id: m3_stocks
+  chapter: The gas
+  narration: The big chipmakers survived. They had learned from an earlier scare in twenty fourteen, when Russia annexed
+    Crimea, and kept safety stocks. But replacing the lost supply was slow. Building new neon purification lines elsewhere
+    could take {{neon.months_spoken}}. Neon showed that a chokepoint does not need a government to switch it off. A war
+    is enough.
+  claims:
+  - neon
+- id: m3_now
+  chapter: The gas
+  narration: In fact, after the scare of twenty fourteen, the industry had already started to spread its bets. By one
+    consultant's estimate at Bain, only about two-fifths of the neon used for chips still came from Russia and Ukraine
+    by the time of the invasion. The lesson had been learned once. It had to be learned
+    again.
+  claims:
+  - neon
+- id: m3_transition
+  chapter: The gas
+  narration: And then came the metal, controlled by the country that wanted it controlled.
+  claims: []
+- id: m4_card
+  chapter: The metal
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The metal
+  narration: What happens when one country produces almost all of something?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_gallium
+  chapter: The metal
+  narration: Meet gallium, a soft silver metal used in special chips for defense systems, telecom equipment and LEDs. In
+    the United States, chips use {{gallium.ic_spoken}} of all the gallium consumed. And according to the US Geological
+    Survey, China produced {{gallium}} of the world's raw gallium in twenty twenty-four.
+  claims:
+  - gallium
+- id: m4_controls
+  chapter: The metal
+  narration: In August twenty twenty-three, China began requiring licences for every gallium export. Prices jumped. Raw
+    gallium in China went from about {{gallium.p23_spoken}} a kilogram in mid twenty twenty-three to {{gallium.p24_spoken}}
+    by October twenty twenty-four. Then, in December twenty twenty-four, China banned gallium exports to the United States
+    altogether.
+  claims:
+  - gallium
+- id: m4_pause
+  chapter: The metal
+  narration: A year later, after talks between the American and Chinese presidents, China suspended that ban. But it only paused it. Exporters still
+    need a licence from Beijing for every sale, and the pause is set to expire on {{ga_suspend}}. In other words, the tap
+    is open, but the hand is still on it.
+  claims:
+  - ga_suspend
+- id: m4_draw
+  chapter: The metal
+  narration: 'Let me draw three kinds of chokepoints. The first is skill: Japan makes resist that others cannot yet copy.
+    The second is accident: neon ended up in Ukraine because that is where the steel was. The third is policy:
+    China produces almost all the raw gallium and decides who gets it. Each one is fixed in a different way, and none of them
+    quickly.'
+  claims:
+  - euv_share
+  - neon
+  - gallium
+  analysis: true
+  source_note: Classification of the three sourced cases.
+- id: m4_transition
+  chapter: The metal
+  narration: So what are governments doing about it?
+  claims: []
+- id: m5_card
+  chapter: Owning the bottle
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Owning the bottle
+  narration: Can a country protect its chemicals like a strategic asset?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_jsr
+  chapter: Owning the bottle
+  narration: Japan answered that question with a purchase. In twenty twenty-four, a government-backed fund, the Japan
+    Investment Corporation, bought JSR, one of the three big resist makers, in a deal worth about {{jsr}}. JSR left the
+    stock market. A private chemical company became, in effect, a national asset. JSR had already bought an American start-up,
+    Inpria, for {{jsr.inpria_spoken}}, to own the next generation of EUV resist.
+  claims:
+  - jsr
+- id: m5_mor
+  chapter: Owning the bottle
+  narration: That next generation is called metal oxide resist. Instead of plastic-like molecules, it uses tin oxide, which,
+    according to Inpria, absorbs extreme ultraviolet light about {{mor}} more efficiently. JSR is now ramping the world's
+    first large-scale factory for it, in South Korea. Japan is not only defending today's recipe. It is buying tomorrow's.
+  claims:
+  - mor
+  - jsr
+- id: m5_taiwan
+  chapter: Owning the bottle
+  narration: And the materials are moving closer to the factories. At the request of TSMC, JSR is building its first
+    photoresist plant in Taiwan, expected to open as early as twenty twenty-eight. Its rivals Tokyo Ohka Kogyo and Shin-Etsu
+    already produce on the island. The reason is speed. Every new chip generation needs hundreds of test cycles, and
+    shipping samples across the sea for each one costs weeks.
+  claims:
+  - jsr
+  - resist
+- id: m5_lesson
+  chapter: Owning the bottle
+  narration: But notice what that means. Taiwan gets the resist plants, and Japan keeps the recipes. Korea makes more of
+    its own materials, but still buys the most advanced ones. America looks at restarting gallium production, but China still
+    produces almost all of it. Every country is building a little more of the chain. Nobody owns all of it.
+  claims:
+  - jsr
+  - korea_after
+  - gallium
+  analysis: true
+  source_note: Synthesis of the sourced parts; the US gallium restart efforts are from USGS.
+- id: payoff
+  chapter: The lesson
+  narration: So who decides who makes chips? The machine makers, yes. But also the companies that make a liquid most
+    people have never heard of, the steel plants that happen to collect a gas, and the country that produces a silver metal.
+    The most powerful thing in a chip factory is not always the biggest. Sometimes it is the bottle on the shelf that
+    nobody else knows how to fill.
+  claims:
+  - euv_share
+  - neon
+  - gallium
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

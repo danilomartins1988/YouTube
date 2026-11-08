@@ -1,0 +1,154 @@
+# Sources and claims for "The Chemicals Nobody Talks About That Decide Who Makes Chips" (Episode 18, chip series C5).
+# Every claim was read on its source page on 2026-11-08 (AI fact-check; quotes in docs/episodes/18-chip-chemicals/FACT_CHECK.md).
+# Status stays source_located until a named human reviewer signs off.
+# MONEY: all amounts in US dollars as published by the sources (yen deal value as converted by Tom's Hardware).
+# MARKET SHARES are research-firm estimates and are said as estimates. Policies with an end date are said as of November 2026.
+sources:
+  - id: thw_jsr
+    title: "JSR builds first Taiwan photoresist plant as Japanese materials makers race to embed next to TSMC"
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/tech-industry/jsr-builds-first-taiwan-photoresist-plant-as-japanese-materials-makers-race-to-embed-next-to-tsmc
+    published: "2026"
+    accessed: "2026-11-08"
+    credit: "Tom's Hardware"
+  - id: dt_japan
+    title: "Japan's materials grip strengthens in 2-nanometre era"
+    publisher: Digital Today
+    url: https://www.digitaltoday.co.kr/en/view/34628/japans-materials-grip-strengthens-in-2-nanometre-era
+    published: "2026"
+    accessed: "2026-11-08"
+    credit: "Digital Today / QYResearch"
+  - id: ihs_2019
+    title: "Japan adds to global trade tensions with export curb against S. Korea (IHS Technology)"
+    publisher: TelecomTV (IHS Markit press release)
+    url: https://www.telecomtv.com/content/patents-and-ipr/impacts-of-japan-s-export-curb-against-south-korea-35763
+    published: "2019-07-14"
+    accessed: "2026-11-08"
+    credit: "IHS Markit"
+  - id: oled_2019
+    title: "Japan to restrict exports of some materials to Korea, could affect OLED production"
+    publisher: OLED-Info
+    url: https://www.oled-info.com/japan-restrict-exports-some-materials-korea-could-effect-oled-production
+    published: "2019-07"
+    accessed: "2026-11-08"
+    credit: "OLED-Info"
+  - id: aj_2019
+    title: "Japan's curbs on hi-tech exports to South Korea could backfire (Reuters)"
+    publisher: Al Jazeera (Reuters)
+    url: https://www.aljazeera.com/economy/2019/8/30/japans-curbs-on-hi-tech-exports-to-south-korea-could-backfire
+    published: "2019-08-30"
+    accessed: "2026-11-08"
+    credit: "Reuters"
+  - id: reg_neon
+    title: "Ukraine neon gas suppliers shut down, chip supply at risk"
+    publisher: The Register
+    url: https://www.theregister.com/2022/03/11/ukraine_neon_supplies/
+    published: "2022-03-11"
+    accessed: "2026-11-08"
+    credit: "The Register / Reuters"
+  - id: cnbc_neon
+    title: "Chip industry under threat with neon production set to fall off a cliff following Russia's invasion of Ukraine"
+    publisher: CNBC
+    url: https://www.cnbc.com/2022/03/25/russia-ukraine-war-laser-neon-shortage-threatens-semiconductor-industry.html
+    published: "2022-03-25"
+    accessed: "2026-11-08"
+    credit: "CNBC"
+  - id: usgs_ga
+    title: "Gallium, Mineral Commodity Summaries 2025"
+    publisher: U.S. Geological Survey
+    url: https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-gallium.pdf
+    published: "2025-01"
+    accessed: "2026-11-08"
+    credit: "USGS"
+  - id: evertiq_ga
+    title: "China suspends ban on gallium and germanium exports to the US"
+    publisher: Evertiq
+    url: https://evertiq.com/news/2025-11-10-china-suspends-ban-on-gallium-and-germanium-exports-to-the-us
+    published: "2025-11-10"
+    accessed: "2026-11-08"
+    credit: "Evertiq / Reuters"
+claims:
+  - id: resist
+    text: "Tom's Hardware: photoresists are the light-sensitive materials that transfer circuit designs onto silicon wafers; they must be reformulated for each new process node; each new node requires hundreds of iterative test cycles between resist supplier and foundry. Reuters (2019): Tokyo Ohka Kogyo says it takes up to two years to develop new resists."
+    spoken: up to two years
+    display: "≈ 2 years"
+    source_ids: [thw_jsr, aj_2019]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: euv_share
+    text: "Digital Today citing QYResearch: three Japanese companies, Tokyo Ohka Kogyo (TOK), JSR and Shin-Etsu Chemical, accounted for about 90% of the global EUV photoresist market; the average price of EUV photoresist is about $1,800 per gallon. Tom's Hardware: JSR holds roughly a quarter of the global photoresist market; TOK and Shin-Etsu are the first- and third-largest suppliers."
+    spoken: about ninety percent
+    display: "≈ 90%"
+    fields: {gal_spoken: about one thousand eight hundred dollars, gal_display: "≈ $1,800 / gallon", jsr_spoken: roughly a quarter}
+    source_ids: [dt_japan, thw_jsr]
+    status: source_located
+    verification_note: Research-firm estimate, said as an estimate.
+
+  - id: korea2019
+    text: "IHS (Jul 2019): on July 1, Japan's METI announced it would restrict exports of fluorinated polyimide, resist and hydrogen fluoride, used for semiconductor and display production, to South Korea. OLED-Info: Japan produces about 90% of fluorinated polyimide and resist. Reuters (Aug 2019): Japan provides about 70% or more of the restricted products to the world; Samsung stepped up testing of non-Japanese photoresists and hydrogen fluoride; Soulbrain aimed to match the purity of Japanese hydrogen fluoride."
+    spoken: about seventy percent or more
+    display: "≈ 70%+"
+    fields: {res_spoken: about ninety percent}
+    source_ids: [ihs_2019, oled_2019, aj_2019]
+    status: source_located
+    verification_note: Shares as reported in 2019.
+
+  - id: korea_after
+    text: "Digital Today (2026): after Japan's export restrictions in 2019, South Korea's localisation rate for general-purpose materials increased, but as processes become more advanced, dependence on Japan rises again; for High-NA EUV it is still difficult to secure yields without Japanese materials."
+    spoken: rises again
+    display: "dependence rises again"
+    source_ids: [dt_japan]
+    status: source_located
+    verification_note: Industry assessment as reported.
+
+  - id: neon
+    text: "The Register citing Reuters (11 Mar 2022): Ingas (Mariupol) and Cryoin (Odessa) produce 45 to 54 percent of the world's neon for chip fabrication (Reuters calculation from company and Techcet data); both shut down amid Russian attacks; neon is needed as a buffer gas for lasers used in chipmaking; big chipmakers had safety stocks; moving production could take nine months to two years. CNBC (25 Mar 2022): neon is required for the lasers used in lithography; global chip neon consumption roughly 540 metric tons in 2021 (Techcet); historically up to 90% of chip-industry neon was a by-product of Russian steel manufacturing; Bain's Peter Hanbury estimated only about two-fifths of the neon used in chip production is now sourced from Russia and Ukraine; the industry took steps to limit neon risks after Russia's annexation of Crimea in 2014."
+    spoken: forty-five to fifty-four percent
+    display: "45-54%"
+    fields: {tons_spoken: about five hundred and forty tons, steel_spoken: up to ninety percent, months_spoken: nine months to two years}
+    source_ids: [reg_neon, cnbc_neon]
+    status: source_located
+    verification_note: Reuters calculation as reported.
+
+  - id: gallium
+    text: "USGS (Jan 2025): China accounted for 99% of worldwide primary low-purity gallium production; in August 2023 China implemented gallium export controls requiring licences; in December 2024 China banned all exports of gallium to the United States; primary gallium prices in China averaged $380/kg in June 2024, up 58% from $240/kg in June 2023, and $420/kg by October 2024; integrated circuits accounted for 79% of U.S. gallium consumption."
+    spoken: ninety-nine percent
+    display: "99%"
+    fields: {p23_spoken: two hundred and forty dollars, p24_spoken: four hundred and twenty dollars, ic_spoken: about four in five}
+    source_ids: [usgs_ga]
+    status: source_located
+    verification_note: Read in the PDF.
+
+  - id: ga_suspend
+    text: "Evertiq / Reuters (10 Nov 2025): China suspended its ban on gallium and germanium exports to the US; the suspension remains in effect until November 27, 2026; exporters must still comply with licensing under China's dual-use export control list."
+    spoken: November twenty-seventh, twenty twenty-six
+    display: "until 27 Nov 2026"
+    source_ids: [evertiq_ga]
+    status: source_located
+    verification_note: Status as of 8 Nov 2026 not re-checked on MOFCOM; the film says the pause 'is set to expire'.
+
+  - id: jsr
+    text: "Tom's Hardware: Japan Investment Corporation (JIC), a government-backed fund, completed a tender offer for JSR in April 2024; JSR delisted on June 25, 2024; the deal valued the company at roughly ¥909 billion ($6.4 billion); JSR bought Inpria (metal oxide resist) for $514 million in 2021; at TSMC's request JSR set up a joint venture to build its first Taiwan photoresist plant in Yunlin, online as early as 2028; TOK and Shin-Etsu already produce in Taiwan."
+    spoken: about six point four billion dollars
+    display: "≈ $6.4bn"
+    fields: {inpria_spoken: five hundred and fourteen million dollars}
+    source_ids: [thw_jsr]
+    status: source_located
+    verification_note: Dollar value as given by Tom's Hardware.
+
+  - id: layers
+    text: "Digital Today (2026): compared with 3 nm, the number of EUV-applied layers in 2 nm processes increases by more than 30%; as layers increase, material consumption rises; Hoya dominates the market for EUV blank masks, the base plates for photomasks."
+    spoken: more than thirty percent
+    display: "+30% EUV layers"
+    source_ids: [dt_japan]
+    status: source_located
+    verification_note: Industry figures as reported.
+
+  - id: mor
+    text: "Tom's Hardware: JSR is ramping the world's first production-scale facility for metal oxide resist (MOR) in South Korea, a next-generation EUV chemistry acquired with Inpria; tin-oxide MOR absorbs EUV photons roughly five times more efficiently than organic resists, according to Inpria."
+    spoken: roughly five times
+    display: "≈ 5×"
+    source_ids: [thw_jsr]
+    status: source_located
+    verification_note: Company claim (Inpria), attributed.

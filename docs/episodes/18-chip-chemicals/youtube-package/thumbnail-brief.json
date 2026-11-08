@@ -1,0 +1,348 @@
+{
+  "title": "The Chemicals Nobody Talks About That Decide Who Makes Chips",
+  "docs_dir": "docs/episodes/18-chip-chemicals",
+  "video": "output/chip_chemicals_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "A missing bottle of liquid could stop the most advanced chip factory",
+    "surprising_fact": "Three Japanese firms hold \u2248 90% of EUV resist (QYResearch); China \u2248 99% of raw gallium (USGS)",
+    "subject": "an amber bottle of photoresist",
+    "tone": "thriller",
+    "metaphor": "the bottle nobody else knows how to fill"
+  },
+  "default": "A",
+  "slug": "the-chemicals-that-decide-who-makes-chips",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "NO BOTTLE,",
+        "NO CHIPS"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "resist: no photoresist, no pattern, no chip (Tom's Hardware description of photoresist)",
+      "scene": {
+        "palette": {
+          "sky0": "#050302",
+          "sky1": "#2A1606",
+          "haze": "#FFB300",
+          "key": "#FFE0A0",
+          "accent": "#FFB300",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "cleanroom",
+        "subject": {
+          "kind": "flask",
+          "x": 1400,
+          "y": 560,
+          "s": 1.0
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1400,
+            "y": 520,
+            "s": 1.0,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE0A0"
+        },
+        "vignette": 0.6,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "NO BOTTLE,",
+          "x": 90,
+          "y": 520.0,
+          "size": 125.0,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "NO CHIPS",
+          "x": 90,
+          "y": 650.0,
+          "size": 125.0,
+          "width": 640.0,
+          "anchor": "start",
+          "color": "#FFB300"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.60 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 422, 890, 528), (90, 552, 730, 658)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.077",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 44",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hidden-business-of-formula-1 (distance 0.33)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "resist: no photoresist, no pattern, no chip (Tom's Hardware description of photoresist)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.681,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hidden-business-of-formula-1"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "JAPAN'S",
+        "90%"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "euv_share: TOK, JSR, Shin-Etsu \u2248 90% of EUV photoresist (QYResearch via Digital Today)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#2A0E12",
+          "haze": "#FF4B3E",
+          "key": "#FFD1CC",
+          "accent": "#FFB300",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "cleanroom",
+        "subject": {
+          "kind": "flask",
+          "x": 1420,
+          "y": 560,
+          "s": 0.95
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1420,
+            "y": 520,
+            "s": 0.9,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD1CC"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "JAPAN'S",
+          "x": 90,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "90%",
+          "x": 90,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 342.9,
+          "anchor": "start",
+          "color": "#FFB300"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.60 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 372, 890, 522), (90, 558, 433, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 8.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.072",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 46",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.38)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "euv_share: TOK, JSR, Shin-Etsu \u2248 90% of EUV photoresist (QYResearch via Digital Today)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.873,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T17:52:45Z",
+  "master": "output/the-chemicals-that-decide-who-makes-chips/thumbnails/master_A.png"
+}

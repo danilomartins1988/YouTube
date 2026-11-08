@@ -1867,6 +1867,57 @@ const osat: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A strategic material: mode 'bottle' (amber resist bottle, liquid level), 'tank' (gas cylinder with a pressure gauge) or
+ *  'ingot' (stack of silver bars). `level` keyframes 0..1 drain it; `lockAt` drops a padlock and chain on it; `glow` pulses. */
+const vessel: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6), y = a.y !== undefined ? kf(a.y, t, f) : f;
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const mode = a.mode || 'bottle', lv = clamp(kf(a.level, t, 1)), locked = a.lockAt !== undefined && t >= a.lockAt;
+  const lk = locked ? E.outBack(win(t, a.lockAt, 0.6)) : 0, glow = a.glow ? 0.25 + 0.2 * Math.sin(t * 3 + i) : 0;
+  let body: React.ReactNode = null, top = -300;
+  if (mode === 'bottle') {
+    const h = 240, liq = h * lv;
+    body = <g>
+      {glow > 0 && <ellipse cx={0} cy={-130} rx={120} ry={160} fill="#FFB74D" opacity={glow} />}
+      <rect x={-24} y={-300} width={48} height={46} rx={6} fill="#37474F" stroke={OL} strokeWidth={4} />
+      <path d="M -80 -250 Q -80 -270 -40 -270 L 40 -270 Q 80 -270 80 -250 L 80 -10 Q 80 0 70 0 L -70 0 Q -80 0 -80 -10 Z" fill="#5D4037" opacity={0.35} stroke={OL} strokeWidth={5} />
+      <rect x={-74} y={-6 - liq} width={148} height={liq} rx={8} fill="#FF8F00" opacity={0.85} />
+      <path d={`M -74 ${-6 - liq} q 37 ${-8 + 4 * Math.sin(t * 3)} 74 0 q 37 ${8 - 4 * Math.sin(t * 3)} 74 0`} fill="none" stroke="#FFE082" strokeWidth={4} opacity={lv > 0.02 ? 1 : 0} />
+      <rect x={-64} y={-190} width={128} height={70} rx={8} fill={K.white} stroke={OL} strokeWidth={3} />
+      <T x={0} y={-162} s={18}>{a.label || 'RESIST'}</T><T x={0} y={-136} s={14} c="#78909C">{a.sub || 'EUV'}</T>
+    </g>;
+  } else if (mode === 'tank') {
+    const needle = -150 + 120 * lv;
+    top = -440;
+    body = <g>
+      <rect x={-70} y={-380} width={140} height={380} rx={60} fill={col(a.color, '#B0BEC5')} stroke={OL} strokeWidth={5} />
+      <rect x={-26} y={-430} width={52} height={56} rx={8} fill="#78909C" stroke={OL} strokeWidth={4} />
+      <circle cx={0} cy={-470} r={40} fill={K.white} stroke={OL} strokeWidth={4} />
+      <path d={`M 0 -470 L ${40 * Math.cos((needle * Math.PI) / 180) * 0.8} ${-470 + 40 * Math.sin((needle * Math.PI) / 180) * 0.8}`} stroke={lv < 0.25 ? K.red : OL} strokeWidth={5} strokeLinecap="round" />
+      <rect x={-56} y={-250} width={112} height={60} rx={8} fill={K.white} stroke={OL} strokeWidth={3} />
+      <T x={0} y={-212} s={24}>{a.label || 'NEON'}</T>
+      {glow > 0 && <rect x={-70} y={-380} width={140} height={380} rx={60} fill="#FF80AB" opacity={glow} />}
+    </g>;
+  } else {
+    const n = Math.max(0, Math.round((a.n ?? 6) * lv)), bars: React.ReactNode[] = [];
+    for (let k = 0; k < n; k++) { const r = k < 3 ? 0 : k < 5 ? 1 : 2, c2 = k < 3 ? k : k < 5 ? k - 3 : 0, bx = -150 + c2 * 100 + r * 50, by = -50 - r * 50;
+      bars.push(<g key={k}><path d={`M ${bx - 46} ${by} L ${bx + 46} ${by} L ${bx + 34} ${by - 44} L ${bx - 34} ${by - 44} Z`} fill="#CFD8DC" stroke={OL} strokeWidth={4} />
+        <path d={`M ${bx - 26} ${by - 36} L ${bx + 10} ${by - 36}`} stroke={K.white} strokeWidth={4} opacity={0.8} /></g>); }
+    top = -220;
+    body = <g>{glow > 0 && <ellipse cx={0} cy={-80} rx={220} ry={110} fill="#E0F7FA" opacity={glow} />}{bars}
+      {a.label && <g><rect x={-90} y={-6} width={180} height={40} rx={8} fill={K.white} stroke={OL} strokeWidth={3} /><T x={0} y={22} s={20}>{a.label}</T></g>}</g>;
+  }
+  return <g key={'vs' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    {body}
+    {locked && <g transform={`translate(0 ${top + 140 - 160 * (1 - lk)})`} opacity={lk}>
+      <path d="M -110 30 L 110 -30 M -110 -30 L 110 30" stroke="#90A4AE" strokeWidth={12} strokeDasharray="18 8" />
+      <rect x={-34} y={-10} width={68} height={56} rx={8} fill={K.gold} stroke={OL} strokeWidth={4} />
+      <path d="M -20 -10 L -20 -32 Q 0 -56 20 -32 L 20 -10" fill="none" stroke={OL} strokeWidth={7} />
+      <circle cx={0} cy={16} r={7} fill={OL} /></g>}
+    {a.text && <T x={0} y={top - 30} s={28}>{a.text}</T>}
+  </g>;
+};
+
 /** A school bus (for size comparisons). */
 const bus: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
@@ -1974,7 +2025,7 @@ const watch: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

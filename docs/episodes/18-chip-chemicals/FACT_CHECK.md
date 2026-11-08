@@ -1,0 +1,20 @@
+# Fact check: The Chemicals Nobody Talks About That Decide Who Makes Chips (Episode 18, chip series C5)
+
+AI fact-check, 2026-11-08. Every claim was read on its source page before the script was written. Status: `source_located`
+until a named human reviewer signs off. Claim ids refer to `projects/the-chemicals-that-decide-who-makes-chips/sources.yaml`.
+
+| Claim | Quote read on the page | Source |
+|---|---|---|
+| resist | "Photoresists, the light-sensitive materials that transfer circuit designs onto silicon wafers, must be reformulated for each new process node"; "Each new node requires hundreds of iterative test cycles"; TOK "says it takes up to two years to develop new resists". | Tom's Hardware (2026); Reuters via Al Jazeera (2019) |
+| euv_share | "three Japanese companies - Tokyo Ohka Kogyo (TOK), JSR and Shin-Etsu Chemical - accounted for about 90 percent of the global EUV photoresist market"; "about $1,800 per gallon" (QYResearch). JSR "holds roughly a quarter of the global photoresist market". | Digital Today; Tom's Hardware |
+| layers | "Compared with 3 nanometres, the number of EUV-applied layers in 2-nanometre processes increases by more than 30 percent"; "Hoya dominates the market for blank masks". | Digital Today |
+| korea2019 | "On July 1, Japan's Ministry of Economy, Trade and Industry announced that it will restrict export of fluorinated polyimide, resist and hydrogen fluoride… to South Korea"; Japan makes "about 90% of fluorinated polyimide and resist"; Japan "provides about 70 percent or more of the restricted products to the world"; curbs "prompted by a decades-old dispute… over compensation for forced South Korean labourers"; "Samsung… has stepped up testing of non-Japanese photoresists and hydrogen fluoride"; Soulbrain "aiming to match the purity of Japanese hydrogen fluoride". | IHS Markit (TelecomTV); OLED-Info; Reuters via Al Jazeera |
+| korea_after | "After Japan's export restrictions in 2019, the localisation rate for general-purpose materials increased. But as processes become more advanced… dependence on Japan rises again." | Digital Today |
+| neon | "Ingas and Cryoin, produce 45 to 54 percent of the world's neon for chip fabrication" (Reuters calculation); "shuttered in the face of continued attacks"; "safety stocks"; "nine months to two years"; CNBC: "Neon is required for the lasers that are used in… lithography"; "roughly 540 metric tons" (2021); "up to 90% of the neon for the chip industry was produced as a by-product of Russian steel manufacturing"; "only about two-fifths… is sourced from Russia and Ukraine" (Bain); steps taken "in the wake of Russia's annexation of Crimea in 2014". | The Register (Reuters), 11 Mar 2022; CNBC, 25 Mar 2022 |
+| gallium | "China accounted for 99% of worldwide primary low-purity gallium production"; "In August 2023, China's Government implemented gallium export controls"; "In December 2024, China banned all exports of gallium to the United States"; "$240 per kilogram in June 2023"; "By October… $420 per kilogram"; "ICs accounted for 79% of domestic gallium consumption". | USGS Mineral Commodity Summaries 2025 |
+| ga_suspend | "The suspension of the US ban will remain in effect until November 27, 2026. Exporters must still comply with licensing requirements"; "follows recent talks between US President Donald Trump and Chinese President Xi Jinping". | Evertiq (Reuters), 10 Nov 2025 |
+| jsr / mor | JIC "completed a tender offer… in April 2024"; "delisted… June 25, 2024"; "roughly ¥909 billion ($6.4 billion)"; Inpria "$514 million… 2021"; Taiwan plant "as early as 2028", "driven by a direct request from TSMC"; "world's first production-scale facility for metal oxide resist (MOR) in South Korea"; MOR "absorbs EUV photons roughly five times more efficiently… according to Inpria". | Tom's Hardware (2026) |
+
+Not used: SEMI's 2025 materials market totals (press release not readable here), the April 2025 Japanese controls and the
+claimed +15% resist price rise (single broker source), the US ITC neon brief (not readable here).
+The gallium pause ends on 27 Nov 2026: re-check MOFCOM before publishing in case it is extended.

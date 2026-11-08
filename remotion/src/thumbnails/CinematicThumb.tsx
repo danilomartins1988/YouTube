@@ -248,6 +248,24 @@ const SUBJECTS: Record<string, SubjectFn> = {
     <path d="M -230 -120 L 230 -120" stroke="#FFFFFF" strokeWidth={4} opacity={0.7} />
     {Array.from({length: 11}, (_, k) => <path key={'t' + k} d={`M ${-190 + k * 38} 20 L ${-190 + k * 38} 44`} stroke="#DFF4FF" strokeWidth={9} />)}
   </g>,
+  /** An amber bottle of photoresist, glowing from inside, with an optional padlock and chain (strategic material). */
+  flask: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -6})`}>
+    <defs><linearGradient id="amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFD180" /><stop offset="0.5" stopColor="#FF8F00" /><stop offset="1" stopColor="#6D3A00" /></linearGradient>
+      <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#FFFFFF" stopOpacity="0.35" /><stop offset="0.25" stopColor="#FFFFFF" stopOpacity="0.05" /><stop offset="1" stopColor="#FFFFFF" stopOpacity="0" /></linearGradient></defs>
+    <ellipse cx={0} cy={330} rx={300} ry={50} fill="#000" opacity={0.55} filter="url(#soft)" />
+    <ellipse cx={0} cy={60} rx={260} ry={330} fill={P.accent} opacity={0.3} filter="url(#glow)" />
+    <rect x={-70} y={-380} width={140} height={90} rx={14} fill="#263238" stroke={P.key} strokeWidth={3} />
+    <path d="M -190 -250 Q -190 -300 -120 -300 L 120 -300 Q 190 -300 190 -250 L 190 290 Q 190 320 160 320 L -160 320 Q -190 320 -190 290 Z" fill="url(#amber)" stroke={P.key} strokeWidth={5} />
+    <path d="M -190 -250 Q -190 -300 -120 -300 L 120 -300 Q 190 -300 190 -250 L 190 290 Q 190 320 160 320 L -160 320 Q -190 320 -190 290 Z" fill="url(#glass)" />
+    <rect x={-140} y={-80} width={280} height={150} rx={12} fill="#FFFFFF" opacity={0.92} />
+    <text x={0} y={-12} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={52} fill="#1B1F27">{o.label ?? 'RESIST'}</text>
+    <text x={0} y={42} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={28} fill="#78909C">{o.sub ?? 'EUV'}</text>
+    {o.hot !== false && <g transform="translate(110 140) rotate(8)">
+      <path d="M -260 -60 L 120 60 M -260 60 L 120 -60" stroke="#B0BEC5" strokeWidth={22} strokeDasharray="34 12" />
+      <rect x={-70} y={-30} width={140} height={120} rx={16} fill="#FFC21A" stroke="#1B1F27" strokeWidth={6} />
+      <path d="M -42 -30 L -42 -72 Q 0 -128 42 -72 L 42 -30" fill="none" stroke="#1B1F27" strokeWidth={14} />
+      <circle cx={0} cy={26} r={14} fill="#1B1F27" /></g>}
+  </g>,
   /** A crashing line (consequence) */
   crash: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 7}, (_, k) => <path key={k} d={`M -700 ${-k * 110 + 300} L 700 ${-k * 110 + 300}`} stroke={P.haze} strokeOpacity={0.12} strokeWidth={2} />)}
