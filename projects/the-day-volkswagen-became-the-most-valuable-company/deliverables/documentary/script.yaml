@@ -1,0 +1,262 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}}; years are written in words. Generic teaser (channel rule).
+# LEGAL CARE: Porsche denied manipulation; its former bosses were acquitted (2016). Never imply a crime.
+logline: In October 2008, in the middle of a financial crisis, a struggling carmaker briefly became the most valuable
+  company on Earth. Not because it sold more cars, but because too many investors had bet against it, and there were
+  not enough shares left to buy back.
+title: The Day Volkswagen Became the World's Most Valuable Company
+segments:
+- id: h_question
+  chapter: The impossible day
+  narration: What if, in the worst week of a financial crisis, a carmaker in trouble suddenly became the most
+    valuable company in the world? Not for a year. Not for a month. For about a day.
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_stakes
+  chapter: The impossible day
+  narration: That happened to Volkswagen in October twenty oh eight. In two trading days, its share price jumped
+    from {{price}} to {{price.peak_spoken}}. For a brief moment, the whole company was worth {{top}}, more than
+    ExxonMobil, the world's biggest company at the time. Nothing about its cars had changed. What changed was a
+    simple question of arithmetic. How many shares were left?
+  claims:
+  - price
+  - top
+- id: m1_card
+  chapter: The bet against Volkswagen
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The bet against Volkswagen
+  narration: Why would so many professional investors bet that Volkswagen's shares would fall?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_draw
+  chapter: The bet against Volkswagen
+  narration: 'Let me draw how you bet against a share. It is called short selling. First, you borrow a share from
+    someone who owns it. Then you sell it right away, at today''s price. Later, you buy a share back on the market
+    and return it to the lender. If the price has fallen, you keep the difference. But here is the catch: if the
+    price rises instead, you still have to buy it back. And a price can rise without any limit.'
+  claims:
+  - float
+  analysis: true
+  source_note: General explanation of short selling, as described by International Banker; the "no limit" point is
+    the standard risk of a short position.
+- id: m1_why
+  chapter: The bet against Volkswagen
+  narration: In twenty oh eight, Volkswagen looked like an easy target. It was a carmaker carrying a lot of debt.
+    Many hedge funds thought its shares had become too expensive. And then the financial crisis hit, and demand
+    for new cars collapsed. If you wanted to bet that a share would fall, Volkswagen seemed like a good one.
+  claims:
+  - march
+- id: m1_porsche
+  chapter: The bet against Volkswagen
+  narration: But there was one buyer who kept buying. Porsche, the sports car maker from Stuttgart, much smaller
+    than Volkswagen, had been building up a stake in its giant neighbour. By March twenty oh eight, Porsche owned
+    {{march}} of Volkswagen. Would it go all the way to seventy-five percent? Porsche said that was very unlikely.
+    The state of Lower Saxony, Volkswagen's second largest shareholder, owned {{march.lsax_spoken}}. So there
+    simply weren't enough shares out there.
+  claims:
+  - march
+- id: m1_transition
+  chapter: The bet against Volkswagen
+  narration: 'So the bet looked safe. A weak carmaker, a crisis, and plenty of shares to borrow. Or so everyone
+    thought.'
+  claims: []
+- id: m2_card
+  chapter: The Sunday announcement
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: The Sunday announcement
+  narration: What did the short sellers not know?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_sunday
+  chapter: The Sunday announcement
+  narration: On Sunday, October twenty-sixth, twenty oh eight, Porsche published a press release. It said that it
+    held {{stake.shares_spoken}} of Volkswagen's ordinary shares. And on top of that, {{stake.options_spoken}}
+    more in so-called cash-settled options, a kind of financial contract linked to Volkswagen's share price. Together,
+    {{stake}}. Its aim, it said, was to reach seventy-five percent in twenty oh nine. And the Porsche and Piëch families,
+    who own all of Porsche's voting shares, backed the plan to take control of Volkswagen.
+  claims:
+  - stake
+- id: m2_options
+  chapter: The Sunday announcement
+  narration: 'Here is how they worked. When an option was settled, Porsche would receive in cash the difference
+    between Volkswagen''s share price and an agreed price, called the strike. Those options were the surprise. Porsche
+    said they were there to protect it against rising prices.
+    Only a few weeks earlier, it had disclosed a stake of about thirty-five percent. Now the market could see the
+    full picture, and it looked very different from what many short sellers had believed.'
+  claims:
+  - stake
+- id: m2_draw
+  chapter: The Sunday announcement
+  narration: 'Let me draw the problem with a hundred shares. Porsche: about seventy-four, counting its options. Lower
+    Saxony: twenty. What is left for everyone else? Less than six. Now, how many shares had been sold short? Around
+    twelve. Twelve shares owed, and fewer than six for sale. Not every short seller could buy back. That is a short
+    squeeze.'
+  claims:
+  - stake
+  - float
+  analysis: true
+  source_note: Illustration with 100 shares of the percentages given by Porsche SE and International Banker.
+- id: m2_transition
+  chapter: The Sunday announcement
+  narration: On Monday morning, the trading floors opened. And everyone who owed shares went looking for the same
+    few.
+  claims: []
+- id: m3_card
+  chapter: The squeeze
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The squeeze
+  narration: What happens when everyone has to buy, and almost no one can sell?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_spike
+  chapter: The squeeze
+  narration: The price explodes. On Friday, a Volkswagen share had cost {{price}}. By Tuesday, October twenty-eighth,
+    it touched {{price.peak_spoken}}. Short sellers were not buying because they liked the company. They were
+    buying because they had to. Every purchase pushed the price higher, which made the losses of the next short
+    seller even bigger.
+  claims:
+  - price
+- id: m3_top
+  chapter: The squeeze
+  narration: And for a brief moment, the numbers became absurd. At that price, Volkswagen's voting shares were worth
+    {{top}}. ExxonMobil, the giant oil company and the world's most valuable firm, was worth {{top.exxon_spoken}}.
+    A carmaker in the middle of a crisis was, on paper, the most valuable company on the planet.
+  claims:
+  - top
+- id: m3_tears
+  chapter: The squeeze
+  narration: On the trading floors, it was chaos. One analyst in London said he had hedge fund managers literally
+    in tears on the phone. And Germany's financial regulator, BaFin, said {{bafin}} that it was examining the trading
+    for signs of insider trading or market manipulation. Porsche denied all of it.
+  claims:
+  - bafin
+  - fall
+- id: m3_transition
+  chapter: The squeeze
+  narration: A price like that could not last. But who would let the air out?
+  claims: []
+- id: m4_card
+  chapter: Letting the air out
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: Letting the air out
+  narration: How do you stop a squeeze once it has started?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_porsche
+  chapter: Letting the air out
+  narration: The first move came from Porsche itself. On October twenty-ninth, it said that short sellers were responsible
+    for the extreme prices. To avoid more market distortions, it would settle options covering {{settle}} of Volkswagen's
+    shares, putting more shares within reach of those who needed them. Porsche added that it had informed the regulator
+    in advance.
+  claims:
+  - settle
+  - bafin
+- id: m4_index
+  chapter: Letting the air out
+  narration: The second move came from the stock exchange. Deutsche Börse runs the DAX, the index of Germany's top
+    companies. After Tuesday's close, Volkswagen alone made up {{dax_cap.weight_spoken}} of the whole index. So
+    the exchange brought forward a rule, and capped Volkswagen's weight at {{dax_cap}}. Normally, that rule was only
+    applied on fixed dates, and the next one was not until December twenty-second. This time, it would apply from
+    Monday, November third.
+  claims:
+  - dax_cap
+- id: m4_draw
+  chapter: Letting the air out
+  narration: 'Let me draw why that mattered. An index is like a basket of companies. Many funds simply copy the basket,
+    holding each company at its weight. When one company becomes a giant slice of the basket, those funds need more
+    of it, at the worst possible moment. Cap the slice at ten percent, and that pressure eases.'
+  claims:
+  - dax_cap
+  analysis: true
+  source_note: General explanation of index weights and index-tracking funds; the 27% and 10% figures are from Deutsche
+    Börse.
+- id: m4_fall
+  chapter: Letting the air out
+  narration: And the price came down as fast as it went up. On Wednesday, the share closed at {{price.close_spoken}}, about half its peak of the day before.
+    Within four days of the peak, it had fallen {{fall}}. A month later, it was down {{fall.month_spoken}}. But
+    for many short sellers, it was too late. They had already bought back at sky-high prices. Hedge funds that had
+    bet against Volkswagen lost {{fall.loss_spoken}}.
+  claims:
+  - price
+  - fall
+- id: m4_transition
+  chapter: Letting the air out
+  narration: Porsche seemed to be winning one of the most spectacular takeover battles in German history. The real ending
+    was very different.
+  claims: []
+- id: m5_card
+  chapter: The hunter and the hunted
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: The hunter and the hunted
+  narration: So who really won?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_gain
+  chapter: The hunter and the hunted
+  narration: On paper, Porsche looked brilliant. For its business year twenty oh seven to twenty oh eight, it reported
+    a gain of {{options_gain}} on its Volkswagen options alone. A year earlier, it had already made {{options_gain.prev_spoken}}
+    this way. That was most of its profit of {{options_gain.profit_spoken}}.
+    A large part of a sports car maker's profit came from financial contracts on another company's shares.
+  claims:
+  - options_gain
+- id: m5_merger
+  chapter: The hunter and the hunted
+  narration: But the plan was to take over Volkswagen, and the crisis made that much harder. Less than a year later,
+    the roles were reversed. In August twenty oh nine, the two companies agreed to merge. Volkswagen would first
+    buy {{merger.stake_spoken}} of Porsche for {{merger}}, and Porsche would become a brand inside
+    the Volkswagen group. Volkswagen's chief executive, Martin Winterkorn, would run both companies. And the Gulf
+    state of Qatar was expected to take a direct stake in Volkswagen, by buying options that Porsche held. The news
+    agency AFP called it the failure of a gamble to take over the far larger Volkswagen.
+    The hunter had become the hunted.
+  claims:
+  - merger
+- id: m5_court
+  chapter: The hunter and the hunted
+  narration: And the courts? Prosecutors in Stuttgart charged Porsche's former chief executive, Wendelin Wiedeking,
+    and its former finance chief, Holger Härter, with market manipulation. In {{acquittal}}, the court acquitted
+    them on all charges. It found that their statements in twenty oh eight were neither false nor misleading. The
+    prosecutors dropped their appeal, and the verdict became final.
+  claims:
+  - acquittal
+- id: m5_draw
+  chapter: The hunter and the hunted
+  narration: 'Let me draw the lesson of this squeeze. A short seller can lose more than they bet, because a price
+    has no ceiling. When too many people bet the same way, the exit gets crowded. And when someone holds positions
+    the market cannot fully see, the number of shares that are really for sale can be much smaller than everyone
+    thinks.'
+  claims:
+  - float
+  analysis: true
+  source_note: Conclusion drawn from the sourced facts (Risk.net, smaller pool of shares than thought).
+- id: payoff
+  chapter: The lesson
+  narration: So, how did Volkswagen become the world's most valuable company? Not by selling more cars. Not by inventing
+    anything. It happened because, for a day, its shares were the scarcest thing in the market. A price is not
+    only what a company is worth. Sometimes it is just what the last desperate buyer has to pay.
+  claims:
+  - top
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

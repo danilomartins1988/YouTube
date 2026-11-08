@@ -1390,6 +1390,31 @@ const counter: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** 100 share certificates in a 10x10 grid; `groups` [{n, color, label, at}] fill cells in order (who owns what);
+ *  `owed` {n, at, label}: a column of dashed red certificates that short sellers must buy back, shaking when they can't. */
+const shares: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 420), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5), cw = 54, ch = 38, gap = 8;
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const groups: any[] = a.groups || [], cells: React.ReactNode[] = [], W = 10 * (cw + gap) - gap, H = 10 * (ch + gap) - gap;
+  let idx = 0;
+  groups.forEach((g, gi) => { const at = g.at ?? 0, n = g.n ?? 0;
+    for (let k = 0; k < n && idx < 100; k++, idx++) { const ap = pop(t, at + k * (g.step ?? 0.02), 0.3); if (ap <= 0) continue;
+      const cx = -W / 2 + (idx % 10) * (cw + gap) + cw / 2, cy = -H / 2 + Math.floor(idx / 10) * (ch + gap) + ch / 2;
+      cells.push(<g key={'c' + idx} transform={`translate(${cx} ${cy}) scale(${ap})`}><rect x={-cw / 2} y={-ch / 2} width={cw} height={ch} rx={6} fill={col(g.color, K.white)} stroke={OL} strokeWidth={3} />
+        <path d={`M ${-cw / 2 + 10} ${-4} L ${cw / 2 - 10} ${-4} M ${-cw / 2 + 10} 8 L ${cw / 2 - 22} 8`} stroke={OL} strokeWidth={2} opacity={0.4} /></g>); } });
+  const ow = a.owed, owN = ow ? ow.n ?? 12 : 0, shake = ow && ow.shakeAt !== undefined && t >= ow.shakeAt ? Math.sin(t * 40) * 5 : 0;
+  return <g key={'sh' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-W / 2 - 24} y={-H / 2 - 24} width={W + 48} height={H + 48} rx={20} fill="#1B2438" stroke={OL} strokeWidth={6} />
+    {cells}
+    {groups.map((g, gi) => g.label && t >= (g.at ?? 0) ? <g key={'l' + gi}><rect x={-W / 2 - 24 + gi * ((W + 48) / Math.max(3, groups.length))} y={H / 2 + 40} width={(W + 48) / Math.max(3, groups.length) - 12} height={56} rx={12} fill={col(g.color, K.white)} stroke={OL} strokeWidth={4} />
+      <T x={-W / 2 - 24 + gi * ((W + 48) / Math.max(3, groups.length)) + ((W + 48) / Math.max(3, groups.length) - 12) / 2} y={H / 2 + 78} s={24}>{g.label}</T></g> : null)}
+    {ow && t >= ow.at && <g transform={`translate(${W / 2 + 120 + shake} 0)`}>
+      {Array.from({length: owN}, (_, k) => { const ap = pop(t, ow.at + k * 0.08, 0.3); return ap <= 0 ? null : <g key={k} transform={`translate(${(k % 2) * (cw + 10) - cw / 2 - 5} ${-H / 2 + Math.floor(k / 2) * (ch + gap) + ch / 2}) scale(${ap})`}>
+        <rect x={-cw / 2} y={-ch / 2} width={cw} height={ch} rx={6} fill="#FFE1E1" stroke={K.red} strokeWidth={4} strokeDasharray="8 5" /><T x={0} y={9} s={22} c={K.red}>?</T></g>; })}
+      <rect x={-110} y={H / 2 + 40} width={220} height={56} rx={12} fill="#FFCDD2" stroke={OL} strokeWidth={4} /><T x={0} y={H / 2 + 78} s={24}>{ow.label || 'OWED'}</T></g>}
+  </g>;
+};
+
 /** Renewal clock: the hand sweeps a full turn every `period` s; each lap pops a coin ("PAY AGAIN"). */
 const clock: ItemFn = (a, {t}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, 400), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5), per = a.period ?? 3;
@@ -1631,8 +1656,8 @@ const watch: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch};
-const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm']);
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares};
+const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
 export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
