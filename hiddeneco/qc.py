@@ -257,6 +257,10 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
     seqs = [t for t in timed if t.scene.type == "presenter" or (t.scene.type == "engine_draw" and t.scene.params.get("presenter", True) is not False)]
     out = []
     need = int(raw.get("presenter_min", project.get("presenter_min", 3)))   # an episode brief may raise the minimum
+    from hiddeneco import visual_direction as vdir
+    vd = vdir.load(paths.project_dir, paths.deliverable_dir)
+    if vd and (vd.get("presenter") or {}).get("min_sequences") is not None:
+        need = int(vd["presenter"]["min_sequences"])                       # the story's tone sets how often the character appears
     if len(seqs) < need:
         out.append(_issue("presenter", "error", f"Only {len(seqs)} presenter sequences; at least {need} are required"))
     for t in seqs:
@@ -280,6 +284,50 @@ def check_presenter(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
     for a_, b_ in zip(seqs, seqs[1:]):
         if abs(b_.start - (a_.start + a_.duration)) < 1.0:
             out.append(_issue("presenter", "warning", f"Presenter scenes {a_.scene.id} and {b_.scene.id} are back to back"))
+    return out
+
+
+def check_tone(paths: ProjectPaths, timed: list[TimedScene]) -> list[dict]:
+    """Adaptive visual storytelling (standard of 2026-11-08): the story sets the atmosphere. Warns about playful
+    decoration in serious scenes, a generic city reused across a serious film, repetitive backgrounds, and a missing
+    visual direction plan for cartoon-engine films."""
+    from hiddeneco import visual_direction as vdir
+    cartoon = [t for t in timed if t.scene.type == "engine_cartoon"]
+    vd = vdir.load(paths.project_dir, paths.deliverable_dir)
+    out = []
+    if not vd:
+        if cartoon:
+            out.append(_issue("tone", "warning", "No visual_direction.yaml: every scene uses the default bright look "
+                              "(run tools/visual_direction.py plan <slug>)"))
+        return out
+    PLAYFUL_POSES = {"cheer"}
+    for t in timed:
+        p = t.scene.params
+        tone = p.get("tone")
+        if tone not in vdir.SERIOUS:
+            continue
+        if t.scene.type == "engine_cartoon":
+            for it in p.get("items", []):
+                k = it.get("kind")
+                if k == "person" and it.get("pose") in PLAYFUL_POSES:
+                    out.append(_issue("tone", "warning", f"Scene {t.scene.id} ({tone}): a cheering crowd; check it suits the moment"))
+                    break
+                if k == "burst":
+                    out.append(_issue("tone", "warning", f"Scene {t.scene.id} ({tone}): confetti burst in a serious scene"))
+                    break
+                if k == "letters" and re.search(r"[\u263A\U0001F600-\U0001F64F]", str(it.get("text", ""))):
+                    out.append(_issue("tone", "warning", f"Scene {t.scene.id} ({tone}): smiley text in a serious scene"))
+                    break
+            if any(z.get("set") in {"city", "hills"} for z in p.get("zones", []) or []):
+                out.append(_issue("tone", "warning", f"Scene {t.scene.id} ({tone}): generic colourful city/hills backdrop in a serious scene"))
+        if t.scene.type == "engine_draw":
+            if any(a.get("kind") == "smile" for a in p.get("actions", [])):
+                out.append(_issue("tone", "warning", f"Presenter scene {t.scene.id} ({tone}): a smile action in a serious scene"))
+    sets = [z.get("set") for t in cartoon for z in (t.scene.params.get("zones") or [{"set": t.scene.params.get("world", "ocean")}])]
+    if len(sets) >= 8:
+        top = max(set(sets), key=sets.count)
+        if sets.count(top) / len(sets) > 0.45:
+            out.append(_issue("tone", "warning", f"Backdrop '{top}' fills {sets.count(top)}/{len(sets)} cartoon zones: vary the worlds"))
     return out
 
 
@@ -310,6 +358,7 @@ def run_qc(paths: ProjectPaths, deliverable: Deliverable, fmt: dict, script: Scr
     issues += check_media(timed, paths, deliverable)
     issues += check_presenter(paths, timed)
     issues += check_animation_density(paths, timed)
+    issues += check_tone(paths, timed)
     src, blockers = check_sources(script, dossier, storyboard)
     issues += src
     issues += check_licensing(storyboard, dossier)

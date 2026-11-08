@@ -1,5 +1,6 @@
 import React from 'react';
 import {E, clamp, ease, lerp, win} from '../motion';
+import {ToneFilterDef, ToneOverlay, ToneShift, isNeutral, toneAt} from '../tone';
 
 /**
  * CartoonStage: land-based cartoon WORLDS built for a specific story (flat colours, thick outlines, bouncy motion).
@@ -24,6 +25,8 @@ export type CartoonStageProps = {
   t: number; W?: number; H?: number; world?: string; zones?: StageZone[]; worldW?: number; floor?: number;
   cam?: Key[]; drift?: number; shake?: {at: number; dur?: number; amp?: number}[]; night?: boolean;
   items?: StageItem[]; callouts?: StageCallout[]; banner?: {text: string; sub?: string; at?: number};
+  /** adaptive visual tone (see ../tone.tsx); default 'bright' = original look */
+  tone?: string; toneShift?: ToneShift; spot?: [number, number];
 };
 
 export const OL = '#10213A';
@@ -1687,25 +1690,28 @@ export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
     </g>;
   };
   const render = (list: StageItem[], off: number) => list.map((a, k) => { const fn = ITEMS[a.kind]; return fn ? <React.Fragment key={off + k}>{fn(a, ctx, off + k)}</React.Fragment> : null; });
-  const sky = night ? ['#1B2A5A', '#3D4F8F'] : [K.sky1, K.sky2];
+  const tn = toneAt(p.tone, p.toneShift, t), graded = !isNeutral(tn);
+  const sky = night ? tn.nightSky : tn.sky;
   const ban = p.banner, bu = ban ? E.outBack(win(t, ban.at ?? 0.3, 0.6)) : 0;
   return (
     <svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
-      <defs><linearGradient id="stgsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={sky[0]} /><stop offset="100%" stopColor={sky[1]} /></linearGradient></defs>
+      <defs><linearGradient id="stgsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={sky[0]} /><stop offset="100%" stopColor={sky[1]} /></linearGradient>
+        {graded && <ToneFilterDef id="stgtone" s={tn} />}</defs>
       <rect width={W} height={H} fill={sky[0]} />
       <g transform={camT}>
         <rect x={-4000} y={-3000} width={worldW + 8000} height={3000 + floor} fill="url(#stgsky)" />
+        <g filter={graded ? 'url(#stgtone)' : undefined}>
         {night ? <g transform={`translate(${cx * 0.9} 0)`}>
-          {Array.from({length: 40}, (_, k) => <circle key={k} cx={(rnd(k) - 0.5) * 2600} cy={-200 + rnd(k + 7) * 600} r={2 + 2 * rnd(k + 3)} fill={K.white} opacity={0.5 + 0.5 * Math.sin(t * 3 + k)} />)}
-          <circle cx={560} cy={210} r={60} fill="#FFF3B0" stroke={OL} strokeWidth={5} /><circle cx={585} cy={195} r={52} fill={sky[0]} /></g>
-          : <g transform={`translate(${cx + 560} 0)`}>
-            <circle cx={0} cy={220 + Math.sin(t * 0.8) * 8} r={66} fill={K.sun} stroke={OL} strokeWidth={5} />
-            <circle cx={-20} cy={210} r={6} fill={OL} /><circle cx={20} cy={210} r={6} fill={OL} />
-            <path d="M -22 236 Q 0 254 22 236" fill="none" stroke={OL} strokeWidth={5} strokeLinecap="round" /></g>}
-        <g transform={`translate(${cx * 0.6} 0)`}>
+          {tn.stars && Array.from({length: 40}, (_, k) => <circle key={k} cx={(rnd(k) - 0.5) * 2600} cy={-200 + rnd(k + 7) * 600} r={2 + 2 * rnd(k + 3)} fill={K.white} opacity={0.5 + 0.5 * Math.sin(t * 3 + k)} />)}
+          {tn.sun !== 'none' && <g><circle cx={560} cy={210} r={60} fill="#FFF3B0" stroke={OL} strokeWidth={5} /><circle cx={585} cy={195} r={52} fill={sky[0]} /></g>}</g>
+          : tn.sun !== 'none' && <g transform={`translate(${cx + 560} 0)`}>
+            <circle cx={0} cy={220 + Math.sin(t * 0.8) * 8 * tn.bounce} r={66} fill={K.sun} stroke={OL} strokeWidth={5} />
+            {tn.sun === 'face' && <g><circle cx={-20} cy={210} r={6} fill={OL} /><circle cx={20} cy={210} r={6} fill={OL} />
+            <path d="M -22 236 Q 0 254 22 236" fill="none" stroke={OL} strokeWidth={5} strokeLinecap="round" /></g>}</g>}
+        {tn.clouds !== 'none' && <g transform={`translate(${cx * 0.6} 0)`}>
           {[0, 1, 2, 3].map((i) => { const x = ((i * 700 + t * 18) % 3400) - 1700, y = 90 + (i % 2) * 70;
-            return <path key={i} transform={`translate(${x} ${y})`} d="M -90 20 Q -100 -20 -50 -20 Q -30 -60 20 -40 Q 70 -60 90 -10 Q 120 20 80 30 L -80 30 Q -110 30 -90 20 Z" fill={night ? '#5A6A9A' : K.white} stroke={OL} strokeWidth={4} />; })}
-        </g>
+            return <path key={i} transform={`translate(${x} ${y})`} d="M -90 20 Q -100 -20 -50 -20 Q -30 -60 20 -40 Q 70 -60 90 -10 Q 120 20 80 30 L -80 30 Q -110 30 -90 20 Z" fill={night ? '#5A6A9A' : tn.clouds === 'grey' ? '#8C93A6' : K.white} stroke={OL} strokeWidth={4} />; })}
+        </g>}
         {zones.map((z, k) => { const fn = SETS[z.set] || SETS.hills;
           return <g key={'z' + k}>
             <clipPath id={`zc${k}`}><rect x={z.x0} y={INDOOR.has(z.set) ? -3000 : -3000} width={z.x1 - z.x0} height={6000} /></clipPath>
@@ -1714,8 +1720,10 @@ export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
           </g>; })}
         {render(items.filter((a) => BACK.has(a.kind)), 0)}
         {render(items.filter((a) => !BACK.has(a.kind)), 500)}
+        </g>
         {callouts.filter((c) => !c.screen).map(calloutNode)}
       </g>
+      <ToneOverlay s={tn} t={t} W={W} H={H} id="stgtn" spotX={p.spot?.[0]} spotY={p.spot?.[1]} />
       {callouts.filter((c) => c.screen).map((c, i) => calloutNode(c, 100 + i))}
       {ban && bu > 0 && <g transform={`translate(120 96) scale(${bu})`}>
         <rect x={0} y={0} width={Math.max(ban.text.length * 27, (ban.sub || '').length * 13) + 60} height={ban.sub ? 100 : 70} rx={18} fill={K.white} stroke={OL} strokeWidth={5} />

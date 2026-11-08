@@ -1,5 +1,6 @@
 import React from 'react';
 import {E, clamp, ease, lerp, win} from '../motion';
+import {ToneFilterDef, ToneOverlay, ToneShift, isNeutral, toneAt} from '../tone';
 
 /**
  * CartoonOcean: a side-view, cartoon-style ocean world (flat colours, thick outlines, squash-and-stretch).
@@ -37,6 +38,8 @@ export type CartoonCallout = {text: string; sub?: string; x: number; y: number; 
   tail?: [number, number]; size?: number; screen?: boolean};
 export type CartoonOceanProps = {
   t: number; W?: number; H?: number;
+  /** adaptive visual tone (see ../tone.tsx); default 'bright' = original look */
+  tone?: string; toneShift?: ToneShift;
   worldW?: number; sea?: number; bed?: number;
   cam?: Key[]; drift?: number; shake?: {at: number; dur?: number; amp?: number}[];
   /** port: a container crane and box stacks instead of the data center (shipping stories) */
@@ -457,7 +460,8 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
         <circle cx={10} cy={-3} r={3} fill={OL} /></g>; })}</g>;
   };
 
-  const sky = p.night ? ['#1B2A5A', '#3D4F8F'] : [K.sky1, K.sky2];
+  const tn = toneAt(p.tone, p.toneShift, t), graded = !isNeutral(tn);
+  const sky = p.night ? tn.nightSky : tn.sky;
   const sunY = 240 + Math.sin(t * 0.8) * 8;
   const ban = p.banner, bu = ban ? E.outBack(win(t, ban.at ?? 0.3, 0.6)) : 0;
   return (
@@ -465,19 +469,21 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
       <defs>
         <linearGradient id="cskyg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={sky[0]} /><stop offset="100%" stopColor={sky[1]} /></linearGradient>
         <linearGradient id="cseag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={K.sea1} /><stop offset="45%" stopColor={K.sea2} /><stop offset="100%" stopColor={K.sea3} /></linearGradient>
+        {graded && <ToneFilterDef id="cotone" s={tn} />}
       </defs>
       <rect width={W} height={H} fill={K.sea3} />
       <g transform={camT}>
         <rect x={-3000} y={-3000} width={worldW + 6000} height={3000 + sea + 40} fill="url(#cskyg)" />
-        <g transform={`translate(${cx + 560} 0)`}>{/* the sun keeps its place on screen (top right) */}
+        <g filter={graded ? 'url(#cotone)' : undefined}>
+        {tn.sun !== 'none' && <g transform={`translate(${cx + 560} 0)`}>{/* the sun keeps its place on screen (top right) */}
           <circle cx={0} cy={sunY} r={70} fill={K.sun} stroke={OL} strokeWidth={5} />
-          <circle cx={-22} cy={sunY - 10} r={7} fill={OL} /><circle cx={22} cy={sunY - 10} r={7} fill={OL} />
-          <path d={`M -25 ${sunY + 18} Q 0 ${sunY + 38} 25 ${sunY + 18}`} fill="none" stroke={OL} strokeWidth={5} strokeLinecap="round" />
-        </g>
-        <g transform={`translate(${cx * 0.6} 0)`}>{/* clouds with parallax */}
+          {tn.sun === 'face' && <g><circle cx={-22} cy={sunY - 10} r={7} fill={OL} /><circle cx={22} cy={sunY - 10} r={7} fill={OL} />
+          <path d={`M -25 ${sunY + 18} Q 0 ${sunY + 38} 25 ${sunY + 18}`} fill="none" stroke={OL} strokeWidth={5} strokeLinecap="round" /></g>}
+        </g>}
+        {tn.clouds !== 'none' && <g transform={`translate(${cx * 0.6} 0)`}>{/* clouds with parallax */}
           {[0, 1, 2, 3].map((i) => { const x = ((i * 700 + t * 18) % 3400) - 1700, y = 90 + (i % 2) * 70;
-            return <g key={i} transform={`translate(${x} ${y})`}><path d="M -90 20 Q -100 -20 -50 -20 Q -30 -60 20 -40 Q 70 -60 90 -10 Q 120 20 80 30 L -80 30 Q -110 30 -90 20 Z" fill={K.white} stroke={OL} strokeWidth={4} /></g>; })}
-        </g>
+            return <g key={i} transform={`translate(${x} ${y})`}><path d="M -90 20 Q -100 -20 -50 -20 Q -30 -60 20 -40 Q 70 -60 90 -10 Q 120 20 80 30 L -80 30 Q -110 30 -90 20 Z" fill={tn.clouds === 'grey' ? '#8C93A6' : K.white} stroke={OL} strokeWidth={4} /></g>; })}
+        </g>}
         <rect x={-3000} y={sea} width={worldW + 6000} height={3000} fill="url(#cseag)" />
         {Array.from({length: 7}, (_, i) => <path key={'ray' + i} d={`M ${i * (worldW / 6) + Math.sin(t * 0.5 + i) * 40} ${sea} l 120 ${bed - sea} l 90 0 Z`} fill={K.white} opacity={0.05} />)}
         {Array.from({length: fish}, (_, i) => fishNode(i))}
@@ -496,8 +502,10 @@ export const CartoonOcean: React.FC<CartoonOceanProps> = (p) => {
         {actors.filter((a) => a.kind === 'island').map(actorNode)}
         {actors.filter((a) => !['volcano', 'whale', 'island'].includes(a.kind)).map(actorNode)}
         <path d={Array.from({length: Math.ceil((worldW + 4000) / 40)}, (_, k) => { const x = -2000 + k * 40; return `${k ? 'L' : 'M'} ${x} ${surfY(x).toFixed(1)}`; }).join(' ')} fill="none" stroke={K.white} strokeWidth={5} opacity={0.85} />
+        </g>
         {callouts.filter((c) => !c.screen).map((c, i) => calloutNode(c, i, false))}
       </g>
+      <ToneOverlay s={tn} t={t} W={W} H={H} id="cotn" />
       {callouts.filter((c) => c.screen).map((c, i) => calloutNode(c, 100 + i, true))}
       {ban && bu > 0 && <g transform={`translate(120 96) scale(${bu})`}>
         <rect x={0} y={0} width={Math.max(ban.text.length * 27, (ban.sub || '').length * 13) + 60} height={ban.sub ? 100 : 70} rx={18} fill={K.white} stroke={OL} strokeWidth={5} />

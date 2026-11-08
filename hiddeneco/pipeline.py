@@ -25,7 +25,11 @@ class BuildError(RuntimeError):
 
 
 def load_project(paths: ProjectPaths) -> dict:
-    return yaml.safe_load((paths.project_dir / "project.yaml").read_text(encoding="utf-8"))
+    """project.yaml, with the palette of visual_direction.yaml (if any) merged over style.palette."""
+    from hiddeneco import visual_direction as vdir
+    proj = yaml.safe_load((paths.project_dir / "project.yaml").read_text(encoding="utf-8"))
+    dd = getattr(paths, "deliverable_dir", None)
+    return vdir.merge_palette(proj, vdir.load(paths.project_dir, dd if dd and dd.exists() else None))
 
 
 def load_deliverable(paths: ProjectPaths) -> tuple[Deliverable, dict]:
@@ -68,6 +72,11 @@ def prepare(paths: ProjectPaths, d):
         if draw.get("intro") is not None:              # a deliverable may override the project setting
             proj = {**proj, "intro": draw["intro"] if isinstance(draw["intro"], dict) else {"enabled": bool(draw["intro"])}}
         sc, sb, intro_after = insert_intro(proj, sc, sb, render=lambda x: script_mod.render_text(x, d))
+        # adaptive visual tone: the story's visual direction plan sets tone / tone shifts / presenter demeanour
+        from hiddeneco import visual_direction as vdir
+        toned = vdir.apply(vdir.load(paths.project_dir, paths.deliverable_dir), sc, sb)
+        if toned:
+            log("visual_direction.applied", scenes=len(toned))
         if intro_after:
             log("intro.inserted", after=intro_after)
         (paths.out_sub("storyboard") / "storyboard.md").write_text(sb_mod.to_markdown(sb, d), encoding="utf-8")

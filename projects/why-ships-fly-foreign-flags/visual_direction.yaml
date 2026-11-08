@@ -1,0 +1,77 @@
+# Visual direction for why-ships-fly-foreign-flags (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Draft from tools/visual_direction.py: edit tones per chapter, add turning_points [{segment, cue, to}], then commit.
+primary_tone: trade
+secondary_tones:
+- history
+- reflective
+presenter:
+  demeanor: warm
+  min_sequences: 4
+chapters:
+- chapter: The flags
+  tone: trade
+- chapter: Whose ship is it
+  tone: trade
+- chapter: How it started
+  tone: history
+- chapter: Why owners do it
+  tone: trade
+- chapter: The dark side
+  tone: reflective
+- chapter: Why it survives
+  tone: trade
+- chapter: The journey
+  tone: trade
+turning_points: []
+thumbnail:
+  tone: trade
+  headline:
+  - WHOSE SHIP
+  - IS THIS?
+  idea: one giant container ship with three small generic flags (no real designs)
+  stage: ocean
+  accent_line: 1
+  side: left
+  at: 2.0
+  scene:
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    drift: 0
+    cam:
+    - at: 0
+      x: 820
+      y: 560
+      zoom: 1.25
+    items:
+    - kind: ship
+      x: 1250
+      flag: PANAMA?
+      flip: true
+      crew: 3
+      scale: 1.25
+    - kind: sign
+      x: 1500
+      y: 260
+      text: LIBERIA?
+      color: '#FFF59D'
+      size: 40
+      hang: true
+      swing: true
+      at: 0
+    - kind: sign
+      x: 1020
+      y: 230
+      text: MARSHALL IS.?
+      color: '#FFF59D'
+      size: 40
+      hang: true
+      swing: true
+      at: 0
+requirements:
+- Open sea and ports, daylight, long horizons; the sun has no face
+- 'How it started: archival sepia for the 1920s-1940s history'
+- 'The dark side: abandoned crews told with restraint (reflective), no playful fish or smiles'
+- 'Presenter warm and exploratory: draws routes and registries'

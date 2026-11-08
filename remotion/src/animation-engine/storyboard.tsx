@@ -12,6 +12,7 @@ import {DigitalBoard, Studio} from './transitions';
 import {CartoonOcean} from './CartoonOcean/CartoonOcean';
 import {CartoonStage} from './CartoonStage/CartoonStage';
 import {fromEpisodePalette} from './motion';
+import {ToneOverlay, demeanorFor, toneAt} from './tone';
 
 /**
  * Storyboard adapters: lets hiddeneco storyboards (YAML) use the engine directly, timed to the narration.
@@ -54,7 +55,8 @@ export const EngineDrawScene: React.FC = () => {
         <DrawOnCanvas t={ctx.t} timeline={tl} showPen={p.presenter === false} palette={p.palette} />
       </g>
       {p.presenter !== false && <AnimatedPresenter t={ctx.t} actions={actions} floor={p.floor ?? 960} scale={p.scale ?? 0.9}
-        startX={p.enter?.from ?? -260} talk={[[ctx.scene.lead, ctx.scene.lead + ctx.scene.speech]]} />}
+        startX={p.enter?.from ?? -260} talk={[[ctx.scene.lead, ctx.scene.lead + ctx.scene.speech]]} demeanor={p.demeanor ?? demeanorFor(p.tone)} />}
+      {p.tone && <ToneOverlay s={{...toneAt(p.tone, p.toneShift, ctx.t), spot: 0, grain: 0}} t={ctx.t} W={ctx.W} H={ctx.H} id="drtn" />}
       <Chrome title={p.title} subtitle={p.subtitle} t={ctx.t} palette={p.palette} />
     </svg>
   );

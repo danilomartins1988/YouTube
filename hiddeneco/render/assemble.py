@@ -144,7 +144,19 @@ def build_audio_track(timed: list[TimedScene], out_dir: Path, deliverable: Deliv
     voice *= 0.8 / peak
     voice_path = audio_mod.write_wav(out_dir / "voice_only.wav", voice, rate)
     events = sfx_events(timed, deliverable.audio.get("sfx", True))
-    mixed = audio_mod.mix(voice, events, deliverable.audio.get("music", True), rate)
+    # music direction: when the visual direction plan toned the scenes, the bed follows the tone (else the original pad)
+    moods, cur = [], None
+    for ts in timed:
+        tone = ts.scene.params.get("tone") or cur
+        shift = ts.scene.params.get("toneShift")
+        if tone:
+            if moods and moods[-1][2] == tone and abs(moods[-1][1] - ts.start) < 0.05:
+                moods[-1] = (moods[-1][0], ts.start + ts.duration, tone)
+            else:
+                moods.append((ts.start, ts.start + ts.duration, tone))
+            cur = shift["to"] if isinstance(shift, dict) and shift.get("to") else tone
+    mixed = audio_mod.mix(voice, events, deliverable.audio.get("music", True), rate,
+                          moods=moods if any(ts.scene.params.get("tone") for ts in timed) else None)
     raw = audio_mod.write_wav(out_dir / "mix_raw.wav", mixed, rate)
     final = audio_mod.loudnorm(raw, out_dir / "mix.wav", fmt["loudness_lufs"], rate)
     log("audio.mixed", seconds=round(total, 2), sfx=len(events), music=deliverable.audio.get("music", True))

@@ -74,12 +74,37 @@ CHORDS = {  # A-minor family, voiced low and close; frequencies in Hz
     "F": [87.31, 130.81, 174.61, 220.00],
     "C": [130.81, 164.81, 196.00, 261.63],
     "G": [98.00, 123.47, 146.83, 196.00],
+    "E": [82.41, 103.83, 123.47, 164.81],
+    "Em": [82.41, 123.47, 164.81, 196.00],
+    "Dm": [73.42, 110.00, 146.83, 174.61],
+    "D": [73.42, 110.00, 146.83, 185.00],
+    "Bb": [116.54, 146.83, 174.61, 233.08],
+    "Gm": [98.00, 116.54, 146.83, 196.00],
+    "A": [110.00, 138.59, 164.81, 220.00],
+}
+
+# music direction per visual tone (adaptive visual storytelling): progression, chord length, pulse (Hz, depth),
+# low drone (Hz or 0), octave shift, airy shimmer
+MOODS = {
+    "bright": {"progression": ("Am", "F", "C", "G"), "chord_seconds": 6.0},
+    "trade": {"progression": ("C", "G", "Am", "F"), "chord_seconds": 5.0},
+    "strategy": {"progression": ("C", "G", "Am", "F"), "chord_seconds": 6.0, "pulse": (0.5, 0.12)},
+    "tech": {"progression": ("Em", "C", "G", "D"), "chord_seconds": 6.0, "shimmer": 0.18},
+    "history": {"progression": ("Dm", "Am", "C", "G"), "chord_seconds": 8.0, "octave": 0.5},
+    "thriller": {"progression": ("Am", "Am", "F", "E"), "chord_seconds": 8.0, "pulse": (0.9, 0.3), "drone": 55.0, "octave": 0.5},
+    "crisis": {"progression": ("Dm", "Bb", "Gm", "A"), "chord_seconds": 5.0, "pulse": (1.6, 0.35), "drone": 73.42},
+    "reflective": {"progression": ("Am", "F", "C", "G"), "chord_seconds": 9.0, "octave": 0.5},
 }
 
 
 def music_bed(seconds: float, rate: int = RATE, progression=("Am", "F", "C", "G"),
-              chord_seconds: float = 6.0) -> np.ndarray:
-    """Original ambient pad: detuned sines with slow swells, crossfaded chord changes."""
+              chord_seconds: float = 6.0, mood: str | None = None) -> np.ndarray:
+    """Original ambient pad: detuned sines with slow swells, crossfaded chord changes. `mood` (a visual tone name)
+    picks the progression, tempo, pulse and drone of MOODS."""
+    m = MOODS.get(mood or "", {})
+    progression = m.get("progression", progression)
+    chord_seconds = m.get("chord_seconds", chord_seconds)
+    octave, shimmer = m.get("octave", 1.0), m.get("shimmer", 0.0)
     n = int(seconds * rate)
     out = np.zeros(n, dtype=np.float64)
     seg = int(chord_seconds * rate)
@@ -87,7 +112,7 @@ def music_bed(seconds: float, rate: int = RATE, progression=("Am", "F", "C", "G"
     t_all = np.arange(seg + fade) / rate
     k = 0
     for start in range(0, n, seg):
-        chord = CHORDS[progression[k % len(progression)]]
+        chord = [f * octave for f in CHORDS[progression[k % len(progression)]]]
         k += 1
         length = min(seg + fade, n - start)
         t = t_all[:length]
@@ -96,12 +121,35 @@ def music_bed(seconds: float, rate: int = RATE, progression=("Am", "F", "C", "G"
             for detune, amp in ((1.0, 1.0), (1.003, 0.6), (0.997, 0.6), (2.0, 0.18)):
                 phase = (i * 1.7 + detune * 3.1) % (2 * np.pi)
                 tone += amp * np.sin(2 * np.pi * f * detune * t + phase)
+            if shimmer:
+                tone += shimmer * np.sin(2 * np.pi * f * 4 * t + i) * (0.5 + 0.5 * np.sin(2 * np.pi * t / 1.5 + i))
         tone *= 0.75 + 0.25 * np.sin(2 * np.pi * t / chord_seconds - np.pi / 2)  # slow swell
         tone *= _env(length, min(fade, length) / rate, min(fade, length) / rate, rate)
         out[start:start + length] += tone
+    if m.get("drone"):
+        ta = np.arange(n) / rate
+        out += 0.9 * np.sin(2 * np.pi * m["drone"] * ta) * (0.7 + 0.3 * np.sin(2 * np.pi * ta / 11))
+    if m.get("pulse"):
+        hz, depth = m["pulse"]
+        ta = np.arange(n) / rate
+        out *= (1 - depth) + depth * (0.5 + 0.5 * np.sin(2 * np.pi * hz * ta)) ** 4
     out /= np.max(np.abs(out)) + 1e-9
     out *= _env(n, 2.0, 3.0, rate)
     return out.astype(np.float32)
+
+
+def mood_bed(seconds: float, moods: list[tuple[float, float, str]], rate: int = RATE, xfade: float = 2.0) -> np.ndarray:
+    """A music bed that follows the story: one pad per (start, end, mood) run, cross-faded at the turning points."""
+    n = int(seconds * rate)
+    out = np.zeros(n, dtype=np.float32)
+    for s0, s1, mood in moods:
+        a, b = max(0.0, s0 - xfade / 2), min(seconds, s1 + xfade / 2)
+        if b <= a:
+            continue
+        chunk = music_bed(b - a, rate, mood=mood)
+        i = int(a * rate)
+        out[i:i + len(chunk)] += chunk[: max(0, n - i)]
+    return out
 
 
 def envelope(x: np.ndarray, rate: int = RATE, window: float = 0.25) -> np.ndarray:
@@ -111,11 +159,12 @@ def envelope(x: np.ndarray, rate: int = RATE, window: float = 0.25) -> np.ndarra
 
 
 def mix(voice: np.ndarray, events: list[tuple[float, str, float]], music: bool, rate: int = RATE,
-        music_level: float = 0.11, duck_to: float = 0.035) -> np.ndarray:
-    """voice: float32 mono in [-1, 1]. events: (seconds, kind, gain). Returns float32 mix."""
+        music_level: float = 0.11, duck_to: float = 0.035, moods: list[tuple[float, float, str]] | None = None) -> np.ndarray:
+    """voice: float32 mono in [-1, 1]. events: (seconds, kind, gain). moods: optional (start, end, tone) runs from the
+    visual direction plan (the music follows the story). Returns float32 mix."""
     out = voice.astype(np.float32).copy()
     if music:
-        bed = music_bed(len(voice) / rate, rate)[: len(voice)]
+        bed = (mood_bed(len(voice) / rate, moods, rate) if moods else music_bed(len(voice) / rate, rate))[: len(voice)]
         env = envelope(voice, rate)
         speaking = np.clip(env / (np.percentile(env, 90) * 0.35 + 1e-9), 0, 1)
         gain = music_level - (music_level - duck_to) * speaking

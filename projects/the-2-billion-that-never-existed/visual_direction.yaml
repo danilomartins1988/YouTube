@@ -1,0 +1,90 @@
+# Visual direction for the-2-billion-that-never-existed (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Draft from tools/visual_direction.py: edit tones per chapter, add turning_points [{segment, cue, to}], then commit.
+primary_tone: thriller
+secondary_tones:
+- strategy
+- crisis
+- reflective
+palette:
+  bg: '#0F1520'
+  bg2: '#1A2332'
+  ink: '#ECE7DC'
+  muted: '#8D98A8'
+  land: '#2A3546'
+  border: '#3E4C62'
+  accent: '#D9A441'
+  accent2: '#7FA6C9'
+  accent3: '#5FAF83'
+  risk: '#E0473F'
+presenter:
+  demeanor: serious
+  min_sequences: 3
+chapters:
+- chapter: The missing billions
+  tone: thriller
+- chapter: The rocket
+  tone: strategy
+- chapter: The warnings
+  tone: thriller
+- chapter: The money that wasn't there
+  tone: thriller
+- chapter: The collapse
+  tone: crisis
+- chapter: Who failed
+  tone: thriller
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m1_dax
+  cue: At its peak
+  to: thriller
+  why: the peak of the rocket is where the questions begin
+- segment: m3_banks
+  cue: most likely did not exist
+  to: crisis
+  why: 'the admission: the mystery becomes a collapse'
+thumbnail:
+  tone: thriller
+  headline:
+  - $2 BILLION
+  - NEVER EXISTED
+  idea: an open vault, empty, lit by one beam; a single gold question mark
+  stage: vault
+  accent_line: 1
+  side: left
+  at: 4.0
+  scene:
+    zones:
+    - set: vault
+      x0: -1600
+      x1: 4600
+    worldW: 2200
+    drift: 0
+    spot:
+    - 0.68
+    - 0.5
+    cam:
+    - at: 0
+      x: 760
+      y: 520
+      zoom: 1.15
+    items:
+    - kind: vaultdoor
+      x: 1200
+      r: 300
+      label: TRUST ACCOUNT
+      openAt: 0.5
+      text: EMPTY
+    - kind: letters
+      x: 1200
+      y: 160
+      text: '?'
+      at: 0.2
+      size: 170
+      color: gold
+requirements:
+- 'Opening: dark office, one lit document, the missing-money question; no sky decorations'
+- 'The rocket: brighter corporate imagery and rising charts (strategy), darkening at the peak'
+- 'Warnings / money: documents, stamps, magnifier on inconsistencies; spotlight on the evidence'
+- 'Collapse: fast deterioration, alarm pulse, storm; accurate institutional consequences'
+- 'Lesson: calm, low light, the empty vault revisited; presenter serious, no smile'

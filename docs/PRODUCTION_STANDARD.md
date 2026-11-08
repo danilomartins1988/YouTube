@@ -75,7 +75,7 @@ reusable standard. `README.md` covers how to run the pipeline; this file covers 
   - `pin` and `bubble` (a marker or a value-sized circle grows while the hand points at it);
   - `shock` (a red disruption travels along a path; boxes it passes turn red and shake);
   - `carry` (the hand moves a labelled token from one place to another).
-- **Frequency** (documentaries of 10-15 min, enforced by QC in `hiddeneco/qc.py:check_presenter`). An episode needs at least **3** presenter sequences (an episode brief can raise this with `presenter_min` in `project.yaml`; Episode 07 uses 4) of about 10-25 s each, spread through the film and not back to back, including:
+- **Frequency** (documentaries of 10-15 min, enforced by QC in `hiddeneco/qc.py:check_presenter`). An episode needs at least **3** presenter sequences (an episode brief can raise this with `presenter_min` in `project.yaml`; Episode 07 uses 4; from 2026-11-08 the visual direction plan's `presenter.min_sequences` sets it, see 2a) of about 10-25 s each, spread through the film and not back to back, including:
   - one that draws a diagram (boxes, strokes or arrows);
   - one that builds or interacts with a chart or a map (`bars`, `map` or `bubble`);
   - one that explains a business or economic relationship (at least two boxes joined by an arrow).
@@ -112,9 +112,10 @@ Documentaries are animated explanations, not narrated slideshows. Use the reusab
   missions", "Here is the discovery" or "Mission complete". Never show a mission HUD, "MISSION n COMPLETE" stamps,
   mission lists or `THE QUESTION / WHY IT MATTERS` labels. Chapter cards show only the chapter title (no "Mission n").
   Episodes 07 and 08 used the older, spoken mission model; do not copy that part from them.
-- **Visual style: cartoon first (user decision of 2026-11-06).** The user wants episodes "like a cartoon": bright,
-  flat colours, thick outlines, characters and objects that move (ships, anchors, fish, a smiling sun, speech-bubble
-  callouts), camera tracking shots. Use `engine_cartoon` (`remotion/src/animation-engine/CartoonOcean/`) or new
+- **Visual style: cartoon first (user decision of 2026-11-06), toned by the story (user decision of 2026-11-08, see
+  section 2a).** Flat colours, thick outlines, characters and objects that move, speech-bubble callouts, camera
+  tracking shots. The cheerful defaults (a smiling sun, white clouds, colourful generic streets) appear only when the
+  story's tone allows them. Use `engine_cartoon` (`remotion/src/animation-engine/CartoonOcean/`) or new
   cartoon worlds built the same way for most beats; keep maps for geography and the presenter boards for
   explanations. Plain text cards should be the exception.
 - **Bespoke worlds per topic (user decision of 2026-11-08).** Never reuse one scenery for every story (the user
@@ -126,6 +127,68 @@ Documentaries are animated explanations, not narrated slideshows. Use the reusab
   (towers, boards, charts, people, a watchdog, wafers, an EUV machine, conveyors, dominoes, cranes, browsers,
   ships with text pennants, a passport...). Add a new set or item when a story needs one; the ocean world
   (CartoonOcean) is for stories that really happen at sea.
+## 2a. Adaptive visual storytelling (permanent, from 2026-11-08)
+
+The story sets the visual atmosphere; the cartoon style never sets the emotional tone. The channel keeps one identity
+(2D cartoon engine, presenter, typography, intro, chapter cards, the "THE HIDDEN ECONOMICS" mark), but every episode
+gets its own emotional personality. Premium animated documentary for adults, not a factory of identical cartoons.
+
+- **Visual direction plan, before the storyboard.** Run `python tools/visual_direction.py plan <slug> --doc
+  docs/episodes/NN-name`. It classifies the script by chapter (lexicon scores) and writes
+  `projects/<slug>/visual_direction.yaml` plus `VISUAL_DIRECTION.md` with the 12 points (primary tone, secondary
+  tones, palette, lighting/contrast, animation intensity, character behaviour, backgrounds, charts, transitions,
+  music/sound, turning points, scene requirements). A human (or Claude as director) then edits the YAML: tone per
+  chapter, `turning_points` [{segment, cue, to, why}], requirements, thumbnail. Commit both.
+- **The plan is applied, not just documented** (`hiddeneco/visual_direction.py`, called in `pipeline.prepare`):
+  its `palette` replaces the project palette (cards, kinetic text, studio, charts); every `engine_cartoon` /
+  `engine_draw` scene gets the chapter's `tone`; turning points become `toneShift` inside the scene at the cue; the
+  presenter's demeanour follows the tone; the music bed follows the tone and crossfades between chapters
+  (`hiddeneco/audio.py` MOODS). A storyboard may still set `tone` / `toneShift` on a scene explicitly.
+- **Tones** (`remotion/src/animation-engine/tone.tsx`), starting points, mixable within one film:
+  - `thriller` (fraud, manipulation, missing money): dark slate, desaturated, spotlight on the evidence, heavy
+    vignette, grain; documents, stamps, magnifiers, suspicious links; slow deliberate motion.
+  - `crisis` (bank failures, crashes, contagion): storm sky, high contrast, red alarm pulse, accelerating charts,
+    contagion diagrams; urgency grows as the crisis develops.
+  - `strategy` (rivalries, acquisitions, decisions): clean cool greys, diagrams, competitive maps, comparisons.
+  - `trade` (shipping, ports, supply chains): bright, exploratory, long horizons; the sun has no face.
+  - `tech` (chips, AI, machines): deep navy, cyan glow, darker exposure, cutaways and layered components.
+  - `history` (economic history): sepia, archival grain, timelines and maps.
+  - `reflective` (conclusions of serious stories): low light, calm, few elements.
+  - `bright`: the original cheerful look (default; light, educational stories only).
+- **Decorations are not automatic.** No smiling sun, cheerful clouds, confetti or cheering crowds in serious tones
+  (the engine removes sun and clouds by tone; QC warns about the rest). Do not reuse the same generic city, sky or
+  landscape across unrelated documentaries: every set must establish a place, explain a mechanism or carry the mood.
+  Prefer interiors and story-specific sets (vault, archive, newsroom, court, exchange, fab, port...) for thrillers
+  and crises.
+- **Character, context-aware.** The presenter is an explanatory tool, not the film's personality.
+  - In thriller and crisis scenes it is `serious`: it examines records, connects evidence, points at gaps and draws
+    cascades, and it never smiles or hops.
+  - In strategy, tech and history scenes it is `neutral`.
+  - In trade and bright scenes it is `warm`: it walks routes and explains.
+  - Its minimum count comes from the plan (`presenter.min_sequences`; 3 for serious films, 4 otherwise). Never add
+    a sequence only to meet a quota when it would damage the tone.
+- **Tone evolves.** Map the emotional arc: e.g. Wirecard opens as a thriller, the growth chapter is brighter strategy,
+  it darkens at the peak, becomes a crisis at the admission and the collapse, and ends reflective.
+- **Retention.** Keep the internal five-part structure (hook, progressive discoveries, payoffs; never narrated as
+  missions, see section 2), meaningful visual change every 2-4 s, but allow restraint (stillness, a held spotlight)
+  before revelations in serious tones.
+- **Thumbnails are designed separately** (`remotion/src/ToneThumbnail.tsx`, `python tools/tone_thumbnail.py <slug>
+  <out.png>` from the plan's `thumbnail` block): one dominant visual idea built for the thumbnail (never a frame of
+  the film), the episode's tone, 2-4 words, strong contrast, readable on a phone, the shared channel mark bottom-left.
+  A scandal thumbnail must not look like a shipping one.
+- **QC** (`hiddeneco/qc.py:check_tone`, warnings):
+  - a missing plan for a cartoon-engine film;
+  - cheering crowds, confetti or smileys in serious scenes;
+  - generic city or hills backdrops in serious scenes;
+  - one backdrop filling more than 45% of the cartoon zones.
+
+  For the visual review, render stills with `python tools/tone_preview.py <slug> <out.jpg> <scene ids>` (add
+  `--plain` for the "before" look).
+- **Reference plans:** Wirecard (thriller), flags (trade), ASML (tech): `docs/episodes/{12-wirecard,11-flags,08-asml}/
+  VISUAL_DIRECTION.md`, `visual_direction_preview.jpg`, `thumbnail_tone.png`.
+
+## 2b. Story details (continued)
+
 - **Hypotheticals.** Any scenario that has not happened is said to be hypothetical in the narration and labelled on screen (red "Hypothetical scenario" banner). Show a real precedent next to it when one exists.
 - **Pacing.** Alternate macro context with detailed mechanism. Build curiosity, pause before the reveals, and cut redundant explanation.
 - **Balance.** Cover both strengths and risks. Never make it a corporate advert.

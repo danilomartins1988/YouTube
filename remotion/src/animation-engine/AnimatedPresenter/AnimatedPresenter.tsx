@@ -41,6 +41,8 @@ export type AnimatedPresenterProps = {
   faceDefault?: 1 | -1;
   /** horizontal distance kept between body and the hand target while drawing */
   reach?: number;
+  /** 'serious' (thrillers, crises): never smiles or hops; 'neutral': restrained; 'warm' (default): original */
+  demeanor?: 'warm' | 'neutral' | 'serious';
 };
 
 const startOf = (a: PresenterAction) => (a.kind === 'draw' ? a.timeline.start : a.at);
@@ -133,6 +135,8 @@ export const presenterPose = (p: AnimatedPresenterProps): Pose & {handTarget: Ve
   const facing: 1 | -1 = target ? (target[0] >= x ? 1 : -1) : moving > 0.25 ? (v > 0 ? 1 : -1) : faceDefault;
   const blink = ((t + 0.7) % 3.4) < 0.12 ? 1 : 0;
   const breathe = Math.sin(t * 2.2) * 1.6 * (1 - moving);
+  const dm = p.demeanor === 'serious' ? {smile: 0, hop: 0.15, surprise: 0.35} : p.demeanor === 'neutral' ? {smile: 0.4, hop: 0.5, surprise: 0.7} : {smile: 1, hop: 1, surprise: 1};
+  smile *= dm.smile; hop *= dm.hop; surprise *= dm.surprise;
   return {x, floor, facing, walk: x / (58 * S), moving, hop: hop + breathe, drawHand, pointHand, backHand, talking, blink,
     surprise, scale: S, holdingMarker: holding, lean, smile, handTarget: drawHand || pointHand};
 };

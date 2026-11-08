@@ -1,0 +1,73 @@
+# Visual direction for the-machine-only-one-company-can-build (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Draft from tools/visual_direction.py: edit tones per chapter, add turning_points [{segment, cue, to}], then commit.
+primary_tone: tech
+secondary_tones:
+- strategy
+palette:
+  bg: '#081226'
+  bg2: '#0F1F3F'
+  ink: '#E8F4FF'
+  muted: '#8AA4C2'
+  land: '#16294A'
+  border: '#2B4A78'
+  accent: '#3FD0FF'
+  accent2: '#9B8CFF'
+  accent3: '#3DDC97'
+  risk: '#FF5A6E'
+presenter:
+  demeanor: neutral
+  min_sequences: 4
+chapters:
+- chapter: The machine
+  tone: tech
+- chapter: What the machine does
+  tone: tech
+- chapter: How one company ended up alone
+  tone: strategy
+- chapter: Who builds it
+  tone: tech
+- chapter: How it makes money
+  tone: tech
+- chapter: Where the machine may go
+  tone: strategy
+- chapter: The lesson
+  tone: tech
+turning_points: []
+thumbnail:
+  tone: tech
+  headline:
+  - ONLY ONE
+  - COMPANY
+  idea: the glowing lithography machine alone in a dark clean room
+  stage: fab
+  accent_line: 1
+  side: left
+  at: 3.0
+  scene:
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+      label: yellow
+    worldW: 1920
+    drift: 0
+    spot:
+    - 0.68
+    - 0.5
+    cam:
+    - at: 0
+      x: 560
+      y: 520
+      zoom: 1.2
+    items:
+    - kind: litho
+      x: 860
+      at: 0
+      fireAt: 0.4
+      text: ''
+      sub: ''
+requirements:
+- 'Machine scenes: dark clean room, cyan glow, layered cutaways of light source and mirrors'
+- 'Business chapters: cool strategic diagrams (strategy tone)'
+- 'Presenter neutral: assembles components, draws the supply network'
+- No sky decorations inside the fab

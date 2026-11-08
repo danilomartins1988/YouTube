@@ -15,6 +15,9 @@ remotion/src/animation-engine/
   CartoonOcean/        side-view cartoon sea (ships, cables with light, volcano): stories that happen at sea
   CartoonStage/        topic-specific cartoon worlds: `zones` of sets (city, exchange, newsroom, vault, court, fab,
                        sciencepark, datacenter, beach, web, port, cabin...) + items; used via engine_cartoon `zones`
+  tone.tsx             adaptive visual tone: thriller, crisis, strategy, trade, tech, history, reflective, bright
+                       (sky, sun/clouds, grade, exposure, vignette, spotlight, alarm pulse, grain, glow); scenes take
+                       `tone` + `toneShift: {at, to, dur}`; presenter `demeanor` (serious/neutral/warm). Default = old look
   transitions/         LightSweep, Iris, Burst, Studio set, DigitalBoard, TitleReveal
   motion/              easing, springs, windows, arcs, deterministic noise, palette
   types/               shared types
