@@ -3,6 +3,12 @@
 Prepared for manual publishing. Nothing has been uploaded. Every number below comes from the dossier
 (`research/asml_sources.md`). ASML reports in euros; amounts are in US dollars at the ECB 2025 average (1.13).
 
+## Title for the redone version (use this)
+
+**The $250 Million Machine Every Advanced Chip Depends On** (55 chars)
+
+The original upload used "The Machine Only One Company on Earth Can Build". The cartoon redo gets a different title so the two videos are not confused (owner's decision, 2026-11-08). The options below are kept for reference.
+
 ## Title options
 
 1. **The Machine Only One Company on Earth Can Build** (recommended: the episode title; curiosity plus a fact)

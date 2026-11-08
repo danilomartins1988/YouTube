@@ -4,6 +4,12 @@ Prepared for manual publishing. Nothing has been uploaded. Every number below co
 (`research/taiwan_v2_sources.md`, re-checked 2026-11-07). The disruption part is a clearly labelled hypothetical scenario, not a prediction.
 Use this package for `output/taiwan_v2_documentary.mp4`; the original v1 keeps its own package.
 
+## Title for the redone version (use this)
+
+**The Small Island the Whole World Economy Depends On** (51 chars)
+
+The original upload used "Why Taiwan Matters So Much to the Global Economy". The cartoon redo gets a different title so the two videos are not confused (owner's decision, 2026-11-08). The options below are kept for reference.
+
 ## Title options
 
 1. **Why Taiwan Matters So Much to the Global Economy** (recommended: the episode title; clear and searchable)

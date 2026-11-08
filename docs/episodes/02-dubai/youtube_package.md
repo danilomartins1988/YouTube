@@ -3,6 +3,12 @@
 Prepared for manual publishing. Nothing has been uploaded. Video: `output/dubai_documentary.mp4` (11:49, cartoon redo
 of 2026-11-08). Amounts in US dollars (see `CURRENCY.md`).
 
+## Title for the redone version (use this)
+
+**Dubai Isn't Rich Because of Oil. Here's What Pays the Bills** (59 chars)
+
+The original upload used "How Dubai Really Makes Money". The cartoon redo gets a different title so the two videos are not confused (owner's decision, 2026-11-08). The options below are kept for reference.
+
 ## Title options
 
 1. How Dubai Really Makes Money (28 chars)

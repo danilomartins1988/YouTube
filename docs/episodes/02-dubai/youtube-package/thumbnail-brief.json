@@ -1,5 +1,5 @@
 {
-  "title": "How Dubai Really Makes Money",
+  "title": "Dubai Isn't Rich Because of Oil. Here's What Pays the Bills",
   "docs_dir": "docs/episodes/02-dubai",
   "video": "output/dubai_documentary.mp4",
   "analysis": {
@@ -11,6 +11,7 @@
   },
   "status": "completed",
   "deliverable": "documentary",
+  "original_title": "How Dubai Really Makes Money",
   "slug": "how-dubai-really-makes-money",
   "concepts": [
     {
@@ -294,7 +295,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest the-machine-only-one-company-can-build (distance 0.37)",
+            "detail": "nearest why-norway-is-so-rich (distance 0.81)",
             "critical": false
           },
           {
@@ -305,7 +306,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.752,
+        "design_score": 0.791,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -313,13 +314,13 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "the-machine-only-one-company-can-build"
+        "nearest": "why-norway-is-so-rich"
       }
     }
   ],
   "default": "B",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T15:22:10Z",
+  "generated": "2026-11-08T16:15:42Z",
   "master": "output/how-dubai-really-makes-money/thumbnails/master_B.png"
 }

@@ -4,6 +4,12 @@ Prepared for manual publishing. Nothing has been uploaded. Video: `output/switze
 redo of 2026-11-08, four new fact-checked segments: see `FACT_CHECK.md`). Amounts in US dollars; the franc and the euro
 appear only as the subject of the story (the safe haven, the 1.20 floor), never as the unit of an amount.
 
+## Title for the redone version (use this)
+
+**The Hidden Formula Behind Switzerland's Wealth** (46 chars)
+
+The original upload used "Why Switzerland Is So Rich". The cartoon redo gets a different title so the two videos are not confused (owner's decision, 2026-11-08). The options below are kept for reference.
+
 ## Title options
 
 1. **Why Switzerland Is So Rich** (recommended: the episode title)

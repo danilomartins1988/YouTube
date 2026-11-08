@@ -3,6 +3,12 @@
 Prepared for manual publishing. Nothing has been uploaded. Video: `output/norway_documentary.mp4` (11:21, cartoon
 redo of 2026-11-08). Every amount is in US dollars (see `CURRENCY.md`).
 
+## Title for the redone version (use this)
+
+**How Norway Turned Oil Into a $2 Trillion Fortune** (48 chars)
+
+The original upload used "Why Norway Is So Rich — The Secret Behind Its Oil Fortune". The cartoon redo gets a different title so the two videos are not confused (owner's decision, 2026-11-08). The options below are kept for reference.
+
 ## Title options
 
 1. **Why Norway Is So Rich — The Secret Behind Its Oil Fortune** (recommended: the episode title)

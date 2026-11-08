@@ -1,5 +1,5 @@
 {
-  "title": "How Nvidia Took Over the AI Economy",
+  "title": "From Video Games to AI: How Nvidia Became a $5 Trillion Company",
   "docs_dir": "docs/episodes/06-nvidia",
   "video": "output/nvidia_documentary_presenter.mp4",
   "deliverable": "documentary_presenter",
@@ -11,18 +11,19 @@
     "metaphor": "the chip everything runs through"
   },
   "status": "completed",
+  "original_title": "How Nvidia Took Over the AI Economy",
   "slug": "how-nvidia-took-over-the-ai-economy",
   "concepts": [
     {
       "id": "A",
       "angle": "mystery",
       "text": [
-        "$5 TRILLION",
-        "CHIP"
+        "WHO SELLS",
+        "THE SHOVELS?"
       ],
-      "accent_line": 0,
+      "accent_line": 1,
       "text_side": "left",
-      "claim_basis": "market_cap_5tn: first company to close above $5 trillion (29 Oct 2025)",
+      "claim_basis": "A question (gold-rush metaphor); the film shows Nvidia sells the chips AI companies buy (10-K)",
       "scene": {
         "palette": {
           "sky0": "#030603",
@@ -54,22 +55,22 @@
       },
       "layout": [
         {
-          "text": "$5 TRILLION",
+          "text": "WHO SELLS",
           "x": 90,
-          "y": 521.8,
-          "size": 113.6,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 600.0,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "THE SHOVELS?",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
           "width": 800,
           "anchor": "start",
           "color": "#8BE04E"
-        },
-        {
-          "text": "CHIP",
-          "x": 90,
-          "y": 640.0,
-          "size": 113.6,
-          "width": 290.9,
-          "anchor": "start",
-          "color": "#FFFFFF"
         }
       ],
       "qc": {
@@ -89,7 +90,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.50 MB",
+            "detail": "0.51 MB",
             "critical": true
           },
           {
@@ -101,13 +102,13 @@
           {
             "check": "0-4 words",
             "pass": true,
-            "detail": "3 words",
+            "detail": "4 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 433, 890, 529), (90, 551, 381, 647)]",
+            "detail": "[(90, 442, 690, 530), (90, 550, 890, 638)]",
             "critical": true
           },
           {
@@ -119,19 +120,19 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": true,
-            "detail": "9.5px font at 160px wide",
+            "detail": "8.7px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 5.9:1 (dark outline adds more)",
+            "detail": "worst 5.5:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.060",
+            "detail": "0.064",
             "critical": false
           },
           {
@@ -143,18 +144,18 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest the-2-billion-that-never-existed (distance 0.89)",
+            "detail": "nearest why-norway-is-so-rich (distance 0.93)",
             "critical": false
           },
           {
             "check": "text rests on a verified claim or makes no factual claim",
             "pass": true,
-            "detail": "market_cap_5tn: first company to close above $5 trillion (29 Oct 2025)",
+            "detail": "A question (gold-rush metaphor); the film shows Nvidia sells the chips AI companies buy (10-K)",
             "critical": true
           }
         ],
         "critical_fail": false,
-        "design_score": 0.726,
+        "design_score": 0.691,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -162,19 +163,19 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "the-2-billion-that-never-existed"
+        "nearest": "why-norway-is-so-rich"
       }
     },
     {
       "id": "B",
       "angle": "consequence",
       "text": [
-        "FROM GAMES",
-        "TO AI"
+        "THE AI",
+        "CHOKEPOINT?"
       ],
       "accent_line": 1,
       "text_side": "right",
-      "claim_basis": "gpu_1999 (GPU for PC gaming), cuda_2006, dc_fy2026 (data center \u2248 90% of revenue)",
+      "claim_basis": "A question; data center \u2248 90% of FY2026 revenue (10-K)",
       "scene": {
         "palette": {
           "sky0": "#05040A",
@@ -215,20 +216,20 @@
       },
       "layout": [
         {
-          "text": "FROM GAMES",
+          "text": "THE AI",
           "x": 1830,
-          "y": 520.0,
-          "size": 125.0,
-          "width": 800,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 436.4,
           "anchor": "end",
           "color": "#FFFFFF"
         },
         {
-          "text": "TO AI",
+          "text": "CHOKEPOINT?",
           "x": 1830,
-          "y": 650.0,
-          "size": 125.0,
-          "width": 400.0,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 800,
           "anchor": "end",
           "color": "#76D13A"
         }
@@ -250,7 +251,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.52 MB",
+            "detail": "0.51 MB",
             "critical": true
           },
           {
@@ -262,13 +263,13 @@
           {
             "check": "0-4 words",
             "pass": true,
-            "detail": "4 words",
+            "detail": "3 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(1030, 422, 1830, 528), (1430, 552, 1830, 658)]",
+            "detail": "[(1394, 433, 1830, 529), (1030, 551, 1830, 647)]",
             "critical": true
           },
           {
@@ -280,19 +281,19 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": true,
-            "detail": "10.4px font at 160px wide",
+            "detail": "9.5px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 4.8:1 (dark outline adds more)",
+            "detail": "worst 3.8:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.066",
+            "detail": "0.064",
             "critical": false
           },
           {
@@ -304,18 +305,18 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest how-dubai-really-makes-money (distance 0.50)",
+            "detail": "nearest how-dubai-really-makes-money (distance 0.48)",
             "critical": false
           },
           {
             "check": "text rests on a verified claim or makes no factual claim",
             "pass": true,
-            "detail": "gpu_1999 (GPU for PC gaming), cuda_2006, dc_fy2026 (data center \u2248 90% of revenue)",
+            "detail": "A question; data center \u2248 90% of FY2026 revenue (10-K)",
             "critical": true
           }
         ],
         "critical_fail": false,
-        "design_score": 0.682,
+        "design_score": 0.618,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -330,6 +331,6 @@
   "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T15:22:40Z",
+  "generated": "2026-11-08T16:15:32Z",
   "master": "output/how-nvidia-took-over-the-ai-economy/thumbnails/master_A.png"
 }

@@ -1,5 +1,5 @@
 {
-  "title": "The Hidden Business of Formula 1",
+  "title": "Who Really Makes Money From Formula 1?",
   "docs_dir": "docs/episodes/03-formula1",
   "video": "output/formula1_documentary.mp4",
   "analysis": {
@@ -11,6 +11,8 @@
   },
   "status": "completed",
   "deliverable": "documentary",
+  "original_title": "The Hidden Business of Formula 1",
+  "default": "B",
   "slug": "the-hidden-business-of-formula-1",
   "concepts": [
     {
@@ -153,7 +155,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-taiwan-matters (distance 0.50)",
+            "detail": "nearest why-taiwan-matters (distance 0.49)",
             "critical": false
           },
           {
@@ -164,7 +166,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.721,
+        "design_score": 0.72,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -338,9 +340,8 @@
       }
     }
   ],
-  "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T15:24:47Z",
-  "master": "output/the-hidden-business-of-formula-1/thumbnails/master_A.png"
+  "generated": "2026-11-08T16:15:37Z",
+  "master": "output/the-hidden-business-of-formula-1/thumbnails/master_B.png"
 }

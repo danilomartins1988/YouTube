@@ -1,5 +1,5 @@
 {
-  "title": "Why Norway Is So Rich \u2014 The Secret Behind Its Oil Fortune",
+  "title": "How Norway Turned Oil Into a $2 Trillion Fortune",
   "docs_dir": "docs/episodes/04-norway",
   "video": "output/norway_documentary.mp4",
   "analysis": {
@@ -11,18 +11,20 @@
   },
   "status": "completed",
   "deliverable": "documentary",
+  "original_title": "Why Norway Is So Rich \u2014 The Secret Behind Its Oil Fortune",
+  "default": "A",
   "slug": "why-norway-is-so-rich",
   "concepts": [
     {
       "id": "A",
       "angle": "mystery",
       "text": [
-        "THE OIL",
-        "FORTUNE"
+        "SAVED,",
+        "NOT SPENT"
       ],
       "accent_line": 1,
       "text_side": "left",
-      "claim_basis": "No number; the fund's size is in the film (fund_value \u2248 $2.12tn)",
+      "claim_basis": "Fiscal rule: the government spends only the fund's expected return (Ministry of Finance, in sources.yaml)",
       "scene": {
         "palette": {
           "sky0": "#0B1222",
@@ -64,19 +66,19 @@
       },
       "layout": [
         {
-          "text": "THE OIL",
+          "text": "SAVED,",
           "x": 90,
-          "y": 511.4,
-          "size": 178.6,
-          "width": 800,
+          "y": 517.8,
+          "size": 138.9,
+          "width": 533.3,
           "anchor": "start",
           "color": "#FFFFFF"
         },
         {
-          "text": "FORTUNE",
+          "text": "NOT SPENT",
           "x": 90,
-          "y": 697.1,
-          "size": 178.6,
+          "y": 662.2,
+          "size": 138.9,
           "width": 800,
           "anchor": "start",
           "color": "#FFC93C"
@@ -99,7 +101,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.50 MB",
+            "detail": "0.52 MB",
             "critical": true
           },
           {
@@ -117,7 +119,7 @@
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 372, 890, 522), (90, 558, 890, 708)]",
+            "detail": "[(90, 409, 623, 526), (90, 554, 890, 671)]",
             "critical": true
           },
           {
@@ -129,7 +131,7 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": true,
-            "detail": "14.9px font at 160px wide",
+            "detail": "11.6px font at 160px wide",
             "critical": true
           },
           {
@@ -141,7 +143,7 @@
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.092",
+            "detail": "0.082",
             "critical": false
           },
           {
@@ -153,18 +155,18 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.45)",
+            "detail": "nearest why-taiwan-matters (distance 0.44)",
             "critical": false
           },
           {
             "check": "text rests on a verified claim or makes no factual claim",
             "pass": true,
-            "detail": "No number; the fund's size is in the film (fund_value \u2248 $2.12tn)",
+            "detail": "Fiscal rule: the government spends only the fund's expected return (Ministry of Finance, in sources.yaml)",
             "critical": true
           }
         ],
         "critical_fail": false,
-        "design_score": 0.712,
+        "design_score": 0.676,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -172,19 +174,19 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+        "nearest": "why-taiwan-matters"
       }
     },
     {
       "id": "B",
       "angle": "consequence",
       "text": [
-        "$2 TRILLION",
-        "FUND"
+        "WHERE THE",
+        "OIL MONEY?"
       ],
-      "accent_line": 0,
+      "accent_line": 1,
       "text_side": "right",
-      "claim_basis": "fund_value: NOK 22,014bn \u2248 $2.12tn (Fed H.10 2025 average), CURRENCY.md",
+      "claim_basis": "A question.",
       "scene": {
         "palette": {
           "sky0": "#060A12",
@@ -225,22 +227,22 @@
       },
       "layout": [
         {
-          "text": "$2 TRILLION",
+          "text": "WHERE THE",
           "x": 1830,
-          "y": 521.8,
-          "size": 113.6,
+          "y": 520.0,
+          "size": 125.0,
+          "width": 720.0,
+          "anchor": "end",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "OIL MONEY?",
+          "x": 1830,
+          "y": 650.0,
+          "size": 125.0,
           "width": 800,
           "anchor": "end",
           "color": "#FFD24A"
-        },
-        {
-          "text": "FUND",
-          "x": 1830,
-          "y": 640.0,
-          "size": 113.6,
-          "width": 290.9,
-          "anchor": "end",
-          "color": "#FFFFFF"
         }
       ],
       "qc": {
@@ -272,13 +274,13 @@
           {
             "check": "0-4 words",
             "pass": true,
-            "detail": "3 words",
+            "detail": "4 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(1030, 433, 1830, 529), (1539, 551, 1830, 647)]",
+            "detail": "[(1110, 422, 1830, 528), (1030, 552, 1830, 658)]",
             "critical": true
           },
           {
@@ -290,19 +292,19 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": true,
-            "detail": "9.5px font at 160px wide",
+            "detail": "10.4px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
-            "pass": true,
-            "detail": "worst 3.4:1 (dark outline adds more)",
+            "pass": false,
+            "detail": "worst 2.9:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.074",
+            "detail": "0.087",
             "critical": false
           },
           {
@@ -314,18 +316,18 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-switzerland-is-so-rich (distance 0.76)",
+            "detail": "nearest why-switzerland-is-so-rich (distance 0.77)",
             "critical": false
           },
           {
             "check": "text rests on a verified claim or makes no factual claim",
             "pass": true,
-            "detail": "fund_value: NOK 22,014bn \u2248 $2.12tn (Fed H.10 2025 average), CURRENCY.md",
+            "detail": "A question.",
             "critical": true
           }
         ],
-        "critical_fail": false,
-        "design_score": 0.625,
+        "critical_fail": true,
+        "design_score": 0.61,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -337,9 +339,8 @@
       }
     }
   ],
-  "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T15:26:15Z",
+  "generated": "2026-11-08T16:14:51Z",
   "master": "output/why-norway-is-so-rich/thumbnails/master_A.png"
 }

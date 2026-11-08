@@ -1,6 +1,6 @@
 # Thumbnail creative brief for how-nvidia-took-over-the-ai-economy (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
 # Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
-title: How Nvidia Took Over the AI Economy
+title: 'From Video Games to AI: How Nvidia Became a $5 Trillion Company'
 docs_dir: docs/episodes/06-nvidia
 video: output/nvidia_documentary_presenter.mp4
 deliverable: documentary_presenter
@@ -14,11 +14,11 @@ concepts:
 - id: A
   angle: mystery
   text:
-  - $5 TRILLION
-  - CHIP
-  accent_line: 0
+  - WHO SELLS
+  - THE SHOVELS?
+  accent_line: 1
   text_side: left
-  claim_basis: 'market_cap_5tn: first company to close above $5 trillion (29 Oct 2025)'
+  claim_basis: A question (gold-rush metaphor); the film shows Nvidia sells the chips AI companies buy (10-K)
   scene:
     palette:
       sky0: '#030603'
@@ -46,11 +46,11 @@ concepts:
 - id: B
   angle: consequence
   text:
-  - FROM GAMES
-  - TO AI
+  - THE AI
+  - CHOKEPOINT?
   accent_line: 1
   text_side: right
-  claim_basis: gpu_1999 (GPU for PC gaming), cuda_2006, dc_fy2026 (data center ≈ 90% of revenue)
+  claim_basis: A question; data center ≈ 90% of FY2026 revenue (10-K)
   scene:
     palette:
       sky0: '#05040A'
@@ -82,3 +82,4 @@ concepts:
       size: 2
     brand: tr
 status: completed
+original_title: How Nvidia Took Over the AI Economy

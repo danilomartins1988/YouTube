@@ -1,5 +1,5 @@
 {
-  "title": "Why Taiwan Matters So Much to the Global Economy",
+  "title": "The Small Island the Whole World Economy Depends On",
   "docs_dir": "docs/episodes/07-taiwan-v2",
   "video": "output/taiwan_v2_documentary.mp4",
   "analysis": {
@@ -11,6 +11,8 @@
   },
   "status": "completed",
   "deliverable": "documentary",
+  "original_title": "Why Taiwan Matters So Much to the Global Economy",
+  "default": "B",
   "slug": "why-taiwan-matters-cartoon",
   "concepts": [
     {
@@ -142,7 +144,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest the-cables-at-the-bottom-of-the-ocean (distance 0.35)",
+            "detail": "nearest the-machine-only-one-company-can-build (distance 0.31)",
             "critical": false
           },
           {
@@ -153,7 +155,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.653,
+        "design_score": 0.641,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -161,7 +163,7 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "the-cables-at-the-bottom-of-the-ocean"
+        "nearest": "the-machine-only-one-company-can-build"
       }
     },
     {
@@ -317,9 +319,8 @@
       }
     }
   ],
-  "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T15:28:14Z",
-  "master": "output/why-taiwan-matters-cartoon/thumbnails/master_A.png"
+  "generated": "2026-11-08T16:15:34Z",
+  "master": "output/why-taiwan-matters-cartoon/thumbnails/master_B.png"
 }

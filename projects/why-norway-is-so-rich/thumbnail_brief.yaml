@@ -1,6 +1,6 @@
 # Thumbnail creative brief for why-norway-is-so-rich (hiddeneco/youtube_thumbnail.py). Designed separately from the film.
 # Concept A = mystery, B = consequence. Every word on the image must rest on `claim_basis` (a verified claim) or be a question.
-title: Why Norway Is So Rich — The Secret Behind Its Oil Fortune
+title: How Norway Turned Oil Into a $2 Trillion Fortune
 docs_dir: docs/episodes/04-norway
 video: output/norway_documentary.mp4
 analysis:
@@ -13,11 +13,11 @@ concepts:
 - id: A
   angle: mystery
   text:
-  - THE OIL
-  - FORTUNE
+  - SAVED,
+  - NOT SPENT
   accent_line: 1
   text_side: left
-  claim_basis: No number; the fund's size is in the film (fund_value ≈ $2.12tn)
+  claim_basis: 'Fiscal rule: the government spends only the fund''s expected return (Ministry of Finance, in sources.yaml)'
   scene:
     palette:
       sky0: '#0B1222'
@@ -52,11 +52,11 @@ concepts:
 - id: B
   angle: consequence
   text:
-  - $2 TRILLION
-  - FUND
-  accent_line: 0
+  - WHERE THE
+  - OIL MONEY?
+  accent_line: 1
   text_side: right
-  claim_basis: 'fund_value: NOK 22,014bn ≈ $2.12tn (Fed H.10 2025 average), CURRENCY.md'
+  claim_basis: A question.
   scene:
     palette:
       sky0: '#060A12'
@@ -89,3 +89,5 @@ concepts:
     brand: tr
 status: completed
 deliverable: documentary
+original_title: Why Norway Is So Rich — The Secret Behind Its Oil Fortune
+default: A

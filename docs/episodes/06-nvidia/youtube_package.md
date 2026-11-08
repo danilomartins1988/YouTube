@@ -3,6 +3,12 @@
 Prepared for manual publishing. Nothing has been uploaded. Every number below comes from the dossier
 (`research/nvidia_sources.md`). Nvidia figures are fiscal years (FY2026 = year to January 2026).
 
+## Title for the redone version (use this)
+
+**From Video Games to AI: How Nvidia Became a $5 Trillion Company** (63 chars)
+
+The original upload used "How Nvidia Took Over the AI Economy". The cartoon redo gets a different title so the two videos are not confused (owner's decision, 2026-11-08). The options below are kept for reference.
+
 ## Title options
 
 1. **How Nvidia Took Over the AI Economy** (recommended: the episode title; clear, searchable, no hype)
