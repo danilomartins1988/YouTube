@@ -2,15 +2,15 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/how-dubai-really-makes-money/documentary/how-dubai-really-makes-money--documentary.mp4 (204.0 MB) |
+| File exists | PASS | /home/user/YouTube/output/how-dubai-really-makes-money/documentary/how-dubai-really-makes-money--documentary.mp4 (204.6 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 10-12 min | PASS | 708.87 s (11:48) |
+| Duration 11-13:20 min (channel standard 660-800 s) | PASS | 708.87 s (11:48) |
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 295 cues; median cue-start offset 0.06 s, p90 0.36 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>5 s) | FAIL | 652.7s |
+| No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
@@ -22,7 +22,7 @@
 # QC report: how-dubai-really-makes-money / documentary (long_16x9)
 
 - Runtime: **708.87 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 204.0 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 204.6 MB
 - Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
 - Errors: **0**, warnings: **21**
 - Technical QC passed: **True**
