@@ -506,6 +506,40 @@ const SETS: Record<string, SetFn> = {
       <ellipse cx={cx - 520} cy={f - 40} rx={120} ry={70} fill="#FF7043" stroke={OL} strokeWidth={5} />
     </g>;
   },
+  /** A Norwegian fjord: steep snowy mountains, a waterfall into the fjord, red wooden houses on the shore, a jetty. */
+  fjord: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      {Array.from({length: Math.ceil(w / 520) + 1}, (_, k) => { const x = z.x0 + k * 520 - 100, h = 520 + 140 * rnd(k + 81);
+        return <g key={'mt' + k}><path d={`M ${x - 340} ${f - 120} L ${x} ${f - 120 - h} L ${x + 340} ${f - 120} Z`} fill={night ? '#3D4F7A' : '#7C8DB0'} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          <path d={`M ${x - 90} ${f - 120 - h + 130} L ${x} ${f - 120 - h} L ${x + 90} ${f - 120 - h + 130} L ${x + 40} ${f - 120 - h + 100} L ${x} ${f - 120 - h + 140} L ${x - 40} ${f - 120 - h + 100} Z`} fill={K.white} stroke={OL} strokeWidth={3} strokeLinejoin="round" /></g>; })}
+      {Array.from({length: Math.ceil(w / 1400)}, (_, k) => { const x = z.x0 + 700 + k * 1400;
+        return <g key={'wf' + k}><path d={`M ${x - 20} ${f - 480} Q ${x} ${f - 300} ${x - 10} ${f - 130} L ${x + 30} ${f - 130} Q ${x + 40} ${f - 300} ${x + 20} ${f - 480} Z`} fill="#BFE8FA" stroke={OL} strokeWidth={3} />
+          {Array.from({length: 6}, (_, j) => { const u = ((t * 0.8 + j / 6) % 1); return <path key={j} d={`M ${x - 6 + 10 * (j % 3)} ${f - 470 + u * 330} l 0 40`} stroke={K.white} strokeWidth={4} opacity={0.8} />; })}
+          {Array.from({length: 5}, (_, j) => <circle key={'sp' + j} cx={x + 10 + 30 * Math.cos(j + t * 3)} cy={f - 130 + 10 * Math.sin(j * 2 + t * 4)} r={10} fill={K.white} opacity={0.7} />)}</g>; })}
+      <rect x={z.x0} y={f - 130} width={w} height={130} fill={night ? '#1F4E6E' : '#3C8FB8'} />
+      {Array.from({length: Math.ceil(w / 80)}, (_, k) => <path key={'wv' + k} d={`M ${z.x0 + k * 80 + 20 * Math.sin(t + k)} ${f - 100 + 70 * rnd(k)} q 16 -8 32 0`} fill="none" stroke={K.white} strokeWidth={3} opacity={0.5} />)}
+      <rect x={z.x0} y={f} width={w} height={600} fill="#7BAF5E" />
+      <rect x={z.x0} y={f} width={w} height={22} fill="#9E8E78" stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 340)}, (_, k) => { const x = z.x0 + 120 + k * 340;
+        return <g key={'rh' + k} transform={`translate(${x} ${f})`}>
+          <rect x={-70} y={-120} width={140} height={120} fill={['#B22222', '#C0392B', '#F2C14E', '#ECEFF1'][k % 4]} stroke={OL} strokeWidth={4} />
+          {Array.from({length: 7}, (_, j) => <path key={j} d={`M ${-70 + j * 20} -120 L ${-70 + j * 20} 0`} stroke={OL} strokeWidth={1.5} opacity={0.3} />)}
+          <path d="M -84 -120 L 0 -180 L 84 -120 Z" fill="#37474F" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          <rect x={-46} y={-90} width={30} height={30} fill={night ? '#FFE08A' : K.white} stroke={OL} strokeWidth={3} />
+          <rect x={14} y={-70} width={30} height={70} fill="#5D4037" stroke={OL} strokeWidth={3} /></g>; })}
+    </g>;
+  },
+  /** The North Sea: a grey-blue sea to the horizon with rolling swell; the floor line is the sea surface. */
+  northsea: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={f - 240} width={w} height={840} fill={night ? '#16324F' : '#3F7CA6'} />
+      {Array.from({length: 4}, (_, r) => <path key={'sw' + r} d={`M ${z.x0} ${f - 200 + r * 70} ${Array.from({length: Math.ceil(w / 60) + 1}, (_, k) => `L ${z.x0 + k * 60} ${f - 200 + r * 70 + (6 + r * 3) * Math.sin(k * 0.8 + t * (1 + r * 0.3))}`).join(' ')}`}
+        fill="none" stroke={K.white} strokeWidth={3} opacity={0.25 + r * 0.1} />)}
+      {Array.from({length: Math.ceil(w / 90)}, (_, k) => <path key={'wc' + k} d={`M ${z.x0 + k * 90 + 30 * Math.sin(t * 0.7 + k)} ${f + 40 + 200 * rnd(k + 13)} q 20 -12 40 0`} fill="none" stroke={K.white} strokeWidth={4} opacity={0.5} />)}
+    </g>;
+  },
   /** Plain studio-like sky with rolling hills (fallback / neutral). */
   hills: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -525,7 +559,7 @@ type ItemFn = (a: StageItem, c: Ctx, i: number) => React.ReactNode;
 const person: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = a.scale ?? 1, fl = a.flip ? -1 : 1, pose = a.pose || 'stand';
   const shirt = a.suit ? '#F4F7FB' : col(a.color, ['#4FB3F6', '#FF8A65', '#7BD389', '#B39DDB', '#FFC93C', '#F06292'][i % 6]);
-  const skin = K.skin[(a.skin ?? i) % 4], hair = ['#3E2723', '#212121', '#8D6E63', '#F4C542', '#5D4037'][(a.hair ?? i) % 5];
+  const skin = K.skin[(a.skin ?? i) % 4], hair = a.old ? '#CFD8DC' : ['#3E2723', '#212121', '#8D6E63', '#F4C542', '#5D4037'][(a.hair ?? i) % 5];
   const walk = pose === 'walk' || pose === 'run' ? Math.sin(t * (pose === 'run' ? 14 : 8)) : 0;
   const bob = pose === 'cheer' ? Math.abs(Math.sin(t * 7)) * 18 : pose === 'walk' || pose === 'run' ? Math.abs(walk) * 6 : Math.sin(t * 2 + i) * 2;
   const app = pop(t, a.at ?? 0, 0.45);
@@ -563,6 +597,7 @@ const person: ItemFn = (a, {t, f}, i) => {
     {a.suit && <g><path d="M -38 -186 Q -40 -240 0 -238 Q 40 -240 38 -186 L 38 -150 L -38 -150 Z" fill="#F4F7FB" stroke={OL} strokeWidth={4} />
       <rect x={-26} y={-206} width={52} height={22} rx={10} fill={skin} stroke={OL} strokeWidth={3} /><circle cx={-11} cy={-195} r={3.5} fill={OL} /><circle cx={13} cy={-195} r={3.5} fill={OL} />
       <rect x={-24} y={-182} width={48} height={22} rx={8} fill="#B3E5FC" stroke={OL} strokeWidth={3} /></g>}
+    {a.old && <g><path d="M 44 -110 L 60 0" stroke={K.wood2} strokeWidth={8} strokeLinecap="round" /><path d="M 30 -112 Q 44 -124 50 -110" stroke={K.wood2} strokeWidth={8} fill="none" strokeLinecap="round" /></g>}
     {a.hat && <path d="M -36 -214 L 36 -214 L 26 -236 L -26 -236 Z" fill={col(a.hat)} stroke={OL} strokeWidth={3} />}
     {sad && <path d={`M 34 -208 q 4 ${8 + 4 * Math.sin(t * 6)} 0 12 q -4 -4 0 -12`} fill="#7FD3F7" stroke={OL} strokeWidth={2} />}
   </g>;
@@ -1279,6 +1314,10 @@ const ship: ItemFn = (a, {t, f}, i) => {
       fill={['#E53935', '#1E88E5', '#FFB300', '#43A047', '#8E24AA', '#F4511E'][(r * 3 + c2 + i) % 6]} stroke={OL} strokeWidth={3} />))}
     {ty === 'tanker' && <g><rect x={-330} y={-130} width={480} height={20} fill="#9E9E9E" stroke={OL} strokeWidth={3} />
       {[-260, -120, 20].map((dx) => <ellipse key={dx} cx={dx} cy={-128} rx={46} ry={14} fill="#BDBDBD" stroke={OL} strokeWidth={3} />)}</g>}
+    {ty === 'fishing' && <g><rect x={-60} y={-200} width={140} height={90} rx={8} fill={K.cream} stroke={OL} strokeWidth={4} />
+      <rect x={-44} y={-186} width={40} height={28} rx={4} fill="#9FE3FF" stroke={OL} strokeWidth={2} /><rect x={14} y={-186} width={40} height={28} rx={4} fill="#9FE3FF" stroke={OL} strokeWidth={2} />
+      <path d="M 160 -110 L 160 -300 L 330 -130" fill="none" stroke={OL} strokeWidth={6} strokeLinecap="round" />
+      <path d={`M 330 -130 L ${330 + 10 * Math.sin(t * 2)} -40`} stroke={OL} strokeWidth={3} /></g>}
     {ty === 'liner' && <g><rect x={-320} y={-200} width={560} height={90} rx={12} fill={K.white} stroke={OL} strokeWidth={4} />
       {Array.from({length: 10}, (_, k) => <circle key={k} cx={-290 + k * 54} cy={-155} r={10} fill="#9FE3FF" stroke={OL} strokeWidth={2} />)}
       {[-120, 40].map((dx) => <g key={dx}><rect x={dx} y={-290} width={60} height={90} fill="#E53935" stroke={OL} strokeWidth={4} /><rect x={dx} y={-290} width={60} height={22} fill={OL} /></g>)}</g>}
@@ -1403,10 +1442,39 @@ const barrier: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** Offshore oil platform on legs over the sea (floor = sea surface): deck, derrick, flare, helideck. drillAt: the drill
+ * turns; dryAt shows "DRY"; strikeAt: a gusher of oil and a gold burst; flowAt: a pipe of oil barrels flows away. */
+const rig: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.7);
+  if (s <= 0) return null;
+  const drill = a.drillAt !== undefined && t >= a.drillAt, strike = a.strikeAt !== undefined && t >= a.strikeAt, dry = a.dryAt !== undefined && t >= a.dryAt && !strike;
+  const g = strike ? E.out(win(t, a.strikeAt, 0.8)) : 0, night = !!a.night;
+  return <g key={'rg' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    {[-200, -70, 70, 200].map((dx) => <rect key={dx} x={dx - 16} y={-240} width={32} height={320} fill="#F9A825" stroke={OL} strokeWidth={4} />)}
+    <path d="M -200 -150 L 200 -30 M 200 -150 L -200 -30" stroke="#F9A825" strokeWidth={10} />
+    <rect x={-280} y={-300} width={560} height={70} rx={8} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+    <rect x={-260} y={-380} width={200} height={80} rx={6} fill="#E53935" stroke={OL} strokeWidth={4} />
+    {[0, 1, 2].map((k) => <rect key={k} x={-244 + k * 60} y={-366} width={40} height={22} rx={3} fill={night ? '#FFE08A' : '#CFEFFF'} stroke={OL} strokeWidth={2} />)}
+    <ellipse cx={-160} cy={-392} rx={100} ry={16} fill="#90A4AE" stroke={OL} strokeWidth={4} />
+    <T x={-160} y={-386} s={18} c={K.white}>H</T>
+    <path d="M 60 -300 L 110 -560 L 160 -300 M 72 -360 L 148 -360 M 84 -430 L 136 -430 M 96 -500 L 124 -500 M 72 -360 L 136 -430 M 148 -360 L 84 -430" fill="none" stroke="#B0BEC5" strokeWidth={8} strokeLinejoin="round" />
+    {drill && <g transform={`translate(110 -260) rotate(${t * 400})`}><path d="M -20 0 L 20 0 M 0 -20 L 0 20" stroke={OL} strokeWidth={6} /></g>}
+    <path d="M 240 -300 L 330 -470" stroke="#90A4AE" strokeWidth={14} strokeLinecap="round" />
+    {a.flare !== false && <path d={`M 330 -470 Q ${310 + 10 * Math.sin(t * 9)} -520 ${330 + 6 * Math.sin(t * 7)} ${-560 - 20 * Math.abs(Math.sin(t * 5))} Q ${352 + 8 * Math.sin(t * 11)} -510 330 -470 Z`} fill="#FF7043" stroke={OL} strokeWidth={3} />}
+    {dry && <g transform={`translate(110 -640) scale(${E.outBack(win(t, a.dryAt, 0.4))})`}><rect x={-80} y={-36} width={160} height={66} rx={14} fill="#FFCDD2" stroke={OL} strokeWidth={4} /><T x={0} y={12} s={36} c={K.red}>DRY</T></g>}
+    {strike && <g>
+      <path d={`M 90 -560 Q ${60 + 20 * Math.sin(t * 8)} ${-560 - 260 * g} 110 ${-580 - 300 * g} Q ${160 + 20 * Math.sin(t * 7)} ${-560 - 260 * g} 130 -560 Z`} fill="#212121" stroke={OL} strokeWidth={3} />
+      {Array.from({length: 10}, (_, k) => { const u = ((t - a.strikeAt) * 0.8 + k / 10) % 1; return <circle key={k} cx={110 + (k % 2 ? 1 : -1) * 120 * u} cy={-860 * g + 400 * u * u + (-580 + 280 * u) * (1 - g)} r={10} fill="#212121" opacity={1 - u} />; })}
+      {t < a.strikeAt + 1.5 && Array.from({length: 12}, (_, k) => { const an = k * 0.52, r = 80 + 220 * win(t, a.strikeAt, 1.2);
+        return <path key={'bb' + k} d={`M ${110 + Math.cos(an) * 60} ${-700 + Math.sin(an) * 60} L ${110 + Math.cos(an) * r} ${-700 + Math.sin(an) * r}`} stroke={K.gold} strokeWidth={8} strokeLinecap="round" opacity={1 - win(t, a.strikeAt, 1.5)} />; })}</g>}
+    {a.text && <g><rect x={-170} y={-230} width={340} height={50} rx={10} fill={K.white} stroke={OL} strokeWidth={4} /><T x={0} y={-195} s={26}>{a.text}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier};
-const BACK = new Set(['tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm']);
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig};
+const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm']);
 
 /* =============================================================================================== STAGE */
 export const CartoonStage: React.FC<CartoonStageProps> = (p) => {

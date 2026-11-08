@@ -9,15 +9,17 @@ remotion_geo: [europe, world]
 currency_exempt: true
 style:
   name: nordic-ledger
-  palette:            # dark navy, white, restrained gold (brief)
-    bg: "#07111F"
-    bg2: "#0E1D33"
-    ink: "#F4F1EA"
-    muted: "#8B98AA"
-    land: "#18283D"
-    border: "#33475F"
-    accent: "#D4AF5A"     # restrained gold
-    accent2: "#9FB7D0"    # cold steel blue, used sparingly for contrast
+  palette:            # bright cartoon day (2026-11-08 cartoon redo): sky base, gold = money, blue, green = growth, red = risk
+    bg: "#BFE8FA"
+    bg2: "#EAF8FF"
+    ink: "#10213A"
+    muted: "#4F6B80"
+    land: "#8BD47A"
+    border: "#2E5A73"
+    accent: "#E89A00"
+    accent2: "#1E7FD8"
+    accent3: "#23995A"
+    risk: "#E53935"
   fonts:              # used by the Python thumbnail renderer
     display: InterDisplay-Bold
     heading: InterDisplay-SemiBold
