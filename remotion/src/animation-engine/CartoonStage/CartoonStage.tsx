@@ -1823,6 +1823,50 @@ const satellite: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** Back-end line (OSAT): a wafer is diced (saw lines), dies hop onto a belt, drop into black packages with gold legs,
+ *  and pass a test gate that lights a green tick (or red on `failEvery`). `rate` = chips per second once running. */
+const osat: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.7);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const st = (a.at ?? 0) + 0.5, cut = clamp(win(t, st, 1.6)), run = t >= st + 1.6, rate = a.rate ?? 1.1, n = 7, failEvery = a.failEvery ?? 0;
+  const L = -620, R = 620, belt = -150, chips: React.ReactNode[] = [];
+  if (run) for (let k = 0; k < n; k++) {
+    const u = ((t - st - 1.6) * rate * 0.18 + k / n) % 1, cx = lerp(L + 260, R, u), id = Math.floor((t - st - 1.6) * rate * 0.18 + k / n) * n + k;
+    const packed = u > 0.38, tested = u > 0.7, bad = failEvery > 0 && id % failEvery === failEvery - 1;
+    chips.push(<g key={k} transform={`translate(${cx} ${belt - 26})`}>
+      {packed ? <g><rect x={-30} y={-22} width={60} height={44} rx={5} fill="#1B1F27" stroke={OL} strokeWidth={3} />
+        {[-20, -7, 7, 20].map((lx) => <path key={lx} d={`M ${lx} 22 L ${lx} 32 M ${lx} -22 L ${lx} -32`} stroke="#FFC93C" strokeWidth={4} />)}
+        <circle cx={-18} cy={-10} r={3} fill="#90A4AE" /></g>
+        : <rect x={-18} y={-14} width={36} height={28} rx={3} fill="#80DEEA" stroke={OL} strokeWidth={2} />}
+      {tested && <circle cx={0} cy={-56} r={14} fill={bad ? K.red : K.green} stroke={OL} strokeWidth={3} />}
+      {tested && <path d={bad ? 'M -6 -62 L 6 -50 M 6 -62 L -6 -50' : 'M -7 -56 L -2 -50 L 8 -62'} stroke={K.white} strokeWidth={4} fill="none" />}
+    </g>);
+  }
+  return <g key={'os' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    {/* wafer on the dicing table */}
+    <rect x={L - 40} y={-120} width={280} height={120} rx={12} fill="#CFD8DC" stroke={OL} strokeWidth={5} />
+    <g transform={`translate(${L + 100} -200)`}>
+      <circle r={110} fill="url(#wafg2)" stroke={OL} strokeWidth={5} />
+      {Array.from({length: 5}, (_, k) => <path key={'h' + k} d={`M -110 ${-80 + k * 40} L ${-110 + 220 * cut} ${-80 + k * 40}`} stroke={OL} strokeWidth={2.5} opacity={0.8} />)}
+      {Array.from({length: 5}, (_, k) => <path key={'v' + k} d={`M ${-80 + k * 40} -110 L ${-80 + k * 40} ${-110 + 220 * cut}`} stroke={OL} strokeWidth={2.5} opacity={0.8} />)}
+      {cut < 1 && <circle cx={-110 + 220 * cut} cy={-80 + (Math.floor(t * 3) % 5) * 40} r={16} fill="#B0BEC5" stroke={OL} strokeWidth={3} />}
+      <defs><linearGradient id="wafg2" x1="0" x2="1"><stop offset="0%" stopColor="#B39DDB" /><stop offset="50%" stopColor="#80DEEA" /><stop offset="100%" stopColor="#F48FB1" /></linearGradient></defs>
+    </g>
+    <T x={L + 100} y={-330} s={22}>{cut < 1 ? 'DICING' : 'DIES'}</T>
+    {/* belt */}
+    <rect x={L + 240} y={belt} width={R - L - 220} height={26} rx={12} fill="#455A64" stroke={OL} strokeWidth={4} />
+    {Array.from({length: 14}, (_, k) => <circle key={k} cx={L + 260 + ((k * 82 + t * 60) % (R - L - 240))} cy={belt + 13} r={6} fill="#90A4AE" />)}
+    <rect x={L + 240} y={belt + 26} width={R - L - 220} height={-belt - 26} fill="#ECEFF1" stroke={OL} strokeWidth={4} />
+    {/* packaging press and test gate */}
+    <g transform="translate(-20 0)"><rect x={-70} y={-360} width={140} height={130} rx={12} fill="#FFB300" stroke={OL} strokeWidth={4} />
+      <path d={`M 0 -230 L 0 ${-200 + 30 * Math.abs(Math.sin(t * 3))}`} stroke={OL} strokeWidth={10} /><T x={0} y={-290} s={20}>PACKAGE</T></g>
+    <g transform="translate(260 0)"><path d="M -70 -150 L -70 -330 L 70 -330 L 70 -150" fill="none" stroke="#26A69A" strokeWidth={12} />
+      <rect x={-70} y={-370} width={140} height={44} rx={10} fill="#26A69A" stroke={OL} strokeWidth={4} /><T x={0} y={-340} s={20} c={K.white}>TEST</T></g>
+    {chips}
+    {a.text && <g><rect x={-260} y={-470} width={520} height={56} rx={12} fill={col(a.color, K.gold)} stroke={OL} strokeWidth={4} /><T x={0} y={-432} s={28}>{a.text}</T></g>}
+  </g>;
+};
+
 /** A school bus (for size comparisons). */
 const bus: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
@@ -1930,7 +1974,7 @@ const watch: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

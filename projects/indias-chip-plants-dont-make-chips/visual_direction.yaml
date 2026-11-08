@@ -1,0 +1,52 @@
+# Visual direction for indias-chip-plants-dont-make-chips (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a patient industrial strategy. Warm saffron and green accents (no flag designs), strategy for the plan, tech for the
+# factories, crisis for the fab's slips and rivals, reflective for the ladder.
+primary_tone: strategy
+secondary_tones:
+- tech
+- crisis
+- reflective
+palette:
+  bg: '#0E1220'
+  bg2: '#1A2133'
+  ink: '#F5F3EE'
+  muted: '#B4ACA0'
+  land: '#2A3348'
+  border: '#4A5470'
+  accent: '#FF9933'
+  accent2: '#5BC0FF'
+  accent3: '#4CC38A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The plant that does not make chips
+  tone: strategy
+- chapter: Two halves of a chip
+  tone: tech
+- chapter: Sanand
+  tone: tech
+- chapter: The import bill
+  tone: strategy
+- chapter: The missing middle
+  tone: crisis
+- chapter: The second step
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m4_slip
+  cue: That has changed
+  to: crisis
+  why: the promised date slips
+thumbnail:
+  tone: strategy
+  headline: []
+  idea: a packaged chip with gold legs, the wafer behind it greyed out
+requirements:
+- 'The OSAT line (dice, package, test) is the through-line: hook, back end, inside Sanand, payoff'
+- 'Front end vs back end: fab clean room vs packaging line'
+- Sanand as an industrial site with three plants opening in sequence
+- 'Dholera: construction site and a slipping calendar (28 nm -> 90 nm, 2026 -> 2028)'
+- No flags, no logos, no smiling sun, no generic city

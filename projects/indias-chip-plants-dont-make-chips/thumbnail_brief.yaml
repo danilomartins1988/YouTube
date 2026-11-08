@@ -1,0 +1,88 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
+title: "India's Chip Plants Don't Make Chips. That's the Plan"
+docs_dir: docs/episodes/17-india-chips
+video: output/india_chips_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: India's new chip plants do not make chips from silicon
+  surprising_fact: 'Five units in commercial production; the first ones package and test chips made abroad; packaging is 6% of the industry value'
+  subject: one packaged chip
+  tone: strategy
+  metaphor: the first rung of the ladder
+concepts:
+- id: A
+  angle: mystery (bold)
+  text:
+  - INDIA'S CHIP
+  - PLANTS DON'T
+  - MAKE CHIPS?
+  accent_line: 2
+  text_side: left
+  claim_basis: 'units/sanand: the plants in production package and test chips made elsewhere (PIB, Tech Times)'
+  scene:
+    palette:
+      sky0: '#06080F'
+      sky1: '#241A10'
+      haze: '#FF9933'
+      key: '#FFD9A8'
+      accent: '#FF9933'
+      ink: '#FFFFFF'
+    backdrop: cleanroom
+    subject:
+      kind: chip
+      x: 1400
+      y: 560
+      s: 1.0
+    support:
+    - kind: bignum
+      x: 1400
+      y: 520
+      s: 1.0
+      label: ' '
+      rot: 0
+    particles:
+      n: 70
+      region: [800, 0, 1920, 1080]
+      size: 3
+      color: '#FFD9A8'
+    vignette: 0.55
+    brand: tl
+- id: B
+  angle: consequence (bold)
+  text:
+  - INDIA
+  - CHIPS
+  - STEP ONE
+  accent_line: 2
+  text_side: left
+  claim_basis: 'value: packaging and testing is the first step into chipmaking (BCG/SIA value chain)'
+  scene:
+    palette:
+      sky0: '#05070F'
+      sky1: '#102A1C'
+      haze: '#4CC38A'
+      key: '#C8F2DA'
+      accent: '#FF9933'
+      ink: '#FFFFFF'
+    backdrop: cleanroom
+    subject:
+      kind: chip
+      x: 1420
+      y: 560
+      s: 0.95
+    support:
+    - kind: bignum
+      x: 1420
+      y: 520
+      s: 0.9
+      label: ' '
+      rot: 0
+    particles:
+      n: 60
+      region: [800, 0, 1920, 1080]
+      size: 3
+      color: '#C8F2DA'
+    vignette: 0.55
+    brand: tl
+default: A

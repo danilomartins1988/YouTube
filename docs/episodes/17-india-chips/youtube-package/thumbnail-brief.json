@@ -1,0 +1,368 @@
+{
+  "title": "India's Chip Plants Don't Make Chips. That's the Plan",
+  "docs_dir": "docs/episodes/17-india-chips",
+  "video": "output/india_chips_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "India's new chip plants do not make chips from silicon",
+    "surprising_fact": "Five units in commercial production; the first ones package and test chips made abroad; packaging is 6% of the industry value",
+    "subject": "one packaged chip",
+    "tone": "strategy",
+    "metaphor": "the first rung of the ladder"
+  },
+  "default": "A",
+  "slug": "indias-chip-plants-dont-make-chips",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "INDIA'S CHIP",
+        "PLANTS DON'T",
+        "MAKE CHIPS?"
+      ],
+      "accent_line": 2,
+      "text_side": "left",
+      "claim_basis": "units/sanand: the plants in production package and test chips made elsewhere (PIB, Tech Times)",
+      "scene": {
+        "palette": {
+          "sky0": "#06080F",
+          "sky1": "#241A10",
+          "haze": "#FF9933",
+          "key": "#FFD9A8",
+          "accent": "#FF9933",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "cleanroom",
+        "subject": {
+          "kind": "chip",
+          "x": 1400,
+          "y": 560,
+          "s": 1.0
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1400,
+            "y": 520,
+            "s": 1.0,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD9A8"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "INDIA'S CHIP",
+          "x": 90,
+          "y": 469.2,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "PLANTS DON'T",
+          "x": 90,
+          "y": 577.5,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "MAKE CHIPS?",
+          "x": 90,
+          "y": 685.8,
+          "size": 104.2,
+          "width": 733.3,
+          "anchor": "start",
+          "color": "#FF9933"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "6 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 388, 890, 475), (90, 496, 890, 584), (90, 605, 823, 692)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.103",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 31",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters (distance 0.56)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "units/sanand: the plants in production package and test chips made elsewhere (PIB, Tech Times)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.609,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "INDIA",
+        "CHIPS",
+        "STEP ONE"
+      ],
+      "accent_line": 2,
+      "text_side": "left",
+      "claim_basis": "value: packaging and testing is the first step into chipmaking (BCG/SIA value chain)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#102A1C",
+          "haze": "#4CC38A",
+          "key": "#C8F2DA",
+          "accent": "#FF9933",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "cleanroom",
+        "subject": {
+          "kind": "chip",
+          "x": 1420,
+          "y": 560,
+          "s": 0.95
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1420,
+            "y": 520,
+            "s": 0.9,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#C8F2DA"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "INDIA",
+          "x": 90,
+          "y": 433.8,
+          "size": 156.2,
+          "width": 500.0,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "CHIPS",
+          "x": 90,
+          "y": 596.2,
+          "size": 156.2,
+          "width": 500.0,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "STEP ONE",
+          "x": 90,
+          "y": 758.8,
+          "size": 156.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FF9933"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 312, 590, 443), (90, 474, 590, 606), (90, 637, 890, 768)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.105",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 32",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters (distance 0.70)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "value: packaging and testing is the first step into chipmaking (BCG/SIA value chain)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.669,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T17:42:08Z",
+  "master": "output/indias-chip-plants-dont-make-chips/thumbnails/master_A.png"
+}
