@@ -232,7 +232,7 @@ stage("s23_cxmt", "m4_cxmt", {
     "items": [it("tower", x=700, text="CXMT", color=CXM, h=420, at=0.3, growAt=0.3),
               it("sign", x=700, y=300, text="#4 DRAM MAKER", sub="{{big3.cxmt_display}} of sales, Q2 2026", at=C("fourth largest"), color="#FFCDD2", size=34),
               it("board", x=2200, y=60, w=820, at=C("In July", -0.4), text="SHANGHAI · STAR MARKET",
-                 rows=[{"name": "CXMT · LISTING DAY", "value": "8.66 yuan"}], swap={"at": C("the shares jumped"), "out": 0, "in": {"name": "CXMT · DAY 1", "value": "+466%", "color": "gold"}}),
+                 rows=[{"name": "CXMT · LISTING DAY", "value": "$8.6bn raised"}], swap={"at": C("the shares jumped"), "out": 0, "in": {"name": "CXMT · DAY 1", "value": "+466%", "color": "gold"}}),
               it("chart", x=2200, y=560, w=600, h=320, at=C("In July"), dur=2, text="CXMT SHARES", pts=[0.1, 0.12, 0.85, 0.95]),
               it("burst", x=2200, y=350, at=C("the shares jumped", 0.4)),
               *crowd([2650, 2780], "cheer", at=C("Investors were betting"))],
