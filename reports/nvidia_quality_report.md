@@ -2,11 +2,11 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | output/nvidia_documentary.mp4 (176.0 MB) |
+| File exists | PASS | /home/user/YouTube/output/how-nvidia-took-over-the-ai-economy/documentary/how-nvidia-took-over-the-ai-economy--documentary.mp4 (176.0 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 10-12 min | PASS | 698.77 s (11:38) |
+| Duration 11-13:20 min (channel standard 660-800 s) | PASS | 698.77 s (11:38) |
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 308 cues; median cue-start offset 0.07 s, p90 0.36 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |

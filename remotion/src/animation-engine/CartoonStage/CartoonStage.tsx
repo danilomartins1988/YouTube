@@ -281,6 +281,32 @@ const SETS: Record<string, SetFn> = {
           <path d="M 4 -36 L 40 -32" stroke={K.skin[k % 4]} strokeWidth={7} strokeLinecap="round" /></g>; })}
     </g>;
   },
+  /** Electronics shop: wall shelves of generic boxes with price tags, a neon sign, a glass counter, ceiling lights. */
+  shop: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#2A2F45' : '#EDE7F6'} />
+      <rect x={z.x0} y={f - 640} width={w} height={20} fill="#B39DDB" opacity={0.5} />
+      {Array.from({length: Math.ceil(w / 420)}, (_, k) => { const x = z.x0 + 40 + k * 420;
+        return <g key={'sh' + k}>
+          {[0, 1, 2].map((r) => <g key={r}>
+            <rect x={x} y={f - 560 + r * 150} width={360} height={14} fill={K.wood} stroke={OL} strokeWidth={3} />
+            {[0, 1, 2, 3].map((b) => { const bw = 70, bh = 80 + ((k + r + b) % 3) * 14, c = ['#4FB3F6', '#FFC93C', '#7BD389', '#F06292', '#9575CD', '#FF8A65'][(k * 3 + r * 2 + b) % 6];
+              return <g key={b}><rect x={x + 14 + b * 86} y={f - 560 + r * 150 - bh} width={bw} height={bh} rx={4} fill={c} stroke={OL} strokeWidth={3} />
+                <rect x={x + 24 + b * 86} y={f - 560 + r * 150 - bh + 12} width={50} height={14} rx={3} fill={K.white} opacity={0.8} /></g>; })}
+            <rect x={x + 150} y={f - 560 + r * 150 + 16} width={60} height={24} rx={4} fill={K.white} stroke={OL} strokeWidth={2} />
+          </g>)}
+        </g>; })}
+      {(z as any).label !== 'none' && <g transform={`translate(${z.x0 + w / 2} ${f - 690})`}>
+        <rect x={-260} y={-56} width={520} height={92} rx={18} fill="#1B2438" stroke={OL} strokeWidth={5} />
+        <text x={0} y={10} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={52} fill={Math.sin(t * 3) > -0.8 ? '#FF4FD8' : '#7A2A6A'}>{(z as any).label || 'COMPUTERS'}</text></g>}
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => <g key={'lt' + k}><rect x={z.x0 + 100 + k * 300} y={f - 900} width={120} height={14} rx={7} fill="#FFF8E1" />
+        <path d={`M ${z.x0 + 100 + k * 300} ${f - 886} L ${z.x0 + 60 + k * 300} ${f - 640} L ${z.x0 + 260 + k * 300} ${f - 640} L ${z.x0 + 220 + k * 300} ${f - 886} Z`} fill="#FFF8E1" opacity={night ? 0.08 : 0.18} /></g>)}
+      <rect x={z.x0} y={f - 70} width={w} height={70} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3A3550' : '#D7CCC8'} />
+      {Array.from({length: Math.ceil(w / 100)}, (_, k) => <rect key={'ft' + k} x={z.x0 + k * 100} y={f} width={4} height={600} fill={OL} opacity={0.08} />)}
+    </g>;
+  },
   /** Car plant interior: steel trusses, orange welding robots with sparks in the back. */
   carplant: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -661,7 +687,7 @@ const SETS: Record<string, SetFn> = {
     </g>;
   },
 };
-const INDOOR = new Set(['pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set(['shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -1418,6 +1444,68 @@ const shares: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A DDR memory stick (generic, no brand): green PCB, eight black chips, gold contacts; chips glow red from hotAt;
+ *  `liftAt` raises the eight chips off the board (to count them); `label` sticker (e.g. "16 GB"). */
+const ramstick: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 500), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const hot = a.hotAt !== undefined ? clamp(win(t, a.hotAt, 1.2)) : 0, lift = a.liftAt !== undefined ? E.outBack(win(t, a.liftAt, 0.9)) : 0;
+  return <g key={'rs' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${a.tilt ?? 0})`}>
+    <rect x={-420} y={-110} width={840} height={220} rx={14} fill="#2E7D4F" stroke={OL} strokeWidth={6} />
+    {Array.from({length: 24}, (_, k) => <path key={k} d={`M ${-400 + k * 34} -96 l 0 ${30 + (k % 3) * 10}`} stroke="#7BD389" strokeWidth={2} opacity={0.5} />)}
+    {Array.from({length: 40}, (_, k) => <rect key={'c' + k} x={-400 + k * 20} y={92} width={12} height={26} fill="#FFC93C" stroke={OL} strokeWidth={1.5} />)}
+    <rect x={-20} y={96} width={24} height={30} fill={K.sky2} />
+    {Array.from({length: 8}, (_, k) => { const cx = -350 + k * 100, ly = -lift * (60 + (k % 2) * 30);
+      const g = hot * (0.6 + 0.4 * Math.sin(t * 6 + k));
+      return <g key={k} transform={`translate(${cx} ${-10 + ly})`}>
+        {g > 0 && <rect x={-46} y={-56} width={92} height={112} rx={10} fill={K.red} opacity={g * 0.5} />}
+        <rect x={-38} y={-48} width={76} height={96} rx={6} fill="#1B1F27" stroke={OL} strokeWidth={4} />
+        <circle cx={-26} cy={-36} r={4} fill="#5C6B7A" />
+        {lift > 0.5 && <text x={0} y={8} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={24} fill={K.gold}>{k + 1}</text>}
+      </g>; })}
+    {a.label && <g><rect x={-120} y={-96} width={240} height={36} rx={6} fill={K.white} stroke={OL} strokeWidth={3} transform="translate(0 -40)" />
+      <T x={0} y={-112} s={26}>{a.label}</T></g>}
+  </g>;
+};
+
+/** A hanging price tag on a string; `pages` [[t, text]] flip the price; a page with red: true turns it red. */
+const pricetag: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 300), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  let txt = a.text || '$0', red = false, lastT = -99;
+  for (const p of (a.pages || []) as any[]) if (t >= p[0]) { txt = p[1]; red = !!p[2]; lastT = p[0]; }
+  const flip = Math.abs(Math.cos(Math.min(1, (t - lastT) / 0.5) * Math.PI)), sw = Math.sin(t * 1.6) * 6;
+  const w = Math.max(220, txt.length * 44 + 70);
+  return <g key={'pt' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${sw})`}>
+    <path d={`M 0 ${-220} L 0 -70`} stroke={OL} strokeWidth={4} />
+    <g transform={`scale(1 ${t - lastT < 0.5 ? flip : 1})`}>
+      <path d={`M ${-w / 2} -60 L ${w / 2 - 50} -60 L ${w / 2} 0 L ${w / 2 - 50} 60 L ${-w / 2} 60 Z`} fill={red ? '#FFCDD2' : K.white} stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+      <circle cx={w / 2 - 54} cy={0} r={12} fill={K.sky2} stroke={OL} strokeWidth={4} />
+      <T x={-26} y={22} s={64} c={red ? K.red : OL}>{txt}</T>
+      {a.sub && <T x={-26} y={96} s={22} w={700}>{a.sub}</T>}
+    </g>
+  </g>;
+};
+
+/** An AI accelerator package: a glowing processor die flanked by HBM stacks whose layers build up from `at`. */
+const hbm: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 520), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const layers = a.layers ?? 8, build = clamp(win(t, (a.at ?? 0) + 0.4, a.dur ?? 3));
+  const stack = (sx: number, k: number) => <g key={k} transform={`translate(${sx} 0)`}>
+    {Array.from({length: Math.ceil(layers * build)}, (_, l) => <rect key={l} x={-60} y={60 - l * 22} width={120} height={18} rx={3}
+      fill={l % 2 ? '#4FB3F6' : '#2F6FD1'} stroke={OL} strokeWidth={3} />)}
+    {build >= 1 && <T x={0} y={60 - layers * 22 - 14} s={22} c={K.white}>HBM</T>}
+  </g>;
+  return <g key={'hb' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-520} y={80} width={1040} height={60} rx={10} fill="#2E7D4F" stroke={OL} strokeWidth={5} />
+    <rect x={-170} y={-120} width={340} height={200} rx={14} fill="#1B1F27" stroke={OL} strokeWidth={6} />
+    <rect x={-140} y={-92} width={280} height={144} rx={8} fill="#7DF29A" opacity={0.25 + 0.15 * Math.sin(t * 3)} />
+    <T x={0} y={-6} s={32} c="#7DF29A">{a.text || 'AI CHIP'}</T>
+    {[-420, -280, 280, 420].map((sx, k) => stack(sx, k))}
+  </g>;
+};
+
 /** Renewal clock: the hand sweeps a full turn every `period` s; each lap pops a coin ("PAY AGAIN"). */
 const clock: ItemFn = (a, {t}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, 400), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5), per = a.period ?? 3;
@@ -1659,7 +1747,7 @@ const watch: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

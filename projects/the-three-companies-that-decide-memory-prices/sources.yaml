@@ -1,0 +1,200 @@
+# Sources and claims for "The Three Companies That Decide How Much Your Memory Costs" (Episode 14).
+# Every claim was read on its source page on 2026-11-08 (AI fact-check; quotes in docs/episodes/14-memory/FACT_CHECK.md).
+# Status stays source_located until a named human reviewer signs off.
+# MONEY: all amounts are in US dollars as published (TrendForce and the companies report in US$). The yuan IPO figures
+# are given in the AP's own dollar conversion.
+# FORECASTS are labelled as forecasts in the narration (prices next quarter, the end of the shortage, CXMT's share in 2028).
+sources:
+  - id: tf_2q26
+    title: "DRAM Industry Revenue Rises 59.5% QoQ in 2Q26 as Supply Expansion Continues to Lag Demand Growth"
+    publisher: TrendForce
+    url: https://www.trendforce.com/presscenter/news/20260907-13219.html
+    published: "2026-09-07"
+    accessed: "2026-11-08"
+    credit: "TrendForce"
+  - id: evertiq_2q26
+    title: "DRAM industry revenue surges 59.5% in Q2 as supply lags demand (ranking table, TrendForce data)"
+    publisher: Evertiq
+    url: https://evertiq.com/news/2026-09-07-dram-industry-revenue-surges-595-in-q2-as-supply-lags-demand
+    published: "2026-09-07"
+    accessed: "2026-11-08"
+    credit: "Evertiq / TrendForce"
+  - id: teamgroup_prices
+    title: "Memory crisis: according to TeamGroup, the worst is yet to come (TrendForce contract prices from TeamGroup's 2 Nov 2026 presentation)"
+    publisher: Basic Tutorials
+    url: https://basic-tutorials.com/news/memory-crisis-according-to-teamgroup-the-worst-is-yet-to-come/
+    published: "2026-11"
+    accessed: "2026-11-08"
+    credit: "TrendForce via TeamGroup"
+  - id: tf_1q26
+    title: "DRAMpocalypse: memory price projections skyrocket for 1Q26 (TrendForce)"
+    publisher: Evertiq
+    url: https://evertiq.com/news/2026-02-02-drampocalypse-memory-price-projections-skyrocket-for-1q26
+    published: "2026-02-02"
+    accessed: "2026-11-08"
+    credit: "Evertiq / TrendForce"
+  - id: register_crucial
+    title: "Micron ditches consumer memory brand Crucial to chase AI riches"
+    publisher: The Register
+    url: https://www.theregister.com/2025/12/03/micron_cuts_crucial/
+    published: "2025-12-03"
+    accessed: "2026-11-08"
+    credit: "The Register"
+  - id: thw_micron_dec25
+    title: "Micron outlines grim outlook for DRAM supply in first earnings call since killing Crucial; CEO says it can only meet half to two-thirds of demand"
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/pc-components/dram/micron-outlines-grim-outlook-for-dram-supply-in-first-earnings-call-since-killing-crucial-memory-and-ssd-brand-ceo-says-it-can-only-meet-half-to-two-thirds-of-demand
+    published: "2025-12-17"
+    accessed: "2026-11-08"
+    credit: "Tom's Hardware"
+  - id: nextplatform_2024
+    title: "Micron gears up for its potential datacenter memory boom"
+    publisher: The Next Platform
+    url: https://www.nextplatform.com/2024/06/27/micron-gears-up-for-its-potential-datacenter-memory-boom/
+    published: "2024-06-27"
+    accessed: "2026-11-08"
+    credit: "The Next Platform"
+  - id: computerworld_nikkei
+    title: "Global RAM shortage appears set to continue through 2027 (citing Nikkei Asia)"
+    publisher: Computerworld
+    url: https://www.computerworld.com/article/4161043/the-memory-shortage-appears-set-to-continue-through-2027.html
+    published: "2026-04-20"
+    accessed: "2026-11-08"
+    credit: "Computerworld / Nikkei Asia"
+  - id: ap_cxmt
+    title: "China memory chipmaker CXMT's shares soar in a blockbuster share listing in Shanghai (AP)"
+    publisher: KSAT (Associated Press)
+    url: https://www.ksat.com/business/2026/07/27/china-memory-chipmaker-cxmts-shares-soar-in-a-blockbuster-share-listing-in-shanghai/
+    published: "2026-07-27"
+    accessed: "2026-11-08"
+    credit: "AP"
+  - id: thw_micron_2023
+    title: "Micron loses $2.312 billion as demand for DRAM and 3D NAND nosedives"
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/news/micron-loses-dollar2312-billion-as-demand-for-dram-and-3d-nand-nosedives
+    published: "2023-03-29"
+    accessed: "2026-11-08"
+    credit: "Tom's Hardware"
+  - id: thw_micron_cut
+    title: "Micron cuts DRAM and NAND output to lessen price drops"
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/news/micron-cuts-dram-and-nand-output
+    published: "2022-11"
+    accessed: "2026-11-08"
+    credit: "Tom's Hardware"
+  - id: fool_2023
+    title: "The worst may be over for Micron, but pandemic-era profits aren't coming back"
+    publisher: The Motley Fool
+    url: https://www.fool.com/investing/2023/04/13/the-worst-may-be-over-for-micron-but-pandemic-era
+    published: "2023-04-13"
+    accessed: "2026-11-08"
+    credit: "The Motley Fool"
+
+claims:
+  - id: big3
+    text: "TrendForce (7 Sep 2026): in 2Q26 Samsung had 39.4% of DRAM industry revenue, SK hynix 24.9% and Micron 23.3% (together 87.6%, our sum); in 1Q26 the shares were 38.5%, 28.8% and 22.4%; SK hynix's HBM-heavy mix limited its ASP growth; Samsung moved early into HBM4 mass production; CXMT ranked fourth with 9.5%; total DRAM revenue reached nearly US$154.73bn, up 59.5% QoQ, driven by sharp rises in conventional DRAM contract prices."
+    spoken: almost nine in every ten dollars
+    display: "≈ 88%"
+    fields: {samsung_display: "39.4%", hynix_display: "24.9%", micron_display: "23.3%", cxmt_spoken: about nine and a half percent, cxmt_display: "9.5%",
+             total_spoken: about one hundred and fifty-five billion dollars, total_display: "$154.7bn",
+             qoq_spoken: almost sixty percent, hynix_q1_display: "28.8%"}
+    source_ids: [tf_2q26, evertiq_2q26]
+    status: source_located
+    verification_note: Shares and total read on the TrendForce release; the full ranking table on Evertiq. The 87.6% is our sum.
+
+  - id: ddr5
+    text: "TrendForce contract prices for one 16Gb DDR5 chip, as shown by TeamGroup (2 Nov 2026): $8.70 (Oct 2025), $28.50 (Jan 2026), $35.00 (Apr 2026), $45.00 (Jul 2026), $48.00 (Sep 2026), about +450%."
+    spoken: eight dollars and seventy cents
+    display: "$8.70"
+    fields: {now_spoken: forty-eight dollars, now_display: "$48", pct_spoken: about four hundred and fifty percent, pct_display: "+450%"}
+    source_ids: [teamgroup_prices]
+    status: source_located
+    verification_note: TrendForce's own contract-price table was not openly accessible; the figures are TrendForce data as presented by TeamGroup. The film credits both. Contract prices, not spot or retail.
+
+  - id: stick
+    text: "Our calculation: a 16 GB module holds 128 gigabits, i.e. eight 16Gb chips; at TrendForce contract prices that is ≈ $70 of memory chips in Oct 2025 (8 × $8.70) and ≈ $384 in Sep 2026 (8 × $48)."
+    spoken: about seventy dollars
+    display: "≈ $70"
+    fields: {now_spoken: about three hundred and eighty dollars, now_display: "≈ $384"}
+    source_ids: [teamgroup_prices]
+    status: source_located
+    verification_note: Arithmetic only (16 GB = 128 Gb = 8 chips of 16 Gb). Chip cost, not the shop price of a module; the film says so.
+
+  - id: q1_record
+    text: "TrendForce (Feb 2026): conventional DRAM contract prices expected to rise 90-95% QoQ in 1Q26; PC DRAM contract prices more than 100%, 'the largest quarterly price surge on record'; server DRAM about +90%; CSPs negotiate long-term agreements."
+    spoken: more than double
+    display: "+100%"
+    source_ids: [tf_1q26]
+    status: source_located
+    verification_note: A forecast made in Feb 2026 for 1Q26; Computerworld/Nikkei later reported prices rose about 90% in 1Q26.
+
+  - id: consumer_curtailed
+    text: "TrendForce (Sep 2026): suppliers have significantly curtailed consumer DRAM supply, so consumer DRAM is expected to post the strongest price growth; conventional DRAM contract price growth to moderate to 13-18% QoQ in 3Q26 because PC and smartphone customers have limited ability to absorb further increases."
+    spoken: thirteen to eighteen percent
+    display: "+13-18%"
+    source_ids: [tf_2q26]
+    status: source_located
+    verification_note: Forecast for 3Q26, labelled as such.
+
+  - id: hbm3x
+    text: "Micron (via The Next Platform, June 2024): HBM3E consumes 3x the wafers of normal DDR5 to produce a given amount of capacity at a given process node. Tom's Hardware (Dec 2025): HBM requires three times as much wafer space as DDR5; Micron projects the HBM market at $100bn by 2028."
+    spoken: three times
+    display: "3×"
+    fields: {tam_spoken: one hundred billion dollars, tam_display: "$100bn"}
+    source_ids: [nextplatform_2024, thw_micron_dec25]
+    status: source_located
+    verification_note: Micron management statement as reported; the $100bn is Micron's projection (labelled).
+
+  - id: crucial
+    text: "The Register (3 Dec 2025): Micron is abandoning its Crucial consumer memory and storage business 'to improve supply and support for our larger, strategic customers in faster-growing segments' (Sumit Sadana); Crucial products ship through the end of February 2026, warranties continue."
+    spoken: the end of February twenty twenty-six
+    display: "Feb 2026"
+    source_ids: [register_crucial]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: half_demand
+    text: "Tom's Hardware (17 Dec 2025): Micron expects to meet only 'half to two-thirds' of demand from its key customers; supply constraints to 'persist beyond calendar 2026'; customers are 'concerned about long-term access to memory' and line up for multi-year contracts; first new Idaho fab expected to produce chips in mid-2027."
+    spoken: half to two-thirds
+    display: "½ - ⅔"
+    source_ids: [thw_micron_dec25]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: nikkei
+    text: "Computerworld citing Nikkei Asia (Apr 2026): leading manufacturers can meet only about 60% of global demand despite expansion plans; memory prices rose about 90% in 1Q26; balance is not expected to normalise until 2028."
+    spoken: about sixty percent
+    display: "≈ 60%"
+    source_ids: [computerworld_nikkei]
+    status: source_located
+    verification_note: An estimate reported by Nikkei; labelled as such.
+
+  - id: cxmt
+    text: "AP (27 Jul 2026): CXMT, China's largest memory chipmaker, raised at least $8.6bn listing on Shanghai's STAR market, priced at 8.66 yuan; shares surged 466% on day one (market value ≈ 3.3 trillion yuan, more than $487bn; the most valuable company listed on a mainland Chinese exchange); Counterpoint: ≈ 8% of global DRAM shipments in 2025 (Samsung 36%, SK Hynix 29%, Micron ≈ 24%), ≈ 9% in 1Q26, forecast ≈ 11% by 2028, needs at least 15% to be competitive long term; access to chipmaking tools is restricted; some US lawmakers called for blocking US purchases of its chips."
+    spoken: at least eight point six billion dollars
+    display: "$8.6bn"
+    fields: {jump_spoken: four hundred and sixty-six percent, jump_display: "+466%", share_spoken: about eight percent, share_2028_spoken: about eleven percent, share_2028_display: "≈ 11% (2028 forecast)"}
+    source_ids: [ap_cxmt]
+    status: source_located
+    verification_note: Shipment shares (Counterpoint) differ slightly from TrendForce revenue shares; the film names which is which.
+
+  - id: teamgroup_outlook
+    text: "TeamGroup (2 Nov 2026, via Basic Tutorials): the most severe DRAM and NAND shortage expected from 4Q26 to the end of 2Q27; supply and demand not expected to balance until the second half of 2028 at the earliest."
+    spoken: the second half of twenty twenty-eight
+    display: "2H 2028"
+    source_ids: [teamgroup_prices]
+    status: source_located
+    verification_note: A module maker's forecast; labelled as such.
+
+  - id: crash2023
+    text: "Tom's Hardware (Mar 2023): Micron's revenue in Q2 FY2023 was $3.693bn, down from $7.786bn a year earlier, with a $2.312bn GAAP net loss, $1.43bn of inventory write-downs and gross margin of -32.7%; in late 2022 Micron cut DRAM and NAND wafer starts by about 20%. Motley Fool (Apr 2023): after its profit crashed, Samsung announced a 'meaningful' cut in memory production."
+    spoken: two point three billion dollars
+    display: "-$2.3bn"
+    fields: {rev_then_spoken: seven point eight billion dollars, rev_now_spoken: three point seven billion dollars}
+    source_ids: [thw_micron_2023, thw_micron_cut, fool_2023]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+data_claims: []
+open_questions:
+  - "The DDR5 contract series comes from TrendForce via TeamGroup's slides; a direct TrendForce table would be stronger."

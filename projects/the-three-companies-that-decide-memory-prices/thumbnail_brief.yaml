@@ -1,0 +1,96 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
+title: The Three Companies That Decide How Much Your Memory Costs
+docs_dir: docs/episodes/14-memory
+video: output/memory_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why one ordinary memory chip got more than five times dearer in a year
+  surprising_fact: 'A 16Gb DDR5 chip: $8.70 (Oct 2025) to $48 (Sep 2026), TrendForce contract prices; three makers take ≈ 88% of DRAM sales'
+  subject: one memory stick with a red price tag
+  tone: crisis
+  metaphor: the chip promised to the highest bidder
+concepts:
+- id: A
+  angle: mystery (bold)
+  text:
+  - MEMORY
+  - $8.70 →
+  - $48
+  accent_line: 2
+  text_side: left
+  claim_basis: 'ddr5: TrendForce contract price per 16Gb DDR5 chip, Oct 2025 $8.70 → Sep 2026 $48 (via TeamGroup)'
+  scene:
+    palette:
+      sky0: '#0A0306'
+      sky1: '#2E0A12'
+      haze: '#FF3B30'
+      key: '#FFB4A8'
+      accent: '#FF4B3E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ramchip
+      x: 1400
+      y: 560
+      s: 1.0
+    support:
+    - kind: bignum
+      x: 1400
+      y: 520
+      s: 1.0
+      label: ' '
+      rot: 0
+    particles:
+      n: 70
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFB4A8'
+    vignette: 0.55
+    brand: tl
+- id: B
+  angle: consequence (bold)
+  text:
+  - 3 COMPANIES
+  - 88%
+  accent_line: 1
+  text_side: left
+  claim_basis: 'big3: Samsung 39.4% + SK hynix 24.9% + Micron 23.3% of DRAM sales, Q2 2026 (TrendForce; our sum 87.6%)'
+  scene:
+    palette:
+      sky0: '#05070F'
+      sky1: '#16203A'
+      haze: '#4FB3F6'
+      key: '#BFE3FF'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ramchip
+      x: 1420
+      y: 560
+      s: 0.95
+      hot: false
+    support:
+    - kind: bignum
+      x: 1420
+      y: 520
+      s: 0.9
+      label: ' '
+      rot: 0
+    particles:
+      n: 60
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#BFE3FF'
+    vignette: 0.55
+    brand: tl
+default: A

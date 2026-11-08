@@ -1,0 +1,359 @@
+{
+  "title": "The Three Companies That Decide How Much Your Memory Costs",
+  "docs_dir": "docs/episodes/14-memory",
+  "video": "output/memory_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why one ordinary memory chip got more than five times dearer in a year",
+    "surprising_fact": "A 16Gb DDR5 chip: $8.70 (Oct 2025) to $48 (Sep 2026), TrendForce contract prices; three makers take \u2248 88% of DRAM sales",
+    "subject": "one memory stick with a red price tag",
+    "tone": "crisis",
+    "metaphor": "the chip promised to the highest bidder"
+  },
+  "default": "A",
+  "slug": "the-three-companies-that-decide-memory-prices",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "MEMORY",
+        "$8.70 \u2192",
+        "$48"
+      ],
+      "accent_line": 2,
+      "text_side": "left",
+      "claim_basis": "ddr5: TrendForce contract price per 16Gb DDR5 chip, Oct 2025 $8.70 \u2192 Sep 2026 $48 (via TeamGroup)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0306",
+          "sky1": "#2E0A12",
+          "haze": "#FF3B30",
+          "key": "#FFB4A8",
+          "accent": "#FF4B3E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ramchip",
+          "x": 1400,
+          "y": 560,
+          "s": 1.0
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1400,
+            "y": 520,
+            "s": 1.0,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFB4A8"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "MEMORY",
+          "x": 90,
+          "y": 418.6,
+          "size": 178.6,
+          "width": 685.7,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$8.70 \u2192",
+          "x": 90,
+          "y": 604.3,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$48",
+          "x": 90,
+          "y": 790.0,
+          "size": 178.6,
+          "width": 342.9,
+          "anchor": "start",
+          "color": "#FF4B3E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.66 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 279, 776, 429), (90, 465, 890, 615), (90, 651, 433, 801)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.093",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 45",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters (distance 0.39)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "ddr5: TrendForce contract price per 16Gb DDR5 chip, Oct 2025 $8.70 \u2192 Sep 2026 $48 (via TeamGroup)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.709,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "3 COMPANIES",
+        "88%"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "big3: Samsung 39.4% + SK hynix 24.9% + Micron 23.3% of DRAM sales, Q2 2026 (TrendForce; our sum 87.6%)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#16203A",
+          "haze": "#4FB3F6",
+          "key": "#BFE3FF",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ramchip",
+          "x": 1420,
+          "y": 560,
+          "s": 0.95,
+          "hot": false
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1420,
+            "y": 520,
+            "s": 0.9,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#BFE3FF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "3 COMPANIES",
+          "x": 90,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "88%",
+          "x": 90,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 218.2,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.65 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 433, 890, 529), (90, 551, 308, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 8.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.068",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 45",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-ships-fly-foreign-flags (distance 0.53)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "big3: Samsung 39.4% + SK hynix 24.9% + Micron 23.3% of DRAM sales, Q2 2026 (TrendForce; our sum 87.6%)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.829,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-ships-fly-foreign-flags"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T17:03:38Z",
+  "master": "output/the-three-companies-that-decide-memory-prices/thumbnails/master_A.png"
+}

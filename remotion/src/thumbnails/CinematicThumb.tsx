@@ -215,6 +215,22 @@ const SUBJECTS: Record<string, SubjectFn> = {
     {[-250, 250].map((x) => <g key={x}><circle cx={x} cy={90} r={70} fill="#05070A" stroke="#2C323D" strokeWidth={12} /><circle cx={x} cy={90} r={30} fill="#9AA6B8" /></g>)}
     <path d="M 380 0 l 26 4 l -4 22 l -28 -6 Z" fill="#FFE7A0" filter="url(#glow)" />
   </g>,
+  /** A memory stick (generic, no brand) shot at an angle: glossy PCB, eight chips, gold contacts; chips glow when hot. */
+  ramchip: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -12})`}>
+    <defs><linearGradient id="pcb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#2F8A55" /><stop offset="1" stopColor="#14462B" /></linearGradient>
+      <linearGradient id="chipg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#3A414D" /><stop offset="0.5" stopColor="#14171D" /><stop offset="1" stopColor="#05070A" /></linearGradient>
+      <linearGradient id="gold2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#FFE7A0" /><stop offset="1" stopColor="#B07C12" /></linearGradient></defs>
+    <rect x={-560} y={-170} width={1120} height={340} rx={22} fill="#000" opacity={0.5} transform="translate(20 40)" filter="url(#soft)" />
+    <rect x={-560} y={-170} width={1120} height={340} rx={22} fill="url(#pcb)" stroke={P.key} strokeWidth={4} />
+    {Array.from({length: 30}, (_, k) => <path key={k} d={`M ${-540 + k * 36} -150 l 0 ${40 + (k % 3) * 12}`} stroke="#7BD389" strokeWidth={3} opacity={0.35} />)}
+    {Array.from({length: 46}, (_, k) => <rect key={'g' + k} x={-540 + k * 23.5} y={136} width={14} height={40} fill="url(#gold2)" />)}
+    {Array.from({length: 8}, (_, k) => { const cx = -465 + k * 133, hot = o.hot !== false;
+      return <g key={k}>
+        {hot && <rect x={cx - 64} y={-104} width={128} height={168} rx={14} fill={P.accent} opacity={0.35 + 0.25 * ((k * 7) % 3) / 2} filter="url(#glow)" />}
+        <rect x={cx - 52} y={-92} width={104} height={144} rx={8} fill="url(#chipg)" stroke={hot ? P.accent : '#4A5260'} strokeWidth={hot ? 5 : 3} />
+        <rect x={cx - 40} y={-80} width={80} height={10} rx={4} fill="#FFFFFF" opacity={0.18} /></g>; })}
+    <rect x={-90} y={-160} width={180} height={44} rx={8} fill="#E9EDF3" /><text x={0} y={-128} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill="#14171D">16 GB</text>
+  </g>,
   /** A crashing line (consequence) */
   crash: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 7}, (_, k) => <path key={k} d={`M -700 ${-k * 110 + 300} L 700 ${-k * 110 + 300}`} stroke={P.haze} strokeOpacity={0.12} strokeWidth={2} />)}

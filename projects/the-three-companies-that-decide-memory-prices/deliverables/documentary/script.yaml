@@ -1,0 +1,241 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}}; years in words; forecasts said to be forecasts. Generic teaser.
+logline: The memory inside every computer and phone is made almost entirely by three companies. In 2026 they chose a
+  better-paying customer, artificial intelligence, and the price of ordinary memory exploded. Who decides, why, and why
+  the boom may end the way every memory boom has ended.
+title: The Three Companies That Decide How Much Your Memory Costs
+segments:
+- id: h_question
+  chapter: The price on the shelf
+  narration: What if the price of one tiny part inside your computer jumped more than five times in a single year, and
+    almost nobody outside the industry noticed why?
+  claims: []
+  analysis: true
+  source_note: Hook question; 'more than five times' follows from $8.70 to $48 (ddr5).
+- id: h_stakes
+  chapter: The price on the shelf
+  narration: That part is a memory chip. In October twenty twenty-five, big buyers paid {{ddr5}} for one standard sixteen
+    gigabit memory chip. By September twenty twenty-six, the same chip cost {{ddr5.now_spoken}}. That is a rise of {{ddr5.pct_spoken}}.
+    And behind that price are just three companies, making one quiet choice.
+  claims:
+  - ddr5
+  - big3
+- id: m1_card
+  chapter: The shelf
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The shelf
+  narration: So what exactly got so expensive, and how much of it is in the device on your desk?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_what
+  chapter: The shelf
+  narration: The chip is called DRAM. It is the working memory of every computer, phone, game console and server. It holds
+    whatever the machine is thinking about right now. Without it, nothing runs. And it is a commodity, sold by the billions,
+    one tiny chip after another. Most of it is sold under contracts. Big buyers, like computer and phone makers, agree
+    a price with the chipmaker every few months. Anyone without a contract, or who needs more than the contract covers,
+    buys on the spot market, at whatever price the day brings.
+  claims:
+  - ddr5
+  analysis: true
+  source_note: General description of DRAM.
+- id: m1_stick
+  chapter: The shelf
+  narration: Take one ordinary sixteen gigabyte memory stick. Inside it sit eight of those chips. In October twenty twenty-five,
+    the chips on that stick cost big buyers {{stick}}. By September twenty twenty-six, {{stick.now_spoken}}. And that is
+    only the chips, before anyone builds the stick, ships it or puts it on a shelf.
+  claims:
+  - stick
+  - ddr5
+  source_note: Our calculation, labelled on screen.
+- id: m1_record
+  chapter: The shelf
+  narration: The worst jump came at the start of twenty twenty-six. The research firm TrendForce expected contract prices
+    for PC memory to rise by {{q1_record}} in just three months, the largest quarterly price surge it had ever recorded.
+    Computer makers that had signed supply deals watched their stockpiles shrink. Those without deals had to pay whatever
+    the market asked. Server memory, the kind data centers buy, was expected to jump about ninety percent in the same
+    quarter. And the biggest cloud companies in North America and China were negotiating long-term deals to lock in supply.
+  claims:
+  - q1_record
+- id: m1_transition
+  chapter: The shelf
+  narration: A price can only move like that if very few people control the supply. So who are they?
+  claims: []
+- id: m2_card
+  chapter: Three companies
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: Three companies
+  narration: Who actually makes the world's memory?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_three
+  chapter: Three companies
+  narration: Almost all of it comes from three companies. In the second quarter of twenty twenty-six, Samsung took {{big3.samsung_display}}
+    of all DRAM sales, SK hynix {{big3.hynix_display}} and Micron {{big3.micron_display}}. Together, {{big3}} spent on memory
+    went to just these three. The whole market reached {{big3.total_spoken}} in a single quarter, up {{big3.qoq_spoken}}
+    from the quarter before. And look at how the order moved. SK hynix sells the most AI memory, so its prices rose the
+    least, and its share fell from {{big3.hynix_q1_display}} to {{big3.hynix_display}}. Samsung, which started mass production
+    of the newest AI memory early, pulled further ahead.
+  claims:
+  - big3
+- id: m2_draw
+  chapter: Three companies
+  narration: 'Let me draw why three is such a powerful number. A memory factory costs billions and takes years to build.
+    So nobody new can jump in when prices rise. And when only three sellers exist, none of them has to agree with the
+    others on anything. Each one simply looks at its own order book and asks one question: which customer pays the most
+    for the same silicon?'
+  claims:
+  - big3
+  analysis: true
+  source_note: Explanation of oligopoly economics; no claim of coordination between the companies.
+- id: m2_transition
+  chapter: Three companies
+  narration: In twenty twenty-six, the answer to that question was not you.
+  claims: []
+- id: m3_card
+  chapter: The customer who pays more
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The customer who pays more
+  narration: Who is outbidding the rest of us for memory?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_hbm
+  chapter: The customer who pays more
+  narration: Artificial intelligence. The chips that train and run AI models need a special, extremely fast kind of memory
+    called HBM, high bandwidth memory, stacked right next to the processor. It sells for far more. But it is greedy. According
+    to Micron, making HBM takes about {{hbm3x}} the wafers that ordinary DDR five memory needs for the same amount of memory. And
+    Micron expects the market for HBM alone to reach {{hbm3x.tam_spoken}} by twenty twenty-eight. That is a forecast, but it
+    tells you where the factories want to go.
+  claims:
+  - hbm3x
+- id: m3_draw
+  chapter: The customer who pays more
+  narration: 'Let me draw what that means for the factory. Imagine one silicon wafer. Cut it into ordinary memory, and you
+    get a certain amount of capacity to sell to computer and phone makers. Turn the same wafer into HBM, and you get only
+    about a third as much memory, but each bit sells for a lot more to AI companies. Every wafer moved to HBM is a wafer
+    taken away from the memory in your laptop.'
+  claims:
+  - hbm3x
+  analysis: true
+  source_note: Illustration of the 3x wafer ratio; no specific prices.
+- id: m3_crucial
+  chapter: The customer who pays more
+  narration: Some companies went further. In December twenty twenty-five, Micron announced it was leaving its Crucial consumer
+    brand, the memory sticks and drives sold in shops, to improve supply for its larger, strategic customers. Crucial products
+    shipped until {{crucial}}. And Micron said that even then, it expected to meet only {{half_demand}} of what its key customers
+    wanted. Its customers, worried about long-term access to memory, were lining up for contracts lasting several years.
+  claims:
+  - crucial
+  - half_demand
+- id: m3_squeeze
+  chapter: The customer who pays more
+  narration: By September twenty twenty-six, TrendForce said suppliers had significantly curtailed memory for consumer products.
+    That is why consumer memory was expected to see the strongest price increases of all. The phone in your pocket and the
+    laptop on your desk were now competing for silicon with the biggest data centers on Earth. And it was not only Micron.
+    According to Nikkei, the leading manufacturers could meet only {{nikkei}} of global demand, even with their expansion
+    plans.
+  claims:
+  - consumer_curtailed
+  - nikkei
+- id: m3_transition
+  chapter: The customer who pays more
+  narration: High prices usually attract a challenger. This time, one was waiting in China.
+  claims: []
+- id: m4_card
+  chapter: The challenger
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The challenger
+  narration: Can a newcomer break into a market this hard to enter?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_cxmt
+  chapter: The challenger
+  narration: CXMT, China's largest memory chipmaker, is trying. In the second quarter of twenty twenty-six it was already
+    the world's fourth largest DRAM maker, with {{big3.cxmt_spoken}} of sales. In July twenty twenty-six it listed its shares
+    in Shanghai and raised {{cxmt}}. On the first day of trading, the shares jumped {{cxmt.jump_spoken}}. That made it the
+    most valuable company listed in mainland China, worth more than four hundred and eighty-seven billion dollars on paper.
+    Investors were betting that a fourth seller would get rich from the shortage too.
+  claims:
+  - big3
+  - cxmt
+- id: m4_limits
+  chapter: The challenger
+  narration: But CXMT has a problem. Its access to advanced chipmaking tools is restricted, and some American lawmakers
+    have called for blocking US companies from buying its memory. The research firm Counterpoint forecasts its share at
+    {{cxmt.share_2028_spoken}} by twenty twenty-eight, and estimates it would need at least fifteen percent to be competitive
+    in the long run. A challenger, yes. A rescue for buyers, not yet.
+  claims:
+  - cxmt
+- id: m4_transition
+  chapter: The challenger
+  narration: So is this the new normal? Memory has a very long history of answering that question the hard way.
+  claims: []
+- id: m5_card
+  chapter: Boom and bust
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Boom and bust
+  narration: What happens after a memory boom?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_2023
+  chapter: Boom and bust
+  narration: Just look at what happened only three years earlier. In early twenty twenty-three, demand collapsed after the
+    pandemic buying spree. In one quarter, Micron's revenue fell from {{crash2023.rev_then_spoken}} a year earlier to {{crash2023.rev_now_spoken}},
+    and it lost {{crash2023}}. For every dollar of memory it sold, it was losing about thirty-three cents before other
+    costs, after writing down chips it could no longer sell at a profit. Micron cut the wafers going into its factories
+    by about a fifth. Even Samsung, which had refused for months, finally announced a meaningful
+    cut in memory output.
+  claims:
+  - crash2023
+- id: m5_draw
+  chapter: Boom and bust
+  narration: 'Let me draw the memory cycle. Prices rise, so profits soar. Profits pay for new factories. But factories take
+    years, so they all arrive at once. Supply floods in, prices crash, and everyone cuts back. Then shortages return, and
+    the wheel turns again.'
+  claims:
+  - crash2023
+  analysis: true
+  source_note: Explanation of the memory cycle, illustrated by the 2023 crash.
+- id: m5_next
+  chapter: Boom and bust
+  narration: And the new factories are coming. Micron's first new plant in Idaho is expected to start producing chips in
+    mid twenty twenty-seven. CXMT is expanding. Forecasts reported by Nikkei say supply and demand should return to balance
+    around twenty twenty-eight, and the memory maker TeamGroup does not expect balance before {{teamgroup_outlook}}. These
+    are forecasts, not facts. TeamGroup even expects the tightest months still ahead, from the end of twenty twenty-six
+    to the middle of twenty twenty-seven. But they point to the same place the cycle always goes.
+  claims:
+  - half_demand
+  - nikkei
+  - teamgroup_outlook
+- id: payoff
+  chapter: The lesson
+  narration: So who decides how much your memory costs? Not you, and not the shop. Three companies, each choosing the customer
+    who pays the most for every wafer. Today that customer is artificial intelligence. Tomorrow, when the new factories
+    open, it may be you again. So the next time a memory stick costs more than you expected, remember that its chips were
+    promised to the highest bidder long before it reached the shelf. In memory, the price is never about the chip. It is
+    about who is first in line.
+  claims:
+  - big3
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

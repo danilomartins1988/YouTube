@@ -1,0 +1,56 @@
+# Visual direction for the-three-companies-that-decide-memory-prices (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Draft from tools/visual_direction.py: edit tones per chapter, add turning_points [{segment, cue, to}], then commit.
+primary_tone: crisis
+secondary_tones:
+- strategy
+- tech
+- reflective
+palette:
+  bg: '#140C16'
+  bg2: '#22121F'
+  ink: '#F6EEF2'
+  muted: '#B39AB0'
+  land: '#3A2433'
+  border: '#5A3A52'
+  accent: '#FFC21A'
+  accent2: '#4FB3F6'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The price on the shelf
+  tone: crisis
+- chapter: The shelf
+  tone: crisis
+- chapter: Three companies
+  tone: strategy
+- chapter: The customer who pays more
+  tone: tech
+- chapter: The challenger
+  tone: strategy
+- chapter: Boom and bust
+  tone: crisis
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m3_squeeze
+  cue: curtailed
+  to: crisis
+  why: the AI story lands back on the consumer
+- segment: m5_next
+  cue: new factories are coming
+  to: strategy
+  why: 'the cycle turns: supply is on its way'
+thumbnail:
+  tone: crisis
+  headline: []
+  idea: a single memory stick with a price tag jumping from $8.70 to $48
+requirements:
+- 'One memory stick on a shop shelf is the through-line: price tag flips $8.70 -> $48'
+- Three company towers / factories as an oligopoly, never logos (names as text)
+- 'HBM: AI chip with stacked memory, wafer split diagram'
+- 'CXMT: a Shanghai trading board debut (STAR market) with restrictions shown as a barrier'
+- 'Boom and bust: rollercoaster price chart, factories arriving at once'
+- No smiling sun, no generic colourful city; shop, fab, data centre, exchange, boardroom only
