@@ -7,17 +7,22 @@ language: en
 # channel never looks like a template farm. QC compares scene grammar against earlier projects.
 # Made before the US-dollar rule (2026-11-05); keeps its local-currency figures.
 currency_exempt: true
+# 2026-11-08 cartoon redo: animated with the Remotion engine (CartoonStage worlds).
+renderer: remotion
+remotion_geo: [world]
 style:
   name: alpine-ledger
-  palette:
-    bg: "#0F1B24"
-    bg2: "#16283A"
-    ink: "#F3EEE4"
-    muted: "#7D8E9B"
-    land: "#24394B"
-    border: "#3C566B"
-    accent: "#E0453A"      # Swiss red
-    accent2: "#E9B44C"     # gold
+  palette:            # bright cartoon day with Swiss red (2026-11-08 cartoon redo)
+    bg: "#BFE8FA"
+    bg2: "#EAF8FF"
+    ink: "#10213A"
+    muted: "#4F6B80"
+    land: "#8BD47A"
+    border: "#2E5A73"
+    accent: "#E53935"
+    accent2: "#1E7FD8"
+    accent3: "#23995A"
+    risk: "#C62828"
   fonts:
     display: InterDisplay-Bold
     heading: InterDisplay-SemiBold
@@ -33,3 +38,6 @@ youtube:
 # For a future re-edit, set intro.enabled: true (and add presenter scenes or keep presenter_exempt).
 intro: {enabled: false}
 presenter_exempt: true
+# 2026-11-08 cartoon redo: the narration is re-voiced with the current voice settings (≈ $0.28); standard per-episode cap.
+budget:
+  max_paid_usd: 1.00

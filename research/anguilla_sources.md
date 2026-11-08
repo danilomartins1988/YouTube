@@ -1,6 +1,6 @@
 # Research dossier - The Tiny Island Getting Rich From AI
 
-Generated 2026-11-07T14:49:22+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-08T01:52:01+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 

@@ -215,6 +215,48 @@ sources:
     credit: "swissinfo.ch"
 
 # Computed by the pipeline from the datasets above. Do not hand-edit values.
+  - id: swi_watches_2024
+    title: "Swiss watch exports down 2.8% in 2024 (Keystone-SDA, citing the Federation of the Swiss Watch Industry FH)"
+    publisher: SWI swissinfo.ch
+    url: https://www.swissinfo.ch/eng/archive-swiss-made/watch-exports-down-2-8-in-2024/88801991
+    published: "2025-01-30"
+    accessed: "2026-11-08"
+    credit: "FH via swissinfo.ch"
+  - id: swi_unemployment_2024
+    title: "Unemployment rises in Switzerland (SECO annual figures for 2024)"
+    publisher: SWI swissinfo.ch
+    url: https://www.swissinfo.ch/eng/workplace-switzerland/unemployment-rises-in-switzerland-in-december/88701842
+    published: "2025-01-10"
+    accessed: "2026-11-08"
+    credit: "SECO via swissinfo.ch"
+  - id: swi_crossborder_2024
+    title: "Over 400,000 cross-border commuters now work in Switzerland (Keystone-SDA, citing the FSO)"
+    publisher: SWI swissinfo.ch
+    url: https://www.swissinfo.ch/eng/workplace-switzerland/over-400000-cross-border-commuters-now-work-in-switzerland/88038932
+    published: "2024-11-08"
+    accessed: "2026-11-08"
+    credit: "FSO via swissinfo.ch"
+  - id: swi_snb_2024
+    title: "SNB Held Off on FX Interventions After Trump Won Election (Bloomberg, citing the SNB annual report 2024)"
+    publisher: SWI swissinfo.ch / Bloomberg
+    url: https://www.swissinfo.ch/eng/snb-held-off-on-fx-interventions-after-trump-won-election/89025505
+    published: "2025-03-18"
+    accessed: "2026-11-08"
+    credit: "SNB via swissinfo.ch"
+  - id: kmu_tariff_2025
+    title: "High US tariffs threaten Swiss exports"
+    publisher: Swiss Confederation, SME Portal (kmu.admin.ch)
+    url: https://www.kmu.admin.ch/en/high-us-tariffs-threaten-swiss-exports
+    published: "2025-08-11"
+    accessed: "2026-11-08"
+    credit: "Swiss SME Portal (admin.ch)"
+  - id: swi_tariff15_2025
+    title: "Switzerland secures US tariff rate cut to 15%"
+    publisher: SWI swissinfo.ch
+    url: https://www.swissinfo.ch/eng/foreign-affairs/swiss-government-us-tariffs-will-be-cut-to-15/90335075
+    published: "2025-11-14"
+    accessed: "2026-11-08"
+    credit: "swissinfo.ch"
 data_claims:
   - id: pop_che_2023
     metric: population
@@ -390,6 +432,50 @@ claims:
     status: source_located
     verification_note: Sources are news articles; confirm on roche.com and novartis.com (Novartis HQ is only implied by the found sources).
 
+  - id: watches_2024
+    text: "Swiss watch exports reached CHF 25.9 billion in 2024, down 2.8% (FH statistics, via Keystone-SDA/swissinfo: 'which reached a volume of CHF25.9 billion')."
+    spoken: 25.9 billion francs
+    display: "CHF 25.9bn"
+    value: 25.9
+    fields: {change_spoken: 2.8 percent, change_display: "-2.8%"}
+    source_ids: [swi_watches_2024]
+    status: source_located
+    verification_note: Read on the page 2026-11-08. FH's own table gives CHF 25,993.1m (press release rounds to 26.0bn); the film uses the article's 25.9bn.
+  - id: unemployment_2024
+    text: "SECO: the average unemployment rate for 2024 was 2.4%, 0.4 points higher than the previous year; at 2.0% the 2023 figure was the lowest since 2001."
+    spoken: 2.4 percent
+    display: "2.4%"
+    value: 2.4
+    fields: {prev_spoken: 2.0 percent, prev_display: "2.0%"}
+    source_ids: [swi_unemployment_2024]
+    status: source_located
+    verification_note: Read on the page 2026-11-08 (quoted).
+  - id: crossborder_2024
+    text: "Around 403,000 people with a G permit (cross-border commuters) were working in Switzerland at the end of September 2024 (FSO); about 57% lived in France, 23% in Italy and about 16% in Germany."
+    spoken: around 403,000
+    display: "≈ 403,000"
+    value: 403000
+    source_ids: [swi_crossborder_2024]
+    status: source_located
+    verification_note: Read on the page 2026-11-08 (quoted).
+  - id: snb_fx_2024
+    text: "For all of 2024 the SNB purchased CHF 1.2bn of foreign currency, compared with sales of CHF 132.9bn the previous year; in 2022 and 2023 it boosted the franc this way to dampen inflation."
+    spoken: 1.2 billion francs
+    display: "CHF 1.2bn"
+    value: 1.2
+    fields: {sold_spoken: 132.9 billion francs, sold_display: "CHF 132.9bn"}
+    source_ids: [swi_snb_2024]
+    status: source_located
+    verification_note: Read on the page 2026-11-08 (quoted, citing the SNB annual report).
+  - id: tariff_2025
+    text: "Since 7 August 2025, Swiss exports to the US were subject to a 39% tariff (SME Portal, 11.08.2025). On 14 November 2025 Switzerland and Liechtenstein signed a non-binding memorandum of understanding; the US would reduce the country-specific additional tariff to 15%, in line with the EU; Swiss companies plan USD 200bn of direct investment in the US by the end of 2028."
+    spoken: 39 percent
+    display: "39%"
+    value: 39
+    fields: {new_spoken: 15 percent, new_display: "15%", invest_spoken: 200 billion dollars, invest_display: "$200bn"}
+    source_ids: [kmu_tariff_2025, swi_tariff15_2025]
+    status: source_located
+    verification_note: Both pages read 2026-11-08 (quoted). Later changes to US tariffs (after Dec 2025) were not checked; the narration speaks of 2025 only.
 open_questions:
   - For the full documentary - role of banking secrecy and its erosion (1934 Banking Act, automatic exchange of information). Needs primary legal sources.
   - Swiss franc and the Swiss National Bank's balance sheet - SNB annual reports.

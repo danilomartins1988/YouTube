@@ -1,291 +1,281 @@
-# Full documentary (8-12 min). Seven acts, cold open, counterpoint act, conclusion.
-# Every number comes from the dossier. Segments marked analysis contain the channel's interpretation.
 title: Why Switzerland Is So Rich
-logline: >-
-  A small, landlocked country with one of the highest outputs per person in the world. Stability,
-  money, specialisation and skills - and the hidden costs that come with Swiss success.
+logline: A small, landlocked country with one of the highest outputs per person in the world. Stability, money, specialisation
+  and skills - and the hidden costs that come with Swiss success.
 segments:
-  # ---------------------------------------------------------------- cold open
-  - id: open_map
-    chapter: The puzzle
-    narration: >-
-      Picture a small, landlocked country of {{pop_che_2023}} people. It has no coastline, no direct access to the sea,
-      and it sits in the middle of a continent full of larger, louder neighbours.
-    claims: [geo_landlocked, pop_che_2023]
-    analysis: true
-    source_note: '"Larger neighbours" is visible on the map (Germany, France, Italy, Austria); framing, not a statistic.' 
-
-  - id: open_number
-    chapter: The puzzle
-    narration: >-
-      And yet, in {{gdppc_che_2023.year}}, this country produced {{gdppc_che_2023}} of economic output for every
-      person living there. That is {{ratio_che_deu_2023}} Germany's figure, and {{ratio_che_euu_2023}} the average
-      across the European Union.
-    claims: [gdppc_che_2023, ratio_che_deu_2023, ratio_che_euu_2023]
-
-  - id: open_promise
-    chapter: The puzzle
-    narration: >-
-      How did Switzerland get this rich? The usual answers are banks, chocolate and watches. The real story is
-      stranger, more deliberate, and it comes with costs that rarely make the postcards. This is The Hidden Economics.
-    claims: []
-    analysis: true
-    source_note: Framing only; 'usual answers' refers to popular perception, not a survey.
-
-  - id: open_roadmap
-    chapter: The puzzle
-    narration: >-
-      In this film, we will follow the money through four forces. Stability, built over two centuries.
-      Money, and the rise and fall of banking secrecy. Specialisation, in products the rest of the world finds hard to
-      copy. And skills, built in classrooms and workshops. Then we will look at the bill: the hidden costs of being
-      this successful.
-    claims: []
-    analysis: true
-    source_note: Roadmap of the film; 'two centuries' refers to 1815 to today (neutrality_1815).
-
-  # ---------------------------------------------------------------- act 1: the puzzle in data
-  - id: act1_card
-    chapter: The puzzle
-    narration: ""
-    claims: []
-
-  - id: puzzle_bars
-    chapter: The puzzle
-    narration: >-
-      Let's start with the numbers. Measured as output per person, Switzerland sits well above its neighbours.
-      Austria, Germany, France and Italy all trail behind, and so does the United States.
-    claims: [gdppc_chart_2023]
-    source_note: Ordering read directly from the 2023 World Bank values in the chart.
-
-  - id: puzzle_line
-    chapter: The puzzle
-    narration: >-
-      And this is not a lucky year. Follow the data back to the start of the century, and Switzerland stays ahead of
-      Germany and the European Union average {{che_above_deu_euu_2000_2023}}. Whatever is driving Swiss wealth,
-      it is structural.
-    claims: [che_above_deu_euu_2000_2023, gdppc_series_2000_2023]
-    analysis: true
-    source_note: '"Structural" is interpretation of a 24-year pattern; the pattern itself is computed from World Bank data.'
-
-  - id: puzzle_caveat
-    chapter: The puzzle
-    narration: >-
-      A quick but important note on what this number means. Output per person measures how much an economy produces,
-      divided by everyone who lives there. It is not the same as the money in an ordinary person's pocket, and it is
-      measured in US dollars, so exchange rates move it too. We will come back to what that means for everyday prices
-      later. But as a measure of how productive an economy is, it tells a clear story.
-    claims: [gdppc_che_2023]
-    analysis: true
-    source_note: Methodological caveat (GDP per capita, current US$, is affected by exchange rates); interpretation.
-
-  # ---------------------------------------------------------------- act 2: stability
-  - id: act2_card
-    chapter: Stability
-    narration: ""
-    claims: []
-
-  - id: stab_timeline
-    chapter: Stability
-    narration: >-
-      The first force is stability, and it is old. {{neutrality_1815}}, at the end of the Napoleonic wars, Europe's
-      great powers formally recognised Swiss neutrality. Then, {{constitution_1848|cap}}, a new constitution turned a
-      loose group of cantons into a federal state, with a parliament, a government and a federal court.
-    claims: [neutrality_1815, constitution_1848]
-    source_note: '"End of the Napoleonic wars" places 1815 historically (Congress of Vienna); verify phrasing against admin.ch.'
-
-  - id: stab_eu
-    chapter: Stability
-    narration: >-
-      That independent streak never went away. Switzerland is not a member of the European Union. Instead, it manages
-      its relationship with the bloc through a web of bilateral agreements, negotiated sector by sector.
-    claims: [eu_bilateral]
-
-  - id: stab_meaning
-    chapter: Stability
-    narration: >-
-      Why does this matter for money? Because capital hates surprises. A country where rules change slowly, and
-      in public, is a country where a factory, a laboratory or a savings account can plan for decades.
-      Predictability is hard to measure, but it may be the most valuable thing Switzerland has ever produced.
-    claims: []
-    analysis: true
-    source_note: Interpretation by the channel.
-
-  # ---------------------------------------------------------------- act 3: money
-  - id: act3_card
-    chapter: Money
-    narration: ""
-    claims: []
-
-  - id: money_1934
-    chapter: Money
-    narration: >-
-      Stability attracted money, and Switzerland learned to protect it. {{banking_act_1934}}, a new federal banking law
-      made it a criminal offence for bankers to reveal their clients' secrets. Before that, confidentiality had been a
-      matter of civil law. Now, breaking it could mean prosecution.
-    claims: [banking_act_1934]
-
-  - id: money_pressure
-    chapter: Money
-    narration: >-
-      For decades, discretion became part of the Swiss brand. But secrecy that protects privacy can also protect
-      people hiding money from their own governments, and pressure from abroad kept growing.
-    claims: []
-    analysis: true
-    source_note: General interpretation; no specific case or figure is asserted.
-
-  - id: money_aeoi
-    chapter: Money
-    narration: >-
-      The turning point came quietly. In {{aeoi_2018.year}}, under a global standard for tax transparency,
-      Switzerland automatically shared financial account information with other countries for the first time.
-      That first exchange covered {{aeoi_2018}} accounts. The law on secrecy still exists at home, but foreign tax
-      authorities now get the data.
-    claims: [aeoi_2018, banking_act_1934]
-    analysis: true
-    source_note: '"The law on secrecy still exists at home" relies on Article 47 still being in force (secondary sources); verify on fedlex.'
-
-  - id: money_haven
-    chapter: Money
-    narration: >-
-      There is another way Switzerland attracts money, and it does not require a bank account at all. In times of
-      crisis, investors look for places to park their wealth that are politically stable and unlikely to inflate it
-      away. Economists call that a safe haven, and the Swiss franc is often described as one.
-    claims: []
-    analysis: true
-    source_note: Definition of a safe haven and the common description of the franc as one; general framing, no statistic.
-
-  - id: money_floor_2011
-    chapter: Money
-    narration: >-
-      Safety has a side effect. When investors trust a country, they buy its currency, and a strong currency makes
-      everything that country sells abroad more expensive. On {{snb_floor_2011.date_spoken}}, the Swiss National Bank
-      drew a line in the sand. It would no longer tolerate a euro worth less than {{snb_floor_2011}}.
-    claims: [snb_floor_2011]
-    analysis: true
-    source_note: The first two sentences are general economics framing; the date and the 1.20 rate are sourced.
-
-  - id: money_floor_2015
-    chapter: Money
-    narration: >-
-      Defending that line meant buying foreign currency again and again. The central bank later said it could only have
-      been held with interventions of rapidly increasing size. On {{snb_floor_end_2015.date_spoken}}, it abandoned the
-      minimum rate with immediate effect. The franc jumped, and markets were caught off guard.
-    claims: [snb_floor_interventions, snb_floor_end_2015]
-
-  - id: money_cs
-    chapter: Money
-    narration: >-
-      Even Swiss banking is not immune to crisis. In {{cs_ubs_2023.month_spoken}}, Credit Suisse was taken over by its
-      rival UBS, in a deal approved by the financial regulator and backed by the federal government and the central bank.
-    claims: [cs_ubs_2023]
-
-  # ---------------------------------------------------------------- act 4: specialisation
-  - id: act4_card
-    chapter: Specialisation
-    narration: ""
-    claims: []
-
-  - id: spec_ring
-    chapter: Specialisation
-    narration: >-
-      But here is the twist. Look at what Switzerland physically ships abroad, and banks barely appear.
-      In {{pharma_share_2024.year}}, chemical and pharmaceutical products made up {{pharma_share_2024.spoken_exact}}
-      of Swiss exports. {{pharma_share_2024|cap}} of everything the country sold abroad came from one industry.
-    claims: [pharma_share_2024]
-    analysis: true
-    source_note: '"Banks barely appear" = financial services are not goods exports, so they are not in goods trade statistics by definition.'
-
-  - id: spec_basel
-    chapter: Specialisation
-    narration: >-
-      The centre of gravity is Basel, a city on the Rhine, close to the borders with France and Germany.
-      The drug makers Roche and Novartis both have their global headquarters here.
-    claims: [pharma_hq_basel]
-    source_note: Basel's location on the Rhine near France and Germany is visible on the Natural Earth map.
-
-  - id: spec_why
-    chapter: Specialisation
-    narration: >-
-      Medicines are almost the perfect product for a small, landlocked, expensive country. They are light, they are
-      valuable, and they are protected by patents and know-how that take years to build. Switzerland does not compete
-      on what is cheap to make. It competes on what is hard to copy.
-    claims: []
-    analysis: true
-    source_note: Interpretation by the channel; 'expensive' is supported by the price-level claim in act 6.
-
-  # ---------------------------------------------------------------- act 5: skills and ideas
-  - id: act5_card
-    chapter: Skills
-    narration: ""
-    claims: []
-
-  - id: skills_vet
-    chapter: Skills
-    narration: >-
-      Hard-to-copy products need people who are hard to replace. {{vet_share}} of young people in Switzerland go into
-      vocational education and training, usually apprenticeships that combine the classroom with real work inside a
-      company. In many countries, that path is seen as a fallback. Here, it is the mainstream.
-    claims: [vet_share]
-    analysis: true
-    source_note: '"Seen as a fallback in many countries" is interpretation, not a cross-country statistic.'
-
-  - id: skills_gii
-    chapter: Skills
-    narration: >-
-      Skills feed ideas. {{gii_2025_rank}} in its Global Innovation Index. Sweden, the United States, South Korea and
-      Singapore completed the top five.
-    claims: [gii_2025_rank, gii_2025_top5]
-
-  # ---------------------------------------------------------------- act 6: the hidden costs
-  - id: act6_card
-    chapter: The hidden costs
-    narration: ""
-    claims: []
-
-  - id: cost_prices
-    chapter: The hidden costs
-    narration: >-
-      Now for the part that rarely makes the brochures. Success is expensive, literally. In
-      {{price_level_2024.year}}, Switzerland had the highest price level of all the countries compared by Eurostat,
-      {{price_level_2024}}.
-    claims: [price_level_2024]
-
-  - id: cost_franc
-    chapter: The hidden costs
-    narration: >-
-      High prices and a strong franc squeeze anyone who has to compete from Switzerland. That pressure is exactly
-      what the central bank was fighting between {{snb_floor_2011.year}} and {{snb_floor_end_2015.year}}.
-      Being a safe haven is a privilege, but the bill arrives in the export sector.
-    claims: [snb_floor_2011, snb_floor_end_2015]
-    analysis: true
-    source_note: Interpretation linking the price level and the exchange-rate floor.
-
-  - id: cost_concentration
-    chapter: The hidden costs
-    narration: >-
-      And concentration cuts both ways. When {{pharma_share_2024}} of your exports come from one industry,
-      a shock to that industry is a shock to the whole country. The Credit Suisse rescue was a reminder that a great
-      financial centre can also become a national risk.
-    claims: [pharma_share_2024, cs_ubs_2023]
-    analysis: true
-    source_note: Risk framing is interpretation; the export share and the rescue are sourced.
-
-  # ---------------------------------------------------------------- conclusion
-  - id: act7_card
-    chapter: Conclusion
-    narration: ""
-    claims: []
-
-  - id: close
-    chapter: Conclusion
-    narration: >-
-      So, why is Switzerland so rich? Not because of what lies under its ground, but because of what it built on top
-      of it. Stability that investors trust, earned over two centuries and defended, sometimes at great cost.
-      A financial system that had to reinvent itself when secrecy stopped being acceptable. Specialisation in products
-      that are hard to copy. And skills that keep them that way.
-      None of these forces is guaranteed. A strong currency, high prices and a dependence on a few giants are the
-      price of the model. The question for the next decade is whether a small country can keep it running in a world
-      of bigger, louder powers. Thanks for watching. This is The Hidden Economics.
-    claims: []
-    analysis: true
-    source_note: Conclusion and outlook are the channel's interpretation.
+- id: open_map
+  chapter: The puzzle
+  narration: Picture a small, landlocked country of {{pop_che_2023}} people. It has no coastline, no direct access to the
+    sea, and it sits in the middle of a continent full of larger, louder neighbours.
+  claims:
+  - geo_landlocked
+  - pop_che_2023
+  analysis: true
+  source_note: '"Larger neighbours" is visible on the map (Germany, France, Italy, Austria); framing, not a statistic.'
+- id: open_number
+  chapter: The puzzle
+  narration: And yet, in {{gdppc_che_2023.year}}, this country produced {{gdppc_che_2023}} of economic output for every person
+    living there. That is {{ratio_che_deu_2023}} Germany's figure, and {{ratio_che_euu_2023}} the average across the European
+    Union.
+  claims:
+  - gdppc_che_2023
+  - ratio_che_deu_2023
+  - ratio_che_euu_2023
+- id: open_promise
+  chapter: The puzzle
+  narration: How did Switzerland get this rich? The usual answers are banks, chocolate and watches. The real story is stranger,
+    more deliberate, and it comes with costs that rarely make the postcards. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Framing only; 'usual answers' refers to popular perception, not a survey.
+- id: open_roadmap
+  chapter: The puzzle
+  narration: 'In this film, we will follow the money through four forces. Stability, built over two centuries. Money, and
+    the rise and fall of banking secrecy. Specialisation, in products the rest of the world finds hard to copy. And skills,
+    built in classrooms and workshops. Then we will look at the bill: the hidden costs of being this successful.'
+  claims: []
+  analysis: true
+  source_note: Roadmap of the film; 'two centuries' refers to 1815 to today (neutrality_1815).
+- id: act1_card
+  chapter: The puzzle
+  narration: ''
+  claims: []
+- id: puzzle_bars
+  chapter: The puzzle
+  narration: Let's start with the numbers. Measured as output per person, Switzerland sits well above its neighbours. Austria,
+    Germany, France and Italy all trail behind, and so does the United States.
+  claims:
+  - gdppc_chart_2023
+  source_note: Ordering read directly from the 2023 World Bank values in the chart.
+- id: puzzle_line
+  chapter: The puzzle
+  narration: And this is not a lucky year. Follow the data back to the start of the century, and Switzerland stays ahead of
+    Germany and the European Union average {{che_above_deu_euu_2000_2023}}. Whatever is driving Swiss wealth, it is structural.
+  claims:
+  - che_above_deu_euu_2000_2023
+  - gdppc_series_2000_2023
+  analysis: true
+  source_note: '"Structural" is interpretation of a 24-year pattern; the pattern itself is computed from World Bank data.'
+- id: puzzle_caveat
+  chapter: The puzzle
+  narration: A quick but important note on what this number means. Output per person measures how much an economy produces,
+    divided by everyone who lives there. It is not the same as the money in an ordinary person's pocket, and it is measured
+    in US dollars, so exchange rates move it too. We will come back to what that means for everyday prices later. But as a
+    measure of how productive an economy is, it tells a clear story.
+  claims:
+  - gdppc_che_2023
+  analysis: true
+  source_note: Methodological caveat (GDP per capita, current US$, is affected by exchange rates); interpretation.
+- id: act2_card
+  chapter: Stability
+  narration: ''
+  claims: []
+- id: stab_timeline
+  chapter: Stability
+  narration: The first force is stability, and it is old. {{neutrality_1815}}, at the end of the Napoleonic wars, Europe's
+    great powers formally recognised Swiss neutrality. Then, {{constitution_1848|cap}}, a new constitution turned a loose
+    group of cantons into a federal state, with a parliament, a government and a federal court.
+  claims:
+  - neutrality_1815
+  - constitution_1848
+  source_note: '"End of the Napoleonic wars" places 1815 historically (Congress of Vienna); verify phrasing against admin.ch.'
+- id: stab_eu
+  chapter: Stability
+  narration: That independent streak never went away. Switzerland is not a member of the European Union. Instead, it manages
+    its relationship with the bloc through a web of bilateral agreements, negotiated sector by sector.
+  claims:
+  - eu_bilateral
+- id: stab_meaning
+  chapter: Stability
+  narration: Why does this matter for money? Because capital hates surprises. A country where rules change slowly, and in
+    public, is a country where a factory, a laboratory or a savings account can plan for decades. Predictability is hard to
+    measure, but it may be the most valuable thing Switzerland has ever produced.
+  claims: []
+  analysis: true
+  source_note: Interpretation by the channel.
+- id: act3_card
+  chapter: Money
+  narration: ''
+  claims: []
+- id: money_1934
+  chapter: Money
+  narration: Stability attracted money, and Switzerland learned to protect it. {{banking_act_1934}}, a new federal banking
+    law made it a criminal offence for bankers to reveal their clients' secrets. Before that, confidentiality had been a matter
+    of civil law. Now, breaking it could mean prosecution.
+  claims:
+  - banking_act_1934
+- id: money_pressure
+  chapter: Money
+  narration: For decades, discretion became part of the Swiss brand. But secrecy that protects privacy can also protect people
+    hiding money from their own governments, and pressure from abroad kept growing.
+  claims: []
+  analysis: true
+  source_note: General interpretation; no specific case or figure is asserted.
+- id: money_aeoi
+  chapter: Money
+  narration: The turning point came quietly. In {{aeoi_2018.year}}, under a global standard for tax transparency, Switzerland
+    automatically shared financial account information with other countries for the first time. That first exchange covered
+    {{aeoi_2018}} accounts. The law on secrecy still exists at home, but foreign tax authorities now get the data.
+  claims:
+  - aeoi_2018
+  - banking_act_1934
+  analysis: true
+  source_note: '"The law on secrecy still exists at home" relies on Article 47 still being in force (secondary sources); verify
+    on fedlex.'
+- id: money_haven
+  chapter: Money
+  narration: There is another way Switzerland attracts money, and it does not require a bank account at all. In times of crisis,
+    investors look for places to park their wealth that are politically stable and unlikely to inflate it away. Economists
+    call that a safe haven, and the Swiss franc is often described as one.
+  claims: []
+  analysis: true
+  source_note: Definition of a safe haven and the common description of the franc as one; general framing, no statistic.
+- id: money_floor_2011
+  chapter: Money
+  narration: Safety has a side effect. When investors trust a country, they buy its currency, and a strong currency makes
+    everything that country sells abroad more expensive. On {{snb_floor_2011.date_spoken}}, the Swiss National Bank drew a
+    line in the sand. It would no longer tolerate a euro worth less than {{snb_floor_2011}}.
+  claims:
+  - snb_floor_2011
+  analysis: true
+  source_note: The first two sentences are general economics framing; the date and the 1.20 rate are sourced.
+- id: money_floor_2015
+  chapter: Money
+  narration: Defending that line meant buying foreign currency again and again. The central bank later said it could only
+    have been held with interventions of rapidly increasing size. On {{snb_floor_end_2015.date_spoken}}, it abandoned the
+    minimum rate with immediate effect. The franc jumped, and markets were caught off guard.
+  claims:
+  - snb_floor_interventions
+  - snb_floor_end_2015
+- id: money_after
+  chapter: Money
+  narration: 'The battle over the franc never really ended. In twenty twenty-two and twenty twenty-three, the central bank
+    did the opposite: it sold foreign currency to strengthen the franc and make imports cheaper, to dampen inflation. In twenty
+    twenty-three alone, it sold {{snb_fx_2024.sold_spoken}} worth. In twenty twenty-four, it was buying again, but only {{snb_fx_2024}}.'
+  claims:
+  - snb_fx_2024
+- id: money_cs
+  chapter: Money
+  narration: Even Swiss banking is not immune to crisis. In {{cs_ubs_2023.month_spoken}}, Credit Suisse was taken over by
+    its rival UBS, in a deal approved by the financial regulator and backed by the federal government and the central bank.
+  claims:
+  - cs_ubs_2023
+- id: act4_card
+  chapter: Specialisation
+  narration: ''
+  claims: []
+- id: spec_ring
+  chapter: Specialisation
+  narration: But here is the twist. Look at what Switzerland physically ships abroad, and banks barely appear. In {{pharma_share_2024.year}},
+    chemical and pharmaceutical products made up {{pharma_share_2024.spoken_exact}} of Swiss exports. {{pharma_share_2024|cap}}
+    of everything the country sold abroad came from one industry.
+  claims:
+  - pharma_share_2024
+  analysis: true
+  source_note: '"Banks barely appear" = financial services are not goods exports, so they are not in goods trade statistics
+    by definition.'
+- id: spec_basel
+  chapter: Specialisation
+  narration: The centre of gravity is Basel, a city on the Rhine, close to the borders with France and Germany. The drug makers
+    Roche and Novartis both have their global headquarters here.
+  claims:
+  - pharma_hq_basel
+  source_note: Basel's location on the Rhine near France and Germany is visible on the Natural Earth map.
+- id: spec_why
+  chapter: Specialisation
+  narration: Medicines are almost the perfect product for a small, landlocked, expensive country. They are light, they are
+    valuable, and they are protected by patents and know-how that take years to build. Switzerland does not compete on what
+    is cheap to make. It competes on what is hard to copy.
+  claims: []
+  analysis: true
+  source_note: Interpretation by the channel; 'expensive' is supported by the price-level claim in act 6.
+- id: spec_watches
+  chapter: Specialisation
+  narration: 'And the watches? They are real, and they are big business. In twenty twenty-four, Swiss watch exports were worth
+    {{watches_2024}}, down {{watches_2024.change_spoken}} on the year, according to the watch industry''s federation. It is
+    the same lesson as medicine: small, light, expensive objects that are very hard to copy.'
+  claims:
+  - watches_2024
+- id: act5_card
+  chapter: Skills
+  narration: ''
+  claims: []
+- id: skills_vet
+  chapter: Skills
+  narration: Hard-to-copy products need people who are hard to replace. {{vet_share}} of young people in Switzerland go into
+    vocational education and training, usually apprenticeships that combine the classroom with real work inside a company.
+    In many countries, that path is seen as a fallback. Here, it is the mainstream.
+  claims:
+  - vet_share
+  analysis: true
+  source_note: '"Seen as a fallback in many countries" is interpretation, not a cross-country statistic.'
+- id: skills_gii
+  chapter: Skills
+  narration: Skills feed ideas. {{gii_2025_rank}} in its Global Innovation Index. Sweden, the United States, South Korea and
+    Singapore completed the top five.
+  claims:
+  - gii_2025_rank
+  - gii_2025_top5
+- id: skills_jobs
+  chapter: Skills
+  narration: 'Skills also keep people in work. In twenty twenty-four, the average unemployment rate in Switzerland was {{unemployment_2024}},
+    according to the economics ministry, SECO. A year earlier, at {{unemployment_2024.prev_spoken}}, it had been at its lowest
+    level since two thousand and one. And the jobs pull people in from across the borders: {{crossborder_2024}} cross-border
+    commuters, most of them living in France, Italy and Germany, were working in Switzerland at the end of September twenty
+    twenty-four.'
+  claims:
+  - unemployment_2024
+  - crossborder_2024
+- id: act6_card
+  chapter: The hidden costs
+  narration: ''
+  claims: []
+- id: cost_prices
+  chapter: The hidden costs
+  narration: Now for the part that rarely makes the brochures. Success is expensive, literally. In {{price_level_2024.year}},
+    Switzerland had the highest price level of all the countries compared by Eurostat, {{price_level_2024}}.
+  claims:
+  - price_level_2024
+- id: cost_franc
+  chapter: The hidden costs
+  narration: High prices and a strong franc squeeze anyone who has to compete from Switzerland. That pressure is exactly what
+    the central bank was fighting between {{snb_floor_2011.year}} and {{snb_floor_end_2015.year}}. Being a safe haven is a
+    privilege, but the bill arrives in the export sector.
+  claims:
+  - snb_floor_2011
+  - snb_floor_end_2015
+  analysis: true
+  source_note: Interpretation linking the price level and the exchange-rate floor.
+- id: cost_tariff
+  chapter: The hidden costs
+  narration: 'Then, in twenty twenty-five, the risk of depending on a few big customers became very real. From August seventh,
+    Swiss exports to the United States faced a tariff of {{tariff_2025}}. The Swiss government called it unjustified and a
+    heavy burden for exporters. In November, the two countries signed a non-binding memorandum: the extra tariff would fall
+    to {{tariff_2025.new_spoken}}, in line with the European Union, and Swiss companies planned {{tariff_2025.invest_spoken}}
+    of investment in the United States by the end of twenty twenty-eight.'
+  claims:
+  - tariff_2025
+- id: cost_concentration
+  chapter: The hidden costs
+  narration: And concentration cuts both ways. When {{pharma_share_2024}} of your exports come from one industry, a shock
+    to that industry is a shock to the whole country. The Credit Suisse rescue was a reminder that a great financial centre
+    can also become a national risk.
+  claims:
+  - pharma_share_2024
+  - cs_ubs_2023
+  analysis: true
+  source_note: Risk framing is interpretation; the export share and the rescue are sourced.
+- id: act7_card
+  chapter: Conclusion
+  narration: ''
+  claims: []
+- id: close
+  chapter: Conclusion
+  narration: So, why is Switzerland so rich? Not because of what lies under its ground, but because of what it built on top
+    of it. Stability that investors trust, earned over two centuries and defended, sometimes at great cost. A financial system
+    that had to reinvent itself when secrecy stopped being acceptable. Specialisation in products that are hard to copy. And
+    skills that keep them that way. None of these forces is guaranteed. A strong currency, high prices and a dependence on
+    a few giants are the price of the model. The question for the next decade is whether a small country can keep it running
+    in a world of bigger, louder powers. Thanks for watching. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Conclusion and outlook are the channel's interpretation.

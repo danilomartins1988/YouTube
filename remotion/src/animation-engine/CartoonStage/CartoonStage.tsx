@@ -619,6 +619,36 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 80)}, (_, k) => <path key={'cw' + k} d={`M ${z.x0 + k * 80 + 20 * Math.sin(t + k)} ${f + 40 + 160 * rnd(k)} q 16 -8 32 0`} fill="none" stroke={K.white} strokeWidth={3} opacity={0.5} />)}
     </g>;
   },
+  /** Swiss Alps: snowy peaks, a blue lake, wooden chalets with flower boxes, a red cable car, a red train along the shore. */
+  swiss: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    const trainX = z.x0 + ((t * 170) % (w + 1200)) - 600;
+    return <g>
+      {Array.from({length: Math.ceil(w / 460) + 1}, (_, k) => { const x = z.x0 + k * 460 - 80, h = 460 + 170 * rnd(k + 121);
+        return <g key={'pk' + k}><path d={`M ${x - 320} ${f - 180} L ${x} ${f - 180 - h} L ${x + 320} ${f - 180} Z`} fill={night ? '#46557F' : '#8A9BC0'} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          <path d={`M ${x - 110} ${f - 180 - h + 150} L ${x} ${f - 180 - h} L ${x + 110} ${f - 180 - h + 150} L ${x + 50} ${f - 180 - h + 115} L ${x} ${f - 180 - h + 160} L ${x - 50} ${f - 180 - h + 115} Z`} fill={K.white} stroke={OL} strokeWidth={3} strokeLinejoin="round" /></g>; })}
+      <path d={`M ${z.x0} ${f - 330} L ${z.x0 + w * 0.5} ${f - 640} L ${z.x1} ${f - 340}`} fill="none" stroke={OL} strokeWidth={3} />
+      {(() => { const u = (Math.sin(t * 0.35) + 1) / 2, cx2 = lerp(z.x0 + 200, z.x0 + w * 0.5 - 60, u), cy2 = lerp(f - 340, f - 610, u);
+        return <g transform={`translate(${cx2} ${cy2})`}><path d="M 0 0 L 0 26" stroke={OL} strokeWidth={3} /><rect x={-34} y={26} width={68} height={52} rx={8} fill="#E53935" stroke={OL} strokeWidth={4} />
+          <rect x={-24} y={34} width={48} height={20} rx={4} fill="#CFEFFF" stroke={OL} strokeWidth={2} /></g>; })()}
+      <rect x={z.x0} y={f - 180} width={w} height={120} fill={night ? '#1F4E6E' : '#4FB3E8'} />
+      {Array.from({length: Math.ceil(w / 90)}, (_, k) => <path key={'lw' + k} d={`M ${z.x0 + k * 90 + 20 * Math.sin(t + k)} ${f - 150 + 70 * rnd(k)} q 16 -8 32 0`} fill="none" stroke={K.white} strokeWidth={3} opacity={0.5} />)}
+      <rect x={z.x0} y={f - 60} width={w} height={14} fill="#9E9E9E" />
+      <g transform={`translate(${trainX} ${f - 62})`}>{[0, 1, 2].map((k) => <g key={k} transform={`translate(${k * 190} 0)`}>
+        <rect x={0} y={-70} width={180} height={66} rx={14} fill="#E53935" stroke={OL} strokeWidth={4} />
+        {[0, 1, 2].map((j) => <rect key={j} x={14 + j * 54} y={-60} width={40} height={26} rx={4} fill="#CFEFFF" stroke={OL} strokeWidth={2} />)}</g>)}</g>
+      <rect x={z.x0} y={f - 46} width={w} height={600} fill="#7BCB6B" />
+      {Array.from({length: Math.ceil(w / 380)}, (_, k) => { const x = z.x0 + 150 + k * 380;
+        return <g key={'ch' + k} transform={`translate(${x} ${f})`}>
+          <rect x={-80} y={-130} width={160} height={130} fill="#A1662F" stroke={OL} strokeWidth={4} />
+          {Array.from({length: 6}, (_, j) => <path key={j} d={`M -80 ${-130 + j * 22} L 80 ${-130 + j * 22}`} stroke={OL} strokeWidth={1.5} opacity={0.35} />)}
+          <path d="M -110 -120 L 0 -200 L 110 -120 Z" fill="#6D4C41" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          <rect x={-50} y={-100} width={36} height={34} fill={night ? '#FFE08A' : K.white} stroke={OL} strokeWidth={3} />
+          <rect x={14} y={-100} width={36} height={34} fill={night ? '#FFE08A' : K.white} stroke={OL} strokeWidth={3} />
+          {[-32, 32].map((dx) => <rect key={dx} x={dx - 24} y={-64} width={48} height={12} fill="#E53935" />)}
+          <rect x={-16} y={-46} width={32} height={46} fill="#5D4037" stroke={OL} strokeWidth={3} /></g>; })}
+    </g>;
+  },
   /** Plain studio-like sky with rolling hills (fallback / neutral). */
   hills: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -1577,9 +1607,31 @@ const racecar: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A big cartoon wristwatch: ticking second hand, strap, glinting crystal; text on a tag below. */
+const watch: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 450), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0) return null;
+  const sec = Math.floor(t) * 6, mn = t * 0.5, hr = t * 0.04;
+  return <g key={'wt' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${Math.sin(t * 1.2) * 3})`}>
+    <rect x={-80} y={-330} width={160} height={180} rx={30} fill="#5D4037" stroke={OL} strokeWidth={5} />
+    <rect x={-80} y={150} width={160} height={180} rx={30} fill="#5D4037" stroke={OL} strokeWidth={5} />
+    {[-260, -200, 200, 260].map((dy) => <path key={dy} d={`M -60 ${dy} L 60 ${dy}`} stroke="#3E2723" strokeWidth={4} />)}
+    <circle r={185} fill={col(a.color, '#B0BEC5')} stroke={OL} strokeWidth={7} />
+    <circle r={160} fill={K.white} stroke={OL} strokeWidth={4} />
+    <rect x={182} y={-22} width={30} height={44} rx={8} fill={col(a.color, '#B0BEC5')} stroke={OL} strokeWidth={4} />
+    {Array.from({length: 12}, (_, k) => { const an = k * Math.PI / 6; return <path key={k} d={`M ${Math.sin(an) * 130} ${-Math.cos(an) * 130} L ${Math.sin(an) * 148} ${-Math.cos(an) * 148}`} stroke={OL} strokeWidth={k % 3 ? 4 : 8} />; })}
+    <path d={`M 0 0 L ${Math.sin(hr) * 70} ${-Math.cos(hr) * 70}`} stroke={OL} strokeWidth={12} strokeLinecap="round" />
+    <path d={`M 0 0 L ${Math.sin(mn) * 110} ${-Math.cos(mn) * 110}`} stroke={OL} strokeWidth={8} strokeLinecap="round" />
+    <path d={`M 0 20 L ${Math.sin(sec * Math.PI / 180) * 130} ${-Math.cos(sec * Math.PI / 180) * 130}`} stroke={K.red} strokeWidth={4} strokeLinecap="round" />
+    <circle r={12} fill={OL} />
+    <path d="M -110 -90 Q -60 -140 0 -130" fill="none" stroke={K.white} strokeWidth={10} opacity={0.6} strokeLinecap="round" />
+    {a.text && <g><rect x={-170} y={210} width={340} height={56} rx={12} fill={K.gold} stroke={OL} strokeWidth={4} /><T x={0} y={248} s={28}>{a.text}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm']);
 
 /* =============================================================================================== STAGE */

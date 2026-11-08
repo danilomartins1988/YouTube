@@ -15,22 +15,36 @@
       "keyframes": [
         {
           "param": "callouts[0].at.cue",
-          "cue": "No factories",
+          "cue": "tiny island",
           "label": "callouts[0].at.cue",
+          "scene_time_s": 1.02,
+          "absolute_s": 1.02
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "No factories",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 6.67,
+          "absolute_s": 6.67
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "No factories",
+          "label": "items[0].at.cue",
           "scene_time_s": 6.97,
           "absolute_s": 6.97
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[1].at.cue",
           "cue": "no data centers",
-          "label": "callouts[1].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 8.28,
           "absolute_s": 8.28
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[2].at.cue",
           "cue": "no tech giants",
-          "label": "callouts[2].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 9.86,
           "absolute_s": 9.86
         },
@@ -42,46 +56,63 @@
           "absolute_s": 11.35
         },
         {
-          "param": "actors[1].at.cue",
+          "param": "items[0].until.cue",
           "cue": "Just two letters",
-          "label": "actors[1].at.cue",
+          "label": "items[0].until.cue",
           "scene_time_s": 11.35,
           "absolute_s": 11.35
         },
         {
-          "param": "callouts[0].until.cue",
+          "param": "items[1].until.cue",
           "cue": "Just two letters",
-          "label": "callouts[0].until.cue",
+          "label": "items[1].until.cue",
           "scene_time_s": 11.35,
           "absolute_s": 11.35
         },
         {
-          "param": "callouts[1].until.cue",
+          "param": "items[2].until.cue",
           "cue": "Just two letters",
-          "label": "callouts[1].until.cue",
+          "label": "items[2].until.cue",
           "scene_time_s": 11.35,
           "absolute_s": 11.35
         },
         {
-          "param": "callouts[2].until.cue",
+          "param": "items[3].at.cue",
           "cue": "Just two letters",
-          "label": "callouts[2].until.cue",
+          "label": "items[3].at.cue",
           "scene_time_s": 11.35,
           "absolute_s": 11.35
         },
         {
-          "param": "actors[2].at.cue",
+          "param": "items[4].at.cue",
           "cue": "Just two letters",
-          "label": "actors[2].at.cue",
-          "scene_time_s": 12.15,
-          "absolute_s": 12.15
+          "label": "items[4].at.cue",
+          "scene_time_s": 11.55,
+          "absolute_s": 11.55
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Just two letters",
+          "label": "items[5].at.cue",
+          "scene_time_s": 11.65,
+          "absolute_s": 11.65
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Just two letters",
+          "label": "items[6].at.cue",
+          "scene_time_s": 11.65,
+          "absolute_s": 11.65
         }
       ],
       "unresolved_cues": [],
       "assets": [
         "font:inter"
       ],
-      "sources": [],
+      "sources": [
+        "ap_2024",
+        "gleaner_2026"
+      ],
       "transition_out": "scan"
     },
     {
@@ -207,11 +238,18 @@
       "segment": "m1_question",
       "type": "engine_cartoon",
       "start_s": 46.27,
-      "end_s": 54.0,
-      "duration_s": 7.73,
+      "end_s": 55.27,
+      "duration_s": 9.0,
       "visual_objective": "",
       "narration": "So how did an island with no tech industry end up owning the most wanted letters on the internet?",
       "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "no tech industry",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.13,
+          "absolute_s": 48.4
+        },
         {
           "param": "callouts[0].at.cue",
           "cue": "no tech industry",
@@ -220,9 +258,16 @@
           "absolute_s": 48.4
         },
         {
-          "param": "actors[1].at.cue",
+          "param": "callouts[0].until.cue",
           "cue": "most wanted",
-          "label": "actors[1].at.cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 4.38,
+          "absolute_s": 50.65
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "most wanted",
+          "label": "cam[1].at.cue",
           "scene_time_s": 4.68,
           "absolute_s": 50.95
         },
@@ -246,8 +291,8 @@
       "id": "p05_what",
       "segment": "m1_what",
       "type": "engine_draw",
-      "start_s": 54.0,
-      "end_s": 73.07,
+      "start_s": 55.27,
+      "end_s": 74.33,
       "duration_s": 19.07,
       "visual_objective": "",
       "narration": "First, what is a domain name? Every website lives at a number, a bit like a phone number, that computers use to find it. A domain name is the easy name that points to that number. And the last part, after the final dot, is called the ending.",
@@ -257,70 +302,70 @@
           "cue": "First",
           "label": "enter.at.cue",
           "scene_time_s": 0.05,
-          "absolute_s": 54.05
+          "absolute_s": 55.32
         },
         {
           "param": "draw_start.cue",
           "cue": "Every website",
           "label": "draw_start.cue",
           "scene_time_s": 3.49,
-          "absolute_s": 57.49
+          "absolute_s": 58.76
         },
         {
           "param": "strokes[0].start.cue",
           "cue": "Every website",
           "label": "strokes[0].start.cue",
           "scene_time_s": 3.49,
-          "absolute_s": 57.49
+          "absolute_s": 58.76
         },
         {
           "param": "strokes[1].start.cue",
           "cue": "phone number",
           "label": "strokes[1].start.cue",
           "scene_time_s": 6.73,
-          "absolute_s": 60.73
+          "absolute_s": 62.0
         },
         {
           "param": "strokes[5].start.cue",
           "cue": "computers use",
           "label": "strokes[5].start.cue",
           "scene_time_s": 7.73,
-          "absolute_s": 61.73
+          "absolute_s": 63.0
         },
         {
           "param": "strokes[2].start.cue",
           "cue": "easy name",
           "label": "strokes[2].start.cue",
           "scene_time_s": 11.44,
-          "absolute_s": 65.44
+          "absolute_s": 66.71
         },
         {
           "param": "strokes[3].start.cue",
           "cue": "points to",
           "label": "strokes[3].start.cue",
           "scene_time_s": 12.4,
-          "absolute_s": 66.4
+          "absolute_s": 67.67
         },
         {
           "param": "strokes[4].start.cue",
           "cue": "the last part",
           "label": "strokes[4].start.cue",
           "scene_time_s": 14.66,
-          "absolute_s": 68.66
+          "absolute_s": 69.93
         },
         {
           "param": "actions[0].at.cue",
           "cue": "the last part",
           "label": "actions[0].at.cue",
           "scene_time_s": 15.16,
-          "absolute_s": 69.16
+          "absolute_s": 70.43
         },
         {
           "param": "actions[1].at.cue",
           "cue": "is called",
           "label": "actions[1].at.cue",
           "scene_time_s": 17.38,
-          "absolute_s": 71.38
+          "absolute_s": 72.65
         }
       ],
       "unresolved_cues": [],
@@ -335,8 +380,8 @@
       "id": "s06_codes",
       "segment": "m1_codes",
       "type": "engine_cartoon",
-      "start_s": 73.07,
-      "end_s": 93.3,
+      "start_s": 74.33,
+      "end_s": 94.57,
       "duration_s": 20.23,
       "visual_objective": "",
       "narration": "Let me draw it. Every country on the internet gets its own two-letter ending. Brazil is dot B R. Japan is dot J P. The letters come from each country's official code, not from what they might mean one day. And Anguilla's code is A I.",
@@ -346,42 +391,100 @@
           "cue": "Every country",
           "label": "callouts[0].at.cue",
           "scene_time_s": 2.35,
-          "absolute_s": 75.42
+          "absolute_s": 76.68
         },
         {
-          "param": "actors[1].at.cue",
-          "cue": "Brazil is",
-          "label": "actors[1].at.cue",
+          "param": "items[0].at.cue",
+          "cue": "Brazil",
+          "label": "items[0].at.cue",
           "scene_time_s": 7.3,
-          "absolute_s": 80.37
+          "absolute_s": 81.63
         },
         {
-          "param": "actors[2].at.cue",
-          "cue": "Japan is",
-          "label": "actors[2].at.cue",
+          "param": "items[3].at.cue",
+          "cue": "Brazil",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.3,
+          "absolute_s": 81.63
+        },
+        {
+          "param": "items[0].typeAt.cue",
+          "cue": "Brazil",
+          "label": "items[0].typeAt.cue",
+          "scene_time_s": 7.5,
+          "absolute_s": 81.83
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Japan",
+          "label": "items[1].at.cue",
           "scene_time_s": 9.02,
-          "absolute_s": 82.09
+          "absolute_s": 83.35
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Japan",
+          "label": "items[4].at.cue",
+          "scene_time_s": 9.02,
+          "absolute_s": 83.35
+        },
+        {
+          "param": "items[1].typeAt.cue",
+          "cue": "Japan",
+          "label": "items[1].typeAt.cue",
+          "scene_time_s": 9.22,
+          "absolute_s": 83.55
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "official code",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.38,
+          "absolute_s": 87.72
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "official code",
           "label": "callouts[1].at.cue",
           "scene_time_s": 13.69,
-          "absolute_s": 86.75
+          "absolute_s": 88.02
         },
         {
-          "param": "actors[3].at.cue",
-          "cue": "Anguilla's",
-          "label": "actors[3].at.cue",
+          "param": "cam[1].at.cue",
+          "cue": "Anguilla's code",
+          "label": "cam[1].at.cue",
           "scene_time_s": 17.63,
-          "absolute_s": 90.7
+          "absolute_s": 91.96
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Anguilla's code",
+          "label": "items[2].at.cue",
+          "scene_time_s": 17.63,
+          "absolute_s": 91.96
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Anguilla's code",
+          "label": "items[5].at.cue",
+          "scene_time_s": 17.63,
+          "absolute_s": 91.96
+        },
+        {
+          "param": "items[2].typeAt.cue",
+          "cue": "Anguilla's code",
+          "label": "items[2].typeAt.cue",
+          "scene_time_s": 17.83,
+          "absolute_s": 92.16
         }
       ],
       "unresolved_cues": [],
       "assets": [
         "font:inter"
       ],
-      "sources": [],
+      "sources": [
+        "iana_ai"
+      ],
       "transition_out": "scan"
     },
     {
@@ -389,53 +492,53 @@
       "id": "s07_1995",
       "segment": "m1_assigned",
       "type": "engine_cartoon",
-      "start_s": 93.3,
-      "end_s": 116.27,
+      "start_s": 94.57,
+      "end_s": 117.53,
       "duration_s": 22.97,
       "visual_objective": "",
       "narration": "In 1995, Anguilla was assigned dot A I. Back then, artificial intelligence was a niche idea in labs, and the letters were worth almost nothing. Its official manager today is the Government of Anguilla. Nobody on the island could have guessed what those two letters would one day be worth.",
       "keyframes": [
         {
-          "param": "callouts[0].at.cue",
+          "param": "items[1].at.cue",
           "cue": "Anguilla was assigned",
-          "label": "callouts[0].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 2.51,
-          "absolute_s": 95.81
+          "absolute_s": 97.08
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[3].at.cue",
           "cue": "niche idea",
-          "label": "callouts[1].at.cue",
+          "label": "items[3].at.cue",
           "scene_time_s": 8.76,
-          "absolute_s": 102.06
+          "absolute_s": 103.33
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[2].at.cue",
           "cue": "almost nothing",
-          "label": "callouts[2].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 11.56,
-          "absolute_s": 104.86
+          "absolute_s": 106.13
         },
         {
-          "param": "callouts[1].until.cue",
+          "param": "cam[1].at.cue",
           "cue": "Its official",
-          "label": "callouts[1].until.cue",
+          "label": "cam[1].at.cue",
           "scene_time_s": 12.95,
-          "absolute_s": 106.25
+          "absolute_s": 107.52
         },
         {
-          "param": "callouts[2].until.cue",
+          "param": "items[4].at.cue",
           "cue": "Its official",
-          "label": "callouts[2].until.cue",
+          "label": "items[4].at.cue",
           "scene_time_s": 12.95,
-          "absolute_s": 106.25
+          "absolute_s": 107.52
         },
         {
-          "param": "callouts[3].at.cue",
+          "param": "callouts[0].at.cue",
           "cue": "Its official",
-          "label": "callouts[3].at.cue",
+          "label": "callouts[0].at.cue",
           "scene_time_s": 12.95,
-          "absolute_s": 106.25
+          "absolute_s": 107.52
         }
       ],
       "unresolved_cues": [],
@@ -454,8 +557,8 @@
       "id": "s08_cate",
       "segment": "m1_cate",
       "type": "engine_cartoon",
-      "start_s": 116.27,
-      "end_s": 146.67,
+      "start_s": 117.53,
+      "end_s": 147.93,
       "duration_s": 30.4,
       "visual_objective": "",
       "narration": "The early years were improvised. A software developer called Vince Cate, who moved to the island in nineteen ninety-four, says he was asked by one of the internet's founders whether he wanted to run dot A I. For a while the domain was even handed to a company in Taiwan that later disappeared, and it had to be recovered. For years, Cate ran the sales for the government. Later, he made the government itself the official contact for the domain.",
@@ -465,105 +568,161 @@
           "cue": "Vince Cate",
           "label": "callouts[0].at.cue",
           "scene_time_s": 5.11,
-          "absolute_s": 121.37
+          "absolute_s": 122.64
         },
         {
-          "param": "actors[1].x[1][0].cue",
+          "param": "items[0].x[1][0].cue",
           "cue": "moved to the island",
-          "label": "actors[1].x[1][0].cue",
-          "scene_time_s": 6.88,
-          "absolute_s": 123.15
+          "label": "items[0].x[1][0].cue",
+          "scene_time_s": 5.88,
+          "absolute_s": 123.42
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "moved to the island",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.88,
+          "absolute_s": 123.42
+        },
+        {
+          "param": "items[0].x[2][0].cue",
+          "cue": "moved to the island",
+          "label": "items[0].x[2][0].cue",
+          "scene_time_s": 10.88,
+          "absolute_s": 128.42
+        },
+        {
+          "param": "items[0].y[1][0].cue",
+          "cue": "moved to the island",
+          "label": "items[0].y[1][0].cue",
+          "scene_time_s": 10.88,
+          "absolute_s": 128.42
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "whether he wanted",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.05,
+          "absolute_s": 128.58
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "whether he wanted",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.65,
+          "absolute_s": 129.18
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "whether he wanted",
           "label": "callouts[1].at.cue",
           "scene_time_s": 11.65,
-          "absolute_s": 127.91
+          "absolute_s": 129.18
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "run dot",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.84,
+          "absolute_s": 130.38
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "For a while",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.14,
+          "absolute_s": 131.67
         },
         {
           "param": "callouts[1].until.cue",
           "cue": "For a while",
           "label": "callouts[1].until.cue",
-          "scene_time_s": 14.44,
-          "absolute_s": 130.71
-        },
-        {
-          "param": "cam[1].at.cue",
-          "cue": "company in Taiwan",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 16.89,
-          "absolute_s": 133.16
-        },
-        {
-          "param": "actors[2].x[1][0].cue",
-          "cue": "company in Taiwan",
-          "label": "actors[2].x[1][0].cue",
-          "scene_time_s": 16.89,
-          "absolute_s": 133.16
-        },
-        {
-          "param": "callouts[2].at.cue",
-          "cue": "company in Taiwan",
-          "label": "callouts[2].at.cue",
-          "scene_time_s": 18.09,
-          "absolute_s": 134.36
-        },
-        {
-          "param": "callouts[3].at.cue",
-          "cue": "disappeared",
-          "label": "callouts[3].at.cue",
-          "scene_time_s": 18.47,
-          "absolute_s": 134.73
-        },
-        {
-          "param": "actors[2].x[2][0].cue",
-          "cue": "company in Taiwan",
-          "label": "actors[2].x[2][0].cue",
-          "scene_time_s": 18.89,
-          "absolute_s": 135.16
-        },
-        {
-          "param": "actors[2].x[3][0].cue",
-          "cue": "recovered",
-          "label": "actors[2].x[3][0].cue",
-          "scene_time_s": 19.2,
-          "absolute_s": 135.47
-        },
-        {
-          "param": "callouts[2].until.cue",
-          "cue": "disappeared",
-          "label": "callouts[2].until.cue",
-          "scene_time_s": 19.97,
-          "absolute_s": 136.23
+          "scene_time_s": 14.14,
+          "absolute_s": 131.67
         },
         {
           "param": "cam[2].at.cue",
-          "cue": "recovered",
+          "cue": "For a while",
           "label": "cam[2].at.cue",
+          "scene_time_s": 14.44,
+          "absolute_s": 131.97
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "For a while",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 14.44,
+          "absolute_s": 131.97
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "company in Taiwan",
+          "label": "items[5].at.cue",
+          "scene_time_s": 16.89,
+          "absolute_s": 134.42
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "disappeared",
+          "label": "items[6].at.cue",
+          "scene_time_s": 18.47,
+          "absolute_s": 136.0
+        },
+        {
+          "param": "items[5].until.cue",
+          "cue": "disappeared",
+          "label": "items[5].until.cue",
+          "scene_time_s": 19.07,
+          "absolute_s": 136.6
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "recovered",
+          "label": "items[7].at.cue",
           "scene_time_s": 20.2,
-          "absolute_s": 136.47
+          "absolute_s": 137.73
         },
         {
-          "param": "callouts[3].until.cue",
+          "param": "items[6].until.cue",
           "cue": "recovered",
-          "label": "callouts[3].until.cue",
-          "scene_time_s": 20.2,
-          "absolute_s": 136.47
+          "label": "items[6].until.cue",
+          "scene_time_s": 20.7,
+          "absolute_s": 138.23
         },
         {
-          "param": "actors[2].x[4][0].cue",
-          "cue": "recovered",
-          "label": "actors[2].x[4][0].cue",
-          "scene_time_s": 21.2,
-          "absolute_s": 137.47
+          "param": "callouts[2].until.cue",
+          "cue": "For years",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 21.36,
+          "absolute_s": 138.89
         },
         {
-          "param": "callouts[4].at.cue",
-          "cue": "recovered",
-          "label": "callouts[4].at.cue",
-          "scene_time_s": 21.2,
-          "absolute_s": 137.47
+          "param": "cam[3].at.cue",
+          "cue": "For years",
+          "label": "cam[3].at.cue",
+          "scene_time_s": 21.66,
+          "absolute_s": 139.19
+        },
+        {
+          "param": "items[7].until.cue",
+          "cue": "For years",
+          "label": "items[7].until.cue",
+          "scene_time_s": 21.66,
+          "absolute_s": 139.19
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "For years",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 21.66,
+          "absolute_s": 139.19
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "official contact",
+          "label": "items[8].at.cue",
+          "scene_time_s": 27.84,
+          "absolute_s": 145.37
         }
       ],
       "unresolved_cues": [],
@@ -580,8 +739,8 @@
       "id": "s09_t1",
       "segment": "m1_transition",
       "type": "kinetic_text",
-      "start_s": 146.67,
-      "end_s": 153.1,
+      "start_s": 147.93,
+      "end_s": 154.37,
       "duration_s": 6.43,
       "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
       "narration": "Two letters, given away almost by accident. So how do they turn into money?",
@@ -591,14 +750,14 @@
           "cue": "Two letters",
           "label": "Two letters, given away almost by accident",
           "scene_time_s": 0.35,
-          "absolute_s": 147.02
+          "absolute_s": 148.28
         },
         {
           "param": "lines[1].cue",
           "cue": "turn into money",
           "label": "How do they turn into money?",
           "scene_time_s": 4.98,
-          "absolute_s": 151.64
+          "absolute_s": 152.91
         }
       ],
       "unresolved_cues": [],
@@ -613,8 +772,8 @@
       "id": "s10_c2",
       "segment": "m2_card",
       "type": "act_title",
-      "start_s": 153.1,
-      "end_s": 158.5,
+      "start_s": 154.37,
+      "end_s": 159.77,
       "duration_s": 5.4,
       "visual_objective": "Chapter card: masked title reveal, gold rule draws",
       "narration": "",
@@ -631,32 +790,46 @@
       "id": "s11_q2",
       "segment": "m2_question",
       "type": "engine_cartoon",
-      "start_s": 158.5,
-      "end_s": 164.4,
-      "duration_s": 5.9,
+      "start_s": 159.77,
+      "end_s": 168.77,
+      "duration_s": 9.0,
       "visual_objective": "",
       "narration": "Who actually pays Anguilla? And why would anyone pay for two letters?",
       "keyframes": [
-        {
-          "param": "actors[3].at.cue",
-          "cue": "Who actually",
-          "label": "actors[3].at.cue",
-          "scene_time_s": 0.35,
-          "absolute_s": 158.85
-        },
         {
           "param": "callouts[0].at.cue",
           "cue": "Who actually",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 158.85
+          "absolute_s": 160.12
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "two letters",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 4.38,
+          "absolute_s": 164.14
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "two letters",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 4.68,
+          "absolute_s": 164.44
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "two letters",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.68,
+          "absolute_s": 164.44
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "two letters",
           "label": "callouts[1].at.cue",
           "scene_time_s": 4.68,
-          "absolute_s": 163.18
+          "absolute_s": 164.44
         }
       ],
       "unresolved_cues": [],
@@ -671,8 +844,8 @@
       "id": "p12_chain",
       "segment": "m2_draw",
       "type": "engine_draw",
-      "start_s": 164.4,
-      "end_s": 187.57,
+      "start_s": 168.77,
+      "end_s": 191.93,
       "duration_s": 23.17,
       "visual_objective": "",
       "narration": "Let me draw the money machine. A start-up anywhere in the world wants a name that ends in dot A I. It buys it from a website that sells domain names. That seller passes the order to the registry, the system that keeps the master list of every dot A I name. And the registry pays the Government of Anguilla.",
@@ -682,84 +855,84 @@
           "cue": "Let me draw",
           "label": "enter.at.cue",
           "scene_time_s": 0.05,
-          "absolute_s": 164.45
+          "absolute_s": 168.82
         },
         {
           "param": "draw_start.cue",
           "cue": "A start-up",
           "label": "draw_start.cue",
           "scene_time_s": 2.94,
-          "absolute_s": 167.34
+          "absolute_s": 171.71
         },
         {
           "param": "strokes[0].start.cue",
           "cue": "A start-up",
           "label": "strokes[0].start.cue",
           "scene_time_s": 2.94,
-          "absolute_s": 167.34
+          "absolute_s": 171.71
         },
         {
           "param": "strokes[1].start.cue",
           "cue": "buys it",
           "label": "strokes[1].start.cue",
           "scene_time_s": 8.33,
-          "absolute_s": 172.73
+          "absolute_s": 177.1
         },
         {
           "param": "strokes[2].start.cue",
           "cue": "sells domain names",
           "label": "strokes[2].start.cue",
           "scene_time_s": 10.01,
-          "absolute_s": 174.41
+          "absolute_s": 178.78
         },
         {
           "param": "strokes[3].start.cue",
           "cue": "passes the order",
           "label": "strokes[3].start.cue",
           "scene_time_s": 12.64,
-          "absolute_s": 177.04
+          "absolute_s": 181.41
         },
         {
           "param": "strokes[4].start.cue",
           "cue": "the registry",
           "label": "strokes[4].start.cue",
           "scene_time_s": 13.99,
-          "absolute_s": 178.39
+          "absolute_s": 182.76
         },
         {
           "param": "strokes[5].start.cue",
           "cue": "master list",
           "label": "strokes[5].start.cue",
           "scene_time_s": 16.44,
-          "absolute_s": 180.84
+          "absolute_s": 185.21
         },
         {
           "param": "strokes[6].start.cue",
           "cue": "pays the Government",
           "label": "strokes[6].start.cue",
           "scene_time_s": 20.78,
-          "absolute_s": 185.18
+          "absolute_s": 189.55
         },
         {
           "param": "strokes[7].start.cue",
           "cue": "Government of Anguilla",
           "label": "strokes[7].start.cue",
           "scene_time_s": 21.2,
-          "absolute_s": 185.6
+          "absolute_s": 189.97
         },
         {
           "param": "actions[0].at.cue",
           "cue": "Government of Anguilla",
           "label": "actions[0].at.cue",
           "scene_time_s": 22.0,
-          "absolute_s": 186.4
+          "absolute_s": 190.77
         },
         {
           "param": "actions[1].at.cue",
           "cue": "Government of Anguilla",
           "label": "actions[1].at.cue",
           "scene_time_s": 23.4,
-          "absolute_s": 187.8
+          "absolute_s": 192.17
         }
       ],
       "unresolved_cues": [],
@@ -776,67 +949,123 @@
       "id": "s13_price",
       "segment": "m2_price",
       "type": "engine_cartoon",
-      "start_s": 187.57,
-      "end_s": 214.93,
+      "start_s": 191.93,
+      "end_s": 219.3,
       "duration_s": 27.37,
       "visual_objective": "",
       "narration": "The price is simple. A new name costs about 140 dollars for two years. Then you pay again to keep it, every time it comes up for renewal. And the best names are auctioned. In twenty twenty-three, litigate dot A I went for 13,000 dollars. And when a name expires and nobody renews it, it can be sold again, and the island is paid once more.",
       "keyframes": [
         {
-          "param": "actors[2].at.cue",
-          "cue": "The price",
-          "label": "actors[2].at.cue",
-          "scene_time_s": 0.35,
-          "absolute_s": 187.92
-        },
-        {
           "param": "callouts[0].at.cue",
           "cue": "costs about",
           "label": "callouts[0].at.cue",
           "scene_time_s": 2.96,
-          "absolute_s": 190.53
+          "absolute_s": 194.9
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "pay again",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 5.94,
+          "absolute_s": 197.88
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "pay again",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.24,
+          "absolute_s": 198.18
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "pay again",
           "label": "callouts[1].at.cue",
           "scene_time_s": 6.24,
-          "absolute_s": 193.81
+          "absolute_s": 198.18
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "auctioned",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 13.0,
+          "absolute_s": 204.93
         },
         {
           "param": "cam[1].at.cue",
           "cue": "auctioned",
           "label": "cam[1].at.cue",
           "scene_time_s": 13.3,
-          "absolute_s": 200.86
+          "absolute_s": 205.23
         },
         {
-          "param": "actors[3].at.cue",
-          "cue": "auctioned",
-          "label": "actors[3].at.cue",
-          "scene_time_s": 13.3,
-          "absolute_s": 200.86
+          "param": "items[2].hits[0].cue",
+          "cue": "litigate",
+          "label": "items[2].hits[0].cue",
+          "scene_time_s": 16.15,
+          "absolute_s": 208.08
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "litigate",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.15,
+          "absolute_s": 208.08
         },
         {
           "param": "callouts[2].at.cue",
           "cue": "litigate",
           "label": "callouts[2].at.cue",
           "scene_time_s": 16.15,
-          "absolute_s": 203.72
+          "absolute_s": 208.08
         },
         {
-          "param": "actors[3].until.cue",
-          "cue": "auctioned",
-          "label": "actors[3].until.cue",
-          "scene_time_s": 16.3,
-          "absolute_s": 203.86
+          "param": "items[2].hits[1].cue",
+          "cue": "litigate",
+          "label": "items[2].hits[1].cue",
+          "scene_time_s": 16.95,
+          "absolute_s": 208.88
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "expires",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 20.87,
+          "absolute_s": 212.8
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "expires",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 21.17,
+          "absolute_s": 213.1
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "expires",
+          "label": "items[4].at.cue",
+          "scene_time_s": 21.17,
+          "absolute_s": 213.1
         },
         {
           "param": "callouts[3].at.cue",
           "cue": "expires",
           "label": "callouts[3].at.cue",
           "scene_time_s": 21.17,
-          "absolute_s": 208.73
+          "absolute_s": 213.1
+        },
+        {
+          "param": "items[4].pages[1][0].cue",
+          "cue": "sold again",
+          "label": "items[4].pages[1][0].cue",
+          "scene_time_s": 24.24,
+          "absolute_s": 216.18
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "paid once more",
+          "label": "items[5].at.cue",
+          "scene_time_s": 26.21,
+          "absolute_s": 218.15
         }
       ],
       "unresolved_cues": [],
@@ -854,8 +1083,8 @@
       "id": "s14_renew",
       "segment": "m2_renew",
       "type": "engine_flow",
-      "start_s": 214.93,
-      "end_s": 234.67,
+      "start_s": 219.3,
+      "end_s": 239.03,
       "duration_s": 19.73,
       "visual_objective": "",
       "narration": "Here is the clever part. A domain name is never really bought. It is rented. Stop paying, and you lose it. So every name sold today comes back as money two years later, and two years after that. For Anguilla, the AI boom became a subscription.",
@@ -865,21 +1094,21 @@
           "cue": "never really bought",
           "label": "items.starts[0].cue",
           "scene_time_s": 3.65,
-          "absolute_s": 218.59
+          "absolute_s": 222.96
         },
         {
           "param": "items.starts[1].cue",
           "cue": "comes back",
           "label": "items.starts[1].cue",
           "scene_time_s": 11.22,
-          "absolute_s": 226.15
+          "absolute_s": 230.52
         },
         {
           "param": "items.starts[2].cue",
           "cue": "two years after",
           "label": "items.starts[2].cue",
           "scene_time_s": 14.12,
-          "absolute_s": 229.05
+          "absolute_s": 233.42
         }
       ],
       "unresolved_cues": [],
@@ -897,53 +1126,81 @@
       "id": "s15_why",
       "segment": "m2_why",
       "type": "engine_cartoon",
-      "start_s": 234.67,
-      "end_s": 251.07,
+      "start_s": 239.03,
+      "end_s": 255.43,
       "duration_s": 16.4,
       "visual_objective": "",
       "narration": "Why pay? Because for an AI company, a name that ends in dot A I tells the world what it does in two letters. It works like a brand. And with so many new AI start-ups, everyone wants one.",
       "keyframes": [
         {
-          "param": "callouts[0].at.cue",
+          "param": "items[2].at.cue",
+          "cue": "for an AI company",
+          "label": "items[2].at.cue",
+          "scene_time_s": 2.22,
+          "absolute_s": 241.25
+        },
+        {
+          "param": "items[2].typeAt.cue",
+          "cue": "for an AI company",
+          "label": "items[2].typeAt.cue",
+          "scene_time_s": 2.52,
+          "absolute_s": 241.55
+        },
+        {
+          "param": "items[3].at.cue",
           "cue": "two letters",
-          "label": "callouts[0].at.cue",
+          "label": "items[3].at.cue",
           "scene_time_s": 8.15,
-          "absolute_s": 242.81
+          "absolute_s": 247.18
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[4].at.cue",
           "cue": "like a brand",
-          "label": "callouts[1].at.cue",
+          "label": "items[4].at.cue",
           "scene_time_s": 10.27,
-          "absolute_s": 244.93
-        },
-        {
-          "param": "actors[1].at.cue",
-          "cue": "so many",
-          "label": "actors[1].at.cue",
-          "scene_time_s": 12.38,
-          "absolute_s": 247.05
-        },
-        {
-          "param": "actors[2].at.cue",
-          "cue": "so many",
-          "label": "actors[2].at.cue",
-          "scene_time_s": 12.78,
-          "absolute_s": 247.45
+          "absolute_s": 249.3
         },
         {
           "param": "cam[1].at.cue",
-          "cue": "everyone wants",
+          "cue": "so many new",
           "label": "cam[1].at.cue",
-          "scene_time_s": 14.53,
-          "absolute_s": 249.19
+          "scene_time_s": 12.38,
+          "absolute_s": 251.42
         },
         {
-          "param": "actors[4].at.cue",
+          "param": "items[5].at.cue",
+          "cue": "so many new",
+          "label": "items[5].at.cue",
+          "scene_time_s": 12.38,
+          "absolute_s": 251.42
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "so many new",
+          "label": "items[6].at.cue",
+          "scene_time_s": 12.38,
+          "absolute_s": 251.42
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "so many new",
+          "label": "items[7].at.cue",
+          "scene_time_s": 12.38,
+          "absolute_s": 251.42
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "so many new",
+          "label": "items[8].at.cue",
+          "scene_time_s": 12.38,
+          "absolute_s": 251.42
+        },
+        {
+          "param": "callouts[0].at.cue",
           "cue": "everyone wants",
-          "label": "actors[4].at.cue",
+          "label": "callouts[0].at.cue",
           "scene_time_s": 14.53,
-          "absolute_s": 249.19
+          "absolute_s": 253.56
         }
       ],
       "unresolved_cues": [],
@@ -958,49 +1215,87 @@
       "id": "s16_manager",
       "segment": "m2_manager",
       "type": "engine_cartoon",
-      "start_s": 251.07,
-      "end_s": 271.0,
+      "start_s": 255.43,
+      "end_s": 275.37,
       "duration_s": 19.93,
       "visual_objective": "",
       "narration": "In twenty twenty-four, as the rush grew, Anguilla signed a deal with an American company, Identity Digital, to run the registry. The government said it would bring more money, and make the system safer. The same company also runs Australia's own internet ending, dot A U.",
       "keyframes": [
         {
+          "param": "items[3].at.cue",
+          "cue": "signed a deal",
+          "label": "items[3].at.cue",
+          "scene_time_s": 3.48,
+          "absolute_s": 258.91
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "signed a deal",
           "label": "callouts[0].at.cue",
           "scene_time_s": 3.48,
-          "absolute_s": 254.54
+          "absolute_s": 258.91
         },
         {
-          "param": "actors[1].at.cue",
-          "cue": "Identity",
-          "label": "actors[1].at.cue",
+          "param": "cam[1].at.cue",
+          "cue": "American company",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 4.74,
+          "absolute_s": 260.18
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Identity Digital",
+          "label": "items[2].at.cue",
           "scene_time_s": 6.41,
-          "absolute_s": 257.48
+          "absolute_s": 261.85
         },
         {
-          "param": "cables[0].lightAt.cue",
+          "param": "items[1].at.cue",
           "cue": "run the registry",
-          "label": "cables[0].lightAt.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 8.29,
-          "absolute_s": 259.36
+          "absolute_s": 263.73
         },
         {
-          "param": "actors[2].at.cue",
+          "param": "callouts[0].until.cue",
           "cue": "more money",
-          "label": "actors[2].at.cue",
-          "scene_time_s": 11.6,
-          "absolute_s": 262.67
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.3,
+          "absolute_s": 266.74
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "more money",
           "label": "callouts[1].at.cue",
           "scene_time_s": 11.6,
-          "absolute_s": 262.67
+          "absolute_s": 267.04
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "dot A U",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.7,
+          "absolute_s": 274.13
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Australia",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "Australia",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": null,
+          "absolute_s": null
         }
       ],
-      "unresolved_cues": [],
+      "unresolved_cues": [
+        "Australia",
+        "Australia"
+      ],
       "assets": [
         "font:inter"
       ],
@@ -1015,8 +1310,8 @@
       "id": "s17_t2",
       "segment": "m2_transition",
       "type": "kinetic_text",
-      "start_s": 271.0,
-      "end_s": 278.37,
+      "start_s": 275.37,
+      "end_s": 282.73,
       "duration_s": 7.37,
       "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
       "narration": "A small fee, paid again and again. Now multiply it by the AI boom.",
@@ -1026,14 +1321,14 @@
           "cue": "A small fee",
           "label": "A small fee, paid again and again",
           "scene_time_s": 0.35,
-          "absolute_s": 271.35
+          "absolute_s": 275.72
         },
         {
           "param": "lines[1].cue",
           "cue": "multiply",
           "label": "× the AI boom",
           "scene_time_s": 4.27,
-          "absolute_s": 275.27
+          "absolute_s": 279.64
         }
       ],
       "unresolved_cues": [],
@@ -1048,8 +1343,8 @@
       "id": "s18_c3",
       "segment": "m3_card",
       "type": "act_title",
-      "start_s": 278.37,
-      "end_s": 283.77,
+      "start_s": 282.73,
+      "end_s": 288.13,
       "duration_s": 5.4,
       "visual_objective": "Chapter card: masked title reveal, gold rule draws",
       "narration": "",
@@ -1066,9 +1361,9 @@
       "id": "s19_q3",
       "segment": "m3_question",
       "type": "engine_cartoon",
-      "start_s": 283.77,
-      "end_s": 292.73,
-      "duration_s": 8.97,
+      "start_s": 288.13,
+      "end_s": 297.13,
+      "duration_s": 9.0,
       "visual_objective": "",
       "narration": "So how big did it get? When chatbots went mainstream, the world suddenly wanted dot A I.",
       "keyframes": [
@@ -1077,42 +1372,28 @@
           "cue": "How big",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.8,
-          "absolute_s": 284.57
+          "absolute_s": 288.94
         },
         {
-          "param": "actors[0].at.cue",
-          "cue": "chatbots",
-          "label": "actors[0].at.cue",
-          "scene_time_s": 3.89,
-          "absolute_s": 287.65
+          "param": "cam[1].at.cue",
+          "cue": "wanted dot",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.03,
+          "absolute_s": 295.17
         },
         {
-          "param": "actors[1].at.cue",
-          "cue": "chatbots",
-          "label": "actors[1].at.cue",
-          "scene_time_s": 4.24,
-          "absolute_s": 288.0
+          "param": "items[1].at.cue",
+          "cue": "wanted dot",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.03,
+          "absolute_s": 295.17
         },
         {
-          "param": "actors[2].at.cue",
-          "cue": "chatbots",
-          "label": "actors[2].at.cue",
-          "scene_time_s": 4.59,
-          "absolute_s": 288.35
-        },
-        {
-          "param": "actors[3].at.cue",
-          "cue": "chatbots",
-          "label": "actors[3].at.cue",
-          "scene_time_s": 4.94,
-          "absolute_s": 288.7
-        },
-        {
-          "param": "actors[5].at.cue",
-          "cue": "suddenly wanted",
-          "label": "actors[5].at.cue",
-          "scene_time_s": 6.17,
-          "absolute_s": 289.93
+          "param": "items[2].at.cue",
+          "cue": "wanted dot",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.53,
+          "absolute_s": 295.67
         }
       ],
       "unresolved_cues": [],
@@ -1127,8 +1408,8 @@
       "id": "s20_regs",
       "segment": "m3_regs",
       "type": "engine_chart",
-      "start_s": 292.73,
-      "end_s": 314.33,
+      "start_s": 297.13,
+      "end_s": 318.73,
       "duration_s": 21.6,
       "visual_objective": "",
       "narration": "In twenty twenty-two, there were 144,000 registered dot A I names. A year later, 354,000. By the start of twenty twenty-five, about 600,000. And in January twenty twenty-six, the government announced that dot A I had passed one million names.",
@@ -1138,14 +1419,14 @@
           "cue": "In twenty twenty-two",
           "label": "start.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 293.08
+          "absolute_s": 297.48
         },
         {
           "param": "highlightAt.cue",
           "cue": "passed",
           "label": "highlightAt.cue",
           "scene_time_s": 19.52,
-          "absolute_s": 312.26
+          "absolute_s": 316.66
         }
       ],
       "unresolved_cues": [],
@@ -1163,25 +1444,67 @@
       "id": "s21_cate",
       "segment": "m3_cate",
       "type": "engine_cartoon",
-      "start_s": 314.33,
-      "end_s": 335.3,
+      "start_s": 318.73,
+      "end_s": 339.7,
       "duration_s": 20.97,
       "visual_objective": "",
       "narration": "Vince Cate watched it happen from his office. At the start of twenty twenty-four he said sales had gone up almost four times, to about 3 million dollars a month. That year, the island's premier said the money could even double. By twenty twenty-five, it had nearly tripled.",
       "keyframes": [
         {
+          "param": "items[2].at.cue",
+          "cue": "almost four times",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.53,
+          "absolute_s": 326.26
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "almost four times",
+          "label": "items[3].at.cue",
+          "scene_time_s": 8.13,
+          "absolute_s": 326.86
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "almost four times",
           "label": "callouts[0].at.cue",
           "scene_time_s": 8.13,
-          "absolute_s": 322.46
+          "absolute_s": 326.86
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "premier said",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.67,
+          "absolute_s": 332.41
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "premier said",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.97,
+          "absolute_s": 332.71
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "premier said",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.97,
+          "absolute_s": 332.71
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "nearly tripled",
+          "label": "items[5].at.cue",
+          "scene_time_s": 19.5,
+          "absolute_s": 338.23
         },
         {
           "param": "callouts[1].at.cue",
-          "cue": "about 3 million",
+          "cue": "nearly tripled",
           "label": "callouts[1].at.cue",
-          "scene_time_s": 9.71,
-          "absolute_s": 324.04
+          "scene_time_s": 19.5,
+          "absolute_s": 338.23
         }
       ],
       "unresolved_cues": [],
@@ -1198,8 +1521,8 @@
       "id": "s22_rev",
       "segment": "m3_revenue",
       "type": "engine_chart",
-      "start_s": 335.3,
-      "end_s": 359.93,
+      "start_s": 339.7,
+      "end_s": 364.33,
       "duration_s": 24.63,
       "visual_objective": "",
       "narration": "The money followed. Before the boom, the domain brought in around 5 percent of the government's revenue. In twenty twenty-three, it was about 32 million dollars, just over 20 percent of everything the government collected. In twenty twenty-five, about 85 million dollars, far more than the government itself had planned.",
@@ -1209,14 +1532,14 @@
           "cue": "In twenty twenty-three",
           "label": "start.cue",
           "scene_time_s": 8.15,
-          "absolute_s": 343.45
+          "absolute_s": 347.85
         },
         {
           "param": "highlightAt.cue",
           "cue": "far more",
           "label": "highlightAt.cue",
           "scene_time_s": 21.27,
-          "absolute_s": 356.57
+          "absolute_s": 360.97
         }
       ],
       "unresolved_cues": [],
@@ -1235,8 +1558,8 @@
       "id": "s23_share",
       "segment": "m3_peak",
       "type": "engine_chart",
-      "start_s": 359.93,
-      "end_s": 378.93,
+      "start_s": 364.33,
+      "end_s": 383.33,
       "duration_s": 19.0,
       "visual_objective": "",
       "narration": "And in the first seven months of twenty twenty-six, 80 million dollars. That is 47.5 percent of all government revenue, and more than all the taxes paid by the island's entire productive sector in the same period.",
@@ -1246,7 +1569,7 @@
           "cue": "first seven months",
           "label": "start.cue",
           "scene_time_s": 1.18,
-          "absolute_s": 361.11
+          "absolute_s": 365.51
         }
       ],
       "unresolved_cues": [],
@@ -1264,8 +1587,8 @@
       "id": "s24_t3",
       "segment": "m3_transition",
       "type": "kinetic_text",
-      "start_s": 378.93,
-      "end_s": 383.53,
+      "start_s": 383.33,
+      "end_s": 387.93,
       "duration_s": 4.6,
       "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
       "narration": "So what does a tiny island do with that much money?",
@@ -1275,14 +1598,14 @@
           "cue": "So what",
           "label": "So what does a tiny island do",
           "scene_time_s": 0.35,
-          "absolute_s": 379.28
+          "absolute_s": 383.68
         },
         {
           "param": "lines[1].cue",
           "cue": "that much money",
           "label": "with that much money?",
           "scene_time_s": 3.04,
-          "absolute_s": 381.97
+          "absolute_s": 386.37
         }
       ],
       "unresolved_cues": [],
@@ -1297,8 +1620,8 @@
       "id": "s25_c4",
       "segment": "m4_card",
       "type": "act_title",
-      "start_s": 383.53,
-      "end_s": 388.93,
+      "start_s": 387.93,
+      "end_s": 393.33,
       "duration_s": 5.4,
       "visual_objective": "Chapter card: masked title reveal, gold rule draws",
       "narration": "",
@@ -1315,25 +1638,74 @@
       "id": "s26_q4",
       "segment": "m4_question",
       "type": "engine_cartoon",
-      "start_s": 388.93,
-      "end_s": 395.6,
-      "duration_s": 6.67,
+      "start_s": 393.33,
+      "end_s": 402.33,
+      "duration_s": 9.0,
       "visual_objective": "",
       "narration": "Where does all this money go? And how much is it for the people who actually live there?",
       "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Where does",
+          "label": "items[1].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 393.68
+        },
         {
           "param": "callouts[0].at.cue",
           "cue": "Where does",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 389.28
+          "absolute_s": 393.68
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "how much",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 3.09,
+          "absolute_s": 396.42
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "how much",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.39,
+          "absolute_s": 396.72
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "how much",
           "label": "callouts[1].at.cue",
           "scene_time_s": 3.39,
-          "absolute_s": 392.32
+          "absolute_s": 396.72
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "people",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.58,
+          "absolute_s": 397.91
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "people",
+          "label": "items[3].at.cue",
+          "scene_time_s": 4.58,
+          "absolute_s": 397.91
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "people",
+          "label": "items[4].at.cue",
+          "scene_time_s": 4.58,
+          "absolute_s": 397.91
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "people",
+          "label": "items[5].at.cue",
+          "scene_time_s": 4.58,
+          "absolute_s": 397.91
         }
       ],
       "unresolved_cues": [],
@@ -1348,60 +1720,179 @@
       "id": "s27_uses",
       "segment": "m4_uses",
       "type": "engine_cartoon",
-      "start_s": 395.6,
-      "end_s": 421.6,
+      "start_s": 402.33,
+      "end_s": 428.33,
       "duration_s": 26.0,
       "visual_objective": "",
       "narration": "The government says dot A I money has helped pay for the airport, new roads, tax relief for locals, and more health services for the young and the elderly, including free medical care for senior citizens. Part of it was also used to pay down debt. It is also helping to finish a new vocational training center, where young islanders learn technical skills.",
       "keyframes": [
         {
+          "param": "items[0].x[1][0].cue",
+          "cue": "the airport",
+          "label": "items[0].x[1][0].cue",
+          "scene_time_s": 4.25,
+          "absolute_s": 406.58
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "the airport",
           "label": "callouts[0].at.cue",
           "scene_time_s": 4.25,
-          "absolute_s": 399.85
+          "absolute_s": 406.58
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[1].at.cue",
           "cue": "new roads",
-          "label": "callouts[1].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 5.26,
-          "absolute_s": 400.86
+          "absolute_s": 407.59
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "callouts[0].until.cue",
           "cue": "tax relief",
-          "label": "callouts[2].at.cue",
-          "scene_time_s": 6.01,
-          "absolute_s": 401.61
-        },
-        {
-          "param": "actors[1].x[1][0].cue",
-          "cue": "the airport",
-          "label": "actors[1].x[1][0].cue",
-          "scene_time_s": 6.75,
-          "absolute_s": 402.35
-        },
-        {
-          "param": "callouts[3].at.cue",
-          "cue": "health services",
-          "label": "callouts[3].at.cue",
-          "scene_time_s": 8.32,
-          "absolute_s": 403.92
-        },
-        {
-          "param": "callouts[4].at.cue",
-          "cue": "free medical",
-          "label": "callouts[4].at.cue",
-          "scene_time_s": 12.45,
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 5.71,
           "absolute_s": 408.05
         },
         {
-          "param": "callouts[5].at.cue",
+          "param": "items[2].at.cue",
+          "cue": "tax relief",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.01,
+          "absolute_s": 408.35
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "tax relief",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 6.01,
+          "absolute_s": 408.35
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "health services",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.82,
+          "absolute_s": 410.16
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "health services",
+          "label": "items[3].at.cue",
+          "scene_time_s": 8.32,
+          "absolute_s": 410.66
+        },
+        {
+          "param": "items[0].x[2][0].cue",
+          "cue": "the airport",
+          "label": "items[0].x[2][0].cue",
+          "scene_time_s": 9.25,
+          "absolute_s": 411.58
+        },
+        {
+          "param": "items[0].y[1][0].cue",
+          "cue": "the airport",
+          "label": "items[0].y[1][0].cue",
+          "scene_time_s": 9.25,
+          "absolute_s": 411.58
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "free medical",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 12.15,
+          "absolute_s": 414.49
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "free medical",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.45,
+          "absolute_s": 414.79
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "free medical",
+          "label": "items[5].at.cue",
+          "scene_time_s": 12.45,
+          "absolute_s": 414.79
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "free medical",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 12.45,
+          "absolute_s": 414.79
+        },
+        {
+          "param": "cam[2].at.cue",
           "cue": "pay down debt",
-          "label": "callouts[5].at.cue",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 17.37,
+          "absolute_s": 419.7
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "pay down debt",
+          "label": "items[6].at.cue",
+          "scene_time_s": 17.37,
+          "absolute_s": 419.7
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "pay down debt",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 17.57,
+          "absolute_s": 419.9
+        },
+        {
+          "param": "items[6].h[1][0].cue",
+          "cue": "pay down debt",
+          "label": "items[6].h[1][0].cue",
           "scene_time_s": 17.87,
-          "absolute_s": 413.47
+          "absolute_s": 420.2
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "pay down debt",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 17.87,
+          "absolute_s": 420.2
+        },
+        {
+          "param": "items[6].h[2][0].cue",
+          "cue": "pay down debt",
+          "label": "items[6].h[2][0].cue",
+          "scene_time_s": 20.87,
+          "absolute_s": 423.2
+        },
+        {
+          "param": "callouts[3].until.cue",
+          "cue": "vocational",
+          "label": "callouts[3].until.cue",
+          "scene_time_s": 21.13,
+          "absolute_s": 423.46
+        },
+        {
+          "param": "cam[3].at.cue",
+          "cue": "vocational",
+          "label": "cam[3].at.cue",
+          "scene_time_s": 21.43,
+          "absolute_s": 423.76
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "vocational",
+          "label": "items[7].at.cue",
+          "scene_time_s": 21.43,
+          "absolute_s": 423.76
+        },
+        {
+          "param": "callouts[4].at.cue",
+          "cue": "vocational",
+          "label": "callouts[4].at.cue",
+          "scene_time_s": 21.43,
+          "absolute_s": 423.76
         }
       ],
       "unresolved_cues": [],
@@ -1420,8 +1911,8 @@
       "id": "p28_person",
       "segment": "m4_person",
       "type": "engine_draw",
-      "start_s": 421.6,
-      "end_s": 438.93,
+      "start_s": 428.33,
+      "end_s": 445.67,
       "duration_s": 17.33,
       "visual_objective": "",
       "narration": "Now do the math. In twenty twenty-five, the island earned about 85 million dollars from the domain. Divide it by about 16,000 people, and it is about 5,300 dollars for every resident, from two letters on a screen.",
@@ -1431,77 +1922,77 @@
           "cue": "Now do the math",
           "label": "enter.at.cue",
           "scene_time_s": 0.05,
-          "absolute_s": 421.65
+          "absolute_s": 428.38
         },
         {
           "param": "draw_start.cue",
           "cue": "In twenty twenty-five",
           "label": "draw_start.cue",
           "scene_time_s": 1.94,
-          "absolute_s": 423.54
+          "absolute_s": 430.27
         },
         {
           "param": "strokes[0].start.cue",
           "cue": "the island earned",
           "label": "strokes[0].start.cue",
           "scene_time_s": 3.36,
-          "absolute_s": 424.96
+          "absolute_s": 431.69
         },
         {
           "param": "strokes[1].start.cue",
           "cue": "from the domain",
           "label": "strokes[1].start.cue",
           "scene_time_s": 6.28,
-          "absolute_s": 427.88
+          "absolute_s": 434.61
         },
         {
           "param": "strokes[2].start.cue",
           "cue": "Divide it",
           "label": "strokes[2].start.cue",
           "scene_time_s": 7.85,
-          "absolute_s": 429.45
+          "absolute_s": 436.18
         },
         {
           "param": "strokes[3].start.cue",
           "cue": "Divide it",
           "label": "strokes[3].start.cue",
           "scene_time_s": 8.45,
-          "absolute_s": 430.05
+          "absolute_s": 436.78
         },
         {
           "param": "strokes[4].start.cue",
           "cue": "for every resident",
           "label": "strokes[4].start.cue",
           "scene_time_s": 13.07,
-          "absolute_s": 434.67
+          "absolute_s": 441.4
         },
         {
           "param": "strokes[5].start.cue",
           "cue": "for every resident",
           "label": "strokes[5].start.cue",
           "scene_time_s": 13.87,
-          "absolute_s": 435.47
+          "absolute_s": 442.2
         },
         {
           "param": "actions[0].at.cue",
           "cue": "for every resident",
           "label": "actions[0].at.cue",
           "scene_time_s": 14.67,
-          "absolute_s": 436.27
+          "absolute_s": 443.0
         },
         {
           "param": "strokes[6].start.cue",
           "cue": "two letters on a screen",
           "label": "strokes[6].start.cue",
           "scene_time_s": 15.63,
-          "absolute_s": 437.23
+          "absolute_s": 443.97
         },
         {
           "param": "actions[1].at.cue",
           "cue": "two letters on a screen",
           "label": "actions[1].at.cue",
           "scene_time_s": 15.63,
-          "absolute_s": 437.23
+          "absolute_s": 443.97
         }
       ],
       "unresolved_cues": [],
@@ -1518,26 +2009,89 @@
       "index": 30,
       "id": "s29_budget",
       "segment": "m4_budget",
-      "type": "compare",
-      "start_s": 438.93,
-      "end_s": 456.17,
+      "type": "engine_cartoon",
+      "start_s": 445.67,
+      "end_s": 462.9,
       "duration_s": 17.23,
-      "visual_objective": "Side-by-side figures count up; bars rise",
+      "visual_objective": "",
       "narration": "For comparison, the whole government of Anguilla plans to collect about 221 million dollars in twenty twenty-six. A big part of that now depends on how many people, all over the world, want a name that ends in dot A I.",
       "keyframes": [
         {
-          "param": "sides[0].cue",
-          "cue": "plans to collect",
-          "label": "converted at EC$2.70 = US$1",
-          "scene_time_s": 3.86,
-          "absolute_s": 442.8
+          "param": "callouts[0].at.cue",
+          "cue": "For comparison",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 446.02
         },
         {
-          "param": "sides[1].cue",
+          "param": "items[0].at.cue",
+          "cue": "plans to collect",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.86,
+          "absolute_s": 449.53
+        },
+        {
+          "param": "items[0].h[1][0].cue",
+          "cue": "plans to collect",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 3.86,
+          "absolute_s": 449.53
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "plans to collect",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 3.86,
+          "absolute_s": 449.53
+        },
+        {
+          "param": "items[0].h[2][0].cue",
+          "cue": "plans to collect",
+          "label": "items[0].h[2][0].cue",
+          "scene_time_s": 6.86,
+          "absolute_s": 452.53
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "A big part",
-          "label": "The Gleaner",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.0,
+          "absolute_s": 454.67
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A big part",
+          "label": "cam[1].at.cue",
           "scene_time_s": 9.3,
-          "absolute_s": 448.23
+          "absolute_s": 454.97
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "A big part",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.3,
+          "absolute_s": 454.97
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "A big part",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 9.3,
+          "absolute_s": 454.97
+        },
+        {
+          "param": "items[1].h[2][0].cue",
+          "cue": "A big part",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 12.3,
+          "absolute_s": 457.97
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "dot A I",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.98,
+          "absolute_s": 461.65
         }
       ],
       "unresolved_cues": [],
@@ -1556,116 +2110,165 @@
       "id": "s30_tourism",
       "segment": "m4_tourism",
       "type": "engine_cartoon",
-      "start_s": 456.17,
-      "end_s": 478.07,
+      "start_s": 462.9,
+      "end_s": 484.8,
       "duration_s": 21.9,
       "visual_objective": "",
       "narration": "For an island like this, that changes everything. Tourism makes up 37 percent of the economy, and it has been hit hard, by a powerful hurricane and then by the pandemic. The domain gives the government a second engine, one that no storm can blow away.",
       "keyframes": [
         {
+          "param": "items[0].at.cue",
+          "cue": "Tourism makes up",
+          "label": "items[0].at.cue",
+          "scene_time_s": 5.02,
+          "absolute_s": 467.92
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Tourism makes up",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.02,
+          "absolute_s": 467.92
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Tourism makes up",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.02,
+          "absolute_s": 467.92
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "Tourism makes up",
           "label": "callouts[0].at.cue",
           "scene_time_s": 5.02,
-          "absolute_s": 461.19
+          "absolute_s": 467.92
         },
         {
-          "param": "actors[1].x[1][0].cue",
-          "cue": "Tourism makes up",
-          "label": "actors[1].x[1][0].cue",
-          "scene_time_s": 8.02,
-          "absolute_s": 464.19
-        },
-        {
-          "param": "actors[0].darkAt.cue",
+          "param": "callouts[0].until.cue",
           "cue": "powerful hurricane",
-          "label": "actors[0].darkAt.cue",
-          "scene_time_s": 11.15,
-          "absolute_s": 467.31
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 10.85,
+          "absolute_s": 473.75
         },
         {
-          "param": "actors[1].x[2][0].cue",
+          "param": "shake[0].at.cue",
           "cue": "powerful hurricane",
-          "label": "actors[1].x[2][0].cue",
+          "label": "shake[0].at.cue",
           "scene_time_s": 11.15,
-          "absolute_s": 467.31
+          "absolute_s": 474.05
         },
         {
-          "param": "actors[2].at.cue",
+          "param": "items[0].until.cue",
           "cue": "powerful hurricane",
-          "label": "actors[2].at.cue",
+          "label": "items[0].until.cue",
           "scene_time_s": 11.15,
-          "absolute_s": 467.31
+          "absolute_s": 474.05
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "powerful hurricane",
+          "label": "items[1].until.cue",
+          "scene_time_s": 11.15,
+          "absolute_s": 474.05
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "powerful hurricane",
+          "label": "items[2].until.cue",
+          "scene_time_s": 11.15,
+          "absolute_s": 474.05
+        },
+        {
+          "param": "items[6].x[1][0].cue",
+          "cue": "powerful hurricane",
+          "label": "items[6].x[1][0].cue",
+          "scene_time_s": 11.15,
+          "absolute_s": 474.05
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "powerful hurricane",
+          "label": "items[6].at.cue",
+          "scene_time_s": 11.15,
+          "absolute_s": 474.05
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "powerful hurricane",
           "label": "callouts[1].at.cue",
           "scene_time_s": 11.15,
-          "absolute_s": 467.31
+          "absolute_s": 474.05
         },
         {
-          "param": "actors[1].x[3][0].cue",
+          "param": "items[3].at.cue",
           "cue": "powerful hurricane",
-          "label": "actors[1].x[3][0].cue",
-          "scene_time_s": 13.15,
-          "absolute_s": 469.31
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.45,
+          "absolute_s": 474.35
         },
         {
-          "param": "actors[2].x[1][0].cue",
+          "param": "items[4].at.cue",
           "cue": "powerful hurricane",
-          "label": "actors[2].x[1][0].cue",
-          "scene_time_s": 13.15,
-          "absolute_s": 469.31
+          "label": "items[4].at.cue",
+          "scene_time_s": 11.45,
+          "absolute_s": 474.35
         },
         {
-          "param": "actors[0].lightAt.cue",
-          "cue": "then by the pandemic",
-          "label": "actors[0].lightAt.cue",
-          "scene_time_s": 14.3,
-          "absolute_s": 470.46
+          "param": "items[5].at.cue",
+          "cue": "powerful hurricane",
+          "label": "items[5].at.cue",
+          "scene_time_s": 11.45,
+          "absolute_s": 474.35
         },
         {
-          "param": "actors[2].until.cue",
-          "cue": "then by the pandemic",
-          "label": "actors[2].until.cue",
-          "scene_time_s": 14.3,
-          "absolute_s": 470.46
+          "param": "items[7].at.cue",
+          "cue": "the pandemic",
+          "label": "items[7].at.cue",
+          "scene_time_s": 13.27,
+          "absolute_s": 476.17
+        },
+        {
+          "param": "items[6].x[2][0].cue",
+          "cue": "powerful hurricane",
+          "label": "items[6].x[2][0].cue",
+          "scene_time_s": 17.15,
+          "absolute_s": 480.05
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "second engine",
+          "label": "items[8].at.cue",
+          "scene_time_s": 17.58,
+          "absolute_s": 480.48
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "second engine",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 17.68,
+          "absolute_s": 480.58
         },
         {
           "param": "cam[1].at.cue",
           "cue": "second engine",
           "label": "cam[1].at.cue",
           "scene_time_s": 17.98,
-          "absolute_s": 474.15
-        },
-        {
-          "param": "actors[3].at.cue",
-          "cue": "second engine",
-          "label": "actors[3].at.cue",
-          "scene_time_s": 17.98,
-          "absolute_s": 474.15
-        },
-        {
-          "param": "cables[0].lightAt.cue",
-          "cue": "second engine",
-          "label": "cables[0].lightAt.cue",
-          "scene_time_s": 17.98,
-          "absolute_s": 474.15
-        },
-        {
-          "param": "callouts[1].until.cue",
-          "cue": "second engine",
-          "label": "callouts[1].until.cue",
-          "scene_time_s": 17.98,
-          "absolute_s": 474.15
+          "absolute_s": 480.88
         },
         {
           "param": "callouts[2].at.cue",
           "cue": "second engine",
           "label": "callouts[2].at.cue",
           "scene_time_s": 17.98,
-          "absolute_s": 474.15
+          "absolute_s": 480.88
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "no storm",
+          "label": "items[9].at.cue",
+          "scene_time_s": 19.82,
+          "absolute_s": 482.72
         }
       ],
       "unresolved_cues": [],
@@ -1683,8 +2286,8 @@
       "id": "s31_t4",
       "segment": "m4_transition",
       "type": "kinetic_text",
-      "start_s": 478.07,
-      "end_s": 485.0,
+      "start_s": 484.8,
+      "end_s": 491.73,
       "duration_s": 6.93,
       "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
       "narration": "But money that falls from the sky can also stop falling. Can it last?",
@@ -1694,14 +2297,14 @@
           "cue": "But money",
           "label": "Money that falls from the sky",
           "scene_time_s": 0.35,
-          "absolute_s": 478.42
+          "absolute_s": 485.15
         },
         {
           "param": "lines[1].cue",
           "cue": "stop falling",
           "label": "can stop falling",
           "scene_time_s": 3.78,
-          "absolute_s": 481.84
+          "absolute_s": 488.58
         }
       ],
       "unresolved_cues": [],
@@ -1716,8 +2319,8 @@
       "id": "s32_c5",
       "segment": "m5_card",
       "type": "act_title",
-      "start_s": 485.0,
-      "end_s": 490.4,
+      "start_s": 491.73,
+      "end_s": 497.13,
       "duration_s": 5.4,
       "visual_objective": "Chapter card: masked title reveal, gold rule draws",
       "narration": "",
@@ -1734,9 +2337,9 @@
       "id": "s33_q5",
       "segment": "m5_question",
       "type": "engine_cartoon",
-      "start_s": 490.4,
-      "end_s": 498.7,
-      "duration_s": 8.3,
+      "start_s": 497.13,
+      "end_s": 506.13,
+      "duration_s": 9.0,
       "visual_objective": "",
       "narration": "What happens to Anguilla if the AI boom cools down? Its own leaders have asked the same question.",
       "keyframes": [
@@ -1745,7 +2348,21 @@
           "cue": "What happens",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 490.75
+          "absolute_s": 497.48
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "cools down",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.87,
+          "absolute_s": 501.0
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Its own leaders",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.2,
+          "absolute_s": 502.33
         }
       ],
       "unresolved_cues": [],
@@ -1760,8 +2377,8 @@
       "id": "s34_quote",
       "segment": "m5_quote",
       "type": "kinetic_text",
-      "start_s": 498.7,
-      "end_s": 518.73,
+      "start_s": 506.13,
+      "end_s": 526.17,
       "duration_s": 20.03,
       "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
       "narration": "In twenty twenty-four, the island's premier said: \"You can't predict how long this is going to last.\" And, \"we can't rely on it solely.\" At the time, the government expected the domain to settle at around 15 percent of its revenue. Instead, it shot far higher.",
@@ -1771,28 +2388,28 @@
           "cue": "You can't predict",
           "label": "“You can't predict how long this",
           "scene_time_s": 3.86,
-          "absolute_s": 502.56
+          "absolute_s": 509.99
         },
         {
           "param": "lines[1].cue",
           "cue": "going to last",
           "label": "is going to last.”",
           "scene_time_s": 5.85,
-          "absolute_s": 504.55
+          "absolute_s": 511.99
         },
         {
           "param": "lines[2].cue",
           "cue": "we can't rely",
           "label": "Premier Ellis Webster, 2024 (AP)",
           "scene_time_s": 7.07,
-          "absolute_s": 505.77
+          "absolute_s": 513.21
         },
         {
           "param": "lines[3].cue",
           "cue": "shot far higher",
           "label": "Expected ≈ ≈ 15% of revenue → actual 47.5% (Jan–Jul 2026)",
           "scene_time_s": 18.3,
-          "absolute_s": 517.0
+          "absolute_s": 524.44
         }
       ],
       "unresolved_cues": [],
@@ -1807,8 +2424,8 @@
       "id": "s35_renew",
       "segment": "m5_renewals",
       "type": "engine_cartoon",
-      "start_s": 518.73,
-      "end_s": 535.77,
+      "start_s": 526.17,
+      "end_s": 543.2,
       "duration_s": 17.03,
       "visual_objective": "",
       "narration": "The real test is renewals. Many names were bought in the rush. If AI start-ups close, or the hype fades, owners stop renewing, and the money shrinks two years later. The boom could turn into a slow leak.",
@@ -1818,42 +2435,91 @@
           "cue": "real test",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.68,
-          "absolute_s": 519.41
+          "absolute_s": 526.84
         },
         {
-          "param": "actors[3].until.cue",
-          "cue": "hype fades",
-          "label": "actors[3].until.cue",
-          "scene_time_s": 7.88,
-          "absolute_s": 526.62
+          "param": "items[1].at.cue",
+          "cue": "bought in the rush",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.25,
+          "absolute_s": 530.41
         },
         {
-          "param": "actors[4].at.cue",
-          "cue": "hype fades",
-          "label": "actors[4].at.cue",
-          "scene_time_s": 8.88,
-          "absolute_s": 527.62
+          "param": "items[2].at.cue",
+          "cue": "bought in the rush",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.65,
+          "absolute_s": 530.81
         },
         {
-          "param": "coasts.darkAt.cue",
-          "cue": "owners stop renewing",
-          "label": "coasts.darkAt.cue",
+          "param": "items[4].at.cue",
+          "cue": "If AI",
+          "label": "items[4].at.cue",
+          "scene_time_s": 5.78,
+          "absolute_s": 531.95
+        },
+        {
+          "param": "items[2].pages[1][0].cue",
+          "cue": "the hype fades",
+          "label": "items[2].pages[1][0].cue",
+          "scene_time_s": 7.62,
+          "absolute_s": 533.78
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "owners stop",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.62,
+          "absolute_s": 534.79
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "owners stop",
+          "label": "cam[1].at.cue",
           "scene_time_s": 8.92,
-          "absolute_s": 527.66
+          "absolute_s": 535.09
+        },
+        {
+          "param": "items[0].stopAt.cue",
+          "cue": "owners stop",
+          "label": "items[0].stopAt.cue",
+          "scene_time_s": 8.92,
+          "absolute_s": 535.09
+        },
+        {
+          "param": "items[1].pages[1][0].cue",
+          "cue": "owners stop",
+          "label": "items[1].pages[1][0].cue",
+          "scene_time_s": 8.92,
+          "absolute_s": 535.09
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "owners stop",
           "label": "callouts[1].at.cue",
           "scene_time_s": 8.92,
-          "absolute_s": 527.66
+          "absolute_s": 535.09
+        },
+        {
+          "param": "items[3].until.cue",
+          "cue": "money shrinks",
+          "label": "items[3].until.cue",
+          "scene_time_s": 11.29,
+          "absolute_s": 537.46
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "slow leak",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 15.59,
+          "absolute_s": 541.76
         },
         {
           "param": "callouts[2].at.cue",
           "cue": "slow leak",
           "label": "callouts[2].at.cue",
           "scene_time_s": 15.89,
-          "absolute_s": 534.63
+          "absolute_s": 542.06
         }
       ],
       "unresolved_cues": [],
@@ -1868,88 +2534,102 @@
       "id": "s36_tv",
       "segment": "m5_tv",
       "type": "engine_cartoon",
-      "start_s": 535.77,
-      "end_s": 555.3,
+      "start_s": 543.2,
+      "end_s": 562.73,
       "duration_s": 19.53,
       "visual_objective": "",
       "narration": "There is a warning from the other side of the world. Tuvalu, in the Pacific, owns dot T V. It became a hit with video sites, including the streaming platform Twitch. At its peak it had more than 500,000 names. Today, it is in decline.",
       "keyframes": [
         {
+          "param": "items[0].at.cue",
+          "cue": "Tuvalu",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.67,
+          "absolute_s": 546.87
+        },
+        {
           "param": "callouts[0].at.cue",
           "cue": "Tuvalu",
           "label": "callouts[0].at.cue",
           "scene_time_s": 3.67,
-          "absolute_s": 539.44
+          "absolute_s": 546.87
         },
         {
-          "param": "actors[1].at.cue",
-          "cue": "owns dot T V",
-          "label": "actors[1].at.cue",
-          "scene_time_s": 6.17,
-          "absolute_s": 541.94
+          "param": "items[1].at.cue",
+          "cue": "dot T V",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.42,
+          "absolute_s": 549.62
         },
         {
-          "param": "cam[1].at.cue",
+          "param": "items[2].at.cue",
           "cue": "video sites",
-          "label": "cam[1].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 9.03,
-          "absolute_s": 544.8
-        },
-        {
-          "param": "actors[4].at.cue",
-          "cue": "video sites",
-          "label": "actors[4].at.cue",
-          "scene_time_s": 9.03,
-          "absolute_s": 544.8
+          "absolute_s": 552.23
         },
         {
           "param": "callouts[0].until.cue",
-          "cue": "video sites",
+          "cue": "Twitch",
           "label": "callouts[0].until.cue",
-          "scene_time_s": 9.03,
-          "absolute_s": 544.8
+          "scene_time_s": 11.55,
+          "absolute_s": 554.75
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "Twitch",
           "label": "callouts[1].at.cue",
           "scene_time_s": 11.85,
-          "absolute_s": 547.62
+          "absolute_s": 555.05
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "At its peak",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 12.55,
+          "absolute_s": 555.75
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "At its peak",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.85,
+          "absolute_s": 556.05
         },
         {
           "param": "callouts[2].at.cue",
           "cue": "At its peak",
           "label": "callouts[2].at.cue",
           "scene_time_s": 12.85,
-          "absolute_s": 548.62
+          "absolute_s": 556.05
         },
         {
-          "param": "actors[4].until.cue",
-          "cue": "Today",
-          "label": "actors[4].until.cue",
-          "scene_time_s": 16.95,
-          "absolute_s": 552.72
-        },
-        {
-          "param": "actors[5].at.cue",
-          "cue": "Today",
-          "label": "actors[5].at.cue",
-          "scene_time_s": 17.45,
-          "absolute_s": 553.22
-        },
-        {
-          "param": "cam[2].at.cue",
+          "param": "callouts[2].until.cue",
           "cue": "in decline",
-          "label": "cam[2].at.cue",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 17.95,
+          "absolute_s": 561.15
+        },
+        {
+          "param": "items[1].redAt.cue",
+          "cue": "in decline",
+          "label": "items[1].redAt.cue",
           "scene_time_s": 18.25,
-          "absolute_s": 554.02
+          "absolute_s": 561.45
+        },
+        {
+          "param": "items[2].crashAt.cue",
+          "cue": "in decline",
+          "label": "items[2].crashAt.cue",
+          "scene_time_s": 18.25,
+          "absolute_s": 561.45
         },
         {
           "param": "callouts[3].at.cue",
           "cue": "in decline",
           "label": "callouts[3].at.cue",
           "scene_time_s": 18.25,
-          "absolute_s": 554.02
+          "absolute_s": 561.45
         }
       ],
       "unresolved_cues": [],
@@ -1967,8 +2647,8 @@
       "id": "s37_io",
       "segment": "m5_io",
       "type": "engine_map",
-      "start_s": 555.3,
-      "end_s": 572.63,
+      "start_s": 562.73,
+      "end_s": 580.07,
       "duration_s": 17.33,
       "visual_objective": "",
       "narration": "And dot I O, loved by tech start-ups, belongs to the British Indian Ocean Territory, a group of islands that is being transferred to Mauritius. Lucky letters can change hands, and fashions can change.",
@@ -1978,35 +2658,35 @@
           "cue": "belongs to",
           "label": "hubs[0].time.cue",
           "scene_time_s": 3.56,
-          "absolute_s": 558.86
+          "absolute_s": 566.29
         },
         {
           "param": "cameras[1].at.cue",
           "cue": "British Indian",
           "label": "cameras[1].at.cue",
           "scene_time_s": 4.64,
-          "absolute_s": 559.94
+          "absolute_s": 567.38
         },
         {
           "param": "highlights[0].at.cue",
           "cue": "Mauritius",
           "label": "highlights[0].at.cue",
           "scene_time_s": 10.87,
-          "absolute_s": 566.16
+          "absolute_s": 573.6
         },
         {
           "param": "hubs[1].time.cue",
           "cue": "Mauritius",
           "label": "hubs[1].time.cue",
           "scene_time_s": 10.87,
-          "absolute_s": 566.16
+          "absolute_s": 573.6
         },
         {
           "param": "routes[0].at.cue",
           "cue": "Mauritius",
           "label": "routes[0].at.cue",
           "scene_time_s": 11.17,
-          "absolute_s": 566.46
+          "absolute_s": 573.9
         }
       ],
       "unresolved_cues": [],
@@ -2025,39 +2705,53 @@
       "id": "s38_save",
       "segment": "m5_save",
       "type": "engine_cartoon",
-      "start_s": 572.63,
-      "end_s": 589.73,
+      "start_s": 580.07,
+      "end_s": 597.17,
       "duration_s": 17.1,
       "visual_objective": "",
       "narration": "So far, Anguilla is saving part of it. In twenty twenty-five, the government ended the year with a surplus of about 32 million dollars, largely thanks to the domain. And it has used dot A I money to cut its debt.",
       "keyframes": [
         {
-          "param": "actors[1].at.cue",
-          "cue": "saving part",
-          "label": "actors[1].at.cue",
-          "scene_time_s": 2.03,
-          "absolute_s": 574.66
-        },
-        {
-          "param": "actors[2].at.cue",
-          "cue": "saving part",
-          "label": "actors[2].at.cue",
-          "scene_time_s": 2.03,
-          "absolute_s": 574.66
-        },
-        {
           "param": "callouts[0].at.cue",
           "cue": "surplus",
           "label": "callouts[0].at.cue",
           "scene_time_s": 7.77,
-          "absolute_s": 580.4
+          "absolute_s": 587.84
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "cut its debt",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.59,
+          "absolute_s": 595.66
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "cut its debt",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.89,
+          "absolute_s": 595.96
+        },
+        {
+          "param": "items[2].h[1][0].cue",
+          "cue": "cut its debt",
+          "label": "items[2].h[1][0].cue",
+          "scene_time_s": 15.89,
+          "absolute_s": 595.96
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "cut its debt",
           "label": "callouts[1].at.cue",
           "scene_time_s": 15.89,
-          "absolute_s": 588.52
+          "absolute_s": 595.96
+        },
+        {
+          "param": "items[2].h[2][0].cue",
+          "cue": "cut its debt",
+          "label": "items[2].h[2][0].cue",
+          "scene_time_s": 18.89,
+          "absolute_s": 598.96
         }
       ],
       "unresolved_cues": [],
@@ -2075,8 +2769,8 @@
       "id": "p39_choice",
       "segment": "m5_draw",
       "type": "engine_draw",
-      "start_s": 589.73,
-      "end_s": 608.8,
+      "start_s": 597.17,
+      "end_s": 616.23,
       "duration_s": 19.07,
       "visual_objective": "",
       "narration": "Let me draw the choice Anguilla faces. On one side, spend the windfall as if it will last forever. On the other, save part of it and invest in things that will still matter when the hype is over: an airport, roads, health care, and a cushion for the next storm.",
@@ -2086,70 +2780,70 @@
           "cue": "Let me draw",
           "label": "enter.at.cue",
           "scene_time_s": 0.05,
-          "absolute_s": 589.78
+          "absolute_s": 597.22
         },
         {
           "param": "strokes[0].start.cue",
           "cue": "the choice",
           "label": "strokes[0].start.cue",
           "scene_time_s": 1.13,
-          "absolute_s": 590.86
+          "absolute_s": 598.3
         },
         {
           "param": "draw_start.cue",
           "cue": "On one side",
           "label": "draw_start.cue",
           "scene_time_s": 3.53,
-          "absolute_s": 593.26
+          "absolute_s": 600.7
         },
         {
           "param": "strokes[1].start.cue",
           "cue": "On one side",
           "label": "strokes[1].start.cue",
           "scene_time_s": 3.53,
-          "absolute_s": 593.26
+          "absolute_s": 600.7
         },
         {
           "param": "actions[0].at.cue",
           "cue": "On one side",
           "label": "actions[0].at.cue",
           "scene_time_s": 3.83,
-          "absolute_s": 593.56
+          "absolute_s": 601.0
         },
         {
           "param": "strokes[2].start.cue",
           "cue": "spend the windfall",
           "label": "strokes[2].start.cue",
           "scene_time_s": 4.46,
-          "absolute_s": 594.19
+          "absolute_s": 601.62
         },
         {
           "param": "strokes[3].start.cue",
           "cue": "On the",
           "label": "strokes[3].start.cue",
           "scene_time_s": 7.94,
-          "absolute_s": 597.67
+          "absolute_s": 605.11
         },
         {
           "param": "strokes[4].start.cue",
           "cue": "save part",
           "label": "strokes[4].start.cue",
           "scene_time_s": 9.16,
-          "absolute_s": 598.89
+          "absolute_s": 606.32
         },
         {
           "param": "strokes[5].start.cue",
           "cue": "airport, roads",
           "label": "strokes[5].start.cue",
           "scene_time_s": 14.67,
-          "absolute_s": 604.4
+          "absolute_s": 611.83
         },
         {
           "param": "actions[1].at.cue",
           "cue": "a cushion",
           "label": "actions[1].at.cue",
           "scene_time_s": 17.03,
-          "absolute_s": 606.76
+          "absolute_s": 614.19
         }
       ],
       "unresolved_cues": [],
@@ -2164,102 +2858,144 @@
       "id": "s40_payoff",
       "segment": "payoff",
       "type": "engine_cartoon",
-      "start_s": 608.8,
-      "end_s": 649.13,
+      "start_s": 616.23,
+      "end_s": 656.57,
       "duration_s": 40.33,
       "visual_objective": "",
       "narration": "So, Anguilla didn't invent artificial intelligence. It didn't build a single data center. It simply owned the right two letters at the right moment in history. And every time someone, somewhere, names a new AI company, a little piece of that idea travels across the ocean, to a small island in the Caribbean. The lesson is not only about luck. It is about what you do when luck arrives: spend it, or turn it into something that lasts. From an improvised registry run by one software developer to more than a million names, it is one of the strangest windfalls in the world economy.",
       "keyframes": [
         {
-          "param": "callouts[0].at.cue",
+          "param": "items[0].at.cue",
           "cue": "didn't invent",
-          "label": "callouts[0].at.cue",
+          "label": "items[0].at.cue",
           "scene_time_s": 1.41,
-          "absolute_s": 610.21
+          "absolute_s": 617.64
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "items[1].at.cue",
           "cue": "data center",
-          "label": "callouts[1].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 5.5,
-          "absolute_s": 614.3
+          "absolute_s": 621.73
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[2].at.cue",
           "cue": "right two letters",
-          "label": "callouts[2].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 8.2,
-          "absolute_s": 617.0
+          "absolute_s": 624.44
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "right two letters",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 8.2,
+          "absolute_s": 624.44
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "every time someone",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.76,
+          "absolute_s": 627.99
         },
         {
           "param": "cam[1].at.cue",
           "cue": "every time someone",
           "label": "cam[1].at.cue",
           "scene_time_s": 12.06,
-          "absolute_s": 620.86
+          "absolute_s": 628.29
         },
         {
-          "param": "actors[4].at.cue",
+          "param": "items[0].until.cue",
           "cue": "every time someone",
-          "label": "actors[4].at.cue",
+          "label": "items[0].until.cue",
           "scene_time_s": 12.06,
-          "absolute_s": 620.86
+          "absolute_s": 628.29
         },
         {
-          "param": "cables[0].lightAt.cue",
+          "param": "items[1].until.cue",
           "cue": "every time someone",
-          "label": "cables[0].lightAt.cue",
+          "label": "items[1].until.cue",
           "scene_time_s": 12.06,
-          "absolute_s": 620.86
+          "absolute_s": 628.29
         },
         {
-          "param": "callouts[0].until.cue",
+          "param": "items[3].at.cue",
           "cue": "every time someone",
-          "label": "callouts[0].until.cue",
+          "label": "items[3].at.cue",
           "scene_time_s": 12.06,
-          "absolute_s": 620.86
+          "absolute_s": 628.29
         },
         {
-          "param": "callouts[1].until.cue",
-          "cue": "every time someone",
-          "label": "callouts[1].until.cue",
-          "scene_time_s": 12.06,
-          "absolute_s": 620.86
-        },
-        {
-          "param": "callouts[2].until.cue",
-          "cue": "every time someone",
-          "label": "callouts[2].until.cue",
-          "scene_time_s": 12.06,
-          "absolute_s": 620.86
+          "param": "items[3].typeAt.cue",
+          "cue": "names a new",
+          "label": "items[3].typeAt.cue",
+          "scene_time_s": 14.22,
+          "absolute_s": 630.46
         },
         {
           "param": "cam[2].at.cue",
           "cue": "travels across",
           "label": "cam[2].at.cue",
           "scene_time_s": 17.61,
-          "absolute_s": 626.41
+          "absolute_s": 633.85
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "travels across",
+          "label": "items[4].at.cue",
+          "scene_time_s": 17.61,
+          "absolute_s": 633.85
         },
         {
           "param": "cam[3].at.cue",
           "cue": "The lesson",
           "label": "cam[3].at.cue",
           "scene_time_s": 22.49,
-          "absolute_s": 631.29
+          "absolute_s": 638.72
         },
         {
-          "param": "actors[5].at.cue",
-          "cue": "The lesson",
-          "label": "actors[5].at.cue",
-          "scene_time_s": 22.49,
-          "absolute_s": 631.29
-        },
-        {
-          "param": "callouts[3].at.cue",
+          "param": "items[5].at.cue",
           "cue": "spend it",
-          "label": "callouts[3].at.cue",
+          "label": "items[5].at.cue",
           "scene_time_s": 27.79,
-          "absolute_s": 636.59
+          "absolute_s": 644.03
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "spend it",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 27.79,
+          "absolute_s": 644.03
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "spend it",
+          "label": "items[6].at.cue",
+          "scene_time_s": 28.19,
+          "absolute_s": 644.43
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "more than a million",
+          "label": "items[7].at.cue",
+          "scene_time_s": 35.09,
+          "absolute_s": 651.32
+        },
+        {
+          "param": "items[7].steps[1][0].cue",
+          "cue": "more than a million",
+          "label": "items[7].steps[1][0].cue",
+          "scene_time_s": 35.09,
+          "absolute_s": 651.32
+        },
+        {
+          "param": "items[7].steps[2][0].cue",
+          "cue": "more than a million",
+          "label": "items[7].steps[2][0].cue",
+          "scene_time_s": 37.59,
+          "absolute_s": 653.82
         }
       ],
       "unresolved_cues": [],
@@ -2276,8 +3012,8 @@
       "id": "s41_end",
       "segment": "teaser",
       "type": "end_card",
-      "start_s": 649.13,
-      "end_s": 661.57,
+      "start_s": 656.57,
+      "end_s": 669.0,
       "duration_s": 12.43,
       "visual_objective": "Closing words land; brand line draws",
       "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
@@ -2287,7 +3023,7 @@
           "cue": "This is The Hidden Economics",
           "label": "brand_cue.cue",
           "scene_time_s": 9.54,
-          "absolute_s": 658.67
+          "absolute_s": 666.11
         },
         {
           "param": "brand_cue",
