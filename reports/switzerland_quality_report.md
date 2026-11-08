@@ -7,7 +7,7 @@
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
 | Duration 10-12 min | FAIL | 724.63 s (12:04) |
-| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
+| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 329 cues; median cue-start offset 0.08 s, p90 0.40 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
@@ -24,13 +24,12 @@
 - Runtime: **724.63 s**
 - Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 218.3 MB
 - Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
-- Errors: **1**, warnings: **27**
-- Technical QC passed: **False**
+- Errors: **0**, warnings: **27**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [ERROR] (timing) Runtime 724.6s outside target 480-720s
 - [WARNING] (timing) Segment stab_timeline pace 113 wpm (numerals count as one word)
 - [WARNING] (timing) Segment money_1934 pace 116 wpm (numerals count as one word)
 - [WARNING] (timing) Segment spec_ring pace 119 wpm (numerals count as one word)
