@@ -17,10 +17,10 @@ Total 11:34 (694.5 s), 41 scenes. Timestamps come from the narration timing of t
 | 11 | 2:20 | 10.0s | `s10_q2` | engine_cartoon |  | Why can't every country just build its own chip factories? If they could, Taiwan would not... | - |
 | 12 | 2:30 | 22.0s | `p11_process` | engine_draw |  | Let me draw what it takes. First, engineers design the chip, billions of tiny switches. Th... | - |
 | 13 | 2:52 | 19.1s | `s12_euv` | engine_cartoon |  | Here is the first obstacle. To print the smallest features, a fab needs extreme ultraviole... | asml_euv, asml_2025 |
-| 14 | 3:11 | 29.7s | `s13_yield` | engine_draw |  | And owning the machines is not enough. The real secret is yield, the share of chips on eac... | - |
-| 15 | 3:41 | 22.6s | `s14_capex` | compare | Side-by-side figures count up; bars rise | Then there is the money. TSMC planned to spend more than 50 billion dollars on factories a... | tsmc_4q25_call, sia_bcg_2024 |
+| 14 | 3:11 | 29.7s | `s13_yield` | engine_cartoon |  | And owning the machines is not enough. The real secret is yield, the share of chips on eac... | - |
+| 15 | 3:41 | 22.6s | `s14_capex` | engine_cartoon |  | Then there is the money. TSMC planned to spend more than 50 billion dollars on factories a... | tsmc_4q25_call, sia_bcg_2024 |
 | 16 | 4:03 | 24.4s | `s15_capacity` | engine_chart |  | Taiwan does not make most of the world's chips. In twenty twenty-two it had 18 percent of ... | sia_bcg_2024 |
-| 17 | 4:28 | 22.8s | `s16_layers` | compare | Side-by-side figures count up; bars rise | And chips are not one market. Memory is a different game, led by South Korea, which had ab... | sia_bcg_2024 |
+| 17 | 4:28 | 22.8s | `s16_layers` | engine_cartoon |  | And chips are not one market. Memory is a different game, led by South Korea, which had ab... | sia_bcg_2024 |
 | 18 | 4:51 | 5.5s | `s17_t2` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | Which raises the next question. Who depends on that top? | - |
 | 19 | 4:56 | 5.4s | `s18_c3` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
 | 20 | 5:01 | 10.4s | `s19_q3` | engine_cartoon |  | So who actually depends on Taiwan? It matters because dependence is where economic power, ... | - |
@@ -28,7 +28,7 @@ Total 11:34 (694.5 s), 41 scenes. Timestamps come from the narration timing of t
 | 22 | 5:34 | 33.4s | `s21_customers` | engine_chart |  | How concentrated is it? In twenty twenty-five, TSMC's largest customer alone made up 19 pe... | tsmc_customers_2025 |
 | 23 | 6:08 | 25.9s | `s22_network` | engine_cartoon |  | Now follow the chips further. Cloud companies in the United States, Europe and Asia fill t... | taiwan_exports_2025 |
 | 24 | 6:34 | 17.5s | `s23_designers` | engine_flow |  | Here is the key distinction. Companies that design chips depend on the companies that make... | - |
-| 25 | 6:51 | 24.5s | `s24_unequal` | compare | Side-by-side figures count up; bars rise | But not every industry depends on Taiwan equally. A cutting-edge AI chip or a new phone pr... | - |
+| 25 | 6:51 | 24.5s | `s24_unequal` | engine_cartoon |  | But not every industry depends on Taiwan equally. A cutting-edge AI chip or a new phone pr... | - |
 | 26 | 7:16 | 6.1s | `s25_t3` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | So what would happen if the flow of chips from Taiwan were suddenly interrupted? | - |
 | 27 | 7:22 | 5.4s | `s26_c4` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |
 | 28 | 7:27 | 12.5s | `s27_q4` | engine_cartoon |  | Here is a thought experiment. What if chip shipments from Taiwan were seriously disrupted?... | - |

@@ -14,11 +14,32 @@
       "narration": "What if one of the world's most important industries depended on an island smaller than Switzerland?",
       "keyframes": [
         {
-          "param": "actors[4].at.cue",
+          "param": "items[2].at.cue",
           "cue": "most important",
-          "label": "actors[4].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 1.97,
           "absolute_s": 1.97
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "most important",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.97,
+          "absolute_s": 1.97
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "most important",
+          "label": "items[3].at.cue",
+          "scene_time_s": 2.27,
+          "absolute_s": 2.27
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "most important",
+          "label": "items[4].at.cue",
+          "scene_time_s": 2.57,
+          "absolute_s": 2.57
         },
         {
           "param": "cam[1].at.cue",
@@ -28,11 +49,39 @@
           "absolute_s": 3.86
         },
         {
-          "param": "callouts[0].at.cue",
+          "param": "items[1].x[1][0].cue",
+          "cue": "depended on",
+          "label": "items[1].x[1][0].cue",
+          "scene_time_s": 3.86,
+          "absolute_s": 3.86
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "smaller than Switzerland",
-          "label": "callouts[0].at.cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 5.45,
+          "absolute_s": 5.45
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "smaller than Switzerland",
+          "label": "callouts[1].at.cue",
           "scene_time_s": 5.75,
           "absolute_s": 5.75
+        },
+        {
+          "param": "items[1].x[2][0].cue",
+          "cue": "depended on",
+          "label": "items[1].x[2][0].cue",
+          "scene_time_s": 9.86,
+          "absolute_s": 9.86
+        },
+        {
+          "param": "items[1].y[1][0].cue",
+          "cue": "depended on",
+          "label": "items[1].y[1][0].cue",
+          "scene_time_s": 9.86,
+          "absolute_s": 9.86
         }
       ],
       "unresolved_cues": [],
@@ -164,16 +213,16 @@
           "absolute_s": 30.1
         },
         {
-          "param": "actors[1].at.cue",
-          "cue": "center of chipmaking",
-          "label": "actors[1].at.cue",
-          "scene_time_s": 3.38,
-          "absolute_s": 31.91
+          "param": "cam[1].at.cue",
+          "cue": "runs on chips",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.01,
+          "absolute_s": 38.55
         },
         {
-          "param": "actors[2].at.cue",
+          "param": "items[4].at.cue",
           "cue": "runs on chips",
-          "label": "actors[2].at.cue",
+          "label": "items[4].at.cue",
           "scene_time_s": 10.01,
           "absolute_s": 38.55
         },
@@ -183,6 +232,27 @@
           "label": "callouts[1].at.cue",
           "scene_time_s": 10.01,
           "absolute_s": 38.55
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "runs on chips",
+          "label": "items[5].at.cue",
+          "scene_time_s": 10.31,
+          "absolute_s": 38.85
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "someone has to",
+          "label": "items[6].at.cue",
+          "scene_time_s": 11.43,
+          "absolute_s": 39.97
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "someone has to",
+          "label": "items[7].at.cue",
+          "scene_time_s": 11.73,
+          "absolute_s": 40.27
         }
       ],
       "unresolved_cues": [],
@@ -418,9 +488,9 @@
       "narration": "Why can't every country just build its own chip factories? If they could, Taiwan would not be special at all.",
       "keyframes": [
         {
-          "param": "actors[0].at.cue",
+          "param": "items[0].at.cue",
           "cue": "build its own",
-          "label": "actors[0].at.cue",
+          "label": "items[0].at.cue",
           "scene_time_s": 2.75,
           "absolute_s": 142.84
         },
@@ -432,11 +502,25 @@
           "absolute_s": 142.84
         },
         {
-          "param": "actors[1].at.cue",
+          "param": "items[1].at.cue",
           "cue": "build its own",
-          "label": "actors[1].at.cue",
-          "scene_time_s": 3.15,
-          "absolute_s": 143.25
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.35,
+          "absolute_s": 143.44
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "not be special",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 7.41,
+          "absolute_s": 147.51
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "not be special",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.71,
+          "absolute_s": 147.81
         },
         {
           "param": "callouts[1].at.cue",
@@ -568,18 +652,46 @@
       "narration": "Here is the first obstacle. To print the smallest features, a fab needs extreme ultraviolet lithography machines. Only one company in the world makes them, the Dutch firm A S M L. In twenty twenty-five, it shipped 48 of them.",
       "keyframes": [
         {
+          "param": "items[0].fireAt.cue",
+          "cue": "smallest features",
+          "label": "items[0].fireAt.cue",
+          "scene_time_s": 3.71,
+          "absolute_s": 175.78
+        },
+        {
           "param": "callouts[0].at.cue",
-          "cue": "Only one company",
+          "cue": "smallest features",
           "label": "callouts[0].at.cue",
+          "scene_time_s": 3.71,
+          "absolute_s": 175.78
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Only one company",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.18,
+          "absolute_s": 181.25
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Only one company",
+          "label": "cam[1].at.cue",
           "scene_time_s": 9.48,
           "absolute_s": 181.55
         },
         {
-          "param": "cam[1].at.cue",
-          "cue": "In twenty twenty-five",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 15.39,
-          "absolute_s": 187.46
+          "param": "items[1].at.cue",
+          "cue": "Only one company",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.48,
+          "absolute_s": 181.55
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "it shipped",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.84,
+          "absolute_s": 188.9
         },
         {
           "param": "callouts[1].at.cue",
@@ -603,7 +715,7 @@
       "index": 14,
       "id": "s13_yield",
       "segment": "m2_yield",
-      "type": "engine_draw",
+      "type": "engine_cartoon",
       "start_s": 191.13,
       "end_s": 220.8,
       "duration_s": 29.67,
@@ -611,242 +723,67 @@
       "narration": "And owning the machines is not enough. The real secret is yield, the share of chips on each wafer that actually work. Raising yield takes years of practice, thousands of engineers, and endless learning from mistakes. A brand-new factory, even with the very same machines, can take a long time to match the yields of an experienced one. That know-how is hard to buy, and even harder to copy.",
       "keyframes": [
         {
-          "param": "draw_start.cue",
+          "param": "callouts[0].at.cue",
           "cue": "The real secret",
-          "label": "draw_start.cue",
+          "label": "callouts[0].at.cue",
           "scene_time_s": 3.76,
           "absolute_s": 194.89
         },
         {
-          "param": "strokes[0].start.cue",
-          "cue": "The real secret",
-          "label": "strokes[0].start.cue",
-          "scene_time_s": 3.76,
-          "absolute_s": 194.89
-        },
-        {
-          "param": "strokes[1].start.cue",
+          "param": "items[0].revealAt.cue",
           "cue": "actually work",
-          "label": "strokes[1].start.cue",
+          "label": "items[0].revealAt.cue",
           "scene_time_s": 8.09,
           "absolute_s": 199.22
         },
         {
-          "param": "strokes[2].start.cue",
-          "cue": "actually work",
-          "label": "strokes[2].start.cue",
-          "scene_time_s": 8.14,
-          "absolute_s": 199.27
-        },
-        {
-          "param": "strokes[3].start.cue",
-          "cue": "actually work",
-          "label": "strokes[3].start.cue",
-          "scene_time_s": 8.19,
-          "absolute_s": 199.32
-        },
-        {
-          "param": "strokes[4].start.cue",
-          "cue": "actually work",
-          "label": "strokes[4].start.cue",
-          "scene_time_s": 8.24,
-          "absolute_s": 199.37
-        },
-        {
-          "param": "strokes[5].start.cue",
-          "cue": "actually work",
-          "label": "strokes[5].start.cue",
-          "scene_time_s": 8.29,
-          "absolute_s": 199.42
-        },
-        {
-          "param": "strokes[6].start.cue",
-          "cue": "actually work",
-          "label": "strokes[6].start.cue",
-          "scene_time_s": 8.34,
-          "absolute_s": 199.47
-        },
-        {
-          "param": "strokes[7].start.cue",
-          "cue": "actually work",
-          "label": "strokes[7].start.cue",
-          "scene_time_s": 8.39,
-          "absolute_s": 199.52
-        },
-        {
-          "param": "strokes[8].start.cue",
-          "cue": "actually work",
-          "label": "strokes[8].start.cue",
-          "scene_time_s": 8.44,
-          "absolute_s": 199.57
-        },
-        {
-          "param": "strokes[9].start.cue",
-          "cue": "actually work",
-          "label": "strokes[9].start.cue",
-          "scene_time_s": 8.49,
-          "absolute_s": 199.62
-        },
-        {
-          "param": "strokes[10].start.cue",
-          "cue": "actually work",
-          "label": "strokes[10].start.cue",
-          "scene_time_s": 8.54,
-          "absolute_s": 199.67
-        },
-        {
-          "param": "strokes[11].start.cue",
-          "cue": "actually work",
-          "label": "strokes[11].start.cue",
-          "scene_time_s": 8.59,
-          "absolute_s": 199.72
-        },
-        {
-          "param": "strokes[12].start.cue",
-          "cue": "actually work",
-          "label": "strokes[12].start.cue",
-          "scene_time_s": 8.64,
-          "absolute_s": 199.77
-        },
-        {
-          "param": "strokes[13].start.cue",
-          "cue": "actually work",
-          "label": "strokes[13].start.cue",
-          "scene_time_s": 8.69,
-          "absolute_s": 199.82
-        },
-        {
-          "param": "strokes[14].start.cue",
-          "cue": "actually work",
-          "label": "strokes[14].start.cue",
-          "scene_time_s": 8.74,
-          "absolute_s": 199.87
-        },
-        {
-          "param": "strokes[15].start.cue",
-          "cue": "actually work",
-          "label": "strokes[15].start.cue",
-          "scene_time_s": 8.79,
-          "absolute_s": 199.92
-        },
-        {
-          "param": "strokes[16].start.cue",
-          "cue": "actually work",
-          "label": "strokes[16].start.cue",
-          "scene_time_s": 8.84,
-          "absolute_s": 199.97
-        },
-        {
-          "param": "strokes[17].start.cue",
-          "cue": "actually work",
-          "label": "strokes[17].start.cue",
-          "scene_time_s": 8.89,
-          "absolute_s": 200.02
-        },
-        {
-          "param": "strokes[18].start.cue",
-          "cue": "actually work",
-          "label": "strokes[18].start.cue",
-          "scene_time_s": 8.94,
-          "absolute_s": 200.07
-        },
-        {
-          "param": "strokes[19].start.cue",
-          "cue": "actually work",
-          "label": "strokes[19].start.cue",
-          "scene_time_s": 8.99,
-          "absolute_s": 200.12
-        },
-        {
-          "param": "strokes[20].start.cue",
-          "cue": "actually work",
-          "label": "strokes[20].start.cue",
-          "scene_time_s": 9.04,
-          "absolute_s": 200.17
-        },
-        {
-          "param": "strokes[21].start.cue",
-          "cue": "actually work",
-          "label": "strokes[21].start.cue",
-          "scene_time_s": 9.09,
-          "absolute_s": 200.22
-        },
-        {
-          "param": "strokes[22].start.cue",
-          "cue": "actually work",
-          "label": "strokes[22].start.cue",
-          "scene_time_s": 9.14,
-          "absolute_s": 200.27
-        },
-        {
-          "param": "strokes[23].start.cue",
-          "cue": "actually work",
-          "label": "strokes[23].start.cue",
-          "scene_time_s": 9.19,
-          "absolute_s": 200.32
-        },
-        {
-          "param": "strokes[24].start.cue",
-          "cue": "actually work",
-          "label": "strokes[24].start.cue",
-          "scene_time_s": 9.24,
-          "absolute_s": 200.37
-        },
-        {
-          "param": "strokes[25].start.cue",
-          "cue": "actually work",
-          "label": "strokes[25].start.cue",
-          "scene_time_s": 9.29,
-          "absolute_s": 200.42
-        },
-        {
-          "param": "strokes[26].start.cue",
-          "cue": "actually work",
-          "label": "strokes[26].start.cue",
-          "scene_time_s": 9.34,
-          "absolute_s": 200.47
-        },
-        {
-          "param": "strokes[27].start.cue",
-          "cue": "actually work",
-          "label": "strokes[27].start.cue",
-          "scene_time_s": 9.39,
-          "absolute_s": 200.52
-        },
-        {
-          "param": "strokes[28].start.cue",
-          "cue": "actually work",
-          "label": "strokes[28].start.cue",
-          "scene_time_s": 9.44,
-          "absolute_s": 200.57
-        },
-        {
-          "param": "strokes[29].start.cue",
-          "cue": "actually work",
-          "label": "strokes[29].start.cue",
-          "scene_time_s": 9.49,
-          "absolute_s": 200.62
-        },
-        {
-          "param": "strokes[30].start.cue",
-          "cue": "actually work",
-          "label": "strokes[30].start.cue",
-          "scene_time_s": 9.54,
-          "absolute_s": 200.67
-        },
-        {
-          "param": "strokes[31].start.cue",
-          "cue": "years of practice",
-          "label": "strokes[31].start.cue",
-          "scene_time_s": 11.15,
-          "absolute_s": 202.29
-        },
-        {
-          "param": "strokes[32].start.cue",
+          "param": "items[0].fail[1][0].cue",
           "cue": "endless learning",
-          "label": "strokes[32].start.cue",
+          "label": "items[0].fail[1][0].cue",
           "scene_time_s": 14.27,
           "absolute_s": 205.4
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "brand-new factory",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 16.92,
+          "absolute_s": 208.05
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "brand-new factory",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.22,
+          "absolute_s": 208.35
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "brand-new factory",
+          "label": "items[2].at.cue",
+          "scene_time_s": 17.22,
+          "absolute_s": 208.35
+        },
+        {
+          "param": "items[0].fail[2][0].cue",
+          "cue": "endless learning",
+          "label": "items[0].fail[2][0].cue",
+          "scene_time_s": 18.27,
+          "absolute_s": 209.4
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "same machines",
+          "label": "items[3].at.cue",
+          "scene_time_s": 19.93,
+          "absolute_s": 211.07
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "hard to buy",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 26.36,
+          "absolute_s": 217.49
         }
       ],
       "unresolved_cues": [],
@@ -860,26 +797,68 @@
       "index": 15,
       "id": "s14_capex",
       "segment": "m2_capex",
-      "type": "compare",
+      "type": "engine_cartoon",
       "start_s": 220.8,
       "end_s": 243.4,
       "duration_s": 22.6,
-      "visual_objective": "Side-by-side figures count up; bars rise",
+      "visual_objective": "",
       "narration": "Then there is the money. TSMC planned to spend more than 50 billion dollars on factories and equipment in twenty twenty-six alone. Across the industry, chipmakers are expected to invest about 2.3 trillion dollars in new fabs between twenty twenty-four and twenty thirty-two.",
       "keyframes": [
         {
-          "param": "sides[0].cue",
+          "param": "callouts[0].at.cue",
+          "cue": "the money",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.55,
+          "absolute_s": 222.35
+        },
+        {
+          "param": "items[0].at.cue",
           "cue": "TSMC planned",
-          "label": "January 2026 guidance",
+          "label": "items[0].at.cue",
           "scene_time_s": 3.63,
           "absolute_s": 224.43
         },
         {
-          "param": "sides[1].cue",
+          "param": "items[0].h[1][0].cue",
+          "cue": "TSMC planned",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 3.63,
+          "absolute_s": 224.43
+        },
+        {
+          "param": "items[0].h[2][0].cue",
+          "cue": "TSMC planned",
+          "label": "items[0].h[2][0].cue",
+          "scene_time_s": 6.63,
+          "absolute_s": 227.43
+        },
+        {
+          "param": "cam[1].at.cue",
           "cue": "Across the industry",
-          "label": "SIA/BCG projection",
+          "label": "cam[1].at.cue",
           "scene_time_s": 11.95,
           "absolute_s": 232.75
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Across the industry",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.95,
+          "absolute_s": 232.75
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "Across the industry",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 11.95,
+          "absolute_s": 232.75
+        },
+        {
+          "param": "items[1].h[2][0].cue",
+          "cue": "Across the industry",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 15.95,
+          "absolute_s": 236.75
         }
       ],
       "unresolved_cues": [],
@@ -931,31 +910,87 @@
       "index": 17,
       "id": "s16_layers",
       "segment": "m2_layers",
-      "type": "compare",
+      "type": "engine_cartoon",
       "start_s": 267.8,
       "end_s": 290.63,
       "duration_s": 22.83,
-      "visual_objective": "Side-by-side figures count up; bars rise",
+      "visual_objective": "",
       "narration": "And chips are not one market. Memory is a different game, led by South Korea, which had about half of the world's DRAM capacity. Advanced packaging, the step that joins chips and memory, has become a bottleneck of its own. So Taiwan's edge is narrow, but it sits at the very top.",
       "keyframes": [
         {
-          "param": "sides[0].cue",
+          "param": "callouts[0].at.cue",
+          "cue": "not one market",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.43,
+          "absolute_s": 269.23
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "Memory",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.52,
+          "absolute_s": 271.32
+        },
+        {
+          "param": "items[1].at.cue",
           "cue": "led by South Korea",
-          "label": "South Korea",
+          "label": "items[1].at.cue",
           "scene_time_s": 5.99,
           "absolute_s": 273.79
         },
         {
-          "param": "sides[1].cue",
+          "param": "items[2].at.cue",
           "cue": "Advanced packaging",
-          "label": "joining chips and memory",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.97,
+          "absolute_s": 278.77
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Advanced packaging",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.17,
+          "absolute_s": 278.97
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Advanced packaging",
+          "label": "cam[1].at.cue",
           "scene_time_s": 11.47,
           "absolute_s": 279.27
         },
         {
-          "param": "sides[2].cue",
+          "param": "items[3].at.cue",
+          "cue": "bottleneck",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.02,
+          "absolute_s": 283.82
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Taiwan's edge",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.28,
+          "absolute_s": 286.08
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "narrow",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 19.37,
+          "absolute_s": 287.17
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "narrow",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 19.37,
+          "absolute_s": 287.17
+        },
+        {
+          "param": "items[5].at.cue",
           "cue": "very top",
-          "label": "narrow, but at the very top",
+          "label": "items[5].at.cue",
           "scene_time_s": 21.51,
           "absolute_s": 289.31
         }
@@ -1037,6 +1072,20 @@
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.65,
           "absolute_s": 302.15
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "economic power",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 5.93,
+          "absolute_s": 307.43
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "economic power",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 6.23,
+          "absolute_s": 307.73
         },
         {
           "param": "callouts[1].at.cue",
@@ -1171,37 +1220,100 @@
       "narration": "Now follow the chips further. Cloud companies in the United States, Europe and Asia fill their data centers with AI chips made in Taiwan. Phone makers, PC makers and carmakers buy chips too. In twenty twenty-five, Taiwan's exports hit a record 640 billion dollars, up 35 percent in a single year.",
       "keyframes": [
         {
-          "param": "actors[6].at.cue",
+          "param": "cam[1].at.cue",
           "cue": "Cloud companies",
-          "label": "actors[6].at.cue",
+          "label": "cam[1].at.cue",
           "scene_time_s": 3.22,
           "absolute_s": 371.12
         },
         {
-          "param": "cam[1].at.cue",
-          "cue": "Phone makers",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 11.7,
-          "absolute_s": 379.6
-        },
-        {
-          "param": "actors[7].at.cue",
-          "cue": "Phone makers",
-          "label": "actors[7].at.cue",
-          "scene_time_s": 11.7,
-          "absolute_s": 379.6
+          "param": "items[1].at.cue",
+          "cue": "Cloud companies",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.22,
+          "absolute_s": 371.12
         },
         {
           "param": "callouts[0].at.cue",
-          "cue": "Taiwan's exports",
+          "cue": "Cloud companies",
           "label": "callouts[0].at.cue",
+          "scene_time_s": 3.22,
+          "absolute_s": 371.12
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "data centers",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.06,
+          "absolute_s": 375.96
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Phone makers",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.7,
+          "absolute_s": 378.6
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Phone makers",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.4,
+          "absolute_s": 379.3
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Phone makers",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 11.7,
+          "absolute_s": 379.6
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Phone makers",
+          "label": "items[4].at.cue",
+          "scene_time_s": 11.7,
+          "absolute_s": 379.6
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Phone makers",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.7,
+          "absolute_s": 379.6
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "PC makers",
+          "label": "items[5].at.cue",
+          "scene_time_s": 12.85,
+          "absolute_s": 380.75
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Taiwan's exports",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 17.99,
+          "absolute_s": 385.89
+        },
+        {
+          "param": "cam[3].at.cue",
+          "cue": "Taiwan's exports",
+          "label": "cam[3].at.cue",
           "scene_time_s": 18.29,
           "absolute_s": 386.19
         },
         {
-          "param": "callouts[1].at.cue",
+          "param": "callouts[2].at.cue",
+          "cue": "Taiwan's exports",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 18.29,
+          "absolute_s": 386.19
+        },
+        {
+          "param": "callouts[3].at.cue",
           "cue": "in a single year",
-          "label": "callouts[1].at.cue",
+          "label": "callouts[3].at.cue",
           "scene_time_s": 24.13,
           "absolute_s": 392.03
         }
@@ -1259,33 +1371,103 @@
       "index": 25,
       "id": "s24_unequal",
       "segment": "m3_unequal",
-      "type": "compare",
+      "type": "engine_cartoon",
       "start_s": 411.3,
       "end_s": 435.83,
       "duration_s": 24.53,
-      "visual_objective": "Side-by-side figures count up; bars rise",
+      "visual_objective": "",
       "narration": "But not every industry depends on Taiwan equally. A cutting-edge AI chip or a new phone processor needs the most advanced factories, and that is where Taiwan dominates. A car or a washing machine mostly uses older, simpler chips that are made in many countries. Even so, a missing cheap chip can still stop a car factory.",
       "keyframes": [
         {
-          "param": "sides[0].cue",
+          "param": "callouts[0].at.cue",
+          "cue": "not every industry",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.58,
+          "absolute_s": 411.88
+        },
+        {
+          "param": "items[0].at.cue",
           "cue": "cutting-edge",
-          "label": "where Taiwan dominates",
+          "label": "items[0].at.cue",
           "scene_time_s": 4.75,
           "absolute_s": 416.05
         },
         {
-          "param": "sides[1].cue",
+          "param": "items[1].at.cue",
+          "cue": "phone processor",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.73,
+          "absolute_s": 418.03
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "that is where",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.42,
+          "absolute_s": 421.72
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "A car",
+          "label": "items[3].at.cue",
+          "scene_time_s": 13.21,
+          "absolute_s": 424.51
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "washing machine",
+          "label": "items[4].at.cue",
+          "scene_time_s": 14.09,
+          "absolute_s": 425.39
+        },
+        {
+          "param": "cam[1].at.cue",
           "cue": "older, simpler",
-          "label": "made in many countries",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.26,
+          "absolute_s": 426.56
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "older, simpler",
+          "label": "items[5].at.cue",
           "scene_time_s": 15.86,
           "absolute_s": 427.16
         },
         {
-          "param": "sides[2].cue",
+          "param": "items[6].at.cue",
           "cue": "Even so",
-          "label": "a missing cheap chip can stop a car factory",
+          "label": "items[6].at.cue",
+          "scene_time_s": 18.49,
+          "absolute_s": 429.79
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Even so",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 19.19,
+          "absolute_s": 430.49
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Even so",
+          "label": "callouts[1].at.cue",
           "scene_time_s": 19.49,
           "absolute_s": 430.79
+        },
+        {
+          "param": "items[6].gapAt.cue",
+          "cue": "missing cheap chip",
+          "label": "items[6].gapAt.cue",
+          "scene_time_s": 20.81,
+          "absolute_s": 432.11
+        },
+        {
+          "param": "items[6].stopAt.cue",
+          "cue": "stop a car factory",
+          "label": "items[6].stopAt.cue",
+          "scene_time_s": 22.43,
+          "absolute_s": 433.73
         }
       ],
       "unresolved_cues": [],
@@ -1365,11 +1547,18 @@
           "absolute_s": 449.9
         },
         {
-          "param": "actors[3].until.cue",
+          "param": "items[0].stopAt.cue",
           "cue": "seriously disrupted",
-          "label": "actors[3].until.cue",
+          "label": "items[0].stopAt.cue",
           "scene_time_s": 4.93,
           "absolute_s": 452.23
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "seriously disrupted",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.33,
+          "absolute_s": 452.63
         }
       ],
       "unresolved_cues": [],
@@ -1398,11 +1587,46 @@
           "absolute_s": 462.52
         },
         {
-          "param": "coasts.darkAt.cue",
+          "param": "items[0].gapAt.cue",
           "cue": "hit carmakers",
-          "label": "coasts.darkAt.cue",
+          "label": "items[0].gapAt.cue",
           "scene_time_s": 8.09,
           "absolute_s": 467.86
+        },
+        {
+          "param": "items[0].stopAt.cue",
+          "cue": "hit carmakers",
+          "label": "items[0].stopAt.cue",
+          "scene_time_s": 8.49,
+          "absolute_s": 468.26
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "hit carmakers",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.69,
+          "absolute_s": 468.46
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "hit carmakers",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.69,
+          "absolute_s": 468.46
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "lost revenue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.65,
+          "absolute_s": 475.41
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "lost revenue",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.95,
+          "absolute_s": 475.71
         },
         {
           "param": "callouts[1].at.cue",
@@ -1440,53 +1664,67 @@
       "narration": "Now imagine a disruption at the source. Advanced chip supply stops. New phones and computers slip. Cloud companies can't add AI servers. Carmakers idle their lines. Prices rise, and the shock spreads to industries that never thought of themselves as tech. A shortage of the most advanced chips would be very hard to replace quickly, because the alternative factories simply don't exist yet at that scale.",
       "keyframes": [
         {
-          "param": "actors[0].darkAt.cue",
+          "param": "items[0].fallAt[0].cue",
           "cue": "supply stops",
-          "label": "actors[0].darkAt.cue",
+          "label": "items[0].fallAt[0].cue",
           "scene_time_s": 4.5,
           "absolute_s": 485.06
-        },
-        {
-          "param": "actors[4].sadAt.cue",
-          "cue": "supply stops",
-          "label": "actors[4].sadAt.cue",
-          "scene_time_s": 4.5,
-          "absolute_s": 485.06
-        },
-        {
-          "param": "actors[4].anchorAt.cue",
-          "cue": "supply stops",
-          "label": "actors[4].anchorAt.cue",
-          "scene_time_s": 4.5,
-          "absolute_s": 485.06
-        },
-        {
-          "param": "actors[5].sadAt.cue",
-          "cue": "supply stops",
-          "label": "actors[5].sadAt.cue",
-          "scene_time_s": 4.5,
-          "absolute_s": 485.06
-        },
-        {
-          "param": "actors[5].anchorAt.cue",
-          "cue": "supply stops",
-          "label": "actors[5].anchorAt.cue",
-          "scene_time_s": 4.9,
-          "absolute_s": 485.46
         },
         {
           "param": "callouts[0].at.cue",
-          "cue": "New phones",
+          "cue": "supply stops",
           "label": "callouts[0].at.cue",
+          "scene_time_s": 4.5,
+          "absolute_s": 485.06
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "New phones",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 5.6,
+          "absolute_s": 486.17
+        },
+        {
+          "param": "items[0].fallAt[1].cue",
+          "cue": "New phones",
+          "label": "items[0].fallAt[1].cue",
           "scene_time_s": 5.8,
           "absolute_s": 486.37
         },
         {
           "param": "callouts[1].at.cue",
-          "cue": "Cloud companies",
+          "cue": "New phones",
           "label": "callouts[1].at.cue",
+          "scene_time_s": 5.8,
+          "absolute_s": 486.37
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Cloud companies",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 7.84,
+          "absolute_s": 488.41
+        },
+        {
+          "param": "items[0].fallAt[2].cue",
+          "cue": "Cloud companies",
+          "label": "items[0].fallAt[2].cue",
           "scene_time_s": 8.04,
           "absolute_s": 488.61
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "Cloud companies",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 8.04,
+          "absolute_s": 488.61
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "Carmakers",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 10.74,
+          "absolute_s": 491.31
         },
         {
           "param": "cam[1].at.cue",
@@ -1496,30 +1734,58 @@
           "absolute_s": 491.51
         },
         {
-          "param": "callouts[2].at.cue",
+          "param": "items[0].fallAt[3].cue",
           "cue": "Carmakers",
-          "label": "callouts[2].at.cue",
+          "label": "items[0].fallAt[3].cue",
           "scene_time_s": 10.94,
           "absolute_s": 491.51
         },
         {
-          "param": "coasts.darkAt.cue",
-          "cue": "Prices rise",
-          "label": "coasts.darkAt.cue",
-          "scene_time_s": 13.13,
-          "absolute_s": 493.7
+          "param": "callouts[3].at.cue",
+          "cue": "Carmakers",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 10.94,
+          "absolute_s": 491.51
         },
         {
-          "param": "callouts[3].at.cue",
+          "param": "callouts[3].until.cue",
           "cue": "Prices rise",
-          "label": "callouts[3].at.cue",
+          "label": "callouts[3].until.cue",
+          "scene_time_s": 12.93,
+          "absolute_s": 493.5
+        },
+        {
+          "param": "items[0].fallAt[4].cue",
+          "cue": "Prices rise",
+          "label": "items[0].fallAt[4].cue",
           "scene_time_s": 13.13,
           "absolute_s": 493.7
         },
         {
           "param": "callouts[4].at.cue",
-          "cue": "very hard to replace",
+          "cue": "Prices rise",
           "label": "callouts[4].at.cue",
+          "scene_time_s": 13.13,
+          "absolute_s": 493.7
+        },
+        {
+          "param": "items[0].fallAt[5].cue",
+          "cue": "never thought",
+          "label": "items[0].fallAt[5].cue",
+          "scene_time_s": 16.06,
+          "absolute_s": 496.62
+        },
+        {
+          "param": "callouts[4].until.cue",
+          "cue": "very hard to replace",
+          "label": "callouts[4].until.cue",
+          "scene_time_s": 21.03,
+          "absolute_s": 501.6
+        },
+        {
+          "param": "callouts[5].at.cue",
+          "cue": "very hard to replace",
+          "label": "callouts[5].at.cue",
           "scene_time_s": 21.33,
           "absolute_s": 501.9
         }
@@ -1760,9 +2026,9 @@
       "narration": "Can the world spread the risk? It matters because diversification is expensive, and it is slow.",
       "keyframes": [
         {
-          "param": "actors[0].at.cue",
+          "param": "items[0].at.cue",
           "cue": "spread the risk",
-          "label": "actors[0].at.cue",
+          "label": "items[0].at.cue",
           "scene_time_s": 1.3,
           "absolute_s": 563.03
         },
@@ -1774,11 +2040,39 @@
           "absolute_s": 563.03
         },
         {
-          "param": "actors[1].at.cue",
+          "param": "items[1].at.cue",
           "cue": "spread the risk",
-          "label": "actors[1].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 1.8,
           "absolute_s": 563.53
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "expensive",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 4.86,
+          "absolute_s": 566.59
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "expensive",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.16,
+          "absolute_s": 566.89
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "expensive",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.16,
+          "absolute_s": 566.89
+        },
+        {
+          "param": "items[2].h[1][0].cue",
+          "cue": "expensive",
+          "label": "items[2].h[1][0].cue",
+          "scene_time_s": 5.16,
+          "absolute_s": 566.89
         },
         {
           "param": "callouts[1].at.cue",
@@ -1786,6 +2080,13 @@
           "label": "callouts[1].at.cue",
           "scene_time_s": 5.16,
           "absolute_s": 566.89
+        },
+        {
+          "param": "items[2].h[2][0].cue",
+          "cue": "expensive",
+          "label": "items[2].h[2][0].cue",
+          "scene_time_s": 8.16,
+          "absolute_s": 569.89
         }
       ],
       "unresolved_cues": [],
@@ -1888,9 +2189,16 @@
       "narration": "In Germany, a TSMC joint venture is rising in Dresden, and Europe wants 20 percent of global chip production by twenty thirty. South Korea keeps pouring money into memory and its own foundries. And Taiwan keeps building its newest fabs at home.",
       "keyframes": [
         {
-          "param": "actors[0].at.cue",
+          "param": "items[0].at.cue",
           "cue": "In Germany",
-          "label": "actors[0].at.cue",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 594.48
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "In Germany",
+          "label": "items[1].at.cue",
           "scene_time_s": 0.35,
           "absolute_s": 594.48
         },
@@ -1902,9 +2210,16 @@
           "absolute_s": 594.48
         },
         {
-          "param": "actors[1].at.cue",
+          "param": "callouts[0].until.cue",
           "cue": "Europe wants",
-          "label": "actors[1].at.cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 3.93,
+          "absolute_s": 598.07
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Europe wants",
+          "label": "items[2].at.cue",
           "scene_time_s": 4.23,
           "absolute_s": 598.37
         },
@@ -1916,11 +2231,32 @@
           "absolute_s": 598.37
         },
         {
+          "param": "callouts[1].until.cue",
+          "cue": "South Korea",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 9.03,
+          "absolute_s": 603.16
+        },
+        {
+          "param": "items[1].progress[1][0].cue",
+          "cue": "South Korea",
+          "label": "items[1].progress[1][0].cue",
+          "scene_time_s": 9.33,
+          "absolute_s": 603.46
+        },
+        {
           "param": "callouts[2].at.cue",
           "cue": "South Korea",
           "label": "callouts[2].at.cue",
           "scene_time_s": 9.33,
           "absolute_s": 603.46
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "And Taiwan keeps",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 13.29,
+          "absolute_s": 607.42
         },
         {
           "param": "cam[1].at.cue",
@@ -1937,11 +2273,25 @@
           "absolute_s": 607.72
         },
         {
-          "param": "actors[4].at.cue",
+          "param": "items[3].at.cue",
           "cue": "newest fabs",
-          "label": "actors[4].at.cue",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.18,
+          "absolute_s": 609.31
+        },
+        {
+          "param": "items[3].progress[1][0].cue",
+          "cue": "newest fabs",
+          "label": "items[3].progress[1][0].cue",
           "scene_time_s": 15.58,
           "absolute_s": 609.71
+        },
+        {
+          "param": "items[3].progress[2][0].cue",
+          "cue": "newest fabs",
+          "label": "items[3].progress[2][0].cue",
+          "scene_time_s": 19.58,
+          "absolute_s": 613.71
         }
       ],
       "unresolved_cues": [],
@@ -2008,6 +2358,13 @@
           "absolute_s": 637.31
         },
         {
+          "param": "items[1].at.cue",
+          "cue": "the engineers",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.1,
+          "absolute_s": 640.0
+        },
+        {
           "param": "cam[1].at.cue",
           "cue": "Taiwan has spent",
           "label": "cam[1].at.cue",
@@ -2015,9 +2372,72 @@
           "absolute_s": 645.4
         },
         {
-          "param": "actors[0].at.cue",
+          "param": "items[2].at.cue",
+          "cue": "decades",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 646.31
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "decades",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 646.31
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "decades",
+          "label": "items[4].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 646.31
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "decades",
+          "label": "items[5].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 646.31
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "decades",
+          "label": "items[6].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 646.31
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "decades",
+          "label": "items[7].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 646.31
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "decades",
+          "label": "items[8].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 646.31
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "decades",
+          "label": "items[9].at.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 646.31
+        },
+        {
+          "param": "callouts[0].until.cue",
           "cue": "can be built",
-          "label": "actors[0].at.cue",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.17,
+          "absolute_s": 649.07
+        },
+        {
+          "param": "items[0].progress[1][0].cue",
+          "cue": "can be built",
+          "label": "items[0].progress[1][0].cue",
           "scene_time_s": 14.47,
           "absolute_s": 649.37
         },
@@ -2027,6 +2447,27 @@
           "label": "callouts[1].at.cue",
           "scene_time_s": 14.47,
           "absolute_s": 649.37
+        },
+        {
+          "param": "items[0].progress[2][0].cue",
+          "cue": "can be built",
+          "label": "items[0].progress[2][0].cue",
+          "scene_time_s": 17.47,
+          "absolute_s": 652.37
+        },
+        {
+          "param": "items[10].dropAt.cue",
+          "cue": "ecosystem",
+          "label": "items[10].dropAt.cue",
+          "scene_time_s": 18.14,
+          "absolute_s": 653.04
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "much longer",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 19.9,
+          "absolute_s": 654.8
         },
         {
           "param": "callouts[2].at.cue",
@@ -2055,9 +2496,9 @@
       "narration": "Taiwan matters not because it makes every chip, but because it makes the hardest ones, at a scale nobody else has matched. An island smaller than Switzerland ended up holding one of the most important keys to the global economy. Its strength is also the world's weak point: so much of the cutting edge in one place. And that is why the whole world is watching it.",
       "keyframes": [
         {
-          "param": "actors[6].at.cue",
+          "param": "items[1].at.cue",
           "cue": "hardest ones",
-          "label": "actors[6].at.cue",
+          "label": "items[1].at.cue",
           "scene_time_s": 5.08,
           "absolute_s": 661.38
         },
@@ -2069,9 +2510,9 @@
           "absolute_s": 661.38
         },
         {
-          "param": "actors[7].at.cue",
+          "param": "items[2].at.cue",
           "cue": "hardest ones",
-          "label": "actors[7].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 5.38,
           "absolute_s": 661.68
         },
@@ -2083,6 +2524,13 @@
           "absolute_s": 662.44
         },
         {
+          "param": "callouts[0].until.cue",
+          "cue": "weak point",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 17.68,
+          "absolute_s": 673.98
+        },
+        {
           "param": "callouts[1].at.cue",
           "cue": "weak point",
           "label": "callouts[1].at.cue",
@@ -2090,9 +2538,51 @@
           "absolute_s": 674.28
         },
         {
+          "param": "callouts[1].until.cue",
+          "cue": "the whole world is watching",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 22.45,
+          "absolute_s": 678.75
+        },
+        {
           "param": "cam[2].at.cue",
           "cue": "the whole world is watching",
           "label": "cam[2].at.cue",
+          "scene_time_s": 22.75,
+          "absolute_s": 679.05
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "the whole world is watching",
+          "label": "items[3].at.cue",
+          "scene_time_s": 22.75,
+          "absolute_s": 679.05
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "the whole world is watching",
+          "label": "items[4].at.cue",
+          "scene_time_s": 22.75,
+          "absolute_s": 679.05
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "the whole world is watching",
+          "label": "items[5].at.cue",
+          "scene_time_s": 22.75,
+          "absolute_s": 679.05
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "the whole world is watching",
+          "label": "items[6].at.cue",
+          "scene_time_s": 22.75,
+          "absolute_s": 679.05
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "the whole world is watching",
+          "label": "callouts[2].at.cue",
           "scene_time_s": 22.75,
           "absolute_s": 679.05
         }

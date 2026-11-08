@@ -1,6 +1,7 @@
 """Generates projects/the-machine-only-one-company-can-build/deliverables/documentary/storyboard.yaml (Episode 08).
 
-Built on the animation engine (engine_* scene types, see docs/engine/INTEGRATION.md). Times are narration cues
+Bespoke CartoonStage worlds (Dutch town with windmill and bikes, a lithography clean room, the tin-plasma light source,
+mirrors in a vacuum, a school bus for scale, an export barrier) plus presenter boards, the exploded machine and maps. Times are narration cues
 ({cue: "..."}) wherever possible. Run: python tools/gen_asml_storyboard.py
 """
 from __future__ import annotations
@@ -37,7 +38,7 @@ def add(id_, segment, type_, params, sources=(), assets=INTER, sfx=None):
 
 
 def card(id_, seg, number, title, sub):
-    add(id_, seg, "act_title", {"number": number, "title": title, "subtitle": sub, "min_seconds": 3.0}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
+    add(id_, seg, "act_title", {"number": "", "title": title, "subtitle": sub, "min_seconds": 5.4}, sfx=[{"kind": "hit", "at": 0.1, "gain": 0.25}])
 
 
 def question(id_, seg, chapter, q, why, q_cue, why_cue):
@@ -54,6 +55,45 @@ def kinetic(id_, seg, lines, chapter=None):
     if chapter:
         p["chapter"] = chapter
     add(id_, seg, "kinetic_text", p)
+
+
+def stage(id_, seg, params, sources=(), sfx=None):
+    """A bespoke CartoonStage world (Dutch town, clean room, airport...)."""
+    add(id_, seg, "engine_cartoon", params, sources, sfx=sfx)
+
+
+def it(kind, **kw):
+    return {"kind": kind, **kw}
+
+
+def co(text, x, y, at, color="white", sub=None, until=None, size=None, screen=False):
+    c = {"text": text, "x": x, "y": y, "at": at, "color": color}
+    for k, v in (("sub", sub), ("until", until), ("size", size)):
+        if v is not None:
+            c[k] = v
+    if screen:
+        c["screen"] = True
+    return c
+
+
+F = 860
+Z = lambda s, x0=-1600, x1=4600, **kw: {"set": s, "x0": x0, "x1": x1, **kw}
+FAB = lambda x0=-1600, x1=4600, **kw: Z("fab", x0, x1, **kw)
+DUTCH = lambda x0=-1600, x1=4600, **kw: Z("dutch", x0, x1, **kw)
+
+
+def crowd(xs, pose, at=0.0, until=None, scale=0.8, **kw):
+    out = []
+    for k, x in enumerate(xs):
+        d = {"x": x, "pose": pose, "at": at, "scale": scale, "hair": k + 1, "skin": k, **kw}
+        if until is not None:
+            d["until"] = until
+        out.append(it("person", **d))
+    return out
+
+
+def suits(xs, pose="stand", at=0.2):
+    return crowd(xs, pose, at=at, suit=True, scale=1.0)
 
 
 def rect(x, y, w, h):
@@ -90,29 +130,34 @@ MACHINE = [
 ]
 
 # ====================================================================== HOOK
-add("s01_machine", "h_question", "engine_exploded", {
-    "title": "One machine. One company.", "layers": MACHINE, "cx": 960, "cy": 600,
-    "scale": [[0, 0.5], [1.5, 1.15], [7, 1.35]], "yaw": [[0, 0], [8, 70]],
-    "explodeAt": 99, "assembleAt": 100, "note": "Conceptual modules · schematic"},
+stage("s01_machine", "h_question", {
+    "zones": [FAB(label="yellow")], "worldW": 1920,
+    "cam": [{"at": 0, "x": 860, "y": 470, "zoom": 1.35}, {"at": C("only one company"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "items": [it("litho", x=860, at=0.2, fireAt=0.8, text="ONE MACHINE", sub="prints the most advanced chips"),
+              *suits([1350, 1500]),
+              it("sign", x=1450, y=330, text="ONLY ONE COMPANY", sub="knows how to build it", at=C("only one company"), color="#FFF59D", size=36)],
+    "callouts": [co("The most advanced chips on Earth…", 960, 150, C("most advanced chips"), "white", screen=True, until=C("only one company", -0.3)),
+                 co("…printed by one machine", 960, 150, C("only one company"), "gold", screen=True, size=44)]},
     sources=["asml_euv"], sfx=[{"kind": "hit", "at": 0.0, "gain": 0.3}])
-add("s02_town", "h_stakes", "engine_map", {
-    "cameras": [{"at": 0, "lon": 15, "lat": 30, "span": 300}, {"at": C("small town"), "lon": 5.43, "lat": 51.6, "span": 7, "dur": 2.0}],
-    "highlights": [{"iso": "NLD", "color": "gold", "at": C("That company")}],
-    "hubs": [{"id": "v", "at": LL["veldhoven"], "label": "Veldhoven", "sub": "{{euv_price.display}} per machine", "color": "gold", "time": C("Each machine")}],
-    "tilt": [[0, 10], [6, 0]], "caption": "Real location (Natural Earth, public domain)"},
-    sources=["reuters_explainer", "asml_history", "natural_earth"], assets=GEO)
-kinetic("s03_missions", "h_missions", [
-    ("Today: five missions", 64, "five missions", "accent", False),
-    ("1 · What the machine actually does", 40, "what this machine", None, True),
-    ("2 · How one company ended up alone", 40, "ended up alone", None, True),
-    ("3 · Who helps build it", 40, "who helps", None, True),
-    ("4 · How it makes money", 40, "makes money", None, True),
-    ("5 · Where it is allowed to go", 40, "allowed to go", "risk", True)], chapter="Five missions")
-
+stage("s02_town", "h_stakes", {
+    "zones": [DUTCH()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 470, "zoom": 1.25}, {"at": C("small town"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "items": [it("building", x=1100, style="office", color="#90CAF9", text="ASML", at=C("That company"), scale=0.9),
+              it("stack", x=600, at=C("Each machine"), h=[[0, 40], [{"cue": "Each machine"}, 40], [{"cue": "Each machine", "offset": 2.5}, 300]], text="{{euv_price.display}}", sub="per machine", color="gold"),
+              it("sign", x=1550, y=640, text="VELDHOVEN", sub="the Netherlands", post=True, at=C("small town"), color="#FFE0B2", size=30)],
+    "callouts": [co("That company exists", 960, 150, C("That company"), "white", screen=True, until=C("Each machine", -0.3)),
+                 co("{{euv_price.display}} per machine", 960, 150, C("Each machine"), "gold", screen=True, size=44, until=C("small town", -0.3)),
+                 co("…from a small Dutch town", 960, 150, C("small town"), "white", screen=True, size=44)]},
+    sources=["reuters_explainer", "asml_history"])
 # ====================================================================== MISSION 1
 card("s04_m1", "m1_card", "Mission 1", "What the Machine Does", "Printing chips with light")
-question("s05_m1q", "m1_question", "Mission 1 · What the machine does", "What does this machine actually do?",
-         "Every phone, laptop and AI data center depends on it", "What does", "It matters")
+stage("s05_m1q", "m1_question", {
+    "zones": [FAB()], "worldW": 1920, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 470, "zoom": 1.25}, {"at": C("every phone"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("wafer", x=960, y=420, r=180, at=0.2, spin=6),
+              it("device", type="phone", x=420, y=760, at=C("every phone"), scale=0.7), it("device", type="laptop", x=760, y=820, at=C("every laptop"), scale=0.7),
+              it("device", type="server", x=1450, y=F, at=C("AI data center"), text="AI DATA CENTER", scale=0.8)],
+    "callouts": [co("What does this machine actually do?", 960, 150, C("What does"), "gold", screen=True, size=42)]})
 # ---- PRESENTER A: draws the principle of lithography
 add("p06_draw", "m1_draw", "engine_draw", {
     "title": "Lithography: printing with light", "board": BOARD, "draw_start": C("A chip is built"), "speed": 1100,
@@ -127,54 +172,72 @@ add("p06_draw", "m1_draw", "engine_draw", {
     ],
     "actions": [{"kind": "walk", "at": C("onto the wafer", 0.7), "dur": 1.0, "to": 1520}, {"kind": "point", "at": C("onto the wafer", 1.8), "dur": 1.2, "target": [1250, 885]}],
     "scale": 0.86, "floor": 1040}, sources=["asml_euv"])
-kinetic("s07_shrink", "m1_shrink", [
-    ("You can't print details much smaller than the light", 46, "The catch", None, True),
-    ("Smaller details = more transistors per chip", 50, "more transistors", "accent", False),
-    ("faster · cheaper · more efficient", 44, "faster", None, True),
-    ("Needed: much shorter wavelength", 58, "much shorter", "accent2", False)], chapter="Mission 1 · The catch")
+stage("s07_shrink", "m1_shrink", {
+    "zones": [FAB()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 500, "zoom": 1.1}, {"at": C("So to keep"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("wafer", x=560, y=430, r=190, at=0.3, n=6, text="BIGGER DETAILS"),
+              it("wafer", x=1360, y=430, r=190, at=C("smaller details"), n=16, text="SMALLER DETAILS = MORE TRANSISTORS"),
+              it("arrow", **{"from": [800, 430], "to": [1120, 430]}, at=C("smaller details"), color="green"),
+              it("sign", x=960, y=780, text="NEEDED: SHORTER-WAVELENGTH LIGHT", at=C("So to keep"), color="#E1BEE7", size=32)],
+    "callouts": [co("You can't print much smaller than your light", 960, 150, C("The catch"), "risk", screen=True, until=C("smaller details", -0.3)),
+                 co("Smaller → faster, cheaper, more efficient", 960, 150, C("smaller details"), "green", screen=True)]})
 # ---- pen drawing: the EUV light source
 drops = " ".join(circle(420 + i * 52, 540, 7) for i in range(9))
-add("s08_light", "m1_light", "engine_draw", {
-    "title": "Making light that nature doesn't", "subtitle": "{{droplets.nm_display}} extreme ultraviolet", "presenter": False, "studio": False, "push": 0.0028,
-    "draw_start": C("ASML's answer"), "speed": 1400,
-    "strokes": [
-        {"d": "M 420 260 L 1500 260", "color": "accent2", "width": 3, "start": C("ASML's answer"), "flow": 180, "label": lbl("WAVELENGTH {{droplets.nm_display}}", 960, 240, 30, "accent2")},
-        {"d": "M 420 540 L 900 540", "color": "border", "width": 3, "start": C("makes its own"), "flow": 140},
-        {"d": drops, "color": "muted", "width": 4, "start": C("tiny drops"), "label": lbl("MOLTEN TIN · {{droplets.display}}", 420, 490, 28, "muted", "start")},
-        {"d": "M 920 900 L 920 560", "color": "accent2", "width": 6, "flow": 260, "start": C("A laser flattens"), "label": lbl("LASER PRE-PULSE", 895, 880, 26, "accent2", "end")},
-        {"d": ellipse(920, 540, 26, 9), "color": "ink", "width": 4, "start": C("each drop")},
-        {"d": "M 1010 900 L 930 560", "color": "risk", "width": 9, "flow": 320, "start": C("more powerful pulse"), "label": lbl("MAIN PULSE", 1035, 900, 26, "risk", "start")},
-        {"d": "M 920 470 L 920 400 M 920 610 L 920 680 M 850 540 L 780 540 M 990 540 L 1060 540 M 870 490 L 830 450 M 970 590 L 1010 630 M 970 490 L 1010 450 M 870 590 L 830 630",
-         "color": "gold", "width": 6, "pulse": True, "start": C("plasma"), "label": lbl("PLASMA → EUV LIGHT", 920, 370, 30, "gold")},
-        {"d": "M 760 330 Q 640 540 760 750", "color": "teal", "width": 8, "start": C("special mirror"), "label": lbl("COLLECTOR MIRROR", 640, 800, 26, "teal")},
-        {"d": "M 930 520 L 1560 430 M 930 560 L 1560 650 M 1560 430 L 1700 540 L 1560 650", "color": "gold", "width": 4, "flow": 220, "start": C("sends it"), "label": lbl("INTO THE MACHINE →", 1640, 400, 26, "gold")},
-        {"d": "M 420 960 L 1700 960", "color": "border", "width": 3, "start": C("again and again"), "label": lbl("REPEATED NONSTOP, FOR HOURS", 1060, 1010, 26, "muted")},
-    ]}, sources=["asml_hot", "asml_ar_2025"])
+stage("s08_light", "m1_light", {
+    "min_seconds": 48, "zones": [FAB(label="yellow")], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.0}, {"at": C("A laser flattens"), "x": 960, "y": 480, "zoom": 1.15, "dur": 2.4},
+            {"at": C("special mirror"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("tinsource", x=960, y=520, at=C("makes its own", -0.5), laserAt=C("A laser flattens"), plasmaAt=C("more powerful pulse"), rate=0.9, text="INSIDE THE LIGHT SOURCE (slowed down)"),
+              it("sign", x=330, y=330, text="{{droplets.display}}", sub="tin drops (real speed)", at=C("tiny drops"), color="#FFF59D", size=34),
+              it("sign", x=1600, y=330, text="HOTTER THAN THE SUN'S SURFACE", at=C("hotter than"), color="#FFCDD2", size=26)],
+    "callouts": [co("Extreme ultraviolet: {{droplets.nm_display}}", 960, 150, C("ASML's answer"), "gold", screen=True, size=42, until=C("Nothing on Earth", -0.2)),
+                 co("Nothing on Earth makes it naturally", 960, 150, C("Nothing on Earth"), "white", screen=True, until=C("tiny drops", -0.3)),
+                 co("Molten tin, laser, plasma, light", 960, 150, C("tiny drops"), "white", screen=True, until=C("again and again", -0.3)),
+                 co("Again and again, for hours", 960, 150, C("again and again"), "green", screen=True)]},
+    sources=["asml_hot", "asml_ar_2025"])
 # ---- pen drawing: mirrors in a vacuum
-add("s09_mirrors", "m1_mirrors", "engine_draw", {
-    "title": "Mirrors, in a vacuum", "presenter": False, "studio": False, "push": 0.006, "draw_start": C("absorbed"), "speed": 1600,
-    "strokes": [
-        {"d": rect(260, 300, 1400, 620), "color": "border", "width": 4, "dash": "14 10", "flow": 120, "start": C("absorbed"), "label": lbl("VACUUM CHAMBER", 300, 345, 26, "muted", "start")},
-        {"d": "M 470 800 Q 520 770 570 800 M 770 410 Q 820 440 870 410 M 1070 800 Q 1120 770 1170 800 M 1370 410 Q 1420 440 1470 410", "color": "teal", "width": 7, "pulse": True, "start": C("ultra smooth"), "label": lbl("MIRRORS", 820, 380, 26, "teal")},
-        {"d": "M 300 600 L 520 790 L 820 420 L 1120 790 L 1420 420 L 1560 760", "color": "gold", "width": 5, "flow": 300, "start": C("bounces off", 0.3)},
-        {"d": ellipse(1580, 800, 110, 26), "color": "ink", "width": 5, "fill": "accent2", "fillOpacity": 0.2, "start": C("reaches the wafer"), "label": lbl("WAFER", 1580, 870, 26)},
-    ]}, sources=["asml_euv", "ieee_euv"])
-add("s10_size", "m1_discovery", "compare", {"chapter": "Mission 1 · The discovery", "title": "One machine", "sides": [
-    {"kicker": "Size", "value": "School bus", "label": "one machine", "cue": "school bus"},
-    {"kicker": "Weight", "value": "{{machine_size.display}}", "label": "per machine", "cue": "weighing"},
-    {"kicker": "To deliver one", "value": "{{machine_size.containers_display}}", "label": "containers + cargo planes", "cue": "shipping containers"}]},
+stage("s09_mirrors", "m1_mirrors", {
+    "zones": [FAB()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 500, "zoom": 1.05}], "drift": 0,
+    "items": [it("mirrors", x=960, y=500, at=0.2, beamAt=C("bounces off"), dur=3.5, scale=1.0)],
+    "callouts": [co("Absorbed by almost everything, even air", 960, 150, C("absorbed"), "risk", screen=True, until=C("bounces off", -0.3)),
+                 co("Mirrors, in a vacuum", 960, 150, C("bounces off"), "gold", screen=True, size=44)]},
+    sources=["asml_euv", "ieee_euv"])
+stage("s10_size", "m1_discovery", {
+    "min_seconds": 21, "zones": [FAB(x1=1900), Z("airport", 1900, 6000)], "worldW": 3600,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 0.95}, {"at": C("To deliver one"), "x": 2600, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "items": [it("litho", x=620, at=0.2, fireAt=0.5, text="EUV MACHINE", scale=0.8),
+              it("bus", x=1400, at=C("school bus"), text="SCHOOL BUS", scale=0.9),
+              it("sign", x=960, y=230, text="{{machine_size.display}}", sub="per machine", at=C("weighing"), color="#FFF59D", size=40),
+              it("conveyor", x0=2100, x1=2900, y=F - 30, goods="box", label="ASML", n=6, speed=120, at=C("To deliver one", -0.5)),
+              it("plane", x=[[0, 2400], [{"cue": "cargo planes"}, 2400], [{"cue": "cargo planes", "offset": 6}, 4200]], y=[[0, 720], [{"cue": "cargo planes", "offset": 6}, 200]], tilt=-12, text="", scale=0.8, at=C("cargo planes", -1))],
+    "callouts": [co("The size of a school bus", 960, 960, C("school bus"), "gold", screen=True, until=C("To deliver one", -0.3)),
+                 co("{{machine_size.containers_display}} containers + cargo planes", 960, 960, C("To deliver one"), "white", screen=True)]},
     sources=["reuters_explainer"])
-kinetic("s11_m1t", "m1_transition", [("Why can only one company", 60, "So why", None, True), ("build it?", 80, "build it", "accent", False), ("Mission 2 →", 44, "mission two", "muted", False)])
+kinetic("s11_m1t", "m1_transition", [("Why can only one company", 60, "So why", None, True), ("build it?", 80, "build it", "accent", False)])
 
 # ====================================================================== MISSION 2
 card("s12_m2", "m2_card", "Mission 2", "How One Company Ended Up Alone", "Forty years of bets")
-question("s13_m2q", "m2_question", "Mission 2 · How one company ended up alone", "How did a small Dutch company end up as the only one?",
-         "Monopolies like this usually don't last", "How did", "It matters")
-add("s14_origin", "m2_origin", "timeline", {"chapter": "Mission 2 · The origin", "title": "A small joint venture in Veldhoven",
-    "start_year": 1980, "end_year": 2000, "tick_every": 5, "items": [
-        {"year": "{{founded_1984.value}}", "label": "Philips + ASM International create ASML", "cue": "created a small"},
-        {"year": 1985, "label": "Moves to Veldhoven · a small newcomer", "cue": "moved to Veldhoven"},
-        {"year": "{{ipo_1995.value}}", "label": "Independent, listed in Amsterdam + New York", "cue": "fully independent"}]},
+stage("s13_m2q", "m2_question", {
+    "zones": [DUTCH()], "worldW": 1920, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.2}, {"at": C("monopolies"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("building", x=960, style="office", color="#90CAF9", text="ASML", at=0.2, scale=0.8),
+              it("letters", x=960, y=200, text="THE ONLY ONE?", at=C("the only one"), size=80, color="gold")],
+    "callouts": [co("Monopolies like this rarely last", 960, 960, C("monopolies"), "white", screen=True)]})
+stage("s14_origin", "m2_origin", {
+    "min_seconds": 39, "zones": [DUTCH()], "worldW": 2600,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.0}, {"at": C("Its early years"), "x": 1500, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("calendar", x=280, y=300, at=0.2, scale=0.75, pages=[[0, "1984", "FOUNDED"], [{"cue": "moved to Veldhoven"}, "1985", "VELDHOVEN"], [{"cue": "fully independent"}, "1995", "INDEPENDENT"]]),
+              it("building", x=600, style="office", color="#B0BEC5", text="PHILIPS", at=C("Philips"), scale=0.65),
+              it("building", x=1050, style="office", color="#C5E1A5", text="ASM INTERNATIONAL", at=C("A S M International"), scale=0.65),
+              it("building", x=1550, style="office", color="#90CAF9", text="ASML", at=C("created a small"), scale=0.55),
+              it("arrow", **{"from": [700, 380], "to": [1450, 420]}, at=C("created a small"), color="gold"),
+              it("tower", x=2150, text="BIG RIVALS", color="#78909C", at=C("bigger, established"), scale=0.9),
+              it("sign", x=1550, y=280, text="LISTED: AMSTERDAM + NEW YORK", at=C("fully independent"), color="#FFF59D", size=28),
+              it("sign", x=1550, y=430, text="BET: EVER-SHORTER LIGHT", at=C("one idea"), color="#E1BEE7", size=28)],
+    "callouts": [co("{{founded_1984.display}}: Philips + ASM International", 960, 150, C("created a small"), "white", screen=True, until=C("Its early years", -0.3)),
+                 co("A small, unknown newcomer", 960, 150, C("Its early years"), "risk", screen=True, until=C("fully independent", -0.3)),
+                 co("{{ipo_1995.display}}: independent and listed", 960, 150, C("fully independent"), "gold", screen=True)]},
     sources=["asml_history"])
 # ---- PRESENTER B: the customers' bet (relationship)
 add("p15_bet", "m2_bet", "engine_draw", {
@@ -194,10 +257,15 @@ add("p15_bet", "m2_bet", "engine_draw", {
     ],
     "actions": [{"kind": "explain", "at": C("The conflict", 1.2), "dur": 4.0}, {"kind": "walk", "at": C("pay for the research", 0.5), "dur": 1.1, "to": 1790}, {"kind": "point", "at": C("pay for the research", 1.7), "dur": 1.2, "target": [1560, 600]}],
     "scale": 0.86, "floor": 1040}, sources=["ccip_2012", "samsung_ccip"])
-kinetic("s16_insurance", "m2_insurance", [
-    ("For the customers: insurance", 58, "insurance", "accent", False),
-    ("No machine → their roadmaps stall", 46, "never arrived", "risk", True),
-    ("Machine arrives → first in line", 46, "first in", "accent3", True)], chapter="Mission 2 · The bet")
+stage("s16_insurance", "m2_insurance", {
+    "zones": [FAB()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.05}], "drift": 4,
+    "items": [it("building", x=480, style="office", color="#B0BEC5", text="CHIPMAKERS", at=0.2, scale=0.75),
+              it("sign", x=480, y=250, text="NO MACHINE → ROADMAPS STALL", at=C("never arrived"), color="#FFCDD2", size=28),
+              it("litho", x=1350, at=C("If it did"), fireAt=C("first in line"), text="EUV MACHINE", scale=0.7),
+              *crowd([1000], "cheer", at=C("first in line"), tie=True)],
+    "callouts": [co("For the customers: insurance", 960, 150, C("insurance"), "gold", screen=True, size=44, until=C("If it did", -0.3)),
+                 co("Machine arrives → first in line", 960, 150, C("first in line"), "green", screen=True, size=40)]})
 add("s17_pieces", "m2_pieces", "timeline_network", {
     "title": "Buying the missing pieces", "title_cue": "missing pieces", "subtitle": "Light source and optics",
     "start_year": 1980, "end_year": 2025, "tick_every": 5, "axis_cue": "missing pieces",
@@ -210,15 +278,28 @@ add("s17_pieces", "m2_pieces", "timeline_network", {
     "links": [[1, 0], [2, 0]], "morph_cue": "production", "view": {"lon": -55, "lat": 45, "span": 160},
     "highlight": {"NLD": "accent", "USA": "accent2", "DEU": "accent3"}, "network_title": "One machine, three companies"},
     sources=["cymer_2012", "zeiss_2016", "asml_history", "natural_earth"], assets=GEO)
-add("s18_share", "m2_discovery", "compare", {"chapter": "Mission 2 · The discovery", "title": "Alone at the top", "sides": [
-    {"kicker": "Makers of EUV machines", "value": "1", "label": "ASML, in the whole world", "cue": "the only company"},
-    {"kicker": "Market value", "value": "{{market_90.display}}", "label": "Europe's most valuable company (Reuters)", "cue": "most valuable"}]},
+stage("s18_share", "m2_discovery", {
+    "zones": [DUTCH()], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.1}, {"at": C("the only company"), "x": 960, "y": 500, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("tower", x=960, text="ASML", color="#1E7FD8", growAt=C("didn't win alone", -0.5), scale=1.0),
+              it("building", x=480, style="office", color="#B0BEC5", text="CUSTOMERS", at=C("customers"), scale=0.65),
+              it("building", x=1450, style="office", color="#C5E1A5", text="SUPPLIERS", at=C("its suppliers"), scale=0.65),
+              it("letters", x=960, y=120, text="№ 1", at=C("the only company"), size=110, color="gold")],
+    "callouts": [co("It tied customers + suppliers to the same bet", 960, 960, C("didn't win alone"), "white", screen=True, until=C("the only company", -0.3)),
+                 co("The only maker of EUV machines", 960, 960, C("the only company"), "gold", screen=True, until=C("most valuable", -0.3)),
+                 co("Europe's most valuable company", 960, 960, C("most valuable"), "green", screen=True, sub="Reuters")]},
     sources=["reuters_explainer", "asml_euv"])
-kinetic("s19_m2t", "m2_transition", [("Never built by one company", 56, "never built", None, True), ("Who else is inside it?", 76, "Who else", "accent", False), ("Mission 3 →", 44, "Mission three", "muted", False)])
+kinetic("s19_m2t", "m2_transition", [("Never built by one company", 56, "never built", None, True), ("Who else is inside it?", 76, "Who else", "accent", False)])
 
 # ====================================================================== MISSION 3
 card("s20_m3", "m3_card", "Mission 3", "Who Builds It", "The monopoly is a network")
-question("s21_m3q", "m3_question", "Mission 3 · Who builds it", "Who actually builds this machine?", "The monopoly is a network, not one company", "Who actually", "It matters")
+stage("s21_m3q", "m3_question", {
+    "zones": [FAB()], "worldW": 1920, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 470, "zoom": 1.2}, {"at": C("It matters"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("litho", x=960, at=0.2, fireAt=0.6, text="WHO BUILDS IT?", scale=0.75), *suits([380, 520, 1400, 1540]),
+              it("arm", x=1750, at=0.4)],
+    "callouts": [co("Who actually builds this machine?", 960, 150, C("Who actually"), "gold", screen=True, size=42, until=C("It matters", -0.3)),
+                 co("Not one company: a network", 960, 150, C("It is a network"), "white", screen=True, size=42)]})
 add("s22_inside", "m3_inside", "engine_exploded", {
     "title": "Inside the machine", "subtitle": "conceptual modules · schematic, not the physical layout", "layers": MACHINE, "cx": 760, "cy": 620,
     "scale": [[0, 0.7], [1.2, 1.2], [14, 1.35], [22, 1.15]], "yaw": [[0, 15], [22, 70]],
@@ -243,23 +324,30 @@ add("s23_suppliers", "m3_map", "engine_map", {
         {"from": LL["sandiego"], "to": LL["veldhoven"], "at": C("San Diego", 0.6), "dur": 1.4, "color": "accent2", "tokenShape": "box", "tokens": 6, "tokenEvery": 0.35, "lift": 0.25}],
     "caption": "Real locations (Natural Earth) · routes are schematic"},
     sources=["asml_ar_2025", "cymer_2012", "natural_earth"], assets=GEO)
-add("s24_ship", "m3_shipping", "engine_flow", {
-    "title": "Built twice", "subtitle": "assembled and tested in the Netherlands, rebuilt at the customer", "cardW": 280, "cardH": 230,
-    "stages": [
-        {"id": "b", "label": "Build", "sub": "Veldhoven", "x": 230, "y": 560, "kind": "fab", "color": "gold", "appear": 0.3, "output": "box"},
-        {"id": "t", "label": "Test", "sub": "full run-in", "x": 595, "y": 560, "kind": "company", "color": "accent2", "appear": 0.45, "output": "box"},
-        {"id": "p", "label": "Take apart", "sub": "≈ 40 containers", "x": 960, "y": 560, "kind": "warehouse", "color": "teal", "appear": 0.6, "output": "box"},
-        {"id": "f", "label": "Fly", "sub": "cargo planes", "x": 1325, "y": 560, "kind": "company", "color": "accent2", "appear": 0.75, "output": "box"},
-        {"id": "r", "label": "Rebuild", "sub": "customer's fab", "x": 1690, "y": 560, "kind": "fab", "color": "gold", "appear": 0.9, "output": "wafer"}],
-    "links": [{"from": "b", "to": "t", "appear": 1.0}, {"from": "t", "to": "p", "appear": 1.1}, {"from": "p", "to": "f", "appear": 1.2}, {"from": "f", "to": "r", "appear": 1.3}],
-    "items": {"starts": [C("built and tested")], "route": ["b", "t", "p", "f", "r"], "travel": 0.7, "process": 1.2},
-    "money": [{"from": "r", "to": "b", "starts": [C("start printing"), C("start printing", 0.3), C("start printing", 0.6)], "travel": 1.2, "label": "PAYMENT", "lift": 0.18}]},
+stage("s24_ship", "m3_shipping", {
+    "min_seconds": 20, "zones": [FAB(x1=1700), Z("airport", 1700, 3700, night=True), FAB(3700, 7000)], "worldW": 4800,
+    "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("flown to"), "x": 2700, "y": 520, "zoom": 1.0, "dur": 2.6},
+            {"at": C("rebuilt there"), "x": 4300, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "items": [it("litho", x=800, at=0.2, fireAt=C("tested"), text="BUILT + TESTED (NL)", scale=0.75),
+              it("conveyor", x0=1150, x1=1650, y=F - 30, goods="box", label="CRATE", n=4, speed=90, at=C("taken apart")),
+              it("plane", x=[[0, 2100], [{"cue": "flown to"}, 2100], [{"cue": "flown to", "offset": 6}, 3600]], y=[[0, 700], [{"cue": "flown to", "offset": 3}, 300], [{"cue": "flown to", "offset": 6}, 650]], text="", scale=0.8),
+              it("litho", x=4300, at=C("rebuilt there", -0.6), fireAt=C("start printing"), text="REBUILT AT THE FAB", scale=0.75), *suits([3950, 4650], at=C("rebuilt there"))],
+    "callouts": [co("Built and tested in the Netherlands", 960, 150, C("built and tested"), "white", screen=True, until=C("taken apart", -0.3)),
+                 co("…taken apart, packed into crates…", 960, 150, C("taken apart"), "white", screen=True, until=C("flown to", -0.3)),
+                 co("…flown to the customer", 960, 150, C("flown to"), "gold", screen=True, until=C("rebuilt there", -0.3)),
+                 co("…and rebuilt there", 960, 150, C("rebuilt there"), "green", screen=True)]},
     sources=["reuters_explainer"])
-kinetic("s25_m3t", "m3_transition", [("Where does all the money go?", 60, "So where", None, True), ("Mission 4 →", 44, "Mission four", "muted", False)])
+kinetic("s25_m3t", "m3_transition", [("Where does all the money go?", 60, "So where", None, True)])
 
 # ====================================================================== MISSION 4
 card("s26_m4", "m4_card", "Mission 4", "How It Makes Money", "Machines, research, and a loop")
-question("s27_m4q", "m4_question", "Mission 4 · How it makes money", "How does ASML make money?", "It sits in the middle of the AI boom", "How does", "It matters")
+stage("s27_m4q", "m4_question", {
+    "zones": [DUTCH()], "worldW": 1920, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 500, "zoom": 1.2}, {"at": C("It matters"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("building", x=960, style="office", color="#90CAF9", text="ASML", at=0.2, scale=0.8),
+              it("coins", **{"from": [-100, 200], "to": [960, 500]}, at=0.5, rate=4), it("coins", **{"from": [2000, 200], "to": [960, 500]}, at=0.8, rate=4)],
+    "callouts": [co("How does ASML make money?", 960, 150, C("How does"), "gold", screen=True, size=44, until=C("It matters", -0.3)),
+                 co("In the middle of the AI boom", 960, 150, C("AI boom"), "white", screen=True, size=42)]})
 # ---- PRESENTER C: draws the numbers
 add("p28_sales", "m4_sales", "engine_draw", {
     "title": "ASML in 2025 (US dollars)", "board": BOARD, "draw_start": C("ASML sold"), "speed": 1400,
@@ -279,31 +367,40 @@ add("p28_sales", "m4_sales", "engine_draw", {
     ],
     "actions": [{"kind": "walk", "at": C("bringing in", 0.8), "dur": 1.0, "to": 1820}, {"kind": "point", "at": C("bringing in", 1.9), "dur": 1.3, "target": [1460, 820]}, {"kind": "react", "at": C("bringing in", 3.3)}],
     "scale": 0.86, "floor": 1040}, sources=["asml_q4_2025", "asml_q4_2025_deck", "asml_q4_2024", "ecb_2025_avg"])
-add("s29_avg", "m4_average", "compare", {"chapter": "Mission 4 · Per machine", "title": "What one EUV machine brings in", "sides": [
-    {"kicker": "EUV sales, 2025", "value": "{{euv_sales_2025.usd_display}}", "label": "{{euv_sales_2025.display}} machines", "cue": "average"},
-    {"kicker": "Average per machine", "value": "{{euv_sales_2025.avg_display}}", "label": "our calculation", "cue": "per machine"},
-    {"kicker": "Exchange rate used", "value": "{{eur_usd.display}}", "label": "ECB average rate, 2025", "cue": "converted"}]},
+stage("s29_avg", "m4_average", {
+    "zones": [FAB(label="yellow")], "worldW": 1920,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.05}], "drift": 4,
+    "items": [it("litho", x=700, at=0.2, fireAt=0.6, text="ONE EUV MACHINE", scale=0.8),
+              it("stack", x=1450, at=0.4, h=[[0, 40], [2.5, 330]], text="{{euv_sales_2025.avg_display}}", sub="average per machine (our calculation)", color="gold")],
+    "callouts": [co("{{euv_sales_2025.avg_display}} per machine", 960, 150, C("average"), "gold", screen=True, size=44, sub="{{euv_sales_2025.usd_display}} ÷ {{euv_sales_2025.display}} machines", until=C("We show", -0.3)),
+                 co("All figures in US dollars", 960, 150, C("We show"), "white", screen=True, sub="converted at the official average rate for the year")]},
     sources=["asml_q4_2025_deck", "ecb_2025_avg"])
 add("s30_regions", "m4_customers", "engine_chart", {"chart": "bar", "data": "{{regions.value}}", "box": {"x": 300, "y": 330, "w": 1320, "h": 500},
     "start": C("who buys"), "stagger": 0.25, "title": "Who buys from ASML", "note": "Share of 2025 sales, by customer location",
     "valueSuffix": "%", "highlight": 0, "highlightAt": C("customers in China"), "color": "accent2", "highlightColor": "risk"},
     sources=["asml_ar_2025"])
-add("s31_loop", "m4_flywheel", "engine_flow", {
-    "title": "The money loop", "subtitle": "order backlog at the end of 2025: {{backlog.display}}", "cardW": 290, "cardH": 220,
-    "stages": [
-        {"id": "c", "label": "Chipmakers", "sub": "buy machines", "x": 420, "y": 600, "kind": "customer", "color": "accent2", "appear": 0.3, "output": "coin"},
-        {"id": "a", "label": "ASML", "sub": "sales", "x": 960, "y": 380, "kind": "bank", "color": "gold", "appear": 0.45, "output": "coin"},
-        {"id": "r", "label": "Research", "sub": "{{rd_2025.display}} a year", "x": 1500, "y": 600, "kind": "design", "color": "accent3", "appear": 0.6, "output": "blueprint"},
-        {"id": "m", "label": "Next machine", "sub": "they need it", "x": 960, "y": 850, "kind": "fab", "color": "gold", "appear": 0.75, "output": "box"}],
-    "links": [{"from": "c", "to": "a", "appear": 0.9}, {"from": "a", "to": "r", "appear": 1.0}, {"from": "r", "to": "m", "appear": 1.1}, {"from": "m", "to": "c", "appear": 1.2}],
-    "items": {"starts": [C("Chipmakers pay"), C("order again", -1.0)], "route": ["c", "a", "r", "m", "c"], "travel": 0.8, "process": 0.9}},
-    sources=["asml_ar_2025", "asml_q4_2025", "ecb_2025_avg"])
-kinetic("s32_m4t", "m4_transition", [("A machine this valuable", 58, "A machine", None, True), ("is also a weapon", 80, "weapon", "risk", False), ("Mission 5 →", 44, "Mission five", "muted", False)])
+stage("s31_loop", "m4_flywheel", {
+    "min_seconds": 32, "zones": [Z("sciencepark", -1600, 1300), FAB(1300, 6000)], "worldW": 2800,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 0.95}, {"at": C("already had"), "x": 1500, "y": 500, "zoom": 0.9, "dur": 2.4}], "drift": 0,
+    "items": [it("coins", **{"from": [500, 500], "to": [1900, 500]}, at=C("Chipmakers pay"), rate=5),
+              it("sign", x=500, y=300, text="CHIPMAKERS", at=0.2, color="#BBDEFB", size=34),
+              it("stack", x=1900, at=C("on research"), h=[[0, 40], [{"cue": "on research"}, 40], [{"cue": "on research", "offset": 2.5}, 240]], text="R&D {{rd_2025.display}}", sub="a year", color="#E1BEE7"),
+              it("litho", x=2350, at=C("makes the next"), fireAt=C("stay ahead"), text="NEXT MACHINE", scale=0.6),
+              it("arrow", **{"from": [2200, 300], "to": [700, 300]}, at=C("order again"), color="green", text="ORDER AGAIN"),
+              it("counter", x=1500, y=170, at=C("already had"), steps=[[0, 0], [{"cue": "already had"}, 0], [{"cue": "already had", "offset": 2.5}, 43.8]], prefix="$", suffix="bn", decimals=1, text="orders waiting, end of 2025")],
+    "callouts": [co("The money flows in a loop", 960, 960, C("money flows"), "gold", screen=True)]},
+    sources=["asml_ar_2025"])
+kinetic("s32_m4t", "m4_transition", [("A machine this valuable", 58, "A machine", None, True), ("is also a weapon", 80, "weapon", "risk", False)])
 
 # ====================================================================== MISSION 5
 card("s33_m5", "m5_card", "Mission 5", "Where the Machine May Go", "Export controls and the price of a gate")
-question("s34_m5q", "m5_question", "Mission 5 · Where the machine may go", "Who decides where these machines can go?",
-         "Control the machine, control the most advanced chips", "Who decides", "It matters")
+stage("s34_m5q", "m5_question", {
+    "zones": [Z("airport", night=True)], "worldW": 1920, "night": True, "min_seconds": 9.0,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.15}, {"at": C("It matters"), "x": 960, "y": 540, "zoom": 1.0, "dur": 2.4}], "drift": 0,
+    "items": [it("barrier", x=900, at=0.2, closeAt=C("allowed to go"), text="EXPORT CHECK"),
+              it("conveyor", x0=200, x1=760, y=F - 30, goods="box", label="EUV", n=3, speed=70, stopAt=C("allowed to go"))],
+    "callouts": [co("Who decides where the machines may go?", 960, 150, C("Who decides"), "gold", screen=True, size=40, until=C("It matters", -0.3)),
+                 co("Control the machine → control the chips", 960, 150, C("whoever controls"), "risk", screen=True, size=40)]})
 add("s35_export", "m5_map", "engine_map", {
     "title": "Where EUV machines can go", "subtitle": "export rules set by the Netherlands, under pressure from the United States",
     "cameras": [{"at": 0, "lon": 35, "lat": 38, "span": 300}, {"at": C("not to China"), "lon": 80, "lat": 38, "span": 170, "dur": 2.0},
@@ -338,28 +435,32 @@ add("p36_gate", "m5_gate", "engine_draw", {
     ],
     "actions": [{"kind": "point", "at": C("Close it", 1.0), "dur": 1.2, "target": [1110, 690]}],
     "scale": 0.86, "floor": 1040})
-add("s37_cost", "m5_cost", "compare", {"chapter": "Mission 5 · The price of the gate", "title": "The gate cuts both ways", "sides": [
-    {"kicker": "China, share of ASML sales", "value": "{{regions.display}} → {{china_2026.display}}", "label": "2025 → 2026 (company expectation)", "cue": "The company expects"},
-    {"kicker": "Next generation (High-NA)", "value": "{{highna_price.display}}", "label": "estimate · first one shipped to Intel, Dec 2023", "cue": "next"}]},
+stage("s37_cost", "m5_cost", {
+    "min_seconds": 37, "zones": [DUTCH(x1=1700), FAB(1700, 6000)], "worldW": 3200,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.0}, {"at": C("next generation"), "x": 2400, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
+    "items": [it("chart", x=960, y=400, w=640, h=360, at=0.3, dur=2, text="CHINA'S SHARE OF ASML SALES", pts=[0.85, 0.65], crashAt=C("twenty twenty-six")),
+              it("sign", x=960, y=700, text="2024 {{regions.china24_display}} → 2025 {{regions.display}} → 2026 {{china_2026.display}}", sub="2026: company expectation", at=C("The company expects"), color="#FFF59D", size=26),
+              it("sign", x=1500, y=300, text="CHINA BUILDS ITS OWN", at=C("racing to build"), color="#FFCDD2", size=28, hang=True, swing=True),
+              it("litho", x=2400, at=C("next generation", -0.4), fireAt=C("next generation"), text="HIGH-NA (NEXT GEN)", sub="{{highna_price.display}}", scale=0.8),
+              it("sign", x=2400, y=210, text="FIRST ONE: {{highna_intel.display}}", at=C("The first of those"), color="#BBDEFB", size=28)],
+    "callouts": [co("The gate has a price for ASML too", 960, 150, C("The gate has a price"), "white", screen=True, until=C("next generation", -0.3)),
+                 co("The gap may keep growing", 960, 150, C("gap"), "risk", screen=True, size=42)]},
     sources=["asml_ar_2025", "caixin_china", "highna_2023"])
 
 # ====================================================================== PAYOFF
-add("s38_payoff", "payoff", "engine_map", {
-    "cameras": [{"at": 0, "lon": 40, "lat": 35, "span": 300}, {"at": C("forty years"), "lon": 20, "lat": 45, "span": 150, "dur": 2.4},
-                {"at": C("small town"), "lon": 5.43, "lat": 51.6, "span": 6, "dur": 2.4}, {"at": C("drop of tin"), "lon": 5.43, "lat": 51.5, "span": 2.5, "dur": 3.0}],
-    "drift": {"lon": 0.1, "zoom": 0.006}, "tilt": [[0, 16], [30, 4]],
-    "highlights": [{"iso": "NLD", "color": "gold", "at": 0.2}],
-    "hubs": [{"id": "v", "at": LL["veldhoven"], "label": "Veldhoven", "sub": "one Dutch machine", "color": "gold", "time": 0.3},
-             {"id": "z", "at": LL["oberkochen"], "label": "Zeiss", "color": "teal", "time": C("network of suppliers")},
-             {"id": "s", "at": LL["sandiego"], "label": "Cymer", "color": "accent2", "time": C("network of suppliers", 0.3)}],
-    "routes": [{"from": LL["oberkochen"], "to": LL["veldhoven"], "at": C("network of suppliers"), "dur": 0.8, "color": "teal", "tokenShape": "box", "lift": 0.3},
-               {"from": LL["sandiego"], "to": LL["veldhoven"], "at": C("network of suppliers", 0.3), "dur": 1.0, "color": "accent2", "tokenShape": "box"},
-               {"from": LL["veldhoven"], "to": LL["hsinchu"], "at": C("customers who paid"), "dur": 1.0, "color": "gold", "tokenShape": "box"},
-               {"from": LL["veldhoven"], "to": LL["hwaseong"], "at": C("customers who paid", 0.2), "dur": 1.0, "color": "gold", "tokenShape": "box"},
-               {"from": LL["veldhoven"], "to": LL["hillsboro"], "at": C("customers who paid", 0.4), "dur": 1.0, "color": "gold", "tokenShape": "box"}],
-    "caption": "Mission complete"},
-    sources=["asml_history", "natural_earth"], assets=GEO)
-add("s39_end", "teaser", "end_card", {"words": ["Next time:", "the cables under the ocean"], "brand": "The Hidden Economics",
+stage("s38_payoff", "payoff", {
+    "min_seconds": 36, "zones": [DUTCH(x1=1800), FAB(1800, 6000, label="yellow")], "worldW": 3200,
+    "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.0}, {"at": C("small town"), "x": 960, "y": 500, "zoom": 1.1, "dur": 2.6},
+            {"at": C("drop of tin"), "x": 2450, "y": 520, "zoom": 1.05, "dur": 2.6}], "drift": 0,
+    "items": [it("sign", x=380, y=330, text="40 YEARS OF BETS", at=C("forty years"), color="#FFF59D", size=32, hang=True, swing=True),
+              it("sign", x=960, y=480, text="A NETWORK NO ONE CAN COPY", at=C("network of suppliers"), color="#C8E6C9", size=32, hang=True, swing=True),
+              it("sign", x=1540, y=330, text="CUSTOMERS WHO PAID", at=C("customers who paid"), color="#BBDEFB", size=32, hang=True, swing=True),
+              it("tinsource", x=2450, y=520, at=C("drop of tin", -0.6), laserAt=C("hit by a laser"), rate=0.9, scale=0.9)],
+    "callouts": [co("Not a single invention", 960, 960, C("not a single invention"), "white", screen=True, until=C("small town", -0.3)),
+                 co("A small Dutch town holds a key to computing", 960, 960, C("small town"), "gold", screen=True, until=C("drop of tin", -0.3)),
+                 co("It all begins as a drop of tin", 960, 960, C("drop of tin"), "green", screen=True, size=44)]},
+    sources=["asml_history", "asml_hot"])
+add("s39_end", "teaser", "end_card", {"words": ["Next time:", "another hidden link of the world economy"], "brand": "The Hidden Economics",
     "teaser": "Every figure in this film is sourced in the description", "brand_cue": {"cue": "This is The Hidden Economics"}})
 
 OUT.write_text("# GENERATED by tools/gen_asml_storyboard.py; edit the generator, not this file.\n"

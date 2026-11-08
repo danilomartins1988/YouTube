@@ -559,8 +559,7 @@ scenes:
     - kind: crane
       x: 500
       text: NEW FAB?
-      at:
-        cue: build its own
+      at: 0.2
       progress:
       - - 0
         - 0.05
@@ -570,12 +569,18 @@ scenes:
     - kind: person
       x: 1050
       pose: shrug
-      at:
-        cue: build its own
-        offset: 0.6
+      at: 0.4
       scale: 0.8
       hair: 1
       skin: 0
+      hat: '#FFC93C'
+    - kind: person
+      x: 1200
+      pose: shrug
+      at: 0.4
+      scale: 0.8
+      hair: 2
+      skin: 1
       hat: '#FFC93C'
     callouts:
     - text: Just copy it?
@@ -2183,8 +2188,7 @@ scenes:
     - kind: crane
       x: 500
       text: NEW FAB
-      at:
-        cue: spread the risk
+      at: 0.2
       progress:
       - - 0
         - 0.1
@@ -2194,9 +2198,7 @@ scenes:
     - kind: crane
       x: 1500
       text: NEW FAB
-      at:
-        cue: spread the risk
-        offset: 0.5
+      at: 0.6
       progress:
       - - 0
         - 0.05

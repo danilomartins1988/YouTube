@@ -1,6 +1,6 @@
 # Research dossier - Why Taiwan Matters So Much to the Global Economy
 
-Generated 2026-11-07T22:28:28+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-08T01:27:21+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 

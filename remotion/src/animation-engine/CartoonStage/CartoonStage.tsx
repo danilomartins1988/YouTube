@@ -441,6 +441,71 @@ const SETS: Record<string, SetFn> = {
       <path d={`M ${z.x0} ${f + 150} ${Array.from({length: Math.ceil(w / 80) + 1}, (_, k) => `L ${z.x0 + k * 80} ${f + 140 + 8 * rnd(k)}`).join(' ')} L ${z.x1} ${f + 600} L ${z.x0} ${f + 600} Z`} fill="#F2C987" stroke={OL} strokeWidth={4} />
     </g>;
   },
+  /** A Dutch town: flat green polder, a windmill turning, narrow canal-house gables, a canal, cyclists riding by. */
+  dutch: (t, z, f) => {
+    const w = z.x1 - z.x0;
+    return <g>
+      <rect x={z.x0} y={f - 200} width={w} height={200} fill="#8BD47A" />
+      {Array.from({length: Math.ceil(w / 1100)}, (_, k) => { const x = z.x0 + 300 + k * 1100, a = t * 40 + k * 20;
+        return <g key={'wm' + k} transform={`translate(${x} ${f - 200})`}>
+          <path d="M -50 0 L -30 -230 L 30 -230 L 50 0 Z" fill="#8D6E63" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          <path d="M -40 -230 L 0 -280 L 40 -230 Z" fill="#5D4037" stroke={OL} strokeWidth={4} />
+          <g transform={`translate(0 -240) rotate(${a})`}>{[0, 90, 180, 270].map((r) => <g key={r} transform={`rotate(${r})`}>
+            <rect x={-12} y={-190} width={24} height={180} fill="#FFF8E1" stroke={OL} strokeWidth={3} />
+            {[0, 1, 2, 3].map((l) => <path key={l} d={`M -12 ${-170 + l * 40} L 12 ${-170 + l * 40}`} stroke={OL} strokeWidth={2} />)}</g>)}
+            <circle r={12} fill={OL} /></g></g>; })}
+      {Array.from({length: Math.ceil(w / 120)}, (_, k) => { const x = z.x0 + k * 120, h = 200 + 60 * rnd(k + 51), c = ['#C0504D', '#8D5A3B', '#E8D5B7', '#4E6E8E', '#A0522D'][k % 5];
+        if (k % 9 === 2) return null;
+        return <g key={'ch' + k}>
+          <path d={`M ${x} ${f} L ${x} ${f - h} L ${x + 20} ${f - h} L ${x + 20} ${f - h - 20} L ${x + 40} ${f - h - 20} L ${x + 40} ${f - h - 40} L ${x + 76} ${f - h - 40} L ${x + 76} ${f - h - 20} L ${x + 96} ${f - h - 20} L ${x + 96} ${f - h} L ${x + 116} ${f - h} L ${x + 116} ${f} Z`}
+            fill={c} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          {Array.from({length: Math.floor(h / 60)}, (_, r) => [0, 1].map((c2) => <rect key={r + '-' + c2} x={x + 18 + c2 * 46} y={f - h + 24 + r * 60} width={32} height={40} rx={3} fill={K.white} stroke={OL} strokeWidth={3} />))}
+        </g>; })}
+      <rect x={z.x0} y={f} width={w} height={40} fill="#D8D2C4" stroke={OL} strokeWidth={4} />
+      <rect x={z.x0} y={f + 40} width={w} height={90} fill="#5BA3C9" stroke={OL} strokeWidth={3} />
+      {Array.from({length: Math.ceil(w / 100)}, (_, k) => <path key={'cw' + k} d={`M ${z.x0 + k * 100 + 20 * Math.sin(t + k)} ${f + 80} q 15 -8 30 0`} fill="none" stroke={K.white} strokeWidth={3} opacity={0.6} />)}
+      <rect x={z.x0} y={f + 130} width={w} height={500} fill="#C9A26A" />
+      {Array.from({length: 5}, (_, k) => { const dir = k % 2 ? -1 : 1, sp = 90 + 40 * rnd(k + 70), span = w + 400;
+        const x = dir > 0 ? z.x0 - 200 + ((t * sp + rnd(k) * span) % span) : z.x1 + 200 - ((t * sp + rnd(k) * span) % span), y = f + 190 + (k % 2) * 40, pd = t * 8 * (sp / 90);
+        return <g key={'bk' + k} transform={`translate(${x} ${y}) scale(${dir * 0.9} 0.9)`}>
+          <circle cx={-32} cy={0} r={20} fill="none" stroke={OL} strokeWidth={4} /><circle cx={32} cy={0} r={20} fill="none" stroke={OL} strokeWidth={4} />
+          <path d="M -32 0 L -6 -30 L 22 -30 L 32 0 M -6 -30 L 0 0 L 22 -30 M 22 -30 L 26 -44" fill="none" stroke={['#E53935', '#1E88E5', '#FFB300'][k % 3]} strokeWidth={5} strokeLinejoin="round" />
+          <path d={`M 0 0 L ${8 * Math.cos(pd)} ${8 * Math.sin(pd)}`} stroke={OL} strokeWidth={4} />
+          <path d={`M -4 -36 L 4 -80`} stroke={['#FF8A65', '#7BD389', '#B39DDB'][k % 3]} strokeWidth={16} strokeLinecap="round" />
+          <circle cx={6} cy={-96} r={14} fill={K.skin[k % 4]} stroke={OL} strokeWidth={3} />
+          <path d={`M 4 -50 L ${0 + 8 * Math.cos(pd)} ${-10 + 8 * Math.sin(pd)}`} stroke="#2D3E66" strokeWidth={8} strokeLinecap="round" />
+          <path d="M 4 -70 L 26 -46" stroke={K.skin[k % 4]} strokeWidth={6} strokeLinecap="round" /></g>; })}
+    </g>;
+  },
+  /** A gamer's bedroom: posters, a desk with a glowing PC tower and a big monitor showing a racing game, a bean bag. */
+  den: (t, z, f) => {
+    const w = z.x1 - z.x0, cx = (z as any).cx ?? z.x0 + w / 2;
+    const rgb = ['#FF5252', '#FFC93C', '#3DBE6B', '#4FB3F6', '#B388FF'][Math.floor(t * 2) % 5];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#3A3F6B" />
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => <rect key={'ps' + k} x={z.x0 + 60 + k * 300} y={f - 640 + 40 * rnd(k)} width={150} height={200} rx={6}
+        fill={['#FF8A65', '#4FB3F6', '#7BD389', '#F06292'][k % 4]} stroke={OL} strokeWidth={4} transform={`rotate(${(rnd(k + 3) - 0.5) * 8} ${z.x0 + 135 + k * 300} ${f - 540})`} />)}
+      <rect x={cx - 360} y={f - 200} width={720} height={26} rx={6} fill="#263238" stroke={OL} strokeWidth={4} />
+      <rect x={cx - 340} y={f - 174} width={18} height={174} fill="#263238" /><rect x={cx + 322} y={f - 174} width={18} height={174} fill="#263238" />
+      <rect x={cx - 230} y={f - 480} width={420} height={260} rx={14} fill="#111827" stroke={OL} strokeWidth={6} />
+      <clipPath id="denscr"><rect x={cx - 216} y={f - 466} width={392} height={232} rx={8} /></clipPath>
+      <g clipPath="url(#denscr)">
+        <rect x={cx - 216} y={f - 466} width={392} height={232} fill="#7FD3F7" />
+        <path d={`M ${cx - 216} ${f - 340} L ${cx + 176} ${f - 340} L ${cx + 176} ${f - 234} L ${cx - 216} ${f - 234} Z`} fill="#7BCB6B" />
+        <path d={`M ${cx - 90} ${f - 234} L ${cx - 10} ${f - 340} L ${cx + 10} ${f - 340} L ${cx + 90} ${f - 234} Z`} fill="#5B6577" />
+        {Array.from({length: 5}, (_, k) => { const u = ((t * 1.5 + k / 5) % 1); return <rect key={k} x={cx - 4 - 2 * u} y={f - 340 + 106 * u} width={8 + 4 * u} height={10 + 10 * u} fill={K.white} />; })}
+        <g transform={`translate(${cx + 30 * Math.sin(t * 1.3)} ${f - 262})`}><rect x={-36} y={-22} width={72} height={30} rx={8} fill="#E53935" stroke={OL} strokeWidth={3} />
+          <circle cx={-22} cy={10} r={9} fill={OL} /><circle cx={22} cy={10} r={9} fill={OL} /></g></g>
+      <rect x={cx - 30} y={f - 220} width={20} height={20} fill="#111827" />
+      <rect x={cx + 220} y={f - 430} width={110} height={230} rx={10} fill="#1F2937" stroke={OL} strokeWidth={5} />
+      <rect x={cx + 232} y={f - 418} width={86} height={150} rx={6} fill="#0F172A" stroke={rgb} strokeWidth={4} />
+      {[0, 1, 2].map((k) => <circle key={k} cx={cx + 275} cy={f - 380 + k * 45} r={16} fill="none" stroke={rgb} strokeWidth={4} transform={`rotate(${t * 300} ${cx + 275} ${f - 380 + k * 45})`} strokeDasharray="10 8" />)}
+      <rect x={cx - 120} y={f - 220} width={200} height={20} rx={6} fill="#455A64" stroke={OL} strokeWidth={3} />
+      <rect x={z.x0} y={f} width={w} height={600} fill="#6D4C41" />
+      {Array.from({length: Math.ceil(w / 80)}, (_, k) => <path key={'fb' + k} d={`M ${z.x0 + k * 80} ${f} l 0 600`} stroke={OL} strokeWidth={2} opacity={0.2} />)}
+      <ellipse cx={cx - 520} cy={f - 40} rx={120} ry={70} fill="#FF7043" stroke={OL} strokeWidth={5} />
+    </g>;
+  },
   /** Plain studio-like sky with rolling hills (fallback / neutral). */
   hills: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -450,7 +515,7 @@ const SETS: Record<string, SetFn> = {
     </g>;
   },
 };
-const INDOOR = new Set(['cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set(['den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -964,13 +1029,14 @@ const wafer: ItemFn = (a, {t}, i) => {
     dies.push(<rect key={k} x={dx - cell * 0.42} y={dy - cell * 0.42} width={cell * 0.84} height={cell * 0.84} rx={3}
       fill={on ? (bad ? '#FF7B7B' : '#7DF29A') : 'url(#wafg)'} stroke={OL} strokeWidth={2} opacity={on ? 1 : 0.85} />);
   }
-  return <g key={'wf' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${(a.spin ?? 0) * t})`}>
+  return <g key={'wf' + i} transform={`translate(${x} ${y}) scale(${s})`}><g transform={`rotate(${(a.spin ?? 0) * t})`}>
     <defs><linearGradient id="wafg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="#B39DDB" /><stop offset="35%" stopColor="#80DEEA" />
       <stop offset="65%" stopColor="#FFF59D" /><stop offset="100%" stopColor="#F48FB1" /></linearGradient></defs>
     <circle r={r + 8} fill="#CFD8DC" stroke={OL} strokeWidth={6} />
     <path d={`M ${-r * 0.3} ${r + 6} L ${r * 0.3} ${r + 6}`} stroke={OL} strokeWidth={8} />
     {dies}
     <path d={`M ${-r * 0.7} ${-r * 0.3} Q ${-r * 0.2} ${-r * 0.9} ${r * 0.5} ${-r * 0.7}`} fill="none" stroke={K.white} strokeWidth={10} opacity={0.5 + 0.3 * Math.sin(t * 2)} strokeLinecap="round" />
+    </g>
     {a.text && <T x={0} y={r + 60} s={30}>{a.text}</T>}
   </g>;
 };
@@ -1261,9 +1327,85 @@ const passport: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** EUV light source: tin droplets fall; a pre-pulse flattens one, the main pulse turns it into a bright plasma;
+ * a collector mirror gathers the violet light (rate = droplets shown per second, slowed down for the eye). */
+const tinsource: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0) return null;
+  const st = a.at ?? 0, per = 1 / (a.rate ?? 1.2), u = ((t - st) % per) / per, on = t >= (a.laserAt ?? st), pl = a.plasmaAt === undefined || t >= a.plasmaAt;
+  const dy = lerp(-260, 0, Math.min(1, u / 0.55)), flat = on && u > 0.55 ? Math.min(1, (u - 0.55) / 0.12) : 0, boom = on && pl && u > 0.7 ? 1 - (u - 0.7) / 0.3 : 0;
+  return <g key={'ts' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-360} y={-330} width={720} height={560} rx={30} fill="#1B2438" stroke={OL} strokeWidth={6} />
+    <path d="M -200 160 Q 0 0 200 160" fill="none" stroke="#B0BEC5" strokeWidth={22} strokeLinecap="round" />
+    <path d="M -200 160 Q 0 0 200 160" fill="none" stroke={K.white} strokeWidth={6} opacity={0.6} />
+    <T x={0} y={205} s={22} c="#B0BEC5">COLLECTOR MIRROR</T>
+    <rect x={-30} y={-320} width={60} height={50} rx={8} fill="#78909C" stroke={OL} strokeWidth={3} />
+    <T x={0} y={-282} s={16} c={K.white}>TIN</T>
+    {u < 0.7 && <ellipse cx={0} cy={dy} rx={12 + 26 * flat} ry={12 - 8 * flat} fill="#CFD8DC" stroke={OL} strokeWidth={3} />}
+    {[0.25, 0.5].map((o, k) => { const uu = (u + o) % 1; if (uu > 0.55) return null; return <circle key={k} cx={0} cy={lerp(-260, 0, uu / 0.55)} r={10} fill="#CFD8DC" stroke={OL} strokeWidth={2} opacity={0.8} />; })}
+    {on && u > 0.5 && u < 0.6 && <path d="M -340 0 L -20 0" stroke="#FF5252" strokeWidth={8} opacity={0.8} />}
+    {on && u > 0.66 && u < 0.76 && <path d="M -340 0 L -20 0" stroke="#FF1744" strokeWidth={22} />}
+    {boom > 0 && <g><circle r={30 + 90 * (1 - boom)} fill="#E1BEE7" opacity={boom} /><circle r={20 + 40 * (1 - boom)} fill={K.white} opacity={boom} />
+      {Array.from({length: 10}, (_, k) => <path key={k} d={`M 0 0 L ${Math.cos(k * 0.63) * (90 + 120 * (1 - boom))} ${Math.sin(k * 0.63) * (90 + 120 * (1 - boom))}`} stroke="#B388FF" strokeWidth={6} opacity={boom} />)}</g>}
+    {on && pl && <path d={`M -150 120 L 0 0 L 150 120 M 0 0 L 0 -200`} stroke="#B388FF" strokeWidth={4} opacity={0.3 + 0.3 * Math.sin(t * 20)} />}
+    <T x={-200} y={-30} s={20} c="#FF8A80" a="middle">{on ? 'LASER' : ''}</T>
+    {a.text && <T x={0} y={-350} s={30}>{a.text}</T>}
+  </g>;
+};
+
+/** A vacuum chamber where a violet beam bounces down a chain of mirrors onto a wafer. */
+const mirrors: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6), n = a.n ?? 6;
+  if (s <= 0) return null;
+  const pts: [number, number][] = Array.from({length: n}, (_, k) => [-300 + (k % 2) * 520 - (k % 2 ? 0 : 0), -220 + k * 80]);
+  const u = clamp(win(t, a.beamAt ?? (a.at ?? 0) + 0.5, a.dur ?? 3)) * (n - 1);
+  const path: string[] = [];
+  for (let k = 0; k <= Math.floor(u) && k < n; k++) path.push(`${k ? 'L' : 'M'} ${pts[k][0]} ${pts[k][1]}`);
+  const k0 = Math.floor(u);
+  if (k0 < n - 1) path.push(`L ${lerp(pts[k0][0], pts[k0 + 1][0], u - k0)} ${lerp(pts[k0][1], pts[k0 + 1][1], u - k0)}`);
+  return <g key={'mr' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-400} y={-300} width={800} height={600} rx={40} fill="#263238" stroke={OL} strokeWidth={6} />
+    <T x={0} y={-250} s={26} c="#90A4AE">VACUUM</T>
+    {pts.map((q, k) => <rect key={k} x={q[0] - 50} y={q[1] - 10} width={100} height={20} rx={8} fill="#CFD8DC" stroke={OL} strokeWidth={3} transform={`rotate(${k % 2 ? -20 : 20} ${q[0]} ${q[1]})`} />)}
+    <path d={path.join(' ')} fill="none" stroke="#B388FF" strokeWidth={10} strokeLinejoin="round" opacity={0.85} />
+    <ellipse cx={pts[n - 1][0]} cy={pts[n - 1][1] + 90} rx={120} ry={22} fill="url(#wafg2)" stroke={OL} strokeWidth={4} />
+    {u >= n - 1.01 && <circle cx={pts[n - 1][0]} cy={pts[n - 1][1] + 80} r={10 + 4 * Math.sin(t * 10)} fill={K.white} />}
+    <defs><linearGradient id="wafg2" x1="0" x2="1"><stop offset="0%" stopColor="#B39DDB" /><stop offset="50%" stopColor="#80DEEA" /><stop offset="100%" stopColor="#F48FB1" /></linearGradient></defs>
+  </g>;
+};
+
+/** A school bus (for size comparisons). */
+const bus: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0) return null;
+  return <g key={'bs' + i} transform={`translate(${x} ${f}) scale(${s * (a.flip ? -1 : 1)} ${s})`}>
+    <path d="M -300 -30 L -300 -230 Q -300 -250 -280 -250 L 230 -250 Q 260 -250 270 -220 L 300 -130 L 300 -30 Z" fill="#FFC107" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+    {Array.from({length: 7}, (_, k) => <rect key={k} x={-280 + k * 70} y={-230} width={56} height={60} rx={6} fill="#CFEFFF" stroke={OL} strokeWidth={3} />)}
+    <path d="M -300 -120 L 300 -120" stroke={OL} strokeWidth={4} />
+    {[-200, 200].map((dx) => <circle key={dx} cx={dx} cy={-30} r={34} fill="#333" stroke={OL} strokeWidth={4} />)}
+    {a.text && <T x={0} y={-140} s={28}>{a.text}</T>}
+  </g>;
+};
+
+/** A border barrier (export control): the boom lowers on closeAt and lifts on openAt; a sign shows the destination. */
+const barrier: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0) return null;
+  const closed = a.closeAt !== undefined && t >= a.closeAt && !(a.openAt !== undefined && t >= a.openAt);
+  const ang = closed ? lerp(-70, 0, E.outBack(win(t, a.closeAt, 0.6))) : a.openAt !== undefined && t >= a.openAt ? lerp(0, -70, E.out(win(t, a.openAt, 0.6))) : -70;
+  return <g key={'bar' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    <rect x={-40} y={-160} width={80} height={160} rx={10} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+    <circle cx={0} cy={-190} r={22} fill={closed ? K.red : K.green} stroke={OL} strokeWidth={4} />
+    <g transform={`translate(30 -120) rotate(${ang})`}>
+      <rect x={0} y={-14} width={520} height={28} rx={14} fill={K.white} stroke={OL} strokeWidth={4} />
+      {[0, 1, 2, 3, 4].map((k) => <rect key={k} x={20 + k * 100} y={-14} width={50} height={28} fill={K.red} />)}</g>
+    {a.text && <g><rect x={-130} y={-300} width={260} height={56} rx={10} fill={closed ? '#FFCDD2' : '#C8E6C9'} stroke={OL} strokeWidth={4} /><T x={0} y={-262} s={28}>{a.text}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier};
 const BACK = new Set(['tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm']);
 
 /* =============================================================================================== STAGE */

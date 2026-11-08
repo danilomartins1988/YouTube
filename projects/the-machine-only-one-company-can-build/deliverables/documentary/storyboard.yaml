@@ -3,57 +3,77 @@
 scenes:
 - id: s01_machine
   segment: h_question
-  type: engine_exploded
+  type: engine_cartoon
   params:
-    title: One machine. One company.
-    layers: &id002
-    - label: Wafer stage
-      sub: holds and moves the wafer
-      kind: substrate
-      color: teal
-      thickness: 18
-      size: 250
-    - label: Projection mirrors
-      sub: shrink the pattern
-      kind: lid
-      color: muted
-      thickness: 12
-      size: 220
-    - label: Mask (reticle)
-      sub: the chip design
-      kind: die
-      color: accent2
-      thickness: 9
-      size: 200
-    - label: Illumination optics
-      sub: shape the light
-      kind: interconnect
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+      label: yellow
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 860
+      y: 470
+      zoom: 1.35
+    - at:
+        cue: only one company
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: litho
+      x: 860
+      at: 0.2
+      fireAt: 0.8
+      text: ONE MACHINE
+      sub: prints the most advanced chips
+    - kind: person
+      x: 1350
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 1
+      skin: 0
+      suit: true
+    - kind: person
+      x: 1500
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 2
+      skin: 1
+      suit: true
+    - kind: sign
+      x: 1450
+      y: 330
+      text: ONLY ONE COMPANY
+      sub: knows how to build it
+      at:
+        cue: only one company
+      color: '#FFF59D'
+      size: 36
+    callouts:
+    - text: The most advanced chips on Earth…
+      x: 960
+      y: 150
+      at:
+        cue: most advanced chips
+      color: white
+      until:
+        cue: only one company
+        offset: -0.3
+      screen: true
+    - text: …printed by one machine
+      x: 960
+      y: 150
+      at:
+        cue: only one company
       color: gold
-      thickness: 10
-      size: 210
-    - label: EUV light source
-      sub: tin plasma makes the light
-      kind: bumps
-      color: risk
-      thickness: 14
-      size: 230
-    cx: 960
-    cy: 600
-    scale:
-    - - 0
-      - 0.5
-    - - 1.5
-      - 1.15
-    - - 7
-      - 1.35
-    yaw:
-    - - 0
-      - 0
-    - - 8
-      - 70
-    explodeAt: 99
-    assembleAt: 100
-    note: Conceptual modules · schematic
+      size: 44
+      screen: true
   sfx:
   - kind: hit
     at: 0.0
@@ -64,89 +84,102 @@ scenes:
   - font:inter
 - id: s02_town
   segment: h_stakes
-  type: engine_map
+  type: engine_cartoon
   params:
-    cameras:
+    zones:
+    - set: dutch
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    cam:
     - at: 0
-      lon: 15
-      lat: 30
-      span: 300
+      x: 960
+      y: 470
+      zoom: 1.25
     - at:
         cue: small town
-      lon: 5.43
-      lat: 51.6
-      span: 7
-      dur: 2.0
-    highlights:
-    - iso: NLD
-      color: gold
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: building
+      x: 1100
+      style: office
+      color: '#90CAF9'
+      text: ASML
       at:
         cue: That company
-    hubs:
-    - id: v
-      at: &id003
-      - 5.43
-      - 51.42
-      label: Veldhoven
-      sub: '{{euv_price.display}} per machine'
-      color: gold
-      time:
+      scale: 0.9
+    - kind: stack
+      x: 600
+      at:
         cue: Each machine
-    tilt:
-    - - 0
-      - 10
-    - - 6
-      - 0
-    caption: Real location (Natural Earth, public domain)
+      h:
+      - - 0
+        - 40
+      - - cue: Each machine
+        - 40
+      - - cue: Each machine
+          offset: 2.5
+        - 300
+      text: '{{euv_price.display}}'
+      sub: per machine
+      color: gold
+    - kind: sign
+      x: 1550
+      y: 640
+      text: VELDHOVEN
+      sub: the Netherlands
+      post: true
+      at:
+        cue: small town
+      color: '#FFE0B2'
+      size: 30
+    callouts:
+    - text: That company exists
+      x: 960
+      y: 150
+      at:
+        cue: That company
+      color: white
+      until:
+        cue: Each machine
+        offset: -0.3
+      screen: true
+    - text: '{{euv_price.display}} per machine'
+      x: 960
+      y: 150
+      at:
+        cue: Each machine
+      color: gold
+      until:
+        cue: small town
+        offset: -0.3
+      size: 44
+      screen: true
+    - text: …from a small Dutch town
+      x: 960
+      y: 150
+      at:
+        cue: small town
+      color: white
+      size: 44
+      screen: true
   sources:
   - reuters_explainer
   - asml_history
-  - natural_earth
-  assets:
-  - geo:remotion_world
-  - font:inter
-- id: s03_missions
-  segment: h_missions
-  type: kinetic_text
-  params:
-    align: center
-    lines:
-    - text: 'Today: five missions'
-      size: 64
-      cue: five missions
-      color: accent
-    - text: 1 · What the machine actually does
-      size: 40
-      cue: what this machine
-      style: body
-    - text: 2 · How one company ended up alone
-      size: 40
-      cue: ended up alone
-      style: body
-    - text: 3 · Who helps build it
-      size: 40
-      cue: who helps
-      style: body
-    - text: 4 · How it makes money
-      size: 40
-      cue: makes money
-      style: body
-    - text: 5 · Where it is allowed to go
-      size: 40
-      cue: allowed to go
-      color: risk
-      style: body
-    chapter: Five missions
   assets:
   - font:inter
 - id: s04_m1
   segment: m1_card
   type: act_title
   params:
-    number: Mission 1
+    number: ''
     title: What the Machine Does
     subtitle: Printing chips with light
-    min_seconds: 3.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -155,31 +188,64 @@ scenes:
   - font:inter
 - id: s05_m1q
   segment: m1_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 1 · What the machine does
-    lines:
-    - text: THE QUESTION
-      size: 34
-      style: body
-      color: muted
-      cue: What does
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    min_seconds: 9.0
+    cam:
+    - at: 0
+      x: 960
+      y: 470
+      zoom: 1.25
+    - at:
+        cue: every phone
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: wafer
+      x: 960
+      y: 420
+      r: 180
+      at: 0.2
+      spin: 6
+    - kind: device
+      type: phone
+      x: 420
+      y: 760
+      at:
+        cue: every phone
+      scale: 0.7
+    - kind: device
+      type: laptop
+      x: 760
+      y: 820
+      at:
+        cue: every laptop
+      scale: 0.7
+    - kind: device
+      type: server
+      x: 1450
+      y: 860
+      at:
+        cue: AI data center
+      text: AI DATA CENTER
+      scale: 0.8
+    callouts:
     - text: What does this machine actually do?
-      size: 64
-      color: accent
-      cue: What does
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: Every phone, laptop and AI data center depends on it
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
+      x: 960
+      y: 150
+      at:
+        cue: What does
+      color: gold
+      size: 42
+      screen: true
   assets:
   - font:inter
 - id: p06_draw
@@ -292,166 +358,177 @@ scenes:
   - font:inter
 - id: s07_shrink
   segment: m1_shrink
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    lines:
-    - text: You can't print details much smaller than the light
-      size: 46
-      cue: The catch
-      style: body
-    - text: Smaller details = more transistors per chip
-      size: 50
-      cue: more transistors
-      color: accent
-    - text: faster · cheaper · more efficient
-      size: 44
-      cue: faster
-      style: body
-    - text: 'Needed: much shorter wavelength'
-      size: 58
-      cue: much shorter
-      color: accent2
-    chapter: Mission 1 · The catch
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 960
+      y: 500
+      zoom: 1.1
+    - at:
+        cue: So to keep
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: wafer
+      x: 560
+      y: 430
+      r: 190
+      at: 0.3
+      n: 6
+      text: BIGGER DETAILS
+    - kind: wafer
+      x: 1360
+      y: 430
+      r: 190
+      at:
+        cue: smaller details
+      n: 16
+      text: SMALLER DETAILS = MORE TRANSISTORS
+    - kind: arrow
+      from:
+      - 800
+      - 430
+      to:
+      - 1120
+      - 430
+      at:
+        cue: smaller details
+      color: green
+    - kind: sign
+      x: 960
+      y: 780
+      text: 'NEEDED: SHORTER-WAVELENGTH LIGHT'
+      at:
+        cue: So to keep
+      color: '#E1BEE7'
+      size: 32
+    callouts:
+    - text: You can't print much smaller than your light
+      x: 960
+      y: 150
+      at:
+        cue: The catch
+      color: risk
+      until:
+        cue: smaller details
+        offset: -0.3
+      screen: true
+    - text: Smaller → faster, cheaper, more efficient
+      x: 960
+      y: 150
+      at:
+        cue: smaller details
+      color: green
+      screen: true
   assets:
   - font:inter
 - id: s08_light
   segment: m1_light
-  type: engine_draw
+  type: engine_cartoon
   params:
-    title: Making light that nature doesn't
-    subtitle: '{{droplets.nm_display}} extreme ultraviolet'
-    presenter: false
-    studio: false
-    push: 0.0028
-    draw_start:
-      cue: ASML's answer
-    speed: 1400
-    strokes:
-    - d: M 420 260 L 1500 260
-      color: accent2
-      width: 3
-      start:
-        cue: ASML's answer
-      flow: 180
-      label:
-        text: WAVELENGTH {{droplets.nm_display}}
-        x: 960
-        y: 240
-        size: 30
-        color: accent2
-        anchor: middle
-      kind: stroke
-    - d: M 420 540 L 900 540
-      color: border
-      width: 3
-      start:
-        cue: makes its own
-      flow: 140
-      kind: stroke
-    - d: M 413 540 A 7 7 0 1 0 427 540 A 7 7 0 1 0 413 540 M 465 540 A 7 7 0 1 0 479 540 A 7 7 0 1 0 465 540 M 517 540 A 7 7 0 1 0 531 540 A 7 7 0 1 0 517 540 M 569 540 A 7 7 0 1 0 583 540 A 7 7 0 1 0 569
-        540 M 621 540 A 7 7 0 1 0 635 540 A 7 7 0 1 0 621 540 M 673 540 A 7 7 0 1 0 687 540 A 7 7 0 1 0 673 540 M 725 540 A 7 7 0 1 0 739 540 A 7 7 0 1 0 725 540 M 777 540 A 7 7 0 1 0 791 540 A 7 7 0 1
-        0 777 540 M 829 540 A 7 7 0 1 0 843 540 A 7 7 0 1 0 829 540
-      color: muted
-      width: 4
-      start:
-        cue: tiny drops
-      label:
-        text: MOLTEN TIN · {{droplets.display}}
-        x: 420
-        y: 490
-        size: 28
-        color: muted
-        anchor: start
-      kind: stroke
-    - d: M 920 900 L 920 560
-      color: accent2
-      width: 6
-      flow: 260
-      start:
+    min_seconds: 48
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+      label: yellow
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.0
+    - at:
         cue: A laser flattens
-      label:
-        text: LASER PRE-PULSE
-        x: 895
-        y: 880
-        size: 26
-        color: accent2
-        anchor: end
-      kind: stroke
-    - d: M 894 540 A 26 9 0 1 0 946 540 A 26 9 0 1 0 894 540
-      color: ink
-      width: 4
-      start:
-        cue: each drop
-      kind: stroke
-    - d: M 1010 900 L 930 560
-      color: risk
-      width: 9
-      flow: 320
-      start:
-        cue: more powerful pulse
-      label:
-        text: MAIN PULSE
-        x: 1035
-        y: 900
-        size: 26
-        color: risk
-        anchor: start
-      kind: stroke
-    - d: M 920 470 L 920 400 M 920 610 L 920 680 M 850 540 L 780 540 M 990 540 L 1060 540 M 870 490 L 830 450 M 970 590 L 1010 630 M 970 490 L 1010 450 M 870 590 L 830 630
-      color: gold
-      width: 6
-      pulse: true
-      start:
-        cue: plasma
-      label:
-        text: PLASMA → EUV LIGHT
-        x: 920
-        y: 370
-        size: 30
-        color: gold
-        anchor: middle
-      kind: stroke
-    - d: M 760 330 Q 640 540 760 750
-      color: teal
-      width: 8
-      start:
+      x: 960
+      y: 480
+      zoom: 1.15
+      dur: 2.4
+    - at:
         cue: special mirror
-      label:
-        text: COLLECTOR MIRROR
-        x: 640
-        y: 800
-        size: 26
-        color: teal
-        anchor: middle
-      kind: stroke
-    - d: M 930 520 L 1560 430 M 930 560 L 1560 650 M 1560 430 L 1700 540 L 1560 650
+      x: 960
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: tinsource
+      x: 960
+      y: 520
+      at:
+        cue: makes its own
+        offset: -0.5
+      laserAt:
+        cue: A laser flattens
+      plasmaAt:
+        cue: more powerful pulse
+      rate: 0.9
+      text: INSIDE THE LIGHT SOURCE (slowed down)
+    - kind: sign
+      x: 330
+      y: 330
+      text: '{{droplets.display}}'
+      sub: tin drops (real speed)
+      at:
+        cue: tiny drops
+      color: '#FFF59D'
+      size: 34
+    - kind: sign
+      x: 1600
+      y: 330
+      text: HOTTER THAN THE SUN'S SURFACE
+      at:
+        cue: hotter than
+      color: '#FFCDD2'
+      size: 26
+    callouts:
+    - text: 'Extreme ultraviolet: {{droplets.nm_display}}'
+      x: 960
+      y: 150
+      at:
+        cue: ASML's answer
       color: gold
-      width: 4
-      flow: 220
-      start:
-        cue: sends it
-      label:
-        text: INTO THE MACHINE →
-        x: 1640
-        y: 400
-        size: 26
-        color: gold
-        anchor: middle
-      kind: stroke
-    - d: M 420 960 L 1700 960
-      color: border
-      width: 3
-      start:
+      until:
+        cue: Nothing on Earth
+        offset: -0.2
+      size: 42
+      screen: true
+    - text: Nothing on Earth makes it naturally
+      x: 960
+      y: 150
+      at:
+        cue: Nothing on Earth
+      color: white
+      until:
+        cue: tiny drops
+        offset: -0.3
+      screen: true
+    - text: Molten tin, laser, plasma, light
+      x: 960
+      y: 150
+      at:
+        cue: tiny drops
+      color: white
+      until:
         cue: again and again
-      label:
-        text: REPEATED NONSTOP, FOR HOURS
-        x: 1060
-        y: 1010
-        size: 26
-        color: muted
-        anchor: middle
-      kind: stroke
+        offset: -0.3
+      screen: true
+    - text: Again and again, for hours
+      x: 960
+      y: 150
+      at:
+        cue: again and again
+      color: green
+      screen: true
   sources:
   - asml_hot
   - asml_ar_2025
@@ -459,68 +536,47 @@ scenes:
   - font:inter
 - id: s09_mirrors
   segment: m1_mirrors
-  type: engine_draw
+  type: engine_cartoon
   params:
-    title: Mirrors, in a vacuum
-    presenter: false
-    studio: false
-    push: 0.006
-    draw_start:
-      cue: absorbed
-    speed: 1600
-    strokes:
-    - d: M 260 300 L 1660 300 L 1660 920 L 260 920 Z
-      color: border
-      width: 4
-      dash: 14 10
-      flow: 120
-      start:
-        cue: absorbed
-      label:
-        text: VACUUM CHAMBER
-        x: 300
-        y: 345
-        size: 26
-        color: muted
-        anchor: start
-      kind: box
-    - d: M 470 800 Q 520 770 570 800 M 770 410 Q 820 440 870 410 M 1070 800 Q 1120 770 1170 800 M 1370 410 Q 1420 440 1470 410
-      color: teal
-      width: 7
-      pulse: true
-      start:
-        cue: ultra smooth
-      label:
-        text: MIRRORS
-        x: 820
-        y: 380
-        size: 26
-        color: teal
-        anchor: middle
-      kind: stroke
-    - d: M 300 600 L 520 790 L 820 420 L 1120 790 L 1420 420 L 1560 760
-      color: gold
-      width: 5
-      flow: 300
-      start:
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 960
+      y: 500
+      zoom: 1.05
+    drift: 0
+    items:
+    - kind: mirrors
+      x: 960
+      y: 500
+      at: 0.2
+      beamAt:
         cue: bounces off
-        offset: 0.3
-      kind: stroke
-    - d: M 1470 800 A 110 26 0 1 0 1690 800 A 110 26 0 1 0 1470 800
-      color: ink
-      width: 5
-      fill: accent2
-      fillOpacity: 0.2
-      start:
-        cue: reaches the wafer
-      label:
-        text: WAFER
-        x: 1580
-        y: 870
-        size: 26
-        color: ink
-        anchor: middle
-      kind: stroke
+      dur: 3.5
+      scale: 1.0
+    callouts:
+    - text: Absorbed by almost everything, even air
+      x: 960
+      y: 150
+      at:
+        cue: absorbed
+      color: risk
+      until:
+        cue: bounces off
+        offset: -0.3
+      screen: true
+    - text: Mirrors, in a vacuum
+      x: 960
+      y: 150
+      at:
+        cue: bounces off
+      color: gold
+      size: 44
+      screen: true
   sources:
   - asml_euv
   - ieee_euv
@@ -528,23 +584,101 @@ scenes:
   - font:inter
 - id: s10_size
   segment: m1_discovery
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Mission 1 · The discovery
-    title: One machine
-    sides:
-    - kicker: Size
-      value: School bus
-      label: one machine
-      cue: school bus
-    - kicker: Weight
-      value: '{{machine_size.display}}'
-      label: per machine
-      cue: weighing
-    - kicker: To deliver one
-      value: '{{machine_size.containers_display}}'
-      label: containers + cargo planes
-      cue: shipping containers
+    min_seconds: 21
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 1900
+    - set: airport
+      x0: 1900
+      x1: 6000
+    worldW: 3600
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 0.95
+    - at:
+        cue: To deliver one
+      x: 2600
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: litho
+      x: 620
+      at: 0.2
+      fireAt: 0.5
+      text: EUV MACHINE
+      scale: 0.8
+    - kind: bus
+      x: 1400
+      at:
+        cue: school bus
+      text: SCHOOL BUS
+      scale: 0.9
+    - kind: sign
+      x: 960
+      y: 230
+      text: '{{machine_size.display}}'
+      sub: per machine
+      at:
+        cue: weighing
+      color: '#FFF59D'
+      size: 40
+    - kind: conveyor
+      x0: 2100
+      x1: 2900
+      y: 830
+      goods: box
+      label: ASML
+      n: 6
+      speed: 120
+      at:
+        cue: To deliver one
+        offset: -0.5
+    - kind: plane
+      x:
+      - - 0
+        - 2400
+      - - cue: cargo planes
+        - 2400
+      - - cue: cargo planes
+          offset: 6
+        - 4200
+      y:
+      - - 0
+        - 720
+      - - cue: cargo planes
+          offset: 6
+        - 200
+      tilt: -12
+      text: ''
+      scale: 0.8
+      at:
+        cue: cargo planes
+        offset: -1
+    callouts:
+    - text: The size of a school bus
+      x: 960
+      y: 960
+      at:
+        cue: school bus
+      color: gold
+      until:
+        cue: To deliver one
+        offset: -0.3
+      screen: true
+    - text: '{{machine_size.containers_display}} containers + cargo planes'
+      x: 960
+      y: 960
+      at:
+        cue: To deliver one
+      color: white
+      screen: true
   sources:
   - reuters_explainer
   assets:
@@ -563,20 +697,16 @@ scenes:
       size: 80
       cue: build it
       color: accent
-    - text: Mission 2 →
-      size: 44
-      cue: mission two
-      color: muted
   assets:
   - font:inter
 - id: s12_m2
   segment: m2_card
   type: act_title
   params:
-    number: Mission 2
+    number: ''
     title: How One Company Ended Up Alone
     subtitle: Forty years of bets
-    min_seconds: 3.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -585,52 +715,175 @@ scenes:
   - font:inter
 - id: s13_m2q
   segment: m2_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 2 · How one company ended up alone
-    lines:
-    - text: THE QUESTION
-      size: 34
-      style: body
-      color: muted
-      cue: How did
-    - text: How did a small Dutch company end up as the only one?
-      size: 64
-      color: accent
-      cue: How did
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: Monopolies like this usually don't last
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
+    zones:
+    - set: dutch
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    min_seconds: 9.0
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.2
+    - at:
+        cue: monopolies
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: building
+      x: 960
+      style: office
+      color: '#90CAF9'
+      text: ASML
+      at: 0.2
+      scale: 0.8
+    - kind: letters
+      x: 960
+      y: 200
+      text: THE ONLY ONE?
+      at:
+        cue: the only one
+      size: 80
+      color: gold
+    callouts:
+    - text: Monopolies like this rarely last
+      x: 960
+      y: 960
+      at:
+        cue: monopolies
+      color: white
+      screen: true
   assets:
   - font:inter
 - id: s14_origin
   segment: m2_origin
-  type: timeline
+  type: engine_cartoon
   params:
-    chapter: Mission 2 · The origin
-    title: A small joint venture in Veldhoven
-    start_year: 1980
-    end_year: 2000
-    tick_every: 5
+    min_seconds: 39
+    zones:
+    - set: dutch
+      x0: -1600
+      x1: 4600
+    worldW: 2600
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: Its early years
+      x: 1500
+      y: 520
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
     items:
-    - year: '{{founded_1984.value}}'
-      label: Philips + ASM International create ASML
-      cue: created a small
-    - year: 1985
-      label: Moves to Veldhoven · a small newcomer
-      cue: moved to Veldhoven
-    - year: '{{ipo_1995.value}}'
-      label: Independent, listed in Amsterdam + New York
-      cue: fully independent
+    - kind: calendar
+      x: 280
+      y: 300
+      at: 0.2
+      scale: 0.75
+      pages:
+      - - 0
+        - '1984'
+        - FOUNDED
+      - - cue: moved to Veldhoven
+        - '1985'
+        - VELDHOVEN
+      - - cue: fully independent
+        - '1995'
+        - INDEPENDENT
+    - kind: building
+      x: 600
+      style: office
+      color: '#B0BEC5'
+      text: PHILIPS
+      at:
+        cue: Philips
+      scale: 0.65
+    - kind: building
+      x: 1050
+      style: office
+      color: '#C5E1A5'
+      text: ASM INTERNATIONAL
+      at:
+        cue: A S M International
+      scale: 0.65
+    - kind: building
+      x: 1550
+      style: office
+      color: '#90CAF9'
+      text: ASML
+      at:
+        cue: created a small
+      scale: 0.55
+    - kind: arrow
+      from:
+      - 700
+      - 380
+      to:
+      - 1450
+      - 420
+      at:
+        cue: created a small
+      color: gold
+    - kind: tower
+      x: 2150
+      text: BIG RIVALS
+      color: '#78909C'
+      at:
+        cue: bigger, established
+      scale: 0.9
+    - kind: sign
+      x: 1550
+      y: 280
+      text: 'LISTED: AMSTERDAM + NEW YORK'
+      at:
+        cue: fully independent
+      color: '#FFF59D'
+      size: 28
+    - kind: sign
+      x: 1550
+      y: 430
+      text: 'BET: EVER-SHORTER LIGHT'
+      at:
+        cue: one idea
+      color: '#E1BEE7'
+      size: 28
+    callouts:
+    - text: '{{founded_1984.display}}: Philips + ASM International'
+      x: 960
+      y: 150
+      at:
+        cue: created a small
+      color: white
+      until:
+        cue: Its early years
+        offset: -0.3
+      screen: true
+    - text: A small, unknown newcomer
+      x: 960
+      y: 150
+      at:
+        cue: Its early years
+      color: risk
+      until:
+        cue: fully independent
+        offset: -0.3
+      screen: true
+    - text: '{{ipo_1995.display}}: independent and listed'
+      x: 960
+      y: 150
+      at:
+        cue: fully independent
+      color: gold
+      screen: true
   sources:
   - asml_history
   assets:
@@ -787,25 +1040,72 @@ scenes:
   - font:inter
 - id: s16_insurance
   segment: m2_insurance
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    lines:
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.05
+    drift: 4
+    items:
+    - kind: building
+      x: 480
+      style: office
+      color: '#B0BEC5'
+      text: CHIPMAKERS
+      at: 0.2
+      scale: 0.75
+    - kind: sign
+      x: 480
+      y: 250
+      text: NO MACHINE → ROADMAPS STALL
+      at:
+        cue: never arrived
+      color: '#FFCDD2'
+      size: 28
+    - kind: litho
+      x: 1350
+      at:
+        cue: If it did
+      fireAt:
+        cue: first in line
+      text: EUV MACHINE
+      scale: 0.7
+    - kind: person
+      x: 1000
+      pose: cheer
+      at:
+        cue: first in line
+      scale: 0.8
+      hair: 1
+      skin: 0
+      tie: true
+    callouts:
     - text: 'For the customers: insurance'
-      size: 58
-      cue: insurance
-      color: accent
-    - text: No machine → their roadmaps stall
-      size: 46
-      cue: never arrived
-      color: risk
-      style: body
+      x: 960
+      y: 150
+      at:
+        cue: insurance
+      color: gold
+      until:
+        cue: If it did
+        offset: -0.3
+      size: 44
+      screen: true
     - text: Machine arrives → first in line
-      size: 46
-      cue: first in
-      color: accent3
-      style: body
-    chapter: Mission 2 · The bet
+      x: 960
+      y: 150
+      at:
+        cue: first in line
+      color: green
+      size: 40
+      screen: true
   assets:
   - font:inter
 - id: s17_pieces
@@ -880,19 +1180,87 @@ scenes:
   - font:inter
 - id: s18_share
   segment: m2_discovery
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Mission 2 · The discovery
-    title: Alone at the top
-    sides:
-    - kicker: Makers of EUV machines
-      value: '1'
-      label: ASML, in the whole world
-      cue: the only company
-    - kicker: Market value
-      value: '{{market_90.display}}'
-      label: Europe's most valuable company (Reuters)
-      cue: most valuable
+    zones:
+    - set: dutch
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.1
+    - at:
+        cue: the only company
+      x: 960
+      y: 500
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: tower
+      x: 960
+      text: ASML
+      color: '#1E7FD8'
+      growAt:
+        cue: didn't win alone
+        offset: -0.5
+      scale: 1.0
+    - kind: building
+      x: 480
+      style: office
+      color: '#B0BEC5'
+      text: CUSTOMERS
+      at:
+        cue: customers
+      scale: 0.65
+    - kind: building
+      x: 1450
+      style: office
+      color: '#C5E1A5'
+      text: SUPPLIERS
+      at:
+        cue: its suppliers
+      scale: 0.65
+    - kind: letters
+      x: 960
+      y: 120
+      text: № 1
+      at:
+        cue: the only company
+      size: 110
+      color: gold
+    callouts:
+    - text: It tied customers + suppliers to the same bet
+      x: 960
+      y: 960
+      at:
+        cue: didn't win alone
+      color: white
+      until:
+        cue: the only company
+        offset: -0.3
+      screen: true
+    - text: The only maker of EUV machines
+      x: 960
+      y: 960
+      at:
+        cue: the only company
+      color: gold
+      until:
+        cue: most valuable
+        offset: -0.3
+      screen: true
+    - text: Europe's most valuable company
+      x: 960
+      y: 960
+      at:
+        cue: most valuable
+      color: green
+      sub: Reuters
+      screen: true
   sources:
   - reuters_explainer
   - asml_euv
@@ -912,20 +1280,16 @@ scenes:
       size: 76
       cue: Who else
       color: accent
-    - text: Mission 3 →
-      size: 44
-      cue: Mission three
-      color: muted
   assets:
   - font:inter
 - id: s20_m3
   segment: m3_card
   type: act_title
   params:
-    number: Mission 3
+    number: ''
     title: Who Builds It
     subtitle: The monopoly is a network
-    min_seconds: 3.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -934,31 +1298,88 @@ scenes:
   - font:inter
 - id: s21_m3q
   segment: m3_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 3 · Who builds it
-    lines:
-    - text: THE QUESTION
-      size: 34
-      style: body
-      color: muted
-      cue: Who actually
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    min_seconds: 9.0
+    cam:
+    - at: 0
+      x: 960
+      y: 470
+      zoom: 1.2
+    - at:
+        cue: It matters
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: litho
+      x: 960
+      at: 0.2
+      fireAt: 0.6
+      text: WHO BUILDS IT?
+      scale: 0.75
+    - kind: person
+      x: 380
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 1
+      skin: 0
+      suit: true
+    - kind: person
+      x: 520
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 2
+      skin: 1
+      suit: true
+    - kind: person
+      x: 1400
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 3
+      skin: 2
+      suit: true
+    - kind: person
+      x: 1540
+      pose: stand
+      at: 0.2
+      scale: 1.0
+      hair: 4
+      skin: 3
+      suit: true
+    - kind: arm
+      x: 1750
+      at: 0.4
+    callouts:
     - text: Who actually builds this machine?
-      size: 64
-      color: accent
-      cue: Who actually
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: The monopoly is a network, not one company
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
+      x: 960
+      y: 150
+      at:
+        cue: Who actually
+      color: gold
+      until:
+        cue: It matters
+        offset: -0.3
+      size: 42
+      screen: true
+    - text: 'Not one company: a network'
+      x: 960
+      y: 150
+      at:
+        cue: It is a network
+      color: white
+      size: 42
+      screen: true
   assets:
   - font:inter
 - id: s22_inside
@@ -967,7 +1388,37 @@ scenes:
   params:
     title: Inside the machine
     subtitle: conceptual modules · schematic, not the physical layout
-    layers: *id002
+    layers:
+    - label: Wafer stage
+      sub: holds and moves the wafer
+      kind: substrate
+      color: teal
+      thickness: 18
+      size: 250
+    - label: Projection mirrors
+      sub: shrink the pattern
+      kind: lid
+      color: muted
+      thickness: 12
+      size: 220
+    - label: Mask (reticle)
+      sub: the chip design
+      kind: die
+      color: accent2
+      thickness: 9
+      size: 200
+    - label: Illumination optics
+      sub: shape the light
+      kind: interconnect
+      color: gold
+      thickness: 10
+      size: 210
+    - label: EUV light source
+      sub: tin plasma makes the light
+      kind: bumps
+      color: risk
+      thickness: 14
+      size: 230
     cx: 760
     cy: 620
     scale:
@@ -1057,14 +1508,16 @@ scenes:
         cue: San Diego
     hubs:
     - id: v
-      at: *id003
+      at: &id003
+      - 5.43
+      - 51.42
       label: Veldhoven
       sub: ASML assembly
       color: gold
       time: 0.5
       anchor: end
     - id: o
-      at: &id004
+      at: &id002
       - 10.1
       - 48.78
       label: Oberkochen
@@ -1073,7 +1526,7 @@ scenes:
       time:
         cue: Zeiss
     - id: w
-      at: &id005
+      at: &id004
       - 8.5
       - 50.55
       label: Wetzlar
@@ -1082,7 +1535,7 @@ scenes:
       time:
         cue: Wetzlar
     - id: s
-      at: &id006
+      at: &id005
       - -117.16
       - 32.72
       label: San Diego
@@ -1091,7 +1544,7 @@ scenes:
       time:
         cue: San Diego
     routes:
-    - from: *id004
+    - from: *id002
       to: *id003
       at:
         cue: mirrors come from
@@ -1102,7 +1555,7 @@ scenes:
       tokens: 6
       tokenEvery: 0.35
       lift: 0.3
-    - from: *id005
+    - from: *id004
       to: *id003
       at:
         cue: Wetzlar
@@ -1113,7 +1566,7 @@ scenes:
       tokens: 5
       tokenEvery: 0.35
       lift: 0.3
-    - from: *id006
+    - from: *id005
       to: *id003
       at:
         cue: San Diego
@@ -1134,94 +1587,141 @@ scenes:
   - font:inter
 - id: s24_ship
   segment: m3_shipping
-  type: engine_flow
+  type: engine_cartoon
   params:
-    title: Built twice
-    subtitle: assembled and tested in the Netherlands, rebuilt at the customer
-    cardW: 280
-    cardH: 230
-    stages:
-    - id: b
-      label: Build
-      sub: Veldhoven
-      x: 230
-      y: 560
-      kind: fab
-      color: gold
-      appear: 0.3
-      output: box
-    - id: t
-      label: Test
-      sub: full run-in
-      x: 595
-      y: 560
-      kind: company
-      color: accent2
-      appear: 0.45
-      output: box
-    - id: p
-      label: Take apart
-      sub: ≈ 40 containers
-      x: 960
-      y: 560
-      kind: warehouse
-      color: teal
-      appear: 0.6
-      output: box
-    - id: f
-      label: Fly
-      sub: cargo planes
-      x: 1325
-      y: 560
-      kind: company
-      color: accent2
-      appear: 0.75
-      output: box
-    - id: r
-      label: Rebuild
-      sub: customer's fab
-      x: 1690
-      y: 560
-      kind: fab
-      color: gold
-      appear: 0.9
-      output: wafer
-    links:
-    - from: b
-      to: t
-      appear: 1.0
-    - from: t
-      to: p
-      appear: 1.1
-    - from: p
-      to: f
-      appear: 1.2
-    - from: f
-      to: r
-      appear: 1.3
+    min_seconds: 20
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 1700
+    - set: airport
+      x0: 1700
+      x1: 3700
+      night: true
+    - set: fab
+      x0: 3700
+      x1: 7000
+    worldW: 4800
+    cam:
+    - at: 0
+      x: 900
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: flown to
+      x: 2700
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    - at:
+        cue: rebuilt there
+      x: 4300
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
     items:
-      starts:
-      - cue: built and tested
-      route:
-      - b
-      - t
-      - p
-      - f
-      - r
-      travel: 0.7
-      process: 1.2
-    money:
-    - from: r
-      to: b
-      starts:
-      - cue: start printing
-      - cue: start printing
-        offset: 0.3
-      - cue: start printing
-        offset: 0.6
-      travel: 1.2
-      label: PAYMENT
-      lift: 0.18
+    - kind: litho
+      x: 800
+      at: 0.2
+      fireAt:
+        cue: tested
+      text: BUILT + TESTED (NL)
+      scale: 0.75
+    - kind: conveyor
+      x0: 1150
+      x1: 1650
+      y: 830
+      goods: box
+      label: CRATE
+      n: 4
+      speed: 90
+      at:
+        cue: taken apart
+    - kind: plane
+      x:
+      - - 0
+        - 2100
+      - - cue: flown to
+        - 2100
+      - - cue: flown to
+          offset: 6
+        - 3600
+      y:
+      - - 0
+        - 700
+      - - cue: flown to
+          offset: 3
+        - 300
+      - - cue: flown to
+          offset: 6
+        - 650
+      text: ''
+      scale: 0.8
+    - kind: litho
+      x: 4300
+      at:
+        cue: rebuilt there
+        offset: -0.6
+      fireAt:
+        cue: start printing
+      text: REBUILT AT THE FAB
+      scale: 0.75
+    - kind: person
+      x: 3950
+      pose: stand
+      at: &id006
+        cue: rebuilt there
+      scale: 1.0
+      hair: 1
+      skin: 0
+      suit: true
+    - kind: person
+      x: 4650
+      pose: stand
+      at: *id006
+      scale: 1.0
+      hair: 2
+      skin: 1
+      suit: true
+    callouts:
+    - text: Built and tested in the Netherlands
+      x: 960
+      y: 150
+      at:
+        cue: built and tested
+      color: white
+      until:
+        cue: taken apart
+        offset: -0.3
+      screen: true
+    - text: …taken apart, packed into crates…
+      x: 960
+      y: 150
+      at:
+        cue: taken apart
+      color: white
+      until:
+        cue: flown to
+        offset: -0.3
+      screen: true
+    - text: …flown to the customer
+      x: 960
+      y: 150
+      at:
+        cue: flown to
+      color: gold
+      until:
+        cue: rebuilt there
+        offset: -0.3
+      screen: true
+    - text: …and rebuilt there
+      x: 960
+      y: 150
+      at:
+        cue: rebuilt there
+      color: green
+      screen: true
   sources:
   - reuters_explainer
   assets:
@@ -1236,20 +1736,16 @@ scenes:
       size: 60
       cue: So where
       style: body
-    - text: Mission 4 →
-      size: 44
-      cue: Mission four
-      color: muted
   assets:
   - font:inter
 - id: s26_m4
   segment: m4_card
   type: act_title
   params:
-    number: Mission 4
+    number: ''
     title: How It Makes Money
     subtitle: Machines, research, and a loop
-    min_seconds: 3.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -1258,31 +1754,72 @@ scenes:
   - font:inter
 - id: s27_m4q
   segment: m4_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 4 · How it makes money
-    lines:
-    - text: THE QUESTION
-      size: 34
-      style: body
-      color: muted
-      cue: How does
+    zones:
+    - set: dutch
+      x0: -1600
+      x1: 4600
+    worldW: 1920
+    min_seconds: 9.0
+    cam:
+    - at: 0
+      x: 960
+      y: 500
+      zoom: 1.2
+    - at:
+        cue: It matters
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: building
+      x: 960
+      style: office
+      color: '#90CAF9'
+      text: ASML
+      at: 0.2
+      scale: 0.8
+    - kind: coins
+      from:
+      - -100
+      - 200
+      to:
+      - 960
+      - 500
+      at: 0.5
+      rate: 4
+    - kind: coins
+      from:
+      - 2000
+      - 200
+      to:
+      - 960
+      - 500
+      at: 0.8
+      rate: 4
+    callouts:
     - text: How does ASML make money?
-      size: 64
-      color: accent
-      cue: How does
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: It sits in the middle of the AI boom
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
+      x: 960
+      y: 150
+      at:
+        cue: How does
+      color: gold
+      until:
+        cue: It matters
+        offset: -0.3
+      size: 44
+      screen: true
+    - text: In the middle of the AI boom
+      x: 960
+      y: 150
+      at:
+        cue: AI boom
+      color: white
+      size: 42
+      screen: true
   assets:
   - font:inter
 - id: p28_sales
@@ -1438,23 +1975,59 @@ scenes:
   - font:inter
 - id: s29_avg
   segment: m4_average
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Mission 4 · Per machine
-    title: What one EUV machine brings in
-    sides:
-    - kicker: EUV sales, 2025
-      value: '{{euv_sales_2025.usd_display}}'
-      label: '{{euv_sales_2025.display}} machines'
-      cue: average
-    - kicker: Average per machine
-      value: '{{euv_sales_2025.avg_display}}'
-      label: our calculation
-      cue: per machine
-    - kicker: Exchange rate used
-      value: '{{eur_usd.display}}'
-      label: ECB average rate, 2025
-      cue: converted
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 4600
+      label: yellow
+    worldW: 1920
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.05
+    drift: 4
+    items:
+    - kind: litho
+      x: 700
+      at: 0.2
+      fireAt: 0.6
+      text: ONE EUV MACHINE
+      scale: 0.8
+    - kind: stack
+      x: 1450
+      at: 0.4
+      h:
+      - - 0
+        - 40
+      - - 2.5
+        - 330
+      text: '{{euv_sales_2025.avg_display}}'
+      sub: average per machine (our calculation)
+      color: gold
+    callouts:
+    - text: '{{euv_sales_2025.avg_display}} per machine'
+      x: 960
+      y: 150
+      at:
+        cue: average
+      color: gold
+      sub: '{{euv_sales_2025.usd_display}} ÷ {{euv_sales_2025.display}} machines'
+      until:
+        cue: We show
+        offset: -0.3
+      size: 44
+      screen: true
+    - text: All figures in US dollars
+      x: 960
+      y: 150
+      at:
+        cue: We show
+      color: white
+      sub: converted at the official average rate for the year
+      screen: true
   sources:
   - asml_q4_2025_deck
   - ecb_2025_avg
@@ -1488,79 +2061,108 @@ scenes:
   - font:inter
 - id: s31_loop
   segment: m4_flywheel
-  type: engine_flow
+  type: engine_cartoon
   params:
-    title: The money loop
-    subtitle: 'order backlog at the end of 2025: {{backlog.display}}'
-    cardW: 290
-    cardH: 220
-    stages:
-    - id: c
-      label: Chipmakers
-      sub: buy machines
-      x: 420
-      y: 600
-      kind: customer
-      color: accent2
-      appear: 0.3
-      output: coin
-    - id: a
-      label: ASML
-      sub: sales
+    min_seconds: 32
+    zones:
+    - set: sciencepark
+      x0: -1600
+      x1: 1300
+    - set: fab
+      x0: 1300
+      x1: 6000
+    worldW: 2800
+    cam:
+    - at: 0
       x: 960
-      y: 380
-      kind: bank
-      color: gold
-      appear: 0.45
-      output: coin
-    - id: r
-      label: Research
-      sub: '{{rd_2025.display}} a year'
+      y: 520
+      zoom: 0.95
+    - at:
+        cue: already had
       x: 1500
-      y: 600
-      kind: design
-      color: accent3
-      appear: 0.6
-      output: blueprint
-    - id: m
-      label: Next machine
-      sub: they need it
-      x: 960
-      y: 850
-      kind: fab
-      color: gold
-      appear: 0.75
-      output: box
-    links:
-    - from: c
-      to: a
-      appear: 0.9
-    - from: a
-      to: r
-      appear: 1.0
-    - from: r
-      to: m
-      appear: 1.1
-    - from: m
-      to: c
-      appear: 1.2
+      y: 500
+      zoom: 0.9
+      dur: 2.4
+    drift: 0
     items:
-      starts:
-      - cue: Chipmakers pay
-      - cue: order again
-        offset: -1.0
-      route:
-      - c
-      - a
-      - r
-      - m
-      - c
-      travel: 0.8
-      process: 0.9
+    - kind: coins
+      from:
+      - 500
+      - 500
+      to:
+      - 1900
+      - 500
+      at:
+        cue: Chipmakers pay
+      rate: 5
+    - kind: sign
+      x: 500
+      y: 300
+      text: CHIPMAKERS
+      at: 0.2
+      color: '#BBDEFB'
+      size: 34
+    - kind: stack
+      x: 1900
+      at:
+        cue: on research
+      h:
+      - - 0
+        - 40
+      - - cue: on research
+        - 40
+      - - cue: on research
+          offset: 2.5
+        - 240
+      text: R&D {{rd_2025.display}}
+      sub: a year
+      color: '#E1BEE7'
+    - kind: litho
+      x: 2350
+      at:
+        cue: makes the next
+      fireAt:
+        cue: stay ahead
+      text: NEXT MACHINE
+      scale: 0.6
+    - kind: arrow
+      from:
+      - 2200
+      - 300
+      to:
+      - 700
+      - 300
+      at:
+        cue: order again
+      color: green
+      text: ORDER AGAIN
+    - kind: counter
+      x: 1500
+      y: 170
+      at:
+        cue: already had
+      steps:
+      - - 0
+        - 0
+      - - cue: already had
+        - 0
+      - - cue: already had
+          offset: 2.5
+        - 43.8
+      prefix: $
+      suffix: bn
+      decimals: 1
+      text: orders waiting, end of 2025
+    callouts:
+    - text: The money flows in a loop
+      x: 960
+      y: 960
+      at:
+        cue: money flows
+      color: gold
+      screen: true
   sources:
   - asml_ar_2025
-  - asml_q4_2025
-  - ecb_2025_avg
   assets:
   - font:inter
 - id: s32_m4t
@@ -1577,20 +2179,16 @@ scenes:
       size: 80
       cue: weapon
       color: risk
-    - text: Mission 5 →
-      size: 44
-      cue: Mission five
-      color: muted
   assets:
   - font:inter
 - id: s33_m5
   segment: m5_card
   type: act_title
   params:
-    number: Mission 5
+    number: ''
     title: Where the Machine May Go
     subtitle: Export controls and the price of a gate
-    min_seconds: 3.0
+    min_seconds: 5.4
   sfx:
   - kind: hit
     at: 0.1
@@ -1599,31 +2197,65 @@ scenes:
   - font:inter
 - id: s34_m5q
   segment: m5_question
-  type: kinetic_text
+  type: engine_cartoon
   params:
-    align: center
-    chapter: Mission 5 · Where the machine may go
-    lines:
-    - text: THE QUESTION
-      size: 34
-      style: body
-      color: muted
-      cue: Who decides
-    - text: Who decides where these machines can go?
-      size: 64
-      color: accent
-      cue: Who decides
-      offset: 0.4
-    - text: WHY IT MATTERS
-      size: 34
-      style: body
-      color: muted
-      cue: It matters
-    - text: Control the machine, control the most advanced chips
-      size: 48
-      style: body
-      cue: It matters
-      offset: 0.4
+    zones:
+    - set: airport
+      x0: -1600
+      x1: 4600
+      night: true
+    worldW: 1920
+    night: true
+    min_seconds: 9.0
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.15
+    - at:
+        cue: It matters
+      x: 960
+      y: 540
+      zoom: 1.0
+      dur: 2.4
+    drift: 0
+    items:
+    - kind: barrier
+      x: 900
+      at: 0.2
+      closeAt:
+        cue: allowed to go
+      text: EXPORT CHECK
+    - kind: conveyor
+      x0: 200
+      x1: 760
+      y: 830
+      goods: box
+      label: EUV
+      n: 3
+      speed: 70
+      stopAt:
+        cue: allowed to go
+    callouts:
+    - text: Who decides where the machines may go?
+      x: 960
+      y: 150
+      at:
+        cue: Who decides
+      color: gold
+      until:
+        cue: It matters
+        offset: -0.3
+      size: 40
+      screen: true
+    - text: Control the machine → control the chips
+      x: 960
+      y: 150
+      at:
+        cue: whoever controls
+      color: risk
+      size: 40
+      screen: true
   assets:
   - font:inter
 - id: s35_export
@@ -1883,19 +2515,99 @@ scenes:
   - font:inter
 - id: s37_cost
   segment: m5_cost
-  type: compare
+  type: engine_cartoon
   params:
-    chapter: Mission 5 · The price of the gate
-    title: The gate cuts both ways
-    sides:
-    - kicker: China, share of ASML sales
-      value: '{{regions.display}} → {{china_2026.display}}'
-      label: 2025 → 2026 (company expectation)
-      cue: The company expects
-    - kicker: Next generation (High-NA)
-      value: '{{highna_price.display}}'
-      label: estimate · first one shipped to Intel, Dec 2023
-      cue: next
+    min_seconds: 37
+    zones:
+    - set: dutch
+      x0: -1600
+      x1: 1700
+    - set: fab
+      x0: 1700
+      x1: 6000
+    worldW: 3200
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: next generation
+      x: 2400
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: chart
+      x: 960
+      y: 400
+      w: 640
+      h: 360
+      at: 0.3
+      dur: 2
+      text: CHINA'S SHARE OF ASML SALES
+      pts:
+      - 0.85
+      - 0.65
+      crashAt:
+        cue: twenty twenty-six
+    - kind: sign
+      x: 960
+      y: 700
+      text: 2024 {{regions.china24_display}} → 2025 {{regions.display}} → 2026 {{china_2026.display}}
+      sub: '2026: company expectation'
+      at:
+        cue: The company expects
+      color: '#FFF59D'
+      size: 26
+    - kind: sign
+      x: 1500
+      y: 300
+      text: CHINA BUILDS ITS OWN
+      at:
+        cue: racing to build
+      color: '#FFCDD2'
+      size: 28
+      hang: true
+      swing: true
+    - kind: litho
+      x: 2400
+      at:
+        cue: next generation
+        offset: -0.4
+      fireAt:
+        cue: next generation
+      text: HIGH-NA (NEXT GEN)
+      sub: '{{highna_price.display}}'
+      scale: 0.8
+    - kind: sign
+      x: 2400
+      y: 210
+      text: 'FIRST ONE: {{highna_intel.display}}'
+      at:
+        cue: The first of those
+      color: '#BBDEFB'
+      size: 28
+    callouts:
+    - text: The gate has a price for ASML too
+      x: 960
+      y: 150
+      at:
+        cue: The gate has a price
+      color: white
+      until:
+        cue: next generation
+        offset: -0.3
+      screen: true
+    - text: The gap may keep growing
+      x: 960
+      y: 150
+      at:
+        cue: gap
+      color: risk
+      size: 42
+      screen: true
   sources:
   - asml_ar_2025
   - caixin_china
@@ -1904,109 +2616,110 @@ scenes:
   - font:inter
 - id: s38_payoff
   segment: payoff
-  type: engine_map
+  type: engine_cartoon
   params:
-    cameras:
+    min_seconds: 36
+    zones:
+    - set: dutch
+      x0: -1600
+      x1: 1800
+    - set: fab
+      x0: 1800
+      x1: 6000
+      label: yellow
+    worldW: 3200
+    cam:
     - at: 0
-      lon: 40
-      lat: 35
-      span: 300
-    - at:
-        cue: forty years
-      lon: 20
-      lat: 45
-      span: 150
-      dur: 2.4
+      x: 960
+      y: 520
+      zoom: 1.0
     - at:
         cue: small town
-      lon: 5.43
-      lat: 51.6
-      span: 6
-      dur: 2.4
+      x: 960
+      y: 500
+      zoom: 1.1
+      dur: 2.6
     - at:
         cue: drop of tin
-      lon: 5.43
-      lat: 51.5
-      span: 2.5
-      dur: 3.0
-    drift:
-      lon: 0.1
-      zoom: 0.006
-    tilt:
-    - - 0
-      - 16
-    - - 30
-      - 4
-    highlights:
-    - iso: NLD
-      color: gold
-      at: 0.2
-    hubs:
-    - id: v
-      at: *id003
-      label: Veldhoven
-      sub: one Dutch machine
-      color: gold
-      time: 0.3
-    - id: z
-      at: *id004
-      label: Zeiss
-      color: teal
-      time:
-        cue: network of suppliers
-    - id: s
-      at: *id006
-      label: Cymer
-      color: accent2
-      time:
-        cue: network of suppliers
-        offset: 0.3
-    routes:
-    - from: *id004
-      to: *id003
+      x: 2450
+      y: 520
+      zoom: 1.05
+      dur: 2.6
+    drift: 0
+    items:
+    - kind: sign
+      x: 380
+      y: 330
+      text: 40 YEARS OF BETS
+      at:
+        cue: forty years
+      color: '#FFF59D'
+      size: 32
+      hang: true
+      swing: true
+    - kind: sign
+      x: 960
+      y: 480
+      text: A NETWORK NO ONE CAN COPY
       at:
         cue: network of suppliers
-      dur: 0.8
-      color: teal
-      tokenShape: box
-      lift: 0.3
-    - from: *id006
-      to: *id003
-      at:
-        cue: network of suppliers
-        offset: 0.3
-      dur: 1.0
-      color: accent2
-      tokenShape: box
-    - from: *id003
-      to: *id007
+      color: '#C8E6C9'
+      size: 32
+      hang: true
+      swing: true
+    - kind: sign
+      x: 1540
+      y: 330
+      text: CUSTOMERS WHO PAID
       at:
         cue: customers who paid
-      dur: 1.0
-      color: gold
-      tokenShape: box
-    - from: *id003
-      to: *id008
+      color: '#BBDEFB'
+      size: 32
+      hang: true
+      swing: true
+    - kind: tinsource
+      x: 2450
+      y: 520
       at:
-        cue: customers who paid
-        offset: 0.2
-      dur: 1.0
-      color: gold
-      tokenShape: box
-    - from: *id003
-      to: *id009
+        cue: drop of tin
+        offset: -0.6
+      laserAt:
+        cue: hit by a laser
+      rate: 0.9
+      scale: 0.9
+    callouts:
+    - text: Not a single invention
+      x: 960
+      y: 960
       at:
-        cue: customers who paid
-        offset: 0.4
-      dur: 1.0
+        cue: not a single invention
+      color: white
+      until:
+        cue: small town
+        offset: -0.3
+      screen: true
+    - text: A small Dutch town holds a key to computing
+      x: 960
+      y: 960
+      at:
+        cue: small town
       color: gold
-      tokenShape: box
-    caption: Mission complete
+      until:
+        cue: drop of tin
+        offset: -0.3
+      screen: true
+    - text: It all begins as a drop of tin
+      x: 960
+      y: 960
+      at:
+        cue: drop of tin
+      color: green
+      size: 44
+      screen: true
   sources:
   - asml_history
-  - natural_earth
+  - asml_hot
   assets:
-  - geo:remotion_world
   - font:inter
 - id: s39_end
   segment: teaser
@@ -2014,7 +2727,7 @@ scenes:
   params:
     words:
     - 'Next time:'
-    - the cables under the ocean
+    - another hidden link of the world economy
     brand: The Hidden Economics
     teaser: Every figure in this film is sourced in the description
     brand_cue:

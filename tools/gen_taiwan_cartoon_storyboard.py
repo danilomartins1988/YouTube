@@ -124,8 +124,8 @@ card("s09_c2", "m2_card", "Why Chips Are So Hard to Make", "Machines, yield and 
 stage("s10_q2", "m2_question", {
     "zones": [Z("site", -1600, 1500), PARK(1500, 5000)], "worldW": 3000, "min_seconds": 9.0,
     "cam": [{"at": 0, "x": 760, "y": 540, "zoom": 1.0}, {"at": C("not be special"), "x": 1700, "y": 540, "zoom": 0.85, "dur": 2.6}], "drift": 0,
-    "items": [it("crane", x=500, text="NEW FAB?", at=C("build its own"), progress=[[0, 0.05], [12, 0.2]], scale=1.0),
-              *crowd([1050], "shrug", at=C("build its own", 0.6), hat="#FFC93C")],
+    "items": [it("crane", x=500, text="NEW FAB?", at=0.2, progress=[[0, 0.05], [12, 0.2]], scale=1.0),
+              *crowd([1050, 1200], "shrug", at=0.4, hat="#FFC93C")],
     "callouts": [co("Just copy it?", 960, 150, C("build its own"), "gold", screen=True, size=48, until=C("not be special", -0.3)),
                  co("Then Taiwan wouldn't be special", 960, 150, C("not be special"), "white", screen=True)]})
 # ---- PRESENTER B: the chip process
@@ -320,8 +320,8 @@ card("s33_c5", "m5_card", "The Race to Diversify", "Expensive, and slow")
 stage("s34_q5", "m5_question", {
     "zones": [Z("site")], "worldW": 2400, "min_seconds": 9.0,
     "cam": [{"at": 0, "x": 960, "y": 540, "zoom": 1.0}, {"at": C("expensive"), "x": 1300, "y": 520, "zoom": 0.9, "dur": 2.6}], "drift": 4,
-    "items": [it("crane", x=500, text="NEW FAB", at=C("spread the risk"), progress=[[0, 0.1], [14, 0.35]], scale=1.0),
-              it("crane", x=1500, text="NEW FAB", at=C("spread the risk", 0.5), progress=[[0, 0.05], [14, 0.3]], scale=1.0),
+    "items": [it("crane", x=500, text="NEW FAB", at=0.2, progress=[[0, 0.1], [14, 0.35]], scale=1.0),
+              it("crane", x=1500, text="NEW FAB", at=0.6, progress=[[0, 0.05], [14, 0.3]], scale=1.0),
               it("stack", x=2100, at=C("expensive"), h=[[0, 40], [{"cue": "expensive"}, 40], [{"cue": "expensive", "offset": 3}, 360]], text="$$$")],
     "callouts": [co("Spread the risk?", 960, 150, C("spread the risk"), "gold", screen=True, size=48, until=C("expensive", -0.3)),
                  co("Expensive · slow", 960, 150, C("expensive"), "risk", screen=True, size=44)]})

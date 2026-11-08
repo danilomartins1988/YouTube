@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/why-taiwan-matters-cartoon/documentary/why-taiwan-matters-cartoon--documentary.mp4 (173.5 MB) |
+| File exists | PASS | /home/user/YouTube/output/why-taiwan-matters-cartoon/documentary/why-taiwan-matters-cartoon--documentary.mp4 (207.4 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -14,7 +14,7 @@
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.1 LUFS integrated, true peak -4.2 dBFS
-- Scenes: 41; types: act_title x5, channel_intro x1, compare x4, end_card x1, engine_cartoon x13, engine_chart x4, engine_draw x5, engine_flow x2, engine_map x2, kinetic_text x4
+- Scenes: 41; types: act_title x5, channel_intro x1, compare x1, end_card x1, engine_cartoon x17, engine_chart x4, engine_draw x4, engine_flow x2, engine_map x2, kinetic_text x4
 - Average scene length: 16.9 s; act cards are music-only.
 
 ## Pipeline QC report
@@ -22,7 +22,7 @@
 # QC report: why-taiwan-matters-cartoon / documentary (long_16x9)
 
 - Runtime: **694.47 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 173.5 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 207.4 MB
 - Loudness: -16.1 LUFS integrated, true peak -4.2 dBFS
 - Errors: **0**, warnings: **41**
 - Technical QC passed: **True**

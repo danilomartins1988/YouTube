@@ -1,340 +1,276 @@
-# Documentary (target 11-13 min). Mission model: hook -> channel intro (automatic) -> five missions -> payoff -> teaser.
-# Every number comes from sources.yaml via {{placeholders}}; years are written in words. Money in US dollars
-# (ASML's euro figures converted at the ECB 2025 average, stated on screen).
-title: "The Machine Only One Company on Earth Can Build"
-logline: >-
-  Every advanced chip in the world is printed by a machine that only one company can build: ASML, from a small
-  town in the Netherlands. Five missions explain what the machine does, how one company ended up alone, who
-  builds it with them, how it makes money, and why governments now fight over where it can go.
+title: The Machine Only One Company on Earth Can Build
+logline: 'Every advanced chip in the world is printed by a machine that only one company can build: ASML, from a small town
+  in the Netherlands. The film explains what the machine does, how one company ended up alone, who builds it with them,
+  how it makes money, and why governments now fight over where it can go.'
 segments:
-  # ---------------------------------------------------------------- HOOK
-  - id: h_question
-    chapter: The machine
-    narration: >-
-      What if the most advanced chips on Earth could only be printed by one machine, and only one company knew
-      how to build it?
-    claims: [euv_only]
-
-  - id: h_stakes
-    chapter: The machine
-    narration: >-
-      That company exists. Each machine costs {{euv_price}}. And it comes from a small town in the Netherlands.
-    claims: [euv_price, founded_1984]
-
-  - id: h_missions
-    chapter: The machine
-    narration: >-
-      Today we have five missions. Find out what this machine actually does, how one company ended up alone,
-      who helps build it, how it makes money, and why governments now fight over where it is allowed to go.
-    claims: []
-    analysis: true
-    source_note: Episode roadmap.
-
-  # ---------------------------------------------------------------- MISSION 1: what the machine does
-  - id: m1_card
-    chapter: What the machine does
-    narration: ""
-    claims: []
-
-  - id: m1_question
-    chapter: What the machine does
-    narration: >-
-      Mission one. What does this machine actually do? It matters because every phone, every laptop and every AI
-      data center depends on what it prints.
-    claims: []
-    analysis: true
-    source_note: Mission question and stakes.
-
-  - id: m1_draw
-    chapter: What the machine does
-    narration: >-
-      Let me draw it. A chip is built by printing patterns onto a silicon wafer with light, a bit like a
-      projector. Light shines through a mask with the circuit design, then lenses or mirrors shrink that image
-      onto the wafer.
-    claims: []
-    analysis: true
-    source_note: General explanation of optical lithography; no figures.
-
-  - id: m1_shrink
-    chapter: What the machine does
-    narration: >-
-      The catch: you can't print details much smaller than the light you use. And smaller
-      details mean more transistors on every chip, which means faster, cheaper and more efficient computers. So
-      to keep shrinking chips, the industry needed light with a much shorter wavelength than ever before.
-    claims: []
-    analysis: true
-    source_note: General explanation of resolution and transistor density; no figures.
-
-  - id: m1_light
-    chapter: What the machine does
-    narration: >-
-      ASML's answer is extreme ultraviolet light, with a wavelength of just {{droplets.nm_spoken}}. Nothing on
-      Earth makes it naturally. So the machine makes its own. It fires tiny drops of molten tin, up to
-      {{droplets}} of them every second. A laser flattens each drop, and a second, far more powerful pulse,
-      hotter than the surface of the sun, turns it into a plasma that gives off the light. A special mirror collects that
-      light and sends it into the rest of the machine. All of this happens again and again, every second, for
-      hours, without stopping.
-    claims: [droplets]
-    source_note: '"Hotter than the surface of the sun" follows ASML''s own description of the tin plasma (asml_hot).'
-
-  - id: m1_mirrors
-    chapter: What the machine does
-    narration: >-
-      But this light is absorbed by almost everything, even air. So the whole path runs in a vacuum, and instead
-      of lenses, it bounces off a chain of ultra smooth mirrors before it reaches the wafer.
-    claims: [zeiss]
-    analysis: true
-    source_note: Physics of EUV optics (reflective, in vacuum), as described by ASML and IEEE Spectrum.
-
-  - id: m1_discovery
-    chapter: What the machine does
-    narration: >-
-      Here is the discovery. The result is a machine the size of a school bus, weighing {{machine_size}}. To
-      deliver one, ASML packs it into {{machine_size.containers_spoken}} shipping containers and flies it across the
-      world on cargo planes.
-    claims: [machine_size]
-
-  - id: m1_transition
-    chapter: What the machine does
-    narration: >-
-      So why is there only one company that can build it? That is mission two.
-    claims: []
-
-  # ---------------------------------------------------------------- MISSION 2: how one company ended up alone
-  - id: m2_card
-    chapter: How one company ended up alone
-    narration: ""
-    claims: []
-
-  - id: m2_question
-    chapter: How one company ended up alone
-    narration: >-
-      Mission two. How did a small Dutch company end up as the only one? It matters because, in a normal market,
-      monopolies like this don't last.
-    claims: []
-    analysis: true
-    source_note: Mission question.
-
-  - id: m2_origin
-    chapter: How one company ended up alone
-    narration: >-
-      The story starts {{founded_1984.mid_spoken}}, when the electronics giant Philips and a chip equipment maker
-      called A S M International created a small new company near Eindhoven. A year later it moved to Veldhoven.
-      Its early years were rough: a small, unknown newcomer in a market full of bigger, established competitors. {{ipo_1995|cap}}, it became a fully independent
-      company, listed in Amsterdam and New York, and it kept pouring money into one idea: printing with ever
-      shorter light.
-    claims: [founded_1984, ipo_1995]
-    source_note: Early struggles and Japanese competition per ASML's own history page.
-
-  - id: m2_bet
-    chapter: How one company ended up alone
-    narration: >-
-      The conflict came with extreme ultraviolet light. Making it work took decades and billions, and nobody was
-      sure it ever would. So in twenty twelve, ASML did something unusual. Its own biggest customers, Intel,
-      TSMC and Samsung, bought {{ccip_2012}} of the company and helped pay for the research.
-    claims: [ccip_2012]
-
-  - id: m2_insurance
-    chapter: How one company ended up alone
-    narration: >-
-      For them, it was
-      insurance. If the machine never arrived, their own roadmaps would stall. If it did, they would be first in
-      line.
-    claims: [ccip_2012]
-    analysis: true
-    source_note: Interpretation of the customers' motive for co-investing.
-
-  - id: m2_pieces
-    chapter: How one company ended up alone
-    narration: >-
-      Then ASML went after the missing pieces. It moved to buy Cymer, the American maker of its light source, in a
-      deal worth {{cymer_2012}}. Later it took {{zeiss}} of Carl Zeiss's chip optics business, the German company that
-      makes its mirrors. {{euv_2020|cap}}, extreme ultraviolet machines finally went into high volume
-      production.
-    claims: [cymer_2012, zeiss, euv_2020]
-
-  - id: m2_discovery
-    chapter: How one company ended up alone
-    narration: >-
-      The discovery: ASML didn't win alone. It won by tying its customers and its suppliers to the same bet.
-      Today it is the only company in the world that makes extreme ultraviolet machines, and it has become
-      {{market_90}}.
-    claims: [market_90, euv_only]
-
-  - id: m2_transition
-    chapter: How one company ended up alone
-    narration: >-
-      But a machine this complex is never built by one company. Who else is inside it? Mission three.
-    claims: []
-
-  # ---------------------------------------------------------------- MISSION 3: who builds it with them
-  - id: m3_card
-    chapter: Who builds it
-    narration: ""
-    claims: []
-
-  - id: m3_question
-    chapter: Who builds it
-    narration: >-
-      Mission three. Who actually builds this machine? It matters because the monopoly is not one company. It is
-      a network.
-    claims: []
-    analysis: true
-    source_note: Mission question.
-
-  - id: m3_inside
-    chapter: Who builds it
-    narration: >-
-      Let's open it up. At the bottom, the stage that holds the wafer and moves it with incredible precision.
-      Above it, the projection mirrors. Then the mask with the chip design. Then the optics that shape the light.
-      And feeding it all, the light source, where the tin turns into plasma.
-    claims: []
-    analysis: true
-    source_note: Schematic of the main modules of an EUV scanner; conceptual, not a physical layout.
-
-  - id: m3_map
-    chapter: Who builds it
-    narration: >-
-      Now follow the parts on a map. The mirrors come from Zeiss, in southern Germany. ASML bought
-      {{zeiss.buy_spoken}} of parts from Zeiss in twenty twenty-five alone, and Zeiss is its only supplier for
-      them. In fact, Zeiss's sites in {{zeiss_sites}} and Wetzlar are the only places where these optics can be
-      built, so their capacity limits how many machines ASML can ship. The light source is developed by Cymer,
-      in San Diego. In total, ASML works with about {{suppliers}} suppliers, and employs more than
-      {{suppliers.staff_spoken}} people. Everything comes together in Veldhoven.
-    claims: [zeiss, zeiss_sites, cymer_2012, suppliers]
-
-  - id: m3_shipping
-    chapter: Who builds it
-    narration: >-
-      Then comes the strangest part. Each machine is built and tested in the Netherlands, taken apart, packed into
-      crates, flown to the customer's fab, and rebuilt there. Only then does it start printing chips.
-    claims: [machine_size]
-    analysis: true
-    source_note: Build, test, ship and re-install sequence as reported by Reuters and Intel; payment timing is a simplification of revenue recognition on installation.
-
-  - id: m3_transition
-    chapter: Who builds it
-    narration: >-
-      So where does all that money go, and how much is there? Mission four.
-    claims: []
-
-  # ---------------------------------------------------------------- MISSION 4: how it makes money
-  - id: m4_card
-    chapter: How it makes money
-    narration: ""
-    claims: []
-
-  - id: m4_question
-    chapter: How it makes money
-    narration: >-
-      Mission four. How does ASML make money? It matters because this one company sits in the middle of the
-      whole AI boom.
-    claims: []
-    analysis: true
-    source_note: Mission question.
-
-  - id: m4_sales
-    chapter: How it makes money
-    narration: >-
-      Let me draw the numbers. In twenty twenty-five, ASML sold {{sales_2025}} worth of machines and services, up
-      {{sales_2025.growth_spoken}} in a year. It kept {{sales_2025.ni_spoken}} as profit. Extreme ultraviolet was
-      the star: {{euv_sales_2025}} machines, bringing in {{euv_sales_2025.usd_spoken}}.
-    claims: [sales_2025, euv_sales_2025]
-
-  - id: m4_average
-    chapter: How it makes money
-    narration: >-
-      That is an average of
-      {{euv_sales_2025.avg_spoken}} per machine, by our calculation. We show every figure in US dollars,
-      converted at the official average exchange rate for the year.
-    claims: [euv_sales_2025, eur_usd]
-
-  - id: m4_customers
-    chapter: How it makes money
-    narration: >-
-      And who buys them? In twenty twenty-five, customers in China made up {{regions}} of ASML's sales, none of it
-      the newest machines, because China cannot buy them. A year earlier it was {{regions.china24_spoken}}.
-      Then come Taiwan, South Korea and the United States, home to the chipmakers we met in the last episode.
-    claims: [regions, export_euv]
-
-  - id: m4_flywheel
-    chapter: How it makes money
-    narration: >-
-      Here is the discovery. The money flows in a loop. Chipmakers pay for machines. ASML spends
-      {{rd_2025}} a year on research. That research makes the next machine, which chipmakers need to stay ahead,
-      so they order again. At the end of twenty twenty-five, ASML already had {{backlog}} of orders waiting.
-    claims: [rd_2025, backlog]
-
-  - id: m4_transition
-    chapter: How it makes money
-    narration: >-
-      A machine this valuable is also a weapon. Mission five.
-    claims: []
-    analysis: true
-    source_note: Framing line.
-
-  # ---------------------------------------------------------------- MISSION 5: geopolitics
-  - id: m5_card
-    chapter: Where the machine may go
-    narration: ""
-    claims: []
-
-  - id: m5_question
-    chapter: Where the machine may go
-    narration: >-
-      Mission five. Who decides where these machines are allowed to go? It matters because whoever controls the
-      machine controls who can make the most advanced chips.
-    claims: []
-    analysis: true
-    source_note: Mission question.
-
-  - id: m5_map
-    chapter: Where the machine may go
-    narration: >-
-      Extreme ultraviolet machines flow to Taiwan, South Korea and the United States. But not to China. The Dutch
-      government has not let ASML send them there {{export_euv}}, and it has never shipped one. {{export_duv}}, the Dutch
-      government also began restricting some of the older machines, and extended the rules a year later.
-    claims: [export_euv, export_duv]
-
-  - id: m5_gate
-    chapter: Where the machine may go
-    narration: >-
-      Let me draw the gate. On one side, the supply network in Europe and the United States. On the other, the
-      buyers. Each export license is a gate. Open it, and a country gets the tools for the most advanced chips.
-      Close it, and it has to try to build its own, which could take many years.
-    claims: []
-    analysis: true
-    source_note: Conceptual diagram of export controls; no figures.
-
-  - id: m5_cost
-    chapter: Where the machine may go
-    narration: >-
-      The gate has a price for ASML too. The company expects China to fall to {{china_2026}} of its sales in
-      twenty twenty-six. And China is now racing to build its own lithography machines, while the next
-      generation of ASML's machines is estimated to cost {{highna_price}}. The first of those went to {{highna_intel}},
-      at the end of twenty twenty-three. So the gap between those who have the machine and those who don't may
-      keep growing.
-    claims: [china_2026, highna_price, highna_intel, regions]
-    source_note: Chinese efforts to build alternatives are reported by Reuters (reuters_explainer).
-
-  # ---------------------------------------------------------------- PAYOFF + TEASER
-  - id: payoff
-    chapter: Mission complete
-    narration: >-
-      So, mission complete. The machine only one company can build is not a single invention. It is forty years of
-      bets, a network of suppliers no one else can copy, and customers who paid to make it real. That is why a
-      small town in the Netherlands holds one of the most important keys to the future of computing. And the
-      smallest details on the most powerful chips in the world all begin as a drop of tin, hit by a laser,
-      inside one Dutch machine.
-    claims: [founded_1984, suppliers, ccip_2012]
-    analysis: true
-    source_note: Conclusion drawn from the sourced missions; forty years = 1984 to 2025.
-
-  - id: teaser
-    chapter: Mission complete
-    narration: >-
-      Next time on The Hidden Economics, we follow the cables at the bottom of the ocean that carry the world's
-      internet. This is The Hidden Economics.
-    claims: []
-    analysis: true
-    source_note: Teaser; the next episode's claims will be sourced in its own dossier.
+- id: h_question
+  chapter: The machine
+  narration: What if the most advanced chips on Earth could only be printed by one machine, and only one company knew how
+    to build it?
+  claims:
+  - euv_only
+- id: h_stakes
+  chapter: The machine
+  narration: That company exists. Each machine costs {{euv_price}}. And it comes from a small town in the Netherlands.
+  claims:
+  - euv_price
+  - founded_1984
+- id: m1_card
+  chapter: What the machine does
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: What the machine does
+  narration: What does this machine actually do? It matters because every phone, every laptop and every AI data center depends
+    on what it prints.
+  claims: []
+  analysis: true
+  source_note: Mission question and stakes.
+- id: m1_draw
+  chapter: What the machine does
+  narration: Let me draw it. A chip is built by printing patterns onto a silicon wafer with light, a bit like a projector.
+    Light shines through a mask with the circuit design, then lenses or mirrors shrink that image onto the wafer.
+  claims: []
+  analysis: true
+  source_note: General explanation of optical lithography; no figures.
+- id: m1_shrink
+  chapter: What the machine does
+  narration: 'The catch: you can''t print details much smaller than the light you use. And smaller details mean more transistors
+    on every chip, which means faster, cheaper and more efficient computers. So to keep shrinking chips, the industry needed
+    light with a much shorter wavelength than ever before.'
+  claims: []
+  analysis: true
+  source_note: General explanation of resolution and transistor density; no figures.
+- id: m1_light
+  chapter: What the machine does
+  narration: ASML's answer is extreme ultraviolet light, with a wavelength of just {{droplets.nm_spoken}}. Nothing on Earth
+    makes it naturally. So the machine makes its own. It fires tiny drops of molten tin, up to {{droplets}} of them every
+    second. A laser flattens each drop, and a second, far more powerful pulse, hotter than the surface of the sun, turns it
+    into a plasma that gives off the light. A special mirror collects that light and sends it into the rest of the machine.
+    All of this happens again and again, every second, for hours, without stopping.
+  claims:
+  - droplets
+  source_note: '"Hotter than the surface of the sun" follows ASML''s own description of the tin plasma (asml_hot).'
+- id: m1_mirrors
+  chapter: What the machine does
+  narration: But this light is absorbed by almost everything, even air. So the whole path runs in a vacuum, and instead of
+    lenses, it bounces off a chain of ultra smooth mirrors before it reaches the wafer.
+  claims:
+  - zeiss
+  analysis: true
+  source_note: Physics of EUV optics (reflective, in vacuum), as described by ASML and IEEE Spectrum.
+- id: m1_discovery
+  chapter: What the machine does
+  narration: The result is a machine the size of a school bus, weighing {{machine_size}}. To deliver one, ASML packs it into
+    {{machine_size.containers_spoken}} shipping containers and flies it across the world on cargo planes.
+  claims:
+  - machine_size
+- id: m1_transition
+  chapter: What the machine does
+  narration: So why is there only one company that can build it?
+  claims: []
+- id: m2_card
+  chapter: How one company ended up alone
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: How one company ended up alone
+  narration: How did a small Dutch company end up as the only one? It matters because, in a normal market, monopolies like
+    this don't last.
+  claims: []
+  analysis: true
+  source_note: Mission question.
+- id: m2_origin
+  chapter: How one company ended up alone
+  narration: 'The story starts {{founded_1984.mid_spoken}}, when the electronics giant Philips and a chip equipment maker
+    called A S M International created a small new company near Eindhoven. A year later it moved to Veldhoven. Its early years
+    were rough: a small, unknown newcomer in a market full of bigger, established competitors. {{ipo_1995|cap}}, it became
+    a fully independent company, listed in Amsterdam and New York, and it kept pouring money into one idea: printing with
+    ever shorter light.'
+  claims:
+  - founded_1984
+  - ipo_1995
+  source_note: Early struggles and Japanese competition per ASML's own history page.
+- id: m2_bet
+  chapter: How one company ended up alone
+  narration: The conflict came with extreme ultraviolet light. Making it work took decades and billions, and nobody was sure
+    it ever would. So in twenty twelve, ASML did something unusual. Its own biggest customers, Intel, TSMC and Samsung, bought
+    {{ccip_2012}} of the company and helped pay for the research.
+  claims:
+  - ccip_2012
+- id: m2_insurance
+  chapter: How one company ended up alone
+  narration: For them, it was insurance. If the machine never arrived, their own roadmaps would stall. If it did, they would
+    be first in line.
+  claims:
+  - ccip_2012
+  analysis: true
+  source_note: Interpretation of the customers' motive for co-investing.
+- id: m2_pieces
+  chapter: How one company ended up alone
+  narration: Then ASML went after the missing pieces. It moved to buy Cymer, the American maker of its light source, in a
+    deal worth {{cymer_2012}}. Later it took {{zeiss}} of Carl Zeiss's chip optics business, the German company that makes
+    its mirrors. {{euv_2020|cap}}, extreme ultraviolet machines finally went into high volume production.
+  claims:
+  - cymer_2012
+  - zeiss
+  - euv_2020
+- id: m2_discovery
+  chapter: How one company ended up alone
+  narration: In the end, ASML didn't win alone. It won by tying its customers and its suppliers to the same bet. Today it
+    is the only company in the world that makes extreme ultraviolet machines, and it has become {{market_90}}.
+  claims:
+  - market_90
+  - euv_only
+- id: m2_transition
+  chapter: How one company ended up alone
+  narration: But a machine this complex is never built by one company. Who else is inside it?
+  claims: []
+- id: m3_card
+  chapter: Who builds it
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: Who builds it
+  narration: Who actually builds this machine? It matters because the monopoly is not one company. It is a network.
+  claims: []
+  analysis: true
+  source_note: Mission question.
+- id: m3_inside
+  chapter: Who builds it
+  narration: Let's open it up. At the bottom, the stage that holds the wafer and moves it with incredible precision. Above
+    it, the projection mirrors. Then the mask with the chip design. Then the optics that shape the light. And feeding it all,
+    the light source, where the tin turns into plasma.
+  claims: []
+  analysis: true
+  source_note: Schematic of the main modules of an EUV scanner; conceptual, not a physical layout.
+- id: m3_map
+  chapter: Who builds it
+  narration: Now follow the parts on a map. The mirrors come from Zeiss, in southern Germany. ASML bought {{zeiss.buy_spoken}}
+    of parts from Zeiss in twenty twenty-five alone, and Zeiss is its only supplier for them. In fact, Zeiss's sites in {{zeiss_sites}}
+    and Wetzlar are the only places where these optics can be built, so their capacity limits how many machines ASML can ship.
+    The light source is developed by Cymer, in San Diego. In total, ASML works with about {{suppliers}} suppliers, and employs
+    more than {{suppliers.staff_spoken}} people. Everything comes together in Veldhoven.
+  claims:
+  - zeiss
+  - zeiss_sites
+  - cymer_2012
+  - suppliers
+- id: m3_shipping
+  chapter: Who builds it
+  narration: Then comes the strangest part. Each machine is built and tested in the Netherlands, taken apart, packed into
+    crates, flown to the customer's fab, and rebuilt there. Only then does it start printing chips.
+  claims:
+  - machine_size
+  analysis: true
+  source_note: Build, test, ship and re-install sequence as reported by Reuters and Intel; payment timing is a simplification
+    of revenue recognition on installation.
+- id: m3_transition
+  chapter: Who builds it
+  narration: So where does all that money go, and how much is there?
+  claims: []
+- id: m4_card
+  chapter: How it makes money
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: How it makes money
+  narration: How does ASML make money? It matters because this one company sits in the middle of the whole AI boom.
+  claims: []
+  analysis: true
+  source_note: Mission question.
+- id: m4_sales
+  chapter: How it makes money
+  narration: 'Let me draw the numbers. In twenty twenty-five, ASML sold {{sales_2025}} worth of machines and services, up
+    {{sales_2025.growth_spoken}} in a year. It kept {{sales_2025.ni_spoken}} as profit. Extreme ultraviolet was the star:
+    {{euv_sales_2025}} machines, bringing in {{euv_sales_2025.usd_spoken}}.'
+  claims:
+  - sales_2025
+  - euv_sales_2025
+- id: m4_average
+  chapter: How it makes money
+  narration: That is an average of {{euv_sales_2025.avg_spoken}} per machine, by our calculation. We show every figure in
+    US dollars, converted at the official average exchange rate for the year.
+  claims:
+  - euv_sales_2025
+  - eur_usd
+- id: m4_customers
+  chapter: How it makes money
+  narration: And who buys them? In twenty twenty-five, customers in China made up {{regions}} of ASML's sales, none of it
+    the newest machines, because China cannot buy them. A year earlier it was {{regions.china24_spoken}}. Then come Taiwan,
+    South Korea and the United States, home to the chipmakers we met in the last episode.
+  claims:
+  - regions
+  - export_euv
+- id: m4_flywheel
+  chapter: How it makes money
+  narration: The money flows in a loop. Chipmakers pay for machines. ASML spends {{rd_2025}} a year on research. That research
+    makes the next machine, which chipmakers need to stay ahead, so they order again. At the end of twenty twenty-five, ASML
+    already had {{backlog}} of orders waiting.
+  claims:
+  - rd_2025
+  - backlog
+- id: m4_transition
+  chapter: How it makes money
+  narration: A machine this valuable is also a weapon.
+  claims: []
+  analysis: true
+  source_note: Framing line.
+- id: m5_card
+  chapter: Where the machine may go
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Where the machine may go
+  narration: Who decides where these machines are allowed to go? It matters because whoever controls the machine controls
+    who can make the most advanced chips.
+  claims: []
+  analysis: true
+  source_note: Mission question.
+- id: m5_map
+  chapter: Where the machine may go
+  narration: Extreme ultraviolet machines flow to Taiwan, South Korea and the United States. But not to China. The Dutch government
+    has not let ASML send them there {{export_euv}}, and it has never shipped one. {{export_duv}}, the Dutch government also
+    began restricting some of the older machines, and extended the rules a year later.
+  claims:
+  - export_euv
+  - export_duv
+- id: m5_gate
+  chapter: Where the machine may go
+  narration: Let me draw the gate. On one side, the supply network in Europe and the United States. On the other, the buyers.
+    Each export license is a gate. Open it, and a country gets the tools for the most advanced chips. Close it, and it has
+    to try to build its own, which could take many years.
+  claims: []
+  analysis: true
+  source_note: Conceptual diagram of export controls; no figures.
+- id: m5_cost
+  chapter: Where the machine may go
+  narration: The gate has a price for ASML too. The company expects China to fall to {{china_2026}} of its sales in twenty
+    twenty-six. And China is now racing to build its own lithography machines, while the next generation of ASML's machines
+    is estimated to cost {{highna_price}}. The first of those went to {{highna_intel}}, at the end of twenty twenty-three.
+    So the gap between those who have the machine and those who don't may keep growing.
+  claims:
+  - china_2026
+  - highna_price
+  - highna_intel
+  - regions
+  source_note: Chinese efforts to build alternatives are reported by Reuters (reuters_explainer).
+- id: payoff
+  chapter: The lesson
+  narration: So, the machine only one company can build is not a single invention. It is forty years of bets, a network of
+    suppliers no one else can copy, and customers who paid to make it real. That is why a small town in the Netherlands holds
+    one of the most important keys to the future of computing. And the smallest details on the most powerful chips in the
+    world all begin as a drop of tin, hit by a laser, inside one Dutch machine.
+  claims:
+  - founded_1984
+  - suppliers
+  - ccip_2012
+  analysis: true
+  source_note: Conclusion drawn from the sourced missions; forty years = 1984 to 2025.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Teaser; the next episode's claims will be sourced in its own dossier.
