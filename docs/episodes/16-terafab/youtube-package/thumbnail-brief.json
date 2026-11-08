@@ -1,0 +1,348 @@
+{
+  "title": "Why Elon Musk Wants His Own Chip Factory",
+  "docs_dir": "docs/episodes/16-terafab",
+  "video": "output/terafab_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why would two companies that have never made a chip build the largest chip factory on Earth?",
+    "surprising_fact": "A county filing says SpaceX may spend up to $119 billion on Terafab; first phase $16.8 billion",
+    "subject": "one glowing chip",
+    "tone": "spectacle",
+    "metaphor": "buying a place in the factory queue"
+  },
+  "default": "A",
+  "slug": "why-elon-musk-wants-his-own-chip-factory",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "MUSK'S OWN",
+        "CHIP FACTORY"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "launch/cost: Tesla and SpaceX plan Terafab, their own chip factory (TechCrunch, Texas Governor)",
+      "scene": {
+        "palette": {
+          "sky0": "#04060D",
+          "sky1": "#1A1430",
+          "haze": "#FFC21A",
+          "key": "#FFE7A0",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "cleanroom",
+        "subject": {
+          "kind": "chip",
+          "x": 1400,
+          "y": 560,
+          "s": 1.0
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1400,
+            "y": 520,
+            "s": 1.0,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE7A0"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "MUSK'S OWN",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 666.7,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "CHIP FACTORY",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 757, 530), (90, 550, 890, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.092",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 35",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hidden-business-of-formula-1 (distance 0.33)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "launch/cost: Tesla and SpaceX plan Terafab, their own chip factory (TechCrunch, Texas Governor)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.601,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hidden-business-of-formula-1"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "TERAFAB",
+        "$119B?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "cost: county filing, SpaceX may spend up to $119bn across all phases (TechCrunch, May 2026)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#2A0E12",
+          "haze": "#FF4B3E",
+          "key": "#FFD1CC",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "cleanroom",
+        "subject": {
+          "kind": "chip",
+          "x": 1420,
+          "y": 560,
+          "s": 0.95
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1420,
+            "y": 520,
+            "s": 0.9,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD1CC"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "TERAFAB",
+          "x": 90,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$119B?",
+          "x": 90,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 685.7,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 372, 890, 522), (90, 558, 776, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 7.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.101",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 36",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters (distance 0.45)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "cost: county filing, SpaceX may spend up to $119bn across all phases (TechCrunch, May 2026)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.838,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T17:30:12Z",
+  "master": "output/why-elon-musk-wants-his-own-chip-factory/thumbnails/master_A.png"
+}

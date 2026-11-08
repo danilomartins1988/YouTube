@@ -1,0 +1,54 @@
+# Visual direction for why-elon-musk-wants-his-own-chip-factory (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a spectacular promise meets the fine print. Spectacle for the launch, strategy for the money, crisis for the filing.
+primary_tone: strategy
+secondary_tones:
+- spectacle
+- tech
+- crisis
+- reflective
+palette:
+  bg: '#0B0F1A'
+  bg2: '#161D2E'
+  ink: '#F3F5FA'
+  muted: '#A3ADC2'
+  land: '#27324A'
+  border: '#3D4B6B'
+  accent: '#FFC21A'
+  accent2: '#4FB3F6'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The biggest building on Earth
+  tone: spectacle
+- chapter: The bottleneck
+  tone: strategy
+- chapter: Everything under one roof
+  tone: tech
+- chapter: The price tag
+  tone: strategy
+- chapter: The fine print
+  tone: crisis
+- chapter: Owning the factory
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+segments:
+  m1_rate: spectacle
+turning_points:
+- segment: m3_county
+  cue: Hundreds of residents
+  to: crisis
+  why: the local cost of the promise
+thumbnail:
+  tone: spectacle
+  headline: []
+  idea: a glowing chip in front of a giant factory outline, with the price in gold
+requirements:
+- 'The megafab building section by section is the through-line (hook, size, payoff)'
+- A queue of customers at one chip printer (the bottleneck)
+- Data centers in orbit as satellites over the Earth (planned, labelled)
+- 'The fine print: a filing under a magnifier, NOT OBLIGATED stamp'
+- No likeness of any real person (Musk is a name in text); no logos; no smiling sun; no generic city

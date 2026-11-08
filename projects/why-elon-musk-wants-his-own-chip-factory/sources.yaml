@@ -1,0 +1,209 @@
+# Sources and claims for "Why Elon Musk Wants His Own Chip Factory" (Episode 16, chip series C3: Terafab).
+# Every claim was read on its source page on 2026-11-08 (AI fact-check; quotes in docs/episodes/16-terafab/FACT_CHECK.md).
+# Status stays source_located until a named human reviewer signs off.
+# MONEY: all amounts in US dollars as published. PLANS, TARGETS AND GOALS (capacity, terawatt, phases) are labelled as
+# plans in the narration; Musk's statements are attributed to him. No likeness of any real person is drawn.
+sources:
+  - id: thw_launch
+    title: "Elon Musk unveils $20 billion 'TeraFab' chip project to make chips, memory, and package processors all under one roof"
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/tech-industry/elon-musk-formally-launches-20-billion-terafab-chip-project
+    published: "2026-03-22"
+    accessed: "2026-11-08"
+    credit: "Tom's Hardware"
+  - id: electrek_launch
+    title: "Tesla and SpaceX announce $25B 'Terafab' chip factory — here's why it reeks of desperation (opinion and reporting)"
+    publisher: Electrek
+    url: https://electrek.co/2026/03/22/tesla-spacex-terafab-chip-factory-ai-desperation/
+    published: "2026-03-22"
+    accessed: "2026-11-08"
+    credit: "Electrek"
+  - id: tesla_q1
+    title: "Tesla Q1 2026 earnings call transcript"
+    publisher: Stock Analysis (transcript)
+    url: https://stockanalysis.com/stocks/tsla/transcripts/547944-q1-2026/
+    published: "2026-04-22"
+    accessed: "2026-11-08"
+    credit: "Tesla Q1 2026 earnings call"
+  - id: tc_119
+    title: "SpaceX may spend up to $119 billion on Terafab chip factory in Texas"
+    publisher: TechCrunch
+    url: https://techcrunch.com/2026/05/06/spacex-may-spend-up-to-119-billion-on-terafab-chip-factory-in-texas/
+    published: "2026-05-06"
+    accessed: "2026-11-08"
+    credit: "TechCrunch / Grimes County filing"
+  - id: electrek_s1
+    title: "SpaceX S-1: Tesla's Terafab and Macrohard are not a done deal"
+    publisher: Electrek
+    url: https://electrek.co/2026/05/20/spacex-s1-tesla-terafab-macrohard-not-done-deal/
+    published: "2026-05-20"
+    accessed: "2026-11-08"
+    credit: "SpaceX S-1 via Electrek"
+  - id: kbtx_tax
+    title: "Grimes County approves reinvestment zone and tax abatement for SpaceX Terafab"
+    publisher: KBTX
+    url: https://www.kbtx.com/2026/06/03/grimes-county-approves-reinvestment-zone-massive-spacex-project-still-considering-tax-breaks/
+    published: "2026-06-03"
+    accessed: "2026-11-08"
+    credit: "KBTX"
+  - id: tc_168
+    title: "Tesla and SpaceX will invest $16.8B to start building 'Terafab' chip factory in Texas"
+    publisher: TechCrunch
+    url: https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/
+    published: "2026-08-06"
+    accessed: "2026-11-08"
+    credit: "TechCrunch"
+  - id: tx_gov
+    title: "Governor Abbott announces SpaceX expansion in Grimes County"
+    publisher: Office of the Texas Governor
+    url: https://gov.texas.gov/news/post/governor-abbott-announces-spacex-expansion-in-grimes-county
+    published: "2026-08-06"
+    accessed: "2026-11-08"
+    credit: "Office of the Texas Governor"
+  - id: dezeen
+    title: "Elon Musk reveals plans for world's largest building"
+    publisher: Dezeen
+    url: https://www.dezeen.com/2026/08/10/terafab-elon-musk-spacex-tesla-largest-building/
+    published: "2026-08-10"
+    accessed: "2026-11-08"
+    credit: "Dezeen"
+  - id: thw_samsung
+    title: "Samsung inks $16.5 billion Tesla AI chip deal"
+    publisher: Tom's Hardware
+    url: https://www.tomshardware.com/tech-industry/semiconductors/samsung-inks-usd16-5-billion-tesla-ai-chip-deal-elon-musk-says-samsung-will-produce-new-a16-chips-the-strategic-importance-of-this-is-hard-to-overstate
+    published: "2025-07-28"
+    accessed: "2026-11-08"
+    credit: "Tom's Hardware"
+  - id: tsmc_capacity
+    title: "TSMC fab capacity"
+    publisher: TSMC
+    url: https://www.tsmc.com/english/dedicatedFoundry/manufacturing/fab_capacity
+    published: "2026"
+    accessed: "2026-11-08"
+    credit: "TSMC"
+  - id: tsmc_us
+    title: "TSMC intends to expand its investment in the United States to US$165 billion"
+    publisher: TSMC
+    url: https://pr.tsmc.com/english/news/3210
+    published: "2025-03-04"
+    accessed: "2026-11-08"
+    credit: "TSMC"
+claims:
+  - id: launch
+    text: "Tom's Hardware (22 Mar 2026): Musk launched TeraFab on 21 March 2026 at the defunct Seaholm Power Plant in Austin: 'We either build the TeraFab, or we don't have the chips, and we need the chips, so we build the TeraFab'; the industry's expansion rate is 'much less than we'd like'; he put global AI compute output at roughly 20 GW a year, about 2% of his companies' eventual needs; target of a terawatt of compute a year (100-200 GW on Earth, the rest in space); Tesla, SpaceX and xAI will keep buying from TSMC, Samsung and Micron, which he would like 'to expand as quickly as they can'; he gave no timeline for when TeraFab would begin producing chips."
+    spoken: about two percent
+    display: "≈ 2%"
+    fields: {tw_spoken: one terawatt, tw_display: "1 TW / year"}
+    source_ids: [thw_launch, tc_119]
+    status: source_located
+    verification_note: Musk's own estimate and target, attributed.
+
+  - id: wafers
+    text: "Electrek (22 Mar 2026): Tesla said it is targeting 2 nm process technology; Terafab is designed for an initial output of 100,000 wafer starts per month, with ambitions to scale to 1 million wafer starts per month at full capacity; it would consolidate design, lithography, fabrication, memory, advanced packaging and testing; Tesla's CFO said the full cost (est. $20-25bn) is not yet in Tesla's 2026 capex plan, which already exceeds $20bn."
+    spoken: one hundred thousand wafers a month
+    display: "100,000 / month"
+    fields: {full_spoken: one million, full_display: "1,000,000 / month", node_spoken: two nanometer}
+    source_ids: [electrek_launch]
+    status: source_located
+    verification_note: Targets, labelled as such. Tom's Hardware notes Musk did not repeat the 2 nm figure in the broadcast; the film says 'Tesla said'.
+
+  - id: tsmc_cap
+    text: "TSMC: annual capacity of the facilities managed by TSMC and its subsidiaries exceeded 17 million 12-inch equivalent wafers in 2025. Our calculation: ≈ 1.4 million a month, so 1 million wafer starts a month would be about 70% of TSMC's 2025 capacity."
+    spoken: more than seventeen million wafers
+    display: "> 17M wafers / yr"
+    fields: {month_spoken: about one point four million a month, pct_spoken: about seventy percent, pct_display: "≈ 70%"}
+    source_ids: [tsmc_capacity]
+    status: source_located
+    verification_note: TSMC figure read via its fab capacity page and 2025 annual report; the 70% is our arithmetic (Electrek makes the same comparison).
+
+  - id: suppliers
+    text: "Tom's Hardware (Jul 2025): Samsung's $16.5bn deal runs through 31 Dec 2033 to make Tesla's AI6 at its Taylor, Texas fab; Musk: 'Samsung currently makes AI4. TSMC will make AI5… initially in Taiwan and then Arizona.'"
+    spoken: sixteen and a half billion dollars
+    display: "$16.5bn"
+    source_ids: [thw_samsung]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: research_fab
+    text: "Tesla Q1 2026 call (22 Apr 2026), Musk: Tesla will build the research fab on its Giga Texas campus, 'probably a $3 billion-ish initiative, and capable of maybe a few thousand wafers per month. It's really intended to try out ideas'; 'We plan to use Intel's 14A process, which is state-of-the-art and in fact, not yet totally complete.'"
+    spoken: about three billion dollars
+    display: "≈ $3bn"
+    source_ids: [tesla_q1]
+    status: source_located
+    verification_note: Transcript read on 2026-11-08.
+
+  - id: cost
+    text: "TechCrunch (6 May 2026): a proposal on the Grimes County website says SpaceX is considering spending $55 billion, at least initially, and estimates it may spend a total of $119 billion on a multi-phase facility. Office of the Texas Governor (6 Aug 2026): the first phase represents a capital investment of more than $16.8 billion and will create 3,000 new jobs; a $30 million Texas Enterprise Fund grant."
+    spoken: sixteen point eight billion dollars
+    display: "$16.8bn"
+    fields: {initial_spoken: fifty-five billion dollars, initial_display: "$55bn", total_spoken: one hundred and nineteen billion dollars, total_display: "$119bn",
+             jobs_spoken: three thousand, grant_spoken: thirty million dollars, grant_display: "$30M"}
+    source_ids: [tc_119, tx_gov, tc_168]
+    status: source_located
+    verification_note: The $119bn is an estimate in a county filing, said as 'may spend'.
+
+  - id: size
+    text: "Dezeen (10 Aug 2026): Terafab will span over 100 million square feet (9.3 million m2), exceeding the current world's largest building by floor area, the 65 million-square-foot AvtoVAZ main assembly building in Russia. TechCrunch: Musk wrote it will be 'the largest and most valuable building on Earth by far'."
+    spoken: more than one hundred million square feet
+    display: "100M sq ft"
+    fields: {avto_spoken: sixty-five million}
+    source_ids: [dezeen, tc_168]
+    status: source_located
+    verification_note: Planned size, labelled.
+
+  - id: tax
+    text: "KBTX (3 Jun 2026): Grimes County commissioners voted 4-1 to approve a reinvestment zone and a 100% tax abatement for the Terafab project; a commissioner said the footprint would cover roughly 3% to 4% of the county. TechCrunch (Aug 2026): hundreds of residents raised concerns about tax breaks and a lack of transparency."
+    spoken: one hundred percent
+    display: "100%"
+    source_ids: [kbtx_tax, tc_168]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: s1
+    text: "SpaceX S-1 as quoted by Electrek (20 May 2026): Terafab and Macrohard 'are in the very early stages'; SpaceX and Tesla agreed 'a general framework for the future development of Terafab'; specific projects 'will be subject to separate negotiations and agreements'; 'neither Tesla nor Intel are obligated to remain a part of the project'."
+    spoken: very early stages
+    display: "'very early stages'"
+    source_ids: [electrek_s1]
+    status: source_located
+    verification_note: Quoted from the filing text reproduced by Electrek.
+
+  - id: doubts
+    text: "Electrek (opinion, 22 Mar 2026): Tesla has zero semiconductor manufacturing experience; compares the event to Battery Day 2020 (4680 cell targets missed); Musk said 80% of Terafab's compute would go to orbital AI satellites."
+    spoken: eighty percent
+    display: "80% to space"
+    source_ids: [electrek_launch]
+    status: source_located
+    verification_note: The skepticism is Electrek's opinion, attributed as such.
+
+  - id: tsmc_us
+    text: "TSMC (4 Mar 2025): TSMC's total investment in the U.S. is expected to reach US$165 billion, including plans for three new fabrication plants, two advanced packaging facilities and a major R&D team center, building on its ongoing $65 billion investment in Phoenix, Arizona."
+    spoken: one hundred and sixty-five billion dollars
+    display: "$165bn"
+    source_ids: [tsmc_us]
+    status: source_located
+    verification_note: Read via TSMC's press release.
+
+  - id: two_chips
+    text: "SpaceX (via TechCrunch, Aug 2026): Terafab 'will produce chips optimized for edge computing and inference for use in hardware like Tesla's Optimus robots and self-driving Cybercabs, along with high-power chips designed for operating SpaceX's space-based data centers'; it will house 'manufacturing, packaging, and testing of advanced logic and memory devices'. Electrek: Musk argued solar irradiance in space is roughly 5x greater than at Earth's surface, and that heat rejection in vacuum makes thermal scaling viable. Tom's Hardware: 100-200 GW a year of terrestrial chips, 'on the order of a terawatt of chips in space'."
+    spoken: about five times
+    display: "≈ 5× sunlight"
+    source_ids: [tc_168, electrek_launch, thw_launch]
+    status: source_located
+    verification_note: Musk's argument, attributed.
+
+  - id: water
+    text: "TechCrunch (6 Aug 2026): SpaceX said it is 'committing to the use of' water from the local Gibbons Creek Reservoir instead of local groundwater; the companies say the facility will employ at least 3,000 people from Grimes and nearby Brazos County."
+    spoken: Gibbons Creek Reservoir
+    display: "reservoir water"
+    source_ids: [tc_168]
+    status: source_located
+    verification_note: Read on 2026-11-08.
+
+  - id: tangle
+    text: "Electrek on the SpaceX S-1 (20 May 2026): in 2025 SpaceX obtained $144 million in goods and services from Tesla, up from $4 million in 2024; xAI purchased $506 million from Tesla in 2025, primarily Megapack batteries for its data centers; Tesla holds less than 1% of SpaceX, converted from its $2 billion xAI investment."
+    spoken: five hundred and six million dollars
+    display: "$506M"
+    fields: {spx_spoken: one hundred and forty-four million dollars, spx_then_spoken: four million, inv_spoken: two billion dollars}
+    source_ids: [electrek_s1]
+    status: source_located
+    verification_note: Figures from the S-1 related-party section as reported by Electrek.

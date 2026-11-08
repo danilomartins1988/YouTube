@@ -1,0 +1,258 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# plans and targets said to be plans; Musk's statements attributed; opinion attributed. Generic teaser.
+logline: The companies that design some of the most demanding chips in the world have never made one. Now Tesla and
+  SpaceX plan to build the largest chip factory on Earth. Why owning the factory suddenly looks worth a hundred billion
+  dollars, and what the fine print says.
+title: Why Elon Musk Wants His Own Chip Factory
+segments:
+- id: h_question
+  chapter: The biggest building on Earth
+  narration: Why would two companies that have never made a single chip plan to build the largest building on Earth,
+    just to make chips?
+  claims: []
+  analysis: true
+  source_note: Hook question; size claim from SpaceX and Dezeen; 'never made a chip' per Electrek (no semiconductor manufacturing experience).
+- id: h_stakes
+  chapter: The biggest building on Earth
+  narration: The building is called Terafab. Tesla and SpaceX say its first phase alone will cost {{cost}}. A county filing
+    says the whole project may cost up to {{cost.total_spoken}}. And the man behind it, Elon Musk, gives a simple reason.
+    We either build it, he says, or we don't have the chips.
+  claims:
+  - cost
+  - launch
+  - doubts
+- id: m1_card
+  chapter: The bottleneck
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The bottleneck
+  narration: Why can't the richest buyers in tech simply buy the chips they need?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_design
+  chapter: The bottleneck
+  narration: Tesla already designs its own chips. They are the brains of its cars and of its humanoid robot, Optimus.
+    But Tesla does not make them. Samsung makes the current one. TSMC in Taiwan will make the next one, first in Taiwan
+    and then in Arizona. And in twenty twenty-five, Samsung signed a deal worth {{suppliers}} to make the one after that
+    at its new factory in Taylor, Texas, running until the end of twenty thirty-three.
+  claims:
+  - suppliers
+- id: m1_rate
+  chapter: The bottleneck
+  narration: So why build a factory at all? Because, Musk says, his suppliers cannot grow fast enough. At the launch event
+    in Austin in March twenty twenty-six, he said the rate at which they are comfortable expanding is much less than he
+    would like. By his own estimate, everything the world produces in AI computing today is only {{launch}} of what his
+    companies will eventually need. His target is {{launch.tw_spoken}} of computing power every year.
+  claims:
+  - launch
+- id: m1_draw
+  chapter: The bottleneck
+  narration: 'Let me draw the problem. A chip designer is like a writer with a great book and no printing press. The
+    printers are very few, and every big customer is in the same queue: phone makers, AI companies, carmakers. When the
+    queue gets long, the printer decides who goes first. Musk''s answer is to buy his own printing press.'
+  claims:
+  - suppliers
+  - launch
+  analysis: true
+  source_note: Analogy for the foundry model and supply queue; no figures.
+- id: m1_transition
+  chapter: The bottleneck
+  narration: But this is not a normal printing press. It is meant to do everything at once.
+  claims: []
+- id: m2_card
+  chapter: Everything under one roof
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: Everything under one roof
+  narration: What exactly would Terafab do that other chip factories do not?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_roof
+  chapter: Everything under one roof
+  narration: Normally, a chip travels the world. It is designed in one place, printed in a factory in another, and packaged
+    and tested somewhere else, often in another country. Terafab is meant to do all of it under one roof. Design, printing,
+    memory, packaging and testing. Musk says that way his engineers can make a chip, test it, fix the design and print
+    it again, without shipping wafers between sites.
+  claims:
+  - wafers
+  - launch
+- id: m2_scale
+  chapter: Everything under one roof
+  narration: The targets are enormous. Tesla said it is aiming for the most advanced kind of chip, with {{wafers.node_spoken}}
+    technology. The plan starts at {{wafers}}, and the ambition is to reach {{wafers.full_spoken}} wafers a month. For
+    comparison, TSMC, the biggest chipmaker in the world, had a capacity of {{tsmc_cap}} in twenty twenty-five. That is
+    {{tsmc_cap.month_spoken}}. So the full target would be {{tsmc_cap.pct_spoken}} of everything TSMC can make, in one
+    place. These are targets, not output.
+  claims:
+  - wafers
+  - tsmc_cap
+- id: m2_two
+  chapter: Everything under one roof
+  narration: Terafab would make two kinds of chips. Small, efficient ones that let cars drive themselves and robots move,
+    and powerful ones for something that does not exist yet, data centers in orbit. Musk wants most of the computing power
+    in space, where, he argues, the sun shines {{two_chips}} as strongly as on the ground, and cooling in a
+    vacuum can work. So the factory on Earth is meant to feed computers above it.
+  claims:
+  - two_chips
+  - launch
+- id: m2_small
+  chapter: Everything under one roof
+  narration: The real start is much smaller. On Tesla's earnings call in April twenty twenty-six, Musk said Tesla would
+    first build a research fab at its Texas car plant, costing {{research_fab}}, and capable of maybe a few thousand wafers
+    a month. It is meant to try out ideas. He also said Terafab plans to use a manufacturing process from Intel that, in
+    his words, is not yet totally complete.
+  claims:
+  - research_fab
+- id: m2_transition
+  chapter: Everything under one roof
+  narration: A test factory costs billions. The real one costs a lot more.
+  claims: []
+- id: m3_card
+  chapter: The price tag
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The price tag
+  narration: How much does a chip factory this big really cost?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_money
+  chapter: The price tag
+  narration: The numbers keep moving. In March, reports put the project at about twenty to twenty-five billion dollars.
+    In May, a filing on the website of Grimes County, Texas, said SpaceX was considering {{cost.initial_spoken}} at first,
+    and up to {{cost.total_spoken}} across all phases. In August, the companies chose that county, outside Houston, and
+    announced the first phase at {{cost}}. For comparison, TSMC plans to invest a total of {{tsmc_us}} in the United States,
+    for several factories.
+  claims:
+  - wafers
+  - cost
+  - tsmc_us
+- id: m3_size
+  chapter: The price tag
+  narration: The building itself would be gigantic. SpaceX plans {{size}} of manufacturing space. The largest building
+    in the world today, a car factory in Russia, has about {{size.avto_spoken}}. Musk called it the largest and most valuable
+    building on Earth by far. The state of Texas says the first phase will create {{cost.jobs_spoken}} jobs, and gave
+    SpaceX a grant of {{cost.grant_spoken}}.
+  claims:
+  - size
+  - cost
+- id: m3_water
+  chapter: The price tag
+  narration: A chip factory also needs water, and a factory this size needs a lot of it. SpaceX says it will take
+    its water from the local {{water}}, instead of pumping it from under the ground, and that most of the jobs will
+    go to people from Grimes and the neighbouring county.
+  claims:
+  - water
+- id: m3_county
+  chapter: The price tag
+  narration: The county paid its share too. In June twenty twenty-six, Grimes County commissioners voted four to one for
+    a {{tax}} exemption from county property taxes on the new buildings. One commissioner said the project would cover
+    three to four percent of the whole county. Hundreds of residents came to a meeting to complain about the tax breaks
+    and a lack of transparency.
+  claims:
+  - tax
+- id: m3_transition
+  chapter: The price tag
+  narration: Big promises, big money. But the most revealing words were written by lawyers.
+  claims: []
+- id: m4_card
+  chapter: The fine print
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The fine print
+  narration: How solid is the plan, really?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_s1
+  chapter: The fine print
+  narration: In May twenty twenty-six, SpaceX filed to sell its shares to the public. A company that sells shares must
+    tell investors the risks. And the filing was careful. It said Terafab is in the {{s1}}. It said SpaceX and Tesla have
+    agreed only a general framework. The money, the timelines and who owns the technology still have to be negotiated.
+    And it said that neither Tesla nor Intel is obligated to remain part of the project.
+  claims:
+  - s1
+- id: m4_tangle
+  chapter: The fine print
+  narration: The same filing shows how tangled Musk's companies already are. In twenty twenty-five, SpaceX bought {{tangle.spx_spoken}}
+    of goods and services from Tesla, up from just {{tangle.spx_then_spoken}} the year before. The AI company xAI, now
+    part of SpaceX, bought another {{tangle}} from Tesla, mostly giant batteries for its data centers. Terafab would tie
+    the companies together even more tightly.
+  claims:
+  - tangle
+- id: m4_doubts
+  chapter: The fine print
+  narration: Critics go further. The electric car news site Electrek pointed out that Tesla has no experience making chips,
+    and compared the event to Tesla's battery day in twenty twenty, when big promises about a new battery took years longer
+    than planned. And Musk said {{doubts}} of Terafab's computing power would go to AI satellites in space, an idea that
+    still has to prove it works.
+  claims:
+  - doubts
+- id: m4_draw
+  chapter: The fine print
+  narration: 'Let me draw why chipmaking punishes newcomers. A factory must be built before it earns a single dollar.
+    Then it must learn. The first wafers come out with many broken chips. Every month, the share of good chips rises,
+    and only then does the money start to come back. The companies at the top have climbed that curve for decades. A
+    newcomer starts at the bottom.'
+  claims:
+  - research_fab
+  analysis: true
+  source_note: Explanation of the yield learning curve; no figures.
+- id: m4_transition
+  chapter: The fine print
+  narration: So why take the risk? Because of who controls the chips today.
+  claims: []
+- id: m5_card
+  chapter: Owning the factory
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Owning the factory
+  narration: When does it make sense to build what you could buy?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_why
+  chapter: Owning the factory
+  narration: For years, the smart move in chips was the opposite. Design the chip yourself and let a specialist make it.
+    It saved billions. But that only works while the specialist has room for you. When every AI company is fighting for
+    the same factories, being a customer means waiting in line. Owning the factory means deciding the line. That is the
+    bet behind Terafab. Not that Tesla can make chips more cheaply than TSMC, but that it cannot afford to wait.
+  claims:
+  - launch
+  - suppliers
+  analysis: true
+  source_note: Analysis of the make-or-buy decision built on Musk's sourced reasoning (suppliers' expansion rate).
+- id: m5_still
+  chapter: Owning the factory
+  narration: And notice what has not changed. Musk said his companies will keep buying chips from TSMC, Samsung and Micron,
+    and wants them to expand as quickly as they can. He gave no date for when Terafab would start making chips. Until it
+    does, Tesla is still in the same line as everyone else.
+  claims:
+  - launch
+  - suppliers
+- id: payoff
+  chapter: The lesson
+  narration: So why does Elon Musk want his own chip factory? Not because making chips is a good business for a newcomer.
+    It is one of the hardest businesses on Earth. He wants it because in the age of AI, the scarcest thing is not money
+    or ideas. It is a place in the factory queue. Terafab is a bet of up to {{cost.total_spoken}} that it is cheaper to
+    build the queue than to wait in it. Whether it pays off, the fine print says, is still to be negotiated.
+  claims:
+  - cost
+  - s1
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

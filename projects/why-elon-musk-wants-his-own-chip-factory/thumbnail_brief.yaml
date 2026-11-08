@@ -1,0 +1,86 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
+title: Why Elon Musk Wants His Own Chip Factory
+docs_dir: docs/episodes/16-terafab
+video: output/terafab_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why would two companies that have never made a chip build the largest chip factory on Earth?
+  surprising_fact: 'A county filing says SpaceX may spend up to $119 billion on Terafab; first phase $16.8 billion'
+  subject: one glowing chip
+  tone: spectacle
+  metaphor: buying a place in the factory queue
+concepts:
+- id: A
+  angle: mystery (bold)
+  text:
+  - MUSK'S OWN
+  - CHIP FACTORY
+  accent_line: 1
+  text_side: left
+  claim_basis: 'launch/cost: Tesla and SpaceX plan Terafab, their own chip factory (TechCrunch, Texas Governor)'
+  scene:
+    palette:
+      sky0: '#04060D'
+      sky1: '#1A1430'
+      haze: '#FFC21A'
+      key: '#FFE7A0'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: cleanroom
+    subject:
+      kind: chip
+      x: 1400
+      y: 560
+      s: 1.0
+    support:
+    - kind: bignum
+      x: 1400
+      y: 520
+      s: 1.0
+      label: ' '
+      rot: 0
+    particles:
+      n: 70
+      region: [800, 0, 1920, 1080]
+      size: 3
+      color: '#FFE7A0'
+    vignette: 0.55
+    brand: tl
+- id: B
+  angle: consequence (bold)
+  text:
+  - TERAFAB
+  - $119B?
+  accent_line: 1
+  text_side: left
+  claim_basis: 'cost: county filing, SpaceX may spend up to $119bn across all phases (TechCrunch, May 2026)'
+  scene:
+    palette:
+      sky0: '#05070F'
+      sky1: '#2A0E12'
+      haze: '#FF4B3E'
+      key: '#FFD1CC'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: cleanroom
+    subject:
+      kind: chip
+      x: 1420
+      y: 560
+      s: 0.95
+    support:
+    - kind: bignum
+      x: 1420
+      y: 520
+      s: 0.9
+      label: ' '
+      rot: 0
+    particles:
+      n: 60
+      region: [800, 0, 1920, 1080]
+      size: 3
+      color: '#FFD1CC'
+    vignette: 0.55
+    brand: tl
+default: A

@@ -375,6 +375,18 @@ const SETS: Record<string, SetFn> = {
     </g>;
   },
   /** Construction site: dirt lot, fence, traffic cones, hills behind. */
+  /** Low Earth orbit: black space with twinkling stars and the blue curve of the Earth (with a sunrise rim) below. */
+  orbit: (t, z, f) => {
+    const w = z.x1 - z.x0, cx = (z.x0 + z.x1) / 2;
+    return <g>
+      <rect x={z.x0} y={-1600} width={w} height={f + 2400} fill="#030712" />
+      {Array.from({length: Math.ceil(w / 40)}, (_, k) => <circle key={'st' + k} cx={z.x0 + k * 40 + 30 * rnd(k)} cy={-300 + 1000 * rnd(k + 3)} r={1.5 + 2 * rnd(k + 7)}
+        fill="#FFFFFF" opacity={0.35 + 0.6 * Math.abs(Math.sin(t * (0.6 + rnd(k)) + k))} />)}
+      <ellipse cx={cx} cy={f + 2600} rx={Math.max(w, 3000)} ry={2700} fill="#1565C0" />
+      <ellipse cx={cx} cy={f + 2600} rx={Math.max(w, 3000)} ry={2700} fill="none" stroke="#81D4FA" strokeWidth={26} opacity={0.6} />
+      {Array.from({length: 7}, (_, k) => <ellipse key={'cl' + k} cx={z.x0 + ((k * 520 + t * 12) % w)} cy={f + 40 + 40 * rnd(k)} rx={160} ry={26} fill="#FFFFFF" opacity={0.35} />)}
+    </g>;
+  },
   site: (t, z, f) => {
     const w = z.x1 - z.x0;
     return <g>
@@ -1755,6 +1767,62 @@ const beamsrc: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A giant low factory that builds section by section (progress 0..1 keyframes); `compare` draws a dashed outline of a
+ *  reference building (e.g. the current largest) at `compareW` of its width; `glowAt` lights the windows. */
+const megafab: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.7);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const W = a.w ?? 1400, H = a.h ?? 220, n = a.n ?? 10, prog = clamp(kf(a.progress, t, 1)), built = prog * n;
+  const lit = a.glowAt !== undefined && t >= a.glowAt, cw = W * (a.compareW ?? 0.65);
+  const secs: React.ReactNode[] = [];
+  for (let k = 0; k < n; k++) {
+    const u = clamp(built - k); if (u <= 0) continue;
+    const sx = -W / 2 + (k * W) / n, sw = W / n, sh = H * E.outBack(u);
+    secs.push(<g key={k}>
+      <rect x={sx} y={-sh} width={sw + 1} height={sh} fill={k % 2 ? '#E3E8F0' : '#D5DCE7'} stroke={OL} strokeWidth={4} />
+      <path d={`M ${sx} ${-sh} Q ${sx + sw / 2} ${-sh - 34 * u} ${sx + sw} ${-sh}`} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+      {u >= 1 && [0, 1, 2].map((r) => <rect key={r} x={sx + 14 + r * (sw - 28) / 3} y={-H + 50} width={(sw - 28) / 3 - 10} height={34} rx={4}
+        fill={lit ? '#FFE082' : '#90A4AE'} opacity={lit ? 0.75 + 0.25 * Math.sin(t * 3 + k + r) : 0.8} stroke={OL} strokeWidth={2} />)}
+      {u >= 1 && <rect x={sx + sw / 2 - 18} y={-60} width={36} height={60} fill="#546E7A" stroke={OL} strokeWidth={3} />}
+    </g>);
+  }
+  const crane = prog < 1 ? -W / 2 + built * (W / n) : null;
+  return <g key={'mf' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    {a.compareAt !== undefined && t >= a.compareAt && <g opacity={E.out(win(t, a.compareAt, 0.8))}>
+      <rect x={-W / 2} y={-H - 70} width={cw} height={H + 70} fill="none" stroke={K.red} strokeWidth={6} strokeDasharray="22 14" />
+      <rect x={-W / 2 + 10} y={-H - 120} width={Math.min(cw - 20, 560)} height={42} rx={10} fill={K.red} stroke={OL} strokeWidth={3} />
+      <T x={-W / 2 + 10 + Math.min(cw - 20, 560) / 2} y={-H - 90} s={22} c={K.white}>{a.compareText || "TODAY'S LARGEST"}</T></g>}
+    {secs}
+    {crane !== null && <g transform={`translate(${crane} 0)`}>
+      <path d={`M 0 0 L 0 ${-H - 220} L 160 ${-H - 220}`} fill="none" stroke="#FFB300" strokeWidth={10} />
+      <path d={`M 120 ${-H - 220} L 120 ${-H - 120}`} stroke={OL} strokeWidth={3} /><rect x={104} y={-H - 124} width={32} height={22} fill="#90A4AE" stroke={OL} strokeWidth={2} /></g>}
+    {a.text && prog > 0.3 && <g><rect x={-200} y={-H - 34 - 70} width={400} height={56} rx={12} fill={col(a.color, K.gold)} stroke={OL} strokeWidth={4} />
+      <T x={0} y={-H - 64} s={30}>{a.text}</T></g>}
+    {a.sub && <T x={0} y={44} s={24} c={a.subc || OL}>{a.sub}</T>}
+  </g>;
+};
+
+/** An orbital AI satellite: solar wings unfold from `at`, a glowing compute core; optional sun rays from the left. */
+const satellite: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 380) + Math.sin(t * 0.9 + i) * 10, s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const open = E.outBack(win(t, (a.at ?? 0) + 0.3, 1.2)), wing = 300 * open;
+  return <g key={'sat' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${a.rot ?? -8})`}>
+    {a.rays && Array.from({length: 6}, (_, k) => <path key={k} d={`M ${-900} ${-140 + k * 56} L ${-wing - 40} ${-60 + k * 24}`} stroke="#FFE082" strokeWidth={6}
+      opacity={0.35 + 0.25 * Math.sin(t * 4 + k)} />)}
+    {[-1, 1].map((d) => <g key={d}>
+      <path d={`M ${d * 60} 0 L ${d * (60 + wing)} 0`} stroke="#B0BEC5" strokeWidth={8} />
+      {Array.from({length: 4}, (_, k) => <rect key={k} x={d > 0 ? 70 + k * wing / 4 : -70 - (k + 1) * wing / 4} y={-70} width={wing / 4 - 6} height={140}
+        fill="#1E3A8A" stroke="#90CAF9" strokeWidth={3} opacity={open} />)}
+    </g>)}
+    <rect x={-60} y={-80} width={120} height={160} rx={16} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+    <rect x={-40} y={-50} width={80} height={80} rx={8} fill="#1B1F27" stroke={OL} strokeWidth={3} />
+    <rect x={-30} y={-40} width={60} height={60} rx={6} fill="#7DF29A" opacity={0.35 + 0.3 * Math.sin(t * 3)} />
+    <T x={0} y={4} s={18} c="#7DF29A">AI</T>
+    {a.text && <T x={0} y={130} s={26} c={a.textc || K.white}>{a.text}</T>}
+  </g>;
+};
+
 /** A school bus (for size comparisons). */
 const bus: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
@@ -1862,8 +1930,8 @@ const watch: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc};
-const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'crane', 'arm', 'shares']);
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite};
+const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
 export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
