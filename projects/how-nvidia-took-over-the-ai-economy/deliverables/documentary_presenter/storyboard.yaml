@@ -1400,166 +1400,140 @@ scenes:
   - font:inter
 - id: s23_bottleneck
   segment: a5_bottleneck
-  type: supply_chain
+  type: engine_cartoon
   params:
-    title: One slow link holds up the chain
-    title_cue: slowest link
-    views:
-    - lon: 40
-      lat: 30
-      span: 280
-    - lon: 124
-      lat: 28
-      span: 60
-      cue: advanced packaging
-    anchor_y: 0.46
-    nodes:
-    - id: nvda
-      label: NVIDIA
-      role: Design
-      lon: -121.96
-      lat: 37.37
-      colour: accent
+    zones:
+    - set: fab
+      x0: -1600
+      x1: 2200
+      label: yellow
+    - set: datacenter
+      x0: 2200
+      x1: 6000
+    worldW: 3000
+    cam:
+    - at: 0
+      x: 900
+      y: 540
+      zoom: 1.05
+    - at:
+        cue: runs short
+      x: 1200
+      y: 540
+      zoom: 1.0
+      dur: 2.0
+    - at:
+        cue: everything downstream
+      x: 2500
+      y: 540
+      zoom: 1.0
+      dur: 2.6
+    drift: 5
+    items:
+    - kind: conveyor
+      x0: -200
+      x1: 2100
+      y: 820
       at: 0
-      dx: -26
-      dy: 24
-    - id: tsmc
-      hide_wide: true
-      label: TSMC
-      role: Wafers
-      lon: 120.99
-      lat: 24.78
-      colour: accent2
-      country: TWN
-      at: 0
-      dx: 26
-      dy: -10
-    - id: skh
-      label: SK Hynix · Samsung
-      role: HBM memory
-      lon: 127.3
-      lat: 37.2
-      colour: accent3
-      country: KOR
-      at: 0
-      dx: 26
-    - id: mu
-      label: Micron
-      role: HBM memory
-      lon: -116.2
-      lat: 43.6
-      colour: accent3
-      at: 0
-      dx: 26
-      dy: -34
-    - id: cowos
-      hide_wide: true
-      label: CoWoS packaging
-      role: Taiwan
-      lon: 120.45
-      lat: 23.48
-      colour: accent2
-      at: 0
-      dx: -26
-      dy: 20
-    - id: asm
-      hide_wide: true
-      label: Server assembly
-      role: Taiwan
-      lon: 121.45
-      lat: 25.06
-      colour: accent2
-      at: 0
-      dx: 26
-      dy: 36
-    - id: twc
-      wide_only: true
-      label: Taiwan
-      role: fab · CoWoS · assembly
-      lon: 121.0
-      lat: 23.8
-      colour: accent2
-      at: 0
-      dx: 26
-      dy: 34
-    - id: dc1
-      label: Data centers
-      role: US
-      lon: -78.5
-      lat: 38.9
-      colour: accent
-      at: 0
-      dx: 26
-    - id: dc2
-      label: Data centers
-      role: Europe
-      lon: 8.7
-      lat: 50.1
-      colour: accent
-      at: 0
-      dx: 26
-    - id: dc3
-      label: Data centers
-      role: Asia
-      lon: 103.8
-      lat: 1.35
-      colour: accent
-      at: 0
-      dx: 26
-    links:
-    - from: nvda
-      to: tsmc
-      lift: 0.15
-    - from: tsmc
-      to: cowos
-      lift: 0.4
-    - from: skh
-      to: cowos
-      lift: 0.3
-    - from: mu
-      to: cowos
-      lift: 0.12
-    - from: cowos
-      to: asm
-      lift: 0.5
-    - from: asm
-      to: dc1
-      lift: 0.15
-    - from: asm
-      to: dc2
-      lift: 0.2
-    - from: asm
-      to: dc3
-      lift: 0.3
-    bottleneck:
-      node: cowos
-      label: SHORTAGE
-      cue: runs short
-    steps:
-    - label: Design
-      colour: accent
-      at: 0
-    - label: Wafer fab
-      colour: accent2
-      at: 0
-    - label: HBM memory
-      colour: accent3
-      at: 0
-    - label: CoWoS packaging
-      colour: accent2
-      at: 0
-      node: cowos
-    - label: Assembly
-      colour: accent2
-      at: 0
-    - label: Data centers
-      colour: accent
-      at: 0
+      n: 8
+      speed: 140
+      goods: chip
+      stopAt:
+        cue: runs short
+    - kind: stack
+      x: 300
+      at: 0.3
+      h:
+      - - 0
+        - 240
+      - - cue: runs short
+        - 240
+      - - cue: runs short
+          offset: 2
+        - 40
+      text: HBM MEMORY
+    - kind: sign
+      x: 1150
+      y: 330
+      text: CoWoS PACKAGING
+      at: 0.4
+      color: '#BBDEFB'
+      size: 32
+    - kind: sign
+      x: 1150
+      y: 470
+      text: SHORTAGE
+      at:
+        cue: runs short
+      color: '#FFCDD2'
+      size: 40
+      hang: true
+      swing: true
+    - kind: letters
+      x: 1150
+      y: 600
+      text: '!'
+      at:
+        cue: runs short
+        offset: 0.3
+      size: 120
+      color: risk
+    - kind: person
+      x: 2450
+      pose: worry
+      at: &id004
+        cue: everything downstream
+      scale: 0.8
+      hair: 1
+      skin: 0
+      tie: true
+    - kind: person
+      x: 2600
+      pose: worry
+      at: *id004
+      scale: 0.8
+      hair: 2
+      skin: 1
+      tie: true
+    - kind: person
+      x: 2750
+      pose: worry
+      at: *id004
+      scale: 0.8
+      hair: 3
+      skin: 2
+      tie: true
+    callouts:
+    - text: Only as fast as the slowest link
+      x: 960
+      y: 150
+      at:
+        cue: only as fast
+      color: white
+      until:
+        cue: annual report
+        offset: -0.3
+      screen: true
+    - text: '10-K: a shortage of any one component can hold back sales'
+      x: 960
+      y: 150
+      at:
+        cue: annual report
+      color: gold
+      until:
+        cue: runs short
+        offset: -0.3
+      screen: true
+    - text: 'Packaging or memory runs short: everyone waits'
+      x: 960
+      y: 150
+      at:
+        cue: runs short
+      color: risk
+      screen: true
   sources:
   - nvda_10k_fy2026
-  - natural_earth
   assets:
-  - geo:remotion_world
   - font:inter
 - id: s24_arizona
   segment: a5_arizona
@@ -1575,17 +1549,30 @@ scenes:
     worldW: 2800
     cam:
     - at: 0
-      x: 760
+      x: 640
+      y: 560
+      zoom: 1.12
+    - at:
+        cue: spread it out
+      x: 860
       y: 520
       zoom: 1.0
+      dur: 2.4
     - at:
         cue: In October
       x: 1900
       y: 520
       zoom: 1.0
       dur: 2.6
-    drift: 0
+    drift: 6
     items:
+    - kind: bus
+      x:
+      - - 0
+        - -300
+      - - 14
+        - 900
+      at: 0
     - kind: sign
       x: 600
       y: 330
@@ -1685,10 +1672,9 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: city
+    - set: sciencepark
       x0: -1600
       x1: 4600
-      label: nochurch
     worldW: 2600
     cam:
     - at: 0

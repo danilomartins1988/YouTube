@@ -136,11 +136,27 @@ stage("s20_latest", "a4_latest", {
                  co("Next quarter expected: {{q2fy27.guide_display}}", 960, 960, C("expected"), "gold", screen=True)]},
     sources=["nvda_q2fy27"])
 card("s21_act5", "a5_card", "The Global Supply Chain", "Designed in California, made in Asia")
-keep("s22_chain", "s23_bottleneck")
+keep("s22_chain")
+# bespoke replacement for the old static map (freeze check): a packaging line that jams when one input runs short
+stage("s23_bottleneck", "a5_bottleneck", {
+    "zones": [Z("fab", -1600, 2200, label="yellow"), Z("datacenter", 2200, 6000)], "worldW": 3000,
+    "cam": [{"at": 0, "x": 900, "y": 540, "zoom": 1.05}, {"at": C("runs short"), "x": 1200, "y": 540, "zoom": 1.0, "dur": 2.0},
+            {"at": C("everything downstream"), "x": 2500, "y": 540, "zoom": 1.0, "dur": 2.6}], "drift": 5,
+    "items": [it("conveyor", x0=-200, x1=2100, y=F - 40, at=0, n=8, speed=140, goods="chip", stopAt=C("runs short")),
+              it("stack", x=300, at=0.3, h=[[0, 240], [{"cue": "runs short"}, 240], [{"cue": "runs short", "offset": 2}, 40]], text="HBM MEMORY"),
+              it("sign", x=1150, y=330, text="CoWoS PACKAGING", at=0.4, color="#BBDEFB", size=32),
+              it("sign", x=1150, y=470, text="SHORTAGE", at=C("runs short"), color="#FFCDD2", size=40, hang=True, swing=True),
+              it("letters", x=1150, y=600, text="!", at=C("runs short", 0.3), size=120, color="risk"),
+              *crowd([2450, 2600, 2750], "worry", at=C("everything downstream"), tie=True)],
+    "callouts": [co("Only as fast as the slowest link", 960, 150, C("only as fast"), "white", screen=True, until=C("annual report", -0.3)),
+                 co("10-K: a shortage of any one component can hold back sales", 960, 150, C("annual report"), "gold", screen=True, until=C("runs short", -0.3)),
+                 co("Packaging or memory runs short: everyone waits", 960, 150, C("runs short"), "risk", screen=True)]},
+    sources=["nvda_10k_fy2026"])
 stage("s24_arizona", "a5_arizona", {
     "zones": [Z("site", -1600, 1300), Z("fab", 1300, 6000)], "worldW": 2800,
-    "cam": [{"at": 0, "x": 760, "y": 520, "zoom": 1.0}, {"at": C("In October"), "x": 1900, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 0,
-    "items": [it("sign", x=600, y=330, text="MOSTLY IN ASIA", sub="above all in Taiwan", at=C("concentrated in Asia"), color="#FFF59D", size=32),
+    "cam": [{"at": 0, "x": 640, "y": 560, "zoom": 1.12}, {"at": C("spread it out"), "x": 860, "y": 520, "zoom": 1.0, "dur": 2.4}, {"at": C("In October"), "x": 1900, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 6,
+    "items": [it("bus", x=[[0, -300], [14, 900]], at=0),
+              it("sign", x=600, y=330, text="MOSTLY IN ASIA", sub="above all in Taiwan", at=C("concentrated in Asia"), color="#FFF59D", size=32),
               it("crane", x=900, text="SPREAD IT OUT", at=C("spread it out"), progress=[[0, 0.3], [20, 0.8]], scale=0.8),
               it("wafer", x=1800, y=430, r=180, at=C("first Blackwell"), spin=6, text="FIRST U.S.-MADE BLACKWELL WAFER"),
               it("sign", x=2350, y=330, text="TSMC · ARIZONA", at=C("TSMC's factory"), color="#BBDEFB", size=30),
@@ -150,7 +166,7 @@ stage("s24_arizona", "a5_arizona", {
     sources=["nvda_10k_fy2026", "arizona_wafer"])
 card("s25_act6", "a6_card", "The Competition", "Rivals, and customers who build their own")
 stage("s26_rivals", "a6_rivals", {
-    "zones": [Z("city", label="nochurch")], "worldW": 2600,
+    "zones": [Z("sciencepark")], "worldW": 2600,
     "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 0.95}, {"at": C("some of its own"), "x": 1650, "y": 520, "zoom": 0.95, "dur": 2.6}], "drift": 0,
     "items": [it("tower", x=600, text="NVIDIA", color="#76B900", at=0.2, scale=1.0),
               it("building", x=980, style="office", color="#FFCDD2", text="AMD", at=C("chipmakers like"), scale=0.8),

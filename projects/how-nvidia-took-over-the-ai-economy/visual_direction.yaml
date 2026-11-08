@@ -1,0 +1,43 @@
+# Visual direction for how-nvidia-took-over-the-ai-economy (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Draft from tools/visual_direction.py: edit tones per chapter, add turning_points [{segment, cue, to}], then commit.
+primary_tone: tech
+secondary_tones:
+- strategy
+palette:
+  bg: '#081226'
+  bg2: '#0F1F3F'
+  ink: '#E8F4FF'
+  muted: '#8AA4C2'
+  land: '#16294A'
+  border: '#2B4A78'
+  accent: '#3FD0FF'
+  accent2: '#9B8CFF'
+  accent3: '#3DDC97'
+  risk: '#FF5A6E'
+presenter:
+  demeanor: neutral
+  min_sequences: 4
+chapters:
+- chapter: The supplier
+  tone: tech
+- chapter: From gaming to AI
+  tone: tech
+- chapter: The CUDA advantage
+  tone: tech
+- chapter: How Nvidia makes money
+  tone: strategy
+- chapter: The global supply chain
+  tone: tech
+- chapter: The competition
+  tone: strategy
+- chapter: The future of Nvidia
+  tone: strategy
+turning_points: []
+thumbnail:
+  tone: tech
+  headline: []
+  idea: one dominant object that states the central mystery
+requirements:
+- 'Chip and data-centre scenes: deep navy, cyan glow, precise'
+- 'Money and competition chapters: cool strategic diagrams'
+- No smiling sun or cheerful clouds; presenter neutral

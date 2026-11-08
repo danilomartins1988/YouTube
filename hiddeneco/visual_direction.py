@@ -19,7 +19,7 @@ from pathlib import Path
 
 import yaml
 
-TONES = ("bright", "thriller", "crisis", "strategy", "trade", "tech", "history", "reflective")
+TONES = ("bright", "thriller", "crisis", "strategy", "trade", "tech", "history", "reflective", "spectacle")
 SERIOUS = {"thriller", "crisis", "reflective"}
 TONED_TYPES = {"engine_cartoon", "engine_draw"}
 

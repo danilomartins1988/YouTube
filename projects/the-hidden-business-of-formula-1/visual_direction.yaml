@@ -1,0 +1,46 @@
+# Visual direction for the-hidden-business-of-formula-1 (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Draft from tools/visual_direction.py: edit tones per chapter, add turning_points [{segment, cue, to}], then commit.
+primary_tone: spectacle
+secondary_tones:
+- strategy
+presenter:
+  demeanor: warm
+  min_sequences: 4
+chapters:
+- chapter: The business
+  tone: spectacle
+- chapter: A sport becomes a property
+  tone: strategy
+- chapter: Who owns what
+  tone: strategy
+- chapter: The money machine
+  tone: strategy
+- chapter: Media rights
+  tone: strategy
+- chapter: Hosting fees
+  tone: strategy
+- chapter: Sponsorship
+  tone: spectacle
+- chapter: How teams make money
+  tone: strategy
+- chapter: The cost cap
+  tone: strategy
+- chapter: Why brands invest
+  tone: spectacle
+- chapter: Netflix and expansion
+  tone: spectacle
+- chapter: The host-city deal
+  tone: strategy
+- chapter: Risks and opportunities
+  tone: strategy
+- chapter: The real product
+  tone: spectacle
+turning_points: []
+thumbnail:
+  tone: spectacle
+  headline: []
+  idea: one dominant object that states the central mystery
+requirements:
+- 'Race scenes: night circuit, floodlights, vivid colour; no smiling sun'
+- 'Business chapters: clean strategic diagrams (owners, revenue streams, host fees)'
+- Presenter warm, explains the money behind the show

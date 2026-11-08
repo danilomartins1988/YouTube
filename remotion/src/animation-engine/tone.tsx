@@ -10,7 +10,7 @@ import {clamp, lerp, win} from './motion';
  * a scene (e.g. a bright growth story that darkens when the auditor refuses to sign). `bright` is the original
  * cheerful look and the default, so storyboards without a tone render exactly as before.
  */
-export type ToneName = 'bright' | 'thriller' | 'crisis' | 'strategy' | 'trade' | 'tech' | 'history' | 'reflective';
+export type ToneName = 'bright' | 'thriller' | 'crisis' | 'strategy' | 'trade' | 'tech' | 'history' | 'reflective' | 'spectacle';
 export type ToneSpec = {
   sky: [string, string]; nightSky: [string, string];
   sun: 'face' | 'plain' | 'none'; clouds: 'white' | 'grey' | 'none'; stars: boolean;
@@ -46,6 +46,9 @@ export const TONES: Record<ToneName, ToneSpec> = {
   // economic history: archival paper light, sepia grade, grain
   history: {sky: ['#D9C79E', '#F1E6CC'], nightSky: ['#3A3022', '#5A4A34'], sun: 'plain', clouds: 'grey', stars: false,
     saturate: 0.6, sepia: 0.55, tint: '#8A6A3A', tintOpacity: 0.14, vignette: 0.55, spot: 0, pulse: 0, grain: 0.45, glow: null, bounce: 0.4},
+  // sport, entertainment, glamour: vivid, night-race lights, energetic, no cartoon face in the sky
+  spectacle: {sky: ['#0B1030', '#3A1E5C'], nightSky: ['#070A1E', '#2A1650'], sun: 'none', clouds: 'none', stars: true,
+    saturate: 1.2, sepia: 0, tint: '#2A1650', tintOpacity: 0.1, vignette: 0.35, spot: 0.1, pulse: 0, grain: 0, glow: '#FF4FD8', bounce: 0.9, exposure: 0.92},
   // conclusions after a serious story: calm, low light, nothing playful
   reflective: {sky: ['#2A3142', '#566078'], nightSky: ['#141A26', '#2A3142'], sun: 'none', clouds: 'none', stars: false,
     saturate: 0.55, sepia: 0.08, tint: '#323A4E', tintOpacity: 0.2, vignette: 0.6, spot: 0.25, pulse: 0, grain: 0.15, glow: null, bounce: 0.2, exposure: 0.78},

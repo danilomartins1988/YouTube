@@ -94,6 +94,7 @@ MOODS = {
     "thriller": {"progression": ("Am", "Am", "F", "E"), "chord_seconds": 8.0, "pulse": (0.9, 0.3), "drone": 55.0, "octave": 0.5},
     "crisis": {"progression": ("Dm", "Bb", "Gm", "A"), "chord_seconds": 5.0, "pulse": (1.6, 0.35), "drone": 73.42},
     "reflective": {"progression": ("Am", "F", "C", "G"), "chord_seconds": 9.0, "octave": 0.5},
+    "spectacle": {"progression": ("Em", "C", "G", "D"), "chord_seconds": 4.0, "pulse": (2.0, 0.25), "shimmer": 0.12},
 }
 
 
