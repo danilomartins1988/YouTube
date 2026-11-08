@@ -81,6 +81,55 @@ concepts:
       - 800
       size: 3
     brand: tr
+- id: C
+  angle: mystery (bold)
+  text:
+  - SWITZERLAND
+  - WHY SO RICH?
+  accent_line: 1
+  text_side: left
+  claim_basis: A question; Switzerland is landlocked (geo_landlocked) and among the richest countries (World Bank data in the film)
+  scene:
+    palette:
+      sky0: '#05070F'
+      sky1: '#1A2440'
+      haze: '#FFD36A'
+      key: '#FFF1C2'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: alps
+    subject:
+      kind: goldvault
+      x: 1470
+      y: 720
+      s: 0.95
+    support:
+    - kind: bignum
+      x: 1470
+      y: 560
+      s: 1.1
+      label: ' '
+      rot: 0
+    beams:
+    - x: 1470
+      y: -80
+      angle: 0
+      width: 760
+      length: 1000
+      opacity: 0.45
+      color: '#FFE7A0'
+    particles:
+      n: 80
+      region:
+      - 900
+      - 100
+      - 1900
+      - 1000
+      size: 3
+      color: '#FFF1C2'
+    vignette: 0.55
+    brand: tl
 status: completed
 deliverable: documentary
 original_title: Why Switzerland Is So Rich
+default: C

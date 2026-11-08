@@ -12,6 +12,7 @@
   "status": "completed",
   "deliverable": "documentary",
   "original_title": "Why Switzerland Is So Rich",
+  "default": "C",
   "slug": "why-switzerland-is-so-rich",
   "concepts": [
     {
@@ -327,11 +328,184 @@
         ],
         "nearest": "why-ships-fly-foreign-flags"
       }
+    },
+    {
+      "id": "C",
+      "angle": "mystery (bold)",
+      "text": [
+        "SWITZERLAND",
+        "WHY SO RICH?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "A question; Switzerland is landlocked (geo_landlocked) and among the richest countries (World Bank data in the film)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#1A2440",
+          "haze": "#FFD36A",
+          "key": "#FFF1C2",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "alps",
+        "subject": {
+          "kind": "goldvault",
+          "x": 1470,
+          "y": 720,
+          "s": 0.95
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1470,
+            "y": 560,
+            "s": 1.1,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "beams": [
+          {
+            "x": 1470,
+            "y": -80,
+            "angle": 0,
+            "width": 760,
+            "length": 1000,
+            "opacity": 0.45,
+            "color": "#FFE7A0"
+          }
+        ],
+        "particles": {
+          "n": 80,
+          "region": [
+            900,
+            100,
+            1900,
+            1000
+          ],
+          "size": 3,
+          "color": "#FFF1C2"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "SWITZERLAND",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 733.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "WHY SO RICH?",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.48 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 823, 530), (90, 550, 890, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 6.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.075",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 78",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hidden-business-of-formula-1 (distance 0.64)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "A question; Switzerland is landlocked (geo_landlocked) and among the richest countries (World Bank data in the film)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.785,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hidden-business-of-formula-1"
+      }
     }
   ],
-  "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T16:15:39Z",
-  "master": "output/why-switzerland-is-so-rich/thumbnails/master_A.png"
+  "generated": "2026-11-08T16:46:15Z",
+  "master": "output/why-switzerland-is-so-rich/thumbnails/master_C.png"
 }

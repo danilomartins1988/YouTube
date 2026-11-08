@@ -87,7 +87,53 @@ concepts:
       - 800
       size: 3
     brand: tr
+- id: C
+  angle: consequence (bold)
+  text:
+  - NORWAY
+  - SAVED,
+  - NOT SPENT
+  accent_line: 2
+  text_side: left
+  claim_basis: 'Fiscal rule: the government spends only the fund''s expected return; fund ≈ $2.12tn (sources.yaml, CURRENCY.md)'
+  scene:
+    palette:
+      sky0: '#080A18'
+      sky1: '#4A1E2E'
+      haze: '#FF8A2A'
+      key: '#FFD08A'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: sea
+    subject:
+      kind: coin
+      x: 1440
+      y: 330
+      s: 1.1
+      symbol: $
+    support:
+    - kind: bignum
+      x: 1440
+      y: 330
+      s: 1.0
+      label: ' '
+      rot: 0
+    - kind: oilrig
+      x: 1440
+      y: 800
+      s: 0.5
+    particles:
+      n: 80
+      region:
+      - 900
+      - 60
+      - 1900
+      - 900
+      size: 3
+      color: '#FFE7A0'
+    vignette: 0.55
+    brand: tl
 status: completed
 deliverable: documentary
 original_title: Why Norway Is So Rich — The Secret Behind Its Oil Fortune
-default: A
+default: C

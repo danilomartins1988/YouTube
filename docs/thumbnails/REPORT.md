@@ -21,9 +21,9 @@
 | Who Really Makes Money From Formula 1? | B | pass | 0.72 / 0.634 | not ready | `docs/episodes/03-formula1/youtube-package/` |
 | The Tiny Island Getting Rich From AI | A | pass | 0.728 / 0.694 | ready | `docs/episodes/10-anguilla/youtube-package/` |
 | The $250 Million Machine Every Advanced Chip Depends On | A | pass | 0.719 / 0.794 | ready | `docs/episodes/08-asml/youtube-package/` |
-| How Norway Turned Oil Into a $2 Trillion Fortune | A | pass | 0.676 / 0.61 | ready | `docs/episodes/04-norway/youtube-package/` |
+| How Norway Turned Oil Into a $2 Trillion Fortune | C | pass | 0.676 / 0.579 / 0.691 | ready | `docs/episodes/04-norway/youtube-package/` |
 | Why Almost Half the World's Ships Fly Three Small Flags | A | pass | 0.695 / 0.616 | ready | `docs/episodes/11-flags/youtube-package/` |
-| The Hidden Formula Behind Switzerland's Wealth | A | pass | 0.882 / 0.704 | ready | `docs/episodes/01-switzerland/youtube-package/` |
+| The Hidden Formula Behind Switzerland's Wealth | C | pass | 0.882 / 0.704 / 0.785 | ready | `docs/episodes/01-switzerland/youtube-package/` |
 | Why Taiwan Matters So Much to the Global Economy (original cut) | B | pass | 0.556 / 0.705 | ready | `docs/episodes/07-taiwan/youtube-package/` |
 | The Small Island the Whole World Economy Depends On | B | pass | 0.641 / 0.646 | ready | `docs/episodes/07-taiwan-v2/youtube-package/` |
 

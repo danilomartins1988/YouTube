@@ -12,7 +12,7 @@
   "status": "completed",
   "deliverable": "documentary",
   "original_title": "Why Norway Is So Rich \u2014 The Secret Behind Its Oil Fortune",
-  "default": "A",
+  "default": "C",
   "slug": "why-norway-is-so-rich",
   "concepts": [
     {
@@ -316,7 +316,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-switzerland-is-so-rich (distance 0.77)",
+            "detail": "nearest the-hidden-business-of-formula-1 (distance 0.40)",
             "critical": false
           },
           {
@@ -327,7 +327,7 @@
           }
         ],
         "critical_fail": true,
-        "design_score": 0.61,
+        "design_score": 0.579,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -335,12 +335,192 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "why-switzerland-is-so-rich"
+        "nearest": "the-hidden-business-of-formula-1"
+      }
+    },
+    {
+      "id": "C",
+      "angle": "consequence (bold)",
+      "text": [
+        "NORWAY",
+        "SAVED,",
+        "NOT SPENT"
+      ],
+      "accent_line": 2,
+      "text_side": "left",
+      "claim_basis": "Fiscal rule: the government spends only the fund's expected return; fund \u2248 $2.12tn (sources.yaml, CURRENCY.md)",
+      "scene": {
+        "palette": {
+          "sky0": "#080A18",
+          "sky1": "#4A1E2E",
+          "haze": "#FF8A2A",
+          "key": "#FFD08A",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "sea",
+        "subject": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 330,
+          "s": 1.1,
+          "symbol": "$"
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1440,
+            "y": 330,
+            "s": 1.0,
+            "label": " ",
+            "rot": 0
+          },
+          {
+            "kind": "oilrig",
+            "x": 1440,
+            "y": 800,
+            "s": 0.5
+          }
+        ],
+        "particles": {
+          "n": 80,
+          "region": [
+            900,
+            60,
+            1900,
+            900
+          ],
+          "size": 3,
+          "color": "#FFE7A0"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "NORWAY",
+          "x": 90,
+          "y": 445.6,
+          "size": 138.9,
+          "width": 533.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "SAVED,",
+          "x": 90,
+          "y": 590.0,
+          "size": 138.9,
+          "width": 533.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "NOT SPENT",
+          "x": 90,
+          "y": 734.4,
+          "size": 138.9,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.60 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 337, 623, 454), (90, 482, 623, 598), (90, 626, 890, 743)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "11.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.094",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 41",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.57)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "Fiscal rule: the government spends only the fund's expected return; fund \u2248 $2.12tn (sources.yaml, CURRENCY.md)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.691,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
       }
     }
   ],
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T16:14:51Z",
-  "master": "output/why-norway-is-so-rich/thumbnails/master_A.png"
+  "generated": "2026-11-08T16:46:37Z",
+  "master": "output/why-norway-is-so-rich/thumbnails/master_C.png"
 }
