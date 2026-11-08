@@ -1,0 +1,262 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# projections and targets labelled; rupee sums given in dollars (FRED H.10 rate of the day). Generic teaser.
+logline: India now has chip plants in commercial production, and none of them makes a chip from scratch. They package
+  and test chips made elsewhere. Why that is not a failure but a deliberate first step, and what India still has to
+  build before it can make chips of its own.
+title: India's Chip Plants Don't Make Chips. That's the Plan
+segments:
+- id: h_question
+  chapter: The plant that does not make chips
+  narration: What if a country opened its first chip plants, celebrated, and not one of them actually made a chip from
+    scratch?
+  claims: []
+  analysis: true
+  source_note: Hook question; the plants in production are packaging and test plants (PIB, Tech Times).
+- id: h_stakes
+  chapter: The plant that does not make chips
+  narration: That is India in twenty twenty-six. The government says {{units.five_spoken}} chip units are in commercial
+    production. But the first ones to open do not make chips from silicon. They take chips made somewhere else and
+    finish them. And that, it turns out, may be exactly the right way to start.
+  claims:
+  - units
+  - sanand
+- id: m1_card
+  chapter: Two halves of a chip
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: Two halves of a chip
+  narration: What does it actually mean to make a chip?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_front
+  chapter: Two halves of a chip
+  narration: Making a chip happens in two halves. The first half is the front end, the fab. Here, light and chemicals
+    build billions of tiny circuits onto a silicon wafer, layer after layer. It is the hardest part, and the most expensive.
+    One industry study put the cost of a state-of-the-art fab at roughly {{value.fablo_spoken}} to {{value.fabhi_spoken}}.
+  claims:
+  - value
+- id: m1_back
+  chapter: Two halves of a chip
+  narration: The second half is the back end. The finished wafer is cut into individual chips. Each chip is sealed inside
+    a protective package, wired to the outside world, and tested before it ships. In India, this is called assembly,
+    testing, marking and packaging. It is skilled work, but it needs far less money and far fewer exotic machines than
+    a fab.
+  claims:
+  - value
+  - units
+- id: m1_draw
+  chapter: Two halves of a chip
+  narration: 'Let me draw where the money is. Split the value of the chip industry into slices. Designing the chip is
+    about {{value.design_spoken}} of the value. Making the wafer in a fab, {{value.fab_spoken}}. Packaging and testing,
+    only {{value}}. So the back end is the smallest slice. But it is also the one door a newcomer can open first.'
+  claims:
+  - value
+  analysis: true
+  source_note: Value-added shares from BCG/SIA (2019 data).
+- id: m1_transition
+  chapter: Two halves of a chip
+  narration: India walked through that door in a town called Sanand.
+  claims: []
+- id: m2_card
+  chapter: Sanand
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: Sanand
+  narration: What is actually running in India today?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_sanand
+  chapter: Sanand
+  narration: Sanand is an industrial town in the state of Gujarat. In February twenty twenty-six, the American memory
+    maker Micron inaugurated a packaging and test plant there, a project of about {{sanand}}. It now ships memory chips.
+    At the end of March, a second plant, from the Indian company Kaynes, started commercial operation. In July, a third,
+    from a joint venture of CG Power with the Japanese chipmaker Renesas, began production. All three in the same town.
+  claims:
+  - sanand
+- id: m2_inside
+  chapter: Sanand
+  narration: Inside, the work goes like this. Finished wafers arrive from fabs abroad. Machines cut each wafer into
+    individual dies. Each die is placed in a package, connected to the outside with tiny wires, sealed, and then
+    tested. The machines and most of the materials still come from the United States, Japan, Taiwan and
+    South Korea. But the factory, the jobs and the know-how are now in India.
+  claims:
+  - osat_how
+- id: m2_count
+  chapter: Sanand
+  narration: In total, India has approved {{units.n_spoken}} chip manufacturing units, with investments worth {{units}}.
+    Look at the mix. One silicon fab, two fabs for special materials and displays, and {{units.packaging_spoken}} packaging and test
+    plants. By September, the government said five of them were in commercial production. In twenty twenty-one, it says,
+    the country had no commercial chip plant at all.
+  claims:
+  - units
+- id: m2_transition
+  chapter: Sanand
+  narration: So why would a country spend billions on the smallest slice of the business?
+  claims: []
+- id: m3_card
+  chapter: The import bill
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The import bill
+  narration: Why does India want chip plants at all?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_bill
+  chapter: The import bill
+  narration: Because it buys an enormous amount of chips. According to the government, India spent {{imports}} on imported
+    chips between twenty sixteen and twenty twenty-five. Imports grew by an average of almost a quarter a year. If
+    that trend continued, the government says, India could be importing {{imports.y2035_spoken}} worth of chips a year
+    by twenty thirty-five. That is a projection, not a fact. But it explains the hurry.
+  claims:
+  - imports
+- id: m3_demand
+  chapter: The import bill
+  narration: And the need is growing. The government projects that India's own demand for chips will reach {{imports.demand_spoken}}
+    a year by twenty thirty, as phones, cars, data centers and factories all fill up with electronics. Again, a projection.
+    And every chip India buys abroad is money that leaves the country.
+  claims:
+  - imports
+- id: m3_phones
+  chapter: The import bill
+  narration: And India has done this before. A decade ago, three in every four mobile phones sold in India were imported.
+    Then factories started assembling phones in India, starting with the final steps. By twenty twenty-five, the government says, almost every phone sold in India was made in India. Packaging chips is
+    the same first step, applied to the chip itself.
+  claims:
+  - phones
+- id: m3_design
+  chapter: The import bill
+  narration: India also starts with a hidden strength. The government says {{imports.design_spoken}} chip designers
+    in the world works in India. Remember the slices. Design is the biggest one, and India already does a large part
+    of it for companies around the world. Packaging, the smallest slice, has now arrived. The missing piece in the middle
+    is the fab.
+  claims:
+  - imports
+  - value
+- id: m3_transition
+  chapter: The import bill
+  narration: And the fab is where things get harder.
+  claims: []
+- id: m4_card
+  chapter: The missing middle
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The missing middle
+  narration: How close is India to making the chip itself?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_dholera
+  chapter: The missing middle
+  narration: India's first real chip fab is being built by Tata Electronics in Dholera, also in Gujarat, with technology
+    from the Taiwanese chipmaker PSMC. It is worth about {{dholera}}, and it is designed for {{dholera.wspm_spoken}}. When
+    construction began in twenty twenty-four, India's IT minister said the first chip would arrive in December twenty
+    twenty-six, at twenty-eight nanometers.
+  claims:
+  - dholera
+- id: m4_slip
+  chapter: The missing middle
+  narration: That has changed. According to Tech Times, the fab will now start with older ninety nanometer chips, and
+    commercial production is targeted for mid twenty twenty-eight. Tata and PSMC say starting with a mature process is
+    normal, and in chipmaking it often is. A new fab has to learn to make good chips before it can make small ones.
+  claims:
+  - dholera
+- id: m4_loan
+  chapter: The missing middle
+  narration: Even the financing shows how new this is. In February twenty twenty-six, the project borrowed {{loan}}
+    from a group of international banks. According to Tech Times, the land pledged as collateral was valued at zero,
+    because nothing had been built on it yet. The banks were betting on the Tata name more than on the factory.
+  claims:
+  - loan
+- id: m4_rivals
+  chapter: The missing middle
+  narration: But the competition will not wait. Chinese foundries, backed by state subsidies, are expanding exactly this
+    kind of mature chip production. One of them, Nexchip, is ramping up to {{china_mature}}. And India carries an old
+    scar. In twenty oh five, a three billion dollar chip project called SemIndia stalled while its imported equipment
+    sat stuck at Indian ports, waiting for customs clearance.
+  claims:
+  - china_mature
+  - semindia
+- id: m4_draw
+  chapter: The missing middle
+  narration: 'Let me draw why a fab is so much harder than a packaging plant. A packaging plant needs machines that many
+    companies sell, and materials with ordinary purity. A fab needs lithography machines from one or two suppliers, gases
+    and chemicals so pure that contamination is counted in parts per trillion, and engineers who have done it before.
+    Every one of those still comes from abroad.'
+  claims:
+  - semicon2
+  analysis: true
+  source_note: Explanation based on the Tech Times description of OSAT vs front-end supply chains.
+- id: m4_transition
+  chapter: The missing middle
+  narration: India knows this. Its next move is aimed at exactly that list.
+  claims: []
+- id: m5_card
+  chapter: The second step
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: The second step
+  narration: What comes after packaging?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_semicon2
+  chapter: The second step
+  narration: In July twenty twenty-six, the government approved a second chip program worth {{semicon2}}. For the first
+    time, it pays companies that make the things behind the chips, the machines, the special chemicals and the gases,
+    with an incentive of {{semicon2.inc_spoken}} of the project cost. Because, as one consultant at Kearney put it, the
+    lion's share of critical inputs will still be imported, even with new fabs and packaging plants.
+  claims:
+  - semicon2
+- id: m5_people
+  chapter: The second step
+  narration: The new program also pays for more fabs, covering up to {{pillars}} of the cost of a new silicon fab. And
+    it pays for people. Chip design tools are now in {{pillars.uni_spoken}} Indian universities, and the equipment maker
+    Lam Research plans to help train {{pillars.eng_spoken}} fab engineers over the next decade. Because a fab is not only
+    machines. It is thousands of people who know how to run them.
+  claims:
+  - pillars
+- id: m5_trust
+  chapter: The second step
+  narration: And India is not trying to win on price. Chinese mature chips are cheap and subsidized. According to Tech
+    Times, India's real argument is trust. Companies in America, Europe and Japan want a second source of chips in a
+    country they see as a reliable partner. That is a selling point no subsidy can buy.
+  claims:
+  - geo
+- id: m5_ladder
+  chapter: The second step
+  narration: That is the logic of the whole plan. Start where the door is open, packaging and testing. Learn to run
+    clean factories, train engineers, and attract suppliers. Then move up to a fab, first with older chips. And only
+    then, maybe, the leading edge. Each step is smaller than the dream. But each one is real.
+  claims:
+  - units
+  - dholera
+  - semicon2
+  analysis: true
+  source_note: Conclusion on the sequencing, built on the sourced program structure.
+- id: payoff
+  chapter: The lesson
+  narration: So are India's chip plants a failure because they do not make chips? No. They are the first rung of a
+    ladder that every chip country has had to climb. The real test comes in twenty twenty-eight, when Dholera is meant
+    to start selling chips of its own. Until then, India is learning the cheapest lesson in chipmaking first, how to
+    finish what others started, before it learns how to start.
+  claims:
+  - dholera
+  - value
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy.
+    This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

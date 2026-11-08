@@ -136,7 +136,31 @@ stage("s20_latest", "a4_latest", {
                  co("Next quarter expected: {{q2fy27.guide_display}}", 960, 960, C("expected"), "gold", screen=True)]},
     sources=["nvda_q2fy27"])
 card("s21_act5", "a5_card", "The Global Supply Chain", "Designed in California, made in Asia")
-keep("s22_chain")
+# bespoke replacement for the old map (freeze at its start in the Nov 2026 render): one chip's journey, design -> wafer -> memory -> servers
+stage("s22_chain", "a5_chain", {
+    "zones": [Z("office", -1600, 1300), Z("fab", 1300, 2700, label="yellow"), Z("datacenter", 2700, 7000)], "worldW": 4400,
+    "cam": [{"at": 0, "x": 700, "y": 520, "zoom": 1.05}, {"at": C("send the designs"), "x": 1900, "y": 520, "zoom": 1.0, "dur": 2.6},
+            {"at": C("high bandwidth memory"), "x": 2500, "y": 520, "zoom": 1.05, "dur": 2.4},
+            {"at": C("Contract manufacturers"), "x": 3600, "y": 520, "zoom": 1.0, "dur": 2.6}], "drift": 6,
+    "items": [it("sign", x=650, y=300, text="NVIDIA · CALIFORNIA", sub="designs, does not make", at=0.3, color="#C8E6C9", size=34),
+              it("device", type="laptop", x=650, y=F, at=0.6),
+              it("plane", x=[[0, 700], [{"cue": "send the designs"}, 700], [{"cue": "send the designs", "offset": 3}, 1700], [{"cue": "send the designs", "offset": 5}, 2400]],
+                 y=[[0, 420], [{"cue": "send the designs", "offset": 3}, 250], [{"cue": "send the designs", "offset": 5}, -200]],
+                 at=C("send the designs", -0.3), until=C("send the designs", 5), text="DESIGN FILES", scale=0.6),
+              it("litho", x=1700, at=C("in Taiwan", -0.4), fireAt=C("prints them"), text="TSMC · TAIWAN", scale=0.6),
+              it("wafer", x=2150, y=430, r=150, at=C("prints them"), spin=8, revealAt=C("silicon wafers"), fail=0.05),
+              it("hbm", x=2650, y=500, at=C("high bandwidth memory", -0.2), dur=3, scale=0.6, text="GPU + HBM"),
+              it("sign", x=2650, y=250, text="SK HYNIX · MICRON · SAMSUNG", sub="memory stacks", at=C("SK Hynix"), color="#BBDEFB", size=28),
+              it("sign", x=2650, y=760, text="CoWoS PACKAGING", at=C("CoWoS"), color="#FFE0B2", size=30),
+              it("conveyor", x0=2800, x1=4400, y=F - 40, at=C("Contract manufacturers", -0.5), n=8, speed=140, goods="chip"),
+              it("device", type="server", x=3500, y=F, at=C("assemble them into servers")),
+              it("device", type="server", x=3750, y=F, at=C("assemble them into servers", 0.4)),
+              it("plane", x=[[0, 3700], [{"cue": "ship to data centers"}, 3700], [{"cue": "ship to data centers", "offset": 4}, 4600]], y=[[0, 600], [{"cue": "ship to data centers", "offset": 4}, 220]], at=C("ship to data centers", -0.4), text="TO DATA CENTERS", scale=0.6, tilt=-10)],
+    "callouts": [co("Nvidia designs. Others make.", 960, 150, C("designs its chips"), "gold", screen=True, until=C("send the designs", -0.3)),
+                 co("Wafers: {{suppliers.display}}, Taiwan", 960, 150, C("send the designs"), "white", screen=True, until=C("high bandwidth memory", -0.3)),
+                 co("Memory stacks + CoWoS packaging", 960, 150, C("high bandwidth memory"), "white", screen=True, until=C("Contract manufacturers", -0.3)),
+                 co("Servers, then data centers worldwide", 960, 150, C("Contract manufacturers"), "gold", screen=True)]},
+    sources=["nvda_10k_fy2026"])
 # bespoke replacement for the old static map (freeze check): a packaging line that jams when one input runs short
 stage("s23_bottleneck", "a5_bottleneck", {
     "zones": [Z("fab", -1600, 2200, label="yellow"), Z("datacenter", 2200, 6000)], "worldW": 3000,

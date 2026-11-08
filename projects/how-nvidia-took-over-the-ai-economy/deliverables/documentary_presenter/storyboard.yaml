@@ -1235,168 +1235,217 @@ scenes:
   - font:inter
 - id: s22_chain
   segment: a5_chain
-  type: supply_chain
+  type: engine_cartoon
   params:
-    title: From design to data center
-    subtitle: Company locations are headquarters or named sites · NVIDIA 10-K
-    title_cue: surprising part
-    views:
-    - lon: -10
-      lat: 32
-      span: 300
-    - lon: 124
-      lat: 30
-      span: 48
-      cue: in Taiwan
-    - lon: 10
-      lat: 25
-      span: 320
-      cue: Contract manufacturers
-    anchor_y: 0.46
-    nodes:
-    - id: nvda
-      label: NVIDIA
-      role: Design · Santa Clara, CA
-      lon: -121.96
-      lat: 37.37
-      colour: accent
-      cue: designs its chips
-      dx: -26
-      dy: 24
-    - id: tsmc
-      hide_wide: true
-      label: TSMC
-      role: Wafer fabrication · Hsinchu
-      lon: 120.99
-      lat: 24.78
-      colour: accent2
-      country: TWN
-      cue: send the designs
-      dx: 26
-      dy: -10
-    - id: skh
-      label: SK Hynix · Samsung
-      role: HBM memory · Korea
-      lon: 127.3
-      lat: 37.2
-      colour: accent3
-      country: KOR
-      cue: high bandwidth memory
-      dx: 26
-    - id: mu
-      label: Micron
-      role: HBM memory · HQ Boise, ID
-      lon: -116.2
-      lat: 43.6
-      colour: accent3
-      cue: Micron
-      dx: 26
-      dy: -34
-    - id: cowos
-      hide_wide: true
-      label: CoWoS packaging
-      role: TSMC advanced packaging · Taiwan
-      lon: 120.45
-      lat: 23.48
-      colour: accent2
-      cue: advanced packaging
-      dx: -26
-      dy: 20
-    - id: asm
-      hide_wide: true
-      label: Server assembly
-      role: Contract manufacturers (e.g. Hon Hai)
-      lon: 121.45
-      lat: 25.06
-      colour: accent2
-      cue: Contract manufacturers
-      dx: 26
-      dy: 36
-    - id: twc
-      wide_only: true
-      label: Taiwan
-      role: fab · CoWoS · assembly
-      lon: 121.0
-      lat: 23.8
-      colour: accent2
-      cue: Contract manufacturers
-      dx: 26
-      dy: 34
-    - id: dc1
-      label: Data centers
-      role: US
-      lon: -78.5
-      lat: 38.9
-      colour: accent
-      cue: data centers around
-      dx: 26
-    - id: dc2
-      label: Data centers
-      role: Europe
-      lon: 8.7
-      lat: 50.1
-      colour: accent
-      cue: around the world
-      dx: 26
-    - id: dc3
-      label: Data centers
-      role: Asia
-      lon: 103.8
-      lat: 1.35
-      colour: accent
-      cue: around the world
-      offset: 0.3
-      dx: 26
-    links:
-    - from: nvda
-      to: tsmc
-      lift: 0.15
-    - from: tsmc
-      to: cowos
-      lift: 0.4
-    - from: skh
-      to: cowos
-      lift: 0.3
-    - from: mu
-      to: cowos
-      lift: 0.12
-    - from: cowos
-      to: asm
-      lift: 0.5
-    - from: asm
-      to: dc1
-      lift: 0.15
-    - from: asm
-      to: dc2
-      lift: 0.2
-    - from: asm
-      to: dc3
-      lift: 0.3
-    steps:
-    - label: Design
-      colour: accent
-      cue: designs its chips
-    - label: Wafer fab
-      colour: accent2
-      cue: silicon wafers
-    - label: HBM memory
-      colour: accent3
-      cue: high bandwidth memory
-    - label: CoWoS packaging
-      colour: accent2
-      cue: packaging technique
-      node: cowos
-    - label: Assembly
-      colour: accent2
-      cue: assemble them
-    - label: Data centers
-      colour: accent
-      cue: data centers around
+    zones:
+    - set: office
+      x0: -1600
+      x1: 1300
+    - set: fab
+      x0: 1300
+      x1: 2700
+      label: yellow
+    - set: datacenter
+      x0: 2700
+      x1: 7000
+    worldW: 4400
+    cam:
+    - at: 0
+      x: 700
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: send the designs
+      x: 1900
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    - at:
+        cue: high bandwidth memory
+      x: 2500
+      y: 520
+      zoom: 1.05
+      dur: 2.4
+    - at:
+        cue: Contract manufacturers
+      x: 3600
+      y: 520
+      zoom: 1.0
+      dur: 2.6
+    drift: 6
+    items:
+    - kind: sign
+      x: 650
+      y: 300
+      text: NVIDIA · CALIFORNIA
+      sub: designs, does not make
+      at: 0.3
+      color: '#C8E6C9'
+      size: 34
+    - kind: device
+      type: laptop
+      x: 650
+      y: 860
+      at: 0.6
+    - kind: plane
+      x:
+      - - 0
+        - 700
+      - - cue: send the designs
+        - 700
+      - - cue: send the designs
+          offset: 3
+        - 1700
+      - - cue: send the designs
+          offset: 5
+        - 2400
+      y:
+      - - 0
+        - 420
+      - - cue: send the designs
+          offset: 3
+        - 250
+      - - cue: send the designs
+          offset: 5
+        - -200
+      at:
+        cue: send the designs
+        offset: -0.3
+      until:
+        cue: send the designs
+        offset: 5
+      text: DESIGN FILES
+      scale: 0.6
+    - kind: litho
+      x: 1700
+      at:
+        cue: in Taiwan
+        offset: -0.4
+      fireAt:
+        cue: prints them
+      text: TSMC · TAIWAN
+      scale: 0.6
+    - kind: wafer
+      x: 2150
+      y: 430
+      r: 150
+      at:
+        cue: prints them
+      spin: 8
+      revealAt:
+        cue: silicon wafers
+      fail: 0.05
+    - kind: hbm
+      x: 2650
+      y: 500
+      at:
+        cue: high bandwidth memory
+        offset: -0.2
+      dur: 3
+      scale: 0.6
+      text: GPU + HBM
+    - kind: sign
+      x: 2650
+      y: 250
+      text: SK HYNIX · MICRON · SAMSUNG
+      sub: memory stacks
+      at:
+        cue: SK Hynix
+      color: '#BBDEFB'
+      size: 28
+    - kind: sign
+      x: 2650
+      y: 760
+      text: CoWoS PACKAGING
+      at:
+        cue: CoWoS
+      color: '#FFE0B2'
+      size: 30
+    - kind: conveyor
+      x0: 2800
+      x1: 4400
+      y: 820
+      at:
+        cue: Contract manufacturers
+        offset: -0.5
+      n: 8
+      speed: 140
+      goods: chip
+    - kind: device
+      type: server
+      x: 3500
+      y: 860
+      at:
+        cue: assemble them into servers
+    - kind: device
+      type: server
+      x: 3750
+      y: 860
+      at:
+        cue: assemble them into servers
+        offset: 0.4
+    - kind: plane
+      x:
+      - - 0
+        - 3700
+      - - cue: ship to data centers
+        - 3700
+      - - cue: ship to data centers
+          offset: 4
+        - 4600
+      y:
+      - - 0
+        - 600
+      - - cue: ship to data centers
+          offset: 4
+        - 220
+      at:
+        cue: ship to data centers
+        offset: -0.4
+      text: TO DATA CENTERS
+      scale: 0.6
+      tilt: -10
+    callouts:
+    - text: Nvidia designs. Others make.
+      x: 960
+      y: 150
+      at:
+        cue: designs its chips
+      color: gold
+      until:
+        cue: send the designs
+        offset: -0.3
+      screen: true
+    - text: 'Wafers: {{suppliers.display}}, Taiwan'
+      x: 960
+      y: 150
+      at:
+        cue: send the designs
+      color: white
+      until:
+        cue: high bandwidth memory
+        offset: -0.3
+      screen: true
+    - text: Memory stacks + CoWoS packaging
+      x: 960
+      y: 150
+      at:
+        cue: high bandwidth memory
+      color: white
+      until:
+        cue: Contract manufacturers
+        offset: -0.3
+      screen: true
+    - text: Servers, then data centers worldwide
+      x: 960
+      y: 150
+      at:
+        cue: Contract manufacturers
+      color: gold
+      screen: true
   sources:
   - nvda_10k_fy2026
-  - natural_earth
   assets:
-  - geo:remotion_world
   - font:inter
 - id: s23_bottleneck
   segment: a5_bottleneck
