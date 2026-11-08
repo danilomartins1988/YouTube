@@ -7,16 +7,17 @@ renderer: remotion
 remotion_geo: [world]
 style:
   name: pit-lane
-  palette:            # vibrant red, electric blue, yellow, white, dark charcoal (brief)
-    bg: "#16181D"
-    bg2: "#22252C"
-    ink: "#FFFFFF"
-    muted: "#9AA1AD"
-    land: "#2A2E36"
-    border: "#3A3F49"
-    accent: "#FF2D3D"     # vibrant red
-    accent2: "#1E9BFF"    # electric blue
-    accent3: "#FFD21F"    # yellow
+  palette:            # bright cartoon day with racing red (2026-11-08 cartoon redo)
+    bg: "#BFE8FA"
+    bg2: "#EAF8FF"
+    ink: "#10213A"
+    muted: "#4F6B80"
+    land: "#8BD47A"
+    border: "#2E5A73"
+    accent: "#E53935"     # racing red
+    accent2: "#1E7FD8"
+    accent3: "#E89A00"
+    risk: "#C62828"
   fonts:
     display: InterDisplay-Bold
     heading: InterDisplay-SemiBold

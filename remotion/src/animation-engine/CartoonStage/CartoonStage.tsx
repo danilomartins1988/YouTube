@@ -540,6 +540,44 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 90)}, (_, k) => <path key={'wc' + k} d={`M ${z.x0 + k * 90 + 30 * Math.sin(t * 0.7 + k)} ${f + 40 + 200 * rnd(k + 13)} q 20 -12 40 0`} fill="none" stroke={K.white} strokeWidth={4} opacity={0.5} />)}
     </g>;
   },
+  /** Race circuit: a packed grandstand of waving fans, generic advertising boards (text only), a track with red-white kerbs. */
+  circuit: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    const boards: string[] = (z as any).boards || ['SPONSOR', 'YOUR BRAND HERE', 'SPONSOR', 'BRAND', 'SPONSOR'];
+    return <g>
+      <path d={`M ${z.x0} ${f - 160} L ${z.x0} ${f - 520} L ${z.x1} ${f - 520} L ${z.x1} ${f - 160} Z`} fill="#90A4AE" stroke={OL} strokeWidth={4} />
+      <path d={`M ${z.x0} ${f - 560} L ${z.x1} ${f - 560} L ${z.x1} ${f - 520} L ${z.x0} ${f - 520} Z`} fill="#ECEFF1" stroke={OL} strokeWidth={4} />
+      {Array.from({length: 7}, (_, r) => Array.from({length: Math.ceil(w / 34)}, (_, k) => { const x = z.x0 + 17 + k * 34 + (r % 2) * 17, y = f - 500 + r * 48, j = rnd(r * 977 + k);
+        const jump = Math.max(0, Math.sin(t * 6 + j * 30)) * 6;
+        return <g key={r + '-' + k}><circle cx={x} cy={y - jump} r={11} fill={K.skin[Math.floor(j * 4)]} />
+          <rect x={x - 12} y={y + 10 - jump} width={24} height={20} rx={6} fill={['#E53935', '#1E88E5', '#FFB300', '#43A047', '#8E24AA', '#FF7043'][Math.floor(j * 6)]} /></g>; }))}
+      {Array.from({length: Math.ceil(w / 420)}, (_, k) => <g key={'ad' + k}><rect x={z.x0 + 10 + k * 420} y={f - 150} width={400} height={70} fill={['#FFFFFF', '#FFF59D', '#BBDEFB', '#FFCDD2'][k % 4]} stroke={OL} strokeWidth={4} />
+        <T x={z.x0 + 210 + k * 420} y={f - 104} s={28}>{boards[k % boards.length]}</T></g>)}
+      <rect x={z.x0} y={f - 80} width={w} height={80} fill="#B0BEC5" stroke={OL} strokeWidth={3} />
+      <rect x={z.x0} y={f} width={w} height={150} fill="#455A64" />
+      {Array.from({length: Math.ceil(w / 60)}, (_, k) => <rect key={'kb' + k} x={z.x0 + k * 60} y={f} width={30} height={16} fill={K.red} />)}
+      {Array.from({length: Math.ceil(w / 60)}, (_, k) => <rect key={'kw' + k} x={z.x0 + k * 60 + 30} y={f} width={30} height={16} fill={K.white} />)}
+      <rect x={z.x0} y={f + 150} width={w} height={500} fill={night ? '#2E5B3A' : '#66BB6A'} />
+    </g>;
+  },
+  /** Pit lane: a row of team garages with mechanics' tools, overhead gantry lights, the pit wall. */
+  pitlane: (t, z, f) => {
+    const w = z.x1 - z.x0;
+    const teams: string[] = (z as any).teams || ['TEAM A', 'TEAM B', 'TEAM C', 'TEAM D', 'TEAM E'];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f - 380} fill="#ECEFF1" />
+      {Array.from({length: Math.ceil(w / 480)}, (_, k) => { const x = z.x0 + 20 + k * 480, c = ['#E53935', '#1E88E5', '#FF9800', '#00897B', '#7E57C2', '#546E7A'][k % 6];
+        return <g key={'gr' + k}>
+          <rect x={x} y={f - 380} width={460} height={380} fill="#37474F" stroke={OL} strokeWidth={4} />
+          <rect x={x} y={f - 440} width={460} height={60} fill={c} stroke={OL} strokeWidth={4} />
+          <T x={x + 230} y={f - 398} s={30} c={K.white}>{teams[k % teams.length]}</T>
+          {[0, 1, 2].map((j) => <rect key={j} x={x + 40 + j * 140} y={f - 340} width={100} height={60} rx={6} fill="#263238" stroke={c} strokeWidth={3} />)}
+          <rect x={x + 30} y={f - 200} width={50} height={200} fill="#B0BEC5" stroke={OL} strokeWidth={3} /><rect x={x + 380} y={f - 200} width={50} height={200} fill="#B0BEC5" stroke={OL} strokeWidth={3} /></g>; })}
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => <circle key={'gl' + k} cx={z.x0 + 150 + k * 300} cy={f - 470} r={10} fill={Math.sin(t * 3 + k) > 0 ? '#FFEB3B' : '#FFF9C4'} stroke={OL} strokeWidth={2} />)}
+      <rect x={z.x0} y={f} width={w} height={600} fill="#546E7A" />
+      <path d={`M ${z.x0} ${f + 60} L ${z.x1} ${f + 60}`} stroke={K.white} strokeWidth={6} strokeDasharray="40 30" />
+    </g>;
+  },
   /** Plain studio-like sky with rolling hills (fallback / neutral). */
   hills: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -549,7 +587,7 @@ const SETS: Record<string, SetFn> = {
     </g>;
   },
 };
-const INDOOR = new Set(['den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set(['pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -1471,9 +1509,34 @@ const rig: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A race car (or a motorbike with bike:true), side view, wheels spinning; x keyframes or `loop` (speed px/s across x0..x1). */
+const racecar: ItemFn = (a, {t, f}, i) => {
+  const s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.3), c = col(a.color, K.red);
+  if (s <= 0) return null;
+  let x = kf(a.x, t, 960);
+  if (a.loop) { const x0 = a.x0 ?? -600, x1 = a.x1 ?? 2600, sp = a.loop; x = x0 + (((t - (a.at ?? 0)) * sp + (a.phase ?? 0)) % (x1 - x0)); }
+  const y = kf(a.y, t, f + 70), spin = t * 1400, fl = a.flip ? -1 : 1;
+  const wheel = (wx: number, r: number) => <g transform={`translate(${wx} 0) rotate(${spin})`}><circle r={r} fill="#212121" stroke={OL} strokeWidth={3} /><path d={`M ${-r * 0.6} 0 L ${r * 0.6} 0 M 0 ${-r * 0.6} L 0 ${r * 0.6}`} stroke="#9E9E9E" strokeWidth={3} /></g>;
+  return <g key={'rc' + i} transform={`translate(${x} ${y}) scale(${s * fl} ${s})`}>
+    {(a.loop || Array.isArray(a.x)) && [0, 1, 2].map((k) => <path key={k} d={`M ${-170 - k * 40} ${-30 + k * 14} L ${-240 - k * 60} ${-30 + k * 14}`} stroke={K.white} strokeWidth={4} opacity={0.7} />)}
+    {a.bike ? <g>
+      {wheel(-60, 30)}{wheel(70, 30)}
+      <path d="M -60 0 L -10 -50 L 50 -50 L 70 0 M -10 -50 L -30 -70 M 50 -50 L 60 -80" fill="none" stroke={c} strokeWidth={12} strokeLinejoin="round" strokeLinecap="round" />
+      <path d="M -10 -60 Q 20 -110 60 -80" fill="none" stroke={OL} strokeWidth={16} strokeLinecap="round" />
+      <circle cx={40} cy={-112} r={22} fill={c} stroke={OL} strokeWidth={4} /><rect x={44} y={-122} width={20} height={12} rx={4} fill="#263238" /></g>
+    : <g>
+      <path d="M -170 -20 L -150 -60 L -40 -64 L -10 -100 L 40 -100 L 60 -60 L 180 -44 L 190 -20 Z" fill={c} stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+      <rect x={-190} y={-96} width={40} height={50} rx={4} fill={c} stroke={OL} strokeWidth={4} />
+      <rect x={170} y={-40} width={40} height={20} rx={3} fill={c} stroke={OL} strokeWidth={4} />
+      <circle cx={10} cy={-96} r={18} fill={a.helmet ? col(a.helmet) : K.gold} stroke={OL} strokeWidth={4} />
+      <T x={-60} y={-30} s={30} c={K.white}>{a.text ?? String((i % 20) + 1)}</T>
+      {wheel(-110, 32)}{wheel(130, 32)}</g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'crane', 'arm']);
 
 /* =============================================================================================== STAGE */

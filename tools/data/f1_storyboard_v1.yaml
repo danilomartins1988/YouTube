@@ -1,0 +1,658 @@
+# Storyboard for the Remotion renderer (remotion/src/scenes/*). One scene per script segment.
+# Animation is cue-driven: `cue` phrases are matched against the narration's word timings.
+# All art is original programmatic SVG: generic open-wheel cars, a fictional circuit, placeholder sponsor
+# boards ("YOUR BRAND"), an original hand illustration. No official F1 marks, liveries or broadcast graphics.
+# Whiteboard hand-drawing sequences: s05_sketch (car), s11_sketch (revenue model), s43_sketch (circuit).
+scenes:
+  # ---------------- cold open
+  - id: s01_hook
+    segment: open_hook
+    type: race_track
+    params:
+      no_chrome: true
+      kicker: The Hidden Economics
+      kicker_cue: "A pack"
+      title: The Hidden Business
+      title_cue: "grandstand"
+      value: Behind Formula 1
+      value_cue: "has been sold"
+      subtitle: Who pays, who gets paid, and why
+      subtitle_cue: "only half"
+      boards: ["YOUR BRAND", "SPONSOR", "PARTNER", "THIS SPACE", "YOUR LOGO"]
+    sfx: [{kind: hit, at: 0.0, gain: 0.3}]
+    assets: ["font:inter"]
+
+  - id: s02_revenue
+    segment: open_revenue
+    type: big_counter
+    params:
+      chapter: "The business"
+      cue: "took in"
+      kicker: "Formula 1 total revenue, {{f1_revenue_2025.year}}"
+      display: "{{f1_revenue_2025.display}}"
+      label: "Formula 1 group revenue"
+      sublabel: "{{f1_revenue_2025.growth_display}} vs {{f1_revenue_2025.prev_display}} in 2024 · not team or promoter money"
+    sfx: [{kind: pop, cue: "took in", offset: 1.4}]
+    sources: [liberty_fy2025]
+    assets: ["font:inter"]
+
+  - id: s03_question
+    segment: open_question
+    type: kinetic_text
+    params:
+      align: center
+      lines:
+        - {text: "Who pays?", size: 84, cue: "So where"}
+        - {text: "Who gets paid?", size: 84, color: accent2, cue: "who gets paid"}
+        - {text: "Why do cities line up to host a race?", size: 54, color: accent3, style: body, cue: "why do cities"}
+    assets: ["font:inter"]
+
+  # ---------------- part 1
+  - id: s04_p1
+    segment: p1_card
+    type: act_title
+    params: {number: Part 1, title: A Sport Becomes a Property, subtitle: From racing club to global business, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s05_sketch
+    segment: p1_sketch
+    type: whiteboard
+    params:
+      drawing: car
+      speed: 520
+      caption: The show itself could be sold
+      caption_cue: "packaged and sold"
+    assets: ["font:inter"]
+
+  - id: s06_history
+    segment: p1_history
+    type: timeline
+    params:
+      chapter: "01 · A sport becomes a property"
+      title: Who has owned the show
+      start_year: 2004
+      end_year: 2018
+      tick_every: 2
+      items:
+        - {year: "{{cvc_2006.value}}", label: "CVC takes majority control", cue: "CVC took"}
+        - {year: 2011, display: "16 → 22", label: "Races per season over CVC's tenure (CVC)", cue: "calendar grew"}
+        - {year: 2017, label: "Ecclestone hands over after decades", cue: "Bernie Ecclestone"}
+    sources: [liberty_close_2017, cvc_case]
+    assets: ["font:inter"]
+
+  - id: s07_liberty
+    segment: p1_liberty
+    type: big_counter
+    params:
+      chapter: "01 · A sport becomes a property"
+      cue: "valuing the business"
+      kicker: "Liberty Media agrees to buy Formula 1, {{liberty_deal.year_display}}"
+      display: "{{liberty_deal.display}}"
+      label: "Enterprise value (including debt)"
+      sublabel: "Equity value {{liberty_deal.equity_display}} · completed {{liberty_deal.close_display}}"
+    sfx: [{kind: pop, cue: "valuing", offset: 1.4}]
+    sources: [liberty_deal_2016, liberty_close_2017]
+    assets: ["font:inter"]
+
+  # ---------------- part 2
+  - id: s08_p2
+    segment: p2_card
+    type: act_title
+    params: {number: Part 2, title: Who Owns What, subtitle: "The regulator, the rights holder and the teams", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s09_layers
+    segment: p2_layers
+    type: fund_flow
+    params:
+      chapter: "02 · Who owns what"
+      title: Three layers
+      nodes:
+        - {id: fia, shape: flag, x: 380, y: 520, label: The FIA, sublabel: writes and polices the rules, cue: "The FIA writes"}
+        - {id: lib, shape: box, x: 960, y: 330, label: Liberty Media, sublabel: owner, colour: accent2, cue: "owned by Liberty"}
+        - {id: f1, shape: f1, x: 960, y: 640, label: Formula 1 (FOM), sublabel: commercial rights, cue: "Formula One, owned"}
+        - {id: teams, shape: car, x: 1560, y: 560, label: The teams, sublabel: compete and share the money, size: 1.4, cue: "the teams compete"}
+      links:
+        - {from: lib, to: f1, cue: "holds the commercial", colour: accent2}
+        - {from: f1, to: teams, cue: "sharing in the money", bend: 0.25, coins: 6}
+        - {from: fia, to: teams, cue: "the teams compete", bend: -0.35, colour: muted, coins: 0}
+      caption: "FIA: safety and sport come before commercial interests"
+      caption_cue: "must put safety"
+    sources: [liberty_10k_2025]
+    assets: ["font:inter"]
+
+  - id: s10_motogp
+    segment: p2_motogp
+    type: kinetic_text
+    params:
+      align: center
+      lines:
+        - {text: "Liberty Media", size: 64, color: accent2, cue: "Liberty has"}
+        - {text: "+ Formula 1", size: 84, cue: "kept building"}
+        - {text: "+ MotoGP (about 84%, {{liberty_motogp.display}})", size: 60, color: accent3, cue: "MotoGP"}
+        - {text: "Two world series, one owner", size: 46, style: body, cue: "Two world"}
+    sources: [liberty_fy2025]
+    assets: ["font:inter"]
+
+  # ---------------- part 3
+  - id: s11_p3
+    segment: p3_card
+    type: act_title
+    params: {number: Part 3, title: The Money Machine, subtitle: Where Formula 1's revenue comes from, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s12_sketch
+    segment: p3_sketch
+    type: whiteboard
+    params:
+      drawing: revenue
+      speed: 1900
+      caption: "Money in from three sources, a large share out to the teams"
+      caption_cue: "flows back out"
+    sources: [liberty_10k_2025, liberty_fy2025]
+    assets: ["font:inter"]
+
+  - id: s13_mix
+    segment: p3_mix
+    type: donut
+    params:
+      chapter: "03 · The money machine"
+      title: Formula 1 revenue by stream, 2025
+      subtitle: Share of total Formula 1 group revenue (Liberty Media 10-K)
+      segments: "{{revenue_mix_2025.value}}"
+      center: "{{f1_revenue_2025.display}}"
+      cue: "media rights"
+    sources: [liberty_10k_2025, liberty_fy2025]
+    assets: ["font:inter"]
+
+  - id: s14_growth
+    segment: p3_growth
+    type: bar_chart
+    params:
+      chapter: "03 · The money machine"
+      title: Formula 1 total revenue
+      subtitle: US$ million, Formula 1 group (Liberty Media)
+      data: "{{f1_revenue_series.value}}"
+      highlight: Y2025
+      sort: false
+      value_prefix: "$"
+      value_suffix: "m"
+      callout: "{{f1_revenue_2025.races_spoken}} races in 2025"
+      callout_cue: "races"
+    sources: [liberty_fy2025, liberty_fy2024]
+    assets: ["font:inter"]
+
+  # ---------------- part 4
+  - id: s15_p4
+    segment: p4_card
+    type: act_title
+    params: {number: Part 4, title: Media Rights, subtitle: Selling the show to screens, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s16_media
+    segment: p4_media
+    type: fund_flow
+    params:
+      chapter: "04 · Media rights"
+      title: "Media rights: {{revenue_usd_2025.display}} in 2025 (our calculation)"
+      nodes:
+        - {id: tv1, shape: tv, x: 360, y: 360, label: Broadcasters, cue: "Broadcasters pay"}
+        - {id: tv2, shape: tv, x: 360, y: 720, label: F1 TV streaming, colour: accent2, cue: "streaming"}
+        - {id: f1, shape: f1, x: 1180, y: 540, label: Formula 1, sublabel: "{{revenue_mix_2025.media_display}} of revenue", size: 1.3, at: 0.0}
+      links:
+        - {from: tv1, to: f1, cue: "Broadcasters pay", bend: 0.2, coins: 6, label: "rights fees"}
+        - {from: tv2, to: f1, cue: "streaming", bend: -0.2, colour: accent2, coins: 4, label: subscriptions}
+      caption: "{{revenue_mix_2025.media_display}} × {{f1_revenue_2025.display}} ≈ {{revenue_usd_2025.display}}"
+      caption_cue: "By our calculation"
+    sources: [liberty_10k_2025, liberty_fy2025]
+    assets: ["font:inter"]
+
+  - id: s17_apple
+    segment: p4_apple
+    type: kinetic_text
+    params:
+      align: center
+      lines:
+        - {text: "United States, from 2026", size: 46, color: accent3, style: body, cue: "biggest new deal"}
+        - {text: "One exclusive broadcaster", size: 78, cue: "exclusive broadcaster"}
+        - {text: "{{apple_deal.years_display}}", size: 64, color: accent2, cue: "for five"}
+        - {text: "Reportedly {{apple_deal.display}} (undisclosed)", size: 60, color: accent, cue: "reportedly"}
+    sources: [apple_f1_2025, cnbc_apple_value]
+    assets: ["font:inter"]
+
+  - id: s18_audience
+    segment: p4_audience
+    type: line_chart
+    params:
+      chapter: "04 · Media rights"
+      title: Average US TV audience per race (ESPN)
+      subtitle: Million viewers · ESPN, ESPN2 and ABC
+      series: "{{espn_audience.value}}"
+      highlight: ESPN
+      cue: "On ESPN"
+      draw_seconds: 6
+      y_max: 1.5
+      y_steps: 3
+      axis_prefix: ""
+      axis_suffix: "m"
+      axis_decimals: 1
+      value_prefix: ""
+      value_suffix: "m"
+      value_decimals: 2
+      year_every: 1
+      events:
+        - {year: 2025, label: "{{espn_audience.growth_display}} since 2018", cue: "up"}
+    sources: [espn_2025]
+    assets: ["font:inter"]
+
+  # ---------------- part 5
+  - id: s19_p5
+    segment: p5_card
+    type: act_title
+    params: {number: Part 5, title: Hosting Fees, subtitle: What a city pays for a race, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s20_fees
+    segment: p5_fees
+    type: circuit
+    params:
+      chapter: "05 · Hosting fees"
+      title: The race promotion contract
+      subtitle: Paid by circuits and cities to Formula 1 (Liberty Media 10-K)
+      draw_seconds: 2.4
+      lap_label: Contract year
+      lap_seconds: 4
+      laps_total: 7
+      scale: 0.85
+      ox: 230
+      oy: 170
+      markers:
+        - {along: 0.08, label: Typical term, value: "{{promoter_terms.term_display}}", colour: accent2, cue: "Contracts typically", dx: 80, dy: 80}
+        - {along: 0.42, label: Fee increases, value: "{{promoter_terms.display}}", colour: accent3, cue: "with fees rising", dx: -60, dy: -70}
+        - {along: 0.72, label: "All fees, 2025 (our calc.)", value: "{{revenue_usd_2025.promo_display}}", colour: accent, cue: "By our calculation", dx: -80, dy: 90}
+    sources: [liberty_10k_2025, liberty_fy2025]
+    assets: ["font:inter"]
+
+  - id: s21_governments
+    segment: p5_governments
+    type: compare
+    params:
+      chapter: "05 · Hosting fees"
+      title: "Singapore Grand Prix, 2022: who paid?"
+      sides:
+        - {kicker: Cost of staging the race, value: "{{singapore_2022.display}}", label: "converted from Singapore dollars", bar: 100, cue: "race cost"}
+        - {kicker: Paid by the government, value: "{{singapore_2022.gov_display}}", label: "of the cost", bar: 60, cue: "government covered"}
+    sources: [mti_singapore_2023, fed_h10]
+    assets: ["font:inter"]
+
+  - id: s22_vegas
+    segment: p5_vegas
+    type: race_track
+    params:
+      speed: 1100
+      kicker: Las Vegas
+      kicker_cue: "Las Vegas"
+      title: F1 as its own promoter
+      title_cue: "its own promoter"
+      value: "{{vegas_self.display}}"
+      value_cue: "bought land"
+      subtitle: "for land beside the Strip · tickets and hospitality kept by F1"
+      subtitle_cue: "keeps the ticket"
+      boards: ["TICKETS", "HOSPITALITY", "YOUR BRAND", "PADDOCK"]
+    sources: [liberty_10k_2025, vegas_land_2022]
+    assets: ["font:inter"]
+
+  # ---------------- part 6
+  - id: s23_p6
+    segment: p6_card
+    type: act_title
+    params: {number: Part 6, title: Sponsorship, subtitle: Selling every surface, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s24_sponsors
+    segment: p6_sponsors
+    type: compare
+    params:
+      chapter: "06 · Sponsorship"
+      title: Sponsorship's share of Formula 1 revenue
+      sides:
+        - {kicker: "2024", value: "{{revenue_mix_2025.spons_prev_display}}", label: of revenue, bar: 18.6, cue: "the year before"}
+        - {kicker: "2025", value: "{{revenue_mix_2025.spons_display}}", label: "{{revenue_usd_2025.spons_display}} (our calc.)", bar: 21.7, cue: "third stream"}
+        - {kicker: "LVMH, from 2025", value: "{{lvmh_deal.display}}", label: "value undisclosed", cue: "LVMH"}
+        - {kicker: "Aramco, from 2020", value: "500m fans", label: "promised by F1", cue: "Aramco"}
+    sources: [liberty_10k_2025, f1_lvmh_2024, f1_aramco_2020]
+    assets: ["font:inter"]
+
+  - id: s25_hospitality
+    segment: p6_hospitality
+    type: race_track
+    params:
+      speed: 700
+      kicker: Hospitality, freight and licensing
+      kicker_cue: "hospitality"
+      title: The Paddock Club
+      title_cue: "Paddock Club"
+      value: "{{revenue_mix_2025.other_usd_display}}"
+      value_cue: "brought in"
+      subtitle: "other Formula 1 revenue, 2025 ({{revenue_mix_2025.other_display}})"
+      subtitle_cue: "another"
+      boards: ["PADDOCK CLUB", "HOSPITALITY", "SPONSOR", "VIP"]
+    sources: [liberty_fy2025]
+    assets: ["font:inter"]
+
+  # ---------------- part 7
+  - id: s26_p7
+    segment: p7_card
+    type: act_title
+    params: {number: Part 7, title: How Teams Make Money, subtitle: "Prize money, sponsors and owners", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s27_payments
+    segment: p7_payments
+    type: bar_chart
+    params:
+      chapter: "07 · How teams make money"
+      title: What Formula 1 pays the teams
+      subtitle: Team payments, US$ million (Liberty Media; 2025 excludes a one-off $50m Concorde incentive)
+      data: "{{team_payments_series.value}}"
+      highlight: Y2025
+      sort: false
+      value_prefix: "$"
+      value_suffix: "m"
+      callout: "{{team_payments.share_display}} of pre-payment profit (Adj. OIBDA)"
+      callout_cue: "underlying profit"
+    sources: [liberty_fy2025, liberty_fy2023]
+    assets: ["font:inter"]
+
+  - id: s28_own
+    segment: p7_own
+    type: fund_flow
+    params:
+      chapter: "07 · How teams make money"
+      title: "One team's income: Mercedes, 2024"
+      nodes:
+        - {id: f1, shape: f1, x: 360, y: 330, label: F1 team payments, cue: "Second"}
+        - {id: sp, shape: sponsor, x: 360, y: 760, label: Own sponsors and licensing, sub_colour: accent3, sublabel: "{{mercedes_2024.spons_display}} of income", cue: "their own sponsors"}
+        - {id: team, shape: car, x: 1360, y: 560, label: "Revenue {{mercedes_2024.display}}", sublabel: "Profit {{mercedes_2024.profit_display}} (converted to US$)", size: 1.6, cue: "Mercedes"}
+      links:
+        - {from: f1, to: team, cue: "Mercedes", bend: 0.2, coins: 4}
+        - {from: sp, to: team, cue: "sponsorship and licensing", bend: -0.2, colour: accent3, coins: 7}
+    sources: [blackbook_mercedes_2024, fed_h10]
+    assets: ["font:inter"]
+
+  - id: s29_pots
+    segment: p7_pots
+    type: kinetic_text
+    params:
+      align: center
+      lines:
+        - {text: Three pots of money, size: 80, cue: "three pots"}
+        - {text: "1 · Formula 1's revenue", size: 56, color: accent, style: body, cue: "own revenue"}
+        - {text: "2 · The teams' revenue", size: 56, color: accent2, style: body, cue: "teams' revenue"}
+        - {text: "3 · Promoters: pay the fee, sell the tickets", size: 56, color: accent3, style: body, cue: "promoters"}
+    assets: ["font:inter"]
+
+  # ---------------- part 8
+  - id: s30_p8
+    segment: p8_card
+    type: act_title
+    params: {number: Part 8, title: The Cost Cap, subtitle: "Prize money, budgets and team value", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s31_cap
+    segment: p8_cap
+    type: bar_chart
+    params:
+      chapter: "08 · The cost cap"
+      title: The F1 cost cap
+      subtitle: "Headline cap, US$ million (formula1.com) · *2026 covers many more costs"
+      data: "{{cost_cap.value}}"
+      highlight: Y2026
+      sort: false
+      value_prefix: "$"
+      value_suffix: "m"
+      callout: "Excluded: driver pay, top-3 executives, marketing"
+      callout_cue: "Driver salaries"
+    sources: [f1_cost_cap_2026]
+    assets: ["font:inter"]
+
+  - id: s32_breach
+    segment: p8_breach
+    type: big_counter
+    params:
+      chapter: "08 · The cost cap"
+      cue: "The penalty"
+      kicker: "2021 cost cap breach (FIA)"
+      display: "{{redbull_breach.display}}"
+      label: "Red Bull Racing: {{redbull_breach.over_display}} over the cap"
+      sublabel: "plus {{redbull_breach.aero_display}} for 12 months"
+    sfx: [{kind: pop, cue: "The penalty", offset: 1.2}]
+    sources: [fia_rbr_2022, autosport_rbr_2022]
+    assets: ["font:inter"]
+
+  - id: s33_values
+    segment: p8_values
+    type: compare
+    params:
+      chapter: "08 · The cost cap"
+      title: What an F1 team is worth (Forbes estimates, 2025)
+      sides:
+        - {kicker: Lowest, value: "{{forbes_values.low_display}}", label: enterprise value, bar: 1.5, cue: "profitable franchises"}
+        - {kicker: Average team, value: "{{forbes_values.display}}", label: "enterprise value", bar: 3.6, cue: "average team"}
+        - {kicker: Ferrari, value: "{{forbes_values.top_display}}", label: most valuable, bar: 6.5, cue: "Ferrari"}
+    sources: [forbes_teams_2025]
+    assets: ["font:inter"]
+
+  - id: s34_entry
+    segment: p8_entry
+    type: compare
+    params:
+      chapter: "08 · The cost cap"
+      title: The price of an 11th seat at the table
+      sides:
+        - {kicker: "Old rules (2021 Concorde)", value: "{{cadillac_entry.old_display}}", label: anti-dilution fee, bar: 200, cue: "old rules"}
+        - {kicker: "Cadillac, 2026 entry", value: "{{cadillac_entry.display}}", label: "paid to the other ten teams", bar: 450, cue: "reportedly agreed"}
+    sources: [f1_cadillac_2025, theRace_antidilution]
+    assets: ["font:inter"]
+
+  # ---------------- part 9
+  - id: s35_p9
+    segment: p9_card
+    type: act_title
+    params: {number: Part 9, title: Why Brands Invest, subtitle: "Reach, wealth and a technology story", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s36_fans
+    segment: p9_fans
+    type: big_counter
+    params:
+      chapter: "09 · Why brands invest"
+      cue: "it had"
+      kicker: "Formula 1 fanbase, 2025 (F1's own measure)"
+      display: "{{fanbase_2025.display}}"
+      label: "fans · {{fanbase_2025.growth_display}}"
+      sublabel: "{{fanbase_2025.female_display}} female · {{fanbase_2025.young_display}} under 35 · {{fanbase_2025.attend_display}} attended races"
+    sfx: [{kind: pop, cue: "it had", offset: 1.2}]
+    sources: [f1_2025_numbers]
+    assets: ["font:inter"]
+
+  - id: s37_why
+    segment: p9_why
+    type: race_track
+    params:
+      speed: 1300
+      kicker: What a sponsor buys
+      kicker_cue: "For a sponsor"
+      title: A global stage
+      title_cue: "global stage"
+      value: "24 race weekends"
+      value_cue: "every other weekend"
+      subtitle: "a wealthy audience · a technology story"
+      subtitle_cue: "technology story"
+      boards: ["YOUR BRAND", "FUEL PARTNER", "TECH PARTNER", "YOUR LOGO"]
+    sources: [f1_aramco_2020]
+    assets: ["font:inter"]
+
+  # ---------------- part 10
+  - id: s38_p10
+    segment: p10_card
+    type: act_title
+    params: {number: Part 10, title: Netflix and Expansion, subtitle: How the audience was built, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s39_netflix
+    segment: p10_netflix
+    type: timeline
+    params:
+      chapter: "10 · Netflix and expansion"
+      title: Building a new audience
+      start_year: 2017
+      end_year: 2026
+      tick_every: 1
+      items:
+        - {year: 2017, label: "Liberty takes over", cue: "accident"}
+        - {year: "{{dts_2019.value}}", label: "Drive to Survive on Netflix", cue: "Netflix released"}
+        - {year: 2025, display: "{{f1_movie.display}}", label: "the film F1 at the box office", cue: "box office"}
+    sources: [f1_dts_2019, boxofficemojo_f1, liberty_close_2017]
+    assets: ["font:inter"]
+
+  - id: s40_map
+    segment: p10_map
+    type: map
+    params:
+      chapter: "10 · Netflix and expansion"
+      geo: world
+      views:
+        - {lon: -20, lat: 30, span: 170}
+        - {lon: 0, lat: 15, span: 260, cue: "Rwanda"}
+      move: 2.5
+      highlights:
+        USA: {colour: accent, cue: "Las Vegas"}
+        ESP: {colour: accent3, cue: "Madrid"}
+        RWA: {colour: accent2, cue: "Rwanda"}
+      origin: {lon: -0.13, lat: 51.5}
+      arcs:
+        - {lon: -115.17, lat: 36.11, label: Las Vegas, cue: "Las Vegas joined"}
+        - {lon: -3.6, lat: 40.46, label: "Madrid (from 2026)", cue: "Madrid hosts"}
+        - {lon: 30.06, lat: -1.95, label: "Rwanda (early 2030s)", cue: "Rwanda"}
+      callouts:
+        - {label: "Rwanda: new long-term deal", value: "{{madrid_rwanda.display}}", cue: "deal will take"}
+      callout_x: 1380
+      callout_y: 720
+    sources: [f1_madrid_2024, f1_rwanda_2026, liberty_10k_2025, natural_earth]
+    assets: ["geo:remotion_world", "font:inter"]
+
+  # ---------------- part 11
+  - id: s41_p11
+    segment: p11_card
+    type: act_title
+    params: {number: Part 11, title: The Host-City Deal, subtitle: "Benefits, bills and doubts", min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s42_sketch
+    segment: p11_sketch
+    type: whiteboard
+    params:
+      drawing: circuit
+      caption: "Audience and fame vs. fee, track and disruption"
+      caption_cue: "On the other"
+    assets: ["font:inter"]
+
+  - id: s43_costs
+    segment: p11_costs
+    type: compare
+    params:
+      chapter: "11 · The host-city deal"
+      title: Bills and claims (US$, converted where needed)
+      sides:
+        - {kicker: "Australia 2024 cost", value: "{{australia_2024.display}}", label: "to taxpayers (from A. dollars)", bar: 67, cue: "Australian Grand Prix"}
+        - {kicker: "Las Vegas impact", value: "{{vegas_impact_2024.display}}", label: "F1-paid study, gross", bar: 934, cue: "economic impact"}
+        - {kicker: "Las Vegas taxes", value: "{{vegas_impact_2024.tax_display}}", label: same study, bar: 45, cue: "direct taxes"}
+    sources: [aap_agp_2024, fed_h10, lvgp_impact_2024]
+    assets: ["font:inter"]
+
+  - id: s44_doubt
+    segment: p11_doubt
+    type: kinetic_text
+    params:
+      align: center
+      lines:
+        - {text: Economists are sceptical, size: 76, cue: "Economists"}
+        - {text: "Mega-event benefits: 'nearly unanimously' exaggerated", size: 46, style: body, color: accent3, cue: "nearly unanimously"}
+        - {text: "Victoria 2005: costs exceeded benefits", size: 52, color: accent, cue: "Auditor-General"}
+        - {text: "Las Vegas: 3 business disputes settled", size: 52, color: accent2, cue: "lost trade"}
+    sources: [matheson_2006, vago_2007, vegas_settle_2025]
+    assets: ["font:inter"]
+
+  # ---------------- part 12
+  - id: s45_p12
+    segment: p12_card
+    type: act_title
+    params: {number: Part 12, title: Risks and Opportunities, subtitle: What could slow the machine, min_seconds: 3.2}
+    sfx: [{kind: hit, at: 0.1, gain: 0.25}]
+    assets: ["font:inter"]
+
+  - id: s46_risks
+    segment: p12_risks
+    type: compare
+    params:
+      chapter: "12 · Risks and opportunities"
+      title: The risks
+      sides:
+        - {kicker: "Conflict", value: "{{gulf_cancel.display}}", label: "Gulf races, 2026", cue: "called off"}
+        - {kicker: "H1 2026 revenue", value: "{{h1_2026.display}}", label: "8 races vs 11", cue: "revenue fell"}
+        - {kicker: Reputation, value: "Sportswashing", label: "rights groups", cue: "Rights groups"}
+        - {kicker: Economy, value: "Recession", label: "budgets shrink", cue: "sponsors cut back"}
+    sources: [gulf_cancel_2026, liberty_q2_2026, hrw_2020, liberty_10k_2025]
+    assets: ["font:inter"]
+
+  - id: s47_opps
+    segment: p12_opps
+    type: circuit
+    params:
+      chapter: "12 · Risks and opportunities"
+      title: The opportunities
+      subtitle: "What could keep revenue growing"
+      draw_seconds: 2.0
+      lap_seconds: 6
+      scale: 0.85
+      ox: 230
+      oy: 170
+      cars: [{colour: accent}, {colour: accent2, offset: 0.05}, {colour: accent3, offset: 0.1}, {colour: "#FFFFFF", offset: 0.15}]
+      markers:
+        - {along: 0.06, label: New US broadcaster, value: "2026", colour: accent2, cue: "American broadcaster", dx: 80, dy: 80}
+        - {along: 0.30, label: An 11th team, value: Cadillac, colour: accent, cue: "eleventh team", dx: 40, dy: -80}
+        - {along: 0.55, label: New markets, value: "Spain, Africa", colour: accent3, cue: "New markets", dx: -60, dy: -70}
+        - {along: 0.80, label: "Governance agreed", value: "to 2030", colour: accent2, cue: "governance", dx: -80, dy: 80}
+        - {along: 0.95, label: "Net zero target", value: "2030", colour: accent3, cue: "net zero", dx: 60, dy: -90}
+    sources: [apple_f1_2025, f1_cadillac_2025, f1_madrid_2024, f1_rwanda_2026, f1_concorde_2025, f1_netzero_2022]
+    assets: ["font:inter"]
+
+  # ---------------- conclusion
+  - id: s48_outro
+    segment: outro
+    type: race_track
+    params:
+      speed: 1500
+      kicker: The Hidden Economics
+      kicker_cue: "Formula One sells"
+      title: The real product
+      title_cue: "real product"
+      value: Attention
+      value_cue: "attention"
+      subtitle: "The teams race for points. The business races for the next contract."
+      subtitle_cue: "The teams race"
+    sfx: [{kind: hit, cue: "This was", gain: 0.25}]
+    sources: [f1_2025_numbers]
+    assets: ["font:inter"]
