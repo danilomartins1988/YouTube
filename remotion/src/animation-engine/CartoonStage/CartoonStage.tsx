@@ -1918,6 +1918,41 @@ const vessel: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A giant phone playing a short show: `rot` keyframes (0 = portrait, 90 = landscape, the Turnstyle trick); the scene
+ *  re-frames as it turns; a progress bar runs over `len` seconds and loops ("10 MIN"); `offAt` blacks the screen out. */
+const bigphone: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const rot = kf(a.rot, t, 0), land = clamp(rot / 90), off = a.offAt !== undefined && t >= a.offAt;
+  const W = 300, H = 560, prog = ((t - (a.at ?? 0)) / (a.len ?? 12)) % 1;
+  const sw = lerp(W - 40, H - 60, land), sh = lerp(H - 90, W - 40, land);
+  return <g key={'bp' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <g transform={`rotate(${rot})`}>
+      <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={44} fill="#1B1F27" stroke={OL} strokeWidth={6} />
+      <rect x={-30} y={-H / 2 + 14} width={60} height={10} rx={5} fill="#37474F" />
+    </g>
+    <g>
+      <clipPath id={'bpc' + i}><rect x={-sw / 2} y={-sh / 2} width={sw} height={sh} rx={18} /></clipPath>
+      <g clipPath={`url(#bpc${i})`}>
+        <rect x={-sw / 2} y={-sh / 2} width={sw} height={sh} fill={off ? '#0B0D12' : col(a.color, '#4FB3F6')} />
+        {!off && <g>
+          <rect x={-sw / 2} y={sh * 0.15} width={sw} height={sh * 0.35} fill="#7BD389" />
+          <circle cx={sw * 0.28} cy={-sh * 0.28} r={Math.min(sw, sh) * 0.09} fill="#FFE082" />
+          {[-0.18, 0.12].map((dx, k) => { const px = sw * dx + Math.sin(t * 2 + k) * 10, ph = Math.min(sw, sh) * 0.32;
+            return <g key={k} transform={`translate(${px} ${sh * 0.15})`}>
+              <rect x={-ph * 0.18} y={-ph} width={ph * 0.36} height={ph * 0.7} rx={ph * 0.12} fill={k ? '#F06292' : '#FFB74D'} stroke={OL} strokeWidth={3} />
+              <circle cx={0} cy={-ph * 1.08} r={ph * 0.18} fill="#F6C9A0" stroke={OL} strokeWidth={3} /></g>; })}
+          <rect x={-sw / 2 + 16} y={sh / 2 - 22} width={sw - 32} height={8} rx={4} fill="#FFFFFF" opacity={0.4} />
+          <rect x={-sw / 2 + 16} y={sh / 2 - 22} width={(sw - 32) * prog} height={8} rx={4} fill={K.red} />
+          <T x={sw / 2 - 20} y={-sh / 2 + 34} s={20} c={K.white} a="end">{a.label || '10 MIN'}</T>
+        </g>}
+        {off && <T x={0} y={8} s={26} c="#90A4AE">{a.offText || 'NO SIGNAL'}</T>}
+      </g>
+    </g>
+    {a.text && <T x={0} y={H / 2 + 50} s={28} c={a.textc || OL}>{a.text}</T>}
+  </g>;
+};
+
 /** A school bus (for size comparisons). */
 const bus: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
@@ -2025,7 +2060,7 @@ const watch: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

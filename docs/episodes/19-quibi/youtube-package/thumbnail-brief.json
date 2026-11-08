@@ -1,0 +1,348 @@
+{
+  "title": "The $1.75 Billion Streaming App That Lasted Six Months",
+  "docs_dir": "docs/episodes/19-quibi",
+  "video": "output/quibi_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "How $1.75 billion and Hollywood's biggest names lasted six months",
+    "surprising_fact": "Quibi raised $1.75bn (Fortune), launched April 2020, announced its shutdown in October 2020",
+    "subject": "a crashing line",
+    "tone": "spectacle",
+    "metaphor": "money buys shows, habits buy viewers"
+  },
+  "default": "B",
+  "slug": "the-175-billion-app-that-lasted-six-months",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "$1.75 BILLION",
+        "6 MONTHS"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "raised/shut: $1.75bn raised; shutdown announced six months after the April 2020 launch",
+      "scene": {
+        "palette": {
+          "sky0": "#06030C",
+          "sky1": "#22103A",
+          "haze": "#B388FF",
+          "key": "#E6D6FF",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "crash",
+          "x": 1380,
+          "y": 560,
+          "s": 0.9
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1400,
+            "y": 520,
+            "s": 1.0,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E6D6FF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "$1.75 BILLION",
+          "x": 90,
+          "y": 524.6,
+          "size": 96.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "6 MONTHS",
+          "x": 90,
+          "y": 624.6,
+          "size": 96.2,
+          "width": 492.3,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.63 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 450, 890, 530), (90, 550, 582, 630)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "8.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 8.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.045",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 17",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.57)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "raised/shut: $1.75bn raised; shutdown announced six months after the April 2020 launch",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.779,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "QUIBI'S",
+        "$1.75B FLOP"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "raised/shut: $1.75bn raised; the service closed six months after launch (Fortune)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#2A0E12",
+          "haze": "#FF4B3E",
+          "key": "#FFD1CC",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "crash",
+          "x": 1380,
+          "y": 560,
+          "s": 0.9
+        },
+        "support": [
+          {
+            "kind": "bignum",
+            "x": 1420,
+            "y": 520,
+            "s": 0.9,
+            "label": " ",
+            "rot": 0
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD1CC"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "QUIBI'S",
+          "x": 90,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 509.1,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$1.75B FLOP",
+          "x": 90,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.59 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 433, 599, 529), (90, 551, 890, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 7.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.048",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 19",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.26)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "raised/shut: $1.75bn raised; the service closed six months after launch (Fortune)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.698,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-08T23:18:50Z",
+  "master": "output/the-175-billion-app-that-lasted-six-months/thumbnails/master_B.png"
+}

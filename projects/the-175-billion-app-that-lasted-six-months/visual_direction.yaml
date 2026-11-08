@@ -1,0 +1,51 @@
+# Visual direction for the-175-billion-app-that-lasted-six-months (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a glittering Hollywood launch that empties out. Spectacle for the money, crisis for the lockdown launch and the
+# failed trial, strategy for the money and the shutdown, reflective close.
+primary_tone: spectacle
+secondary_tones:
+- crisis
+- strategy
+- reflective
+palette:
+  bg: '#0E0816'
+  bg2: '#1C1230'
+  ink: '#F7F1FF'
+  muted: '#B8A8D0'
+  land: '#2C2142'
+  border: '#4A3B6B'
+  accent: '#FFC21A'
+  accent2: '#B388FF'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The billion-dollar bet
+  tone: spectacle
+- chapter: Quick bites
+  tone: spectacle
+- chapter: The worst launch date
+  tone: crisis
+- chapter: The free trial
+  tone: crisis
+- chapter: The money
+  tone: strategy
+- chapter: The end
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m1_warning
+  cue: There was a warning sign
+  to: thriller
+  why: the Go90 precedent
+thumbnail:
+  tone: spectacle
+  headline: []
+  idea: a glowing phone going dark, with the money figure
+requirements:
+- 'The bigphone (a ten-minute show that rotates like Turnstyle and finally goes dark) is the through-line'
+- Hollywood night premiere for the money; empty commuter bus for the lockdown; living-room TV the app could not reach
+- 'The free-trial funnel; a vault draining; a library sold for a fraction'
+- No Quibi logo or app UI, no likeness of real people, no smiling sun, no generic city
