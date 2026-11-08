@@ -180,6 +180,31 @@ const SUBJECTS: Record<string, SubjectFn> = {
     </g>
     {o.label && <text x={340} y={-560} fontFamily={FONT} fontWeight={900} fontSize={64} fill={P.accent}>{o.label}</text>}
   </g>,
+  /** A thick glowing arrow that BREAKS OUT of a chart frame (glass shards), a car silhouette launched on it. */
+  breakout: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs><linearGradient id="arw" x1="0" y1="1" x2="0.4" y2="0"><stop offset="0" stopColor={P.accent} stopOpacity={0.35} /><stop offset="0.6" stopColor={P.accent} /><stop offset="1" stopColor="#FFFFFF" /></linearGradient>
+      <radialGradient id="burst" cx="50%" cy="50%" r="50%"><stop offset="0" stopColor="#FFFFFF" stopOpacity={0.95} /><stop offset="0.25" stopColor={P.accent} stopOpacity={0.6} /><stop offset="1" stopColor={P.accent} stopOpacity={0} /></radialGradient></defs>
+    <rect x={-560} y={-300} width={980} height={620} rx={16} fill="#06090F" stroke="#3A4558" strokeWidth={10} />
+    {Array.from({length: 5}, (_, k) => <path key={k} d={`M -540 ${-200 + k * 110} L 400 ${-200 + k * 110}`} stroke="#1E2838" strokeWidth={3} />)}
+    <path d="M -540 250 L -400 236 L -260 252 L -120 228 L 0 240 L 80 210" stroke={P.accent} strokeWidth={14} fill="none" opacity={0.7} />
+    <circle cx={330} cy={-430} r={330} fill="url(#burst)" />
+    <path d="M 40 240 L 240 -120 L 330 -480" stroke="url(#arw)" strokeWidth={110} fill="none" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
+    <path d="M 330 -480 L 200 -400 M 330 -480 L 380 -330" stroke="#FFFFFF" strokeWidth={60} strokeLinecap="round" />
+    <path d="M 330 -480 L 220 -390 L 330 -620 L 450 -380 Z" fill="#FFFFFF" />
+    {Array.from({length: 16}, (_, k) => { const a = -1.9 + rnd(k) * 1.6, r = 140 + rnd(k + 3) * 300, x = 250 + Math.cos(a) * r, y = -300 + Math.sin(a) * r;
+      return <path key={k} d={`M ${x} ${y} l ${18 + rnd(k + 1) * 40} ${-10 - rnd(k + 2) * 30} l ${-8} ${30 + rnd(k) * 20} Z`} fill="#E8F4FF" opacity={0.85} transform={`rotate(${rnd(k + 5) * 90} ${x} ${y})`} />; })}
+    {o.car !== false && <g transform="translate(150 -40) rotate(-62) scale(1.15)">
+      <path d="M -190 0 L -170 -50 Q -120 -110 -30 -112 L 60 -112 Q 130 -100 170 -50 L 200 -40 Q 220 -20 210 10 L -200 10 Z" fill="#05070A" stroke={P.accent} strokeWidth={6} />
+      <circle cx={-110} cy={14} r={38} fill="#05070A" stroke="#C8D2E0" strokeWidth={8} /><circle cx={120} cy={14} r={38} fill="#05070A" stroke="#C8D2E0" strokeWidth={8} />
+    </g>}
+  </g>,
+  /** A giant glowing number used AS the subject (e.g. #1), with a crown-like glow. */
+  bignum: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -4})`}>
+    <defs><linearGradient id="bng" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#FFF4C2" /><stop offset="0.5" stopColor={P.accent} /><stop offset="1" stopColor="#8A5A00" /></linearGradient></defs>
+    <circle r={420} fill={P.accent} opacity={0.18} filter="url(#soft)" />
+    {Array.from({length: 18}, (_, k) => <path key={k} d={`M 0 0 L ${Math.cos(k * 0.349) * 900} ${Math.sin(k * 0.349) * 900}`} stroke={P.accent} strokeOpacity={0.12} strokeWidth={60} />)}
+    <text x={0} y={190} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={o.size ?? 560} fill="url(#bng)" stroke="#2A1A00" strokeWidth={18} paintOrder="stroke" filter="url(#glow)">{o.label || '#1'}</text>
+  </g>,
   /** A crashing line (consequence) */
   crash: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 7}, (_, k) => <path key={k} d={`M -700 ${-k * 110 + 300} L 700 ${-k * 110 + 300}`} stroke={P.haze} strokeOpacity={0.12} strokeWidth={2} />)}

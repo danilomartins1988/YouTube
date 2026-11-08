@@ -11,6 +11,7 @@
     "metaphor": "the impossible surge"
   },
   "deliverable": "documentary",
+  "default": "D",
   "slug": "the-day-volkswagen-became-the-most-valuable-company",
   "concepts": [
     {
@@ -314,11 +315,328 @@
         ],
         "nearest": "why-norway-is-so-rich"
       }
+    },
+    {
+      "id": "C",
+      "angle": "mystery (bold)",
+      "text": [
+        "$266 \u2192",
+        "$1,250"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "price: \u20ac210.52 (24 Oct) \u2192 \u20ac1,005.01 (28 Oct 2008), Risk.net; Fed H.10 day rates \u2248 $266 \u2192 \u2248 $1,250",
+      "scene": {
+        "palette": {
+          "sky0": "#010604",
+          "sky1": "#072318",
+          "haze": "#2BFF88",
+          "key": "#B8FFD8",
+          "accent": "#39FF88",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "breakout",
+          "x": 1470,
+          "y": 640,
+          "s": 0.95,
+          "car": false
+        },
+        "particles": {
+          "n": 90,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#B8FFD8"
+        },
+        "vignette": 0.6,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "$266 \u2192",
+          "x": 90,
+          "y": 506.7,
+          "size": 208.3,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$1,250",
+          "x": 90,
+          "y": 723.3,
+          "size": 208.3,
+          "width": 800,
+          "anchor": "start",
+          "color": "#39FF88"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.49 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 344, 890, 519), (90, 561, 890, 736)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "17.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.085",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 65",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-switzerland-is-so-rich (distance 0.96)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "price: \u20ac210.52 (24 Oct) \u2192 \u20ac1,005.01 (28 Oct 2008), Risk.net; Fed H.10 day rates \u2248 $266 \u2192 \u2248 $1,250",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.809,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-switzerland-is-so-rich"
+      }
+    },
+    {
+      "id": "D",
+      "angle": "consequence (bold)",
+      "text": [
+        "FOR ONE",
+        "DAY"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "top: briefly the world's largest company by market value on 28 Oct 2008 (\u2248 $370bn vs ExxonMobil $343bn)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0203",
+          "sky1": "#3A0A0E",
+          "haze": "#FF3B30",
+          "key": "#FFD7A0",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "bignum",
+          "x": 1380,
+          "y": 520,
+          "s": 1.0,
+          "label": "#1",
+          "rot": -6
+        },
+        "support": [
+          {
+            "kind": "crash",
+            "x": 1350,
+            "y": 760,
+            "s": 0.55,
+            "opacity": 0.55
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD7A0"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "FOR ONE",
+          "x": 90,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "DAY",
+          "x": 90,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 342.9,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.59 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 372, 890, 522), (90, 558, 433, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 9.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.070",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 45",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-2-billion-that-never-existed (distance 0.55)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "top: briefly the world's largest company by market value on 28 Oct 2008 (\u2248 $370bn vs ExxonMobil $343bn)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.909,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-2-billion-that-never-existed"
+      }
     }
   ],
-  "default": "B",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T16:24:13Z",
-  "master": "output/the-day-volkswagen-became-the-most-valuable-company/thumbnails/master_B.png"
+  "generated": "2026-11-08T16:38:17Z",
+  "master": "output/the-day-volkswagen-became-the-most-valuable-company/thumbnails/master_D.png"
 }

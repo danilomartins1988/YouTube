@@ -45,7 +45,7 @@ concepts:
 - id: B
   angle: consequence
   text:
-  - "#1 FOR"
+  - '#1 FOR'
   - A DAY
   accent_line: 0
   text_side: right
@@ -73,4 +73,80 @@ concepts:
       - 1000
       size: 2
     brand: tr
+- id: C
+  angle: mystery (bold)
+  text:
+  - $266 →
+  - $1,250
+  accent_line: 1
+  text_side: left
+  claim_basis: 'price: €210.52 (24 Oct) → €1,005.01 (28 Oct 2008), Risk.net; Fed H.10 day rates ≈ $266 → ≈ $1,250'
+  scene:
+    palette:
+      sky0: '#010604'
+      sky1: '#072318'
+      haze: '#2BFF88'
+      key: '#B8FFD8'
+      accent: '#39FF88'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: breakout
+      x: 1470
+      y: 640
+      s: 0.95
+      car: false
+    particles:
+      n: 90
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#B8FFD8'
+    vignette: 0.6
+    brand: tl
+- id: D
+  angle: consequence (bold)
+  text:
+  - FOR ONE
+  - DAY
+  accent_line: 1
+  text_side: left
+  claim_basis: 'top: briefly the world''s largest company by market value on 28 Oct 2008 (≈ $370bn vs ExxonMobil $343bn)'
+  scene:
+    palette:
+      sky0: '#0A0203'
+      sky1: '#3A0A0E'
+      haze: '#FF3B30'
+      key: '#FFD7A0'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: bignum
+      x: 1380
+      y: 520
+      s: 1.0
+      label: '#1'
+      rot: -6
+    support:
+    - kind: crash
+      x: 1350
+      y: 760
+      s: 0.55
+      opacity: 0.55
+    particles:
+      n: 60
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFD7A0'
+    vignette: 0.55
+    brand: tl
 deliverable: documentary
+default: D
