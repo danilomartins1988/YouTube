@@ -2,7 +2,7 @@
   "title": "The Day Volkswagen Became the World's Most Valuable Company",
   "docs_dir": "docs/episodes/13-volkswagen",
   "video": "output/volkswagen_documentary.mp4",
-  "status": "in_production",
+  "status": "completed",
   "analysis": {
     "mystery": "How a carmaker in crisis became the world's most valuable company for a day",
     "surprising_fact": "On 28 Oct 2008 VW was briefly worth \u2248 $370bn, more than ExxonMobil's $343bn",
@@ -293,7 +293,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-norway-is-so-rich (distance 0.45)",
+            "detail": "nearest why-norway-is-so-rich (distance 0.46)",
             "critical": false
           },
           {
@@ -304,7 +304,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.867,
+        "design_score": 0.869,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -319,6 +319,6 @@
   "default": "B",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T16:08:40Z",
+  "generated": "2026-11-08T16:24:13Z",
   "master": "output/the-day-volkswagen-became-the-most-valuable-company/thumbnails/master_B.png"
 }

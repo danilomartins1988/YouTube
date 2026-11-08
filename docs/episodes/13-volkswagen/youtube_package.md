@@ -1,0 +1,73 @@
+# YouTube package: "The Day Volkswagen Became the World's Most Valuable Company" (Episode 13)
+
+Prepared for manual publishing. Nothing has been uploaded. Video: `output/volkswagen_documentary.mp4` (11:39).
+
+## Title options
+
+1. **The Day Volkswagen Became the World's Most Valuable Company** (recommended: the episode title)
+2. **The 2008 Short Squeeze That Made Volkswagen #1 for a Day**
+3. **How Porsche's Options Trapped the Short Sellers**
+
+## Description (3021 chars, YouTube limit 5,000)
+
+```
+In October 2008, in the middle of the financial crisis, a carmaker in trouble briefly became the most valuable company in the world. Not because it sold more cars, but because too many investors had bet against its shares, and there were not enough shares left to buy back. How short selling works, Porsche's 74.1% position, the squeeze, the index cap, the collapse, and how the hunter became the hunted. Every figure is sourced below.
+
+All amounts are in US dollars: one-day market figures at the Federal Reserve H.10 rate of that day, yearly figures at the H.10 annual average. Porsche denied manipulation; its former CEO and CFO were acquitted in 2016.
+
+Chapters
+0:00 The impossible day
+0:52 The bet against Volkswagen
+2:42 The Sunday announcement
+4:45 The squeeze
+6:23 Letting the air out
+8:43 The hunter and the hunted
+11:05 The lesson
+
+Sources
+- Porsche Automobil Holding SE: Porsche heads for domination agreement (press release, 26 October 2008) - https://www.porsche-se.com/en/media/press-releases/detail/porsche-heads-for-domination-agreement-1
+- Porsche Automobil Holding SE: Short sellers responsible for extreme price movements in Volkswagen ordinary shares (press release, 29 October 2008) - https://www.porsche-se.com/en/media/press-releases/detail/short-sellers-responsible-for-extreme-price-movements-in-volkswagen-ordinary-shares-1
+- Deutsche Börse AG: Deutsche Börse extraordinarily adjusts DAX weightings: Volkswagen AG to be capped at 10 percent - https://www.deutsche-boerse.com/dbg-en/investor-relations/announcements-and-services/press-releases/Deutsche-B-rse-Extraordinarily-Adjusts-DAX-Weightings-438008
+- International Banker: The Volkswagen Short Squeeze (2008) - https://internationalbanker.com/history-of-financial-crises/the-volkswagen-short-squeeze-2008/
+- Risk.net: Porsche makes €6.83bn on VW options - https://www.risk.net/foreign-exchange/1503275/porsche-makes-eu683bn-vw-options
+- IndustryWeek (Agence France-Presse): Volkswagen, Porsche seal merger deal (AFP) - https://www.industryweek.com/the-economy/article/21941439/volkswagen-porsche-seal-merger-deal
+- Porsche Automobil Holding SE: Acquittal in criminal proceedings against former members of the Porsche SE executive board legally binding - https://www.porsche-se.com/en/media/press-releases/detail/acquittal-in-criminal-proceedings-against-former-members-of-the-porsche-se-executive-board-legally-b-1
+- Board of Governors of the Federal Reserve System (via FRED): Foreign exchange rates (H.10): US dollars per euro, daily (DEXUSEU) and annual averages (AEXUSEU) - https://fred.stlouisfed.org/series/DEXUSEU
+
+Credits & licences
+- Typeface: Inter (SIL Open Font License 1.1)
+- Graphics, animation, music and sound effects: original, made by The Hidden Economics
+- Narration: synthetic voice (OpenAI)
+
+This is an independent educational documentary, not affiliated with Volkswagen, Porsche, Deutsche Börse or any fund. No logos are used. Interpretation is marked as such in the script notes.
+
+#economics #volkswagen #stockmarket
+```
+
+## Tags
+
+```
+Volkswagen, Porsche, short squeeze, Volkswagen short squeeze 2008, most valuable company, short selling explained, hedge funds, DAX, stock market history, financial crisis 2008, economics documentary, The Hidden Economics
+```
+
+## Hashtags
+
+`#economics` `#volkswagen` `#stockmarket`
+
+## Subtitles
+
+`subtitles_en.srt`.
+
+## Pinned comment
+
+```
+Every figure is sourced in the description. Notes:
+1) Prices on single days are converted at that day's Federal Reserve rate (e.g. €1,005.01 on 28 Oct 2008 ≈ $1,250); yearly figures at the annual average.
+2) "Most valuable company" refers to VW's voting shares at the peak price on 28 Oct 2008 (≈ $370bn vs ExxonMobil's $343bn), as reported by International Banker.
+3) Porsche denied any manipulation; the Stuttgart Regional Court acquitted its former CEO and CFO in 2016 (final).
+Think a number is wrong? Reply with a source and we'll check it.
+```
+
+## Before publishing
+
+A named human reviewer must verify the 12 claims marked `source_located` (see `FACT_CHECK.md`).
