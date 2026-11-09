@@ -740,7 +740,7 @@ scenes:
         color: accent
         anchor: middle
       kind: box
-    - d: M 920 455 L 1140 505
+    - d: M 910 455 Q 1025 504 1150 505 M 1128 515 L 1150 505 L 1128 494
       color: ink
       width: 4
       start:
@@ -752,7 +752,7 @@ scenes:
         size: 22
         color: ink
         anchor: middle
-      kind: stroke
+      kind: arrow
     - d: M 600 700 L 1440 700
       color: accent3
       width: 6

@@ -119,7 +119,7 @@ add("p09_power", "m1_draw", "engine_draw", {
     "strokes": [
         {"d": rect(560, 340, 340, 230), "color": "accent2", "width": 6, "start": C("The machine that prints"), "label": lbl("MACHINE: $ HUNDREDS OF M", 730, 460, 22, "accent2")},
         {"d": rect(1160, 440, 110, 130), "color": "accent", "width": 5, "start": C("The resist on a wafer"), "label": lbl("RESIST: ¢", 1215, 515, 24, "accent")},
-        {"d": "M 920 455 L 1140 505", "color": "ink", "width": 4, "start": C("the factory needs both"), "label": lbl("BOTH NEEDED", 1030, 440, 22, "ink")},
+        {"d": arrow((910, 455), (1150, 505), 0.1), "color": "ink", "width": 4, "start": C("the factory needs both"), "label": lbl("BOTH NEEDED", 1030, 440, 22, "ink")},
         {"d": "M 600 700 L 1440 700", "color": "accent3", "width": 6, "start": C("If either one"), "label": lbl("production line", 1020, 680, 22, "accent3")},
         {"d": "M 980 660 L 1060 740 M 1060 660 L 980 740", "color": "risk", "width": 8, "start": C("the whole line stops"), "label": lbl("STOP", 1020, 790, 30, "risk")},
         {"d": "M 730 600 Q 970 860 1215 600", "color": "accent", "width": 5, "start": C("the same power"), "label": lbl("same power", 970, 880, 26, "accent")},

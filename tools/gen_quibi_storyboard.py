@@ -88,7 +88,7 @@ stage("s06_money", "m1_money", {
 stage("s07_warning", "m1_warning", {
     "zones": [Z("office", night=True)], "worldW": 2600, "night": True,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("Katzenberg insisted"), "x": 1600, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
-    "items": [it("bigphone", x=800, y=440, at=C("Go90", -0.5), scale=0.6, color="#78909C", label="GO90", offAt=C("never found an audience")),
+    "items": [it("bigphone", x=800, y=440, at=C("Go Ninety", -0.5), scale=0.6, color="#78909C", label="GO90", offAt=C("never found an audience")),
               it("counter", x=800, y=170, at=C("wrote off"), prefix="$", suffix="M", steps=[[0, 0], [{"cue": "wrote off", "offset": 1.5}, 658]], text="VERIZON WRITE-OFF"),
               it("bigphone", x=1650, y=440, at=C("Katzenberg insisted"), scale=0.6, color=PUR, rot=[[0, 0], [{"cue": "built from the ground up"}, 0], [{"cue": "built from the ground up", "offset": 1}, 90]])],
     "callouts": [co("2018: Verizon shuts Go90, its short-video app", 960, 960, C("There was a warning sign"), "risk", screen=True, size=38, sub="Variety", until=C("Katzenberg insisted", -0.3)),
@@ -251,6 +251,7 @@ add("p27_rights", "m4_rights", "engine_draw", {
         {"d": rect(910, 500, 560, 80), "color": "muted", "width": 3, "start": C("would not keep"), "label": lbl("shows' rights not exclusive", 1190, 480, 22, "muted")},
         {"d": "M 620 720 Q 750 680 880 720", "color": "risk", "width": 5, "start": C("spending fortunes"), "label": lbl("$$$ in", 750, 760, 24, "risk")},
         {"d": rect(1250, 700, 220, 100), "color": "accent2", "width": 5, "start": C("a buyer would get"), "label": lbl("A WINDOW, NOT A LIBRARY", 1360, 840, 20, "accent2")},
+        {"d": arrow((760, 590), (1250, 740), 0.15), "color": "ink", "width": 4, "start": C("a buyer would get", 0.6)},
     ],
     "actions": [{"kind": "point", "at": C("not a library", 0.2), "dur": 1.4, "target": [1360, 750]}],
     "scale": 0.86, "floor": 1040}, sources=["verge_roku"])
