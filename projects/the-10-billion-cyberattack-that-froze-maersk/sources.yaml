@@ -1,0 +1,202 @@
+# Sources and claims for "The $10 Billion Cyberattack That Froze the World's Biggest Shipping Company"
+# (Episode 20, top-10 #3: NotPetya / Maersk).
+# Every claim was read on its source page on 2026-11-09 (AI fact-check; quotes in docs/episodes/20-notpetya/FACT_CHECK.md).
+# Status stays source_located until a named human reviewer signs off.
+# MONEY: all amounts in US dollars as published. Company losses are the companies' own reported figures (via the press);
+# the $10bn total is a White House assessment, said as such. Attribution: the film says which governments blamed the
+# Russian military, that the Kremlin rejected the accusation, and that the GRU officers are charged (an indictment, not a
+# conviction). Real people are named in text only; no logos, no likeness, no real company UI.
+sources:
+  - id: wired
+    title: "The Untold Story of NotPetya, the Most Devastating Cyberattack in History"
+    publisher: WIRED (Andy Greenberg)
+    url: https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/
+    published: "2018-08-22"
+    accessed: "2026-11-09"
+    credit: "WIRED"
+  - id: maersk_q2
+    title: "Shipping giant Maersk says NotPetya attack cost it up to $300M (Maersk interim report Q2 2017)"
+    publisher: SiliconANGLE
+    url: https://siliconangle.com/2017/08/16/shipping-giant-maesrk-says-notpetya-attack-cost-300m/
+    published: "2017-08-16"
+    accessed: "2026-11-09"
+    credit: "Maersk Q2 2017 report, via SiliconANGLE"
+  - id: wh_2018
+    title: "Statement from the Press Secretary (NotPetya)"
+    publisher: The White House (archived)
+    url: https://trumpwhitehouse.archives.gov/briefings-statements/statement-press-secretary-25/
+    published: "2018-02-15"
+    accessed: "2026-11-09"
+    credit: "The White House"
+  - id: reg_2018
+    title: "UK names Russia as source of NotPetya, USA follows suit"
+    publisher: The Register
+    url: https://www.theregister.com/security/2018/02/15/uk-names-russia-as-source-of-notpetya-usa-follows-suit/325929
+    published: "2018-02-15"
+    accessed: "2026-11-09"
+    credit: "The Register / UK NCSC"
+  - id: fortune_2018
+    title: "Russia Blamed for NotPetya Cyberattack: What You Need to Know"
+    publisher: Fortune
+    url: https://fortune.com/2018/02/16/russia-notpetya-cyberattack-damage/
+    published: "2018-02-16"
+    accessed: "2026-11-09"
+    credit: "Fortune"
+  - id: lawfare_doj
+    title: "Summary: Justice Department Charges Six Russian GRU Officers"
+    publisher: Lawfare
+    url: https://www.lawfaremedia.org/article/summary-justice-department-charges-six-russian-gru-officers
+    published: "2020-10"
+    accessed: "2026-11-09"
+    credit: "Lawfare (summary of the US indictment)"
+  - id: infosec_doj
+    title: "US Indicts GRU Officers for NotPetya, Olympics Attacks and More"
+    publisher: Infosecurity Magazine
+    url: https://www.infosecurity-magazine.com/news/us-indicts-gru-officers-notpetya/
+    published: "2020-10-20"
+    accessed: "2026-11-09"
+    credit: "Infosecurity Magazine"
+  - id: mcg_merck
+    title: "Merck Settlement of $1.4 Billion Coverage Dispute Over NotPetya Cyberattack Places Renewed Spotlight on War Exclusions in 2024"
+    publisher: McGuireWoods (Shelby Guilbert)
+    url: https://blogs.mcguirewoods.com/2024/02/29/merck-settlement-1-4-billion-coverage-dispute-notpetya-cyberattack-places-renewed-spotlight-war-exclusions-2024/
+    published: "2024-02-29"
+    accessed: "2026-11-09"
+    credit: "McGuireWoods"
+
+claims:
+  - id: total
+    text: "WIRED (Aug 2018): NotPetya caused more than $10 billion in total damages, according to a White House assessment confirmed to WIRED by former Homeland Security adviser Tom Bossert. White House (15 Feb 2018): 'the most destructive and costly cyber-attack in history', 'causing billions of dollars in damage across Europe, Asia, and the Americas'."
+    spoken: more than ten billion dollars
+    display: "$10bn+"
+    source_ids: [wired, wh_2018]
+    status: source_located
+    verification_note: A White House assessment; said as an estimate.
+
+  - id: fleet
+    text: "WIRED: Maersk, 'the world's largest shipping conglomerate', was responsible for 76 ports and nearly 800 seafaring vessels, representing close to a fifth of the entire world's shipping capacity."
+    spoken: seventy-six
+    display: "76 ports"
+    fields: {vessels_spoken: nearly eight hundred, share_spoken: close to a fifth}
+    source_ids: [wired]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: mdoc
+    text: "WIRED: Linkos Group, a small, family-run Ukrainian software business, makes M.E.Doc accounting software; in spring 2017 Russian military hackers hijacked its update servers; in June 2017 they used that back door to release NotPetya. Lawfare (DOJ indictment): M.E.Doc is a popular Ukrainian accounting program used to send tax information to the government; malicious code was added to updates on three dates in April, May and June."
+    spoken: M.E.Doc
+    display: "M.E.Doc"
+    source_ids: [wired, lawfare_doj]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: exploits
+    text: "WIRED: NotPetya combined EternalBlue, a penetration tool created by the US National Security Agency and leaked earlier in 2017, with Mimikatz, which pulls passwords out of memory; together they could infect unpatched computers and then use stolen passwords to infect patched ones. The Register: EternalBlue was leaked from the NSA."
+    spoken: EternalBlue
+    display: "EternalBlue + Mimikatz"
+    source_ids: [wired, reg_2018]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: ransom
+    text: "WIRED: screens read 'oops, your important files are encrypted' and demanded $300 worth of bitcoin; the ransom messages were only a ruse. Lawfare (DOJ): unlike Petya, NotPetya irreversibly encrypted computers so that not even the hackers could restore the contents."
+    spoken: three hundred dollars
+    display: "$300 in bitcoin"
+    source_ids: [wired, lawfare_doj]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: speed
+    text: "WIRED (ISSP): it took 45 seconds to bring down the network of a large Ukrainian bank; a portion of a major Ukrainian transit hub was fully infected in 16 seconds; the attack came the day before Ukraine's Constitution Day."
+    spoken: forty-five seconds
+    display: "45 s"
+    fields: {hub_spoken: sixteen seconds}
+    source_ids: [wired]
+    status: source_located
+    verification_note: Figures from the Ukrainian security firm ISSP, as reported by WIRED.
+
+  - id: ukraine
+    text: "WIRED: NotPetya hit at least four hospitals in Kiev alone, six power companies, two airports, more than 22 Ukrainian banks, ATMs and card payment systems, and practically every federal agency; one senior Ukrainian official estimated that 10 percent of all computers in the country were wiped; it shut down computers at the Chernobyl cleanup site."
+    spoken: ten percent
+    display: "≈ 10%"
+    fields: {banks_spoken: more than twenty-two}
+    source_ids: [wired]
+    status: source_located
+    verification_note: The 10% figure is one official's estimate, said as such.
+
+  - id: terminals
+    text: "WIRED: the same scene played out at 17 of Maersk's 76 terminals, from Los Angeles to Algeciras, Rotterdam and Mumbai; gates down, cranes frozen. At Elizabeth, New Jersey, about 3,000 trucks arrive on a good day; hundreds of trucks backed up for miles and the Port Authority said the terminal would be closed for the rest of the day. SiliconANGLE: the attack did not stop any of Maersk's ships."
+    spoken: seventeen
+    display: "17 of 76"
+    fields: {trucks_spoken: about three thousand}
+    source_ids: [wired, maersk_q2]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: whatsapp
+    text: "WIRED: Maersk staffers took orders via personal Gmail accounts, WhatsApp and Excel spreadsheets; a customer: 'booking 500 shipping containers via WhatsApp'. Maersk CEO Soren Skou (Q2 2017 report): business volumes were negatively affected for a couple of weeks in July."
+    spoken: five hundred
+    display: "500 containers via WhatsApp"
+    source_ids: [wired, maersk_q2]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: rebuild
+    text: "WIRED: Maersk's 150 or so domain controllers synced with each other and all were wiped; backups of almost all individual servers existed, but not of the domain controllers; one lone surviving domain controller was found in Ghana, untouched thanks to a power outage; no Ghana staffer had a British visa, so the drive went by relay via Nigeria, then on a six-and-a-half-hour flight to Heathrow; the recovery centre in Maidenhead was managed by Deloitte. Chair Jim Hagemann Snabe (Davos): it took just 10 days to rebuild 4,000 servers and 45,000 PCs; full recovery took close to two months."
+    spoken: four thousand servers and forty-five thousand PCs
+    display: "4,000 servers · 45,000 PCs"
+    fields: {dc_spoken: about a hundred and fifty, days_spoken: ten days, flight_spoken: six and a half hours}
+    source_ids: [wired]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: maersk_cost
+    text: "Maersk interim report Q2 2017 (via SiliconANGLE), CEO Soren Skou: 'We expect that the cyber-attack will impact results negatively by USD 200-300m.' WIRED: Snabe estimated at Davos that NotPetya cost Maersk between $250 million and $300 million; staffers privately suspected the figure was low-balled. Fortune (Feb 2018): up to $300 million replacing tens of thousands of PCs and servers."
+    spoken: two hundred to three hundred million dollars
+    display: "$200–300M"
+    fields: {snabe_spoken: between two hundred and fifty and three hundred million dollars}
+    source_ids: [maersk_q2, wired, fortune_2018]
+    status: source_located
+    verification_note: Company estimates.
+
+  - id: victims
+    text: "WIRED (approximate damages reported by the biggest victims): Merck $870 million; FedEx, through TNT Express, $400 million; Saint-Gobain $384 million; Maersk $300 million; Mondelēz $188 million; Reckitt Benckiser $129 million. Merck's ability to manufacture some drugs was temporarily shut down."
+    spoken: eight hundred and seventy million dollars
+    display: "$870M"
+    fields: {fedex_spoken: four hundred million dollars, sg_spoken: three hundred and eighty-four million dollars, mdlz_spoken: one hundred and eighty-eight million dollars, rb_spoken: one hundred and twenty-nine million dollars}
+    source_ids: [wired]
+    status: source_located
+    verification_note: Company-reported figures, as listed by WIRED.
+
+  - id: atlanta
+    text: "WIRED: the ransomware attack that paralyzed Atlanta's city government in March 2018 cost up to $10 million, a tenth of a percent of NotPetya's price."
+    spoken: up to ten million dollars
+    display: "$10M"
+    source_ids: [wired]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: blame
+    text: "The Register (15 Feb 2018): the UK National Cyber Security Centre concluded 'the Russian military was almost certainly responsible'. White House (15 Feb 2018): 'In June 2017, the Russian military launched the most destructive and costly cyber-attack in history.' Fortune (16 Feb 2018): Kremlin spokesman Dmitry Peskov: 'We categorically reject such accusations. We consider them unsubstantiated and groundless.'"
+    spoken: almost certainly
+    display: "'almost certainly'"
+    source_ids: [reg_2018, wh_2018, fortune_2018]
+    status: source_located
+    verification_note: Accusation and denial both said.
+
+  - id: doj
+    text: "Lawfare (Oct 2020): federal prosecutors indicted six officers in Unit 74455 of Russia's GRU; systems attacked by NotPetya included two hospitals and 78 other medical facilities in the Heritage Valley Health System in Pennsylvania, which lost access to systems for cardiology, nuclear medicine, radiology and surgery; FedEx spent about $400 million and a large US pharmaceutical manufacturer over $500 million. Infosecurity Magazine: the DoJ said $1 billion was lost from just three of the many victim organizations; the unit is also known as Sandworm."
+    spoken: six
+    display: "6 GRU officers charged"
+    fields: {hv_spoken: two hospitals and seventy-eight other medical facilities, three_spoken: close to a billion dollars}
+    source_ids: [lawfare_doj, infosec_doj]
+    status: source_located
+    verification_note: Charges are allegations; no trial has taken place.
+
+  - id: merck_ins
+    text: "McGuireWoods (Feb 2024): Merck reached a settlement with its 'all risk' property insurers in a dispute involving over $1.4 billion in losses from NotPetya; the insurers argued a 'hostile/warlike' exclusion applied; the New Jersey trial court found the exclusion did not apply to malware and cyberattacks but only to physical acts of warfare, and the state appeals court affirmed; the settlement came days before the New Jersey Supreme Court was set to hear arguments; terms were not disclosed."
+    spoken: more than one point four billion dollars
+    display: "$1.4bn+"
+    source_ids: [mcg_merck]
+    status: source_located
+    verification_note: Settlement terms undisclosed.

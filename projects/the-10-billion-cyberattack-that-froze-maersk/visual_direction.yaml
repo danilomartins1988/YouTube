@@ -1,0 +1,55 @@
+# Visual direction for the-10-billion-cyberattack-that-froze-maersk (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a cyber thriller that spills into the real economy. Thriller for the poisoned update, crisis for the frozen
+# terminals and the hunt for one server, strategy for the bill and the blame, reflective close.
+primary_tone: thriller
+secondary_tones:
+- crisis
+- strategy
+- reflective
+palette:
+  bg: '#06110D'
+  bg2: '#0D1F18'
+  ink: '#EAFBF2'
+  muted: '#9CC2B0'
+  land: '#163327'
+  border: '#2E5A47'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The ten-billion-dollar morning
+  tone: thriller
+- chapter: The update
+  tone: thriller
+- chapter: Copenhagen goes dark
+  tone: crisis
+- chapter: The search for one server
+  tone: crisis
+- chapter: The bill
+  tone: strategy
+- chapter: Who pays
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m1_ransom
+  cue: But it was a disguise
+  to: crisis
+  why: the ransom note was a ruse; the files were gone for good
+- segment: m3_ghana
+  cue: they found one survivor
+  to: spectacle
+  why: the lone surviving server in Ghana
+thumbnail:
+  tone: thriller
+  headline: []
+  idea: a container ship under a glitching red screen, with the damage figure
+requirements:
+- 'The pcgrid (a wall of office PCs that the wiper turns red in a spreading wave, later rebuilt one by one) is the through-line'
+- Night server room for the poisoned update; frozen container terminal with a closed gate and a queue of trucks
+- 'Recovery war room in Maidenhead; the Ghana -> Nigeria -> London relay flight with one hard drive; a courtroom for the war clause'
+- No company logos, no real ransom-screen UI, no likeness of real people, no flags, no hooded-hacker cliché

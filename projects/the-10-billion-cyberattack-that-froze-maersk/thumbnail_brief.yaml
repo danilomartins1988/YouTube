@@ -1,0 +1,82 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
+title: The $10 Billion Cyberattack That Froze the World's Biggest Shipping Company
+docs_dir: docs/episodes/20-notpetya
+video: output/notpetya_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: How one tax-software update froze the world's largest shipping conglomerate
+  surprising_fact: 'NotPetya: more than $10bn in damage (White House assessment, via WIRED); Maersk hit for $200-300M (Q2 2017 report)'
+  subject: a container ship and a glitching screen
+  tone: thriller
+  metaphor: you do not have to be the target to be the victim
+concepts:
+- id: A
+  angle: mystery (bold)
+  text:
+  - ONE UPDATE
+  - $10 BILLION
+  accent_line: 1
+  text_side: left
+  claim_basis: 'mdoc/total: the M.E.Doc update; more than $10bn in damage (White House assessment)'
+  scene:
+    palette:
+      sky0: '#020806'
+      sky1: '#0B2A1E'
+      haze: '#7DF29A'
+      key: '#D8FFE9'
+      accent: '#FF4B3E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ship
+      x: 1380
+      y: 640
+      s: 0.9
+    support:
+    - kind: glitch
+      x: 1400
+      y: 420
+      s: 1.0
+    particles:
+      n: 70
+      region: [800, 0, 1920, 1080]
+      size: 3
+      color: '#7DF29A'
+    vignette: 0.55
+    brand: tl
+- id: B
+  angle: consequence (bold)
+  text:
+  - MAERSK
+  - HACKED
+  accent_line: 1
+  text_side: left
+  claim_basis: 'fleet/terminals: the NotPetya attack froze 17 of Maersk''s 76 terminals (WIRED)'
+  scene:
+    palette:
+      sky0: '#05070F'
+      sky1: '#2A0E12'
+      haze: '#FF4B3E'
+      key: '#FFD1CC'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ship
+      x: 1380
+      y: 640
+      s: 0.9
+    support:
+    - kind: glitch
+      x: 1400
+      y: 420
+      s: 1.0
+    particles:
+      n: 60
+      region: [800, 0, 1920, 1080]
+      size: 3
+      color: '#FFD1CC'
+    vignette: 0.55
+    brand: tl
+default: A

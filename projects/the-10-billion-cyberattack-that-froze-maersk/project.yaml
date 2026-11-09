@@ -1,0 +1,34 @@
+title: "The $10 Billion Cyberattack That Froze the World's Biggest Shipping Company"
+slug: the-10-billion-cyberattack-that-froze-maersk
+language: en
+# Episode 20 (top-10 #3: NotPetya / Maersk). Visual direction: visual_direction.yaml (thriller -> crisis -> strategy -> reflective).
+# Five-part structure internal only. Money: all amounts in US dollars as published by the sources.
+renderer: remotion
+remotion_geo: [world]
+style:
+  name: cartoon-day
+  palette:
+    bg: "#C4E4FA"
+    bg2: "#EEF8FF"
+    ink: "#0F1E36"
+    muted: "#4D6680"
+    land: "#8BD47A"
+    border: "#2B5573"
+    accent: "#E89A00"
+    accent2: "#1565C0"
+    accent3: "#23995A"
+    risk: "#E53935"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 3

@@ -1,0 +1,291 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# company losses are their own reported figures; the ten-billion total is a White House assessment; the blame is said
+# with the Kremlin's denial; the GRU officers are charged, not convicted. Generic teaser.
+logline: In June twenty seventeen, a piece of code hidden in a Ukrainian tax program froze the world's biggest shipping company,
+  wiped thousands of computers, and caused more than ten billion dollars in damage. How it spread, how Maersk came back, and
+  who ended up paying.
+title: The $10 Billion Cyberattack That Froze the World's Biggest Shipping Company
+segments:
+- id: h_question
+  chapter: The ten-billion-dollar morning
+  narration: How does a small update for an accounting program in Ukraine end up stopping trucks at a port in New Jersey,
+    shutting down drug production at one of the world's biggest drug makers, and costing the world more than ten billion dollars?
+  claims:
+  - total
+  - terminals
+  analysis: true
+  source_note: Hook question built from the sourced claims (M.E.Doc update, Elizabeth NJ terminal, Merck, White House total).
+- id: h_stakes
+  chapter: The ten-billion-dollar morning
+  narration: The code was called NotPetya, and the White House later put its damage at {{total}}. One victim was Maersk, the
+    world's largest shipping conglomerate. Within half an hour, its staff were running down the hallways, shouting at colleagues
+    to unplug their computers. And what saved it in the end was a single server in Africa that happened to be offline.
+  claims:
+  - total
+  - fleet
+  - rebuild
+- id: m1_card
+  chapter: The update
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The update
+  narration: How do you hit an entire country at once?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_mdoc
+  chapter: The update
+  narration: You go through software everybody trusts. A small family-run company in Kyiv, Linkos Group, made an accounting
+    program called {{mdoc}}, used by Ukrainian businesses to file their taxes. Like most software, it updated itself. In the
+    spring of twenty seventeen, according to American prosecutors, Russian military hackers took over its update servers and
+    slipped their own code into the updates.
+  claims:
+  - mdoc
+- id: m1_launch
+  chapter: The update
+  narration: On June twenty-seventh, the day before a national holiday in Ukraine, they used that back door. The malware spread
+    with terrifying speed. A Ukrainian security firm watched it bring down the network of a large bank in {{speed}}. Part
+    of a major transit hub was fully infected in {{speed.hub_spoken}}.
+  claims:
+  - mdoc
+  - speed
+- id: m1_weapons
+  chapter: The update
+  narration: It had two weapons. The first was EternalBlue, a hacking tool built by America's own National Security Agency,
+    which had leaked earlier that year. It broke into Windows computers that had not installed a security fix. The second,
+    Mimikatz, pulled passwords out of memory, and those passwords opened the machines that had been fixed.
+  claims:
+  - exploits
+- id: m1_draw
+  chapter: The update
+  narration: Let me draw how one computer becomes thousands. One infected machine finds a neighbor that missed the security
+    fix, and breaks in. There, it reads the passwords stored in memory. Those passwords open a third machine, even a fully
+    updated one. Every victim becomes a new attacker. And inside a big company, where every computer trusts the others, there
+    is no wall to stop it.
+  claims:
+  - exploits
+  analysis: true
+  source_note: Explanation of the EternalBlue plus Mimikatz combination described by WIRED.
+- id: m1_ransom
+  chapter: The update
+  narration: Then the screens changed. Some said the computer was repairing its file system. Others said, oops, your important
+    files are encrypted, and asked for {{ransom}} in bitcoin. But it was a disguise. According to the charges, the files were
+    scrambled in a way that not even the hackers could undo. Paying changed nothing. This was not a ransom. It was a wiper.
+  claims:
+  - ransom
+- id: m1_ukraine
+  chapter: The update
+  narration: In Ukraine, it hit hospitals, six power companies, two airports, {{ukraine.banks_spoken}} banks, cash machines,
+    and practically every government agency. It even shut down the computers at the Chernobyl clean-up site. One senior official
+    estimated that {{ukraine}} of all the computers in the country were wiped.
+  claims:
+  - ukraine
+- id: m1_transition
+  chapter: The update
+  narration: But the code did not stay in Ukraine. It got on a plane, so to speak, inside the networks of global companies.
+  claims: []
+- id: m2_card
+  chapter: Copenhagen goes dark
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: Copenhagen goes dark
+  narration: What happens when the company behind a fifth of world shipping loses its computers?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_door
+  chapter: Copenhagen goes dark
+  narration: Maersk's door was a single computer. A finance executive at its office in Ukraine had asked for {{mdoc}} to be
+    installed on one machine. That was enough. Through Maersk's global network, the malware reached its headquarters in Copenhagen
+    on a sunny summer afternoon, and from there, the rest of the company.
+  claims:
+  - mdoc
+- id: m2_scale
+  chapter: Copenhagen goes dark
+  narration: This was the world's largest shipping conglomerate, with {{fleet}} port terminals, {{fleet.vessels_spoken}} vessels,
+    and {{fleet.share_spoken}} of the world's shipping capacity. Every container is tracked, booked and cleared by computers.
+    And the computers were gone.
+  claims:
+  - fleet
+- id: m2_port
+  chapter: Copenhagen goes dark
+  narration: At the terminal in Elizabeth, New Jersey, {{terminals.trucks_spoken}} trucks arrive on a good day. That day,
+    the gates stopped working. Hundreds of trucks backed up for miles, and the terminal was closed for the rest of the day.
+    The same thing happened at {{terminals}} of Maersk's seventy-six terminals, from Los Angeles to Rotterdam and Mumbai.
+    Gates down. Cranes frozen.
+  claims:
+  - terminals
+  - fleet
+- id: m2_ships
+  chapter: Copenhagen goes dark
+  narration: The ships themselves kept sailing. But without the systems that say which box goes where, a port becomes a parking
+    lot. Staff fell back on personal email, spreadsheets and WhatsApp. One customer remembered booking {{whatsapp}} shipping
+    containers through a messaging app.
+  claims:
+  - terminals
+  - whatsapp
+- id: m2_transition
+  chapter: Copenhagen goes dark
+  narration: To come back, Maersk had to rebuild everything. And for that, it needed one thing it could not find.
+  claims: []
+- id: m3_card
+  chapter: The search for one server
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The search for one server
+  narration: What do you rebuild first when everything is gone?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_maidenhead
+  chapter: The search for one server
+  narration: Maersk turned an office building in Maidenhead, a town west of London, into a recovery center run with the consultancy
+    Deloitte. Staff kept arriving from all over the world, luggage in hand. The good news was that there were backups of almost
+    all of the company's servers.
+  claims:
+  - rebuild
+- id: m3_map
+  chapter: The search for one server
+  narration: The bad news was the map. A network like Maersk's runs on special servers called domain controllers, the master
+    list of who may log in to what. Maersk had {{rebuild.dc_spoken}}, copying each other so that any one could replace the
+    others. That design covered every disaster except one. All of them wiped at once. And there was no separate backup.
+  claims:
+  - rebuild
+- id: m3_draw
+  chapter: The search for one server
+  narration: Let me draw the trap. Here are the servers, each one a box, all connected to the master list. Normally, if one
+    copy dies, the others fill in. But the malware reached every copy at the same time. No healthy copy was left. And without
+    the master list, the backups of all the other servers were useless, because nobody could log in to restore them.
+  claims:
+  - rebuild
+  analysis: true
+  source_note: Explanation of the domain-controller problem described by WIRED.
+- id: m3_ghana
+  chapter: The search for one server
+  narration: After calling hundreds of administrators around the world, they found one survivor. A single domain controller
+    in an office in Ghana. A power cut had knocked it offline, and the malware never touched it. A blackout had saved the
+    company.
+  claims:
+  - rebuild
+- id: m3_relay
+  chapter: The search for one server
+  narration: But the connection in Ghana was so slow that sending the data would take days. So they decided to fly it. Nobody
+    in the Ghana office had a British visa, so it became a relay race. One employee flew the hard drive to Nigeria and handed
+    it over at the airport to a colleague, who carried it on a {{rebuild.flight_spoken}} flight to London.
+  claims:
+  - rebuild
+- id: m3_rebuilt
+  chapter: The search for one server
+  narration: With that drive, Maidenhead could start bringing the company back. According to Maersk's chairman, it took {{rebuild.days_spoken}}
+    to rebuild a network of {{rebuild}}. Full recovery took close to two months.
+  claims:
+  - rebuild
+- id: m3_transition
+  chapter: The search for one server
+  narration: Then came the bill. And Maersk was only one of the victims.
+  claims: []
+- id: m4_card
+  chapter: The bill
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The bill
+  narration: How much can a few lines of code cost?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_maersk
+  chapter: The bill
+  narration: In August, Maersk told investors the attack would cut its results by {{maersk_cost}}. Its chairman later put
+    it {{maersk_cost.snabe_spoken}}. Some of the company's own staff privately suspected even that was too low.
+  claims:
+  - maersk_cost
+- id: m4_victims
+  chapter: The bill
+  narration: And the list kept growing. The drug maker Merck, whose ability to manufacture some medicines was temporarily
+    shut down, reported a loss of {{victims}}. FedEx, through its European arm TNT Express, {{victims.fedex_spoken}}. Saint-Gobain,
+    the French building giant, {{victims.sg_spoken}}. The snack maker Mondelez, {{victims.mdlz_spoken}}.
+  claims:
+  - victims
+- id: m4_draw
+  chapter: The bill
+  narration: Let me draw the scale. Here is a typical ransomware attack that paralyzed the city of Atlanta, costing {{atlanta}}.
+    Next to it, Maersk. Then FedEx. Then Merck. And then the total. The White House estimate of more than ten billion dollars.
+    Next to that bar, the Atlanta attack is barely a line. It is about a tenth of one percent.
+  claims:
+  - atlanta
+  - victims
+  - total
+  analysis: true
+  source_note: Bar comparison of sourced figures; 'a tenth of a percent' is WIRED's comparison.
+- id: m4_hospitals
+  chapter: The bill
+  narration: Not all the damage was measured in money. In Pennsylvania, NotPetya hit the Heritage Valley Health System, {{doj.hv_spoken}}.
+    For more than a week, staff could not reach the computer systems they used for cardiology, nuclear medicine, radiology
+    and surgery.
+  claims:
+  - doj
+- id: m4_transition
+  chapter: The bill
+  narration: Somebody had launched it. And somebody would have to pay for it.
+  claims: []
+- id: m5_card
+  chapter: Who pays
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Who pays
+  narration: Who is responsible for a weapon that does not stay where it was aimed?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_blame
+  chapter: Who pays
+  narration: In February twenty eighteen, Britain's National Cyber Security Centre concluded that the Russian military was
+    {{blame}} responsible. The White House called it the most destructive and costly cyber attack in history, and said it
+    was part of the Kremlin's effort to destabilize Ukraine. Russia's government rejected the accusations as groundless.
+  claims:
+  - blame
+- id: m5_doj
+  chapter: Who pays
+  narration: In October twenty twenty, American prosecutors charged {{doj}} officers of a Russian military intelligence unit,
+    known to researchers as Sandworm. They said just three American victims had lost {{doj.three_spoken}}. These are accusations,
+    not convictions.
+  claims:
+  - doj
+- id: m5_insurance
+  chapter: Who pays
+  narration: So the victims turned to their insurers. And the insurers pointed to an old clause excluding hostile or warlike
+    acts. If a government's military launched the attack, they argued, it was war, and they did not have to pay. Merck's fight
+    was over {{merck_ins}} in losses.
+  claims:
+  - merck_ins
+- id: m5_court
+  chapter: Who pays
+  narration: A New Jersey court disagreed. The war exclusion, it found, was written for physical acts of warfare between armies,
+    not for malware. An appeals court agreed. In early twenty twenty-four, days before the state's supreme court was due to
+    hear the case, Merck settled with its insurers. The terms were never disclosed.
+  claims:
+  - merck_ins
+- id: payoff
+  chapter: The lesson
+  narration: So what did NotPetya teach the world economy? That the attack does not have to be aimed at you. Maersk was not
+    the target. It was in the way. One computer running one tax program was enough to stop terminals on three continents.
+    Networks where everything trusts everything else are efficient. They are also fragile. And in the end, the world's biggest
+    shipping company was rescued not by a plan, but by a power cut in Ghana.
+  claims:
+  - rebuild
+  - terminals
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

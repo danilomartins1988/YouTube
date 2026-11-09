@@ -2058,9 +2058,42 @@ const watch: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A wall of office PCs. From infectAt, a wiper spreads from `origin` [col,row] at `speed` cells/s: each screen flashes and turns
+ *  to a red ransom note. From healAt, machines are rebuilt one by one (blue with a tick) at `healSpeed` cells/s. */
+const pcgrid: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const cols = a.cols ?? 8, rows = a.rows ?? 4, cw = a.cell ?? 120, ch = cw * 0.8, [oc, or] = a.origin || [0, 0];
+  const ia = a.infectAt ?? 1e9, sp = a.speed ?? 4, ha = a.healAt ?? 1e9, hs = a.healSpeed ?? 3;
+  const cells = [];
+  let bad = 0;
+  for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+    const d = Math.hypot(c - oc, r - or) + ((c * 7 + r * 13) % 5) * 0.15, ti = ia + d / sp, th = ha + (r * cols + c) / (hs * 1.0) * 0.5;
+    const inf = t >= ti && t < th, healed = t >= th, flash = inf && t < ti + 0.25;
+    if (inf) bad++;
+    const px = (c - (cols - 1) / 2) * cw, py = (r - (rows - 1) / 2) * ch;
+    cells.push(<g key={r + '-' + c} transform={`translate(${px} ${py})`}>
+      <rect x={-cw * 0.4} y={-ch * 0.42} width={cw * 0.8} height={ch * 0.6} rx={6} fill="#37474F" stroke={OL} strokeWidth={3} />
+      <rect x={-cw * 0.34} y={-ch * 0.37} width={cw * 0.68} height={ch * 0.5} rx={3} fill={flash ? '#FFFFFF' : inf ? '#B71C1C' : healed ? '#81D4FA' : '#A5D6A7'} />
+      {inf && !flash && [0, 1, 2].map((k) => <rect key={k} x={-cw * 0.28} y={-ch * 0.3 + k * ch * 0.12} width={cw * (k === 2 ? 0.3 : 0.56)} height={ch * 0.05} fill="#FFCDD2" />)}
+      {healed && <path d={`M ${-cw * 0.1} ${-ch * 0.12} l ${cw * 0.07} ${cw * 0.07} l ${cw * 0.14} ${-cw * 0.14}`} stroke={OL} strokeWidth={4} fill="none" strokeLinecap="round" />}
+      {!inf && !healed && Math.sin(t * 4 + r + c) > 0 && <rect x={-cw * 0.28} y={-ch * 0.3} width={cw * 0.05} height={ch * 0.1} fill={OL} />}
+      <rect x={-cw * 0.06} y={ch * 0.18} width={cw * 0.12} height={ch * 0.12} fill="#546E7A" />
+      <rect x={-cw * 0.2} y={ch * 0.29} width={cw * 0.4} height={ch * 0.06} rx={3} fill="#546E7A" stroke={OL} strokeWidth={2} />
+    </g>);
+  }
+  const tw = cols * cw;
+  return <g key={'pg' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    {cells}
+    {a.text && <T x={0} y={-(rows / 2) * ch - 26} s={30} c={a.textc || OL}>{a.text}</T>}
+    {a.count && <g transform={`translate(${tw / 2 + 30} ${-(rows / 2) * ch})`}><rect x={0} y={0} width={210} height={70} rx={12} fill={bad ? K.red : '#455A64'} stroke={OL} strokeWidth={4} />
+      <T x={105} y={46} s={30} c={K.white}>{bad ? `${bad} DOWN` : 'ALL OK'}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
