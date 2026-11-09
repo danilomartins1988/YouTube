@@ -50,7 +50,7 @@ SHORTS = {
     "18-chip-chemicals": ("the-chemicals-that-decide-who-makes-chips", "documentary", "chip_chemicals_documentary", "NO CHEMICALS,", "NO CHIPS", "The Chemicals That Decide Who Makes Chips", "#chips #chemicals #economics"),
     "19-quibi": ("the-175-billion-app-that-lasted-six-months", "documentary", "quibi_documentary", "$1.75 BILLION APP.", "GONE IN 6 MONTHS", "The $1.75 Billion App That Lasted Six Months", "#quibi #streaming #business"),
     "20-notpetya": ("the-10-billion-cyberattack-that-froze-maersk", "documentary", "notpetya_documentary", "ONE SOFTWARE UPDATE.", "$10 BILLION IN DAMAGE", "One Software Update Froze the World's Biggest Shipping Company", "#cybersecurity #maersk #shipping"),
-    "22-iceland": ("how-three-banks-nearly-destroyed-an-entire-country", "documentary", "iceland_documentary", "3 BANKS GREW 9X", "BIGGER THAN THEIR COUNTRY", "How Three Banks Nearly Destroyed an Entire Country", "#iceland #banking #economics"),
+    "22-iceland": ("how-three-banks-nearly-destroyed-an-entire-country", "documentary", "iceland_documentary", "3 BANKS GREW ~9X", "BIGGER THAN THEIR COUNTRY", "How Three Banks Nearly Destroyed an Entire Country", "#iceland #banking #economics"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
