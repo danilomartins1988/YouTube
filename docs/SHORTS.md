@@ -28,3 +28,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 22-iceland | How Three Banks Nearly Destroyed an Entire Country | 3 BANKS GREW ~9X / BIGGER THAN THEIR COUNTRY | 40 s | `docs/episodes/22-iceland/youtube-short/short_package.md` |
 | 24-debeers | How Four Words Made Diamonds Mean Love | 4 WORDS MADE / DIAMONDS MEAN LOVE | 38 s | `docs/episodes/24-debeers/youtube-short/short_package.md` |
 | 25-nickel | The Night $13 Billion of Trades Were Erased | $13 BILLION OF TRADES / ERASED OVERNIGHT | 43 s | `docs/episodes/25-nickel/youtube-short/short_package.md` |
+| 26-mcdonalds | Why Moscow Queued From 4 A.M. for a Hamburger | THEY QUEUED FROM 4 A.M. / FOR A HAMBURGER | 45 s | `docs/episodes/26-mcdonalds/youtube-short/short_package.md` |

@@ -22,7 +22,7 @@ The summaries below are the owner's pitch. Every number in them must be checked 
 | 6 | When Tokyo's Land Was Worth More Than Entire Countries | **Delivered** (11:16, QC 0 errors) | Ep 23, `docs/episodes/23-tokyo`. Japan bubble (late 1980s): the famous land-value comparisons must come from a citable source; yen converted to dollars. |
 | 7 | How One Company Made Diamonds a Symbol of Love | **Delivered** (11:32, QC 0 errors) | Ep 24, `docs/episodes/24-debeers`. De Beers ("A Diamond Is Forever", 1947): no logo or ad reproduction; slogan quoted as text. |
 | 8 | The Metal Trade That Broke a Billion-Dollar Market | **Delivered** (11:04, QC 0 errors) | Ep 25, `docs/episodes/25-nickel`. LME nickel, March 2022 (Tsingshan, trades cancelled, suspension): use LME and FCA material. Careful wording on legal cases. |
-| 9 | The Hamburger That Became a Symbol of the Cold War's End | In production (queued for render) | McDonald's Moscow, 31 Jan 1990: no logo, no arches; generic cartoon burger. Ruble figures converted with an official rate or left out. |
+| 9 | The Hamburger That Became a Symbol of the Cold War's End | **Delivered** (11:18, QC 0 errors) | McDonald's Moscow, 31 Jan 1990: no logo, no arches; generic cartoon burger. Ruble figures converted with an official rate or left out. |
 | 10 | The Day Oil Was Worth Less Than Nothing | In production (queued for render) | WTI May 2020 contract settled at −$37.63 on 20 Apr 2020 (verify on CME/EIA); storage at Cushing; how futures expire. |
 | 11 | How Big Tech Really Makes Money From AI | Queued (added 2026-11-08) | Microsoft, Alphabet, Amazon, Meta: cloud AI revenue, capex, chips, ads; use 10-K/10-Q and earnings releases only; separate reported figures from estimates; no logos. |
 
