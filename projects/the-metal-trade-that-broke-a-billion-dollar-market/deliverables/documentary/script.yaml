@@ -1,0 +1,261 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# legal wording as in the FCA notice and the court judgments (cancellation found lawful). Generic teaser.
+logline: On the morning of March eighth, twenty twenty-two, the price of nickel on the London Metal Exchange doubled in a
+  few hours and passed one hundred thousand dollars a tonne. The exchange stopped trading and erased thirteen billion dollars
+  of deals. What happened that night, why the exchange tore up the trades, and who paid for it.
+title: The Metal Trade That Broke a Billion-Dollar Market
+segments:
+- id: h_question
+  chapter: The night nickel went crazy
+  narration: What happens when the price of a metal doubles in a single morning, and the market where it trades decides that
+    none of it happened?
+  claims:
+  - spike
+  - cancel
+  analysis: true
+  source_note: Hook question built from the sourced spike and cancellation.
+- id: h_stakes
+  chapter: The night nickel went crazy
+  narration: In March twenty twenty-two, it happened in London. The price of nickel, a metal used in stainless steel and batteries,
+    shot past {{spike}} a tonne. The London Metal Exchange suspended trading. Then it cancelled every trade made that morning,
+    worth {{cancel}}. Some traders lost fortunes they thought they had made. Others were saved from ruin.
+  claims:
+  - spike
+  - cancel
+- id: m1_card
+  chapter: A market that never sleeps
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: A market that never sleeps
+  narration: Who sets the price of the world's metals?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_lme
+  chapter: A market that never sleeps
+  narration: For most of the metals in your phone, your car or your kitchen sink, a key price is set in London. The London
+    Metal Exchange trades contracts to deliver copper, aluminium, nickel and other metals, usually three months ahead. Miners,
+    factories and traders use those contracts to protect themselves against price swings. And the market runs almost around
+    the clock, with {{blind}} trading hours handled overnight from Hong Kong.
+  claims:
+  - blind
+- id: m1_draw
+  chapter: A market that never sleeps
+  narration: Let me draw how a short position works. A company that will sell nickel in the future agrees today to deliver
+    it at a fixed price. That is a short. If the price falls, it wins. If the price rises, it loses, and the exchange asks
+    it to put up more cash every day to cover the loss. That cash is called margin. And if the price rises fast enough, the
+    margin calls can grow faster than anyone can pay.
+  claims:
+  - margin
+  analysis: true
+  source_note: Explanation of short positions and margin calls as described in the FCA notice.
+- id: m1_short
+  chapter: A market that never sleeps
+  narration: In early twenty twenty-two, there was a very large short in nickel. According to the claimants in the later court
+    case, it was built up by companies within Tsingshan, a Chinese industrial user of nickel. And much of it was held not
+    on the exchange itself, but in private deals between banks and traders, called the over the counter market. The exchange
+    could not see it.
+  claims:
+  - blind
+- id: m1_transition
+  chapter: A market that never sleeps
+  narration: Then, at the end of February, Russia invaded Ukraine. And as one of the exchange's own board members would note,
+    Russia is a large global producer of nickel.
+  claims:
+  - emails
+- id: m2_card
+  chapter: The squeeze
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: The squeeze
+  narration: What happens when everyone who bet on a fall has to buy at once?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_friday
+  chapter: The squeeze
+  narration: The pressure built over a few days. On Friday, March fourth, the exchange's clearing house asked its members
+    for a record {{margin.friday_spoken}} in extra margin. On Monday morning, it asked for another {{margin.monday_spoken}},
+    a new record. By the end of Monday, nickel had jumped by sixty-six percent in a single day, to {{spike.close_spoken}}
+    a tonne.
+  claims:
+  - margin
+  - spike
+- id: m2_monday
+  chapter: The squeeze
+  narration: Inside the exchange, people were alarmed. By two in the afternoon on Monday, the clearing house had called {{emails.intraday_spoken}}
+    from its members that day, and one manager warned in an email that the calls were adding to the stress. A board member
+    wrote that they did not understand why nickel was up sixty-six percent while aluminium was down three, when Russia produced
+    both. Another described the metals markets to the British Treasury as in {{emails}}.
+  claims:
+  - emails
+- id: m2_night
+  chapter: The squeeze
+  narration: Then came the night. Trading reopened in the early hours of Tuesday, London time, run from Hong Kong. The exchange
+    had automatic limits, called price bands, to stop prices moving too fast. But at four forty-nine in the morning, they
+    were switched off. For more than three hours, there was no automatic brake at all.
+  claims:
+  - spike
+  - blind
+- id: m2_peak
+  chapter: The squeeze
+  narration: Without the brake, the price ran. From sixty thousand to seventy thousand dollars in under an hour. Then, in
+    just {{spike.minutes_spoken}}, from seventy thousand to {{spike}}. The price had doubled since the close of the day before.
+    In London, a board member of the exchange woke up around half past five, checked the prices, and saw the numbers.
+  claims:
+  - spike
+- id: m2_draw
+  chapter: The squeeze
+  narration: Let me draw the morning of March eighth. Here is the price on Friday. Here is Monday's close, sixty-six percent
+    higher. And here is the early hours of Tuesday, climbing to more than one hundred thousand dollars. Now look at the bars
+    underneath. The margin calls. Three and a half billion on Friday. Five billion on Monday. And on Tuesday morning, almost
+    twenty billion.
+  claims:
+  - spike
+  - margin
+  analysis: true
+  source_note: Chart of the FCA figures.
+- id: m2_transition
+  chapter: The squeeze
+  narration: At seven thirty in the morning, the exchange's managers met. They had less than an hour to decide.
+  claims: []
+- id: m3_card
+  chapter: Tearing up the trades
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: Tearing up the trades
+  narration: Can a market just decide that trades never happened?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_calls
+  chapter: Tearing up the trades
+  narration: The numbers on the table were frightening. That morning's margin calls on nickel totalled {{margin}}. According
+    to the regulator, calls on that scale were likely to push several members of the exchange into default. And when a member
+    defaults, the losses can spread through the clearing house to everyone else.
+  claims:
+  - margin
+- id: m3_suspend
+  chapter: Tearing up the trades
+  narration: At eight fifteen, the exchange suspended nickel trading. Later that day, it went further. It cancelled every
+    nickel trade made since midnight, worth {{cancel}}. The market stayed shut for more than a week, and reopened on March
+    sixteenth. Night trading from Asia did not return for a whole year.
+  claims:
+  - cancel
+- id: m3_rewind
+  chapter: Tearing up the trades
+  narration: The exchange chose midnight as the cut-off, not the moment the brakes came off. Everything traded from the start
+    of the day was wiped out, as if the morning had never happened. And the billions in margin that the morning's prices had
+    created simply disappeared with it.
+  claims:
+  - cancel
+  - spike
+  analysis: true
+  source_note: Cut-off from the FCA notice (trades on or after 00:00 UK time on 8 March); the rest is explanation of its effect.
+- id: m3_winners
+  chapter: Tearing up the trades
+  narration: Think about what that meant. A trader who had sold nickel at one hundred thousand dollars that morning suddenly
+    had no trade at all. And a company caught short, facing billions in losses, was suddenly spared the worst prices of the
+    day. The cancellation saved the market from a chain of defaults. But it also took real profits away from people who had
+    done nothing wrong.
+  claims:
+  - cancel
+  analysis: true
+  source_note: Analysis of the effects of the cancellation described in the FCA notice and the judgment.
+- id: m3_transition
+  chapter: Tearing up the trades
+  narration: Some of those people went to court.
+  claims: []
+- id: m4_card
+  chapter: The court
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The court
+  narration: Was it legal to erase the trades?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_claims
+  chapter: The court
+  narration: The American hedge fund Elliott said the cancellation had cost it {{court}} in profits. The trading firm Jane
+    Street put its loss at {{court.js_spoken}}. They argued that the market had not been disorderly at all, that the price
+    was simply the result of a squeeze on traders like Tsingshan, and that the exchange had acted unlawfully.
+  claims:
+  - court
+  - blind
+- id: m4_rulings
+  chapter: The court
+  narration: In November twenty twenty-three, the High Court in London disagreed, and dismissed the case. The traders had
+    signed up to the exchange's rules, and those rules gave it the power to cancel trades. In October twenty twenty-four,
+    the Court of Appeal upheld that decision. The cancellation, the courts found, had been lawful.
+  claims:
+  - court
+- id: m4_draw
+  chapter: The court
+  narration: Let me draw the dilemma the exchange faced. Option one, let the trades stand. Then several members might default,
+    and the damage could spread through the whole clearing system. Option two, cancel the trades. The system survives, but
+    some traders lose money that they had fairly won. The arrow from each option leads to a loser. The exchange chose the
+    loser it thought the market could survive.
+  claims:
+  - margin
+  - cancel
+  analysis: true
+  source_note: Diagram of the trade-off described in the FCA notice and the judgment.
+- id: m4_transition
+  chapter: The court
+  narration: The courts said the decision was lawful. The regulator asked a different question. How did it get that far?
+  claims: []
+- id: m5_card
+  chapter: The verdict
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: The verdict
+  narration: Who was responsible for the chaos?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_fca
+  chapter: The verdict
+  narration: In March twenty twenty-five, Britain's Financial Conduct Authority fined the London Metal Exchange {{fine}}.
+    It found that the exchange's policies, controls and training had not prepared it for extreme volatility.
+  claims:
+  - fine
+- id: m5_philosophy
+  chapter: The verdict
+  narration: The regulator also described the culture behind the decisions. The prevailing philosophy at the exchange, it
+    said, was that trading should not be restricted even in times of extreme volatility, unless the market became disorderly.
+    Its price bands had been designed mainly to catch mistakes, a fat finger on a keyboard or a rogue computer program. Not
+    a real squeeze, in the middle of the night, with billions at stake.
+  claims:
+  - emails
+- id: m5_failures
+  chapter: The verdict
+  narration: The notice describes an exchange that could not see the risk building. Its overnight team in Hong Kong had switched
+    off the price bands without consulting senior management, and had never been trained to escalate such a decision. And
+    it could not see the private positions that, it later found, were a material cause of the price rise.
+  claims:
+  - blind
+- id: payoff
+  chapter: The lesson
+  narration: So what does the nickel crisis teach about markets? That a price is only as real as the system behind it. When
+    enough people bet one way, and the bets are hidden from view, a market can break in a few hours. The exchange saved itself
+    by rewriting the morning. That kept the system standing. But it also showed that, in a real crisis, the rules of the market
+    can change while the game is being played.
+  claims:
+  - cancel
+  - blind
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

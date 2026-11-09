@@ -2212,9 +2212,35 @@ const gem: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A trading screen for one contract. `price` is a keyframed value (e.g. [[0, 29000], [cue, 48075], ...]); the line is
+ *  drawn from `at` up to now by sampling it; `max` sets the y scale. `bandsOffAt` turns the "PRICE BANDS" lamp red (OFF),
+ *  `haltAt` stamps SUSPENDED, `cancelAt` greys the part of the line after `cancelFrom` (seconds) and stamps CANCELLED. */
+const tradescreen: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 460), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const W = 760, H = 460, at = a.at ?? 0, mx = a.max ?? 110000, span = Math.max(0.5, t - at), N = 60;
+  const pts: string[] = [], grey: string[] = [];
+  const cf = a.cancelFrom ?? 1e9, cancelled = a.cancelAt !== undefined && t >= a.cancelAt;
+  for (let k = 0; k <= N; k++) { const tt = at + span * k / N, v = kf(a.price, tt, 0), px = -W / 2 + 60 + (W - 120) * k / N, py = H / 2 - 70 - (H - 160) * clamp(v / mx);
+    (cancelled && tt >= cf ? grey : pts).push(`${px.toFixed(1)},${py.toFixed(1)}`); if (cancelled && tt >= cf && grey.length === 1 && pts.length) grey.unshift(pts[pts.length - 1]); }
+  const now = kf(a.price, t, 0), off = a.bandsOffAt !== undefined && t >= a.bandsOffAt, halt = a.haltAt !== undefined && t >= a.haltAt;
+  return <g key={'ts' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={18} fill="#0E1621" stroke={OL} strokeWidth={6} />
+    {[0, 1, 2, 3].map((g) => <line key={g} x1={-W / 2 + 60} x2={W / 2 - 60} y1={H / 2 - 70 - (H - 160) * g / 3} y2={H / 2 - 70 - (H - 160) * g / 3} stroke="#24384F" strokeWidth={2} />)}
+    <T x={-W / 2 + 30} y={-H / 2 + 44} s={26} c="#B0BEC5" a="start">{a.text || '3M NICKEL · $ / TONNE'}</T>
+    <T x={W / 2 - 30} y={-H / 2 + 46} s={34} c={now > (a.hot ?? 60000) ? K.red : '#7DF29A'} a="end">{'$' + Math.round(now).toLocaleString('en-US')}</T>
+    <polyline points={pts.join(' ')} fill="none" stroke={now > (a.hot ?? 60000) ? K.red : '#7DF29A'} strokeWidth={6} strokeLinejoin="round" />
+    {grey.length > 1 && <polyline points={grey.join(' ')} fill="none" stroke="#546E7A" strokeWidth={5} strokeDasharray="10 8" />}
+    <g transform={`translate(${-W / 2 + 40} ${H / 2 - 30})`}><circle r={12} fill={off ? K.red : '#7DF29A'} stroke={OL} strokeWidth={3} />
+      <T x={24} y={9} s={22} c="#B0BEC5" a="start">{off ? 'PRICE BANDS: OFF' : 'PRICE BANDS: ON'}</T></g>
+    {halt && <g transform={`rotate(-8) scale(${E.outBack(win(t, a.haltAt, 0.4))})`}><rect x={-210} y={-44} width={420} height={88} rx={10} fill="none" stroke={K.red} strokeWidth={8} />
+      <T x={0} y={18} s={52} c={K.red}>{cancelled ? 'CANCELLED' : 'SUSPENDED'}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

@@ -1,0 +1,90 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
+title: The Metal Trade That Broke a Billion-Dollar Market
+docs_dir: docs/episodes/25-nickel
+video: output/nickel_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: How nickel doubled in a morning and the exchange erased $13.4bn of trades
+  surprising_fact: 3M nickel $70,000 → $101,365 in 24 minutes; $13.373bn of trades cancelled (FCA Final Notice)
+  subject: a crashing line
+  tone: thriller
+  metaphor: rules changed mid-game
+concepts:
+- id: A
+  angle: mystery (bold)
+  text:
+  - $13 BILLION
+  - ERASED
+  accent_line: 1
+  text_side: left
+  claim_basis: 'cancel: $13.373bn notional cancelled (FCA)'
+  scene:
+    palette:
+      sky0: '#020806'
+      sky1: '#0B2A1E'
+      haze: '#7DF29A'
+      key: '#D8FFE9'
+      accent: '#FF4B3E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: glitch
+      x: 1380
+      y: 520
+      s: 1.1
+    support:
+    - kind: crash
+      x: 1400
+      y: 620
+      s: 0.8
+    particles:
+      n: 70
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#7DF29A'
+    vignette: 0.55
+    brand: tl
+- id: B
+  angle: consequence (bold)
+  text:
+  - NICKEL
+  - DOUBLED IN HOURS
+  accent_line: 1
+  text_side: left
+  claim_basis: 'spike: price doubled since the 7 March close, to $101,365 (FCA)'
+  scene:
+    palette:
+      sky0: '#05070F'
+      sky1: '#2A0E12'
+      haze: '#FF4B3E'
+      key: '#FFD1CC'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: glitch
+      x: 1380
+      y: 520
+      s: 1.1
+    support:
+    - kind: crash
+      x: 1400
+      y: 620
+      s: 0.8
+    particles:
+      n: 60
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFD1CC'
+    vignette: 0.55
+    brand: tl
+default: A

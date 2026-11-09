@@ -1,0 +1,50 @@
+# Visual direction for the-metal-trade-that-broke-a-billion-dollar-market (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a short squeeze in the dark. Thriller for the night, crisis for the cancellation, strategy for the courts and
+# the regulator, reflective close.
+primary_tone: thriller
+secondary_tones:
+- crisis
+- strategy
+- reflective
+palette:
+  bg: '#0A0F14'
+  bg2: '#141E28'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The night nickel went crazy
+  tone: thriller
+- chapter: A market that never sleeps
+  tone: strategy
+- chapter: The squeeze
+  tone: thriller
+- chapter: Tearing up the trades
+  tone: crisis
+- chapter: The court
+  tone: strategy
+- chapter: The verdict
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m2_peak
+  cue: Without the brake
+  to: crisis
+  why: the price runs
+thumbnail:
+  tone: thriller
+  headline: []
+  idea: a red price line shooting off a trading screen, stamped CANCELLED
+requirements:
+- The tradescreen (the 3M nickel line, PRICE BANDS lamp, SUSPENDED and CANCELLED stamps) is the through-line
+- London exchange; a Hong Kong night desk; a clearing-house vault of margin calls; a dawn boardroom; courtrooms; the regulator
+- No LME logo, no real trading UI, no likeness of real people

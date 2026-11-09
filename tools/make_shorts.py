@@ -53,6 +53,7 @@ SHORTS = {
     "22-iceland": ("how-three-banks-nearly-destroyed-an-entire-country", "documentary", "iceland_documentary", "3 BANKS GREW ~9X", "BIGGER THAN THEIR COUNTRY", "How Three Banks Nearly Destroyed an Entire Country", "#iceland #banking #economics"),
     "23-tokyo": ("when-tokyos-land-was-worth-more-than-entire-countries", "documentary", "tokyo_documentary", "ONE GARDEN IN TOKYO", "= ALL OF CALIFORNIA?", "Was One Garden in Tokyo Worth All of California?", "#japan #tokyo #bubble"),
     "24-debeers": ("how-one-company-made-diamonds-a-symbol-of-love", "documentary", "debeers_documentary", "4 WORDS MADE", "DIAMONDS MEAN LOVE", "How Four Words Made Diamonds Mean Love", "#diamonds #debeers #marketing"),
+    "25-nickel": ("the-metal-trade-that-broke-a-billion-dollar-market", "documentary", "nickel_documentary", "$13 BILLION OF TRADES", "ERASED OVERNIGHT", "The Night $13 Billion of Trades Were Erased", "#nickel #lme #markets"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 

@@ -677,105 +677,70 @@
     },
     {
       "index": 13,
-      "id": "s12_risk",
+      "id": "p12_catch",
       "segment": "m2_risk",
-      "type": "engine_cartoon",
+      "type": "engine_draw",
       "start_s": 180.93,
-      "end_s": 203.1,
-      "duration_s": 22.17,
+      "end_s": 207.8,
+      "duration_s": 26.87,
       "visual_objective": "",
-      "narration": "But there was a catch hidden in the structure. Icesave was part of an Icelandic bank, not a separate British one. So if it failed, the first promise to repay ordinary savers came from Iceland's own deposit guarantee fund. A fund in a small country, standing behind savers in two much bigger ones.",
+      "narration": "Let me draw the catch. Here is a British saver. Here is Icesave, a branch of an Icelandic bank, not a separate British one. If the bank fails, the first promise to repay ordinary savers comes from here, Iceland's own deposit guarantee fund. A fund in a small country, standing behind savers in two much bigger ones.",
       "keyframes": [
         {
-          "param": "callouts[0].at.cue",
-          "cue": "Icesave was part",
-          "label": "callouts[0].at.cue",
-          "scene_time_s": 3.54,
-          "absolute_s": 184.47
+          "param": "draw_start.cue",
+          "cue": "Here is a British saver",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.77,
+          "absolute_s": 183.7
         },
         {
-          "param": "items[1].at.cue",
-          "cue": "part of an Icelandic bank",
-          "label": "items[1].at.cue",
-          "scene_time_s": 4.31,
-          "absolute_s": 185.24
+          "param": "strokes[0].start.cue",
+          "cue": "Here is a British saver",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.77,
+          "absolute_s": 183.7
         },
         {
-          "param": "items[2].at.cue",
-          "cue": "part of an Icelandic bank",
-          "label": "items[2].at.cue",
-          "scene_time_s": 4.31,
-          "absolute_s": 185.24
+          "param": "strokes[1].start.cue",
+          "cue": "Here is Icesave",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.31,
+          "absolute_s": 186.24
         },
         {
-          "param": "callouts[0].until.cue",
-          "cue": "So if it failed",
-          "label": "callouts[0].until.cue",
-          "scene_time_s": 8.06,
-          "absolute_s": 188.99
+          "param": "strokes[2].start.cue",
+          "cue": "Here is Icesave",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 5.91,
+          "absolute_s": 186.84
         },
         {
-          "param": "callouts[1].at.cue",
-          "cue": "So if it failed",
-          "label": "callouts[1].at.cue",
-          "scene_time_s": 8.36,
-          "absolute_s": 189.29
+          "param": "strokes[4].start.cue",
+          "cue": "If the bank fails",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 11.26,
+          "absolute_s": 192.19
         },
         {
-          "param": "items[3].at.cue",
-          "cue": "deposit guarantee fund",
-          "label": "items[3].at.cue",
-          "scene_time_s": 13.96,
-          "absolute_s": 194.89
+          "param": "strokes[3].start.cue",
+          "cue": "comes from here",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 15.81,
+          "absolute_s": 196.74
         },
         {
-          "param": "cam[1].at.cue",
+          "param": "actions[0].at.cue",
           "cue": "A fund in a small country",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 16.42,
-          "absolute_s": 197.35
+          "label": "actions[0].at.cue",
+          "scene_time_s": 20.92,
+          "absolute_s": 201.85
         },
         {
-          "param": "items[4].at.cue",
-          "cue": "standing behind savers",
-          "label": "items[4].at.cue",
-          "scene_time_s": 18.41,
-          "absolute_s": 199.34
-        },
-        {
-          "param": "items[5].at.cue",
-          "cue": "standing behind savers",
-          "label": "items[5].at.cue",
-          "scene_time_s": 18.41,
-          "absolute_s": 199.34
-        },
-        {
-          "param": "items[6].at.cue",
-          "cue": "standing behind savers",
-          "label": "items[6].at.cue",
-          "scene_time_s": 18.41,
-          "absolute_s": 199.34
-        },
-        {
-          "param": "items[7].at.cue",
-          "cue": "standing behind savers",
-          "label": "items[7].at.cue",
-          "scene_time_s": 18.41,
-          "absolute_s": 199.34
-        },
-        {
-          "param": "items[8].at.cue",
-          "cue": "standing behind savers",
-          "label": "items[8].at.cue",
-          "scene_time_s": 18.41,
-          "absolute_s": 199.34
-        },
-        {
-          "param": "items[9].at.cue",
-          "cue": "standing behind savers",
-          "label": "items[9].at.cue",
-          "scene_time_s": 18.41,
-          "absolute_s": 199.34
+          "param": "strokes[5].start.cue",
+          "cue": "two much bigger ones",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 24.75,
+          "absolute_s": 205.68
         }
       ],
       "unresolved_cues": [],
@@ -793,8 +758,8 @@
       "id": "s13_warning",
       "segment": "m2_warning",
       "type": "engine_cartoon",
-      "start_s": 203.1,
-      "end_s": 226.13,
+      "start_s": 207.8,
+      "end_s": 230.83,
       "duration_s": 23.03,
       "visual_objective": "",
       "narration": "There were warning signs. Iceland was running huge deficits with the rest of the world, and its banks depended on borrowing that could vanish overnight. The Cambridge study notes that the banks did not hold the toxic mortgage-linked securities that sank others. Their weakness was simpler. They were too big, and they ran on borrowed money.",
@@ -804,63 +769,63 @@
           "cue": "There were warning signs",
           "label": "toneShift.at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 203.45
+          "absolute_s": 208.15
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "Iceland was running",
           "label": "callouts[0].at.cue",
           "scene_time_s": 2.64,
-          "absolute_s": 205.74
+          "absolute_s": 210.44
         },
         {
           "param": "items[0].at.cue",
           "cue": "huge deficits",
           "label": "items[0].at.cue",
           "scene_time_s": 3.94,
-          "absolute_s": 207.04
+          "absolute_s": 211.74
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "The Cambridge study",
           "label": "callouts[0].until.cue",
           "scene_time_s": 10.55,
-          "absolute_s": 213.65
+          "absolute_s": 218.35
         },
         {
           "param": "cam[1].at.cue",
           "cue": "The Cambridge study",
           "label": "cam[1].at.cue",
           "scene_time_s": 10.85,
-          "absolute_s": 213.95
+          "absolute_s": 218.65
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "The Cambridge study",
           "label": "callouts[1].at.cue",
           "scene_time_s": 10.85,
-          "absolute_s": 213.95
+          "absolute_s": 218.65
         },
         {
           "param": "items[1].at.cue",
           "cue": "toxic mortgage-linked securities",
           "label": "items[1].at.cue",
           "scene_time_s": 13.73,
-          "absolute_s": 216.83
+          "absolute_s": 221.53
         },
         {
           "param": "items[1].stampAt.cue",
           "cue": "that sank others",
           "label": "items[1].stampAt.cue",
           "scene_time_s": 16.0,
-          "absolute_s": 219.1
+          "absolute_s": 223.8
         },
         {
           "param": "items[2].at.cue",
           "cue": "They were too big",
           "label": "items[2].at.cue",
           "scene_time_s": 19.4,
-          "absolute_s": 222.5
+          "absolute_s": 227.2
         }
       ],
       "unresolved_cues": [],
@@ -877,8 +842,8 @@
       "id": "s14_praise",
       "segment": "m2_praise",
       "type": "engine_cartoon",
-      "start_s": 226.13,
-      "end_s": 252.13,
+      "start_s": 230.83,
+      "end_s": 256.83,
       "duration_s": 26.0,
       "visual_objective": "",
       "narration": "And yet, the experts were calm. In twenty oh seven, a report by respected international economists concluded, in its own words, that these were in fact very well run banks. Iceland's regulators seemed to agree. When the people paid to watch the banks were reassured, very few outsiders asked the obvious question. What if the money stops?",
@@ -888,56 +853,56 @@
           "cue": "a report by respected",
           "label": "items[0].at.cue",
           "scene_time_s": 5.16,
-          "absolute_s": 231.29
+          "absolute_s": 235.99
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "a report by respected",
           "label": "callouts[0].at.cue",
           "scene_time_s": 5.16,
-          "absolute_s": 231.29
+          "absolute_s": 235.99
         },
         {
           "param": "items[1].at.cue",
           "cue": "Iceland's regulators",
           "label": "items[1].at.cue",
           "scene_time_s": 14.39,
-          "absolute_s": 240.52
+          "absolute_s": 245.22
         },
         {
           "param": "items[2].at.cue",
           "cue": "Iceland's regulators",
           "label": "items[2].at.cue",
           "scene_time_s": 14.39,
-          "absolute_s": 240.52
+          "absolute_s": 245.22
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "When the people paid",
           "label": "callouts[0].until.cue",
           "scene_time_s": 16.8,
-          "absolute_s": 242.93
+          "absolute_s": 247.63
         },
         {
           "param": "cam[1].at.cue",
           "cue": "When the people paid",
           "label": "cam[1].at.cue",
           "scene_time_s": 17.1,
-          "absolute_s": 243.23
+          "absolute_s": 247.93
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "When the people paid",
           "label": "callouts[1].at.cue",
           "scene_time_s": 17.1,
-          "absolute_s": 243.23
+          "absolute_s": 247.93
         },
         {
           "param": "items[3].at.cue",
           "cue": "What if the money stops",
           "label": "items[3].at.cue",
           "scene_time_s": 23.68,
-          "absolute_s": 249.81
+          "absolute_s": 254.51
         }
       ],
       "unresolved_cues": [],
@@ -954,8 +919,8 @@
       "id": "s15_t2",
       "segment": "m2_transition",
       "type": "kinetic_text",
-      "start_s": 252.13,
-      "end_s": 259.2,
+      "start_s": 256.83,
+      "end_s": 263.9,
       "duration_s": 7.07,
       "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
       "narration": "Then, in September twenty oh eight, the global flow of borrowed money stopped.",
@@ -965,14 +930,14 @@
           "cue": "September",
           "label": "September 2008",
           "scene_time_s": 1.14,
-          "absolute_s": 253.28
+          "absolute_s": 257.98
         },
         {
           "param": "lines[1].cue",
           "cue": "money stopped",
           "label": "The borrowed money stopped",
           "scene_time_s": 5.49,
-          "absolute_s": 257.62
+          "absolute_s": 262.32
         }
       ],
       "unresolved_cues": [],
@@ -987,8 +952,8 @@
       "id": "s16_c3",
       "segment": "m3_card",
       "type": "act_title",
-      "start_s": 259.2,
-      "end_s": 264.6,
+      "start_s": 263.9,
+      "end_s": 269.3,
       "duration_s": 5.4,
       "visual_objective": "Chapter card: masked title reveal, gold rule draws",
       "narration": "",
@@ -1005,8 +970,8 @@
       "id": "s17_q3",
       "segment": "m3_question",
       "type": "engine_cartoon",
-      "start_s": 264.6,
-      "end_s": 273.6,
+      "start_s": 269.3,
+      "end_s": 278.3,
       "duration_s": 9.0,
       "visual_objective": "",
       "narration": "What happens when the money stops?",
@@ -1016,7 +981,7 @@
           "cue": "What happens when",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 264.95
+          "absolute_s": 269.65
         }
       ],
       "unresolved_cues": [],
@@ -1031,67 +996,67 @@
       "id": "s18_fall",
       "segment": "m3_fall",
       "type": "engine_cartoon",
-      "start_s": 273.6,
-      "end_s": 301.47,
-      "duration_s": 27.87,
+      "start_s": 278.3,
+      "end_s": 308.5,
+      "duration_s": 30.2,
       "visual_objective": "",
-      "narration": "After the collapse of Lehman Brothers, banks everywhere stopped lending to each other. For Iceland's banks, that was fatal. They could not roll over their debts, and the country's central bank could not print dollars or euros to rescue them. One after another, Glitnir, Landsbanki and Kaupthing fell, in less than one week. Together, they were about eighty-five percent of the country's banking system.",
+      "narration": "After the collapse of Lehman Brothers, banks everywhere stopped lending to each other. For Iceland's banks, that was fatal. They could not roll over their debts, and the country's central bank could not print the foreign money needed to rescue them. One after another, Glitnir, Landsbanki and Kaupthing fell, in less than one week. Together, they were about eighty-five percent of the country's banking system.",
       "keyframes": [
         {
           "param": "items[0].at.cue",
           "cue": "After the collapse",
           "label": "items[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 273.95
+          "absolute_s": 278.65
         },
         {
           "param": "items[1].wobbleAt.cue",
           "cue": "that was fatal",
           "label": "items[1].wobbleAt.cue",
-          "scene_time_s": 7.5,
-          "absolute_s": 281.1
+          "scene_time_s": 8.21,
+          "absolute_s": 286.5
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "They could not roll over",
           "label": "callouts[0].at.cue",
-          "scene_time_s": 9.22,
-          "absolute_s": 282.82
+          "scene_time_s": 9.88,
+          "absolute_s": 288.18
         },
         {
           "param": "items[2].at.cue",
-          "cue": "could not print dollars",
+          "cue": "could not print the foreign money",
           "label": "items[2].at.cue",
-          "scene_time_s": 13.09,
-          "absolute_s": 286.69
+          "scene_time_s": 13.7,
+          "absolute_s": 292.0
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "One after another",
           "label": "callouts[0].until.cue",
-          "scene_time_s": 16.31,
-          "absolute_s": 289.91
+          "scene_time_s": 17.5,
+          "absolute_s": 295.8
         },
         {
           "param": "cam[1].at.cue",
           "cue": "One after another",
           "label": "cam[1].at.cue",
-          "scene_time_s": 16.61,
-          "absolute_s": 290.21
+          "scene_time_s": 17.8,
+          "absolute_s": 296.1
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "One after another",
           "label": "callouts[1].at.cue",
-          "scene_time_s": 16.61,
-          "absolute_s": 290.21
+          "scene_time_s": 17.8,
+          "absolute_s": 296.1
         },
         {
           "param": "items[1].fallAt.cue",
           "cue": "One after another",
           "label": "items[1].fallAt.cue",
-          "scene_time_s": 17.11,
-          "absolute_s": 290.71
+          "scene_time_s": 18.3,
+          "absolute_s": 296.6
         }
       ],
       "unresolved_cues": [],
@@ -1108,8 +1073,8 @@
       "id": "s19_speech",
       "segment": "m3_speech",
       "type": "engine_cartoon",
-      "start_s": 301.47,
-      "end_s": 325.23,
+      "start_s": 308.5,
+      "end_s": 332.27,
       "duration_s": 23.77,
       "visual_objective": "",
       "narration": "On October sixth, Prime Minister Geir Haarde addressed the nation. There was, he said, a very real danger that the economy could be sucked with the banks into the whirlpool, and the result could be national bankruptcy. He announced an emergency bill, to be passed that same day. And he ended with three words. God bless Iceland.",
@@ -1119,56 +1084,56 @@
           "cue": "There was, he said",
           "label": "callouts[0].at.cue",
           "scene_time_s": 5.77,
-          "absolute_s": 307.24
+          "absolute_s": 314.27
         },
         {
           "param": "items[2].at.cue",
           "cue": "a very real danger",
           "label": "items[2].at.cue",
           "scene_time_s": 6.96,
-          "absolute_s": 308.43
+          "absolute_s": 315.46
         },
         {
           "param": "items[3].at.cue",
           "cue": "a very real danger",
           "label": "items[3].at.cue",
           "scene_time_s": 6.96,
-          "absolute_s": 308.43
+          "absolute_s": 315.46
         },
         {
           "param": "items[4].at.cue",
           "cue": "a very real danger",
           "label": "items[4].at.cue",
           "scene_time_s": 6.96,
-          "absolute_s": 308.43
+          "absolute_s": 315.46
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "He announced",
           "label": "callouts[0].until.cue",
           "scene_time_s": 14.95,
-          "absolute_s": 316.42
+          "absolute_s": 323.45
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "He announced",
           "label": "callouts[1].at.cue",
           "scene_time_s": 15.25,
-          "absolute_s": 316.72
+          "absolute_s": 323.75
         },
         {
           "param": "cam[1].at.cue",
           "cue": "And he ended",
           "label": "cam[1].at.cue",
           "scene_time_s": 19.52,
-          "absolute_s": 320.99
+          "absolute_s": 328.02
         },
         {
           "param": "items[5].at.cue",
           "cue": "God bless Iceland",
           "label": "items[5].at.cue",
           "scene_time_s": 21.78,
-          "absolute_s": 323.25
+          "absolute_s": 330.28
         }
       ],
       "unresolved_cues": [],
@@ -1185,8 +1150,8 @@
       "id": "s20_scale",
       "segment": "m3_scale",
       "type": "engine_cartoon",
-      "start_s": 325.23,
-      "end_s": 343.73,
+      "start_s": 332.27,
+      "end_s": 350.77,
       "duration_s": 18.5,
       "visual_objective": "",
       "narration": "The next day, October seventh, the government took control of the banks. Measured together, the failure of the three Icelandic banks was the third largest bankruptcy in the world, after Lehman Brothers and Washington Mutual.",
@@ -1196,49 +1161,49 @@
           "cue": "took control",
           "label": "items[0].stampAt.cue",
           "scene_time_s": 4.42,
-          "absolute_s": 329.65
+          "absolute_s": 336.69
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Measured together",
           "label": "cam[1].at.cue",
           "scene_time_s": 6.73,
-          "absolute_s": 331.96
+          "absolute_s": 339.0
         },
         {
           "param": "items[3].at.cue",
           "cue": "Measured together",
           "label": "items[3].at.cue",
           "scene_time_s": 6.73,
-          "absolute_s": 331.96
+          "absolute_s": 339.0
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "Measured together",
           "label": "callouts[0].at.cue",
           "scene_time_s": 6.73,
-          "absolute_s": 331.96
+          "absolute_s": 339.0
         },
         {
           "param": "items[3].h[1][0].cue",
           "cue": "Measured together",
           "label": "items[3].h[1][0].cue",
           "scene_time_s": 8.23,
-          "absolute_s": 333.46
+          "absolute_s": 340.5
         },
         {
           "param": "items[1].at.cue",
           "cue": "after Lehman Brothers",
           "label": "items[1].at.cue",
           "scene_time_s": 14.77,
-          "absolute_s": 340.0
+          "absolute_s": 347.03
         },
         {
           "param": "items[2].at.cue",
           "cue": "Washington Mutual",
           "label": "items[2].at.cue",
           "scene_time_s": 16.65,
-          "absolute_s": 341.89
+          "absolute_s": 348.92
         }
       ],
       "unresolved_cues": [],
@@ -1255,8 +1220,8 @@
       "id": "s21_terror",
       "segment": "m3_terror",
       "type": "engine_cartoon",
-      "start_s": 343.73,
-      "end_s": 366.87,
+      "start_s": 350.77,
+      "end_s": 373.9,
       "duration_s": 23.13,
       "visual_objective": "",
       "narration": "Two days later, Britain struck. At ten in the morning on October eighth, the British Treasury made an order freezing Landsbanki's assets in the country. The power it used came from a law of twenty oh one, the anti-terrorism, crime and security act. An anti-terrorism law, used against the bank of a friendly European country.",
@@ -1266,56 +1231,56 @@
           "cue": "At ten in the morning",
           "label": "callouts[0].at.cue",
           "scene_time_s": 3.04,
-          "absolute_s": 346.77
+          "absolute_s": 353.81
         },
         {
           "param": "items[2].at.cue",
           "cue": "made an order",
           "label": "items[2].at.cue",
           "scene_time_s": 6.69,
-          "absolute_s": 350.42
+          "absolute_s": 357.46
         },
         {
           "param": "items[2].stampAt.cue",
           "cue": "freezing Landsbanki's assets",
           "label": "items[2].stampAt.cue",
           "scene_time_s": 7.51,
-          "absolute_s": 351.24
+          "absolute_s": 358.27
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "The power it used",
           "label": "callouts[0].until.cue",
           "scene_time_s": 10.47,
-          "absolute_s": 354.2
+          "absolute_s": 361.24
         },
         {
           "param": "cam[1].at.cue",
           "cue": "The power it used",
           "label": "cam[1].at.cue",
           "scene_time_s": 10.77,
-          "absolute_s": 354.5
+          "absolute_s": 361.54
         },
         {
           "param": "items[3].at.cue",
           "cue": "The power it used",
           "label": "items[3].at.cue",
           "scene_time_s": 10.77,
-          "absolute_s": 354.5
+          "absolute_s": 361.54
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "The power it used",
           "label": "callouts[1].at.cue",
           "scene_time_s": 10.77,
-          "absolute_s": 354.5
+          "absolute_s": 361.54
         },
         {
           "param": "items[4].at.cue",
           "cue": "used against the bank",
           "label": "items[4].at.cue",
           "scene_time_s": 19.48,
-          "absolute_s": 363.21
+          "absolute_s": 370.24
         }
       ],
       "unresolved_cues": [],
@@ -1332,8 +1297,8 @@
       "id": "p22_reach",
       "segment": "m3_draw",
       "type": "engine_draw",
-      "start_s": 366.87,
-      "end_s": 399.0,
+      "start_s": 373.9,
+      "end_s": 406.03,
       "duration_s": 32.13,
       "visual_objective": "",
       "narration": "Let me draw why a country cannot save banks this big. Here is the government, with its tax revenue and its reserves. Here are the banks, with their debts to the world. An arrow from the government to the banks is a rescue. But look at the sizes. The banks owe many times more than the whole economy produces. The arrow simply cannot reach. So instead of saving the banks, Iceland drew a line between them and the country.",
@@ -1343,49 +1308,49 @@
           "cue": "Here is the government",
           "label": "draw_start.cue",
           "scene_time_s": 5.13,
-          "absolute_s": 372.0
+          "absolute_s": 379.03
         },
         {
           "param": "strokes[0].start.cue",
           "cue": "Here is the government",
           "label": "strokes[0].start.cue",
           "scene_time_s": 5.13,
-          "absolute_s": 372.0
+          "absolute_s": 379.03
         },
         {
           "param": "strokes[1].start.cue",
           "cue": "Here are the banks",
           "label": "strokes[1].start.cue",
           "scene_time_s": 9.27,
-          "absolute_s": 376.14
+          "absolute_s": 383.17
         },
         {
           "param": "strokes[2].start.cue",
           "cue": "An arrow from the government",
           "label": "strokes[2].start.cue",
           "scene_time_s": 12.82,
-          "absolute_s": 379.69
+          "absolute_s": 386.72
         },
         {
           "param": "strokes[3].start.cue",
           "cue": "The arrow simply cannot reach",
           "label": "strokes[3].start.cue",
           "scene_time_s": 23.54,
-          "absolute_s": 390.41
+          "absolute_s": 397.44
         },
         {
           "param": "actions[0].at.cue",
           "cue": "cannot reach",
           "label": "actions[0].at.cue",
           "scene_time_s": 24.9,
-          "absolute_s": 391.76
+          "absolute_s": 398.8
         },
         {
           "param": "strokes[4].start.cue",
           "cue": "drew a line",
           "label": "strokes[4].start.cue",
           "scene_time_s": 29.14,
-          "absolute_s": 396.01
+          "absolute_s": 403.04
         }
       ],
       "unresolved_cues": [],
@@ -1403,8 +1368,8 @@
       "id": "s23_t3",
       "segment": "m3_transition",
       "type": "kinetic_text",
-      "start_s": 399.0,
-      "end_s": 405.37,
+      "start_s": 406.03,
+      "end_s": 412.4,
       "duration_s": 6.37,
       "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
       "narration": "The banks were gone. Now the bill arrived at every kitchen table.",
@@ -1414,14 +1379,14 @@
           "cue": "The banks were gone",
           "label": "The banks were gone",
           "scene_time_s": 0.35,
-          "absolute_s": 399.35
+          "absolute_s": 406.38
         },
         {
           "param": "lines[1].cue",
           "cue": "the bill arrived",
           "label": "Now the bill arrived",
           "scene_time_s": 2.83,
-          "absolute_s": 401.83
+          "absolute_s": 408.87
         }
       ],
       "unresolved_cues": [],
@@ -1436,8 +1401,8 @@
       "id": "s24_c4",
       "segment": "m4_card",
       "type": "act_title",
-      "start_s": 405.37,
-      "end_s": 410.77,
+      "start_s": 412.4,
+      "end_s": 417.8,
       "duration_s": 5.4,
       "visual_objective": "Chapter card: masked title reveal, gold rule draws",
       "narration": "",
@@ -1454,8 +1419,8 @@
       "id": "s25_q4",
       "segment": "m4_question",
       "type": "engine_cartoon",
-      "start_s": 410.77,
-      "end_s": 419.77,
+      "start_s": 417.8,
+      "end_s": 426.8,
       "duration_s": 9.0,
       "visual_objective": "",
       "narration": "Who pays when a whole banking system disappears?",
@@ -1465,7 +1430,7 @@
           "cue": "Who pays",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 411.12
+          "absolute_s": 418.15
         }
       ],
       "unresolved_cues": [],
@@ -1480,74 +1445,74 @@
       "id": "s26_krona",
       "segment": "m4_krona",
       "type": "engine_cartoon",
-      "start_s": 419.77,
-      "end_s": 446.47,
-      "duration_s": 26.7,
+      "start_s": 426.8,
+      "end_s": 455.27,
+      "duration_s": 28.47,
       "visual_objective": "",
-      "narration": "First, everyone holding Icelandic krónur. According to the IMF, the currency fell by more than seventy percent in offshore trading, and the stock market fell by eighty percent. Even at official rates, the krona lost more than half of its value against the dollar in about a year. Imports became far more expensive, and inflation rose to over eighteen percent in twenty oh nine.",
+      "narration": "First, everyone holding Iceland's currency. According to the IMF, the currency fell by more than seventy percent in offshore trading, and the stock market fell by eighty percent. Even at official rates, the currency lost more than half of its value against the dollar in about a year. Imports became far more expensive, and inflation rose to over eighteen percent in twenty oh nine.",
       "keyframes": [
         {
           "param": "callouts[0].at.cue",
           "cue": "According to the IMF",
           "label": "callouts[0].at.cue",
-          "scene_time_s": 4.09,
-          "absolute_s": 423.86
+          "scene_time_s": 4.24,
+          "absolute_s": 431.04
         },
         {
           "param": "items[0].at.cue",
           "cue": "the currency fell",
           "label": "items[0].at.cue",
-          "scene_time_s": 5.59,
-          "absolute_s": 425.36
+          "scene_time_s": 5.91,
+          "absolute_s": 432.71
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "Even at official rates",
           "label": "callouts[0].until.cue",
-          "scene_time_s": 12.65,
-          "absolute_s": 432.42
+          "scene_time_s": 13.54,
+          "absolute_s": 440.34
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Even at official rates",
           "label": "cam[1].at.cue",
-          "scene_time_s": 12.95,
-          "absolute_s": 432.72
+          "scene_time_s": 13.84,
+          "absolute_s": 440.64
         },
         {
           "param": "items[1].at.cue",
           "cue": "Even at official rates",
           "label": "items[1].at.cue",
-          "scene_time_s": 12.95,
-          "absolute_s": 432.72
+          "scene_time_s": 13.84,
+          "absolute_s": 440.64
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "Even at official rates",
           "label": "callouts[1].at.cue",
-          "scene_time_s": 12.95,
-          "absolute_s": 432.72
+          "scene_time_s": 13.84,
+          "absolute_s": 440.64
         },
         {
           "param": "items[1].steps[1][0].cue",
           "cue": "lost",
           "label": "items[1].steps[1][0].cue",
-          "scene_time_s": 16.95,
-          "absolute_s": 436.72
+          "scene_time_s": 18.11,
+          "absolute_s": 444.91
         },
         {
           "param": "items[2].at.cue",
           "cue": "Imports became",
           "label": "items[2].at.cue",
-          "scene_time_s": 19.76,
-          "absolute_s": 439.53
+          "scene_time_s": 21.23,
+          "absolute_s": 448.03
         },
         {
           "param": "items[2].pages[1][0].cue",
           "cue": "inflation rose",
           "label": "items[2].pages[1][0].cue",
-          "scene_time_s": 22.37,
-          "absolute_s": 442.13
+          "scene_time_s": 23.96,
+          "absolute_s": 450.76
         }
       ],
       "unresolved_cues": [],
@@ -1566,95 +1531,95 @@
       "id": "s27_recession",
       "segment": "m4_recession",
       "type": "engine_cartoon",
-      "start_s": 446.47,
-      "end_s": 472.3,
-      "duration_s": 25.83,
+      "start_s": 455.27,
+      "end_s": 481.47,
+      "duration_s": 26.2,
       "visual_objective": "",
-      "narration": "Then came the recession. The economy shrank by minus six point six percent in twenty oh nine, and by another minus four point one percent the year after. According to the Cambridge study, it was the worst recession of any country in the OECD, the club of rich economies. Unemployment soared, and the weak krona pushed prices up.",
+      "narration": "Then came the recession. The economy shrank by minus six point six percent in twenty oh nine, and by another minus four point one percent the year after. According to the Cambridge study, it was the worst recession of any country in the OECD, the club of rich economies. Unemployment soared, and the weak currency pushed prices up.",
       "keyframes": [
         {
           "param": "items[0].at.cue",
           "cue": "The economy shrank",
           "label": "items[0].at.cue",
-          "scene_time_s": 3.19,
-          "absolute_s": 449.66
+          "scene_time_s": 3.02,
+          "absolute_s": 458.29
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "The economy shrank",
           "label": "callouts[0].at.cue",
-          "scene_time_s": 3.19,
-          "absolute_s": 449.66
+          "scene_time_s": 3.02,
+          "absolute_s": 458.29
         },
         {
           "param": "items[0].steps[1][0].cue",
           "cue": "in twenty oh nine",
           "label": "items[0].steps[1][0].cue",
-          "scene_time_s": 6.89,
-          "absolute_s": 453.35
+          "scene_time_s": 6.98,
+          "absolute_s": 462.25
         },
         {
           "param": "items[0].steps[2][0].cue",
           "cue": "the year after",
           "label": "items[0].steps[2][0].cue",
-          "scene_time_s": 10.98,
-          "absolute_s": 457.44
+          "scene_time_s": 11.4,
+          "absolute_s": 466.67
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "According to the Cambridge",
           "label": "callouts[0].until.cue",
-          "scene_time_s": 11.99,
-          "absolute_s": 458.46
+          "scene_time_s": 12.54,
+          "absolute_s": 467.81
         },
         {
           "param": "cam[1].at.cue",
           "cue": "According to the Cambridge",
           "label": "cam[1].at.cue",
-          "scene_time_s": 12.29,
-          "absolute_s": 458.76
+          "scene_time_s": 12.84,
+          "absolute_s": 468.11
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "According to the Cambridge",
           "label": "callouts[1].at.cue",
-          "scene_time_s": 12.29,
-          "absolute_s": 458.76
+          "scene_time_s": 12.84,
+          "absolute_s": 468.11
         },
         {
           "param": "items[5].at.cue",
           "cue": "the worst recession",
           "label": "items[5].at.cue",
-          "scene_time_s": 15.24,
-          "absolute_s": 461.7
+          "scene_time_s": 15.6,
+          "absolute_s": 470.86
         },
         {
           "param": "items[1].at.cue",
           "cue": "Unemployment soared",
           "label": "items[1].at.cue",
-          "scene_time_s": 21.4,
-          "absolute_s": 467.87
+          "scene_time_s": 21.53,
+          "absolute_s": 476.8
         },
         {
           "param": "items[2].at.cue",
           "cue": "Unemployment soared",
           "label": "items[2].at.cue",
-          "scene_time_s": 21.4,
-          "absolute_s": 467.87
+          "scene_time_s": 21.53,
+          "absolute_s": 476.8
         },
         {
           "param": "items[3].at.cue",
           "cue": "Unemployment soared",
           "label": "items[3].at.cue",
-          "scene_time_s": 21.4,
-          "absolute_s": 467.87
+          "scene_time_s": 21.53,
+          "absolute_s": 476.8
         },
         {
           "param": "items[4].at.cue",
           "cue": "Unemployment soared",
           "label": "items[4].at.cue",
-          "scene_time_s": 21.4,
-          "absolute_s": 467.87
+          "scene_time_s": 21.53,
+          "absolute_s": 476.8
         }
       ],
       "unresolved_cues": [],
@@ -1671,8 +1636,8 @@
       "id": "s28_imf",
       "segment": "m4_imf",
       "type": "engine_cartoon",
-      "start_s": 472.3,
-      "end_s": 488.83,
+      "start_s": 481.47,
+      "end_s": 498.0,
       "duration_s": 16.53,
       "visual_objective": "",
       "narration": "In November, the IMF approved a loan to Iceland of about two point one billion dollars, with other governments lending the rest of what was needed. In return, Iceland had to stabilize its currency and its public finances.",
@@ -1682,42 +1647,42 @@
           "cue": "In November",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 472.65
+          "absolute_s": 481.82
         },
         {
           "param": "items[0].at.cue",
           "cue": "the IMF approved",
           "label": "items[0].at.cue",
           "scene_time_s": 1.45,
-          "absolute_s": 473.74
+          "absolute_s": 482.91
         },
         {
           "param": "items[1].at.cue",
           "cue": "the IMF approved",
           "label": "items[1].at.cue",
           "scene_time_s": 1.45,
-          "absolute_s": 473.74
+          "absolute_s": 482.91
         },
         {
           "param": "items[1].h[1][0].cue",
           "cue": "about",
           "label": "items[1].h[1][0].cue",
           "scene_time_s": 5.63,
-          "absolute_s": 477.93
+          "absolute_s": 487.09
         },
         {
           "param": "cam[1].at.cue",
           "cue": "In return",
           "label": "cam[1].at.cue",
           "scene_time_s": 10.55,
-          "absolute_s": 482.85
+          "absolute_s": 492.02
         },
         {
           "param": "items[2].at.cue",
           "cue": "In return",
           "label": "items[2].at.cue",
           "scene_time_s": 10.55,
-          "absolute_s": 482.85
+          "absolute_s": 492.02
         }
       ],
       "unresolved_cues": [],
@@ -1734,8 +1699,8 @@
       "id": "s29_icesave",
       "segment": "m4_icesave",
       "type": "engine_cartoon",
-      "start_s": 488.83,
-      "end_s": 510.1,
+      "start_s": 498.0,
+      "end_s": 519.27,
       "duration_s": 21.27,
       "visual_objective": "",
       "narration": "And then there was Icesave. Britain and the Netherlands paid back their own savers, and sent the bill to Iceland. Britain alone had paid out four and a half billion pounds, about seven point eight billion dollars at the time. The governments negotiated a deal for Iceland's taxpayers to repay it, with interest.",
@@ -1745,77 +1710,77 @@
           "cue": "Britain and the Netherlands",
           "label": "callouts[0].at.cue",
           "scene_time_s": 2.86,
-          "absolute_s": 491.69
+          "absolute_s": 500.86
         },
         {
           "param": "items[0].at.cue",
           "cue": "paid back their own savers",
           "label": "items[0].at.cue",
           "scene_time_s": 4.37,
-          "absolute_s": 493.2
+          "absolute_s": 502.37
         },
         {
           "param": "items[1].at.cue",
           "cue": "paid back their own savers",
           "label": "items[1].at.cue",
           "scene_time_s": 4.37,
-          "absolute_s": 493.2
+          "absolute_s": 502.37
         },
         {
           "param": "items[2].at.cue",
           "cue": "paid back their own savers",
           "label": "items[2].at.cue",
           "scene_time_s": 4.37,
-          "absolute_s": 493.2
+          "absolute_s": 502.37
         },
         {
           "param": "items[4].at.cue",
           "cue": "sent the bill to Iceland",
           "label": "items[4].at.cue",
           "scene_time_s": 6.07,
-          "absolute_s": 494.9
+          "absolute_s": 504.07
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "Britain alone",
           "label": "callouts[0].until.cue",
           "scene_time_s": 8.01,
-          "absolute_s": 496.84
+          "absolute_s": 506.01
         },
         {
           "param": "items[3].at.cue",
           "cue": "Britain alone",
           "label": "items[3].at.cue",
           "scene_time_s": 8.31,
-          "absolute_s": 497.14
+          "absolute_s": 506.31
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "Britain alone",
           "label": "callouts[1].at.cue",
           "scene_time_s": 8.31,
-          "absolute_s": 497.14
+          "absolute_s": 506.31
         },
         {
           "param": "items[3].h[1][0].cue",
           "cue": "Britain alone",
           "label": "items[3].h[1][0].cue",
           "scene_time_s": 9.81,
-          "absolute_s": 498.64
+          "absolute_s": 507.81
         },
         {
           "param": "cam[1].at.cue",
           "cue": "The governments negotiated",
           "label": "cam[1].at.cue",
           "scene_time_s": 15.74,
-          "absolute_s": 504.57
+          "absolute_s": 513.74
         },
         {
           "param": "items[5].at.cue",
           "cue": "The governments negotiated",
           "label": "items[5].at.cue",
           "scene_time_s": 15.74,
-          "absolute_s": 504.57
+          "absolute_s": 513.74
         }
       ],
       "unresolved_cues": [],
@@ -1834,8 +1799,8 @@
       "id": "s30_vote",
       "segment": "m4_vote",
       "type": "engine_cartoon",
-      "start_s": 510.1,
-      "end_s": 533.93,
+      "start_s": 519.27,
+      "end_s": 543.1,
       "duration_s": 23.83,
       "visual_objective": "",
       "narration": "Icelanders said no. In a referendum in March twenty ten, just over ninety-three percent voted against the repayment deal. A new, softer deal went to a second vote in April twenty eleven. It was rejected again, by almost fifty-nine percent. Ordinary people refused to pay for the debts of private banks.",
@@ -1845,112 +1810,112 @@
           "cue": "Icelanders said no",
           "label": "items[2].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 510.45
+          "absolute_s": 519.62
         },
         {
           "param": "items[3].at.cue",
           "cue": "Icelanders said no",
           "label": "items[3].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 510.45
+          "absolute_s": 519.62
         },
         {
           "param": "items[4].at.cue",
           "cue": "Icelanders said no",
           "label": "items[4].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 510.45
+          "absolute_s": 519.62
         },
         {
           "param": "items[5].at.cue",
           "cue": "Icelanders said no",
           "label": "items[5].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 510.45
+          "absolute_s": 519.62
         },
         {
           "param": "items[6].at.cue",
           "cue": "Icelanders said no",
           "label": "items[6].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 510.45
+          "absolute_s": 519.62
         },
         {
           "param": "items[7].at.cue",
           "cue": "Icelanders said no",
           "label": "items[7].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 510.45
+          "absolute_s": 519.62
         },
         {
           "param": "items[8].at.cue",
           "cue": "Icelanders said no",
           "label": "items[8].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 510.45
+          "absolute_s": 519.62
         },
         {
           "param": "items[9].at.cue",
           "cue": "Icelanders said no",
           "label": "items[9].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 510.45
+          "absolute_s": 519.62
         },
         {
           "param": "items[0].at.cue",
           "cue": "In a referendum",
           "label": "items[0].at.cue",
           "scene_time_s": 2.92,
-          "absolute_s": 513.02
+          "absolute_s": 522.19
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "In a referendum",
           "label": "callouts[0].at.cue",
           "scene_time_s": 2.92,
-          "absolute_s": 513.02
+          "absolute_s": 522.19
         },
         {
           "param": "items[0].steps[1][0].cue",
           "cue": "voted against",
           "label": "items[0].steps[1][0].cue",
           "scene_time_s": 7.89,
-          "absolute_s": 517.99
+          "absolute_s": 527.15
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "A new, softer deal",
           "label": "callouts[0].until.cue",
           "scene_time_s": 9.59,
-          "absolute_s": 519.69
+          "absolute_s": 528.86
         },
         {
           "param": "cam[1].at.cue",
           "cue": "A new, softer deal",
           "label": "cam[1].at.cue",
           "scene_time_s": 9.89,
-          "absolute_s": 519.99
+          "absolute_s": 529.16
         },
         {
           "param": "items[1].at.cue",
           "cue": "A new, softer deal",
           "label": "items[1].at.cue",
           "scene_time_s": 9.89,
-          "absolute_s": 519.99
+          "absolute_s": 529.16
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "A new, softer deal",
           "label": "callouts[1].at.cue",
           "scene_time_s": 9.89,
-          "absolute_s": 519.99
+          "absolute_s": 529.16
         },
         {
           "param": "items[1].steps[1][0].cue",
           "cue": "rejected again",
           "label": "items[1].steps[1][0].cue",
           "scene_time_s": 16.08,
-          "absolute_s": 526.18
+          "absolute_s": 535.34
         }
       ],
       "unresolved_cues": [],
@@ -1968,8 +1933,8 @@
       "id": "s31_t4",
       "segment": "m4_transition",
       "type": "kinetic_text",
-      "start_s": 533.93,
-      "end_s": 538.8,
+      "start_s": 543.1,
+      "end_s": 547.97,
       "duration_s": 4.87,
       "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
       "narration": "Britain and the Netherlands took the fight to court.",
@@ -1979,14 +1944,14 @@
           "cue": "Britain and the Netherlands",
           "label": "Britain and the Netherlands",
           "scene_time_s": 0.35,
-          "absolute_s": 534.28
+          "absolute_s": 543.45
         },
         {
           "param": "lines[1].cue",
           "cue": "to court",
           "label": "took the fight to court",
           "scene_time_s": 3.7,
-          "absolute_s": 537.63
+          "absolute_s": 546.8
         }
       ],
       "unresolved_cues": [],
@@ -2001,8 +1966,8 @@
       "id": "s32_c5",
       "segment": "m5_card",
       "type": "act_title",
-      "start_s": 538.8,
-      "end_s": 544.2,
+      "start_s": 547.97,
+      "end_s": 553.37,
       "duration_s": 5.4,
       "visual_objective": "Chapter card: masked title reveal, gold rule draws",
       "narration": "",
@@ -2019,8 +1984,8 @@
       "id": "s33_q5",
       "segment": "m5_question",
       "type": "engine_cartoon",
-      "start_s": 544.2,
-      "end_s": 553.2,
+      "start_s": 553.37,
+      "end_s": 562.37,
       "duration_s": 9.0,
       "visual_objective": "",
       "narration": "Did Iceland have to pay?",
@@ -2030,7 +1995,7 @@
           "cue": "Did Iceland",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 544.55
+          "absolute_s": 553.72
         }
       ],
       "unresolved_cues": [],
@@ -2045,8 +2010,8 @@
       "id": "s34_efta",
       "segment": "m5_efta",
       "type": "engine_cartoon",
-      "start_s": 553.2,
-      "end_s": 574.73,
+      "start_s": 562.37,
+      "end_s": 583.9,
       "duration_s": 21.53,
       "visual_objective": "",
       "narration": "The case went to the EFTA Court, the court for the European countries outside the European Union that share its single market. On January twenty-eighth, twenty thirteen, it ruled. The claim against Iceland was dismissed. Iceland had not broken the rules by refusing to guarantee the savers with its own taxpayers' money.",
@@ -2056,49 +2021,49 @@
           "cue": "On January",
           "label": "items[0].at.cue",
           "scene_time_s": 8.72,
-          "absolute_s": 561.92
+          "absolute_s": 571.09
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "it ruled",
           "label": "callouts[0].at.cue",
           "scene_time_s": 11.2,
-          "absolute_s": 564.4
+          "absolute_s": 573.57
         },
         {
           "param": "toneShift.at.cue",
           "cue": "it ruled",
           "label": "toneShift.at.cue",
           "scene_time_s": 11.2,
-          "absolute_s": 564.4
+          "absolute_s": 573.57
         },
         {
           "param": "items[1].hits[0].cue",
           "cue": "it ruled",
           "label": "items[1].hits[0].cue",
           "scene_time_s": 11.5,
-          "absolute_s": 564.7
+          "absolute_s": 573.87
         },
         {
           "param": "items[2].at.cue",
           "cue": "The claim against Iceland",
           "label": "items[2].at.cue",
           "scene_time_s": 12.5,
-          "absolute_s": 565.7
+          "absolute_s": 574.87
         },
         {
           "param": "items[2].stampAt.cue",
           "cue": "The claim against Iceland",
           "label": "items[2].stampAt.cue",
           "scene_time_s": 14.0,
-          "absolute_s": 567.2
+          "absolute_s": 576.37
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Iceland had not broken",
           "label": "cam[1].at.cue",
           "scene_time_s": 15.23,
-          "absolute_s": 568.43
+          "absolute_s": 577.6
         }
       ],
       "unresolved_cues": [],
@@ -2115,8 +2080,8 @@
       "id": "s35_estate",
       "segment": "m5_estate",
       "type": "engine_cartoon",
-      "start_s": 574.73,
-      "end_s": 598.47,
+      "start_s": 583.9,
+      "end_s": 607.63,
       "duration_s": 23.73,
       "visual_objective": "",
       "narration": "The savers' money came back another way. Landsbanki's remaining assets were sold off over the following years, and the deposit claims had priority. In January twenty sixteen, the British Treasury announced it had received its final payment, and said it had now recovered all the taxpayer money used for Icesave.",
@@ -2126,49 +2091,49 @@
           "cue": "The savers' money came back",
           "label": "callouts[0].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 575.08
+          "absolute_s": 584.25
         },
         {
           "param": "items[1].at.cue",
           "cue": "Landsbanki's remaining assets",
           "label": "items[1].at.cue",
           "scene_time_s": 4.42,
-          "absolute_s": 579.15
+          "absolute_s": 588.32
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "In January",
           "label": "callouts[0].until.cue",
           "scene_time_s": 11.75,
-          "absolute_s": 586.48
+          "absolute_s": 595.65
         },
         {
           "param": "cam[1].at.cue",
           "cue": "In January",
           "label": "cam[1].at.cue",
           "scene_time_s": 12.05,
-          "absolute_s": 586.78
+          "absolute_s": 595.95
         },
         {
           "param": "items[2].at.cue",
           "cue": "In January",
           "label": "items[2].at.cue",
           "scene_time_s": 12.05,
-          "absolute_s": 586.78
+          "absolute_s": 595.95
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "In January",
           "label": "callouts[1].at.cue",
           "scene_time_s": 12.05,
-          "absolute_s": 586.78
+          "absolute_s": 595.95
         },
         {
           "param": "items[3].at.cue",
           "cue": "recovered all",
           "label": "items[3].at.cue",
           "scene_time_s": 19.64,
-          "absolute_s": 594.37
+          "absolute_s": 603.54
         }
       ],
       "unresolved_cues": [],
@@ -2185,8 +2150,8 @@
       "id": "s36_people",
       "segment": "m5_people",
       "type": "engine_cartoon",
-      "start_s": 598.47,
-      "end_s": 626.6,
+      "start_s": 607.63,
+      "end_s": 635.77,
       "duration_s": 28.13,
       "visual_objective": "",
       "narration": "Iceland also did something few countries did after the crisis. It took people to court. In twenty twelve, former prime minister Geir Haarde was convicted on one charge, with no punishment, the first government leader prosecuted over the global banking crisis. In twenty fifteen, Iceland's Supreme Court sent the former head of Kaupthing to prison for five and a half years for market manipulation.",
@@ -2196,70 +2161,70 @@
           "cue": "In twenty twelve",
           "label": "items[1].at.cue",
           "scene_time_s": 6.65,
-          "absolute_s": 605.12
+          "absolute_s": 614.28
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "In twenty twelve",
           "label": "callouts[0].at.cue",
           "scene_time_s": 6.65,
-          "absolute_s": 605.12
+          "absolute_s": 614.28
         },
         {
           "param": "items[0].hits[0].cue",
           "cue": "was convicted on one charge",
           "label": "items[0].hits[0].cue",
           "scene_time_s": 10.09,
-          "absolute_s": 608.55
+          "absolute_s": 617.72
         },
         {
           "param": "items[1].stampAt.cue",
           "cue": "with no punishment",
           "label": "items[1].stampAt.cue",
           "scene_time_s": 11.71,
-          "absolute_s": 610.18
+          "absolute_s": 619.34
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "In twenty fifteen",
           "label": "callouts[0].until.cue",
           "scene_time_s": 18.63,
-          "absolute_s": 617.1
+          "absolute_s": 626.26
         },
         {
           "param": "cam[1].at.cue",
           "cue": "In twenty fifteen",
           "label": "cam[1].at.cue",
           "scene_time_s": 18.93,
-          "absolute_s": 617.4
+          "absolute_s": 626.56
         },
         {
           "param": "items[2].at.cue",
           "cue": "In twenty fifteen",
           "label": "items[2].at.cue",
           "scene_time_s": 18.93,
-          "absolute_s": 617.4
+          "absolute_s": 626.56
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "In twenty fifteen",
           "label": "callouts[1].at.cue",
           "scene_time_s": 18.93,
-          "absolute_s": 617.4
+          "absolute_s": 626.56
         },
         {
           "param": "items[0].hits[1].cue",
           "cue": "sent the former head",
           "label": "items[0].hits[1].cue",
           "scene_time_s": 22.04,
-          "absolute_s": 620.5
+          "absolute_s": 629.67
         },
         {
           "param": "items[2].stampAt.cue",
           "cue": "to prison for",
           "label": "items[2].stampAt.cue",
           "scene_time_s": 23.63,
-          "absolute_s": 622.09
+          "absolute_s": 631.26
         }
       ],
       "unresolved_cues": [],
@@ -2277,8 +2242,8 @@
       "id": "s37_payoff",
       "segment": "payoff",
       "type": "engine_cartoon",
-      "start_s": 626.6,
-      "end_s": 654.87,
+      "start_s": 635.77,
+      "end_s": 664.03,
       "duration_s": 28.27,
       "visual_objective": "",
       "narration": "So what is the lesson of Iceland? That a bank can grow bigger than the country that stands behind it. When that happens, the country stops controlling the bank, and the bank starts controlling the country. In the end, Iceland let its banks fail, and refused to make its taxpayers carry their foreign debts. Bigger countries in twenty oh eight made a different choice. Which one was right is still being argued today.",
@@ -2288,63 +2253,63 @@
           "cue": "That a bank can grow",
           "label": "items[2].at.cue",
           "scene_time_s": 3.17,
-          "absolute_s": 629.77
+          "absolute_s": 638.94
         },
         {
           "param": "callouts[0].at.cue",
           "cue": "That a bank can grow",
           "label": "callouts[0].at.cue",
           "scene_time_s": 3.17,
-          "absolute_s": 629.77
+          "absolute_s": 638.94
         },
         {
           "param": "items[0].grow[1][0].cue",
           "cue": "bigger than the country",
           "label": "items[0].grow[1][0].cue",
           "scene_time_s": 5.29,
-          "absolute_s": 631.89
+          "absolute_s": 641.05
         },
         {
           "param": "items[0].wobbleAt.cue",
           "cue": "the bank starts controlling",
           "label": "items[0].wobbleAt.cue",
           "scene_time_s": 11.0,
-          "absolute_s": 637.6
+          "absolute_s": 646.77
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "In the end",
           "label": "callouts[0].until.cue",
           "scene_time_s": 13.6,
-          "absolute_s": 640.2
+          "absolute_s": 649.37
         },
         {
           "param": "cam[1].at.cue",
           "cue": "In the end",
           "label": "cam[1].at.cue",
           "scene_time_s": 13.9,
-          "absolute_s": 640.5
+          "absolute_s": 649.67
         },
         {
           "param": "items[1].at.cue",
           "cue": "In the end",
           "label": "items[1].at.cue",
           "scene_time_s": 13.9,
-          "absolute_s": 640.5
+          "absolute_s": 649.67
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "In the end",
           "label": "callouts[1].at.cue",
           "scene_time_s": 13.9,
-          "absolute_s": 640.5
+          "absolute_s": 649.67
         },
         {
           "param": "items[0].fallAt.cue",
           "cue": "Iceland let its banks fail",
           "label": "items[0].fallAt.cue",
           "scene_time_s": 14.8,
-          "absolute_s": 641.4
+          "absolute_s": 650.57
         }
       ],
       "unresolved_cues": [],
@@ -2362,8 +2327,8 @@
       "id": "s38_end",
       "segment": "teaser",
       "type": "end_card",
-      "start_s": 654.87,
-      "end_s": 666.0,
+      "start_s": 664.03,
+      "end_s": 675.17,
       "duration_s": 11.13,
       "visual_objective": "Closing words land; brand line draws",
       "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
@@ -2373,7 +2338,7 @@
           "cue": "This is The Hidden Economics",
           "label": "brand_cue.cue",
           "scene_time_s": 8.53,
-          "absolute_s": 663.4
+          "absolute_s": 672.56
         },
         {
           "param": "brand_cue",
