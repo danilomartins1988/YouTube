@@ -13,9 +13,17 @@ Who Really Gets Rich From Formula 1? #shorts
 ## Description
 
 ```
-Who Really Gets Rich From Formula 1?. The full story, with every figure sourced, is in the long video on the channel: "Who Really Makes Money From Formula 1?".
+A pack of cars screams past the grandstand. Every surface you can see has been sold: the boards, the cars, the overalls, even the time on the screen.
 
-#formula1 #f1 #business #shorts #economics
+Watch the full story: "Who Really Makes Money From Formula 1?" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #formula1 #f1 #business #economics
+```
+
+## Tags
+
+```
+Formula 1, F1, Liberty Media, sports business, Drive to Survive, Las Vegas Grand Prix, race hosting fees, sponsorship, media rights, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

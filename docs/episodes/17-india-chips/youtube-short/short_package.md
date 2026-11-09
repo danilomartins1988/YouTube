@@ -13,9 +13,17 @@ India's Chip Plants Don't Make Chips. That's the Plan #shorts
 ## Description
 
 ```
-India's Chip Plants Don't Make Chips. That's the Plan. The full story, with every figure sourced, is in the long video on the channel: "India's Chip Plants Don't Make Chips. That's the Plan".
+What if a country opened its first chip plants, celebrated, and not one of them actually made a chip from scratch?
 
-#india #chips #economics #shorts #economics
+Watch the full story: "India's Chip Plants Don't Make Chips. That's the Plan" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #india #chips #economics
+```
+
+## Tags
+
+```
+India, semiconductors, chips, Micron Sanand, Tata Dholera, OSAT, chip packaging, India Semiconductor Mission, supply chain, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

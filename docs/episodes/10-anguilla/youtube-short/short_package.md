@@ -13,9 +13,17 @@ The Tiny Island Getting Rich From AI #shorts
 ## Description
 
 ```
-The Tiny Island Getting Rich From AI. The full story, with every figure sourced, is in the long video on the channel: "The Tiny Island Getting Rich From AI".
+What if a tiny island got rich from artificial intelligence, without building a single AI?
 
-#ai #anguilla #economics #shorts #economics
+Watch the full story: "The Tiny Island Getting Rich From AI" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #ai #anguilla #economics
+```
+
+## Tags
+
+```
+Anguilla, .ai domain, ai domain, Anguilla ai, domain names, AI boom, Caribbean island, how domains make money, Vince Cate, Identity Digital, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

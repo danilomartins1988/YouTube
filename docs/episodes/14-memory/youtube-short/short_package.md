@@ -13,9 +13,17 @@ Three Companies Decide What Your Memory Costs #shorts
 ## Description
 
 ```
-Three Companies Decide What Your Memory Costs. The full story, with every figure sourced, is in the long video on the channel: "The Three Companies That Decide How Much Your Memory Costs".
+What if the price of one tiny part inside your computer jumped more than five times in a single year, and almost nobody outside the industry noticed why?
 
-#chips #memory #economics #shorts #economics
+Watch the full story: "The Three Companies That Decide How Much Your Memory Costs" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #chips #memory #economics
+```
+
+## Tags
+
+```
+DRAM, memory prices, RAM shortage, AI, HBM, Samsung, SK hynix, Micron, CXMT, semiconductors, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

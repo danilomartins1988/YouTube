@@ -13,9 +13,17 @@ How Four Words Made Diamonds Mean Love #shorts
 ## Description
 
 ```
-How Four Words Made Diamonds Mean Love. The full story, with every figure sourced, is in the long video on the channel: "".
+Why does a promise of love come with a small, clear stone? And who decided that it should?
 
-#diamonds #debeers #marketing #shorts #economics
+Watch the full story: "How One Company Made Diamonds a Symbol of Love" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #diamonds #debeers #marketing #economics
+```
+
+## Tags
+
+```
+De Beers, diamonds, A Diamond Is Forever, cartel, advertising, Anglo American, lab-grown diamonds, Lightbox, engagement ring, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

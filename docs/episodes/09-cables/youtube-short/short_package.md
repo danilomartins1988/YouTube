@@ -13,9 +13,17 @@ The Internet Runs Under the Ocean #shorts
 ## Description
 
 ```
-The Internet Runs Under the Ocean. The full story, with every figure sourced, is in the long video on the channel: "The Cables at the Bottom of the Ocean That Carry the Internet".
+What if the internet you use every day wasn't in the sky, but at the bottom of the ocean? It is.
 
-#internet #cables #technology #shorts #economics
+Watch the full story: "The Cables at the Bottom of the Ocean That Carry the Internet" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #internet #cables #technology #economics
+```
+
+## Tags
+
+```
+undersea cables, submarine cables, internet cables, how the internet works, internet explained, subsea cables, ocean floor, fiber optic cable, Red Sea cables, Tonga volcano internet, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

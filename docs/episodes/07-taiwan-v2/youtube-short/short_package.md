@@ -13,9 +13,17 @@ Why Taiwan Matters So Much #shorts
 ## Description
 
 ```
-Why Taiwan Matters So Much. The full story, with every figure sourced, is in the long video on the channel: "The Small Island the Whole World Economy Depends On".
+What if one of the world's most important industries depended on an island smaller than Switzerland?
 
-#taiwan #chips #economics #shorts #economics
+Watch the full story: "The Small Island the Whole World Economy Depends On" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #taiwan #chips #economics
+```
+
+## Tags
+
+```
+Taiwan, why Taiwan matters, Taiwan economy, TSMC, TSMC explained, semiconductors, chip industry, chip supply chain, foundry model, advanced chips, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

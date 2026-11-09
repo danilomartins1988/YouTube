@@ -13,9 +13,17 @@ Dubai Doesn't Make Its Money the Way You Think #shorts
 ## Description
 
 ```
-Dubai Doesn't Make Its Money the Way You Think. The full story, with every figure sourced, is in the long video on the channel: "Dubai Isn't Rich Because of Oil. Here's What Pays the Bills".
+Most people assume Dubai got rich on oil. Its own government says more than 95 percent of its economy has nothing to do with oil.
 
-#dubai #economics #shorts #economics
+Watch the full story: "Dubai Isn't Rich Because of Oil. Here's What Pays the Bills" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #dubai #economics
+```
+
+## Tags
+
+```
+Dubai, Dubai economy, how Dubai makes money, UAE economy, Abu Dhabi, Jebel Ali, DP World, Emirates airline, Dubai real estate, DIFC, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

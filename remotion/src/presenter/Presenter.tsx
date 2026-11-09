@@ -29,13 +29,15 @@ export const BRAND = {skin: '#E7B791', skinShade: '#D29E78', hair: '#2B221D', ja
 
 type Pt = [number, number];
 const L1 = 150, L2 = 145;
+/** arms stay anatomical: at most 6% stretch; beyond that a telescopic marker / pointer bridges the gap */
+const MAX_STRETCH = 1.06;
 
 /** Two-bone IK: returns elbow point for shoulder s reaching target t (elbow bends down/back). */
 const ik = (s: Pt, t: Pt, bendSign = 1): {e: Pt; h: Pt} => {
   const dx = t[0] - s[0], dy = t[1] - s[1];
   const raw = Math.hypot(dx, dy);
   // cartoon stretch: a far target lengthens both bones (up to 1.5x) so the hand stays ON the drawing path
-  const k = clamp(raw / (L1 + L2 - 2), 1, 1.5);
+  const k = clamp(raw / (L1 + L2 - 2), 1, MAX_STRETCH);
   const l1 = L1 * k, l2 = L2 * k;
   const d = clamp(raw, 20, l1 + l2 - 2);
   const a = Math.atan2(dy, dx);
@@ -68,7 +70,9 @@ export const frontArmWorld = (pose: Pose) => {
   // marker tip: 36 local units beyond the hand along shoulder->target
   const v = [toLocal(front || hand)[0] - 58, toLocal(front || hand)[1] + 428], n = Math.hypot(v[0], v[1]) || 1;
   const tipL: Pt = [arm.h[0] + (v[0] / n) * 36, arm.h[1] + (v[1] / n) * 36];
-  return {shoulder: W(58, -428), elbow: W(arm.e[0], arm.e[1]), hand, tip: W(tipL[0], tipL[1]), forearmAngle: dir};
+  const want = drawHand || pointHand, tipW = W(tipL[0], tipL[1]);
+  const tip: Pt = want && Math.hypot(want[0] - tipW[0], want[1] - tipW[1]) > 6 ? want : tipW;
+  return {shoulder: W(58, -428), elbow: W(arm.e[0], arm.e[1]), hand, tip, forearmAngle: dir};
 };
 
 /** The character, drawn in world coordinates. Hand targets are world points. */
@@ -104,6 +108,33 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
   const limb = (a: Pt, b: Pt, c: Pt, col: string, w: number) => (
     <path d={`M ${P(a)} L ${P(b)} L ${P(c)}`} fill="none" stroke={col} strokeWidth={w * S} strokeLinecap="round" strokeLinejoin="round" />
   );
+  /** a tailored sleeve: tapered upper arm and forearm with rounded joints, a white shirt cuff at the wrist */
+  const sleeve = (a: Pt, b: Pt, c: Pt, col: string, skin: string, frontArm: boolean) => {
+    const A = W(a[0], a[1]), B = W(b[0], b[1]), Cw = W(c[0], c[1]);
+    const seg = (p: Pt, q: Pt, w0: number, w1: number, fill: string) => {
+      const an = Math.atan2(q[1] - p[1], q[0] - p[0]), nx = -Math.sin(an), ny = Math.cos(an);
+      return <path d={`M ${p[0] + nx * w0} ${p[1] + ny * w0} L ${q[0] + nx * w1} ${q[1] + ny * w1} L ${q[0] - nx * w1} ${q[1] - ny * w1} L ${p[0] - nx * w0} ${p[1] - ny * w0} Z`} fill={fill} />;
+    };
+    const an2 = Math.atan2(Cw[1] - B[1], Cw[0] - B[0]);
+    const cuff: Pt = [Cw[0] - Math.cos(an2) * 10 * S, Cw[1] - Math.sin(an2) * 10 * S];
+    return <g>
+      <circle cx={A[0]} cy={A[1]} r={19 * S} fill={col} />
+      {seg(A, B, 19 * S, 16 * S, col)}
+      <circle cx={B[0]} cy={B[1]} r={16 * S} fill={col} />
+      {seg(B, cuff, 16 * S, 13.5 * S, col)}
+      {seg(cuff, [cuff[0] + Math.cos(an2) * 7 * S, cuff[1] + Math.sin(an2) * 7 * S], 13 * S, 12 * S, BRAND.shirt)}
+      {!frontArm && hand3(Cw, an2, skin, false)}
+    </g>;
+  };
+  /** a simple cartoon hand (palm + thumb) oriented along angle `an` (world radians) */
+  function hand3(c: Pt, an: number, skin: string, grip: boolean) {
+    const deg = (an * 180) / Math.PI;
+    return <g transform={`translate(${c[0]} ${c[1]}) rotate(${deg})`}>
+      <ellipse cx={6 * S} cy={0} rx={15 * S} ry={grip ? 11 * S : 10 * S} fill={skin} />
+      <ellipse cx={4 * S} cy={(grip ? -10 : -9) * S} rx={7 * S} ry={4.5 * S} transform={`rotate(-25 ${4 * S} ${-10 * S})`} fill={skin} />
+      {grip && <path d={`M ${2 * S} ${6 * S} L ${16 * S} ${6 * S}`} stroke={BRAND.skinShade} strokeWidth={2 * S} strokeLinecap="round" />}
+    </g>;
+  }
   const head = W(0, -510);
   const eyeY = -512, eyeDX = 16;
   const torso = [[-64, -252], [-74, -440], [-34, -462], [34, -462], [74, -440], [64, -252]].map((p) => P(p as Pt)).join(' L ');
@@ -116,8 +147,7 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
       {/* shadow */}
       <ellipse cx={x} cy={floor + 6} rx={90 * S * (1 - 0.15 * Math.min(1, hop / 20))} ry={12 * S} fill="#000" opacity={0.28} />
       {/* back arm */}
-      {limb(shL, armB.e, armB.h, BRAND.jacketShade, 30)}
-      <circle cx={W(armB.h[0], armB.h[1])[0]} cy={W(armB.h[0], armB.h[1])[1]} r={15 * S} fill={BRAND.skinShade} />
+      {sleeve(shL, armB.e, armB.h, BRAND.jacketShade, BRAND.skinShade, false)}
       {/* legs */}
       {legs.map((l, i) => (
         <g key={i}>
@@ -153,17 +183,32 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
         ? <path d={`M ${P([6, -482])} Q ${P([18, -482 + 10 * smile])} ${P([30, -482])}`} fill="none" stroke="#6B2E2A" strokeWidth={4 * S} strokeLinecap="round" />
         : <ellipse cx={W(18, -478)[0]} cy={W(18, -478)[1]} rx={(8 + 2 * surprise) * S} ry={(1.6 + 4 * talking + 5 * surprise) * S} fill="#6B2E2A" />}
       {/* front arm + hand + marker */}
-      {limb(shR, armF.e, armF.h, BRAND.jacket, 30)}
-      <circle cx={handW[0]} cy={handW[1]} r={16 * S} fill={BRAND.skin} />
-      {pose.holdingMarker && !pointHand && (
-        <g transform={`translate(${handW[0]} ${handW[1]}) rotate(${(Math.atan2(Math.sin(dirF), Math.cos(dirF) * facing) * 180) / Math.PI})`}>
-          <rect x={-6} y={-6} width={34 * S} height={12 * S} rx={4} fill={BRAND.marker} />
-          <rect x={28 * S} y={-3} width={8 * S} height={6 * S} fill="#1A1C20" />
-        </g>
-      )}
-      {pointHand && (() => {
-        const tip = [handW[0] + Math.cos(dirF) * 26 * S * facing, handW[1] + Math.sin(dirF) * 26 * S];
-        return <line x1={handW[0]} y1={handW[1]} x2={tip[0]} y2={tip[1]} stroke={BRAND.skin} strokeWidth={9 * S} strokeLinecap="round" />;
+      {(() => {
+        // the real target (marker tip on the path, or the pointed spot) in world space
+        const want: Pt | null = drawHand || pointHand || null;
+        const angW = Math.atan2(Math.sin(dirF), Math.cos(dirF) * facing);
+        const natural: Pt = [handW[0] + Math.cos(angW) * 40 * S, handW[1] + Math.sin(angW) * 40 * S];
+        const gap = want ? Math.hypot(want[0] - natural[0], want[1] - natural[1]) : 0;
+        const pole = want && gap > 8 * S;                 // out of reach: a telescopic marker / pointer, never a rubber arm
+        const tip: Pt = pole ? want! : natural;
+        const pa = Math.atan2(tip[1] - handW[1], tip[0] - handW[0]);
+        const len = Math.hypot(tip[0] - handW[0], tip[1] - handW[1]);
+        return <g>
+          {sleeve(shR, armF.e, armF.h, BRAND.jacket, BRAND.skin, true)}
+          {(pose.holdingMarker || pointHand) && <g transform={`translate(${handW[0]} ${handW[1]}) rotate(${(pa * 180) / Math.PI})`}>
+            {pole && <>
+              <rect x={0} y={-3.2 * S} width={Math.max(0, len - 18 * S)} height={6.4 * S} rx={3 * S} fill="#B8963E" />
+              <rect x={0} y={-4.6 * S} width={Math.max(0, len * 0.45)} height={9.2 * S} rx={4 * S} fill={BRAND.marker} />
+              {[0.45, 0.72].map((u) => <rect key={u} x={len * u - 2 * S} y={-4.4 * S} width={4 * S} height={8.8 * S} fill="#8C6F2A" />)}
+            </>}
+            {pose.holdingMarker && !pointHand
+              ? <g transform={`translate(${pole ? len - 22 * S : 0} 0)`}><rect x={-4 * S} y={-6 * S} width={30 * S} height={12 * S} rx={4 * S} fill={BRAND.marker} />
+                  <path d={`M ${26 * S} ${-5 * S} L ${36 * S} 0 L ${26 * S} ${5 * S} Z`} fill="#1A1C20" /></g>
+              : pointHand && <circle cx={len} cy={0} r={6 * S} fill="#E8D08A" />}
+          </g>}
+          {/* fingers wrap the marker / pointer: drawn last so the grip reads */}
+          {hand3(handW, (pose.holdingMarker || pointHand) ? pa : angW, BRAND.skin, true)}
+        </g>;
       })()}
       {/* 'aha' marks */}
       {surprise > 0.05 && [-0.6, 0, 0.6].map((a, i) => {

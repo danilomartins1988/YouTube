@@ -13,9 +13,17 @@ The $2 Billion That Never Existed #shorts
 ## Description
 
 ```
-The $2 Billion That Never Existed. The full story, with every figure sourced, is in the long video on the channel: "The $2 Billion That Never Existed".
+What if one of Europe's most celebrated tech companies said it had billions in the bank, and then, one day, admitted that the money had probably never existed?
 
-#wirecard #fraud #finance #shorts #economics
+Watch the full story: "The $2 Billion That Never Existed" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #wirecard #fraud #finance #economics
+```
+
+## Tags
+
+```
+Wirecard, Wirecard scandal, Wirecard explained, accounting fraud, missing 2 billion, Germany fintech, DAX, Commerzbank, BaFin, EY audit, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

@@ -13,9 +13,17 @@ Can a Stamp Beat a $400 Million Machine? #shorts
 ## Description
 
 ```
-Can a Stamp Beat a $400 Million Machine?. The full story, with every figure sourced, is in the long video on the channel: "The Stamp That Could Break ASML's Monopoly".
+What if the most expensive machine in the chip industry could be replaced by something that works like a rubber stamp?
 
-#asml #canon #chips #shorts #economics
+Watch the full story: "The Stamp That Could Break ASML's Monopoly" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #asml #canon #chips #economics
+```
+
+## Tags
+
+```
+ASML, Canon, nanoimprint lithography, EUV, chips, semiconductors, lithography, China EUV, Substrate, monopoly, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

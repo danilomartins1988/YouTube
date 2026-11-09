@@ -13,9 +13,17 @@ Why Elon Musk Wants His Own Chip Factory #shorts
 ## Description
 
 ```
-Why Elon Musk Wants His Own Chip Factory. The full story, with every figure sourced, is in the long video on the channel: "Why Elon Musk Wants His Own Chip Factory".
+Why would two companies that have never made a single chip plan to build the largest building on Earth, just to make chips?
 
-#elonmusk #tesla #chips #shorts #economics
+Watch the full story: "Why Elon Musk Wants His Own Chip Factory" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #elonmusk #tesla #chips #economics
+```
+
+## Tags
+
+```
+Terafab, Tesla, SpaceX, Elon Musk, chip factory, semiconductors, TSMC, Samsung, Intel, AI chips, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

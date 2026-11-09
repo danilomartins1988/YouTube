@@ -13,9 +13,17 @@ How Did Switzerland Get So Rich? #shorts
 ## Description
 
 ```
-How Did Switzerland Get So Rich?. The full story, with every figure sourced, is in the long video on the channel: "The Hidden Formula Behind Switzerland's Wealth".
+Picture a small, landlocked country of about 8.9 million people. It has no coastline, no direct access to the sea, and it sits in the middle of a continent full of larger, louder neighbors.
 
-#switzerland #economics #shorts #economics
+Watch the full story: "The Hidden Formula Behind Switzerland's Wealth" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #switzerland #economics
+```
+
+## Tags
+
+```
+Switzerland, Swiss economy, why is Switzerland rich, Swiss franc, Swiss banks, banking secrecy, Swiss National Bank, safe haven, Swiss watches, pharmaceutical industry, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

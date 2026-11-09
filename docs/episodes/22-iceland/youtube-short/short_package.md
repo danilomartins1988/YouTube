@@ -1,4 +1,4 @@
-# YouTube Short: "How Three Banks Nearly Destroyed an Entire Country" (22-iceland)
+# YouTube Short: "Three Banks Grew Almost 9x Bigger Than Their Country" (22-iceland)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/22-iceland_short.mp4` (40 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,15 +7,23 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-How Three Banks Nearly Destroyed an Entire Country #shorts
+Three Banks Grew Almost 9x Bigger Than Their Country #shorts
 ```
 
 ## Description
 
 ```
-How Three Banks Nearly Destroyed an Entire Country. The full story, with every figure sourced, is in the long video on the channel: "How Three Banks Nearly Destroyed an Entire Country".
+What happens when a country's banks become so big that the whole country cannot save them?
 
-#iceland #banking #economics #shorts #economics
+Watch the full story: "How Three Banks Nearly Destroyed an Entire Country" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #iceland #banking #crisis #economics
+```
+
+## Tags
+
+```
+Iceland, 2008 financial crisis, Kaupthing, Landsbanki, Glitnir, Icesave, banking crisis, IMF, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

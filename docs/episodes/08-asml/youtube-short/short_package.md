@@ -13,9 +13,17 @@ The Machine Only One Company on Earth Can Build #shorts
 ## Description
 
 ```
-The Machine Only One Company on Earth Can Build. The full story, with every figure sourced, is in the long video on the channel: "The $250 Million Machine Every Advanced Chip Depends On".
+What if the most advanced chips on Earth could only be printed by one machine, and only one company knew how to build it?
 
-#asml #chips #technology #shorts #economics
+Watch the full story: "The $250 Million Machine Every Advanced Chip Depends On" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #asml #chips #technology #economics
+```
+
+## Tags
+
+```
+ASML, ASML explained, EUV, EUV lithography, extreme ultraviolet, how chips are made, chip machine, lithography machine, semiconductors, chip supply chain, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

@@ -13,9 +13,17 @@ The Day Volkswagen Became the World's Most Valuable Company #shorts
 ## Description
 
 ```
-The Day Volkswagen Became the World's Most Valuable Company. The full story, with every figure sourced, is in the long video on the channel: "The Day Volkswagen Became the World's Most Valuable Company".
+What if, in the worst week of a financial crisis, a carmaker in trouble suddenly became the most valuable company in the world?
 
-#volkswagen #stocks #finance #shorts #economics
+Watch the full story: "The Day Volkswagen Became the World's Most Valuable Company" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #volkswagen #stocks #finance #economics
+```
+
+## Tags
+
+```
+Volkswagen, Porsche, short squeeze, Volkswagen short squeeze 2008, most valuable company, short selling explained, hedge funds, DAX, stock market history, financial crisis 2008, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

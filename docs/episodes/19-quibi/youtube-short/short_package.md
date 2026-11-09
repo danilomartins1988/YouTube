@@ -13,9 +13,17 @@ The $1.75 Billion App That Lasted Six Months #shorts
 ## Description
 
 ```
-The $1.75 Billion App That Lasted Six Months. The full story, with every figure sourced, is in the long video on the channel: "The $1.75 Billion Streaming App That Lasted Six Months".
+How do you raise almost two billion dollars, hire the biggest stars in Hollywood, and still shut down six months after launch?
 
-#quibi #streaming #business #shorts #economics
+Watch the full story: "The $1.75 Billion Streaming App That Lasted Six Months" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #quibi #streaming #business #economics
+```
+
+## Tags
+
+```
+Quibi, streaming, Jeffrey Katzenberg, Meg Whitman, startup failure, Hollywood, mobile video, business failure, venture capital, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

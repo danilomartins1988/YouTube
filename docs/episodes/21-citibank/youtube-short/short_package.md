@@ -13,9 +13,17 @@ The Bank That Accidentally Sent $900 Million #shorts
 ## Description
 
 ```
-The Bank That Accidentally Sent $900 Million. The full story, with every figure sourced, is in the long video on the channel: "".
+What happens when one of the biggest banks in the world sends almost a billion dollars to the wrong place, and the people who receive it say, thank you, we are keeping it?
 
-#citibank #banking #finance #shorts #economics
+Watch the full story: "The Bank That Accidentally Sent $900 Million" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #citibank #banking #finance #economics
+```
+
+## Tags
+
+```
+Citibank, Revlon, banking mistake, wire transfer, Flexcube, finance, court case, discharge for value, Second Circuit, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

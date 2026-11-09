@@ -13,9 +13,17 @@ How Norway Turned Oil Into a Fortune #shorts
 ## Description
 
 ```
-How Norway Turned Oil Into a Fortune. The full story, with every figure sourced, is in the long video on the channel: "How Norway Turned Oil Into a $2 Trillion Fortune".
+Somewhere in the North Sea, a platform pumps oil from beneath the seabed. The money it earns ends up in one of the largest investment funds on Earth.
 
-#norway #oil #economics #shorts #economics
+Watch the full story: "How Norway Turned Oil Into a $2 Trillion Fortune" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #norway #oil #economics
+```
+
+## Tags
+
+```
+Norway, Norway economy, why is Norway rich, Norway oil fund, Government Pension Fund Global, NBIM, sovereign wealth fund, North Sea oil, Ekofisk, Equinor, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

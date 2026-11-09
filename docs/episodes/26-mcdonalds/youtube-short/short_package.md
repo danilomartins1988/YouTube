@@ -13,9 +13,17 @@ Why Moscow Queued From 4 A.M. for a Hamburger #shorts
 ## Description
 
 ```
-Why Moscow Queued From 4 A.M. for a Hamburger. The full story, with every figure sourced, is in the long video on the channel: "".
+Why would thousands of people stand in the snow before dawn, in the capital of the Soviet Union, just to buy a hamburger?
 
-#mcdonalds #moscow #coldwar #shorts #economics
+Watch the full story: "The Hamburger That Became a Symbol of the Cold War's End" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #mcdonalds #moscow #coldwar #economics
+```
+
+## Tags
+
+```
+McDonald's, Moscow, Soviet Union, Cold War, perestroika, Pushkin Square, joint venture, supply chain, Russia, Vkusno i tochka, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

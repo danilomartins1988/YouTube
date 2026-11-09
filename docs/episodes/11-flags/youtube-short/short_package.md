@@ -13,9 +13,17 @@ Why Almost Half the World's Ships Fly Three Small Flags #shorts
 ## Description
 
 ```
-Why Almost Half the World's Ships Fly Three Small Flags. The full story, with every figure sourced, is in the long video on the channel: "Why Almost Half the World's Ships Fly Three Small Flags".
+What if most of the giant ships that carry your phone, your clothes and your coffee were registered in countries they almost never visit?
 
-#shipping #economics #shorts #economics
+Watch the full story: "Why Almost Half the World's Ships Fly Three Small Flags" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #shipping #economics
+```
+
+## Tags
+
+```
+flags of convenience, ship registry, why ships fly Liberia flag, Liberia flag, Panama flag, Marshall Islands, shipping explained, global trade, container ships, Ever Given, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

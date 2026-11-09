@@ -13,9 +13,17 @@ How Nvidia Took Over the AI Economy #shorts
 ## Description
 
 ```
-How Nvidia Took Over the AI Economy. The full story, with every figure sourced, is in the long video on the channel: "From Video Games to AI: How Nvidia Became a $5 Trillion Company".
+Every time you ask an AI chatbot a question, a machine somewhere does the math. Behind the apps are the AI labs.
 
-#nvidia #ai #chips #shorts #economics
+Watch the full story: "From Video Games to AI: How Nvidia Became a $5 Trillion Company" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #nvidia #ai #chips #economics
+```
+
+## Tags
+
+```
+Nvidia, Nvidia explained, how Nvidia makes money, Nvidia AI, AI economy, AI chips, GPU vs CPU, CUDA, CUDA moat, Nvidia data center, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

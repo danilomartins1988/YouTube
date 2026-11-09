@@ -13,9 +13,17 @@ One Software Update Froze the World's Biggest Shipping Company #shorts
 ## Description
 
 ```
-One Software Update Froze the World's Biggest Shipping Company. The full story, with every figure sourced, is in the long video on the channel: "".
+How does a small update for an accounting program in Ukraine end up stopping trucks at a port in New Jersey, shutting down drug production at one of the world's biggest drug makers, and costing the world more than ten billion dollars?
 
-#cybersecurity #maersk #shipping #shorts #economics
+Watch the full story: "The $10 Billion Cyberattack That Froze the World's Biggest Shipping Company" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #cybersecurity #maersk #shipping #economics
+```
+
+## Tags
+
+```
+NotPetya, Maersk, cyberattack, cybersecurity, ransomware, shipping, Ukraine, Sandworm, Merck, insurance, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

@@ -13,9 +13,17 @@ Was One Garden in Tokyo Worth All of California? #shorts
 ## Description
 
 ```
-Was One Garden in Tokyo Worth All of California?. The full story, with every figure sourced, is in the long video on the channel: "".
+How can a garden in the middle of one city be worth as much as an entire American state? In Tokyo, at the end of the nineteen eighties, it was.
 
-#japan #tokyo #bubble #shorts #economics
+Watch the full story: "When Tokyo's Land Was Worth More Than Entire Countries" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #japan #tokyo #bubble #economics
+```
+
+## Tags
+
+```
+Japan, Tokyo, bubble economy, 1980s, land prices, Imperial Palace, Nikkei, Plaza Accord, Bank of Japan, lost decades, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

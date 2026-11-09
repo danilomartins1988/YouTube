@@ -13,9 +13,17 @@ The Chemicals That Decide Who Makes Chips #shorts
 ## Description
 
 ```
-The Chemicals That Decide Who Makes Chips. The full story, with every figure sourced, is in the long video on the channel: "The Chemicals Nobody Talks About That Decide Who Makes Chips".
+What if the most advanced chip factory on Earth could be stopped, not by a broken machine, but by a missing bottle of liquid?
 
-#chips #chemicals #economics #shorts #economics
+Watch the full story: "The Chemicals Nobody Talks About That Decide Who Makes Chips" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #chips #chemicals #economics
+```
+
+## Tags
+
+```
+photoresist, semiconductors, chips, JSR, Tokyo Ohka Kogyo, Shin-Etsu, neon, gallium, export controls, supply chain, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

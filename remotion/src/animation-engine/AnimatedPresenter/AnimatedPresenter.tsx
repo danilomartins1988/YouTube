@@ -41,6 +41,8 @@ export type AnimatedPresenterProps = {
   faceDefault?: 1 | -1;
   /** horizontal distance kept between body and the hand target while drawing */
   reach?: number;
+  /** x where the character steps aside to (off the drawing) during long pen pauses and after drawing */
+  park?: number;
   /** 'serious' (thrillers, crises): never smiles or hops; 'neutral': restrained; 'warm' (default): original */
   demeanor?: 'warm' | 'neutral' | 'serious';
 };
@@ -48,7 +50,18 @@ export type AnimatedPresenterProps = {
 const startOf = (a: PresenterAction) => (a.kind === 'draw' ? a.timeline.start : a.at);
 
 /** Body x position at time t (pure function of the action list). */
-const bodyX = (t: number, acts: PresenterAction[], startX: number, reach: number): number => {
+/** 0..1: how far the character has stepped aside during a long pause between two strokes (gap > 2.4 s). */
+export const parkAmount = (tl: DrawTimeline, t: number): number => {
+  const S = tl.strokes;
+  for (let i = 0; i + 1 < S.length; i++) {
+    const a = S[i], b = S[i + 1];
+    if (b.t0 - a.t1 > 2.4 && t > a.t1 && t < b.t0)
+      return Math.min(E.inOut(win(t, a.t1 + 0.2, 0.9)), 1 - E.inOut(win(t, b.t0 - 1.1, 0.9)));
+  }
+  return 0;
+};
+
+const bodyX = (t: number, acts: PresenterAction[], startX: number, reach: number, park?: number): number => {
   let cur = startX;
   const slack = reach * 0.55;
   for (const a of acts) {
@@ -69,11 +82,15 @@ const bodyX = (t: number, acts: PresenterAction[], startX: number, reach: number
       };
       if (t < s - 0.5) return cur;
       if (t < s) return lerp(cur, follow(s), E.inOut(win(t, s - 0.5, 0.5)));
-      if (t <= e) return follow(t);
-      cur = follow(e);
+      if (t <= e) return park === undefined ? follow(t) : lerp(follow(t), park, parkAmount(tl, t));
+      if (park !== undefined) {                      // finished: step aside so the whole diagram is visible
+        if (t <= e + 1.3) return lerp(follow(e), park, E.inOut(win(t, e + 0.3, 1.0)));
+        cur = park;
+      } else cur = follow(e);
     } else if (a.kind === 'point' || a.kind === 'write') {
       const tx = a.kind === 'point' ? a.target[0] : a.x;
-      const need = Math.abs(tx - cur) > reach * 1.7 ? tx - Math.sign(tx - cur) * reach * 1.2 : cur;
+      const far = park !== undefined ? reach * 5.8 : reach * 1.7;      // with a telescopic pointer he can point from aside
+      const need = Math.abs(tx - cur) > far ? tx - Math.sign(tx - cur) * reach * 1.2 : cur;
       if (t < a.at - 0.45) return cur;
       if (t < a.at) return lerp(cur, need, E.inOut(win(t, a.at - 0.45, 0.45)));
       cur = need;
@@ -88,7 +105,7 @@ export const presenterPose = (p: AnimatedPresenterProps): Pose & {handTarget: Ve
   const acts = [...p.actions].sort((a, b) => startOf(a) - startOf(b));
   const enter = acts.find((a) => a.kind === 'enter') as any;
   const startX = p.startX ?? enter?.from ?? 300;
-  const X = (tt: number) => bodyX(tt, acts, startX, reach);
+  const X = (tt: number) => bodyX(tt, acts, startX, reach, p.park);
   const dt = 1 / 30;
   const x = X(t), v = (X(t + dt) - X(t - dt)) / (2 * dt), acc = (X(t + 2 * dt) - 2 * x + X(t - 2 * dt)) / (4 * dt * dt);
   const moving = clamp(Math.abs(v) / 260);
@@ -105,8 +122,8 @@ export const presenterPose = (p: AnimatedPresenterProps): Pose & {handTarget: Ve
       if (t >= tl.start - 0.45 && t <= tl.end + 0.35) {
         const pen = penAt(tl, t).pt;
         const inU = E.out(win(t, tl.start - 0.45, 0.45)), outU = E.in(win(t, tl.end, 0.35));
-        drawHand = lerpV(lerpV(rest, pen, inU), rest, outU);
-        holding = true; target = pen;
+        drawHand = lerpV(lerpV(lerpV(rest, pen, inU), rest, outU), rest, p.park !== undefined ? parkAmount(tl, t) : 0);
+        holding = true; target = p.park !== undefined && parkAmount(tl, t) > 0.5 ? null : pen;
       }
     } else if (a.kind === 'write' && t >= a.at - 0.3 && t <= a.at + a.dur + 0.3) {
       const u = win(t, a.at, a.dur);

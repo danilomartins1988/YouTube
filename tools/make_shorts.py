@@ -50,12 +50,12 @@ SHORTS = {
     "18-chip-chemicals": ("the-chemicals-that-decide-who-makes-chips", "documentary", "chip_chemicals_documentary", "NO CHEMICALS,", "NO CHIPS", "The Chemicals That Decide Who Makes Chips", "#chips #chemicals #economics"),
     "19-quibi": ("the-175-billion-app-that-lasted-six-months", "documentary", "quibi_documentary", "$1.75 BILLION APP.", "GONE IN 6 MONTHS", "The $1.75 Billion App That Lasted Six Months", "#quibi #streaming #business"),
     "20-notpetya": ("the-10-billion-cyberattack-that-froze-maersk", "documentary", "notpetya_documentary", "ONE SOFTWARE UPDATE.", "$10 BILLION IN DAMAGE", "One Software Update Froze the World's Biggest Shipping Company", "#cybersecurity #maersk #shipping"),
-    "22-iceland": ("how-three-banks-nearly-destroyed-an-entire-country", "documentary", "iceland_documentary", "3 BANKS GREW ~9X", "BIGGER THAN THEIR COUNTRY", "How Three Banks Nearly Destroyed an Entire Country", "#iceland #banking #economics"),
+    "22-iceland": ("how-three-banks-nearly-destroyed-an-entire-country", "documentary", "iceland_documentary", "3 BANKS GREW ~9X", "BIGGER THAN THEIR COUNTRY", "Three Banks Grew Almost 9x Bigger Than Their Country", "#iceland #banking #crisis"),
     "23-tokyo": ("when-tokyos-land-was-worth-more-than-entire-countries", "documentary", "tokyo_documentary", "ONE GARDEN IN TOKYO", "= ALL OF CALIFORNIA?", "Was One Garden in Tokyo Worth All of California?", "#japan #tokyo #bubble"),
     "24-debeers": ("how-one-company-made-diamonds-a-symbol-of-love", "documentary", "debeers_documentary", "4 WORDS MADE", "DIAMONDS MEAN LOVE", "How Four Words Made Diamonds Mean Love", "#diamonds #debeers #marketing"),
     "25-nickel": ("the-metal-trade-that-broke-a-billion-dollar-market", "documentary", "nickel_documentary", "$13 BILLION OF TRADES", "ERASED OVERNIGHT", "The Night $13 Billion of Trades Were Erased", "#nickel #lme #markets"),
     "26-mcdonalds": ("the-hamburger-that-became-a-symbol-of-the-cold-wars-end", "documentary", "mcdonalds_documentary", "THEY QUEUED FROM 4 A.M.", "FOR A HAMBURGER", "Why Moscow Queued From 4 A.M. for a Hamburger", "#mcdonalds #moscow #coldwar"),
-    "27-oil": ("the-day-oil-was-worth-less-than-nothing", "documentary", "oil_documentary", "OIL HIT -$37.63", "SELLERS PAID BUYERS", "The Day Oil Was Worth Less Than Nothing", "#oil #markets #economics"),
+    "27-oil": ("the-day-oil-was-worth-less-than-nothing", "documentary", "oil_documentary", "OIL HIT -$37.63", "SELLERS PAID BUYERS", "Sellers Paid People to Take Their Oil", "#oil #markets #wti"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -126,6 +126,67 @@ def captions(segs, path):
     Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def pick_segments(ep):
+    slug, dv = SHORTS[ep][0], SHORTS[ep][1]
+    tl = json.loads((ROOT / "output" / slug / dv / "timeline.json").read_text())
+    picks, total = [], 0.0
+    for x in tl:
+        seg, typ = x["scene"]["segment"], x["scene"]["type"]
+        if typ == "act_title" or seg.endswith("_card"):
+            break
+        if seg == "channel_intro" or typ == "channel_intro":
+            continue
+        if picks and total + x["duration"] > MAX_SECONDS:
+            break
+        picks.append(x)
+        total += x["duration"]
+    return picks
+
+
+def _sentences(text):
+    import re
+    return [x.strip() for x in re.split(r"(?<=[.?!])\s+", text.strip()) if x.strip()]
+
+
+def short_copy(ep, narration):
+    """Copy-paste text for YouTube: title, description, tags. Every sentence in the description is the episode's own
+    narration (already fact-checked) or a neutral pointer to the full episode; no new figures."""
+    slug, dv, vname, l1, l2, title, hashtags = SHORTS[ep]
+    pk = ROOT / "docs" / "episodes" / ep / "youtube-package"
+    long_title = (pk / "title.txt").read_text().strip() if (pk / "title.txt").exists() else ""
+    if not long_title:
+        import yaml
+        long_title = yaml.safe_load((ROOT / "projects" / slug / "project.yaml").read_text()).get("title", "")
+    for a, b in (("neighbours", "neighbors"), ("colour", "color"), ("favour", "favor"), ("aluminium", "aluminum")):
+        narration = narration.replace(a, b)
+    sents = _sentences(narration)
+    lead = " ".join(sents[:2]) if sents and len(sents[0]) < 90 else (sents[0] if sents else "")
+    tags_long = (pk / "tags.txt").read_text().strip() if (pk / "tags.txt").exists() else ""
+    tags = [t.strip() for t in tags_long.split(",") if t.strip()]
+    tags = [t for t in tags if t.lower() != "the hidden economics"][:10] + ["shorts", "economics explained", "The Hidden Economics"]
+    hs = [h for h in hashtags.split() if h.lower() not in ("#shorts", "#economics")]
+    full_title = f"{title} #shorts"
+    desc = (f"{lead}\n\n"
+            f"Watch the full story: \"{long_title}\" on The Hidden Economics. Every figure in it is sourced.\n\n"
+            f"#shorts {' '.join(hs)} #economics")
+    return full_title, desc, ", ".join(tags)
+
+
+def write_package(ep, dur, n, narration):
+    l1, l2, title = SHORTS[ep][3], SHORTS[ep][4], SHORTS[ep][5]
+    t, desc, tags = short_copy(ep, narration)
+    pkg = ROOT / "docs" / "episodes" / ep / "youtube-short"
+    pkg.mkdir(parents=True, exist_ok=True)
+    (pkg / "short_package.md").write_text(
+        f"# YouTube Short: \"{title}\" ({ep})\n\nPrepared for manual publishing. Nothing has been uploaded. "
+        f"File: `output/shorts/{ep}_short.mp4` ({dur:.0f} s, 1080x1920, captions burned in). Not committed (MP4).\n\n"
+        f"Built by `tools/make_shorts.py` from the episode's own opening ({n} narrated segments, same audio and "
+        f"sources as the full episode; no new figures).\n\n## Title\n\n```\n{t}\n```\n\n## Description\n\n```\n{desc}\n```\n\n"
+        f"## Tags\n\n```\n{tags}\n```\n\n## On-screen hook\n\n```\n{l1}\n{l2}\n```\n\n## Narration in the Short\n\n> {narration}\n\n"
+        f"## Publishing note\n\nLink the Short to the full video with YouTube's \"Related video\" field after both are uploaded.\n",
+        encoding="utf-8")
+
+
 def build(ep):
     slug, dv, vname, l1, l2, title, tags = SHORTS[ep]
     video = ROOT / "output" / f"{vname}.mp4"
@@ -175,24 +236,26 @@ def build(ep):
     pkg = ROOT / "docs" / "episodes" / ep / "youtube-short"
     pkg.mkdir(parents=True, exist_ok=True)
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", "1.2", "-i", str(out), "-frames:v", "1", str(pkg / "cover.png")])
-    long_title = (ROOT / "docs" / "episodes" / ep / "youtube-package" / "title.txt")
-    lt = long_title.read_text().strip() if long_title.exists() else ""
     narration = " ".join(" ".join(w["word"] for w in (x.get("words") or [])) for x in picks)
-    (pkg / "short_package.md").write_text(
-        f"# YouTube Short: \"{title}\" ({ep})\n\nPrepared for manual publishing. Nothing has been uploaded. "
-        f"File: `output/shorts/{ep}_short.mp4` ({dur:.0f} s, 1080x1920, captions burned in). Not committed (MP4).\n\n"
-        f"Built by `tools/make_shorts.py` from the episode's own opening ({len(picks)} narrated segments, same audio and "
-        f"sources as the full episode; no new figures).\n\n## Title\n\n```\n{title} #shorts\n```\n\n## Description\n\n```\n"
-        f"{title}. The full story, with every figure sourced, is in the long video on the channel: \"{lt}\".\n\n"
-        f"{tags} #shorts #economics\n```\n\n## On-screen hook\n\n```\n{l1}\n{l2}\n```\n\n## Narration in the Short\n\n> {narration}\n\n"
-        f"## Publishing note\n\nLink the Short to the full video with YouTube's \"Related video\" field after both are uploaded.\n",
-        encoding="utf-8")
+    write_package(ep, dur, len(picks), narration)
     return out, dur, len(picks)
 
 
 if __name__ == "__main__":
-    eps = sys.argv[1:] or list(SHORTS)
+    args = sys.argv[1:]
+    pkg_only = "--pkg-only" in args
+    eps = [a for a in args if not a.startswith("--")] or list(SHORTS)
     for ep in eps:
+        if pkg_only:
+            out = ROOT / "output" / "shorts" / f"{ep}_short.mp4"
+            if not out.exists():
+                print(f"{ep}: SKIP (no Short yet)")
+                continue
+            picks = pick_segments(ep)
+            dur = float(run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(out)]).strip())
+            write_package(ep, dur, len(picks), " ".join(" ".join(w["word"] for w in (x.get("words") or [])) for x in picks))
+            print(f"{ep}: package rewritten")
+            continue
         if not (ROOT / "output" / f"{SHORTS[ep][2]}.mp4").exists():
             print(f"{ep}: SKIP (no final video yet)")
             continue

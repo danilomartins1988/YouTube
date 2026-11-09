@@ -13,9 +13,17 @@ The Night $13 Billion of Trades Were Erased #shorts
 ## Description
 
 ```
-The Night $13 Billion of Trades Were Erased. The full story, with every figure sourced, is in the long video on the channel: "".
+What happens when the price of a metal doubles in a single morning, and the market where it trades decides that none of it happened?
 
-#nickel #lme #markets #shorts #economics
+Watch the full story: "The Metal Trade That Broke a Billion-Dollar Market" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #nickel #lme #markets #economics
+```
+
+## Tags
+
+```
+nickel, London Metal Exchange, LME, short squeeze, Tsingshan, margin calls, commodities, Elliott, FCA, markets, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook
