@@ -14,8 +14,8 @@ concepts:
 - id: A
   angle: mystery (bold)
   text:
-  - $13 BILLION
-  - ERASED
+  - NICKEL
+  - $13B ERASED
   accent_line: 1
   text_side: left
   claim_basis: 'cancel: $13.373bn notional cancelled (FCA)'
@@ -25,19 +25,20 @@ concepts:
       sky1: '#0B2A1E'
       haze: '#7DF29A'
       key: '#D8FFE9'
-      accent: '#FF4B3E'
+      accent: '#FFC21A'
       ink: '#FFFFFF'
     backdrop: void
     subject:
-      kind: glitch
-      x: 1380
-      y: 520
-      s: 1.1
+      kind: ingots
+      x: 1420
+      y: 760
+      s: 1.4
     support:
     - kind: crash
       x: 1400
-      y: 620
-      s: 0.8
+      y: 380
+      s: 0.75
+      opacity: 0.8
     particles:
       n: 70
       region:
@@ -53,7 +54,7 @@ concepts:
   angle: consequence (bold)
   text:
   - NICKEL
-  - DOUBLED IN HOURS
+  - 2X IN HOURS
   accent_line: 1
   text_side: left
   claim_basis: 'spike: price doubled since the 7 March close, to $101,365 (FCA)'
@@ -67,15 +68,17 @@ concepts:
       ink: '#FFFFFF'
     backdrop: void
     subject:
-      kind: glitch
-      x: 1380
-      y: 520
-      s: 1.1
+      kind: ingots
+      x: 1420
+      y: 800
+      s: 1.3
+      tag: $101,365/t
     support:
     - kind: crash
       x: 1400
-      y: 620
-      s: 0.8
+      y: 380
+      s: 0.75
+      opacity: 0.8
     particles:
       n: 60
       region:

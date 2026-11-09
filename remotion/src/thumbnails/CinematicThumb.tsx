@@ -369,6 +369,22 @@ const SUBJECTS: Record<string, SubjectFn> = {
       {glint(-T * 0.5, CY + 10, 70, 0)}{glint(W * 0.75, GY - 20, 48, 1)}{glint(-W * 0.3, 140, 36, 2)}
     </g>;
   },
+  /** A stack of metal ingots (trapezoid bars) stamped with a short element mark, e.g. "Ni". */
+  ingots: (o, P) => {
+    const bar = (x: number, y: number, k: number) => <g key={k} transform={`translate(${x} ${y})`}>
+      <path d="M -170 0 L 170 0 L 140 -70 L -140 -70 Z" fill="url(#ing)" stroke="#3B434F" strokeWidth={4} />
+      <path d="M -170 0 L 170 0 L 170 22 L -170 22 Z" fill="#59616E" />
+      <path d="M -140 -70 L 140 -70 L 120 -82 L -120 -82 Z" fill="#E8EDF3" opacity={0.9} />
+      <text x={0} y={-22} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={44} fill="#3B434F" opacity={0.75}>{o.mark || 'Ni'}</text>
+    </g>;
+    return <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+      <defs>{metal('ing', '#8C96A4', '#E3E9F0')}</defs>
+      <ellipse cx={0} cy={60} rx={420} ry={44} fill="#000" opacity={0.4} filter="url(#soft)" />
+      {[[-180, 40], [180, 40], [0, -64]].map(([x, y], k) => bar(x, y, k))}
+      {o.tag && <g transform="translate(0 -260)"><rect x={-210} y={-60} width={420} height={96} rx={14} fill={P.accent} />
+        <text x={0} y={10} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={60} fill="#111">{o.tag}</text></g>}
+    </g>;
+  },
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}
