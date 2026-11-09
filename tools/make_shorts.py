@@ -51,7 +51,7 @@ SHORTS = {
     "19-quibi": ("the-175-billion-app-that-lasted-six-months", "documentary", "quibi_documentary", "$1.75 BILLION APP.", "GONE IN 6 MONTHS", "The $1.75 Billion App That Lasted Six Months", "#quibi #streaming #business"),
     "20-notpetya": ("the-10-billion-cyberattack-that-froze-maersk", "documentary", "notpetya_documentary", "ONE SOFTWARE UPDATE.", "$10 BILLION IN DAMAGE", "One Software Update Froze the World's Biggest Shipping Company", "#cybersecurity #maersk #shipping"),
     "22-iceland": ("how-three-banks-nearly-destroyed-an-entire-country", "documentary", "iceland_documentary", "3 BANKS GREW ~9X", "BIGGER THAN THEIR COUNTRY", "How Three Banks Nearly Destroyed an Entire Country", "#iceland #banking #economics"),
-    "23-tokyo": ("when-tokyos-land-was-worth-more-than-entire-countries", "documentary", "tokyo_documentary", "ONE GARDEN IN TOKYO", "= ALL OF CALIFORNIA?", "When One Garden in Tokyo Was Worth All of California", "#japan #tokyo #bubble"),
+    "23-tokyo": ("when-tokyos-land-was-worth-more-than-entire-countries", "documentary", "tokyo_documentary", "ONE GARDEN IN TOKYO", "= ALL OF CALIFORNIA?", "Was One Garden in Tokyo Worth All of California?", "#japan #tokyo #bubble"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
