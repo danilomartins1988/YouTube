@@ -2160,9 +2160,42 @@ const bankisle: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A big balance scale: `left` / `right` labels on the pans (`lsub` / `rsub` small lines); the beam starts tipped
+ *  (`tilt` degrees, + = right side down) and settles to `to` (default 0 = level) at balanceAt; `lsize`/`rsize` scale the
+ *  load drawn on each pan (a walled garden on the left, a big block of land on the right). */
+const balance: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const ba = a.balanceAt ?? 1e9, u = E.outBack(win(t, ba, 1.6)), ang = lerp(a.tilt ?? 14, a.to ?? 0, u) + Math.sin(t * 2) * 0.6;
+  const L = 300, rad = ang * Math.PI / 180, ly = -L * Math.sin(rad), ry = L * Math.sin(rad);
+  const pan = (px: number, py: number, label: string, sub: string | undefined, sz: number, garden: boolean) =>
+    <g transform={`translate(${px} ${py})`}>
+      <path d="M 0 0 L -110 120 M 0 0 L 110 120" stroke={OL} strokeWidth={4} />
+      <path d="M -130 120 Q 0 170 130 120 Z" fill="#B0BEC5" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+      <g transform={`translate(0 118) scale(${sz})`}>
+        {garden ? <g><rect x={-70} y={-60} width={140} height={60} rx={6} fill="#7CB342" stroke={OL} strokeWidth={4} />
+          <rect x={-78} y={-68} width={156} height={12} fill="#BCAAA4" stroke={OL} strokeWidth={3} />
+          <circle cx={-30} cy={-34} r={14} fill="#33691E" /><circle cx={24} cy={-30} r={16} fill="#33691E" /></g>
+          : <path d="M -90 0 L -100 -70 L -40 -96 L 30 -84 L 96 -50 L 90 0 Z" fill="#FFCC80" stroke={OL} strokeWidth={4} strokeLinejoin="round" />}
+      </g>
+      <T x={0} y={210} s={30} c={a.textc || OL}>{label}</T>
+      {sub && <T x={0} y={244} s={20} c={a.textc || '#455A64'}>{sub}</T>}
+    </g>;
+  return <g key={'bl' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    <path d="M -90 0 L 90 0 L 30 -40 L -30 -40 Z" fill="#8D6E63" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+    <rect x={-14} y={-460} width={28} height={420} fill="#A1887F" stroke={OL} strokeWidth={5} />
+    <g transform={`translate(0 -460)`}>
+      <line x1={-L * Math.cos(rad)} y1={ly} x2={L * Math.cos(rad)} y2={ry} stroke={OL} strokeWidth={12} strokeLinecap="round" />
+      <circle r={20} fill={K.gold} stroke={OL} strokeWidth={5} />
+      {pan(-L * Math.cos(rad), ly, a.left || 'LEFT', a.lsub, a.lsize ?? 1, true)}
+      {pan(L * Math.cos(rad), ry, a.right || 'RIGHT', a.rsub, a.rsize ?? 1, false)}
+    </g>
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

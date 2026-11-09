@@ -1,0 +1,50 @@
+# Visual direction for when-tokyos-land-was-worth-more-than-entire-countries (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: the biggest land bubble of modern times. Spectacle for the prices, strategy for the cheap money, crisis for the
+# pin and the long fall, reflective close.
+primary_tone: spectacle
+secondary_tones:
+- strategy
+- crisis
+- reflective
+palette:
+  bg: '#120A16'
+  bg2: '#22122A'
+  ink: '#FFF4FA'
+  muted: '#CDB4D6'
+  land: '#2E1B36'
+  border: '#5A3B6B'
+  accent: '#FFC21A'
+  accent2: '#FF6FB5'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The most expensive land on Earth
+  tone: spectacle
+- chapter: Money with nowhere to go
+  tone: strategy
+- chapter: The price of a square meter
+  tone: spectacle
+- chapter: The pin
+  tone: crisis
+- chapter: The long fall
+  tone: crisis
+- chapter: Thirty-four years
+  tone: reflective
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m3_crash
+  cue: it fell
+  to: crisis
+  why: the Nikkei turns
+thumbnail:
+  tone: spectacle
+  headline: []
+  idea: a scale with a small garden balancing a whole state
+requirements:
+- The balance (Imperial Palace garden on one pan, California on the other) is the through-line
+- Neon Ginza night with giant price tags; central-bank rate dial; falling stock board; golf memberships; 2024 trading floor
+- No logos, no flags, no likeness of real people; no yen symbols on screen

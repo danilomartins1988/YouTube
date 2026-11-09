@@ -1,0 +1,130 @@
+# Sources and claims for "When Tokyo's Land Was Worth More Than Entire Countries" (Episode 23, top-10 #6: Japan's bubble).
+# Every claim was read on its source page on 2026-11-09 (AI fact-check; quotes in docs/episodes/23-tokyo/FACT_CHECK.md).
+# Status stays source_located until a named human reviewer signs off.
+# MONEY: yen converted at the Federal Reserve H.10 rate (FRED DEXJPUS) on 29 Dec 1989 (143.80 yen per dollar); the
+# paper's own dollar figures (which used 143.76 and, for end-1990, 135.40) are said as the paper's. The famous land
+# comparisons (Imperial Palace vs California or Canada; Japan vs the US) come from a citable academic paper and are said
+# as estimates "at neighbouring land prices". No logos; real people named in text only.
+sources:
+  - id: lse
+    title: "Land and Stock Bubbles, Crashes and Exit Strategies in Japan Circa 1990 and in 2013 (SRC Discussion Paper No 20)"
+    publisher: London School of Economics, Systemic Risk Centre (Shiryaev, Zhitlukhin, Ziemba)
+    url: https://www.fmg.ac.uk/sites/default/files/publications/dp-20.pdf
+    published: "2014-08"
+    accessed: "2026-11-09"
+    credit: "Shiryaev, Zhitlukhin & Ziemba (LSE SRC)"
+  - id: mof
+    title: "Financial and Fiscal Policy History 1972-1990, Chapter 3 (part 2): liberalization, internationalization and the bubble economy"
+    publisher: Ministry of Finance Japan, Policy Research Institute
+    url: https://www.mof.go.jp/english/pri/publication/policy_1972-1990/Chapter3-2.pdf
+    published: "MOF policy history"
+    accessed: "2026-11-09"
+    credit: "Ministry of Finance Japan"
+  - id: ap_2024
+    title: "Japan's Nikkei stock index breaks its 1989 record and surges to an all-time high (AP)"
+    publisher: The Boston Globe (Associated Press)
+    url: https://www.bostonglobe.com/2024/02/22/business/japans-nikkei-stock-index-breaks-its-1989-record-surges-an-all-time-high/
+    published: "2024-02-22"
+    accessed: "2026-11-09"
+    credit: "AP"
+  - id: fred_jpy
+    title: "Japanese Yen to U.S. Dollar Spot Exchange Rate (DEXJPUS, H.10)"
+    publisher: Federal Reserve via FRED
+    url: https://fred.stlouisfed.org/series/DEXJPUS
+    published: "daily"
+    accessed: "2026-11-09"
+    credit: "Federal Reserve H.10"
+
+claims:
+  - id: landvalue
+    text: "LSE paper: 'Japanese land was worth some 2180 trillion [yen] as of the end of 1989. This compares with a value of 1050 trillion at the end of 1985.' At the H.10 rate of 29 Dec 1989 (143.80 yen per $), ¥2,180 trillion ≈ $15.2 trillion (the paper: $15.16 trillion at 143.76); with the end-1990 rate of 135.40 the paper puts total land values 'in the $18.7 trillion range'."
+    spoken: about fifteen trillion dollars
+    display: "≈ $15.2tn"
+    fields: {doubled_spoken: more than doubled, later_spoken: about eighteen point seven trillion dollars}
+    source_ids: [lse, fred_jpy]
+    status: source_located
+    verification_note: Yen converted at H.10 on 29 Dec 1989.
+
+  - id: vsus
+    text: "LSE paper: 'The total land value in Japan in 1990 was about 4.1 times that of the whole United States'; 'The average acre of land in Japan was worth fully 100 times the average acre in the U.S. So even though the US has about 25 times more land than Japan, its 1990 total value was less than a fourth as much'; 'Essentially half the world's land value at 1987-90 prices was accounted for by Japanese land!'"
+    spoken: about four times
+    display: "≈ 4.1× the US"
+    fields: {acre_spoken: a hundred times, area_spoken: about twenty-five times}
+    source_ids: [lse]
+    status: source_located
+    verification_note: Academic estimate, attributed.
+
+  - id: palace
+    text: "LSE paper: 'At neighboring land prices, the value of land under the Emperor's palace and garden in Tokyo equaled that of all California or of Canada.'"
+    spoken: all of California
+    display: "= California (est.)"
+    source_ids: [lse]
+    status: source_located
+    verification_note: An estimate at neighbouring prices; said as such.
+
+  - id: ginza
+    text: "LSE paper: 'In the Ginza district of Tokyo each square meter of land was worth well over US$200,000 with some plots approaching $300,000. Choice downtown land in Tokyo sold for the equivalent of nearly a billion dollars an acre'; 'Simple houses in Tokyo rented for more than $10,000 per month'; 'Office space for sale in Tokyo's financial district cost nearly $75,000 per square foot.'"
+    spoken: more than two hundred thousand dollars
+    display: "$200,000+ per m²"
+    fields: {acre_spoken: nearly a billion dollars, rent_spoken: more than ten thousand dollars, office_spoken: nearly seventy-five thousand dollars}
+    source_ids: [lse]
+    status: source_located
+    verification_note: Dollar figures as published in the paper.
+
+  - id: plaza
+    text: "MOF: in September 1985 the G5 agreed on concerted intervention to correct the dollar against the yen and the mark ('The Plaza Accord'); after it, an easy money policy; the official discount rate stayed at 2.50% until May 1989 (BOJ data in the MOF chapter); fund management boomed, 'even creating the word Zaitech'; a speculative boom ('Bubble Economy') became strong from around 1987; the BOJ worried, 'dry firewood piled up goes up in flames'."
+    spoken: two and a half percent
+    display: "2.5%"
+    source_ids: [mof]
+    status: source_located
+    verification_note: Read in the MOF chapter.
+
+  - id: hikes
+    text: "MOF (BOJ data): official discount rate 2.50% → 3.25% (31 May 1989) → 3.75% (11 Oct 1989) → 4.25% (25 Dec 1989) → 5.25% (20 Mar 1990) → 6.00% (30 Aug 1990); 'the official discount rate recorded 2.5%, which was the lowest level in history (as of) February 1987. This low interest rate was maintained until May 1989'. In March 1990 the MOF issued the 'Sōryō Kisei' (quantitative restrictions on real-estate-related loans)."
+    spoken: six percent
+    display: "6.0% (Aug 1990)"
+    source_ids: [mof]
+    status: source_located
+    verification_note: Read in the MOF chapter.
+
+  - id: crash
+    text: "LSE paper: 'When it bottomed, the market had fallen 48% from 38,916 at the end of December 1989 to 20,222 on October 1, 1990'; 'In time sequence, the stock market fell first then the golf course membership market and finally the land markets'; the land crash began in 1991 and 'ushered in two decades of deflation, weak economic markets and a lost generation of young people'; 'By 1999 Yamaichi Securities [once the fourth largest securities firm in Japan] was bankrupt and ceased to exist'; George Soros 'shorted the Japanese market too soon in 1988 and lost about $1 billion'."
+    spoken: forty-eight percent
+    display: "−48% (1990)"
+    fields: {soros_spoken: about one billion dollars}
+    source_ids: [lse]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: record
+    text: "AP (22 Feb 2024): the Nikkei 225 closed at 39,098.68, past its previous record of 38,915.87 set on Dec. 29, 1989."
+    spoken: more than thirty-four years
+    display: "Feb 22, 2024"
+    source_ids: [ap_2024]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: roots
+    text: "LSE paper: 'Land values in the six largest cities outpaced the Consumer Prices Index (CPI) by twenty times from 1955 to 1990'; 'For land in the whole country, the 1955 to 1970 period produced gains of about 15 times the 1955 values.' MOF: 'The sharp rise in land prices had already started in around 1983 in the commercial area in central Tokyo. This was because foreign financial institutions began to launch their businesses in Tokyo'."
+    spoken: twenty times
+    display: "20× CPI (1955-90)"
+    fields: {early_spoken: about fifteen times}
+    source_ids: [lse, mof]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: banks
+    text: "MOF: 'As a result of the inspections, land-related loans and loans for zaitech significantly increased. The defects of the management system, such as the incomplete examination of land-related loans… were also pointed out.'"
+    spoken: significantly increased
+    display: "land loans ↑"
+    source_ids: [mof]
+    status: source_located
+    verification_note: Read in the MOF chapter.
+
+  - id: warning
+    text: "LSE paper: 'The crash in the Nikkei which started on the first trading day of 1990 was predictable in April 1989 using the bond-stock earnings yield model which signaled a crash but not when'; Ziemba was then consulting at the Yamaichi Research Institute of Yamaichi Securities; 'It is too bad Yamaichi's top management did not listen'."
+    spoken: April nineteen eighty-nine
+    display: "Apr 1989 signal"
+    source_ids: [lse]
+    status: source_located
+    verification_note: First-person account by a paper author.

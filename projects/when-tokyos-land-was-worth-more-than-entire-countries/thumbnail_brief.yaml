@@ -1,0 +1,90 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
+title: When Tokyo's Land Was Worth More Than Entire Countries
+docs_dir: docs/episodes/23-tokyo
+video: output/tokyo_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: How one garden in Tokyo was valued like all of California
+  surprising_fact: At neighbouring prices the palace land equalled all California or Canada; Japan's land ≈ 4.1x all US land (LSE paper)
+  subject: a crashing line
+  tone: spectacle
+  metaphor: a price real on paper, impossible in practice
+concepts:
+- id: A
+  angle: mystery (bold)
+  text:
+  - 1 GARDEN
+  - = CALIFORNIA?
+  accent_line: 1
+  text_side: left
+  claim_basis: 'palace: at neighbouring land prices the palace land equalled all of California (LSE paper)'
+  scene:
+    palette:
+      sky0: '#0A050C'
+      sky1: '#2A1030'
+      haze: '#FF6FB5'
+      key: '#FFE6F3'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: skyline
+      x: 1380
+      y: 640
+      s: 0.9
+    support:
+    - kind: crash
+      x: 1400
+      y: 520
+      s: 0.8
+    particles:
+      n: 70
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#DDEBFF'
+    vignette: 0.55
+    brand: tl
+- id: B
+  angle: consequence (bold)
+  text:
+  - JAPAN'S LAND
+  - 4× THE USA
+  accent_line: 1
+  text_side: left
+  claim_basis: 'vsus: Japan''s 1990 land value ≈ 4.1x the whole US (LSE paper)'
+  scene:
+    palette:
+      sky0: '#05070F'
+      sky1: '#2A0E12'
+      haze: '#FF4B3E'
+      key: '#FFD1CC'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: skyline
+      x: 1380
+      y: 640
+      s: 0.9
+    support:
+    - kind: crash
+      x: 1400
+      y: 520
+      s: 0.8
+    particles:
+      n: 60
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFD1CC'
+    vignette: 0.55
+    brand: tl
+default: A

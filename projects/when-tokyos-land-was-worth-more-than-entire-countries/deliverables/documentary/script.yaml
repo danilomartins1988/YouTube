@@ -1,0 +1,270 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# yen in dollars at the H.10 rate; the famous land comparisons said as academic estimates. Generic teaser.
+logline: At the end of the nineteen eighties, the land under Tokyo's Imperial Palace was estimated to be worth as much as
+  all of California. Japan's land was worth about four times all the land in the United States. How the biggest bubble of
+  modern times was built, how it burst, and why it took Japan's stock market thirty-four years to recover.
+title: When Tokyo's Land Was Worth More Than Entire Countries
+segments:
+- id: h_question
+  chapter: The most expensive land on Earth
+  narration: How can a garden in the middle of one city be worth as much as an entire American state?
+  claims:
+  - palace
+  analysis: true
+  source_note: Hook question built from the sourced palace estimate.
+- id: h_stakes
+  chapter: The most expensive land on Earth
+  narration: In Tokyo, at the end of the nineteen eighties, it was. At neighbouring land prices, economists estimated that
+    the land under the Emperor's palace was worth as much as {{palace}}, or all of Canada. Japan's land as a whole was worth
+    {{vsus}} all the land in the United States. Then it all came down, and Japan's stock market would not see its old record
+    again for {{record}}.
+  claims:
+  - palace
+  - vsus
+  - record
+- id: m1_card
+  chapter: Money with nowhere to go
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: Money with nowhere to go
+  narration: Where did all that money come from?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_roots
+  chapter: Money with nowhere to go
+  narration: Land in Japan had been a one-way bet for decades. Between nineteen fifty-five and nineteen ninety, land in the
+    six largest cities rose {{roots}} faster than consumer prices. Nationwide, land gained {{roots.early_spoken}} its value
+    between nineteen fifty-five and nineteen seventy alone. And from around nineteen eighty-three, prices in central Tokyo
+    climbed faster still, as foreign financial firms rushed to open offices in the city.
+  claims:
+  - roots
+- id: m1_plaza
+  chapter: Money with nowhere to go
+  narration: It started with a deal. In September nineteen eighty-five, the Group of Five, the leading industrial economies,
+    agreed to push the dollar down against the yen and the German mark. It became known as the Plaza Accord. The yen soared,
+    and Japan feared a recession caused by its expensive currency. So the central bank began cutting interest rates, again
+    and again.
+  claims:
+  - plaza
+- id: m1_cheap
+  chapter: Money with nowhere to go
+  narration: By February nineteen eighty-seven, the official interest rate was {{plaza}}, the lowest in Japan's history, and
+    it stayed there until May nineteen eighty-nine. Companies had more cash than they could use. Japan's Ministry of Finance
+    says fund management became so fashionable that a new word appeared, zaitech, financial engineering. Companies started
+    making money from trading shares and land, not just from making things.
+  claims:
+  - plaza
+- id: m1_draw
+  chapter: Money with nowhere to go
+  narration: Let me draw the machine that turned cheap money into a bubble. A company owns land. The bank lends against that
+    land. The company uses the loan to buy more land, or shares. That pushes prices up. Higher prices make the land worth
+    more, so the bank lends even more. Round and round. Each turn makes everyone feel richer, and makes the next loan look
+    safe.
+  claims:
+  - plaza
+  - landvalue
+  analysis: true
+  source_note: Illustration of the land-collateral lending loop described in the MOF chapter (land-related loans, zaitech).
+- id: m1_firewood
+  chapter: Money with nowhere to go
+  narration: The central bank saw the danger. The Ministry of Finance history quotes a saying used at the time. Dry firewood
+    piled up goes up in flames. The money was the firewood. But ordinary prices in the shops were stable, so there was no
+    obvious reason to raise interest rates. And the pile kept growing.
+  claims:
+  - plaza
+- id: m1_transition
+  chapter: Money with nowhere to go
+  narration: By the end of the decade, the numbers had stopped making sense.
+  claims: []
+- id: m2_card
+  chapter: The price of a square meter
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: The price of a square meter
+  narration: How expensive did Tokyo get?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_ginza
+  chapter: The price of a square meter
+  narration: In Tokyo's Ginza district, one square meter of land, about the size of a small table, was worth {{ginza}}. Choice
+    land downtown sold for the equivalent of {{ginza.acre_spoken}} an acre. Office space in the financial district cost {{ginza.office_spoken}}
+    per square foot. Even simple houses rented for {{ginza.rent_spoken}} a month.
+  claims:
+  - ginza
+- id: m2_total
+  chapter: The price of a square meter
+  narration: Add it all up, and the numbers become absurd. By the end of nineteen eighty-nine, all the land in Japan was worth
+    around two thousand one hundred and eighty trillion yen. That is {{landvalue}}. In just four years, its value had {{landvalue.doubled_spoken}}.
+  claims:
+  - landvalue
+- id: m2_banks
+  chapter: The price of a square meter
+  narration: The banks were deep inside it. When the Ministry of Finance inspected them, it found that loans linked to land
+    and to zaitech had {{banks}}, and that the checks on those land loans were incomplete. Land was the collateral behind
+    almost everything, and its price was the one number nobody wanted to question.
+  claims:
+  - banks
+  analysis: true
+  source_note: Inspection findings from the MOF chapter; the last sentence is commentary.
+- id: m2_draw
+  chapter: The price of a square meter
+  narration: Let me draw what that meant. Here is the United States, with about twenty-five times more land than Japan. Here
+    is the value of all that American land. And here is the value of Japan's land. About four times bigger. An average acre
+    in Japan was worth a hundred times an average acre in America. By one estimate, Japan held about half of the value of
+    all the land in the world.
+  claims:
+  - vsus
+  analysis: true
+  source_note: Bar comparison of the paper's estimates.
+- id: m2_palace
+  chapter: The price of a square meter
+  narration: And then there is the most famous comparison of all. The Imperial Palace sits in the heart of Tokyo, a walled
+    garden in the middle of the city. Valued at the price of the land around it, economists estimated it was worth as much
+    as all of California. It was never for sale. But on paper, one garden could buy a state.
+  claims:
+  - palace
+- id: m2_transition
+  chapter: The price of a square meter
+  narration: And on the last trading day of nineteen eighty-nine, the stock market hit its peak.
+  claims: []
+- id: m3_card
+  chapter: The pin
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The pin
+  narration: What pops a bubble this big?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_rates
+  chapter: The pin
+  narration: Interest rates. In May nineteen eighty-nine, the central bank finally began to raise them. Then again in October,
+    and again on Christmas Day. In March nineteen ninety came another rise, and in August, the rate reached {{hikes}}. In
+    just over a year, the price of money had more than doubled.
+  claims:
+  - hikes
+- id: m3_warning
+  chapter: The pin
+  narration: Some saw it coming. One of the paper's authors, the economist William Ziemba, was then working with the research
+    institute of Yamaichi Securities in Tokyo. His model, comparing bond yields with company earnings, flashed a danger signal
+    in {{warning}}, months before the peak. It could say a crash was coming, but not when. And Yamaichi's top management,
+    he writes, did not listen.
+  claims:
+  - warning
+- id: m3_crash
+  chapter: The pin
+  narration: The stock market turned first. On the last trading day of nineteen eighty-nine, the Nikkei index closed near
+    thirty-eight thousand nine hundred. From the very first trading day of nineteen ninety, it fell. By October, it had lost
+    {{crash}} of its value.
+  claims:
+  - crash
+- id: m3_soros
+  chapter: The pin
+  narration: Even famous investors got the timing wrong. According to the same paper, George Soros bet against the Japanese
+    market too early, in nineteen eighty-eight, and lost {{crash.soros_spoken}}. A bubble can stay irrational longer than
+    most people can afford to wait.
+  claims:
+  - crash
+  analysis: true
+  source_note: Soros figure from the LSE paper; last sentence is commentary.
+- id: m3_land
+  chapter: The pin
+  narration: Land held on a little longer. Even as shares fell, the public stayed bullish about property. So in March nineteen
+    ninety, the Ministry of Finance stepped in directly. It told banks to keep their real estate loans from growing faster
+    than their total lending. The flow of new money into land was cut off.
+  claims:
+  - hikes
+- id: m3_transition
+  chapter: The pin
+  narration: First the shares fell. Then the golf clubs. And finally, the land.
+  claims: []
+- id: m4_card
+  chapter: The long fall
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The long fall
+  narration: What happens to a country when its land stops going up?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_golf
+  chapter: The long fall
+  narration: The strangest signal came from golf. In the bubble, memberships of golf clubs were traded like shares, and according
+    to the researchers, that market was an even bigger bubble than stocks. It fell after the stock market, and before the
+    land. Then, from nineteen ninety-one, land prices began a long decline.
+  claims:
+  - crash
+- id: m4_draw
+  chapter: The long fall
+  narration: Let me draw why this hurt for so long. Here is the loop from before, running backwards. Land prices fall. So
+    the land that backs the loans is worth less. The banks are left with bad loans, and they stop lending. Companies cannot
+    borrow, so they sell land and shares to pay their debts. That pushes prices down again. The same machine that built the
+    bubble now takes it apart.
+  claims:
+  - crash
+  analysis: true
+  source_note: The lending loop in reverse; illustration, no figures.
+- id: m4_lost
+  chapter: The long fall
+  narration: The researchers describe what came next as two decades of deflation, weak markets, and a lost generation of young
+    people. Some of the biggest names did not survive. Yamaichi Securities, once the fourth largest securities firm in Japan,
+    was bankrupt by the end of the decade.
+  claims:
+  - crash
+- id: m4_transition
+  chapter: The long fall
+  narration: And the stock market waited, and waited, for its old record.
+  claims: []
+- id: m5_card
+  chapter: Thirty-four years
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: Thirty-four years
+  narration: How long does it take to recover from a bubble this big?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_record
+  chapter: Thirty-four years
+  narration: On February twenty-second, twenty twenty-four, the Nikkei finally closed above its record from December nineteen
+    eighty-nine. It had taken {{record}}. A whole generation of Japanese savers had grown up and grown old without ever seeing
+    the stock market as high as their parents had.
+  claims:
+  - record
+  analysis: true
+  source_note: Record from AP; the generational remark is commentary.
+- id: m5_compare
+  chapter: Thirty-four years
+  narration: Today, nobody thinks the Imperial Palace is worth as much as California. But the comparison survives because
+    it captures something real. When cheap money meets something people believe can never lose value, prices stop measuring
+    what a thing is worth. They start measuring how much people can borrow.
+  claims:
+  - palace
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: payoff
+  chapter: The lesson
+  narration: So what is the lesson of Japan's bubble? That a price can be real on paper and impossible in practice. Japan's
+    land was never going to be sold all at once to anyone. Its value only existed while everyone kept believing, and kept
+    borrowing. When the borrowing stopped, the belief went with it. Every bubble since has had its own version of the palace
+    and California. The trick is to notice it while you are still inside.
+  claims:
+  - palace
+  - landvalue
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
