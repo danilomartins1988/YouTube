@@ -1,0 +1,274 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# no claim about who caused the drop (the CFTC interim report names no cause). Generic teaser.
+logline: On April twentieth, twenty twenty, the price of a barrel of American oil fell below zero for the first time in history
+  and settled at minus thirty-seven dollars and sixty-three cents. Sellers paid buyers to take their oil. How a contract for
+  real barrels, a full storage hub in Oklahoma and a world in lockdown turned oil into something worth less than nothing.
+title: The Day Oil Was Worth Less Than Nothing
+segments:
+- id: h_question
+  chapter: Minus thirty-seven dollars
+  narration: What would you do if someone offered you a barrel of oil, and paid you to take it?
+  claims:
+  - settle
+  analysis: true
+  source_note: Hook question built from the sourced negative settlement.
+- id: h_stakes
+  chapter: Minus thirty-seven dollars
+  narration: On April twentieth, twenty twenty, that is exactly what happened. The price of American crude oil for delivery
+    in May fell below zero, for the first time since that contract began trading in nineteen eighty-three. At the end of the
+    day it settled at {{settle}} a barrel. People who owned oil were paying others to take it off their hands. To understand
+    how, you have to understand that an oil price is really a promise, and on that day the promise came due.
+  claims:
+  - settle
+  - delivery
+- id: m1_card
+  chapter: A world that stopped
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: A world that stopped
+  narration: What happens to oil when the world stops moving?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_demand
+  chapter: A world that stopped
+  narration: In the spring of twenty twenty, the pandemic shut down much of the planet. Planes stayed on the ground. Roads
+    emptied. Factories went quiet. Analysts cited by the US Congressional Research Service estimated that global demand for
+    crude oil fell by {{demand}}, around thirty percent of everything the world normally burns.
+  claims:
+  - demand
+- id: m1_opec
+  chapter: A world that stopped
+  narration: The big producers tried to respond. On April twelfth, the OPEC Plus group agreed to cut output by {{demand.cut_spoken}},
+    the largest single production cut in history. But it would only start in May. And even a record cut was much smaller than
+    the hole in demand.
+  claims:
+  - demand
+- id: m1_draw
+  chapter: A world that stopped
+  narration: Let me draw the problem. Here is the oil coming out of the ground every day. Here is the oil the world was actually
+    using. The gap between them did not disappear. Every barrel nobody wanted had to go somewhere. Into a tank, a pipeline,
+    or a ship. And the space in those tanks was running out.
+  claims:
+  - demand
+  - storage
+  analysis: true
+  source_note: Supply, demand and storage diagram drawn from the sourced figures.
+- id: m1_transition
+  chapter: A world that stopped
+  narration: To see why that mattered so much, you need to know how oil is really traded.
+  claims: []
+- id: m2_card
+  chapter: Paper barrels
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: Paper barrels
+  narration: When you buy oil on the market, what do you actually own?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_futures
+  chapter: Paper barrels
+  narration: Most oil is traded through futures contracts. A futures contract is a promise to buy or sell barrels of oil at
+    a set price, on a set date in the future. The best known American contract is called W T I. Each month has its own contract,
+    and each one ends on a fixed day. The May twenty twenty contract expired on April twenty-first.
+  claims:
+  - delivery
+- id: m2_delivery
+  chapter: Paper barrels
+  narration: And here is the key. These contracts are for real oil. According to the US Energy Information Administration,
+    anyone still holding one when it expires must make or take physical delivery of crude oil in {{delivery}}, a small town
+    that is home to a major oil storage hub.
+  claims:
+  - delivery
+- id: m2_draw
+  chapter: Paper barrels
+  narration: Let me draw what that means. Here is a trader who bought a May contract. Before the expiry date, they have two
+    choices. Sell the contract to someone else. Or keep it, and receive real barrels of oil in Oklahoma, and find somewhere
+    to put them. Most financial traders have no tanks and no pipelines. So for them, there is only one real choice. Sell before
+    the deadline.
+  claims:
+  - delivery
+  analysis: true
+  source_note: Diagram of physical delivery as described by EIA and CRS .
+- id: m2_holders
+  chapter: Paper barrels
+  narration: Most people did leave in time. According to the US regulator, the Commodity Futures Trading Commission, the number
+    of open May contracts fell from {{holders.oi_start_spoken}} at the start of April to {{holders.oi_end_spoken}} on the
+    morning of April twentieth. But that still left a lot of contracts, with one day to go.
+  claims:
+  - holders
+- id: m2_transition
+  chapter: Paper barrels
+  narration: And to take delivery, you need one thing above all. Somewhere to put the oil.
+  claims: []
+- id: m3_card
+  chapter: Nowhere to put it
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: Nowhere to put it
+  narration: What happens when the tanks are full?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_cushing
+  chapter: Nowhere to put it
+  narration: The storage tanks at Cushing can hold about {{storage.cap_spoken}} of crude oil. In mid-March, they were about
+    half full. By April seventeenth, they held {{storage.held_spoken}}. They were {{storage}} full, and filling fast. The
+    three weeks to April seventeenth brought the three largest weekly increases ever recorded.
+  claims:
+  - storage
+- id: m3_committed
+  chapter: Nowhere to put it
+  narration: And seventy-six percent full did not mean twenty-four percent free. As the Energy Information Administration
+    noted, some of the empty space had probably already been leased or promised to someone else. For a trader looking for
+    a tank at the last minute, there was almost nothing left.
+  claims:
+  - storage
+- id: m3_sea
+  chapter: Nowhere to put it
+  narration: Oil companies started looking for storage anywhere they could find it, including at sea. In the first three weeks
+    of April, the oil stored on tankers floating offshore rose by almost sixty-nine million barrels, to {{floating}}. Ships
+    became floating warehouses.
+  claims:
+  - floating
+- id: m3_peak
+  chapter: Nowhere to put it
+  narration: And the tanks kept filling after the crash. A week later, on April twenty-fourth, Cushing was eighty-one percent
+    full. By the start of May, according to the Energy Information Administration, it had reached eighty-three percent of
+    its working capacity. The hub was never completely full. But for anyone holding a May contract with nowhere to send the
+    oil, it did not need to be.
+  claims:
+  - storage
+- id: m3_draw
+  chapter: Nowhere to put it
+  narration: Let me draw what storage does to a price. Normally, a barrel today and a barrel next month cost about the same.
+    But when storage runs out, oil for delivery right now becomes a burden. You have to pay someone to keep it. So the near
+    month falls, and the later months hold up. The gap between them is the price of a tank.
+  claims:
+  - storage
+  - after
+  analysis: true
+  source_note: Explanation of the near-month discount (contango) as described by EIA and CFTC.
+- id: m3_transition
+  chapter: Nowhere to put it
+  narration: On Friday, April seventeenth, the May contract closed at {{minutes.friday_spoken}}. Then came Monday.
+  claims:
+  - minutes
+- id: m4_card
+  chapter: Twenty minutes below zero
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: Twenty minutes below zero
+  narration: How can the price of something real fall below nothing?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_monday
+  chapter: Twenty minutes below zero
+  narration: On Monday, April twentieth, the last full trading day before expiry, the May contract started falling and kept
+    falling. Holders who could not take delivery needed to sell. But there were very few buyers with somewhere to put the
+    oil. By the early afternoon in New York, the price was approaching zero.
+  claims:
+  - delivery
+  - minutes
+- id: m4_minutes
+  chapter: Twenty minutes below zero
+  narration: Then it went through the floor. According to the regulator, in {{minutes}}, between eight minutes past two and
+    twenty-eight minutes past two, the price fell from zero to minus thirty-nine dollars and fifty-five cents. A minute later
+    it hit {{settle.low_spoken}}, the lowest price in the history of the contract.
+  claims:
+  - minutes
+  - settle
+- id: m4_settle
+  chapter: Twenty minutes below zero
+  narration: At the close, the May contract settled at {{settle}}. From the start of trading to the bottom, it had lost {{minutes.fall_spoken}}
+    a barrel. Some sellers were, in effect, paying a counterparty to let them out of their contracts.
+  claims:
+  - settle
+  - minutes
+  - delivery
+- id: m4_spread
+  chapter: Twenty minutes below zero
+  narration: The strangest number was the gap between two months. On Friday, May oil had been about seven dollars cheaper
+    than June oil. By Monday's close, the gap was fifty-eight dollars. The June contract, for the same oil delivered just
+    one month later, closed at {{after.june_spoken}}. Nothing had happened to the oil itself. Only to the date.
+  claims:
+  - after
+- id: m4_draw
+  chapter: Twenty minutes below zero
+  narration: Let me draw that Monday. Here is the May contract on Friday, eighteen dollars. Here is the June contract on Monday,
+    still around twenty dollars. And here is the May contract at the close, almost thirty-eight dollars below zero. The same
+    oil, the same pipeline, one month apart. All the other months stayed above zero. Only the one that was about to arrive
+    collapsed.
+  claims:
+  - settle
+  - after
+  - minutes
+  analysis: true
+  source_note: Bar chart of the sourced May and June prices.
+- id: m4_transition
+  chapter: Twenty minutes below zero
+  narration: The next morning, the world woke up to headlines about negative oil. But the story was not over.
+  claims: []
+- id: m5_card
+  chapter: The morning after
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: The morning after
+  narration: Who was left holding the oil?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_next
+  chapter: The morning after
+  narration: On April twenty-first, its last day, the May contract settled at {{after}}, positive again. But the panic spread
+    to the next month. The June contract fell by forty-three percent that day, to eleven dollars and fifty-seven cents.
+  claims:
+  - after
+- id: m5_who
+  chapter: The morning after
+  narration: The regulator later looked at who was trading. On April twentieth, out of four hundred and forty-eight large
+    traders it tracked, {{holders}} still held May contracts. Its interim report described the conditions in detail, but did
+    not name a single cause for the crash.
+  claims:
+  - holders
+- id: m5_cme
+  chapter: The morning after
+  narration: The exchange had seen the risk coming. In early April, CME Group sent notices to its members about the possibility
+    of {{cme}}, and opened a testing system so that trading firms could check that their computers could handle a price below
+    zero. In almost forty years of trading, that had never happened before.
+  claims:
+  - cme
+  analysis: true
+  source_note: Notices from the CFTC report; the last sentence is commentary.
+- id: m5_recovery
+  chapter: The morning after
+  narration: As lockdowns eased and demand slowly returned, the price recovered. By July first, a barrel of American oil was
+    back at about {{after.july_spoken}}. Prices below zero had not even lasted two trading days.
+  claims:
+  - after
+- id: payoff
+  chapter: The lesson
+  narration: So what does negative oil teach about prices? That a price is not just about how useful something is. It is also
+    about where it is, when it arrives, and whether you have room for it. On April twentieth, the oil had not lost its value.
+    The world had simply run out of places to put it. And a contract that looked like a piece of paper turned out to be a
+    promise to take delivery of something very real.
+  claims:
+  - settle
+  - storage
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

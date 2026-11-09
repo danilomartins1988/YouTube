@@ -398,6 +398,22 @@ const SUBJECTS: Record<string, SubjectFn> = {
     {Array.from({length: 14}, (_, k) => <ellipse key={k} cx={-180 + rnd(k) * 360} cy={-170 + rnd(k + 4) * 130} rx={13} ry={7} transform={`rotate(${rnd(k + 7) * 60 - 30})`} fill="#FFF5E1" stroke="#3A2414" strokeWidth={2} />)}
     {[0, 1, 2].map((q) => <path key={q} d={`M ${-90 + q * 90} ${-260 - q * 10} q 22 -30 0 -60 q -22 -30 0 -60`} fill="none" stroke="#FFFFFF" strokeWidth={12} strokeLinecap="round" opacity={0.5} />)}
   </g>,
+  /** A big black oil drum with steel hoops and a drop mark; `money` sends banknotes flying away from it. */
+  oilbarrel: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs>{metal('ob', '#1B1F26', '#3A424F')}</defs>
+    <circle r={420} fill={P.haze} opacity={0.16} filter="url(#soft)" />
+    <ellipse cx={0} cy={300} rx={240} ry={34} fill="#000" opacity={0.5} filter="url(#soft)" />
+    <rect x={-200} y={-280} width={400} height={570} rx={40} fill="url(#ob)" stroke="#0A0C10" strokeWidth={10} />
+    {[-130, 60].map((y) => <rect key={y} x={-212} y={y} width={424} height={34} rx={16} fill="#5A6472" stroke="#0A0C10" strokeWidth={6} />)}
+    <ellipse cx={0} cy={-280} rx={200} ry={44} fill="#2C333D" stroke="#0A0C10" strokeWidth={8} />
+    <ellipse cx={0} cy={-280} rx={150} ry={30} fill="#11151B" />
+    <path d="M -150 -270 Q -60 -230 40 -262 Q 30 -200 -40 -190" fill="#000" opacity={0.9} />
+    <path d="M -40 -40 q 40 -100 80 0 a 40 40 0 1 1 -80 0 Z" fill={P.accent} stroke="#0A0C10" strokeWidth={6} />
+    <path d="M -150 -240 L -150 250" stroke="#FFFFFF" strokeWidth={16} strokeLinecap="round" opacity={0.12} />
+    {o.money && Array.from({length: 7}, (_, k) => <g key={k} transform={`translate(${-330 - k * 60 + rnd(k) * 40} ${-200 + rnd(k + 3) * 380}) rotate(${-40 + rnd(k + 5) * 80})`} opacity={0.95 - k * 0.1}>
+      <rect x={-80} y={-38} width={160} height={76} rx={8} fill="#3E6B48" stroke="#9FD3A8" strokeWidth={4} /><circle r={20} fill="none" stroke="#9FD3A8" strokeWidth={4} />
+      <text x={0} y={12} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill="#9FD3A8">$</text></g>)}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

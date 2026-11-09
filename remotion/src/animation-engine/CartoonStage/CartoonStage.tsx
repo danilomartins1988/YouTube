@@ -353,6 +353,27 @@ const SETS: Record<string, SetFn> = {
       </g>)}
     </g>;
   },
+  /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
+   *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
+  tankfarm: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#2B2440' : '#BFE3F5'} />
+      {night ? <circle cx={z.x0 + w * 0.6} cy={f - 520} r={60} fill="#FFB74D" opacity={0.85} /> : <circle cx={z.x0 + w * 0.6} cy={f - 680} r={70} fill={K.sun} stroke={OL} strokeWidth={4} />}
+      <rect x={z.x0} y={f - 260} width={w} height={260} fill={night ? '#3D3A55' : '#D8E8B0'} />
+      {Array.from({length: Math.ceil(w / 260)}, (_, k) => { const x = z.x0 + 40 + k * 260, h = 120 + (k % 3) * 30, r = 100;
+        return <g key={'tk' + k}>
+          <rect x={x} y={f - 230 - h} width={r * 2} height={h} fill={night ? '#8E8AA8' : '#F4F6F8'} stroke={OL} strokeWidth={4} />
+          <ellipse cx={x + r} cy={f - 230 - h} rx={r} ry={16} fill={night ? '#A7A3C0' : '#FFFFFF'} stroke={OL} strokeWidth={4} />
+          <path d={`M ${x + 20} ${f - 230 - h} L ${x + 60} ${f - 230}`} stroke={OL} strokeWidth={3} opacity={0.5} />
+          <ellipse cx={x + r} cy={f - 230} rx={r} ry={16} fill="none" stroke={OL} strokeWidth={3} opacity={0.4} /></g>; })}
+      <rect x={z.x0} y={f - 150} width={w} height={22} fill="#78909C" stroke={OL} strokeWidth={3} />
+      <rect x={z.x0} y={f - 110} width={w} height={16} fill="#90A4AE" stroke={OL} strokeWidth={3} />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <rect key={'pl' + k} x={z.x0 + 60 + k * 200} y={f - 128} width={10} height={128} fill="#546E7A" />)}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#4A4560' : '#C9B88F'} />
+      <rect x={z.x0} y={f} width={w} height={14} fill={night ? '#5B5575' : '#B5A27A'} />
+    </g>;
+  },
   /** Financial district at night: dark glass towers with lit windows, a distant skyline, wet street with reflections. */
   district: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -2340,35 +2361,82 @@ const queue: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A big storage tank seen from the side with a cut-away showing the oil level: `fill` keyframes 0..1, `cap` text,
+ *  label shows the % full; above `warn` (default 0.8) the gauge flashes red and a FULL? sign pops. */
+const oiltank: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const fill = clamp(kf(a.fill, t, 0.5)), W = 360, H = 420, warn = a.warn ?? 0.8, hot = fill >= warn, fl = Math.sin(t * 9) > 0;
+  const lvl = H * fill, wave = Math.sin(t * 2.4) * 6;
+  return <g key={'ot' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    <rect x={-W / 2} y={-H} width={W} height={H} fill="#ECEFF1" stroke={OL} strokeWidth={6} />
+    <rect x={-W / 2 + 40} y={-H + 30} width={W - 80} height={H - 50} fill="#CFD8DC" stroke={OL} strokeWidth={3} />
+    <path d={`M ${-W / 2 + 40} ${-20 - lvl + 30 * fill} Q ${-60} ${-20 - lvl + 30 * fill - wave} 0 ${-20 - lvl + 30 * fill} T ${W / 2 - 40} ${-20 - lvl + 30 * fill} L ${W / 2 - 40} -20 L ${-W / 2 + 40} -20 Z`}
+      fill="#1B1B1B" opacity={0.92} />
+    <ellipse cx={0} cy={-H} rx={W / 2} ry={26} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
+    <path d={`M ${W / 2 - 10} ${-H + 10} L ${W / 2 + 40} ${-H + 60} L ${W / 2 + 40} 0`} fill="none" stroke="#90A4AE" strokeWidth={8} />
+    <g transform={`translate(0 ${-H - 90})`}><rect x={-120} y={-44} width={240} height={80} rx={14} fill={hot && fl ? K.red : '#263238'} stroke={OL} strokeWidth={4} />
+      <T x={0} y={14} s={44} c="#FFFFFF">{Math.round(fill * 100) + '%'}</T></g>
+    {a.cap && <T x={0} y={60} s={30} c={a.textc || OL}>{a.cap}</T>}
+    {hot && a.fullText !== '' && <g transform={`translate(${W / 2 + 120} ${-H - 40}) rotate(8) scale(${E.outBack(win(t, a.fullAt ?? 0, 0.4))})`}>
+      <rect x={-110} y={-40} width={220} height={74} rx={10} fill="#FFF3E0" stroke={K.red} strokeWidth={6} /><T x={0} y={12} s={36} c={K.red}>{a.fullText || 'FULL?'}</T></g>}
+  </g>;
+};
+
+/** A row of oil drums (barrels). `n` drums; `tag` text on a price tag above (e.g. "−$37.63"), `tagAt`; `pay` makes
+ *  banknotes fly OUT of the seller's side towards +x from `payAt` (paying someone to take the oil). */
+const barrel: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const n = a.n ?? 3, gap = 150;
+  return <g key={'br' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    {Array.from({length: n}, (_, k) => { const dx = (k - (n - 1) / 2) * gap, bob = Math.sin(t * 2 + k) * 2;
+      return <g key={k} transform={`translate(${dx} ${bob})`}>
+        <rect x={-60} y={-190} width={120} height={190} rx={14} fill={col(a.color, '#263238')} stroke={OL} strokeWidth={5} />
+        {[-140, -60].map((yy) => <rect key={yy} x={-64} y={yy} width={128} height={12} rx={6} fill="#455A64" stroke={OL} strokeWidth={3} />)}
+        <ellipse cx={0} cy={-190} rx={60} ry={14} fill="#37474F" stroke={OL} strokeWidth={4} />
+        <path d="M -10 -110 q 10 -26 20 0 a 10 10 0 1 1 -20 0 Z" fill="#FFC93C" stroke={OL} strokeWidth={2.5} />
+      </g>; })}
+    {a.tag && t >= (a.tagAt ?? 0) && <g transform={`translate(0 -300) rotate(${-4 + Math.sin(t * 2) * 3}) scale(${E.outBack(win(t, a.tagAt ?? 0, 0.4))})`}>
+      <rect x={-170} y={-50} width={340} height={96} rx={16} fill={a.tagColor ? col(a.tagColor) : K.red} stroke={OL} strokeWidth={5} />
+      <T x={0} y={18} s={52} c="#FFFFFF">{a.tag}</T>{a.tagSub && <T x={0} y={80} s={26} c={OL}>{a.tagSub}</T>}</g>}
+    {a.payAt !== undefined && t >= a.payAt && Array.from({length: 6}, (_, k) => { const ph = ((t - a.payAt) * 0.7 + k / 6) % 1;
+      return <g key={'pm' + k} transform={`translate(${-n * gap / 2 - 60 + ph * (n * gap + 360)} ${-260 - Math.sin(ph * Math.PI) * 160}) rotate(${ph * 360})`} opacity={1 - ph * 0.6}>
+        <rect x={-44} y={-22} width={88} height={44} rx={5} fill="#3E6B48" stroke="#9FD3A8" strokeWidth={3} /><circle r={11} fill="none" stroke="#9FD3A8" strokeWidth={3} /></g>; })}
+  </g>;
+};
+
 /** A trading screen for one contract. `price` is a keyframed value (e.g. [[0, 29000], [cue, 48075], ...]); the line is
  *  drawn from `at` up to now by sampling it; `max` sets the y scale. `bandsOffAt` turns the "PRICE BANDS" lamp red (OFF),
  *  `haltAt` stamps SUSPENDED, `cancelAt` greys the part of the line after `cancelFrom` (seconds) and stamps CANCELLED. */
 const tradescreen: ItemFn = (a, {t}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, 460), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
   if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
-  const W = 760, H = 460, at = a.at ?? 0, mx = a.max ?? 110000, span = Math.max(0.5, t - at), N = 60;
+  const W = 760, H = 460, at = a.at ?? 0, mx = a.max ?? 110000, mn = a.min ?? 0, span = Math.max(0.5, t - at), N = 60;
   const pts: string[] = [], grey: string[] = [];
   const cf = a.cancelFrom ?? 1e9, cancelled = a.cancelAt !== undefined && t >= a.cancelAt;
-  for (let k = 0; k <= N; k++) { const tt = at + span * k / N, v = kf(a.price, tt, 0), px = -W / 2 + 60 + (W - 120) * k / N, py = H / 2 - 70 - (H - 160) * clamp(v / mx);
+  for (let k = 0; k <= N; k++) { const tt = at + span * k / N, v = kf(a.price, tt, 0), px = -W / 2 + 60 + (W - 120) * k / N, py = H / 2 - 70 - (H - 160) * clamp((v - mn) / (mx - mn));
     (cancelled && tt >= cf ? grey : pts).push(`${px.toFixed(1)},${py.toFixed(1)}`); if (cancelled && tt >= cf && grey.length === 1 && pts.length) grey.unshift(pts[pts.length - 1]); }
   const now = kf(a.price, t, 0), off = a.bandsOffAt !== undefined && t >= a.bandsOffAt, halt = a.haltAt !== undefined && t >= a.haltAt;
   return <g key={'ts' + i} transform={`translate(${x} ${y}) scale(${s})`}>
     <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={18} fill="#0E1621" stroke={OL} strokeWidth={6} />
     {[0, 1, 2, 3].map((g) => <line key={g} x1={-W / 2 + 60} x2={W / 2 - 60} y1={H / 2 - 70 - (H - 160) * g / 3} y2={H / 2 - 70 - (H - 160) * g / 3} stroke="#24384F" strokeWidth={2} />)}
     <T x={-W / 2 + 30} y={-H / 2 + 44} s={26} c="#B0BEC5" a="start">{a.text || '3M NICKEL · $ / TONNE'}</T>
-    <T x={W / 2 - 30} y={-H / 2 + 46} s={34} c={now > (a.hot ?? 60000) ? K.red : '#7DF29A'} a="end">{'$' + Math.round(now).toLocaleString('en-US')}</T>
-    <polyline points={pts.join(' ')} fill="none" stroke={now > (a.hot ?? 60000) ? K.red : '#7DF29A'} strokeWidth={6} strokeLinejoin="round" />
+    {mn < 0 && <g><line x1={-W / 2 + 60} x2={W / 2 - 60} y1={H / 2 - 70 - (H - 160) * clamp(-mn / (mx - mn))} y2={H / 2 - 70 - (H - 160) * clamp(-mn / (mx - mn))} stroke="#B0BEC5" strokeWidth={3} strokeDasharray="6 6" />
+      <T x={-W / 2 + 54} y={H / 2 - 62 - (H - 160) * clamp(-mn / (mx - mn))} s={20} c="#B0BEC5" a="end">$0</T></g>}
+    <T x={W / 2 - 30} y={-H / 2 + 46} s={34} c={now > (a.hot ?? 60000) || now < 0 ? K.red : '#7DF29A'} a="end">{(now < 0 ? '−$' : '$') + Math.abs(now).toLocaleString('en-US', {minimumFractionDigits: a.decimals ?? 0, maximumFractionDigits: a.decimals ?? 0})}</T>
+    <polyline points={pts.join(' ')} fill="none" stroke={now > (a.hot ?? 60000) || now < 0 ? K.red : '#7DF29A'} strokeWidth={6} strokeLinejoin="round" />
     {grey.length > 1 && <polyline points={grey.join(' ')} fill="none" stroke="#546E7A" strokeWidth={5} strokeDasharray="10 8" />}
-    <g transform={`translate(${-W / 2 + 40} ${H / 2 - 30})`}><circle r={12} fill={off ? K.red : '#7DF29A'} stroke={OL} strokeWidth={3} />
-      <T x={24} y={9} s={22} c="#B0BEC5" a="start">{off ? 'PRICE BANDS: OFF' : 'PRICE BANDS: ON'}</T></g>
+    {a.lamp !== false && <g transform={`translate(${-W / 2 + 40} ${H / 2 - 30})`}><circle r={12} fill={off ? K.red : '#7DF29A'} stroke={OL} strokeWidth={3} />
+      <T x={24} y={9} s={22} c="#B0BEC5" a="start">{off ? 'PRICE BANDS: OFF' : 'PRICE BANDS: ON'}</T></g>}
     {halt && <g transform={`rotate(-8) scale(${E.outBack(win(t, a.haltAt, 0.4))})`}><rect x={-210} y={-44} width={420} height={88} rx={10} fill="none" stroke={K.red} strokeWidth={8} />
-      <T x={0} y={18} s={52} c={K.red}>{cancelled ? 'CANCELLED' : 'SUSPENDED'}</T></g>}
+      <T x={0} y={18} s={52} c={K.red}>{a.haltText || (cancelled ? 'CANCELLED' : 'SUSPENDED')}</T></g>}
   </g>;
 };
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

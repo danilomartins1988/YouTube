@@ -1,0 +1,122 @@
+# Sources and claims for "The Day Oil Was Worth Less Than Nothing" (Episode 27, top-10 #10: the WTI May 2020 contract
+# below zero on 20 April 2020). Claims were read on their source pages on 2026-11-09 (AI fact-check; quotes in
+# docs/episodes/27-oil/RESEARCH_NOTES.md and FACT_CHECK.md). Status stays source_located until a named human reviewer signs off.
+# MONEY: US dollars as published. Primary sources: the CFTC interim staff report, EIA Today in Energy, the CRS Insight.
+# Left out (unverified or conflicting): the IEA report text, the Bank of China product losses, tanker counts, a May 2020
+# average price, and any claim about who caused the drop (the CFTC interim report does not name a cause).
+# No exchange logos or real trading screens; no likeness of real people.
+sources:
+  - id: cftc
+    title: "Interim Staff Report: Trading in NYMEX WTI Crude Oil Futures Contract Leading up to, on, and around April 20, 2020"
+    publisher: US Commodity Futures Trading Commission (Division of Market Oversight, Office of the Chief Economist)
+    url: https://www.cftc.gov/media/5296/InterimStaffReportNYMEX_WTICrudeOil/download
+    published: "2020-11-23"
+    accessed: "2026-11-09"
+    credit: "CFTC staff report"
+  - id: eia_apr27
+    title: "Low liquidity and limited available storage pushed WTI crude oil futures prices below zero"
+    publisher: US Energy Information Administration (Today in Energy)
+    url: https://www.eia.gov/todayinenergy/detail.php?id=43495
+    published: "2020-04-27"
+    accessed: "2026-11-09"
+    credit: "EIA"
+  - id: eia_apr30
+    title: "U.S. crude oil inventories are approaching record-high levels"
+    publisher: US Energy Information Administration (Today in Energy)
+    url: https://www.eia.gov/todayinenergy/detail.php?id=43555
+    published: "2020-04-30"
+    accessed: "2026-11-09"
+    credit: "EIA"
+  - id: eia_2021
+    title: "Crude oil prices briefly traded below $0 in spring 2020 but have since been mostly flat"
+    publisher: US Energy Information Administration (Today in Energy)
+    url: https://www.eia.gov/todayinenergy/detail.php?id=46336
+    published: "2021-01-05"
+    accessed: "2026-11-09"
+    credit: "EIA"
+  - id: crs
+    title: "Crude Oil Futures Prices Turn Negative (Insight IN11354)"
+    publisher: Congressional Research Service
+    url: https://www.congress.gov/crs_external_products/IN/PDF/IN11354/IN11354.1.pdf
+    published: "2020-04-22"
+    accessed: "2026-11-09"
+    credit: "CRS"
+
+claims:
+  - id: settle
+    text: "CFTC: the May Contract 'settled on April 20 at a price of -$37.63 per barrel'; it 'recorded an all-time intraday trading low price of -$40.32 per barrel'; prices fell below $0 'for the first time since the inception of the WTI Contract in 1983'; 'All other expirations in the WTI Contract settled at positive prices on April 20.'"
+    spoken: minus thirty-seven dollars and sixty-three cents
+    display: "−$37.63 / barrel"
+    fields: {low_spoken: minus forty dollars and thirty-two cents}
+    source_ids: [cftc]
+    status: source_located
+    verification_note: Read in the CFTC report (CRS gives -$37.62; the CFTC settlement figure is used).
+
+  - id: minutes
+    text: "CFTC: 'The price drop was particularly pronounced during a 20-minute period between 2:08 p.m. and 2:28 p.m. ET, when May Contract prices moved from $0 to -$39.55 per barrel, before reaching the all-time low of -$40.32 at 2:29 p.m. ET.' 'At the close on Friday, April 17, the May Contract price fell below $20 per barrel to $18.27 per barrel'; 'The May Contract opened the session on Sunday at a price of $17.73 per barrel'; 'the May Contract price ultimately fell by $58.05 per barrel.'"
+    spoken: twenty minutes
+    display: "$0 → −$39.55 in 20 min"
+    fields: {friday_spoken: eighteen dollars and twenty-seven cents, fall_spoken: fifty-eight dollars and five cents}
+    source_ids: [cftc]
+    status: source_located
+    verification_note: Read in the CFTC report.
+
+  - id: delivery
+    text: "EIA (27 Apr 2020): 'Market participants that hold WTI futures contracts through expiration must make or take physical delivery of WTI crude oil in Cushing, Oklahoma, unless they have made other arrangements ahead of time'; some 'resorting to selling their futures contracts at negative prices, in effect paying a counterparty to allow them to exit their positions.' CRS: 'financial traders—traders that cannot take physical delivery of crude oil— needed to sell before prices fell further.' CFTC: the May Contract 'expired on April 21'."
+    spoken: Cushing, Oklahoma
+    display: "Delivery: Cushing, OK"
+    source_ids: [eia_apr27, crs, cftc]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: storage
+    text: "EIA (27 Apr 2020): 'crude oil storage facilities at Cushing have 76 million barrels of working storage capacity'; 'As of April 17, Cushing inventories totaled 60 million barrels'; storage 'was 76% full'; 'some of this physically unfilled storage may have already been leased or otherwise committed'. CFTC: storage at Cushing 'had increased from about 50% of capacity in mid-March to approximately 76% of capacity by April 17.' EIA (30 Apr 2020): the builds for the weeks ending April 3, 10 and 17 'are the three largest weekly inventory builds on record'; 'storage utilization at Cushing, Oklahoma, rose to 81%' (week to April 24). EIA (5 Jan 2021): Cushing inventories 'rose by 27 million barrels, reaching 83% of the hub's working storage capacity' (13 March to 1 May)."
+    spoken: seventy-six percent
+    display: "Cushing 76% full"
+    fields: {cap_spoken: seventy-six million barrels, held_spoken: sixty million barrels}
+    source_ids: [eia_apr27, cftc, eia_apr30, eia_2021]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: floating
+    text: "CFTC (citing Bloomberg data): 'During the first three weeks of April... the amount of oil in floating storage rose by almost 69 million barrels to about 127 million barrels'."
+    spoken: about one hundred and twenty-seven million barrels
+    display: "≈127M barrels at sea"
+    source_ids: [cftc]
+    status: source_located
+    verification_note: Read in the CFTC report.
+
+  - id: demand
+    text: "CRS (22 Apr 2020): 'The decline in demand ... is estimated by analysts to be about 30% of global crude oil consumption or about 30 million barrels per day.' CFTC: 'OPEC Plus members reached a historic agreement to cut the world's crude oil output by 9.7 million barrels per day (\"bpd\"), the largest single production cut in history.'"
+    spoken: about thirty million barrels a day
+    display: "≈ −30M barrels/day demand"
+    fields: {cut_spoken: nine point seven million barrels a day}
+    source_ids: [crs, cftc]
+    status: source_located
+    verification_note: The demand figure is an analysts' estimate cited by CRS and is said as such.
+
+  - id: holders
+    text: "CFTC: 'The majority of traders holding positions in the May Contract had traded out of their positions prior to April 20. OI fell from 634,727 contracts at the start of the month of April to 108,593 contracts at the start of the April 20 trading session.' 'On April 20, out of the 448 distinct traders with reportable positions, 173 held positions in the May Contract.'"
+    spoken: one hundred and seventy-three
+    display: "173 of 448 traders"
+    fields: {oi_start_spoken: about six hundred and thirty-five thousand, oi_end_spoken: about one hundred and nine thousand}
+    source_ids: [cftc]
+    status: source_located
+    verification_note: Read in the CFTC report.
+
+  - id: after
+    text: "CFTC: 'The price settled at expiration on April 21 at a price of $10.01 per barrel'; 'the May-June Spread widened from the previous trading day's closing spread of -$6.76 to -$58.06 per barrel.' CRS: 'The June contract for WTI dropped $4.60 to $20.43 per barrel at the close on April 20'; 'On April 21, the June WTI contract fell by 43% to $11.57 a barrel.' EIA (5 Jan 2021): 'The WTI price climbed to $40/b on July 1'."
+    spoken: ten dollars and one cent
+    display: "Apr 21: +$10.01"
+    fields: {june_spoken: twenty dollars and forty-three cents, july_spoken: forty dollars}
+    source_ids: [cftc, crs, eia_2021]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: cme
+    text: "CFTC report (footnote 42): CME Group issued notices on April 3, 8, 13 and 15, 2020, including a clearing plan for 'the Potential of a Negative Underlying' in certain energy options and a testing environment for firms 'wishing to test negative and zero trade, settlement, and strike prices for Crude Oil futures'."
+    spoken: negative prices
+    display: "Exchange tested negative prices"
+    source_ids: [cftc]
+    status: source_located
+    verification_note: CME notices cited via the CFTC report (CME pages were unreachable).

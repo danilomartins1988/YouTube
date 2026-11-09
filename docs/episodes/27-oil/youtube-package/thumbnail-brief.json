@@ -1,0 +1,347 @@
+{
+  "title": "The Day Oil Was Worth Less Than Nothing",
+  "docs_dir": "docs/episodes/27-oil",
+  "video": "output/oil_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "analysis": {
+    "mystery": "How a barrel of oil ended a day at minus $37.63",
+    "surprising_fact": "WTI May 2020 settled at -$37.63 on 20 Apr 2020; $0 to -$39.55 in 20 minutes (CFTC)",
+    "subject": "an oil barrel",
+    "tone": "crisis",
+    "metaphor": "paying someone to take your oil"
+  },
+  "default": "A",
+  "slug": "the-day-oil-was-worth-less-than-nothing",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "OIL AT",
+        "\u2212$37.63"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "settle: WTI May 2020 settled at -$37.63 a barrel on 20 Apr 2020 (CFTC)",
+      "scene": {
+        "palette": {
+          "sky0": "#07090D",
+          "sky1": "#2A1414",
+          "haze": "#FF6E5A",
+          "key": "#FFE2D6",
+          "accent": "#FF4B3E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "oilbarrel",
+          "x": 1420,
+          "y": 560,
+          "s": 1.1
+        },
+        "support": [
+          {
+            "kind": "crash",
+            "x": 1400,
+            "y": 420,
+            "s": 0.75,
+            "opacity": 0.7
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD9CF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "OIL AT",
+          "x": 90,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 685.7,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "\u2212$37.63",
+          "x": 90,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FF4B3E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 372, 776, 522), (90, 558, 890, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.072",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 29",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest indias-chip-plants-dont-make-chips (distance 0.33)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "settle: WTI May 2020 settled at -$37.63 a barrel on 20 Apr 2020 (CFTC)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.612,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "indias-chip-plants-dont-make-chips"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "PAID TO TAKE",
+        "OIL?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "delivery: sellers in effect paid a counterparty to exit (EIA); question form",
+      "scene": {
+        "palette": {
+          "sky0": "#06090E",
+          "sky1": "#14283A",
+          "haze": "#4FC3F7",
+          "key": "#DDF2FF",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "oilbarrel",
+          "x": 1420,
+          "y": 560,
+          "s": 1.1,
+          "money": true
+        },
+        "support": [
+          {
+            "kind": "crash",
+            "x": 1400,
+            "y": 420,
+            "s": 0.75,
+            "opacity": 0.7
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD9CF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "PAID TO TAKE",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "OIL?",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 266.7,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.58 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 890, 530), (90, 550, 357, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 7.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.074",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 36",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-machine-only-one-company-can-build (distance 0.38)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "delivery: sellers in effect paid a counterparty to exit (EIA); question form",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.755,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-machine-only-one-company-can-build"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-09T19:30:32Z",
+  "master": "output/the-day-oil-was-worth-less-than-nothing/thumbnails/master_A.png"
+}

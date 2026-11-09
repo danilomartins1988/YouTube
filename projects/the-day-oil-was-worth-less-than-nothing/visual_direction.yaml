@@ -1,0 +1,50 @@
+# Visual direction for the-day-oil-was-worth-less-than-nothing (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: an empty pandemic world (reflective), the mechanics of paper barrels (strategy), tanks filling up (thriller),
+# twenty minutes below zero (crisis), the morning after and the lesson (reflective).
+primary_tone: thriller
+secondary_tones:
+- strategy
+- crisis
+- reflective
+palette:
+  bg: '#0B1016'
+  bg2: '#151E28'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Minus thirty-seven dollars
+  tone: thriller
+- chapter: A world that stopped
+  tone: reflective
+- chapter: Paper barrels
+  tone: strategy
+- chapter: Nowhere to put it
+  tone: thriller
+- chapter: Twenty minutes below zero
+  tone: crisis
+- chapter: The morning after
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m4_minutes
+  cue: Then it went through the floor
+  to: crisis
+  why: the price crosses zero
+thumbnail:
+  tone: crisis
+  headline: []
+  idea: an oil barrel with a red minus price tag, money flying away from it
+requirements:
+- The oil price screen (tradescreen with a $0 line) is the through-line; the line dives below zero
+- A prairie tank farm whose tanks fill up (oiltank gauges), oil drums with a negative price tag, tankers at sea as floating storage
+- No exchange logos, no real trading UI, no likeness of real people
