@@ -21,7 +21,7 @@
         "ASML",
         "VS A STAMP"
       ],
-      "accent_line": 2,
+      "accent_line": 1,
       "text_side": "left",
       "claim_basis": "nil_how: Canon nanoimprint presses a quartz mold onto the wafer \"as though it were a stamp\" (IEEE Spectrum)",
       "scene": {
@@ -81,7 +81,7 @@
           "size": 125.0,
           "width": 800,
           "anchor": "start",
-          "color": "#FFFFFF"
+          "color": "#FFC21A"
         }
       ],
       "qc": {
@@ -137,13 +137,13 @@
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 8.8:1 (dark outline adds more)",
+            "detail": "worst 5.5:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.081",
+            "detail": "0.080",
             "critical": false
           },
           {
@@ -155,7 +155,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-ships-fly-foreign-flags (distance 0.53)",
+            "detail": "nearest why-ships-fly-foreign-flags (distance 0.50)",
             "critical": false
           },
           {
@@ -166,7 +166,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.842,
+        "design_score": 0.732,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -328,7 +328,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest the-three-companies-that-decide-memory-prices (distance 0.41)",
+            "detail": "nearest the-175-billion-app-that-lasted-six-months (distance 0.40)",
             "critical": false
           },
           {
@@ -339,7 +339,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.806,
+        "design_score": 0.805,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -347,12 +347,12 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "the-three-companies-that-decide-memory-prices"
+        "nearest": "the-175-billion-app-that-lasted-six-months"
       }
     }
   ],
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-08T17:18:39Z",
+  "generated": "2026-11-09T02:41:03Z",
   "master": "output/the-stamp-that-could-break-asmls-monopoly/thumbnails/master_A.png"
 }
