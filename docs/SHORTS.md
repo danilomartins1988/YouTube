@@ -29,3 +29,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 24-debeers | How Four Words Made Diamonds Mean Love | 4 WORDS MADE / DIAMONDS MEAN LOVE | 38 s | `docs/episodes/24-debeers/youtube-short/short_package.md` |
 | 25-nickel | The Night $13 Billion of Trades Were Erased | $13 BILLION OF TRADES / ERASED OVERNIGHT | 43 s | `docs/episodes/25-nickel/youtube-short/short_package.md` |
 | 26-mcdonalds | Why Moscow Queued From 4 A.M. for a Hamburger | THEY QUEUED FROM 4 A.M. / FOR A HAMBURGER | 45 s | `docs/episodes/26-mcdonalds/youtube-short/short_package.md` |
+| 27-oil | The Day Oil Was Worth Less Than Nothing | OIL HIT -$37.63 / SELLERS PAID BUYERS | 46 s | `docs/episodes/27-oil/youtube-short/short_package.md` |

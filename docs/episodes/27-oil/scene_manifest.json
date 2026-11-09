@@ -1,0 +1,2159 @@
+{
+  "slug": "the-day-oil-was-worth-less-than-nothing",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_hook",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 7.23,
+      "duration_s": 7.23,
+      "visual_objective": "",
+      "narration": "What would you do if someone offered you a barrel of oil, and paid you to take it?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What would you do",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 0.35
+        },
+        {
+          "param": "items[1].payAt.cue",
+          "cue": "and paid you",
+          "label": "items[1].payAt.cue",
+          "scene_time_s": 5.26,
+          "absolute_s": 5.26
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_apr27"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_stakes",
+      "segment": "h_stakes",
+      "type": "engine_cartoon",
+      "start_s": 7.23,
+      "end_s": 43.6,
+      "duration_s": 36.37,
+      "visual_objective": "",
+      "narration": "On April twentieth, twenty twenty, that is exactly what happened. The price of American crude oil for delivery in May fell below zero, for the first time since that contract began trading in nineteen eighty-three. At the end of the day it settled at minus thirty-seven dollars and sixty-three cents a barrel. People who owned oil were paying others to take it off their hands. To understand how, you have to understand that an oil price is really a promise, and on that day the promise came due.",
+      "keyframes": [
+        {
+          "param": "items[0].price[1][0].cue",
+          "cue": "fell below zero",
+          "label": "items[0].price[1][0].cue",
+          "scene_time_s": 8.82,
+          "absolute_s": 16.06
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "fell below zero",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 9.82,
+          "absolute_s": 17.06
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "At the end of the day",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 16.5,
+          "absolute_s": 23.73
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "At the end of the day",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.8,
+          "absolute_s": 24.03
+        },
+        {
+          "param": "items[0].price[2][0].cue",
+          "cue": "it settled at",
+          "label": "items[0].price[2][0].cue",
+          "scene_time_s": 19.15,
+          "absolute_s": 26.38
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "People who owned oil",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 23.43,
+          "absolute_s": 30.66
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "People who owned oil",
+          "label": "items[1].at.cue",
+          "scene_time_s": 23.43,
+          "absolute_s": 30.66
+        },
+        {
+          "param": "items[1].tagAt.cue",
+          "cue": "People who owned oil",
+          "label": "items[1].tagAt.cue",
+          "scene_time_s": 23.83,
+          "absolute_s": 31.06
+        },
+        {
+          "param": "items[1].payAt.cue",
+          "cue": "paying others",
+          "label": "items[1].payAt.cue",
+          "scene_time_s": 25.24,
+          "absolute_s": 32.47
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "To understand how",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 27.58,
+          "absolute_s": 34.81
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "To understand how",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 27.88,
+          "absolute_s": 35.11
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 43.6,
+      "end_s": 48.6,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s03_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 48.6,
+      "end_s": 54.0,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s04_q1",
+      "segment": "m1_question",
+      "type": "engine_cartoon",
+      "start_s": 54.0,
+      "end_s": 63.0,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "What happens to oil when the world stops moving?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What happens",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 54.35
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s05_demand",
+      "segment": "m1_demand",
+      "type": "engine_cartoon",
+      "start_s": 63.0,
+      "end_s": 88.33,
+      "duration_s": 25.33,
+      "visual_objective": "",
+      "narration": "In the spring of twenty twenty, the pandemic shut down much of the planet. Planes stayed on the ground. Roads emptied. Factories went quiet. Analysts cited by the US Congressional Research Service estimated that global demand for crude oil fell by about thirty million barrels a day, around thirty percent of everything the world normally burns.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In the spring",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 63.35
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Roads",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.8,
+          "absolute_s": 70.8
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Roads",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.8,
+          "absolute_s": 70.8
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Analysts cited",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 74.41
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Analysts cited",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 11.71,
+          "absolute_s": 74.71
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Analysts cited",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.71,
+          "absolute_s": 74.71
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Analysts cited",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.71,
+          "absolute_s": 74.71
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "fell by",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 19.06,
+          "absolute_s": 82.06
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "around thirty percent",
+          "label": "items[3].at.cue",
+          "scene_time_s": 20.98,
+          "absolute_s": 83.98
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s06_opec",
+      "segment": "m1_opec",
+      "type": "engine_cartoon",
+      "start_s": 88.33,
+      "end_s": 107.8,
+      "duration_s": 19.47,
+      "visual_objective": "",
+      "narration": "The big producers tried to respond. On April twelfth, the OPEC Plus group agreed to cut output by nine point seven million barrels a day, the largest single production cut in history. But it would only start in May. And even a record cut was much smaller than the hole in demand.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "On April twelfth",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.13,
+          "absolute_s": 91.46
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "agreed to cut",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.33,
+          "absolute_s": 93.66
+        },
+        {
+          "param": "items[1].signAt.cue",
+          "cue": "the largest single",
+          "label": "items[1].signAt.cue",
+          "scene_time_s": 9.51,
+          "absolute_s": 97.84
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "But it would only start",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 12.57,
+          "absolute_s": 100.9
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But it would only start",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.87,
+          "absolute_s": 101.2
+        },
+        {
+          "param": "items[0].pages[1][0].cue",
+          "cue": "But it would only start",
+          "label": "items[0].pages[1][0].cue",
+          "scene_time_s": 12.87,
+          "absolute_s": 101.2
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "But it would only start",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 12.87,
+          "absolute_s": 101.2
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And even a record cut",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.23,
+          "absolute_s": 103.56
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And even a record cut",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.23,
+          "absolute_s": 103.56
+        },
+        {
+          "param": "items[2].h[1][0].cue",
+          "cue": "much smaller",
+          "label": "items[2].h[1][0].cue",
+          "scene_time_s": 17.39,
+          "absolute_s": 105.72
+        },
+        {
+          "param": "items[3].h[1][0].cue",
+          "cue": "much smaller",
+          "label": "items[3].h[1][0].cue",
+          "scene_time_s": 17.89,
+          "absolute_s": 106.22
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc",
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "p07_gap",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 107.8,
+      "end_s": 131.93,
+      "duration_s": 24.13,
+      "visual_objective": "",
+      "narration": "Let me draw the problem. Here is the oil coming out of the ground every day. Here is the oil the world was actually using. The gap between them did not disappear. Every barrel nobody wanted had to go somewhere. Into a tank, a pipeline, or a ship. And the space in those tanks was running out.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is the oil coming out",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.12,
+          "absolute_s": 110.92
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is the oil coming out",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.12,
+          "absolute_s": 110.92
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Here is the oil the world",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.78,
+          "absolute_s": 114.58
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Here is the oil the world",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 7.28,
+          "absolute_s": 115.08
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Every barrel nobody wanted",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 14.07,
+          "absolute_s": 121.87
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "had to go somewhere",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 15.9,
+          "absolute_s": 123.7
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "running out",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 22.82,
+          "absolute_s": 130.62
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "running out",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 23.02,
+          "absolute_s": 130.82
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs",
+        "eia_apr27"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s08_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 131.93,
+      "end_s": 138.87,
+      "duration_s": 6.93,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "To see why that mattered so much, you need to know how oil is really traded.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "To see why",
+          "label": "How is oil really traded?",
+          "scene_time_s": 0.35,
+          "absolute_s": 132.28
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s09_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 138.87,
+      "end_s": 144.27,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s10_q2",
+      "segment": "m2_question",
+      "type": "engine_cartoon",
+      "start_s": 144.27,
+      "end_s": 153.27,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "When you buy oil on the market, what do you actually own?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "When you buy oil",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 144.62
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_futures",
+      "segment": "m2_futures",
+      "type": "engine_cartoon",
+      "start_s": 153.27,
+      "end_s": 178.27,
+      "duration_s": 25.0,
+      "visual_objective": "",
+      "narration": "Most oil is traded through futures contracts. A futures contract is a promise to buy or sell barrels of oil at a set price, on a set date in the future. The best known American contract is called W T I. Each month has its own contract, and each one ends on a fixed day. The May twenty twenty contract expired on April twenty-first.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "A futures contract is",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.98,
+          "absolute_s": 157.25
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "A futures contract is",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.98,
+          "absolute_s": 157.25
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Each month has",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.53,
+          "absolute_s": 168.8
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Each month has",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.83,
+          "absolute_s": 169.1
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Each month has",
+          "label": "items[1].at.cue",
+          "scene_time_s": 15.83,
+          "absolute_s": 169.1
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The May twenty twenty",
+          "label": "items[2].at.cue",
+          "scene_time_s": 20.46,
+          "absolute_s": 173.73
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The May twenty twenty",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 20.46,
+          "absolute_s": 173.73
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_delivery",
+      "segment": "m2_delivery",
+      "type": "engine_cartoon",
+      "start_s": 178.27,
+      "end_s": 199.73,
+      "duration_s": 21.47,
+      "visual_objective": "",
+      "narration": "And here is the key. These contracts are for real oil. According to the US Energy Information Administration, anyone still holding one when it expires must make or take physical delivery of crude oil in Cushing, Oklahoma, a small town that is home to a major oil storage hub.",
+      "keyframes": [
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "These contracts are for real oil",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 3.01,
+          "absolute_s": 181.28
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "anyone still holding",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.99,
+          "absolute_s": 188.26
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "anyone still holding",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.99,
+          "absolute_s": 188.26
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "anyone still holding",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 9.99,
+          "absolute_s": 188.26
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "make or take physical delivery",
+          "label": "items[1].at.cue",
+          "scene_time_s": 12.75,
+          "absolute_s": 191.02
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_apr27"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "p13_choice",
+      "segment": "m2_draw",
+      "type": "engine_draw",
+      "start_s": 199.73,
+      "end_s": 227.9,
+      "duration_s": 28.17,
+      "visual_objective": "",
+      "narration": "Let me draw what that means. Here is a trader who bought a May contract. Before the expiry date, they have two choices. Sell the contract to someone else. Or keep it, and receive real barrels of oil in Oklahoma, and find somewhere to put them. Most financial traders have no tanks and no pipelines. So for them, there is only one real choice. Sell before the deadline.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is a trader",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.07,
+          "absolute_s": 202.8
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is a trader",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.07,
+          "absolute_s": 202.8
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Sell the contract",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 9.88,
+          "absolute_s": 209.61
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Sell the contract",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 9.88,
+          "absolute_s": 209.61
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Or keep it",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 12.13,
+          "absolute_s": 211.86
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Or keep it",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 12.13,
+          "absolute_s": 211.86
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "no tanks and no pipelines",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 20.35,
+          "absolute_s": 220.08
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "Sell before the deadline",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 26.18,
+          "absolute_s": 225.91
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_apr27",
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_holders",
+      "segment": "m2_holders",
+      "type": "engine_cartoon",
+      "start_s": 227.9,
+      "end_s": 251.5,
+      "duration_s": 23.6,
+      "visual_objective": "",
+      "narration": "Most people did leave in time. According to the US regulator, the Commodity Futures Trading Commission, the number of open May contracts fell from about six hundred and thirty-five thousand at the start of April to about one hundred and nine thousand on the morning of April twentieth. But that still left a lot of contracts, with one day to go.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "the number",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 8.28,
+          "absolute_s": 236.18
+        },
+        {
+          "param": "items[1].pages[1][0].cue",
+          "cue": "on the morning of",
+          "label": "items[1].pages[1][0].cue",
+          "scene_time_s": 16.22,
+          "absolute_s": 244.12
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "on the morning of",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 17.22,
+          "absolute_s": 245.12
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "But that still left",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 18.6,
+          "absolute_s": 246.5
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But that still left",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 246.8
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "But that still left",
+          "label": "items[2].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 246.8
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "But that still left",
+          "label": "items[3].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 246.8
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "But that still left",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 246.8
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "with one day to go",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 21.68,
+          "absolute_s": 249.58
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 251.5,
+      "end_s": 258.0,
+      "duration_s": 6.5,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "And to take delivery, you need one thing above all. Somewhere to put the oil.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "And to take delivery",
+          "label": "To take delivery, you need…",
+          "scene_time_s": 0.35,
+          "absolute_s": 251.85
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Somewhere to put the oil",
+          "label": "somewhere to put the oil",
+          "scene_time_s": 4.26,
+          "absolute_s": 255.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 258.0,
+      "end_s": 263.4,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_q3",
+      "segment": "m3_question",
+      "type": "engine_cartoon",
+      "start_s": 263.4,
+      "end_s": 272.4,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "What happens when the tanks are full?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What happens",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 263.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_cushing",
+      "segment": "m3_cushing",
+      "type": "engine_cartoon",
+      "start_s": 272.4,
+      "end_s": 298.73,
+      "duration_s": 26.33,
+      "visual_objective": "",
+      "narration": "The storage tanks at Cushing can hold about seventy-six million barrels of crude oil. In mid-March, they were about half full. By April seventeenth, they held sixty million barrels. They were seventy-six percent full, and filling fast. The three weeks to April seventeenth brought the three largest weekly increases ever recorded.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The storage tanks",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 272.75
+        },
+        {
+          "param": "items[0].fill[1][0].cue",
+          "cue": "In mid-March",
+          "label": "items[0].fill[1][0].cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 279.63
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "In mid-March",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 279.63
+        },
+        {
+          "param": "items[1].pages[1][0].cue",
+          "cue": "By April seventeenth",
+          "label": "items[1].pages[1][0].cue",
+          "scene_time_s": 10.39,
+          "absolute_s": 282.79
+        },
+        {
+          "param": "items[0].fill[2][0].cue",
+          "cue": "By April seventeenth",
+          "label": "items[0].fill[2][0].cue",
+          "scene_time_s": 12.39,
+          "absolute_s": 284.79
+        },
+        {
+          "param": "items[0].fullAt.cue",
+          "cue": "filling fast",
+          "label": "items[0].fullAt.cue",
+          "scene_time_s": 17.79,
+          "absolute_s": 290.19
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The three weeks",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 19.26,
+          "absolute_s": 291.66
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The three weeks",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 19.56,
+          "absolute_s": 291.96
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The three weeks",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 19.56,
+          "absolute_s": 291.96
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_apr27",
+        "cftc",
+        "eia_apr30"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_committed",
+      "segment": "m3_committed",
+      "type": "engine_cartoon",
+      "start_s": 298.73,
+      "end_s": 318.47,
+      "duration_s": 19.73,
+      "visual_objective": "",
+      "narration": "And seventy-six percent full did not mean twenty-four percent free. As the Energy Information Administration noted, some of the empty space had probably already been leased or promised to someone else. For a trader looking for a tank at the last minute, there was almost nothing left.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "And seventy-six percent",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 299.08
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "some of the empty space",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.07,
+          "absolute_s": 307.8
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "For a trader looking",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.35,
+          "absolute_s": 313.08
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "For a trader looking",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.65,
+          "absolute_s": 313.38
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "For a trader looking",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.65,
+          "absolute_s": 313.38
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "For a trader looking",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.65,
+          "absolute_s": 313.38
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "For a trader looking",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 14.65,
+          "absolute_s": 313.38
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_apr27"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_sea",
+      "segment": "m3_sea",
+      "type": "engine_cartoon",
+      "start_s": 318.47,
+      "end_s": 338.5,
+      "duration_s": 20.03,
+      "visual_objective": "",
+      "narration": "Oil companies started looking for storage anywhere they could find it, including at sea. In the first three weeks of April, the oil stored on tankers floating offshore rose by almost sixty-nine million barrels, to about one hundred and twenty-seven million barrels. Ships became floating warehouses.",
+      "keyframes": [
+        {
+          "param": "items[3].at.cue",
+          "cue": "In the first three weeks",
+          "label": "items[3].at.cue",
+          "scene_time_s": 6.25,
+          "absolute_s": 324.72
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In the first three weeks",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.25,
+          "absolute_s": 324.72
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "rose by almost",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.72,
+          "absolute_s": 329.19
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "rose by almost",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 12.72,
+          "absolute_s": 331.19
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Ships",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 17.15,
+          "absolute_s": 335.62
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Ships",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.45,
+          "absolute_s": 335.92
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Ships",
+          "label": "items[2].at.cue",
+          "scene_time_s": 17.45,
+          "absolute_s": 335.92
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Ships",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 17.45,
+          "absolute_s": 335.92
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_peak",
+      "segment": "m3_peak",
+      "type": "engine_cartoon",
+      "start_s": 338.5,
+      "end_s": 366.7,
+      "duration_s": 28.2,
+      "visual_objective": "",
+      "narration": "And the tanks kept filling after the crash. A week later, on April twenty-fourth, Cushing was eighty-one percent full. By the start of May, according to the Energy Information Administration, it had reached eighty-three percent of its working capacity. The hub was never completely full. But for anyone holding a May contract with nowhere to send the oil, it did not need to be.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "A week later",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.92,
+          "absolute_s": 342.42
+        },
+        {
+          "param": "items[0].fill[1][0].cue",
+          "cue": "eighty-one percent",
+          "label": "items[0].fill[1][0].cue",
+          "scene_time_s": 7.78,
+          "absolute_s": 346.28
+        },
+        {
+          "param": "items[1].pages[1][0].cue",
+          "cue": "By the start of May",
+          "label": "items[1].pages[1][0].cue",
+          "scene_time_s": 9.92,
+          "absolute_s": 348.42
+        },
+        {
+          "param": "items[0].fill[2][0].cue",
+          "cue": "eighty-three percent",
+          "label": "items[0].fill[2][0].cue",
+          "scene_time_s": 14.98,
+          "absolute_s": 353.48
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The hub was never",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 17.97,
+          "absolute_s": 356.47
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The hub was never",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.27,
+          "absolute_s": 356.77
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The hub was never",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 18.27,
+          "absolute_s": 356.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_apr30",
+        "eia_2021"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "p22_contango",
+      "segment": "m3_draw",
+      "type": "engine_draw",
+      "start_s": 366.7,
+      "end_s": 388.83,
+      "duration_s": 22.13,
+      "visual_objective": "",
+      "narration": "Let me draw what storage does to a price. Normally, a barrel today and a barrel next month cost about the same. But when storage runs out, oil for delivery right now becomes a burden. You have to pay someone to keep it. So the near month falls, and the later months hold up. The gap between them is the price of a tank.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Normally",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.59,
+          "absolute_s": 370.29
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "oil for delivery right now",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 9.94,
+          "absolute_s": 376.64
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "You have to pay someone",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 13.52,
+          "absolute_s": 380.22
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "So the near month falls",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 15.6,
+          "absolute_s": 382.3
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "the later months hold up",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 17.24,
+          "absolute_s": 383.94
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "The gap between them",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 19.42,
+          "absolute_s": 386.12
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "The gap between them",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 19.62,
+          "absolute_s": 386.32
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_apr27",
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 388.83,
+      "end_s": 398.97,
+      "duration_s": 10.13,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "On Friday, April seventeenth, the May contract closed at eighteen dollars and twenty-seven cents. Then came Monday.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "On Friday",
+          "label": "Friday 17 April: $18.27",
+          "scene_time_s": 0.35,
+          "absolute_s": 389.18
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Then came Monday",
+          "label": "Then came Monday",
+          "scene_time_s": 8.13,
+          "absolute_s": 396.96
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 398.97,
+      "end_s": 404.37,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_q4",
+      "segment": "m4_question",
+      "type": "engine_cartoon",
+      "start_s": 404.37,
+      "end_s": 413.37,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "How can the price of something real fall below nothing?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "How can the price",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 404.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_monday",
+      "segment": "m4_monday",
+      "type": "engine_cartoon",
+      "start_s": 413.37,
+      "end_s": 435.97,
+      "duration_s": 22.6,
+      "visual_objective": "",
+      "narration": "On Monday, April twentieth, the last full trading day before expiry, the May contract started falling and kept falling. Holders who could not take delivery needed to sell. But there were very few buyers with somewhere to put the oil. By the early afternoon in New York, the price was approaching zero.",
+      "keyframes": [
+        {
+          "param": "items[0].price[1][0].cue",
+          "cue": "kept falling",
+          "label": "items[0].price[1][0].cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 423.04
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Holders who could not",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.37,
+          "absolute_s": 423.74
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Holders who could not",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.37,
+          "absolute_s": 423.74
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Holders who could not",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.37,
+          "absolute_s": 423.74
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Holders who could not",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.37,
+          "absolute_s": 423.74
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But there were very few",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.32,
+          "absolute_s": 427.69
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "But there were very few",
+          "label": "items[4].at.cue",
+          "scene_time_s": 14.32,
+          "absolute_s": 427.69
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "By the early afternoon",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 17.78,
+          "absolute_s": 431.15
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "By the early afternoon",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 18.08,
+          "absolute_s": 431.45
+        },
+        {
+          "param": "items[0].price[2][0].cue",
+          "cue": "approaching zero",
+          "label": "items[0].price[2][0].cue",
+          "scene_time_s": 22.03,
+          "absolute_s": 435.39
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_apr27",
+        "crs",
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_minutes",
+      "segment": "m4_minutes",
+      "type": "engine_cartoon",
+      "start_s": 435.97,
+      "end_s": 458.87,
+      "duration_s": 22.9,
+      "visual_objective": "",
+      "narration": "Then it went through the floor. According to the regulator, in twenty minutes, between eight minutes past two and twenty-eight minutes past two, the price fell from zero to minus thirty-nine dollars and fifty-five cents. A minute later it hit minus forty dollars and thirty-two cents, the lowest price in the history of the contract.",
+      "keyframes": [
+        {
+          "param": "toneShift.at.cue",
+          "cue": "Then it went through the floor",
+          "label": "toneShift.at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 436.32
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "between eight minutes past two",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.39,
+          "absolute_s": 442.36
+        },
+        {
+          "param": "items[0].price[1][0].cue",
+          "cue": "the price fell from zero",
+          "label": "items[0].price[1][0].cue",
+          "scene_time_s": 13.13,
+          "absolute_s": 449.1
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A minute later",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.82,
+          "absolute_s": 450.79
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "A minute later",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 14.82,
+          "absolute_s": 450.79
+        },
+        {
+          "param": "items[0].price[2][0].cue",
+          "cue": "A minute later",
+          "label": "items[0].price[2][0].cue",
+          "scene_time_s": 15.82,
+          "absolute_s": 451.79
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_settle",
+      "segment": "m4_settle",
+      "type": "engine_cartoon",
+      "start_s": 458.87,
+      "end_s": 479.47,
+      "duration_s": 20.6,
+      "visual_objective": "",
+      "narration": "At the close, the May contract settled at minus thirty-seven dollars and sixty-three cents. From the start of trading to the bottom, it had lost fifty-eight dollars and five cents a barrel. Some sellers were, in effect, paying a counterparty to let them out of their contracts.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "At the close",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 459.22
+        },
+        {
+          "param": "items[0].haltAt.cue",
+          "cue": "settled at",
+          "label": "items[0].haltAt.cue",
+          "scene_time_s": 3.92,
+          "absolute_s": 462.79
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Some sellers were",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.01,
+          "absolute_s": 472.88
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Some sellers were",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 473.18
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Some sellers were",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 473.18
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Some sellers were",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 473.18
+        },
+        {
+          "param": "items[1].tagAt.cue",
+          "cue": "Some sellers were",
+          "label": "items[1].tagAt.cue",
+          "scene_time_s": 14.61,
+          "absolute_s": 473.48
+        },
+        {
+          "param": "items[1].payAt.cue",
+          "cue": "paying a counterparty",
+          "label": "items[1].payAt.cue",
+          "scene_time_s": 16.54,
+          "absolute_s": 475.41
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc",
+        "eia_apr27"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_spread",
+      "segment": "m4_spread",
+      "type": "engine_cartoon",
+      "start_s": 479.47,
+      "end_s": 505.7,
+      "duration_s": 26.23,
+      "visual_objective": "",
+      "narration": "The strangest number was the gap between two months. On Friday, May oil had been about seven dollars cheaper than June oil. By Monday's close, the gap was fifty-eight dollars. The June contract, for the same oil delivered just one month later, closed at twenty dollars and forty-three cents. Nothing had happened to the oil itself. Only to the date.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "On Friday",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 4.73,
+          "absolute_s": 484.2
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "By Monday's close",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.08,
+          "absolute_s": 489.55
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The June contract",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.76,
+          "absolute_s": 493.23
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The June contract",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.06,
+          "absolute_s": 493.53
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "The June contract",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.06,
+          "absolute_s": 493.53
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The June contract",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 14.06,
+          "absolute_s": 493.53
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc",
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "p30_monday",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 505.7,
+      "end_s": 535.5,
+      "duration_s": 29.8,
+      "visual_objective": "",
+      "narration": "Let me draw that Monday. Here is the May contract on Friday, eighteen dollars. Here is the June contract on Monday, still around twenty dollars. And here is the May contract at the close, almost thirty-eight dollars below zero. The same oil, the same pipeline, one month apart. All the other months stayed above zero. Only the one that was about to arrive collapsed.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is the May contract on Friday",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.61,
+          "absolute_s": 508.31
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is the May contract on Friday",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.61,
+          "absolute_s": 508.31
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "eighteen dollars",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.27,
+          "absolute_s": 510.97
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Here is the June contract",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 7.07,
+          "absolute_s": 512.77
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "almost thirty-eight dollars below zero",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 14.66,
+          "absolute_s": 520.37
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "Only the one that was about to arrive",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 25.9,
+          "absolute_s": 531.6
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc",
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 535.5,
+      "end_s": 543.3,
+      "duration_s": 7.8,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "The next morning, the world woke up to headlines about negative oil. But the story was not over.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "The next morning",
+          "label": "Headlines: negative oil",
+          "scene_time_s": 0.35,
+          "absolute_s": 535.85
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "But the story was not over",
+          "label": "The story was not over",
+          "scene_time_s": 5.41,
+          "absolute_s": 540.91
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 543.3,
+      "end_s": 548.7,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_q5",
+      "segment": "m5_question",
+      "type": "engine_cartoon",
+      "start_s": 548.7,
+      "end_s": 557.7,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Who was left holding the oil?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Who was left",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 549.05
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_next",
+      "segment": "m5_next",
+      "type": "engine_cartoon",
+      "start_s": 557.7,
+      "end_s": 577.4,
+      "duration_s": 19.7,
+      "visual_objective": "",
+      "narration": "On April twenty-first, its last day, the May contract settled at ten dollars and one cent, positive again. But the panic spread to the next month. The June contract fell by forty-three percent that day, to eleven dollars and fifty-seven cents.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "On April twenty-first",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 558.05
+        },
+        {
+          "param": "items[0].price[1][0].cue",
+          "cue": "positive again",
+          "label": "items[0].price[1][0].cue",
+          "scene_time_s": 7.32,
+          "absolute_s": 565.02
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "But the panic spread",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.17,
+          "absolute_s": 566.87
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But the panic spread",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.47,
+          "absolute_s": 567.17
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "But the panic spread",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.47,
+          "absolute_s": 567.17
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "But the panic spread",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 9.47,
+          "absolute_s": 567.17
+        },
+        {
+          "param": "items[1].price[1][0].cue",
+          "cue": "fell by forty-three",
+          "label": "items[1].price[1][0].cue",
+          "scene_time_s": 14.48,
+          "absolute_s": 572.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc",
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_who",
+      "segment": "m5_who",
+      "type": "engine_cartoon",
+      "start_s": 577.4,
+      "end_s": 597.8,
+      "duration_s": 20.4,
+      "visual_objective": "",
+      "narration": "The regulator later looked at who was trading. On April twentieth, out of four hundred and forty-eight large traders it tracked, one hundred and seventy-three still held May contracts. Its interim report described the conditions in detail, but did not name a single cause for the crash.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The regulator later",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 577.75
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "On April twentieth",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.58,
+          "absolute_s": 580.98
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "still held May contracts",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 11.03,
+          "absolute_s": 588.43
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Its interim report",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 12.77,
+          "absolute_s": 590.17
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Its interim report",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.07,
+          "absolute_s": 590.47
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Its interim report",
+          "label": "items[1].at.cue",
+          "scene_time_s": 13.07,
+          "absolute_s": 590.47
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "did not name",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 17.45,
+          "absolute_s": 594.85
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "did not name",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 17.45,
+          "absolute_s": 594.85
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_cme",
+      "segment": "m5_cme",
+      "type": "engine_cartoon",
+      "start_s": 597.8,
+      "end_s": 621.43,
+      "duration_s": 23.63,
+      "visual_objective": "",
+      "narration": "The exchange had seen the risk coming. In early April, CME Group sent notices to its members about the possibility of negative prices, and opened a testing system so that trading firms could check that their computers could handle a price below zero. In almost forty years of trading, that had never happened before.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The exchange had seen",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 598.15
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "CME Group sent notices",
+          "label": "items[0].at.cue",
+          "scene_time_s": 5.09,
+          "absolute_s": 602.89
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "opened a testing system",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 11.12,
+          "absolute_s": 608.92
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "opened a testing system",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.12,
+          "absolute_s": 608.92
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "In almost forty years",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 18.72,
+          "absolute_s": 616.52
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In almost forty years",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 19.02,
+          "absolute_s": 616.82
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "In almost forty years",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 19.02,
+          "absolute_s": 616.82
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_recovery",
+      "segment": "m5_recovery",
+      "type": "engine_cartoon",
+      "start_s": 621.43,
+      "end_s": 638.67,
+      "duration_s": 17.23,
+      "visual_objective": "",
+      "narration": "As lockdowns eased and demand slowly returned, the price recovered. By July first, a barrel of American oil was back at about forty dollars. Prices below zero had not even lasted two trading days.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "By July first",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.29,
+          "absolute_s": 627.72
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "By July first",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.29,
+          "absolute_s": 627.72
+        },
+        {
+          "param": "items[0].price[2][0].cue",
+          "cue": "back at about",
+          "label": "items[0].price[2][0].cue",
+          "scene_time_s": 10.62,
+          "absolute_s": 632.05
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Prices below zero",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.21,
+          "absolute_s": 633.64
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eia_2021"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 638.67,
+      "end_s": 666.6,
+      "duration_s": 27.93,
+      "visual_objective": "",
+      "narration": "So what does negative oil teach about prices? That a price is not just about how useful something is. It is also about where it is, when it arrives, and whether you have room for it. On April twentieth, the oil had not lost its value. The world had simply run out of places to put it. And a contract that looked like a piece of paper turned out to be a promise to take delivery of something very real.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "That a price is not just",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.79,
+          "absolute_s": 642.46
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "It is also about where",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.49,
+          "absolute_s": 646.16
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "On April twentieth",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.01,
+          "absolute_s": 651.68
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "On April twentieth",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.31,
+          "absolute_s": 651.98
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "On April twentieth",
+          "label": "items[1].at.cue",
+          "scene_time_s": 13.31,
+          "absolute_s": 651.98
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "On April twentieth",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 13.31,
+          "absolute_s": 651.98
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cftc",
+        "eia_apr27"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "s39_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 666.6,
+      "end_s": 677.03,
+      "duration_s": 10.43,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 674.11
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}
