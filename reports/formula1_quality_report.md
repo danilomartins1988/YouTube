@@ -2,34 +2,35 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | output/formula1_documentary.mp4 (237.2 MB) |
+| File exists | PASS | /home/user/YouTube/output/the-hidden-business-of-formula-1/documentary/the-hidden-business-of-formula-1--documentary.mp4 (291.4 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 10-12 min | PASS | 702.40 s (11:42) |
-| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
+| Duration 11-13:20 min (channel standard 660-800 s) | PASS | 728.80 s (12:08) |
+| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
 | Caption/voice sync | PASS | 308 cues; median cue-start offset 0.06 s, p90 0.36 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>6 s) | PASS | none |
+| No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.1 LUFS integrated, true peak -4.0 dBFS
-- Scenes: 48; types: act_title x12, bar_chart x3, big_counter x4, circuit x2, compare x6, donut x1, fund_flow x3, kinetic_text x5, line_chart x1, map x1, race_track x5, timeline x2, whiteboard x3
-- Average scene length: 14.6 s; act cards are music-only.
+- Scenes: 48; types: act_title x12, bar_chart x3, circuit x2, donut x1, engine_cartoon x19, engine_draw x4, line_chart x1, map x1, race_track x5
+- Average scene length: 15.2 s; act cards are music-only.
 
 ## Pipeline QC report
 
 # QC report: the-hidden-business-of-formula-1 / documentary (long_16x9)
 
-- Runtime: **702.4 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 237.2 MB
+- Runtime: **728.8 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 291.4 MB
 - Loudness: -16.1 LUFS integrated, true peak -4.0 dBFS
-- Errors: **0**, warnings: **60**
-- Technical QC passed: **True**
+- Errors: **1**, warnings: **60**
+- Technical QC passed: **False**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
+- [ERROR] (timing) Runtime 728.8s outside target 600-720s
 - [WARNING] (timing) Segment p1_liberty pace 118 wpm (numerals count as one word)
 - [WARNING] (timing) Segment p2_motogp pace 114 wpm (numerals count as one word)
 - [WARNING] (timing) Segment p3_mix pace 98 wpm (numerals count as one word)
@@ -174,27 +175,3 @@
 
 To clear a blocker: read the primary source, then set `status: human_verified` and `verified_by: <name>` for that claim in projects/<slug>/sources.yaml and rebuild.
 
-
-
-## Episode 05 brief checklist (added 2026-11-05)
-
-| Requirement | Result | Evidence |
-|---|---|---|
-| Decodable file | PASS | `ffmpeg -v error -i output/formula1_documentary.mp4 -f null -` returned no errors |
-| 1920x1080, 16:9, H.264/AAC, 30 fps | PASS | ffprobe: h264 1920x1080 DAR 16:9, 30/1 fps; AAC 48 kHz stereo |
-| 10-12 minutes | PASS | 702.4 s (11:42) |
-| Narration synchronised | PASS | caption/voice sync check above; animations are cued to word timings |
-| No missing assets, black frames or broken transitions | PASS | pipeline media check found 0 errors; blackdetect and freezedetect found none; the racing-wipe transition between all 48 scenes renders in the single Remotion pass |
-| Financial claims sourced | PASS | every on-screen and spoken number comes from a dossier claim (`projects/the-hidden-business-of-formula-1/sources.yaml`, exported to `research/formula1_sources.md`). Typed digits in narration are a build error. Unofficial figures (Apple fee, Cadillac fee, Forbes values, team accounts) are labelled "reportedly" or "estimate" on screen and in the voice |
-| F1 Group / team / promoter money kept apart | PASS | F1 Group revenue (Liberty Media), team revenue (Mercedes accounts, team payments) and promoter or host costs (Singapore, Australia, Las Vegas) are labelled separately; scene s29 states the distinction explicitly |
-| US dollars only | PASS | currency QC check: 0 errors. Non-USD originals are converted with the Federal Reserve H.10 annual average and marked "≈ / converted" |
-| Rights documented | PASS | `research/formula1_asset_licenses.md`: all art is original programmatic SVG, Natural Earth map (public domain), Inter (OFL), code-generated music and SFX; no photos, footage, official marks or AI images |
-| Visual change every 3-6 s | PASS | 48 scenes (average 14.6 s), each animating on narration cues (counters, bars, lines, nodes, markers, laps, hand strokes); freezedetect found no static stretch over 4 s |
-| Whiteboard hand-drawing sequences (2-4) | PASS | 3: s05 car (becomes an animated car), s12 revenue model (colours in; money flows along the arrows), s42 circuit (becomes a live track) |
-| Voice spend ≤ US$1.00 | PASS | US$0.2581 (36 requests; two rebuilds reused the cache and made 0 paid calls) - see `reports/formula1_cost_report.md` |
-
-### Warnings reviewed
-
-- **Pace (93-120 wpm):** the slower segments are number-heavy; this pace is deliberate.
-- **Number words outside placeholders:** each was reviewed. They are years written in words (for example "twenty twenty-five"), with each event's year matching the dossier, or ordinary words such as "one drawing", "three layers", "two sides", "more than double" and "eleven ways". "More than double" ($450m vs $200m) and "eleven ways" (the 11th team) follow from the cited claims.
-- **39 claims awaiting human verification:** every claim is `source_located`, meaning web research found it on 2026-11-05 but no named person has yet read each source in full. An editor should verify the claims before any publication. This is a publishing step, not a render defect.

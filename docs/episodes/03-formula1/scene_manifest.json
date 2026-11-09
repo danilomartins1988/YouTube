@@ -1,0 +1,2465 @@
+{
+  "slug": "the-hidden-business-of-formula-1",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_hook",
+      "segment": "open_hook",
+      "type": "race_track",
+      "start_s": 0.0,
+      "end_s": 17.13,
+      "duration_s": 17.13,
+      "visual_objective": "2.5D trackside: parallax skyline, crowd, placeholder sponsor boards, scrolling kerbs, original cars racing past; headline and value on narration cues",
+      "narration": "A pack of cars screams past the grandstand. Every surface you can see has been sold: the boards, the cars, the overalls, even the time on the screen. The race on track is only half the story.",
+      "keyframes": [
+        {
+          "param": "kicker_cue",
+          "cue": "A pack",
+          "label": "The Hidden Economics",
+          "scene_time_s": 0.35,
+          "absolute_s": 0.35
+        },
+        {
+          "param": "title_cue",
+          "cue": "grandstand",
+          "label": "The Hidden Economics",
+          "scene_time_s": 3.31,
+          "absolute_s": 3.31
+        },
+        {
+          "param": "value_cue",
+          "cue": "has been sold",
+          "label": "The Hidden Economics",
+          "scene_time_s": 7.18,
+          "absolute_s": 7.18
+        },
+        {
+          "param": "subtitle_cue",
+          "cue": "only half",
+          "label": "The Hidden Economics",
+          "scene_time_s": 14.93,
+          "absolute_s": 14.93
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 2,
+      "id": "s02_revenue",
+      "segment": "open_revenue",
+      "type": "engine_cartoon",
+      "start_s": 17.13,
+      "end_s": 26.67,
+      "duration_s": 9.53,
+      "visual_objective": "",
+      "narration": "Last year, the company that runs Formula One took in 3.9 billion dollars, 14 percent more than the year before.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "more than the year before",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.56,
+          "absolute_s": 24.7
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_fy2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 3,
+      "id": "s03_question",
+      "segment": "open_question",
+      "type": "engine_cartoon",
+      "start_s": 26.67,
+      "end_s": 40.63,
+      "duration_s": 13.97,
+      "visual_objective": "",
+      "narration": "So where does that money come from? Who pays, who gets paid, and why do cities line up to host a race that can cost them a fortune? This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "Who pays",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.04,
+          "absolute_s": 30.71
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "who gets paid",
+          "label": "items[3].at.cue",
+          "scene_time_s": 4.77,
+          "absolute_s": 31.43
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "line up to host",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.0,
+          "absolute_s": 33.67
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "line up to host",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.0,
+          "absolute_s": 33.67
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 4,
+      "id": "s04_p1",
+      "segment": "p1_card",
+      "type": "act_title",
+      "start_s": 40.63,
+      "end_s": 46.03,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 5,
+      "id": "p05_sketch",
+      "segment": "p1_sketch",
+      "type": "engine_draw",
+      "start_s": 46.03,
+      "end_s": 65.7,
+      "duration_s": 19.67,
+      "visual_objective": "",
+      "narration": "At its core, Formula One is simple. A handful of teams design their own cars, and race them around the world. For most of its history, that was the whole idea. The business began when someone realised the show itself could be packaged and sold.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "A handful of teams",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.05,
+          "absolute_s": 50.08
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "A handful of teams",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.05,
+          "absolute_s": 50.08
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "design their own",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.56,
+          "absolute_s": 51.6
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "design their own",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 5.86,
+          "absolute_s": 51.9
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "race them",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 7.65,
+          "absolute_s": 53.69
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "race them",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 7.95,
+          "absolute_s": 53.99
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "The business began",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 14.15,
+          "absolute_s": 60.18
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "packaged and sold",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 18.08,
+          "absolute_s": 64.11
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "packaged and sold",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 18.48,
+          "absolute_s": 64.51
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 6,
+      "id": "s06_history",
+      "segment": "p1_history",
+      "type": "engine_cartoon",
+      "start_s": 65.7,
+      "end_s": 86.07,
+      "duration_s": 20.37,
+      "visual_objective": "",
+      "narration": "For decades, that someone was Bernie Ecclestone, who sold the sport to television as one package. In 2006, the investment firm CVC took majority control. According to CVC, the calendar grew from sixteen to twenty-two races while it was in charge.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "sold the sport",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 4.11,
+          "absolute_s": 69.81
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "one package",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.39,
+          "absolute_s": 72.09
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "CVC took",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 10.71,
+          "absolute_s": 76.41
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "CVC took",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.01,
+          "absolute_s": 76.7
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "CVC took",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.01,
+          "absolute_s": 76.7
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "CVC took",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.01,
+          "absolute_s": 76.7
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "the calendar grew",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.91,
+          "absolute_s": 80.61
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_close_2017",
+        "cvc_case"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 7,
+      "id": "s07_liberty",
+      "segment": "p1_liberty",
+      "type": "engine_cartoon",
+      "start_s": 86.07,
+      "end_s": 102.67,
+      "duration_s": 16.6,
+      "visual_objective": "",
+      "narration": "In 2016, the American media company Liberty Media agreed to buy Formula One, valuing the business at 8 billion dollars, including its debt. The deal closed in January 2017, and a new era began.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Liberty Media",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.13,
+          "absolute_s": 90.2
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "valuing the business",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 7.0,
+          "absolute_s": 93.07
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "valuing the business",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 9.5,
+          "absolute_s": 95.57
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The deal closed",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.54,
+          "absolute_s": 97.61
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "a new era",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 14.88,
+          "absolute_s": 100.95
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_deal_2016",
+        "liberty_close_2017"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 8,
+      "id": "s08_p2",
+      "segment": "p2_card",
+      "type": "act_title",
+      "start_s": 102.67,
+      "end_s": 108.07,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 9,
+      "id": "s09_layers",
+      "segment": "p2_layers",
+      "type": "engine_cartoon",
+      "start_s": 108.07,
+      "end_s": 131.77,
+      "duration_s": 23.7,
+      "visual_objective": "",
+      "narration": "Today the sport has three layers. The FIA writes and polices the rules. Formula One, owned by Liberty Media, holds the commercial rights and sells the show. And the teams compete, sharing in the money. Liberty's own filings say the FIA must put safety and sporting concerns above Formula One's commercial interests.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "three layers",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.11,
+          "absolute_s": 110.17
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "The FIA",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.33,
+          "absolute_s": 111.4
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "owned by Liberty",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.41,
+          "absolute_s": 115.47
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "holds the commercial",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.34,
+          "absolute_s": 117.41
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "the teams compete",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.39,
+          "absolute_s": 120.45
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "the teams compete",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.39,
+          "absolute_s": 120.45
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "the teams compete",
+          "label": "items[5].at.cue",
+          "scene_time_s": 12.39,
+          "absolute_s": 120.45
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "sharing in the money",
+          "label": "items[6].at.cue",
+          "scene_time_s": 13.39,
+          "absolute_s": 121.46
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Liberty's own filings",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.26,
+          "absolute_s": 123.33
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "safety and sporting",
+          "label": "items[7].at.cue",
+          "scene_time_s": 17.99,
+          "absolute_s": 126.05
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_10k_2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 10,
+      "id": "s10_motogp",
+      "segment": "p2_motogp",
+      "type": "engine_cartoon",
+      "start_s": 131.77,
+      "end_s": 142.6,
+      "duration_s": 10.83,
+      "visual_objective": "",
+      "narration": "Liberty has kept building. In 2025, it also bought most of MotoGP, the motorbike championship. Two world series, one owner.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "MotoGP",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.48,
+          "absolute_s": 137.24
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Two world series",
+          "label": "items[3].at.cue",
+          "scene_time_s": 8.27,
+          "absolute_s": 140.04
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_fy2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 11,
+      "id": "s11_p3",
+      "segment": "p3_card",
+      "type": "act_title",
+      "start_s": 142.6,
+      "end_s": 148.0,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 12,
+      "id": "p12_sketch",
+      "segment": "p3_sketch",
+      "type": "engine_draw",
+      "start_s": 148.0,
+      "end_s": 163.8,
+      "duration_s": 15.8,
+      "visual_objective": "",
+      "narration": "Here is the business model, in one drawing. In the middle sits Formula One. Money flows in from broadcasters, from race promoters, and from sponsors. And a large share flows back out again, to the teams.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "In the middle",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.06,
+          "absolute_s": 152.06
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "In the middle",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.06,
+          "absolute_s": 152.06
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "from broadcasters",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 7.49,
+          "absolute_s": 155.49
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "from broadcasters",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 7.79,
+          "absolute_s": 155.79
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "race promoters",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 8.97,
+          "absolute_s": 156.97
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "race promoters",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 9.27,
+          "absolute_s": 157.27
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "from sponsors",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 10.46,
+          "absolute_s": 158.46
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "from sponsors",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 10.76,
+          "absolute_s": 158.76
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "flows back out",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 12.89,
+          "absolute_s": 160.89
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "flows back out",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 13.19,
+          "absolute_s": 161.19
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "to the teams",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 14.49,
+          "absolute_s": 162.49
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_10k_2025",
+        "liberty_fy2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 13,
+      "id": "s13_mix",
+      "segment": "p3_mix",
+      "type": "donut",
+      "start_s": 163.8,
+      "end_s": 180.53,
+      "duration_s": 16.73,
+      "visual_objective": "Allocation arcs sweep one after another; legend counts in",
+      "narration": "Last year, media rights brought in 31 percent of the revenue. Race promotion fees, about 27 percent. Sponsorship, about 22 percent. The rest came from hospitality, freight and licensing.",
+      "keyframes": [
+        {
+          "param": "cue",
+          "cue": "media rights",
+          "label": "cue",
+          "scene_time_s": 1.12,
+          "absolute_s": 164.92
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_10k_2025",
+        "liberty_fy2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 14,
+      "id": "s14_growth",
+      "segment": "p3_growth",
+      "type": "bar_chart",
+      "start_s": 180.53,
+      "end_s": 189.3,
+      "duration_s": 8.77,
+      "visual_objective": "Bars grow in a stagger with counting values",
+      "narration": "And the total keeps climbing, year after year, to 3.9 billion dollars across 24 races.",
+      "keyframes": [
+        {
+          "param": "callout_cue",
+          "cue": "races",
+          "label": "callout_cue",
+          "scene_time_s": 7.74,
+          "absolute_s": 188.27
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_fy2025",
+        "liberty_fy2024"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 15,
+      "id": "s15_p4",
+      "segment": "p4_card",
+      "type": "act_title",
+      "start_s": 189.3,
+      "end_s": 194.7,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 16,
+      "id": "s16_media",
+      "segment": "p4_media",
+      "type": "engine_cartoon",
+      "start_s": 194.7,
+      "end_s": 213.3,
+      "duration_s": 18.6,
+      "visual_objective": "",
+      "narration": "Media rights are the biggest single stream. By our calculation, they were worth about 1.2 billion dollars last year. Broadcasters pay to show every session, and Formula One also sells its own streaming service directly to fans.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "By our calculation",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.1,
+          "absolute_s": 198.8
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "By our calculation",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 4.1,
+          "absolute_s": 198.8
+        },
+        {
+          "param": "items[2].steps[2][0].cue",
+          "cue": "By our calculation",
+          "label": "items[2].steps[2][0].cue",
+          "scene_time_s": 6.6,
+          "absolute_s": 201.3
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Broadcasters pay",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 9.75,
+          "absolute_s": 204.45
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "its own streaming",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.83,
+          "absolute_s": 209.53
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "its own streaming",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.13,
+          "absolute_s": 209.83
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "its own streaming",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.13,
+          "absolute_s": 209.83
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "its own streaming",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 15.13,
+          "absolute_s": 209.83
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_10k_2025",
+        "liberty_fy2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 17,
+      "id": "s17_apple",
+      "segment": "p4_apple",
+      "type": "engine_cartoon",
+      "start_s": 213.3,
+      "end_s": 230.17,
+      "duration_s": 16.87,
+      "visual_objective": "",
+      "narration": "The biggest new deal is in America. Apple is now the sport's exclusive broadcaster in the United States, for five years. The price was never disclosed, but it is reportedly about 140 million dollars a year.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "biggest new deal",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.6,
+          "absolute_s": 213.9
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "exclusive broadcaster",
+          "label": "items[0].at.cue",
+          "scene_time_s": 5.35,
+          "absolute_s": 218.65
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "reportedly",
+          "label": "items[1].at.cue",
+          "scene_time_s": 12.89,
+          "absolute_s": 226.19
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "reportedly",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 12.89,
+          "absolute_s": 226.19
+        },
+        {
+          "param": "items[1].h[2][0].cue",
+          "cue": "reportedly",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 14.89,
+          "absolute_s": 228.19
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "apple_f1_2025",
+        "cnbc_apple_value"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 18,
+      "id": "s18_audience",
+      "segment": "p4_audience",
+      "type": "line_chart",
+      "start_s": 230.17,
+      "end_s": 249.13,
+      "duration_s": 18.97,
+      "visual_objective": "Line chart draws progressively with the narration; event annotations pop on cues",
+      "narration": "Why pay that much? Look at the American audience. On ESPN, the average race drew 554,000 viewers in twenty eighteen. By twenty twenty-five, it was 1.3 million, up 135 percent.",
+      "keyframes": [
+        {
+          "param": "cue",
+          "cue": "On ESPN",
+          "label": "cue",
+          "scene_time_s": 4.52,
+          "absolute_s": 234.69
+        },
+        {
+          "param": "events[0].cue",
+          "cue": "up",
+          "label": "+135% since 2018",
+          "scene_time_s": 16.38,
+          "absolute_s": 246.54
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "espn_2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 19,
+      "id": "s19_p5",
+      "segment": "p5_card",
+      "type": "act_title",
+      "start_s": 249.13,
+      "end_s": 254.53,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 20,
+      "id": "s20_fees",
+      "segment": "p5_fees",
+      "type": "circuit",
+      "start_s": 254.53,
+      "end_s": 275.23,
+      "duration_s": 20.7,
+      "visual_objective": "Fictional circuit draws itself, then cars lap it with trails; markers pop on narration cues",
+      "narration": "The second stream is the hosting fee. Circuits and cities pay Formula One for the right to stage a Grand Prix. Contracts typically run three to seven years, with fees rising by up to 5 percent a year. By our calculation, those fees came to about 1 billion dollars last year.",
+      "keyframes": [
+        {
+          "param": "markers[0].cue",
+          "cue": "Contracts typically",
+          "label": "Typical term",
+          "scene_time_s": 8.49,
+          "absolute_s": 263.02
+        },
+        {
+          "param": "markers[1].cue",
+          "cue": "with fees rising",
+          "label": "Fee increases",
+          "scene_time_s": 11.52,
+          "absolute_s": 266.05
+        },
+        {
+          "param": "markers[2].cue",
+          "cue": "By our calculation",
+          "label": "All fees, 2025 (our calc.)",
+          "scene_time_s": 15.23,
+          "absolute_s": 269.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_10k_2025",
+        "liberty_fy2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 21,
+      "id": "s21_governments",
+      "segment": "p5_governments",
+      "type": "engine_cartoon",
+      "start_s": 275.23,
+      "end_s": 293.77,
+      "duration_s": 18.53,
+      "visual_objective": "",
+      "narration": "The fee for each race is almost never published. But we know who often pays: Liberty says some of its partners are governments. In Singapore, the twenty twenty-two race cost about 100 million dollars to stage, and the government covered 60 percent of it.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "almost never published",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.89,
+          "absolute_s": 277.13
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "In Singapore",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.53,
+          "absolute_s": 284.76
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "In Singapore",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.83,
+          "absolute_s": 285.06
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "In Singapore",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 9.83,
+          "absolute_s": 285.06
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "cost",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.17,
+          "absolute_s": 287.4
+        },
+        {
+          "param": "items[3].h[1][0].cue",
+          "cue": "cost",
+          "label": "items[3].h[1][0].cue",
+          "scene_time_s": 12.17,
+          "absolute_s": 287.4
+        },
+        {
+          "param": "items[3].h[2][0].cue",
+          "cue": "cost",
+          "label": "items[3].h[2][0].cue",
+          "scene_time_s": 14.17,
+          "absolute_s": 289.4
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "government covered",
+          "label": "items[4].at.cue",
+          "scene_time_s": 15.45,
+          "absolute_s": 290.69
+        },
+        {
+          "param": "items[4].h[1][0].cue",
+          "cue": "government covered",
+          "label": "items[4].h[1][0].cue",
+          "scene_time_s": 15.45,
+          "absolute_s": 290.69
+        },
+        {
+          "param": "items[4].h[2][0].cue",
+          "cue": "government covered",
+          "label": "items[4].h[2][0].cue",
+          "scene_time_s": 17.45,
+          "absolute_s": 292.69
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mti_singapore_2023",
+        "fed_h10"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 22,
+      "id": "s22_vegas",
+      "segment": "p5_vegas",
+      "type": "race_track",
+      "start_s": 293.77,
+      "end_s": 312.77,
+      "duration_s": 19.0,
+      "visual_objective": "2.5D trackside: parallax skyline, crowd, placeholder sponsor boards, scrolling kerbs, original cars racing past; headline and value on narration cues",
+      "narration": "Las Vegas is the exception. There, Formula One is its own promoter. It bought land beside the Strip for about 240 million dollars, built a pit building, and keeps the ticket and hospitality money. It takes the reward, and the risk.",
+      "keyframes": [
+        {
+          "param": "kicker_cue",
+          "cue": "Las Vegas",
+          "label": "Las Vegas",
+          "scene_time_s": 0.35,
+          "absolute_s": 294.12
+        },
+        {
+          "param": "title_cue",
+          "cue": "its own promoter",
+          "label": "Las Vegas",
+          "scene_time_s": 4.6,
+          "absolute_s": 298.36
+        },
+        {
+          "param": "value_cue",
+          "cue": "bought land",
+          "label": "Las Vegas",
+          "scene_time_s": 6.55,
+          "absolute_s": 300.31
+        },
+        {
+          "param": "subtitle_cue",
+          "cue": "keeps the ticket",
+          "label": "Las Vegas",
+          "scene_time_s": 12.34,
+          "absolute_s": 306.1
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_10k_2025",
+        "vegas_land_2022"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 23,
+      "id": "s23_p6",
+      "segment": "p6_card",
+      "type": "act_title",
+      "start_s": 312.77,
+      "end_s": 318.17,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 24,
+      "id": "s24_sponsors",
+      "segment": "p6_sponsors",
+      "type": "engine_cartoon",
+      "start_s": 318.17,
+      "end_s": 341.57,
+      "duration_s": 23.4,
+      "visual_objective": "",
+      "narration": "Sponsorship is the third stream, and it is growing fast: about 22 percent of revenue last year, up from less than a fifth the year before. The luxury group LVMH signed a ten-year global partnership. The oil giant Aramco joined earlier, with Formula One promising it an audience of 500 million fans.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "growing fast",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.0,
+          "absolute_s": 321.17
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "up from",
+          "label": "items[4].at.cue",
+          "scene_time_s": 7.21,
+          "absolute_s": 325.38
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "LVMH",
+          "label": "items[5].at.cue",
+          "scene_time_s": 11.94,
+          "absolute_s": 330.11
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Aramco joined",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.23,
+          "absolute_s": 334.4
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Aramco joined",
+          "label": "items[6].at.cue",
+          "scene_time_s": 16.23,
+          "absolute_s": 334.4
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_10k_2025",
+        "f1_lvmh_2024",
+        "f1_aramco_2020"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 25,
+      "id": "s25_hospitality",
+      "segment": "p6_hospitality",
+      "type": "race_track",
+      "start_s": 341.57,
+      "end_s": 355.77,
+      "duration_s": 14.2,
+      "visual_objective": "2.5D trackside: parallax skyline, crowd, placeholder sponsor boards, scrolling kerbs, original cars racing past; headline and value on narration cues",
+      "narration": "Then there is hospitality. In the Paddock Club, corporate guests watch from above the pit lane. Hospitality, freight and licensing together brought in another 787 million dollars.",
+      "keyframes": [
+        {
+          "param": "kicker_cue",
+          "cue": "hospitality",
+          "label": "Hospitality, freight and licensing",
+          "scene_time_s": 1.01,
+          "absolute_s": 342.58
+        },
+        {
+          "param": "title_cue",
+          "cue": "Paddock Club",
+          "label": "Hospitality, freight and licensing",
+          "scene_time_s": 3.11,
+          "absolute_s": 344.68
+        },
+        {
+          "param": "value_cue",
+          "cue": "brought in",
+          "label": "Hospitality, freight and licensing",
+          "scene_time_s": 10.38,
+          "absolute_s": 351.95
+        },
+        {
+          "param": "subtitle_cue",
+          "cue": "another",
+          "label": "Hospitality, freight and licensing",
+          "scene_time_s": 10.87,
+          "absolute_s": 352.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_fy2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 26,
+      "id": "s26_p7",
+      "segment": "p7_card",
+      "type": "act_title",
+      "start_s": 355.77,
+      "end_s": 361.17,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 27,
+      "id": "s27_payments",
+      "segment": "p7_payments",
+      "type": "bar_chart",
+      "start_s": 361.17,
+      "end_s": 379.83,
+      "duration_s": 18.67,
+      "visual_objective": "Bars grow in a stagger with counting values",
+      "narration": "So how do the teams get paid? First, a share of Formula One's profits. Last year, Formula One paid the teams 1.4 billion dollars, about 60 percent of its underlying profit before those payments. And that sum has grown every year.",
+      "keyframes": [
+        {
+          "param": "callout_cue",
+          "cue": "underlying profit",
+          "label": "callout_cue",
+          "scene_time_s": 12.78,
+          "absolute_s": 373.95
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "liberty_fy2025",
+        "liberty_fy2023"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 28,
+      "id": "s28_own",
+      "segment": "p7_own",
+      "type": "engine_cartoon",
+      "start_s": 379.83,
+      "end_s": 400.23,
+      "duration_s": 20.4,
+      "visual_objective": "",
+      "narration": "Second, their own sponsors: the logos on the car, the overalls and the garage. Mercedes, for example, reported revenue of about 810 million dollars in twenty twenty-four, with more than 60 percent of it from sponsorship and licensing. Its profit was about 150 million dollars.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Second",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 380.18
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "their own sponsors",
+          "label": "items[1].at.cue",
+          "scene_time_s": 1.03,
+          "absolute_s": 380.86
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "reported revenue",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.13,
+          "absolute_s": 387.97
+        },
+        {
+          "param": "items[2].h[1][0].cue",
+          "cue": "reported revenue",
+          "label": "items[2].h[1][0].cue",
+          "scene_time_s": 8.13,
+          "absolute_s": 387.97
+        },
+        {
+          "param": "items[2].h[2][0].cue",
+          "cue": "reported revenue",
+          "label": "items[2].h[2][0].cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 389.97
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "sponsorship and licensing",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.89,
+          "absolute_s": 394.72
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Its profit",
+          "label": "items[4].at.cue",
+          "scene_time_s": 17.03,
+          "absolute_s": 396.86
+        },
+        {
+          "param": "items[4].h[1][0].cue",
+          "cue": "Its profit",
+          "label": "items[4].h[1][0].cue",
+          "scene_time_s": 17.03,
+          "absolute_s": 396.86
+        },
+        {
+          "param": "items[4].h[2][0].cue",
+          "cue": "Its profit",
+          "label": "items[4].h[2][0].cue",
+          "scene_time_s": 19.03,
+          "absolute_s": 398.86
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "blackbook_mercedes_2024",
+        "fed_h10"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 29,
+      "id": "p29_pots",
+      "segment": "p7_pots",
+      "type": "engine_draw",
+      "start_s": 400.23,
+      "end_s": 413.07,
+      "duration_s": 12.83,
+      "visual_objective": "",
+      "narration": "So keep three pots of money apart. Formula One's own revenue. The teams' revenue. And the promoters, who pay the hosting fee and sell the tickets.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "three pots",
+          "label": "draw_start.cue",
+          "scene_time_s": 1.08,
+          "absolute_s": 401.31
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "apart",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 2.91,
+          "absolute_s": 403.14
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Formula One's own",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.29,
+          "absolute_s": 404.52
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "The teams' revenue",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.53,
+          "absolute_s": 406.76
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "the promoters",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.34,
+          "absolute_s": 408.57
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the promoters",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 8.64,
+          "absolute_s": 408.87
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "hosting fee",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 10.33,
+          "absolute_s": 410.56
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 30,
+      "id": "s30_p8",
+      "segment": "p8_card",
+      "type": "act_title",
+      "start_s": 413.07,
+      "end_s": 418.47,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 31,
+      "id": "s31_cap",
+      "segment": "p8_cap",
+      "type": "bar_chart",
+      "start_s": 418.47,
+      "end_s": 446.8,
+      "duration_s": 28.33,
+      "visual_objective": "Bars grow in a stagger with counting values",
+      "narration": "For years, the richest teams could simply outspend the rest. So in twenty twenty-one, the sport brought in a cost cap: 145 million dollars that first year, falling to 135 million dollars. From twenty twenty-six, it rises to 215 million dollars, but it now covers far more costs. Driver salaries and the three best-paid executives are still outside it.",
+      "keyframes": [
+        {
+          "param": "callout_cue",
+          "cue": "Driver salaries",
+          "label": "callout_cue",
+          "scene_time_s": 23.07,
+          "absolute_s": 441.54
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "f1_cost_cap_2026"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 32,
+      "id": "s32_breach",
+      "segment": "p8_breach",
+      "type": "engine_cartoon",
+      "start_s": 446.8,
+      "end_s": 461.3,
+      "duration_s": 14.5,
+      "visual_objective": "",
+      "narration": "And the cap has teeth. Red Bull Racing went over its twenty twenty-one limit by 1.6 percent. The penalty: a 7-million-dollar fine, and 10 percent less aerodynamic testing.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "has teeth",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 1.09,
+          "absolute_s": 447.89
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "went over",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 2.9,
+          "absolute_s": 449.7
+        },
+        {
+          "param": "items[3].hits[0].cue",
+          "cue": "The penalty",
+          "label": "items[3].hits[0].cue",
+          "scene_time_s": 8.39,
+          "absolute_s": 455.19
+        },
+        {
+          "param": "items[3].hits[1].cue",
+          "cue": "The penalty",
+          "label": "items[3].hits[1].cue",
+          "scene_time_s": 9.19,
+          "absolute_s": 455.99
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "fine",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.22,
+          "absolute_s": 457.02
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "less aerodynamic",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.12,
+          "absolute_s": 458.92
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fia_rbr_2022",
+        "autosport_rbr_2022"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 33,
+      "id": "s33_values",
+      "segment": "p8_values",
+      "type": "engine_cartoon",
+      "start_s": 461.3,
+      "end_s": 479.6,
+      "duration_s": 18.3,
+      "visual_objective": "",
+      "narration": "With costs capped and income shared, teams have started to look like profitable franchises. Forbes estimates that the average team was worth 3.6 billion dollars last year, with Ferrari on top at 6.5 billion dollars.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "profitable franchises",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 4.83,
+          "absolute_s": 466.13
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "average team",
+          "label": "items[0].at.cue",
+          "scene_time_s": 9.58,
+          "absolute_s": 470.88
+        },
+        {
+          "param": "items[0].h[1][0].cue",
+          "cue": "average team",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 9.58,
+          "absolute_s": 470.88
+        },
+        {
+          "param": "items[0].h[2][0].cue",
+          "cue": "average team",
+          "label": "items[0].h[2][0].cue",
+          "scene_time_s": 11.58,
+          "absolute_s": 472.88
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Ferrari on top",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.17,
+          "absolute_s": 475.47
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "Ferrari on top",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 14.17,
+          "absolute_s": 475.47
+        },
+        {
+          "param": "items[1].h[2][0].cue",
+          "cue": "Ferrari on top",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 16.67,
+          "absolute_s": 477.97
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "forbes_teams_2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 34,
+      "id": "s34_entry",
+      "segment": "p8_entry",
+      "type": "engine_cartoon",
+      "start_s": 479.6,
+      "end_s": 500.03,
+      "duration_s": 20.43,
+      "visual_objective": "",
+      "narration": "That is why a seat at the table is so expensive. When Cadillac was approved as an eleventh team, it reportedly agreed to pay 450 million dollars to the others, more than double the 200 million dollars in the old rules, to make up for sharing the prize money eleven ways.",
+      "keyframes": [
+        {
+          "param": "items[0].x[1][0].cue",
+          "cue": "eleventh team",
+          "label": "items[0].x[1][0].cue",
+          "scene_time_s": 6.88,
+          "absolute_s": 486.48
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "eleventh team",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.88,
+          "absolute_s": 486.48
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "agreed to pay",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.99,
+          "absolute_s": 488.59
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "agreed to pay",
+          "label": "items[3].at.cue",
+          "scene_time_s": 8.99,
+          "absolute_s": 488.59
+        },
+        {
+          "param": "items[0].x[2][0].cue",
+          "cue": "eleventh team",
+          "label": "items[0].x[2][0].cue",
+          "scene_time_s": 9.88,
+          "absolute_s": 489.48
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "more than double",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.76,
+          "absolute_s": 492.36
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "eleven ways",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 19.09,
+          "absolute_s": 498.68
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "f1_cadillac_2025",
+        "theRace_antidilution"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 35,
+      "id": "s35_p9",
+      "segment": "p9_card",
+      "type": "act_title",
+      "start_s": 500.03,
+      "end_s": 505.43,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 36,
+      "id": "s36_fans",
+      "segment": "p9_fans",
+      "type": "engine_cartoon",
+      "start_s": 505.43,
+      "end_s": 522.23,
+      "duration_s": 16.8,
+      "visual_objective": "",
+      "narration": "Why do brands pay so much? Reach, and a changing audience. Formula One says it had 827 million fans last year, up 63 percent since twenty eighteen. And 42 percent of them are women.",
+      "keyframes": [
+        {
+          "param": "items[3].at.cue",
+          "cue": "fans last year",
+          "label": "items[3].at.cue",
+          "scene_time_s": 8.29,
+          "absolute_s": 513.72
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "fans last year",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 8.29,
+          "absolute_s": 513.72
+        },
+        {
+          "param": "items[3].steps[2][0].cue",
+          "cue": "fans last year",
+          "label": "items[3].steps[2][0].cue",
+          "scene_time_s": 10.79,
+          "absolute_s": 516.22
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "since twenty eighteen",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 11.9,
+          "absolute_s": 517.33
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "are women",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.66,
+          "absolute_s": 521.1
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "are women",
+          "label": "items[4].at.cue",
+          "scene_time_s": 15.66,
+          "absolute_s": 521.1
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "f1_2025_numbers"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 37,
+      "id": "s37_why",
+      "segment": "p9_why",
+      "type": "race_track",
+      "start_s": 522.23,
+      "end_s": 537.27,
+      "duration_s": 15.03,
+      "visual_objective": "2.5D trackside: parallax skyline, crowd, placeholder sponsor boards, scrolling kerbs, original cars racing past; headline and value on narration cues",
+      "narration": "For a sponsor, that means a global stage almost every other weekend, a wealthy audience, and a technology story to tell. Aramco's deal, for example, also covered sustainable fuels.",
+      "keyframes": [
+        {
+          "param": "kicker_cue",
+          "cue": "For a sponsor",
+          "label": "What a sponsor buys",
+          "scene_time_s": 0.35,
+          "absolute_s": 522.58
+        },
+        {
+          "param": "title_cue",
+          "cue": "global stage",
+          "label": "What a sponsor buys",
+          "scene_time_s": 2.29,
+          "absolute_s": 524.53
+        },
+        {
+          "param": "value_cue",
+          "cue": "every other weekend",
+          "label": "What a sponsor buys",
+          "scene_time_s": 3.52,
+          "absolute_s": 525.75
+        },
+        {
+          "param": "subtitle_cue",
+          "cue": "technology story",
+          "label": "What a sponsor buys",
+          "scene_time_s": 7.4,
+          "absolute_s": 529.64
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "f1_aramco_2020"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 38,
+      "id": "s38_p10",
+      "segment": "p10_card",
+      "type": "act_title",
+      "start_s": 537.27,
+      "end_s": 542.67,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 39,
+      "id": "s39_netflix",
+      "segment": "p10_netflix",
+      "type": "engine_cartoon",
+      "start_s": 542.67,
+      "end_s": 571.07,
+      "duration_s": 28.4,
+      "visual_objective": "",
+      "narration": "That audience did not grow by accident. In March 2019, Netflix released Drive to Survive, a behind-the-scenes series that turned drivers and team bosses into characters. The new owners pushed into social media and streaming. Then came Hollywood: a racing blockbuster, named after the sport, took more than 630 million dollars at the box office.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Drive to Survive",
+          "label": "items[0].at.cue",
+          "scene_time_s": 7.67,
+          "absolute_s": 550.34
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Drive to Survive",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.67,
+          "absolute_s": 550.34
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Drive to Survive",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.67,
+          "absolute_s": 550.34
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "turned drivers",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 11.16,
+          "absolute_s": 553.82
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "social media",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.84,
+          "absolute_s": 559.51
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Then came Hollywood",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 18.67,
+          "absolute_s": 561.34
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Then came Hollywood",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.97,
+          "absolute_s": 561.64
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Then came Hollywood",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 18.97,
+          "absolute_s": 561.64
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "box office",
+          "label": "items[4].at.cue",
+          "scene_time_s": 27.16,
+          "absolute_s": 569.83
+        },
+        {
+          "param": "items[4].h[1][0].cue",
+          "cue": "box office",
+          "label": "items[4].h[1][0].cue",
+          "scene_time_s": 27.16,
+          "absolute_s": 569.83
+        },
+        {
+          "param": "items[4].h[2][0].cue",
+          "cue": "box office",
+          "label": "items[4].h[2][0].cue",
+          "scene_time_s": 29.16,
+          "absolute_s": 571.83
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "f1_dts_2019",
+        "boxofficemojo_f1",
+        "liberty_close_2017"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 40,
+      "id": "s40_map",
+      "segment": "p10_map",
+      "type": "map",
+      "start_s": 571.07,
+      "end_s": 586.37,
+      "duration_s": 15.3,
+      "visual_objective": "Camera-driven vector map: highlighted countries, animated routes with moving packets, flow arcs with particles, pulsing markers, callouts",
+      "narration": "And the calendar went global. Las Vegas joined, Madrid hosts the Spanish race from twenty twenty-six, and a ten-year deal will take Formula One to Rwanda in the early twenty-thirties.",
+      "keyframes": [
+        {
+          "param": "highlights.USA.cue",
+          "cue": "Las Vegas",
+          "label": "highlights.USA.cue",
+          "scene_time_s": 3.2,
+          "absolute_s": 574.27
+        },
+        {
+          "param": "arcs[0].cue",
+          "cue": "Las Vegas joined",
+          "label": "Las Vegas",
+          "scene_time_s": 3.2,
+          "absolute_s": 574.27
+        },
+        {
+          "param": "highlights.ESP.cue",
+          "cue": "Madrid",
+          "label": "highlights.ESP.cue",
+          "scene_time_s": 4.84,
+          "absolute_s": 575.9
+        },
+        {
+          "param": "arcs[1].cue",
+          "cue": "Madrid hosts",
+          "label": "Madrid (from 2026)",
+          "scene_time_s": 4.84,
+          "absolute_s": 575.9
+        },
+        {
+          "param": "callouts[0].cue",
+          "cue": "deal will take",
+          "label": "Rwanda: new long-term deal",
+          "scene_time_s": 9.8,
+          "absolute_s": 580.87
+        },
+        {
+          "param": "views[1].cue",
+          "cue": "Rwanda",
+          "label": "views[1].cue",
+          "scene_time_s": 12.02,
+          "absolute_s": 583.09
+        },
+        {
+          "param": "highlights.RWA.cue",
+          "cue": "Rwanda",
+          "label": "highlights.RWA.cue",
+          "scene_time_s": 12.02,
+          "absolute_s": 583.09
+        },
+        {
+          "param": "arcs[2].cue",
+          "cue": "Rwanda",
+          "label": "Rwanda (early 2030s)",
+          "scene_time_s": 12.02,
+          "absolute_s": 583.09
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "geo:remotion_world",
+        "font:inter"
+      ],
+      "sources": [
+        "f1_madrid_2024",
+        "f1_rwanda_2026",
+        "liberty_10k_2025",
+        "natural_earth"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 41,
+      "id": "s41_p11",
+      "segment": "p11_card",
+      "type": "act_title",
+      "start_s": 586.37,
+      "end_s": 591.77,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 42,
+      "id": "p42_sketch",
+      "segment": "p11_sketch",
+      "type": "engine_draw",
+      "start_s": 591.77,
+      "end_s": 607.0,
+      "duration_s": 15.23,
+      "visual_objective": "",
+      "narration": "For a host city, a Grand Prix is a deal with two sides. On one side, a global audience, full hotels and a famous name. On the other, the fee, the track, and weeks of disruption.",
+      "keyframes": [
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "two sides",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.2,
+          "absolute_s": 595.97
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "On one side",
+          "label": "draw_start.cue",
+          "scene_time_s": 5.73,
+          "absolute_s": 597.5
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "On one side",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.73,
+          "absolute_s": 597.5
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "global audience",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 6.91,
+          "absolute_s": 598.67
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "full hotels",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 8.09,
+          "absolute_s": 599.85
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "famous name",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 9.29,
+          "absolute_s": 601.06
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "On the other",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 10.71,
+          "absolute_s": 602.48
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "the fee",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 11.89,
+          "absolute_s": 603.66
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "the track",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 12.59,
+          "absolute_s": 604.35
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "disruption",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 14.01,
+          "absolute_s": 605.78
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "disruption",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 606.08
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 43,
+      "id": "s43_costs",
+      "segment": "p11_costs",
+      "type": "engine_cartoon",
+      "start_s": 607.0,
+      "end_s": 627.37,
+      "duration_s": 20.37,
+      "visual_objective": "",
+      "narration": "The bills can be large. The twenty twenty-four Australian Grand Prix cost Victorian taxpayers about 67 million dollars. In Las Vegas, a study paid for by Formula One put the race's economic impact at 934 million dollars, with 45 million dollars in direct taxes.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "bills can be large",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.67,
+          "absolute_s": 607.67
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "Victorian taxpayers",
+          "label": "items[0].at.cue",
+          "scene_time_s": 5.5,
+          "absolute_s": 612.49
+        },
+        {
+          "param": "items[0].h[1][0].cue",
+          "cue": "Victorian taxpayers",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 5.5,
+          "absolute_s": 612.49
+        },
+        {
+          "param": "items[0].h[2][0].cue",
+          "cue": "Victorian taxpayers",
+          "label": "items[0].h[2][0].cue",
+          "scene_time_s": 7.5,
+          "absolute_s": 614.49
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In Las Vegas",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.21,
+          "absolute_s": 616.21
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "economic impact",
+          "label": "items[1].at.cue",
+          "scene_time_s": 13.33,
+          "absolute_s": 620.33
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "economic impact",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 13.33,
+          "absolute_s": 620.33
+        },
+        {
+          "param": "items[1].h[2][0].cue",
+          "cue": "economic impact",
+          "label": "items[1].h[2][0].cue",
+          "scene_time_s": 15.83,
+          "absolute_s": 622.83
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "direct taxes",
+          "label": "items[2].at.cue",
+          "scene_time_s": 18.98,
+          "absolute_s": 625.98
+        },
+        {
+          "param": "items[2].h[1][0].cue",
+          "cue": "direct taxes",
+          "label": "items[2].h[1][0].cue",
+          "scene_time_s": 18.98,
+          "absolute_s": 625.98
+        },
+        {
+          "param": "items[2].h[2][0].cue",
+          "cue": "direct taxes",
+          "label": "items[2].h[2][0].cue",
+          "scene_time_s": 20.98,
+          "absolute_s": 627.98
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "aap_agp_2024",
+        "fed_h10",
+        "lvgp_impact_2024"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 44,
+      "id": "s44_doubt",
+      "segment": "p11_doubt",
+      "type": "engine_cartoon",
+      "start_s": 627.37,
+      "end_s": 653.53,
+      "duration_s": 26.17,
+      "visual_objective": "",
+      "narration": "Economists are sceptical. Independent studies of big sporting events nearly unanimously find that the promised benefits are exaggerated. Victoria's own Auditor-General found that for the twenty oh-five race, the costs exceeded the benefits. And in Las Vegas, local businesses complained of lost trade, until three of the disputes were settled.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Economists are sceptical",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 627.72
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Independent studies",
+          "label": "items[2].at.cue",
+          "scene_time_s": 2.94,
+          "absolute_s": 630.31
+        },
+        {
+          "param": "items[2].stampAt.cue",
+          "cue": "exaggerated",
+          "label": "items[2].stampAt.cue",
+          "scene_time_s": 9.4,
+          "absolute_s": 636.76
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Auditor-General",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.16,
+          "absolute_s": 639.53
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "local businesses",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 20.08,
+          "absolute_s": 647.44
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "local businesses",
+          "label": "items[4].at.cue",
+          "scene_time_s": 20.08,
+          "absolute_s": 647.44
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "matheson_2006",
+        "vago_2007",
+        "vegas_settle_2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 45,
+      "id": "s45_p12",
+      "segment": "p12_card",
+      "type": "act_title",
+      "start_s": 653.53,
+      "end_s": 658.93,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "race"
+    },
+    {
+      "index": 46,
+      "id": "s46_risks",
+      "segment": "p12_risks",
+      "type": "engine_cartoon",
+      "start_s": 658.93,
+      "end_s": 684.1,
+      "duration_s": 25.17,
+      "visual_objective": "",
+      "narration": "The risks are real. This spring, the Bahrain and Saudi Arabian races were called off because of the conflict in the Middle East. Fewer races means less money: in the first half of this year, Formula One's revenue fell 15 percent. Rights groups accuse some hosts of sportswashing. And sponsors cut back in a recession.",
+      "keyframes": [
+        {
+          "param": "items[0].closeAt.cue",
+          "cue": "called off",
+          "label": "items[0].closeAt.cue",
+          "scene_time_s": 6.43,
+          "absolute_s": 665.37
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "called off",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 6.43,
+          "absolute_s": 665.37
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "conflict",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.11,
+          "absolute_s": 667.04
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Fewer races",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.68,
+          "absolute_s": 669.61
+        },
+        {
+          "param": "items[2].crashAt.cue",
+          "cue": "revenue fell",
+          "label": "items[2].crashAt.cue",
+          "scene_time_s": 15.92,
+          "absolute_s": 674.85
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "revenue fell",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.92,
+          "absolute_s": 674.85
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Rights groups",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 677.83
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Rights groups",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 677.83
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "sponsors cut",
+          "label": "items[5].at.cue",
+          "scene_time_s": 22.57,
+          "absolute_s": 681.5
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "gulf_cancel_2026",
+        "liberty_q2_2026",
+        "hrw_2020",
+        "liberty_10k_2025"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 47,
+      "id": "s47_opps",
+      "segment": "p12_opps",
+      "type": "circuit",
+      "start_s": 684.1,
+      "end_s": 707.1,
+      "duration_s": 23.0,
+      "visual_objective": "Fictional circuit draws itself, then cars lap it with trails; markers pop on narration cues",
+      "narration": "But the opportunities are big too. A new American broadcaster. An eleventh team. New markets in Spain and Africa. All the teams signed up to the sport's governance until twenty thirty. And new engines run on sustainable fuel, as Formula One aims for net zero carbon by 2030.",
+      "keyframes": [
+        {
+          "param": "markers[0].cue",
+          "cue": "American broadcaster",
+          "label": "New US broadcaster",
+          "scene_time_s": 3.86,
+          "absolute_s": 687.96
+        },
+        {
+          "param": "markers[1].cue",
+          "cue": "eleventh team",
+          "label": "An 11th team",
+          "scene_time_s": 5.91,
+          "absolute_s": 690.01
+        },
+        {
+          "param": "markers[2].cue",
+          "cue": "New markets",
+          "label": "New markets",
+          "scene_time_s": 7.31,
+          "absolute_s": 691.41
+        },
+        {
+          "param": "markers[3].cue",
+          "cue": "governance",
+          "label": "Governance agreed",
+          "scene_time_s": 12.21,
+          "absolute_s": 696.31
+        },
+        {
+          "param": "markers[4].cue",
+          "cue": "net zero",
+          "label": "Net zero target",
+          "scene_time_s": 19.63,
+          "absolute_s": 703.73
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "apple_f1_2025",
+        "f1_cadillac_2025",
+        "f1_madrid_2024",
+        "f1_rwanda_2026",
+        "f1_concorde_2025",
+        "f1_netzero_2022"
+      ],
+      "transition_out": "race"
+    },
+    {
+      "index": 48,
+      "id": "s48_outro",
+      "segment": "outro",
+      "type": "race_track",
+      "start_s": 707.1,
+      "end_s": 728.8,
+      "duration_s": 21.7,
+      "visual_objective": "2.5D trackside: parallax skyline, crowd, placeholder sponsor boards, scrolling kerbs, original cars racing past; headline and value on narration cues",
+      "narration": "Formula One sells speed. But the real product is attention: hundreds of millions of fans, sold to broadcasters, to cities and to brands. The teams race for points. The business races for the next contract. This was The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "kicker_cue",
+          "cue": "Formula One sells",
+          "label": "The Hidden Economics",
+          "scene_time_s": 0.35,
+          "absolute_s": 707.45
+        },
+        {
+          "param": "title_cue",
+          "cue": "real product",
+          "label": "The Hidden Economics",
+          "scene_time_s": 4.05,
+          "absolute_s": 711.15
+        },
+        {
+          "param": "value_cue",
+          "cue": "attention",
+          "label": "The Hidden Economics",
+          "scene_time_s": 5.22,
+          "absolute_s": 712.32
+        },
+        {
+          "param": "subtitle_cue",
+          "cue": "The teams race",
+          "label": "The Hidden Economics",
+          "scene_time_s": 13.23,
+          "absolute_s": 720.33
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "f1_2025_numbers"
+      ],
+      "transition_out": "end"
+    }
+  ]
+}
