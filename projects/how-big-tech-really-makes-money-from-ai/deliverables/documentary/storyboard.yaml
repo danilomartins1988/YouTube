@@ -78,55 +78,55 @@ scenes:
     drift: 1
     items:
     - kind: sign
-      x: 360
-      y: 330
+      x: 330
+      y: 300
       text: MICROSOFT
       at:
         cue: Microsoft
       color: '#C8E6C9'
-      size: 42
+      size: 64
     - kind: sign
-      x: 760
-      y: 330
+      x: 770
+      y: 300
       text: ALPHABET
       sub: owner of Google
       at:
         cue: Alphabet
       color: '#FFE0B2'
-      size: 42
+      size: 64
     - kind: sign
-      x: 1160
-      y: 330
+      x: 1180
+      y: 300
       text: AMAZON
       at:
         cue: Amazon
       color: '#BBDEFB'
-      size: 42
+      size: 64
     - kind: sign
-      x: 1560
-      y: 330
+      x: 1590
+      y: 300
       text: META
       sub: Facebook · Instagram
       at:
         cue: And Meta
       color: '#E1BEE7'
-      size: 42
+      size: 64
     - kind: isodc
       x: 960
-      y: 720
-      at:
-        cue: Data centers
-      n: 6
-      step: 0.15
+      y: 700
+      at: 0.3
+      n: 9
+      step: 0.25
       cols: 3
-      scale: 0.6
+      scale: 0.75
+      glow: true
     - kind: letters
       x: 960
-      y: 560
+      y: 520
       text: DATA CENTERS + AI CHIPS
       at:
         cue: Much of that money
-      size: 54
+      size: 70
       color: gold
   sources:
   - msft_call
@@ -2126,8 +2126,7 @@ scenes:
         y: 380
         text: THE BACKLOG
         sub: the one number to watch
-        at:
-          cue: The backlog
+        at: 0.3
         w: 440
         size: 54
       - x: 650
@@ -2186,36 +2185,35 @@ scenes:
     items:
     - kind: sign
       x: 480
-      y: 260
+      y: 240
       text: RENT
       at:
         cue: By renting
       color: '#BBDEFB'
-      size: 44
+      size: 64
     - kind: sign
       x: 960
-      y: 260
+      y: 240
       text: ADS
       at:
         cue: by selling better ads
       color: '#FFE0B2'
-      size: 44
+      size: 64
     - kind: sign
       x: 1440
-      y: 260
+      y: 240
       text: LOCK-IN
       at:
         cue: by locking in
       color: '#C8E6C9'
-      size: 44
+      size: 64
     - kind: browser
       x: 960
-      y: 520
-      at:
-        cue: The chatbot is the shop window
+      y: 560
+      at: 0.3
       url: chatbot.example
       page: chat
-      scale: 0.45
+      scale: 0.75
       until:
         cue: The real business
         offset: 0.5

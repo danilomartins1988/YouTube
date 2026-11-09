@@ -49,12 +49,12 @@ stage("s01_open", "h_open", {
 stage("s02_who", "h_who", {
     "zones": [Z("studio", night=True)], "worldW": 1920, "night": True,
     "cam": [{"at": 0, "x": 960, "y": 540, "zoom": 1.0}, {"at": C("Much of that money"), "x": 960, "y": 560, "zoom": 1.08, "dur": 2.0}], "drift": 1,
-    "items": [it("sign", x=360, y=330, text="MICROSOFT", at=C("Microsoft"), color="#C8E6C9", size=42),
-              it("sign", x=760, y=330, text="ALPHABET", sub="owner of Google", at=C("Alphabet"), color="#FFE0B2", size=42),
-              it("sign", x=1160, y=330, text="AMAZON", at=C("Amazon"), color="#BBDEFB", size=42),
-              it("sign", x=1560, y=330, text="META", sub="Facebook · Instagram", at=C("And Meta"), color="#E1BEE7", size=42),
-              it("isodc", x=960, y=720, at=C("Data centers"), n=6, step=0.15, cols=3, scale=0.6),
-              it("letters", x=960, y=560, text="DATA CENTERS + AI CHIPS", at=C("Much of that money"), size=54, color="gold")]},
+    "items": [it("sign", x=330, y=300, text="MICROSOFT", at=C("Microsoft"), color="#C8E6C9", size=64),
+              it("sign", x=770, y=300, text="ALPHABET", sub="owner of Google", at=C("Alphabet"), color="#FFE0B2", size=64),
+              it("sign", x=1180, y=300, text="AMAZON", at=C("Amazon"), color="#BBDEFB", size=64),
+              it("sign", x=1590, y=300, text="META", sub="Facebook · Instagram", at=C("And Meta"), color="#E1BEE7", size=64),
+              it("isodc", x=960, y=700, at=0.3, n=9, step=0.25, cols=3, scale=0.75, glow=True),
+              it("letters", x=960, y=520, text="DATA CENTERS + AI CHIPS", at=C("Much of that money"), size=70, color="gold")]},
     sources=["msft_call"])
 stage("s03_question", "h_question", {
     "zones": [Z("web")], "worldW": 2400,
@@ -298,7 +298,7 @@ stage("s37_number", "m5_number", {
     "zones": [Z("corkboard")], "worldW": 2200,
     "cam": [{"at": 0, "x": 1100, "y": 470, "zoom": 1.25}, {"at": C("As long as"), "x": 1100, "y": 480, "zoom": 1.0, "dur": 1.8}], "drift": 1,
     "items": [it("pinboard", cards=[
-                {"x": 1100, "y": 380, "text": "THE BACKLOG", "sub": "the one number to watch", "at": C("The backlog"), "w": 440, "size": 54},
+                {"x": 1100, "y": 380, "text": "THE BACKLOG", "sub": "the one number to watch", "at": 0.3, "w": 440, "size": 54},
                 {"x": 650, "y": 650, "text": "GROWS → BET PAYS", "at": C("As long as"), "w": 380, "color": "#C8E6C9", "size": 34},
                 {"x": 1550, "y": 650, "text": "STALLS → EMPTY ROOMS", "at": C("If the backlog stops"), "w": 420, "color": "#FFCDD2", "size": 32}],
               links=[[0, 1, C("As long as", 0.4)], [0, 2, C("If the backlog stops", 0.4)]])]},
@@ -308,10 +308,10 @@ stage("s37_number", "m5_number", {
 stage("s38_payoff", "payoff", {
     "zones": [Z("studio", night=True)], "worldW": 1920, "night": True,
     "cam": [{"at": 0, "x": 960, "y": 540, "zoom": 1.15}, {"at": C("The chatbot is the shop window"), "x": 960, "y": 600, "zoom": 0.95, "dur": 3.0}], "drift": 0,
-    "items": [it("sign", x=480, y=260, text="RENT", at=C("By renting"), color="#BBDEFB", size=44),
-              it("sign", x=960, y=260, text="ADS", at=C("by selling better ads"), color="#FFE0B2", size=44),
-              it("sign", x=1440, y=260, text="LOCK-IN", at=C("by locking in"), color="#C8E6C9", size=44),
-              it("browser", x=960, y=520, at=C("The chatbot is the shop window"), url="chatbot.example", page="chat", scale=0.45, until=C("The real business", 0.5)),
+    "items": [it("sign", x=480, y=240, text="RENT", at=C("By renting"), color="#BBDEFB", size=64),
+              it("sign", x=960, y=240, text="ADS", at=C("by selling better ads"), color="#FFE0B2", size=64),
+              it("sign", x=1440, y=240, text="LOCK-IN", at=C("by locking in"), color="#C8E6C9", size=64),
+              it("browser", x=960, y=560, at=0.3, url="chatbot.example", page="chat", scale=0.75, until=C("The real business", 0.5)),
               it("isodc", x=960, y=720, at=C("The real business"), n=9, step=0.1, cols=3, scale=0.75, glow=True)]})
 add("s39_end", "teaser", "end_card", {"words": ["Next time:", "another hidden link of the world economy"], "brand": "The Hidden Economics",
     "teaser": "Every figure in this film is sourced in the description", "brand_cue": {"cue": "This is The Hidden Economics"}})
