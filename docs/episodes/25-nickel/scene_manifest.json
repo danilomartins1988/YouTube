@@ -1,0 +1,2161 @@
+{
+  "slug": "the-metal-trade-that-broke-a-billion-dollar-market",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_hook",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 9.37,
+      "duration_s": 9.37,
+      "visual_objective": "",
+      "narration": "What happens when the price of a metal doubles in a single morning, and the market where it trades decides that none of it happened?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What happens",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 0.35
+        },
+        {
+          "param": "items[0].haltAt.cue",
+          "cue": "decides that none",
+          "label": "items[0].haltAt.cue",
+          "scene_time_s": 6.86,
+          "absolute_s": 6.86
+        },
+        {
+          "param": "items[0].cancelAt.cue",
+          "cue": "decides that none",
+          "label": "items[0].cancelAt.cue",
+          "scene_time_s": 7.76,
+          "absolute_s": 7.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 9.37,
+      "end_s": 14.37,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s02_stakes",
+      "segment": "h_stakes",
+      "type": "engine_cartoon",
+      "start_s": 14.37,
+      "end_s": 45.53,
+      "duration_s": 31.17,
+      "visual_objective": "",
+      "narration": "In March twenty twenty-two, it happened in London. The price of nickel, a metal used in stainless steel and batteries, shot past one hundred and one thousand three hundred and sixty-five dollars a tonne. The London Metal Exchange suspended trading. Then it cancelled every trade made that morning, worth about thirteen point four billion dollars. Some traders lost fortunes they thought they had made. Others were saved from ruin.",
+      "keyframes": [
+        {
+          "param": "items[0].price[1][0].cue",
+          "cue": "shot past",
+          "label": "items[0].price[1][0].cue",
+          "scene_time_s": 7.61,
+          "absolute_s": 21.97
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "shot past",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 9.61,
+          "absolute_s": 23.97
+        },
+        {
+          "param": "items[0].price[2][0].cue",
+          "cue": "shot past",
+          "label": "items[0].price[2][0].cue",
+          "scene_time_s": 10.61,
+          "absolute_s": 24.97
+        },
+        {
+          "param": "items[0].haltAt.cue",
+          "cue": "suspended trading",
+          "label": "items[0].haltAt.cue",
+          "scene_time_s": 17.08,
+          "absolute_s": 31.45
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Then it cancelled",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 18.45,
+          "absolute_s": 32.82
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Then it cancelled",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.75,
+          "absolute_s": 33.12
+        },
+        {
+          "param": "items[0].cancelAt.cue",
+          "cue": "Then it cancelled",
+          "label": "items[0].cancelAt.cue",
+          "scene_time_s": 18.75,
+          "absolute_s": 33.12
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Then it cancelled",
+          "label": "items[1].at.cue",
+          "scene_time_s": 18.75,
+          "absolute_s": 33.12
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Then it cancelled",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 18.75,
+          "absolute_s": 33.12
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "worth",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 22.93,
+          "absolute_s": 37.29
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Some traders lost",
+          "label": "items[2].at.cue",
+          "scene_time_s": 25.29,
+          "absolute_s": 39.66
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Some traders lost",
+          "label": "items[3].at.cue",
+          "scene_time_s": 25.29,
+          "absolute_s": 39.66
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Others were saved",
+          "label": "items[4].at.cue",
+          "scene_time_s": 28.82,
+          "absolute_s": 43.19
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Others were saved",
+          "label": "items[5].at.cue",
+          "scene_time_s": 28.82,
+          "absolute_s": 43.19
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s03_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 45.53,
+      "end_s": 50.93,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s04_q1",
+      "segment": "m1_question",
+      "type": "engine_cartoon",
+      "start_s": 50.93,
+      "end_s": 59.93,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Who sets the price of the world's metals?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Who sets",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 51.28
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s05_lme",
+      "segment": "m1_lme",
+      "type": "engine_cartoon",
+      "start_s": 59.93,
+      "end_s": 93.1,
+      "duration_s": 33.17,
+      "visual_objective": "",
+      "narration": "For most of the metals in your phone, your car or your kitchen sink, a key price is set in London. The London Metal Exchange trades contracts to deliver copper, aluminium, nickel and other metals, usually three months ahead. Miners, factories and traders use those contracts to protect themselves against price swings. And the market runs almost around the clock, with seven of its nineteen trading hours handled overnight from Hong Kong.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "For most of the metals",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 60.28
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "your phone",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.29,
+          "absolute_s": 62.22
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "your car",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.09,
+          "absolute_s": 63.03
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The London Metal Exchange trades",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.44,
+          "absolute_s": 68.37
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Miners, factories",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.89,
+          "absolute_s": 77.82
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Miners, factories",
+          "label": "items[3].at.cue",
+          "scene_time_s": 17.89,
+          "absolute_s": 77.82
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Miners, factories",
+          "label": "items[4].at.cue",
+          "scene_time_s": 17.89,
+          "absolute_s": 77.82
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Miners, factories",
+          "label": "items[5].at.cue",
+          "scene_time_s": 17.89,
+          "absolute_s": 77.82
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "And the market runs",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 24.9,
+          "absolute_s": 84.83
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "And the market runs",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 25.2,
+          "absolute_s": 85.13
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "And the market runs",
+          "label": "items[6].at.cue",
+          "scene_time_s": 25.2,
+          "absolute_s": 85.13
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "And the market runs",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 25.2,
+          "absolute_s": 85.13
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "handled overnight",
+          "label": "items[7].at.cue",
+          "scene_time_s": 30.73,
+          "absolute_s": 90.66
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "p06_short",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 93.1,
+      "end_s": 125.6,
+      "duration_s": 32.5,
+      "visual_objective": "",
+      "narration": "Let me draw how a short position works. A company that will sell nickel in the future agrees today to deliver it at a fixed price. That is a short. If the price falls, it wins. If the price rises, it loses, and the exchange asks it to put up more cash every day to cover the loss. That cash is called margin. And if the price rises fast enough, the margin calls can grow faster than anyone can pay.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "A company that will sell",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.83,
+          "absolute_s": 96.93
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "A company that will sell",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.83,
+          "absolute_s": 96.93
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "If the price rises",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 15.27,
+          "absolute_s": 108.37
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "the exchange asks it",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 18.04,
+          "absolute_s": 111.14
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "to put up more cash",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 19.32,
+          "absolute_s": 112.42
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "faster than anyone can pay",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 30.25,
+          "absolute_s": 123.35
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "faster than anyone can pay",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 30.45,
+          "absolute_s": 123.55
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s07_short",
+      "segment": "m1_short",
+      "type": "engine_cartoon",
+      "start_s": 125.6,
+      "end_s": 151.67,
+      "duration_s": 26.07,
+      "visual_objective": "",
+      "narration": "In early twenty twenty-two, there was a very large short in nickel. According to the claimants in the later court case, it was built up by companies within Tsingshan, a Chinese industrial user of nickel. And much of it was held not on the exchange itself, but in private deals between banks and traders, called the over the counter market. The exchange could not see it.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In early",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 125.95
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "a very large short",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.17,
+          "absolute_s": 128.77
+        },
+        {
+          "param": "items[0].h[1][0].cue",
+          "cue": "a very large short",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 5.17,
+          "absolute_s": 130.77
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Tsingshan",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.05,
+          "absolute_s": 136.66
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And much of it",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.76,
+          "absolute_s": 140.36
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "private deals",
+          "label": "items[2].at.cue",
+          "scene_time_s": 18.32,
+          "absolute_s": 143.92
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The exchange could not see it",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 23.12,
+          "absolute_s": 148.72
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "The exchange could not see it",
+          "label": "items[3].at.cue",
+          "scene_time_s": 23.42,
+          "absolute_s": 149.02
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The exchange could not see it",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 23.42,
+          "absolute_s": 149.02
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "could not see it",
+          "label": "items[4].at.cue",
+          "scene_time_s": 24.34,
+          "absolute_s": 149.94
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "highcourt",
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s08_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 151.67,
+      "end_s": 164.0,
+      "duration_s": 12.33,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Then, at the end of February, Russia invaded Ukraine. And as one of the exchange's own board members would note, Russia is a large global producer of nickel.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Russia invaded Ukraine",
+          "label": "Then Russia invaded Ukraine",
+          "scene_time_s": 2.86,
+          "absolute_s": 154.53
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "a large global producer",
+          "label": "…and Russia produces nickel",
+          "scene_time_s": 9.49,
+          "absolute_s": 161.16
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s09_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 164.0,
+      "end_s": 169.4,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s10_q2",
+      "segment": "m2_question",
+      "type": "engine_cartoon",
+      "start_s": 169.4,
+      "end_s": 178.4,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "What happens when everyone who bet on a fall has to buy at once?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What happens",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 169.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_friday",
+      "segment": "m2_friday",
+      "type": "engine_cartoon",
+      "start_s": 178.4,
+      "end_s": 207.63,
+      "duration_s": 29.23,
+      "visual_objective": "",
+      "narration": "The pressure built over a few days. On Friday, March fourth, the exchange's clearing house asked its members for a record three point five billion dollars in extra margin. On Monday morning, it asked for another five point one billion dollars, a new record. By the end of Monday, nickel had jumped by sixty-six percent in a single day, to forty-eight thousand and seventy-five dollars a tonne.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "On Friday",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.68,
+          "absolute_s": 182.08
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "asked its members",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.9,
+          "absolute_s": 185.3
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "in extra margin",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 11.62,
+          "absolute_s": 190.03
+        },
+        {
+          "param": "items[0].pages[1][0].cue",
+          "cue": "On Monday morning",
+          "label": "items[0].pages[1][0].cue",
+          "scene_time_s": 12.06,
+          "absolute_s": 190.46
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "On Monday morning",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.06,
+          "absolute_s": 190.46
+        },
+        {
+          "param": "items[2].h[1][0].cue",
+          "cue": "a new record",
+          "label": "items[2].h[1][0].cue",
+          "scene_time_s": 17.83,
+          "absolute_s": 196.23
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "By the end of Monday",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 18.45,
+          "absolute_s": 196.85
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "By the end of Monday",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.75,
+          "absolute_s": 197.15
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "By the end of Monday",
+          "label": "items[3].at.cue",
+          "scene_time_s": 18.75,
+          "absolute_s": 197.15
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "By the end of Monday",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 18.75,
+          "absolute_s": 197.15
+        },
+        {
+          "param": "items[3].price[1][0].cue",
+          "cue": "jumped by",
+          "label": "items[3].price[1][0].cue",
+          "scene_time_s": 23.36,
+          "absolute_s": 201.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_monday",
+      "segment": "m2_monday",
+      "type": "engine_cartoon",
+      "start_s": 207.63,
+      "end_s": 239.17,
+      "duration_s": 31.53,
+      "visual_objective": "",
+      "narration": "Inside the exchange, people were alarmed. By two in the afternoon on Monday, the clearing house had called more than seven point four billion dollars from its members that day, and one manager warned in an email that the calls were adding to the stress. A board member wrote that they did not understand why nickel was up sixty-six percent while aluminium was down three, when Russia produced both. Another described the metals markets to the British Treasury as in total disarray.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "By two in the afternoon",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.72,
+          "absolute_s": 211.35
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "By two in the afternoon",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.72,
+          "absolute_s": 211.35
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "from its members that day",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 10.55,
+          "absolute_s": 218.19
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "one manager warned",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.85,
+          "absolute_s": 219.48
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "A board member wrote",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 16.7,
+          "absolute_s": 224.33
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A board member wrote",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 224.63
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "A board member wrote",
+          "label": "items[2].at.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 224.63
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Another described",
+          "label": "items[3].at.cue",
+          "scene_time_s": 26.35,
+          "absolute_s": 233.98
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Another described",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 26.35,
+          "absolute_s": 233.98
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_night",
+      "segment": "m2_night",
+      "type": "engine_cartoon",
+      "start_s": 239.17,
+      "end_s": 263.8,
+      "duration_s": 24.63,
+      "visual_objective": "",
+      "narration": "Then came the night. Trading reopened in the early hours of Tuesday, London time, run from Hong Kong. The exchange had automatic limits, called price bands, to stop prices moving too fast. But at four forty-nine in the morning, they were switched off. For more than three hours, there was no automatic brake at all.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Then came the night",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 239.52
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Trading reopened",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.43,
+          "absolute_s": 241.6
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "run from Hong Kong",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.02,
+          "absolute_s": 246.19
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "But at four forty-nine",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.46,
+          "absolute_s": 254.63
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But at four forty-nine",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.76,
+          "absolute_s": 254.93
+        },
+        {
+          "param": "items[1].price[1][0].cue",
+          "cue": "But at four forty-nine",
+          "label": "items[1].price[1][0].cue",
+          "scene_time_s": 15.76,
+          "absolute_s": 254.93
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "But at four forty-nine",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 15.76,
+          "absolute_s": 254.93
+        },
+        {
+          "param": "items[1].bandsOffAt.cue",
+          "cue": "they were switched off",
+          "label": "items[1].bandsOffAt.cue",
+          "scene_time_s": 18.0,
+          "absolute_s": 257.16
+        },
+        {
+          "param": "items[1].price[2][0].cue",
+          "cue": "For more than three hours",
+          "label": "items[1].price[2][0].cue",
+          "scene_time_s": 22.68,
+          "absolute_s": 261.85
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_peak",
+      "segment": "m2_peak",
+      "type": "engine_cartoon",
+      "start_s": 263.8,
+      "end_s": 292.03,
+      "duration_s": 28.23,
+      "visual_objective": "",
+      "narration": "Without the brake, the price ran. From sixty thousand to seventy thousand dollars in under an hour. Then, in just twenty-four minutes, from seventy thousand to one hundred and one thousand three hundred and sixty-five dollars. The price had doubled since the close of the day before. In London, a board member of the exchange woke up around half past five, checked the prices, and saw the numbers.",
+      "keyframes": [
+        {
+          "param": "toneShift.at.cue",
+          "cue": "Without the brake",
+          "label": "toneShift.at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 264.15
+        },
+        {
+          "param": "items[0].price[1][0].cue",
+          "cue": "in under an hour",
+          "label": "items[0].price[1][0].cue",
+          "scene_time_s": 6.44,
+          "absolute_s": 270.24
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Then, in just",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.14,
+          "absolute_s": 271.94
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Then, in just",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 8.14,
+          "absolute_s": 271.94
+        },
+        {
+          "param": "items[0].price[2][0].cue",
+          "cue": "from seventy thousand to",
+          "label": "items[0].price[2][0].cue",
+          "scene_time_s": 12.85,
+          "absolute_s": 276.65
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "In London",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 19.6,
+          "absolute_s": 283.4
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In London",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 19.9,
+          "absolute_s": 283.7
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "In London",
+          "label": "items[2].at.cue",
+          "scene_time_s": 19.9,
+          "absolute_s": 283.7
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "In London",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 19.9,
+          "absolute_s": 283.7
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "woke up",
+          "label": "items[3].at.cue",
+          "scene_time_s": 22.93,
+          "absolute_s": 286.74
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "p15_morning",
+      "segment": "m2_draw",
+      "type": "engine_draw",
+      "start_s": 292.03,
+      "end_s": 320.07,
+      "duration_s": 28.03,
+      "visual_objective": "",
+      "narration": "Let me draw the morning of March eighth. Here is the price on Friday. Here is Monday's close, sixty-six percent higher. And here is the early hours of Tuesday, climbing to more than one hundred thousand dollars. Now look at the bars underneath. The margin calls. Three and a half billion on Friday. Five billion on Monday. And on Tuesday morning, almost twenty billion.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is the price on Friday",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.72,
+          "absolute_s": 295.75
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is the price on Friday",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.72,
+          "absolute_s": 295.75
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Here is the price on Friday",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.12,
+          "absolute_s": 296.15
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Now look at the bars",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 16.45,
+          "absolute_s": 308.48
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Three and a half billion",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 20.37,
+          "absolute_s": 312.4
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Five billion on Monday",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 22.58,
+          "absolute_s": 314.61
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "almost twenty billion",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 26.09,
+          "absolute_s": 318.12
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "almost twenty billion",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 26.29,
+          "absolute_s": 318.32
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 320.07,
+      "end_s": 329.0,
+      "duration_s": 8.93,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "At seven thirty in the morning, the exchange's managers met. They had less than an hour to decide.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "At seven thirty",
+          "label": "7:30am. The managers meet.",
+          "scene_time_s": 0.35,
+          "absolute_s": 320.42
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "less than an hour",
+          "label": "Less than an hour to decide",
+          "scene_time_s": 6.45,
+          "absolute_s": 326.51
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 329.0,
+      "end_s": 334.4,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_q3",
+      "segment": "m3_question",
+      "type": "engine_cartoon",
+      "start_s": 334.4,
+      "end_s": 343.4,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Can a market just decide that trades never happened?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Can a market",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 334.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_calls",
+      "segment": "m3_calls",
+      "type": "engine_cartoon",
+      "start_s": 343.4,
+      "end_s": 365.97,
+      "duration_s": 22.57,
+      "visual_objective": "",
+      "narration": "The numbers on the table were frightening. That morning's margin calls on nickel totalled nineteen point seven billion dollars. According to the regulator, calls on that scale were likely to push several members of the exchange into default. And when a member defaults, the losses can spread through the clearing house to everyone else.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "That morning's margin calls",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.4,
+          "absolute_s": 346.8
+        },
+        {
+          "param": "items[1].openAt.cue",
+          "cue": "That morning's margin calls",
+          "label": "items[1].openAt.cue",
+          "scene_time_s": 3.4,
+          "absolute_s": 346.8
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "That morning's margin calls",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.4,
+          "absolute_s": 346.8
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "totalled",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 6.39,
+          "absolute_s": 349.79
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "And when a member defaults",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 16.02,
+          "absolute_s": 359.42
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And when a member defaults",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.32,
+          "absolute_s": 359.72
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And when a member defaults",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.32,
+          "absolute_s": 359.72
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "And when a member defaults",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.32,
+          "absolute_s": 359.72
+        },
+        {
+          "param": "items[2].fallAt.cue",
+          "cue": "the losses can spread",
+          "label": "items[2].fallAt.cue",
+          "scene_time_s": 18.3,
+          "absolute_s": 361.71
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_suspend",
+      "segment": "m3_suspend",
+      "type": "engine_cartoon",
+      "start_s": 365.97,
+      "end_s": 388.93,
+      "duration_s": 22.97,
+      "visual_objective": "",
+      "narration": "At eight fifteen, the exchange suspended nickel trading. Later that day, it went further. It cancelled every nickel trade made since midnight, worth about thirteen point four billion dollars. The market stayed shut for more than a week, and reopened on March sixteenth. Night trading from Asia did not return for a whole year.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "At eight fifteen",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 366.32
+        },
+        {
+          "param": "items[0].haltAt.cue",
+          "cue": "suspended nickel trading",
+          "label": "items[0].haltAt.cue",
+          "scene_time_s": 2.35,
+          "absolute_s": 368.32
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "It cancelled every",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 6.96,
+          "absolute_s": 372.93
+        },
+        {
+          "param": "items[0].cancelAt.cue",
+          "cue": "It cancelled every",
+          "label": "items[0].cancelAt.cue",
+          "scene_time_s": 7.26,
+          "absolute_s": 373.23
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "It cancelled every",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 7.26,
+          "absolute_s": 373.23
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The market stayed shut",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.39,
+          "absolute_s": 380.36
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "The market stayed shut",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.39,
+          "absolute_s": 380.36
+        },
+        {
+          "param": "items[1].pages[1][0].cue",
+          "cue": "reopened on",
+          "label": "items[1].pages[1][0].cue",
+          "scene_time_s": 17.22,
+          "absolute_s": 383.19
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Night trading from Asia",
+          "label": "items[2].at.cue",
+          "scene_time_s": 19.3,
+          "absolute_s": 385.27
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_rewind",
+      "segment": "m3_rewind",
+      "type": "engine_cartoon",
+      "start_s": 388.93,
+      "end_s": 407.73,
+      "duration_s": 18.8,
+      "visual_objective": "",
+      "narration": "The exchange chose midnight as the cut-off, not the moment the brakes came off. Everything traded from the start of the day was wiped out, as if the morning had never happened. And the billions in margin that the morning's prices had created simply disappeared with it.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The exchange chose midnight",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 389.28
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Everything traded",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 6.06,
+          "absolute_s": 394.99
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Everything traded",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 6.36,
+          "absolute_s": 395.29
+        },
+        {
+          "param": "items[1].cancelAt.cue",
+          "cue": "was wiped out",
+          "label": "items[1].cancelAt.cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 397.67
+        },
+        {
+          "param": "items[1].haltAt.cue",
+          "cue": "was wiped out",
+          "label": "items[1].haltAt.cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 397.67
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And the billions",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.73,
+          "absolute_s": 401.66
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And the billions",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.73,
+          "absolute_s": 401.66
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_winners",
+      "segment": "m3_winners",
+      "type": "engine_cartoon",
+      "start_s": 407.73,
+      "end_s": 434.27,
+      "duration_s": 26.53,
+      "visual_objective": "",
+      "narration": "Think about what that meant. A trader who had sold nickel at one hundred thousand dollars that morning suddenly had no trade at all. And a company caught short, facing billions in losses, was suddenly spared the worst prices of the day. The cancellation saved the market from a chain of defaults. But it also took real profits away from people who had done nothing wrong.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "A trader who had sold",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.76,
+          "absolute_s": 410.49
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "A trader who had sold",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.76,
+          "absolute_s": 410.49
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "A trader who had sold",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.76,
+          "absolute_s": 410.49
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "suddenly had no trade",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.4,
+          "absolute_s": 415.13
+        },
+        {
+          "param": "items[2].stampAt.cue",
+          "cue": "no trade at all",
+          "label": "items[2].stampAt.cue",
+          "scene_time_s": 8.37,
+          "absolute_s": 416.11
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "And a company caught short",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.83,
+          "absolute_s": 417.56
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And a company caught short",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 417.86
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And a company caught short",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 417.86
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "And a company caught short",
+          "label": "items[4].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 417.86
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "And a company caught short",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 417.86
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "But it also took",
+          "label": "items[5].at.cue",
+          "scene_time_s": 21.92,
+          "absolute_s": 429.65
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 434.27,
+      "end_s": 437.73,
+      "duration_s": 3.47,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Some of those people went to court.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Some of those people",
+          "label": "Some of those people",
+          "scene_time_s": 0.35,
+          "absolute_s": 434.62
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "went to court",
+          "label": "went to court",
+          "scene_time_s": 1.99,
+          "absolute_s": 436.26
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 437.73,
+      "end_s": 443.13,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_q4",
+      "segment": "m4_question",
+      "type": "engine_cartoon",
+      "start_s": 443.13,
+      "end_s": 452.13,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Was it legal to erase the trades?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Was it legal",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 443.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_claims",
+      "segment": "m4_claims",
+      "type": "engine_cartoon",
+      "start_s": 452.13,
+      "end_s": 477.2,
+      "duration_s": 25.07,
+      "visual_objective": "",
+      "narration": "The American hedge fund Elliott said the cancellation had cost it about four hundred and fifty-six million dollars in profits. The trading firm Jane Street put its loss at about fifteen million dollars. They argued that the market had not been disorderly at all, that the price was simply the result of a squeeze on traders like Tsingshan, and that the exchange had acted unlawfully.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "The American hedge fund",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 452.48
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The American hedge fund",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 452.48
+        },
+        {
+          "param": "items[0].h[1][0].cue",
+          "cue": "in profits",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 7.9,
+          "absolute_s": 460.03
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "The trading firm",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.43,
+          "absolute_s": 460.56
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "put its loss at",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 11.39,
+          "absolute_s": 463.53
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "They argued",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.54,
+          "absolute_s": 465.67
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "They argued",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.84,
+          "absolute_s": 465.97
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "They argued",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.84,
+          "absolute_s": 465.97
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "They argued",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 13.84,
+          "absolute_s": 465.97
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "highcourt"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_rulings",
+      "segment": "m4_rulings",
+      "type": "engine_cartoon",
+      "start_s": 477.2,
+      "end_s": 501.6,
+      "duration_s": 24.4,
+      "visual_objective": "",
+      "narration": "In November twenty twenty-three, the High Court in London disagreed, and dismissed the case. The traders had signed up to the exchange's rules, and those rules gave it the power to cancel trades. In October twenty twenty-four, the Court of Appeal upheld that decision. The cancellation, the courts found, had been lawful.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In November",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 477.55
+        },
+        {
+          "param": "items[1].hits[0].cue",
+          "cue": "dismissed the case",
+          "label": "items[1].hits[0].cue",
+          "scene_time_s": 6.09,
+          "absolute_s": 483.29
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "In October",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.81,
+          "absolute_s": 492.01
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In October",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.11,
+          "absolute_s": 492.31
+        },
+        {
+          "param": "items[0].pages[1][0].cue",
+          "cue": "In October",
+          "label": "items[0].pages[1][0].cue",
+          "scene_time_s": 15.11,
+          "absolute_s": 492.31
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "In October",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 15.11,
+          "absolute_s": 492.31
+        },
+        {
+          "param": "items[1].hits[1].cue",
+          "cue": "upheld that decision",
+          "label": "items[1].hits[1].cue",
+          "scene_time_s": 18.62,
+          "absolute_s": 495.82
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The cancellation, the courts found",
+          "label": "items[2].at.cue",
+          "scene_time_s": 20.49,
+          "absolute_s": 497.69
+        },
+        {
+          "param": "items[2].stampAt.cue",
+          "cue": "had been lawful",
+          "label": "items[2].stampAt.cue",
+          "scene_time_s": 22.92,
+          "absolute_s": 500.12
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "highcourt",
+        "freshfields"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "p28_dilemma",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 501.6,
+      "end_s": 529.87,
+      "duration_s": 28.27,
+      "visual_objective": "",
+      "narration": "Let me draw the dilemma the exchange faced. Option one, let the trades stand. Then several members might default, and the damage could spread through the whole clearing system. Option two, cancel the trades. The system survives, but some traders lose money that they had fairly won. The arrow from each option leads to a loser. The exchange chose the loser it thought the market could survive.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Option one",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.74,
+          "absolute_s": 505.34
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Option one",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.74,
+          "absolute_s": 505.34
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Then several members",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 7.03,
+          "absolute_s": 508.63
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "several members might default",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 508.83
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Option two",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 12.66,
+          "absolute_s": 514.26
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "The system survives",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 15.83,
+          "absolute_s": 517.43
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "some traders lose money",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 17.58,
+          "absolute_s": 519.18
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "The exchange chose",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 24.38,
+          "absolute_s": 525.98
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "The exchange chose",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 24.58,
+          "absolute_s": 526.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca",
+        "highcourt"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 529.87,
+      "end_s": 538.4,
+      "duration_s": 8.53,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "The courts said the decision was lawful. The regulator asked a different question. How did it get that far?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "the decision was lawful",
+          "label": "The decision was lawful",
+          "scene_time_s": 1.11,
+          "absolute_s": 530.98
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "How did it get that far",
+          "label": "But how did it get that far?",
+          "scene_time_s": 6.46,
+          "absolute_s": 536.33
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 538.4,
+      "end_s": 543.8,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_q5",
+      "segment": "m5_question",
+      "type": "engine_cartoon",
+      "start_s": 543.8,
+      "end_s": 552.8,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Who was responsible for the chaos?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Who was responsible",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 544.15
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_fca",
+      "segment": "m5_fca",
+      "type": "engine_cartoon",
+      "start_s": 552.8,
+      "end_s": 568.43,
+      "duration_s": 15.63,
+      "visual_objective": "",
+      "narration": "In March twenty twenty-five, Britain's Financial Conduct Authority fined the London Metal Exchange about twelve million dollars. It found that the exchange's policies, controls and training had not prepared it for extreme volatility.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In March",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 553.15
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "fined the London Metal Exchange",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.64,
+          "absolute_s": 557.44
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "fined the London Metal Exchange",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 6.14,
+          "absolute_s": 558.94
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "It found",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.37,
+          "absolute_s": 561.17
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "It found",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.67,
+          "absolute_s": 561.47
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "It found",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.67,
+          "absolute_s": 561.47
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "It found",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 8.67,
+          "absolute_s": 561.47
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca",
+        "fred_gbp"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_philosophy",
+      "segment": "m5_philosophy",
+      "type": "engine_cartoon",
+      "start_s": 568.43,
+      "end_s": 596.8,
+      "duration_s": 28.37,
+      "visual_objective": "",
+      "narration": "The regulator also described the culture behind the decisions. The prevailing philosophy at the exchange, it said, was that trading should not be restricted even in times of extreme volatility, unless the market became disorderly. Its price bands had been designed mainly to catch mistakes, a fat finger on a keyboard or a rogue computer program. Not a real squeeze, in the middle of the night, with billions at stake.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "The prevailing philosophy",
+          "label": "items[0].at.cue",
+          "scene_time_s": 5.36,
+          "absolute_s": 573.79
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The prevailing philosophy",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.36,
+          "absolute_s": 573.79
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Its price bands",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.6,
+          "absolute_s": 584.03
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Its price bands",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.9,
+          "absolute_s": 584.33
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Its price bands",
+          "label": "items[1].at.cue",
+          "scene_time_s": 15.9,
+          "absolute_s": 584.33
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Its price bands",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 15.9,
+          "absolute_s": 584.33
+        },
+        {
+          "param": "items[1].bandsOffAt.cue",
+          "cue": "Not a real squeeze",
+          "label": "items[1].bandsOffAt.cue",
+          "scene_time_s": 23.69,
+          "absolute_s": 592.12
+        },
+        {
+          "param": "items[1].price[2][0].cue",
+          "cue": "Not a real squeeze",
+          "label": "items[1].price[2][0].cue",
+          "scene_time_s": 25.69,
+          "absolute_s": 594.12
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_failures",
+      "segment": "m5_failures",
+      "type": "engine_cartoon",
+      "start_s": 596.8,
+      "end_s": 618.3,
+      "duration_s": 21.5,
+      "visual_objective": "",
+      "narration": "The notice describes an exchange that could not see the risk building. Its overnight team in Hong Kong had switched off the price bands without consulting senior management, and had never been trained to escalate such a decision. And it could not see the private positions that, it later found, were a material cause of the price rise.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Its overnight team",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.0,
+          "absolute_s": 601.8
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "switched off the price bands",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.88,
+          "absolute_s": 603.68
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "never been trained",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 11.04,
+          "absolute_s": 607.84
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "And it could not see",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.67,
+          "absolute_s": 611.47
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And it could not see",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.97,
+          "absolute_s": 611.77
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And it could not see",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.97,
+          "absolute_s": 611.77
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "And it could not see",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 14.97,
+          "absolute_s": 611.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 618.3,
+      "end_s": 649.93,
+      "duration_s": 31.63,
+      "visual_objective": "",
+      "narration": "So what does the nickel crisis teach about markets? That a price is only as real as the system behind it. When enough people bet one way, and the bets are hidden from view, a market can break in a few hours. The exchange saved itself by rewriting the morning. That kept the system standing. But it also showed that, in a real crisis, the rules of the market can change while the game is being played.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "That a price is only",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 4.71,
+          "absolute_s": 623.01
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The exchange saved itself",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 17.05,
+          "absolute_s": 635.35
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The exchange saved itself",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.35,
+          "absolute_s": 635.65
+        },
+        {
+          "param": "items[0].haltAt.cue",
+          "cue": "The exchange saved itself",
+          "label": "items[0].haltAt.cue",
+          "scene_time_s": 17.35,
+          "absolute_s": 635.65
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The exchange saved itself",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 17.35,
+          "absolute_s": 635.65
+        },
+        {
+          "param": "items[0].cancelAt.cue",
+          "cue": "by rewriting the morning",
+          "label": "items[0].cancelAt.cue",
+          "scene_time_s": 19.02,
+          "absolute_s": 637.32
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "But it also showed",
+          "label": "items[1].at.cue",
+          "scene_time_s": 23.8,
+          "absolute_s": 642.1
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fca"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 649.93,
+      "end_s": 659.93,
+      "duration_s": 10.0,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 7.27,
+          "absolute_s": 657.2
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}
