@@ -1,0 +1,26 @@
+# YouTube Shorts (one per finished episode)
+
+Built by `tools/make_shorts.py` from each episode's own opening hook (same narration, same sources; no new figures). MP4s live in `output/shorts/` (not committed). Nothing has been uploaded.
+
+| Episode | Short title | Hook on screen | Length | Package |
+|---|---|---|---|---|
+| 01-switzerland | How Did Switzerland Get So Rich? | HOW DID THIS TINY COUNTRY / GET SO RICH? | 54 s | `docs/episodes/01-switzerland/youtube-short/short_package.md` |
+| 02-dubai | Dubai Doesn't Make Its Money the Way You Think | DUBAI ISN'T RICH / BECAUSE OF OIL | 49 s | `docs/episodes/02-dubai/youtube-short/short_package.md` |
+| 03-formula1 | Who Really Gets Rich From Formula 1? | WHO REALLY GETS RICH / FROM FORMULA 1? | 43 s | `docs/episodes/03-formula1/youtube-short/short_package.md` |
+| 04-norway | How Norway Turned Oil Into a Fortune | NORWAY FOUND OIL. / THEN IT DID THIS | 54 s | `docs/episodes/04-norway/youtube-short/short_package.md` |
+| 06-nvidia | How Nvidia Took Over the AI Economy | ONE CHIP COMPANY / TOOK OVER AI | 59 s | `docs/episodes/06-nvidia/youtube-short/short_package.md` |
+| 07-taiwan-v2 | Why Taiwan Matters So Much | THE ISLAND THE WORLD / CAN'T AFFORD TO LOSE | 21 s | `docs/episodes/07-taiwan-v2/youtube-short/short_package.md` |
+| 08-asml | The Machine Only One Company on Earth Can Build | ONLY ONE COMPANY / CAN BUILD THIS MACHINE | 22 s | `docs/episodes/08-asml/youtube-short/short_package.md` |
+| 09-cables | The Internet Runs Under the Ocean | YOUR INTERNET RUNS / UNDER THE OCEAN | 34 s | `docs/episodes/09-cables/youtube-short/short_package.md` |
+| 10-anguilla | The Tiny Island Getting Rich From AI | A TINY ISLAND IS / GETTING RICH FROM .AI | 38 s | `docs/episodes/10-anguilla/youtube-short/short_package.md` |
+| 11-flags | Why Almost Half the World's Ships Fly Three Small Flags | WHY SHIPS FLY FLAGS / OF TINY COUNTRIES | 38 s | `docs/episodes/11-flags/youtube-short/short_package.md` |
+| 12-wirecard | The $2 Billion That Never Existed | $2 BILLION / THAT NEVER EXISTED | 39 s | `docs/episodes/12-wirecard/youtube-short/short_package.md` |
+| 13-volkswagen | The Day Volkswagen Became the World's Most Valuable Company | THE DAY VOLKSWAGEN / WAS WORTH THE MOST | 50 s | `docs/episodes/13-volkswagen/youtube-short/short_package.md` |
+| 14-memory | Three Companies Decide What Your Memory Costs | 3 COMPANIES DECIDE / WHAT YOUR MEMORY COSTS | 41 s | `docs/episodes/14-memory/youtube-short/short_package.md` |
+| 15-nanoimprint | Can a Stamp Beat a $400 Million Machine? | CAN A STAMP BEAT / A $400 MILLION MACHINE? | 36 s | `docs/episodes/15-nanoimprint/youtube-short/short_package.md` |
+| 16-terafab | Why Elon Musk Wants His Own Chip Factory | WHY ELON MUSK WANTS / HIS OWN CHIP FACTORY | 37 s | `docs/episodes/16-terafab/youtube-short/short_package.md` |
+| 17-india-chips | India's Chip Plants Don't Make Chips. That's the Plan | INDIA'S CHIP PLANTS / DON'T MAKE CHIPS | 32 s | `docs/episodes/17-india-chips/youtube-short/short_package.md` |
+| 18-chip-chemicals | The Chemicals That Decide Who Makes Chips | NO CHEMICALS, / NO CHIPS | 31 s | `docs/episodes/18-chip-chemicals/youtube-short/short_package.md` |
+| 19-quibi | The $1.75 Billion App That Lasted Six Months | $1.75 BILLION APP. / GONE IN 6 MONTHS | 31 s | `docs/episodes/19-quibi/youtube-short/short_package.md` |
+| 20-notpetya | One Software Update Froze the World's Biggest Shipping Company | ONE SOFTWARE UPDATE. / $10 BILLION IN DAMAGE | pending (episode render) | - |
+| 21-citibank | The Bank That Accidentally Sent $900 Million | A BANK SENT $900M / BY MISTAKE | pending (episode render) | - |
