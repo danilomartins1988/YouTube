@@ -1,0 +1,148 @@
+# Sources and claims for "Why Americans Pay So Much for Healthcare" (Episode 29, US batch #01).
+# Every claim was read on its source page on 2026-11-09 (AI fact-check; quotes in docs/episodes/29-us-healthcare/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as published.
+# RULE: CMS national figures ($15,474 per person; 18.0% of GDP) and the OECD-basis international figures (Peterson-KFF:
+# $14,775; 17.2%) are never mixed in one sentence; the film says which basis it uses. RAND hospital and drug figures are
+# said with their caveats (limited sample; list prices before rebates). No logos; no likeness of real people.
+sources:
+  - id: cms
+    title: "NHE Fact Sheet (National Health Expenditure data)"
+    publisher: Centers for Medicare & Medicaid Services
+    url: https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/nhe-fact-sheet
+    published: "2026-06-24"
+    accessed: "2026-11-09"
+    credit: "CMS"
+  - id: pkff_spend
+    title: "How does health spending in the U.S. compare to other countries?"
+    publisher: Peterson-KFF Health System Tracker
+    url: https://www.healthsystemtracker.org/chart-collection/health-spending-u-s-compare-countries/
+    published: "2026-03-11"
+    accessed: "2026-11-09"
+    credit: "Peterson-KFF"
+  - id: pkff_life
+    title: "How does U.S. life expectancy compare to other countries?"
+    publisher: Peterson-KFF Health System Tracker
+    url: https://www.healthsystemtracker.org/chart-collection/u-s-life-expectancy-compare-countries/
+    published: "2026-03-31"
+    accessed: "2026-11-09"
+    credit: "Peterson-KFF"
+  - id: pkff_prices
+    title: "How do healthcare prices and use in the U.S. compare to other countries?"
+    publisher: Peterson-KFF Health System Tracker / KFF
+    url: https://www.healthsystemtracker.org/chart-collection/how-do-healthcare-prices-and-use-in-the-u-s-compare-to-other-countries/
+    published: "2025-09-04"
+    accessed: "2026-11-09"
+    credit: "Peterson-KFF"
+  - id: pkff_time
+    title: "How has U.S. spending on healthcare changed over time?"
+    publisher: Peterson-KFF Health System Tracker
+    url: https://www.healthsystemtracker.org/chart-collection/u-s-spending-healthcare-changed-time/
+    published: "2026-01-22"
+    accessed: "2026-11-09"
+    credit: "Peterson-KFF"
+  - id: jama
+    title: "Health Care Spending in the United States and Other High-Income Countries (JAMA 2018;319(10):1024-1039)"
+    publisher: Papanicolas, Woskie and Jha, JAMA
+    url: https://jamanetwork.com/journals/jama/fullarticle/2674671
+    published: "2018-03-13"
+    accessed: "2026-11-09"
+    credit: "JAMA (2018)"
+  - id: rand_hosp
+    title: "Prices Paid to Hospitals by Private Health Plans: Findings from Round 5.1 of an Employer-Led Transparency Initiative"
+    publisher: RAND Corporation (RR-A1144-2-v2)
+    url: https://www.rand.org/pubs/research_reports/RRA1144-2-v2.html
+    published: "2024-12"
+    accessed: "2026-11-09"
+    credit: "RAND"
+  - id: rand_drugs
+    title: "International Prescription Drug Price Comparisons: Estimates Using 2022 Data"
+    publisher: RAND (RAND Health Quarterly 11(3):5)
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11147645/
+    published: "2024-06-03"
+    accessed: "2026-11-09"
+    credit: "RAND"
+  - id: kff_ehbs
+    title: "KFF Employer Health Benefits Survey 2026 (news release)"
+    publisher: KFF
+    url: https://www.kff.org/other-health/workers-now-pay-7471-on-average-annually-for-family-health-coverage-up-9-or-621-from-2025-benchmark-employer-health-benefits-survey-finds/
+    published: "2026-10-22"
+    accessed: "2026-11-09"
+    credit: "KFF"
+
+claims:
+  - id: nhe
+    text: "CMS: 'NHE grew 7.2% to $5.3 trillion in 2024, or $15,474 per person, and accounted for 18.0% of Gross Domestic Product (GDP).' 'Hospital expenditures grew 8.9% to $1,634.7 billion in 2024'; 'Prescription drug spending increased 7.9% to $467.0 billion in 2024'."
+    spoken: fifteen thousand four hundred and seventy-four dollars
+    display: "$15,474 per person (2024)"
+    fields: {total_spoken: five point three trillion dollars, gdp_spoken: eighteen percent, hosp_spoken: one point six trillion dollars, drugs_spoken: four hundred and sixty-seven billion dollars}
+    source_ids: [cms]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: peers
+    text: "Peterson-KFF (OECD basis): health spending per person 'averaged $14,775 in the U.S. in 2024', against comparable high-income peer countries ($7,860); 'almost $5,000 more per person than the next highest peer country, Switzerland'; 'In 2024, the U.S. spent 17.2% of GDP on health – still substantially higher than peer countries, which average 11.2% of GDP.'"
+    spoken: almost five thousand dollars
+    display: "$14,775 vs $7,860 (OECD basis)"
+    fields: {us_spoken: fourteen thousand seven hundred and seventy-five dollars, peer_spoken: seven thousand eight hundred and sixty dollars}
+    source_ids: [pkff_spend]
+    status: source_located
+    verification_note: OECD basis; not mixed with CMS figures in one sentence.
+
+  - id: life
+    text: "Peterson-KFF: 'In 2024, U.S. life expectancy reached a record high of 79 years', '3.7 years below the comparable country average of 82.7 years.'"
+    spoken: seventy-nine years
+    display: "79 vs 82.7 years"
+    source_ids: [pkff_life]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: usage
+    text: "Peterson-KFF / KFF: 'higher prices – as opposed to higher utilization – explain the United States' high health spending'; 'Compared to its peers, the U.S. has about half as many in-person doctor consultations per person'; 'In 2021, comparable countries averaged 57% more discharges per capita than the U.S.'; 'In 2022, peer nations had an average inpatient hospital stay of 9.7 days … compared to 6.5 days in the U.S.'"
+    spoken: about half as many
+    display: "≈ ½ the doctor visits"
+    source_ids: [pkff_prices]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: prices
+    text: "Peterson-KFF / KFF: 'the average cost per inpatient CABG in the U.S. traditional Medicare program was $44,149' compared with '$24,847 among public insurance schemes in peer nations'; for angioplasty 'the average cost within the U.S. traditional Medicare program was 2.9 times the average cost among peer nations'; 'The cost per MRI among U.S. private health plans was more than three times the U.S. Medicare cost'; 'Medicare-negotiated prices are 2.8 times the average of drug prices in the 11 comparable countries.'"
+    spoken: forty-four thousand one hundred and forty-nine dollars
+    display: "Heart bypass $44,149 vs $24,847"
+    fields: {peer_spoken: twenty-four thousand eight hundred and forty-seven dollars}
+    source_ids: [pkff_prices]
+    status: source_located
+    verification_note: The MRI comparison is between two US payers (private vs Medicare), said as such.
+
+  - id: hospitals
+    text: "RAND Round 5.1: 'In 2022, across all hospital inpatient and outpatient services ... employers and private insurers paid, on average, 254 percent of what Medicare would have paid for the same services at the same facilities.' Outpatient facility services averaged 279 percent."
+    spoken: two hundred and fifty-four percent
+    display: "254% of Medicare"
+    source_ids: [rand_hosp]
+    status: source_located
+    verification_note: Read via the full report PDF (Vermont Legislature copy); limited sample; the hospital industry disputes the method; said as a study finding.
+
+  - id: drugs
+    text: "RAND (2022 data): 'In 2022, U.S. prices across all drugs were 278 percent of prices in the 33 OECD comparison countries.' 'U.S. prices for brand-name originator drugs were 422 percent of prices in comparison countries.' 'U.S. prices were 67 percent of prices of non-U.S. countries for unbranded generics.' After rebates, brand-name drugs were 308 percent."
+    spoken: four hundred and twenty-two percent
+    display: "Brand-name drugs 422%"
+    fields: {all_spoken: two hundred and seventy-eight percent, generic_spoken: sixty-seven percent, rebate_spoken: three hundred and eight percent}
+    source_ids: [rand_drugs]
+    status: source_located
+    verification_note: List prices before rebates; the after-rebate figure is said too.
+
+  - id: admin
+    text: "JAMA (2018, 2016 data): administrative costs 'accounted for 8% in the US vs a range of 1% to 3% in the other countries.' Peterson-KFF (Jan 2026): the net cost of health insurance and program administration 'represented 7.0% of total national health expenditures' in 2024."
+    spoken: eight percent
+    display: "Admin 8% vs 1–3%"
+    source_ids: [jama, pkff_time]
+    status: source_located
+    verification_note: JAMA figure is 2016 data and said as such.
+
+  - id: premium
+    text: "KFF (22 Oct 2026): 'Including the employers' share, total annual premiums for family coverage now average $28,303, up 5% or $1,310 from 2025.' 'Workers are paying on average $7,471 annually toward the premiums for employer-sponsored family health benefits this year'; release title: 'Workers Now Pay $7,471 on Average Annually for Family Health Coverage, Up 9% or $621 from 2025'."
+    spoken: twenty-eight thousand three hundred and three dollars
+    display: "Family premium $28,303"
+    fields: {worker_spoken: seven thousand four hundred and seventy-one dollars}
+    source_ids: [kff_ehbs]
+    status: source_located
+    verification_note: Read on 2026-11-09.

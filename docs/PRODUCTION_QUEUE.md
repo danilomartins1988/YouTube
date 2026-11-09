@@ -47,7 +47,7 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 
 | # | Working title | Status |
 |---|---|---|
-| 01 | Why Americans Pay So Much for Healthcare | Approved, queued |
+| 01 | Why Americans Pay So Much for Healthcare | In production (Ep 29, queued for render) |
 | 02 | The Hidden Business Behind Your Credit Card | Approved, queued |
 | 03 | Why American Homes Became So Expensive | Approved, queued |
 | 04 | How Costco Makes Money Selling Things Cheap | Approved, queued |

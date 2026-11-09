@@ -1,0 +1,267 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; CMS and OECD-basis figures are never mixed in one sentence.
+logline: An American family's health insurance now costs about twenty-eight thousand dollars a year. Americans see the doctor
+  less often than people in other rich countries, and live shorter lives, yet pay far more. The three prices that make American
+  healthcare so expensive.
+title: Why Americans Pay So Much for Healthcare
+segments:
+- id: h_open
+  chapter: Twenty-eight thousand dollars
+  narration: Twenty-eight thousand dollars. That is what health insurance for the average American family with a job-based
+    plan now costs in a single year.
+  claims:
+  - premium
+- id: h_twist
+  chapter: Twenty-eight thousand dollars
+  narration: And here is the strange part. Americans see a doctor about half as often as people in other rich countries. They
+    spend fewer days in hospital. Yet they pay far more for health care, and they live shorter lives.
+  claims:
+  - usage
+  - life
+  - peers
+- id: h_question
+  chapter: Twenty-eight thousand dollars
+  narration: So if Americans are not getting more care, where is all that money going?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced usage and spending figures.
+- id: h_promise
+  chapter: Twenty-eight thousand dollars
+  narration: By the end of this video, you will know the three prices that make American health care the most expensive of
+    any rich country, and why they are so hard to bring down.
+  claims:
+  - peers
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The bill
+  narration: ''
+  claims: []
+- id: m1_total
+  chapter: The bill
+  narration: Start with the whole bill. In twenty twenty-four, the United States spent {{nhe.total_spoken}} on health care.
+    That is {{nhe}} for every man, woman and child, and {{nhe.gdp_spoken}} of everything the American economy produced. And
+    it grew more than seven percent in a single year.
+  claims:
+  - nhe
+- id: m1_parts
+  chapter: The bill
+  narration: The biggest piece is hospitals, at about {{nhe.hosp_spoken}} a year. Prescription drugs at the pharmacy add another
+    {{nhe.drugs_spoken}}. Doctors, nursing homes, insurance and everything else make up the rest. Hospital spending alone
+    grew almost nine percent in a single year, and drug spending almost eight.
+  claims:
+  - nhe
+- id: m1_peers
+  chapter: The bill
+  narration: Now compare that with other rich countries. On the international basis used by the O E C D, the US spent {{peers.us_spoken}}
+    per person in twenty twenty-four. The average of comparable rich countries was {{peers.peer_spoken}}. Even Switzerland,
+    the next most expensive, spent {{peers}} less per person.
+  claims:
+  - peers
+- id: m1_draw
+  chapter: The bill
+  narration: Let me draw what that looks like. Here is the average rich country, spending about eight thousand dollars per
+    person. Here is Switzerland, higher. And here is the United States, almost twice the average. Now look underneath at life
+    expectancy. Seventy-nine years in America. Almost eighty-three on average in the other countries. The most expensive system,
+    but not the longest lives.
+  claims:
+  - peers
+  - life
+  analysis: true
+  source_note: Bar chart of the Peterson-KFF figures (OECD basis).
+- id: m1_life
+  chapter: The bill
+  narration: American life expectancy did reach a record high of {{life}} in twenty twenty-four. But that is still about three
+    point seven years below the average of comparable countries. More money has not bought more years.
+  claims:
+  - life
+- id: m1_transition
+  chapter: The bill
+  narration: So what is all that money buying? The answer surprises most people. It is not more care.
+  claims:
+  - usage
+- id: m2_card
+  chapter: Less care, higher prices
+  narration: ''
+  claims: []
+- id: m2_usage
+  chapter: Less care, higher prices
+  narration: Americans actually use less health care than people in many rich countries. They have {{usage}} in-person doctor
+    consultations per person. In other rich countries, hospitals discharge about fifty-seven percent more patients per person.
+    And an average hospital stay lasts six and a half days in the US, against almost ten days elsewhere.
+  claims:
+  - usage
+- id: m2_finding
+  chapter: Less care, higher prices
+  narration: Researchers have looked at this for years, and the conclusion keeps coming back the same. In the words of the
+    Peterson-KFF Health System Tracker, it is higher prices, as opposed to higher use, that explain the high spending.
+  claims:
+  - usage
+- id: m2_example
+  chapter: Less care, higher prices
+  narration: Take a heart bypass operation. Even in Medicare, the US government's own program, the average cost was {{prices}}.
+    In public insurance schemes in comparable countries, it was about {{prices.peer_spoken}}. For a procedure to open a blocked
+    artery, the Medicare cost was almost three times the peer average.
+  claims:
+  - prices
+- id: m2_draw
+  chapter: Less care, higher prices
+  narration: Let me draw the simplest equation in health economics. Spending equals the amount of care, times the price of
+    each piece of care. In America, the amount is not unusually high. So the price has to be. And there are three prices that
+    matter most. The hospital. The pharmacy. And the paperwork.
+  claims:
+  - usage
+  - prices
+  analysis: true
+  source_note: Diagram of spending = quantity × price, built on the sourced finding.
+- id: m2_transition
+  chapter: Less care, higher prices
+  narration: Start with the biggest one. The hospital.
+  claims: []
+- id: m3_card
+  chapter: 'Price one: the hospital'
+  narration: ''
+  claims: []
+- id: m3_two
+  chapter: 'Price one: the hospital'
+  narration: An American hospital does not have one price. It has many. For older Americans on Medicare, the government sets
+    what it will pay. For everyone with private insurance, the price is negotiated between the hospital and each insurer.
+    And those prices are much higher.
+  claims:
+  - hospitals
+  analysis: true
+  source_note: Context for the RAND finding (Medicare rates are set administratively; private rates are negotiated).
+- id: m3_rand
+  chapter: 'Price one: the hospital'
+  narration: The RAND Corporation studied what employers and private insurers actually paid hospitals. In twenty twenty-two,
+    they paid on average {{hospitals}} of what Medicare would have paid, for the same services, at the same hospitals. For
+    outpatient services, it was two hundred and seventy-nine percent. In other words, the same hospital, for the same care,
+    charged private plans about two and a half times what it accepted from Medicare.
+  claims:
+  - hospitals
+- id: m3_caveat
+  chapter: 'Price one: the hospital'
+  narration: The study covers only part of the market, and the hospital industry disputes its method. So treat the exact number
+    with care. The direction, though, matches the wider research. American prices are high.
+  claims:
+  - hospitals
+  analysis: true
+  source_note: Caveat on the RAND sample and method.
+- id: m3_mri
+  chapter: 'Price one: the hospital'
+  narration: The same pattern shows up in scans. According to Peterson-KFF, an M R I paid for by a private health plan cost
+    more than three times what Medicare paid for the same scan. Same machine, same picture, very different bill.
+  claims:
+  - prices
+- id: m3_draw
+  chapter: 'Price one: the hospital'
+  narration: Let me draw one hospital and two patients. On the left, a patient on Medicare. The hospital is paid one hundred.
+    On the right, a patient with private insurance, getting exactly the same care. The hospital is paid about two hundred
+    and fifty. The difference does not disappear. It comes back as higher insurance premiums for everyone with a job-based
+    plan.
+  claims:
+  - hospitals
+  - premium
+  analysis: true
+  source_note: Illustration of the RAND 254% figure (indexed to 100).
+- id: m3_transition
+  chapter: 'Price one: the hospital'
+  narration: The second price is the one Americans see every time they pick up a prescription.
+  claims: []
+- id: m4_card
+  chapter: 'Price two: the pharmacy'
+  narration: ''
+  claims: []
+- id: m4_brand
+  chapter: 'Price two: the pharmacy'
+  narration: RAND also compared drug prices in America with thirty-three other rich countries. Across all drugs, US prices
+    were {{drugs.all_spoken}} of prices elsewhere. For brand-name drugs, the ones still protected by patents, they were {{drugs}}.
+    More than four times as much.
+  claims:
+  - drugs
+- id: m4_generic
+  chapter: 'Price two: the pharmacy'
+  narration: But here is the twist. For cheap generic drugs, the copies made after patents expire, American prices were lower,
+    about {{drugs.generic_spoken}} of prices abroad. The problem is not every pill. It is the newest, patented ones.
+  claims:
+  - drugs
+- id: m4_rebates
+  chapter: 'Price two: the pharmacy'
+  narration: Those figures use list prices, before the confidential discounts that drug makers give insurers. Even after estimating
+    those rebates, brand-name drugs in America still cost about {{drugs.rebate_spoken}} of prices elsewhere. And even the
+    prices the US government recently negotiated for Medicare are, according to Peterson-KFF, two point eight times the average
+    in comparable countries.
+  claims:
+  - drugs
+  - prices
+- id: m4_draw
+  chapter: 'Price two: the pharmacy'
+  narration: Let me draw the same pill in three places. Here is the price in other rich countries, set to one hundred. Here
+    is the American generic, cheaper, at about sixty-seven. And here is the American brand-name price, over four hundred.
+    Same chemistry. Very different price tags.
+  claims:
+  - drugs
+  analysis: true
+  source_note: Bar chart of the RAND index figures.
+- id: m4_transition
+  chapter: 'Price two: the pharmacy'
+  narration: The third price is the hardest to see, because it is not attached to any treatment at all.
+  claims: []
+- id: m5_card
+  chapter: 'Price three: the paperwork'
+  narration: ''
+  claims: []
+- id: m5_admin
+  chapter: 'Price three: the paperwork'
+  narration: Someone has to run all those insurance plans, process every claim, and argue over every bill. A major study in
+    the Journal of the American Medical Association found that administration took about {{admin}} of US health spending,
+    against one to three percent in other rich countries. That was for twenty sixteen. More recent figures put the cost of
+    running insurance and public programs at about seven percent of national health spending.
+  claims:
+  - admin
+- id: m5_premium
+  chapter: 'Price three: the paperwork'
+  narration: All three prices end up in the same place. The insurance premium. In twenty twenty-six, a family plan through
+    an employer cost on average {{premium}} a year, up five percent in a single year. Workers themselves paid about {{premium.worker_spoken}}
+    of that, nine percent more than the year before. The employer paid the rest, as part of the cost of employing each worker.
+  claims:
+  - premium
+- id: m5_draw
+  chapter: 'Price three: the paperwork'
+  narration: Let me draw where a family's premium goes. Into the insurer. Out to hospitals, at prices far above Medicare's.
+    Out to the pharmacy, at brand-name prices four times higher than abroad. And a slice that stays behind to pay for the
+    paperwork itself. Three prices, one bill.
+  claims:
+  - premium
+  - hospitals
+  - drugs
+  - admin
+  analysis: true
+  source_note: Flow diagram built from the sourced figures.
+- id: m5_hard
+  chapter: 'Price three: the paperwork'
+  narration: Why are these prices so hard to bring down? Because every one of them is somebody's income. A hospital's budget,
+    a drug maker's profit, an insurer's revenue. Lowering the price means someone gets paid less, and each of them has every
+    reason to fight it.
+  claims: []
+  analysis: true
+  source_note: Commentary on the political economy of prices.
+- id: payoff
+  chapter: The lesson
+  narration: So why do Americans pay so much for health care? Not because they go to the doctor more. They go less. They pay
+    more for each visit, each scan, each pill, and each claim. Health care in America is not expensive because of how much
+    care people get. It is expensive because of what each piece of care costs.
+  claims:
+  - usage
+  - prices
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

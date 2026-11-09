@@ -1,0 +1,44 @@
+# Visual direction for why-americans-pay-so-much-for-healthcare (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: the bill (hook), data charts (part 1), the hospital corridor (part 2), two patients and
+# two bills (part 3), the pharmacy (part 4), the evidence board of the premium (part 5). Bright overall, reflective close.
+primary_tone: bright
+secondary_tones:
+- strategy
+- reflective
+palette:
+  bg: '#DDF0EA'
+  bg2: '#F5FBF9'
+  ink: '#10213A'
+  muted: '#4D6680'
+  land: '#C8E6DE'
+  border: '#2E7D74'
+  accent: '#E89A00'
+  accent2: '#1565C0'
+  accent3: '#23995A'
+  risk: '#E53935'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Twenty-eight thousand dollars
+  tone: bright
+- chapter: The bill
+  tone: strategy
+- chapter: Less care, higher prices
+  tone: bright
+- chapter: 'Price one: the hospital'
+  tone: strategy
+- chapter: 'Price two: the pharmacy'
+  tone: bright
+- chapter: 'Price three: the paperwork'
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: bright
+  headline: []
+  idea: a giant itemized medical bill; split US vs other rich countries
+requirements:
+- One visual language per part; text mostly on objects or at the top
+- No hospital, insurer or drug-maker logos; no likeness of real people

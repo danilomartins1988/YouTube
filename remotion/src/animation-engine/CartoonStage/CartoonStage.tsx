@@ -400,6 +400,28 @@ const SETS: Record<string, SetFn> = {
       <ellipse cx={z.x0 + w * 0.5} cy={f - 500} rx={w * 0.45} ry={520} fill="#FFE9B0" opacity={0.10 + 0.02 * Math.sin(t * 1.3)} />
     </g>;
   },
+  /** A hospital corridor: pale mint walls, numbered doors with small windows, a handrail, ceiling light panels, a glossy
+   *  tiled floor; `night` dims it to an evening shift. Generic, no real hospital branding. */
+  hospital: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#3C5A5A' : '#DDF0EA'} />
+      <rect x={z.x0} y={f - 360} width={w} height={360} fill={night ? '#355050' : '#C8E6DE'} />
+      <rect x={z.x0} y={f - 380} width={w} height={20} fill="#9CCFC3" stroke={OL} strokeWidth={3} />
+      <rect x={z.x0} y={f - 190} width={w} height={14} rx={7} fill="#B0BEC5" stroke={OL} strokeWidth={3} />
+      {Array.from({length: Math.ceil(w / 420)}, (_, k) => { const x = z.x0 + 80 + k * 420;
+        return <g key={'hd' + k}>
+          <rect x={x} y={f - 560} width={200} height={560} fill={night ? '#6E8E8A' : '#F5FBF9'} stroke={OL} strokeWidth={4} />
+          <rect x={x + 60} y={f - 500} width={80} height={110} fill="#BFE8FF" stroke={OL} strokeWidth={3} />
+          <circle cx={x + 170} cy={f - 280} r={9} fill="#90A4AE" stroke={OL} strokeWidth={2} />
+          <rect x={x + 40} y={f - 620} width={120} height={40} rx={8} fill="#2E7D74" stroke={OL} strokeWidth={3} />
+          <T x={x + 100} y={f - 591} s={24} c="#FFFFFF">{'ROOM ' + (101 + k)}</T></g>; })}
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => <rect key={'hl' + k} x={z.x0 + 60 + k * 300} y={f - 900} width={180} height={22} rx={6} fill={night ? '#C9E8FF' : '#FFFFFF'} opacity={0.9} />)}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#4E6B68' : '#E9F3F1'} />
+      {Array.from({length: Math.ceil(w / 120)}, (_, k) => <rect key={'ht' + k} x={z.x0 + k * 120} y={f} width={3} height={600} fill={OL} opacity={0.08} />)}
+      <rect x={z.x0} y={f + 30} width={w} height={8} fill="#FFFFFF" opacity={0.4} />
+    </g>;
+  },
   /** Financial district at night: dark glass towers with lit windows, a distant skyline, wet street with reflections. */
   district: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -2522,6 +2544,52 @@ const isodc: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** An itemized medical bill that unrolls line by line: `lines` [{text, amount, at}] (amount is a display string),
+ *  `total` {text, amount, at} stamped at the bottom in red; `title`. Paper curls at the bottom while unrolling. */
+const medbill: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 200), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const lines = a.lines || [], W = 560, LH = 64, shown = lines.filter((l: any) => t >= (l.at ?? 0)).length;
+  const tot = a.total && t >= (a.total.at ?? 1e9), H = 150 + shown * LH + (tot ? 120 : 0);
+  return <g key={'mb' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${a.rot ?? -2})`}>
+    <rect x={-W / 2 + 10} y={12} width={W} height={H} fill="#000" opacity={0.25} />
+    <rect x={-W / 2} y={0} width={W} height={H} fill="#FFFFFF" stroke={OL} strokeWidth={4} />
+    <rect x={-W / 2} y={0} width={W} height={90} fill="#E0F2F1" stroke={OL} strokeWidth={4} />
+    <T x={-W / 2 + 30} y={58} s={34} a="start">{a.title || 'STATEMENT'}</T>
+    {lines.slice(0, shown).map((l: any, k: number) => { const u = E.out(clamp((t - (l.at ?? 0)) / 0.4));
+      return <g key={k} opacity={u} transform={`translate(${(1 - u) * -30} ${130 + k * LH})`}>
+        <T x={-W / 2 + 30} y={0} s={28} a="start" w={700}>{l.text}</T>
+        <T x={W / 2 - 30} y={0} s={30} a="end">{l.amount}</T>
+        <rect x={-W / 2 + 30} y={18} width={W - 60} height={2} fill={OL} opacity={0.15} /></g>; })}
+    {tot && <g transform={`translate(0 ${150 + shown * LH + 40})`}>
+      <rect x={-W / 2 + 20} y={-50} width={W - 40} height={90} rx={8} fill="#FFEBEE" stroke={K.red} strokeWidth={5} />
+      <T x={-W / 2 + 40} y={10} s={34} a="start" c={K.red}>{a.total.text || 'TOTAL'}</T>
+      <T x={W / 2 - 40} y={12} s={44} a="end" c={K.red}>{a.total.amount}</T></g>}
+    <path d={`M ${-W / 2} ${H} q ${W / 4} 26 ${W / 2} 0 t ${W / 2} 0`} fill="#F5F5F5" stroke={OL} strokeWidth={4} />
+  </g>;
+};
+
+/** A prescription pill bottle with a label and a swinging price tag (`price`, keyframes via `prices` [[t, text]]). */
+const pills: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  let price = a.price || '';
+  for (const [pt, pv] of (a.prices || []) as [number, string][]) if (t >= pt) price = pv;
+  const c = col(a.color, '#FF8F00'), sw = Math.sin(t * 2.2 + i) * 6;
+  return <g key={'pl' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-90} y={-300} width={180} height={300} rx={22} fill={c} opacity={0.85} stroke={OL} strokeWidth={5} />
+    <rect x={-104} y={-350} width={208} height={64} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={5} />
+    <rect x={-80} y={-230} width={160} height={150} rx={8} fill="#FFFFFF" stroke={OL} strokeWidth={3} />
+    <T x={0} y={-180} s={26}>{a.label || 'Rx'}</T>
+    {[0, 1, 2].map((q) => <rect key={q} x={-60} y={-150 + q * 22} width={120 - q * 20} height={8} rx={4} fill={OL} opacity={0.25} />)}
+    {price && <g transform={`translate(110 -330) rotate(${10 + sw})`}>
+      <path d="M 0 0 L 40 -20 L 230 -20 L 230 60 L 40 60 L 0 40 Z" fill={K.gold} stroke={OL} strokeWidth={4} />
+      <circle cx={30} cy={20} r={7} fill="#FFFFFF" stroke={OL} strokeWidth={2} />
+      <T x={140} y={34} s={40}>{price}</T></g>}
+    {a.sub && <T x={0} y={60} s={28} c={a.textc || OL}>{a.sub}</T>}
+  </g>;
+};
+
 /** A trading screen for one contract. `price` is a keyframed value (e.g. [[0, 29000], [cue, 48075], ...]); the line is
  *  drawn from `at` up to now by sampling it; `max` sets the y scale. `bandsOffAt` turns the "PRICE BANDS" lamp red (OFF),
  *  `haltAt` stamps SUSPENDED, `cancelAt` greys the part of the line after `cancelFrom` (seconds) and stamps CANCELLED. */
@@ -2552,7 +2620,7 @@ const tradescreen: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
