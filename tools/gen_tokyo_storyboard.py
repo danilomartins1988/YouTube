@@ -73,14 +73,14 @@ stage("s05_roots", "m1_roots", {
     sources=["lse", "mof"])
 stage("s06_plaza", "m1_plaza", {
     "zones": [Z("parliament")], "worldW": 2600,
-    "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("The yen soared"), "x": 1700, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
+    "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("Japan's currency soared"), "x": 1700, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
     "items": [it("calendar", x=400, y=300, at=0.2, pages=[[0, "SEP", "1985"]], scale=0.8),
               *[it("person", x=800 + 130 * k, pose="stand", at=C("the Group of Five", 0.2 * k), scale=0.6, hair=k + 1, skin=k % 4) for k in range(5)],
               it("contract", x=1100, y=420, at=C("Plaza Accord"), text="PLAZA ACCORD", sub="push the dollar down", scale=0.6),
-              it("chart", x=1800, y=420, w=460, h=280, at=C("The yen soared"), dur=2.5, text="YEN vs DOLLAR", pts=[0.2, 0.45, 0.7, 0.85, 0.9], color="green"),
+              it("chart", x=1800, y=420, w=460, h=280, at=C("Japan's currency soared"), dur=2.5, text="JAPAN'S CURRENCY vs DOLLAR", pts=[0.2, 0.45, 0.7, 0.85, 0.9], color="green"),
               it("arrow", **{"from": [1800, 650], "to": [2200, 760]}, at=C("began cutting interest rates"))],
-    "callouts": [co("Sept 1985: the Plaza Accord", 960, 960, C("In September"), "white", screen=True, size=40, sub="Ministry of Finance Japan", until=C("The yen soared", -0.3)),
-                 co("Strong yen → fear of recession → rate cuts", 960, 960, C("The yen soared"), "gold", screen=True, size=38)]},
+    "callouts": [co("Sept 1985: the Plaza Accord", 960, 960, C("In September"), "white", screen=True, size=40, sub="Ministry of Finance Japan", until=C("Japan's currency soared", -0.3)),
+                 co("Strong currency → fear of recession → rate cuts", 960, 960, C("Japan's currency soared"), "gold", screen=True, size=38)]},
     sources=["mof"])
 stage("s07_cheap", "m1_cheap", {
     "zones": [Z("exchange")], "worldW": 2800,
@@ -140,10 +140,10 @@ stage("s13_ginza", "m2_ginza", {
 stage("s14_total", "m2_total", {
     "zones": [Z("exchange")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("In just four years"), "x": 1400, "y": 520, "zoom": 1.05, "dur": 2.4}], "drift": 3,
-    "items": [it("counter", x=1000, y=220, at=C("all the land in Japan"), prefix="$", suffix="tn", decimals=1, steps=[[0, 0], [{"cue": "That is", "offset": 1.5}, 15.2]], text="ALL JAPANESE LAND, END-1989 (H.10)"),
+    "items": [it("counter", x=1000, y=220, at=C("all the land in Japan"), prefix="$", suffix="tn", decimals=1, steps=[[0, 0], [{"cue": "all the land in Japan was worth", "offset": 2}, 15.2]], text="ALL JAPANESE LAND, END-1989 (H.10)"),
               it("tower", x=1500, text="1985", color="#78909C", h=250, at=C("In just four years"), scale=0.7),
               it("tower", x=1800, text="1989", color="#C62828", h=[[0, 40], [{"cue": "had", "offset": 1}, 520]], at=C("In just four years"), scale=0.7)],
-    "callouts": [co("End-1989: ≈ {{landvalue.display}} of land", 960, 960, C("By the end of"), "gold", screen=True, size=40, sub="LSE paper; yen at H.10 (143.80)", until=C("In just four years", -0.3)),
+    "callouts": [co("End-1989: ≈ {{landvalue.display}} of land", 960, 960, C("By the end of"), "gold", screen=True, size=40, sub="LSE paper; converted at H.10 (143.80 per $)", until=C("In just four years", -0.3)),
                  co("More than doubled since 1985", 960, 960, C("In just four years"), "risk", screen=True, size=40)]},
     sources=["lse", "fred_jpy"])
 stage("s15_banks", "m2_banks", {

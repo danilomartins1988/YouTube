@@ -118,17 +118,19 @@ stage("s11_icesave", "m2_icesave", {
     "callouts": [co("Oct 2006: Icesave, the best rates in Britain", 960, 960, C("In October"), "gold", screen=True, size=38, sub="Cambridge", until=C("It also took savers", -0.3)),
                  co("≈ 340,000 British and Dutch savers", 960, 960, C("It also took savers"), "white", screen=True, size=40, sub="The Irish Times")]},
     sources=["cambridge", "irish_2010"])
-stage("s12_risk", "m2_risk", {
-    "zones": [Z("city")], "worldW": 2800,
-    "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("A fund in a small country"), "x": 1600, "y": 520, "zoom": 0.9, "dur": 2.4}], "drift": 3,
-    "items": [it("building", x=800, at=0.2, text="ICESAVE", scale=0.7),
-              it("arrow", **{"from": [900, 400], "to": [1500, 400]}, at=C("part of an Icelandic bank")),
-              isle(1700, 820, at=C("part of an Icelandic bank"), scale=0.7, grow=0.8),
-              it("piggy", x=1700, at=C("deposit guarantee fund"), scale=0.45),
-              *crowd([2200 + 110 * k for k in range(6)], "stand", at=C("standing behind savers"), scale=0.7)],
-    "callouts": [co("A branch, not a British bank", 960, 960, C("Icesave was part"), "white", screen=True, size=40, until=C("So if it failed", -0.3)),
-                 co("First guarantee: Iceland's own fund", 960, 960, C("So if it failed"), "risk", screen=True, size=40, sub="EFTA Court case E-16/11")]},
-    sources=["cambridge", "efta"])
+add("p12_catch", "m2_risk", "engine_draw", {
+    "title": "The catch", "board": BOARD, "draw_start": C("Here is a British saver"), "speed": 1400, "push": 0.003,
+    "enter": {"from": 2200, "to": 1620, "at": 0.2, "dur": 1.3},
+    "strokes": [
+        {"d": rect(560, 400, 220, 120), "color": "accent2", "width": 6, "kind": "box", "start": C("Here is a British saver"), "label": lbl("UK SAVER", 670, 468, 26, "accent2")},
+        {"d": rect(900, 400, 240, 120), "color": "accent", "width": 6, "kind": "box", "start": C("Here is Icesave"), "label": lbl("ICESAVE (BRANCH)", 1020, 468, 22, "accent")},
+        {"d": arrow((790, 460), (890, 460), 0.1), "color": "ink", "width": 5, "start": C("Here is Icesave", 0.6)},
+        {"d": rect(900, 660, 240, 120), "color": "risk", "width": 6, "fill": "risk", "fillOpacity": 0.15, "kind": "box", "start": C("comes from here"), "label": lbl("ICELAND'S FUND", 1020, 728, 22, "risk")},
+        {"d": arrow((1020, 530), (1020, 650), 0.0), "color": "ink", "width": 5, "start": C("If the bank fails")},
+        {"d": "M 1200 760 L 1240 760 M 1300 600 L 1460 600 L 1460 840 L 1300 840 Z", "color": "muted", "width": 4, "start": C("two much bigger ones"), "label": lbl("UK + NETHERLANDS", 1380, 880, 20, "muted")},
+    ],
+    "actions": [{"kind": "point", "at": C("A fund in a small country", 0.2), "dur": 1.4, "target": [1020, 720]}],
+    "scale": 0.86, "floor": 1040}, sources=["cambridge", "efta"])
 stage("s13_warning", "m2_warning", {
     "zones": [Z("exchange")], "worldW": 2600,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("The Cambridge study"), "x": 1600, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
@@ -161,7 +163,7 @@ stage("s18_fall", "m3_fall", {
     "cam": [{"at": 0, "x": 1000, "y": 480, "zoom": 1.0}, {"at": C("One after another"), "x": 1100, "y": 520, "zoom": 0.9, "dur": 2.4}], "drift": 2,
     "items": [it("sign", x=500, y=260, text="LEHMAN BROTHERS", sub="Sep 2008", at=C("After the collapse"), color="#FFCDD2", size=30),
               isle(1100, 820, at=0.2, scale=1.0, grow=1.0, wobbleAt=C("that was fatal"), fallAt=C("One after another", 0.5)),
-              it("letters", x=1650, y=220, text="NO DOLLARS · NO EUROS", at=C("could not print dollars"), size=46, color="risk")],
+              it("letters", x=1650, y=220, text="NO FOREIGN MONEY TO PRINT", at=C("could not print the foreign money"), size=46, color="risk")],
     "callouts": [co("No one rolls over the debts", 960, 960, C("They could not roll over"), "risk", screen=True, size=40, until=C("One after another", -0.3)),
                  co("Glitnir, Landsbanki, Kaupthing: ≈ 85% of the system", 960, 960, C("One after another"), "gold", screen=True, size=36, sub="IMF")]},
     sources=["imf_pr"])
@@ -219,10 +221,10 @@ stage("s25_q4", "m4_question", {
 stage("s26_krona", "m4_krona", {
     "zones": [Z("exchange")], "worldW": 2600,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("Even at official rates"), "x": 1600, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
-    "items": [it("chart", x=800, y=420, w=520, h=320, at=C("the currency fell"), dur=3, text="KRONA OFFSHORE · STOCKS", pts=[0.9, 0.85, 0.5, 0.25, 0.15], color="risk"),
+    "items": [it("chart", x=800, y=420, w=520, h=320, at=C("the currency fell"), dur=3, text="CURRENCY OFFSHORE · STOCKS", pts=[0.9, 0.85, 0.5, 0.25, 0.15], color="risk"),
               it("counter", x=1700, y=220, at=C("Even at official rates"), decimals=1, steps=[[0, 60.7], [{"cue": "lost", "offset": 1.5}, 135.3]], text="KRÓNUR PER US DOLLAR (OECD)"),
               it("pricetag", x=1700, y=520, at=C("Imports became"), pages=[[0, "IMPORTS ↑"], [{"cue": "inflation rose"}, "INFLATION 18%+"]], sub="2009")],
-    "callouts": [co("Króna −70%+ offshore · stocks −80%", 960, 960, C("According to the IMF"), "risk", screen=True, size=38, sub="IMF", until=C("Even at official rates", -0.3)),
+    "callouts": [co("Currency −70%+ offshore · stocks −80%", 960, 960, C("According to the IMF"), "risk", screen=True, size=38, sub="IMF", until=C("Even at official rates", -0.3)),
                  co("60.7 → 135.3 krónur per dollar (Oct 2007 → Nov 2008)", 960, 960, C("Even at official rates"), "white", screen=True, size=32, sub="OECD via FRED")]},
     sources=["imf_pr", "fred_isk", "cambridge"])
 stage("s27_recession", "m4_recession", {
@@ -246,11 +248,11 @@ stage("s29_icesave", "m4_icesave", {
     "zones": [Z("city")], "worldW": 2800,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("The governments negotiated"), "x": 1700, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
     "items": [*crowd([600, 720, 840], "cheer", at=C("paid back their own savers"), scale=0.7),
-              it("stack", x=1200, h=[[0, 40], [{"cue": "Britain alone", "offset": 1.5}, 320]], at=C("Britain alone"), text="£4.5BN ≈ $7.8BN", sub="UK payout (H.10, Oct 2008)"),
+              it("stack", x=1200, h=[[0, 40], [{"cue": "Britain alone", "offset": 1.5}, 320]], at=C("Britain alone"), text="≈ $7.8BN", sub="UK payout (H.10, Oct 2008)"),
               it("docs", x=1800, y=560, at=C("sent the bill to Iceland"), text="BILL: ICESAVE", scale=0.6),
               it("contract", x=2200, y=430, at=C("The governments negotiated"), text="REPAYMENT DEAL", sub="with interest", scale=0.6)],
     "callouts": [co("UK + Netherlands repay savers, bill Iceland", 960, 960, C("Britain and the Netherlands"), "white", screen=True, size=38, sub="The Irish Times", until=C("Britain alone", -0.3)),
-                 co("UK: £4.5bn ≈ {{repaid.display}}", 960, 960, C("Britain alone"), "gold", screen=True, size=40, sub="HM Treasury; H.10 rate")]},
+                 co("UK payout ≈ $7.8bn", 960, 960, C("Britain alone"), "gold", screen=True, size=40, sub="HM Treasury; H.10 rate")]},
     sources=["irish_2010", "ukgov_2016", "fred_gbp"])
 stage("s30_vote", "m4_vote", {
     "zones": [Z("parliament")], "worldW": 2600,

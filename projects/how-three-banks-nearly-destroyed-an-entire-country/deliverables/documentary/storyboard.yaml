@@ -445,7 +445,7 @@ scenes:
   type: engine_draw
   params:
     title: A small country holding up a giant
-    board: &id006
+    board: &id003
       x: 470
       y: 230
       w: 1370
@@ -771,122 +771,100 @@ scenes:
   - irish_2010
   assets:
   - font:inter
-- id: s12_risk
+- id: p12_catch
   segment: m2_risk
-  type: engine_cartoon
+  type: engine_draw
   params:
-    zones:
-    - set: city
-      x0: -1600
-      x1: 4600
-    worldW: 2800
-    cam:
-    - at: 0
-      x: 900
-      y: 520
-      zoom: 1.0
-    - at:
-        cue: A fund in a small country
-      x: 1600
-      y: 520
-      zoom: 0.9
-      dur: 2.4
-    drift: 3
-    items:
-    - kind: building
-      x: 800
+    title: The catch
+    board: *id003
+    draw_start:
+      cue: Here is a British saver
+    speed: 1400
+    push: 0.003
+    enter:
+      from: 2200
+      to: 1620
       at: 0.2
-      text: ICESAVE
-      scale: 0.7
-    - kind: arrow
-      from:
-      - 900
-      - 400
-      to:
-      - 1500
-      - 400
-      at:
-        cue: part of an Icelandic bank
-    - kind: bankisle
-      x: 1700
-      y: 820
-      names:
-      - K
-      - L
-      - G
-      at:
-        cue: part of an Icelandic bank
-      scale: 0.7
-      grow: 0.8
-    - kind: piggy
-      x: 1700
-      at:
-        cue: deposit guarantee fund
-      scale: 0.45
-    - kind: person
-      x: 2200
-      pose: stand
-      at: &id003
-        cue: standing behind savers
-      scale: 0.7
-      hair: 2
-      skin: 0
-    - kind: person
-      x: 2310
-      pose: stand
-      at: *id003
-      scale: 0.7
-      hair: 3
-      skin: 1
-    - kind: person
-      x: 2420
-      pose: stand
-      at: *id003
-      scale: 0.7
-      hair: 4
-      skin: 2
-    - kind: person
-      x: 2530
-      pose: stand
-      at: *id003
-      scale: 0.7
-      hair: 5
-      skin: 3
-    - kind: person
-      x: 2640
-      pose: stand
-      at: *id003
-      scale: 0.7
-      hair: 6
-      skin: 0
-    - kind: person
-      x: 2750
-      pose: stand
-      at: *id003
-      scale: 0.7
-      hair: 7
-      skin: 1
-    callouts:
-    - text: A branch, not a British bank
-      x: 960
-      y: 960
-      at:
-        cue: Icesave was part
-      color: white
-      until:
-        cue: So if it failed
-        offset: -0.3
-      size: 40
-      screen: true
-    - text: 'First guarantee: Iceland''s own fund'
-      x: 960
-      y: 960
-      at:
-        cue: So if it failed
+      dur: 1.3
+    strokes:
+    - d: M 560 400 L 780 400 L 780 520 L 560 520 Z
+      color: accent2
+      width: 6
+      kind: box
+      start:
+        cue: Here is a British saver
+      label:
+        text: UK SAVER
+        x: 670
+        y: 468
+        size: 26
+        color: accent2
+        anchor: middle
+    - d: M 900 400 L 1140 400 L 1140 520 L 900 520 Z
+      color: accent
+      width: 6
+      kind: box
+      start:
+        cue: Here is Icesave
+      label:
+        text: ICESAVE (BRANCH)
+        x: 1020
+        y: 468
+        size: 22
+        color: accent
+        anchor: middle
+    - d: M 790 460 Q 840 470 890 460 M 871 474 L 890 460 L 867 454
+      color: ink
+      width: 5
+      start:
+        cue: Here is Icesave
+        offset: 0.6
+      kind: arrow
+    - d: M 900 660 L 1140 660 L 1140 780 L 900 780 Z
       color: risk
-      sub: EFTA Court case E-16/11
-      size: 40
-      screen: true
+      width: 6
+      fill: risk
+      fillOpacity: 0.15
+      kind: box
+      start:
+        cue: comes from here
+      label:
+        text: ICELAND'S FUND
+        x: 1020
+        y: 728
+        size: 22
+        color: risk
+        anchor: middle
+    - d: M 1020 530 Q 1020 590 1020 650 M 1010 628 L 1020 650 L 1030 628
+      color: ink
+      width: 5
+      start:
+        cue: If the bank fails
+      kind: arrow
+    - d: M 1200 760 L 1240 760 M 1300 600 L 1460 600 L 1460 840 L 1300 840 Z
+      color: muted
+      width: 4
+      start:
+        cue: two much bigger ones
+      label:
+        text: UK + NETHERLANDS
+        x: 1380
+        y: 880
+        size: 20
+        color: muted
+        anchor: middle
+      kind: stroke
+    actions:
+    - kind: point
+      at:
+        cue: A fund in a small country
+        offset: 0.2
+      dur: 1.4
+      target:
+      - 1020
+      - 720
+    scale: 0.86
+    floor: 1040
   sources:
   - cambridge
   - efta
@@ -1177,9 +1155,9 @@ scenes:
     - kind: letters
       x: 1650
       y: 220
-      text: NO DOLLARS · NO EUROS
+      text: NO FOREIGN MONEY TO PRINT
       at:
-        cue: could not print dollars
+        cue: could not print the foreign money
       size: 46
       color: risk
     callouts:
@@ -1471,7 +1449,7 @@ scenes:
   type: engine_draw
   params:
     title: Why the rescue cannot reach
-    board: *id006
+    board: *id003
     draw_start:
       cue: Here is the government
     speed: 1400
@@ -1662,7 +1640,7 @@ scenes:
       at:
         cue: the currency fell
       dur: 3
-      text: KRONA OFFSHORE · STOCKS
+      text: CURRENCY OFFSHORE · STOCKS
       pts:
       - 0.9
       - 0.85
@@ -1695,7 +1673,7 @@ scenes:
         - INFLATION 18%+
       sub: '2009'
     callouts:
-    - text: Króna −70%+ offshore · stocks −80%
+    - text: Currency −70%+ offshore · stocks −80%
       x: 960
       y: 960
       at:
@@ -1764,7 +1742,7 @@ scenes:
     - kind: person
       x: 1500
       pose: worry
-      at: &id007
+      at: &id006
         cue: Unemployment soared
       scale: 0.7
       hair: 2
@@ -1772,21 +1750,21 @@ scenes:
     - kind: person
       x: 1620
       pose: worry
-      at: *id007
+      at: *id006
       scale: 0.7
       hair: 3
       skin: 1
     - kind: person
       x: 1740
       pose: worry
-      at: *id007
+      at: *id006
       scale: 0.7
       hair: 4
       skin: 2
     - kind: person
       x: 1860
       pose: worry
-      at: *id007
+      at: *id006
       scale: 0.7
       hair: 5
       skin: 3
@@ -1913,7 +1891,7 @@ scenes:
     - kind: person
       x: 600
       pose: cheer
-      at: &id008
+      at: &id007
         cue: paid back their own savers
       scale: 0.7
       hair: 2
@@ -1921,14 +1899,14 @@ scenes:
     - kind: person
       x: 720
       pose: cheer
-      at: *id008
+      at: *id007
       scale: 0.7
       hair: 3
       skin: 1
     - kind: person
       x: 840
       pose: cheer
-      at: *id008
+      at: *id007
       scale: 0.7
       hair: 4
       skin: 2
@@ -1942,7 +1920,7 @@ scenes:
         - 320
       at:
         cue: Britain alone
-      text: £4.5BN ≈ $7.8BN
+      text: ≈ $7.8BN
       sub: UK payout (H.10, Oct 2008)
     - kind: docs
       x: 1800
@@ -1972,7 +1950,7 @@ scenes:
         offset: -0.3
       size: 38
       screen: true
-    - text: 'UK: £4.5bn ≈ {{repaid.display}}'
+    - text: UK payout ≈ $7.8bn
       x: 960
       y: 960
       at:
@@ -2039,7 +2017,7 @@ scenes:
     - kind: person
       x: 800
       pose: cheer
-      at: &id009
+      at: &id008
         cue: Icelanders said no
       scale: 0.6
       hair: 2
@@ -2047,49 +2025,49 @@ scenes:
     - kind: person
       x: 920
       pose: cheer
-      at: *id009
+      at: *id008
       scale: 0.6
       hair: 3
       skin: 1
     - kind: person
       x: 1040
       pose: cheer
-      at: *id009
+      at: *id008
       scale: 0.6
       hair: 4
       skin: 2
     - kind: person
       x: 1160
       pose: cheer
-      at: *id009
+      at: *id008
       scale: 0.6
       hair: 5
       skin: 3
     - kind: person
       x: 1280
       pose: cheer
-      at: *id009
+      at: *id008
       scale: 0.6
       hair: 6
       skin: 0
     - kind: person
       x: 1400
       pose: cheer
-      at: *id009
+      at: *id008
       scale: 0.6
       hair: 7
       skin: 1
     - kind: person
       x: 1520
       pose: cheer
-      at: *id009
+      at: *id008
       scale: 0.6
       hair: 8
       skin: 2
     - kind: person
       x: 1640
       pose: cheer
-      at: *id009
+      at: *id008
       scale: 0.6
       hair: 9
       skin: 3

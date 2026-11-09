@@ -337,7 +337,7 @@ scenes:
       y: 520
       zoom: 1.0
     - at:
-        cue: The yen soared
+        cue: Japan's currency soared
       x: 1700
       y: 520
       zoom: 1.0
@@ -412,9 +412,9 @@ scenes:
       w: 460
       h: 280
       at:
-        cue: The yen soared
+        cue: Japan's currency soared
       dur: 2.5
-      text: YEN vs DOLLAR
+      text: JAPAN'S CURRENCY vs DOLLAR
       pts:
       - 0.2
       - 0.45
@@ -440,15 +440,15 @@ scenes:
       color: white
       sub: Ministry of Finance Japan
       until:
-        cue: The yen soared
+        cue: Japan's currency soared
         offset: -0.3
       size: 40
       screen: true
-    - text: Strong yen → fear of recession → rate cuts
+    - text: Strong currency → fear of recession → rate cuts
       x: 960
       y: 960
       at:
-        cue: The yen soared
+        cue: Japan's currency soared
       color: gold
       size: 38
       screen: true
@@ -946,8 +946,8 @@ scenes:
       steps:
       - - 0
         - 0
-      - - cue: That is
-          offset: 1.5
+      - - cue: all the land in Japan was worth
+          offset: 2
         - 15.2
       text: ALL JAPANESE LAND, END-1989 (H.10)
     - kind: tower
@@ -978,7 +978,7 @@ scenes:
       at:
         cue: By the end of
       color: gold
-      sub: LSE paper; yen at H.10 (143.80)
+      sub: LSE paper; converted at H.10 (143.80 per $)
       until:
         cue: In just four years
         offset: -0.3
