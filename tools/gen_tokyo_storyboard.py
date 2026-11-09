@@ -217,7 +217,7 @@ stage("s23_crash", "m3_crash", {
 stage("s24_soros", "m3_soros", {
     "zones": [Z("exchange")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("A bubble can stay"), "x": 1400, "y": 520, "zoom": 1.05, "dur": 2.4}], "drift": 3,
-    "items": [it("calendar", x=600, y=300, at=C("in nineteen eighty-eight"), pages=[[0, "1988"]], scale=0.8),
+    "items": [it("calendar", x=600, y=300, at=C("in nineteen eighty-eight"), pages=[[0, "1988", "TOO EARLY"]], scale=0.8),
               it("arrow", **{"from": [800, 300], "to": [1300, 600]}, at=C("bet against the Japanese market")),
               it("stack", x=1500, h=[[0, 300], [{"cue": "and lost", "offset": 1.5}, 40]], at=C("bet against"), text="−$1BN", sub="too early", color="#C62828"),
               it("clock", x=1900, y=330, at=C("A bubble can stay"), period=1.6)],
@@ -267,7 +267,7 @@ add("p30_reverse", "m4_draw", "engine_draw", {
 stage("s31_lost", "m4_lost", {
     "zones": [Z("city", night=True)], "worldW": 2600, "night": True,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("Some of the biggest names"), "x": 1700, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 2,
-    "items": [it("calendar", x=500, y=300, at=0.2, pages=[[0, "1990s"], [3.0, "2000s"], [6.0, "2010s"]], scale=0.8),
+    "items": [it("calendar", x=500, y=300, at=0.2, pages=[[0, "1990s", "LOST"], [3.0, "2000s", "LOST"], [6.0, "2010s", "LOST"]], scale=0.8),
               *crowd([900, 1020, 1140], "worry", at=C("a lost generation"), scale=0.7),
               it("building", x=1800, at=C("Some of the biggest names"), text="YAMAICHI SECURITIES", scale=0.7),
               it("docs", x=1800, y=600, at=C("was bankrupt"), text="1990s", scale=0.5, stamp="BANKRUPT", stampAt=C("was bankrupt", 0.3))],

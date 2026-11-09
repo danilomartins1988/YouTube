@@ -1,0 +1,165 @@
+# Sources and claims for "How One Company Made Diamonds a Symbol of Love" (Episode 24, top-10 #7: De Beers).
+# Every claim was read on its source page on 2026-11-09 (AI fact-check; quotes in docs/episodes/24-debeers/FACT_CHECK.md).
+# Status stays source_located until a named human reviewer signs off.
+# MONEY: all amounts in US dollars as published. The 2026 sale price is a press report (Bloomberg, via JCK) that Anglo
+# American did not confirm, and is said as such; the sale was not signed as of the latest reports read. The slogan is
+# quoted as text only; no De Beers logo, no ad reproduction, no likeness of real people (names in text only).
+sources:
+  - id: gia
+    title: "Rough Diamond Auctions: Changes in Pricing and Distribution (Gems & Gemology, Winter 2014)"
+    publisher: GIA (Gemological Institute of America)
+    url: https://www.gia.edu/gems-gemology/winter-2014-rough-diamond-auctions-changes-pricing-distribution
+    published: "2014-12"
+    accessed: "2026-11-09"
+    credit: "GIA, Gems & Gemology"
+  - id: adweek
+    title: "Rock of Ages (Perspective: 'A Diamond Is Forever')"
+    publisher: Adweek (Robert Klara)
+    url: https://www.robertklara.com/wp-content/uploads/2013/09/Diamonds-are-Forever.pdf
+    published: "2011-10-17"
+    accessed: "2026-11-09"
+    credit: "Adweek"
+  - id: doj_2004
+    title: "De Beers Centenary AG Pleads Guilty to Price-Fixing Indictment"
+    publisher: US Department of Justice
+    url: https://www.justice.gov/archive/opa/pr/2004/July/04_at_476.htm
+    published: "2004-07-13"
+    accessed: "2026-11-09"
+    credit: "US DOJ"
+  - id: anglo_2011
+    title: "Anglo American agrees acquisition of Oppenheimer family's 40% interest in De Beers"
+    publisher: Anglo American
+    url: https://www.angloamerican.com/media/press-releases/archive/2011/2011-11-04
+    published: "2011-11-04"
+    accessed: "2026-11-09"
+    credit: "Anglo American"
+  - id: anglo_2025
+    title: "Anglo American full year 2025 results"
+    publisher: Anglo American
+    url: https://www.angloamerican.com/media/press-releases/2026/20-02-2026
+    published: "2026-02-20"
+    accessed: "2026-11-09"
+    credit: "Anglo American"
+  - id: anglo_2026
+    title: "Anglo American interim results 2026"
+    publisher: Anglo American
+    url: https://www.angloamerican.com/media/press-releases/2026/30-07-2026
+    published: "2026-07-30"
+    accessed: "2026-11-09"
+    credit: "Anglo American"
+  - id: jck_2026
+    title: "Anglo American CEO Says De Beers Sale Is Almost Done but Won't Name Buyer"
+    publisher: JCK (Karen Dybis)
+    url: https://www.jckonline.com/editorial-article/de-beers-second-half-2026/
+    published: "2026-07-30"
+    accessed: "2026-11-09"
+    credit: "JCK"
+
+  - id: debeers_2025
+    title: "De Beers Group Announces Intention To Close Lightbox Business"
+    publisher: De Beers Group (Media OutReach Newswire, via European Business Magazine)
+    url: https://europeanbusinessmagazine.com/de-beers-group-announces-intention-to-close-lightbox-business/
+    published: "2025-05-09"
+    accessed: "2026-11-09"
+    credit: "De Beers Group"
+
+  - id: nj_2025
+    title: "Lightbox to Go Dark by Summer, De Beers Says"
+    publisher: National Jeweler
+    url: https://nationaljeweler.com/articles/13908-lightbox-to-go-dark-by-summer-de-beers-says
+    published: "2025-05-12"
+    accessed: "2026-11-09"
+    credit: "National Jeweler"
+
+claims:
+  - id: syndicate
+    text: "GIA: in 1888 De Beers Consolidated Mines took control of the Kimberley mines after a battle between Cecil Rhodes and Barney Barnato; 'Rhodes and Barnato both believed that controlling production was essential to stabilizing prices'; De Beers signed a contract with 10 London distributors to buy all its production (the London Syndicate); Ernest Oppenheimer later directed all rough sales through the Diamond Trading Company; prices 'were adjusted upward when market conditions warranted, but never downward'; in slack periods it 'would stockpile rough diamonds or impose production quotas'."
+    spoken: eighteen eighty-eight
+    display: "1888"
+    source_ids: [gia]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: share
+    text: "GIA: 'Through nearly all of the last century, the company commanded 75–80% of world rough diamond sales'; its own mines were about 45% of rough production by value in the 1980s but 'the share it actually controlled was 80%', including Soviet output from around 1963; in 2003 it 'still commanded a 65% market share'."
+    spoken: seventy-five to eighty percent
+    display: "75–80%"
+    fields: {own_spoken: about forty-five percent, later_spoken: sixty-five percent}
+    source_ids: [gia]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: ayer
+    text: "Adweek (2011): in September 1938, with diamond prices plummeting, Harry Oppenheimer went to Philadelphia to the N.W. Ayer & Son agency to penetrate the American market; Ayer worked the account for a decade; in 1947 copywriter Frances Gerety wrote 'A Diamond Is Forever'; De Beers adopted it the following year; grooms 'make up 90 percent of diamond buyers'; a 1957 ad listed a 1-carat diamond at $600–$1,210 when the average American man took home $417 a month."
+    spoken: nineteen forty-seven
+    display: "1947"
+    fields: {price_spoken: six hundred to twelve hundred and ten dollars, wage_spoken: four hundred and seventeen dollars}
+    source_ids: [adweek]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: doj
+    text: "US DOJ (13 Jul 2004): De Beers Centenary AG pleaded guilty and was sentenced to pay a $10 million criminal fine for conspiring to fix prices of industrial diamonds; the plea resolved a 1994 indictment; the company had not been tried because the court lacked jurisdiction until it consented."
+    spoken: ten million dollars
+    display: "$10M fine"
+    source_ids: [doj_2004]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: change
+    text: "GIA: the DTC's control began to wane in the early 1990s after the breakup of the Soviet Union; new Canadian mines (Ekati, 1998) sold most output themselves; De Beers 'sold its diamond stockpile and curtailed its market custodianship by declining to limit sales during slower demand periods'; it agreed to phase out marketing Russia's production over seven years; rough sales moved increasingly to tenders and auctions, and since 2007 rough prices became 'extremely volatile'."
+    spoken: extremely volatile
+    display: "stockpile sold"
+    source_ids: [gia]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: oppenheimer_sale
+    text: "Anglo American (4 Nov 2011): agreed to acquire the Oppenheimer family's 40% interest in De Beers for a total cash consideration of US$5.1 billion (implying about $12.75 billion for 100%)."
+    spoken: five point one billion dollars
+    display: "$5.1bn for 40%"
+    fields: {implied_spoken: almost thirteen billion dollars}
+    source_ids: [anglo_2011]
+    status: source_located
+    verification_note: Implied value = 5.1 / 0.40, computed.
+
+  - id: writedown
+    text: "Anglo American (20 Feb 2026, FY2025 results): 'Loss attributable to equity shareholders of $3.7 billion – including a pre-tax impairment of $2.3 billion relating to De Beers'; it was 'progressing the separation of De Beers'. Anglo (30 Jul 2026): 'advancing the sale process for De Beers… to minimise the impact from challenging diamond markets'."
+    spoken: two point three billion dollars
+    display: "$2.3bn impairment"
+    source_ids: [anglo_2025, anglo_2026]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: sale
+    text: "JCK (30 Jul 2026): Bloomberg reported Anglo American was in advanced talks to sell its majority stake in De Beers to a consortium led by former De Beers CEO Gareth Penny for $1 billion; CEO Duncan Wanblad: 'We are not exclusive with anybody at this particular stage'; he hoped to sign by year-end."
+    spoken: about one billion dollars
+    display: "≈ $1bn (reported)"
+    source_ids: [jck_2026]
+    status: source_located
+    verification_note: A press report, not confirmed by Anglo; no signing found as of 2026-11-09.
+
+  - id: lab
+    text: "De Beers Group press release (9 May 2025, via Media OutReach Newswire / European Business Magazine): it intends to close its lab-grown diamond jewellery brand Lightbox; 'The business was launched with transparent linear pricing of $800 per carat. Since then, LGD prices in the jewellery sector have fallen 90% at wholesale'."
+    spoken: ninety percent
+    display: "−90% (wholesale)"
+    fields: {launch_spoken: eight hundred dollars}
+    source_ids: [debeers_2025]
+    status: source_located
+    verification_note: Company statement, said as such.
+
+  - id: anglo_origin
+    text: "GIA: 'The Syndicate nearly collapsed during the financial crash of 1907 and again during World War I'; Oppenheimer 'gained backers from the United States to take over the newly discovered coastal mines' of South-West Africa; 'That venture was named the Anglo American Corporation. Oppenheimer eventually leveraged Anglo American's highly profitable operations to take over both the Syndicate and De Beers by 1929'."
+    spoken: nineteen twenty-nine
+    display: "1929"
+    source_ids: [gia]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: cook
+    text: "National Jeweler (12 May 2025), De Beers CEO Al Cook: 'Back in 2018, when we started Lightbox, synthetics were selling for thousands of dollars, almost as much as natural diamonds.'"
+    spoken: thousands of dollars
+    display: "'thousands of dollars'"
+    source_ids: [nj_2025]
+    status: source_located
+    verification_note: Quote read on the page.

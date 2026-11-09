@@ -1,0 +1,270 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# the 2026 sale price is a press report and said as such; the slogan is quoted as text. Generic teaser.
+logline: For most of the twentieth century, one company controlled most of the world's rough diamonds, and an advertising
+  line from nineteen forty-seven taught the world that a diamond means forever. How De Beers built the most successful cartel
+  and slogan in history, and why it is now being sold for a fraction of what it was worth.
+title: How One Company Made Diamonds a Symbol of Love
+segments:
+- id: h_question
+  chapter: Four words
+  narration: Why does a promise of love come with a small, clear stone? And who decided that it should?
+  claims:
+  - ayer
+  analysis: true
+  source_note: Hook question built from the sourced slogan history.
+- id: h_stakes
+  chapter: Four words
+  narration: The answer starts with one company, De Beers. For most of the last century, it controlled {{share}} of the world's
+    rough diamonds. And in {{ayer}}, its advertising agency came up with four words that changed weddings forever. A diamond
+    is forever. Today, the company that made diamonds priceless is being sold off, at a price that would have seemed impossible
+    not long ago.
+  claims:
+  - share
+  - ayer
+  - writedown
+- id: m1_card
+  chapter: The cartel
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The cartel
+  narration: How do you keep something valuable when the ground is full of it?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_kimberley
+  chapter: The cartel
+  narration: In the early eighteen seventies, huge diamond mines were found around Kimberley, in South Africa. Suddenly there
+    were so many diamonds that prices swung wildly. Two rivals, Cecil Rhodes and Barney Barnato, fought for control of the
+    mines. In {{syndicate}}, Rhodes won, and De Beers Consolidated Mines was born. Both men agreed on one thing. Controlling
+    how many diamonds came out of the ground was the only way to keep prices stable.
+  claims:
+  - syndicate
+- id: m1_syndicate
+  chapter: The cartel
+  narration: So De Beers signed a deal with ten diamond dealers in London to buy all of its production. Later, under Ernest
+    Oppenheimer, all rough sales went through a single selling company. It sorted the stones into thousands of categories
+    and sold them at regular sales, called sights, to a small circle of approved buyers, at prices it set.
+  claims:
+  - syndicate
+- id: m1_anglo
+  chapter: The cartel
+  narration: The syndicate nearly collapsed twice, in the financial crash of nineteen oh seven and during the First World
+    War. The man who rebuilt it, Ernest Oppenheimer, did it through another company. With American backers, he created a mining
+    firm called Anglo American. By {{anglo_origin}}, he had used it to take over both the London syndicate and De Beers itself.
+    Remember that name. Almost a century later, Anglo American would be the one trying to sell De Beers.
+  claims:
+  - anglo_origin
+- id: m1_draw
+  chapter: The cartel
+  narration: Let me draw how the cartel worked. Here are the mines, De Beers' own and others around the world. All their stones
+    flow into one box, the selling company. From there, they go out to a small circle of approved buyers. And here is the
+    trick. When demand was weak, the box simply kept the diamonds, or told the mines to dig less. So prices went up when times
+    were good, and never came down.
+  claims:
+  - syndicate
+  - share
+  analysis: true
+  source_note: Diagram of the selling system and stockpiling described by GIA.
+- id: m1_share
+  chapter: The cartel
+  narration: By the nineteen eighties, De Beers' own mines produced only {{share.own_spoken}} of the world's rough diamonds
+    by value. But through its contracts, including with the Soviet Union, it controlled the sale of around eighty percent.
+    It did not need to own the diamonds. It only needed to be the one place they were sold.
+  claims:
+  - share
+- id: m1_transition
+  chapter: The cartel
+  narration: Controlling supply was half the job. The other half was creating demand.
+  claims: []
+- id: m2_card
+  chapter: A diamond is forever
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: A diamond is forever
+  narration: How do you make people want a stone?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_1938
+  chapter: A diamond is forever
+  narration: In September nineteen thirty-eight, with war coming in Europe, diamond prices were falling. Harry Oppenheimer,
+    the son of De Beers' chairman, decided the company's future lay in America. He traveled to Philadelphia, to an advertising
+    agency called N W Ayer and Son. For almost a decade, the agency draped diamonds on Hollywood stars. But it still had no
+    line that stuck.
+  claims:
+  - ayer
+- id: m2_gerety
+  chapter: A diamond is forever
+  narration: 'Then, in {{ayer}}, a young copywriter named Frances Gerety, according to Adweek, wrote four words under a photo
+    of a honeymooning couple. A diamond is forever. De Beers adopted the line the next year, and has used it ever since. '
+  claims:
+  - ayer
+- id: m2_meaning
+  chapter: A diamond is forever
+  narration: The genius was in what the line connected. Not beauty, not wealth, but love that lasts. A diamond stopped being
+    a gem and became a promise. And since grooms make up about nine out of ten diamond buyers, the ads spoke straight to them,
+    with lines about how the stone reflects the greatness of your love.
+  claims:
+  - ayer
+- id: m2_price
+  chapter: A diamond is forever
+  narration: The ads were not shy about money either. A De Beers advertisement from nineteen fifty-seven listed a one carat
+    diamond at {{ayer.price_spoken}}. At the time, the average American man took home about {{ayer.wage_spoken}} a month.
+    The message was clear. Real love costs months of pay.
+  claims:
+  - ayer
+  analysis: true
+  source_note: Prices from Adweek (1957 ad); last sentence is commentary.
+- id: m2_draw
+  chapter: A diamond is forever
+  narration: Let me draw the two halves of the machine. On one side, the cartel, holding supply back. On the other side, the
+    slogan, pushing demand up. Supply down, demand up, and the price in the middle rises. And because the stone now meant
+    forever, nobody wanted to sell theirs back. A diamond sold once was gone from the market for good.
+  claims:
+  - share
+  - ayer
+  analysis: true
+  source_note: Supply and demand illustration; the resale point is analysis.
+- id: m2_transition
+  chapter: A diamond is forever
+  narration: For decades, the machine worked almost perfectly. Then the world changed around it.
+  claims: []
+- id: m3_card
+  chapter: Cracks
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: Cracks
+  narration: Can a cartel survive the end of the world it was built for?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_usa
+  chapter: Cracks
+  narration: There was always one awkward fact. America, the market De Beers worked so hard to win, had antitrust laws. In
+    nineteen ninety-four, the US government indicted the company for conspiring to fix the prices of industrial diamonds.
+    For years, the case went nowhere, because the court had no hold over De Beers. Only in two thousand four did a De Beers
+    company finally plead guilty, and pay a fine of {{doj}}.
+  claims:
+  - doj
+- id: m3_soviet
+  chapter: Cracks
+  narration: Meanwhile, the walls around supply were falling. When the Soviet Union broke up in the early nineteen nineties,
+    Moscow lost its tight grip on the country's diamond mines. In nineteen ninety-eight, Canada opened its first diamond mine,
+    and its owners sold most of the stones themselves. More and more diamonds were reaching the market without passing through
+    De Beers.
+  claims:
+  - change
+- id: m3_stockpile
+  chapter: Cracks
+  narration: So De Beers changed strategy. It sold off its great stockpile of rough diamonds, and stopped holding back supply
+    when demand was weak. It agreed to phase out selling Russia's diamonds. By two thousand three, its share of the market
+    had fallen to {{share.later_spoken}}. And as more stones were sold at auction, rough diamond prices became, in GIA's words,
+    {{change}}.
+  claims:
+  - change
+  - share
+- id: m3_transition
+  chapter: Cracks
+  narration: But the biggest threat did not come from a mine at all. It came from a laboratory.
+  claims: []
+- id: m4_card
+  chapter: Diamonds from a machine
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: Diamonds from a machine
+  narration: What happens to forever when anyone can make a diamond?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_lab
+  chapter: Diamonds from a machine
+  narration: Diamonds can now be grown in factories, with the same carbon and the same sparkle. In twenty eighteen, De Beers
+    itself launched a lab-grown jewellery brand, called Lightbox, at {{lab.launch_spoken}} per carat. Its idea was to show
+    that lab diamonds were a cheap, different product, not a rival to the real thing.
+  claims:
+  - lab
+- id: m4_cook
+  chapter: Diamonds from a machine
+  narration: At first, lab diamonds were sold almost as luxury goods. As De Beers' chief executive Al Cook later put it, back
+    in twenty eighteen, synthetics were selling for {{cook}}, almost as much as natural diamonds. Lightbox was meant to show
+    they deserved a much lower price.
+  claims:
+  - cook
+  - lab
+- id: m4_collapse
+  chapter: Diamonds from a machine
+  narration: Then the price of lab diamonds collapsed. According to De Beers, wholesale prices for lab-grown jewellery diamonds
+    fell by {{lab}}. In twenty twenty-five, the company announced it would close Lightbox altogether. Factories could simply
+    make more, and the value of the stone started to look like the cost of the machine that made it.
+  claims:
+  - lab
+  analysis: true
+  source_note: Price fall and closure from the De Beers statement; the last sentence is analysis.
+- id: m4_draw
+  chapter: Diamonds from a machine
+  narration: Let me draw the problem for a natural diamond. Here is the price line of a stone from the ground, held up by
+    scarcity and by a story. Here is the line of a lab diamond, falling towards its cost of production. Every year, the gap
+    between them is the price of the story. The question for the industry is how long people will keep paying for it.
+  claims:
+  - lab
+  analysis: true
+  source_note: Illustration of the natural vs lab-grown price gap; no figures beyond the sourced ninety percent fall.
+- id: m4_transition
+  chapter: Diamonds from a machine
+  narration: And then the numbers reached the owner of De Beers.
+  claims: []
+- id: m5_card
+  chapter: For sale
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: For sale
+  narration: What is the diamond king worth today?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_2011
+  chapter: For sale
+  narration: In twenty eleven, the mining group Anglo American paid the Oppenheimer family {{oppenheimer_sale}} for forty
+    percent of De Beers. That put a value of {{oppenheimer_sale.implied_spoken}} on the whole company. The family that had
+    run De Beers for generations stepped aside.
+  claims:
+  - oppenheimer_sale
+- id: m5_writedown
+  chapter: For sale
+  narration: Fifteen years later, the story was very different. In its results for twenty twenty-five, Anglo American booked
+    an impairment of {{writedown}} on De Beers, as diamond markets weakened. It is now trying to sell the business.
+  claims:
+  - writedown
+- id: m5_sale
+  chapter: For sale
+  narration: In July twenty twenty-six, Bloomberg reported that Anglo was in advanced talks to sell its stake to a group led
+    by a former De Beers chief executive, for {{sale}}. Anglo did not confirm the figure, and said it was not exclusive with
+    any buyer. But even as a rough guide, the gap is enormous. Almost thirteen billion dollars, then. Perhaps one billion,
+    now.
+  claims:
+  - sale
+  - oppenheimer_sale
+- id: payoff
+  chapter: The lesson
+  narration: So what is the lesson of De Beers? That a price is not only about how rare something is. It is about who controls
+    the supply, and what story people believe. De Beers mastered both for a century. It held the stones back, and it gave
+    them a meaning. The slogan still works. But a story can only hold a price up for as long as people stop asking what the
+    thing would cost without it.
+  claims:
+  - share
+  - ayer
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

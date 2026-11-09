@@ -2193,9 +2193,28 @@ const balance: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A big brilliant-cut diamond with sparkles. `n` stones in a row (default 1, `gap` px apart); `dimAt` greys them out
+ *  (the price story fading); `label` under it; `color` tints the stone (e.g. a lab stone). */
+const gem: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const n = a.n ?? 1, gap = a.gap ?? 260, dim = a.dimAt !== undefined ? clamp((t - a.dimAt) / 1.5) : 0, c = col(a.color, '#B3E5FC');
+  return <g key={'gm' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    {Array.from({length: n}, (_, k) => { const dx = (k - (n - 1) / 2) * gap, bob = Math.sin(t * 1.8 + k) * 6;
+      return <g key={k} transform={`translate(${dx} ${bob})`} opacity={1 - dim * 0.55}>
+        <path d="M -110 -40 L -60 -100 L 60 -100 L 110 -40 L 0 110 Z" fill={c} stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+        <path d="M -110 -40 L 110 -40 M -60 -100 L -30 -40 L 0 -100 L 30 -40 L 60 -100 M -30 -40 L 0 110 L 30 -40" stroke={OL} strokeWidth={3} fill="none" strokeLinejoin="round" opacity={0.7} />
+        <path d="M -60 -100 L -30 -40 L -110 -40 Z" fill="#FFFFFF" opacity={0.5} />
+        {[0, 1, 2].map((q) => { const ph = (t * 1.3 + q * 0.7 + k) % 2.1, sc = ph < 0.5 ? Math.sin(ph / 0.5 * Math.PI) : 0;
+          return sc > 0 ? <path key={q} transform={`translate(${[-70, 50, 10][q]} ${[-110, -70, 20][q]}) scale(${sc * (1 - dim)})`} d="M 0 -26 L 6 -6 L 26 0 L 6 6 L 0 26 L -6 6 L -26 0 L -6 -6 Z" fill="#FFFFFF" /> : null; })}
+      </g>; })}
+    {a.label && <T x={0} y={170} s={30} c={a.textc || OL}>{a.label}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

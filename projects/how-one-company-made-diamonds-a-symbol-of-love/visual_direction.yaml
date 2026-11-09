@@ -1,0 +1,51 @@
+# Visual direction for how-one-company-made-diamonds-a-symbol-of-love (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: the cartel and the slogan that made diamonds mean forever. Spectacle for the myth, strategy for the cartel and
+# the sale, crisis for the cracks and the lab stones, reflective close.
+primary_tone: spectacle
+secondary_tones:
+- strategy
+- crisis
+- reflective
+palette:
+  bg: '#07101A'
+  bg2: '#0F1F30'
+  ink: '#F2FAFF'
+  muted: '#A8C3D8'
+  land: '#1A2E42'
+  border: '#36577A'
+  accent: '#FFC21A'
+  accent2: '#80D8FF'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Four words
+  tone: spectacle
+- chapter: The cartel
+  tone: strategy
+- chapter: A diamond is forever
+  tone: spectacle
+- chapter: Cracks
+  tone: crisis
+- chapter: Diamonds from a machine
+  tone: crisis
+- chapter: For sale
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m4_collapse
+  cue: collapsed
+  to: crisis
+  why: lab prices collapse
+thumbnail:
+  tone: spectacle
+  headline: []
+  idea: a sparkling diamond with a falling price line
+requirements:
+- The gem (a brilliant-cut diamond that sparkles, and greys out as its price story fades) is the through-line
+- Kimberley mining field; London sorting room with the selling box; 1940s ad office; 1950s jewellery window; courtroom; lab;
+  boardroom
+- No De Beers logo or real ads (slogan quoted as text); no likeness of real people

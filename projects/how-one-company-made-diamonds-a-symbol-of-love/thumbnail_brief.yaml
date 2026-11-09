@@ -1,0 +1,90 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
+title: How One Company Made Diamonds a Symbol of Love
+docs_dir: docs/episodes/24-debeers
+video: output/debeers_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: How one company and four words made diamonds mean forever
+  surprising_fact: De Beers controlled 75-80% of rough sales (GIA); 40% sold for $5.1bn in 2011; a $2.3bn impairment in 2025
+  subject: a glowing gem
+  tone: spectacle
+  metaphor: a price held up by a story
+concepts:
+- id: A
+  angle: mystery (bold)
+  text:
+  - 4 WORDS
+  - MADE DIAMONDS
+  accent_line: 1
+  text_side: left
+  claim_basis: 'ayer: ''A Diamond Is Forever'' (1947, Adweek)'
+  scene:
+    palette:
+      sky0: '#03070C'
+      sky1: '#0C2236'
+      haze: '#80D8FF'
+      key: '#E8F7FF'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: coin
+      x: 1380
+      y: 560
+      s: 1.0
+    support:
+    - kind: crash
+      x: 1400
+      y: 560
+      s: 0.8
+    particles:
+      n: 70
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#DDEBFF'
+    vignette: 0.55
+    brand: tl
+- id: B
+  angle: consequence (bold)
+  text:
+  - $13 BILLION
+  - TO $1 BILLION?
+  accent_line: 1
+  text_side: left
+  claim_basis: 'oppenheimer_sale/sale: implied $12.75bn (2011) vs a reported ~$1bn offer (2026, unconfirmed)'
+  scene:
+    palette:
+      sky0: '#05070F'
+      sky1: '#2A0E12'
+      haze: '#FF4B3E'
+      key: '#FFD1CC'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: coin
+      x: 1380
+      y: 560
+      s: 1.0
+    support:
+    - kind: crash
+      x: 1400
+      y: 560
+      s: 0.8
+    particles:
+      n: 60
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFD1CC'
+    vignette: 0.55
+    brand: tl
+default: A

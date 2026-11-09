@@ -13,7 +13,7 @@ How Three Banks Nearly Destroyed an Entire Country #shorts
 ## Description
 
 ```
-How Three Banks Nearly Destroyed an Entire Country. The full story, with every figure sourced, is in the long video on the channel: "".
+How Three Banks Nearly Destroyed an Entire Country. The full story, with every figure sourced, is in the long video on the channel: "How Three Banks Nearly Destroyed an Entire Country".
 
 #iceland #banking #economics #shorts #economics
 ```
