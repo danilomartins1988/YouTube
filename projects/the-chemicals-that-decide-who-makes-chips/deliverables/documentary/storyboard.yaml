@@ -1238,6 +1238,21 @@ scenes:
         color: risk
         anchor: middle
       kind: stroke
+    - d: M 640 810 L 640 700 L 700 700 L 700 810 M 760 810 L 760 620 L 820 620 L 820 810
+      color: accent3
+      width: 4
+      fill: accent3
+      fillOpacity: 0.3
+      kind: bar
+      start:
+        cue: it now makes more of the ordinary
+      label:
+        text: home-made share
+        x: 730
+        y: 595
+        size: 18
+        color: accent3
+        anchor: middle
     - d: M 1300 880 L 1460 880 M 1430 860 L 1460 880 L 1430 900
       color: accent
       width: 5

@@ -2545,6 +2545,21 @@ scenes:
         color: risk
         anchor: middle
       kind: stroke
+    - d: M 900 810 L 900 740 L 960 740 L 960 810 M 1040 810 L 1040 640 L 1100 640 L 1100 810 M 1180 810 L 1180 520 L 1240 520 L 1240 810 M 1320 810 L 1320 430 L 1380 430 L 1380 810
+      color: accent3
+      width: 4
+      fill: accent3
+      fillOpacity: 0.3
+      kind: bar
+      start:
+        cue: Every month
+      label:
+        text: good chips per wafer
+        x: 1140
+        y: 860
+        size: 20
+        color: accent3
+        anchor: middle
     - d: M 1100 600 L 1500 600
       color: accent
       width: 4

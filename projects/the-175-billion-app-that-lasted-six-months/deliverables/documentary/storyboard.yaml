@@ -627,9 +627,18 @@ scenes:
       start:
         cue: If even a small slice
       kind: stroke
-    - d: M 1260 700 L 1260 360 M 1260 700 L 1500 700 M 1270 690 Q 1380 600 1480 380
+    - d: M 1260 700 L 1260 360 M 1260 700 L 1500 700
+      color: ink
+      width: 4
+      start:
+        cue: If even a small slice
+      kind: stroke
+    - d: M 1290 700 L 1290 640 L 1340 640 L 1340 700 M 1360 700 L 1360 540 L 1410 540 L 1410 700 M 1430 700 L 1430 400 L 1480 400 L 1480 700
       color: accent3
-      width: 5
+      width: 4
+      fill: accent3
+      fillOpacity: 0.3
+      kind: bar
       start:
         cue: would be enormous
       label:
@@ -639,7 +648,6 @@ scenes:
         size: 24
         color: accent3
         anchor: middle
-      kind: stroke
     - d: M 600 820 L 1480 820
       color: risk
       width: 6

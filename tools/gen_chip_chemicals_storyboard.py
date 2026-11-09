@@ -173,6 +173,8 @@ add("p15_after", "m2_after", "engine_draw", {
         {"d": "M 560 820 L 1500 820 M 560 820 L 560 330", "color": "ink", "width": 4, "start": C("Did Korea break free"), "label": lbl("2019 → today", 1420, 860, 22, "ink")},
         {"d": "M 600 760 Q 900 700 1050 560 Q 1200 440 1450 400", "color": "accent3", "width": 7, "start": C("makes more of the ordinary"), "label": lbl("ORDINARY: MADE IN KOREA", 1250, 380, 22, "accent3")},
         {"d": "M 600 520 Q 800 600 950 560 Q 1150 470 1450 330", "color": "risk", "width": 7, "start": C("But for the most advanced"), "label": lbl("ADVANCED: JAPAN AGAIN", 1250, 310, 22, "risk")},
+        {"d": "M 640 810 L 640 700 L 700 700 L 700 810 M 760 810 L 760 620 L 820 620 L 820 810", "color": "accent3", "width": 4, "fill": "accent3", "fillOpacity": 0.3, "kind": "bar",
+         "start": C("it now makes more of the ordinary"), "label": lbl("home-made share", 730, 595, 18, "accent3")},
         {"d": "M 1300 880 L 1460 880 M 1430 860 L 1460 880 L 1430 900", "color": "accent", "width": 5, "start": C("moves the finish line"), "label": lbl("finish line moves", 1180, 885, 22, "accent")},
     ],
     "actions": [{"kind": "point", "at": C("the more Korea depends", 0.2), "dur": 1.4, "target": [1450, 330]}],

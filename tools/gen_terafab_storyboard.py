@@ -283,6 +283,8 @@ add("p28_yield", "m4_draw", "engine_draw", {
         {"d": "M 820 790 Q 950 780 1050 640 Q 1150 470 1450 400", "color": "accent3", "width": 7, "start": C("Then it must learn"), "label": lbl("GOOD CHIPS %", 1340, 370, 24, "accent3")},
         {"d": " ".join(f"M {x} {y} l 14 14 M {x + 14} {y} l -14 14" for x, y in [(860, 740), (900, 760), (940, 720), (980, 750)]), "color": "risk", "width": 4,
          "start": C("many broken chips"), "label": lbl("broken chips", 920, 700, 22, "risk")},
+        {"d": "M 900 810 L 900 740 L 960 740 L 960 810 M 1040 810 L 1040 640 L 1100 640 L 1100 810 M 1180 810 L 1180 520 L 1240 520 L 1240 810 M 1320 810 L 1320 430 L 1380 430 L 1380 810",
+         "color": "accent3", "width": 4, "fill": "accent3", "fillOpacity": 0.3, "kind": "bar", "start": C("Every month"), "label": lbl("good chips per wafer", 1140, 860, 20, "accent3")},
         {"d": "M 1100 600 L 1500 600", "color": "accent", "width": 4, "start": C("the money start to come back"), "label": lbl("money comes back", 1300, 585, 22, "accent")},
         {"d": arrow((1480, 470), (1480, 400)), "color": "accent2", "width": 5, "start": C("The companies at the top"), "label": lbl("LEADERS: DECADES UP HERE", 1250, 340, 22, "accent2")},
         {"d": dot(600, 800), "color": "risk", "width": 1, "start": C("A newcomer starts"), "label": lbl("NEWCOMER", 640, 870, 24, "risk")},
