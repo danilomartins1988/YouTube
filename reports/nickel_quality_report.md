@@ -2,35 +2,34 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/the-metal-trade-that-broke-a-billion-dollar-market/documentary/the-metal-trade-that-broke-a-billion-dollar-market--documentary.mp4 (210.9 MB) |
+| File exists | PASS | /home/user/YouTube/output/the-metal-trade-that-broke-a-billion-dollar-market/documentary/the-metal-trade-that-broke-a-billion-dollar-market--documentary.mp4 (212.4 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 11-13:20 min (channel standard 660-800 s) | FAIL | 659.93 s (10:59) |
-| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
-| Caption/voice sync | PASS | 302 cues; median cue-start offset 0.07 s, p90 0.42 s; 100% of speech captioned |
+| Duration 11-13:20 min (channel standard 660-800 s) | PASS | 663.77 s (11:03) |
+| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
+| Caption/voice sync | PASS | 305 cues; median cue-start offset 0.07 s, p90 0.40 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
-- Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
+- Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
 - Scenes: 37; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x23, engine_draw x3, kinetic_text x4
-- Average scene length: 17.8 s; act cards are music-only.
+- Average scene length: 17.9 s; act cards are music-only.
 
 ## Pipeline QC report
 
 # QC report: the-metal-trade-that-broke-a-billion-dollar-market / documentary (long_16x9)
 
-- Runtime: **659.93 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 210.9 MB
-- Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Errors: **1**, warnings: **52**
-- Technical QC passed: **False**
+- Runtime: **663.77 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 212.4 MB
+- Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
+- Errors: **0**, warnings: **53**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [ERROR] (timing) Runtime 659.9s outside target 660-800s
 - [WARNING] (presenter) Presenter scene p06_short lasts 32.5s (target 10-25 s)
 - [WARNING] (tone) Scene s02_stakes (thriller): a cheering crowd; check it suits the moment
 - [WARNING] (tone) Scene s13_night (thriller): generic colourful city/hills backdrop in a serious scene
@@ -83,6 +82,7 @@
 - [WARNING] (distinctiveness) Scene sequence 88% similar to 'the-chemicals-that-decide-who-makes-chips/documentary'
 - [WARNING] (distinctiveness) Scene sequence 93% similar to 'the-bank-that-accidentally-sent-900-million/documentary'
 - [WARNING] (distinctiveness) Scene sequence 93% similar to 'how-one-company-made-diamonds-a-symbol-of-love/documentary'
+- [WARNING] (distinctiveness) Scene sequence 91% similar to 'the-hamburger-that-became-a-symbol-of-the-cold-wars-end/documentary'
 
 ## Publish blockers - claims needing human verification
 

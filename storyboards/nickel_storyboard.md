@@ -1,6 +1,6 @@
 # Storyboard - The Metal Trade That Broke a Billion-Dollar Market
 
-Total 11:00 (659.9 s), 37 scenes. Timestamps come from the narration timing of the build that produced `timeline.json`. Engine: Remotion (React + SVG), 1920x1080, 30 fps.
+Total 11:04 (663.8 s), 37 scenes. Timestamps come from the narration timing of the build that produced `timeline.json`. Engine: Remotion (React + SVG), 1920x1080, 30 fps.
 
 | # | Start | Dur | Scene | Type | Animation | Narration (start) | Sources |
 |---|---|---|---|---|---|---|---|
@@ -39,5 +39,5 @@ Total 11:00 (659.9 s), 37 scenes. Timestamps come from the narration timing of t
 | 33 | 9:13 | 15.6s | `s32_fca` | engine_cartoon |  | In March twenty twenty-five, Britain's Financial Conduct Authority fined the London Metal ... | fca, fred_gbp |
 | 34 | 9:28 | 28.4s | `s33_philosophy` | engine_cartoon |  | The regulator also described the culture behind the decisions. The prevailing philosophy a... | fca |
 | 35 | 9:57 | 21.5s | `s34_failures` | engine_cartoon |  | The notice describes an exchange that could not see the risk building. Its overnight team ... | fca |
-| 36 | 10:18 | 31.6s | `s35_payoff` | engine_cartoon |  | So what does the nickel crisis teach about markets? That a price is only as real as the sy... | fca |
-| 37 | 10:50 | 10.0s | `s36_end` | end_card | Closing words land; brand line draws | Next time on The Hidden Economics, we follow the money behind another hidden link of the w... | - |
+| 36 | 10:18 | 35.5s | `s35_payoff` | engine_cartoon |  | So what does the nickel crisis teach about markets? That a price is only as real as the sy... | fca |
+| 37 | 10:54 | 10.0s | `s36_end` | end_card | Closing words land; brand line draws | Next time on The Hidden Economics, we follow the money behind another hidden link of the w... | - |
