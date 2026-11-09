@@ -9,7 +9,7 @@ How Did Switzerland Get So Rich? #shorts
 ```
 **Description**
 ```
-Picture a small, landlocked country of about 8.9 million people. It has no coastline, no direct access to the sea, and it sits in the middle of a continent full of larger, louder neighbours.
+Picture a small, landlocked country of about 8.9 million people. It has no coastline, no direct access to the sea, and it sits in the middle of a continent full of larger, louder neighbors.
 
 Watch the full story: "The Hidden Formula Behind Switzerland's Wealth" on The Hidden Economics. Every figure in it is sourced.
 
@@ -493,4 +493,23 @@ Watch the full story: "The Day Oil Was Worth Less Than Nothing" on The Hidden Ec
 **Tags**
 ```
 oil, negative oil price, WTI, crude oil futures, Cushing, April 2020, storage, contango, CFTC, OPEC, shorts, economics explained, The Hidden Economics
+```
+
+## 28-bigtech-ai
+
+**Title**
+```
+Big Tech Spent $200 Billion in 3 Months. Here's Why #shorts
+```
+**Description**
+```
+Two hundred billion dollars. That is roughly what four companies spent on buildings and machines in just three months.
+
+Watch the full story: "How Big Tech Really Makes Money From AI" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #ai #bigtech #economics
+```
+**Tags**
+```
+AI, artificial intelligence, Big Tech, Microsoft, Alphabet, Google, Amazon, AWS, Meta, Azure, shorts, economics explained, The Hidden Economics
 ```

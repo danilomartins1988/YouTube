@@ -1,0 +1,2027 @@
+{
+  "slug": "how-big-tech-really-makes-money-from-ai",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_open",
+      "segment": "h_open",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 8.67,
+      "duration_s": 8.67,
+      "visual_objective": "",
+      "narration": "Two hundred billion dollars. That is roughly what four companies spent on buildings and machines in just three months.",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_q1",
+        "goog_q3",
+        "amzn_q3",
+        "meta_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_who",
+      "segment": "h_who",
+      "type": "engine_cartoon",
+      "start_s": 8.67,
+      "end_s": 25.3,
+      "duration_s": 16.63,
+      "visual_objective": "",
+      "narration": "Microsoft. Alphabet, the owner of Google. Amazon. And Meta, the owner of Facebook and Instagram. Much of that money went into one thing. Data centers, packed with chips for artificial intelligence.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Microsoft",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 9.02
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Alphabet",
+          "label": "items[1].at.cue",
+          "scene_time_s": 1.73,
+          "absolute_s": 10.4
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Amazon",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.28,
+          "absolute_s": 12.95
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And Meta",
+          "label": "items[3].at.cue",
+          "scene_time_s": 5.43,
+          "absolute_s": 14.1
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Much of that money",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.02,
+          "absolute_s": 17.69
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Much of that money",
+          "label": "items[5].at.cue",
+          "scene_time_s": 9.02,
+          "absolute_s": 17.69
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s03_question",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 25.3,
+      "end_s": 34.77,
+      "duration_s": 9.47,
+      "visual_objective": "",
+      "narration": "Spending like that has to come back somehow. So how does a chatbot, an AI model, or a data center turn into actual money?",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "So how does",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.69,
+          "absolute_s": 28.99
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "So how does",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.69,
+          "absolute_s": 28.99
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "So how does",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.69,
+          "absolute_s": 28.99
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s04_promise",
+      "segment": "h_promise",
+      "type": "engine_cartoon",
+      "start_s": 34.77,
+      "end_s": 46.07,
+      "duration_s": 11.3,
+      "visual_objective": "",
+      "narration": "By the end of this video, you will know the three ways Big Tech really makes money from AI, and the one number that shows whether the bet is paying off.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "the three ways",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.49,
+          "absolute_s": 38.25
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "the three ways",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.89,
+          "absolute_s": 38.65
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "the three ways",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.29,
+          "absolute_s": 39.05
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "and the one number",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.04,
+          "absolute_s": 41.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s05_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 46.07,
+      "end_s": 51.47,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s06_size",
+      "segment": "m1_size",
+      "type": "engine_cartoon",
+      "start_s": 51.47,
+      "end_s": 77.43,
+      "duration_s": 25.97,
+      "visual_objective": "",
+      "narration": "First, remember how big these companies are. In their latest full years, Amazon sold about seven hundred and seventeen billion dollars of goods and services. Alphabet took in about four hundred and three billion dollars. Microsoft, about three hundred and thirty-two billion dollars. Meta, about two hundred and one billion dollars. That is the scale of money they are betting with.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "Amazon sold",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 6.08,
+          "absolute_s": 57.55
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Alphabet took in",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 11.97,
+          "absolute_s": 63.44
+        },
+        {
+          "param": "items[0].bars[2].at.cue",
+          "cue": "Microsoft,",
+          "label": "items[0].bars[2].at.cue",
+          "scene_time_s": 15.77,
+          "absolute_s": 67.24
+        },
+        {
+          "param": "items[0].bars[3].at.cue",
+          "cue": "Meta,",
+          "label": "items[0].bars[3].at.cue",
+          "scene_time_s": 19.49,
+          "absolute_s": 70.96
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amzn_fy25",
+        "goog_fy25",
+        "msft_fy26",
+        "meta_fy25"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s07_quarter",
+      "segment": "m1_quarter",
+      "type": "engine_cartoon",
+      "start_s": 77.43,
+      "end_s": 109.5,
+      "duration_s": 32.07,
+      "visual_objective": "",
+      "narration": "Now look at how much they are betting. In the latest quarter, Amazon spent about seventy-seven billion dollars on property and equipment. Alphabet, about fifty-one billion dollars. Microsoft, about thirty-nine billion dollars. Meta, about thirty-five billion dollars. For Amazon, Alphabet and Microsoft, that is roughly double what each spent a year earlier. Together, that is more than two billion dollars every single day, by our calculation.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "Amazon spent",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 4.52,
+          "absolute_s": 81.96
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Alphabet, about",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 9.7,
+          "absolute_s": 87.13
+        },
+        {
+          "param": "items[0].bars[2].at.cue",
+          "cue": "Microsoft, about",
+          "label": "items[0].bars[2].at.cue",
+          "scene_time_s": 12.81,
+          "absolute_s": 90.24
+        },
+        {
+          "param": "items[0].bars[3].at.cue",
+          "cue": "Meta, about",
+          "label": "items[0].bars[3].at.cue",
+          "scene_time_s": 16.23,
+          "absolute_s": 93.66
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "For Amazon, Alphabet",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 19.61,
+          "absolute_s": 97.04
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "roughly double",
+          "label": "items[1].at.cue",
+          "scene_time_s": 22.9,
+          "absolute_s": 100.34
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "every single day",
+          "label": "items[2].at.cue",
+          "scene_time_s": 28.83,
+          "absolute_s": 106.27
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amzn_q3",
+        "goog_q3",
+        "msft_q1",
+        "meta_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s08_year",
+      "segment": "m1_year",
+      "type": "engine_cartoon",
+      "start_s": 109.5,
+      "end_s": 131.17,
+      "duration_s": 21.67,
+      "visual_objective": "",
+      "narration": "And the plans for the full year are even bigger. Add up what the four companies themselves expect to spend in twenty twenty-six, and you get around seven hundred and twenty to seven hundred and forty billion dollars. They count it in slightly different ways, so treat it as an estimate. But the order of magnitude is clear.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Add up",
+          "label": "items[0].at.cue",
+          "scene_time_s": 4.03,
+          "absolute_s": 113.53
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "and you get",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 10.0,
+          "absolute_s": 119.5
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "so treat it as an estimate",
+          "label": "items[1].at.cue",
+          "scene_time_s": 16.38,
+          "absolute_s": 125.88
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_call",
+        "goog_call",
+        "amzn_q3",
+        "meta_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "p09_dc",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 131.17,
+      "end_s": 162.9,
+      "duration_s": 31.73,
+      "visual_objective": "",
+      "narration": "Let me draw where that money goes. Here is a data center. Inside are the chips, the servers and the networks. Around it, the land, the buildings, the power and the cooling. Microsoft says roughly three quarters of its spending last quarter went on short-lived assets, mainly processors and graphics chips. Those wear out or go out of date in a few years. So this is not a one-time bill. It comes back again and again.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is a data center",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.03,
+          "absolute_s": 134.2
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is a data center",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.03,
+          "absolute_s": 134.2
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Inside are the chips",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.99,
+          "absolute_s": 136.16
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Around it, the land",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.96,
+          "absolute_s": 140.13
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "the power and the cooling",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.29,
+          "absolute_s": 142.45
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "short-lived assets",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 18.34,
+          "absolute_s": 149.51
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "mainly processors",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 19.95,
+          "absolute_s": 151.12
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "It comes back again and again",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 28.97,
+          "absolute_s": 160.14
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "It comes back again and again",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 29.27,
+          "absolute_s": 160.44
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s10_supply",
+      "segment": "m1_supply",
+      "type": "engine_cartoon",
+      "start_s": 162.9,
+      "end_s": 182.07,
+      "duration_s": 19.17,
+      "visual_objective": "",
+      "narration": "Why spend so fast? Because, according to Microsoft, customer demand continues to exceed available supply. And the spending is already visible in the accounts. Amazon said its free cash flow fell mainly because of its investments in artificial intelligence.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "customer demand",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.83,
+          "absolute_s": 167.73
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And the spending is already visible",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.93,
+          "absolute_s": 171.83
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And the spending is already visible",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.93,
+          "absolute_s": 171.83
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Amazon said",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 12.28,
+          "absolute_s": 175.18
+        },
+        {
+          "param": "items[2].h[1][0].cue",
+          "cue": "free cash flow fell",
+          "label": "items[2].h[1][0].cue",
+          "scene_time_s": 14.46,
+          "absolute_s": 177.36
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_call",
+        "amzn_q3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s11_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 182.07,
+      "end_s": 193.4,
+      "duration_s": 11.33,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So where does the money come back from? There are three ways. The first is the oldest trick in the cloud. Renting the machines.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "There are three ways",
+          "label": "Three ways back.",
+          "scene_time_s": 3.55,
+          "absolute_s": 185.62
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Renting the machines",
+          "label": "Way 1: rent the machines",
+          "scene_time_s": 9.41,
+          "absolute_s": 191.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 193.4,
+      "end_s": 198.4,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 198.4,
+      "end_s": 203.8,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_rent",
+      "segment": "m2_rent",
+      "type": "engine_cartoon",
+      "start_s": 203.8,
+      "end_s": 218.83,
+      "duration_s": 15.03,
+      "visual_objective": "",
+      "narration": "A company that wants to use AI can build its own data center. Or it can rent computing power from someone who already has one. That is the cloud business, and AI has turned it into a gold rush.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Or it can rent",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.3,
+          "absolute_s": 209.1
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Or it can rent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.3,
+          "absolute_s": 209.1
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "That is the cloud business",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 9.73,
+          "absolute_s": 213.53
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "gold rush",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.03,
+          "absolute_s": 217.82
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "gold rush",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.03,
+          "absolute_s": 217.82
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "gold rush",
+          "label": "items[4].at.cue",
+          "scene_time_s": 14.03,
+          "absolute_s": 217.82
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_aws",
+      "segment": "m2_aws",
+      "type": "engine_cartoon",
+      "start_s": 218.83,
+      "end_s": 234.67,
+      "duration_s": 15.83,
+      "visual_objective": "",
+      "narration": "Start with Amazon's cloud, A W S. In the last quarter its sales grew thirty-nine percent, to forty-six billion dollars, and it made an operating profit of about seventeen point eight billion dollars.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "its sales grew",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 5.67,
+          "absolute_s": 224.51
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "thirty-nine percent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.62,
+          "absolute_s": 225.45
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "operating profit",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 11.07,
+          "absolute_s": 229.9
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amzn_q3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_margin",
+      "segment": "m2_margin",
+      "type": "engine_cartoon",
+      "start_s": 234.67,
+      "end_s": 260.33,
+      "duration_s": 25.67,
+      "visual_objective": "",
+      "narration": "Put those two numbers side by side. By our calculation, A W S kept almost thirty-nine cents of operating profit from every dollar of sales. Amazon as a whole kept about fourteen cents. So the cloud earns almost three times the margin of the rest of the company. Renting out computers, it turns out, is a very good business.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "almost thirty-nine cents",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 5.98,
+          "absolute_s": 240.65
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Amazon as a whole",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 11.84,
+          "absolute_s": 246.51
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "So the cloud earns",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.49,
+          "absolute_s": 250.16
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "almost three times",
+          "label": "items[1].at.cue",
+          "scene_time_s": 16.39,
+          "absolute_s": 251.06
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amzn_q3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_google",
+      "segment": "m2_google",
+      "type": "engine_cartoon",
+      "start_s": 260.33,
+      "end_s": 279.73,
+      "duration_s": 19.4,
+      "visual_objective": "",
+      "narration": "Google Cloud grew even faster. Its revenue rose one hundred and three percent in a year, to about thirty point seven billion dollars, powered, in Alphabet's own words, by huge demand for its AI infrastructure. And its profit more than tripled.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Its revenue rose",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 3.94,
+          "absolute_s": 264.27
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And its profit",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.61,
+          "absolute_s": 276.94
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "And its profit",
+          "label": "items[1].at.cue",
+          "scene_time_s": 16.61,
+          "absolute_s": 276.94
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "more than tripled",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 18.26,
+          "absolute_s": 278.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "goog_q3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_azure",
+      "segment": "m2_azure",
+      "type": "engine_cartoon",
+      "start_s": 279.73,
+      "end_s": 293.07,
+      "duration_s": 13.33,
+      "visual_objective": "",
+      "narration": "And Microsoft's cloud, Azure, grew forty-eight percent in the quarter. Over Microsoft's last financial year, Azure revenue passed one hundred billion dollars for the first time.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "grew",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.73,
+          "absolute_s": 282.47
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Over Microsoft's last",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.74,
+          "absolute_s": 285.47
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Over Microsoft's last",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.74,
+          "absolute_s": 285.47
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "for the first time",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 11.83,
+          "absolute_s": 291.56
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_q1",
+        "msft_fy26"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_foundry",
+      "segment": "m2_foundry",
+      "type": "engine_cartoon",
+      "start_s": 293.07,
+      "end_s": 313.33,
+      "duration_s": 20.27,
+      "visual_objective": "",
+      "narration": "Microsoft's wider cloud business brought in sixty-three point nine billion dollars in a single quarter, up thirty percent. And it says more than one hundred and twenty thousand customers now build on its AI platform, called Foundry, with revenue from it more than tripling in a year.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "in a single quarter",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 5.62,
+          "absolute_s": 298.68
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And it says",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "And it says",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And it says",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And it says",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "And it says",
+          "label": "items[4].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "And it says",
+          "label": "items[5].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "And it says",
+          "label": "items[6].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "And it says",
+          "label": "items[7].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "And it says",
+          "label": "items[8].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "And it says",
+          "label": "items[9].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[10].at.cue",
+          "cue": "And it says",
+          "label": "items[10].at.cue",
+          "scene_time_s": 9.2,
+          "absolute_s": 302.27
+        },
+        {
+          "param": "items[10].steps[1][0].cue",
+          "cue": "customers now build",
+          "label": "items[10].steps[1][0].cue",
+          "scene_time_s": 13.57,
+          "absolute_s": 306.63
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_q1",
+        "msft_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "p19_rent",
+      "segment": "m2_draw",
+      "type": "engine_draw",
+      "start_s": 313.33,
+      "end_s": 338.3,
+      "duration_s": 24.97,
+      "visual_objective": "",
+      "narration": "Let me draw the rental model. On one side, the cloud company, which owns the chips. On the other, thousands of customers, from start-ups to banks, who need computing power for a few hours or a few months. Money flows one way, rent flows back. The more AI everyone wants to run, the more rent the landlord collects.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "On one side",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.15,
+          "absolute_s": 316.48
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "On one side",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.15,
+          "absolute_s": 316.48
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "On the other",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 7.5,
+          "absolute_s": 320.83
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Money flows one way",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 16.22,
+          "absolute_s": 329.55
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "rent flows back",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 18.14,
+          "absolute_s": 331.48
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "the more rent the landlord",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 22.41,
+          "absolute_s": 335.74
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the more rent the landlord",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 22.71,
+          "absolute_s": 336.04
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amzn_q3",
+        "goog_q3",
+        "msft_q1"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 338.3,
+      "end_s": 348.37,
+      "duration_s": 10.07,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "But two of these companies earn most of their money in a completely different way. And there, AI is quietly doing something else.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "But two of these",
+          "label": "Two of them earn most money",
+          "scene_time_s": 0.35,
+          "absolute_s": 338.65
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "a completely different way",
+          "label": "…a different way",
+          "scene_time_s": 3.91,
+          "absolute_s": 342.21
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 348.37,
+      "end_s": 353.77,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_ads",
+      "segment": "m3_ads",
+      "type": "engine_cartoon",
+      "start_s": 353.77,
+      "end_s": 379.77,
+      "duration_s": 26.0,
+      "visual_objective": "",
+      "narration": "Google and Meta are, above all, advertising companies. In the last quarter, Google's search business brought in about sixty-three point four billion dollars, and YouTube ads more than eleven billion. Meta's apps earned about sixty-three billion dollars from ads. Meta's total revenue grew twenty-six percent in a year, and almost all of it comes from ads.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Google's search business",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.79,
+          "absolute_s": 360.56
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "and YouTube ads",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 11.06,
+          "absolute_s": 364.83
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "YouTube ads",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 11.8,
+          "absolute_s": 365.57
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Meta's apps",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.69,
+          "absolute_s": 368.46
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Meta's apps",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.69,
+          "absolute_s": 368.46
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Meta's apps",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.69,
+          "absolute_s": 368.46
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "from ads",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 18.35,
+          "absolute_s": 372.12
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "grew twenty-six percent",
+          "label": "items[4].at.cue",
+          "scene_time_s": 20.54,
+          "absolute_s": 374.3
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "goog_q3",
+        "meta_q3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_better",
+      "segment": "m3_better",
+      "type": "engine_cartoon",
+      "start_s": 379.77,
+      "end_s": 401.4,
+      "duration_s": 21.63,
+      "visual_objective": "",
+      "narration": "Here, AI is not a product you buy. It is the engine that decides which ad you see. Meta says its AI ads model, called GEM, raised conversions for app ads by nine point six percent. A few percent sounds small. On sixty billion dollars of ads a quarter, it is not.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "decides which ad you see",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.3,
+          "absolute_s": 385.07
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "raised conversions",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.88,
+          "absolute_s": 390.65
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "raised conversions",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.18,
+          "absolute_s": 390.95
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A few percent",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.25,
+          "absolute_s": 395.02
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "On sixty billion",
+          "label": "items[4].at.cue",
+          "scene_time_s": 17.32,
+          "absolute_s": 397.09
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "meta_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_assist",
+      "segment": "m3_assist",
+      "type": "engine_cartoon",
+      "start_s": 401.4,
+      "end_s": 424.37,
+      "duration_s": 22.97,
+      "visual_objective": "",
+      "narration": "At Alphabet, the advertising business as a whole brought in about eighty-two billion dollars in the quarter. And Meta says advertisers who used its AI business assistant got almost five percent more conversions, at the same cost. Every small improvement in targeting is multiplied by billions of ads.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "the advertising business",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 1.46,
+          "absolute_s": 402.86
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "And Meta says",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 8.48,
+          "absolute_s": 409.88
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "almost five percent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 13.32,
+          "absolute_s": 414.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "goog_q3",
+        "meta_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "p25_ads",
+      "segment": "m3_draw",
+      "type": "engine_draw",
+      "start_s": 424.37,
+      "end_s": 445.8,
+      "duration_s": 21.43,
+      "visual_objective": "",
+      "narration": "Let me draw how that works. Here is an advertiser with a budget. Here is the ad system, which picks who sees what. If the AI picks better, more people click and buy. The advertiser gets more for each dollar, so they spend more dollars. You never pay for the AI. The advertiser does.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is an advertiser",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.05,
+          "absolute_s": 427.42
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is an advertiser",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.05,
+          "absolute_s": 427.42
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Here is the ad system",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.59,
+          "absolute_s": 429.96
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Here is the ad system",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 6.19,
+          "absolute_s": 430.56
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "more people click",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.08,
+          "absolute_s": 435.45
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "more people click",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 11.08,
+          "absolute_s": 435.45
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "so they spend more dollars",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 15.88,
+          "absolute_s": 440.25
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "The advertiser does",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 19.92,
+          "absolute_s": 444.29
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "meta_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 445.8,
+      "end_s": 453.87,
+      "duration_s": 8.07,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Rent and ads pay today's bills. The third way is about money that has not arrived yet.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Rent and ads",
+          "label": "Rent + ads = today's bills",
+          "scene_time_s": 0.35,
+          "absolute_s": 446.15
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "money that has not arrived",
+          "label": "Way 3: money not yet arrived",
+          "scene_time_s": 5.61,
+          "absolute_s": 451.41
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 453.87,
+      "end_s": 459.27,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_backlog",
+      "segment": "m4_backlog",
+      "type": "engine_cartoon",
+      "start_s": 459.27,
+      "end_s": 489.17,
+      "duration_s": 29.9,
+      "visual_objective": "",
+      "narration": "When a customer signs a long cloud contract, the money arrives over years. Companies report this as a backlog. Microsoft says its commercial backlog grew seventy-three percent, to six hundred and seventy-seven billion dollars. Google Cloud reports a backlog of five hundred and sixty-one billion dollars. Alphabet expects just over half of that to turn into revenue within the next two years.",
+      "keyframes": [
+        {
+          "param": "items[0].cards[1].at.cue",
+          "cue": "Microsoft says",
+          "label": "items[0].cards[1].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 468.94
+        },
+        {
+          "param": "items[0].links[0][2].cue",
+          "cue": "Microsoft says",
+          "label": "items[0].links[0][2].cue",
+          "scene_time_s": 10.27,
+          "absolute_s": 469.54
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Google Cloud reports",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.73,
+          "absolute_s": 477.0
+        },
+        {
+          "param": "items[0].cards[2].at.cue",
+          "cue": "Google Cloud reports",
+          "label": "items[0].cards[2].at.cue",
+          "scene_time_s": 17.73,
+          "absolute_s": 477.0
+        },
+        {
+          "param": "items[0].links[1][2].cue",
+          "cue": "Google Cloud reports",
+          "label": "items[0].links[1][2].cue",
+          "scene_time_s": 18.33,
+          "absolute_s": 477.6
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_q1",
+        "goog_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_sum",
+      "segment": "m4_sum",
+      "type": "engine_cartoon",
+      "start_s": 489.17,
+      "end_s": 507.1,
+      "duration_s": 17.93,
+      "visual_objective": "",
+      "narration": "Add those two together, and you get more than one point two trillion dollars of business already signed but not yet paid. Microsoft's figure covers all its commercial contracts, not only AI. But it shows customers are committing for years, not weeks.",
+      "keyframes": [
+        {
+          "param": "items[0].cards[2].at.cue",
+          "cue": "and you get",
+          "label": "items[0].cards[2].at.cue",
+          "scene_time_s": 2.06,
+          "absolute_s": 491.23
+        },
+        {
+          "param": "items[0].links[0][2].cue",
+          "cue": "and you get",
+          "label": "items[0].links[0][2].cue",
+          "scene_time_s": 2.36,
+          "absolute_s": 491.53
+        },
+        {
+          "param": "items[0].links[1][2].cue",
+          "cue": "and you get",
+          "label": "items[0].links[1][2].cue",
+          "scene_time_s": 2.66,
+          "absolute_s": 491.83
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "of business already signed",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 5.04,
+          "absolute_s": 494.2
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Microsoft's figure covers",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.89,
+          "absolute_s": 498.06
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Microsoft's figure covers",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 8.89,
+          "absolute_s": 498.06
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_q1",
+        "goog_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_users",
+      "segment": "m4_users",
+      "type": "engine_cartoon",
+      "start_s": 507.1,
+      "end_s": 519.4,
+      "duration_s": 12.3,
+      "visual_objective": "",
+      "narration": "And then there are users. Google says its Gemini app now has one billion users. Users today are the customers, and the data, of tomorrow.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "one billion users",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 5.79,
+          "absolute_s": 512.89
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Users today",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Users today",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Users today",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Users today",
+          "label": "items[4].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Users today",
+          "label": "items[5].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Users today",
+          "label": "items[6].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "Users today",
+          "label": "items[7].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "Users today",
+          "label": "items[8].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "Users today",
+          "label": "items[9].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[10].at.cue",
+          "cue": "Users today",
+          "label": "items[10].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[11].at.cue",
+          "cue": "Users today",
+          "label": "items[11].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        },
+        {
+          "param": "items[12].at.cue",
+          "cue": "Users today",
+          "label": "items[12].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 514.61
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "goog_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_tokens",
+      "segment": "m4_tokens",
+      "type": "engine_cartoon",
+      "start_s": 519.4,
+      "end_s": 540.97,
+      "duration_s": 21.57,
+      "visual_objective": "",
+      "narration": "Usage is exploding behind the scenes too. Google says it now processes nearly thirty-two billion tokens a minute, the small pieces of text that AI models read and write. That is more than four times what it handled a year ago. Every one of those tokens runs on a chip in a data center somebody paid for.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Google says",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.87,
+          "absolute_s": 523.27
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "tokens a minute",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 7.55,
+          "absolute_s": 526.95
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "more than four times",
+          "label": "items[1].at.cue",
+          "scene_time_s": 13.61,
+          "absolute_s": 533.01
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Every one of those tokens",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.95,
+          "absolute_s": 536.35
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Every one of those tokens",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.95,
+          "absolute_s": 536.35
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "goog_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "p32_three",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 540.97,
+      "end_s": 560.5,
+      "duration_s": 19.53,
+      "visual_objective": "",
+      "narration": "Let me draw the three ways side by side. Rent, money coming in now. Ads, money coming in now, but a little better every year. And backlog, money promised for later. Against all three, one huge bar. The spending.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Rent, money coming in now",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.84,
+          "absolute_s": 544.81
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Rent, money coming in now",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.84,
+          "absolute_s": 544.81
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Rent, money",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 3.84,
+          "absolute_s": 544.81
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Ads, money",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 6.58,
+          "absolute_s": 547.55
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "And backlog",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.18,
+          "absolute_s": 552.15
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "one huge bar",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 16.49,
+          "absolute_s": 557.45
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "The spending",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 18.33,
+          "absolute_s": 559.3
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_q1",
+        "goog_call",
+        "msft_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 560.5,
+      "end_s": 566.67,
+      "duration_s": 6.17,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Which brings us to the question everyone is asking. Is it worth it?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Is it worth it",
+          "label": "Is it worth it?",
+          "scene_time_s": 4.59,
+          "absolute_s": 565.09
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 566.67,
+      "end_s": 572.07,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_risk",
+      "segment": "m5_risk",
+      "type": "engine_cartoon",
+      "start_s": 572.07,
+      "end_s": 593.37,
+      "duration_s": 21.3,
+      "visual_objective": "",
+      "narration": "Right now, the spending is growing much faster than sales. Alphabet says it expects its spending to increase significantly again in twenty twenty-seven. Meta says it will keep investing aggressively. And because so much of it goes on chips that age in a few years, the bill keeps coming back.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "significantly again",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.65,
+          "absolute_s": 579.72
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And because so much",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.27,
+          "absolute_s": 587.34
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amzn_q3",
+        "goog_call",
+        "msft_call",
+        "meta_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_chips",
+      "segment": "m5_chips",
+      "type": "engine_cartoon",
+      "start_s": 593.37,
+      "end_s": 617.63,
+      "duration_s": 24.27,
+      "visual_objective": "",
+      "narration": "That is why the companies are also designing their own chips, to cut the cost of every calculation. Amazon says its in-house chips, called Trainium and Graviton, now have a combined annual revenue run rate of more than ten billion dollars. And Microsoft expects to spend more than fifty billion dollars in its next quarter alone.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Amazon says",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.6,
+          "absolute_s": 600.97
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "combined annual revenue",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 14.66,
+          "absolute_s": 608.03
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And Microsoft expects",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.29,
+          "absolute_s": 611.66
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And Microsoft expects",
+          "label": "items[2].at.cue",
+          "scene_time_s": 18.29,
+          "absolute_s": 611.66
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And Microsoft expects",
+          "label": "items[3].at.cue",
+          "scene_time_s": 18.59,
+          "absolute_s": 611.96
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amzn_fy25",
+        "msft_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_number",
+      "segment": "m5_number",
+      "type": "engine_cartoon",
+      "start_s": 617.63,
+      "end_s": 639.07,
+      "duration_s": 21.43,
+      "visual_objective": "",
+      "narration": "So here is the one number to watch. Not the spending. The backlog. As long as customers keep signing contracts faster than the companies can build, the bet is paying off. If the backlog stops growing while the spending keeps rising, the data centers become very expensive empty rooms.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "As long as",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 6.6,
+          "absolute_s": 624.23
+        },
+        {
+          "param": "items[0].cards[1].at.cue",
+          "cue": "As long as",
+          "label": "items[0].cards[1].at.cue",
+          "scene_time_s": 6.6,
+          "absolute_s": 624.23
+        },
+        {
+          "param": "items[0].links[0][2].cue",
+          "cue": "As long as",
+          "label": "items[0].links[0][2].cue",
+          "scene_time_s": 7.0,
+          "absolute_s": 624.63
+        },
+        {
+          "param": "items[0].cards[2].at.cue",
+          "cue": "If the backlog stops",
+          "label": "items[0].cards[2].at.cue",
+          "scene_time_s": 13.45,
+          "absolute_s": 631.08
+        },
+        {
+          "param": "items[0].links[1][2].cue",
+          "cue": "If the backlog stops",
+          "label": "items[0].links[1][2].cue",
+          "scene_time_s": 13.85,
+          "absolute_s": 631.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "msft_q1",
+        "goog_call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 639.07,
+      "end_s": 662.47,
+      "duration_s": 23.4,
+      "visual_objective": "",
+      "narration": "So how does Big Tech really make money from AI? By renting the machines, by selling better ads, and by locking in customers for years. The chatbot is the shop window. The real business is behind it, in the data centers, in the ad auctions, and in contracts that will pay out long after the next model is released.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "By renting",
+          "label": "items[0].at.cue",
+          "scene_time_s": 4.29,
+          "absolute_s": 643.36
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "by selling better ads",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.12,
+          "absolute_s": 645.19
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "by locking in",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.96,
+          "absolute_s": 647.03
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The chatbot is the shop window",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.67,
+          "absolute_s": 649.74
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "The real business",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.52,
+          "absolute_s": 652.59
+        },
+        {
+          "param": "items[3].until.cue",
+          "cue": "The real business",
+          "label": "items[3].until.cue",
+          "scene_time_s": 14.02,
+          "absolute_s": 653.09
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "s39_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 662.47,
+      "end_s": 673.77,
+      "duration_s": 11.3,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 8.37,
+          "absolute_s": 670.84
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}
