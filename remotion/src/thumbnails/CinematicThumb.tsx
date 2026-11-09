@@ -347,6 +347,28 @@ const SUBJECTS: Record<string, SubjectFn> = {
     <circle r={160} fill="none" stroke="#8A6414" strokeWidth={8} />
     <text x={0} y={70} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={200} fill="#6B4C0E">{o.symbol || '$'}</text>
   </g>,
+  /** A huge brilliant-cut diamond (side view): crown facets over a pointed pavilion, with star glints. */
+  gem: (o, P) => {
+    const W = 300, T = 150, CY = -120, GY = -40, PY = 300; // half-width, table half-width, crown top, girdle, culet
+    const xs = [-W, -T, -T * 0.35, T * 0.35, T, W];
+    const crown = xs.slice(0, -1).map((x, k) => {
+      const x2 = xs[k + 1], top = (v: number) => (Math.abs(v) <= T + 1 ? CY : GY);
+      return <path key={'c' + k} d={`M ${x} ${top(x)} L ${x2} ${top(x2)} L ${x2} ${GY} L ${x} ${GY} Z`} fill={['#BFE8FF', '#E9F8FF', '#FFFFFF', '#D6F1FF', '#9FD7F5'][k]} stroke="#5FA9D6" strokeWidth={3} />;
+    });
+    const pav = [-W, -W * 0.55, -W * 0.15, W * 0.15, W * 0.55, W].slice(0, -1).map((x, k, a) => {
+      const x2 = [-W, -W * 0.55, -W * 0.15, W * 0.15, W * 0.55, W][k + 1];
+      return <path key={'p' + k} d={`M ${x} ${GY} L ${x2} ${GY} L 0 ${PY} Z`} fill={['#7CC4EE', '#CDEEFF', '#FFFFFF', '#A9DDF7', '#5FB0E0'][k]} stroke="#4A93C2" strokeWidth={3} />;
+    });
+    const glint = (x: number, y: number, r: number, k: number) => <path key={'g' + k} transform={`translate(${x} ${y})`}
+      d={`M 0 ${-r} L ${r * 0.16} ${-r * 0.16} L ${r} 0 L ${r * 0.16} ${r * 0.16} L 0 ${r} L ${-r * 0.16} ${r * 0.16} L ${-r} 0 L ${-r * 0.16} ${-r * 0.16} Z`} fill="#FFFFFF" filter="url(#glow)" />;
+    return <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -8})`}>
+      <ellipse cx={0} cy={PY + 60} rx={260} ry={40} fill="#000" opacity={0.35} filter="url(#soft)" />
+      <circle r={420} fill={o.halo || P.key} opacity={0.18} filter="url(#soft)" />
+      {pav}{crown}
+      <path d={`M ${-T} ${CY} L ${T} ${CY}`} stroke="#FFFFFF" strokeWidth={6} />
+      {glint(-T * 0.5, CY + 10, 70, 0)}{glint(W * 0.75, GY - 20, 48, 1)}{glint(-W * 0.3, 140, 36, 2)}
+    </g>;
+  },
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

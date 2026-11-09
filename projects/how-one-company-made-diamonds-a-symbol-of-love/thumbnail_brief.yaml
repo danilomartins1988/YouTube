@@ -3,7 +3,7 @@ title: How One Company Made Diamonds a Symbol of Love
 docs_dir: docs/episodes/24-debeers
 video: output/debeers_documentary.mp4
 deliverable: documentary
-status: planned
+status: completed
 analysis:
   mystery: How one company and four words made diamonds mean forever
   surprising_fact: De Beers controlled 75-80% of rough sales (GIA); 40% sold for $5.1bn in 2011; a $2.3bn impairment in 2025
@@ -14,8 +14,8 @@ concepts:
 - id: A
   angle: mystery (bold)
   text:
-  - 4 WORDS
-  - MADE DIAMONDS
+  - DIAMONDS
+  - = LOVE?
   accent_line: 1
   text_side: left
   claim_basis: 'ayer: ''A Diamond Is Forever'' (1947, Adweek)'
@@ -29,15 +29,10 @@ concepts:
       ink: '#FFFFFF'
     backdrop: void
     subject:
-      kind: coin
-      x: 1380
-      y: 560
-      s: 1.0
-    support:
-    - kind: crash
+      kind: gem
       x: 1400
-      y: 560
-      s: 0.8
+      y: 500
+      s: 1.25
     particles:
       n: 70
       region:
@@ -52,8 +47,8 @@ concepts:
 - id: B
   angle: consequence (bold)
   text:
-  - $13 BILLION
-  - TO $1 BILLION?
+  - DE BEERS
+  - $13B TO $1B?
   accent_line: 1
   text_side: left
   claim_basis: 'oppenheimer_sale/sale: implied $12.75bn (2011) vs a reported ~$1bn offer (2026, unconfirmed)'
@@ -67,14 +62,15 @@ concepts:
       ink: '#FFFFFF'
     backdrop: void
     subject:
-      kind: coin
-      x: 1380
-      y: 560
+      kind: gem
+      x: 1420
+      y: 470
       s: 1.0
+      halo: '#FF8A80'
     support:
     - kind: crash
       x: 1400
-      y: 560
+      y: 640
       s: 0.8
     particles:
       n: 60

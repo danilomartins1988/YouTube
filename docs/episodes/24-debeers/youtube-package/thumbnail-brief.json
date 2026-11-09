@@ -1,0 +1,337 @@
+{
+  "title": "How One Company Made Diamonds a Symbol of Love",
+  "docs_dir": "docs/episodes/24-debeers",
+  "video": "output/debeers_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "How one company and four words made diamonds mean forever",
+    "surprising_fact": "De Beers controlled 75-80% of rough sales (GIA); 40% sold for $5.1bn in 2011; a $2.3bn impairment in 2025",
+    "subject": "a glowing gem",
+    "tone": "spectacle",
+    "metaphor": "a price held up by a story"
+  },
+  "default": "A",
+  "slug": "how-one-company-made-diamonds-a-symbol-of-love",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "DIAMONDS",
+        "= LOVE?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "ayer: 'A Diamond Is Forever' (1947, Adweek)",
+      "scene": {
+        "palette": {
+          "sky0": "#03070C",
+          "sky1": "#0C2236",
+          "haze": "#80D8FF",
+          "key": "#E8F7FF",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "gem",
+          "x": 1400,
+          "y": 500,
+          "s": 1.25
+        },
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#DDEBFF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "DIAMONDS",
+          "x": 90,
+          "y": 515.0,
+          "size": 156.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "= LOVE?",
+          "x": 90,
+          "y": 677.5,
+          "size": 156.2,
+          "width": 700.0,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.57 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 393, 890, 524), (90, 556, 790, 687)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.069",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 38",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-cables-at-the-bottom-of-the-ocean (distance 0.39)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "ayer: 'A Diamond Is Forever' (1947, Adweek)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.71,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-cables-at-the-bottom-of-the-ocean"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "DE BEERS",
+        "$13B TO $1B?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "oppenheimer_sale/sale: implied $12.75bn (2011) vs a reported ~$1bn offer (2026, unconfirmed)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#2A0E12",
+          "haze": "#FF4B3E",
+          "key": "#FFD1CC",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "gem",
+          "x": 1420,
+          "y": 470,
+          "s": 1.0,
+          "halo": "#FF8A80"
+        },
+        "support": [
+          {
+            "kind": "crash",
+            "x": 1400,
+            "y": 640,
+            "s": 0.8
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD1CC"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "DE BEERS",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 533.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$13B TO $1B?",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.55 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "5 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 623, 530), (90, 550, 890, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 7.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.054",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 54",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-10-billion-cyberattack-that-froze-maersk (distance 0.25)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "oppenheimer_sale/sale: implied $12.75bn (2011) vs a reported ~$1bn offer (2026, unconfirmed)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.735,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-10-billion-cyberattack-that-froze-maersk"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-09T17:57:45Z",
+  "master": "output/how-one-company-made-diamonds-a-symbol-of-love/thumbnails/master_A.png"
+}

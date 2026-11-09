@@ -26,3 +26,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 21-citibank | The Bank That Accidentally Sent $900 Million | A BANK SENT $900M / BY MISTAKE | 42 s | `docs/episodes/21-citibank/youtube-short/short_package.md` |
 | 23-tokyo | Was One Garden in Tokyo Worth All of California? | ONE GARDEN IN TOKYO / = ALL OF CALIFORNIA? | 40 s | `docs/episodes/23-tokyo/youtube-short/short_package.md` |
 | 22-iceland | How Three Banks Nearly Destroyed an Entire Country | 3 BANKS GREW ~9X / BIGGER THAN THEIR COUNTRY | 40 s | `docs/episodes/22-iceland/youtube-short/short_package.md` |
+| 24-debeers | How Four Words Made Diamonds Mean Love | 4 WORDS MADE / DIAMONDS MEAN LOVE | 38 s | `docs/episodes/24-debeers/youtube-short/short_package.md` |
