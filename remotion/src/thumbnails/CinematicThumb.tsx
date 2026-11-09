@@ -385,6 +385,19 @@ const SUBJECTS: Record<string, SubjectFn> = {
         <text x={0} y={10} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={60} fill="#111">{o.tag}</text></g>}
     </g>;
   },
+  /** A giant generic cartoon burger (sesame bun, patty, cheese, lettuce) with a warm glow and steam; no brand marks. */
+  burger: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <circle r={430} fill={P.key} opacity={0.22} filter="url(#soft)" />
+    <ellipse cx={0} cy={230} rx={300} ry={36} fill="#000" opacity={0.4} filter="url(#soft)" />
+    <path d="M -280 90 Q -295 200 -220 205 L 220 205 Q 295 200 280 90 Z" fill="#E39A4C" stroke="#3A2414" strokeWidth={8} />
+    <path d="M -300 45 L 300 45 L 288 100 L -288 100 Z" fill="#5A3220" stroke="#3A2414" strokeWidth={8} strokeLinejoin="round" />
+    <path d="M -292 30 L 292 30 L 220 80 L 160 40 L 60 92 L -30 40 L -130 86 L -205 40 Z" fill="#FFC21A" stroke="#3A2414" strokeWidth={7} strokeLinejoin="round" />
+    <path d={`M -315 10 ${Array.from({length: 12}, (_, k) => `Q ${-289 + k * 52.5} ${42 + (k % 2) * 12} ${-262 + k * 52.5} 10`).join(' ')} L 315 10 L 315 32 L -315 32 Z`} fill="#6CCB6A" stroke="#3A2414" strokeWidth={6} strokeLinejoin="round" />
+    <path d="M -295 0 Q -295 -230 0 -230 Q 295 -230 295 0 Z" fill="#F2A44A" stroke="#3A2414" strokeWidth={8} />
+    <path d="M -230 -60 Q -200 -190 -40 -205" fill="none" stroke="#FFFFFF" strokeWidth={18} strokeLinecap="round" opacity={0.35} />
+    {Array.from({length: 14}, (_, k) => <ellipse key={k} cx={-180 + rnd(k) * 360} cy={-170 + rnd(k + 4) * 130} rx={13} ry={7} transform={`rotate(${rnd(k + 7) * 60 - 30})`} fill="#FFF5E1" stroke="#3A2414" strokeWidth={2} />)}
+    {[0, 1, 2].map((q) => <path key={q} d={`M ${-90 + q * 90} ${-260 - q * 10} q 22 -30 0 -60 q -22 -30 0 -60`} fill="none" stroke="#FFFFFF" strokeWidth={12} strokeLinecap="round" opacity={0.5} />)}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

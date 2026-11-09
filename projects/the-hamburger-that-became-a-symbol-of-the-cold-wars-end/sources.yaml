@@ -1,0 +1,167 @@
+# Sources and claims for "The Hamburger That Became a Symbol of the Cold War's End" (Episode 26, top-10 #9: McDonald's
+# in Moscow, 1990-2022). Every claim was read on its source page on 2026-11-09 (AI fact-check; quotes in
+# docs/episodes/26-mcdonalds/RESEARCH_NOTES.md and FACT_CHECK.md). Status stays source_located until a named human
+# reviewer signs off.
+# MONEY: US dollars as published. 1990 Soviet prices are NOT converted (the currency was non-convertible; the official
+# rate badly misstates real value) and are said only as a share of wages ("half a day's average pay").
+# Conflicting figures (seats 700 vs 900; Big Mac price 3 / 3.50 / 3.75; queue head-count) are left out.
+# No McDonald's logo, arches, mascot or trade dress: a generic cartoon burger and storefront; names in text only;
+# no likeness of real people.
+sources:
+  - id: cbc
+    title: "When a Canadian brought McDonald's fast food to Moscow"
+    publisher: CBC Archives
+    url: https://www.cbc.ca/archives/first-mcdonalds-moscow-1990-1.4980247
+    published: "2019-01-31"
+    accessed: "2026-11-09"
+    credit: "CBC Archives"
+  - id: ap1990
+    title: "McDonald's Opens In Moscow (Associated Press, via The Harvard Crimson)"
+    publisher: Associated Press / The Harvard Crimson
+    url: https://thecrimson.com/article/1990/2/1/mcdonalds-opens-in-moscow-pmoscow-thousands-of
+    published: "1990-02-01"
+    accessed: "2026-11-09"
+    credit: "AP (1990)"
+  - id: ironside
+    title: "McDonalds on Pushkin Square: From Joint Venture to Foreign Subsidiary (working paper)"
+    publisher: Kristy Ironside, Becker Friedman Institute, University of Chicago
+    url: https://bfi.uchicago.edu/wp-content/uploads/2021/12/McDonalds-on-Pushkin-Square_Ironside.pdf
+    published: "2021-12"
+    accessed: "2026-11-09"
+    credit: "Ironside (UChicago BFI)"
+  - id: mcd_exit
+    title: "McDonald's To Exit from Russia"
+    publisher: McDonald's Corporation
+    url: https://mcdonalds.mediaroom.com/2022-05-16-McDonalds-To-Exit-from-Russia
+    published: "2022-05-16"
+    accessed: "2026-11-09"
+    credit: "McDonald's"
+  - id: mcd_sale
+    title: "McDonald's agrees to sell Russian business to current licensee Alexander Govor"
+    publisher: McDonald's Corporation
+    url: https://mcdonalds.mediaroom.com/2022-05-19-McDonalds-agrees-to-sell-Russian-business-to-current-licensee-Alexander-Govor
+    published: "2022-05-19"
+    accessed: "2026-11-09"
+    credit: "McDonald's"
+  - id: q2_10q
+    title: "McDonald's Corporation Form 10-Q, quarter ended June 30, 2022"
+    publisher: US SEC (EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/63908/000006390822000041/mcd-20220630.htm
+    published: "2022-08-04"
+    accessed: "2026-11-09"
+    credit: "McDonald's 10-Q"
+  - id: q2_release
+    title: "McDonald's Q2 2022 earnings release (Form 8-K, Exhibit 99.1)"
+    publisher: US SEC (EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/63908/000006390822000034/exhibit991-6302022.htm
+    published: "2022-07-26"
+    accessed: "2026-11-09"
+    credit: "McDonald's Q2 2022 release"
+  - id: ap_mar22
+    title: "McDonald's to temporarily close all Russian locations in response to Ukrainian war (AP)"
+    publisher: Associated Press via PBS NewsHour
+    url: https://www.pbs.org/newshour/world/mcdonalds-to-temporarily-close-all-russian-locations-in-response-to-ukrainian-war
+    published: "2022-03-08"
+    accessed: "2026-11-09"
+    credit: "AP"
+  - id: ap_jun22
+    title: "Russian-owned successor of McDonald's opens in Moscow (AP)"
+    publisher: Associated Press via PBS NewsHour
+    url: https://www.pbs.org/newshour/world/russian-owned-successor-of-mcdonalds-opens-in-moscow
+    published: "2022-06-12"
+    accessed: "2026-11-09"
+    credit: "AP"
+
+claims:
+  - id: opening
+    text: "CBC: 'On Jan. 31, 1990, Muscovites had begun lining up near Pushkin Square as early as 4 a.m. — to enter the doors of the first McDonald's restaurant to open in the Soviet Union'; 'At the end of the day, 30,000 new customers had passed through the doors, and the store had set a McDonald's record for most customers served on an opening day.' AP (1990): '30,000 meals on 27 cash registers'; 'Thousands of queuehardened Soviets'. Ironside: 'Staff expected to serve 10,000 meals that day, but they served over 30,000'."
+    spoken: thirty thousand
+    display: "30,000 served"
+    fields: {expected_spoken: ten thousand, tills_spoken: twenty-seven}
+    source_ids: [cbc, ap1990, ironside]
+    status: source_located
+    verification_note: Read on 2026-11-09. Queue head-count not verified and not used.
+
+  - id: wage
+    text: "CBC: 'At the price of half a day's average wages, the cost of trying out this new style of food was steep.'"
+    spoken: half a day's average wages
+    display: "≈ half a day's pay"
+    source_ids: [cbc]
+    status: source_located
+    verification_note: Used instead of any converted price (the 1990 currency was non-convertible).
+
+  - id: deal
+    text: "CBC: 'the culmination of 14 years of work and an investment of $50 million.' Ironside: 'Beginning in 1976, he made the first of dozens of trips to Moscow to lobby Party officials'; the restaurant was 'a joint venture' between McDonald's Canada and the Moscow city soviet; 'the agreement was signed on April 29, 1987'; the city held 'the 51% controlling share'; foreign partners were 'limited to a 49% share'."
+    spoken: fourteen years
+    display: "14 years · $50M"
+    fields: {invest_spoken: fifty million dollars}
+    source_ids: [cbc, ironside]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: plant
+    text: "Ironside: 'the 100,000-square-foot \"Makkompleks\" in the Moscow suburb of Sol'ntsevo, began in 1989. The building opened in 1990'; 'McDonalds imported Russet Burbank potato seeds … and they trained Soviet collective farmers in how to increase their yields.' CBC: part of the $50 million went to a processing plant 'turning out 14,000 buns per hour' and where '10,000 patties per hour were made and frozen'."
+    spoken: fourteen thousand buns an hour
+    display: "14,000 buns / hour"
+    fields: {patties_spoken: ten thousand patties an hour}
+    source_ids: [ironside, cbc]
+    status: source_located
+    verification_note: The CBC potato tonnage figure is not used (unconfirmed elsewhere).
+
+  - id: perestroika
+    text: "Ironside quotes the first Moscow restaurant manager, Khamzat Khazbulatov: 'Many people talk about perestroika, but for them perestroika is an abstraction. Now, me—I can touch my perestroika. I can taste my perestroika. Big Mac is perestroika.' Ironside also quotes Mikhail Gorbachev calling the restaurant 'a breakthrough which demonstrated that new economic relations between our country and the rest of the world were possible.'"
+    spoken: Big Mac is perestroika
+    display: "'Big Mac is perestroika'"
+    source_ids: [ironside]
+    status: source_located
+    verification_note: Quote as printed in the paper; name in text only.
+
+  - id: control
+    text: "Ironside: 'In February 1996, McDonalds bought 31% of the Moscow city government's shares in the enterprise, bringing its share up to 80%.' AP (8 Mar 2022): 'McDonald's owns 84 percent of its Russian locations.'"
+    spoken: eighty percent
+    display: "49% → 80%"
+    source_ids: [ironside, ap_mar22]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: size
+    text: "McDonald's 10-Q (Q2 2022): 'Reflects the sale of over 850 restaurants in Russia in the second quarter of 2022, most of which were Company-operated.' McDonald's (16 May 2022), CEO Chris Kempczinski: 'the 62,000 employees who work in our restaurants'. AP (8 Mar 2022): restaurants in Russia and Ukraine 'contributed 9% of its annual revenue, or around $2 billion'."
+    spoken: more than eight hundred and fifty
+    display: "850+ restaurants"
+    fields: {staff_spoken: sixty-two thousand, revenue_spoken: around two billion dollars}
+    source_ids: [q2_10q, mcd_exit, ap_mar22]
+    status: source_located
+    verification_note: The 9% / $2bn covers Russia AND Ukraine together, and is said that way.
+
+  - id: exit
+    text: "McDonald's (16 May 2022): 'This follows McDonald's announcement on March 8, 2022, that it had temporarily closed restaurants in Russia'; 'After more than 30 years of operations in the country, McDonald's Corporation announced it will exit'; Kempczinski: 'we can no longer keep the Arches shining there'; expected charge 'of approximately $1.2-1.4 billion to write off its net investment in the market'."
+    spoken: more than thirty years
+    display: "Exit: 16 May 2022"
+    source_ids: [mcd_exit]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: sale
+    text: "McDonald's (19 May 2022): it agreed to sell its Russian business to current licensee Alexander Govor; 'Since 2015, Mr. Govor has served as a McDonald's licensee and has operated 25 restaurants in Siberia'; 'The sale and purchase agreement provides for employees to be retained for at least two years, on equivalent terms.' No price was disclosed (AP, 12 Jun 2022: monetary terms not announced)."
+    spoken: twenty-five restaurants in Siberia
+    display: "Sold to its licensee"
+    source_ids: [mcd_sale, ap_jun22]
+    status: source_located
+    verification_note: Sale price not disclosed; said as such.
+
+  - id: charge
+    text: "McDonald's 10-Q (Q2 2022): 'The Company recorded a charge for the quarter of $1.2 billion, comprised primarily of the write-off of the Company's net investment in Russia'. Q2 2022 release: 'Pre-tax charges of $1.2 billion … for the quarter and $1.3 billion … for the six months, related to the sale of the Company's business in Russia.'"
+    spoken: one point three billion dollars
+    display: "$1.3bn charge"
+    fields: {quarter_spoken: one point two billion dollars}
+    source_ids: [q2_10q, q2_release]
+    status: source_located
+    verification_note: Pre-tax, six months to 30 Jun 2022.
+
+  - id: reopen
+    text: "AP (12 Jun 2022): the Russian-owned successor opened in Moscow on Sunday, 12 June 2022, starting with the Pushkin Square restaurant; its new name, 'Vkusno & tochka', was announced a couple of hours before opening. McDonald's 10-Q: restaurants remained closed in Russia through the completion of the sale in mid-June."
+    spoken: June twelfth, twenty twenty-two
+    display: "12 Jun 2022: new name"
+    source_ids: [ap_jun22, q2_10q]
+    status: source_located
+    verification_note: Read on 2026-11-09.

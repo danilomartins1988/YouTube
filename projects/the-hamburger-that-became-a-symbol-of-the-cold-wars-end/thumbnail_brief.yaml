@@ -1,0 +1,84 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
+# Generic cartoon burger only: no logo, arches or trade dress.
+title: The Hamburger That Became a Symbol of the Cold War's End
+docs_dir: docs/episodes/26-mcdonalds
+video: output/mcdonalds_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: Why 30,000 people lined up in the snow for a hamburger in 1990 Moscow
+  surprising_fact: 30,000 customers on day one vs 10,000 expected, a McDonald's opening-day
+    record (CBC, Ironside); exit in 2022 with a $1.3bn charge
+  subject: a glowing burger
+  tone: bright
+  metaphor: a burger as a symbol of the Cold War ending
+concepts:
+- id: A
+  angle: mystery (bold)
+  text:
+  - 30,000
+  - FOR A BURGER
+  accent_line: 1
+  text_side: left
+  claim_basis: 'opening: 30,000 customers on 31 Jan 1990 (CBC; AP 1990)'
+  scene:
+    palette:
+      sky0: '#0B1630'
+      sky1: '#24406E'
+      haze: '#9EC9FF'
+      key: '#FFF1D6'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: burger
+      x: 1420
+      y: 520
+      s: 1.2
+    support: []
+    particles:
+      n: 140
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFFFFF'
+    vignette: 0.55
+    brand: tl
+- id: B
+  angle: consequence (bold)
+  text:
+  - $1.3B TO
+  - LEAVE RUSSIA
+  accent_line: 1
+  text_side: left
+  claim_basis: 'charge: $1.3bn pre-tax charges in the first half of 2022 related to the sale of the Russian business (McDonald''s Q2 2022 release)'
+  scene:
+    palette:
+      sky0: '#1A0E12'
+      sky1: '#4A1F26'
+      haze: '#FF9E80'
+      key: '#FFE9C4'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: burger
+      x: 1420
+      y: 520
+      s: 1.2
+    support: []
+    particles:
+      n: 140
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFFFFF'
+    vignette: 0.55
+    brand: tl
+default: A

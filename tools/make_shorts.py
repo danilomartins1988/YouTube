@@ -54,6 +54,7 @@ SHORTS = {
     "23-tokyo": ("when-tokyos-land-was-worth-more-than-entire-countries", "documentary", "tokyo_documentary", "ONE GARDEN IN TOKYO", "= ALL OF CALIFORNIA?", "Was One Garden in Tokyo Worth All of California?", "#japan #tokyo #bubble"),
     "24-debeers": ("how-one-company-made-diamonds-a-symbol-of-love", "documentary", "debeers_documentary", "4 WORDS MADE", "DIAMONDS MEAN LOVE", "How Four Words Made Diamonds Mean Love", "#diamonds #debeers #marketing"),
     "25-nickel": ("the-metal-trade-that-broke-a-billion-dollar-market", "documentary", "nickel_documentary", "$13 BILLION OF TRADES", "ERASED OVERNIGHT", "The Night $13 Billion of Trades Were Erased", "#nickel #lme #markets"),
+    "26-mcdonalds": ("the-hamburger-that-became-a-symbol-of-the-cold-wars-end", "documentary", "mcdonalds_documentary", "THEY QUEUED FROM 4 A.M.", "FOR A HAMBURGER", "Why Moscow Queued From 4 A.M. for a Hamburger", "#mcdonalds #moscow #coldwar"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 

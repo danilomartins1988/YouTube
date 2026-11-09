@@ -1,0 +1,50 @@
+# Visual direction for the-hamburger-that-became-a-symbol-of-the-cold-wars-end (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a warm, almost fairy-tale opening in the snow (wonder), the patient grind of building a supply chain (strategy),
+# growth (bright), then the exit (crisis) and a reflective close on the same square.
+primary_tone: bright
+secondary_tones:
+- strategy
+- crisis
+- reflective
+palette:
+  bg: '#C9D8E6'
+  bg2: '#EEF4FA'
+  ink: '#10213A'
+  muted: '#4D6680'
+  land: '#F4F8FC'
+  border: '#2B5573'
+  accent: '#E89A00'
+  accent2: '#1565C0'
+  accent3: '#23995A'
+  risk: '#E53935'
+presenter:
+  demeanor: warm
+  min_sequences: 3
+chapters:
+- chapter: A line in the snow
+  tone: bright
+- chapter: Fourteen years
+  tone: strategy
+- chapter: Building a food chain
+  tone: strategy
+- chapter: Opening day
+  tone: bright
+- chapter: Thirty years
+  tone: bright
+- chapter: Leaving
+  tone: crisis
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m4_transition
+  cue: Russia invaded Ukraine
+  to: crisis
+  why: the war ends the story that began in 1990
+thumbnail:
+  tone: bright
+  headline: []
+  idea: a giant cartoon burger glowing in a snowy night square with a long queue in fur hats
+requirements:
+- The snowy square (wintersquare) with the generic restaurant front is the through-line; the sign swaps to the new name in 2022
+- A queue of people in winter coats and fur hats; a negotiation office; potato fields (farm); a food plant (conveyor)
+- No McDonald's logo, arches, mascot, colours or trade dress; a generic cartoon burger; names in text only; no likeness of real people

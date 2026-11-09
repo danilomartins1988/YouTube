@@ -1,0 +1,330 @@
+{
+  "title": "The Hamburger That Became a Symbol of the Cold War's End",
+  "docs_dir": "docs/episodes/26-mcdonalds",
+  "video": "output/mcdonalds_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "analysis": {
+    "mystery": "Why 30,000 people lined up in the snow for a hamburger in 1990 Moscow",
+    "surprising_fact": "30,000 customers on day one vs 10,000 expected, a McDonald's opening-day record (CBC, Ironside); exit in 2022 with a $1.3bn charge",
+    "subject": "a glowing burger",
+    "tone": "bright",
+    "metaphor": "a burger as a symbol of the Cold War ending"
+  },
+  "default": "A",
+  "slug": "the-hamburger-that-became-a-symbol-of-the-cold-wars-end",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "30,000",
+        "FOR A BURGER"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "opening: 30,000 customers on 31 Jan 1990 (CBC; AP 1990)",
+      "scene": {
+        "palette": {
+          "sky0": "#0B1630",
+          "sky1": "#24406E",
+          "haze": "#9EC9FF",
+          "key": "#FFF1D6",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "burger",
+          "x": 1420,
+          "y": 520,
+          "s": 1.2
+        },
+        "support": [],
+        "particles": {
+          "n": 140,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "30,000",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 400.0,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "FOR A BURGER",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.61 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 490, 530), (90, 550, 890, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.083",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 47",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-bank-that-accidentally-sent-900-million (distance 0.70)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "opening: 30,000 customers on 31 Jan 1990 (CBC; AP 1990)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.608,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-bank-that-accidentally-sent-900-million"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "$1.3B TO",
+        "LEAVE RUSSIA"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "charge: $1.3bn pre-tax charges in the first half of 2022 related to the sale of the Russian business (McDonald's Q2 2022 release)",
+      "scene": {
+        "palette": {
+          "sky0": "#1A0E12",
+          "sky1": "#4A1F26",
+          "haze": "#FF9E80",
+          "key": "#FFE9C4",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "burger",
+          "x": 1420,
+          "y": 520,
+          "s": 1.2
+        },
+        "support": [],
+        "particles": {
+          "n": 140,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "$1.3B TO",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 533.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "LEAVE RUSSIA",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.60 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 623, 530), (90, 550, 890, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.3:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.083",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 47",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.38)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "charge: $1.3bn pre-tax charges in the first half of 2022 related to the sale of the Russian business (McDonald's Q2 2022 release)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.607,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-09T18:44:17Z",
+  "master": "output/the-hamburger-that-became-a-symbol-of-the-cold-wars-end/thumbnails/master_A.png"
+}
