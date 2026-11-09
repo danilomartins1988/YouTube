@@ -18,8 +18,8 @@
       "id": "A",
       "angle": "mystery (bold)",
       "text": [
-        "3 BANKS",
-        "VS 1 COUNTRY"
+        "3 BANKS VS",
+        "ICELAND"
       ],
       "accent_line": 1,
       "text_side": "left",
@@ -66,20 +66,20 @@
       },
       "layout": [
         {
-          "text": "3 BANKS",
+          "text": "3 BANKS VS",
           "x": 90,
-          "y": 523.3,
-          "size": 104.2,
-          "width": 466.7,
+          "y": 520.0,
+          "size": 125.0,
+          "width": 800,
           "anchor": "start",
           "color": "#FFFFFF"
         },
         {
-          "text": "VS 1 COUNTRY",
+          "text": "ICELAND",
           "x": 90,
-          "y": 631.7,
-          "size": 104.2,
-          "width": 800,
+          "y": 650.0,
+          "size": 125.0,
+          "width": 560.0,
           "anchor": "start",
           "color": "#FFC21A"
         }
@@ -112,14 +112,14 @@
           },
           {
             "check": "0-4 words",
-            "pass": false,
-            "detail": "5 words",
+            "pass": true,
+            "detail": "4 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 442, 557, 530), (90, 550, 890, 638)]",
+            "detail": "[(90, 422, 890, 528), (90, 552, 650, 658)]",
             "critical": true
           },
           {
@@ -131,19 +131,19 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": true,
-            "detail": "8.7px font at 160px wide",
+            "detail": "10.4px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 5.3:1 (dark outline adds more)",
+            "detail": "worst 6.5:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.044",
+            "detail": "0.054",
             "critical": false
           },
           {
@@ -155,7 +155,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest the-island-getting-rich-from-ai (distance 0.33)",
+            "detail": "nearest the-island-getting-rich-from-ai (distance 0.34)",
             "critical": false
           },
           {
@@ -166,7 +166,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.622,
+        "design_score": 0.698,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -181,8 +181,8 @@
       "id": "B",
       "angle": "consequence (bold)",
       "text": [
-        "ICELAND",
-        "WENT BUST"
+        "ICELAND'S BANKS",
+        "COLLAPSED"
       ],
       "accent_line": 1,
       "text_side": "left",
@@ -229,20 +229,20 @@
       },
       "layout": [
         {
-          "text": "ICELAND",
+          "text": "ICELAND'S BANKS",
           "x": 90,
-          "y": 517.8,
-          "size": 138.9,
-          "width": 622.2,
+          "y": 526.7,
+          "size": 83.3,
+          "width": 800,
           "anchor": "start",
           "color": "#FFFFFF"
         },
         {
-          "text": "WENT BUST",
+          "text": "COLLAPSED",
           "x": 90,
-          "y": 662.2,
-          "size": 138.9,
-          "width": 800,
+          "y": 613.3,
+          "size": 83.3,
+          "width": 480.0,
           "anchor": "start",
           "color": "#FFC21A"
         }
@@ -264,7 +264,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.58 MB",
+            "detail": "0.59 MB",
             "critical": true
           },
           {
@@ -282,7 +282,7 @@
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 409, 712, 526), (90, 554, 890, 671)]",
+            "detail": "[(90, 462, 890, 532), (90, 548, 570, 618)]",
             "critical": true
           },
           {
@@ -293,20 +293,20 @@
           },
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
-            "pass": true,
-            "detail": "11.6px font at 160px wide",
+            "pass": false,
+            "detail": "6.9px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 7.2:1 (dark outline adds more)",
+            "detail": "worst 8.7:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.054",
+            "detail": "0.043",
             "critical": false
           },
           {
@@ -318,7 +318,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": false,
-            "detail": "nearest the-175-billion-app-that-lasted-six-months (distance 0.08)",
+            "detail": "nearest the-175-billion-app-that-lasted-six-months (distance 0.06)",
             "critical": false
           },
           {
@@ -328,8 +328,8 @@
             "critical": true
           }
         ],
-        "critical_fail": false,
-        "design_score": 0.676,
+        "critical_fail": true,
+        "design_score": 0.634,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -343,6 +343,6 @@
   ],
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-09T15:04:49Z",
+  "generated": "2026-11-09T17:02:07Z",
   "master": "output/how-three-banks-nearly-destroyed-an-entire-country/thumbnails/master_A.png"
 }

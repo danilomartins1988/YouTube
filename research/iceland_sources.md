@@ -1,6 +1,6 @@
 # Research dossier - How Three Banks Nearly Destroyed an Entire Country
 
-Generated 2026-11-09T14:06:55+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-09T15:57:25+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 

@@ -33,7 +33,7 @@ Total 11:15 (675.2 s), 39 scenes. Timestamps come from the narration timing of t
 | 27 | 7:07 | 28.5s | `s26_krona` | engine_cartoon |  | First, everyone holding Iceland's currency. According to the IMF, the currency fell by mor... | imf_pr, fred_isk, cambridge |
 | 28 | 7:35 | 26.2s | `s27_recession` | engine_cartoon |  | Then came the recession. The economy shrank by minus six point six percent in twenty oh ni... | cambridge |
 | 29 | 8:01 | 16.5s | `s28_imf` | engine_cartoon |  | In November, the IMF approved a loan to Iceland of about two point one billion dollars, wi... | imf_pr |
-| 30 | 8:18 | 21.3s | `s29_icesave` | engine_cartoon |  | And then there was Icesave. Britain and the Netherlands paid back their own savers, and se... | irish_2010, ukgov_2016, fred_gbp |
+| 30 | 8:18 | 21.3s | `p29_bill` | engine_draw |  | And then there was Icesave. Britain and the Netherlands paid back their own savers, and se... | irish_2010, ukgov_2016, fred_gbp |
 | 31 | 8:39 | 23.8s | `s30_vote` | engine_cartoon |  | Icelanders said no. In a referendum in March twenty ten, just over ninety-three percent vo... | irish_2010, schuman_2011 |
 | 32 | 9:03 | 4.9s | `s31_t4` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | Britain and the Netherlands took the fight to court. | - |
 | 33 | 9:08 | 5.4s | `s32_c5` | act_title | Chapter card: masked title reveal, gold rule draws | (music only) | - |

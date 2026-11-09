@@ -1696,9 +1696,9 @@
     },
     {
       "index": 30,
-      "id": "s29_icesave",
+      "id": "p29_bill",
       "segment": "m4_icesave",
-      "type": "engine_cartoon",
+      "type": "engine_draw",
       "start_s": 498.0,
       "end_s": 519.27,
       "duration_s": 21.27,
@@ -1706,81 +1706,60 @@
       "narration": "And then there was Icesave. Britain and the Netherlands paid back their own savers, and sent the bill to Iceland. Britain alone had paid out four and a half billion pounds, about seven point eight billion dollars at the time. The governments negotiated a deal for Iceland's taxpayers to repay it, with interest.",
       "keyframes": [
         {
-          "param": "callouts[0].at.cue",
-          "cue": "Britain and the Netherlands",
-          "label": "callouts[0].at.cue",
+          "param": "draw_start.cue",
+          "cue": "Britain and the Netherlands paid",
+          "label": "draw_start.cue",
           "scene_time_s": 2.86,
           "absolute_s": 500.86
         },
         {
-          "param": "items[0].at.cue",
+          "param": "strokes[0].start.cue",
+          "cue": "Britain and the Netherlands paid",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.86,
+          "absolute_s": 500.86
+        },
+        {
+          "param": "strokes[1].start.cue",
           "cue": "paid back their own savers",
-          "label": "items[0].at.cue",
+          "label": "strokes[1].start.cue",
           "scene_time_s": 4.37,
           "absolute_s": 502.37
         },
         {
-          "param": "items[1].at.cue",
+          "param": "strokes[2].start.cue",
           "cue": "paid back their own savers",
-          "label": "items[1].at.cue",
-          "scene_time_s": 4.37,
-          "absolute_s": 502.37
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 4.87,
+          "absolute_s": 502.87
         },
         {
-          "param": "items[2].at.cue",
-          "cue": "paid back their own savers",
-          "label": "items[2].at.cue",
-          "scene_time_s": 4.37,
-          "absolute_s": 502.37
-        },
-        {
-          "param": "items[4].at.cue",
+          "param": "strokes[3].start.cue",
           "cue": "sent the bill to Iceland",
-          "label": "items[4].at.cue",
+          "label": "strokes[3].start.cue",
           "scene_time_s": 6.07,
           "absolute_s": 504.07
         },
         {
-          "param": "callouts[0].until.cue",
-          "cue": "Britain alone",
-          "label": "callouts[0].until.cue",
-          "scene_time_s": 8.01,
-          "absolute_s": 506.01
+          "param": "strokes[4].start.cue",
+          "cue": "sent the bill to Iceland",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 6.47,
+          "absolute_s": 504.47
         },
         {
-          "param": "items[3].at.cue",
-          "cue": "Britain alone",
-          "label": "items[3].at.cue",
-          "scene_time_s": 8.31,
-          "absolute_s": 506.31
-        },
-        {
-          "param": "callouts[1].at.cue",
-          "cue": "Britain alone",
-          "label": "callouts[1].at.cue",
-          "scene_time_s": 8.31,
-          "absolute_s": 506.31
-        },
-        {
-          "param": "items[3].h[1][0].cue",
-          "cue": "Britain alone",
-          "label": "items[3].h[1][0].cue",
-          "scene_time_s": 9.81,
-          "absolute_s": 507.81
-        },
-        {
-          "param": "cam[1].at.cue",
+          "param": "actions[0].at.cue",
           "cue": "The governments negotiated",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 15.74,
-          "absolute_s": 513.74
+          "label": "actions[0].at.cue",
+          "scene_time_s": 15.94,
+          "absolute_s": 513.94
         },
         {
-          "param": "items[5].at.cue",
-          "cue": "The governments negotiated",
-          "label": "items[5].at.cue",
-          "scene_time_s": 15.74,
-          "absolute_s": 513.74
+          "param": "strokes[5].start.cue",
+          "cue": "with interest",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 19.96,
+          "absolute_s": 517.96
         }
       ],
       "unresolved_cues": [],

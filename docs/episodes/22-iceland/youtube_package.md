@@ -1,6 +1,6 @@
 # YouTube package: "How Three Banks Nearly Destroyed an Entire Country" (Episode 22)
 
-Prepared for manual publishing. Nothing has been uploaded. Video length 11:05.
+Prepared for manual publishing. Nothing has been uploaded. Video length 11:15.
 
 ## Title options
 
@@ -19,10 +19,10 @@ Chapters
 0:00 The week a country nearly went bankrupt
 0:42 From fish to finance
 2:21 Icesave
-4:19 Seven days in October
-6:45 The bill
-8:58 The verdicts
-10:26 The lesson
+4:23 Seven days in October
+6:52 The bill
+9:07 The verdicts
+10:35 The lesson
 
 Sources
 - International Monetary Fund: IMF Executive Board Approves US$2.1 Billion Stand-By Arrangement for Iceland (Press Release 08/296) - https://www.imf.org/external/np/sec/pr/2008/pr08296.htm
@@ -48,14 +48,14 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 0:00 The week a country nearly went bankrupt
 0:42 From fish to finance
 2:21 Icesave
-4:19 Seven days in October
-6:45 The bill
-8:58 The verdicts
-10:26 The lesson
+4:23 Seven days in October
+6:52 The bill
+9:07 The verdicts
+10:35 The lesson
 ```
 
 ## Tags
 
 ```
-Iceland, 2008 financial crisis, Kaupthing, Landsbanki, Glitnir, Icesave, banking collapse, IMF, krona, economics, The Hidden Economics
+Iceland, 2008 financial crisis, Kaupthing, Landsbanki, Glitnir, Icesave, banking crisis, IMF, economics, The Hidden Economics
 ```

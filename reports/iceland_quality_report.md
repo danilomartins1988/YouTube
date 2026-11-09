@@ -2,19 +2,19 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/how-three-banks-nearly-destroyed-an-entire-country/documentary/how-three-banks-nearly-destroyed-an-entire-country--documentary.mp4 (248.8 MB) |
+| File exists | PASS | /home/user/YouTube/output/how-three-banks-nearly-destroyed-an-entire-country/documentary/how-three-banks-nearly-destroyed-an-entire-country--documentary.mp4 (244.0 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
 | Duration 11-13:20 min (channel standard 660-800 s) | PASS | 675.17 s (11:15) |
-| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
+| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 302 cues; median cue-start offset 0.04 s, p90 0.33 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Scenes: 39; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x25, engine_draw x3, kinetic_text x4
+- Scenes: 39; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x24, engine_draw x4, kinetic_text x4
 - Average scene length: 17.3 s; act cards are music-only.
 
 ## Pipeline QC report
@@ -22,10 +22,10 @@
 # QC report: how-three-banks-nearly-destroyed-an-entire-country / documentary (long_16x9)
 
 - Runtime: **675.17 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 248.8 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 244.0 MB
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Errors: **1**, warnings: **52**
-- Technical QC passed: **False**
+- Errors: **0**, warnings: **50**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
@@ -33,9 +33,6 @@
 - [WARNING] (timing) Segment m3_scale pace 119 wpm (numerals count as one word)
 - [WARNING] (captions) Caption reading speed >25 chars/s: 'A small country,'
 - [WARNING] (presenter) Presenter scene p22_reach lasts 32.1s (target 10-25 s)
-- [ERROR] (presenter) Presenter sequences are bunched together; spread them through the film
-- [WARNING] (tone) Scene s29_icesave (crisis): a cheering crowd; check it suits the moment
-- [WARNING] (tone) Scene s29_icesave (crisis): generic colourful city/hills backdrop in a serious scene
 - [WARNING] (tone) Scene s30_vote (crisis): a cheering crowd; check it suits the moment
 - [WARNING] (sources) Number word 'eight' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
@@ -81,8 +78,8 @@
 - [WARNING] (sources) Number word 'eight' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (distinctiveness) Scene sequence 84% similar to 'when-tokyos-land-was-worth-more-than-entire-countries/documentary'
-- [WARNING] (distinctiveness) Scene sequence 87% similar to 'how-one-company-made-diamonds-a-symbol-of-love/documentary'
+- [WARNING] (distinctiveness) Scene sequence 83% similar to 'how-one-company-made-diamonds-a-symbol-of-love/documentary'
+- [WARNING] (distinctiveness) Scene sequence 81% similar to 'the-10-billion-cyberattack-that-froze-maersk/documentary'
 
 ## Publish blockers - claims needing human verification
 
