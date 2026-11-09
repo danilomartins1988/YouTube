@@ -2091,9 +2091,54 @@ const pcgrid: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A generic (redrawn) loan-payment form: three wash-account checkboxes FRONT / FUND / PRINCIPAL that tick at the
+ *  times in `checks` ([front, fund, principal], null = never), an approval stamp row (`approvals`: times), a warning
+ *  dialog at warnAt ("Funds will be sent out of the bank. Continue?") whose YES is clicked at yesAt, after which the
+ *  `sent` line counts up. */
+const wireform: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const W = 620, H = 470, ch: (number | null)[] = a.checks || [null, null, null], names = ['FRONT', 'FUND', 'PRINCIPAL'];
+  const apv: number[] = a.approvals || [], warn = a.warnAt ?? 1e9, yes = a.yesAt ?? 1e9;
+  const showWarn = t >= warn && t < yes + 0.6, sent = t >= yes;
+  const amt = sent ? Math.min(1, (t - yes) / 2.5) : 0;
+  return <g key={'wf' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={14} fill="#ECEFF1" stroke={OL} strokeWidth={6} />
+    <rect x={-W / 2} y={-H / 2} width={W} height={56} rx={14} fill="#37474F" />
+    <T x={-W / 2 + 24} y={-H / 2 + 38} s={24} c={K.white} a="start">{a.title || 'LOAN PAYMENT · WASH ACCOUNT'}</T>
+    {names.map((n, k) => { const on = ch[k] !== null && ch[k] !== undefined && t >= (ch[k] as number), yy = -H / 2 + 110 + k * 62;
+      const pulse = on && t < (ch[k] as number) + 0.4 ? 1.25 : 1;
+      return <g key={n} transform={`translate(${-W / 2 + 40} ${yy})`}>
+        <g transform={`scale(${pulse})`}><rect x={-16} y={-16} width={32} height={32} rx={5} fill={K.white} stroke={OL} strokeWidth={4} />
+          {on && <path d="M -10 0 L -2 9 L 12 -10" stroke={K.green2} strokeWidth={6} fill="none" strokeLinecap="round" strokeLinejoin="round" />}</g>
+        <T x={34} y={10} s={28} a="start">{n}</T>
+        <rect x={250} y={-18} width={260} height={36} rx={6} fill={on ? '#C8E6C9' : '#FFFFFF'} stroke="#90A4AE" strokeWidth={3} />
+        <T x={262} y={8} s={20} a="start" c="#546E7A">{on ? 'WASH ACCOUNT' : (t >= (a.at ?? 0) + 1 && k < 2 && ch[2] !== null ? '— (default)' : '')}</T>
+      </g>; })}
+    <g transform={`translate(${-W / 2 + 40} ${H / 2 - 120})`}>
+      {['MAKER', 'CHECKER', 'APPROVER'].map((r, k) => { const ok = apv[k] !== undefined && t >= apv[k];
+        return <g key={r} transform={`translate(${k * 190} 0)`}><rect x={0} y={-24} width={170} height={44} rx={22} fill={ok ? K.green2 : '#CFD8DC'} stroke={OL} strokeWidth={3} />
+          <T x={85} y={6} s={20} c={ok ? K.white : '#546E7A'}>{(ok ? '✓ ' : '') + r}</T></g>; })}
+    </g>
+    <g transform={`translate(0 ${H / 2 - 40})`}>
+      <T x={-W / 2 + 40} y={8} s={24} a="start">SENT OUT:</T>
+      <T x={W / 2 - 40} y={8} s={32} a="end" c={amt > 0.05 ? K.red : OL}>{sent ? '$' + (7.8 + amt * (a.total ?? 894)).toFixed(1) + 'M' : '$0'}</T>
+    </g>
+    {showWarn && <g transform={`translate(0 -10) scale(${E.outBack(win(t, warn, 0.4))})`}>
+      <rect x={-250} y={-110} width={500} height={220} rx={16} fill="#FFF8E1" stroke={OL} strokeWidth={6} />
+      <path d="M -200 -60 l 26 -46 l 26 46 Z" fill={K.gold} stroke={OL} strokeWidth={4} strokeLinejoin="round" /><T x={-174} y={-68} s={30}>!</T>
+      <T x={-130} y={-74} s={22} a="start">Funds will be sent out</T>
+      <T x={-130} y={-46} s={22} a="start">of the bank. Continue?</T>
+      <g transform="translate(-90 50)"><rect x={-70} y={-26} width={140} height={52} rx={10} fill={t >= yes ? K.green2 : K.white} stroke={OL} strokeWidth={4} /><T x={0} y={9} s={26}>YES</T></g>
+      <g transform="translate(90 50)"><rect x={-70} y={-26} width={140} height={52} rx={10} fill={K.white} stroke={OL} strokeWidth={4} /><T x={0} y={9} s={26}>NO</T></g>
+      {t >= yes - 0.8 && <path d={`M ${-60 + 40 * clamp(1 - (t - yes + 0.8) / 0.8)} ${70 + 40 * clamp(1 - (t - yes + 0.8) / 0.8)} l 0 40 l 10 -10 l 12 22 l 8 -4 l -12 -22 l 14 0 Z`} fill={K.white} stroke={OL} strokeWidth={3} />}
+    </g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

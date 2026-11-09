@@ -1,0 +1,56 @@
+# Visual direction for the-bank-that-accidentally-sent-900-million (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a banking thriller about one wrong checkbox. Thriller for the evening the money left, crisis for the morning
+# after, strategy for the two court rulings, reflective close.
+primary_tone: thriller
+secondary_tones:
+- crisis
+- strategy
+- reflective
+palette:
+  bg: '#08101E'
+  bg2: '#111E36'
+  ink: '#EEF4FF'
+  muted: '#A9B8D6'
+  land: '#1B2A47'
+  border: '#34507E'
+  accent: '#FFC21A'
+  accent2: '#64B5F6'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The nine-hundred-million-dollar click
+  tone: thriller
+- chapter: The middleman
+  tone: strategy
+- chapter: Three checkboxes
+  tone: thriller
+- chapter: The morning after
+  tone: crisis
+- chapter: Finders keepers
+  tone: strategy
+- chapter: The appeal
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m2_stop
+  cue: The approver clicked yes
+  to: crisis
+  why: the money leaves the bank
+- segment: m5_reverse
+  cue: reversed the ruling
+  to: spectacle
+  why: the appeals court reverses
+thumbnail:
+  tone: thriller
+  headline: []
+  idea: an open vault pouring money, one ticked checkbox, the 00M figure
+requirements:
+- The wireform (a redrawn, generic payment form with FRONT / FUND / PRINCIPAL boxes, the six-eye row and the Continue? dialog)
+  is the through-line
+- Late-evening operations floor; a vault that swings open; returned vs kept money piles; two courtrooms
+- No Citi, Revlon or Flexcube logos or real UI; no likeness of real people (names in text only)
+

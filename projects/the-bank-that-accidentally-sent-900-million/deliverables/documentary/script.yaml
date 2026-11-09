@@ -1,0 +1,276 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# the court chain is followed exactly as read (2021 district ruling, 2022 appeals reversal). Generic teaser.
+logline: In August twenty twenty, Citibank meant to send about seven point eight million dollars. It sent almost nine hundred
+  million. Some lenders refused to give it back, and a federal judge said they could keep it. How three checkboxes, six eyes
+  and one old legal rule turned a typo into a two-year court fight.
+title: The Bank That Accidentally Sent $900 Million
+segments:
+- id: h_question
+  chapter: The nine-hundred-million-dollar click
+  narration: What happens when one of the biggest banks in the world sends almost a billion dollars to the wrong place, and
+    the people who receive it say, thank you, we are keeping it?
+  claims:
+  - wired
+  - split
+  analysis: true
+  source_note: Hook question built from the sourced claims.
+- id: h_stakes
+  chapter: The nine-hundred-million-dollar click
+  narration: On August eleventh, twenty twenty, Citibank meant to pay {{wired.interest_spoken}} of interest on behalf of the
+    cosmetics company Revlon. Instead, it sent {{wired}} of its own money. A federal judge later called it one of the biggest
+    blunders in banking history. And then he ruled that much of the money did not have to come back.
+  claims:
+  - wired
+  - ruling_2021
+- id: m1_card
+  chapter: The middleman
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: The middleman
+  narration: Why was Citibank paying Revlon's bills at all?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_loan
+  chapter: The middleman
+  narration: In twenty sixteen, Revlon borrowed {{loan}} through a syndicated loan. That means the money did not come from
+    one bank, but from dozens of lenders, mostly investment funds. Someone has to sit in the middle, collect Revlon's payments
+    and pass them on to every lender. That job is called the administrative agent. And Revlon's agent was Citibank.
+  claims:
+  - loan
+- id: m1_draw
+  chapter: The middleman
+  narration: Let me draw the plumbing. Here is Revlon. Here is Citibank, the agent. And here are the lenders. When an interest
+    payment is due, Revlon sends the money to Citibank, and Citibank splits it and sends each lender its share. The agent
+    does not lend. It only moves the money. But that means the agent's computers are connected to the bank's own vault. If
+    the agent sends too much, the extra comes out of Citibank's own pocket.
+  claims:
+  - loan
+  analysis: true
+  source_note: Explanation of the administrative-agent role described in the opinion.
+- id: m1_trouble
+  chapter: The middleman
+  narration: By twenty twenty, Revlon was in deep trouble. In May, it raised {{distress.new_spoken}} in new financing, partly
+    by moving assets that had protected the old loan into a new deal. Many lenders were furious. On the market, the old loan
+    was trading for {{distress}}. In other words, investors doubted they would ever be paid back in full.
+  claims:
+  - distress
+- id: m1_transition
+  chapter: The middleman
+  narration: Then, late on a Tuesday in August, Citibank paid them back in full. By accident.
+  claims: []
+- id: m2_card
+  chapter: Three checkboxes
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: Three checkboxes
+  narration: How do you send nine hundred million dollars by mistake?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_task
+  chapter: Three checkboxes
+  narration: The task looked simple. As part of a deal with some of its lenders, Revlon had agreed to pay interest to all
+    of its old lenders early. Citibank's payment software, called Flexcube, had an awkward quirk. The easiest way to send
+    only the interest was to enter the transaction as if Revlon were paying off the entire loan, and then redirect the principal
+    into an internal account, called a wash account, so that the money never left the bank.
+  claims:
+  - checkbox
+- id: m2_boxes
+  chapter: Three checkboxes
+  narration: According to the court, Citibank's own manual said that to keep the principal inside, three fields on the screen
+    all had to be set to the wash account. They were called front, fund, and principal. The employee who built the payment,
+    part of a team in India working for Citibank through the outsourcing firm Wipro, ticked only one. Principal.
+  claims:
+  - checkbox
+- id: m2_six
+  chapter: Three checkboxes
+  narration: Citibank had a safety rule for this, called six eyes. Three people must review a payment before it goes out.
+    The second person checked it and approved. The third, a senior manager in the United States, replied, looks good, please
+    proceed, principal is going to wash. All three believed the screen meant something it did not.
+  claims:
+  - checkbox
+- id: m2_stop
+  chapter: Three checkboxes
+  narration: There was even a final warning. A box popped up saying the funds would be sent out of the bank, and asking, do
+    you want to continue. But it did not say how much. And since the interest really was supposed to leave the bank, the warning
+    looked normal. The approver clicked yes. And Citibank's money went out, matching, to the penny, everything Revlon owed
+    on the loan.
+  claims:
+  - checkbox
+  - wired
+- id: m2_missed
+  chapter: Three checkboxes
+  narration: Even the evidence went unread. That evening, as part of the routine, the employee who built the payment sent
+    his manager the paperwork, including screenshots from the system. Under amount paid, they showed {{wired.interest_spoken}}
+    in interest, and {{wired.principal_spoken}} in principal. He did not see anything wrong, because he believed the system
+    was showing the principal as paid into the bank's own internal account.
+  claims:
+  - wired
+  - checkbox
+- id: m2_draw
+  chapter: Three checkboxes
+  narration: Let me draw the size of the mistake. Here is what Citibank meant to send, {{wired.interest_spoken}}. And here
+    is what actually left the bank. The principal alone was almost nine hundred million dollars. The intended payment is barely
+    a line next to it. More than a hundred times smaller.
+  claims:
+  - wired
+  analysis: true
+  source_note: Bar comparison of the two figures shown in the opinion ($7.8M interest, $894M principal).
+- id: m2_transition
+  chapter: Three checkboxes
+  narration: Nobody noticed that evening. The next morning, somebody did.
+  claims: []
+- id: m3_card
+  chapter: The morning after
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: The morning after
+  narration: Can you just ask for it back?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_bad
+  chapter: The morning after
+  narration: Around nine the next morning, a team manager checking the previous day's accounts found a discrepancy that should
+    not have been there. In a chat message, one employee wrote, bad news, the wires look like they went out the door. By the
+    afternoon, Citibank was sending notices to every lender, saying the money had been sent in error, and asking for it back.
+  claims:
+  - morning
+- id: m3_split
+  chapter: The morning after
+  narration: Many lenders sent it back. About {{split}} came home. But {{split.firms_spoken}} investment firms, managing funds
+    that had received more than five hundred million dollars, refused. One of them replied that it was not at all clear that
+    the funds were paid in error.
+  claims:
+  - split
+  - morning
+- id: m3_hold
+  chapter: The morning after
+  narration: Inside the funds, the reactions were telling. Some sent the money straight back. Others told their banks to wait.
+    One firm said it was working with its lawyers to get approval to return the funds, but asked its trustee to hold off until
+    it heard back. The longer they held on, the more it looked like a decision, not a delay.
+  claims:
+  - morning
+  - split
+  analysis: true
+  source_note: Lender responses as described in the opinion (Allstate to BNY Mellon); last sentence is analysis.
+- id: m3_why
+  chapter: The morning after
+  narration: Why would they keep it? Look at it from their side. They held a loan the market valued at under a third of its
+    face value. Suddenly, they had received every cent, in cash. And they were already in a fight with Revlon. The very next
+    day, a group of lenders sued Revlon and Citibank over the May deal. To them, this money was not a gift. It was what they
+    were owed.
+  claims:
+  - split
+  - distress
+  analysis: true
+  source_note: Lenders' perspective as described in the opinion (loan price, UMB lawsuit filed August twelfth).
+- id: m3_transition
+  chapter: The morning after
+  narration: So Citibank went to court, sure that the law was on its side.
+  claims: []
+- id: m4_card
+  chapter: Finders keepers
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: Finders keepers
+  narration: If someone pays you by mistake, do you have to give it back?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_rule
+  chapter: Finders keepers
+  narration: Usually, yes. Under New York law, a payment made by mistake generally has to be returned. But there is an old
+    exception, called discharge for value. If you are owed money, and someone pays you that exact amount, and you had no reason
+    to suspect a mistake, you can keep it. As New York's highest court once put it, you should be able to treat the payment
+    as final.
+  claims:
+  - ruling_2021
+- id: m4_draw
+  chapter: Finders keepers
+  narration: Let me draw the test. First box. Were you owed this money? Second box. Did you do nothing to mislead the sender?
+    Third box. Did you have no notice of a mistake? If the answer to all three is yes, the arrow leads to keeping it. If any
+    answer is no, the arrow leads back to the sender. The whole case came down to that third box.
+  claims:
+  - ruling_2021
+  analysis: true
+  source_note: Simplified diagram of the discharge-for-value defense as set out in the opinion.
+- id: m4_ruling
+  chapter: Finders keepers
+  narration: After a trial in December, Judge Jesse Furman ruled in February twenty twenty-one. The lenders, he found, could
+    reasonably have believed the payment was deliberate. The amounts matched to the penny, and Revlon was backed by the billionaire
+    Ronald Perelman, whose company owned {{distress.perelman_spoken}} of it. His conclusion was blunt. {{ruling_2021}}. The
+    lenders could keep about {{split.kept_spoken}}.
+  claims:
+  - ruling_2021
+  - distress
+  - split
+- id: m4_fine
+  chapter: Finders keepers
+  narration: For Citibank, it was an embarrassment on top of a bigger problem. The blunder raised questions about its controls,
+    and, as the trade publication Banking Dive noted, it may have contributed to the {{occ}} fine that its regulator had imposed
+    on the bank in October. Citibank said it would appeal.
+  claims:
+  - occ
+  - ruling_2021
+- id: m4_transition
+  chapter: Finders keepers
+  narration: The appeal took another year and a half.
+  claims: []
+- id: m5_card
+  chapter: The appeal
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: The appeal
+  narration: Should the lenders have known?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_reverse
+  chapter: The appeal
+  narration: On {{ruling_2022}}, the federal appeals court in New York reversed the ruling. First, the loan was not due until
+    twenty twenty-three. So the lenders were not owed that money yet, and the old exception did not protect them.
+  claims:
+  - ruling_2022
+  - loan
+- id: m5_flags
+  chapter: The appeal
+  narration: Second, the court listed red flags that should have made any careful investor pick up the phone. Revlon had not
+    sent the notice required for paying early. A struggling company was supposedly repaying everything three years ahead of
+    time. It could have bought the same debt on the market for under thirty cents on the dollar. And days earlier, it had
+    launched a deal designed to stop the loan from coming due early.
+  claims:
+  - ruling_2022
+- id: m5_after
+  chapter: The appeal
+  narration: The money had to go back. By then, the industry had already moved. Many loan contracts now include clauses saying
+    that a payment made in error must be returned. And Revlon itself, the company at the center of it all, later filed for
+    bankruptcy protection.
+  claims:
+  - ruling_2022
+  - distress
+- id: payoff
+  chapter: The lesson
+  narration: So what does this story say about the money system? That the biggest transfers in the world still pass through
+    a few people looking at a screen. Six eyes are only safe if each pair is really looking, not trusting the other two. A
+    warning that does not show the amount is not much of a warning. And when money arrives that seems too good to be true,
+    the law may one day ask a simple question. Why didn't you call?
+  claims:
+  - checkbox
+  - ruling_2022
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

@@ -1,0 +1,118 @@
+# Sources and claims for "The Bank That Accidentally Sent $900 Million" (Episode 21, top-10 #4: Citibank / Revlon).
+# Every claim was read on its source page on 2026-11-09 (AI fact-check; quotes in docs/episodes/21-citibank/FACT_CHECK.md).
+# The main source is the court's own opinion (Judge Jesse Furman, S.D.N.Y., 16 Feb 2021, 105 pages); the 2022 appeal is
+# followed through law-firm summaries (Kelley Drye, Torys), as read. Status stays source_located until a human signs off.
+# MONEY: all amounts in US dollars as published. Real people are named in text only (as they appear in the court opinion);
+# no logos, no real software UI (the screen is redrawn generically), no likenesses.
+sources:
+  - id: furman
+    title: "In re Citibank August 11, 2020 Wire Transfers, 20-CV-6539 (JMF), Opinion and Order"
+    publisher: US District Court, Southern District of New York (via the Federal Reserve Bank of New York, FMLG)
+    url: https://www.newyorkfed.org/medialibrary/Microsites/fmlg/files/2021/20cv6539-citibank-opinion
+    published: "2021-02-16"
+    accessed: "2026-11-09"
+    credit: "S.D.N.Y. opinion (Furman, J.)"
+  - id: bankingdive
+    title: "Citi on the hook for $500M blunder, judge rules"
+    publisher: Banking Dive
+    url: https://www.bankingdive.com/news/citi-revlon-lawsuit-payment-mistake-creditors/595154/
+    published: "2021-02-16"
+    accessed: "2026-11-09"
+    credit: "Banking Dive"
+  - id: reg_2021
+    title: "Citibank accidentally wired $500m back to lenders in user-interface super-gaffe – and judge says it can't be undone"
+    publisher: The Register
+    url: https://www.theregister.com/2021/02/19/citibank_money_mistake/
+    published: "2021-02-19"
+    accessed: "2026-11-09"
+    credit: "The Register"
+  - id: kelleydrye
+    title: "What Inquiring Minds Should Have Known: Second Circuit Ruling on Inquiry Notice Saves Citibank From $900 Million Payment Mistake"
+    publisher: Kelley Drye & Warren
+    url: https://www.kelleydrye.com/viewpoints/client-advisories/what-inquiring-minds-should-have-known-second-circuit-ruling-on-inquiry-notice-saves-citibank-from-900-million-payment-mistake
+    published: "2022-10-11"
+    accessed: "2026-11-09"
+    credit: "Kelley Drye"
+  - id: torys
+    title: "Revlon erroneous payment decision reversed on appeal"
+    publisher: Torys LLP
+    url: https://www.torys.com/en/our-latest-thinking/publications/2022/09/revlon-erroneous-payment-decision-reversed-on-appeal
+    published: "2022-09"
+    accessed: "2026-11-09"
+    credit: "Torys"
+
+claims:
+  - id: wired
+    text: "Furman opinion: on August 11, 2020, Citibank, as Administrative Agent for a syndicated term loan to Revlon, intended to wire approximately $7.8 million in interest payments to Revlon's lenders; 'Instead, it made one of the biggest blunders in banking history: It mistakenly wired, in addition to Revlon's $7.8 million, almost $900 million of its own money as well. The resulting payments equaled — to the penny — the amounts of principal and interest that Revlon owed.' Screenshots showed $7.8 million in interest and $894 million in principal."
+    spoken: almost nine hundred million dollars
+    display: "≈ $900M"
+    fields: {interest_spoken: about seven point eight million dollars, interest_display: "$7.8M", principal_display: "$894M", principal_spoken: eight hundred and ninety-four million dollars}
+    source_ids: [furman, bankingdive]
+    status: source_located
+    verification_note: Read in the opinion on 2026-11-09.
+
+  - id: loan
+    text: "Furman opinion: in 2016, Revlon took out a seven-year, $1.8 billion syndicated loan; Citibank is the Administrative Agent, which receives payments from Revlon and passes them on to the lenders. Kelley Drye: the loan was not due until 2023."
+    spoken: one point eight billion dollars
+    display: "$1.8bn"
+    source_ids: [furman, kelleydrye]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: distress
+    text: "Furman opinion: in May 2020 Revlon completed a transaction that obtained over $800 million in new financing and moved collateral that had secured the 2016 loan to a new facility; some lenders challenged it, and on August 12, 2020 lenders authorized UMB Bank to sue Revlon and Citibank over it; Revlon was backed by Ronald Perelman's MacAndrews & Forbes, which owned approximately 85% of Revlon. Kelley Drye: Revlon was in severe financial distress, with the loan trading for less than 30 cents on the dollar; Revlon has since filed for chapter 11."
+    spoken: less than thirty cents on the dollar
+    display: "< 30¢ per $1"
+    fields: {new_spoken: more than eight hundred million dollars, perelman_spoken: about eighty-five percent}
+    source_ids: [furman, kelleydrye]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: checkbox
+    text: "Furman opinion: Citibank's payments ran on Flexcube; the easiest way to pay the interest was to enter a full payoff and send the principal to an internal 'wash account'; the manual said 'ALL of the below field[s] must be set to the wash account: FRONT[;] FUND[; and] PRINCIPAL'; between 5:15 and 5:45 p.m. the maker checked only PRINCIPAL; the 'six-eye' procedure requires three people to review and approve; the checker and the senior approver ('Looks good, please proceed. Principal is going to wash.') also believed it was correct; a 'stop sign' warned 'Account used is Wire Account and Funds will be sent out of the bank. Do you want to continue?' without showing the amount. Several team members were Wipro employees in India working exclusively for Citibank."
+    spoken: three
+    display: "FRONT · FUND · PRINCIPAL"
+    source_ids: [furman, reg_2021]
+    status: source_located
+    verification_note: Read in the opinion; names in text only.
+
+  - id: morning
+    text: "Furman opinion: around 9:00 a.m. on August 12, a team manager reviewing 'cash breaks' found the discrepancy; a Skype message: 'bad news… wires look[] like they went out the door'; at approximately 2:25 p.m. Citibank began sending Recall Notices; further notices followed that evening and the next days. Allstate replied: 'It is not at all clear that the funds were paid in error.'"
+    spoken: the next morning
+    display: "Aug 12, 2020"
+    source_ids: [furman]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: split
+    text: "Banking Dive (Feb 2021): some asset managers returned about $385 million, 10 refused; the judge ruled they do not need to return $504 million. Furman opinion: defendants were ten investment advisory firms (including Brigade, HPS and Symphony) whose clients received more than $500 million; Citibank sought $504,169,401.45."
+    spoken: about three hundred and eighty-five million dollars
+    display: "$385M returned"
+    fields: {kept_spoken: about five hundred and four million dollars, kept_display: "$504M", firms_spoken: ten}
+    source_ids: [bankingdive, furman]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: ruling_2021
+    text: "Furman opinion (16 Feb 2021, after a December 2020 bench trial): New York law generally requires mistaken payments to be returned, but the 'discharge-for-value' defense lets a creditor keep money it is owed if it had no notice of the mistake (Banque Worms, 1991: such a beneficiary 'should be able to consider the transfer of funds as a final and complete transaction'); 'the Court holds that Citibank is not entitled to its money back. Instead, Defendants' clients are entitled to keep the money.' Banking Dive: Citi said it would appeal."
+    spoken: Citibank is not entitled to its money back
+    display: "Feb 16, 2021"
+    source_ids: [furman, bankingdive]
+    status: source_located
+    verification_note: Quotes read in the opinion.
+
+  - id: occ
+    text: "Banking Dive (Feb 2021): the overpayment 'called into question the bank's system of checks and balances, and potentially contributed to the $400 million fine the Office of the Comptroller of the Currency (OCC) levied against Citi in October.'"
+    spoken: four hundred million dollars
+    display: "$400M OCC fine"
+    source_ids: [bankingdive]
+    status: source_located
+    verification_note: Link to the fine is Banking Dive's 'potentially'; said as such.
+
+  - id: ruling_2022
+    text: "Torys / Kelley Drye (Sep-Oct 2022): the Second Circuit reversed and remanded on September 8, 2022; the lenders were not bona fide creditors because the debt was not yet due; they were on inquiry notice given four red flags: no prepayment notice from Revlon; Revlon paying off the loan three years early despite poor finances; it could have bought the debt for under 30 cents on the dollar; and an exchange offer days earlier designed to prevent acceleration of the loan. Torys: the market had already added erroneous-payment provisions drafted by the Loan Syndication and Trading Association."
+    spoken: September eighth, twenty twenty-two
+    display: "Sep 8, 2022"
+    source_ids: [torys, kelleydrye]
+    status: source_located
+    verification_note: Followed through law-firm summaries as read.
