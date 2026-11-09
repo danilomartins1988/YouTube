@@ -25,4 +25,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 20-notpetya | One Software Update Froze the World's Biggest Shipping Company | ONE SOFTWARE UPDATE. / $10 BILLION IN DAMAGE | 46 s | `docs/episodes/20-notpetya/youtube-short/short_package.md` |
 | 21-citibank | The Bank That Accidentally Sent $900 Million | A BANK SENT $900M / BY MISTAKE | 42 s | `docs/episodes/21-citibank/youtube-short/short_package.md` |
 | 23-tokyo | Was One Garden in Tokyo Worth All of California? | ONE GARDEN IN TOKYO / = ALL OF CALIFORNIA? | 40 s | `docs/episodes/23-tokyo/youtube-short/short_package.md` |
-| 22-iceland | ``` | 3 BANKS GREW ~9X / BIGGER THAN THEIR COUNTRY | 40 s | `docs/episodes/22-iceland/youtube-short/short_package.md` |
+| 22-iceland | How Three Banks Nearly Destroyed an Entire Country | 3 BANKS GREW ~9X / BIGGER THAN THEIR COUNTRY | 40 s | `docs/episodes/22-iceland/youtube-short/short_package.md` |
