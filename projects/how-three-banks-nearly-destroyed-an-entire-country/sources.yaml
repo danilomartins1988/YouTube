@@ -108,7 +108,7 @@ claims:
     verification_note: Different dates and measures; the film says 'almost nine times' (IMF end-2007) and attributes it.
 
   - id: growth
-    text: "Cambridge: Iceland had depended on fishing and aluminium; the banks were privatised (completed 1999-2002, 'arbitrary and opaque procedures'); 'By 2003, Icelandic banking began to grow at an extraordinary fast rate, aided by low world interest rates and free capital mobility'; the owners of all three banks 'also became the major borrowers from the banks'."
+    text: "Cambridge: Iceland had depended on fishing and aluminium; the banks were privatised (completed 1999-2002, 'arbitrary and opaque procedures'); 'By 2003, Icelandic banking began to grow at an extraordinary fast rate, aided by low world interest rates and free capital mobility'; the owners of all three banks 'also became the major borrowers from the banks'; Table 2: current account balance −20.7% of GDP in 2006."
     spoken: fishing and aluminium
     display: "fish + aluminium → banks"
     source_ids: [cambridge]
@@ -196,5 +196,22 @@ claims:
     spoken: five and a half years
     display: "5½ years"
     source_ids: [cbc_2012, fox_2015]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: praise
+    text: "Cambridge (quoting the Portes et al. 2007 report on Iceland): 'Our view, which appears to be shared by the regulatory authorities (the [FME] and the CBI) is that these are in fact very well run banks.' Cambridge also notes Mishkin and Herbertsson (2006) judged the banks fundamentally sound."
+    spoken: very well run banks
+    display: "'very well run banks'"
+    source_ids: [cambridge]
+    status: source_located
+    verification_note: Quote as reproduced in the Cambridge paper.
+
+  - id: recession
+    text: "Cambridge: Iceland's growth of 1.1 per cent in 2008 'the very next year declined to minus 6.6 per cent and the following year was minus 4.1 per cent, the worst recession of any of the OECD countries'; on 7 October 2008 the government was compelled to nationalise the three major banks; the bankruptcy of the three banks is the third largest in the world, after Lehman Brothers and Washington Mutual."
+    spoken: minus six point six percent
+    display: "−6.6% (2009)"
+    fields: {next_spoken: minus four point one percent}
+    source_ids: [cambridge]
     status: source_located
     verification_note: Read on 2026-11-09.

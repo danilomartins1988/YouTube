@@ -1,0 +1,267 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Every number comes from sources.yaml via {{placeholders}} or is spelled out from a cited claim; years in words;
+# bank size said as the sources state it; pounds converted at the H.10 rate; the krona via the OECD series. Generic teaser.
+logline: In October twenty eight, three banks from a small North Atlantic island collapsed in less than a week. They had grown
+  to almost nine times the size of the country's whole economy. How fishing and aluminium turned into a global banking empire,
+  why Britain used an anti-terrorism law against it, and how Iceland survived.
+title: How Three Banks Nearly Destroyed an Entire Country
+segments:
+- id: h_question
+  chapter: The week a country nearly went bankrupt
+  narration: What happens when a country's banks become so big that the whole country cannot save them?
+  claims:
+  - size
+  analysis: true
+  source_note: Hook question built from the sourced size claim.
+- id: h_stakes
+  chapter: The week a country nearly went bankrupt
+  narration: In October twenty oh eight, Iceland found out. Its three biggest banks collapsed in {{collapse}}. According to
+    the International Monetary Fund, the banking system had grown to {{size}} the size of the country's entire economy. The
+    prime minister went on television and warned of national bankruptcy. And the British government froze an Icelandic bank's
+    money using an anti-terrorism law.
+  claims:
+  - collapse
+  - size
+  - speech
+  - freeze
+- id: m1_card
+  chapter: From fish to finance
+  narration: ''
+  claims: []
+- id: m1_question
+  chapter: From fish to finance
+  narration: How does a country of fishermen build a global banking empire?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m1_fish
+  chapter: From fish to finance
+  narration: For most of its modern history, Iceland lived mainly on two things. Fishing, and later aluminium. Its banks were
+    small, and mostly owned by the state. Then, around the turn of the century, the government sold them off. A study from
+    the University of Cambridge describes the sale as arbitrary and opaque, with the banks going to groups close to the parties
+    in power.
+  claims:
+  - growth
+- id: m1_boom
+  chapter: From fish to finance
+  narration: From about twenty oh three, the three banks, Kaupthing, Landsbanki and Glitnir, began to grow at an extraordinary
+    speed. Money was cheap around the world, and capital could flow across borders freely. The banks borrowed abroad, invested
+    abroad, and lent to Iceland's own businessmen. In fact, the owners of the banks became some of their biggest borrowers.
+  claims:
+  - growth
+- id: m1_draw
+  chapter: From fish to finance
+  narration: Let me draw the problem. Here is the size of Iceland's economy, everything the country produces in a year. One
+    bar. Now here are the assets of its banks by the end of twenty oh seven, according to the IMF. Almost nine bars. A small
+    country, holding up a giant. And if the giant ever fell, who could possibly catch it?
+  claims:
+  - size
+  - growth
+  analysis: true
+  source_note: Bar illustration of the IMF figure (almost 900 percent of GDP by end-2007).
+- id: m1_transition
+  chapter: From fish to finance
+  narration: To keep growing, the banks needed more money. So they went looking for savers. In Britain.
+  claims: []
+- id: m2_card
+  chapter: Icesave
+  narration: ''
+  claims: []
+- id: m2_question
+  chapter: Icesave
+  narration: Why would a British saver put their money in an Icelandic bank?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m2_icesave
+  chapter: Icesave
+  narration: Because it paid more. In October twenty oh six, Landsbanki launched an internet savings account in Britain called
+    {{icesave}}. It offered some of the best interest rates available, and the deposits flooded in. It also took savers in
+    the Netherlands. In the end, {{icesave.savers_spoken}} British and Dutch savers had money in it.
+  claims:
+  - icesave
+- id: m2_risk
+  chapter: Icesave
+  narration: But there was a catch hidden in the structure. Icesave was part of an Icelandic bank, not a separate British
+    one. So if it failed, the first promise to repay ordinary savers came from Iceland's own deposit guarantee fund. A fund
+    in a small country, standing behind savers in two much bigger ones.
+  claims:
+  - icesave
+  - efta
+  analysis: true
+  source_note: Structure as described in the Cambridge paper and the EFTA Court case (Icesave depositors in the UK and the
+    Netherlands under Iceland's deposit-guarantee scheme).
+- id: m2_warning
+  chapter: Icesave
+  narration: There were warning signs. Iceland was running huge deficits with the rest of the world, and its banks depended
+    on borrowing that could vanish overnight. The Cambridge study notes that the banks did not hold the toxic mortgage-linked
+    securities that sank others. Their weakness was simpler. They were too big, and they ran on borrowed money.
+  claims:
+  - growth
+  - size
+- id: m2_praise
+  chapter: Icesave
+  narration: And yet, the experts were calm. In twenty oh seven, a report by respected international economists concluded,
+    in its own words, that these were in fact {{praise}}. Iceland's regulators seemed to agree. When the people paid to watch
+    the banks were reassured, very few outsiders asked the obvious question. What if the money stops?
+  claims:
+  - praise
+- id: m2_transition
+  chapter: Icesave
+  narration: Then, in September twenty oh eight, the global flow of borrowed money stopped.
+  claims: []
+- id: m3_card
+  chapter: Seven days in October
+  narration: ''
+  claims: []
+- id: m3_question
+  chapter: Seven days in October
+  narration: What happens when the money stops?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m3_fall
+  chapter: Seven days in October
+  narration: After the collapse of Lehman Brothers, banks everywhere stopped lending to each other. For Iceland's banks, that
+    was fatal. They could not roll over their debts, and the country's central bank could not print dollars or euros to rescue
+    them. One after another, Glitnir, Landsbanki and Kaupthing fell, in {{collapse}}. Together, they were {{collapse.share_spoken}}
+    of the country's banking system.
+  claims:
+  - collapse
+- id: m3_speech
+  chapter: Seven days in October
+  narration: On October sixth, Prime Minister Geir Haarde addressed the nation. There was, he said, a very real danger that
+    the economy could be sucked with the banks into the whirlpool, and the result could be {{speech}}. He announced an emergency
+    bill, to be passed that same day. And he ended with three words. God bless Iceland.
+  claims:
+  - speech
+- id: m3_scale
+  chapter: Seven days in October
+  narration: The next day, October seventh, the government took control of the banks. Measured together, the failure of the
+    three Icelandic banks was the third largest bankruptcy in the world, after Lehman Brothers and Washington Mutual.
+  claims:
+  - recession
+  source_note: Nationalisation and 'third largest' from the Cambridge paper.
+- id: m3_terror
+  chapter: Seven days in October
+  narration: Two days later, Britain struck. At ten in the morning on October eighth, the British Treasury made an order freezing
+    Landsbanki's assets in the country. The power it used came from a law of twenty oh one, the {{freeze}}, crime and security
+    act. An anti-terrorism law, used against the bank of a friendly European country.
+  claims:
+  - freeze
+- id: m3_draw
+  chapter: Seven days in October
+  narration: Let me draw why a country cannot save banks this big. Here is the government, with its tax revenue and its reserves.
+    Here are the banks, with their debts to the world. An arrow from the government to the banks is a rescue. But look at
+    the sizes. The banks owe many times more than the whole economy produces. The arrow simply cannot reach. So instead of
+    saving the banks, Iceland drew a line between them and the country.
+  claims:
+  - size
+  analysis: true
+  source_note: Diagram of the size mismatch described by the IMF and the prime minister's address.
+- id: m3_transition
+  chapter: Seven days in October
+  narration: The banks were gone. Now the bill arrived at every kitchen table.
+  claims: []
+- id: m4_card
+  chapter: The bill
+  narration: ''
+  claims: []
+- id: m4_question
+  chapter: The bill
+  narration: Who pays when a whole banking system disappears?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m4_krona
+  chapter: The bill
+  narration: First, everyone holding Icelandic krónur. According to the IMF, the currency fell by {{collapse.krona_spoken}}
+    in offshore trading, and the stock market fell by {{collapse.stocks_spoken}}. Even at official rates, the krona lost {{krona}}
+    of its value against the dollar in about a year. Imports became far more expensive, and inflation rose to {{krona.inflation_spoken}}
+    in twenty oh nine.
+  claims:
+  - collapse
+  - krona
+- id: m4_recession
+  chapter: The bill
+  narration: Then came the recession. The economy shrank by {{recession}} in twenty oh nine, and by another {{recession.next_spoken}}
+    the year after. According to the Cambridge study, it was the worst recession of any country in the OECD, the club of rich
+    economies. Unemployment soared, and the weak krona pushed prices up.
+  claims:
+  - recession
+  - krona
+- id: m4_imf
+  chapter: The bill
+  narration: In November, the IMF approved a loan to Iceland of about {{imf}}, with other governments lending the rest of
+    what was needed. In return, Iceland had to stabilize its currency and its public finances.
+  claims:
+  - imf
+- id: m4_icesave
+  chapter: The bill
+  narration: And then there was Icesave. Britain and the Netherlands paid back their own savers, and sent the bill to Iceland.
+    Britain alone had paid out four and a half billion pounds, {{repaid}} at the time. The governments negotiated a deal for
+    Iceland's taxpayers to repay it, with interest.
+  claims:
+  - repaid
+  - votes
+- id: m4_vote
+  chapter: The bill
+  narration: Icelanders said no. In a referendum in March twenty ten, {{votes}} voted against the repayment deal. A new, softer
+    deal went to a second vote in April twenty eleven. It was rejected again, by {{votes.second_spoken}}. Ordinary people
+    refused to pay for the debts of private banks.
+  claims:
+  - votes
+- id: m4_transition
+  chapter: The bill
+  narration: Britain and the Netherlands took the fight to court.
+  claims: []
+- id: m5_card
+  chapter: The verdicts
+  narration: ''
+  claims: []
+- id: m5_question
+  chapter: The verdicts
+  narration: Did Iceland have to pay?
+  claims: []
+  analysis: true
+  source_note: Part question.
+- id: m5_efta
+  chapter: The verdicts
+  narration: The case went to the EFTA Court, the court for the European countries outside the European Union that share its
+    single market. On January twenty-eighth, twenty thirteen, it ruled. The claim against Iceland was {{efta}}. Iceland had
+    not broken the rules by refusing to guarantee the savers with its own taxpayers' money.
+  claims:
+  - efta
+- id: m5_estate
+  chapter: The verdicts
+  narration: The savers' money came back another way. Landsbanki's remaining assets were sold off over the following years,
+    and the deposit claims had priority. In January twenty sixteen, the British Treasury announced it had received its final
+    payment, and said it had now recovered all the taxpayer money used for Icesave.
+  claims:
+  - repaid
+- id: m5_people
+  chapter: The verdicts
+  narration: Iceland also did something few countries did after the crisis. It took people to court. In twenty twelve, former
+    prime minister Geir Haarde was convicted on one charge, with no punishment, the first government leader prosecuted over
+    the global banking crisis. In twenty fifteen, Iceland's Supreme Court sent the former head of Kaupthing to prison for
+    {{courts}} for market manipulation.
+  claims:
+  - courts
+- id: payoff
+  chapter: The lesson
+  narration: So what is the lesson of Iceland? That a bank can grow bigger than the country that stands behind it. When that
+    happens, the country stops controlling the bank, and the bank starts controlling the country. In the end, Iceland let
+    its banks fail, and refused to make its taxpayers carry their foreign debts. Bigger countries in twenty oh eight made
+    a different choice. Which one was right is still being argued today.
+  claims:
+  - size
+  - votes
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

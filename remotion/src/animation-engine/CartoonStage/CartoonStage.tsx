@@ -2136,9 +2136,33 @@ const wireform: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A small island carrying three bank towers. `grow` (0..1 keyframes) raises the towers far above the island;
+ *  from wobbleAt they sway; at fallAt they crack and topple into the sea one after another (0.6 s apart). */
+const bankisle: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 760), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const g = clamp(kf(a.grow, t, 0.1)), wob = a.wobbleAt !== undefined && t >= a.wobbleAt ? Math.sin(t * 6) * Math.min(1, (t - a.wobbleAt) / 2) * 4 : 0;
+  const names: string[] = a.names || ['K', 'L', 'G'], cols = ['#6A1B9A', '#1565C0', '#C62828'];
+  return <g key={'bi' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <ellipse cx={0} cy={40} rx={330} ry={34} fill="#4FB3F6" opacity={0.6} />
+    <path d="M -220 30 Q -170 -40 -60 -50 Q 40 -70 120 -40 Q 210 -20 230 30 Z" fill="#7CB342" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+    <path d="M -120 -40 l 40 -50 l 30 40 Z M 60 -48 l 30 -36 l 26 32 Z" fill="#ECEFF1" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+    {names.map((n, k) => { const fa = a.fallAt !== undefined ? a.fallAt + k * 0.6 : 1e9, f = clamp((t - fa) / 1.4);
+      const h = 60 + g * (a.maxH ?? 520) * (1 - 0.12 * k), bx = -110 + k * 110, ang = (k - 1 || 1) * 80 * E.in(f) + wob * (k + 1) * 0.6;
+      return <g key={k} transform={`translate(${bx} ${-44 + 160 * E.in(f)}) rotate(${ang})`} opacity={1 - clamp((t - fa - 1.2) / 0.8)}>
+        <rect x={-38} y={-h} width={76} height={h} rx={6} fill={cols[k % 3]} stroke={OL} strokeWidth={5} />
+        {Array.from({length: Math.floor(h / 46)}, (_, r) => <g key={r}><rect x={-26} y={-h + 16 + r * 46} width={18} height={20} fill="#FFE082" opacity={0.85} /><rect x={8} y={-h + 16 + r * 46} width={18} height={20} fill="#FFE082" opacity={0.85} /></g>)}
+        <path d={`M -44 ${-h} L 0 ${-h - 34} L 44 ${-h} Z`} fill="#ECEFF1" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+        <T x={0} y={-h - 44} s={30} c={K.white}>{n}</T>
+        {f > 0 && <path d={`M -20 ${-h * 0.5} l 18 30 l -10 22 l 16 26`} stroke={OL} strokeWidth={4} fill="none" />}
+      </g>; })}
+    {a.text && <T x={0} y={100} s={28} c={a.textc || OL}>{a.text}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle};
 const BACK = new Set(['rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

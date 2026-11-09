@@ -1,0 +1,56 @@
+# Visual direction for how-three-banks-nearly-destroyed-an-entire-country (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Story: a small island that grew a giant banking system. Spectacle for the boom, thriller for the warnings, crisis for
+# October 2008 and the bill, strategy for the verdicts, reflective close.
+primary_tone: spectacle
+secondary_tones:
+- thriller
+- crisis
+- strategy
+- reflective
+palette:
+  bg: '#07121C'
+  bg2: '#0E2333'
+  ink: '#EAF6FF'
+  muted: '#A6C4D8'
+  land: '#1B3445'
+  border: '#335C78'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: The week a country nearly went bankrupt
+  tone: thriller
+- chapter: From fish to finance
+  tone: spectacle
+- chapter: Icesave
+  tone: spectacle
+- chapter: Seven days in October
+  tone: crisis
+- chapter: The bill
+  tone: crisis
+- chapter: The verdicts
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m2_warning
+  cue: There were warning signs
+  to: thriller
+  why: the hidden fragility
+- segment: m5_efta
+  cue: it ruled
+  to: spectacle
+  why: Iceland wins in court
+thumbnail:
+  tone: crisis
+  headline: []
+  idea: three bank towers toppling off a small island
+requirements:
+- The bankisle (a small island carrying three bank towers that grow far above it, sway and topple) is the through-line
+- Fjord with fishing boats; British high street of savers; a night TV address; a London order stamped anti-terrorism; ballot
+  counters; the EFTA courtroom
+- No bank logos, no flags, no likeness of real people (names in text only)
