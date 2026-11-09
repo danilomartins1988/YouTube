@@ -1,0 +1,3377 @@
+{
+  "slug": "the-10-billion-cyberattack-that-froze-maersk",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_hook",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 16.7,
+      "duration_s": 16.7,
+      "visual_objective": "",
+      "narration": "How does a small update for an accounting program in Ukraine end up stopping trucks at a port in New Jersey, shutting down drug production at one of the world's biggest drug makers, and costing the world more than ten billion dollars?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "How does a small update",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 0.35
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "end up stopping trucks",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 4.37,
+          "absolute_s": 4.37
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "end up stopping trucks",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 4.67,
+          "absolute_s": 4.67
+        },
+        {
+          "param": "items[0].infectAt.cue",
+          "cue": "end up stopping trucks",
+          "label": "items[0].infectAt.cue",
+          "scene_time_s": 4.67,
+          "absolute_s": 4.67
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "end up stopping trucks",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 4.67,
+          "absolute_s": 4.67
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "costing the world",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 12.94,
+          "absolute_s": 12.94
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "costing the world",
+          "label": "items[1].at.cue",
+          "scene_time_s": 13.24,
+          "absolute_s": 13.24
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "costing the world",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 13.24,
+          "absolute_s": 13.24
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "costing the world",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 15.24,
+          "absolute_s": 15.24
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 16.7,
+      "end_s": 21.7,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s02_stakes",
+      "segment": "h_stakes",
+      "type": "engine_cartoon",
+      "start_s": 21.7,
+      "end_s": 48.73,
+      "duration_s": 27.03,
+      "visual_objective": "",
+      "narration": "The code was called NotPetya, and the White House later put its damage at more than ten billion dollars. One victim was Maersk, the world's largest shipping conglomerate. Within half an hour, its staff were running down the hallways, shouting at colleagues to unplug their computers. And what saved it in the end was a single server in Africa that happened to be offline.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The code was called",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 22.05
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "One victim was Maersk",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.21,
+          "absolute_s": 29.91
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "One victim was Maersk",
+          "label": "items[0].at.cue",
+          "scene_time_s": 8.51,
+          "absolute_s": 30.21
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "One victim was Maersk",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 8.51,
+          "absolute_s": 30.21
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Within half an hour",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 13.21,
+          "absolute_s": 34.91
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Within half an hour",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.51,
+          "absolute_s": 35.21
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Within half an hour",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.51,
+          "absolute_s": 35.21
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Within half an hour",
+          "label": "items[3].at.cue",
+          "scene_time_s": 13.51,
+          "absolute_s": 35.21
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Within half an hour",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.51,
+          "absolute_s": 35.21
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Within half an hour",
+          "label": "items[5].at.cue",
+          "scene_time_s": 13.51,
+          "absolute_s": 35.21
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "Within half an hour",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 13.51,
+          "absolute_s": 35.21
+        },
+        {
+          "param": "items[5].redAt.cue",
+          "cue": "unplug their computers",
+          "label": "items[5].redAt.cue",
+          "scene_time_s": 18.58,
+          "absolute_s": 40.28
+        },
+        {
+          "param": "callouts[2].until.cue",
+          "cue": "And what saved it",
+          "label": "callouts[2].until.cue",
+          "scene_time_s": 20.65,
+          "absolute_s": 42.35
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "And what saved it",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 20.95,
+          "absolute_s": 42.65
+        },
+        {
+          "param": "callouts[3].at.cue",
+          "cue": "And what saved it",
+          "label": "callouts[3].at.cue",
+          "scene_time_s": 20.95,
+          "absolute_s": 42.65
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "a single server in Africa",
+          "label": "items[6].at.cue",
+          "scene_time_s": 22.88,
+          "absolute_s": 44.58
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired",
+        "wh_2018"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s03_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 48.73,
+      "end_s": 54.13,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s04_q1",
+      "segment": "m1_question",
+      "type": "engine_cartoon",
+      "start_s": 54.13,
+      "end_s": 63.13,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "How do you hit an entire country at once?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "How do you hit",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 54.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s05_mdoc",
+      "segment": "m1_mdoc",
+      "type": "engine_cartoon",
+      "start_s": 63.13,
+      "end_s": 91.93,
+      "duration_s": 28.8,
+      "visual_objective": "",
+      "narration": "You go through software everybody trusts. A small family-run company in Kyiv, Linkos Group, made an accounting program called M.E.Doc, used by Ukrainian businesses to file their taxes. Like most software, it updated itself. In the spring of twenty seventeen, according to American prosecutors, Russian military hackers took over its update servers and slipped their own code into the updates.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "You go through software",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 63.48
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "A small family-run company",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 3.77,
+          "absolute_s": 66.9
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "A small family-run company",
+          "label": "items[0].at.cue",
+          "scene_time_s": 4.07,
+          "absolute_s": 67.2
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "A small family-run company",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 4.07,
+          "absolute_s": 67.2
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "an accounting program",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.9,
+          "absolute_s": 71.04
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Like most software",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.73,
+          "absolute_s": 77.86
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Like most software",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.73,
+          "absolute_s": 77.86
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "it updated itself",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.2,
+          "absolute_s": 78.34
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "In the spring",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 15.91,
+          "absolute_s": 79.04
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "In the spring",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 16.21,
+          "absolute_s": 79.34
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "In the spring",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 16.21,
+          "absolute_s": 79.34
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "took over its update servers",
+          "label": "items[4].at.cue",
+          "scene_time_s": 23.54,
+          "absolute_s": 86.67
+        },
+        {
+          "param": "items[4].stampAt.cue",
+          "cue": "slipped their own code",
+          "label": "items[4].stampAt.cue",
+          "scene_time_s": 25.68,
+          "absolute_s": 88.81
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired",
+        "lawfare_doj"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s06_launch",
+      "segment": "m1_launch",
+      "type": "engine_cartoon",
+      "start_s": 91.93,
+      "end_s": 115.03,
+      "duration_s": 23.1,
+      "visual_objective": "",
+      "narration": "On June twenty-seventh, the day before a national holiday in Ukraine, they used that back door. The malware spread with terrifying speed. A Ukrainian security firm watched it bring down the network of a large bank in forty-five seconds. Part of a major transit hub was fully infected in sixteen seconds.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "On June",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 92.28
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "they used that back door",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.43,
+          "absolute_s": 97.36
+        },
+        {
+          "param": "items[1].infectAt.cue",
+          "cue": "The malware spread",
+          "label": "items[1].infectAt.cue",
+          "scene_time_s": 7.66,
+          "absolute_s": 99.59
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "A Ukrainian security firm",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 10.75,
+          "absolute_s": 102.68
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A Ukrainian security firm",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.05,
+          "absolute_s": 102.98
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "A Ukrainian security firm",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.05,
+          "absolute_s": 102.98
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "A Ukrainian security firm",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.05,
+          "absolute_s": 102.98
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "bring down the network",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 15.2,
+          "absolute_s": 107.13
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Part of a major transit hub",
+          "label": "items[3].at.cue",
+          "scene_time_s": 17.82,
+          "absolute_s": 109.75
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "Part of a major transit hub",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 19.32,
+          "absolute_s": 111.25
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s07_weapons",
+      "segment": "m1_weapons",
+      "type": "engine_cartoon",
+      "start_s": 115.03,
+      "end_s": 138.23,
+      "duration_s": 23.2,
+      "visual_objective": "",
+      "narration": "It had two weapons. The first was EternalBlue, a hacking tool built by America's own National Security Agency, which had leaked earlier that year. It broke into Windows computers that had not installed a security fix. The second, Mimikatz, pulled passwords out of memory, and those passwords opened the machines that had been fixed.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "The first was EternalBlue",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.44,
+          "absolute_s": 117.47
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The first was EternalBlue",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.44,
+          "absolute_s": 117.47
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "It broke into",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.09,
+          "absolute_s": 126.12
+        },
+        {
+          "param": "items[1].redAt.cue",
+          "cue": "a security fix",
+          "label": "items[1].redAt.cue",
+          "scene_time_s": 13.99,
+          "absolute_s": 129.02
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The second",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.5,
+          "absolute_s": 130.53
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The second",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.8,
+          "absolute_s": 130.83
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The second, Mimikatz",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.8,
+          "absolute_s": 130.83
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The second",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 15.8,
+          "absolute_s": 130.83
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "pulled passwords",
+          "label": "items[4].at.cue",
+          "scene_time_s": 17.4,
+          "absolute_s": 132.43
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "those passwords",
+          "label": "items[3].at.cue",
+          "scene_time_s": 19.63,
+          "absolute_s": 134.66
+        },
+        {
+          "param": "items[3].redAt.cue",
+          "cue": "had been fixed",
+          "label": "items[3].redAt.cue",
+          "scene_time_s": 21.88,
+          "absolute_s": 136.92
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired",
+        "reg_2018"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "p08_spread",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 138.23,
+      "end_s": 167.23,
+      "duration_s": 29.0,
+      "visual_objective": "",
+      "narration": "Let me draw how one computer becomes thousands. One infected machine finds a neighbor that missed the security fix, and breaks in. There, it reads the passwords stored in memory. Those passwords open a third machine, even a fully updated one. Every victim becomes a new attacker. And inside a big company, where every computer trusts the others, there is no wall to stop it.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "One infected machine",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.35,
+          "absolute_s": 142.58
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "One infected machine",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.35,
+          "absolute_s": 142.58
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "missed the security fix",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.78,
+          "absolute_s": 145.01
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "missed the security fix",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 6.78,
+          "absolute_s": 145.01
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "reads the passwords",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 10.74,
+          "absolute_s": 148.97
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "open a third machine",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 14.65,
+          "absolute_s": 152.88
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "open a third machine",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 14.65,
+          "absolute_s": 152.88
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Every victim becomes",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 19.17,
+          "absolute_s": 157.4
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "inside a big company",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 22.51,
+          "absolute_s": 160.75
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "no wall to stop it",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 27.59,
+          "absolute_s": 165.82
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s09_ransom",
+      "segment": "m1_ransom",
+      "type": "engine_cartoon",
+      "start_s": 167.23,
+      "end_s": 197.23,
+      "duration_s": 30.0,
+      "visual_objective": "",
+      "narration": "Then the screens changed. Some said the computer was repairing its file system. Others said, oops, your important files are encrypted, and asked for three hundred dollars in bitcoin. But it was a disguise. According to the charges, the files were scrambled in a way that not even the hackers could undo. Paying changed nothing. This was not a ransom. It was a wiper.",
+      "keyframes": [
+        {
+          "param": "items[0].infectAt.cue",
+          "cue": "Then the screens changed",
+          "label": "items[0].infectAt.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 167.58
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Others said",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.95,
+          "absolute_s": 175.18
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "asked for",
+          "label": "items[1].at.cue",
+          "scene_time_s": 12.15,
+          "absolute_s": 179.38
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "But it was a disguise",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.25,
+          "absolute_s": 182.48
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But it was a disguise",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.55,
+          "absolute_s": 182.78
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "But it was a disguise",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.55,
+          "absolute_s": 182.78
+        },
+        {
+          "param": "toneShift.at.cue",
+          "cue": "But it was a disguise",
+          "label": "toneShift.at.cue",
+          "scene_time_s": 15.55,
+          "absolute_s": 182.78
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "According to the charges",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 17.55,
+          "absolute_s": 184.78
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Paying changed nothing",
+          "label": "items[3].at.cue",
+          "scene_time_s": 24.55,
+          "absolute_s": 191.78
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "This was not a ransom",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 26.41,
+          "absolute_s": 193.64
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "This was not a ransom",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 26.71,
+          "absolute_s": 193.94
+        },
+        {
+          "param": "items[2].stampAt.cue",
+          "cue": "It was a wiper",
+          "label": "items[2].stampAt.cue",
+          "scene_time_s": 28.53,
+          "absolute_s": 195.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired",
+        "lawfare_doj"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s10_ukraine",
+      "segment": "m1_ukraine",
+      "type": "engine_cartoon",
+      "start_s": 197.23,
+      "end_s": 218.93,
+      "duration_s": 21.7,
+      "visual_objective": "",
+      "narration": "In Ukraine, it hit hospitals, six power companies, two airports, more than twenty-two banks, cash machines, and practically every government agency. It even shut down the computers at the Chernobyl clean-up site. One senior official estimated that ten percent of all the computers in the country were wiped.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In Ukraine",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 197.58
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "it hit hospitals",
+          "label": "items[0].at.cue",
+          "scene_time_s": 1.23,
+          "absolute_s": 198.47
+        },
+        {
+          "param": "items[0].redAt.cue",
+          "cue": "it hit hospitals",
+          "label": "items[0].redAt.cue",
+          "scene_time_s": 1.83,
+          "absolute_s": 199.07
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "two airports",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.13,
+          "absolute_s": 201.37
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "banks",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.15,
+          "absolute_s": 203.38
+        },
+        {
+          "param": "items[2].redAt.cue",
+          "cue": "cash machines",
+          "label": "items[2].redAt.cue",
+          "scene_time_s": 6.58,
+          "absolute_s": 203.81
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "It even shut down",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.41,
+          "absolute_s": 208.64
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "It even shut down",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.71,
+          "absolute_s": 208.94
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "It even shut down",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.71,
+          "absolute_s": 208.94
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "It even shut down",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 11.71,
+          "absolute_s": 208.94
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "One senior official",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 15.34,
+          "absolute_s": 212.57
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "One senior official",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 15.64,
+          "absolute_s": 212.87
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "One senior official",
+          "label": "items[4].at.cue",
+          "scene_time_s": 15.64,
+          "absolute_s": 212.87
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "One senior official",
+          "label": "items[5].at.cue",
+          "scene_time_s": 15.64,
+          "absolute_s": 212.87
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "One senior official",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 15.64,
+          "absolute_s": 212.87
+        },
+        {
+          "param": "items[4].steps[1][0].cue",
+          "cue": "One senior official",
+          "label": "items[4].steps[1][0].cue",
+          "scene_time_s": 17.64,
+          "absolute_s": 214.87
+        },
+        {
+          "param": "items[5].infectAt.cue",
+          "cue": "were wiped",
+          "label": "items[5].infectAt.cue",
+          "scene_time_s": 19.57,
+          "absolute_s": 216.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 218.93,
+      "end_s": 227.97,
+      "duration_s": 9.03,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "But the code did not stay in Ukraine. It got on a plane, so to speak, inside the networks of global companies.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "did not stay in Ukraine",
+          "label": "But the code did not stay in Ukraine",
+          "scene_time_s": 1.27,
+          "absolute_s": 220.2
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "inside the networks",
+          "label": "It travelled inside global companies",
+          "scene_time_s": 6.0,
+          "absolute_s": 224.93
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 227.97,
+      "end_s": 233.37,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_q2",
+      "segment": "m2_question",
+      "type": "engine_cartoon",
+      "start_s": 233.37,
+      "end_s": 242.37,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "What happens when the company behind a fifth of world shipping loses its computers?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What happens",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 233.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_door",
+      "segment": "m2_door",
+      "type": "engine_cartoon",
+      "start_s": 242.37,
+      "end_s": 267.57,
+      "duration_s": 25.2,
+      "visual_objective": "",
+      "narration": "Maersk's door was a single computer. A finance executive at its office in Ukraine had asked for M.E.Doc to be installed on one machine. That was enough. Through Maersk's global network, the malware reached its headquarters in Copenhagen on a sunny summer afternoon, and from there, the rest of the company.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Maersk's door",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 242.72
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "asked for",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.32,
+          "absolute_s": 250.69
+        },
+        {
+          "param": "items[0].redAt.cue",
+          "cue": "That was enough",
+          "label": "items[0].redAt.cue",
+          "scene_time_s": 12.79,
+          "absolute_s": 255.16
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Through Maersk's global network",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.07,
+          "absolute_s": 256.44
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Through Maersk's global network",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.37,
+          "absolute_s": 256.74
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Through Maersk's global network",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.37,
+          "absolute_s": 256.74
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Through Maersk's global network",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 14.37,
+          "absolute_s": 256.74
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "reached its headquarters",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.82,
+          "absolute_s": 259.19
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "reached its headquarters",
+          "label": "items[4].at.cue",
+          "scene_time_s": 16.82,
+          "absolute_s": 259.19
+        },
+        {
+          "param": "items[4].infectAt.cue",
+          "cue": "the rest of the company",
+          "label": "items[4].infectAt.cue",
+          "scene_time_s": 21.98,
+          "absolute_s": 264.34
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_scale",
+      "segment": "m2_scale",
+      "type": "engine_cartoon",
+      "start_s": 267.57,
+      "end_s": 288.47,
+      "duration_s": 20.9,
+      "visual_objective": "",
+      "narration": "This was the world's largest shipping conglomerate, with seventy-six port terminals, nearly eight hundred vessels, and close to a fifth of the world's shipping capacity. Every container is tracked, booked and cleared by computers. And the computers were gone.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "This was the world's largest",
+          "label": "items[2].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 267.92
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "This was the world's largest",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 267.92
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "port terminals",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 6.15,
+          "absolute_s": 273.71
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "vessels",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.8,
+          "absolute_s": 275.37
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "vessels",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.8,
+          "absolute_s": 275.37
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "vessels",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 9.0,
+          "absolute_s": 276.57
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Every container",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 12.9,
+          "absolute_s": 280.47
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Every container",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.2,
+          "absolute_s": 280.77
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Every container",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.2,
+          "absolute_s": 280.77
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Every container",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 13.2,
+          "absolute_s": 280.77
+        },
+        {
+          "param": "items[4].infectAt.cue",
+          "cue": "And the computers were gone",
+          "label": "items[4].infectAt.cue",
+          "scene_time_s": 17.93,
+          "absolute_s": 285.5
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_port",
+      "segment": "m2_port",
+      "type": "engine_cartoon",
+      "start_s": 288.47,
+      "end_s": 315.77,
+      "duration_s": 27.3,
+      "visual_objective": "",
+      "narration": "At the terminal in Elizabeth, New Jersey, about three thousand trucks arrive on a good day. That day, the gates stopped working. Hundreds of trucks backed up for miles, and the terminal was closed for the rest of the day. The same thing happened at seventeen of Maersk's seventy-six terminals, from Los Angeles to Rotterdam and Mumbai. Gates down. Cranes frozen.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "At the terminal in Elizabeth",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 288.82
+        },
+        {
+          "param": "items[0].closeAt.cue",
+          "cue": "the gates stopped working",
+          "label": "items[0].closeAt.cue",
+          "scene_time_s": 7.96,
+          "absolute_s": 296.43
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Hundreds of trucks",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.37,
+          "absolute_s": 297.84
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "items[4].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "items[5].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "items[6].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "items[7].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "items[8].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Hundreds of trucks",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 9.67,
+          "absolute_s": 298.14
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "the terminal was closed",
+          "label": "items[9].at.cue",
+          "scene_time_s": 12.27,
+          "absolute_s": 300.74
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "The same thing happened",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 15.57,
+          "absolute_s": 304.04
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "The same thing happened",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 15.87,
+          "absolute_s": 304.34
+        },
+        {
+          "param": "items[10].at.cue",
+          "cue": "The same thing happened",
+          "label": "items[10].at.cue",
+          "scene_time_s": 15.87,
+          "absolute_s": 304.34
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "The same thing happened",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 15.87,
+          "absolute_s": 304.34
+        },
+        {
+          "param": "items[10].steps[1][0].cue",
+          "cue": "The same thing happened",
+          "label": "items[10].steps[1][0].cue",
+          "scene_time_s": 17.37,
+          "absolute_s": 305.84
+        },
+        {
+          "param": "items[12].at.cue",
+          "cue": "Gates down",
+          "label": "items[12].at.cue",
+          "scene_time_s": 24.24,
+          "absolute_s": 312.71
+        },
+        {
+          "param": "items[11].at.cue",
+          "cue": "Cranes frozen",
+          "label": "items[11].at.cue",
+          "scene_time_s": 24.58,
+          "absolute_s": 313.05
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_ships",
+      "segment": "m2_ships",
+      "type": "engine_cartoon",
+      "start_s": 315.77,
+      "end_s": 334.8,
+      "duration_s": 19.03,
+      "visual_objective": "",
+      "narration": "The ships themselves kept sailing. But without the systems that say which box goes where, a port becomes a parking lot. Staff fell back on personal email, spreadsheets and WhatsApp. One customer remembered booking five hundred shipping containers through a messaging app.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The ships themselves",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 316.12
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "a port becomes a parking lot",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.34,
+          "absolute_s": 322.11
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Staff fell back",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 324.51
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Staff fell back",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.04,
+          "absolute_s": 324.81
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Staff fell back",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.04,
+          "absolute_s": 324.81
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Staff fell back",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 9.04,
+          "absolute_s": 324.81
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "personal email",
+          "label": "items[4].at.cue",
+          "scene_time_s": 9.92,
+          "absolute_s": 325.69
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "personal email",
+          "label": "items[5].at.cue",
+          "scene_time_s": 9.92,
+          "absolute_s": 325.69
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "One customer remembered",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.53,
+          "absolute_s": 328.3
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "maersk_q2",
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 334.8,
+      "end_s": 343.0,
+      "duration_s": 8.2,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "To come back, Maersk had to rebuild everything. And for that, it needed one thing it could not find.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "rebuild everything",
+          "label": "To come back, rebuild everything",
+          "scene_time_s": 2.16,
+          "absolute_s": 336.96
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "one thing it could not find",
+          "label": "…and find one missing thing",
+          "scene_time_s": 6.12,
+          "absolute_s": 340.92
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 343.0,
+      "end_s": 348.4,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_q3",
+      "segment": "m3_question",
+      "type": "engine_cartoon",
+      "start_s": 348.4,
+      "end_s": 357.4,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "What do you rebuild first when everything is gone?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What do you rebuild",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 348.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_maidenhead",
+      "segment": "m3_maidenhead",
+      "type": "engine_cartoon",
+      "start_s": 357.4,
+      "end_s": 376.1,
+      "duration_s": 18.7,
+      "visual_objective": "",
+      "narration": "Maersk turned an office building in Maidenhead, a town west of London, into a recovery center run with the consultancy Deloitte. Staff kept arriving from all over the world, luggage in hand. The good news was that there were backups of almost all of the company's servers.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Maersk turned an office",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 357.75
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Maersk turned an office",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 357.75
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "into a recovery center",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.58,
+          "absolute_s": 361.98
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Staff kept arriving",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.21,
+          "absolute_s": 366.61
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Staff kept arriving",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.21,
+          "absolute_s": 366.61
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Staff kept arriving",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.51,
+          "absolute_s": 366.91
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Staff kept arriving",
+          "label": "items[4].at.cue",
+          "scene_time_s": 9.81,
+          "absolute_s": 367.21
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Staff kept arriving",
+          "label": "items[5].at.cue",
+          "scene_time_s": 10.11,
+          "absolute_s": 367.51
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The good news",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.57,
+          "absolute_s": 370.97
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "The good news",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 13.87,
+          "absolute_s": 371.27
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "The good news",
+          "label": "items[6].at.cue",
+          "scene_time_s": 13.87,
+          "absolute_s": 371.27
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The good news",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 13.87,
+          "absolute_s": 371.27
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "luggage in hand",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 14.19,
+          "absolute_s": 371.59
+        },
+        {
+          "param": "items[3].x[1][0].cue",
+          "cue": "luggage in hand",
+          "label": "items[3].x[1][0].cue",
+          "scene_time_s": 14.19,
+          "absolute_s": 371.59
+        },
+        {
+          "param": "items[4].x[1][0].cue",
+          "cue": "luggage in hand",
+          "label": "items[4].x[1][0].cue",
+          "scene_time_s": 14.19,
+          "absolute_s": 371.59
+        },
+        {
+          "param": "items[5].x[1][0].cue",
+          "cue": "luggage in hand",
+          "label": "items[5].x[1][0].cue",
+          "scene_time_s": 14.19,
+          "absolute_s": 371.59
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "almost all",
+          "label": "items[7].at.cue",
+          "scene_time_s": 16.04,
+          "absolute_s": 373.44
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_map",
+      "segment": "m3_map",
+      "type": "engine_cartoon",
+      "start_s": 376.1,
+      "end_s": 404.67,
+      "duration_s": 28.57,
+      "visual_objective": "",
+      "narration": "The bad news was the map. A network like Maersk's runs on special servers called domain controllers, the master list of who may log in to what. Maersk had about a hundred and fifty, copying each other so that any one could replace the others. That design covered every disaster except one. All of them wiped at once. And there was no separate backup.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The bad news was the map",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 376.45
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "domain controllers",
+          "label": "items[0].at.cue",
+          "scene_time_s": 6.6,
+          "absolute_s": 382.7
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Maersk had",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.87,
+          "absolute_s": 387.97
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Maersk had",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.17,
+          "absolute_s": 388.27
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Maersk had",
+          "label": "items[1].at.cue",
+          "scene_time_s": 12.17,
+          "absolute_s": 388.27
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "Maersk had",
+          "label": "items[8].at.cue",
+          "scene_time_s": 12.17,
+          "absolute_s": 388.27
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Maersk had",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 12.17,
+          "absolute_s": 388.27
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Maersk had",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.37,
+          "absolute_s": 388.47
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Maersk had",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.57,
+          "absolute_s": 388.67
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Maersk had",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.77,
+          "absolute_s": 388.87
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Maersk had",
+          "label": "items[5].at.cue",
+          "scene_time_s": 12.97,
+          "absolute_s": 389.07
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Maersk had",
+          "label": "items[6].at.cue",
+          "scene_time_s": 13.17,
+          "absolute_s": 389.27
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "Maersk had",
+          "label": "items[7].at.cue",
+          "scene_time_s": 13.37,
+          "absolute_s": 389.47
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "All of them wiped",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 22.98,
+          "absolute_s": 399.08
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "All of them wiped",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 23.28,
+          "absolute_s": 399.38
+        },
+        {
+          "param": "items[1].redAt.cue",
+          "cue": "All of them wiped",
+          "label": "items[1].redAt.cue",
+          "scene_time_s": 23.28,
+          "absolute_s": 399.38
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "All of them wiped",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 23.28,
+          "absolute_s": 399.38
+        },
+        {
+          "param": "items[2].redAt.cue",
+          "cue": "All of them wiped",
+          "label": "items[2].redAt.cue",
+          "scene_time_s": 23.43,
+          "absolute_s": 399.53
+        },
+        {
+          "param": "items[3].redAt.cue",
+          "cue": "All of them wiped",
+          "label": "items[3].redAt.cue",
+          "scene_time_s": 23.58,
+          "absolute_s": 399.68
+        },
+        {
+          "param": "items[4].redAt.cue",
+          "cue": "All of them wiped",
+          "label": "items[4].redAt.cue",
+          "scene_time_s": 23.73,
+          "absolute_s": 399.83
+        },
+        {
+          "param": "items[5].redAt.cue",
+          "cue": "All of them wiped",
+          "label": "items[5].redAt.cue",
+          "scene_time_s": 23.88,
+          "absolute_s": 399.98
+        },
+        {
+          "param": "items[6].redAt.cue",
+          "cue": "All of them wiped",
+          "label": "items[6].redAt.cue",
+          "scene_time_s": 24.03,
+          "absolute_s": 400.13
+        },
+        {
+          "param": "items[7].redAt.cue",
+          "cue": "All of them wiped",
+          "label": "items[7].redAt.cue",
+          "scene_time_s": 24.18,
+          "absolute_s": 400.28
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "there was no separate backup",
+          "label": "items[9].at.cue",
+          "scene_time_s": 26.08,
+          "absolute_s": 402.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "p23_trap",
+      "segment": "m3_draw",
+      "type": "engine_draw",
+      "start_s": 404.67,
+      "end_s": 429.9,
+      "duration_s": 25.23,
+      "visual_objective": "",
+      "narration": "Let me draw the trap. Here are the servers, each one a box, all connected to the master list. Normally, if one copy dies, the others fill in. But the malware reached every copy at the same time. No healthy copy was left. And without the master list, the backups of all the other servers were useless, because nobody could log in to restore them.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here are the servers",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.56,
+          "absolute_s": 407.23
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "each one a box",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 3.91,
+          "absolute_s": 408.58
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "each one a box",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 4.31,
+          "absolute_s": 408.98
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "each one a box",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 4.71,
+          "absolute_s": 409.38
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "all connected to the master list",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 5.04,
+          "absolute_s": 409.7
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "all connected to the master list",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 5.44,
+          "absolute_s": 410.1
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "all connected to the master list",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 5.64,
+          "absolute_s": 410.3
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "all connected to the master list",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 5.84,
+          "absolute_s": 410.5
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "reached every copy",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 12.43,
+          "absolute_s": 417.09
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "the backups of all the other servers were useless",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 18.97,
+          "absolute_s": 423.64
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "nobody could log in",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 22.78,
+          "absolute_s": 427.45
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_ghana",
+      "segment": "m3_ghana",
+      "type": "engine_cartoon",
+      "start_s": 429.9,
+      "end_s": 447.13,
+      "duration_s": 17.23,
+      "visual_objective": "",
+      "narration": "After calling hundreds of administrators around the world, they found one survivor. A single domain controller in an office in Ghana. A power cut had knocked it offline, and the malware never touched it. A blackout had saved the company.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "After calling hundreds",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 430.25
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "After calling hundreds",
+          "label": "items[1].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 430.25
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "After calling hundreds",
+          "label": "items[2].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 430.25
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "they found one survivor",
+          "label": "items[5].at.cue",
+          "scene_time_s": 4.29,
+          "absolute_s": 434.19
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "they found one survivor",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 4.29,
+          "absolute_s": 434.19
+        },
+        {
+          "param": "toneShift.at.cue",
+          "cue": "they found one survivor",
+          "label": "toneShift.at.cue",
+          "scene_time_s": 4.29,
+          "absolute_s": 434.19
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A single domain controller",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 6.35,
+          "absolute_s": 436.25
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "A single domain controller",
+          "label": "items[4].at.cue",
+          "scene_time_s": 6.35,
+          "absolute_s": 436.25
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "A single domain controller",
+          "label": "items[0].until.cue",
+          "scene_time_s": 8.35,
+          "absolute_s": 438.25
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "A single domain controller",
+          "label": "items[1].until.cue",
+          "scene_time_s": 8.35,
+          "absolute_s": 438.25
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "A single domain controller",
+          "label": "items[2].until.cue",
+          "scene_time_s": 8.35,
+          "absolute_s": 438.25
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "A power cut",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.92,
+          "absolute_s": 439.82
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "A power cut",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.22,
+          "absolute_s": 440.12
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "A power cut",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 10.22,
+          "absolute_s": 440.12
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "A blackout had saved",
+          "label": "items[6].at.cue",
+          "scene_time_s": 14.84,
+          "absolute_s": 444.74
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_relay",
+      "segment": "m3_relay",
+      "type": "engine_cartoon",
+      "start_s": 447.13,
+      "end_s": 469.73,
+      "duration_s": 22.6,
+      "visual_objective": "",
+      "narration": "But the connection in Ghana was so slow that sending the data would take days. So they decided to fly it. Nobody in the Ghana office had a British visa, so it became a relay race. One employee flew the hard drive to Nigeria and handed it over at the airport to a colleague, who carried it on a six and a half hours flight to London.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "But the connection in Ghana",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 447.48
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "so slow",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.64,
+          "absolute_s": 449.77
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Nobody in the Ghana office",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 7.76,
+          "absolute_s": 454.89
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Nobody in the Ghana office",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.06,
+          "absolute_s": 455.19
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Nobody in the Ghana office",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 8.06,
+          "absolute_s": 455.19
+        },
+        {
+          "param": "items[1].openAt.cue",
+          "cue": "Nobody in the Ghana office",
+          "label": "items[1].openAt.cue",
+          "scene_time_s": 8.66,
+          "absolute_s": 455.79
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "so it became a relay race",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.14,
+          "absolute_s": 458.27
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "One employee flew",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.35,
+          "absolute_s": 460.48
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "One employee flew",
+          "label": "items[1].until.cue",
+          "scene_time_s": 14.35,
+          "absolute_s": 461.48
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "handed it over",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.92,
+          "absolute_s": 463.05
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "One employee flew",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 17.35,
+          "absolute_s": 464.48
+        },
+        {
+          "param": "items[2].y[1][0].cue",
+          "cue": "One employee flew",
+          "label": "items[2].y[1][0].cue",
+          "scene_time_s": 17.35,
+          "absolute_s": 464.48
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "who carried it",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 18.59,
+          "absolute_s": 465.72
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "who carried it",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 18.89,
+          "absolute_s": 466.02
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "who carried it",
+          "label": "items[2].until.cue",
+          "scene_time_s": 18.89,
+          "absolute_s": 466.02
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "who carried it",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.89,
+          "absolute_s": 466.02
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "who carried it",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 18.89,
+          "absolute_s": 466.02
+        },
+        {
+          "param": "items[4].x[1][0].cue",
+          "cue": "who carried it",
+          "label": "items[4].x[1][0].cue",
+          "scene_time_s": 24.89,
+          "absolute_s": 472.02
+        },
+        {
+          "param": "items[4].y[1][0].cue",
+          "cue": "who carried it",
+          "label": "items[4].y[1][0].cue",
+          "scene_time_s": 24.89,
+          "absolute_s": 472.02
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_rebuilt",
+      "segment": "m3_rebuilt",
+      "type": "engine_cartoon",
+      "start_s": 469.73,
+      "end_s": 488.73,
+      "duration_s": 19.0,
+      "visual_objective": "",
+      "narration": "With that drive, Maidenhead could start bringing the company back. According to Maersk's chairman, it took ten days to rebuild a network of four thousand servers and forty-five thousand PCs. Full recovery took close to two months.",
+      "keyframes": [
+        {
+          "param": "items[0].healAt.cue",
+          "cue": "With that drive",
+          "label": "items[0].healAt.cue",
+          "scene_time_s": 1.35,
+          "absolute_s": 471.08
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "According to Maersk's chairman",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.35,
+          "absolute_s": 475.08
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "it took",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.74,
+          "absolute_s": 477.47
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Full recovery",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.18,
+          "absolute_s": 484.91
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Full recovery",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.48,
+          "absolute_s": 485.21
+        },
+        {
+          "param": "items[1].pages[1][0].cue",
+          "cue": "Full recovery",
+          "label": "items[1].pages[1][0].cue",
+          "scene_time_s": 15.48,
+          "absolute_s": 485.21
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Full recovery",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 15.48,
+          "absolute_s": 485.21
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 488.73,
+      "end_s": 493.7,
+      "duration_s": 4.97,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Then came the bill. And Maersk was only one of the victims.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Then came the bill",
+          "label": "Then came the bill",
+          "scene_time_s": 0.35,
+          "absolute_s": 489.08
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "only one of the victims",
+          "label": "Maersk was only one victim",
+          "scene_time_s": 2.83,
+          "absolute_s": 491.57
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 493.7,
+      "end_s": 499.1,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_q4",
+      "segment": "m4_question",
+      "type": "engine_cartoon",
+      "start_s": 499.1,
+      "end_s": 508.1,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "How much can a few lines of code cost?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "How much can",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 499.45
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_maersk",
+      "segment": "m4_maersk",
+      "type": "engine_cartoon",
+      "start_s": 508.1,
+      "end_s": 529.1,
+      "duration_s": 21.0,
+      "visual_objective": "",
+      "narration": "In August, Maersk told investors the attack would cut its results by two hundred to three hundred million dollars. Its chairman later put it between two hundred and fifty and three hundred million dollars. Some of the company's own staff privately suspected even that was too low.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "In August",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 508.45
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In August",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 508.45
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Its chairman later",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.76,
+          "absolute_s": 516.86
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Its chairman later",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.06,
+          "absolute_s": 517.16
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Its chairman later",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.06,
+          "absolute_s": 517.16
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Its chairman later",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 9.06,
+          "absolute_s": 517.16
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "Its chairman later",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 10.56,
+          "absolute_s": 518.66
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "privately suspected",
+          "label": "items[2].at.cue",
+          "scene_time_s": 17.2,
+          "absolute_s": 525.3
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "privately suspected",
+          "label": "items[3].at.cue",
+          "scene_time_s": 17.2,
+          "absolute_s": 525.3
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "even that was too low",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.97,
+          "absolute_s": 527.07
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "maersk_q2",
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_victims",
+      "segment": "m4_victims",
+      "type": "engine_cartoon",
+      "start_s": 529.1,
+      "end_s": 558.27,
+      "duration_s": 29.17,
+      "visual_objective": "",
+      "narration": "And the list kept growing. The drug maker Merck, whose ability to manufacture some medicines was temporarily shut down, reported a loss of eight hundred and seventy million dollars. FedEx, through its European arm TNT Express, four hundred million dollars. Saint-Gobain, the French building giant, three hundred and eighty-four million dollars. The snack maker Mondelez, one hundred and eighty-eight million dollars.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "The drug maker Merck",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.78,
+          "absolute_s": 531.88
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The drug maker Merck",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.78,
+          "absolute_s": 531.88
+        },
+        {
+          "param": "items[0].h[1][0].cue",
+          "cue": "reported a loss",
+          "label": "items[0].h[1][0].cue",
+          "scene_time_s": 10.31,
+          "absolute_s": 539.41
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "FedEx",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.06,
+          "absolute_s": 542.16
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "FedEx",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.36,
+          "absolute_s": 542.46
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "FedEx",
+          "label": "items[1].at.cue",
+          "scene_time_s": 13.36,
+          "absolute_s": 542.46
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "FedEx",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 13.36,
+          "absolute_s": 542.46
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "FedEx",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 14.56,
+          "absolute_s": 543.66
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Saint-Gobain",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 19.24,
+          "absolute_s": 548.34
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Saint-Gobain",
+          "label": "items[2].at.cue",
+          "scene_time_s": 19.24,
+          "absolute_s": 548.34
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Saint-Gobain",
+          "label": "items[3].at.cue",
+          "scene_time_s": 20.24,
+          "absolute_s": 549.34
+        },
+        {
+          "param": "items[2].h[1][0].cue",
+          "cue": "Saint-Gobain",
+          "label": "items[2].h[1][0].cue",
+          "scene_time_s": 20.44,
+          "absolute_s": 549.54
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "The snack maker",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 24.43,
+          "absolute_s": 553.53
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "The snack maker",
+          "label": "items[4].at.cue",
+          "scene_time_s": 24.73,
+          "absolute_s": 553.83
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "The snack maker",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 24.73,
+          "absolute_s": 553.83
+        },
+        {
+          "param": "items[4].h[1][0].cue",
+          "cue": "The snack maker",
+          "label": "items[4].h[1][0].cue",
+          "scene_time_s": 25.93,
+          "absolute_s": 555.03
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "p32_scale",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 558.27,
+      "end_s": 584.5,
+      "duration_s": 26.23,
+      "visual_objective": "",
+      "narration": "Let me draw the scale. Here is a typical ransomware attack that paralyzed the city of Atlanta, costing up to ten million dollars. Next to it, Maersk. Then FedEx. Then Merck. And then the total. The White House estimate of more than ten billion dollars. Next to that bar, the Atlanta attack is barely a line. It is about a tenth of one percent.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is a typical ransomware attack",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.76,
+          "absolute_s": 561.03
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is a typical ransomware attack",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.76,
+          "absolute_s": 561.03
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "costing",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 7.33,
+          "absolute_s": 565.6
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Next to it, Maersk",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 9.72,
+          "absolute_s": 567.99
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Then FedEx",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.65,
+          "absolute_s": 569.92
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Then Merck",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 12.91,
+          "absolute_s": 571.18
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "And then the total",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 14.18,
+          "absolute_s": 572.45
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "barely a line",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 22.03,
+          "absolute_s": 580.3
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "a tenth of one percent",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 24.77,
+          "absolute_s": 583.04
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_hospitals",
+      "segment": "m4_hospitals",
+      "type": "engine_cartoon",
+      "start_s": 584.5,
+      "end_s": 605.77,
+      "duration_s": 21.27,
+      "visual_objective": "",
+      "narration": "Not all the damage was measured in money. In Pennsylvania, NotPetya hit the Heritage Valley Health System, two hospitals and seventy-eight other medical facilities. For more than a week, staff could not reach the computer systems they used for cardiology, nuclear medicine, radiology and surgery.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "In Pennsylvania",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.71,
+          "absolute_s": 588.21
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In Pennsylvania",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.71,
+          "absolute_s": 588.21
+        },
+        {
+          "param": "items[0].redAt.cue",
+          "cue": "NotPetya hit",
+          "label": "items[0].redAt.cue",
+          "scene_time_s": 5.02,
+          "absolute_s": 589.52
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "two hospitals",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.1,
+          "absolute_s": 592.59
+        },
+        {
+          "param": "items[1].redAt.cue",
+          "cue": "two hospitals",
+          "label": "items[1].redAt.cue",
+          "scene_time_s": 8.6,
+          "absolute_s": 593.09
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "For more than a week",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 12.03,
+          "absolute_s": 596.53
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "For more than a week",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.33,
+          "absolute_s": 596.83
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "For more than a week",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.33,
+          "absolute_s": 596.83
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "For more than a week",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 12.33,
+          "absolute_s": 596.83
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "lawfare_doj"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 605.77,
+      "end_s": 610.87,
+      "duration_s": 5.1,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Somebody had launched it. And somebody would have to pay for it.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Somebody had launched it",
+          "label": "Somebody had launched it",
+          "scene_time_s": 0.35,
+          "absolute_s": 606.12
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "somebody would have to pay",
+          "label": "Somebody would have to pay",
+          "scene_time_s": 2.58,
+          "absolute_s": 608.35
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 610.87,
+      "end_s": 616.27,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_q5",
+      "segment": "m5_question",
+      "type": "engine_cartoon",
+      "start_s": 616.27,
+      "end_s": 625.27,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Who is responsible for a weapon that does not stay where it was aimed?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Who is responsible",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 616.62
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_blame",
+      "segment": "m5_blame",
+      "type": "engine_cartoon",
+      "start_s": 625.27,
+      "end_s": 649.3,
+      "duration_s": 24.03,
+      "visual_objective": "",
+      "narration": "In February twenty eighteen, Britain's National Cyber Security Centre concluded that the Russian military was almost certainly responsible. The White House called it the most destructive and costly cyber attack in history, and said it was part of the Kremlin's effort to destabilize Ukraine. Russia's government rejected the accusations as groundless.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "In February",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 625.62
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In February",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 625.62
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "responsible",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 8.27,
+          "absolute_s": 633.54
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The White House called",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.83,
+          "absolute_s": 635.1
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The White House called",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 635.4
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "The White House called",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 635.4
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The White House called",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 635.4
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Russia's government rejected",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 19.72,
+          "absolute_s": 644.99
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Russia's government rejected",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 20.02,
+          "absolute_s": 645.29
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Russia's government rejected",
+          "label": "items[2].at.cue",
+          "scene_time_s": 20.02,
+          "absolute_s": 645.29
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "Russia's government rejected",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 20.02,
+          "absolute_s": 645.29
+        },
+        {
+          "param": "items[2].stampAt.cue",
+          "cue": "as groundless",
+          "label": "items[2].stampAt.cue",
+          "scene_time_s": 22.88,
+          "absolute_s": 648.14
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reg_2018",
+        "wh_2018",
+        "fortune_2018"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_doj",
+      "segment": "m5_doj",
+      "type": "engine_cartoon",
+      "start_s": 649.3,
+      "end_s": 669.03,
+      "duration_s": 19.73,
+      "visual_objective": "",
+      "narration": "In October twenty twenty, American prosecutors charged six officers of a Russian military intelligence unit, known to researchers as Sandworm. They said just three American victims had lost close to a billion dollars. These are accusations, not convictions.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "In October",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 649.65
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "American prosecutors charged",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.34,
+          "absolute_s": 651.64
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "charged",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 4.12,
+          "absolute_s": 653.42
+        },
+        {
+          "param": "items[0].hits[0].cue",
+          "cue": "charged",
+          "label": "items[0].hits[0].cue",
+          "scene_time_s": 4.52,
+          "absolute_s": 653.82
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "They said just three",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 10.69,
+          "absolute_s": 659.99
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "They said just three",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.99,
+          "absolute_s": 660.29
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "They said just three",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.99,
+          "absolute_s": 660.29
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "They said just three",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 10.99,
+          "absolute_s": 660.29
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "They said just three",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 12.49,
+          "absolute_s": 661.79
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "These are accusations",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 16.06,
+          "absolute_s": 665.36
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "These are accusations",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.36,
+          "absolute_s": 665.66
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "These are accusations",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 16.36,
+          "absolute_s": 665.66
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "lawfare_doj",
+        "infosec_doj"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "s39_insurance",
+      "segment": "m5_insurance",
+      "type": "engine_cartoon",
+      "start_s": 669.03,
+      "end_s": 692.1,
+      "duration_s": 23.07,
+      "visual_objective": "",
+      "narration": "So the victims turned to their insurers. And the insurers pointed to an old clause excluding hostile or warlike acts. If a government's military launched the attack, they argued, it was war, and they did not have to pay. Merck's fight was over more than one point four billion dollars in losses.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "So the victims turned",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 669.38
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "an old clause",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.75,
+          "absolute_s": 674.78
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "If a government's military",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.03,
+          "absolute_s": 679.06
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "If a government's military",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.03,
+          "absolute_s": 679.06
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "If a government's military",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.03,
+          "absolute_s": 679.06
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Merck's fight",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 17.27,
+          "absolute_s": 686.3
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Merck's fight",
+          "label": "items[3].at.cue",
+          "scene_time_s": 17.57,
+          "absolute_s": 686.6
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Merck's fight",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 17.57,
+          "absolute_s": 686.6
+        },
+        {
+          "param": "items[3].h[1][0].cue",
+          "cue": "Merck's fight",
+          "label": "items[3].h[1][0].cue",
+          "scene_time_s": 19.07,
+          "absolute_s": 688.1
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mcg_merck"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 41,
+      "id": "s40_court",
+      "segment": "m5_court",
+      "type": "engine_cartoon",
+      "start_s": 692.1,
+      "end_s": 714.93,
+      "duration_s": 22.83,
+      "visual_objective": "",
+      "narration": "A New Jersey court disagreed. The war exclusion, it found, was written for physical acts of warfare between armies, not for malware. An appeals court agreed. In early twenty twenty-four, days before the state's supreme court was due to hear the case, Merck settled with its insurers. The terms were never disclosed.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "A New Jersey court disagreed",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 692.45
+        },
+        {
+          "param": "items[0].hits[0].cue",
+          "cue": "A New Jersey court disagreed",
+          "label": "items[0].hits[0].cue",
+          "scene_time_s": 0.75,
+          "absolute_s": 692.85
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "The war exclusion",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.16,
+          "absolute_s": 695.26
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "not for malware",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 8.53,
+          "absolute_s": 700.63
+        },
+        {
+          "param": "items[0].hits[1].cue",
+          "cue": "An appeals court agreed",
+          "label": "items[0].hits[1].cue",
+          "scene_time_s": 10.64,
+          "absolute_s": 702.74
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "In early",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 11.74,
+          "absolute_s": 703.84
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In early",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.04,
+          "absolute_s": 704.14
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "In early",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.04,
+          "absolute_s": 704.14
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "In early",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 12.04,
+          "absolute_s": 704.14
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Merck settled",
+          "label": "items[2].at.cue",
+          "scene_time_s": 17.98,
+          "absolute_s": 710.08
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mcg_merck"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 42,
+      "id": "s41_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 714.93,
+      "end_s": 746.33,
+      "duration_s": 31.4,
+      "visual_objective": "",
+      "narration": "So what did NotPetya teach the world economy? That the attack does not have to be aimed at you. Maersk was not the target. It was in the way. One computer running one tax program was enough to stop terminals on three continents. Networks where everything trusts everything else are efficient. They are also fragile. And in the end, the world's biggest shipping company was rescued not by a plan, but by a power cut in Ghana.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "That the attack",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.9,
+          "absolute_s": 718.83
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Maersk was not the target",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.9,
+          "absolute_s": 721.83
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Networks where everything trusts",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 16.62,
+          "absolute_s": 731.55
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Networks where everything trusts",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.92,
+          "absolute_s": 731.85
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Networks where everything trusts",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.92,
+          "absolute_s": 731.85
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Networks where everything trusts",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.92,
+          "absolute_s": 731.85
+        },
+        {
+          "param": "items[2].infectAt.cue",
+          "cue": "They are also fragile",
+          "label": "items[2].infectAt.cue",
+          "scene_time_s": 20.94,
+          "absolute_s": 735.87
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "And in the end",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 23.01,
+          "absolute_s": 737.94
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "And in the end",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 23.31,
+          "absolute_s": 738.24
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And in the end",
+          "label": "items[3].at.cue",
+          "scene_time_s": 23.31,
+          "absolute_s": 738.24
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "And in the end",
+          "label": "items[4].at.cue",
+          "scene_time_s": 23.31,
+          "absolute_s": 738.24
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "And in the end",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 23.31,
+          "absolute_s": 738.24
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wired"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 43,
+      "id": "s42_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 746.33,
+      "end_s": 757.33,
+      "duration_s": 11.0,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 8.34,
+          "absolute_s": 754.67
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}

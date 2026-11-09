@@ -1,0 +1,344 @@
+{
+  "title": "The $10 Billion Cyberattack That Froze the World's Biggest Shipping Company",
+  "docs_dir": "docs/episodes/20-notpetya",
+  "video": "output/notpetya_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "How one tax-software update froze the world's largest shipping conglomerate",
+    "surprising_fact": "NotPetya: more than $10bn in damage (White House assessment, via WIRED); Maersk hit for $200-300M (Q2 2017 report)",
+    "subject": "a glitching screen and a crashing line",
+    "tone": "thriller",
+    "metaphor": "you do not have to be the target to be the victim"
+  },
+  "default": "B",
+  "slug": "the-10-billion-cyberattack-that-froze-maersk",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "ONE UPDATE",
+        "$10 BILLION"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "mdoc/total: the M.E.Doc update; more than $10bn in damage (White House assessment)",
+      "scene": {
+        "palette": {
+          "sky0": "#020806",
+          "sky1": "#0B2A1E",
+          "haze": "#7DF29A",
+          "key": "#D8FFE9",
+          "accent": "#FF4B3E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "glitch",
+          "x": 1380,
+          "y": 520,
+          "s": 1.1
+        },
+        "support": [
+          {
+            "kind": "crash",
+            "x": 1400,
+            "y": 640,
+            "s": 0.8
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#7DF29A"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "ONE UPDATE",
+          "x": 90,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 727.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$10 BILLION",
+          "x": 90,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FF4B3E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.55 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 433, 817, 529), (90, 551, 890, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.057",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 11",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-three-companies-that-decide-memory-prices (distance 0.68)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "mdoc/total: the M.E.Doc update; more than $10bn in damage (White House assessment)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.519,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-three-companies-that-decide-memory-prices"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "MAERSK",
+        "HACKED"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "fleet/terminals: the NotPetya attack froze 17 of Maersk's 76 terminals (WIRED)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#2A0E12",
+          "haze": "#FF4B3E",
+          "key": "#FFD1CC",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "glitch",
+          "x": 1380,
+          "y": 520,
+          "s": 1.1
+        },
+        "support": [
+          {
+            "kind": "crash",
+            "x": 1400,
+            "y": 640,
+            "s": 0.8
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD1CC"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "MAERSK",
+          "x": 90,
+          "y": 506.7,
+          "size": 208.3,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "HACKED",
+          "x": 90,
+          "y": 723.3,
+          "size": 208.3,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 344, 890, 519), (90, 561, 890, 736)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "17.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 6.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.097",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 25",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.30)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "fleet/terminals: the NotPetya attack froze 17 of Maersk's 76 terminals (WIRED)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.738,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-09T12:23:21Z",
+  "master": "output/the-10-billion-cyberattack-that-froze-maersk/thumbnails/master_B.png"
+}

@@ -3,11 +3,11 @@ title: The $10 Billion Cyberattack That Froze the World's Biggest Shipping Compa
 docs_dir: docs/episodes/20-notpetya
 video: output/notpetya_documentary.mp4
 deliverable: documentary
-status: planned
+status: completed
 analysis:
   mystery: How one tax-software update froze the world's largest shipping conglomerate
   surprising_fact: 'NotPetya: more than $10bn in damage (White House assessment, via WIRED); Maersk hit for $200-300M (Q2 2017 report)'
-  subject: a container ship and a glitching screen
+  subject: a glitching screen and a crashing line
   tone: thriller
   metaphor: you do not have to be the target to be the victim
 concepts:
@@ -29,18 +29,22 @@ concepts:
       ink: '#FFFFFF'
     backdrop: void
     subject:
-      kind: ship
+      kind: glitch
       x: 1380
-      y: 640
-      s: 0.9
+      y: 520
+      s: 1.1
     support:
-    - kind: glitch
+    - kind: crash
       x: 1400
-      y: 420
-      s: 1.0
+      y: 640
+      s: 0.8
     particles:
       n: 70
-      region: [800, 0, 1920, 1080]
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
       size: 3
       color: '#7DF29A'
     vignette: 0.55
@@ -63,18 +67,22 @@ concepts:
       ink: '#FFFFFF'
     backdrop: void
     subject:
-      kind: ship
+      kind: glitch
       x: 1380
-      y: 640
-      s: 0.9
+      y: 520
+      s: 1.1
     support:
-    - kind: glitch
+    - kind: crash
       x: 1400
-      y: 420
-      s: 1.0
+      y: 640
+      s: 0.8
     particles:
       n: 60
-      region: [800, 0, 1920, 1080]
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
       size: 3
       color: '#FFD1CC'
     vignette: 0.55

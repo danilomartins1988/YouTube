@@ -1,0 +1,1371 @@
+1
+00:00:00,350 --> 00:00:02,508
+How does a small update for an
+
+2
+00:00:02,508 --> 00:00:05,206
+accounting program in Ukraine end up
+
+3
+00:00:05,206 --> 00:00:07,364
+stopping trucks at a port in New
+
+4
+00:00:07,364 --> 00:00:08,146
+Jersey,
+
+5
+00:00:08,146 --> 00:00:10,844
+shutting down drug production at one of
+
+6
+00:00:10,844 --> 00:00:12,975
+the world's biggest drug makers,
+
+7
+00:00:12,975 --> 00:00:15,133
+and costing the world more than ten
+
+8
+00:00:15,133 --> 00:00:16,812
+billion dollars?
+
+9
+00:00:22,050 --> 00:00:24,521
+The code was called NotPetya,
+
+10
+00:00:24,521 --> 00:00:26,743
+and the White House later put its
+
+11
+00:00:26,743 --> 00:00:30,120
+damage at more than ten billion dollars.
+
+12
+00:00:30,210 --> 00:00:31,768
+One victim was Maersk,
+
+13
+00:00:31,768 --> 00:00:35,010
+the world's largest shipping conglomerate.
+
+14
+00:00:35,210 --> 00:00:36,521
+Within half an hour,
+
+15
+00:00:36,521 --> 00:00:38,721
+its staff were running down the hallways,
+
+16
+00:00:38,721 --> 00:00:40,943
+shouting at colleagues to unplug their
+
+17
+00:00:40,943 --> 00:00:42,210
+computers.
+
+18
+00:00:42,650 --> 00:00:44,364
+And what saved it in the end
+
+19
+00:00:44,364 --> 00:00:46,720
+was a single server in Africa that
+
+20
+00:00:46,720 --> 00:00:48,819
+happened to be offline.
+
+21
+00:00:54,483 --> 00:00:57,326
+How do you hit an entire country
+
+22
+00:00:57,326 --> 00:00:58,558
+at once?
+
+23
+00:01:03,483 --> 00:01:07,153
+You go through software everybody trusts.
+
+24
+00:01:07,203 --> 00:01:09,918
+A small family-run company in Kyiv,
+
+25
+00:01:09,918 --> 00:01:10,808
+Linkos Group,
+
+26
+00:01:10,808 --> 00:01:13,523
+made an accounting program called M.E.Doc,
+
+27
+00:01:13,523 --> 00:01:16,717
+used by Ukrainian businesses to file their
+
+28
+00:01:16,717 --> 00:01:17,773
+taxes.
+
+29
+00:01:17,863 --> 00:01:18,335
+Like most software,
+
+30
+00:01:18,335 --> 00:01:19,343
+it updated itself.
+
+31
+00:01:19,343 --> 00:01:21,698
+In the spring of twenty seventeen,
+
+32
+00:01:21,698 --> 00:01:24,766
+according to American prosecutors,
+
+33
+00:01:24,766 --> 00:01:27,620
+Russian military hackers took over its
+
+34
+00:01:27,620 --> 00:01:29,998
+update servers and slipped their own code
+
+35
+00:01:29,998 --> 00:01:32,026
+into the updates.
+
+36
+00:01:32,283 --> 00:01:33,891
+On June twenty-seventh,
+
+37
+00:01:33,891 --> 00:01:36,688
+the day before a national holiday in
+
+38
+00:01:36,688 --> 00:01:37,364
+Ukraine,
+
+39
+00:01:37,364 --> 00:01:39,363
+they used that back door.
+
+40
+00:01:39,593 --> 00:01:42,783
+The malware spread with terrifying speed.
+
+41
+00:01:42,983 --> 00:01:45,853
+A Ukrainian security firm watched it bring
+
+42
+00:01:45,853 --> 00:01:47,619
+down the network of a large bank
+
+43
+00:01:47,619 --> 00:01:49,543
+in forty-five seconds.
+
+44
+00:01:49,753 --> 00:01:52,019
+Part of a major transit hub was
+
+45
+00:01:52,019 --> 00:01:55,136
+fully infected in sixteen seconds.
+
+46
+00:01:55,383 --> 00:01:57,473
+It had two weapons.
+
+47
+00:01:57,473 --> 00:01:58,981
+The first was EternalBlue,
+
+48
+00:01:58,981 --> 00:02:01,384
+a hacking tool built by America's own
+
+49
+00:02:01,384 --> 00:02:03,765
+National Security Agency,
+
+50
+00:02:03,765 --> 00:02:06,113
+which had leaked earlier that year.
+
+51
+00:02:06,123 --> 00:02:08,250
+It broke into Windows computers that had
+
+52
+00:02:08,250 --> 00:02:10,783
+not installed a security fix.
+
+53
+00:02:10,833 --> 00:02:11,632
+The second,
+
+54
+00:02:11,632 --> 00:02:12,431
+Mimikatz,
+
+55
+00:02:12,431 --> 00:02:14,459
+pulled passwords out of memory,
+
+56
+00:02:14,459 --> 00:02:16,713
+and those passwords opened the machines
+
+57
+00:02:16,713 --> 00:02:18,337
+that had been fixed.
+
+58
+00:02:18,583 --> 00:02:21,384
+Let me draw how one computer becomes
+
+59
+00:02:21,384 --> 00:02:22,493
+thousands.
+
+60
+00:02:22,583 --> 00:02:25,009
+One infected machine finds a neighbor that
+
+61
+00:02:25,009 --> 00:02:26,971
+missed the security fix,
+
+62
+00:02:26,971 --> 00:02:28,233
+and breaks in.
+
+63
+00:02:28,313 --> 00:02:28,743
+There,
+
+64
+00:02:28,743 --> 00:02:31,833
+it reads the passwords stored in memory.
+
+65
+00:02:32,163 --> 00:02:34,536
+Those passwords open a third machine,
+
+66
+00:02:34,536 --> 00:02:37,293
+even a fully updated one.
+
+67
+00:02:37,403 --> 00:02:40,273
+Every victim becomes a new attacker.
+
+68
+00:02:40,523 --> 00:02:42,513
+And inside a big company,
+
+69
+00:02:42,513 --> 00:02:45,173
+where every computer trusts the others,
+
+70
+00:02:45,173 --> 00:02:47,338
+there is no wall to stop it.
+
+71
+00:02:47,583 --> 00:02:50,593
+Then the screens changed.
+
+72
+00:02:50,793 --> 00:02:53,455
+Some said the computer was repairing its
+
+73
+00:02:53,455 --> 00:02:55,023
+file system.
+
+74
+00:02:55,183 --> 00:02:56,108
+Others said,
+
+75
+00:02:56,108 --> 00:02:56,559
+oops,
+
+76
+00:02:56,559 --> 00:02:59,146
+your important files are encrypted,
+
+77
+00:02:59,146 --> 00:03:01,518
+and asked for three hundred dollars in
+
+78
+00:03:01,518 --> 00:03:02,593
+bitcoin.
+
+79
+00:03:02,783 --> 00:03:04,723
+But it was a disguise.
+
+80
+00:03:04,783 --> 00:03:06,574
+According to the charges,
+
+81
+00:03:06,574 --> 00:03:08,615
+the files were scrambled in a way
+
+82
+00:03:08,615 --> 00:03:11,483
+that not even the hackers could undo.
+
+83
+00:03:11,783 --> 00:03:13,813
+Paying changed nothing.
+
+84
+00:03:13,943 --> 00:03:15,763
+This was not a ransom.
+
+85
+00:03:15,763 --> 00:03:17,343
+It was a wiper.
+
+86
+00:03:17,583 --> 00:03:18,466
+In Ukraine,
+
+87
+00:03:18,466 --> 00:03:19,803
+it hit hospitals,
+
+88
+00:03:19,803 --> 00:03:21,366
+six power companies,
+
+89
+00:03:21,366 --> 00:03:22,249
+two airports,
+
+90
+00:03:22,249 --> 00:03:23,812
+more than twenty-two banks,
+
+91
+00:03:23,812 --> 00:03:24,922
+cash machines,
+
+92
+00:03:24,922 --> 00:03:28,693
+and practically every government agency.
+
+93
+00:03:28,943 --> 00:03:30,825
+It even shut down the computers at
+
+94
+00:03:30,825 --> 00:03:32,743
+the Chernobyl clean-up site.
+
+95
+00:03:32,873 --> 00:03:35,338
+One senior official estimated that ten
+
+96
+00:03:35,338 --> 00:03:37,393
+percent of all the computers in the
+
+97
+00:03:37,393 --> 00:03:39,020
+country were wiped.
+
+98
+00:03:39,283 --> 00:03:41,422
+But the code did not stay in
+
+99
+00:03:41,422 --> 00:03:42,633
+Ukraine.
+
+100
+00:03:42,673 --> 00:03:44,034
+It got on a plane,
+
+101
+00:03:44,034 --> 00:03:44,934
+so to speak,
+
+102
+00:03:44,934 --> 00:03:48,072
+inside the networks of global companies.
+
+103
+00:03:53,717 --> 00:03:56,779
+What happens when the company behind a
+
+104
+00:03:56,779 --> 00:03:59,007
+fifth of world shipping loses its
+
+105
+00:03:59,007 --> 00:04:00,442
+computers?
+
+106
+00:04:02,717 --> 00:04:06,717
+Maersk's door was a single computer.
+
+107
+00:04:06,957 --> 00:04:09,940
+A finance executive at its office in
+
+108
+00:04:09,940 --> 00:04:12,427
+Ukraine had asked for M.E.Doc to be
+
+109
+00:04:12,427 --> 00:04:14,767
+installed on one machine.
+
+110
+00:04:15,157 --> 00:04:16,617
+That was enough.
+
+111
+00:04:16,737 --> 00:04:18,448
+Through Maersk's global network,
+
+112
+00:04:18,448 --> 00:04:20,928
+the malware reached its headquarters in
+
+113
+00:04:20,928 --> 00:04:24,376
+Copenhagen on a sunny summer afternoon,
+
+114
+00:04:24,376 --> 00:04:25,343
+and from there,
+
+115
+00:04:25,343 --> 00:04:27,679
+the rest of the company.
+
+116
+00:04:27,917 --> 00:04:30,061
+This was the world's largest shipping
+
+117
+00:04:30,061 --> 00:04:31,374
+conglomerate,
+
+118
+00:04:31,374 --> 00:04:34,028
+with seventy-six port terminals,
+
+119
+00:04:34,028 --> 00:04:36,145
+nearly eight hundred vessels,
+
+120
+00:04:36,145 --> 00:04:38,021
+and close to a fifth of the
+
+121
+00:04:38,021 --> 00:04:40,497
+world's shipping capacity.
+
+122
+00:04:40,767 --> 00:04:43,150
+Every container is tracked,
+
+123
+00:04:43,150 --> 00:04:45,917
+booked and cleared by computers.
+
+124
+00:04:45,997 --> 00:04:48,581
+And the computers were gone.
+
+125
+00:04:48,817 --> 00:04:51,505
+At the terminal in Elizabeth,
+
+126
+00:04:51,505 --> 00:04:52,467
+New Jersey,
+
+127
+00:04:52,467 --> 00:04:54,934
+about three thousand trucks arrive on a
+
+128
+00:04:54,934 --> 00:04:55,987
+good day.
+
+129
+00:04:55,987 --> 00:04:56,432
+That day,
+
+130
+00:04:56,432 --> 00:04:58,107
+the gates stopped working.
+
+131
+00:04:58,137 --> 00:05:00,518
+Hundreds of trucks backed up for miles,
+
+132
+00:05:00,518 --> 00:05:02,703
+and the terminal was closed for the
+
+133
+00:05:02,703 --> 00:05:04,177
+rest of the day.
+
+134
+00:05:04,337 --> 00:05:06,971
+The same thing happened at seventeen of
+
+135
+00:05:06,971 --> 00:05:09,103
+Maersk's seventy-six terminals,
+
+136
+00:05:09,103 --> 00:05:12,577
+from Los Angeles to Rotterdam and Mumbai.
+
+137
+00:05:12,707 --> 00:05:14,047
+Gates down.
+
+138
+00:05:14,047 --> 00:05:15,870
+Cranes frozen.
+
+139
+00:05:16,117 --> 00:05:19,057
+The ships themselves kept sailing.
+
+140
+00:05:19,067 --> 00:05:21,188
+But without the systems that say which
+
+141
+00:05:21,188 --> 00:05:22,106
+box goes where,
+
+142
+00:05:22,106 --> 00:05:24,807
+a port becomes a parking lot.
+
+143
+00:05:24,807 --> 00:05:26,993
+Staff fell back on personal email,
+
+144
+00:05:26,993 --> 00:05:28,297
+spreadsheets and WhatsApp.
+
+145
+00:05:28,297 --> 00:05:31,047
+One customer remembered booking five
+
+146
+00:05:31,047 --> 00:05:33,297
+hundred shipping containers through a
+
+147
+00:05:33,297 --> 00:05:34,897
+messaging app.
+
+148
+00:05:35,150 --> 00:05:36,172
+To come back,
+
+149
+00:05:36,172 --> 00:05:39,100
+Maersk had to rebuild everything.
+
+150
+00:05:39,100 --> 00:05:40,127
+And for that,
+
+151
+00:05:40,127 --> 00:05:42,233
+it needed one thing it could not
+
+152
+00:05:42,233 --> 00:05:43,096
+find.
+
+153
+00:05:48,750 --> 00:05:52,577
+What do you rebuild first when everything
+
+154
+00:05:52,577 --> 00:05:53,873
+is gone?
+
+155
+00:05:57,750 --> 00:05:59,674
+Maersk turned an office building in
+
+156
+00:05:59,674 --> 00:06:00,507
+Maidenhead,
+
+157
+00:06:00,507 --> 00:06:01,982
+a town west of London,
+
+158
+00:06:01,982 --> 00:06:04,547
+into a recovery center run with the
+
+159
+00:06:04,547 --> 00:06:06,430
+consultancy Deloitte.
+
+160
+00:06:06,610 --> 00:06:09,113
+Staff kept arriving from all over the
+
+161
+00:06:09,113 --> 00:06:09,589
+world,
+
+162
+00:06:09,589 --> 00:06:11,190
+luggage in hand.
+
+163
+00:06:11,270 --> 00:06:12,791
+The good news was that there were
+
+164
+00:06:12,791 --> 00:06:15,181
+backups of almost all of the company's
+
+165
+00:06:15,181 --> 00:06:16,216
+servers.
+
+166
+00:06:16,450 --> 00:06:18,960
+The bad news was the map.
+
+167
+00:06:19,120 --> 00:06:21,597
+A network like Maersk's runs on special
+
+168
+00:06:21,597 --> 00:06:24,322
+servers called domain controllers,
+
+169
+00:06:24,322 --> 00:06:26,524
+the master list of who may log
+
+170
+00:06:26,524 --> 00:06:27,950
+in to what.
+
+171
+00:06:28,270 --> 00:06:30,734
+Maersk had about a hundred and fifty,
+
+172
+00:06:30,734 --> 00:06:32,994
+copying each other so that any one
+
+173
+00:06:32,994 --> 00:06:34,950
+could replace the others.
+
+174
+00:06:35,200 --> 00:06:38,373
+That design covered every disaster except
+
+175
+00:06:38,373 --> 00:06:39,200
+one.
+
+176
+00:06:39,380 --> 00:06:41,920
+All of them wiped at once.
+
+177
+00:06:41,930 --> 00:06:44,783
+And there was no separate backup.
+
+178
+00:06:45,017 --> 00:06:47,227
+Let me draw the trap.
+
+179
+00:06:47,227 --> 00:06:48,580
+Here are the servers,
+
+180
+00:06:48,580 --> 00:06:49,703
+each one a box,
+
+181
+00:06:49,703 --> 00:06:52,367
+all connected to the master list.
+
+182
+00:06:52,417 --> 00:06:53,255
+Normally,
+
+183
+00:06:53,255 --> 00:06:54,523
+if one copy dies,
+
+184
+00:06:54,523 --> 00:06:56,197
+the others fill in.
+
+185
+00:06:56,317 --> 00:06:58,645
+But the malware reached every copy at
+
+186
+00:06:58,645 --> 00:06:59,767
+the same time.
+
+187
+00:06:59,767 --> 00:07:01,937
+No healthy copy was left.
+
+188
+00:07:01,947 --> 00:07:03,636
+And without the master list,
+
+189
+00:07:03,636 --> 00:07:05,774
+the backups of all the other servers
+
+190
+00:07:05,774 --> 00:07:06,822
+were useless,
+
+191
+00:07:06,822 --> 00:07:09,173
+because nobody could log in to restore
+
+192
+00:07:09,173 --> 00:07:09,987
+them.
+
+193
+00:07:10,250 --> 00:07:13,048
+After calling hundreds of administrators
+
+194
+00:07:13,048 --> 00:07:14,191
+around the world,
+
+195
+00:07:14,191 --> 00:07:16,190
+they found one survivor.
+
+196
+00:07:16,250 --> 00:07:18,746
+A single domain controller in an office
+
+197
+00:07:18,746 --> 00:07:19,970
+in Ghana.
+
+198
+00:07:20,120 --> 00:07:22,311
+A power cut had knocked it offline,
+
+199
+00:07:22,311 --> 00:07:24,720
+and the malware never touched it.
+
+200
+00:07:24,740 --> 00:07:27,238
+A blackout had saved the company.
+
+201
+00:07:27,483 --> 00:07:30,028
+But the connection in Ghana was so
+
+202
+00:07:30,028 --> 00:07:32,319
+slow that sending the data would take
+
+203
+00:07:32,319 --> 00:07:33,153
+days.
+
+204
+00:07:33,153 --> 00:07:35,133
+So they decided to fly it.
+
+205
+00:07:35,193 --> 00:07:37,324
+Nobody in the Ghana office had a
+
+206
+00:07:37,324 --> 00:07:38,273
+British visa,
+
+207
+00:07:38,273 --> 00:07:40,423
+so it became a relay race.
+
+208
+00:07:40,483 --> 00:07:42,193
+One employee flew the hard drive to
+
+209
+00:07:42,193 --> 00:07:44,545
+Nigeria and handed it over at the
+
+210
+00:07:44,545 --> 00:07:46,020
+airport to a colleague,
+
+211
+00:07:46,020 --> 00:07:47,731
+who carried it on a six and
+
+212
+00:07:47,731 --> 00:07:49,827
+a half hours flight to London.
+
+213
+00:07:50,083 --> 00:07:51,128
+With that drive,
+
+214
+00:07:51,128 --> 00:07:53,271
+Maidenhead could start bringing the
+
+215
+00:07:53,271 --> 00:07:54,943
+company back.
+
+216
+00:07:55,083 --> 00:07:57,473
+According to Maersk's chairman,
+
+217
+00:07:57,473 --> 00:07:59,894
+it took ten days to rebuild a
+
+218
+00:07:59,894 --> 00:08:02,617
+network of four thousand servers and
+
+219
+00:08:02,617 --> 00:08:05,033
+forty-five thousand PCs.
+
+220
+00:08:05,213 --> 00:08:08,818
+Full recovery took close to two months.
+
+221
+00:08:09,083 --> 00:08:10,863
+Then came the bill.
+
+222
+00:08:10,863 --> 00:08:12,741
+And Maersk was only one of the
+
+223
+00:08:12,741 --> 00:08:13,810
+victims.
+
+224
+00:08:19,450 --> 00:08:22,182
+How much can a few lines of
+
+225
+00:08:22,182 --> 00:08:23,465
+code cost?
+
+226
+00:08:28,450 --> 00:08:29,478
+In August,
+
+227
+00:08:29,478 --> 00:08:32,115
+Maersk told investors the attack would cut
+
+228
+00:08:32,115 --> 00:08:34,488
+its results by two hundred to three
+
+229
+00:08:34,488 --> 00:08:36,670
+hundred million dollars.
+
+230
+00:08:37,160 --> 00:08:39,395
+Its chairman later put it between two
+
+231
+00:08:39,395 --> 00:08:41,406
+hundred and fifty and three hundred
+
+232
+00:08:41,406 --> 00:08:42,900
+million dollars.
+
+233
+00:08:43,280 --> 00:08:46,315
+Some of the company's own staff privately
+
+234
+00:08:46,315 --> 00:08:49,192
+suspected even that was too low.
+
+235
+00:08:49,450 --> 00:08:51,820
+And the list kept growing.
+
+236
+00:08:51,880 --> 00:08:53,133
+The drug maker Merck,
+
+237
+00:08:53,133 --> 00:08:55,469
+whose ability to manufacture some
+
+238
+00:08:55,469 --> 00:08:58,209
+medicines was temporarily shut down,
+
+239
+00:08:58,209 --> 00:09:00,333
+reported a loss of eight hundred and
+
+240
+00:09:00,333 --> 00:09:02,420
+seventy million dollars.
+
+241
+00:09:02,460 --> 00:09:03,229
+FedEx,
+
+242
+00:09:03,229 --> 00:09:05,854
+through its European arm TNT Express,
+
+243
+00:09:05,854 --> 00:09:08,310
+four hundred million dollars.
+
+244
+00:09:08,340 --> 00:09:09,261
+Saint-Gobain,
+
+245
+00:09:09,261 --> 00:09:10,653
+the French building giant,
+
+246
+00:09:10,653 --> 00:09:12,778
+three hundred and eighty-four million
+
+247
+00:09:12,778 --> 00:09:13,830
+dollars.
+
+248
+00:09:13,830 --> 00:09:15,574
+The snack maker Mondelez,
+
+249
+00:09:15,574 --> 00:09:17,340
+one hundred and eighty-eight million
+
+250
+00:09:17,340 --> 00:09:18,382
+dollars.
+
+251
+00:09:18,617 --> 00:09:20,697
+Let me draw the scale.
+
+252
+00:09:21,027 --> 00:09:23,321
+Here is a typical ransomware attack that
+
+253
+00:09:23,321 --> 00:09:25,596
+paralyzed the city of Atlanta,
+
+254
+00:09:25,596 --> 00:09:27,917
+costing up to ten million dollars.
+
+255
+00:09:27,987 --> 00:09:29,149
+Next to it,
+
+256
+00:09:29,149 --> 00:09:29,917
+Maersk.
+
+257
+00:09:29,917 --> 00:09:31,177
+Then FedEx.
+
+258
+00:09:31,177 --> 00:09:32,447
+Then Merck.
+
+259
+00:09:32,447 --> 00:09:33,947
+And then the total.
+
+260
+00:09:33,947 --> 00:09:35,850
+The White House estimate of more than
+
+261
+00:09:35,850 --> 00:09:37,507
+ten billion dollars.
+
+262
+00:09:37,667 --> 00:09:38,751
+Next to that bar,
+
+263
+00:09:38,751 --> 00:09:42,007
+the Atlanta attack is barely a line.
+
+264
+00:09:42,067 --> 00:09:43,613
+It is about a tenth of one
+
+265
+00:09:43,613 --> 00:09:44,600
+percent.
+
+266
+00:09:44,850 --> 00:09:47,067
+Not all the damage was measured in
+
+267
+00:09:47,067 --> 00:09:48,110
+money.
+
+268
+00:09:48,210 --> 00:09:49,517
+In Pennsylvania,
+
+269
+00:09:49,517 --> 00:09:51,953
+NotPetya hit the Heritage Valley Health
+
+270
+00:09:51,953 --> 00:09:52,595
+System,
+
+271
+00:09:52,595 --> 00:09:54,810
+two hospitals and seventy-eight other
+
+272
+00:09:54,810 --> 00:09:56,830
+medical facilities.
+
+273
+00:09:56,830 --> 00:09:58,116
+For more than a week,
+
+274
+00:09:58,116 --> 00:10:00,297
+staff could not reach the computer systems
+
+275
+00:10:00,297 --> 00:10:02,237
+they used for cardiology,
+
+276
+00:10:02,237 --> 00:10:03,524
+nuclear medicine,
+
+277
+00:10:03,524 --> 00:10:05,868
+radiology and surgery.
+
+278
+00:10:06,117 --> 00:10:08,147
+Somebody had launched it.
+
+279
+00:10:08,147 --> 00:10:10,151
+And somebody would have to pay for
+
+280
+00:10:10,151 --> 00:10:10,952
+it.
+
+281
+00:10:16,617 --> 00:10:19,273
+Who is responsible for a weapon that
+
+282
+00:10:19,273 --> 00:10:21,805
+does not stay where it was aimed?
+
+283
+00:10:25,617 --> 00:10:27,478
+In February twenty eighteen,
+
+284
+00:10:27,478 --> 00:10:29,987
+Britain's National Cyber Security Centre
+
+285
+00:10:29,987 --> 00:10:32,495
+concluded that the Russian military was
+
+286
+00:10:32,495 --> 00:10:34,977
+almost certainly responsible.
+
+287
+00:10:35,397 --> 00:10:37,167
+The White House called it the most
+
+288
+00:10:37,167 --> 00:10:39,601
+destructive and costly cyber attack in
+
+289
+00:10:39,601 --> 00:10:40,464
+history,
+
+290
+00:10:40,464 --> 00:10:42,013
+and said it was part of the
+
+291
+00:10:42,013 --> 00:10:45,047
+Kremlin's effort to destabilize Ukraine.
+
+292
+00:10:45,287 --> 00:10:47,264
+Russia's government rejected the
+
+293
+00:10:47,264 --> 00:10:49,402
+accusations as groundless.
+
+294
+00:10:49,650 --> 00:10:51,636
+In October twenty twenty,
+
+295
+00:10:51,636 --> 00:10:54,760
+American prosecutors charged six officers
+
+296
+00:10:54,760 --> 00:10:58,085
+of a Russian military intelligence unit,
+
+297
+00:10:58,085 --> 00:11:00,290
+known to researchers as Sandworm.
+
+298
+00:11:00,290 --> 00:11:02,999
+They said just three American victims had
+
+299
+00:11:02,999 --> 00:11:05,570
+lost close to a billion dollars.
+
+300
+00:11:05,660 --> 00:11:07,473
+These are accusations,
+
+301
+00:11:07,473 --> 00:11:09,124
+not convictions.
+
+302
+00:11:09,383 --> 00:11:12,723
+So the victims turned to their insurers.
+
+303
+00:11:12,753 --> 00:11:15,291
+And the insurers pointed to an old
+
+304
+00:11:15,291 --> 00:11:18,683
+clause excluding hostile or warlike acts.
+
+305
+00:11:19,063 --> 00:11:21,762
+If a government's military launched the
+
+306
+00:11:21,762 --> 00:11:22,414
+attack,
+
+307
+00:11:22,414 --> 00:11:23,291
+they argued,
+
+308
+00:11:23,291 --> 00:11:24,169
+it was war,
+
+309
+00:11:24,169 --> 00:11:26,343
+and they did not have to pay.
+
+310
+00:11:26,603 --> 00:11:28,948
+Merck's fight was over more than one
+
+311
+00:11:28,948 --> 00:11:32,187
+point four billion dollars in losses.
+
+312
+00:11:32,450 --> 00:11:35,260
+A New Jersey court disagreed.
+
+313
+00:11:35,260 --> 00:11:36,543
+The war exclusion,
+
+314
+00:11:36,543 --> 00:11:37,173
+it found,
+
+315
+00:11:37,173 --> 00:11:39,565
+was written for physical acts of warfare
+
+316
+00:11:39,565 --> 00:11:40,630
+between armies,
+
+317
+00:11:40,630 --> 00:11:42,100
+not for malware.
+
+318
+00:11:42,340 --> 00:11:44,140
+An appeals court agreed.
+
+319
+00:11:44,140 --> 00:11:46,273
+In early twenty twenty-four,
+
+320
+00:11:46,273 --> 00:11:48,669
+days before the state's supreme court was
+
+321
+00:11:48,669 --> 00:11:50,083
+due to hear the case,
+
+322
+00:11:50,083 --> 00:11:52,460
+Merck settled with its insurers.
+
+323
+00:11:52,460 --> 00:11:55,047
+The terms were never disclosed.
+
+324
+00:11:55,283 --> 00:11:57,401
+So what did NotPetya teach the world
+
+325
+00:11:57,401 --> 00:11:58,833
+economy?
+
+326
+00:11:58,833 --> 00:12:00,310
+That the attack does not have to
+
+327
+00:12:00,310 --> 00:12:01,833
+be aimed at you.
+
+328
+00:12:01,833 --> 00:12:04,053
+Maersk was not the target.
+
+329
+00:12:04,053 --> 00:12:05,523
+It was in the way.
+
+330
+00:12:05,543 --> 00:12:08,226
+One computer running one tax program was
+
+331
+00:12:08,226 --> 00:12:10,421
+enough to stop terminals on three
+
+332
+00:12:10,421 --> 00:12:11,753
+continents.
+
+333
+00:12:11,853 --> 00:12:13,538
+Networks where everything trusts
+
+334
+00:12:13,538 --> 00:12:16,033
+everything else are efficient.
+
+335
+00:12:16,173 --> 00:12:18,113
+They are also fragile.
+
+336
+00:12:18,243 --> 00:12:19,451
+And in the end,
+
+337
+00:12:19,451 --> 00:12:21,918
+the world's biggest shipping company was
+
+338
+00:12:21,918 --> 00:12:23,619
+rescued not by a plan,
+
+339
+00:12:23,619 --> 00:12:26,439
+but by a power cut in Ghana.
+
+340
+00:12:26,683 --> 00:12:29,188
+Next time on The Hidden Economics,
+
+341
+00:12:29,188 --> 00:12:32,175
+we follow the money behind another hidden
+
+342
+00:12:32,175 --> 00:12:34,613
+link of the world economy.
+
+343
+00:12:34,673 --> 00:12:36,821
+This is The Hidden Economics.

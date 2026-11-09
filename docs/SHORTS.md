@@ -22,5 +22,5 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 17-india-chips | India's Chip Plants Don't Make Chips. That's the Plan | INDIA'S CHIP PLANTS / DON'T MAKE CHIPS | 32 s | `docs/episodes/17-india-chips/youtube-short/short_package.md` |
 | 18-chip-chemicals | The Chemicals That Decide Who Makes Chips | NO CHEMICALS, / NO CHIPS | 31 s | `docs/episodes/18-chip-chemicals/youtube-short/short_package.md` |
 | 19-quibi | The $1.75 Billion App That Lasted Six Months | $1.75 BILLION APP. / GONE IN 6 MONTHS | 31 s | `docs/episodes/19-quibi/youtube-short/short_package.md` |
-| 20-notpetya | One Software Update Froze the World's Biggest Shipping Company | ONE SOFTWARE UPDATE. / $10 BILLION IN DAMAGE | pending (episode render) | - |
+| 20-notpetya | One Software Update Froze the World's Biggest Shipping Company | ONE SOFTWARE UPDATE. / $10 BILLION IN DAMAGE | 46 s | `docs/episodes/20-notpetya/youtube-short/short_package.md` |
 | 21-citibank | The Bank That Accidentally Sent $900 Million | A BANK SENT $900M / BY MISTAKE | pending (episode render) | - |
