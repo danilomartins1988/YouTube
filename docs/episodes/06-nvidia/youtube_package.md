@@ -24,15 +24,12 @@ How did a video-game graphics company end up at the center of the AI economy? We
 
 CHAPTERS
 0:00 The supplier behind AI
-0:56 From gaming to AI
-1:41 CPU vs GPU, explained
-2:42 The CUDA advantage
-4:10 How Nvidia makes money
-6:39 The global supply chain
-8:01 The competition
-9:17 GPUs vs custom AI chips
-9:50 The future of Nvidia
-11:09 The real advantage (and why Taiwan matters)
+1:01 From gaming to AI
+2:50 The CUDA advantage
+4:20 How Nvidia makes money
+6:51 The global supply chain
+8:16 The competition
+10:07 The future of Nvidia
 
 KEY SOURCES
 - NVIDIA Form 10-K for fiscal 2026, 2025 and 2022 (SEC EDGAR); SEC XBRL company facts
@@ -53,7 +50,7 @@ This is an independent educational documentary. It is not affiliated with, endor
 #Nvidia #AI #economics
 ```
 
-The chapters above match the original cut (`output/nvidia_documentary.mp4`). In `output/nvidia_documentary_with_intro.mp4`, every chapter after 0:00 starts **5 seconds later** (the intro sits at 0:18). For the revised presenter cut, use the chapters in `docs/episodes/06-nvidia/README.md`.
+The chapters above match the redone presenter cut (`output/nvidia_documentary_presenter.mp4`, Nov 2026 re-render, 12:02).
 
 ## Keywords / tags (about 470 characters)
 

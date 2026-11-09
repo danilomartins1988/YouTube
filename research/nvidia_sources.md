@@ -1,6 +1,6 @@
 # Research dossier - How Nvidia Took Over the AI Economy
 
-Generated 2026-11-08T16:50:27+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-09T00:10:10+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 
