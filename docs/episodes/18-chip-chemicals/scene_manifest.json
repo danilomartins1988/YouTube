@@ -1,0 +1,2815 @@
+{
+  "slug": "the-chemicals-that-decide-who-makes-chips",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_hook",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 10.33,
+      "duration_s": 10.33,
+      "visual_objective": "",
+      "narration": "What if the most advanced chip factory on Earth could be stopped, not by a broken machine, but by a missing bottle of liquid?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "not by a broken",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.09,
+          "absolute_s": 5.09
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "a missing",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 7.42,
+          "absolute_s": 7.42
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "a missing",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.72,
+          "absolute_s": 7.72
+        },
+        {
+          "param": "items[0].level[1][0].cue",
+          "cue": "a missing",
+          "label": "items[0].level[1][0].cue",
+          "scene_time_s": 7.72,
+          "absolute_s": 7.72
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "a missing",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 7.72,
+          "absolute_s": 7.72
+        },
+        {
+          "param": "items[1].stopAt.cue",
+          "cue": "a missing",
+          "label": "items[1].stopAt.cue",
+          "scene_time_s": 9.22,
+          "absolute_s": 9.22
+        },
+        {
+          "param": "items[0].level[2][0].cue",
+          "cue": "a missing",
+          "label": "items[0].level[2][0].cue",
+          "scene_time_s": 9.72,
+          "absolute_s": 9.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_stakes",
+      "segment": "h_stakes",
+      "type": "engine_cartoon",
+      "start_s": 10.33,
+      "end_s": 28.67,
+      "duration_s": 18.33,
+      "visual_objective": "",
+      "narration": "It has almost happened, more than once. A chemical from Japan, a gas from Ukraine, a metal from China. Each time, the chip industry discovered that its weakest link was not a machine worth hundreds of millions of dollars, but something that fits in a truck.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "A chemical from Japan",
+          "label": "items[0].at.cue",
+          "scene_time_s": 3.81,
+          "absolute_s": 14.14
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "A chemical from Japan",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.81,
+          "absolute_s": 14.14
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "a gas from Ukraine",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.65,
+          "absolute_s": 15.98
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "a metal from China",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.02,
+          "absolute_s": 17.36
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Each time",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.75,
+          "absolute_s": 19.08
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Each time",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.05,
+          "absolute_s": 19.38
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "a machine worth",
+          "label": "items[3].at.cue",
+          "scene_time_s": 13.12,
+          "absolute_s": 23.46
+        },
+        {
+          "param": "items[3].fireAt.cue",
+          "cue": "a machine worth",
+          "label": "items[3].fireAt.cue",
+          "scene_time_s": 13.42,
+          "absolute_s": 23.76
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "something that fits",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.12,
+          "absolute_s": 26.45
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "ihs_2019",
+        "reg_neon",
+        "usgs_ga"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 28.67,
+      "end_s": 33.67,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s03_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 33.67,
+      "end_s": 39.07,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s04_q1",
+      "segment": "m1_question",
+      "type": "engine_cartoon",
+      "start_s": 39.07,
+      "end_s": 48.07,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "What is the most important chemical in a chip factory?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What is the most",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 39.42
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s05_resist",
+      "segment": "m1_resist",
+      "type": "engine_cartoon",
+      "start_s": 48.07,
+      "end_s": 73.23,
+      "duration_s": 25.17,
+      "visual_objective": "",
+      "narration": "A strong candidate is photoresist. It is a light-sensitive liquid spread across the silicon wafer. When the lithography machine shines its pattern of light, the resist changes wherever the light hits it. Wash it, and the circuit design is left behind on the wafer, ready to be etched. No resist, no pattern. No pattern, no chip.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "A strong candidate",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 48.42
+        },
+        {
+          "param": "items[0].level[1][0].cue",
+          "cue": "spread across",
+          "label": "items[0].level[1][0].cue",
+          "scene_time_s": 6.23,
+          "absolute_s": 54.3
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "spread across",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.23,
+          "absolute_s": 54.3
+        },
+        {
+          "param": "items[0].level[2][0].cue",
+          "cue": "spread across",
+          "label": "items[0].level[2][0].cue",
+          "scene_time_s": 8.23,
+          "absolute_s": 56.3
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "When the lithography machine",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.52,
+          "absolute_s": 56.59
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "When the lithography machine",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.62,
+          "absolute_s": 56.69
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "When the lithography machine",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.92,
+          "absolute_s": 56.99
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "When the lithography machine",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 8.92,
+          "absolute_s": 56.99
+        },
+        {
+          "param": "items[2].beamAt.cue",
+          "cue": "shines its pattern",
+          "label": "items[2].beamAt.cue",
+          "scene_time_s": 10.7,
+          "absolute_s": 58.76
+        },
+        {
+          "param": "items[1].revealAt.cue",
+          "cue": "Wash it",
+          "label": "items[1].revealAt.cue",
+          "scene_time_s": 15.85,
+          "absolute_s": 63.92
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "No resist",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 21.18,
+          "absolute_s": 69.25
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "No resist",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 21.48,
+          "absolute_s": 69.55
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "No resist",
+          "label": "items[3].at.cue",
+          "scene_time_s": 21.48,
+          "absolute_s": 69.55
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "No resist",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 21.48,
+          "absolute_s": 69.55
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "thw_jsr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s06_recipe",
+      "segment": "m1_recipe",
+      "type": "engine_cartoon",
+      "start_s": 73.23,
+      "end_s": 97.93,
+      "duration_s": 24.7,
+      "visual_objective": "",
+      "narration": "And resist is not a commodity. Every new generation of chips needs a new recipe, tuned to the light, the machine and the chemistry of one factory. That takes hundreds of test cycles between the resist maker and the chipmaker. One of the biggest suppliers says developing a new resist can take up to two years.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Every new generation",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.39,
+          "absolute_s": 76.62
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "a new recipe",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.17,
+          "absolute_s": 79.41
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "hundreds of test cycles",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.45,
+          "absolute_s": 86.68
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "hundreds of test cycles",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.75,
+          "absolute_s": 86.98
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "hundreds of test cycles",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.75,
+          "absolute_s": 86.98
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "hundreds of test cycles",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 13.75,
+          "absolute_s": 86.98
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "the resist maker",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.58,
+          "absolute_s": 88.81
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "the resist maker",
+          "label": "items[4].at.cue",
+          "scene_time_s": 15.58,
+          "absolute_s": 88.81
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "One of the biggest",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 18.43,
+          "absolute_s": 91.66
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "One of the biggest",
+          "label": "items[5].at.cue",
+          "scene_time_s": 18.73,
+          "absolute_s": 91.96
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "One of the biggest",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 18.73,
+          "absolute_s": 91.96
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "thw_jsr",
+        "aj_2019"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s07_japan",
+      "segment": "m1_japan",
+      "type": "engine_cartoon",
+      "start_s": 97.93,
+      "end_s": 135.37,
+      "duration_s": 37.43,
+      "visual_objective": "",
+      "narration": "For the most advanced chips, made with extreme ultraviolet light, the market belongs to Japan. According to the research firm QYResearch, three Japanese companies, Tokyo Ohka Kogyo, JSR and Shin-Etsu Chemical, hold about ninety percent of the world market for EUV resist. It is an estimate. But it means the most advanced factories in Taiwan, Korea and America all depend on a few chemical plants in Japan. And this resist sells for about one thousand eight hundred dollars a gallon.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "According to the research firm",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.95,
+          "absolute_s": 105.88
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Tokyo Ohka Kogyo",
+          "label": "items[1].at.cue",
+          "scene_time_s": 12.7,
+          "absolute_s": 110.63
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "JSR",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.36,
+          "absolute_s": 112.29
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Shin-Etsu",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.84,
+          "absolute_s": 112.77
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "of the world market",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.41,
+          "absolute_s": 116.34
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "But it means",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 22.5,
+          "absolute_s": 120.43
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But it means",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 22.8,
+          "absolute_s": 120.73
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "But it means",
+          "label": "items[5].at.cue",
+          "scene_time_s": 22.8,
+          "absolute_s": 120.73
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "But it means",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 22.8,
+          "absolute_s": 120.73
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "But it means",
+          "label": "items[6].at.cue",
+          "scene_time_s": 23.1,
+          "absolute_s": 121.03
+        },
+        {
+          "param": "items[5].fireAt.cue",
+          "cue": "But it means",
+          "label": "items[5].fireAt.cue",
+          "scene_time_s": 23.2,
+          "absolute_s": 121.13
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "But it means",
+          "label": "items[7].at.cue",
+          "scene_time_s": 23.4,
+          "absolute_s": 121.33
+        },
+        {
+          "param": "items[6].fireAt.cue",
+          "cue": "But it means",
+          "label": "items[6].fireAt.cue",
+          "scene_time_s": 23.5,
+          "absolute_s": 121.43
+        },
+        {
+          "param": "items[7].fireAt.cue",
+          "cue": "But it means",
+          "label": "items[7].fireAt.cue",
+          "scene_time_s": 23.8,
+          "absolute_s": 121.73
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "But it means",
+          "label": "items[8].at.cue",
+          "scene_time_s": 23.8,
+          "absolute_s": 121.73
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "And this resist sells",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 32.36,
+          "absolute_s": 130.29
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "And this resist sells",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 32.66,
+          "absolute_s": 130.59
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "And this resist sells",
+          "label": "items[9].at.cue",
+          "scene_time_s": 32.66,
+          "absolute_s": 130.59
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "And this resist sells",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 32.66,
+          "absolute_s": 130.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "dt_japan",
+        "thw_jsr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s08_layers",
+      "segment": "m1_layers",
+      "type": "engine_cartoon",
+      "start_s": 135.37,
+      "end_s": 163.4,
+      "duration_s": 28.03,
+      "visual_objective": "",
+      "narration": "And the dependence grows with every generation. Moving from three nanometer chips to two nanometer chips adds more than thirty percent more layers printed with extreme ultraviolet light, according to Korean industry figures. Each layer needs its own coat of resist, and its own mask, printed on blank plates from yet another Japanese specialist, Hoya. The smaller the chip, the more of these materials it eats.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "adds",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.69,
+          "absolute_s": 143.06
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "adds",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.69,
+          "absolute_s": 143.06
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "adds",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 9.19,
+          "absolute_s": 144.56
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Each layer needs",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.35,
+          "absolute_s": 150.72
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Each layer needs",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.65,
+          "absolute_s": 151.02
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Each layer needs",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.65,
+          "absolute_s": 151.02
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Each layer needs",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 15.65,
+          "absolute_s": 151.02
+        },
+        {
+          "param": "items[2].level[1][0].cue",
+          "cue": "Each layer needs",
+          "label": "items[2].level[1][0].cue",
+          "scene_time_s": 21.65,
+          "absolute_s": 157.02
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Hoya",
+          "label": "items[3].at.cue",
+          "scene_time_s": 23.03,
+          "absolute_s": 158.4
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "The smaller the chip",
+          "label": "items[4].at.cue",
+          "scene_time_s": 24.07,
+          "absolute_s": 159.44
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "dt_japan"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "p09_power",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 163.4,
+      "end_s": 189.2,
+      "duration_s": 25.8,
+      "visual_objective": "",
+      "narration": "Let me draw why a tiny market can hold so much power. The machine that prints the chip is worth hundreds of millions of dollars. The resist on a wafer costs very little by comparison. But the factory needs both. If either one is missing, the whole line stops. So the cheapest ingredient can carry the same power as the most expensive machine.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "The machine that prints",
+          "label": "draw_start.cue",
+          "scene_time_s": 5.15,
+          "absolute_s": 168.55
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "The machine that prints",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 5.15,
+          "absolute_s": 168.55
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "The resist on a wafer",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 9.81,
+          "absolute_s": 173.21
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "the factory needs both",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 14.05,
+          "absolute_s": 177.45
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "If either one",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 16.15,
+          "absolute_s": 179.55
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "the whole line stops",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 18.09,
+          "absolute_s": 181.49
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the whole line stops",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 18.29,
+          "absolute_s": 181.69
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "the same power",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 22.4,
+          "absolute_s": 185.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "dt_japan"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s10_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 189.2,
+      "end_s": 195.43,
+      "duration_s": 6.23,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "In twenty nineteen, one country tested exactly that idea.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "In twenty nineteen",
+          "label": "In 2019",
+          "scene_time_s": 0.35,
+          "absolute_s": 189.55
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "one country tested",
+          "label": "one country tested exactly that idea",
+          "scene_time_s": 2.42,
+          "absolute_s": 191.63
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 195.43,
+      "end_s": 200.83,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_q2",
+      "segment": "m2_question",
+      "type": "engine_cartoon",
+      "start_s": 200.83,
+      "end_s": 209.83,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "What happens when a supplier closes the tap?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What happens",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 201.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_curbs",
+      "segment": "m2_curbs",
+      "type": "engine_cartoon",
+      "start_s": 209.83,
+      "end_s": 247.8,
+      "duration_s": 37.97,
+      "visual_objective": "",
+      "narration": "On July first, twenty nineteen, in a decades-old dispute with South Korea over wartime forced labour, Japan announced it would restrict exports of three materials to Korea. Fluorinated polyimide, used in phone screens. Photoresist. And ultra-pure hydrogen fluoride, used to clean and etch wafers. Korea is home to two of the world's biggest memory makers, Samsung and SK hynix. And Japan supplied, by one estimate, about seventy percent or more of these materials to the whole world.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Japan announced",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.71,
+          "absolute_s": 217.54
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Japan announced",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.71,
+          "absolute_s": 217.54
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Japan announced",
+          "label": "items[5].at.cue",
+          "scene_time_s": 8.71,
+          "absolute_s": 218.54
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "restrict exports",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 9.33,
+          "absolute_s": 219.17
+        },
+        {
+          "param": "items[5].closeAt.cue",
+          "cue": "restrict exports",
+          "label": "items[5].closeAt.cue",
+          "scene_time_s": 10.33,
+          "absolute_s": 220.17
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Fluorinated polyimide",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.07,
+          "absolute_s": 222.9
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Fluorinated polyimide",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.07,
+          "absolute_s": 222.9
+        },
+        {
+          "param": "items[2].lockAt.cue",
+          "cue": "Photoresist",
+          "label": "items[2].lockAt.cue",
+          "scene_time_s": 16.66,
+          "absolute_s": 226.49
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Photoresist",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.66,
+          "absolute_s": 226.49
+        },
+        {
+          "param": "items[3].lockAt.cue",
+          "cue": "ultra-pure hydrogen",
+          "label": "items[3].lockAt.cue",
+          "scene_time_s": 18.36,
+          "absolute_s": 228.2
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "ultra-pure hydrogen",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.36,
+          "absolute_s": 228.2
+        },
+        {
+          "param": "items[4].lockAt.cue",
+          "cue": "used to clean",
+          "label": "items[4].lockAt.cue",
+          "scene_time_s": 21.22,
+          "absolute_s": 231.06
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Korea is home",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 23.49,
+          "absolute_s": 233.32
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Korea is home",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 23.79,
+          "absolute_s": 233.62
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Korea is home",
+          "label": "items[6].at.cue",
+          "scene_time_s": 23.79,
+          "absolute_s": 233.62
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Korea is home",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 23.79,
+          "absolute_s": 233.62
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "Korea is home",
+          "label": "items[7].at.cue",
+          "scene_time_s": 24.09,
+          "absolute_s": 233.92
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "And Japan supplied",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 30.25,
+          "absolute_s": 240.08
+        },
+        {
+          "param": "cam[3].at.cue",
+          "cue": "And Japan supplied",
+          "label": "cam[3].at.cue",
+          "scene_time_s": 30.55,
+          "absolute_s": 240.38
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "And Japan supplied",
+          "label": "items[8].at.cue",
+          "scene_time_s": 30.55,
+          "absolute_s": 240.38
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "And Japan supplied",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 30.55,
+          "absolute_s": 240.38
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "ihs_2019",
+        "oled_2019",
+        "aj_2019"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_scramble",
+      "segment": "m2_scramble",
+      "type": "engine_cartoon",
+      "start_s": 247.8,
+      "end_s": 273.03,
+      "duration_s": 25.23,
+      "visual_objective": "",
+      "narration": "Korea scrambled. Samsung stepped up testing of resists and hydrogen fluoride from other suppliers. A Korean chemical maker, Soulbrain, raced to match the purity of the Japanese gas. Shipments from Japan now needed case-by-case permission. For the first time, the chip industry saw a supply of chemicals turned into a lever.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Samsung stepped up",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.74,
+          "absolute_s": 250.54
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Samsung stepped up",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.74,
+          "absolute_s": 250.54
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Samsung stepped up",
+          "label": "items[2].at.cue",
+          "scene_time_s": 2.74,
+          "absolute_s": 250.54
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Samsung stepped up",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.74,
+          "absolute_s": 250.54
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "from other suppliers",
+          "label": "items[3].at.cue",
+          "scene_time_s": 5.79,
+          "absolute_s": 253.59
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "from other suppliers",
+          "label": "items[4].at.cue",
+          "scene_time_s": 6.09,
+          "absolute_s": 253.9
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "from other suppliers",
+          "label": "items[5].at.cue",
+          "scene_time_s": 6.39,
+          "absolute_s": 254.19
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Soulbrain",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 9.23,
+          "absolute_s": 257.03
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Soulbrain",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.53,
+          "absolute_s": 257.33
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Soulbrain",
+          "label": "items[6].at.cue",
+          "scene_time_s": 9.53,
+          "absolute_s": 257.33
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Soulbrain",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 9.53,
+          "absolute_s": 257.33
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "case-by-case",
+          "label": "items[7].at.cue",
+          "scene_time_s": 16.92,
+          "absolute_s": 264.72
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "For the first time",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 19.1,
+          "absolute_s": 266.9
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "For the first time",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 19.4,
+          "absolute_s": 267.2
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "For the first time",
+          "label": "items[8].at.cue",
+          "scene_time_s": 19.4,
+          "absolute_s": 267.2
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "For the first time",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 19.4,
+          "absolute_s": 267.2
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "aj_2019"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "p15_after",
+      "segment": "m2_after",
+      "type": "engine_draw",
+      "start_s": 273.03,
+      "end_s": 296.27,
+      "duration_s": 23.23,
+      "visual_objective": "",
+      "narration": "Did Korea break free? Partly. According to Korean industry reports, it now makes more of the ordinary materials at home. But for the most advanced chips, the pattern repeats. The finer the circuits, the more Korea depends on Japanese materials again. Every new generation of chips moves the finish line.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Did Korea break free",
+          "label": "draw_start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 273.38
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Did Korea break free",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 273.38
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "it now makes more of the ordinary",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 6.13,
+          "absolute_s": 279.16
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "makes more of the ordinary",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.51,
+          "absolute_s": 279.54
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "But for the most advanced",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 10.09,
+          "absolute_s": 283.12
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the more Korea depends",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 15.56,
+          "absolute_s": 288.6
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "moves the finish line",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 21.41,
+          "absolute_s": 294.45
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "dt_japan"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 296.27,
+      "end_s": 303.77,
+      "duration_s": 7.5,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "A chemical can be restricted. A gas can simply disappear.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "A chemical can",
+          "label": "A chemical can be restricted",
+          "scene_time_s": 0.35,
+          "absolute_s": 296.62
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "A gas can",
+          "label": "A gas can simply disappear",
+          "scene_time_s": 3.86,
+          "absolute_s": 300.13
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 303.77,
+      "end_s": 309.17,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_q3",
+      "segment": "m3_question",
+      "type": "engine_cartoon",
+      "start_s": 309.17,
+      "end_s": 318.17,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Why would a war in Ukraine threaten chip factories in Taiwan?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Why would a war",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 309.52
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_neon",
+      "segment": "m3_neon",
+      "type": "engine_cartoon",
+      "start_s": 318.17,
+      "end_s": 344.47,
+      "duration_s": 26.3,
+      "visual_objective": "",
+      "narration": "Because of neon. Chipmakers use ultra-pure neon gas inside the lasers of their lithography machines. And in early twenty twenty-two, two Ukrainian companies, Ingas in Mariupol and Cryoin in Odessa, produced, by Reuters' calculation, forty-five to fifty-four percent of the world's neon for chipmaking. When Russia invaded, both shut down.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Chipmakers use",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.24,
+          "absolute_s": 320.41
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "ultra-pure neon",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.19,
+          "absolute_s": 321.36
+        },
+        {
+          "param": "items[0].laserAt.cue",
+          "cue": "inside the lasers",
+          "label": "items[0].laserAt.cue",
+          "scene_time_s": 4.38,
+          "absolute_s": 322.55
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "And in early",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 8.15,
+          "absolute_s": 326.32
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And in early",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.45,
+          "absolute_s": 326.62
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Ingas in Mariupol",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.65,
+          "absolute_s": 330.82
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Cryoin in Odessa",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 332.47
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "by Reuters' calculation",
+          "label": "items[4].at.cue",
+          "scene_time_s": 16.62,
+          "absolute_s": 334.79
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "by Reuters' calculation",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.62,
+          "absolute_s": 334.79
+        },
+        {
+          "param": "shake[0].at.cue",
+          "cue": "When Russia invaded",
+          "label": "shake[0].at.cue",
+          "scene_time_s": 23.22,
+          "absolute_s": 341.39
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "both shut down",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 24.71,
+          "absolute_s": 342.88
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "both shut down",
+          "label": "items[5].at.cue",
+          "scene_time_s": 25.01,
+          "absolute_s": 343.18
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "both shut down",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 25.01,
+          "absolute_s": 343.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reg_neon",
+        "cnbc_neon"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_steel",
+      "segment": "m3_steel",
+      "type": "engine_cartoon",
+      "start_s": 344.47,
+      "end_s": 372.03,
+      "duration_s": 27.57,
+      "visual_objective": "",
+      "narration": "Why Ukraine? Because neon is a by-product. It is collected from steelmaking, and historically up to ninety percent of the neon for the chip industry came as a by-product of Russian steel plants, with companies in Ukraine turning it into the ultra-pure gas chipmakers need. The whole chip industry used about about five hundred and forty tons of it in twenty twenty-one.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "historically",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.79,
+          "absolute_s": 352.25
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "historically",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.79,
+          "absolute_s": 352.25
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "with companies in Ukraine",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.16,
+          "absolute_s": 359.62
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "with companies in Ukraine",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.66,
+          "absolute_s": 360.12
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "ultra-pure gas",
+          "label": "items[3].at.cue",
+          "scene_time_s": 18.77,
+          "absolute_s": 363.23
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The whole chip industry",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 21.29,
+          "absolute_s": 365.76
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "The whole chip industry",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 21.59,
+          "absolute_s": 366.06
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "The whole chip industry",
+          "label": "items[4].at.cue",
+          "scene_time_s": 21.59,
+          "absolute_s": 366.06
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The whole chip industry",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 21.59,
+          "absolute_s": 366.06
+        },
+        {
+          "param": "items[4].steps[1][0].cue",
+          "cue": "The whole chip industry",
+          "label": "items[4].steps[1][0].cue",
+          "scene_time_s": 23.59,
+          "absolute_s": 368.06
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cnbc_neon"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_stocks",
+      "segment": "m3_stocks",
+      "type": "engine_cartoon",
+      "start_s": 372.03,
+      "end_s": 398.23,
+      "duration_s": 26.2,
+      "visual_objective": "",
+      "narration": "The big chipmakers survived. They had learned from an earlier scare in twenty fourteen, when Russia annexed Crimea, and kept safety stocks. But replacing the lost supply was slow. Building new neon purification lines elsewhere could take nine months to two years. Neon showed that a chokepoint does not need a government to switch it off. A war is enough.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "They had learned",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.15,
+          "absolute_s": 375.18
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "kept safety stocks",
+          "label": "items[0].at.cue",
+          "scene_time_s": 8.85,
+          "absolute_s": 380.88
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "kept safety stocks",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.05,
+          "absolute_s": 381.08
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "kept safety stocks",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.25,
+          "absolute_s": 381.28
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "kept safety stocks",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.45,
+          "absolute_s": 381.48
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "But replacing",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 10.51,
+          "absolute_s": 382.54
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But replacing",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.81,
+          "absolute_s": 382.84
+        },
+        {
+          "param": "items[0].level[1][0].cue",
+          "cue": "But replacing",
+          "label": "items[0].level[1][0].cue",
+          "scene_time_s": 10.81,
+          "absolute_s": 382.84
+        },
+        {
+          "param": "items[1].level[1][0].cue",
+          "cue": "But replacing",
+          "label": "items[1].level[1][0].cue",
+          "scene_time_s": 10.81,
+          "absolute_s": 382.84
+        },
+        {
+          "param": "items[2].level[1][0].cue",
+          "cue": "But replacing",
+          "label": "items[2].level[1][0].cue",
+          "scene_time_s": 10.81,
+          "absolute_s": 382.84
+        },
+        {
+          "param": "items[3].level[1][0].cue",
+          "cue": "But replacing",
+          "label": "items[3].level[1][0].cue",
+          "scene_time_s": 10.81,
+          "absolute_s": 382.84
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Building new neon",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.66,
+          "absolute_s": 385.69
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Building new neon",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 13.66,
+          "absolute_s": 385.69
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "could take",
+          "label": "items[5].at.cue",
+          "scene_time_s": 17.03,
+          "absolute_s": 389.07
+        },
+        {
+          "param": "items[0].level[2][0].cue",
+          "cue": "But replacing",
+          "label": "items[0].level[2][0].cue",
+          "scene_time_s": 18.81,
+          "absolute_s": 390.84
+        },
+        {
+          "param": "items[1].level[2][0].cue",
+          "cue": "But replacing",
+          "label": "items[1].level[2][0].cue",
+          "scene_time_s": 18.81,
+          "absolute_s": 390.84
+        },
+        {
+          "param": "items[2].level[2][0].cue",
+          "cue": "But replacing",
+          "label": "items[2].level[2][0].cue",
+          "scene_time_s": 18.81,
+          "absolute_s": 390.84
+        },
+        {
+          "param": "items[3].level[2][0].cue",
+          "cue": "But replacing",
+          "label": "items[3].level[2][0].cue",
+          "scene_time_s": 18.81,
+          "absolute_s": 390.84
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Neon showed",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 19.22,
+          "absolute_s": 391.25
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "Neon showed",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 19.52,
+          "absolute_s": 391.55
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "A war is enough",
+          "label": "items[6].at.cue",
+          "scene_time_s": 24.26,
+          "absolute_s": 396.29
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "reg_neon",
+        "cnbc_neon"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_now",
+      "segment": "m3_now",
+      "type": "engine_cartoon",
+      "start_s": 398.23,
+      "end_s": 420.8,
+      "duration_s": 22.57,
+      "visual_objective": "",
+      "narration": "In fact, after the scare of twenty fourteen, the industry had already started to spread its bets. By one consultant's estimate at Bain, only about two-fifths of the neon used for chips still came from Russia and Ukraine by the time of the invasion. The lesson had been learned once. It had to be learned again.",
+      "keyframes": [
+        {
+          "param": "toneShift.at.cue",
+          "cue": "In fact",
+          "label": "toneShift.at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 398.58
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "By one",
+          "label": "items[0].at.cue",
+          "scene_time_s": 7.68,
+          "absolute_s": 405.91
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "By one",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 7.68,
+          "absolute_s": 405.91
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "only about two-fifths",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.41,
+          "absolute_s": 408.64
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The lesson had been",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 18.11,
+          "absolute_s": 416.34
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The lesson had been",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.41,
+          "absolute_s": 416.64
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The lesson had been",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 18.41,
+          "absolute_s": 416.64
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cnbc_neon"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 420.8,
+      "end_s": 427.07,
+      "duration_s": 6.27,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "And then came the metal, controlled by the country that wanted it controlled.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "And then came",
+          "label": "And then came the metal",
+          "scene_time_s": 0.35,
+          "absolute_s": 421.15
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "controlled by the country",
+          "label": "controlled by the country that wanted it controlled",
+          "scene_time_s": 2.14,
+          "absolute_s": 422.94
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 427.07,
+      "end_s": 432.47,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_q4",
+      "segment": "m4_question",
+      "type": "engine_cartoon",
+      "start_s": 432.47,
+      "end_s": 441.47,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "What happens when one country produces almost all of something?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "What happens",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 432.82
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_gallium",
+      "segment": "m4_gallium",
+      "type": "engine_cartoon",
+      "start_s": 441.47,
+      "end_s": 464.87,
+      "duration_s": 23.4,
+      "visual_objective": "",
+      "narration": "Meet gallium, a soft silver metal used in special chips for defense systems, telecom equipment and LEDs. In the United States, chips use about four in five of all the gallium consumed. And according to the US Geological Survey, China produced ninety-nine percent of the world's raw gallium in twenty twenty-four.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "telecom equipment",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.77,
+          "absolute_s": 447.24
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "LEDs",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 448.98
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "chips use",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.27,
+          "absolute_s": 451.74
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "chips use",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.27,
+          "absolute_s": 451.74
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "And according to",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 14.98,
+          "absolute_s": 456.45
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And according to",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.28,
+          "absolute_s": 456.75
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "And according to",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 15.28,
+          "absolute_s": 456.75
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "And according to",
+          "label": "items[4].at.cue",
+          "scene_time_s": 15.58,
+          "absolute_s": 457.05
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "produced",
+          "label": "items[5].at.cue",
+          "scene_time_s": 18.57,
+          "absolute_s": 460.04
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "usgs_ga"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_controls",
+      "segment": "m4_controls",
+      "type": "engine_cartoon",
+      "start_s": 464.87,
+      "end_s": 490.6,
+      "duration_s": 25.73,
+      "visual_objective": "",
+      "narration": "In August twenty twenty-three, China began requiring licences for every gallium export. Prices jumped. Raw gallium in China went from about two hundred and forty dollars a kilogram in mid twenty twenty-three to four hundred and twenty dollars by October twenty twenty-four. Then, in December twenty twenty-four, China banned gallium exports to the United States altogether.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "requiring licences",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.17,
+          "absolute_s": 468.04
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "requiring licences",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.17,
+          "absolute_s": 468.04
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "for every gallium",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 4.49,
+          "absolute_s": 469.35
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Prices jumped",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 6.49,
+          "absolute_s": 471.36
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Prices jumped",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 6.79,
+          "absolute_s": 471.66
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Prices jumped",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.79,
+          "absolute_s": 471.66
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Prices jumped",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 6.79,
+          "absolute_s": 471.66
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "went from about",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.59,
+          "absolute_s": 474.46
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "by October",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 15.33,
+          "absolute_s": 480.19
+        },
+        {
+          "param": "items[3].steps[2][0].cue",
+          "cue": "by October",
+          "label": "items[3].steps[2][0].cue",
+          "scene_time_s": 17.33,
+          "absolute_s": 482.19
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Then, in December",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.6,
+          "absolute_s": 483.47
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Then, in December",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 18.6,
+          "absolute_s": 483.47
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Then, in December",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 483.77
+        },
+        {
+          "param": "items[0].pages[1][0].cue",
+          "cue": "Then, in December",
+          "label": "items[0].pages[1][0].cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 483.77
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Then, in December",
+          "label": "items[5].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 483.77
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "Then, in December",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 18.9,
+          "absolute_s": 483.77
+        },
+        {
+          "param": "items[4].lockAt.cue",
+          "cue": "banned gallium exports",
+          "label": "items[4].lockAt.cue",
+          "scene_time_s": 21.75,
+          "absolute_s": 486.61
+        },
+        {
+          "param": "items[5].closeAt.cue",
+          "cue": "altogether",
+          "label": "items[5].closeAt.cue",
+          "scene_time_s": 24.43,
+          "absolute_s": 489.29
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "usgs_ga"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_pause",
+      "segment": "m4_pause",
+      "type": "engine_cartoon",
+      "start_s": 490.6,
+      "end_s": 516.0,
+      "duration_s": 25.4,
+      "visual_objective": "",
+      "narration": "A year later, after talks between the American and Chinese presidents, China suspended that ban. But it only paused it. Exporters still need a licence from Beijing for every sale, and the pause is set to expire on November twenty-seventh, twenty twenty-six. In other words, the tap is open, but the hand is still on it.",
+      "keyframes": [
+        {
+          "param": "items[0].openAt.cue",
+          "cue": "suspended that ban",
+          "label": "items[0].openAt.cue",
+          "scene_time_s": 5.94,
+          "absolute_s": 496.54
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "suspended that ban",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 5.94,
+          "absolute_s": 496.54
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "But it only paused",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 498.11
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "But it only paused",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 7.81,
+          "absolute_s": 498.41
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "set to expire",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.36,
+          "absolute_s": 505.96
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "set to expire",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.36,
+          "absolute_s": 505.96
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "In other words",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 20.3,
+          "absolute_s": 510.9
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In other words",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 20.6,
+          "absolute_s": 511.2
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "In other words",
+          "label": "items[4].at.cue",
+          "scene_time_s": 20.6,
+          "absolute_s": 511.2
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "In other words",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 20.6,
+          "absolute_s": 511.2
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "evertiq_ga"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "p29_kinds",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 516.0,
+      "end_s": 541.93,
+      "duration_s": 25.93,
+      "visual_objective": "",
+      "narration": "Let me draw three kinds of chokepoints. The first is skill: Japan makes resist that others cannot yet copy. The second is accident: neon ended up in Ukraine because that is where the steel was. The third is policy: China produces almost all the raw gallium and decides who gets it. Each one is fixed in a different way, and none of them quickly.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "The first is skill",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.67,
+          "absolute_s": 519.67
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "The first is skill",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.67,
+          "absolute_s": 519.67
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Japan makes resist",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.83,
+          "absolute_s": 520.84
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "The second is accident",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.9,
+          "absolute_s": 524.9
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "neon ended up",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 10.83,
+          "absolute_s": 526.83
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "The third is policy",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 15.15,
+          "absolute_s": 531.15
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "China produces",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 16.74,
+          "absolute_s": 532.74
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Each one is fixed",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 21.73,
+          "absolute_s": 537.73
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "none of them quickly",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 24.59,
+          "absolute_s": 540.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "dt_japan",
+        "reg_neon",
+        "usgs_ga"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 541.93,
+      "end_s": 545.83,
+      "duration_s": 3.9,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So what are governments doing about it?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "So what are",
+          "label": "So what are governments",
+          "scene_time_s": 0.35,
+          "absolute_s": 542.28
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "doing about it",
+          "label": "doing about it?",
+          "scene_time_s": 2.17,
+          "absolute_s": 544.11
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 545.83,
+      "end_s": 551.23,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_q5",
+      "segment": "m5_question",
+      "type": "engine_cartoon",
+      "start_s": 551.23,
+      "end_s": 560.23,
+      "duration_s": 9.0,
+      "visual_objective": "",
+      "narration": "Can a country protect its chemicals like a strategic asset?",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Can a country",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 551.58
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_jsr",
+      "segment": "m5_jsr",
+      "type": "engine_cartoon",
+      "start_s": 560.23,
+      "end_s": 595.77,
+      "duration_s": 35.53,
+      "visual_objective": "",
+      "narration": "Japan answered that question with a purchase. In twenty twenty-four, a government-backed fund, the Japan Investment Corporation, bought JSR, one of the three big resist makers, in a deal worth about about six point four billion dollars. JSR left the stock market. A private chemical company became, in effect, a national asset. JSR had already bought an American start-up, Inpria, for five hundred and fourteen million dollars, to own the next generation of EUV resist.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "bought JSR",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 570.36
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "bought JSR",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.13,
+          "absolute_s": 570.36
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "JSR left the stock market",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.6,
+          "absolute_s": 577.83
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "in effect",
+          "label": "items[3].at.cue",
+          "scene_time_s": 22.36,
+          "absolute_s": 582.59
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "JSR had already bought",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 24.57,
+          "absolute_s": 584.8
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "JSR had already bought",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 24.87,
+          "absolute_s": 585.1
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "JSR had already bought",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 24.87,
+          "absolute_s": 585.1
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Inpria",
+          "label": "items[4].at.cue",
+          "scene_time_s": 28.34,
+          "absolute_s": 588.57
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Inpria",
+          "label": "items[5].at.cue",
+          "scene_time_s": 28.34,
+          "absolute_s": 588.57
+        },
+        {
+          "param": "items[5].steps[1][0].cue",
+          "cue": "Inpria",
+          "label": "items[5].steps[1][0].cue",
+          "scene_time_s": 29.84,
+          "absolute_s": 590.07
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "thw_jsr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_mor",
+      "segment": "m5_mor",
+      "type": "engine_cartoon",
+      "start_s": 595.77,
+      "end_s": 622.47,
+      "duration_s": 26.7,
+      "visual_objective": "",
+      "narration": "That next generation is called metal oxide resist. Instead of plastic-like molecules, it uses tin oxide, which, according to Inpria, absorbs extreme ultraviolet light about roughly five times more efficiently. JSR is now ramping the world's first large-scale factory for it, in South Korea. Japan is not only defending today's recipe. It is buying tomorrow's.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "it uses tin oxide",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.63,
+          "absolute_s": 602.4
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "absorbs extreme",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.07,
+          "absolute_s": 605.83
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "absorbs extreme",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 10.07,
+          "absolute_s": 605.83
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "JSR is now ramping",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 15.34,
+          "absolute_s": 611.11
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "JSR is now ramping",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.64,
+          "absolute_s": 611.41
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "JSR is now ramping",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.64,
+          "absolute_s": 611.41
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "JSR is now ramping",
+          "label": "items[2].until.cue",
+          "scene_time_s": 16.64,
+          "absolute_s": 612.41
+        },
+        {
+          "param": "items[3].progress[1][0].cue",
+          "cue": "JSR is now ramping",
+          "label": "items[3].progress[1][0].cue",
+          "scene_time_s": 19.64,
+          "absolute_s": 615.41
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Japan is not only",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 21.56,
+          "absolute_s": 617.33
+        },
+        {
+          "param": "items[3].glowAt.cue",
+          "cue": "buying tomorrow's",
+          "label": "items[3].glowAt.cue",
+          "scene_time_s": 25.18,
+          "absolute_s": 620.94
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "thw_jsr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_taiwan",
+      "segment": "m5_taiwan",
+      "type": "engine_cartoon",
+      "start_s": 622.47,
+      "end_s": 653.27,
+      "duration_s": 30.8,
+      "visual_objective": "",
+      "narration": "And the materials are moving closer to the factories. At the request of TSMC, JSR is building its first photoresist plant in Taiwan, expected to open as early as twenty twenty-eight. Its rivals Tokyo Ohka Kogyo and Shin-Etsu already produce on the island. The reason is speed. Every new chip generation needs hundreds of test cycles, and shipping samples across the sea for each one costs weeks.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "At the request",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 4.32,
+          "absolute_s": 626.79
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "JSR is building",
+          "label": "items[0].at.cue",
+          "scene_time_s": 5.99,
+          "absolute_s": 628.46
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "as early as",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.06,
+          "absolute_s": 633.53
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Its rivals",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 13.4,
+          "absolute_s": 635.87
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Its rivals",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.7,
+          "absolute_s": 636.17
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Its rivals",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 13.7,
+          "absolute_s": 636.17
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Tokyo Ohka Kogyo",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.43,
+          "absolute_s": 636.9
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Shin-Etsu",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.14,
+          "absolute_s": 638.61
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "The reason is speed",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 19.47,
+          "absolute_s": 641.94
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "The reason is speed",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 19.77,
+          "absolute_s": 642.24
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "The reason is speed",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 19.77,
+          "absolute_s": 642.24
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "shipping samples",
+          "label": "items[4].at.cue",
+          "scene_time_s": 26.79,
+          "absolute_s": 649.26
+        },
+        {
+          "param": "items[4].x[1][0].cue",
+          "cue": "shipping samples",
+          "label": "items[4].x[1][0].cue",
+          "scene_time_s": 30.79,
+          "absolute_s": 653.26
+        },
+        {
+          "param": "items[4].y[1][0].cue",
+          "cue": "shipping samples",
+          "label": "items[4].y[1][0].cue",
+          "scene_time_s": 30.79,
+          "absolute_s": 653.26
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "thw_jsr"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_lesson",
+      "segment": "m5_lesson",
+      "type": "engine_cartoon",
+      "start_s": 653.27,
+      "end_s": 680.43,
+      "duration_s": 27.17,
+      "visual_objective": "",
+      "narration": "But notice what that means. Taiwan gets the resist plants, and Japan keeps the recipes. Korea makes more of its own materials, but still buys the most advanced ones. America looks at restarting gallium production, but China still produces almost all of it. Every country is building a little more of the chain. Nobody owns all of it.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Taiwan gets",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.95,
+          "absolute_s": 656.22
+        },
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "Taiwan gets",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 2.95,
+          "absolute_s": 656.22
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Japan keeps",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.45,
+          "absolute_s": 658.71
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "Korea makes more",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 7.93,
+          "absolute_s": 661.2
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Korea makes more",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.23,
+          "absolute_s": 661.5
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "Korea makes more",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 8.23,
+          "absolute_s": 661.5
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "America looks",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.56,
+          "absolute_s": 667.83
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "China still",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.13,
+          "absolute_s": 671.4
+        },
+        {
+          "param": "callouts[1].until.cue",
+          "cue": "Every country is building",
+          "label": "callouts[1].until.cue",
+          "scene_time_s": 21.17,
+          "absolute_s": 674.44
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Every country is building",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 21.47,
+          "absolute_s": 674.74
+        },
+        {
+          "param": "callouts[2].at.cue",
+          "cue": "Every country is building",
+          "label": "callouts[2].at.cue",
+          "scene_time_s": 21.47,
+          "absolute_s": 674.74
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Nobody owns",
+          "label": "items[5].at.cue",
+          "scene_time_s": 24.95,
+          "absolute_s": 678.22
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "thw_jsr",
+        "dt_japan",
+        "usgs_ga"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 680.43,
+      "end_s": 707.07,
+      "duration_s": 26.63,
+      "visual_objective": "",
+      "narration": "So who decides who makes chips? The machine makers, yes. But also the companies that make a liquid most people have never heard of, the steel plants that happen to collect a gas, and the country that produces a silver metal. The most powerful thing in a chip factory is not always the biggest. Sometimes it is the bottle on the shelf that nobody else knows how to fill.",
+      "keyframes": [
+        {
+          "param": "callouts[0].at.cue",
+          "cue": "The machine makers",
+          "label": "callouts[0].at.cue",
+          "scene_time_s": 3.32,
+          "absolute_s": 683.75
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "a liquid most people",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.61,
+          "absolute_s": 688.04
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "collect a gas",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.8,
+          "absolute_s": 692.24
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "a silver metal",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.67,
+          "absolute_s": 695.1
+        },
+        {
+          "param": "callouts[0].until.cue",
+          "cue": "The most powerful thing",
+          "label": "callouts[0].until.cue",
+          "scene_time_s": 16.51,
+          "absolute_s": 696.94
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The most powerful thing",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.81,
+          "absolute_s": 697.24
+        },
+        {
+          "param": "callouts[1].at.cue",
+          "cue": "The most powerful thing",
+          "label": "callouts[1].at.cue",
+          "scene_time_s": 16.81,
+          "absolute_s": 697.24
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "dt_japan",
+        "cnbc_neon",
+        "usgs_ga"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 707.07,
+      "end_s": 718.8,
+      "duration_s": 11.73,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 8.52,
+          "absolute_s": 715.59
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}
