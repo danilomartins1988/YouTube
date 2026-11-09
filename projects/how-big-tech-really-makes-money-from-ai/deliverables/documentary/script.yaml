@@ -39,9 +39,18 @@ segments:
   chapter: The spending spree
   narration: ''
   claims: []
+- id: m1_size
+  chapter: The spending spree
+  narration: First, remember how big these companies are. In their latest full years, Amazon sold {{size}} of goods and services.
+    Alphabet took in {{size.goog_spoken}}. Microsoft, {{size.msft_spoken}}. Meta, {{size.meta_spoken}}. That is the scale
+    of money they are betting with.
+  claims:
+  - size
+  analysis: true
+  source_note: Annual revenue from each company; last sentence is commentary.
 - id: m1_quarter
   chapter: The spending spree
-  narration: First, how big is the bet? Look at the latest quarter. Amazon spent about {{capex_q.amzn_spoken}} on property
+  narration: Now look at how much they are betting. In the latest quarter, Amazon spent about {{capex_q.amzn_spoken}} on property
     and equipment. Alphabet, about {{capex_q.goog_spoken}}. Microsoft, about {{capex_q.msft_spoken}}. Meta, about {{capex_q.meta_spoken}}.
     For Amazon, Alphabet and Microsoft, that is roughly double what each spent a year earlier. Together, that is more than
     two billion dollars every single day, by our calculation.
@@ -165,9 +174,9 @@ segments:
   source_note: Meta's figure from its call; the last sentence is commentary.
 - id: m3_assist
   chapter: 'Way two: sell better ads'
-  narration: It is the same story at Google. Alphabet's advertising business as a whole brought in about eighty-two billion
-    dollars in the quarter. And Meta says advertisers who used its AI business assistant got almost five percent more conversions,
-    at the same cost. Every small improvement in targeting is multiplied by billions of ads.
+  narration: At Alphabet, the advertising business as a whole brought in about eighty-two billion dollars in the quarter.
+    And Meta says advertisers who used its AI business assistant got almost five percent more conversions, at the same cost.
+    Every small improvement in targeting is multiplied by billions of ads.
   claims:
   - goog
   - meta
@@ -195,7 +204,7 @@ segments:
   chapter: 'Way three: lock in the future'
   narration: When a customer signs a long cloud contract, the money arrives over years. Companies report this as a backlog.
     Microsoft says its commercial backlog grew seventy-three percent, to {{msft.rpo_spoken}}. Google Cloud reports a backlog
-    of {{goog.backlog_spoken}}.
+    of {{goog.backlog_spoken}}. Alphabet expects just over half of that to turn into revenue within the next two years.
   claims:
   - msft
   - goog

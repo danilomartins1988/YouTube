@@ -374,6 +374,32 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={14} fill={night ? '#5B5575' : '#B5A27A'} />
     </g>;
   },
+  /** A clean studio backdrop for full-screen data moments: soft vertical gradient, faint grid, a horizon line.
+   *  `night` = dark navy studio. Lets big charts and typography carry the scene (a different "language"). */
+  studio: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    const id = 'stg' + Math.round(z.x0);
+    return <g>
+      <defs><linearGradient id={id} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={night ? '#0E1726' : '#F6F3EC'} /><stop offset="1" stopColor={night ? '#1B2A40' : '#E4DDCF'} /></linearGradient></defs>
+      <rect x={z.x0} y={-2000} width={w} height={3600} fill={`url(#${id})`} />
+      {Array.from({length: Math.ceil(w / 120) + 1}, (_, k) => <rect key={'gv' + k} x={z.x0 + k * 120} y={-600} width={2} height={f + 600} fill={night ? '#FFFFFF' : OL} opacity={0.05} />)}
+      {Array.from({length: 14}, (_, k) => <rect key={'gh' + k} x={z.x0} y={f - k * 120} width={w} height={2} fill={night ? '#FFFFFF' : OL} opacity={0.05} />)}
+      <rect x={z.x0} y={f} width={w} height={8} fill={night ? '#4FC3F7' : OL} opacity={0.5} />
+    </g>;
+  },
+  /** An investigator's evidence wall: cork board in a wooden frame on a dim wall, a desk lamp glow. Pair with `pinboard`. */
+  corkboard: (t, z, f) => {
+    const w = z.x1 - z.x0;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#2E2A26" />
+      <rect x={z.x0} y={f - 900} width={w} height={860} fill="#B7864F" />
+      {Array.from({length: Math.ceil(w / 18) * 4}, (_, k) => <circle key={'ck' + k} cx={z.x0 + rnd(k) * w} cy={f - 900 + rnd(k + 7) * 860} r={1.5 + rnd(k + 3) * 2.5} fill={rnd(k + 9) > 0.5 ? '#9C6E3C' : '#CFA06A'} opacity={0.6} />)}
+      <rect x={z.x0} y={f - 920} width={w} height={26} fill="#5D4029" stroke={OL} strokeWidth={4} />
+      <rect x={z.x0} y={f - 52} width={w} height={26} fill="#5D4029" stroke={OL} strokeWidth={4} />
+      <rect x={z.x0} y={f - 26} width={w} height={700} fill="#3A2C22" />
+      <ellipse cx={z.x0 + w * 0.5} cy={f - 500} rx={w * 0.45} ry={520} fill="#FFE9B0" opacity={0.10 + 0.02 * Math.sin(t * 1.3)} />
+    </g>;
+  },
   /** Financial district at night: dark glass towers with lit windows, a distant skyline, wet street with reflections. */
   district: (t, z, f) => {
     const w = z.x1 - z.x0;
@@ -2406,6 +2432,96 @@ const barrel: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A full-screen bar chart (data "language"): `bars` [{label, value, color?, at?, display?}] grow at their own times with
+ *  rolling value labels; `max` scale; area x,y (top-left), w,h; `title`; `prefix`/`suffix`/`decimals` for values;
+ *  `highlight` index pulses. Horizontal baseline, no axes clutter. */
+const bigchart: ItemFn = (a, {t}, i) => {
+  const app = pop(t, a.at ?? 0, 0.5);
+  if (app <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const X = (a.x as number) ?? 260, Y = (a.y as number) ?? 180, W = a.w ?? 1400, H = a.h ?? 620, bars = a.bars || [], n = Math.max(1, bars.length);
+  const mx = a.max ?? Math.max(...bars.map((b: any) => b.value)), gap = W / n, bw = Math.min(220, gap * 0.62), dark = !!a.dark;
+  return <g key={'bc' + i} opacity={app}>
+    {a.title && <T x={X} y={Y - 30} s={40} c={dark ? '#FFFFFF' : OL} a="start">{a.title}</T>}
+    <rect x={X - 20} y={Y + H} width={W + 40} height={6} fill={dark ? '#FFFFFF' : OL} opacity={0.8} />
+    {bars.map((b: any, k: number) => {
+      const st = b.at ?? (a.at ?? 0) + 0.4 + k * 0.5, u = E.out(clamp((t - st) / 1.1)), v = b.value * u, h = (H - 40) * v / mx;
+      const cx = X + gap * (k + 0.5), c = col(b.color, ['#2F6FD1', '#E89A00', '#23995A', '#E53935', '#7E57C2'][k % 5]);
+      const hl = a.highlight === k ? 1 + 0.03 * Math.sin(t * 6) : 1;
+      const txt = b.display && u >= 1 ? b.display : (a.prefix || '') + v.toLocaleString('en-US', {minimumFractionDigits: a.decimals ?? 0, maximumFractionDigits: a.decimals ?? 0}) + (a.suffix || '');
+      return t < st ? null : <g key={k} transform={`translate(${cx} ${Y + H}) scale(${hl})`}>
+        <rect x={-bw / 2} y={-h} width={bw} height={h} rx={10} fill={c} stroke={OL} strokeWidth={5} />
+        <rect x={-bw / 2 + 10} y={-h + 10} width={bw * 0.18} height={Math.max(0, h - 20)} rx={6} fill="#FFFFFF" opacity={0.22} />
+        <T x={0} y={-h - 22} s={46} c={dark ? '#FFFFFF' : OL}>{txt}</T>
+        <T x={0} y={50} s={30} c={dark ? '#CFD8DC' : OL} w={800}>{b.label}</T>
+        {b.sub && <T x={0} y={84} s={22} c={dark ? '#90A4AE' : '#4D6680'} w={600}>{b.sub}</T>}
+      </g>;
+    })}
+  </g>;
+};
+
+/** Evidence cards pinned to a cork board with red string between them. `cards` [{x, y, text, sub?, at?, color?, rot?}],
+ *  `links` [[i, j, at]] draw a sagging string from card i to card j; `stampAt`/`stamp` slam a stamp on the last card. */
+const pinboard: ItemFn = (a, {t}, i) => {
+  const cards = a.cards || [];
+  const pos = (c: any) => [kf(c.x, t, 960), kf(c.y, t, 400)];
+  return <g key={'pb' + i}>
+    {(a.links || []).map(([p, q, at]: [number, number, number], k: number) => {
+      if (t < at || !cards[p] || !cards[q]) return null;
+      const u = E.out(clamp((t - at) / 0.8)), [x1, y1] = pos(cards[p]), [x2, y2] = pos(cards[q]);
+      const ex = x1 + (x2 - x1) * u, ey = y1 + (y2 - y1) * u, mx = (x1 + ex) / 2, my = (y1 + ey) / 2 + 60 * u;
+      return <path key={'l' + k} d={`M ${x1} ${y1 - 70} Q ${mx} ${my - 70} ${ex} ${ey - 70}`} fill="none" stroke="#D32F2F" strokeWidth={5} />;
+    })}
+    {cards.map((c: any, k: number) => {
+      const sc = pop(t, c.at ?? 0, 0.45);
+      if (sc <= 0) return null;
+      const [x, y] = pos(c), w = c.w ?? 300, h = c.h ?? 190;
+      return <g key={k} transform={`translate(${x} ${y}) rotate(${c.rot ?? ((k % 3) - 1) * 3}) scale(${sc})`}>
+        <rect x={-w / 2 + 8} y={-h / 2 + 10} width={w} height={h} fill="#000" opacity={0.3} />
+        <rect x={-w / 2} y={-h / 2} width={w} height={h} fill={c.color ? col(c.color) : '#FFF8E7'} stroke={OL} strokeWidth={3} />
+        <T x={0} y={c.sub ? -4 : 14} s={c.size ?? 40} c={OL}>{c.text}</T>
+        {c.sub && <T x={0} y={44} s={22} c="#5D4037" w={700}>{c.sub}</T>}
+        <circle cx={0} cy={-h / 2 + 4} r={11} fill="#D32F2F" stroke={OL} strokeWidth={3} />
+      </g>;
+    })}
+    {a.stamp && a.stampAt !== undefined && t >= a.stampAt && cards.length > 0 && (() => {
+      const [x, y] = pos(cards[cards.length - 1]), u = E.outBack(win(t, a.stampAt, 0.35));
+      return <g transform={`translate(${x + 120} ${y - 150}) rotate(-12) scale(${1.6 - 0.6 * u})`} opacity={u}>
+        <rect x={-150} y={-40} width={300} height={80} rx={8} fill="none" stroke={K.red} strokeWidth={8} />
+        <T x={0} y={16} s={44} c={K.red}>{a.stamp}</T></g>;
+    })()}
+  </g>;
+};
+
+/** An isometric data-center campus that builds itself: `n` halls appear one after another (`at` + k*`step`), each an iso
+ *  box with blinking server lights and spinning roof fans; `label`; `glow` adds a power-line glow. */
+const isodc: ItemFn = (a, {t, f}, i) => {
+  const x0 = kf(a.x, t, 960), y0 = kf(a.y, t, f - 120), s = a.scale ?? 1, n = a.n ?? 6, step = a.step ?? 0.4, at = a.at ?? 0;
+  if (t < at) return null;
+  const cols = a.cols ?? 3, W = 220, D = 120, H = 110;
+  const iso = (gx: number, gy: number): [number, number] => [(gx - gy) * W * 0.62, (gx + gy) * D * 0.62];
+  const halls = Array.from({length: n}, (_, k) => ({gx: k % cols, gy: Math.floor(k / cols), k})).sort((p, q) => (p.gx + p.gy) - (q.gx + q.gy));
+  return <g key={'iso' + i} transform={`translate(${x0} ${y0}) scale(${s})`}>
+    {halls.map(({gx, gy, k}) => {
+      const st = at + k * step, u = E.outBack(clamp((t - st) / 0.6));
+      if (u <= 0) return null;
+      const [cx, cy] = iso(gx, gy), h = H * u;
+      const top = `M ${cx} ${cy - h} L ${cx + W / 2} ${cy - h + D / 2} L ${cx} ${cy - h + D} L ${cx - W / 2} ${cy - h + D / 2} Z`;
+      return <g key={k}>
+        <path d={`M ${cx - W / 2} ${cy + D / 2 - h} L ${cx} ${cy + D - h} L ${cx} ${cy + D} L ${cx - W / 2} ${cy + D / 2} Z`} fill="#9FB3C8" stroke={OL} strokeWidth={3} />
+        <path d={`M ${cx} ${cy + D - h} L ${cx + W / 2} ${cy + D / 2 - h} L ${cx + W / 2} ${cy + D / 2} L ${cx} ${cy + D} Z`} fill="#7D93AB" stroke={OL} strokeWidth={3} />
+        <path d={top} fill="#E3EBF3" stroke={OL} strokeWidth={3} />
+        {u > 0.9 && [0, 1, 2].map((q) => <g key={q} transform={`translate(${cx - 40 + q * 40} ${cy - h + D / 2})`}>
+          <ellipse rx={15} ry={8} fill="#546E7A" stroke={OL} strokeWidth={2} />
+          <path d={`M ${-11 * Math.cos(t * 9 + q)} ${-6 * Math.sin(t * 9 + q)} L ${11 * Math.cos(t * 9 + q)} ${6 * Math.sin(t * 9 + q)}`} stroke="#CFD8DC" strokeWidth={3} /></g>)}
+        {u > 0.9 && Array.from({length: 5}, (_, q) => <circle key={'l' + q} cx={cx - W / 2 + 24 + q * 20} cy={cy + D / 2 - h * 0.5 + q * 10} r={3.5}
+          fill={Math.sin(t * 7 + q * 1.7 + k) > 0 ? '#7DF29A' : '#2E7D32'} />)}
+      </g>;
+    })}
+    {a.glow && <path d={`M ${-W * 2} ${D * 2.2} L ${W * 2} ${-D * 0.4}`} stroke="#FFC93C" strokeWidth={6} strokeDasharray="18 14" strokeDashoffset={-t * 60} opacity={0.8} />}
+    {a.label && <T x={0} y={D * 2.6} s={34} c={a.textc || OL}>{a.label}</T>}
+  </g>;
+};
+
 /** A trading screen for one contract. `price` is a keyframed value (e.g. [[0, 29000], [cue, 48075], ...]); the line is
  *  drawn from `at` up to now by sampling it; `max` sets the y scale. `bandsOffAt` turns the "PRICE BANDS" lamp red (OFF),
  *  `haltAt` stamps SUSPENDED, `cancelAt` greys the part of the line after `cancelFrom` (seconds) and stamps CANCELLED. */
@@ -2436,7 +2552,7 @@ const tradescreen: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

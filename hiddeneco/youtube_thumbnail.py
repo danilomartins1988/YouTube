@@ -68,6 +68,32 @@ def layout(lines: list[str], side: str, accent_line: int | None, colors: dict, s
     return out
 
 
+def layout_bignum(lines: list[str], colors: dict) -> list[dict]:
+    """Archetype 'bignum': line 0 is a giant number filling ~60% of the width; the other line is a short kicker below."""
+    big = lines[0]
+    size = min(360, 1180 / (max(1, len(big)) * GLYPH))
+    y0 = H / 2 + size * 0.30 - (60 if len(lines) > 1 else 0)
+    out = [{"text": big, "x": 90, "y": round(y0, 1), "size": round(size, 1), "width": round(min(1180, len(big) * size * GLYPH), 1),
+            "anchor": "start", "color": colors["accent"]}]
+    if len(lines) > 1:
+        k = lines[1]
+        ks = min(120, 1100 / (max(1, len(k)) * GLYPH))
+        out.append({"text": k, "x": 96, "y": round(y0 + ks * 1.15, 1), "size": round(ks, 1), "width": round(min(1100, len(k) * ks * GLYPH), 1),
+                    "anchor": "start", "color": colors["ink"]})
+    return out
+
+
+def layout_split(lines: list[str], colors: dict) -> list[dict]:
+    """Archetype 'split': before / after. Line 0 labels the left half, line 1 the right half (top of each half)."""
+    out = []
+    for i, l in enumerate(lines[:2]):
+        size = min(150, 760 / (max(1, len(l)) * GLYPH))
+        cx = W * 0.25 if i == 0 else W * 0.75
+        out.append({"text": l, "x": cx, "y": round(130 + size * 0.82, 1), "size": round(size, 1), "width": round(min(760, len(l) * size * GLYPH), 1),
+                    "anchor": "middle", "color": colors["ink"] if i == 0 else colors["accent"]})
+    return out
+
+
 def text_boxes(t: list[dict]) -> list[tuple[float, float, float, float]]:
     boxes = []
     for x in t:
@@ -262,9 +288,19 @@ def load_brief(slug: str) -> dict | None:
 def concept_props(b: dict, c: dict, hide_text: bool = False) -> tuple[dict, list[dict]]:
     sc = dict(c["scene"])
     pal = sc["palette"]
-    texts = layout(c["text"], c.get("text_side", "left"), c.get("accent_line"), {"ink": pal.get("ink", "#F4EFE4"), "accent": pal["accent"],
-                   "box_ink": c.get("box_ink", "#05070B")}, c.get("text_style", "plain")) if c.get("text") else []
-    props = {**sc, "text": texts, "hideText": hide_text}
+    cols = {"ink": pal.get("ink", "#F4EFE4"), "accent": pal["accent"], "box_ink": c.get("box_ink", "#05070B")}
+    arch = c.get("archetype", "classic")
+    if not c.get("text"):
+        texts = []
+    elif arch == "bignum":
+        texts = layout_bignum(c["text"], cols)
+    elif arch == "split":
+        texts = layout_split(c["text"], cols)
+    else:
+        texts = layout(c["text"], c.get("text_side", "left"), c.get("accent_line"), cols, c.get("text_style", "plain"))
+    props = {**sc, "text": texts, "hideText": hide_text, "archetype": arch}
+    if arch != "classic":
+        props.setdefault("brand", "none")      # new archetypes drop the corner tag (noise at 160 px)
     return props, texts
 
 

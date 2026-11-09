@@ -1,0 +1,90 @@
+# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). New archetypes: A = bignum, B = presenter.
+title: How Big Tech Really Makes Money From AI
+docs_dir: docs/episodes/28-bigtech-ai
+video: output/bigtech_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: 'Four companies spent ~$200bn in one quarter on AI data centers: how does
+    it come back?'
+  surprising_fact: Latest-quarter capex ≈ $203bn (computed from company filings);
+    2026 plans ≈ $720–740bn (computed)
+  subject: a data-center campus
+  tone: thriller
+  metaphor: a bet that must pay back
+concepts:
+- id: A
+  angle: giant number (archetype bignum)
+  archetype: bignum
+  text:
+  - $200BN
+  - IN 3 MONTHS
+  accent_line: 0
+  claim_basis: 'capex_q: ≈ $202.9bn latest-quarter capex of the four (computed from
+    filings)'
+  scene:
+    palette:
+      sky0: '#05080E'
+      sky1: '#0E1E33'
+      haze: '#4FC3F7'
+      key: '#DDF2FF'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: campus
+      x: 1500
+      y: 560
+      s: 1.0
+    support: []
+    particles:
+      n: 80
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#BFE6FF'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: presenter reaction (archetype presenter)
+  archetype: presenter
+  text:
+  - THE $700BN+
+  - AI BET
+  accent_line: 1
+  text_side: left
+  claim_basis: 'capex_year: 2026 plans ≈ $720–740bn (computed from company guidance)'
+  scene:
+    palette:
+      sky0: '#120708'
+      sky1: '#3A1418'
+      haze: '#FF8A65'
+      key: '#FFE0D0'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: campus
+      x: 1250
+      y: 470
+      s: 0.72
+    support: []
+    presenter:
+      x: 1790
+      y: 1080
+      s: 1.2
+      face: -1
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFD9CF'
+    vignette: 0.55
+    brand: none

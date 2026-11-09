@@ -1,5 +1,6 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
+import {Character} from '../presenter/Presenter';
 
 /**
  * CinematicThumb: a YouTube thumbnail designed as a documentary cover, NOT a frame of the film and NOT the cartoon
@@ -21,7 +22,13 @@ export type CinematicProps = {
   particles?: {n: number; color?: string; region?: [number, number, number, number]; size?: number};
   text: ThumbText[];
   hideText?: boolean;
-  brand?: 'tl' | 'tr' | 'bl';
+  brand?: 'tl' | 'tr' | 'bl' | 'none';
+  /** layout archetype: classic | bignum | split | presenter (see docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md) */
+  archetype?: string;
+  /** split archetype: subject drawn on the right half (the left uses `subject`) */
+  after?: {kind: string; x: number; y: number; s: number; [k: string]: any};
+  /** presenter archetype: the channel's own character, surprised, pointing at the subject */
+  presenter?: {x: number; y: number; s: number; face?: 1 | -1};
   grain?: number; vignette?: number;
 };
 
@@ -414,6 +421,24 @@ const SUBJECTS: Record<string, SubjectFn> = {
       <rect x={-80} y={-38} width={160} height={76} rx={8} fill="#3E6B48" stroke="#9FD3A8" strokeWidth={4} /><circle r={20} fill="none" stroke="#9FD3A8" strokeWidth={4} />
       <text x={0} y={12} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill="#9FD3A8">$</text></g>)}
   </g>,
+  /** An isometric data-center campus at night: rows of halls with glowing server windows and roof fans, power lines. */
+  campus: (o, P) => {
+    const Wd = 230, D = 130, Hh = 120;
+    const iso = (gx: number, gy: number) => [(gx - gy) * Wd * 0.62, (gx + gy) * D * 0.62];
+    const cells = [] as {gx: number; gy: number}[];
+    for (let gy = 0; gy < 3; gy++) for (let gx = 0; gx < 3; gx++) cells.push({gx, gy});
+    return <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+      <ellipse cx={0} cy={D * 1.6} rx={620} ry={260} fill={P.haze} opacity={0.18} filter="url(#soft)" />
+      {cells.map(({gx, gy}, k) => { const [cx, cy] = iso(gx, gy);
+        return <g key={k}>
+          <path d={`M ${cx - Wd / 2} ${cy + D / 2 - Hh} L ${cx} ${cy + D - Hh} L ${cx} ${cy + D} L ${cx - Wd / 2} ${cy + D / 2} Z`} fill="#55708F" stroke="#0A0E16" strokeWidth={4} />
+          <path d={`M ${cx} ${cy + D - Hh} L ${cx + Wd / 2} ${cy + D / 2 - Hh} L ${cx + Wd / 2} ${cy + D / 2} L ${cx} ${cy + D} Z`} fill="#33445A" stroke="#0A0E16" strokeWidth={4} />
+          <path d={`M ${cx} ${cy - Hh} L ${cx + Wd / 2} ${cy - Hh + D / 2} L ${cx} ${cy - Hh + D} L ${cx - Wd / 2} ${cy - Hh + D / 2} Z`} fill="#C9D6E6" stroke="#0A0E16" strokeWidth={4} />
+          {Array.from({length: 6}, (_, q) => <rect key={q} x={cx - Wd / 2 + 16 + q * 16} y={cy + D / 2 - Hh * 0.6 + q * 8} width={10} height={26} fill={P.accent} opacity={0.5 + 0.5 * rnd(k * 7 + q)} filter="url(#glow)" />)}
+          {[0, 1].map((q) => <ellipse key={'f' + q} cx={cx - 30 + q * 60} cy={cy - Hh + D / 2} rx={22} ry={12} fill="#1C2533" stroke="#8FA3BC" strokeWidth={3} />)}
+        </g>; })}
+    </g>;
+  },
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}
@@ -453,16 +478,29 @@ export const CinematicThumb: React.FC<CinematicProps> = (p) => {
         {(p.beams || []).map((b, i) => <Beam key={i} b={b} i={i} color={P.key} />)}
         <ellipse cx={p.subject.x} cy={p.subject.y} rx={700 * p.subject.s} ry={520 * p.subject.s} fill="url(#rim)" />
         {(p.support || []).map((s, i) => { const F = SUBJECTS[s.kind]; return F ? <g key={i} opacity={s.opacity ?? 1}>{F(s, P)}</g> : null; })}
+        {p.archetype === 'split' && <g>
+          <rect x={0} y={0} width={W / 2} height={H} fill="#0A2A4A" opacity={0.35} />
+          <rect x={W / 2} y={0} width={W / 2} height={H} fill="#5A0A0A" opacity={0.35} />
+          <rect x={W / 2 - 5} y={0} width={10} height={H} fill="#FFFFFF" opacity={0.85} />
+          <g transform={`translate(${W / 2} ${H / 2 + 60})`}><circle r={86} fill={P.accent} stroke="#05070B" strokeWidth={8} />
+            <path d="M -38 -34 L 22 0 L -38 34 M -10 -34 L 50 0 L -10 34" fill="none" stroke="#05070B" strokeWidth={16} strokeLinejoin="round" strokeLinecap="round" /></g>
+        </g>}
         {S ? S(p.subject, P) : null}
+        {p.archetype === 'split' && p.after && SUBJECTS[p.after.kind] ? SUBJECTS[p.after.kind](p.after, P) : null}
+        {p.presenter && <g transform={`translate(${p.presenter.x} ${p.presenter.y}) scale(${p.presenter.s})`}>
+          <Character pose={{x: 0, floor: 0, facing: p.presenter.face ?? -1, walk: 0, moving: 0, hop: 0, drawHand: null,
+            pointHand: [(p.subject.x - p.presenter.x) / p.presenter.s, (p.subject.y - p.presenter.y) / p.presenter.s], talking: 0.9, blink: 0,
+            surprise: 1, scale: 1, holdingMarker: false, smile: 0}} />
+        </g>}
         {p.particles && <Particles p={p.particles} color={P.key} />}
         <rect width={W} height={H} fill="url(#vig)" />
         <rect width={W} height={H} filter="url(#grain)" opacity={p.grain ?? 0.07} style={{mixBlendMode: 'overlay'}} />
         {!p.hideText && p.text.map((t, i) => <TextLine key={i} t={t} />)}
         {/* channel mark: identical on every thumbnail, small (identity without competing) */}
-        <g transform={`translate(${bx} ${by})`} opacity={0.92}>
+        {brand !== 'none' && <g transform={`translate(${bx} ${by})`} opacity={0.92}>
           <rect width={8} height={44} fill="#D4AF5A" />
           <text x={22} y={33} fontFamily="Inter, sans-serif" fontWeight={800} fontSize={26} letterSpacing={5} fill="#F4F1EA">THE HIDDEN ECONOMICS</text>
-        </g>
+        </g>}
       </svg>
     </AbsoluteFill>
   );

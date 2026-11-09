@@ -1,0 +1,49 @@
+# Visual direction for how-big-tech-really-makes-money-from-ai (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# First episode on the diversity rules: a different visual language per part (typography + isometric, data charts,
+# data-center campus, cartoon internet, evidence board, dark studio). Strategy tone overall, reflective close.
+primary_tone: strategy
+secondary_tones:
+- bright
+- thriller
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Two hundred billion dollars
+  tone: thriller
+- chapter: The spending spree
+  tone: strategy
+- chapter: 'Way one: rent the machines'
+  tone: bright
+- chapter: 'Way two: sell better ads'
+  tone: bright
+- chapter: 'Way three: lock in the future'
+  tone: strategy
+- chapter: The bet
+  tone: thriller
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m5_risk
+  cue: Right now
+  to: thriller
+  why: the spending outruns sales
+thumbnail:
+  tone: thriller
+  headline: []
+  idea: a giant $200B number over an isometric data-center campus
+requirements:
+- One visual language per part; at most one bottom-centre callout in three scenes
+- No company logos or brand colours (names in text only), no real UI, no likeness of real people

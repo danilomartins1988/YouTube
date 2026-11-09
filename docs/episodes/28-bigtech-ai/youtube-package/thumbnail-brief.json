@@ -1,0 +1,337 @@
+{
+  "title": "How Big Tech Really Makes Money From AI",
+  "docs_dir": "docs/episodes/28-bigtech-ai",
+  "video": "output/bigtech_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "analysis": {
+    "mystery": "Four companies spent ~$200bn in one quarter on AI data centers: how does it come back?",
+    "surprising_fact": "Latest-quarter capex \u2248 $203bn (computed from company filings); 2026 plans \u2248 $720\u2013740bn (computed)",
+    "subject": "a data-center campus",
+    "tone": "thriller",
+    "metaphor": "a bet that must pay back"
+  },
+  "slug": "how-big-tech-really-makes-money-from-ai",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (archetype bignum)",
+      "archetype": "bignum",
+      "text": [
+        "$200BN",
+        "IN 3 MONTHS"
+      ],
+      "accent_line": 0,
+      "claim_basis": "capex_q: \u2248 $202.9bn latest-quarter capex of the four (computed from filings)",
+      "scene": {
+        "palette": {
+          "sky0": "#05080E",
+          "sky1": "#0E1E33",
+          "haze": "#4FC3F7",
+          "key": "#DDF2FF",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "campus",
+          "x": 1500,
+          "y": 560,
+          "s": 1.0
+        },
+        "support": [],
+        "particles": {
+          "n": 80,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#BFE6FF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "$200BN",
+          "x": 90,
+          "y": 572.2,
+          "size": 307.3,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "IN 3 MONTHS",
+          "x": 96,
+          "y": 710.2,
+          "size": 120,
+          "width": 844.8,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.59 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 333, 1270, 591), (96, 617, 941, 717)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.120",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 54",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-three-banks-nearly-destroyed-an-entire-country (distance 0.41)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "capex_q: \u2248 $202.9bn latest-quarter capex of the four (computed from filings)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.601,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-three-banks-nearly-destroyed-an-entire-country"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "presenter reaction (archetype presenter)",
+      "archetype": "presenter",
+      "text": [
+        "THE $700BN+",
+        "AI BET"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "capex_year: 2026 plans \u2248 $720\u2013740bn (computed from company guidance)",
+      "scene": {
+        "palette": {
+          "sky0": "#120708",
+          "sky1": "#3A1418",
+          "haze": "#FF8A65",
+          "key": "#FFE0D0",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "campus",
+          "x": 1250,
+          "y": 470,
+          "s": 0.72
+        },
+        "support": [],
+        "presenter": {
+          "x": 1790,
+          "y": 1080,
+          "s": 1.2,
+          "face": -1
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD9CF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "THE $700BN+",
+          "x": 90,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "AI BET",
+          "x": 90,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 436.4,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.56 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 433, 890, 529), (90, 551, 526, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 7.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.068",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 48",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-oil-was-worth-less-than-nothing (distance 0.28)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "capex_year: 2026 plans \u2248 $720\u2013740bn (computed from company guidance)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.746,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-oil-was-worth-less-than-nothing"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-09T21:18:52Z",
+  "master": "output/how-big-tech-really-makes-money-from-ai/thumbnails/master_B.png"
+}

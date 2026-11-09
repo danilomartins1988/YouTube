@@ -54,6 +54,20 @@ sources:
     published: "2026-02-05"
     accessed: "2026-11-09"
     credit: "Amazon"
+  - id: goog_fy25
+    title: "Alphabet Q4 and fiscal year 2025 results (Exhibit 99.1)"
+    publisher: Alphabet / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm
+    published: "2026-02-04"
+    accessed: "2026-11-09"
+    credit: "Alphabet"
+  - id: meta_fy25
+    title: "Meta Q4 and full year 2025 results (Exhibit 99.1)"
+    publisher: Meta / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm
+    published: "2026-01-28"
+    accessed: "2026-11-09"
+    credit: "Meta"
   - id: meta_q3
     title: "Meta Q3 2026 results press release"
     publisher: Meta
@@ -97,7 +111,7 @@ claims:
     verification_note: Read on 2026-11-09.
 
   - id: goog
-    text: "Alphabet Q3 2026: Google Cloud revenues $30,709M (prior year $15,157M), 'grew 103%, powered by huge demand for our AI infrastructure and AI solutions'; Google Cloud operating income $11,121M (prior year $3,594M); Google Search & other $63,350M; YouTube ads $11,207M. Call: 'Google Cloud's backlog was $561 billion'; 'The Gemini App is now at one billion users'; 'processing nearly 32 billion tokens per minute… more than four times what we processed a year ago'; total Google advertising $82,012M."
+    text: "Alphabet Q3 2026: Google Cloud revenues $30,709M (prior year $15,157M), 'grew 103%, powered by huge demand for our AI infrastructure and AI solutions'; Google Cloud operating income $11,121M (prior year $3,594M); Google Search & other $63,350M; YouTube ads $11,207M. Call: 'Google Cloud's backlog was $561 billion'; 'The Gemini App is now at one billion users'; 'just over 55% of the total backlog as revenues over the next 24 months'; 'processing nearly 32 billion tokens per minute… more than four times what we processed a year ago'; total Google advertising $82,012M."
     spoken: one hundred and three percent
     display: "Google Cloud +103%"
     fields: {cloud_spoken: thirty point seven billion dollars, search_spoken: sixty-three point four billion dollars, backlog_spoken: five hundred and sixty-one billion dollars}
@@ -130,3 +144,12 @@ claims:
     source_ids: [msft_q1, goog_call]
     status: source_located
     verification_note: Sum computed by us; Microsoft's figure covers all commercial contracts, not only AI.
+
+  - id: size
+    text: "Latest full-year revenue: Amazon net sales $716,924M (FY2025); Alphabet revenues $402,836M (FY2025); Microsoft 'Revenue was $331.8 billion and increased 18%' (FY26, year to 30 June 2026); Meta revenue $200,966M (FY2025)."
+    spoken: about seven hundred and seventeen billion dollars
+    display: "Annual revenue"
+    fields: {goog_spoken: about four hundred and three billion dollars, msft_spoken: about three hundred and thirty-two billion dollars, meta_spoken: about two hundred and one billion dollars}
+    source_ids: [amzn_fy25, goog_fy25, msft_fy26, meta_fy25]
+    status: source_located
+    verification_note: Read on 2026-11-09. Microsoft's fiscal year ends 30 June.
