@@ -244,16 +244,19 @@ stage("s28_imf", "m4_imf", {
               it("sign", x=1500, y=260, text="STABILIZE THE CURRENCY", sub="and the public finances", at=C("In return"), color="#BBDEFB", size=30)],
     "callouts": [co("Nov 2008: IMF loan ≈ {{imf.display}}", 960, 960, C("In November"), "gold", screen=True, size=40, sub="IMF")]},
     sources=["imf_pr"])
-stage("s29_icesave", "m4_icesave", {
-    "zones": [Z("city")], "worldW": 2800,
-    "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("The governments negotiated"), "x": 1700, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
-    "items": [*crowd([600, 720, 840], "cheer", at=C("paid back their own savers"), scale=0.7),
-              it("stack", x=1200, h=[[0, 40], [{"cue": "Britain alone", "offset": 1.5}, 320]], at=C("Britain alone"), text="≈ $7.8BN", sub="UK payout (H.10, Oct 2008)"),
-              it("docs", x=1800, y=560, at=C("sent the bill to Iceland"), text="BILL: ICESAVE", scale=0.6),
-              it("contract", x=2200, y=430, at=C("The governments negotiated"), text="REPAYMENT DEAL", sub="with interest", scale=0.6)],
-    "callouts": [co("UK + Netherlands repay savers, bill Iceland", 960, 960, C("Britain and the Netherlands"), "white", screen=True, size=38, sub="The Irish Times", until=C("Britain alone", -0.3)),
-                 co("UK payout ≈ $7.8bn", 960, 960, C("Britain alone"), "gold", screen=True, size=40, sub="HM Treasury; H.10 rate")]},
-    sources=["irish_2010", "ukgov_2016", "fred_gbp"])
+add("p29_bill", "m4_icesave", "engine_draw", {
+    "title": "Who pays the savers?", "board": BOARD, "draw_start": C("Britain and the Netherlands paid"), "speed": 1400, "push": 0.003,
+    "enter": {"from": -260, "to": 430, "at": 0.2, "dur": 1.3},
+    "strokes": [
+        {"d": rect(560, 360, 260, 120), "color": "accent2", "width": 6, "kind": "box", "start": C("Britain and the Netherlands paid"), "label": lbl("UK + NL GOVERNMENTS", 690, 428, 20, "accent2")},
+        {"d": rect(1200, 360, 240, 120), "color": "accent3", "width": 6, "kind": "box", "start": C("paid back their own savers"), "label": lbl("SAVERS REPAID", 1320, 428, 22, "accent3")},
+        {"d": arrow((830, 420), (1190, 420), 0.1), "color": "ink", "width": 5, "start": C("paid back their own savers", 0.5), "label": lbl("UK alone ≈ $7.8bn", 1010, 380, 20, "ink")},
+        {"d": rect(880, 640, 260, 120), "color": "risk", "width": 6, "fill": "risk", "fillOpacity": 0.15, "kind": "box", "start": C("sent the bill to Iceland"), "label": lbl("ICELAND'S TAXPAYERS?", 1010, 708, 20, "risk")},
+        {"d": arrow((690, 490), (900, 640), 0.15), "color": "risk", "width": 5, "start": C("sent the bill to Iceland", 0.4), "label": lbl("the bill", 720, 600, 22, "risk")},
+        {"d": "M 1160 700 L 1300 700", "color": "accent", "width": 5, "start": C("with interest"), "label": lbl("+ interest", 1320, 690, 22, "accent", "start")},
+    ],
+    "actions": [{"kind": "point", "at": C("The governments negotiated", 0.2), "dur": 1.4, "target": [1010, 700]}],
+    "scale": 0.86, "floor": 1040}, sources=["irish_2010", "ukgov_2016", "fred_gbp"])
 stage("s30_vote", "m4_vote", {
     "zones": [Z("parliament")], "worldW": 2600,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("A new, softer deal"), "x": 1700, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
