@@ -1,0 +1,1750 @@
+{
+  "slug": "why-americans-pay-so-much-for-healthcare",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_open",
+      "segment": "h_open",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 10.63,
+      "duration_s": 10.63,
+      "visual_objective": "",
+      "narration": "Twenty-eight thousand dollars. That is what health insurance for the average American family with a job-based plan now costs in a single year.",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "kff_ehbs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_twist",
+      "segment": "h_twist",
+      "type": "engine_cartoon",
+      "start_s": 10.63,
+      "end_s": 26.87,
+      "duration_s": 16.23,
+      "visual_objective": "",
+      "narration": "And here is the strange part. Americans see a doctor about half as often as people in other rich countries. They spend fewer days in hospital. Yet they pay far more for health care, and they live shorter lives.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "about half as often",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.24,
+          "absolute_s": 14.88
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "They spend fewer days",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.02,
+          "absolute_s": 18.65
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Yet they pay far more",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.54,
+          "absolute_s": 22.17
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Yet they pay far more",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.54,
+          "absolute_s": 22.17
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "they live shorter lives",
+          "label": "items[4].at.cue",
+          "scene_time_s": 14.16,
+          "absolute_s": 24.79
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_prices",
+        "pkff_life"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s03_question",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 26.87,
+      "end_s": 33.0,
+      "duration_s": 6.13,
+      "visual_objective": "",
+      "narration": "So if Americans are not getting more care, where is all that money going?",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s04_promise",
+      "segment": "h_promise",
+      "type": "engine_cartoon",
+      "start_s": 33.0,
+      "end_s": 45.6,
+      "duration_s": 12.6,
+      "visual_objective": "",
+      "narration": "By the end of this video, you will know the three prices that make American health care the most expensive of any rich country, and why they are so hard to bring down.",
+      "keyframes": [
+        {
+          "param": "items[3].at.cue",
+          "cue": "and why they are so hard",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.7,
+          "absolute_s": 42.7
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s05_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 45.6,
+      "end_s": 51.0,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s06_total",
+      "segment": "m1_total",
+      "type": "engine_cartoon",
+      "start_s": 51.0,
+      "end_s": 74.53,
+      "duration_s": 23.53,
+      "visual_objective": "",
+      "narration": "Start with the whole bill. In twenty twenty-four, the United States spent five point three trillion dollars on health care. That is fifteen thousand four hundred and seventy-four dollars for every man, woman and child, and eighteen percent of everything the American economy produced. And it grew more than seven percent in a single year.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "on health care",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 7.64,
+          "absolute_s": 58.64
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "That is",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.35,
+          "absolute_s": 60.35
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "That is",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.35,
+          "absolute_s": 60.35
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "for every man",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 13.04,
+          "absolute_s": 64.04
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "of everything",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.69,
+          "absolute_s": 66.69
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "economy produced",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 17.68,
+          "absolute_s": 68.68
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And it grew",
+          "label": "items[3].at.cue",
+          "scene_time_s": 19.89,
+          "absolute_s": 70.89
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cms"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s07_parts",
+      "segment": "m1_parts",
+      "type": "engine_cartoon",
+      "start_s": 74.53,
+      "end_s": 100.53,
+      "duration_s": 26.0,
+      "visual_objective": "",
+      "narration": "The biggest piece is hospitals, at about one point six trillion dollars a year. Prescription drugs at the pharmacy add another four hundred and sixty-seven billion dollars. Doctors, nursing homes, insurance and everything else make up the rest. Hospital spending alone grew almost nine percent in a single year, and drug spending almost eight.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "The biggest piece",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 74.88
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Prescription drugs",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 6.94,
+          "absolute_s": 81.47
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cms"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s08_peers",
+      "segment": "m1_peers",
+      "type": "engine_cartoon",
+      "start_s": 100.53,
+      "end_s": 127.1,
+      "duration_s": 26.57,
+      "visual_objective": "",
+      "narration": "Now compare that with other rich countries. On the international basis used by the O E C D, the US spent fourteen thousand seven hundred and seventy-five dollars per person in twenty twenty-four. The average of comparable rich countries was seven thousand eight hundred and sixty dollars. Even Switzerland, the next most expensive, spent almost five thousand dollars less per person.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "the US spent",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 7.88,
+          "absolute_s": 108.41
+        },
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "The average of comparable",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 14.62,
+          "absolute_s": 115.15
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Even Switzerland",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 20.11,
+          "absolute_s": 120.64
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Even Switzerland",
+          "label": "items[1].at.cue",
+          "scene_time_s": 20.11,
+          "absolute_s": 120.64
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_spend"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "p09_peers",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 127.1,
+      "end_s": 155.77,
+      "duration_s": 28.67,
+      "visual_objective": "",
+      "narration": "Let me draw what that looks like. Here is the average rich country, spending about eight thousand dollars per person. Here is Switzerland, higher. And here is the United States, almost twice the average. Now look underneath at life expectancy. Seventy-nine years in America. Almost eighty-three on average in the other countries. The most expensive system, but not the longest lives.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is the average rich country",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.01,
+          "absolute_s": 130.11
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is the average rich country",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.01,
+          "absolute_s": 130.11
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "spending about eight thousand",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.12,
+          "absolute_s": 132.22
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Here is Switzerland",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.52,
+          "absolute_s": 135.62
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "And here is the United States",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 10.75,
+          "absolute_s": 137.85
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Now look underneath",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 15.1,
+          "absolute_s": 142.2
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "Seventy-nine years",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 18.4,
+          "absolute_s": 145.5
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Almost eighty-three",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 20.88,
+          "absolute_s": 147.98
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "but not the longest lives",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 26.68,
+          "absolute_s": 153.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_spend",
+        "pkff_life"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s10_life",
+      "segment": "m1_life",
+      "type": "engine_cartoon",
+      "start_s": 155.77,
+      "end_s": 172.67,
+      "duration_s": 16.9,
+      "visual_objective": "",
+      "narration": "American life expectancy did reach a record high of seventy-nine years in twenty twenty-four. But that is still about three point seven years below the average of comparable countries. More money has not bought more years.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "in twenty twenty-four",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 5.14,
+          "absolute_s": 160.91
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "But that is still",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.47,
+          "absolute_s": 163.24
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "More money",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.4,
+          "absolute_s": 170.17
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_life"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s11_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 172.67,
+      "end_s": 181.5,
+      "duration_s": 8.83,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So what is all that money buying? The answer surprises most people. It is not more care.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "So what is all that money",
+          "label": "What is the money buying?",
+          "scene_time_s": 0.35,
+          "absolute_s": 173.02
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "It is not more care",
+          "label": "Not more care.",
+          "scene_time_s": 6.41,
+          "absolute_s": 179.08
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 181.5,
+      "end_s": 186.5,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 186.5,
+      "end_s": 191.9,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_usage",
+      "segment": "m2_usage",
+      "type": "engine_cartoon",
+      "start_s": 191.9,
+      "end_s": 215.8,
+      "duration_s": 23.9,
+      "visual_objective": "",
+      "narration": "Americans actually use less health care than people in many rich countries. They have about half as many in-person doctor consultations per person. In other rich countries, hospitals discharge about fifty-seven percent more patients per person. And an average hospital stay lasts six and a half days in the US, against almost ten days elsewhere.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "They have",
+          "label": "items[0].at.cue",
+          "scene_time_s": 5.97,
+          "absolute_s": 197.87
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "They have",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.97,
+          "absolute_s": 197.87
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In other rich countries",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.53,
+          "absolute_s": 202.43
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "In other rich countries",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.53,
+          "absolute_s": 202.43
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "And an average hospital stay",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 16.86,
+          "absolute_s": 208.76
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And an average hospital stay",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.86,
+          "absolute_s": 208.76
+        },
+        {
+          "param": "items[3].pages[1][0].cue",
+          "cue": "against almost ten days",
+          "label": "items[3].pages[1][0].cue",
+          "scene_time_s": 21.3,
+          "absolute_s": 213.2
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_prices"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_finding",
+      "segment": "m2_finding",
+      "type": "engine_cartoon",
+      "start_s": 215.8,
+      "end_s": 232.13,
+      "duration_s": 16.33,
+      "visual_objective": "",
+      "narration": "Researchers have looked at this for years, and the conclusion keeps coming back the same. In the words of the Peterson-KFF Health System Tracker, it is higher prices, as opposed to higher use, that explain the high spending.",
+      "keyframes": [
+        {
+          "param": "items[0].cards[1].at.cue",
+          "cue": "the conclusion keeps",
+          "label": "items[0].cards[1].at.cue",
+          "scene_time_s": 3.18,
+          "absolute_s": 218.98
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In the words of",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 6.2,
+          "absolute_s": 222.0
+        },
+        {
+          "param": "items[0].cards[2].at.cue",
+          "cue": "In the words of",
+          "label": "items[0].cards[2].at.cue",
+          "scene_time_s": 6.2,
+          "absolute_s": 222.0
+        },
+        {
+          "param": "items[0].links[0][2].cue",
+          "cue": "In the words of",
+          "label": "items[0].links[0][2].cue",
+          "scene_time_s": 6.7,
+          "absolute_s": 222.5
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "that explain the high spending",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 14.0,
+          "absolute_s": 229.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_prices",
+        "jama"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_example",
+      "segment": "m2_example",
+      "type": "engine_cartoon",
+      "start_s": 232.13,
+      "end_s": 257.43,
+      "duration_s": 25.3,
+      "visual_objective": "",
+      "narration": "Take a heart bypass operation. Even in Medicare, the US government's own program, the average cost was forty-four thousand one hundred and forty-nine dollars. In public insurance schemes in comparable countries, it was about twenty-four thousand eight hundred and forty-seven dollars. For a procedure to open a blocked artery, the Medicare cost was almost three times the peer average.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "Take a heart bypass",
+          "label": "items[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 232.48
+        },
+        {
+          "param": "items[0].lines[0].at.cue",
+          "cue": "the average cost was",
+          "label": "items[0].lines[0].at.cue",
+          "scene_time_s": 6.31,
+          "absolute_s": 238.44
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "In public insurance schemes",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.33,
+          "absolute_s": 243.46
+        },
+        {
+          "param": "items[1].lines[0].at.cue",
+          "cue": "it was about",
+          "label": "items[1].lines[0].at.cue",
+          "scene_time_s": 14.35,
+          "absolute_s": 246.48
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "For a procedure",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.99,
+          "absolute_s": 251.12
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "For a procedure",
+          "label": "items[2].at.cue",
+          "scene_time_s": 18.99,
+          "absolute_s": 251.12
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_prices"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "p16_equation",
+      "segment": "m2_draw",
+      "type": "engine_draw",
+      "start_s": 257.43,
+      "end_s": 281.47,
+      "duration_s": 24.03,
+      "visual_objective": "",
+      "narration": "Let me draw the simplest equation in health economics. Spending equals the amount of care, times the price of each piece of care. In America, the amount is not unusually high. So the price has to be. And there are three prices that matter most. The hospital. The pharmacy. And the paperwork.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Spending equals",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.53,
+          "absolute_s": 261.96
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Spending equals",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.53,
+          "absolute_s": 261.96
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Spending equals",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 5.13,
+          "absolute_s": 262.56
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "the amount of care",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.71,
+          "absolute_s": 263.15
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "times the price",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 7.46,
+          "absolute_s": 264.89
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "times the price",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 7.76,
+          "absolute_s": 265.19
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "is not unusually high",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 12.7,
+          "absolute_s": 270.13
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "So the price has to be",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 14.54,
+          "absolute_s": 271.97
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "three prices that matter most",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 17.71,
+          "absolute_s": 275.14
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "And the paperwork",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 22.69,
+          "absolute_s": 280.12
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_prices"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 281.47,
+      "end_s": 285.73,
+      "duration_s": 4.27,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Start with the biggest one. The hospital.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Start with the biggest",
+          "label": "Price #1",
+          "scene_time_s": 0.35,
+          "absolute_s": 281.82
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "The hospital",
+          "label": "The hospital",
+          "scene_time_s": 2.92,
+          "absolute_s": 284.39
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 285.73,
+      "end_s": 291.13,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_two",
+      "segment": "m3_two",
+      "type": "engine_cartoon",
+      "start_s": 291.13,
+      "end_s": 311.57,
+      "duration_s": 20.43,
+      "visual_objective": "",
+      "narration": "An American hospital does not have one price. It has many. For older Americans on Medicare, the government sets what it will pay. For everyone with private insurance, the price is negotiated between the hospital and each insurer. And those prices are much higher.",
+      "keyframes": [
+        {
+          "param": "items[4].at.cue",
+          "cue": "It has many",
+          "label": "items[4].at.cue",
+          "scene_time_s": 4.44,
+          "absolute_s": 295.57
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "For older Americans",
+          "label": "items[0].at.cue",
+          "scene_time_s": 6.19,
+          "absolute_s": 297.32
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "For older Americans",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.19,
+          "absolute_s": 297.32
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "For everyone with private",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.91,
+          "absolute_s": 302.04
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "For everyone with private",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.91,
+          "absolute_s": 302.04
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rand_hosp"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_rand",
+      "segment": "m3_rand",
+      "type": "engine_cartoon",
+      "start_s": 311.57,
+      "end_s": 341.77,
+      "duration_s": 30.2,
+      "visual_objective": "",
+      "narration": "The RAND Corporation studied what employers and private insurers actually paid hospitals. In twenty twenty-two, they paid on average two hundred and fifty-four percent of what Medicare would have paid, for the same services, at the same hospitals. For outpatient services, it was two hundred and seventy-nine percent. In other words, the same hospital, for the same care, charged private plans about two and a half times what it accepted from Medicare.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "they paid on average",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 8.21,
+          "absolute_s": 319.77
+        },
+        {
+          "param": "items[0].bars[2].at.cue",
+          "cue": "For outpatient",
+          "label": "items[0].bars[2].at.cue",
+          "scene_time_s": 16.66,
+          "absolute_s": 328.23
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "In other words",
+          "label": "items[1].at.cue",
+          "scene_time_s": 20.96,
+          "absolute_s": 332.53
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rand_hosp"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_caveat",
+      "segment": "m3_caveat",
+      "type": "engine_cartoon",
+      "start_s": 341.77,
+      "end_s": 357.3,
+      "duration_s": 15.53,
+      "visual_objective": "",
+      "narration": "The study covers only part of the market, and the hospital industry disputes its method. So treat the exact number with care. The direction, though, matches the wider research. American prices are high.",
+      "keyframes": [
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "covers only part",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 0.94,
+          "absolute_s": 342.71
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "So treat the exact number",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.52,
+          "absolute_s": 348.29
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The direction, though",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.35,
+          "absolute_s": 351.12
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rand_hosp",
+        "pkff_prices"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_mri",
+      "segment": "m3_mri",
+      "type": "engine_cartoon",
+      "start_s": 357.3,
+      "end_s": 376.67,
+      "duration_s": 19.37,
+      "visual_objective": "",
+      "narration": "The same pattern shows up in scans. According to Peterson-KFF, an M R I paid for by a private health plan cost more than three times what Medicare paid for the same scan. Same machine, same picture, very different bill.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "cost more than three times",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.77,
+          "absolute_s": 367.07
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Same machine",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.04,
+          "absolute_s": 372.34
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_prices"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "p23_twopatients",
+      "segment": "m3_draw",
+      "type": "engine_draw",
+      "start_s": 376.67,
+      "end_s": 401.73,
+      "duration_s": 25.07,
+      "visual_objective": "",
+      "narration": "Let me draw one hospital and two patients. On the left, a patient on Medicare. The hospital is paid one hundred. On the right, a patient with private insurance, getting exactly the same care. The hospital is paid about two hundred and fifty. The difference does not disappear. It comes back as higher insurance premiums for everyone with a job-based plan.",
+      "keyframes": [
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Let me draw one hospital",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 1.35,
+          "absolute_s": 378.02
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "On the left",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.35,
+          "absolute_s": 381.02
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "On the left",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.35,
+          "absolute_s": 381.02
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "The hospital is paid one hundred",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 6.95,
+          "absolute_s": 383.62
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "On the right",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 9.09,
+          "absolute_s": 385.76
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "The hospital is paid about two hundred",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 390.98
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "It comes back",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 19.65,
+          "absolute_s": 396.32
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "It comes back",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 19.95,
+          "absolute_s": 396.62
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rand_hosp"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 401.73,
+      "end_s": 407.77,
+      "duration_s": 6.03,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "The second price is the one Americans see every time they pick up a prescription.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "The second price",
+          "label": "Price #2",
+          "scene_time_s": 0.35,
+          "absolute_s": 402.08
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "pick up a prescription",
+          "label": "The pharmacy",
+          "scene_time_s": 4.18,
+          "absolute_s": 405.92
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 407.77,
+      "end_s": 413.17,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_brand",
+      "segment": "m4_brand",
+      "type": "engine_cartoon",
+      "start_s": 413.17,
+      "end_s": 433.8,
+      "duration_s": 20.63,
+      "visual_objective": "",
+      "narration": "RAND also compared drug prices in America with thirty-three other rich countries. Across all drugs, US prices were two hundred and seventy-eight percent of prices elsewhere. For brand-name drugs, the ones still protected by patents, they were four hundred and twenty-two percent. More than four times as much.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "For brand-name drugs",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.01,
+          "absolute_s": 425.18
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "For brand-name drugs",
+          "label": "items[1].at.cue",
+          "scene_time_s": 12.01,
+          "absolute_s": 425.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rand_drugs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_generic",
+      "segment": "m4_generic",
+      "type": "engine_cartoon",
+      "start_s": 433.8,
+      "end_s": 450.57,
+      "duration_s": 16.77,
+      "visual_objective": "",
+      "narration": "But here is the twist. For cheap generic drugs, the copies made after patents expire, American prices were lower, about sixty-seven percent of prices abroad. The problem is not every pill. It is the newest, patented ones.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "The problem is not every pill",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.97,
+          "absolute_s": 445.77
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rand_drugs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_rebates",
+      "segment": "m4_rebates",
+      "type": "engine_cartoon",
+      "start_s": 450.57,
+      "end_s": 476.57,
+      "duration_s": 26.0,
+      "visual_objective": "",
+      "narration": "Those figures use list prices, before the confidential discounts that drug makers give insurers. Even after estimating those rebates, brand-name drugs in America still cost about three hundred and eight percent of prices elsewhere. And even the prices the US government recently negotiated for Medicare are, according to Peterson-KFF, two point eight times the average in comparable countries.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Even after estimating",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 7.04,
+          "absolute_s": 457.61
+        },
+        {
+          "param": "items[0].bars[2].at.cue",
+          "cue": "And even the prices",
+          "label": "items[0].bars[2].at.cue",
+          "scene_time_s": 15.5,
+          "absolute_s": 466.07
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rand_drugs",
+        "pkff_prices"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "p29_pills",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 476.57,
+      "end_s": 497.57,
+      "duration_s": 21.0,
+      "visual_objective": "",
+      "narration": "Let me draw the same pill in three places. Here is the price in other rich countries, set to one hundred. Here is the American generic, cheaper, at about sixty-seven. And here is the American brand-name price, over four hundred. Same chemistry. Very different price tags.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is the price in other rich countries",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.01,
+          "absolute_s": 480.58
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is the price in other rich countries",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.01,
+          "absolute_s": 480.58
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "set to one hundred",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.36,
+          "absolute_s": 482.92
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Here is the American generic",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.24,
+          "absolute_s": 484.81
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "the American brand-name price",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 13.35,
+          "absolute_s": 489.91
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "Very different price tags",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 18.93,
+          "absolute_s": 495.5
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rand_drugs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 497.57,
+      "end_s": 505.07,
+      "duration_s": 7.5,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "The third price is the hardest to see, because it is not attached to any treatment at all.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "The third price",
+          "label": "Price #3",
+          "scene_time_s": 0.35,
+          "absolute_s": 497.92
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "the hardest to see",
+          "label": "The hardest to see",
+          "scene_time_s": 1.42,
+          "absolute_s": 498.98
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 505.07,
+      "end_s": 510.47,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_admin",
+      "segment": "m5_admin",
+      "type": "engine_cartoon",
+      "start_s": 510.47,
+      "end_s": 540.4,
+      "duration_s": 29.93,
+      "visual_objective": "",
+      "narration": "Someone has to run all those insurance plans, process every claim, and argue over every bill. A major study in the Journal of the American Medical Association found that administration took about eight percent of US health spending, against one to three percent in other rich countries. That was for twenty sixteen. More recent figures put the cost of running insurance and public programs at about seven percent of national health spending.",
+      "keyframes": [
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "argue over every bill",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 5.37,
+          "absolute_s": 515.84
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A major study",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.85,
+          "absolute_s": 518.32
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "A major study",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.85,
+          "absolute_s": 518.32
+        },
+        {
+          "param": "items[1].bars[0].at.cue",
+          "cue": "administration took about",
+          "label": "items[1].bars[0].at.cue",
+          "scene_time_s": 12.84,
+          "absolute_s": 523.31
+        },
+        {
+          "param": "items[1].bars[1].at.cue",
+          "cue": "against one to three",
+          "label": "items[1].bars[1].at.cue",
+          "scene_time_s": 16.36,
+          "absolute_s": 526.82
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "More recent figures",
+          "label": "items[2].at.cue",
+          "scene_time_s": 21.77,
+          "absolute_s": 532.24
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "jama",
+        "pkff_time"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_premium",
+      "segment": "m5_premium",
+      "type": "engine_cartoon",
+      "start_s": 540.4,
+      "end_s": 571.0,
+      "duration_s": 30.6,
+      "visual_objective": "",
+      "narration": "All three prices end up in the same place. The insurance premium. In twenty twenty-six, a family plan through an employer cost on average twenty-eight thousand three hundred and three dollars a year, up five percent in a single year. Workers themselves paid about seven thousand four hundred and seventy-one dollars of that, nine percent more than the year before. The employer paid the rest, as part of the cost of employing each worker.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "In twenty twenty-six",
+          "label": "items[0].at.cue",
+          "scene_time_s": 6.03,
+          "absolute_s": 546.43
+        },
+        {
+          "param": "items[0].total.at.cue",
+          "cue": "cost on average",
+          "label": "items[0].total.at.cue",
+          "scene_time_s": 9.76,
+          "absolute_s": 550.15
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "up five percent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.18,
+          "absolute_s": 554.58
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Workers themselves",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.23,
+          "absolute_s": 557.63
+        },
+        {
+          "param": "items[0].lines[0].at.cue",
+          "cue": "Workers themselves",
+          "label": "items[0].lines[0].at.cue",
+          "scene_time_s": 17.23,
+          "absolute_s": 557.63
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "nine percent more",
+          "label": "items[2].at.cue",
+          "scene_time_s": 22.84,
+          "absolute_s": 563.25
+        },
+        {
+          "param": "items[0].lines[1].at.cue",
+          "cue": "The employer paid",
+          "label": "items[0].lines[1].at.cue",
+          "scene_time_s": 25.79,
+          "absolute_s": 566.19
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "kff_ehbs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "p34_flow",
+      "segment": "m5_draw",
+      "type": "engine_draw",
+      "start_s": 571.0,
+      "end_s": 595.5,
+      "duration_s": 24.5,
+      "visual_objective": "",
+      "narration": "Let me draw where a family's premium goes. Into the insurer. Out to hospitals, at prices far above Medicare's. Out to the pharmacy, at brand-name prices four times higher than abroad. And a slice that stays behind to pay for the paperwork itself. Three prices, one bill.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Into the insurer",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.94,
+          "absolute_s": 575.94
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Into the insurer",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.94,
+          "absolute_s": 575.94
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Out to hospitals",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.5,
+          "absolute_s": 577.5
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Out to hospitals",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 6.8,
+          "absolute_s": 577.8
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Out to the pharmacy",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.04,
+          "absolute_s": 582.04
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Out to the pharmacy",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 11.34,
+          "absolute_s": 582.34
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "a slice that stays behind",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 16.89,
+          "absolute_s": 587.89
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "a slice that stays behind",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 17.19,
+          "absolute_s": 588.19
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "Three prices, one bill",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 21.88,
+          "absolute_s": 592.88
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "kff_ehbs",
+        "rand_hosp",
+        "rand_drugs",
+        "jama"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_hard",
+      "segment": "m5_hard",
+      "type": "engine_cartoon",
+      "start_s": 595.5,
+      "end_s": 614.17,
+      "duration_s": 18.67,
+      "visual_objective": "",
+      "narration": "Why are these prices so hard to bring down? Because every one of them is somebody's income. A hospital's budget, a drug maker's profit, an insurer's revenue. Lowering the price means someone gets paid less, and each of them has every reason to fight it.",
+      "keyframes": [
+        {
+          "param": "items[0].cards[1].at.cue",
+          "cue": "A hospital's budget",
+          "label": "items[0].cards[1].at.cue",
+          "scene_time_s": 7.42,
+          "absolute_s": 602.92
+        },
+        {
+          "param": "items[0].links[0][2].cue",
+          "cue": "A hospital's budget",
+          "label": "items[0].links[0][2].cue",
+          "scene_time_s": 7.72,
+          "absolute_s": 603.22
+        },
+        {
+          "param": "items[0].cards[2].at.cue",
+          "cue": "a drug maker's profit",
+          "label": "items[0].cards[2].at.cue",
+          "scene_time_s": 8.94,
+          "absolute_s": 604.44
+        },
+        {
+          "param": "items[0].links[1][2].cue",
+          "cue": "a drug maker's profit",
+          "label": "items[0].links[1][2].cue",
+          "scene_time_s": 9.24,
+          "absolute_s": 604.74
+        },
+        {
+          "param": "items[0].cards[3].at.cue",
+          "cue": "an insurer's revenue",
+          "label": "items[0].cards[3].at.cue",
+          "scene_time_s": 10.47,
+          "absolute_s": 605.97
+        },
+        {
+          "param": "items[0].links[2][2].cue",
+          "cue": "an insurer's revenue",
+          "label": "items[0].links[2][2].cue",
+          "scene_time_s": 10.77,
+          "absolute_s": 606.27
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Lowering the price",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.47,
+          "absolute_s": 607.97
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 614.17,
+      "end_s": 638.0,
+      "duration_s": 23.83,
+      "visual_objective": "",
+      "narration": "So why do Americans pay so much for health care? Not because they go to the doctor more. They go less. They pay more for each visit, each scan, each pill, and each claim. Health care in America is not expensive because of how much care people get. It is expensive because of what each piece of care costs.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "They go less",
+          "label": "items[0].at.cue",
+          "scene_time_s": 7.31,
+          "absolute_s": 621.48
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "They pay more",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.76,
+          "absolute_s": 622.93
+        },
+        {
+          "param": "items[1].lines[0].at.cue",
+          "cue": "each visit",
+          "label": "items[1].lines[0].at.cue",
+          "scene_time_s": 9.96,
+          "absolute_s": 624.12
+        },
+        {
+          "param": "items[1].lines[1].at.cue",
+          "cue": "each scan",
+          "label": "items[1].lines[1].at.cue",
+          "scene_time_s": 11.12,
+          "absolute_s": 625.29
+        },
+        {
+          "param": "items[1].lines[2].at.cue",
+          "cue": "each pill",
+          "label": "items[1].lines[2].at.cue",
+          "scene_time_s": 11.99,
+          "absolute_s": 626.16
+        },
+        {
+          "param": "items[1].lines[3].at.cue",
+          "cue": "and each claim",
+          "label": "items[1].lines[3].at.cue",
+          "scene_time_s": 12.86,
+          "absolute_s": 627.03
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Health care in America",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.45,
+          "absolute_s": 628.62
+        },
+        {
+          "param": "items[1].total.at.cue",
+          "cue": "It is expensive because",
+          "label": "items[1].total.at.cue",
+          "scene_time_s": 19.25,
+          "absolute_s": 633.42
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pkff_prices"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 638.0,
+      "end_s": 648.87,
+      "duration_s": 10.87,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 8.48,
+          "absolute_s": 646.48
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}

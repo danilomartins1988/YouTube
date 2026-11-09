@@ -57,7 +57,8 @@ segments:
   chapter: The bill
   narration: Now compare that with other rich countries. On the international basis used by the O E C D, the US spent {{peers.us_spoken}}
     per person in twenty twenty-four. The average of comparable rich countries was {{peers.peer_spoken}}. Even Switzerland,
-    the next most expensive, spent {{peers}} less per person.
+    the next most expensive, spent {{peers}} less per person. On the same basis, health care took seventeen point two percent
+    of the American economy, against eleven point two percent on average elsewhere.
   claims:
   - peers
 - id: m1_draw
@@ -102,8 +103,9 @@ segments:
 - id: m2_example
   chapter: Less care, higher prices
   narration: Take a heart bypass operation. Even in Medicare, the US government's own program, the average cost was {{prices}}.
-    In public insurance schemes in comparable countries, it was about {{prices.peer_spoken}}. For a procedure to open a blocked
-    artery, the Medicare cost was almost three times the peer average.
+    In public insurance schemes in comparable countries, it was about {{prices.peer_spoken}}. Almost twice as much, for the
+    same operation, even when the government is the one paying. For a procedure to open a blocked artery, the Medicare cost
+    was almost three times the peer average.
   claims:
   - prices
 - id: m2_draw
