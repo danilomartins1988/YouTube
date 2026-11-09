@@ -1,0 +1,344 @@
+{
+  "title": "When Tokyo's Land Was Worth More Than Entire Countries",
+  "docs_dir": "docs/episodes/23-tokyo",
+  "video": "output/tokyo_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "How one garden in Tokyo was valued like all of California",
+    "surprising_fact": "At neighbouring prices the palace land equalled all California or Canada; Japan's land \u2248 4.1x all US land (LSE paper)",
+    "subject": "a crashing line",
+    "tone": "spectacle",
+    "metaphor": "a price real on paper, impossible in practice"
+  },
+  "default": "B",
+  "slug": "when-tokyos-land-was-worth-more-than-entire-countries",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "1 GARDEN",
+        "= CALIFORNIA?"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "palace: at neighbouring land prices the palace land equalled all of California (LSE paper)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A050C",
+          "sky1": "#2A1030",
+          "haze": "#FF6FB5",
+          "key": "#FFE6F3",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "skyline",
+          "x": 1380,
+          "y": 640,
+          "s": 0.9
+        },
+        "support": [
+          {
+            "kind": "crash",
+            "x": 1400,
+            "y": 520,
+            "s": 0.8
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#DDEBFF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "1 GARDEN",
+          "x": 90,
+          "y": 524.6,
+          "size": 96.2,
+          "width": 492.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "= CALIFORNIA?",
+          "x": 90,
+          "y": 624.6,
+          "size": 96.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.53 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 450, 582, 530), (90, 550, 890, 630)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "8.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 6.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.059",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 48",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-ships-fly-foreign-flags (distance 0.78)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "palace: at neighbouring land prices the palace land equalled all of California (LSE paper)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.74,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-ships-fly-foreign-flags"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "JAPAN'S LAND",
+        "4\u00d7 THE USA"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "vsus: Japan's 1990 land value \u2248 4.1x the whole US (LSE paper)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#2A0E12",
+          "haze": "#FF4B3E",
+          "key": "#FFD1CC",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "skyline",
+          "x": 1380,
+          "y": 640,
+          "s": 0.9
+        },
+        "support": [
+          {
+            "kind": "crash",
+            "x": 1400,
+            "y": 520,
+            "s": 0.8
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD1CC"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "JAPAN'S LAND",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "4\u00d7 THE USA",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 666.7,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.50 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "5 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 890, 530), (90, 550, 757, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 7.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.058",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 43",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters (distance 0.31)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "vsus: Japan's 1990 land value \u2248 4.1x the whole US (LSE paper)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.758,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-09T16:06:32Z",
+  "master": "output/when-tokyos-land-was-worth-more-than-entire-countries/thumbnails/master_B.png"
+}

@@ -24,3 +24,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 19-quibi | The $1.75 Billion App That Lasted Six Months | $1.75 BILLION APP. / GONE IN 6 MONTHS | 31 s | `docs/episodes/19-quibi/youtube-short/short_package.md` |
 | 20-notpetya | One Software Update Froze the World's Biggest Shipping Company | ONE SOFTWARE UPDATE. / $10 BILLION IN DAMAGE | 46 s | `docs/episodes/20-notpetya/youtube-short/short_package.md` |
 | 21-citibank | The Bank That Accidentally Sent $900 Million | A BANK SENT $900M / BY MISTAKE | 42 s | `docs/episodes/21-citibank/youtube-short/short_package.md` |
+| 23-tokyo | Was One Garden in Tokyo Worth All of California? | ONE GARDEN IN TOKYO / = ALL OF CALIFORNIA? | 40 s | `docs/episodes/23-tokyo/youtube-short/short_package.md` |
