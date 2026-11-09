@@ -1,0 +1,284 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# NEW HOOK RULES (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open with the number in the first seconds, no "What if",
+# four short hook beats instead of one long stakes scene, an explicit promise before 30 s, the channel intro after part 1,
+# and no separate "part question" scenes (the question is said over action at the start of each part).
+# Every number comes from sources.yaml via {{placeholders}}; computed totals are said as estimates. Generic teaser.
+logline: In three months, Microsoft, Alphabet, Amazon and Meta spent about two hundred billion dollars on data centers and
+  chips for artificial intelligence. Where does the money come back from? The three ways Big Tech turns AI into cash, and
+  the one number that shows whether the bet is working.
+title: How Big Tech Really Makes Money From AI
+segments:
+- id: h_open
+  chapter: Two hundred billion dollars
+  narration: Two hundred billion dollars. That is roughly what four companies spent on buildings and machines in just three
+    months.
+  claims:
+  - capex_q
+- id: h_who
+  chapter: Two hundred billion dollars
+  narration: Microsoft. Alphabet, the owner of Google. Amazon. And Meta, the owner of Facebook and Instagram. Much of that
+    money went into one thing. Data centers, packed with chips for artificial intelligence.
+  claims:
+  - capex_q
+  - msft
+- id: h_question
+  chapter: Two hundred billion dollars
+  narration: Spending like that has to come back somehow. So how does a chatbot, an AI model, or a data center turn into actual
+    money?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced spending.
+- id: h_promise
+  chapter: Two hundred billion dollars
+  narration: By the end of this video, you will know the three ways Big Tech really makes money from AI, and the one number
+    that shows whether the bet is paying off.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The spending spree
+  narration: ''
+  claims: []
+- id: m1_quarter
+  chapter: The spending spree
+  narration: First, how big is the bet? Look at the latest quarter. Amazon spent about {{capex_q.amzn_spoken}} on property
+    and equipment. Alphabet, about {{capex_q.goog_spoken}}. Microsoft, about {{capex_q.msft_spoken}}. Meta, about {{capex_q.meta_spoken}}.
+    For Amazon, Alphabet and Microsoft, that is roughly double what each spent a year earlier. Together, that is more than
+    two billion dollars every single day, by our calculation.
+  claims:
+  - capex_q
+- id: m1_year
+  chapter: The spending spree
+  narration: And the plans for the full year are even bigger. Add up what the four companies themselves expect to spend in
+    twenty twenty-six, and you get {{capex_year}}. They count it in slightly different ways, so treat it as an estimate. But
+    the order of magnitude is clear.
+  claims:
+  - capex_year
+- id: m1_draw
+  chapter: The spending spree
+  narration: Let me draw where that money goes. Here is a data center. Inside are the chips, the servers and the networks.
+    Around it, the land, the buildings, the power and the cooling. Microsoft says roughly three quarters of its spending last
+    quarter went on short-lived assets, mainly processors and graphics chips. Those wear out or go out of date in a few years.
+    So this is not a one-time bill. It comes back again and again.
+  claims:
+  - msft
+  - capex_q
+  analysis: true
+  source_note: Diagram of data-center spending; the three-quarters figure from Microsoft's call.
+- id: m1_supply
+  chapter: The spending spree
+  narration: Why spend so fast? Because, according to Microsoft, customer demand continues to exceed available supply. And
+    the spending is already visible in the accounts. Amazon said its free cash flow fell mainly because of its investments
+    in artificial intelligence.
+  claims:
+  - msft
+  - capex_year
+- id: m1_transition
+  chapter: The spending spree
+  narration: So where does the money come back from? There are three ways. The first is the oldest trick in the cloud. Renting
+    the machines.
+  claims: []
+- id: m2_card
+  chapter: 'Way one: rent the machines'
+  narration: ''
+  claims: []
+- id: m2_rent
+  chapter: 'Way one: rent the machines'
+  narration: A company that wants to use AI can build its own data center. Or it can rent computing power from someone who
+    already has one. That is the cloud business, and AI has turned it into a gold rush.
+  claims:
+  - amzn
+  - goog
+  - msft
+  analysis: true
+  source_note: Explanation of the cloud rental model; figures in the next segments.
+- id: m2_aws
+  chapter: 'Way one: rent the machines'
+  narration: Start with Amazon's cloud, A W S. In the last quarter its sales grew thirty-nine percent, to {{amzn}}, and it
+    made an operating profit of about {{amzn.op_spoken}}.
+  claims:
+  - amzn
+- id: m2_margin
+  chapter: 'Way one: rent the machines'
+  narration: Put those two numbers side by side. By our calculation, A W S kept almost thirty-nine cents of operating profit
+    from every dollar of sales. Amazon as a whole kept about fourteen cents. So the cloud earns almost three times the margin
+    of the rest of the company. Renting out computers, it turns out, is a very good business.
+  claims:
+  - amzn
+  analysis: true
+  source_note: Margins computed from Amazon Q3 2026 release (AWS 17,773/45,984; total 28,076/201,944).
+- id: m2_google
+  chapter: 'Way one: rent the machines'
+  narration: Google Cloud grew even faster. Its revenue rose {{goog}} in a year, to about {{goog.cloud_spoken}}, powered,
+    in Alphabet's own words, by huge demand for its AI infrastructure. And its profit more than tripled.
+  claims:
+  - goog
+- id: m2_azure
+  chapter: 'Way one: rent the machines'
+  narration: And Microsoft's cloud, Azure, grew {{msft}} in the quarter. Over Microsoft's last financial year, Azure revenue
+    passed one hundred billion dollars for the first time.
+  claims:
+  - msft
+- id: m2_foundry
+  chapter: 'Way one: rent the machines'
+  narration: Microsoft's wider cloud business brought in {{msft.cloud_spoken}} in a single quarter, up thirty percent. And
+    it says more than one hundred and twenty thousand customers now build on its AI platform, called Foundry, with revenue
+    from it more than tripling in a year.
+  claims:
+  - msft
+- id: m2_draw
+  chapter: 'Way one: rent the machines'
+  narration: Let me draw the rental model. On one side, the cloud company, which owns the chips. On the other, thousands of
+    customers, from start-ups to banks, who need computing power for a few hours or a few months. Money flows one way, rent
+    flows back. The more AI everyone wants to run, the more rent the landlord collects.
+  claims:
+  - amzn
+  - goog
+  - msft
+  analysis: true
+  source_note: Diagram of the cloud rental model.
+- id: m2_transition
+  chapter: 'Way one: rent the machines'
+  narration: But two of these companies earn most of their money in a completely different way. And there, AI is quietly doing
+    something else.
+  claims: []
+- id: m3_card
+  chapter: 'Way two: sell better ads'
+  narration: ''
+  claims: []
+- id: m3_ads
+  chapter: 'Way two: sell better ads'
+  narration: Google and Meta are, above all, advertising companies. In the last quarter, Google's search business brought
+    in about {{goog.search_spoken}}, and YouTube ads more than eleven billion. Meta's apps earned about {{meta}} from ads.
+    Meta's total revenue grew twenty-six percent in a year, and almost all of it comes from ads.
+  claims:
+  - goog
+  - meta
+- id: m3_better
+  chapter: 'Way two: sell better ads'
+  narration: Here, AI is not a product you buy. It is the engine that decides which ad you see. Meta says its AI ads model,
+    called GEM, raised conversions for app ads by {{meta.app_spoken}}. A few percent sounds small. On sixty billion dollars
+    of ads a quarter, it is not.
+  claims:
+  - meta
+  analysis: true
+  source_note: Meta's figure from its call; the last sentence is commentary.
+- id: m3_assist
+  chapter: 'Way two: sell better ads'
+  narration: It is the same story at Google. Alphabet's advertising business as a whole brought in about eighty-two billion
+    dollars in the quarter. And Meta says advertisers who used its AI business assistant got almost five percent more conversions,
+    at the same cost. Every small improvement in targeting is multiplied by billions of ads.
+  claims:
+  - goog
+  - meta
+  analysis: true
+  source_note: Figures from Alphabet release and Meta call; the last sentence is commentary.
+- id: m3_draw
+  chapter: 'Way two: sell better ads'
+  narration: Let me draw how that works. Here is an advertiser with a budget. Here is the ad system, which picks who sees
+    what. If the AI picks better, more people click and buy. The advertiser gets more for each dollar, so they spend more
+    dollars. You never pay for the AI. The advertiser does.
+  claims:
+  - meta
+  - goog
+  analysis: true
+  source_note: Diagram of AI-driven ad targeting.
+- id: m3_transition
+  chapter: 'Way two: sell better ads'
+  narration: Rent and ads pay today's bills. The third way is about money that has not arrived yet.
+  claims: []
+- id: m4_card
+  chapter: 'Way three: lock in the future'
+  narration: ''
+  claims: []
+- id: m4_backlog
+  chapter: 'Way three: lock in the future'
+  narration: When a customer signs a long cloud contract, the money arrives over years. Companies report this as a backlog.
+    Microsoft says its commercial backlog grew seventy-three percent, to {{msft.rpo_spoken}}. Google Cloud reports a backlog
+    of {{goog.backlog_spoken}}.
+  claims:
+  - msft
+  - goog
+- id: m4_sum
+  chapter: 'Way three: lock in the future'
+  narration: Add those two together, and you get {{backlog}} of business already signed but not yet paid. Microsoft's figure
+    covers all its commercial contracts, not only AI. But it shows customers are committing for years, not weeks.
+  claims:
+  - backlog
+- id: m4_users
+  chapter: 'Way three: lock in the future'
+  narration: And then there are users. Google says its Gemini app now has one billion users. Users today are the customers,
+    and the data, of tomorrow.
+  claims:
+  - goog
+  analysis: true
+  source_note: Gemini figure from Alphabet's call; the last sentence is commentary.
+- id: m4_tokens
+  chapter: 'Way three: lock in the future'
+  narration: Usage is exploding behind the scenes too. Google says it now processes nearly thirty-two billion tokens a minute,
+    the small pieces of text that AI models read and write. That is more than four times what it handled a year ago. Every
+    one of those tokens runs on a chip in a data center somebody paid for.
+  claims:
+  - goog
+  analysis: true
+  source_note: Token figure from Alphabet call; last sentence commentary.
+- id: m4_draw
+  chapter: 'Way three: lock in the future'
+  narration: Let me draw the three ways side by side. Rent, money coming in now. Ads, money coming in now, but a little better
+    every year. And backlog, money promised for later. Against all three, one huge bar. The spending.
+  claims:
+  - backlog
+  - capex_year
+  analysis: true
+  source_note: Bar comparison of the three income streams against spending (illustrative, not to scale).
+- id: m4_transition
+  chapter: 'Way three: lock in the future'
+  narration: Which brings us to the question everyone is asking. Is it worth it?
+  claims: []
+- id: m5_card
+  chapter: The bet
+  narration: ''
+  claims: []
+- id: m5_risk
+  chapter: The bet
+  narration: Right now, the spending is growing much faster than sales. Alphabet says it expects its spending to increase
+    significantly again in twenty twenty-seven. Meta says it will keep investing aggressively. And because so much of it goes
+    on chips that age in a few years, the bill keeps coming back.
+  claims:
+  - capex_year
+  - msft
+- id: m5_chips
+  chapter: The bet
+  narration: That is why the companies are also designing their own chips, to cut the cost of every calculation. Amazon says
+    its in-house chips, called Trainium and Graviton, now have a combined annual revenue run rate of {{amzn.chips_spoken}}.
+    And Microsoft expects to spend more than fifty billion dollars in its next quarter alone.
+  claims:
+  - amzn
+  - msft
+- id: m5_number
+  chapter: The bet
+  narration: So here is the one number to watch. Not the spending. The backlog. As long as customers keep signing contracts
+    faster than the companies can build, the bet is paying off. If the backlog stops growing while the spending keeps rising,
+    the data centers become very expensive empty rooms.
+  claims:
+  - backlog
+  analysis: true
+  source_note: Analysis drawn from the sourced backlog and spending figures.
+- id: payoff
+  chapter: The lesson
+  narration: So how does Big Tech really make money from AI? By renting the machines, by selling better ads, and by locking
+    in customers for years. The chatbot is the shop window. The real business is behind it, in the data centers, in the ad
+    auctions, and in contracts that will pay out long after the next model is released.
+  claims:
+  - amzn
+  - meta
+  - backlog
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

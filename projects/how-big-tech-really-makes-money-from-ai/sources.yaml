@@ -1,0 +1,132 @@
+# Sources and claims for "How Big Tech Really Makes Money From AI" (Episode 28, top-10 #11).
+# Company primary sources only (earnings releases, SEC Exhibit 99.1, investor-relations call transcripts), read on
+# 2026-11-09 (AI fact-check; quotes in docs/episodes/28-bigtech-ai/RESEARCH_NOTES.md). Status stays source_located until
+# a named human reviewer signs off. Reported figures only; no analyst estimates. Figures marked "computed" are our own
+# arithmetic and are said as such. Capex definitions differ between companies (cash property and equipment vs including
+# finance leases); the film says so. No company logos; names in text only; no likeness of real people.
+sources:
+  - id: msft_fy26
+    title: "Microsoft FY26 Q4 earnings press release"
+    publisher: Microsoft
+    url: https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast
+    published: "2026-07-29"
+    accessed: "2026-11-09"
+    credit: "Microsoft"
+  - id: msft_q1
+    title: "Microsoft FY27 Q1 earnings press release"
+    publisher: Microsoft
+    url: https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast
+    published: "2026-10-28"
+    accessed: "2026-11-09"
+    credit: "Microsoft"
+  - id: msft_call
+    title: "Microsoft FY27 Q1 earnings call"
+    publisher: Microsoft Investor Relations
+    url: https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1
+    published: "2026-10-28"
+    accessed: "2026-11-09"
+    credit: "Microsoft call"
+  - id: goog_q3
+    title: "Alphabet Q3 2026 results (Exhibit 99.1)"
+    publisher: Alphabet / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000080/googexhibit991q32026.htm
+    published: "2026-10-28"
+    accessed: "2026-11-09"
+    credit: "Alphabet"
+  - id: goog_call
+    title: "Alphabet Q3 2026 earnings call transcript"
+    publisher: Alphabet Investor Relations
+    url: https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf
+    published: "2026-10-28"
+    accessed: "2026-11-09"
+    credit: "Alphabet call"
+  - id: amzn_q3
+    title: "Amazon Q3 2026 results (Exhibit 99.1)"
+    publisher: Amazon / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/0001018724/000101872426000038/amzn-20260930xex991.htm
+    published: "2026-10-29"
+    accessed: "2026-11-09"
+    credit: "Amazon"
+  - id: amzn_fy25
+    title: "Amazon.com Announces Fourth Quarter Results (Q4 and full year 2025)"
+    publisher: Amazon Investor Relations
+    url: https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/
+    published: "2026-02-05"
+    accessed: "2026-11-09"
+    credit: "Amazon"
+  - id: meta_q3
+    title: "Meta Q3 2026 results press release"
+    publisher: Meta
+    url: https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx
+    published: "2026-10-21"
+    accessed: "2026-11-09"
+    credit: "Meta"
+  - id: meta_call
+    title: "Meta Q3 2026 earnings call transcript"
+    publisher: Meta Investor Relations
+    url: https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf
+    published: "2026-10-21"
+    accessed: "2026-11-09"
+    credit: "Meta call"
+
+claims:
+  - id: capex_q
+    text: "Latest-quarter purchases of property and equipment: Microsoft $39,367M (Q1 FY27, prior year $19,394M); Alphabet $51,355M (Q3 2026, prior year $23,953M); Amazon $77,259M (Q3 2026, prior year $35,095M); Meta capital expenditures including principal payments on finance leases $34.9B (Q3 2026). Computed total ≈ $202.9B (definitions differ); ≈ $2.2B a day over 92 days (computed)."
+    spoken: about two hundred billion dollars
+    display: "≈ $203bn in one quarter (computed)"
+    fields: {msft_spoken: thirty-nine billion dollars, goog_spoken: fifty-one billion dollars, amzn_spoken: seventy-seven billion dollars, meta_spoken: thirty-five billion dollars}
+    source_ids: [msft_q1, goog_q3, amzn_q3, meta_call]
+    status: source_located
+    verification_note: Sum computed by us; Meta includes finance-lease principal, the others are cash P&E purchases.
+
+  - id: capex_year
+    text: "2026 capex plans: Microsoft 'for the calendar year, spend should be approximately $170 billion' (incl. finance leases); Alphabet 'full-year 2026 CapEx guidance range of $195-$205 billion'; Amazon 'We continue to expect 2026 cash capital expenditures to be approximately $220 billion'; Meta 'in the range of $135-145 billion'. Computed total ≈ $720–740B. Alphabet: 'We continue to expect our CapEx to increase significantly in 2027'. Meta on 2027: 'we expect to continue investing aggressively to support both our core business and emerging AI initiatives'. Amazon: the decline in free cash flow 'primarily reflects investments in artificial intelligence'."
+    spoken: around seven hundred and twenty to seven hundred and forty billion dollars
+    display: "≈ $720–740bn in 2026 (computed)"
+    source_ids: [msft_call, goog_call, amzn_q3, meta_call]
+    status: source_located
+    verification_note: Sum computed by us from each company's own guidance; definitions differ.
+
+  - id: msft
+    text: "Microsoft Q1 FY27: 'Azure revenue increased 48%'; 'Microsoft Cloud revenue was $63.9 billion and increased 30%'; 'Commercial remaining performance obligation increased 73% to $677 billion'. FY26: 'Azure revenue surpassed $100 billion for the first time'. Call: 'Roughly three quarters of our capex was for short-lived assets, primarily CPUs and GPUs'; 'Customer demand continues to exceed available supply.' 'We now have over 120,000 Foundry customers, with revenue more than tripling year over year.' 'In Q2, we expect CapEx spend will be over $50 billion.'"
+    spoken: forty-eight percent
+    display: "Azure +48%"
+    fields: {rpo_spoken: six hundred and seventy-seven billion dollars, cloud_spoken: sixty-three point nine billion dollars}
+    source_ids: [msft_q1, msft_fy26, msft_call]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: goog
+    text: "Alphabet Q3 2026: Google Cloud revenues $30,709M (prior year $15,157M), 'grew 103%, powered by huge demand for our AI infrastructure and AI solutions'; Google Cloud operating income $11,121M (prior year $3,594M); Google Search & other $63,350M; YouTube ads $11,207M. Call: 'Google Cloud's backlog was $561 billion'; 'The Gemini App is now at one billion users'; 'processing nearly 32 billion tokens per minute… more than four times what we processed a year ago'; total Google advertising $82,012M."
+    spoken: one hundred and three percent
+    display: "Google Cloud +103%"
+    fields: {cloud_spoken: thirty point seven billion dollars, search_spoken: sixty-three point four billion dollars, backlog_spoken: five hundred and sixty-one billion dollars}
+    source_ids: [goog_q3, goog_call]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: amzn
+    text: "Amazon Q3 2026: 'AWS segment sales increased 39% year-over-year to $46.0 billion'; AWS operating income $17,773M; the decline in free cash flow 'primarily reflects investments in artificial intelligence'. Amazon (5 Feb 2026): 'Trainium and Graviton now have a combined annual revenue run rate of over $10 billion.' AWS operating margin ≈ 38.6% (17,773 / 45,984, computed); Amazon total operating margin ≈ 13.9% (28,076 / 201,944, computed)."
+    spoken: forty-six billion dollars
+    display: "AWS $46.0bn (+39%)"
+    fields: {op_spoken: seventeen point eight billion dollars, chips_spoken: more than ten billion dollars}
+    source_ids: [amzn_q3, amzn_fy25]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: meta
+    text: "Meta Q3 2026: 'Revenue was $64.60 billion, an increase of 26% year-over-year'; Family of Apps advertising revenue $63,061M. Call: the GEM model drove 'a 1.7% increase in conversions for offsite conversion campaigns and a 9.6% increase in app ad conversions'; 2026 capex 'in the range of $135-145 billion'; advertisers using Meta's AI business assistant 'drove almost 5% more conversions at the same cost per conversion'."
+    spoken: sixty-three billion dollars
+    display: "Meta ads $63.1bn"
+    fields: {app_spoken: nine point six percent}
+    source_ids: [meta_q3, meta_call]
+    status: source_located
+    verification_note: Read on 2026-11-09.
+
+  - id: backlog
+    text: "Microsoft commercial remaining performance obligation $677B (Q1 FY27) + Google Cloud backlog $561B (Q3 2026) = $1.238 trillion (computed)."
+    spoken: more than one point two trillion dollars
+    display: "≈ $1.24tn of signed future business (computed)"
+    source_ids: [msft_q1, goog_call]
+    status: source_located
+    verification_note: Sum computed by us; Microsoft's figure covers all commercial contracts, not only AI.
