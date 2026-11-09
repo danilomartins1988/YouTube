@@ -1,0 +1,344 @@
+{
+  "title": "The Bank That Accidentally Sent $900 Million",
+  "docs_dir": "docs/episodes/21-citibank",
+  "video": "output/citibank_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "How a bank sent almost $900 million by mistake, and why the receivers would not give it back",
+    "surprising_fact": "Citibank meant to pay $7.8M of interest and sent almost $900M of its own money (S.D.N.Y. opinion)",
+    "subject": "an open vault",
+    "tone": "thriller",
+    "metaphor": "six eyes, one wrong checkbox"
+  },
+  "default": "A",
+  "slug": "the-bank-that-accidentally-sent-900-million",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "mystery (bold)",
+      "text": [
+        "$900 MILLION",
+        "BY MISTAKE"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "wired: almost $900M of Citibank money wired by mistake on Aug 11, 2020 (S.D.N.Y. opinion)",
+      "scene": {
+        "palette": {
+          "sky0": "#03060E",
+          "sky1": "#0E1D3A",
+          "haze": "#64B5F6",
+          "key": "#DDEBFF",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "goldvault",
+          "x": 1380,
+          "y": 600,
+          "s": 0.9
+        },
+        "support": [
+          {
+            "kind": "coin",
+            "x": 1500,
+            "y": 760,
+            "s": 0.8
+          }
+        ],
+        "particles": {
+          "n": 70,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#DDEBFF"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "$900 MILLION",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "BY MISTAKE",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 666.7,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.46 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 890, 530), (90, 550, 757, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 6.4:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.071",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 79",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-ships-fly-foreign-flags (distance 0.39)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "wired: almost $900M of Citibank money wired by mistake on Aug 11, 2020 (S.D.N.Y. opinion)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.733,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-ships-fly-foreign-flags"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "consequence (bold)",
+      "text": [
+        "ONE CHECKBOX",
+        "$900M SENT"
+      ],
+      "accent_line": 1,
+      "text_side": "left",
+      "claim_basis": "checkbox/wired: only PRINCIPAL was ticked; almost $900M left the bank (S.D.N.Y. opinion)",
+      "scene": {
+        "palette": {
+          "sky0": "#05070F",
+          "sky1": "#2A0E12",
+          "haze": "#FF4B3E",
+          "key": "#FFD1CC",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "goldvault",
+          "x": 1380,
+          "y": 600,
+          "s": 0.9
+        },
+        "support": [
+          {
+            "kind": "coin",
+            "x": 1500,
+            "y": 760,
+            "s": 0.8
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            800,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD1CC"
+        },
+        "vignette": 0.55,
+        "brand": "tl"
+      },
+      "layout": [
+        {
+          "text": "ONE CHECKBOX",
+          "x": 90,
+          "y": 523.3,
+          "size": 104.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$900M SENT",
+          "x": 90,
+          "y": 631.7,
+          "size": 104.2,
+          "width": 666.7,
+          "anchor": "start",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.45 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 442, 890, 530), (90, 550, 757, 638)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 7.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.067",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 79",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-taiwan-matters (distance 0.56)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "checkbox/wired: only PRINCIPAL was ticked; almost $900M left the bank (S.D.N.Y. opinion)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.834,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-taiwan-matters"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-09T13:05:55Z",
+  "master": "output/the-bank-that-accidentally-sent-900-million/thumbnails/master_A.png"
+}
