@@ -1,0 +1,1790 @@
+{
+  "slug": "the-hidden-business-behind-your-credit-card",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_open",
+      "segment": "h_open",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 9.53,
+      "duration_s": 9.53,
+      "visual_objective": "",
+      "narration": "One hundred and sixty billion dollars. That is how much interest Americans were charged on their credit cards in a single year.",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_2025"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_twist",
+      "segment": "h_twist",
+      "type": "engine_cartoon",
+      "start_s": 9.53,
+      "end_s": 24.0,
+      "duration_s": 14.47,
+      "visual_objective": "",
+      "narration": "And that is only one side of the business. Every time you tap your card, even if you pay your bill in full, the store you are buying from pays a fee too. You just never see it.",
+      "keyframes": [
+        {
+          "param": "items[0].tapAt.cue",
+          "cue": "Every time you tap",
+          "label": "items[0].tapAt.cue",
+          "scene_time_s": 4.05,
+          "absolute_s": 13.58
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "the store you are buying from",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.17,
+          "absolute_s": 18.71
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "pays a fee too",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.81,
+          "absolute_s": 20.34
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "You just never see it",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.59,
+          "absolute_s": 22.12
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s03_question",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 24.0,
+      "end_s": 29.67,
+      "duration_s": 5.67,
+      "visual_objective": "",
+      "narration": "So who really makes money from that small piece of plastic in your wallet?",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s04_promise",
+      "segment": "h_promise",
+      "type": "engine_cartoon",
+      "start_s": 29.67,
+      "end_s": 40.93,
+      "duration_s": 11.27,
+      "visual_objective": "",
+      "narration": "By the end of this video, you will know the three ways the card business makes its money, and who quietly pays for your cash back and travel points.",
+      "keyframes": [
+        {
+          "param": "items[3].at.cue",
+          "cue": "who quietly pays",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.47,
+          "absolute_s": 37.13
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_rewards"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s05_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 40.93,
+      "end_s": 46.33,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s06_swipe",
+      "segment": "m1_swipe",
+      "type": "engine_cartoon",
+      "start_s": 46.33,
+      "end_s": 62.07,
+      "duration_s": 15.73,
+      "visual_objective": "",
+      "narration": "Start with the moment you pay. You buy something for one hundred dollars and tap your card. It takes a couple of seconds. But in that time, the money passes through several companies, and each of them takes a slice.",
+      "keyframes": [
+        {
+          "param": "items[1].tapAt.cue",
+          "cue": "and tap your card",
+          "label": "items[1].tapAt.cue",
+          "scene_time_s": 5.88,
+          "absolute_s": 52.22
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "It takes a couple",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 53.84
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But in that time",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.42,
+          "absolute_s": 55.75
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "the money passes through",
+          "label": "items[4].at.cue",
+          "scene_time_s": 10.52,
+          "absolute_s": 56.86
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s07_split",
+      "segment": "m1_split",
+      "type": "engine_cartoon",
+      "start_s": 62.07,
+      "end_s": 91.73,
+      "duration_s": 29.67,
+      "visual_objective": "",
+      "narration": "According to the Congressional Research Service, the total fee a store pays is typically between one and three percent of the purchase. If it is three percent, the store receives ninety-seven dollars, not one hundred. The biggest slice, called the interchange fee, goes to the bank that issued your card. And here is the odd part. That fee is set not by your bank, and not by the store, but by the card network.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "If it is three percent",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 9.86,
+          "absolute_s": 71.93
+        },
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "the store receives",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 11.29,
+          "absolute_s": 73.35
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "but by the card network",
+          "label": "items[1].at.cue",
+          "scene_time_s": 27.55,
+          "absolute_s": 89.61
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "p08_flow",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 91.73,
+      "end_s": 116.47,
+      "duration_s": 24.73,
+      "visual_objective": "",
+      "narration": "Let me draw where your one hundred dollars goes. Here is you, and here is the store. Between them, three companies. Your bank, which issued the card. The network, Visa or Mastercard, which connects everyone. And the store's own bank. The store gets ninety-seven dollars. Three dollars are split between the others, and the biggest piece goes to your bank.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is you",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.62,
+          "absolute_s": 95.35
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is you",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.62,
+          "absolute_s": 95.35
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "and here is the store",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.58,
+          "absolute_s": 96.31
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Your bank, which issued",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.46,
+          "absolute_s": 100.19
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "The network",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 10.65,
+          "absolute_s": 102.38
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "And the store's own bank",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 14.64,
+          "absolute_s": 106.37
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "The store gets ninety-seven",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 16.5,
+          "absolute_s": 108.23
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "the biggest piece goes to your bank",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 22.13,
+          "absolute_s": 113.87
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the biggest piece goes to your bank",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 22.53,
+          "absolute_s": 114.27
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s09_total",
+      "segment": "m1_total",
+      "type": "engine_cartoon",
+      "start_s": 116.47,
+      "end_s": 134.47,
+      "duration_s": 18.0,
+      "visual_objective": "",
+      "narration": "Multiply that by every purchase in America. The Congressional Research Service cites estimates that in twenty twenty-two, swipe fees on credit and debit cards together came to around one hundred and sixty billion dollars. And most of that came from credit cards.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "came to",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 12.51,
+          "absolute_s": 128.98
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "And most of that",
+          "label": "items[1].at.cue",
+          "scene_time_s": 15.18,
+          "absolute_s": 131.65
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s10_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 134.47,
+      "end_s": 145.07,
+      "duration_s": 10.6,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So the first way to make money is the toll on every payment. And the companies that run the toll road are extraordinarily profitable.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "the first way",
+          "label": "Way 1: a toll on every payment",
+          "scene_time_s": 0.62,
+          "absolute_s": 135.08
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "extraordinarily profitable",
+          "label": "…and the toll road is very profitable",
+          "scene_time_s": 7.89,
+          "absolute_s": 142.36
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 145.07,
+      "end_s": 150.07,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 150.07,
+      "end_s": 155.47,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_networks",
+      "segment": "m2_networks",
+      "type": "engine_cartoon",
+      "start_s": 155.47,
+      "end_s": 179.2,
+      "duration_s": 23.73,
+      "visual_objective": "",
+      "narration": "Visa does not lend you a single dollar. It does not issue cards and it does not charge you interest. It runs the network that moves the payment. In its latest financial year, Visa reported net revenue of about forty-six billion dollars, and a net income of about twenty-three point five billion dollars.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "It runs the network",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.5,
+          "absolute_s": 163.97
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In its latest financial year",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.15,
+          "absolute_s": 167.62
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "In its latest financial year",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.15,
+          "absolute_s": 167.62
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "net revenue of",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 16.59,
+          "absolute_s": 172.06
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "visa"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_margin",
+      "segment": "m2_margin",
+      "type": "engine_cartoon",
+      "start_s": 179.2,
+      "end_s": 197.53,
+      "duration_s": 18.33,
+      "visual_objective": "",
+      "narration": "By our calculation, Visa turned about sixty-one cents of every dollar of revenue into operating profit. Mastercard, the second network, reported an operating margin of fifty-seven point six percent. Those are unusually high margins for companies of their size.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "By our calculation",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 179.55
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Mastercard, the second network",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 7.95,
+          "absolute_s": 187.15
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "visa",
+        "mastercard"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_incentives",
+      "segment": "m2_incentives",
+      "type": "engine_cartoon",
+      "start_s": 197.53,
+      "end_s": 219.13,
+      "duration_s": 21.6,
+      "visual_objective": "",
+      "narration": "And Visa shares some of that toll. In the same year, it reported about eighteen point three billion dollars in client incentives, money paid back to the banks and other partners that use its network. Those incentives help explain why banks are so keen to put one network's logo on their cards.",
+      "keyframes": [
+        {
+          "param": "items[3].at.cue",
+          "cue": "it reported about",
+          "label": "items[3].at.cue",
+          "scene_time_s": 4.33,
+          "absolute_s": 201.87
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "in client incentives",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 7.69,
+          "absolute_s": 205.22
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "client incentives",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.93,
+          "absolute_s": 205.46
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Those incentives",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.23,
+          "absolute_s": 211.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "visa"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "p15_network",
+      "segment": "m2_draw",
+      "type": "engine_draw",
+      "start_s": 219.13,
+      "end_s": 245.23,
+      "duration_s": 26.1,
+      "visual_objective": "",
+      "narration": "Let me draw why a network is such a good business. Here is one card user. Here is one store. Connect them, and there is one link. Add more users and more stores, and every one of them wants to be on the same network, because everyone else is. The network becomes a toll road that nearly every payment has to use. And the toll is a small percentage of every sale.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is one card user",
+          "label": "draw_start.cue",
+          "scene_time_s": 4.32,
+          "absolute_s": 223.45
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is one card user",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 4.32,
+          "absolute_s": 223.45
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Here is one store",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.08,
+          "absolute_s": 225.21
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Connect them",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 7.75,
+          "absolute_s": 226.88
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Add more users",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 10.43,
+          "absolute_s": 229.56
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "The network becomes a toll road",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 17.82,
+          "absolute_s": 236.95
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "nearly every payment has to use",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 19.95,
+          "absolute_s": 239.08
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "And the toll is a small percentage",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 22.5,
+          "absolute_s": 241.63
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "And the toll is a small percentage",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 22.8,
+          "absolute_s": 241.93
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs",
+        "visa"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 245.23,
+      "end_s": 255.57,
+      "duration_s": 10.33,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "But the network's toll is small compared with the second business. The one run by the banks that issue the cards. Interest.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "the second business",
+          "label": "Way 2: the banks",
+          "scene_time_s": 3.5,
+          "absolute_s": 248.73
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Interest",
+          "label": "Interest.",
+          "scene_time_s": 9.19,
+          "absolute_s": 254.42
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 255.57,
+      "end_s": 260.97,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_balances",
+      "segment": "m3_balances",
+      "type": "engine_cartoon",
+      "start_s": 260.97,
+      "end_s": 277.8,
+      "duration_s": 16.83,
+      "visual_objective": "",
+      "narration": "Americans owe a lot on their cards. According to the New York Fed, credit card balances stood at one point two six trillion dollars in the middle of twenty twenty-six. And more than eight in ten American adults have a credit card.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "in the middle of",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 9.37,
+          "absolute_s": 270.33
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[1].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[5].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[6].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[7].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[8].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[9].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[10].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[10].at.cue",
+          "scene_time_s": 12.54,
+          "absolute_s": 273.51
+        },
+        {
+          "param": "items[11].at.cue",
+          "cue": "And more than eight in ten",
+          "label": "items[11].at.cue",
+          "scene_time_s": 13.04,
+          "absolute_s": 274.01
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nyfed",
+        "shed"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_apr",
+      "segment": "m3_apr",
+      "type": "engine_cartoon",
+      "start_s": 277.8,
+      "end_s": 296.43,
+      "duration_s": 18.63,
+      "visual_objective": "",
+      "narration": "The price of that debt has jumped. The Federal Reserve tracks the average interest rate on card accounts that are actually paying interest. In twenty twenty-one, it averaged sixteen point four five percent. Its latest reading is twenty-two point three six percent.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Its latest reading",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 14.78,
+          "absolute_s": 292.58
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "g19"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_margin",
+      "segment": "m3_margin",
+      "type": "engine_cartoon",
+      "start_s": 296.43,
+      "end_s": 330.77,
+      "duration_s": 34.33,
+      "visual_objective": "",
+      "narration": "Part of that rise followed the Federal Reserve's own rate increases. But not all of it. The Consumer Financial Protection Bureau looked at the margin, the gap between card rates and the basic prime rate. It found the margin had grown by four point three percentage points in a decade, to the highest level in recent history. By its estimate, the wider margin alone earned the big card companies about twenty-five billion dollars in extra interest in a single year.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "had grown by",
+          "label": "items[1].at.cue",
+          "scene_time_s": 16.94,
+          "absolute_s": 313.37
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "to the highest level",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 20.4,
+          "absolute_s": 316.83
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "By its estimate",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 24.18,
+          "absolute_s": 320.61
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "By its estimate",
+          "label": "items[2].at.cue",
+          "scene_time_s": 24.18,
+          "absolute_s": 320.61
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "in extra interest",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 31.24,
+          "absolute_s": 327.67
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_margin"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_bill",
+      "segment": "m3_bill",
+      "type": "engine_cartoon",
+      "start_s": 330.77,
+      "end_s": 352.23,
+      "duration_s": 21.47,
+      "visual_objective": "",
+      "narration": "Put it together and the interest bill exploded. In twenty twenty-two, Americans were charged one hundred and five billion dollars in credit card interest. Two years later, it was one hundred and sixty billion dollars. That is more than fifty billion dollars extra in just two years.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "Two years later",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 12.39,
+          "absolute_s": 343.16
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "more than fifty billion",
+          "label": "items[1].at.cue",
+          "scene_time_s": 17.18,
+          "absolute_s": 347.95
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_2025"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_who",
+      "segment": "m3_who",
+      "type": "engine_cartoon",
+      "start_s": 352.23,
+      "end_s": 368.8,
+      "duration_s": 16.57,
+      "visual_objective": "",
+      "narration": "Who pays that interest? Not everyone. In the Federal Reserve's latest survey, forty-five percent of card owners said they had carried a balance at least once in the past year. The rest pay in full, and pay no interest at all.",
+      "keyframes": [
+        {
+          "param": "items[5].at.cue",
+          "cue": "of card owners said",
+          "label": "items[5].at.cue",
+          "scene_time_s": 7.49,
+          "absolute_s": 359.72
+        },
+        {
+          "param": "items[12].at.cue",
+          "cue": "The rest pay in full",
+          "label": "items[12].at.cue",
+          "scene_time_s": 12.46,
+          "absolute_s": 364.69
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "shed"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "p23_twousers",
+      "segment": "m3_draw",
+      "type": "engine_draw",
+      "start_s": 368.8,
+      "end_s": 390.8,
+      "duration_s": 22.0,
+      "visual_objective": "",
+      "narration": "Let me draw the two kinds of card users. On one side, people who pay in full every month. For them, the card is a free short-term loan, plus rewards. On the other side, people who carry a balance. They pay over twenty percent a year on what they owe. The same plastic. Two completely different deals.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "On one side",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.7,
+          "absolute_s": 372.5
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "On one side",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.7,
+          "absolute_s": 372.5
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "a free short-term loan",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 8.47,
+          "absolute_s": 377.27
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "On the other side",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 10.49,
+          "absolute_s": 379.29
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "They pay over twenty percent",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 14.95,
+          "absolute_s": 383.75
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "The same plastic",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 18.15,
+          "absolute_s": 386.95
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "Two completely different deals",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 19.82,
+          "absolute_s": 388.62
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "shed",
+        "g19"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 390.8,
+      "end_s": 401.07,
+      "duration_s": 10.27,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Which raises a question that most people never ask. If the people who pay in full get rewards for free, who is paying for those rewards?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "If the people who pay in full",
+          "label": "If rewards are free…",
+          "scene_time_s": 4.48,
+          "absolute_s": 395.28
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "who is paying for those rewards",
+          "label": "who pays for them?",
+          "scene_time_s": 7.99,
+          "absolute_s": 398.79
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 401.07,
+      "end_s": 406.47,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_rewards",
+      "segment": "m4_rewards",
+      "type": "engine_cartoon",
+      "start_s": 406.47,
+      "end_s": 425.4,
+      "duration_s": 18.93,
+      "visual_objective": "",
+      "narration": "Rewards are big money. According to the CFPB, consumers earned more than more than forty billion dollars in rewards on major issuers' cards in twenty twenty-two. Almost all card spending now goes on rewards cards.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "consumers earned more than",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.0,
+          "absolute_s": 411.47
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "in rewards",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 9.16,
+          "absolute_s": 415.63
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Almost all card spending",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.18,
+          "absolute_s": 420.65
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Almost all card spending",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.18,
+          "absolute_s": 420.65
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_rewards",
+        "cfpb_2025"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_funded",
+      "segment": "m4_funded",
+      "type": "engine_cartoon",
+      "start_s": 425.4,
+      "end_s": 449.47,
+      "duration_s": 24.07,
+      "visual_objective": "",
+      "narration": "And the money comes largely from the swipe fee. The CFPB says issuers typically fund rewards through interchange revenue. The average interchange rate on general purpose cards was one point eight percent, and rewards made up almost nine tenths of that revenue. In other words, the fee the store pays comes back to you as points.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "issuers typically fund rewards",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.74,
+          "absolute_s": 430.14
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "rewards made up almost",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.0,
+          "absolute_s": 440.4
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In other words",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 18.53,
+          "absolute_s": 443.93
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_2023"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_amex",
+      "segment": "m4_amex",
+      "type": "engine_cartoon",
+      "start_s": 449.47,
+      "end_s": 470.77,
+      "duration_s": 21.3,
+      "visual_objective": "",
+      "narration": "You can see the same link inside a single company. In twenty twenty-five, American Express spent about eighteen point four billion dollars on rewards for its card members worldwide. In the same year, it collected about thirty-seven point four billion dollars in fees from the merchants that accept its cards.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "American Express spent about",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 6.08,
+          "absolute_s": 455.55
+        },
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "it collected about",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 14.37,
+          "absolute_s": 463.83
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "amex"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_prices",
+      "segment": "m4_prices",
+      "type": "engine_cartoon",
+      "start_s": 470.77,
+      "end_s": 487.07,
+      "duration_s": 16.3,
+      "visual_objective": "",
+      "narration": "But stores do not simply absorb that fee. It becomes part of their costs, and costs end up in prices. So a customer paying with cash, or with a basic debit card, may be helping to pay for someone else's travel points.",
+      "keyframes": [
+        {
+          "param": "items[0].pages[0][0].cue",
+          "cue": "costs end up in prices",
+          "label": "items[0].pages[0][0].cue",
+          "scene_time_s": 6.48,
+          "absolute_s": 477.25
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "So a customer paying with cash",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.51,
+          "absolute_s": 479.28
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "So a customer paying with cash",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.51,
+          "absolute_s": 479.28
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "may be helping",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.59,
+          "absolute_s": 483.36
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_revolvers",
+      "segment": "m4_revolvers",
+      "type": "engine_cartoon",
+      "start_s": 487.07,
+      "end_s": 511.67,
+      "duration_s": 24.6,
+      "visual_objective": "",
+      "narration": "The CFPB found another imbalance. Cardholders who carry a balance from month to month pay ninety-four percent of all interest and fees, but receive less than thirty percent of the rewards. Not everyone agrees with that framing. A Federal Reserve staff paper has challenged it. But the direction of the money is hard to miss.",
+      "keyframes": [
+        {
+          "param": "items[0].cards[1].at.cue",
+          "cue": "but receive less than",
+          "label": "items[0].cards[1].at.cue",
+          "scene_time_s": 11.32,
+          "absolute_s": 498.39
+        },
+        {
+          "param": "items[0].links[0][2].cue",
+          "cue": "but receive less than",
+          "label": "items[0].links[0][2].cue",
+          "scene_time_s": 11.72,
+          "absolute_s": 498.79
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Not everyone agrees",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.41,
+          "absolute_s": 502.48
+        },
+        {
+          "param": "items[0].cards[2].at.cue",
+          "cue": "Not everyone agrees",
+          "label": "items[0].cards[2].at.cue",
+          "scene_time_s": 15.41,
+          "absolute_s": 502.48
+        },
+        {
+          "param": "items[0].links[1][2].cue",
+          "cue": "Not everyone agrees",
+          "label": "items[0].links[1][2].cue",
+          "scene_time_s": 15.81,
+          "absolute_s": 502.88
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_rewards"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "p31_loop",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 511.67,
+      "end_s": 534.0,
+      "duration_s": 22.33,
+      "visual_objective": "",
+      "narration": "Let me draw the rewards loop. Money comes in from two places. Swipe fees, paid by every store. And interest and fees, paid mostly by people who carry a balance. Money goes out as rewards, mostly to people who pay in full and spend a lot. The bank sits in the middle, and keeps what is left.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Money comes in from two places",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.15,
+          "absolute_s": 514.82
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Money comes in from two places",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 3.15,
+          "absolute_s": 514.82
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Swipe fees",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 5.75,
+          "absolute_s": 517.42
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "paid by every store",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 6.42,
+          "absolute_s": 518.08
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "And interest and fees",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 8.37,
+          "absolute_s": 520.04
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "paid mostly by people",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 9.79,
+          "absolute_s": 521.46
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "Money goes out as rewards",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 12.81,
+          "absolute_s": 524.48
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Money goes out as rewards",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 13.21,
+          "absolute_s": 524.88
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "keeps what is left",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 21.14,
+          "absolute_s": 532.81
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_rewards",
+        "cfpb_2023"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 534.0,
+      "end_s": 541.5,
+      "duration_s": 7.5,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "And there is one more source of money, the one that hurts the most when you miss a payment.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "one more source",
+          "label": "One more source of money",
+          "scene_time_s": 1.26,
+          "absolute_s": 535.26
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "when you miss a payment",
+          "label": "Missing a payment",
+          "scene_time_s": 5.19,
+          "absolute_s": 539.19
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 541.5,
+      "end_s": 546.9,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_late",
+      "segment": "m5_late",
+      "type": "engine_cartoon",
+      "start_s": 546.9,
+      "end_s": 560.63,
+      "duration_s": 13.73,
+      "visual_objective": "",
+      "narration": "Late fees. According to the CFPB, the biggest card issuers charged seventeen billion dollars in late fees in twenty twenty-four, up seventeen percent in two years.",
+      "keyframes": [
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "in late fees",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 8.06,
+          "absolute_s": 554.96
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "up seventeen percent",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.77,
+          "absolute_s": 557.67
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_2025"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_rule",
+      "segment": "m5_rule",
+      "type": "engine_cartoon",
+      "start_s": 560.63,
+      "end_s": 581.73,
+      "duration_s": 21.1,
+      "visual_objective": "",
+      "narration": "In twenty twenty-four, the CFPB tried to change that. Its new rule would have cut the typical late fee from thirty-two dollars to eight. Business and banking groups sued. The rule never took effect, and on April fifteenth, twenty twenty-five, it was vacated by a court order.",
+      "keyframes": [
+        {
+          "param": "items[0].pages[1][0].cue",
+          "cue": "to eight",
+          "label": "items[0].pages[1][0].cue",
+          "scene_time_s": 9.57,
+          "absolute_s": 570.21
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Business and banking groups",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.0,
+          "absolute_s": 571.63
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Business and banking groups",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.0,
+          "absolute_s": 571.63
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "on April fifteenth",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.57,
+          "absolute_s": 576.2
+        },
+        {
+          "param": "items[1].hits[0].cue",
+          "cue": "it was vacated",
+          "label": "items[1].hits[0].cue",
+          "scene_time_s": 18.6,
+          "absolute_s": 579.24
+        },
+        {
+          "param": "items[2].stampAt.cue",
+          "cue": "it was vacated",
+          "label": "items[2].stampAt.cue",
+          "scene_time_s": 18.8,
+          "absolute_s": 579.44
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb_late",
+        "cfpb_vacated"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_risk",
+      "segment": "m5_risk",
+      "type": "engine_cartoon",
+      "start_s": 581.73,
+      "end_s": 601.5,
+      "duration_s": 19.77,
+      "visual_objective": "",
+      "narration": "Meanwhile, a lot of card debt is going bad. The New York Fed reports that close to seven percent of card balances were moving into serious delinquency, ninety days or more behind, in a year. When that happens, the interest and fees keep piling up on the people least able to pay them.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "into serious delinquency",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 8.85,
+          "absolute_s": 590.58
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "When that happens",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.35,
+          "absolute_s": 596.08
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "When that happens",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.35,
+          "absolute_s": 596.08
+        },
+        {
+          "param": "items[1].h[1][0].cue",
+          "cue": "keep piling up",
+          "label": "items[1].h[1][0].cue",
+          "scene_time_s": 17.51,
+          "absolute_s": 599.24
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nyfed"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_distress",
+      "segment": "m5_distress",
+      "type": "engine_cartoon",
+      "start_s": 601.5,
+      "end_s": 625.43,
+      "duration_s": 23.93,
+      "visual_objective": "",
+      "narration": "The New York Fed also measures the stock of bad debt. The share of card balances that were ninety days or more behind rose from seven point six percent in late twenty twenty-two to twelve point eight percent in early twenty twenty-six. And more than twenty-three million Americans still carry card debts on their credit reports that lenders have already written off.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "to twelve point eight",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 11.98,
+          "absolute_s": 613.48
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "still carry card debts",
+          "label": "items[1].at.cue",
+          "scene_time_s": 18.6,
+          "absolute_s": 620.1
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "already written off",
+          "label": "items[2].at.cue",
+          "scene_time_s": 22.05,
+          "absolute_s": 623.55
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "libst"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "p38_three",
+      "segment": "m5_draw",
+      "type": "engine_draw",
+      "start_s": 625.43,
+      "end_s": 644.83,
+      "duration_s": 19.4,
+      "visual_objective": "",
+      "narration": "Let me put the three businesses side by side. The toll on every swipe, collected by the networks and the banks. The interest, paid by people who carry a balance. And the fees, paid by people who slip. Three streams of money, all flowing through the same small card.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "The toll on every swipe",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.86,
+          "absolute_s": 629.29
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "The toll on every swipe",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.86,
+          "absolute_s": 629.29
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "collected by the networks",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.49,
+          "absolute_s": 630.93
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "The interest, paid by",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.22,
+          "absolute_s": 633.65
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "And the fees, paid by",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 12.77,
+          "absolute_s": 638.2
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "all flowing through the same small card",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 16.72,
+          "absolute_s": 642.16
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs",
+        "cfpb_2025"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "s39_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 644.83,
+      "end_s": 672.17,
+      "duration_s": 27.33,
+      "visual_objective": "",
+      "narration": "So what is the hidden business behind your credit card? It is not the plastic. It is the position. The card sits between you and every store, and every company in that chain takes a slice. If you pay in full, the system can work in your favor. If you carry a balance, you are the one paying for it. Either way, the card is never really free.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "It is not the plastic",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.09,
+          "absolute_s": 649.92
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "If you pay in full",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.47,
+          "absolute_s": 661.3
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "If you pay in full",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.47,
+          "absolute_s": 661.3
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "If you carry a balance",
+          "label": "items[3].at.cue",
+          "scene_time_s": 20.25,
+          "absolute_s": 665.08
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "crs",
+        "cfpb_2025",
+        "cfpb_rewards"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 41,
+      "id": "s40_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 672.17,
+      "end_s": 683.47,
+      "duration_s": 11.3,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 8.56,
+          "absolute_s": 680.73
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}

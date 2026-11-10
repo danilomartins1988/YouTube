@@ -532,3 +532,22 @@ Watch the full story: "Why Americans Pay So Much for Healthcare" on The Hidden E
 ```
 healthcare, US healthcare costs, health insurance, Medicare, hospital prices, drug prices, prescription drugs, RAND, KFF, CMS, shorts, economics explained, The Hidden Economics
 ```
+
+## 30-credit-cards
+
+**Title**
+```
+Americans Paid $160 Billion in Card Interest in One Year #shorts
+```
+**Description**
+```
+One hundred and sixty billion dollars. That is how much interest Americans were charged on their credit cards in a single year.
+
+Watch the full story: "The Hidden Business Behind Your Credit Card" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #creditcard #personalfinance #usa #economics
+```
+**Tags**
+```
+credit card, credit cards explained, credit card interest, APR, swipe fees, interchange fees, Visa, Mastercard, credit card rewards, cash back, shorts, economics explained, The Hidden Economics
+```
