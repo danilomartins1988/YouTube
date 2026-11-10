@@ -1,0 +1,277 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; estimates, allegations and interest are said as such.
+logline: The Supreme Court struck down tariffs that had raised an estimated one hundred and sixty-six billion dollars. The
+  refunds are flowing, but not to the shoppers who paid higher prices. Follow the money from the checkout to customs and back.
+title: Who Actually Gets the $166 Billion Tariff Refund?
+segments:
+- id: h_open
+  chapter: One hundred and sixty-six billion
+  narration: One hundred and sixty-six billion dollars. That is roughly how much the United States had charged in tariffs that
+    the Supreme Court later said the President had no power to impose. The number is the customs agency's own estimate.
+  claims:
+  - total
+- id: h_twist
+  chapter: One hundred and sixty-six billion
+  narration: Now the government is paying that money back. By late October, it had sent about {{refunds}} in refunds, with
+    interest, to the Treasury for payment. But almost none of it is going to the people who paid higher prices in the store.
+  claims:
+  - refunds
+  - who
+- id: h_question
+  chapter: One hundred and sixty-six billion
+  narration: So who really paid those tariffs, and who is getting the money back?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: One hundred and sixty-six billion
+  narration: By the end of this video, you will know how a tariff travels from a port to your shopping cart, how the refund
+    machine works, and why the checks are going to companies, not to you.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The ruling
+  narration: ''
+  claims: []
+- id: m1_case
+  chapter: The ruling
+  narration: The tariffs were imposed under an emergency powers law known as IEEPA. Importers sued.
+    On February twentieth, twenty twenty-six, the Supreme Court decided the case, Learning Resources versus Trump, by a vote of
+    {{ruling}}.
+  claims:
+  - ruling
+- id: m1_held
+  chapter: The ruling
+  narration: The ruling was short and direct. In the Court's words, the emergency law does not authorize the President to impose
+    tariffs. Chief Justice Roberts wrote for the majority. Justices Thomas, Alito and Kavanaugh dissented.
+  claims:
+  - ruling
+- id: m1_mess
+  chapter: The ruling
+  narration: But the decision left one huge question open. Justice Kavanaugh pointed it out in his dissent. The Court, he
+    wrote, said nothing about whether or how the government should return the billions it had collected from importers. He
+    predicted it would likely be a mess. And he added a line that sits at the heart of this story. Some importers may have
+    already passed on the costs to consumers.
+  claims:
+  - ruling
+- id: m1_scale
+  chapter: The ruling
+  narration: The scale was enormous. According to the customs agency's estimate, those tariffs had been charged on {{total.entries_spoken}}
+    import shipments, paid by {{total.importers_spoken}} different importers.
+  claims:
+  - total
+- id: m1_draw
+  chapter: The ruling
+  narration: Let me draw who pays a tariff. Here is a factory abroad. Here is the American company that imports its goods. The
+    tariff is charged at the port, and the importer pays it to customs. Then the goods go to a store, and to you. The law sees
+    only the first payment. Your price tag is a separate story.
+  claims:
+  - who
+  analysis: true
+  source_note: Diagram of the importer-of-record chain (CBP rules).
+- id: m1_transition
+  chapter: The ruling
+  narration: So the legal question was settled. The money question was just beginning. And the first part of it is simple.
+    Who actually paid?
+  claims:
+  - paid
+- id: m2_card
+  chapter: Who really paid
+  narration: ''
+  claims: []
+- id: m2_importer
+  chapter: Who really paid
+  narration: On paper, the importer pays. That is how a tariff works. A company brings a shipment of toys or shoes into the
+    country, and before customs releases it, the company pays the duty. The government never sends you a bill.
+  claims:
+  - who
+- id: m2_pass
+  chapter: Who really paid
+  narration: But companies do not have to keep that cost. They can raise their prices. Economists measure this with a number
+    called pass-through. Researchers at the Yale Budget Lab estimate that for everyday core goods, {{paid}} of the tariffs showed
+    up in consumer prices, depending on how you measure it.
+  claims:
+  - paid
+- id: m2_nyfed
+  chapter: Who really paid
+  narration: Researchers at the New York Fed found something similar, but slower. They estimate that {{paid.nyfed_spoken}} of the
+    twenty twenty-five tariffs passed through into the prices of imported goods. The effect on store prices built up more gradually,
+    over many months.
+  claims:
+  - paid
+- id: m2_split
+  chapter: Who really paid
+  narration: So the honest answer is that the cost was shared. Importers paid customs first. Then many of them passed a large
+    part of it on, to stores and to shoppers. Exactly how much reached you depends on the product and the company, and no
+    one can trace every dollar.
+  claims:
+  - paid
+  analysis: true
+  source_note: Summary of the two estimates (commentary).
+- id: m2_draw
+  chapter: Who really paid
+  narration: Let me draw a tariff dollar. One dollar goes to customs. Part of it stays with the importer as a lower profit. Part
+    of it moves down the chain, into the wholesale price, then the store price. By the time it reaches your receipt, it is
+    hidden inside the price of a sweater or a toaster.
+  claims:
+  - paid
+  analysis: true
+  source_note: Illustrative pass-through diagram (based on the attributed estimates).
+- id: m2_transition
+  chapter: Who really paid
+  narration: Now run that chain backwards. When the money comes back, where does it land?
+  claims:
+  - refunds
+- id: m3_card
+  chapter: The refund machine
+  narration: ''
+  claims: []
+- id: m3_cape
+  chapter: The refund machine
+  narration: The customs agency built a new refund system inside its import software. It opened in stages. First, in April,
+    for recent shipments. Then, in June, for more complex cases. And in October, for the oldest shipments, but only for importers
+    that had gone to court and won an order.
+  claims:
+  - refunds
+- id: m3_court
+  chapter: The refund machine
+  narration: That last step pushed thousands of companies into court. More than four thousand cases were filed at the trade
+    court in New York, many of them simply to get the court order that
+    the refund system requires.
+  claims:
+  - refunds
+- id: m3_flow
+  chapter: The refund machine
+  narration: The money moved fast. By the end of July, the agency said it had sent {{refunds.jul_spoken}} in refunds, including
+    interest, to the Treasury for payment. By late October, the total reached {{refunds}}.
+  claims:
+  - refunds
+- id: m3_treasury
+  chapter: The refund machine
+  narration: You can see it in the Treasury's own books. In June twenty twenty-six alone, customs refunds were about {{refunds.june_spoken}}.
+    For three months, from May to July, refunds were so large that the government's net customs revenue actually went negative.
+  claims:
+  - refunds
+- id: m3_held
+  chapter: The refund machine
+  narration: And some money is simply waiting. About {{refunds.held_spoken}} was on hold, because the importers had not yet
+    given the government their bank details.
+  claims:
+  - refunds
+- id: m3_draw
+  chapter: The refund machine
+  narration: Let me draw the refund pipe. On the left, the customs agency, checking each shipment. In the middle, the Treasury,
+    paying out. On the right, the importer's bank account. There is no pipe that leads to a shopper. The system was built to
+    find the company that paid at the port, and only that company.
+  claims:
+  - refunds
+  - who
+  analysis: true
+  source_note: Diagram of the CBP refund process.
+- id: m3_transition
+  chapter: The refund machine
+  narration: So the checks are landing in corporate bank accounts. Here is what some of those companies say they did with
+    them.
+  claims:
+  - firms
+- id: m4_card
+  chapter: Where the money lands
+  narration: ''
+  claims: []
+- id: m4_rule
+  chapter: Where the money lands
+  narration: The customs agency is blunt about it. It can only refund the duties to the importer of record, the company named
+    on the import paperwork. There is no government refund for consumers. If you paid more for a toaster or a pair of
+    shoes in twenty twenty-five, there is no form you can fill out to claim your share from the government.
+  claims:
+  - who
+- id: m4_target
+  chapter: Where the money lands
+  narration: Look at the retailers' own filings. Target reported {{firms}} of tariff refunds in one quarter, booked as a reduction
+    in its cost of sales. In plain words, the refund made its costs lower, and its profit higher.
+  claims:
+  - firms
+- id: m4_costco
+  chapter: Where the money lands
+  narration: Costco said it paid about five hundred million dollars in these tariffs and had received about three hundred and
+    thirty-nine million back. It said part of that money was being invested in lower prices for its members. The clothing maker
+    lululemon received {{firms.lulu_spoken}}, which lifted its gross margin. And the toy maker Mattel said it received
+    eighty-eight million dollars, which helped push its gross margin to almost fifty-five percent.
+  claims:
+  - firms
+- id: m4_fedex
+  chapter: Where the money lands
+  narration: The most direct case is FedEx. In its latest quarterly filing, FedEx said it had received about {{firms.fedex_spoken}} in refunds, and recorded about {{firms.fedexowe_spoken}}
+    as money owed back to those customers.
+  claims:
+  - firms
+- id: m4_draw
+  chapter: Where the money lands
+  narration: Let me draw three ways a refund can go. Some becomes profit, and shows up in a better quarter. Some goes back to
+    business customers, like the shippers paying their clients. And some may turn into lower prices. Which one happens is up
+    to each company.
+  claims:
+  - firms
+  analysis: true
+  source_note: Diagram summarizing the company filings (commentary).
+- id: m4_transition
+  chapter: Where the money lands
+  narration: Which is exactly why shoppers are now going to court.
+  claims:
+  - who
+- id: m5_card
+  chapter: The fight
+  narration: ''
+  claims: []
+- id: m5_suits
+  chapter: The fight
+  narration: Consumers have filed class actions against several big companies. Costco disclosed four of them, which allege
+    that tariffs were passed on to members through higher prices and should now be refunded. FedEx disclosed fourteen. These
+    are allegations, and the cases are still going on.
+  claims:
+  - who
+- id: m5_class
+  chapter: The fight
+  narration: The one class action a court has actually certified so far is different. In October twenty twenty-six, the trade
+    court certified a class of importers, the companies that paid the duties, so that all of them can claim their refunds
+    together.
+  claims:
+  - who
+- id: m5_after
+  chapter: The fight
+  narration: Meanwhile, the tariffs did not simply disappear. Days after the ruling, the President used a different law, Section
+    one twenty-two, to impose a ten percent surcharge for {{after}}. When it expired in July, new tariffs followed under yet
+    another law, Section three oh one, on sixty economies. The Tax Foundation, a think tank, still estimates the
+    tariff burden at about eight hundred and twenty dollars per American household in twenty twenty-six.
+  claims:
+  - after
+- id: m5_draw
+  chapter: The fight
+  narration: Let me draw the loop. Tariffs go in at the port. Prices rise on the shelf. The court says the tariffs were illegal.
+    Refunds come out, to the importers. And new tariffs start the loop again, under a new law.
+  claims:
+  - after
+  - who
+  analysis: true
+  source_note: Summary diagram of the sourced sequence.
+- id: payoff
+  chapter: The lesson
+  narration: So who actually gets the tariff refund? The companies that paid at the border. Not because anyone planned it that
+    way, but because a tariff is legally a tax on the importer, even when the shopper ends up paying much of it. The money left
+    through the port, and it is coming back through the same door. What each company does with it next is the part you can
+    still watch.
+  claims:
+  - who
+  - paid
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

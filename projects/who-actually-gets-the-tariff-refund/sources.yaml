@@ -1,0 +1,124 @@
+# Sources and claims for "Who Actually Gets the $166 Billion Tariff Refund?" (Episode 41, new topics N1).
+# Every claim was read on its primary page/file on 2026-11-10 (notes: docs/episodes/41-tariff-refund/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: $166bn is a CBP ESTIMATE (said); refund totals include interest and mean "certified and sent to Treasury" (said);
+# consumer class actions are ALLEGATIONS (said); the certified class action is for IMPORTERS; pass-through figures are
+# ESTIMATES (attributed); company refund figures as reported in their own filings; no logos.
+sources:
+  - id: scotus
+    title: "Learning Resources, Inc. v. Trump, No. 24-1287 (with Trump v. V.O.S. Selections, No. 25-250)"
+    publisher: Supreme Court of the United States
+    url: https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf
+    published: "2026-02-20"
+    accessed: "2026-11-10"
+    credit: "U.S. Supreme Court"
+  - id: cit
+    title: "Freestyle World v. CBP, No. 26-01088 (CIT): ECF 24 (Aug 4), ECF 61 (Oct 8), ECF 65 (Oct 26)"
+    publisher: U.S. Court of International Trade (CourtListener RECAP)
+    url: https://storage.courtlistener.com/recap/gov.uscourts.cit.19175/gov.uscourts.cit.19175.65.0.pdf
+    published: "2026-10-26"
+    accessed: "2026-11-10"
+    credit: "U.S. Court of International Trade filings"
+  - id: cbp
+    title: "IEEPA duty refunds"
+    publisher: U.S. Customs and Border Protection
+    url: https://www.cbp.gov/trade/programs-administration/trade-remedies/ieepa-duty-refunds
+    published: "2026-11-02"
+    accessed: "2026-11-10"
+    credit: "CBP"
+  - id: mts
+    title: "Monthly Treasury Statement, Table 4: customs duties (2026)"
+    publisher: U.S. Treasury, Fiscal Data
+    url: https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/
+    published: "2026-10"
+    accessed: "2026-11-10"
+    credit: "U.S. Treasury"
+  - id: filings
+    title: "Company filings: Target 10-Q (Q2 2026), Costco 10-K (FY2026), Mattel 10-Q, lululemon 10-Q, FedEx 10-Q (Oct 2026)"
+    publisher: SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm
+    published: "2026-10"
+    accessed: "2026-11-10"
+    credit: "Company 10-K/10-Q filings"
+  - id: crs
+    title: "CRS R49481: tariff authorities after the Supreme Court ruling"
+    publisher: Congressional Research Service
+    url: https://www.congress.gov/crs_external_products/R/PDF/R49481/R49481.1.pdf
+    published: "2026-10-08"
+    accessed: "2026-11-10"
+    credit: "CRS"
+  - id: yale
+    title: "Tariff pass-through analysis"
+    publisher: The Budget Lab at Yale
+    url: https://budgetlab.yale.edu/sites/default/files/page_to_pdf/1349/publication_1349.pdf
+    published: "2026"
+    accessed: "2026-11-10"
+    credit: "Yale Budget Lab (estimate)"
+  - id: nyfed
+    title: "How fast do tariffs pass through into consumer prices?"
+    publisher: Federal Reserve Bank of New York (Liberty Street Economics)
+    url: https://libertystreeteconomics.newyorkfed.org/2026/10/how-fast-do-tariffs-pass-through-into-consumer-prices/
+    published: "2026-10"
+    accessed: "2026-11-10"
+    credit: "New York Fed researchers (estimate)"
+
+claims:
+  - id: total
+    text: "CIT ECF 61 (Oct 8, 2026), quoting CBP's March 6 declaration: 'it was estimated that unlawfully collected duties amounting to $166 billion had been assessed on 53 million entries, involving roughly 330,000 importers of record.'"
+    spoken: one hundred and sixty-six billion dollars
+    display: "≈ $166bn of IEEPA tariffs (CBP estimate)"
+    fields: {importers_spoken: about three hundred and thirty thousand, entries_spoken: fifty-three million}
+    source_ids: [cit]
+    status: source_located
+    verification_note: Estimate (said).
+
+  - id: ruling
+    text: "Learning Resources, Inc. v. Trump (Feb 20, 2026), 6-3, Roberts for the Court (joined by Sotomayor, Kagan, Gorsuch, Barrett, Jackson); Thomas, Alito, Kavanaugh dissenting: 'Held: IEEPA does not authorize the President to impose tariffs.' Kavanaugh dissent: 'The Court says nothing today about whether, and if so how, the Government should go about returning the billions of dollars that it has collected from importers' ... likely to be a 'mess'; 'some importers may have already passed on costs to consumers.'"
+    spoken: six to three
+    display: "Supreme Court, Feb 20, 2026: IEEPA tariffs not authorized (6-3)"
+    source_ids: [scotus]
+    status: source_located
+    verification_note: Read in the opinion.
+
+  - id: refunds
+    text: "CBP declaration (ECF 24, Aug 4, 2026): '$128.68 billion' accepted; 'refunds (duties plus interest) of approximately $100 billion' certified and sent to Treasury by July 31. ECF 65 (Oct 26): as of Oct 23, $137.9bn accepted and $127.7bn (duties plus interest) sent to Treasury, 44 million entries; about $990 million held because importers have not provided bank details. CAPE phases: Apr 20 (unliquidated / recently liquidated), Jun 29 (reconciliation), Oct 6 (finally liquidated, only with a court order). Treasury MTS customs refunds: $21.97bn (May), $49.18bn (Jun), $33.38bn (Jul), $10.54bn (Aug), $19.36bn (Sep 2026); net customs receipts negative May-July (all customs refunds)."
+    spoken: one hundred and twenty-seven point seven billion dollars
+    display: "$127.7bn certified for refund by Oct 23, 2026 (incl. interest)"
+    fields: {jul_spoken: about one hundred billion dollars, held_spoken: about nine hundred and ninety million dollars, june_spoken: forty-nine billion dollars}
+    source_ids: [cit, mts]
+    status: source_located
+    verification_note: Includes interest; certified, not necessarily paid (said).
+
+  - id: who
+    text: "CBP: 'CBP is only able to refund IEEPA duties to the Importer of Record or the Notify Party (designated on CBP Form 4811)'. No government consumer refund. CIT certified (Oct 8) a class of importers of record who paid IEEPA duties Feb 1, 2025 - Feb 19, 2026. Consumer suits (ALLEGATIONS): Costco 10-K lists four class actions 'seeking a refund of tariffs ... passed on to members through higher prices'; FedEx 10-Q: fourteen class actions, thirteen consolidated; Mattel 10-Q: three."
+    spoken: the importer of record
+    display: "Refunds go only to the importer of record (CBP)"
+    source_ids: [cbp, cit, filings]
+    status: source_located
+    verification_note: Consumer suits are allegations (said).
+
+  - id: firms
+    text: "Target 10-Q: 'we recognized $994 million related to IEEPA tariff refunds ... as a reduction of Cost of Sales.' Costco 10-K: paid about $500M in IEEPA duties, received about $339M; 'a portion ... invested in reducing prices for members.' lululemon: received $134.5M; gross margin includes an increase of 560 basis points. Mattel: received $88M, helping lift gross margin to 54.8%. FedEx 10-Q: $3.3bn refunds received; $2.7bn recorded as owed to customers; 'FedEx remits corresponding refunds as soon as practicable.'"
+    spoken: nine hundred and ninety-four million dollars
+    display: "Target: $994M of tariff refunds booked (10-Q)"
+    fields: {costco_spoken: about three hundred and thirty-nine million dollars, lulu_spoken: one hundred and thirty-four point five million dollars, fedex_spoken: three point three billion dollars, fedexowe_spoken: two point seven billion dollars}
+    source_ids: [filings]
+    status: source_located
+    verification_note: As reported in each company's filing.
+
+  - id: paid
+    text: "ESTIMATES. Yale Budget Lab: 'Implied passthrough of tariffs to imported consumer goods prices ranges from roughly 46–86% for core goods'. New York Fed (Liberty Street, Oct 2026): 'nearly 90 percent of the 2025 tariffs were passed through to U.S. import prices'; consumer prices respond more slowly."
+    spoken: between forty-six and eighty-six percent
+    display: "Pass-through to core goods prices 46-86% (Yale Budget Lab estimate)"
+    fields: {nyfed_spoken: nearly ninety percent}
+    source_ids: [yale, nyfed]
+    status: source_located
+    verification_note: Estimates attributed by name.
+
+  - id: after
+    text: "CRS R49481 (Oct 8, 2026): Section 122 surcharge of 10% for 150 days from Feb 24, 2026 (91 FR 9339), expired July 24, 2026; on July 23 the President imposed Section 301 duties of 10% or 12.5% on 60 economies (91 FR 47717); Section 232 actions continue. Tax Foundation (estimate, read via summary): average tariff tax increase about $820 per US household in 2026. CIT ECF 61/65/66: more than 4,000 refund cases filed for finally liquidated entries."
+    spoken: one hundred and fifty days
+    display: "Replacement: Section 122 (10%, 150 days), then Section 301"
+    source_ids: [crs]
+    status: source_located
+    verification_note: Read in CRS.

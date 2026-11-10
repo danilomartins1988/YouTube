@@ -1,0 +1,45 @@
+# Visual direction for who-actually-gets-the-tariff-refund (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: container port + supermarket (hook), courtroom + port (ruling), warehouse + charts + store (who paid),
+# customs office at night + Treasury charts + trade court (refund machine), exchange floor + warehouse + port (where money lands),
+# courtroom at night + Congress (the fight).
+primary_tone: strategy
+secondary_tones:
+- bright
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: One hundred and sixty-six billion
+  tone: strategy
+- chapter: The ruling
+  tone: reflective
+- chapter: Who really paid
+  tone: bright
+- chapter: The refund machine
+  tone: strategy
+- chapter: Where the money lands
+  tone: bright
+- chapter: The fight
+  tone: reflective
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: strategy
+  headline: []
+  idea: shopping cart with a $166 billion refund tag that goes past it (CBP estimate)
+requirements:
+- No company logos (names in text only); no likeness of real people (justices, President)
+- Estimates attributed (CBP, Yale Budget Lab, NY Fed, Tax Foundation); consumer suits said as allegations

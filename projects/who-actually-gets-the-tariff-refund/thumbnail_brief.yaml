@@ -1,0 +1,76 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: Who Actually Gets the $166 Billion Tariff Refund?
+docs_dir: docs/episodes/41-tariff-refund
+video: output/tariff_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Who gets the money back when tariffs are ruled illegal?
+  surprising_fact: About $166bn of IEEPA tariffs were charged (CBP estimate); refunds go only to importers of record
+  subject: a shopping cart
+  tone: strategy
+  metaphor: a refund that skips the shopper
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $166 BILLION
+  - NOT FOR YOU
+  claim_basis: 'total: about $166bn of IEEPA duties (CBP estimate, CIT filing); refunds only to importers of record (CBP)'
+  scene:
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#1E2A4A'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: cart
+      x: 1480
+      y: 600
+      s: 0.75
+    support: []
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 3
+      color: '#E3F2FD'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'PAID: YOU'
+  - 'REFUND: THEM'
+  claim_basis: 'pass-through estimates (Yale Budget Lab, NY Fed) vs refunds to importers of record (CBP)'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: cart
+      x: 480
+      y: 650
+      s: 0.6
+    after:
+      kind: ship
+      x: 1440
+      y: 640
+      s: 0.6
+    support: []
+    particles:
+      n: 40
+      region: [0, 0, 1920, 1080]
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

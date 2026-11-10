@@ -70,6 +70,7 @@ SHORTS = {
     "39-visa-mastercard": ("how-visa-and-mastercard-became-financial-gatekeepers", "documentary", "visamc_documentary", "355 BILLION", "PAYMENTS A YEAR", "How Two Bank Clubs Became Visa and Mastercard", "#visa #mastercard #finance"),
     "40-grocery": ("the-hidden-business-behind-americas-grocery-prices", "documentary", "grocery_documentary", "11.8 CENTS", "TO THE FARM", "Only 11.8 Cents of Your Food Dollar Reaches the Farm", "#groceries #food #usa"),
     "43-gold-reserve": ("americas-trillion-dollar-gold-booked-at-11-billion", "documentary", "gold_documentary", "$11 BILLION", "ON THE BOOKS", "America's Gold Is Booked at Just $11 Billion", "#gold #fortknox #usa"),
+    "41-tariff-refund": ("who-actually-gets-the-tariff-refund", "documentary", "tariff_documentary", "$166 BILLION", "REFUND: NOT YOU", "Who Gets the $166 Billion Tariff Refund? Not Shoppers", "#tariffs #economy #usa"),
     "42-penny": ("why-america-stopped-making-the-penny", "documentary", "penny_documentary", "3.69 CENTS", "TO MAKE 1 CENT", "It Cost 3.69 Cents to Make One Penny", "#penny #money #usa"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
