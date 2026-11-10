@@ -551,3 +551,22 @@ Watch the full story: "The Hidden Business Behind Your Credit Card" on The Hidde
 ```
 credit card, credit cards explained, credit card interest, APR, swipe fees, interchange fees, Visa, Mastercard, credit card rewards, cash back, shorts, economics explained, The Hidden Economics
 ```
+
+## 31-us-housing
+
+**Title**
+```
+You Now Need $120,800 a Year to Afford a Typical Home #shorts
+```
+**Description**
+```
+One hundred and twenty-one thousand dollars a year. That is roughly the income you now need to afford the payments on the typical American home.
+
+Watch the full story: "Why American Homes Became So Expensive" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #housing #realestate #usa #economics
+```
+**Tags**
+```
+housing market, home prices, housing crisis, mortgage rates, housing affordability, why are houses so expensive, zoning, housing shortage, first time home buyer, real estate, shorts, economics explained, The Hidden Economics
+```
