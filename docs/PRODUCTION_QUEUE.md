@@ -56,7 +56,7 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | 07 | How Car Dealerships Really Make Money | **Delivered** (Ep 34, 11:19, QC 0 errors) |
 | 08 | Why America's Electricity Bills Are Rising | **Delivered** (Ep 35, 11:26, QC 0 errors) |
 | 09 | The Bank That Accidentally Sent $900 Million | Already scheduled (top-10 #4); produced once |
-| 10 | Why Your Car Insurance Keeps Getting More Expensive | In production (Ep 36, retitled "Why Your Car Insurance Got So Expensive": prices now falling y/y) |
+| 10 | Why Your Car Insurance Keeps Getting More Expensive | **Delivered** (Ep 36, 11:27, QC 0 errors; retitled "Why Your Car Insurance Got So Expensive": prices now falling y/y) |
 | 11 | The Hidden Economics of Amazon Prime | Approved, queued |
 | 12 | Why America's Airports Make Money Before You Fly | Approved, queued |
 | 13 | The Day Oil Was Worth Less Than Nothing | Already scheduled (top-10 #10); produced once |

@@ -646,3 +646,22 @@ Watch the full story: "Why America's Electricity Bills Are Rising" on The Hidden
 ```
 electricity bills, electric bill, power prices, utility rates, data centers, AI electricity, PJM, power grid, natural gas, energy prices, shorts, economics explained, The Hidden Economics
 ```
+
+## 36-car-insurance
+
+**Title**
+```
+Car Insurance Jumped 22.6% in One Year. Here's Why #shorts
+```
+**Description**
+```
+Twenty-two point six percent. That is how much the price of car insurance in America rose in a single year, by April twenty twenty-four.
+
+Watch the full story: "Why Your Car Insurance Got So Expensive" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #carinsurance #insurance #usa #economics
+```
+**Tags**
+```
+car insurance, auto insurance, insurance rates, why is car insurance so expensive, insurance premiums, Progressive, Allstate, car repair costs, uninsured drivers, Florida insurance, shorts, economics explained, The Hidden Economics
+```

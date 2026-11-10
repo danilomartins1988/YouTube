@@ -1,0 +1,345 @@
+{
+  "title": "Why Your Car Insurance Got So Expensive",
+  "docs_dir": "docs/episodes/36-car-insurance",
+  "video": "output/autoins_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "What made car insurance so expensive, and who made money?",
+    "surprising_fact": "CPI motor vehicle insurance +22.6% in 12 months (Apr 2024), biggest since 1976; Allstate \u2212$1.39bn (2022) \u2192 $10.17bn (2025)",
+    "subject": "a generic car with a price shock",
+    "tone": "bright",
+    "metaphor": "the insurance cycle"
+  },
+  "slug": "why-your-car-insurance-got-so-expensive",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "+22.6%",
+        "CAR INSURANCE"
+      ],
+      "claim_basis": "cpi: BLS CPI motor vehicle insurance +22.6% 12-month change, April 2024",
+      "scene": {
+        "palette": {
+          "sky0": "#10070A",
+          "sky1": "#3A1218",
+          "haze": "#EF9A9A",
+          "key": "#FFEBEE",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "sedan",
+          "x": 1450,
+          "y": 620,
+          "s": 0.6,
+          "color": "#1E88E5",
+          "sticker": "$$$"
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFEBEE"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "+22.6%",
+          "x": 90,
+          "y": 572.2,
+          "size": 307.3,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "CAR INSURANCE",
+          "x": 96,
+          "y": 710.2,
+          "size": 120,
+          "width": 998.4,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 333, 1270, 591), (96, 617, 1094, 717)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.090",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 41",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-costco-makes-money-selling-things-cheap (distance 0.30)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "cpi: BLS CPI motor vehicle insurance +22.6% 12-month change, April 2024",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.617,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-costco-makes-money-selling-things-cheap"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "2022 \u2212$1.4B",
+        "2025 +$10.2B"
+      ],
+      "claim_basis": "insurers: Allstate net loss $1.39bn (2022), net income $10.17bn (2025, incl. gains on dispositions), 10-K",
+      "scene": {
+        "palette": {
+          "sky0": "#06121A",
+          "sky1": "#123040",
+          "haze": "#80CBC4",
+          "key": "#E0F7FA",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ledger",
+          "x": 480,
+          "y": 650,
+          "s": 0.6,
+          "heading": "INSURER NET INCOME",
+          "amount": "\u2212$1.39B",
+          "magnifier": false,
+          "rot": -4
+        },
+        "after": {
+          "kind": "ledger",
+          "x": 1440,
+          "y": 650,
+          "s": 0.6,
+          "heading": "INSURER NET INCOME",
+          "amount": "+$10.17B",
+          "magnifier": false,
+          "stamp": "RECORD",
+          "rot": 4
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E0F7FA"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "2022 \u2212$1.4B",
+          "x": 480.0,
+          "y": 218.5,
+          "size": 108.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "2025 +$10.2B",
+          "x": 1440.0,
+          "y": 211.1,
+          "size": 99.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.58 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 134, 860, 225), (1060, 134, 1820, 217)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "8.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.4:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.095",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 67",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-car-dealerships-really-make-money (distance 0.25)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "insurers: Allstate net loss $1.39bn (2022), net income $10.17bn (2025, incl. gains on dispositions), 10-K",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.576,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-car-dealerships-really-make-money"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-10T07:18:19Z",
+  "master": "output/why-your-car-insurance-got-so-expensive/thumbnails/master_A.png"
+}
