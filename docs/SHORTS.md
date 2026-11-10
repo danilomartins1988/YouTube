@@ -36,3 +36,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 31-us-housing | You Now Need $120,800 a Year to Afford a Typical Home | $120,800 A YEAR / TO AFFORD A HOME | 48 s | `docs/episodes/31-us-housing/youtube-short/short_package.md` |
 | 32-costco | Costco Made $5.9 Billion Before You Bought Anything | $5.9 BILLION / JUST TO GET IN | 55 s | `docs/episodes/32-costco/youtube-short/short_package.md` |
 | 33-student-debt | Americans Owe $1.65 Trillion in Student Loans | $1.65 TRILLION / IN STUDENT DEBT | 55 s | `docs/episodes/33-student-debt/youtube-short/short_package.md` |
+| 34-car-dealers | Car Dealers Make More in the Finance Office Than on the Car | $2,769 PER CAR / FROM THE FINANCE OFFICE | 57 s | `docs/episodes/34-car-dealers/youtube-short/short_package.md` |

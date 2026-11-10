@@ -608,3 +608,22 @@ Watch the full story: "The Business Behind America's Student Debt" on The Hidden
 ```
 student loans, student debt, student loan crisis, college tuition, student loan servicers, Nelnet, student loan default, SAVE plan, Grad PLUS, cost of college, shorts, economics explained, The Hidden Economics
 ```
+
+## 34-car-dealers
+
+**Title**
+```
+Car Dealers Make More in the Finance Office Than on the Car #shorts
+```
+**Description**
+```
+Two thousand five hundred and sixty-four dollars. That is the average gross profit AutoNation, one of America's largest dealership groups, made on each new car it sold in twenty twenty-five.
+
+Watch the full story: "How Car Dealerships Really Make Money" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #cars #carbuying #usa #economics
+```
+**Tags**
+```
+car dealership, how car dealers make money, car buying tips, F&I, dealer markup, auto loan, extended warranty, car prices, AutoNation, franchise laws, shorts, economics explained, The Hidden Economics
+```
