@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {Character} from '../presenter/Presenter';
+import {SUBJECTS} from './CinematicThumb';
 
 /**
  * PunchThumb (v2 thumbnails): loud, high-contrast YouTube covers built to be clicked at phone size.
@@ -16,6 +17,8 @@ export type PunchProps = {
   bg: [string, string];            // sunburst colors (center, edge)
   rays?: string;                   // ray color
   hero: {kind: string; x: number; y: number; s: number; rot?: number; [k: string]: any};
+  /** palette for heroes borrowed from CinematicThumb SUBJECTS */
+  pal?: {sky0: string; sky1: string; haze: string; key: string; accent: string; ink: string};
   presenter?: {x: number; y: number; s: number; face?: 1 | -1; point?: [number, number]};
   arrow?: {from: [number, number]; to: [number, number]; bend?: number; color?: string};
   circle?: {x: number; y: number; r: number; color?: string};
@@ -110,12 +113,16 @@ const Words: React.FC<{t: PunchText}> = ({t}) => {
 };
 
 export const PunchThumb: React.FC<PunchProps> = (p) => {
-  const Hero = HEROES[p.hero.kind];
+  const pal = p.pal || {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#FFFFFF', key: '#FFF3E0', accent: '#FFC21A', ink: '#FFFFFF'};
+  const Hero = HEROES[p.hero.kind] || (SUBJECTS[p.hero.kind] ? ((o: any) => SUBJECTS[o.kind]({...o, x: 0, y: 0, s: 1}, pal)) : null);
   const pr = p.presenter;
   return (
     <AbsoluteFill style={{backgroundColor: p.bg[1]}}>
       <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
         <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+          <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" /></filter>
+          <linearGradient id="paperShade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#FFFFFF" stopOpacity={0.2} /><stop offset="1" stopColor="#000" stopOpacity={0.35} /></linearGradient>
           <filter id="pblur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6" /><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" /></filter>
           <filter id="pwhite" x="-20%" y="-20%" width="140%" height="140%">
             <feMorphology in="SourceAlpha" operator="dilate" radius="12" result="d" /><feFlood floodColor="#FFFFFF" /><feComposite in2="d" operator="in" result="w" />

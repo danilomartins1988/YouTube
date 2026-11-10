@@ -329,3 +329,9 @@ YOUTUBE PACKAGE READY.
   - Make no promises about reach.
 - **Thumbnails and shorts** only when the brief asks for them.
 - **Autonomy.** Production runs end to end without intermediate approvals. **Publishing is always manual.** Never upload.
+
+## Main character (owner decision, 2026-11-10)
+- The cartoon presenter (suit, glasses, gold tie) is the channel's **main character**: he appears in every long video
+  (presenter boards) and on every v2 thumbnail (PunchThumb), shocked and pointing at the hero object.
+- Next videos: improve his **arm** (pointing/drawing arm: better shoulder joint, elbow bend, hand shape, no stretched
+  straight tube). Old videos are not re-rendered for this.

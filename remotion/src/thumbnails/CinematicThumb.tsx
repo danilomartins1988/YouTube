@@ -101,7 +101,7 @@ const metal = (id: string, a: string, b: string) => <linearGradient id={id} x1="
 
 /* ------------------------------------------------------------------------------------------------ subjects */
 type SubjectFn = (o: any, P: CinematicProps['palette']) => React.ReactNode;
-const SUBJECTS: Record<string, SubjectFn> = {
+export const SUBJECTS: Record<string, SubjectFn> = {
   /** A massive open vault door; the chamber behind is empty; bills dissolving into dust. */
   vault: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     <defs>{metal('vm', '#5A6270', '#A9B3C2')}<radialGradient id="vin" cx="50%" cy="45%" r="60%"><stop offset="0" stopColor={P.key} stopOpacity={0.55} /><stop offset="1" stopColor="#05070B" /></radialGradient></defs>
