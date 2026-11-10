@@ -1,0 +1,95 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic graduation cap only (no real logos or campuses).
+title: The Business Behind America's Student Debt
+docs_dir: docs/episodes/33-student-debt
+video: output/studentdebt_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Who is in the business of America's student debt?
+  surprising_fact: $1.65tn student debt (NY Fed Q2 2026); share 90+ days late jumped from 0.53% to 7.74% in one quarter, 10.6% by Q2 2026
+  subject: a graduation cap chained to a ball of debt
+  tone: bright
+  metaphor: the bill split between students, parents and taxpayers
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $1.65T
+  - STUDENT DEBT
+  claim_basis: 'total: $1.65 trillion outstanding student debt, 2026:Q2 (NY Fed)'
+  scene:
+    palette:
+      sky0: '#070B18'
+      sky1: '#1A2550'
+      haze: '#9FA8DA'
+      key: '#E8EAF6'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: gradcap
+      x: 1500
+      y: 470
+      s: 0.62
+      chain: true
+      label: DEBT
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E8EAF6'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 2024 0.5% LATE
+  - 2026 10.6%
+  claim_basis: 'delinq: student debt 90+ days late 0.53% (2024:Q4) vs 10.6% (2026:Q2), NY Fed'
+  scene:
+    palette:
+      sky0: '#0A1712'
+      sky1: '#1E3D33'
+      haze: '#A5D6A7'
+      key: '#E8F5E9'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: 90+ DAYS LATE
+      amount: 0.5%
+      magnifier: false
+      rot: -4
+    after:
+      kind: ledger
+      x: 1440
+      y: 650
+      s: 0.6
+      heading: 90+ DAYS LATE
+      amount: 10.6%
+      magnifier: false
+      stamp: ×20
+      rot: 4
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E8F5E9'
+    vignette: 0.5
+    brand: none

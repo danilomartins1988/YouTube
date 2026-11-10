@@ -406,6 +406,32 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f + 60} width={w} height={8} fill="#FFD54A" opacity={0.8} />
     </g>;
   },
+  /** A generic American college quad: red-brick halls with white columns and a pediment, a central clock tower, a green lawn
+   *  with diagonal paths and round trees. `night` lights the windows. No real campus. */
+  campus: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#1C2448' : '#BFE6FA'} />
+      {Array.from({length: Math.ceil(w / 1100)}, (_, k) => { const x = z.x0 + 120 + k * 1100;
+        return <g key={'hall' + k}>
+          <rect x={x} y={f - 420} width={700} height={300} fill="#B5533C" stroke={OL} strokeWidth={4} />
+          {Array.from({length: 4}, (_, r) => Array.from({length: 9}, (_, c) => <rect key={r + '-' + c} x={x + 30 + c * 74} y={f - 400 + r * 64} width={40} height={40} rx={4}
+            fill={night ? (rnd(k * 50 + r * 9 + c) > 0.4 ? '#FFE082' : '#2B3352') : '#CFEFFF'} stroke={OL} strokeWidth={2} />))}
+          <path d={`M ${x + 220} ${f - 420} L ${x + 350} ${f - 500} L ${x + 480} ${f - 420} Z`} fill="#ECEFF1" stroke={OL} strokeWidth={4} />
+          {[0, 1, 2, 3, 4].map((c) => <rect key={c} x={x + 236 + c * 52} y={f - 420} width={20} height={300} fill="#FAFAFA" stroke={OL} strokeWidth={3} />)}
+          <rect x={x + 900} y={f - 640} width={110} height={520} fill="#A84A35" stroke={OL} strokeWidth={4} />
+          <path d={`M ${x + 885} ${f - 640} L ${x + 955} ${f - 760} L ${x + 1025} ${f - 640} Z`} fill="#546E7A" stroke={OL} strokeWidth={4} />
+          <circle cx={x + 955} cy={f - 570} r={38} fill={K.cream} stroke={OL} strokeWidth={4} />
+          <path d={`M ${x + 955} ${f - 570} L ${x + 955 + 26 * Math.sin(t * 0.5)} ${f - 570 - 26 * Math.cos(t * 0.5)} M ${x + 955} ${f - 570} L ${x + 955 + 16 * Math.sin(t * 0.04)} ${f - 570 - 16 * Math.cos(t * 0.04)}`} stroke={OL} strokeWidth={4} strokeLinecap="round" />
+        </g>; })}
+      <rect x={z.x0} y={f - 120} width={w} height={720} fill={night ? '#2F5D3A' : '#7BCB6B'} />
+      {Array.from({length: Math.ceil(w / 600)}, (_, k) => { const x = z.x0 + k * 600;
+        return <path key={'pt' + k} d={`M ${x} ${f + 600} L ${x + 300} ${f - 120} L ${x + 600} ${f + 600}`} fill="none" stroke={night ? '#8D8F7A' : '#E8DDB5'} strokeWidth={26} />; })}
+      {Array.from({length: Math.ceil(w / 380)}, (_, k) => { const x = z.x0 + 190 + k * 380;
+        return <g key={'tr' + k}><rect x={x - 7} y={f - 150} width={14} height={50} fill={K.wood2} />
+          <circle cx={x} cy={f - 190} r={52} fill={night ? '#2E5E39' : '#4CAF50'} stroke={OL} strokeWidth={4} /></g>; })}
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -2824,9 +2850,40 @@ const pallet: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A rolled diploma with a ribbon that unrolls at `openAt` to reveal `text` (e.g. a balance owed) in red. */
+const diploma: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 460), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const u = a.openAt !== undefined ? E.out(win(t, a.openAt, 0.9)) : 0, W = 120 + 520 * u;
+  return <g key={'dp' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${a.rot ?? -6})`}>
+    <rect x={-W / 2} y={-150} width={W} height={300} rx={8} fill="#FFF8E1" stroke={OL} strokeWidth={5} />
+    {u > 0.6 && <g opacity={(u - 0.6) / 0.4}>
+      <T x={0} y={-80} s={30} c="#6D4C41">{a.title || 'BACHELOR OF ARTS'}</T>
+      <path d="M -200 -50 L 200 -50" stroke="#BCAAA4" strokeWidth={3} />
+      <T x={0} y={40} s={a.size ?? 64} c={K.red}>{a.text || ''}</T>
+      {a.sub && <T x={0} y={100} s={24} c="#6D4C41">{a.sub}</T>}</g>}
+    {[-1, 1].map((d) => <g key={d}><ellipse cx={d * W / 2} cy={0} rx={30} ry={160} fill="#FFECB3" stroke={OL} strokeWidth={5} /></g>)}
+    <rect x={-14} y={-160} width={28} height={320} fill={K.red} opacity={1 - u} stroke={OL} strokeWidth={3} />
+    {u < 0.3 && <path d="M 0 140 L -30 220 M 0 140 L 30 220" stroke={K.red} strokeWidth={14} strokeLinecap="round" />}
+  </g>;
+};
+
+/** Graduation caps tossed in the air: `n` caps launched at `at` (staggered), they fly up, spin and fall back. */
+const gradcaps: ItemFn = (a, {t, f}, i) => {
+  if (t < (a.at ?? 0) || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const n = a.n ?? 6, x0 = kf(a.x, t, 960), sp = a.spread ?? 700, s = a.scale ?? 1;
+  return <g key={'gc' + i}>{Array.from({length: n}, (_, k) => {
+    const tt = (t - (a.at ?? 0) - k * 0.18) % 3.2; if (tt < 0) return null;
+    const x = x0 - sp / 2 + sp * (k + 0.5) / n + 40 * Math.sin(k), y = f - 200 - (520 * tt - 330 * tt * tt / 1.6) * (0.8 + 0.3 * rnd(k)) * (a.h ?? 1);
+    return <g key={k} transform={`translate(${x} ${Math.min(y, f - 140)}) rotate(${tt * 220 * (k % 2 ? 1 : -1)}) scale(${s})`}>
+      <path d="M -70 0 L 0 -28 L 70 0 L 0 28 Z" fill="#212121" stroke={OL} strokeWidth={4} />
+      <path d="M -36 12 L -36 40 Q 0 56 36 40 L 36 12" fill="#212121" stroke={OL} strokeWidth={4} />
+      <path d="M 0 0 L 52 18 L 52 50" stroke={K.gold} strokeWidth={5} fill="none" /><circle cx={52} cy={54} r={7} fill={K.gold} /></g>; })}</g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

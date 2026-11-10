@@ -472,6 +472,20 @@ const SUBJECTS: Record<string, SubjectFn> = {
       <text x={0} y={-268} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill="#FFFFFF">FOR SALE</text>
       <text x={0} y={-180} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={o.price.length > 7 ? 54 : 70} fill="#05070B">{o.price}</text></g>}
   </g>,
+  /** A graduation cap (mortarboard) with a gold tassel, optionally chained to a ball (`chain`) with `label` on it. */
+  gradcap: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -8})`}>
+    <circle r={500} fill={P.haze} opacity={0.18} filter="url(#soft)" />
+    <path d="M -420 -40 L 0 -220 L 420 -40 L 0 140 Z" fill="#000" opacity={0.4} transform="translate(20 30)" filter="url(#soft)" />
+    <path d="M -230 40 L -230 190 Q 0 290 230 190 L 230 40" fill="#1B1B1B" stroke="#05070B" strokeWidth={10} />
+    <path d="M -420 -40 L 0 -220 L 420 -40 L 0 140 Z" fill="#262626" stroke="#05070B" strokeWidth={10} strokeLinejoin="round" />
+    <path d="M -420 -40 L 0 -220 L 420 -40" fill="none" stroke="#FFFFFF" strokeWidth={5} opacity={0.15} />
+    <circle cx={0} cy={-40} r={22} fill={P.accent} stroke="#05070B" strokeWidth={5} />
+    <path d="M 0 -40 L 300 40 L 300 250" stroke={P.accent} strokeWidth={14} fill="none" strokeLinecap="round" />
+    <path d="M 270 250 L 330 250 L 345 360 L 255 360 Z" fill={P.accent} stroke="#05070B" strokeWidth={6} />
+    {o.chain && <g>{Array.from({length: 5}, (_, k) => <ellipse key={k} cx={-260 - k * 40} cy={230 + k * 40} rx={26} ry={16} fill="none" stroke="#9E9E9E" strokeWidth={10} transform={`rotate(${k % 2 ? 40 : -40} ${-260 - k * 40} ${230 + k * 40})`} />)}
+      <circle cx={-520} cy={480} r={150} fill="#37474F" stroke="#05070B" strokeWidth={10} />
+      {o.label && <text x={-520} y={500} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={56} fill="#FFFFFF">{o.label}</text>}</g>}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

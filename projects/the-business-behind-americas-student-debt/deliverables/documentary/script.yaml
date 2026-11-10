@@ -1,0 +1,276 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations are said as such.
+logline: Americans owe one point six five trillion dollars in student loans. Who sets the price, who lends, who collects,
+  and what happened when the payment pause ended.
+title: The Business Behind America's Student Debt
+segments:
+- id: h_open
+  chapter: One point six five trillion dollars
+  narration: One point six five trillion dollars. That is how much Americans owe on student loans, more than they owe on
+    all their credit cards combined.
+  claims:
+  - total
+  analysis: true
+  source_note: NY Fed 2026:Q2; card balances $1.263tn in the same workbook.
+- id: h_twist
+  chapter: One point six five trillion dollars
+  narration: For five years, during and after the pandemic, most borrowers did not have to pay. Then missed payments came
+    back on credit reports. In three months, the share of student debt at least ninety days late jumped from {{delinq.before_spoken}}
+    to {{delinq.after_spoken}}.
+  claims:
+  - delinq
+  analysis: true
+  source_note: NY Fed workbook, 2024:Q4 vs 2025:Q1; "five years" is the March 2020 to 2025 pause and reporting grace period.
+- id: h_question
+  chapter: One point six five trillion dollars
+  narration: So who is actually in the business of America's student debt, and who ends up paying for it?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: One point six five trillion dollars
+  narration: By the end of this video, you will know the four players in this business. The colleges that set the price,
+    the government that lends the money, the companies that collect it, and the borrowers who fall behind.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The price of a degree
+  narration: ''
+  claims: []
+- id: m1_tuition
+  chapter: The price of a degree
+  narration: Start with the price tag. According to the College Board, the average published tuition and fees at a public
+    four-year college, for students from the same state, was about {{tuition.y1996_spoken}} in the school year that began
+    in nineteen ninety-six, measured in today's dollars. This year, it is {{tuition}}. At private nonprofit colleges, it went
+    from about twenty-seven thousand five hundred to forty-six thousand three hundred and fifty dollars. Those numbers are
+    already adjusted for inflation.
+  claims:
+  - tuition
+- id: m1_cpi
+  chapter: The price of a degree
+  narration: The government's own price index tells the same story. By our calculation from Bureau of Labor Statistics
+    data, the price of college tuition and fees rose about two hundred and fifty percent in the thirty years to September
+    twenty twenty-six. Prices in general rose about one hundred and fourteen percent.
+  claims:
+  - tuition
+  analysis: true
+  source_note: Our calculation from BLS CPI series (Sep 1996 to Sep 2026).
+- id: m1_twist
+  chapter: The price of a degree
+  narration: But there is a twist the headlines often miss. Over the last ten years, the inflation-adjusted sticker price
+    at public four-year colleges actually fell by eight percent. And after grants and scholarships, the average net tuition
+    paid by first-time, full-time in-state students there dropped from a peak of about four thousand six hundred dollars to an estimated one thousand
+    nine hundred and twenty this year. The sticker price and the real price are not the same thing.
+  claims:
+  - tuition
+- id: m1_grads
+  chapter: The price of a degree
+  narration: Still, most of the debt was already built up. Among students who finished a bachelor's degree in twenty twenty-five
+    at public and private nonprofit four-year colleges, forty-seven percent graduated with debt, and the average borrower owed {{grads}}.
+  claims:
+  - grads
+- id: m1_draw
+  chapter: The price of a degree
+  narration: Let me draw the gap. Here is the sticker price of a public college, almost doubling in thirty years after inflation.
+    Here is what a typical student actually pays after grants, much lower. The space between those two lines is filled by
+    grants, by family savings, and by loans. And for millions of students, the loan was the easiest piece to get.
+  claims:
+  - tuition
+  analysis: true
+  source_note: Diagram of the College Board published vs net price (schematic).
+- id: m1_transition
+  chapter: The price of a degree
+  narration: Which brings us to the lender. And in America, the biggest student lender by far is not a bank.
+  claims: []
+- id: m2_card
+  chapter: The biggest lender
+  narration: ''
+  claims: []
+- id: m2_gov
+  chapter: The biggest lender
+  narration: It is the federal government. The Federal Reserve's figures show Washington holding about one point six three
+    trillion dollars of student loans, the vast majority of the total. The Education Department counts {{total.people_spoken}}
+    people who have federal student loans.
+  claims:
+  - total
+- id: m2_growth
+  chapter: The biggest lender
+  narration: The pile grew fast. At the start of two thousand and three, Americans owed {{total.y2003_spoken}} in student
+    loans, according to the New York Fed. Today it is {{total}}. By our calculation, that is almost seven times as much in
+    twenty-three years.
+  claims:
+  - total
+- id: m2_profit
+  chapter: The biggest lender
+  narration: Was the government making money on all those loans? For years, its own estimates said yes. The Government
+    Accountability Office looked at loans made from nineteen ninety-seven to twenty twenty-one. At first, the Education Department
+    expected them to earn the government {{govcost}}. Later estimates flipped that to a cost of {{govcost.cost_spoken}}.
+    A swing of three hundred and eleven billion dollars.
+  claims:
+  - govcost
+- id: m2_why
+  chapter: The biggest lender
+  narration: The biggest single reason, about one hundred and two billion dollars of that swing, was the emergency relief
+    of the pandemic, when payments and interest were paused. The rest came from changes in repayment plans and from estimates
+    that turned out to be too optimistic about how much borrowers would repay.
+  claims:
+  - govcost
+  analysis: true
+  source_note: GAO attributes $102bn to emergency relief; the rest summarised from GAO's description.
+- id: m2_draw
+  chapter: The biggest lender
+  narration: Let me draw the government's balance. On one side, the interest it expected to collect. On the other, the money
+    it lends and the payments it forgives or never gets back. When the loans were made, the scale tipped toward profit. Twenty
+    years later, the same loans had tipped into a loss. The taxpayer ended up as the last link in the chain.
+  claims:
+  - govcost
+  analysis: true
+  source_note: Balance diagram of the GAO estimate (commentary).
+- id: m2_transition
+  chapter: The biggest lender
+  narration: But the government does not send the bills itself. For that, it hires private companies.
+  claims: []
+- id: m3_card
+  chapter: The middlemen
+  narration: ''
+  claims: []
+- id: m3_servicers
+  chapter: The middlemen
+  narration: They are called loan servicers. They send the statements, take the payments and answer the phone. According
+    to the Government Accountability Office, in September twenty twenty-five the biggest of them, Nelnet, handled about five
+    hundred and six billion dollars of loans for twelve point four million borrowers. Four other companies split most of
+    the rest.
+  claims:
+  - servicers
+- id: m3_fees
+  chapter: The middlemen
+  narration: How do they get paid? Under the older contracts, the Education Department paid servicers a monthly fee for each
+    borrower. About {{servicers}} for a borrower in repayment. About a dollar for a student still in school. And only forty-five
+    cents for a borrower more than two hundred and seventy days behind.
+  claims:
+  - servicers
+- id: m3_incentive
+  chapter: The middlemen
+  narration: Think about what that pays for. A borrower in good standing was worth more to the servicer than one who fell
+    far behind. Newer contracts from twenty twenty-four were meant to tie pay to performance, with penalties of up to twenty
+    percent. But the government's own watchdog found that the agency overseeing them lost almost half its staff in twenty
+    twenty-five, from one thousand four hundred and thirty-three people to seven hundred and seventy-seven.
+  claims:
+  - servicers
+  analysis: true
+  source_note: Fee structure from GAO-16-523; contract penalties and staffing from GAO-26-108534; first sentence is commentary.
+- id: m3_private
+  chapter: The middlemen
+  narration: And then there are the private lenders. Banks and other companies still lend to students, about {{private}}
+    in the last school year. That is far less than before the financial crisis, but it has been growing again for more than a decade.
+  claims:
+  - private
+- id: m3_draw
+  chapter: The middlemen
+  narration: Let me draw the chain. The student signs the loan. The government lends the money and owns the debt. A servicer
+    sends the bills and is paid a fee. And the college receives the money at the very start, before anyone knows if the
+    degree will pay off.
+  claims:
+  - servicers
+  - total
+  analysis: true
+  source_note: Chain diagram (commentary).
+- id: m3_transition
+  chapter: The middlemen
+  narration: For years, that chain was frozen. Then the pause ended.
+  claims: []
+- id: m4_card
+  chapter: When the pause ended
+  narration: ''
+  claims: []
+- id: m4_scores
+  chapter: When the pause ended
+  narration: When missed payments returned to credit reports in early twenty twenty-five, the effect was immediate. The
+    New York Fed found that more than two point two million borrowers who became newly delinquent saw their credit scores
+    drop by more than one hundred points.
+  claims:
+  - delinq
+- id: m4_rate
+  chapter: When the pause ended
+  narration: And it kept climbing. By the middle of twenty twenty-six, {{delinq}} of all student loan balances were at least
+    ninety days past due. Before the pause ended, it was close to zero.
+  claims:
+  - delinq
+- id: m4_default
+  chapter: When the pause ended
+  narration: Then came defaults. According to the New York Fed, roughly one million federal borrowers defaulted at the end
+    of twenty twenty-five, and another {{defaults}} in the first three months of twenty twenty-six. The Education Department's
+    own data show defaulted Direct Loans more than doubling in a year, from {{defaults.before_spoken}} to {{defaults.after_spoken}}.
+  claims:
+  - defaults
+- id: m4_collect
+  chapter: When the pause ended
+  narration: Default is serious. The government can take part of a paycheck, a tax refund, even Social Security. Collections
+    restarted in May twenty twenty-five, and were then put on hold. In May twenty twenty-six, the New York Fed noted they were
+    suspended with no clear timeline for resumption.
+  claims:
+  - defaults
+  - delinq
+- id: m4_draw
+  chapter: When the pause ended
+  narration: Let me draw the cliff. Here is the share of student debt seriously late. For five years, a flat line near zero.
+    Then, in a single quarter, a wall. Every point on that wall is a person whose credit score fell, whose car loan or apartment
+    just became harder to get.
+  claims:
+  - delinq
+  analysis: true
+  source_note: Line chart of the NY Fed series (schematic).
+- id: m4_transition
+  chapter: When the pause ended
+  narration: Washington's answer was to change the rules of the whole business.
+  claims: []
+- id: m5_card
+  chapter: The new rules
+  narration: ''
+  claims: []
+- id: m5_save
+  chapter: The new rules
+  narration: The plan that was supposed to make payments cheaper, called SAVE, was blocked in court. About eight million
+    borrowers who had enrolled were placed in forbearance. On March tenth, twenty twenty-six, a federal court vacated the plan.
+  claims:
+  - newrules
+- id: m5_obbb
+  chapter: The new rules
+  narration: Meanwhile, Congress passed the One Big Beautiful Bill Act, signed on July fourth, twenty twenty-five. It eliminated
+    Grad PLUS loans for graduate students. New graduate students now
+    face a limit of twenty thousand five hundred dollars a year and {{newrules}} in total. Parents face new limits too. And
+    a new Repayment Assistance Plan takes effect by July twenty twenty-six.
+  claims:
+  - newrules
+- id: m5_draw
+  chapter: The new rules
+  narration: Let me put the business together. Colleges set the price. The government lends, and ended up carrying the losses.
+    Servicers collect, paid by the borrower. And the borrowers carry the debt for decades. The new limits cap how much flows
+    in at the top. Whether that pushes colleges to cut prices, or pushes students toward private lenders, is the question
+    of the next decade.
+  claims:
+  - newrules
+  - govcost
+  - servicers
+  analysis: true
+  source_note: Summary diagram; the last sentence is commentary.
+- id: payoff
+  chapter: The lesson
+  narration: So what is the business behind America's student debt? It was built on a simple promise. Borrow today, earn
+    more tomorrow. For many graduates, that promise holds. But the bill has quietly been split between students, their parents,
+    and taxpayers, while the money for the degree was paid on day one.
+  claims:
+  - total
+  - govcost
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
