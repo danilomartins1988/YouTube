@@ -518,6 +518,18 @@ const SUBJECTS: Record<string, SubjectFn> = {
       <rect x={bx + bw / 2 - 130} y={by + bh / 2 - 80} width={100} height={56} rx={6} fill="#FFFFFF" stroke="#05070B" strokeWidth={4} />
       <path d={`M ${bx + bw / 2 - 118} ${by + bh / 2 - 64} l 76 0 m -76 14 l 60 0 m -60 14 l 70 0`} stroke="#05070B" strokeWidth={4} /></g>)}
   </g>,
+  /** A generic shopping cart full of groceries (no brands) */
+  cart: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <circle r={560} fill={P.haze} opacity={0.18} filter="url(#soft)" />
+    <ellipse cx={0} cy={360} rx={520} ry={40} fill="#000" opacity={0.45} filter="url(#soft)" />
+    {[['#E53935', -200, -120, 70], ['#FB8C00', -60, -150, 80], ['#7CB342', 90, -130, 75], ['#FDD835', 220, -110, 65]].map(([c, x, y, r], k) => <circle key={k} cx={x as number} cy={y as number} r={r as number} fill={c as string} stroke="#05070B" strokeWidth={9} />)}
+    <rect x={-150} y={-260} width={120} height={160} rx={10} fill="#FFF8E7" stroke="#05070B" strokeWidth={9} />
+    <rect x={40} y={-290} width={90} height={190} rx={10} fill="#90CAF9" stroke="#05070B" strokeWidth={9} />
+    <path d="M -400 -300 L -330 -300 L -260 180 L 330 180 L 380 -100 L -300 -100" fill="none" stroke="#05070B" strokeWidth={22} strokeLinejoin="round" />
+    <path d="M -300 -100 L 380 -100 L 340 120 L -270 120 Z" fill="#B0BEC5" stroke="#05070B" strokeWidth={10} opacity={0.9} />
+    {Array.from({length: 7}, (_, k) => <path key={k} d={`M ${-260 + k * 95} -100 L ${-240 + k * 85} 120`} stroke="#05070B" strokeWidth={6} />)}
+    <circle cx={-200} cy={250} r={44} fill="#263238" stroke="#05070B" strokeWidth={9} /><circle cx={260} cy={250} r={44} fill="#263238" stroke="#05070B" strokeWidth={9} />
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

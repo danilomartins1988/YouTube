@@ -1,0 +1,7 @@
+# Episode 40: The Hidden Business Behind America's Grocery Prices (US batch #20)
+
+- Project: `projects/the-hidden-business-behind-americas-grocery-prices`; storyboard generator `tools/gen_grocery_storyboard.py` (40 scenes; lint 0; strict cues 0 missing).
+- New engine pieces: `supermarket` set (aisle signs, shelves, checkout lanes, produce bins), `ranch` set (cattle, fence, packing plant), `eggcarton` item (carton with changing price); thumbnail subject `cart`.
+- One visual language per part: farm + supermarket (hook); USDA office, farm, highway, store, food-dollar bar (food dollar); egg carton, ranch, forecast chart (price shock); store, office, warehouse (penny business); FTC vs FMI charts, Washington, shrinking package (profit debate); ranch at dusk, court, shelf at night (fewer players).
+- Sources: USDA ERS Food Dollar (2024) and Food Price Outlook (Oct 2026), BLS CPI (Sept 2026) and average prices, Kroger/Albertsons/Walmart 10-Ks, FMI (industry group), FTC staff report (2024), FTC merger releases, ERS meatpacking (2024), FTC slotting study (2003), BLS shrinkflation note, PLMA (Circana data).
+- Rules: no assumption of abnormal profits; FTC and FMI measures attributed as different; cumulative +32% since Jan 2020 is our calculation; latest CPI month September 2026 (October CPI due Nov 10, 2026); Kroger/Albertsons prior-year margins used (latest include one-time charges, said); 85% = steer and heifer purchases; slotting range from 2003 case studies. Food dollar 2025 update due Nov 17, 2026.

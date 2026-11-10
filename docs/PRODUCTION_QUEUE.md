@@ -66,4 +66,4 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | 17 | Why the World's Memory Supply Depends on Three Companies | **Duplicate** of Ep 14; replacement topic requested |
 | 18 | How Visa and Mastercard Became Financial Gatekeepers | **In production** (Ep 39, `docs/episodes/39-visa-mastercard`; overlap with Ep 30 checked: history/antitrust only) |
 | 19 | Why Japan's Property Bubble Became a Lost Decade | **Overlaps** top-10 #6 (Tokyo land); owner decision: merge or keep one |
-| 20 | The Hidden Business Behind America's Grocery Prices | Approved, queued |
+| 20 | The Hidden Business Behind America's Grocery Prices | **In production** (Ep 40, `docs/episodes/40-grocery`) |

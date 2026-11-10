@@ -1,0 +1,88 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic cart and groceries only (no store or brand logos).
+title: The Hidden Business Behind America's Grocery Prices
+docs_dir: docs/episodes/40-grocery
+video: output/grocery_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: If the farm gets a dime and the store a couple of pennies, where does the rest of your food dollar go?
+  surprising_fact: Farm share 11.8 cents of each food dollar (USDA ERS, 2024); Kroger net margin about 1.8% (FY2024)
+  subject: a shopping cart
+  tone: bright
+  metaphor: a long chain between farm and cart
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 11.8¢
+  - TO THE FARM
+  claim_basis: 'farm: farm share 11.8 cents per food dollar, 2024 (USDA ERS)'
+  scene:
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#1E2A4A'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: cart
+      x: 1480
+      y: 560
+      s: 0.75
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'FARM: 11.8¢'
+  - 'STORE: 13.8¢'
+  claim_basis: 'farm + retail shares of the 2024 food dollar (USDA ERS)'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: FARM SHARE
+      amount: 11.8¢
+      magnifier: false
+      rot: -4
+    after:
+      kind: cart
+      x: 1440
+      y: 640
+      s: 0.6
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

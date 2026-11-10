@@ -1,0 +1,44 @@
+# Visual direction for the-hidden-business-behind-americas-grocery-prices (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: farm + supermarket (hook), USDA office / farm / highway / supermarket / food-dollar bar (food dollar), egg carton in store and farm, cattle ranch, forecast chart (price shock), supermarket / office / warehouse (penny business), FTC vs FMI charts, Washington, shrinking package (debate), ranch + packing plant, court, shelf at night (fewer players).
+primary_tone: bright
+secondary_tones:
+- strategy
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Eleven point eight cents
+  tone: bright
+- chapter: The food dollar
+  tone: bright
+- chapter: The price shock
+  tone: strategy
+- chapter: The penny business
+  tone: bright
+- chapter: The profit debate
+  tone: strategy
+- chapter: Fewer, bigger players
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: bright
+  headline: []
+  idea: generic shopping cart / egg carton; farm gets 11.8 cents of each food dollar (USDA ERS)
+requirements:
+- One visual language per part; text mostly on objects or at the top
+- No store, brand or packaging logos (names in text only); no likeness of real people
+- No assumption of abnormal profits; FTC and FMI measures both attributed

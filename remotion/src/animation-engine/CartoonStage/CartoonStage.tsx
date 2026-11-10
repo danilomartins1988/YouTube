@@ -627,6 +627,61 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={10} fill={trim} />
     </g>;
   },
+  /** A supermarket: ceiling with hanging aisle signs, produce bins (apples, oranges, greens) at the front, checkout lanes
+   *  with conveyor belts and lane-number lights, a deli counter at the back. `night` = after-hours lights. `label` = store banner. */
+  supermarket: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, fruit = ['#E53935', '#FB8C00', '#7CB342', '#FDD835', '#8E24AA'];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#2E3A4E' : '#F6F1E7'} />
+      <rect x={z.x0} y={f - 470} width={w} height={210} fill={night ? '#3B4A60' : '#E9F3E1'} />
+      {Array.from({length: Math.ceil(w / 220)}, (_, k) => { const x = z.x0 + k * 220;
+        return <g key={'sh' + k}>{[0, 1].map((r) => <g key={r}><rect x={x + 10} y={f - 380 + r * 92} width={200} height={10} fill="#8D6E63" />
+          {Array.from({length: 6}, (_, q) => <rect key={q} x={x + 18 + q * 32} y={f - 440 + r * 92} width={26} height={58 - (q % 2) * 10} rx={3} fill={fruit[(k + q + r) % 5]} stroke={OL} strokeWidth={2} opacity={0.9} />)}</g>)}</g>; })}
+      {Array.from({length: Math.ceil(w / 700)}, (_, k) => { const x = z.x0 + 300 + k * 700;
+        return <g key={'as' + k}><path d={`M ${x + 90} ${f - 900} L ${x + 90} ${f - 800}`} stroke={OL} strokeWidth={3} />
+          <rect x={x} y={f - 800} width={180} height={60} rx={6} fill="#2E7D32" stroke={OL} strokeWidth={3} />
+          <T x={x + 90} y={f - 760} s={24} c="#FFFFFF">{['PRODUCE', 'DAIRY', 'MEAT', 'BAKERY', 'AISLE 5', 'FROZEN'][k % 6]}</T></g>; })}
+      {Array.from({length: Math.ceil(w / 560)}, (_, k) => { const x = z.x0 + 80 + k * 560;
+        return <g key={'ck' + k}>
+          <rect x={x} y={f - 130} width={300} height={130} fill={night ? '#546E7A' : '#B0BEC5'} stroke={OL} strokeWidth={4} />
+          <rect x={x + 10} y={f - 146} width={240} height={20} rx={8} fill="#263238" />
+          {Array.from({length: 6}, (_, q) => <rect key={q} x={x + 14 + ((q * 40 + t * 40) % 230)} y={f - 152} width={2} height={26} fill="#78909C" />)}
+          <rect x={x + 250} y={f - 220} width={50} height={90} rx={6} fill="#ECEFF1" stroke={OL} strokeWidth={3} />
+          <path d={`M ${x + 150} ${f - 130} L ${x + 150} ${f - 330}`} stroke={OL} strokeWidth={4} />
+          <circle cx={x + 150} cy={f - 350} r={26} fill={night ? '#FFE08A' : '#FFC21A'} stroke={OL} strokeWidth={3} />
+          <T x={x + 150} y={f - 341} s={26} c={OL}>{String(k % 9 + 1)}</T>
+          <g transform={`translate(${x + 390} ${f - 90})`}><rect x={-80} y={0} width={160} height={90} rx={10} fill="#8D6E63" stroke={OL} strokeWidth={4} />
+            {Array.from({length: 7}, (_, q) => <circle key={q} cx={-60 + q * 20} cy={-4 - (q % 2) * 12} r={14} fill={fruit[(k + q) % 5]} stroke={OL} strokeWidth={2} />)}</g></g>; })}
+      {z.label && <g transform={`translate(${z.x0 + w * 0.5} ${f - 700})`}><rect x={-260} y={-40} width={520} height={70} rx={10} fill="#C62828" stroke={OL} strokeWidth={4} />
+        <T x={0} y={10} s={36} c="#FFFFFF">{z.label}</T></g>}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#45505E' : '#E7E1D6'} />
+      {Array.from({length: Math.ceil(w / 120)}, (_, k) => <rect key={'ft' + k} x={z.x0 + k * 120} y={f} width={60} height={600} fill={night ? '#4E5968' : '#DAD3C5'} opacity={0.7} />)}
+    </g>;
+  },
+  /** A cattle ranch and feedlot: rolling yellow grass, wooden fence rails, generic brown/black cattle that sway, and a
+   *  large boxy packing plant with a smokestack in the distance. `night` for dusk. */
+  ranch: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, hide = ['#6D4C41', '#3E2723', '#8D6E63', '#4E342E'];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#3A2F4A' : '#CDEBFA'} />
+      <path d={`M ${z.x0} ${f - 260} ${Array.from({length: Math.ceil(w / 600) + 1}, (_, k) => `Q ${z.x0 + k * 600 + 300} ${f - 330 - 40 * rnd(k)} ${z.x0 + k * 600 + 600} ${f - 260}`).join(' ')} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill={night ? '#6B5B3E' : '#E6C76A'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 2200)}, (_, k) => { const x = z.x0 + 1500 + k * 2200;
+        return <g key={'pp' + k}><rect x={x} y={f - 480} width={520} height={200} fill={night ? '#8E8AA8' : '#ECEFF1'} stroke={OL} strokeWidth={4} />
+          <rect x={x + 420} y={f - 620} width={40} height={140} fill="#B0BEC5" stroke={OL} strokeWidth={3} />
+          {[0, 1, 2].map((q) => <circle key={q} cx={x + 440 + q * 18} cy={f - 650 - q * 34 - ((t * 20) % 30)} r={18 + q * 6} fill="#FFFFFF" opacity={0.6 - q * 0.15} />)}
+          {Array.from({length: 6}, (_, q) => <rect key={q} x={x + 30 + q * 64} y={f - 440} width={40} height={30} fill={night ? '#FFE08A' : '#90CAF9'} stroke={OL} strokeWidth={2} />)}
+          <rect x={x + 180} y={f - 360} width={120} height={80} fill="#78909C" stroke={OL} strokeWidth={3} /></g>; })}
+      {Array.from({length: Math.ceil(w / 150)}, (_, k) => { const x = z.x0 + 40 + k * 150 + 40 * rnd(k), y = f - 60 - 40 * rnd(k + 4), b = Math.sin(t * 1.5 + k) * 3;
+        return rnd(k * 3) > 0.2 && <g key={'cw' + k} transform={`translate(${x} ${y + b})`}>
+          <rect x={-46} y={-40} width={92} height={46} rx={18} fill={hide[k % 4]} stroke={OL} strokeWidth={3} />
+          <rect x={36} y={-56} width={34} height={30} rx={10} fill={hide[k % 4]} stroke={OL} strokeWidth={3} />
+          {[-36, -18, 18, 36].map((lx) => <rect key={lx} x={lx - 5} y={2} width={10} height={26} fill={hide[k % 4]} stroke={OL} strokeWidth={2} />)}
+          <circle cx={58} cy={-46} r={3} fill="#FFFFFF" /></g>; })}
+      {[0, 1].map((r) => <rect key={'rl' + r} x={z.x0} y={f - 70 + r * 36} width={w} height={10} fill="#8D6E63" stroke={OL} strokeWidth={2} />)}
+      {Array.from({length: Math.ceil(w / 240)}, (_, k) => <rect key={'po' + k} x={z.x0 + k * 240} y={f - 90} width={16} height={90} fill="#6D4C41" stroke={OL} strokeWidth={2} />)}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#5A4A33' : '#C9A86A'} />
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -3209,9 +3264,26 @@ const netmesh: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** An egg carton (12 eggs) with a price tag; `pages` [[t, price]] changes the price; `empty` [[t, n]] removes eggs (supply). */
+const eggcarton: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 500), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  let price = a.price ?? '$1.46'; for (const p of (a.pages || [])) if (t >= p[0]) price = p[1];
+  let gone = 0; for (const e of (a.empty || [])) if (t >= e[0]) gone = e[1];
+  return <g transform={`translate(${x} ${y}) scale(${s})`} key={i}>
+    <path d="M -260 -40 L 260 -40 L 230 90 L -230 90 Z" fill="#B0A48E" stroke={OL} strokeWidth={5} />
+    {Array.from({length: 12}, (_, k) => { const cx = -205 + (k % 6) * 82, cy = k < 6 ? -40 : 10;
+      return k >= 12 - gone ? <ellipse key={k} cx={cx} cy={cy + 20} rx={30} ry={14} fill="#8C806B" /> : <ellipse key={k} cx={cx} cy={cy} rx={32} ry={40} fill="#FFF8E7" stroke={OL} strokeWidth={4} />; })}
+    <path d="M -260 -40 L -240 -160 L 240 -160 L 260 -40" fill="none" stroke={OL} strokeWidth={5} opacity={0.5} />
+    <g transform="translate(210 -150) rotate(8)"><rect x={-110} y={-44} width={220} height={88} rx={10} fill="#FFC21A" stroke={OL} strokeWidth={5} />
+      <T x={0} y={18} s={52} c={OL}>{price}</T></g>
+    {a.text && <T x={0} y={150} s={32} c="#FFFFFF">{a.text}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

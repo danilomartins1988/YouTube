@@ -1,0 +1,180 @@
+# Sources and claims for "The Hidden Business Behind America's Grocery Prices" (Episode 40, US batch #20).
+# Every claim was read on its primary page/file on 2026-11-10 (notes: docs/episodes/40-grocery/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as published (nominal).
+# RULES: no assumption of abnormal profits; FTC (revenue over total costs, Census data) and FMI (net margin) are different
+# measures, both attributed, neither "debunks" the other. Food dollar = all food spending (stores AND restaurants), 2024 data
+# (2025 update due Nov 17, 2026). Latest CPI = September 2026 (October release due Nov 10, 2026). Cumulative food-at-home rise
+# since Jan 2020 is OUR calculation from the BLS index. Kroger/Albertsons latest margins include one-time charges (said).
+# Meatpacking 85% = share of steer and heifer purchases (said). Slotting range = 2003 FTC case studies (said). No store logos.
+sources:
+  - id: ersfd
+    title: "Food Dollar Series: Summary Findings and Food Dollar Nominal Data (2024)"
+    publisher: USDA Economic Research Service
+    url: https://www.ers.usda.gov/data-products/food-dollar/summary-findings
+    published: "2026-03-10"
+    accessed: "2026-11-10"
+    credit: "USDA ERS"
+  - id: blscpi
+    title: "Consumer Price Index, September 2026; CPI-U food at home (CUUR0000SAF11); average prices"
+    publisher: U.S. Bureau of Labor Statistics
+    url: https://www.bls.gov/news.release/cpi.nr0.htm
+    published: "2026-10-14"
+    accessed: "2026-11-10"
+    credit: "BLS"
+  - id: ersfpo
+    title: "Food Price Outlook: Summary Findings"
+    publisher: USDA Economic Research Service
+    url: https://www.ers.usda.gov/data-products/food-price-outlook/summary-findings
+    published: "2026-10-23"
+    accessed: "2026-11-10"
+    credit: "USDA ERS"
+  - id: kroger
+    title: "The Kroger Co. Form 10-K, fiscal year ended January 31, 2026"
+    publisher: The Kroger Co. (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/56873/000110465926037723/kr-20260131x10k.htm
+    published: "2026-03-31"
+    accessed: "2026-11-10"
+    credit: "Kroger 10-K"
+  - id: aci
+    title: "Albertsons Companies Form 10-K, fiscal 2025"
+    publisher: Albertsons Companies (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1646972/000164697226000032/aci-20260228.htm
+    published: "2026-04-27"
+    accessed: "2026-11-10"
+    credit: "Albertsons 10-K"
+  - id: wmt
+    title: "Walmart Inc. Form 10-K, fiscal year ended January 31, 2026"
+    publisher: Walmart Inc. (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm
+    published: "2026-03-13"
+    accessed: "2026-11-10"
+    credit: "Walmart 10-K"
+  - id: fmi
+    title: "Food Industry Facts; FMI research release (June 27, 2024)"
+    publisher: FMI – The Food Industry Association (trade group)
+    url: https://www.fmi.org/our-research/food-industry-facts
+    published: "2026"
+    accessed: "2026-11-10"
+    credit: "FMI (industry group)"
+  - id: ftc24
+    title: "Feeding America in a Time of Crisis: The United States Grocery Supply Chain and the COVID-19 Pandemic"
+    publisher: Federal Trade Commission (staff report)
+    url: https://www.ftc.gov/system/files/ftc_gov/pdf/p162318supplychainreport2024.pdf
+    published: "2024-03"
+    accessed: "2026-11-10"
+    credit: "FTC staff report"
+  - id: ftcmerge
+    title: "FTC challenges Kroger's acquisition of Albertsons; Statement on securing halt of the merger"
+    publisher: Federal Trade Commission
+    url: https://www.ftc.gov/news-events/news/press-releases/2024/12/statement-ftc-victory-securing-halt-kroger-albertsons-grocery-merger
+    published: "2024-12-10"
+    accessed: "2026-11-10"
+    credit: "FTC"
+  - id: ersmeat
+    title: "Concentration in U.S. Meatpacking Industry and How It Affects Competition and Cattle Prices"
+    publisher: USDA Economic Research Service (Amber Waves)
+    url: https://www.ers.usda.gov/amber-waves/2024/january/concentration-in-u-s-meatpacking-industry-and-how-it-affects-competition-and-cattle-prices
+    published: "2024-01-25"
+    accessed: "2026-11-10"
+    credit: "USDA ERS"
+  - id: ftcslot
+    title: "Slotting Allowances in the Retail Grocery Industry: Selected Case Studies in Five Product Categories"
+    publisher: Federal Trade Commission (staff study)
+    url: https://www.ftc.gov/sites/default/files/documents/reports/use-slotting-allowances-retail-grocery-industry/slottingallowancerpt031114.pdf
+    published: "2003-11"
+    accessed: "2026-11-10"
+    credit: "FTC (2003)"
+  - id: blsshrink
+    title: "Getting less for the same price? How the CPI measures 'shrinkflation'"
+    publisher: U.S. Bureau of Labor Statistics (Beyond the Numbers)
+    url: https://www.bls.gov/opub/btn/volume-12/measuring-shrinkflation-and-its-impact-on-inflation.htm
+    published: "2023-02-02"
+    accessed: "2026-11-10"
+    credit: "BLS"
+  - id: plma
+    title: "U.S. private label industry reached $282.8 billion in sales in 2025"
+    publisher: Private Label Manufacturers Association (trade group; Circana data)
+    url: https://www.plma.com/article/us-private-label-industry-reached-2828-billion-sales-2025
+    published: "2026-01-20"
+    accessed: "2026-11-10"
+    credit: "PLMA (Circana data)"
+
+claims:
+  - id: farm
+    text: "USDA ERS Food Dollar (2024): farm share 11.8 cents per food dollar; marketing share 88.2 cents. Industry group bill, cents per domestic food dollar (all channels): food services 38.6; food processing 16.1; food retail 13.8; food wholesale 6.3; finance and insurance 4.7; transportation and storage 4.1; energy 3.1; advertising 2.2. The food dollar covers food bought at stores and restaurants. 2023 farm share 12.1. 2025 data due Nov 17, 2026."
+    spoken: eleven point eight cents
+    display: "Farm share: 11.8¢ of each food dollar (2024)"
+    fields: {retail_spoken: thirteen point eight cents, proc_spoken: sixteen point one cents, serv_spoken: thirty-eight point six cents, whole_spoken: six point three cents, trans_spoken: four point one cents, energy_spoken: three point one cents, ad_spoken: two point two cents}
+    source_ids: [ersfd]
+    status: source_located
+    verification_note: All food spending, stores and restaurants (said).
+
+  - id: cpi
+    text: "BLS CPI September 2026 (Oct 14, 2026): 'The food at home index rose 1.8 percent over the 12 months ending in September.' BLS CPI-U food at home (CUUR0000SAF11): Jan 2020 243.110; Sep 2026 321.758 → about +32.4% (our calc). ERS Food Price Outlook (Oct 23, 2026): 'In 2026, food-at-home prices are forecast to increase 2.3 percent'; 'Food-at-home prices increased by an average of 2.6 percent per year between 2006 and 2025.' ERS: 'The largest change in this index's average annual value occurred in 2022, when the price of food rose by 9.9 percent.'"
+    spoken: about thirty-two percent
+    display: "Food at home ≈ +32% since Jan 2020 (our calc, BLS)"
+    fields: {latest_spoken: one point eight percent, fcst_spoken: two point three percent, avg_spoken: two point six percent}
+    source_ids: [blscpi, ersfpo]
+    status: source_located
+    verification_note: Cumulative figure our calculation; latest month September 2026 (said).
+
+  - id: eggs
+    text: "BLS average price, Grade A large eggs per dozen (APU0000708111): Jan 2020 $1.461; Mar 2025 $6.227; Sep 2026 $2.272. ERS: 'Retail egg prices increased 32.2 percent in 2022, 1.4 percent in 2023, 8.5 percent in 2024, and 21.9 percent in 2025'; 'An ongoing outbreak of Highly Pathogenic Avian Influenza (HPAI) that began in 2022'. BLS ground beef 100% beef per lb (APU0000703112): Jan 2020 $3.89; Aug 2026 $6.92. ERS: 'Beef and veal prices are forecast to increase 8.7 percent in 2026.'"
+    spoken: six dollars and twenty-three cents
+    display: "Eggs: $1.46 (Jan 2020) → $6.23 (Mar 2025) → $2.27 (Sep 2026)"
+    fields: {egg20_spoken: about a dollar forty-six, egg26_spoken: about two dollars and twenty-seven cents, beef20_spoken: three dollars and eighty-nine cents, beef26_spoken: six dollars and ninety-two cents}
+    source_ids: [blscpi, ersfpo]
+    status: source_located
+    verification_note: Nominal prices; not called a record.
+
+  - id: margins
+    text: "Kroger 10-K (FY ended Jan 31, 2026): net earnings attributable $1,016M (2025) and $2,665M (2024) on sales of $147,642M and $147,123M → ≈ 0.7% and ≈ 1.8% (our calc); 2025 includes a $2.5bn impairment of its fulfillment network. Albertsons 10-K FY2025: net income 0.3% of sales vs 1.2% in fiscal 2024 (stated); FY2025 includes a $599.8M after-tax opioid settlement charge. Walmart U.S. FY2026: grocery net sales $285.5bn of $483.0bn segment sales; segment operating margin 5.2% (no grocery-only margin reported). FMI: 'The average net profit for food retailers in 2025 is 2.1%.'"
+    spoken: about one point eight cents
+    display: "Kroger ≈ 1.8¢ net profit per $1 of sales (FY2024, our calc)"
+    fields: {aci_spoken: one point two percent, fmi_spoken: two point one percent, wmt_spoken: two hundred and eighty-five billion dollars}
+    source_ids: [kroger, aci, wmt, fmi]
+    status: source_located
+    verification_note: Prior-year margins used because the latest include one-time charges (said).
+
+  - id: ftc
+    text: "FTC staff report (March 2024): 'food and beverage retailer revenues increased to more than 6 percent over total costs in 2021, higher than their most recent peak, in 2015, of 5.6 percent. In the first three-quarters of 2023, retailer profits rose even more, with revenue reaching 7 percent over total costs.' The report 'did not test whether the specific companies that received 6(b) Orders increased their prices by more or less than their input cost increases.' FMI (June 27, 2024): 'Food retailer profit margins fell from 2.3% in 2022 to pre- COVID- 19 pandemic levels of 1.6% in 2023'."
+    spoken: more than six percent
+    display: "FTC: retailer revenue >6% over costs (2021), 7% (2023)"
+    fields: {y23_spoken: seven percent, fmi23_spoken: one point six percent}
+    source_ids: [ftc24, fmi]
+    status: source_located
+    verification_note: Different measures (said); both attributed.
+
+  - id: shrink
+    text: "BLS: CPI uses 'An effective price per standard size, usually a price per ounce'; example: a 64-ounce carton reduced to 60 ounces at the same price is recorded as a 6.7 percent price increase."
+    spoken: six point seven percent
+    display: "Shrinkflation: 64 oz → 60 oz = +6.7% in the CPI (BLS)"
+    source_ids: [blsshrink]
+    status: source_located
+    verification_note: BLS example.
+
+  - id: meat
+    text: "USDA ERS Amber Waves (Jan 25, 2024): the four largest meatpackers handle '85 percent of all steer and heifer purchases'; in 1980 'the four largest beef packers accounted for 36 percent of all purchases of steers and heifers'; 81 percent by 1995."
+    spoken: eighty-five percent
+    display: "Top 4 beef packers: 85% of steer & heifer purchases (ERS)"
+    fields: {y80_spoken: thirty-six percent}
+    source_ids: [ersmeat]
+    status: source_located
+    verification_note: Share of steer and heifer purchases, not of all beef sold (said).
+
+  - id: merger
+    text: "FTC (Feb 26, 2024): challenged 'Kroger Company's $24.6 billion acquisition of the Albertsons Companies, Inc.'; combined firm 'more than 5,000 stores'. Kroger 10-K: 'On December 10, 2024 ... the court issued a preliminary injunction' (D. Or., 3:24-cv-00347-AN); a Washington state court issued a permanent injunction the same day. Albertsons terminated the merger agreement on December 10, 2024 and sued Kroger; Kroger sent its own termination notice December 11, 2024; litigation ongoing as of the 10-Ks."
+    spoken: twenty-four point six billion dollars
+    display: "Kroger–Albertsons $24.6bn merger blocked (Dec 2024)"
+    source_ids: [ftcmerge, kroger, aci]
+    status: source_located
+    verification_note: Read in FTC releases and both 10-Ks.
+
+  - id: slot
+    text: "FTC (2003): 'the average amount of slotting allowances (per item, per retailer, per metropolitan area) for all five categories combined ranged from $2,313 to $21,768, depending on the particular retailer and metropolitan area.' Small, non-representative case studies. PLMA (Jan 20, 2026, Circana data): store brands $282.8bn in 2025; dollar share 21.3% (19.1% in 2021)."
+    spoken: twenty-one thousand seven hundred and sixty-eight dollars
+    display: "Slotting fees: $2,313–$21,768 per item (FTC, 2003)"
+    fields: {low_spoken: two thousand three hundred and thirteen dollars, pl_spoken: twenty-one point three percent}
+    source_ids: [ftcslot, plma]
+    status: source_located
+    verification_note: 2003 case studies (said); PLMA is a trade group (attributed).

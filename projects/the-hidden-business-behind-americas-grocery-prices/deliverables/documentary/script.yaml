@@ -1,0 +1,279 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; estimates and our calculations are said as such.
+# Batch rule: no assumption of abnormal profits; FTC and industry measures both attributed.
+logline: Out of every dollar Americans spend on food, only eleven point eight cents reaches the farm. Follow the rest of the
+  dollar, and the fight over who is really behind higher grocery prices.
+title: The Hidden Business Behind America's Grocery Prices
+segments:
+- id: h_open
+  chapter: Eleven point eight cents
+  narration: Eleven point eight cents. Out of every dollar Americans spend on food, that is all that ends up with the farm
+    that grew it.
+  claims:
+  - farm
+- id: h_twist
+  chapter: Eleven point eight cents
+  narration: And the supermarket? One of America's biggest grocers kept less than two cents of profit on every dollar of
+    sales. So if the farmer gets a dime, and the store gets a couple of pennies, where does the rest of your money go?
+  claims:
+  - margins
+- id: h_question
+  chapter: Eleven point eight cents
+  narration: And why did the bill at the checkout jump so much in just a few years?
+  claims:
+  - cpi
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: Eleven point eight cents
+  narration: By the end of this video, you will know who takes each slice of your food dollar, why prices spiked, and why
+    regulators and grocers still argue about who profited.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The food dollar
+  narration: ''
+  claims: []
+- id: m1_dollar
+  chapter: The food dollar
+  narration: Every year, the Department of Agriculture takes one dollar of American food spending and splits it into pieces.
+    It counts both groceries and restaurant meals. And it asks a simple question. Who earned each cent along the way?
+  claims:
+  - farm
+- id: m1_farm
+  chapter: The food dollar
+  narration: The farm comes first, but its share is surprisingly small. In twenty twenty-four, the farm share
+    was {{farm}}. The other eighty-eight point two cents paid for everything that happens after the farm gate.
+  claims:
+  - farm
+- id: m1_chain
+  chapter: The food dollar
+  narration: Food processing, turning wheat into bread and cattle into steaks, took {{farm.proc_spoken}}. Wholesalers, the
+    middlemen who move food to stores, took {{farm.whole_spoken}}. Transportation and storage, {{farm.trans_spoken}}. Energy,
+    {{farm.energy_spoken}}. Advertising, {{farm.ad_spoken}}.
+  claims:
+  - farm
+- id: m1_store
+  chapter: The food dollar
+  narration: Grocery stores and other food retailers took {{farm.retail_spoken}}. And the biggest slice of all went to food
+    services, restaurants and cafeterias, with {{farm.serv_spoken}}. Much of what we pay for food is not the food. It is
+    the cooking, the serving, the shelves and the trucks.
+  claims:
+  - farm
+- id: m1_draw
+  chapter: The food dollar
+  narration: Let me draw your food dollar. Here is one dollar. The farm gets a thin slice on the left, about twelve cents.
+    Then processing. Then wholesale and trucks. Then the grocery store. And the biggest piece, restaurants. Most of the
+    dollar is spent after the food leaves the farm.
+  claims:
+  - farm
+  analysis: true
+  source_note: Bar diagram of the ERS food dollar (2024).
+- id: m1_transition
+  chapter: The food dollar
+  narration: Those slices are fairly stable from year to year. The price of the whole dollar is not. And a few years ago,
+    it started climbing fast.
+  claims:
+  - cpi
+- id: m2_card
+  chapter: The price shock
+  narration: ''
+  claims: []
+- id: m2_cpi
+  chapter: The price shock
+  narration: By our calculation from Labor Department data, grocery prices are up {{cpi}} since January twenty twenty. The
+    Department of Agriculture says twenty twenty-two was the worst year, when food prices overall rose nine point nine percent,
+    the biggest yearly jump in its chart of food prices.
+  claims:
+  - cpi
+- id: m2_eggs
+  chapter: The price shock
+  narration: Eggs became the symbol. A dozen large eggs cost {{eggs.egg20_spoken}} in January twenty twenty. In March twenty
+    twenty-five, the average price hit {{eggs}}. The main reason, according to the Department of Agriculture, was an outbreak
+    of bird flu that began in twenty twenty-two and hit egg farms again and again.
+  claims:
+  - eggs
+- id: m2_eggsdown
+  chapter: The price shock
+  narration: Then supply came back. By September twenty twenty-six, the same dozen cost {{eggs.egg26_spoken}}. The
+    Department of Agriculture expects egg prices to fall by almost thirty percent this year.
+  claims:
+  - eggs
+- id: m2_beef
+  chapter: The price shock
+  narration: Beef went the other way, and it kept going. A pound of ground beef cost {{eggs.beef20_spoken}} in January twenty
+    twenty. In August twenty twenty-six, it cost {{eggs.beef26_spoken}}. And beef prices are forecast to rise another eight
+    point seven percent this year.
+  claims:
+  - eggs
+- id: m2_now
+  chapter: The price shock
+  narration: Overall, the surge has slowed. In the twelve months to September twenty twenty-six, grocery prices rose
+    {{cpi.latest_spoken}}. The forecast for this year is {{cpi.fcst_spoken}}, below the long-run average of {{cpi.avg_spoken}}
+    a year. But slower growth is not the same as lower prices. The higher level stays.
+  claims:
+  - cpi
+- id: m2_draw
+  chapter: The price shock
+  narration: Let me draw the two kinds of price rises. Eggs went up like a rocket, and came back down when the supply returned.
+    Beef climbed like a staircase, step after step. And the whole grocery bill moved like a ramp. It flattened out, but it
+    never went back down.
+  claims:
+  - eggs
+  - cpi
+  analysis: true
+  source_note: Line diagram of the BLS series (illustrative shapes).
+- id: m2_transition
+  chapter: The price shock
+  narration: So when prices jumped, many shoppers blamed the stores. But to judge that, you need to know how a supermarket
+    actually makes money.
+  claims:
+  - margins
+- id: m3_card
+  chapter: The penny business
+  narration: ''
+  claims: []
+- id: m3_kroger
+  chapter: The penny business
+  narration: Take Kroger, one of the largest supermarket chains in America. In its twenty twenty-four fiscal year, it sold
+    about one hundred and forty-seven billion dollars of goods, and kept about two point seven billion as profit. By our
+    calculation, that is {{margins}} on every dollar. The next year, a big write-down pushed it below one cent.
+  claims:
+  - margins
+- id: m3_others
+  chapter: The penny business
+  narration: Albertsons, its rival, reported a net margin of {{margins.aci_spoken}} in fiscal twenty twenty-four. The industry's
+    trade group, FMI, puts the average net profit for food retailers in twenty twenty-five at {{margins.fmi_spoken}}. Those
+    are thin numbers, even by the standards of retail.
+  claims:
+  - margins
+- id: m3_volume
+  chapter: The penny business
+  narration: So how do grocers survive? Volume and speed. A store makes a tiny amount on each sale, but it sells enormous
+    amounts, and it sells the same products again every week. Walmart's American stores sold about
+    {{margins.wmt_spoken}} of groceries in its last fiscal year.
+  claims:
+  - margins
+- id: m3_draw
+  chapter: The penny business
+  narration: Let me draw a grocer's dollar. Most of it pays for the products on the shelf. Then wages, rent, electricity,
+    trucks and card fees. What is left at the bottom, the profit, is a sliver. About two cents. Sell enough dollars, and two
+    cents becomes billions.
+  claims:
+  - margins
+  analysis: true
+  source_note: Stacked bar of a grocer's dollar (illustrative; profit from the 10-Ks).
+- id: m3_transition
+  chapter: The penny business
+  narration: That is the industry's side of the story. But the government looked at the same years, and saw something
+    different.
+  claims:
+  - ftc
+- id: m4_card
+  chapter: The profit debate
+  narration: ''
+  claims: []
+- id: m4_ftc
+  chapter: The profit debate
+  narration: In twenty twenty-four, the Federal Trade Commission published a report on the grocery supply chain during the
+    pandemic. It found that retailer revenues rose to {{ftc}} over their total costs in twenty twenty-one, higher than their
+    last peak in twenty fifteen. And in the first part of twenty twenty-three, they reached {{ftc.y23_spoken}}.
+  claims:
+  - ftc
+- id: m4_caveat
+  chapter: The profit debate
+  narration: But the FTC added an important caveat. It did not test whether specific companies raised their prices by more
+    than their own costs went up.
+  claims:
+  - ftc
+- id: m4_fmi
+  chapter: The profit debate
+  narration: The grocers' trade group tells it differently. It says food retailer profit margins fell from two point three
+    percent in twenty twenty-two to {{ftc.fmi23_spoken}} in twenty twenty-three, back to pre-pandemic levels. The two sides
+    are using different measures, so both can be accurate at the same time. The argument is about what they mean.
+  claims:
+  - ftc
+- id: m4_shrink
+  chapter: The profit debate
+  narration: There is also a price rise that does not look like one. When a package gets smaller but the price stays the
+    same, the Labor Department counts the price per ounce. In its own example, a sixty-four ounce carton cut to sixty ounces
+    at the same price counts as a {{shrink}} price increase. Shrinkflation is in the numbers. It is just hidden on the label.
+  claims:
+  - shrink
+- id: m4_draw
+  chapter: The profit debate
+  narration: Let me draw the two measures. On the left, the FTC's view, revenue compared with all costs, across the whole
+    industry. On the right, the grocers' view, net profit as a share of sales. Same years, different rulers. That is why the
+    debate never ends.
+  claims:
+  - ftc
+  analysis: true
+  source_note: Comparison of the two measures (FTC vs FMI), both attributed.
+- id: m4_transition
+  chapter: The profit debate
+  narration: Margins are only half the question. The other half is how many companies are left to compete.
+  claims:
+  - meat
+- id: m5_card
+  chapter: Fewer, bigger players
+  narration: ''
+  claims: []
+- id: m5_meat
+  chapter: Fewer, bigger players
+  narration: Look at beef. According to the Department of Agriculture, the four largest meatpackers handle {{meat}} of all
+    the cattle bought for beef, counted as steers and heifers. In nineteen eighty, the top four had {{meat.y80_spoken}}. A
+    rancher selling cattle has only a handful of buyers to choose from.
+  claims:
+  - meat
+- id: m5_merger
+  chapter: Fewer, bigger players
+  narration: Supermarkets tried to get bigger too. Kroger planned to buy its rival Albertsons for {{merger}}. The
+    combined company would have had more than five thousand stores. The FTC sued to block it. In December twenty twenty-four,
+    a federal court stopped the deal, and both companies walked away. Albertsons is now suing Kroger over the breakup.
+  claims:
+  - merger
+- id: m5_slot
+  chapter: Fewer, bigger players
+  narration: Then there is the shelf itself. Stores often charge food makers for space, called slotting fees. In a study of
+    a few product categories, the FTC found the average fee per item, for one retailer in one city, ranged from
+    {{slot.low_spoken}} to {{slot}}. That study is from two thousand three, but the practice is still around.
+  claims:
+  - slot
+- id: m5_brands
+  chapter: Fewer, bigger players
+  narration: And the stores have a weapon of their own. Store brands. According to the private label industry's trade group,
+    they made up {{slot.pl_spoken}} of grocery dollar sales in twenty twenty-five. When the store makes its own cereal, it
+    competes with the brands on its own shelves.
+  claims:
+  - slot
+- id: m5_draw
+  chapter: Fewer, bigger players
+  narration: Let me draw the funnel. At the top, many farms and ranches. In the middle, a few big processors. Then a few big
+    grocery chains. At the bottom, millions of shoppers. The narrower the middle of the funnel, the more power sits there.
+  claims:
+  - meat
+  - merger
+  analysis: true
+  source_note: Funnel diagram built from the ERS and FTC material.
+- id: payoff
+  chapter: The lesson
+  narration: So what is the hidden business behind your grocery bill? It is not one villain. The farmer gets about twelve
+    cents. The store keeps a couple of pennies. Most of your money pays for everything in between, the processing, the trucks,
+    the shelves and the people. Some of the biggest jumps came when something in that long chain broke, like a flock of
+    hens or a herd of cattle. The real question is how much power sits in the narrow parts of the chain.
+  claims:
+  - farm
+  - margins
+  - meat
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
