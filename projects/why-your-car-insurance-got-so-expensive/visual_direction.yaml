@@ -1,0 +1,43 @@
+# Visual direction for why-your-car-insurance-got-so-expensive (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: CPI screen + sedan (hook), suburb + policy tags + state charts (bill), body shop + bumper cutaway (car), night interstate + death charts (crashes), court + capitol (courts/states), combined-ratio screens + profit charts + evidence board (insurers).
+primary_tone: bright
+secondary_tones:
+- strategy
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Twenty-two point six percent
+  tone: bright
+- chapter: The bill
+  tone: bright
+- chapter: The car itself
+  tone: bright
+- chapter: The crashes
+  tone: reflective
+- chapter: The courts and the states
+  tone: strategy
+- chapter: The insurers' books
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: bright
+  headline: []
+  idea: generic sedan with a giant +22.6% insurance number; insurer losses to profits
+requirements:
+- One visual language per part; text mostly on objects or at the top
+- No insurer logos or real car designs (names in text only); no likeness of real people

@@ -501,6 +501,28 @@ const SETS: Record<string, SetFn> = {
           <path d={`M ${x - 36} ${f - 216} Q ${x + 114} ${f - 180} ${x + 264} ${f - 216}`} fill="none" stroke={OL} strokeWidth={2} /></g>; })}
     </g>;
   },
+  /** An American interstate: distant hills, a concrete overpass with pillars, green guide signs, a guardrail and a
+   *  multi-lane road with dashed lines and moving headlights at `night`. */
+  highway: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#1A2040' : '#BFE6FA'} />
+      <path d={`M ${z.x0} ${f - 260} ${Array.from({length: Math.ceil(w / 700) + 1}, (_, k) => `Q ${z.x0 + k * 700 + 350} ${f - 360 - 40 * rnd(k + 8)} ${z.x0 + k * 700 + 700} ${f - 270}`).join(' ')} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill={night ? '#2B3B4A' : '#A5D68A'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 1800)}, (_, k) => { const x = z.x0 + 600 + k * 1800;
+        return <g key={'ov' + k}><rect x={x} y={f - 330} width={1100} height={60} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+          <rect x={x} y={f - 345} width={1100} height={18} fill="#CFD8DC" stroke={OL} strokeWidth={3} />
+          {[120, 540, 960].map((dx) => <rect key={dx} x={x + dx} y={f - 270} width={40} height={230} fill="#90A4AE" stroke={OL} strokeWidth={3} />)}
+          <rect x={x + 380} y={f - 470} width={340} height={110} rx={10} fill="#2E7D32" stroke="#FFFFFF" strokeWidth={5} />
+          <T x={x + 550} y={f - 425} s={34} c="#FFFFFF">INTERSTATE</T>
+          <T x={x + 550} y={f - 385} s={24} c="#FFFFFF">EXIT 42 · 1 MILE</T>
+          <rect x={x + 540} y={f - 360} width={14} height={20} fill="#90A4AE" /></g>; })}
+      <rect x={z.x0} y={f - 40} width={w} height={640} fill={night ? '#3E4656' : K.road} />
+      <rect x={z.x0} y={f - 60} width={w} height={14} fill="#CFD8DC" stroke={OL} strokeWidth={2} />
+      {Array.from({length: Math.ceil(w / 160)}, (_, k) => <rect key={'gp' + k} x={z.x0 + k * 160} y={f - 60} width={10} height={36} fill="#90A4AE" />)}
+      {[60, 180].map((dy) => Array.from({length: Math.ceil(w / 220)}, (_, k) => <rect key={dy + '-' + k} x={z.x0 + ((k * 220 - t * 300) % w + w) % w} y={f + dy} width={110} height={10} fill="#FFFFFF" opacity={0.85} />))}
+      {night && Array.from({length: 6}, (_, k) => { const x = z.x0 + ((k * 700 + t * 500) % w); return <g key={'hl' + k}><circle cx={x} cy={f + 120} r={8} fill="#FFF8E1" /><circle cx={x + 26} cy={f + 120} r={8} fill="#FFF8E1" /></g>; })}
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -2798,7 +2820,7 @@ const tradescreen: ItemFn = (a, {t}, i) => {
     {[0, 1, 2, 3].map((g) => <line key={g} x1={-W / 2 + 60} x2={W / 2 - 60} y1={H / 2 - 70 - (H - 160) * g / 3} y2={H / 2 - 70 - (H - 160) * g / 3} stroke="#24384F" strokeWidth={2} />)}
     <T x={-W / 2 + 30} y={-H / 2 + 44} s={26} c="#B0BEC5" a="start">{a.text || '3M NICKEL · $ / TONNE'}</T>
     {mn < 0 && <g><line x1={-W / 2 + 60} x2={W / 2 - 60} y1={H / 2 - 70 - (H - 160) * clamp(-mn / (mx - mn))} y2={H / 2 - 70 - (H - 160) * clamp(-mn / (mx - mn))} stroke="#B0BEC5" strokeWidth={3} strokeDasharray="6 6" />
-      <T x={-W / 2 + 54} y={H / 2 - 62 - (H - 160) * clamp(-mn / (mx - mn))} s={20} c="#B0BEC5" a="end">$0</T></g>}
+      <T x={-W / 2 + 54} y={H / 2 - 62 - (H - 160) * clamp(-mn / (mx - mn))} s={20} c="#B0BEC5" a="end">{a.suffix !== undefined ? '0' + a.suffix : '$0'}</T></g>}
     <T x={W / 2 - 30} y={-H / 2 + 46} s={34} c={now > (a.hot ?? 60000) || now < 0 ? K.red : '#7DF29A'} a="end">{(a.suffix !== undefined ? (now < 0 ? '−' : '') : (now < 0 ? '−$' : '$')) + Math.abs(now).toLocaleString('en-US', {minimumFractionDigits: a.decimals ?? 0, maximumFractionDigits: a.decimals ?? 0}) + (a.suffix ?? '')}</T>
     <polyline points={pts.join(' ')} fill="none" stroke={now > (a.hot ?? 60000) || now < 0 ? K.red : '#7DF29A'} strokeWidth={6} strokeLinejoin="round" />
     {grey.length > 1 && <polyline points={grey.join(' ')} fill="none" stroke="#546E7A" strokeWidth={5} strokeDasharray="10 8" />}
@@ -2992,9 +3014,35 @@ const meter: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A modern bumper in cutaway: the painted cover slides away at `openAt` to reveal radar, parking sensors, wiring and a
+ *  camera; `price` tag shows the repair bill (keyframable via `pages` [[t, text]]). */
+const bumper: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const u = a.openAt !== undefined ? E.out(win(t, a.openAt, 1.0)) : 0;
+  let price = a.price as string | undefined; for (const [at, txt] of (a.pages || []) as [number, string][]) if (t >= at) price = txt;
+  const blink = Math.sin(t * 6) > 0;
+  return <g key={'bp' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-420} y={-120} width={840} height={240} rx={60} fill="#263238" stroke={OL} strokeWidth={6} />
+    <rect x={-240} y={-30} width={140} height={60} rx={10} fill="#90A4AE" stroke={OL} strokeWidth={4} />
+    <T x={-170} y={8} s={22} c="#FFFFFF">RADAR</T>
+    {[-360, -40, 120, 300].map((dx, q) => <g key={q}><circle cx={dx} cy={-60} r={20} fill="#B0BEC5" stroke={OL} strokeWidth={3} /><circle cx={dx} cy={-60} r={7} fill={blink ? '#7DF29A' : '#1B5E20'} /></g>)}
+    <path d="M -360 -40 Q -300 60 -240 20 M -40 -40 Q -60 60 -100 20 M 120 -40 Q 60 80 -100 30 M 300 -40 Q 200 90 -100 40" fill="none" stroke="#FFC21A" strokeWidth={4} />
+    <rect x={180} y={-10} width={130} height={80} rx={10} fill="#455A64" stroke={OL} strokeWidth={4} />
+    <circle cx={245} cy={30} r={24} fill="#0E1621" stroke="#90A4AE" strokeWidth={4} />
+    <T x={245} y={100} s={20} c="#FFFFFF">CAMERA</T>
+    <g transform={`translate(${-u * 900} 0)`} opacity={1 - u}>
+      <rect x={-440} y={-140} width={880} height={280} rx={70} fill={col(a.color, '#D32F2F')} stroke={OL} strokeWidth={6} />
+      <path d="M -400 -80 Q 0 -130 400 -80" stroke="#FFFFFF" strokeWidth={8} opacity={0.3} fill="none" />
+      <rect x={-120} y={-20} width={240} height={60} rx={8} fill="#ECEFF1" stroke={OL} strokeWidth={4} /></g>
+    {price && <g transform="translate(0 -230)"><rect x={-170} y={-50} width={340} height={90} rx={12} fill={K.white} stroke={OL} strokeWidth={5} />
+      <T x={0} y={14} s={42} c={K.red}>{price}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

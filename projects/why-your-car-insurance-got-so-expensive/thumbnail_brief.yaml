@@ -1,0 +1,95 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic sedan only (no insurer logos).
+title: Why Your Car Insurance Got So Expensive
+docs_dir: docs/episodes/36-car-insurance
+video: output/autoins_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: What made car insurance so expensive, and who made money?
+  surprising_fact: CPI motor vehicle insurance +22.6% in 12 months (Apr 2024), biggest since 1976; Allstate −$1.39bn (2022) → $10.17bn (2025)
+  subject: a generic car with a price shock
+  tone: bright
+  metaphor: the insurance cycle
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - +22.6%
+  - CAR INSURANCE
+  claim_basis: 'cpi: BLS CPI motor vehicle insurance +22.6% 12-month change, April 2024'
+  scene:
+    palette:
+      sky0: '#10070A'
+      sky1: '#3A1218'
+      haze: '#EF9A9A'
+      key: '#FFEBEE'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: sedan
+      x: 1450
+      y: 620
+      s: 0.6
+      color: '#1E88E5'
+      sticker: $$$
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFEBEE'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 2022 −$1.4B
+  - 2025 +$10.2B
+  claim_basis: 'insurers: Allstate net loss $1.39bn (2022), net income $10.17bn (2025, incl. gains on dispositions), 10-K'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: INSURER NET INCOME
+      amount: −$1.39B
+      magnifier: false
+      rot: -4
+    after:
+      kind: ledger
+      x: 1440
+      y: 650
+      s: 0.6
+      heading: INSURER NET INCOME
+      amount: +$10.17B
+      magnifier: false
+      stamp: RECORD
+      rot: 4
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

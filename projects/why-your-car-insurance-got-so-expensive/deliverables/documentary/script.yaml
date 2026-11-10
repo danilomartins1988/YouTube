@@ -1,0 +1,272 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations are said as such.
+logline: In April 2024, US car insurance prices were up twenty-two point six percent in a year, the biggest jump since 1976.
+  The cars, the crashes, the courts, and the insurers' own books.
+title: Why Your Car Insurance Got So Expensive
+segments:
+- id: h_open
+  chapter: Twenty-two point six percent
+  narration: Twenty-two point six percent. That is how much the price of car insurance in America rose in a single year,
+    by April twenty twenty-four. By our reading of government data, the biggest jump since nineteen seventy-six.
+  claims:
+  - cpi
+- id: h_twist
+  chapter: Twenty-two point six percent
+  narration: Over five years, car insurance prices rose {{cpi.five_spoken}}. Prices in general rose {{cpi.all_spoken}}.
+    And here is the twist. This year, for the first time in a long time, they have started to fall.
+  claims:
+  - cpi
+- id: h_question
+  chapter: Twenty-two point six percent
+  narration: So what made car insurance so expensive, and who ended up making money from it?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: Twenty-two point six percent
+  narration: By the end of this video, you will know the four forces behind your premium. The cars, the crashes, the courts,
+    and the insurers' own books.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The bill
+  narration: ''
+  claims: []
+- id: m1_naic
+  chapter: The bill
+  narration: Start with what drivers actually pay. According to the National Association of Insurance Commissioners, the
+    average American household spent {{naic}} on auto insurance in twenty twenty-four, up almost twelve percent in a single
+    year. In twenty twenty, it was about one thousand and forty-eight. By our calculation, that is a rise of about thirty-seven
+    percent in four years.
+  claims:
+  - naic
+- id: m1_states
+  chapter: The bill
+  narration: Where you live matters. The most expensive state in twenty twenty-four was Florida, at about two thousand and
+    eighteen dollars a year, followed by New York and Louisiana. The cheapest was North Dakota, at about nine hundred and
+    seven. The regulators themselves warn that state comparisons should be treated with caution, because drivers buy very
+    different coverage.
+  claims:
+  - naic
+- id: m1_cpi
+  chapter: The bill
+  narration: The government's price index tells the same story. By our calculation, car insurance prices rose about forty-nine
+    percent in the five years to September twenty twenty-six. Over the same period, the price of new cars rose about twelve
+    percent. Insurance outran the very thing it insures.
+  claims:
+  - cpi
+- id: m1_drop
+  chapter: The bill
+  narration: And people reacted. The insurance commissioners note that as prices rise, the amount of insurance people buy
+    goes down. Drivers drop coverage, or raise their deductibles. Paying less today, but risking far more if they crash.
+  claims:
+  - naic
+- id: m1_draw
+  chapter: The bill
+  narration: Let me draw what is inside a premium. A slice to repair or replace cars. A slice for people injured in crashes.
+    A slice for lawyers and claims handling. A slice for the insurer's costs and profit. When any slice grows, the whole
+    premium grows.
+  claims:
+  - naic
+  analysis: true
+  source_note: Schematic of premium components (not to scale).
+- id: m1_transition
+  chapter: The bill
+  narration: The first slice to explode was the cost of fixing the car itself.
+  claims: []
+- id: m2_card
+  chapter: The car itself
+  narration: ''
+  claims: []
+- id: m2_used
+  chapter: The car itself
+  narration: During the pandemic, car factories ran short of chips, and used car prices shot up. The insurance commissioners
+    report that used vehicle prices rose thirty-six percent between twenty nineteen and twenty twenty-three. When a car is
+    totaled, the insurer pays what it is worth. Suddenly every totaled car cost much more.
+  claims:
+  - naic
+  analysis: true
+  source_note: Used-vehicle CPI from the NAIC report; the chip shortage is context, no figure claimed.
+- id: m2_repair
+  chapter: The car itself
+  narration: Repairs climbed too, and kept climbing. By our calculation, the price of car maintenance and repair rose about
+    forty-six percent in five years. Parts, paint and labor all became more expensive.
+  claims:
+  - cpi
+- id: m2_tech
+  chapter: The car itself
+  narration: Modern cars are also harder to fix. Cameras and radar sit in bumpers, mirrors and windshields. The Highway Loss
+    Data Institute, which is funded by insurers, found that for otherwise identical cars, those with driver assistance features
+    cost about ten percent more per collision claim. The sensors are expensive, and often need calibration after a repair.
+  claims:
+  - tech
+- id: m2_safer
+  chapter: The car itself
+  narration: But there is a twist. The same technology prevents crashes. Cars with those features had about ten percent
+    fewer collision claims, and almost forty percent fewer claims for damage to other people's property. A more expensive
+    repair, but fewer of them.
+  claims:
+  - tech
+- id: m2_draw
+  chapter: The car itself
+  narration: Let me draw a modern bumper. On the outside, plastic and paint. Inside, a radar unit, sensors, wiring, and a
+    camera behind the windshield. A small bump that once meant a cheap fix can now mean replacing and recalibrating electronics.
+  claims:
+  - tech
+  analysis: true
+  source_note: Illustrative diagram.
+- id: m2_transition
+  chapter: The car itself
+  narration: Then there were the crashes themselves. And they got worse at the worst possible moment.
+  claims: []
+- id: m3_card
+  chapter: The crashes
+  narration: ''
+  claims: []
+- id: m3_deaths
+  chapter: The crashes
+  narration: In twenty twenty, roads emptied during lockdowns, but the crashes that did happen were deadlier. According to
+    federal crash data compiled by the Insurance Institute for Highway Safety, road deaths rose from about thirty-six thousand
+    in twenty nineteen to {{deaths}} in twenty twenty-one. The death rate per mile driven jumped from one point one one to
+    one point three eight.
+  claims:
+  - deaths
+- id: m3_speed
+  chapter: The crashes
+  narration: Speed played a big part. In twenty twenty-four, speeding was a factor in twenty-nine percent of crash deaths.
+    Faster crashes mean more injuries, more hospital bills, and bigger claims.
+  claims:
+  - deaths
+- id: m3_better
+  chapter: The crashes
+  narration: Since then, the roads have become somewhat safer again. Deaths fell to about thirty-nine thousand two hundred
+    in twenty twenty-four. But that is still more than before the pandemic.
+  claims:
+  - deaths
+- id: m3_uninsured
+  chapter: The crashes
+  narration: And not everyone on the road is paying. The Insurance Research Council, an industry-funded group, estimates
+    that about one in seven drivers, fifteen point four percent, were uninsured in twenty twenty-three. When they cause a
+    crash, the cost often lands on the insured driver's own policy.
+  claims:
+  - deaths
+  analysis: true
+  source_note: IRC estimate; the last sentence describes uninsured-motorist coverage (commentary).
+- id: m3_draw
+  chapter: The crashes
+  narration: Let me draw the death rate. Here is twenty nineteen, steady. Here is twenty twenty and twenty twenty-one, a
+    sharp climb even as people drove less. Then a slow decline that has not returned to where it started. Insurers price for
+    that whole curve.
+  claims:
+  - deaths
+  analysis: true
+  source_note: Line chart of IIHS/FARS rates (schematic).
+- id: m3_transition
+  chapter: The crashes
+  narration: After the crash comes the claim. And in some states, the claim goes to court.
+  claims: []
+- id: m4_card
+  chapter: The courts and the states
+  narration: ''
+  claims: []
+- id: m4_legal
+  chapter: The courts and the states
+  narration: The insurance commissioners' data show the price of legal services rising about twenty-one percent from twenty
+    nineteen to twenty twenty-three, more than double the rise in medical care. The insurance industry blames what it calls
+    legal system abuse. Its own study claims that, together with inflation, it added tens of billions of dollars to personal
+    auto losses over ten years. That is the industry's own framing, not a neutral measurement.
+  claims:
+  - courts
+  - naic
+  analysis: true
+  source_note: NAIC CPI table; Triple-I/CAS is an industry study, attributed as such.
+- id: m4_florida
+  chapter: The courts and the states
+  narration: Florida, the most expensive state, changed its laws in March twenty twenty-three. It repealed one-way attorney
+    fees and cut the time to file a negligence lawsuit from {{courts}} years. Three years later, the state says loss ratios
+    for car damage fell from one hundred and twelve percent in twenty twenty-two to under fifty percent in twenty twenty-five,
+    and its biggest insurers are signaling rate cuts of about eight percent for twenty twenty-six.
+  claims:
+  - courts
+- id: m4_rules
+  chapter: The courts and the states
+  narration: States also decide how you can be priced. In California, rates are driven mainly by three mandatory factors,
+    your safety record, the miles you drive, and your years of experience. Elsewhere, the commissioners say about ninety-five
+    percent of auto insurers use credit-based insurance scores where they are allowed. Hawaii and Massachusetts bar rates
+    based on credit.
+  claims:
+  - courts
+- id: m4_draw
+  chapter: The courts and the states
+  narration: Let me draw two drivers with the same car and the same clean record. One lives in a state that allows credit
+    scores, the other does not. Same road, same risk on paper, different price. Your premium depends as much on the rules
+    of your state as on how you drive.
+  claims:
+  - courts
+  analysis: true
+  source_note: Illustrative diagram.
+- id: m4_transition
+  chapter: The courts and the states
+  narration: Which brings us to the companies in the middle. Were they the victims of this storm, or the winners?
+  claims: []
+- id: m5_card
+  chapter: The insurers' books
+  narration: ''
+  claims: []
+- id: m5_loss
+  chapter: The insurers' books
+  narration: At first, they were losing. Insurers measure their business with the combined ratio, losses plus expenses as
+    a share of premiums. Above one hundred means losing money on the policies. Allstate's auto combined ratio was one hundred
+    and ten in twenty twenty-two. The company reported a net loss of {{insurers}} that year.
+  claims:
+  - insurers
+- id: m5_rates
+  chapter: The insurers' books
+  narration: So they raised prices, hard. Progressive says it raised personal auto rates by about thirteen percent in twenty
+    twenty-two, and about nineteen percent in twenty twenty-three. Allstate took rate increases of almost eighteen percent
+    for its main brand in fifty-five locations in twenty twenty-three.
+  claims:
+  - insurers
+- id: m5_profit
+  chapter: The insurers' books
+  narration: Then the books flipped. By twenty twenty-five, Allstate's auto combined ratio was eighty-five, and its net income
+    was ten point one seven billion dollars, partly from selling businesses. Progressive's net income went from seven hundred
+    and twenty-two million dollars in twenty twenty-two to {{insurers.pgr_spoken}} in twenty twenty-five.
+  claims:
+  - insurers
+- id: m5_refund
+  chapter: The insurers' books
+  narration: In Florida, profits grew so large that a state law kicked in. Progressive recorded one point two two billion
+    dollars of credits to policyholders, because its Florida auto profits exceeded the legal limit. And this year, Progressive
+    reports that its average personal auto premium per policy is falling.
+  claims:
+  - insurers
+- id: m5_draw
+  chapter: The insurers' books
+  narration: Let me draw the cycle. Costs rise faster than prices, and insurers lose money. Insurers raise prices, sharply.
+    Costs cool down, but prices are already high, and profits soar. Then competition and regulators push prices back down.
+    Drivers live through the expensive part of every turn.
+  claims:
+  - insurers
+  analysis: true
+  source_note: Insurance cycle diagram (commentary).
+- id: payoff
+  chapter: The lesson
+  narration: So why did your car insurance get so expensive? More expensive cars and repairs, deadlier crashes, rising legal
+    and medical costs, and insurers who raised prices fast to make up for their losses. Prices are finally easing. But they
+    remain far above where they were before the pandemic, and the next turn of the cycle is never far away.
+  claims:
+  - cpi
+  - insurers
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
