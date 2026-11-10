@@ -50,7 +50,7 @@ The biggest piece is hospitals, at about one point six trillion dollars a year. 
 
 ## m1_peers - The bill
 
-Now compare that with other rich countries. On the international basis used by the O E C D, the US spent fourteen thousand seven hundred and seventy-five dollars per person in twenty twenty-four. The average of comparable rich countries was seven thousand eight hundred and sixty dollars. Even Switzerland, the next most expensive, spent almost five thousand dollars less per person.
+Now compare that with other rich countries. On the international basis used by the O E C D, the US spent fourteen thousand seven hundred and seventy-five dollars per person in twenty twenty-four. The average of comparable rich countries was seven thousand eight hundred and sixty dollars. Even Switzerland, the next most expensive, spent almost five thousand dollars less per person. On the same basis, health care took seventeen point two percent of the American economy, against eleven point two percent on average elsewhere.
 
 > `peers` [source_located] Peterson-KFF (OECD basis): health spending per person 'averaged $14,775 in the U.S. in 2024', against comparable high-income peer countries ($7,860); 'almost $5,000 more per person than the next highest peer country, Switzerland'; 'In 2024, the U.S. spent 17.2% of GDP on health – still substantially higher than peer countries, which average 11.2% of GDP.' (sources: pkff_spend)  
 
@@ -94,7 +94,7 @@ Researchers have looked at this for years, and the conclusion keeps coming back 
 
 ## m2_example - Less care, higher prices
 
-Take a heart bypass operation. Even in Medicare, the US government's own program, the average cost was forty-four thousand one hundred and forty-nine dollars. In public insurance schemes in comparable countries, it was about twenty-four thousand eight hundred and forty-seven dollars. For a procedure to open a blocked artery, the Medicare cost was almost three times the peer average.
+Take a heart bypass operation. Even in Medicare, the US government's own program, the average cost was forty-four thousand one hundred and forty-nine dollars. In public insurance schemes in comparable countries, it was about twenty-four thousand eight hundred and forty-seven dollars. Almost twice as much, for the same operation, even when the government is the one paying. For a procedure to open a blocked artery, the Medicare cost was almost three times the peer average.
 
 > `prices` [source_located] Peterson-KFF / KFF: 'the average cost per inpatient CABG in the U.S. traditional Medicare program was $44,149' compared with '$24,847 among public insurance schemes in peer nations'; for angioplasty 'the average cost within the U.S. traditional Medicare program was 2.9 times the average cost among peer nations'; 'The cost per MRI among U.S. private health plans was more than three times the U.S. Medicare cost'; 'Medicare-negotiated prices are 2.8 times the average of drug prices in the 11 comparable countries.' (sources: pkff_prices)  
 

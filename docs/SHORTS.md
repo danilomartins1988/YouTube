@@ -31,3 +31,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 26-mcdonalds | Why Moscow Queued From 4 A.M. for a Hamburger | THEY QUEUED FROM 4 A.M. / FOR A HAMBURGER | 45 s | `docs/episodes/26-mcdonalds/youtube-short/short_package.md` |
 | 27-oil | The Day Oil Was Worth Less Than Nothing | OIL HIT -$37.63 / SELLERS PAID BUYERS | 46 s | `docs/episodes/27-oil/youtube-short/short_package.md` |
 | 28-bigtech-ai | Big Tech Spent $200 Billion in 3 Months. Here's Why | $200 BILLION / IN 3 MONTHS. ON AI | 49 s | `docs/episodes/28-bigtech-ai/youtube-short/short_package.md` |
+| 29-us-healthcare | Why US Health Insurance Costs $28,303 a Year | $28,303 A YEAR / FOR HEALTH INSURANCE | 48 s | `docs/episodes/29-us-healthcare/youtube-short/short_package.md` |

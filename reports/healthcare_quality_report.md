@@ -2,35 +2,34 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/why-americans-pay-so-much-for-healthcare/documentary/why-americans-pay-so-much-for-healthcare--documentary.mp4 (149.2 MB) |
+| File exists | PASS | /home/user/YouTube/output/why-americans-pay-so-much-for-healthcare/documentary/why-americans-pay-so-much-for-healthcare--documentary.mp4 (152.3 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 11-13:20 min (channel standard 660-800 s) | FAIL | 648.87 s (10:48) |
-| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
-| Caption/voice sync | PASS | 305 cues; median cue-start offset 0.04 s, p90 0.37 s; 100% of speech captioned |
+| Duration 11-13:20 min (channel standard 660-800 s) | PASS | 663.27 s (11:03) |
+| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
+| Caption/voice sync | PASS | 314 cues; median cue-start offset 0.04 s, p90 0.37 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
-- Loudness: -16.1 LUFS integrated, true peak -3.8 dBFS
+- Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
 - Scenes: 38; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x22, engine_draw x5, kinetic_text x4
-- Average scene length: 17.1 s; act cards are music-only.
+- Average scene length: 17.5 s; act cards are music-only.
 
 ## Pipeline QC report
 
 # QC report: why-americans-pay-so-much-for-healthcare / documentary (long_16x9)
 
-- Runtime: **648.87 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 149.2 MB
-- Loudness: -16.1 LUFS integrated, true peak -3.8 dBFS
-- Errors: **1**, warnings: **73**
-- Technical QC passed: **False**
+- Runtime: **663.27 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 152.3 MB
+- Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
+- Errors: **0**, warnings: **78**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [ERROR] (timing) Runtime 648.9s outside target 660-800s
 - [WARNING] (sources) Number word 'eight' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'thousand' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
@@ -43,8 +42,11 @@
 - [WARNING] (sources) Number word 'eight' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'nine' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'percent' outside a placeholder - confirm it is not an unsourced statistic.
+- [WARNING] (sources) Number word 'eleven' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'four' outside a placeholder - confirm it is not an unsourced statistic.
+- [WARNING] (sources) Number word 'percent' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
+- [WARNING] (sources) Number word 'two' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'eight' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'nine' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'thousand' outside a placeholder - confirm it is not an unsourced statistic.
@@ -60,7 +62,9 @@
 - [WARNING] (sources) Number word 'seven' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'six' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'ten' outside a placeholder - confirm it is not an unsourced statistic.
+- [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
+- [WARNING] (sources) Number word 'twice' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'one' outside a placeholder - confirm it is not an unsourced statistic.

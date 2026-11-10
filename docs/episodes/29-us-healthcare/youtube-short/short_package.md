@@ -23,7 +23,7 @@ Watch the full story: "Why Americans Pay So Much for Healthcare" on The Hidden E
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+healthcare, US healthcare costs, health insurance, Medicare, hospital prices, drug prices, prescription drugs, RAND, KFF, CMS, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

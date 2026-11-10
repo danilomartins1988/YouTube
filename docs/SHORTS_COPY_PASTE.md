@@ -513,3 +513,22 @@ Watch the full story: "How Big Tech Really Makes Money From AI" on The Hidden Ec
 ```
 AI, artificial intelligence, Big Tech, Microsoft, Alphabet, Google, Amazon, AWS, Meta, Azure, shorts, economics explained, The Hidden Economics
 ```
+
+## 29-us-healthcare
+
+**Title**
+```
+Why US Health Insurance Costs $28,303 a Year #shorts
+```
+**Description**
+```
+Twenty-eight thousand dollars. That is what health insurance for the average American family with a job-based plan now costs in a single year.
+
+Watch the full story: "Why Americans Pay So Much for Healthcare" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #healthcare #insurance #usa #economics
+```
+**Tags**
+```
+healthcare, US healthcare costs, health insurance, Medicare, hospital prices, drug prices, prescription drugs, RAND, KFF, CMS, shorts, economics explained, The Hidden Economics
+```
