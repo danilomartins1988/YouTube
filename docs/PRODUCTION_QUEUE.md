@@ -54,7 +54,7 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | 05 | Why AI Is Making Your Computer More Expensive | **Duplicate** of Ep 14 (memory prices); replacement topic requested |
 | 06 | The Business Behind America's Student Debt | **Delivered** (Ep 33, 11:45, QC 0 errors) |
 | 07 | How Car Dealerships Really Make Money | **Delivered** (Ep 34, 11:19, QC 0 errors) |
-| 08 | Why America's Electricity Bills Are Rising | In production (Ep 35) |
+| 08 | Why America's Electricity Bills Are Rising | **Delivered** (Ep 35, 11:26, QC 0 errors) |
 | 09 | The Bank That Accidentally Sent $900 Million | Already scheduled (top-10 #4); produced once |
 | 10 | Why Your Car Insurance Keeps Getting More Expensive | Approved, queued |
 | 11 | The Hidden Economics of Amazon Prime | Approved, queued |

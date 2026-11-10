@@ -627,3 +627,22 @@ Watch the full story: "How Car Dealerships Really Make Money" on The Hidden Econ
 ```
 car dealership, how car dealers make money, car buying tips, F&I, dealer markup, auto loan, extended warranty, car prices, AutoNation, franchise laws, shorts, economics explained, The Hidden Economics
 ```
+
+## 35-electricity
+
+**Title**
+```
+Why Your Electric Bill Keeps Going Up #shorts
+```
+**Description**
+```
+Twenty-eight dollars and ninety-two cents. Then two hundred and sixty-nine dollars and ninety-two cents.
+
+Watch the full story: "Why America's Electricity Bills Are Rising" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #electricity #energy #usa #economics
+```
+**Tags**
+```
+electricity bills, electric bill, power prices, utility rates, data centers, AI electricity, PJM, power grid, natural gas, energy prices, shorts, economics explained, The Hidden Economics
+```

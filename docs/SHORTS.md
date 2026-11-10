@@ -37,3 +37,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 32-costco | Costco Made $5.9 Billion Before You Bought Anything | $5.9 BILLION / JUST TO GET IN | 55 s | `docs/episodes/32-costco/youtube-short/short_package.md` |
 | 33-student-debt | Americans Owe $1.65 Trillion in Student Loans | $1.65 TRILLION / IN STUDENT DEBT | 55 s | `docs/episodes/33-student-debt/youtube-short/short_package.md` |
 | 34-car-dealers | Car Dealers Make More in the Finance Office Than on the Car | $2,769 PER CAR / FROM THE FINANCE OFFICE | 57 s | `docs/episodes/34-car-dealers/youtube-short/short_package.md` |
+| 35-electricity | Why Your Electric Bill Keeps Going Up | ×9 IN ONE AUCTION / YOUR POWER BILL | 57 s | `docs/episodes/35-electricity/youtube-short/short_package.md` |
