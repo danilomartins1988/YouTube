@@ -1,0 +1,91 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic blank cards only (no Visa/Mastercard logos or card designs).
+title: How Visa and Mastercard Became Financial Gatekeepers
+docs_dir: docs/episodes/39-visa-mastercard
+video: output/visamc_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How did two clubs of banks become the gate almost every card payment passes through?
+  surprising_fact: 355 billion payments carried Visa's name in FY2026 (Visa 10-K); both networks began as bank-owned clubs
+  subject: a generic card
+  tone: bright
+  metaphor: a gate on every payment
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 355 BILLION
+  - PAYMENTS, 1 YEAR
+  claim_basis: 'volume: 355 billion Visa-brand transactions in fiscal 2026 (Visa 10-K)'
+  scene:
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#1E2A4A'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ccard
+      x: 1480
+      y: 560
+      s: 0.75
+      rot: -12
+      coins: true
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'BANK CLUB: 1970'
+  - 'GIANTS: 2026'
+  claim_basis: 'origins + volume: member-owned from 1970 (Visa S-4/A); 355bn transactions FY2026 (Visa 10-K)'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: MEMBER BANKS
+      amount: '≈ 14,000'
+      magnifier: false
+      rot: -4
+    after:
+      kind: ccard
+      x: 1440
+      y: 640
+      s: 0.6
+      rot: -10
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

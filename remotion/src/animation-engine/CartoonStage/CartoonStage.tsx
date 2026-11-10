@@ -594,6 +594,39 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3E4656' : K.road} />
     </g>;
   },
+  /** A 1950s-style bank hall: marble floor, fluted columns, brass teller windows between them, a wall clock and a
+   *  banner (`label`). `night` dims it into an after-hours hall lit by desk lamps. */
+  bankhall: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, n = Math.ceil(w / 520) + 1;
+    const wall = night ? '#3B3A4F' : '#F3E9D2', trim = night ? '#6D5F45' : '#C9A85C';
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={wall} />
+      <rect x={z.x0} y={f - 760} width={w} height={26} fill={trim} stroke={OL} strokeWidth={3} />
+      {Array.from({length: n}, (_, k) => { const x = z.x0 + k * 520;
+        return <g key={'bh' + k}>
+          <rect x={x} y={f - 734} width={70} height={734} fill={night ? '#5C5B70' : '#FFFFFF'} stroke={OL} strokeWidth={4} />
+          {[16, 35, 54].map((dx) => <path key={dx} d={`M ${x + dx} ${f - 720} L ${x + dx} ${f - 20}`} stroke={OL} strokeWidth={2} opacity={0.35} />)}
+          <rect x={x - 14} y={f - 760} width={98} height={30} fill={trim} stroke={OL} strokeWidth={3} />
+          <rect x={x - 14} y={f - 26} width={98} height={26} fill={trim} stroke={OL} strokeWidth={3} />
+          <g transform={`translate(${x + 120} ${f - 420})`}>
+            <rect x={0} y={0} width={330} height={420} fill={night ? '#4A3B2C' : '#8D6E4A'} stroke={OL} strokeWidth={4} />
+            <rect x={20} y={40} width={290} height={170} fill={night ? '#2A3550' : '#DDF1FA'} stroke={OL} strokeWidth={3} />
+            {Array.from({length: 9}, (_, q) => <rect key={q} x={30 + q * 32} y={40} width={6} height={170} fill="#D4AF37" stroke={OL} strokeWidth={1} />)}
+            <rect x={10} y={210} width={310} height={22} fill="#D4AF37" stroke={OL} strokeWidth={3} />
+            {night && <g><circle cx={260} cy={196} r={18} fill="#FFE08A" opacity={0.85} /><rect x={256} y={196} width={8} height={14} fill={OL} /></g>}
+            <rect x={110} y={8} width={110} height={26} rx={4} fill={night ? '#2B2B3A' : '#1B3A5C'} stroke={OL} strokeWidth={2} />
+            <T x={165} y={27} s={16} c="#FFE08A">{['TELLER', 'LOANS', 'CARDS', 'DEPOSITS'][k % 4]}</T></g></g>; })}
+      <g transform={`translate(${z.x0 + w * 0.5} ${f - 640})`}>
+        <circle r={70} fill="#FFFDF5" stroke={OL} strokeWidth={6} /><circle r={58} fill="none" stroke="#D4AF37" strokeWidth={4} />
+        <path d={`M 0 0 L ${40 * Math.sin(t * 0.2)} ${-40 * Math.cos(t * 0.2)}`} stroke={OL} strokeWidth={6} strokeLinecap="round" />
+        <path d={`M 0 0 L ${52 * Math.sin(t * 2.4)} ${-52 * Math.cos(t * 2.4)}`} stroke={OL} strokeWidth={3} strokeLinecap="round" /></g>
+      {z.label && <g transform={`translate(${z.x0 + w * 0.5} ${f - 790})`}><rect x={-340} y={-46} width={680} height={80} rx={8} fill="#1B3A5C" stroke={OL} strokeWidth={4} />
+        <T x={0} y={8} s={40} c="#FFE08A">{z.label}</T></g>}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#4B4A5E' : '#E8E2D4'} />
+      {Array.from({length: Math.ceil(w / 160)}, (_, k) => <rect key={'tl' + k} x={z.x0 + k * 160} y={f} width={80} height={600} fill={night ? '#55546A' : '#D9D1BF'} opacity={0.6} />)}
+      <rect x={z.x0} y={f} width={w} height={10} fill={trim} />
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -3149,9 +3182,36 @@ const flowscreens: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A growing two-sided network: cardholders (blue cards, left) and stores (orange awnings, right) joined by lines.
+ *  `steps` [[t, nCards, nStores], ...] grows the counts; `labels` [left, right]; `rival` draws a tiny lonely pair below
+ *  from `rivalAt` (a new network with no links). */
+const netmesh: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 460), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const st: [number, number, number][] = a.steps || [[0, 2, 2]];
+  let nc = st[0][1], ns = st[0][2];
+  for (let k = 1; k < st.length; k++) { if (t < st[k][0]) break; const u = E.out(clamp((t - st[k][0]) / 1.2)); nc = lerp(st[k - 1][1], st[k][1], u); ns = lerp(st[k - 1][2], st[k][2], u); }
+  const C_ = Math.max(1, Math.round(nc)), S_ = Math.max(1, Math.round(ns)), H = 520;
+  const cy = (k: number, n: number) => -H / 2 + (H * (k + 0.5)) / n;
+  const lab: string[] = a.labels || ['CARDHOLDERS', 'STORES'];
+  const ra = a.rivalAt;
+  return <g transform={`translate(${x} ${y}) scale(${s})`} key={i}>
+    {Array.from({length: C_}, (_, p) => Array.from({length: S_}, (_, q) => <path key={p + '-' + q} d={`M -300 ${cy(p, C_)} C -60 ${cy(p, C_)} 60 ${cy(q, S_)} 300 ${cy(q, S_)}`} stroke="#4FC3F7" strokeWidth={2} opacity={0.35} fill="none" />))}
+    {Array.from({length: C_}, (_, p) => <g key={'c' + p} transform={`translate(-330 ${cy(p, C_)})`}><rect x={-34} y={-20} width={68} height={42} rx={6} fill="#1E88E5" stroke={OL} strokeWidth={3} /><rect x={-24} y={-8} width={14} height={11} rx={2} fill="#FFD54F" /></g>)}
+    {Array.from({length: S_}, (_, q) => <g key={'s' + q} transform={`translate(330 ${cy(q, S_)})`}><rect x={-30} y={-14} width={60} height={34} fill="#FFF3E0" stroke={OL} strokeWidth={3} /><path d="M -36 -14 L -28 -30 L 28 -30 L 36 -14 Z" fill="#FB8C00" stroke={OL} strokeWidth={3} /></g>)}
+    {[-330, 330].map((lx, q) => <g key={"lb" + q}><rect x={lx - 130} y={-H / 2 - 78} width={260} height={52} rx={10} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><T x={lx} y={-H / 2 - 42} s={26} c="#1B3A5C">{lab[q]}</T></g>)}
+    <T x={0} y={H / 2 + 60} s={34} c="#FFC21A">{`${C_ * S_} LINKS`}</T>
+    {ra !== undefined && t >= ra && <g opacity={clamp((t - ra) / 0.6)} transform={`translate(0 ${H / 2 + 150})`}>
+      <rect x={-140} y={-20} width={56} height={36} rx={6} fill="#B0BEC5" stroke={OL} strokeWidth={3} />
+      <rect x={90} y={-14} width={52} height={30} fill="#ECEFF1" stroke={OL} strokeWidth={3} />
+      <path d="M -80 0 L 86 0" stroke="#B0BEC5" strokeWidth={3} strokeDasharray="10 10" />
+      <T x={0} y={-36} s={24} c="#B0BEC5">{a.rivalText || 'A NEW NETWORK: NO LINKS'}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

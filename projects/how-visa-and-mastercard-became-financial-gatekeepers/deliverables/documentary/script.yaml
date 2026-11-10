@@ -1,0 +1,292 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Overlap watch vs Ep 30: no swipe-fee split, no rewards loop, no margins. History, network effects, rules, courts.
+# Numbers come from sources.yaml via {{placeholders}}; allegations and our calculations are said as such.
+logline: Three hundred and fifty-five billion transactions a year carry Visa's name. How two clubs of banks became the
+  gatekeepers of American payments, and why courts, Congress and regulators keep trying to pry the gate open.
+title: How Visa and Mastercard Became Financial Gatekeepers
+segments:
+- id: h_open
+  chapter: Three hundred and fifty-five billion
+  narration: Three hundred and fifty-five billion. That is how many payments carried Visa's name in a single year. Close to
+    one billion every single day.
+  claims:
+  - volume
+- id: h_twist
+  chapter: Three hundred and fifty-five billion
+  narration: And yet Visa does not lend you money. Neither does Mastercard. They did not even start as companies. They
+    started as clubs, owned by the banks that used them.
+  claims:
+  - origins
+- id: h_question
+  chapter: Three hundred and fifty-five billion
+  narration: So how did two clubs of banks become the gate that almost every card payment in America has to pass through?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced history.
+- id: h_promise
+  chapter: Three hundred and fifty-five billion
+  narration: By the end of this video, you will know how that gate was built, why it is so hard to go around it, and why
+    the courts and Congress keep trying to pry it open.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The bank club
+  narration: ''
+  claims: []
+- id: m1_launch
+  chapter: The bank club
+  narration: The story starts in California, in nineteen fifty-eight. Bank of America launches a new kind of card, called
+    BankAmericard. The bank does everything itself. It signs up the shoppers, it signs up the stores, and it carries the
+    risk. It is one bank, running one closed system.
+  claims:
+  - origins
+- id: m1_license
+  chapter: The bank club
+  narration: But one bank can only reach so far. So in nineteen sixty-six, according to the Federal Reserve's own history,
+    Bank of America starts licensing the card to other banks, in the United States and abroad. That same year, a group of
+    rival banks forms its own answer, a cooperative called Interbank. In nineteen sixty-nine, it takes the name Master Charge.
+    That is the ancestor of Mastercard.
+  claims:
+  - origins
+- id: m1_hock
+  chapter: The bank club
+  narration: The BankAmericard system was struggling. In nineteen sixty-nine, a banker named Dee Hock gathered a group of
+    bankers at a hotel in Sausalito to redesign it. The answer was radical. Bank of America would give the system away.
+  claims:
+  - origins
+- id: m1_coop
+  chapter: The bank club
+  narration: In nineteen seventy, ownership passed to the banks that issued the card. The network became a club, a corporation
+    with no shares for sale, owned by its members. In nineteen seventy-six, after an internal contest, the club chose a new
+    name, one that sounds the same in almost every language. Visa.
+  claims:
+  - origins
+- id: m1_draw
+  chapter: The bank club
+  narration: Let me draw why the club worked. Before, every bank had its own card, and each card worked only in its own
+    stores. Here is bank A, with its stores. Here is bank B, with its stores. Now put both inside one club. Suddenly every
+    card works in every store of every member. Each bank keeps its own customers, but they all share one network.
+  claims:
+  - origins
+  analysis: true
+  source_note: Diagram of the member-owned model (Fed History, Visa S-4/A).
+- id: m1_transition
+  chapter: The bank club
+  narration: For almost forty years, that is what Visa and Mastercard were. Clubs owned by thousands of banks. Then the club
+    turned into a company.
+  claims:
+  - origins
+- id: m2_card
+  chapter: The club goes public
+  narration: ''
+  claims: []
+- id: m2_ma
+  chapter: The club goes public
+  narration: Mastercard went first. In May two thousand six, it sold shares to the public for the first time, at thirty-nine
+    dollars each. The offering raised {{ipo}}. And most of the money went straight back to the old owners, the banks, to
+    buy back their shares.
+  claims:
+  - ipo
+- id: m2_visa
+  chapter: The club goes public
+  narration: Before its own listing, Visa in the United States was owned by {{origins.members_spoken}} banks and other
+    financial institutions. In March two thousand eight, in the middle of a financial crisis, Visa went public. It sold four
+    hundred and six million shares at forty-four dollars each. By our calculation, that is {{ipo.visa_spoken}}. Visa itself
+    calls it one of the largest stock offerings in history.
+  claims:
+  - origins
+  - ipo
+- id: m2_why
+  chapter: The club goes public
+  narration: Why sell? Part of the reason was the courts. Stores had been suing the card networks for years, saying the
+    banks inside the club were setting fees together. As public companies, Visa and Mastercard would be businesses in their
+    own right, not clubs of competing banks. Merchant lawyers even asked courts to undo the listings.
+  claims:
+  - settle
+  analysis: true
+  source_note: Motive is commentary; the merchant challenges to the IPOs are in both 10-Ks.
+- id: m2_draw
+  chapter: The club goes public
+  narration: Let me draw the change. Before, the banks owned the network, and the network served the banks. After, the
+    network is owned by shareholders. The banks become customers. The network is now a business with its own interests, and
+    its own share price.
+  claims:
+  - ipo
+  analysis: true
+  source_note: Ownership diagram (commentary on the restructuring).
+- id: m2_transition
+  chapter: The club goes public
+  narration: And it became a very, very large business. Because of a force that is almost impossible to compete against.
+  claims:
+  - network
+- id: m3_card
+  chapter: The moat
+  narration: ''
+  claims: []
+- id: m3_platform
+  chapter: The moat
+  narration: In twenty eighteen, the Supreme Court described what a card network is. It called it a two-sided platform,
+    serving two groups at once, card holders and merchants. And it said these platforms have what economists call indirect
+    network effects. The network is worth more to stores when more shoppers carry its cards, and worth more to shoppers when
+    more stores accept them.
+  claims:
+  - network
+- id: m3_loop
+  chapter: The moat
+  narration: That creates a loop. More cards bring more stores. More stores bring more cards. The Court also noted that
+    almost every bank offering credit cards is in the Visa or Mastercard network, because both began as bank cooperatives.
+  claims:
+  - network
+- id: m3_scale
+  chapter: The moat
+  narration: Look at the size of that loop today. Visa reports {{volume.cards_spoken}} payment credentials, more than four
+    hundred million places that accept them, and {{volume.vol_spoken}} in total volume in its latest year. Mastercard
+    reported {{volume.ma_spoken}} in gross volume in twenty twenty-five.
+  claims:
+  - volume
+- id: m3_compare
+  chapter: The moat
+  narration: Among the big card networks, the gap is enormous. In Visa's annual report, citing industry data, Visa handled
+    about {{network.visa_spoken}} in payments in twenty twenty-five. Mastercard, about {{network.ma_spoken}}. American Express,
+    the next one, about {{network.amex_spoken}}.
+  claims:
+  - network
+- id: m3_draw
+  chapter: The moat
+  narration: Let me draw the moat. Here is a new network, trying to start. No store will accept it, because nobody carries
+    the card. Nobody will carry the card, because no store accepts it. On the other side, Visa and Mastercard, with billions
+    of cards and hundreds of millions of stores. The loop that made them big is the same loop that keeps others out.
+  claims:
+  - network
+  - volume
+  analysis: true
+  source_note: Network-effects diagram built from the Supreme Court description.
+- id: m3_transition
+  chapter: The moat
+  narration: But a moat can also be dug deeper on purpose. And that is where the government stepped in.
+  claims:
+  - exclusive
+- id: m4_card
+  chapter: The rules
+  narration: ''
+  claims: []
+- id: m4_exclusive
+  chapter: The rules
+  narration: By the late nineteen nineties, Visa and Mastercard had rules for their member banks. A bank could issue their cards,
+    but it could not issue American Express or Discover cards. The government sued. According to its brief, Visa and Mastercard
+    then accounted for {{exclusive}} of general purpose card transactions, and {{exclusive.issue_spoken}} of cards issued.
+  claims:
+  - exclusive
+- id: m4_ruling
+  chapter: The rules
+  narration: The courts agreed with the government. The rules had worked as intended. No bank in the continental United
+    States had agreed to issue American Express cards. Visa and Mastercard were ordered to repeal them, and in two thousand
+    three, the appeals court upheld that order.
+  claims:
+  - exclusive
+- id: m4_durbin
+  chapter: The rules
+  narration: Then Congress went after debit cards. A law passed in twenty ten, known as the Durbin Amendment, told the
+    Federal Reserve to limit debit fees for large banks. Today the cap is {{durbin}}, plus five hundredths of a percent of the
+    purchase, plus one cent for fraud prevention. The law also requires every debit card to work on at least two unrelated
+    networks.
+  claims:
+  - durbin
+- id: m4_proposal
+  chapter: The rules
+  narration: In twenty twenty-three, the Fed proposed lowering that cap. On an average fifty dollar purchase, it would fall
+    from {{durbin.old_spoken}} to {{durbin.new_spoken}}. That proposal has still not become final. Meanwhile, two federal
+    courts reached opposite decisions on whether the cap itself is valid, and for now it stays in effect.
+  claims:
+  - durbin
+- id: m4_eu
+  chapter: The rules
+  narration: Europe went further. Since twenty fifteen, European Union law has capped the fee banks earn on consumer cards
+    at zero point two percent for debit and zero point three percent for credit.
+  claims:
+  - ccca
+- id: m4_draw
+  chapter: The rules
+  narration: Let me draw the walls of the gate. First, the exclusivity rules, torn down by the courts. Second, the debit cap
+    and the two-network rule, set by Congress. Third, Europe's caps. Each one opened a small door. None of them removed the
+    gate.
+  claims:
+  - exclusive
+  - durbin
+  - ccca
+  analysis: true
+  source_note: Summary diagram of the sourced rules.
+- id: m4_transition
+  chapter: The rules
+  narration: And now the gate itself is on trial.
+  claims:
+  - dojsuit
+- id: m5_card
+  chapter: The gate on trial
+  narration: ''
+  claims: []
+- id: m5_doj
+  chapter: The gate on trial
+  narration: In September twenty twenty-four, the Justice Department sued Visa. It alleges that Visa illegally protected a
+    monopoly in debit. According to the complaint, {{dojsuit}} of debit transactions in America run on Visa's network,
+    letting it charge {{dojsuit.fees_spoken}} in fees a year. These are allegations. In twenty twenty-five, a judge refused to
+    dismiss the case, and it is still going on.
+  claims:
+  - dojsuit
+- id: m5_moat
+  chapter: The gate on trial
+  narration: The complaint even quotes Visa's own description of the network effects around its business. An enormous moat.
+  claims:
+  - dojsuit
+- id: m5_merchants
+  chapter: The gate on trial
+  narration: The stores have their own case, and it has run for about twenty years. In twenty nineteen, a court approved a
+    settlement for the merchants. By our arithmetic, after money returned for stores that opted out, it came to {{settle}}.
+    A second deal, in twenty twenty-four, was rejected by the judge.
+  claims:
+  - settle
+- id: m5_newdeal
+  chapter: The gate on trial
+  narration: A new deal was signed in November twenty twenty-five. It would cut the average credit card fee by a tenth of a
+    percentage point for five years. And stores could choose to refuse premium cards, while still
+    accepting standard ones. It won preliminary approval in twenty twenty-six. Final approval is still pending.
+  claims:
+  - settle
+- id: m5_ccca
+  chapter: The gate on trial
+  narration: And in Congress, a bill called the Credit Card Competition Act was reintroduced in January twenty twenty-six.
+    Banks with more than {{ccca}} in assets would have to offer a second network on credit cards, one outside Visa and
+    Mastercard. It has not passed. Visa itself says it is unclear whether the bill will gain enough traction.
+  claims:
+  - ccca
+- id: m5_draw
+  chapter: The gate on trial
+  narration: Let me draw where the pressure comes from. The Justice Department, on debit. The stores, through the courts.
+    Congress, with a second network for credit. Three forces pushing on the same gate. So far, the gate is still standing.
+  claims:
+  - dojsuit
+  - settle
+  - ccca
+  analysis: true
+  source_note: Summary diagram of the pending actions (status as of Nov 2026).
+- id: payoff
+  chapter: The lesson
+  narration: So how did Visa and Mastercard become gatekeepers? Not by lending money, and not by owning stores. They became
+    the meeting point. First as clubs that let thousands of banks act like one. Then as companies sitting on a loop that
+    gets stronger every time someone opens a card or a store accepts one. That is the real business. Not the plastic, but
+    the place where everyone has to meet.
+  claims:
+  - origins
+  - network
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

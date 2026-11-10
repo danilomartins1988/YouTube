@@ -1,0 +1,8 @@
+# Episode 39: How Visa and Mastercard Became Financial Gatekeepers (US batch #18)
+
+- Project: `projects/how-visa-and-mastercard-became-financial-gatekeepers`; storyboard generator `tools/gen_visamc_storyboard.py` (41 scenes; lint 0; strict cues 0 missing).
+- New engine pieces: `bankhall` set (1950s bank hall: columns, brass teller windows, clock, banner), `netmesh` item (growing two-sided network of cards and stores).
+- One visual language per part: network web + bank hall + toll gate (hook); 1958 suburb, office calendar, Sausalito bay, member bank hall (club); stock exchange day/night + court (going public); network mesh, stores, numbers, volume chart (moat); bank hall, court, Congress, cap chart, European canal street (rules); night court, vault, stores, Congress at night (on trial).
+- Overlap watch vs Ep 30 (credit card money flow): this film covers history, network effects, antitrust and regulation only; no swipe-fee split, rewards loop or margins.
+- Sources: Visa FY2026 10-K and 8-K (Nov 2025), Mastercard FY2025 10-K, Visa 2007 S-4/A, MasterCard 2001 S-4 and 2006 prospectus, Visa IPO releases (2008), Federal Reserve History, Visa Dee Hock memorial, Ohio v. American Express (2018), U.S. Solicitor General brief (2004), Fed Regulation II pages, DOJ complaint and opinion (U.S. v. Visa), Durbin press release (CCCA), EU Regulation 2015/751.
+- Rules: DOJ figures are allegations (said); merchant settlement net ≈ $5.5bn is our arithmetic; Nov 2025 settlement awaiting final approval; Fed 2023 proposal not final; CCCA not passed (status as of Nov 2026). Fresno card count not used.
