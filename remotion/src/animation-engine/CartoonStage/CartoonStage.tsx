@@ -3550,9 +3550,34 @@ const bigcheck: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A team bench: `n` seats in a row with seated players (generic jerseys, no logos); after `cutAt` the last `cut` seats empty
+ *  and turn red; `label` sign above. */
+const bench: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const n = a.n ?? 10, cut = a.cut ?? 0, done = a.cutAt !== undefined && t >= a.cutAt, W = n * 90;
+  const cols = ['#E53935', '#1E88E5', '#43A047', '#FB8C00', '#8E24AA'];
+  return <g key={'bn' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    <rect x={-W / 2 - 20} y={-110} width={W + 40} height={26} rx={8} fill="#8D6E63" stroke={OL} strokeWidth={4} />
+    {[-W / 2, W / 2].map((lx, k) => <rect key={k} x={lx - 8} y={-84} width={16} height={84} fill="#6D4C41" />)}
+    {Array.from({length: n}, (_, k) => { const sx = -W / 2 + 45 + k * 90, empty = done && k >= n - cut;
+      const bob = Math.sin(t * 2 + k) * 3;
+      return <g key={k}>
+        {empty ? <rect x={sx - 30} y={-150} width={60} height={40} rx={8} fill="#FFCDD2" stroke="#C62828" strokeWidth={4} strokeDasharray="8 6" />
+          : <g transform={`translate(${sx} ${bob})`}>
+            <rect x={-26} y={-190} width={52} height={80} rx={14} fill={cols[k % 5]} stroke={OL} strokeWidth={4} />
+            <T x={0} y={-140} s={22} c="#FFFFFF">{String(k + 1)}</T>
+            <circle cx={0} cy={-212} r={22} fill={['#F6C9A0', '#C68B59', '#8D5524', '#FFDBAC'][k % 4]} stroke={OL} strokeWidth={4} />
+            <path d="M -16 -110 L -16 -60 M 16 -110 L 16 -60" stroke={OL} strokeWidth={8} strokeLinecap="round" /></g>}
+      </g>; })}
+    {a.label && <g transform={`translate(0 -300)`}><rect x={-230} y={-36} width={460} height={66} rx={12} fill="#1B1F27" stroke={OL} strokeWidth={5} />
+      <T x={0} y={12} s={32} c="#FFC21A">{a.label}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: College Sports Just Got a $20.5 Million Payroll
+docs_dir: docs/episodes/49-college-sports
+video: output/college_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How did "amateur" college sports get a payroll?
+  surprising_fact: Each school may pay athletes up to $20.5M in 2025-26 (CSC); $1.77bn paid in year one
+  subject: a trophy
+  tone: bright
+  metaphor: a payroll in a locker room
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $20.5 MILLION
+  - COLLEGE PAYROLL
+  claim_basis: 'cap: $20.5M per school 2025-26 (College Sports Commission)'
+  scene:
+    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: trophy, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'BEFORE: $0'
+  - 'NOW: $20.5M'
+  claim_basis: 'schools could not pay athletes directly before the 2025 settlement; cap $20.5M (CSC)'
+  scene:
+    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: gradcap, x: 480, y: 650, s: 0.6}
+    after: {kind: trophy, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none

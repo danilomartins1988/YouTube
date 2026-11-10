@@ -76,6 +76,7 @@ SHORTS = {
     "45-prediction-markets": ("how-prediction-markets-make-money-off-your-hunches", "documentary", "predmkt_documentary", "$25 BILLION", "IN ONE MONTH", "Prediction Markets Traded $25 Billion in One Month", "#predictionmarkets #finance #sports"),
     "47-post-office": ("why-the-post-office-keeps-losing-billions", "documentary", "postal_documentary", "$118 BILLION", "LOST SINCE 2006", "The Post Office Has Lost $118 Billion Since 2006", "#usps #postoffice #economy"),
     "48-alaska-dividend": ("alaska-the-state-that-pays-you-to-live-there", "documentary", "alaska_documentary", "$1,200 EACH", "JUST FOR LIVING HERE", "Alaska Pays Every Resident $1,200 Just for Living There", "#alaska #ubi #economy"),
+    "49-college-sports": ("college-sports-just-got-a-20-million-payroll", "documentary", "college_documentary", "$20.5 MILLION", "COLLEGE PAYROLL", "College Sports Just Got a $20.5 Million Payroll", "#collegesports #ncaa #money"),
     "42-penny": ("why-america-stopped-making-the-penny", "documentary", "penny_documentary", "3.69 CENTS", "TO MAKE 1 CENT", "It Cost 3.69 Cents to Make One Penny", "#penny #money #usa"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
