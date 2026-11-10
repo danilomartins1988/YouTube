@@ -1,0 +1,65 @@
+# 01. The Three Companies That Decide How Much Your Memory Costs
+
+Episode folder: `docs/episodes/14-memory/`. Upload as **Private** (or schedule); the owner sets it public.
+
+## Files
+
+- Video: `output/memory_documentary_light.mp4`
+- Thumbnail: `docs/episodes/14-memory/youtube-package/thumbnail.png` (alternative: `thumbnail-alt-B.png`)
+- Subtitles (English): `docs/episodes/14-memory/subtitles_en.srt`
+
+## Title
+
+```
+The Three Companies That Decide How Much Your Memory Costs
+```
+
+Other title options: Why AI Made Your Computer's Memory Five Times More Expensive · Samsung, SK hynix, Micron: The Memory Shortage Explained
+
+## Description (3442 characters, chapters included)
+
+```
+In one year, the price big buyers paid for one ordinary memory chip rose from $8.70 to $48. Behind that jump are just three companies, Samsung, SK hynix and Micron, which make almost nine in every ten dollars of the world's DRAM. When artificial intelligence started paying more for every silicon wafer, they chose the customer who pays the most, and the memory in your computer and phone got squeezed. How the shortage happened, why a Chinese challenger cannot fix it yet, and why memory booms always end the same way. Every figure is sourced below; forecasts are labelled as forecasts.
+
+All amounts are in US dollars as published by the sources (TrendForce contract prices, company figures).
+
+Chapters
+0:00 The price on the shelf
+0:43 The shelf
+2:42 Three companies
+4:23 The customer who pays more
+7:02 The challenger
+8:38 Boom and bust
+10:37 The lesson
+
+Sources
+- TrendForce: DRAM Industry Revenue Rises 59.5% QoQ in 2Q26 as Supply Expansion Continues to Lag Demand Growth - https://www.trendforce.com/presscenter/news/20260907-13219.html
+- Evertiq: DRAM industry revenue surges 59.5% in Q2 as supply lags demand (ranking table, TrendForce data) - https://evertiq.com/news/2026-09-07-dram-industry-revenue-surges-595-in-q2-as-supply-lags-demand
+- Basic Tutorials: Memory crisis: according to TeamGroup, the worst is yet to come (TrendForce contract prices from TeamGroup's 2 Nov 2026 presentation) - https://basic-tutorials.com/news/memory-crisis-according-to-teamgroup-the-worst-is-yet-to-come/
+- Evertiq: DRAMpocalypse: memory price projections skyrocket for 1Q26 (TrendForce) - https://evertiq.com/news/2026-02-02-drampocalypse-memory-price-projections-skyrocket-for-1q26
+- The Register: Micron ditches consumer memory brand Crucial to chase AI riches - https://www.theregister.com/2025/12/03/micron_cuts_crucial/
+- Tom's Hardware: Micron outlines grim outlook for DRAM supply in first earnings call since killing Crucial; CEO says it can only meet half to two-thirds of demand - https://www.tomshardware.com/pc-components/dram/micron-outlines-grim-outlook-for-dram-supply-in-first-earnings-call-since-killing-crucial-memory-and-ssd-brand-ceo-says-it-can-only-meet-half-to-two-thirds-of-demand
+- The Next Platform: Micron gears up for its potential datacenter memory boom - https://www.nextplatform.com/2024/06/27/micron-gears-up-for-its-potential-datacenter-memory-boom/
+- Computerworld: Global RAM shortage appears set to continue through 2027 (citing Nikkei Asia) - https://www.computerworld.com/article/4161043/the-memory-shortage-appears-set-to-continue-through-2027.html
+- KSAT (Associated Press): China memory chipmaker CXMT's shares soar in a blockbuster share listing in Shanghai (AP) - https://www.ksat.com/business/2026/07/27/china-memory-chipmaker-cxmts-shares-soar-in-a-blockbuster-share-listing-in-shanghai/
+- Tom's Hardware: Micron loses $2.312 billion as demand for DRAM and 3D NAND nosedives - https://www.tomshardware.com/news/micron-loses-dollar2312-billion-as-demand-for-dram-and-3d-nand-nosedives
+- Tom's Hardware: Micron cuts DRAM and NAND output to lessen price drops - https://www.tomshardware.com/news/micron-cuts-dram-and-nand-output
+- The Motley Fool: The worst may be over for Micron, but pandemic-era profits aren't coming back - https://www.fool.com/investing/2023/04/13/the-worst-may-be-over-for-micron-but-pandemic-era
+
+Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+```
+
+## Tags
+
+```
+DRAM, memory prices, RAM shortage, AI, HBM, Samsung, SK hynix, Micron, CXMT, semiconductors, chip shortage, economics, The Hidden Economics
+```
+
+## Settings in YouTube Studio
+
+- Audience: **No, it's not made for kids**
+- Category: **Education**
+- Video language: **English**
+- Captions: upload the `.srt` above (Subtitles → Upload file → With timing)
+- End screen: add *Best for viewer* video + *Subscribe*
+- Visibility: **Private**, publish when you want
