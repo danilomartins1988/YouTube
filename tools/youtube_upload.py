@@ -1,5 +1,7 @@
 """Upload a finished episode (or its Short) to YouTube as PRIVATE, using the YouTube Data API v3.
 
+Owner's rule (2026-11-10): everything is uploaded PRIVATE, long videos and Shorts alike; the owner makes videos public
+themselves in YouTube Studio when he wants. Uploads only happen when the owner authorizes them.
 Safety rules (channel policy: nothing is published without the owner's explicit authorization):
 - Default is a DRY RUN: it only prints what would be sent. Add --confirm to really upload.
 - Privacy is always "private" unless --privacy is given explicitly; "public" also needs --i-am-the-owner-and-approve-public.
@@ -88,8 +90,15 @@ def episode_files(ep: str, kind: str) -> dict:
     m = re.search(r"File: `([^`]+\.mp4)`", md)
     if not (m and "Title" in blocks):
         die("could not read the Short package")
+    tags = [t.strip() for t in blocks.get("Tags", "").split(",") if t.strip()]
+    sheet = ROOT / "docs/SHORTS_COPY_PASTE.md"
+    if sheet.exists():  # the copy-paste sheet has the fuller tag list
+        sec = re.search(rf"## {re.escape(ep)}\s*\n(.*?)(?=\n## |\Z)", sheet.read_text(), re.S)
+        t2 = sec and re.search(r"\*\*Tags\*\*\s*\n```\n(.*?)\n```", sec.group(1), re.S)
+        if t2:
+            tags = [t.strip() for t in t2.group(1).split(",") if t.strip()]
     return {"video": ROOT / m.group(1), "title": blocks["Title"].strip(), "description": blocks.get("Description", "").strip(),
-            "tags": [t.strip() for t in blocks.get("Tags", "").split(",") if t.strip()], "thumb": None, "srt": None}
+            "tags": tags, "thumb": None, "srt": None}
 
 
 def already_logged(key: str) -> bool:
