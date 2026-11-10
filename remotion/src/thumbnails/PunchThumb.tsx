@@ -74,6 +74,63 @@ const HEROES: Record<string, HeroFn> = {
     <g transform="translate(-560 -330) rotate(80)"><circle cx={-60} cy={-40} r={38} fill="none" stroke={OL} strokeWidth={16} /><circle cx={-60} cy={40} r={38} fill="none" stroke={OL} strokeWidth={16} />
       <path d="M -28 -26 L 150 30 M -28 26 L 150 -30" stroke="#B0BEC5" strokeWidth={22} strokeLinecap="round" /><path d="M -28 -26 L 150 30 M -28 26 L 150 -30" stroke={OL} strokeWidth={4} fill="none" /></g>
   </g>,
+  /** colourful cartoon skyscrapers; `spire` adds one very tall needle tower in the middle (Dubai) */
+  towers: (o) => { const cols = ['#4FC3F7', '#FFB74D', '#81C784', '#BA68C8', '#FF8A65', '#90CAF9'];
+    const b = [[-470, 300], [-330, 420], [-180, 340], [140, 380], [300, 460], [460, 330]];
+    return <g>
+      {o.spire && <g><path d="M -60 380 L -30 -420 L 0 -560 L 30 -420 L 60 380 Z" fill="#B3E5FC" stroke={OL} strokeWidth={12} strokeLinejoin="round" />
+        {[-300, -180, -60, 60, 180, 300].map((y) => <path key={y} d={`M -40 ${y} L 40 ${y}`} stroke={OL} strokeWidth={6} />)}</g>}
+      {b.map(([x, h], k) => <g key={k}><rect x={x - 70} y={380 - h} width={140} height={h} rx={8} fill={cols[k % 6]} stroke={OL} strokeWidth={12} />
+        {Array.from({length: Math.floor(h / 70)}, (_, r) => [0, 1].map((c) => <rect key={r + '-' + c} x={x - 48 + c * 56} y={400 - h + r * 70} width={40} height={36} rx={4} fill="#FFF59D" stroke={OL} strokeWidth={5} />))}</g>)}
+      <rect x={-560} y={370} width={1120} height={36} rx={10} fill="#5D4037" stroke={OL} strokeWidth={10} />
+    </g>; },
+  /** a giant chunky 3D arrow over a small bar chart: `dir` up (green) or down (red) */
+  bigarrow: (o) => { const up = o.dir !== 'down', c = up ? '#2ECC40' : '#FF1E1E';
+    const d = up ? 'M -480 300 L -160 20 L 20 160 L 300 -160 L 220 -240 L 500 -300 L 440 -20 L 360 -100 L 20 260 L -160 120 L -420 360 Z'
+                 : 'M -480 -300 L -160 -20 L 20 -160 L 300 160 L 220 240 L 500 300 L 440 20 L 360 100 L 20 -260 L -160 -120 L -420 -360 Z';
+    return <g>
+      {[-420, -260, -100, 60, 220, 380].map((x, k) => { const h = up ? 80 + k * 50 : 330 - k * 50;
+        return <rect key={k} x={x} y={380 - h} width={110} height={h} fill="#FFFFFF" stroke={OL} strokeWidth={10} opacity={0.9} />; })}
+      <path d={d} fill={c} stroke={OL} strokeWidth={16} strokeLinejoin="round" transform="translate(14 14)" opacity={0.35} />
+      <path d={d} fill={c} stroke={OL} strokeWidth={16} strokeLinejoin="round" />
+      {o.label && <g transform={up ? 'translate(-330 -170)' : 'translate(-330 210)'}><circle r={92} fill="#FFFFFF" stroke={OL} strokeWidth={12} />
+        <text y={34} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={96} fill={OL}>{o.label}</text></g>}
+    </g>; },
+  /** a laptop with a red skull on screen (generic ransomware) */
+  hacked: (o) => <g>
+    <path d="M -520 300 L 520 300 L 600 380 L -600 380 Z" fill="#B0BEC5" stroke={OL} strokeWidth={14} strokeLinejoin="round" />
+    <rect x={-440} y={-330} width={880} height={620} rx={30} fill="#263238" stroke={OL} strokeWidth={16} />
+    <rect x={-400} y={-290} width={800} height={540} rx={12} fill="#B71C1C" />
+    <g transform="translate(0 -30)"><path d="M -150 -20 Q -150 -200 0 -200 Q 150 -200 150 -20 Q 150 60 90 80 L 90 140 L -90 140 L -90 80 Q -150 60 -150 -20 Z" fill="#FFFFFF" stroke={OL} strokeWidth={10} />
+      <circle cx={-60} cy={-40} r={40} fill={OL} /><circle cx={60} cy={-40} r={40} fill={OL} /><path d="M 0 10 L -22 50 L 22 50 Z" fill={OL} />
+      {[-50, 0, 50].map((x) => <rect key={x} x={x - 12} y={100} width={24} height={40} fill={OL} />)}</g>
+    <text x={0} y={230} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={64} fill="#FFFFFF">LOCKED</text>
+  </g>,
+  /** a globe wrapped by thick glowing undersea cables */
+  globecables: (o) => <g>
+    <circle r={360} fill="#1E88E5" stroke={OL} strokeWidth={16} />
+    <path d="M -250 -150 Q -150 -260 -20 -210 Q 60 -120 -60 -60 Q -180 -20 -250 -150 Z M 60 40 Q 200 -40 280 60 Q 260 200 140 240 Q 40 180 60 40 Z M -280 80 Q -200 60 -170 150 Q -210 230 -290 170 Z" fill="#66BB6A" stroke={OL} strokeWidth={10} />
+    {[[-420, -60, 420, 120, -120], [-400, 160, 420, -200, 160], [-200, -400, 220, 400, 60]].map(([x0, y0, x1, y1, b], k) =>
+      <g key={k}><path d={`M ${x0} ${y0} Q ${b} ${(y0 + y1) / 2 + b} ${x1} ${y1}`} fill="none" stroke={OL} strokeWidth={46} strokeLinecap="round" />
+        <path d={`M ${x0} ${y0} Q ${b} ${(y0 + y1) / 2 + b} ${x1} ${y1}`} fill="none" stroke="#FFC21A" strokeWidth={28} strokeLinecap="round" /></g>)}
+  </g>,
+  /** a green tropical island with a giant chip on it */
+  chipland: (o) => <g>
+    <ellipse cx={0} cy={250} rx={560} ry={110} fill="#4FC3F7" stroke={OL} strokeWidth={12} />
+    <path d="M -440 250 Q -400 60 -120 40 Q 200 20 420 110 Q 470 200 420 250 Z" fill="#81C784" stroke={OL} strokeWidth={14} strokeLinejoin="round" />
+    <g transform="translate(0 -120) rotate(-6)"><rect x={-230} y={-230} width={460} height={460} rx={30} fill="#212121" stroke={OL} strokeWidth={14} />
+      <rect x={-150} y={-150} width={300} height={300} rx={14} fill="#FFC21A" stroke={OL} strokeWidth={10} />
+      {Array.from({length: 7}, (_, k) => <g key={k}><rect x={-200 + k * 60} y={-280} width={26} height={50} fill="#B0BEC5" stroke={OL} strokeWidth={5} />
+        <rect x={-200 + k * 60} y={230} width={26} height={50} fill="#B0BEC5" stroke={OL} strokeWidth={5} /></g>)}</g>
+  </g>,
+  /** a chunky open-wheel race car (generic, no livery) */
+  racer: (o) => <g>
+    <path d="M -560 60 L -420 -20 L -120 -40 L -40 -120 L 140 -120 L 200 -40 L 480 -10 L 560 60 L 520 120 L -540 120 Z" fill={o.color || '#E53935'} stroke={OL} strokeWidth={16} strokeLinejoin="round" />
+    <rect x={-620} y={-90} width={140} height={60} rx={10} fill={OL} /><rect x={500} y={-40} width={150} height={40} rx={10} fill={OL} />
+    <path d="M -60 -120 Q 40 -200 140 -120" fill="#90CAF9" stroke={OL} strokeWidth={12} />
+    <text x={20} y={60} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={96} fill="#FFFFFF" stroke={OL} strokeWidth={8} paintOrder="stroke">1</text>
+    {[-380, 380].map((x) => <g key={x}><circle cx={x} cy={120} r={120} fill="#212121" stroke={OL} strokeWidth={14} /><circle cx={x} cy={120} r={48} fill="#9E9E9E" stroke={OL} strokeWidth={8} /></g>)}
+  </g>,
 };
 
 /* ------------------------------------------------------------------------------------------------ parts */
