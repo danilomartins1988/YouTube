@@ -741,3 +741,22 @@ Watch the full story: "How Visa and Mastercard Became Financial Gatekeepers" on 
 ```
 Visa, Mastercard, credit cards, debit cards, payment networks, network effects, antitrust, BankAmericard, finance explained, shorts, economics explained, The Hidden Economics
 ```
+
+## 43-gold-reserve
+
+**Title**
+```
+America's Gold Is Booked at Just $11 Billion #shorts
+```
+**Description**
+```
+Eleven billion dollars. That is what the US Treasury's own books say its gold is worth. At market prices it was about one trillion.
+
+Watch the full story: "America's $1 Trillion of Gold Is Booked at $11 Billion" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #gold #fortknox #economics
+```
+**Tags**
+```
+gold, Fort Knox, gold reserves, US Treasury, gold price, Federal Reserve, central banks, finance explained, shorts, economics explained, The Hidden Economics
+```

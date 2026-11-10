@@ -43,3 +43,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 38-airports | US Airports Made $6.9 Billion From Parking in One Year | $6.9 BILLION / FROM PARKING | 50 s | `docs/episodes/38-airports/youtube-short/short_package.md` |
 | 40-grocery | Only 11.8 Cents of Your Food Dollar Reaches the Farm | 11.8 CENTS / TO THE FARM | 45 s | `docs/episodes/40-grocery/youtube-short/short_package.md` |
 | 39-visa-mastercard | How Two Bank Clubs Became Visa and Mastercard | 355 BILLION / PAYMENTS A YEAR | 47 s | `docs/episodes/39-visa-mastercard/youtube-short/short_package.md` |
+| 43-gold-reserve | America's Gold Is Booked at Just $11 Billion | $11 BILLION / ON THE BOOKS | 50 s | `docs/episodes/43-gold-reserve/youtube-short/short_package.md` |

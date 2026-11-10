@@ -1,0 +1,95 @@
+# Sources and claims for "How Prediction Markets Make Money Off Your Hunches" (Episode 45, new topics N5).
+# Every claim was read on its primary page/file on 2026-11-10 (notes: docs/episodes/45-prediction-markets/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: Kalshi fee = the 2022 formula filed with the CFTC (current rate not verified - said as "the formula it filed");
+# company volume claims attributed and called claims; sports share is a third-party analysis (Pew/The Block);
+# "the exchange isn't your counterparty" (not "never bets"); court cases pending (said); no gambling advice.
+sources:
+  - id: cftc
+    title: "CFTC: Kalshi designation (Nov 4, 2020); Polymarket order (Jan 3, 2022); proposed rule 91 FR 35806 (Jun 12, 2026); press releases 2026"
+    publisher: Commodity Futures Trading Commission
+    url: https://www.govinfo.gov/content/pkg/FR-2026-06-12/pdf/2026-11854.pdf
+    published: "2026-06-12"
+    accessed: "2026-11-10"
+    credit: "CFTC"
+  - id: kalshi
+    title: "Kalshi help center (fees; who you trade with), fee filing (Sep 2022), Kalshi news posts (2022, 2026)"
+    publisher: Kalshi (KalshiEX LLC)
+    url: https://help.kalshi.com/trading/fees
+    published: "2026-04-19"
+    accessed: "2026-11-10"
+    credit: "Kalshi"
+  - id: poly
+    title: "Polymarket US fee filing with the CFTC (Sep 2026); Polymarket docs (fees); ICE 8-K (Oct 7, 2025)"
+    publisher: Polymarket US (QCX LLC); Intercontinental Exchange
+    url: https://www.sec.gov/Archives/edgar/data/1571949/000094787125000890/ss5432176_ex9901.htm
+    published: "2025-10-07"
+    accessed: "2026-11-10"
+    credit: "Polymarket · ICE 8-K"
+  - id: courts
+    title: "KalshiEX v. Flaherty (3d Cir., Apr 6, 2026); Ninth Circuit opinion No. 25-7516 (Aug 28, 2026); Supreme Court docket 26-299"
+    publisher: U.S. Courts of Appeals; Supreme Court of the United States
+    url: https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/26-299.html
+    published: "2026-09-02"
+    accessed: "2026-11-10"
+    credit: "U.S. courts"
+  - id: books
+    title: "DraftKings 10-Q (Nov 6, 2026); Flutter 10-Q (Nov 4, 2026); NBA statement and CFTC-NBA MOU (Oct 26, 2026)"
+    publisher: DraftKings; Flutter Entertainment; NBA; CFTC
+    url: https://www.cftc.gov/PressRoom/PressReleases/9314-26
+    published: "2026-10-26"
+    accessed: "2026-11-10"
+    credit: "Company 10-Qs · NBA · CFTC"
+  - id: pew
+    title: "Pew Research Center analysis of The Block data on prediction market volume (July 2026)"
+    publisher: Pew Research Center (third-party analysis)
+    url: https://www.pewresearch.org/
+    published: "2026"
+    accessed: "2026-11-10"
+    credit: "Pew Research Center (The Block data)"
+
+claims:
+  - id: size
+    text: "CFTC proposed rule (91 FR 35806, Jun 12, 2026): event-contract activity grew 'especially since October 2025, reaching $25 billion in March 2026'; '$25 billion in event contracts is approximately 0.08% of the $31 trillion total notional value in futures contracts regulated by the Commission'. Kalshi claims (Oct 29, 2026): 'annualized trading volume now exceeds $1 trillion'; 'over 75% of prediction market trading volume'; $1B raise at a $40B valuation (company claims)."
+    spoken: twenty-five billion dollars
+    display: "$25bn of event contracts in March 2026 (CFTC)"
+    fields: {share_spoken: about zero point zero eight percent}
+    source_ids: [cftc, kalshi]
+    status: source_located
+    verification_note: Kalshi figures are company claims (said).
+
+  - id: fee
+    text: "Kalshi: 'Kalshi makes money by charging a transaction fee on the expected earnings on the contract'; 'you are always trading against another member of the platform, not the exchange itself'; market makers 'make money by collecting the spread'. Fee formula filed with the CFTC (Sep 2022): 'fees = round up(0.07 x C x P x (1-P))', 'no settlement fee'; 1.75 cents per contract at 50 cents. Polymarket US filing: 'Fee = Θ × C × p × (1 − p)', taker Θ from 0.06 to 0.0695 (Sep 17, 2026), maker rebate Θ = −0.0125. Kalshi affiliate Kalshi Trading LLC trades on the exchange (2021 notice)."
+    spoken: one point seven five cents
+    display: "Fee ≈ 1.75¢ per contract at 50¢ (Kalshi formula filed 2022)"
+    fields: {}
+    source_ids: [kalshi, poly]
+    status: source_located
+    verification_note: Current Kalshi rate not verified (said as the filed formula).
+
+  - id: rules
+    text: "CFTC designated KalshiEX as a contract market Nov 4, 2020. CFTC (Jan 3, 2022): Polymarket to pay a $1.4 million penalty for operating 'an illegal unregistered or non-designated facility'. QCX LLC (Polymarket US) designated July 9, 2025. ICE 8-K (Oct 7, 2025): 'ICE will invest up to $2 billion in Polymarket, reflecting a valuation of approximately $8 billion pre-investment'; trades 'matched peer-to-peer'."
+    spoken: one point four million dollars
+    display: "Polymarket fined $1.4M by the CFTC (2022)"
+    fields: {ice_spoken: up to two billion dollars}
+    source_ids: [cftc, poly]
+    status: source_located
+    verification_note: Designations and orders as published.
+
+  - id: sports
+    text: "Pew Research Center analysis of The Block data: sports 'the most traded topic on both platforms by a large margin'; July 2026 sports ≈ $31.4bn of ≈ $40.1bn on Kalshi (≈ 78%) and ≈ $10.6bn of ≈ $12.9bn on Polymarket (≈ 82%) - shares our calculation. NBA (Oct 26, 2026): Kalshi and Polymarket 'Preferred Prediction Market Exchanges', 'limitations on permissible markets'. DraftKings 10-Q: DraftKings Predictions launched Dec 2025; revenue includes fees of its exchange DKeX and its market maker GUS CAP LLC. Flutter 10-Q: FanDuel Predicts launched Dec 2025 with CME."
+    spoken: about four out of five
+    display: "≈ 4 in 5 dollars traded on sports (Pew analysis, July 2026)"
+    fields: {}
+    source_ids: [pew, books]
+    status: source_located
+    verification_note: Third-party analysis; shares our calculation.
+
+  - id: courts
+    text: "Third Circuit (Apr 6, 2026), 2-1, preliminary-injunction stage: sports contracts 'are swaps traded on a CFTC-licensed DCM, so the CFTC has exclusive jurisdiction'; dissent: 'a performative sleight'. Ninth Circuit (Aug 28, 2026): the contracts 'were not swaps because they were sports bets'. Supreme Court: New Jersey petition No. 26-299 filed Sep 2, 2026; response due Dec 7, 2026 (pending). CFTC (2026): withdrew 2024 proposal to ban political and sports contracts (Feb 4); sued nine states; Oct 9 proposal to define event contracts as swaps."
+    spoken: two to one
+    display: "Courts split: 3rd Cir. for Kalshi, 9th Cir. against"
+    fields: {}
+    source_ids: [courts, cftc]
+    status: source_located
+    verification_note: Cases pending (said).

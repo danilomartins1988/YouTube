@@ -23,7 +23,7 @@ Watch the full story: "America's $1 Trillion of Gold Is Booked at $11 Billion" o
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+gold reserves, Fort Knox, US Treasury, gold price, Federal Reserve, gold certificates, central banks, economics, finance, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook
