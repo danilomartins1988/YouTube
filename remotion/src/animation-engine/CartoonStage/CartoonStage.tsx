@@ -831,6 +831,31 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={8} fill="#FFFFFF" opacity={0.8} />
     </g>;
   },
+  /** A generic post office lobby: a wall of numbered PO boxes, a service counter with a scale, stacked parcels and mail
+   *  bins, an eagle-free plain sign with `label` (default 'POST OFFICE'); `night` dims it. No real logos. */
+  postoffice: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, lab = (z as any).label || 'POST OFFICE';
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#2E3A52' : '#EAF1F8'} />
+      <rect x={z.x0} y={f - 700} width={w} height={60} fill="#1F4E8C" stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 1600)}, (_, k) => <T key={'ps' + k} x={z.x0 + 800 + k * 1600} y={f - 658} s={36} c="#FFFFFF">{lab}</T>)}
+      {Array.from({length: Math.ceil(w / 1600)}, (_, k) => { const x0 = z.x0 + 120 + k * 1600;
+        return <g key={'pb' + k}>
+          {Array.from({length: 40}, (_, q) => { const c = q % 10, r = Math.floor(q / 10);
+            return <g key={q}><rect x={x0 + c * 62} y={f - 600 + r * 70} width={56} height={62} rx={4} fill={night ? '#8D99AE' : '#C9A227'} stroke={OL} strokeWidth={3} />
+              <circle cx={x0 + c * 62 + 44} cy={f - 600 + r * 70 + 31} r={5} fill={OL} />
+              <T x={x0 + c * 62 + 22} y={f - 600 + r * 70 + 38} s={14} c={OL}>{String(100 + k * 40 + q)}</T></g>; })}
+          <rect x={x0 + 760} y={f - 260} width={620} height={260} fill={night ? '#6D5A4A' : '#A1887F'} stroke={OL} strokeWidth={5} />
+          <rect x={x0 + 740} y={f - 280} width={660} height={30} fill="#5D4037" stroke={OL} strokeWidth={4} />
+          <rect x={x0 + 840} y={f - 330} width={110} height={50} rx={6} fill="#ECEFF1" stroke={OL} strokeWidth={4} />
+          <T x={x0 + 895} y={f - 297} s={22} c={OL}>{(1.2 + Math.sin(t + k) * 0.1).toFixed(1) + ' LB'}</T>
+          {[0, 1, 2].map((q) => <rect key={'pc' + q} x={x0 + 1100 + q * 70 - (q === 2 ? 35 : 0)} y={f - 280 - (q === 2 ? 130 : 65)} width={q === 2 ? 70 : 64} height={q === 2 ? 65 : 65} fill="#C8A26B" stroke={OL} strokeWidth={4} />)}
+          <rect x={x0 + 1440} y={f - 160} width={120} height={160} fill="#1F4E8C" stroke={OL} strokeWidth={4} />
+          <rect x={x0 + 1440} y={f - 190} width={120} height={40} rx={20} fill="#1F4E8C" stroke={OL} strokeWidth={4} /></g>; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3D4658' : '#CFD8DC'} />
+      {Array.from({length: Math.ceil(w / 160)}, (_, k) => <rect key={'pt' + k} x={z.x0 + k * 160} y={f} width={3} height={600} fill={OL} opacity={0.1} />)}
+    </g>;
+  },
   /** A hospital corridor: pale mint walls, numbered doors with small windows, a handrail, ceiling light panels, a glossy
    *  tiled floor; `night` dims it to an evening shift. Generic, no real hospital branding. */
   hospital: (t, z, f) => {

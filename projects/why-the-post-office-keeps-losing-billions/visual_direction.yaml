@@ -1,0 +1,44 @@
+# Visual direction for why-the-post-office-keeps-losing-billions (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: post office lobby + suburb route (hook, network), Congress + office (2006 law), studio charts +
+# suburb + sort center (vanishing letter), sort center at night + charts (the plan), office + Congress at night (running out of room).
+primary_tone: reflective
+secondary_tones:
+- strategy
+- bright
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: One hundred and eighteen billion
+  tone: strategy
+- chapter: The network
+  tone: bright
+- chapter: The 2006 law
+  tone: reflective
+- chapter: The vanishing letter
+  tone: reflective
+- chapter: The plan
+  tone: strategy
+- chapter: Running out of room
+  tone: reflective
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: reflective
+  headline: []
+  idea: a generic blue mailbox stuffed with red loss numbers; $118 billion lost since 2006 (GAO)
+requirements:
+- No USPS logo or eagle emblem; generic mail vans and boxes; no likeness of real people
+- Headline figures from USPS releases; our calculations labelled; no privatization claims attributed

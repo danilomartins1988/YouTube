@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: Why the Post Office Keeps Losing Billions
+docs_dir: docs/episodes/47-post-office
+video: output/postal_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How does the Post Office keep losing billions every year?
+  surprising_fact: About $118bn of net losses since FY2006 (GAO); letters fell from 103.7bn (2001) to 39.9bn (2026)
+  subject: a mail delivery van
+  tone: reflective
+  metaphor: a fixed route with an emptier bag
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $118 BILLION
+  - POST OFFICE LOSSES
+  claim_basis: 'loss: about $118bn of net losses since FY2006 (GAO-26-107336)'
+  scene:
+    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: parcels, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - '2001: 104BN LETTERS'
+  - '2026: 40BN'
+  claim_basis: 'First-Class Mail 103.7bn (FY2001, USPS Historian) vs 39.9bn (FY2026, USPS)'
+  scene:
+    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: parcels, x: 480, y: 650, s: 0.6}
+    after: {kind: crash, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none
