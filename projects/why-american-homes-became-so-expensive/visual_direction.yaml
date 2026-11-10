@@ -1,0 +1,45 @@
+# Visual direction for why-american-homes-became-so-expensive (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: suburb + repricing house (hook), suburb by day + ratio charts (price), rate screen + bank
+# office + night suburb with padlocks (rates), construction site with unfinished frames (missing homes), city hall + zoning
+# map (rules), evidence board + night suburb (locked out).
+primary_tone: bright
+secondary_tones:
+- strategy
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: One hundred and twenty-one thousand dollars
+  tone: bright
+- chapter: The price tag
+  tone: bright
+- chapter: The rate shock
+  tone: strategy
+- chapter: The missing homes
+  tone: bright
+- chapter: The rules on the land
+  tone: strategy
+- chapter: Locked out
+  tone: reflective
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: bright
+  headline: []
+  idea: a suburban house with a giant $120,800 income-needed number; split of 2020 vs 2025 income needed
+requirements:
+- One visual language per part; text mostly on objects or at the top
+- No real brands or logos; no likeness of real people

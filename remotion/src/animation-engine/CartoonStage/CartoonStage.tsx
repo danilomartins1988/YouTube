@@ -353,6 +353,33 @@ const SETS: Record<string, SetFn> = {
       </g>)}
     </g>;
   },
+  /** An American suburb: sky, rolling hills, a row of gabled houses with lawns, picket fences and round trees behind a
+   *  sidewalk and a quiet street. `night` lights the windows and darkens the sky. */
+  suburb: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    const roofs = ['#C0504D', '#5C6BC0', '#8D6E63', '#26A69A', '#EF6C00'], walls = ['#FFF3E0', '#E3F2FD', '#F1F8E9', '#FCE4EC', '#FFFDE7'];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#1A2346' : '#BFE6FA'} />
+      {night ? <circle cx={z.x0 + w * 0.72} cy={f - 720} r={56} fill="#FFF8E1" stroke={OL} strokeWidth={4} />
+        : <circle cx={z.x0 + w * 0.72} cy={f - 720} r={70} fill={K.sun} stroke={OL} strokeWidth={4} />}
+      <path d={`M ${z.x0} ${f - 230} ${Array.from({length: Math.ceil(w / 500) + 1}, (_, k) => `Q ${z.x0 + k * 500 + 250} ${f - 330 - 50 * rnd(k + 2)} ${z.x0 + k * 500 + 500} ${f - 240}`).join(' ')} L ${z.x1} ${f} L ${z.x0} ${f} Z`}
+        fill={night ? '#2E4A3A' : '#A5D68A'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 330)}, (_, k) => { const x = z.x0 + 60 + k * 330, j = k % 5, hw = 210, hh = 150 + 30 * rnd(k + 7);
+        return <g key={'sh' + k}>
+          <circle cx={x + hw + 50} cy={f - 200} r={58} fill={night ? '#2F5D3A' : '#5DBB63'} stroke={OL} strokeWidth={4} />
+          <rect x={x + hw + 44} y={f - 160} width={12} height={40} fill={K.wood2} />
+          <rect x={x} y={f - 120 - hh} width={hw} height={hh} fill={walls[j]} stroke={OL} strokeWidth={4} />
+          <path d={`M ${x - 18} ${f - 120 - hh} L ${x + hw / 2} ${f - 200 - hh} L ${x + hw + 18} ${f - 120 - hh} Z`} fill={roofs[j]} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          {[0, 1].map((q) => <rect key={q} x={x + 26 + q * 110} y={f - 100 - hh + 30} width={48} height={40} rx={3} fill={night ? (rnd(k * 3 + q) > 0.35 ? '#FFE082' : '#34405E') : K.glass} stroke={OL} strokeWidth={3} />)}
+          <rect x={x + hw / 2 - 22} y={f - 186} width={44} height={66} fill={K.wood} stroke={OL} strokeWidth={3} /></g>; })}
+      <rect x={z.x0} y={f - 120} width={w} height={60} fill={night ? '#3B6B44' : '#7BCB6B'} />
+      {Array.from({length: Math.ceil(w / 40)}, (_, k) => <rect key={'pf' + k} x={z.x0 + k * 40} y={f - 112} width={14} height={44} rx={5} fill={night ? '#B0BEC5' : K.white} stroke={OL} strokeWidth={2} />)}
+      <rect x={z.x0} y={f - 96} width={w} height={8} fill={night ? '#B0BEC5' : K.white} stroke={OL} strokeWidth={2} />
+      <rect x={z.x0} y={f - 60} width={w} height={60} fill="#CFD8DC" stroke={OL} strokeWidth={3} />
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3E4656' : K.road} />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <rect key={'ln' + k} x={z.x0 + k * 200} y={f + 80} width={100} height={12} rx={6} fill="#FFD54A" />)}
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -2635,7 +2662,7 @@ const tollbooth: ItemFn = (a, {t, f}, i) => {
 
 /** A trading screen for one contract. `price` is a keyframed value (e.g. [[0, 29000], [cue, 48075], ...]); the line is
  *  drawn from `at` up to now by sampling it; `max` sets the y scale. `bandsOffAt` turns the "PRICE BANDS" lamp red (OFF),
- *  `haltAt` stamps SUSPENDED, `cancelAt` greys the part of the line after `cancelFrom` (seconds) and stamps CANCELLED. */
+ *  `haltAt` stamps SUSPENDED, `suffix` (e.g. '%') replaces the $ prefix, `cancelAt` greys the part of the line after `cancelFrom` (seconds) and stamps CANCELLED. */
 const tradescreen: ItemFn = (a, {t}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, 460), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
   if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
@@ -2651,7 +2678,7 @@ const tradescreen: ItemFn = (a, {t}, i) => {
     <T x={-W / 2 + 30} y={-H / 2 + 44} s={26} c="#B0BEC5" a="start">{a.text || '3M NICKEL · $ / TONNE'}</T>
     {mn < 0 && <g><line x1={-W / 2 + 60} x2={W / 2 - 60} y1={H / 2 - 70 - (H - 160) * clamp(-mn / (mx - mn))} y2={H / 2 - 70 - (H - 160) * clamp(-mn / (mx - mn))} stroke="#B0BEC5" strokeWidth={3} strokeDasharray="6 6" />
       <T x={-W / 2 + 54} y={H / 2 - 62 - (H - 160) * clamp(-mn / (mx - mn))} s={20} c="#B0BEC5" a="end">$0</T></g>}
-    <T x={W / 2 - 30} y={-H / 2 + 46} s={34} c={now > (a.hot ?? 60000) || now < 0 ? K.red : '#7DF29A'} a="end">{(now < 0 ? '−$' : '$') + Math.abs(now).toLocaleString('en-US', {minimumFractionDigits: a.decimals ?? 0, maximumFractionDigits: a.decimals ?? 0})}</T>
+    <T x={W / 2 - 30} y={-H / 2 + 46} s={34} c={now > (a.hot ?? 60000) || now < 0 ? K.red : '#7DF29A'} a="end">{(a.suffix !== undefined ? (now < 0 ? '−' : '') : (now < 0 ? '−$' : '$')) + Math.abs(now).toLocaleString('en-US', {minimumFractionDigits: a.decimals ?? 0, maximumFractionDigits: a.decimals ?? 0}) + (a.suffix ?? '')}</T>
     <polyline points={pts.join(' ')} fill="none" stroke={now > (a.hot ?? 60000) || now < 0 ? K.red : '#7DF29A'} strokeWidth={6} strokeLinejoin="round" />
     {grey.length > 1 && <polyline points={grey.join(' ')} fill="none" stroke="#546E7A" strokeWidth={5} strokeDasharray="10 8" />}
     {a.lamp !== false && <g transform={`translate(${-W / 2 + 40} ${H / 2 - 30})`}><circle r={12} fill={off ? K.red : '#7DF29A'} stroke={OL} strokeWidth={3} />
@@ -2661,9 +2688,79 @@ const tradescreen: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A single American house (item `home`). `color` walls, `roof` colour, `sign` for-sale sign text (with `pages` [[at, text], ...] to
+ *  swap the price on it), `soldAt` stamps SOLD, `lockAt` hangs a padlock on the door, `frameAt` → `doneAt`: built from a
+ *  bare timber frame to a finished home, `night` lights the windows. */
+const home: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const wall = col(a.color, '#FFF3E0'), roof = col(a.roof, '#C0504D');
+  const built = a.frameAt !== undefined ? clamp((t - a.frameAt) / Math.max(0.3, (a.doneAt ?? a.frameAt + 3) - a.frameAt)) : 1;
+  let sign = a.sign as string | undefined;
+  for (const [at, txt] of (a.pages || []) as [number, string][]) if (t >= at) sign = txt;
+  const lock = a.lockAt !== undefined ? E.outBack(win(t, a.lockAt, 0.5)) : 0, sold = a.soldAt !== undefined ? E.outBack(win(t, a.soldAt, 0.4)) : 0;
+  return <g key={'hs' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <ellipse cx={0} cy={6} rx={300} ry={22} fill="#000" opacity={0.18} />
+    {built < 1 && <g>
+      {[-200, -120, -40, 40, 120, 200].map((dx) => <rect key={dx} x={dx - 6} y={-300} width={12} height={300} fill="#D7A86E" stroke={OL} strokeWidth={2} />)}
+      <rect x={-210} y={-306} width={420} height={14} fill="#D7A86E" stroke={OL} strokeWidth={2} />
+      <path d="M -230 -300 L 0 -470 L 230 -300" fill="none" stroke="#D7A86E" strokeWidth={14} strokeLinejoin="round" />
+      <path d="M -230 -300 L 0 -470 L 230 -300" fill="none" stroke={OL} strokeWidth={2} /></g>}
+    <g opacity={built} transform={`translate(0 ${(1 - built) * 40})`}>
+      <rect x={-210} y={-300} width={420} height={300} fill={wall} stroke={OL} strokeWidth={6} />
+      <path d="M -250 -300 L 0 -480 L 250 -300 Z" fill={roof} stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+      <rect x={110} y={-470} width={50} height={110} fill="#8D6E63" stroke={OL} strokeWidth={5} />
+      <circle cx={0} cy={-370} r={34} fill={a.night ? '#FFE082' : K.glass} stroke={OL} strokeWidth={5} />
+      {[-150, 70].map((dx) => <g key={dx}><rect x={dx} y={-240} width={80} height={80} rx={4} fill={a.night ? '#FFE082' : K.glass} stroke={OL} strokeWidth={5} />
+        <path d={`M ${dx + 40} -240 L ${dx + 40} -160 M ${dx} -200 L ${dx + 80} -200`} stroke={OL} strokeWidth={3} /></g>)}
+      <rect x={-40} y={-150} width={80} height={150} rx={6} fill={K.wood} stroke={OL} strokeWidth={5} />
+      <circle cx={24} cy={-70} r={6} fill={K.gold} stroke={OL} strokeWidth={2} />
+      {lock > 0 && <g transform={`translate(0 -86) scale(${lock})`}><path d="M -26 -20 L -26 -44 Q 0 -78 26 -44 L 26 -20" fill="none" stroke="#546E7A" strokeWidth={10} />
+        <rect x={-38} y={-24} width={76} height={62} rx={10} fill={K.gold} stroke={OL} strokeWidth={5} /><circle cx={0} cy={4} r={8} fill={OL} /></g>}
+    </g>
+    {sign && <g transform={`translate(${a.signX ?? -330} 0)`}>
+      <rect x={-6} y={-200} width={12} height={200} fill={K.wood2} stroke={OL} strokeWidth={3} />
+      <rect x={-130} y={-230} width={260} height={110} rx={10} fill={K.white} stroke={OL} strokeWidth={5} />
+      <rect x={-130} y={-230} width={260} height={34} rx={10} fill={K.red} stroke={OL} strokeWidth={5} />
+      <T x={0} y={-204} s={22} c={K.white}>{a.signHead || 'FOR SALE'}</T>
+      <T x={0} y={-140} s={sign.length > 9 ? 34 : 44} w={240}>{sign}</T>
+      {sold > 0 && <g transform={`rotate(-12 0 -170) scale(${sold})`}><rect x={-110} y={-200} width={220} height={64} rx={8} fill={K.red} stroke={OL} strokeWidth={4} />
+        <T x={0} y={-154} s={40} c={K.white}>SOLD</T></g>}</g>}
+    {a.text && <T x={0} y={60} s={a.textSize ?? 34} c={a.textc || OL}>{a.text}</T>}
+  </g>;
+};
+
+/** A zoning map seen from above: `cols` × `rows` lots; the first `share` (0-1) of lots light up yellow, one by one, as
+ *  "single-family only" (`label`); the rest are blue ("other homes"). `upzoneAt` turns the yellow lots into small
+ *  apartment blocks. `title` above the map. */
+const zonemap: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 460), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const cols = a.cols ?? 10, rows = a.rows ?? 6, cw = a.cell ?? 70, n = cols * rows, k1 = Math.round((a.share ?? 0.78) * n);
+  const W = cols * cw, H = rows * cw, fillAt = a.fillAt ?? (a.at ?? 0) + 0.4, fd = a.fillDur ?? 2.5, up = a.upzoneAt !== undefined ? win(t, a.upzoneAt, 1.2) : 0;
+  const order = Array.from({length: n}, (_, q) => q).sort((p, q) => rnd(p + 17) - rnd(q + 17));
+  const rank: number[] = []; order.forEach((q, r) => { rank[q] = r; });
+  return <g key={'zm' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-W / 2 - 24} y={-H / 2 - 24} width={W + 48} height={H + 48} rx={16} fill="#ECEFF1" stroke={OL} strokeWidth={6} />
+    {a.title && <T x={0} y={-H / 2 - 50} s={36} c={a.titlec || OL}>{a.title}</T>}
+    {Array.from({length: n}, (_, q) => { const r = rank[q], cx = -W / 2 + (q % cols) * cw, cy = -H / 2 + Math.floor(q / cols) * cw;
+      const on = t >= fillAt + fd * r / n, sf = r < k1;
+      const fill = !on ? '#CFD8DC' : sf ? '#FFD54A' : '#64B5F6';
+      const u = sf && up > 0 ? clamp(up * 1.6 - (r / k1) * 0.6) : 0;
+      return <g key={q}><rect x={cx + 4} y={cy + 4} width={cw - 8} height={cw - 8} rx={6} fill={u > 0.5 ? '#81C784' : fill} stroke={OL} strokeWidth={2} />
+        {on && !(u > 0.5) && <path d={`M ${cx + cw / 2 - 12} ${cy + cw / 2 + 10} L ${cx + cw / 2 - 12} ${cy + cw / 2 - 4} L ${cx + cw / 2} ${cy + cw / 2 - 16} L ${cx + cw / 2 + 12} ${cy + cw / 2 - 4} L ${cx + cw / 2 + 12} ${cy + cw / 2 + 10} Z`} fill={K.white} stroke={OL} strokeWidth={2} />}
+        {u > 0.5 && [0, 1].map((b) => <rect key={b} x={cx + 12 + b * (cw / 2 - 8)} y={cy + 12} width={cw / 2 - 16} height={cw - 24} rx={3} fill={K.white} stroke={OL} strokeWidth={2} />)}</g>; })}
+    {a.label && <g transform={`translate(${-W / 2} ${H / 2 + 60})`}><rect x={-16} y={-40} width={W + 32} height={66} rx={12} fill={K.white} stroke={OL} strokeWidth={4} />
+      <rect x={0} y={-22} width={30} height={30} rx={5} fill="#FFD54A" stroke={OL} strokeWidth={3} />
+      <T x={44} y={2} s={22} a="start" c={a.labelc || OL}>{a.label}</T>
+      {a.label2 && <g transform={`translate(${W * 0.62} 0)`}><rect x={0} y={-22} width={30} height={30} rx={5} fill="#64B5F6" stroke={OL} strokeWidth={3} />
+        <T x={44} y={2} s={22} a="start" c={a.labelc || OL}>{a.label2}</T></g>}</g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

@@ -59,6 +59,7 @@ SHORTS = {
     "28-bigtech-ai": ("how-big-tech-really-makes-money-from-ai", "documentary", "bigtech_documentary", "$200 BILLION", "IN 3 MONTHS. ON AI", "Big Tech Spent $200 Billion in 3 Months. Here's Why", "#ai #bigtech #economics"),
     "29-us-healthcare": ("why-americans-pay-so-much-for-healthcare", "documentary", "healthcare_documentary", "$28,303 A YEAR", "FOR HEALTH INSURANCE", "Why US Health Insurance Costs $28,303 a Year", "#healthcare #insurance #usa"),
     "30-credit-cards": ("the-hidden-business-behind-your-credit-card", "documentary", "creditcard_documentary", "$160 BILLION", "IN CARD INTEREST", "Americans Paid $160 Billion in Card Interest in One Year", "#creditcard #personalfinance #usa"),
+    "31-us-housing": ("why-american-homes-became-so-expensive", "documentary", "housing_documentary", "$120,800 A YEAR", "TO AFFORD A HOME", "You Now Need $120,800 a Year to Afford a Typical Home", "#housing #realestate #usa"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 

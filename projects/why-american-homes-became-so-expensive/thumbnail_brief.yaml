@@ -1,0 +1,91 @@
+# Thumbnail creative brief. A = bignum, B = split.
+title: Why American Homes Became So Expensive
+docs_dir: docs/episodes/31-us-housing
+video: output/housing_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why does the same house now cost a whole extra salary?
+  surprising_fact: Income needed to afford the median home $120,800 at end 2025, up from $68,700 five years earlier (Harvard JCHS)
+  subject: a suburban house for sale
+  tone: bright
+  metaphor: a door that four forces push shut
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $120K
+  - TO BUY A HOME
+  claim_basis: 'income: $120,800 income needed for the median-priced home, end 2025 (Harvard JCHS)'
+  scene:
+    palette:
+      sky0: '#08101E'
+      sky1: '#1C2F55'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: house
+      x: 1450
+      y: 560
+      s: 0.72
+      lock: true
+      lit: true
+    support: []
+    particles:
+      n: 50
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 2020 $68K
+  - NOW $120K
+  claim_basis: 'income: income needed $68,700 (end 2020) vs $120,800 (end 2025), Harvard JCHS'
+  scene:
+    palette:
+      sky0: '#0A1712'
+      sky1: '#1E3D33'
+      haze: '#A5D6A7'
+      key: '#E8F5E9'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: house
+      x: 520
+      y: 640
+      s: 0.48
+      price: $68K
+      wall: '#E8F5E9'
+      roof: '#2E7D32'
+    after:
+      kind: house
+      x: 1440
+      y: 640
+      s: 0.48
+      price: $120K
+      lock: true
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E8F5E9'
+    vignette: 0.5
+    brand: none

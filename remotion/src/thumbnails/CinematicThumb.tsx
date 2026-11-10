@@ -453,6 +453,25 @@ const SUBJECTS: Record<string, SubjectFn> = {
     {o.coins && Array.from({length: 5}, (_, k) => <g key={k} transform={`translate(${420 + k * 70} ${-260 + k * 90})`}><circle r={46} fill={P.accent} stroke="#05070B" strokeWidth={6} />
       <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={52} fill="#05070B">$</text></g>)}
   </g>,
+  /** A suburban house with a for-sale sign (`price` on it; `lock` puts a padlock on the door; `lit` lights the windows). */
+  house: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <circle r={520} fill={P.haze} opacity={0.18} filter="url(#soft)" />
+    <ellipse cx={0} cy={300} rx={520} ry={40} fill="#000" opacity={0.4} filter="url(#soft)" />
+    <rect x={-330} y={-60} width={660} height={360} fill={o.wall || '#F5EBDD'} stroke="#05070B" strokeWidth={8} />
+    <path d="M -400 -60 L 0 -360 L 400 -60 Z" fill={o.roof || '#B23A35'} stroke="#05070B" strokeWidth={8} strokeLinejoin="round" />
+    <path d="M -400 -60 L 0 -360 L 400 -60" fill="none" stroke="#FFFFFF" strokeWidth={4} opacity={0.15} />
+    <rect x={170} y={-330} width={70} height={150} fill="#6D4C41" stroke="#05070B" strokeWidth={6} />
+    {[-250, 110].map((dx) => <g key={dx}><rect x={dx} y={20} width={140} height={120} rx={6} fill={o.lit ? '#FFD54F' : '#9FD8F5'} stroke="#05070B" strokeWidth={6} />
+      <path d={`M ${dx + 70} 20 L ${dx + 70} 140 M ${dx} 80 L ${dx + 140} 80`} stroke="#05070B" strokeWidth={4} /></g>)}
+    <rect x={-60} y={110} width={120} height={190} rx={8} fill="#8A5428" stroke="#05070B" strokeWidth={6} />
+    {o.lock && <g transform="translate(0 170)"><path d="M -40 -20 L -40 -60 Q 0 -110 40 -60 L 40 -20" fill="none" stroke="#B0BEC5" strokeWidth={16} />
+      <rect x={-60} y={-26} width={120} height={96} rx={14} fill={P.accent} stroke="#05070B" strokeWidth={7} /><circle cx={0} cy={14} r={12} fill="#05070B" /></g>}
+    {o.price && <g transform={`translate(${o.signX ?? -470} 300)`}><rect x={-8} y={-260} width={16} height={260} fill="#5D4037" stroke="#05070B" strokeWidth={4} />
+      <rect x={-170} y={-300} width={340} height={150} rx={12} fill="#FFFFFF" stroke="#05070B" strokeWidth={7} />
+      <rect x={-170} y={-300} width={340} height={44} rx={12} fill="#E53935" stroke="#05070B" strokeWidth={7} />
+      <text x={0} y={-268} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill="#FFFFFF">FOR SALE</text>
+      <text x={0} y={-180} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={o.price.length > 7 ? 54 : 70} fill="#05070B">{o.price}</text></g>}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

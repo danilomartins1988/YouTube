@@ -1,0 +1,279 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; estimates and our calculations are said as such.
+logline: To afford the typical American home you now need about one hundred and twenty-one thousand dollars a year, up
+  from under seventy thousand five years earlier. Prices, rates, missing homes and the rules on the land.
+title: Why American Homes Became So Expensive
+segments:
+- id: h_open
+  chapter: One hundred and twenty-one thousand dollars
+  narration: One hundred and twenty-one thousand dollars a year. That is roughly the income you now need to afford the
+    payments on the typical American home.
+  claims:
+  - income
+- id: h_twist
+  chapter: One hundred and twenty-one thousand dollars
+  narration: Five years earlier, it was {{income.before_spoken}}. The houses did not get bigger. They did not get better.
+    The same home simply started to cost a whole extra salary.
+  claims:
+  - income
+  analysis: true
+  source_note: Five-year comparison from JCHS; the house-size line is commentary.
+- id: h_question
+  chapter: One hundred and twenty-one thousand dollars
+  narration: So how did a house, the most ordinary thing in American life, slip out of reach for so many people?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: One hundred and twenty-one thousand dollars
+  narration: By the end of this video, you will know the four forces behind it. The price, the loan, the homes that were
+    never built, and the rules that decide what can be built at all.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The price tag
+  narration: ''
+  claims: []
+- id: m1_ratio
+  chapter: The price tag
+  narration: Start with a simple yardstick. Take the price of a typical existing home and divide it by the income of a
+    typical household. Harvard's Joint Center for Housing Studies tracks exactly that. In the nineteen nineties, a home
+    cost about {{ratio.nineties_spoken}} years of income. In twenty nineteen, about four point one. In twenty twenty-five,
+    {{ratio}}, just below the all-time high of five reached in twenty twenty-two.
+  claims:
+  - ratio
+- id: m1_jump
+  chapter: The price tag
+  narration: The biggest jump came fast. According to the same report, home prices rose {{ratio.rise_spoken}} nationwide
+    after twenty twenty. Wages rose too, but nowhere near that fast.
+  claims:
+  - ratio
+  analysis: true
+  source_note: Price rise from the JCHS press release; the wage line is commentary consistent with the ratio rising.
+- id: m1_new
+  chapter: The price tag
+  narration: New homes tell the same story over a longer stretch. The Census Bureau's median price for a newly built house
+    sold in the summer of two thousand was {{newprice.y2000_spoken}}. In the summer of twenty twenty-six, it was {{newprice}}.
+    These are dollars of the day, not adjusted for inflation, but the price more than doubled.
+  claims:
+  - newprice
+- id: m1_draw
+  chapter: The price tag
+  narration: Let me draw the yardstick. Here is one year of a typical household's income, one block. In the nineties, a
+    home was a stack of about three blocks. By twenty nineteen, four. Today, almost five. Every extra block is a whole
+    extra year of work, before taxes, before food, before anything else.
+  claims:
+  - ratio
+  analysis: true
+  source_note: Diagram of the JCHS price-to-income ratio.
+- id: m1_transition
+  chapter: The price tag
+  narration: But almost nobody pays for a house with cash. They borrow. And the price of borrowing changed even faster
+    than the price of the house.
+  claims: []
+- id: m2_card
+  chapter: The rate shock
+  narration: ''
+  claims: []
+- id: m2_rates
+  chapter: The rate shock
+  narration: In the first week of twenty twenty-one, the average thirty-year fixed mortgage rate, tracked by Freddie Mac,
+    fell to {{rates.low_spoken}}. That was the lowest point of that period. Then inflation arrived, and interest rates
+    climbed. In early November twenty twenty-six, the same average stood at {{rates}}.
+  claims:
+  - rates
+- id: m2_payment
+  chapter: The rate shock
+  narration: Higher prices times higher rates. According to Harvard's housing center, the monthly mortgage payment on the
+    median-priced home reached {{rates.pay_spoken}}. At the end of twenty twenty, it was {{rates.pay_before_spoken}}.
+    The payment roughly doubled. Add insurance and property taxes, and the total monthly cost of owning that home comes
+    to about three thousand one hundred and twenty dollars.
+  claims:
+  - rates
+- id: m2_lockin
+  chapter: The rate shock
+  narration: And high rates did something strange. They froze the market. Half of all outstanding mortgages carried rates
+    below four percent at the end of twenty twenty-five. If you sell, you give up that cheap loan and take a new one at
+    around seven. So many owners simply stay put.
+  claims:
+  - lockin
+- id: m2_frozen
+  chapter: The rate shock
+  narration: The numbers show it. The share of Americans who moved in a year fell to a record low of eleven point two
+    percent in twenty twenty-four. And existing home sales were stuck at four point one million in twenty twenty-five, a
+    thirty-year low, about two thirds of the sales in twenty twenty-one.
+  claims:
+  - lockin
+- id: m2_draw
+  chapter: The rate shock
+  narration: Let me draw the lock. Here is an owner with a loan at three percent. Here is the house they would like to
+    move to. Between them, a new loan at seven percent. Moving would mean a much bigger payment for the same kind of home.
+    So the owner stays, the house never comes up for sale, and the buyers waiting outside see fewer homes on the market.
+  claims:
+  - lockin
+  - rates
+  analysis: true
+  source_note: Lock-in diagram built from the JCHS finding.
+- id: m2_transition
+  chapter: The rate shock
+  narration: Rates explain the last few years. But the deeper problem started long before, with the homes that America
+    never built.
+  claims: []
+- id: m3_card
+  chapter: The missing homes
+  narration: ''
+  claims: []
+- id: m3_crash
+  chapter: The missing homes
+  narration: Go back to two thousand and eight. The housing bubble burst, builders went bust, and construction collapsed.
+    By our calculation from Census data, about {{building}} new homes were completed in the two thousands. In the twenty
+    tens, it was {{building.tens_spoken}}. In twenty eleven alone, completions fell to about five hundred and eighty-five
+    thousand, the lowest year in the Census records, which go back to nineteen sixty-eight.
+  claims:
+  - building
+  analysis: true
+  source_note: Decade totals are our sums of the Census monthly completions series.
+- id: m3_gap
+  chapter: The missing homes
+  narration: Meanwhile, the number of households kept growing. Millennials were reaching the age when
+    people buy their first home. Demand rose, and supply did not keep up.
+  claims:
+  - building
+  analysis: true
+  source_note: Demographic commentary; no figure claimed.
+- id: m3_shortage
+  chapter: The missing homes
+  narration: How many homes are missing? Nobody agrees on one number. Harvard's housing center notes that estimates of
+    the shortage range {{shortage}}. The research group Up for Growth puts the gap at about {{shortage.ufg_spoken}} homes.
+    Either way, it is millions of homes that people need and that do not exist.
+  claims:
+  - shortage
+- id: m3_recovery
+  chapter: The missing homes
+  narration: Builders have picked up the pace again. Completions came back to about one and a half million in twenty
+    twenty-five. But filling a hole that took a decade to dig takes much longer than one good year.
+  claims:
+  - building
+  analysis: true
+  source_note: 2025 total is our sum of the Census monthly series; the last sentence is commentary.
+- id: m3_draw
+  chapter: The missing homes
+  narration: Let me draw the gap. Here is the line of new households, rising steadily year after year. Here is the line
+    of new homes. Before the crash, the two moved together. After the crash, the homes line dropped, and the space between
+    the two lines is the shortage. Too many buyers chasing too few homes means one thing. Higher prices.
+  claims:
+  - building
+  - shortage
+  analysis: true
+  source_note: Schematic diagram (not to scale) of completions vs household growth.
+- id: m3_transition
+  chapter: The missing homes
+  narration: Which raises an obvious question. If homes are so valuable, why not just build more of them? Often, the answer
+    is written in the rules.
+  claims: []
+- id: m4_card
+  chapter: The rules on the land
+  narration: ''
+  claims: []
+- id: m4_zoning
+  chapter: The rules on the land
+  narration: In most American cities, local zoning rules decide what can be built on each piece of land. And very often,
+    the answer is one house per lot, and nothing else. Researchers at the University of California, Berkeley, mapped
+    Greater Los Angeles. They found that about {{zoning}} of its residential land is reserved for single-family homes only.
+  claims:
+  - zoning
+- id: m4_meaning
+  chapter: The rules on the land
+  narration: That means no apartments, no townhouses, no small duplex, on most of the land where people live. Even where
+    demand is highest, the rules can keep the number of homes fixed.
+  claims:
+  - zoning
+  analysis: true
+  source_note: Explanation of exclusive single-family zoning.
+- id: m4_regulation
+  chapter: The rules on the land
+  narration: Then there is the cost of the rules themselves. Permits, fees, codes and delays. The National Association of
+    Home Builders, the builders' own trade group, estimates that regulation makes up about {{regulation}} of the price of
+    a new single-family home. On an average new home, that is {{regulation.usd_spoken}}.
+  claims:
+  - regulation
+- id: m4_debate
+  chapter: The rules on the land
+  narration: That estimate comes from the industry, and many rules protect safety and the environment. But the direction
+    is clear. Every extra step makes a new home slower and more expensive to build.
+  claims:
+  - regulation
+  analysis: true
+  source_note: Commentary on the NAHB estimate and on zoning reform; no figure claimed.
+- id: m4_draw
+  chapter: The rules on the land
+  narration: Let me draw one city block. Here are eight lots. With single-family zoning, each lot gets one house. Eight
+    homes. Now allow small apartment buildings on the same lots. Four homes on each. Thirty-two homes on the same block,
+    with the same streets. The land did not change. Only the rule did.
+  claims:
+  - zoning
+  analysis: true
+  source_note: Illustrative diagram (hypothetical block).
+- id: m4_transition
+  chapter: The rules on the land
+  narration: High prices, expensive loans, missing homes and tight rules. Put them together, and someone ends up locked
+    outside.
+  claims: []
+- id: m5_card
+  chapter: Locked out
+  narration: ''
+  claims: []
+- id: m5_age
+  chapter: Locked out
+  narration: The National Association of Realtors tracks who buys homes. In its latest survey, the typical first-time buyer
+    was {{firsttime}} years old, an all-time high. First-time buyers made up just {{firsttime.share_spoken}} of all buyers,
+    about half the historical norm before two thousand and eight.
+  claims:
+  - firsttime
+- id: m5_listings
+  chapter: Locked out
+  narration: And there is little on the shelf for them. According to Harvard's housing center, in March twenty nineteen,
+    forty-nine percent of homes listed for sale were affordable to a household earning seventy-five thousand dollars or
+    less. By March twenty twenty-six, it was just twenty-three percent.
+  claims:
+  - firsttime
+- id: m5_metros
+  chapter: Locked out
+  narration: The squeeze reaches far beyond the big coastal cities. In twenty twenty, you needed more than one hundred
+    thousand dollars a year to afford the median home in thirty-one metro areas. In twenty twenty-five, it was one hundred
+    and sixty-nine.
+  claims:
+  - income
+- id: m5_draw
+  chapter: Locked out
+  narration: Let me put the four forces together. The price, almost five years of income. The loan, at around seven percent.
+    The missing homes, counted in millions. And the rules on the land. Each one pushes the door a little further shut,
+    and the people still outside are the young and the first-time buyers.
+  claims:
+  - ratio
+  - rates
+  - shortage
+  - firsttime
+  analysis: true
+  source_note: Summary diagram of the sourced parts.
+- id: payoff
+  chapter: The lesson
+  narration: So why did American homes become so expensive? Not because of one villain. A decade of too little building,
+    rules that limit what can be built, and then a jump in prices and rates on top. For owners who bought early, it has
+    been a windfall. For everyone else, the American dream now comes with a much higher price tag.
+  claims:
+  - building
+  - ratio
+  - rates
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

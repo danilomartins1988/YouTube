@@ -1,0 +1,159 @@
+# Sources and claims for "Why American Homes Became So Expensive" (Episode 31, US batch #03).
+# Every claim was read on its source page or data file on 2026-11-10 (AI fact-check; notes in docs/episodes/31-us-housing/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as published (nominal, not inflation-adjusted).
+# RULES: MSPUS is the median price of NEW houses sold (said as such); completions totals by decade are OUR calculation from
+# Census monthly data; shortage estimates vary widely (1.2 to 5.5 million) and are said as a range; the NAHB regulation share
+# is a home builders' trade group estimate, said as such; the Berkeley zoning figure is Greater Los Angeles (region, not city).
+sources:
+  - id: jchs
+    title: "The State of the Nation's Housing 2026: Key Facts"
+    publisher: Harvard Joint Center for Housing Studies
+    url: https://www.jchs.harvard.edu/sites/default/files/interactive-item/files/Harvard_JCHS_State_Nations_Housing_2026_Key_Facts_0.pdf
+    published: "2026-06-17"
+    accessed: "2026-11-10"
+    credit: "Harvard JCHS"
+  - id: jchs_pr
+    title: "High Costs and Slumping Demand Squeeze Housing as Affordable Units Remain in Short Supply (press release)"
+    publisher: Harvard Joint Center for Housing Studies
+    url: https://www.jchs.harvard.edu/sites/default/files/interactive-item/files/Harvard_JCHS_State_of_the_Nations_Housing_2026_Press_Release.pdf
+    published: "2026-06-17"
+    accessed: "2026-11-10"
+    credit: "Harvard JCHS"
+  - id: mspus
+    title: "Median Sales Price of New Houses Sold for the United States (MSPUS)"
+    publisher: U.S. Census Bureau and HUD, via FRED (St. Louis Fed)
+    url: https://fred.stlouisfed.org/series/MSPUS
+    published: "2026-10-27"
+    accessed: "2026-11-10"
+    credit: "Census / HUD via FRED"
+  - id: pmms
+    title: "30-Year Fixed Rate Mortgage Average in the United States (MORTGAGE30US)"
+    publisher: Freddie Mac, via FRED (St. Louis Fed)
+    url: https://fred.stlouisfed.org/series/MORTGAGE30US
+    published: "2026-11-05"
+    accessed: "2026-11-10"
+    credit: "Freddie Mac via FRED"
+  - id: completions
+    title: "New Privately-Owned Housing Units Completed: Total Units (COMPUTNSA)"
+    publisher: U.S. Census Bureau and HUD, via FRED (St. Louis Fed)
+    url: https://fred.stlouisfed.org/series/COMPUTNSA
+    published: "2026-10"
+    accessed: "2026-11-10"
+    credit: "Census via FRED"
+  - id: upforgrowth
+    title: "2025 Housing Underproduction Report"
+    publisher: Up for Growth
+    url: https://upforgrowth.org/news_insights/2025-hup/
+    published: "2025-11-24"
+    accessed: "2026-11-10"
+    credit: "Up for Growth"
+  - id: nahb
+    title: "Government Regulation in the Price of a New Home: 2026"
+    publisher: National Association of Home Builders (Eric Lynch)
+    url: https://www.nahb.org/news-and-economics/housing-economics-plus/special-studies/special-studies-pages/government-regulation-in-the-price-of-new-homes-2026
+    published: "2026-06-08"
+    accessed: "2026-11-10"
+    credit: "NAHB"
+  - id: berkeley
+    title: "Single-Family Zoning in Greater Los Angeles"
+    publisher: Othering & Belonging Institute, UC Berkeley
+    url: https://belonging.berkeley.edu/single-family-zoning-greater-los-angeles
+    published: "2022-03-02"
+    accessed: "2026-11-10"
+    credit: "UC Berkeley"
+  - id: nar
+    title: "First-Time Home Buyer Share Inches Up to 22%, Median Age Remains at Record High of 40"
+    publisher: National Association of Realtors
+    url: https://www.nar.realtor/newsroom/first-time-home-buyer-share-inches-up-to-22-median-age-remains-at-record-high-of-40
+    published: "2026-11-05"
+    accessed: "2026-11-10"
+    credit: "NAR"
+
+claims:
+  - id: income
+    text: "JCHS (Jun 2026): 'The income needed to afford payments on the median-priced home was $120,800 at the end of 2025, up from $68,700 five years earlier. The income required exceeded $100,000 in 169 of the nation's 387 metros in 2025, up from 31 markets in 2020.'"
+    spoken: about one hundred and twenty-one thousand dollars a year
+    display: "$120,800 income needed (end 2025)"
+    fields: {before_spoken: sixty-eight thousand seven hundred dollars}
+    source_ids: [jchs]
+    status: source_located
+    verification_note: Read in the JCHS Key Facts PDF.
+
+  - id: ratio
+    text: "JCHS (Jun 2026): the median existing single-family price 'hovered near five times the median household income, falling slightly from the all-time high of 5.0 in 2022 to 4.7 in 2025. By comparison, this ratio was 4.1 in 2019 and averaged 3.2 throughout the 1990s.' Press release: 'Home prices have increased 54 percent nationwide since 2020.'"
+    spoken: four point seven times
+    display: "Price = 4.7× income (2025)"
+    fields: {nineties_spoken: three point two, rise_spoken: fifty-four percent}
+    source_ids: [jchs, jchs_pr]
+    status: source_located
+    verification_note: Existing single-family homes.
+
+  - id: newprice
+    text: "Census/HUD via FRED MSPUS (median sales price of new houses sold, NSA): 2000Q3 $168,800; 2019Q3 $318,400; 2026Q3 $393,300."
+    spoken: three hundred and ninety-three thousand three hundred dollars
+    display: "New-home median $393,300 (Q3 2026)"
+    fields: {y2000_spoken: one hundred and sixty-eight thousand eight hundred dollars}
+    source_ids: [mspus]
+    status: source_located
+    verification_note: New houses only; nominal dollars. Values checked in the FRED CSV.
+
+  - id: rates
+    text: "Freddie Mac PMMS via FRED: 30-year fixed average 2.65% (week of 2021-01-07, the series low of 2020-21); 7.18% (week of 2026-11-05). JCHS: 'The monthly mortgage payment on the median-priced home is $2,420 ... payments on the median-priced home were $1,240 at the end of 2020 ... total monthly homeownership costs balloon to $3,120.'"
+    spoken: seven point one eight percent
+    display: "30-yr mortgage 7.18%"
+    fields: {low_spoken: two point six five percent, pay_spoken: two thousand four hundred and twenty dollars, pay_before_spoken: one thousand two hundred and forty dollars}
+    source_ids: [pmms, jchs]
+    status: source_located
+    verification_note: Values checked in the FRED CSV; payments read in the JCHS PDF.
+
+  - id: lockin
+    text: "JCHS (Jun 2026): 'With half of all outstanding mortgages carrying rates below 4 percent as of late 2025, many homeowners still face a strong financial disincentive to relocate.' 'Residential mobility fell to a record low of 11.2 percent in 2024.' 'In 2025, existing home sales were unchanged from 2024 at 4.1 million, stuck at a 30-year low that is two-thirds of the 6.1 million sales in 2021.'"
+    spoken: half
+    display: "Half of mortgages below 4%"
+    source_ids: [jchs]
+    status: source_located
+    verification_note: Read in the JCHS Key Facts PDF.
+
+  - id: building
+    text: "Census via FRED COMPUTNSA (monthly, thousands), our sums: completions ≈ 15.64 million in 2000–2009 and ≈ 9.15 million in 2010–2019; 585,000 in 2011, the lowest calendar year in the series (which starts in 1968); ≈ 1.49 million in 2025."
+    spoken: about fifteen and a half million
+    display: "Completions: 15.6M (2000s) vs 9.2M (2010s)"
+    fields: {tens_spoken: about nine million}
+    source_ids: [completions]
+    status: source_located
+    verification_note: Our calculation from the Census monthly series (checked twice).
+
+  - id: shortage
+    text: "JCHS (Jun 2026): 'Construction activity since 2022 has added roughly 900,000 vacant units at a time when various organizations estimate the shortage to be between 1.2 and 5.5 million units.' Up for Growth (Nov 2025): shortfall 'has narrowed, from 3.85 million homes in 2022 to 3.78 million homes in 2023.'"
+    spoken: between one point two and five point five million homes
+    display: "Shortage: 1.2M–5.5M homes (estimates)"
+    fields: {ufg_spoken: three point eight million}
+    source_ids: [jchs, upforgrowth]
+    status: source_located
+    verification_note: A range of estimates; never a single figure.
+
+  - id: regulation
+    text: "NAHB (Jun 2026): 'regulations imposed by government at all levels account for 26.4% of the final price of a new single-family home built for sale'; 'applied to the current average price ($499,500) of a new home, regulation accounts for $131,734 of the final house price.'"
+    spoken: twenty-six point four percent
+    display: "Regulation ≈ 26.4% of a new home's price (NAHB est.)"
+    fields: {usd_spoken: about one hundred and thirty-two thousand dollars}
+    source_ids: [nahb]
+    status: source_located
+    verification_note: A home builders' trade group estimate; said as such.
+
+  - id: zoning
+    text: "UC Berkeley Othering & Belonging Institute (Mar 2022): 'we find that 77.70 percent of residential land in Greater LA is exclusively reserved for single-family housing.'"
+    spoken: seventy-eight percent
+    display: "78% of residential land: single-family only (Greater LA)"
+    source_ids: [berkeley]
+    status: source_located
+    verification_note: Greater Los Angeles region, not the city.
+
+  - id: firsttime
+    text: "NAR (Nov 2026): 'The share of first-time home buyers rose slightly to 22% from last year's record low of 21%'; 'still about half the historical norm of 40% seen before 2008'; 'the typical age of first-time buyers remained at an all-time high of 40'. JCHS: 'just 23 percent of listings in March 2026 were at a price affordable to a household earning $75,000 or less, down from 49 percent of listings in March 2019.'"
+    spoken: forty
+    display: "First-time buyer age: 40 (record)"
+    fields: {share_spoken: twenty-two percent}
+    source_ids: [nar, jchs]
+    status: source_located
+    verification_note: NAR 2026 Profile of Home Buyers and Sellers.
