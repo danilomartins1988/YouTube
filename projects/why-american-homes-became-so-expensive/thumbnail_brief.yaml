@@ -15,7 +15,7 @@ concepts:
   angle: giant number (bignum)
   archetype: bignum
   text:
-  - $120K
+  - $120K/YR
   - TO BUY A HOME
   claim_basis: 'income: $120,800 income needed for the median-priced home, end 2025 (Harvard JCHS)'
   scene:
@@ -29,9 +29,9 @@ concepts:
     backdrop: void
     subject:
       kind: house
-      x: 1450
-      y: 560
-      s: 0.72
+      x: 1540
+      y: 600
+      s: 0.66
       lock: true
       lit: true
     support: []
@@ -52,7 +52,7 @@ concepts:
   text:
   - 2020 $68K
   - NOW $120K
-  claim_basis: 'income: income needed $68,700 (end 2020) vs $120,800 (end 2025), Harvard JCHS'
+  claim_basis: 'income: income needed $68,700 (end 2020) vs $120,800 (end 2025), Harvard JCHS; +76% is our calculation'
   scene:
     palette:
       sky0: '#0A1712'
@@ -63,20 +63,24 @@ concepts:
       ink: '#FFFFFF'
     backdrop: void
     subject:
-      kind: house
-      x: 520
-      y: 640
-      s: 0.48
-      price: $68K
-      wall: '#E8F5E9'
-      roof: '#2E7D32'
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: INCOME NEEDED
+      amount: $68,700
+      magnifier: false
+      rot: -4
     after:
-      kind: house
+      kind: ledger
       x: 1440
-      y: 640
-      s: 0.48
-      price: $120K
-      lock: true
+      y: 650
+      s: 0.6
+      heading: INCOME NEEDED
+      amount: $120,800
+      magnifier: false
+      stamp: +76%
+      rot: 4
     support: []
     particles:
       n: 40

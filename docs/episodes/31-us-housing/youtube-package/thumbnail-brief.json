@@ -1,0 +1,345 @@
+{
+  "title": "Why American Homes Became So Expensive",
+  "docs_dir": "docs/episodes/31-us-housing",
+  "video": "output/housing_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why does the same house now cost a whole extra salary?",
+    "surprising_fact": "Income needed to afford the median home $120,800 at end 2025, up from $68,700 five years earlier (Harvard JCHS)",
+    "subject": "a suburban house for sale",
+    "tone": "bright",
+    "metaphor": "a door that four forces push shut"
+  },
+  "slug": "why-american-homes-became-so-expensive",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "$120K/YR",
+        "TO BUY A HOME"
+      ],
+      "claim_basis": "income: $120,800 income needed for the median-priced home, end 2025 (Harvard JCHS)",
+      "scene": {
+        "palette": {
+          "sky0": "#08101E",
+          "sky1": "#1C2F55",
+          "haze": "#90CAF9",
+          "key": "#E3F2FD",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "house",
+          "x": 1540,
+          "y": 600,
+          "s": 0.66,
+          "lock": true,
+          "lit": true
+        },
+        "support": [],
+        "particles": {
+          "n": 50,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E3F2FD"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "$120K/YR",
+          "x": 90,
+          "y": 549.1,
+          "size": 230.5,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "TO BUY A HOME",
+          "x": 96,
+          "y": 687.1,
+          "size": 120,
+          "width": 998.4,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "5 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 369, 1270, 563), (96, 594, 1094, 694)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.094",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 61",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hamburger-that-became-a-symbol-of-the-cold-wars-end (distance 0.37)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "income: $120,800 income needed for the median-priced home, end 2025 (Harvard JCHS)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.618,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hamburger-that-became-a-symbol-of-the-cold-wars-end"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "2020 $68K",
+        "NOW $120K"
+      ],
+      "claim_basis": "income: income needed $68,700 (end 2020) vs $120,800 (end 2025), Harvard JCHS; +76% is our calculation",
+      "scene": {
+        "palette": {
+          "sky0": "#0A1712",
+          "sky1": "#1E3D33",
+          "haze": "#A5D6A7",
+          "key": "#E8F5E9",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ledger",
+          "x": 480,
+          "y": 650,
+          "s": 0.6,
+          "heading": "INCOME NEEDED",
+          "amount": "$68,700",
+          "magnifier": false,
+          "rot": -4
+        },
+        "after": {
+          "kind": "ledger",
+          "x": 1440,
+          "y": 650,
+          "s": 0.6,
+          "heading": "INCOME NEEDED",
+          "amount": "$120,800",
+          "magnifier": false,
+          "stamp": "+76%",
+          "rot": 4
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E8F5E9"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "2020 $68K",
+          "x": 480.0,
+          "y": 238.2,
+          "size": 131.9,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "NOW $120K",
+          "x": 1440.0,
+          "y": 238.2,
+          "size": 131.9,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.59 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 135, 860, 246), (1060, 135, 1820, 246)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "11.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.104",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 65",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-americans-pay-so-much-for-healthcare (distance 0.61)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "income: income needed $68,700 (end 2020) vs $120,800 (end 2025), Harvard JCHS; +76% is our calculation",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.672,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-americans-pay-so-much-for-healthcare"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-10T01:51:11Z",
+  "master": "output/why-american-homes-became-so-expensive/thumbnails/master_B.png"
+}
