@@ -1,0 +1,98 @@
+# Sources and claims for "How Costco Makes Money Selling Things Cheap" (Episode 32, US batch #04).
+# Every claim was read on its primary source (SEC EDGAR) on 2026-11-10 (notes: docs/episodes/32-costco/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as published (FY2026 = 52 weeks to Aug 30, 2026).
+# RULES: shares of profit are OUR calculation and said as "equal to" (fees have their own costs); markup over cost and
+# inventory turns are our calculation; the 14-15% markup cap, the $1.50 hot dog "since 1985" and the $4.99 chicken are NOT
+# used (no primary source). No logos or store designs of real brands; names in text only.
+sources:
+  - id: tenk
+    title: "Costco Wholesale Corporation Form 10-K, fiscal year ended August 30, 2026"
+    publisher: Costco / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm
+    published: "2026-10-07"
+    accessed: "2026-11-10"
+    credit: "Costco 10-K"
+  - id: results
+    title: "Costco Wholesale Corporation Reports Fourth Quarter and Fiscal Year 2026 Operating Results (8-K Ex. 99.1)"
+    publisher: Costco / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm
+    published: "2026-09-24"
+    accessed: "2026-11-10"
+    credit: "Costco results release"
+  - id: fee
+    title: "Costco Wholesale Corporation announces membership fee increase (8-K Ex. 99.1)"
+    publisher: Costco / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983224000036/costex9918-k71024.htm
+    published: "2024-07-10"
+    accessed: "2026-11-10"
+    credit: "Costco 8-K"
+  - id: ars
+    title: "Costco Wholesale Corporation 2025 Annual Report (letter to shareholders)"
+    publisher: Costco / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983225000157/costannualreport2025.pdf
+    published: "2025-12-04"
+    accessed: "2026-11-10"
+    credit: "Costco Annual Report"
+
+claims:
+  - id: fees
+    text: "Costco 10-K FY2026 ($M): membership fees 5,907 (FY2025 5,323); total revenue 303,154; operating income 11,685; net income 9,226. 'Membership fee revenue increased 11% to $5,907'. Our calculation: fees = 50.6% of operating income, 1.9% of revenue."
+    spoken: five point nine billion dollars
+    display: "$5.9bn membership fees (FY2026)"
+    fields: {op_spoken: eleven point seven billion dollars, net_spoken: nine point two billion dollars}
+    source_ids: [tenk]
+    status: source_located
+    verification_note: Shares of profit are our calculation, said as "equal to".
+
+  - id: sales
+    text: "Costco results release (Sep 2026): 'Net sales for the fiscal year increased 10.1 percent, to $297.2 billion, from $269.9 billion last year.' 10-K: gross margin percentage 11.09% (FY2026), 11.12% (FY2025); merchandise costs $264,279M; 'these volumes and turnover enable us to operate profitably at significantly lower gross margins (net sales less merchandise costs) than most other retailers.' Our calculation: average markup over cost ≈ 12.5%; operating margin ≈ 3.9% of revenue."
+    spoken: two hundred and ninety-seven billion dollars
+    display: "$297.2bn net sales (FY2026)"
+    fields: {gm_spoken: eleven point one percent}
+    source_ids: [results, tenk]
+    status: source_located
+    verification_note: Markup and operating margin are our calculations.
+
+  - id: members
+    text: "Costco 10-K FY2026: paid members 84,100 thousand; total cardholders 150,400 thousand; 'Our member renewal rate was 92.3% in the U.S. and Canada and 89.8% worldwide at the end of 2026.' 'Our annual fee for memberships is $65 in the U.S.' Fee release (Jul 2024): effective Sep 1, 2024, Gold Star $60 → $65, Executive $120 → $130, maximum 2% reward $1,000 → $1,250; 'around 52 million memberships'. 10-K: 'The fee income increase accounted for approximately 30% and 40% of membership income growth during 2026 and 2025.'"
+    spoken: eighty-four million
+    display: "84.1M paid members"
+    fields: {renew_spoken: ninety-two point three percent, cards_spoken: one hundred and fifty million}
+    source_ids: [tenk, fee]
+    status: source_located
+    verification_note: Read in the 10-K and the 2024 fee release.
+
+  - id: skus
+    text: "Costco 10-K FY2026: 'We carry less than 4,000 active stock keeping units (SKUs) per warehouse in our core warehouse business, significantly less than other broadline retailers.' 'Costco operated 939, 914, and 890 warehouses worldwide'; results release: '939 warehouses, including 647 in the United States and Puerto Rico'."
+    spoken: fewer than four thousand
+    display: "< 4,000 items per warehouse"
+    fields: {wh_spoken: nine hundred and thirty-nine}
+    source_ids: [tenk, results]
+    status: source_located
+    verification_note: Read in the 10-K.
+
+  - id: kirkland
+    text: "Costco 2025 Annual Report, letter (Dec 2025): 'Kirkland Signature ... typically offering 15-20% savings compared to the national brand equivalent item ... now representing approximately $90B of annual revenue globally'; 'We celebrated the 30th anniversary of our Kirkland Signature trademark this year'. 10-K FY2026: Kirkland Signature products 'generally earn higher margins'."
+    spoken: about ninety billion dollars
+    display: "Kirkland ≈ $90bn a year"
+    source_ids: [ars, tenk]
+    status: source_located
+    verification_note: Company statement (shareholder letter).
+
+  - id: float
+    text: "Costco 10-K FY2026 balance sheet ($M, Aug 30, 2026): merchandise inventories 19,324; accounts payable 22,591. 'We often sell inventory before we are required to pay for it, even while taking advantage of early payment discounts.' Our calculation: inventory turns ≈ 14 times a year (≈ 26 days)."
+    spoken: twenty-two point six billion dollars
+    display: "$22.6bn owed vs $19.3bn of goods"
+    fields: {inv_spoken: nineteen point three billion dollars}
+    source_ids: [tenk]
+    status: source_located
+    verification_note: Turns are our calculation.
+
+  - id: exec
+    text: "Costco 10-K FY2026: 'Executive members represented 42,300, 38,700, and 35,400 of total paid members in 2026, 2025, and 2024. The penetration of sales to Executive members represented approximately 75.2% of worldwide net sales in 2026.' 'These members earn an Executive reward, generally 2% on qualified purchases, subject to an annual maximum value'."
+    spoken: forty-two point three million
+    display: "42.3M Executive members, ≈75% of sales"
+    fields: {y2024_spoken: thirty-five point four million}
+    source_ids: [tenk, fee]
+    status: source_located
+    verification_note: Read in the 10-K.

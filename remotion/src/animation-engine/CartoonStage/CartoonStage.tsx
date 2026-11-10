@@ -380,6 +380,32 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 200)}, (_, k) => <rect key={'ln' + k} x={z.x0 + k * 200} y={f + 80} width={100} height={12} rx={6} fill="#FFD54A" />)}
     </g>;
   },
+  /** A generic membership warehouse store inside: high corrugated ceiling with hanging lights, tall orange-and-blue
+   *  steel pallet racks loaded with shrink-wrapped boxes up to the roof, polished concrete floor. `night` dims the lights. */
+  warehouse: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, boxes = ['#C8A27A', '#D7B98E', '#B48A5E', '#E0C9A6', '#90CAF9', '#EF9A9A', '#A5D6A7'];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#4A5266' : '#DDE3EA'} />
+      {Array.from({length: Math.ceil(w / 60)}, (_, k) => <rect key={'cg' + k} x={z.x0 + k * 60} y={-2000} width={30} height={2000 + f - 820} fill={night ? '#3F4759' : '#CFD6DE'} />)}
+      <rect x={z.x0} y={f - 830} width={w} height={14} fill="#90A4AE" stroke={OL} strokeWidth={3} />
+      {Array.from({length: Math.ceil(w / 420)}, (_, k) => { const x = z.x0 + 210 + k * 420;
+        return <g key={'lt' + k}><path d={`M ${x} ${f - 816} L ${x} ${f - 780}`} stroke={OL} strokeWidth={3} />
+          <path d={`M ${x - 50} ${f - 760} L ${x - 30} ${f - 780} L ${x + 30} ${f - 780} L ${x + 50} ${f - 760} Z`} fill="#ECEFF1" stroke={OL} strokeWidth={3} />
+          <ellipse cx={x} cy={f - 756} rx={46} ry={8} fill={night ? '#FFE9A8' : '#FFFDE7'} opacity={0.9} /></g>; })}
+      {Array.from({length: Math.ceil(w / 520)}, (_, k) => { const x0 = z.x0 + 30 + k * 520;
+        return <g key={'rk' + k}>
+          {[0, 1, 2].map((r) => <g key={r}>
+            {[0, 1, 2].map((b) => { const bx = x0 + 22 + b * 150, by = f - 140 - r * 170, c = boxes[(k * 7 + r * 3 + b) % boxes.length], hb = 100 + 20 * rnd(k * 11 + r * 3 + b);
+              return <g key={b}><rect x={bx} y={by - hb} width={130} height={hb} rx={4} fill={c} stroke={OL} strokeWidth={3} />
+                <path d={`M ${bx} ${by - hb / 2} L ${bx + 130} ${by - hb / 2}`} stroke="#FFFFFF" strokeWidth={4} opacity={0.4} />
+                <rect x={bx + 4} y={by} width={122} height={12} fill="#A1887F" stroke={OL} strokeWidth={2} /></g>; })}
+            <rect x={x0} y={f - 128 - r * 170} width={480} height={16} fill="#EF6C00" stroke={OL} strokeWidth={3} /></g>)}
+          {[0, 480].map((dx) => <rect key={dx} x={x0 + dx - 8} y={f - 600} width={16} height={600} fill="#1565C0" stroke={OL} strokeWidth={3} />)}</g>; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#6B7280' : '#B9C1C9'} />
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => <rect key={'fl' + k} x={z.x0 + k * 300} y={f + 4} width={4} height={600} fill="#9EA7B0" />)}
+      <rect x={z.x0} y={f + 60} width={w} height={8} fill="#FFD54A" opacity={0.8} />
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -2758,9 +2784,49 @@ const zonemap: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A big shopping cart piled with bulk packs; `x` keyframable (it rolls, wheels spin), `load` 0-3 how full, `text` on the
+ *  biggest box, `price` tag on the handle. */
+const cart: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const load = a.load ?? 3, spin = x * 0.02, cols = ['#C8A27A', '#90CAF9', '#EF9A9A', '#A5D6A7', '#FFE082', '#CE93D8'];
+  const packs = [[-150, -250, 120, 90], [-20, -250, 140, 100], [130, -250, 100, 80], [-120, -350, 130, 100], [20, -360, 120, 110], [-60, -450, 150, 90]].slice(0, load * 2);
+  return <g key={'ct' + i} transform={`translate(${x} ${kf(a.y, t, f)}) scale(${s})`}>
+    {packs.map(([px, py, pw, ph], k) => <g key={k}><rect x={px} y={py + 100 - ph} width={pw} height={ph} rx={6} fill={cols[k % cols.length]} stroke={OL} strokeWidth={4} />
+      <path d={`M ${px} ${py + 100 - ph / 2} L ${px + pw} ${py + 100 - ph / 2}`} stroke="#FFFFFF" strokeWidth={5} opacity={0.5} /></g>)}
+    {a.text && <T x={-60 + 75} y={-372 + 70} s={22}>{a.text}</T>}
+    <path d="M -200 -160 L 220 -160 L 190 -40 L -170 -40 Z" fill="#B0BEC5" fillOpacity={0.35} stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+    {[-120, -40, 40, 120].map((dx) => <path key={dx} d={`M ${dx} -160 L ${dx + 4} -40`} stroke={OL} strokeWidth={3} />)}
+    <path d="M -186 -110 L 206 -110" stroke={OL} strokeWidth={3} />
+    <path d="M 220 -160 L 270 -240 L 320 -240" fill="none" stroke={OL} strokeWidth={8} strokeLinecap="round" />
+    <rect x={296} y={-252} width={50} height={22} rx={8} fill={K.red} stroke={OL} strokeWidth={3} />
+    <path d="M -150 -40 L -140 -20 L 170 -20 L 180 -40" fill="none" stroke={OL} strokeWidth={6} />
+    {[-130, 150].map((dx) => <g key={dx} transform={`translate(${dx} -10) rotate(${spin * 57})`}><circle r={20} fill="#37474F" stroke={OL} strokeWidth={4} /><path d="M -12 0 L 12 0" stroke="#90A4AE" strokeWidth={4} /></g>)}
+    {a.price && <g transform="translate(330 -200)"><rect x={-60} y={0} width={120} height={50} rx={8} fill={K.white} stroke={OL} strokeWidth={4} /><T x={0} y={35} s={28}>{a.price}</T></g>}
+  </g>;
+};
+
+/** A wooden pallet stacked with shrink-wrapped cases; `rows` high, `text` printed on the wrap; `arriveAt` slides it in
+ *  from the left on a forklift tine path; `goneAt` empties it (cases vanish one by one, as if sold). */
+const pallet: ItemFn = (a, {t, f}, i) => {
+  const s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const arr = a.arriveAt !== undefined ? E.out(win(t, a.arriveAt, 1.2)) : 1, x = kf(a.x, t, 960) - (1 - arr) * 900;
+  const rows = a.rows ?? 3, n = rows * 3, gone = a.goneAt !== undefined ? clamp((t - a.goneAt) / (a.goneDur ?? 3)) : 0, c = col(a.color, '#C8A27A');
+  return <g key={'pl' + i} transform={`translate(${x} ${kf(a.y, t, f)}) scale(${s})`}>
+    <rect x={-170} y={-30} width={340} height={30} fill="#A1887F" stroke={OL} strokeWidth={4} />
+    {[-140, -10, 120].map((dx) => <rect key={dx} x={dx} y={-30} width={22} height={30} fill="#6D4C41" />)}
+    {Array.from({length: n}, (_, k) => { const r = Math.floor(k / 3), cc = k % 3, vis = k >= Math.round(gone * n);
+      return vis && <g key={k}><rect x={-165 + cc * 110} y={-30 - (r + 1) * 90} width={108} height={88} rx={4} fill={c} stroke={OL} strokeWidth={3} />
+        <path d={`M ${-165 + cc * 110} ${-30 - (r + 1) * 90 + 44} L ${-57 + cc * 110} ${-30 - (r + 1) * 90 + 44}`} stroke="#FFFFFF" strokeWidth={4} opacity={0.4} /></g>; })}
+    {gone < 0.2 && <rect x={-172} y={-30 - rows * 90 - 6} width={344} height={rows * 90 + 6} fill="#E3F2FD" opacity={0.18} stroke="#FFFFFF" strokeOpacity={0.6} strokeWidth={3} />}
+    {a.text && <T x={0} y={-30 - rows * 45 + 10} s={a.textSize ?? 30} c={OL}>{a.text}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

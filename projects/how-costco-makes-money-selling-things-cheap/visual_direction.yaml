@@ -1,0 +1,45 @@
+# Visual direction for how-costco-makes-money-selling-things-cheap (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: typography + generic member card (hook), warehouse aisles + register + charts (margin),
+# night door queue + price tags + renewal charts (membership), supermarket vs warehouse racks + pallets + cart (short list),
+# loading dock pallets that sell out + balance chart (selling before paying), executive card + charts (loyalty loop).
+primary_tone: bright
+secondary_tones:
+- strategy
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Five point nine billion dollars
+  tone: bright
+- chapter: The thin margin
+  tone: bright
+- chapter: The membership machine
+  tone: strategy
+- chapter: The short shopping list
+  tone: bright
+- chapter: Selling before paying
+  tone: strategy
+- chapter: The loyalty loop
+  tone: bright
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: bright
+  headline: []
+  idea: a generic membership card with $5.9B; split thin margin vs membership fees
+requirements:
+- One visual language per part; text mostly on objects or at the top
+- No real logos, store designs or card designs (names in text only); no likeness of real people

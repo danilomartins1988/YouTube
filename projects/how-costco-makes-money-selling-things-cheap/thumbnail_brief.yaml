@@ -1,0 +1,97 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic card only (no real logos or card designs).
+title: How Costco Makes Money Selling Things Cheap
+docs_dir: docs/episodes/32-costco
+video: output/costco_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How does a store that sells almost at cost make billions?
+  surprising_fact: $5.9bn membership fees in FY2026, equal to about half of operating income (Costco 10-K; our calculation)
+  subject: a membership card
+  tone: bright
+  metaphor: the store is the bait, the membership is the business
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $5.9B
+  - JUST TO GET IN
+  claim_basis: 'fees: $5,907M membership fee revenue, FY2026 (Costco 10-K)'
+  scene:
+    palette:
+      sky0: '#10070A'
+      sky1: '#3A1218'
+      haze: '#EF9A9A'
+      key: '#FFEBEE'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ccard
+      x: 1480
+      y: 560
+      s: 0.72
+      rot: -12
+      c1: '#C62828'
+      c2: '#3A0A0E'
+      coins: true
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFEBEE'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - THIN MARGIN
+  - FAT FEES
+  claim_basis: 'sales: gross margin 11.09% (10-K); fees: $5.9bn, ≈ half of operating income (our calculation)'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: GROSS MARGIN
+      amount: 11.1%
+      magnifier: false
+      rot: -4
+    after:
+      kind: ledger
+      x: 1440
+      y: 650
+      s: 0.6
+      heading: MEMBERSHIP FEES
+      amount: $5.9BN
+      magnifier: false
+      stamp: ≈ ½ PROFIT
+      rot: 4
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

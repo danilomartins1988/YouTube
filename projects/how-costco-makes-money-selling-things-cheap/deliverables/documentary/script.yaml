@@ -1,0 +1,275 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations are said as such.
+logline: Costco collected five point nine billion dollars in membership fees in a year, an amount equal to about half of
+  its operating profit. How a store that sells almost at cost became one of the strongest businesses in America.
+title: How Costco Makes Money Selling Things Cheap
+segments:
+- id: h_open
+  chapter: Five point nine billion dollars
+  narration: Five point nine billion dollars. That is how much Costco collected in a single year, before anyone bought
+    a thing, just for the right to walk through its doors.
+  claims:
+  - fees
+- id: h_twist
+  chapter: Five point nine billion dollars
+  narration: Now compare it with Costco's operating profit for the same year, {{fees.op_spoken}}. By our calculation, the
+    membership fees alone equal about half of it. On the goods it sells, Costco barely makes any money at all.
+  claims:
+  - fees
+  analysis: true
+  source_note: Share of operating income is our calculation (5,907 / 11,685).
+- id: h_question
+  chapter: Five point nine billion dollars
+  narration: So how does a store that sells almost at cost become one of the most powerful retailers in America?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: Five point nine billion dollars
+  narration: By the end of this video, you will know the four parts of the Costco machine. The thin margin, the membership
+    card, the short shopping list, and the money it uses before it pays its suppliers.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The thin margin
+  narration: ''
+  claims: []
+- id: m1_sales
+  chapter: The thin margin
+  narration: Start with the size of it. In its financial year that ended in August twenty twenty-six, Costco sold {{sales}}
+    worth of goods, up ten point one percent from two hundred and sixty-nine point nine billion the year before. It runs
+    {{skus.wh_spoken}} warehouses around the world, six hundred and forty-seven of them in the United States and Puerto
+    Rico. By sales, it is one of the biggest retailers on the planet.
+  claims:
+  - sales
+  - skus
+  analysis: true
+  source_note: Net sales and warehouse counts from the results release; the last sentence is commentary.
+- id: m1_margin
+  chapter: The thin margin
+  narration: But look at what it keeps. After paying for the goods themselves, Costco's gross margin was about {{sales.gm_spoken}}
+    of sales. Put another way, by our calculation, the average item was sold for only about twelve and a half percent more
+    than it cost Costco to buy. Costco itself says it operates at significantly lower margins than most other retailers.
+  claims:
+  - sales
+- id: m1_costs
+  chapter: The thin margin
+  narration: And that thin slice still has to pay for everything else. The warehouses, the workers, the trucks, the electricity.
+    After all of that, by our calculation, Costco's operating profit was less than four cents on every dollar of revenue.
+    Its net income for the year was {{fees.net_spoken}}. A big number, until you set it against nearly three hundred billion
+    dollars of sales.
+  claims:
+  - sales
+  - fees
+  analysis: true
+  source_note: Operating margin is our calculation (11,685 / 303,154).
+- id: m1_draw
+  chapter: The thin margin
+  narration: Let me draw where one hundred dollars at the register goes. About eighty-nine dollars pays the supplier for
+    the goods. About eleven dollars is left. Most of that pays for the stores and the staff. What remains is a tiny sliver
+    of profit. Hold on to that picture, because the real profit is coming from somewhere else.
+  claims:
+  - sales
+  analysis: true
+  source_note: Diagram of the 11.09% gross margin; cost split is illustrative.
+- id: m1_transition
+  chapter: The thin margin
+  narration: If the goods barely make money, where does the profit come from? It starts at the door, with a small plastic
+    card.
+  claims: []
+- id: m2_card
+  chapter: The membership machine
+  narration: ''
+  claims: []
+- id: m2_members
+  chapter: The membership machine
+  narration: To shop at Costco, you need a membership. At the end of its last financial year, Costco had about {{members}}
+    paid members, and about {{members.cards_spoken}} cardholders once family and business cards are counted.
+  claims:
+  - members
+- id: m2_price
+  chapter: The membership machine
+  narration: In September twenty twenty-four, Costco raised its basic fee in the United States and Canada from sixty to
+    sixty-five dollars a year. The Executive membership went from one hundred and twenty to one hundred and thirty. The
+    increase touched around fifty-two million memberships. Costco says the higher fee accounted for about thirty percent
+    of the growth in its membership income in twenty twenty-six. The rest came from new members signing up and from members
+    upgrading to the more expensive card.
+  claims:
+  - members
+- id: m2_renew
+  chapter: The membership machine
+  narration: And people keep paying. Costco reports a renewal rate of {{members.renew_spoken}} in the United States and
+    Canada. More than nine in ten members sign up again, year after year, even after a price increase. Worldwide, including
+    the newer countries where Costco is still growing, the rate is eighty-nine point eight percent. For a subscription that
+    people pay for in advance, those are remarkable numbers.
+  claims:
+  - members
+- id: m2_fees
+  chapter: The membership machine
+  narration: Multiply millions of members by a yearly fee, and you get {{fees}} in a single year. Fees have their own costs,
+    so they are not pure profit. But they arrive almost regardless of what members buy, and they equal about half of Costco's
+    operating profit.
+  claims:
+  - fees
+  analysis: true
+  source_note: Fees from the 10-K; share of operating income is our calculation.
+- id: m2_draw
+  chapter: The membership machine
+  narration: Let me draw the two halves of Costco. On one side, the store, selling goods at a thin margin. On the other side,
+    the club, collecting fees every year. The low prices bring members in. The fees pay for the low prices. And because
+    members have already paid, they keep coming back to get their money's worth.
+  claims:
+  - fees
+  - members
+  analysis: true
+  source_note: Diagram of the membership model (commentary).
+- id: m2_transition
+  chapter: The membership machine
+  narration: But low prices do not come from fees alone. They also come from what Costco refuses to sell.
+  claims: []
+- id: m3_card
+  chapter: The short shopping list
+  narration: ''
+  claims: []
+- id: m3_skus
+  chapter: The short shopping list
+  narration: Costco says it carries fewer than four thousand active products per warehouse, significantly less than other
+    big retailers. Instead of twenty brands of ketchup, you might find two, often in giant packs.
+  claims:
+  - skus
+  analysis: true
+  source_note: SKU count from the 10-K; the ketchup line is an illustration, not a figure.
+- id: m3_world
+  chapter: The short shopping list
+  narration: Walk into any Costco and the design tells the same story. Concrete floors, tall steel shelves, goods still
+    on their shipping pallets. No fancy displays, no decoration. Every dollar not spent on the store is a dollar that can
+    come off the price.
+  claims:
+  - sales
+  analysis: true
+  source_note: Description of the warehouse format (commentary, no figure).
+- id: m3_volume
+  chapter: The short shopping list
+  narration: That short list is the trick. With {{skus.wh_spoken}} warehouses around the world, every product on the shelf
+    sells in enormous volume. And enormous volume gives Costco enormous bargaining power with the companies that make the
+    goods.
+  claims:
+  - skus
+  analysis: true
+  source_note: Warehouse count from the 10-K; bargaining-power line is commentary.
+- id: m3_kirkland
+  chapter: The short shopping list
+  narration: Then there is Costco's own brand, Kirkland Signature, whose trademark turned thirty in twenty twenty-five. In its latest annual letter, Costco says Kirkland brings
+    in {{kirkland}} a year worldwide, and typically saves members fifteen to twenty percent compared with the national brand.
+    And according to its annual report, these products generally earn Costco higher margins.
+  claims:
+  - kirkland
+- id: m3_draw
+  chapter: The short shopping list
+  narration: Let me draw the difference. Here is a typical supermarket, with a long list of products, each selling a little.
+    Here is Costco, with a short list, each selling a lot. Same shoppers, but the money is concentrated on far fewer items.
+    That is what lets Costco squeeze the price on each one.
+  claims:
+  - skus
+  analysis: true
+  source_note: Schematic diagram (illustrative, not to scale).
+- id: m3_transition
+  chapter: The short shopping list
+  narration: And the speed at which those products sell unlocks the most hidden part of the business. Costco often gets
+    paid before it pays.
+  claims:
+  - float
+- id: m4_card
+  chapter: Selling before paying
+  narration: ''
+  claims: []
+- id: m4_quote
+  chapter: Selling before paying
+  narration: This is Costco, in its own annual report. We often sell inventory before we are required to pay for it, even
+    while taking advantage of early payment discounts. Read that again. Costco can pay its suppliers early, collect a discount
+    for doing it, and still have sold the goods to you before the money leaves its account.
+  claims:
+  - float
+- id: m4_balance
+  chapter: Selling before paying
+  narration: Look at the balance sheet. At the end of August twenty twenty-six, Costco held about {{float.inv_spoken}} of
+    goods in its warehouses. At the same moment, it owed its suppliers {{float}}. It owed more than the value of everything
+    on its shelves.
+  claims:
+  - float
+- id: m4_turns
+  chapter: Selling before paying
+  narration: How is that possible? Speed. By our calculation, Costco's entire inventory sells through about fourteen times
+    a year. A typical item sits in the warehouse for less than a month. If the supplier gives Costco about a month to pay,
+    the cash from the customer often arrives first. A slower store, where goods sit on the shelf for months, would have to
+    find that money somewhere else.
+  claims:
+  - float
+  analysis: true
+  source_note: Inventory turns are our calculation; the payment-terms line is an illustration.
+- id: m4_draw
+  chapter: Selling before paying
+  narration: Let me draw the cash cycle. Day zero, a pallet arrives. A few weeks later, members have bought it, and the cash
+    is in Costco's bank. Only later does the bill to the supplier come due. In between, Costco holds billions of dollars
+    that are really its suppliers' money, and it can use that money to run the business.
+  claims:
+  - float
+  analysis: true
+  source_note: Cash-cycle diagram (illustrative).
+- id: m4_transition
+  chapter: Selling before paying
+  narration: One more piece ties everything together. The members who spend the most.
+  claims: []
+- id: m5_card
+  chapter: The loyalty loop
+  narration: ''
+  claims: []
+- id: m5_exec
+  chapter: The loyalty loop
+  narration: Executive members pay double the basic fee. In return, they get back about two percent of what they spend,
+    up to an annual limit. Costco had {{exec}} of them last year. And they accounted for about seventy-five percent of
+    Costco's sales worldwide. Two years earlier, there were {{exec.y2024_spoken}}. Every year, more members choose to pay
+    the higher fee.
+  claims:
+  - exec
+- id: m5_why
+  chapter: The loyalty loop
+  narration: Think about what that reward does. The more you spend at Costco, the more you get back, so the more you want
+    to buy there instead of somewhere else. The fee makes you come back. The reward makes you spend more when you do.
+  claims:
+  - exec
+  analysis: true
+  source_note: Commentary on the Executive reward.
+- id: m5_draw
+  chapter: The loyalty loop
+  narration: Let me put the whole machine together. Low prices bring members in. Members pay fees, which equal about half
+    of the profit. A short list of products sells in huge volume, which keeps prices low. Fast sales let Costco use its suppliers'
+    money. And the biggest spenders are rewarded for spending even more. Each part feeds the next.
+  claims:
+  - fees
+  - skus
+  - float
+  - exec
+  analysis: true
+  source_note: Summary diagram of the sourced parts.
+- id: payoff
+  chapter: The lesson
+  narration: So how does Costco make money selling things cheap? It does not really try to profit on the goods. It sells
+    access. The cheap prices are the product that keeps millions of people paying, every single year, for the privilege
+    of shopping there. The store is the bait. The membership is the business. And for members, the deal works only as long
+    as the savings are bigger than the fee. That is the promise Costco has to keep, every single year, to stay on top.
+  claims:
+  - fees
+  - members
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
