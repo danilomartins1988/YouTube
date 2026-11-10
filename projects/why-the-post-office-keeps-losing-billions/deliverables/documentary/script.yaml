@@ -1,0 +1,276 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations and accounting effects said as such.
+logline: The United States Postal Service has lost about one hundred and eighteen billion dollars since 2006. It delivers to
+  more than 170 million addresses, six days a week, and generally gets no tax dollars to do it. Why the losses never stop.
+title: Why the Post Office Keeps Losing Billions
+segments:
+- id: h_open
+  chapter: One hundred and eighteen billion
+  narration: One hundred and eighteen billion dollars. That is roughly how much the United States Postal Service has lost since
+    twenty oh six, according to the Government Accountability Office.
+  claims:
+  - loss
+- id: h_twist
+  chapter: One hundred and eighteen billion
+  narration: And it keeps going. The Postal Service lost {{loss.y24_spoken}} in twenty twenty-four, and {{loss.y25_spoken}} in
+    twenty twenty-five. On the day this video was made, it reported a loss of {{loss.y26_spoken}} for twenty twenty-six.
+  claims:
+  - loss
+- id: h_question
+  chapter: One hundred and eighteen billion
+  narration: So how does an organization that delivers to every address in America keep losing money? And who pays for it?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: One hundred and eighteen billion
+  narration: By the end of this video, you will know what the Postal Service has to do by law, how a law from twenty oh six
+    turned into a giant bill, why the letter is disappearing, and why the money is running out of room.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The network
+  narration: ''
+  claims: []
+- id: m1_scale
+  chapter: The network
+  narration: Start with the job. The Postal Service delivers to {{network}} addresses, six and often seven days a week. In
+    twenty twenty-five alone, about one point eight million new addresses were added to its routes. Every new house, every new
+    apartment, is one more stop.
+  claims:
+  - network
+- id: m1_fleet
+  chapter: The network
+  narration: The machine behind that is enormous. According to the Postal Service, it runs about two hundred and thirty-six thousand
+    delivery routes, nearly thirty-one thousand retail offices, and a fleet of more than two hundred and sixty thousand vehicles.
+    Every one of those vehicles has to keep moving, whether the mail grows or not.
+  claims:
+  - network
+- id: m1_tax
+  chapter: The network
+  narration: And here is the part many people get wrong. The Postal Service generally receives no tax dollars for its operating
+    expenses. It is supposed to pay its own way, by selling stamps, delivering packages and charging for mail.
+  claims:
+  - network
+- id: m1_law
+  chapter: The network
+  narration: But it cannot run like a normal company. By law, it must deliver at least six days a week. It must serve a farm
+    at the end of a dirt road as well as an office tower in a big city. That promise is called universal service.
+  claims:
+  - laws
+  - network
+- id: m1_cost
+  chapter: The network
+  narration: That promise has a cost that does not shrink when the mail shrinks. A carrier still has to drive the whole route,
+    whether the bag holds fifty letters or five. The network is fixed. The revenue is not.
+  claims:
+  - network
+  analysis: true
+  source_note: Commentary on the universal-service model.
+- id: m1_draw
+  chapter: The network
+  narration: Let me draw the problem. Here is a route with ten houses. Each day, the carrier visits every one. Now the letters
+    fall by half. The route stays the same. Same truck, same miles, same time. Fewer letters to pay for each stop.
+  claims:
+  - network
+  analysis: true
+  source_note: Illustrative diagram of fixed route costs.
+- id: m1_transition
+  chapter: The network
+  narration: That alone would make life hard. But in twenty oh six, Congress added something much bigger.
+  claims:
+  - laws
+- id: m2_card
+  chapter: The 2006 law
+  narration: ''
+  claims: []
+- id: m2_prefund
+  chapter: The 2006 law
+  narration: The Postal Accountability and Enhancement Act set fixed payments for the health care of future retirees. Every year
+    for ten years, the Postal Service had to put {{laws}} into a fund for workers who had not yet retired. By our sum, about
+    fifty-six billion dollars over the decade.
+  claims:
+  - laws
+- id: m2_rare
+  chapter: The 2006 law
+  narration: Those were fixed amounts, written into the law, whatever happened to the business. And they
+    arrived just as the mail started its long decline. The Postal Service soon stopped making them,
+    and the missed payments kept piling up on its books as losses.
+  claims:
+  - laws
+  - loss
+  analysis: true
+  source_note: Commentary on the 2006 law and the GAO account of missed payments.
+- id: m2_reform
+  chapter: The 2006 law
+  narration: In twenty twenty-two, Congress tried to fix it. The Postal Service Reform Act canceled {{laws.cancel_spoken}} of
+    missed payments. It also moved postal retirees onto Medicare, which cut the retiree health bill by about sixty-one billion
+    dollars. And it wrote the six-day delivery rule directly into law.
+  claims:
+  - laws
+- id: m2_still
+  chapter: The 2006 law
+  narration: But the reform did not end the bills. The Postal Service still owes payments for pensions, and new top-up payments
+    for retiree health, about seven hundred and fifty million dollars in twenty twenty-six, growing to about one point four billion
+    a year in later years, according to the auditors. The government's auditors expect that health fund to run dry in fiscal year twenty thirty-one.
+  claims:
+  - laws
+  - cash
+- id: m2_draw
+  chapter: The 2006 law
+  narration: Let me draw the bill. Here is the Postal Service. Here is the fund for future retirees. Every year, a big arrow of
+    money was supposed to flow into it. When the arrow stopped, the debt grew. In twenty twenty-two, Congress erased much of it.
+    But a smaller arrow is still there.
+  claims:
+  - laws
+  analysis: true
+  source_note: Diagram of the prefunding mandate and the 2022 reform.
+- id: m2_transition
+  chapter: The 2006 law
+  narration: The retiree bills explain part of the losses. The rest comes from something you can see in your own mailbox.
+  claims:
+  - mail
+- id: m3_card
+  chapter: The vanishing letter
+  narration: ''
+  claims: []
+- id: m3_peak
+  chapter: The vanishing letter
+  narration: First-Class Mail, the letters and bills that once paid for the whole system, peaked in twenty oh one. That year, the
+    Postal Service handled {{mail}} pieces of it. In twenty twenty-six, it handled {{mail.now_spoken}}. Counting every kind of mail,
+    the total peaked a few years later, in twenty oh six, at more than two hundred and thirteen billion pieces. It has been falling
+    ever since.
+  claims:
+  - mail
+- id: m3_perstop
+  chapter: The vanishing letter
+  narration: Here is the most striking number. In twenty oh seven, each delivery point received about five and a half pieces of mail
+    a day. In twenty twenty-six, it was two point three. More stops, and much less in the bag at each one.
+  claims:
+  - mail
+- id: m3_packages
+  chapter: The vanishing letter
+  narration: Packages are the bright spot. In twenty twenty-six, shipping and packages brought in {{mail.pkg_spoken}}, more than
+    the {{mail.fcm_spoken}} from First-Class Mail. In twenty twenty-five, the Postal Service said its revenue grew
+    mostly thanks to its Ground Advantage shipping service. But packages are a competitive business. Private carriers fight for the same
+    customers, so the Postal Service cannot simply raise prices.
+  claims:
+  - mail
+- id: m3_stamp
+  chapter: The vanishing letter
+  narration: On letters, it has raised prices, again and again. A Forever stamp cost fifty-five cents in twenty nineteen. Since
+    July twenty twenty-six, it costs {{stamp}}. By our calculation, that is about forty-nine percent more in seven years.
+  claims:
+  - stamp
+- id: m3_draw
+  chapter: The vanishing letter
+  narration: Let me draw the two lines. Here is the letter line, starting high in twenty oh one and falling year after year.
+    Here is the stamp price line, starting low and climbing. When fewer people buy something, raising the price only works
+    for so long.
+  claims:
+  - mail
+  - stamp
+  analysis: true
+  source_note: Diagram of the sourced volume and price trends.
+- id: m3_transition
+  chapter: The vanishing letter
+  narration: In twenty twenty-one, the Postal Service announced a plan to turn all of this around.
+  claims:
+  - plan
+- id: m4_card
+  chapter: The plan
+  narration: ''
+  claims: []
+- id: m4_promise
+  chapter: The plan
+  narration: It was called Delivering for America, a ten-year plan. It promised to break even by fiscal year twenty twenty-three,
+    and to avoid {{plan}} in projected losses over ten years. It also promised forty billion dollars of investment and better
+    on-time delivery.
+  claims:
+  - plan
+- id: m4_result
+  chapter: The plan
+  narration: Break-even never came. The government's auditors found that from twenty twenty-one to twenty twenty-four, revenue was
+    actually about twenty-four billion dollars higher than the plan expected. But expenses were about thirty-six billion dollars
+    higher. The costs ran faster than the sales.
+  claims:
+  - plan
+- id: m4_better
+  chapter: The plan
+  narration: The twenty twenty-six loss looked smaller, but read the fine print. Much of the improvement came from accounting for
+    workers' compensation, which moves with interest rates. That one line swung by about {{why}}. The loss the Postal Service
+    says it can actually control was still more than two billion dollars. In twenty twenty-five, that controllable loss was
+    about two point seven billion.
+  claims:
+  - why
+  - loss
+- id: m4_draw
+  chapter: The plan
+  narration: Let me draw the gap. Here is the revenue the plan expected. Here is what actually came in, a little higher. Now here
+    are the expected costs, and here are the real costs, much higher. The plan beat its sales target and still lost, because
+    the costs grew even faster.
+  claims:
+  - plan
+  analysis: true
+  source_note: Bar diagram of the GAO comparison.
+- id: m4_transition
+  chapter: The plan
+  narration: Which leads to the most serious problem of all. The Postal Service is running out of room to borrow.
+  claims:
+  - cash
+- id: m5_card
+  chapter: Running out of room
+  narration: ''
+  claims: []
+- id: m5_cap
+  chapter: Running out of room
+  narration: The Postal Service can borrow from the Treasury, but only up to a legal limit of {{cash}}. That limit has not changed
+    since nineteen ninety-two. And the Postal Service has already reached it.
+  claims:
+  - cash
+- id: m5_skip
+  chapter: Running out of room
+  narration: So in twenty twenty-six, it started skipping bills. With a waiver from its regulator, it did not make its pension
+    payments for the year. It paused some employer pension contributions. And in its own words, it defaulted on a seven hundred
+    and twenty-six million dollar payment for retiree health.
+  claims:
+  - cash
+- id: m5_hole
+  chapter: Running out of room
+  narration: The long-term gaps are huge. The Postal Service reports {{cash.pens_spoken}} in unfunded pension obligations, and about
+    forty-four billion dollars more for retiree health. The government's auditors have kept its finances on their high-risk list
+    since twenty oh nine, and say Congress should act now.
+  claims:
+  - cash
+  - loss
+- id: m5_draw
+  chapter: Running out of room
+  narration: Let me draw the squeeze. On one side, a fixed network that grows every year. On another, letters that keep falling.
+    On top, retiree bills that never go away. And underneath, a credit line already at its limit. Four walls, closing in at
+    once.
+  claims:
+  - cash
+  - mail
+  analysis: true
+  source_note: Summary diagram of the sourced pressures.
+- id: payoff
+  chapter: The lesson
+  narration: So why does the Post Office keep losing billions? Because it is asked to run like a business and serve like a public
+    utility at the same time. It must reach every address, six days a week, while its most profitable product disappears and old
+    promises to retirees come due. Until Congress decides who pays for that promise, the losses are the bill.
+  claims:
+  - loss
+  - laws
+  - mail
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

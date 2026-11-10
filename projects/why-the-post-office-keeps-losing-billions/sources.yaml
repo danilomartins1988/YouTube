@@ -1,0 +1,122 @@
+# Sources and claims for "Why the Post Office Keeps Losing Billions" (Episode 47, new topics N7).
+# Every claim was read on its primary page/file on 2026-11-10 (notes: docs/episodes/47-post-office/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: headline numbers from USPS press releases (10-K PDF was a draft copy); one source per volume figure;
+# "generally receives no tax dollars for operating expenses" (exact wording); 2006 law payments "roughly $5.5bn a year";
+# our calculations labelled; no privatization proposal attributed to anyone.
+sources:
+  - id: usps26
+    title: "USPS reports fiscal year 2026 results (Nov 10, 2026) and FY2026 Form 10-K"
+    publisher: United States Postal Service
+    url: https://about.usps.com/newsroom/national-releases/2026/1110-usps-reports-fiscal-year-2026-results.htm
+    published: "2026-11-10"
+    accessed: "2026-11-10"
+    credit: "USPS"
+  - id: usps25
+    title: "USPS reports fiscal year 2025 results (Nov 14, 2025)"
+    publisher: United States Postal Service
+    url: https://about.usps.com/newsroom/national-releases/2025/1114-usps-reports-fiscal-year-2025-results.htm
+    published: "2025-11-14"
+    accessed: "2026-11-10"
+    credit: "USPS"
+  - id: gao
+    title: "GAO-26-107336: U.S. Postal Service financial viability"
+    publisher: U.S. Government Accountability Office
+    url: https://files.gao.gov/reports/GAO-26-107336/index.html
+    published: "2025-12-16"
+    accessed: "2026-11-10"
+    credit: "GAO"
+  - id: laws
+    title: "Postal Accountability and Enhancement Act (P.L. 109-435, 2006); Postal Service Reform Act (P.L. 117-108, 2022)"
+    publisher: U.S. Congress (govinfo)
+    url: https://www.govinfo.gov/content/pkg/PLAW-117publ108/html/PLAW-117publ108.htm
+    published: "2022-04-06"
+    accessed: "2026-11-10"
+    credit: "U.S. Congress"
+  - id: hist
+    title: "USPS Historian: First-Class Mail volume since 1926; domestic letter rates since 1863; USPS size and scope"
+    publisher: United States Postal Service
+    url: https://about.usps.com/who/profile/history/pdf/first-class-mail-since-1926.pdf
+    published: "2026"
+    accessed: "2026-11-10"
+    credit: "USPS Historian"
+  - id: dfa
+    title: "Delivering for America: the USPS ten-year plan (Mar 23, 2021)"
+    publisher: United States Postal Service
+    url: https://about.usps.com/newsroom/national-releases/2021/0323-usps-unveils-10-year-plan-to-achieve-financial-sustainability-and-service-excellence.htm
+    published: "2021-03-23"
+    accessed: "2026-11-10"
+    credit: "USPS"
+
+claims:
+  - id: loss
+    text: "USPS: net loss FY2026 $6,512M on revenue $82.9bn (controllable loss $2,381M); FY2025 $8,978M on $80.5bn (controllable $2,725M); FY2024 $9,520M (controllable $1,825M). GAO: about $118bn of net losses since FY2006; on GAO's High Risk list since 2009."
+    spoken: about one hundred and eighteen billion dollars
+    display: "≈ $118bn of losses since 2006 (GAO)"
+    fields: {y24_spoken: nine point five billion dollars, y25_spoken: nine billion dollars, y26_spoken: six point five billion dollars}
+    source_ids: [usps26, usps25, gao]
+    status: source_located
+    verification_note: Press-release figures.
+
+  - id: why
+    text: "FY2026 release: workers' compensation swung from a $972M expense (FY2025) to a $1,444M benefit ('a $2.4 billion decrease'), interest-rate driven; CSRS and FERS amortization costs $2,970M and $1,879M; new $726M retiree health top-up. Controllable loss excludes these non-cash and retirement items."
+    spoken: two point four billion dollars
+    display: "FY2026: workers' comp accounting swing −$2.4bn (USPS)"
+    fields: {}
+    source_ids: [usps26]
+    status: source_located
+    verification_note: Accounting effects (said).
+
+  - id: laws
+    text: "P.L. 109-435 (2006): fixed retiree health prefunding payments of $5.4-5.8bn a year for FY2007-2016 (≈ $55.8bn total, our sum). GAO: the Postal Service Reform Act of 2022 'canceled $57 billion' of missed payments; Medicare integration cut the retiree health liability by $61.2bn; fund depleted in FY2031; top-ups 'about $750 million in fiscal year 2026 and grow to about $1.4 billion'. USPS FY2025 release: revenue growth 'due largely to continued growth of our USPS Ground Advantage shipping service'. P.L. 117-108: 'Delivery shall occur at least six days a week.'"
+    spoken: roughly five and a half billion dollars a year
+    display: "2006 law: ≈ $5.5bn a year prefunding for 10 years"
+    fields: {cancel_spoken: fifty-seven billion dollars}
+    source_ids: [laws, gao]
+    status: source_located
+    verification_note: Our total (said).
+
+  - id: mail
+    text: "USPS Historian: First-Class Mail peaked at 103,656M pieces in FY2001. FY2026 release: 39,852M pieces; Shipping & Packages revenue $34.1bn vs First-Class Mail revenue $26.2bn. GAO: total mail peaked at 'over 213 billion pieces' in FY2006. 10-K: pieces per delivery point per day 5.5 (2007) to 2.3 (2026)."
+    spoken: about one hundred and four billion
+    display: "First-Class Mail: 103.7bn (2001) → 39.9bn (2026)"
+    fields: {now_spoken: about forty billion, pkg_spoken: thirty-four point one billion dollars, fcm_spoken: twenty-six point two billion dollars}
+    source_ids: [hist, usps26, gao]
+    status: source_located
+    verification_note: One source per number.
+
+  - id: network
+    text: "USPS: 'more than 170 million addresses', delivery 'six and often seven days a week'; 170.4M delivery points (FY2025), about 1.8M added in 2025; 236,347 routes; 30,972 retail offices; 262,740 vehicles (size and scope, May 2026); 'generally receives no tax dollars for operating expenses'."
+    spoken: more than one hundred and seventy million
+    display: "> 170M addresses, 6+ days a week (USPS)"
+    fields: {}
+    source_ids: [hist, usps26]
+    status: source_located
+    verification_note: Exact tax wording ('generally').
+
+  - id: stamp
+    text: "Forever stamp 82 cents since July 12, 2026; history 55c (Jan 2019), 58c (Aug 2021), 60c, 63c, 66c, 68c, 73c, 78c (Jul 2025), 82c. Rise since 2019 ≈ 49% (our calculation)."
+    spoken: eighty-two cents
+    display: "Forever stamp 82¢ (July 2026)"
+    fields: {}
+    source_ids: [hist]
+    status: source_located
+    verification_note: Our percentage (said).
+
+  - id: plan
+    text: "Delivering for America (Mar 23, 2021): 'Operates at break-even by FY2023 avoiding $160 billion in projected losses over the next 10 years'; '$40 billion in capital investments'; 95% on-time target. GAO: revenue about $24bn more and expenses about $36bn more than projected FY2021-2024; break-even not achieved."
+    spoken: one hundred and sixty billion dollars
+    display: "2021 plan: break-even by 2023 (not reached)"
+    fields: {}
+    source_ids: [dfa, gao]
+    status: source_located
+    verification_note: Plan status in 2026 not stated.
+
+  - id: cash
+    text: "FY2026 10-K / release: debt to the Federal Financing Bank $15.0bn, 'our current statutory limit', unchanged since 1992; PRC waiver Apr 9, 2026 - USPS did not remit 2026 pension amortization payments; employer FERS contributions paused (≈ $2.6bn deferred); 'defaulted on' the $726M retiree health top-up; unfunded pensions $97.1bn, unfunded retiree health $44.1bn."
+    spoken: fifteen billion dollars
+    display: "Debt at the $15bn legal cap, unchanged since 1992"
+    fields: {pens_spoken: ninety-seven point one billion dollars}
+    source_ids: [usps26]
+    status: source_located
+    verification_note: 10-K draft copy; figures also in the release.
