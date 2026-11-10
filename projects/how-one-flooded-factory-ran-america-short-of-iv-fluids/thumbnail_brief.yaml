@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: How One Flooded Factory Ran America Short of IV Fluids
+docs_dir: docs/episodes/44-iv-bags
+video: output/ivfluids_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How can one factory matter so much to a whole country's hospitals?
+  surprising_fact: One plant made about 60% of U.S. IV solutions (AHA estimate); a hurricane flooded it in Sept 2024
+  subject: an IV bag
+  tone: reflective
+  metaphor: a single point of failure
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 60% OF IV FLUIDS
+  - ONE FACTORY
+  claim_basis: 'share: about 60% of U.S. IV solutions from one plant (AHA estimate, Oct 2024)'
+  scene:
+    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: flask, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'NORMAL: 100%'
+  - 'RATIONED: 40%'
+  claim_basis: 'Baxter allocation to direct customers 40%, then 60% (Oct 2024)'
+  scene:
+    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: flask, x: 480, y: 650, s: 0.6}
+    after: {kind: crash, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none

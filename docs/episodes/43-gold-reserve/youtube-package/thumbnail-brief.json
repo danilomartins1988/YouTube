@@ -1,0 +1,338 @@
+{
+  "title": "America's $1 Trillion of Gold Is Booked at $11 Billion",
+  "docs_dir": "docs/episodes/43-gold-reserve",
+  "video": "output/gold_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why is a trillion dollars of gold booked at eleven billion?",
+    "surprising_fact": "Book value $11.04bn at $42.22/oz (Treasury) vs \u2248 $1.0tn at the Sept 30, 2025 price (OIG; our calc)",
+    "subject": "gold bars",
+    "tone": "bright",
+    "metaphor": "a 1973 price tag on a trillion-dollar pile"
+  },
+  "slug": "americas-trillion-dollar-gold-booked-at-11-billion",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "$1 TRILLION",
+        "BOOKED AT $11B"
+      ],
+      "claim_basis": "book + market: $11.04bn book value (Treasury, Oct 2026); \u2248 $1.0tn at Sept 30, 2025 LBMA PM (OIG; our calc)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0E1A",
+          "sky1": "#1E2A4A",
+          "haze": "#90CAF9",
+          "key": "#E3F2FD",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ingots",
+          "x": 1480,
+          "y": 560,
+          "s": 0.75
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E3F2FD"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "$1 TRILLION",
+          "x": 90,
+          "y": 530.3,
+          "size": 167.6,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "BOOKED AT $11B",
+          "x": 96,
+          "y": 668.3,
+          "size": 120,
+          "width": 1075.2,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.51 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "5 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 400, 1270, 540), (96, 575, 1171, 676)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.073",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 37",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": false,
+            "detail": "nearest how-visa-and-mastercard-became-financial-gatekeepers (distance 0.14)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "book + market: $11.04bn book value (Treasury, Oct 2026); \u2248 $1.0tn at Sept 30, 2025 LBMA PM (OIG; our calc)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.528,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-visa-and-mastercard-became-financial-gatekeepers"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "BOOKS: $11B",
+        "MARKET: $1T"
+      ],
+      "claim_basis": "book vs market value (Treasury; OIG price Sept 30, 2025; our calc)",
+      "scene": {
+        "palette": {
+          "sky0": "#06121A",
+          "sky1": "#123040",
+          "haze": "#80CBC4",
+          "key": "#E0F7FA",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ledger",
+          "x": 480,
+          "y": 650,
+          "s": 0.6,
+          "heading": "OFFICIAL PRICE",
+          "amount": "$42.22/OZ",
+          "magnifier": false,
+          "rot": -4
+        },
+        "after": {
+          "kind": "ingots",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E0F7FA"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "BOOKS: $11B",
+          "x": 480.0,
+          "y": 218.5,
+          "size": 108.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "MARKET: $1T",
+          "x": 1440.0,
+          "y": 218.5,
+          "size": 108.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.56 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 134, 860, 225), (1060, 134, 1820, 225)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.3:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.078",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 66",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": false,
+            "detail": "nearest the-hidden-economics-of-amazon-prime (distance 0.15)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "book vs market value (Treasury; OIG price Sept 30, 2025; our calc)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.573,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hidden-economics-of-amazon-prime"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-10T22:35:51Z",
+  "master": "output/americas-trillion-dollar-gold-booked-at-11-billion/thumbnails/master_B.png"
+}

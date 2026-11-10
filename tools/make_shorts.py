@@ -72,6 +72,7 @@ SHORTS = {
     "43-gold-reserve": ("americas-trillion-dollar-gold-booked-at-11-billion", "documentary", "gold_documentary", "$11 BILLION", "ON THE BOOKS", "America's Gold Is Booked at Just $11 Billion", "#gold #fortknox #usa"),
     "41-tariff-refund": ("who-actually-gets-the-tariff-refund", "documentary", "tariff_documentary", "$166 BILLION", "REFUND: NOT YOU", "Who Gets the $166 Billion Tariff Refund? Not Shoppers", "#tariffs #economy #usa"),
     "46-overdrafts": ("why-banks-still-make-billions-from-overdrafts", "documentary", "overdraft_documentary", "$35 FEE", "FOR A $24 BUY", "A $35 Fee for a $24 Purchase: How Overdrafts Still Pay", "#banking #overdraft #money"),
+    "44-iv-bags": ("how-one-flooded-factory-ran-america-short-of-iv-fluids", "documentary", "ivfluids_documentary", "60% OF IV FLUIDS", "ONE FACTORY", "One Flooded Factory Ran America Short of IV Fluids", "#hospitals #supplychain #usa"),
     "42-penny": ("why-america-stopped-making-the-penny", "documentary", "penny_documentary", "3.69 CENTS", "TO MAKE 1 CENT", "It Cost 3.69 Cents to Make One Penny", "#penny #money #usa"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }

@@ -785,6 +785,30 @@ const SETS: Record<string, SetFn> = {
       <ellipse cx={z.x0 + w * 0.5} cy={f - 500} rx={w * 0.45} ry={520} fill="#FFE9B0" opacity={0.10 + 0.02 * Math.sin(t * 1.3)} />
     </g>;
   },
+  /** A mountain valley factory: blue ridges, a long white plant with a sawtooth roof and stacks, a levee and a river in
+   *  front; `floodAt` (s) makes the river rise over the levee and spread across the floor; `night` dims it. Generic. */
+  riverplant: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, fa = (z as any).floodAt as number | undefined;
+    const fl = fa !== undefined ? clamp((t - fa) / 4) : 0, wl = f + 110 - fl * 190;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#2A3550' : '#BFE3F5'} />
+      {[0, 1].map((r) => <path key={'rg' + r} d={`M ${z.x0} ${f - 260 + r * 80} ${Array.from({length: Math.ceil(w / 260) + 1}, (_, k) => `Q ${z.x0 + k * 260 + 130} ${f - 520 + r * 120 - 120 * rnd(k + r * 9)} ${z.x0 + (k + 1) * 260} ${f - 260 + r * 80}`).join(' ')} L ${z.x1} ${f} L ${z.x0} ${f} Z`}
+        fill={night ? (r ? '#34466A' : '#2C3B5C') : (r ? '#7FA9C9' : '#9CC2DD')} stroke={OL} strokeWidth={3} />)}
+      {Array.from({length: Math.ceil(w / 1400)}, (_, k) => { const x = z.x0 + 300 + k * 1400;
+        return <g key={'pl' + k}>
+          <rect x={x} y={f - 300} width={1000} height={300} fill={night ? '#7D8AA6' : '#F4F7FA'} stroke={OL} strokeWidth={5} />
+          <path d={`M ${x} ${f - 300} ${Array.from({length: 8}, (_, q) => `L ${x + q * 125 + 60} ${f - 370} L ${x + q * 125 + 125} ${f - 300}`).join(' ')}`} fill={night ? '#6A7794' : '#DCE5EC'} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          {[0, 1].map((q) => <g key={q}><rect x={x + 760 + q * 90} y={f - 520} width={50} height={220} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+            <circle cx={x + 785 + q * 90 + Math.sin(t + q) * 8} cy={f - 560 - ((t * 30 + q * 40) % 80)} r={22} fill="#FFFFFF" opacity={0.6} /></g>)}
+          {Array.from({length: 7}, (_, q) => <rect key={'w' + q} x={x + 50 + q * 130} y={f - 230} width={80} height={60} fill={night ? '#FFE08A' : '#BFE8FF'} stroke={OL} strokeWidth={3} />)}
+          <rect x={x + 420} y={f - 120} width={160} height={120} fill="#90A4AE" stroke={OL} strokeWidth={4} /></g>; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3E4A3A' : '#8FBF6A'} />
+      <path d={`M ${z.x0} ${f + 60} L ${z.x1} ${f + 60} L ${z.x1} ${f + 120} L ${z.x0} ${f + 120} Z`} fill="#A1887F" stroke={OL} strokeWidth={4} />
+      {fl > 0.6 && <path d={`M ${z.x0 + w * 0.48} ${f + 60} l 40 60 l -70 0 Z`} fill={night ? '#3E4A3A' : '#8FBF6A'} />}
+      <rect x={z.x0} y={Math.min(wl, f + 130)} width={w} height={600} fill={night ? '#2F5D86' : '#4FA3D9'} opacity={0.92} />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <path key={'wv' + k} d={`M ${z.x0 + k * 200 + ((t * 60) % 200)} ${Math.min(wl, f + 130) + 30} q 30 -14 60 0`} fill="none" stroke="#FFFFFF" strokeWidth={4} opacity={0.6} />)}
+    </g>;
+  },
   /** A hospital corridor: pale mint walls, numbered doors with small windows, a handrail, ceiling light panels, a glossy
    *  tiled floor; `night` dims it to an evening shift. Generic, no real hospital branding. */
   hospital: (t, z, f) => {
@@ -3393,9 +3417,35 @@ const statement: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A generic IV bag on a pole (no brand): fluid `level` 0..1 (keyframes ok), drips fall from the line; `text` label on the bag;
+ *  `pole` false hides the stand. */
+const ivbag: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f - 600), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const lv = clamp(kf(a.level, t, 0.8)), W = 150, H = 210, top = -H / 2 + 20, fy = top + (H - 40) * (1 - lv);
+  const drip = (t * 1.3) % 1;
+  return <g key={'iv' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    {a.pole !== false && <g><path d={`M 0 ${-H / 2 - 70} L 0 520`} stroke="#90A4AE" strokeWidth={12} strokeLinecap="round" />
+      <path d={`M -60 ${-H / 2 - 70} L 60 ${-H / 2 - 70}`} stroke="#90A4AE" strokeWidth={10} strokeLinecap="round" />
+      <path d="M -90 520 L 90 520 M 0 520 L -70 560 M 0 520 L 70 560" stroke="#78909C" strokeWidth={10} strokeLinecap="round" /></g>}
+    <path d={`M 0 ${-H / 2 - 70} L 0 ${-H / 2 - 10}`} stroke="#B0BEC5" strokeWidth={5} />
+    <clipPath id={'ivc' + i}><rect x={-W / 2} y={-H / 2} width={W} height={H} rx={34} /></clipPath>
+    <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={34} fill="#F5FBFF" stroke={OL} strokeWidth={6} />
+    <g clipPath={`url(#ivc${i})`}><rect x={-W / 2} y={fy} width={W} height={H} fill={lv < 0.2 ? '#FFAB91' : '#B3E5FC'} />
+      <path d={`M ${-W / 2} ${fy} q ${W / 4} ${-8 * Math.sin(t * 3)} ${W / 2} 0 t ${W / 2} 0`} fill="none" stroke="#4FC3F7" strokeWidth={4} /></g>
+    <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={34} fill="none" stroke={OL} strokeWidth={6} />
+    {[0, 1, 2, 3].map((k) => <path key={k} d={`M ${W / 2 - 34} ${-H / 2 + 40 + k * 36} L ${W / 2 - 12} ${-H / 2 + 40 + k * 36}`} stroke={OL} strokeWidth={3} />)}
+    {a.text && <T x={-8} y={10} s={26} c={OL}>{a.text}</T>}
+    <path d={`M -16 ${H / 2} L 16 ${H / 2} L 10 ${H / 2 + 34} L -10 ${H / 2 + 34} Z`} fill="#E0E0E0" stroke={OL} strokeWidth={4} />
+    <rect x={-12} y={H / 2 + 34} width={24} height={46} rx={6} fill="#F5FBFF" stroke={OL} strokeWidth={4} />
+    {lv > 0.02 && <circle cx={0} cy={H / 2 + 44 + drip * 30} r={6} fill="#4FC3F7" opacity={1 - drip} />}
+    <path d={`M 0 ${H / 2 + 80} q 40 120 -20 260`} fill="none" stroke="#B0BEC5" strokeWidth={5} />
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
