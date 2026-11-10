@@ -1,0 +1,24 @@
+# Research dossier - How Costco Makes Money Selling Things Cheap
+
+Generated 2026-11-10T02:57:24+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+
+## Sources
+
+| id | Publisher | Title | Published | Accessed | Type | URL |
+|---|---|---|---|---|---|---|
+| `tenk` | Costco / SEC EDGAR | Costco Wholesale Corporation Form 10-K, fiscal year ended August 30, 2026 | 2026-10-07 | 2026-11-10 | primary | https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm |
+| `results` | Costco / SEC EDGAR | Costco Wholesale Corporation Reports Fourth Quarter and Fiscal Year 2026 Operating Results (8-K Ex. 99.1) | 2026-09-24 | 2026-11-10 | primary | https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm |
+| `fee` | Costco / SEC EDGAR | Costco Wholesale Corporation announces membership fee increase (8-K Ex. 99.1) | 2024-07-10 | 2026-11-10 | primary | https://www.sec.gov/Archives/edgar/data/909832/000090983224000036/costex9918-k71024.htm |
+| `ars` | Costco / SEC EDGAR | Costco Wholesale Corporation 2025 Annual Report (letter to shareholders) | 2025-12-04 | 2026-11-10 | primary | https://www.sec.gov/Archives/edgar/data/909832/000090983225000157/costannualreport2025.pdf |
+
+## Claims
+
+| id | Claim | On screen | Reference period | Status | Sources | Note |
+|---|---|---|---|---|---|---|
+| `fees` | Costco 10-K FY2026 ($M): membership fees 5,907 (FY2025 5,323); total revenue 303,154; operating income 11,685; net income 9,226. 'Membership fee revenue increased 11% to $5,907'. Our calculation: fees = 50.6% of operating income, 1.9% of revenue. | $5.9bn membership fees (FY2026) | - | **source_located** | tenk | Shares of profit are our calculation, said as "equal to". |
+| `sales` | Costco results release (Sep 2026): 'Net sales for the fiscal year increased 10.1 percent, to $297.2 billion, from $269.9 billion last year.' 10-K: gross margin percentage 11.09% (FY2026), 11.12% (FY2025); merchandise costs $264,279M; 'these volumes and turnover enable us to operate profitably at significantly lower gross margins (net sales less merchandise costs) than most other retailers.' Our calculation: average markup over cost ≈ 12.5%; operating margin ≈ 3.9% of revenue. | $297.2bn net sales (FY2026) | - | **source_located** | results, tenk | Markup and operating margin are our calculations. |
+| `members` | Costco 10-K FY2026: paid members 84,100 thousand; total cardholders 150,400 thousand; 'Our member renewal rate was 92.3% in the U.S. and Canada and 89.8% worldwide at the end of 2026.' 'Our annual fee for memberships is $65 in the U.S.' Fee release (Jul 2024): effective Sep 1, 2024, Gold Star $60 → $65, Executive $120 → $130, maximum 2% reward $1,000 → $1,250; 'around 52 million memberships'. 10-K: 'The fee income increase accounted for approximately 30% and 40% of membership income growth during 2026 and 2025.' | 84.1M paid members | - | **source_located** | tenk, fee | Read in the 10-K and the 2024 fee release. |
+| `skus` | Costco 10-K FY2026: 'We carry less than 4,000 active stock keeping units (SKUs) per warehouse in our core warehouse business, significantly less than other broadline retailers.' 'Costco operated 939, 914, and 890 warehouses worldwide'; results release: '939 warehouses, including 647 in the United States and Puerto Rico'. | < 4,000 items per warehouse | - | **source_located** | tenk, results | Read in the 10-K. |
+| `kirkland` | Costco 2025 Annual Report, letter (Dec 2025): 'Kirkland Signature ... typically offering 15-20% savings compared to the national brand equivalent item ... now representing approximately $90B of annual revenue globally'; 'We celebrated the 30th anniversary of our Kirkland Signature trademark this year'. 10-K FY2026: Kirkland Signature products 'generally earn higher margins'. | Kirkland ≈ $90bn a year | - | **source_located** | ars, tenk | Company statement (shareholder letter). |
+| `float` | Costco 10-K FY2026 balance sheet ($M, Aug 30, 2026): merchandise inventories 19,324; accounts payable 22,591. 'We often sell inventory before we are required to pay for it, even while taking advantage of early payment discounts.' Our calculation: inventory turns ≈ 14 times a year (≈ 26 days). | $22.6bn owed vs $19.3bn of goods | - | **source_located** | tenk | Turns are our calculation. |
+| `exec` | Costco 10-K FY2026: 'Executive members represented 42,300, 38,700, and 35,400 of total paid members in 2026, 2025, and 2024. The penetration of sales to Executive members represented approximately 75.2% of worldwide net sales in 2026.' 'These members earn an Executive reward, generally 2% on qualified purchases, subject to an annual maximum value'. | 42.3M Executive members, ≈75% of sales | - | **source_located** | tenk, fee | Read in the 10-K. |

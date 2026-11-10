@@ -34,3 +34,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 29-us-healthcare | Why US Health Insurance Costs $28,303 a Year | $28,303 A YEAR / FOR HEALTH INSURANCE | 48 s | `docs/episodes/29-us-healthcare/youtube-short/short_package.md` |
 | 30-credit-cards | Americans Paid $160 Billion in Card Interest in One Year | $160 BILLION / IN CARD INTEREST | 43 s | `docs/episodes/30-credit-cards/youtube-short/short_package.md` |
 | 31-us-housing | You Now Need $120,800 a Year to Afford a Typical Home | $120,800 A YEAR / TO AFFORD A HOME | 48 s | `docs/episodes/31-us-housing/youtube-short/short_package.md` |
+| 32-costco | Costco Made $5.9 Billion Before You Bought Anything | $5.9 BILLION / JUST TO GET IN | 55 s | `docs/episodes/32-costco/youtube-short/short_package.md` |

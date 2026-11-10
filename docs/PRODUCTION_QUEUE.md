@@ -50,7 +50,7 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | 01 | Why Americans Pay So Much for Healthcare | **Delivered** (Ep 29, 11:03, QC 0 errors) |
 | 02 | The Hidden Business Behind Your Credit Card | **Delivered** (Ep 30, 11:23, QC 0 errors) |
 | 03 | Why American Homes Became So Expensive | **Delivered** (Ep 31, 11:10, QC 0 errors) |
-| 04 | How Costco Makes Money Selling Things Cheap | In production (Ep 32) |
+| 04 | How Costco Makes Money Selling Things Cheap | **Delivered** (Ep 32, 11:02, QC 0 errors) |
 | 05 | Why AI Is Making Your Computer More Expensive | **Duplicate** of Ep 14 (memory prices); replacement topic requested |
 | 06 | The Business Behind America's Student Debt | Approved, queued |
 | 07 | How Car Dealerships Really Make Money | Approved, queued |

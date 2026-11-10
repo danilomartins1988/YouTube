@@ -570,3 +570,22 @@ Watch the full story: "Why American Homes Became So Expensive" on The Hidden Eco
 ```
 housing market, home prices, housing crisis, mortgage rates, housing affordability, why are houses so expensive, zoning, housing shortage, first time home buyer, real estate, shorts, economics explained, The Hidden Economics
 ```
+
+## 32-costco
+
+**Title**
+```
+Costco Made $5.9 Billion Before You Bought Anything #shorts
+```
+**Description**
+```
+Five point nine billion dollars. That is how much Costco collected in a single year, before anyone bought a thing, just for the right to walk through its doors.
+
+Watch the full story: "How Costco Makes Money Selling Things Cheap" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #costco #business #usa #economics
+```
+**Tags**
+```
+Costco, how Costco makes money, Costco membership, Costco business model, Kirkland Signature, membership fees, retail business, warehouse club, Costco explained, business explained, shorts, economics explained, The Hidden Economics
+```

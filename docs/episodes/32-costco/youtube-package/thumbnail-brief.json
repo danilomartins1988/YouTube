@@ -1,0 +1,347 @@
+{
+  "title": "How Costco Makes Money Selling Things Cheap",
+  "docs_dir": "docs/episodes/32-costco",
+  "video": "output/costco_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "How does a store that sells almost at cost make billions?",
+    "surprising_fact": "$5.9bn membership fees in FY2026, equal to about half of operating income (Costco 10-K; our calculation)",
+    "subject": "a membership card",
+    "tone": "bright",
+    "metaphor": "the store is the bait, the membership is the business"
+  },
+  "slug": "how-costco-makes-money-selling-things-cheap",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "$5.9B",
+        "COSTCO FEES"
+      ],
+      "claim_basis": "fees: $5,907M membership fee revenue, FY2026 (Costco 10-K)",
+      "scene": {
+        "palette": {
+          "sky0": "#10070A",
+          "sky1": "#3A1218",
+          "haze": "#EF9A9A",
+          "key": "#FFEBEE",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ccard",
+          "x": 1480,
+          "y": 560,
+          "s": 0.72,
+          "rot": -12,
+          "c1": "#C62828",
+          "c2": "#3A0A0E",
+          "coins": true
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFEBEE"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "$5.9B",
+          "x": 90,
+          "y": 588.0,
+          "size": 360,
+          "width": 1152.0,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "COSTCO FEES",
+          "x": 96,
+          "y": 726.0,
+          "size": 120,
+          "width": 844.8,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 307, 1242, 610), (96, 632, 941, 733)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.085",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 32",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-10-billion-cyberattack-that-froze-maersk (distance 0.58)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "fees: $5,907M membership fee revenue, FY2026 (Costco 10-K)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.667,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-10-billion-cyberattack-that-froze-maersk"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "THIN MARGIN",
+        "FAT FEES"
+      ],
+      "claim_basis": "sales: gross margin 11.09% (10-K); fees: $5.9bn, \u2248 half of operating income (our calculation)",
+      "scene": {
+        "palette": {
+          "sky0": "#06121A",
+          "sky1": "#123040",
+          "haze": "#80CBC4",
+          "key": "#E0F7FA",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ledger",
+          "x": 480,
+          "y": 650,
+          "s": 0.6,
+          "heading": "GROSS MARGIN",
+          "amount": "11.1%",
+          "magnifier": false,
+          "rot": -4
+        },
+        "after": {
+          "kind": "ledger",
+          "x": 1440,
+          "y": 650,
+          "s": 0.6,
+          "heading": "MEMBERSHIP FEES",
+          "amount": "$5.9BN",
+          "magnifier": false,
+          "stamp": "\u00bd PROFIT",
+          "rot": 4
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E0F7FA"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "THIN MARGIN",
+          "x": 480.0,
+          "y": 218.5,
+          "size": 108.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "FAT FEES",
+          "x": 1440.0,
+          "y": 251.7,
+          "size": 148.4,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.56 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 134, 860, 225), (1060, 136, 1820, 261)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.098",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 68",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-american-homes-became-so-expensive (distance 0.35)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "sales: gross margin 11.09% (10-K); fees: $5.9bn, \u2248 half of operating income (our calculation)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.608,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-american-homes-became-so-expensive"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-10T03:31:29Z",
+  "master": "output/how-costco-makes-money-selling-things-cheap/thumbnails/master_A.png"
+}
