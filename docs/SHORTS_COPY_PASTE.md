@@ -589,3 +589,22 @@ Watch the full story: "How Costco Makes Money Selling Things Cheap" on The Hidde
 ```
 Costco, how Costco makes money, Costco membership, Costco business model, Kirkland Signature, membership fees, retail business, warehouse club, Costco explained, business explained, shorts, economics explained, The Hidden Economics
 ```
+
+## 33-student-debt
+
+**Title**
+```
+Americans Owe $1.65 Trillion in Student Loans #shorts
+```
+**Description**
+```
+One point six five trillion dollars. That is how much Americans owe on student loans, more than they owe on all their credit cards combined.
+
+Watch the full story: "The Business Behind America's Student Debt" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #studentloans #college #usa #economics
+```
+**Tags**
+```
+student loans, student debt, student loan crisis, college tuition, student loan servicers, Nelnet, student loan default, SAVE plan, Grad PLUS, cost of college, shorts, economics explained, The Hidden Economics
+```

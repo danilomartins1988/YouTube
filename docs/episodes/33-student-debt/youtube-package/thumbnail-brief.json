@@ -1,0 +1,345 @@
+{
+  "title": "The Business Behind America's Student Debt",
+  "docs_dir": "docs/episodes/33-student-debt",
+  "video": "output/studentdebt_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Who is in the business of America's student debt?",
+    "surprising_fact": "$1.65tn student debt (NY Fed Q2 2026); share 90+ days late jumped from 0.53% to 7.74% in one quarter, 10.6% by Q2 2026",
+    "subject": "a graduation cap chained to a ball of debt",
+    "tone": "bright",
+    "metaphor": "the bill split between students, parents and taxpayers"
+  },
+  "slug": "the-business-behind-americas-student-debt",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "$1.65T",
+        "STUDENT DEBT"
+      ],
+      "claim_basis": "total: $1.65 trillion outstanding student debt, 2026:Q2 (NY Fed)",
+      "scene": {
+        "palette": {
+          "sky0": "#070B18",
+          "sky1": "#1A2550",
+          "haze": "#9FA8DA",
+          "key": "#E8EAF6",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "gradcap",
+          "x": 1500,
+          "y": 470,
+          "s": 0.62,
+          "chain": true,
+          "label": "DEBT"
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E8EAF6"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "$1.65T",
+          "x": 90,
+          "y": 572.2,
+          "size": 307.3,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "STUDENT DEBT",
+          "x": 96,
+          "y": 710.2,
+          "size": 120,
+          "width": 921.6,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.51 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 333, 1270, 591), (96, 617, 1018, 717)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.082",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 41",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hidden-business-behind-your-credit-card (distance 0.24)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "total: $1.65 trillion outstanding student debt, 2026:Q2 (NY Fed)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.6,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hidden-business-behind-your-credit-card"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "2024 0.5% LATE",
+        "2026 10.6%"
+      ],
+      "claim_basis": "delinq: student debt 90+ days late 0.53% (2024:Q4) vs 10.6% (2026:Q2), NY Fed",
+      "scene": {
+        "palette": {
+          "sky0": "#0A1712",
+          "sky1": "#1E3D33",
+          "haze": "#A5D6A7",
+          "key": "#E8F5E9",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ledger",
+          "x": 480,
+          "y": 650,
+          "s": 0.6,
+          "heading": "90+ DAYS LATE",
+          "amount": "0.5%",
+          "magnifier": false,
+          "rot": -4
+        },
+        "after": {
+          "kind": "ledger",
+          "x": 1440,
+          "y": 650,
+          "s": 0.6,
+          "heading": "90+ DAYS LATE",
+          "amount": "10.6%",
+          "magnifier": false,
+          "stamp": "\u00d720",
+          "rot": 4
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E8F5E9"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "2024 0.5% LATE",
+          "x": 480.0,
+          "y": 199.6,
+          "size": 84.8,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "2026 10.6%",
+          "x": 1440.0,
+          "y": 227.4,
+          "size": 118.8,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.58 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "5 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 133, 860, 205), (1060, 135, 1820, 235)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "7.1px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.093",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 66",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": false,
+            "detail": "nearest why-american-homes-became-so-expensive (distance 0.06)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "delinq: student debt 90+ days late 0.53% (2024:Q4) vs 10.6% (2026:Q2), NY Fed",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.481,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-american-homes-became-so-expensive"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-10T04:26:16Z",
+  "master": "output/the-business-behind-americas-student-debt/thumbnails/master_A.png"
+}

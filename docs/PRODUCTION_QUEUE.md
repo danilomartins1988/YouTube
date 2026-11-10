@@ -52,7 +52,7 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | 03 | Why American Homes Became So Expensive | **Delivered** (Ep 31, 11:10, QC 0 errors) |
 | 04 | How Costco Makes Money Selling Things Cheap | **Delivered** (Ep 32, 11:02, QC 0 errors) |
 | 05 | Why AI Is Making Your Computer More Expensive | **Duplicate** of Ep 14 (memory prices); replacement topic requested |
-| 06 | The Business Behind America's Student Debt | In production (Ep 33) |
+| 06 | The Business Behind America's Student Debt | **Delivered** (Ep 33, 11:45, QC 0 errors) |
 | 07 | How Car Dealerships Really Make Money | Approved, queued |
 | 08 | Why America's Electricity Bills Are Rising | Approved, queued |
 | 09 | The Bank That Accidentally Sent $900 Million | Already scheduled (top-10 #4); produced once |
