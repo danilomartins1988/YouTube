@@ -498,6 +498,16 @@ const SUBJECTS: Record<string, SubjectFn> = {
     {o.sticker && <g transform="translate(-100 -168)"><rect x={-100} y={-48} width={200} height={96} rx={6} fill="#FFFFFF" stroke="#05070B" strokeWidth={6} />
       <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={o.sticker.length > 6 ? 40 : 52} fill="#05070B">{o.sticker}</text></g>}
   </g>,
+  /** A home electricity meter with a digital readout (`text`) and a lightning bolt. */
+  meter: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <circle r={520} fill={P.haze} opacity={0.2} filter="url(#soft)" />
+    <rect x={-210} y={-60} width={420} height={560} rx={36} fill="#90A4AE" stroke="#05070B" strokeWidth={10} />
+    <circle cx={0} cy={0} r={260} fill="#ECEFF1" stroke="#05070B" strokeWidth={10} />
+    <rect x={-170} y={-140} width={340} height={110} rx={14} fill="#0E1621" stroke="#05070B" strokeWidth={8} />
+    <text x={0} y={-62} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={o.text && o.text.length > 5 ? 64 : 80} fill="#7DF29A">{o.text || '$$$'}</text>
+    <ellipse cx={0} cy={90} rx={160} ry={26} fill="#78909C" stroke="#05070B" strokeWidth={6} />
+    <path d="M 40 -420 L -60 -230 L 10 -230 L -40 -80 L 110 -300 L 30 -300 L 90 -420 Z" fill={P.accent} stroke="#05070B" strokeWidth={8} strokeLinejoin="round" transform="translate(230 60)" />
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

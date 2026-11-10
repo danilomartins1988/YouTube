@@ -63,6 +63,7 @@ SHORTS = {
     "32-costco": ("how-costco-makes-money-selling-things-cheap", "documentary", "costco_documentary", "$5.9 BILLION", "JUST TO GET IN", "Costco Made $5.9 Billion Before You Bought Anything", "#costco #business #usa"),
     "33-student-debt": ("the-business-behind-americas-student-debt", "documentary", "studentdebt_documentary", "$1.65 TRILLION", "IN STUDENT DEBT", "Americans Owe $1.65 Trillion in Student Loans", "#studentloans #college #usa"),
     "34-car-dealers": ("how-car-dealerships-really-make-money", "documentary", "dealers_documentary", "$2,769 PER CAR", "FROM THE FINANCE OFFICE", "Car Dealers Make More in the Finance Office Than on the Car", "#cars #carbuying #usa"),
+    "35-electricity": ("why-americas-electricity-bills-are-rising", "documentary", "power_documentary", "×9 IN ONE AUCTION", "YOUR POWER BILL", "Why Your Electric Bill Keeps Going Up", "#electricity #energy #usa"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 

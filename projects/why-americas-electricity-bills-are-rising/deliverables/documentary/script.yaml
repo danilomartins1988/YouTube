@@ -1,0 +1,271 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations are said as such.
+logline: In one auction, the price to keep enough power plants ready for the biggest US grid jumped more than ninefold. Why
+  America's electricity bills are rising faster than inflation, and who is behind it.
+title: Why America's Electricity Bills Are Rising
+segments:
+- id: h_open
+  chapter: Twenty-eight dollars to two hundred and seventy
+  narration: Twenty-eight dollars and ninety-two cents. Then two hundred and sixty-nine dollars and ninety-two cents. That
+    is how much the price of keeping enough power plants ready jumped, in a single auction, on America's largest power grid.
+  claims:
+  - pjm
+- id: h_twist
+  chapter: Twenty-eight dollars to two hundred and seventy
+  narration: More than nine times higher, by our calculation. And that cost does not stay in the auction room. It flows,
+    month after month, into the electricity bills of millions of homes.
+  claims:
+  - pjm
+  analysis: true
+  source_note: Multiple is our calculation; pass-through to bills per EIA STEO description of residential prices.
+- id: h_question
+  chapter: Twenty-eight dollars to two hundred and seventy
+  narration: So why is the most ordinary bill in America, the one for the lights, suddenly rising faster than almost everything
+    else?
+  claims:
+  - price
+  analysis: true
+  source_note: Hook question; electricity CPI vs all items from BLS.
+- id: h_promise
+  chapter: Twenty-eight dollars to two hundred and seventy
+  narration: By the end of this video, you will know the four forces pushing your bill up. The wires, the fuel, the data
+    centers, and the way utilities are allowed to earn a profit.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The bill
+  narration: ''
+  claims: []
+- id: m1_price
+  chapter: The bill
+  narration: Start with the price. According to the Energy Information Administration, the average American home paid about
+    {{price.y2015_spoken}} per kilowatt hour in twenty fifteen. So far in twenty twenty-six, it is {{price}}, based on preliminary
+    data. By our calculation, the price rose about thirty-six percent in the ten years to twenty twenty-five.
+  claims:
+  - price
+- id: m1_cpi
+  chapter: The bill
+  narration: And lately it has outrun inflation. In the five years to September twenty twenty-six, the government's price
+    index for electricity rose {{price.cpi_spoken}}, by our calculation. Prices in general rose {{price.all_spoken}}. The
+    EIA itself says retail electricity prices have increased faster than the rate of inflation since twenty twenty-two.
+  claims:
+  - price
+- id: m1_bill
+  chapter: The bill
+  narration: For a typical home, that adds up. In twenty twenty-four, the average American household used about eight hundred
+    and sixty-three kilowatt hours a month and paid about {{bill}} a month. In the summer, with air conditioners running,
+    bills climb far higher.
+  claims:
+  - bill
+- id: m1_states
+  chapter: The bill
+  narration: Where you live matters enormously. This year, homes in Hawaii pay more than forty-six cents per kilowatt hour,
+    and California more than thirty-two. In North Dakota, Idaho, Utah and Louisiana, it is around thirteen cents or less.
+    By our calculation, a kilowatt hour in Hawaii costs about three point seven times as much as in North Dakota. And some
+    of the fastest increases this year are in Ohio and Virginia, where residential prices so far are up about thirteen percent
+    on last year, also by our calculation.
+  claims:
+  - bill
+- id: m1_draw
+  chapter: The bill
+  narration: Let me draw what is inside one bill. A slice for the power plants that make the electricity. A slice for the
+    high-voltage lines that carry it across the country. A slice for the local wires and poles that bring it to your street.
+    And a slice of profit for the utility. The surprise is which slices are growing.
+  claims:
+  - grid
+  analysis: true
+  source_note: Schematic of bill components (not to scale).
+- id: m1_transition
+  chapter: The bill
+  narration: Because the fastest-growing part of your bill is not the power itself. It is the wires.
+  claims:
+  - grid
+- id: m2_card
+  chapter: The wires
+  narration: ''
+  claims: []
+- id: m2_capex
+  chapter: The wires
+  narration: The EIA looked at twenty years of spending by major utilities. From two thousand and three to twenty twenty-three,
+    capital spending on local distribution, the poles, wires and transformers in your neighborhood, rose {{grid}}, to about
+    fifty-one billion dollars a year. Spending on long-distance transmission nearly tripled, to about twenty-eight billion.
+  claims:
+  - grid
+- id: m2_gen
+  chapter: The wires
+  narration: Meanwhile, spending to actually produce electricity fell twenty-four percent over the same period, after adjusting
+    for inflation. Power plants got cheaper to run. Delivering the power got much more expensive.
+  claims:
+  - grid
+- id: m2_why
+  chapter: The wires
+  narration: Why? Much of the grid is old and needs replacing. Storms and wildfires keep knocking it down. In California,
+    regulators estimate that about forty billion dollars of wildfire costs were approved for recovery from customers between
+    twenty nineteen and twenty twenty-four. In twenty twenty-four, wildfire costs made up about twenty-seven percent of what
+    the largest utility there, PG and E, collected.
+  claims:
+  - wildfire
+  analysis: true
+  source_note: Wildfire figures from the CPUC; the first two sentences are general commentary.
+- id: m2_draw
+  chapter: The wires
+  narration: Let me draw twenty years of spending. Here is the money spent making electricity, slowly shrinking. Here is
+    the money spent on transmission lines, almost tripling. And here is the money spent on local wires, more than doubling.
+    The bill follows the wires.
+  claims:
+  - grid
+  analysis: true
+  source_note: Chart of the EIA spending trends (schematic).
+- id: m2_transition
+  chapter: The wires
+  narration: But there is a second surprise. The fuel that powers much of the grid actually got cheaper.
+  claims:
+  - gas
+- id: m3_card
+  chapter: The fuel paradox
+  narration: ''
+  claims: []
+- id: m3_gas
+  chapter: The fuel paradox
+  narration: In much of America, natural gas sets the price of electricity in the wholesale market most hours of the day.
+    In twenty twenty-two, after Russia invaded Ukraine, the average Henry Hub gas price was {{gas}} per million British thermal
+    units. By twenty twenty-four, it had fallen to two dollars and nineteen cents.
+  claims:
+  - gas
+  analysis: true
+  source_note: Henry Hub annual prices from EIA; the invasion is context, no figure claimed.
+- id: m3_paradox
+  chapter: The fuel paradox
+  narration: By our calculation, that is a drop of about two thirds. And yet over those same two years, the average residential
+    electricity price did not fall. It rose almost ten percent. Most customers pay a price based on the average cost of
+    providing electricity over time, and those costs were dominated by something else.
+  claims:
+  - gas
+  - price
+- id: m3_back
+  chapter: The fuel paradox
+  narration: Gas prices have risen again since, to three dollars and fifty-two cents in twenty twenty-five. So households
+    now face both pressures at once, the rising cost of the wires, and a fuel that is no longer cheap.
+  claims:
+  - gas
+- id: m3_draw
+  chapter: The fuel paradox
+  narration: Let me draw the paradox. Here is the gas price, shooting up in twenty twenty-two and then crashing. Here is your
+    electricity price, a line that just keeps climbing, smoothly, whatever gas does. Two lines that should move together,
+    going their separate ways.
+  claims:
+  - gas
+  - price
+  analysis: true
+  source_note: Line chart of EIA series (schematic).
+- id: m3_transition
+  chapter: The fuel paradox
+  narration: And now a new customer has arrived, hungrier for power than any before it.
+  claims: []
+- id: m4_card
+  chapter: The data center rush
+  narration: ''
+  claims: []
+- id: m4_dc
+  chapter: The data center rush
+  narration: Data centers, the giant warehouses of servers behind the internet and artificial intelligence. According to
+    a report released by the Department of Energy, they used about {{dc}} of all US electricity in twenty twenty-three,
+    and could use between six point seven and twelve percent by twenty twenty-eight.
+  claims:
+  - dc
+- id: m4_demand
+  chapter: The data center rush
+  narration: For fifteen years, American electricity demand barely grew. Between two thousand and five and twenty nineteen,
+    it rose about zero point one percent a year. Between twenty twenty and twenty twenty-five, it grew about one point seven
+    percent a year. The EIA says data centers are driving that growth.
+  claims:
+  - dc
+- id: m4_pjm
+  chapter: The data center rush
+  narration: Nowhere is this clearer than in PJM, the grid operator for a large part of the eastern United States, including
+    Virginia, the world's biggest cluster of data centers. On July second, twenty twenty-six, PJM's demand peaked at one
+    hundred and sixty-two point six gigawatts. Every year PJM
+    holds an auction to pay power plants to be ready for peak demand. The price went from {{pjm}} per megawatt day to {{pjm.jump_spoken}},
+    and then hit the cap in the next two auctions. The total cost to customers for one year rose to about fourteen point
+    seven billion dollars.
+  claims:
+  - pjm
+  analysis: true
+  source_note: PJM auction reports; peak from EIA (Oct 2026); Dominion zone described by EIA as the largest concentration of data centers in the world.
+- id: m4_blame
+  chapter: The data center rush
+  narration: PJM itself said one auction left no doubt that data centers' demand for electricity continues to far outstrip
+    new supply. Its independent market monitor went further. It estimates that over the last four auctions, about twenty-nine
+    billion dollars, around forty-six percent of capacity charges, was the result of data center load.
+  claims:
+  - pjm
+- id: m4_draw
+  chapter: The data center rush
+  narration: Let me draw the squeeze. Here is the supply of power plants on the grid, growing slowly. Here is demand, suddenly
+    bending upward as data centers plug in. When the two lines get close, the price of being ready for the peak explodes,
+    and every household on the grid shares the bill.
+  claims:
+  - pjm
+  - dc
+  analysis: true
+  source_note: Schematic supply-demand diagram.
+- id: m4_transition
+  chapter: The data center rush
+  narration: Which leaves the last question. When all these costs rise, who decides what you pay, and who profits?
+  claims: []
+- id: m5_card
+  chapter: The utility deal
+  narration: ''
+  claims: []
+- id: m5_model
+  chapter: The utility deal
+  narration: Most American homes buy power from a regulated utility. The utility cannot set its own prices. A state commission
+    does. Texas rules put it simply. The cost of service has two parts, allowable expenses, and a return on invested capital.
+  claims:
+  - model
+- id: m5_incentive
+  chapter: The utility deal
+  narration: And here is the key detail. California regulators explain that utilities earn no markup on fuel. It is passed
+    straight through. But on poles, wires and substations, the rate base, they can earn a profit. Other things being equal,
+    a larger rate base means higher income for the utility.
+  claims:
+  - model
+- id: m5_roe
+  chapter: The utility deal
+  narration: How big is that profit? In California, the regulator set PG and E's allowed return on equity for twenty twenty-six
+    at {{model}}. Every new mile of wire, every new substation, adds to the base that the return is earned on. And the
+    customers pay it back, with interest, for decades.
+  claims:
+  - model
+- id: m5_draw
+  chapter: The utility deal
+  narration: Let me put the whole bill together. Old wires to replace, and new ones to build. Fuel that swings up and down.
+    Data centers bidding for the same power plants. And a business model that rewards building more. Each one is a reason.
+    Together, they explain why the bill keeps climbing.
+  claims:
+  - grid
+  - gas
+  - pjm
+  - model
+  analysis: true
+  source_note: Summary diagram of the sourced parts.
+- id: payoff
+  chapter: The lesson
+  narration: So why are America's electricity bills rising? Not because electricity got harder to make. Because the system
+    that delivers it is being rebuilt, the fuel became volatile, and a new generation of machines is competing with your
+    home for the same power. The light switch looks the same as ever. The economics behind it have changed.
+  claims:
+  - grid
+  - dc
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

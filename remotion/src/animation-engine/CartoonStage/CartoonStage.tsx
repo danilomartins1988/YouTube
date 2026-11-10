@@ -475,6 +475,32 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f + 30} width={w} height={8} fill="#FFD54A" opacity={0.8} />
     </g>;
   },
+  /** High-voltage country: rolling hills, a march of lattice transmission towers with sagging lines, a fenced substation
+   *  with transformers, and wooden distribution poles along a road. `night` adds a dusk sky and glowing insulators. */
+  powergrid: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    const tower = (x: number, y: number, sc: number, k: number) => <g key={'tw' + k} transform={`translate(${x} ${y}) scale(${sc})`}>
+      <path d="M -60 0 L -14 -300 L 14 -300 L 60 0 M -40 -100 L 40 -100 M -28 -190 L 28 -190 M -60 0 L 28 -190 M 60 0 L -28 -190 M -40 -100 L 14 -300 M 40 -100 L -14 -300" fill="none" stroke={night ? '#B0BEC5' : '#607D8B'} strokeWidth={6} />
+      <path d="M -110 -250 L 110 -250 M -80 -300 L 80 -300" stroke={night ? '#B0BEC5' : '#607D8B'} strokeWidth={8} />
+      {[-110, 110, -80, 80].map((dx, q) => <circle key={q} cx={dx} cy={q < 2 ? -244 : -294} r={6} fill={night ? '#FFE082' : '#ECEFF1'} />)}</g>;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#22284A' : '#BFE6FA'} />
+      <path d={`M ${z.x0} ${f - 200} ${Array.from({length: Math.ceil(w / 600) + 1}, (_, k) => `Q ${z.x0 + k * 600 + 300} ${f - 300 - 50 * rnd(k + 4)} ${z.x0 + k * 600 + 600} ${f - 210}`).join(' ')} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill={night ? '#2E4A3A' : '#9CCC65'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 520)}, (_, k) => tower(z.x0 + 200 + k * 520, f - 210, 0.9, k))}
+      {Array.from({length: Math.ceil(w / 520)}, (_, k) => { const x = z.x0 + 200 + k * 520;
+        return [[-99, -225], [99, -225], [-72, -270], [72, -270]].map(([dx, dy], q) => <path key={k + '-' + q} d={`M ${x + dx} ${f - 210 + dy} Q ${x + dx + 260} ${f - 210 + dy + 60} ${x + dx + 520} ${f - 210 + dy}`} fill="none" stroke={OL} strokeWidth={2} />); })}
+      {Array.from({length: Math.ceil(w / 1600)}, (_, k) => { const x = z.x0 + 900 + k * 1600;
+        return <g key={'ss' + k}><rect x={x} y={f - 170} width={360} height={170} fill={night ? '#3E4656' : '#CFD8DC'} stroke={OL} strokeWidth={3} />
+          {Array.from({length: 13}, (_, c) => <path key={c} d={`M ${x + c * 30} ${f} L ${x + c * 30} ${f - 170}`} stroke="#90A4AE" strokeWidth={2} />)}
+          {[0, 1, 2].map((q) => <g key={q}><rect x={x + 30 + q * 110} y={f - 130} width={80} height={110} rx={6} fill="#78909C" stroke={OL} strokeWidth={3} />
+            {[0, 1, 2].map((j) => <rect key={j} x={x + 40 + q * 110 + j * 22} y={f - 160} width={10} height={30} fill="#ECEFF1" stroke={OL} strokeWidth={2} />)}</g>)}</g>; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3E4656' : K.road} />
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => { const x = z.x0 + 150 + k * 300;
+        return <g key={'wp' + k}><rect x={x - 7} y={f - 230} width={14} height={230} fill={K.wood2} stroke={OL} strokeWidth={2} />
+          <rect x={x - 40} y={f - 222} width={80} height={10} fill={K.wood2} stroke={OL} strokeWidth={2} />
+          <path d={`M ${x - 36} ${f - 216} Q ${x + 114} ${f - 180} ${x + 264} ${f - 216}`} fill="none" stroke={OL} strokeWidth={2} /></g>; })}
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -2578,25 +2604,25 @@ const barrel: ItemFn = (a, {t, f}, i) => {
 
 /** A full-screen bar chart (data "language"): `bars` [{label, value, color?, at?, display?}] grow at their own times with
  *  rolling value labels; `max` scale; area x,y (top-left), w,h; `title`; `prefix`/`suffix`/`decimals` for values;
- *  `highlight` index pulses. Horizontal baseline, no axes clutter. */
+ *  `highlight` index pulses; `min` (< 0) allows negative bars below a raised baseline. Horizontal baseline, no axes clutter. */
 const bigchart: ItemFn = (a, {t}, i) => {
   const app = pop(t, a.at ?? 0, 0.5);
   if (app <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
   const X = (a.x as number) ?? 260, Y = (a.y as number) ?? 180, W = a.w ?? 1400, H = a.h ?? 620, bars = a.bars || [], n = Math.max(1, bars.length);
-  const mx = a.max ?? Math.max(...bars.map((b: any) => b.value)), gap = W / n, bw = Math.min(220, gap * 0.62), dark = !!a.dark;
+  const mx = a.max ?? Math.max(...bars.map((b: any) => b.value)), mn = Math.min(0, a.min ?? 0), base = Y + H - (H - 40) * (-mn) / (mx - mn), gap = W / n, bw = Math.min(220, gap * 0.62), dark = !!a.dark;
   return <g key={'bc' + i} opacity={app}>
     {a.title && <T x={X} y={Y - 30} s={40} c={dark ? '#FFFFFF' : OL} a="start">{a.title}</T>}
-    <rect x={X - 20} y={Y + H} width={W + 40} height={6} fill={dark ? '#FFFFFF' : OL} opacity={0.8} />
+    <rect x={X - 20} y={base} width={W + 40} height={6} fill={dark ? '#FFFFFF' : OL} opacity={0.8} />
     {bars.map((b: any, k: number) => {
-      const st = b.at ?? (a.at ?? 0) + 0.4 + k * 0.5, u = E.out(clamp((t - st) / 1.1)), v = b.value * u, h = (H - 40) * v / mx;
+      const st = b.at ?? (a.at ?? 0) + 0.4 + k * 0.5, u = E.out(clamp((t - st) / 1.1)), v = b.value * u, h = (H - 40) * v / (mx - mn), neg = h < 0, ah = Math.abs(h);
       const cx = X + gap * (k + 0.5), c = col(b.color, ['#2F6FD1', '#E89A00', '#23995A', '#E53935', '#7E57C2'][k % 5]);
       const hl = a.highlight === k ? 1 + 0.03 * Math.sin(t * 6) : 1;
       const txt = b.display && u >= 1 ? b.display : (a.prefix || '') + v.toLocaleString('en-US', {minimumFractionDigits: a.decimals ?? 0, maximumFractionDigits: a.decimals ?? 0}) + (a.suffix || '');
-      return t < st ? null : <g key={k} transform={`translate(${cx} ${Y + H}) scale(${hl})`}>
-        <rect x={-bw / 2} y={-h} width={bw} height={h} rx={10} fill={c} stroke={OL} strokeWidth={5} />
-        <rect x={-bw / 2 + 10} y={-h + 10} width={bw * 0.18} height={Math.max(0, h - 20)} rx={6} fill="#FFFFFF" opacity={0.22} />
-        <T x={0} y={-h - 22} s={46} c={dark ? '#FFFFFF' : OL}>{txt}</T>
-        <T x={0} y={50} s={30} c={dark ? '#CFD8DC' : OL} w={800}>{b.label}</T>
+      return t < st ? null : <g key={k} transform={`translate(${cx} ${base}) scale(${hl})`}>
+        <rect x={-bw / 2} y={neg ? 0 : -h} width={bw} height={ah} rx={10} fill={c} stroke={OL} strokeWidth={5} />
+        <rect x={-bw / 2 + 10} y={(neg ? 0 : -h) + 10} width={bw * 0.18} height={Math.max(0, ah - 20)} rx={6} fill="#FFFFFF" opacity={0.22} />
+        <T x={0} y={neg ? ah + 52 : -h - 22} s={46} c={dark ? '#FFFFFF' : OL}>{txt}</T>
+        <T x={0} y={neg ? -24 : 50} s={30} c={dark ? '#CFD8DC' : OL} w={800}>{b.label}</T>
         {b.sub && <T x={0} y={84} s={22} c={dark ? '#90A4AE' : '#4D6680'} w={600}>{b.sub}</T>}
       </g>;
     })}
@@ -2946,9 +2972,29 @@ const sedan: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A home electricity meter: glass dome, spinning disc (speed `spin` keyframable), and a digital `$` readout counting
+ *  with `steps` (like counter) or fixed `text`; `label` below. */
+const meter: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 420), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const sp = kf(a.spin, t, 1), ang = (t * 180 * sp) % 360, v = a.steps ? kf(a.steps, t, 0) : null;
+  const txt = v !== null ? (a.prefix ?? '$') + v.toLocaleString('en-US', {minimumFractionDigits: a.decimals ?? 0, maximumFractionDigits: a.decimals ?? 0}) + (a.suffix ?? '') : (a.text ?? '');
+  return <g key={'mt' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-120} y={-40} width={240} height={330} rx={20} fill="#B0BEC5" stroke={OL} strokeWidth={6} />
+    <circle cx={0} cy={0} r={150} fill="#ECEFF1" stroke={OL} strokeWidth={6} />
+    <circle cx={0} cy={0} r={130} fill="#E3F2FD" opacity={0.6} />
+    <rect x={-90} y={-80} width={180} height={60} rx={8} fill="#0E1621" stroke={OL} strokeWidth={4} />
+    <T x={0} y={-38} s={txt.length > 7 ? 30 : 38} c="#7DF29A">{txt}</T>
+    <ellipse cx={0} cy={50} rx={90} ry={16} fill="#90A4AE" stroke={OL} strokeWidth={3} />
+    <rect x={-6 + 80 * Math.cos(ang * Math.PI / 180)} y={42} width={12} height={16} fill={K.red} opacity={Math.sin(ang * Math.PI / 180) > 0 ? 1 : 0.3} />
+    <T x={0} y={110} s={20} c="#546E7A">kWh</T>
+    {a.label && <T x={0} y={250} s={28}>{a.label}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

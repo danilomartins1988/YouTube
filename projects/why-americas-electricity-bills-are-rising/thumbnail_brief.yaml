@@ -1,0 +1,87 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic meter only (no utility logos).
+title: Why America's Electricity Bills Are Rising
+docs_dir: docs/episodes/35-electricity
+video: output/power_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why is the light bill rising faster than almost everything else?
+  surprising_fact: CPI electricity +34.8% vs all items +22.8% (Sep 2021–Sep 2026, our calc); PJM capacity price $28.92 → $269.92 in one auction
+  subject: a home electricity meter
+  tone: bright
+  metaphor: the bill follows the wires
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - +35%
+  - YOUR POWER BILL
+  claim_basis: 'price: BLS CPI electricity +34.8% Sep 2021 → Sep 2026 (our calculation)'
+  scene:
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#22284A'
+      haze: '#FFE082'
+      key: '#FFF8E1'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: meter
+      x: 1480
+      y: 520
+      s: 0.62
+      text: $$$
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFF8E1'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - GRID PRICE $29
+  - NOW $270
+  claim_basis: 'pjm: PJM capacity price $28.92 (2024/25) → $269.92 per MW-day (2025/26), PJM auction reports'
+  scene:
+    palette:
+      sky0: '#0A1712'
+      sky1: '#1E3D33'
+      haze: '#A5D6A7'
+      key: '#E8F5E9'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: meter
+      x: 480
+      y: 640
+      s: 0.42
+      text: $29
+    after:
+      kind: meter
+      x: 1440
+      y: 640
+      s: 0.42
+      text: $270
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E8F5E9'
+    vignette: 0.5
+    brand: none

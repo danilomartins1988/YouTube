@@ -1,0 +1,43 @@
+# Visual direction for why-americas-electricity-bills-are-rising (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: auction chart + meter (hook), night suburb + meter + state charts (bill), powergrid country (wires), gas hub + screens (fuel), data-center campus + PJM charts + evidence board (data centers), commission + balance (utility deal).
+primary_tone: bright
+secondary_tones:
+- strategy
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Twenty-eight dollars to two hundred and seventy
+  tone: bright
+- chapter: The bill
+  tone: bright
+- chapter: The wires
+  tone: strategy
+- chapter: The fuel paradox
+  tone: strategy
+- chapter: The data center rush
+  tone: bright
+- chapter: The utility deal
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: bright
+  headline: []
+  idea: spinning electricity meter with $; PJM capacity price 28.92 vs 269.92
+requirements:
+- One visual language per part; text mostly on objects or at the top
+- No real utility logos (names in text only); no likeness of real people

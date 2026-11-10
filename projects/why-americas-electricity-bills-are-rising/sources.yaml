@@ -1,0 +1,166 @@
+# Sources and claims for "Why America's Electricity Bills Are Rising" (Episode 35, US batch #08).
+# Every claim was read on its primary page or data file on 2026-11-10 (notes: docs/episodes/35-electricity/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as published (nominal unless said).
+# RULES: EIA 2026 monthly data are preliminary (said); % changes are OUR calculation; the PJM market monitor's data-center
+# share is the monitor's own estimate (attributed); data-center share of US power is the DOE/LBNL estimate; no national
+# average ROE is claimed (California decision used as an example). No logos of real utilities; names in text only.
+sources:
+  - id: epm
+    title: "Electric Power Monthly, Tables 5.3 and 5.6.B (August 2026 data)"
+    publisher: U.S. Energy Information Administration
+    url: https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_3
+    published: "2026-10-23"
+    accessed: "2026-11-10"
+    credit: "EIA"
+  - id: epa
+    title: "Electric Power Annual, Table 2.4 (average price of electricity to ultimate customers)"
+    publisher: U.S. Energy Information Administration
+    url: https://www.eia.gov/electricity/annual/html/epa_02_04.html
+    published: "2026"
+    accessed: "2026-11-10"
+    credit: "EIA"
+  - id: bls
+    title: "CPI-U electricity (CUUR0000SEHF01) and all items (CUUR0000SA0)"
+    publisher: U.S. Bureau of Labor Statistics
+    url: https://data.bls.gov/timeseries/CUUR0000SEHF01
+    published: "2026-10"
+    accessed: "2026-11-10"
+    credit: "BLS"
+  - id: srp
+    title: "Sales, Revenue and Price, Table 5A (2024)"
+    publisher: U.S. Energy Information Administration
+    url: https://www.eia.gov/electricity/sales_revenue_price/xls/table_5A.xlsx
+    published: "2025-10-07"
+    accessed: "2026-11-10"
+    credit: "EIA"
+  - id: tie_grid
+    title: "Today in Energy: utility spending on transmission and distribution (id=63724)"
+    publisher: U.S. Energy Information Administration
+    url: https://www.eia.gov/todayinenergy/detail.php?id=63724
+    published: "2024-11-18"
+    accessed: "2026-11-10"
+    credit: "EIA"
+  - id: tie_infl
+    title: "Today in Energy: retail electricity prices and inflation (id=65284)"
+    publisher: U.S. Energy Information Administration
+    url: https://www.eia.gov/todayinenergy/detail.php?id=65284
+    published: "2025-05-14"
+    accessed: "2026-11-10"
+    credit: "EIA"
+  - id: tie_demand
+    title: "Today in Energy: U.S. electricity demand growth (id=67344) and natural gas (id=67106)"
+    publisher: U.S. Energy Information Administration
+    url: https://www.eia.gov/todayinenergy/detail.php?id=67344
+    published: "2026-03-12"
+    accessed: "2026-11-10"
+    credit: "EIA"
+  - id: doe
+    title: "DOE Releases New Report Evaluating Increase in Electricity Demand from Data Centers"
+    publisher: U.S. Department of Energy
+    url: https://www.energy.gov/articles/doe-releases-new-report-evaluating-increase-electricity-demand-data-centers
+    published: "2024-12-20"
+    accessed: "2026-11-10"
+    credit: "DOE / LBNL"
+  - id: pjm
+    title: "PJM Base Residual Auction reports (2025/26, 2026/27, 2027/28) and press release of Dec 17, 2025"
+    publisher: PJM Interconnection
+    url: https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2025-2026/2025-2026-base-residual-auction-report.pdf
+    published: "2024-07-30"
+    accessed: "2026-11-10"
+    credit: "PJM"
+  - id: imm
+    title: "Market Monitor Report to the PJM Members Committee (July 28, 2026)"
+    publisher: Monitoring Analytics (PJM Independent Market Monitor)
+    url: https://www.monitoringanalytics.com/reports/Presentations/2026/IMM_MC_Market_Monitor_Report_20260728.pdf
+    published: "2026-07-28"
+    accessed: "2026-11-10"
+    credit: "PJM Market Monitor"
+  - id: hh
+    title: "Henry Hub Natural Gas Spot Price (annual)"
+    publisher: U.S. Energy Information Administration
+    url: https://www.eia.gov/dnav/ng/hist/rngwhhda.htm
+    published: "2026-11-04"
+    accessed: "2026-11-10"
+    credit: "EIA"
+  - id: cpuc
+    title: "2025 Senate Bill 695 Report (electric rates and costs) and Decision 25-12-043 (cost of capital)"
+    publisher: California Public Utilities Commission
+    url: https://www.cpuc.ca.gov/-/media/cpuc-website/divisions/office-of-governmental-affairs-division/reports/2025/2025-sb-695-report_093025.pdf
+    published: "2025-09"
+    accessed: "2026-11-10"
+    credit: "CPUC"
+  - id: puct
+    title: "Substantive Rule §25.231, Cost of Service"
+    publisher: Public Utility Commission of Texas
+    url: https://ftp.puc.texas.gov/public/puct-info/agency/rulesnlaws/subrules/electric/25.231/25.231.pdf
+    published: "2024"
+    accessed: "2026-11-10"
+    credit: "Texas PUC"
+
+claims:
+  - id: price
+    text: "EIA Electric Power Annual Table 2.4: US residential average price 12.65¢/kWh (2015), 13.15 (2020), 15.04 (2022), 16.48 (2024), 17.23 (2025). EPM Table 5.3: 18.16¢ (Aug 2026, preliminary), 2026 YTD 18.19¢. Our calculation: 2015→2025 +36%. BLS CPI Sep 2021→Sep 2026: electricity +34.8%, all items +22.8% (our calculation). EIA (May 2025): 'Retail electricity prices have increased faster than the rate of inflation since 2022.'"
+    spoken: about eighteen cents
+    display: "18.2¢/kWh (2026 YTD, prelim.)"
+    fields: {y2015_spoken: about twelve and a half cents, cpi_spoken: almost thirty-five percent, all_spoken: about twenty-three percent}
+    source_ids: [epa, epm, bls, tie_infl]
+    # EPM 5.6.B YTD Aug: Ohio 18.81 vs 16.64, Virginia 16.95 vs 15.00 (≈ +13%, our calculation).
+    status: source_located
+    verification_note: 2026 data preliminary; % changes our calculation.
+
+  - id: bill
+    text: "EIA Table 5A (2024): US residential average 863 kWh per month, 16.48¢/kWh, average monthly bill $142.26; Hawaii $212.12 (42.86¢); California $160.86 (31.97¢); Louisiana $140.96 (11.73¢). EPM Table 5.6.B (YTD Aug 2026, prelim.): Hawaii 46.41¢; California 32.58; North Dakota 12.46; Idaho 13.02; Utah 13.19; Louisiana 13.27; US 18.19."
+    spoken: one hundred and forty-two dollars
+    display: "Avg bill $142.26/month (2024)"
+    source_ids: [srp, epm]
+    status: source_located
+    verification_note: Read in the EIA tables.
+
+  - id: grid
+    text: "EIA (Nov 2024): 'Capital investment in distribution infrastructure increased by $31.4 billion, or 160%, from 2003 to 2023'; distribution spending 'increased by $6.5 billion to a total of $50.9 billion' in 2023; transmission spending 'nearly tripled from 2003 to 2023, increasing to $27.7 billion'; 'Spending to produce electricity fell 24% from 2003 to 2023.'"
+    spoken: one hundred and sixty percent
+    display: "Distribution capex +160% (2003–2023)"
+    source_ids: [tie_grid]
+    status: source_located
+    verification_note: Real 2023 dollars per EIA.
+
+  - id: gas
+    text: "EIA Henry Hub annual: $6.45 (2022), $2.19 (2024), $3.52 (2025) per MMBtu. EIA (Feb 2026): 'natural gas prices set the marginal price of electricity during most hours in most regional markets.' Our calculation: gas −66% 2022→2024 while residential power +9.6%."
+    spoken: six dollars and forty-five cents
+    display: "Henry Hub $6.45 → $2.19 (2022→2024)"
+    source_ids: [hh, tie_demand]
+    status: source_located
+    verification_note: Changes our calculation.
+
+  - id: dc
+    text: "DOE (Dec 2024): 'data centers consumed about 4.4% of total U.S. electricity in 2023 and are expected to consume approximately 6.7 to 12% of total U.S. electricity by 2028'; '58 TWh in 2014 to 176 TWh in 2023'. EIA (Mar 2026): 'Between 2020 and 2025, U.S. electricity demand ... grew about 1.7% annually compared with 0.1% annual growth between 2005 and 2019. Electricity use by data centers is driving the electricity demand growth.' EIA (May 2026): PJM's Dominion zone 'serves the largest concentration of data centers in the world.' EIA (Oct 2026): 'PJM peaked at 162.6 gigawatts (GW) on July 2, 2026'."
+    spoken: four point four percent
+    display: "Data centers 4.4% of US power (2023)"
+    source_ids: [doe, tie_demand]
+    status: source_located
+    verification_note: DOE release of the LBNL report.
+
+  - id: pjm
+    text: "PJM Base Residual Auctions, RTO clearing price ($/MW-day): $28.92 (2024/25); $269.92 (2025/26; 'total cost to load ... $14.7 billion'); $329.17 cap (2026/27, $16.1B); $333.44 (2027/28, $16.4B). PJM (Dec 17, 2025): 'this auction leaves no doubt that data centers' demand for electricity continues to far outstrip new supply'; 'Nearly 5,100 MW of that increase is attributable to data center demand.' PJM Market Monitor (Jul 28, 2026): over the last four auctions '$29.4B, or 46.2 percent' of capacity charges resulted from data center load (monitor's estimate)."
+    spoken: twenty-eight dollars and ninety-two cents
+    display: "PJM capacity $28.92 → $269.92/MW-day"
+    fields: {jump_spoken: two hundred and sixty-nine dollars and ninety-two cents}
+    source_ids: [pjm, imm]
+    status: source_located
+    verification_note: Monitor's share is its own estimate, attributed.
+
+  - id: model
+    text: "Texas PUC §25.231: 'The two components of cost of service are allowable expenses and return on invested capital.' 'The return on invested capital is the rate of return times invested capital.' CPUC SB 695 report: rate base assets are those 'for which they may earn a profit. Other things being equal, a larger rate base results in higher net income for utilities'; fuel and purchased power 'are pass-through expenses; the utility receives no mark up or profit on these costs.' CPUC D.25-12-043: 'A Test Year 2026 ROE of 9.98% ... for PG&E'."
+    spoken: nine point nine eight percent
+    display: "PG&E authorized ROE 9.98% (2026)"
+    source_ids: [puct, cpuc]
+    status: source_located
+    verification_note: California example; no national average claimed.
+
+  - id: wildfire
+    text: "CPUC SB 695 report (Sep 2025): 'Wildfire-related revenue requirement in 2024 made up about 27 percent of PG&E's total revenue requirement'; wildfire costs 'authorized for recovery between 2019 and 2024 are approximately $40 billion'."
+    spoken: about forty billion dollars
+    display: "CA wildfire costs ≈ $40bn (2019–2024)"
+    source_ids: [cpuc]
+    status: source_located
+    verification_note: Read in the CPUC report.
