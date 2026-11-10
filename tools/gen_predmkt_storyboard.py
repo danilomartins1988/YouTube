@@ -145,7 +145,7 @@ stage("s16_poly", "m2_poly", {
 stage("s17_spread", "m2_spread", {
     "zones": [Z("exchange", night=True)], "worldW": 2400, "night": True,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("And Kalshi has said"), "x": 1250, "y": 520, "zoom": 1.0, "dur": 1.6}], "drift": 2,
-    "items": [it("tradescreen", x=800, y=420, at=0.3, scale=0.8, price=[[0, 48], [3, 52], [6, 49], [9, 53], [12, 50]], max=100, min=0, suffix="¢"),
+    "items": [it("tradescreen", x=800, y=420, at=0.3, scale=0.8, price=[[0, 48], [3, 52], [6, 49], [9, 53], [12, 50]], max=100, min=0, suffix="¢", text="ONE CONTRACT · YES PRICE (ILLUSTRATION)"),
               it("letters", x=1000, y=110, text="MARKET MAKERS: 'COLLECTING THE SPREAD'", at=C("make money by collecting"), size=44, color="gold"),
               it("sign", x=1550, y=300, text="A KALSHI AFFILIATE TRADES TOO", at=C("And Kalshi has said"), color="#FFE0B2", size=32),
               it("sign", x=1550, y=400, text="YOUR OTHER SIDE MAY BE A PRO", at=C("may be a professional"), color="#FFCDD2", size=32)]},

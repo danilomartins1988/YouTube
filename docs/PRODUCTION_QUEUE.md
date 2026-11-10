@@ -84,4 +84,4 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 | N7 | Why the Post Office Keeps Losing Billions (retitled: FY2026 loss $6.5bn) | **In production** (Ep 47, `docs/episodes/47-post-office`) |
 | N8 | Alaska: The State That Pays You to Live There | **In production** (Ep 48, `docs/episodes/48-alaska-dividend`) |
 | N9 | College Sports Just Got a $20.5 Million Payroll | **In production** (Ep 49, `docs/episodes/49-college-sports`) |
-| N10 | MF Global: The $1.6 Billion That Vanished | Research done (Ep 50) |
+| N10 | MF Global: The $1.6 Billion That Vanished | **In production** (Ep 50, `docs/episodes/50-mf-global`) |

@@ -1,0 +1,45 @@
+# Visual direction for mf-global-the-billion-dollars-that-vanished (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: financial district at night + farm (hook), farm + glass box of segregated money (the firm),
+# exchange floor + office (the bet), district at night + vault + court (the last week), Senate + farm (missing money),
+# court + office + watched glass box (aftermath).
+primary_tone: reflective
+secondary_tones:
+- strategy
+- bright
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: One point six billion
+  tone: strategy
+- chapter: The firm
+  tone: bright
+- chapter: The bet
+  tone: strategy
+- chapter: The last week
+  tone: reflective
+- chapter: The missing money
+  tone: reflective
+- chapter: The aftermath
+  tone: bright
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: reflective
+  headline: []
+  idea: a cracked glass box of customer money, half empty; $1.6 billion missing (trustee)
+requirements:
+- No company logos; no likeness of real people (names in text only)
+- Shortfall figures labelled by source; Corzine civil settlement stated exactly (no admission or denial; not criminally charged)

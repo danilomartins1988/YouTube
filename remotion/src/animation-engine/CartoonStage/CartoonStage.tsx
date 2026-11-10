@@ -3575,9 +3575,35 @@ const bench: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A glass box of segregated customer money: coins inside, a padlock; `label` on the plate; `crackAt` cracks the glass,
+ *  `drainAt` lowers the coin level to `drainTo` (0..1); `watchAt` adds a camera watching it; `fill` 0..1 initial level. */
+const glassbox: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f - 240), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const W = 420, H = 320, crack = a.crackAt !== undefined && t >= a.crackAt;
+  const d = a.drainAt !== undefined ? clamp((t - a.drainAt) / 2.5) : 0, lv = (a.fill ?? 0.8) * (1 - d * (1 - (a.drainTo ?? 0.3)));
+  const rows = Math.round(6 * lv), out: React.ReactNode[] = [];
+  for (let r = 0; r < rows; r++) for (let k = 0; k < 7; k++) out.push(<ellipse key={r + '-' + k} cx={-W / 2 + 40 + k * 56 + (r % 2) * 20} cy={H / 2 - 30 - r * 44} rx={24} ry={12} fill="#FFC21A" stroke={OL} strokeWidth={3} />);
+  return <g key={'gb' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-W / 2 - 20} y={H / 2} width={W + 40} height={40} rx={8} fill="#546E7A" stroke={OL} strokeWidth={5} />
+    {out}
+    <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={10} fill="#B3E5FC" opacity={0.35} stroke={OL} strokeWidth={6} />
+    <path d={`M ${-W / 2 + 30} ${-H / 2 + 20} L ${-W / 2 + 90} ${-H / 2 + 120}`} stroke="#FFFFFF" strokeWidth={8} opacity={0.6} strokeLinecap="round" />
+    {crack && <path d={`M 40 ${-H / 2} L 10 -60 L 60 -20 L 20 40 L 70 90 M 10 -60 L -40 -30 M 60 -20 L 120 -50`} fill="none" stroke="#FFFFFF" strokeWidth={6} />}
+    {crack && <path d={`M 40 ${-H / 2} L 10 -60 L 60 -20 L 20 40 L 70 90`} fill="none" stroke={OL} strokeWidth={2} />}
+    <g transform={`translate(0 ${-H / 2 - 30})`}><path d="M -28 0 L -28 -26 A 28 28 0 0 1 28 -26 L 28 0" fill="none" stroke="#90A4AE" strokeWidth={10} />
+      <rect x={-40} y={-4} width={80} height={60} rx={10} fill={crack ? '#E53935' : '#FFC21A'} stroke={OL} strokeWidth={5} /></g>
+    <rect x={-W / 2 + 40} y={H / 2 + 50} width={W - 80} height={46} rx={8} fill="#1B1F27" />
+    <T x={0} y={H / 2 + 82} s={26} c="#FFFFFF">{a.label || 'CUSTOMER MONEY'}</T>
+    {a.watchAt !== undefined && t >= a.watchAt && <g transform={`translate(${W / 2 + 60} ${-H / 2 - 40}) rotate(${20 + Math.sin(t * 1.5) * 10})`}>
+      <rect x={-50} y={-24} width={100} height={48} rx={8} fill="#ECEFF1" stroke={OL} strokeWidth={4} /><circle cx={-50} cy={0} r={14} fill="#1B1F27" />
+      <circle cx={46} cy={-14} r={6} fill={Math.sin(t * 6) > 0 ? '#E53935' : '#7F0000'} /></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

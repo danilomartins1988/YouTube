@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: 'MF Global: The $1.6 Billion That Vanished'
+docs_dir: docs/episodes/50-mf-global
+video: output/mfglobal_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How does customer money vanish from a regulated firm?
+  surprising_fact: About $1.6bn of customer money missing when MF Global collapsed in Oct 2011 (trustee)
+  subject: a cracked vault
+  tone: reflective
+  metaphor: a broken glass box
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $1.6 BILLION
+  - VANISHED
+  claim_basis: 'gap: approximately $1.6bn customer shortfall (SIPA trustee, Jun 2012; House report)'
+  scene:
+    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: vault, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'MISSING: $1.6BN'
+  - 'RETURNED: $6.7BN'
+  claim_basis: 'shortfall ≈ $1.6bn (trustee); $6.7bn distributed to customers by Apr 2014 (trustee)'
+  scene:
+    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: vault, x: 480, y: 650, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none
