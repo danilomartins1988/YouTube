@@ -682,6 +682,33 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#5A4A33' : '#C9A86A'} />
     </g>;
   },
+  /** A granite bullion depository (generic, Fort Knox-like): two-storey stone block with columns of narrow windows, a
+   *  central entrance with an eagle-less pediment, a guard box, a double fence and green Kentucky hills. `night` = floodlit. */
+  depository: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, cx = z.x0 + w * 0.5;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#1C2340' : '#BFE6FA'} />
+      {night && <circle cx={cx + 700} cy={f - 700} r={50} fill="#FFF3C4" opacity={0.9} />}
+      <path d={`M ${z.x0} ${f - 240} ${Array.from({length: Math.ceil(w / 700) + 1}, (_, k) => `Q ${z.x0 + k * 700 + 350} ${f - 330 - 50 * rnd(k)} ${z.x0 + k * 700 + 700} ${f - 240}`).join(' ')} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill={night ? '#2E4A33' : '#7CB342'} stroke={OL} strokeWidth={4} />
+      <g transform={`translate(${cx} ${f})`}>
+        <rect x={-560} y={-460} width={1120} height={460} fill={night ? '#9FA5AE' : '#D7D2C8'} stroke={OL} strokeWidth={6} />
+        <rect x={-600} y={-500} width={1200} height={50} fill={night ? '#8A9099' : '#C6C0B4'} stroke={OL} strokeWidth={6} />
+        {Array.from({length: 10}, (_, k) => { const x = -520 + k * 110; if (Math.abs(x + 25) < 170) return null;
+          return <g key={k}>{[0, 1].map((r) => <rect key={r} x={x} y={-420 + r * 200} width={44} height={130} fill={night ? '#FFE08A' : '#5D6B7A'} stroke={OL} strokeWidth={4} />)}</g>; })}
+        <rect x={-180} y={-560} width={360} height={560} fill={night ? '#B0B6BF' : '#E4DFD5'} stroke={OL} strokeWidth={6} />
+        <path d="M -200 -560 L 0 -640 L 200 -560 Z" fill={night ? '#9FA5AE' : '#CFC9BE'} stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+        <rect x={-70} y={-230} width={140} height={230} fill="#3E4A57" stroke={OL} strokeWidth={6} />
+        {[-130, 130].map((x) => <rect key={x} x={x - 14} y={-500} width={28} height={500} fill={night ? '#C9CED6' : '#F1EDE5'} stroke={OL} strokeWidth={4} />)}
+        <T x={0} y={-500} s={34} c={OL}>BULLION DEPOSITORY</T>
+      </g>
+      <g transform={`translate(${cx - 900} ${f})`}><rect x={-60} y={-200} width={120} height={200} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+        <rect x={-40} y={-170} width={80} height={60} fill={night ? '#FFE08A' : '#90CAF9'} stroke={OL} strokeWidth={4} /><path d="M -80 -200 L 0 -250 L 80 -200 Z" fill="#78909C" stroke={OL} strokeWidth={5} /></g>
+      {[0, 1].map((r) => <g key={'fn' + r}><rect x={z.x0} y={f - 120 + r * 50} width={w} height={6} fill="#90A4AE" />
+        {Array.from({length: Math.ceil(w / 120)}, (_, k) => <rect key={k} x={z.x0 + k * 120 + r * 40} y={f - 140 + r * 50} width={8} height={90} fill="#78909C" />)}</g>)}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3A4A3A' : '#8BC34A'} />
+      <rect x={cx - 120} y={f} width={240} height={600} fill={night ? '#6B6F75' : '#BDBDBD'} />
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -3281,9 +3308,23 @@ const eggcarton: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A pyramid of gold bars (`rows`), each bar a trapezoid with a shine; optional `tag` price label in front. */
+const bars: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 700), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const rows = a.rows ?? 4, out: React.ReactNode[] = [];
+  for (let r = 0; r < rows; r++) { const n = rows - r;
+    for (let k = 0; k < n; k++) { const bx = (k - (n - 1) / 2) * 150, by = -r * 62;
+      out.push(<g key={r + '-' + k} transform={`translate(${bx} ${by})`}><path d="M -70 0 L 70 0 L 52 -56 L -52 -56 Z" fill="#F4C430" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+        <path d="M -50 -48 L 50 -48 L 42 -36 L -42 -36 Z" fill="#FFE58A" /><path d="M 52 -56 L 70 0" stroke="#C99A00" strokeWidth={6} /></g>); } }
+  return <g transform={`translate(${x} ${y}) scale(${s})`} key={i}>{out}
+    {a.tag && <g transform="translate(0 50)"><rect x={-150} y={-36} width={300} height={72} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
+      <T x={0} y={14} s={42} c={OL}>{a.tag}</T></g>}</g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

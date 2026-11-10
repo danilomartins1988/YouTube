@@ -1,0 +1,88 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic gold bars only (no seals or logos).
+title: America's $1 Trillion of Gold Is Booked at $11 Billion
+docs_dir: docs/episodes/43-gold-reserve
+video: output/gold_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why is a trillion dollars of gold booked at eleven billion?
+  surprising_fact: Book value $11.04bn at $42.22/oz (Treasury) vs ≈ $1.0tn at the Sept 30, 2025 price (OIG; our calc)
+  subject: gold bars
+  tone: bright
+  metaphor: a 1973 price tag on a trillion-dollar pile
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $1 TRILLION
+  - BOOKED AT $11B
+  claim_basis: 'book + market: $11.04bn book value (Treasury, Oct 2026); ≈ $1.0tn at Sept 30, 2025 LBMA PM (OIG; our calc)'
+  scene:
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#1E2A4A'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ingots
+      x: 1480
+      y: 560
+      s: 0.75
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'BOOKS: $11B'
+  - 'MARKET: $1T'
+  claim_basis: 'book vs market value (Treasury; OIG price Sept 30, 2025; our calc)'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: OFFICIAL PRICE
+      amount: $42.22/OZ
+      magnifier: false
+      rot: -4
+    after:
+      kind: ingots
+      x: 1440
+      y: 640
+      s: 0.6
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

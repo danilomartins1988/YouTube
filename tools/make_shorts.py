@@ -69,6 +69,7 @@ SHORTS = {
     "38-airports": ("why-americas-airports-make-money-before-you-fly", "documentary", "airports_documentary", "$6.9 BILLION", "FROM PARKING", "US Airports Made $6.9 Billion From Parking in One Year", "#airports #travel #usa"),
     "39-visa-mastercard": ("how-visa-and-mastercard-became-financial-gatekeepers", "documentary", "visamc_documentary", "355 BILLION", "PAYMENTS A YEAR", "How Two Bank Clubs Became Visa and Mastercard", "#visa #mastercard #finance"),
     "40-grocery": ("the-hidden-business-behind-americas-grocery-prices", "documentary", "grocery_documentary", "11.8 CENTS", "TO THE FARM", "Only 11.8 Cents of Your Food Dollar Reaches the Farm", "#groceries #food #usa"),
+    "43-gold-reserve": ("americas-trillion-dollar-gold-booked-at-11-billion", "documentary", "gold_documentary", "$11 BILLION", "ON THE BOOKS", "America's Gold Is Booked at Just $11 Billion", "#gold #fortknox #usa"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 

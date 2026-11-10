@@ -1,0 +1,281 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations and the valuation date are said as such.
+logline: The United States holds about eight thousand tonnes of gold, and its own books value it at about eleven billion
+  dollars. At market prices it was worth about one trillion. Why a 1973 price tag survives, and what would happen if it changed.
+title: America's $1 Trillion of Gold Is Booked at $11 Billion
+segments:
+- id: h_open
+  chapter: Eleven billion dollars
+  narration: Eleven billion dollars. That is what the United States government says its gold is worth, on its own official
+    books.
+  claims:
+  - book
+- id: h_twist
+  chapter: Eleven billion dollars
+  narration: But at the market price of gold at the end of September twenty twenty-five, the very same gold was worth, by
+    our calculation, {{market}}. Nearly a hundred times more. Same bars, same vaults.
+  claims:
+  - market
+- id: h_question
+  chapter: Eleven billion dollars
+  narration: So why does the world's biggest economy still value its gold like it is nineteen seventy-three?
+  claims:
+  - price
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: Eleven billion dollars
+  narration: By the end of this video, you will know where that gold really sits, why it still carries a price from the seventies,
+    who checks that it is really there, and what could happen if someone rewrote the price.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The pile
+  narration: ''
+  claims: []
+- id: m1_total
+  chapter: The pile
+  narration: Start with the pile itself. According to the Treasury, the government owns about {{book.oz_spoken}} of gold. By
+    our calculation, that is {{book.tons_spoken}}. And the number has barely moved in decades. A congressional audit
+    office counted almost exactly the same amount in twenty ten.
+  claims:
+  - book
+- id: m1_where
+  chapter: The pile
+  narration: Most of it is not where you might think. Fort Knox, in Kentucky, holds about fifty-six percent. West Point, in
+    New York, about twenty-one percent. The Mint in Denver, about seventeen percent. And about five percent sits in a vault
+    under the Federal Reserve Bank of New York.
+  claims:
+  - book
+- id: m1_deep
+  chapter: The pile
+  narration: Almost all of it sits in what the Mint calls deep storage, sealed vaults that are not touched for daily work.
+    The Treasury's inspector general notes that the Mint did not use any of that deep storage gold to make coins in twenty
+    twenty-four or twenty twenty-five. The gold is not inventory. It is a reserve that simply sits there, year after year.
+  claims:
+  - audits
+  - book
+- id: m1_ny
+  chapter: The pile
+  narration: The New York slice is small, but not trivial. Inspectors counted about thirteen and a half million ounces held
+    by the Federal Reserve Banks, almost all of it in the New York vault. At the market price of September twenty twenty-five,
+    that slice alone was worth about fifty-one billion dollars, more than four times the official value of all the gold combined.
+  claims:
+  - market
+  - book
+- id: m1_owner
+  chapter: The pile
+  narration: Here is a detail that surprises a lot of people. The Federal Reserve, America's central bank, does not own any
+    of this gold. In its own words, the Federal Reserve does not own gold. The owner is the Treasury. The Fed only holds a
+    small part of it for safekeeping.
+  claims:
+  - certs
+- id: m1_draw
+  chapter: The pile
+  narration: Let me draw where the gold sits. Here is the whole stack, two hundred and sixty-one million ounces. Fort Knox takes
+    the biggest bar. Then West Point. Then Denver. And a thin slice in New York. More than half of America's gold sits behind
+    one set of doors in Kentucky.
+  claims:
+  - book
+  analysis: true
+  source_note: Bar diagram of the Treasury line items (shares our calculation).
+- id: m1_transition
+  chapter: The pile
+  narration: So the gold is real, and it is enormous. The strange part is the price written next to it.
+  claims:
+  - price
+- id: m2_card
+  chapter: The price tag
+  narration: ''
+  claims: []
+- id: m2_history
+  chapter: The price tag
+  narration: For a long time, the dollar was defined in gold. From nineteen hundred, an ounce was worth twenty dollars and
+    sixty-seven cents. In nineteen thirty-four, the government raised it to thirty-five dollars an ounce. That one change
+    cut the gold value of the dollar to about fifty-nine percent of what it had been.
+  claims:
+  - price
+- id: m2_law
+  chapter: The price tag
+  narration: Then came two laws in quick succession. In March nineteen seventy-two, Congress set the price at thirty-eight
+    dollars. And in September nineteen seventy-three, it raised it one last time, to forty-two and two-ninths dollars. That
+    is {{price}} an ounce. The same law also started to end the ban on Americans owning gold.
+  claims:
+  - price
+- id: m2_frozen
+  chapter: The price tag
+  narration: And then, nothing. The market price of gold went its own way, but the official price never moved again. It is
+    still written into federal law today. Every ounce in Fort Knox is booked at forty-two dollars and twenty-two cents.
+  claims:
+  - price
+  - book
+- id: m2_draw
+  chapter: The price tag
+  narration: Let me draw two prices on the same chart. The official price climbs in small steps, then goes flat after nineteen
+    seventy-three. The market price leaves it behind. At the end of September twenty twenty-five, the market paid about {{market.price_spoken}}
+    an ounce. By our calculation, that is {{market.ratio_spoken}} the official price.
+  claims:
+  - price
+  - market
+  analysis: true
+  source_note: Two-line chart (official price from the statutes; market price as cited by Treasury OIG).
+- id: m2_transition
+  chapter: The price tag
+  narration: Why would anyone keep such an old number? Because that number is not just a label. It is tied to real money at
+    the central bank.
+  claims:
+  - certs
+- id: m3_card
+  chapter: The paper gold
+  narration: ''
+  claims: []
+- id: m3_1934
+  chapter: The paper gold
+  narration: In nineteen thirty-four, the Gold Reserve Act made the Federal Reserve hand all its gold to the Treasury. In
+    return, the Fed received gold certificates. They are written in dollars, and they cannot be swapped back for gold.
+  claims:
+  - certs
+- id: m3_how
+  chapter: The paper gold
+  narration: The Congressional Research Service explains the trick. The Treasury monetized the gold by issuing those certificates
+    to the Fed, and the Fed put the money into the Treasury's own bank account. But there is a limit. The certificates can
+    never be worth more than the gold's official value.
+  claims:
+  - certs
+- id: m3_numbers
+  chapter: The paper gold
+  narration: That is why the numbers match so closely. The Federal Reserve's weekly balance sheet shows a gold stock of about
+    eleven billion dollars, and a gold certificate account of {{certs}}. The gold has already been turned into money, at the
+    nineteen seventy-three price.
+  claims:
+  - certs
+- id: m3_draw
+  chapter: The paper gold
+  narration: Let me draw the loop. Here is the Treasury, with the gold. Here is the Federal Reserve. The Treasury sends certificates
+    to the Fed. The Fed sends dollars back into the Treasury's account. The gold itself never moves. Only the paper and the
+    money do.
+  claims:
+  - certs
+  analysis: true
+  source_note: Diagram of the certificate mechanism described by CRS and the Fed.
+- id: m3_transition
+  chapter: The paper gold
+  narration: Of course, all of this only works if the gold is really there. So who checks?
+  claims:
+  - audits
+- id: m4_card
+  chapter: Who checks the vault
+  narration: ''
+  claims: []
+- id: m4_1974
+  chapter: Who checks the vault
+  narration: In nineteen seventy-four, after questions in Congress, the Government Accountability Office helped plan an audit
+    of Fort Knox. Auditors checked {{audits}} vault compartments, and found no differences. The next year, the Treasury set
+    up a permanent committee to keep auditing the gold.
+  claims:
+  - audits
+- id: m4_today
+  chapter: Who checks the vault
+  narration: By nineteen eighty-six, about ninety-two percent of the gold had been audited. And since nineteen ninety-five,
+    the Treasury's inspector general has audited the gold in deep storage every single year, checking the seals on all forty-two
+    compartments. Its latest report gave the Mint a clean opinion.
+  claims:
+  - audits
+- id: m4_visit
+  chapter: Who checks the vault
+  narration: Official visits make the news. In August twenty seventeen, Treasury Secretary Steven Mnuchin flew to Fort Knox with Senate leader
+    Mitch McConnell. The trip fell on the day of a solar eclipse, and the inspector general looked into it. It found no indication that the date was chosen for the eclipse. The plane cost about {{audits.cost_spoken}}.
+  claims:
+  - audits
+- id: m4_bill
+  chapter: Who checks the vault
+  narration: Some lawmakers still want more. In twenty twenty-five, a House bill proposed a full independent audit of all the
+    gold, every five years. It is a proposal. As far as the official record we could check, it has not become law.
+  claims:
+  - reval
+- id: m4_draw
+  chapter: Who checks the vault
+  narration: Let me draw the vault. Forty-two compartments, each one sealed. Every year, inspectors check the seals. Once in
+    a while, a compartment is opened and the bars are counted and tested. Trust, but verify, one door at a time.
+  claims:
+  - audits
+  analysis: true
+  source_note: Diagram of the audit routine described by GAO and the OIG.
+- id: m4_transition
+  chapter: Who checks the vault
+  narration: Which brings us to the most tempting idea of all. What if the government simply updated the price?
+  claims:
+  - reval
+- id: m5_card
+  chapter: Rewriting the price
+  narration: ''
+  claims: []
+- id: m5_idea
+  chapter: Rewriting the price
+  narration: On paper, the gap is huge. Booked at the market price of September twenty twenty-five, the gold would jump from
+    about eleven billion dollars to about one trillion. The Congressional Research Service notes that changing the official
+    value would monetize or demonetize gold through those certificates at the Fed.
+  claims:
+  - reval
+  - market
+- id: m5_bitcoin
+  chapter: Rewriting the price
+  narration: Some proposals go further. A Senate bill introduced in twenty twenty-five, the BITCOIN Act, would have the Treasury
+    issue new gold certificates at fair market value, partly to help fund a national bitcoin reserve. Again, a proposal,
+    not law.
+  claims:
+  - reval
+- id: m5_catch
+  chapter: Rewriting the price
+  narration: Here is the catch. Revaluing the gold does not create a single new ounce. It changes a number on a page, and lets
+    the government turn that number into fresh money at the central bank. Supporters see a hidden asset. Critics see printing
+    money with extra steps. Either way, the gold in Kentucky stays exactly where it is.
+  claims:
+  - reval
+  analysis: true
+  source_note: Commentary on the mechanism described by CRS; both views stated.
+- id: m5_world
+  chapter: Rewriting the price
+  narration: And it is a lot of gold. According to World Gold Council figures, based on IMF data, China holds around two thousand
+    three hundred and eighty-seven tonnes, and Russia about two thousand two hundred and seventy. By our calculation, the United
+    States holds {{world}} as much as China.
+  claims:
+  - world
+- id: m5_buyers
+  chapter: Rewriting the price
+  narration: And other countries are still buying. According to the World Gold Council, central banks around the world bought
+    about one hundred and seventy tonnes in the first eight months of twenty twenty-six, with Poland alone adding ninety-eight
+    tonnes. America's own total has barely changed since at least twenty ten. It simply keeps the pile, and keeps
+    the old price.
+  claims:
+  - world
+- id: m5_draw
+  chapter: Rewriting the price
+  narration: Let me draw the two balance sheets. On the left, the gold at forty-two dollars, a small brick. On the right, the
+    same gold at the market price, a tower. The bars are identical. Only the price tag changed.
+  claims:
+  - market
+  - book
+  analysis: true
+  source_note: Comparison of book vs market value (our calculation).
+- id: payoff
+  chapter: The lesson
+  narration: So why is America's trillion dollars of gold booked at eleven billion? Because a price written into law in nineteen
+    seventy-three still sets how much money that gold can be turned into. The gold is real, it is audited, and it barely moves.
+    The only thing that is out of date is the price tag. And whoever gets to rewrite it gets to create a lot of money.
+  claims:
+  - book
+  - price
+  - reval
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
