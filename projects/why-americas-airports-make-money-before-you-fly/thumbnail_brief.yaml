@@ -1,0 +1,92 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic cars only (no airport or airline logos).
+title: Why America's Airports Make Money Before You Fly
+docs_dir: docs/episodes/38-airports
+video: output/airports_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How does an airport earn money before anyone boards a plane?
+  surprising_fact: U.S. airports earned $6.9bn from parking and ground transportation in FY2025, more than the $5.5bn in passenger airline landing fees (FAA CATS)
+  subject: a parked car
+  tone: bright
+  metaphor: The airport is a landlord with a giant garage
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $6.9B
+  - AIRPORT PARKING
+  claim_basis: 'parking: parking and ground transportation revenue $6.9bn, FY2025 (FAA CATS)'
+  scene:
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#1E2A4A'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: sedan
+      x: 1450
+      y: 620
+      s: 0.9
+      color: '#E53935'
+      sticker: $/DAY
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'PARKING: $6.9B'
+  - 'LANDING: $5.5B'
+  claim_basis: 'parking vs landing fees: $6.9bn vs $5.5bn, FY2025 (FAA CATS)'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: LANDING FEES
+      amount: $5.5B
+      magnifier: false
+      rot: -4
+    after:
+      kind: sedan
+      x: 1440
+      y: 660
+      s: 0.7
+      color: '#1E88E5'
+      sticker: PARKING
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

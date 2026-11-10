@@ -58,7 +58,7 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | 09 | The Bank That Accidentally Sent $900 Million | Already scheduled (top-10 #4); produced once |
 | 10 | Why Your Car Insurance Keeps Getting More Expensive | **Delivered** (Ep 36, 11:27, QC 0 errors; retitled "Why Your Car Insurance Got So Expensive": prices now falling y/y) |
 | 11 | The Hidden Economics of Amazon Prime | **Delivered** (Ep 37, 11:11, QC 0 errors) |
-| 12 | Why America's Airports Make Money Before You Fly | Approved, queued |
+| 12 | Why America's Airports Make Money Before You Fly | **In production** (Ep 38, `docs/episodes/38-airports`) |
 | 13 | The Day Oil Was Worth Less Than Nothing | Already scheduled (top-10 #10); produced once |
 | 14 | The Streaming App That Burned $1.75 Billion | Already in production (Ep 19, Quibi); title corrected for accuracy |
 | 15 | How One Company Made Diamonds a Symbol of Love | Already scheduled (top-10 #7); produced once |

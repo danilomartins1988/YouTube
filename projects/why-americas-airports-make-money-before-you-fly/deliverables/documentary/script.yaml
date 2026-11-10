@@ -1,0 +1,267 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations are said as such.
+logline: America's airports earned six point nine billion dollars from parking and ground transportation in a year, more
+  than airlines paid in landing fees. How an airport makes money before your plane leaves the ground.
+title: Why America's Airports Make Money Before You Fly
+segments:
+- id: h_open
+  chapter: Six point nine billion dollars
+  narration: Six point nine billion dollars. That is how much America's airports earned in a single year from parking and
+    ground transportation. More than passenger airlines paid them to land their planes.
+  claims:
+  - parking
+- id: h_twist
+  chapter: Six point nine billion dollars
+  narration: Think about what that means. Before your plane even leaves the ground, the airport has already been paid. For
+    your parking spot. Through a charge hidden in your ticket. In rent from the airline. And for the coffee you bought at
+    the gate.
+  claims:
+  - parking
+  - pfc
+  analysis: true
+  source_note: Framing of the revenue streams detailed below.
+- id: h_question
+  chapter: Six point nine billion dollars
+  narration: So who actually owns these giant machines, and how do they make their money?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: Six point nine billion dollars
+  narration: By the end of this video, you will know the four ways an airport gets paid. Your ticket, the airlines, your
+    car, and the terminal itself.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: Who owns the airport
+  narration: ''
+  claims: []
+- id: m1_owners
+  chapter: Who owns the airport
+  narration: Start with a surprise. Most big American airports are not companies. According to the Government Accountability
+    Office, many are owned by states, counties, cities or public authorities. And when they take federal grants, they promise
+    to run the airport to be as self-sustaining as possible, and to spend the airport's money on the airport.
+  claims:
+  - owners
+- id: m1_size
+  chapter: Who owns the airport
+  narration: That is a big business. According to the Federal Aviation Administration's financial reports, the airports
+    that have reported so far earned at least {{mix}} in operating revenue in twenty twenty-five. They also carried about
+    {{mix.debt_spoken}} of debt, money borrowed to build terminals, runways and garages. And they counted almost a billion
+    passenger boardings, nine hundred and ninety-six million, in a single year.
+  claims:
+  - mix
+- id: m1_traffic
+  chapter: Who owns the airport
+  narration: And the customers keep coming. Airlines carried {{traffic.bts_spoken}} passengers to, from and within the United
+    States in twenty twenty-five. On November thirtieth, twenty twenty-five, the TSA screened more than {{traffic}} people
+    in a single day, the highest number in its records.
+  claims:
+  - traffic
+- id: m1_draw
+  chapter: Who owns the airport
+  narration: Let me draw how an airport is built. Here is the city or authority that owns it. It borrows money with bonds.
+    It builds a terminal and runways. Then it collects money from everyone who uses them, and uses that money to pay back
+    the debt. A public owner, run like a business.
+  claims:
+  - owners
+  - mix
+  analysis: true
+  source_note: Diagram of the public-owner finance model (commentary).
+- id: m1_transition
+  chapter: Who owns the airport
+  narration: The first payment starts before you even arrive. It is hidden in the price of your ticket.
+  claims: []
+- id: m2_card
+  chapter: The ticket
+  narration: ''
+  claims: []
+- id: m2_pfc
+  chapter: The ticket
+  narration: It is called the passenger facility charge. Airports can add up to {{pfc}} for each flight segment you take
+    from them, up to eighteen dollars on a round trip. The airport keeps it, to pay for projects like new gates and runways.
+    The cap was last raised in two thousand, from three dollars.
+  claims:
+  - pfc
+- id: m2_total
+  chapter: The ticket
+  narration: Small amounts, multiplied by hundreds of millions of passengers. In twenty twenty-five, these charges raised
+    about three point eight five billion dollars. Since the program began in the nineteen nineties, they have raised {{pfc.total_spoken}}.
+    Every large airport now charges the maximum.
+  claims:
+  - pfc
+- id: m2_taxes
+  chapter: The ticket
+  narration: And that is only one of the extras. There is a federal ticket tax of seven point five percent, a segment fee
+    of five dollars and thirty cents per flight, and a security fee of five dollars and sixty cents per one-way trip. By our
+    calculation, on a three hundred dollar round trip with a connection each way, all of these add up to about {{taxes}}.
+    Even on a nonstop round trip, it is about fifty-three dollars. Only the facility charge goes to the airport.
+  claims:
+  - taxes
+- id: m2_fight
+  chapter: The ticket
+  narration: Airports want more. Their industry group argues that inflation has eaten away at the four fifty charge, and
+    that it should rise to twelve dollars per passenger. The same group estimates that America's airports need about one
+    hundred and seventy-four billion dollars of new investment over the next five years. That is the airports' own estimate.
+    For now, the cap set in two thousand still stands.
+  claims:
+  - pfc
+- id: m2_draw
+  chapter: The ticket
+  narration: Let me draw your ticket. Here is the fare the airline sets. On top, the ticket tax. Then the segment fees. Then
+    the security fee. And here, a thin slice, the facility charge that goes straight to the airport. The price you see on
+    the screen is many prices stacked together.
+  claims:
+  - taxes
+  analysis: true
+  source_note: Stacked-bar diagram of the example (our calculation).
+- id: m2_transition
+  chapter: The ticket
+  narration: The second payment comes from the airlines themselves. And it is the biggest of all.
+  claims:
+  - mix
+- id: m3_card
+  chapter: The landlord
+  narration: ''
+  claims: []
+- id: m3_aero
+  chapter: The landlord
+  narration: An airport is a landlord. Airlines rent gates, counters and offices, and pay a fee every time a plane lands.
+    In twenty twenty-five, landing fees from passenger airlines brought in about {{parking.landing_spoken}}. Terminal rents
+    and fees brought in almost nine billion more. All the aviation charges together came to about nineteen point three billion
+    dollars, more than half of operating revenue, by our calculation.
+  claims:
+  - mix
+  - parking
+- id: m3_cpe
+  chapter: The landlord
+  narration: Airports measure this as the cost per enplaned passenger, what airlines pay the airport for every passenger
+    who boards. In twenty twenty-five, across the airports that reported, it averaged about fifteen dollars and seventy-six
+    cents. A cost that, one way or another, ends up in the price of your ticket.
+  claims:
+  - mix
+  analysis: true
+  source_note: CPE from CATS; last sentence is commentary.
+- id: m3_lax
+  chapter: The landlord
+  narration: Look at Los Angeles International. Its biggest source of revenue in its last financial year was terminal rent,
+    about nine hundred and thirty-five million dollars. Second came landing fees, about three hundred and sixty-nine million.
+    By our calculation, aviation charges made up about three quarters of the airport's operating revenue. The airlines are
+    the anchor tenants of the whole operation.
+  claims:
+  - lax
+- id: m3_draw
+  chapter: The landlord
+  narration: Let me draw the lease. The airport builds the terminal. The airline rents the gate. Every landing pays a fee.
+    And in many airports, the airlines sign long agreements that help the airport borrow money for new projects, because
+    lenders know the rent will keep coming.
+  claims:
+  - mix
+  analysis: true
+  source_note: Commentary on airport-airline agreements; no figure claimed.
+- id: m3_transition
+  chapter: The landlord
+  narration: But some of the most reliable money has nothing to do with planes. It comes from your car.
+  claims: []
+- id: m4_card
+  chapter: The car
+  narration: ''
+  claims: []
+- id: m4_parking
+  chapter: The car
+  narration: Parking and ground transportation brought America's airports {{parking}} in twenty twenty-five. By our calculation,
+    that is about one in every five dollars of operating revenue, and more than airlines paid in landing fees. It is the
+    single biggest source of money that has nothing to do with flying. And it is growing. A year earlier, the same line
+    was about six point five five billion dollars.
+  claims:
+  - parking
+- id: m4_rental
+  chapter: The car
+  narration: Then come the rental cars. Rental companies paid airports about two and a half billion dollars, not counting
+    the extra facility charges added to rental contracts. At Los Angeles, parking was the third biggest revenue source of
+    all, about one hundred and sixty-one million dollars, ahead of rental cars, restaurants and duty free.
+  claims:
+  - parking
+  - lax
+- id: m4_rides
+  chapter: The car
+  narration: Even ride-hailing pays. Los Angeles lists transportation network companies, the ride apps, among its top ten
+    revenue sources, at about thirty-six million dollars a year. Whether you drive, rent or get dropped off, the airport
+    collects.
+  claims:
+  - lax
+- id: m4_draw
+  chapter: The car
+  narration: Let me draw the curb. Here is the garage, charging by the hour. Here is the rental car center, paying a share
+    of every contract. Here is the pickup lane, where every ride app pays a fee. Three ways to arrive, three ways to pay
+    the airport.
+  claims:
+  - parking
+  analysis: true
+  source_note: Diagram of ground-transport revenue (commentary).
+- id: m4_transition
+  chapter: The car
+  narration: And once you are inside, the terminal itself starts earning.
+  claims: []
+- id: m5_card
+  chapter: The terminal
+  narration: ''
+  claims: []
+- id: m5_shops
+  chapter: The terminal
+  narration: Restaurants, shops and duty free pay the airport rent or a share of their sales. In twenty twenty-five, food
+    and beverage brought America's airports about one point two six billion dollars, and retail and duty free almost one
+    billion. At Los Angeles, total concessions earned about five hundred and eleven million dollars, about a quarter of its
+    operating revenue.
+  claims:
+  - mix
+  - lax
+- id: m5_ads
+  chapter: The terminal
+  narration: Even the walls are for rent. Los Angeles earned about thirty-nine million dollars from advertising. A captive
+    audience, waiting at the gate, with nowhere else to go. Some airports even run hotels. Across the country, airport hotels
+    brought in about four hundred million dollars in twenty twenty-five.
+  claims:
+  - lax
+  analysis: true
+  source_note: Advertising from the LAX disclosure; last sentence is commentary.
+- id: m5_grants
+  chapter: The terminal
+  narration: And there is outside money too. Federal grants help pay for runways and terminals. The infrastructure law of
+    twenty twenty-one set aside {{grants}} over five years for airports, and the fifth and final installment, about two point
+    eight nine billion dollars, has now been released. By our calculation from the FAA's grant files, federal
+    airport grants added up to about nine billion dollars in the twenty twenty-five fiscal year.
+  claims:
+  - grants
+- id: m5_draw
+  chapter: The terminal
+  narration: Let me put the whole airport together. Your ticket carries a facility charge. The airlines pay rent and landing
+    fees. Your car pays for parking, rentals or a pickup. The terminal collects from every shop and every screen. And federal
+    grants fill in the rest. Five streams, all flowing into one public owner.
+  claims:
+  - pfc
+  - mix
+  - parking
+  - grants
+  analysis: true
+  source_note: Summary diagram of the sourced parts.
+- id: payoff
+  chapter: The lesson
+  narration: So why do America's airports make money before you fly? Because an airport is not just a runway. It is a landlord,
+    a parking operator, a shopping mall and a toll collector, all at once. And every one of those businesses gets paid long
+    before your wheels leave the ground.
+  claims:
+  - parking
+  - mix
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

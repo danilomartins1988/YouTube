@@ -1,0 +1,146 @@
+# Sources and claims for "Why America's Airports Make Money Before You Fly" (Episode 38, US batch #12).
+# Every claim was read on its primary page/file on 2026-11-10 (notes: docs/episodes/38-airports/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as published.
+# RULES: FAA CATS FY2025 totals cover the 432 airports reporting as of Nov 10, 2026 ("at least", said); shares, per-passenger
+# and ticket-tax example are OUR calculation; AIP FY2025 total is our sum of FAA's grant file; ACI-NA is the airports' industry
+# group (attributed); BTS baggage/change-fee figures NOT used (bts.gov unreadable). No airline or airport logos.
+sources:
+  - id: cats
+    title: "Certification Activity Tracking System (CATS), Form 127, all airports, FY2025 and FY2024"
+    publisher: Federal Aviation Administration
+    url: https://cats.airports.faa.gov/reports/form-127-all-airports
+    published: "2026-11-10"
+    accessed: "2026-11-10"
+    credit: "FAA CATS"
+  - id: gao
+    title: "Airport Finance (GAO-15-306)"
+    publisher: U.S. Government Accountability Office
+    url: https://www.gao.gov/assets/gao-15-306.pdf
+    published: "2015-04"
+    accessed: "2026-11-10"
+    credit: "GAO"
+  - id: assur
+    title: "Airport Sponsor Assurances (4/2025)"
+    publisher: Federal Aviation Administration
+    url: https://www.faa.gov/airports/aip/grant_assurances/assurances-airport-sponsors-2025
+    published: "2025-04"
+    accessed: "2026-11-10"
+    credit: "FAA"
+  - id: pfc
+    title: "Passenger Facility Charge Program; Key PFC Statistics as of October 31, 2026; AIP History"
+    publisher: Federal Aviation Administration
+    url: https://www.faa.gov/airports/pfc
+    published: "2026-11-02"
+    accessed: "2026-11-10"
+    credit: "FAA"
+  - id: excise
+    title: "Trust Fund Excise Taxes Structure, rates effective January 1, 2026"
+    publisher: Federal Aviation Administration
+    url: https://www.faa.gov/about/budget/aatf/Current-Aviation-Excise-Tax-Structure-and-Rates-2026.pdf
+    published: "2026-01"
+    accessed: "2026-11-10"
+    credit: "FAA"
+  - id: tsa
+    title: "September 11 Security Fee; TSA checkpoint travel numbers (2025)"
+    publisher: Transportation Security Administration
+    url: https://www.tsa.gov/for-industry/security-fees
+    published: "2026"
+    accessed: "2026-11-10"
+    credit: "TSA"
+  - id: bts
+    title: "T-100 Market data: passengers, all U.S. and foreign carriers"
+    publisher: Bureau of Transportation Statistics
+    url: https://www.transtats.bts.gov/Data_Elements.aspx?Data=1
+    published: "2026"
+    accessed: "2026-11-10"
+    credit: "BTS"
+  - id: lax
+    title: "LAX FY2025 Annual Financial Report and 2025 Annual Continuing Disclosure Report"
+    publisher: Los Angeles World Airports
+    url: https://www.lawa.org/sites/lawa/files/2025-12/LAX%20-%202025%20Annual%20Continuing%20Disclosure%20Report.pdf
+    published: "2025-12"
+    accessed: "2026-11-10"
+    credit: "Los Angeles World Airports"
+  - id: grants
+    title: "FY 2025 FAA Grant Detail Report; Airport Infrastructure Grants (Bipartisan Infrastructure Law)"
+    publisher: Federal Aviation Administration
+    url: https://www.faa.gov/bil/airport-infrastructure
+    published: "2026-08-12"
+    accessed: "2026-11-10"
+    credit: "FAA"
+  - id: acina
+    title: "Modern Airports for a Stronger America (2025 Infrastructure Needs Study)"
+    publisher: Airports Council International – North America
+    url: https://airportscouncil.org/wp-content/uploads/2025/03/2025-Infrastructure-Needs-Study.pdf
+    published: "2025-03"
+    accessed: "2026-11-10"
+    credit: "ACI-NA (airport industry group)"
+
+claims:
+  - id: parking
+    text: "FAA CATS Form 127, FY2025 (432 airports reporting): 'Parking and ground transportation' $6,886,188,801; 'Passenger airline landing fees' $5,537,643,339; 'Rental cars-excludes customer facility charges' $2,481,524,183; total operating revenue $34,515,928,236. FY2024 (440 airports): parking and ground transportation $6,548,575,803. Our calc: parking ≈ 20% of operating revenue, ≈ 1.24× landing fees."
+    spoken: six point nine billion dollars
+    display: "Parking $6.9bn vs landing fees $5.5bn (FY2025)"
+    fields: {landing_spoken: five point five billion dollars}
+    source_ids: [cats]
+    status: source_located
+    verification_note: FY2025 totals still being reported; 'at least'.
+
+  - id: mix
+    text: "FAA CATS FY2025: total aeronautical $19,325,113,621; terminal arrival fees, rents and utilities $8,941,976,829; total non-aeronautical $15,190,814,616; food and beverage $1,260,475,949; retail and duty free $993,729,868; terminal services $726,024,260; hotel $407,366,246; grant receipts $5,487,938,972; PFCs $3,820,938,163; total debt at end of year $141,077,704,659; enplanements 996,512,601; passenger airline cost per enplanement $15.76."
+    spoken: thirty-four point five billion dollars
+    display: "Airport operating revenue $34.5bn (FY2025)"
+    fields: {debt_spoken: one hundred and forty-one billion dollars}
+    source_ids: [cats]
+    status: source_located
+    verification_note: Shares our calculation.
+
+  - id: owners
+    text: "GAO-15-306: 'many U.S. airports are owned by states, counties, cities, or public authorities'. FAA Sponsor Assurance 24: a fee and rental structure 'which will make the airport as self-sustaining as possible'; Assurance 25: 'All revenues generated by the airport ... will be expended by it for the capital or operating costs of the airport'."
+    spoken: self-sustaining
+    display: "Public owners, self-sustaining (FAA)"
+    source_ids: [gao, assur]
+    status: source_located
+    verification_note: Read in GAO and FAA documents.
+
+  - id: pfc
+    text: "FAA: 'PFCs are capped at $4.50 per flight segment with a maximum of two PFCs charged on a one-way trip or four PFCs on a round trip, for a maximum of $18 total.' AIP History: 1990 Act allowed '$1, $2, or $3'; AIR-21 (2000) raised the maximum 'from $3 to $4 or $4.50'. Key PFC statistics (Oct 31, 2026): 'Actual collections from 1992 through 2025: $79.4 billion'; 2025 collections $3,845,069,634; 'All Large category airports are now collecting at maximum $4.50 level.' ACI-NA (industry): 'The $4.50 PFC set in year 2001 should be $10.05'; calls for a '$12 per enplaned passenger' cap; 'U.S. airports will require $173.9 billion in infrastructure investments over the next five years.'"
+    spoken: four dollars and fifty cents
+    display: "PFC cap $4.50 (since 2000)"
+    fields: {total_spoken: seventy-nine point four billion dollars}
+    source_ids: [pfc, acina]
+    status: source_located
+    verification_note: ACI-NA view attributed as industry.
+
+  - id: taxes
+    text: "FAA excise taxes (2026): 'Domestic passenger ticket tax • 7.5 percent'; 'Domestic flight segment tax ... $5.30 per passenger per segment'. TSA: 'The fee is currently $5.60 per one-way trip ... the fee imposed per round trip shall not exceed $11.20.' Our example: $300 round trip with one connection each way = $22.50 + $21.20 + $18.00 + $11.20 = $72.90 (≈ 24% on top); nonstop round trip ≈ $53.30; only the PFC goes to the airport."
+    spoken: seventy-two dollars and ninety cents
+    display: "$72.90 in taxes/fees on a $300 trip (example)"
+    source_ids: [excise, tsa, pfc]
+    status: source_located
+    verification_note: Example is our calculation at maximum PFC.
+
+  - id: lax
+    text: "LAX 2025 Continuing Disclosure, Top Ten Revenue Sources FY2025 ($000): 1 Terminal Rentals 935,314; 2 Landing Fees 368,616; 3 Auto Parking 161,043; 6 Rental Cars 85,882; 7 Food, Beverage, Gift, News 79,844; 8 Duty Free 59,929; 9 Advertising 39,424; 10 Transportation Network Companies 35,970. LAX AFR FY2025: total operating revenue $2,047,475K; 'Total revenue from concessions was $511.0 million'; passengers '75.2 million'. Our calc: aviation revenue $1,523,081K = 74.4% of operating revenue."
+    spoken: one hundred and sixty-one million dollars
+    display: "LAX parking $161M, #3 revenue source"
+    source_ids: [lax]
+    status: source_located
+    verification_note: Read in LAWA reports.
+
+  - id: traffic
+    text: "TSA checkpoint numbers: 3,134,613 on 11/30/2025 (highest in the table); TSA (Jun 24, 2025): 'TSA screened nearly 3.1 million travelers on Sunday, June 22, the busiest single day in the agency's history.' BTS T-100: 1,098,346,029 passengers in 2025 (all US and foreign carriers, scheduled)."
+    spoken: three point one million
+    display: "TSA record: 3.13M in one day (Nov 30, 2025)"
+    fields: {bts_spoken: about one point one billion}
+    source_ids: [tsa, bts]
+    status: source_located
+    verification_note: TSA figures read via page reader.
+
+  - id: grants
+    text: "FAA: Airport Infrastructure Grants 'provides $14.5 billion in funding over five years starting in FY 2022'; 'The FAA has released the fifth and final installment of $2.89 billion.' Our sum of FAA's FY2025 grant file: AIP ≈ $4.44bn; AIG ≈ $3.60bn; all airport grants ≈ $9.04bn."
+    spoken: fourteen point five billion dollars
+    display: "Infrastructure law: $14.5bn for airports (5 yrs)"
+    source_ids: [grants]
+    status: source_located
+    verification_note: FY2025 totals our sums.

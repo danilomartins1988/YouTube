@@ -545,6 +545,55 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f + 40} width={w} height={10} fill="#FFD54A" opacity={0.8} />
     </g>;
   },
+  /** An airport terminal concourse inside: a wall of tall windows with an apron and parked jets outside (planes taxi by),
+   *  gate signs, rows of seats, a glossy floor and a departures board. `night` darkens the sky outside. */
+  terminal: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#3E4656' : '#ECEFF1'} />
+      <rect x={z.x0} y={f - 640} width={w} height={420} fill={night ? '#16204A' : '#BFE6FA'} />
+      <rect x={z.x0} y={f - 300} width={w} height={80} fill={night ? '#2B3242' : '#90A4AE'} />
+      {Array.from({length: Math.ceil(w / 900)}, (_, k) => { const x = z.x0 + ((k * 900 + t * 60) % (w + 900)) - 300;
+        return <g key={'jet' + k} transform={`translate(${x} ${f - 300})`}>
+          <path d="M -180 -10 L 160 -10 Q 200 -10 210 -30 L 150 -50 L -150 -50 Q -190 -50 -180 -10 Z" fill="#FFFFFF" stroke={OL} strokeWidth={3} />
+          <path d="M -150 -50 L -190 -120 L -160 -120 L -100 -50 Z" fill="#90A4AE" stroke={OL} strokeWidth={3} />
+          <path d="M -20 -30 L 40 -30 L -40 20 L -70 20 Z" fill="#CFD8DC" stroke={OL} strokeWidth={3} />
+          {Array.from({length: 8}, (_, q) => <circle key={q} cx={-100 + q * 28} cy={-36} r={5} fill="#455A64" />)}</g>; })}
+      {Array.from({length: Math.ceil(w / 220)}, (_, k) => <rect key={'mul' + k} x={z.x0 + k * 220} y={f - 650} width={16} height={440} fill="#607D8B" />)}
+      <rect x={z.x0} y={f - 660} width={w} height={24} fill="#607D8B" />
+      <rect x={z.x0} y={f - 210} width={w} height={210} fill={night ? '#4A5266' : '#D5DBE1'} />
+      {Array.from({length: Math.ceil(w / 1000)}, (_, k) => { const x = z.x0 + 300 + k * 1000;
+        return <g key={'gate' + k}><rect x={x} y={f - 760} width={160} height={70} rx={8} fill="#1565C0" stroke={OL} strokeWidth={3} />
+          <T x={x + 80} y={f - 714} s={30} c="#FFFFFF">{'B' + (12 + k * 2)}</T></g>; })}
+      {Array.from({length: Math.ceil(w / 120)}, (_, k) => { const x = z.x0 + 40 + k * 120;
+        return <g key={'seat' + k}><rect x={x} y={f - 70} width={90} height={22} rx={6} fill="#455A64" stroke={OL} strokeWidth={2} />
+          <rect x={x} y={f - 110} width={90} height={44} rx={8} fill="#546E7A" stroke={OL} strokeWidth={2} /><rect x={x + 40} y={f - 48} width={10} height={48} fill="#37474F" /></g>; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#6B7280' : '#CFD8DC'} />
+      <rect x={z.x0} y={f + 4} width={w} height={6} fill="#FFFFFF" opacity={0.6} />
+    </g>;
+  },
+  /** A multi-level airport parking garage: concrete decks with cars parked in rows, a ramp, a ticket booth with a striped
+   *  barrier and a big price sign ("$ / DAY"). */
+  parkingdeck: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, cols = ['#E53935', '#1E88E5', '#43A047', '#FB8C00', '#8E24AA', '#B0BEC5', '#FFFFFF'];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#1A2346' : '#BFE6FA'} />
+      {[0, 1, 2].map((lv) => <g key={'lv' + lv}>
+        <rect x={z.x0} y={f - 210 - lv * 190} width={w} height={30} fill={night ? '#78909C' : '#B0BEC5'} stroke={OL} strokeWidth={3} />
+        {Array.from({length: Math.ceil(w / 400)}, (_, k) => <rect key={k} x={z.x0 + k * 400} y={f - 180 - lv * 190} width={36} height={160} fill={night ? '#90A4AE' : '#CFD8DC'} stroke={OL} strokeWidth={2} />)}
+        {Array.from({length: Math.ceil(w / 130)}, (_, k) => rnd(k * 7 + lv * 31) > 0.25 && <g key={'c' + k} transform={`translate(${z.x0 + 60 + k * 130} ${f - 40 - lv * 190})`}>
+          <path d="M -50 0 L -50 -30 Q -40 -48 -20 -50 L 30 -50 Q 45 -48 52 -30 L 52 0 Z" fill={cols[(k + lv * 3) % cols.length]} stroke={OL} strokeWidth={2} />
+          <rect x={-30} y={-46} width={50} height={16} rx={3} fill={K.glass} /><circle cx={-30} cy={2} r={10} fill="#263238" /><circle cx={32} cy={2} r={10} fill="#263238" /></g>)}</g>)}
+      <rect x={z.x0} y={f - 720} width={w} height={30} fill={night ? '#78909C' : '#B0BEC5'} stroke={OL} strokeWidth={3} />
+      {Array.from({length: Math.ceil(w / 1600)}, (_, k) => { const x = z.x0 + 1000 + k * 1600;
+        return <g key={'pb' + k}><rect x={x} y={f - 160} width={120} height={160} rx={8} fill="#FFC21A" stroke={OL} strokeWidth={4} />
+          <rect x={x + 120} y={f - 100} width={300} height={16} rx={8} fill="#E53935" stroke={OL} strokeWidth={3} />
+          {[0, 1, 2].map((q) => <rect key={q} x={x + 160 + q * 80} y={f - 100} width={30} height={16} fill="#FFFFFF" />)}
+          <rect x={x - 40} y={f - 900} width={260} height={120} rx={10} fill="#1565C0" stroke={OL} strokeWidth={4} />
+          <T x={x + 90} y={f - 850} s={34} c="#FFFFFF">PARKING</T><T x={x + 90} y={f - 806} s={30} c="#FFC21A">$ / DAY</T></g>; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3E4656' : K.road} />
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {

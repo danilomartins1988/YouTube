@@ -66,6 +66,7 @@ SHORTS = {
     "35-electricity": ("why-americas-electricity-bills-are-rising", "documentary", "power_documentary", "×9 IN ONE AUCTION", "YOUR POWER BILL", "Why Your Electric Bill Keeps Going Up", "#electricity #energy #usa"),
     "36-car-insurance": ("why-your-car-insurance-got-so-expensive", "documentary", "autoins_documentary", "+22.6% IN ONE YEAR", "CAR INSURANCE", "Car Insurance Jumped 22.6% in One Year. Here's Why", "#carinsurance #insurance #usa"),
     "37-amazon-prime": ("the-hidden-economics-of-amazon-prime", "documentary", "prime_documentary", "$102.7 BILLION", "ON SHIPPING", "Amazon Spent $102.7 Billion on Shipping in One Year", "#amazon #amazonprime #business"),
+    "38-airports": ("why-americas-airports-make-money-before-you-fly", "documentary", "airports_documentary", "$6.9 BILLION", "FROM PARKING", "US Airports Made $6.9 Billion From Parking in One Year", "#airports #travel #usa"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
