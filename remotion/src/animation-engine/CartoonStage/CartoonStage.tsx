@@ -856,6 +856,28 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 160)}, (_, k) => <rect key={'pt' + k} x={z.x0 + k * 160} y={f} width={3} height={600} fill={OL} opacity={0.1} />)}
     </g>;
   },
+  /** Alaska-like north (generic): snowy peaks, spruce trees, a silver pipeline on stilts zig-zagging across the tundra,
+   *  a small town of cabins; `night` = dark sky with green northern lights. */
+  tundra: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#0B1630' : '#CFE8F7'} />
+      {night && [0, 1, 2].map((q) => <path key={'au' + q} d={`M ${z.x0} ${f - 820 + q * 50} ${Array.from({length: Math.ceil(w / 300) + 1}, (_, k) => `Q ${z.x0 + k * 300 + 150} ${f - 900 + q * 50 + 80 * Math.sin(t * 0.6 + k + q)} ${z.x0 + (k + 1) * 300} ${f - 820 + q * 50}`).join(' ')}`}
+        fill="none" stroke={['#5CFFB0', '#3DDC97', '#9B7BFF'][q]} strokeWidth={26 - q * 6} opacity={0.35} strokeLinecap="round" />)}
+      <path d={`M ${z.x0} ${f - 250} ${Array.from({length: Math.ceil(w / 340) + 1}, (_, k) => `L ${z.x0 + k * 340 + 170} ${f - 560 - 140 * rnd(k + 5)} L ${z.x0 + (k + 1) * 340} ${f - 250}`).join(' ')} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill={night ? '#3A4A6E' : '#9DB5CC'} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+      {Array.from({length: Math.ceil(w / 340) + 1}, (_, k) => { const px = z.x0 + k * 340 + 170, py = f - 560 - 140 * rnd(k + 5);
+        return <path key={'sn' + k} d={`M ${px - 55} ${py + 80} L ${px} ${py} L ${px + 55} ${py + 80} L ${px + 20} ${py + 64} L ${px} ${py + 86} L ${px - 20} ${py + 64} Z`} fill="#FFFFFF" stroke={OL} strokeWidth={3} strokeLinejoin="round" />; })}
+      <rect x={z.x0} y={f - 120} width={w} height={720} fill={night ? '#C9D6E8' : '#F4F8FB'} />
+      {Array.from({length: Math.ceil(w / 130)}, (_, k) => { const x = z.x0 + k * 130 + 40 * rnd(k), h = 90 + 50 * rnd(k + 9);
+        return <path key={'tr' + k} d={`M ${x} ${f - 120} L ${x - 26} ${f - 120} L ${x} ${f - 120 - h} L ${x + 26} ${f - 120} Z`} fill={night ? '#1E4A3A' : '#2E7D5B'} stroke={OL} strokeWidth={3} />; })}
+      <path d={`M ${z.x0} ${f - 40} ${Array.from({length: Math.ceil(w / 400) + 1}, (_, k) => `L ${z.x0 + k * 400 + 200} ${f - 70 + (k % 2) * 40} L ${z.x0 + (k + 1) * 400} ${f - 40}`).join(' ')}`} fill="none" stroke="#B0BEC5" strokeWidth={18} strokeLinejoin="round" />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <rect key={'pl' + k} x={z.x0 + k * 200} y={f - 40} width={8} height={60} fill="#78909C" />)}
+      {Array.from({length: Math.ceil(w / 1500)}, (_, k) => <g key={'cb' + k}>{[0, 1, 2].map((q) => { const x = z.x0 + 900 + k * 1500 + q * 150;
+        return <g key={q}><rect x={x} y={f + 10} width={110} height={80} fill="#8D6E63" stroke={OL} strokeWidth={4} />
+          <path d={`M ${x - 12} ${f + 14} L ${x + 55} ${f - 40} L ${x + 122} ${f + 14} Z`} fill="#ECEFF1" stroke={OL} strokeWidth={4} />
+          <rect x={x + 40} y={f + 36} width={30} height={30} fill={night ? '#FFE082' : '#BFE8FF'} stroke={OL} strokeWidth={3} /></g>; })}</g>)}
+    </g>;
+  },
   /** A hospital corridor: pale mint walls, numbered doors with small windows, a handrail, ceiling light panels, a glossy
    *  tiled floor; `night` dims it to an evening shift. Generic, no real hospital branding. */
   hospital: (t, z, f) => {
@@ -3509,9 +3531,28 @@ const yesno: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A giant generic paper check (no bank name): `amount` text, `memo`, `payee`; `ghost` true draws it faint and dashed
+ *  (a check that was not paid). */
+const bigcheck: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 420), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const g = !!a.ghost, W = 760, H = 330;
+  return <g key={'bc' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${a.rot ?? -3})`} opacity={g ? 0.45 : 1}>
+    {!g && <rect x={-W / 2 + 14} y={-H / 2 + 18} width={W} height={H} rx={18} fill="#000" opacity={0.25} />}
+    <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={18} fill={g ? 'none' : '#E8F5E9'} stroke={g ? '#FFFFFF' : OL} strokeWidth={6} strokeDasharray={g ? '18 12' : undefined} />
+    <T x={-W / 2 + 30} y={-H / 2 + 50} s={26} c={g ? '#FFFFFF' : '#2E7D32'} a="start">{a.title || 'DIVIDEND PAYMENT'}</T>
+    <T x={W / 2 - 30} y={-H / 2 + 50} s={22} c={g ? '#FFFFFF' : '#546E7A'} a="end">{a.date || ''}</T>
+    <T x={-W / 2 + 30} y={-10} s={26} c={g ? '#FFFFFF' : OL} a="start">{'PAY TO: ' + (a.payee || 'EVERY RESIDENT')}</T>
+    <rect x={W / 2 - 300} y={-60} width={270} height={80} rx={10} fill={g ? 'none' : '#FFFFFF'} stroke={g ? '#FFFFFF' : OL} strokeWidth={4} />
+    <T x={W / 2 - 165} y={-6} s={46} c={g ? '#FFFFFF' : OL}>{a.amount || ',000'}</T>
+    <path d={`M ${-W / 2 + 30} 70 L ${W / 2 - 30} 70`} stroke={g ? '#FFFFFF' : '#90A4AE'} strokeWidth={3} />
+    <T x={-W / 2 + 30} y={120} s={22} c={g ? '#FFFFFF' : '#546E7A'} a="start">{a.memo || 'MEMO: PERMANENT FUND'}</T>
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

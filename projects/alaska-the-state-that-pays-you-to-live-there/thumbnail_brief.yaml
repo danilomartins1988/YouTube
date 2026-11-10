@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no seals or logos).
+title: 'Alaska: The State That Pays You to Live There'
+docs_dir: docs/episodes/48-alaska-dividend
+video: output/alaska_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why does a state pay every resident just for living there?
+  surprising_fact: 2026 dividend $1,200; the statutory formula would have paid about $3,650 (Governor's FY27 budget)
+  subject: a giant check
+  tone: bright
+  metaphor: oil money shared with everyone
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $1,200 EACH
+  - ALASKA PAYS YOU
+  claim_basis: 'amounts: 2026 PFD $1,200 incl. $200 energy relief (PFD Division)'
+  scene:
+    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: dollar, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'FORMULA: $3,650'
+  - 'PAID: $1,200'
+  claim_basis: 'Governor FY27 budget statutory PFD $3,650; 2026 PFD $1,200'
+  scene:
+    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: dollar, x: 480, y: 650, s: 0.6}
+    after: {kind: crash, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none
