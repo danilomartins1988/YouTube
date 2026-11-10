@@ -684,3 +684,22 @@ Watch the full story: "The Hidden Economics of Amazon Prime" on The Hidden Econo
 ```
 Amazon Prime, Amazon, how Amazon makes money, Prime membership, AWS, Amazon advertising, FTC Amazon, Prime Day, subscription economy, business explained, shorts, economics explained, The Hidden Economics
 ```
+
+## 38-airports
+
+**Title**
+```
+US Airports Made $6.9 Billion From Parking in One Year #shorts
+```
+**Description**
+```
+Six point nine billion dollars. That is how much America's airports earned in a single year from parking and ground transportation.
+
+Watch the full story: "Why America's Airports Make Money Before You Fly" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #airports #travel #usa #economics
+```
+**Tags**
+```
+airports, airport economics, airport parking, passenger facility charge, FAA, air travel, airline fees, TSA, LAX, travel costs, shorts, economics explained, The Hidden Economics
+```
