@@ -1,0 +1,267 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; nominal dollars; our calculations and research said as such.
+logline: Every year, almost every Alaskan gets a check from the state, just for living there. In 2026 it was twelve hundred
+  dollars. The formula in the law said three thousand six hundred and fifty. Where the money comes from, and why it shrinks.
+title: 'Alaska: The State That Pays You to Live There'
+segments:
+- id: h_open
+  chapter: Twelve hundred dollars
+  narration: Twelve hundred dollars. That is what the state of Alaska paid to almost every resident in twenty twenty-six. Men,
+    women, children, even babies. No work required. Just live there for the whole year.
+  claims:
+  - amounts
+  - who
+- id: h_twist
+  chapter: Twelve hundred dollars
+  narration: But by the formula written in Alaska's own law, the check should have been much bigger. The governor's office put
+    the full amount at {{cut}} per person. The legislature paid about a third of that.
+  claims:
+  - cut
+- id: h_question
+  chapter: Twelve hundred dollars
+  narration: So where does this money come from? And why does the check keep shrinking?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: Twelve hundred dollars
+  narration: By the end of this video, you will know how oil money became a ninety billion dollar fund, how the dividend is
+    paid, why the state now depends on it, and what economists found when they studied the checks.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The check
+  narration: ''
+  claims: []
+- id: m1_first
+  chapter: The check
+  narration: The first check went out in nineteen eighty-two. It was {{amounts.first_spoken}} for every eligible resident. In total,
+    the state paid out about four hundred and seventy-one million dollars that year.
+  claims:
+  - amounts
+- id: m1_rules
+  chapter: The check
+  narration: The rules are simple. You must live in Alaska for the whole calendar year, and plan to stay there indefinitely. You must also have spent at least seventy-two hours in a row in the state during the past
+    two years.
+    In twenty twenty-five, six hundred and sixty-five thousand people applied, and {{who}} were paid. That is most of a state
+    with about seven hundred and thirty-nine thousand people.
+  claims:
+  - who
+- id: m1_history
+  chapter: The check
+  narration: The amount changes every year. In twenty fifteen, the dividend reached two thousand and seventy-two dollars. The
+    largest payment ever, in dollar terms, came in twenty twenty-two. With an extra energy relief payment, it was {{amounts.rec_spoken}}.
+    In twenty twenty-four, it was one thousand seven hundred and two dollars, again
+    including energy relief. In twenty twenty-five, it was back down to one thousand dollars.
+  claims:
+  - amounts
+- id: m1_total
+  chapter: The check
+  narration: Add it all up. From nineteen eighty-two to twenty twenty-five, the state paid out {{amounts.total_spoken}} in dividends.
+    Someone who collected every single check would have received {{amounts.sum_spoken}}, before inflation.
+  claims:
+  - amounts
+- id: m1_draw
+  chapter: The check
+  narration: Let me draw the checks over time. Here is nineteen eighty-two, one thousand dollars. The bars rise and fall with
+    the markets. A high point in twenty fifteen. A cut in twenty sixteen. A record in twenty twenty-two. And today, twelve hundred
+    dollars. The check is a roller coaster, not a salary.
+  claims:
+  - amounts
+  analysis: true
+  source_note: Bar diagram of selected PFD amounts.
+- id: m1_transition
+  chapter: The check
+  narration: To understand why the check moves so much, follow it back to where the money is kept.
+  claims:
+  - fund
+- id: m2_card
+  chapter: The fund
+  narration: ''
+  claims: []
+- id: m2_oil
+  chapter: The fund
+  narration: In nineteen seventy-six, as oil money began to flow, Alaskans voted to change their constitution.
+    At least twenty-five percent of the state's oil and mineral royalties would go into a permanent fund. Later, a state law raised
+    that to fifty percent for newer leases.
+  claims:
+  - fund
+- id: m2_rooms
+  chapter: The fund
+  narration: The fund has two rooms. The principal is locked. The constitution says it cannot be spent. The earnings, the profits
+    from investing it, go into a second account, called the earnings reserve. That second room is where the dividend comes from. At the end of June twenty twenty-six,
+    the fund's managers reported about ten point six billion dollars of realized earnings in that room, plus four billion
+    already set aside for the next year's draw. Unlike the principal, the legislature can spend this room through the yearly
+    budget, as the HB two sixty-three budget did this year.
+  claims:
+  - fund
+  analysis: true
+  source_note: Explanation of the principal and the earnings reserve (APFC structure).
+- id: m2_size
+  chapter: The fund
+  narration: Today the fund is huge. At the end of June twenty twenty-six, it was worth about {{fund}}. Of that, about fifty-nine
+    billion was locked principal. In the last fiscal year, it earned a return of more than twelve percent, and the state drew about three point eight
+    billion dollars from it.
+  claims:
+  - fund
+- id: m2_invest
+  chapter: The fund
+  narration: Here is the surprising part. The fund is no longer mainly an oil fund. Royalties added only about five hundred and
+    thirty-five million dollars last year. Most of its value now comes from decades of investing in stocks, bonds and other
+    assets around the world.
+  claims:
+  - fund
+- id: m2_draw
+  chapter: The fund
+  narration: Let me draw the vault. Here is the pipeline, bringing in oil royalties. They flow into the locked room, the principal.
+    The investments grow, and the profits spill into the second room, the earnings reserve. And from that second room, the state
+    takes its draw, and pays the dividend.
+  claims:
+  - fund
+  analysis: true
+  source_note: Diagram of the fund structure.
+- id: m2_transition
+  chapter: The fund
+  narration: For years, the dividend had its own formula. Then the state ran short of money.
+  claims:
+  - cut
+- id: m3_card
+  chapter: The cut
+  narration: ''
+  claims: []
+- id: m3_veto
+  chapter: The cut
+  narration: In twenty sixteen, oil prices had collapsed and the state budget was in deep trouble. The governor at the time,
+    Bill Walker, cut the money set aside for the dividend roughly in half. The check that year was one thousand and twenty-two
+    dollars.
+  claims:
+  - cut
+- id: m3_court
+  chapter: The cut
+  narration: A lawsuit followed, arguing that the dividend was protected by law. In twenty seventeen, the Alaska Supreme Court disagreed.
+    Its words were clear. Without another constitutional amendment, the dividend must compete for funding every year, just like
+    any other state program.
+  claims:
+  - cut
+- id: m3_pomv
+  chapter: The cut
+  narration: In twenty eighteen, the legislature set a new rule. Each year, the state may draw {{draw}} of the fund's average
+    value from recent years. That single draw now pays for two things at once. The dividend, and the rest of the state government.
+  claims:
+  - draw
+- id: m3_budget
+  chapter: The cut
+  narration: And the government needs it badly. In fiscal year twenty twenty-five, by our calculation from the state's revenue
+    forecast, the Permanent Fund supplied about fifty-eight percent of the state's general revenue. Oil supplied only about thirty
+    percent. The fund has replaced oil as Alaska's biggest paycheck.
+  claims:
+  - draw
+- id: m3_draw
+  chapter: The cut
+  narration: Let me draw the tug of war. Here is the yearly draw from the fund, one pie. On one side, the dividend checks. On the
+    other side, schools, roads and everything else the state pays for. Every dollar that goes to one side cannot go to the other.
+  claims:
+  - draw
+  - cut
+  analysis: true
+  source_note: Diagram of the competing uses of the draw (commentary on the court ruling and the 2018 law).
+- id: m3_transition
+  chapter: The cut
+  narration: Which is exactly the fight that played out again in twenty twenty-six.
+  claims:
+  - cut
+- id: m4_card
+  chapter: The 2026 check
+  narration: ''
+  claims: []
+- id: m4_formula
+  chapter: The 2026 check
+  narration: The governor's budget proposed a full dividend under the old formula, about three thousand six hundred and fifty dollars
+    per Alaskan. The legislature chose something much smaller.
+  claims:
+  - cut
+- id: m4_budget
+  chapter: The 2026 check
+  narration: The final budget paid a dividend of one thousand dollars, estimated at about six hundred and seventy-four million dollars
+    in total. It added a two hundred dollar energy relief payment, but only if the state's revenue came in high enough. It did,
+    and the final check was {{amounts}}.
+  claims:
+  - cut
+  - amounts
+- id: m4_draw2
+  chapter: The 2026 check
+  narration: To pay for all of it, the same budget drew about four billion dollars from the fund's earnings reserve. By our calculation, most
+    of that money went to running the state, not to the checks. The dividend, in other words, is now the smaller part of the fund's
+    yearly paycheck.
+  claims:
+  - cut
+- id: m4_skip
+  chapter: The 2026 check
+  narration: The fund itself felt the squeeze too. Normally, part of the earnings is moved into the principal to protect it from
+    inflation. This year, according to the fund's managers, that one point five billion dollar transfer did not happen, because
+    the legislature did not approve it.
+  claims:
+  - fund
+- id: m4_draw
+  chapter: The 2026 check
+  narration: Let me draw the ghost check. Here is the real check, twelve hundred dollars. Above it, faint, the check the old
+    formula would have paid, three thousand six hundred and fifty. The gap between them is the money the state kept to run its
+    government.
+  claims:
+  - cut
+  - amounts
+  analysis: true
+  source_note: Comparison diagram of the 2026 payment and the governor's statutory figure.
+- id: m4_transition
+  chapter: The 2026 check
+  narration: So what does a yearly check actually do to the people who get it? Economists have studied that question for years.
+  claims:
+  - effects
+- id: m5_card
+  chapter: What the money does
+  narration: ''
+  claims: []
+- id: m5_jobs
+  chapter: What the money does
+  narration: The big fear about free money is that people stop working. Economists Damon Jones and Ioana Marinescu tested that
+    in Alaska. They found no effect on employment. Part-time work actually rose a little, by about one point eight percentage
+    points. Their study was published in a peer-reviewed economics journal in twenty twenty-two.
+  claims:
+  - effects
+- id: m5_spend
+  chapter: What the money does
+  narration: People do spend it. Another study found that households spend about a quarter of the payment on everyday goods and
+    services within three months. Researchers have also linked an extra thousand dollars to slightly higher birth weights. And
+    one study of crime found a jump in substance-abuse incidents the day after the checks arrive, about fourteen percent, while
+    property crime fell about eight percent, and violent crime did not change.
+  claims:
+  - effects
+- id: m5_draw
+  chapter: What the money does
+  narration: Let me draw what the research says. Here is the check arriving. One arrow, to jobs, with almost no change. One arrow,
+    to spending, about a quarter within a few months. And a few small arrows, to health and safety. A cash payment that people
+    use, without walking away from work.
+  claims:
+  - effects
+  analysis: true
+  source_note: Summary diagram of the cited research.
+- id: payoff
+  chapter: The lesson
+  narration: So why does Alaska pay you to live there? Because in nineteen seventy-six, it decided that oil money belonged to
+    everyone, and locked it away. That fund grew to about ninety-two billion dollars. But once the state started paying its bills
+    from the same account, every dividend became a choice. The check is not shrinking by accident. It is shrinking by vote.
+  claims:
+  - fund
+  - cut
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
