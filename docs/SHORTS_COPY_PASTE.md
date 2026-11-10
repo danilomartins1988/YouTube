@@ -665,3 +665,22 @@ Watch the full story: "Why Your Car Insurance Got So Expensive" on The Hidden Ec
 ```
 car insurance, auto insurance, insurance rates, why is car insurance so expensive, insurance premiums, Progressive, Allstate, car repair costs, uninsured drivers, Florida insurance, shorts, economics explained, The Hidden Economics
 ```
+
+## 37-amazon-prime
+
+**Title**
+```
+Amazon Spent $102.7 Billion on Shipping in One Year #shorts
+```
+**Description**
+```
+One hundred and two point seven billion dollars. That is what Amazon spent on shipping in a single year, twenty twenty-five.
+
+Watch the full story: "The Hidden Economics of Amazon Prime" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #amazon #amazonprime #business #economics
+```
+**Tags**
+```
+Amazon Prime, Amazon, how Amazon makes money, Prime membership, AWS, Amazon advertising, FTC Amazon, Prime Day, subscription economy, business explained, shorts, economics explained, The Hidden Economics
+```

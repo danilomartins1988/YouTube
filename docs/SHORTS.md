@@ -39,3 +39,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 34-car-dealers | Car Dealers Make More in the Finance Office Than on the Car | $2,769 PER CAR / FROM THE FINANCE OFFICE | 57 s | `docs/episodes/34-car-dealers/youtube-short/short_package.md` |
 | 35-electricity | Why Your Electric Bill Keeps Going Up | ×9 IN ONE AUCTION / YOUR POWER BILL | 57 s | `docs/episodes/35-electricity/youtube-short/short_package.md` |
 | 36-car-insurance | Car Insurance Jumped 22.6% in One Year. Here's Why | +22.6% IN ONE YEAR / CAR INSURANCE | 53 s | `docs/episodes/36-car-insurance/youtube-short/short_package.md` |
+| 37-amazon-prime | Amazon Spent $102.7 Billion on Shipping in One Year | $102.7 BILLION / ON SHIPPING | 58 s | `docs/episodes/37-amazon-prime/youtube-short/short_package.md` |
