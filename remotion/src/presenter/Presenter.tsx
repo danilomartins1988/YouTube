@@ -28,7 +28,8 @@ export const BRAND = {skin: '#E7B791', skinShade: '#D29E78', hair: '#2B221D', ja
   shirt: '#F1F2F4', tie: '#D9B25F', trousers: '#2A2E37', shoe: '#121418', glasses: '#C9A253', marker: '#D9B25F'};
 
 type Pt = [number, number];
-const L1 = 150, L2 = 145;
+// arm bones (v2, 2026-11-10): shorter and closer to the torso proportions (shoulder→hip ≈ 176)
+const L1 = 126, L2 = 118;
 /** arms stay anatomical: at most 6% stretch; beyond that a telescopic marker / pointer bridges the gap */
 const MAX_STRETCH = 1.06;
 
@@ -52,7 +53,9 @@ export type Pose = {x: number; floor: number; facing: 1 | -1; walk: number; movi
   drawHand: Pt | null; pointHand: Pt | null; talking: number; blink: number; surprise: number; scale: number; holdingMarker: boolean;
   /** optional (animation engine): body lean in degrees (anticipation / follow-through), back-hand world target
    * for explaining gestures, smile 0..1 */
-  lean?: number; backHand?: Pt | null; smile?: number};
+  lean?: number; backHand?: Pt | null; smile?: number;
+  /** point with the index finger (no pointer stick): the arm reaches ~88% toward the target with a natural elbow bend */
+  finger?: boolean};
 
 /** QA helper: world positions of the front shoulder, elbow, hand and marker tip for a pose (same maths as the
  * renderer), so tests can measure whether the drawing instrument really sits on the path. */
@@ -96,6 +99,10 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
   // arms: front arm (facing side) draws/points; back arm hangs or gestures
   const front = drawHand || pointHand;
   let frontTarget: Pt = front ? toLocal(front) : [70 + Math.sin(walk) * 30 * moving, -170];
+  if (pose.finger && pointHand) {                       // finger point: aim, but keep the elbow bent (no rubber arm)
+    const v = [frontTarget[0] - 58, frontTarget[1] + 428], n = Math.hypot(v[0], v[1]) || 1, r = Math.min(n, (L1 + L2) * 0.88);
+    frontTarget = [58 + (v[0] / n) * r, -428 + (v[1] / n) * r];
+  }
   if (drawHand) {                                       // marker tip (not the hand) touches the path
     const v = [frontTarget[0] - 58, frontTarget[1] + 428], n = Math.hypot(v[0], v[1]) || 1;
     frontTarget = [frontTarget[0] - (v[0] / n) * 36, frontTarget[1] - (v[1] / n) * 36];
@@ -122,10 +129,24 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
       {seg(A, B, 19 * S, 16 * S, col)}
       <circle cx={B[0]} cy={B[1]} r={16 * S} fill={col} />
       {seg(B, cuff, 16 * S, 13.5 * S, col)}
+      {seg([cuff[0] - Math.cos(an2) * 9 * S, cuff[1] - Math.sin(an2) * 9 * S], cuff, 14 * S, 13.5 * S, BRAND.jacketShade)}
       {seg(cuff, [cuff[0] + Math.cos(an2) * 7 * S, cuff[1] + Math.sin(an2) * 7 * S], 13 * S, 12 * S, BRAND.shirt)}
+      <path d={`M ${B[0] - Math.cos(an2 - 1.2) * 9 * S} ${B[1] - Math.sin(an2 - 1.2) * 9 * S} q ${Math.cos(an2) * 6 * S} ${Math.sin(an2) * 6 * S} ${Math.cos(an2 + 1.6) * 8 * S} ${Math.sin(an2 + 1.6) * 8 * S}`}
+        fill="none" stroke={BRAND.jacketShade} strokeWidth={2.4 * S} strokeLinecap="round" opacity={0.8} />
       {!frontArm && hand3(Cw, an2, skin, false)}
     </g>;
   };
+  /** a pointing hand: closed fist, index finger extended along `an`, thumb tucked on top */
+  function pointer3(c: Pt, an: number, skin: string) {
+    const deg = (an * 180) / Math.PI;
+    return <g transform={`translate(${c[0]} ${c[1]}) rotate(${deg})`}>
+      <rect x={-2 * S} y={-11 * S} width={24 * S} height={22 * S} rx={10 * S} fill={skin} />
+      <rect x={14 * S} y={-10 * S} width={30 * S} height={8.5 * S} rx={4.25 * S} fill={skin} />
+      <path d={`M ${2 * S} ${4 * S} L ${18 * S} ${4 * S} M ${3 * S} ${8.5 * S} L ${17 * S} ${8.5 * S}`} stroke={BRAND.skinShade} strokeWidth={1.8 * S} strokeLinecap="round" />
+      <ellipse cx={10 * S} cy={-11 * S} rx={8 * S} ry={4.2 * S} transform={`rotate(-12 ${10 * S} ${-11 * S})`} fill={skin} />
+      <path d={`M ${40 * S} ${-7.5 * S} q ${3 * S} ${1.5 * S} 0 ${3.5 * S}`} stroke={BRAND.skinShade} strokeWidth={1.4 * S} fill="none" />
+    </g>;
+  }
   /** a simple cartoon hand (palm + thumb) oriented along angle `an` (world radians) */
   function hand3(c: Pt, an: number, skin: string, grip: boolean) {
     const deg = (an * 180) / Math.PI;
@@ -189,13 +210,14 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
         const angW = Math.atan2(Math.sin(dirF), Math.cos(dirF) * facing);
         const natural: Pt = [handW[0] + Math.cos(angW) * 40 * S, handW[1] + Math.sin(angW) * 40 * S];
         const gap = want ? Math.hypot(want[0] - natural[0], want[1] - natural[1]) : 0;
-        const pole = want && gap > 8 * S;                 // out of reach: a telescopic marker / pointer, never a rubber arm
+        const pole = want && gap > 8 * S && !pose.finger; // out of reach: a telescopic marker / pointer, never a rubber arm
         const tip: Pt = pole ? want! : natural;
         const pa = Math.atan2(tip[1] - handW[1], tip[0] - handW[0]);
         const len = Math.hypot(tip[0] - handW[0], tip[1] - handW[1]);
         return <g>
           {sleeve(shR, armF.e, armF.h, BRAND.jacket, BRAND.skin, true)}
-          {(pose.holdingMarker || pointHand) && <g transform={`translate(${handW[0]} ${handW[1]}) rotate(${(pa * 180) / Math.PI})`}>
+          {pose.finger && pointHand && pointer3(handW, Math.atan2(pointHand[1] - handW[1], pointHand[0] - handW[0]), BRAND.skin)}
+          {!pose.finger && (pose.holdingMarker || pointHand) && <g transform={`translate(${handW[0]} ${handW[1]}) rotate(${(pa * 180) / Math.PI})`}>
             {pole && <>
               <rect x={0} y={-3.2 * S} width={Math.max(0, len - 18 * S)} height={6.4 * S} rx={3 * S} fill="#B8963E" />
               <rect x={0} y={-4.6 * S} width={Math.max(0, len * 0.45)} height={9.2 * S} rx={4 * S} fill={BRAND.marker} />
@@ -207,7 +229,7 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
               : pointHand && <circle cx={len} cy={0} r={6 * S} fill="#E8D08A" />}
           </g>}
           {/* fingers wrap the marker / pointer: drawn last so the grip reads */}
-          {hand3(handW, (pose.holdingMarker || pointHand) ? pa : angW, BRAND.skin, true)}
+          {!(pose.finger && pointHand) && hand3(handW, (pose.holdingMarker || pointHand) ? pa : angW, BRAND.skin, true)}
         </g>;
       })()}
       {/* 'aha' marks */}

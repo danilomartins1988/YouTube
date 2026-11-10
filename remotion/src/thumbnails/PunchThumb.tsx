@@ -135,7 +135,7 @@ export const PunchThumb: React.FC<PunchProps> = (p) => {
         {pr && <Sticker shadow={14}><g transform={`translate(${pr.x} ${pr.y}) scale(${pr.s})`}>
           <Character pose={{x: 0, floor: 0, facing: pr.face ?? -1, walk: 0, moving: 0, hop: 0, drawHand: null,
             pointHand: pr.point ? [(pr.point[0] - pr.x) / pr.s, (pr.point[1] - pr.y) / pr.s] : null, talking: 1, blink: 0,
-            surprise: 1, scale: 1, holdingMarker: false, smile: 0} as any} />
+            surprise: 1, scale: 1, holdingMarker: false, smile: 0, finger: true} as any} />
         </g></Sticker>}
         {p.arrow && <Arrow a={p.arrow} />}
         {p.crossed && <g transform={`rotate(${p.crossed.rotate ?? -6} ${p.crossed.x} ${p.crossed.y})`}>
