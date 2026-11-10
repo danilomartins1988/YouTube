@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/how-visa-and-mastercard-became-financial-gatekeepers/documentary/how-visa-and-mastercard-became-financial-gatekeepers--documentary.mp4 (208.8 MB) |
+| File exists | PASS | /home/user/YouTube/output/how-visa-and-mastercard-became-financial-gatekeepers/documentary/how-visa-and-mastercard-became-financial-gatekeepers--documentary.mp4 (209.0 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -10,7 +10,7 @@
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 342 cues; median cue-start offset 0.03 s, p90 0.31 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
-| No frozen picture (>5 s) | FAIL | 150.1s |
+| No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
@@ -22,9 +22,9 @@
 # QC report: how-visa-and-mastercard-became-financial-gatekeepers / documentary (long_16x9)
 
 - Runtime: **749.1 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 208.8 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 209.0 MB
 - Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Errors: **0**, warnings: **86**
+- Errors: **0**, warnings: **85**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
@@ -115,7 +115,6 @@
 - [WARNING] (distinctiveness) Scene sequence 84% similar to 'why-your-car-insurance-got-so-expensive/documentary'
 - [WARNING] (distinctiveness) Scene sequence 81% similar to 'the-hidden-economics-of-amazon-prime/documentary'
 - [WARNING] (distinctiveness) Scene sequence 85% similar to 'the-2-billion-that-never-existed/documentary'
-- [WARNING] (render) Picture static for >4 s from 149.77s (pacing?)
 
 ## Publish blockers - claims needing human verification
 

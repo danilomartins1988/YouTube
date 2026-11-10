@@ -722,3 +722,22 @@ Watch the full story: "The Hidden Business Behind America's Grocery Prices" on T
 ```
 grocery prices, food prices, inflation, egg prices, supermarket profits, food dollar, USDA, farmers, shrinkflation, shorts, economics explained, The Hidden Economics
 ```
+
+## 39-visa-mastercard
+
+**Title**
+```
+How Two Bank Clubs Became Visa and Mastercard #shorts
+```
+**Description**
+```
+Three hundred and fifty-five billion. That is how many payments carried Visa's name in a single year.
+
+Watch the full story: "How Visa and Mastercard Became Financial Gatekeepers" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #visa #mastercard #finance #economics
+```
+**Tags**
+```
+Visa, Mastercard, credit cards, debit cards, payment networks, network effects, antitrust, BankAmericard, finance explained, shorts, economics explained, The Hidden Economics
+```

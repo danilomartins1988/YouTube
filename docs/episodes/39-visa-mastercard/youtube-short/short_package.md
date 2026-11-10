@@ -23,7 +23,7 @@ Watch the full story: "How Visa and Mastercard Became Financial Gatekeepers" on 
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+Visa, Mastercard, credit cards, debit cards, payment networks, network effects, antitrust, DOJ v Visa, Durbin Amendment, swipe fees, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

@@ -64,6 +64,6 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | 15 | How One Company Made Diamonds a Symbol of Love | Already scheduled (top-10 #7); produced once |
 | 16 | The Machine That Could Challenge ASML | **Duplicate** of Ep 15 (Canon nanoimprint); replacement topic requested |
 | 17 | Why the World's Memory Supply Depends on Three Companies | **Duplicate** of Ep 14; replacement topic requested |
-| 18 | How Visa and Mastercard Became Financial Gatekeepers | **In production** (Ep 39, `docs/episodes/39-visa-mastercard`; overlap with Ep 30 checked: history/antitrust only) |
+| 18 | How Visa and Mastercard Became Financial Gatekeepers | **Delivered** (Ep 39, 12:29, QC 0 errors; history/antitrust angle, no overlap with Ep 30) |
 | 19 | Why Japan's Property Bubble Became a Lost Decade | **Overlaps** top-10 #6 (Tokyo land); owner decision: merge or keep one |
 | 20 | The Hidden Business Behind America's Grocery Prices | **Delivered** (Ep 40, 11:25, QC 0 errors; re-check Oct CPI and 2025 food dollar before publishing) |
