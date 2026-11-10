@@ -1,0 +1,126 @@
+# Sources and claims for "How One Flooded Factory Ran America Short of IV Fluids" (Episode 44, new topics N4).
+# Every claim was read on its primary page/file on 2026-11-10 (notes: docs/episodes/44-iv-bags/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: "about 60%" is an AHA estimate (said, attributed); daily output = Baxter's "more than a million"; HHS/ASPR
+# statements not used (not fetched); no named hospitals; no market-share split between makers; FDA root-cause report = 2019.
+sources:
+  - id: baxter
+    title: "Baxter Hurricane Helene updates (Sep 29, Oct 9, Oct 17, Oct 31, 2024; Jan, Feb, May 2025) and North Cove fact sheet (May 2025)"
+    publisher: Baxter International
+    url: https://www.baxter.com/baxter-newsroom/hurricane-helene-updates
+    published: "2024-09-29"
+    accessed: "2026-11-10"
+    credit: "Baxter"
+  - id: aha
+    title: "AHA letter to the President on the IV solution shortage after Helene"
+    publisher: American Hospital Association
+    url: https://www.aha.org/system/files/media/file/2024/10/aha-to-president-urging-the-administration-to-take-immediate-action-to-address-iv-solution-supply-shortage-as-a-result-of-helene-letter-10-7-2024.pdf
+    published: "2024-10-07"
+    accessed: "2026-11-10"
+    credit: "American Hospital Association"
+  - id: fda
+    title: "FDA Roundup Oct 11 and Oct 18, 2024 (shortage list, compounding, temporary imports)"
+    publisher: U.S. Food and Drug Administration
+    url: https://www.fda.gov/news-events/press-announcements/fda-roundup-october-18-2024
+    published: "2024-10-18"
+    accessed: "2026-11-10"
+    credit: "FDA"
+  - id: ashp
+    title: "Sterile fluid shortage survey (fielded Oct 16-25, 2024)"
+    publisher: American Society of Health-System Pharmacists
+    url: https://news.ashp.org/-/media/assets/drug-shortages/docs/2024/ASHP-Sterile-Fluid-Shortage.pdf
+    published: "2024-10"
+    accessed: "2026-11-10"
+    credit: "ASHP"
+  - id: tenk
+    title: "Baxter International 2024 Form 10-K"
+    publisher: Baxter International (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/10456/000162828025007201/bax-20241231.htm
+    published: "2025-02"
+    accessed: "2026-11-10"
+    credit: "Baxter 10-K"
+  - id: rivals
+    title: "ICU Medical 2024 10-K; B. Braun statement (Oct 18, 2024)"
+    publisher: ICU Medical (SEC filing); B. Braun Medical
+    url: https://www.bbraunusa.com/en/about-us/media/company-news/2024/b--braun-takes-steps-to-secure-the-supply-of-critical-iv-fluids-.html
+    published: "2024-10-18"
+    accessed: "2026-11-10"
+    credit: "ICU Medical 10-K · B. Braun"
+  - id: roots
+    title: "Drug Shortages: Root Causes and Potential Solutions (2019, updated 2020); GAO-14-194 (2014)"
+    publisher: FDA; U.S. Government Accountability Office
+    url: https://www.fda.gov/media/131130/download
+    published: "2019-10"
+    accessed: "2026-11-10"
+    credit: "FDA · GAO"
+  - id: maria
+    title: "Fifth Annual Report on Drug Shortages for Calendar Year 2017"
+    publisher: U.S. Food and Drug Administration
+    url: https://www.fda.gov/files/drugs/published/Fifth-Annual-Report-on-Drug-Shortages-for-Calendar-Year-2017.pdf
+    published: "2018"
+    accessed: "2026-11-10"
+    credit: "FDA"
+
+claims:
+  - id: share
+    text: "AHA (Oct 7, 2024): the Marion, NC plant produces 'approximately 60% — or 1.5 million bags — of the IV solutions used every day in the U.S.' Baxter: North Cove is 'the largest manufacturer of these solutions in the United States'; fact sheet: '1M+ IV solutions produced at the site every day', 'more than 2,500 employees', '1.4M+ square foot facility', '$500M+ facility investments since 2017'."
+    spoken: about sixty percent
+    display: "≈ 60% of U.S. IV solutions (AHA estimate)"
+    fields: {daily_spoken: more than a million, staff_spoken: more than two thousand five hundred}
+    source_ids: [aha, baxter]
+    status: source_located
+    verification_note: 60% is an AHA estimate (said); daily output per Baxter.
+
+  - id: flood
+    text: "Baxter (Sep 29, 2024): North Cove 'affected by flooding due to the storm and is currently closed for production'; 'The heavy rain and storm surge triggered a levee breach, which led to water permeating the site. The bridges accessing the site have also been damaged.' Hurricane Helene, late Sep 2024."
+    spoken: September twenty twenty-four
+    display: "Helene floods North Cove (Sep 2024)"
+    fields: {}
+    source_ids: [baxter]
+    status: source_located
+    verification_note: Baxter wording.
+
+  - id: ration
+    text: "Baxter (Oct 9, 2024): allocations of highest-demand IV fluids raised from 40% to 60% for direct customers and from 10% to 60% for distributors; goal to return to 90-100% allocation of certain IV codes by end of 2024; FDA (Oct 11) temporary compounding guidance; providers urged to conserve. ASHP survey (401 respondents, Oct 16-25, 2024): 84% moderate or critical impact (critical = delay or cancel treatments or procedures); 47% of purchasing staff had two weeks or less of large-volume fluids."
+    spoken: forty percent
+    display: "Hospitals rationed to 40-60% of normal orders (Baxter)"
+    fields: {ashp_spoken: eighty-four percent}
+    source_ids: [baxter, ashp]
+    status: source_located
+    verification_note: Allocation percentages are of normal orders (said).
+
+  - id: response
+    text: "FDA (Oct 11, 2024): added Dextrose 70%, Lactated Ringer's and peritoneal dialysis solution to the shortage list; temporary compounding guidance. FDA (Oct 18): temporary importation of '23 different IV and PD fluids from five Baxter facilities around the world'. Baxter fact sheet: ~200 airplanes, nearly 18,000 tons by end of 2024; 9 plants in its network. B. Braun: Irvine and Daytona Beach output to rise 20 percent. ICU Medical 10-K: competes with Baxter and B. Braun; competitor's damage caused 'a national shortage'."
+    spoken: twenty-three
+    display: "FDA cleared imports of 23 fluids from 5 Baxter plants"
+    fields: {planes_spoken: about two hundred, tons_spoken: nearly eighteen thousand tons}
+    source_ids: [fda, baxter, rivals]
+    status: source_located
+    verification_note: Airlift figures are Baxter's.
+
+  - id: recovery
+    text: "Baxter: first line restarted week of Oct 28 (Oct 31, 2024 update), the highest-throughput line, ~25% of site output and ~50% of its 1-liter bags; first post-storm product released Nov 21, 2024; all 10 lines restarted Jan 28, 2025; pre-hurricane production levels Feb 17, 2025; allocations removed for 'virtually all' North Cove IV codes May 13, 2025."
+    spoken: about four and a half weeks
+    display: "Back to pre-storm output Feb 17, 2025 (Baxter)"
+    fields: {}
+    source_ids: [baxter]
+    status: source_located
+    verification_note: Recovery per Baxter (FDA confirmation not found).
+
+  - id: cost
+    text: "Baxter 2024 10-K: estimated $110M reduction in sales; $44M of inventory/asset write-offs and $317M of remediation, idle-facility and freight costs, offset by $251M of insurance recoveries (net $110M pre-tax charges); North Cove 'was not fully operational for most of the fourth quarter'."
+    spoken: three hundred and seventeen million dollars
+    display: "Baxter: $317M of cleanup, idle-plant and freight costs (10-K)"
+    fields: {ins_spoken: two hundred and fifty-one million dollars, sales_spoken: one hundred and ten million dollars}
+    source_ids: [tenk]
+    status: source_located
+    verification_note: 10-K actuals (guidance not used).
+
+  - id: why
+    text: "FDA root causes report (Oct 2019, updated Feb 2020): root cause 1 'Lack of incentives for manufacturers to produce less profitable drugs'; of 163 shortage drugs, 63% sterile injectables; median per-unit price $8.73 ($11.05 injectables) in the year before shortage. GAO-14-194: 'low profit margins have limited infrastructure investments'; 'constrained manufacturing capacity'. FDA 2017 shortage report: Hurricane Maria 'disrupted the manufacturing of sterile saline solution at the Baxter ... facility located in Puerto Rico'; temporary imports from Baxter plants abroad."
+    spoken: eight dollars and seventy-three cents
+    display: "Shortage drugs: median price $8.73 a unit (FDA)"
+    fields: {inj_spoken: sixty-three percent}
+    source_ids: [roots, maria]
+    status: source_located
+    verification_note: FDA report is 2019 (said).

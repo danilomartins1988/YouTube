@@ -1,0 +1,274 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; the 60% is an AHA estimate (said); company figures attributed.
+logline: In September 2024, a hurricane flooded one factory in North Carolina, and American hospitals started rationing
+  the most basic product they use. How a bag of salt water became a single point of failure, and why nobody fixed it.
+title: How One Flooded Factory Ran America Short of IV Fluids
+segments:
+- id: h_open
+  chapter: Sixty percent
+  narration: About sixty percent. That is how much of America's daily supply of IV fluids came from a single factory in the
+    mountains of North Carolina, according to the American Hospital Association.
+  claims:
+  - share
+- id: h_twist
+  chapter: Sixty percent
+  narration: In September twenty twenty-four, Hurricane Helene flooded that factory. Within days, hospitals across the country
+    were told they could only order a fraction of the fluids they normally used.
+  claims:
+  - flood
+  - ration
+- id: h_question
+  chapter: Sixty percent
+  narration: So how does the richest country in the world end up depending on one building for a bag of salt water?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced facts.
+- id: h_promise
+  chapter: Sixty percent
+  narration: By the end of this video, you will know what happened inside that factory, how hospitals and regulators kept
+    patients supplied, and why the economics of cheap medicine keep creating the same weak point.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The factory
+  narration: ''
+  claims: []
+- id: m1_bag
+  chapter: The factory
+  narration: Start with the product. An IV bag is mostly sterile water with a little salt or sugar. Hospitals use it for almost
+    everything. To keep patients hydrated, to deliver drugs, during surgery, in the emergency room. It is one of the most common
+    things in any hospital, and one of the cheapest.
+  claims:
+  - share
+  analysis: true
+  source_note: Description of IV solutions (commentary).
+- id: m1_site
+  chapter: The factory
+  narration: The factory is called North Cove, near the town of Marion. It belongs to Baxter, a large medical company. Baxter
+    calls it its largest manufacturing facility in the world, with {{share.staff_spoken}} employees. And it calls it the
+    largest maker of IV and dialysis solutions in the United States.
+  claims:
+  - share
+- id: m1_output
+  chapter: The factory
+  narration: The numbers are enormous. According to Baxter, the site produces {{share.daily_spoken}} IV solutions every single
+    day. The hospital association put its share at {{share}} of the IV solutions used in the country each day. Baxter itself
+    never gave a percentage, so treat that figure as an estimate.
+  claims:
+  - share
+- id: m1_size
+  chapter: The factory
+  narration: The building itself is huge. Baxter's fact sheet describes more than one point four million square feet, and more
+    than five hundred million dollars invested in the site since twenty seventeen. It is not a small workshop that happened to
+    flood. It is the heart of the system, built to be efficient.
+  claims:
+  - share
+- id: m1_few
+  chapter: The factory
+  narration: And there are not many other makers. One competitor, ICU Medical, says in its annual report that its IV solutions
+    compete in the U.S. with Baxter and B. Braun. Three companies, and one of them with one giant plant, carrying a large part
+    of the load.
+  claims:
+  - response
+- id: m1_draw
+  chapter: The factory
+  narration: Let me draw the supply line. Here is one big factory. From it, trucks go out to distributors. From the distributors,
+    to thousands of hospitals. Next to it, two smaller makers. Now notice the shape. Most of the arrows start in the same place.
+  claims:
+  - share
+  analysis: true
+  source_note: Diagram of the supply chain (commentary on the sourced facts).
+- id: m1_transition
+  chapter: The factory
+  narration: For years, that shape worked fine. Then, at the end of September twenty twenty-four, the rain came.
+  claims:
+  - flood
+- id: m2_card
+  chapter: The flood
+  narration: ''
+  claims: []
+- id: m2_storm
+  chapter: The flood
+  narration: Hurricane Helene hit the southeast United States and dumped enormous amounts of rain on the mountains of western
+    North Carolina. Rivers rose fast. At North Cove, Baxter said, heavy rain and the storm surge triggered a levee breach, and
+    water got into the site.
+  claims:
+  - flood
+- id: m2_closed
+  chapter: The flood
+  narration: By September twenty-ninth, Baxter announced that the site was closed for production. The bridges that led to the
+    factory were damaged too. So the problem was not only the machines. Workers and trucks could not easily reach the building.
+  claims:
+  - flood
+- id: m2_inside
+  chapter: The flood
+  narration: Making sterile fluids is not like making ordinary products. Every production line has to be cleaned, checked
+    and proven safe before a single bag can be shipped. A flooded line cannot simply be dried out and switched back on.
+  claims:
+  - recovery
+  analysis: true
+  source_note: Commentary on sterile manufacturing (Baxter describes phased, verified restarts).
+- id: m2_draw
+  chapter: The flood
+  narration: Let me draw the flood. Here is the river. Here is the levee that holds it back. Here is the factory behind it.
+    The water rises. The levee breaks. And one break in one place cuts off a large share of a whole country's supply.
+  claims:
+  - flood
+  - share
+  analysis: true
+  source_note: Illustrative diagram of the levee breach described by Baxter.
+- id: m2_transition
+  chapter: The flood
+  narration: Within days, hospitals across America felt it.
+  claims:
+  - ration
+- id: m3_card
+  chapter: The rationing
+  narration: ''
+  claims: []
+- id: m3_alloc
+  chapter: The rationing
+  narration: Baxter put its customers on allocation. That means each hospital could only order a set share of what it normally
+    bought. At first, direct customers could get {{ration}} of their usual orders of the most needed fluids. For distributors,
+    it was only ten percent. On October ninth, Baxter raised both to sixty percent, and set a goal of returning to ninety or one hundred percent
+    for certain products by the end of the year.
+  claims:
+  - ration
+- id: m3_survey
+  chapter: The rationing
+  narration: Hospital pharmacists described the pressure. In a survey by their professional society in October, {{ration.ashp_spoken}}
+    of respondents said the shortage had a moderate or critical impact. A critical impact meant delaying or canceling treatments
+    or procedures. And almost half of those who manage supplies said they had two weeks of fluids or less.
+  claims:
+  - ration
+- id: m3_saving
+  chapter: The rationing
+  narration: Regulators tried to stretch the supply. The FDA issued temporary guidance that let pharmacies prepare certain IV
+    fluids themselves, something they normally could not do on this scale. Pharmacists, doctors and nurses had to
+    decide, patient by patient, where each bag mattered most. For weeks, every single bag had to count, from the emergency room
+    to the operating room.
+  claims:
+  - response
+  - ration
+- id: m3_draw
+  chapter: The rationing
+  narration: Let me draw the allocation. Here is a normal order, one hundred bags. Under allocation, a direct customer gets
+    sixty. A distributor, at first, got only ten. The gap between the order and the delivery is where hospitals had to
+    improvise.
+  claims:
+  - ration
+  analysis: true
+  source_note: Bar diagram of the Baxter allocation percentages.
+- id: m3_transition
+  chapter: The rationing
+  narration: So the question became simple. Where could America find millions of extra bags, fast?
+  claims:
+  - response
+- id: m4_card
+  chapter: The airlift
+  narration: ''
+  claims: []
+- id: m4_fda
+  chapter: The airlift
+  narration: Regulators moved first. The Food and Drug Administration added several IV and dialysis solutions to its official
+    shortage list. And it helped clear the temporary import of {{response}} different IV and dialysis fluids from five Baxter
+    factories around the world.
+  claims:
+  - response
+- id: m4_planes
+  chapter: The airlift
+  narration: Then came the planes. According to Baxter, by the end of twenty twenty-four, {{response.planes_spoken}} airplanes
+    had delivered product to the United States, {{response.tons_spoken}} of fluids, from plants in its global network. Water,
+    flown across oceans, because the usual source was under repair.
+  claims:
+  - response
+- id: m4_rivals
+  chapter: The airlift
+  narration: The other makers pushed too. B. Braun said its plants in California and Florida would raise output by twenty percent.
+    ICU Medical reported higher demand in the last months of the year. But neither could replace a plant of that size overnight.
+  claims:
+  - response
+- id: m4_restart
+  chapter: The airlift
+  narration: Inside North Cove, the repair went line by line. Baxter restarted its first line about four and a half weeks after
+    the flood, and released its first bags made after the storm on November twenty-first. It was the biggest one, about a quarter of the site's output. By late January twenty twenty-five, all ten lines
+    were running again. On February seventeenth, Baxter said the site was back to its production levels from before the storm. That was less than
+    five months after the flood.
+  claims:
+  - recovery
+- id: m4_bill
+  chapter: The airlift
+  narration: The recovery was expensive. In its annual report, Baxter estimated that the storm cut its sales by {{cost.sales_spoken}}.
+    It recorded {{cost}} of cleanup, idle-plant and air freight costs, offset by {{cost.ins_spoken}} from insurance.
+  claims:
+  - cost
+- id: m4_draw
+  chapter: The airlift
+  narration: Let me draw the recovery. Here is the flood, at the end of September. The first line, about a month later. All ten
+    lines, at the end of January. Full output, in February. And in May twenty twenty-five, almost every product off allocation.
+    Eight months, from flood to normal.
+  claims:
+  - recovery
+  analysis: true
+  source_note: Timeline of the Baxter milestones.
+- id: m4_transition
+  chapter: The airlift
+  narration: The fluids came back. But the bigger question did not go away. Why was one building carrying so much in the first
+    place?
+  claims:
+  - why
+- id: m5_card
+  chapter: Why one factory
+  narration: ''
+  claims: []
+- id: m5_cheap
+  chapter: Why one factory
+  narration: The answer is in the price tag. The FDA studied drug shortages and listed the first root cause as a lack of incentives
+    to make less profitable drugs. Of the shortage drugs it studied, {{why.inj_spoken}} were sterile injectables. In the year
+    before the shortage, the median price per unit was just {{why}}.
+  claims:
+  - why
+- id: m5_margin
+  chapter: Why one factory
+  narration: A government watchdog, the GAO, had found the same thing years earlier. Low profit margins had limited investment
+    in factories for these cheap sterile products. When margins are thin, the cheapest way to make a product is in one huge
+    plant, not in several smaller ones spread across the country.
+  claims:
+  - why
+- id: m5_maria
+  chapter: Why one factory
+  narration: And it had happened before. In twenty seventeen, Hurricane Maria disrupted saline production at a Baxter plant in
+    Puerto Rico. Saline was already in short supply, and the storm made it worse. Then too, regulators let in fluids from
+    Baxter plants abroad. The FDA described it in its own annual report on drug shortages for that year. Two
+    storms, seven years apart, and the same lesson about the same kind of product.
+  claims:
+  - why
+- id: m5_draw
+  chapter: Why one factory
+  narration: Let me draw the trade-off. On one side, one big plant. Cheaper per bag, but one weak point. On the other, many smaller
+    plants. More expensive, but if one floods, the others keep going. For a product sold for a few dollars, the market keeps
+    choosing the first option.
+  claims:
+  - why
+  analysis: true
+  source_note: Diagram of the concentration trade-off (commentary on FDA and GAO findings).
+- id: payoff
+  chapter: The lesson
+  narration: So how did one flooded factory run America short of IV fluids? Because the product is so cheap that nobody is paid
+    to build a backup. The system is efficient on a normal day, and fragile on a bad one. The bags came back within months. The
+    shape of the supply chain, with so many arrows starting in one place, is still the part to watch.
+  claims:
+  - share
+  - why
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
