@@ -67,3 +67,21 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | 18 | How Visa and Mastercard Became Financial Gatekeepers | **Delivered** (Ep 39, 12:29, QC 0 errors; history/antitrust angle, no overlap with Ep 30) |
 | 19 | Why Japan's Property Bubble Became a Lost Decade | **Overlaps** top-10 #6 (Tokyo land); owner decision: merge or keep one |
 | 20 | The Hidden Business Behind America's Grocery Prices | **Delivered** (Ep 40, 11:25, QC 0 errors; re-check Oct CPI and 2025 food dollar before publishing) |
+
+## Batch NEW_TOPICS_2026_11 (owner approved 2026-11-10; from docs/TOPIC_RESEARCH_2026-11.md top 10)
+
+Same standard as above. Every hook figure is verified on the primary page before scripting (research marks them "to verify").
+v2 thumbnail (PunchThumb) and the presenter as main character from the start.
+
+| # | Working title | Status |
+|---|---|---|
+| N1 | Who Actually Gets the $166 Billion Tariff Refund? | Research |
+| N2 | Why America Stopped Making the Penny | Research |
+| N3 | America's $1 Trillion of Gold Is Booked at $11 Billion | Research |
+| N4 | One Factory Makes 60% of America's IV Bags | Queued |
+| N5 | How Prediction Markets Make Money Off Your Hunches | Queued |
+| N6 | Why Banks Still Make Billions From Overdrafts | Queued |
+| N7 | Why the Post Office Loses $9 Billion a Year | Queued |
+| N8 | Alaska: The State That Pays You to Live There | Queued |
+| N9 | College Sports Just Got a $20.5 Million Payroll | Queued |
+| N10 | MF Global: The $1.6 Billion That Vanished | Queued |
