@@ -105,9 +105,9 @@ add("p09_blocks", "m1_draw", "engine_draw", {
     "strokes": [
         {"d": "M 560 860 L 1460 860", "color": "ink", "width": 4, "start": C("Here is one year")},
         {"d": rect(600, 760, 180, 100), "color": "accent3", "width": 6, "kind": "box", "start": C("Here is one year", 0.4), "label": lbl("1 YEAR", 690, 818, 22, "accent3")},
-        {"d": "M 900 860 L 900 560 L 1080 560 L 1080 860 M 900 760 L 1080 760 M 900 660 L 1080 660", "color": "accent2", "width": 6, "start": C("In the nineties"), "label": lbl("1990s ≈ 3", 990, 540, 24, "accent2")},
-        {"d": "M 1140 860 L 1140 460 L 1320 460 L 1320 860 M 1140 760 L 1320 760 M 1140 660 L 1320 660 M 1140 560 L 1320 560", "color": "accent", "width": 6, "start": C("By twenty nineteen"), "label": lbl("2019 ≈ 4", 1230, 440, 24, "accent")},
-        {"d": "M 1380 860 L 1380 390 L 1460 390", "color": "risk", "width": 7, "start": C("Today, almost five"), "label": lbl("TODAY ≈ 5", 1420, 370, 24, "risk")},
+        {"d": "M 900 860 L 900 560 L 1080 560 L 1080 860 M 900 760 L 1080 760 M 900 660 L 1080 660", "color": "accent2", "width": 6, "fill": "accent2", "fillOpacity": 0.25, "kind": "bar", "start": C("In the nineties"), "label": lbl("1990s ≈ 3", 990, 540, 24, "accent2")},
+        {"d": "M 1140 860 L 1140 460 L 1320 460 L 1320 860 M 1140 760 L 1320 760 M 1140 660 L 1320 660 M 1140 560 L 1320 560", "color": "accent", "width": 6, "fill": "accent", "fillOpacity": 0.25, "kind": "bar", "start": C("By twenty nineteen"), "label": lbl("2019 ≈ 4", 1230, 440, 24, "accent")},
+        {"d": "M 1380 860 L 1380 390 L 1460 390 L 1460 860", "color": "risk", "width": 7, "fill": "risk", "fillOpacity": 0.25, "kind": "bar", "start": C("Today, almost five"), "label": lbl("TODAY ≈ 5", 1420, 370, 24, "risk")},
     ],
     "actions": [{"kind": "point", "at": C("Every extra block", 0.3), "dur": 1.4, "target": [1420, 420]}],
     "scale": 0.86, "floor": 1040}, sources=["jchs"])
