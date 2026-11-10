@@ -19,7 +19,7 @@
       "archetype": "bignum",
       "text": [
         "+35%",
-        "ELECTRICITY PRICES"
+        "POWER PRICES"
       ],
       "claim_basis": "price: BLS CPI electricity +34.8% Sep 2021 \u2192 Sep 2026 (our calculation)",
       "scene": {
@@ -65,11 +65,11 @@
           "color": "#FFC21A"
         },
         {
-          "text": "ELECTRICITY PRICES",
+          "text": "POWER PRICES",
           "x": 96,
-          "y": 697.8,
-          "size": 95.5,
-          "width": 1100,
+          "y": 726.0,
+          "size": 120,
+          "width": 921.6,
           "anchor": "start",
           "color": "#FFFFFF"
         }
@@ -109,7 +109,7 @@
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 307, 1012, 610), (96, 623, 1196, 704)]",
+            "detail": "[(90, 307, 1012, 610), (96, 632, 1018, 733)]",
             "critical": true
           },
           {
@@ -120,8 +120,8 @@
           },
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
-            "pass": false,
-            "detail": "8.0px font at 160px wide",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
             "critical": true
           },
           {
@@ -133,7 +133,7 @@
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.088",
+            "detail": "0.091",
             "critical": false
           },
           {
@@ -155,8 +155,8 @@
             "critical": true
           }
         ],
-        "critical_fail": true,
-        "design_score": 0.624,
+        "critical_fail": false,
+        "design_score": 0.658,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -329,9 +329,9 @@
       }
     }
   ],
-  "default": null,
+  "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-10T06:25:57Z",
-  "master": null
+  "generated": "2026-11-10T06:26:21Z",
+  "master": "output/why-americas-electricity-bills-are-rising/thumbnails/master_A.png"
 }
