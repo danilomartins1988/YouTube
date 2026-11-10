@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic card only (no bank logos).
+title: Why Banks Still Make Billions From Overdrafts
+docs_dir: docs/episodes/46-overdrafts
+video: output/overdraft_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why does a hated fee still earn billions?
+  surprising_fact: Banks over $1bn collected $5.83bn in overdraft and NSF fees in 2023 (CFPB); median fee $35
+  subject: a bank card with a fee sticker
+  tone: strategy
+  metaphor: a small purchase with a big fee
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $5.8 BILLION
+  - OVERDRAFT FEES
+  claim_basis: 'revenue: $5.83bn overdraft/NSF revenue in 2023, banks over $1bn (CFPB)'
+  scene:
+    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: ccard, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'BUY: $24'
+  - 'FEE: $35'
+  claim_basis: 'median overdraft-triggering debit purchase $24 vs median fee $35 (CFPB)'
+  scene:
+    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: ccard, x: 480, y: 650, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none

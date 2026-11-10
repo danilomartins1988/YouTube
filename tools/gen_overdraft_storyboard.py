@@ -40,7 +40,7 @@ def chart(bars_, at=0.2, **kw):
 
 # ====================================================================== HOOK
 stage("s01_open", "h_open", {
-    "zones": [Z("shop")], "worldW": 2400,
+    "zones": [Z("shop", label="CORNER STORE")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 480, "zoom": 1.15}, {"at": 1.0, "x": 1000, "y": 520, "zoom": 1.0, "dur": 2.5}], "drift": 2,
     "items": [it("letters", x=1000, y=150, text="$35", at=0.05, size=150, color="risk"),
               it("statement", x=1450, y=520, at=0.3, scale=0.8, start=4, rows=[
@@ -69,7 +69,7 @@ stage("s04_promise", "h_promise", {
 # ====================================================================== PART 1: the fee
 card("s05_c1", "m1_card", "The Fee", "How an overdraft is made")
 stage("s06_what", "m1_what", {
-    "zones": [Z("shop")], "worldW": 2400,
+    "zones": [Z("shop", label="CORNER STORE")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("The bank can refuse"), "x": 1200, "y": 520, "zoom": 1.0, "dur": 1.6}], "drift": 1,
     "items": [it("letters", x=1000, y=120, text="WHAT IS AN OVERDRAFT?", at=0.3, size=52, color="gold"),
               it("statement", x=1350, y=540, at=0.4, scale=0.8, start=20, rows=[
@@ -94,7 +94,7 @@ stage("s08_loan", "m1_loan", {
               it("letters", x=1250, y=420, text="A VERY EXPENSIVE SHORT LOAN", at=C("If you called that"), size=48, color="gold")]},
     sources=["cfpbfee"])
 stage("s09_stack", "m1_stack", {
-    "zones": [Z("shop", night=True)], "worldW": 2400, "night": True,
+    "zones": [Z("shop", night=True, label="CORNER STORE")], "worldW": 2400, "night": True,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}], "drift": 2,
     "items": [it("letters", x=1000, y=140, text="$35 PER ITEM · UP TO 3 A DAY (WELLS FARGO)", at=0.3, size=42, color="gold"),
               it("counter", x=1000, y=330, at=C("Three small purchases"), prefix="$", suffix="", steps=[[0, 0], [{"cue": "one hundred and five dollars"}, 105]], text="FEES IN ONE BAD DAY (EXAMPLE)", scale=1.3)]},
@@ -131,7 +131,7 @@ stage("s14_frequent", "m2_frequent", {
               it("letters", x=1250, y=470, text="REPEAT CUSTOMERS", at=C("It depends on a small group"), size=56, color="gold")]},
     sources=["cfpbfee"])
 stage("s15_tight", "m2_tight", {
-    "zones": [Z("shop")], "worldW": 2400,
+    "zones": [Z("shop", label="CORNER STORE")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}], "drift": 2,
     "items": [it("letters", x=1000, y=130, text="WHO OVERDRAWS ON $24?", at=0.3, size=54, color="gold"),
               it("sign", x=700, y=300, text="LARGE BALANCE: RARELY", at=C("Usually not someone"), color="#C8E6C9", size=34),
@@ -163,11 +163,11 @@ add("p18_hundred", "m2_draw", "engine_draw", {
     "title": "100 accounts (CFPB study, rounded)", "board": BOARD, "draw_start": C("Here are one hundred"), "speed": 1600, "push": 0.003,
     "enter": {"from": -260, "to": 270, "at": 0.2, "dur": 1.3},
     "strokes": [
-        *[{"d": rect(600 + (k % 13) * 62, 380 + (k // 13) * 62, 40, 40), "color": "muted", "width": 3, "kind": "box", "start": C("Here are one hundred", 0.02 * k)} for k in range(91)],
-        *[{"d": rect(600 + ((91 + k) % 13) * 62, 380 + ((91 + k) // 13) * 62, 40, 40), "color": "risk", "width": 5, "kind": "box", "start": C("Nine accounts", 0.2 * k)} for k in range(9)],
-        {"d": "M 600 880 L 1400 880", "color": "ink", "width": 1, "kind": "stroke", "start": C("And those nine pay"), "label": lbl("9 RED ACCOUNTS PAY ≈ 4 OF EVERY 5 FEE DOLLARS", 1000, 900, 22, "risk")},
+        *[{"d": rect(800 + (k % 13) * 62, 380 + (k // 13) * 62, 40, 40), "color": "muted", "width": 3, "kind": "box", "start": C("Here are one hundred", 0.02 * k)} for k in range(91)],
+        *[{"d": rect(800 + ((91 + k) % 13) * 62, 380 + ((91 + k) // 13) * 62, 40, 40), "color": "risk", "width": 5, "kind": "box", "start": C("Nine accounts", 0.2 * k)} for k in range(9)],
+        {"d": "M 800 880 L 1600 880", "color": "ink", "width": 1, "kind": "stroke", "start": C("And those nine pay"), "label": lbl("9 RED ACCOUNTS PAY ≈ 4 OF EVERY 5 FEE DOLLARS", 1200, 900, 22, "risk")},
     ],
-    "actions": [{"kind": "point", "at": C("And those nine pay", 0.1), "dur": 1.4, "target": [1000, 800]}],
+    "actions": [{"kind": "point", "at": C("And those nine pay", 0.1), "dur": 1.4, "target": [1200, 800]}],
     "scale": 0.86, "floor": 1040}, sources=["cfpbfee"])
 kinetic("s19_t2", "m2_transition", [("A very profitable model…", 62, "very profitable", None, False),
                                     ("…then the big banks backed away", 60, "backing away", "gold", False)])
@@ -253,13 +253,13 @@ add("p32_timeline", "m4_draw", "engine_draw", {
     "title": "Five months on paper", "board": BOARD, "draw_start": C("December twenty twenty-four, the rule"), "speed": 1400, "push": 0.003,
     "enter": {"from": -260, "to": 270, "at": 0.2, "dur": 1.3},
     "strokes": [
-        {"d": "M 600 620 L 1420 620", "color": "ink", "width": 5, "start": C("Let me draw the timeline")},
-        {"d": rect(600, 470, 220, 80), "color": "accent2", "width": 5, "kind": "box", "start": C("December twenty twenty-four, the rule"), "label": lbl("DEC 2024: RULE", 710, 518, 20, "accent2")},
-        {"d": rect(1200, 470, 220, 80), "color": "muted", "width": 5, "kind": "box", "start": C("was supposed to start"), "label": lbl("OCT 2025: START", 1310, 518, 20, "muted")},
-        {"d": rect(900, 680, 220, 80), "color": "risk", "width": 5, "kind": "box", "start": C("Congress erases it"), "label": lbl("MAY 2025: ERASED", 1010, 728, 20, "risk")},
-        {"d": "M 1010 620 L 1010 675 M 1230 480 L 1390 540 M 1390 480 L 1230 540", "color": "risk", "width": 6, "start": C("The fee cap lived")},
+        {"d": "M 780 620 L 1600 620", "color": "ink", "width": 5, "start": C("Let me draw the timeline")},
+        {"d": rect(780, 470, 220, 80), "color": "accent2", "width": 5, "kind": "box", "start": C("December twenty twenty-four, the rule"), "label": lbl("DEC 2024: RULE", 890, 518, 20, "accent2")},
+        {"d": rect(1380, 470, 220, 80), "color": "muted", "width": 5, "kind": "box", "start": C("was supposed to start"), "label": lbl("OCT 2025: START", 1490, 518, 20, "muted")},
+        {"d": rect(1080, 680, 220, 80), "color": "risk", "width": 5, "kind": "box", "start": C("Congress erases it"), "label": lbl("MAY 2025: ERASED", 1190, 728, 20, "risk")},
+        {"d": "M 1190 620 L 1190 675 M 1410 480 L 1570 540 M 1570 480 L 1410 540", "color": "risk", "width": 6, "start": C("The fee cap lived")},
     ],
-    "actions": [{"kind": "point", "at": C("only on paper", 0.1), "dur": 1.4, "target": [1010, 700]}],
+    "actions": [{"kind": "point", "at": C("only on paper", 0.1), "dur": 1.4, "target": [1190, 700]}],
     "scale": 0.86, "floor": 1040}, sources=["rule", "repeal"])
 kinetic("s33_t4", "m4_transition", [("No federal cap…", 66, "So with no federal cap", None, False),
                                     ("…what happened next?", 66, "what happened to the fees", "gold", False)])
@@ -283,14 +283,14 @@ stage("s36_big", "m5_big", {
 stage("s37_all", "m5_all", {
     "zones": [Z("studio", night=True)], "worldW": 1920, "night": True,
     "cam": [{"at": 0, "x": 960, "y": 540, "zoom": 1.0}], "drift": 0,
-    "items": [chart([{"label": "CFA: BANKS > $10BN", "value": 4.88, "color": "#4FC3F7", "at": 0.4, "display": "$4.88BN"},
-                     {"label": "BATES WHITE: BANKS > $1BN", "value": 6.1, "color": "#1E88E5", "at": 0.8, "display": "≈ $6.1BN"},
-                     {"label": "INCL. CREDIT UNIONS", "value": 12.1, "color": "#E53935", "at": C("Counting everyone"), "display": "≈ $12.1BN"}],
+    "items": [chart([{"label": "CFA · > $10BN", "value": 4.88, "color": "#4FC3F7", "at": 0.4, "display": "$4.88BN"},
+                     {"label": "BATES WHITE · > $1BN", "value": 6.1, "color": "#1E88E5", "at": 0.8, "display": "≈ $6.1BN"},
+                     {"label": "NCLC · ALL", "value": 12.1, "color": "#E53935", "at": C("Counting everyone"), "display": "≈ $12.1BN"}],
                     at=0.2, max=14, dark=True, title="OVERDRAFT + NSF FEES IN 2024: THREE ESTIMATES, THREE GROUPS", x=300, w=1100),
               it("letters", x=1640, y=420, text="ESTIMATES", at=C("That is an estimate"), size=44, color="gold")]},
     sources=["after"])
 stage("s38_why", "m5_why", {
-    "zones": [Z("shop")], "worldW": 2400,
+    "zones": [Z("shop", label="CORNER STORE")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("On a small purchase"), "x": 1250, "y": 520, "zoom": 1.0, "dur": 1.6}], "drift": 2,
     "items": [it("letters", x=1000, y=120, text="A FLAT FEE", at=0.3, size=60, color="gold"),
               it("sign", x=750, y=260, text="OVERDRAW $2 → $35", at=C("whether you overdraw"), color="#FFCDD2", size=34),

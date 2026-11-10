@@ -78,9 +78,9 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 | N1 | Who Actually Gets the $166 Billion Tariff Refund? | **In production** (Ep 41, `docs/episodes/41-tariff-refund`) |
 | N2 | Why America Stopped Making the Penny | **In production** (Ep 42, `docs/episodes/42-penny`) |
 | N3 | America's $1 Trillion of Gold Is Booked at $11 Billion | **In production** (Ep 43, `docs/episodes/43-gold-reserve`) |
-| N4 | One Factory Makes 60% of America's IV Bags | Queued |
-| N5 | How Prediction Markets Make Money Off Your Hunches | Queued |
-| N6 | Why Banks Still Make Billions From Overdrafts | Queued |
+| N4 | One Factory Makes 60% of America's IV Bags | Research done (Ep 44; use "IV fluids", 60% is an AHA estimate) |
+| N5 | How Prediction Markets Make Money Off Your Hunches | Research done (Ep 45) |
+| N6 | Why Banks Still Make Billions From Overdrafts | **In production** (Ep 46, `docs/episodes/46-overdrafts`) |
 | N7 | Why the Post Office Loses $9 Billion a Year | Queued |
 | N8 | Alaska: The State That Pays You to Live There | Queued |
 | N9 | College Sports Just Got a $20.5 Million Payroll | Queued |
