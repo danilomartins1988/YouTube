@@ -80,6 +80,9 @@ def episode_files(ep: str, kind: str) -> dict:
         if not status.get("package_ready"):
             die("package not ready (PACKAGE_STATUS.json package_ready=false)")
         video = ROOT / (pkg / "video.txt").read_text().splitlines()[0].strip()
+        light = video.with_name(video.stem + "_light.mp4")
+        if not video.exists() and light.exists():  # owner's rule (2026-11-10): only the light versions are kept
+            video = light
         title = (pkg / "title.txt").read_text().strip().splitlines()[0]
         desc = (pkg / "description.txt").read_text().strip()
         tags = [t.strip() for t in (pkg / "tags.txt").read_text().split(",") if t.strip()]
