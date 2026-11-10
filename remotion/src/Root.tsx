@@ -4,6 +4,7 @@ import {Documentary} from './Documentary';
 import {Thumbnail} from './Thumbnail';
 import {ToneThumbnail} from './ToneThumbnail';
 import {CinematicThumb} from './thumbnails/CinematicThumb';
+import {PunchThumb} from './thumbnails/PunchThumb';
 import {INTRO_SECONDS, TheHiddenEconomicsIntro} from './brand/TheHiddenEconomicsIntro';
 import type {Props} from './lib/types';
 import {DEMO_SECONDS, EngineDemo} from './animation-engine/examples/EngineDemo';
@@ -28,6 +29,15 @@ export const RemotionRoot: React.FC = () => (
     id="Thumbnail"
     component={Thumbnail as unknown as React.FC<Record<string, unknown>>}
     defaultProps={{...defaults, thumb: {scene: defaults.scenes[0], at: 1, headline: ['DEMO']}} as unknown as Record<string, unknown>}
+    fps={30}
+    width={1920}
+    height={1080}
+    durationInFrames={1}
+  />
+  <Composition
+    id="PunchThumb"
+    component={PunchThumb as unknown as React.FC<Record<string, unknown>>}
+    defaultProps={{bg: ['#FFE14D', '#FF8A00'], hero: {kind: 'ram', x: 1100, y: 540, s: 1}, text: []} as unknown as Record<string, unknown>}
     fps={30}
     width={1920}
     height={1080}
