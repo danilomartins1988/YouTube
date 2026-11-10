@@ -523,6 +523,28 @@ const SETS: Record<string, SetFn> = {
       {night && Array.from({length: 6}, (_, k) => { const x = z.x0 + ((k * 700 + t * 500) % w); return <g key={'hl' + k}><circle cx={x} cy={f + 120} r={8} fill="#FFF8E1" /><circle cx={x + 26} cy={f + 120} r={8} fill="#FFF8E1" /></g>; })}
     </g>;
   },
+  /** A giant parcel sort center inside: steel roof trusses, a mezzanine of yellow conveyor lanes, cardboard boxes stacked
+   *  on carts, numbered loading-dock doors along the back wall. Boxes ride the upper belt continuously. */
+  sortcenter: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#3E4656' : '#D5DBE1'} />
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => <path key={'tr' + k} d={`M ${z.x0 + k * 300} ${f - 820} L ${z.x0 + k * 300 + 150} ${f - 760} L ${z.x0 + k * 300 + 300} ${f - 820}`} fill="none" stroke="#90A4AE" strokeWidth={6} />)}
+      <rect x={z.x0} y={f - 830} width={w} height={12} fill="#78909C" />
+      {Array.from({length: Math.ceil(w / 360)}, (_, k) => { const x = z.x0 + 40 + k * 360;
+        return <g key={'dk' + k}><rect x={x} y={f - 420} width={260} height={300} fill="#90A4AE" stroke={OL} strokeWidth={4} />
+          {Array.from({length: 7}, (_, r) => <rect key={r} x={x + 10} y={f - 410 + r * 42} width={240} height={34} fill="#B0BEC5" stroke={OL} strokeWidth={2} />)}
+          <rect x={x + 90} y={f - 470} width={80} height={40} rx={6} fill="#263238" stroke={OL} strokeWidth={3} />
+          <T x={x + 130} y={f - 441} s={26} c="#FFC21A">{String(101 + k)}</T></g>; })}
+      <rect x={z.x0} y={f - 580} width={w} height={26} fill="#FFC21A" stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 500)}, (_, k) => <rect key={'lg' + k} x={z.x0 + 200 + k * 500} y={f - 554} width={16} height={430} fill="#607D8B" />)}
+      {Array.from({length: Math.ceil(w / 180)}, (_, k) => { const x = z.x0 + ((k * 180 + t * 160) % w + w) % w;
+        return <g key={'bx' + k}><rect x={x} y={f - 640} width={70} height={60} rx={4} fill="#C8A27A" stroke={OL} strokeWidth={3} />
+          <rect x={x + 28} y={f - 640} width={14} height={60} fill="#E0C9A6" /></g>; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#5B6577' : '#AEB6BF'} />
+      <rect x={z.x0} y={f + 40} width={w} height={10} fill="#FFD54A" opacity={0.8} />
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -3040,9 +3062,47 @@ const bumper: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A generic delivery van (no brand): `x` keyframable, wheels spin, rear doors open at `openAt` showing parcels;
+ *  `text` on the side. */
+const van: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const spin = x * 0.03, op = a.openAt !== undefined ? E.out(win(t, a.openAt, 0.7)) : 0, c = col(a.color, '#ECEFF1');
+  return <g key={'vn' + i} transform={`translate(${x} ${kf(a.y, t, f)}) scale(${s})`}>
+    <ellipse cx={0} cy={60} rx={330} ry={16} fill="#000" opacity={0.2} />
+    <path d="M -320 30 L -320 -250 L 160 -250 L 250 -140 L 320 -110 L 320 30 Z" fill={c} stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+    <path d="M 170 -235 L 240 -145 L 170 -145 Z" fill={K.glass} stroke={OL} strokeWidth={4} />
+    <rect x={-320} y={-60} width={640} height={16} fill="#1565C0" />
+    {a.text && <T x={-90} y={-130} s={44} c="#1565C0">{a.text}</T>}
+    {op > 0 && <g><rect x={-330 - 80 * op} y={-250} width={20 + 70 * op} height={260} fill={c} stroke={OL} strokeWidth={4} />
+      {[0, 1, 2].map((k) => <rect key={k} x={-300} y={-80 - k * 60} width={90} height={56} rx={4} fill="#C8A27A" stroke={OL} strokeWidth={3} />)}</g>}
+    {[-200, 200].map((dx) => <g key={dx} transform={`translate(${dx} 30) rotate(${spin * 57})`}><circle r={54} fill="#263238" stroke={OL} strokeWidth={5} />
+      <circle r={22} fill="#B0BEC5" stroke={OL} strokeWidth={3} /><path d="M -18 0 L 18 0 M 0 -18 L 0 18" stroke="#78909C" strokeWidth={4} /></g>)}
+  </g>;
+};
+
+/** A row of phone screens that appear one by one (`stepAt` [times]), each with a `titles[k]` line and option buttons,
+ *  showing a long multi-step flow; `counter` text (e.g. "6 CLICKS") pops at the end. `short` draws a single-button screen. */
+const flowscreens: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const steps: number[] = a.stepAt || [0], titles: string[] = a.titles || [], n = steps.length, gap = a.gap ?? 260;
+  return <g key={'fs' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    {steps.map((st, k) => { const u = E.outBack(win(t, st, 0.4)); if (u <= 0) return null; const cx = (k - (n - 1) / 2) * gap;
+      return <g key={k} transform={`translate(${cx} 0) scale(${u})`}>
+        <rect x={-100} y={-180} width={200} height={360} rx={26} fill="#263238" stroke={OL} strokeWidth={5} />
+        <rect x={-86} y={-160} width={172} height={310} rx={14} fill="#FFFFFF" />
+        <T x={0} y={-118} s={20} w={160}>{titles[k] || 'Are you sure?'}</T>
+        {Array.from({length: a.short ? 1 : 3}, (_, b) => <rect key={b} x={-70} y={-70 + b * 62} width={140} height={44} rx={10} fill={b === 0 ? (a.short ? '#43A047' : '#FFC21A') : '#ECEFF1'} stroke={OL} strokeWidth={2} />)}
+        {k < n - 1 && <path d={`M 108 0 L ${gap - 108} 0`} stroke={K.red} strokeWidth={5} strokeDasharray="10 8" />}</g>; })}
+    {a.counter && a.counterAt !== undefined && t >= a.counterAt && <g transform={`translate(0 250) scale(${E.outBack(win(t, a.counterAt, 0.4))})`}>
+      <rect x={-220} y={-46} width={440} height={80} rx={14} fill={a.short ? '#43A047' : K.red} stroke={OL} strokeWidth={4} /><T x={0} y={12} s={40} c="#FFFFFF">{a.counter}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

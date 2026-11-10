@@ -1,0 +1,88 @@
+# Thumbnail creative brief. A = bignum, B = split. Plain parcels only (no Amazon logo or smile).
+title: The Hidden Economics of Amazon Prime
+docs_dir: docs/episodes/37-amazon-prime
+video: output/prime_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How can a membership that costs so much be a genius deal?
+  surprising_fact: Amazon shipping costs $102.7bn (2025) vs all subscription revenue $49.6bn (10-K)
+  subject: a stack of delivery parcels
+  tone: bright
+  metaphor: Prime is the glue; Amazon buys your habit
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $102.7B
+  - AMAZON'S SHIPPING BILL
+  claim_basis: 'shipping: Amazon shipping costs $102.7bn in 2025 (10-K)'
+  scene:
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#1E2A4A'
+      haze: '#FFCC80'
+      key: '#FFF3E0'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: parcels
+      x: 1480
+      y: 540
+      s: 0.7
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFF3E0'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - FEES $49.6B
+  - SHIPPING $102.7B
+  claim_basis: 'subs + shipping: subscription services $49.6bn vs shipping costs $102.7bn, Amazon 10-K 2025'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: SUBSCRIPTION FEES
+      amount: $49.6B
+      magnifier: false
+      rot: -4
+    after:
+      kind: parcels
+      x: 1440
+      y: 640
+      s: 0.42
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

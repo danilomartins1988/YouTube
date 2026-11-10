@@ -508,6 +508,16 @@ const SUBJECTS: Record<string, SubjectFn> = {
     <ellipse cx={0} cy={90} rx={160} ry={26} fill="#78909C" stroke="#05070B" strokeWidth={6} />
     <path d="M 40 -420 L -60 -230 L 10 -230 L -40 -80 L 110 -300 L 30 -300 L 90 -420 Z" fill={P.accent} stroke="#05070B" strokeWidth={8} strokeLinejoin="round" transform="translate(230 60)" />
   </g>,
+  /** A stack of plain cardboard parcels with tape (no logo). */
+  parcels: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <circle r={540} fill={P.haze} opacity={0.18} filter="url(#soft)" />
+    <ellipse cx={0} cy={330} rx={520} ry={40} fill="#000" opacity={0.45} filter="url(#soft)" />
+    {[[-230, 120, 380, 260], [180, 140, 320, 220], [-40, -150, 360, 280]].map(([bx, by, bw, bh], k) => <g key={k}>
+      <rect x={bx - bw / 2} y={by - bh / 2} width={bw} height={bh} rx={10} fill={['#C8A27A', '#D7B98E', '#B98E62'][k]} stroke="#05070B" strokeWidth={9} />
+      <rect x={bx - 26} y={by - bh / 2} width={52} height={bh} fill="#E9D5B5" stroke="#05070B" strokeWidth={4} />
+      <rect x={bx + bw / 2 - 130} y={by + bh / 2 - 80} width={100} height={56} rx={6} fill="#FFFFFF" stroke="#05070B" strokeWidth={4} />
+      <path d={`M ${bx + bw / 2 - 118} ${by + bh / 2 - 64} l 76 0 m -76 14 l 60 0 m -60 14 l 70 0`} stroke="#05070B" strokeWidth={4} /></g>)}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

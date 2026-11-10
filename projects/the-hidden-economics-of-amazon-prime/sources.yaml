@@ -1,0 +1,130 @@
+# Sources and claims for "The Hidden Economics of Amazon Prime" (Episode 37, US batch #11).
+# Every claim was read on its primary page/filing on 2026-11-10 (notes: docs/episodes/37-amazon-prime/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as published.
+# RULES: "subscription services" includes Prime fees AND other subscriptions (said); shipping/fulfillment costs cover ALL customers,
+# not only Prime (said); ratios are OUR calculation; FTC claims are allegations, Amazon did not admit wrongdoing (said); last
+# official member count is "more than 200 million" (April 2021, said with its date); CIRP and Adobe estimates NOT used.
+# No Amazon logos or real interface designs; names in text only.
+sources:
+  - id: k25
+    title: "Amazon.com, Inc. Form 10-K, fiscal year 2025"
+    publisher: Amazon / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm
+    published: "2026-02-06"
+    accessed: "2026-11-10"
+    credit: "Amazon 10-K"
+  - id: q3
+    title: "Amazon.com, Inc. Form 10-Q (Q3 2026) and Q3 2025 / Q3 2026 earnings releases"
+    publisher: Amazon / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm
+    published: "2026-10-30"
+    accessed: "2026-11-10"
+    credit: "Amazon 10-Q"
+  - id: launch
+    title: "Amazon.com announces fourth quarter 2004 results; introduces Amazon Prime (Ex. 99.1)"
+    publisher: Amazon / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000119312505017451/dex991.htm
+    published: "2005-02-02"
+    accessed: "2026-11-10"
+    credit: "Amazon 2005 release"
+  - id: prices
+    title: "Amazon Q4 2021 results (price increase) and 'Celebrating ten years of Amazon Prime' (2015)"
+    publisher: Amazon
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872422000002/amzn-20211231xex991.htm
+    published: "2022-02-03"
+    accessed: "2026-11-10"
+    credit: "Amazon"
+  - id: letters
+    title: "Letters to shareholders (2017, 2020)"
+    publisher: Amazon / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000110465921050346/tm216818d2_ex99-1.htm
+    published: "2021-04-15"
+    accessed: "2026-11-10"
+    credit: "Amazon shareholder letter"
+  - id: video
+    title: "Prime Video update (limited ads) and Prime Video Ultra"
+    publisher: Amazon (aboutamazon.com)
+    url: https://www.aboutamazon.com/news/entertainment/prime-video-update-announces-limited-ads
+    published: "2023-09-22"
+    accessed: "2026-11-10"
+    credit: "Amazon"
+  - id: ftc
+    title: "FTC v. Amazon.com (Prime): amended complaint (Sep 2023) and settlement release (Sep 2025)"
+    publisher: Federal Trade Commission
+    url: https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-secures-historic-25-billion-settlement-against-amazon
+    published: "2025-09-25"
+    accessed: "2026-11-10"
+    credit: "FTC"
+  - id: primeday
+    title: "Amazon Prime Day 2025 Delivers Record Sales and Savings in Expanded Four-Day Shopping Event"
+    publisher: Amazon
+    url: https://press.aboutamazon.com/2025/7/amazon-prime-day-2025-delivers-record-sales-and-savings-in-expanded-four-day-shopping-event
+    published: "2025-07-12"
+    accessed: "2026-11-10"
+    credit: "Amazon"
+
+claims:
+  - id: shipping
+    text: "Amazon 10-K FY2025: 'Shipping costs were $95.8 billion and $102.7 billion in 2024 and 2025' (FY2024 10-K: $89.5bn in 2023). Fulfillment ($M): 90,619 (2023), 98,505 (2024), 109,074 (2025). 'While costs associated with Amazon Prime membership benefits and other shipping offers are not included in sales and marketing expense, we view these offers as effective worldwide marketing tools, and intend to continue offering them indefinitely.' Video and music expense '$20.4 billion and $22.4 billion' (2024, 2025). 'We expect our cost of shipping to continue to increase to the extent our customers accept and use our shipping offers at an increasing rate'."
+    spoken: one hundred and two point seven billion dollars
+    display: "Shipping costs $102.7bn (2025)"
+    fields: {fulfill_spoken: one hundred and nine billion dollars}
+    source_ids: [k25]
+    status: source_located
+    verification_note: All customers, not only Prime.
+
+  - id: subs
+    text: "Amazon 10-K: subscription services ($M) 40,209 (2023), 44,374 (2024), 49,619 (2025); 'Includes annual and monthly fees associated with Amazon Prime memberships, as well as digital video, audiobook, digital music, e-book, and other non-AWS subscription services.' Q3 2026: $14,006M (+11% y/y, our calc). Our ratio: shipping ≈ 2.1× subscription revenue."
+    spoken: forty-nine point six billion dollars
+    display: "Subscription revenue $49.6bn (2025)"
+    source_ids: [k25, q3]
+    status: source_located
+    verification_note: Prime fees not broken out separately.
+
+  - id: price
+    text: "Amazon (Feb 2, 2005): 'For a flat membership fee of $79 per year, members get unlimited, express two-day shipping for free'; Bezos: 'Though expensive for the Company in the short-term'. Amazon (Feb 2015): 'annual membership program for $99 a year.' Amazon (Feb 3, 2022): 'the annual membership from $119 to $139' and monthly '$12.99 to $14.99'; 'the first time Amazon has raised the price of Prime since 2018'. Amazon (Mar 2026): 'Prime membership is $14.99 a month/$139 a year.'"
+    spoken: seventy-nine dollars
+    display: "$79 (2005) → $139 (2022–2026)"
+    source_ids: [launch, prices]
+    status: source_located
+    verification_note: 2014 and 2018 change dates not cited (press-only).
+
+  - id: members
+    text: "Bezos 2017 letter: 'we have exceeded 100 million paid Prime members globally.' Bezos 2020 letter (Apr 2021): 'We have more than 200 million Prime members worldwide'; value 'about $630' per member and '$126 billion of value creation' (Amazon's own estimate)."
+    spoken: more than two hundred million
+    display: "200M+ members (Amazon, 2021)"
+    source_ids: [letters]
+    status: source_located
+    verification_note: No newer official total.
+
+  - id: ads
+    text: "Amazon 10-K: advertising services ($M) 46,906 (2023), 56,214 (2024), 68,635 (2025). Amazon (Sep 22, 2023): 'starting in early 2024, Prime Video shows and movies will include limited advertisements'; 'a new ad-free option for an additional $2.99 per month'; update Jan 29, 2024. Amazon (2026): 'Prime Video Ultra is available in the U.S. for $4.99 a month' and 'replaces the service's current Ad Free subscription.'"
+    spoken: sixty-eight point six billion dollars
+    display: "Ads revenue $68.6bn (2025)"
+    source_ids: [k25, video]
+    status: source_located
+    verification_note: Growth rates our calculation.
+
+  - id: aws
+    text: "Amazon 10-K FY2025 segment operating income ($M): North America 29,619; International 4,750; AWS 45,606; total 79,975. AWS net sales 128,725 of 716,924. Our calc: AWS 57% of operating income on 18% of sales; margins AWS 35.4% vs North America 6.9%. Q3 2026: AWS 17,773 of 28,076 (≈63%)."
+    spoken: fifty-seven percent
+    display: "AWS = 57% of operating income (2025)"
+    source_ids: [k25, q3]
+    status: source_located
+    verification_note: Shares and margins our calculation.
+
+  - id: ftc
+    text: "FTC amended complaint (Sep 2023): Amazon 'knowingly duped millions of consumers into unknowingly enrolling in its Amazon Prime service'; 'Amazon named that process \"Iliad,\" which refers to Homer's epic about the long, arduous Trojan War'; 'The Iliad Flow required consumers intending to cancel to navigate a four-page, six-click, fifteen-option cancellation process. In contrast, customers could enroll in Prime with one or two clicks.' FTC (Sep 25, 2025): 'Amazon will be required to pay a $1 billion civil penalty'; '$1.5 billion in consumer redress, providing full relief for the estimated 35 million consumers impacted by unwanted Prime enrollment'. Amazon Q3 2025 release: '$2.5 billion related to a legal settlement with the Federal Trade Commission'. Settlement terms (FTC release): a clear option to decline Prime, clear disclosure, easy cancellation."
+    spoken: two point five billion dollars
+    display: "FTC settlement $2.5bn (2025)"
+    source_ids: [ftc, q3]
+    status: source_located
+    verification_note: Allegations; no admission of wrongdoing.
+
+  - id: primeday
+    text: "Amazon (Jul 2025): 'Amazon Prime Day 2025 Delivers Record Sales and Savings in Expanded Four-Day Shopping Event'; 'biggest Prime Day event ever'. Amazon Q3 2026 release: 'Prime Day timing shifted this year, with the event occurring in Q2 for most large countries. In 2025, Prime Day occurred entirely in Q3.'"
+    spoken: four days
+    display: "Prime Day 2025: 'biggest ever' (Amazon)"
+    source_ids: [primeday, q3]
+    status: source_located
+    verification_note: Official wording only; no third-party dollar totals.

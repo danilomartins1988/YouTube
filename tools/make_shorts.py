@@ -65,6 +65,7 @@ SHORTS = {
     "34-car-dealers": ("how-car-dealerships-really-make-money", "documentary", "dealers_documentary", "$2,769 PER CAR", "FROM THE FINANCE OFFICE", "Car Dealers Make More in the Finance Office Than on the Car", "#cars #carbuying #usa"),
     "35-electricity": ("why-americas-electricity-bills-are-rising", "documentary", "power_documentary", "×9 IN ONE AUCTION", "YOUR POWER BILL", "Why Your Electric Bill Keeps Going Up", "#electricity #energy #usa"),
     "36-car-insurance": ("why-your-car-insurance-got-so-expensive", "documentary", "autoins_documentary", "+22.6% IN ONE YEAR", "CAR INSURANCE", "Car Insurance Jumped 22.6% in One Year. Here's Why", "#carinsurance #insurance #usa"),
+    "37-amazon-prime": ("the-hidden-economics-of-amazon-prime", "documentary", "prime_documentary", "$102.7 BILLION", "ON SHIPPING", "Amazon Spent $102.7 Billion on Shipping in One Year", "#amazon #amazonprime #business"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 

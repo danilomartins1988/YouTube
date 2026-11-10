@@ -1,0 +1,271 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations are said as such.
+logline: Amazon spent one hundred and two point seven billion dollars on shipping in 2025, about twice what all its
+  subscriptions brought in. How a money-losing promise became one of the most powerful machines in retail.
+title: The Hidden Economics of Amazon Prime
+segments:
+- id: h_open
+  chapter: One hundred and two billion dollars
+  narration: One hundred and two point seven billion dollars. That is what Amazon spent on shipping in a single year, twenty
+    twenty-five. More than the entire economy of many countries produces.
+  claims:
+  - shipping
+  analysis: true
+  source_note: Shipping cost from the 10-K; the country comparison is commentary.
+- id: h_twist
+  chapter: One hundred and two billion dollars
+  narration: Now compare it with what Amazon earned from all its subscriptions, Prime fees, music, audiobooks and more. {{subs}}.
+    By our calculation, the shipping bill alone was about twice as big. And Amazon says it plans to keep offering those shipping
+    deals indefinitely.
+  claims:
+  - subs
+  - shipping
+- id: h_question
+  chapter: One hundred and two billion dollars
+  narration: So how can a membership that seems to cost Amazon so much be one of the smartest deals in business?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: One hundred and two billion dollars
+  narration: By the end of this video, you will know the four parts of the Prime machine. The fee, the flywheel, the hidden
+    profit engines, and the cancellation maze that cost Amazon two and a half billion dollars.
+  claims:
+  - ftc
+- id: m1_card
+  chapter: The fee
+  narration: ''
+  claims: []
+- id: m1_launch
+  chapter: The fee
+  narration: It began in February two thousand and five. Amazon introduced its first ever membership program. For a flat
+    fee of {{price}} a year, members got unlimited two-day shipping for free, with no minimum purchase. Jeff Bezos called
+    it all-you-can-eat express shipping, and admitted it was expensive for the company in the short term.
+  claims:
+  - price
+- id: m1_prices
+  chapter: The fee
+  narration: The price crept up. By twenty fifteen, Amazon described Prime as a ninety-nine dollar annual program. In twenty
+    eighteen, it went to one hundred and nineteen. In February twenty twenty-two, Amazon raised it again, to one hundred and
+    thirty-nine dollars a year, or fourteen ninety-nine a month. That is still the price today.
+  claims:
+  - price
+- id: m1_members
+  chapter: The fee
+  narration: And people kept joining. In twenty eighteen, Bezos wrote that Prime had passed one hundred million paid members.
+    Three years later, he wrote that Amazon had {{members}} Prime members worldwide. That is the last official total the
+    company has published.
+  claims:
+  - members
+- id: m1_revenue
+  chapter: The fee
+  narration: All of Amazon's subscription fees together brought in about forty billion dollars in twenty twenty-three, forty-four
+    billion in twenty twenty-four, and {{subs}} in twenty twenty-five. That line includes Prime, but also music, audiobooks,
+    e-books and video. Amazon does not report Prime fees on their own. In the third quarter of twenty twenty-six alone,
+    subscriptions brought in about fourteen billion dollars, up about eleven percent on a year earlier, by our calculation.
+  claims:
+  - subs
+- id: m1_draw
+  chapter: The fee
+  narration: Let me draw the deal. On one side, what a member pays, one hundred and thirty-nine dollars a year. On the other
+    side, what the member gets, fast shipping, video, music and more. On paper, the member seems to get far more than they
+    pay. So where does Amazon win?
+  claims:
+  - price
+  analysis: true
+  source_note: Diagram of the membership offer (commentary).
+- id: m1_transition
+  chapter: The fee
+  narration: The answer starts with a single word that Amazon uses in its own annual report. Marketing.
+  claims:
+  - shipping
+- id: m2_card
+  chapter: The flywheel
+  narration: ''
+  claims: []
+- id: m2_marketing
+  chapter: The flywheel
+  narration: In its annual report, Amazon writes that Prime and its other shipping offers are not counted in marketing expense.
+    But the company says it views them as effective worldwide marketing tools, and intends to continue offering them indefinitely.
+  claims:
+  - shipping
+- id: m2_costs
+  chapter: The flywheel
+  narration: And those tools are expensive. Shipping costs rose from about eighty-nine billion dollars in twenty twenty-three
+    to {{shipping}} in twenty twenty-five. Fulfillment, the warehouses, staff and customer service, cost another {{shipping.fulfill_spoken}}.
+    These numbers cover all of Amazon's customers, not just Prime members. But Prime is a big reason people order so often.
+    And Amazon itself expects its cost of shipping to keep increasing, as customers use its shipping offers more.
+  claims:
+  - shipping
+  analysis: true
+  source_note: Costs from the 10-K; the last sentence is commentary.
+- id: m2_video
+  chapter: The flywheel
+  narration: Then there is entertainment. Amazon spent twenty-two point four billion dollars on video and music in twenty
+    twenty-five, including the shows and movies offered with Prime. Content that keeps members coming back, even when they
+    are not shopping.
+  claims:
+  - shipping
+- id: m2_value
+  chapter: The flywheel
+  narration: Why spend so much? Because members buy more, and they buy from Amazon first. In his twenty twenty letter, Bezos
+    estimated that Prime created about six hundred and thirty dollars of value per member, by the company's own calculation.
+    A member who has paid for free shipping has every reason to shop there again.
+  claims:
+  - members
+  analysis: true
+  source_note: Value estimate is Amazon's own; the first and last sentences are commentary.
+- id: m2_draw
+  chapter: The flywheel
+  narration: Let me draw the flywheel. Lower prices and fast delivery bring more customers. More customers bring more sellers.
+    More sellers bring more choice, which brings more customers again. Prime sits at the center, turning a single fee into
+    a habit.
+  claims:
+  - shipping
+  analysis: true
+  source_note: Flywheel diagram (commentary on Amazon's model).
+- id: m2_transition
+  chapter: The flywheel
+  narration: But the flywheel alone does not explain the profits. For that, you have to look at two businesses most shoppers
+    never see.
+  claims: []
+- id: m3_card
+  chapter: The hidden engines
+  narration: ''
+  claims: []
+- id: m3_ads
+  chapter: The hidden engines
+  narration: The first is advertising. Every sponsored product you scroll past on Amazon is an ad that a seller paid for.
+    Amazon's advertising revenue grew from about forty-seven billion dollars in twenty twenty-three to {{ads}} in twenty twenty-five.
+    By our calculation, that is a rise of almost half in two years.
+  claims:
+  - ads
+- id: m3_video
+  chapter: The hidden engines
+  narration: And Prime itself became an ad channel. In early twenty twenty-four, Prime Video started showing ads to members
+    by default. Watching without them cost an extra two dollars and ninety-nine cents a month. In twenty twenty-six, Amazon
+    replaced that with a new ad-free tier, at four ninety-nine a month.
+  claims:
+  - ads
+- id: m3_aws
+  chapter: The hidden engines
+  narration: The second engine is Amazon Web Services, the cloud computing business that rents out servers to other companies.
+    By our calculation, A W S brought in only eighteen percent of Amazon's sales in twenty twenty-five, but {{aws}} of its
+    operating income. In the third quarter of twenty twenty-six, its share was about sixty-three percent.
+  claims:
+  - aws
+- id: m3_margin
+  chapter: The hidden engines
+  narration: The difference is in the margins. By our calculation, A W S kept about thirty-five cents of operating profit
+    from every dollar of sales. The North American store kept about seven cents. The cloud pays for a large part of the
+    empire. The store builds the habit.
+  claims:
+  - aws
+  analysis: true
+  source_note: Margins our calculation from the 10-K; the last sentences are commentary.
+- id: m3_draw
+  chapter: The hidden engines
+  narration: Let me draw where Amazon's profit comes from. Here is the store, by far the biggest in sales, with a thin slice
+    of profit. Here is advertising, growing fast on top of the store's traffic. And here is the cloud, smaller in sales but
+    the biggest in profit. Prime feeds the first two.
+  claims:
+  - aws
+  - ads
+  analysis: true
+  source_note: Bar diagram of segment figures (schematic).
+- id: m3_transition
+  chapter: The hidden engines
+  narration: Keeping members inside the machine matters so much that, according to regulators, Amazon made it hard to leave.
+  claims:
+  - ftc
+- id: m4_card
+  chapter: The Iliad
+  narration: ''
+  claims: []
+- id: m4_complaint
+  chapter: The Iliad
+  narration: In June twenty twenty-three, the Federal Trade Commission sued Amazon. It alleged that the company had duped
+    millions of consumers into enrolling in Prime without knowing it, using designs known as dark patterns.
+  claims:
+  - ftc
+- id: m4_iliad
+  chapter: The Iliad
+  narration: Then there was the way out. According to the complaint, Amazon's internal name for the cancellation process was
+    Iliad, after Homer's epic about the long, hard Trojan War. Cancelling meant a four-page, six-click, fifteen-option process.
+    Joining took one or two clicks.
+  claims:
+  - ftc
+- id: m4_settle
+  chapter: The Iliad
+  narration: In September twenty twenty-five, Amazon settled. It agreed to pay a one billion dollar civil penalty and one
+    point five billion dollars in refunds, for an estimated thirty-five million consumers. Amazon recorded a {{ftc}} charge
+    in its third quarter results. The settlement also requires a clear way to decline Prime and a simple way to cancel it.
+    These were the regulator's allegations, and the company did not admit wrongdoing.
+  claims:
+  - ftc
+- id: m4_draw
+  chapter: The Iliad
+  narration: Let me draw the two doors. The way in, one button, one click. The way out, a corridor of pages, choices and
+    offers, each one asking if you are sure. When leaving is harder than joining, people stay, and every month they stay,
+    the fee keeps arriving.
+  claims:
+  - ftc
+  analysis: true
+  source_note: Diagram of the alleged flows.
+- id: m4_transition
+  chapter: The Iliad
+  narration: And every summer, Amazon turns that membership into one giant shopping event.
+  claims: []
+- id: m5_card
+  chapter: The membership economy
+  narration: ''
+  claims: []
+- id: m5_primeday
+  chapter: The membership economy
+  narration: Prime Day is a sale only members can fully use. In twenty twenty-five, Amazon expanded it to {{primeday}} and
+    called it the biggest Prime Day event ever. It is so important to the business that when it moved from the third quarter
+    to the second in twenty twenty-six, Amazon had to explain the shift to investors.
+  claims:
+  - primeday
+- id: m5_bundle
+  chapter: The membership economy
+  narration: That is the real trick. Prime turns a store into a club. You pay first, then you shop. The fee is small compared
+    to Amazon's costs. But it changes behavior, it brings members back to the app before any other store, and every visit
+    feeds the advertising machine.
+  claims:
+  - subs
+  - ads
+  analysis: true
+  source_note: Commentary on the membership model.
+- id: m5_draw
+  chapter: The membership economy
+  narration: Let me put the whole machine together. A fee that locks in the habit. Shipping and video that make the fee feel
+    like a bargain. Advertising that profits from all that traffic. A cloud business that throws off cash. And an exit door
+    that was, according to regulators, deliberately hard to find.
+  claims:
+  - shipping
+  - ads
+  - aws
+  - ftc
+  analysis: true
+  source_note: Summary diagram of the sourced parts.
+- id: payoff
+  chapter: The lesson
+  narration: So what is the hidden economics of Amazon Prime? Prime is not a product that has to make money on its own. It
+    is the glue. It keeps hundreds of millions of people shopping, watching and clicking in one place. Amazon may spend more
+    on delivery than Prime fees bring in. But what it buys with that money is something far more valuable. Your habit.
+  claims:
+  - shipping
+  - subs
+  - members
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
