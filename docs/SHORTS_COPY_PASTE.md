@@ -703,3 +703,22 @@ Watch the full story: "Why America's Airports Make Money Before You Fly" on The 
 ```
 airports, airport economics, airport parking, passenger facility charge, FAA, air travel, airline fees, TSA, LAX, travel costs, shorts, economics explained, The Hidden Economics
 ```
+
+## 40-grocery
+
+**Title**
+```
+Only 11.8 Cents of Your Food Dollar Reaches the Farm #shorts
+```
+**Description**
+```
+Eleven point eight cents. Out of every dollar Americans spend on food, that is all that ends up with the farm that grew it.
+
+Watch the full story: "The Hidden Business Behind America's Grocery Prices" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #groceries #food #usa #economics
+```
+**Tags**
+```
+grocery prices, food prices, inflation, egg prices, supermarket profits, food dollar, USDA, farmers, shrinkflation, shorts, economics explained, The Hidden Economics
+```
