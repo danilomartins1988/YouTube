@@ -1,0 +1,278 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; FY2024 figures and estimates are said as such.
+logline: In 2024 it cost three point six nine cents to make one penny. After two hundred and thirty-two years, America
+  stopped making it. What that coin really cost, what happens at the register now, and why the nickel is next in line.
+title: Why America Stopped Making the Penny
+segments:
+- id: h_open
+  chapter: Three point six nine cents
+  narration: Three point six nine cents. That is what it cost the United States Mint to make a single one-cent coin, in its
+    twenty twenty-four fiscal year.
+  claims:
+  - cost
+- id: h_twist
+  chapter: Three point six nine cents
+  narration: So every new penny was a small loss. Add them up, and in that one year the Mint spent {{cost.loss_spoken}} more
+    making pennies than the pennies were worth.
+  claims:
+  - cost
+- id: h_question
+  chapter: Three point six nine cents
+  narration: So why did it take so long to stop? And what happens to your change now?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: Three point six nine cents
+  narration: By the end of this video, you will know how a coin ends up costing more than it is worth, how stores round your
+    change without it, and why the nickel may be next.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The coin that costs too much
+  narration: ''
+  claims: []
+- id: m1_seign
+  chapter: The coin that costs too much
+  narration: Governments usually make money on coins. A quarter costs much less than twenty-five cents to make, so every
+    quarter the Mint ships is a small profit. Economists call that profit seigniorage. In twenty twenty-four, quarters
+    alone earned the Mint {{cost.quarter_spoken}}.
+  claims:
+  - cost
+- id: m1_penny
+  chapter: The coin that costs too much
+  narration: The penny went the other way. Its cost jumped about twenty percent in one year, from about three cents to {{cost}}.
+    According to the Treasury, it was only around one point three cents a decade earlier. The Mint shipped more than three
+    billion new pennies in twenty twenty-four, and every one of them lost money.
+  claims:
+  - cost
+- id: m1_perdollar
+  chapter: The coin that costs too much
+  narration: Here is another way to see it. For every one dollar of pennies the Mint sent out, it spent about two dollars and
+    sixty-nine cents more than that dollar was worth. A dime costs under six cents to make. A quarter, under fifteen. Those coins
+    pay their way. The penny never could.
+  claims:
+  - cost
+- id: m1_streak
+  chapter: The coin that costs too much
+  narration: And it was not a one-year accident. The Mint reports that both the penny and the nickel have cost more than their
+    face value for nineteen fiscal years in a row. The nickel, worth five cents, cost {{cost.nickel_spoken}} to make.
+  claims:
+  - cost
+- id: m1_total
+  chapter: The coin that costs too much
+  narration: Across all circulating coins, the Mint still made a profit, about ninety-nine point five million dollars in twenty
+    twenty-four. But that was sixty percent less than the year before. The losing coins were eating into the winners.
+  claims:
+  - cost
+- id: m1_draw
+  chapter: The coin that costs too much
+  narration: Let me draw the coin ledger. Here is the quarter, a big profit bar. The dime, a smaller profit. Then below the
+    line, the nickel, a loss. And the penny, the biggest loss of all. Two coins pay for themselves. Two coins cost the government
+    money every time they are made.
+  claims:
+  - cost
+  analysis: true
+  source_note: Bar diagram of FY2024 seigniorage by coin (Mint annual report).
+- id: m1_transition
+  chapter: The coin that costs too much
+  narration: For years, that loss was simply accepted. Then, in twenty twenty-five, the government finally pulled the plug.
+  claims:
+  - end
+- id: m2_card
+  chapter: The last penny
+  narration: ''
+  claims: []
+- id: m2_strike
+  chapter: The last penny
+  narration: On November twelfth, twenty twenty-five, in Philadelphia, the Mint held a ceremonial strike of the final circulating
+    penny. The Treasurer of the United States pressed the button. According to the St. Louis Fed, it ended {{end}} of penny
+    production.
+  claims:
+  - end
+- id: m2_early
+  chapter: The last penny
+  narration: In practice, the flow had stopped even earlier. According to the Federal Reserve, it received its last new pennies
+    from the Mint shortly after May twenty twenty-five, months before the ceremony.
+  claims:
+  - end
+- id: m2_tender
+  chapter: The last penny
+  narration: But the penny did not disappear. It is still legal tender. The Mint keeps making a few for collectors. And the
+    Federal Reserve keeps moving the old ones around. Its banks resumed taking penny deposits in January twenty twenty-six,
+    and today every one of its coin terminals fills penny orders again.
+  claims:
+  - end
+- id: m2_count
+  chapter: The last penny
+  narration: How many pennies are out there? Nobody knows exactly. The Treasury talks about roughly one hundred and fourteen
+    billion. The Mint has estimated three hundred billion in circulation. Either way, far more than the Mint says commerce needs. The Treasury says the Federal Reserve will
+    keep recirculating the existing pennies for as long as possible.
+  claims:
+  - end
+- id: m2_save
+  chapter: The last penny
+  narration: Stopping production saves money. According to the Treasury, about {{end.save_spoken}} a year in materials alone.
+    That is small for the federal budget, but it ends a loss that grew every year the coin got more expensive to make.
+  claims:
+  - end
+- id: m2_draw
+  chapter: The last penny
+  narration: Let me draw the penny's journey. Here is the Mint, where new pennies used to start. Then the Fed, then the banks,
+    then the stores, then your pocket, and often a jar. Now the first step is gone. The coins still circulate, but no new ones
+    come in to replace those that vanish into jars.
+  claims:
+  - end
+  analysis: true
+  source_note: Flow diagram of coin circulation (commentary on the Fed and Mint descriptions).
+- id: m2_transition
+  chapter: The last penny
+  narration: Which leaves a very practical question. What happens at the cash register when the pennies run out?
+  claims:
+  - round
+- id: m3_card
+  chapter: The rounding
+  narration: ''
+  claims: []
+- id: m3_rule
+  chapter: The rounding
+  narration: The Treasury published guidance, not a law. It only applies to cash, and only to the final total, after tax.
+    If the total ends in one, two, six or seven cents, round down. If it ends in three, four, eight or nine, round up to the
+    nearest five.
+  claims:
+  - round
+- id: m3_example
+  chapter: The rounding
+  narration: So a bill of four dollars and ninety-eight cents becomes five dollars. But a bill of four dollars and ninety-six
+    cents becomes four ninety-five. If you pay by card, nothing changes at all. You still pay to the exact cent. And the rounding happens
+    once, on the whole receipt, not on every item in your basket. A cart of fifty items gets rounded one time, at the end.
+  claims:
+  - round
+  analysis: true
+  source_note: Worked example applying the Treasury rounding guidance.
+- id: m3_states
+  chapter: The rounding
+  narration: States are writing their own rules. Washington passed a law in twenty twenty-six that lets stores round cash payments
+    the same way, but does not force them to. It took effect in June. Customers can still pay with exact change, and tax is
+    added before any rounding. In Congress, the House and the Senate
+    each passed their own version of a rounding bill, called the Common Cents Act, in twenty twenty-six. As of August, they
+    had not agreed on one text, so it is not law yet.
+  claims:
+  - round
+- id: m3_tax
+  chapter: The rounding
+  narration: Does rounding cheat shoppers? The Richmond Fed studied it. Its researchers estimate the cost to consumers at {{round}}
+    a year, across the whole country. By our calculation, that is less than two cents per American, per year.
+  claims:
+  - round
+- id: m3_draw
+  chapter: The rounding
+  narration: Let me draw the rounding wheel. Here are the last digits, zero to nine. One and two go down to zero. Three and
+    four go up to five. Six and seven go down to five. Eight and nine go up to the next ten. Half the time you win a cent or
+    two. Half the time you lose one.
+  claims:
+  - round
+  analysis: true
+  source_note: Diagram of the Treasury rounding rule.
+- id: m3_transition
+  chapter: The rounding
+  narration: This is not the first time America has had to rethink the penny. And it is not the first country to drop one.
+  claims:
+  - zinc
+- id: m4_card
+  chapter: Before and elsewhere
+  narration: ''
+  claims: []
+- id: m4_zinc
+  chapter: Before and elsewhere
+  narration: In nineteen eighty-two, the Mint changed the recipe to save money. The penny went from ninety-five percent copper
+    to almost ninety-eight percent zinc, with only a little copper.
+    At the time, the change was expected to save the Treasury around {{zinc}} a year.
+  claims:
+  - zinc
+- id: m4_canada
+  chapter: Before and elsewhere
+  narration: Canada went further. In May twenty twelve, its finance minister struck the country's last penny in Winnipeg. Its
+    mint stopped sending pennies to banks in February twenty thirteen. Each one cost {{canada.cost_spoken}} Canadian cents to make.
+  claims:
+  - canada
+- id: m4_canada2
+  chapter: Before and elsewhere
+  narration: The government expected to save eleven million Canadian dollars a year. At the exchange rate of January twenty
+    thirteen, that is {{canada}}. Canadians have rounded their cash payments ever since.
+  claims:
+  - canada
+- id: m4_draw
+  chapter: Before and elsewhere
+  narration: Let me draw the timeline. Nineteen eighty-two, the copper penny becomes a zinc penny. Twenty thirteen, Canada stops
+    handing out pennies. Twenty twenty-five, the United States strikes its last one. Each time, the same reason. The metal
+    cost more than the coin.
+  claims:
+  - zinc
+  - canada
+  - end
+  analysis: true
+  source_note: Timeline of the sourced events.
+- id: m4_transition
+  chapter: Before and elsewhere
+  narration: And that same reason is now staring at the next coin up.
+  claims:
+  - cost
+- id: m5_card
+  chapter: The nickel problem
+  narration: ''
+  claims: []
+- id: m5_nickel
+  chapter: The nickel problem
+  narration: The nickel is a bigger loss per coin than the penny ever was. In twenty twenty-four it cost almost fourteen cents
+    to make a five-cent coin. The Mint lost about seventeen point seven million dollars on nickels that year, less in total than on
+    pennies.
+  claims:
+  - cost
+- id: m5_why
+  chapter: The nickel problem
+  narration: But dropping the nickel would be harder. Without pennies and nickels, cash would round to the nearest ten cents.
+    The Richmond Fed estimates that would cost consumers about {{round.nickel_spoken}} a year, nearly ten times the cost of
+    rounding to five cents.
+  claims:
+  - round
+- id: m5_cash
+  chapter: The nickel problem
+  analysis: true
+  source_note: Cash share from the St. Louis Fed; the last two sentences are commentary.
+  narration: There is also a bigger trend behind all of this. According to the St. Louis Fed, cash was used in only about fourteen
+    percent of payments in twenty twenty-four. Every year, fewer people need small coins at all. That makes it easier for governments
+    to stop making them. For the Mint, ending the penny means less zinc and copper to buy, fewer coins to strike, and one
+    less loss on its books every single year. For shoppers, it mostly means a slightly different number at the cash register.
+  claims:
+  - end
+- id: m5_draw
+  chapter: The nickel problem
+  narration: Let me draw the trade-off. On one side, the cost of making coins that lose money. On the other side, the cost
+    of rounding without them. For the penny, the minting loss was far bigger than the rounding cost. For the nickel, by these estimates,
+    rounding would cost more than the minting loss. That is one reason the nickel is a harder call.
+  claims:
+  - cost
+  - round
+  analysis: true
+  source_note: Comparison of minting losses and rounding estimates (commentary on sourced figures).
+- id: payoff
+  chapter: The lesson
+  narration: So why did America stop making the penny? Because a coin is not just money. It is a product, made of metal,
+    with a cost. When the cost of the product rises above the value printed on it, every new coin is a loss. The penny crossed
+    that line years ago. The only surprise is how long it took to stop.
+  claims:
+  - cost
+  - end
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

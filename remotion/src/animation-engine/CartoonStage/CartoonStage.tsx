@@ -709,6 +709,35 @@ const SETS: Record<string, SetFn> = {
       <rect x={cx - 120} y={f} width={240} height={600} fill={night ? '#6B6F75' : '#BDBDBD'} />
     </g>;
   },
+  /** A mint production floor: big coin presses with a pumping ram, a conveyor carrying copper/silver coins, coin bins and
+   *  ceiling lamps. `night` = dim after-hours floor. `label` = banner. */
+  mintfloor: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#2A3140' : '#DCE3EA'} />
+      <rect x={z.x0} y={f - 700} width={w} height={30} fill={night ? '#3A4456' : '#B0BEC5'} />
+      {Array.from({length: Math.ceil(w / 360)}, (_, k) => { const x = z.x0 + 180 + k * 360; return <g key={'lp' + k}>
+        <path d={`M ${x} ${f - 700} L ${x} ${f - 640}`} stroke={OL} strokeWidth={3} /><path d={`M ${x - 40} ${f - 600} L ${x} ${f - 640} L ${x + 40} ${f - 600} Z`} fill="#546E7A" stroke={OL} strokeWidth={3} />
+        <path d={`M ${x - 40} ${f - 600} L ${x - 120} ${f - 300} L ${x + 120} ${f - 300} L ${x + 40} ${f - 600} Z`} fill="#FFF8E1" opacity={night ? 0.12 : 0.22} /></g>; })}
+      {Array.from({length: Math.ceil(w / 900)}, (_, k) => { const x = z.x0 + 300 + k * 900, ram = 30 * Math.abs(Math.sin(t * 3 + k));
+        return <g key={'pr' + k}>
+          <rect x={x - 130} y={f - 520} width={260} height={90} rx={10} fill="#78909C" stroke={OL} strokeWidth={5} />
+          <rect x={x - 110} y={f - 430} width={40} height={300} fill="#90A4AE" stroke={OL} strokeWidth={4} /><rect x={x + 70} y={f - 430} width={40} height={300} fill="#90A4AE" stroke={OL} strokeWidth={4} />
+          <rect x={x - 40} y={f - 430 + ram} width={80} height={90} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+          <rect x={x - 150} y={f - 130} width={300} height={130} fill="#607D8B" stroke={OL} strokeWidth={5} />
+          <rect x={x - 100} y={f - 500} width={200} height={40} rx={6} fill={night ? '#263238' : '#37474F'} />
+          <T x={x} y={f - 472} s={22} c="#FFC21A">PRESS {k + 1}</T></g>; })}
+      <rect x={z.x0} y={f - 150} width={w} height={26} fill="#37474F" stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 60)}, (_, k) => { const cx = z.x0 + ((k * 60 + t * 90) % w);
+        return <circle key={'cn' + k} cx={cx} cy={f - 162} r={14} fill={k % 3 ? '#C77B3A' : '#CFD8DC'} stroke={OL} strokeWidth={3} />; })}
+      {Array.from({length: Math.ceil(w / 1100)}, (_, k) => { const x = z.x0 + 750 + k * 1100;
+        return <g key={'bn' + k}><path d={`M ${x - 120} ${f - 100} L ${x + 120} ${f - 100} L ${x + 100} ${f} L ${x - 100} ${f} Z`} fill="#8D6E63" stroke={OL} strokeWidth={5} />
+          {Array.from({length: 9}, (_, q) => <circle key={q} cx={x - 80 + (q % 5) * 40} cy={f - 110 - Math.floor(q / 5) * 18} r={16} fill="#C77B3A" stroke={OL} strokeWidth={3} />)}</g>; })}
+      {z.label && <g transform={`translate(${z.x0 + w * 0.5} ${f - 760})`}><rect x={-300} y={-40} width={600} height={70} rx={10} fill="#1B3A5C" stroke={OL} strokeWidth={4} />
+        <T x={0} y={10} s={36} c="#FFE08A">{z.label}</T></g>}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3B4250' : '#9EA7B0'} />
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -3322,9 +3351,25 @@ const bars: ItemFn = (a, {t}, i) => {
       <T x={0} y={14} s={42} c={OL}>{a.tag}</T></g>}</g>;
 };
 
+/** A giant generic coin (no real coin design): `metal` copper|silver, `value` text (e.g. "1¢"), optional price `tag`
+ *  hanging from it ("COST 3.69¢"), `spin` makes it turn (scaleX). */
+const bigcoin: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 460), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const cu = (a.metal ?? 'copper') === 'copper', fill = cu ? '#C77B3A' : '#CFD8DC', rim = cu ? '#9C5A25' : '#90A4AE';
+  const sx = a.spin ? Math.max(0.15, Math.abs(Math.cos(t * 1.6))) : 1;
+  return <g transform={`translate(${x} ${y}) scale(${s})`} key={i}>
+    <g transform={`scale(${sx} 1)`}><circle r={170} fill={rim} stroke={OL} strokeWidth={8} /><circle r={140} fill={fill} stroke={OL} strokeWidth={5} />
+      {Array.from({length: 40}, (_, k) => { const an = (k / 40) * Math.PI * 2; return <path key={k} d={`M ${Math.cos(an) * 152} ${Math.sin(an) * 152} L ${Math.cos(an) * 166} ${Math.sin(an) * 166}`} stroke={OL} strokeWidth={3} />; })}
+      <T x={0} y={36} s={110} c={OL}>{a.value || '1¢'}</T></g>
+    {a.tag && <g transform="translate(150 150) rotate(12)"><path d="M -10 -40 L 20 -40" stroke={OL} strokeWidth={4} />
+      <rect x={-20} y={-30} width={260} height={80} rx={12} fill="#FFC21A" stroke={OL} strokeWidth={6} /><T x={110} y={22} s={40} c={OL}>{a.tag}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

@@ -60,6 +60,7 @@ S = {
  "37-amazon-prime": ("blue", "R", {"kind": "parcels", "s": 0.95}, "$102.7 BILLION", "ON SHIPPING", "#FF1E1E", {}, "shipping costs $102.7bn 2025"),
  "38-airports": ("purple", "L", {"kind": "sedan", "s": 1.0, "color": "#FFC21A", "sticker": "$/DAY"}, "$6.9 BILLION", "FROM PARKING", "#FF1E1E", {}, "parking $6.9bn FY2025 (FAA)"),
  "39-visa-mastercard": ("navy", "R", {"kind": "ccard", "s": 0.95, "rot": 10, "coins": True}, "355 BILLION", "VISA PAYMENTS", "#FF1E1E", {}, "355bn transactions FY2026"),
+ "42-penny": ("orange", "R", {"kind": "coin", "s": 1.0, "symbol": "1¢"}, "IT COSTS 3.69¢", "TO MAKE 1¢", "#FF1E1E", {}, "penny unit cost 3.69¢ FY2024 (Mint)"),
  "43-gold-reserve": ("gold", "L", {"kind": "ingots", "s": 1.05, "tag": "$42.22"}, "$1 TRILLION", "BOOKED AT $11B", "#FF1E1E", {}, "≈ $1.0tn at Sept 2025 price vs $11.04bn book"),
  "40-grocery": ("green", "R", {"kind": "dollar", "s": 0.78, "rot": -6}, "FARMERS GET", "ONLY 11.8¢", "#FF1E1E", {"slice": True}, "farm share 11.8¢ (USDA ERS)"),
 }

@@ -1,0 +1,43 @@
+# Visual direction for why-america-stopped-making-the-penny (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: giant spinning coin on the mint floor (hook), seigniorage charts + mint floor (losing coin), mint at night + Fed bank hall + Congress (last penny), supermarket checkout + Congress + estimate (rounding), office 1982 + snowy square (Canada), silver coin + comparison chart + exchange (nickel).
+primary_tone: bright
+secondary_tones:
+- strategy
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Three point six nine cents
+  tone: bright
+- chapter: The coin that costs too much
+  tone: bright
+- chapter: The last penny
+  tone: reflective
+- chapter: The rounding
+  tone: bright
+- chapter: Before and elsewhere
+  tone: reflective
+- chapter: The nickel problem
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: bright
+  headline: []
+  idea: giant generic copper coin with a 3.69¢ cost tag (FY2024 U.S. Mint)
+requirements:
+- Generic coins only (no real coin designs, no portraits, no seals); no likeness of real people
+- FY2024 figures labelled; estimates attributed (Richmond Fed); bills not law

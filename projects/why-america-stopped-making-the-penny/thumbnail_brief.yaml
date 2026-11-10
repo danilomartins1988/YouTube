@@ -1,0 +1,88 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic coins only (no real coin designs).
+title: Why America Stopped Making the Penny
+docs_dir: docs/episodes/42-penny
+video: output/penny_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why would a country stop making its own coin?
+  surprising_fact: A penny cost 3.69¢ to make in FY2024; the Mint spent $85.3M more than face value (U.S. Mint)
+  subject: a giant copper coin
+  tone: bright
+  metaphor: a coin that costs more than it is worth
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 3.69¢
+  - TO MAKE 1¢
+  claim_basis: 'cost: penny unit cost 3.69 cents, FY2024 (U.S. Mint annual report)'
+  scene:
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#1E2A4A'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: coin
+      x: 1480
+      y: 560
+      s: 0.75
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'WORTH: 1¢'
+  - 'COST: 3.69¢'
+  claim_basis: 'face value vs FY2024 unit cost (U.S. Mint)'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ledger
+      x: 480
+      y: 650
+      s: 0.6
+      heading: MINT LOSS FY2024
+      amount: −$85.3M
+      magnifier: false
+      rot: -4
+    after:
+      kind: coin
+      x: 1440
+      y: 640
+      s: 0.6
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

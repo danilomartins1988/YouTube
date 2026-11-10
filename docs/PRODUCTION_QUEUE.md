@@ -76,7 +76,7 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 | # | Working title | Status |
 |---|---|---|
 | N1 | Who Actually Gets the $166 Billion Tariff Refund? | Research done (Ep 41) |
-| N2 | Why America Stopped Making the Penny | Research done (Ep 42) |
+| N2 | Why America Stopped Making the Penny | **In production** (Ep 42, `docs/episodes/42-penny`) |
 | N3 | America's $1 Trillion of Gold Is Booked at $11 Billion | **In production** (Ep 43, `docs/episodes/43-gold-reserve`) |
 | N4 | One Factory Makes 60% of America's IV Bags | Queued |
 | N5 | How Prediction Markets Make Money Off Your Hunches | Queued |
