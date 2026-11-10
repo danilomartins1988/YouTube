@@ -1,0 +1,136 @@
+# Sources and claims for "Why Banks Still Make Billions From Overdrafts" (Episode 46, new topics N6).
+# Every claim was read on its primary page/file on 2026-11-10 (notes: docs/episodes/46-overdrafts/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: CFPB revenue = banks with more than $1bn in assets (credit unions excluded), latest official year 2023;
+# 2024/2025 totals are third-party analyses of call reports (said, with who); $35 = median at institutions over $10bn;
+# frequent-overdrafter shares are 2011-12 data (said as "a CFPB study"); Senate tally not used; BofA fee amount not used.
+sources:
+  - id: cfpb23
+    title: "Data Spotlight: Overdraft/NSF revenue in 2023 down more than 50% versus pre-pandemic levels"
+    publisher: Consumer Financial Protection Bureau
+    url: https://www.consumerfinance.gov/data-research/research-reports/data-spotlight-overdraft-nsf-revenue-in-2023-down-more-than-50-versus-pre-pandemic-levels-saving-consumers-over-6-billion-annually/
+    published: "2024-04-24"
+    accessed: "2026-11-10"
+    credit: "CFPB"
+  - id: cfpbfee
+    title: "Overdraft and nonsufficient fund fees: insights from the CFPB's monitoring (Dec 2023); Data Point: Checking account overdraft (2014); Data Point: Frequent overdrafters (2017); overdraft practices white paper (2013)"
+    publisher: Consumer Financial Protection Bureau
+    url: https://files.consumerfinance.gov/f/documents/cfpb_overdraft-nsf-report_2023-12.pdf
+    published: "2023-12"
+    accessed: "2026-11-10"
+    credit: "CFPB"
+  - id: rege
+    title: "Federal Reserve announces final rules prohibiting overdraft fees for ATM and one-time debit card transactions without opt-in (Regulation E, 12 CFR 1005.17)"
+    publisher: Federal Reserve Board
+    url: https://www.federalreserve.gov/newsevents/pressreleases/bcreg20091112a.htm
+    published: "2009-11-12"
+    accessed: "2026-11-10"
+    credit: "Federal Reserve"
+  - id: apsn
+    title: "Circular 2022-06 (unanticipated overdraft fees); Supervisory Highlights Issue 29 (88 FR 16945)"
+    publisher: Consumer Financial Protection Bureau
+    url: https://www.consumerfinance.gov/compliance/circulars/consumer-financial-protection-circular-2022-06-unanticipated-overdraft-fee-assessment-practices/
+    published: "2022-10-26"
+    accessed: "2026-11-10"
+    credit: "CFPB"
+  - id: banks
+    title: "Bank announcements: Capital One (2021-12-01), Wells Fargo (2022-01-11), Citi (2022-02-24), Chase; Bank of America 2022 10-K; Wells Fargo overdraft page"
+    publisher: Company press releases and filings
+    url: https://www.capitalone.com/about/newsroom/eliminating-overdraft-fees/
+    published: "2021-12-01"
+    accessed: "2026-11-10"
+    credit: "Company releases and 10-K filings"
+  - id: rule
+    title: "CFPB closes overdraft loophole (final rule, Dec 12, 2024; 89 FR 106768)"
+    publisher: Consumer Financial Protection Bureau
+    url: https://www.consumerfinance.gov/archive/newsroom/cfpb-closes-overdraft-loophole-to-save-americans-billions-in-fees/
+    published: "2024-12-12"
+    accessed: "2026-11-10"
+    credit: "CFPB"
+  - id: repeal
+    title: "Public Law 119-10 (S.J.Res. 18), approved May 9, 2025; House Roll Call 96 (Apr 9, 2025)"
+    publisher: U.S. Congress / Clerk of the House
+    url: https://www.congress.gov/119/plaws/publ10/PLAW-119publ10.htm
+    published: "2025-05-09"
+    accessed: "2026-11-10"
+    credit: "U.S. Congress"
+  - id: after
+    title: "Bates White (Aug 11, 2025); Consumer Federation of America (Apr 7, 2025); NCLC 'The $12 Billion Overdraft Trap' (Jun 2026); Wells Fargo 2024 and 2025 annual reports"
+    publisher: Third-party analyses of FFIEC call reports; Wells Fargo
+    url: https://consumerfed.org/curious-how-much-banks-make-from-overdraft-fees-we-have-the-data/
+    published: "2025-04-07"
+    accessed: "2026-11-10"
+    credit: "CFA · Bates White · NCLC (analyses)"
+
+claims:
+  - id: revenue
+    text: "CFPB (Apr 24, 2024): reporting banks' overdraft/NSF revenue $11.96bn in 2019 and $5.83bn in 2023, down 51% ($6.13bn); about $185 a year saved per overdrafting household; 617 banks with assets over $1bn; credit unions excluded. Latest official data year: 2023."
+    spoken: five point eight three billion dollars
+    display: "Overdraft/NSF revenue $5.83bn in 2023 (CFPB, banks > $1bn)"
+    fields: {y2019_spoken: eleven point nine six billion dollars, hh_spoken: one hundred and eighty-five dollars}
+    source_ids: [cfpb23]
+    status: source_located
+    verification_note: Banks over $1bn only (said).
+
+  - id: fee
+    text: "CFPB (Dec 2023): median overdraft fee $35 among the 119 institutions over $10bn that charge one; median NSF fee $32. CFPB 2014 Data Point: median debit card transaction that led to an overdraft $24. Wells Fargo: $35 per item, up to 3 a day."
+    spoken: thirty-five dollars
+    display: "Median overdraft fee $35 (largest banks, CFPB)"
+    fields: {debit_spoken: twenty-four dollars}
+    source_ids: [cfpbfee, banks]
+    status: source_located
+    verification_note: Median at institutions over $10bn.
+
+  - id: who
+    text: "CFPB Data Point (2017, 2011-12 account data): 9.1% of accounts paid 78.7% of overdraft and NSF fees; accounts with more than 20 a year (4.9%) paid 63.3%. CFPB 2014: 8% of customers incur nearly 75% of fees."
+    spoken: about nine percent
+    display: "≈ 9% of accounts paid ≈ 79% of fees (CFPB study)"
+    fields: {}
+    source_ids: [cfpbfee]
+    status: source_located
+    verification_note: 2011-12 account data (said as a CFPB study).
+
+  - id: rege
+    text: "Federal Reserve (Nov 12, 2009): no overdraft fees on ATM and one-time debit card transactions unless the consumer opts in; effective July 1, 2010 (existing accounts Aug 15, 2010). CFPB 2013 white paper: posting high-to-low can increase overdrafts. CFPB Circular 2022-06 (Oct 26, 2022): 'authorize positive, settle negative' fees likely unfair; Supervisory Highlights 29 (2023): at least tens of millions in injury, refunds to over 170,000 consumers."
+    spoken: twenty ten
+    display: "Opt-in rule for debit and ATM overdrafts (July 1, 2010)"
+    fields: {}
+    source_ids: [rege, apsn, cfpbfee]
+    status: source_located
+    verification_note: Circular later withdrawn (2025, via summaries) - not narrated.
+
+  - id: retreat
+    text: "Capital One (Dec 1, 2021): ending all overdraft and NSF fees (early 2022). Wells Fargo (Jan 11, 2022): ending NSF and overdraft-protection transfer fees; 24-hour grace period; $35 overdraft fee kept. Citi (Feb 24, 2022): ending overdraft, returned-item and overdraft-protection fees 'by this Summer'; 'the only top five U.S. bank' to do so. Chase (2021): $50 cushion, no returned-item fee. Bank of America 2022 10-K: service charges down $1.1bn 'primarily driven by the impact of non-sufficient funds and overdraft policy changes'."
+    spoken: one point one billion dollars
+    display: "Big banks cut or ended overdraft fees (2021-22)"
+    fields: {}
+    source_ids: [banks]
+    status: source_located
+    verification_note: BofA fee amount not used.
+
+  - id: rule
+    text: "CFPB final rule (Dec 12, 2024): institutions over $10bn; options: $5 fee, a fee that covers costs and losses, or treat overdraft as a loan under TILA; 'up to $5 billion in annual overdraft fee savings', $225 per overdrafting household; effective Oct 1, 2025."
+    spoken: five dollars
+    display: "Rule: $5 overdraft fee option (CFPB, Dec 2024)"
+    fields: {save_spoken: up to five billion dollars a year, hh_spoken: two hundred and twenty-five dollars}
+    source_ids: [rule]
+    status: source_located
+    verification_note: Savings are CFPB projections (said).
+
+  - id: repeal
+    text: "Public Law 119-10 (S.J.Res. 18), approved May 9, 2025: the rule (89 FR 106768) 'shall have no force or effect'. House passed 217-211 on Apr 9, 2025 (Roll Call 96). Senate passed it in March 2025 (CRS)."
+    spoken: May ninth, twenty twenty-five
+    display: "Rule repealed by Congress (Public Law 119-10, May 9, 2025)"
+    fields: {}
+    source_ids: [repeal]
+    status: source_located
+    verification_note: Senate tally not used.
+
+  - id: since
+    text: "Bates White (Aug 11, 2025): banks over $1bn collected about $6.1bn in 2024, about 3% more than 2023; JPMorgan Chase and Wells Fargo each $1bn or more. CFA (Apr 7, 2025): banks over $10bn $4.88bn in 2024; JPMorgan Chase $1.028bn. NCLC (Jun 2026), citing the Financial Health Network: an estimated $12.1bn of overdraft and NSF fees in 2024 including credit unions. Wells Fargo 10-K: deposit-related fees (which include overdraft) $5,099m in 2025."
+    spoken: about six point one billion dollars
+    display: "≈ $6.1bn in 2024, banks > $1bn (Bates White analysis)"
+    fields: {cfa_spoken: four point eight eight billion dollars, jpm_spoken: about one billion dollars, all_spoken: about twelve point one billion dollars}
+    source_ids: [after]
+    status: source_located
+    verification_note: Third-party analyses of call reports (said, with who).

@@ -1,0 +1,37 @@
+title: "Why Banks Still Make Billions From Overdrafts"
+slug: why-banks-still-make-billions-from-overdrafts
+language: en
+# Episode 46 (new topics N6: overdraft fees). Visual direction: visual_direction.yaml.
+# Five-part structure internal only. Money: all amounts in US dollars as published by the sources.
+renderer: remotion
+remotion_geo: [world]
+style:
+  name: cartoon-day
+  palette:
+    bg: "#C4E4FA"
+    bg2: "#EEF8FF"
+    ink: "#0F1E36"
+    muted: "#4D6680"
+    land: "#8BD47A"
+    border: "#2B5573"
+    accent: "#E89A00"
+    accent2: "#1565C0"
+    accent3: "#23995A"
+    risk: "#E53935"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 3
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): the channel intro plays after part 1, never inside the hook.
+intro:
+  after_segment: m1_transition

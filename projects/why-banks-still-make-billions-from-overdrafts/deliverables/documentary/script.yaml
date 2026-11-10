@@ -1,0 +1,291 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; estimates and third-party analyses are said as such.
+logline: A twenty-four dollar card purchase can cost a thirty-five dollar fee. Banks cut overdraft fees in half, a federal
+  cap was written and then erased, and the fees still bring in billions. Follow the money behind the overdraft.
+title: Why Banks Still Make Billions From Overdrafts
+segments:
+- id: h_open
+  chapter: Thirty-five dollars
+  narration: Thirty-five dollars. That is the typical overdraft fee at America's largest banks, according to the Consumer Financial
+    Protection Bureau. You can pay it for spending just a few dollars more than you have.
+  claims:
+  - fee
+- id: h_twist
+  chapter: Thirty-five dollars
+  narration: Banks have cut these fees sharply in the last few years. Even so, in twenty twenty-three, banks with more than
+    a billion dollars in assets still collected {{revenue}} in overdraft and bounced-payment fees.
+  claims:
+  - revenue
+- id: h_question
+  chapter: Thirty-five dollars
+  narration: So why is a fee that everyone seems to hate still worth billions? And who is really paying it?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: Thirty-five dollars
+  narration: By the end of this video, you will know how an overdraft fee is made, why a small group of customers pays most
+    of it, and how a federal cap on the fee was written and then erased.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The fee
+  narration: ''
+  claims: []
+- id: m1_what
+  chapter: The fee
+  narration: Here is what an overdraft is. You have twenty dollars in your checking account. You buy something for twenty-five.
+    The bank can refuse the payment, or it can pay it anyway and push your balance below zero. If it pays, it usually charges
+    you a fee for doing it.
+  claims:
+  - fee
+  analysis: true
+  source_note: Explanation of an overdraft (CFPB description).
+- id: m1_median
+  chapter: The fee
+  narration: According to the bureau, the median overdraft fee at the largest institutions that charge one was {{fee}}. The
+    fee for a payment the bank refuses, called a non-sufficient funds fee, was thirty-two dollars. And the bureau found that
+    the median debit card purchase that triggered an overdraft was only {{fee.debit_spoken}}.
+  claims:
+  - fee
+- id: m1_loan
+  chapter: The fee
+  narration: Think about what that means. The bank covers a twenty-four dollar purchase for a few days, until your next deposit
+    arrives. And it charges thirty-five dollars for the favor. If you called that a short loan, it would be one of the most
+    expensive loans in the country.
+  claims:
+  - fee
+  analysis: true
+  source_note: Commentary comparing the median fee and the median transaction (sourced figures).
+- id: m1_stack
+  chapter: The fee
+  narration: And the fees can stack. Wells Fargo, for example, still charges thirty-five dollars per item, up to three times
+    a day. Three small purchases on a bad day can mean one hundred and five dollars in fees.
+  claims:
+  - fee
+- id: m1_draw
+  chapter: The fee
+  narration: Let me draw a bad day. Start at ten dollars. A coffee, and the balance is still positive. A grocery run, and it
+    drops below zero. A fee. A gas station, another fee. A streaming bill, a third fee. The purchases add up to less than the
+    fees.
+  claims:
+  - fee
+  analysis: true
+  source_note: Illustrative example (hypothetical amounts; fee per Wells Fargo's published schedule).
+- id: m1_transition
+  chapter: The fee
+  narration: So who actually ends up paying all these fees? The answer is surprisingly concentrated.
+  claims:
+  - who
+- id: m2_card
+  chapter: Who pays
+  narration: ''
+  claims: []
+- id: m2_few
+  chapter: Who pays
+  narration: Most people rarely overdraft, or never do. The bureau studied millions of checking accounts. It found that about
+    nine percent of accounts paid almost seventy-nine percent of all overdraft and bounced-payment fees.
+  claims:
+  - who
+- id: m2_frequent
+  chapter: Who pays
+  narration: It gets even more extreme at the top. Accounts that overdrafted more than twenty times a year were fewer than one
+    in twenty. Yet they paid about sixty-three percent of all those fees. For the bank, the overdraft business does not depend
+    on everyone. It depends on a small group of repeat customers.
+  claims:
+  - who
+- id: m2_tight
+  chapter: Who pays
+  narration: And those customers are usually people living close to zero. Someone with a large balance does not overdraft on
+    a twenty-four dollar purchase. Someone waiting for the next paycheck does. That is why critics say the fee falls hardest on
+    those who can least afford it.
+  claims:
+  - who
+  analysis: true
+  source_note: Commentary on the CFPB concentration findings.
+- id: m2_order
+  chapter: Who pays
+  narration: Some practices made it worse. The bureau described how some banks processed the largest payment of the day first.
+    Paying the big bill first could empty the account faster, so that several small purchases each triggered their own fee.
+  claims:
+  - rege
+- id: m2_apsn
+  chapter: Who pays
+  narration: Regulators also went after something stranger. A purchase was approved when the account had enough money, but
+    by the time it settled, the balance had dropped, and the bank charged an overdraft fee anyway. The bureau called these fees
+    likely unfair. Its examiners found at least tens of millions of dollars in harm, and refunds went to more than one hundred
+    and seventy thousand customers.
+  claims:
+  - rege
+- id: m2_draw
+  chapter: Who pays
+  narration: Let me draw who pays. Here are one hundred checking accounts. Most of them, ninety-one, pay little or nothing.
+    Nine accounts are on the other side. And those nine pay almost four out of every five fee dollars.
+  claims:
+  - who
+  analysis: true
+  source_note: Diagram of the CFPB concentration finding (rounded).
+- id: m2_transition
+  chapter: Who pays
+  narration: For years, that model was very profitable. Then, almost overnight, the biggest banks started backing away from
+    it.
+  claims:
+  - retreat
+- id: m3_card
+  chapter: The retreat
+  narration: ''
+  claims: []
+- id: m3_optin
+  chapter: The retreat
+  narration: The first crack came years earlier. In twenty ten, a Federal Reserve rule took effect. Banks could no longer charge
+    overdraft fees on ATM withdrawals or one-time debit card purchases unless the customer had opted in. Many customers
+    did opt in. But it was the first time the default had changed.
+  claims:
+  - rege
+- id: m3_capone
+  chapter: The retreat
+  narration: The bigger shift came at the end of twenty twenty-one. Capital One announced it would stop charging overdraft and
+    bounced-payment fees altogether. Weeks later, Wells Fargo dropped its bounced-payment fee and added a grace period of
+    twenty-four hours, though it kept the overdraft fee itself.
+  claims:
+  - retreat
+- id: m3_citi
+  chapter: The retreat
+  narration: In February twenty twenty-two, Citi said it would end overdraft fees completely, and called itself the only top
+    five American bank to do so. Chase added a fifty-dollar cushion before any fee. And Bank of America reported that its
+    service charges fell by {{retreat}} in one year, mainly because of its new overdraft policies.
+  claims:
+  - retreat
+- id: m3_total
+  chapter: The retreat
+  narration: Across the industry, the drop was huge. The bureau counted overdraft and bounced-payment revenue at banks with
+    more than a billion dollars in assets. It was {{revenue.y2019_spoken}} in twenty nineteen. By twenty twenty-three, it was
+    {{revenue}}, down fifty-one percent. The bureau estimated that the average overdrafting household saved about {{revenue.hh_spoken}}
+    a year.
+  claims:
+  - revenue
+- id: m3_draw
+  chapter: The retreat
+  narration: Let me draw the drop. Here is twenty nineteen, a tall bar, almost twelve billion dollars. Here is twenty twenty-three,
+    less than half as tall. The banks gave up more than six billion dollars a year. But look at what is left. Almost six billion
+    dollars a year is still a very big business.
+  claims:
+  - revenue
+  analysis: true
+  source_note: Bar diagram of the CFPB revenue figures.
+- id: m3_transition
+  chapter: The retreat
+  narration: So regulators decided to go further. And for a few months, it looked like the thirty-five dollar fee might disappear.
+  claims:
+  - rule
+- id: m4_card
+  chapter: The rule that vanished
+  narration: ''
+  claims: []
+- id: m4_rule
+  chapter: The rule that vanished
+  narration: In December twenty twenty-four, the bureau issued a final rule for banks and credit unions with more than ten billion
+    dollars in assets. They would have three choices. Charge an overdraft fee of no more than {{rule}}. Charge a fee that only covered
+    their own costs and losses. Or treat the overdraft as a loan, with the same disclosures as a credit card.
+  claims:
+  - rule
+- id: m4_save
+  chapter: The rule that vanished
+  narration: The bureau projected that the rule could save consumers {{rule.save_spoken}}, or about {{rule.hh_spoken}} for each
+    household that pays overdraft fees. It was due to take effect in October twenty twenty-five. Wells Fargo warned its investors
+    that it would expect a significant reduction in its overdraft fees.
+  claims:
+  - rule
+- id: m4_repeal
+  chapter: The rule that vanished
+  narration: It never took effect. In twenty twenty-five, Congress used a law called the Congressional Review Act to cancel
+    it. The Senate voted in March. The House voted two hundred and seventeen to two hundred and eleven in April.
+  claims:
+  - repeal
+- id: m4_signed
+  chapter: The rule that vanished
+  narration: And on {{repeal}}, the resolution became law. Its text is one sentence long. The rule, it says, shall have no
+    force or effect. The five-dollar option was gone before a single bank had to offer it.
+  claims:
+  - repeal
+- id: m4_draw
+  chapter: The rule that vanished
+  narration: Let me draw the timeline. December twenty twenty-four, the rule is written. October twenty twenty-five, the rule
+    was supposed to start. But in between, in May twenty twenty-five, Congress erases it. The fee cap lived for five months,
+    only on paper.
+  claims:
+  - rule
+  - repeal
+  analysis: true
+  source_note: Timeline of the sourced dates.
+- id: m4_transition
+  chapter: The rule that vanished
+  narration: So with no federal cap, what happened to the fees next?
+  claims:
+  - since
+- id: m5_card
+  chapter: Still billions
+  narration: ''
+  claims: []
+- id: m5_2024
+  chapter: Still billions
+  narration: The bureau has not published a new total since twenty twenty-three. But outside researchers read the same bank
+    reports. The consulting firm Bates White estimates that banks with more than a billion dollars in assets collected {{since}}
+    in twenty twenty-four, about three percent more than the year before. In its words, the steep decline appears to have ended.
+  claims:
+  - since
+- id: m5_big
+  chapter: Still billions
+  narration: The money is concentrated at the top. The Consumer Federation of America, an advocacy group, counted {{since.cfa_spoken}}
+    in twenty twenty-four at banks with more than ten billion dollars in assets. JPMorgan Chase alone took about one billion.
+    Wells Fargo was close behind.
+  claims:
+  - since
+- id: m5_all
+  chapter: Still billions
+  narration: And those numbers leave out a lot. Credit unions and smaller banks do not appear in them. Counting everyone, the
+    National Consumer Law Center cites an estimate of {{since.all_spoken}} in overdraft and bounced-payment fees in twenty twenty-four.
+    That is an estimate, and it measures a much wider group than the bureau did.
+  claims:
+  - since
+- id: m5_why
+  chapter: Still billions
+  narration: Why does the fee survive? For a bank, it costs very little to pay a small purchase for a few days. Most overdrafts
+    are paid back quickly, when the next deposit arrives. And the fee is the same thirty-five dollars whether you overdraw by
+    two dollars or by two hundred. On a small purchase, that is a very wide margin.
+  claims:
+  - fee
+  analysis: true
+  source_note: Commentary on the sourced fee structure.
+- id: m5_draw
+  chapter: Still billions
+  narration: Let me draw the overdraft machine. On the left, a customer close to zero. In the middle, the bank paying a small
+    purchase. On the right, the fee, coming back the moment the paycheck lands. Then the next month, the same customer, the same
+    loop.
+  claims:
+  - who
+  - fee
+  analysis: true
+  source_note: Diagram summarizing the sourced findings (commentary).
+- id: payoff
+  chapter: The lesson
+  narration: So why do banks still make billions from overdrafts? Because the fee is small for most people and huge for a few.
+    It is charged on tiny purchases, paid by customers who live close to zero, and repeated month after month. Banks cut it in
+    half when the pressure was high. The cap that would have cut it again was erased. If you want to keep your money out of
+    that machine, the simplest move is to check whether you opted in.
+  claims:
+  - who
+  - revenue
+  - repeal
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).
