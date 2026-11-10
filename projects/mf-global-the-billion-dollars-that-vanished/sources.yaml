@@ -1,0 +1,97 @@
+# Sources and claims for "MF Global: The $1.6 Billion That Vanished" (Episode 50, new topics N10).
+# Every claim was read on its primary page/file on 2026-11-10 (notes: docs/episodes/50-mf-global/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: each shortfall figure labelled by source ($1.6bn trustee/House report; "nearly $1 billion" misused per CFTC;
+# $1.212bn restitution order); Corzine: settled a CFTC civil case without admitting or denying, was not criminally charged
+# (never "cleared"); "eighth-largest bankruptcy" attributed (Sen. Roberts / CRS); UK customers not claimed repaid 100%.
+sources:
+  - id: house
+    title: "House Financial Services Committee, Oversight & Investigations staff report on MF Global (Nov 15, 2012)"
+    publisher: U.S. House of Representatives
+    url: https://financialservices.house.gov/uploadedfiles/256882456288524.pdf
+    published: "2012-11-15"
+    accessed: "2026-11-10"
+    credit: "House Financial Services Committee"
+  - id: sec
+    title: "MF Global Holdings 8-K filings: Oct 25, 2011 earnings release (Ex. 99.1); Oct 31, 2011 bankruptcy"
+    publisher: MF Global Holdings Ltd. (SEC filings)
+    url: https://www.sec.gov/Archives/edgar/data/0001401106/000119312511279409/d247384dex991.htm
+    published: "2011-10-25"
+    accessed: "2026-11-10"
+    credit: "MF Global 8-K (SEC)"
+  - id: trustee
+    title: "SIPA Trustee James W. Giddens releases (Nov 21 and Dec 23, 2011; Jun 4, 2012; Apr 3, 2014); SIPC releases (Nov 6, 2013; Apr 3, 2014)"
+    publisher: SIPA Trustee for MF Global Inc.; SIPC
+    url: https://www.sipc.org/news-and-media/news-releases/20140403
+    published: "2014-04-03"
+    accessed: "2026-11-10"
+    credit: "SIPA Trustee · SIPC"
+  - id: cftc
+    title: "CFTC releases 6776-13 (Nov 2013) and 7508-17 (Jan 5, 2017); customer protection rules (78 FR 68505)"
+    publisher: Commodity Futures Trading Commission
+    url: https://www.cftc.gov/PressRoom/PressReleases/7508-17
+    published: "2017-01-05"
+    accessed: "2026-11-10"
+    credit: "CFTC"
+  - id: senate
+    title: "Senate Agriculture Committee hearing, S. Hrg. 112-504 (Dec 13, 2011); FINRA testimony (Dec 8, 2011)"
+    publisher: U.S. Senate; FINRA
+    url: https://www.finra.org/media-center/speeches-testimony/testimony-committee-agriculture
+    published: "2011-12-13"
+    accessed: "2026-11-10"
+    credit: "U.S. Senate · FINRA"
+
+claims:
+  - id: gap
+    text: "House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.)."
+    spoken: one point six billion dollars
+    display: "≈ $1.6bn customer shortfall (trustee, House report)"
+    fields: {us_spoken: about nine hundred million dollars, fx_spoken: about seven hundred million dollars, cust_spoken: about thirty-six thousand}
+    source_ids: [house, trustee, sec]
+    status: source_located
+    verification_note: Figures labelled by source.
+
+  - id: bet
+    text: "MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q."
+    spoken: six point three billion dollars
+    display: "$6.3bn bet on European government bonds (8-K, Sep 30, 2011)"
+    fields: {loss_spoken: one hundred and ninety-one point six million dollars}
+    source_ids: [sec, house, senate]
+    status: source_located
+    verification_note: Size as of Sep 30, 2011 (said).
+
+  - id: boss
+    text: "Corzine: Chairman and CEO of MF Global Holdings from March 2010. CFTC (Jan 5, 2017): Corzine to pay 'a $5 million civil monetary penalty' and 'will never register with the CFTC in any capacity' or act as a principal, officer, director or employee of a futures broker; the firm used 'nearly one billion dollars' of segregated customer funds; former assistant treasurer ordered to pay $500,000. Settled without admitting or denying; not criminally charged."
+    spoken: five million dollars
+    display: "Corzine: $5M civil penalty, settled with the CFTC (2017)"
+    fields: {}
+    source_ids: [cftc]
+    status: source_located
+    verification_note: Civil settlement; never 'cleared'.
+
+  - id: order
+    text: "CFTC (order entered Nov 8, 2013): MF Global Inc. to pay '$1.212 billion in restitution' plus a '$100 million civil monetary penalty', payable after customers are paid. CFTC (2017): 'restitution has been paid to satisfy all customer claims'."
+    spoken: one point two one two billion dollars
+    display: "$1.212bn restitution + $100M penalty (CFTC order, 2013)"
+    fields: {}
+    source_ids: [cftc]
+    status: source_located
+    verification_note: As ordered.
+
+  - id: back
+    text: "SIPC (Nov 6, 2013): '100 percent of securities customers' property has already been returned'. Trustee final distribution (Apr 3, 2014; checks from Apr 4): $6.7bn in total to more than 26,000 customers; US futures 24,020 customers $5.4bn; foreign-exchange futures 2,047 customers $880M; securities 428 customers $376M; '100 percent whole'."
+    spoken: six point seven billion dollars
+    display: "$6.7bn returned to 26,000+ customers by April 2014 (trustee)"
+    fields: {}
+    source_ids: [trustee]
+    status: source_located
+    verification_note: MF Global Inc. customers; UK administration not claimed.
+
+  - id: rules
+    text: "Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals."
+    spoken: two hundred and fifty-three thousand dollars
+    display: "A farmer's $253,000 frozen (Senate hearing, 2011)"
+    fields: {}
+    source_ids: [senate, cftc]
+    status: source_located
+    verification_note: Testimony quoted as testimony.
