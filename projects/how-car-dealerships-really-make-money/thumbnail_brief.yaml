@@ -1,0 +1,92 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic sedan only (no real brand or car design).
+title: How Car Dealerships Really Make Money
+docs_dir: docs/episodes/34-car-dealers
+video: output/dealers_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: If the car is not the profit, what is?
+  surprising_fact: AutoNation 2025 gross profit per new car $2,564 vs F&I $2,769 per car; new cars 13% of gross profit (10-K)
+  subject: a generic new car with a price sticker
+  tone: bright
+  metaphor: the car is the bait, the customer is the business
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 13%
+  - DEALER PROFIT FROM NEW CARS
+  claim_basis: 'mix: new vehicles 13% of gross profit, AutoNation FY2025 10-K'
+  scene:
+    palette:
+      sky0: '#070B18'
+      sky1: '#1A2550'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: sedan
+      x: 1450
+      y: 600
+      s: 0.62
+      color: '#D32F2F'
+      sticker: $52K
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - CAR $2,564
+  - LOAN DESK $2,769
+  claim_basis: 'mix: gross profit per new vehicle $2,564 vs F&I per vehicle $2,769, AutoNation FY2025 10-K'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: sedan
+      x: 480
+      y: 680
+      s: 0.36
+      color: '#1E88E5'
+    after:
+      kind: ledger
+      x: 1440
+      y: 650
+      s: 0.6
+      heading: FINANCE OFFICE
+      amount: $2,769
+      magnifier: false
+      stamp: MORE!
+      rot: 4
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

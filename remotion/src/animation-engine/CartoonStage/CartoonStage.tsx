@@ -432,6 +432,49 @@ const SETS: Record<string, SetFn> = {
           <circle cx={x} cy={f - 190} r={52} fill={night ? '#2E5E39' : '#4CAF50'} stroke={OL} strokeWidth={4} /></g>; })}
     </g>;
   },
+  /** A generic car dealership seen from the lot: a glass showroom with a flat canopy, a row of pennant strings, light
+   *  poles and a paved lot with parking lines. `night` lights the showroom. No real brand. */
+  dealership: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#1A2346' : '#BFE6FA'} />
+      {Array.from({length: Math.ceil(w / 1400)}, (_, k) => { const x = z.x0 + 200 + k * 1400;
+        return <g key={'sr' + k}>
+          <rect x={x} y={f - 420} width={900} height={330} fill={night ? '#FFE9A8' : '#D6EEF8'} stroke={OL} strokeWidth={5} />
+          {Array.from({length: 7}, (_, c) => <rect key={c} x={x + c * 128} y={f - 420} width={10} height={330} fill="#90A4AE" />)}
+          <rect x={x - 40} y={f - 470} width={980} height={56} rx={6} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+          <rect x={x + 300} y={f - 462} width={380} height={40} rx={6} fill="#1565C0" stroke={OL} strokeWidth={3} />
+          <T x={x + 490} y={f - 432} s={30} c="#FFFFFF">AUTO SALES</T>
+          <rect x={x + 1000} y={f - 360} width={280} height={270} fill="#B0BEC5" stroke={OL} strokeWidth={5} />
+          {[0, 1, 2, 3, 4].map((r) => <rect key={r} x={x + 1020} y={f - 330 + r * 46} width={240} height={36} fill="#CFD8DC" stroke={OL} strokeWidth={2} />)}
+          <rect x={x + 1000} y={f - 400} width={280} height={40} fill="#455A64" stroke={OL} strokeWidth={3} />
+          <T x={x + 1140} y={f - 371} s={24} c="#FFFFFF">SERVICE</T></g>; })}
+      {Array.from({length: Math.ceil(w / 700)}, (_, k) => { const x = z.x0 + 100 + k * 700;
+        return <g key={'pn' + k}><rect x={x - 6} y={f - 620} width={12} height={530} fill="#90A4AE" />
+          <path d={`M ${x} ${f - 600} Q ${x + 350} ${f - 520 + Math.sin(t * 2 + k) * 10} ${x + 700} ${f - 600}`} fill="none" stroke={OL} strokeWidth={2} />
+          {Array.from({length: 10}, (_, j) => { const px = x + 35 + j * 66, py = f - 600 + 80 * Math.sin(Math.PI * (j + 0.5) / 10.6) * 0.9;
+            return <path key={j} d={`M ${px - 14} ${py} L ${px + 14} ${py} L ${px} ${py + 30 + Math.sin(t * 6 + j) * 3} Z`} fill={['#E53935', '#FFC21A', '#1E88E5'][j % 3]} stroke={OL} strokeWidth={2} />; })}</g>; })}
+      <rect x={z.x0} y={f - 90} width={w} height={690} fill={night ? '#3E4656' : '#78838F'} />
+      {Array.from({length: Math.ceil(w / 260)}, (_, k) => <rect key={'pl' + k} x={z.x0 + k * 260} y={f - 80} width={8} height={120} fill="#FFFFFF" opacity={0.8} transform={`skewX(-20)`} />)}
+    </g>;
+  },
+  /** A dealership service bay inside: two-post car lifts, a tool wall with pegboard, tire stacks, epoxy floor. */
+  garage: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#4A5266' : '#E3E7EC'} />
+      <rect x={z.x0} y={f - 700} width={w} height={14} fill="#90A4AE" />
+      {Array.from({length: Math.ceil(w / 900)}, (_, k) => { const x = z.x0 + 80 + k * 900;
+        return <g key={'gb' + k}>
+          <rect x={x} y={f - 560} width={360} height={260} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+          {Array.from({length: 8}, (_, r) => Array.from({length: 14}, (_, c) => <circle key={r + '-' + c} cx={x + 14 + c * 24} cy={f - 546 + r * 32} r={3} fill="#78909C" />))}
+          {[0, 1, 2, 3].map((q) => <path key={q} d={`M ${x + 40 + q * 80} ${f - 520} l 0 70 m -10 -70 l 20 0`} stroke="#E53935" strokeWidth={8} strokeLinecap="round" />)}
+          {[0, 1, 2].map((q) => <ellipse key={q} cx={x + 600} cy={f - 40 - q * 60} rx={70} ry={30} fill="#263238" stroke={OL} strokeWidth={4} />)}
+          {[x + 420, x + 820].map((px) => <rect key={px} x={px - 12} y={f - 520} width={24} height={520} fill="#FFC21A" stroke={OL} strokeWidth={3} />)}</g>; })}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#5B6577' : '#A7B0BA'} />
+      <rect x={z.x0} y={f + 30} width={w} height={8} fill="#FFD54A" opacity={0.8} />
+    </g>;
+  },
   /** An oil storage hub on the flat prairie (generic, Cushing-like): big sky, rows of white cylindrical tanks in the back,
    *  pipelines on short legs, a few grain-elevator silhouettes. `night` for dusk. */
   tankfarm: (t, z, f) => {
@@ -2881,9 +2924,31 @@ const gradcaps: ItemFn = (a, {t, f}, i) => {
       <path d="M 0 0 L 52 18 L 52 50" stroke={K.gold} strokeWidth={5} fill="none" /><circle cx={52} cy={54} r={7} fill={K.gold} /></g>; })}</g>;
 };
 
+/** A generic sedan, side view (no brand): `color`, `x` keyframable (wheels spin), `sticker` window price sticker text,
+ *  `lift` keyframable 0-1 raises it on a service lift, `soldAt` stamps SOLD on the windshield. */
+const sedan: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const c = col(a.color, '#1E88E5'), lift = kf(a.lift, t, 0) * 220, spin = x * 0.03, sold = a.soldAt !== undefined ? E.outBack(win(t, a.soldAt, 0.4)) : 0;
+  return <g key={'sd' + i} transform={`translate(${x} ${kf(a.y, t, f) - lift}) scale(${s})`}>
+    {lift > 0 && <rect x={-200} y={60} width={400} height={16} fill="#FFC21A" stroke={OL} strokeWidth={3} />}
+    <ellipse cx={0} cy={60 + lift / s} rx={300} ry={16} fill="#000" opacity={0.2} />
+    <path d="M -300 20 L -300 -40 Q -290 -70 -240 -76 L -150 -84 L -80 -150 Q -60 -164 -20 -164 L 110 -164 Q 140 -164 165 -140 L 230 -84 L 280 -76 Q 310 -66 310 -30 L 310 20 Z" fill={c} stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+    <path d="M -130 -88 L -70 -146 L 20 -146 L 20 -88 Z" fill={K.glass} stroke={OL} strokeWidth={4} />
+    <path d="M 40 -88 L 40 -146 L 105 -146 Q 125 -146 140 -128 L 190 -88 Z" fill={K.glass} stroke={OL} strokeWidth={4} />
+    <path d="M -300 -20 L 310 -20" stroke="#FFFFFF" strokeWidth={4} opacity={0.35} />
+    <rect x={-290} y={-40} width={30} height={16} rx={4} fill="#FFE082" stroke={OL} strokeWidth={2} />
+    {[-180, 190].map((dx) => <g key={dx} transform={`translate(${dx} 20) rotate(${spin * 57})`}><circle r={52} fill="#263238" stroke={OL} strokeWidth={5} />
+      <circle r={24} fill="#B0BEC5" stroke={OL} strokeWidth={3} /><path d="M -20 0 L 20 0 M 0 -20 L 0 20" stroke="#78909C" strokeWidth={4} /></g>)}
+    {a.sticker && <g transform="translate(-20 -118)"><rect x={-60} y={-30} width={120} height={60} rx={4} fill="#FFFFFF" stroke={OL} strokeWidth={3} />
+      <T x={0} y={12} s={a.sticker.length > 7 ? 18 : 26}>{a.sticker}</T></g>}
+    {sold > 0 && <g transform={`translate(80 -118) rotate(-12) scale(${sold})`}><rect x={-60} y={-24} width={120} height={48} rx={6} fill={K.red} stroke={OL} strokeWidth={3} /><T x={0} y={12} s={30} c="#FFFFFF">SOLD</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

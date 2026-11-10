@@ -1,0 +1,151 @@
+# Sources and claims for "How Car Dealerships Really Make Money" (Episode 34, US batch #07).
+# Every claim was read on its primary page or filing on 2026-11-10 (notes: docs/episodes/34-car-dealers/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as published.
+# RULES: the profit mix is ONE large public dealer group (AutoNation FY2025 10-K), said as such, not "all dealers"; shares,
+# margins and ratios are OUR calculation; the CFPB 2013 bulletin was disapproved by Congress in 2018 (said); Experian loan figures
+# are as printed in NADA's report; NY Fed is Q2 2026 (Q3 due Nov 10). No logos or real dealership/brand designs; names in text only.
+sources:
+  - id: nada
+    title: "NADA Data 2025: Annual Financial Profile of America's Franchised New-Car Dealerships"
+    publisher: National Automobile Dealers Association
+    url: https://www.nada.org/media/4695/download
+    published: "2026"
+    accessed: "2026-11-10"
+    credit: "NADA Data"
+  - id: an10k
+    title: "AutoNation, Inc. Form 10-K, fiscal year 2025"
+    publisher: AutoNation / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/350698/000162828026007800/an-20251231.htm
+    published: "2026-02-12"
+    accessed: "2026-11-10"
+    credit: "AutoNation 10-K"
+  - id: an10q
+    title: "AutoNation, Inc. Form 10-Q, quarter ended September 30, 2026"
+    publisher: AutoNation / SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/350698/000162828026068579/an-20260930.htm
+    published: "2026-10-30"
+    accessed: "2026-11-10"
+    credit: "AutoNation 10-Q"
+  - id: cfpb13
+    title: "CFPB Bulletin 2013-02: Indirect Auto Lending and Compliance with the Equal Credit Opportunity Act"
+    publisher: Consumer Financial Protection Bureau
+    url: https://files.consumerfinance.gov/f/201303_cfpb_march_-Auto-Finance-Bulletin.pdf
+    published: "2013-03-21"
+    accessed: "2026-11-10"
+    credit: "CFPB"
+  - id: cfpbask
+    title: "Ask CFPB: auto loan rates; GAP insurance"
+    publisher: Consumer Financial Protection Bureau
+    url: https://www.consumerfinance.gov/ask-cfpb/where-can-i-get-information-on-auto-loan-rates-en-761/
+    published: "2024"
+    accessed: "2026-11-10"
+    credit: "CFPB"
+  - id: ftc
+    title: "FTC Announces CARS Rule to Fight Scams in Vehicle Shopping"
+    publisher: Federal Trade Commission
+    url: https://www.ftc.gov/news-events/news/press-releases/2023/12/ftc-announces-cars-rule-fight-scams-vehicle-shopping
+    published: "2023-12-12"
+    accessed: "2026-11-10"
+    credit: "FTC"
+  - id: ca5
+    title: "National Automobile Dealers Association v. FTC, No. 24-60013"
+    publisher: U.S. Court of Appeals for the Fifth Circuit
+    url: https://www.ca5.uscourts.gov/opinions/pub/24/24-60013-CV0.pdf
+    published: "2025-01-27"
+    accessed: "2026-11-10"
+    credit: "Fifth Circuit"
+  - id: kbb
+    title: "Kelley Blue Book Average Transaction Price report, September 2026"
+    publisher: Cox Automotive
+    url: https://www.coxautoinc.com/insights/sept-2026-atp-report/
+    published: "2026-10-13"
+    accessed: "2026-11-10"
+    credit: "Kelley Blue Book / Cox Automotive"
+  - id: g19
+    title: "G.19 Consumer Credit"
+    publisher: Federal Reserve Board
+    url: https://www.federalreserve.gov/releases/g19/current/default.htm
+    published: "2026-11-06"
+    accessed: "2026-11-10"
+    credit: "Federal Reserve G.19"
+  - id: nyfed
+    title: "Household Debt and Credit Report, Q2 2026"
+    publisher: Federal Reserve Bank of New York
+    url: https://www.newyorkfed.org/newsevents/news/research/2026/20260811
+    published: "2026-08-11"
+    accessed: "2026-11-10"
+    credit: "NY Fed"
+  - id: mich
+    title: "Michigan Compiled Laws 445.1574"
+    publisher: Michigan Legislature
+    url: https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-1574
+    published: "2014-10-21"
+    accessed: "2026-11-10"
+    credit: "Michigan Legislature"
+  - id: ftc15
+    title: "Direct-to-consumer auto sales: It's not just about Tesla (Competition Matters blog)"
+    publisher: Federal Trade Commission (staff)
+    url: https://www.ftc.gov/enforcement/competition-matters/2015/05/direct-consumer-auto-sales-its-not-just-about-tesla
+    published: "2015-05-11"
+    accessed: "2026-11-10"
+    credit: "FTC staff"
+
+claims:
+  - id: mix
+    text: "AutoNation 10-K FY2025: 'new vehicle sales accounted for 49% of our total revenue and 13% of our total gross profit. Used vehicle sales accounted for 28% of our total revenue and 9% of our total gross profit. Our parts and service operations, while comprising 17% of our total revenue, contributed 48% of our total gross profit. Our finance and insurance sales, while comprising 5% of our total revenue, contributed 30% of our total gross profit.' Gross profit ($M): new 664.8; used 462.6; parts & service 2,355.1; F&I 1,464.4. Per vehicle retailed: new $2,564 (2024 $3,045; 2023 $4,342); used $1,555; F&I $2,769; average new-vehicle revenue $52,075. Q3 2026 10-Q: new $2,176, F&I $2,698 per vehicle; parts & service 51.1% of gross profit."
+    spoken: two thousand five hundred and sixty-four dollars
+    display: "New car gross profit $2,564 vs F&I $2,769 (AutoNation 2025)"
+    fields: {fi_spoken: two thousand seven hundred and sixty-nine dollars, price_spoken: about fifty-two thousand dollars, y2023_spoken: four thousand three hundred and forty-two dollars}
+    source_ids: [an10k, an10q]
+    status: source_located
+    verification_note: One dealer group; ratios and margins are our calculation.
+
+  - id: industry
+    text: "NADA Data 2025: 'The nation's 16,990 franchised light-vehicle dealers sold 16.2 million light-duty vehicles.' 'Total franchised light-vehicle dealership sales topped $1.3 trillion.' 'Dealerships wrote more than 276 million repair orders, with service and parts sales exceeding $164 billion.' Customer mechanical labor rate $186 per hour; average retail selling price $48,205; Experian data in the report (Q4 2025, new): monthly payment $767, term 68.9 months. KBB (Oct 2026): 'The September average transaction price, or ATP, reached $50,562, placing it just below the all-time record of $50,614 set in December 2025.' KBB: 'the average estimated incentive was $3,359'. NADA: average new vehicles sold per dealership 955."
+    spoken: sixteen thousand nine hundred and ninety
+    display: "16,990 dealers · $1.3tn sales (NADA 2025)"
+    fields: {atp_spoken: fifty thousand five hundred and sixty-two dollars}
+    source_ids: [nada, kbb]
+    status: source_located
+    verification_note: Experian figures read from NADA chart labels.
+
+  - id: fi
+    text: "CFPB Bulletin 2013-02: 'the lender may pay the dealer what is typically referred to as \"reserve\" (or \"participation\"), compensation based upon the difference in interest revenues between the buy rate and the actual note rate charged to the consumer' (bulletin disapproved by Congress in May 2018). Ask CFPB: 'interest rates through dealers are generally higher because their rates often add additional interest to compensate them for handling your financing. Regardless of the source, interest rates are negotiable.' GAP: 'one of several optional add-on products ... The cost of the product will be rolled into the loan amount.' AutoNation 10-K: F&I revenue 'represents commissions earned by us for the placement of ... loans and leases ... vehicle service contracts ... and other vehicle protection products'."
+    spoken: one point four six billion dollars
+    display: "F&I gross profit $1.46bn (AutoNation 2025)"
+    source_ids: [cfpb13, cfpbask, an10k]
+    status: source_located
+    verification_note: The 2013 bulletin is described as history, with its 2018 disapproval.
+
+  - id: cars
+    text: "FTC (Dec 12, 2023): 'The rule prohibits dealers from charging for any add-on that does not provide a benefit to consumers.' 'expected to save consumers nationwide more than $3.4 billion'; 'The rule requires dealers to get consumers' express, informed consent for any charges that they pay'. Fifth Circuit (Jan 27, 2025): 'we GRANT the petition for review and VACATE the CARS Rule.'"
+    spoken: three point four billion dollars
+    display: "CARS Rule vacated (Jan 2025)"
+    source_ids: [ftc, ca5]
+    status: source_located
+    verification_note: Read on the court opinion; FTC page via fetcher.
+
+  - id: service
+    text: "AutoNation 10-K: 'Our higher-margin parts and service business has historically been less sensitive to macroeconomic conditions as compared to new and used vehicle sales.' Parts & service revenue $4,835.4M, gross profit $2,355.1M (our margin ≈ 48.7%)."
+    spoken: forty-eight percent
+    display: "Service: 17% of revenue, 48% of gross profit"
+    source_ids: [an10k, nada]
+    status: source_located
+    verification_note: Margin our calculation.
+
+  - id: law
+    text: "Michigan MCL 445.1574(1)(i): a manufacturer shall not 'Sell any new motor vehicle directly to a retail customer other than through franchised dealers' (amended 2014). FTC staff (2015): 'Blanket prohibitions on direct manufacturer sales to consumers are an anomaly within the larger economy.' AutoNation 10-K: franchise laws make it 'unlawful for a manufacturer to terminate or not renew a franchise unless \"good cause\" exists'; dealers are 'restricted by various state franchise laws from relocating stores or establishing new stores ... within any area that is served by another dealer of the same vehicle brand'; 'these franchise laws, which were designed to protect dealers'."
+    spoken: good cause
+    display: "State franchise laws protect dealers"
+    source_ids: [mich, ftc15, an10k]
+    status: source_located
+    verification_note: Michigan statute read; no count of states claimed.
+
+  - id: loans
+    text: "NY Fed (Aug 2026): 'auto loan balances increased by $28 billion to $1.71 trillion'; flow into serious delinquency 3.00% (Q2 2026). Fed G.19: commercial bank rate on 72-month new-car loans 7.17% (Aug 2026)."
+    spoken: one point seven one trillion dollars
+    display: "$1.71tn auto loans (Q2 2026)"
+    fields: {rate_spoken: seven point one seven percent}
+    source_ids: [nyfed, g19]
+    status: source_located
+    verification_note: Q2 2026 (Q3 due Nov 10, 2026).

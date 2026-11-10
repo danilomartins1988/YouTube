@@ -486,6 +486,18 @@ const SUBJECTS: Record<string, SubjectFn> = {
       <circle cx={-520} cy={480} r={150} fill="#37474F" stroke="#05070B" strokeWidth={10} />
       {o.label && <text x={-520} y={500} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={56} fill="#FFFFFF">{o.label}</text>}</g>}
   </g>,
+  /** A generic sedan, three-quarter-ish side view, with a window price sticker (`sticker`). No brand. */
+  sedan: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -4})`}>
+    <circle r={540} fill={P.haze} opacity={0.18} filter="url(#soft)" />
+    <ellipse cx={0} cy={150} rx={560} ry={40} fill="#000" opacity={0.45} filter="url(#soft)" />
+    <path d="M -560 90 L -560 -20 Q -540 -80 -450 -90 L -300 -105 L -170 -240 Q -130 -270 -60 -270 L 200 -270 Q 260 -270 300 -230 L 420 -110 L 510 -95 Q 570 -80 570 -10 L 570 90 Z" fill={o.color || '#D32F2F'} stroke="#05070B" strokeWidth={10} strokeLinejoin="round" />
+    <path d="M -560 0 Q 0 -60 570 0" stroke="#FFFFFF" strokeWidth={8} opacity={0.18} fill="none" />
+    <path d="M -270 -110 L -160 -225 L 30 -225 L 30 -110 Z" fill="#9FD8F5" stroke="#05070B" strokeWidth={7} />
+    <path d="M 70 -110 L 70 -225 L 190 -225 Q 230 -225 255 -195 L 340 -110 Z" fill="#9FD8F5" stroke="#05070B" strokeWidth={7} />
+    {[-340, 360].map((dx) => <g key={dx} transform={`translate(${dx} 90)`}><circle r={95} fill="#1B1B1B" stroke="#05070B" strokeWidth={8} /><circle r={45} fill="#B0BEC5" stroke="#05070B" strokeWidth={5} /></g>)}
+    {o.sticker && <g transform="translate(-100 -168)"><rect x={-100} y={-48} width={200} height={96} rx={6} fill="#FFFFFF" stroke="#05070B" strokeWidth={6} />
+      <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={o.sticker.length > 6 ? 40 : 52} fill="#05070B">{o.sticker}</text></g>}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

@@ -1,0 +1,269 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; our calculations are said as such.
+logline: One of America's biggest dealer groups made more gross profit per car in its finance office than on the new car
+  itself. Where a car dealership really makes its money.
+title: How Car Dealerships Really Make Money
+segments:
+- id: h_open
+  chapter: Two thousand five hundred dollars
+  narration: Two thousand five hundred and sixty-four dollars. That is the average gross profit AutoNation, one of America's
+    largest dealership groups, made on each new car it sold in twenty twenty-five. On a car that sold for {{mix.price_spoken}}.
+  claims:
+  - mix
+- id: h_twist
+  chapter: Two thousand five hundred dollars
+  narration: Now the surprise. On the same deal, a small office at the back of the showroom made even more. The finance
+    office earned {{mix.fi_spoken}} per car. More than the car itself.
+  claims:
+  - mix
+- id: h_question
+  chapter: Two thousand five hundred dollars
+  narration: So if the shiny car in the window is not where the money is, how does a car dealership really make its money?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: Two thousand five hundred dollars
+  narration: By the end of this video, you will know the four engines of a dealership. The showroom, the finance office,
+    the service bay, and the state laws that protect the whole business.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The showroom
+  narration: ''
+  claims: []
+- id: m1_size
+  chapter: The showroom
+  narration: Start with the size of the industry. According to the National Automobile Dealers Association, the country's
+    {{industry}} franchised new-car dealers sold sixteen point two million vehicles in twenty twenty-five. Their total sales
+    topped one point three trillion dollars. The average dealership sold about nine hundred and fifty-five new vehicles
+    in the year, at an average retail price of about forty-eight thousand two hundred dollars. On paper, it looks like a
+    business of selling cars.
+  claims:
+  - industry
+- id: m1_price
+  chapter: The showroom
+  narration: And cars are expensive. Kelley Blue Book says the average new vehicle sold in September twenty twenty-six went
+    for {{industry.atp_spoken}}, just below the all-time record. Carmakers were also spending an average of about three thousand
+    three hundred and fifty-nine dollars per vehicle on incentives to keep cars moving. With prices like that, you would expect the dealer to keep
+    a big slice.
+  claims:
+  - industry
+- id: m1_thin
+  chapter: The showroom
+  narration: It does not. At AutoNation, new vehicles brought in forty-nine percent of all revenue in twenty twenty-five,
+    but only thirteen percent of gross profit. By our calculation, the gross margin on a new car was less than five percent.
+    And it has been shrinking. Gross profit per new car fell from {{mix.y2023_spoken}} in twenty twenty-three to {{mix}}
+    in twenty twenty-five, and to two thousand one hundred and seventy-six in the third quarter of twenty twenty-six.
+  claims:
+  - mix
+- id: m1_used
+  chapter: The showroom
+  narration: Used cars are not much better. They made up twenty-eight percent of AutoNation's revenue, but only nine percent
+    of its gross profit, about one thousand five hundred and fifty-five dollars per used car. Many of them arrive as trade-ins,
+    which gives the dealer a second chance to profit from the same customer.
+  claims:
+  - mix
+  analysis: true
+  source_note: Shares and per-unit profit from the 10-K; the trade-in line is commentary.
+- id: m1_draw
+  chapter: The showroom
+  narration: Let me draw the pie. Here is AutoNation's revenue, and almost half of it is new cars. Now here is its gross
+    profit. The new-car slice shrinks to a sliver. The big pieces are somewhere else, in two places most buyers barely notice.
+  claims:
+  - mix
+  analysis: true
+  source_note: Revenue vs gross-profit mix from the 10-K.
+- id: m1_transition
+  chapter: The showroom
+  narration: The first is a small room you visit after you have already chosen your car. The finance office.
+  claims: []
+- id: m2_card
+  chapter: The finance office
+  narration: ''
+  claims: []
+- id: m2_how
+  chapter: The finance office
+  narration: Most people do not pay cash for a car. They take a loan, often arranged right there at the dealership. The dealer
+    does not lend the money itself. It places the loan with a bank or finance company, and earns a commission for it. It
+    also sells extended warranties, service contracts and other protection products, again on commission.
+  claims:
+  - fi
+- id: m2_markup
+  chapter: The finance office
+  narration: Here is one way the commission can work. The lender sets a rate, called the buy rate. The dealer can offer
+    you a higher rate, and the lender shares the difference with the dealer. That was described in a twenty thirteen bulletin
+    from the Consumer Financial Protection Bureau, which Congress later overturned. The Bureau's own advice is simple. Rates
+    through dealers are often higher, and interest rates are negotiable.
+  claims:
+  - fi
+- id: m2_addons
+  chapter: The finance office
+  narration: Then come the add-ons. Gap insurance, extended warranties, paint protection. The CFPB notes that the cost of
+    these products is often rolled into the loan amount. So you pay interest on them too, for years.
+  claims:
+  - fi
+- id: m2_total
+  chapter: The finance office
+  narration: Add it up, and the finance office is a gold mine. At AutoNation, finance and insurance made up just five percent
+    of revenue, but thirty percent of gross profit, {{fi}} in twenty twenty-five. By our calculation, that is more than twice
+    the gross profit it made selling new cars.
+  claims:
+  - mix
+  - fi
+- id: m2_cars
+  chapter: The finance office
+  narration: Regulators tried to step in. In December twenty twenty-three, the Federal Trade Commission adopted the CARS
+    Rule, banning charges for add-ons that give the buyer no benefit, and requiring dealers to get the buyer's express, informed
+    consent for every charge. It expected to save consumers more than {{cars}} a year.
+    The dealers' association sued. In January twenty twenty-five, a federal appeals court vacated the rule.
+  claims:
+  - cars
+- id: m2_draw
+  chapter: The finance office
+  narration: Let me draw the loan. Here is the price of the car. Add the add-ons, rolled into the loan. Add a slightly higher
+    interest rate. Stretch it over almost six years. The monthly payment looks manageable, but the total paid grows, and
+    part of that growth goes back to the dealer.
+  claims:
+  - fi
+  analysis: true
+  source_note: Illustrative diagram, no figure claimed.
+- id: m2_transition
+  chapter: The finance office
+  narration: But the most reliable money comes later, every time your car needs an oil change.
+  claims: []
+- id: m3_card
+  chapter: The service bay
+  narration: ''
+  claims: []
+- id: m3_scale
+  chapter: The service bay
+  narration: According to NADA, America's franchised dealers wrote more than two hundred and seventy-six million repair orders
+    in twenty twenty-five. Service and parts sales exceeded one hundred and sixty-four billion dollars. The average customer
+    labor rate was one hundred and eighty-six dollars an hour.
+  claims:
+  - industry
+- id: m3_share
+  chapter: The service bay
+  narration: At AutoNation, parts and service made up seventeen percent of revenue, but {{service}} of gross profit, the
+    biggest share of all. By our calculation, almost half of every service dollar was gross profit. In the third quarter of
+    twenty twenty-six, its share passed fifty-one percent.
+  claims:
+  - service
+  - mix
+- id: m3_stable
+  chapter: The service bay
+  narration: And it is steady. In AutoNation's own words, parts and service has historically been less sensitive to the
+    economy than selling cars. People can delay buying a new car. They cannot delay fixing the brakes. Warranty repairs are
+    paid by the carmaker, so even a brand new car brings work back to the dealer.
+  claims:
+  - service
+  analysis: true
+  source_note: Quote from the 10-K; brakes and warranty lines are commentary consistent with the 10-K.
+- id: m3_draw
+  chapter: The service bay
+  narration: Let me draw the life of one customer. Day one, the sale, a small profit. The same day, the loan and the warranty,
+    a bigger one. Then, for years, oil changes, tires, brakes and repairs. The car is sold once. The customer is served again
+    and again.
+  claims:
+  - mix
+  - service
+  analysis: true
+  source_note: Customer-lifecycle diagram (commentary).
+- id: m3_transition
+  chapter: The service bay
+  narration: Which raises a question. Why can carmakers not just sell directly to you and keep all that? The answer is in
+    the law.
+  claims: []
+- id: m4_card
+  chapter: The dealer's shield
+  narration: ''
+  claims: []
+- id: m4_law
+  chapter: The dealer's shield
+  narration: In many states, franchise laws stand between the carmaker and the buyer. Michigan's law, for example, says a
+    manufacturer may not sell a new car directly to a retail customer other than through franchised dealers.
+  claims:
+  - law
+- id: m4_protect
+  chapter: The dealer's shield
+  narration: These laws do more. A carmaker cannot simply end a dealer's franchise unless there is good cause. And a new
+    dealer of the same brand often cannot open nearby. As AutoNation's annual report puts it, these franchise laws were designed
+    to protect dealers.
+  claims:
+  - law
+- id: m4_ftc
+  chapter: The dealer's shield
+  narration: Not everyone agrees with them. Staff at the Federal Trade Commission wrote in twenty fifteen that blanket bans
+    on direct sales are an anomaly within the larger economy. Some newer electric carmakers have fought these rules state
+    by state. But for most brands, the dealer remains the only door to the customer.
+  claims:
+  - law
+  analysis: true
+  source_note: FTC staff quote; the electric-carmaker line is general commentary without figures.
+- id: m4_draw
+  chapter: The dealer's shield
+  narration: Let me draw the wall. Here is the carmaker. Here is you. Between you, a wall built by state law, with one door.
+    The dealer stands in that door, and every sale, every loan and every repair passes through it.
+  claims:
+  - law
+  analysis: true
+  source_note: Diagram (commentary).
+- id: m4_transition
+  chapter: The dealer's shield
+  narration: And on the other side of that door, the bill lands on the buyer.
+  claims: []
+- id: m5_card
+  chapter: The buyer's bill
+  narration: ''
+  claims: []
+- id: m5_loans
+  chapter: The buyer's bill
+  narration: Americans now owe {{loans}} on auto loans, according to the New York Fed. The Federal Reserve reports that the
+    average rate on a seventy-two month new-car loan at commercial banks was {{loans.rate_spoken}} in August twenty twenty-six.
+  claims:
+  - loans
+- id: m5_payment
+  chapter: The buyer's bill
+  narration: Experian data published by NADA put the average monthly payment on a new car at about seven hundred and sixty-seven
+    dollars at the end of twenty twenty-five, with an average term of almost sixty-nine months. That is close to six years
+    of payments. And every extra month on the loan means more interest paid, and more years before the car is truly yours.
+  claims:
+  - industry
+- id: m5_late
+  chapter: The buyer's bill
+  narration: And more buyers are struggling. The New York Fed says new delinquencies on auto loans remain at elevated levels.
+    In the second quarter of twenty twenty-six, about three percent of auto loan balances moved into serious delinquency
+    on an annual basis.
+  claims:
+  - loans
+- id: m5_draw
+  chapter: The buyer's bill
+  narration: Let me put the dealership together. A thin profit on the car. A thick profit on the loan and the add-ons. A
+    steady profit on every repair for years. And a law that keeps the door in the dealer's hands. The car is the bait. The
+    customer is the business.
+  claims:
+  - mix
+  - law
+  analysis: true
+  source_note: Summary diagram of the sourced parts.
+- id: payoff
+  chapter: The lesson
+  narration: So how do car dealerships really make money? Not mainly on the car you drive away in. On the loan you sign for
+    it, the warranty you add to it, and the service bay you return to. Knowing that changes how you buy. Negotiate the price,
+    but also the rate, the add-ons and the term. That is where the dealer's money really is.
+  claims:
+  - mix
+  - fi
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts; not financial advice.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

@@ -62,6 +62,7 @@ SHORTS = {
     "31-us-housing": ("why-american-homes-became-so-expensive", "documentary", "housing_documentary", "$120,800 A YEAR", "TO AFFORD A HOME", "You Now Need $120,800 a Year to Afford a Typical Home", "#housing #realestate #usa"),
     "32-costco": ("how-costco-makes-money-selling-things-cheap", "documentary", "costco_documentary", "$5.9 BILLION", "JUST TO GET IN", "Costco Made $5.9 Billion Before You Bought Anything", "#costco #business #usa"),
     "33-student-debt": ("the-business-behind-americas-student-debt", "documentary", "studentdebt_documentary", "$1.65 TRILLION", "IN STUDENT DEBT", "Americans Owe $1.65 Trillion in Student Loans", "#studentloans #college #usa"),
+    "34-car-dealers": ("how-car-dealerships-really-make-money", "documentary", "dealers_documentary", "$2,769 PER CAR", "FROM THE LOAN DESK", "Car Dealers Make More on Your Loan Than on the Car", "#cars #carbuying #usa"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
