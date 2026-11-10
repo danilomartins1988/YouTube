@@ -809,6 +809,28 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 200)}, (_, k) => <path key={'wv' + k} d={`M ${z.x0 + k * 200 + ((t * 60) % 200)} ${Math.min(wl, f + 130) + 30} q 30 -14 60 0`} fill="none" stroke="#FFFFFF" strokeWidth={4} opacity={0.6} />)}
     </g>;
   },
+  /** A generic stadium at game time: tiered stands with a waving crowd, floodlights, a striped field, a scoreboard showing
+   *  `label` (default 'HOME 0 – 0 AWAY'); `night` lights the floodlights. No team names or logos. */
+  stadium: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, lab = (z as any).label || 'HOME 0 – 0 AWAY';
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#121A33' : '#9FD3F2'} />
+      {[0, 1, 2].map((r) => <rect key={'st' + r} x={z.x0} y={f - 520 + r * 130} width={w} height={130} fill={['#5C6B8A', '#4E5C7A', '#43506B'][r]} stroke={OL} strokeWidth={3} />)}
+      {Array.from({length: Math.ceil(w / 46) * 3}, (_, k) => { const r = k % 3, x = z.x0 + Math.floor(k / 3) * 46 + (r % 2) * 23, up = Math.sin(t * 4 + x * 0.02) > 0.6 ? 14 : 0;
+        return <circle key={'cr' + k} cx={x} cy={f - 470 + r * 130 - up} r={14} fill={['#FF7043', '#FFCA28', '#42A5F5', '#EC407A', '#66BB6A'][(k * 7) % 5]} stroke={OL} strokeWidth={2} />; })}
+      {Array.from({length: Math.ceil(w / 900)}, (_, k) => { const x = z.x0 + 300 + k * 900;
+        return <g key={'fl' + k}><rect x={x - 8} y={f - 900} width={16} height={380} fill="#78909C" />
+          <rect x={x - 70} y={f - 960} width={140} height={70} rx={8} fill="#ECEFF1" stroke={OL} strokeWidth={4} />
+          {Array.from({length: 6}, (_, q) => <circle key={q} cx={x - 50 + (q % 3) * 50} cy={f - 940 + Math.floor(q / 3) * 30} r={10} fill={night ? '#FFF59D' : '#FFFDE7'} />)}
+          {night && <path d={`M ${x - 70} ${f - 890} L ${x - 300} ${f} L ${x + 300} ${f} L ${x + 70} ${f - 890} Z`} fill="#FFF9C4" opacity={0.08} />}</g>; })}
+      <g transform={`translate(${z.x0 + w * 0.6} ${f - 760})`}><rect x={-230} y={-80} width={460} height={140} rx={14} fill="#1B1F27" stroke={OL} strokeWidth={6} />
+        <rect x={-20} y={60} width={40} height={180} fill="#455A64" />
+        <T x={0} y={14} s={44} c="#FFC21A">{lab}</T></g>
+      <rect x={z.x0} y={f} width={w} height={600} fill="#4CAF50" />
+      {Array.from({length: Math.ceil(w / 240)}, (_, k) => <rect key={'fs' + k} x={z.x0 + k * 240} y={f} width={120} height={600} fill="#43A047" />)}
+      <rect x={z.x0} y={f} width={w} height={8} fill="#FFFFFF" opacity={0.8} />
+    </g>;
+  },
   /** A hospital corridor: pale mint walls, numbered doors with small windows, a handrail, ceiling light panels, a glossy
    *  tiled floor; `night` dims it to an evening shift. Generic, no real hospital branding. */
   hospital: (t, z, f) => {
@@ -3443,9 +3465,28 @@ const ivbag: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A generic yes/no event-contract ticket: `q` question text, `yes` price in cents (keyframes ok); the bar splits YES/NO
+ *  at that price; `settle` = 'yes' | 'no' with `settleAt` (s) flashes the winner and drops the $1 to that side. */
+const yesno: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 420), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const p = clamp(kf(a.yes, t, 50) / 100), W = 620, done = a.settleAt !== undefined && t >= a.settleAt, win = a.settle || 'yes';
+  const fl = done ? 0.5 + 0.5 * Math.sin((t - a.settleAt) * 8) : 0;
+  return <g key={'yn' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-W / 2 + 12} y={-150 + 16} width={W} height={300} rx={28} fill="#000" opacity={0.25} />
+    <rect x={-W / 2} y={-150} width={W} height={300} rx={28} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
+    <T x={0} y={-90} s={32} c={OL} w={W - 60}>{a.q || 'WILL IT HAPPEN?'}</T>
+    <rect x={-W / 2 + 30} y={-40} width={(W - 60) * p} height={90} rx={14} fill="#43A047" stroke={OL} strokeWidth={4} opacity={done && win !== 'yes' ? 0.35 : 1 - fl * 0.3} />
+    <rect x={-W / 2 + 30 + (W - 60) * p} y={-40} width={(W - 60) * (1 - p)} height={90} rx={14} fill="#E53935" stroke={OL} strokeWidth={4} opacity={done && win !== 'no' ? 0.35 : 1 - fl * 0.3} />
+    {p > 0.18 && <T x={-W / 2 + 30 + (W - 60) * p / 2} y={18} s={34} c="#FFFFFF">{'YES ' + Math.round(p * 100) + '¢'}</T>}
+    {p < 0.82 && <T x={-W / 2 + 30 + (W - 60) * (p + (1 - p) / 2)} y={18} s={34} c="#FFFFFF">{'NO ' + Math.round((1 - p) * 100) + '¢'}</T>}
+    <T x={0} y={110} s={26} c="#546E7A">{done ? (win === 'yes' ? 'YES WINS · PAYS $1' : 'NO WINS · PAYS $1') : 'WINNER GETS $1 PER CONTRACT'}</T>
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

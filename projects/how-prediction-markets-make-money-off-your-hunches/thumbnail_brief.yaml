@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: How Prediction Markets Make Money Off Your Hunches
+docs_dir: docs/episodes/45-prediction-markets
+video: output/predmkt_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How does a market that does not bet against you make money?
+  surprising_fact: $25bn of event contracts traded in March 2026 (CFTC); the fee peaks at 50 cents
+  subject: a yes/no trading screen
+  tone: strategy
+  metaphor: a toll booth on every hunch
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $25 BILLION
+  - PREDICTION MARKETS
+  claim_basis: 'size: $25bn of event contracts in March 2026 (CFTC proposed rule)'
+  scene:
+    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: surge, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'YOU: WIN OR LOSE'
+  - 'THEM: A FEE'
+  claim_basis: 'Kalshi: fee on every trade; trades against other members (help center)'
+  scene:
+    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: surge, x: 480, y: 650, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none

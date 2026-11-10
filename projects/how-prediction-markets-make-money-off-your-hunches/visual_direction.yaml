@@ -1,0 +1,44 @@
+# Visual direction for how-prediction-markets-make-money-off-your-hunches (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: exchange floor + stadium at night (hook), yes/no tickets + exchange (the contract), toll booth +
+# formula + fee chart (the toll), stadium + skyline (mostly sports), courtroom + Congress (the fight), studio (the house gets paid).
+primary_tone: strategy
+secondary_tones:
+- bright
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: Twenty-five billion dollars
+  tone: strategy
+- chapter: The contract
+  tone: bright
+- chapter: The toll
+  tone: strategy
+- chapter: Mostly sports
+  tone: bright
+- chapter: The fight
+  tone: reflective
+- chapter: The house always gets paid
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: strategy
+  headline: []
+  idea: a giant YES/NO ticket with a toll booth; $25 billion in one month (CFTC)
+requirements:
+- No company or league logos (names in text only); no likeness of real people; no betting encouragement
+- Company volume claims and third-party sports shares attributed; court cases said as pending
