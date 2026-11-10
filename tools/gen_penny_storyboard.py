@@ -237,7 +237,7 @@ stage("s30_canada", "m4_canada", {
     "zones": [Z("wintersquare")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("Its\n    mint") if False else C("stopped sending pennies"), "x": 1250, "y": 520, "zoom": 1.0, "dur": 1.6}], "drift": 2,
     "items": [it("letters", x=1000, y=150, text="CANADA · MAY 4, 2012 · WINNIPEG", at=0.3, size=52, color="gold"),
-              it("bigcoin", x=800, y=420, at=0.4, scale=0.6, value="1¢", tag="1.6¢ CAD"),
+              it("bigcoin", x=800, y=420, at=0.4, scale=0.6, value="1¢", tag="COST 1.6¢ (CANADA)"),
               it("sign", x=1450, y=320, text="FEB 4, 2013: NO MORE PENNIES TO BANKS", at=C("stopped sending pennies"), color="#BBDEFB", size=32)]},
     sources=["canada"])
 stage("s31_canada2", "m4_canada2", {
