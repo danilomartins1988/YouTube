@@ -560,7 +560,7 @@ scenes:
       w: 1370
       h: 800
     draw_start:
-      cue: Here is bank A
+      cue: Before, every bank
     speed: 1400
     push: 0.003
     enter:
@@ -574,7 +574,7 @@ scenes:
       width: 6
       kind: box
       start:
-        cue: Here is bank A
+        cue: Before, every bank
       label:
         text: BANK A
         x: 670
@@ -587,8 +587,7 @@ scenes:
       width: 3
       kind: box
       start:
-        cue: Here is bank A
-        offset: 0.6
+        cue: only in its own stores
       label:
         text: ITS STORES
         x: 670

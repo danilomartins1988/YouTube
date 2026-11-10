@@ -107,11 +107,11 @@ stage("s09_coop", "m1_coop", {
               it("letters", x=1450, y=480, text="1976 · THE NAME: VISA", at=C("sounds the same in almost every language"), size=56, color="gold")]},
     sources=["visas4", "fedhist", "hock"])
 add("p10_club", "m1_draw", "engine_draw", {
-    "title": "Why the club worked", "board": BOARD, "draw_start": C("Here is bank A"), "speed": 1400, "push": 0.003,
+    "title": "Why the club worked", "board": BOARD, "draw_start": C("Before, every bank"), "speed": 1400, "push": 0.003,
     "enter": {"from": -260, "to": 330, "at": 0.2, "dur": 1.3},
     "strokes": [
-        {"d": rect(560, 360, 220, 90), "color": "accent2", "width": 6, "kind": "box", "start": C("Here is bank A"), "label": lbl("BANK A", 670, 413, 26, "accent2")},
-        {"d": rect(560, 500, 220, 60), "color": "accent2", "width": 3, "kind": "box", "start": C("Here is bank A", 0.6), "label": lbl("ITS STORES", 670, 538, 20, "accent2")},
+        {"d": rect(560, 360, 220, 90), "color": "accent2", "width": 6, "kind": "box", "start": C("Before, every bank"), "label": lbl("BANK A", 670, 413, 26, "accent2")},
+        {"d": rect(560, 500, 220, 60), "color": "accent2", "width": 3, "kind": "box", "start": C("only in its own stores"), "label": lbl("ITS STORES", 670, 538, 20, "accent2")},
         {"d": rect(1220, 360, 220, 90), "color": "accent", "width": 6, "kind": "box", "start": C("Here is bank B"), "label": lbl("BANK B", 1330, 413, 26, "accent")},
         {"d": rect(1220, 500, 220, 60), "color": "accent", "width": 3, "kind": "box", "start": C("Here is bank B", 0.6), "label": lbl("ITS STORES", 1330, 538, 20, "accent")},
         {"d": rect(520, 320, 960, 480), "color": "accent3", "width": 6, "kind": "box", "start": C("Now put both inside one club"), "label": lbl("ONE CLUB · ONE NETWORK", 1000, 760, 30, "accent3")},

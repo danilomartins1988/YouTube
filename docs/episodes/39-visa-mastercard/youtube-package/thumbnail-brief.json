@@ -1,0 +1,341 @@
+{
+  "title": "How Visa and Mastercard Became Financial Gatekeepers",
+  "docs_dir": "docs/episodes/39-visa-mastercard",
+  "video": "output/visamc_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "How did two clubs of banks become the gate almost every card payment passes through?",
+    "surprising_fact": "355 billion payments carried Visa's name in FY2026 (Visa 10-K); both networks began as bank-owned clubs",
+    "subject": "a generic card",
+    "tone": "bright",
+    "metaphor": "a gate on every payment"
+  },
+  "slug": "how-visa-and-mastercard-became-financial-gatekeepers",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "355 BILLION",
+        "PAYMENTS, 1 YEAR"
+      ],
+      "claim_basis": "volume: 355 billion Visa-brand transactions in fiscal 2026 (Visa 10-K)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0E1A",
+          "sky1": "#1E2A4A",
+          "haze": "#90CAF9",
+          "key": "#E3F2FD",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ccard",
+          "x": 1480,
+          "y": 560,
+          "s": 0.75,
+          "rot": -12,
+          "coins": true
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E3F2FD"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "355 BILLION",
+          "x": 90,
+          "y": 530.3,
+          "size": 167.6,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "PAYMENTS, 1 YEAR",
+          "x": 96,
+          "y": 653.8,
+          "size": 107.4,
+          "width": 1100,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.55 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "5 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 400, 1270, 540), (96, 570, 1196, 660)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.082",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 34",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-business-behind-americas-student-debt (distance 0.34)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "volume: 355 billion Visa-brand transactions in fiscal 2026 (Visa 10-K)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.561,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-business-behind-americas-student-debt"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "BANK CLUB: 1970",
+        "GIANTS: 2026"
+      ],
+      "claim_basis": "origins + volume: member-owned from 1970 (Visa S-4/A); 355bn transactions FY2026 (Visa 10-K)",
+      "scene": {
+        "palette": {
+          "sky0": "#06121A",
+          "sky1": "#123040",
+          "haze": "#80CBC4",
+          "key": "#E0F7FA",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ledger",
+          "x": 480,
+          "y": 650,
+          "s": 0.6,
+          "heading": "MEMBER BANKS",
+          "amount": "\u2248 14,000",
+          "magnifier": false,
+          "rot": -4
+        },
+        "after": {
+          "kind": "ccard",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6,
+          "rot": -10
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E0F7FA"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "BANK CLUB: 1970",
+          "x": 480.0,
+          "y": 194.9,
+          "size": 79.2,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "GIANTS: 2026",
+          "x": 1440.0,
+          "y": 211.1,
+          "size": 99.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.58 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "5 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 133, 860, 200), (1060, 134, 1820, 217)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "6.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.4:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.074",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 67",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hidden-economics-of-amazon-prime (distance 0.25)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "origins + volume: member-owned from 1970 (Visa S-4/A); 355bn transactions FY2026 (Visa 10-K)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.566,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hidden-economics-of-amazon-prime"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-10T10:01:46Z",
+  "master": "output/how-visa-and-mastercard-became-financial-gatekeepers/thumbnails/master_A.png"
+}
