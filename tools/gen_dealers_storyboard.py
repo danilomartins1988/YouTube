@@ -257,7 +257,8 @@ add("p30_wall", "m4_draw", "engine_draw", {
         {"d": rect(1260, 460, 200, 100), "color": "accent3", "width": 6, "kind": "box", "start": C("Here is you"), "label": lbl("YOU", 1360, 518, 26, "accent3")},
         {"d": "M 1000 360 L 1000 470 M 1000 560 L 1000 760", "color": "risk", "width": 12, "start": C("a wall built by state law"), "label": lbl("STATE LAW", 1000, 340, 22, "risk")},
         {"d": rect(970, 470, 60, 90), "color": "accent", "width": 6, "kind": "box", "start": C("with one door"), "label": lbl("DEALER", 1000, 600, 22, "accent")},
-        {"d": arrow((770, 510), (960, 510)) + " " + arrow((1040, 510), (1250, 510)), "color": "ink", "width": 4, "start": C("every sale")},
+        {"d": arrow((770, 510), (960, 510)), "color": "ink", "width": 4, "kind": "arrow", "start": C("every sale")},
+        {"d": arrow((1040, 510), (1250, 510)), "color": "ink", "width": 4, "kind": "arrow", "start": C("every sale", 0.4)},
     ],
     "actions": [{"kind": "point", "at": C("passes through it", 0.1), "dur": 1.4, "target": [1000, 515]}],
     "scale": 0.86, "floor": 1040}, sources=["mich", "an10k"])

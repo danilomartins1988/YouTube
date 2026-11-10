@@ -1,0 +1,342 @@
+{
+  "title": "How Car Dealerships Really Make Money",
+  "docs_dir": "docs/episodes/34-car-dealers",
+  "video": "output/dealers_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "If the car is not the profit, what is?",
+    "surprising_fact": "AutoNation 2025 gross profit per new car $2,564 vs F&I $2,769 per car; new cars 13% of gross profit (10-K)",
+    "subject": "a generic new car with a price sticker",
+    "tone": "bright",
+    "metaphor": "the car is the bait, the customer is the business"
+  },
+  "slug": "how-car-dealerships-really-make-money",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "13%",
+        "DEALER PROFIT FROM NEW CARS"
+      ],
+      "claim_basis": "mix: new vehicles 13% of gross profit, AutoNation FY2025 10-K",
+      "scene": {
+        "palette": {
+          "sky0": "#070B18",
+          "sky1": "#1A2550",
+          "haze": "#90CAF9",
+          "key": "#E3F2FD",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "sedan",
+          "x": 1450,
+          "y": 600,
+          "s": 0.62,
+          "color": "#D32F2F",
+          "sticker": "$52K"
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E3F2FD"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "13%",
+          "x": 90,
+          "y": 588.0,
+          "size": 360,
+          "width": 691.2,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "DEALER PROFIT FROM NEW CARS",
+          "x": 96,
+          "y": 661.2,
+          "size": 63.7,
+          "width": 1100,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "6 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 307, 781, 610), (96, 612, 1196, 665)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "5.3px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.070",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 43",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-business-behind-americas-student-debt (distance 0.36)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "mix: new vehicles 13% of gross profit, AutoNation FY2025 10-K",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.612,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-business-behind-americas-student-debt"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "CAR $2,564",
+        "F&I $2,769"
+      ],
+      "claim_basis": "mix: gross profit per new vehicle $2,564 vs F&I per vehicle $2,769, AutoNation FY2025 10-K",
+      "scene": {
+        "palette": {
+          "sky0": "#06121A",
+          "sky1": "#123040",
+          "haze": "#80CBC4",
+          "key": "#E0F7FA",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "sedan",
+          "x": 480,
+          "y": 680,
+          "s": 0.36,
+          "color": "#1E88E5"
+        },
+        "after": {
+          "kind": "ledger",
+          "x": 1440,
+          "y": 650,
+          "s": 0.6,
+          "heading": "FINANCE OFFICE",
+          "amount": "$2,769",
+          "magnifier": false,
+          "stamp": "MORE!",
+          "rot": 4
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E0F7FA"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "CAR $2,564",
+          "x": 480.0,
+          "y": 227.4,
+          "size": 118.8,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "F&I $2,769",
+          "x": 1440.0,
+          "y": 227.4,
+          "size": 118.8,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.58 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 135, 860, 235), (1060, 135, 1820, 235)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.3:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.087",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 31",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-island-getting-rich-from-ai (distance 0.39)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "mix: gross profit per new vehicle $2,564 vs F&I per vehicle $2,769, AutoNation FY2025 10-K",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.604,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-island-getting-rich-from-ai"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-10T05:08:03Z",
+  "master": "output/how-car-dealerships-really-make-money/thumbnails/master_B.png"
+}

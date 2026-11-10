@@ -1557,12 +1557,19 @@ scenes:
         size: 22
         color: accent
         anchor: middle
-    - d: M 770 510 Q 865 510 960 510 M 938 520 L 960 510 L 938 500 M 1040 510 Q 1145 510 1250 510 M 1228 520 L 1250 510 L 1228 500
+    - d: M 770 510 Q 865 510 960 510 M 938 520 L 960 510 L 938 500
       color: ink
       width: 4
+      kind: arrow
       start:
         cue: every sale
-      kind: stroke
+    - d: M 1040 510 Q 1145 510 1250 510 M 1228 520 L 1250 510 L 1228 500
+      color: ink
+      width: 4
+      kind: arrow
+      start:
+        cue: every sale
+        offset: 0.4
     actions:
     - kind: point
       at:
