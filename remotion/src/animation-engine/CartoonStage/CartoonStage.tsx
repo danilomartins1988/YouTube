@@ -3367,9 +3367,35 @@ const bigcoin: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** A generic bank-app statement (no bank name or logo): `start` balance, `rows` [{at, label, amt, fee?}] appear one by one;
+ *  the big running balance turns red below zero and fee rows flash red. `title` header text. */
+const statement: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 480), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const rows: any[] = a.rows ?? [], shown = rows.filter((r) => t >= (r.at ?? 0));
+  const bal = (a.start ?? 0) + shown.reduce((q, r) => q + (r.amt ?? 0), 0), neg = bal < 0;
+  const fmt = (v: number) => (v < 0 ? '−$' : '$') + Math.abs(v).toFixed(2);
+  const W = 520, H = 130 + Math.max(rows.length, 3) * 74 + 40;
+  return <g key={'st' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-W / 2 + 14} y={-H / 2 + 18} width={W} height={H} rx={34} fill="#000" opacity={0.25} />
+    <rect x={-W / 2} y={-H / 2} width={W} height={H} rx={34} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
+    <rect x={-W / 2} y={-H / 2} width={W} height={130} rx={34} fill={neg ? '#E53935' : '#1E88E5'} stroke={OL} strokeWidth={6} />
+    <rect x={-W / 2 + 3} y={-H / 2 + 100} width={W - 6} height={30} fill={neg ? '#E53935' : '#1E88E5'} />
+    <T x={-W / 2 + 30} y={-H / 2 + 42} s={24} c="#FFFFFF" a="start" o={0.85}>{a.title || 'CHECKING · BALANCE'}</T>
+    <T x={-W / 2 + 30} y={-H / 2 + 104} s={60} c="#FFFFFF" a="start">{fmt(bal)}</T>
+    {shown.map((r, k) => { const ry = -H / 2 + 175 + k * 74, fl = r.fee ? 0.5 + 0.5 * Math.sin(Math.PI * clamp((t - r.at) / 0.6)) : 0;
+      const ap = clamp((t - r.at) / 0.35);
+      return <g key={k} opacity={ap} transform={`translate(${(1 - ap) * 40} 0)`}>
+        {r.fee && <rect x={-W / 2 + 14} y={ry - 44} width={W - 28} height={64} rx={12} fill="#FFCDD2" opacity={0.6 + 0.4 * fl} />}
+        <T x={-W / 2 + 34} y={ry} s={30} c={r.fee ? '#C62828' : OL} a="start">{r.label}</T>
+        <T x={W / 2 - 34} y={ry} s={30} c={r.fee ? '#C62828' : (r.amt ?? 0) < 0 ? OL : '#2E7D32'} a="end">{fmt(r.amt ?? 0)}</T>
+        <path d={`M ${-W / 2 + 24} ${ry + 26} L ${W / 2 - 24} ${ry + 26}`} stroke="#ECEFF1" strokeWidth={3} /></g>; })}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
