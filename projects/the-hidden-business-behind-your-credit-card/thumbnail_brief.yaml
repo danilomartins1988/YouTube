@@ -1,0 +1,94 @@
+# Thumbnail creative brief. A = bignum, B = split.
+title: The Hidden Business Behind Your Credit Card
+docs_dir: docs/episodes/30-credit-cards
+video: output/creditcard_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: Who really makes money from your credit card?
+  surprising_fact: $160bn card interest in 2024 (CFPB); swipe fees ~$160bn in 2022
+    (estimate cited by CRS)
+  subject: a credit card
+  tone: bright
+  metaphor: a toll on every payment
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - $160B
+  - CARD INTEREST
+  claim_basis: 'interest: $160bn interest charged in 2024 (CFPB)'
+  scene:
+    palette:
+      sky0: '#060914'
+      sky1: '#151E4A'
+      haze: '#7986CB'
+      key: '#E8EAF6'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ccard
+      x: 1480
+      y: 560
+      s: 0.75
+      rot: -12
+      coins: true
+    support: []
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E8EAF6'
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - YOU PAY $100
+  - STORE GETS $97
+  claim_basis: 'swipe: CRS worked example, $100 purchase with 3% fee → merchant receives
+    $97'
+  scene:
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
+    backdrop: void
+    subject:
+      kind: ccard
+      x: 480
+      y: 650
+      s: 0.5
+      rot: -8
+    after:
+      kind: ledger
+      x: 1440
+      y: 650
+      s: 0.6
+      heading: STORE RECEIPT
+      amount: $97.00
+      magnifier: false
+      stamp: -3% FEES
+      rot: 4
+    support: []
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
+    vignette: 0.5
+    brand: none

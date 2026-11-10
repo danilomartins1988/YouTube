@@ -439,6 +439,20 @@ const SUBJECTS: Record<string, SubjectFn> = {
         </g>; })}
     </g>;
   },
+  /** A big generic credit card (no brand): gradient, chip, contactless mark, a few fee coins flying off it. */
+  ccard: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -10})`}>
+    <defs><linearGradient id="ccg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={o.c1 || '#3F51B5'} /><stop offset="1" stopColor={o.c2 || '#0B1440'} /></linearGradient></defs>
+    <circle r={480} fill={P.haze} opacity={0.18} filter="url(#soft)" />
+    <rect x={-380} y={-240} width={760} height={480} rx={42} fill="#000" opacity={0.45} transform="translate(18 26)" filter="url(#soft)" />
+    <rect x={-380} y={-240} width={760} height={480} rx={42} fill="url(#ccg)" stroke="#05070B" strokeWidth={8} />
+    <path d="M -380 -60 Q 0 -200 380 -120 L 380 -240 L -380 -240 Z" fill="#FFFFFF" opacity={0.08} />
+    <rect x={-300} y={-100} width={130} height={100} rx={14} fill="#E3C46E" stroke="#05070B" strokeWidth={4} />
+    <path d="M -300 -50 L -170 -50 M -235 -100 L -235 0" stroke="#A88A3C" strokeWidth={4} />
+    {[0, 1, 2].map((q) => <path key={q} d={`M ${240 + q * 30} -120 q ${26 + q * 10} 50 0 100`} fill="none" stroke="#FFFFFF" strokeWidth={9} strokeLinecap="round" opacity={0.85} />)}
+    {[0, 1, 2, 3].map((g) => <text key={g} x={-290 + g * 160} y={120} fontFamily={FONT} fontWeight={900} fontSize={54} fill="#FFFFFF" opacity={0.85}>••••</text>)}
+    {o.coins && Array.from({length: 5}, (_, k) => <g key={k} transform={`translate(${420 + k * 70} ${-260 + k * 90})`}><circle r={46} fill={P.accent} stroke="#05070B" strokeWidth={6} />
+      <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={52} fill="#05070B">$</text></g>)}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

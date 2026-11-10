@@ -48,7 +48,7 @@ Full manifest with verification sources: `docs/batches/US_AUDIENCE_BATCH_001.jso
 | # | Working title | Status |
 |---|---|---|
 | 01 | Why Americans Pay So Much for Healthcare | **Delivered** (Ep 29, 11:03, QC 0 errors) |
-| 02 | The Hidden Business Behind Your Credit Card | Approved, queued |
+| 02 | The Hidden Business Behind Your Credit Card | In production (Ep 30, queued for render) |
 | 03 | Why American Homes Became So Expensive | Approved, queued |
 | 04 | How Costco Makes Money Selling Things Cheap | Approved, queued |
 | 05 | Why AI Is Making Your Computer More Expensive | **Duplicate** of Ep 14 (memory prices); replacement topic requested |

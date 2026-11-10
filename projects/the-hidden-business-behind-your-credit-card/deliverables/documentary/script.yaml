@@ -1,0 +1,290 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}; estimates and our calculations are said as such.
+logline: Americans were charged one hundred and sixty billion dollars in credit card interest in a single year, and stores
+  pay a fee on almost every swipe. The three ways the card business makes money, and who quietly pays for your rewards.
+title: The Hidden Business Behind Your Credit Card
+segments:
+- id: h_open
+  chapter: One hundred and sixty billion dollars
+  narration: One hundred and sixty billion dollars. That is how much interest Americans were charged on their credit cards
+    in a single year.
+  claims:
+  - interest
+- id: h_twist
+  chapter: One hundred and sixty billion dollars
+  narration: And that is only one side of the business. Every time you tap your card, even if you pay your bill in full, the
+    store you are buying from pays a fee too. You just never see it.
+  claims:
+  - swipe
+- id: h_question
+  chapter: One hundred and sixty billion dollars
+  narration: So who really makes money from that small piece of plastic in your wallet?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced figures.
+- id: h_promise
+  chapter: One hundred and sixty billion dollars
+  narration: By the end of this video, you will know the three ways the card business makes its money, and who quietly pays
+    for your cash back and travel points.
+  claims:
+  - rewards
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The two-second swipe
+  narration: ''
+  claims: []
+- id: m1_swipe
+  chapter: The two-second swipe
+  narration: Start with the moment you pay. You buy something for one hundred dollars and tap your card. It takes a couple
+    of seconds. But in that time, the money passes through several companies, and each of them takes a slice.
+  claims:
+  - swipe
+  analysis: true
+  source_note: Set-up of the transaction flow described by CRS.
+- id: m1_split
+  chapter: The two-second swipe
+  narration: According to the Congressional Research Service, the total fee a store pays is typically between one and three
+    percent of the purchase. If it is three percent, the store receives ninety-seven dollars, not one hundred. The biggest
+    slice, called the interchange fee, goes to the bank that issued your card. And here is the odd part. That fee is set not
+    by your bank, and not by the store, but by the card network.
+  claims:
+  - swipe
+- id: m1_draw
+  chapter: The two-second swipe
+  narration: Let me draw where your one hundred dollars goes. Here is you, and here is the store. Between them, three companies.
+    Your bank, which issued the card. The network, Visa or Mastercard, which connects everyone. And the store's own bank.
+    The store gets ninety-seven dollars. Three dollars are split between the others, and the biggest piece goes to your bank.
+  claims:
+  - swipe
+  analysis: true
+  source_note: Diagram of the CRS worked example (3% MDR).
+- id: m1_total
+  chapter: The two-second swipe
+  narration: Multiply that by every purchase in America. The Congressional Research Service cites estimates that in twenty
+    twenty-two, swipe fees on credit and debit cards together came to {{swipe}}. And most of that came from credit cards.
+  claims:
+  - swipe
+- id: m1_transition
+  chapter: The two-second swipe
+  narration: So the first way to make money is the toll on every payment. And the companies that run the toll road are extraordinarily
+    profitable.
+  claims:
+  - networks
+  analysis: true
+  source_note: Bridge to the sourced network profits.
+- id: m2_card
+  chapter: The toll road
+  narration: ''
+  claims: []
+- id: m2_networks
+  chapter: The toll road
+  narration: Visa does not lend you a single dollar. It does not issue cards and it does not charge you interest. It runs
+    the network that moves the payment. In its latest financial year, Visa reported net revenue of {{networks}}, and a net
+    income of about {{networks.net_spoken}}.
+  claims:
+  - networks
+- id: m2_margin
+  chapter: The toll road
+  narration: By our calculation, Visa turned about sixty-one cents of every dollar of revenue into operating profit. Mastercard,
+    the second network, reported an operating margin of {{networks.ma_spoken}}. Those are unusually high margins for companies
+    of their size.
+  claims:
+  - networks
+  analysis: true
+  source_note: Visa margin computed from its 10-K; Mastercard margin as reported; last sentence is commentary.
+- id: m2_incentives
+  chapter: The toll road
+  narration: And Visa shares some of that toll. In the same year, it reported about eighteen point three billion dollars in
+    client incentives, money paid back to the banks and other partners that use its network. Those incentives help explain
+    why banks are so keen to put one network's logo on their cards.
+  claims:
+  - networks
+  analysis: true
+  source_note: Client incentives from Visa 10-K; last sentence is commentary.
+- id: m2_draw
+  chapter: The toll road
+  narration: Let me draw why a network is such a good business. Here is one card user. Here is one store. Connect them, and
+    there is one link. Add more users and more stores, and every one of them wants to be on the same network, because everyone
+    else is. The network becomes a toll road that nearly every payment has to use. And the toll is a small percentage of every
+    sale.
+  claims:
+  - networks
+  - swipe
+  analysis: true
+  source_note: Network-effects diagram (commentary).
+- id: m2_transition
+  chapter: The toll road
+  narration: But the network's toll is small compared with the second business. The one run by the banks that issue the cards.
+    Interest.
+  claims:
+  - swipe
+- id: m3_card
+  chapter: The interest machine
+  narration: ''
+  claims: []
+- id: m3_balances
+  chapter: The interest machine
+  narration: Americans owe a lot on their cards. According to the New York Fed, credit card balances stood at {{balances}}
+    in the middle of twenty twenty-six. And more than eight in ten American adults have a credit card.
+  claims:
+  - balances
+  - revolve
+- id: m3_apr
+  chapter: The interest machine
+  narration: The price of that debt has jumped. The Federal Reserve tracks the average interest rate on card accounts that
+    are actually paying interest. In twenty twenty-one, it averaged {{apr.y2021_spoken}}. Its latest reading is {{apr}}.
+  claims:
+  - apr
+- id: m3_margin
+  chapter: The interest machine
+  narration: Part of that rise followed the Federal Reserve's own rate increases. But not all of it. The Consumer Financial
+    Protection Bureau looked at the margin, the gap between card rates and the basic prime rate. It found the margin had grown
+    by four point three percentage points in a decade, to the highest level in recent history. By its estimate, the wider
+    margin alone earned the big card companies about {{margin}} in extra interest in a single year.
+  claims:
+  - margin
+- id: m3_bill
+  chapter: The interest machine
+  narration: Put it together and the interest bill exploded. In twenty twenty-two, Americans were charged {{interest.before_spoken}}
+    in credit card interest. Two years later, it was {{interest}}. That is more than fifty billion dollars extra in just two
+    years.
+  claims:
+  - interest
+- id: m3_who
+  chapter: The interest machine
+  narration: Who pays that interest? Not everyone. In the Federal Reserve's latest survey, {{revolve}} of card owners said
+    they had carried a balance at least once in the past year. The rest pay in full, and pay no interest at all.
+  claims:
+  - revolve
+- id: m3_draw
+  chapter: The interest machine
+  narration: Let me draw the two kinds of card users. On one side, people who pay in full every month. For them, the card
+    is a free short-term loan, plus rewards. On the other side, people who carry a balance. They pay over twenty percent a
+    year on what they owe. The same plastic. Two completely different deals.
+  claims:
+  - revolve
+  - apr
+  analysis: true
+  source_note: Diagram of transactors vs revolvers.
+- id: m3_transition
+  chapter: The interest machine
+  narration: Which raises a question that most people never ask. If the people who pay in full get rewards for free, who is
+    paying for those rewards?
+  claims:
+  - rewards
+- id: m4_card
+  chapter: Who pays for your rewards
+  narration: ''
+  claims: []
+- id: m4_rewards
+  chapter: Who pays for your rewards
+  narration: Rewards are big money. According to the CFPB, consumers earned more than {{rewards}} in rewards on major issuers'
+    cards in twenty twenty-two. Almost all card spending now goes on rewards cards.
+  claims:
+  - rewards
+- id: m4_funded
+  chapter: Who pays for your rewards
+  narration: And the money comes largely from the swipe fee. The CFPB says issuers typically fund rewards through interchange
+    revenue. The average interchange rate on general purpose cards was {{rewards.rate_spoken}}, and rewards made up almost
+    nine tenths of that revenue. In other words, the fee the store pays comes back to you as points.
+  claims:
+  - rewards
+- id: m4_amex
+  chapter: Who pays for your rewards
+  narration: You can see the same link inside a single company. In twenty twenty-five, American Express spent about {{amexrw}}
+    on rewards for its card members worldwide. In the same year, it collected about {{amexrw.disc_spoken}} in fees from the
+    merchants that accept its cards.
+  claims:
+  - amexrw
+- id: m4_prices
+  chapter: Who pays for your rewards
+  narration: But stores do not simply absorb that fee. It becomes part of their costs, and costs end up in prices. So a customer
+    paying with cash, or with a basic debit card, may be helping to pay for someone else's travel points.
+  claims:
+  - swipe
+  analysis: true
+  source_note: Economic commentary on the incidence of swipe fees.
+- id: m4_revolvers
+  chapter: Who pays for your rewards
+  narration: The CFPB found another imbalance. Cardholders who carry a balance from month to month pay {{rewards.pay_spoken}}
+    of all interest and fees, but receive less than thirty percent of the rewards. Not everyone agrees with that framing.
+    A Federal Reserve staff paper has challenged it. But the direction of the money is hard to miss.
+  claims:
+  - rewards
+- id: m4_draw
+  chapter: Who pays for your rewards
+  narration: Let me draw the rewards loop. Money comes in from two places. Swipe fees, paid by every store. And interest and
+    fees, paid mostly by people who carry a balance. Money goes out as rewards, mostly to people who pay in full and spend
+    a lot. The bank sits in the middle, and keeps what is left.
+  claims:
+  - rewards
+  - swipe
+  analysis: true
+  source_note: Flow diagram built from the CFPB findings.
+- id: m4_transition
+  chapter: Who pays for your rewards
+  narration: And there is one more source of money, the one that hurts the most when you miss a payment.
+  claims: []
+- id: m5_card
+  chapter: The fees
+  narration: ''
+  claims: []
+- id: m5_late
+  chapter: The fees
+  narration: Late fees. According to the CFPB, the biggest card issuers charged {{late}} in late fees in twenty twenty-four,
+    up seventeen percent in two years.
+  claims:
+  - late
+- id: m5_rule
+  chapter: The fees
+  narration: In twenty twenty-four, the CFPB tried to change that. Its new rule would have cut the typical late fee from thirty-two
+    dollars to eight. Business and banking groups sued. The rule never took effect, and on April fifteenth, twenty twenty-five,
+    it was vacated by a court order.
+  claims:
+  - late
+- id: m5_risk
+  chapter: The fees
+  narration: Meanwhile, a lot of card debt is going bad. The New York Fed reports that close to seven percent of card balances
+    were moving into serious delinquency, ninety days or more behind, in a year. When that happens, the interest and fees
+    keep piling up on the people least able to pay them.
+  claims:
+  - balances
+- id: m5_distress
+  chapter: The fees
+  narration: The New York Fed also measures the stock of bad debt. The share of card balances that were ninety days or more
+    behind rose from seven point six percent in late twenty twenty-two to twelve point eight percent in early twenty twenty-six.
+    And {{distress}} Americans still carry card debts on their credit reports that lenders have already written off.
+  claims:
+  - distress
+- id: m5_draw
+  chapter: The fees
+  narration: Let me put the three businesses side by side. The toll on every swipe, collected by the networks and the banks.
+    The interest, paid by people who carry a balance. And the fees, paid by people who slip. Three streams of money, all flowing
+    through the same small card.
+  claims:
+  - swipe
+  - interest
+  - late
+  analysis: true
+  source_note: Summary bar chart of the sourced figures (not to scale).
+- id: payoff
+  chapter: The lesson
+  narration: So what is the hidden business behind your credit card? It is not the plastic. It is the position. The card sits
+    between you and every store, and every company in that chain takes a slice. If you pay in full, the system can work in
+    your favor. If you carry a balance, you are the one paying for it. Either way, the card is never really free.
+  claims:
+  - swipe
+  - interest
+  - rewards
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

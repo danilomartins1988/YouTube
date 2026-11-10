@@ -1,0 +1,44 @@
+# Visual direction for the-hidden-business-behind-your-credit-card (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: typography + card (hook), store checkout (the swipe), toll booth + charts (networks),
+# night financial district + charts (interest), airport + evidence board (rewards), office + courtroom (fees).
+primary_tone: bright
+secondary_tones:
+- strategy
+- reflective
+palette:
+  bg: '#0E1726'
+  bg2: '#1B2A40'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: One hundred and sixty billion dollars
+  tone: bright
+- chapter: The two-second swipe
+  tone: bright
+- chapter: The toll road
+  tone: strategy
+- chapter: The interest machine
+  tone: strategy
+- chapter: Who pays for your rewards
+  tone: bright
+- chapter: The fees
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: bright
+  headline: []
+  idea: a generic credit card with a giant $160B interest number; presenter reacting to a toll booth
+requirements:
+- One visual language per part; text mostly on objects or at the top
+- No real card designs or logos (names in text only); no likeness of real people

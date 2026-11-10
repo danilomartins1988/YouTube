@@ -2590,6 +2590,49 @@ const pills: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A generic credit card (no brand): chip, embossed dots, a coloured gradient; `tapAt` swings it towards a reader with
+ *  contactless waves; `text` label on the card; `flip` shows the back with a magnetic stripe. */
+const creditcard: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 420), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const tap = a.tapAt !== undefined ? Math.sin(Math.PI * clamp((t - a.tapAt) / 0.9)) : 0;
+  const c1 = col(a.color, '#3949AB'), id = 'ccg' + i;
+  return <g key={'cc' + i} transform={`translate(${x + tap * 60} ${y - tap * 30}) scale(${s}) rotate(${(a.rot ?? -8) + tap * 10})`}>
+    <defs><linearGradient id={id} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={c1} /><stop offset="1" stopColor="#0D1B4C" /></linearGradient></defs>
+    <rect x={-230} y={-145} width={460} height={290} rx={26} fill="#000" opacity={0.3} transform="translate(12 16)" />
+    <rect x={-230} y={-145} width={460} height={290} rx={26} fill={`url(#${id})`} stroke={OL} strokeWidth={6} />
+    {a.flip ? <rect x={-230} y={-95} width={460} height={60} fill="#1A1A1A" /> : <g>
+      <rect x={-180} y={-60} width={80} height={60} rx={10} fill="#E0C068" stroke={OL} strokeWidth={3} />
+      <path d="M -180 -30 L -100 -30 M -140 -60 L -140 0" stroke="#A88A3C" strokeWidth={3} />
+      {[0, 1, 2, 3].map((g) => <T key={g} x={-170 + g * 100} y={70} s={30} c="#FFFFFF" o={0.85} a="start">{'••••'}</T>)}
+      <path d="M 150 -70 q 14 14 0 28 M 168 -82 q 26 26 0 52 M 186 -94 q 38 38 0 76" fill="none" stroke="#FFFFFF" strokeWidth={5} strokeLinecap="round" opacity={0.8} />
+      {a.text && <T x={-180} y={122} s={26} c="#FFFFFF" a="start" w={700}>{a.text}</T>}</g>}
+    {tap > 0.2 && [0, 1, 2].map((q) => <path key={q} d={`M ${250 + q * 26} -60 q ${30 + q * 8} 60 0 120`} fill="none" stroke={K.gold} strokeWidth={6} strokeLinecap="round" opacity={tap * (1 - q * 0.25)} />)}
+  </g>;
+};
+
+/** A highway toll booth with a barrier arm that lifts for each passing coin; `fee` text on the booth sign; `rate` coins/s
+ *  flow left to right through it and a small cut drops into the booth's bin (`binLabel`). */
+const tollbooth: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const rate = a.rate ?? 1.4, ph = ((t - (a.at ?? 0)) * rate) % 1, lift = Math.sin(Math.PI * clamp((ph - 0.35) / 0.3));
+  return <g key={'tb' + i} transform={`translate(${x} ${f}) scale(${s})`}>
+    <rect x={-700} y={-10} width={1400} height={20} fill="#5B6577" />
+    <rect x={-110} y={-330} width={220} height={330} rx={10} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+    <rect x={-80} y={-290} width={160} height={110} rx={8} fill="#B3E5FC" stroke={OL} strokeWidth={4} />
+    <rect x={-150} y={-400} width={300} height={70} rx={12} fill={K.gold} stroke={OL} strokeWidth={5} />
+    <T x={0} y={-353} s={34}>{a.fee || 'TOLL 1–3%'}</T>
+    <g transform={`translate(110 -150) rotate(${-80 * lift})`}><rect x={0} y={-10} width={360} height={20} rx={10} fill="#E53935" stroke={OL} strokeWidth={4} />
+      {[0, 1, 2].map((q) => <rect key={q} x={60 + q * 100} y={-10} width={40} height={20} fill="#FFFFFF" />)}</g>
+    {[0, 1, 2].map((q) => { const u = (ph + q / 3) % 1, cx = -650 + u * 1300;
+      return <g key={q} transform={`translate(${cx} -60)`}><circle r={34} fill={K.gold} stroke={OL} strokeWidth={4} /><T x={0} y={12} s={34}>$</T></g>; })}
+    <rect x={-60} y={-60} width={120} height={60} fill="#455A64" stroke={OL} strokeWidth={4} />
+    <circle cx={0} cy={-80 - 120 * clamp(1 - Math.abs(ph - 0.5) * 4)} r={12} fill={K.gold} stroke={OL} strokeWidth={2} opacity={ph > 0.3 && ph < 0.7 ? 1 : 0} />
+    {a.binLabel && <T x={0} y={60} s={30} c={a.textc || OL}>{a.binLabel}</T>}
+  </g>;
+};
+
 /** A trading screen for one contract. `price` is a keyframed value (e.g. [[0, 29000], [cue, 48075], ...]); the line is
  *  drawn from `at` up to now by sampling it; `max` sets the y scale. `bandsOffAt` turns the "PRICE BANDS" lamp red (OFF),
  *  `haltAt` stamps SUSPENDED, `cancelAt` greys the part of the line after `cancelFrom` (seconds) and stamps CANCELLED. */
@@ -2620,7 +2663,7 @@ const tradescreen: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
