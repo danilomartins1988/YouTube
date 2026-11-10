@@ -81,7 +81,9 @@ stage("s06_ratio", "m1_ratio", {
                      {"label": "2019", "value": 4.1, "color": "#FFB74D", "at": C("In twenty nineteen"), "display": "4.1×"},
                      {"label": "2022 PEAK", "value": 5.0, "color": "#B71C1C", "at": C("just below the all-time high"), "display": "5.0×"},
                      {"label": "2025", "value": 4.7, "color": "#E53935", "at": C("In twenty twenty-five"), "display": "4.7×"}],
-                    at=0.2, max=5.6, title="HOME PRICE ÷ HOUSEHOLD INCOME (HARVARD JCHS)", x=360, w=1200)]},
+                    at=0.2, max=5.6, title="HOME PRICE ÷ HOUSEHOLD INCOME (HARVARD JCHS)", x=360, w=1200),
+              it("letters", x=960, y=420, text="HOME PRICE ÷ INCOME", at=0.3, until=C("In the nineteen nineties"), size=80, color="gold"),
+              it("letters", x=960, y=540, text="= YEARS OF INCOME", at=C("divide it by"), until=C("In the nineteen nineties"), size=64, color="white")]},
     sources=["jchs"])
 stage("s07_jump", "m1_jump", {
     "zones": [Z("suburb")], "worldW": 2400,
@@ -127,7 +129,8 @@ stage("s13_payment", "m2_payment", {
     "items": [chart([{"label": "END 2020", "value": 1240, "color": "#90A4AE", "at": C("At the end of twenty twenty"), "display": "$1,240"},
                      {"label": "NOW (MORTGAGE)", "value": 2420, "color": "#E53935", "at": C("reached"), "display": "$2,420"},
                      {"label": "+ INSURANCE, TAXES", "value": 3120, "color": "#B71C1C", "at": C("Add insurance"), "display": "$3,120"}],
-                    at=0.2, max=3500, title="MONTHLY COST OF THE MEDIAN-PRICED HOME (HARVARD JCHS)", x=420, w=1080)]},
+                    at=0.2, max=3500, title="MONTHLY COST OF THE MEDIAN-PRICED HOME (HARVARD JCHS)", x=420, w=1080),
+              it("letters", x=960, y=480, text="HIGHER PRICE × HIGHER RATE", at=0.3, until=C("reached"), size=70, color="risk")]},
     sources=["jchs"])
 stage("s14_lockin", "m2_lockin", {
     "zones": [Z("suburb", night=True)], "worldW": 2400, "night": True,

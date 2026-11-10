@@ -289,6 +289,25 @@ scenes:
       at: 0.2
       max: 5.6
       title: HOME PRICE ÷ HOUSEHOLD INCOME (HARVARD JCHS)
+    - kind: letters
+      x: 960
+      y: 420
+      text: HOME PRICE ÷ INCOME
+      at: 0.3
+      until:
+        cue: In the nineteen nineties
+      size: 80
+      color: gold
+    - kind: letters
+      x: 960
+      y: 540
+      text: = YEARS OF INCOME
+      at:
+        cue: divide it by
+      until:
+        cue: In the nineteen nineties
+      size: 64
+      color: white
   sources:
   - jchs
   assets:
@@ -646,6 +665,15 @@ scenes:
       at: 0.2
       max: 3500
       title: MONTHLY COST OF THE MEDIAN-PRICED HOME (HARVARD JCHS)
+    - kind: letters
+      x: 960
+      y: 480
+      text: HIGHER PRICE × HIGHER RATE
+      at: 0.3
+      until:
+        cue: reached
+      size: 70
+      color: risk
   sources:
   - jchs
   assets:
