@@ -1,0 +1,283 @@
+# Before You Buy: Apple, November 2026 edition. Series spec: docs/series/BEFORE_YOU_BUY.md.
+# Investor-level audience (no concept lessons). Every number through {{placeholders}} (sources.yaml) so a quarterly
+# refresh swaps numbers. Our calculations said as ours. Never fair value, cheap/expensive, buy/sell. Disclaimer after the hook.
+logline: Apple is worth about five trillion dollars. What does that price assume about the iPhone, Services and margins,
+  what has to go right, and what could go wrong? November 2026 edition.
+title: 'Before You Buy Apple Stock, Watch This (Nov 2026)'
+segments:
+- id: h_open
+  chapter: Five trillion
+  narration: Apple is worth {{cap}}. That is the price of every share, {{cap.price_spoken}} at the close on {{cap.date_spoken}},
+    times {{cap.shares_spoken}} shares. By our math, that is {{lenses}} last year's profit.
+  claims:
+  - cap
+  - lenses
+- id: h_twist
+  chapter: Five trillion
+  narration: And here's the twist. The thing everyone pictures, the iPhone, brings in more than half the money. But the part
+    that quietly makes the most profit per dollar is something you never hold in your hand.
+  claims:
+  - rev
+  - services
+  analysis: true
+  source_note: Framing built from the 10-K revenue and margin figures.
+- id: h_question
+  chapter: Five trillion
+  narration: So what is that price actually betting on? What has to happen for it to keep working? And what could break it?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: Five trillion
+  narration: In the next few minutes, we open the machine, follow the cash, run the numbers on what's priced in, and finish
+    with the three numbers to watch when Apple reports next.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode.
+- id: h_disclaimer
+  chapter: Five trillion
+  narration: Quick note. This isn't financial advice. Everything here comes from Apple's own filings and our own math, dated,
+    so you can decide for yourself.
+  claims: []
+  analysis: true
+  source_note: Series disclaimer (required after the hook).
+- id: m1_card
+  chapter: The machine
+  narration: ''
+  claims: []
+- id: m1_machine
+  chapter: The machine
+  narration: In fiscal twenty twenty-six, Apple sold {{rev}} of stuff, up {{rev.growth_spoken}}, after just {{rev.prior_spoken}}
+    the year before. The iPhone alone was {{rev.iphone_spoken}}, up {{rev.iphone_growth_spoken}}, and {{rev.iphone_share_spoken}}
+    of everything. Mac, iPad and the wearables pipe are smaller, and iPad and wearables were basically flat.
+  claims:
+  - rev
+- id: m1_services
+  chapter: The machine
+  narration: Then there's the pipe you can't see. Services, meaning the App Store, cloud, advertising, payments and subscriptions,
+    brought in {{rev.services_spoken}}, about a quarter of sales. But its gross margin was {{services}}, against {{services.products_spoken}}
+    for the hardware. So Services makes {{services.gp_share_spoken}} of Apple's gross profit. A quarter of the revenue, two fifths
+    of the profit.
+  claims:
+  - rev
+  - services
+- id: m1_where
+  chapter: The machine
+  narration: Where does it come from? Greater China came roaring back, {{geo}}, up {{geo.china_growth_spoken}}, after falling
+    {{geo.china_prior_spoken}} the year before. About {{geo.indirect_spoken}} of sales go through carriers, retailers and resellers,
+    not Apple's own stores. And almost all the hardware is built by partners across Asia, from China mainland and India
+    to Vietnam. So Apple owns the brand, the software and the customer, while other companies run most of the factories.
+  claims:
+  - geo
+- id: m1_draw
+  chapter: The machine
+  narration: Let me draw the machine. Here are the products, the big pipe, with a thinner margin. Here is Services, the smaller
+    pipe, with a fat margin. Both pour into gross profit. And this arrow is the one investors watch, because every point of
+    Services growth carries far more profit than a point of hardware.
+  claims:
+  - services
+  analysis: true
+  source_note: Diagram of the 10-K product vs services gross margin split.
+- id: m1_transition
+  chapter: The machine
+  narration: A machine that profitable throws off a lot of cash. So where does the cash go?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: The cash
+  narration: ''
+  claims: []
+- id: m2_cash
+  chapter: The cash
+  narration: Operating cash flow was {{lenses.ocf_spoken}}. Capital spending was only {{lenses.capex_spoken}}, {{lenses.capexshare_spoken}}
+    of that. So free cash flow, by our math, was {{lenses.fcf_spoken}}. That's more than net income, which was {{lenses.ni_spoken}}.
+  claims:
+  - lenses
+- id: m2_returns
+  chapter: The cash
+  narration: And Apple hands most of it back. It bought back {{cash}} of its own shares, and paid {{cash.div_spoken}} in dividends.
+    Together, about {{cash.share_spoken}} of free cash flow, by our math. The share count has dropped by {{cash.fewer_spoken}}
+    since mid twenty twenty-three, so each remaining share owns a slightly bigger slice. That's a quiet tailwind for earnings
+    per share, even in a year when total profit stands still.
+  claims:
+  - cash
+- id: m2_ai
+  chapter: The cash
+  narration: One caveat. Apple's low capital spending does not mean artificial intelligence is free. Research and development
+    jumped {{cash.rd_growth_spoken}} to about {{cash.rd_spoken}}, mainly because of infrastructure costs, including A I. And Apple
+    says it relies on third party cloud providers for compute. So part of the A I bill shows up as an expense, not as capex.
+  claims:
+  - cash
+- id: m2_draw
+  chapter: The cash
+  narration: Let me draw where a year of free cash went. Here is the free cash flow bar. Here is the buyback bar, by far the
+    biggest. Here are the dividends. And this small piece is what was left over. Most of the money goes straight back to shareholders.
+  claims:
+  - cash
+  - lenses
+  analysis: true
+  source_note: Bar sketch of FY2026 FCF uses (10-K; our calc.).
+- id: m2_transition
+  chapter: The cash
+  narration: Which brings us to the big question. At five trillion dollars, what are you paying for?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: What's priced in
+  narration: ''
+  claims: []
+- id: m3_lenses
+  chapter: What's priced in
+  narration: Three quick lenses first, all our math on the latest fiscal year. Price to earnings, {{lenses}}. Free cash flow
+    yield, {{lenses.fcfy_spoken}}. Operating cash flow yield, {{lenses.ocfy_spoken}}. Apple has net cash of {{cap.netcash_spoken}},
+    which barely moves a number this size. And because its capex is small and steady, free cash flow is a fair base here.
+  claims:
+  - lenses
+  - cap
+- id: m3_gauge
+  chapter: What's priced in
+  narration: Now let's run it backwards. We ask what growth in free cash flow, for the next ten years, makes today's price
+    work, then assume growth slows to three percent forever. With an eight percent discount rate, the answer is {{rdcf}}.
+    With ten percent, it's {{rdcf.high_spoken}}. Our illustration, with the assumptions on screen.
+  claims:
+  - rdcf
+- id: m3_zero
+  chapter: What's priced in
+  narration: For contrast, if free cash flow simply stayed flat forever, the same model gives a company worth {{rdcf.z8_spoken}}
+    at eight percent, or {{rdcf.z10_spoken}} at ten. So more than half of today's price is a bet on growth.
+  claims:
+  - rdcf
+  analysis: true
+  source_note: Our illustration; comparison of model outputs.
+- id: m3_draw
+  chapter: What's priced in
+  narration: Let me draw that gap. Here is what flat cash would be worth at ten percent. Here it is at eight. And here is the
+    actual price, towering over both. That gap is the growth the market is paying for in advance.
+  claims:
+  - rdcf
+  - cap
+  analysis: true
+  source_note: Bar sketch of model outputs vs market value (our calc.).
+- id: m3_history
+  chapter: What's priced in
+  narration: Is that growth unusual for Apple? Last year, sales grew {{rev.growth_spoken}}. The year before, {{rev.prior_spoken}}.
+    So the price assumes the strong year was not a one off, at least at the lower discount rate, and something even better at
+    the higher one.
+  claims:
+  - rev
+  - rdcf
+  analysis: true
+  source_note: Comparison with reported growth.
+- id: m3_transition
+  chapter: What's priced in
+  narration: So what has to go right?
+  claims: []
+- id: m4_card
+  chapter: What has to happen
+  narration: ''
+  claims: []
+- id: m4_iphone
+  chapter: What has to happen
+  narration: Number one, the iPhone keeps compounding from a record. It just grew {{rev.iphone_growth_spoken}} to {{rev.iphone_spoken}}.
+    Beating that every year means people keep upgrading, and Apple keeps getting enough chips and memory to build them. A
+    record year is great news, and also a harder bar to clear next time.
+  claims:
+  - rev
+  analysis: true
+  source_note: Driver tied to the 10-K iPhone figure.
+- id: m4_services
+  chapter: What has to happen
+  narration: Number two, Services keeps growing fast. It's the profit engine, but its growth slowed to {{services.q4_spoken}}
+    in the September quarter, the slowest of the year. If that line keeps cooling, the whole growth story gets harder.
+  claims:
+  - services
+  analysis: true
+  source_note: Driver tied to quarterly Services growth (our calc.).
+- id: m4_margin
+  chapter: What has to happen
+  narration: Number three, margins hold. The September quarter's gross margin was {{margin}}, and that included about one point
+    from tariff refunds that may not come back. Apple itself warns of downward pressure, and says memory and storage costs are
+    rising, and expected to rise further.
+  claims:
+  - margin
+  analysis: true
+  source_note: Driver tied to the Q4 release and 10-K language.
+- id: m4_china
+  chapter: What has to happen
+  narration: And number four, China keeps buying. That rebound to {{geo}} did a lot of the heavy lifting last year. One weak year
+    there would show up fast, because the region is more than a sixth of Apple's sales, and it swung from shrinking to booming
+    in a single year.
+  claims:
+  - geo
+  analysis: true
+  source_note: Driver tied to the 10-K segment figure.
+- id: m4_transition
+  chapter: What has to happen
+  narration: Now the other side of the scale.
+  claims: []
+- id: m5_card
+  chapter: Risks and upside
+  narration: ''
+  claims: []
+- id: m5_courts
+  chapter: Risks and upside
+  narration: Risk one is the courts. Apple earns licensing money from Google for search, and says that if the antitrust ruling
+    against Google is reversed on appeal, remedies could block those payments. Apple doesn't say how much is at stake. The App
+    Store fight with Epic is now headed to the Supreme Court. And the Justice Department's antitrust suit is still going.
+  claims:
+  - risks
+- id: m5_europe
+  chapter: Risks and upside
+  narration: Risk two is Europe. Under the Digital Markets Act, Apple was already fined in twenty twenty-five, and is appealing.
+    In the open investigation, the law allows fines of {{risks}}. On last year's sales, that ceiling would be {{risks.dma_spoken}}.
+    That's a legal maximum, not an estimate.
+  claims:
+  - risks
+- id: m5_tariffs
+  chapter: Risks and upside
+  narration: Risk three is everything Apple doesn't control. Tariffs can still hit costs. Memory prices are climbing. And on
+    artificial intelligence, Apple warns that failing to keep up with rivals could cost it market share.
+  claims:
+  - risks
+  - margin
+- id: m5_upside
+  chapter: Risks and upside
+  narration: And the upside the price might not fully include. Apple says its installed base of active devices hit {{upside}},
+    in every major category and region, though it gives no number. New cloud services will expand access to its A I features,
+    with no pricing announced yet. And advertising is already one of the lines driving Services. None of that is sized, so we
+    won't size it either.
+  claims:
+  - upside
+  analysis: true
+  source_note: Company-stated upside; unsized by rule.
+- id: m5_transition
+  chapter: Risks and upside
+  narration: So, what should you watch?
+  claims: []
+- id: payoff
+  chapter: The scorecard
+  narration: Here's the scorecard for the next report, expected around {{watch.next_spoken}}, our estimate. One, December quarter
+    revenue against about {{watch}} a year earlier. Two, gross margin against {{margin}}, which still had tariff refunds in it.
+    Three, Services growth against {{services.q4_spoken}}. If those three hold up, the story the price is telling keeps holding
+    up. If they crack, the gap between the price and the cash gets harder to defend.
+  claims:
+  - watch
+  - margin
+  - services
+  analysis: true
+  source_note: Scorecard (company figures; next date our estimate).
+- id: payoff2
+  chapter: The scorecard
+  narration: That's Apple, November twenty twenty-six edition. We'll update it after every report, with new numbers and the
+    same three questions. What's priced in, what has to happen, and what could go wrong.
+  claims: []
+  analysis: true
+  source_note: Series sign-off.
+- id: teaser
+  chapter: The scorecard
+  narration: Next in the series, another giant of the stock market, opened up the same way. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser.

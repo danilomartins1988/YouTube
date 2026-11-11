@@ -918,7 +918,7 @@ const SETS: Record<string, SetFn> = {
     const w = z.x1 - z.x0, zz = z as any, night = !!z.night;
     const segs: {label: string; value: number; color?: string; at?: number}[] = zz.segments || [{label: 'REVENUE', value: 1}];
     const total = segs.reduce((s, q) => s + Math.max(0, q.value), 0) || 1;
-    const mx = z.x0 + w * (zz.machineAt ?? 0.55), my = f - 330;
+    const mx = zz.mx ?? z.x0 + w * (zz.machineAt ?? 0.55), my = f - 330;
     const shud = zz.boomAt !== undefined && t > zz.boomAt && t < zz.boomAt + 1.2 ? 6 * Math.sin(t * 60) * (1 - (t - zz.boomAt) / 1.2) : 0;
     const signs: string[] = zz.signs || ['PROFIT DEPT · 3RD FLOOR', 'NO FREE LUNCH (ASK)', 'MIND THE MARGIN', 'QUARTERLY HUMS ONLY'];
     const pal = ['#FF4FD8', '#3DF5FF', '#FFE14D', '#7DFF8A', '#FF9F1C', '#7B61FF'];
@@ -928,13 +928,13 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 240)}, (_, k) => <g key={'pn' + k}>
         <rect x={z.x0 + k * 240} y={f - 1100} width={236} height={1040} fill={night ? '#1C1140' : '#3A2378'} stroke="#24154F" strokeWidth={4} />
         {[0, 1, 2, 3, 4, 5].map((r) => <circle key={r} cx={z.x0 + k * 240 + 14} cy={f - 1080 + r * 190} r={5} fill="#7E6BC4" />)}</g>)}
-      {signs.slice(0, Math.max(1, Math.floor(w / 700))).map((s, k) => { const sx = z.x0 + w * ((k + 0.5) / Math.max(1, Math.floor(w / 700))), on = Math.sin(t * (1.3 + k) + k) > -0.85;
-        return <g key={'ms' + k} transform={`translate(${sx} ${f - 940}) rotate(${-3 + 2 * Math.sin(t * 0.9 + k)})`}>
+      {signs.map((s, k) => { const sx = mx - 1150 + k * 1000, on = Math.sin(t * (1.3 + k) + k) > -0.85;
+        return <g key={'ms' + k} transform={`translate(${sx} ${f - 800}) rotate(${-3 + 2 * Math.sin(t * 0.9 + k)})`}>
           <rect x={-190} y={-34} width={380} height={64} rx={32} fill="#120A2A" stroke={pal[k % pal.length]} strokeWidth={5} opacity={on ? 1 : 0.5} />
           <T x={0} y={10} s={24} c={pal[k % pal.length]} o={on ? 1 : 0.4}>{s}</T></g>; })}
       {/* intake pipes from the left wall into the machine */}
       {segs.map((q, k) => { const th = 26 + 120 * (Math.max(0, q.value) / total), py = my - 170 + k * (360 / Math.max(1, segs.length - 1 || 1)) * (segs.length > 1 ? 1 : 0),
-          c = q.color || pal[k % pal.length], on = q.at === undefined || t >= q.at, x0 = z.x0 + 40, x1 = mx - 230;
+          c = q.color || pal[k % pal.length], on = q.at === undefined || t >= q.at, x0 = Math.max(z.x0 + 40, mx - 1250), x1 = mx - 230;
         const grow = q.at === undefined ? 1 : clamp((t - q.at) / 0.8), xe = lerp(x0, x1, E.out(grow));
         return <g key={'pp' + k}>
           <rect x={x0} y={py - th / 2} width={Math.max(0, xe - x0)} height={th} rx={th / 2} fill="#B0BEC5" stroke={OL} strokeWidth={6} />
@@ -4078,7 +4078,9 @@ const freighter: ItemFn = (a, {t, f}, i) => {
 };
 
 /* ------------------------------------------------------------------ BEFORE YOU BUY series kit (original designs) */
-/** PRICED-IN CALCULATOR: a retro-futurist contraption with a half-dial from 0 to `max` (% a year). Two needles swing in:
+/** PRICED-IN CALCULATOR (series method, docs/series/BEFORE_YOU_BUY.md): an optional `lenses` strip of three values
+ *  [{label, value, at}] (P/E, FCF yield, OCF yield / capex lens) above the dial, and a `base` label naming the cash base the
+ *  gauge uses (FCF / OCF minus depreciation proxy / revenue scenario). A retro-futurist contraption with a half-dial from 0 to `max` (% a year). Two needles swing in:
  *  `low` {label, value, at} and `high` {label, value, at}; a shaded band marks the range between them. An inputs placard
  *  (`inputs`: lines) hangs beside it, `title` on top, `note` under the dial (e.g. "OUR ILLUSTRATION"). Lights blink,
  *  a crank turns while the needles move. */
@@ -4097,7 +4099,7 @@ const pricedin: ItemFn = (a, {t}, i) => {
   const band = (() => { const a0 = (ang(lo.value) * Math.PI) / 180, a1 = (ang(hi.value) * Math.PI) / 180, show = (hi.at === undefined || t >= hi.at + 0.6) ? 1 : 0;
     return <path d={`M 0 0 L ${Math.sin(a0) * R} ${-Math.cos(a0) * R} A ${R} ${R} 0 0 1 ${Math.sin(a1) * R} ${-Math.cos(a1) * R} Z`} fill="#FFE14D" opacity={0.35 * show} />; })();
   const moving = [lo, hi].some((n) => n.at !== undefined && t >= n.at && t < n.at + 1.2);
-  const inputs: string[] = a.inputs || [];
+  const inputs: string[] = a.inputs || [], lenses: {label: string; value: string; at?: number}[] = a.lenses || [];
   return <g key={'pin' + i} transform={`translate(${x} ${y}) scale(${s})`}>
     <rect x={-360} y={-60} width={720} height={260} rx={40} fill="#7B61FF" stroke={OL} strokeWidth={8} />
     <rect x={-330} y={-40} width={660} height={36} rx={14} fill="#FFFFFF" opacity={0.18} />
@@ -4113,8 +4115,16 @@ const pricedin: ItemFn = (a, {t}, i) => {
       <circle r={30} fill="#37474F" stroke={OL} strokeWidth={6} />
     </g>
     <g transform={`translate(${R + 40} 150) rotate(${moving ? t * 400 : 0})`}><path d="M 0 0 L 60 0" stroke={OL} strokeWidth={10} strokeLinecap="round" /><circle cx={60} cy={0} r={14} fill="#FF9F1C" stroke={OL} strokeWidth={4} /></g>
-    {a.title && <T x={0} y={-90} s={40} c="#FFF8E1">{a.title}</T>}
+    {a.title && <T x={0} y={-R - 150} s={40} c="#FFF8E1">{a.title}</T>}
+    {a.base && <g transform="translate(0 120)"><rect x={-230} y={-26} width={460} height={44} rx={22} fill="#FFE14D" stroke={OL} strokeWidth={4} />
+      <T x={0} y={6} s={22} c={OL}>{`BASE: ${a.base}`}</T></g>}
     {a.note && <T x={0} y={180} s={24} c="#FFF8E1" w={800}>{a.note}</T>}
+    {lenses.length > 0 && <g transform={`translate(0 ${a.lensY ?? -R - 270})`}>
+      {lenses.map((l, k) => { const n = lenses.length, lx = (k - (n - 1) / 2) * 300, u = l.at === undefined ? 1 : E.outBack(clamp((t - l.at) / 0.5));
+        return u > 0 && <g key={'ln' + k} transform={`translate(${lx} 0) scale(${u}) rotate(${1.5 * Math.sin(t * 1.4 + k)})`}>
+          <rect x={-135} y={-52} width={270} height={98} rx={18} fill="#120A2A" stroke={['#3DF5FF', '#7DFF8A', '#FF9F1C'][k % 3]} strokeWidth={5} />
+          <T x={0} y={-18} s={19} c="#C9B8F0" w={800}>{l.label}</T>
+          <T x={0} y={28} s={36} c={['#3DF5FF', '#7DFF8A', '#FF9F1C'][k % 3]}>{l.value}</T></g>; })}</g>}
     {inputs.length > 0 && <g transform={`translate(${a.placardX ?? 560} ${a.placardY ?? -220}) rotate(${2 * Math.sin(t * 1.1)})`}>
       <path d="M 0 -60 L 0 -20" stroke={OL} strokeWidth={4} />
       <rect x={-200} y={-20} width={400} height={inputs.length * 40 + 60} rx={14} fill="#FFF8E1" stroke={OL} strokeWidth={5} />
@@ -4160,11 +4170,11 @@ const editionstamp: ItemFn = (a, {t}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, 160), at = a.at ?? 0;
   if (t < at || (a.until !== undefined && t > a.until + 0.4)) return null;
   const u = clamp((t - at) / 0.35), sc = (a.scale ?? 1) * (u < 1 ? lerp(2.4, 1, E.in(u)) : 1 + 0.04 * Math.exp(-(t - at - 0.35) * 8) * Math.sin((t - at) * 40));
-  const txt: string = a.text || 'DATA AS OF', sub: string | undefined = a.sub, c = a.color || '#E53935';
+  const txt: string = a.text || 'DATA AS OF', sub: string | undefined = a.sub, c = a.color || '#FF6B81';
   const w = Math.max(txt.length * 21, (sub || '').length * 16) + 80, h = sub ? 112 : 76, o = a.until !== undefined ? 1 - win(t, a.until, 0.4) : 1;
   return <g key={'es' + i} opacity={o * (u < 1 ? 0.6 + 0.4 * u : 0.92)} transform={`translate(${x} ${y}) rotate(${a.rot ?? -6}) scale(${sc})`}>
     {u >= 1 && [0, 1, 2, 3, 4].map((k) => <circle key={k} cx={(rnd(k + i) - 0.5) * w} cy={(rnd(k + 9) - 0.5) * h * 1.4} r={4 + 6 * rnd(k + 3)} fill={c} opacity={0.35} />)}
-    <rect x={-w / 2} y={-h / 2} width={w} height={h} rx={10} fill="none" stroke={c} strokeWidth={7} />
+    <rect x={-w / 2} y={-h / 2} width={w} height={h} rx={10} fill="#120A2A" fillOpacity={0.78} stroke={c} strokeWidth={7} />
     <rect x={-w / 2 + 10} y={-h / 2 + 10} width={w - 20} height={h - 20} rx={6} fill="none" stroke={c} strokeWidth={3} />
     <T x={0} y={sub ? -8 : 12} s={34} c={c}>{txt}</T>
     {sub && <T x={0} y={34} s={26} c={c} w={800}>{sub}</T>}

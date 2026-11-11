@@ -1,0 +1,123 @@
+# Sources and claims for "Before You Buy Apple Stock, Watch This (Nov 2026)" (series Before You Buy, Apple, 2026-11 edition).
+# Facts read 2026-11-11 (notes: docs/series/research/apple_2026-11.md). DATA AS OF the 2026-11-10 close.
+# QUARTERLY REFRESH: update text/spoken/display/fields below from the new 10-Q/10-K and the new close; the script reads
+# every number through {{placeholders}}. Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: December-quarter call guidance is NOT used (secondary source only); tariff refunds always mentioned with the
+# FY2026 margin; Google licensing never given a dollar figure; the EU DMA 10% is a legal MAXIMUM; ratios and the reverse
+# calculation are OUR calculations (illustration, inputs on screen); never fair value, cheap/expensive, buy/sell.
+sources:
+  - id: tenk
+    title: "Apple Inc. Form 10-K for fiscal 2026 (year ended September 26, 2026)"
+    publisher: Apple Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm
+    published: "2026-11-03"
+    accessed: "2026-11-11"
+    credit: "Apple 10-K (SEC)"
+  - id: q4
+    title: "Apple Q4 FY2026 results, Form 8-K Exhibit 99.1 (Nov 2, 2026); Forms 10-Q Q1-Q3 FY2026"
+    publisher: Apple Inc. (SEC filings)
+    url: https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/a8-kex991q4202609262026.htm
+    published: "2026-11-02"
+    accessed: "2026-11-11"
+    credit: "Apple results (SEC)"
+  - id: px
+    title: "AAPL closing price, Nov 10, 2026 (data vendor); share count from the 10-K cover (Oct 23, 2026)"
+    publisher: Yahoo Finance; Apple Inc.
+    url: https://finance.yahoo.com/quote/AAPL/history/
+    published: "2026-11-10"
+    accessed: "2026-11-11"
+    credit: "Yahoo Finance price · our calculation"
+
+claims:
+  - id: cap
+    text: "Close Nov 10, 2026: $348.51 (Yahoo Finance). 10-K cover: '14,532,182,000 shares of common stock were issued and outstanding as of October 23, 2026.' OUR calculation: market value ≈ $5,064.6bn (≈ $5.06tn). Net cash ≈ $56.8bn (cash and marketable securities $136.9bn minus debt $80.1bn, our calc.), so enterprise value ≈ $5.01tn: net cash is about 1% of the price, so market cap is used."
+    spoken: about five point oh six trillion dollars
+    display: "≈ $5.06tn market value (close Nov 10, 2026 × 14.53bn shares; our calc.)"
+    fields: {price_spoken: three hundred and forty-eight dollars and fifty-one cents, shares_spoken: about fourteen and a half billion, date_spoken: "November tenth, twenty twenty-six", netcash_spoken: about fifty-seven billion dollars}
+    source_ids: [px, tenk]
+    status: source_located
+    verification_note: Our calculation; date on screen.
+
+  - id: lenses
+    text: "OUR calculations: trailing P/E 38.3x ($5,064.6bn / FY2026 net income $132.175bn); FCF $136.056bn = operating cash flow $145.097bn minus capex $9.041bn (10-K cash-flow statement), FCF yield 2.7%; operating cash flow yield 2.9%; capex is about 6% of operating cash flow (steady), so FCF is the gauge base."
+    spoken: about thirty-eight times
+    display: "P/E 38.3x · FCF yield 2.7% · OCF yield 2.9% (our calc., FY2026)"
+    fields: {ni_spoken: one hundred and thirty-two billion dollars, fcf_spoken: one hundred and thirty-six billion dollars, fcfy_spoken: about two point seven percent, ocfy_spoken: about two point nine percent, ocf_spoken: one hundred and forty-five billion dollars, capex_spoken: about nine billion dollars, capexshare_spoken: about six percent}
+    source_ids: [tenk, px]
+    status: source_located
+    verification_note: Our calculation.
+
+  - id: rdcf
+    text: "OUR illustration (not a valuation): market cap $5,064.6bn = sum of 10 years of FCF growing at g from FY2026 FCF $136.056bn, plus a terminal value at 3% growth, discounted at r. Solved: r = 8% gives g ≈ 10.5% a year (year-10 FCF ≈ $369bn); r = 10% gives g ≈ 15.5% (≈ $576bn). With zero growth the same model gives ≈ $2.21tn (8%) or ≈ $1.61tn (10%). Net cash ignored for simplicity."
+    spoken: about ten and a half percent a year
+    display: "Implied FCF growth ≈ 10.5%-15.5% a year for 10 years (our illustration)"
+    fields: {high_spoken: about fifteen and a half percent, z8_spoken: about two point two trillion dollars, z10_spoken: about one point six trillion dollars, y10_spoken: about three hundred and seventy billion dollars}
+    source_ids: [tenk, px]
+    status: source_located
+    verification_note: Our illustration; assumptions on screen (8% and 10% discount rates, 3% terminal growth, 10 years).
+
+  - id: rev
+    text: "10-K: net sales FY2024 $391,035M, FY2025 $416,161M, FY2026 $478,834M (+15%; FY2025 +6%). iPhone FY2026 $254,098M (+21%, 53.1% of sales, our calc.); Mac $37,929M; iPad $27,929M; Wearables, Home and Accessories $35,577M; Services $123,301M (+13%, 25.8%)."
+    spoken: about four hundred and seventy-nine billion dollars
+    display: "FY2026 net sales $478.8bn (+15%) (10-K)"
+    fields: {growth_spoken: fifteen percent, prior_spoken: six percent, iphone_spoken: about two hundred and fifty-four billion dollars, iphone_share_spoken: fifty-three percent, iphone_growth_spoken: twenty-one percent, services_spoken: about one hundred and twenty-three billion dollars, services_share_spoken: about a quarter}
+    source_ids: [tenk]
+    status: source_located
+
+  - id: services
+    text: "10-K FY2026 gross margin: Products 39.3%, Services 76.2%, total 48.8%. Services gross profit $93,943M = 40.2% of total gross profit from 25.8% of revenue (our calc.). 10-K: Services growth 'primarily due to higher net sales from advertising and cloud services'. Services growth y/y by quarter (our calc. from 10-Qs): +14%, +16%, +12%, +9.8% (Q4 FY2026)."
+    spoken: seventy-six percent
+    display: "Services: 26% of sales, 40% of gross profit, 76% margin (10-K; our calc.)"
+    fields: {gp_share_spoken: forty percent, products_spoken: thirty-nine percent, q4_spoken: nine point eight percent}
+    source_ids: [tenk, q4]
+    status: source_located
+
+  - id: margin
+    text: "Q4 release: 'Company gross margin was 47.9 percent, including a favorable impact of approximately 1 percentage point from tariff refunds.' 10-K: FY2026 products margin rose 'primarily due to product mix and tariff refunds, partially offset by higher costs, including memory'; 'gross margins will be subject to volatility and downward pressure'; supply constraints and rising costs for memory and storage, 'The Company expects these trends to intensify'."
+    spoken: forty-seven point nine percent
+    display: "Q4 gross margin 47.9%, incl. ≈ 1 pt from tariff refunds (Apple)"
+    fields: {fy_spoken: forty-eight point eight percent}
+    source_ids: [q4, tenk]
+    status: source_located
+
+  - id: geo
+    text: "10-K segments FY2026: Americas $198,083M; Europe (incl. India, Middle East, Africa) $127,604M; Greater China $82,378M (+28%; FY2025 -4%); Japan $30,908M; Rest of Asia Pacific $39,861M. 'net sales through its indirect distribution channels accounted for approximately 60% of total net sales.' Hardware made by outsourcing partners 'located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam'."
+    spoken: about eighty-two billion dollars
+    display: "Greater China $82.4bn, +28% in FY2026 (10-K)"
+    fields: {china_growth_spoken: twenty-eight percent, china_prior_spoken: four percent, indirect_spoken: about sixty percent}
+    source_ids: [tenk]
+    status: source_located
+
+  - id: cash
+    text: "10-K FY2026: operating cash flow $145,097M; capex $9,041M; FCF $136,056M (our calc.); 'repurchased $85.8 billion' of shares; dividends $15,721M; capital returned ≈ $102bn = 75% of FCF (our calc.). Shares outstanding 15,634M (Jul 2023) to 14,532M (Oct 2026): about 7% fewer (our calc.). R&D +32% to $45.8bn 'primarily due to higher infrastructure-related costs, including investments in artificial intelligence'; Apple 'relies on third-party cloud service providers'."
+    spoken: eighty-five point eight billion dollars
+    display: "FY2026: buybacks $85.8bn + dividends $15.7bn ≈ 75% of FCF (10-K; our calc.)"
+    fields: {div_spoken: about sixteen billion dollars, share_spoken: seventy-five percent, fewer_spoken: about seven percent, rd_spoken: forty-six billion dollars, rd_growth_spoken: thirty-two percent}
+    source_ids: [tenk]
+    status: source_located
+
+  - id: risks
+    text: "10-K risk factors: Google licensing: a reversal on appeal 'could result in the imposition of certain remedies initially proposed by the DOJ, such as those prohibiting Google from offering the Company commercial terms for search distribution', which 'could materially adversely affect' that revenue (no amount disclosed). U.S. App Store: court-ordered injunction on link-out commissions; Supreme Court granted review on June 30, 2026. EU DMA: a 2025 fine under appeal; in the open investigation the Commission 'may impose fines up to 10% of the Company's annual worldwide net sales' (a legal maximum; ≈ $47.9bn on FY2026 sales, our calc.). DOJ antitrust suit filed March 2024. Tariffs: 'can have a material adverse impact'; refunds may not repeat. AI: 'Failure to successfully develop, deploy or differentiate artificial intelligence capabilities ... could result in loss of market share'."
+    spoken: up to ten percent of worldwide sales
+    display: "10-K risk factors (Apple)"
+    fields: {dma_spoken: about forty-eight billion dollars}
+    source_ids: [tenk]
+    status: source_located
+    verification_note: Google payments never quantified; DMA 10% is a ceiling, not an estimate.
+
+  - id: upside
+    text: "10-K: cloud services 'will provide expanded access to Apple Intelligence and Siri AI features' (no pricing announced; unsized). Q4 release (CFO): 'our installed base of active devices reached a new all-time high across all major product categories and geographic segments' (no number). 10-K: Services growth led by advertising and cloud services."
+    spoken: a new all-time high
+    display: "Installed base at an all-time high (Apple, no number given)"
+    fields: {}
+    source_ids: [tenk, q4]
+    status: source_located
+    verification_note: Upside is company-stated and unsized; never put a dollar figure on it.
+
+  - id: watch
+    text: "Scorecard for the next report (Q1 FY2027, date not announced; last year Jan 29, 2026, so late January 2027 is our estimate): December-quarter revenue vs $143,756M a year earlier; gross margin vs 47.9% in Q4 FY2026 (incl. tariff refunds); Services growth vs +9.8% in Q4 FY2026 (Q1 FY2026 base $30,013M)."
+    spoken: one hundred and forty-four billion dollars
+    display: "Next report: late January 2027 (our estimate)"
+    fields: {next_spoken: late January twenty twenty-seven}
+    source_ids: [q4, tenk]
+    status: source_located

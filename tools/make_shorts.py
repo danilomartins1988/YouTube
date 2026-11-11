@@ -78,6 +78,7 @@ SHORTS = {
     "48-alaska-dividend": ("alaska-the-state-that-pays-you-to-live-there", "documentary", "alaska_documentary", "$1,200 EACH", "JUST FOR LIVING HERE", "Alaska Pays Every Resident $1,200 Just for Living There", "#alaska #ubi #economy"),
     "49-college-sports": ("college-sports-just-got-a-20-million-payroll", "documentary", "college_documentary", "$20.5 MILLION", "COLLEGE PAYROLL", "College Sports Just Got a $20.5 Million Payroll", "#collegesports #ncaa #money"),
     "51-spacex": ("how-spacex-actually-makes-money", "documentary", "spacex_documentary", "$1.25 BILLION", "A MONTH, FOR CHIPS", "An AI Company Agreed to Pay SpaceX $1.25 Billion a Month", "#spacex #starlink #ai"),
+    "byb-apple-2026-11": ("before-you-buy-apple-2026-11", "documentary", "bybapple_documentary", "APPLE: $5 TRILLION", "38× LAST YEAR'S PROFIT", "Apple Is Worth $5 Trillion. Here's What That Price Assumes", "#apple #stocks #investing"),
     "52-nvidia-probe": ("why-nvidia-lost-428-billion-in-two-days", "documentary", "nvidiaprobe_documentary", "-$428 BILLION", "IN TWO DAYS", "Nvidia Lost About $428 Billion in Two Days", "#nvidia #stocks #ai"),
     "50-mf-global": ("mf-global-the-billion-dollars-that-vanished", "documentary", "mfglobal_documentary", "$1.6 BILLION", "VANISHED", "MF Global: $1.6 Billion of Customer Money Vanished", "#finance #wallstreet #farmers"),
     "42-penny": ("why-america-stopped-making-the-penny", "documentary", "penny_documentary", "3.69 CENTS", "TO MAKE 1 CENT", "It Cost 3.69 Cents to Make One Penny", "#penny #money #usa"),

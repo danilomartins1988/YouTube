@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: "Before You Buy Apple Stock, Watch This (Nov 2026)"
+docs_dir: docs/episodes/byb-apple-2026-11
+video: output/bybapple_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: What is a five-trillion-dollar price betting on?
+  surprising_fact: Apple trades at about 38 times last year's profit (our calc., Nov 10, 2026 close)
+  subject: a generic smartphone
+  tone: spectacle
+  metaphor: the price tag is a rocket
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 'APPLE: 38×'
+  - PROFIT
+  claim_basis: 'lenses: trailing P/E 38.3x = $5,064.6bn / FY2026 net income $132.2bn (our calc., Nov 10, 2026 close)'
+  scene:
+    palette: {sky0: '#14082E', sky1: '#3A1A6E', haze: '#3DF5FF', key: '#E0F7FA', accent: '#FFE14D', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: coin, x: 1500, y: 600, s: 0.75}
+    support: []
+    particles: {n: 70, region: [0, 0, 1920, 1080], size: 3, color: '#FFFFFF'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'APPLE: $5T'
+  - PRICED IN?
+  claim_basis: 'cap: ≈ $5.06tn market value (our calc., Nov 10, 2026 close)'
+  scene:
+    palette: {sky0: '#0A0614', sky1: '#2A1440', haze: '#FF9F1C', key: '#FFF3E0', accent: '#7DFF8A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: coin, x: 480, y: 660, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
+    vignette: 0.5
+    brand: none
