@@ -817,3 +817,22 @@ Watch the full story: "Why the Post Office Keeps Losing Billions" on The Hidden 
 ```
 USPS, Post Office, postal service, mail, stamps, government finance, GAO, shorts, economics explained, The Hidden Economics
 ```
+
+## 48-alaska-dividend
+
+**Title**
+```
+Alaska Pays Every Resident $1,200 Just for Living There #shorts
+```
+**Description**
+```
+Twelve hundred dollars. That is what Alaska paid almost every resident in 2026, just for living there. By the formula in its own law, the check would have been about $3,650.
+
+Watch the full story: "Alaska: The State That Pays You to Live There" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #alaska #ubi #economics
+```
+**Tags**
+```
+Alaska, Permanent Fund Dividend, PFD, universal basic income, oil money, state budget, shorts, economics explained, The Hidden Economics
+```

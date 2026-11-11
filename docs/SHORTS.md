@@ -47,3 +47,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 46-overdrafts | A $35 Fee for a $24 Purchase: How Overdrafts Still Pay | $35 FEE / FOR A $24 BUY | 55 s | `docs/episodes/46-overdrafts/youtube-short/short_package.md` |
 | 44-iv-bags | One Flooded Factory Ran America Short of IV Fluids | 60% OF IV FLUIDS / ONE FACTORY | 51 s | `docs/episodes/44-iv-bags/youtube-short/short_package.md` |
 | 47-post-office | The Post Office Has Lost $118 Billion Since 2006 | $118 BILLION / LOST SINCE 2006 | 59 s | `docs/episodes/47-post-office/youtube-short/short_package.md` |
+| 48-alaska-dividend | Alaska Pays Every Resident $1,200 Just for Living There | $1,200 EACH / JUST FOR LIVING HERE | 54 s | `docs/episodes/48-alaska-dividend/youtube-short/short_package.md` |

@@ -23,7 +23,7 @@ Watch the full story: "Alaska: The State That Pays You to Live There" on The Hid
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+Alaska, Permanent Fund Dividend, PFD, universal basic income, oil money, sovereign wealth fund, state budget, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

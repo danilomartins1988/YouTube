@@ -82,6 +82,6 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 | N5 | How Prediction Markets Make Money Off Your Hunches | **In production** (Ep 45, `docs/episodes/45-prediction-markets`) |
 | N6 | Why Banks Still Make Billions From Overdrafts | **Delivered** (Ep 46, `docs/episodes/46-overdrafts`) |
 | N7 | Why the Post Office Keeps Losing Billions (retitled: FY2026 loss $6.5bn) | **Delivered** (Ep 47, `docs/episodes/47-post-office`) |
-| N8 | Alaska: The State That Pays You to Live There | **In production** (Ep 48, `docs/episodes/48-alaska-dividend`) |
+| N8 | Alaska: The State That Pays You to Live There | **Delivered** (Ep 48, `docs/episodes/48-alaska-dividend`) |
 | N9 | College Sports Just Got a $20.5 Million Payroll | **In production** (Ep 49, `docs/episodes/49-college-sports`) |
 | N10 | MF Global: The $1.6 Billion That Vanished | **In production** (Ep 50, `docs/episodes/50-mf-global`) |
