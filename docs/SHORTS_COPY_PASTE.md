@@ -931,3 +931,22 @@ Watch the full story: "College Sports Just Got a $20.5 Million Payroll" on The H
 ```
 college sports, NCAA, House settlement, revenue sharing, NIL, college football, Title IX, athletes, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 51-spacex
+
+**Title**
+```
+An AI Company Agreed to Pay SpaceX $1.25 Billion a Month #shorts
+```
+**Description**
+```
+A rent of one point two five billion dollars a month. That is what one artificial intelligence company agreed to pay SpaceX, until May twenty twenty-nine, according to the prospectus SpaceX filed when it went public.
+
+Watch the full story: "How SpaceX Actually Makes Money" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #spacex #starlink #ai #economics
+```
+**Tags**
+```
+SpaceX, Starlink, xAI, rockets, satellites, AI data centers, IPO, Elon Musk, space economy, economics, shorts, economics explained, The Hidden Economics
+```

@@ -23,7 +23,7 @@ Watch the full story: "How SpaceX Actually Makes Money" on The Hidden Economics.
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+SpaceX, Starlink, xAI, rockets, satellites, AI data centers, IPO, Elon Musk, space economy, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

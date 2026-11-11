@@ -26,17 +26,17 @@
         "palette": {
           "sky0": "#050A1C",
           "sky1": "#16244A",
-          "haze": "#7DF9FF",
+          "haze": "#4FC3F7",
           "key": "#E0F7FA",
-          "accent": "#FF7A1A",
+          "accent": "#FFD54F",
           "ink": "#FFFFFF"
         },
         "backdrop": "void",
         "subject": {
           "kind": "rocket",
-          "x": 1480,
+          "x": 1560,
           "y": 600,
-          "s": 0.8
+          "s": 0.75
         },
         "support": [],
         "particles": {
@@ -61,7 +61,7 @@
           "size": 307.3,
           "width": 1180,
           "anchor": "start",
-          "color": "#FF7A1A"
+          "color": "#FFD54F"
         },
         {
           "text": "NOT ROCKETS",
@@ -125,26 +125,26 @@
           },
           {
             "check": "text contrast >= 3:1 against its background",
-            "pass": false,
-            "detail": "worst 2.0:1 (dark outline adds more)",
+            "pass": true,
+            "detail": "worst 5.1:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.090",
+            "detail": "0.084",
             "critical": false
           },
           {
             "check": "dominant subject has strong internal contrast",
             "pass": true,
-            "detail": "luma std 43",
+            "detail": "luma std 49",
             "critical": false
           },
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest how-one-company-made-diamonds-a-symbol-of-love (distance 0.49)",
+            "detail": "nearest the-stamp-that-could-break-asmls-monopoly (distance 0.40)",
             "critical": false
           },
           {
@@ -154,8 +154,8 @@
             "critical": true
           }
         ],
-        "critical_fail": true,
-        "design_score": 0.55,
+        "critical_fail": false,
+        "design_score": 0.678,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -163,7 +163,7 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "how-one-company-made-diamonds-a-symbol-of-love"
+        "nearest": "the-stamp-that-could-break-asmls-monopoly"
       }
     },
     {
@@ -326,9 +326,9 @@
       }
     }
   ],
-  "default": null,
+  "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-11T12:21:22Z",
-  "master": null
+  "generated": "2026-11-11T12:29:01Z",
+  "master": "output/how-spacex-actually-makes-money/thumbnails/master_A.png"
 }

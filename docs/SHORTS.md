@@ -53,3 +53,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 41-tariff-refund | Who Gets the $166 Billion Tariff Refund? Not Shoppers | $166 BILLION / REFUND: NOT YOU | 56 s | `docs/episodes/41-tariff-refund/youtube-short/short_package.md` |
 | 45-prediction-markets | Prediction Markets Traded $25 Billion in One Month | $25 BILLION / IN ONE MONTH | 50 s | `docs/episodes/45-prediction-markets/youtube-short/short_package.md` |
 | 49-college-sports | College Sports Just Got a $20.5 Million Payroll | $20.5 MILLION / COLLEGE PAYROLL | 54 s | `docs/episodes/49-college-sports/youtube-short/short_package.md` |
+| 51-spacex | An AI Company Agreed to Pay SpaceX $1.25 Billion a Month | $1.25 BILLION / A MONTH, FOR CHIPS | 53 s | `docs/episodes/51-spacex/youtube-short/short_package.md` |
