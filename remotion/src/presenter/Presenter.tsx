@@ -40,7 +40,8 @@ const ik = (s: Pt, t: Pt, bendSign = 1): {e: Pt; h: Pt} => {
   // cartoon stretch: a far target lengthens both bones (up to 1.5x) so the hand stays ON the drawing path
   const k = clamp(raw / (L1 + L2 - 2), 1, MAX_STRETCH);
   const l1 = L1 * k, l2 = L2 * k;
-  const d = clamp(raw, 20, l1 + l2 - 2);
+  // v3: the hand never reaches full extension, so the elbow always shows a visible bend
+  const d = clamp(raw, 20, (l1 + l2) * 0.9);
   const a = Math.atan2(dy, dx);
   const cosB = clamp((l1 * l1 + d * d - l2 * l2) / (2 * l1 * d), -1, 1);
   const b = Math.acos(cosB) * bendSign;
@@ -100,7 +101,7 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
   const front = drawHand || pointHand;
   let frontTarget: Pt = front ? toLocal(front) : [70 + Math.sin(walk) * 30 * moving, -170];
   if (pose.finger && pointHand) {                       // finger point: aim, but keep the elbow bent (no rubber arm)
-    const v = [frontTarget[0] - 58, frontTarget[1] + 428], n = Math.hypot(v[0], v[1]) || 1, r = Math.min(n, (L1 + L2) * 0.88);
+    const v = [frontTarget[0] - 58, frontTarget[1] + 428], n = Math.hypot(v[0], v[1]) || 1, r = Math.min(n, (L1 + L2) * 0.8);
     frontTarget = [58 + (v[0] / n) * r, -428 + (v[1] / n) * r];
   }
   if (drawHand) {                                       // marker tip (not the hand) touches the path
@@ -139,7 +140,7 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
   /** a pointing hand: closed fist, index finger extended along `an`, thumb tucked on top */
   function pointer3(c: Pt, an: number, skin: string) {
     const deg = (an * 180) / Math.PI;
-    return <g transform={`translate(${c[0]} ${c[1]}) rotate(${deg})`}>
+    return <g transform={`translate(${c[0]} ${c[1]}) rotate(${deg}) scale(1.15)`}>
       <rect x={-2 * S} y={-11 * S} width={24 * S} height={22 * S} rx={10 * S} fill={skin} />
       <rect x={14 * S} y={-10 * S} width={30 * S} height={8.5 * S} rx={4.25 * S} fill={skin} />
       <path d={`M ${2 * S} ${4 * S} L ${18 * S} ${4 * S} M ${3 * S} ${8.5 * S} L ${17 * S} ${8.5 * S}`} stroke={BRAND.skinShade} strokeWidth={1.8 * S} strokeLinecap="round" />
@@ -150,7 +151,7 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
   /** a simple cartoon hand (palm + thumb) oriented along angle `an` (world radians) */
   function hand3(c: Pt, an: number, skin: string, grip: boolean) {
     const deg = (an * 180) / Math.PI;
-    return <g transform={`translate(${c[0]} ${c[1]}) rotate(${deg})`}>
+    return <g transform={`translate(${c[0]} ${c[1]}) rotate(${deg}) scale(1.22)`}>
       <ellipse cx={6 * S} cy={0} rx={15 * S} ry={grip ? 11 * S : 10 * S} fill={skin} />
       <ellipse cx={4 * S} cy={(grip ? -10 : -9) * S} rx={7 * S} ry={4.5 * S} transform={`rotate(-25 ${4 * S} ${-10 * S})`} fill={skin} />
       {grip && <path d={`M ${2 * S} ${6 * S} L ${16 * S} ${6 * S}`} stroke={BRAND.skinShade} strokeWidth={2 * S} strokeLinecap="round" />}

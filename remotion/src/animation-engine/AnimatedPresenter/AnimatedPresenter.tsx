@@ -63,7 +63,7 @@ export const parkAmount = (tl: DrawTimeline, t: number): number => {
 
 const bodyX = (t: number, acts: PresenterAction[], startX: number, reach: number, park?: number): number => {
   let cur = startX;
-  const slack = reach * 0.55;
+  const slack = reach * 0.3;   // v3 (2026-11-11): stay close so the elbow bends (no straight 'plank' arm)
   for (const a of acts) {
     if (a.kind === 'enter' || a.kind === 'walk' || a.kind === 'exit') {
       const from = a.from ?? cur;
@@ -89,7 +89,7 @@ const bodyX = (t: number, acts: PresenterAction[], startX: number, reach: number
       } else cur = follow(e);
     } else if (a.kind === 'point' || a.kind === 'write') {
       const tx = a.kind === 'point' ? a.target[0] : a.x;
-      const far = park !== undefined ? reach * 5.8 : reach * 1.7;      // with a telescopic pointer he can point from aside
+      const far = park !== undefined ? reach * 5.8 : reach * 1.6;      // from aside he points with the index finger (no stick)
       const need = Math.abs(tx - cur) > far ? tx - Math.sign(tx - cur) * reach * 1.2 : cur;
       if (t < a.at - 0.45) return cur;
       if (t < a.at) return lerp(cur, need, E.inOut(win(t, a.at - 0.45, 0.45)));
@@ -101,7 +101,7 @@ const bodyX = (t: number, acts: PresenterAction[], startX: number, reach: number
 
 export const presenterPose = (p: AnimatedPresenterProps): Pose & {handTarget: Vec | null} => {
   const {t, floor, scale: S = 0.9, faceDefault = 1, talk = []} = p;
-  const reach = p.reach ?? 230 * S;
+  const reach = p.reach ?? 160 * S;
   const acts = [...p.actions].sort((a, b) => startOf(a) - startOf(b));
   const enter = acts.find((a) => a.kind === 'enter') as any;
   const startX = p.startX ?? enter?.from ?? 300;
@@ -155,7 +155,8 @@ export const presenterPose = (p: AnimatedPresenterProps): Pose & {handTarget: Ve
   const dm = p.demeanor === 'serious' ? {smile: 0, hop: 0.15, surprise: 0.35} : p.demeanor === 'neutral' ? {smile: 0.4, hop: 0.5, surprise: 0.7} : {smile: 1, hop: 1, surprise: 1};
   smile *= dm.smile; hop *= dm.hop; surprise *= dm.surprise;
   return {x, floor, facing, walk: x / (58 * S), moving, hop: hop + breathe, drawHand, pointHand, backHand, talking, blink,
-    surprise, scale: S, holdingMarker: holding, lean, smile, handTarget: drawHand || pointHand};
+    surprise, scale: S, holdingMarker: holding, lean, smile, handTarget: drawHand || pointHand,
+    finger: !!pointHand && !drawHand};   // v3: pointing is always an index-finger gesture, never a telescopic stick
 };
 
 /** Renders the character for time t. Place it inside an <svg> in the same coordinate space as the board. */
