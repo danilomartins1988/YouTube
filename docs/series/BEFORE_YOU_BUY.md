@@ -30,6 +30,16 @@ could add even more value.
 7. The scorecard: the 3 numbers to watch next quarter that confirm or break the priced-in story.
 
 ## Method rules for "priced in"
+- Owner question 2026-11-11: free cash flow alone misleads during an investment boom (Alphabet 178x, Amazon negative).
+  Every episode therefore shows the SAME three lenses, then picks the most meaningful base for the implied-growth gauge:
+  1. P/E on trailing net income (strip one-off gains when disclosed, e.g. Alphabet equity gains);
+  2. FCF yield (FCF / market cap) — what owners actually get today;
+  3. Cash before growth spending: operating cash flow yield, plus "what the capex must earn": the annual return the
+     trailing capex needs to generate for the price to make sense (our calculation).
+  Use enterprise value (market cap + debt - cash) when net cash or debt is material.
+  Base for the gauge: FCF when capex is steady (Apple); operating cash flow minus depreciation as a proxy for
+  maintenance-adjusted cash when capex is booming (Microsoft, Alphabet, Amazon, Meta), clearly labelled as a proxy;
+  revenue/scenario framing when profit is tiny (Tesla).
 - Our calculation, labelled every time; inputs and date on screen; a range (two discount rates), not one number.
 - Never "fair value", "cheap", "expensive", "buy" or "sell". The episode says what the price assumes, not whether
   the assumption is right.

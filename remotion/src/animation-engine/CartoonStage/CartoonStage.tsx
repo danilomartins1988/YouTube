@@ -910,6 +910,76 @@ const SETS: Record<string, SetFn> = {
   /** Retro-future neon CHIP CITY (original design): towers shaped like computer chips (pin "legs" on the sides, a glowing
    *  die window, antennas), glass transit tubes with capsules zipping through, bubble-canopy flying cars, joke neon signs.
    *  `dimAt`: the neon flickers and dims (mood drop). `signs`: override the joke signs. */
+  /** BEFORE YOU BUY series: the MONEY MACHINE (original design). A retro-futurist factory hall with a big chrome
+   *  machine; one labelled intake pipe per revenue segment (`segments` [{label, value, color, at?}]; pipe thickness ∝
+   *  value), glowing blobs flowing in, pistons pumping, gauges wobbling, coins tumbling out of the output chute into a
+   *  bin labelled `out`. Joke signs on the back wall (`signs`). `night`: darker hall. `boomAt`: the machine shudders. */
+  moneymachine: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, night = !!z.night;
+    const segs: {label: string; value: number; color?: string; at?: number}[] = zz.segments || [{label: 'REVENUE', value: 1}];
+    const total = segs.reduce((s, q) => s + Math.max(0, q.value), 0) || 1;
+    const mx = z.x0 + w * (zz.machineAt ?? 0.55), my = f - 330;
+    const shud = zz.boomAt !== undefined && t > zz.boomAt && t < zz.boomAt + 1.2 ? 6 * Math.sin(t * 60) * (1 - (t - zz.boomAt) / 1.2) : 0;
+    const signs: string[] = zz.signs || ['PROFIT DEPT · 3RD FLOOR', 'NO FREE LUNCH (ASK)', 'MIND THE MARGIN', 'QUARTERLY HUMS ONLY'];
+    const pal = ['#FF4FD8', '#3DF5FF', '#FFE14D', '#7DFF8A', '#FF9F1C', '#7B61FF'];
+    const pump = (k: number) => Math.sin(t * 4.2 + k * 1.7);
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#140A2E' : '#2B1860'} />
+      {Array.from({length: Math.ceil(w / 240)}, (_, k) => <g key={'pn' + k}>
+        <rect x={z.x0 + k * 240} y={f - 1100} width={236} height={1040} fill={night ? '#1C1140' : '#3A2378'} stroke="#24154F" strokeWidth={4} />
+        {[0, 1, 2, 3, 4, 5].map((r) => <circle key={r} cx={z.x0 + k * 240 + 14} cy={f - 1080 + r * 190} r={5} fill="#7E6BC4" />)}</g>)}
+      {signs.slice(0, Math.max(1, Math.floor(w / 700))).map((s, k) => { const sx = z.x0 + w * ((k + 0.5) / Math.max(1, Math.floor(w / 700))), on = Math.sin(t * (1.3 + k) + k) > -0.85;
+        return <g key={'ms' + k} transform={`translate(${sx} ${f - 940}) rotate(${-3 + 2 * Math.sin(t * 0.9 + k)})`}>
+          <rect x={-190} y={-34} width={380} height={64} rx={32} fill="#120A2A" stroke={pal[k % pal.length]} strokeWidth={5} opacity={on ? 1 : 0.5} />
+          <T x={0} y={10} s={24} c={pal[k % pal.length]} o={on ? 1 : 0.4}>{s}</T></g>; })}
+      {/* intake pipes from the left wall into the machine */}
+      {segs.map((q, k) => { const th = 26 + 120 * (Math.max(0, q.value) / total), py = my - 170 + k * (360 / Math.max(1, segs.length - 1 || 1)) * (segs.length > 1 ? 1 : 0),
+          c = q.color || pal[k % pal.length], on = q.at === undefined || t >= q.at, x0 = z.x0 + 40, x1 = mx - 230;
+        const grow = q.at === undefined ? 1 : clamp((t - q.at) / 0.8), xe = lerp(x0, x1, E.out(grow));
+        return <g key={'pp' + k}>
+          <rect x={x0} y={py - th / 2} width={Math.max(0, xe - x0)} height={th} rx={th / 2} fill="#B0BEC5" stroke={OL} strokeWidth={6} />
+          <rect x={x0} y={py - th / 2 + 6} width={Math.max(0, xe - x0)} height={Math.max(4, th * 0.22)} rx={4} fill="#FFFFFF" opacity={0.35} />
+          {on && Array.from({length: 6}, (_, b) => { const u = ((t * 0.45 + b / 6 + k * 0.13) % 1), bx = lerp(x0 + 20, xe - 10, u);
+            return bx < xe - 8 && <ellipse key={b} cx={bx} cy={py} rx={Math.min(th * 0.42, 34)} ry={th * 0.3} fill={c} stroke={OL} strokeWidth={3} opacity={0.95} />; })}
+          {[0.25, 0.6].map((u) => <rect key={u} x={lerp(x0, x1, u) - 10} y={py - th / 2 - 8} width={20} height={th + 16} rx={6} fill="#78909C" stroke={OL} strokeWidth={4} opacity={grow > u ? 1 : 0} />)}
+          <g opacity={grow} transform={`translate(${x0 + 30} ${py - th / 2 - 30})`}>
+            <rect x={0} y={-30} width={Math.max(160, q.label.length * 17 + 30)} height={44} rx={10} fill="#FFF8E1" stroke={OL} strokeWidth={4} />
+            <T x={14} y={2} s={24} a="start">{q.label}</T></g>
+        </g>; })}
+      {/* the machine */}
+      <g transform={`translate(${mx + shud} ${my})`}>
+        <rect x={-240} y={-260} width={480} height={520} rx={60} fill="#CFD8DC" stroke={OL} strokeWidth={8} />
+        <rect x={-210} y={-232} width={70} height={464} rx={30} fill="#FFFFFF" opacity={0.35} />
+        <path d="M -200 -260 Q 0 -440 200 -260 Z" fill="#90A4AE" stroke={OL} strokeWidth={8} />
+        <circle cx={0} cy={-330} r={34} fill={Math.sin(t * 5) > 0 ? '#FF4F6B' : '#FFE14D'} stroke={OL} strokeWidth={6} />
+        {[-1, 1].map((d, k) => <g key={'pi' + k} transform={`translate(${d * 120} ${-260 - 40 - 28 * Math.max(0, pump(k))})`}>
+          <rect x={-22} y={-60} width={44} height={90} rx={8} fill="#78909C" stroke={OL} strokeWidth={5} />
+          <circle cx={0} cy={-66} r={14} fill="#B0BEC5" stroke={OL} strokeWidth={4} /></g>)}
+        {[-1, 0, 1].map((d) => { const ang = -60 + 50 * Math.sin(t * (1.6 + d) + d) + 20 * d;
+          return <g key={'gg' + d} transform={`translate(${d * 140} -120)`}>
+            <circle r={52} fill="#FFF8E1" stroke={OL} strokeWidth={6} />
+            {[-60, -30, 0, 30, 60].map((g) => <path key={g} d={`M ${Math.sin((g * Math.PI) / 180) * 38} ${-Math.cos((g * Math.PI) / 180) * 38} L ${Math.sin((g * Math.PI) / 180) * 46} ${-Math.cos((g * Math.PI) / 180) * 46}`} stroke={OL} strokeWidth={4} />)}
+            <path d={`M 0 0 L ${Math.sin((ang * Math.PI) / 180) * 40} ${-Math.cos((ang * Math.PI) / 180) * 40}`} stroke="#E53935" strokeWidth={6} strokeLinecap="round" />
+            <circle r={7} fill={OL} /></g>; })}
+        <rect x={-170} y={0} width={340} height={120} rx={18} fill="#14102E" stroke={OL} strokeWidth={6} />
+        {Array.from({length: 12}, (_, q) => { const on = Math.sin(t * (3 + (q % 4)) + q) > 0;
+          return <rect key={q} x={-150 + (q % 6) * 52} y={18 + Math.floor(q / 6) * 50} width={40} height={34} rx={6} fill={on ? pal[q % pal.length] : '#2A2350'} />; })}
+        <T x={0} y={215} s={40} c={OL}>{zz.name || 'THE MONEY MACHINE'}</T>
+        {/* output chute + coins */}
+        <path d="M 230 120 L 380 170 L 380 250 L 230 230 Z" fill="#90A4AE" stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+      </g>
+      {Array.from({length: 9}, (_, k) => { const u = ((t * 0.9 + k / 9) % 1), cx2 = mx + 390 + 40 * u + 20 * rnd(k), cy2 = my + 210 + u * u * 300;
+        return <g key={'mc' + k} transform={`translate(${cx2} ${cy2}) rotate(${t * 300 + k * 40})`} opacity={u < 0.92 ? 1 : 0}>
+          <ellipse rx={22} ry={22 * Math.abs(Math.cos(t * 6 + k))} fill="#FFC93C" stroke={OL} strokeWidth={4} /></g>; })}
+      <g transform={`translate(${mx + 440} ${f - 10})`}>
+        <path d="M -120 -150 L 120 -150 L 100 0 L -100 0 Z" fill="#FF9F1C" stroke={OL} strokeWidth={7} strokeLinejoin="round" />
+        <ellipse cx={0} cy={-150} rx={120} ry={20} fill="#FFC93C" stroke={OL} strokeWidth={6} />
+        <T x={0} y={-62} s={26} c={OL}>{zz.out || 'CASH'}</T></g>
+      <rect x={z.x0} y={f - 20} width={w} height={20} fill="#4A2F8A" stroke={OL} strokeWidth={5} />
+      <rect x={z.x0} y={f} width={w} height={600} fill="#1E1040" />
+      {Array.from({length: Math.ceil(w / 160)}, (_, k) => <path key={'hz' + k} d={`M ${z.x0 + k * 160} ${f + 40} l 80 0 l -30 40 l -80 0 Z`} fill="#FFE14D" opacity={0.25} />)}
+    </g>;
+  },
   chipcity: (t, z, f) => {
     const w = z.x1 - z.x0, zz = z as any, dim = zz.dimAt !== undefined ? clamp((t - zz.dimAt) / 1.6) : 0;
     const flick = dim > 0 && dim < 1 ? (Math.sin(t * 47) > 0 ? 1 : 0.35) : 1, glow = (1 - 0.65 * dim) * flick;
@@ -4007,9 +4077,126 @@ const freighter: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/* ------------------------------------------------------------------ BEFORE YOU BUY series kit (original designs) */
+/** PRICED-IN CALCULATOR: a retro-futurist contraption with a half-dial from 0 to `max` (% a year). Two needles swing in:
+ *  `low` {label, value, at} and `high` {label, value, at}; a shaded band marks the range between them. An inputs placard
+ *  (`inputs`: lines) hangs beside it, `title` on top, `note` under the dial (e.g. "OUR ILLUSTRATION"). Lights blink,
+ *  a crank turns while the needles move. */
+const pricedin: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 520), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const max = a.max ?? 25, R = 260, lo = a.low || {value: 0}, hi = a.high || {value: 0};
+  const ang = (v: number) => -90 + 180 * clamp(v / max);
+  const needle = (n: any, k: number) => { const u = n.at === undefined ? 1 : E.outBack(clamp((t - n.at) / 1.1)), v = lerp(0, n.value, u) + (u >= 1 ? 0.15 * Math.sin(t * 7 + k) : 0);
+    const r = (ang(v) * Math.PI) / 180;
+    return <g key={'nd' + k} opacity={n.at === undefined || t >= n.at ? 1 : 0}>
+      <path d={`M 0 0 L ${Math.sin(r) * (R - 40)} ${-Math.cos(r) * (R - 40)}`} stroke={k ? '#FF4F6B' : '#3DF5FF'} strokeWidth={12} strokeLinecap="round" />
+      <g transform={`translate(${Math.sin(r) * (R + 70)} ${-Math.cos(r) * (R + 70)})`}>
+        <rect x={-110} y={-36} width={220} height={66} rx={14} fill={k ? '#FF4F6B' : '#3DF5FF'} stroke={OL} strokeWidth={5} />
+        <T x={0} y={-6} s={22} c={OL}>{n.label || ''}</T><T x={0} y={22} s={26} c={OL}>{n.text || `≈ ${n.value}% / YR`}</T></g></g>; };
+  const band = (() => { const a0 = (ang(lo.value) * Math.PI) / 180, a1 = (ang(hi.value) * Math.PI) / 180, show = (hi.at === undefined || t >= hi.at + 0.6) ? 1 : 0;
+    return <path d={`M 0 0 L ${Math.sin(a0) * R} ${-Math.cos(a0) * R} A ${R} ${R} 0 0 1 ${Math.sin(a1) * R} ${-Math.cos(a1) * R} Z`} fill="#FFE14D" opacity={0.35 * show} />; })();
+  const moving = [lo, hi].some((n) => n.at !== undefined && t >= n.at && t < n.at + 1.2);
+  const inputs: string[] = a.inputs || [];
+  return <g key={'pin' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-360} y={-60} width={720} height={260} rx={40} fill="#7B61FF" stroke={OL} strokeWidth={8} />
+    <rect x={-330} y={-40} width={660} height={36} rx={14} fill="#FFFFFF" opacity={0.18} />
+    {[-1, 1].map((d) => <g key={'lt' + d}><circle cx={d * 300} cy={140} r={20} fill={Math.sin(t * 6 + d) > 0 ? '#7DFF8A' : '#2A4A30'} stroke={OL} strokeWidth={4} /></g>)}
+    <g transform="translate(0 40)">
+      <path d={`M ${-R - 30} 0 A ${R + 30} ${R + 30} 0 0 1 ${R + 30} 0 Z`} fill="#CFD8DC" stroke={OL} strokeWidth={8} />
+      <path d={`M ${-R} 0 A ${R} ${R} 0 0 1 ${R} 0 Z`} fill="#FFF8E1" stroke={OL} strokeWidth={5} />
+      {band}
+      {Array.from({length: 6}, (_, k) => { const v = (max / 5) * k, r = (ang(v) * Math.PI) / 180;
+        return <g key={'tk' + k}><path d={`M ${Math.sin(r) * (R - 26)} ${-Math.cos(r) * (R - 26)} L ${Math.sin(r) * R} ${-Math.cos(r) * R}`} stroke={OL} strokeWidth={5} />
+          <T x={Math.sin(r) * (R - 58)} y={-Math.cos(r) * (R - 58) + 9} s={24} c={OL}>{`${Math.round(v)}%`}</T></g>; })}
+      {needle(lo, 0)}{needle(hi, 1)}
+      <circle r={30} fill="#37474F" stroke={OL} strokeWidth={6} />
+    </g>
+    <g transform={`translate(${R + 40} 150) rotate(${moving ? t * 400 : 0})`}><path d="M 0 0 L 60 0" stroke={OL} strokeWidth={10} strokeLinecap="round" /><circle cx={60} cy={0} r={14} fill="#FF9F1C" stroke={OL} strokeWidth={4} /></g>
+    {a.title && <T x={0} y={-90} s={40} c="#FFF8E1">{a.title}</T>}
+    {a.note && <T x={0} y={180} s={24} c="#FFF8E1" w={800}>{a.note}</T>}
+    {inputs.length > 0 && <g transform={`translate(${a.placardX ?? 560} ${a.placardY ?? -220}) rotate(${2 * Math.sin(t * 1.1)})`}>
+      <path d="M 0 -60 L 0 -20" stroke={OL} strokeWidth={4} />
+      <rect x={-200} y={-20} width={400} height={inputs.length * 40 + 60} rx={14} fill="#FFF8E1" stroke={OL} strokeWidth={5} />
+      <T x={0} y={18} s={22} c="#7B61FF">INPUTS (ON SCREEN)</T>
+      {inputs.map((ln, k) => <T key={k} x={-180} y={58 + k * 40} s={21} c={OL} w={800} a="start">{ln}</T>)}</g>}
+  </g>;
+};
+
+/** RISK SCALE: a big balance; RISKS on the left pan, UPSIDE on the right. `risks` / `upside`: [{text, at}] blocks that drop
+ *  in (squash on landing); the beam tilts toward the heavier side as blocks land. `title` above. */
+const riskscale: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 300), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const L: {text: string; at: number}[] = a.risks || [], Rr: {text: string; at: number}[] = a.upside || [];
+  const landed = (b: {at: number}) => clamp((t - b.at) / 0.6);
+  const wl = L.reduce((q, b) => q + landed(b), 0), wr = Rr.reduce((q, b) => q + landed(b), 0);
+  const tilt = clamp((wr - wl) * 6, -14, 14) + 1.2 * Math.sin(t * 2.2), rad = (tilt * Math.PI) / 180, arm = 420;
+  const pan = (side: number, list: {text: string; at: number}[], label: string, c: string) => {
+    const px = side * arm * Math.cos(rad), py = side * arm * Math.sin(rad);
+    return <g transform={`translate(${px} ${py})`}>
+      <path d="M 0 0 L -150 220 M 0 0 L 150 220" stroke={OL} strokeWidth={4} />
+      <path d="M -190 220 L 190 220 Q 170 270 0 272 Q -170 270 -190 220 Z" fill={c} stroke={OL} strokeWidth={6} />
+      <T x={0} y={254} s={26} c={OL}>{label}</T>
+      {list.map((b, k) => { const u = landed(b); if (t < b.at - 0.01) return null;
+        const drop = (1 - E.out(u)) * -500, sq = u >= 1 ? 1 : 1 + 0.15 * Math.sin(u * Math.PI);
+        return <g key={k} transform={`translate(0 ${200 - k * 62 + drop}) scale(${1 / sq} ${sq})`}>
+          <rect x={-175} y={-56} width={350} height={54} rx={12} fill="#FFF8E1" stroke={OL} strokeWidth={4} />
+          <T x={0} y={-20} s={b.text.length > 24 ? 18 : 22} c={OL}>{b.text}</T></g>; })}
+    </g>; };
+  return <g key={'rs' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <path d="M -60 560 L 60 560 L 24 40 L -24 40 Z" fill="#B0BEC5" stroke={OL} strokeWidth={7} strokeLinejoin="round" />
+    <rect x={-160} y={550} width={320} height={40} rx={14} fill="#78909C" stroke={OL} strokeWidth={6} />
+    <g transform={`rotate(${tilt})`}><rect x={-arm - 20} y={-14} width={arm * 2 + 40} height={28} rx={14} fill="#FFE14D" stroke={OL} strokeWidth={6} /></g>
+    {pan(-1, L, a.leftLabel || 'RISKS', '#FF8A80')}{pan(1, Rr, a.rightLabel || 'UPSIDE', '#B9F6CA')}
+    <circle r={26} fill="#FF4FD8" stroke={OL} strokeWidth={6} />
+    {a.title && <T x={0} y={-80} s={42} c="#FFF8E1">{a.title}</T>}
+  </g>;
+};
+
+/** EDITION STAMP: a red rubber stamp that slams in at `at` (overshoot + ink splat), double border, `text` (1-2 lines via
+ *  `sub`). Used at the hook, the priced-in section and the end card so every edition is dated on screen. */
+const editionstamp: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 160), at = a.at ?? 0;
+  if (t < at || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const u = clamp((t - at) / 0.35), sc = (a.scale ?? 1) * (u < 1 ? lerp(2.4, 1, E.in(u)) : 1 + 0.04 * Math.exp(-(t - at - 0.35) * 8) * Math.sin((t - at) * 40));
+  const txt: string = a.text || 'DATA AS OF', sub: string | undefined = a.sub, c = a.color || '#E53935';
+  const w = Math.max(txt.length * 21, (sub || '').length * 16) + 80, h = sub ? 112 : 76, o = a.until !== undefined ? 1 - win(t, a.until, 0.4) : 1;
+  return <g key={'es' + i} opacity={o * (u < 1 ? 0.6 + 0.4 * u : 0.92)} transform={`translate(${x} ${y}) rotate(${a.rot ?? -6}) scale(${sc})`}>
+    {u >= 1 && [0, 1, 2, 3, 4].map((k) => <circle key={k} cx={(rnd(k + i) - 0.5) * w} cy={(rnd(k + 9) - 0.5) * h * 1.4} r={4 + 6 * rnd(k + 3)} fill={c} opacity={0.35} />)}
+    <rect x={-w / 2} y={-h / 2} width={w} height={h} rx={10} fill="none" stroke={c} strokeWidth={7} />
+    <rect x={-w / 2 + 10} y={-h / 2 + 10} width={w - 20} height={h - 20} rx={6} fill="none" stroke={c} strokeWidth={3} />
+    <T x={0} y={sub ? -8 : 12} s={34} c={c}>{txt}</T>
+    {sub && <T x={0} y={34} s={26} c={c} w={800}>{sub}</T>}
+  </g>;
+};
+
+/** SCORECARD: the end card of each edition: a retro-futurist scoreboard with `title` and up to 3 `rows`
+ *  [{label, value, at}] that flip in (split-flap), plus an edition line `stamp` at the bottom. */
+const scorecard: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 260), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const rows: {label: string; value: string; at?: number}[] = a.rows || [], W = 1100, RH = 130;
+  return <g key={'sc' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <path d={`M ${-W / 2 - 40} -90 L ${W / 2 + 40} -90 L ${W / 2 + 20} ${rows.length * RH + 120} L ${-W / 2 - 20} ${rows.length * RH + 120} Z`} fill="#24154F" stroke={OL} strokeWidth={8} strokeLinejoin="round" />
+    {[-1, 1].map((d) => <circle key={d} cx={d * (W / 2 + 10)} cy={-60} r={16} fill={Math.sin(t * 5 + d) > 0 ? '#FFE14D' : '#5A4A10'} stroke={OL} strokeWidth={4} />)}
+    <T x={0} y={-34} s={40} c="#FFE14D">{a.title || '3 NUMBERS TO WATCH'}</T>
+    {rows.map((r, k) => { const at = r.at ?? 0, u = clamp((t - at) / 0.5), flip = Math.abs(Math.cos(u * Math.PI * 2)), shown = t >= at;
+      return <g key={k} transform={`translate(0 ${20 + k * RH})`}>
+        <rect x={-W / 2} y={0} width={W} height={RH - 20} rx={16} fill="#120A2A" stroke="#3DF5FF" strokeWidth={4} />
+        <circle cx={-W / 2 + 56} cy={(RH - 20) / 2} r={34} fill="#FF4FD8" stroke={OL} strokeWidth={4} />
+        <T x={-W / 2 + 56} y={(RH - 20) / 2 + 12} s={34} c={OL}>{String(k + 1)}</T>
+        {shown && <g transform={`translate(0 ${(RH - 20) / 2}) scale(1 ${u < 1 ? flip : 1}) translate(0 ${-(RH - 20) / 2})`}>
+          <T x={-W / 2 + 120} y={46} s={30} c="#FFF8E1" a="start">{r.label}</T>
+          <T x={-W / 2 + 120} y={88} s={26} c="#3DF5FF" w={800} a="start">{r.value}</T></g>}
+      </g>; })}
+    {a.stamp && <T x={0} y={rows.length * RH + 80} s={22} c="#C9B8F0" w={800}>{a.stamp}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, freighter};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, freighter, pricedin, riskscale, editionstamp, scorecard};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
