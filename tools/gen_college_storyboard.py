@@ -271,6 +271,7 @@ add("p36_doors", "m5_draw", "engine_draw", {
         {"d": rect(760, 400, 200, 340), "color": "accent2", "width": 6, "kind": "box", "start": C("One door says student"), "label": lbl("STUDENT", 860, 380, 24, "accent2")},
         {"d": rect(1260, 400, 200, 340), "color": "accent", "width": 6, "kind": "box", "start": C("The other says employee"), "label": lbl("EMPLOYEE", 1360, 380, 24, "accent")},
         {"d": "M 960 760 L 1260 760", "color": "ink", "width": 4, "start": C("stand in the hallway"), "label": lbl("THE HALLWAY", 1110, 800, 22, "ink")},
+        {"d": arrow((965, 570), (1255, 570)), "color": "risk", "width": 5, "kind": "arrow", "start": C("stand in the hallway", 0.5), "label": lbl("WHICH WAY?", 1110, 540, 20, "risk")},
     ],
     "actions": [{"kind": "point", "at": C("a payroll in one hand", 0.1), "dur": 1.4, "target": [1110, 700]}],
     "scale": 0.86, "floor": 1040}, sources=["law"])

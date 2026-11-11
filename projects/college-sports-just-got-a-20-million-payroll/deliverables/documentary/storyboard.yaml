@@ -1689,6 +1689,20 @@ scenes:
         color: ink
         anchor: middle
       kind: stroke
+    - d: M 965 570 Q 1110 570 1255 570 M 1233 580 L 1255 570 L 1233 560
+      color: risk
+      width: 5
+      kind: arrow
+      start:
+        cue: stand in the hallway
+        offset: 0.5
+      label:
+        text: WHICH WAY?
+        x: 1110
+        y: 540
+        size: 20
+        color: risk
+        anchor: middle
     actions:
     - kind: point
       at:
