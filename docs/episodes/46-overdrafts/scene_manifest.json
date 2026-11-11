@@ -1,0 +1,2475 @@
+{
+  "slug": "why-banks-still-make-billions-from-overdrafts",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_open",
+      "segment": "h_open",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 13.63,
+      "duration_s": 13.63,
+      "visual_objective": "",
+      "narration": "Thirty-five dollars. That is the typical overdraft fee at America's largest banks, according to the Consumer Financial Protection Bureau. You can pay it for spending just a few dollars more than you have.",
+      "keyframes": [
+        {
+          "param": "items[1].rows[0].at.cue",
+          "cue": "You can pay it",
+          "label": "items[1].rows[0].at.cue",
+          "scene_time_s": 9.68,
+          "absolute_s": 9.68
+        },
+        {
+          "param": "items[1].rows[1].at.cue",
+          "cue": "more than you have",
+          "label": "items[1].rows[1].at.cue",
+          "scene_time_s": 12.27,
+          "absolute_s": 12.27
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_twist",
+      "segment": "h_twist",
+      "type": "engine_cartoon",
+      "start_s": 13.63,
+      "end_s": 30.9,
+      "duration_s": 17.27,
+      "visual_objective": "",
+      "narration": "Banks have cut these fees sharply in the last few years. Even so, in twenty twenty-three, banks with more than a billion dollars in assets still collected five point eight three billion dollars in overdraft and bounced-payment fees.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "still collected",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.01,
+          "absolute_s": 24.65
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "still collected",
+          "label": "items[0].until.cue",
+          "scene_time_s": 11.01,
+          "absolute_s": 24.65
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "still collected",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.01,
+          "absolute_s": 24.65
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "bounced-payment fees",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 15.45,
+          "absolute_s": 29.09
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb23"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s03_question",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 30.9,
+      "end_s": 39.67,
+      "duration_s": 8.77,
+      "visual_objective": "",
+      "narration": "So why is a fee that everyone seems to hate still worth billions? And who is really paying it?",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s04_promise",
+      "segment": "h_promise",
+      "type": "engine_cartoon",
+      "start_s": 39.67,
+      "end_s": 52.6,
+      "duration_s": 12.93,
+      "visual_objective": "",
+      "narration": "By the end of this video, you will know how an overdraft fee is made, why a small group of customers pays most of it, and how a federal cap on the fee was written and then erased.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "how an overdraft fee is made",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.95,
+          "absolute_s": 42.62
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "a small group of customers",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.31,
+          "absolute_s": 44.98
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "written and then erased",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.78,
+          "absolute_s": 50.45
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s05_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 52.6,
+      "end_s": 58.0,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s06_what",
+      "segment": "m1_what",
+      "type": "engine_cartoon",
+      "start_s": 58.0,
+      "end_s": 76.9,
+      "duration_s": 18.9,
+      "visual_objective": "",
+      "narration": "Here is what an overdraft is. You have twenty dollars in your checking account. You buy something for twenty-five. The bank can refuse the payment, or it can pay it anyway and push your balance below zero. If it pays, it usually charges you a fee for doing it.",
+      "keyframes": [
+        {
+          "param": "items[1].rows[0].at.cue",
+          "cue": "You buy something",
+          "label": "items[1].rows[0].at.cue",
+          "scene_time_s": 5.39,
+          "absolute_s": 63.39
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The bank can refuse",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.81,
+          "absolute_s": 65.81
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The bank can refuse",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.81,
+          "absolute_s": 65.81
+        },
+        {
+          "param": "items[1].rows[1].at.cue",
+          "cue": "it usually charges",
+          "label": "items[1].rows[1].at.cue",
+          "scene_time_s": 15.3,
+          "absolute_s": 73.3
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s07_median",
+      "segment": "m1_median",
+      "type": "engine_cartoon",
+      "start_s": 76.9,
+      "end_s": 100.33,
+      "duration_s": 23.43,
+      "visual_objective": "",
+      "narration": "According to the bureau, the median overdraft fee at the largest institutions that charge one was thirty-five dollars. The fee for a payment the bank refuses, called a non-sufficient funds fee, was thirty-two dollars. And the bureau found that the median debit card purchase that triggered an overdraft was only twenty-four dollars.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "median overdraft fee",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 2.54,
+          "absolute_s": 79.44
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "non-sufficient funds",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 12.38,
+          "absolute_s": 89.28
+        },
+        {
+          "param": "items[0].bars[2].at.cue",
+          "cue": "median debit card purchase",
+          "label": "items[0].bars[2].at.cue",
+          "scene_time_s": 17.67,
+          "absolute_s": 94.57
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "was only",
+          "label": "items[1].at.cue",
+          "scene_time_s": 21.11,
+          "absolute_s": 98.01
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s08_loan",
+      "segment": "m1_loan",
+      "type": "engine_cartoon",
+      "start_s": 100.33,
+      "end_s": 118.27,
+      "duration_s": 17.93,
+      "visual_objective": "",
+      "narration": "Think about what that means. The bank covers a twenty-four dollar purchase for a few days, until your next deposit arrives. And it charges thirty-five dollars for the favor. If you called that a short loan, it would be a very expensive one.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "And it charges",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.26,
+          "absolute_s": 109.59
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "If you called that",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.13,
+          "absolute_s": 113.46
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "If you called that",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.13,
+          "absolute_s": 113.46
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s09_stack",
+      "segment": "m1_stack",
+      "type": "engine_cartoon",
+      "start_s": 118.27,
+      "end_s": 134.6,
+      "duration_s": 16.33,
+      "visual_objective": "",
+      "narration": "And the fees can stack. Wells Fargo, for example, still charges thirty-five dollars per item, up to three times a day. Three small purchases on a bad day can mean one hundred and five dollars in fees.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Three small purchases",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.21,
+          "absolute_s": 128.48
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "one hundred and five dollars",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 13.3,
+          "absolute_s": 131.57
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "banks"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "p10_day",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 134.6,
+      "end_s": 156.77,
+      "duration_s": 22.17,
+      "visual_objective": "",
+      "narration": "Let me draw a bad day. Start at ten dollars. A coffee, and the balance is still positive. A grocery run, and it drops below zero. A fee. A gas station, another fee. A streaming bill, a third fee. The purchases add up to less than the fees.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Start at ten dollars",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.05,
+          "absolute_s": 137.65
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Start at ten dollars",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.05,
+          "absolute_s": 137.65
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "A coffee",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.08,
+          "absolute_s": 139.68
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "A fee.",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 12.27,
+          "absolute_s": 146.87
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "another fee",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 14.34,
+          "absolute_s": 148.94
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "a third fee",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 17.1,
+          "absolute_s": 151.7
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "The purchases add up",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 18.83,
+          "absolute_s": 153.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "banks"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s11_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 156.77,
+      "end_s": 164.07,
+      "duration_s": 7.3,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So who actually ends up paying all these fees? The answer is surprisingly concentrated.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "who actually ends up",
+          "label": "So who pays all these fees?",
+          "scene_time_s": 0.64,
+          "absolute_s": 157.41
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "surprisingly concentrated",
+          "label": "…surprisingly few people",
+          "scene_time_s": 5.12,
+          "absolute_s": 161.89
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 164.07,
+      "end_s": 169.07,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 169.07,
+      "end_s": 174.47,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_few",
+      "segment": "m2_few",
+      "type": "engine_cartoon",
+      "start_s": 174.47,
+      "end_s": 190.1,
+      "duration_s": 15.63,
+      "visual_objective": "",
+      "narration": "Most people rarely overdraft, or never do. The bureau studied millions of checking accounts. It found that about nine percent of accounts paid almost seventy-nine percent of all overdraft and bounced-payment fees.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "nine percent of accounts",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.68,
+          "absolute_s": 183.15
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "nine percent of accounts",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 8.68,
+          "absolute_s": 183.15
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "paid almost",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.17,
+          "absolute_s": 184.64
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "seventy-nine percent",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 10.92,
+          "absolute_s": 185.38
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_frequent",
+      "segment": "m2_frequent",
+      "type": "engine_cartoon",
+      "start_s": 190.1,
+      "end_s": 212.57,
+      "duration_s": 22.47,
+      "visual_objective": "",
+      "narration": "It gets even more extreme at the top. Accounts that overdrafted more than twenty times a year were fewer than one in twenty. Yet they paid about sixty-three percent of all those fees. For the bank, the overdraft business does not depend on everyone. It depends on a small group of repeat customers.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "sixty-three percent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.05,
+          "absolute_s": 201.15
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "For the bank",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.45,
+          "absolute_s": 204.55
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "It depends on a small group",
+          "label": "items[2].at.cue",
+          "scene_time_s": 19.0,
+          "absolute_s": 209.1
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_tight",
+      "segment": "m2_tight",
+      "type": "engine_cartoon",
+      "start_s": 212.57,
+      "end_s": 228.83,
+      "duration_s": 16.27,
+      "visual_objective": "",
+      "narration": "Think about who overdraws on a twenty-four dollar purchase. Usually not someone with a large balance. More often, someone waiting for the next paycheck. That is why critics say the fee falls hardest on those who can least afford it.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Usually not someone",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.75,
+          "absolute_s": 217.32
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "someone waiting for the next",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.58,
+          "absolute_s": 221.15
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "p16_order",
+      "segment": "m2_order",
+      "type": "engine_draw",
+      "start_s": 228.83,
+      "end_s": 246.03,
+      "duration_s": 17.2,
+      "visual_objective": "",
+      "narration": "Some practices made it worse. The bureau described how some banks processed the largest payment of the day first. Paying the big bill first could empty the account faster, so that several small purchases each triggered their own fee.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "processed the largest payment",
+          "label": "draw_start.cue",
+          "scene_time_s": 5.34,
+          "absolute_s": 234.17
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "processed the largest payment",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 5.34,
+          "absolute_s": 234.17
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Paying the big bill first",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 8.93,
+          "absolute_s": 237.76
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "several small purchases",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 13.07,
+          "absolute_s": 241.9
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "several small purchases",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 13.57,
+          "absolute_s": 242.4
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "each triggered",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 14.89,
+          "absolute_s": 243.72
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "each triggered",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 15.09,
+          "absolute_s": 243.92
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_apsn",
+      "segment": "m2_apsn",
+      "type": "engine_cartoon",
+      "start_s": 246.03,
+      "end_s": 271.57,
+      "duration_s": 25.53,
+      "visual_objective": "",
+      "narration": "Regulators also went after something stranger. A purchase was approved when the account had enough money, but by the time it settled, the balance had dropped, and the bank charged an overdraft fee anyway. The bureau called these fees likely unfair. Its examiners found at least tens of millions of dollars in harm, and refunds went to more than one hundred and seventy thousand customers.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "A purchase was approved",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.64,
+          "absolute_s": 249.67
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "by the time it settled",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.18,
+          "absolute_s": 253.21
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "likely unfair",
+          "label": "items[0].until.cue",
+          "scene_time_s": 14.78,
+          "absolute_s": 260.81
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "likely unfair",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.78,
+          "absolute_s": 260.81
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Its examiners found",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.8,
+          "absolute_s": 262.83
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "refunds went to",
+          "label": "items[4].at.cue",
+          "scene_time_s": 21.02,
+          "absolute_s": 267.05
+        },
+        {
+          "param": "items[4].steps[1][0].cue",
+          "cue": "seventy thousand customers",
+          "label": "items[4].steps[1][0].cue",
+          "scene_time_s": 23.25,
+          "absolute_s": 269.29
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "apsn"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "p18_hundred",
+      "segment": "m2_draw",
+      "type": "engine_draw",
+      "start_s": 271.57,
+      "end_s": 287.3,
+      "duration_s": 15.73,
+      "visual_objective": "",
+      "narration": "Let me draw who pays. Here are one hundred checking accounts. Most of them, ninety-one, pay little or nothing. Nine accounts are on the other side. And those nine pay almost four out of every five fee dollars.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here are one hundred",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.78,
+          "absolute_s": 274.35
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.78,
+          "absolute_s": 274.35
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 2.8,
+          "absolute_s": 274.37
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 2.82,
+          "absolute_s": 274.39
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 2.84,
+          "absolute_s": 274.41
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 2.86,
+          "absolute_s": 274.43
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 2.88,
+          "absolute_s": 274.45
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 2.9,
+          "absolute_s": 274.47
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 2.92,
+          "absolute_s": 274.49
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 2.94,
+          "absolute_s": 274.51
+        },
+        {
+          "param": "strokes[9].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[9].start.cue",
+          "scene_time_s": 2.96,
+          "absolute_s": 274.53
+        },
+        {
+          "param": "strokes[10].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[10].start.cue",
+          "scene_time_s": 2.98,
+          "absolute_s": 274.55
+        },
+        {
+          "param": "strokes[11].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[11].start.cue",
+          "scene_time_s": 3.0,
+          "absolute_s": 274.57
+        },
+        {
+          "param": "strokes[12].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[12].start.cue",
+          "scene_time_s": 3.02,
+          "absolute_s": 274.59
+        },
+        {
+          "param": "strokes[13].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[13].start.cue",
+          "scene_time_s": 3.04,
+          "absolute_s": 274.61
+        },
+        {
+          "param": "strokes[14].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[14].start.cue",
+          "scene_time_s": 3.06,
+          "absolute_s": 274.63
+        },
+        {
+          "param": "strokes[15].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[15].start.cue",
+          "scene_time_s": 3.08,
+          "absolute_s": 274.65
+        },
+        {
+          "param": "strokes[16].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[16].start.cue",
+          "scene_time_s": 3.1,
+          "absolute_s": 274.67
+        },
+        {
+          "param": "strokes[17].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[17].start.cue",
+          "scene_time_s": 3.12,
+          "absolute_s": 274.69
+        },
+        {
+          "param": "strokes[18].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[18].start.cue",
+          "scene_time_s": 3.14,
+          "absolute_s": 274.71
+        },
+        {
+          "param": "strokes[19].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[19].start.cue",
+          "scene_time_s": 3.16,
+          "absolute_s": 274.73
+        },
+        {
+          "param": "strokes[20].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[20].start.cue",
+          "scene_time_s": 3.18,
+          "absolute_s": 274.75
+        },
+        {
+          "param": "strokes[21].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[21].start.cue",
+          "scene_time_s": 3.2,
+          "absolute_s": 274.77
+        },
+        {
+          "param": "strokes[22].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[22].start.cue",
+          "scene_time_s": 3.22,
+          "absolute_s": 274.79
+        },
+        {
+          "param": "strokes[23].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[23].start.cue",
+          "scene_time_s": 3.24,
+          "absolute_s": 274.81
+        },
+        {
+          "param": "strokes[24].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[24].start.cue",
+          "scene_time_s": 3.26,
+          "absolute_s": 274.83
+        },
+        {
+          "param": "strokes[25].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[25].start.cue",
+          "scene_time_s": 3.28,
+          "absolute_s": 274.85
+        },
+        {
+          "param": "strokes[26].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[26].start.cue",
+          "scene_time_s": 3.3,
+          "absolute_s": 274.87
+        },
+        {
+          "param": "strokes[27].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[27].start.cue",
+          "scene_time_s": 3.32,
+          "absolute_s": 274.89
+        },
+        {
+          "param": "strokes[28].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[28].start.cue",
+          "scene_time_s": 3.34,
+          "absolute_s": 274.91
+        },
+        {
+          "param": "strokes[29].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[29].start.cue",
+          "scene_time_s": 3.36,
+          "absolute_s": 274.93
+        },
+        {
+          "param": "strokes[30].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[30].start.cue",
+          "scene_time_s": 3.38,
+          "absolute_s": 274.95
+        },
+        {
+          "param": "strokes[31].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[31].start.cue",
+          "scene_time_s": 3.4,
+          "absolute_s": 274.97
+        },
+        {
+          "param": "strokes[32].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[32].start.cue",
+          "scene_time_s": 3.42,
+          "absolute_s": 274.99
+        },
+        {
+          "param": "strokes[33].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[33].start.cue",
+          "scene_time_s": 3.44,
+          "absolute_s": 275.01
+        },
+        {
+          "param": "strokes[34].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[34].start.cue",
+          "scene_time_s": 3.46,
+          "absolute_s": 275.03
+        },
+        {
+          "param": "strokes[35].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[35].start.cue",
+          "scene_time_s": 3.48,
+          "absolute_s": 275.05
+        },
+        {
+          "param": "strokes[36].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[36].start.cue",
+          "scene_time_s": 3.5,
+          "absolute_s": 275.07
+        },
+        {
+          "param": "strokes[37].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[37].start.cue",
+          "scene_time_s": 3.52,
+          "absolute_s": 275.09
+        },
+        {
+          "param": "strokes[38].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[38].start.cue",
+          "scene_time_s": 3.54,
+          "absolute_s": 275.11
+        },
+        {
+          "param": "strokes[39].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[39].start.cue",
+          "scene_time_s": 3.56,
+          "absolute_s": 275.13
+        },
+        {
+          "param": "strokes[40].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[40].start.cue",
+          "scene_time_s": 3.58,
+          "absolute_s": 275.15
+        },
+        {
+          "param": "strokes[41].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[41].start.cue",
+          "scene_time_s": 3.6,
+          "absolute_s": 275.17
+        },
+        {
+          "param": "strokes[42].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[42].start.cue",
+          "scene_time_s": 3.62,
+          "absolute_s": 275.19
+        },
+        {
+          "param": "strokes[43].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[43].start.cue",
+          "scene_time_s": 3.64,
+          "absolute_s": 275.21
+        },
+        {
+          "param": "strokes[44].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[44].start.cue",
+          "scene_time_s": 3.66,
+          "absolute_s": 275.23
+        },
+        {
+          "param": "strokes[45].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[45].start.cue",
+          "scene_time_s": 3.68,
+          "absolute_s": 275.25
+        },
+        {
+          "param": "strokes[46].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[46].start.cue",
+          "scene_time_s": 3.7,
+          "absolute_s": 275.27
+        },
+        {
+          "param": "strokes[47].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[47].start.cue",
+          "scene_time_s": 3.72,
+          "absolute_s": 275.29
+        },
+        {
+          "param": "strokes[48].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[48].start.cue",
+          "scene_time_s": 3.74,
+          "absolute_s": 275.31
+        },
+        {
+          "param": "strokes[49].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[49].start.cue",
+          "scene_time_s": 3.76,
+          "absolute_s": 275.33
+        },
+        {
+          "param": "strokes[50].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[50].start.cue",
+          "scene_time_s": 3.78,
+          "absolute_s": 275.35
+        },
+        {
+          "param": "strokes[51].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[51].start.cue",
+          "scene_time_s": 3.8,
+          "absolute_s": 275.37
+        },
+        {
+          "param": "strokes[52].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[52].start.cue",
+          "scene_time_s": 3.82,
+          "absolute_s": 275.39
+        },
+        {
+          "param": "strokes[53].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[53].start.cue",
+          "scene_time_s": 3.84,
+          "absolute_s": 275.41
+        },
+        {
+          "param": "strokes[54].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[54].start.cue",
+          "scene_time_s": 3.86,
+          "absolute_s": 275.43
+        },
+        {
+          "param": "strokes[55].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[55].start.cue",
+          "scene_time_s": 3.88,
+          "absolute_s": 275.45
+        },
+        {
+          "param": "strokes[56].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[56].start.cue",
+          "scene_time_s": 3.9,
+          "absolute_s": 275.47
+        },
+        {
+          "param": "strokes[57].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[57].start.cue",
+          "scene_time_s": 3.92,
+          "absolute_s": 275.49
+        },
+        {
+          "param": "strokes[58].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[58].start.cue",
+          "scene_time_s": 3.94,
+          "absolute_s": 275.51
+        },
+        {
+          "param": "strokes[59].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[59].start.cue",
+          "scene_time_s": 3.96,
+          "absolute_s": 275.53
+        },
+        {
+          "param": "strokes[60].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[60].start.cue",
+          "scene_time_s": 3.98,
+          "absolute_s": 275.55
+        },
+        {
+          "param": "strokes[61].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[61].start.cue",
+          "scene_time_s": 4.0,
+          "absolute_s": 275.57
+        },
+        {
+          "param": "strokes[62].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[62].start.cue",
+          "scene_time_s": 4.02,
+          "absolute_s": 275.59
+        },
+        {
+          "param": "strokes[63].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[63].start.cue",
+          "scene_time_s": 4.04,
+          "absolute_s": 275.61
+        },
+        {
+          "param": "strokes[64].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[64].start.cue",
+          "scene_time_s": 4.06,
+          "absolute_s": 275.63
+        },
+        {
+          "param": "strokes[65].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[65].start.cue",
+          "scene_time_s": 4.08,
+          "absolute_s": 275.65
+        },
+        {
+          "param": "strokes[66].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[66].start.cue",
+          "scene_time_s": 4.1,
+          "absolute_s": 275.67
+        },
+        {
+          "param": "strokes[67].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[67].start.cue",
+          "scene_time_s": 4.12,
+          "absolute_s": 275.69
+        },
+        {
+          "param": "strokes[68].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[68].start.cue",
+          "scene_time_s": 4.14,
+          "absolute_s": 275.71
+        },
+        {
+          "param": "strokes[69].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[69].start.cue",
+          "scene_time_s": 4.16,
+          "absolute_s": 275.73
+        },
+        {
+          "param": "strokes[70].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[70].start.cue",
+          "scene_time_s": 4.18,
+          "absolute_s": 275.75
+        },
+        {
+          "param": "strokes[71].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[71].start.cue",
+          "scene_time_s": 4.2,
+          "absolute_s": 275.77
+        },
+        {
+          "param": "strokes[72].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[72].start.cue",
+          "scene_time_s": 4.22,
+          "absolute_s": 275.79
+        },
+        {
+          "param": "strokes[73].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[73].start.cue",
+          "scene_time_s": 4.24,
+          "absolute_s": 275.81
+        },
+        {
+          "param": "strokes[74].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[74].start.cue",
+          "scene_time_s": 4.26,
+          "absolute_s": 275.83
+        },
+        {
+          "param": "strokes[75].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[75].start.cue",
+          "scene_time_s": 4.28,
+          "absolute_s": 275.85
+        },
+        {
+          "param": "strokes[76].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[76].start.cue",
+          "scene_time_s": 4.3,
+          "absolute_s": 275.87
+        },
+        {
+          "param": "strokes[77].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[77].start.cue",
+          "scene_time_s": 4.32,
+          "absolute_s": 275.89
+        },
+        {
+          "param": "strokes[78].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[78].start.cue",
+          "scene_time_s": 4.34,
+          "absolute_s": 275.91
+        },
+        {
+          "param": "strokes[79].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[79].start.cue",
+          "scene_time_s": 4.36,
+          "absolute_s": 275.93
+        },
+        {
+          "param": "strokes[80].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[80].start.cue",
+          "scene_time_s": 4.38,
+          "absolute_s": 275.95
+        },
+        {
+          "param": "strokes[81].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[81].start.cue",
+          "scene_time_s": 4.4,
+          "absolute_s": 275.97
+        },
+        {
+          "param": "strokes[82].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[82].start.cue",
+          "scene_time_s": 4.42,
+          "absolute_s": 275.99
+        },
+        {
+          "param": "strokes[83].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[83].start.cue",
+          "scene_time_s": 4.44,
+          "absolute_s": 276.01
+        },
+        {
+          "param": "strokes[84].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[84].start.cue",
+          "scene_time_s": 4.46,
+          "absolute_s": 276.03
+        },
+        {
+          "param": "strokes[85].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[85].start.cue",
+          "scene_time_s": 4.48,
+          "absolute_s": 276.05
+        },
+        {
+          "param": "strokes[86].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[86].start.cue",
+          "scene_time_s": 4.5,
+          "absolute_s": 276.07
+        },
+        {
+          "param": "strokes[87].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[87].start.cue",
+          "scene_time_s": 4.52,
+          "absolute_s": 276.09
+        },
+        {
+          "param": "strokes[88].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[88].start.cue",
+          "scene_time_s": 4.54,
+          "absolute_s": 276.11
+        },
+        {
+          "param": "strokes[89].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[89].start.cue",
+          "scene_time_s": 4.56,
+          "absolute_s": 276.13
+        },
+        {
+          "param": "strokes[90].start.cue",
+          "cue": "Here are one hundred",
+          "label": "strokes[90].start.cue",
+          "scene_time_s": 4.58,
+          "absolute_s": 276.15
+        },
+        {
+          "param": "strokes[91].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[91].start.cue",
+          "scene_time_s": 9.02,
+          "absolute_s": 280.59
+        },
+        {
+          "param": "strokes[92].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[92].start.cue",
+          "scene_time_s": 9.22,
+          "absolute_s": 280.79
+        },
+        {
+          "param": "strokes[93].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[93].start.cue",
+          "scene_time_s": 9.42,
+          "absolute_s": 280.99
+        },
+        {
+          "param": "strokes[94].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[94].start.cue",
+          "scene_time_s": 9.62,
+          "absolute_s": 281.19
+        },
+        {
+          "param": "strokes[95].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[95].start.cue",
+          "scene_time_s": 9.82,
+          "absolute_s": 281.39
+        },
+        {
+          "param": "strokes[96].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[96].start.cue",
+          "scene_time_s": 10.02,
+          "absolute_s": 281.59
+        },
+        {
+          "param": "strokes[97].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[97].start.cue",
+          "scene_time_s": 10.22,
+          "absolute_s": 281.79
+        },
+        {
+          "param": "strokes[98].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[98].start.cue",
+          "scene_time_s": 10.42,
+          "absolute_s": 281.99
+        },
+        {
+          "param": "strokes[99].start.cue",
+          "cue": "Nine accounts",
+          "label": "strokes[99].start.cue",
+          "scene_time_s": 10.62,
+          "absolute_s": 282.19
+        },
+        {
+          "param": "strokes[100].start.cue",
+          "cue": "And those nine pay",
+          "label": "strokes[100].start.cue",
+          "scene_time_s": 11.17,
+          "absolute_s": 282.74
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "And those nine pay",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 11.27,
+          "absolute_s": 282.84
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 287.3,
+      "end_s": 296.8,
+      "duration_s": 9.5,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "For years, that model was very profitable. Then, almost overnight, the biggest banks started backing away from it.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "very profitable",
+          "label": "A very profitable model…",
+          "scene_time_s": 2.08,
+          "absolute_s": 289.38
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "backing away",
+          "label": "…then the big banks backed away",
+          "scene_time_s": 7.72,
+          "absolute_s": 295.03
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 296.8,
+      "end_s": 302.2,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_optin",
+      "segment": "m3_optin",
+      "type": "engine_cartoon",
+      "start_s": 302.2,
+      "end_s": 326.43,
+      "duration_s": 24.23,
+      "visual_objective": "",
+      "narration": "The first crack came years earlier. In twenty ten, a Federal Reserve rule took effect. Banks could no longer charge overdraft fees on ATM withdrawals or one-time debit card purchases unless the customer had opted in. Customers had to say yes first. It was the first time the default had changed.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Banks could no longer",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.96,
+          "absolute_s": 310.16
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Customers had to say yes",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.39,
+          "absolute_s": 319.59
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Customers had to say yes",
+          "label": "items[2].at.cue",
+          "scene_time_s": 17.39,
+          "absolute_s": 319.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rege"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_capone",
+      "segment": "m3_capone",
+      "type": "engine_cartoon",
+      "start_s": 326.43,
+      "end_s": 346.87,
+      "duration_s": 20.43,
+      "visual_objective": "",
+      "narration": "The bigger shift came at the end of twenty twenty-one. Capital One announced it would stop charging overdraft and bounced-payment fees altogether. Weeks later, Wells Fargo dropped its bounced-payment fee and added a grace period of twenty-four hours, though it kept the overdraft fee itself.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Capital One announced",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.04,
+          "absolute_s": 330.47
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Weeks later",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.73,
+          "absolute_s": 337.16
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Weeks later",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.73,
+          "absolute_s": 337.16
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "banks"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_citi",
+      "segment": "m3_citi",
+      "type": "engine_cartoon",
+      "start_s": 346.87,
+      "end_s": 371.17,
+      "duration_s": 24.3,
+      "visual_objective": "",
+      "narration": "In February twenty twenty-two, Citi said it would end overdraft fees completely, and called itself the only top five American bank to do so. Chase added a fifty-dollar cushion before any fee. And Bank of America reported that its service charges fell by one point one billion dollars in one year, mainly because of its new overdraft policies.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Chase added",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.68,
+          "absolute_s": 357.55
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And Bank of America",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.75,
+          "absolute_s": 361.62
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And Bank of America",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.75,
+          "absolute_s": 361.62
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "in one year",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 20.15,
+          "absolute_s": 367.01
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "banks"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_total",
+      "segment": "m3_total",
+      "type": "engine_cartoon",
+      "start_s": 371.17,
+      "end_s": 400.23,
+      "duration_s": 29.07,
+      "visual_objective": "",
+      "narration": "Across the industry, the drop was huge. The bureau counted overdraft and bounced-payment revenue at banks with more than a billion dollars in assets. It was eleven point nine six billion dollars in twenty nineteen. By twenty twenty-three, it was five point eight three billion dollars, down fifty-one percent. The bureau estimated that the average overdrafting household saved about one hundred and eighty-five dollars a year.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "It was",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 10.99,
+          "absolute_s": 382.16
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "By twenty twenty-three",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 15.64,
+          "absolute_s": 386.81
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "down fifty-one percent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 19.4,
+          "absolute_s": 390.57
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "saved about",
+          "label": "items[2].at.cue",
+          "scene_time_s": 25.09,
+          "absolute_s": 396.26
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb23"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "p25_drop",
+      "segment": "m3_draw",
+      "type": "engine_draw",
+      "start_s": 400.23,
+      "end_s": 421.83,
+      "duration_s": 21.6,
+      "visual_objective": "",
+      "narration": "Let me draw the drop. Here is twenty nineteen, a tall bar, almost twelve billion dollars. Here is twenty twenty-three, less than half as tall. The banks gave up more than six billion dollars a year. But look at what is left. Almost six billion dollars a year is still a very big business.",
+      "keyframes": [
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Let me draw the drop",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 400.58
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is twenty nineteen",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.65,
+          "absolute_s": 402.88
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Here is twenty nineteen",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 2.65,
+          "absolute_s": 402.88
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "less than half as tall",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 9.96,
+          "absolute_s": 410.19
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "The banks gave up",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.74,
+          "absolute_s": 411.97
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "But look at what is left",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 15.34,
+          "absolute_s": 415.57
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb23"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 421.83,
+      "end_s": 430.77,
+      "duration_s": 8.93,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So regulators decided to go further. And for a few months, it looked like the thirty-five dollar fee might disappear.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "go further",
+          "label": "Regulators went further…",
+          "scene_time_s": 2.31,
+          "absolute_s": 424.14
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "might disappear",
+          "label": "…would the $35 fee disappear?",
+          "scene_time_s": 7.51,
+          "absolute_s": 429.34
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 430.77,
+      "end_s": 436.17,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_rule",
+      "segment": "m4_rule",
+      "type": "engine_cartoon",
+      "start_s": 436.17,
+      "end_s": 464.77,
+      "duration_s": 28.6,
+      "visual_objective": "",
+      "narration": "In December twenty twenty-four, the bureau issued a final rule for banks and credit unions with more than ten billion dollars in assets. They would have three choices. Charge an overdraft fee of no more than five dollars. Charge a fee that only covered their own costs and losses. Or treat the overdraft as a loan, under the federal lending law, with the disclosures that come with credit.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "no more than",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.81,
+          "absolute_s": 450.98
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Charge a fee that only",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.98,
+          "absolute_s": 453.15
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Charge a fee that only",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.98,
+          "absolute_s": 453.15
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Or treat the overdraft",
+          "label": "items[3].at.cue",
+          "scene_time_s": 21.08,
+          "absolute_s": 457.25
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rule"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_save",
+      "segment": "m4_save",
+      "type": "engine_cartoon",
+      "start_s": 464.77,
+      "end_s": 486.07,
+      "duration_s": 21.3,
+      "visual_objective": "",
+      "narration": "The bureau projected that the rule could save consumers up to five billion dollars a year, or about two hundred and twenty-five dollars for each household that pays overdraft fees. It was due to take effect in October twenty twenty-five. Wells Fargo warned its investors that it would expect a significant reduction in its overdraft fees.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "save consumers",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 2.73,
+          "absolute_s": 467.5
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "household that pays",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.77,
+          "absolute_s": 473.54
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Wells Fargo warned",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.17,
+          "absolute_s": 479.94
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Wells Fargo warned",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.17,
+          "absolute_s": 479.94
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rule"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_repeal",
+      "segment": "m4_repeal",
+      "type": "engine_cartoon",
+      "start_s": 486.07,
+      "end_s": 501.0,
+      "duration_s": 14.93,
+      "visual_objective": "",
+      "narration": "It never took effect. In twenty twenty-five, Congress used a law called the Congressional Review Act to cancel it. The Senate voted in March. The House voted two hundred and seventeen to two hundred and eleven in April.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Congressional Review Act",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.29,
+          "absolute_s": 491.35
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The Senate voted",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.34,
+          "absolute_s": 494.41
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The House voted",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.34,
+          "absolute_s": 496.41
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "repeal"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_signed",
+      "segment": "m4_signed",
+      "type": "engine_cartoon",
+      "start_s": 501.0,
+      "end_s": 517.83,
+      "duration_s": 16.83,
+      "visual_objective": "",
+      "narration": "And on May ninth, twenty twenty-five, the resolution became law. Its text is very short. The rule, it says, shall have no force or effect. The five-dollar option was gone before a single bank had to offer it.",
+      "keyframes": [
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "shall have no",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 9.65,
+          "absolute_s": 510.65
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "shall have no",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.65,
+          "absolute_s": 510.65
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "repeal"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "p32_timeline",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 517.83,
+      "end_s": 538.43,
+      "duration_s": 20.6,
+      "visual_objective": "",
+      "narration": "Let me draw the timeline. December twenty twenty-four, the rule is written. October twenty twenty-five, the rule was supposed to start. But in between, in May twenty twenty-five, Congress erases it. The fee cap lived for five months, only on paper.",
+      "keyframes": [
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Let me draw the timeline",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 518.18
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "December twenty twenty-four, the rule",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.94,
+          "absolute_s": 520.77
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "December twenty twenty-four, the rule",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 2.94,
+          "absolute_s": 520.77
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "was supposed to start",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 9.05,
+          "absolute_s": 526.89
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Congress erases it",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 14.22,
+          "absolute_s": 532.06
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "The fee cap lived",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 16.45,
+          "absolute_s": 534.28
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "only on paper",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 18.88,
+          "absolute_s": 536.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "rule",
+        "repeal"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 538.43,
+      "end_s": 544.3,
+      "duration_s": 5.87,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So with no federal cap, what happened to the fees next?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "So with no federal cap",
+          "label": "No federal cap…",
+          "scene_time_s": 0.35,
+          "absolute_s": 538.78
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "what happened to the fees",
+          "label": "…what happened next?",
+          "scene_time_s": 2.85,
+          "absolute_s": 541.28
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 544.3,
+      "end_s": 549.7,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_2024",
+      "segment": "m5_2024",
+      "type": "engine_cartoon",
+      "start_s": 549.7,
+      "end_s": 578.13,
+      "duration_s": 28.43,
+      "visual_objective": "",
+      "narration": "The bureau has not published a new total since twenty twenty-three. But outside researchers read the same bank reports. The consulting firm Bates White estimates that banks with more than a billion dollars in assets collected about six point one billion dollars in twenty twenty-four, about three percent more than the year before. In its words, the steep decline appears to have ended.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Bates White estimates",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.93,
+          "absolute_s": 560.63
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "in twenty twenty-four, about three",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 18.77,
+          "absolute_s": 568.47
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In its words",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 23.95,
+          "absolute_s": 573.65
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "In its words",
+          "label": "items[2].at.cue",
+          "scene_time_s": 23.95,
+          "absolute_s": 573.65
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "after"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_big",
+      "segment": "m5_big",
+      "type": "engine_cartoon",
+      "start_s": 578.13,
+      "end_s": 597.4,
+      "duration_s": 19.27,
+      "visual_objective": "",
+      "narration": "The money is concentrated at the top. The Consumer Federation of America, an advocacy group, counted four point eight eight billion dollars in twenty twenty-four at banks with more than ten billion dollars in assets. JPMorgan Chase alone took about one billion. Wells Fargo was close behind.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "counted",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 585.36
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "in twenty twenty-four at banks",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 9.16,
+          "absolute_s": 587.3
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "JPMorgan Chase alone",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.86,
+          "absolute_s": 591.99
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "about one billion",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 15.39,
+          "absolute_s": 593.53
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "after"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_all",
+      "segment": "m5_all",
+      "type": "engine_cartoon",
+      "start_s": 597.4,
+      "end_s": 622.23,
+      "duration_s": 24.83,
+      "visual_objective": "",
+      "narration": "And those numbers leave out a lot. Credit unions and smaller banks do not appear in them. Counting everyone, the National Consumer Law Center cites an estimate of about twelve point one billion dollars in overdraft and bounced-payment fees in twenty twenty-four. That is an estimate, and it measures a much wider group than the bureau did.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[2].at.cue",
+          "cue": "Counting everyone",
+          "label": "items[0].bars[2].at.cue",
+          "scene_time_s": 7.94,
+          "absolute_s": 605.34
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "That is an estimate",
+          "label": "items[1].at.cue",
+          "scene_time_s": 19.79,
+          "absolute_s": 617.19
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "after"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_why",
+      "segment": "m5_why",
+      "type": "engine_cartoon",
+      "start_s": 622.23,
+      "end_s": 652.1,
+      "duration_s": 29.87,
+      "visual_objective": "",
+      "narration": "Why does the fee survive? Look at how it is built. It is a flat fee. At a bank like Wells Fargo, it is the same thirty-five dollars whether you overdraw by two dollars or by two hundred. On a small purchase, covered for a few days until the next deposit, that is a very wide margin. And without a federal cap, each bank still decides for itself what to charge.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "whether you overdraw",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.94,
+          "absolute_s": 634.17
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "or by two hundred",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.62,
+          "absolute_s": 636.85
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "On a small purchase",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.89,
+          "absolute_s": 639.12
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "And without a federal cap",
+          "label": "items[3].at.cue",
+          "scene_time_s": 24.0,
+          "absolute_s": 646.23
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "banks"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "p39_machine",
+      "segment": "m5_draw",
+      "type": "engine_draw",
+      "start_s": 652.1,
+      "end_s": 671.43,
+      "duration_s": 19.33,
+      "visual_objective": "",
+      "narration": "Let me draw the overdraft machine. On the left, a customer close to zero. In the middle, the bank paying a small purchase. On the right, the fee, coming back the moment the paycheck lands. Then the next month, the same customer, the same loop.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "On the left, a customer",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.6,
+          "absolute_s": 655.7
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "On the left, a customer",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 3.6,
+          "absolute_s": 655.7
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "In the middle, the bank",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 7.1,
+          "absolute_s": 659.2
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "In the middle, the bank",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 7.5,
+          "absolute_s": 659.6
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "On the right, the fee",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 10.54,
+          "absolute_s": 662.64
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Then the next month",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 15.17,
+          "absolute_s": 667.27
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "the same loop",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 18.04,
+          "absolute_s": 670.14
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpbfee",
+        "banks"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 41,
+      "id": "s40_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 671.43,
+      "end_s": 699.93,
+      "duration_s": 28.5,
+      "visual_objective": "",
+      "narration": "So why do banks still make billions from overdrafts? Because the fee is small for most people and huge for a few. It is charged on tiny purchases, paid by customers who live close to zero, and repeated month after month. Banks cut it in half when the pressure was high. The cap that would have cut it again was erased. If you want to keep your money out of that machine, the simplest move is to check whether you opted in.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Banks cut it in",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.32,
+          "absolute_s": 685.75
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Banks cut it in",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.32,
+          "absolute_s": 685.75
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "The cap that would",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.84,
+          "absolute_s": 688.27
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "check whether you opted in",
+          "label": "items[3].at.cue",
+          "scene_time_s": 26.36,
+          "absolute_s": 697.79
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "cfpb23",
+        "repeal"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 42,
+      "id": "s41_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 699.93,
+      "end_s": 711.53,
+      "duration_s": 11.6,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 8.63,
+          "absolute_s": 708.56
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}

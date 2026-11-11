@@ -1,0 +1,334 @@
+{
+  "title": "Why Banks Still Make Billions From Overdrafts",
+  "docs_dir": "docs/episodes/46-overdrafts",
+  "video": "output/overdraft_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why does a hated fee still earn billions?",
+    "surprising_fact": "Banks over $1bn collected $5.83bn in overdraft and NSF fees in 2023 (CFPB); median fee $35",
+    "subject": "a bank card with a fee sticker",
+    "tone": "strategy",
+    "metaphor": "a small purchase with a big fee"
+  },
+  "slug": "why-banks-still-make-billions-from-overdrafts",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "$5.8 BILLION",
+        "OVERDRAFT FEES"
+      ],
+      "claim_basis": "revenue: $5.83bn overdraft/NSF revenue in 2023, banks over $1bn (CFPB)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0E1A",
+          "sky1": "#1E2A4A",
+          "haze": "#90CAF9",
+          "key": "#E3F2FD",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ccard",
+          "x": 1480,
+          "y": 560,
+          "s": 0.75
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E3F2FD"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "$5.8 BILLION",
+          "x": 90,
+          "y": 526.1,
+          "size": 153.6,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "OVERDRAFT FEES",
+          "x": 96,
+          "y": 664.1,
+          "size": 120,
+          "width": 1075.2,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 406, 1270, 535), (96, 570, 1171, 671)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.082",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 33",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": false,
+            "detail": "nearest how-visa-and-mastercard-became-financial-gatekeepers (distance 0.10)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "revenue: $5.83bn overdraft/NSF revenue in 2023, banks over $1bn (CFPB)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.506,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-visa-and-mastercard-became-financial-gatekeepers"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "BUY: $24",
+        "FEE: $35"
+      ],
+      "claim_basis": "median overdraft-triggering debit purchase $24 vs median fee $35 (CFPB)",
+      "scene": {
+        "palette": {
+          "sky0": "#06121A",
+          "sky1": "#123040",
+          "haze": "#80CBC4",
+          "key": "#E0F7FA",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "ccard",
+          "x": 480,
+          "y": 650,
+          "s": 0.6
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E0F7FA"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "BUY: $24",
+          "x": 480.0,
+          "y": 251.7,
+          "size": 148.4,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "FEE: $35",
+          "x": 1440.0,
+          "y": 251.7,
+          "size": 148.4,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.57 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 136, 860, 261), (1060, 136, 1820, 261)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "12.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.067",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 27",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-america-stopped-making-the-penny (distance 0.30)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "median overdraft-triggering debit purchase $24 vs median fee $35 (CFPB)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.627,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-america-stopped-making-the-penny"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-11T02:00:27Z",
+  "master": "output/why-banks-still-make-billions-from-overdrafts/thumbnails/master_B.png"
+}
