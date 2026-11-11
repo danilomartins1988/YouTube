@@ -34,14 +34,14 @@ const L1 = 126, L2 = 118;
 const MAX_STRETCH = 1.06;
 
 /** Two-bone IK: returns elbow point for shoulder s reaching target t (elbow bends down/back). */
-const ik = (s: Pt, t: Pt, bendSign = 1): {e: Pt; h: Pt} => {
+const ik = (s: Pt, t: Pt, bendSign = 1, maxFrac = 0.9): {e: Pt; h: Pt} => {
   const dx = t[0] - s[0], dy = t[1] - s[1];
   const raw = Math.hypot(dx, dy);
   // cartoon stretch: a far target lengthens both bones (up to 1.5x) so the hand stays ON the drawing path
   const k = clamp(raw / (L1 + L2 - 2), 1, MAX_STRETCH);
   const l1 = L1 * k, l2 = L2 * k;
   // v3: the hand never reaches full extension, so the elbow always shows a visible bend
-  const d = clamp(raw, 20, (l1 + l2) * 0.9);
+  const d = clamp(raw, 20, (l1 + l2) * maxFrac);
   const a = Math.atan2(dy, dx);
   const cosB = clamp((l1 * l1 + d * d - l2 * l2) / (2 * l1 * d), -1, 1);
   const b = Math.acos(cosB) * bendSign;
@@ -96,7 +96,7 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
     return {knee, foot};
   };
   const legs = [leg(1), leg(-1)];
-  const shL: Pt = [-58, -428], shR: Pt = [58, -428];
+  const shL: Pt = [-68, -430], shR: Pt = [58, -428];   // v3.2: back shoulder at the torso edge so both arms read
   // arms: front arm (facing side) draws/points; back arm hangs or gestures
   const front = drawHand || pointHand;
   let frontTarget: Pt = front ? toLocal(front) : [70 + Math.sin(walk) * 30 * moving, -170];
@@ -109,9 +109,9 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
     frontTarget = [frontTarget[0] - (v[0] / n) * 36, frontTarget[1] - (v[1] / n) * 36];
   }
   const backTarget: Pt = pose.backHand ? toLocal(pose.backHand)
-    : [-62 - Math.sin(walk) * 30 * moving, -175];   // v3.1: no talk-driven jitter (the mouth level flickers every frame)
-  const armF = ik(shR, frontTarget, front ? 1 : -1);
-  const armB = ik(shL, backTarget, -1);
+    : [-102 - Math.sin(walk) * 30 * moving, -182];   // v3.1: no talk-driven jitter (the mouth level flickers every frame)
+  const armF = ik(shR, frontTarget, front ? 1 : -1, front ? 0.9 : 0.97);
+  const armB = ik(shL, backTarget, -1, pose.backHand ? 0.9 : 0.97);   // resting arms hang almost straight
   const P = (p: Pt) => W(p[0], p[1]).join(',');
   const limb = (a: Pt, b: Pt, c: Pt, col: string, w: number) => (
     <path d={`M ${P(a)} L ${P(b)} L ${P(c)}`} fill="none" stroke={col} strokeWidth={w * S} strokeLinecap="round" strokeLinejoin="round" />
@@ -169,7 +169,7 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
       {/* shadow */}
       <ellipse cx={x} cy={floor + 6} rx={90 * S * (1 - 0.15 * Math.min(1, hop / 20))} ry={12 * S} fill="#000" opacity={0.28} />
       {/* back arm */}
-      {sleeve(shL, armB.e, armB.h, BRAND.jacketShade, BRAND.skinShade, false)}
+      {sleeve(shL, armB.e, armB.h, '#20324F', BRAND.skinShade, false)}
       {/* legs */}
       {legs.map((l, i) => (
         <g key={i}>

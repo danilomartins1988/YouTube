@@ -127,7 +127,7 @@ export const presenterPose = (p: AnimatedPresenterProps): Pose & {handTarget: Ve
       }
     } else if (a.kind === 'write' && t >= a.at - 0.3 && t <= a.at + a.dur + 0.3) {
       const u = win(t, a.at, a.dur);
-      const pen: Vec = [a.x + a.width * u, a.y + Math.sin(u * a.width * 0.35) * 7 - Math.abs(Math.sin(u * a.width * 0.11)) * 6];
+      const pen: Vec = [a.x + a.width * u, a.y + Math.sin(u * a.width * 0.12) * 3 - Math.abs(Math.sin(u * a.width * 0.05)) * 3];   // v3.2: calmer handwriting
       const inU = E.out(win(t, a.at - 0.3, 0.3)), outU = E.in(win(t, a.at + a.dur, 0.3));
       drawHand = lerpV(lerpV(rest, pen, inU), rest, outU); holding = true; target = pen;
     } else if (a.kind === 'point' && t >= a.at && t <= a.at + a.dur) {
