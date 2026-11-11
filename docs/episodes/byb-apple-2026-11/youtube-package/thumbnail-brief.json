@@ -1,0 +1,334 @@
+{
+  "title": "Before You Buy Apple Stock, Watch This (Nov 2026)",
+  "docs_dir": "docs/episodes/byb-apple-2026-11",
+  "video": "output/bybapple_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "What is a five-trillion-dollar price betting on?",
+    "surprising_fact": "Apple trades at about 38 times last year's profit (our calc., Nov 10, 2026 close)",
+    "subject": "a generic smartphone",
+    "tone": "spectacle",
+    "metaphor": "the price tag is a rocket"
+  },
+  "slug": "before-you-buy-apple-2026-11",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "APPLE: 38\u00d7",
+        "PROFIT"
+      ],
+      "claim_basis": "lenses: trailing P/E 38.3x = $5,064.6bn / FY2026 net income $132.2bn (our calc., Nov 10, 2026 close)",
+      "scene": {
+        "palette": {
+          "sky0": "#14082E",
+          "sky1": "#3A1A6E",
+          "haze": "#3DF5FF",
+          "key": "#E0F7FA",
+          "accent": "#FFE14D",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "coin",
+          "x": 1500,
+          "y": 600,
+          "s": 0.75
+        },
+        "support": [],
+        "particles": {
+          "n": 70,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "APPLE: 38\u00d7",
+          "x": 90,
+          "y": 535.3,
+          "size": 184.4,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFE14D"
+        },
+        {
+          "text": "PROFIT",
+          "x": 96,
+          "y": 673.3,
+          "size": 120,
+          "width": 460.8,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 391, 1270, 546), (96, 580, 557, 680)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.060",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 34",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest who-actually-gets-the-tariff-refund (distance 0.39)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "lenses: trailing P/E 38.3x = $5,064.6bn / FY2026 net income $132.2bn (our calc., Nov 10, 2026 close)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.627,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "who-actually-gets-the-tariff-refund"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "APPLE: $5T",
+        "PRICED IN?"
+      ],
+      "claim_basis": "cap: \u2248 $5.06tn market value (our calc., Nov 10, 2026 close)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0614",
+          "sky1": "#2A1440",
+          "haze": "#FF9F1C",
+          "key": "#FFF3E0",
+          "accent": "#7DFF8A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "coin",
+          "x": 480,
+          "y": 660,
+          "s": 0.6
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFF3E0"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "APPLE: $5T",
+          "x": 480.0,
+          "y": 227.4,
+          "size": 118.8,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "PRICED IN?",
+          "x": 1440.0,
+          "y": 227.4,
+          "size": 118.8,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#7DFF8A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 135, 860, 235), (1060, 135, 1820, 235)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 10.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.061",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 45",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.40)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "cap: \u2248 $5.06tn market value (our calc., Nov 10, 2026 close)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.813,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-11T22:49:39Z",
+  "master": "output/before-you-buy-apple-2026-11/thumbnails/master_B.png"
+}
