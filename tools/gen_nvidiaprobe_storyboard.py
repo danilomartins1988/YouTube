@@ -174,7 +174,7 @@ card("s20_c3", "m3_card", "Chips at the Border", "U.S. export rules")
 stage("s21_rules", "m3_rules", {
     "zones": [Z("searoute", buoyAt=0.5)], "worldW": 2600,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("In April"), "x": 1350, "y": 520, "zoom": 1.0, "dur": 2.0}], "drift": 2,
-    "items": [it("calendar", x=820, y=260, at=0.2, pages=[[0, "2022", "LICENCES"], [C("the rules got tighter"), "2023", "TIGHTER"], [C("In April"), "2025", "H20 TOO"]]),
+    "items": [it("calendar", x=820, y=260, at=0.2, pages=[[0, "2022", "LICENSES"], [C("the rules got tighter"), "2023", "TIGHTER"], [C("In April"), "2025", "H20 TOO"]]),
               it("freighter", x=[[0, 200], [C("In April"), 1100]], y=650, at=0.3, scale=0.75, labels=["H100", "A100", "H20"], stopAt=C("needed a licence")),
               it("letters", x=1400, y=140, text="≈ $4.5BN CHARGE (H20, 10-Q)", at=C("took a charge"), size=50, color="gold")]},
     sources=["sec"])
@@ -187,7 +187,7 @@ stage("s22_foreclosed", "m3_foreclosed", {
               buddy(1000, 860, at=0.3, mood="sad", label="H20", color="#7B61FF", hop=8)]},
     sources=["sec"])
 stage("s23_smuggle", "m3_smuggle", {
-    "zones": [Z("searoute", night=True, buoyAt=0.53, sign="EXPORT RULES CHECKPOINT", sub="NO LICENCE? NO PASSAGE")], "worldW": 2600, "night": True,
+    "zones": [Z("searoute", night=True, buoyAt=0.53, sign="EXPORT RULES CHECKPOINT", sub="NO LICENSE? NO PASSAGE")], "worldW": 2600, "night": True,
     "cam": [{"at": 0, "x": 900, "y": 520, "zoom": 1.0}, {"at": C("pleaded guilty"), "x": 1200, "y": 520, "zoom": 1.0, "dur": 2.0}], "drift": 3,
     "items": [it("freighter", x=[[0, -200], [C("And in October"), 900]], y=660, at=0.3, scale=0.75, labels=["RELABELED", "SERVERS", "?"], stopAt=C("And in October")),
               it("sign", x=1000, y=170, text="GUILTY PLEA: ≥ $160M OF CHIPS, RELABELED (DOJ)", at=C("pleaded guilty"), color="#FFE0B2", size=26),

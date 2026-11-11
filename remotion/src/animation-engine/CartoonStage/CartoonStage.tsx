@@ -997,7 +997,7 @@ const SETS: Record<string, SetFn> = {
           <path d="M 0 60 L 0 110" stroke={OL} strokeWidth={6} />
           <rect x={-250} y={-40} width={500} height={100} rx={14} fill="#FFF8E1" stroke={OL} strokeWidth={6} />
           <T x={0} y={8} s={32}>{zz.sign || 'EXPORT RULES CHECKPOINT'}</T>
-          <T x={0} y={44} s={20} c="#5D4037" w={700}>{zz.sub || 'PLEASE HAVE YOUR LICENCE READY'}</T></g>
+          <T x={0} y={44} s={20} c="#5D4037" w={700}>{zz.sub || 'PLEASE HAVE YOUR LICENSE READY'}</T></g>
       </g>
     </g>;
   },
