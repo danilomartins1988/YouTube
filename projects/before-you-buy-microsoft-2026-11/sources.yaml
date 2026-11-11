@@ -157,3 +157,19 @@ claims:
     fields: {}
     source_ids: [call, tenq]
     status: source_located
+
+  - id: lines
+    text: "10-Q, revenue by product line, Q1 FY27 vs Q1 FY26 ($M; growth our calc.): Microsoft 365 cloud 27,778 (+17%); Search and advertising 6,554 (+10%); Productivity and server licensing 8,407 (-3%); XBOX 5,379 (-2%); Windows OEM and devices 3,551 (-22%). Devices and Consumer segment revenue $15,484M (-3%); Agents and Infra operating margin 52.8% (our calc.). CFO: 'Inventory levels remain elevated' (PCs)."
+    spoken: about twenty-eight billion dollars
+    display: "Q1 FY27: M365 cloud $27.8bn +17% · Windows OEM −22% (10-Q)"
+    fields: {m365_growth_spoken: seventeen percent, search_spoken: ten percent, win_spoken: twenty-two percent, xbox_spoken: two percent, lic_spoken: three percent, margin_spoken: almost fifty-three percent}
+    source_ids: [tenq, call]
+    status: source_located
+
+  - id: oai
+    text: "10-Q: Microsoft holds 'an approximate 24% interest on an as-converted basis' in OpenAI (equity method); receivables from OpenAI $7.2bn; funding commitments $13.0bn, of which $12.0bn funded. FY2026 revenue from OpenAI arrangements $24.1bn = 7.3% of revenue (our calc.). Risk factor: 'If an arrangement fails to adequately anticipate changing circumstances and interests of a party, it may result in early termination or renegotiation'. Market value of the stake not disclosed."
+    spoken: about twenty-four percent
+    display: "OpenAI: ≈24% stake · $7.2bn receivable · $12.0bn of $13.0bn funded (10-Q)"
+    fields: {recv_spoken: about seven billion dollars, commit_spoken: thirteen billion dollars, funded_spoken: twelve billion, fy_spoken: about twenty-four billion dollars, fyshare_spoken: about seven percent}
+    source_ids: [tenq]
+    status: source_located

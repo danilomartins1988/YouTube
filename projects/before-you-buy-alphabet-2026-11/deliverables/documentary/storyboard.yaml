@@ -603,6 +603,88 @@ scenes:
   - tenq
   assets:
   - font:inter
+- id: s09b_geo
+  segment: m1_geo
+  type: engine_cartoon
+  params:
+    zones:
+    - set: exchange
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: And advertising fell
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: THE MIX IS SHIFTING
+      at: 0.2
+      size: 60
+      color: gold
+    - kind: sign
+      x: 760
+      y: 250
+      text: U.S. 53% OF REVENUE (+39%)
+      at:
+        cue: the United States
+      color: '#BBDEFB'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 250
+      text: WAS 48% LAST YEAR
+      at:
+        cue: up from
+      color: '#F5F5F5'
+      size: 30
+    - kind: sign
+      x: 760
+      y: 380
+      text: 'ADS: 64% OF THE QUARTER'
+      at:
+        cue: And advertising fell
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 380
+      text: PARTNER IMPRESSIONS −14%
+      at:
+        cue: Impressions on partner
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 520
+      text: '''HALF-TRILLION RUN RATE'' (CEO CLAIM)'
+      at:
+        cue: Sundar Pichai
+      color: '#C8E6C9'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: happy
+      label: GOOG
+      color: '#3DF5FF'
+      hop: 14
+  sources:
+  - tenq
+  - rel
+  assets:
+  - font:inter
 - id: p10_machine
   segment: m1_draw
   type: engine_draw
@@ -1012,6 +1094,88 @@ scenes:
       hop: 16
   sources:
   - tenq
+  assets:
+  - font:inter
+- id: s16b_stakes
+  segment: m2_stakes
+  type: engine_cartoon
+  params:
+    zones:
+    - set: vault
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Those are marks
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: A PILE OF STAKES
+      at: 0.2
+      size: 60
+      color: gold
+    - kind: sign
+      x: 760
+      y: 250
+      text: SPACEX SHARES $75.2BN (RESTRICTED)
+      at:
+        cue: of SpaceX shares
+      color: '#BBDEFB'
+      size: 28
+    - kind: sign
+      x: 1260
+      y: 250
+      text: ONE PRIVATE CO. ≈ $128.2BN
+      at:
+        cue: one unnamed private
+      color: '#BBDEFB'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 370
+      text: ≈ 6% OF MARKET VALUE (OUR CALC.)
+      at:
+        cue: Together, by our math
+      color: '#FFF8E1'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 480
+      text: 'Q3: −$8.2BN ON PAPER'
+      at:
+        cue: they cost
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 590
+      text: JUNE OFFER $355.20 → NOV 10 CLOSE $287.38
+      at:
+        cue: the new shares
+      color: '#FFE0B2'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: worry
+      label: GOOG
+      color: '#3DF5FF'
+      hop: 12
+  sources:
+  - tenq
+  - px
   assets:
   - font:inter
 - id: p17_cash
@@ -1989,6 +2153,79 @@ scenes:
       hits:
       - cue: rejected a breakup
       - cue: set aside
+  sources:
+  - tenq
+  assets:
+  - font:inter
+- id: s34b_fines
+  segment: m5_fines
+  type: engine_cartoon
+  params:
+    zones:
+    - set: court
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: A Swedish
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: THE BILLS FROM EUROPE
+      at: 0.2
+      size: 60
+      color: gold
+    - kind: sign
+      x: 760
+      y: 260
+      text: 'EU AD TECH: $3.5BN CHARGE'
+      at:
+        cue: The European ad tech
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 260
+      text: 'DMA: +$1.0BN (Q3)'
+      at:
+        cue: digital markets
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 390
+      text: PRICERUNNER ≈ $2.1BN (APPEAL)
+      at:
+        cue: A Swedish
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 520
+      text: 'TEXAS AD TECH TRIAL: ''CANNOT ESTIMATE'''
+      at:
+        cue: A Texas trial
+      color: '#F5F5F5'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.4
+      mood: worry
+      label: GOOG
+      color: '#3DF5FF'
+      hop: 12
   sources:
   - tenq
   assets:

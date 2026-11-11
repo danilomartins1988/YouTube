@@ -98,6 +98,18 @@ stage("s09_openai", "m1_openai", {
               it("letters", x=1150, y=480, text="PARTNER · SHAREHOLDING · BUYER", at=C("So OpenAI is"), size=46, color="gold"),
               buddy(1700, 860, at=0.5, mood="shock", moods=[[C("all at once"), "cool"]], label="OPENAI", color="#7B61FF", hop=22, scale=1.25)]},
     sources=["tenq"])
+stage("s09b_lines", "m1_lines", {
+    "zones": [Z("datacenter")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("But the older businesses"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="DIFFERENT SPEEDS", at=0.2, size=60, color="gold"),
+              it("sign", x=740, y=250, text="M365 CLOUD +17%", at=C("the cloud Office"), color="#C8E6C9", size=32),
+              it("sign", x=1000, y=250, text="SEARCH & ADS +10%", at=C("Search and advertising"), color="#C8E6C9", size=32),
+              it("sign", x=740, y=380, text="WINDOWS OEM −22%", at=C("Windows sales"), color="#FFCDD2", size=32),
+              it("sign", x=1000, y=380, text="XBOX −2%", at=C("Xbox slipped"), color="#FFCDD2", size=32),
+              it("sign", x=1280, y=380, text="LICENSES −3%", at=C("classic software"), color="#FFCDD2", size=32),
+              it("sign", x=1000, y=520, text="CLOUD ENGINE MARGIN ≈ 53%", at=C("So the cloud engine"), color="#BBDEFB", size=30),
+              buddy(1700, 860, at=0.3, mood="happy", label="AZURE", hop=14)]},
+    sources=["tenq"])
 board("p10_machine", "m1_draw", "The machine (recast segments, Q1 FY27)", C("Here is Agents and Infra"), [
     {"d": rect(1080, 420, 360, 200), "color": "accent2", "width": 6, "kind": "box", "start": C("Here is Agents and Infra"), "label": lbl("AGENTS & INFRA · 52.8%", 1260, 528, 20, "accent2")},
     {"d": rect(1080, 700, 360, 120), "color": "accent", "width": 6, "kind": "box", "start": C("Here is Devices and Consumer"), "label": lbl("DEVICES & CONSUMER", 1260, 768, 20, "accent")},
@@ -258,6 +270,17 @@ stage("s34_partner", "m5_partner", {
               it("sign", x=700, y=250, text="PARTNERS = BIG AZURE CUSTOMERS", at=C("Partners like OpenAI"), color="#FFE0B2", size=30),
               it("sign", x=1350, y=370, text="AI PRICES ↓ → MARGINS ↓", at=C("And if prices"), color="#FFCDD2", size=32),
               it("pricetag", x=1650, y=560, at=C("And if prices"), text="AI COMPUTE", pages=[[C("because of competition"), "AI COMPUTE ↓", True]])]},
+    sources=["tenq"])
+stage("s34b_stake", "m5_stake", {
+    "zones": [Z("vault")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("Last fiscal year"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="THE OPENAI TIE", at=0.2, size=60, color="gold"),
+              it("sign", x=740, y=250, text="STAKE ≈ 24% (AS-CONVERTED)", at=C("Microsoft owns"), color="#BBDEFB", size=30),
+              it("sign", x=1260, y=250, text="OPENAI OWES $7.2BN", at=C("OpenAI owes it"), color="#FFE0B2", size=30),
+              it("sign", x=1000, y=370, text="FUNDING: $12.0BN OF $13.0BN PAID IN", at=C("has committed"), color="#FFE0B2", size=30),
+              it("sign", x=1000, y=490, text="FY2026: $24.1BN = 7.3% OF REVENUE", at=C("Last fiscal year"), color="#C8E6C9", size=30),
+              it("sign", x=1000, y=610, text="'MAY RESULT IN EARLY TERMINATION OR RENEGOTIATION'", at=C("Microsoft's own filing"), color="#FFCDD2", size=26),
+              buddy(1700, 860, at=0.4, mood="worry", label="MSFT", hop=12)]},
     sources=["tenq"])
 stage("s35_other", "m5_other", {
     "zones": [Z("court")], "worldW": 2400,

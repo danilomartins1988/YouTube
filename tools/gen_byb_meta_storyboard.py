@@ -101,6 +101,18 @@ stage("s09_ads", "m1_ads", {
               it("counter", x=1000, y=360, at=0.2, prefix="", suffix="BN PEOPLE / DAY", decimals=2, steps=[[0, 0], [{"cue": "people use at least one"}, 3.64]], text="DAILY ACTIVE PEOPLE (Q3)"),
               it("letters", x=1000, y=540, text="MORE ADS × HIGHER PRICES", at=C("More ads, at higher prices"), size=50, color="gold")]},
     sources=["rel", "tenq"])
+stage("s09b_geo", "m1_geo", {
+    "zones": [Z("exchange")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("And the machine"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="WHERE THE AD MONEY COMES FROM", at=0.2, size=52, color="gold"),
+              it("sign", x=720, y=250, text="U.S. & CANADA 39%", at=C("The United States"), color="#BBDEFB", size=30),
+              it("sign", x=880, y=330, text="EUROPE 23%", at=C("Europe,"), color="#C8E6C9", size=30),
+              it("sign", x=1200, y=250, text="ASIA-PACIFIC 27%", at=C("Asia Pacific"), color="#FFE0B2", size=30),
+              it("sign", x=1320, y=330, text="REST OF WORLD 11%", at=C("The rest of the world"), color="#F5F5F5", size=30),
+              it("sign", x=1000, y=480, text="HEADCOUNT 66,775 (−15%)", at=C("Meta's headcount"), color="#FFCDD2", size=30),
+              it("sign", x=1000, y=590, text="89% OF COSTS: THE APPS", at=C("Almost all the spending"), color="#FFF8E1", size=28),
+              buddy(1700, 860, at=0.3, mood="happy", label="META", color="#FF4FD8", hop=14)]},
+    sources=["tenq", "rel"])
 board("p10_machine", "m1_draw", "The machine (segments, FY2025)", C("Here is the Family of Apps"), [
     {"d": rect(1080, 420, 360, 200), "color": "accent2", "width": 6, "kind": "box", "start": C("Here is the Family of Apps"), "label": lbl("FAMILY OF APPS · +$102.5BN", 1260, 528, 20, "accent2")},
     {"d": rect(1080, 700, 360, 120), "color": "risk", "width": 6, "kind": "box", "start": C("Here is Reality Labs"), "label": lbl("REALITY LABS · −$19.2BN", 1260, 768, 20, "risk")},
@@ -141,6 +153,17 @@ stage("s15_capital", "m2_capital", {
               it("sign", x=1350, y=440, text="$15.0BN OF BONDS", at=C("of bonds"), color="#FFE0B2", size=28),
               it("letters", x=1100, y=600, text="SHARE COUNT: RISING, NOT FALLING", at=C("The share count is now"), size=44, color="gold")]},
     sources=["cap8k", "tenq"])
+stage("s15b_commit", "m2_commit", {
+    "zones": [Z("vault")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("At the end of September"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="THE BILLS ARE ALREADY SIGNED", at=0.2, size=54, color="gold"),
+              it("counter", x=800, y=270, at=C("Meta lists"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [{"cue": "non cancelable"}, 454.5]], text="COMMITMENTS (10-Q)"),
+              it("sign", x=1280, y=230, text="DUE 2026: $45.9BN", at=C("due this year"), color="#FFE0B2", size=30),
+              it("sign", x=1280, y=330, text="DUE 2027: $121.4BN", at=C("next year"), color="#FFCDD2", size=30),
+              it("sign", x=1000, y=500, text="CASH $82.4BN  ·  DEBT $84.0BN", at=C("At the end of September"), color="#BBDEFB", size=30),
+              it("sign", x=1000, y=610, text="SHARES +1% IN 9 MONTHS", at=C("the share count rose"), color="#F5F5F5", size=28),
+              buddy(1700, 860, at=0.3, mood="worry", label="CASH", color="#23995A", hop=12)]},
+    sources=["tenq"])
 board("p16_cash", "m2_draw", "Twelve months of cash (our calc.)", C("Here is the operating cash bar"), [
     {"d": "M 700 780 L 1560 780", "color": "ink", "width": 4, "start": C("Here is the operating cash bar"), "label": lbl("$BN · TTM · OUR CALC.", 1130, 830, 18, "ink")},
     bar(740, 150, 780, 380, "accent2", C("Here is the operating cash bar"), "OCF 133"),
@@ -248,6 +271,18 @@ stage("s32_courts", "m5_courts", {
               it("sign", x=1400, y=300, text="AGs SETTLEMENT: UP TO ≈ $18.6BN", at=C("The settlement with"), color="#FFCDD2", size=28),
               it("sign", x=1400, y=440, text="LEGAL ACCRUALS ≈ $19.9BN", at=C("Legal accruals"), color="#FFCDD2", size=28),
               it("gavel", x=1750, y=600, hits=[C("imposed a civil penalty"), C("will appeal")])]},
+    sources=["tenq"])
+stage("s32b_youth", "m5_youth", {
+    "zones": [Z("parliament")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("Lawyers for"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="NOT OVER YET", at=0.2, size=60, color="gold"),
+              it("sign", x=740, y=250, text="$12.7BN OVER 10 YEARS", at=C("paid over ten years"), color="#FFE0B2", size=30),
+              it("sign", x=1260, y=250, text="+$5.3BN IF RIVALS FOLLOW", at=C("only comes due"), color="#FFE0B2", size=28),
+              it("sign", x=740, y=380, text="200,000+ ARBITRATION CLAIMANTS", at=C("Lawyers for"), color="#FFCDD2", size=28),
+              it("sign", x=1260, y=380, text="NEXT TRIAL: FEB 2027", at=C("school district trial"), color="#BBDEFB", size=30),
+              it("sign", x=1000, y=510, text="DC: UP TO $1.7BN", at=C("District of Columbia"), color="#FFCDD2", size=30),
+              it("sign", x=1000, y=630, text="'$1 TRILLION+' = PLAINTIFFS' CLAIM", at=C("Plaintiffs have claimed"), color="#F5F5F5", size=26),
+              buddy(1700, 860, at=0.4, mood="worry", label="META", color="#FF4FD8", hop=12)]},
     sources=["tenq"])
 stage("s33_europe", "m5_europe", {
     "zones": [Z("parliament")], "worldW": 2400,

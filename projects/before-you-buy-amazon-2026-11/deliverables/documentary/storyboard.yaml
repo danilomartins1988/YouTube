@@ -595,6 +595,87 @@ scenes:
   - tenq
   assets:
   - font:inter
+- id: s09b_streams
+  segment: m1_streams
+  type: engine_cartoon
+  params:
+    zones:
+    - set: office
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: And the cloud is speeding up
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: THE QUIETER STREAMS
+      at: 0.2
+      size: 58
+      color: gold
+    - kind: sign
+      x: 720
+      y: 250
+      text: SELLER SERVICES $187.7BN
+      at:
+        cue: Fees from outside sellers
+      color: '#FFE0B2'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 330
+      text: ADS $78.0BN
+      at:
+        cue: over the year
+      color: '#FFE0B2'
+      size: 28
+    - kind: sign
+      x: 1300
+      y: 250
+      text: SUBSCRIPTIONS $54.3BN
+      at:
+        cue: Prime and other
+      color: '#FFE0B2'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 470
+      text: 'AWS GROWTH: 24% → 28% → 37% → 39%'
+      at:
+        cue: A W S growth went
+      color: '#C8E6C9'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 590
+      text: 'PRIME DAY SHIFT: ≈ −4 PTS IN Q3'
+      at:
+        cue: Prime Day moved
+      color: '#F5F5F5'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: happy
+      label: AWS
+      color: '#FF9F1C'
+      hop: 14
+  sources:
+  - rel
+  assets:
+  - font:inter
 - id: p10_machine
   segment: m1_draw
   type: engine_draw
@@ -949,6 +1030,87 @@ scenes:
       label: LOOP
       color: '#FF4FD8'
       hop: 20
+  sources:
+  - tenq
+  assets:
+  - font:inter
+- id: s15b_bsheet
+  segment: m2_bsheet
+  type: engine_cartoon
+  params:
+    zones:
+    - set: vault
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: On top of that
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: THE BALANCE SHEET FLIPPED
+      at: 0.2
+      size: 56
+      color: gold
+    - kind: sign
+      x: 760
+      y: 250
+      text: CASH + SECURITIES $114.2BN
+      at:
+        cue: Amazon held
+      color: '#C8E6C9'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 250
+      text: LONG-TERM DEBT $180.9BN
+      at:
+        cue: It owed
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 360
+      text: INCL. $17.5BN TERM LOAN (SEPT)
+      at:
+        cue: term loan
+      color: '#FFCDD2'
+      size: 26
+    - kind: sign
+      x: 1000
+      y: 480
+      text: LEASE LIABILITIES $98.8BN
+      at:
+        cue: lease liabilities
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 590
+      text: +$164.9BN OF LEASES NOT YET STARTED
+      at:
+        cue: signed but haven't
+      color: '#FFE0B2'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: worry
+      label: CASH
+      color: '#23995A'
+      hop: 12
   sources:
   - tenq
   assets:
@@ -2046,6 +2208,79 @@ scenes:
   sources:
   - tenq
   - rel
+  assets:
+  - font:inter
+- id: s34b_chips
+  segment: m5_chips
+  type: engine_cartoon
+  params:
+    zones:
+    - set: datacenter
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: A patent case
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: RISK 4 · SUPPLY
+      at: 0.2
+      size: 60
+      color: gold
+    - kind: sign
+      x: 760
+      y: 260
+      text: '''A LIMITED GROUP OF SUPPLIERS'''
+      at:
+        cue: relies on a limited
+      color: '#FFE0B2'
+      size: 28
+    - kind: sign
+      x: 1260
+      y: 260
+      text: MEMORY CHIP SWINGS
+      at:
+        cue: memory chips
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 390
+      text: PATENT CASE VS AWS SERVERS (ITC)
+      at:
+        cue: A patent case
+      color: '#FFCDD2'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 510
+      text: TAX POSITIONS ≈ $7.3BN
+      at:
+        cue: uncertain tax
+      color: '#F5F5F5'
+      size: 30
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.4
+      mood: worry
+      label: AWS
+      color: '#FF9F1C'
+      hop: 12
+  sources:
+  - tenq
   assets:
   - font:inter
 - id: s36_scale

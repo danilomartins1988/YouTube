@@ -97,6 +97,17 @@ stage("s09_cloud", "m1_cloud", {
               it("letters", x=1300, y=760, text="CLOUD BACKLOG ≈ $568BN", at=C("the Cloud backlog"), size=46, color="gold"),
               buddy(1900, 880, at=0.5, mood="shock", moods=[[C("the Cloud backlog"), "cool"]], label="TPU", color="#7DFF8A", hop=22, scale=1.2)]},
     sources=["rel", "tenq"])
+stage("s09b_geo", "m1_geo", {
+    "zones": [Z("exchange")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("And advertising fell"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="THE MIX IS SHIFTING", at=0.2, size=60, color="gold"),
+              it("sign", x=760, y=250, text="U.S. 53% OF REVENUE (+39%)", at=C("the United States"), color="#BBDEFB", size=30),
+              it("sign", x=1260, y=250, text="WAS 48% LAST YEAR", at=C("up from"), color="#F5F5F5", size=30),
+              it("sign", x=760, y=380, text="ADS: 64% OF THE QUARTER", at=C("And advertising fell"), color="#FFE0B2", size=30),
+              it("sign", x=1260, y=380, text="PARTNER IMPRESSIONS −14%", at=C("Impressions on partner"), color="#FFCDD2", size=30),
+              it("sign", x=1000, y=520, text="'HALF-TRILLION RUN RATE' (CEO CLAIM)", at=C("Sundar Pichai"), color="#C8E6C9", size=28),
+              buddy(1700, 860, at=0.3, mood="happy", label="GOOG", color="#3DF5FF", hop=14)]},
+    sources=["tenq", "rel"])
 board("p10_machine", "m1_draw", "The machine (FY2025 + Q3 2026)", C("Here is Google Services"), [
     {"d": rect(1080, 420, 360, 200), "color": "accent2", "width": 6, "kind": "box", "start": C("Here is Google Services"), "label": lbl("SERVICES · 41% MARGIN", 1260, 528, 20, "accent2")},
     {"d": rect(640, 450, 260, 140), "color": "accent3", "width": 6, "kind": "box", "start": C("Here is Google Cloud"), "label": lbl("CLOUD +103%", 770, 528, 20, "accent3")},
@@ -144,6 +155,17 @@ stage("s16_returns", "m2_returns", {
               it("sign", x=1400, y=700, text="SHARE COUNT +1.8% IN A YEAR", at=C("But the share count"), color="#FFCDD2", size=30),
               buddy(1900, 880, at=0.4, mood="worry", label="SHARES", color="#FF9F1C", hop=16)]},
     sources=["tenq"])
+stage("s16b_stakes", "m2_stakes", {
+    "zones": [Z("vault")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("Those are marks"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="A PILE OF STAKES", at=0.2, size=60, color="gold"),
+              it("sign", x=760, y=250, text="SPACEX SHARES $75.2BN (RESTRICTED)", at=C("of SpaceX shares"), color="#BBDEFB", size=28),
+              it("sign", x=1260, y=250, text="ONE PRIVATE CO. ≈ $128.2BN", at=C("one unnamed private"), color="#BBDEFB", size=28),
+              it("sign", x=1000, y=370, text="≈ 6% OF MARKET VALUE (OUR CALC.)", at=C("Together, by our math"), color="#FFF8E1", size=28),
+              it("sign", x=1000, y=480, text="Q3: −$8.2BN ON PAPER", at=C("they cost"), color="#FFCDD2", size=30),
+              it("sign", x=1000, y=590, text="JUNE OFFER $355.20 → NOV 10 CLOSE $287.38", at=C("the new shares"), color="#FFE0B2", size=28),
+              buddy(1700, 860, at=0.3, mood="worry", label="GOOG", color="#3DF5FF", hop=12)]},
+    sources=["tenq", "px"])
 board("p17_cash", "m2_draw", "Where twelve months of operating cash went", C("Here is the operating cash bar"), [
     {"d": "M 700 780 L 1560 780", "color": "ink", "width": 4, "start": C("Here is the operating cash bar"), "label": lbl("$BN · OUR CALC.", 1130, 830, 18, "ink")},
     bar(740, 150, 780, 380, "accent2", C("Here is the operating cash bar"), "OCF 180"),
@@ -260,6 +282,16 @@ stage("s34_legal", "m5_legal", {
               it("sign", x=1350, y=370, text="AD TECH: NO BREAKUP · OTHER REMEDIES", at=C("In ad tech"), color="#FFE0B2", size=28),
               it("sign", x=1000, y=490, text="EU ANDROID FINE PAID: $5.2BN · SET ASIDE ≈ $13.8BN", at=C("In Europe"), color="#FFCDD2", size=26),
               it("gavel", x=1800, y=600, hits=[C("rejected a breakup"), C("set aside")])]},
+    sources=["tenq"])
+stage("s34b_fines", "m5_fines", {
+    "zones": [Z("court")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("A Swedish"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="THE BILLS FROM EUROPE", at=0.2, size=60, color="gold"),
+              it("sign", x=760, y=260, text="EU AD TECH: $3.5BN CHARGE", at=C("The European ad tech"), color="#FFCDD2", size=30),
+              it("sign", x=1260, y=260, text="DMA: +$1.0BN (Q3)", at=C("digital markets"), color="#FFCDD2", size=30),
+              it("sign", x=1000, y=390, text="PRICERUNNER ≈ $2.1BN (APPEAL)", at=C("A Swedish"), color="#FFE0B2", size=30),
+              it("sign", x=1000, y=520, text="TEXAS AD TECH TRIAL: 'CANNOT ESTIMATE'", at=C("A Texas trial"), color="#F5F5F5", size=28),
+              buddy(1700, 860, at=0.4, mood="worry", label="GOOG", color="#3DF5FF", hop=12)]},
     sources=["tenq"])
 stage("s35_control", "m5_control", {
     "zones": [Z("parliament")], "worldW": 2400,

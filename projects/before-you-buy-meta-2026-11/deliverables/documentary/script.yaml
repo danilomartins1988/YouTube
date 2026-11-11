@@ -68,6 +68,14 @@ segments:
     people use at least one of its apps every day. More ads, at higher prices, to almost everyone online.
   claims:
   - q3
+- id: m1_geo
+  chapter: The machine
+  narration: Where does that money come from? The United States and Canada bring in {{geo}} of revenue. Europe, {{geo.eu_spoken}}.
+    Asia Pacific, {{geo.apac_spoken}}. The rest of the world, {{geo.row_spoken}}. And the machine is getting leaner.
+    Meta's headcount is down {{geo.staff_drop_spoken}} from a year ago, to {{geo.staff_spoken}} people. Almost all the
+    spending, {{geo.foa_cost_spoken}} of costs, goes into the apps, and the rest into the headsets and glasses lab.
+  claims:
+  - geo
 - id: m1_draw
   chapter: The machine
   narration: Let me draw the machine. Here is the Family of Apps, the big engine. Here is Reality Labs, the small one. Here is
@@ -108,6 +116,15 @@ segments:
     worth {{capital.fwd_spoken}}, and {{capital.notes_spoken}} of bonds. The share count is now rising, not falling.
   claims:
   - capital
+- id: m2_commit
+  chapter: The cash
+  narration: And the bills are already signed. Meta lists {{commit}} of non cancelable contractual commitments. About
+    {{commit.due26_spoken}} is due this year, and {{commit.due27_spoken}} next year. At the end of September, it held
+    {{commit.cash_spoken}} of cash and securities, against {{commit.debt_spoken}} of debt. So for the first time in
+    years, the balance sheet is roughly even, and with no buybacks, the share count rose about {{commit.shares_spoken}}
+    in nine months.
+  claims:
+  - commit
 - id: m2_draw
   chapter: The cash
   narration: Let me draw where twelve months of operating cash went. Here is the operating cash bar. Here is the capex bar,
@@ -225,6 +242,16 @@ segments:
     general could cost {{legal.ag_spoken}}. Legal accruals now total {{legal.accr_spoken}}.
   claims:
   - legal
+- id: m5_youth
+  chapter: Risks and upside
+  narration: And the youth safety cases aren't over. The settlement with the states is paid over ten years, with {{youth}} in
+    installments, plus about {{youth.contingent_spoken}} more that only comes due if rivals like YouTube and TikTok
+    adopt similar protections. Lawyers for {{youth.claimants_spoken}} people have sent mass arbitration demands. The
+    next school district trial is set for February. And the District of Columbia is seeking {{youth.dc_spoken}} in
+    penalties. Plaintiffs have claimed damages above a trillion dollars in some cases, but that's their number, not an
+    estimate.
+  claims:
+  - youth
 - id: m5_europe
   chapter: Risks and upside
   narration: Risk two is Europe, about {{legal.eu_spoken}} of revenue. Meta is appealing a fine over its pay or consent model,

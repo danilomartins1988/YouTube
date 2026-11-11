@@ -98,6 +98,19 @@ stage("s09_energy", "m1_energy", {
               it("letters", x=1700, y=520, text="BETTER THAN THE CARS", at=C("That's a better margin"), size=50, color="gold"),
               buddy(2200, 860, at=0.4, mood="cool", label="ENERGY", color="#7DFF8A", hop=20)]},
     sources=["tenq"])
+stage("s09b_geo", "m1_geo", {
+    "zones": [Z("exchange")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("Software is creeping"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="WHERE THE CUSTOMERS ARE", at=0.2, size=56, color="gold"),
+              it("sign", x=720, y=250, text="U.S. 46%", at=C("the United States brought"), color="#BBDEFB", size=32),
+              it("sign", x=1000, y=250, text="CHINA 20%", at=C("China"), color="#FFE0B2", size=32),
+              it("sign", x=1300, y=250, text="REST 34%", at=C("everywhere else"), color="#C8E6C9", size=32),
+              it("sign", x=760, y=380, text="Q3: U.S. −14%", at=C("U S revenue fell"), color="#FFCDD2", size=30),
+              it("sign", x=1260, y=380, text="Q3: OTHER INTL +32%", at=C("other international markets"), color="#C8E6C9", size=30),
+              it("sign", x=1000, y=510, text="FSD SUBSCRIPTIONS 1.04M → 1.74M", at=C("Active Full Self Driving"), color="#BBDEFB", size=28),
+              it("sign", x=1000, y=620, text="SERVICES ≈ $16.3BN / YEAR", at=C("And services"), color="#F5F5F5", size=28),
+              buddy(1700, 860, at=0.3, mood="happy", label="TSLA", color="#E53935", hop=14)]},
+    sources=["tenq", "deck"])
 board("p10_machine", "m1_draw", "The machine (FY2025 / TTM)", C("Here are the cars"), [
     {"d": rect(1080, 420, 360, 200), "color": "risk", "width": 6, "kind": "box", "start": C("Here are the cars"), "label": lbl("CARS · THIN MARGIN", 1260, 528, 20, "risk")},
     {"d": rect(1080, 700, 360, 120), "color": "accent3", "width": 6, "kind": "box", "start": C("Here is energy"), "label": lbl("ENERGY · ≈ 30% GM", 1260, 768, 20, "accent3")},
@@ -146,6 +159,18 @@ stage("s16_returns", "m2_returns", {
               it("sign", x=1400, y=320, text="DEBT ≈ $9.5BN", at=C("against about"), color="#C8E6C9", size=32),
               it("sign", x=1250, y=470, text="NO DIVIDEND · NO BUYBACKS", at=C("It pays no dividend"), color="#FFE0B2", size=30),
               coins(500, 760, [1300, 860], at=0.3, rate=6)]},
+    sources=["tenq"])
+stage("s16b_stake", "m2_stake", {
+    "zones": [Z("vault")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("These marks"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="A PIECE OF THE MUSK UNIVERSE", at=0.2, size=54, color="gold"),
+              it("sign", x=640, y=250, text="SPACEX STAKE: $2.0BN → $2.865BN", at=C("put"), color="#BBDEFB", size=28),
+              it("sign", x=1420, y=250, text="LOCK-UP ENDS DECEMBER", at=C("the lock up"), color="#F5F5F5", size=28),
+              it("sign", x=1000, y=370, text="SPACEX BOUGHT $626M OF MEGAPACKS", at=C("SpaceX bought"), color="#FFE0B2", size=28),
+              it("sign", x=760, y=490, text="Q3: SPACEX −$142M", at=C("a loss of"), color="#FFCDD2", size=28),
+              it("sign", x=1260, y=490, text="Q3: BITCOIN +$288M", at=C("on bitcoin"), color="#C8E6C9", size=28),
+              it("sign", x=1000, y=610, text="9M CAPEX $6.1BN → $13.0BN", at=C("capex in the first nine months"), color="#FFE0B2", size=28),
+              buddy(1700, 860, at=0.3, mood="worry", label="TSLA", color="#E53935", hop=12)]},
     sources=["tenq"])
 board("p17_cash", "m2_draw", "Twelve months of cash ($BN, our calc.)", C("Here is operating cash"), [
     {"d": "M 700 780 L 1460 780", "color": "ink", "width": 4, "start": C("Here is operating cash"), "label": lbl("$BN · TTM", 1080, 830, 18, "ink")},
@@ -257,6 +282,16 @@ stage("s34_demand", "m5_demand", {
               it("sign", x=1350, y=380, text="'STRONG COMPETITION'", at=C("Competition"), color="#FFE0B2", size=30),
               it("sign", x=1000, y=500, text="TAX CREDITS CUT · TARIFFS HIT ENERGY HARDER", at=C("Tax credits"), color="#FFCDD2", size=28)]},
     sources=["tenq"])
+stage("s34b_squeeze", "m5_squeeze", {
+    "zones": [Z("office")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("A securities class action"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="A THIN MARGIN", at=0.2, size=60, color="gold"),
+              it("sign", x=1000, y=250, text="TTM OPERATING MARGIN 3.3%", at=C("operating margin was"), color="#FFCDD2", size=32),
+              it("sign", x=1000, y=370, text="Q3 OPEX $3.43BN → $4.78BN", at=C("Operating expenses"), color="#FFE0B2", size=30),
+              it("sign", x=1000, y=490, text="SI + R&D + STOCK PAY (INCL. CEO AWARD)", at=C("super intelligence"), color="#F5F5F5", size=28),
+              it("sign", x=1000, y=610, text="SECURITIES CLASS ACTION PENDING", at=C("A securities class action"), color="#FFCDD2", size=28),
+              buddy(1700, 860, at=0.4, mood="worry", label="TSLA", color="#E53935", hop=12)]},
+    sources=["deck", "tenq"])
 stage("s35_legal", "m5_legal", {
     "zones": [Z("court")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("Regulators are asking"), "x": 1250, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,

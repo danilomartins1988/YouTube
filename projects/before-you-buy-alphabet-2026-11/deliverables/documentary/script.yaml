@@ -69,6 +69,15 @@ segments:
     A I chip systems, called T P Us, to customers. And the Cloud backlog stands at {{cloud.backlog_spoken}}.
   claims:
   - cloud
+- id: m1_geo
+  chapter: The machine
+  narration: That shift shows up on the map too. In the September quarter, the United States made up {{geo}} of revenue, growing
+    {{geo.us_growth_spoken}}, up from {{geo.us_prior_spoken}} of the total last year, in line with that American cloud
+    and chip demand. And advertising fell to {{geo.ads_spoken}} of quarterly revenue, from more than seventy percent
+    last year. Impressions on partner sites dropped {{geo.net_spoken}}. Sundar Pichai says the company is now on a half
+    trillion dollar revenue run rate. That's his framing, but the math roughly checks out.
+  claims:
+  - geo
 - id: m1_draw
   chapter: The machine
   narration: Let me draw the machine. Here is Google Services, the big profitable engine. Here is Google Cloud, the fast one.
@@ -118,6 +127,16 @@ segments:
     in a year, after years of shrinking.
   claims:
   - cash
+- id: m2_stakes
+  chapter: The cash
+  narration: There's also a strange pile of investments on the balance sheet. Alphabet holds {{stakes}} of SpaceX shares, which it
+    can't sell right away, and one unnamed private company carried at {{stakes.private_spoken}}. Together, by our math,
+    that's about {{stakes.mcshare_spoken}} of Alphabet's own market value. Those are marks, not cash, and they swing. In
+    the September quarter, mostly SpaceX, they cost about {{stakes.q3loss_spoken}} on paper. And the new shares sold in
+    June went out at about {{stakes.offer_spoken}} each. Today's price is {{stakes.below_spoken}} lower.
+  claims:
+  - stakes
+  - cap
 - id: m2_draw
   chapter: The cash
   narration: Let me draw where twelve months of operating cash went. Here is the operating cash bar. Here is the capex bar,
@@ -240,6 +259,14 @@ segments:
     fine this summer. And it has {{legal.accrued_spoken}} set aside for fines and settlements.
   claims:
   - legal
+- id: m5_fines
+  chapter: Risks and upside
+  narration: And the bills from Europe keep coming. The European ad tech fine was booked as a {{fines}} charge, and the two digital
+    markets decisions added another {{fines.dma_spoken}} last quarter, all under appeal. A Swedish price comparison site
+    won about {{fines.pr_spoken}} in damages, also under appeal. A Texas trial on ad tech is still ahead, and for that
+    one Alphabet says it can't estimate a possible loss.
+  claims:
+  - fines
 - id: m5_control
   chapter: Risks and upside
   narration: Risk three is control and dilution. The founders' special shares carry about {{risks.vote_spoken}} of the votes.

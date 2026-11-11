@@ -150,3 +150,27 @@ claims:
     fields: {}
     source_ids: [rel, tenq]
     status: source_located
+
+  - id: geo
+    text: "Our calc. from the 10-K FY2025 and 10-Qs, TTM revenue by user geography: U.S. and Canada $95.2bn (39.4%), Europe $55.5bn (23.0%), Asia-Pacific $63.9bn (26.5%), Rest of World $27.0bn (11.2%). Q3 press release: headcount 66,775 (-15% year over year). 10-Q: 'In the nine months ended September 30, 2026, 89% of our total costs and expenses were recognized in FoA and 11% were recognized in RL.'"
+    spoken: about thirty-nine percent
+    display: "TTM revenue: U.S.&Canada 39% · Europe 23% · Asia-Pacific 27% · RoW 11% (our calc.)"
+    fields: {eu_spoken: twenty-three percent, apac_spoken: about twenty-seven percent, row_spoken: eleven percent, staff_spoken: about sixty-seven thousand, staff_drop_spoken: fifteen percent, foa_cost_spoken: eighty-nine percent}
+    source_ids: [tenq, rel]
+    status: source_located
+
+  - id: commit
+    text: "10-Q: non-cancelable contractual commitments '$454.52 billion … with approximately $45.85 billion and $121.41 billion due in 2026 and 2027'. Sep 30, 2026: cash, equivalents and marketable securities $82,449M; debt (face) $84,000M. Shares outstanding 2,529,555,464 (Jan 23, 2026) to 2,556,241,253 (Oct 16, 2026), +1.05% (our calc.) with no buybacks."
+    spoken: about four hundred and fifty-five billion dollars
+    display: "$454.5bn of commitments; $121.4bn due in 2027 (10-Q)"
+    fields: {due26_spoken: about forty-six billion dollars, due27_spoken: about one hundred and twenty-one billion dollars, cash_spoken: about eighty-two billion dollars, debt_spoken: about eighty-four billion dollars, shares_spoken: about one percent}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: youth
+    text: "10-Q: settlement with state attorneys general, 'Approximately $12.7 billion … payable … in annual installments over a 10-year period'; about $5.3bn is contingent (payable only if peers adopt similar protections) and not accrued. 'counsel for over two hundred thousand individual claimants have sent mass arbitration demands'; next school-district bellwether February 2027; the DC Attorney General is 'seeking up to $1.7 billion in civil penalties'. Plaintiffs have said damages sought 'have at times in certain cases amounted to more than a trillion dollars' (a plaintiffs' claim, not an estimate)."
+    spoken: about twelve point seven billion dollars
+    display: "Youth cases: $12.7bn over 10 years · 200,000+ arbitration claimants · DC up to $1.7bn (10-Q)"
+    fields: {contingent_spoken: about five point three billion dollars, claimants_spoken: more than two hundred thousand, dc_spoken: up to one point seven billion dollars}
+    source_ids: [tenq]
+    status: source_located

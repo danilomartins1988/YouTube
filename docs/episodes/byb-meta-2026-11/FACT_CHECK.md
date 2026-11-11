@@ -21,6 +21,9 @@
 | WhatsApp paid messaging + subscriptions +59% (≈ $3.8bn TTM); Muse agentic AI; AI glasses | 10-Q | company claims, unsized |
 | Class C stock dividend works like a 2-for-1 split (charter effective Jan 19, 2027) | 8-K Oct 21, 2026 | source_located |
 | Next report late January 2027 | last year's date (Jan 28, 2026) | our estimate |
+| TTM revenue by geography: U.S.&Canada 39%, Europe 23%, Asia-Pacific 27%, RoW 11%; headcount 66,775 (−15%); 89% of costs in FoA | 10-K, 10-Qs; Q3 release | source_located (shares our calc.) |
+| Commitments $454.5bn ($45.9bn due 2026, $121.4bn 2027); cash $82.4bn vs debt $84.0bn; shares +1.05% in nine months | 10-Q | source_located (% our calc.) |
+| AG settlement $12.7bn over 10 years + ≈ $5.3bn contingent; 200,000+ arbitration claimants; next school-district trial Feb 2027; DC up to $1.7bn; '$1tn+' = plaintiffs' claim | 10-Q | source_located (plaintiffs' figure attributed) |
 
 Not used: analyst consensus (unverified snippet), plaintiffs' "more than a trillion dollars" claim, NM accrual amount, METAM conversion math.
 

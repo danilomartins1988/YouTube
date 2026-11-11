@@ -66,6 +66,15 @@ segments:
     the cars.
   claims:
   - seg
+- id: m1_geo
+  chapter: The machine
+  narration: Where are the customers? Over the last twelve months, the United States brought in {{geo}} of revenue, China
+    {{geo.china_spoken}}, and everywhere else {{geo.other_spoken}}. And the map is moving. Last quarter, U S revenue
+    fell {{geo.us_q3_spoken}}, while other international markets grew {{geo.intl_q3_spoken}}. Software is creeping in
+    too. Active Full Self Driving subscriptions reached {{geo.fsd_spoken}}, up from {{geo.fsd_prior_spoken}} a year
+    earlier. And services, from repairs to charging, now bring in {{geo.svc_spoken}} a year.
+  claims:
+  - geo
 - id: m1_draw
   chapter: The machine
   narration: Let me draw the machine. Here are the cars, the big engine with thin margins. Here is energy, smaller but more
@@ -114,6 +123,16 @@ segments:
     against about {{cash.debt_spoken}} of debt. It pays no dividend and buys back no stock.
   claims:
   - cash
+- id: m2_stake
+  chapter: The cash
+  narration: Tesla also owns a piece of the Musk universe. In March it put {{stake}} into what is now SpaceX stock. By the end of
+    September that stake was marked at {{stake.fv_spoken}}, and the lock up after the SpaceX listing ends in December.
+    The flow goes both ways. SpaceX bought {{stake.mp_spoken}} of Tesla's Megapack batteries this year. These marks move
+    the profit line. Last quarter, net income included a loss of {{stake.sx_loss_spoken}} on SpaceX and a gain of
+    {{stake.btc_spoken}} on bitcoin. Meanwhile, capex in the first nine months more than doubled, to
+    {{stake.capex9_spoken}} from {{stake.capex9_prior_spoken}}.
+  claims:
+  - stake
 - id: m2_draw
   chapter: The cash
   narration: Let me draw twelve months of cash. Here is operating cash. Here is capex, taking most of it. And here is what's left,
@@ -239,6 +258,15 @@ segments:
     keeps growing. Tax credits have been repealed or restricted, and tariffs hit the energy business harder than the cars.
   claims:
   - risks
+- id: m5_squeeze
+  chapter: Risks and upside
+  narration: And the margin is already thin. Over the last twelve months, Tesla's operating margin was {{squeeze}}. Operating
+    expenses last quarter were {{squeeze.opex_spoken}}, up from {{squeeze.opex_prior_spoken}} a year earlier, which
+    Tesla puts down to its super intelligence and other research projects, and to stock pay, including the C E O's
+    award. A securities class action over its Autopilot, self driving and Robotaxi claims is also pending. So the costs
+    of the bet arrive before the revenue does.
+  claims:
+  - squeeze
 - id: m5_legal
   chapter: Risks and upside
   narration: Risk three is the courts and regulators. In one Autopilot case, a jury awarded {{legal.comp_spoken}} in damages,

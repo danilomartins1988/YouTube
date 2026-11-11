@@ -150,3 +150,27 @@ claims:
     fields: {}
     source_ids: [rel, tenq]
     status: source_located
+
+  - id: geo
+    text: "10-Q, Q3 2026: United States 53% of revenue ($67.7bn, +39% year over year); EMEA 26%; APAC 16%; Other Americas 5%; FY2025 U.S. share 48% (10-K). Advertising $82,012M of $127,577M = 64% of Q3 revenue (our calc.); 10-K: 'more than 70% of total revenues from online advertising in 2025'. Network impressions -14% (10-Q). Pichai (Q3 release): 'now on a half-trillion dollar revenue run rate' (company claim)."
+    spoken: fifty-three percent
+    display: "Q3 2026: U.S. 53% of revenue (+39%) · ads 64% (10-Q; our calc.)"
+    fields: {us_growth_spoken: thirty-nine percent, us_prior_spoken: forty-eight percent, ads_spoken: about sixty-four percent, net_spoken: fourteen percent}
+    source_ids: [tenq, rel]
+    status: source_located
+
+  - id: stakes
+    text: "10-Q, Sep 30, 2026: marketable equity includes $75.2bn of SpaceX shares 'subject to short-term restrictions on the ability to sell'; non-marketable securities $135.2bn, of which about $128.2bn is 'primarily … our investment in one private company' (not named). Together ≈ 5.8% of market value (our calc.). Q3 other income and expense -$8.2bn, 'net unrealized losses in our marketable equity securities largely from SpaceX'. June 2026 offering price '$355.1982 per share' (Class A); Nov 10 close $287.38 is 19% below (our calc.)."
+    spoken: about seventy-five billion dollars
+    display: "SpaceX stake $75.2bn + one private company ≈ $128.2bn (10-Q)"
+    fields: {private_spoken: about one hundred and twenty-eight billion dollars, mcshare_spoken: about six percent, q3loss_spoken: about eight billion dollars, offer_spoken: about three hundred and fifty-five dollars, below_spoken: nineteen percent}
+    source_ids: [tenq, px]
+    status: source_located
+
+  - id: fines
+    text: "10-Q Note 10: European Commission ad tech fine recorded as a $3.5bn charge, under appeal; EU DMA decisions (Play and Search) recorded as a $1.0bn charge in Q3 2026, under appeal; PriceRunner (Stockholm) 'approximately $2.1 billion … in principal damages plus accrued interest', under appeal; DOJ ad tech: a Texas state AG trial follows; 'We cannot estimate a possible loss.'"
+    spoken: three and a half billion dollars
+    display: "EU ad tech $3.5bn charge · DMA $1.0bn · PriceRunner ≈ $2.1bn (10-Q)"
+    fields: {dma_spoken: one billion dollars, pr_spoken: about two point one billion dollars}
+    source_ids: [tenq]
+    status: source_located

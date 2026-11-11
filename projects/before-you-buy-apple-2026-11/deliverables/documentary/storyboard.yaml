@@ -601,6 +601,105 @@ scenes:
   - tenk
   assets:
   - font:inter
+- id: s09b_rhythm
+  segment: m1_rhythm
+  type: engine_cartoon
+  params:
+    zones:
+    - set: shop
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Now look at
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: ONE GIANT QUARTER
+      at: 0.2
+      until:
+        cue: Now look at
+      size: 60
+      color: gold
+    - kind: counter
+      x: 800
+      y: 280
+      at:
+        cue: The December quarter
+      prefix: $
+      suffix: BN
+      decimals: 1
+      steps:
+      - - 0
+        - 0
+      - - cue: brought in
+        - 143.8
+      text: DEC QUARTER = 30% OF THE YEAR
+      until:
+        cue: Now look at
+    - kind: letters
+      x: 1000
+      y: 100
+      text: SEP QUARTER, YEAR OVER YEAR
+      at:
+        cue: Now look at
+      size: 52
+      color: gold
+    - kind: sign
+      x: 560
+      y: 260
+      text: IPHONE +17.5%
+      at:
+        cue: The iPhone grew
+      color: '#C8E6C9'
+      size: 32
+    - kind: sign
+      x: 940
+      y: 260
+      text: MAC +23.7%
+      at:
+        cue: and the Mac
+      color: '#C8E6C9'
+      size: 32
+    - kind: sign
+      x: 1320
+      y: 260
+      text: IPAD −10.4%
+      at:
+        cue: the iPad fell
+      color: '#FFCDD2'
+      size: 32
+    - kind: sign
+      x: 1700
+      y: 360
+      text: WEARABLES −7.9%
+      at:
+        cue: wearables slipped
+      color: '#FFCDD2'
+      size: 30
+    - kind: chipbuddy
+      x: 450
+      y: 860
+      at: 0.3
+      mood: happy
+      label: AAPL
+      hop: 14
+  sources:
+  - tenk
+  - q4
+  assets:
+  - font:inter
 - id: p10_machine
   segment: m1_draw
   type: engine_draw
@@ -946,6 +1045,91 @@ scenes:
       label: AI
       color: '#7B61FF'
       hop: 14
+  sources:
+  - tenk
+  assets:
+  - font:inter
+- id: s15b_quality
+  segment: m2_quality
+  type: engine_cartoon
+  params:
+    zones:
+    - set: vault
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Part of that
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    - at:
+        cue: And the day before
+      x: 1000
+      y: 520
+      zoom: 1.05
+      dur: 1.6
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: A FOOTNOTE ON THE CASH
+      at: 0.2
+      size: 58
+      color: gold
+    - kind: counter
+      x: 800
+      y: 270
+      at:
+        cue: Operating cash flow
+      prefix: $
+      suffix: BN
+      decimals: 1
+      steps:
+      - - 0
+        - 111.5
+      - - cue: jumped
+        - 145.1
+      text: OPERATING CASH FLOW (+30%)
+    - kind: sign
+      x: 1280
+      y: 250
+      text: 'OTHER LIABILITIES: +$13.7BN (VS −$11.1BN)'
+      at:
+        cue: A swing in
+      color: '#FFE0B2'
+      size: 28
+    - kind: sign
+      x: 1280
+      y: 360
+      text: INVENTORIES $5.7BN → $14.5BN
+      at:
+        cue: And inventories
+      color: '#FFE0B2'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 520
+      text: 'NOV 9: $7.5BN OF NEW BONDS (8-K)'
+      at:
+        cue: Apple still sold
+      color: '#BBDEFB'
+      size: 30
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: worry
+      label: CASH
+      color: '#23995A'
+      hop: 12
   sources:
   - tenk
   assets:
@@ -1998,6 +2182,86 @@ scenes:
         - 200
       - - 10
         - 1300
+      y: 760
+      scale: 0.7
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.4
+      mood: worry
+      label: AAPL
+      hop: 12
+  sources:
+  - tenk
+  assets:
+  - font:inter
+- id: s34b_partners
+  segment: m5_partners
+  type: engine_cartoon
+  params:
+    zones:
+    - set: port
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: On the selling side
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 3
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: RISK 4 · A FEW BIG PARTNERS
+      at: 0.2
+      size: 52
+      color: gold
+    - kind: sign
+      x: 640
+      y: 250
+      text: '2 SUPPLIERS: 45% + 27%'
+      at:
+        cue: just two suppliers
+      color: '#FFE0B2'
+      size: 32
+    - kind: sign
+      x: 1340
+      y: 250
+      text: 'CARRIERS: 33% OF RECEIVABLES'
+      at:
+        cue: phone carriers
+      color: '#BBDEFB'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 360
+      text: 'ONE CUSTOMER: 13%'
+      at:
+        cue: one single customer
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 520
+      text: NAMES NOT DISCLOSED (10-K)
+      at:
+        cue: doesn't name
+      color: '#F5F5F5'
+      size: 28
+    - kind: cargo
+      x:
+      - - 0
+        - 200
+      - - 12
+        - 1400
       y: 760
       scale: 0.7
     - kind: chipbuddy

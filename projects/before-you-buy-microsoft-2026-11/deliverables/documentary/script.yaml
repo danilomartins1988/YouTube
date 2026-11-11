@@ -68,6 +68,14 @@ segments:
     So OpenAI is a partner, a shareholder story, and one of Azure's biggest buyers, all at once.
   claims:
   - openai
+- id: m1_lines
+  chapter: The machine
+  narration: Under the hood, the product lines are moving at very different speeds. the cloud Office subscriptions made {{lines}} in the quarter, up {{lines.m365_growth_spoken}}. Search and advertising grew {{lines.search_spoken}}.
+    But the older businesses are shrinking. Windows sales to PC makers fell {{lines.win_spoken}}, Xbox slipped
+    {{lines.xbox_spoken}}, and classic software licenses dropped {{lines.lic_spoken}}. So the cloud engine runs at an
+    operating margin of {{lines.margin_spoken}}, while the consumer side is going backwards.
+  claims:
+  - lines
 - id: m1_draw
   chapter: The machine
   narration: Let me draw the machine. Here is Agents and Infra, the big engine. Here is Devices and Consumer, the small one.
@@ -239,6 +247,15 @@ segments:
     not be realized or sustained. And if prices for A I services fall because of competition, margins could suffer.
   claims:
   - risks
+- id: m5_stake
+  chapter: Risks and upside
+  narration: And the OpenAI tie runs deeper than revenue. Microsoft owns {{oai}} of OpenAI on an as-converted basis. OpenAI owes it
+    {{oai.recv_spoken}}. And Microsoft has committed {{oai.commit_spoken}} of funding, with {{oai.funded_spoken}} of
+    that already paid in. Last fiscal year, OpenAI brought in {{oai.fy_spoken}} of revenue, {{oai.fyshare_spoken}} of
+    the total. Microsoft's own filing warns that a partnership that fails to anticipate changing circumstances may end
+    early or be renegotiated. It doesn't put a market value on the stake, and neither will we.
+  claims:
+  - oai
 - id: m5_other
   chapter: Risks and upside
   narration: Risk three is the long list in the fine print. The I R S is seeking an extra {{risks}} in tax, plus penalties and

@@ -102,6 +102,17 @@ stage("s09_backlog", "m1_backlog", {
               it("letters", x=1100, y=600, text="SHARE OF THE TOTAL: NOT DISCLOSED", at=C("doesn't say what share"), size=44, color="gold"),
               buddy(400, 880, at=0.4, mood="shock", moods=[[C("doesn't say what share"), "worry"]], label="BACKLOG", color="#7DFF8A", hop=20)]},
     sources=["tenq"])
+stage("s09b_streams", "m1_streams", {
+    "zones": [Z("office")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("And the cloud is speeding up"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="THE QUIETER STREAMS", at=0.2, size=58, color="gold"),
+              it("sign", x=720, y=250, text="SELLER SERVICES $187.7BN", at=C("Fees from outside sellers"), color="#FFE0B2", size=28),
+              it("sign", x=1000, y=330, text="ADS $78.0BN", at=C("over the year"), color="#FFE0B2", size=28),
+              it("sign", x=1300, y=250, text="SUBSCRIPTIONS $54.3BN", at=C("Prime and other"), color="#FFE0B2", size=28),
+              it("sign", x=1000, y=470, text="AWS GROWTH: 24% → 28% → 37% → 39%", at=C("A W S growth went"), color="#C8E6C9", size=30),
+              it("sign", x=1000, y=590, text="PRIME DAY SHIFT: ≈ −4 PTS IN Q3", at=C("Prime Day moved"), color="#F5F5F5", size=28),
+              buddy(1700, 860, at=0.3, mood="happy", label="AWS", color="#FF9F1C", hop=14)]},
+    sources=["rel"])
 board("p10_machine", "m1_draw", "The machine (TTM to Q3 2026)", C("Here are the stores"), [
     {"d": rect(1080, 420, 360, 200), "color": "accent", "width": 6, "kind": "box", "start": C("Here are the stores"), "label": lbl("STORES · THIN MARGIN", 1260, 528, 20, "accent")},
     {"d": rect(1080, 700, 360, 120), "color": "accent2", "width": 6, "kind": "box", "start": C("Here is A W S"), "label": lbl("AWS · 58% OF PROFIT", 1260, 768, 20, "accent2")},
@@ -141,6 +152,17 @@ stage("s15_stakes", "m2_stakes", {
               it("counter", x=1000, y=340, at=C("In total"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [{"cue": "are carried at"}, 298.8]], text="STAKES + CONVERTIBLES, CARRIED VALUE (10-Q)"),
               it("letters", x=1000, y=540, text="INVESTOR AND SUPPLIER AT THE SAME TIME", at=C("Investor and supplier"), size=42, color="gold"),
               buddy(1850, 880, at=0.4, mood="shock", label="LOOP", color="#FF4FD8", hop=20)]},
+    sources=["tenq"])
+stage("s15b_bsheet", "m2_bsheet", {
+    "zones": [Z("vault")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("On top of that"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="THE BALANCE SHEET FLIPPED", at=0.2, size=56, color="gold"),
+              it("sign", x=760, y=250, text="CASH + SECURITIES $114.2BN", at=C("Amazon held"), color="#C8E6C9", size=30),
+              it("sign", x=1260, y=250, text="LONG-TERM DEBT $180.9BN", at=C("It owed"), color="#FFCDD2", size=30),
+              it("sign", x=1260, y=360, text="INCL. $17.5BN TERM LOAN (SEPT)", at=C("term loan"), color="#FFCDD2", size=26),
+              it("sign", x=1000, y=480, text="LEASE LIABILITIES $98.8BN", at=C("lease liabilities"), color="#FFE0B2", size=30),
+              it("sign", x=1000, y=590, text="+$164.9BN OF LEASES NOT YET STARTED", at=C("signed but haven't"), color="#FFE0B2", size=28),
+              buddy(1700, 860, at=0.3, mood="worry", label="CASH", color="#23995A", hop=12)]},
     sources=["tenq"])
 stage("s16_outlook", "m2_returns", {
     "zones": [Z("site")], "worldW": 2400,
@@ -274,6 +296,16 @@ stage("s35_legal", "m5_legal", {
               it("sign", x=1000, y=510, text="PRIME SETTLEMENT (2025): $2.5BN", at=C("And last year's Prime"), color="#BBDEFB", size=28),
               it("gavel", x=1800, y=620, hits=[C("sued over"), C("cost")])]},
     sources=["tenq", "rel"])
+stage("s34b_chips", "m5_chips", {
+    "zones": [Z("datacenter")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("A patent case"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="RISK 4 · SUPPLY", at=0.2, size=60, color="gold"),
+              it("sign", x=760, y=260, text="'A LIMITED GROUP OF SUPPLIERS'", at=C("relies on a limited"), color="#FFE0B2", size=28),
+              it("sign", x=1260, y=260, text="MEMORY CHIP SWINGS", at=C("memory chips"), color="#FFE0B2", size=30),
+              it("sign", x=1000, y=390, text="PATENT CASE VS AWS SERVERS (ITC)", at=C("A patent case"), color="#FFCDD2", size=28),
+              it("sign", x=1000, y=510, text="TAX POSITIONS ≈ $7.3BN", at=C("uncertain tax"), color="#F5F5F5", size=30),
+              buddy(1700, 860, at=0.4, mood="worry", label="AWS", color="#FF9F1C", hop=12)]},
+    sources=["tenq"])
 stage("s36_scale", "m5_upside", {
     "zones": [Z("studio", night=True)], "worldW": 1920, "night": True,
     "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.0}, {"at": C("are marks and claims"), "x": 960, "y": 500, "zoom": 1.05, "dur": 2.0}], "drift": 2,

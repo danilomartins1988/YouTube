@@ -69,6 +69,16 @@ segments:
     a hundred billion over ten. Amazon doesn't say what share of the total they are.
   claims:
   - aws
+- id: m1_streams
+  chapter: The machine
+  narration: Behind the stores there are quieter money streams too. Fees from outside sellers who use Amazon's marketplace and
+    warehouses brought in {{streams}} over the year. Advertising, {{streams.ads_spoken}}. Prime and other
+    subscriptions, {{streams.subs_spoken}}. And the cloud is speeding up, not slowing down. A W S growth went from
+    {{streams.g1_spoken}}, to {{streams.g2_spoken}}, to {{streams.g3_spoken}}, to {{streams.g4_spoken}} over the last
+    four quarters, ignoring currency moves. One caution for the stores. Prime Day moved to an earlier quarter this year,
+    which Amazon says cut the latest quarter's growth by {{streams.shift_spoken}}.
+  claims:
+  - streams
 - id: m1_draw
   chapter: The machine
   narration: Let me draw the machine. Here are the stores, huge but thin margin. Here is A W S, small in sales but carrying the
@@ -111,6 +121,14 @@ segments:
   claims:
   - cash
   - aws
+- id: m2_bsheet
+  chapter: The cash
+  narration: Put the balance sheet together and it has flipped. At the end of September, Amazon held {{bsheet}} of cash and
+    securities. It owed {{bsheet.debt_spoken}} in long term debt, including a {{bsheet.loan_spoken}} term loan taken in
+    September. On top of that, lease liabilities add {{bsheet.lease_spoken}}, and another {{bsheet.notyet_spoken}} of
+    leases are signed but haven't started yet. That's the price of building data centers faster than the cash comes in.
+  claims:
+  - bsheet
 - id: m2_returns
   chapter: The cash
   narration: And the company says the spending isn't done. It expects cash capex this year of {{guide.capex_spoken}}, and it says
@@ -244,6 +262,14 @@ segments:
     auctions. Older antitrust cases seek billions of dollars in damages. And last year's Prime settlement cost {{legal}}.
   claims:
   - legal
+- id: m5_chips
+  chapter: Risks and upside
+  narration: And then there's supply. Amazon says it relies on a limited group of suppliers for chips, including the graphics
+    processors behind A I, and its own guidance flags supply swings in memory chips. A patent case at the International
+    Trade Commission is seeking to block some A W S servers. And Amazon carries about {{chips}} of uncertain tax
+    positions. None of these is sized as a loss, but each one could slow the build out.
+  claims:
+  - chips
 - id: m5_upside
   chapter: Risks and upside
   narration: And the upside the price might not fully include. The C E O says Amazon may have {{upside}} trillion dollar revenue

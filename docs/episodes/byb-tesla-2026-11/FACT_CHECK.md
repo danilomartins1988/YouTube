@@ -17,6 +17,9 @@
 | Benavides: $129M compensatory + $200M punitive, on appeal; regulators' ADAS/Robotaxi requests; no wrongdoing found | 10-Q | source_located |
 | Semi in production; Cybercab capacity > 125,000; FSD in 9 EU countries; SpaceX stake (lock-up to Dec 2026) | deck, 10-Q | company claims / source_located |
 | Next report late January 2027; Q4 deliveries ≈ Jan 2, 2027 | last year's dates | our estimate |
+| TTM revenue: U.S. 46%, China 20%, other 34%; Q3 U.S. −14%, other international +32%; FSD subscriptions 1.04M → 1.74M; services ≈ $16.3bn TTM | 10-K, 10-Q; Q3 Update | source_located (shares/TTM our calc.) |
+| SpaceX stake $2.0bn → $2.865bn fair value; lock-up ends December 2026; SpaceX bought $626M of Megapacks (9M); Q3 SpaceX −$142M, bitcoin +$288M; 9M capex $6.13bn → $13.01bn | 10-Q | source_located |
+| TTM operating margin 3.3%; Q3 opex $4.78bn vs $3.43bn (SI, R&D, SBC incl. CEO award); securities class action pending | Q3 Update; 10-Q | source_located (margin our calc.) |
 
 Not used: analyst consensus (unverified), segment operating margins (not reported), Robotaxi/Optimus revenue (none disclosed), any TAM figure.
 

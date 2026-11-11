@@ -16,6 +16,9 @@
 | Google licensing risk (no amount); App Store/Epic at the Supreme Court; DOJ suit; DMA fine under appeal, up to 10% of sales (≈ $48bn ceiling) | 10-K | source_located / derived |
 | Installed base at an all-time high (no number); cloud AI services; advertising | Q4 release; 10-K | source_located |
 | Next report late January 2027 | last year's date (Jan 29, 2026) | our estimate |
+| Dec quarter $143.8bn ≈ 30% of FY2026 sales; iPhone $85.3bn that quarter; Sep quarter y/y: iPhone +17.5%, Mac +23.7%, iPad −10.4%, Wearables −7.9% | 10-Qs; Q4 release | source_located (shares, growth our calc.) |
+| OCF $111.5bn → $145.1bn (+30%); other liabilities +$13.7bn vs −$11.1bn; inventories $5.7bn → $14.5bn; $7.5bn notes issued Nov 9, 2026 | 10-K cash flow; 8-K | source_located (sum our calc.) |
+| Two vendors 45% and 27% of vendor non-trade receivables; one customer 13% and carriers 33% of trade receivables; names not disclosed | 10-K | source_located |
 
 Not used: December-quarter guidance (MacRumors only), product names from secondary coverage, Google payment amounts, analyst consensus.
 A named human reviewer must sign off before publication.

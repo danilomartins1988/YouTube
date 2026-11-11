@@ -586,6 +586,94 @@ scenes:
   - tenq
   assets:
   - font:inter
+- id: s09b_lines
+  segment: m1_lines
+  type: engine_cartoon
+  params:
+    zones:
+    - set: datacenter
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: But the older businesses
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: DIFFERENT SPEEDS
+      at: 0.2
+      size: 60
+      color: gold
+    - kind: sign
+      x: 740
+      y: 250
+      text: M365 CLOUD +17%
+      at:
+        cue: the cloud Office
+      color: '#C8E6C9'
+      size: 32
+    - kind: sign
+      x: 1000
+      y: 250
+      text: SEARCH & ADS +10%
+      at:
+        cue: Search and advertising
+      color: '#C8E6C9'
+      size: 32
+    - kind: sign
+      x: 740
+      y: 380
+      text: WINDOWS OEM −22%
+      at:
+        cue: Windows sales
+      color: '#FFCDD2'
+      size: 32
+    - kind: sign
+      x: 1000
+      y: 380
+      text: XBOX −2%
+      at:
+        cue: Xbox slipped
+      color: '#FFCDD2'
+      size: 32
+    - kind: sign
+      x: 1280
+      y: 380
+      text: LICENSES −3%
+      at:
+        cue: classic software
+      color: '#FFCDD2'
+      size: 32
+    - kind: sign
+      x: 1000
+      y: 520
+      text: CLOUD ENGINE MARGIN ≈ 53%
+      at:
+        cue: So the cloud engine
+      color: '#BBDEFB'
+      size: 30
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: happy
+      label: AZURE
+      hop: 14
+  sources:
+  - tenq
+  assets:
+  - font:inter
 - id: p10_machine
   segment: m1_draw
   type: engine_draw
@@ -1957,6 +2045,86 @@ scenes:
       - - cue: because of competition
         - AI COMPUTE ↓
         - true
+  sources:
+  - tenq
+  assets:
+  - font:inter
+- id: s34b_stake
+  segment: m5_stake
+  type: engine_cartoon
+  params:
+    zones:
+    - set: vault
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Last fiscal year
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: THE OPENAI TIE
+      at: 0.2
+      size: 60
+      color: gold
+    - kind: sign
+      x: 740
+      y: 250
+      text: STAKE ≈ 24% (AS-CONVERTED)
+      at:
+        cue: Microsoft owns
+      color: '#BBDEFB'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 250
+      text: OPENAI OWES $7.2BN
+      at:
+        cue: OpenAI owes it
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 370
+      text: 'FUNDING: $12.0BN OF $13.0BN PAID IN'
+      at:
+        cue: has committed
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 490
+      text: 'FY2026: $24.1BN = 7.3% OF REVENUE'
+      at:
+        cue: Last fiscal year
+      color: '#C8E6C9'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 610
+      text: '''MAY RESULT IN EARLY TERMINATION OR RENEGOTIATION'''
+      at:
+        cue: Microsoft's own filing
+      color: '#FFCDD2'
+      size: 26
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.4
+      mood: worry
+      label: MSFT
+      hop: 12
   sources:
   - tenq
   assets:

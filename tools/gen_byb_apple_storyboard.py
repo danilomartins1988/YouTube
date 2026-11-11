@@ -90,6 +90,18 @@ stage("s09_where", "m1_where", {
               it("sign", x=900, y=330, text="BUILT BY PARTNERS: CHINA · INDIA · VIETNAM …", at=C("And almost all"), color="#FFE0B2", size=26),
               ship(kind="cargo", x=[[0, 300], [12, 1100]], y=760, scale=0.7)]},
     sources=["tenk"])
+stage("s09b_rhythm", "m1_rhythm", {
+    "zones": [Z("shop")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("Now look at"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="ONE GIANT QUARTER", at=0.2, until=C("Now look at"), size=60, color="gold"),
+              it("counter", x=800, y=280, at=C("The December quarter"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [{"cue": "brought in"}, 143.8]], text="DEC QUARTER = 30% OF THE YEAR", until=C("Now look at")),
+              it("letters", x=1000, y=100, text="SEP QUARTER, YEAR OVER YEAR", at=C("Now look at"), size=52, color="gold"),
+              it("sign", x=560, y=260, text="IPHONE +17.5%", at=C("The iPhone grew"), color="#C8E6C9", size=32),
+              it("sign", x=940, y=260, text="MAC +23.7%", at=C("and the Mac"), color="#C8E6C9", size=32),
+              it("sign", x=1320, y=260, text="IPAD −10.4%", at=C("the iPad fell"), color="#FFCDD2", size=32),
+              it("sign", x=1700, y=360, text="WEARABLES −7.9%", at=C("wearables slipped"), color="#FFCDD2", size=30),
+              buddy(450, 860, at=0.3, mood="happy", label="AAPL", hop=14)]},
+    sources=["tenk", "q4"])
 board("p10_machine", "m1_draw", "The machine (FY2026, 10-K)", C("Here are the products"), [
     {"d": rect(640, 420, 300, 180), "color": "accent2", "width": 6, "kind": "box", "start": C("Here are the products"), "label": lbl("PRODUCTS · 39% MARGIN", 790, 518, 20, "accent2")},
     {"d": rect(640, 700, 300, 120), "color": "accent3", "width": 6, "kind": "box", "start": C("Here is Services"), "label": lbl("SERVICES · 76% MARGIN", 790, 768, 20, "accent3")},
@@ -128,6 +140,16 @@ stage("s15_ai", "m2_ai", {
               it("sign", x=1450, y=380, text="COMPUTE: THIRD-PARTY CLOUD", at=C("And Apple says"), color="#BBDEFB", size=30),
               it("sign", x=1100, y=520, text="PART OF THE AI BILL = EXPENSE, NOT CAPEX", at=C("So part of"), color="#FFE0B2", size=28),
               buddy(500, 860, at=0.3, mood="worry", label="AI", color="#7B61FF", hop=14)]},
+    sources=["tenk"])
+stage("s15b_quality", "m2_quality", {
+    "zones": [Z("vault")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.05}, {"at": C("Part of that"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}, {"at": C("And the day before"), "x": 1000, "y": 520, "zoom": 1.05, "dur": 1.6}], "drift": 2,
+    "items": [it("letters", x=1000, y=100, text="A FOOTNOTE ON THE CASH", at=0.2, size=58, color="gold"),
+              it("counter", x=800, y=270, at=C("Operating cash flow"), prefix="$", suffix="BN", decimals=1, steps=[[0, 111.5], [{"cue": "jumped"}, 145.1]], text="OPERATING CASH FLOW (+30%)"),
+              it("sign", x=1280, y=250, text="OTHER LIABILITIES: +$13.7BN (VS −$11.1BN)", at=C("A swing in"), color="#FFE0B2", size=28),
+              it("sign", x=1280, y=360, text="INVENTORIES $5.7BN → $14.5BN", at=C("And inventories"), color="#FFE0B2", size=28),
+              it("sign", x=1000, y=520, text="NOV 9: $7.5BN OF NEW BONDS (8-K)", at=C("Apple still sold"), color="#BBDEFB", size=30),
+              buddy(1700, 860, at=0.3, mood="worry", label="CASH", color="#23995A", hop=12)]},
     sources=["tenk"])
 board("p16_cash", "m2_draw", "Where a year of free cash went (FY2026)", C("Here is the free cash flow bar"), [
     {"d": "M 700 760 L 1560 760", "color": "ink", "width": 4, "start": C("Here is the free cash flow bar"), "label": lbl("$BN · 10-K · OUR CALC.", 1130, 810, 18, "ink")},
@@ -251,6 +273,17 @@ stage("s34_tariffs", "m5_tariffs", {
               it("sign", x=1000, y=250, text="MEMORY PRICES ↑", at=C("Memory prices"), color="#FFE0B2", size=34),
               it("sign", x=1400, y=250, text="THE AI RACE", at=C("artificial intelligence"), color="#BBDEFB", size=34),
               ship(kind="cargo", x=[[0, 200], [10, 1300]], y=760, scale=0.7),
+              buddy(1700, 860, at=0.4, mood="worry", label="AAPL", hop=12)]},
+    sources=["tenk"])
+stage("s34b_partners", "m5_partners", {
+    "zones": [Z("port")], "worldW": 2400,
+    "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("On the selling side"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 3,
+    "items": [it("letters", x=1000, y=100, text="RISK 4 · A FEW BIG PARTNERS", at=0.2, size=52, color="gold"),
+              it("sign", x=640, y=250, text="2 SUPPLIERS: 45% + 27%", at=C("just two suppliers"), color="#FFE0B2", size=32),
+              it("sign", x=1340, y=250, text="CARRIERS: 33% OF RECEIVABLES", at=C("phone carriers"), color="#BBDEFB", size=30),
+              it("sign", x=1260, y=360, text="ONE CUSTOMER: 13%", at=C("one single customer"), color="#FFCDD2", size=30),
+              it("sign", x=1000, y=520, text="NAMES NOT DISCLOSED (10-K)", at=C("doesn't name"), color="#F5F5F5", size=28),
+              ship(kind="cargo", x=[[0, 200], [12, 1400]], y=760, scale=0.7),
               buddy(1700, 860, at=0.4, mood="worry", label="AAPL", hop=12)]},
     sources=["tenk"])
 stage("s35_scale", "m5_upside", {

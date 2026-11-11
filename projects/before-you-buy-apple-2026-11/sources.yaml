@@ -121,3 +121,27 @@ claims:
     fields: {next_spoken: late January twenty twenty-seven}
     source_ids: [q4, tenk]
     status: source_located
+
+  - id: qtr
+    text: "10-Qs and Q4 release, net sales by category ($M): Q1 FY26 (Dec quarter) total 143,756, iPhone 85,269; FY2026 total 478,834, so the Dec quarter was 30.0% of the year (our calc.). Q4 FY26 (Sep quarter) year over year (our calc.): iPhone +17.5%, Mac +23.7%, iPad -10.4%, Wearables, Home and Accessories -7.9%."
+    spoken: about one hundred and forty-four billion dollars
+    display: "Dec quarter $143.8bn = 30% of FY2026 sales (10-Q; our calc.)"
+    fields: {dec_share_spoken: thirty percent, dec_iphone_spoken: about eighty-five billion dollars, iph_spoken: seventeen and a half percent, mac_spoken: almost twenty-four percent, ipad_spoken: about ten percent, wear_spoken: about eight percent}
+    source_ids: [tenk, q4]
+    status: source_located
+
+  - id: ocfq
+    text: "10-K cash-flow statement: operating cash flow $111,482M (FY2025) and $145,097M (FY2026), +30% (our calc.); 'Other current and non-current liabilities' +$13.7bn in FY2026 vs -$11.1bn in FY2025; inventories $5.7bn to $14.5bn. 8-K: $7.5bn of notes issued Nov 9, 2026 (seven tranches, 2028-2036; sum our calc.)."
+    spoken: about one hundred and eleven billion dollars
+    display: "Operating cash $111.5bn → $145.1bn (+30%); timing items inside (10-K)"
+    fields: {jump_spoken: thirty percent, liab_spoken: about fourteen billion dollars, liab_prior_spoken: about eleven billion dollars, inv0_spoken: about six billion dollars, inv1_spoken: about fourteen and a half billion dollars, notes_spoken: seven and a half billion dollars}
+    source_ids: [tenk]
+    status: source_located
+
+  - id: conc
+    text: "10-K: 'Substantially all of the Company's hardware products are manufactured by outsourcing partners'; two vendors accounted for 45% and 27% of vendor non-trade receivables; one customer accounted for 13% of total trade receivables; cellular network carriers accounted for 33% of trade receivables. Names not disclosed."
+    spoken: forty-five percent
+    display: "Two vendors: 45% and 27% of vendor receivables; carriers 33% of trade receivables (10-K)"
+    fields: {v2_spoken: twenty-seven percent, carriers_spoken: a third, one_spoken: thirteen percent}
+    source_ids: [tenk]
+    status: source_located

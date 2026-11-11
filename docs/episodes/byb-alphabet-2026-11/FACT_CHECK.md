@@ -16,6 +16,9 @@
 | DOJ search and ad-tech remedies; EC Android $5.2bn paid; accrued fines $13.8bn | 10-Q Note 10 | source_located |
 | Gemini app one billion users; TPU systems; SpaceX + private-company stakes marked ≈ $203bn | release, 10-Q | company claims / marks |
 | Next report early February 2027 | last year's date (Feb 4, 2026) | our estimate |
+| Q3 2026: U.S. 53% of revenue (+39%), 48% in FY2025; ads 64% of Q3 revenue (>70% in 2025); network impressions −14%; 'half-trillion run rate' (CEO claim) | 10-Q; 10-K; Q3 release | source_located (ads share our calc.; claim attributed) |
+| SpaceX shares $75.2bn (restricted) + one private company ≈ $128.2bn ≈ 6% of market value; Q3 −$8.2bn other income mostly SpaceX; June offering $355.20 vs Nov 10 close $287.38 (−19%) | 10-Q; price | source_located (% our calc.) |
+| EU ad tech fine booked as $3.5bn charge; DMA decisions $1.0bn charge (Q3); PriceRunner ≈ $2.1bn damages (appeal); Texas trial, 'cannot estimate a possible loss' | 10-Q Note 10 | source_located |
 
 Not used: the numeric 2026 capex range (secondary source only), analyst consensus, the private company's name, the backlog jump as like-for-like growth.
 

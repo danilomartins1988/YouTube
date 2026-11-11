@@ -587,6 +587,104 @@ scenes:
   - tenq
   assets:
   - font:inter
+- id: s09b_geo
+  segment: m1_geo
+  type: engine_cartoon
+  params:
+    zones:
+    - set: exchange
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Software is creeping
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: WHERE THE CUSTOMERS ARE
+      at: 0.2
+      size: 56
+      color: gold
+    - kind: sign
+      x: 720
+      y: 250
+      text: U.S. 46%
+      at:
+        cue: the United States brought
+      color: '#BBDEFB'
+      size: 32
+    - kind: sign
+      x: 1000
+      y: 250
+      text: CHINA 20%
+      at:
+        cue: China
+      color: '#FFE0B2'
+      size: 32
+    - kind: sign
+      x: 1300
+      y: 250
+      text: REST 34%
+      at:
+        cue: everywhere else
+      color: '#C8E6C9'
+      size: 32
+    - kind: sign
+      x: 760
+      y: 380
+      text: 'Q3: U.S. −14%'
+      at:
+        cue: U S revenue fell
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 380
+      text: 'Q3: OTHER INTL +32%'
+      at:
+        cue: other international markets
+      color: '#C8E6C9'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 510
+      text: FSD SUBSCRIPTIONS 1.04M → 1.74M
+      at:
+        cue: Active Full Self Driving
+      color: '#BBDEFB'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 620
+      text: SERVICES ≈ $16.3BN / YEAR
+      at:
+        cue: And services
+      color: '#F5F5F5'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: happy
+      label: TSLA
+      color: '#E53935'
+      hop: 14
+  sources:
+  - tenq
+  - deck
+  assets:
+  - font:inter
 - id: p10_machine
   segment: m1_draw
   type: engine_draw
@@ -1005,6 +1103,95 @@ scenes:
       - 860
       at: 0.3
       rate: 6
+  sources:
+  - tenq
+  assets:
+  - font:inter
+- id: s16b_stake
+  segment: m2_stake
+  type: engine_cartoon
+  params:
+    zones:
+    - set: vault
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: These marks
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: A PIECE OF THE MUSK UNIVERSE
+      at: 0.2
+      size: 54
+      color: gold
+    - kind: sign
+      x: 640
+      y: 250
+      text: 'SPACEX STAKE: $2.0BN → $2.865BN'
+      at:
+        cue: put
+      color: '#BBDEFB'
+      size: 28
+    - kind: sign
+      x: 1420
+      y: 250
+      text: LOCK-UP ENDS DECEMBER
+      at:
+        cue: the lock up
+      color: '#F5F5F5'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 370
+      text: SPACEX BOUGHT $626M OF MEGAPACKS
+      at:
+        cue: SpaceX bought
+      color: '#FFE0B2'
+      size: 28
+    - kind: sign
+      x: 760
+      y: 490
+      text: 'Q3: SPACEX −$142M'
+      at:
+        cue: a loss of
+      color: '#FFCDD2'
+      size: 28
+    - kind: sign
+      x: 1260
+      y: 490
+      text: 'Q3: BITCOIN +$288M'
+      at:
+        cue: on bitcoin
+      color: '#C8E6C9'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 610
+      text: 9M CAPEX $6.1BN → $13.0BN
+      at:
+        cue: capex in the first nine months
+      color: '#FFE0B2'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: worry
+      label: TSLA
+      color: '#E53935'
+      hop: 12
   sources:
   - tenq
   assets:
@@ -1932,6 +2119,80 @@ scenes:
       color: '#FFCDD2'
       size: 28
   sources:
+  - tenq
+  assets:
+  - font:inter
+- id: s34b_squeeze
+  segment: m5_squeeze
+  type: engine_cartoon
+  params:
+    zones:
+    - set: office
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: A securities class action
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: A THIN MARGIN
+      at: 0.2
+      size: 60
+      color: gold
+    - kind: sign
+      x: 1000
+      y: 250
+      text: TTM OPERATING MARGIN 3.3%
+      at:
+        cue: operating margin was
+      color: '#FFCDD2'
+      size: 32
+    - kind: sign
+      x: 1000
+      y: 370
+      text: Q3 OPEX $3.43BN → $4.78BN
+      at:
+        cue: Operating expenses
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 490
+      text: SI + R&D + STOCK PAY (INCL. CEO AWARD)
+      at:
+        cue: super intelligence
+      color: '#F5F5F5'
+      size: 28
+    - kind: sign
+      x: 1000
+      y: 610
+      text: SECURITIES CLASS ACTION PENDING
+      at:
+        cue: A securities class action
+      color: '#FFCDD2'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.4
+      mood: worry
+      label: TSLA
+      color: '#E53935'
+      hop: 12
+  sources:
+  - deck
   - tenq
   assets:
   - font:inter

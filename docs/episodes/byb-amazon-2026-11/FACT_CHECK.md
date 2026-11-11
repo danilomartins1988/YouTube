@@ -15,6 +15,9 @@
 | FTC + 22 states ad-auction suit (Aug 2026); antitrust cases seek "billions"; Prime settlement $2.5bn | 10-Q, 10-K | source_located |
 | CEO: "we may have two" trillion-dollar revenue businesses; AI-lab stakes marked ≈ $289bn | release, 10-Q | company claims / marks |
 | Next report early February 2027 | last year's date (Feb 5, 2026) | our estimate |
+| TTM: seller services $187.7bn, ads $78.0bn, subscriptions $54.3bn; AWS growth ex-FX 24% → 28% → 37% → 39%; Prime Day shift ≈ 4 pts on Q3 growth | Q3 release supplemental | source_located (sums our calc.) |
+| Cash + securities $114.2bn; long-term debt $180.9bn incl. $17.5bn term loan (Sept); lease liabilities $98.8bn; $164.9bn of leases not yet commenced | 10-Q | source_located (sum our calc.) |
+| 'limited group of suppliers' for chips incl. GPUs; memory supply volatility; Xockets ITC case vs AWS servers; unrecognized tax contingencies ≈ $7.3bn | 10-Q; Q3 release | source_located |
 
 Not used: an implied Q4 2026 capex figure (unverified arithmetic), the named customers' share of the backlog, analyst consensus.
 

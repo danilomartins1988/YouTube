@@ -69,6 +69,15 @@ segments:
     to Vietnam. So Apple owns the brand, the software and the customer, while other companies run most of the factories.
   claims:
   - geo
+- id: m1_rhythm
+  chapter: The machine
+  narration: Apple's year also has a very uneven rhythm. The December quarter alone brought in {{qtr}}, about
+    {{qtr.dec_share_spoken}} of the whole year, with {{qtr.dec_iphone_spoken}} from the iPhone in just those three
+    months. Now look at the September quarter, the one just reported. The iPhone grew {{qtr.iph_spoken}} and the Mac
+    {{qtr.mac_spoken}}, while the iPad fell {{qtr.ipad_spoken}} and wearables slipped {{qtr.wear_spoken}}. So two
+    product lines carried the growth, and two of them shrank.
+  claims:
+  - qtr
 - id: m1_draw
   chapter: The machine
   narration: Let me draw the machine. Here are the products, the big pipe, with a thinner margin. Here is Services, the smaller
@@ -109,6 +118,18 @@ segments:
     says it relies on third party cloud providers for compute. So part of the A I bill shows up as an expense, not as capex.
   claims:
   - cash
+- id: m2_quality
+  chapter: The cash
+  narration: Now, one honest footnote on all that cash. Operating cash flow jumped from {{ocfq}} to {{lenses.ocf_spoken}}, about
+    {{ocfq.jump_spoken}} in a single year. Part of that was timing. A swing in other liabilities added
+    {{ocfq.liab_spoken}} this year, after taking away {{ocfq.liab_prior_spoken}} the year before. And inventories
+    climbed from {{ocfq.inv0_spoken}} to {{ocfq.inv1_spoken}}. So this year's cash was strong, but not all of it is a
+    new normal. And the day before our data date, Apple still sold {{ocfq.notes_spoken}} of new bonds, even with net
+    cash of {{cap.netcash_spoken}}.
+  claims:
+  - ocfq
+  - lenses
+  - cap
 - id: m2_draw
   chapter: The cash
   narration: Let me draw where a year of free cash went. Here is the free cash flow bar. Here is the buyback bar, by far the
@@ -242,6 +263,15 @@ segments:
   claims:
   - risks
   - margin
+- id: m5_partners
+  chapter: Risks and upside
+  narration: And there's a quieter concentration risk. Almost all of Apple's hardware is built by outsourcing partners, and just two
+    suppliers account for {{conc}} and {{conc.v2_spoken}} of the money vendors owe Apple. On the selling side, phone
+    carriers make up {{conc.carriers_spoken}} of what customers owe Apple, and one single customer alone is
+    {{conc.one_spoken}}. Apple doesn't name any of them. But if one big partner stumbles, on either end of the chain, it
+    shows up in Apple's numbers.
+  claims:
+  - conc
 - id: m5_upside
   chapter: Risks and upside
   narration: And the upside the price might not fully include. Apple says its installed base of active devices hit {{upside}},

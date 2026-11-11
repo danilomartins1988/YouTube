@@ -18,6 +18,8 @@
 | Risk factors (AI investment ahead of revenue; underutilization; partners; AI pricing); IRS $28.9bn (disputed) | 10-Q | source_located |
 | Foundry revenue more than tripled; Copilot daily users > 5x y/y; underused capacity monetized | CFO / CEO (call) | company claims, unsized |
 | Next report late January 2027 | last year's date (Jan 28, 2026) | our estimate |
+| Q1 FY27 y/y: Microsoft 365 cloud $27.8bn +17%; search & ads +10%; Windows OEM −22%; Xbox −2%; licensing −3%; Agents and Infra margin ≈ 53% | 10-Q | source_located (growth/margin our calc.) |
+| OpenAI: ≈ 24% as-converted stake; $7.2bn receivable; $12.0bn of $13.0bn funding paid; FY2026 OpenAI revenue $24.1bn = 7.3%; 'early termination or renegotiation' risk quote | 10-Q | source_located (share our calc.) |
 
 Not used: analyst consensus (none verified), old "Intelligent Cloud" figures, Copilot revenue, OpenAI stake value, proxy-statement figures.
 

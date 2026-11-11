@@ -131,3 +131,27 @@ claims:
     fields: {deliv_q4_spoken: four hundred and eighteen thousand}
     source_ids: [deck, tenq]
     status: source_located
+
+  - id: geo
+    text: "Our calc. from the 10-K FY2025 and 10-Q, TTM revenue: U.S. $47.3bn (45.6%), China $20.8bn (20.1%), other international $35.5bn (34.3%). Q3 2026 (10-Q): U.S. $12.5bn (-14% year over year), other international $10.3bn (+32%). Q3 2026 Update: active FSD subscriptions 1.74 million (Q3 2025: 1.04 million); services and other revenue $16.3bn TTM (our calc.), gross profit 'a record $734M' in Q3."
+    spoken: about forty-six percent
+    display: "TTM revenue: U.S. 46% · China 20% · other 34% (our calc.)"
+    fields: {china_spoken: about twenty percent, other_spoken: about thirty-four percent, us_q3_spoken: fourteen percent, intl_q3_spoken: thirty-two percent, fsd_spoken: one point seven four million, fsd_prior_spoken: one point oh four million, svc_spoken: about sixteen billion dollars}
+    source_ids: [tenq, deck]
+    status: source_located
+
+  - id: stake
+    text: "10-Q: Tesla invested $2.00bn in SpaceX stock (originally xAI preferred) on Mar 12, 2026; fair value $2.865bn at Sep 30, 2026; IPO lock-up 'expire[s] in December 2026'. SpaceX bought $626M of Megapacks in 9M 2026 (related party). Q3 2026 net income included a $142M loss on the SpaceX investment and a $288M bitcoin gain. 9M capex $13.01bn vs $6.13bn in 9M 2025."
+    spoken: two billion dollars
+    display: "SpaceX stake: $2.0bn in → $2.865bn fair value (10-Q)"
+    fields: {fv_spoken: about two point nine billion dollars, mp_spoken: about six hundred and twenty-six million dollars, sx_loss_spoken: about one hundred and forty million dollars, btc_spoken: about two hundred and ninety million dollars, capex9_spoken: about thirteen billion dollars, capex9_prior_spoken: about six billion dollars}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: squeeze
+    text: "Q3 2026 Update and 10-Q: TTM income from operations $3,466M on revenue $103,570M = 3.3% operating margin (our calc.). Operating expenses $4.78bn in Q3 2026 vs $3.43bn a year earlier, driven by 'SI and other R&D projects, SBC (including 2025 CEO Performance Award)'. Securities class action over Autopilot, FSD and Robotaxi claims (W.D. Tex., filed Aug 4, 2025); motion to dismiss fully briefed."
+    spoken: three point three percent
+    display: "TTM operating margin 3.3% · Q3 opex $4.78bn vs $3.43bn (deck; our calc.)"
+    fields: {opex_spoken: about four point eight billion dollars, opex_prior_spoken: about three point four billion dollars}
+    source_ids: [deck, tenq]
+    status: source_located

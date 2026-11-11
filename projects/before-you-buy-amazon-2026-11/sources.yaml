@@ -133,3 +133,27 @@ claims:
     fields: {}
     source_ids: [rel, tenq]
     status: source_located
+
+  - id: streams
+    text: "Q3 2026 release supplemental, trailing twelve months (sums our calc.): third-party seller services $187,666M; advertising services $78,006M; subscription services $54,285M. AWS growth year over year excluding FX: 24% (Q4 2025), 28% (Q1 2026), 37% (Q2), 39% (Q3). Release: Prime Day moved to Q2 in 2026; 'Excluding this shift, third quarter year-over-year growth would have been approximately 400 basis points higher.'"
+    spoken: about one hundred and eighty-eight billion dollars
+    display: "TTM: seller services $187.7bn · ads $78.0bn · subscriptions $54.3bn (our calc.)"
+    fields: {ads_spoken: about seventy-eight billion dollars, subs_spoken: about fifty-four billion dollars, g1_spoken: twenty-four, g2_spoken: twenty-eight, g3_spoken: thirty-seven, g4_spoken: thirty-nine percent, shift_spoken: about four percentage points}
+    source_ids: [rel]
+    status: source_located
+
+  - id: bsheet
+    text: "10-Q, Sep 30, 2026: cash and equivalents plus marketable securities $55,783M + $58,443M = $114,226M (sum our calc.); total face value of long-term debt $180,887M, including a $17.5bn term loan drawn in September 2026; long-term lease liabilities $98,824M; leases not yet commenced $164.9bn."
+    spoken: about one hundred and fourteen billion dollars
+    display: "Cash $114.2bn vs debt $180.9bn + leases $98.8bn (10-Q)"
+    fields: {debt_spoken: about one hundred and eighty-one billion dollars, loan_spoken: seventeen and a half billion dollars, lease_spoken: about ninety-nine billion dollars, notyet_spoken: about one hundred and sixty-five billion dollars}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: chips
+    text: "10-Q risk factor: 'we rely on a limited group of suppliers for semiconductor products, including products related to artificial intelligence infrastructure such as graphics processing units'; guidance cites 'resource and supply volatility, including for memory chips'. Xockets ITC patent case against AWS servers, seeking injunctive relief. Unrecognized tax contingencies about $7.3bn (10-Q)."
+    spoken: about seven point three billion dollars
+    display: "Chip suppliers · patent case vs AWS servers · tax contingencies ≈ $7.3bn (10-Q)"
+    fields: {}
+    source_ids: [tenq, rel]
+    status: source_located

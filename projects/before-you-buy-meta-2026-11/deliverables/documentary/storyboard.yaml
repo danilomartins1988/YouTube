@@ -608,6 +608,96 @@ scenes:
   - tenq
   assets:
   - font:inter
+- id: s09b_geo
+  segment: m1_geo
+  type: engine_cartoon
+  params:
+    zones:
+    - set: exchange
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: And the machine
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: WHERE THE AD MONEY COMES FROM
+      at: 0.2
+      size: 52
+      color: gold
+    - kind: sign
+      x: 720
+      y: 250
+      text: U.S. & CANADA 39%
+      at:
+        cue: The United States
+      color: '#BBDEFB'
+      size: 30
+    - kind: sign
+      x: 880
+      y: 330
+      text: EUROPE 23%
+      at:
+        cue: Europe,
+      color: '#C8E6C9'
+      size: 30
+    - kind: sign
+      x: 1200
+      y: 250
+      text: ASIA-PACIFIC 27%
+      at:
+        cue: Asia Pacific
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1320
+      y: 330
+      text: REST OF WORLD 11%
+      at:
+        cue: The rest of the world
+      color: '#F5F5F5'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 480
+      text: HEADCOUNT 66,775 (−15%)
+      at:
+        cue: Meta's headcount
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 590
+      text: '89% OF COSTS: THE APPS'
+      at:
+        cue: Almost all the spending
+      color: '#FFF8E1'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: happy
+      label: META
+      color: '#FF4FD8'
+      hop: 14
+  sources:
+  - tenq
+  - rel
+  assets:
+  - font:inter
 - id: p10_machine
   segment: m1_draw
   type: engine_draw
@@ -954,6 +1044,93 @@ scenes:
       color: gold
   sources:
   - cap8k
+  - tenq
+  assets:
+  - font:inter
+- id: s15b_commit
+  segment: m2_commit
+  type: engine_cartoon
+  params:
+    zones:
+    - set: vault
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: At the end of September
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: THE BILLS ARE ALREADY SIGNED
+      at: 0.2
+      size: 54
+      color: gold
+    - kind: counter
+      x: 800
+      y: 270
+      at:
+        cue: Meta lists
+      prefix: $
+      suffix: BN
+      decimals: 1
+      steps:
+      - - 0
+        - 0
+      - - cue: non cancelable
+        - 454.5
+      text: COMMITMENTS (10-Q)
+    - kind: sign
+      x: 1280
+      y: 230
+      text: 'DUE 2026: $45.9BN'
+      at:
+        cue: due this year
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1280
+      y: 330
+      text: 'DUE 2027: $121.4BN'
+      at:
+        cue: next year
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 500
+      text: CASH $82.4BN  ·  DEBT $84.0BN
+      at:
+        cue: At the end of September
+      color: '#BBDEFB'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 610
+      text: SHARES +1% IN 9 MONTHS
+      at:
+        cue: the share count rose
+      color: '#F5F5F5'
+      size: 28
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.3
+      mood: worry
+      label: CASH
+      color: '#23995A'
+      hop: 12
+  sources:
   - tenq
   assets:
   - font:inter
@@ -1879,6 +2056,95 @@ scenes:
       hits:
       - cue: imposed a civil penalty
       - cue: will appeal
+  sources:
+  - tenq
+  assets:
+  - font:inter
+- id: s32b_youth
+  segment: m5_youth
+  type: engine_cartoon
+  params:
+    zones:
+    - set: parliament
+      x0: -1600
+      x1: 4600
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1000
+      y: 520
+      zoom: 1.05
+    - at:
+        cue: Lawyers for
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.8
+    drift: 2
+    items:
+    - kind: letters
+      x: 1000
+      y: 100
+      text: NOT OVER YET
+      at: 0.2
+      size: 60
+      color: gold
+    - kind: sign
+      x: 740
+      y: 250
+      text: $12.7BN OVER 10 YEARS
+      at:
+        cue: paid over ten years
+      color: '#FFE0B2'
+      size: 30
+    - kind: sign
+      x: 1260
+      y: 250
+      text: +$5.3BN IF RIVALS FOLLOW
+      at:
+        cue: only comes due
+      color: '#FFE0B2'
+      size: 28
+    - kind: sign
+      x: 740
+      y: 380
+      text: 200,000+ ARBITRATION CLAIMANTS
+      at:
+        cue: Lawyers for
+      color: '#FFCDD2'
+      size: 28
+    - kind: sign
+      x: 1260
+      y: 380
+      text: 'NEXT TRIAL: FEB 2027'
+      at:
+        cue: school district trial
+      color: '#BBDEFB'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 510
+      text: 'DC: UP TO $1.7BN'
+      at:
+        cue: District of Columbia
+      color: '#FFCDD2'
+      size: 30
+    - kind: sign
+      x: 1000
+      y: 630
+      text: '''$1 TRILLION+'' = PLAINTIFFS'' CLAIM'
+      at:
+        cue: Plaintiffs have claimed
+      color: '#F5F5F5'
+      size: 26
+    - kind: chipbuddy
+      x: 1700
+      y: 860
+      at: 0.4
+      mood: worry
+      label: META
+      color: '#FF4FD8'
+      hop: 12
   sources:
   - tenq
   assets:
