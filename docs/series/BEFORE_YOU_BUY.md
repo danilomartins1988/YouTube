@@ -1,6 +1,6 @@
 # Series draft: "Before You Buy" (largest U.S. listed companies)
 
-Status: DRAFT, owner discussing format (2026-11-11). Not yet approved.
+Status: APPROVED by the owner 2026-11-11: produce the 10 largest Nasdaq-listed companies; every episode dated, to be remade each quarter.
 
 ## Audience
 Viewers who already know the basics of investing. No concept lessons: terms such as revenue, gross/operating margin,
@@ -36,3 +36,11 @@ could add even more value.
 
 ## Season 1 candidates (verify market-cap order before starting)
 Nvidia, Microsoft, Apple, Alphabet, Amazon, Meta, Broadcom, Tesla, Berkshire Hathaway, JPMorgan. Bonus: SpaceX (Ep 51).
+
+## Dating and quarterly refresh (owner, 2026-11-11)
+- Title carries the edition: "Before You Buy Nvidia Stock, Watch This (Nov 2026)"; next edition after the next earnings report.
+- On screen: a "DATA AS OF <close date> · LATEST REPORT: <quarter>" stamp at the hook, at the priced-in section and at the end.
+- Description: the same date line plus "updated every quarter".
+- Each project keeps one file of inputs (prices, share count, segment figures, guidance) so a refresh swaps numbers
+  and re-renders; scripts read the numbers from sources.yaml placeholders.
+- Order: companies that already reported this quarter first; Nvidia after its Nov 2026 report.
