@@ -874,3 +874,22 @@ Watch the full story: "MF Global: The $1.6 Billion That Vanished" on The Hidden 
 ```
 MF Global, Jon Corzine, customer money, segregated funds, bankruptcy, futures, CFTC, Wall Street, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 41-tariff-refund
+
+**Title**
+```
+Who Gets the $166 Billion Tariff Refund? Not Shoppers #shorts
+```
+**Description**
+```
+One hundred and sixty-six billion dollars. That is roughly how much the United States had charged in tariffs that the Supreme Court later said the President had no power to impose.
+
+Watch the full story: "Who Actually Gets the $166 Billion Tariff Refund?" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #tariffs #economy #usa #economics
+```
+**Tags**
+```
+tariffs, tariff refund, Supreme Court, IEEPA, importers, prices, Costco, FedEx, trade policy, economics, shorts, economics explained, The Hidden Economics
+```

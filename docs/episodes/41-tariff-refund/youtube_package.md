@@ -1,0 +1,56 @@
+# YouTube package: "Who Actually Gets the $166 Billion Tariff Refund?" (Episode 41)
+
+Prepared for manual publishing. Nothing has been uploaded. Video length 11:06.
+
+## Title options
+
+1. **Who Actually Gets the $166 Billion Tariff Refund?** (recommended)
+2. **The $166 Billion Tariff Refund Isn't Going to Shoppers**
+3. **You Paid the Tariffs. Companies Get the Refund**
+
+## Description (2812 chars, YouTube limit 5,000)
+
+```
+In February 2026, the Supreme Court ruled 6–3 that the emergency law used to impose sweeping tariffs "does not authorize the President to impose tariffs." About $166 billion had been collected, from roughly 330,000 importers (CBP estimate). By late October, the government had sent back $127.7 billion, including interest. So who actually gets that money: the companies that paid the duty, or the shoppers who may have paid higher prices? We follow the ruling, the refund system, the monthly Treasury numbers, how much of the tariffs economists estimate reached store shelves, what Target, Costco, lululemon, Mattel and FedEx told investors, the lawsuits, and the tariffs that replaced them.
+
+Every figure is sourced below: the Supreme Court opinion, Court of International Trade filings and CBP declarations, the Monthly Treasury Statement, company 10-Q and 10-K filings, the Congressional Research Service, Yale Budget Lab, New York Fed researchers and the Tax Foundation. Pass-through and household figures are estimates. Not legal or tax advice.
+
+Chapters
+0:00 One hundred and sixty-six billion
+0:53 The ruling
+2:55 Who really paid
+4:46 The refund machine
+6:46 Where the money lands
+8:45 The fight
+10:19 The lesson
+
+Sources
+- Supreme Court of the United States: Learning Resources, Inc. v. Trump, No. 24-1287 (with Trump v. V.O.S. Selections, No. 25-250) - https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf
+- U.S. Court of International Trade (CourtListener RECAP): Freestyle World v. CBP, No. 26-01088 (CIT): ECF 24 (Aug 4), ECF 61 (Oct 8), ECF 65 (Oct 26) - https://storage.courtlistener.com/recap/gov.uscourts.cit.19175/gov.uscourts.cit.19175.65.0.pdf
+- U.S. Customs and Border Protection: IEEPA duty refunds - https://www.cbp.gov/trade/programs-administration/trade-remedies/ieepa-duty-refunds
+- U.S. Treasury, Fiscal Data: Monthly Treasury Statement, Table 4: customs duties (2026) - https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/
+- SEC EDGAR: Company filings: Target 10-Q (Q2 2026), Costco 10-K (FY2026), Mattel 10-Q, lululemon 10-Q, FedEx 10-Q (Oct 2026) - https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm
+- Congressional Research Service: CRS R49481: tariff authorities after the Supreme Court ruling - https://www.congress.gov/crs_external_products/R/PDF/R49481/R49481.1.pdf
+- The Budget Lab at Yale: Tariff pass-through analysis - https://budgetlab.yale.edu/sites/default/files/page_to_pdf/1349/publication_1349.pdf
+- Federal Reserve Bank of New York (Liberty Street Economics): How fast do tariffs pass through into consumer prices? - https://libertystreeteconomics.newyorkfed.org/2026/10/how-fast-do-tariffs-pass-through-into-consumer-prices/
+
+Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+```
+
+## Chapters
+
+```
+0:00 One hundred and sixty-six billion
+0:53 The ruling
+2:55 Who really paid
+4:46 The refund machine
+6:46 Where the money lands
+8:45 The fight
+10:19 The lesson
+```
+
+## Tags
+
+```
+tariffs, tariff refund, Supreme Court, IEEPA, importers, prices, Costco, FedEx, trade policy, economics, The Hidden Economics
+```

@@ -75,7 +75,7 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 
 | # | Working title | Status |
 |---|---|---|
-| N1 | Who Actually Gets the $166 Billion Tariff Refund? | **In production** (Ep 41, `docs/episodes/41-tariff-refund`) |
+| N1 | Who Actually Gets the $166 Billion Tariff Refund? | **Delivered** (Ep 41, `docs/episodes/41-tariff-refund`) |
 | N2 | Why America Stopped Making the Penny | **Delivered** (Ep 42, `docs/episodes/42-penny`) |
 | N3 | America's $1 Trillion of Gold Is Booked at $11 Billion | **Delivered** (Ep 43, `docs/episodes/43-gold-reserve`) |
 | N4 | One Factory Makes 60% of America's IV Bags | **Delivered** (Ep 44, `docs/episodes/44-iv-bags`; title "How One Flooded Factory Ran America Short of IV Fluids") |

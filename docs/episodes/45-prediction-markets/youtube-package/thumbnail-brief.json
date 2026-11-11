@@ -144,7 +144,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": false,
-            "detail": "nearest how-one-flooded-factory-ran-america-short-of-iv-fluids (distance 0.17)",
+            "detail": "nearest alaska-the-state-that-pays-you-to-live-there (distance 0.16)",
             "critical": false
           },
           {
@@ -155,7 +155,7 @@
           }
         ],
         "critical_fail": true,
-        "design_score": 0.498,
+        "design_score": 0.495,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -163,7 +163,7 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "how-one-flooded-factory-ran-america-short-of-iv-fluids"
+        "nearest": "alaska-the-state-that-pays-you-to-live-there"
       }
     },
     {
@@ -171,8 +171,8 @@
       "angle": "before/after (split)",
       "archetype": "split",
       "text": [
-        "YOU: WIN OR LOSE",
-        "THEM: A FEE"
+        "YOU: GAMBLE",
+        "THEY: COLLECT"
       ],
       "claim_basis": "Kalshi: fee on every trade; trades against other members (help center)",
       "scene": {
@@ -214,19 +214,19 @@
       },
       "layout": [
         {
-          "text": "YOU: WIN OR LOSE",
+          "text": "YOU: GAMBLE",
           "x": 480.0,
-          "y": 190.9,
-          "size": 74.2,
+          "y": 218.5,
+          "size": 108.0,
           "width": 760,
           "anchor": "middle",
           "color": "#FFFFFF"
         },
         {
-          "text": "THEM: A FEE",
+          "text": "THEY: COLLECT",
           "x": 1440.0,
-          "y": 218.5,
-          "size": 108.0,
+          "y": 204.9,
+          "size": 91.3,
           "width": 760,
           "anchor": "middle",
           "color": "#FF5A4E"
@@ -260,14 +260,14 @@
           },
           {
             "check": "0-4 words",
-            "pass": false,
-            "detail": "7 words",
-            "critical": true
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(100, 133, 860, 195), (1060, 134, 1820, 225)]",
+            "detail": "[(100, 134, 860, 225), (1060, 134, 1820, 210)]",
             "critical": true
           },
           {
@@ -279,19 +279,19 @@
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
             "pass": false,
-            "detail": "6.2px font at 160px wide",
+            "detail": "7.6px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 4.3:1 (dark outline adds more)",
+            "detail": "worst 4.4:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.057",
+            "detail": "0.060",
             "critical": false
           },
           {
@@ -303,7 +303,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": false,
-            "detail": "nearest americas-trillion-dollar-gold-booked-at-11-billion (distance 0.21)",
+            "detail": "nearest college-sports-just-got-a-20-million-payroll (distance 0.18)",
             "critical": false
           },
           {
@@ -314,7 +314,7 @@
           }
         ],
         "critical_fail": true,
-        "design_score": 0.498,
+        "design_score": 0.513,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -322,13 +322,13 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "americas-trillion-dollar-gold-booked-at-11-billion"
+        "nearest": "college-sports-just-got-a-20-million-payroll"
       }
     }
   ],
   "default": null,
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-11T03:03:49Z",
+  "generated": "2026-11-11T07:06:45Z",
   "master": null
 }

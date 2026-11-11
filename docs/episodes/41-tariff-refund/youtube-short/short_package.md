@@ -23,7 +23,7 @@ Watch the full story: "Who Actually Gets the $166 Billion Tariff Refund?" on The
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+tariffs, tariff refund, Supreme Court, IEEPA, importers, prices, Costco, FedEx, trade policy, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook
