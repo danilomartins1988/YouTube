@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos, no people).
+title: Why Nvidia Lost $428 Billion in Two Days
+docs_dir: docs/episodes/52-nvidia-probe
+video: output/nvidiaprobe_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How can one weekend's story erase hundreds of billions from a chip company?
+  surprising_fact: About -$428bn of Nvidia market value in two trading days, Nov 6-10, 2026 (our estimate from closes × 24.1bn shares)
+  subject: a generic AI chip
+  tone: spectacle
+  metaphor: a chip in a falling elevator
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - -$428 BILLION
+  - NVIDIA
+  claim_basis: 'drop: ≈ -$428bn Nov 6-10, 2026 (our estimate: Yahoo Finance closes × 24.1bn shares, 10-Q)'
+  scene:
+    palette: {sky0: '#12062E', sky1: '#341A6B', haze: '#FF6EC7', key: '#FFF3B0', accent: '#FFE14D', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: chip, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#3DF5FF'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'NVIDIA: $4.5TN'
+  - 'TUESDAY: $4.07TN'
+  claim_basis: 'market value ≈ $4.50tn (Nov 6) → ≈ $4.07tn (Nov 10), our estimate from closes × 24.1bn shares'
+  scene:
+    palette: {sky0: '#0B1030', sky1: '#2A1650', haze: '#3DF5FF', key: '#E0F7FA', accent: '#FF4F6B', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: chip, x: 480, y: 650, s: 0.6}
+    after: {kind: chip, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none

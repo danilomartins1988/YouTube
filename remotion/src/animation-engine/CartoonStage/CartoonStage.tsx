@@ -907,6 +907,144 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 500)}, (_, k) => <path key={'pl' + k} d={`M ${z.x0 + 120 + k * 500} ${f - 80} l 0 -60 m -16 18 q 16 -30 32 0`} stroke="#4E7D3A" strokeWidth={6} fill="none" />)}
     </g>;
   },
+  /** Retro-future neon CHIP CITY (original design): towers shaped like computer chips (pin "legs" on the sides, a glowing
+   *  die window, antennas), glass transit tubes with capsules zipping through, bubble-canopy flying cars, joke neon signs.
+   *  `dimAt`: the neon flickers and dims (mood drop). `signs`: override the joke signs. */
+  chipcity: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, dim = zz.dimAt !== undefined ? clamp((t - zz.dimAt) / 1.6) : 0;
+    const flick = dim > 0 && dim < 1 ? (Math.sin(t * 47) > 0 ? 1 : 0.35) : 1, glow = (1 - 0.65 * dim) * flick;
+    const signs: string[] = zz.signs || ['GPU PARKING ONLY', 'NO TENSORS AFTER 9 PM', 'COOLING TOWER · STAY CHILL', 'NOW HIRING: MORE CORES', 'CACHE ONLY · NO CHECKS', 'FAB-ULOUS DINER'];
+    const neon = ['#FF4FD8', '#3DF5FF', '#FFE14D', '#7DFF8A'], body = ['#2EC4B6', '#FF9F1C', '#7B61FF', '#E71D73', '#3A86FF'];
+    const tubeY = (x: number) => f - 330 + 60 * Math.sin((x - z.x0) / 380);
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#1B0B3F" />
+      <rect x={z.x0} y={f - 900} width={w} height={900} fill="#341A6B" opacity={0.85} />
+      <rect x={z.x0} y={f - 420} width={w} height={420} fill="#FF6EC7" opacity={0.14 * glow} />
+      {Array.from({length: Math.ceil(w / 55)}, (_, k) => <circle key={'cs' + k} cx={z.x0 + k * 55 + 30 * rnd(k)} cy={f - 1150 + 520 * rnd(k + 3)} r={1.5 + 2 * rnd(k + 8)}
+        fill="#FFFFFF" opacity={0.3 + 0.6 * Math.abs(Math.sin(t * (0.8 + rnd(k)) + k))} />)}
+      <g transform={`translate(${z.x0 + w * 0.82} ${f - 960})`}>
+        <circle r={110} fill="#FFE9B0" stroke={OL} strokeWidth={6} />
+        <circle cx={-34} cy={-20} r={20} fill="#F2CF7E" /><circle cx={30} cy={34} r={14} fill="#F2CF7E" /><circle cx={40} cy={-40} r={9} fill="#F2CF7E" />
+      </g>
+      {Array.from({length: Math.ceil(w / 150)}, (_, k) => { const x = z.x0 + k * 150, h = 220 + 200 * rnd(k + 21);
+        return <path key={'bk' + k} d={`M ${x} ${f - 120} L ${x} ${f - 120 - h} Q ${x + 65} ${f - 170 - h} ${x + 130} ${f - 120 - h} L ${x + 130} ${f - 120} Z`} fill="#2A1658" />; })}
+      {Array.from({length: Math.ceil(w / 380)}, (_, k) => { const x = z.x0 + 60 + k * 380, bw = 210 + 50 * rnd(k + 2), h = 380 + 260 * rnd(k + 5), c = body[k % body.length], top = f - 60 - h;
+        return <g key={'ct' + k}>
+          <rect x={x} y={top} width={bw} height={h} rx={26} fill={c} stroke={OL} strokeWidth={6} />
+          {Array.from({length: Math.floor((h - 60) / 46)}, (_, r) => <g key={r}>
+            <rect x={x - 22} y={top + 40 + r * 46} width={24} height={14} rx={3} fill="#CFD8DC" stroke={OL} strokeWidth={3} />
+            <rect x={x + bw - 2} y={top + 40 + r * 46} width={24} height={14} rx={3} fill="#CFD8DC" stroke={OL} strokeWidth={3} /></g>)}
+          <rect x={x + bw * 0.2} y={top + h * 0.18} width={bw * 0.6} height={bw * 0.6} rx={12} fill="#14102E" stroke={OL} strokeWidth={5} />
+          {Array.from({length: 16}, (_, q) => { const on = Math.sin(t * (2 + rnd(k * 16 + q) * 3) + q) > -0.2;
+            return <rect key={'d' + q} x={x + bw * 0.24 + (q % 4) * bw * 0.135} y={top + h * 0.18 + bw * 0.04 + Math.floor(q / 4) * bw * 0.135} width={bw * 0.1} height={bw * 0.1} rx={3}
+              fill={on ? neon[(k + q) % 4] : '#2A2350'} opacity={on ? glow : 1} />; })}
+          {Array.from({length: Math.floor((h * 0.5) / 56)}, (_, r) => Array.from({length: 3}, (_, q) =>
+            <rect key={'w' + r + q} x={x + 26 + q * (bw - 52) / 3 + 4} y={top + h * 0.18 + bw * 0.66 + r * 56} width={(bw - 52) / 3 - 10} height={30} rx={8}
+              fill={rnd(k * 97 + r * 7 + q) > 0.35 ? '#FFF3B0' : '#1B1440'} opacity={0.4 + 0.6 * glow} stroke={OL} strokeWidth={3} />))}
+          <ellipse cx={x + bw / 2} cy={top + 6} rx={bw * 0.62} ry={22} fill="#B0BEC5" stroke={OL} strokeWidth={5} />
+          <path d={`M ${x + bw / 2} ${top - 16} L ${x + bw / 2} ${top - 90}`} stroke={OL} strokeWidth={6} />
+          <circle cx={x + bw / 2} cy={top - 96} r={13} fill={Math.sin(t * 4 + k) > 0 ? '#FF4F6B' : '#5A1020'} stroke={OL} strokeWidth={4} />
+          {k % 2 === 0 && <g transform={`translate(${x + bw / 2} ${top + h * 0.1}) rotate(${-4 + 3 * Math.sin(t * 1.3 + k)})`}>
+            <rect x={-150} y={-30} width={300} height={56} rx={28} fill="#120A2A" stroke={neon[k % 4]} strokeWidth={5} opacity={glow} />
+            <T x={0} y={10} s={24} c={neon[k % 4]} o={glow}>{signs[Math.floor(k / 2) % signs.length]}</T></g>}
+        </g>; })}
+      <path d={Array.from({length: Math.ceil(w / 40) + 1}, (_, k) => `${k ? 'L' : 'M'} ${z.x0 + k * 40} ${tubeY(z.x0 + k * 40)}`).join(' ')} fill="none" stroke="#B3E5FC" strokeWidth={46} opacity={0.3} />
+      <path d={Array.from({length: Math.ceil(w / 40) + 1}, (_, k) => `${k ? 'L' : 'M'} ${z.x0 + k * 40} ${tubeY(z.x0 + k * 40) - 23}`).join(' ')} fill="none" stroke={OL} strokeWidth={4} />
+      <path d={Array.from({length: Math.ceil(w / 40) + 1}, (_, k) => `${k ? 'L' : 'M'} ${z.x0 + k * 40} ${tubeY(z.x0 + k * 40) + 23}`).join(' ')} fill="none" stroke={OL} strokeWidth={4} />
+      {Array.from({length: 4}, (_, k) => { const cx2 = z.x0 + ((t * 700 + k * 900) % (w + 200)) - 100;
+        return <g key={'cap' + k} transform={`translate(${cx2} ${tubeY(cx2)})`}><rect x={-46} y={-16} width={92} height={32} rx={16} fill="#FFE14D" stroke={OL} strokeWidth={4} />
+          <rect x={-30} y={-9} width={24} height={14} rx={4} fill="#3DF5FF" /><rect x={4} y={-9} width={24} height={14} rx={4} fill="#3DF5FF" /></g>; })}
+      {Array.from({length: 5}, (_, k) => { const dir = k % 2 ? -1 : 1, sp = 180 + 70 * k, span = w + 600;
+        const u = ((t * sp + k * 830) % span), cx2 = dir > 0 ? z.x0 - 300 + u : z.x1 + 300 - u, cy2 = f - 700 + k * 85 + 18 * Math.sin(t * 2.2 + k);
+        const cc = ['#FF4F6B', '#FFE14D', '#3DF5FF', '#7DFF8A', '#FF9F1C'][k];
+        return <g key={'fc' + k} transform={`translate(${cx2} ${cy2}) scale(${dir} 1) rotate(${4 * Math.sin(t * 3 + k)})`}>
+          {[0, 1, 2].map((p) => <circle key={p} cx={-90 - p * 26 - ((t * 60) % 26)} cy={6} r={9 - p * 2} fill="#FFFFFF" opacity={0.5 - p * 0.15} />)}
+          <path d="M -80 10 Q -70 -18 -20 -20 L 50 -20 Q 92 -16 96 8 Q 70 26 -60 24 Q -84 22 -80 10 Z" fill={cc} stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+          <path d="M -24 -20 Q 6 -62 40 -20 Z" fill="#B3E5FC" opacity={0.8} stroke={OL} strokeWidth={4} />
+          <path d="M -80 6 L -100 -18 L -66 -6 Z" fill={cc} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          <ellipse cx={10} cy={30} rx={46} ry={6} fill="#3DF5FF" opacity={0.5} /></g>; })}
+      <rect x={z.x0} y={f - 60} width={w} height={60} fill="#3A2470" stroke={OL} strokeWidth={5} />
+      <rect x={z.x0} y={f} width={w} height={600} fill="#1E1040" />
+      {Array.from({length: Math.ceil(w / 140)}, (_, k) => <rect key={'nl' + k} x={z.x0 + k * 140} y={f + 110} width={70} height={8} rx={4} fill="#3DF5FF" opacity={0.5 * glow} />)}
+    </g>;
+  },
+  /** A sea route at dusk (original design): layered sky, distant hills, a choppy sea with waves, gulls, and a striped
+   *  CHECKPOINT BUOY (`buoyAt`, fraction of the width) with a rotating lamp and a sweeping searchlight; its sign reads
+   *  `sign` (default "EXPORT RULES CHECKPOINT"). `night`: darker sky and a stronger beam. */
+  searoute: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, night = !!z.night, bx = z.x0 + w * (zz.buoyAt ?? 0.62), sea = f - 240;
+    const sweep = Math.sin(t * 0.9) * 32 - 8, bob = 10 * Math.sin(t * 2.1);
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + sea} fill={night ? '#120E2E' : '#FF9E6B'} />
+      <rect x={z.x0} y={sea - 520} width={w} height={520} fill={night ? '#2B1B55' : '#FFC27A'} />
+      <rect x={z.x0} y={sea - 200} width={w} height={200} fill={night ? '#3E2A6E' : '#FFD9A0'} />
+      <circle cx={z.x0 + w * 0.25} cy={sea - 60} r={130} fill={night ? '#F5F1D0' : '#FFF1C1'} opacity={0.9} />
+      {Array.from({length: Math.ceil(w / 260)}, (_, k) => <path key={'hl' + k} d={`M ${z.x0 + k * 260 - 40} ${sea} Q ${z.x0 + k * 260 + 90} ${sea - 70 - 60 * rnd(k + 4)} ${z.x0 + k * 260 + 230} ${sea} Z`}
+        fill={night ? '#241640' : '#C9746A'} opacity={0.9} />)}
+      <rect x={z.x0} y={sea} width={w} height={2600} fill={night ? '#103A6B' : '#1E7FD8'} />
+      {Array.from({length: 5}, (_, r) => Array.from({length: Math.ceil(w / 150) + 1}, (_, k) =>
+        <path key={'wv' + r + '-' + k} d={`M ${z.x0 + k * 150 + 40 * Math.sin(t * (1 + r * 0.3) + k + r)} ${sea + 40 + r * 70} q 25 -14 50 0 q 25 14 50 0`} fill="none" stroke="#FFFFFF" strokeWidth={4} opacity={0.35 + 0.1 * r} />))}
+      {Array.from({length: 4}, (_, k) => { const gx = z.x0 + ((t * (60 + 20 * k) + k * 600) % w), gy = sea - 420 + 70 * k + 20 * Math.sin(t * 3 + k);
+        return <path key={'gl' + k} d={`M ${gx - 22} ${gy} q 11 ${-12 - 6 * Math.sin(t * 9 + k)} 22 0 q 11 ${-12 - 6 * Math.sin(t * 9 + k)} 22 0`} fill="none" stroke={OL} strokeWidth={4} strokeLinecap="round" />; })}
+      <g transform={`translate(${bx} ${sea + 30 + bob})`}>
+        <path d="M 0 -250 L -1100 -90 L -1100 190 Z" fill="#FFF59D" opacity={night ? 0.32 : 0.2} transform={`rotate(${sweep} 0 -250)`} />
+        <path d="M -80 40 L -60 -120 L 60 -120 L 80 40 Z" fill="#FFFFFF" stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+        <path d="M -73 -20 L 73 -20 L 70 0 L -70 0 Z M -66 -80 L 66 -80 L 64 -60 L -64 -60 Z" fill="#E53935" />
+        <rect x={-30} y={-210} width={60} height={90} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+        <circle cx={0} cy={-250} r={34} fill={Math.sin(t * 5) > 0 ? '#FFEB3B' : '#FFA000'} stroke={OL} strokeWidth={5} />
+        <path d="M -40 -284 L 40 -284 L 0 -320 Z" fill="#E53935" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+        <g transform={`translate(0 -400) rotate(${3 * Math.sin(t * 1.7)})`}>
+          <path d="M 0 60 L 0 110" stroke={OL} strokeWidth={6} />
+          <rect x={-250} y={-40} width={500} height={100} rx={14} fill="#FFF8E1" stroke={OL} strokeWidth={6} />
+          <T x={0} y={8} s={32}>{zz.sign || 'EXPORT RULES CHECKPOINT'}</T>
+          <T x={0} y={44} s={20} c="#5D4037" w={700}>{zz.sub || 'PLEASE HAVE YOUR LICENCE READY'}</T></g>
+      </g>
+    </g>;
+  },
+  /** A closed-door BRIEFING ROOM (original design): dark wood panels with rivets, a giant round chrome vault door (spoked
+   *  wheel spins from `spinAt`), an IN SESSION light, joke house-rule signs, a long table with empty chairs and a cactus.
+   *  `doorAt`: fraction of the width for the door. */
+  secretroom: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, dx = z.x0 + w * (zz.doorAt ?? 0.5), spin = zz.spinAt !== undefined ? Math.max(0, t - zz.spinAt) * 120 : 0;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#2B1D16" />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <g key={'pn' + k}>
+        <rect x={z.x0 + k * 200 + 10} y={f - 760} width={180} height={700} rx={10} fill="#4E342E" stroke={OL} strokeWidth={5} />
+        {[0, 1].map((q) => <rect key={q} x={z.x0 + k * 200 + 30} y={f - 730 + q * 340} width={140} height={300} rx={8} fill="#5D4037" stroke={OL} strokeWidth={3} />)}</g>)}
+      <rect x={z.x0} y={f - 800} width={w} height={40} fill="#3E2723" stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => <g key={'lp' + k} transform={`translate(${z.x0 + 150 + k * 300} ${f - 760})`}>
+        <path d="M -60 0 L 60 0 L 30 40 L -30 40 Z" fill="#FFCA28" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+        <path d="M -30 40 L -110 300 L 110 300 L 30 40 Z" fill="#FFE082" opacity={0.08} /></g>)}
+      <g transform={`translate(${dx} ${f - 380})`}>
+        <circle r={300} fill="#455A64" stroke={OL} strokeWidth={8} />
+        <circle r={262} fill="#CFD8DC" stroke={OL} strokeWidth={7} />
+        {Array.from({length: 16}, (_, k) => <circle key={k} cx={236 * Math.cos(k * Math.PI / 8)} cy={236 * Math.sin(k * Math.PI / 8)} r={11} fill="#90A4AE" stroke={OL} strokeWidth={3} />)}
+        <circle r={190} fill="#B0BEC5" stroke={OL} strokeWidth={5} />
+        <g transform={`rotate(${spin})`}>
+          {[0, 1, 2].map((k) => <rect key={k} x={-150} y={-12} width={300} height={24} rx={12} fill="#78909C" stroke={OL} strokeWidth={4} transform={`rotate(${k * 60})`} />)}
+          <circle r={52} fill="#546E7A" stroke={OL} strokeWidth={5} /></g>
+        <path d="M -80 -150 Q 0 -120 80 -150" fill="none" stroke="#FFFFFF" strokeWidth={8} opacity={0.4} strokeLinecap="round" />
+      </g>
+      <g transform={`translate(${dx} ${f - 740})`}>
+        <rect x={-210} y={-34} width={420} height={60} rx={12} fill="#1B0F0B" stroke="#FF5252" strokeWidth={4} />
+        <T x={-30} y={8} s={26} c="#FF8A80">{zz.title || 'CLOSED-DOOR BRIEFING'}</T>
+        <circle cx={170} cy={-4} r={14} fill={Math.sin(t * 4) > 0 ? '#FF1744' : '#5D0A0A'} stroke={OL} strokeWidth={3} /></g>
+      {[[-560, 'NO PHONES'], [-560, 'NO SNACKS'], [560, 'NO LEAKS'], [560, 'WHISPER ONLY']].map(([o, s], k) =>
+        <g key={'rs' + k} transform={`translate(${dx + (o as number)} ${f - 620 + (k % 2) * 110}) rotate(${(k % 2 ? 3 : -3) + 1.5 * Math.sin(t + k)})`}>
+          <rect x={-120} y={-34} width={240} height={64} rx={8} fill="#FFF8E1" stroke={OL} strokeWidth={4} />
+          <T x={0} y={10} s={26}>{s as string}</T></g>)}
+      <rect x={z.x0} y={f - 60} width={w} height={60} fill="#3E2723" />
+      <rect x={z.x0} y={f} width={w} height={600} fill="#6D1B1B" />
+      {Array.from({length: Math.ceil(w / 90)}, (_, k) => <rect key={'cp' + k} x={z.x0 + k * 90} y={f} width={4} height={600} fill="#000000" opacity={0.12} />)}
+      <g transform={`translate(${dx} ${f + 40})`}>
+        <rect x={-520} y={-40} width={1040} height={60} rx={14} fill="#8D6E63" stroke={OL} strokeWidth={5} />
+        {Array.from({length: 7}, (_, k) => <g key={'ch' + k} transform={`translate(${-450 + k * 150} -40)`}>
+          <rect x={-40} y={-120} width={80} height={110} rx={20} fill="#212121" stroke={OL} strokeWidth={4} /></g>)}
+        <g transform="translate(470 -40)"><rect x={-24} y={-20} width={48} height={30} fill="#A1887F" stroke={OL} strokeWidth={3} />
+          <path d="M 0 -20 L 0 -90 M 0 -60 L -20 -70 L -20 -90 M 0 -50 L 18 -58 L 18 -76" stroke="#43A047" strokeWidth={12} strokeLinecap="round" fill="none" /></g>
+      </g>
+    </g>;
+  },
   /** A hospital corridor: pale mint walls, numbered doors with small windows, a handrail, ceiling light panels, a glossy
    *  tiled floor; `night` dims it to an evening shift. Generic, no real hospital branding. */
   hospital: (t, z, f) => {
@@ -3683,9 +3821,195 @@ const constellation: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** CHIP BUDDY (original design): a cute computer chip with a face, pin legs and little arms, bouncing with squash and
+ *  stretch. `mood` (happy | worry | shock | cool | sad) or `moods` [[t, mood], ...] to change it over time; `hop` jump
+ *  height (0 = idle wobble), `hopRate`, `look` (-1..1 pupils), `label` printed on the die, `color`. */
+const chipbuddy: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  let mood: string = a.mood ?? 'happy';
+  for (const [mt, m] of (a.moods || []) as [number, string][]) if (t >= mt) mood = m;
+  const hopH = a.hop ?? 26, ph = Math.abs(Math.sin(t * (a.hopRate ?? 3.2) + i * 1.3)), air = hopH * ph;
+  const st = hopH > 0 ? 0.1 * ph - 0.12 * Math.max(0, 0.25 - ph) * 4 : 0.03 * Math.sin(t * 3 + i);
+  const sy = 1 + st, sx = 1 / sy, c = col(a.color, '#2EC4B6'), look = (a.look ?? 0) * 8 + 3 * Math.sin(t * 0.9 + i);
+  const shake = mood === 'shock' ? 4 * Math.sin(t * 50) : 0, B = 150;
+  const mouth = mood === 'happy' ? <path d="M -30 34 Q 0 64 30 34" fill="#3B0A1A" stroke={OL} strokeWidth={4} />
+    : mood === 'shock' ? <ellipse cx={0} cy={44} rx={16} ry={22} fill="#3B0A1A" stroke={OL} strokeWidth={4} />
+    : mood === 'cool' ? <path d="M -24 42 L 26 38" stroke={OL} strokeWidth={5} strokeLinecap="round" />
+    : mood === 'sad' ? <path d="M -28 52 Q 0 28 28 52" fill="none" stroke={OL} strokeWidth={5} strokeLinecap="round" />
+    : <path d="M -30 46 q 10 -10 20 0 q 10 10 20 0 q 10 -10 20 0" fill="none" stroke={OL} strokeWidth={5} strokeLinecap="round" />;
+  const brow = mood === 'worry' || mood === 'sad' ? [12, -12] : mood === 'shock' ? [-6, 6] : mood === 'cool' ? [0, 0] : [-4, 4];
+  return <g key={'cb' + i} transform={`translate(${x + shake} ${y}) scale(${s * (a.flip ? -1 : 1)} ${s})`}>
+    <ellipse cx={0} cy={4} rx={70 - air * 0.6} ry={12} fill="#000000" opacity={0.25} />
+    <g transform={`translate(0 ${-air})`}>
+      {[-1, 1].map((d) => <g key={'lg' + d}><path d={`M ${d * 30} -14 L ${d * 34} -2`} stroke={OL} strokeWidth={8} strokeLinecap="round" />
+        <ellipse cx={d * 40} cy={0} rx={18} ry={9} fill="#263238" stroke={OL} strokeWidth={3} /></g>)}
+      <g transform={`translate(0 -14) scale(${sx} ${sy}) translate(0 ${-B / 2})`}>
+        {[-1, 1].map((d) => Array.from({length: 4}, (_, k) => <rect key={'p' + d + k} x={d > 0 ? B / 2 - 2 : -B / 2 - 16} y={-50 + k * 30} width={18} height={12} rx={3} fill="#CFD8DC" stroke={OL} strokeWidth={3} />))}
+        {[-1, 1].map((d) => { const wave = mood === 'happy' ? Math.sin(t * 8 + d) * 25 : mood === 'shock' ? -60 : 10;
+          return <path key={'ar' + d} d={`M ${d * (B / 2 + 14)} 6 q ${d * 30} ${-10 + wave * 0.3} ${d * 40} ${wave}`} fill="none" stroke={OL} strokeWidth={7} strokeLinecap="round" />; })}
+        <rect x={-B / 2} y={-B / 2} width={B} height={B} rx={26} fill={c} stroke={OL} strokeWidth={6} />
+        <rect x={-B / 2 + 14} y={-B / 2 + 12} width={B - 28} height={20} rx={8} fill="#FFFFFF" opacity={0.25} />
+        {[-1, 1].map((d) => <g key={'e' + d}>
+          <ellipse cx={d * 28} cy={-10} rx={20} ry={mood === 'shock' ? 26 : 22} fill="#FFFFFF" stroke={OL} strokeWidth={4} />
+          <circle cx={d * 28 + look} cy={-6} r={mood === 'shock' ? 6 : 9} fill={OL} />
+          <path d={`M ${d * 28 - 16} ${-40 + (d < 0 ? brow[0] : brow[1]) * 0.5} L ${d * 28 + 16} ${-40 + (d < 0 ? brow[1] : brow[0]) * 0.5}`} stroke={OL} strokeWidth={5} strokeLinecap="round" /></g>)}
+        {mood === 'cool' && <path d="M -54 -20 L 54 -20 L 46 2 L 10 2 L 4 -10 L -4 -10 L -10 2 L -46 2 Z" fill="#111" stroke={OL} strokeWidth={3} />}
+        {mouth}
+        {(mood === 'worry' || mood === 'sad') && <path d={`M ${B / 2 - 18} -40 q 8 14 0 22 q -8 -8 0 -22 Z`} fill="#81D4FA" stroke={OL} strokeWidth={2} transform={`translate(0 ${(t * 30) % 30})`} />}
+        {a.label && <T x={0} y={B / 2 - 12} s={20} c="#FFFFFF">{a.label}</T>}
+      </g>
+      {mood === 'shock' && [0, 1, 2, 3].map((k) => <path key={'sk' + k} d={`M ${-110 + k * 70} ${-215} l ${-10 + k * 7} -30`} stroke={K.gold} strokeWidth={6} strokeLinecap="round" />)}
+    </g>
+    {a.text && <T x={0} y={60} s={30} c={a.textc || K.white}>{a.text}</T>}
+  </g>;
+};
+
+/** STOCK ELEVATOR (original design): a chrome elevator shaft whose floors are labelled with values (`floors`, top to
+ *  bottom); the gold car drops one floor at each time in `stops` (accelerating fall, then a squashy landing), its LED
+ *  display shows the current floor's label, a worried chip rides inside. `text` caption below. */
+const stockelevator: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 160), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const floors: string[] = a.floors || ['$4.50TN', '$4.31TN', '$4.07TN'], stops: number[] = a.stops || [], FH = a.fh ?? 230, n = floors.length;
+  let pos = 0, sq = 0, falling = false;
+  stops.forEach((ts, k) => { const u = clamp((t - (ts - 0.7)) / 0.7); pos += u * u; if (u > 0 && u < 1) falling = true;
+    const g = t - ts; if (g > 0 && g < 0.45) sq = Math.max(sq, Math.sin(Math.PI * g / 0.45) * Math.exp(-g * 3)); void k; });
+  const cur = Math.min(n - 1, Math.round(pos)), carY = 60 + pos * FH, shaftH = (n - 1) * FH + 300;
+  return <g key={'se' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-170} y={0} width={340} height={shaftH} rx={18} fill="#1B2440" stroke={OL} strokeWidth={6} />
+    {[-1, 1].map((d) => <rect key={'rl' + d} x={d * 150 - 8} y={10} width={16} height={shaftH - 20} fill="#B0BEC5" stroke={OL} strokeWidth={3} />)}
+    {floors.map((lab, k) => <g key={'fl' + k}>
+      <path d={`M -170 ${60 + k * FH + 210} L 170 ${60 + k * FH + 210}`} stroke="#90A4AE" strokeWidth={6} />
+      <rect x={-430} y={60 + k * FH + 60} width={230} height={70} rx={14} fill={k === cur ? '#FFE14D' : '#2A1658'} stroke={OL} strokeWidth={5} />
+      <T x={-315} y={60 + k * FH + 108} s={36} c={k === cur ? OL : '#3DF5FF'}>{lab}</T>
+      <path d={`M -200 ${60 + k * FH + 95} L -172 ${60 + k * FH + 95}`} stroke={OL} strokeWidth={5} /></g>)}
+    <g transform="translate(0 -20)"><circle r={44} fill="#CFD8DC" stroke={OL} strokeWidth={6} />
+      <g transform={`rotate(${pos * 400})`}>{[0, 1, 2].map((k) => <rect key={k} x={-36} y={-5} width={72} height={10} fill="#78909C" transform={`rotate(${k * 60})`} />)}</g></g>
+    {[-30, 30].map((dx) => <path key={'cb' + dx} d={`M ${dx} 20 L ${dx} ${carY}`} stroke="#90A4AE" strokeWidth={4} />)}
+    <g transform={`translate(0 ${carY + 200}) scale(${1 + sq * 0.12} ${1 - sq * 0.16}) translate(0 -200)`}>
+      <rect x={-120} y={0} width={240} height={200} rx={16} fill="#FFC93C" stroke={OL} strokeWidth={6} />
+      <rect x={-90} y={14} width={180} height={50} rx={8} fill="#1A0A0A" stroke={OL} strokeWidth={4} />
+      <T x={0} y={52} s={34} c="#FF5252">{floors[cur]}</T>
+      <rect x={-90} y={76} width={180} height={110} rx={10} fill="#FFF3C4" stroke={OL} strokeWidth={4} />
+      <g transform="translate(0 186) scale(0.55)">
+        <rect x={-75} y={-150} width={150} height={150} rx={24} fill="#2EC4B6" stroke={OL} strokeWidth={6} />
+        {[-1, 1].map((d) => <g key={'ey' + d}><ellipse cx={d * 28} cy={-90} rx={20} ry={26} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><circle cx={d * 28} cy={falling ? -100 : -86} r={7} fill={OL} /></g>)}
+        <ellipse cx={0} cy={-40} rx={falling ? 18 : 12} ry={falling ? 22 : 8} fill="#3B0A1A" stroke={OL} strokeWidth={4} /></g>
+      <path d="M -120 100 L 120 100" stroke={OL} strokeWidth={3} opacity={0.3} />
+      {falling && [0, 1, 2, 3].map((k) => <path key={'sp' + k} d={`M ${k % 2 ? 128 : -128} ${20 + k * 30} l ${k % 2 ? 26 : -26} ${-18 - 10 * Math.sin(t * 40 + k)}`} stroke={K.gold} strokeWidth={6} strokeLinecap="round" />)}
+      {falling && [0, 1, 2].map((k) => <path key={'ml' + k} d={`M ${-70 + k * 70} ${-20 - k * 6} l 0 -60`} stroke="#FFFFFF" strokeWidth={5} opacity={0.6} strokeLinecap="round" />)}
+    </g>
+    <path d={`M 230 ${carY + 70} l 30 0 l -15 26 Z`} fill={Math.sin(t * 8) > 0 ? '#FF5252' : '#7F0000'} stroke={OL} strokeWidth={3} />
+    {a.text && <T x={0} y={shaftH + 60} s={36} c={a.textc || K.white}>{a.text}</T>}
+  </g>;
+};
+
+/** DETECTIVE (original, generic design; never a real person): a trench-coat investigator with a wide-brim hat and a
+ *  magnifying glass. Walks when `x` keyframes move (bobbing, legs swinging). `searchAt`: sweeps the lens left/right with
+ *  a giant magnified eye. `findAt`: a "!" pops above the hat. `text`: caption. */
+const detective: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const vx = kf(a.x, t + 0.05, 960) - kf(a.x, t - 0.05, 960), walk = Math.abs(vx) > 0.5, dir = vx < -0.5 ? -1 : (a.flip ? -1 : 1);
+  const bob = walk ? Math.abs(Math.sin(t * 9)) * 10 : 2 * Math.sin(t * 2), leg = walk ? Math.sin(t * 9) * 22 : 0;
+  const search = a.searchAt !== undefined && t >= a.searchAt, lensA = search ? Math.sin(t * 2.6) * 22 : -8, found = a.findAt !== undefined && t >= a.findAt;
+  const skin = K.skin[a.skin ?? 3];
+  return <g key={'dt' + i} transform={`translate(${x} ${y}) scale(${s * dir} ${s})`}>
+    <ellipse cx={0} cy={4} rx={90} ry={12} fill="#000000" opacity={0.25} />
+    <g transform={`translate(0 ${-bob})`}>
+      {[-1, 1].map((d) => <g key={'lg' + d} transform={`rotate(${d * leg} ${d * 22} -110)`}>
+        <rect x={d * 22 - 12} y={-110} width={24} height={100} rx={10} fill="#37474F" stroke={OL} strokeWidth={4} />
+        <ellipse cx={d * 22 + 14} cy={-6} rx={30} ry={14} fill="#3E2723" stroke={OL} strokeWidth={4} /></g>)}
+      <path d="M -70 -110 L -52 -330 Q 0 -350 52 -330 L 74 -110 Q 0 -96 -70 -110 Z" fill="#C9A66B" stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+      <path d="M 0 -340 L 0 -112" stroke={OL} strokeWidth={4} opacity={0.5} />
+      <rect x={-62} y={-232} width={128} height={18} fill="#8D6E3F" stroke={OL} strokeWidth={4} />
+      <rect x={-10} y={-236} width={22} height={26} rx={4} fill="#FFD54F" stroke={OL} strokeWidth={3} />
+      {[-300, -270, -180].map((by) => <circle key={by} cx={18} cy={by} r={5} fill={OL} />)}
+      <path d="M -54 -336 L -10 -296 L -6 -350 Z M 54 -336 L 10 -296 L 6 -350 Z" fill="#B8925A" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+      <path d="M -50 -310 Q -84 -250 -60 -200" fill="none" stroke="#B8925A" strokeWidth={26} strokeLinecap="round" />
+      <path d="M -50 -310 Q -84 -250 -60 -200" fill="none" stroke={OL} strokeWidth={4} strokeLinecap="round" opacity={0.6} />
+      <g transform={`rotate(${lensA} 46 -300)`}>
+        <path d="M 46 -300 L 130 -300" stroke="#B8925A" strokeWidth={26} strokeLinecap="round" />
+        <circle cx={140} cy={-300} r={16} fill={skin} stroke={OL} strokeWidth={4} />
+        <path d="M 150 -300 L 186 -300" stroke="#5D4037" strokeWidth={14} strokeLinecap="round" />
+        <circle cx={232} cy={-300} r={50} fill="#B3E5FC" opacity={0.55} stroke={OL} strokeWidth={8} />
+        {search && <g><ellipse cx={232} cy={-300} rx={30} ry={22} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><circle cx={236 + 6 * Math.sin(t * 5)} cy={-300} r={12} fill={OL} /></g>}
+        <path d="M 208 -324 Q 220 -336 236 -334" stroke="#FFFFFF" strokeWidth={6} fill="none" strokeLinecap="round" /></g>
+      <circle cx={8} cy={-388} r={44} fill={skin} stroke={OL} strokeWidth={5} />
+      <circle cx={26} cy={-394} r={6} fill={OL} />
+      <path d="M 14 -410 L 38 -414" stroke={OL} strokeWidth={5} strokeLinecap="round" />
+      <path d="M 50 -380 q 10 6 0 12" fill="none" stroke={OL} strokeWidth={4} />
+      <path d="M -40 -372 Q 8 -340 56 -372 L 56 -350 Q 8 -326 -40 -350 Z" fill="#B8925A" stroke={OL} strokeWidth={4} />
+      <ellipse cx={8} cy={-420} rx={86} ry={16} fill="#4E5B4A" stroke={OL} strokeWidth={5} />
+      <path d="M -36 -424 L -30 -486 Q 8 -508 46 -486 L 52 -424 Z" fill="#5E6B58" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+      <rect x={-34} y={-446} width={84} height={14} fill="#2E3A2C" />
+      {found && <g transform={`translate(10 ${-560 - 10 * Math.abs(Math.sin(t * 6))}) scale(${pop(t, a.findAt, 0.4)})`}>
+        <circle r={40} fill="#FFE14D" stroke={OL} strokeWidth={5} /><T x={0} y={20} s={56}>!</T></g>}
+    </g>
+    {a.text && <g transform={`scale(${dir} 1)`}><T x={0} y={60} s={32} c={a.textc || K.white}>{a.text}</T></g>}
+  </g>;
+};
+
+/** EMPTY CHAIR (original design): a tall executive chair, nobody in it, slowly swivelling under a spotlight. From
+ *  `memoAt`, a memo flutters down from above and lands on the seat (`memo`: its title). `text`: caption. */
+const emptychair: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const sw = 0.82 + 0.18 * Math.cos(t * 0.8), m = a.memoAt !== undefined ? clamp((t - a.memoAt) / 2.4) : -1;
+  const mx = m >= 0 ? 160 * Math.sin(m * Math.PI * 3) * (1 - m) : 0, my = m >= 0 ? -900 + 700 * E.out(m) : 0, mr = m >= 0 ? 25 * Math.sin(m * Math.PI * 4) * (1 - m) : 0;
+  return <g key={'ec' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    <path d="M -60 -900 L 60 -900 L 300 0 L -300 0 Z" fill="#FFF59D" opacity={0.12} />
+    <ellipse cx={0} cy={0} rx={240} ry={28} fill="#FFF59D" opacity={0.25} />
+    <g transform={`scale(${sw} 1)`}>
+      {Array.from({length: 5}, (_, k) => { const ang = k * 72 + t * 20;
+        return <g key={'lg' + k}><path d={`M 0 -20 L ${150 * Math.cos(ang * Math.PI / 180)} ${-6 + 16 * Math.sin(ang * Math.PI / 180)}`} stroke="#90A4AE" strokeWidth={14} strokeLinecap="round" />
+          <circle cx={150 * Math.cos(ang * Math.PI / 180)} cy={6 + 16 * Math.sin(ang * Math.PI / 180)} r={14} fill="#263238" stroke={OL} strokeWidth={3} /></g>; })}
+      <rect x={-14} y={-150} width={28} height={130} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+      <rect x={-170} y={-200} width={340} height={60} rx={26} fill="#3E2723" stroke={OL} strokeWidth={6} />
+      <path d="M -150 -200 L -170 -560 Q 0 -640 170 -560 L 150 -200 Z" fill="#4E342E" stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+      {Array.from({length: 9}, (_, k) => <circle key={'tf' + k} cx={-90 + (k % 3) * 90} cy={-500 + Math.floor(k / 3) * 100} r={9} fill="#2B1B17" />)}
+      {[-1, 1].map((d) => <rect key={'ar' + d} x={d > 0 ? 160 : -200} y={-300} width={40} height={110} rx={16} fill="#3E2723" stroke={OL} strokeWidth={5} />)}
+      <path d="M -120 -590 Q 0 -630 100 -585" stroke="#FFFFFF" strokeWidth={8} opacity={0.25} fill="none" strokeLinecap="round" />
+    </g>
+    {m >= 0 && <g transform={`translate(${mx} ${my - 230}) rotate(${mr})`}>
+      <rect x={-90} y={-60} width={180} height={120} rx={6} fill="#FFFFFF" stroke={OL} strokeWidth={5} />
+      <T x={0} y={-22} s={26}>{a.memo || 'MEMO'}</T>
+      {[0, 1, 2].map((k) => <rect key={k} x={-64} y={-4 + k * 18} width={128 - k * 24} height={6} rx={3} fill="#B0BEC5" />)}</g>}
+    {a.text && <T x={0} y={80} s={34} c={a.textc || K.white}>{a.text}</T>}
+  </g>;
+};
+
+/** FREIGHTER (original design): a chunky cartoon cargo boat bobbing on the waves, stacked crates with stencilled
+ *  `labels`, a puffing funnel. Moves with `x` keyframes; `stopAt`: it brakes (wake stops) and a "?" pops over it. */
+const freighter: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f - 210), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const labels: string[] = a.labels || ['CARGO'], moving = Math.abs(kf(a.x, t + 0.05, 960) - kf(a.x, t - 0.05, 960)) > 0.5;
+  const rock = 4 * Math.sin(t * 1.9 + i), bob = 8 * Math.sin(t * 2.1 + i), q = a.stopAt !== undefined && t >= a.stopAt;
+  const cc = ['#E53935', '#1E88E5', '#FFB300', '#43A047', '#8E24AA', '#00ACC1'];
+  return <g key={'fr' + i} transform={`translate(${x} ${y + bob}) scale(${s * (a.flip ? -1 : 1)} ${s}) rotate(${rock})`}>
+    {moving && [0, 1, 2].map((k) => <path key={'wk' + k} d={`M ${-300 - k * 60 - ((t * 120) % 60)} ${40 + k * 8} q 30 -12 60 0`} fill="none" stroke="#FFFFFF" strokeWidth={5} opacity={0.6 - k * 0.15} />)}
+    <path d="M -290 -20 L 300 -20 L 250 70 L -250 70 Z" fill="#37474F" stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+    <rect x={-290} y={-34} width={590} height={18} fill="#ECEFF1" stroke={OL} strokeWidth={4} />
+    <path d="M -250 50 L 250 50" stroke="#E53935" strokeWidth={10} />
+    {Array.from({length: 6}, (_, k) => { const r = k < 4 ? 0 : 1, c2 = k < 4 ? k : k - 4;
+      return <g key={'cr' + k} transform={`translate(${-230 + c2 * 104 + r * 52} ${-110 - r * 76})`}>
+        <rect x={0} y={0} width={100} height={76} rx={4} fill={cc[k % cc.length]} stroke={OL} strokeWidth={4} />
+        {[1, 2, 3].map((v) => <path key={v} d={`M ${v * 25} 6 L ${v * 25} 70`} stroke={OL} strokeWidth={2} opacity={0.3} />)}
+        <T x={50} y={46} s={labels[k % labels.length].length > 7 ? 15 : 20} c="#FFFFFF">{labels[k % labels.length]}</T></g>; })}
+    <rect x={190} y={-150} width={90} height={116} rx={8} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+    {[0, 1].map((k) => <rect key={'wd' + k} x={202 + k * 38} y={-136} width={28} height={24} rx={4} fill="#81D4FA" stroke={OL} strokeWidth={3} />)}
+    <rect x={214} y={-220} width={40} height={70} fill="#E53935" stroke={OL} strokeWidth={5} />
+    {[0, 1, 2].map((k) => { const g = ((t * 0.8 + k / 3) % 1); return <circle key={'pf' + k} cx={234 - 40 * g} cy={-240 - 140 * g} r={16 + 26 * g} fill="#ECEFF1" opacity={0.8 * (1 - g)} stroke={OL} strokeWidth={3} />; })}
+    {q && <g transform={`translate(0 ${-330 - 8 * Math.abs(Math.sin(t * 5))}) scale(${pop(t, a.stopAt, 0.4)})`}><circle r={46} fill="#FFE14D" stroke={OL} strokeWidth={5} /><T x={0} y={22} s={62}>?</T></g>}
+    {a.text && <T x={0} y={130} s={34} c={a.textc || K.white}>{a.text}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, freighter};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

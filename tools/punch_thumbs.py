@@ -67,6 +67,7 @@ S = {
  "47-post-office": ("navy", "R", {"kind": "parcels", "s": 0.95}, "$118 BILLION", "POST OFFICE LOSSES", "#FF1E1E", {}, "≈ $118bn net losses since FY2006 (GAO)"),
  "48-alaska-dividend": ("blue", "L", {"kind": "bigcheck", "s": 0.75, "amount": "$1,200"}, "$1,200 EACH", "ALASKA PAYS YOU", "#FF1E1E", {}, "2026 PFD $1,200 (PFD Division)"),
  "49-college-sports": ("orange", "R", {"kind": "trophy", "s": 0.95}, "$20.5 MILLION", "COLLEGE PAYROLL", "#FF1E1E", {}, "$20.5M cap per school 2025-26 (CSC)"),
+ "52-nvidia-probe": ("navy", "L", {"kind": "chip", "s": 1.0, "rot": -10, "label": "AI"}, "NVIDIA", "-$428 BILLION", "#FF1E1E", {}, "≈ -$428bn market value Nov 6-10, 2026 (our estimate: closes × 24.1bn shares)"),
  "51-spacex": ("navy", "L", {"kind": "rocket", "s": 0.75}, "SPACEX", "NOT ROCKETS?!", "#FF1E1E", {}, "Q3 2026: SI $7.6bn > Starlink $5.2bn > Space $1.8bn (Q3 release)"),
  "50-mf-global": ("navy", "L", {"kind": "vault", "s": 0.95}, "$1.6 BILLION", "VANISHED", "#FF1E1E", {}, "≈ $1.6bn customer shortfall (SIPA trustee)"),
  "42-penny": ("orange", "R", {"kind": "coin", "s": 1.0, "symbol": "1¢"}, "IT COSTS 3.69¢", "TO MAKE 1¢", "#FF1E1E", {}, "penny unit cost 3.69¢ FY2024 (Mint)"),
