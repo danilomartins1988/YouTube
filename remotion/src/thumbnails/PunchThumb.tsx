@@ -72,6 +72,26 @@ const HEROES: Record<string, HeroFn> = {
     <circle cx={0} cy={230} r={18} fill="#4FC3F7" stroke={OL} strokeWidth={6} />
     <path d="M 0 270 q 120 160 -60 300" fill="none" stroke="#B0BEC5" strokeWidth={12} />
   </g>,
+  /** a giant YES/NO contract ticket with a coin flipping above it */
+  yesnoticket: (o) => <g>
+    <rect x={-470} y={-270} width={940} height={540} rx={40} fill="#FFFFFF" stroke={OL} strokeWidth={16} />
+    <text x={0} y={-150} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={64} fill={OL}>WILL IT HAPPEN?</text>
+    <rect x={-410} y={-70} width={480} height={190} rx={22} fill="#43A047" stroke={OL} strokeWidth={12} />
+    <rect x={70} y={-70} width={340} height={190} rx={22} fill="#E53935" stroke={OL} strokeWidth={12} />
+    <text x={-170} y={50} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={84} fill="#FFFFFF">YES 65¢</text>
+    <text x={240} y={50} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={84} fill="#FFFFFF">NO 35¢</text>
+    <rect x={-150} y={170} width={300} height={70} rx={14} fill="#FFC21A" stroke={OL} strokeWidth={10} />
+    <text x={0} y={222} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={46} fill={OL}>FEE</text>
+  </g>,
+  /** a giant generic paper check */
+  bigcheck: (o) => <g transform="rotate(-6)">
+    <rect x={-560} y={-260} width={1120} height={520} rx={30} fill="#E8F5E9" stroke={OL} strokeWidth={16} />
+    <text x={-500} y={-170} fontFamily={FONT} fontWeight={900} fontSize={54} fill="#2E7D32">DIVIDEND</text>
+    <text x={-500} y={-20} fontFamily={FONT} fontWeight={800} fontSize={48} fill={OL}>PAY TO: EVERY RESIDENT</text>
+    <rect x={120} y={60} width={380} height={130} rx={16} fill="#FFFFFF" stroke={OL} strokeWidth={12} />
+    <text x={310} y={155} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={96} fill={OL}>{o.amount || '$1,200'}</text>
+    <path d="M -500 120 L 60 120 M -500 200 L 60 200" stroke="#90A4AE" strokeWidth={8} />
+  </g>,
   /** a giant dollar bill with a thin slice cut off on the left (the farm's share) and scissors */
   dollar: (o) => <g>
     <rect x={-560} y={-250} width={1120} height={500} rx={24} fill="#8BCB8F" stroke={OL} strokeWidth={14} />
