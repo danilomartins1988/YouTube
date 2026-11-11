@@ -798,3 +798,22 @@ Watch the full story: "How One Flooded Factory Ran America Short of IV Fluids" o
 ```
 IV fluids, hospitals, drug shortages, supply chain, Hurricane Helene, healthcare economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 47-post-office
+
+**Title**
+```
+The Post Office Has Lost $118 Billion Since 2006 #shorts
+```
+**Description**
+```
+About one hundred and eighteen billion dollars. That is roughly how much the U.S. Postal Service has lost since 2006, according to the GAO.
+
+Watch the full story: "Why the Post Office Keeps Losing Billions" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #usps #postoffice #economics
+```
+**Tags**
+```
+USPS, Post Office, postal service, mail, stamps, government finance, GAO, shorts, economics explained, The Hidden Economics
+```
