@@ -85,3 +85,10 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 | N8 | Alaska: The State That Pays You to Live There | **Delivered** (Ep 48, `docs/episodes/48-alaska-dividend`) |
 | N9 | College Sports Just Got a $20.5 Million Payroll | **Delivered** (Ep 49, `docs/episodes/49-college-sports`) |
 | N10 | MF Global: The $1.6 Billion That Vanished | **Delivered** (Ep 50, `docs/episodes/50-mf-global`) |
+
+## Owner requests 2026-11-11
+
+| # | Working title | Status | Notes |
+|---|---|---|---|
+| R1 | How SpaceX Actually Makes Money | **Research** (Ep 51, `docs/episodes/51-spacex`) | Public since 2026: S-1 and 10-Qs on SEC EDGAR are the primary sources. Segments (Starlink, launch, AI), Starship spending, government contracts. No logos; rockets and satellites generic. |
+| R2 | Nvidia, the CEO probe and the chip-smuggling question | **Research** (Ep 52, `docs/episodes/52-nvidia-probe`) | Owner asked 2026-11-11. Allegations attributed to NYT/FT; the woman is not named; no person drawn. Script now, render after Nov 17 earnings and the Nov 18 House briefing unless the owner wants it sooner. |
