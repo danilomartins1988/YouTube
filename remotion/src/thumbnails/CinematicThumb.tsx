@@ -180,11 +180,11 @@ export const SUBJECTS: Record<string, SubjectFn> = {
     <path d="M -700 300 L -500 280 L -320 300 L -150 270 L 0 290 L 120 250 L 220 -40 L 300 -520" stroke={P.accent} strokeWidth={20} fill="none" strokeLinejoin="round" filter="url(#glow)" />
     <path d="M -700 300 L -500 280 L -320 300 L -150 270 L 0 290 L 120 250 L 220 -40 L 300 -520 L 300 420 L -700 420 Z" fill={P.accent} opacity={0.12} />
     <path d="M 300 -520 l -60 40 m 60 -40 l 20 70" stroke={P.accent} strokeWidth={20} strokeLinecap="round" filter="url(#glow)" />
-    <g transform="translate(-120 230) rotate(-6) scale(1.2)">
+    {!o.nocar && <g transform="translate(-120 230) rotate(-6) scale(1.2)">
       <path d="M -190 0 L -170 -50 Q -120 -110 -30 -112 L 60 -112 Q 130 -100 170 -50 L 200 -40 Q 220 -20 210 10 L -200 10 Z" fill="#0B0F16" />
       <path d="M -110 -60 Q -70 -98 -20 -100 L 40 -100 Q 90 -92 120 -60 Z" fill={P.key} opacity={0.35} />
       <circle cx={-110} cy={14} r={38} fill="#05070A" stroke="#3A4250" strokeWidth={8} /><circle cx={120} cy={14} r={38} fill="#05070A" stroke="#3A4250" strokeWidth={8} />
-    </g>
+    </g>}
     {o.label && <text x={340} y={-560} fontFamily={FONT} fontWeight={900} fontSize={64} fill={P.accent}>{o.label}</text>}
   </g>,
   /** A thick glowing arrow that BREAKS OUT of a chart frame (glass shards), a car silhouette launched on it. */

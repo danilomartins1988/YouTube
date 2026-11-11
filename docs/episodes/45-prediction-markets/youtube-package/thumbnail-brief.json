@@ -19,16 +19,16 @@
       "archetype": "bignum",
       "text": [
         "$25 BILLION",
-        "PREDICTION MARKETS"
+        "IN BETS"
       ],
       "claim_basis": "size: $25bn of event contracts in March 2026 (CFTC proposed rule)",
       "scene": {
         "palette": {
-          "sky0": "#0A0E1A",
-          "sky1": "#1E2A4A",
-          "haze": "#90CAF9",
-          "key": "#E3F2FD",
-          "accent": "#FFC21A",
+          "sky0": "#160A1E",
+          "sky1": "#3A1450",
+          "haze": "#CE93D8",
+          "key": "#F3E5F5",
+          "accent": "#69F0AE",
           "ink": "#FFFFFF"
         },
         "backdrop": "void",
@@ -36,7 +36,8 @@
           "kind": "surge",
           "x": 1480,
           "y": 560,
-          "s": 0.75
+          "s": 0.75,
+          "nocar": true
         },
         "support": [],
         "particles": {
@@ -61,14 +62,14 @@
           "size": 167.6,
           "width": 1180,
           "anchor": "start",
-          "color": "#FFC21A"
+          "color": "#69F0AE"
         },
         {
-          "text": "PREDICTION MARKETS",
+          "text": "IN BETS",
           "x": 96,
-          "y": 640.1,
-          "size": 95.5,
-          "width": 1100,
+          "y": 668.3,
+          "size": 120,
+          "width": 537.6,
           "anchor": "start",
           "color": "#FFFFFF"
         }
@@ -90,7 +91,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.55 MB",
+            "detail": "0.54 MB",
             "critical": true
           },
           {
@@ -108,7 +109,7 @@
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 400, 1270, 540), (96, 566, 1196, 646)]",
+            "detail": "[(90, 400, 1270, 540), (96, 575, 634, 676)]",
             "critical": true
           },
           {
@@ -119,32 +120,32 @@
           },
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
-            "pass": false,
-            "detail": "8.0px font at 160px wide",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 3.7:1 (dark outline adds more)",
+            "detail": "worst 5.1:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.078",
+            "detail": "0.057",
             "critical": false
           },
           {
             "check": "dominant subject has strong internal contrast",
-            "pass": true,
-            "detail": "luma std 40",
+            "pass": false,
+            "detail": "luma std 17",
             "critical": false
           },
           {
             "check": "distinct from other channel thumbnails",
-            "pass": false,
-            "detail": "nearest alaska-the-state-that-pays-you-to-live-there (distance 0.16)",
+            "pass": true,
+            "detail": "nearest mf-global-the-billion-dollars-that-vanished (distance 0.86)",
             "critical": false
           },
           {
@@ -154,8 +155,8 @@
             "critical": true
           }
         ],
-        "critical_fail": true,
-        "design_score": 0.495,
+        "critical_fail": false,
+        "design_score": 0.677,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -163,7 +164,7 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "alaska-the-state-that-pays-you-to-live-there"
+        "nearest": "mf-global-the-billion-dollars-that-vanished"
       }
     },
     {
@@ -171,8 +172,8 @@
       "angle": "before/after (split)",
       "archetype": "split",
       "text": [
-        "YOU: GAMBLE",
-        "THEY: COLLECT"
+        "YOU BET",
+        "THEY WIN"
       ],
       "claim_basis": "Kalshi: fee on every trade; trades against other members (help center)",
       "scene": {
@@ -189,7 +190,8 @@
           "kind": "surge",
           "x": 480,
           "y": 650,
-          "s": 0.6
+          "s": 0.6,
+          "nocar": true
         },
         "after": {
           "kind": "coin",
@@ -214,19 +216,19 @@
       },
       "layout": [
         {
-          "text": "YOU: GAMBLE",
+          "text": "YOU BET",
           "x": 480.0,
-          "y": 218.5,
-          "size": 108.0,
-          "width": 760,
+          "y": 253.0,
+          "size": 150,
+          "width": 672.0,
           "anchor": "middle",
           "color": "#FFFFFF"
         },
         {
-          "text": "THEY: COLLECT",
+          "text": "THEY WIN",
           "x": 1440.0,
-          "y": 204.9,
-          "size": 91.3,
+          "y": 251.7,
+          "size": 148.4,
           "width": 760,
           "anchor": "middle",
           "color": "#FF5A4E"
@@ -249,7 +251,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.56 MB",
+            "detail": "0.54 MB",
             "critical": true
           },
           {
@@ -267,7 +269,7 @@
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(100, 134, 860, 225), (1060, 134, 1820, 210)]",
+            "detail": "[(144, 136, 816, 262), (1060, 136, 1820, 261)]",
             "critical": true
           },
           {
@@ -278,32 +280,32 @@
           },
           {
             "check": "legible at 160 px wide (cap height >= 6 px)",
-            "pass": false,
-            "detail": "7.6px font at 160px wide",
+            "pass": true,
+            "detail": "12.4px font at 160px wide",
             "critical": true
           },
           {
             "check": "text contrast >= 3:1 against its background",
             "pass": true,
-            "detail": "worst 4.4:1 (dark outline adds more)",
+            "detail": "worst 4.2:1 (dark outline adds more)",
             "critical": true
           },
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.060",
+            "detail": "0.058",
             "critical": false
           },
           {
             "check": "dominant subject has strong internal contrast",
             "pass": false,
-            "detail": "luma std 23",
+            "detail": "luma std 16",
             "critical": false
           },
           {
             "check": "distinct from other channel thumbnails",
             "pass": false,
-            "detail": "nearest college-sports-just-got-a-20-million-payroll (distance 0.18)",
+            "detail": "nearest why-banks-still-make-billions-from-overdrafts (distance 0.21)",
             "critical": false
           },
           {
@@ -313,8 +315,8 @@
             "critical": true
           }
         ],
-        "critical_fail": true,
-        "design_score": 0.513,
+        "critical_fail": false,
+        "design_score": 0.589,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -322,13 +324,13 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "college-sports-just-got-a-20-million-payroll"
+        "nearest": "why-banks-still-make-billions-from-overdrafts"
       }
     }
   ],
-  "default": null,
+  "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-11T07:06:45Z",
-  "master": null
+  "generated": "2026-11-11T09:08:18Z",
+  "master": "output/how-prediction-markets-make-money-off-your-hunches/thumbnails/master_A.png"
 }

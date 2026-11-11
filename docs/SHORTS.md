@@ -51,3 +51,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 42-penny | It Cost 3.69 Cents to Make One Penny | 3.69 CENTS / TO MAKE 1 CENT | 45 s | `docs/episodes/42-penny/youtube-short/short_package.md` |
 | 50-mf-global | MF Global: $1.6 Billion of Customer Money Vanished | $1.6 BILLION / VANISHED | 55 s | `docs/episodes/50-mf-global/youtube-short/short_package.md` |
 | 41-tariff-refund | Who Gets the $166 Billion Tariff Refund? Not Shoppers | $166 BILLION / REFUND: NOT YOU | 56 s | `docs/episodes/41-tariff-refund/youtube-short/short_package.md` |
+| 45-prediction-markets | Prediction Markets Traded $25 Billion in One Month | $25 BILLION / IN ONE MONTH | 50 s | `docs/episodes/45-prediction-markets/youtube-short/short_package.md` |

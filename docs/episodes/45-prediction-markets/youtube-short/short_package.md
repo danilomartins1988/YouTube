@@ -23,7 +23,7 @@ Watch the full story: "How Prediction Markets Make Money Off Your Hunches" on Th
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+prediction markets, Kalshi, Polymarket, event contracts, sports betting, CFTC, market makers, gambling, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

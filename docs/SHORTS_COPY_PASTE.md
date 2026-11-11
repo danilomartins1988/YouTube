@@ -893,3 +893,22 @@ Watch the full story: "Who Actually Gets the $166 Billion Tariff Refund?" on The
 ```
 tariffs, tariff refund, Supreme Court, IEEPA, importers, prices, Costco, FedEx, trade policy, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 45-prediction-markets
+
+**Title**
+```
+Prediction Markets Traded $25 Billion in One Month #shorts
+```
+**Description**
+```
+Twenty-five billion dollars. That is how much was traded on event contracts in America in March twenty twenty-six, according to the federal regulator.
+
+Watch the full story: "How Prediction Markets Make Money Off Your Hunches" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #predictionmarkets #finance #sports #economics
+```
+**Tags**
+```
+prediction markets, Kalshi, Polymarket, event contracts, sports betting, CFTC, market makers, gambling, economics, shorts, economics explained, The Hidden Economics
+```

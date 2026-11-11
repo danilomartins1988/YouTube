@@ -16,12 +16,12 @@ concepts:
   archetype: bignum
   text:
   - $25 BILLION
-  - PREDICTION MARKETS
+  - IN BETS
   claim_basis: 'size: $25bn of event contracts in March 2026 (CFTC proposed rule)'
   scene:
-    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    palette: {sky0: '#160A1E', sky1: '#3A1450', haze: '#CE93D8', key: '#F3E5F5', accent: '#69F0AE', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: surge, x: 1480, y: 560, s: 0.75}
+    subject: {kind: surge, x: 1480, y: 560, s: 0.75, nocar: true}
     support: []
     particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
     vignette: 0.55
@@ -30,13 +30,13 @@ concepts:
   angle: before/after (split)
   archetype: split
   text:
-  - 'YOU: GAMBLE'
-  - 'THEY: COLLECT'
+  - 'YOU BET'
+  - 'THEY WIN'
   claim_basis: 'Kalshi: fee on every trade; trades against other members (help center)'
   scene:
     palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: surge, x: 480, y: 650, s: 0.6}
+    subject: {kind: surge, x: 480, y: 650, s: 0.6, nocar: true}
     after: {kind: coin, x: 1440, y: 640, s: 0.6}
     support: []
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}

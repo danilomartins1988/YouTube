@@ -79,7 +79,7 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 | N2 | Why America Stopped Making the Penny | **Delivered** (Ep 42, `docs/episodes/42-penny`) |
 | N3 | America's $1 Trillion of Gold Is Booked at $11 Billion | **Delivered** (Ep 43, `docs/episodes/43-gold-reserve`) |
 | N4 | One Factory Makes 60% of America's IV Bags | **Delivered** (Ep 44, `docs/episodes/44-iv-bags`; title "How One Flooded Factory Ran America Short of IV Fluids") |
-| N5 | How Prediction Markets Make Money Off Your Hunches | **In production** (Ep 45, `docs/episodes/45-prediction-markets`) |
+| N5 | How Prediction Markets Make Money Off Your Hunches | **Delivered** (Ep 45, `docs/episodes/45-prediction-markets`) |
 | N6 | Why Banks Still Make Billions From Overdrafts | **Delivered** (Ep 46, `docs/episodes/46-overdrafts`) |
 | N7 | Why the Post Office Keeps Losing Billions (retitled: FY2026 loss $6.5bn) | **Delivered** (Ep 47, `docs/episodes/47-post-office`) |
 | N8 | Alaska: The State That Pays You to Live There | **Delivered** (Ep 48, `docs/episodes/48-alaska-dividend`) |
