@@ -76,7 +76,7 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 | # | Working title | Status |
 |---|---|---|
 | N1 | Who Actually Gets the $166 Billion Tariff Refund? | **In production** (Ep 41, `docs/episodes/41-tariff-refund`) |
-| N2 | Why America Stopped Making the Penny | **In production** (Ep 42, `docs/episodes/42-penny`) |
+| N2 | Why America Stopped Making the Penny | **Delivered** (Ep 42, `docs/episodes/42-penny`) |
 | N3 | America's $1 Trillion of Gold Is Booked at $11 Billion | **Delivered** (Ep 43, `docs/episodes/43-gold-reserve`) |
 | N4 | One Factory Makes 60% of America's IV Bags | **Delivered** (Ep 44, `docs/episodes/44-iv-bags`; title "How One Flooded Factory Ran America Short of IV Fluids") |
 | N5 | How Prediction Markets Make Money Off Your Hunches | **In production** (Ep 45, `docs/episodes/45-prediction-markets`) |
@@ -84,4 +84,4 @@ v2 thumbnail (PunchThumb) and the presenter as main character from the start.
 | N7 | Why the Post Office Keeps Losing Billions (retitled: FY2026 loss $6.5bn) | **Delivered** (Ep 47, `docs/episodes/47-post-office`) |
 | N8 | Alaska: The State That Pays You to Live There | **Delivered** (Ep 48, `docs/episodes/48-alaska-dividend`) |
 | N9 | College Sports Just Got a $20.5 Million Payroll | **In production** (Ep 49, `docs/episodes/49-college-sports`) |
-| N10 | MF Global: The $1.6 Billion That Vanished | **In production** (Ep 50, `docs/episodes/50-mf-global`) |
+| N10 | MF Global: The $1.6 Billion That Vanished | **Delivered** (Ep 50, `docs/episodes/50-mf-global`) |

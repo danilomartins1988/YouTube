@@ -23,7 +23,7 @@ Watch the full story: "Why America Stopped Making the Penny" on The Hidden Econo
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+penny, U.S. Mint, coins, cost of money, rounding, zinc, Treasury, cash, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

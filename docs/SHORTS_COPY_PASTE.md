@@ -836,3 +836,41 @@ Watch the full story: "Alaska: The State That Pays You to Live There" on The Hid
 ```
 Alaska, Permanent Fund Dividend, PFD, universal basic income, oil money, state budget, shorts, economics explained, The Hidden Economics
 ```
+
+## 42-penny
+
+**Title**
+```
+It Cost 3.69 Cents to Make One Penny #shorts
+```
+**Description**
+```
+Three point six nine cents. That is what it cost the United States Mint to make a single one-cent coin, in its twenty twenty-four fiscal year.
+
+Watch the full story: "Why America Stopped Making the Penny" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #penny #money #usa #economics
+```
+**Tags**
+```
+penny, U.S. Mint, coins, cost of money, rounding, zinc, Treasury, cash, economics, shorts, economics explained, The Hidden Economics
+```
+
+## 50-mf-global
+
+**Title**
+```
+MF Global: $1.6 Billion of Customer Money Vanished #shorts
+```
+**Description**
+```
+One point six billion dollars. That is how much customer money was missing when the brokerage firm MF Global collapsed in October twenty eleven, according to the trustee who took over the firm.
+
+Watch the full story: "MF Global: The $1.6 Billion That Vanished" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #finance #wallstreet #farmers #economics
+```
+**Tags**
+```
+MF Global, Jon Corzine, customer money, segregated funds, bankruptcy, futures, CFTC, Wall Street, economics, shorts, economics explained, The Hidden Economics
+```
