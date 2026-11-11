@@ -23,7 +23,7 @@ Watch the full story: "College Sports Just Got a $20.5 Million Payroll" on The H
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+college sports, NCAA, House settlement, revenue sharing, NIL, college football, Title IX, athletes, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

@@ -912,3 +912,22 @@ Watch the full story: "How Prediction Markets Make Money Off Your Hunches" on Th
 ```
 prediction markets, Kalshi, Polymarket, event contracts, sports betting, CFTC, market makers, gambling, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 49-college-sports
+
+**Title**
+```
+College Sports Just Got a $20.5 Million Payroll #shorts
+```
+**Description**
+```
+Twenty point five million dollars. That is how much each big college athletic department was allowed to pay its own athletes directly, in the school year that started in twenty twenty-five.
+
+Watch the full story: "College Sports Just Got a $20.5 Million Payroll" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #collegesports #ncaa #money #economics
+```
+**Tags**
+```
+college sports, NCAA, House settlement, revenue sharing, NIL, college football, Title IX, athletes, economics, shorts, economics explained, The Hidden Economics
+```
