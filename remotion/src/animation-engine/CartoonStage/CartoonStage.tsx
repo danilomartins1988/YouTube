@@ -878,6 +878,35 @@ const SETS: Record<string, SetFn> = {
           <rect x={x + 40} y={f + 36} width={30} height={30} fill={night ? '#FFE082' : '#BFE8FF'} stroke={OL} strokeWidth={3} /></g>; })}</g>)}
     </g>;
   },
+  /** A coastal launch site: sky (night = stars), the sea on the horizon, a lattice launch tower with a service arm,
+   *  spherical fuel tanks, a concrete pad and, further along, a round landing pad with a painted target ring. */
+  launchpad: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, tx = z.x0 + w * ((z as any).towerAt ?? 0.38), lx = z.x0 + w * ((z as any).landAt ?? 0.72);
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#0B1430' : '#8FD3FF'} />
+      <rect x={z.x0} y={f - 520} width={w} height={520} fill={night ? '#16244A' : '#CDEEFF'} opacity={0.8} />
+      {night && Array.from({length: Math.ceil(w / 60)}, (_, k) => <circle key={'st' + k} cx={z.x0 + k * 60 + 40 * rnd(k)} cy={f - 1100 + 560 * rnd(k + 5)} r={1.5 + 2 * rnd(k + 9)}
+        fill="#FFFFFF" opacity={0.4 + 0.5 * Math.abs(Math.sin(t * (0.7 + rnd(k)) + k))} />)}
+      <rect x={z.x0} y={f - 150} width={w} height={70} fill={night ? '#1C3B6B' : '#2E9BD6'} />
+      {Array.from({length: Math.ceil(w / 90)}, (_, k) => <path key={'wv' + k} d={`M ${z.x0 + k * 90 + 18 * Math.sin(t + k)} ${f - 120 + 30 * rnd(k)} q 15 -7 30 0`} fill="none" stroke={K.white} strokeWidth={3} opacity={0.6} />)}
+      <rect x={z.x0} y={f - 80} width={w} height={80} fill={night ? '#5E6B4A' : '#C9D98A'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: 3}, (_, k) => <g key={'tk' + k} transform={`translate(${tx - 520 + k * 120} ${f - 80})`}>
+        <circle cx={0} cy={-60} r={56} fill="#ECEFF1" stroke={OL} strokeWidth={4} /><rect x={-40} y={-10} width={80} height={10} fill="#90A4AE" stroke={OL} strokeWidth={3} /></g>)}
+      <rect x={tx - 260} y={f - 30} width={520} height={30} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+      <g transform={`translate(${tx - 150} ${f - 30})`}>
+        <rect x={-30} y={-780} width={60} height={780} fill="none" stroke="#C62828" strokeWidth={8} />
+        {Array.from({length: 13}, (_, k) => <path key={k} d={`M -30 ${-k * 60} L 30 ${-k * 60 - 60} M 30 ${-k * 60} L -30 ${-k * 60 - 60}`} stroke="#C62828" strokeWidth={4} />)}
+        <rect x={30} y={-560} width={110} height={16} fill="#90A4AE" stroke={OL} strokeWidth={3} />
+        <circle cx={0} cy={-800} r={10} fill={Math.sin(t * 3) > 0 ? '#FF5252' : '#7F0000'} />
+      </g>
+      <g transform={`translate(${lx} ${f - 34})`}>
+        <ellipse cx={0} cy={0} rx={230} ry={34} fill="#9E9E9E" stroke={OL} strokeWidth={4} />
+        <ellipse cx={0} cy={0} rx={150} ry={22} fill="none" stroke={K.white} strokeWidth={8} />
+        <ellipse cx={0} cy={0} rx={60} ry={9} fill={K.gold} stroke={OL} strokeWidth={3} />
+      </g>
+      {Array.from({length: Math.ceil(w / 500)}, (_, k) => <path key={'pl' + k} d={`M ${z.x0 + 120 + k * 500} ${f - 80} l 0 -60 m -16 18 q 16 -30 32 0`} stroke="#4E7D3A" strokeWidth={6} fill="none" />)}
+    </g>;
+  },
   /** A hospital corridor: pale mint walls, numbered doors with small windows, a handrail, ceiling light panels, a glossy
    *  tiled floor; `night` dims it to an evening shift. Generic, no real hospital branding. */
   hospital: (t, z, f) => {
@@ -3601,9 +3630,62 @@ const glassbox: ItemFn = (a, {t, f}, i) => {
   </g>;
 };
 
+/** A generic two-stage reusable rocket (no markings). `launchAt`: lifts off with flame and smoke. `landAt`: draws the
+ *  booster only, dropping from the sky with a landing burn, legs unfolding, until it stands on the pad. */
+const rocket: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), base = kf(a.y, t, f - 30), s = (a.scale ?? 0.5) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const land = a.landAt !== undefined, up = a.launchAt !== undefined ? clamp((t - a.launchAt) / 4) : 0;
+  let dy = -2800 * up * up, burn = up > 0 && up < 1, legs = 1;
+  if (land) { const u = clamp((t - a.landAt) / 2.8); dy = -2200 * Math.pow(1 - u, 2.2); burn = u > 0.05 && u < 1; legs = clamp((u - 0.6) / 0.3); if (t < a.landAt) return null; }
+  const shake = burn ? Math.sin(t * 70) * 3 : 0, fl = 90 + 40 * Math.abs(Math.sin(t * 31));
+  const smoke = !land && a.launchAt !== undefined && t > a.launchAt ? Array.from({length: 9}, (_, k) => { const g = clamp((t - a.launchAt - k * 0.12) / 2.5);
+    return g > 0 ? <circle key={'sm' + k} cx={(k - 4) * 70 * (0.6 + g)} cy={-20 - 40 * g} r={70 + 120 * g} fill="#ECEFF1" opacity={0.85 * (1 - g * 0.6)} stroke={OL} strokeWidth={3} /> : null; }) : null;
+  return <g key={'rk' + i} transform={`translate(${x} ${base}) scale(${s})`}>
+    {smoke}
+    <g transform={`translate(${shake} ${dy})`}>
+      {burn && <path d={`M -34 0 Q 0 ${fl * 2.6} 34 0 Z`} fill="#FFC93C" stroke="#FF7043" strokeWidth={8} />}
+      {burn && <path d={`M -18 0 Q 0 ${fl * 1.5} 18 0 Z`} fill="#FFFFFF" />}
+      {[-1, 1].map((d) => <path key={d} d={`M ${d * 40} -90 L ${d * (40 + 70 * legs)} ${-20 + 20 * legs}`} stroke="#37474F" strokeWidth={10} strokeLinecap="round" />)}
+      <rect x={-40} y={-620} width={80} height={620} rx={6} fill="#F5F7FA" stroke={OL} strokeWidth={5} />
+      <rect x={-40} y={-420} width={80} height={18} fill="#B0BEC5" />
+      {land && <path d="M -40 -560 Q 0 -540 40 -560 L 40 -300 Q 0 -280 -40 -300 Z" fill="#8D8D8D" opacity={0.35} />}
+      {[-1, 1].map((d) => <rect key={'gf' + d} x={d > 0 ? 40 : -66} y={-600} width={26} height={30} fill="#546E7A" stroke={OL} strokeWidth={3} />)}
+      {!land && <g>
+        <rect x={-40} y={-670} width={80} height={50} fill="#263238" stroke={OL} strokeWidth={4} />
+        <rect x={-40} y={-860} width={80} height={190} fill="#F5F7FA" stroke={OL} strokeWidth={5} />
+        <path d="M -46 -860 L 46 -860 L 46 -940 Q 30 -1040 0 -1060 Q -30 -1040 -46 -940 Z" fill="#F5F7FA" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+      </g>}
+    </g>
+    {a.text && <T x={0} y={120} s={44} c={a.textc || K.white}>{a.text}</T>}
+  </g>;
+};
+
+/** A broadband satellite constellation: rows of small flat satellites drifting across low orbit. From `beamAt`, a few
+ *  of them shine beams down to little dishes on the ground line (`ground`, default y + 520). */
+const constellation: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 300), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.6);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const W = a.w ?? 1600, n = a.n ?? 14, rows = a.rows ?? 3, g = a.ground ?? 520, beam = a.beamAt !== undefined && t >= a.beamAt;
+  const sats: React.ReactNode[] = [], beams: React.ReactNode[] = [];
+  for (let r = 0; r < rows; r++) for (let k = 0; k < n; k++) {
+    const u = ((k / n + t * (0.02 + 0.006 * r)) % 1), sx = -W / 2 + u * W, sy = -r * 90 + 30 * Math.sin(u * Math.PI * 2 + r);
+    sats.push(<g key={r + '-' + k} transform={`translate(${sx} ${sy}) rotate(${-12 + r * 6})`}>
+      <rect x={-30} y={-6} width={60} height={12} rx={3} fill="#ECEFF1" stroke={OL} strokeWidth={2} />
+      <rect x={-26} y={-26} width={52} height={18} fill="#1E3A8A" stroke="#90CAF9" strokeWidth={2} /></g>);
+    if (beam && r === 0 && k % 3 === 0) beams.push(<path key={'b' + k} d={`M ${sx} ${sy} L ${sx - 50} ${g} L ${sx + 50} ${g} Z`} fill="#7DF9FF" opacity={0.12 + 0.08 * Math.sin(t * 4 + k)} />);
+  }
+  return <g key={'cs' + i} transform={`translate(${x} ${y}) scale(${s})`}>
+    {beams}{sats}
+    {beam && Array.from({length: 5}, (_, k) => <g key={'d' + k} transform={`translate(${-W / 2 + 160 + k * (W - 320) / 4} ${g})`}>
+      <rect x={-6} y={-40} width={12} height={40} fill="#546E7A" /><rect x={-44} y={-70} width={88} height={34} rx={6} fill="#ECEFF1" stroke={OL} strokeWidth={3} transform="rotate(-18)" /></g>)}
+    {a.text && <T x={0} y={g + 70} s={34} c={a.textc || K.white}>{a.text}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

@@ -1,0 +1,45 @@
+# Visual direction for how-spacex-actually-makes-money (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# One visual language per part: data center + launch site (hook), exchange + office + studio (three businesses),
+# low orbit with a constellation + suburb (Starlink), launch site by day/night with landings (rockets),
+# data center + exchange at night + office (the landlord), bank hall + office + parliament (who's in charge).
+primary_tone: strategy
+secondary_tones:
+- bright
+- reflective
+palette:
+  bg: '#0B1430'
+  bg2: '#16244A'
+  ink: '#EEF5FA'
+  muted: '#A3B4C2'
+  land: '#1E2A36'
+  border: '#3A5266'
+  accent: '#FFC21A'
+  accent2: '#4FC3F7'
+  accent3: '#7DF29A'
+  risk: '#FF4B3E'
+presenter:
+  demeanor: neutral
+  min_sequences: 3
+chapters:
+- chapter: A rent from the sky
+  tone: strategy
+- chapter: Three businesses
+  tone: strategy
+- chapter: Starlink
+  tone: bright
+- chapter: The rockets
+  tone: bright
+- chapter: The landlord
+  tone: strategy
+- chapter: Who's in charge
+  tone: reflective
+- chapter: The lesson
+  tone: reflective
+turning_points: []
+thumbnail:
+  tone: strategy
+  headline: []
+  idea: a generic rocket on the pad with a data-center rack beside it; SpaceX's biggest revenue line is AI rent
+requirements:
+- No company logos or markings on rockets, satellites or dishes; no likeness of real people (names in text only)
+- Customer A and Customer B never named; Q3 2026 profit caveated; recast xAI/X figures flagged; computed figures labelled

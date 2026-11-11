@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: How SpaceX Actually Makes Money
+docs_dir: docs/episodes/51-spacex
+video: output/spacex_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: How does a rocket company make its money, if the rockets lose money?
+  surprising_fact: In Q3 2026 SpaceX's AI segment ($7.6bn) out-earned Starlink ($5.2bn); rockets came last (Q3 release)
+  subject: a generic rocket
+  tone: strategy
+  metaphor: the rocket is the delivery truck
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - SPACEX
+  - NOT ROCKETS
+  claim_basis: 'q3: Q3 2026 segment revenue Space $1.8bn < Connectivity $5.2bn < SI $7.6bn (Q3 release)'
+  scene:
+    palette: {sky0: '#050A1C', sky1: '#16244A', haze: '#7DF9FF', key: '#E0F7FA', accent: '#FF7A1A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: rocket, x: 1480, y: 600, s: 0.8}
+    support: []
+    particles: {n: 80, region: [0, 0, 1920, 1080], size: 3, color: '#FFFFFF'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'ROCKETS: LOSS'
+  - 'STARLINK: PROFIT'
+  claim_basis: 'rev: FY2025 operating result Space −$657M, Connectivity +$4.4bn (prospectus)'
+  scene:
+    palette: {sky0: '#0A0614', sky1: '#2A1440', haze: '#FFB74D', key: '#FFF3E0', accent: '#7DF29A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: rocket, x: 480, y: 660, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
+    vignette: 0.5
+    brand: none

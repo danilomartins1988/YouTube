@@ -1,0 +1,132 @@
+# Sources and claims for "How SpaceX Actually Makes Money" (Episode 51, owner request R1).
+# Every claim was read on its primary page on 2026-11-11 (notes: docs/episodes/51-spacex/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as reported.
+# RULES: FY2023-2025 figures are recast to include xAI and X (say so); Customer A and Customer B are NOT named;
+# Musk voting power said as "more than 80%"; Q3 2026 net income said with its tax-benefit and Boring Company caveats;
+# no Falcon 9 list price; SpaceX is a Texas corporation listed on Nasdaq and Nasdaq Texas; "our calculation" labels.
+sources:
+  - id: pros
+    title: "SpaceX final prospectus (Form 424B4), June 11, 2026, incl. Note 3 segment data, risk factors, ownership"
+    publisher: Space Exploration Technologies Corp. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm
+    published: "2026-06-11"
+    accessed: "2026-11-11"
+    credit: "SpaceX prospectus (SEC)"
+  - id: ipo8k
+    title: "SpaceX 8-K: completion of the initial public offering (June 15, 2026)"
+    publisher: Space Exploration Technologies Corp. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1181412/000162828026043288/spaceexplorationtechnologi.htm
+    published: "2026-06-15"
+    accessed: "2026-11-11"
+    credit: "SpaceX 8-K (SEC)"
+  - id: q2
+    title: "SpaceX Q2 2026 earnings release (8-K Ex. 99.1, Aug 4, 2026) and Form 10-Q for the quarter ended June 30, 2026"
+    publisher: Space Exploration Technologies Corp. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm
+    published: "2026-08-04"
+    accessed: "2026-11-11"
+    credit: "SpaceX Q2 2026 release (SEC)"
+  - id: q3
+    title: "SpaceX Q3 2026 earnings release (8-K Ex. 99.1, Oct 20, 2026)"
+    publisher: Space Exploration Technologies Corp. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm
+    published: "2026-10-20"
+    accessed: "2026-11-11"
+    credit: "SpaceX Q3 2026 release (SEC)"
+  - id: tenq3
+    title: "SpaceX Form 10-Q for the quarter ended September 30, 2026 (Oct 22, 2026); 8-K on the Apollo GPU lease (Oct 26, 2026)"
+    publisher: Space Exploration Technologies Corp. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm
+    published: "2026-10-22"
+    accessed: "2026-11-11"
+    credit: "SpaceX 10-Q (SEC)"
+  - id: nasa
+    title: "NASA releases: Commercial Crew flights (Sept 18, 2026); Artemis Human Landing System awards (Apr 16, 2021; Nov 15, 2022)"
+    publisher: NASA
+    url: https://www.nasa.gov/missions/station/commercial-crew/nasa-awards-spacex-three-crew-flights-to-space-station/
+    published: "2026-09-18"
+    accessed: "2026-11-11"
+    credit: "NASA"
+
+claims:
+  - id: ipo
+    text: "Prospectus: 'The initial public offering price is $135.00 per share'; listed on Nasdaq and Nasdaq Texas under 'SPCX'; SpaceX is 'a Texas corporation'. Q2 release: 'net proceeds of approximately $85.7 billion. The shares ... began trading ... on June 12, 2026'. 8-K: 638,888,888 shares including the over-allotment. Value ≈ $1.77 trillion at $135 (OUR calculation from 13.09bn shares outstanding after the offering, before the over-allotment)."
+    spoken: one hundred and thirty-five dollars
+    display: "$135 a share (prospectus); net ≈ $85.7bn raised"
+    fields: {net_spoken: eighty-five point seven billion dollars, value_spoken: one point seven seven trillion dollars}
+    source_ids: [pros, ipo8k, q2]
+    status: source_located
+    verification_note: Valuation is our calculation; no first-day price quoted.
+
+  - id: rev
+    text: "Prospectus Note 3 (recast to include xAI, acquired Feb 2, 2026, and X, acquired by xAI Mar 28, 2025): FY2025 revenue $18,674M = Space $4,086M + Connectivity $11,387M + AI $3,201M. FY2025 operating income/loss: Space $(657)M, Connectivity $4,423M, AI $(6,355)M; consolidated $(2,589)M; net loss $(4,937)M. FY2023 total $10,387M (incl. X advertising)."
+    spoken: eighteen point seven billion dollars
+    display: "FY2025 revenue $18.7bn (recast incl. xAI and X)"
+    fields: {space_spoken: four point one billion dollars, conn_spoken: eleven point four billion dollars, ai_spoken: three point two billion dollars, connop_spoken: four point four billion dollars, spaceop_spoken: six hundred and fifty-seven million dollars, aiop_spoken: six point four billion dollars, net_spoken: four point nine billion dollars}
+    source_ids: [pros]
+    status: source_located
+
+  - id: starlink
+    text: "Q3 release: '13.6 million Starlink consumer subscribers' at Sep 30, 2026 (definition changed from Q3: consumer only). Prospectus: 2.3M (2023), 4.4M (2024), 8.9M (2025) Starlink Subscribers; ARPU $99 (2023), $66 (Q1 2026), 'primarily due to international expansion and the addition of lower priced service plans'; 'SpaceX owns and operates approximately 75% of all active maneuverable satellites'. 10-Q: 'over 11,100 Starlink broadband and mobile satellites', '174 countries, territories, and other markets'. Q3 Connectivity revenue $5,248M, operating income $2,367M (≈ 45%, OUR calculation)."
+    spoken: thirteen point six million
+    display: "13.6M Starlink consumer subscribers (Sep 30, 2026)"
+    fields: {markets_spoken: one hundred and seventy-four, subs23_spoken: two point three million, subs24_spoken: four point four million, subs25_spoken: eight point nine million, sats_spoken: eleven thousand one hundred, share_spoken: seventy-five percent, arpu23_spoken: ninety-nine dollars, arpu26_spoken: sixty-six dollars, q3op_spoken: two point four billion dollars, q3rev_spoken: five point two billion dollars, margin_spoken: forty-five cents}
+    source_ids: [pros, q3, tenq3]
+    status: source_located
+
+  - id: launch
+    text: "Prospectus: Falcon launches in 2025 totaled 165, of which 43 customer and 122 internal (≈ 74%, OUR calculation); 'For launches of our Starlink satellites, the Company does not recognize any inter-segment revenue'; 'Since 2023, we have launched more than 80% of mass to orbit for the world each year'; 'over 570 successful booster landings'; 2025 cost of revenue lowered partly by increased reusability."
+    spoken: one hundred and sixty-five
+    display: "165 Falcon launches in 2025: 43 customer, 122 Starlink (prospectus)"
+    fields: {cust_spoken: forty-three, int_spoken: one hundred and twenty-two, mass_spoken: more than eighty percent, landings_spoken: five hundred and seventy}
+    source_ids: [pros]
+    status: source_located
+
+  - id: starship
+    text: "Prospectus: 'investing over $15 billion in our next-generation rocket, Starship'; Space segment funded '$3,004 million' of Starship R&D in 2025; risk factor: 'Any failure or delay in the development of Starship ... would delay or limit our ability to execute our growth strategy, including the deployment of next-generation satellites, global satellite-to-mobile connectivity, and orbital AI compute'; 'We expect to begin deploying our orbital AI compute satellites as early as 2028.'"
+    spoken: three billion dollars
+    display: "Starship R&D ≈ $3.0bn in 2025; > $15bn invested (prospectus)"
+    fields: {total_spoken: fifteen billion dollars}
+    source_ids: [pros]
+    status: source_located
+
+  - id: gov
+    text: "Prospectus: 'In 2025, we launched 11 of 12 National Security Space Launch (NSSL) medium and heavy lift missions and all five U.S. crew and cargo missions to the International Space Station for NASA'; government contracts 'primarily NASA, the Department of War, the General Services Administration, and certain Intelligence Community agencies'; 'Customer A' was 20.9% of 2025 revenue (not named). Q2 release: 'Awarded over $6 billion in multi-year U.S. government contracts for Starshield ... primarily from two major Space Force contracts'. NASA (Sept 18, 2026): Commercial Crew contract cumulative value '$5.92 billion', SpaceX total '17' missions."
+    spoken: eleven of the twelve
+    display: "11 of 12 national-security launches in 2025 (prospectus)"
+    fields: {starshield_spoken: six billion dollars, crew_spoken: seventeen, crewval_spoken: five point nine two billion dollars, custa_spoken: twenty-one percent}
+    source_ids: [pros, q2, nasa]
+    status: source_located
+
+  - id: gpu
+    text: "Prospectus: 'in May 2026, we entered into Cloud Services Agreements with Anthropic PBC ... approximately 325,000 NVIDIA GPUs ... the customer has agreed to pay us $1.25 billion per month through May 2029 ... After the initial three-month period, the agreements may be terminated by either party upon 90 days' notice.'"
+    spoken: one point two five billion dollars a month
+    display: "$1.25bn a month for ≈ 325,000 GPUs, through May 2029 (prospectus)"
+    fields: {gpus_spoken: three hundred and twenty-five thousand, notice_spoken: "ninety days'"}
+    source_ids: [pros]
+    status: source_located
+    verification_note: Customer B is NOT identified as Anthropic.
+
+  - id: q3
+    text: "Q3 release: 'Revenues of $14.6 billion, up 161% from $5.6 billion'; segment revenue Space $1,767M, Connectivity $5,248M, Super Intelligence $7,560M; 'Super Intelligence (SI) refers to the operating and reportable segment previously reported as Artificial Intelligence (AI)'; 'Net income of $4.4 billion'. 10-Q: SI includes infrastructure, Grok, Cursor and X; 'Customer B' 34.5% of Q3 revenue (not named); Q3 results include a $390M tax benefit and a $561M related-party unrealized gain on The Boring Company stake. Cursor: 'implied equity value of $60 billion', closed Aug 14, 2026."
+    spoken: fourteen point six billion dollars
+    display: "Q3 2026 revenue $14.6bn; SI $7.6bn > Starlink $5.2bn"
+    fields: {prior_spoken: five point six billion dollars, si_spoken: seven point six billion dollars, conn_spoken: five point two billion dollars, space_spoken: one point eight billion dollars, custb_spoken: thirty-four point five percent, net_spoken: four point four billion dollars, cursor_spoken: sixty billion dollars}
+    source_ids: [q3, tenq3]
+    status: source_located
+
+  - id: capex
+    text: "10-Q: nine-month 2026 capex $48,069M, of which SI $39,995M (≈ 83%, OUR calculation). Prospectus: FY2025 capex $20,737M vs revenue $18,674M. 8-K (Oct 26, 2026): Apollo-managed lessor lease schedules with 'aggregate principal payments ... approximately $40 billion'."
+    spoken: forty-eight point one billion dollars
+    display: "Capex 9M 2026 $48.1bn, ≈ 83% for AI (10-Q; our calc.)"
+    fields: {si_share_spoken: eighty-three percent, apollo_spoken: forty billion dollars}
+    source_ids: [tenq3, pros]
+    status: source_located
+
+  - id: musk
+    text: "Prospectus cover: Musk 'will hold approximately 82.4% of the voting power' (ownership table, May 1 basis: 84.4%); Class B carries '10 votes per share'; 'controlled company' under Nasdaq rules. Risk factors: 'We are highly dependent on the continued service and performance of Mr. Musk ... We do not maintain key-person life insurance on Mr. Musk ... he does not devote his full time and attention to our businesses'. 10-Q: 'our board of directors has formed a special committee to evaluate a potential combination between SpaceX and Tesla, Inc. ... No determination ... has been made'."
+    spoken: more than eighty percent
+    display: "Musk: > 80% of the votes (prospectus)"
+    fields: {}
+    source_ids: [pros, tenq3]
+    status: source_located

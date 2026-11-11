@@ -1,0 +1,6 @@
+# Episode 51: How SpaceX Actually Makes Money (owner request R1, 2026-11-11)
+
+- Project: `projects/how-spacex-actually-makes-money`; storyboard generator `tools/gen_spacex_storyboard.py` (41 scenes; lint 0; strict cues 0 missing). Narration ≈ 9,850 characters (target ≈ 760 s).
+- New engine pieces: `launchpad` set (coastal launch site, lattice tower, fuel spheres, landing pad), `rocket` item (generic two-stage rocket, no markings; `launchAt` lift-off with smoke, `landAt` booster landing burn with legs), `constellation` item (rows of flat satellites drifting in orbit; `beamAt` beams to ground dishes). Thumbnail subject `rocket` (CinematicThumb, used by PunchThumb).
+- Sources: SpaceX SEC filings (424B4 prospectus Jun 11, 2026; IPO 8-K Jun 15; Q2 release and 10-Q Aug 4; Q3 release Oct 20; 10-Q Oct 22; Apollo 8-K Oct 26) and NASA releases. Notes: `RESEARCH_NOTES.md`.
+- Rules: FY2023–2025 recast to include xAI and X (said on air); Customer A and Customer B never named; Musk voting power "more than 80%"; Q3 2026 net income caveated (tax benefit, Boring Company gain); no Falcon 9 list price; Texas corporation; our calculations labelled. Anthropic named only as the counterparty stated in the prospectus, neutrally.

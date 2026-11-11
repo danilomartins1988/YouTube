@@ -1,0 +1,290 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook rules (docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md): cold open on the number, four short beats, explicit promise,
+# no "What if", channel intro after part 1, no separate part-question scenes.
+# Numbers come from sources.yaml via {{placeholders}}. Customer A and Customer B are never named; Q3 profit caveated.
+logline: SpaceX is famous for rockets, but its own filings show the rockets lose money. Starlink pays the bills, and the biggest
+  revenue line is now artificial intelligence, much of it from renting out computing power.
+title: How SpaceX Actually Makes Money
+segments:
+- id: h_open
+  chapter: A rent from the sky
+  narration: A rent of {{gpu}}. That is what one artificial intelligence company agreed to pay SpaceX, until May twenty twenty-nine,
+    according to the prospectus SpaceX filed when it went public. Not for a rocket launch. For computer chips.
+  claims:
+  - gpu
+- id: h_twist
+  chapter: A rent from the sky
+  narration: In twenty twenty-six, SpaceX finally opened its books. And the most famous rocket company in the world turned
+    out to earn most of its money from something else. In its latest quarter, artificial intelligence came first, internet
+    subscriptions second, and rockets last.
+  claims:
+  - q3
+- id: h_question
+  chapter: A rent from the sky
+  narration: So how does SpaceX actually make money? And why has the rocket business, the part everyone watches, been losing
+    money?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced facts.
+- id: h_promise
+  chapter: A rent from the sky
+  narration: By the end of this video, you will know where SpaceX's money comes from, why most of its rockets carry its own
+    cargo, and who really controls the company.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: Three businesses
+  narration: ''
+  claims: []
+- id: m1_ipo
+  chapter: Three businesses
+  narration: On June twelfth, twenty twenty-six, SpaceX began trading on the stock market. The shares were sold at {{ipo}}
+    each, and the company, a Texas corporation, raised about {{ipo.net_spoken}} after fees. At that price, by our calculation,
+    the whole company was valued at about {{ipo.value_spoken}}.
+  claims:
+  - ipo
+- id: m1_recast
+  chapter: Three businesses
+  narration: There is one catch. Before going public, SpaceX bought xAI, the artificial intelligence company that also owns
+    the social network X. Both were controlled by Elon Musk. So the filings rewrite SpaceX's past to include them. On that
+    basis, revenue in twenty twenty-five was {{rev}}.
+  claims:
+  - rev
+- id: m1_split
+  chapter: Three businesses
+  narration: The company splits that money into three businesses. Space, meaning launches and contracts with NASA and the
+    military, brought in about {{rev.space_spoken}}. Connectivity, which is mostly Starlink, brought in about {{rev.conn_spoken}}.
+    And artificial intelligence, including advertising on X, brought in about {{rev.ai_spoken}}.
+  claims:
+  - rev
+- id: m1_loss
+  chapter: Three businesses
+  narration: And here is the first surprise. Only one of the three made an operating profit that year. Starlink earned about
+    {{rev.connop_spoken}}. The space business lost about {{rev.spaceop_spoken}}. The artificial intelligence business lost
+    about {{rev.aiop_spoken}}. Overall, the company reported a net loss of about {{rev.net_spoken}}.
+  claims:
+  - rev
+- id: m1_draw
+  chapter: Three businesses
+  narration: Let me draw the three engines. Here is the space business, the part everyone sees. Here is Starlink, the internet
+    service. Here is artificial intelligence, the newest. Now the arrows. In twenty twenty-five, only Starlink made an operating
+    profit. One engine was carrying the whole ship.
+  claims:
+  - rev
+  analysis: true
+  source_note: Diagram of the three reported segments and their FY2025 operating results.
+- id: m1_transition
+  chapter: Three businesses
+  narration: So let's start with the engine that carries everything.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: Starlink
+  narration: ''
+  claims: []
+- id: m2_subs
+  chapter: Starlink
+  narration: Starlink sells internet from space. A small dish on a roof talks to satellites flying in low orbit. By the end
+    of September twenty twenty-six, Starlink had about {{starlink}} consumer subscribers, in {{starlink.markets_spoken}} countries,
+    territories and other markets. At the end of twenty twenty-three, it had about {{starlink.subs23_spoken}}.
+  claims:
+  - starlink
+- id: m2_sats
+  chapter: Starlink
+  narration: To serve them, SpaceX flies more than {{starlink.sats_spoken}} Starlink satellites. According to the prospectus,
+    SpaceX owns and operates about {{starlink.share_spoken}} of all the active satellites in orbit that can maneuver.
+  claims:
+  - starlink
+- id: m2_arpu
+  chapter: Starlink
+  narration: But each customer now pays less than before. Average revenue per subscriber was about {{starlink.arpu23_spoken}}
+    a month in twenty twenty-three. In early twenty twenty-six, it was about {{starlink.arpu26_spoken}}. The company says
+    that is mainly because of international expansion and cheaper plans.
+  claims:
+  - starlink
+- id: m2_margin
+  chapter: Starlink
+  narration: And still, it is very profitable. In the third quarter of twenty twenty-six, the connectivity business earned
+    about {{starlink.q3op_spoken}} of operating profit on {{starlink.q3rev_spoken}} of revenue. By our calculation, that is
+    about {{starlink.margin_spoken}} of every dollar that comes in.
+  claims:
+  - starlink
+- id: m2_draw
+  chapter: Starlink
+  narration: Let me draw the subscriber climb. Twenty twenty-three, about {{starlink.subs23_spoken}}. Twenty twenty-four,
+    {{starlink.subs24_spoken}}. Twenty twenty-five, {{starlink.subs25_spoken}}. And by September twenty twenty-six, {{starlink}}
+    consumers alone. Each bar is a city of customers.
+  claims:
+  - starlink
+  analysis: true
+  source_note: Bar diagram of reported subscriber counts (definition narrowed to consumers from Q3 2026).
+- id: m2_transition
+  chapter: Starlink
+  narration: Starlink pays the bills. So what about the rockets?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: The rockets
+  narration: ''
+  claims: []
+- id: m3_count
+  chapter: The rockets
+  narration: SpaceX launches more rockets than anyone. In twenty twenty-five, it flew {{launch}} Falcon rockets. And according
+    to the prospectus, since twenty twenty-three it has launched {{launch.mass_spoken}} of all the mass sent to orbit by the
+    entire world, every year.
+  claims:
+  - launch
+- id: m3_own
+  chapter: The rockets
+  narration: But here is the twist. Of those {{launch}} launches, only {{launch.cust_spoken}} carried paying customers. The
+    other {{launch.int_spoken}} carried SpaceX's own Starlink satellites. By our calculation, that is about three out of every
+    four. And for those launches, the space business books no revenue at all, because SpaceX does not charge itself.
+  claims:
+  - launch
+- id: m3_reuse
+  chapter: The rockets
+  narration: What keeps that affordable is reuse. Falcon boosters fly back and land, standing up, on a pad or on a ship at
+    sea. The prospectus counts more than {{launch.landings_spoken}} successful booster landings. A rocket that lands can fly
+    again.
+  claims:
+  - launch
+- id: m3_starship
+  chapter: The rockets
+  narration: So why does the space business lose money? The answer is Starship, the giant new rocket. In twenty twenty-five
+    alone, SpaceX spent about {{starship}} on Starship research and development, and it says it has invested more than {{starship.total_spoken}}
+    in it so far. That year, the space business posted an operating loss of about {{rev.spaceop_spoken}}. The prospectus warns
+    that any delay in Starship would limit its growth plans, including computers in orbit.
+  claims:
+  - starship
+  - rev
+- id: m3_gov
+  chapter: The rockets
+  narration: Rockets also bring in steady government money. In twenty twenty-five, SpaceX launched {{gov}} medium and heavy
+    national security missions for the United States, and every crew and cargo mission to the space station for NASA.
+  claims:
+  - gov
+- id: m3_draw
+  chapter: The rockets
+  narration: Let me draw one year of launches. Here are {{launch}} rockets. Here, {{launch.cust_spoken}} carry customers,
+    and send money back in. And here, {{launch.int_spoken}} carry Starlink, and send satellites up, not money. The rocket
+    business works like a delivery truck for the internet business.
+  claims:
+  - launch
+  analysis: true
+  source_note: Diagram of 2025 customer vs internal Falcon launches (prospectus).
+- id: m3_transition
+  chapter: The rockets
+  narration: And then, in twenty twenty-six, a third business took over.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m4_card
+  chapter: The landlord
+  narration: ''
+  claims: []
+- id: m4_xai
+  chapter: The landlord
+  narration: In February twenty twenty-six, SpaceX merged with xAI, the maker of the Grok chatbot. Since then the segment
+    has been renamed Super Intelligence. It also includes the social network X, and Cursor, a coding tool SpaceX bought in
+    August at an implied value of {{q3.cursor_spoken}}.
+  claims:
+  - q3
+- id: m4_rent
+  chapter: The landlord
+  narration: But the biggest money is not from chatbots. It is rent. In May twenty twenty-six, according to the prospectus,
+    SpaceX signed cloud services agreements with Anthropic, another artificial intelligence company, for about {{gpu.gpus_spoken}}
+    Nvidia graphics chips, at {{gpu}} through May twenty twenty-nine. After three months, either side can end the deal with
+    {{gpu.notice_spoken}} notice.
+  claims:
+  - gpu
+- id: m4_q3
+  chapter: The landlord
+  narration: Then came the third quarter. SpaceX reported revenue of {{q3}}, up from {{q3.prior_spoken}} a year earlier. Super
+    Intelligence brought in {{q3.si_spoken}}, more than Starlink for the first time. And one single customer, which the filing
+    does not name, accounted for {{q3.custb_spoken}} of all revenue in the quarter.
+  claims:
+  - q3
+- id: m4_profit
+  chapter: The landlord
+  narration: SpaceX even reported a profit that quarter, {{q3.net_spoken}}. But that figure was helped by a tax benefit, and
+    by a gain on its stake in another Musk company, The Boring Company. A strong quarter, but not yet proof of a reliable
+    money machine.
+  claims:
+  - q3
+- id: m4_capex
+  chapter: The landlord
+  narration: And renting out chips costs a fortune up front. In the first nine months of twenty twenty-six, SpaceX spent {{capex}}
+    on capital expenditure. By our calculation, about {{capex.si_share_spoken}} of it went to the Super Intelligence business.
+  claims:
+  - capex
+- id: m4_draw
+  chapter: The landlord
+  narration: Let me draw the third quarter. A bar for rockets, {{q3.space_spoken}}. A bar for Starlink, {{q3.conn_spoken}}.
+    And a bar for Super Intelligence, {{q3.si_spoken}}. The rocket company now earns its biggest share of revenue from artificial
+    intelligence.
+  claims:
+  - q3
+  analysis: true
+  source_note: Bar diagram of Q3 2026 segment revenue.
+- id: m4_transition
+  chapter: The landlord
+  narration: Which leaves one question. Who is in charge of all this?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m5_card
+  chapter: Who's in charge
+  narration: ''
+  claims: []
+- id: m5_vote
+  chapter: Who's in charge
+  narration: Elon Musk. After the offering, according to the prospectus, he held {{musk}} of the voting power, mostly through
+    special class B shares that carry ten votes each. That makes SpaceX a controlled company under Nasdaq rules.
+  claims:
+  - musk
+- id: m5_risk
+  chapter: Who's in charge
+  narration: The prospectus is blunt about it. It says the company is highly dependent on Mr. Musk, that it does not carry
+    key person life insurance on him, and that he does not devote his full time to SpaceX, because he also runs Tesla.
+  claims:
+  - musk
+- id: m5_govdep
+  chapter: Who's in charge
+  narration: The second big dependence is government. One customer, which the filing does not name, accounted for about {{gov.custa_spoken}}
+    of SpaceX's revenue in twenty twenty-five. Its government contracts are mainly with NASA, the Department of War, the General
+    Services Administration and intelligence agencies.
+  claims:
+  - gov
+- id: m5_draw
+  chapter: Who's in charge
+  narration: Let me draw the control panel. Here is SpaceX, with its three businesses. Here are the ordinary shareholders,
+    with their shares. And here is one person, holding {{musk}} of the votes. Every arrow of control runs through one box.
+  claims:
+  - musk
+  analysis: true
+  source_note: Diagram of voting control (prospectus).
+- id: payoff
+  chapter: The lesson
+  narration: So how does SpaceX actually make money? Not mainly from rockets. The rocket business has been losing money, because
+    SpaceX is pouring billions into Starship, and most launches carry its own satellites. Starlink makes the operating profit.
+    And now the biggest revenue line is artificial intelligence, much of it from renting out computing power, with one unnamed
+    customer bringing in about a third of the latest quarter's revenue. The lesson is that the most famous part of a company
+    is not always the part that pays. At SpaceX, the rocket is the delivery truck, Starlink is the cash register, and the
+    newest business is a landlord with very large bills. Whether that mix keeps working depends on Starship, on a few big
+    customers, and on one man.
+  claims:
+  - launch
+  - starlink
+  - q3
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

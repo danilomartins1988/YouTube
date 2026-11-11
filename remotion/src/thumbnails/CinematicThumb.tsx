@@ -297,6 +297,18 @@ export const SUBJECTS: Record<string, SubjectFn> = {
     {Array.from({length: 14}, (_, k) => <rect key={k} x={-520 + rnd(k) * 1040} y={-420 + rnd(k + 4) * 640} width={120} height={56} rx={6} transform={`rotate(${-40 + rnd(k + 1) * 80})`}
       fill="#3E6B48" stroke="#9FD3A8" strokeWidth={3} opacity={0.75} />)}
   </g>,
+  /** A generic two-stage rocket lifting off (no markings): white body, dark interstage, a long flame and billowing smoke. */
+  rocket: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs>{metal('rkt', '#C9D2DC', '#FFFFFF')}</defs>
+    {Array.from({length: 9}, (_, k) => <circle key={k} cx={-360 + k * 90} cy={420 + 30 * Math.sin(k)} r={110 + 40 * rnd(k)} fill="#E8EDF2" opacity={0.85} />)}
+    <path d="M -60 260 Q 0 640 60 260 Z" fill="#FFB300" /><path d="M -32 260 Q 0 480 32 260 Z" fill="#FFFFFF" />
+    <rect x={-60} y={-420} width={120} height={680} rx={10} fill="url(#rkt)" />
+    <rect x={-60} y={-470} width={120} height={50} fill="#1B1F27" />
+    <rect x={-60} y={-720} width={120} height={250} fill="url(#rkt)" />
+    <path d="M -68 -720 L 68 -720 L 68 -830 Q 44 -960 0 -990 Q -44 -960 -68 -830 Z" fill="url(#rkt)" />
+    {[-1, 1].map((d) => <path key={d} d={`M ${d * 60} 180 L ${d * 130} 280 L ${d * 60} 260 Z`} fill="#37474F" />)}
+    <rect x={-60} y={-200} width={120} height={22} fill={P.accent} opacity={0.8} />
+  </g>,
   /** A supertall desert tower skyline at golden hour, a jet overhead and a ship below. */
   skyline: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     <path d="M -20 0 L -20 -560 L -8 -760 L 0 -980 L 8 -760 L 20 -560 L 20 0 Z" fill="#0B0F17" />
