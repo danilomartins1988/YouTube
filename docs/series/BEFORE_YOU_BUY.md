@@ -44,3 +44,11 @@ Nvidia, Microsoft, Apple, Alphabet, Amazon, Meta, Broadcom, Tesla, Berkshire Hat
 - Each project keeps one file of inputs (prices, share count, segment figures, guidance) so a refresh swaps numbers
   and re-renders; scripts read the numbers from sources.yaml placeholders.
 - Order: companies that already reported this quarter first; Nvidia after its Nov 2026 report.
+
+## Look and voice (owner, 2026-11-11)
+- As animated as possible, retro-futurist sci-fi cartoon comedy feel (same genre-level rules as Ep 52: original
+  designs only, never copying any existing show's characters, designs, logos, fonts, catchphrases or music).
+  Mostly drawn scenes; charts only where QC requires.
+- Series-only voice: younger and more human than the channel's documentary voice. Samples sent 2026-11-11
+  (gpt-4o-mini-tts: verse, ballad, coral, echo, alloy, sage, marin, cedar, with a "young creator" instruction);
+  the owner picks. Implemented as a per-project TTS override, so the channel default (ash) is unchanged.
