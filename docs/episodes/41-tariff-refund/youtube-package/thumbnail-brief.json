@@ -19,7 +19,7 @@
       "archetype": "bignum",
       "text": [
         "$166 BILLION",
-        "NOT FOR YOU"
+        "NOT YOURS"
       ],
       "claim_basis": "total: about $166bn of IEEPA duties (CBP estimate, CIT filing); refunds only to importers of record (CBP)",
       "scene": {
@@ -64,11 +64,11 @@
           "color": "#FFC21A"
         },
         {
-          "text": "NOT FOR YOU",
+          "text": "NOT YOURS",
           "x": 96,
           "y": 664.1,
           "size": 120,
-          "width": 844.8,
+          "width": 691.2,
           "anchor": "start",
           "color": "#FFFFFF"
         }
@@ -101,14 +101,14 @@
           },
           {
             "check": "0-4 words",
-            "pass": false,
-            "detail": "5 words",
+            "pass": true,
+            "detail": "4 words",
             "critical": false
           },
           {
             "check": "no clipped text (inside safe margins)",
             "pass": true,
-            "detail": "[(90, 406, 1270, 535), (96, 570, 941, 671)]",
+            "detail": "[(90, 406, 1270, 535), (96, 570, 787, 671)]",
             "critical": true
           },
           {
@@ -132,7 +132,7 @@
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.090",
+            "detail": "0.086",
             "critical": false
           },
           {
@@ -143,8 +143,8 @@
           },
           {
             "check": "distinct from other channel thumbnails",
-            "pass": true,
-            "detail": "nearest how-visa-and-mastercard-became-financial-gatekeepers (distance 0.28)",
+            "pass": false,
+            "detail": "nearest alaska-the-state-that-pays-you-to-live-there (distance 0.20)",
             "critical": false
           },
           {
@@ -155,7 +155,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.583,
+        "design_score": 0.565,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -163,7 +163,7 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "how-visa-and-mastercard-became-financial-gatekeepers"
+        "nearest": "alaska-the-state-that-pays-you-to-live-there"
       }
     },
     {
@@ -329,6 +329,6 @@
   "default": "A",
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-11T01:31:27Z",
+  "generated": "2026-11-11T06:17:59Z",
   "master": "output/who-actually-gets-the-tariff-refund/thumbnails/master_A.png"
 }

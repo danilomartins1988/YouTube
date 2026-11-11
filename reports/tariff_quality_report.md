@@ -2,35 +2,34 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/who-actually-gets-the-tariff-refund/documentary/who-actually-gets-the-tariff-refund--documentary.mp4 (178.6 MB) |
+| File exists | PASS | /home/user/YouTube/output/who-actually-gets-the-tariff-refund/documentary/who-actually-gets-the-tariff-refund--documentary.mp4 (182.5 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 11-13:20 min (channel standard 660-800 s) | FAIL | 654.93 s (10:54) |
-| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
-| Caption/voice sync | PASS | 304 cues; median cue-start offset 0.04 s, p90 0.33 s; 100% of speech captioned |
+| Duration 11-13:20 min (channel standard 660-800 s) | PASS | 666.80 s (11:06) |
+| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
+| Caption/voice sync | PASS | 311 cues; median cue-start offset 0.04 s, p90 0.33 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
-- Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
+- Loudness: -16.1 LUFS integrated, true peak -4.0 dBFS
 - Scenes: 41; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x25, engine_draw x5, kinetic_text x4
-- Average scene length: 16.0 s; act cards are music-only.
+- Average scene length: 16.3 s; act cards are music-only.
 
 ## Pipeline QC report
 
 # QC report: who-actually-gets-the-tariff-refund / documentary (long_16x9)
 
-- Runtime: **654.93 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 178.6 MB
-- Loudness: -16.1 LUFS integrated, true peak -4.1 dBFS
-- Errors: **1**, warnings: **66**
-- Technical QC passed: **False**
+- Runtime: **666.8 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 182.5 MB
+- Loudness: -16.1 LUFS integrated, true peak -4.0 dBFS
+- Errors: **0**, warnings: **66**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
 
-- [ERROR] (timing) Runtime 654.9s outside target 660-800s
 - [WARNING] (timing) Segment h_promise pace 187 wpm (numerals count as one word)
 - [WARNING] (timing) Segment m1_case pace 118 wpm (numerals count as one word)
 - [WARNING] (timing) Segment m3_transition pace 193 wpm (numerals count as one word)

@@ -1,6 +1,6 @@
 # Storyboard - Who Actually Gets the $166 Billion Tariff Refund?
 
-Total 10:55 (654.9 s), 41 scenes. Timestamps come from the narration timing of the build that produced `timeline.json`. Engine: Remotion (React + SVG), 1920x1080, 30 fps.
+Total 11:07 (666.8 s), 41 scenes. Timestamps come from the narration timing of the build that produced `timeline.json`. Engine: Remotion (React + SVG), 1920x1080, 30 fps.
 
 | # | Start | Dur | Scene | Type | Animation | Narration (start) | Sources |
 |---|---|---|---|---|---|---|---|
@@ -43,5 +43,5 @@ Total 10:55 (654.9 s), 41 scenes. Timestamps come from the narration timing of t
 | 37 | 9:11 | 17.9s | `s36_class` | engine_cartoon |  | The one class action a court has actually certified so far is different. In October twenty... | cit |
 | 38 | 9:29 | 33.4s | `s37_after` | engine_cartoon |  | Meanwhile, the tariffs did not simply disappear. Days after the ruling, the President used... | crs |
 | 39 | 10:02 | 17.2s | `p38_loop` | engine_draw |  | Let me draw the loop. Tariffs go in at the port. Prices rise on the shelf. The court says ... | crs, cit |
-| 40 | 10:19 | 24.7s | `s39_payoff` | engine_cartoon |  | So who actually gets the tariff refund? The companies that paid at the border. Not because... | cbp, yale |
-| 41 | 10:44 | 10.9s | `s40_end` | end_card | Closing words land; brand line draws | Next time on The Hidden Economics, we follow the money behind another hidden link of the w... | - |
+| 40 | 10:19 | 36.6s | `s39_payoff` | engine_cartoon |  | So who actually gets the tariff refund? The companies that paid at the border. Not because... | cbp, yale |
+| 41 | 10:56 | 10.9s | `s40_end` | end_card | Closing words land; brand line draws | Next time on The Hidden Economics, we follow the money behind another hidden link of the w... | - |

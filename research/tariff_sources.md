@@ -1,6 +1,6 @@
 # Research dossier - Who Actually Gets the $166 Billion Tariff Refund?
 
-Generated 2026-11-11T01:05:24+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-11T05:43:01+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 
