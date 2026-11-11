@@ -1,0 +1,278 @@
+# Before You Buy: Meta, November 2026 edition. Series spec: docs/series/BEFORE_YOU_BUY.md.
+# Investor-level audience (no concept lessons). Every number through {{placeholders}} (sources.yaml) so a quarterly
+# refresh swaps numbers. Our calculations said as ours. Never fair value, cheap/expensive, buy/sell. Disclaimer after the hook.
+# Capex boom: three lenses, then the gauge on the labelled proxy (OCF minus D&A), with the FCF result as the other end.
+logline: Meta is worth about one point six trillion dollars, and last quarter its free cash flow turned negative. What does
+  the price assume about ads, AI spending and the courts, what has to go right, and what could go wrong? November 2026 edition.
+title: 'Before You Buy Meta Stock, Watch This (Nov 2026)'
+segments:
+- id: h_open
+  chapter: The negative quarter
+  narration: Meta is worth {{cap}}. That's {{cap.price_spoken}} a share at the close on {{cap.date_spoken}}, times {{cap.shares_spoken}}
+    shares. And last quarter, for the first time in years, its free cash flow, as Meta defines it, was {{lenses.q3_spoken}}.
+  claims:
+  - cap
+  - lenses
+- id: h_twist
+  chapter: The negative quarter
+  narration: That's not because the business is shrinking. Ad revenue grew {{q3.ad_growth_spoken}}. It's because Meta is spending
+    {{lenses.capexshare_spoken}} of everything it sells on data centers and servers. And instead of buying back stock, it just
+    lined up {{capital}} of new money in two weeks, by our count.
+  claims:
+  - q3
+  - lenses
+  - capital
+- id: h_question
+  chapter: The negative quarter
+  narration: So what is this price actually betting on? What has to happen for all that spending to pay off? And what could
+    break the story?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: The negative quarter
+  narration: In the next few minutes, we open the machine, follow the cash, run the numbers on what's priced in, and finish
+    with the three numbers to watch when Meta reports next.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode.
+- id: h_disclaimer
+  chapter: The negative quarter
+  narration: Quick note. This isn't financial advice. Everything here comes from Meta's own filings and our own math, dated,
+    so you can decide for yourself.
+  claims: []
+  analysis: true
+  source_note: Series disclaimer (required after the hook).
+- id: m1_card
+  chapter: The machine
+  narration: ''
+  claims: []
+- id: m1_machine
+  chapter: The machine
+  narration: Over the last twelve months, Meta brought in {{rev}}, and {{rev.ad_share_spoken}} of it came from advertising.
+    Meta's own filing says it plainly. Substantially all of its revenue comes from marketers advertising on Facebook and Instagram.
+    And those marketers don't sign long term contracts.
+  claims:
+  - rev
+- id: m1_engines
+  chapter: The machine
+  narration: There are two engines. The Family of Apps, Facebook, Instagram, WhatsApp and Messenger, earned an operating margin
+    of {{rev.foa_margin_spoken}} in twenty twenty-five. Reality Labs, the headsets and glasses, brings in very little and lost
+    {{rev.rl_loss_spoken}} that year. One engine pays for the other.
+  claims:
+  - rev
+- id: m1_ads
+  chapter: The machine
+  narration: The money machine itself is simple. In the third quarter, Meta showed {{q3.imp_spoken}} more ads than a year earlier,
+    and charged {{q3.price_spoken}} more per ad, mostly because its targeting and measurement got better. About {{q3.dap_spoken}}
+    people use at least one of its apps every day. More ads, at higher prices, to almost everyone online.
+  claims:
+  - q3
+- id: m1_draw
+  chapter: The machine
+  narration: Let me draw the machine. Here is the Family of Apps, the big engine. Here is Reality Labs, the small one. Here is
+    advertising, feeding the big engine. And this arrow is the cash the big engine sends over to keep the small one running.
+  claims:
+  - rev
+  analysis: true
+  source_note: Diagram of the segments (10-K FY2025).
+- id: m1_transition
+  chapter: The machine
+  narration: An ad machine that good throws off a lot of cash. So where did it go?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: The cash
+  narration: ''
+  claims: []
+- id: m2_cash
+  chapter: The cash
+  narration: Operating cash flow over the last twelve months was {{lenses.ocf_spoken}}. Net income was {{lenses.ni_spoken}},
+    though that includes a big tax benefit and billions in legal charges. Then capex, including finance leases, took {{lenses.capex_spoken}}.
+    Free cash flow, by Meta's definition, was {{lenses.fcf_spoken}}.
+  claims:
+  - lenses
+- id: m2_quarter
+  chapter: The cash
+  narration: And the latest quarter went below zero. The third quarter also carried a {{q3.charge_spoken}} charge for the settlement
+    with state attorneys general. Including it, the Family of Apps margin fell to {{q3.margin_spoken}}. Without it, by our math,
+    it would have been {{q3.margin_ex_spoken}}.
+  claims:
+  - q3
+  - lenses
+- id: m2_capital
+  chapter: The cash
+  narration: So Meta changed direction on capital. In twenty twenty-five it bought back {{capital.bb2025_spoken}} of stock. This
+    year, none. Instead, in two weeks it committed {{capital.pref_spoken}} of convertible preferred, a forward sale of new shares
+    worth {{capital.fwd_spoken}}, and {{capital.notes_spoken}} of bonds. The share count is now rising, not falling.
+  claims:
+  - capital
+- id: m2_draw
+  chapter: The cash
+  narration: Let me draw where twelve months of operating cash went. Here is the operating cash bar. Here is the capex bar,
+    taking most of it. Here is what's left, the free cash flow. And here is the new money coming in from outside, more than
+    twice as big.
+  claims:
+  - lenses
+  - capital
+  analysis: true
+  source_note: Bar sketch of TTM cash uses and new capital (our calc.).
+- id: m2_transition
+  chapter: The cash
+  narration: Which brings us to the big question. At one point six trillion dollars, what are you paying for?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: What's priced in
+  narration: ''
+  claims: []
+- id: m3_lenses
+  chapter: What's priced in
+  narration: Three quick lenses first, all our math on the last twelve months. Price to earnings, {{lenses}}, though one offs
+    push that number around in both directions. Free cash flow yield, {{lenses.fcfy_spoken}}. Operating cash flow yield, {{lenses.ocfy_spoken}}.
+    That gap is the whole story. The cash is there. The capex is eating it.
+  claims:
+  - lenses
+- id: m3_proxy
+  chapter: What's priced in
+  narration: So for a company in a building spree, we use a proxy. We take operating cash and subtract depreciation and amortization,
+    about {{proxy.dep_spoken}} a year, as a rough stand-in for the spending needed just to keep things running. That leaves {{proxy}},
+    a yield of {{proxy.yield_spoken}}. It assumes capex eventually falls back toward that level.
+  claims:
+  - proxy
+- id: m3_gauge
+  chapter: What's priced in
+  narration: Now let's run it backwards. What growth in that cash, for ten years, makes today's price work, before slowing to
+    three percent? With an eight percent discount rate, {{rdcf}}. With ten percent, {{rdcf.high_spoken}}. But on today's actual
+    free cash flow, the answer jumps to between {{rdcf.fcf_low_spoken}} and {{rdcf.fcf_high_spoken}} a year.
+  claims:
+  - rdcf
+- id: m3_mustearn
+  chapter: What's priced in
+  narration: So the bet is the capex. One more lens, our rough illustration. If Meta keeps spending at today's pace, every dollar
+    of capex has to add about {{mustearn}} to {{mustearn.high_spoken}} of extra operating cash every year, within a decade, for
+    the price to make sense. Less than Microsoft needs, by the same math, but Meta's spending is still climbing.
+  claims:
+  - mustearn
+- id: m3_draw
+  chapter: What's priced in
+  narration: Let me draw the two answers. Here is the growth the price needs if capex calms down. Here it is at the higher rate.
+    And here is what it needs if capex stays where it is. Same company, same price. The difference is one number, the capex.
+  claims:
+  - rdcf
+  analysis: true
+  source_note: Bar sketch of implied growth on the proxy vs FCF bases (our calc.).
+- id: m3_transition
+  chapter: What's priced in
+  narration: So what has to go right?
+  claims: []
+- id: m4_card
+  chapter: What has to happen
+  narration: ''
+  claims: []
+- id: m4_ads
+  chapter: What has to happen
+  narration: Number one, ads keep compounding. Price per ad up {{q3.price_spoken}}, impressions up {{q3.imp_spoken}}. For this
+    quarter, the C F O guided revenue of {{guide}}, and says the A I work should help sustain strong revenue growth throughout
+    next year. That's the engine everything else depends on.
+  claims:
+  - q3
+  - guide
+  analysis: true
+  source_note: Driver tied to the CFO's guidance.
+- id: m4_capex
+  chapter: What has to happen
+  narration: Number two, capex turns back into cash. Meta guides twenty twenty-six capex of {{guide.capex_spoken}}. By our math,
+    that implies {{guide.q4capex_spoken}} in this quarter alone, far above the last one. And it has {{risks}} of future commitments
+    on the books, with {{risks.due27_spoken}} due next year.
+  claims:
+  - guide
+  - risks
+  analysis: true
+  source_note: Driver tied to the capex guidance and commitments.
+- id: m4_margin
+  chapter: What has to happen
+  narration: Number three, the core margin holds once the legal charges stop. It was {{rev.foa_margin_spoken}} last year, and
+    about {{q3.margin_ex_spoken}} last quarter before the settlement charge. Depreciation from all that new equipment is already
+    rising fast, so this margin will be under pressure.
+  claims:
+  - rev
+  - q3
+  analysis: true
+  source_note: Driver tied to segment margins (our calc.).
+- id: m4_rl
+  chapter: What has to happen
+  narration: And number four, Reality Labs shrinks its losses as promised. The C F O expects {{guide.rl_spoken}} this year,
+    and {{guide.rl27_spoken}} next year. Every billion saved there is a billion that can go into A I instead.
+  claims:
+  - guide
+  analysis: true
+  source_note: Driver tied to the Reality Labs outlook.
+- id: m4_transition
+  chapter: What has to happen
+  narration: Now the other side of the scale.
+  claims: []
+- id: m5_card
+  chapter: Risks and upside
+  narration: ''
+  claims: []
+- id: m5_courts
+  chapter: Risks and upside
+  narration: Risk one is the courts. A New Mexico court imposed a civil penalty of {{legal}}, with fifteen percent post judgment
+    interest. Meta says it has accrued an amount and will appeal, but doesn't say how much. The settlement with state attorneys
+    general could cost {{legal.ag_spoken}}. Legal accruals now total {{legal.accr_spoken}}.
+  claims:
+  - legal
+- id: m5_europe
+  chapter: Risks and upside
+  narration: Risk two is Europe, about {{legal.eu_spoken}} of revenue. Meta is appealing a fine over its pay or consent model,
+    and warns that further changes could be imposed, with a significant impact on its European business.
+  claims:
+  - legal
+- id: m5_other
+  chapter: Risks and upside
+  narration: Risk three is the spending itself, and control. Meta's filing says that if its investments aren't successful longer
+    term, the business could be harmed, and notes shifting public sentiment toward data centers. It depends on Mark Zuckerberg,
+    and the new non voting shares could extend his majority of the votes for longer.
+  claims:
+  - risks
+- id: m5_upside
+  chapter: Risks and upside
+  narration: And the upside the price might not fully include. WhatsApp paid messaging and subscriptions grew {{upside}} last
+    quarter, though it's still small, about {{upside.ttm_spoken}} a year. Meta has launched Muse, an agentic A I it plans to scale,
+    and A I glasses are selling. None of that comes with a forecast, so we won't size it.
+  claims:
+  - upside
+  analysis: true
+  source_note: Company-stated upside; unsized by rule.
+- id: m5_transition
+  chapter: Risks and upside
+  narration: So, what should you watch?
+  claims: []
+- id: payoff
+  chapter: The scorecard
+  narration: Here's the scorecard for the next report, expected around {{watch}}, our estimate. One, fourth quarter revenue
+    against the seventy-three to seventy-six billion dollar guide. Two, capex, and the first outlook for next year, which decide
+    whether free cash flow climbs back above zero. Three, legal accruals and the core margin. And one note for next time. Meta's
+    new share dividend works like a two for one split, so the share count roughly doubles.
+  claims:
+  - watch
+  - guide
+  - capital
+  analysis: true
+  source_note: Scorecard (company figures; next date our estimate).
+- id: payoff2
+  chapter: The scorecard
+  narration: That's Meta, November twenty twenty-six edition. We'll update it after every report, with new numbers and the
+    same three questions. What's priced in, what has to happen, and what could go wrong.
+  claims: []
+  analysis: true
+  source_note: Series sign-off.
+- id: teaser
+  chapter: The scorecard
+  narration: Next in the series, another giant of the stock market, opened up the same way. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser.

@@ -1,0 +1,159 @@
+# Sources and claims for "Before You Buy Microsoft Stock, Watch This (Nov 2026)" (series Before You Buy, Microsoft, 2026-11 edition).
+# Facts read 2026-11-11 (notes: docs/series/research/microsoft_2026-11.md, incl. the depreciation addendum). DATA AS OF the 2026-11-10 close.
+# QUARTERLY REFRESH: update text/spoken/display/fields below from the new 10-Q/10-K, transcript and close; the script reads
+# every number through {{placeholders}}. Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: segments are the NEW recast ones (Agents and Infra / Devices and Consumer); never compare with old "Intelligent
+# Cloud" figures. Capex: say which figure (cash $39.4bn vs $45.2bn incl. finance leases). OpenAI share is QUARTERLY
+# (about 11% last quarter), not an annual >10% customer. Guidance only verbatim from the CFO's call remarks, attributed.
+# Ratios, the proxy base and the reverse calculation are OUR calculations (illustration, inputs on screen); never fair
+# value, cheap/expensive, buy/sell. No analyst consensus (none verified).
+sources:
+  - id: tenq
+    title: "Microsoft Form 10-Q for Q1 FY2027 (quarter ended September 30, 2026)"
+    publisher: Microsoft Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm
+    published: "2026-10-28"
+    accessed: "2026-11-11"
+    credit: "Microsoft 10-Q (SEC)"
+  - id: rel
+    title: "Microsoft FY27 Q1 earnings release (8-K Ex. 99.1) and the 8-K recasting FY2024-FY2026 into the new segments (Oct 28, 2026); Form 10-K FY2026"
+    publisher: Microsoft Corporation (SEC filings)
+    url: https://www.sec.gov/Archives/edgar/data/789019/000119312526436149/msft-ex99_1.htm
+    published: "2026-10-28"
+    accessed: "2026-11-11"
+    credit: "Microsoft filings (SEC)"
+  - id: call
+    title: "Microsoft FY27 Q1 earnings call transcript (CFO and CEO prepared remarks)"
+    publisher: Microsoft Investor Relations
+    url: https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1
+    published: "2026-10-28"
+    accessed: "2026-11-11"
+    credit: "Microsoft earnings call"
+  - id: px
+    title: "MSFT closing price, Nov 10, 2026 (data vendor); share count from the 10-Q cover (Oct 22, 2026); depreciation from SEC XBRL"
+    publisher: Yahoo Finance; Microsoft Corporation
+    url: https://finance.yahoo.com/quote/MSFT/history/
+    published: "2026-11-10"
+    accessed: "2026-11-11"
+    credit: "Yahoo Finance price · our calculation"
+
+claims:
+  - id: cap
+    text: "Close Nov 10, 2026: $533.16 (Yahoo Finance). 10-Q cover: 7,426,194,552 shares outstanding as of October 22, 2026. OUR calculation: market value ≈ $3,959.3bn (≈ $3.96tn). Cash and short-term investments $64.5bn vs debt $35.5bn at Sep 30, 2026 (10-Q); finance lease liabilities $71.0bn; $25.0bn of new notes after the quarter (8-K). Equity value used (net debt and leases ignored for simplicity)."
+    spoken: about three point nine six trillion dollars
+    display: "≈ $3.96tn market value (close Nov 10, 2026 × 7.43bn shares; our calc.)"
+    fields: {price_spoken: five hundred and thirty-three dollars and sixteen cents, shares_spoken: about seven point four billion, date_spoken: "November tenth, twenty twenty-six", leases_spoken: seventy-one billion dollars}
+    source_ids: [px, tenq]
+    status: source_located
+    verification_note: Our calculation; date on screen.
+
+  - id: lenses
+    text: "OUR calculations (trailing twelve months, Q2 FY26 to Q1 FY27): operating cash flow $195.9bn; cash capex (additions to property and equipment) $135.9bn = 39% of TTM revenue $346.4bn; free cash flow $60.0bn; GAAP net income $142.6bn. Trailing P/E 27.8x (≈ 29.5x excluding OpenAI gains); price/FCF 66x (FCF yield 1.5%); operating cash flow yield 4.9%."
+    spoken: about twenty-eight times
+    display: "P/E 27.8x · FCF yield 1.5% · OCF yield 4.9% (TTM; our calc.)"
+    fields: {ocf_spoken: about one hundred and ninety-six billion dollars, capex_spoken: about one hundred and thirty-six billion dollars, capexshare_spoken: thirty-nine percent, fcf_spoken: about sixty billion dollars, ni_spoken: about one hundred and forty-three billion dollars, fcfy_spoken: about one and a half percent, ocfy_spoken: about four point nine percent, pfcf_spoken: sixty-six times}
+    source_ids: [tenq, rel, px]
+    status: source_located
+    verification_note: Our calculation; capex = cash additions to property and equipment.
+
+  - id: proxy
+    text: "OUR proxy base for a capex boom (labelled proxy): operating cash flow $195.9bn minus depreciation of property and equipment ≈ $38.3bn TTM (SEC XBRL: Q2 FY26 $7.9bn, Q3 $9.0bn, Q4 $10.3bn, Q1 FY27 $11.1bn) = ≈ $157.6bn (yield ≈ 4.0%). It assumes capex eventually falls back to roughly the depreciation level."
+    spoken: about one hundred and fifty-eight billion dollars
+    display: "Proxy base: OCF − depreciation ≈ $157.6bn (TTM; our calc.)"
+    fields: {dep_spoken: about thirty-eight billion dollars, yield_spoken: about four percent}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Proxy, our calculation.
+
+  - id: rdcf
+    text: "OUR illustration (not a valuation): market cap $3,959.3bn = 10 years of cash growing at g plus a terminal value at 3%, discounted at r. On the PROXY base $157.6bn: r = 8% gives g ≈ 5.5% a year; r = 10% gives g ≈ 10.2%. On TTM FREE CASH FLOW $60.0bn: g ≈ 17.9% (8%) / ≈ 23.3% (10%); implied year-10 FCF ≈ $310bn / ≈ $489bn."
+    spoken: about five and a half percent a year
+    display: "Implied growth ≈ 5.5%-10.2% (proxy) or ≈ 17.9%-23.3% (FCF) a year for 10 years (our illustration)"
+    fields: {high_spoken: about ten percent, fcf_low_spoken: about eighteen percent, fcf_high_spoken: about twenty-three percent}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Our illustration; assumptions on screen (8% and 10% discount rates, 3% terminal growth, 10 years).
+
+  - id: mustearn
+    text: "OUR rough illustration: if cash capex stays at the TTM pace ($135.9bn a year), the year-10 free cash flow the price implies (≈ $310bn at 8%, ≈ $489bn at 10%) needs operating cash of FCF plus capex; the extra over today's $195.9bn, spread over ten years of capex ($1,359bn), is ≈ 18 cents (8%) to ≈ 32 cents (10%) of extra yearly operating cash per dollar of capex."
+    spoken: about eighteen cents
+    display: "Each capex dollar must add ≈ 18-32¢ of yearly operating cash within 10 years (our illustration)"
+    fields: {high_spoken: about thirty-two cents}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Our illustration; inputs on screen.
+
+  - id: seg
+    text: "Recast 8-K (Oct 28, 2026): FY2026 revenue $331.8bn (+18%); Agents and Infra $268.1bn (+23%), operating income $136.4bn (margin 50.9%, our calc.); Devices and Consumer $63.7bn (+1%), margin 29.6%. 10-Q Q1 FY27: revenue $92.3bn (+19%); Agents and Infra $76.8bn, margin 52.8%; Devices and Consumer $15.5bn (−3%). 'The updates do not represent a restatement.'"
+    spoken: about three hundred and thirty-two billion dollars
+    display: "FY2026 revenue $331.8bn: Agents & Infra $268.1bn, Devices & Consumer $63.7bn (recast 8-K)"
+    fields: {growth_spoken: eighteen percent, ai_spoken: about two hundred and sixty-eight billion dollars, ai_margin_spoken: about fifty-one percent, dc_spoken: about sixty-four billion dollars, q1_spoken: about ninety-two billion dollars, q1_growth_spoken: nineteen percent}
+    source_ids: [rel, tenq]
+    status: source_located
+
+  - id: azure
+    text: "Recast 8-K: Azure revenue FY2026 $101.9bn (FY2025 $72.6bn). 10-Q Q1 FY27: Azure $33.2bn (+48%), ≈ 36% of quarterly revenue (our calc.); Microsoft 365 commercial cloud $27.8bn (+17%); Windows OEM and devices $3.6bn (−22%). Microsoft Cloud gross margin fell to 66% 'driven by sales mix shift to Azure'."
+    spoken: about thirty-three billion dollars
+    display: "Azure $33.2bn in Q1 FY27, +48% (10-Q)"
+    fields: {growth_spoken: forty-eight percent, share_spoken: about thirty-six percent, fy_spoken: about one hundred and two billion dollars, m365_growth_spoken: seventeen percent, win_spoken: twenty-two percent, gm_spoken: sixty-six percent}
+    source_ids: [rel, tenq]
+    status: source_located
+
+  - id: openai
+    text: "10-Q: 'For the three months ended September 30, 2026, we recorded revenue from commercial arrangements with OpenAI, inclusive of revenue-sharing payments, of $10.0 billion' = 10.8% of Q1 revenue (our calc.). Microsoft holds 'an approximate 24% interest on an as-converted basis'; receivables from OpenAI $7.2bn. FY2026 10-K: no customer above 10% of annual revenue."
+    spoken: ten billion dollars
+    display: "OpenAI: $10.0bn of revenue in one quarter (≈ 11%; 10-Q)"
+    fields: {share_spoken: about eleven percent, stake_spoken: about twenty-four percent}
+    source_ids: [tenq]
+    status: source_located
+    verification_note: Quarterly share only; never call it an annual >10% customer.
+
+  - id: rpo
+    text: "CFO (call): commercial remaining performance obligation $677bn, up 73%; 'roughly 30% will be recognized in revenue in the next 12 months' (≈ $203bn, our calc.). Commercial bookings decreased 12% 'driven by the impact from large Azure commitments in the prior year'."
+    spoken: six hundred and seventy-seven billion dollars
+    display: "Commercial backlog (RPO) $677bn, +73% (CFO)"
+    fields: {growth_spoken: seventy-three percent, next_spoken: about two hundred billion dollars}
+    source_ids: [call]
+    status: source_located
+
+  - id: cash
+    text: "OUR calculations, TTM: buybacks $21.0bn, dividends $27.0bn, together $48.0bn = 80% of free cash flow. Shares outstanding 7,432.4M (Oct 2025) to 7,426.2M (Oct 2026), about flat. CFO: Q1 'free cash flow was $18.6 billion reflecting higher capital expenditures' (Q1 FY26: $25.7bn, so about −27%, our calc.). CFO capex: '$45.2 billion ... finance leases were $7.4 billion ... cash paid for P, P, and E was $39.4 billion.' FY2026 10-K: datacenter leases not yet commenced $329.1bn."
+    spoken: about forty-eight billion dollars
+    display: "TTM: buybacks $21.0bn + dividends $27.0bn = 80% of FCF (our calc.)"
+    fields: {share_spoken: eighty percent, q1fcf_spoken: eighteen point six billion dollars, drop_spoken: about twenty-seven percent, capex_q1_spoken: forty-five point two billion dollars, cashcapex_q1_spoken: thirty-nine point four billion dollars, leases_spoken: three hundred and twenty-nine billion dollars}
+    source_ids: [tenq, call]
+    status: source_located
+
+  - id: guide
+    text: "CFO (call), Q2 FY27 outlook: 'revenue should be between $96 and $97.1 billion or growth of 18 to 19%'; 'In Azure, we expect revenue growth of 49 to 50% in constant currency ... Customer demand continues to exceed available supply'; 'we expect CapEx spend will be over $50 billion. Therefore, for the calendar year, spend should be approximately $170 billion'; 'Windows OEM and Devices revenue should decline in the mid-thirties'; 'Microsoft Cloud gross margin percentage should be roughly 65%'; 'we expect to continue to remain free cash flow positive in FY27.'"
+    spoken: between ninety-six and ninety-seven point one billion dollars
+    display: "Q2 FY27 guide: revenue $96-97.1bn; Azure +49-50% cc; capex > $50bn (CFO)"
+    fields: {azure_spoken: forty-nine to fifty percent, capex_spoken: over fifty billion dollars, cy_spoken: approximately one hundred and seventy billion dollars, gm_spoken: roughly sixty-five percent}
+    source_ids: [call]
+    status: source_located
+    verification_note: Verbatim, attributed to the CFO.
+
+  - id: risks
+    text: "10-Q risk factors: AI investments 'are being made at significant scale and on an accelerated timeline ... and are in advance of fully developed revenue streams. The associated revenue may not be realized in the expected timeframes or at expected levels'; 'Overestimation of demand or misalignment of capacity investments may result in underutilization of infrastructure and may lead to impairment of assets'; partners that are 'significant customers of Azure' may not deliver the expected benefits; 'if pricing for AI products and services declines ... our margins ... could be adversely affected'. IRS 'is seeking an additional tax payment of $28.9 billion plus penalties and interest' (2004-2013; Microsoft disputes it). Competition scrutiny in the EU, UK, U.S. and China; tariffs 'could impact cloud and devices supply chain cost competitiveness'."
+    spoken: twenty-eight point nine billion dollars
+    display: "10-Q risk factors (Microsoft)"
+    fields: {}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: upside
+    text: "CFO (call): 'Foundry revenue more than tripled year-over-year'. CEO (call): Copilot 'Daily users are up nearly 50 percent quarter over quarter, and over 5X year over year'; 'MAI Code Flash had 3 million users in GitHub Copilot last month alone'. CFO: engineering work 'enabled us to identify and monetize underutilized capacity'. Copilot revenue is not disclosed in dollars; the OpenAI stake's market value is not disclosed."
+    spoken: more than tripled
+    display: "Foundry revenue more than tripled; Copilot daily users > 5x y/y (Microsoft, unsized)"
+    fields: {}
+    source_ids: [call, tenq]
+    status: source_located
+    verification_note: Company claims; never sized in dollars.
+
+  - id: watch
+    text: "Scorecard for the next report (Q2 FY27, date not announced; last year Jan 28, 2026, so late January 2027 is our estimate): Azure growth vs the 49-50% constant-currency guide (Q1 +48%); capex (guide 'over $50 billion') and whether free cash flow holds near Q1's $18.6bn; commercial backlog $677bn and the OpenAI share of revenue (10.8% in Q1)."
+    spoken: late January twenty twenty-seven
+    display: "Next report: late January 2027 (our estimate)"
+    fields: {}
+    source_ids: [call, tenq]
+    status: source_located

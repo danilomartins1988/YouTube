@@ -1,0 +1,152 @@
+# Sources and claims for "Before You Buy Meta Stock, Watch This (Nov 2026)" (series Before You Buy, Meta, 2026-11 edition).
+# Facts read 2026-11-11 (notes: docs/series/research/meta_2026-11.md, incl. the depreciation addendum). DATA AS OF the 2026-11-10 close.
+# QUARTERLY REFRESH: update text/spoken/display/fields below from the new 10-Q/10-K and the new close; the script reads
+# every number through {{placeholders}}. Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: the New Mexico accrual amount is NOT disclosed (never say reserved or unreserved); Q3 free cash flow was negative;
+# the ≈ $56bn of new capital is OUR sum (forward-sale proceeds not yet received); "free cash flow as Meta defines it";
+# TTM net income distorted by one-offs (tax benefit, legal charges); plaintiffs' trillion-dollar figure is a claim, not
+# used. Class C dividend (charter effective Jan 19, 2027): the next edition's share count roughly doubles.
+# Ratios, the proxy base and the reverse calculation are OUR calculations; never fair value, cheap/expensive, buy/sell.
+sources:
+  - id: tenq
+    title: "Meta Platforms Form 10-Q for Q3 2026 (quarter ended September 30, 2026)"
+    publisher: Meta Platforms, Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm
+    published: "2026-10-22"
+    accessed: "2026-11-11"
+    credit: "Meta 10-Q (SEC)"
+  - id: rel
+    title: "Meta Q3 2026 results, 8-K Ex. 99.1 (Oct 21, 2026), incl. CFO outlook; 8-K on the Class C stock dividend (Oct 21, 2026); Form 10-K FY2025"
+    publisher: Meta Platforms, Inc. (SEC filings)
+    url: https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm
+    published: "2026-10-21"
+    accessed: "2026-11-11"
+    credit: "Meta results (SEC)"
+  - id: cap8k
+    title: "Meta 8-Ks of Oct 29, 2026 (mandatory convertible preferred; forward sale of common stock) and Nov 5, 2026 ($15bn notes)"
+    publisher: Meta Platforms, Inc. (SEC filings)
+    url: https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm
+    published: "2026-10-29"
+    accessed: "2026-11-11"
+    credit: "Meta 8-Ks (SEC)"
+  - id: px
+    title: "META closing price, Nov 10, 2026 (data vendor); share count from the 10-Q cover (Oct 16, 2026); D&A from SEC XBRL"
+    publisher: Yahoo Finance; Meta Platforms, Inc.
+    url: https://finance.yahoo.com/quote/META/history/
+    published: "2026-11-10"
+    accessed: "2026-11-11"
+    credit: "Yahoo Finance price · our calculation"
+
+claims:
+  - id: cap
+    text: "Close Nov 10, 2026: $641.39 (Yahoo Finance). 10-Q cover: Class A 2,214,472,367 + Class B 341,768,886 = 2,556,241,253 shares outstanding as of October 16, 2026. OUR calculation: market value ≈ $1,639.5bn (≈ $1.64tn), Class B valued at the Class A price; excludes the new mandatory convertible preferred (≈ $12.8bn) and the 46M forward-sale shares not yet issued. Cash and marketable securities $82.4bn vs debt ≈ $84.0bn at Sep 30, 2026: net debt about zero."
+    spoken: about one point six four trillion dollars
+    display: "≈ $1.64tn market value (close Nov 10, 2026 × 2.56bn shares, A+B; our calc.)"
+    fields: {price_spoken: six hundred and forty-one dollars and thirty-nine cents, shares_spoken: about two point six billion, date_spoken: "November tenth, twenty twenty-six"}
+    source_ids: [px, tenq]
+    status: source_located
+    verification_note: Our calculation; date on screen.
+
+  - id: lenses
+    text: "OUR calculations (TTM Q4 2025 to Q3 2026): operating cash flow $133.1bn; capex incl. finance-lease principal $108.0bn = 44.7% of TTM revenue $241.6bn; free cash flow as Meta defines it $25.1bn; net income $75.2bn (incl. an $8.03bn tax benefit and $12.29bn of pre-tax legal charges). P/E 21.8x; price/FCF 65x (FCF yield 1.5%); operating cash flow yield 8.1%. Q3 2026 free cash flow: −$2.12bn."
+    spoken: about twenty-two times
+    display: "P/E 21.8x · FCF yield 1.5% · OCF yield 8.1% (TTM; our calc.)"
+    fields: {ocf_spoken: about one hundred and thirty-three billion dollars, capex_spoken: about one hundred and eight billion dollars, capexshare_spoken: about forty-five percent, fcf_spoken: about twenty-five billion dollars, ni_spoken: about seventy-five billion dollars, fcfy_spoken: about one and a half percent, ocfy_spoken: about eight percent, pfcf_spoken: about sixty-five times, q3_spoken: negative two point one billion dollars}
+    source_ids: [tenq, rel, px]
+    status: source_located
+    verification_note: Our calculation; FCF is Meta's definition (OCF − property and equipment − finance-lease principal).
+
+  - id: proxy
+    text: "OUR proxy base for a capex boom (labelled proxy): operating cash flow $133.1bn minus depreciation and amortization ≈ $24.9bn TTM (SEC XBRL cash-flow line; Q3 2026 $7.15bn vs $4.96bn a year earlier) = ≈ $108.2bn (yield ≈ 6.6%). It assumes capex eventually falls back to roughly the depreciation level."
+    spoken: about one hundred and eight billion dollars
+    display: "Proxy base: OCF − D&A ≈ $108.2bn (TTM; our calc.)"
+    fields: {dep_spoken: about twenty-five billion dollars, yield_spoken: about six and a half percent}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Proxy, our calculation.
+
+  - id: rdcf
+    text: "OUR illustration (not a valuation): market cap $1,639.5bn = 10 years of cash growing at g plus a terminal value at 3%, discounted at r. On the PROXY base $108.2bn: r = 8% gives g ≈ −0.9% a year (about zero); r = 10% gives g ≈ 3.4%. On TTM FREE CASH FLOW $25.1bn: g ≈ 17.7% (8%) / ≈ 23.2% (10%); implied year-10 FCF ≈ $128bn / ≈ $202bn."
+    spoken: about zero
+    display: "Implied growth ≈ 0%-3.4% (proxy) or ≈ 17.7%-23.2% (FCF) a year for 10 years (our illustration)"
+    fields: {high_spoken: about three and a half percent, fcf_low_spoken: about eighteen percent, fcf_high_spoken: about twenty-three percent}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Our illustration; assumptions on screen (8% and 10% discount rates, 3% terminal growth, 10 years).
+
+  - id: mustearn
+    text: "OUR rough illustration: if capex stays at the TTM pace ($108.0bn a year incl. finance leases), the year-10 free cash flow the price implies (≈ $128bn at 8%, ≈ $202bn at 10%) needs operating cash of FCF plus capex; the extra over today's $133.1bn, spread over ten years of capex ($1,080bn), is ≈ 9.5 cents (8%) to ≈ 16 cents (10%) of extra yearly operating cash per dollar of capex."
+    spoken: about ten cents
+    display: "Each capex dollar must add ≈ 9.5-16¢ of yearly operating cash within 10 years (our illustration)"
+    fields: {high_spoken: about sixteen cents}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Our illustration; inputs on screen.
+
+  - id: rev
+    text: "10-K FY2025: revenue $201.0bn; Family of Apps $198.8bn, operating income $102.5bn (margin 51.6%, our calc.); Reality Labs revenue $2.2bn, operating loss $19.2bn. TTM revenue $241.6bn (our calc. from quarterly releases); advertising $235.6bn = 97.5%. 10-Q: 'Substantially all of our revenue is currently generated from marketers advertising on Facebook and Instagram'."
+    spoken: about two hundred and forty-two billion dollars
+    display: "TTM revenue $241.6bn; advertising 97.5% (our calc.; Meta filings)"
+    fields: {ad_share_spoken: ninety-seven and a half percent, foa_margin_spoken: about fifty-two percent, rl_loss_spoken: about nineteen billion dollars, fy_spoken: about two hundred and one billion dollars}
+    source_ids: [rel, tenq]
+    status: source_located
+
+  - id: q3
+    text: "Q3 2026 release: revenue $64.6bn; advertising $63.1bn (+26% y/y, 10-Q); ad impressions +10%; average price per ad +14%; daily active people 3.64bn (+3%); headcount 66,775 (−15%). Q3 includes 'a $9.89 billion charge' related to the settlement with the state attorneys general; Family of Apps margin 26.7% reported, ≈ 42% excluding the charge (our calc., assuming it all sits in FoA)."
+    spoken: about sixty-five billion dollars
+    display: "Q3 2026: ad revenue +26%; impressions +10%, price per ad +14% (Meta)"
+    fields: {ad_growth_spoken: twenty-six percent, imp_spoken: ten percent, price_spoken: fourteen percent, dap_spoken: three point six four billion, charge_spoken: nine point eight nine billion dollars, margin_spoken: about twenty-seven percent, margin_ex_spoken: about forty-two percent}
+    source_ids: [rel, tenq]
+    status: source_located
+
+  - id: capital
+    text: "10-Q: 'We did not repurchase any shares of Class A common stock during the nine months ended September 30, 2026' (2025 buybacks $26.25bn). After the quarter (8-Ks): $12.5bn of 6.50% mandatory convertible preferred; a forward sale of 46,000,000 Class A shares at about $622.92 (≈ $28.7bn, settlement by Nov 19, 2027, no proceeds yet); $15.0bn of senior notes. OUR sum: ≈ $56bn of new capital committed Oct 26 to Nov 5, 2026. Shares outstanding +1.05% in nine months. 8-K: a one-time non-voting Class C share for each Class A and B share (charter effective Jan 19, 2027), expected to work like a two-for-one split."
+    spoken: about fifty-six billion dollars
+    display: "≈ $56bn of new capital committed Oct 26-Nov 5, 2026 (our sum; Meta 8-Ks)"
+    fields: {bb2025_spoken: about twenty-six billion dollars, pref_spoken: twelve and a half billion dollars, fwd_spoken: about twenty-nine billion dollars, notes_spoken: fifteen billion dollars}
+    source_ids: [cap8k, tenq, rel]
+    status: source_located
+    verification_note: Sum is ours; forward-sale proceeds not yet received.
+
+  - id: guide
+    text: "Q3 release, CFO outlook: 'We expect fourth quarter 2026 total revenue to be in the range of $73-76 billion'; 'We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $135-145 billion'; 'We now expect Reality Labs losses to decline compared to 2025 to a range of $18-19 billion'; Reality Labs 'losses to narrow next year to around $15 billion'; 'position us to sustain strong overall revenue growth throughout 2027'. OUR calc.: implied Q4 capex ≈ $49-59bn vs $34.9bn in Q3."
+    spoken: seventy-three to seventy-six billion dollars
+    display: "Q4 2026 guide: revenue $73-76bn; 2026 capex $135-145bn (Meta CFO)"
+    fields: {capex_spoken: one hundred and thirty-five to one hundred and forty-five billion dollars, q4capex_spoken: about forty-nine to fifty-nine billion dollars, rl_spoken: eighteen to nineteen billion dollars, rl27_spoken: around fifteen billion dollars}
+    source_ids: [rel]
+    status: source_located
+    verification_note: Verbatim, attributed to the CFO.
+
+  - id: legal
+    text: "10-Q: New Mexico: 'the court issued an order imposing a civil penalty in the amount of $25 billion, assigning 15% post-judgment interest ... We have accrued an amount for loss contingencies related to this matter and intend to appeal' (amount accrued not disclosed). State attorneys general settlement: 'payments of up to approximately $18.59 billion'. Legal-related accruals $19.88bn at Sep 30, 2026 (vs $7.3bn at Dec 31, 2025). EU: DMA 'subscription for no ads' fine of EUR 200 million under appeal; 'further modifications to our model may be imposed' that could significantly impact the European business (Europe ≈ 23% of TTM revenue, our calc.)."
+    spoken: twenty-five billion dollars
+    display: "New Mexico penalty $25bn + 15% interest; accrued amount not disclosed (10-Q)"
+    fields: {ag_spoken: up to about eighteen point six billion dollars, accr_spoken: about twenty billion dollars, eu_spoken: about twenty-three percent}
+    source_ids: [tenq]
+    status: source_located
+    verification_note: Never say the penalty is reserved or unreserved.
+
+  - id: risks
+    text: "10-Q risk factors: 'If our investments are not successful longer-term, our business and financial performance could be harmed'; 'our industry has experienced shifting public sentiment toward data center development'; marketers 'do not have long-term advertising commitments with us'; ads rely on 'data signals ... that we do not control'; 'We currently depend on the continued services and performance of our key personnel, including Mark Zuckerberg'; the Class C issuance 'could have the effect of prolonging the duration of Mr. Zuckerberg's ability to exercise voting rights with respect to a majority of the voting power'. Non-cancelable commitments $454.52bn, ≈ $121.41bn due in 2027."
+    spoken: four hundred and fifty-four billion dollars
+    display: "10-Q risk factors (Meta)"
+    fields: {due27_spoken: about one hundred and twenty-one billion dollars}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: upside
+    text: "10-Q: 'FoA other revenue ... increased $407 million, or 59%' in Q3, 'primarily driven by paid messaging from WhatsApp and subscriptions' (≈ $3.8bn TTM, our calc.); 'we have launched Muse, an agentic AI, which we intend to scale over time'; Reality Labs: 'higher sales of AI glasses' offset lower Quest sales. Company claims, unsized."
+    spoken: fifty-nine percent
+    display: "WhatsApp paid messaging + subscriptions +59% (Meta, small, unsized upside)"
+    fields: {ttm_spoken: about four billion dollars}
+    source_ids: [tenq]
+    status: source_located
+    verification_note: Company claims; never sized beyond the reported line.
+
+  - id: watch
+    text: "Scorecard for the next report (Q4 2026, date not announced; last year Jan 28, 2026, so late January 2027 is our estimate): Q4 revenue vs the $73-76bn guide (Q4 2025: $59.9bn); Q4 capex (implied ≈ $49-59bn) and the first 2027 capex outlook, which decide whether free cash flow recovers from −$2.12bn in Q3; legal accruals ($19.9bn) and the Family of Apps margin. The Class C share dividend takes effect Jan 19, 2027, just before that report."
+    spoken: late January twenty twenty-seven
+    display: "Next report: late January 2027 (our estimate)"
+    fields: {}
+    source_ids: [rel, tenq]
+    status: source_located

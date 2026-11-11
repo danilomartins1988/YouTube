@@ -67,6 +67,8 @@ S = {
  "47-post-office": ("navy", "R", {"kind": "parcels", "s": 0.95}, "$118 BILLION", "POST OFFICE LOSSES", "#FF1E1E", {}, "≈ $118bn net losses since FY2006 (GAO)"),
  "48-alaska-dividend": ("blue", "L", {"kind": "bigcheck", "s": 0.75, "amount": "$1,200"}, "$1,200 EACH", "ALASKA PAYS YOU", "#FF1E1E", {}, "2026 PFD $1,200 (PFD Division)"),
  "49-college-sports": ("orange", "R", {"kind": "trophy", "s": 0.95}, "$20.5 MILLION", "COLLEGE PAYROLL", "#FF1E1E", {}, "$20.5M cap per school 2025-26 (CSC)"),
+ "byb-microsoft-2026-11": ("navy", "L", {"kind": "chip", "s": 1.0, "rot": -8, "label": "CLOUD"}, "MICROSOFT STOCK", "66× FREE CASH?!", "#FF1E1E", {}, "price/FCF 66x (our calc., Nov 10, 2026 close; TTM FCF $60.0bn)"),
+ "byb-meta-2026-11": ("navy", "L", {"kind": "coin", "s": 1.0, "symbol": "−$"}, "META STOCK", "CASH BELOW ZERO?!", "#FF1E1E", {}, "Q3 2026 free cash flow −$2.12bn (Meta definition; Q3 release)"),
  "byb-apple-2026-11": ("navy", "L", {"kind": "coin", "s": 1.0, "symbol": "38×"}, "APPLE STOCK", "38× PROFIT?!", "#FF1E1E", {}, "trailing P/E 38.3x (our calc., Nov 10, 2026 close; FY2026 net income)"),
  "52-nvidia-probe": ("navy", "L", {"kind": "chip", "s": 1.0, "rot": -10, "label": "AI"}, "NVIDIA", "-$428 BILLION", "#FF1E1E", {}, "≈ -$428bn market value Nov 6-10, 2026 (our estimate: closes × 24.1bn shares)"),
  "51-spacex": ("navy", "L", {"kind": "rocket", "s": 0.75}, "SPACEX", "NOT ROCKETS?!", "#FF1E1E", {}, "Q3 2026: SI $7.6bn > Starlink $5.2bn > Space $1.8bn (Q3 release)"),

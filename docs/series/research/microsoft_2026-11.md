@@ -221,3 +221,17 @@ The release itself says: "Microsoft will provide forward-looking guidance in con
 - Third-party claims (e.g. "~$170B calendar-year capex" from secondary outlets) were checked against the transcript; use the transcript wording.
 - Board: director Emma Walmsley is not standing for re-election (8-K 2026-11-05). This is not material to the thesis.
 - **What not to say:** no "fair value", "cheap/expensive", "buy/sell", or targets. Say "the price assumes ...", never "Microsoft will ...".
+
+---
+
+## Addendum 2026-11-11: depreciation, for the capex-boom gauge base (series method rule)
+- XBRL `us-gaap:Depreciation` (depreciation expense on property and equipment, notes to the 10-Q/10-K), Fetched from
+  https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json: Q2 FY26 $7.9B; Q3 FY26 $9.0B; FY26 $34.3B (so Q4 FY26
+  $10.3B, Computed); Q1 FY27 $11.1B. **TTM depreciation ≈ $38.3B** (Computed).
+- Proxy base (labelled proxy): OCF − depreciation = 195.9 − 38.3 = **$157.6B** (yield 4.0% on $3,959.3B; Computed).
+  Reverse calculation on this base (same model): **≈ 5.5% a year (8%) / ≈ 10.2% (10%)**; zero-growth value ≈ $2.56T / $1.86T.
+  This proxy assumes capex falls back to roughly the depreciation level; FCF-based result (≈ 17.9% / 23.3%) is the other end.
+- "What the capex must earn" (our rough illustration): if capex stays at the TTM cash pace ($135.9B a year), the year-10
+  FCF the price implies (≈ $310B at 8%, ≈ $489B at 10%) needs operating cash of FCF + capex; the extra over today's OCF
+  ($195.9B), spread over ten years of capex ($1,359B), is **≈ 18 cents (8%) to ≈ 32 cents (10%) of yearly operating cash per
+  dollar of capex** (Computed).

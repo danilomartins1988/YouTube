@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: "Before You Buy Meta Stock, Watch This (Nov 2026)"
+docs_dir: docs/episodes/byb-meta-2026-11
+video: output/bybmeta_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why did a booming ad business run out of free cash last quarter?
+  surprising_fact: Meta's free cash flow (its own definition) was -$2.12bn in Q3 2026 while ad revenue grew 26% (Meta)
+  subject: a crashing line
+  tone: strategy
+  metaphor: the capex eats the cash
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 'META: −$2.1BN'
+  - FREE CASH
+  claim_basis: 'lenses: Q3 2026 free cash flow −$2.12bn, Meta definition (Q3 release)'
+  scene:
+    palette: {sky0: '#1A0630', sky1: '#3B1466', haze: '#FF4FD8', key: '#FCE4FF', accent: '#FFE14D', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: crash, x: 1500, y: 600, s: 0.75}
+    support: []
+    particles: {n: 70, region: [0, 0, 1920, 1080], size: 3, color: '#FFFFFF'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'META: $56BN'
+  - NEW MONEY
+  claim_basis: 'capital: ≈ $56bn of new capital committed Oct 26-Nov 5, 2026 (our sum of Meta 8-Ks)'
+  scene:
+    palette: {sky0: '#0A0614', sky1: '#2A1440', haze: '#3DF5FF', key: '#E0F7FA', accent: '#7DFF8A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: coin, x: 480, y: 660, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    vignette: 0.5
+    brand: none

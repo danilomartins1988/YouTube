@@ -980,6 +980,97 @@ const SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 160)}, (_, k) => <path key={'hz' + k} d={`M ${z.x0 + k * 160} ${f + 40} l 80 0 l -30 40 l -80 0 Z`} fill="#FFE14D" opacity={0.25} />)}
     </g>;
   },
+  /** CLOUD PORT (original design, series Before You Buy): a retro-futurist sky harbor. Data-center towers on stilts with
+   *  glowing rack windows, round cloud-blimps (server pods) floating in to dock on cables, chrome cooling fans spinning,
+   *  joke signs (`signs`). `busyAt`: from that time, blimps queue and the dock lights flash (demand > supply). */
+  cloudport: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, busy = zz.busyAt !== undefined && t >= zz.busyAt ? 1 : 0;
+    const signs: string[] = zz.signs || ['NOW DOCKING: MORE GPUS', 'CAPACITY · PLEASE WAIT', 'NO EMPTY RACKS', 'CLOUD PARKING · 1 HR'];
+    const neon = ['#3DF5FF', '#FFE14D', '#7DFF8A', '#FF4FD8'];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#0C1F4A" />
+      <rect x={z.x0} y={f - 1000} width={w} height={1000} fill="#1C3A7A" opacity={0.85} />
+      <rect x={z.x0} y={f - 380} width={w} height={380} fill="#3DF5FF" opacity={0.08} />
+      {Array.from({length: Math.ceil(w / 70)}, (_, k) => <circle key={'cps' + k} cx={z.x0 + k * 70 + 25 * rnd(k)} cy={f - 1150 + 480 * rnd(k + 5)} r={1.5 + 2 * rnd(k + 9)}
+        fill="#FFFFFF" opacity={0.25 + 0.5 * Math.abs(Math.sin(t * (0.7 + rnd(k)) + k))} />)}
+      {Array.from({length: 6}, (_, k) => { const cx = z.x0 + ((t * (40 + 12 * k) + k * 700) % (w + 600)) - 300, cy = f - 960 + 90 * k;
+        return <g key={'cl' + k} opacity={0.35}><ellipse cx={cx} cy={cy} rx={160} ry={34} fill="#B3E5FC" /><ellipse cx={cx + 60} cy={cy - 22} rx={80} ry={30} fill="#B3E5FC" /></g>; })}
+      {Array.from({length: Math.ceil(w / 420)}, (_, k) => { const x = z.x0 + 80 + k * 420, bw = 240, h = 420 + 160 * rnd(k + 11), top = f - 130 - h;
+        return <g key={'dt' + k}>
+          {[-1, 1].map((d) => <path key={'st' + d} d={`M ${x + bw / 2 + d * 70} ${f - 130} L ${x + bw / 2 + d * 100} ${f}`} stroke="#90A4AE" strokeWidth={14} />)}
+          <rect x={x} y={top} width={bw} height={h} rx={30} fill={['#3A86FF', '#7B61FF', '#2EC4B6'][k % 3]} stroke={OL} strokeWidth={6} />
+          {Array.from({length: Math.floor((h - 80) / 52)}, (_, r) => <g key={r}>
+            <rect x={x + 24} y={top + 40 + r * 52} width={bw - 48} height={32} rx={8} fill="#0E1633" stroke={OL} strokeWidth={3} />
+            {Array.from({length: 7}, (_, q) => { const on = Math.sin(t * (2.5 + rnd(k * 31 + r * 7 + q) * 4) + q + r) > -0.3;
+              return <circle key={q} cx={x + 44 + q * ((bw - 88) / 6)} cy={top + 56 + r * 52} r={5} fill={on ? neon[(q + r) % 4] : '#24305C'} />; })}</g>)}
+          <g transform={`translate(${x + bw / 2} ${top - 34})`}><circle r={40} fill="#CFD8DC" stroke={OL} strokeWidth={5} />
+            <g transform={`rotate(${t * (220 + 80 * busy)})`}>{[0, 120, 240].map((a2) => <path key={a2} d="M 0 0 L 34 -10 L 30 12 Z" fill="#607D8B" transform={`rotate(${a2})`} />)}</g>
+            <circle r={8} fill={OL} /></g>
+          {k % 2 === 1 && <g transform={`translate(${x + bw / 2} ${top + h * 0.5}) rotate(${-3 + 2 * Math.sin(t * 1.2 + k)})`}>
+            <rect x={-160} y={-30} width={320} height={56} rx={28} fill="#081028" stroke={neon[k % 4]} strokeWidth={5} />
+            <T x={0} y={10} s={22} c={neon[k % 4]}>{signs[Math.floor(k / 2) % signs.length]}</T></g>}
+        </g>; })}
+      {Array.from({length: 4 + 2 * busy}, (_, k) => { const span = w + 800, u = ((t * (90 + 20 * k) + k * 610) % span), bx = z.x0 - 400 + u,
+          by = f - 760 + 70 * (k % 3) + 26 * Math.sin(t * 1.6 + k), dock = Math.min(1, Math.max(0, (bx - z.x0) / w));
+        return <g key={'bl' + k} transform={`translate(${bx} ${by}) rotate(${4 * Math.sin(t * 1.3 + k)})`}>
+          <path d={`M 0 40 L ${-60 + 30 * dock} 200`} stroke="#B0BEC5" strokeWidth={3} strokeDasharray="8 8" />
+          <ellipse rx={120} ry={56} fill="#ECEFF1" stroke={OL} strokeWidth={6} />
+          <ellipse cx={-30} cy={-18} rx={50} ry={14} fill="#FFFFFF" opacity={0.7} />
+          <rect x={-60} y={-14} width={120} height={36} rx={8} fill="#14102E" stroke={OL} strokeWidth={4} />
+          {Array.from({length: 5}, (_, q) => <rect key={q} x={-50 + q * 22} y={-6} width={14} height={20} rx={3} fill={Math.sin(t * 5 + q + k) > 0 ? neon[q % 4] : '#2A2350'} />)}
+          <path d="M 110 -8 L 150 -26 L 150 26 L 110 8 Z" fill="#FF9F1C" stroke={OL} strokeWidth={4} />
+        </g>; })}
+      <rect x={z.x0} y={f - 20} width={w} height={900} fill="#1A2330" />
+      <rect x={z.x0} y={f - 20} width={w} height={60} fill="#263238" />
+      {Array.from({length: Math.ceil(w / 160)}, (_, k) => <rect key={'dl' + k} x={z.x0 + k * 160} y={f + 6} width={90} height={10} rx={5} fill={busy && Math.sin(t * 8 + k) > 0 ? '#FF4F6B' : '#FFE14D'} opacity={0.7} />)}
+    </g>;
+  },
+  /** FEED CITY (original design, series Before You Buy): a neon town of tall phone-shaped towers whose screens scroll
+   *  generic feed cards (avatar dot + bars + a picture block); generic heart / thumb-up / chat bubbles float up; ad
+   *  billboards flip between `ads`; an ad-auction ticker runs along the street. `adAt`: ad cards start appearing in feeds.
+   *  No real app UI or logos: shapes only. */
+  feedcity: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, ads = zz.adAt !== undefined && t >= zz.adAt;
+    const signs: string[] = zz.ads || ['YOUR AD HERE · $', 'SCROLL RESPONSIBLY', 'NOW SHOWING: YOU', 'LIKES REDEEMABLE NEVER'];
+    const neon = ['#FF4FD8', '#3DF5FF', '#FFE14D', '#7DFF8A', '#FF9F1C'], body = ['#3A86FF', '#7B61FF', '#E71D73', '#2EC4B6'];
+    const heart = (s: number, c: string) => <path d={`M 0 ${6 * s} C ${-16 * s} ${-6 * s} ${-8 * s} ${-18 * s} 0 ${-8 * s} C ${8 * s} ${-18 * s} ${16 * s} ${-6 * s} 0 ${6 * s} Z`} fill={c} stroke={OL} strokeWidth={3} />;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#22093F" />
+      <rect x={z.x0} y={f - 950} width={w} height={950} fill="#3B1466" opacity={0.85} />
+      <rect x={z.x0} y={f - 420} width={w} height={420} fill="#FF4FD8" opacity={0.1} />
+      {Array.from({length: Math.ceil(w / 60)}, (_, k) => <circle key={'fcs' + k} cx={z.x0 + k * 60 + 25 * rnd(k + 2)} cy={f - 1150 + 500 * rnd(k + 7)} r={1.5 + 2 * rnd(k)}
+        fill="#FFFFFF" opacity={0.3 + 0.5 * Math.abs(Math.sin(t * (0.9 + rnd(k)) + k))} />)}
+      {Array.from({length: Math.ceil(w / 360)}, (_, k) => { const x = z.x0 + 70 + k * 360, bw = 230, h = 520 + 180 * rnd(k + 3), top = f - 70 - h, c = body[k % body.length];
+        const scr = {x: x + 18, y: top + 50, w: bw - 36, h: h - 110};
+        return <g key={'ft' + k}>
+          <rect x={x} y={top} width={bw} height={h} rx={40} fill={c} stroke={OL} strokeWidth={6} />
+          <rect x={x + bw / 2 - 30} y={top + 16} width={60} height={12} rx={6} fill={OL} />
+          <clipPath id={'fcc' + k + '_' + Math.round(z.x0)}><rect x={scr.x} y={scr.y} width={scr.w} height={scr.h} rx={18} /></clipPath>
+          <rect x={scr.x} y={scr.y} width={scr.w} height={scr.h} rx={18} fill="#F5F0FF" stroke={OL} strokeWidth={4} />
+          <g clipPath={`url(#fcc${k}_${Math.round(z.x0)})`}>
+            {Array.from({length: 6}, (_, q) => { const cardH = 150, off = (t * (60 + 25 * rnd(k)) + q * cardH) % (cardH * 6), cy = scr.y + scr.h - off, isAd = ads && (q + k) % 3 === 0;
+              return <g key={q} transform={`translate(${scr.x + 10} ${cy})`}>
+                <rect x={0} y={0} width={scr.w - 20} height={cardH - 14} rx={12} fill={isAd ? '#FFF3B0' : '#FFFFFF'} stroke={OL} strokeWidth={3} />
+                <circle cx={22} cy={22} r={12} fill={neon[(q + k) % 5]} stroke={OL} strokeWidth={2} />
+                <rect x={42} y={14} width={scr.w - 90} height={8} rx={4} fill="#B39DDB" /><rect x={42} y={28} width={(scr.w - 90) * 0.6} height={6} rx={3} fill="#D1C4E9" />
+                <rect x={10} y={44} width={scr.w - 40} height={cardH - 72} rx={8} fill={isAd ? '#FFB703' : ['#90CAF9', '#A5D6A7', '#F8BBD0'][(q + k) % 3]} />
+                {isAd && <T x={(scr.w - 20) / 2} y={44 + (cardH - 72) / 2 + 8} s={22} c={OL}>AD</T>}</g>; })}
+          </g>
+          {k % 2 === 0 && <g transform={`translate(${x + bw / 2} ${top - 40}) rotate(${-4 + 3 * Math.sin(t * 1.1 + k)})`}>
+            <rect x={-160} y={-30} width={320} height={56} rx={28} fill="#14062A" stroke={neon[k % 5]} strokeWidth={5} />
+            <T x={0} y={10} s={22} c={neon[k % 5]}>{signs[Math.floor(k / 2) % signs.length]}</T></g>}
+        </g>; })}
+      {Array.from({length: 14}, (_, k) => { const u = ((t * (0.18 + 0.05 * rnd(k)) + rnd(k + 40)) % 1), bx = z.x0 + rnd(k + 13) * w + 30 * Math.sin(t * 2 + k), by = f - 80 - u * 900;
+        const kind = k % 3, c = neon[k % 5];
+        return <g key={'fl' + k} transform={`translate(${bx} ${by}) scale(${1 + 0.3 * Math.sin(t * 4 + k)})`} opacity={1 - u}>
+          {kind === 0 ? heart(2, c) : kind === 1 ? <g><rect x={-18} y={-16} width={36} height={26} rx={10} fill={c} stroke={OL} strokeWidth={3} /><path d="M -6 10 L -12 20 L 4 10 Z" fill={c} stroke={OL} strokeWidth={3} /></g>
+            : <g><rect x={-10} y={-4} width={18} height={20} rx={4} fill={c} stroke={OL} strokeWidth={3} /><rect x={-4} y={-20} width={10} height={20} rx={4} fill={c} stroke={OL} strokeWidth={3} /></g>}
+        </g>; })}
+      <rect x={z.x0} y={f - 70} width={w} height={900} fill="#14062A" />
+      <g>{(() => { const SP_ = 380, n = Math.ceil((w + 760) / SP_), P_ = n * SP_; return Array.from({length: n}, (_, k) => { const tx = z.x0 - 380 + ((k * SP_ - t * 160) % P_ + P_) % P_;
+        return <T key={'tk' + k} x={tx} y={f - 26} s={22} c={neon[k % 5]}>{['AD SLOT SOLD', 'PRICE PER AD ↑', 'IMPRESSIONS ↑', 'BID · BID · BID'][k % 4]}</T>; }); })()}</g>
+    </g>;
+  },
   chipcity: (t, z, f) => {
     const w = z.x1 - z.x0, zz = z as any, dim = zz.dimAt !== undefined ? clamp((t - zz.dimAt) / 1.6) : 0;
     const flick = dim > 0 && dim < 1 ? (Math.sin(t * 47) > 0 ? 1 : 0.35) : 1, glow = (1 - 0.65 * dim) * flick;

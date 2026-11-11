@@ -1,0 +1,285 @@
+# Before You Buy: Microsoft, November 2026 edition. Series spec: docs/series/BEFORE_YOU_BUY.md.
+# Investor-level audience (no concept lessons). Every number through {{placeholders}} (sources.yaml) so a quarterly
+# refresh swaps numbers. Our calculations said as ours. Never fair value, cheap/expensive, buy/sell. Disclaimer after the hook.
+# Capex boom: three lenses, then the gauge on the labelled proxy (OCF minus depreciation), with the FCF result as the other end.
+logline: Microsoft is worth about four trillion dollars while spending more on data centers than ever. What does the price
+  assume about Azure, the backlog and all that capex, what has to go right, and what could go wrong? November 2026 edition.
+title: 'Before You Buy Microsoft Stock, Watch This (Nov 2026)'
+segments:
+- id: h_open
+  chapter: Four trillion
+  narration: Microsoft is worth {{cap}}. That's {{cap.price_spoken}} a share at the close on {{cap.date_spoken}}, times
+    {{cap.shares_spoken}} shares. And by our math, that's {{lenses.pfcf_spoken}} the free cash flow it generated over the last
+    twelve months.
+  claims:
+  - cap
+  - lenses
+- id: h_twist
+  chapter: Four trillion
+  narration: Here's why that number looks so strange. Over the same twelve months, Microsoft spent {{lenses.capex_spoken}}
+    on property and equipment, mostly data centers. That's {{lenses.capexshare_spoken}} of everything it sold. The cash is
+    there. It's just being poured back into concrete, chips and cooling.
+  claims:
+  - lenses
+- id: h_question
+  chapter: Four trillion
+  narration: So what is this price actually betting on? What has to happen for all that spending to pay off? And what could
+    break the story?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: Four trillion
+  narration: In the next few minutes, we open the machine, follow the cash into the data centers, run the numbers on what's
+    priced in, and finish with the three numbers to watch when Microsoft reports next.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode.
+- id: h_disclaimer
+  chapter: Four trillion
+  narration: Quick note. This isn't financial advice. Everything here comes from Microsoft's own filings, its earnings call
+    and our own math, dated, so you can decide for yourself.
+  claims: []
+  analysis: true
+  source_note: Series disclaimer (required after the hook).
+- id: m1_card
+  chapter: The machine
+  narration: ''
+  claims: []
+- id: m1_machine
+  chapter: The machine
+  narration: In fiscal twenty twenty-six, Microsoft brought in {{seg}}, up {{seg.growth_spoken}}. And it now reports just two
+    engines. Agents and Infra, the cloud, the A I platforms and the business software, made {{seg.ai_spoken}}, at an operating
+    margin of {{seg.ai_margin_spoken}}. Devices and Consumer, meaning Windows, Xbox and the PCs, made {{seg.dc_spoken}}, and
+    barely grew.
+  claims:
+  - seg
+- id: m1_azure
+  chapter: The machine
+  narration: The engine inside the engine is Azure. It made {{azure.fy_spoken}} last fiscal year. And in the September quarter
+    alone, {{azure}}, up {{azure.growth_spoken}}. That's {{azure.share_spoken}} of all of Microsoft's revenue. The Office cloud for businesses
+    grew {{azure.m365_growth_spoken}}. Meanwhile, Windows sold with new PCs fell {{azure.win_spoken}}.
+  claims:
+  - azure
+- id: m1_openai
+  chapter: The machine
+  narration: And one customer stands out. In that quarter, Microsoft booked {{openai}} of revenue from its arrangements with
+    OpenAI, {{openai.share_spoken}} of the total. Microsoft also owns {{openai.stake_spoken}} of OpenAI on an as converted basis.
+    So OpenAI is a partner, a shareholder story, and one of Azure's biggest buyers, all at once.
+  claims:
+  - openai
+- id: m1_draw
+  chapter: The machine
+  narration: Let me draw the machine. Here is Agents and Infra, the big engine. Here is Devices and Consumer, the small one.
+    Here is Azure, feeding the big engine. And this arrow is the one that matters most right now, because one customer, OpenAI,
+    sends a tenth of the quarter's revenue through it.
+  claims:
+  - seg
+  - openai
+  analysis: true
+  source_note: Diagram of the recast segments and the OpenAI revenue share (10-Q).
+- id: m1_transition
+  chapter: The machine
+  narration: An engine that big throws off a lot of cash. So why is free cash flow so small?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: The cash
+  narration: ''
+  claims: []
+- id: m2_cash
+  chapter: The cash
+  narration: Operating cash flow over the last twelve months was {{lenses.ocf_spoken}}. Net income was {{lenses.ni_spoken}}.
+    But capex took {{lenses.capex_spoken}} of that operating cash. What was left, the free cash flow, was {{lenses.fcf_spoken}},
+    by our math.
+  claims:
+  - lenses
+- id: m2_quarter
+  chapter: The cash
+  narration: The latest quarter shows the trend. The C F O said free cash flow was {{cash.q1fcf_spoken}}, reflecting higher
+    capital expenditures. A year earlier it was about twenty-six billion, so that's down {{cash.drop_spoken}}. Total capex in the
+    quarter was {{cash.capex_q1_spoken}} including finance leases, or {{cash.cashcapex_q1_spoken}} in cash.
+  claims:
+  - cash
+- id: m2_leases
+  chapter: The cash
+  narration: And there's more spending already lined up. Microsoft has {{cash.leases_spoken}} of data center leases that haven't
+    even started yet. Finance lease liabilities on the balance sheet are already {{cap.leases_spoken}}. Much of this build-out
+    doesn't show up as debt, but it is money Microsoft has promised to spend.
+  claims:
+  - cash
+  - cap
+- id: m2_returns
+  chapter: The cash
+  narration: Even so, the shareholders still get paid. Over the last twelve months, buybacks and dividends came to {{cash}},
+    about {{cash.share_spoken}} of free cash flow. The share count barely moved, because buybacks mostly offset stock handed to
+    employees.
+  claims:
+  - cash
+- id: m2_draw
+  chapter: The cash
+  narration: Let me draw where twelve months of operating cash went. Here is the operating cash bar. Here is the capex bar,
+    eating most of it. Here is what's left, the free cash flow. And here is what went back to shareholders. Almost nothing is
+    left over after that.
+  claims:
+  - lenses
+  - cash
+  analysis: true
+  source_note: Bar sketch of TTM cash uses (10-Q; our calc.).
+- id: m2_transition
+  chapter: The cash
+  narration: Which brings us to the big question. At four trillion dollars, what are you paying for?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: What's priced in
+  narration: ''
+  claims: []
+- id: m3_lenses
+  chapter: What's priced in
+  narration: Three quick lenses first, all our math on the last twelve months. Price to earnings, {{lenses}}. Free cash flow
+    yield, {{lenses.fcfy_spoken}}. Operating cash flow yield, {{lenses.ocfy_spoken}}. Those last two tell very different stories,
+    and the gap between them is the data center bill.
+  claims:
+  - lenses
+- id: m3_proxy
+  chapter: What's priced in
+  narration: So for a company in a building spree, we use a proxy. We take operating cash and subtract depreciation, about
+    {{proxy.dep_spoken}} a year, as a rough stand-in for the spending needed just to keep things running. That leaves {{proxy}},
+    a yield of {{proxy.yield_spoken}}. It's a proxy, and it assumes capex eventually falls back toward that level.
+  claims:
+  - proxy
+- id: m3_gauge
+  chapter: What's priced in
+  narration: Now let's run it backwards. What growth in that cash, for ten years, makes today's price work, before slowing to
+    three percent? With an eight percent discount rate, {{rdcf}}. With ten percent, {{rdcf.high_spoken}}. But run the same math
+    on today's actual free cash flow, and the answer jumps to between {{rdcf.fcf_low_spoken}} and {{rdcf.fcf_high_spoken}} a year.
+  claims:
+  - rdcf
+- id: m3_mustearn
+  chapter: What's priced in
+  narration: So the real question is the capex. Here's one more lens, our rough illustration. If Microsoft keeps spending at
+    today's pace, every dollar of capex has to add about {{mustearn}} to {{mustearn.high_spoken}} of extra operating cash every
+    year, within a decade, for the price to make sense.
+  claims:
+  - mustearn
+- id: m3_draw
+  chapter: What's priced in
+  narration: Let me draw the two answers. Here is the growth the price needs if capex calms down. Here it is at the higher rate.
+    And here is what it needs if capex stays where it is. Same company, same price. The difference is one number, the capex.
+  claims:
+  - rdcf
+  analysis: true
+  source_note: Bar sketch of implied growth on the proxy vs FCF bases (our calc.).
+- id: m3_transition
+  chapter: What's priced in
+  narration: So what has to go right?
+  claims: []
+- id: m4_card
+  chapter: What has to happen
+  narration: ''
+  claims: []
+- id: m4_azure
+  chapter: What has to happen
+  narration: Number one, Azure keeps growing near fifty percent. The C F O guided {{guide.azure_spoken}} growth in constant
+    currency for this quarter, and said customer demand continues to exceed available supply. If the new capacity lands on time,
+    that demand turns into revenue.
+  claims:
+  - guide
+  analysis: true
+  source_note: Driver tied to the CFO's guidance.
+- id: m4_backlog
+  chapter: What has to happen
+  narration: Number two, the backlog converts. Microsoft's commercial backlog is {{rpo}}, up {{rpo.growth_spoken}}. The C F O
+    said roughly thirty percent of it will become revenue in the next twelve months, about {{rpo.next_spoken}}. Bookings actually
+    fell, because last year had huge Azure deals. So the backlog has to keep refilling.
+  claims:
+  - rpo
+  analysis: true
+  source_note: Driver tied to the RPO disclosure.
+- id: m4_capex
+  chapter: What has to happen
+  narration: Number three, capex peaks and free cash flow recovers. For this quarter, the C F O expects capex of {{guide.capex_spoken}},
+    and {{guide.cy_spoken}} for the calendar year. He also said Microsoft expects to remain free cash flow positive in fiscal
+    twenty twenty-seven. The price needs a lot more than positive.
+  claims:
+  - guide
+  analysis: true
+  source_note: Driver tied to the CFO's capex outlook.
+- id: m4_margin
+  chapter: What has to happen
+  narration: And number four, margins hold. Microsoft Cloud gross margin has already slipped to {{azure.gm_spoken}}, and the
+    guide is {{guide.gm_spoken}}, because Azure's A I work costs more to serve. Revenue for the quarter is guided at {{guide}}.
+    Growth is not the problem. Profit per dollar is the thing to watch.
+  claims:
+  - azure
+  - guide
+  analysis: true
+  source_note: Driver tied to the gross-margin disclosure and guidance.
+- id: m4_transition
+  chapter: What has to happen
+  narration: Now the other side of the scale.
+  claims: []
+- id: m5_card
+  chapter: Risks and upside
+  narration: ''
+  claims: []
+- id: m5_capex
+  chapter: Risks and upside
+  narration: Risk one is the build-out itself. Microsoft's own filing says these investments come in advance of fully developed
+    revenue streams, and that the revenue may not arrive on time or at the expected levels. Overestimating demand could leave
+    capacity sitting idle, and lead to write-downs.
+  claims:
+  - risks
+- id: m5_partner
+  chapter: Risks and upside
+  narration: Risk two is concentration. Partners like OpenAI are also big Azure customers, and Microsoft warns the benefits may
+    not be realized or sustained. And if prices for A I services fall because of competition, margins could suffer.
+  claims:
+  - risks
+- id: m5_other
+  chapter: Risks and upside
+  narration: Risk three is the long list in the fine print. The I R S is seeking an extra {{risks}} in tax, plus penalties and
+    interest, for twenty oh four to twenty thirteen, which Microsoft disputes. Regulators in Europe, Britain, the U S and China
+    are watching. And tariffs could raise costs for devices and data centers.
+  claims:
+  - risks
+- id: m5_upside
+  chapter: Risks and upside
+  narration: And the upside the price might not fully include. The C F O says Foundry revenue {{upside}}. The C E O says Copilot
+    daily users are up more than five times in a year, and Microsoft is finding ways to sell capacity that was sitting
+    underused. None of that comes with a dollar figure, so we won't put one on it.
+  claims:
+  - upside
+  analysis: true
+  source_note: Company-stated upside; unsized by rule.
+- id: m5_transition
+  chapter: Risks and upside
+  narration: So, what should you watch?
+  claims: []
+- id: payoff
+  chapter: The scorecard
+  narration: Here's the scorecard for the next report, expected around {{watch}}, our estimate. One, Azure growth against the
+    forty-nine to fifty percent guide. Two, capex, and whether free cash flow holds near {{cash.q1fcf_spoken}}. Three, the
+    backlog, and whether it broadens beyond one customer. If those hold up, the story the price is telling keeps holding up.
+    If they crack, the capex gets much harder to defend.
+  claims:
+  - watch
+  - cash
+  analysis: true
+  source_note: Scorecard (company figures; next date our estimate).
+- id: payoff2
+  chapter: The scorecard
+  narration: That's Microsoft, November twenty twenty-six edition. We'll update it after every report, with new numbers and
+    the same three questions. What's priced in, what has to happen, and what could go wrong.
+  claims: []
+  analysis: true
+  source_note: Series sign-off.
+- id: teaser
+  chapter: The scorecard
+  narration: Next in the series, another giant of the stock market, opened up the same way. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser.
