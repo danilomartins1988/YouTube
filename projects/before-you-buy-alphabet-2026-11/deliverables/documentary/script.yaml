@@ -1,0 +1,287 @@
+# Before You Buy: Alphabet, November 2026 edition. Series spec: docs/series/BEFORE_YOU_BUY.md.
+# Investor-level audience (no concept lessons). Every number through {{placeholders}} (sources.yaml). Our calculations said
+# as ours. Never fair value, cheap/expensive, buy/sell. Disclaimer after the hook. Capex boom: three lenses, then the gauge
+# on the labelled proxy (OCF minus depreciation), with the FCF result as the other end. Capex range not quoted (unconfirmed).
+logline: Alphabet is worth about three and a half trillion dollars, but its free cash flow has nearly vanished into data
+  centers, and it has started selling new stock. What does the price assume, what has to go right, and what could go wrong?
+  November 2026 edition.
+title: 'Before You Buy Alphabet Stock, Watch This (Nov 2026)'
+segments:
+- id: h_open
+  chapter: Three and a half trillion
+  narration: Alphabet, the company behind Google, is worth {{cap}}. That's every share class, at the close on {{cap.date_spoken}}.
+    And by our math, that's {{lenses.pfcf_spoken}} the free cash flow it generated over the last twelve months.
+  claims:
+  - cap
+  - lenses
+- id: h_twist
+  chapter: Three and a half trillion
+  narration: Here's why that number looks so strange. In those twelve months, Alphabet spent {{lenses.capex_spoken}} on property
+    and equipment, {{lenses.capexshare_spoken}} of its operating cash. Free cash flow was negative in each of the last two quarters.
+    And this year, instead of buying back stock, Alphabet sold new stock.
+  claims:
+  - lenses
+  - cash
+- id: h_question
+  chapter: Three and a half trillion
+  narration: So what is this price actually betting on? What has to happen for all that spending to pay off? And what could
+    break the story?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: Three and a half trillion
+  narration: In the next few minutes, we open the machine, follow the cash into the data centers and the new shares, run the
+    numbers on what's priced in, and finish with the three numbers to watch when Alphabet reports next.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode.
+- id: h_disclaimer
+  chapter: Three and a half trillion
+  narration: Quick note. This isn't financial advice. Everything here comes from Alphabet's own filings and our own math,
+    dated, so you can decide for yourself.
+  claims: []
+  analysis: true
+  source_note: Series disclaimer (required after the hook).
+- id: m1_card
+  chapter: The machine
+  narration: ''
+  claims: []
+- id: m1_machine
+  chapter: The machine
+  narration: In twenty twenty-five, Alphabet brought in {{seg}}. Google Services, meaning Search, YouTube and the subscriptions,
+    made {{seg.svc_spoken}}, at an operating margin of {{seg.svc_margin_spoken}}. Google Cloud made {{seg.cloud_fy_spoken}}.
+    And the Other Bets, like Waymo, lost {{seg.bets_loss_spoken}}. More than seventy percent of all revenue still came from
+    advertising.
+  claims:
+  - seg
+- id: m1_search
+  chapter: The machine
+  narration: The core is still Search. Over the last twelve months, Search and other brought in {{search}}, by our math,
+    {{search.share_spoken}} of everything. In the September quarter it grew {{search.q3_growth_spoken}}, with paid clicks up
+    {{search.clicks_spoken}}. YouTube ads added another {{search.yt_spoken}} over the year.
+  claims:
+  - search
+- id: m1_cloud
+  chapter: The machine
+  narration: But the fastest engine is now Cloud. In the September quarter, Google Cloud made {{cloud}}, up {{cloud.growth_spoken}},
+    at an operating margin of {{cloud.margin_spoken}}. Part of that growth is a new kind of sale. Alphabet now sells its own
+    A I chip systems, called T P Us, to customers. And the Cloud backlog stands at {{cloud.backlog_spoken}}.
+  claims:
+  - cloud
+- id: m1_draw
+  chapter: The machine
+  narration: Let me draw the machine. Here is Google Services, the big profitable engine. Here is Google Cloud, the fast one.
+    Here are the Other Bets, still losing money. And this arrow is the one the market watches now, the backlog flowing into
+    Cloud revenue.
+  claims:
+  - seg
+  - cloud
+  analysis: true
+  source_note: Diagram of the segments and the Cloud backlog (10-K, 10-Q).
+- id: m1_transition
+  chapter: The machine
+  narration: A machine that profitable throws off a lot of cash. So where did it all go?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: The cash
+  narration: ''
+  claims: []
+- id: m2_cash
+  chapter: The cash
+  narration: Operating cash flow over the last twelve months was {{lenses.ocf_spoken}}. Net income was even higher, at {{lenses.ni_spoken}},
+    but about {{lenses.gains_spoken}} of that was gains on stakes in other companies, mostly on paper. Capex took {{lenses.capex_spoken}}.
+    What was left, the free cash flow, was {{lenses.fcf_spoken}}, by our math.
+  claims:
+  - lenses
+- id: m2_quarter
+  chapter: The cash
+  narration: The last two quarters show the trend. Free cash flow was {{cash.q2fcf_spoken}} in the June quarter, and
+    {{cash.q3fcf_spoken}} in September. The company says it expects to significantly increase its investment in technical
+    infrastructure this year, compared with last year. So the bill is still rising.
+  claims:
+  - cash
+  - guide
+- id: m2_funding
+  chapter: The cash
+  narration: To pay for it, Alphabet raised money. This year it sold {{cash}} of new common stock, plus {{cash.pref_spoken}} of
+    preferred stock that converts into shares later. Long-term debt went from {{cash.debt_from_spoken}} at the end of last year to
+    {{cash.debt_to_spoken}}. And it still has {{cash.atm_spoken}} of room to sell more shares on the market.
+  claims:
+  - cash
+- id: m2_returns
+  chapter: The cash
+  narration: Meanwhile, the buybacks stopped. Alphabet repurchased no stock at all in the first nine months of this year. It
+    still paid about {{cash.div_spoken}} in dividends over the last twelve months. But the share count rose {{cash.shares_growth_spoken}}
+    in a year, after years of shrinking.
+  claims:
+  - cash
+- id: m2_draw
+  chapter: The cash
+  narration: Let me draw where twelve months of operating cash went. Here is the operating cash bar. Here is the capex bar,
+    eating almost all of it. Here is what's left, the free cash flow. And here is the new stock it sold this year, just to keep
+    going. The cash is coming in from outside now.
+  claims:
+  - lenses
+  - cash
+  analysis: true
+  source_note: Bar sketch of TTM cash uses and new equity (10-Q; our calc.).
+- id: m2_transition
+  chapter: The cash
+  narration: Which brings us to the big question. At three and a half trillion dollars, what are you paying for?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: What's priced in
+  narration: ''
+  claims: []
+- id: m3_lenses
+  chapter: What's priced in
+  narration: Three quick lenses first, all our math on the last twelve months. Price to earnings, {{lenses}}, but strip out
+    those paper gains and it's closer to {{lenses.exgains_spoken}}. Free cash flow yield, {{lenses.fcfy_spoken}}. Operating cash
+    flow yield, {{lenses.ocfy_spoken}}. The gap between those last two is the data center bill.
+  claims:
+  - lenses
+- id: m3_proxy
+  chapter: What's priced in
+  narration: So for a company in a building spree, we use a proxy. We take operating cash and subtract depreciation, about
+    {{proxy.dep_spoken}} a year, as a rough stand-in for the spending needed just to keep things running. That leaves {{proxy}},
+    a yield of {{proxy.yield_spoken}}. It's a proxy, and it assumes capex eventually falls back toward that level.
+  claims:
+  - proxy
+- id: m3_gauge
+  chapter: What's priced in
+  narration: Now let's run it backwards. What growth in that cash, for ten years, makes today's price work, before slowing to
+    three percent? With an eight percent discount rate, {{rdcf}}. With ten percent, {{rdcf.high_spoken}}. But run the same math
+    on today's actual free cash flow, and the answer jumps to between {{rdcf.fcf_low_spoken}} and {{rdcf.fcf_high_spoken}} a year.
+  claims:
+  - rdcf
+- id: m3_mustearn
+  chapter: What's priced in
+  narration: So the real question is the capex. Here's one more lens, our rough illustration. If Alphabet keeps spending at
+    today's pace, every dollar of capex has to add about {{mustearn}} to {{mustearn.high_spoken}} of extra operating cash every
+    year, within a decade, for the price to make sense.
+  claims:
+  - mustearn
+- id: m3_draw
+  chapter: What's priced in
+  narration: Let me draw the two answers. Here is the growth the price needs if capex calms down. Here it is at the higher rate.
+    And here is what it needs if capex stays where it is. Same company, same price. The difference is the spending.
+  claims:
+  - rdcf
+  analysis: true
+  source_note: Bar sketch of implied growth on the proxy vs FCF bases (our calc.).
+- id: m3_transition
+  chapter: What's priced in
+  narration: So what has to go right?
+  claims: []
+- id: m4_card
+  chapter: What has to happen
+  narration: ''
+  claims: []
+- id: m4_backlog
+  chapter: What has to happen
+  narration: Number one, the Cloud backlog turns into revenue. Alphabet expects to recognize just over fifty-five percent of
+    its backlog over the next two years, about {{cloud.next_spoken}} by our math. One caution. Alphabet changed how it counts
+    the backlog this year, so the jump from last year is not like for like.
+  claims:
+  - cloud
+  analysis: true
+  source_note: Driver tied to the backlog disclosure.
+- id: m4_payback
+  chapter: What has to happen
+  narration: Number two, the spending starts paying back. Capex is eating {{lenses.capexshare_spoken}} of operating cash, and
+    the company expects to keep raising it. For the price to work, free cash flow has to climb back, and then keep climbing for
+    years.
+  claims:
+  - lenses
+  - guide
+  analysis: true
+  source_note: Driver tied to the cash figures and the company outlook.
+- id: m4_search
+  chapter: What has to happen
+  narration: Number three, Search holds up. It is still about {{search.share_spoken}} of revenue, and it has to keep growing
+    while A I changes how people search, and while a court order forces Google to share some search data with rivals.
+  claims:
+  - search
+  - legal
+  analysis: true
+  source_note: Driver tied to the Search figures and the DOJ judgment.
+- id: m4_funding
+  chapter: What has to happen
+  narration: And number four, the funding gap closes. This year took new shares and new debt. To stop the dilution, operating
+    cash has to catch up with capex, so Alphabet can go back to shrinking its share count instead of growing it.
+  claims:
+  - cash
+  analysis: true
+  source_note: Driver tied to the 2026 financing.
+- id: m4_transition
+  chapter: What has to happen
+  narration: Now the other side of the scale.
+  claims: []
+- id: m5_card
+  chapter: Risks and upside
+  narration: ''
+  claims: []
+- id: m5_capex
+  chapter: Risks and upside
+  narration: Risk one is the build-out itself. Alphabet's own filing says its investments may not result in an adequate return.
+    It has {{risks}} of commitments, mostly long-term supply deals, plus guarantees and repurchase promises on some hardware.
+    If demand falls short, it could be left with capacity it can't easily use.
+  claims:
+  - risks
+- id: m5_legal
+  chapter: Risks and upside
+  narration: Risk two is the courts. The search judgment restricts how Google distributes its services. In ad tech, the judge
+    rejected a breakup but ordered other remedies, and Google plans to appeal. In Europe, Alphabet paid {{legal}} for the Android
+    fine this summer. And it has {{legal.accrued_spoken}} set aside for fines and settlements.
+  claims:
+  - legal
+- id: m5_control
+  chapter: Risks and upside
+  narration: Risk three is control and dilution. The founders' special shares carry about {{risks.vote_spoken}} of the votes.
+    And the filing now warns that new share sales could depress the stock price. Reported profits will also keep swinging with
+    the value of its stakes in other companies.
+  claims:
+  - risks
+- id: m5_upside
+  chapter: Risks and upside
+  narration: And the upside the price might not fully include. Alphabet says the Gemini app has reached {{upside}}. T P U
+    systems are becoming a product line of their own. And its stakes in SpaceX and one private company are marked at about
+    {{upside.stakes_spoken}}. Those are marks, not cash, so we won't treat them as money in the bank.
+  claims:
+  - upside
+  analysis: true
+  source_note: Company-stated upside; marks are not cash.
+- id: m5_transition
+  chapter: Risks and upside
+  narration: So, what should you watch?
+  claims: []
+- id: payoff
+  chapter: The scorecard
+  narration: Here's the scorecard for the next report, expected in {{watch}}, our estimate. One, Google Cloud revenue and margin,
+    after {{cloud}} last quarter. Two, capex and free cash flow, after {{cash.q3fcf_spoken}}, and what Alphabet says about
+    spending in twenty twenty-seven. Three, Search growth, and the share count. If those hold up, the story the price is
+    telling keeps holding up. If they crack, the spending gets much harder to defend.
+  claims:
+  - watch
+  - cloud
+  - cash
+  analysis: true
+  source_note: Scorecard (company figures; next date our estimate).
+- id: payoff2
+  chapter: The scorecard
+  narration: That's Alphabet, November twenty twenty-six edition. We'll update it after every report, with new numbers and
+    the same three questions. What's priced in, what has to happen, and what could go wrong.
+  claims: []
+  analysis: true
+  source_note: Series sign-off.
+- id: teaser
+  chapter: The scorecard
+  narration: Next in the series, another giant of the stock market, opened up the same way. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser.

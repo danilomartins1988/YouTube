@@ -1,0 +1,135 @@
+# Sources and claims for "Before You Buy Amazon Stock, Watch This (Nov 2026)" (series Before You Buy, Amazon, 2026-11 edition).
+# Facts read 2026-11-11 (notes: docs/series/research/amazon_2026-11.md, incl. the depreciation addendum). DATA AS OF the 2026-11-10 close.
+# QUARTERLY REFRESH: update text/spoken/display/fields from the new 10-Q/10-K and close; the script reads every number
+# through {{placeholders}}. Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: free cash flow is NEGATIVE, so no reverse calculation on FCF; the gauge uses the labelled proxy (OCF minus
+# depreciation and amortization) plus a "steady-state cash the price needs" lens. The 2026 capex guide is quoted verbatim
+# only; no implied Q4 figure (the arithmetic looks odd, unverified). The OpenAI/Anthropic backlog expansions are named but
+# their share of the $578bn is NOT disclosed. GAAP P/E is flattered by Anthropic mark-ups (say so). Company claims attributed.
+# DISCLOSURE: drafted with an AI made by Anthropic, an Amazon investee and AWS customer named in these filings.
+sources:
+  - id: tenq
+    title: "Amazon Form 10-Q for Q3 2026 (quarter ended September 30, 2026)"
+    publisher: Amazon.com, Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm
+    published: "2026-10-30"
+    accessed: "2026-11-11"
+    credit: "Amazon 10-Q (SEC)"
+  - id: rel
+    title: "Amazon Q3 2026 earnings release (8-K Ex. 99.1, Oct 29, 2026), earlier 2026 releases and Form 10-K FY2025"
+    publisher: Amazon.com, Inc. (SEC filings)
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm
+    published: "2026-10-29"
+    accessed: "2026-11-11"
+    credit: "Amazon filings (SEC)"
+  - id: px
+    title: "AMZN closing price, Nov 10, 2026 (data vendor); share count from the 10-Q cover (Oct 21, 2026); depreciation from SEC XBRL"
+    publisher: Yahoo Finance; Amazon.com, Inc.
+    url: https://finance.yahoo.com/quote/AMZN/history/
+    published: "2026-11-10"
+    accessed: "2026-11-11"
+    credit: "Yahoo Finance price · our calculation"
+
+claims:
+  - id: cap
+    text: "Close Nov 10, 2026: $270.87 (Yahoo Finance). 10-Q cover: 10,813,138,306 shares outstanding as of October 21, 2026. OUR calculation: market value about $2,929bn (single share class)."
+    spoken: about two point nine three trillion dollars
+    display: "≈ $2.93tn market value (close Nov 10, 2026 × 10.81bn shares; our calc.)"
+    fields: {price_spoken: two hundred and seventy dollars and eighty-seven cents, shares_spoken: about ten point eight billion, date_spoken: "November tenth, twenty twenty-six"}
+    source_ids: [px, tenq]
+    status: source_located
+    verification_note: Our calculation; date on screen.
+
+  - id: lenses
+    text: "Releases (TTM to Q3 2026): operating cash flow $168.3bn; capex net of proceeds and incentives $210.7bn; 'Free cash flow decreased to an outflow of $42.4 billion for the trailing twelve months'. Net income TTM $134.8bn, of which about $69.8bn non-operating income (mostly upward adjustments to the Anthropic preferred stock). OUR calculations: GAAP P/E 21.7x; about 37x excluding non-operating income (our assumption: 21% tax); price/FCF not meaningful (negative); operating cash flow yield 5.7%."
+    spoken: about twenty-two times
+    display: "P/E 21.7x (≈ 37x ex non-operating gains) · FCF negative · OCF yield 5.7% (TTM; our calc.)"
+    fields: {ocf_spoken: about one hundred and sixty-eight billion dollars, capex_spoken: about two hundred and eleven billion dollars, fcf_spoken: minus forty-two billion dollars, ni_spoken: about one hundred and thirty-five billion dollars, gains_spoken: about seventy billion dollars, exgains_spoken: about thirty-seven times, ocfy_spoken: about five point seven percent}
+    source_ids: [rel, tenq, px]
+    status: source_located
+    verification_note: Our calculation; the ex-gains P/E uses an assumed 21% tax rate (stated).
+
+  - id: proxy
+    text: "OUR proxy base for a capex boom (labelled proxy): operating cash flow $168.3bn minus depreciation and amortization of $79.4bn TTM (SEC XBRL, Q4 2025 to Q3 2026; includes amortization of finance-lease assets) = about $88.9bn (yield about 3.0%). It assumes capex eventually falls back toward that level."
+    spoken: about eighty-nine billion dollars
+    display: "Proxy base: OCF − D&A ≈ $88.9bn (TTM; our calc.)"
+    fields: {dep_spoken: about seventy-nine billion dollars, yield_spoken: about three percent}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Proxy, our calculation.
+
+  - id: rdcf
+    text: "OUR illustration (not a valuation): market cap $2,929bn = 10 years of cash growing at g plus a terminal value at 3%, discounted at r. On the PROXY base $88.9bn: r = 8% gives g about 8.9% a year; r = 10% gives g about 13.9%. On TTM free cash flow (-$42.4bn) no growth rate can be solved. Steady-state lens: for the price to work as a business growing 3% a year from now, free cash flow would need to be about $142bn (8%) to $199bn (10%) a year."
+    spoken: about nine percent a year
+    display: "Implied growth ≈ 8.9%-13.9% a year on the proxy (10 years); steady-state FCF needed ≈ $142-199bn (our illustration)"
+    fields: {high_spoken: about fourteen percent, need_low_spoken: about one hundred and forty-two billion dollars, need_high_spoken: about one hundred and ninety-nine billion dollars}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Our illustration; 8% and 10% discount rates, 3% terminal growth, 10 years, on screen.
+
+  - id: seg
+    text: "Q3 2026 release supplemental (TTM, Q4 2025 to Q3 2026): net sales $797.5bn; North America $460.3bn (operating margin 8.2%); International $175.8bn (3.3%); AWS $161.4bn (37.8%). AWS is about 20% of sales but about 58% of operating income ($61.0bn of $104.4bn, our calc.). Advertising TTM about $78.0bn (our calc.)."
+    spoken: about seven hundred and ninety-seven billion dollars
+    display: "TTM sales $797.5bn; AWS $161.4bn = 20% of sales, 58% of operating income (our calc.)"
+    fields: {aws_spoken: about one hundred and sixty-one billion dollars, aws_share_spoken: about twenty percent, oi_share_spoken: about fifty-eight percent, aws_margin_spoken: about thirty-eight percent, na_margin_spoken: about eight percent, intl_margin_spoken: about three percent, ads_spoken: about seventy-eight billion dollars}
+    source_ids: [rel]
+    status: source_located
+
+  - id: aws
+    text: "Q3 2026 release: 'AWS net sales increased 39.3%—its fastest growth in nearly five years—to a $184 billion annualized revenue run rate'; Q3 AWS operating margin 38.7%. 10-Q: AWS commitments 'approximately $578 billion as of September 30, 2026' with a weighted-average remaining life of 6.1 years, vs about $244bn at Dec 31, 2025. Named expansions: OpenAI ($100.0bn over 8.0 years, on top of $38.0bn) and Anthropic (more than $100.0bn over 10.0 years); their share of the total is not disclosed."
+    spoken: about five hundred and seventy-eight billion dollars
+    display: "AWS backlog ≈ $578bn, up from ≈ $244bn at year end (10-Q)"
+    fields: {from_spoken: about two hundred and forty-four billion dollars, growth_spoken: thirty-nine percent, years_spoken: about six years}
+    source_ids: [rel, tenq]
+    status: source_located
+    verification_note: Never claim a share for the named customers.
+
+  - id: cash
+    text: "10-Q: total face value of long-term debt $180.9bn at Sep 30, 2026 vs $68.8bn at Dec 31, 2025. 'There were no repurchases of our common stock during the nine months ended September 30, 2025 or 2026'; no dividends. Shares outstanding 10,687M (Sep 2025) to 10,811M (Sep 2026), +1.2% (our calc.). Investments in AI labs in 9M 2026: '$50.0 billion in OpenAI's Series C Preferred Stock ... and $10.0 billion in Anthropic nonvoting preferred stock'; total equity, warrant and convertible investments $298.8bn."
+    spoken: about one hundred and eighty-one billion dollars
+    display: "Long-term debt $68.8bn → $180.9bn in nine months; no buybacks (10-Q)"
+    fields: {debt_from_spoken: about sixty-nine billion dollars, shares_growth_spoken: one point two percent, openai_spoken: fifty billion dollars, anth_spoken: ten billion dollars, invest_spoken: about two hundred and ninety-nine billion dollars}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: guide
+    text: "Q3 2026 release (verbatim): 'Net sales are expected to be between $240.0 billion and $247.0 billion'; 'Operating income is expected to be between $28.5 billion and $33.5 billion, compared with $25.0 billion in fourth quarter 2025'; 'We continue to expect 2026 cash capital expenditures to be approximately $220 billion.' 10-Q: 'We expect cash capital expenditures to meaningfully increase in 2027.' CEO (release, company projection): AWS 'projected revenue growth rates of over 40% both in 2027 and in 2028'. Track record (our check): 2026 operating income beat the top of the guided range in Q1, Q2 and Q3."
+    spoken: between twenty-eight point five and thirty-three point five billion dollars
+    display: "Q4 guide: operating income $28.5-33.5bn; 2026 cash capex ≈ $220bn (release)"
+    fields: {sales_spoken: between two hundred and forty and two hundred and forty-seven billion dollars, capex_spoken: approximately two hundred and twenty billion dollars, aws_claim_spoken: over forty percent}
+    source_ids: [rel, tenq]
+    status: source_located
+    verification_note: Verbatim; no implied Q4 capex figure (unverified arithmetic).
+
+  - id: risks
+    text: "10-Q risk factors: 'Failures to adequately predict customer demand ... result in excess or insufficient fulfillment or data center capacity, service interruptions, increased costs, and impairment charges'; newer activities including AI 'may not meet our expectations, and we may not be successful enough in these newer activities to recoup our investments in them'; 'we rely on a limited group of suppliers for semiconductor products'. Total contractual commitments $883.6bn, including $164.9bn of leases not yet commenced. 'Valuations of private companies are inherently more complex.'"
+    spoken: about eight hundred and eighty-four billion dollars
+    display: "Commitments $883.6bn incl. $164.9bn of leases not yet started (10-Q)"
+    fields: {leases_spoken: about one hundred and sixty-five billion dollars}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: legal
+    text: "10-Q: FTC and 22 state attorneys general (August 2026) sued over 'the use of reserve prices in Amazon's sponsored ad auctions', seeking 'unspecified amounts of civil penalties, restitution, forfeiture, disgorgement'; earlier antitrust cases 'seek billions of dollars of alleged damages, treble damages'; three class actions certified in the UK and one in the US; no loss estimate given. 10-K: FTC Prime settlement charge '$2.5 billion' (2025)."
+    spoken: two point five billion dollars
+    display: "FTC ad-auction suit (Aug 2026); antitrust cases seek 'billions' (10-Q)"
+    fields: {}
+    source_ids: [tenq, rel]
+    status: source_located
+
+  - id: upside
+    text: "Company claims (Q3 2026 release): Bedrock 'Fortune 500 companies spending nearly 7x more year-over-year and total Bedrock token volume growing nearly 17x'; Amazon Leo satellite service 'on track to begin initial service'; Zoox paid rides in Las Vegas; CEO: 'There has never been a trillion dollar revenue business, and we may have two of them in the next 5-10 years.' 10-Q marks: Anthropic preferred stock $92.5bn plus convertible notes $146.2bn fair value; OpenAI preferred $50.0bn. These are marks, not cash."
+    spoken: two
+    display: "CEO: 'we may have two' trillion-dollar revenue businesses (claim); AI-lab stakes marked ≈ $289bn"
+    fields: {stakes_spoken: about two hundred and eighty-nine billion dollars}
+    source_ids: [rel, tenq]
+    status: source_located
+    verification_note: Company claims; marks are not cash.
+
+  - id: watch
+    text: "Scorecard for the next report (Q4 2026; date not announced; last year Feb 5, 2026, so early February 2027 is our estimate): AWS growth and margin (Q3 +39% ex-FX, 38.7%) and the backlog vs $578bn; Q4 operating income vs the $28.5-33.5bn guide; cash capex, trailing free cash flow (-$42.4bn) and the 2027 capex outlook."
+    spoken: early February twenty twenty-seven
+    display: "Next report: early February 2027 (our estimate)"
+    fields: {}
+    source_ids: [rel, tenq]
+    status: source_located

@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: "Before You Buy Amazon Stock, Watch This (Nov 2026)"
+docs_dir: docs/episodes/byb-amazon-2026-11
+video: output/bybamzn_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Why is a three-trillion-dollar company's free cash flow below zero?
+  surprising_fact: Amazon's free cash flow was -$42.4bn over 12 months while its AWS backlog reached about $578bn (10-Q, release)
+  subject: a generic stack of parcels
+  tone: strategy
+  metaphor: boxes in, data centers out
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 'AMAZON: $578BN'
+  - BACKLOG BET
+  claim_basis: 'aws: AWS commitments approximately $578bn at Sep 30, 2026 (10-Q)'
+  scene:
+    palette: {sky0: '#1A1006', sky1: '#40280E', haze: '#FF9F1C', key: '#E0F7FA', accent: '#FFE14D', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: parcels, x: 1500, y: 600, s: 0.75}
+    support: []
+    particles: {n: 70, region: [0, 0, 1920, 1080], size: 3, color: '#FFFFFF'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'AMAZON: −$42BN'
+  - FREE CASH
+  claim_basis: 'lenses: TTM free cash flow outflow of $42.4bn (release)'
+  scene:
+    palette: {sky0: '#0A0614', sky1: '#16244A', haze: '#FF9F1C', key: '#FFF3E0', accent: '#7DFF8A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: parcels, x: 480, y: 660, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
+    vignette: 0.5
+    brand: none

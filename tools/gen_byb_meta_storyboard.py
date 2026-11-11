@@ -38,13 +38,13 @@ ADS = ["YOUR AD HERE · $", "SCROLL RESPONSIBLY", "NOW SHOWING: YOU", "LIKES RED
 
 # ====================================================================== HOOK
 stage("s01_open", "h_open", {
-    "zones": [Z("feedcity", ads=ADS, adAt=0.5)], "worldW": 2400,
+    "zones": [Z("studio", night=True, x1=1080), Z("feedcity", ads=ADS, adAt=0.5, x0=1080)], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 470, "zoom": 1.15}, {"at": 1.2, "x": 1050, "y": 520, "zoom": 1.0, "dur": 2.4}], "drift": 3,
-    "items": [it("counter", x=700, y=210, at=0.05, prefix="≈ $", suffix="TN", decimals=2, steps=[[0.05, 0], [{"cue": "Meta is worth"}, 1.64]], text="META MARKET VALUE (OUR CALC.)", scale=1.3),
-              it("sign", x=700, y=410, text="$641.39 × 2.56BN SHARES (A+B)", at=C("a share at the close"), color="#BBDEFB", size=30),
-              it("letters", x=1050, y=620, text="Q3 FREE CASH: −$2.1BN", at=C("for the first time"), size=54, color="gold"),
-              stamp(1480, 450, at=C("a share at the close"), scale=0.75),
-              buddy(480, 860, at=0.5, mood="happy", moods=[[C("for the first time"), "shock"]], label="META", color="#FF4FD8", hop=30)]},
+    "items": [it("counter", x=660, y=230, at=0.05, prefix="≈ $", suffix="TN", decimals=2, steps=[[0.05, 0], [{"cue": "Meta is worth"}, 1.64]], text="META MARKET VALUE (OUR CALC.)", scale=1.15),
+              it("sign", x=660, y=410, text="$641.39 × 2.56BN SHARES (A+B)", at=C("a share at the close"), color="#BBDEFB", size=28),
+              it("letters", x=640, y=560, text="Q3 FREE CASH: −$2.1BN", at=C("for the first time"), size=50, color="gold"),
+              stamp(700, 720, at=C("a share at the close"), scale=0.6),
+              buddy(300, 860, at=0.5, mood="happy", moods=[[C("for the first time"), "shock"]], label="META", color="#FF4FD8", hop=30)]},
     sources=["px", "tenq", "rel"])
 stage("s02_twist", "h_twist", {
     "zones": [Z("datacenter", x1=1500), Z("bankhall", x0=1500)], "worldW": 3200,

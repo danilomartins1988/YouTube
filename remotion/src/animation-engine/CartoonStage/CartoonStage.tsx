@@ -1071,6 +1071,160 @@ const SETS: Record<string, SetFn> = {
         return <T key={'tk' + k} x={tx} y={f - 26} s={22} c={neon[k % 5]}>{['AD SLOT SOLD', 'PRICE PER AD ↑', 'IMPRESSIONS ↑', 'BID · BID · BID'][k % 4]}</T>; }); })()}</g>
     </g>;
   },
+  /** INFO LIBRARY (original design, series Before You Buy): an endless retro-future library of glowing book-towers
+   *  (the index), a giant search bar that types `query`, ad tokens dropping into a coin chute beside every answer, and
+   *  little cloud carts gliding on a rail. `cloudAt`: the cloud carts light up. Shapes only, no real UI or logos. */
+  infolibrary: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, cloud = zz.cloudAt !== undefined && t >= zz.cloudAt;
+    const signs: string[] = zz.signs || ['QUIET: INDEXING', 'ANSWERS · AISLE ∞', 'ADS NEXT TO EVERYTHING', 'NO SHUSHING THE ROBOTS'];
+    const neon = ['#3DF5FF', '#FFE14D', '#7DFF8A', '#FF4FD8', '#FF9F1C'], wood = ['#5D4037', '#6D4C41', '#4E342E'];
+    const q: string = zz.query || 'HOW DOES IT MAKE MONEY?', typed = q.slice(0, Math.max(0, Math.floor((t % 9) * 6)));
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#0E1B3D" />
+      <rect x={z.x0} y={f - 1000} width={w} height={1000} fill="#1A2C5C" opacity={0.9} />
+      {Array.from({length: Math.ceil(w / 300)}, (_, k) => { const x = z.x0 + 40 + k * 300, h = 480 + 180 * rnd(k + 21), top = f - 40 - h;
+        return <g key={'bt' + k}>
+          <rect x={x} y={top} width={220} height={h} rx={18} fill={wood[k % 3]} stroke={OL} strokeWidth={6} />
+          {Array.from({length: Math.floor((h - 40) / 70)}, (_, r) => <g key={r}>
+            <rect x={x + 10} y={top + 20 + r * 70 + 52} width={200} height={10} fill="#3E2723" />
+            {Array.from({length: 8}, (_, b) => { const lit = Math.sin(t * (1.5 + rnd(k * 17 + r * 5 + b) * 3) + b + r) > 0.2;
+              return <rect key={b} x={x + 16 + b * 24} y={top + 26 + r * 70 + 6 * rnd(b + r)} width={18} height={44 - 8 * rnd(k + b + r)} rx={3}
+                fill={lit ? neon[(b + r + k) % 5] : '#37474F'} stroke={OL} strokeWidth={2} opacity={lit ? 0.75 : 0.6} />; })}</g>)}
+          {k % 2 === 1 && <g transform={`translate(${x + 110} ${top - 34}) rotate(${-3 + 2 * Math.sin(t + k)})`}>
+            <rect x={-170} y={-30} width={340} height={56} rx={28} fill="#081028" stroke={neon[k % 5]} strokeWidth={5} />
+            <T x={0} y={10} s={21} c={neon[k % 5]}>{signs[Math.floor(k / 2) % signs.length]}</T></g>}
+          {/* coin chute: an ad token drops beside each tower */}
+          {(() => { const u = ((t * 0.55 + rnd(k + 3)) % 1);
+            return <g><rect x={x + 228} y={f - 330} width={34} height={300} rx={10} fill="#90A4AE" stroke={OL} strokeWidth={4} />
+              <circle cx={x + 245} cy={f - 330 + u * 280} r={13} fill="#FFC93C" stroke={OL} strokeWidth={3} /></g>; })()}
+        </g>; })}
+      {/* the giant search bar */}
+      <g transform={`translate(${z.x0 + w * (zz.barAt ?? 0.4)} ${f - (zz.barY ?? 780)})`}>
+        <rect x={-360} y={-48} width={720} height={96} rx={48} fill="#FFFFFF" stroke={OL} strokeWidth={7} />
+        <circle cx={-300} cy={-4} r={20} fill="none" stroke={OL} strokeWidth={6} /><path d="M -286 10 L -268 28" stroke={OL} strokeWidth={7} strokeLinecap="round" />
+        <T x={-250} y={12} s={32} c={OL} a="start">{typed}</T>
+        {Math.sin(t * 8) > 0 && <rect x={-250 + typed.length * 18} y={-20} width={4} height={40} fill={OL} />}
+      </g>
+      {/* cloud carts on a rail */}
+      <path d={`M ${z.x0} ${f - 660} L ${z.x1} ${f - 660}`} stroke="#B0BEC5" strokeWidth={8} />
+      {Array.from({length: 5}, (_, k) => { const bx = z.x0 + ((t * (120 + 15 * k) + k * 900) % (w + 400)) - 200;
+        return <g key={'cc' + k} transform={`translate(${bx} ${f - 660})`}>
+          <path d="M -50 0 L -50 30 M 50 0 L 50 30" stroke="#78909C" strokeWidth={6} />
+          <ellipse cx={0} cy={60} rx={90} ry={40} fill={cloud ? '#E0F7FA' : '#B0BEC5'} stroke={OL} strokeWidth={5} />
+          <ellipse cx={30} cy={36} rx={44} ry={26} fill={cloud ? '#E0F7FA' : '#B0BEC5'} stroke={OL} strokeWidth={5} />
+          {cloud && Array.from({length: 4}, (_, q2) => <rect key={q2} x={-40 + q2 * 22} y={54} width={14} height={16} rx={3} fill={Math.sin(t * 6 + q2 + k) > 0 ? neon[q2] : '#26304F'} />)}
+        </g>; })}
+      <rect x={z.x0} y={f - 40} width={w} height={900} fill="#2B1B12" />
+      {Array.from({length: Math.ceil(w / 120)}, (_, k) => <rect key={'fl' + k} x={z.x0 + k * 120} y={f - 40} width={116} height={26} fill={k % 2 ? '#4E342E' : '#5D4037'} />)}
+    </g>;
+  },
+  /** BOX PORT (original design, series Before You Buy): a giant fulfillment hall where generic brown boxes ride snaking
+   *  conveyors, little robot carts zip under shelves, and at the far end the boxes go through a "cloud gate" and come out as
+   *  glowing server bricks (the AWS half). `gateAt`: the gate lights up; `jamAt`: conveyors stall and a red light spins. */
+  boxport: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, gate = zz.gateAt === undefined || t >= zz.gateAt, jam = zz.jamAt !== undefined && t >= zz.jamAt;
+    const signs: string[] = zz.signs || ['SMILE · YOU ARE A PARCEL', 'NEXT-DAY OR BUST', 'CLOUD GATE · NO BOXES BEYOND', 'ROBOTS HAVE RIGHT OF WAY'];
+    const neon = ['#FFE14D', '#3DF5FF', '#7DFF8A', '#FF9F1C'], spd = jam ? 0.08 : 1, gx = zz.gateWX ?? z.x0 + w * (zz.gateX ?? 0.72);
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#1B2A3A" />
+      <rect x={z.x0} y={f - 1000} width={w} height={1000} fill="#26415C" opacity={0.9} />
+      {Array.from({length: Math.ceil(w / 260)}, (_, k) => <rect key={'lt' + k} x={z.x0 + k * 260 + 60} y={f - 1000} width={140} height={22} rx={8} fill="#FFF8E1" opacity={0.35 + 0.2 * Math.sin(t * 2 + k)} />)}
+      {/* shelves */}
+      {Array.from({length: Math.ceil((gx - z.x0) / 340)}, (_, k) => { const x = z.x0 + 30 + k * 340;
+        return <g key={'sh' + k}>{[0, 1, 2, 3].map((r) => <g key={r}>
+          <rect x={x} y={f - 840 + r * 170} width={280} height={14} fill="#FF9F1C" stroke={OL} strokeWidth={4} />
+          {Array.from({length: 4}, (_, b) => <rect key={b} x={x + 14 + b * 66} y={f - 840 + r * 170 - 56 - 10 * rnd(k + r + b)} width={56} height={56 + 10 * rnd(k + r + b)} rx={4} fill="#C8925A" stroke={OL} strokeWidth={3} />)}</g>)}
+          <rect x={x} y={f - 860} width={14} height={820} fill="#455A64" /><rect x={x + 266} y={f - 860} width={14} height={820} fill="#455A64" /></g>; })}
+      {/* conveyor with boxes */}
+      {[0, 1].map((lane) => { const y = f - 230 - lane * 150;
+        return <g key={'cv' + lane}>
+          <rect x={z.x0} y={y} width={gx - z.x0} height={40} rx={20} fill="#37474F" stroke={OL} strokeWidth={5} />
+          {Array.from({length: Math.ceil((gx - z.x0) / 60)}, (_, k) => <circle key={k} cx={z.x0 + 30 + ((k * 60 + t * 120 * spd) % (gx - z.x0))} cy={y + 20} r={8} fill="#90A4AE" />)}
+          {Array.from({length: 7}, (_, k) => { const bx = z.x0 + ((t * (150 + 30 * lane) * spd + k * 300 + lane * 140) % (gx - z.x0)), s2 = 1 + 0.08 * Math.sin(t * 9 + k);
+            return <g key={'bx' + k} transform={`translate(${bx} ${y - 34}) scale(${s2} ${2 - s2})`}>
+              <rect x={-34} y={-30} width={68} height={62} rx={5} fill="#C8925A" stroke={OL} strokeWidth={4} />
+              <rect x={-34} y={-6} width={68} height={10} fill="#E6C08A" />
+              <path d="M -14 14 Q 0 24 14 14" stroke={OL} strokeWidth={3} fill="none" /></g>; })}
+        </g>; })}
+      {/* robot carts */}
+      {Array.from({length: 4}, (_, k) => { const span = gx - z.x0, bx = z.x0 + ((t * (220 + 40 * k) * spd + k * 520) % span);
+        return <g key={'rc' + k} transform={`translate(${bx} ${f - 40})`}>
+          <rect x={-46} y={-40} width={92} height={36} rx={14} fill="#FFE14D" stroke={OL} strokeWidth={4} />
+          <circle cx={-26} cy={-2} r={10} fill={OL} /><circle cx={26} cy={-2} r={10} fill={OL} />
+          <circle cx={0} cy={-46} r={8} fill={Math.sin(t * 10 + k) > 0 ? '#7DFF8A' : '#FF4F6B'} stroke={OL} strokeWidth={3} /></g>; })}
+      {/* the cloud gate and server bricks */}
+      <g transform={`translate(${gx} ${f - 40})`}>
+        <path d="M -40 0 L -40 -520 Q 120 -640 280 -520 L 280 0" fill="none" stroke={gate ? '#3DF5FF' : '#546E7A'} strokeWidth={26} strokeLinecap="round" opacity={0.9} />
+        {gate && <path d="M -40 0 L -40 -520 Q 120 -640 280 -520 L 280 0" fill="none" stroke="#FFFFFF" strokeWidth={8} opacity={0.4 + 0.4 * Math.sin(t * 6)} />}
+        <g transform="translate(120 -600)"><rect x={-180} y={-34} width={360} height={60} rx={30} fill="#081028" stroke={gate ? '#3DF5FF' : '#546E7A'} strokeWidth={5} />
+          <T x={0} y={10} s={24} c={gate ? '#3DF5FF' : '#90A4AE'}>{zz.gateLabel || 'THE CLOUD GATE'}</T></g>
+      </g>
+      {Array.from({length: Math.ceil((z.x1 - gx - 320) / 200)}, (_, k) => { const x = gx + 340 + k * 200, h = 300 + 140 * rnd(k + 9);
+        return <g key={'sv' + k}><rect x={x} y={f - 40 - h} width={150} height={h} rx={16} fill={['#3A86FF', '#2EC4B6', '#7B61FF'][k % 3]} stroke={OL} strokeWidth={5} />
+          {Array.from({length: Math.floor(h / 46)}, (_, r) => <rect key={r} x={x + 16} y={f - 40 - h + 16 + r * 46} width={118} height={26} rx={6} fill="#0E1633"
+            stroke={gate && Math.sin(t * 4 + r + k) > -0.2 ? neon[(r + k) % 4] : OL} strokeWidth={3} />)}</g>; })}
+      {signs.map((s, k) => { const sx = z.x0 + 260 + k * (w / signs.length);
+        return <g key={'bs' + k} transform={`translate(${sx} ${f - 930}) rotate(${-2 + 2 * Math.sin(t * 0.9 + k)})`}>
+          <rect x={-190} y={-30} width={380} height={56} rx={28} fill="#0E1A26" stroke={neon[k % 4]} strokeWidth={5} />
+          <T x={0} y={10} s={21} c={neon[k % 4]}>{s}</T></g>; })}
+      {jam && <g transform={`translate(${z.x0 + 200} ${f - 960})`}><circle r={30} fill="#FF4F6B" opacity={0.5 + 0.5 * Math.sin(t * 12)} stroke={OL} strokeWidth={4} /></g>}
+      <rect x={z.x0} y={f - 20} width={w} height={900} fill="#263238" />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <rect key={'yl' + k} x={z.x0 + k * 200} y={f - 10} width={110} height={10} fill="#FFE14D" opacity={0.6} />)}
+    </g>;
+  },
+  /** VOLT VALLEY (original design, series Before You Buy): a retro-future valley with a long car factory roof, a highway
+   *  of generic rounded robo-pods with no driver (little sensor domes), rows of battery cabinets with charge bars, solar
+   *  canopies and a tiny walking helper robot (generic boxy shape). `podsAt`: driverless pods appear; `chargeAt`: battery
+   *  bars fill; `robotAt`: the helper robot walks across. No logos, no real vehicles. */
+  voltvalley: (t, z, f) => {
+    const w = z.x1 - z.x0, zz = z as any, pods = zz.podsAt === undefined || t >= zz.podsAt;
+    const charge = zz.chargeAt === undefined ? 0.6 : clamp((t - zz.chargeAt) / 3), robot = zz.robotAt !== undefined && t >= zz.robotAt;
+    const signs: string[] = zz.signs || ['NO DRIVER · NO PROBLEM?', 'CHARGE IT TO THE FUTURE', 'ROBOTS CROSSING', 'BATTERIES INCLUDED · MOSTLY'];
+    const neon = ['#7DFF8A', '#3DF5FF', '#FFE14D', '#FF4FD8'], podC = ['#ECEFF1', '#FF4F6B', '#3A86FF', '#FFE14D'];
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill="#FF9F68" />
+      <rect x={z.x0} y={f - 1100} width={w} height={500} fill="#FFC48C" opacity={0.7} />
+      <circle cx={zz.sunX ?? 1900} cy={f - 900} r={110} fill="#FFE14D" opacity={0.9} />
+      {Array.from({length: Math.ceil(w / 500)}, (_, k) => <path key={'hl' + k} d={`M ${z.x0 + k * 500 - 100} ${f - 520} Q ${z.x0 + k * 500 + 150} ${f - 760 - 80 * rnd(k)} ${z.x0 + k * 500 + 400} ${f - 520} Z`} fill="#B5651D" opacity={0.55} />)}
+      {/* factory roof */}
+      <g transform={`translate(${zz.factoryX ?? -200} ${f - 520})`}>
+        <rect x={0} y={0} width={1300} height={200} fill="#ECEFF1" stroke={OL} strokeWidth={6} />
+        {Array.from({length: 6}, (_, k) => <path key={k} d={`M ${k * 216} 0 L ${k * 216 + 108} -70 L ${k * 216 + 216} 0 Z`} fill="#CFD8DC" stroke={OL} strokeWidth={5} />)}
+        {Array.from({length: 6}, (_, k) => <rect key={'wn' + k} x={40 + k * 210} y={60} width={140} height={60} rx={8} fill="#3DF5FF" opacity={0.4 + 0.3 * Math.sin(t * 2 + k)} stroke={OL} strokeWidth={3} />)}
+        <T x={650} y={175} s={34} c={OL}>{zz.name || 'THE CAR FACTORY'}</T>
+      </g>
+      {/* battery cabinets + solar canopies */}
+      {Array.from({length: 7}, (_, k) => { const x = (zz.battX ?? 1250) + k * 170;
+        return <g key={'bc' + k}>
+          <path d={`M ${x - 20} ${f - 420} L ${x + 150} ${f - 470}`} stroke="#1E3A5F" strokeWidth={24} />
+          <rect x={x} y={f - 300} width={130} height={240} rx={10} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+          <rect x={x + 20} y={f - 270} width={90} height={180} rx={6} fill="#263238" />
+          <rect x={x + 20} y={f - 90 - 180 * charge * (0.7 + 0.3 * rnd(k))} width={90} height={180 * charge * (0.7 + 0.3 * rnd(k))} rx={6} fill={neon[0]} opacity={0.85} />
+          <path d={`M ${x + 70} ${f - 240} L ${x + 55} ${f - 200} L ${x + 75} ${f - 200} L ${x + 60} ${f - 160}`} stroke="#FFE14D" strokeWidth={6} fill="none" /></g>; })}
+      {/* highway with pods */}
+      <rect x={z.x0} y={f - 60} width={w} height={60} fill="#37474F" />
+      {Array.from({length: Math.ceil(w / 180)}, (_, k) => <rect key={'ln' + k} x={z.x0 + ((k * 180 - t * 300) % w + w) % w} y={f - 34} width={90} height={8} fill="#FFE14D" />)}
+      {pods && Array.from({length: 4}, (_, k) => { const bx = -400 + ((t * (220 + 50 * k) + k * 830) % 3400);
+        return <g key={'pd' + k} transform={`translate(${bx} ${f - 70 + 4 * Math.sin(t * 9 + k)})`}>
+          <path d="M -90 0 L -80 -50 Q -40 -100 30 -100 Q 80 -96 96 -40 L 100 0 Z" fill={podC[k % 4]} stroke={OL} strokeWidth={5} />
+          <path d="M -50 -54 Q -20 -86 30 -86 Q 64 -82 74 -54 Z" fill="#0E1633" opacity={0.85} />
+          <circle cx={-10} cy={-104} r={12} fill="#7DFF8A" stroke={OL} strokeWidth={3} opacity={0.6 + 0.4 * Math.sin(t * 7 + k)} />
+          <circle cx={-56} cy={0} r={18} fill={OL} /><circle cx={62} cy={0} r={18} fill={OL} /></g>; })}
+      {robot && (() => { const u = clamp((t - zz.robotAt) / 8), rx = lerp(zz.robotFrom ?? 300, zz.robotTo ?? 1700, u), step = Math.sin(t * 8);
+        return <g transform={`translate(${rx} ${f - 80})`}>
+          <rect x={-8} y={-20} width={14} height={60 + 10 * step} fill="#90A4AE" stroke={OL} strokeWidth={3} /><rect x={10} y={-20} width={14} height={60 - 10 * step} fill="#90A4AE" stroke={OL} strokeWidth={3} />
+          <rect x={-30} y={-150} width={76} height={130} rx={16} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+          <rect x={-22} y={-210} width={60} height={56} rx={14} fill="#ECEFF1" stroke={OL} strokeWidth={5} />
+          <rect x={-14} y={-194} width={44} height={16} rx={8} fill="#0E1633" /><circle cx={0} cy={-186} r={4} fill="#3DF5FF" /><circle cx={16} cy={-186} r={4} fill="#3DF5FF" />
+          <path d={`M -30 -130 L ${-50 - 10 * step} -60 M 46 -130 L ${66 + 10 * step} -60`} stroke="#90A4AE" strokeWidth={10} strokeLinecap="round" /></g>; })()}
+      {signs.map((s, k) => { const sx = (zz.signX ?? -100) + k * 760;
+        return <g key={'vs' + k} transform={`translate(${sx} ${f - 640}) rotate(${-2 + 2 * Math.sin(t * 0.8 + k)})`}>
+          <path d="M 0 30 L 0 120" stroke={OL} strokeWidth={8} />
+          <rect x={-180} y={-30} width={360} height={56} rx={12} fill="#FFF8E1" stroke={OL} strokeWidth={5} />
+          <T x={0} y={10} s={21} c={OL}>{s}</T></g>; })}
+      <rect x={z.x0} y={f} width={w} height={900} fill="#5D4037" />
+    </g>;
+  },
   chipcity: (t, z, f) => {
     const w = z.x1 - z.x0, zz = z as any, dim = zz.dimAt !== undefined ? clamp((t - zz.dimAt) / 1.6) : 0;
     const flick = dim > 0 && dim < 1 ? (Math.sin(t * 47) > 0 ? 1 : 0.35) : 1, glow = (1 - 0.65 * dim) * flick;

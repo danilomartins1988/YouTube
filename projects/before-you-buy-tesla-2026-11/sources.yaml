@@ -1,0 +1,133 @@
+# Sources and claims for "Before You Buy Tesla Stock, Watch This (Nov 2026)" (series Before You Buy, Tesla, 2026-11 edition).
+# Facts read 2026-11-11 (notes: docs/series/research/tesla_2026-11.md). DATA AS OF the 2026-11-10 close.
+# QUARTERLY REFRESH: update text/spoken/display/fields from the new update deck, 10-Q/10-K and close; the script reads every
+# number through {{placeholders}}. Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: market cap on the 10-Q cover count (includes ~710M restricted/unearned CEO shares; the diluted figure is said too).
+# The reverse calculation BREAKS at a 0.2% FCF yield: shown only to say so; the episode uses sales and scenario framing.
+# Robotaxi, Optimus and energy plans are the COMPANY's words (attributed); no forecasts of ours. Tesla reports only segment
+# gross profit. Pay-package market-cap milestones are compensation terms, not forecasts. Musk named in text only.
+sources:
+  - id: deck
+    title: "Tesla Q3 2026 Update (8-K Ex. 99.1, Oct 21, 2026)"
+    publisher: Tesla, Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm
+    published: "2026-10-21"
+    accessed: "2026-11-11"
+    credit: "Tesla Q3 update (SEC)"
+  - id: tenq
+    title: "Tesla Form 10-Q for Q3 2026 (quarter ended September 30, 2026); Form 10-K FY2025; 8-K Sep 29, 2026 (credit facilities)"
+    publisher: Tesla, Inc. (SEC filings)
+    url: https://www.sec.gov/Archives/edgar/data/1318605/000162828026066775/tsla-20260930.htm
+    published: "2026-10-22"
+    accessed: "2026-11-11"
+    credit: "Tesla 10-Q (SEC)"
+  - id: px
+    title: "TSLA closing price, Nov 10, 2026 (data vendor); share count from the 10-Q cover (Oct 15, 2026)"
+    publisher: Yahoo Finance; Tesla, Inc.
+    url: https://finance.yahoo.com/quote/TSLA/history/
+    published: "2026-11-10"
+    accessed: "2026-11-11"
+    credit: "Yahoo Finance price · our calculation"
+
+claims:
+  - id: cap
+    text: "Close Nov 10, 2026: $379.78 (Yahoo Finance). 10-Q cover: 'As of October 15, 2026, there were 3,952,757,946 shares of the registrant's common stock outstanding.' OUR calculation: market value about $1,501bn. The cover count includes about 423.7M unearned 2025 CEO award shares and about 286.5M restricted shares from the 2018 award; on Q3 diluted weighted shares (3,541M) the value is about $1,345bn."
+    spoken: about one point five trillion dollars
+    display: "≈ $1.50tn market value (close Nov 10, 2026 × 3.95bn cover shares; ≈ $1.35tn on diluted shares; our calc.)"
+    fields: {price_spoken: three hundred and seventy-nine dollars and seventy-eight cents, shares_spoken: about three point nine five billion, date_spoken: "November tenth, twenty twenty-six", diluted_spoken: about one point three five trillion dollars}
+    source_ids: [px, tenq]
+    status: source_located
+    verification_note: Our calculation; share-count method said on air.
+
+  - id: lenses
+    text: "Update deck (TTM, Q4 2025 to Q3 2026): revenue $103.6bn; income from operations $3.47bn (3.3% margin); net income attributable to common $3.22bn; operating cash flow $18.7bn; capex $15.4bn; free cash flow $3.3bn. OUR calculations: market cap / TTM net income 466x; price / TTM free cash flow 454x (FCF yield 0.22%); price / TTM sales 14.5x."
+    spoken: about four hundred and sixty-six times
+    display: "P/E ≈ 466x · FCF yield 0.2% · price/sales 14.5x (TTM; our calc.)"
+    fields: {rev_spoken: about one hundred and four billion dollars, oi_spoken: about three and a half billion dollars, ni_spoken: about three point two billion dollars, ocf_spoken: about eighteen point seven billion dollars, capex_spoken: about fifteen point four billion dollars, fcf_spoken: about three point three billion dollars, fcfy_spoken: about zero point two percent, ps_spoken: fourteen and a half times, margin_spoken: about three percent}
+    source_ids: [deck, px]
+    status: source_located
+    verification_note: Our calculation.
+
+  - id: rdcf
+    text: "OUR illustration (not a valuation), shown to make a point: market cap $1,501bn = 10 years of free cash flow growing at g plus a terminal value at 3%, discounted at r. On TTM FCF $3.30bn: g about 44.7% a year (8%) or 51.8% (10%), year-10 FCF about $133bn-$214bn. At a 0.2% FCF yield the result swings with tiny input changes, so the method breaks. Steady-state lens: for the price to work as a business growing 3% a year from now, free cash flow would need to be about $73bn (8%) to $102bn (10%) a year: 22 to 31 times today's $3.3bn, or about 70% to 98% of today's entire revenue."
+    spoken: about forty-five percent a year
+    display: "Reverse calc. breaks: ≈ 45-52% a year; steady-state FCF needed ≈ $73-102bn (our illustration)"
+    fields: {high_spoken: about fifty-two percent, need_low_spoken: about seventy-three billion dollars, need_high_spoken: about one hundred and two billion dollars, mult_low_spoken: twenty-two, mult_high_spoken: thirty-one, revshare_low_spoken: seventy percent, revshare_high_spoken: ninety-eight percent}
+    source_ids: [deck, px]
+    status: source_located
+    verification_note: Our illustration; 8% and 10% discount rates, 3% terminal growth, 10 years, on screen; not a forecast.
+
+  - id: seg
+    text: "10-K FY2025: total revenue $94.8bn; automotive sales $65.8bn (from $78.5bn in 2023); energy generation and storage $12.8bn (from $6.0bn in 2023), gross margin 29.8% (our calc.). Tesla reports only segment gross profit. Update deck TTM: automotive sales $72.3bn; services and other $16.3bn; energy $12.3bn with gross profit $3.6bn (29.7%); deliveries 1,742,908. Model 3/Y were about 98% of Q3 deliveries (our calc.). Deliveries: about 1.79M (2024), about 1.64M (2025)."
+    spoken: about ninety-five billion dollars
+    display: "FY2025 revenue $94.8bn: cars $65.8bn, energy $12.8bn (10-K)"
+    fields: {auto_from_spoken: about seventy-eight and a half billion dollars, auto_spoken: about sixty-six billion dollars, energy_from_spoken: about six billion dollars, energy_spoken: about thirteen billion dollars, energy_margin_spoken: about thirty percent, deliv_spoken: about one point seven four million, my_spoken: about ninety-eight percent, deliv25_spoken: about one point six four million, deliv24_spoken: about one point seven nine million}
+    source_ids: [tenq, deck]
+    status: source_located
+
+  - id: credits
+    text: "Update deck TTM: automotive regulatory credits $1.18bn = 34% of TTM income from operations $3.47bn (our calc.). 10-Q Q3: 'we reversed $475 million of automotive regulatory credits revenue for contractual return of previously delivered credits'; 'Recent governmental and regulatory actions have restricted certain regulatory credit programs tied to our products.' Q3 credits $113M."
+    spoken: about thirty-four percent
+    display: "Regulatory credits ≈ 34% of TTM operating income (our calc.)"
+    fields: {credits_spoken: about one point two billion dollars, reversal_spoken: four hundred and seventy-five million dollars, q3_spoken: a hundred and thirteen million dollars}
+    source_ids: [deck, tenq]
+    status: source_located
+
+  - id: cash
+    text: "10-Q: 'we currently expect our capital expenditures to be in excess of $20 billion in 2026, driven by our SI initiatives, including investments in compute infrastructure and data centers'; 'periods of heightened levels of capital expenditures ... will necessitate additional funding beyond our operating cash flow.' 8-K (Sep 29, 2026): $30bn of new credit facilities; 'Tesla does not currently plan to draw on the facilities in 2026.' Cash, equivalents and short-term investments $45.4bn; debt and finance leases $9.5bn. No buybacks or dividends. Cover share count 3,216.5M (Jan 2025) to 3,952.8M (Oct 2026), +22.9% (our calc.), almost all CEO awards."
+    spoken: in excess of twenty billion dollars
+    display: "2026 capex 'in excess of $20 billion'; $30bn credit lines, not drawn (10-Q, 8-K)"
+    fields: {lines_spoken: thirty billion dollars, cash_spoken: about forty-five billion dollars, debt_spoken: about nine and a half billion dollars, shares_growth_spoken: about twenty-three percent}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: plans
+    text: "Update deck (company statements): 'We started providing Robotaxi rides using Cybercabs on September 3 in Austin'; 'nearly two million cumulative unsupervised miles'; active FSD subscriptions 1.74M (Q3 2025: 1.04M); Megafactory Texas 'began production, with planned capacity of 50 GWh'; energy storage 'highest-ever order rate and backlog'; 'Optimus production began in Fremont on our high-volume lines'; 'battery availability continued to be the limiting factor in increasing auto volumes'. No separate Robotaxi or Optimus revenue is reported."
+    spoken: one point seven four million
+    display: "Company statements: Robotaxi rides in Austin; FSD subscriptions 1.74M; Optimus production began (Q3 update)"
+    fields: {fsd_from_spoken: one point zero four million, miles_spoken: nearly two million, mwh_spoken: fifty gigawatt hours}
+    source_ids: [deck]
+    status: source_located
+    verification_note: Company claims, attributed; no revenue figures exist.
+
+  - id: award
+    text: "10-Q: the 2025 CEO Performance Award has 12 tranches of 35,311,992 shares; each needs a market-cap milestone from $2.0tn to $8.5tn plus operational milestones (for example 10M active FSD subscriptions, 1M Robotaxis in commercial operation, 1M bots delivered). Today's value (about $1.50tn) is below the first $2.0tn milestone. These are compensation terms, not company forecasts."
+    spoken: two trillion dollars
+    display: "Pay package: first market-cap milestone $2.0tn (compensation terms, 10-Q)"
+    fields: {}
+    source_ids: [tenq]
+    status: source_located
+    verification_note: Never framed as a forecast or target.
+
+  - id: risks
+    text: "10-K/10-Q risk factors: 'We are highly dependent on the services of Elon Musk ... he does not devote his full time and attention to Tesla'; share pledges: Musk 'may be forced ... to sell shares'; 'Our future growth and success are dependent upon demand for our electric vehicles and adoption of autonomous driving solutions'; 'We face strong competition'; government actions 'have repealed and/or restricted consumer, manufacturing and charging infrastructure tax credits'; 'The current tariff regime will have a relatively larger impact on our energy generation and storage business'."
+    spoken: highly dependent
+    display: "Risk factors: key person, demand and autonomy, competition, credits, tariffs (10-K, 10-Q)"
+    fields: {}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: legal
+    text: "10-Q: Benavides v. Tesla (Autopilot fatality): 'The jury awarded $129 million in total compensatory damages, finding the driver 67% at fault and the Company 33% at fault. The jury also awarded $200 million in punitive damages'; on appeal; Tesla 'has recorded an immaterial accrual'. Regulators' requests include 'Advanced Driver-Assistance Systems and Robotaxi'; no amounts disclosed; 'To our knowledge no government agency in any ongoing investigation has concluded that any wrongdoing occurred.'"
+    spoken: two hundred million dollars
+    display: "Benavides verdict: $129M compensatory + $200M punitive, on appeal (10-Q)"
+    fields: {comp_spoken: a hundred and twenty-nine million dollars}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: upside
+    text: "Update deck (company statements): Tesla Semi in volume production in Nevada; Cybercab capacity more than 125,000 a year in Texas; FSD 'available in a total of nine EU countries and used by over 100,000 customers'; services and other gross profit 'a record $734M'; energy storage demand 'increasingly aligned with SI infrastructure demand'. 10-Q: SpaceX stake (originally xAI preferred) fair value $2.865bn; the SpaceX IPO lock-up 'expire[s] in December 2026'. None is sized as future revenue."
+    spoken: nine E U countries
+    display: "Company statements: Semi in production; Cybercab capacity > 125,000; FSD in 9 EU countries (Q3 update)"
+    fields: {}
+    source_ids: [deck, tenq]
+    status: source_located
+    verification_note: Company claims; unsized.
+
+  - id: watch
+    text: "Scorecard for the next report (Q4 2026 deliveries around Jan 2, 2027 and earnings late January 2027, both our estimates from last year's dates; annual meeting Dec 3, 2026): Q4 deliveries vs Q4 2025's 418,227; Q4 capex (implied above $7bn, our calc.) and free cash flow; regulatory credits and automotive gross margin excluding credits (Q3: $113M; 18.1%)."
+    spoken: late January twenty twenty-seven
+    display: "Next report: late January 2027 (our estimate)"
+    fields: {deliv_q4_spoken: four hundred and eighteen thousand}
+    source_ids: [deck, tenq]
+    status: source_located

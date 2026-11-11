@@ -1,0 +1,152 @@
+# Sources and claims for "Before You Buy Alphabet Stock, Watch This (Nov 2026)" (series Before You Buy, Alphabet, 2026-11 edition).
+# Facts read 2026-11-11 (notes: docs/series/research/alphabet_2026-11.md, incl. the depreciation addendum). DATA AS OF the 2026-11-10 close.
+# QUARTERLY REFRESH: update text/spoken/display/fields from the new 10-Q/10-K and close; the script reads every number
+# through {{placeholders}}. Status stays source_located until a named human reviewer signs off. US dollars.
+# RULES: market cap sums Class A + B (at the GOOGL price) + C; GAAP P/E is distorted by ~$130bn of equity gains (say so);
+# the 2026 capex range is NOT on an Alphabet page we could open (MarketBeat only) -> never quoted as a number; backlog
+# definition changed in Q1 2026 (not like-for-like); the "private company" stake is never named; company claims attributed.
+# Ratios, the proxy base and the reverse calculation are OUR calculations (illustration, inputs on screen); never fair
+# value, cheap/expensive, buy/sell. No analyst consensus.
+sources:
+  - id: tenq
+    title: "Alphabet Form 10-Q for Q3 2026 (quarter ended September 30, 2026)"
+    publisher: Alphabet Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm
+    published: "2026-10-29"
+    accessed: "2026-11-11"
+    credit: "Alphabet 10-Q (SEC)"
+  - id: rel
+    title: "Alphabet Q3 2026 earnings release (8-K Ex. 99.1, Oct 28, 2026), earlier 2026 releases and Form 10-K FY2025"
+    publisher: Alphabet Inc. (SEC filings)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm
+    published: "2026-10-28"
+    accessed: "2026-11-11"
+    credit: "Alphabet filings (SEC)"
+  - id: px
+    title: "GOOGL and GOOG closing prices, Nov 10, 2026 (data vendor); share counts from the 10-Q cover (Oct 21, 2026); depreciation from SEC XBRL"
+    publisher: Yahoo Finance; Alphabet Inc.
+    url: https://finance.yahoo.com/quote/GOOGL/history/
+    published: "2026-11-10"
+    accessed: "2026-11-11"
+    credit: "Yahoo Finance price · our calculation"
+
+claims:
+  - id: cap
+    text: "Closes Nov 10, 2026: GOOGL $287.38, GOOG $284.92 (Yahoo Finance). 10-Q cover (Oct 21, 2026): 5,888M Class A, 827M Class B, 5,579M Class C shares (12,294M). OUR calculation: (5,888M + 827M) x $287.38 + 5,579M x $284.92 = about $3,519bn (Class B, unlisted, at the GOOGL price). Excludes the mandatory convertible preferred (about $19bn)."
+    spoken: about three point five two trillion dollars
+    display: "≈ $3.52tn market value (all share classes, close Nov 10, 2026; our calc.)"
+    fields: {price_spoken: about two hundred and eighty-seven dollars, shares_spoken: about twelve point three billion, date_spoken: "November tenth, twenty twenty-six"}
+    source_ids: [px, tenq]
+    status: source_located
+    verification_note: Our calculation; date on screen.
+
+  - id: lenses
+    text: "OUR calculations, trailing twelve months (Q4 2025 to Q3 2026): operating cash flow $179.6bn; purchases of property and equipment $159.8bn (89% of OCF); free cash flow $19.7bn (matches the company's non-GAAP TTM FCF); net income $235.7bn, of which about $129.6bn pre-tax were gains on equity securities. GAAP P/E 14.9x; about 26x excluding those gains (our assumption: 21% tax); price/FCF 178x (FCF yield 0.6%); operating cash flow yield 5.1%."
+    spoken: about fifteen times
+    display: "P/E 14.9x (≈ 26x ex equity gains) · FCF yield 0.6% · OCF yield 5.1% (TTM; our calc.)"
+    fields: {ocf_spoken: about one hundred and eighty billion dollars, capex_spoken: about one hundred and sixty billion dollars, capexshare_spoken: eighty-nine percent, fcf_spoken: about twenty billion dollars, ni_spoken: about two hundred and thirty-six billion dollars, gains_spoken: about one hundred and thirty billion dollars, exgains_spoken: about twenty-six times, fcfy_spoken: about zero point six percent, ocfy_spoken: about five percent, pfcf_spoken: about a hundred and seventy-eight times}
+    source_ids: [rel, tenq, px]
+    status: source_located
+    verification_note: Our calculation; the ex-gains P/E uses an assumed 21% tax rate (stated).
+
+  - id: proxy
+    text: "OUR proxy base for a capex boom (labelled proxy): operating cash flow $179.6bn minus depreciation of property and equipment of about $28.0bn TTM (SEC XBRL: FY2025 $21.1bn minus 9M 2025 $15.1bn plus 9M 2026 $22.0bn) = about $151.6bn (yield about 4.3%). It assumes capex eventually falls back toward the depreciation level."
+    spoken: about one hundred and fifty-two billion dollars
+    display: "Proxy base: OCF − depreciation ≈ $151.6bn (TTM; our calc.)"
+    fields: {dep_spoken: about twenty-eight billion dollars, yield_spoken: about four point three percent}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Proxy, our calculation.
+
+  - id: rdcf
+    text: "OUR illustration (not a valuation): market cap $3,519bn = 10 years of cash growing at g plus a terminal value at 3%, discounted at r. On the PROXY base $151.6bn: r = 8% gives g about 4.5% a year; r = 10% gives g about 9.2%. On TTM FREE CASH FLOW $19.7bn: g about 31% (8%) / about 38% (10%); implied year-10 FCF about $299bn / $476bn."
+    spoken: about four and a half percent a year
+    display: "Implied growth ≈ 4.5%-9.2% (proxy) or ≈ 31%-38% (FCF) a year for 10 years (our illustration)"
+    fields: {high_spoken: about nine percent, fcf_low_spoken: about thirty-one percent, fcf_high_spoken: about thirty-eight percent}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Our illustration; 8% and 10% discount rates, 3% terminal growth, 10 years, on screen.
+
+  - id: mustearn
+    text: "OUR rough illustration: if capex stays at the TTM pace ($159.8bn a year), the year-10 free cash flow the price implies (about $299bn at 8%, about $476bn at 10%) needs operating cash of FCF plus capex; the extra over today's $179.6bn, spread over ten years of capex ($1,598bn), is about 17.5 cents (8%) to about 28.6 cents (10%) of extra yearly operating cash per dollar of capex."
+    spoken: about seventeen cents
+    display: "Each capex dollar must add ≈ 17-29¢ of yearly operating cash within 10 years (our illustration)"
+    fields: {high_spoken: about twenty-nine cents}
+    source_ids: [tenq, px]
+    status: source_located
+    verification_note: Our illustration; inputs on screen.
+
+  - id: seg
+    text: "10-K FY2025: revenue $402.8bn; Google Services $342.7bn (operating margin 40.7%, our calc.); Google Cloud $58.7bn (23.7%); Other Bets $1.5bn with an operating loss of $7.5bn. 10-K: 'We generated more than 70% of total revenues from online advertising in 2025.' Q3 2026: revenue $127.6bn (+25%), operating margin 31.8%."
+    spoken: about four hundred and three billion dollars
+    display: "FY2025 revenue $402.8bn: Services $342.7bn, Cloud $58.7bn (10-K)"
+    fields: {svc_spoken: about three hundred and forty-three billion dollars, svc_margin_spoken: about forty-one percent, cloud_fy_spoken: about fifty-nine billion dollars, bets_loss_spoken: about seven and a half billion dollars, q3_growth_spoken: twenty-five percent}
+    source_ids: [rel]
+    status: source_located
+
+  - id: search
+    text: "OUR calculation from the quarterly releases: Google Search & other TTM $250.1bn, about 53% of TTM revenue $471.1bn. Q3 2026: Search & other $63.35bn (+12%); paid clicks +8%, cost-per-click +4% (10-Q). YouTube ads TTM $43.5bn."
+    spoken: about two hundred and fifty billion dollars
+    display: "Search & other $250.1bn TTM, ≈ 53% of revenue (our calc.)"
+    fields: {share_spoken: about fifty-three percent, q3_growth_spoken: twelve percent, clicks_spoken: eight percent, yt_spoken: about forty-four billion dollars}
+    source_ids: [rel, tenq]
+    status: source_located
+
+  - id: cloud
+    text: "Q3 2026 release: 'Google Cloud delivered record growth as revenues increased 103% to $30.7 billion ... TPU systems sales were also a meaningful contributor to revenue growth.' Cloud operating margin 36.2% (our calc.). 10-Q: revenue backlog $567.7bn, of which $560.8bn Google Cloud; 'just over 55% ... over the next 24 months' (about $312bn, our calc.). Backlog was $242.8bn at Dec 31, 2025, but in Q1 2026 Alphabet changed its reporting to also include contracts of one year or less (not like-for-like)."
+    spoken: thirty point seven billion dollars
+    display: "Google Cloud $30.7bn in Q3 2026, +103% (release)"
+    fields: {growth_spoken: a hundred and three percent, margin_spoken: about thirty-six percent, backlog_spoken: about five hundred and sixty-eight billion dollars, next_spoken: about three hundred and twelve billion dollars}
+    source_ids: [rel, tenq]
+    status: source_located
+    verification_note: Backlog definition change said on air.
+
+  - id: cash
+    text: "10-Q and releases: quarterly free cash flow Q2 2026 -$5.9bn, Q3 2026 -$9.1bn. 'In the three and nine months ended September 30, 2026, there were no repurchases.' Buybacks TTM $5.5bn (all Q4 2025); dividends TTM about $10.7bn (common plus preferred). New equity in 2026: common stock net $42.9bn (June offering, a private placement and at-the-market sales) plus $19.1bn of mandatory convertible preferred. Long-term debt $126.1bn at Sep 30, 2026 vs $46.5bn at Dec 31, 2025. Shares outstanding 12,077M (Sep 2025) to 12,294M (Sep 2026), +1.8% (our calc.). At-the-market program: $27.6bn remained available."
+    spoken: about forty-three billion dollars
+    display: "2026: no buybacks; $42.9bn of new common stock + $19.1bn preferred (10-Q)"
+    fields: {q2fcf_spoken: minus five point nine billion dollars, q3fcf_spoken: minus nine point one billion dollars, pref_spoken: about nineteen billion dollars, div_spoken: about eleven billion dollars, debt_from_spoken: about forty-seven billion dollars, debt_to_spoken: about one hundred and twenty-six billion dollars, shares_growth_spoken: one point eight percent, atm_spoken: about twenty-eight billion dollars}
+    source_ids: [tenq, rel]
+    status: source_located
+
+  - id: guide
+    text: "10-Q (company outlook, verbatim): 'In 2026, we expect to significantly increase, relative to 2025, our investment in our technical infrastructure, including servers and network equipment and data centers.' Alphabet gives no revenue or EPS guidance. A numeric 2026 capex range circulates in secondary coverage but was not confirmed on an Alphabet or SEC page, so it is not used."
+    spoken: significantly increase
+    display: "'In 2026, we expect to significantly increase ... our investment in our technical infrastructure' (10-Q)"
+    fields: {}
+    source_ids: [tenq]
+    status: source_located
+    verification_note: Verbatim; no unconfirmed number.
+
+  - id: risks
+    text: "10-Q risk factors: 'Our investments ultimately may not be commercially viable or may not result in an adequate return of capital'; large long-duration agreements 'including backstops and financial guarantees ... and contingent repurchase obligations ... we may incur additional liabilities, have excess capacity or inventory that we cannot easily redeploy'. Total commitments $802.1bn, 'mostly long-term supply agreements'; leases not yet commenced $130.5bn. New risk factor on 'the dilutive impact of current or future equity issuances'. 10-K: Class B stock 'represented approximately 52.7% of the voting power'."
+    spoken: about eight hundred billion dollars
+    display: "Commitments $802.1bn, mostly long-term supply agreements (10-Q)"
+    fields: {leases_spoken: about one hundred and thirty billion dollars, vote_spoken: about fifty-three percent}
+    source_ids: [tenq, rel]
+    status: source_located
+
+  - id: legal
+    text: "10-Q Note 10: DOJ search final judgment (Dec 2025) 'imposes restrictions on how Google distributes its services and requires Google to share certain search data with and offer syndication services to certain competitors' (both sides appealed). DOJ ad tech: the court denied 'the DOJ's request for structural divestitures ... instead ordering certain behavioral remedies' (Google plans to appeal). EC Android: 'we made a cash payment of $5.2 billion for the fine plus accrued interest' (July 2026). Accrued legal and regulatory fines and settlements $13.8bn at Sep 30, 2026."
+    spoken: five point two billion dollars
+    display: "EC Android fine paid: $5.2bn incl. interest; accrued fines $13.8bn (10-Q)"
+    fields: {accrued_spoken: about fourteen billion dollars}
+    source_ids: [tenq]
+    status: source_located
+
+  - id: upside
+    text: "Company claims (Q3 2026 release): 'the Gemini app has reached one billion users'; APIs 'processing nearly 32 billion tokens per minute, more than four times what we processed a year ago'. 10-Q: Cloud 'generates product revenues primarily from the sale of TPU systems'; inventory $13.3bn vs $2.4bn at year end. Investment marks: SpaceX shares $75.2bn (subject to short-term sale restrictions) and one unnamed private company carried at about $128.2bn. Waymo raised a $5.0bn term loan 'not guaranteed by Alphabet'. None of these is sized as future revenue."
+    spoken: one billion users
+    display: "Gemini app: one billion users; TPU systems sales; stakes marked ≈ $203bn (company)"
+    fields: {stakes_spoken: about two hundred billion dollars}
+    source_ids: [rel, tenq]
+    status: source_located
+    verification_note: Company claims; marks are not cash.
+
+  - id: watch
+    text: "Scorecard for the next report (Q4 2026; date not announced; last year Feb 4, 2026, so early February 2027 is our estimate): Google Cloud revenue and margin (Q3 $30.7bn, +103%, 36.2%); capex and quarterly free cash flow (Q3 -$9.1bn) and the 2027 investment outlook; Search & other growth (Q3 +12%) and the share count (12,294M)."
+    spoken: early February twenty twenty-seven
+    display: "Next report: early February 2027 (our estimate)"
+    fields: {}
+    source_ids: [rel, tenq]
+    status: source_located

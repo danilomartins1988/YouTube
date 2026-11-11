@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
+title: "Before You Buy Tesla Stock, Watch This (Nov 2026)"
+docs_dir: docs/episodes/byb-tesla-2026-11
+video: output/bybtsla_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: What does a price of about 466 times profit assume?
+  surprising_fact: Tesla is worth about 466 times its last 12 months of net income; regulatory credits were about 34% of operating income (our calc., Nov 10, 2026 close)
+  subject: a generic car
+  tone: strategy
+  metaphor: the price rides on cars that don't exist yet
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 'TESLA: 466×'
+  - PROFIT
+  claim_basis: 'lenses: market cap $1,501bn / TTM net income $3.22bn = 466x (our calc., Nov 10, 2026 close)'
+  scene:
+    palette: {sky0: '#1A0606', sky1: '#401010', haze: '#FF4F6B', key: '#E0F7FA', accent: '#FFE14D', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: sedan, x: 1500, y: 600, s: 0.75}
+    support: []
+    particles: {n: 70, region: [0, 0, 1920, 1080], size: 3, color: '#FFFFFF'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'TESLA: 14.5×'
+  - SALES
+  claim_basis: 'lenses: market cap $1,501bn / TTM revenue $103.6bn = 14.5x (our calc.)'
+  scene:
+    palette: {sky0: '#0A0614', sky1: '#16244A', haze: '#FF9F1C', key: '#FFF3E0', accent: '#7DFF8A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: sedan, x: 480, y: 660, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
+    vignette: 0.5
+    brand: none

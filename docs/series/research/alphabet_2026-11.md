@@ -179,3 +179,10 @@ Script line: "On today's free cash flow, the price assumes that cash flow grows 
 - "Half-trillion run rate", "fastest-growing product", Gemini user counts: company claims, to be attributed.
 - Search "miss" headlines (e.g., investinglive) are [S]. Don't use them without a sourced consensus.
 - **What not to say:** no "cheap" or "expensive", no fair value, no buy or sell. The reverse DCF shows what the price assumes, not whether that is right. Keep the disclaimer after the hook.
+
+## Addendum (2026-11-11): depreciation for the proxy base [F, SEC XBRL us-gaap:Depreciation]
+FY2025 $21,136M; 9M 2025 $15,096M; 9M 2026 $21,955M → TTM (Q4 2025 to Q3 2026) = 21,136 − 15,096 + 21,955 = **$27,995M** [C].
+Proxy base OCF − depreciation = 179,551 − 27,995 = **$151.6B** (yield ≈ 4.3% on $3.519T) [C]. Reverse calc. on the proxy (same
+method as section 4): g ≈ 4.5% (r = 8%), ≈ 9.2% (r = 10%) [C]. "Capex must earn": with capex held at $159.8B a year, the year-10
+FCF implied on the FCF base ($299B / $476B) needs (FCF10 + capex − today's OCF) / (10 × capex) ≈ 17.5¢ / 28.6¢ of extra yearly
+operating cash per capex dollar [C].

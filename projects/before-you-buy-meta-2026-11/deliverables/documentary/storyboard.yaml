@@ -6,8 +6,12 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: feedcity
+    - set: studio
       x0: -1600
+      x1: 1080
+      night: true
+    - set: feedcity
+      x0: 1080
       x1: 4600
       ads: &id002
       - YOUR AD HERE · $
@@ -29,8 +33,8 @@ scenes:
     drift: 3
     items:
     - kind: counter
-      x: 700
-      y: 210
+      x: 660
+      y: 230
       at: 0.05
       prefix: ≈ $
       suffix: TN
@@ -41,33 +45,33 @@ scenes:
       - - cue: Meta is worth
         - 1.64
       text: META MARKET VALUE (OUR CALC.)
-      scale: 1.3
+      scale: 1.15
     - kind: sign
-      x: 700
+      x: 660
       y: 410
       text: $641.39 × 2.56BN SHARES (A+B)
       at:
         cue: a share at the close
       color: '#BBDEFB'
-      size: 30
+      size: 28
     - kind: letters
-      x: 1050
-      y: 620
+      x: 640
+      y: 560
       text: 'Q3 FREE CASH: −$2.1BN'
       at:
         cue: for the first time
-      size: 54
+      size: 50
       color: gold
     - kind: editionstamp
-      x: 1480
-      y: 450
+      x: 700
+      y: 720
       at:
         cue: a share at the close
       text: DATA AS OF NOV 10, 2026 CLOSE
       sub: 'LATEST REPORT: Q3 2026 (SEP 30, 2026)'
-      scale: 0.75
+      scale: 0.6
     - kind: chipbuddy
-      x: 480
+      x: 300
       y: 860
       at: 0.5
       mood: happy

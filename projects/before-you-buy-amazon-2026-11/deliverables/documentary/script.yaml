@@ -1,0 +1,284 @@
+# Before You Buy: Amazon, November 2026 edition. Series spec: docs/series/BEFORE_YOU_BUY.md.
+# Investor-level audience (no concept lessons). Every number through {{placeholders}} (sources.yaml). Our calculations said
+# as ours. Never fair value, cheap/expensive, buy/sell. Disclaimer after the hook. FCF is negative: three lenses, the gauge
+# on the labelled proxy (OCF minus D&A), and a steady-state lens. No implied Q4 capex figure. Anthropic/OpenAI named as filed.
+logline: Amazon is worth about three trillion dollars, and over the last twelve months its free cash flow was negative.
+  The bet is an AWS backlog that more than doubled. What does the price assume, what has to go right, and what could go
+  wrong? November 2026 edition.
+title: 'Before You Buy Amazon Stock, Watch This (Nov 2026)'
+segments:
+- id: h_open
+  chapter: Three trillion
+  narration: Amazon is worth {{cap}}. That's {{cap.price_spoken}} a share at the close on {{cap.date_spoken}}, times
+    {{cap.shares_spoken}} shares. And over the last twelve months, its free cash flow was {{lenses.fcf_spoken}}. Negative.
+  claims:
+  - cap
+  - lenses
+- id: h_twist
+  chapter: Three trillion
+  narration: The cash didn't disappear. Amazon poured {{lenses.capex_spoken}} into capex, mostly data centers for A W S. And
+    the bet behind it is a backlog. A W S says customers have committed {{aws}}, up from {{aws.from_spoken}} at the start of the year.
+  claims:
+  - lenses
+  - aws
+- id: h_question
+  chapter: Three trillion
+  narration: So what is this price actually betting on? What has to happen for all that spending to pay off? And what could
+    break the story?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: Three trillion
+  narration: In the next few minutes, we open the machine, follow the cash into the data centers and the debt, run the numbers
+    on what's priced in, and finish with the three numbers to watch when Amazon reports next.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode.
+- id: h_disclaimer
+  chapter: Three trillion
+  narration: Quick note. This isn't financial advice. Everything here comes from Amazon's own filings and our own math, dated,
+    so you can decide for yourself. And one disclosure. This episode was drafted with help from an A I made by Anthropic, a
+    company that Amazon has invested in, and that appears in these filings.
+  claims: []
+  analysis: true
+  source_note: Series disclaimer plus the drafting-AI disclosure (required after the hook).
+- id: m1_card
+  chapter: The machine
+  narration: ''
+  claims: []
+- id: m1_machine
+  chapter: The machine
+  narration: Over the last twelve months, Amazon sold {{seg}} worth of stuff and services. The stores in North America ran at
+    an operating margin of {{seg.na_margin_spoken}}. International, about {{seg.intl_margin_spoken}}. Advertising brought in
+    {{seg.ads_spoken}}. But the profit engine is somewhere else.
+  claims:
+  - seg
+- id: m1_aws
+  chapter: The machine
+  narration: It's A W S, the cloud. It made {{seg.aws_spoken}}, only {{seg.aws_share_spoken}} of sales, but {{seg.oi_share_spoken}}
+    of all operating income, at a margin of {{seg.aws_margin_spoken}}. And in the September quarter, A W S grew {{aws.growth_spoken}},
+    its fastest growth in nearly five years.
+  claims:
+  - seg
+  - aws
+- id: m1_backlog
+  chapter: The machine
+  narration: The backlog is the headline. {{aws}} of commitments, with an average remaining life of {{aws.years_spoken}}. Two
+    expansions are named in the filing. OpenAI added a hundred billion dollars over eight years, and Anthropic added more than
+    a hundred billion over ten. Amazon doesn't say what share of the total they are.
+  claims:
+  - aws
+- id: m1_draw
+  chapter: The machine
+  narration: Let me draw the machine. Here are the stores, huge but thin margin. Here is A W S, small in sales but carrying the
+    profit. Here is the backlog, flowing into A W S. And this arrow is the one that matters most right now, the capex it takes
+    to serve that backlog.
+  claims:
+  - seg
+  - aws
+  analysis: true
+  source_note: Diagram of the segments, backlog and capex (release, 10-Q).
+- id: m1_transition
+  chapter: The machine
+  narration: A machine that profitable should throw off cash. So why is free cash flow below zero?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: The cash
+  narration: ''
+  claims: []
+- id: m2_cash
+  chapter: The cash
+  narration: Operating cash flow over the last twelve months was {{lenses.ocf_spoken}}. Net income was {{lenses.ni_spoken}},
+    but about {{lenses.gains_spoken}} of that came from marking up stakes, mostly in Anthropic, on paper. Capex took {{lenses.capex_spoken}}.
+    So free cash flow came out at {{lenses.fcf_spoken}}.
+  claims:
+  - lenses
+- id: m2_debt
+  chapter: The cash
+  narration: To fill the gap, Amazon borrowed. Long-term debt went from {{cash.debt_from_spoken}} at the end of last year to {{cash}},
+    in just nine months. And there are no buybacks and no dividend. The share count grew {{cash.shares_growth_spoken}} in a year,
+    from stock paid to employees.
+  claims:
+  - cash
+- id: m2_stakes
+  chapter: The cash
+  narration: Amazon also wrote big checks to A I labs. This year it put {{cash.openai_spoken}} into OpenAI preferred stock and
+    {{cash.anth_spoken}} into Anthropic. In total, its stakes and convertible investments are carried at {{cash.invest_spoken}}.
+    Those labs are also among the A W S customers behind the backlog. Investor and supplier at the same time.
+  claims:
+  - cash
+  - aws
+- id: m2_returns
+  chapter: The cash
+  narration: And the company says the spending isn't done. It expects cash capex this year of {{guide.capex_spoken}}, and it says
+    capex will meaningfully increase again in twenty twenty-seven.
+  claims:
+  - guide
+- id: m2_draw
+  chapter: The cash
+  narration: Let me draw where twelve months of cash went. Here is the operating cash bar. Here is the capex bar, taller than
+    the cash. Here is what's left, below zero. And here is the new debt that filled the hole.
+  claims:
+  - lenses
+  - cash
+  analysis: true
+  source_note: Bar sketch of TTM cash uses and new debt (10-Q; our calc.).
+- id: m2_transition
+  chapter: The cash
+  narration: Which brings us to the big question. At three trillion dollars, what are you paying for?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: What's priced in
+  narration: ''
+  claims: []
+- id: m3_lenses
+  chapter: What's priced in
+  narration: Three quick lenses first, all our math on the last twelve months. Price to earnings, {{lenses}}, but take out the
+    paper gains and it's closer to {{lenses.exgains_spoken}}. Free cash flow yield, below zero, so it tells us nothing. Operating
+    cash flow yield, {{lenses.ocfy_spoken}}.
+  claims:
+  - lenses
+- id: m3_proxy
+  chapter: What's priced in
+  narration: So for a company in a building spree, we use a proxy. We take operating cash and subtract depreciation and
+    amortization, about {{proxy.dep_spoken}} a year, as a rough stand-in for the spending needed just to keep things running.
+    That leaves {{proxy}}, a yield of {{proxy.yield_spoken}}. It's a proxy, and it assumes capex eventually falls back.
+  claims:
+  - proxy
+- id: m3_gauge
+  chapter: What's priced in
+  narration: Now let's run it backwards. What growth in that cash, for ten years, makes today's price work, before slowing to
+    three percent? With an eight percent discount rate, {{rdcf}}. With ten percent, {{rdcf.high_spoken}}. On actual free cash
+    flow, the math doesn't even start, because it's negative.
+  claims:
+  - rdcf
+- id: m3_steady
+  chapter: What's priced in
+  narration: So here's one more lens, our rough illustration. If Amazon were a steady business growing three percent a year from
+    here, the price would need free cash flow of about {{rdcf.need_low_spoken}} to {{rdcf.need_high_spoken}} a year. Today it's
+    {{lenses.fcf_spoken}}. That gap is the whole bet.
+  claims:
+  - rdcf
+  - lenses
+- id: m3_draw
+  chapter: What's priced in
+  narration: Let me draw the gap. Here is free cash flow today, below the line. Here is what the price needs at the lower rate.
+    And here it is at the higher rate. The difference is what the backlog and the data centers have to deliver.
+  claims:
+  - rdcf
+  analysis: true
+  source_note: Bar sketch of today's FCF vs the steady-state need (our calc.).
+- id: m3_transition
+  chapter: What's priced in
+  narration: So what has to go right?
+  claims: []
+- id: m4_card
+  chapter: What has to happen
+  narration: ''
+  claims: []
+- id: m4_aws
+  chapter: What has to happen
+  narration: Number one, the backlog converts. {{aws}} of commitments has to turn into revenue over the next six years. The
+    C E O says A W S is projected to grow {{guide.aws_claim_spoken}} in both twenty twenty-seven and twenty twenty-eight. That's
+    his projection, not ours.
+  claims:
+  - aws
+  - guide
+  analysis: true
+  source_note: Driver tied to the backlog and the CEO's stated projection.
+- id: m4_margin
+  chapter: What has to happen
+  narration: Number two, A W S margins hold while depreciation ramps. The margin was close to thirty-nine percent last quarter.
+    But depreciation and amortization is already {{proxy.dep_spoken}} a year, and every new data center adds to it.
+  claims:
+  - proxy
+  analysis: true
+  source_note: Driver tied to the AWS margin and D&A.
+- id: m4_retail
+  chapter: What has to happen
+  narration: Number three, the stores keep getting more profitable. Amazon guided fourth quarter operating income of {{guide}},
+    and sales {{guide.sales_spoken}}. This year, operating income beat the top of its own range every single quarter.
+  claims:
+  - guide
+  analysis: true
+  source_note: Driver tied to the Q4 guidance and the 2026 track record.
+- id: m4_capex
+  chapter: What has to happen
+  narration: And number four, capex peaks and free cash flow turns positive. Until then, the gap is filled with debt. The price
+    needs that to change within a few years, not a decade.
+  claims:
+  - cash
+  analysis: true
+  source_note: Driver tied to the cash figures.
+- id: m4_transition
+  chapter: What has to happen
+  narration: Now the other side of the scale.
+  claims: []
+- id: m5_card
+  chapter: Risks and upside
+  narration: ''
+  claims: []
+- id: m5_capacity
+  chapter: Risks and upside
+  narration: Risk one is the build-out itself. Amazon's own filing warns that misjudging demand can leave too much data center
+    capacity and lead to impairment charges. It also says its A I investments may not earn enough to recoup the money. And it
+    has {{risks}} of commitments already signed.
+  claims:
+  - risks
+- id: m5_circular
+  chapter: Risks and upside
+  narration: Risk two is the loop. Amazon is an investor in the same A I labs that are big A W S customers. Their stakes are
+    valued with models, and the filing admits private valuations are inherently complex. If those labs stumble, it hits the
+    backlog and the stakes at the same time.
+  claims:
+  - cash
+  - risks
+- id: m5_legal
+  chapter: Risks and upside
+  narration: Risk three is regulators. In August, the F T C and twenty-two states sued over how Amazon prices its sponsored ad
+    auctions. Older antitrust cases seek billions of dollars in damages. And last year's Prime settlement cost {{legal}}.
+  claims:
+  - legal
+- id: m5_upside
+  chapter: Risks and upside
+  narration: And the upside the price might not fully include. The C E O says Amazon may have {{upside}} trillion dollar revenue
+    businesses in the next five to ten years. Its stakes in Anthropic and OpenAI are marked at about {{upside.stakes_spoken}}. Those
+    are marks and claims, not cash, so we won't count them as money in the bank.
+  claims:
+  - upside
+  analysis: true
+  source_note: Company-stated upside; marks are not cash.
+- id: m5_transition
+  chapter: Risks and upside
+  narration: So, what should you watch?
+  claims: []
+- id: payoff
+  chapter: The scorecard
+  narration: Here's the scorecard for the next report, expected in {{watch}}, our estimate. One, A W S growth and margin, and
+    the backlog against {{aws}}. Two, fourth quarter operating income against the guide. Three, capex and trailing free cash flow,
+    now {{lenses.fcf_spoken}}, plus the outlook for twenty twenty-seven. If those hold up, the story the price is telling keeps
+    holding up. If they crack, the debt gets much harder to defend.
+  claims:
+  - watch
+  - aws
+  - lenses
+  analysis: true
+  source_note: Scorecard (company figures; next date our estimate).
+- id: payoff2
+  chapter: The scorecard
+  narration: That's Amazon, November twenty twenty-six edition. We'll update it after every report, with new numbers and the
+    same three questions. What's priced in, what has to happen, and what could go wrong.
+  claims: []
+  analysis: true
+  source_note: Series sign-off.
+- id: teaser
+  chapter: The scorecard
+  narration: Next in the series, another giant of the stock market, opened up the same way. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser.

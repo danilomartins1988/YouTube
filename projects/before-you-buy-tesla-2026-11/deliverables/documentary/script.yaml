@@ -1,0 +1,284 @@
+# Before You Buy: Tesla, November 2026 edition. Series spec: docs/series/BEFORE_YOU_BUY.md.
+# Investor-level audience (no concept lessons). Every number through {{placeholders}} (sources.yaml). Our calculations said
+# as ours. Never fair value, cheap/expensive, buy/sell. Disclaimer after the hook. Profit is tiny: the reverse calculation
+# breaks (shown to say so); sales and steady-state framing instead. Company plans attributed; no forecasts of ours.
+logline: Tesla is worth about one and a half trillion dollars on about three billion dollars of yearly profit, and a third
+  of its operating profit came from selling credits to other carmakers. What does the price assume, what has to go right,
+  and what could go wrong? November 2026 edition.
+title: 'Before You Buy Tesla Stock, Watch This (Nov 2026)'
+segments:
+- id: h_open
+  chapter: One and a half trillion
+  narration: Tesla is worth {{cap}}. That's {{cap.price_spoken}} a share at the close on {{cap.date_spoken}}, times {{cap.shares_spoken}}
+    shares. And over the last twelve months, it earned {{lenses.ni_spoken}}. By our math, that's {{lenses}} its profit.
+  claims:
+  - cap
+  - lenses
+- id: h_twist
+  chapter: One and a half trillion
+  narration: And here's the twist. About {{credits}} of Tesla's operating profit over those twelve months came from regulatory
+    credits, sold to other carmakers that need them. Not from building cars. So the price is clearly not about today's profit.
+  claims:
+  - credits
+- id: h_question
+  chapter: One and a half trillion
+  narration: So what is this price actually betting on? What has to happen for it to make sense? And what could break the
+    story?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: One and a half trillion
+  narration: In the next few minutes, we open the machine, follow the cash, run the numbers on what's priced in, and finish
+    with the three numbers to watch when Tesla reports next.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode.
+- id: h_disclaimer
+  chapter: One and a half trillion
+  narration: Quick note. This isn't financial advice. Everything here comes from Tesla's own filings and our own math, dated,
+    so you can decide for yourself.
+  claims: []
+  analysis: true
+  source_note: Series disclaimer (required after the hook).
+- id: m1_card
+  chapter: The machine
+  narration: ''
+  claims: []
+- id: m1_machine
+  chapter: The machine
+  narration: In twenty twenty-five, Tesla brought in {{seg}}. Car sales were {{seg.auto_spoken}}, down from {{seg.auto_from_spoken}}
+    two years earlier. Deliveries fell too, to {{seg.deliv25_spoken}}. Over the last twelve months, they recovered to
+    {{seg.deliv_spoken}}, and two models, the Model Three and the Model Y, were {{seg.my_spoken}} of deliveries last quarter.
+  claims:
+  - seg
+- id: m1_credits
+  chapter: The machine
+  narration: Then there are the credits. Over the last twelve months they brought in {{credits.credits_spoken}}, almost pure
+    profit. But that's shrinking. Last quarter Tesla reversed {{credits.reversal_spoken}} of credit revenue, and it says new
+    government actions have restricted some credit programs.
+  claims:
+  - credits
+- id: m1_energy
+  chapter: The machine
+  narration: The quiet engine is energy. Batteries for homes and power grids brought in {{seg.energy_spoken}} last year, up from
+    {{seg.energy_from_spoken}} in twenty twenty-three, at a gross margin of {{seg.energy_margin_spoken}}. That's a better margin than
+    the cars.
+  claims:
+  - seg
+- id: m1_draw
+  chapter: The machine
+  narration: Let me draw the machine. Here are the cars, the big engine with thin margins. Here is energy, smaller but more
+    profitable. Here are the credits, shrinking. And this arrow is the one the price is really about, the future businesses
+    Tesla talks about, that don't have revenue numbers yet.
+  claims:
+  - seg
+  - credits
+  analysis: true
+  source_note: Diagram of the revenue lines (10-K, update deck).
+- id: m1_transition
+  chapter: The machine
+  narration: So how much cash does all of that actually throw off?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: The cash
+  narration: ''
+  claims: []
+- id: m2_cash
+  chapter: The cash
+  narration: Over the last twelve months, operating cash flow was {{lenses.ocf_spoken}}. Capex took {{lenses.capex_spoken}}. Free
+    cash flow was {{lenses.fcf_spoken}}. Operating profit was {{lenses.oi_spoken}}, an operating margin of {{lenses.margin_spoken}}
+    on {{lenses.rev_spoken}} of revenue.
+  claims:
+  - lenses
+- id: m2_capex
+  chapter: The cash
+  narration: And the spending is going up. Tesla expects capex {{cash}} this year, for what it calls super intelligence, meaning
+    computing infrastructure and data centers. It warns that heavy capex will need funding beyond its operating cash. It signed
+    {{cash.lines_spoken}} of new credit lines, but says it doesn't plan to draw on them this year.
+  claims:
+  - cash
+- id: m2_shares
+  chapter: The cash
+  narration: There's a catch in the share count too. Since January of last year, shares outstanding rose {{cash.shares_growth_spoken}},
+    almost all from the C E O's pay awards, many of them not yet earned. Count only diluted shares and the value is closer to
+    {{cap.diluted_spoken}}.
+  claims:
+  - cash
+  - cap
+- id: m2_returns
+  chapter: The cash
+  narration: On the plus side, the balance sheet is strong. Tesla holds {{cash.cash_spoken}} in cash and short-term investments,
+    against about {{cash.debt_spoken}} of debt. It pays no dividend and buys back no stock.
+  claims:
+  - cash
+- id: m2_draw
+  chapter: The cash
+  narration: Let me draw twelve months of cash. Here is operating cash. Here is capex, taking most of it. And here is what's left,
+    the free cash flow. A thin sliver, for a company valued in the trillions.
+  claims:
+  - lenses
+  analysis: true
+  source_note: Bar sketch of TTM cash (update deck; our calc.).
+- id: m2_transition
+  chapter: The cash
+  narration: Which brings us to the big question. At one and a half trillion dollars, what are you paying for?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: What's priced in
+  narration: ''
+  claims: []
+- id: m3_lenses
+  chapter: What's priced in
+  narration: Three quick lenses first, all our math on the last twelve months. Price to earnings, {{lenses}}. Free cash flow
+    yield, {{lenses.fcfy_spoken}}. Price to sales, {{lenses.ps_spoken}}. For a car company, all three are far outside the
+    normal range.
+  claims:
+  - lenses
+- id: m3_breaks
+  chapter: What's priced in
+  narration: Our usual reverse math breaks here, and we want to show you why. To justify the price from today's free cash
+    flow, that cash would need to grow {{rdcf}} with an eight percent discount rate, or {{rdcf.high_spoken}} at ten, every year
+    for a decade. At a yield this small, tiny changes swing the answer, so it isn't a useful number.
+  claims:
+  - rdcf
+- id: m3_steady
+  chapter: What's priced in
+  narration: So here's a simpler lens, our rough illustration. For the price to work as a steady business growing three percent
+    a year from here, Tesla would need free cash flow of about {{rdcf.need_low_spoken}} to {{rdcf.need_high_spoken}} a year.
+    That's {{rdcf.mult_low_spoken}} to {{rdcf.mult_high_spoken}} times today, or {{rdcf.revshare_low_spoken}} to
+    {{rdcf.revshare_high_spoken}} of today's entire revenue.
+  claims:
+  - rdcf
+- id: m3_scenario
+  chapter: What's priced in
+  narration: In other words, the price is not about cars at today's margins. It's a bet on businesses that barely show up in
+    the numbers yet. Robotaxis, the self-driving software, energy storage and robots. Even the C E O's pay package starts paying
+    out only above {{award}} of market value, and today's value is below that first milestone. Those are pay terms, not forecasts.
+  claims:
+  - award
+  analysis: true
+  source_note: Framing from the steady-state gap and the pay-package terms (10-Q).
+- id: m3_draw
+  chapter: What's priced in
+  narration: Let me draw the gap. Here is free cash flow today. Here is what the price needs at the lower rate. And here it is at
+    the higher rate. Everything between those bars has to come from the new businesses.
+  claims:
+  - rdcf
+  analysis: true
+  source_note: Bar sketch of today's FCF vs the steady-state need (our calc.).
+- id: m3_transition
+  chapter: What's priced in
+  narration: So what has to go right?
+  claims: []
+- id: m4_card
+  chapter: What has to happen
+  narration: ''
+  claims: []
+- id: m4_robotaxi
+  chapter: What has to happen
+  narration: Number one, autonomy becomes revenue. Tesla says it started Robotaxi rides with Cybercabs in Austin in September,
+    and that its fleet passed {{plans.miles_spoken}} unsupervised miles. Active self-driving subscriptions reached {{plans}}, up from
+    {{plans.fsd_from_spoken}} a year earlier. Tesla doesn't report Robotaxi revenue yet.
+  claims:
+  - plans
+  analysis: true
+  source_note: Driver tied to company statements (update deck).
+- id: m4_energy
+  chapter: What has to happen
+  narration: Number two, energy keeps growing at about a thirty percent margin. Tesla says its battery business has its highest
+    ever order rate and backlog, and a new Texas factory started production with planned capacity of {{plans.mwh_spoken}}.
+  claims:
+  - plans
+  - seg
+  analysis: true
+  source_note: Driver tied to company statements and the energy margin.
+- id: m4_optimus
+  chapter: What has to happen
+  narration: Number three, the robots become a product. Tesla says Optimus production began on high volume lines in Fremont.
+    There are no revenue figures. One of the pay package milestones is a million robots delivered.
+  claims:
+  - plans
+  - award
+  analysis: true
+  source_note: Driver tied to company statements and the award terms.
+- id: m4_cars
+  chapter: What has to happen
+  narration: And number four, the car business recovers without the credits. Deliveries went from {{seg.deliv24_spoken}} in
+    twenty twenty-four to {{seg.deliv25_spoken}} last year. Tesla says batteries are now the limit on car volumes, and that its
+    order backlog for cars is the largest in four years. Margins have to hold as the credits fade, because the price can't
+    lean on them anymore.
+  claims:
+  - plans
+  - credits
+  - seg
+  analysis: true
+  source_note: Driver tied to company statements.
+- id: m4_transition
+  chapter: What has to happen
+  narration: Now the other side of the scale.
+  claims: []
+- id: m5_card
+  chapter: Risks and upside
+  narration: ''
+  claims: []
+- id: m5_key
+  chapter: Risks and upside
+  narration: Risk one is one person. Tesla's own filing says it is {{risks}} on Elon Musk, who doesn't devote his full time to
+    Tesla and also runs other companies. It warns that if he pledged shares for loans, he might be forced to sell. And it says
+    the pay package could pull focus toward specific technologies.
+  claims:
+  - risks
+- id: m5_demand
+  chapter: Risks and upside
+  narration: Risk two is demand and policy. Growth depends on people buying electric cars and adopting self-driving. Competition
+    keeps growing. Tax credits have been repealed or restricted, and tariffs hit the energy business harder than the cars.
+  claims:
+  - risks
+- id: m5_legal
+  chapter: Risks and upside
+  narration: Risk three is the courts and regulators. In one Autopilot case, a jury awarded {{legal.comp_spoken}} in damages,
+    plus {{legal}} in punitive damages, and Tesla is appealing. Regulators are asking about driver assistance and Robotaxi. No
+    agency has found wrongdoing, and no amounts are disclosed.
+  claims:
+  - legal
+- id: m5_upside
+  chapter: Risks and upside
+  narration: And the upside the price might not fully include. Tesla says the Semi is in volume production, Cybercab capacity is
+    over a hundred and twenty-five thousand a year, and its self-driving software is now offered in {{upside}}. It also owns a
+    stake in SpaceX, which went public this year. None of it comes with a revenue figure, so we won't put one on it.
+  claims:
+  - upside
+  analysis: true
+  source_note: Company-stated upside; unsized by rule.
+- id: m5_transition
+  chapter: Risks and upside
+  narration: So, what should you watch?
+  claims: []
+- id: payoff
+  chapter: The scorecard
+  narration: Here's the scorecard for the next report, expected in {{watch}}, our estimate. One, fourth quarter deliveries, against
+    {{watch.deliv_q4_spoken}} a year earlier. Two, capex and free cash flow, as spending passes twenty billion. Three, regulatory
+    credits and the car margin without them. If those hold up, the story the price is telling keeps holding up. If they crack,
+    the bet on the future gets much harder to defend.
+  claims:
+  - watch
+  analysis: true
+  source_note: Scorecard (company figures; next date our estimate).
+- id: payoff2
+  chapter: The scorecard
+  narration: That's Tesla, November twenty twenty-six edition. We'll update it after every report, with new numbers and the same
+    three questions. What's priced in, what has to happen, and what could go wrong.
+  claims: []
+  analysis: true
+  source_note: Series sign-off.
+- id: teaser
+  chapter: The scorecard
+  narration: Next in the series, another giant of the stock market, opened up the same way. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser.
