@@ -760,3 +760,22 @@ Watch the full story: "America's $1 Trillion of Gold Is Booked at $11 Billion" o
 ```
 gold, Fort Knox, gold reserves, US Treasury, gold price, Federal Reserve, central banks, finance explained, shorts, economics explained, The Hidden Economics
 ```
+
+## 46-overdrafts
+
+**Title**
+```
+A $35 Fee for a $24 Purchase: How Overdrafts Still Pay #shorts
+```
+**Description**
+```
+Thirty-five dollars. That is the typical overdraft fee at America's largest banks. And banks over $1 billion in assets still collected $5.83 billion in these fees in 2023 (CFPB).
+
+Watch the full story: "Why Banks Still Make Billions From Overdrafts" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #banking #overdraft #money
+```
+**Tags**
+```
+overdraft fees, banks, NSF fees, CFPB, checking account, bank fees, personal finance, shorts, economics explained, The Hidden Economics
+```

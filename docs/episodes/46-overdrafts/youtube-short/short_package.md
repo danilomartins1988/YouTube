@@ -23,7 +23,7 @@ Watch the full story: "Why Banks Still Make Billions From Overdrafts" on The Hid
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+overdraft fees, banks, NSF fees, CFPB, checking account, bank fees, Congressional Review Act, personal finance, economics, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook
