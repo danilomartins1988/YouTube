@@ -137,7 +137,7 @@ export const presenterPose = (p: AnimatedPresenterProps): Pose & {handTarget: Ve
     } else if (a.kind === 'explain' && t >= a.at && t <= a.at + a.dur) {
       const u = win(t, a.at, a.dur), env = Math.sin(Math.PI * clamp(u * 1.15));
       const side = -faceDefault;
-      backHand = [x + side * (95 + 25 * Math.sin(t * 5.2)) * S, floor - (300 + 40 * env + 18 * Math.cos(t * 4.1)) * S];
+      backHand = [x + side * (95 + 14 * Math.sin(t * 2.1)) * S, floor - (300 + 40 * env + 10 * Math.cos(t * 1.7)) * S];   // v3.1: slow, calm gesture
       talking = Math.max(talking, 0.6 + 0.4 * Math.abs(Math.sin(t * 17)));
     } else if (a.kind === 'react') {
       const d = a.dur ?? 0.9, u = win(t, a.at, d);

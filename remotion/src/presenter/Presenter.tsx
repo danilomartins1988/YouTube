@@ -109,7 +109,7 @@ export const Character: React.FC<{pose: Pose}> = ({pose}) => {
     frontTarget = [frontTarget[0] - (v[0] / n) * 36, frontTarget[1] - (v[1] / n) * 36];
   }
   const backTarget: Pt = pose.backHand ? toLocal(pose.backHand)
-    : [-62 - Math.sin(walk) * 30 * moving, -175 + (talking > 0.5 && !front ? -40 * Math.sin(talking * 3) : 0)];
+    : [-62 - Math.sin(walk) * 30 * moving, -175];   // v3.1: no talk-driven jitter (the mouth level flickers every frame)
   const armF = ik(shR, frontTarget, front ? 1 : -1);
   const armB = ik(shL, backTarget, -1);
   const P = (p: Pt) => W(p[0], p[1]).join(',');
