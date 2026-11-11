@@ -2069,7 +2069,7 @@ const contract: ItemFn = (a, {t}, i) => {
 
 /** Coins arc from `from` to `to` (a stream), from at until `until`. */
 const coins: ItemFn = (a, {t}, i) => {
-  const at = a.at ?? 0, until = a.until ?? 1e9, rate = a.rate ?? 4, fr: [number, number] = a.from, to: [number, number] = a.to;
+  const at = a.at ?? 0, until = a.until ?? 1e9, rate = a.rate ?? 4, fr: [number, number] = a.from ?? [Number(a.x ?? 0), Number(a.y ?? 0)], to: [number, number] = a.to ?? [Number(a.x ?? 0) + 400, Number(a.y ?? 0)];   // accept x/y as the start point
   if (t < at) return null;
   const n = Math.ceil((Math.min(t, until) - at) * rate), out: React.ReactNode[] = [];
   for (let k = Math.max(0, n - 12); k < n; k++) {
