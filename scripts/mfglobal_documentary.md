@@ -1,0 +1,255 @@
+# MF Global: The $1.6 Billion That Vanished
+
+_In October 2011, a Wall Street firm collapsed, and about 1.6 billion dollars of its customers' money was missing. Much of it belonged to farmers who had used the firm to protect their crops. How a bet on European bonds broke the one rule of the futures business, and how the money came back._
+
+## h_open - One point six billion
+
+One point six billion dollars. That is how much customer money was missing when the brokerage firm MF Global collapsed in October twenty eleven, according to the trustee who took over the firm.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+
+## h_twist - One point six billion
+
+This was not the firm's own money. It belonged to its customers. Among them were farm cooperatives representing up to thirty-five thousand farmers, who used the firm to protect themselves against swings in crop prices.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+
+## h_question - One point six billion
+
+So how does customer money simply vanish from a regulated firm? And did those farmers ever get it back?
+
+> Contains editorial interpretation (marked analysis).  
+> Hook question built from the sourced facts.  
+
+## h_promise - One point six billion
+
+By the end of this video, you will know what a futures broker does with your money, the bet that sank MF Global, what happened in its last week, and how long it took to find the money.
+
+> Contains editorial interpretation (marked analysis).  
+> Promise of the episode (hook rule).  
+
+## m1_card - The firm
+
+
+
+
+## m1_broker - The firm
+
+MF Global was a futures broker. Farmers, ranchers, traders and companies used it to buy and sell futures contracts. A farmer could lock in a price for corn months before the harvest. A cattle rancher could protect against a fall in beef prices. That is called hedging.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+> Contains editorial interpretation (marked analysis).  
+> Explanation of futures hedging (commentary; customer types from the House report).  
+
+## m1_rule - The firm
+
+To trade, customers leave money with the broker as a deposit. And here is the most important rule in the whole business. That customer money must be kept separate from the firm's own money. The law says it shall not be commingled. It sits in segregated accounts, like a glass box the firm is not allowed to open for itself.
+
+> `rules` [source_located] Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals. (sources: senate, cftc)  
+
+## m1_trust - The firm
+
+Customers trusted that rule completely. One farmer later told the United States Senate that his broker had assured him that no customer had ever lost a penny in segregated accounts. He had about two hundred and fifty-three thousand dollars in his account when it was frozen.
+
+> `rules` [source_located] Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals. (sources: senate, cftc)  
+
+## m1_size - The firm
+
+The firm was big. According to a congressional report, it had about thirty-six thousand futures customers and more than three hundred securities customers when it fell. A senator later described its collapse as the eighth largest bankruptcy in the history of the United States.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+> `rules` [source_located] Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals. (sources: senate, cftc)  
+
+## m1_draw - The firm
+
+Let me draw the glass box. Here is the firm, with its own money on one side. Here is the customer box, locked, on the other. Farmers put their deposits into the box. The firm may hold the box, but it may not use what is inside to pay its own bills. That line in the middle is the whole system.
+
+> `rules` [source_located] Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals. (sources: senate, cftc)  
+> Contains editorial interpretation (marked analysis).  
+> Diagram of customer fund segregation (CEA section 4d).  
+
+## m1_transition - The firm
+
+In twenty ten, the firm got a new chief executive, and a new strategy.
+
+> `boss` [source_located] Corzine: Chairman and CEO of MF Global Holdings from March 2010. CFTC (Jan 5, 2017): Corzine to pay 'a $5 million civil monetary penalty' and 'will never register with the CFTC in any capacity' or act as a principal, officer, director or employee of a futures broker; the firm used 'nearly one billion dollars' of segregated customer funds; former assistant treasurer ordered to pay $500,000. Settled without admitting or denying; not criminally charged. (sources: cftc)  
+
+## m2_card - The bet
+
+
+
+
+## m2_ceo - The bet
+
+Jon Corzine became chairman and chief executive of MF Global's parent company in March twenty ten. Over the next year and a half, the firm built up a very large trading position with its own money, on top of handling trades for its customers.
+
+> `boss` [source_located] Corzine: Chairman and CEO of MF Global Holdings from March 2010. CFTC (Jan 5, 2017): Corzine to pay 'a $5 million civil monetary penalty' and 'will never register with the CFTC in any capacity' or act as a principal, officer, director or employee of a futures broker; the firm used 'nearly one billion dollars' of segregated customer funds; former assistant treasurer ordered to pay $500,000. Settled without admitting or denying; not criminally charged. (sources: cftc)  
+> `bet` [source_located] MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q. (sources: sec, house, senate)  
+
+## m2_bonds - The bet
+
+The biggest was a bet on European government bonds. In its last earnings release, the firm disclosed a position of six point three billion dollars in short-term bonds of Belgium, Italy, Spain, Portugal and Ireland. In twenty eleven, those were exactly the countries at the center of Europe's debt crisis.
+
+> `bet` [source_located] MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q. (sources: sec, house, senate)  
+
+## m2_repo - The bet
+
+The trades used a structure called repo to maturity. The firm bought the bonds, then borrowed against them until the day they matured. Under the accounting rules of the time, these trades were treated as sales. So the bonds did not appear on the firm's balance sheet. But as the industry regulator later told Congress, the firm was still exposed to the risk.
+
+> `bet` [source_located] MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q. (sources: sec, house, senate)  
+
+## m2_capital - The bet
+
+That regulator, FINRA, decided the firm needed to hold more capital against those bonds. According to the congressional report, MF Global resisted throughout the summer of twenty eleven, then gave in at the end of August. The extra charges came to about two hundred and fifty-seven million dollars. It had to report a capital shortfall for July. The news was in a public filing in September, but few people noticed.
+
+> `bet` [source_located] MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q. (sources: sec, house, senate)  
+
+## m2_draw - The bet
+
+Let me draw the invisible bet. Here is the balance sheet, what everyone could see. Here are six point three billion dollars of bonds, moved off the page by the accounting. And here is the risk, still tied to the firm by a thin string. When Europe shook, the string pulled.
+
+> `bet` [source_located] MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q. (sources: sec, house, senate)  
+> Contains editorial interpretation (marked analysis).  
+> Diagram of repo-to-maturity derecognition (FINRA and House report descriptions).  
+
+## m2_transition - The bet
+
+In October twenty eleven, that string began to pull very hard.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+
+## m3_card - The last week
+
+
+
+
+## m3_downgrade - The last week
+
+On Monday, October twenty-fourth, the rating agency Moody's cut MF Global's credit rating to one notch above junk. The next day, the firm reported a quarterly loss of one hundred and ninety-one point six million dollars, and disclosed the full size of its European bet.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+> `bet` [source_located] MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q. (sources: sec, house, senate)  
+
+## m3_run - The last week
+
+Confidence collapsed. On Thursday, October twenty-seventh, Moody's and Fitch both cut the firm's rating to junk. A broker that lives on trust was losing it by the hour.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+
+## m3_glass - The last week
+
+In those final days, according to the regulator, the firm used customer money that was supposed to stay in the glass box. The Commodity Futures Trading Commission later said that nearly one billion dollars of segregated customer funds had been unlawfully used.
+
+> `boss` [source_located] Corzine: Chairman and CEO of MF Global Holdings from March 2010. CFTC (Jan 5, 2017): Corzine to pay 'a $5 million civil monetary penalty' and 'will never register with the CFTC in any capacity' or act as a principal, officer, director or employee of a futures broker; the firm used 'nearly one billion dollars' of segregated customer funds; former assistant treasurer ordered to pay $500,000. Settled without admitting or denying; not criminally charged. (sources: cftc)  
+
+## m3_fall - The last week
+
+On October thirty-first, twenty eleven, the parent company filed for bankruptcy, and a trustee began to liquidate the brokerage. When the trustee opened the books, the customer accounts did not add up.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+
+## m3_draw - The last week
+
+Let me draw the last week. Monday, the downgrade. Tuesday, the loss and the bet revealed. Thursday, junk. Monday, bankruptcy. Seven days, from the first downgrade to a firm that could not find its customers' money.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+> `bet` [source_located] MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q. (sources: sec, house, senate)  
+> Contains editorial interpretation (marked analysis).  
+> Timeline of the sourced dates.  
+
+## m3_transition - The last week
+
+The next question was simple, and terrifying for the customers. Where did the money go?
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+
+## m4_card - The missing money
+
+
+
+
+## m4_estimates - The missing money
+
+The answer came slowly. In November, the trustee said the shortfall could be as much as one point two billion dollars or more. By June twenty twelve, the estimate was about one point six billion dollars. About about nine hundred million dollars in American accounts, and about about seven hundred million dollars linked to customers trading on foreign exchanges.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+
+## m4_farmer - The missing money
+
+For the customers, the frozen money was not abstract. The farmer who testified to the Senate said he was forced to close his hedges, which cost him well over an additional one hundred thousand dollars. His words were blunt. Commingling money is stealing money.
+
+> `rules` [source_located] Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals. (sources: senate, cftc)  
+
+## m4_senate - The missing money
+
+At the same hearing, a farm cooperative leader asked Congress to ensure the sanctity of segregated funds. And a senator called the collapse a violation of the most sacred rule of the futures industry.
+
+> `rules` [source_located] Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals. (sources: senate, cftc)  
+
+## m4_draw - The missing money
+
+Let me draw the hole. Here is the glass box, as it should have been. Here is what the trustee found. A gap of about one point six billion dollars. On one side, the American accounts. On the other, the money tied to trades abroad. And thousands of customers waiting outside.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+> Contains editorial interpretation (marked analysis).  
+> Diagram of the trustee's shortfall split.  
+
+## m4_transition - The missing money
+
+Then came the long work of getting it back, and of deciding who would be held responsible.
+
+> `order` [source_located] CFTC (order entered Nov 8, 2013): MF Global Inc. to pay '$1.212 billion in restitution' plus a '$100 million civil monetary penalty', payable after customers are paid. CFTC (2017): 'restitution has been paid to satisfy all customer claims'. (sources: cftc)  
+
+## m5_card - The aftermath
+
+
+
+
+## m5_back - The aftermath
+
+Piece by piece, the trustee paid customers back in stages. By November twenty thirteen, the securities customers had their property back. By April twenty fourteen, he announced a final distribution. In total, about six point seven billion dollars had gone back to more than twenty-six thousand customers. In his words, they were made one hundred percent whole. The biggest group, about twenty-four thousand American futures customers, received about five point four billion dollars. It had taken about two and a half years.
+
+> `back` [source_located] SIPC (Nov 6, 2013): '100 percent of securities customers' property has already been returned'. Trustee final distribution (Apr 3, 2014; checks from Apr 4): $6.7bn in total to more than 26,000 customers; US futures 24,020 customers $5.4bn; foreign-exchange futures 2,047 customers $880M; securities 428 customers $376M; '100 percent whole'. (sources: trustee)  
+
+## m5_order - The aftermath
+
+In twenty thirteen, a federal court order required MF Global's brokerage to pay one point two one two billion dollars in restitution to customers, plus a one hundred million dollar penalty, to be paid only after the customers had been paid. The regulator later said restitution had been paid to satisfy all customer claims.
+
+> `order` [source_located] CFTC (order entered Nov 8, 2013): MF Global Inc. to pay '$1.212 billion in restitution' plus a '$100 million civil monetary penalty', payable after customers are paid. CFTC (2017): 'restitution has been paid to satisfy all customer claims'. (sources: cftc)  
+
+## m5_corzine - The aftermath
+
+And in January twenty seventeen, Jon Corzine settled the regulator's civil case. He agreed to pay a five million dollars civil penalty and never to register with the commission again. He settled without admitting or denying the charges, and he was not criminally charged.
+
+> `boss` [source_located] Corzine: Chairman and CEO of MF Global Holdings from March 2010. CFTC (Jan 5, 2017): Corzine to pay 'a $5 million civil monetary penalty' and 'will never register with the CFTC in any capacity' or act as a principal, officer, director or employee of a futures broker; the firm used 'nearly one billion dollars' of segregated customer funds; former assistant treasurer ordered to pay $500,000. Settled without admitting or denying; not criminally charged. (sources: cftc)  
+
+## m5_rules - The aftermath
+
+The rules changed too. In late twenty thirteen, the regulator approved new customer protections. Brokers must now report their segregated accounts every day, and large withdrawals of customer money need approval from senior management. The chairman of the commission called segregation the core foundation of the markets.
+
+> `rules` [source_located] Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals. (sources: senate, cftc)  
+
+## m5_draw - The aftermath
+
+Let me draw the repair. Here is the glass box again. Now add a camera, watching it every day. Now add a second key, held by a senior manager. And a phone line to the regulator. The box was always supposed to be locked. Now someone is watching the lock.
+
+> `rules` [source_located] Senate Agriculture hearing (Dec 13, 2011): farmer Dean Tofteland - $253,000 frozen; told 'no customer has ever lost a penny in segregated accounts'; 'forced to liquidate my hedges', costing 'well over an additional $100,000'; 'commingling money is stealing money'. C.J. Blew: 'We must ensure the sanctity of segregated funds.' Sen. Roberts: 'a violation of the most sacred rule of the futures industry'; 'the eighth largest bankruptcy in the history of the United States'. CEA 4d(a)(2): customer money 'shall not be commingled'. CFTC customer protection rules approved Oct 30, 2013 (78 FR 68505, effective Jan 13, 2014): residual interest, daily segregation reporting, senior approval for large withdrawals. (sources: senate, cftc)  
+> Contains editorial interpretation (marked analysis).  
+> Diagram of the 2013 customer protection rules.  
+
+## payoff - The lesson
+
+So how did one point six billion dollars vanish? A firm made a giant bet that its own balance sheet did not show, and when the bet turned against it, customer money that should never have been touched was used to keep it alive. The farmers got their money back, but only after years of waiting. The rule had been there all along. The lesson is that a rule only works if someone is checking it. Today, regulators look inside that glass box every single day. That is the real legacy of the money that vanished in October twenty eleven. For the farmers who waited two and a half years, the money came back. The trust took longer.
+
+> `gap` [source_located] House staff report: the collapse 'resulted in a $1.6 billion shortfall in customer funds'; about 36,000 futures customers and 318 securities customers, including 'farm co-operatives representing up to 35,000 farmers'. Trustee (Jun 4, 2012): 'approximately $1.6 billion' - about $900M in US domestic accounts and about $700M 'related to trades by customers on foreign exchanges'; earlier estimates 'as much as $1.2 billion or more' (Nov 21, 2011), 'not less than $1.2 billion' (Dec 23, 2011). House report: Oct 24, 2011 Moody's downgrade to 'Baa3', one notch above junk; Oct 27 'Moody's and Fitch both downgraded MF Global's credit rating to junk'. Filing: Oct 31, 2011 (Chapter 11 for the holding company; SIPC liquidation of MF Global Inc.). (sources: house, trustee, sec)  
+> `bet` [source_located] MF Global 8-K (Oct 25, 2011): 'net long position of $6.3 billion' in European sovereign debt (Belgium, Italy, Spain, Portugal, Ireland) 'financed to maturity (repo-to-maturity)'; quarterly loss $191.6M. House report: the bonds were 'derecognized', 'deemed to be sold'. FINRA (Dec 8, 2011): trades 'afforded sale treatment and therefore not recognized on the balance sheet' yet the firm 'remained subject to market and credit risk'. FINRA capital charge: resisted 'throughout the summer' 2011, conceded late August; ≈ $257M of haircuts; $150M net capital deficiency reported for July; public in the Sep 1 amended 10-Q. (sources: sec, house, senate)  
+> `back` [source_located] SIPC (Nov 6, 2013): '100 percent of securities customers' property has already been returned'. Trustee final distribution (Apr 3, 2014; checks from Apr 4): $6.7bn in total to more than 26,000 customers; US futures 24,020 customers $5.4bn; foreign-exchange futures 2,047 customers $880M; securities 428 customers $376M; '100 percent whole'. (sources: trustee)  
+> Contains editorial interpretation (marked analysis).  
+> Conclusion drawn from the sourced parts.  
+
+## teaser - The lesson
+
+Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+
+> Contains editorial interpretation (marked analysis).  
+> Generic teaser (channel rule).  
