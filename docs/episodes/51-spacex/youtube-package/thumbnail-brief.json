@@ -1,0 +1,334 @@
+{
+  "title": "How SpaceX Actually Makes Money",
+  "docs_dir": "docs/episodes/51-spacex",
+  "video": "output/spacex_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "How does a rocket company make its money, if the rockets lose money?",
+    "surprising_fact": "In Q3 2026 SpaceX's AI segment ($7.6bn) out-earned Starlink ($5.2bn); rockets came last (Q3 release)",
+    "subject": "a generic rocket",
+    "tone": "strategy",
+    "metaphor": "the rocket is the delivery truck"
+  },
+  "slug": "how-spacex-actually-makes-money",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "SPACEX",
+        "NOT ROCKETS"
+      ],
+      "claim_basis": "q3: Q3 2026 segment revenue Space $1.8bn < Connectivity $5.2bn < SI $7.6bn (Q3 release)",
+      "scene": {
+        "palette": {
+          "sky0": "#050A1C",
+          "sky1": "#16244A",
+          "haze": "#7DF9FF",
+          "key": "#E0F7FA",
+          "accent": "#FF7A1A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "rocket",
+          "x": 1480,
+          "y": 600,
+          "s": 0.8
+        },
+        "support": [],
+        "particles": {
+          "n": 80,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "SPACEX",
+          "x": 90,
+          "y": 572.2,
+          "size": 307.3,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FF7A1A"
+        },
+        {
+          "text": "NOT ROCKETS",
+          "x": 96,
+          "y": 710.2,
+          "size": 120,
+          "width": 844.8,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.56 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 333, 1270, 591), (96, 617, 941, 717)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.090",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 43",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-one-company-made-diamonds-a-symbol-of-love (distance 0.49)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "q3: Q3 2026 segment revenue Space $1.8bn < Connectivity $5.2bn < SI $7.6bn (Q3 release)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.55,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-one-company-made-diamonds-a-symbol-of-love"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "ROCKETS: LOSS",
+        "STARLINK: PROFIT"
+      ],
+      "claim_basis": "rev: FY2025 operating result Space \u2212$657M, Connectivity +$4.4bn (prospectus)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0614",
+          "sky1": "#2A1440",
+          "haze": "#FFB74D",
+          "key": "#FFF3E0",
+          "accent": "#7DF29A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "rocket",
+          "x": 480,
+          "y": 660,
+          "s": 0.6
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFF3E0"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "ROCKETS: LOSS",
+          "x": 480.0,
+          "y": 204.9,
+          "size": 91.3,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "STARLINK: PROFIT",
+          "x": 1440.0,
+          "y": 190.9,
+          "size": 74.2,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#7DF29A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.57 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 134, 860, 210), (1060, 133, 1820, 195)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "6.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 9.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.064",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 57",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-day-volkswagen-became-the-most-valuable-company (distance 0.40)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "rev: FY2025 operating result Space \u2212$657M, Connectivity +$4.4bn (prospectus)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.764,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-day-volkswagen-became-the-most-valuable-company"
+      }
+    }
+  ],
+  "default": null,
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-11T12:21:22Z",
+  "master": null
+}
