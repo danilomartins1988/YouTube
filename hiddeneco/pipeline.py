@@ -104,6 +104,11 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
 
     tts_name = tts_name or default_provider_name(cfg)
     tts = get_provider(tts_name, cfg, allow_paid=allow_paid)
+    # per-project voice override (e.g. a series voice): project.yaml -> tts_overrides: {<provider>: {voice: ..., instructions: ...}}
+    over = (project.get("tts_overrides") or {}).get(tts_name)
+    if over:
+        tts.options = {**tts.options, **over}
+        log("tts.override", provider=tts_name, keys=sorted(over))
     if tts.paid:
         from hiddeneco.budget import Budget
         cap = (project.get("budget") or {}).get("max_paid_usd", cfg["budget"]["max_paid_usd_per_topic"])

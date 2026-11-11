@@ -39,3 +39,11 @@ budget:
 presenter_min: 3
 intro:
   after_segment: m1_transition
+# Series voice (owner chose "alloy" 2026-11-11); the channel default (ash) is unchanged.
+tts_overrides:
+  openai:
+    voice: alloy
+    instructions: >-
+      Voice: a young creator in their mid-twenties explaining something cool to a friend. Natural, human, warm and a
+      little playful, with small smiles in the voice. Pacing: relaxed and unhurried, like thinking out loud; take a real
+      breath at commas and full stops, and slow down noticeably on numbers so they land. Not an announcer, not salesy.
