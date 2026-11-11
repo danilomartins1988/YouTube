@@ -45,3 +45,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 39-visa-mastercard | How Two Bank Clubs Became Visa and Mastercard | 355 BILLION / PAYMENTS A YEAR | 47 s | `docs/episodes/39-visa-mastercard/youtube-short/short_package.md` |
 | 43-gold-reserve | America's Gold Is Booked at Just $11 Billion | $11 BILLION / ON THE BOOKS | 50 s | `docs/episodes/43-gold-reserve/youtube-short/short_package.md` |
 | 46-overdrafts | A $35 Fee for a $24 Purchase: How Overdrafts Still Pay | $35 FEE / FOR A $24 BUY | 55 s | `docs/episodes/46-overdrafts/youtube-short/short_package.md` |
+| 44-iv-bags | One Flooded Factory Ran America Short of IV Fluids | 60% OF IV FLUIDS / ONE FACTORY | 51 s | `docs/episodes/44-iv-bags/youtube-short/short_package.md` |

@@ -62,7 +62,7 @@ S = {
  "39-visa-mastercard": ("navy", "R", {"kind": "ccard", "s": 0.95, "rot": 10, "coins": True}, "355 BILLION", "VISA PAYMENTS", "#FF1E1E", {}, "355bn transactions FY2026"),
  "41-tariff-refund": ("blue", "R", {"kind": "cart", "s": 0.95}, "$166 BILLION", "TARIFF REFUND", "#FF1E1E", {}, "≈ $166bn IEEPA duties (CBP estimate)"),
  "46-overdrafts": ("red", "L", {"kind": "ccard", "s": 0.95, "rot": -8, "sticker": "$35"}, "$5.8 BILLION", "OVERDRAFT FEES", "#0B0B0F", {}, "$5.83bn 2023, banks > $1bn (CFPB)"),
- "44-iv-bags": ("blue", "R", {"kind": "flask", "s": 0.95}, "60% OF IV FLUIDS", "ONE FACTORY", "#FF1E1E", {}, "≈ 60% of U.S. IV solutions (AHA estimate)"),
+ "44-iv-bags": ("blue", "R", {"kind": "ivbag", "s": 0.8}, "60% OF IV FLUIDS", "ONE FACTORY", "#FF1E1E", {}, "≈ 60% of U.S. IV solutions (AHA estimate)"),
  "45-prediction-markets": ("purple", "L", {"kind": "surge", "s": 0.95}, "$25 BILLION", "PREDICTION MARKETS", "#FF1E1E", {}, "$25bn event contracts, Mar 2026 (CFTC)"),
  "47-post-office": ("navy", "R", {"kind": "parcels", "s": 0.95}, "$118 BILLION", "POST OFFICE LOSSES", "#FF1E1E", {}, "≈ $118bn net losses since FY2006 (GAO)"),
  "48-alaska-dividend": ("blue", "L", {"kind": "dollar", "s": 0.78, "rot": -6}, "$1,200 EACH", "ALASKA PAYS YOU", "#FF1E1E", {}, "2026 PFD $1,200 (PFD Division)"),

@@ -847,6 +847,52 @@ scenes:
       kind: stroke
       start:
         cue: climbs to its peak
+    - d: M 660 840 L 660 760 L 740 760 L 740 840
+      color: muted
+      width: 4
+      fill: muted
+      fillOpacity: 0.3
+      kind: bar
+      start:
+        cue: It starts
+      label:
+        text: 10¢
+        x: 700
+        y: 870
+        size: 18
+        color: muted
+        anchor: middle
+    - d: M 960 840 L 960 470 L 1040 470 L 1040 840
+      color: risk
+      width: 4
+      fill: risk
+      fillOpacity: 0.3
+      kind: bar
+      start:
+        cue: climbs to its peak
+        offset: 0.4
+      label:
+        text: 50¢
+        x: 1000
+        y: 870
+        size: 18
+        color: risk
+        anchor: middle
+    - d: M 1260 840 L 1260 760 L 1340 760 L 1340 840
+      color: muted
+      width: 4
+      fill: muted
+      fillOpacity: 0.3
+      kind: bar
+      start:
+        cue: and falls again
+      label:
+        text: 90¢
+        x: 1300
+        y: 870
+        size: 18
+        color: muted
+        anchor: middle
     - d: M 940 410 L 1060 410 L 1060 470 L 940 470 Z
       color: accent
       width: 5

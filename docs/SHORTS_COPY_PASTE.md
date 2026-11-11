@@ -779,3 +779,22 @@ Watch the full story: "Why Banks Still Make Billions From Overdrafts" on The Hid
 ```
 overdraft fees, banks, NSF fees, CFPB, checking account, bank fees, personal finance, shorts, economics explained, The Hidden Economics
 ```
+
+## 44-iv-bags
+
+**Title**
+```
+One Flooded Factory Ran America Short of IV Fluids #shorts
+```
+**Description**
+```
+About sixty percent. That is how much of America's daily IV fluids came from one factory in North Carolina, according to the American Hospital Association. Then Hurricane Helene flooded it.
+
+Watch the full story: "How One Flooded Factory Ran America Short of IV Fluids" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #hospitals #supplychain #economics
+```
+**Tags**
+```
+IV fluids, hospitals, drug shortages, supply chain, Hurricane Helene, healthcare economics, shorts, economics explained, The Hidden Economics
+```

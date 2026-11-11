@@ -58,6 +58,20 @@ const HEROES: Record<string, HeroFn> = {
     <path d="M -40 -40 L 120 -160 M 60 130 L 180 80 M -90 60 L -180 120" fill="none" stroke="#FFFFFF" strokeWidth={6} />
     <circle cx={0} cy={-200} r={70} fill="#FFC21A" stroke={OL} strokeWidth={10} /><path d="M -22 -235 L 34 -200 L -22 -165 Z" fill={OL} />
   </g>,
+  /** a generic IV bag on a pole, almost empty, with a red low-level band and a drip */
+  ivbag: (o) => <g>
+    <path d="M 0 -560 L 0 520 M -140 -560 L 140 -560 M -160 520 L 160 520" stroke="#90A4AE" strokeWidth={22} strokeLinecap="round" />
+    <path d="M 0 -560 L 0 -470" stroke="#B0BEC5" strokeWidth={10} />
+    <rect x={-210} y={-470} width={420} height={560} rx={90} fill="#F5FBFF" stroke={OL} strokeWidth={16} />
+    <clipPath id="ivpt"><rect x={-210} y={-470} width={420} height={560} rx={90} /></clipPath>
+    <g clipPath="url(#ivpt)"><rect x={-210} y={-10} width={420} height={120} fill="#FF7A6B" /></g>
+    <rect x={-210} y={-470} width={420} height={560} rx={90} fill="none" stroke={OL} strokeWidth={16} />
+    {[0, 1, 2, 3, 4].map((k) => <path key={k} d={`M 120 ${-400 + k * 80} L 180 ${-400 + k * 80}`} stroke={OL} strokeWidth={8} />)}
+    <text x={-20} y={-250} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={110} fill={OL}>IV</text>
+    <path d="M -40 90 L 40 90 L 26 170 L -26 170 Z" fill="#E0E0E0" stroke={OL} strokeWidth={10} />
+    <circle cx={0} cy={230} r={18} fill="#4FC3F7" stroke={OL} strokeWidth={6} />
+    <path d="M 0 270 q 120 160 -60 300" fill="none" stroke="#B0BEC5" strokeWidth={12} />
+  </g>,
   /** a giant dollar bill with a thin slice cut off on the left (the farm's share) and scissors */
   dollar: (o) => <g>
     <rect x={-560} y={-250} width={1120} height={500} rx={24} fill="#8BCB8F" stroke={OL} strokeWidth={14} />
