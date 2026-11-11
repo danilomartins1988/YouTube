@@ -69,9 +69,9 @@ card("s06_c1", "m1_card", "The Machine", "Where the money comes from")
 stage("s07_machine", "m1_machine", {
     "zones": [machine([(SEGS[0][0], SEGS[0][1], SEGS[0][2], C("The iPhone alone"))] + [(l, v, c, C("Mac, iPad")) for (l, v, c, _) in SEGS[2:]], "THE APPLE MACHINE", "SALES", JOKES)], "worldW": 2600,
     "cam": [{"at": 0, "x": 1100, "y": 520, "zoom": 0.88}, {"at": C("Mac, iPad"), "x": 1000, "y": 540, "zoom": 0.9, "dur": 2.0}], "drift": 2,
-    "items": [it("counter", x=700, y=170, at=0.2, prefix="$", suffix="BN", decimals=1, steps=[[0.2, 0], [{"cue": "of stuff"}, 478.8]], text="FY2026 NET SALES (10-K)", scale=1.1),
-              it("sign", x=650, y=960, text="+15% (AFTER +6%)", at=C("the year before"), color="#C8E6C9", size=30),
-              it("sign", x=1250, y=960, text="IPHONE: 53% OF EVERYTHING", at=C("of everything"), color="#BBDEFB", size=30)]},
+    "items": [it("counter", x=1500, y=830, at=0.2, prefix="$", suffix="BN", decimals=1, steps=[[0.2, 0], [{"cue": "of stuff"}, 478.8]], text="FY2026 NET SALES (10-K)", scale=1.0),
+              it("sign", x=560, y=960, text="+15% (AFTER +6%)", at=C("the year before"), color="#C8E6C9", size=30),
+              it("sign", x=650, y=860, text="IPHONE: 53% OF EVERYTHING", at=C("of everything"), color="#BBDEFB", size=30)]},
     sources=["tenk"])
 stage("s08_services", "m1_services", {
     "zones": [machine(SEGS, "THE APPLE MACHINE", "PROFIT", JOKES, boomAt=4.0)], "worldW": 2600,

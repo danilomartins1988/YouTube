@@ -942,7 +942,7 @@ const SETS: Record<string, SetFn> = {
           {on && Array.from({length: 6}, (_, b) => { const u = ((t * 0.45 + b / 6 + k * 0.13) % 1), bx = lerp(x0 + 20, xe - 10, u);
             return bx < xe - 8 && <ellipse key={b} cx={bx} cy={py} rx={Math.min(th * 0.42, 34)} ry={th * 0.3} fill={c} stroke={OL} strokeWidth={3} opacity={0.95} />; })}
           {[0.25, 0.6].map((u) => <rect key={u} x={lerp(x0, x1, u) - 10} y={py - th / 2 - 8} width={20} height={th + 16} rx={6} fill="#78909C" stroke={OL} strokeWidth={4} opacity={grow > u ? 1 : 0} />)}
-          <g opacity={grow} transform={`translate(${x0 + 30} ${py - th / 2 - 30})`}>
+          <g opacity={grow} transform={`translate(${Math.max(x0 + 30, x1 - Math.max(160, q.label.length * 17 + 30) - 60)} ${py - th / 2 - 30})`}>
             <rect x={0} y={-30} width={Math.max(160, q.label.length * 17 + 30)} height={44} rx={10} fill="#FFF8E1" stroke={OL} strokeWidth={4} />
             <T x={14} y={2} s={24} a="start">{q.label}</T></g>
         </g>; })}
@@ -4093,7 +4093,7 @@ const pricedin: ItemFn = (a, {t}, i) => {
     const r = (ang(v) * Math.PI) / 180;
     return <g key={'nd' + k} opacity={n.at === undefined || t >= n.at ? 1 : 0}>
       <path d={`M 0 0 L ${Math.sin(r) * (R - 40)} ${-Math.cos(r) * (R - 40)}`} stroke={k ? '#FF4F6B' : '#3DF5FF'} strokeWidth={12} strokeLinecap="round" />
-      <g transform={`translate(${Math.sin(r) * (R + 70)} ${-Math.cos(r) * (R + 70)})`}>
+      <g transform={`translate(${Math.sin(r) * (R + 70 + k * 95)} ${-Math.cos(r) * (R + 70 + k * 95)})`}>
         <rect x={-110} y={-36} width={220} height={66} rx={14} fill={k ? '#FF4F6B' : '#3DF5FF'} stroke={OL} strokeWidth={5} />
         <T x={0} y={-6} s={22} c={OL}>{n.label || ''}</T><T x={0} y={22} s={26} c={OL}>{n.text || `≈ ${n.value}% / YR`}</T></g></g>; };
   const band = (() => { const a0 = (ang(lo.value) * Math.PI) / 180, a1 = (ang(hi.value) * Math.PI) / 180, show = (hi.at === undefined || t >= hi.at + 0.6) ? 1 : 0;

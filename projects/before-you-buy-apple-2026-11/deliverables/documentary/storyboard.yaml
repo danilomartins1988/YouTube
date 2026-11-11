@@ -401,8 +401,8 @@ scenes:
     drift: 2
     items:
     - kind: counter
-      x: 700
-      y: 170
+      x: 1500
+      y: 830
       at: 0.2
       prefix: $
       suffix: BN
@@ -413,9 +413,9 @@ scenes:
       - - cue: of stuff
         - 478.8
       text: FY2026 NET SALES (10-K)
-      scale: 1.1
+      scale: 1.0
     - kind: sign
-      x: 650
+      x: 560
       y: 960
       text: +15% (AFTER +6%)
       at:
@@ -423,8 +423,8 @@ scenes:
       color: '#C8E6C9'
       size: 30
     - kind: sign
-      x: 1250
-      y: 960
+      x: 650
+      y: 860
       text: 'IPHONE: 53% OF EVERYTHING'
       at:
         cue: of everything
