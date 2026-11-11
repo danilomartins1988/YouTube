@@ -297,20 +297,26 @@ stage("s35_scale", "m5_upside", {
 kinetic("s36_t5", "m5_transition", [("So, what should you watch?", 76, "what should you watch", "gold", False)])
 
 # ====================================================================== PAYOFF
-stage("s37_score", "payoff", {
-    "zones": [Z("chipcity", night=True, signs=["SCOREBOARD", "NEXT REPORT: LATE JAN 2027?", "WATCH THE MARGIN", "SERVICES CHECK"])], "worldW": 2400, "night": True,
-    "cam": [{"at": 0, "x": 960, "y": 540, "zoom": 1.05}, {"at": C("If those three"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.0}], "drift": 2,
-    "items": [scorecard([("DECEMBER-QUARTER REVENUE", "VS $143.8BN A YEAR EARLIER", C("One, December")),
-                         ("GROSS MARGIN", "VS 47.9% (INCL. TARIFF REFUNDS)", C("Two, gross margin")),
-                         ("SERVICES GROWTH", "VS +9.8% IN THE SEP QUARTER", C("Three, Services"))], x=960, y=220, at=0.2, scale=0.92),
-              stamp(1500, 900, at=0.5, scale=0.7),
-              buddy(300, 900, at=0.4, mood="happy", moods=[[C("If they crack"), "worry"]], label="AAPL", hop=20)]},
-    sources=["q4", "tenk"])
+board("p37_watch", "payoff", "3 numbers to watch (next report)", C("One, December"), [
+    {"d": rect(1320, 440, 250, 140), "color": "accent", "width": 6, "kind": "box", "start": C("One, December"), "label": lbl("NEXT REPORT", 1445, 518, 22, "accent")},
+    {"d": rect(700, 300, 440, 110), "color": "accent2", "width": 5, "kind": "box", "start": C("One, December"), "label": lbl("DECEMBER-QUARTER REVENUE", 920, 362, 20, "accent2")},
+    {"d": "M 720 428 L 1120 428", "color": "ink", "width": 1, "start": C("One, December", 0.3), "label": lbl("VS $143.8BN A YEAR EARLIER", 920, 450, 14, "ink")},
+    {"d": arrow((1150, 355), (1310, 462), 0.08), "color": "accent2", "width": 5, "kind": "arrow", "start": C("One, December", 0.6)},
+    {"d": rect(700, 470, 440, 110), "color": "accent3", "width": 5, "kind": "box", "start": C("Two, gross margin"), "label": lbl("GROSS MARGIN", 920, 532, 20, "accent3")},
+    {"d": "M 720 598 L 1120 598", "color": "ink", "width": 1, "start": C("Two, gross margin", 0.3), "label": lbl("VS 47.9% (INCL. TARIFF REFUNDS)", 920, 620, 14, "ink")},
+    {"d": arrow((1150, 525), (1310, 505), 0.08), "color": "accent3", "width": 5, "kind": "arrow", "start": C("Two, gross margin", 0.6)},
+    {"d": rect(700, 640, 440, 110), "color": "risk", "width": 5, "kind": "box", "start": C("Three, Services"), "label": lbl("SERVICES GROWTH", 920, 702, 20, "risk")},
+    {"d": "M 720 768 L 1120 768", "color": "ink", "width": 1, "start": C("Three, Services", 0.3), "label": lbl("VS +9.8% IN THE SEP QUARTER", 920, 790, 14, "ink")},
+    {"d": arrow((1150, 695), (1310, 547), 0.08), "color": "risk", "width": 5, "kind": "arrow", "start": C("Three, Services", 0.6)},
+], C("Three, Services", 0.5), [1445, 510], sources=["q4", "tenk"])
 stage("s38_edition", "payoff2", {
     "zones": [machine(SEGS, "THE APPLE MACHINE", "PROFIT", ["SEE YOU NEXT QUARTER", "NEW NUMBERS · SAME QUESTIONS", "EDITION: NOV 2026", "UPDATED EVERY QUARTER"])], "worldW": 2600,
     "cam": [{"at": 0, "x": 1300, "y": 520, "zoom": 1.0}, {"at": 2.0, "x": 1100, "y": 540, "zoom": 1.05, "dur": 3.0}], "drift": 2,
-    "items": [stamp(800, 900, at=0.3, scale=0.9),
-              it("sign", x=1100, y=200, text="PRICED IN? · WHAT HAS TO HAPPEN? · WHAT COULD GO WRONG?", at=C("the same three questions"), color="#BBDEFB", size=26)]},
+    "items": [scorecard([("DECEMBER-QUARTER REVENUE", "VS $143.8BN A YEAR EARLIER", 0.4),
+                         ("GROSS MARGIN", "VS 47.9% (INCL. TARIFF REFUNDS)", 1.0),
+                         ("SERVICES GROWTH", "VS +9.8% IN THE SEP QUARTER", 1.6)], x=960, y=230, at=0.2, scale=0.82),
+              stamp(1560, 930, at=0.6, scale=0.7),
+              it("sign", x=760, y=925, text="PRICED IN? · WHAT HAS TO HAPPEN? · WHAT COULD GO WRONG?", at=C("the same three questions"), color="#BBDEFB", size=24)]},
     sources=["tenk"])
 add("s39_end", "teaser", "end_card", {"words": ["Next in the series:", "another giant, opened up the same way"], "brand": "The Hidden Economics",
     "teaser": "Every figure in this film is sourced in the description", "brand_cue": {"cue": "This is The Hidden Economics"}})

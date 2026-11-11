@@ -311,21 +311,27 @@ stage("s35_scale", "m5_upside", {
 kinetic("s36_t5", "m5_transition", [("So, what should you watch?", 76, "what should you watch", "gold", False)])
 
 # ====================================================================== PAYOFF
-stage("s37_score", "payoff", {
-    "zones": [Z("feedcity", ads=["SCOREBOARD", "NEXT REPORT: LATE JAN 2027?", "WATCH THE CAPEX", "CLASS C: JAN 19, 2027"])], "worldW": 2400,
-    "cam": [{"at": 0, "x": 960, "y": 540, "zoom": 1.05}, {"at": C("And one note"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.0}], "drift": 2,
-    "items": [scorecard([("Q4 REVENUE", "VS THE $73-76BN GUIDE", C("One, fourth")),
-                         ("CAPEX + 2027 OUTLOOK", "FREE CASH BACK ABOVE ZERO? (Q3: −$2.1BN)", C("Two, capex")),
-                         ("LEGAL ACCRUALS + CORE MARGIN", "VS $19.9BN · VS ≈ 42% EX-CHARGE", C("Three, legal"))], x=960, y=220, at=0.2, scale=0.92),
-              it("sign", x=1300, y=900, text="NEXT EDITION: SHARE COUNT ≈ 2× (CLASS C)", at=C("And one note"), color="#FFE0B2", size=26),
-              stamp(600, 900, at=0.5, scale=0.6),
-              buddy(1750, 900, at=0.4, mood="happy", moods=[[C("roughly doubles"), "shock"]], label="META", color="#FF4FD8", hop=20)]},
-    sources=["rel", "tenq", "cap8k"])
+board("p37_watch", "payoff", "3 numbers to watch (next report)", C("One, fourth"), [
+    {"d": rect(1320, 440, 250, 140), "color": "accent", "width": 6, "kind": "box", "start": C("One, fourth"), "label": lbl("NEXT REPORT", 1445, 518, 22, "accent")},
+    {"d": "M 1360 640 L 1640 640", "color": "risk", "width": 2, "start": C("And one note"), "label": lbl("NEXT EDITION: SHARES ≈ 2× (CLASS C)", 1500, 670, 15, "risk")},
+    {"d": rect(700, 300, 440, 110), "color": "accent2", "width": 5, "kind": "box", "start": C("One, fourth"), "label": lbl("Q4 REVENUE", 920, 362, 20, "accent2")},
+    {"d": "M 720 428 L 1120 428", "color": "ink", "width": 1, "start": C("One, fourth", 0.3), "label": lbl("VS THE $73-76BN GUIDE", 920, 450, 14, "ink")},
+    {"d": arrow((1150, 355), (1310, 462), 0.08), "color": "accent2", "width": 5, "kind": "arrow", "start": C("One, fourth", 0.6)},
+    {"d": rect(700, 470, 440, 110), "color": "accent3", "width": 5, "kind": "box", "start": C("Two, capex"), "label": lbl("CAPEX + 2027 OUTLOOK", 920, 532, 20, "accent3")},
+    {"d": "M 720 598 L 1120 598", "color": "ink", "width": 1, "start": C("Two, capex", 0.3), "label": lbl("FREE CASH BACK ABOVE ZERO? (Q3: −$2.1BN)", 920, 620, 14, "ink")},
+    {"d": arrow((1150, 525), (1310, 505), 0.08), "color": "accent3", "width": 5, "kind": "arrow", "start": C("Two, capex", 0.6)},
+    {"d": rect(700, 640, 440, 110), "color": "risk", "width": 5, "kind": "box", "start": C("Three, legal"), "label": lbl("LEGAL ACCRUALS + CORE MARGIN", 920, 702, 20, "risk")},
+    {"d": "M 720 768 L 1120 768", "color": "ink", "width": 1, "start": C("Three, legal", 0.3), "label": lbl("VS $19.9BN · VS ≈ 42% EX-CHARGE", 920, 790, 14, "ink")},
+    {"d": arrow((1150, 695), (1310, 547), 0.08), "color": "risk", "width": 5, "kind": "arrow", "start": C("Three, legal", 0.6)},
+], C("Three, legal", 0.5), [1445, 510], sources=["rel", "tenq", "cap8k"])
 stage("s38_edition", "payoff2", {
     "zones": [machine(SEGS, "THE META MACHINE", "PROFIT", ["SEE YOU NEXT QUARTER", "NEW NUMBERS · SAME QUESTIONS", "EDITION: NOV 2026", "UPDATED EVERY QUARTER"])], "worldW": 2600,
     "cam": [{"at": 0, "x": 1300, "y": 520, "zoom": 1.0}, {"at": 2.0, "x": 1100, "y": 540, "zoom": 1.05, "dur": 3.0}], "drift": 2,
-    "items": [stamp(800, 900, at=0.3, scale=0.9),
-              it("sign", x=1100, y=200, text="PRICED IN? · WHAT HAS TO HAPPEN? · WHAT COULD GO WRONG?", at=C("the same three questions"), color="#BBDEFB", size=26)]},
+    "items": [scorecard([("Q4 REVENUE", "VS THE $73-76BN GUIDE", 0.4),
+                         ("CAPEX + 2027 OUTLOOK", "FREE CASH BACK ABOVE ZERO? (Q3: −$2.1BN)", 1.0),
+                         ("LEGAL ACCRUALS + CORE MARGIN", "VS $19.9BN · VS ≈ 42% EX-CHARGE", 1.6)], x=960, y=230, at=0.2, scale=0.82),
+              stamp(1560, 930, at=0.6, scale=0.7),
+              it("sign", x=760, y=925, text="PRICED IN? · WHAT HAS TO HAPPEN? · WHAT COULD GO WRONG?", at=C("the same three questions"), color="#BBDEFB", size=24)]},
     sources=["rel"])
 add("s39_end", "teaser", "end_card", {"words": ["Next in the series:", "another giant, opened up the same way"], "brand": "The Hidden Economics",
     "teaser": "Every figure in this film is sourced in the description", "brand_cue": {"cue": "This is The Hidden Economics"}})

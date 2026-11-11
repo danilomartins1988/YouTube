@@ -2264,71 +2264,148 @@ scenes:
       color: gold
   assets:
   - font:inter
-- id: s38_score
+- id: p38_watch
   segment: payoff
-  type: engine_cartoon
+  type: engine_draw
   params:
-    zones:
-    - set: cloudport
-      x0: -1600
-      x1: 4600
-      signs:
-      - SCOREBOARD
-      - 'NEXT REPORT: LATE JAN 2027?'
-      - WATCH THE CAPEX
-      - BACKLOG CHECK
-    worldW: 2400
-    cam:
-    - at: 0
-      x: 960
-      y: 540
-      zoom: 1.05
-    - at:
-        cue: If those hold up
-      x: 960
-      y: 520
-      zoom: 1.0
-      dur: 2.0
-    drift: 2
-    items:
-    - kind: scorecard
-      rows:
-      - label: AZURE GROWTH
-        value: 'VS +49-50% CC GUIDE (Q1: +48%)'
-        at:
-          cue: One, Azure
-      - label: CAPEX AND FREE CASH
-        value: VS 'OVER $50BN' · FCF VS $18.6BN
-        at:
-          cue: Two, capex
-      - label: BACKLOG $677BN
-        value: BROADER THAN ONE CUSTOMER? (OPENAI ≈ 11%)
-        at:
-          cue: Three, the
-      title: 3 NUMBERS TO WATCH
-      stamp: 'DATA AS OF NOV 10, 2026 CLOSE · LATEST REPORT: Q1 FY2027 (SEP 30, 2026)'
-      x: 960
-      y: 220
+    title: 3 numbers to watch (next report)
+    board: *id003
+    draw_start:
+      cue: One, Azure
+    speed: 1400
+    push: 0.003
+    enter:
+      from: -260
+      to: 270
       at: 0.2
-      scale: 0.92
-    - kind: editionstamp
-      x: 1500
-      y: 900
-      at: 0.5
-      text: DATA AS OF NOV 10, 2026 CLOSE
-      sub: 'LATEST REPORT: Q1 FY2027 (SEP 30, 2026)'
-      scale: 0.7
-    - kind: chipbuddy
-      x: 300
-      y: 900
-      at: 0.4
-      mood: happy
-      moods:
-      - - cue: If they crack
-        - worry
-      label: MSFT
-      color: '#3A86FF'
-      hop: 20
+      dur: 1.3
+    strokes:
+    - d: M 1320 440 L 1570 440 L 1570 580 L 1320 580 Z
+      color: accent
+      width: 6
+      kind: box
+      start:
+        cue: One, Azure
+      label:
+        text: NEXT REPORT
+        x: 1445
+        y: 518
+        size: 22
+        color: accent
+        anchor: middle
+    - d: M 700 300 L 1140 300 L 1140 410 L 700 410 Z
+      color: accent2
+      width: 5
+      kind: box
+      start:
+        cue: One, Azure
+      label:
+        text: AZURE GROWTH
+        x: 920
+        y: 362
+        size: 20
+        color: accent2
+        anchor: middle
+    - d: M 720 428 L 1120 428
+      color: ink
+      width: 1
+      start:
+        cue: One, Azure
+        offset: 0.3
+      label:
+        text: 'VS +49-50% CC GUIDE (Q1: +48%)'
+        x: 920
+        y: 450
+        size: 14
+        color: ink
+        anchor: middle
+      kind: stroke
+    - d: M 1150 355 Q 1221 421 1310 462 M 1286 462 L 1310 462 L 1295 443
+      color: accent2
+      width: 5
+      kind: arrow
+      start:
+        cue: One, Azure
+        offset: 0.6
+    - d: M 700 470 L 1140 470 L 1140 580 L 700 580 Z
+      color: accent3
+      width: 5
+      kind: box
+      start:
+        cue: Two, capex
+      label:
+        text: CAPEX AND FREE CASH
+        x: 920
+        y: 532
+        size: 20
+        color: accent3
+        anchor: middle
+    - d: M 720 598 L 1120 598
+      color: ink
+      width: 1
+      start:
+        cue: Two, capex
+        offset: 0.3
+      label:
+        text: VS 'OVER $50BN' · FCF VS $18.6BN
+        x: 920
+        y: 620
+        size: 14
+        color: ink
+        anchor: middle
+      kind: stroke
+    - d: M 1150 525 Q 1232 528 1310 505 M 1292 521 L 1310 505 L 1286 501
+      color: accent3
+      width: 5
+      kind: arrow
+      start:
+        cue: Two, capex
+        offset: 0.6
+    - d: M 700 640 L 1140 640 L 1140 750 L 700 750 Z
+      color: risk
+      width: 5
+      kind: box
+      start:
+        cue: Three, the
+      label:
+        text: BACKLOG $677BN
+        x: 920
+        y: 702
+        size: 20
+        color: risk
+        anchor: middle
+    - d: M 720 768 L 1120 768
+      color: ink
+      width: 1
+      start:
+        cue: Three, the
+        offset: 0.3
+      label:
+        text: BROADER THAN ONE CUSTOMER? (OPENAI ≈ 11%)
+        x: 920
+        y: 790
+        size: 14
+        color: ink
+        anchor: middle
+      kind: stroke
+    - d: M 1150 695 Q 1242 634 1310 547 M 1305 570 L 1310 547 L 1288 558
+      color: risk
+      width: 5
+      kind: arrow
+      start:
+        cue: Three, the
+        offset: 0.6
+    actions:
+    - kind: point
+      at:
+        cue: Three, the
+        offset: 0.5
+      dur: 1.4
+      target:
+      - 1445
+      - 510
+    scale: 0.86
+    floor: 1040
   sources:
   - call
   - tenq
@@ -2370,21 +2447,38 @@ scenes:
       dur: 3.0
     drift: 2
     items:
+    - kind: scorecard
+      rows:
+      - label: AZURE GROWTH
+        value: 'VS +49-50% CC GUIDE (Q1: +48%)'
+        at: 0.4
+      - label: CAPEX AND FREE CASH
+        value: VS 'OVER $50BN' · FCF VS $18.6BN
+        at: 1.0
+      - label: BACKLOG $677BN
+        value: BROADER THAN ONE CUSTOMER? (OPENAI ≈ 11%)
+        at: 1.6
+      title: 3 NUMBERS TO WATCH
+      stamp: 'DATA AS OF NOV 10, 2026 CLOSE · LATEST REPORT: Q1 FY2027 (SEP 30, 2026)'
+      x: 960
+      y: 230
+      at: 0.2
+      scale: 0.82
     - kind: editionstamp
-      x: 800
-      y: 900
-      at: 0.3
+      x: 1560
+      y: 930
+      at: 0.6
       text: DATA AS OF NOV 10, 2026 CLOSE
       sub: 'LATEST REPORT: Q1 FY2027 (SEP 30, 2026)'
-      scale: 0.9
+      scale: 0.7
     - kind: sign
-      x: 1100
-      y: 200
+      x: 760
+      y: 925
       text: PRICED IN? · WHAT HAS TO HAPPEN? · WHAT COULD GO WRONG?
       at:
         cue: the same three questions
       color: '#BBDEFB'
-      size: 26
+      size: 24
   sources:
   - rel
   assets:

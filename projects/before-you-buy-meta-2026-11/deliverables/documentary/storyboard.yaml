@@ -2332,79 +2332,161 @@ scenes:
       color: gold
   assets:
   - font:inter
-- id: s37_score
+- id: p37_watch
   segment: payoff
-  type: engine_cartoon
+  type: engine_draw
   params:
-    zones:
-    - set: feedcity
-      x0: -1600
-      x1: 4600
-      ads:
-      - SCOREBOARD
-      - 'NEXT REPORT: LATE JAN 2027?'
-      - WATCH THE CAPEX
-      - 'CLASS C: JAN 19, 2027'
-    worldW: 2400
-    cam:
-    - at: 0
-      x: 960
-      y: 540
-      zoom: 1.05
-    - at:
-        cue: And one note
-      x: 960
-      y: 520
-      zoom: 1.0
-      dur: 2.0
-    drift: 2
-    items:
-    - kind: scorecard
-      rows:
-      - label: Q4 REVENUE
-        value: VS THE $73-76BN GUIDE
-        at:
-          cue: One, fourth
-      - label: CAPEX + 2027 OUTLOOK
-        value: 'FREE CASH BACK ABOVE ZERO? (Q3: −$2.1BN)'
-        at:
-          cue: Two, capex
-      - label: LEGAL ACCRUALS + CORE MARGIN
-        value: VS $19.9BN · VS ≈ 42% EX-CHARGE
-        at:
-          cue: Three, legal
-      title: 3 NUMBERS TO WATCH
-      stamp: 'DATA AS OF NOV 10, 2026 CLOSE · LATEST REPORT: Q3 2026 (SEP 30, 2026)'
-      x: 960
-      y: 220
+    title: 3 numbers to watch (next report)
+    board: *id003
+    draw_start:
+      cue: One, fourth
+    speed: 1400
+    push: 0.003
+    enter:
+      from: -260
+      to: 270
       at: 0.2
-      scale: 0.92
-    - kind: sign
-      x: 1300
-      y: 900
-      text: 'NEXT EDITION: SHARE COUNT ≈ 2× (CLASS C)'
-      at:
+      dur: 1.3
+    strokes:
+    - d: M 1320 440 L 1570 440 L 1570 580 L 1320 580 Z
+      color: accent
+      width: 6
+      kind: box
+      start:
+        cue: One, fourth
+      label:
+        text: NEXT REPORT
+        x: 1445
+        y: 518
+        size: 22
+        color: accent
+        anchor: middle
+    - d: M 1360 640 L 1640 640
+      color: risk
+      width: 2
+      start:
         cue: And one note
-      color: '#FFE0B2'
-      size: 26
-    - kind: editionstamp
-      x: 600
-      y: 900
-      at: 0.5
-      text: DATA AS OF NOV 10, 2026 CLOSE
-      sub: 'LATEST REPORT: Q3 2026 (SEP 30, 2026)'
-      scale: 0.6
-    - kind: chipbuddy
-      x: 1750
-      y: 900
-      at: 0.4
-      mood: happy
-      moods:
-      - - cue: roughly doubles
-        - shock
-      label: META
-      color: '#FF4FD8'
-      hop: 20
+      label:
+        text: 'NEXT EDITION: SHARES ≈ 2× (CLASS C)'
+        x: 1500
+        y: 670
+        size: 15
+        color: risk
+        anchor: middle
+      kind: stroke
+    - d: M 700 300 L 1140 300 L 1140 410 L 700 410 Z
+      color: accent2
+      width: 5
+      kind: box
+      start:
+        cue: One, fourth
+      label:
+        text: Q4 REVENUE
+        x: 920
+        y: 362
+        size: 20
+        color: accent2
+        anchor: middle
+    - d: M 720 428 L 1120 428
+      color: ink
+      width: 1
+      start:
+        cue: One, fourth
+        offset: 0.3
+      label:
+        text: VS THE $73-76BN GUIDE
+        x: 920
+        y: 450
+        size: 14
+        color: ink
+        anchor: middle
+      kind: stroke
+    - d: M 1150 355 Q 1221 421 1310 462 M 1286 462 L 1310 462 L 1295 443
+      color: accent2
+      width: 5
+      kind: arrow
+      start:
+        cue: One, fourth
+        offset: 0.6
+    - d: M 700 470 L 1140 470 L 1140 580 L 700 580 Z
+      color: accent3
+      width: 5
+      kind: box
+      start:
+        cue: Two, capex
+      label:
+        text: CAPEX + 2027 OUTLOOK
+        x: 920
+        y: 532
+        size: 20
+        color: accent3
+        anchor: middle
+    - d: M 720 598 L 1120 598
+      color: ink
+      width: 1
+      start:
+        cue: Two, capex
+        offset: 0.3
+      label:
+        text: 'FREE CASH BACK ABOVE ZERO? (Q3: −$2.1BN)'
+        x: 920
+        y: 620
+        size: 14
+        color: ink
+        anchor: middle
+      kind: stroke
+    - d: M 1150 525 Q 1232 528 1310 505 M 1292 521 L 1310 505 L 1286 501
+      color: accent3
+      width: 5
+      kind: arrow
+      start:
+        cue: Two, capex
+        offset: 0.6
+    - d: M 700 640 L 1140 640 L 1140 750 L 700 750 Z
+      color: risk
+      width: 5
+      kind: box
+      start:
+        cue: Three, legal
+      label:
+        text: LEGAL ACCRUALS + CORE MARGIN
+        x: 920
+        y: 702
+        size: 20
+        color: risk
+        anchor: middle
+    - d: M 720 768 L 1120 768
+      color: ink
+      width: 1
+      start:
+        cue: Three, legal
+        offset: 0.3
+      label:
+        text: VS $19.9BN · VS ≈ 42% EX-CHARGE
+        x: 920
+        y: 790
+        size: 14
+        color: ink
+        anchor: middle
+      kind: stroke
+    - d: M 1150 695 Q 1242 634 1310 547 M 1305 570 L 1310 547 L 1288 558
+      color: risk
+      width: 5
+      kind: arrow
+      start:
+        cue: Three, legal
+        offset: 0.6
+    actions:
+    - kind: point
+      at:
+        cue: Three, legal
+        offset: 0.5
+      dur: 1.4
+      target:
+      - 1445
+      - 510
+    scale: 0.86
+    floor: 1040
   sources:
   - rel
   - tenq
@@ -2450,21 +2532,38 @@ scenes:
       dur: 3.0
     drift: 2
     items:
+    - kind: scorecard
+      rows:
+      - label: Q4 REVENUE
+        value: VS THE $73-76BN GUIDE
+        at: 0.4
+      - label: CAPEX + 2027 OUTLOOK
+        value: 'FREE CASH BACK ABOVE ZERO? (Q3: −$2.1BN)'
+        at: 1.0
+      - label: LEGAL ACCRUALS + CORE MARGIN
+        value: VS $19.9BN · VS ≈ 42% EX-CHARGE
+        at: 1.6
+      title: 3 NUMBERS TO WATCH
+      stamp: 'DATA AS OF NOV 10, 2026 CLOSE · LATEST REPORT: Q3 2026 (SEP 30, 2026)'
+      x: 960
+      y: 230
+      at: 0.2
+      scale: 0.82
     - kind: editionstamp
-      x: 800
-      y: 900
-      at: 0.3
+      x: 1560
+      y: 930
+      at: 0.6
       text: DATA AS OF NOV 10, 2026 CLOSE
       sub: 'LATEST REPORT: Q3 2026 (SEP 30, 2026)'
-      scale: 0.9
+      scale: 0.7
     - kind: sign
-      x: 1100
-      y: 200
+      x: 760
+      y: 925
       text: PRICED IN? · WHAT HAS TO HAPPEN? · WHAT COULD GO WRONG?
       at:
         cue: the same three questions
       color: '#BBDEFB'
-      size: 26
+      size: 24
   sources:
   - rel
   assets:

@@ -312,20 +312,26 @@ stage("s36_scale", "m5_upside", {
 kinetic("s37_t5", "m5_transition", [("So, what should you watch?", 76, "what should you watch", "gold", False)])
 
 # ====================================================================== PAYOFF
-stage("s38_score", "payoff", {
-    "zones": [Z("voltvalley", signs=["SCOREBOARD", "NEXT REPORT: LATE JAN 2027?", "WATCH THE CREDITS", "DELIVERIES CHECK"], podsAt=0, chargeAt=0)], "worldW": 2400,
-    "cam": [{"at": 0, "x": 960, "y": 540, "zoom": 1.05}, {"at": C("If those hold up"), "x": 960, "y": 520, "zoom": 1.0, "dur": 2.0}], "drift": 2,
-    "items": [scorecard([("Q4 DELIVERIES", "VS 418,227 IN Q4 2025", C("One, fourth quarter")),
-                         ("CAPEX AND FREE CASH", "CAPEX > $20BN IN 2026 · TTM FCF $3.3BN", C("Two, capex")),
-                         ("CREDITS + CAR MARGIN", "Q3: $113M · 18.1% EX-CREDITS", C("Three, regulatory"))], x=960, y=300, at=0.2, scale=0.9),
-              stamp(1500, 960, at=0.5, scale=0.6),
-              buddy(250, 880, at=0.4, mood="happy", moods=[[C("If they crack"), "worry"]], label="TSLA", color=RED, hop=20)]},
-    sources=["deck", "tenq"])
+board("p38_watch", "payoff", "3 numbers to watch (next report)", C("One, fourth quarter"), [
+    {"d": rect(1320, 440, 250, 140), "color": "accent", "width": 6, "kind": "box", "start": C("One, fourth quarter"), "label": lbl("NEXT REPORT", 1445, 518, 22, "accent")},
+    {"d": rect(700, 300, 440, 110), "color": "accent2", "width": 5, "kind": "box", "start": C("One, fourth quarter"), "label": lbl("Q4 DELIVERIES", 920, 362, 20, "accent2")},
+    {"d": "M 720 428 L 1120 428", "color": "ink", "width": 1, "start": C("One, fourth quarter", 0.3), "label": lbl("VS 418,227 IN Q4 2025", 920, 450, 14, "ink")},
+    {"d": arrow((1150, 355), (1310, 462), 0.08), "color": "accent2", "width": 5, "kind": "arrow", "start": C("One, fourth quarter", 0.6)},
+    {"d": rect(700, 470, 440, 110), "color": "accent3", "width": 5, "kind": "box", "start": C("Two, capex"), "label": lbl("CAPEX AND FREE CASH", 920, 532, 20, "accent3")},
+    {"d": "M 720 598 L 1120 598", "color": "ink", "width": 1, "start": C("Two, capex", 0.3), "label": lbl("CAPEX > $20BN IN 2026 · TTM FCF $3.3BN", 920, 620, 14, "ink")},
+    {"d": arrow((1150, 525), (1310, 505), 0.08), "color": "accent3", "width": 5, "kind": "arrow", "start": C("Two, capex", 0.6)},
+    {"d": rect(700, 640, 440, 110), "color": "risk", "width": 5, "kind": "box", "start": C("Three, regulatory"), "label": lbl("CREDITS + CAR MARGIN", 920, 702, 20, "risk")},
+    {"d": "M 720 768 L 1120 768", "color": "ink", "width": 1, "start": C("Three, regulatory", 0.3), "label": lbl("Q3: $113M · 18.1% EX-CREDITS", 920, 790, 14, "ink")},
+    {"d": arrow((1150, 695), (1310, 547), 0.08), "color": "risk", "width": 5, "kind": "arrow", "start": C("Three, regulatory", 0.6)},
+], C("Three, regulatory", 0.5), [1445, 510], sources=["deck", "tenq"])
 stage("s39_edition", "payoff2", {
     "zones": [machine(SEGS, "THE TESLA MACHINE", "PROFIT", ["SEE YOU NEXT QUARTER", "NEW NUMBERS · SAME QUESTIONS", "EDITION: NOV 2026", "UPDATED EVERY QUARTER"])], "worldW": 2600,
     "cam": [{"at": 0, "x": 1300, "y": 520, "zoom": 1.0}, {"at": 2.0, "x": 1100, "y": 540, "zoom": 1.05, "dur": 3.0}], "drift": 2,
-    "items": [stamp(800, 900, at=0.3, scale=0.9),
-              it("sign", x=1100, y=330, text="PRICED IN? · WHAT HAS TO HAPPEN? · WHAT COULD GO WRONG?", at=C("three questions"), color="#BBDEFB", size=26)]},
+    "items": [scorecard([("Q4 DELIVERIES", "VS 418,227 IN Q4 2025", 0.4),
+                         ("CAPEX AND FREE CASH", "CAPEX > $20BN IN 2026 · TTM FCF $3.3BN", 1.0),
+                         ("CREDITS + CAR MARGIN", "Q3: $113M · 18.1% EX-CREDITS", 1.6)], x=960, y=230, at=0.2, scale=0.82),
+              stamp(1560, 930, at=0.6, scale=0.7),
+              it("sign", x=760, y=925, text="PRICED IN? · WHAT HAS TO HAPPEN? · WHAT COULD GO WRONG?", at=C("three questions"), color="#BBDEFB", size=24)]},
     sources=["deck"])
 add("s40_end", "teaser", "end_card", {"words": ["Next in the series:", "another giant, opened up the same way"], "brand": "The Hidden Economics",
     "teaser": "Every figure in this film is sourced in the description", "brand_cue": {"cue": "This is The Hidden Economics"}})
