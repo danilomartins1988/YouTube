@@ -1,4 +1,4 @@
-import {ChannelAvatar, ChannelBanner} from './brand/ChannelArt';
+import {ChannelAvatar, ChannelBanner, ChannelWatermark} from './brand/ChannelArt';
 import React from 'react';
 import {Composition} from 'remotion';
 import {Documentary} from './Documentary';
@@ -36,6 +36,7 @@ export const RemotionRoot: React.FC = () => (
     durationInFrames={1}
   />
   <Composition id="ChannelAvatar" component={ChannelAvatar as unknown as React.FC<Record<string, unknown>>} defaultProps={{variant: 'mascot'}} fps={30} width={800} height={800} durationInFrames={1} />
+  <Composition id="ChannelWatermark" component={ChannelWatermark as unknown as React.FC<Record<string, unknown>>} defaultProps={{}} fps={30} width={300} height={300} durationInFrames={1} />
   <Composition id="ChannelBanner" component={ChannelBanner as unknown as React.FC<Record<string, unknown>>} defaultProps={{}} fps={30} width={2560} height={1440} durationInFrames={1} />
   <Composition
     id="PunchThumb"

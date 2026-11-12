@@ -67,3 +67,17 @@ export const ChannelBanner: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+/** Video watermark (YouTube "branding watermark": square PNG, shown small bottom-right, works on any background):
+ *  transparent background, the mascot head in a gold ring with a dark outline so it reads on light and dark video. */
+export const ChannelWatermark: React.FC = () => (
+  <AbsoluteFill style={{backgroundColor: 'transparent'}}>
+    <svg width={300} height={300} viewBox="0 0 800 800">
+      <defs><clipPath id="wmc"><circle cx={400} cy={400} r={360} /></clipPath></defs>
+      <circle cx={400} cy={400} r={372} fill={NAVY1} />
+      <g clipPath="url(#wmc)">{mascot(385, 1850, 2.9)}</g>
+      <circle cx={400} cy={400} r={372} fill="none" stroke={OL} strokeWidth={44} />
+      <circle cx={400} cy={400} r={372} fill="none" stroke={GOLD} strokeWidth={26} />
+    </svg>
+  </AbsoluteFill>
+);
