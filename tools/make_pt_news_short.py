@@ -33,7 +33,8 @@ def norm(s: str) -> str:
 
 
 def voice(cfg: dict, work: Path, text: str) -> list[dict]:
-    mp3, al = work / "voice_v2.mp3", work / "voice_v2_alignment.json"
+    au = cfg.get("audio", {})
+    mp3, al = work / au.get("mp3", "voice_v2.mp3"), work / au.get("alignment", "voice_v2_alignment.json")
     if not (mp3.exists() and al.exists()):
         v = cfg["voice"]
         r = requests.post(f"https://api.elevenlabs.io/v1/text-to-speech/{v['voice_id']}/with-timestamps",
@@ -58,16 +59,19 @@ def voice(cfg: dict, work: Path, text: str) -> list[dict]:
         pe = e
     if cur:
         words.append({"w": cur, "s": round(s0, 3), "e": round(pe, 3)})
-    return words
+    # the alignment also spells out SSML <break time="..."/> tags: drop those tokens
+    return [w for w in words if not any(x in w["w"] for x in ("<", "break", "time=", "/>"))]
 
 
 def main(proj: Path, test: float | None):
     cfg = yaml.safe_load((proj / "news_short.yaml").read_text())
     slug = proj.name
-    work = ROOT / "output" / slug / "news_v2"
+    au = cfg.get("audio", {})
+    work = ROOT / "output" / slug / au.get("dir", "news_v2")
     work.mkdir(parents=True, exist_ok=True)
-    segs = json.loads((work / "script_v2.json").read_text())
-    words = voice(cfg, work, " ".join(segs))
+    script = work / au.get("script", "script_v2.json")
+    text = " ".join(json.loads(script.read_text())) if script.suffix == ".json" else script.read_text().strip()
+    words = voice(cfg, work, text)
     hl = {norm(w) for w in cfg.get("highlight_words", [])}
     for w in words:
         w["hl"] = norm(w["w"]) in hl
@@ -85,17 +89,28 @@ def main(proj: Path, test: float | None):
         d = {x: y for x, y in s.items() if x != "cue"}
         d["start"] = 0.0 if not shots else t
         shots.append(d)
+    lead, tail = cfg.get("lead", 0.35), cfg.get("tail", 0.0)
+    vend = words[-1]["e"]
     for i, s in enumerate(shots):
-        s["end"] = shots[i + 1]["start"] if i + 1 < len(shots) else words[-1]["e"] + 4
+        s["end"] = shots[i + 1]["start"] if i + 1 < len(shots) else vend + 0.6 + tail + 1
     overlays, k = [], 0
     for o in cfg["overlays"]:
+        if o["kind"] == "end":   # end card: after the last word, for `tail` seconds
+            d = {x: y for x, y in o.items() if x != "kind"}
+            d.update(kind="end", start=vend + 0.5, end=vend + 0.6 + tail + 1)
+            overlays.append(d)
+            continue
         t, k = at(o["cue"], k)
         u, _ = at(o["until"], k)
-        d = {x: y for x, y in o.items() if x not in ("cue", "until")}
+        d = {x: y for x, y in o.items() if x not in ("cue", "until", "steps")}
         d.update(start=t, end=u)
+        if "steps" in o:
+            kk, d["steps"] = k, []
+            for st in o["steps"]:
+                ts, kk = at(st["cue"], kk)
+                d["steps"].append({"at": ts, "month": st["month"], "label": st["label"]})
         overlays.append(d)
-    lead = cfg.get("lead", 0.35)
-    total = (test if test else words[-1]["e"] + 0.6) + lead
+    total = (test if test else vend + 0.6 + tail) + lead
     props = {"words": words if not test else [w for w in words if w["s"] < test], "shots": shots, "overlays": overlays,
              "lead": lead, "accent": cfg.get("accent", "#FFD23F")}
     pj = work / "props.json"
@@ -114,11 +129,18 @@ def main(proj: Path, test: float | None):
     mix = ("[0:a]adelay={d}|{d},atrim=0:{T:.2f},apad=whole_dur={T:.2f},asplit=2[v][vk];".format(d=int(lead * 1000), T=total)
            + pad.replace("[bed]", "[bed0]") + ";[bed0][vk]sidechaincompress=threshold=0.03:ratio=8:attack=20:release=400[bed];"
            + sfx + "[v][bed]" + "".join(f"[w{i}]" for i in range(len(cuts)))
-           + f"amix=inputs={2 + len(cuts)}:normalize=0,atrim=0:{total:.2f},loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[out]")
-    wav = work / "mix.wav"
-    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(work / "voice_v2.mp3"), "-filter_complex", mix,
-         "-map", "[out]", "-c:a", "pcm_s16le", str(wav)])
-    out = ROOT / "output" / ("short_pt_cbs_style_test.mp4" if test else "short_pt_cbs_prazo.mp4")
+           + f"amix=inputs={2 + len(cuts)}:normalize=0,atrim=0:{total:.2f},aresample=48000[out]")
+    raw, wav = work / "mix_raw.wav", work / "mix.wav"
+    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(work / au.get("mp3", "voice_v2.mp3")), "-filter_complex", mix,
+         "-map", "[out]", "-c:a", "pcm_s16le", str(raw)])
+    # measure, then static gain to -14 LUFS with a soft peak limiter (-1.5 dBTP); loudnorm alone undershoots here
+    ln = "loudnorm=I=-14:TP=-1.5:LRA=11"
+    err = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(raw), "-af", ln + ":print_format=json", "-f", "null", "-"],
+                         capture_output=True, text=True).stderr
+    m = json.loads(err[err.rindex("{"):err.rindex("}") + 1])
+    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(raw), "-af",
+         f"volume={-13.2 - float(m['input_i']):.2f}dB,alimiter=limit=0.84:attack=3:release=60:level=disabled,aresample=48000", "-c:a", "pcm_s16le", str(wav)])
+    out = ROOT / "output" / ("short_pt_cbs_style_test.mp4" if test else cfg.get("output", "short_pt_cbs_prazo.mp4"))
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(silent), "-i", str(wav), "-map", "0:v", "-map", "1:a",
          "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(out)])
     print(out.relative_to(ROOT), f"{total:.1f}s")
