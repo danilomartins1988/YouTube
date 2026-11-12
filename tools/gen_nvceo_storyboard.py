@@ -28,9 +28,9 @@ PROJ = ROOT / "projects/nvidia-ceo-crisis-second-report"
 OUT = PROJ / "deliverables/documentary/storyboard.yaml"
 
 # ---------------------------------------------------------------- TO UPDATE before rendering (keep in sync with sources.yaml "cum")
-CUM_BN = 636            # our estimate, $bn lost vs the Nov 6 close ($186.64) x 24.1bn shares
-LATEST = 160.27         # price used for CUM_BN
-ASOF = "PREMARKET, NOV 12, 7:03 A.M. ET"   # label shown on screen next to the latest price
+CUM_BN = 649            # our estimate, $bn lost vs the Nov 6 close ($186.64) x 24.1bn shares
+LATEST = 159.70         # price used for CUM_BN
+ASOF = "PREMARKET, NOV 12, 8:11 A.M. ET"   # label shown on screen next to the latest price
 # ---------------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------- ending selection -> script.yaml m_end
