@@ -962,6 +962,7 @@ Apple Is Worth $5 Trillion. Here's What That Price Assumes #shorts
 Apple is worth about five point oh six trillion dollars. That is the price of every share, three hundred and forty-eight dollars and fifty-one cents at the close on November tenth, twenty twenty-six, times about fourteen and a half billion shares.
 
 Watch the full story: "Before You Buy Apple Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
+Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
 
 #shorts #apple #stocks #investing #economics
 ```
