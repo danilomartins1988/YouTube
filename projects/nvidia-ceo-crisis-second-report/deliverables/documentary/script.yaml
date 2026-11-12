@@ -1,0 +1,259 @@
+# Documentary (target 11-13 min), Episode 53: follow-up to Ep 52. INTERNAL five-part structure. Hook rules: cold open on the
+# number, short beats, explicit promise, channel intro after part 1. LIVE STORY: the m_end narration is written by
+# tools/gen_nvceo_storyboard.py from endings.yaml according to project.yaml "ending:" (pending | stays | out).
+# The second person is never named; the first woman is never named; allegations attributed; our estimates labelled.
+logline: Two days after Nvidia lost about $428 billion over reports about its founder, a second report and a board meeting about
+  his future pushed the loss further. What was reported, what is confirmed, and what removing a founder would mean.
+title: Nvidia's Founder Might Be Out. Here's What's at Stake
+segments:
+- id: h_open
+  chapter: Six hundred billion
+  narration: '{{cum}}. By our own estimate, that is how much stock market value Nvidia had lost since the close on Friday, November
+    sixth, measured at {{cum.asof_spoken}}.'
+  claims:
+  - cum
+- id: h_twist
+  chapter: Six hundred billion
+  narration: In our last video, the number was {{recap}}. Then came a second newspaper report about Nvidia's founder, and a board meeting
+    about his future.
+  claims:
+  - recap
+  - second
+  - oust
+- id: h_question
+  chapter: Six hundred billion
+  narration: So could the world's most valuable chip designer lose the man investors call its product? And what is the stock price
+    telling us about that?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced facts.
+- id: h_promise
+  chapter: Six hundred billion
+  narration: By the end of this video, you will know what was reported, what is confirmed and what is not, what removing a founder chief
+    executive would actually involve, who could step in, and the dates to watch.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: The story so far
+  narration: ''
+  claims: []
+- id: m1_recap
+  chapter: The story so far
+  narration: A quick recap. On Sunday, November eighth, Jensen Huang, Nvidia's founder and chief executive, sent an email to employees.
+    In it he wrote, I was unfaithful to my wife. The same day, the board opened an independent investigation, in light of reporting that
+    he had been the target of a foreign intelligence effort. The New York Times and the Financial Times had reported that American officials
+    believed a businesswoman linked to an Nvidia customer was working for China's intelligence service. China called that unsubstantiated,
+    and nobody has been charged.
+  claims:
+  - recap
+- id: m1_market
+  chapter: The story so far
+  narration: The board said it had no reason to believe that national security or company secrets were compromised. Investors sold anyway.
+    On Monday, the broad market and Nvidia's rivals rose, while Nvidia fell. Over two trading days, about {{recap}} of market value
+    disappeared, by our estimate.
+  claims:
+  - recap
+- id: m1_draw
+  chapter: The story so far
+  narration: Let me draw the share price on four checkpoints. Friday, November sixth, about a hundred and eighty-seven dollars. Tuesday,
+    about a hundred and sixty-nine. Then Wednesday's close, a little higher, about a hundred and seventy-four. And here is the latest
+    price we used, {{cum.price_spoken}}. Look at what happened between those last two bars.
+  claims:
+  - cum
+  - night
+  - recap
+  analysis: true
+  source_note: Bar sketch of the sourced closing and premarket prices.
+- id: m1_transition
+  chapter: The story so far
+  narration: Wednesday had started as a good day. Then, a little before five in the afternoon, the second story broke.
+  claims:
+  - night
+- id: m2_card
+  chapter: The second report
+  narration: ''
+  claims: []
+- id: m2_nyt
+  chapter: The second report
+  narration: On Wednesday, November eleventh, the New York Times reported that Huang had had a second relationship, this time with an
+    Nvidia vice president who reports to him. The Times cited five people who had worked at the company. According to the report, both
+    were married to other people.
+  claims:
+  - second
+- id: m2_unconfirmed
+  chapter: The second report
+  narration: Here is what is not confirmed. Huang has not confirmed it. Nvidia has not commented. NBC News said it had not confirmed the
+    Times report. When the Times reached Huang by phone, he said, I don't think you should be talking to me directly. We are not naming
+    the executive, and we will not speculate about her. She is not accused of anything.
+  claims:
+  - second
+- id: m2_why
+  chapter: The second report
+  narration: So why would this matter to investors at all? Because of the reporting line. A chief executive in a relationship with someone
+    who reports to him is not a gossip question for a board. It is a governance question, about conflicts of interest and about who
+    knew what. That is the lens the market used.
+  claims:
+  - second
+  analysis: true
+  source_note: Commentary on why boards treat reporting-line relationships as governance issues.
+- id: m2_afterhours
+  chapter: The second report
+  narration: The timing shows it. Nvidia's shares had actually closed up {{night}} on Wednesday, at about a hundred and seventy-four dollars.
+    In trading after the close, they slid. By about five twenty-five in the evening, New York time, the price had touched about a hundred
+    and fifty-six dollars, roughly ten percent below the close. At eight in the evening, the last after-hours trade was still about
+    a hundred and fifty-nine dollars. On Thursday morning, before the open, rivals AMD and Broadcom were up,
+    and Nvidia was still down nearly eight percent.
+  claims:
+  - night
+- id: m2_transition
+  chapter: The second report
+  narration: And while the price was falling, the board was meeting.
+  claims:
+  - oust
+- id: m3_card
+  chapter: The board meeting
+  narration: ''
+  claims: []
+- id: m3_reports
+  chapter: The board meeting
+  narration: The Wall Street Journal reported that Nvidia's board was preparing to oust Huang. Semafor reported the same, and added that the
+    full board had yet to make a decision. CNBC confirmed that the board met on Wednesday to discuss whether to remove him. On Thursday
+    morning, CNBC wrote that no outcome had been announced.
+  claims:
+  - oust
+- id: m3_confidence
+  chapter: The board meeting
+  narration: Notice the contrast with four days earlier. On Sunday, the board's own statement said it had confidence in Jensen and his
+    leadership team. As of Thursday morning, that line had not been withdrawn or updated in public. There was no new statement on the
+    company's newsroom, and no new filing with the SEC. Everything about a possible change of leadership was still coming from reporting,
+    not from Nvidia.
+  claims:
+  - recap
+  - oust
+- id: m3_interim
+  chapter: The board meeting
+  narration: Bloomberg reported that Nvidia was working with an outside search firm to identify chief executive candidates, and was weighing
+    an interim leader first. Semafor reported that some directors favor the chief financial officer, Colette Kress, for that interim
+    role. Those are reports. No name has been confirmed by the company.
+  claims:
+  - oust
+- id: m3_control
+  chapter: The board meeting
+  narration: Could a board really remove the founder of a company like this? According to Nvidia's latest proxy statement, Huang owns about
+    {{control}} of the company's shares, mostly through family trusts. That is a fortune, but it is far from a majority. The chief executive
+    serves at the pleasure of the board, which CNBC says has eleven directors and a lead director instead of a chair. And removing him as
+    chief executive would not, by itself, remove him from the board. And the proxy statement does not use the word succession even once.
+  claims:
+  - control
+- id: m3_draw
+  chapter: The board meeting
+  narration: Let me draw the decision. Here is the board. Here is the chief executive's seat. The board appoints whoever sits in it. Today
+    that arrow points at the founder. If the board changes its mind, the arrow moves to an interim leader, while a search firm looks for
+    a permanent one. And by law, the company would have to tell regulators, normally within four business days.
+  claims:
+  - oust
+  - control
+  analysis: true
+  source_note: Diagram of the board-CEO relationship and the 8-K timing.
+- id: m3_transition
+  chapter: The board meeting
+  narration: Meanwhile, in Washington, the reaction was getting louder.
+  claims:
+  - congress
+- id: m4_card
+  chapter: Washington
+  narration: ''
+  claims: []
+- id: m4_calls
+  chapter: Washington
+  narration: Senator Kevin Cramer, a Republican from North Dakota, told Politico that the potential for extortion was so tremendous, given
+    something as sensitive as Nvidia chips, that, in his words, he's got to go. Representative Suhas Subramanyam, a Democrat from Virginia,
+    told CNBC that Huang should resign. Those are their opinions. No regulator has made a finding.
+  claims:
+  - congress
+- id: m4_chairs
+  chapter: Washington
+  narration: Two House committee chairmen, Brian Mast and John Moolenaar, said they had not heard from Huang and gave him until the end of
+    Wednesday to respond. Asked whether subpoenas were possible, Mast said, yes.
+  claims:
+  - congress
+- id: m4_letter
+  chapter: Washington
+  narration: In the Senate, Elizabeth Warren and Chris Coons asked the Commerce Department to preserve its records on Nvidia's chip exports
+    to China, writing that the incident raises significant concerns about the government's ability to enforce export controls. And in
+    January, Democrats take control of both chambers, with the power to issue subpoenas.
+  claims:
+  - congress
+- id: m4_transition
+  chapter: Washington
+  narration: So what is the market actually pricing?
+  claims: []
+- id: m5_card
+  chapter: What the price says
+  narration: ''
+  claims: []
+- id: m5_keyperson
+  chapter: What the price says
+  narration: Remember the phrase from our last video, key person risk. Nvidia's annual report says it is highly dependent on its longstanding
+    executive team. The analyst Stacy Rasgon summed it up in five words. Jensen is Nvidia. Nvidia is Jensen.
+  claims:
+  - control
+  - analysts
+- id: m5_ives
+  chapter: What the price says
+  narration: Some analysts have put numbers on that. Dan Ives said that if Huang were removed, Nvidia would be worth a lot less, {{analysts}},
+    and he gave different price targets depending on whether Huang stays or goes. Bernstein downgraded the stock and cut its target in half.
+    Those are opinions, not facts. But they show how a single seat can move a valuation by hundreds of billions of dollars.
+  claims:
+  - analysts
+- id: m5_peers
+  chapter: What the price says
+  narration: And look at the neighbors. When Nvidia fell, AMD and Broadcom rose, on Monday and again on Thursday morning. Investors were not
+    selling chips. They were selling uncertainty about one company's leadership, and buying its rivals.
+  claims:
+  - night
+  - recap
+- id: m5_transition
+  chapter: What the price says
+  narration: Which leaves three things to watch.
+  claims: []
+- id: m6_card
+  chapter: What to watch
+  narration: ''
+  claims: []
+- id: m6_draw
+  chapter: What to watch
+  narration: Let me draw them. First, the board. Any decision about the chief executive should show up in a filing with the SEC. Second,
+    the results. Nvidia is scheduled to report on {{watch}}. Third, Congress. House chairmen have asked for a closed-door briefing on
+    November eighteenth, and it is still not confirmed. All three arrows point at the same question, who runs Nvidia.
+  claims:
+  - watch
+  - oust
+  analysis: true
+  source_note: Diagram of the three sourced upcoming events.
+- id: m_end
+  chapter: What to watch
+  narration: 'As of {{cum.asof_spoken}}, Nvidia''s board had not announced a decision. There was no new filing with regulators and no new statement from Huang. If the board does act, the company would normally have to disclose it within four business days, so that filing is the first thing to look for.'
+  claims:
+  - oust
+  - cum
+- id: payoff
+  chapter: The lesson
+  narration: So why is Nvidia worth so much less than a week ago? Not because its chips changed. Because investors are trying to price a
+    company that, by its own admission, depends heavily on its leaders, at the exact moment its board is reported to be debating whether
+    to replace the most important one. Nothing in this story has been proven in court, and nobody has been charged. But markets do not wait
+    for verdicts. They price people, and they price uncertainty. And for now, the biggest uncertainty in artificial intelligence is not a
+    chip. It is a chair.
+  claims:
+  - cum
+  - control
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden
+    Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

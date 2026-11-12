@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos, no people in the classic version).
+title: "Nvidia's Founder Might Be Out. Here's What's at Stake"
+docs_dir: docs/episodes/53-nvidia-ceo-crisis
+video: output/nvceo_documentary.mp4
+deliverable: documentary
+status: completed
+analysis:
+  mystery: Could Nvidia's board remove its founder, and what is that worth?
+  surprising_fact: WSJ and Semafor reported the board was preparing to oust Huang (Nov 11, 2026); no decision announced as of Nov 12 morning
+  subject: an empty executive chair
+  tone: spectacle
+  metaphor: the most valuable chair in AI
+concepts:
+- id: A
+  angle: giant question (bignum)
+  archetype: bignum
+  text:
+  - NVIDIA'S CEO
+  - OUT?
+  claim_basis: 'oust: WSJ/Semafor reported the board was preparing to oust Huang; no decision announced (CNBC, Nov 12)'
+  scene:
+    palette: {sky0: '#12062E', sky1: '#341A6B', haze: '#FF6EC7', key: '#FFF3B0', accent: '#FFE14D', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: chip, x: 1480, y: 560, s: 0.75}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#3DF5FF'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - 'FOUNDER'
+  - 'OR OUT?'
+  claim_basis: 'oust: reported board deliberations (WSJ, Semafor); no decision announced'
+  scene:
+    palette: {sky0: '#0A0614', sky1: '#2A1440', haze: '#FFB74D', key: '#FFF3E0', accent: '#FF4F6B', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: chip, x: 480, y: 660, s: 0.6}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
+    vignette: 0.5
+    brand: none

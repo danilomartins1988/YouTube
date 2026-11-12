@@ -73,6 +73,7 @@ S = {
  "byb-amazon-2026-11": ("navy", "L", {"kind": "parcels", "s": 0.9}, "AMAZON STOCK", "CASH BELOW ZERO?!", "#FF1E1E", {}, "TTM free cash flow −$42.4bn (Amazon definition; Q3 release)"),
  "byb-tesla-2026-11": ("navy", "L", {"kind": "sedan", "s": 0.9}, "TESLA STOCK", "466× PROFIT?!", "#FF1E1E", {}, "market cap / TTM net income 466x (our calc., Nov 10, 2026 close)"),
  "byb-apple-2026-11": ("navy", "L", {"kind": "coin", "s": 1.0, "symbol": "38×"}, "APPLE STOCK", "38× PROFIT?!", "#FF1E1E", {}, "trailing P/E 38.3x (our calc., Nov 10, 2026 close; FY2026 net income)"),
+ "53-nvidia-ceo-crisis": ("navy", "R", {"kind": "ceo", "who": "huang", "mood": "shock", "shadow": False, "s": 0.95}, "NVIDIA'S CEO", "OUT?", "#FF1E1E", {}, "WSJ/Semafor reported the board was preparing to oust Huang (Nov 11, 2026); no decision announced as of Nov 12 a.m."),
  "52-nvidia-probe": ("navy", "R", {"kind": "ceo", "who": "huang", "mood": "shock", "shadow": True, "s": 0.95}, "NVIDIA CEO'S AFFAIR", "-$428 BILLION", "#FF1E1E", {}, "Huang admitted being unfaithful (Nov 8 memo); ≈ -$428bn market value Nov 6-10, 2026 (our estimate)"),
  "51-spacex": ("navy", "L", {"kind": "rocket", "s": 0.75}, "SPACEX", "NOT ROCKETS?!", "#FF1E1E", {}, "Q3 2026: SI $7.6bn > Starlink $5.2bn > Space $1.8bn (Q3 release)"),
  "50-mf-global": ("navy", "L", {"kind": "vault", "s": 0.95}, "$1.6 BILLION", "VANISHED", "#FF1E1E", {}, "≈ $1.6bn customer shortfall (SIPA trustee)"),

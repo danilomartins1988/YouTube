@@ -1,0 +1,16 @@
+# Ending segment for Ep 53 (m_end). Select with project.yaml "ending:" and re-run tools/gen_nvceo_storyboard.py, which
+# copies the chosen narration into script.yaml (segment m_end) and picks the matching scene.
+# "stays" and "out" are TEMPLATES: before using them, replace every [TO UPDATE ...] with sourced facts (and add the source
+# to sources.yaml claim "oust"). The generator refuses to write an ending that still contains "[TO UPDATE".
+pending: >-
+  As of {{cum.asof_spoken}}, Nvidia's board had not announced a decision. There was no new filing with regulators and no new statement
+  from Huang. If the board does act, the company would normally have to disclose it within four business days, so that filing is the
+  first thing to look for.
+stays: >-
+  Update. [TO UPDATE: date and form of the announcement, e.g. "On November twelfth, Nvidia's board said in a statement that"] Jensen
+  Huang will remain chief executive. [TO UPDATE: any conditions, review findings or governance changes the board announced, quoted
+  exactly.] The independent investigation into the reports about a foreign intelligence effort continues.
+out: >-
+  Update. [TO UPDATE: date and source, e.g. "On November twelfth, in a filing with the SEC, Nvidia said that"] Jensen Huang will step
+  down as chief executive. [TO UPDATE: who leads in the interim and Huang's remaining role, quoted exactly from the company.] The
+  independent investigation into the reports about a foreign intelligence effort continues.

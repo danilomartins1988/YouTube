@@ -84,6 +84,7 @@ SHORTS = {
     "byb-amazon-2026-11": ("before-you-buy-amazon-2026-11", "documentary", "bybamzn_documentary", "AMAZON: FREE CASH", "BELOW ZERO", "Amazon's Free Cash Flow Is Negative. Here's the Bet", "#amazon #stocks #investing"),
     "byb-tesla-2026-11": ("before-you-buy-tesla-2026-11", "documentary", "bybtsla_documentary", "TESLA: 466×", "ITS PROFIT", "Tesla Is Worth 466 Times Its Profit. Here's What That Assumes", "#tesla #stocks #investing"),
     "byb-apple-2026-11": ("before-you-buy-apple-2026-11", "documentary", "bybapple_documentary", "APPLE: $5 TRILLION", "38× LAST YEAR'S PROFIT", "Apple Is Worth $5 Trillion. Here's What That Price Assumes", "#apple #stocks #investing"),
+    "53-nvidia-ceo-crisis": ("nvidia-ceo-crisis-second-report", "documentary", "nvceo_documentary", "NVIDIA'S CEO", "OUT?", "Could Nvidia's Board Push Out Its Founder?", "#nvidia #stocks #ai"),
     "52-nvidia-probe": ("why-nvidia-lost-428-billion-in-two-days", "documentary", "nvidiaprobe_documentary", "-$428 BILLION", "IN TWO DAYS", "Nvidia Lost About $428 Billion in Two Days", "#nvidia #stocks #ai"),
     "50-mf-global": ("mf-global-the-billion-dollars-that-vanished", "documentary", "mfglobal_documentary", "$1.6 BILLION", "VANISHED", "MF Global: $1.6 Billion of Customer Money Vanished", "#finance #wallstreet #farmers"),
     "42-penny": ("why-america-stopped-making-the-penny", "documentary", "penny_documentary", "3.69 CENTS", "TO MAKE 1 CENT", "It Cost 3.69 Cents to Make One Penny", "#penny #money #usa"),
