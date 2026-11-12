@@ -1,0 +1,20 @@
+# Professional "news explainer" edit of the CBS Short (owner feedback 2026-11-12: the kinetic-text version looked amateur).
+# Narration: ONE ElevenLabs request for the whole script (voice test A settings), cached in output/short-pt-cbs-prazo/news_v2/.
+# Cues are words of the narration (first match at/after the previous cue); times resolve from the character alignment.
+voice:
+  voice_id: rjdBsuq3BG78Nr8NKTlM
+  model_id: eleven_multilingual_v2
+  voice_settings: {stability: 0.35, similarity_boost: 0.8, style: 0.35, use_speaker_boost: true}
+lead: 0.35
+accent: "#FFD23F"
+highlight_words: [receita, trinta, dias, porém, cbs, reforma, tributária, estimativa, acerto, janeiro, fevereiro, março, caixa, créditos, proposta, congresso, complementar, 2027]
+shots:
+  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: A, fx: 0.36, fy: 0.45, z0: 1.0, z1: 1.12, dx: 60, credit: "Foto: Rafa Neddermeyer/Agência Brasil"}
+  - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: pagar, fx: 0.50, fy: 0.55, z0: 1.15, z1: 1.30, dim: 0.45, credit: "Foto: Rafa Neddermeyer/Agência Brasil"}
+  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: Mas, fx: 0.30, fy: 0.40, z0: 1.35, z1: 1.50, dim: 0.45, dy: 40, credit: "Foto: Rafa Neddermeyer/Agência Brasil"}
+  - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: CBS., fx: 0.30, fy: 0.45, z0: 1.05, z1: 1.20, dx: 60, credit: "Foto: Rafa Neddermeyer/Agência Brasil"}
+  - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: contribuição, fx: 0.75, fy: 0.60, z0: 1.30, z1: 1.45, dx: -50, credit: "Foto: Rafa Neddermeyer/Agência Brasil"}
+overlays:
+  - {kind: badge, cue: trinta, until: novo, big: "+30", small: "DIAS PARA PAGAR"}
+  - {kind: news, cue: novo, until: O, outlet: "IstoÉ Dinheiro", date: "11/11/2026", headline: "CBS: governo propõe ampliar em 30 dias prazo para acerto do imposto", highlight: "ampliar em 30 dias"}
+  - {kind: lower, cue: CBS., until: substitui, title: "CBS", sub: "Contribuição sobre Bens e Serviços"}
