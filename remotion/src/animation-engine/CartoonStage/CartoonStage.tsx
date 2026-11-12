@@ -4307,6 +4307,78 @@ const detective: ItemFn = (a, {t, f}, i) => {
 
 /** EMPTY CHAIR (original design): a tall executive chair, nobody in it, slowly swivelling under a spotlight. From
  *  `memoAt`, a memo flutters down from above and lands on the seat (`memo`: its title). `text`: caption. */
+/** CARICATURE (owner decision 2026-11-12): a PUBLIC FIGURE as a respectful flat cartoon, recognisable only by
+ *  signature traits (hair, clothes), never photo-traced, never mocking features. `who`: 'huang' | 'trump' |
+ *  'silhouette' (a private person: faceless shadow, no likeness) | a traits object {hair:'spiky'|'swoop'|'side'|'bald',
+ *  hairColor, jacket, shirt, tie, leather, glasses, skin}. Poses: stand | talk | memo (writes at a small desk) | wave |
+ *  worry | point; `poses: [[t, pose]]` switches on cues. `label` + `labelUntil`: a name tag (first appearance). */
+const CARI: Record<string, any> = {
+  huang: {hair: 'swept', hairColor: '#C3C8CF', jacket: '#1B1B1F', shirt: '#26262B', leather: true, skin: '#E6B58C', tie: null, glasses: false},
+  trump: {hair: 'swoop', hairColor: '#F2C94C', jacket: '#1F2A44', shirt: '#F4F7FB', tie: '#D32F2F', longTie: true, skin: '#F0BE96', glasses: false},
+};
+const caricature: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s0 = (a.scale ?? 1), app = pop(t, a.at ?? 0, 0.5), fl = a.flip ? -1 : 1;
+  if (app <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  let pose: string = a.pose || 'stand';
+  if (Array.isArray(a.poses)) for (const [pt, pp] of a.poses) if (t >= Number(pt)) pose = pp;
+  const sil = a.who === 'silhouette';
+  const tr = sil ? {hair: 'side', hairColor: '#1A1A22', jacket: '#1A1A22', shirt: '#1A1A22', skin: '#1A1A22'} : {...(CARI[a.who] || {}), ...(typeof a.who === 'object' ? a.who : {}), ...(a.traits || {})};
+  const skin = tr.skin || '#E8B88F', jk = tr.jacket || '#37474F', sh = tr.shirt || '#FFFFFF';
+  const breathe = Math.sin(t * 2 + i) * 2, talk = pose === 'talk' || pose === 'wave' || pose === 'point' ? Math.abs(Math.sin(t * 9 + i)) : 0;
+  let la = 14, ra = -14;
+  if (pose === 'talk') { ra = -60 - 20 * Math.sin(t * 2.6 + i); la = 18; }
+  if (pose === 'wave') { ra = -150 - 18 * Math.sin(t * 7); }
+  if (pose === 'point') { ra = -100 - 5 * Math.sin(t * 3); }
+  if (pose === 'worry') { la = 150; ra = -150; }
+  if (pose === 'memo') { ra = -62 + 8 * Math.sin(t * 9); la = 40; }
+  const out = a.until !== undefined ? 1 - win(t, a.until, 0.4) : 1;
+  const arm = (side: number, ang: number) => { const r = (ang * Math.PI) / 180, sx = side * 40, sy = -205;
+    const ex = sx + Math.sin(r) * 92, ey = sy + Math.cos(r) * 92;
+    return <g><path d={`M ${sx} ${sy} L ${ex} ${ey}`} stroke={jk} strokeWidth={26} strokeLinecap="round" />
+      <path d={`M ${sx} ${sy} L ${ex} ${ey}`} stroke={OL} strokeWidth={30} strokeLinecap="round" opacity={0} />
+      {!sil && <circle cx={ex} cy={ey} r={13} fill={skin} stroke={OL} strokeWidth={3} />}</g>; };
+  const hairPath: Record<string, string> = {
+    spiky: 'M -50 -292 L -44 -330 L -30 -316 L -20 -342 L -6 -322 L 8 -344 L 20 -320 L 34 -338 L 40 -314 L 52 -326 L 50 -290 Q 0 -306 -50 -292 Z',
+    swoop: 'M -50 -298 Q -54 -340 -4 -346 Q 54 -350 72 -316 Q 76 -300 58 -305 Q 30 -324 -14 -316 Q -40 -312 -50 -298 Z',
+    swept: 'M -53 -290 Q -60 -336 -8 -344 Q 46 -348 57 -306 Q 59 -292 53 -288 Q 44 -318 6 -322 Q -32 -322 -53 -290 Z',
+    side: 'M -52 -280 Q -56 -340 0 -340 Q 56 -340 52 -280 Q 40 -312 -10 -314 Q -40 -312 -52 -280 Z',
+    bald: 'M -48 -300 Q 0 -320 48 -300',
+  };
+  const head = <g>
+    <ellipse cx={0} cy={-282} rx={54} ry={60} fill={skin} stroke={sil ? 'none' : OL} strokeWidth={4} />
+    {!sil && <g>
+      <ellipse cx={-54} cy={-280} rx={9} ry={14} fill={skin} stroke={OL} strokeWidth={3} /><ellipse cx={54} cy={-280} rx={9} ry={14} fill={skin} stroke={OL} strokeWidth={3} />
+      <path d={hairPath[tr.hair || 'side'] || hairPath.side} fill={tr.hairColor || '#3E2723'} stroke={OL} strokeWidth={3.5} strokeLinejoin="round" />
+      {tr.glasses && <g><rect x={-38} y={-294} width={30} height={20} rx={6} fill="none" stroke={OL} strokeWidth={3} /><rect x={8} y={-294} width={30} height={20} rx={6} fill="none" stroke={OL} strokeWidth={3} /><path d="M -8 -286 L 8 -286" stroke={OL} strokeWidth={3} /></g>}
+      <circle cx={-20} cy={-283} r={5} fill={OL} /><circle cx={22} cy={-283} r={5} fill={OL} />
+      <path d={pose === 'worry' ? 'M -32 -302 L -10 -298 M 32 -302 L 10 -298' : 'M -32 -300 L -10 -303 M 32 -300 L 10 -303'} stroke={OL} strokeWidth={4} strokeLinecap="round" />
+      {pose === 'worry' ? <path d="M -14 -248 Q 1 -258 16 -248" fill="none" stroke={OL} strokeWidth={4} strokeLinecap="round" />
+        : talk > 0.05 ? <ellipse cx={1} cy={-250} rx={12} ry={3 + 8 * talk} fill="#6B2E2A" stroke={OL} strokeWidth={3} />
+        : <path d="M -16 -254 Q 1 -240 18 -254" fill="none" stroke={OL} strokeWidth={4} strokeLinecap="round" />}
+    </g>}
+    {sil && <T x={0} y={-266} s={54} c="#9AA3B5">?</T>}
+  </g>;
+  return <g key={'cr' + i} opacity={out * (sil ? 0.92 : 1)} transform={`translate(${x} ${y - breathe}) scale(${s0 * fl * app} ${s0 * app})`}>
+    <ellipse cx={0} cy={4} rx={70} ry={12} fill="#000" opacity={0.18} />
+    {pose === 'memo' && <g><rect x={20} y={-120} width={170} height={16} rx={4} fill="#8D6E63" stroke={OL} strokeWidth={4} />
+      <rect x={40} y={-104} width={12} height={104} fill="#6D4C41" stroke={OL} strokeWidth={3} /><rect x={160} y={-104} width={12} height={104} fill="#6D4C41" stroke={OL} strokeWidth={3} />
+      <g transform="translate(110 -132) rotate(-4)"><rect x={-52} y={-16} width={104} height={18} fill="#FFFFFF" stroke={OL} strokeWidth={3} /></g></g>}
+    <path d="M -24 -112 L -26 0 M 24 -112 L 26 0" stroke={sil ? '#1A1A22' : '#22252E'} strokeWidth={26} strokeLinecap="round" />
+    {!sil && <path d="M -40 -2 l -14 0 M 40 -2 l 14 0" stroke={OL} strokeWidth={12} strokeLinecap="round" />}
+    {arm(-1, la)}
+    <path d="M -50 -222 Q -56 -110 -44 -100 L 44 -100 Q 56 -110 50 -222 Q 0 -238 -50 -222 Z" fill={jk} stroke={sil ? 'none' : OL} strokeWidth={4} />
+    {!sil && <path d="M -18 -228 L 0 -150 L 18 -228 Z" fill={sh} stroke={OL} strokeWidth={3} />}
+    {!sil && tr.leather && <g><path d="M -18 -228 L -6 -112 M 18 -228 L 6 -112" stroke="#000" strokeWidth={3} /><path d="M 0 -150 L 0 -104" stroke="#9E9E9E" strokeWidth={3} strokeDasharray="4 4" />
+      <path d="M -44 -200 Q -30 -180 -40 -150" stroke="#FFFFFF" strokeWidth={5} opacity={0.22} fill="none" strokeLinecap="round" /></g>}
+    {!sil && tr.tie && <path d={`M 0 -224 L -9 -196 L 0 ${tr.longTie ? -96 : -140} L 9 -196 Z`} fill={tr.tie} stroke={OL} strokeWidth={3} />}
+    {arm(1, ra)}
+    {head}
+    {a.label && (a.labelUntil === undefined || t < a.labelUntil) && <g transform="translate(0 52)">
+      <rect x={-Math.max(140, a.label.length * 9.5)} y={-24} width={Math.max(280, a.label.length * 19)} height={44} rx={12} fill="#FFF8E1" stroke={OL} strokeWidth={4} />
+      <T x={0} y={8} s={24} c={OL}>{a.label}</T></g>}
+  </g>;
+};
+
 const emptychair: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
   if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
@@ -4490,7 +4562,7 @@ const scorecard: ItemFn = (a, {t}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, freighter, pricedin, riskscale, editionstamp, scorecard};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, freighter, pricedin, riskscale, editionstamp, scorecard};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

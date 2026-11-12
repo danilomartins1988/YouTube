@@ -335,3 +335,12 @@ YOUTUBE PACKAGE READY.
   (presenter boards) and on every v2 thumbnail (PunchThumb), shocked and pointing at the hero object.
 - Next videos: improve his **arm** (pointing/drawing arm: better shoulder joint, elbow bend, hand shape, no stretched
   straight tube). Old videos are not re-rendered for this.
+
+## Real people (owner decision 2026-11-12)
+- Public figures named in an episode (executives, politicians) may appear as respectful flat-cartoon caricatures,
+  recognisable only by signature traits (hair, clothes): the `caricature` item in CartoonStage (`who: 'huang' | 'trump'`
+  or a traits object). No photo tracing, no realistic rendering, no mocking of physical features.
+- A name label on first appearance. They appear only doing what the narration documents (attributed).
+- Private individuals are never drawn with a likeness: anonymous silhouette (`who: 'silhouette'`), never named if the
+  script does not name them.
+- No depiction implying wrongdoing beyond attributed facts; no romance or sexual content.

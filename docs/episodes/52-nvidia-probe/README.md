@@ -8,3 +8,11 @@
 - Style previews: `style_preview/01_chip_city_elevator.png`, `02_chip_buddies_monday.png`, `03_falling_elevator.png`, `04_cargo_ship_checkpoint.png`, `05_detective.png`, `06_secret_briefing_room.png`.
 - Rules: the woman is never named or shown; Huang named in text only; spy claims attributed to NYT/FT reporting (relayed); China denies; board "no reason to believe" secrets compromised; nobody charged; Megaspeed denies, not on the Entity List; no "obstructed"; Nov 5 market-wide drop not attributed; market-value figures are our estimates.
 - Sources: Nvidia statements (Nov 8, Nov 10), 10-K FY2025/FY2026, 10-Qs, proxy (May 2026), Yahoo Finance closes, Reuters factbox, NBC/CNBC/Bloomberg/TechCrunch/Fortune reporting, DOJ releases (Nov 2025, Dec 2025, Oct 2026), Sen. Cotton letter (Oct 2025). Notes: `RESEARCH_NOTES.md`.
+
+## V3 (owner, 2026-11-12): caricatures
+- Jensen Huang and Donald Trump appear as respectful cartoon caricatures (`caricature` item; traits only: Huang's silver
+  swept hair and black leather jacket; Trump's swept blond hair, dark suit, long red tie), with name labels on first
+  appearance: s07 (Huang at HQ by day, reporters), s14 (Huang writing the Nov 8 memo), s15 (Huang present while the
+  board's investigator works), s36 (Trump where the narration reports he backed Huang; Huang beside).
+- The woman named in press reports stays an anonymous faceless silhouette (s13, "UNNAMED · PER PRESS REPORTS"); never named.
+- Previews: `style_preview_v3/`. Presenter boards span 0.63 of the film; lint 0; strict cues 0 missing.

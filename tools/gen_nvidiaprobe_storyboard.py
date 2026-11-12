@@ -99,13 +99,13 @@ stage("s06_size", "m1_size", {
               folk(820, "cheer", at=C("Before")), folk(1340, "phone", at=C("Before", 0.3), flip=True), folk(1860, "cheer", at=C("by our estimate"))]},
     sources=["sec", "px"])
 stage("s07_founder", "m1_founder", {
-    "zones": [Z("chipcity", night=True, signs=["CEO PARKING ONLY", "KEYNOTE TONIGHT", "VISION SOLD HERE", "NOW HIRING: MORE CORES"])], "worldW": 2400, "night": True,
+    "zones": [Z("chipcity", day=True, signs=["CEO PARKING ONLY", "KEYNOTE TODAY", "VISION SOLD HERE", "NOW HIRING: MORE CORES"])], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 540, "zoom": 1.1}, {"at": C("One well known"), "x": 1100, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 2,
-    "items": [it("emptychair", x=1000, y=860, at=0.2, scale=0.9, text="FOUNDER AND CEO: JENSEN HUANG"),
+    "items": [it("caricature", who="huang", x=1000, y=860, at=0.2, scale=1.15, poses=[[0, "wave"], [C("One well known"), "talk"]], label="JENSEN HUANG · FOUNDER AND CEO"),
               it("letters", x=1000, y=130, text="'JENSEN IS NVIDIA. NVIDIA IS JENSEN.'", at=C("Jensen is Nvidia"), size=50, color="gold"),
               it("sign", x=1000, y=230, text="STACY RASGON, ANALYST (CNBC)", at=C("Jensen is Nvidia"), color="#BBDEFB", size=28),
               buddy(420, 860, at=0.5, mood="happy", label="GPU", hop=18), buddy(1600, 860, at=0.7, mood="happy", label="GPU", color="#FF9F1C", hop=18),
-              folk(640, "phone", at=0.6), folk(1350, "cheer", at=C("Jensen is Nvidia"), flip=True), folk(1840, "stand", at=0.8, glasses=True)]},
+              folk(560, "mic", at=0.6), folk(1420, "camera", at=0.7, flip=True), folk(1840, "cheer", at=C("Jensen is Nvidia"), flip=True, glasses=True)]},
     sources=["press"])
 stage("s08_risk", "m1_risk", {
     "zones": [Z("office")], "worldW": 2400,
@@ -149,16 +149,18 @@ stage("s13_reports", "m2_reports", {
     "items": [it("calendar", x=620, y=330, at=0.2, pages=[[0, "OCT 29", "2026"], [C("Then, on Friday"), "NOV 6", "2026"]]),
               it("paper", x=900, y=430, at=C("reported on a relationship"), until=C("Then, on Friday"), text="CEO AND A CHIP CUSTOMER", sub="REPORTED BY THE NEW YORK TIMES", size=36),
               it("paper", x=1300, y=430, at=C("the Times reported"), text="'WORKING FOR CHINA'S MSS'", sub="REPORTED · RELAYED BY BLOOMBERG", size=34),
-              it("sign", x=1300, y=760, text="ALLEGATION · NOT PROVEN", at=C("Ministry of State Security"), color="#FFCDD2", size=30),
+              it("sign", x=900, y=760, text="ALLEGATION · NOT PROVEN", at=C("Ministry of State Security"), color="#FFCDD2", size=30),
+              it("caricature", who="silhouette", x=1380, y=860, at=C("reported on a relationship"), scale=0.95, label="UNNAMED · PER PRESS REPORTS"),
               folk(300, "type", at=0.3), folk(1720, "phone", at=C("Then, on Friday"), flip=True), folk(1960, "type", at=0.6, flip=True, glasses=True)]},
     sources=["press"])
 stage("s14_memo", "m2_memo", {
     "zones": [Z("chipcity", night=True)], "worldW": 2400, "night": True,
     "cam": [{"at": 0, "x": 1000, "y": 540, "zoom": 1.1}, {"at": C("That is all"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.8}], "drift": 1,
-    "items": [it("emptychair", x=1000, y=860, at=0.2, scale=0.9, memoAt=C("Huang wrote"), memo="MEMO, NOV 8"),
+    "items": [it("caricature", who="huang", x=880, y=860, at=0.2, scale=1.15, poses=[[0, "stand"], [C("Huang wrote"), "memo"], [C("What matters"), "talk"]]),
+              it("sign", x=1320, y=560, text="MEMO, NOV 8 · TO EMPLOYEES", at=C("Huang wrote", 0.6), until=C("What matters"), color="#FFFFFF", size=28),
               it("sign", x=1000, y=170, text="HUANG'S EMAIL TO EMPLOYEES (NOV 8)", at=C("Huang wrote"), color="#FFF8E1", size=30),
-              it("sign", x=1520, y=330, text="PRIVATE LIFE: THAT'S ALL", at=C("That is all"), color="#E1BEE7", size=28),
-              it("letters", x=1000, y=290, text="WHAT MATTERS: THE MONEY", at=C("What matters"), size=54, color="gold"),
+              it("sign", x=1500, y=330, text="PRIVATE LIFE: THAT'S ALL", at=C("That is all"), until=C("What matters"), color="#E1BEE7", size=28),
+              it("letters", x=1300, y=330, text="WHAT MATTERS: THE MONEY", at=C("What matters"), size=54, color="gold"),
               folk(470, "read", at=C("Huang wrote")), folk(1560, "phone", at=C("Huang wrote", 0.4), flip=True, poses=[[C("That is all"), "shrug"]])]},
     sources=["nvidia"])
 stage("s15_board", "m2_board", {
@@ -323,6 +325,7 @@ stage("s35_calendar", "m5_calendar", {
     "items": [it("letters", x=760, y=90, text="2 · THE CALENDAR", at=0.2, size=56, color="gold"),
               it("calendar", x=420, y=330, at=C("scheduled to report"), pages=[[0, "NOV 17", "RESULTS"], [C("And three House"), "NOV 18", "BRIEFING?"]]),
               it("sign", x=1000, y=300, text="REQUESTED, NOT CONFIRMED", at=C("not yet confirmed"), color="#FFCDD2", size=30),
+              it("caricature", who="huang", x=260, y=860, at=0.4, scale=0.95, pose="stand", until=C("And three House")),
               folk(900, "read", at=C("And three House"), tie=True), folk(1250, "clipboard", at=C("And three House", 0.3), flip=True, tie=True, old=True),
               folk(1600, "point", at=C("vital that Congress"), flip=True, tie=True)]},
     sources=["press", "nvidia"])
@@ -330,10 +333,11 @@ stage("s36_politics", "m5_politics", {
     "zones": [Z("chipcity", day=True, signs=["NO POLITICS IN THE TUBE", "GPU PARKING ONLY", "STAY CHILL", "MORE CORES"])], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("He said Huang"), "x": 1150, "y": 520, "zoom": 1.0, "dur": 1.6}], "drift": 2,
     "items": [it("letters", x=1000, y=120, text="3 · POLITICS", at=0.2, size=60, color="gold"),
-              it("sign", x=800, y=300, text="PRESIDENT TRUMP: 'I REALLY BELIEVE HIM'", at=C("really believes him"), color="#FFE0B2", size=30),
+              it("sign", x=1000, y=300, text="PRESIDENT TRUMP: 'I REALLY BELIEVE HIM'", at=C("really believes him"), color="#FFE0B2", size=30),
               it("sign", x=1350, y=430, text="HIS ACCOUNT OF THE CALL", at=C("That is his account"), color="#E1BEE7", size=28),
-              it("emptychair", x=1600, y=860, at=0.3, scale=0.6),
-              folk(360, "mic", at=0.3), folk(620, "camera", at=0.4), folk(1150, "phone", at=C("really believes him"), flip=True), folk(1950, "camera", at=0.6, flip=True)]},
+              it("caricature", who="trump", x=1000, y=860, at=0.3, scale=1.15, poses=[[0, "stand"], [C("He said Huang"), "talk"]], label="PRESIDENT DONALD TRUMP"),
+              it("caricature", who="huang", x=1620, y=860, at=0.5, scale=0.9, pose="stand"),
+              folk(360, "mic", at=0.3), folk(600, "camera", at=0.4), folk(1350, "phone", at=C("really believes him"), flip=True), folk(1980, "camera", at=0.6, flip=True)]},
     sources=["press"])
 
 # ====================================================================== PAYOFF

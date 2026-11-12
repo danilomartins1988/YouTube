@@ -520,14 +520,13 @@ scenes:
     - set: chipcity
       x0: -1600
       x1: 4600
-      night: true
+      day: true
       signs:
       - CEO PARKING ONLY
-      - KEYNOTE TONIGHT
+      - KEYNOTE TODAY
       - VISION SOLD HERE
       - 'NOW HIRING: MORE CORES'
     worldW: 2400
-    night: true
     cam:
     - at: 0
       x: 1000
@@ -541,12 +540,18 @@ scenes:
       dur: 1.8
     drift: 2
     items:
-    - kind: emptychair
+    - kind: caricature
+      who: huang
       x: 1000
       y: 860
       at: 0.2
-      scale: 0.9
-      text: 'FOUNDER AND CEO: JENSEN HUANG'
+      scale: 1.15
+      poses:
+      - - 0
+        - wave
+      - - cue: One well known
+        - talk
+      label: JENSEN HUANG · FOUNDER AND CEO
     - kind: letters
       x: 1000
       y: 130
@@ -579,20 +584,19 @@ scenes:
       color: '#FF9F1C'
       hop: 18
     - kind: person
-      x: 640
+      x: 560
       y: 860
-      pose: phone
+      pose: mic
       at: 0.6
       scale: 0.95
       hair: 4
       skin: 3
       color: '#F06292'
     - kind: person
-      x: 1350
+      x: 1420
       y: 860
-      pose: cheer
-      at:
-        cue: Jensen is Nvidia
+      pose: camera
+      at: 0.7
       scale: 0.95
       hair: 2
       skin: 2
@@ -601,12 +605,14 @@ scenes:
     - kind: person
       x: 1840
       y: 860
-      pose: stand
-      at: 0.8
+      pose: cheer
+      at:
+        cue: Jensen is Nvidia
       scale: 0.95
       hair: 0
       skin: 1
       color: '#A1887F'
+      flip: true
       glasses: true
   sources:
   - press
@@ -966,13 +972,21 @@ scenes:
       sub: REPORTED · RELAYED BY BLOOMBERG
       size: 34
     - kind: sign
-      x: 1300
+      x: 900
       y: 760
       text: ALLEGATION · NOT PROVEN
       at:
         cue: Ministry of State Security
       color: '#FFCDD2'
       size: 30
+    - kind: caricature
+      who: silhouette
+      x: 1380
+      y: 860
+      at:
+        cue: reported on a relationship
+      scale: 0.95
+      label: UNNAMED · PER PRESS REPORTS
     - kind: person
       x: 300
       y: 860
@@ -1032,14 +1046,30 @@ scenes:
       dur: 1.8
     drift: 1
     items:
-    - kind: emptychair
-      x: 1000
+    - kind: caricature
+      who: huang
+      x: 880
       y: 860
       at: 0.2
-      scale: 0.9
-      memoAt:
+      scale: 1.15
+      poses:
+      - - 0
+        - stand
+      - - cue: Huang wrote
+        - memo
+      - - cue: What matters
+        - talk
+    - kind: sign
+      x: 1320
+      y: 560
+      text: MEMO, NOV 8 · TO EMPLOYEES
+      at:
         cue: Huang wrote
-      memo: MEMO, NOV 8
+        offset: 0.6
+      until:
+        cue: What matters
+      color: '#FFFFFF'
+      size: 28
     - kind: sign
       x: 1000
       y: 170
@@ -1049,16 +1079,18 @@ scenes:
       color: '#FFF8E1'
       size: 30
     - kind: sign
-      x: 1520
+      x: 1500
       y: 330
       text: 'PRIVATE LIFE: THAT''S ALL'
       at:
         cue: That is all
+      until:
+        cue: What matters
       color: '#E1BEE7'
       size: 28
     - kind: letters
-      x: 1000
-      y: 290
+      x: 1300
+      y: 330
       text: 'WHAT MATTERS: THE MONEY'
       at:
         cue: What matters
@@ -2566,6 +2598,15 @@ scenes:
         cue: not yet confirmed
       color: '#FFCDD2'
       size: 30
+    - kind: caricature
+      who: huang
+      x: 260
+      y: 860
+      at: 0.4
+      scale: 0.95
+      pose: stand
+      until:
+        cue: And three House
     - kind: person
       x: 900
       y: 860
@@ -2644,7 +2685,7 @@ scenes:
       size: 60
       color: gold
     - kind: sign
-      x: 800
+      x: 1000
       y: 300
       text: 'PRESIDENT TRUMP: ''I REALLY BELIEVE HIM'''
       at:
@@ -2659,11 +2700,25 @@ scenes:
         cue: That is his account
       color: '#E1BEE7'
       size: 28
-    - kind: emptychair
-      x: 1600
+    - kind: caricature
+      who: trump
+      x: 1000
       y: 860
       at: 0.3
-      scale: 0.6
+      scale: 1.15
+      poses:
+      - - 0
+        - stand
+      - - cue: He said Huang
+        - talk
+      label: PRESIDENT DONALD TRUMP
+    - kind: caricature
+      who: huang
+      x: 1620
+      y: 860
+      at: 0.5
+      scale: 0.9
+      pose: stand
     - kind: person
       x: 360
       y: 860
@@ -2674,7 +2729,7 @@ scenes:
       skin: 1
       color: '#B39DDB'
     - kind: person
-      x: 620
+      x: 600
       y: 860
       pose: camera
       at: 0.4
@@ -2683,7 +2738,7 @@ scenes:
       skin: 0
       color: '#FFC93C'
     - kind: person
-      x: 1150
+      x: 1350
       y: 860
       pose: phone
       at:
@@ -2694,7 +2749,7 @@ scenes:
       color: '#F06292'
       flip: true
     - kind: person
-      x: 1950
+      x: 1980
       y: 860
       pose: camera
       at: 0.6
