@@ -44,6 +44,6 @@ Total 12:13 (732.6 s), 43 scenes. Timestamps come from the narration timing of t
 | 38 | 10:34 | 22.3s | `s35_other` | engine_cartoon |  | Risk three is the long list in the fine print. The I R S is seeking an extra twenty-eight ... | tenq |
 | 39 | 10:56 | 22.4s | `s36_scale` | engine_cartoon |  | And the upside the price might not fully include. The C F O says Foundry revenue more than... | call, tenq |
 | 40 | 11:18 | 3.0s | `s37_t5` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | So, what should you watch? | - |
-| 41 | 11:21 | 29.3s | `s38_score` | engine_cartoon |  | Here's the scorecard for the next report, expected around late January twenty twenty-seven... | call, tenq |
+| 41 | 11:21 | 29.3s | `p38_watch` | engine_draw |  | Here's the scorecard for the next report, expected around late January twenty twenty-seven... | call, tenq |
 | 42 | 11:51 | 14.4s | `s39_edition` | engine_cartoon |  | That's Microsoft, November twenty twenty-six edition. We'll update it after every report, ... | rel |
 | 43 | 12:05 | 7.5s | `s40_end` | end_card | Closing words land; brand line draws | Next in the series, another giant of the stock market, opened up the same way. This is The... | - |

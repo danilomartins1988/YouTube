@@ -1,0 +1,334 @@
+{
+  "title": "Before You Buy Microsoft Stock, Watch This (Nov 2026)",
+  "docs_dir": "docs/episodes/byb-microsoft-2026-11",
+  "video": "output/bybmsft_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why does a four-trillion-dollar company show so little free cash?",
+    "surprising_fact": "Microsoft trades at about 66 times its last 12 months of free cash flow, after $135.9bn of capex (our calc., Nov 10, 2026 close)",
+    "subject": "a generic server chip",
+    "tone": "strategy",
+    "metaphor": "the cash is poured into concrete and chips"
+  },
+  "slug": "before-you-buy-microsoft-2026-11",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "MICROSOFT: 66\u00d7",
+        "FREE CASH"
+      ],
+      "claim_basis": "lenses: price/FCF 66x = $3,959.3bn / TTM FCF $60.0bn (our calc., Nov 10, 2026 close)",
+      "scene": {
+        "palette": {
+          "sky0": "#06122E",
+          "sky1": "#16306A",
+          "haze": "#3DF5FF",
+          "key": "#E0F7FA",
+          "accent": "#FFE14D",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 1500,
+          "y": 600,
+          "s": 0.75
+        },
+        "support": [],
+        "particles": {
+          "n": 70,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "MICROSOFT: 66\u00d7",
+          "x": 90,
+          "y": 519.5,
+          "size": 131.7,
+          "width": 1180.0,
+          "anchor": "start",
+          "color": "#FFE14D"
+        },
+        {
+          "text": "FREE CASH",
+          "x": 96,
+          "y": 657.5,
+          "size": 120,
+          "width": 691.2,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.53 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 417, 1270, 527), (96, 564, 787, 665)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.085",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 40",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-one-company-made-diamonds-a-symbol-of-love (distance 0.48)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "lenses: price/FCF 66x = $3,959.3bn / TTM FCF $60.0bn (our calc., Nov 10, 2026 close)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.624,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-one-company-made-diamonds-a-symbol-of-love"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "MICROSOFT: $136BN",
+        "ON CAPEX"
+      ],
+      "claim_basis": "lenses: TTM cash capex $135.9bn (10-Q; our calc.)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0614",
+          "sky1": "#16244A",
+          "haze": "#FF9F1C",
+          "key": "#FFF3E0",
+          "accent": "#7DFF8A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 480,
+          "y": 660,
+          "s": 0.6
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFF3E0"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "MICROSOFT: $136BN",
+          "x": 480.0,
+          "y": 187.3,
+          "size": 69.9,
+          "width": 760.0,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "ON CAPEX",
+          "x": 1440.0,
+          "y": 251.7,
+          "size": 148.4,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#7DFF8A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 133, 860, 191), (1060, 136, 1820, 261)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "5.8px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 10.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.071",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 30",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-apple-2026-11 (distance 0.25)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "lenses: TTM cash capex $135.9bn (10-Q; our calc.)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.663,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-apple-2026-11"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-12T00:52:48Z",
+  "master": "output/before-you-buy-microsoft-2026-11/thumbnails/master_A.png"
+}

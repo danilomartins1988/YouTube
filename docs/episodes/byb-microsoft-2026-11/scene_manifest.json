@@ -1937,9 +1937,9 @@
     },
     {
       "index": 41,
-      "id": "s38_score",
+      "id": "p38_watch",
       "segment": "payoff",
-      "type": "engine_cartoon",
+      "type": "engine_draw",
       "start_s": 681.43,
       "end_s": 710.77,
       "duration_s": 29.33,
@@ -1947,39 +1947,88 @@
       "narration": "Here's the scorecard for the next report, expected around late January twenty twenty-seven, our estimate. One, Azure growth against the forty-nine to fifty percent guide. Two, capex, and whether free cash flow holds near eighteen point six billion dollars. Three, the backlog, and whether it broadens beyond one customer. If those hold up, the story the price is telling keeps holding up. If they crack, the capex gets much harder to defend.",
       "keyframes": [
         {
-          "param": "items[0].rows[0].at.cue",
+          "param": "draw_start.cue",
           "cue": "One, Azure",
-          "label": "items[0].rows[0].at.cue",
+          "label": "draw_start.cue",
           "scene_time_s": 8.53,
           "absolute_s": 689.96
         },
         {
-          "param": "items[0].rows[1].at.cue",
+          "param": "strokes[0].start.cue",
+          "cue": "One, Azure",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 8.53,
+          "absolute_s": 689.96
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "One, Azure",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 8.53,
+          "absolute_s": 689.96
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "One, Azure",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.83,
+          "absolute_s": 690.26
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "One, Azure",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 9.13,
+          "absolute_s": 690.56
+        },
+        {
+          "param": "strokes[4].start.cue",
           "cue": "Two, capex",
-          "label": "items[0].rows[1].at.cue",
+          "label": "strokes[4].start.cue",
           "scene_time_s": 12.05,
           "absolute_s": 693.48
         },
         {
-          "param": "items[0].rows[2].at.cue",
+          "param": "strokes[5].start.cue",
+          "cue": "Two, capex",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 12.35,
+          "absolute_s": 693.78
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Two, capex",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 12.65,
+          "absolute_s": 694.08
+        },
+        {
+          "param": "strokes[7].start.cue",
           "cue": "Three, the",
-          "label": "items[0].rows[2].at.cue",
+          "label": "strokes[7].start.cue",
           "scene_time_s": 17.02,
           "absolute_s": 698.45
         },
         {
-          "param": "cam[1].at.cue",
-          "cue": "If those hold up",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 21.29,
-          "absolute_s": 702.72
+          "param": "strokes[8].start.cue",
+          "cue": "Three, the",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 17.32,
+          "absolute_s": 698.75
         },
         {
-          "param": "items[2].moods[0][0].cue",
-          "cue": "If they crack",
-          "label": "items[2].moods[0][0].cue",
-          "scene_time_s": 25.53,
-          "absolute_s": 706.96
+          "param": "actions[0].at.cue",
+          "cue": "Three, the",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 17.52,
+          "absolute_s": 698.95
+        },
+        {
+          "param": "strokes[9].start.cue",
+          "cue": "Three, the",
+          "label": "strokes[9].start.cue",
+          "scene_time_s": 17.62,
+          "absolute_s": 699.05
         }
       ],
       "unresolved_cues": [],
@@ -2004,9 +2053,9 @@
       "narration": "That's Microsoft, November twenty twenty-six edition. We'll update it after every report, with new numbers and the same three questions. What's priced in, what has to happen, and what could go wrong.",
       "keyframes": [
         {
-          "param": "items[1].at.cue",
+          "param": "items[2].at.cue",
           "cue": "the same three questions",
-          "label": "items[1].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 8.01,
           "absolute_s": 718.77
         }

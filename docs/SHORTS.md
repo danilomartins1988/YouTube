@@ -55,3 +55,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 49-college-sports | College Sports Just Got a $20.5 Million Payroll | $20.5 MILLION / COLLEGE PAYROLL | 54 s | `docs/episodes/49-college-sports/youtube-short/short_package.md` |
 | 51-spacex | An AI Company Agreed to Pay SpaceX $1.25 Billion a Month | $1.25 BILLION / A MONTH, FOR CHIPS | 53 s | `docs/episodes/51-spacex/youtube-short/short_package.md` |
 | byb-apple-2026-11 | Apple Is Worth $5 Trillion. Here's What That Price Assumes | APPLE: $5 TRILLION / 38× LAST YEAR'S PROFIT | 54 s | `docs/episodes/byb-apple-2026-11/youtube-short/short_package.md` |
+| byb-microsoft-2026-11 | Microsoft Is Worth $4 Trillion. Here's What That Price Assumes | MICROSOFT: $4 TRILLION / 66× ITS FREE CASH | 55 s | `docs/episodes/byb-microsoft-2026-11/youtube-short/short_package.md` |
