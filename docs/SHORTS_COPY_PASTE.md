@@ -1030,3 +1030,23 @@ Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
 ```
 Alphabet stock, Google stock, GOOGL, before you buy, Google Cloud, AI capex, YouTube, valuation, stock analysis, Nasdaq, shorts, economics explained, The Hidden Economics
 ```
+
+## byb-amazon-2026-11
+
+**Title**
+```
+Amazon's Free Cash Flow Is Negative. Here's the Bet #shorts
+```
+**Description**
+```
+Amazon is worth about two point nine three trillion dollars. That's two hundred and seventy dollars and eighty-seven cents a share at the close on November tenth, twenty twenty-six, times about ten point eight billion shares.
+
+Watch the full story: "Before You Buy Amazon Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
+Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
+
+#shorts #amazon #stocks #investing #economics
+```
+**Tags**
+```
+Amazon stock, AMZN, before you buy, AWS, AI capex, free cash flow, valuation, stock analysis, Nasdaq, shorts, economics explained, The Hidden Economics
+```

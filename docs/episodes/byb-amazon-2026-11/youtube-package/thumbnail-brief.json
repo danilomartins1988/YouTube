@@ -1,0 +1,334 @@
+{
+  "title": "Before You Buy Amazon Stock, Watch This (Nov 2026)",
+  "docs_dir": "docs/episodes/byb-amazon-2026-11",
+  "video": "output/bybamzn_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why is a three-trillion-dollar company's free cash flow below zero?",
+    "surprising_fact": "Amazon's free cash flow was -$42.4bn over 12 months while its AWS backlog reached about $578bn (10-Q, release)",
+    "subject": "a generic stack of parcels",
+    "tone": "strategy",
+    "metaphor": "boxes in, data centers out"
+  },
+  "slug": "before-you-buy-amazon-2026-11",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "AMAZON: $578BN",
+        "BACKLOG BET"
+      ],
+      "claim_basis": "aws: AWS commitments approximately $578bn at Sep 30, 2026 (10-Q)",
+      "scene": {
+        "palette": {
+          "sky0": "#1A1006",
+          "sky1": "#40280E",
+          "haze": "#FF9F1C",
+          "key": "#E0F7FA",
+          "accent": "#FFE14D",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "parcels",
+          "x": 1500,
+          "y": 600,
+          "s": 0.75
+        },
+        "support": [],
+        "particles": {
+          "n": 70,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "AMAZON: $578BN",
+          "x": 90,
+          "y": 519.5,
+          "size": 131.7,
+          "width": 1180.0,
+          "anchor": "start",
+          "color": "#FFE14D"
+        },
+        {
+          "text": "BACKLOG BET",
+          "x": 96,
+          "y": 657.5,
+          "size": 120,
+          "width": 844.8,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 417, 1270, 527), (96, 564, 941, 665)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.094",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 37",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-chemicals-that-decide-who-makes-chips (distance 0.41)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "aws: AWS commitments approximately $578bn at Sep 30, 2026 (10-Q)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.643,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-chemicals-that-decide-who-makes-chips"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "AMAZON: \u2212$42BN",
+        "FREE CASH"
+      ],
+      "claim_basis": "lenses: TTM free cash flow outflow of $42.4bn (release)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0614",
+          "sky1": "#16244A",
+          "haze": "#FF9F1C",
+          "key": "#FFF3E0",
+          "accent": "#7DFF8A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "parcels",
+          "x": 480,
+          "y": 660,
+          "s": 0.6
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFF3E0"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "AMAZON: \u2212$42BN",
+          "x": 480.0,
+          "y": 199.6,
+          "size": 84.8,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "FREE CASH",
+          "x": 1440.0,
+          "y": 238.2,
+          "size": 131.9,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#7DFF8A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 133, 860, 205), (1060, 135, 1820, 246)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "7.1px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 10.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.069",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 46",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": false,
+            "detail": "nearest before-you-buy-apple-2026-11 (distance 0.22)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "lenses: TTM free cash flow outflow of $42.4bn (release)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.704,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-apple-2026-11"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-12T04:05:10Z",
+  "master": "output/before-you-buy-amazon-2026-11/thumbnails/master_A.png"
+}
