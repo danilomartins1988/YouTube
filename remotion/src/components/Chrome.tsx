@@ -73,11 +73,11 @@ export const Chrome: React.FC = () => {
             </text>
           </g>
         ) : null}
-        {hudOn ? <MissionHud a={a} /> : (
+        {hudOn ? <MissionHud a={a} /> : scene.params.brand === false ? null : (
         <text x={W - 120} y={100} textAnchor="end" fill={pal.muted} fontFamily={font.body} fontWeight={600} fontSize={18} letterSpacing={4} opacity={0.8 * a}>
           THE HIDDEN ECONOMICS
         </text>)}
-        {credits.length ? (
+        {credits.length && !scene.params.no_credits ? (
           <text x={120} y={H - 60} fill={pal.muted} fontFamily={font.body} fontSize={20} opacity={0.9 * a}>
             {'Source: ' + credits.join('  ·  ')}
           </text>

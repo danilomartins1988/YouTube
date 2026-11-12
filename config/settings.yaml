@@ -89,7 +89,7 @@ pricing:
   # Conservative: tts-1-hd is $30/1M chars; gpt-4o-mini-tts is token-priced (~$0.015/min of audio,
   # roughly $15-17/1M chars). Using $30/1M for both keeps the budget cap on the safe side.
   openai:     {usd_per_1k_chars: 0.030, verified_on: "2026-11-03 via search results (not OpenAI's page) - confirm at https://openai.com/api/pricing"}
-  elevenlabs: {usd_per_1k_chars: null,  verified_on: "unverified - depends on your plan, see https://elevenlabs.io/pricing"}
+  elevenlabs: {usd_per_1k_chars: 0.30,  verified_on: "ESTIMATE (conservative, plan-dependent; not verified) - see https://elevenlabs.io/pricing"}
   local_compute: {usd_per_cpu_hour: 0.0, verified_on: "assumed negligible on your own machine"}
 
 licensing:

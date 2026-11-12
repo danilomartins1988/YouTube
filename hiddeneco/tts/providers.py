@@ -142,7 +142,10 @@ class ElevenLabsProvider(TTSProvider):
             f"https://api.elevenlabs.io/v1/text-to-speech/{o['voice_id']}",
             headers={"xi-api-key": env(o.get("api_key_env", "ELEVENLABS_API_KEY")),
                      "Content-Type": "application/json"},
-            json={"text": text, "model_id": o.get("model_id", "eleven_multilingual_v2")}, timeout=120)
+            json={"text": text, "model_id": o.get("model_id", "eleven_multilingual_v2"),
+                  # optional per-project tuning (project.yaml tts_overrides.elevenlabs): voice_settings, language_code
+                  **({"voice_settings": o["voice_settings"]} if o.get("voice_settings") else {}),
+                  **({"language_code": o["language_code"]} if o.get("language_code") else {})}, timeout=120)
         resp.raise_for_status()
         out_path.write_bytes(resp.content)
         return out_path
