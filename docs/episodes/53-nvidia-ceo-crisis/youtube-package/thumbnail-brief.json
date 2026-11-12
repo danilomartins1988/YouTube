@@ -1,0 +1,334 @@
+{
+  "title": "Nvidia's Founder Might Be Out. Here's What's at Stake",
+  "docs_dir": "docs/episodes/53-nvidia-ceo-crisis",
+  "video": "output/nvceo_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Could Nvidia's board remove its founder, and what is that worth?",
+    "surprising_fact": "WSJ and Semafor reported the board was preparing to oust Huang (Nov 11, 2026); no decision announced as of Nov 12 morning",
+    "subject": "an empty executive chair",
+    "tone": "spectacle",
+    "metaphor": "the most valuable chair in AI"
+  },
+  "slug": "nvidia-ceo-crisis-second-report",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant question (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "NVIDIA'S CEO",
+        "OUT?"
+      ],
+      "claim_basis": "oust: WSJ/Semafor reported the board was preparing to oust Huang; no decision announced (CNBC, Nov 12)",
+      "scene": {
+        "palette": {
+          "sky0": "#12062E",
+          "sky1": "#341A6B",
+          "haze": "#FF6EC7",
+          "key": "#FFF3B0",
+          "accent": "#FFE14D",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 1480,
+          "y": 560,
+          "s": 0.75
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#3DF5FF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "NVIDIA'S CEO",
+          "x": 90,
+          "y": 526.1,
+          "size": 153.6,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFE14D"
+        },
+        {
+          "text": "OUT?",
+          "x": 96,
+          "y": 664.1,
+          "size": 120,
+          "width": 307.2,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.51 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 406, 1270, 535), (96, 570, 403, 671)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.076",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 38",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": false,
+            "detail": "nearest why-nvidia-lost-428-billion-in-two-days (distance 0.07)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "oust: WSJ/Semafor reported the board was preparing to oust Huang; no decision announced (CNBC, Nov 12)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.598,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-nvidia-lost-428-billion-in-two-days"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "FOUNDER",
+        "OR OUT?"
+      ],
+      "claim_basis": "oust: reported board deliberations (WSJ, Semafor); no decision announced",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0614",
+          "sky1": "#2A1440",
+          "haze": "#FFB74D",
+          "key": "#FFF3E0",
+          "accent": "#FF4F6B",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 480,
+          "y": 660,
+          "s": 0.6
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFF3E0"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "FOUNDER",
+          "x": 480.0,
+          "y": 253.0,
+          "size": 150,
+          "width": 672.0,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "OR OUT?",
+          "x": 1440.0,
+          "y": 253.0,
+          "size": 150,
+          "width": 672.0,
+          "anchor": "middle",
+          "color": "#FF4F6B"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.53 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(144, 136, 816, 262), (1104, 136, 1776, 262)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "12.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.072",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 22",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-apple-2026-11 (distance 0.28)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "oust: reported board deliberations (WSJ, Semafor); no decision announced",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.603,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-apple-2026-11"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-12T13:58:39Z",
+  "master": "output/nvidia-ceo-crisis-second-report/thumbnails/master_B.png"
+}

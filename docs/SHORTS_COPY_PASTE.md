@@ -1089,3 +1089,22 @@ Watch the full story: "Why Nvidia Lost $428 Billion in Two Days" on The Hidden E
 ```
 Nvidia, NVDA, Jensen Huang, Nvidia stock, export controls, AI chips, Singapore, key person risk, market value, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 53-nvidia-ceo-crisis
+
+**Title**
+```
+Could Nvidia's Board Push Out Its Founder? #shorts
+```
+**Description**
+```
+about six hundred and fifty billion dollars. By our own estimate, that is how much stock market value Nvidia had lost since the close on Friday, November sixth, measured at a little after eight in the morning, New York time, on Thursday, November twelfth, before the market opened.
+
+Watch the full story: "Nvidia's Founder Might Be Out. Here's What's at Stake" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #nvidia #stocks #ai #economics
+```
+**Tags**
+```
+Nvidia, Jensen Huang, Nvidia CEO, Nvidia board, NVDA, Nvidia stock, CEO succession, key person risk, affair report, economics, shorts, economics explained, The Hidden Economics
+```
