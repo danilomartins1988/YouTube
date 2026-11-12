@@ -990,3 +990,23 @@ Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
 ```
 Microsoft stock, MSFT, before you buy, Azure, AI capex, OpenAI, valuation, stock analysis, Nasdaq, shorts, economics explained, The Hidden Economics
 ```
+
+## byb-meta-2026-11
+
+**Title**
+```
+Meta's Free Cash Flow Just Went Negative. Here's Why #shorts
+```
+**Description**
+```
+Meta is worth about one point six four trillion dollars. That's six hundred and forty-one dollars and thirty-nine cents a share at the close on November tenth, twenty twenty-six, times about two point six billion shares.
+
+Watch the full story: "Before You Buy Meta Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
+Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
+
+#shorts #meta #stocks #investing #economics
+```
+**Tags**
+```
+Meta stock, META, before you buy, Facebook, Instagram, AI capex, advertising, valuation, stock analysis, Nasdaq, shorts, economics explained, The Hidden Economics
+```

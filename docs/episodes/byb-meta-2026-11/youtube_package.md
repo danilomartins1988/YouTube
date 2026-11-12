@@ -1,0 +1,53 @@
+# YouTube package: "Before You Buy Meta Stock, Watch This (Nov 2026)" (Before You Buy · Meta · Nov 2026)
+
+Prepared for manual publishing. Nothing has been uploaded. Video length 12:07.
+
+## Title options
+
+1. **Before You Buy Meta Stock, Watch This (Nov 2026)** (recommended)
+2. **Meta's Free Cash Flow Just Went Negative. What's the Price Betting On? (Nov 2026)**
+3. **What's Priced Into Meta Stock? The Capex Bet Behind $1.6 Trillion (Nov 2026)**
+
+## Description (2326 chars, YouTube limit 5,000)
+
+```
+Meta is worth about $1.64 trillion, and in the third quarter of 2026 its free cash flow, as Meta defines it, was negative: about −$2.1 billion, while ad revenue grew 26%. So what is that price actually betting on? In this edition of Before You Buy, we open Meta's money machine (Family of Apps advertising, Reality Labs), follow the cash into data centers and the new capital it lined up, run three lenses and a simple reverse calculation on a labelled proxy and on free cash flow, ask what each dollar of capex has to earn, weigh what has to go right, what could go wrong (including the courts) and the upside Meta itself points to, and finish with the three numbers to watch at the next report.
+
+Data as of the November 10, 2026 close · latest report: Q3 2026 (quarter ended September 30, 2026). This video is updated every quarter.
+Every figure comes from Meta's 10-Q, 10-K, earnings release and 8-Ks on SEC EDGAR, plus the closing price; ratios, the proxy and the reverse calculation are our own calculations (illustration, assumptions on screen). For educational purposes only. Not financial, investment or tax advice. Not affiliated with Meta Platforms, Inc.
+
+Chapters
+0:00 The negative quarter
+1:13 The machine
+3:20 The cash
+5:37 What's priced in
+7:38 What has to happen
+9:11 Risks and upside
+11:16 The scorecard
+
+Sources
+- Meta Platforms, Inc. (SEC filing): Meta Platforms Form 10-Q for Q3 2026 (quarter ended September 30, 2026) - https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm
+- Meta Platforms, Inc. (SEC filings): Meta Q3 2026 results, 8-K Ex. 99.1 (Oct 21, 2026), incl. CFO outlook; 8-K on the Class C stock dividend (Oct 21, 2026); Form 10-K FY2025 - https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm
+- Meta Platforms, Inc. (SEC filings): Meta 8-Ks of Oct 29, 2026 (mandatory convertible preferred; forward sale of common stock) and Nov 5, 2026 ($15bn notes) - https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm
+- Yahoo Finance; Meta Platforms, Inc.: META closing price, Nov 10, 2026 (data vendor); share count from the 10-Q cover (Oct 16, 2026); D&A from SEC XBRL - https://finance.yahoo.com/quote/META/history/
+
+Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+```
+
+## Chapters
+
+```
+0:00 The negative quarter
+1:13 The machine
+3:20 The cash
+5:37 What's priced in
+7:38 What has to happen
+9:11 Risks and upside
+11:16 The scorecard
+```
+
+## Tags
+
+```
+Meta stock, META, before you buy, Facebook, Instagram, AI capex, advertising, valuation, stock analysis, Nasdaq, The Hidden Economics
+```
