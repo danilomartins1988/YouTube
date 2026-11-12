@@ -1,0 +1,48 @@
+# Fontes do Short (12/11/2026). Notas: docs/shorts_pt/cbs-prazo-30-dias/RESEARCH_NOTES.md
+sources:
+  - id: idn
+    title: "CBS: governo propõe ampliar em 30 dias prazo para acerto do imposto"
+    publisher: IstoÉ Dinheiro
+    url: https://istoedinheiro.com.br/pagamento-cbs-prazo-30-dias-acerto-definitivo
+    published: "2026-11-11"
+    accessed: "2026-11-12"
+    credit: "IstoÉ Dinheiro"
+  - id: bn
+    title: "Receita propõe prazo extra de 30 dias para pagamento definitivo da CBS"
+    publisher: Bahia Notícias
+    url: https://www.bahianoticias.com.br/noticia/323558-receita-propoe-prazo-extra-de-30-dias-para-pagamento-definitivo-da-cbs
+    published: "2026-11-11"
+    accessed: "2026-11-12"
+    credit: "Bahia Notícias"
+  - id: ce
+    title: "Receita Federal anuncia prazo extra para pagamento da CBS e flexibiliza transição da reforma tributária"
+    publisher: Correio do Estado
+    url: https://correiodoestado.com.br/economia/2026/11/11/receita-federal-anuncia-prazo-extra-para-pagamento-da-cbs-e-flexibiliza-transicao-da-reforma-tributaria.html
+    published: "2026-11-11"
+    accessed: "2026-11-12"
+    credit: "Correio do Estado"
+claims:
+  - id: plp
+    text: "Fazenda enviará ao Congresso um projeto de lei complementar para ampliar em 30 dias o prazo de pagamento definitivo da CBS; depende de aprovação do Congresso (Barreirinhas, 11/11/2026)."
+    spoken: trinta dias
+    display: "+30 dias (proposta)"
+    source_ids: [idn, bn, ce]
+    status: source_located
+  - id: cbs
+    text: "CBS: novo tributo federal da reforma tributária; substituirá o PIS e a Cofins a partir de 2027."
+    spoken: CBS
+    display: "CBS substitui PIS e Cofins (2027)"
+    source_ids: [idn, bn]
+    status: source_located
+  - id: how
+    text: "Pagamento inicial por estimativa no mês seguinte às operações; acerto definitivo dois meses após as vendas. Exemplo: vendas em janeiro de 2027, estimativa em fevereiro, acerto em março."
+    spoken: estimativa
+    display: "Jan → Fev → Mar"
+    source_ids: [idn]
+    status: source_located
+  - id: why
+    text: "Objetivo: mais tempo para conferir valores e créditos; evitar problemas de fluxo de caixa; no início a maioria das empresas ainda não terá créditos para abater (primeiro recolhimento previsto para o fim de fevereiro de 2027)."
+    spoken: fluxo de caixa
+    display: "Alívio de caixa"
+    source_ids: [idn, bn]
+    status: source_located
