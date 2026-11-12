@@ -1,0 +1,53 @@
+# Kinetic-typography beats for tools/make_pt_short.py (text + voice only; no characters). <= ~6 words on screen at once.
+disclaimer: "Conteúdo educativo.|Não é consultoria tributária."
+asof: "Informações de 12/11/2026"
+beats:
+- seg: s1
+  bg: ["#0E1530", "#3346C9"]
+  els:
+  - {type: flap, text: "30 DIAS", cue: trinta, until_cue: Mas, y: 640, size: 150}
+  - {type: slam, text: "A MAIS", sub: "PARA PAGAR", cue: mais, until_cue: Mas, y: 1010, size: 150, color: "#FFD23F", rot: -4}
+  - {type: bounce, text: "MAS...", cue: Mas, y: 720, size: 170}
+  - {type: slam, text: "TEM UM PORÉM", cue: porém, y: 980, size: 112, color: "#FF3B47", rot: 3}
+- seg: s2
+  bg: ["#101826", "#0F7A63"]
+  els:
+  - {type: slam, text: "CBS", sub: "NOVO IMPOSTO FEDERAL", cue: CBS, until_cue: substituir, y: 760, size: 330, color: "#FFD23F"}
+  - {type: strike, text: "PIS + COFINS", cue: PIS, y: 640, size: 120}
+  - {type: arrow, cue: Cofins, from: [300, 720], to: [760, 930], color: "#FFD23F"}
+  - {type: slam, text: "CBS EM 2027", cue: "2027", y: 1080, size: 130, color: "#00E39A", rot: -3}
+- seg: s3
+  bg: ["#1A1030", "#7B2FF7"]
+  els:
+  - {type: slam, text: "A PROPOSTA", sub: "DA RECEITA", cue: Pela, until_cue: estimativa, y: 820, size: 150, color: "#FFFFFF", rot: -3}
+  - {type: slam, text: "1º ESTIMATIVA", cue: estimativa, y: 620, size: 120, color: "#22E6FF", rot: -3}
+  - {type: arrow, cue: acerto, from: [280, 700], to: [770, 880], color: "#FFFFFF"}
+  - {type: slam, text: "DEPOIS: ACERTO", cue: acerto, y: 1000, size: 112, color: "#00E39A", rot: 2}
+  - {type: bounce, text: "+1 MÊS", cue: mês, y: 1200, size: 110, color: "#FFD23F"}
+- seg: s4
+  bg: ["#0E1A2B", "#1E6FD9"]
+  els:
+  - {type: bounce, text: "NA PRÁTICA", cue: Funciona, until_cue: Vendeu, y: 820, size: 120, color: "#FFD23F"}
+  - {type: cal, cue: Vendeu, cue_list: [janeiro, fevereiro, março], y: 780,
+     items: [{label: "JAN", sub: "VENDEU"}, {label: "FEV", sub: "ESTIMATIVA"}, {label: "MAR", sub: "ACERTO"}]}
+- seg: s5
+  bg: ["#0B1F18", "#0E9F6E"]
+  els:
+  - {type: slam, text: "CAIXA", sub: "O MOTIVO", cue: caixa, until_cue: começo, y: 800, size: 250, color: "#FFFFFF"}
+  - {type: badge, text: "SEM CRÉDITOS", ok: false, cue: créditos, x: 190, y: 720, size: 64}
+  - {type: badge, text: "TEMPO P/ CONFERIR", ok: true, cue: tempo, x: 190, y: 1000, size: 60}
+- seg: s6
+  bg: ["#2A0B12", "#C2183A"]
+  els:
+  - {type: slam, text: "O PORÉM", cue: porém, until_cue: Como, y: 680, size: 170, color: "#FFFFFF", rot: -3}
+  - {type: slam, text: "SÓ UMA PROPOSTA", cue: proposta, until_cue: Como, y: 960, size: 104, color: "#FFD23F"}
+  - {type: slam, text: "MUDA A APURAÇÃO", cue: Como, until_cue: projeto, y: 820, size: 100, color: "#FFFFFF", rot: 2}
+  - {type: bounce, text: "LEI COMPLEMENTAR", cue: projeto, y: 660, size: 84}
+  - {type: stamp, text: "PRECISA DO CONGRESSO", cue: Congresso, y: 1010, size: 68, rot: -8}
+- seg: s7
+  bg: ["#12122A", "#3D2BD9"]
+  els:
+  - {type: slam, text: "TEM EMPRESA?", cue: empresa, until_cue: Segue, y: 640, size: 130, color: "#FFFFFF"}
+  - {type: flap, text: "JAN 2027", cue: janeiro, until_cue: Segue, y: 980, size: 120}
+  - {type: bounce, text: "SEGUE", cue: Segue, y: 700, size: 170, color: "#FFD23F"}
+  - {type: slam, text: "REFORMA TRIBUTÁRIA", cue: reforma, y: 980, size: 88, color: "#00E39A"}

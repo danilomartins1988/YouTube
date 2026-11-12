@@ -1,3 +1,4 @@
+import {KineticShort} from './brand/KineticShort';
 import {ChannelAvatar, ChannelBanner, ChannelWatermark} from './brand/ChannelArt';
 import React from 'react';
 import {Composition} from 'remotion';
@@ -36,6 +37,7 @@ export const RemotionRoot: React.FC = () => (
     durationInFrames={1}
   />
   <Composition id="ChannelAvatar" component={ChannelAvatar as unknown as React.FC<Record<string, unknown>>} defaultProps={{variant: 'mascot'}} fps={30} width={800} height={800} durationInFrames={1} />
+  <Composition id="KineticShort" component={KineticShort as unknown as React.FC<Record<string, unknown>>} defaultProps={{words: [], beats: [], total: 5, endCard: 3, disclaimer: 'Conteúdo educativo.', asof: ''}} fps={30} width={1080} height={1920} durationInFrames={30 * 120} />
   <Composition id="ChannelWatermark" component={ChannelWatermark as unknown as React.FC<Record<string, unknown>>} defaultProps={{}} fps={30} width={300} height={300} durationInFrames={1} />
   <Composition id="ChannelBanner" component={ChannelBanner as unknown as React.FC<Record<string, unknown>>} defaultProps={{}} fps={30} width={2560} height={1440} durationInFrames={1} />
   <Composition
