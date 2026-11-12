@@ -1,12 +1,12 @@
-# CBS Short, v2 edit (owner feedback 2026-11-12: better hook, voice test D, full-frame imagery, cuts every 2-3 s).
+# CBS Short, v3 edit (owner-approved script 2026-11-12: no repeated 2027, the 'porém' is revealed at the end); v2 edit (owner feedback 2026-11-12: better hook, voice test D, full-frame imagery, cuts every 2-3 s).
 # Narration: ONE ElevenLabs /with-timestamps request for the whole script (with <break/> pauses), cached in
 # output/short-pt-cbs-prazo/news_v3/. Cues are words of the narration (first match at/after the previous cue).
 voice:
   voice_id: rjdBsuq3BG78Nr8NKTlM
   model_id: eleven_multilingual_v2
   voice_settings: {stability: 0.3, similarity_boost: 0.8, style: 0.45, use_speaker_boost: true, speed: 0.96}
-audio: {dir: news_v3, script: script_v3.txt, mp3: voice.mp3, alignment: alignment.json}
-output: short_pt_cbs_prazo_v2.mp4
+audio: {dir: news_v4, script: script_v4.txt, mp3: voice.mp3, alignment: alignment.json}
+output: short_pt_cbs_prazo_v3.mp4
 lead: 0.35
 tail: 3.4
 accent: "#FFD23F"
@@ -19,40 +19,38 @@ shots:
   - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: Sabe, fx: 0.5, fy: 0.5, z0: 1.0, z1: 1.12, dx: 40, dim: 0.35, credit: *ab}
   - {src: shorts_pt/cbs/ir_mg6811.jpg, cue: A, fx: 0.45, fy: 0.45, z0: 1.05, z1: 1.18, dx: -40, credit: *bp}
   - {src: shorts_pt/cbs/moedas_jfcrz.jpg, cue: trinta, fx: 0.62, fy: 0.5, z0: 1.15, z1: 1.3, dim: 0.35, credit: *jc}
-  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: Só, fx: 0.36, fy: 0.45, z0: 1.3, z1: 1.1, dim: 0.3, credit: *ab}
-  - {src: shorts_pt/cbs/notas_d6a9016.jpg, cue: É, fx: 0.24, fy: 0.5, z0: 1.0, z1: 1.12, dy: 30, credit: *ff}
+  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: Mas, fx: 0.36, fy: 0.45, z0: 1.3, z1: 1.1, dim: 0.3, credit: *ab}
+  - {src: shorts_pt/cbs/notas_d6a9016.jpg, cue: Esse, fx: 0.24, fy: 0.5, z0: 1.0, z1: 1.12, dy: 30, credit: *ff}
   - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: PIS, fx: 0.3, fy: 0.45, z0: 1.25, z1: 1.4, dx: 60, credit: *ab}
-  - {src: shorts_pt/cbs/moedas_jfcrz.jpg, cue: partir, fx: 0.25, fy: 0.5, z0: 1.0, z1: 1.15, dx: -50, credit: *jc}
-  - {src: shorts_pt/cbs/ir_mg6798.jpg, cue: E, fx: 0.82, fy: 0.45, z0: 1.0, z1: 1.14, credit: *bp}
-  - {src: shorts_pt/cbs/ir_mg6811.jpg, cue: fevereiro, fx: 0.6, fy: 0.6, z0: 1.3, z1: 1.45, dx: 40, credit: *bp}
-  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: proposta, fx: 0.55, fy: 0.45, z0: 1.05, z1: 1.18, dim: 0.35, credit: *ab}
-  - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: acerto, fx: 0.7, fy: 0.6, z0: 1.2, z1: 1.35, dx: -50, credit: *ab}
+  - {src: shorts_pt/cbs/ir_mg6798.jpg, cue: ideia, fx: 0.82, fy: 0.45, z0: 1.0, z1: 1.14, credit: *bp}
+  - {src: shorts_pt/cbs/moedas_jfcrz.jpg, cue: estimativa, fx: 0.25, fy: 0.5, z0: 1.0, z1: 1.15, dx: -50, credit: *jc}
+  - {src: shorts_pt/cbs/ir_mg6811.jpg, cue: acerto, fx: 0.6, fy: 0.6, z0: 1.3, z1: 1.45, dx: 40, credit: *bp}
   - {src: shorts_pt/cbs/notas_d6a9016.jpg, cue: Vendeu, fx: 0.25, fy: 0.55, z0: 1.15, z1: 1.3, dim: 0.35, credit: *ff}
   - {src: shorts_pt/cbs/moedas_jfcrz.jpg, cue: Paga, fx: 0.8, fy: 0.5, z0: 1.1, z1: 1.25, dim: 0.35, dx: 40, credit: *jc}
-  - {src: shorts_pt/cbs/ir_mg6811.jpg, cue: E, fx: 0.4, fy: 0.4, z0: 1.15, z1: 1.3, dim: 0.35, credit: *bp}
-  - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: O, fx: 0.45, fy: 0.3, z0: 1.15, z1: 1.3, dx: 50, dim: 0.3, credit: *ab}
+  - {src: shorts_pt/cbs/ir_mg6811.jpg, cue: acerta, fx: 0.4, fy: 0.4, z0: 1.15, z1: 1.3, dim: 0.35, credit: *bp}
+  - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: Por, fx: 0.45, fy: 0.3, z0: 1.15, z1: 1.3, dx: 50, dim: 0.3, credit: *ab}
   - {src: shorts_pt/cbs/moedas_jfcrz.jpg, cue: "No", fx: 0.45, fy: 0.5, z0: 1.3, z1: 1.15, credit: *jc}
   - {src: shorts_pt/cbs/notas_d6a9016.jpg, cue: maioria, fx: 0.28, fy: 0.6, z0: 1.0, z1: 1.14, dx: -40, credit: *ff}
-  - {src: shorts_pt/cbs/ir_mg6798.jpg, cue: E, fx: 0.86, fy: 0.5, z0: 1.2, z1: 1.35, credit: *bp}
+  - {src: shorts_pt/cbs/ir_mg6798.jpg, cue: esse, fx: 0.86, fy: 0.5, z0: 1.2, z1: 1.35, credit: *bp}
   - {src: shorts_pt/cbs/ir_mg6811.jpg, cue: conferir, fx: 0.35, fy: 0.5, z0: 1.0, z1: 1.12, dx: 40, credit: *bp}
-  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: Agora, fx: 0.3, fy: 0.4, z0: 1.0, z1: 1.15, dx: 50, credit: *ab}
-  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: Isso, fx: 0.62, fy: 0.5, z0: 1.35, z1: 1.5, dy: 30, credit: *ab}
-  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: Precisa, fx: 0.45, fy: 0.45, z0: 1.1, z1: 1.25, dim: 0.4, credit: *ab}
+  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: E, fx: 0.3, fy: 0.4, z0: 1.0, z1: 1.15, dx: 50, credit: *ab}
+  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: proposta, fx: 0.62, fy: 0.5, z0: 1.35, z1: 1.5, dy: 30, credit: *ab}
+  - {src: shorts_pt/cbs/congresso_arcos_raf01889.jpg, cue: precisa, fx: 0.45, fy: 0.45, z0: 1.1, z1: 1.25, dim: 0.4, credit: *ab}
   - {src: shorts_pt/cbs/cedulas_raf1032.jpg, cue: aprovada, fx: 0.55, fy: 0.5, z0: 1.3, z1: 1.45, dim: 0.4, dx: -40, credit: *ab}
   - {src: shorts_pt/cbs/notas_d6a9016.jpg, cue: Se, fx: 0.22, fy: 0.5, z0: 1.05, z1: 1.18, credit: *ff}
   - {src: shorts_pt/cbs/ir_mg6798.jpg, cue: Segue, fx: 0.8, fy: 0.45, z0: 1.0, z1: 1.1, credit: *bp}
 overlays:
-  - {kind: badge, cue: trinta, until: Só, big: "+30", small: "DIAS PARA PAGAR"}
-  - {kind: lower, cue: CBS, until: partir, title: "CBS", sub: "substitui PIS e Cofins em 2027"}
-  - {kind: news, cue: proposta, until: Vendeu, outlet: "IstoÉ Dinheiro", date: "11/11/2026", headline: "CBS: governo propõe ampliar em 30 dias prazo para acerto do imposto", highlight: "ampliar em 30 dias"}
+  - {kind: badge, cue: trinta, until: Mas, big: "+30", small: "DIAS PARA PAGAR"}
+  - {kind: lower, cue: CBS, until: ideia, title: "CBS", sub: "substitui PIS e Cofins"}
+  - {kind: news, cue: ideia, until: Vendeu, outlet: "IstoÉ Dinheiro", date: "11/11/2026", headline: "CBS: governo propõe ampliar em 30 dias prazo para acerto do imposto", highlight: "ampliar em 30 dias"}
   - kind: timeline
     cue: Vendeu
-    until: O
+    until: Por
     steps:
       - {cue: janeiro, month: JAN, label: VENDA}
       - {cue: fevereiro, month: FEV, label: ESTIMATIVA}
       - {cue: março, month: MAR, label: ACERTO}
-  - {kind: label, cue: Precisa, until: Se, text: "PRECISA DO CONGRESSO"}
+  - {kind: label, cue: proposta, until: Se, text: "PRECISA DO CONGRESSO"}
   - kind: end
     lines: ["CBS: +30 dias para o acerto", "Proposta. Depende de lei complementar."]
     date: "Informações de 12/11/2026"
