@@ -1031,6 +1031,18 @@ scenes:
         cue: Count only diluted shares
       color: '#BBDEFB'
       size: 30
+    - kind: caricature
+      who: musk
+      x: 920
+      y: 860
+      at: 0.3
+      scale: 1.0
+      poses:
+      - - 0
+        - stand
+      - - cue: almost all from
+        - talk
+      label: ELON MUSK · TESLA CEO
     - kind: chipbuddy
       x: 1850
       y: 860
@@ -1584,6 +1596,16 @@ scenes:
         cue: Those are pay terms
       color: '#FFCDD2'
       size: 30
+    - kind: caricature
+      who: musk
+      x: 1000
+      y: 860
+      at:
+        cue: Even the C E O's pay package
+      scale: 0.95
+      poses:
+      - - 0
+        - point
   sources:
   - tenq
   assets:
@@ -2022,12 +2044,19 @@ scenes:
       at: 0.2
       size: 58
       color: gold
-    - kind: emptychair
-      x: 700
-      y: 640
-      at: 0.4
-      memoAt:
-        cue: also runs other companies
+    - kind: caricature
+      who: musk
+      x: 650
+      y: 860
+      at: 0.3
+      scale: 1.1
+      poses:
+      - - 0
+        - stand
+      - - cue: also runs other companies
+        - worry
+      - - cue: And it says the pay package
+        - talk
     - kind: sign
       x: 1350
       y: 270

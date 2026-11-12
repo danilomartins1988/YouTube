@@ -62,3 +62,4 @@ Nvidia, Microsoft, Apple, Alphabet, Amazon, Meta, Broadcom, Tesla, Berkshire Hat
 - Series-only voice: younger and more human than the channel's documentary voice. Samples sent 2026-11-11
   (gpt-4o-mini-tts: verse, ballad, coral, echo, alloy, sage, marin, cedar, with a "young creator" instruction);
   the owner picks. Implemented as a per-project TTS override, so the channel default (ash) is unchanged.
+- Public-figure caricatures (CEO etc.) appear where the narration names them (owner 2026-11-12); rules in docs/PRODUCTION_STANDARD.md "Real people". Nov 2026 edition: Musk in the Tesla episode; the Amazon script does not name Andy Jassy, so no caricature there.

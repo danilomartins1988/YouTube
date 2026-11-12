@@ -4314,6 +4314,8 @@ const detective: ItemFn = (a, {t, f}, i) => {
  *  worry | point; `poses: [[t, pose]]` switches on cues. `label` + `labelUntil`: a name tag (first appearance). */
 const CARI: Record<string, any> = {
   huang: {hair: 'swept', hairColor: '#C3C8CF', jacket: '#1B1B1F', shirt: '#26262B', leather: true, skin: '#E6B58C', tie: null, glasses: false},
+  jassy: {hair: 'bald', hairColor: '#D9A57E', jacket: '#2E3440', shirt: '#E9EEF3', tie: null, skin: '#E3AE86', glasses: false},
+  musk: {hair: 'side', hairColor: '#2B2420', jacket: '#1C1C1E', shirt: '#1C1C1E', tie: null, skin: '#EBC09C', glasses: false},
   trump: {hair: 'swoop', hairColor: '#F2C94C', jacket: '#1F2A44', shirt: '#F4F7FB', tie: '#D32F2F', longTie: true, skin: '#F0BE96', glasses: false},
 };
 const caricature: ItemFn = (a, {t, f}, i) => {

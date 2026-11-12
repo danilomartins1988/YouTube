@@ -150,6 +150,7 @@ stage("s15_shares", "m2_shares", {
               it("letters", x=1300, y=220, text="+ ≈ 23% · MOSTLY CEO PAY AWARDS", at=C("almost all from"), size=40, color="gold"),
               it("sign", x=1300, y=380, text="MANY NOT YET EARNED", at=C("not yet earned"), color="#FFE0B2", size=30),
               it("sign", x=1300, y=500, text="ON DILUTED SHARES: ≈ $1.35TN", at=C("Count only diluted shares"), color="#BBDEFB", size=30),
+              it("caricature", who="musk", x=920, y=860, at=0.3, scale=1.0, poses=[[0, "stand"], [C("almost all from"), "talk"]], label="ELON MUSK · TESLA CEO"),
               buddy(1850, 860, at=0.4, mood="shock", label="SHARES", color="#FF9F1C", hop=14)]},
     sources=["tenq", "px"])
 stage("s16_returns", "m2_returns", {
@@ -215,7 +216,8 @@ stage("s23_scenario", "m3_scenario", {
     "items": [it("letters", x=1000, y=130, text="NOT ABOUT CARS AT TODAY'S MARGINS", at=0.2, size=50, color="gold"),
               it("sign", x=1000, y=270, text="ROBOTAXIS · SELF-DRIVING · ENERGY · ROBOTS", at=C("Robotaxis"), color="#BBDEFB", size=28),
               it("sign", x=1300, y=400, text="PAY PACKAGE: FIRST MILESTONE $2.0TN · TODAY ≈ $1.5TN", at=C("Even the C E O's pay package"), color="#FFE0B2", size=24),
-              it("sign", x=1300, y=510, text="PAY TERMS, NOT FORECASTS", at=C("Those are pay terms"), color="#FFCDD2", size=30)]},
+              it("sign", x=1300, y=510, text="PAY TERMS, NOT FORECASTS", at=C("Those are pay terms"), color="#FFCDD2", size=30),
+              it("caricature", who="musk", x=1000, y=860, at=C("Even the C E O's pay package"), scale=0.95, poses=[[0, "point"]])]},
     sources=["tenq"])
 board("p24_two", "m3_draw", "Today vs what the price needs (FCF, $BN, our illustration)", C("Here is free cash flow today"), [
     {"d": "M 720 780 L 1520 780", "color": "ink", "width": 4, "start": C("Here is free cash flow today"), "label": lbl("$BN A YEAR · OUR CALC.", 1120, 830, 18, "ink")},
@@ -269,7 +271,7 @@ stage("s33_key", "m5_key", {
     "zones": [Z("office")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 1.0}, {"at": C("And it says the pay package"), "x": 1200, "y": 520, "zoom": 1.05, "dur": 1.8}], "drift": 2,
     "items": [it("letters", x=1000, y=130, text="RISK 1 · ONE PERSON", at=0.2, size=58, color="gold"),
-              it("emptychair", x=700, y=640, at=0.4, memoAt=C("also runs other companies")),
+              it("caricature", who="musk", x=650, y=860, at=0.3, scale=1.1, poses=[[0, "stand"], [C("also runs other companies"), "worry"], [C("And it says the pay package"), "talk"]]),
               it("sign", x=1350, y=270, text="'HIGHLY DEPENDENT ON THE SERVICES OF ELON MUSK'", at=C("highly dependent"), color="#FFE0B2", size=24),
               it("sign", x=1350, y=390, text="PLEDGED SHARES → MAY BE 'FORCED ... TO SELL'", at=C("if he pledged shares"), color="#FFCDD2", size=26),
               it("sign", x=1350, y=510, text="PAY PACKAGE COULD PULL FOCUS", at=C("And it says the pay package"), color="#FFCDD2", size=28)]},
