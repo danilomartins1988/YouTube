@@ -268,3 +268,93 @@ Primary sources used:
 - Do not attribute the Nov 5 drop to the scandal (market-wide selloff). Do not present our market-cap figures as reported figures; label them "our estimate based on Nvidia's share count."
 - Keep the affair to one factual line, quoting his memo. Avoid speculation about the relationship. This is not a gossip video.
 - DOJ case defendants are "charged / accused" (except Hsu and Hao Global, who pleaded guilty). Nvidia is not accused in them.
+
+## Update 2026-11-12
+
+Checked Thursday, Nov 12, 2026, about 7:05 a.m. ET (12:05 UTC), before the US open. Same conventions as above: "Fetched" means I read the article text myself; "Snippet" means search summaries or secondary relays only. Bloomberg, WSJ and NYT were not opened directly (paywall/403); their reporting below is relayed by CNBC, NBC, Semafor, Yahoo Finance and TNW. The story is moving by the hour. Re-check before recording.
+
+**New sources used (Fetched unless noted)**
+- CNBC, "Nvidia stock falls 7% as investors await Jensen Huang's fate," Nov 12, 4:02 a.m. ET (updated later). https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html
+- CNBC, "Nerves around Nvidia as investors await the outcome of Board's crisis CEO meeting," Nov 12, 6:06 a.m. ET. https://www.cnbc.com/2026/11/12/nvidia-boards-crisis-meeting.html
+- CNBC, "Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports," Nov 11, 4:59 p.m. ET. https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html
+- NBC News, "Nvidia shares drop after hours as board meets over CEO Jensen Huang's future," Nov 11, 6:51 p.m. ET, updated Nov 12, 6:31 a.m. ET. https://www.nbcnews.com/business/business-news/nvidia-shares-drop-hours-reports-meeting-ceo-jensen-huangs-future-rcna608906
+- Semafor, "Nvidia board prepares to oust CEO, name interim chief," updated Nov 11, 10:27 p.m. ET. https://www.semafor.com/article/11/11/2026/nvidia-board-preparing-to-oust-ceo-huang-wsj ; and Semafor, Nov 12, 6:44 a.m. ET. https://www.semafor.com/article/11/12/2026/nvidia-weighs-firing-ceo-following-spy-scandal
+- Yahoo Finance live blog (timestamps in UTC on page). https://finance.yahoo.com/technology/live/nvidia-live-updates-nvidia-stock-tanks-in-after-hours-after-allegations-of-a-second-affair-surface-222438011.html
+- TNW, Nov 12, 8:03 a.m. GMT (relays Reuters, WSJ, NYT, Bloomberg, Axios). https://thenextweb.com/news/nvidia-board-meeting-jensen-huang-ouster-no-decision
+- Reuters via Investing.com, Nov 10, 10:47 p.m. (Cramer). https://www.investing.com/news/stock-market-news/senior-republican-on-us-senate-banking-panel-calls-on-nvidia-ceo-huang-to-resign-5017609
+- Bloomberg, "Nvidia Working With Outside Firm to Identify CEO Candidates," Nov 11. https://www.bloomberg.com/news/articles/2026-11-11/nvidia-working-with-outside-firm-to-identify-ceo-candidates (Snippet; not opened)
+- [PX] Yahoo Finance chart API (daily and 5-minute bars incl. extended hours), pulled Nov 12, ~7:03 a.m. ET.
+- [EDGAR] data.sec.gov submissions JSON, re-checked Nov 12, 12:05 UTC.
+- Nvidia newsroom (https://nvidianews.nvidia.com/news), checked Nov 12, ~7:00 a.m. ET.
+
+### 1. What is reported vs confirmed
+
+**Second relationship (NYT, Wed Nov 11)**
+- Reported by the **New York Times**, citing five people who worked at Nvidia. Per the NYT (relayed by Yahoo live blog, 10:31 p.m. UTC = 5:31 p.m. ET, and by CNBC/NBC/TNW), Huang had a relationship with **an Nvidia vice president who reports to him**. Both are reportedly married to other people. The NYT reported they were seen being affectionate at a hotel during Nvidia's March developer conference (Snippet for the hotel/NDA details).
+- Huang's only reported response, to the NYT by phone: "I don't think you should be talking to me directly." (TNW relaying NYT. Fetched secondary.)
+- Nvidia "did not respond to multiple requests for comment on Wednesday" (NBC). The executive did not respond either (TNW). Semafor: "Spokespeople for the company didn't immediately provide a comment."
+- **NBC says it "has not confirmed the Times report."** Neither Huang nor the executive has confirmed it. Nvidia has issued no statement on it.
+- Per CNN's Meg Tirrell (relayed by the Yahoo blog, 2:00 a.m. UTC Nov 12), the executive dropped out of a Milken summit panel. Single relay; do not use.
+
+**Board deliberations**
+- **WSJ (Wed Nov 11)**: the board was "preparing to oust" Huang and could meet as soon as that day, citing people familiar (Yahoo blog entry 10:44 p.m. UTC = 5:44 p.m. ET; CNBC video headline; Reuters "Instant View" relays it). Not opened directly.
+- **Semafor** says it "earlier confirmed" the board is preparing to oust Huang, and that "The full board has yet to make a decision." It also says the board reportedly briefed the White House (a senior administration official).
+- **CNBC itself confirmed** that the board met on Wednesday, Nov 11, to discuss whether to oust Huang. **NBC**: two sources said the board was addressing Huang's future; one said the White House was aware. **Reuters** (relayed by TNW/Euronews, Snippet): the board met late Wednesday, per one person familiar.
+- **Bloomberg (Nov 11)**: Nvidia is working with an outside search firm to identify CEO candidates, and is weighing naming a temporary (interim) CEO before a wider search, citing a person familiar (Yahoo blog 11:49 p.m. UTC; Newsquawk headline; Semafor). Bloomberg's own text not opened. The search firm is not named.
+- **Interim CEO name**: none confirmed. **Semafor** alone reports that "some board members favor" CFO **Colette Kress** as interim CEO, per people familiar; Semafor's Nov 12 piece adds the company may also hire a COO. Benzinga headlines this as "Report." Other names in coverage (Johny Srouji per a Semafor source; Eric Schmidt, Rene Haas in weaker outlets) are speculation; do not use.
+- **Outcome as of ~7:05 a.m. ET Nov 12: no decision announced.** CNBC 6:06 a.m. ET: "So far, no outcome has been announced from those talks." TNW 8:03 a.m. GMT: no decision announced. Note: removal as CEO would not by itself remove Huang from the board (TNW/Korea Times, Snippet).
+
+**Official Nvidia/Huang channels**
+- **Nvidia newsroom**: the latest item is still the Nov 10 "Statement From the Independent Members of the NVIDIA Board." Nothing posted Nov 11 or 12 (checked ~7:00 a.m. ET).
+- **EDGAR**: no 8-K. Latest Nvidia filing is still the Nov 6 Form 4 (accepted 2026-11-06 21:12 UTC). Re-checked 12:05 UTC Nov 12. A CEO departure or interim appointment would normally require an 8-K (Item 5.02) within four business days, so watch EDGAR.
+- **Huang**: no public statement since his Nov 8 memo, other than the NYT phone remark above.
+- The board's Nov 8 line that it "has confidence in Jensen and his leadership team" has not been withdrawn or updated publicly.
+
+### 2. Stock ([PX], Yahoo chart API; times ET; vendor data, not an exchange record)
+
+| Point | NVDA price | vs Nov 11 close | vs Nov 6 close ($186.64) | Value change vs Nov 6, our calc (24.1bn shares) |
+|---|---|---|---|---|
+| Wed Nov 11 regular close (4:00 p.m.) | $173.73 (+2.86% on day) | | -6.92% | ≈ -$311bn |
+| After-hours low (5-min bar from 5:25 p.m.) | $156.20 | -10.09% | -16.31% | ≈ -$734bn |
+| After-hours last (7:55–8:00 p.m. bar) | $158.78 | -8.61% | -14.93% | ≈ -$671bn |
+| Thu Nov 12 premarket, 7:03 a.m. | $160.27 | -7.75% | -14.13% | ≈ -$636bn |
+
+- Nov 11 regular session: open $172.80, high $177.54, low $170.77, volume 313.4M. The stock **rose** 2.86% on Nov 11 (≈ +$117bn, our calc) before the news; the after-hours drop came after the close.
+- The after-hours decline started with the 4:55 p.m. ET bar (low $168.01) and steepened in the 5:20–5:25 p.m. bars, consistent with the NYT report and then the WSJ report. I cannot pin each move to a specific article timestamp.
+- Media figures: Semafor "more than 8% after hours," "52-week low"; Yahoo blog "7%" (12:13 a.m. UTC) then "9%"; NBC "almost 7%" premarket and "more than $350 billion" if it holds; CNBC "down 6.9% in premarket trading as of 6:23 a.m. ET," later "around 5%" (6:06 a.m. piece). Yahoo blog quote box: $160.10, -7.85% (no time). CNBC: "about $600 billion" lost this week including after hours (Snippet). These all fit our bars at different times; narrate our labelled figures.
+- **Nov 12 open/close: not yet available** (market opens 9:30 a.m. ET). Update before recording.
+- Our calc caveat as before: 24.1bn shares (Aug 21, 2026 10-Q cover), ±~$0.9bn per $1 move. After-hours/premarket prices are thin-volume and should be labelled "after-hours" / "premarket."
+- Title check: "$428 Billion in Two Days" still holds for the Nov 6 → Nov 10 closes. If the Nov 12 close is near premarket levels, the cumulative figure from Nov 6 would be roughly $600bn+, which the title would understate. Decide after the Nov 12 close.
+- Analysts (Fetched via CNBC/Yahoo relays): Bernstein downgraded to Market-Perform and cut its target from $400 to $200 (CNBC, Yahoo blog). Dan Ives: "the writing is on the wall"; $300 target if Huang stays, $225 if ousted (Yahoo blog relay). Peers premarket (CNBC, 6:23 a.m. ET): AMD +3.9%, Broadcom +3%.
+
+### 3. Congressional and regulator reaction (new since Nov 10 notes)
+- **Sen. Kevin Cramer (R-N.D., Senate Banking)**, late Tue Nov 10, to Politico (Reuters, Fetched): "The potential for extortion is so tremendous that something as sensitive as Nvidia chips, I just think he's got to go." Wed Nov 11, to CNBC: "As a matter of his own conscience, he should resign." First sitting senator found calling for resignation.
+- **Rep. Suhas Subramanyam (D-Va.)** to CNBC: "Jensen Huang should resign from Nvidia." **Rep. Don Bacon (R-Neb.)** to CNBC: "he allowed himself to get compromised by the Chinese government. Not good." (Bacon's line asserts something unproven; quote only as his opinion, if at all.)
+- **House chairs, Wed Nov 11 afternoon (CNBC):** Mast and Moolenaar said they had not heard from Huang and gave him until end of day. Mast, asked if subpoenas were possible: "yes." Moolenaar: "We are going to continue to pursue this." Whether Huang replied is **unknown** as of this check.
+- **Sens. Elizabeth Warren (D-Mass.) and Chris Coons (D-Del.)** wrote to Commerce Secretary Lutnick asking that records on Nvidia's chip exports to China be preserved: "This incident raises significant concerns about the federal government's ability to effectively enforce our export controls and protect our national security." (NBC, Fetched; WSJ via Yahoo blog.) I could not find the letter on the senators' or Banking Committee sites.
+- **Warren and Sen. Jim Banks (R-Ind.)** joint statement pushing the AI Overwatch Act in the NDAA (CNBC; date not given).
+- Context (CNBC, NBC): Democrats take control of both chambers in January and will have subpoena power; Warren is described as incoming Senate Banking chair.
+- **Regulators:** no statement found from the SEC, Commerce/BIS, DOJ or FBI since Nov 11. Trump said Monday (Nov 9) the FBI was looking into the relationship (Yahoo blog relay, Snippet). Axios reportedly said Lutnick delayed a planned crackdown on suspected Nvidia chip diversion (relayed by TNW only; Axios piece not found). Do not use until opened.
+- **China:** Bloomberg reportedly says the Megaspeed-linked woman is believed to be living in Beijing (Yahoo blog relay, Snippet).
+
+### 4. Flags for this update
+
+**The second person: do not name or show**
+- Do **not** name, picture, or describe the Nvidia executive in the video, and do not show her in B-roll, headlines or screenshots (crop or blur names in any news screenshot). This is a private-life allegation, unconfirmed by her, Huang or Nvidia, and NBC says it has not confirmed the NYT report. She is not accused of any wrongdoing.
+- If needed at all, one attributed line: "The New York Times reported a second relationship, with a senior Nvidia employee; Huang and Nvidia have not confirmed it." Keep the focus on governance (a relationship with a direct report is a board/policy question), not on the relationship.
+- Reference only (not for narration): coverage names her as Nvidia's vice president of health care.
+
+**Attribution and wording**
+- "Preparing to oust" is the WSJ's (and Semafor's) reporting, not a board announcement. Say "the Wall Street Journal reported the board was preparing to remove Huang; as of [time], Nvidia had announced no decision."
+- Interim CEO: "Bloomberg reported Nvidia is weighing an interim CEO and working with a search firm." Do not name Kress as interim CEO; if mentioned at all, "Semafor reported some directors favor CFO Colette Kress."
+- No implication of crimes: no one has been charged. Do not say Huang was "compromised" or "fired." Lawmakers' resignation calls are opinions; attribute them.
+- After-hours/premarket figures must be labelled with the time; all market-value figures are "our estimate based on Nvidia's share count."
+
+**Still unconfirmed as of ~7:05 a.m. ET Nov 12**
+- The second relationship (NYT only; unconfirmed by Huang, the executive, Nvidia; NBC has not confirmed).
+- Any board decision; the outcome of the Nov 11 meeting.
+- The board "preparing to oust" (WSJ/Semafor), interim CEO plan (Bloomberg), Kress as favored interim (Semafor), the search firm's identity.
+- Whether Huang answered the House committees' Nov 11 deadline; whether subpoenas follow.
+- The Warren-Coons letter text; the Axios Lutnick item; FBI involvement (only Trump's remark).
+- Nov 12 open and close (not yet trading in regular session).
+- Any 8-K or Nvidia/Huang statement: none as of 12:05 UTC.
