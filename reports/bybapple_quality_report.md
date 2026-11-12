@@ -2,19 +2,19 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/before-you-buy-apple-2026-11/documentary/before-you-buy-apple-2026-11--documentary.mp4 (287.1 MB) |
+| File exists | PASS | /home/user/YouTube/output/before-you-buy-apple-2026-11/documentary/before-you-buy-apple-2026-11--documentary.mp4 (275.3 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
 | Duration 11-13:20 min (channel standard 660-800 s) | PASS | 721.90 s (12:01) |
-| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
+| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 392 cues; median cue-start offset 0.05 s, p90 0.35 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
 - Loudness: -16.1 LUFS integrated, true peak -3.9 dBFS
-- Scenes: 43; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x28, engine_draw x3, kinetic_text x5
+- Scenes: 43; types: act_title x5, channel_intro x1, end_card x1, engine_cartoon x27, engine_draw x4, kinetic_text x5
 - Average scene length: 16.8 s; act cards are music-only.
 
 ## Pipeline QC report
@@ -22,10 +22,10 @@
 # QC report: before-you-buy-apple-2026-11 / documentary (long_16x9)
 
 - Runtime: **721.9 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 287.1 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 275.3 MB
 - Loudness: -16.1 LUFS integrated, true peak -3.9 dBFS
-- Errors: **1**, warnings: **72**
-- Technical QC passed: **False**
+- Errors: **0**, warnings: **74**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
@@ -38,7 +38,7 @@
 - [WARNING] (timing) Segment m5_upside pace 190 wpm (numerals count as one word)
 - [WARNING] (timing) Segment m5_transition pace 117 wpm (numerals count as one word)
 - [WARNING] (captions) Caption reading speed >25 chars/s: 'The year before,'
-- [ERROR] (presenter) Presenter sequences are bunched together; spread them through the film
+- [WARNING] (presenter) Presenter scene p37_watch lasts 31.3s (target 10-25 s)
 - [WARNING] (sources) Number word 'half' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'six' outside a placeholder - confirm it is not an unsourced statistic.
@@ -93,16 +93,17 @@
 - [WARNING] (sources) Number word 'six' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'three' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (distinctiveness) Scene sequence 86% similar to 'alaska-the-state-that-pays-you-to-live-there/documentary'
+- [WARNING] (distinctiveness) Scene sequence 89% similar to 'alaska-the-state-that-pays-you-to-live-there/documentary'
 - [WARNING] (distinctiveness) Scene sequence 95% similar to 'before-you-buy-amazon-2026-11/documentary'
-- [WARNING] (distinctiveness) Scene sequence 86% similar to 'how-car-dealerships-really-make-money/documentary'
-- [WARNING] (distinctiveness) Scene sequence 86% similar to 'why-americas-airports-make-money-before-you-fly/documentary'
-- [WARNING] (distinctiveness) Scene sequence 86% similar to 'the-business-behind-americas-student-debt/documentary'
+- [WARNING] (distinctiveness) Scene sequence 89% similar to 'how-car-dealerships-really-make-money/documentary'
+- [WARNING] (distinctiveness) Scene sequence 89% similar to 'why-americas-airports-make-money-before-you-fly/documentary'
+- [WARNING] (distinctiveness) Scene sequence 89% similar to 'the-business-behind-americas-student-debt/documentary'
 - [WARNING] (distinctiveness) Scene sequence 95% similar to 'before-you-buy-tesla-2026-11/documentary'
 - [WARNING] (distinctiveness) Scene sequence 96% similar to 'before-you-buy-meta-2026-11/documentary'
 - [WARNING] (distinctiveness) Scene sequence 95% similar to 'before-you-buy-alphabet-2026-11/documentary'
 - [WARNING] (distinctiveness) Scene sequence 84% similar to 'the-2-billion-that-never-existed/documentary'
 - [WARNING] (distinctiveness) Scene sequence 96% similar to 'before-you-buy-microsoft-2026-11/documentary'
+- [WARNING] (render) Picture static for >4 s from 670.03s (pacing?)
 
 ## Publish blockers - claims needing human verification
 

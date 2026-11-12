@@ -44,6 +44,6 @@ Total 12:02 (721.9 s), 43 scenes. Timestamps come from the narration timing of t
 | 38 | 10:11 | 30.6s | `s34b_partners` | engine_cartoon |  | And there's a quieter concentration risk. Almost all of Apple's hardware is built by outso... | tenk |
 | 39 | 10:42 | 23.2s | `s35_scale` | engine_cartoon |  | And the upside the price might not fully include. Apple says its installed base of active ... | tenk, q4 |
 | 40 | 11:05 | 3.4s | `s36_t5` | kinetic_text | Kinetic typography: lines enter word by word on narration cues | So, what should you watch? | - |
-| 41 | 11:09 | 31.3s | `s37_score` | engine_cartoon |  | Here's the scorecard for the next report, expected around late January twenty twenty-seven... | q4, tenk |
+| 41 | 11:09 | 31.3s | `p37_watch` | engine_draw |  | Here's the scorecard for the next report, expected around late January twenty twenty-seven... | q4, tenk |
 | 42 | 11:40 | 14.0s | `s38_edition` | engine_cartoon |  | That's Apple, November twenty twenty-six edition. We'll update it after every report, with... | tenk |
 | 43 | 11:54 | 8.1s | `s39_end` | end_card | Closing words land; brand line draws | Next in the series, another giant of the stock market, opened up the same way. This is The... | - |

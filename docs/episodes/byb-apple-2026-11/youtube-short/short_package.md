@@ -23,7 +23,7 @@ Watch the full story: "Before You Buy Apple Stock, Watch This (Nov 2026)" on The
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+Apple stock, AAPL, before you buy, Apple earnings, iPhone, Apple services, valuation, stock analysis, Nasdaq, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

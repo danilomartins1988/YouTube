@@ -1949,9 +1949,9 @@
     },
     {
       "index": 41,
-      "id": "s37_score",
+      "id": "p37_watch",
       "segment": "payoff",
-      "type": "engine_cartoon",
+      "type": "engine_draw",
       "start_s": 668.53,
       "end_s": 699.87,
       "duration_s": 31.33,
@@ -1959,39 +1959,88 @@
       "narration": "Here's the scorecard for the next report, expected around late January twenty twenty-seven, our estimate. One, December quarter revenue against about one hundred and forty-four billion dollars a year earlier. Two, gross margin against forty-seven point nine percent, which still had tariff refunds in it. Three, Services growth against nine point eight percent. If those three hold up, the story the price is telling keeps holding up. If they crack, the gap between the price and the cash gets harder to defend.",
       "keyframes": [
         {
-          "param": "items[0].rows[0].at.cue",
+          "param": "draw_start.cue",
           "cue": "One, December",
-          "label": "items[0].rows[0].at.cue",
+          "label": "draw_start.cue",
           "scene_time_s": 6.64,
           "absolute_s": 675.17
         },
         {
-          "param": "items[0].rows[1].at.cue",
+          "param": "strokes[0].start.cue",
+          "cue": "One, December",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 6.64,
+          "absolute_s": 675.17
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "One, December",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 6.64,
+          "absolute_s": 675.17
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "One, December",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 6.94,
+          "absolute_s": 675.47
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "One, December",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 7.24,
+          "absolute_s": 675.77
+        },
+        {
+          "param": "strokes[4].start.cue",
           "cue": "Two, gross margin",
-          "label": "items[0].rows[1].at.cue",
+          "label": "strokes[4].start.cue",
           "scene_time_s": 13.03,
           "absolute_s": 681.56
         },
         {
-          "param": "items[0].rows[2].at.cue",
+          "param": "strokes[5].start.cue",
+          "cue": "Two, gross margin",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 13.33,
+          "absolute_s": 681.86
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Two, gross margin",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 13.63,
+          "absolute_s": 682.16
+        },
+        {
+          "param": "strokes[7].start.cue",
           "cue": "Three, Services",
-          "label": "items[0].rows[2].at.cue",
+          "label": "strokes[7].start.cue",
           "scene_time_s": 18.93,
           "absolute_s": 687.46
         },
         {
-          "param": "cam[1].at.cue",
-          "cue": "If those three",
-          "label": "cam[1].at.cue",
-          "scene_time_s": 21.97,
-          "absolute_s": 690.5
+          "param": "strokes[8].start.cue",
+          "cue": "Three, Services",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 19.23,
+          "absolute_s": 687.76
         },
         {
-          "param": "items[2].moods[0][0].cue",
-          "cue": "If they crack",
-          "label": "items[2].moods[0][0].cue",
-          "scene_time_s": 26.13,
-          "absolute_s": 694.66
+          "param": "actions[0].at.cue",
+          "cue": "Three, Services",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 19.43,
+          "absolute_s": 687.96
+        },
+        {
+          "param": "strokes[9].start.cue",
+          "cue": "Three, Services",
+          "label": "strokes[9].start.cue",
+          "scene_time_s": 19.53,
+          "absolute_s": 688.06
         }
       ],
       "unresolved_cues": [],
@@ -2016,9 +2065,9 @@
       "narration": "That's Apple, November twenty twenty-six edition. We'll update it after every report, with new numbers and the same three questions. What's priced in, what has to happen, and what could go wrong.",
       "keyframes": [
         {
-          "param": "items[1].at.cue",
+          "param": "items[2].at.cue",
           "cue": "the same three questions",
-          "label": "items[1].at.cue",
+          "label": "items[2].at.cue",
           "scene_time_s": 8.0,
           "absolute_s": 707.86
         }
