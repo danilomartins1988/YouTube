@@ -59,3 +59,5 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | byb-meta-2026-11 | Meta's Free Cash Flow Just Went Negative. Here's Why | META: FREE CASH / BELOW ZERO | 54 s | `docs/episodes/byb-meta-2026-11/youtube-short/short_package.md` |
 | byb-alphabet-2026-11 | Alphabet Trades at 178 Times Its Free Cash. Here's Why | ALPHABET: 178× / ITS FREE CASH | 51 s | `docs/episodes/byb-alphabet-2026-11/youtube-short/short_package.md` |
 | byb-amazon-2026-11 | Amazon's Free Cash Flow Is Negative. Here's the Bet | AMAZON: FREE CASH / BELOW ZERO | 54 s | `docs/episodes/byb-amazon-2026-11/youtube-short/short_package.md` |
+| byb-tesla-2026-11 | Tesla Is Worth 466 Times Its Profit. Here's What That Assumes | TESLA: 466× / ITS PROFIT | 53 s | `docs/episodes/byb-tesla-2026-11/youtube-short/short_package.md` |
+| 52-nvidia-probe | Nvidia Lost About $428 Billion in Two Days | -$428 BILLION / IN TWO DAYS | 48 s | `docs/episodes/52-nvidia-probe/youtube-short/short_package.md` |

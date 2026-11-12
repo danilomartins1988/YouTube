@@ -1050,3 +1050,42 @@ Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
 ```
 Amazon stock, AMZN, before you buy, AWS, AI capex, free cash flow, valuation, stock analysis, Nasdaq, shorts, economics explained, The Hidden Economics
 ```
+
+## byb-tesla-2026-11
+
+**Title**
+```
+Tesla Is Worth 466 Times Its Profit. Here's What That Assumes #shorts
+```
+**Description**
+```
+Tesla is worth about one point five trillion dollars. That's three hundred and seventy-nine dollars and seventy-eight cents a share at the close on November tenth, twenty twenty-six, times about three point nine five billion shares.
+
+Watch the full story: "Before You Buy Tesla Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
+Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
+
+#shorts #tesla #stocks #investing #economics
+```
+**Tags**
+```
+Tesla stock, TSLA, before you buy, Elon Musk, robotaxi, energy storage, regulatory credits, valuation, stock analysis, Nasdaq, shorts, economics explained, The Hidden Economics
+```
+
+## 52-nvidia-probe
+
+**Title**
+```
+Nvidia Lost About $428 Billion in Two Days #shorts
+```
+**Description**
+```
+four hundred and twenty-eight billion dollars. By our own estimate, that is about how much stock market value Nvidia, the company whose chips power artificial intelligence, lost in just two trading days in November twenty twenty-six.
+
+Watch the full story: "Why Nvidia Lost $428 Billion in Two Days" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #nvidia #stocks #ai #economics
+```
+**Tags**
+```
+Nvidia, NVDA, Jensen Huang, Nvidia stock, export controls, AI chips, Singapore, key person risk, market value, economics, shorts, economics explained, The Hidden Economics
+```

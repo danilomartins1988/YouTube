@@ -16,6 +16,7 @@ Tesla Is Worth 466 Times Its Profit. Here's What That Assumes #shorts
 Tesla is worth about one point five trillion dollars. That's three hundred and seventy-nine dollars and seventy-eight cents a share at the close on November tenth, twenty twenty-six, times about three point nine five billion shares.
 
 Watch the full story: "Before You Buy Tesla Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
+Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
 
 #shorts #tesla #stocks #investing #economics
 ```
@@ -23,7 +24,7 @@ Watch the full story: "Before You Buy Tesla Stock, Watch This (Nov 2026)" on The
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+Tesla stock, TSLA, before you buy, Elon Musk, robotaxi, energy storage, regulatory credits, valuation, stock analysis, Nasdaq, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook
