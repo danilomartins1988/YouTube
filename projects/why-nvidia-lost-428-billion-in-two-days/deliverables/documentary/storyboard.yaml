@@ -9,6 +9,7 @@ scenes:
     - set: chipcity
       x0: -1600
       x1: 4600
+      day: true
     worldW: 2400
     cam:
     - at: 0
@@ -58,6 +59,45 @@ scenes:
         - shock
       label: GPU
       hop: 30
+    - kind: person
+      x: 300
+      y: 860
+      pose: phone
+      at: 0.3
+      scale: 0.95
+      hair: 0
+      skin: 0
+      color: '#4FB3F6'
+      poses:
+      - - cue: lost in just
+        - shock
+    - kind: person
+      x: 760
+      y: 860
+      pose: phone
+      at: 0.45
+      scale: 0.95
+      hair: 3
+      skin: 3
+      color: '#FF8A65'
+      flip: true
+      poses:
+      - - cue: lost in just
+          offset: 0.3
+        - shock
+    - kind: person
+      x: 1000
+      y: 860
+      pose: stand
+      at: 0.6
+      scale: 0.95
+      hair: 1
+      skin: 2
+      color: '#7BD389'
+      glasses: true
+      poses:
+      - - cue: two trading days
+        - worry
   sources:
   - px
   - sec
@@ -71,6 +111,7 @@ scenes:
     - set: chipcity
       x0: -1600
       x1: 4600
+      day: true
     worldW: 2400
     cam:
     - at: 0
@@ -138,6 +179,46 @@ scenes:
       label: GPU
       color: '#7B61FF'
       hop: 20
+    - kind: person
+      x: 420
+      y: 860
+      pose: carry
+      at:
+        cue: No factory
+      scale: 0.95
+      hair: 4
+      skin: 1
+      color: '#B39DDB'
+      box: WAFERS
+      hat: '#FFC93C'
+    - kind: person
+      x: 1000
+      y: 860
+      pose: clipboard
+      at:
+        cue: No chip
+      scale: 0.95
+      hair: 2
+      skin: 0
+      color: '#FFC93C'
+      glasses: true
+      poses:
+      - - cue: What changed
+        - shrug
+    - kind: person
+      x: 1600
+      y: 860
+      pose: type
+      at:
+        cue: No customer
+      scale: 0.95
+      hair: 0
+      skin: 3
+      color: '#F06292'
+      flip: true
+      poses:
+      - - cue: What changed
+        - shock
   sources:
   - px
   assets:
@@ -151,7 +232,10 @@ scenes:
       x0: -1600
       x1: 4600
       night: true
-      buoyAt: 0.5
+      buoyAt: 0.62
+      dock: true
+      dockX0: 200
+      dockX1: 700
     worldW: 2400
     night: true
     cam:
@@ -169,9 +253,9 @@ scenes:
     - kind: freighter
       x:
       - - 0
-        - 200
+        - 700
       - - 5.0
-        - 1100
+        - 1250
       y: 650
       at: 0.2
       scale: 0.8
@@ -188,6 +272,28 @@ scenes:
       at: 0.4
       size: 58
       color: gold
+    - kind: person
+      x: 300
+      y: 795
+      pose: carry
+      at: 0.3
+      scale: 0.95
+      hair: 3
+      skin: 2
+      color: '#4DD0E1'
+      box: CHIPS
+      hat: '#FF9F1C'
+    - kind: person
+      x: 540
+      y: 795
+      pose: shrug
+      at: 0.6
+      scale: 0.95
+      hair: 1
+      skin: 1
+      color: '#A1887F'
+      flip: true
+      hat: '#FF9F1C'
   assets:
   - font:inter
 - id: s04_promise
@@ -198,6 +304,7 @@ scenes:
     - set: chipcity
       x0: -1600
       x1: 4600
+      day: true
       signs:
       - FOUNDER = PRODUCT?
       - REPORTED ≠ PROVEN
@@ -256,6 +363,26 @@ scenes:
       mood: happy
       label: YOU?
       hop: 24
+    - kind: person
+      x: 560
+      y: 860
+      pose: point
+      at: 0.5
+      scale: 0.95
+      hair: 4
+      skin: 0
+      color: '#4FB3F6'
+    - kind: person
+      x: 1450
+      y: 860
+      pose: phone
+      at: 0.7
+      scale: 0.95
+      hair: 2
+      skin: 3
+      color: '#FF8A65'
+      flip: true
+      glasses: true
   assets:
   - font:inter
 - id: s05_c1
@@ -280,6 +407,7 @@ scenes:
     - set: chipcity
       x0: -1600
       x1: 4600
+      day: true
     worldW: 2600
     cam:
     - at: 0
@@ -324,7 +452,7 @@ scenes:
       color: '#FFE0B2'
       size: 28
     - kind: chipbuddy
-      x: 500
+      x: 560
       y: 860
       at: 0.3
       mood: happy
@@ -332,7 +460,7 @@ scenes:
       color: '#2EC4B6'
       hop: 22
     - kind: chipbuddy
-      x: 760
+      x: 1080
       y: 860
       at: 0.44999999999999996
       mood: happy
@@ -340,29 +468,45 @@ scenes:
       color: '#FF9F1C'
       hop: 28
     - kind: chipbuddy
-      x: 1020
+      x: 1600
       y: 860
       at: 0.6
       mood: happy
       label: AI
       color: '#7B61FF'
       hop: 34
-    - kind: chipbuddy
-      x: 1280
+    - kind: person
+      x: 820
       y: 860
-      at: 0.75
-      mood: happy
-      label: AI
-      color: '#E71D73'
-      hop: 40
-    - kind: chipbuddy
-      x: 1540
+      pose: cheer
+      at:
+        cue: Before
+      scale: 0.95
+      hair: 0
+      skin: 2
+      color: '#7BD389'
+    - kind: person
+      x: 1340
       y: 860
-      at: 0.8999999999999999
-      mood: happy
-      label: AI
-      color: '#3A86FF'
-      hop: 46
+      pose: phone
+      at:
+        cue: Before
+        offset: 0.3
+      scale: 0.95
+      hair: 3
+      skin: 1
+      color: '#B39DDB'
+      flip: true
+    - kind: person
+      x: 1860
+      y: 860
+      pose: cheer
+      at:
+        cue: by our estimate
+      scale: 0.95
+      hair: 1
+      skin: 0
+      color: '#FFC93C'
   sources:
   - sec
   - px
@@ -434,6 +578,36 @@ scenes:
       label: GPU
       color: '#FF9F1C'
       hop: 18
+    - kind: person
+      x: 640
+      y: 860
+      pose: phone
+      at: 0.6
+      scale: 0.95
+      hair: 4
+      skin: 3
+      color: '#F06292'
+    - kind: person
+      x: 1350
+      y: 860
+      pose: cheer
+      at:
+        cue: Jensen is Nvidia
+      scale: 0.95
+      hair: 2
+      skin: 2
+      color: '#4DD0E1'
+      flip: true
+    - kind: person
+      x: 1840
+      y: 860
+      pose: stand
+      at: 0.8
+      scale: 0.95
+      hair: 0
+      skin: 1
+      color: '#A1887F'
+      glasses: true
   sources:
   - press
   assets:
@@ -505,6 +679,31 @@ scenes:
       mood: worry
       label: GPU
       hop: 10
+    - kind: person
+      x: 380
+      y: 860
+      pose: read
+      at:
+        cue: annual report
+      scale: 0.95
+      hair: 3
+      skin: 0
+      color: '#4FB3F6'
+      glasses: true
+    - kind: person
+      x: 1780
+      y: 860
+      pose: clipboard
+      at:
+        cue: And the latest proxy
+      scale: 0.95
+      hair: 1
+      skin: 3
+      color: '#FF8A65'
+      flip: true
+      poses:
+      - - cue: use the word succession
+        - shrug
   sources:
   - sec
   assets:
@@ -517,6 +716,7 @@ scenes:
     - set: chipcity
       x0: -1600
       x1: 4600
+      day: true
     worldW: 2400
     cam:
     - at: 0
@@ -567,6 +767,31 @@ scenes:
         - sad
       label: GPU
       hop: 16
+    - kind: person
+      x: 380
+      y: 860
+      pose: phone
+      at: 0.5
+      scale: 0.95
+      hair: 4
+      skin: 2
+      color: '#7BD389'
+      poses:
+      - - cue: fifteen billion
+        - shock
+    - kind: person
+      x: 1750
+      y: 860
+      pose: read
+      at: 0.7
+      scale: 0.95
+      hair: 2
+      skin: 1
+      color: '#B39DDB'
+      flip: true
+      poses:
+      - - cue: fifteen billion
+        - worry
   sources:
   - sec
   - px
@@ -748,6 +973,37 @@ scenes:
         cue: Ministry of State Security
       color: '#FFCDD2'
       size: 30
+    - kind: person
+      x: 300
+      y: 860
+      pose: type
+      at: 0.3
+      scale: 0.95
+      hair: 0
+      skin: 0
+      color: '#FFC93C'
+    - kind: person
+      x: 1720
+      y: 860
+      pose: phone
+      at:
+        cue: Then, on Friday
+      scale: 0.95
+      hair: 3
+      skin: 3
+      color: '#F06292'
+      flip: true
+    - kind: person
+      x: 1960
+      y: 860
+      pose: type
+      at: 0.6
+      scale: 0.95
+      hair: 1
+      skin: 2
+      color: '#4DD0E1'
+      flip: true
+      glasses: true
   sources:
   - press
   assets:
@@ -808,6 +1064,31 @@ scenes:
         cue: What matters
       size: 54
       color: gold
+    - kind: person
+      x: 470
+      y: 860
+      pose: read
+      at:
+        cue: Huang wrote
+      scale: 0.95
+      hair: 4
+      skin: 1
+      color: '#A1887F'
+    - kind: person
+      x: 1560
+      y: 860
+      pose: phone
+      at:
+        cue: Huang wrote
+        offset: 0.4
+      scale: 0.95
+      hair: 2
+      skin: 0
+      color: '#4FB3F6'
+      flip: true
+      poses:
+      - - cue: That is all
+        - shrug
   sources:
   - nvidia
   assets:
@@ -870,6 +1151,28 @@ scenes:
         cue: no one has
       color: '#BBDEFB'
       size: 32
+    - kind: person
+      x: 1150
+      y: 860
+      pose: worry
+      at: 0.5
+      scale: 0.95
+      hair: 0
+      skin: 3
+      color: '#FF8A65'
+      tie: true
+    - kind: person
+      x: 1850
+      y: 860
+      pose: clipboard
+      at:
+        cue: no reason to believe
+      scale: 0.95
+      hair: 3
+      skin: 2
+      color: '#7BD389'
+      flip: true
+      glasses: true
   sources:
   - nvidia
   - press
@@ -880,7 +1183,7 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: chipcity
+    - set: exchange
       x0: -1600
       x1: 4600
     worldW: 2400
@@ -946,6 +1249,44 @@ scenes:
       at: 0.2
       size: 60
       color: gold
+    - kind: person
+      x: 300
+      y: 900
+      pose: type
+      at: 0.3
+      scale: 0.95
+      hair: 1
+      skin: 1
+      color: '#B39DDB'
+      tie: true
+      poses:
+      - - cue: Nvidia fell
+        - shock
+    - kind: person
+      x: 1420
+      y: 900
+      pose: phone
+      at: 0.5
+      scale: 0.95
+      hair: 4
+      skin: 0
+      color: '#FFC93C'
+      flip: true
+      poses:
+      - - cue: Nvidia fell
+          offset: 0.3
+        - worry
+    - kind: person
+      x: 2000
+      y: 900
+      pose: cheer
+      at:
+        cue: A M D
+      scale: 0.95
+      hair: 2
+      skin: 3
+      color: '#F06292'
+      flip: true
   sources:
   - px
   assets:
@@ -1005,6 +1346,34 @@ scenes:
       - cue: The stock fell again
         offset: 0.6
       text: 'TUESDAY: -5.47% → $168.89'
+    - kind: person
+      x:
+      - - 0
+        - 1400
+      - - cue: named their investigator
+        - 1000
+      y: 860
+      pose: mic
+      at: 0.4
+      scale: 0.95
+      hair: 0
+      skin: 2
+      color: '#4DD0E1'
+      flip: true
+    - kind: person
+      x:
+      - - 0
+        - 1600
+      - - cue: named their investigator
+        - 1180
+      y: 860
+      pose: camera
+      at: 0.5
+      scale: 0.95
+      hair: 3
+      skin: 1
+      color: '#A1887F'
+      flip: true
   sources:
   - nvidia
   - px
@@ -1079,6 +1448,29 @@ scenes:
       mood: sad
       label: GPU
       hop: 0
+    - kind: person
+      x: 1350
+      y: 860
+      pose: worry
+      at:
+        cue: With roughly
+      scale: 0.95
+      hair: 1
+      skin: 0
+      color: '#4FB3F6'
+    - kind: person
+      x: 1880
+      y: 860
+      pose: phone
+      at: 0.6
+      scale: 0.95
+      hair: 4
+      skin: 3
+      color: '#FF8A65'
+      flip: true
+      poses:
+      - - cue: of market value
+        - shock
   sources:
   - px
   - sec
@@ -1121,7 +1513,11 @@ scenes:
     - set: searoute
       x0: -1600
       x1: 4600
-      buoyAt: 0.5
+      day: true
+      buoyAt: 0.62
+      dock: true
+      dockX0: 520
+      dockX1: 1000
     worldW: 2600
     cam:
     - at: 0
@@ -1153,9 +1549,9 @@ scenes:
     - kind: freighter
       x:
       - - 0
-        - 200
+        - 1000
       - - cue: In April
-        - 1100
+        - 1500
       y: 650
       at: 0.3
       scale: 0.75
@@ -1173,6 +1569,29 @@ scenes:
         cue: took a charge
       size: 50
       color: gold
+    - kind: person
+      x: 640
+      y: 795
+      pose: clipboard
+      at: 0.4
+      scale: 0.95
+      hair: 2
+      skin: 2
+      color: '#7BD389'
+      hat: '#1565C0'
+      badge: true
+    - kind: person
+      x: 860
+      y: 795
+      pose: point
+      at:
+        cue: the rules got tighter
+      scale: 0.95
+      hair: 0
+      skin: 1
+      color: '#B39DDB'
+      hat: '#1565C0'
+      badge: true
   sources:
   - sec
   assets:
@@ -1231,6 +1650,27 @@ scenes:
       label: H20
       color: '#7B61FF'
       hop: 8
+    - kind: person
+      x: 420
+      y: 860
+      pose: type
+      at: 0.4
+      scale: 0.95
+      hair: 3
+      skin: 0
+      color: '#FFC93C'
+      glasses: true
+    - kind: person
+      x: 1620
+      y: 860
+      pose: shrug
+      at:
+        cue: Customers headquartered
+      scale: 0.95
+      hair: 1
+      skin: 3
+      color: '#F06292'
+      flip: true
   sources:
   - sec
   assets:
@@ -1244,7 +1684,10 @@ scenes:
       x0: -1600
       x1: 4600
       night: true
-      buoyAt: 0.53
+      buoyAt: 0.6
+      dock: true
+      dockX0: 420
+      dockX1: 900
       sign: EXPORT RULES CHECKPOINT
       sub: NO LICENSE? NO PASSAGE
     worldW: 2600
@@ -1265,9 +1708,9 @@ scenes:
     - kind: freighter
       x:
       - - 0
-        - -200
+        - 950
       - - cue: And in October
-        - 900
+        - 1400
       y: 660
       at: 0.3
       scale: 0.75
@@ -1301,6 +1744,29 @@ scenes:
         cue: Nvidia is not accused
       color: '#C8E6C9'
       size: 32
+    - kind: person
+      x: 540
+      y: 795
+      pose: point
+      at: 0.4
+      scale: 0.95
+      hair: 4
+      skin: 2
+      color: '#4DD0E1'
+      hat: '#1565C0'
+      badge: true
+    - kind: person
+      x: 760
+      y: 795
+      pose: clipboard
+      at:
+        cue: pleaded guilty
+      scale: 0.95
+      hair: 2
+      skin: 1
+      color: '#A1887F'
+      hat: '#1565C0'
+      badge: true
   sources:
   - doj
   assets:
@@ -1511,6 +1977,32 @@ scenes:
         cue: Actual shipments
       color: '#C8E6C9'
       size: 32
+    - kind: person
+      x:
+      - - 0
+        - 200
+      - - 8
+        - 700
+      y: 860
+      pose: carry
+      at: 0.4
+      scale: 0.95
+      hair: 0
+      skin: 0
+      color: '#4FB3F6'
+      box: INVOICES
+    - kind: person
+      x: 1900
+      y: 860
+      pose: clipboard
+      at:
+        cue: centralize invoicing
+      scale: 0.95
+      hair: 3
+      skin: 3
+      color: '#FF8A65'
+      flip: true
+      glasses: true
   sources:
   - sec
   assets:
@@ -1682,6 +2174,32 @@ scenes:
       label: GPU
       color: '#7B61FF'
       hop: 20
+    - kind: person
+      x:
+      - - 0
+        - -400
+      - - 6
+        - 300
+      y: 860
+      pose: carry
+      at: 0.5
+      scale: 0.95
+      hair: 1
+      skin: 2
+      color: '#7BD389'
+      box: SERVERS
+      hat: '#FF9F1C'
+    - kind: person
+      x: 1800
+      y: 860
+      pose: clipboard
+      at:
+        cue: its assets grew
+      scale: 0.95
+      hair: 4
+      skin: 1
+      color: '#B39DDB'
+      flip: true
   sources:
   - reuters
   - press
@@ -1763,6 +2281,29 @@ scenes:
       scale: 0.8
       searchAt:
         cue: by the book
+    - kind: person
+      x: 300
+      y: 860
+      pose: point
+      at:
+        cue: Senator Tom Cotton
+      scale: 0.95
+      hair: 2
+      skin: 0
+      color: '#FFC93C'
+      tie: true
+      old: true
+    - kind: person
+      x: 1100
+      y: 860
+      pose: read
+      at: 0.6
+      scale: 0.95
+      hair: 0
+      skin: 3
+      color: '#F06292'
+      flip: true
+      tie: true
   sources:
   - cotton
   - press
@@ -1824,6 +2365,27 @@ scenes:
         - happy
       label: GPU
       hop: 14
+    - kind: person
+      x: 380
+      y: 860
+      pose: clipboard
+      at: 0.4
+      scale: 0.95
+      hair: 3
+      skin: 2
+      color: '#4DD0E1'
+      glasses: true
+    - kind: person
+      x: 1700
+      y: 860
+      pose: mic
+      at:
+        cue: Nvidia has described
+      scale: 0.95
+      hair: 1
+      skin: 1
+      color: '#A1887F'
+      flip: true
   sources:
   - reuters
   - press
@@ -1858,69 +2420,98 @@ scenes:
     gain: 0.25
   assets:
   - font:inter
-- id: s34_detective
+- id: p34_investigation
   segment: m5_detective
-  type: engine_cartoon
+  type: engine_draw
   params:
-    zones:
-    - set: office
-      x0: -1600
-      x1: 4600
-      night: true
-    worldW: 2400
-    night: true
-    cam:
-    - at: 0
-      x: 1000
-      y: 520
-      zoom: 1.05
-    - at:
-        cue: Until it reports
-      x: 1150
-      y: 520
-      zoom: 1.0
-      dur: 1.8
-    drift: 2
-    items:
-    - kind: letters
-      x: 1000
-      y: 120
-      text: 1 · THE INVESTIGATION
+    title: 1 · The investigation
+    board: *id002
+    draw_start:
+      cue: A committee of independent
+    speed: 1400
+    push: 0.003
+    enter:
+      from: -260
+      to: 270
       at: 0.2
-      size: 60
-      color: gold
-    - kind: detective
-      x:
-      - - 0
-        - 400
-      - - 3
-        - 900
-      - - 6
-        - 1300
-      - - 9
-        - 800
-      y: 860
-      at: 0.2
-      scale: 0.9
-      searchAt:
-        cue: examine all available
-      text: INDEPENDENT DIRECTORS + OUTSIDE LAWYERS
-    - kind: docs
-      x: 1500
-      y: 860
-      at: 0.6
-      text: EVIDENCE
-      stampAt:
+      dur: 1.3
+    strokes:
+    - d: M 640 420 L 900 420 L 900 570 L 640 570 Z
+      color: accent2
+      width: 6
+      kind: box
+      start:
+        cue: A committee of independent
+      label:
+        text: INDEPENDENT DIRECTORS
+        x: 770
+        y: 500
+        size: 18
+        color: accent2
+        anchor: middle
+    - d: M 640 620 L 900 620 L 900 770 L 640 770 Z
+      color: accent2
+      width: 6
+      kind: box
+      start:
+        cue: helped by outside lawyers
+      label:
+        text: OUTSIDE LAWYERS
+        x: 770
+        y: 700
+        size: 18
+        color: accent2
+        anchor: middle
+    - d: M 1200 500 L 1440 500 L 1440 680 L 1200 680 Z
+      color: accent
+      width: 6
+      kind: box
+      start:
+        cue: will examine all
+      label:
+        text: 'FINDINGS: ?'
+        x: 1320
+        y: 595
+        size: 24
+        color: accent
+        anchor: middle
+    - d: M 905 495 Q 1050 528 1195 560 M 1172 565 L 1195 560 L 1176 545
+      color: ink
+      width: 5
+      kind: arrow
+      start:
+        cue: will examine all
+      label:
+        text: ALL AVAILABLE INFO
+        x: 1050
+        y: 500
+        size: 16
+        color: ink
+        anchor: middle
+    - d: M 905 695 Q 1050 658 1195 620 M 1177 636 L 1195 620 L 1171 615
+      color: ink
+      width: 5
+      kind: arrow
+      start:
         cue: further updates
-      stamp: PENDING
-    - kind: letters
-      x: 1450
-      y: 330
-      text: '?'
+      label:
+        text: UPDATES PROMISED
+        x: 1050
+        y: 700
+        size: 16
+        color: ink
+        anchor: middle
+    actions:
+    - kind: point
       at:
         cue: question mark
-      size: 160
-      color: gold
+        offset: 0.05
+      dur: 1.4
+      target:
+      - 1320
+      - 590
+    scale: 0.86
+    floor: 1040
   sources:
   - nvidia
   assets:
@@ -1975,13 +2566,43 @@ scenes:
         cue: not yet confirmed
       color: '#FFCDD2'
       size: 30
-    - kind: chipbuddy
+    - kind: person
+      x: 900
+      y: 860
+      pose: read
+      at:
+        cue: And three House
+      scale: 0.95
+      hair: 4
+      skin: 0
+      color: '#4FB3F6'
+      tie: true
+    - kind: person
+      x: 1250
+      y: 860
+      pose: clipboard
+      at:
+        cue: And three House
+        offset: 0.3
+      scale: 0.95
+      hair: 2
+      skin: 3
+      color: '#FF8A65'
+      flip: true
+      tie: true
+      old: true
+    - kind: person
       x: 1600
       y: 860
-      at: 0.4
-      mood: worry
-      label: GPU
-      hop: 10
+      pose: point
+      at:
+        cue: vital that Congress
+      scale: 0.95
+      hair: 0
+      skin: 2
+      color: '#7BD389'
+      flip: true
+      tie: true
   sources:
   - press
   - nvidia
@@ -1995,6 +2616,7 @@ scenes:
     - set: chipcity
       x0: -1600
       x1: 4600
+      day: true
       signs:
       - NO POLITICS IN THE TUBE
       - GPU PARKING ONLY
@@ -2042,6 +2664,45 @@ scenes:
       y: 860
       at: 0.3
       scale: 0.6
+    - kind: person
+      x: 360
+      y: 860
+      pose: mic
+      at: 0.3
+      scale: 0.95
+      hair: 3
+      skin: 1
+      color: '#B39DDB'
+    - kind: person
+      x: 620
+      y: 860
+      pose: camera
+      at: 0.4
+      scale: 0.95
+      hair: 1
+      skin: 0
+      color: '#FFC93C'
+    - kind: person
+      x: 1150
+      y: 860
+      pose: phone
+      at:
+        cue: really believes him
+      scale: 0.95
+      hair: 4
+      skin: 3
+      color: '#F06292'
+      flip: true
+    - kind: person
+      x: 1950
+      y: 860
+      pose: camera
+      at: 0.6
+      scale: 0.95
+      hair: 2
+      skin: 2
+      color: '#4DD0E1'
+      flip: true
   sources:
   - press
   assets:
@@ -2130,6 +2791,41 @@ scenes:
       label: GPU
       color: '#FF9F1C'
       hop: 22
+    - kind: person
+      x: 260
+      y: 860
+      pose: phone
+      at: 0.5
+      scale: 0.95
+      hair: 0
+      skin: 1
+      color: '#A1887F'
+      poses:
+      - - cue: Even a company
+        - stand
+    - kind: person
+      x: 1000
+      y: 860
+      pose: worry
+      at:
+        cue: Neither risk
+      scale: 0.95
+      hair: 3
+      skin: 0
+      color: '#4FB3F6'
+      poses:
+      - - cue: They price stories
+        - shrug
+    - kind: person
+      x: 1780
+      y: 860
+      pose: read
+      at: 0.7
+      scale: 0.95
+      hair: 1
+      skin: 3
+      color: '#FF8A65'
+      flip: true
   sources:
   - px
   - nvidia
