@@ -1,12 +1,15 @@
-# YouTube package: "Why Nvidia Lost $428 Billion in Two Days" (Episode 52)
+# YouTube package: "Nvidia's CEO Admitted an Affair. Then the Stock Lost $428 Billion" (Episode 52)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 12:41.
 
 ## Title options
 
-1. **Why Nvidia Lost $428 Billion in Two Days** (recommended)
-2. **How One Weekend Wiped $428 Billion Off Nvidia**
-3. **Nvidia, a CEO Probe and the Chips Bound for China**
+1. **Nvidia's CEO Admitted an Affair. Then the Stock Lost $428 Billion** (recommended, owner asked for a title that points to the affair, 2026-11-12)
+2. **One Affair, $428 Billion: The Nvidia Scandal Explained**
+3. **Nvidia's CEO, an Affair and an Alleged Spy: The $428 Billion Fallout**
+4. **Why Nvidia Lost $428 Billion in Two Days** (original, neutral)
+
+Basis: Huang's own Nov 8, 2026 memo ("I was unfaithful to my wife"); the spy claim stays "alleged" (press reports only); the drop is our estimate from closing prices. "Then" states order, not sole cause.
 
 ## Description (3179 chars, YouTube limit 5,000)
 

@@ -38,6 +38,39 @@ const Sticker: React.FC<{children: React.ReactNode; shadow?: number}> = ({childr
 /* ------------------------------------------------------------------------------------------------ heroes */
 type HeroFn = (o: any) => React.ReactNode;
 const HEROES: Record<string, HeroFn> = {
+  /** CEO bust (public-figure caricature, owner decision 2026-11-12): a big flat-cartoon head and shoulders recognisable by
+   *  signature traits only. `who`: 'huang' (silver swept hair, black leather jacket over a black tee). `mood`: 'shock' | 'calm'.
+   *  `shadow`: true adds a faceless silhouette behind (a private person, never a likeness). */
+  ceo: (o) => { const hair = o.hairColor || '#C3C8CF', skin = o.skin || '#E6B58C', shock = (o.mood || 'shock') === 'shock';
+    return <g>
+      {o.shadow && <g transform="translate(330 -60) scale(0.82)" opacity={0.92}>
+        <path d="M -260 560 Q -250 250 0 230 Q 250 250 260 560 Z" fill="#14141C" stroke={OL} strokeWidth={10} />
+        <circle cx={0} cy={60} r={170} fill="#14141C" stroke={OL} strokeWidth={10} />
+        <path d="M -175 40 Q -150 -150 20 -130 Q 190 -110 175 80 Q 160 -20 60 -40 Q -60 -60 -175 40 Z" fill="#0A0A10" />
+        <text x={0} y={90} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={150} fill="#FFFFFF" opacity={0.85}>?</text></g>}
+      {/* shoulders: black leather jacket with collar and zip, black tee */}
+      <path d="M -440 600 Q -430 300 -150 250 L 150 250 Q 430 300 440 600 Z" fill="#1B1B1F" stroke={OL} strokeWidth={14} />
+      <path d="M -150 250 L -40 420 L 0 300 L 40 420 L 150 250" fill="#2A2A30" stroke={OL} strokeWidth={10} strokeLinejoin="round" />
+      <path d="M -150 250 L -230 330 L -120 400 Z M 150 250 L 230 330 L 120 400 Z" fill="#26262B" stroke={OL} strokeWidth={10} strokeLinejoin="round" />
+      <path d="M -300 360 Q -260 330 -220 380 M 300 360 Q 260 330 220 380" stroke="#4A4A55" strokeWidth={8} fill="none" />
+      <path d="M -60 250 Q 0 300 60 250 L 50 230 L -50 230 Z" fill="#26262B" stroke={OL} strokeWidth={8} />
+      {/* neck + head */}
+      <rect x={-55} y={150} width={110} height={110} rx={30} fill={skin} stroke={OL} strokeWidth={10} />
+      <ellipse cx={0} cy={0} rx={190} ry={215} fill={skin} stroke={OL} strokeWidth={14} />
+      <ellipse cx={-188} cy={20} rx={30} ry={46} fill={skin} stroke={OL} strokeWidth={10} />
+      <ellipse cx={188} cy={20} rx={30} ry={46} fill={skin} stroke={OL} strokeWidth={10} />
+      {/* silver swept-back hair */}
+      <path d="M -195 -20 Q -215 -210 -40 -235 Q 150 -250 200 -100 Q 205 -40 190 -10 Q 170 -150 40 -165 Q -100 -175 -150 -90 Q -175 -60 -195 -20 Z" fill={hair} stroke={OL} strokeWidth={12} strokeLinejoin="round" />
+      {[-120, -60, 0, 60, 120].map((x, k) => <path key={k} d={`M ${x - 30} -200 Q ${x + 20} -230 ${x + 70} -170`} stroke="#9EA4AD" strokeWidth={8} fill="none" strokeLinecap="round" />)}
+      {/* brows, eyes, nose, mouth */}
+      <path d={shock ? 'M -125 -75 Q -85 -110 -45 -85 M 45 -85 Q 85 -110 125 -75' : 'M -125 -70 Q -85 -85 -45 -72 M 45 -72 Q 85 -85 125 -70'} stroke="#6E737B" strokeWidth={14} fill="none" strokeLinecap="round" />
+      {[-85, 85].map((x) => <g key={x}><ellipse cx={x} cy={-25} rx={shock ? 34 : 28} ry={shock ? 38 : 24} fill="#FFFFFF" stroke={OL} strokeWidth={8} />
+        <circle cx={x + 4} cy={-20} r={shock ? 14 : 12} fill={OL} /></g>)}
+      <path d="M 0 -10 Q -18 60 -10 80 Q 10 90 28 78" stroke={OL} strokeWidth={8} fill="none" strokeLinecap="round" />
+      {shock ? <ellipse cx={0} cy={130} rx={46} ry={40} fill="#6B2E2A" stroke={OL} strokeWidth={8} />
+        : <path d="M -55 120 Q 0 150 55 120" stroke={OL} strokeWidth={10} fill="none" strokeLinecap="round" />}
+      <path d="M -150 40 Q -140 80 -115 95 M 150 40 Q 140 80 115 95" stroke="#D29E78" strokeWidth={6} fill="none" opacity={0.7} />
+    </g>; },
   /** a RAM stick, tilted, with black chips and gold pins; `flames` adds fire behind it */
   ram: (o) => <g>
     {o.flames && [0, 1, 2, 3, 4, 5].map((k) => <path key={k} d={`M ${-420 + k * 170} 40 Q ${-470 + k * 170} -170 ${-380 + k * 170} -330 Q ${-350 + k * 170} -200 ${-300 + k * 170} -260 Q ${-260 + k * 170} -120 ${-250 + k * 170} 40 Z`}
