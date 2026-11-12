@@ -1,0 +1,334 @@
+{
+  "title": "Before You Buy Meta Stock, Watch This (Nov 2026)",
+  "docs_dir": "docs/episodes/byb-meta-2026-11",
+  "video": "output/bybmeta_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why did a booming ad business run out of free cash last quarter?",
+    "surprising_fact": "Meta's free cash flow (its own definition) was -$2.12bn in Q3 2026 while ad revenue grew 26% (Meta)",
+    "subject": "a crashing line",
+    "tone": "strategy",
+    "metaphor": "the capex eats the cash"
+  },
+  "slug": "before-you-buy-meta-2026-11",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "META: \u2212$2.1BN",
+        "FREE CASH"
+      ],
+      "claim_basis": "lenses: Q3 2026 free cash flow \u2212$2.12bn, Meta definition (Q3 release)",
+      "scene": {
+        "palette": {
+          "sky0": "#1A0630",
+          "sky1": "#3B1466",
+          "haze": "#FF4FD8",
+          "key": "#FCE4FF",
+          "accent": "#FFE14D",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "crash",
+          "x": 1500,
+          "y": 600,
+          "s": 0.75
+        },
+        "support": [],
+        "particles": {
+          "n": 70,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "META: \u2212$2.1BN",
+          "x": 90,
+          "y": 522.5,
+          "size": 141.8,
+          "width": 1180.0,
+          "anchor": "start",
+          "color": "#FFE14D"
+        },
+        {
+          "text": "FREE CASH",
+          "x": 96,
+          "y": 660.5,
+          "size": 120,
+          "width": 691.2,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.56 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 412, 1270, 531), (96, 567, 787, 668)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 6.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.060",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": false,
+            "detail": "luma std 27",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-prediction-markets-make-money-off-your-hunches (distance 0.35)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "lenses: Q3 2026 free cash flow \u2212$2.12bn, Meta definition (Q3 release)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.689,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-prediction-markets-make-money-off-your-hunches"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "META: $56BN",
+        "NEW MONEY"
+      ],
+      "claim_basis": "capital: \u2248 $56bn of new capital committed Oct 26-Nov 5, 2026 (our sum of Meta 8-Ks)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0614",
+          "sky1": "#2A1440",
+          "haze": "#3DF5FF",
+          "key": "#E0F7FA",
+          "accent": "#7DFF8A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "coin",
+          "x": 480,
+          "y": 660,
+          "s": 0.6
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E0F7FA"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "META: $56BN",
+          "x": 480.0,
+          "y": 218.5,
+          "size": 108.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "NEW MONEY",
+          "x": 1440.0,
+          "y": 238.2,
+          "size": 131.9,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#7DFF8A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.56 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 134, 860, 225), (1060, 135, 1820, 246)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 10.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.065",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 44",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-stamp-that-could-break-asmls-monopoly (distance 0.39)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "capital: \u2248 $56bn of new capital committed Oct 26-Nov 5, 2026 (our sum of Meta 8-Ks)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.79,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-stamp-that-could-break-asmls-monopoly"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-12T01:07:44Z",
+  "master": "output/before-you-buy-meta-2026-11/thumbnails/master_B.png"
+}
