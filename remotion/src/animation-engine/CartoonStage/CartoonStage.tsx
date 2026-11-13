@@ -2053,8 +2053,202 @@ const SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={600} fill="#7BCB6B" />
     </g>;
   },
+  /** FIVE-AND-DIME SQUARE (Ep 55, original design): a sunny 1950s small-town square. A row of two-storey brick
+   *  storefronts with cornices and striped awnings, a domed county building with a clock behind the trees, lamp posts,
+   *  swaying elms, rounded 1950s cars rolling along the street. The hero shop (`storeX` 0..1) is a variety store with a
+   *  generic sign (`storeSign`, default "5 & 10 VARIETY"), a window full of goods and a blinking OPEN card. `discount`
+   *  (a time): a long low 1960s discount store slides up behind the row ("bigger store"). No real shop names or logos. */
+  fivedime: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, sx = z.x0 + w * ((z as any).storeX ?? 0.5), sign = (z as any).storeSign || '5 & 10 VARIETY';
+    const disc = (z as any).discount !== undefined ? E.outBack(win(t, (z as any).discount, 1.4)) : 0;
+    const bricks = ['#B5523B', '#C9784A', '#9E4B3C', '#D69A5E', '#A85C45'], awn = [['#E53935', '#FFFFFF'], ['#2E7D32', '#F1F8E9'], ['#1E5AA8', '#FFFFFF'], ['#F2A900', '#FFF8E1']];
+    const shopW = 300, n = Math.ceil(w / shopW) + 1;
+    return <g>
+      {/* distant county building with a clock dome */}
+      <g transform={`translate(${z.x0 + w * 0.5 + 640} ${f - 300})`}>
+        <rect x={-240} y={-260} width={480} height={260} fill={night ? '#7A6E64' : '#E9DCC4'} stroke={OL} strokeWidth={5} />
+        {[-180, -90, 0, 90, 180].map((dx) => <rect key={dx} x={dx - 20} y={-220} width={40} height={90} rx={18} fill={night ? '#FFE08A' : '#BFE3F5'} stroke={OL} strokeWidth={3} />)}
+        <path d="M -260 -260 L 0 -340 L 260 -260 Z" fill="#B97A55" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+        <rect x={-60} y={-430} width={120} height={100} fill={night ? '#7A6E64' : '#E9DCC4'} stroke={OL} strokeWidth={5} />
+        <circle cx={0} cy={-380} r={34} fill="#FFFDF2" stroke={OL} strokeWidth={4} />
+        <path d={`M 0 -380 L ${22 * Math.sin(t * 0.3)} ${-380 - 22 * Math.cos(t * 0.3)} M 0 -380 L ${28 * Math.sin(t * 3)} ${-380 - 28 * Math.cos(t * 3)}`} stroke={OL} strokeWidth={4} strokeLinecap="round" />
+        <path d="M -70 -430 Q 0 -540 70 -430 Z" fill="#7FB3A0" stroke={OL} strokeWidth={5} />
+        <path d="M 0 -515 L 0 -560" stroke={OL} strokeWidth={4} /><path d={`M 0 -560 L ${34 + 4 * Math.sin(t * 3)} -550 L 0 -540 Z`} fill="#E53935" stroke={OL} strokeWidth={3} />
+      </g>
+      {/* elms behind the row */}
+      {Array.from({length: Math.ceil(w / 420)}, (_, k) => { const tx = z.x0 + 200 + k * 420, sw = 3 * Math.sin(t * 1.3 + k);
+        return <g key={'el' + k} transform={`translate(${tx} ${f - 300}) rotate(${sw})`}>
+          <rect x={-10} y={-40} width={20} height={60} fill={K.wood2} stroke={OL} strokeWidth={3} />
+          <circle cx={-40} cy={-90} r={70} fill="#5DAA5A" stroke={OL} strokeWidth={4} /><circle cx={40} cy={-100} r={76} fill="#6CBF66" stroke={OL} strokeWidth={4} /><circle cx={0} cy={-150} r={70} fill="#7BD389" stroke={OL} strokeWidth={4} /></g>; })}
+      {/* the 1962 discount store rising behind */}
+      {disc > 0 && <g transform={`translate(${sx} ${f - 260 + (1 - disc) * 300})`}>
+        <rect x={-760} y={-200} width={1520} height={200} fill="#F4F1E6" stroke={OL} strokeWidth={6} />
+        <rect x={-760} y={-220} width={1520} height={30} fill="#1E5AA8" stroke={OL} strokeWidth={5} />
+        <rect x={-260} y={-300} width={520} height={86} rx={10} fill="#FFFFFF" stroke={OL} strokeWidth={5} />
+        <T x={0} y={-244} s={44} c="#1E5AA8">DISCOUNT STORE</T>
+        {Array.from({length: 10}, (_, k) => <rect key={k} x={-720 + k * 148} y={-150} width={110} height={90} fill="#BFE3F5" stroke={OL} strokeWidth={3} />)}
+      </g>}
+      {/* storefront row */}
+      {Array.from({length: n}, (_, k) => { const x = z.x0 + k * shopW; const hero = Math.abs(x + shopW / 2 - sx) < shopW / 2;
+        const h = hero ? 330 : 280 + 50 * rnd(k + 4), c = bricks[k % bricks.length], [a1, a2] = hero ? ['#E53935', '#FFFFFF'] : awn[k % 4];
+        return <g key={'sf' + k}>
+          <rect x={x} y={f - h} width={shopW} height={h} fill={hero ? '#C0473A' : c} stroke={OL} strokeWidth={4} />
+          {Array.from({length: 6}, (_, r) => <path key={r} d={`M ${x} ${f - h + 30 + r * 22} L ${x + shopW} ${f - h + 30 + r * 22}`} stroke={OL} strokeWidth={1.5} opacity={0.12} />)}
+          <rect x={x - 6} y={f - h - 18} width={shopW + 12} height={22} fill={night ? '#5C4A3E' : '#E8D9B8'} stroke={OL} strokeWidth={4} />
+          {[0, 1, 2].map((q) => <rect key={q} x={x + 36 + q * 84} y={f - h + 34} width={54} height={70} rx={4} fill={night ? '#FFE08A' : '#CFEFFF'} stroke={OL} strokeWidth={3} />)}
+          {/* awning: stripes, gently flapping */}
+          <g transform={`translate(${x + 10} ${f - 200})`}>
+            {Array.from({length: 7}, (_, q) => <path key={q} d={`M ${q * 40} 0 L ${q * 40 + 40} 0 L ${q * 40 + 46} ${54 + 3 * Math.sin(t * 3 + q + k)} L ${q * 40 + 6} ${54 + 3 * Math.sin(t * 3 + q + k)} Z`} fill={q % 2 ? a2 : a1} stroke={OL} strokeWidth={3} strokeLinejoin="round" />)}
+          </g>
+          <rect x={x + 20} y={f - 140} width={shopW - 40} height={140} fill={night ? '#3A3550' : '#A7D8F0'} stroke={OL} strokeWidth={4} />
+          <rect x={x + shopW / 2 - 28} y={f - 140} width={56} height={140} fill={K.wood2} stroke={OL} strokeWidth={4} />
+          {!hero && <g><rect x={x + 30} y={f - 252} width={shopW - 60} height={40} rx={6} fill="#FFF5E1" stroke={OL} strokeWidth={3} />
+            <T x={x + shopW / 2} y={f - 222} s={24} c={OL}>{['HARDWARE', 'BARBER', 'DRUGSTORE', 'DINER', 'SHOES', 'BANK'][k % 6]}</T></g>}
+          {hero && <g>
+            <rect x={x + 6} y={f - h + 120} width={shopW - 12} height={64} rx={8} fill="#FFF8E1" stroke={OL} strokeWidth={5} />
+            <T x={x + shopW / 2} y={f - h + 166} s={sign.length > 12 ? 32 : 38} c="#C62828">{sign}</T>
+            {/* window display: pans, toys, spools */}
+            {Array.from({length: 6}, (_, q) => { const gx = x + 34 + (q % 3) * 28 + (q > 2 ? 150 : 0), gy = f - 40 - Math.floor((q % 3) / 2) * 30;
+              return <g key={'g' + q} transform={`translate(${gx} ${gy + 2 * Math.sin(t * 2 + q)})`}>
+                {q % 3 === 0 ? <circle r={13} fill="#F2A900" stroke={OL} strokeWidth={3} /> : q % 3 === 1 ? <rect x={-12} y={-12} width={24} height={24} fill="#4FB3F6" stroke={OL} strokeWidth={3} />
+                  : <path d="M -14 10 L 0 -14 L 14 10 Z" fill="#E53935" stroke={OL} strokeWidth={3} strokeLinejoin="round" />}</g>; })}
+            <g transform={`translate(${x + shopW / 2 + 60} ${f - 110})`}><rect x={-30} y={-16} width={60} height={30} rx={5} fill={Math.sin(t * 3) > -0.3 ? '#FFEB3B' : '#FFF8E1'} stroke={OL} strokeWidth={3} /><T x={0} y={6} s={16}>OPEN</T></g>
+          </g>}
+        </g>; })}
+      {/* sidewalk, lamp posts, street, cars */}
+      <rect x={z.x0} y={f} width={w} height={46} fill={night ? '#8A8478' : '#E3DCCB'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 600)}, (_, k) => { const lx = z.x0 + 150 + k * 600;
+        return <g key={'lp' + k}><rect x={lx - 6} y={f - 240} width={12} height={250} fill="#2E3440" stroke={OL} strokeWidth={3} />
+          <circle cx={lx} cy={f - 250} r={20} fill={night ? '#FFE08A' : '#FFFDF2'} stroke={OL} strokeWidth={4} /></g>; })}
+      <rect x={z.x0} y={f + 46} width={w} height={600} fill={night ? '#4A4E5C' : '#6E7484'} />
+      {Array.from({length: Math.ceil(w / 160)}, (_, k) => <rect key={'dl' + k} x={z.x0 + k * 160} y={f + 130} width={80} height={8} fill="#F2E6B8" opacity={0.7} />)}
+      {[0, 1, 2].map((q) => { const dir = q === 1 ? -1 : 1, sp = 110 + q * 30, span = w + 800;
+        const cxp = dir > 0 ? z.x0 - 400 + ((t * sp + q * 900) % span) : z.x1 + 400 - ((t * sp + q * 700) % span), cy = f + (q === 1 ? 96 : 176);
+        const body = ['#3FA7A0', '#E57373', '#F2C14E'][q];
+        return <g key={'car' + q} transform={`translate(${cxp} ${cy}) scale(${dir} 1)`}>
+          <path d="M -120 0 L -120 -40 Q -110 -60 -70 -62 L -40 -100 Q 0 -112 40 -100 L 80 -62 Q 120 -58 124 -36 L 124 0 Z" fill={body} stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+          <path d="M -30 -92 L -54 -62 L 14 -62 L 14 -94 Z M 24 -94 L 24 -62 L 70 -62 L 44 -92 Z" fill="#CFEFFF" stroke={OL} strokeWidth={3} />
+          <rect x={-128} y={-14} width={26} height={10} rx={4} fill="#ECEFF1" stroke={OL} strokeWidth={2} /><rect x={106} y={-14} width={26} height={10} rx={4} fill="#ECEFF1" stroke={OL} strokeWidth={2} />
+          {[-70, 72].map((wx) => <g key={wx} transform={`translate(${wx} 2) rotate(${t * 300})`}><circle r={22} fill="#263238" stroke={OL} strokeWidth={4} /><circle r={9} fill="#ECEFF1" /><path d="M -9 0 L 9 0" stroke={OL} strokeWidth={2} /></g>)}
+        </g>; })}
+    </g>;
+  },
+  /** TRUST ROOM (Ep 55, original design): the family vault, a daylit wood-panelled room. High windows throw moving
+   *  light shafts, green banker's lamps glow on a long table, landscape paintings (no portraits) hang on the panels, and
+   *  a giant round vault door (`vaultX` 0..1) stands open from `openAt` onto shelves of glowing share bundles. The
+   *  shelves empty a little from `thinAt` (the trust selling). `night`: evening lamps. */
+  trustroom: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, vx = z.x0 + w * ((z as any).vaultX ?? 0.5), op = (z as any).openAt !== undefined ? E.inOut(win(t, (z as any).openAt, 1.6)) : 1;
+    const thin = (z as any).thinAt !== undefined ? clamp(win(t, (z as any).thinAt, 3)) : 0;
+    const wall = night ? '#3A2E2A' : '#E8D9BF', panel = night ? '#4E3527' : '#9A6A40';
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={wall} />
+      {Array.from({length: Math.ceil(w / 560) + 1}, (_, k) => { const x = z.x0 + 60 + k * 560; if (Math.abs(x + 90 - vx) < 420) return null;
+        return <g key={'tw' + k}>
+          <path d={`M ${x} ${f - 560} L ${x} ${f - 980} Q ${x + 90} ${f - 1060} ${x + 180} ${f - 980} L ${x + 180} ${f - 560} Z`} fill={night ? '#22305A' : '#D6F0FF'} stroke={OL} strokeWidth={6} />
+          <path d={`M ${x + 90} ${f - 1030} L ${x + 90} ${f - 560} M ${x} ${f - 760} L ${x + 180} ${f - 760}`} stroke={OL} strokeWidth={4} />
+          {!night && <path d={`M ${x} ${f - 960} L ${x + 180} ${f - 960} L ${x + 420 + 24 * Math.sin(t * 0.5 + k)} ${f} L ${x + 120 + 24 * Math.sin(t * 0.5 + k)} ${f} Z`} fill="#FFF3C4" opacity={0.2 + 0.05 * Math.sin(t + k)} />}
+          {/* landscape painting under the window */}
+          <g transform={`translate(${x + 90} ${f - 420})`}><rect x={-110} y={-70} width={220} height={140} fill="#C9A24A" stroke={OL} strokeWidth={5} />
+            <rect x={-94} y={-54} width={188} height={108} fill="#BFE3F5" /><path d={`M -94 30 Q -40 ${-10 + 4 * Math.sin(t + k)} 10 20 Q 50 0 94 24 L 94 54 L -94 54 Z`} fill="#7BB86F" /><circle cx={50} cy={-24} r={14} fill="#FFE082" /></g>
+        </g>; })}
+      <rect x={z.x0} y={f - 300} width={w} height={300} fill={panel} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <rect key={'pp' + k} x={z.x0 + 20 + k * 200} y={f - 270} width={160} height={230} rx={8} fill="none" stroke={night ? '#6B4C3A' : '#7A4E2A'} strokeWidth={5} />)}
+      <rect x={z.x0} y={f - 314} width={w} height={22} fill={night ? '#6D5F45' : '#C9A26A'} stroke={OL} strokeWidth={3} />
+      {/* the vault: frame, shelves of share bundles, swinging door */}
+      <g transform={`translate(${vx} ${f - 430})`}>
+        <circle r={330} fill="#7D8794" stroke={OL} strokeWidth={8} />
+        <circle r={290} fill="#2B2F38" stroke={OL} strokeWidth={6} />
+        {[-150, -40, 70, 180].map((sy, r) => <g key={'sh' + r}>
+          <rect x={-250} y={sy + 50} width={500} height={14} fill="#8D6E63" stroke={OL} strokeWidth={3} />
+          {Array.from({length: 8}, (_, q) => { const gone = thin > 0 && (q + r * 3) % 5 === 0 && thin > ((q * 7 + r * 3) % 10) / 10;
+            return gone ? null : <g key={q} transform={`translate(${-220 + q * 62} ${sy + 50})`}>
+              <rect x={-24} y={-62} width={48} height={62} rx={4} fill={(q + r) % 3 === 0 ? '#FFE9A8' : '#F6F1DF'} stroke={OL} strokeWidth={3} />
+              <rect x={-24} y={-38} width={48} height={12} fill="#2E9E5B" opacity={0.85} /></g>; })}
+        </g>)}
+        <circle r={290} fill="#FFE9A8" opacity={0.08 + 0.05 * Math.sin(t * 2)} />
+        <g transform={`translate(${290 * op * 0.95} 0) scale(${1 - 0.82 * op} 1)`}>
+          <circle r={300} fill="#A9B3BF" stroke={OL} strokeWidth={8} />
+          <circle r={220} fill="none" stroke="#7D8794" strokeWidth={10} />
+          <g transform={`rotate(${t * 20 + op * 200})`}>{[0, 60, 120].map((ang) => <path key={ang} transform={`rotate(${ang})`} d="M -150 0 L 150 0" stroke={OL} strokeWidth={14} strokeLinecap="round" />)}
+            <circle r={44} fill="#D4AF37" stroke={OL} strokeWidth={6} /></g>
+          {Array.from({length: 12}, (_, q) => <circle key={q} cx={262 * Math.cos(q * Math.PI / 6)} cy={262 * Math.sin(q * Math.PI / 6)} r={10} fill="#D4AF37" stroke={OL} strokeWidth={3} />)}
+        </g>
+      </g>
+      {/* long table with banker's lamps */}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#4A3426' : '#8C5A34'} />
+      {Array.from({length: Math.ceil(w / 140)}, (_, k) => <rect key={'fb' + k} x={z.x0 + k * 140} y={f} width={6} height={600} fill={OL} opacity={0.12} />)}
+      {Array.from({length: Math.ceil(w / 900)}, (_, k) => { const lx = z.x0 + 300 + k * 900; if (Math.abs(lx - vx) < 380) return null;
+        return <g key={'tb' + k}>
+          <rect x={lx - 260} y={f - 96} width={520} height={30} rx={8} fill="#6D4122" stroke={OL} strokeWidth={5} />
+          <rect x={lx - 240} y={f - 66} width={24} height={66} fill="#5A3519" stroke={OL} strokeWidth={3} /><rect x={lx + 216} y={f - 66} width={24} height={66} fill="#5A3519" stroke={OL} strokeWidth={3} />
+          <g transform={`translate(${lx - 120} ${f - 96})`}><rect x={-4} y={-60} width={8} height={60} fill="#C9A24A" stroke={OL} strokeWidth={2} />
+            <path d="M -50 -60 Q 0 -96 50 -60 Z" fill="#2E7D4F" stroke={OL} strokeWidth={4} /><ellipse cx={0} cy={-56} rx={46} ry={8} fill="#FFF3C4" opacity={0.7 + 0.3 * Math.sin(t * 4 + k)} />
+            <path d="M -60 -56 L -120 96 L 120 96 L 60 -56 Z" fill="#FFF3C4" opacity={0.12} /></g>
+          <g transform={`translate(${lx + 80} ${f - 104}) rotate(-4)`}><rect x={-60} y={-12} width={120} height={14} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><rect x={-50} y={-22} width={100} height={12} fill="#F6F1DF" stroke={OL} strokeWidth={2} /></g>
+        </g>; })}
+    </g>;
+  },
+  /** DC CITY (Ep 55, original design): a giant distribution-centre city at midday. Long warehouses with blue roof
+   *  stripes, spinning roof fans and rows of dock doors with trailers backed in; a conveyor bridge carries boxes between
+   *  halls; generic semi-trucks (no markings) roll along a service road in both directions; a water tower; at `storeX`
+   *  (0..1) a generic big-box store with a car park where little cars come and go. `night`: lit docks. */
+  dccity: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, stx = z.x0 + w * ((z as any).storeX ?? 0.82);
+    return <g>
+      <path d={`M ${z.x0} ${f - 280} ${Array.from({length: Math.ceil(w / 300) + 1}, (_, k) => `Q ${z.x0 + k * 300 + 150} ${f - 380 - 60 * rnd(k + 2)} ${z.x0 + k * 300 + 300} ${f - 290}`).join(' ')} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill={night ? '#3E5A6B' : '#A8D5A2'} stroke={OL} strokeWidth={4} />
+      {/* water tower */}
+      <g transform={`translate(${z.x0 + w * 0.08} ${f - 260})`}><path d="M -50 0 L -30 -220 M 50 0 L 30 -220 M -40 -80 L 40 -150 M 40 -80 L -40 -150" stroke={OL} strokeWidth={6} />
+        <ellipse cx={0} cy={-270} rx={90} ry={70} fill="#E3EAF2" stroke={OL} strokeWidth={6} /><path d="M -90 -270 Q 0 -240 90 -270" fill="none" stroke="#1E5AA8" strokeWidth={8} /></g>
+      {/* warehouses */}
+      {[0.12, 0.42].map((p, k) => { const x = z.x0 + w * p, W2 = w * 0.26;
+        return <g key={'wh' + k}>
+          <rect x={x} y={f - 300} width={W2} height={300} fill={night ? '#B8C3CF' : '#F1F4F7'} stroke={OL} strokeWidth={6} />
+          <rect x={x} y={f - 316} width={W2} height={26} fill="#1E5AA8" stroke={OL} strokeWidth={5} />
+          {Array.from({length: Math.floor(W2 / 180)}, (_, q) => <g key={'fan' + q} transform={`translate(${x + 90 + q * 180} ${f - 330})`}>
+            <rect x={-28} y={-24} width={56} height={24} fill="#90A4AE" stroke={OL} strokeWidth={3} />
+            <g transform={`translate(0 -12) scale(1 0.35) rotate(${t * 240 + q * 40})`}><path d="M -22 0 L 22 0 M 0 -22 L 0 22" stroke={OL} strokeWidth={6} /></g></g>)}
+          {Array.from({length: Math.floor(W2 / 110)}, (_, q) => { const dx = x + 30 + q * 110, busy = rnd(q + k * 13) > 0.35, open = 0.5 + 0.5 * Math.sin(t * 0.8 + q * 1.7 + k);
+            return <g key={'dk' + q}>
+              <rect x={dx} y={f - 150} width={80} height={150} fill={night ? '#FFE08A' : '#5B6577'} stroke={OL} strokeWidth={3} />
+              <rect x={dx} y={f - 150} width={80} height={150 * (busy ? 0.3 + 0.6 * open : 1)} fill="#CFD8DC" stroke={OL} strokeWidth={3} />
+              {Array.from({length: 4}, (_, r) => <path key={r} d={`M ${dx} ${f - 150 + r * 34} L ${dx + 80} ${f - 150 + r * 34}`} stroke={OL} strokeWidth={1.5} opacity={0.4} />)}
+            </g>; })}
+          <g transform={`translate(${x + W2 * 0.1} ${f - 360})`}><rect x={0} y={-50} width={260} height={50} rx={8} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><T x={130} y={-14} s={28} c="#1E5AA8">{k ? 'FULFILLMENT' : 'DISTRIBUTION'}</T></g>
+        </g>; })}
+      {/* conveyor bridge with moving boxes */}
+      <g transform={`translate(${z.x0 + w * 0.38} ${f - 230})`}>
+        <rect x={-w * 0.02} y={0} width={w * 0.06} height={30} fill="#B0BEC5" stroke={OL} strokeWidth={4} />
+        {Array.from({length: 5}, (_, q) => { const bx = -w * 0.02 + ((t * 70 + q * w * 0.012) % (w * 0.06));
+          return <rect key={q} x={bx} y={-30} width={34} height={30} rx={3} fill="#D7A86E" stroke={OL} strokeWidth={3} />; })}
+      </g>
+      {/* big-box store (generic) with car park */}
+      <g transform={`translate(${stx} ${f})`}>
+        <rect x={-380} y={-260} width={760} height={260} fill="#F4F1E6" stroke={OL} strokeWidth={6} />
+        <rect x={-380} y={-280} width={760} height={30} fill="#1E5AA8" stroke={OL} strokeWidth={5} />
+        <rect x={-150} y={-250} width={300} height={70} rx={10} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><T x={0} y={-202} s={38} c="#1E5AA8">STORE</T>
+        <rect x={-90} y={-140} width={180} height={140} fill="#BFE3F5" stroke={OL} strokeWidth={4} /><path d={`M 0 -140 L 0 0`} stroke={OL} strokeWidth={4} />
+        {[-300, -200, 200, 300].map((dx) => <rect key={dx} x={dx - 40} y={-150} width={80} height={70} fill="#BFE3F5" stroke={OL} strokeWidth={3} />)}
+      </g>
+      {/* ground, service road, trucks */}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#3F4552' : '#8A93A3'} />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <rect key={'rd' + k} x={z.x0 + k * 200} y={f + 120} width={100} height={8} fill="#FFFFFF" opacity={0.7} />)}
+      {Array.from({length: 10}, (_, k) => { const px = stx - 360 + k * 80; return <path key={'pk' + k} d={`M ${px} ${f + 20} L ${px} ${f + 70}`} stroke="#FFFFFF" strokeWidth={4} opacity={0.8} />; })}
+      {[0, 1, 2].map((q) => { const cyc = ((t * 0.15 + q / 3) % 1), px = stx - 340 + q * 120, park = cyc < 0.5 ? E.out(cyc * 2) : 1 - E.in((cyc - 0.5) * 2);
+        return <g key={'pc' + q} transform={`translate(${px} ${f + 66 - 40 * park})`}><rect x={-30} y={-26} width={60} height={26} rx={8} fill={['#E57373', '#4FB3F6', '#F2C14E'][q]} stroke={OL} strokeWidth={3} /></g>; })}
+      {[0, 1, 2, 3].map((q) => { const dir = q % 2 ? -1 : 1, sp = 160 + q * 25, span = w + 1200;
+        const tx = dir > 0 ? z.x0 - 600 + ((t * sp + q * 1300) % span) : z.x1 + 600 - ((t * sp + q * 900) % span), ty = f + (dir > 0 ? 200 : 100);
+        return <g key={'tr' + q} transform={`translate(${tx} ${ty}) scale(${dir * 0.9} 0.9)`}>
+          <rect x={-330} y={-130} width={400} height={120} rx={6} fill="#F7F9FB" stroke={OL} strokeWidth={5} />
+          <path d="M -330 -60 L 70 -60" stroke="#1E5AA8" strokeWidth={8} opacity={0.6} />
+          <path d={`M 80 -10 L 80 -110 L 150 -110 Q 180 -108 190 -70 L 196 -10 Z`} fill={['#1E5AA8', '#E53935', '#2E9E5B', '#F2A900'][q]} stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+          <path d="M 150 -100 L 178 -100 Q 186 -90 188 -70 L 150 -70 Z" fill="#CFEFFF" stroke={OL} strokeWidth={3} />
+          {[-290, -230, 110, 170].map((wx) => <g key={wx} transform={`translate(${wx} 0) rotate(${t * 360 * dir})`}><circle r={22} fill="#263238" stroke={OL} strokeWidth={4} /><path d="M -10 0 L 10 0" stroke="#90A4AE" strokeWidth={3} /></g>)}
+        </g>; })}
+    </g>;
+  },
 };
-const INDOOR = new Set(['parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set(['trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -4548,6 +4742,12 @@ const CARI: Record<string, any> = {
   jassy: {hair: 'bald', hairColor: '#D9A57E', jacket: '#2E3440', shirt: '#E9EEF3', tie: null, skin: '#E3AE86', glasses: false},
   pichai: {hair: 'side', hairColor: '#2A2624', jacket: '#2B3A55', shirt: '#D6E6F5', tie: null, skin: '#B98458', glasses: false},
   musk: {hair: 'side', hairColor: '#2B2420', jacket: '#1C1C1E', shirt: '#1C1C1E', tie: null, skin: '#EBC09C', glasses: false},
+  // Ep 55 (Walmart): named public figures only, signature traits (cap, hair colour, clothes), never likeness-traced.
+  sam: {hair: 'side', hairColor: '#D9DCE1', jacket: '#4F7BA8', shirt: '#FFFFFF', tie: null, cap: '#1F4E8C', skin: '#EDC4A0', glasses: false},
+  rob: {hair: 'side', hairColor: '#ECEDEF', jacket: '#26344F', shirt: '#E9EEF3', tie: '#7A1F2B', skin: '#EDC4A0', glasses: false},
+  penner: {hair: 'side', hairColor: '#5A4632', jacket: '#1F2A44', shirt: '#DCE8F5', tie: null, skin: '#EBC09C', glasses: false},
+  steuart: {hair: 'swept', hairColor: '#6B4E33', jacket: '#3B4A5E', shirt: '#FFFFFF', tie: null, skin: '#EBC09C', glasses: false},
+  furner: {hair: 'side', hairColor: '#4A3B2E', jacket: '#2E3440', shirt: '#E9EEF3', tie: null, skin: '#EBC09C', glasses: false},
   trump: {hair: 'swoop', hairColor: '#F2C94C', jacket: '#1F2A44', shirt: '#F4F7FB', tie: '#D32F2F', longTie: true, skin: '#F0BE96', glasses: false},
 };
 const caricature: ItemFn = (a, {t, f}, i) => {
@@ -4583,6 +4783,9 @@ const caricature: ItemFn = (a, {t, f}, i) => {
     {!sil && <g>
       <ellipse cx={-54} cy={-280} rx={9} ry={14} fill={skin} stroke={OL} strokeWidth={3} /><ellipse cx={54} cy={-280} rx={9} ry={14} fill={skin} stroke={OL} strokeWidth={3} />
       <path d={hairPath[tr.hair || 'side'] || hairPath.side} fill={tr.hairColor || '#3E2723'} stroke={OL} strokeWidth={3.5} strokeLinejoin="round" />
+      {tr.cap && <g><path d="M -58 -292 Q -60 -356 0 -358 Q 60 -356 58 -292 Z" fill={tr.cap} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+        <path d="M -40 -296 Q 0 -280 60 -294 Q 90 -296 96 -286 Q 60 -270 0 -278 Q -30 -280 -40 -296 Z" fill={tr.cap} stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+        <path d="M 0 -358 L 0 -300" stroke={OL} strokeWidth={2} opacity={0.35} /><circle cx={0} cy={-360} r={6} fill={tr.cap} stroke={OL} strokeWidth={3} /></g>}
       {tr.glasses && <g><rect x={-38} y={-294} width={30} height={20} rx={6} fill="none" stroke={OL} strokeWidth={3} /><rect x={8} y={-294} width={30} height={20} rx={6} fill="none" stroke={OL} strokeWidth={3} /><path d="M -8 -286 L 8 -286" stroke={OL} strokeWidth={3} /></g>}
       <circle cx={-20} cy={-283} r={5} fill={OL} /><circle cx={22} cy={-283} r={5} fill={OL} />
       <path d={pose === 'worry' ? 'M -32 -302 L -10 -298 M 32 -302 L 10 -298' : 'M -32 -300 L -10 -303 M 32 -300 L 10 -303'} stroke={OL} strokeWidth={4} strokeLinecap="round" />
@@ -4922,9 +5125,79 @@ const cashfalls: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** PIE (Ep 55): an animated pie chart. `slices` [{v, label, color, at}] sweep in one by one on their cues; `r` radius;
+ *  `title` above; `popAt` [index, time]: that slice slides out of the pie. Values are shares of `total` (default 100). */
+const pie: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 460), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5), r = a.r ?? 220;
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const sl: any[] = a.slices || [], tot = a.total ?? sl.reduce((q, v) => q + (v.v ?? 0), 0);
+  let a0 = -Math.PI / 2;
+  const out: React.ReactNode[] = [];
+  sl.forEach((p, k) => {
+    const da = ((p.v ?? 0) / tot) * Math.PI * 2, u = E.inOut(win(t, p.at ?? 0, 0.7));
+    if (u > 0) {
+      const a1 = a0 + da * u, mid = a0 + da / 2, po = Array.isArray(a.popAt) && a.popAt[0] === k ? 34 * E.outBack(win(t, a.popAt[1], 0.5)) : 0;
+      const ox = Math.cos(mid) * po, oy = Math.sin(mid) * po, big = da * u > Math.PI ? 1 : 0;
+      out.push(<g key={k} transform={`translate(${ox} ${oy})`}>
+        <path d={`M 0 0 L ${r * Math.cos(a0)} ${r * Math.sin(a0)} A ${r} ${r} 0 ${big} 1 ${r * Math.cos(a1)} ${r * Math.sin(a1)} Z`} fill={col(p.color, K.blue)} stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+        {u > 0.9 && p.label && <g transform={`translate(${Math.cos(mid) * r * 0.62} ${Math.sin(mid) * r * 0.62}) scale(${E.outBack(win(t, (p.at ?? 0) + 0.5, 0.4))})`}>
+          {String(p.label).split('\n').map((ln: string, q: number) => <text key={q} x={0} y={q * 30 + 8 - (String(p.label).split('\n').length - 1) * 15} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={p.size ?? 26} fill={K.white} stroke={OL} strokeWidth={4} paintOrder="stroke">{ln}</text>)}</g>}
+      </g>);
+    }
+    a0 += da;
+  });
+  return <g key={'pie' + i} transform={`translate(${x} ${y}) scale(${s}) rotate(${Math.sin(t * 0.8 + i) * 1.5})`}>
+    <ellipse cx={8} cy={r + 30} rx={r * 0.9} ry={20} fill="#000" opacity={0.15} />
+    <circle r={r + 6} fill="#FFFFFF" opacity={0.25} />
+    {out}
+    {a.title && <g><rect x={-Math.max(160, a.title.length * 10 + 30)} y={-r - 92} width={Math.max(320, a.title.length * 20 + 60)} height={52} rx={14} fill={K.white} stroke={OL} strokeWidth={4} /><T x={0} y={-r - 56} s={28}>{a.title}</T></g>}
+  </g>;
+};
+
+/** BALLOTS (Ep 55): folded voting slips with a check mark that fly in arcs from `from` to `to` (like `coins`), e.g. the
+ *  trust's votes travelling to Walton Enterprises through the proxy. `rate` per second, `until` stops new ones. */
+const ballots: ItemFn = (a, {t}, i) => {
+  const at = a.at ?? 0, until = a.until ?? 1e9, rate = a.rate ?? 4, fr: [number, number] = a.from ?? [0, 0], to: [number, number] = a.to ?? [400, 0];
+  if (t < at) return null;
+  const n = Math.ceil((Math.min(t, until) - at) * rate), out: React.ReactNode[] = [];
+  for (let k = Math.max(0, n - 14); k < n; k++) {
+    const t0 = at + k / rate, u = win(t, t0, 1.5);
+    if (u >= 1 || u <= 0) continue;
+    const px = lerp(fr[0], to[0], u), py = lerp(fr[1], to[1], u) - Math.sin(u * Math.PI) * (a.arc ?? 140);
+    out.push(<g key={k} transform={`translate(${px} ${py}) rotate(${-14 + 28 * Math.sin(t * 5 + k)}) scale(${a.size ?? 1})`}>
+      <rect x={-30} y={-22} width={60} height={44} rx={4} fill="#FFFFFF" stroke={OL} strokeWidth={3} />
+      <path d="M -16 0 L -4 12 L 18 -12" fill="none" stroke={col(a.color, K.green)} strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" /></g>);
+  }
+  return <g key={'bl' + i}>{out}</g>;
+};
+
+/** SAPLING (Ep 55): the 1953 gift as a seed that grows into a giant tree. Origin at the roots. From `growAt` it grows
+ *  from a sprout (scale 0.18) to a full oak over `dur` seconds; golden share-leaves glint in the crown. `tagSmall`
+ *  shows by the sprout, `tagBig` by the grown tree (from `bigAt`). */
+const sapling: ItemFn = (a, {t, f}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s0 = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s0 <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const g = a.growAt !== undefined ? E.inOut(win(t, a.growAt, a.dur ?? 3)) : 0, sc = 0.18 + 0.82 * g, sw = Math.sin(t * 1.4 + i) * (2 + 3 * g);
+  const big = a.bigAt !== undefined ? t >= a.bigAt : g > 0.95;
+  return <g key={'sp' + i} transform={`translate(${x} ${y}) scale(${s0})`}>
+    <ellipse cx={0} cy={6} rx={140 * sc + 40} ry={16} fill="#6D4C41" opacity={0.5} />
+    <g transform={`scale(${sc}) rotate(${sw})`}>
+      <path d="M -40 0 Q -30 -200 -60 -380 L 60 -380 Q 30 -200 40 0 Z" fill="#8A5428" stroke={OL} strokeWidth={8} strokeLinejoin="round" />
+      <path d="M -40 -300 Q -160 -360 -220 -440 M 40 -320 Q 170 -380 230 -460" stroke="#8A5428" strokeWidth={34} strokeLinecap="round" fill="none" />
+      {[[-230, -520, 170], [230, -540, 170], [0, -640, 220], [-120, -760, 160], [130, -770, 160]].map(([cx, cy, r], k) =>
+        <circle key={k} cx={cx} cy={cy} r={r} fill={['#5DAA5A', '#6CBF66', '#7BD389', '#6CBF66', '#5DAA5A'][k]} stroke={OL} strokeWidth={8} />)}
+      {g > 0.5 && Array.from({length: 14}, (_, k) => { const lx = -260 + rnd(k + i) * 520, ly = -480 - rnd(k + 7) * 360, gl = 0.6 + 0.4 * Math.sin(t * 4 + k);
+        return <g key={'lf' + k} transform={`translate(${lx} ${ly}) scale(${E.outBack(win(t, (a.growAt ?? 0) + 1.6 + k * 0.08, 0.4))})`}>
+          <rect x={-26} y={-18} width={52} height={36} rx={6} fill="#FFD54F" stroke={OL} strokeWidth={5} opacity={gl} /><T x={0} y={10} s={26}>$</T></g>; })}
+    </g>
+    {a.tagSmall && !big && <g transform="translate(0 70)"><rect x={-Math.max(120, a.tagSmall.length * 9.5)} y={-26} width={Math.max(240, a.tagSmall.length * 19)} height={48} rx={12} fill="#FFF8E1" stroke={OL} strokeWidth={4} /><T x={0} y={8} s={26}>{a.tagSmall}</T></g>}
+    {a.tagBig && big && <g transform={`translate(0 70) scale(${E.outBack(win(t, a.bigAt ?? 0, 0.4))})`}><rect x={-Math.max(140, a.tagBig.length * 10)} y={-26} width={Math.max(280, a.tagBig.length * 20)} height={48} rx={12} fill="#FFD54F" stroke={OL} strokeWidth={4} /><T x={0} y={8} s={26}>{a.tagBig}</T></g>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

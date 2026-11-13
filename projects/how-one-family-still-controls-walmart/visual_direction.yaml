@@ -1,0 +1,58 @@
+# Visual direction for how-one-family-still-controls-walmart (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Director's edit (Ep 55). One bespoke world per part, all DAY scenes unless the story turns serious:
+#   hook: a ranking podium in a daylit hall of fame + the family vault glimpse;
+#   part 1 (1950s Bentonville): `fivedime` set, a sunny small-town square with a variety store, awning, Model-era cars;
+#   part 2 (going public): the 1970 trading floor (`exchange`) + the store that grows into a chain (`fivedime` grown);
+#   part 3 (the family vault): `trustroom`, a wood-panelled family vault room with a ledger wall and a proxy lever;
+#   part 4 (the money machine): `dccity`, a giant distribution-center city at midday, trucks, conveyors, a big box store;
+#   part 5 (the next generation): the trustroom with fewer shares + boardroom (`office`) + court for the GRAT case.
+# Caricatures (respectful, only named public figures): Sam Walton, Rob Walton, Greg Penner, Steuart Walton, John Furner.
+# Private individuals (Audrey Walton, trust beneficiaries) are never drawn: documents or silhouettes only.
+primary_tone: strategy
+secondary_tones:
+- history
+- trade
+- reflective
+palette:
+  bg: '#13243A'
+  bg2: '#1E3452'
+  ink: '#F4F1E8'
+  muted: '#AAB6C4'
+  land: '#2A3B52'
+  border: '#4A6584'
+  accent: '#F2B200'
+  accent2: '#4FA3F7'
+  accent3: '#5FD38D'
+  risk: '#FF5A4E'
+presenter:
+  demeanor: neutral
+  min_sequences: 4
+chapters:
+- chapter: The family business
+  tone: strategy
+- chapter: One store in Bentonville
+  tone: history
+- chapter: Going public
+  tone: history
+- chapter: The family vault
+  tone: strategy
+- chapter: The money machine
+  tone: trade
+- chapter: The next generation
+  tone: strategy
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m5_sales
+  cue: the block is slowly shrinking
+  to: strategy
+  why: after the cheerful money machine, the film turns to the risks (sales, succession, scrutiny)
+thumbnail:
+  tone: strategy
+  headline: [ONE FAMILY, WALMART]
+  idea: a giant vault door made of stacked shopping-cart-free store shelves; one family key in the lock (no logos)
+requirements:
+- No Walmart logo, spark symbol, store signage lettering or trademarked art; stores are generic big-box buildings
+- Caricatures only of named public figures, respectful (signature traits only), name tag on first appearance
+- Private individuals as silhouettes or documents only; nothing implies wrongdoing (all estate tools are legal)
+- Our calculations labelled on screen; fiscal years labelled; Bloomberg 2013 attributed

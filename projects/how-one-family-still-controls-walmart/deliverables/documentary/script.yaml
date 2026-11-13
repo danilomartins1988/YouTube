@@ -1,0 +1,308 @@
+# Documentary (target 11-13 min). Five parts as an INTERNAL structure only (never narrated or shown as missions).
+# Hook type: contradiction ("lost one crown, still holds another"), cold open on a verified ranking, explicit promise,
+# channel intro after part 1. Numbers come from sources.yaml via {{placeholders}}; years are spoken as words.
+# Rules: "largest family business" only as the EY / St. Gallen ranking by revenue; the stake is the two family
+# entities; our calculations said as such; Bloomberg 2013 attributed; nothing implies wrongdoing (all tools are legal).
+logline: Walmart has been on the stock market since 1970, yet one family still votes the biggest block of its shares. A
+  1953 family partnership, a single voting entity and a low-margin money machine explain how the Waltons kept control
+  of the world's largest family business for three generations.
+title: How One Family Still Controls Walmart
+segments:
+- id: h_open
+  chapter: The family business
+  narration: This year, Walmart lost a crown it had worn for {{crown}}. Amazon passed it as America's biggest company
+    by revenue, by {{crown.gap_spoken}}. But Walmart still holds another title, and this one isn't close.
+  claims:
+  - crown
+- id: h_twist
+  chapter: The family business
+  narration: In the latest global ranking of family-controlled companies, compiled by EY and the University of St. Gallen, Walmart
+    is {{index}}, with about {{index.wmt_spoken}} in revenue. Number two, Volkswagen, had about {{index.vw_spoken}}. Walmart
+    is almost twice as big.
+  claims:
+  - index
+- id: h_question
+  chapter: The family business
+  narration: Here's the strange part. Walmart has been on the stock market for more than half a century, and anyone can buy
+    its shares. Founding families usually lose control within a generation or two. So how did the Waltons keep it?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced facts (public since 1970, per Walmart).
+- id: h_promise
+  chapter: The family business
+  narration: By the end of this video, you'll know Sam Walton's nineteen fifty-three move, how much of Walmart the family's
+    entities hold today, and how much cash flows back to them.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: m1_card
+  chapter: One store in Bentonville
+  narration: ''
+  claims: []
+- id: m1_store
+  chapter: One store in Bentonville
+  narration: The story starts on a small-town square. In nineteen fifty, Sam Walton and his wife Helen moved to Bentonville,
+    Arkansas, where Sam opened Walton's five and dime, a variety store selling everyday goods.
+  claims:
+  - hist
+- id: m1_partner
+  chapter: One store in Bentonville
+  narration: Three years later, the business was still tiny, and his oldest child was only {{gift.age_spoken}}. But Sam was
+    already thinking about the estate tax, the tax the government takes when a fortune passes to the next generation.
+  claims:
+  - gift
+- id: m1_split
+  chapter: One store in Bentonville
+  narration: So in nineteen fifty-three, he set up the business as a family partnership. According to his autobiography,
+    as reported by Bloomberg, each of his four children got {{gift}}. Sam and Helen kept twenty percent between them. His
+    reasoning, in his own words. The best way to reduce paying estate taxes is to give your assets away before they appreciate.
+  claims:
+  - gift
+- id: m1_draw
+  chapter: One store in Bentonville
+  narration: Let me draw why that works. Here is the gift, made in nineteen fifty-three, when a share of a few variety stores
+    was worth very little. And here is the same stake, decades later, grown into a giant. The arrow between them is all growth,
+    and it happened inside the children's shares, not inside Sam's estate.
+  claims: []
+  analysis: true
+  source_note: Simplified explanation of why an early gift moves future growth out of the giver's estate (based on the
+    Bloomberg account of the 1953 partnership); not tax advice.
+- id: m1_rogers
+  chapter: One store in Bentonville
+  narration: In nineteen sixty-two, Sam opened the first Walmart, in Rogers, Arkansas. And according to Bloomberg, the family's
+    stake stayed inside that partnership structure from then on.
+  claims:
+  - hist
+  - gift
+- id: m1_transition
+  chapter: One store in Bentonville
+  narration: But a chain of discount stores needs money to grow. And the usual way to raise it puts control at risk.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: Going public
+  narration: ''
+  claims: []
+- id: m2_ipo
+  chapter: Going public
+  narration: In nineteen seventy, Walmart sold shares to the public for the first time, at {{hist}} each. The money financed
+    a steady expansion. Sam's eldest son, Rob, a lawyer, did what Sam later called most of the work to take us public.
+  claims:
+  - hist
+  - rob
+- id: m2_keep
+  chapter: Going public
+  narration: Going public usually means giving up control. But the Waltons sold only part of the company and kept their shares
+    together in one family block. Walmart has no special shares with extra votes. Every share gets one vote. The family simply
+    kept enough of them, in one place.
+  claims: []
+  analysis: true
+  source_note: Interpretation; one class of common stock with one vote per share per the 2026 meeting 8-K; the family
+    block per the proxy and Bloomberg.
+- id: m2_growth
+  chapter: Going public
+  narration: Sam Walton died in nineteen ninety-two, and Rob became chairman. Under Rob, according to Walmart, annual sales
+    grew from about {{rob}} to {{rob.end_spoken}}.
+  claims:
+  - rob
+  - hist
+- id: m2_estate
+  chapter: Going public
+  narration: And when Sam died, there was no fire sale of shares to pay a giant tax bill. Most of the stake had been in his
+    children's hands for almost forty years.
+  claims:
+  - gift
+  analysis: true
+  source_note: Consequence of the 1953 structure as described by Bloomberg (2013); spousal exemption as reported there.
+- id: m2_transition
+  chapter: Going public
+  narration: So, more than fifty years after going public, how much does the family still hold?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: The family vault
+  narration: ''
+  claims: []
+- id: m3_two
+  chapter: The family vault
+  narration: Today, the family's Walmart shares sit mainly in two places. Walton Enterprises, a family holding company, holds
+    about {{stake.we_spoken}} shares, after a {{split}} split in twenty twenty-four. The Walton Family Holdings Trust held another
+    {{stake.wfht_spoken}} in April.
+  claims:
+  - stake
+  - split
+- id: m3_pct
+  chapter: The family vault
+  narration: Together, that's about {{stake.total_spoken}} shares, or {{stake}} of the whole company, per Walmart's latest proxy
+    statement. At the closing price on November twelfth, by our calculation, they were worth {{value}}, in a company valued
+    at {{value.mcap_spoken}}.
+  claims:
+  - stake
+  - value
+- id: m3_proxy
+  chapter: The family vault
+  narration: And the trust has given Walton Enterprises an irrevocable proxy, so one entity votes the entire family block, by
+    majority vote of its managing members.
+  claims:
+  - stake
+- id: m3_handover
+  chapter: The family vault
+  narration: In December twenty twenty-four, the family rewired that machine for the next generation. Rob, Jim and Alice Walton
+    moved their managing roles into four family trusts, and {{handover}} younger family members became trustees.
+  claims:
+  - handover
+- id: m3_draw
+  chapter: The family vault
+  narration: Here's the whole structure. A box for the family trust. A box for Walton Enterprises. An arrow for the proxy, carrying
+    the trust's votes. And Walmart, with one thick arrow of votes going in. Two entities, one voice.
+  claims: []
+  analysis: true
+  source_note: Diagram of the ownership and voting structure described in the 2026 proxy and the Schedule 13D.
+- id: m3_turnout
+  chapter: The family vault
+  narration: And {{stake}} is stronger than it sounds, because not everyone votes. At the twenty twenty-six annual
+    meeting, about {{votes.present_spoken}} shares were represented. By our calculation, the family block was about {{votes}}
+    of them.
+  claims:
+  - votes
+  - stake
+- id: m3_transition
+  chapter: The family vault
+  narration: Control is one thing. But a stake is only worth what the business behind it earns.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m4_card
+  chapter: The money machine
+  narration: ''
+  claims: []
+- id: m4_scale
+  chapter: The money machine
+  narration: And the business behind it is enormous. In the fiscal year that ended January thirty-first, twenty twenty-six,
+    Walmart had revenue of {{rev}}, {{rev.units_spoken}} stores and clubs, and about {{rev.staff_spoken}} associates.
+  claims:
+  - rev
+- id: m4_margin
+  chapter: The money machine
+  narration: But here's the twist. It keeps very little of each dollar. Operating income was {{rev.op_spoken}}, about
+    {{rev.margin_spoken}} of every dollar of sales. That's the everyday low price model. Thin margins, enormous volume.
+  claims:
+  - rev
+- id: m4_supply
+  chapter: The money machine
+  narration: Thin margins only work with relentless logistics. In the U.S. alone, Walmart runs {{margin}} distribution facilities,
+    fed by its own private truck fleet and outside carriers.
+  claims:
+  - margin
+- id: m4_draw
+  chapter: The money machine
+  narration: Let me build sales by business. Walmart U.S., {{segs}}. Walmart International, about {{segs.intl_spoken}}. And
+    Sam's Club in the U.S., about {{segs.sams_spoken}}. The American stores carry the machine.
+  claims:
+  - segs
+- id: m4_new
+  chapter: The money machine
+  narration: And on top of the stores, newer businesses are growing much faster. Advertising, sold to brands and marketplace
+    sellers, grew {{ads.adgrow_spoken}} last fiscal year, to nearly {{ads}}, including the TV maker VIZIO. In the latest quarter,
+    it grew another {{ads.adq2_spoken}}. Add membership fees from Sam's Club and Walmart Plus, and an online marketplace for
+    outside sellers.
+  claims:
+  - ads
+- id: m4_cash
+  chapter: The money machine
+  narration: All of that turns into cash. Operations brought in {{cash}} last fiscal year. Walmart spent {{cash.capex_spoken}}
+    on stores, warehouses and technology, and still had {{cash.fcf_spoken}} of free cash flow left.
+  claims:
+  - cash
+- id: m4_dividend
+  chapter: The money machine
+  narration: This fiscal year's dividend is {{div}} a share. Multiply that by the roughly {{stake.total_spoken}} shares the
+    two family entities hold, and by our calculation, that's {{div.family_spoken}} a year, {{div.month_spoken}} a month, before
+    taxes.
+  claims:
+  - div
+  - stake
+- id: m4_buyback
+  chapter: The money machine
+  narration: Buybacks help quietly too. Walmart bought back {{cash.buyback_spoken}} of its own stock last fiscal year, and every
+    share it retires makes the family's slice a little bigger.
+  claims:
+  - cash
+- id: m4_transition
+  chapter: The money machine
+  narration: So the machine keeps paying. The real question is whether the family can keep the block together.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m5_card
+  chapter: The next generation
+  narration: ''
+  claims: []
+- id: m5_sales
+  chapter: The next generation
+  narration: Because the block is slowly shrinking. Between December twenty twenty-four and June twenty twenty-six, the
+    holdings trust's filings report sales of about {{sales}} shares. By our tally of the reported prices, that's roughly
+    {{sales.usd_spoken}}. It also handed about {{sales.dist_spoken}} shares to family beneficiaries.
+  claims:
+  - sales
+- id: m5_why
+  chapter: The next generation
+  narration: The filings say it's to meet the beneficiaries' investment, personal and charitable objectives. The trust went
+    from about {{handover.trust24_spoken}} shares to about {{sales.now_spoken}}. Walton Enterprises' own block stayed at about
+    {{stake.we_spoken}} shares.
+  claims:
+  - sales
+  - handover
+  - stake
+- id: m5_grat
+  chapter: The next generation
+  narration: Wealthy families also use trusts the law allows. One is the grantor retained annuity trust, or GRAT. In nineteen
+    ninety-three, Audrey Walton, from the family of Sam's brother Bud, put about {{grat}} of Walmart stock into two short GRATs.
+    The IRS challenged her valuation. In two thousand, the U.S. Tax Court sided with her.
+  claims:
+  - grat
+- id: m5_clat
+  chapter: The next generation
+  narration: 'Another is the charitable lead trust: it pays a charity for years, then passes what''s left to heirs. Bloomberg
+    reported that Alice Walton''s mother and brother put {{clat}} into such trusts since two thousand three. And in twenty twenty-six,
+    a trust named a twenty twenty-four Walmart GRAT filed notice to sell shares.'
+  claims:
+  - clat
+  - grat
+- id: m5_board
+  chapter: The next generation
+  narration: The boardroom has changed too. Rob Walton retired from the board in twenty twenty-four. His son-in-law, Greg Penner,
+    has been chairman since twenty fifteen, and Steuart Walton, Jim's son, is a director. That's {{board}} family members out
+    of {{board.directors_spoken}}. And the chief executive since February is John Furner, who started as an hourly associate.
+  claims:
+  - board
+- id: m5_draw
+  chapter: The next generation
+  narration: Let me chart the trust. December twenty twenty-four, about {{handover.trust24_spoken}} shares. March twenty twenty-six,
+    about {{sales.mar_spoken}}. June, about {{sales.now_spoken}}. The control block is still huge, but it isn't frozen.
+  claims:
+  - sales
+  - handover
+- id: m5_scrutiny
+  chapter: The next generation
+  narration: And scrutiny isn't going away. At this year's meeting, a shareholder proposal argued that concentrated family control
+    limits other investors' say in board elections. It got about {{votes.for_spoken}} votes for, and about {{votes.against_spoken}}
+    against.
+  claims:
+  - votes
+- id: payoff
+  chapter: The lesson
+  narration: So how did one family keep the world's largest family business? Not with special shares. With timing. Sam Walton
+    gave the company to his children before it was worth much, kept the shares in one block, and let a thin-margin, high-volume
+    machine compound for seventy years. The test now is whether the block holds while pieces of it are sold.
+  claims: []
+  analysis: true
+  source_note: Conclusion drawn from the sourced facts above.
+- id: teaser
+  chapter: The lesson
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
