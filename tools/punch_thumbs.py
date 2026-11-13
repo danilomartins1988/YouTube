@@ -76,6 +76,7 @@ S = {
  "53-nvidia-ceo-crisis": ("navy", "R", {"kind": "ceo", "who": "huang", "mood": "shock", "shadow": False, "s": 0.95}, "NVIDIA'S CEO", "OUT?", "#FF1E1E", {}, "WSJ/Semafor reported the board was preparing to oust Huang (Nov 11, 2026); no decision announced as of Nov 12 a.m."),
  "52-nvidia-probe": ("navy", "R", {"kind": "ceo", "who": "huang", "mood": "shock", "shadow": True, "s": 0.95}, "NVIDIA CEO'S AFFAIR", "-$428 BILLION", "#FF1E1E", {}, "Huang admitted being unfaithful (Nov 8 memo); ≈ -$428bn market value Nov 6-10, 2026 (our estimate)"),
  "54-alphabet": ("navy", "L", {"kind": "searchbar", "s": 0.72, "tag": "$20B"}, "GOOGLE → APPLE", "$20 BILLION", "#FF1E1E", {}, "2022 revenue share to Apple an estimated $20bn (US v. Google, D.D.C. 2024, finding 299)"),
+ "55-walmart-walton": ("navy", "L", {"kind": "storekey", "s": 0.62}, "WHO CONTROLS", "WALMART?", "#FF1E1E", {}, "a question; answer: Walton family entities hold 44.11% (proxy, Apr 10, 2026)"),
  "51-spacex": ("navy", "L", {"kind": "rocket", "s": 0.75}, "SPACEX", "NOT ROCKETS?!", "#FF1E1E", {}, "Q3 2026: SI $7.6bn > Starlink $5.2bn > Space $1.8bn (Q3 release)"),
  "50-mf-global": ("navy", "L", {"kind": "vault", "s": 0.95}, "$1.6 BILLION", "VANISHED", "#FF1E1E", {}, "≈ $1.6bn customer shortfall (SIPA trustee)"),
  "42-penny": ("orange", "R", {"kind": "coin", "s": 1.0, "symbol": "1¢"}, "IT COSTS 3.69¢", "TO MAKE 1¢", "#FF1E1E", {}, "penny unit cost 3.69¢ FY2024 (Mint)"),

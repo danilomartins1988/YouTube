@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos, no real people).
+title: How One Family Still Controls Walmart
+docs_dir: docs/episodes/55-walmart-walton
+video: output/walmart_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: How does one family still control a public company worth about a trillion dollars?
+  surprising_fact: Two Walton family entities hold about 44% of Walmart's shares (2026 proxy) and Walmart ranks No. 1 in the 2025 EY / St. Gallen family business index
+  subject: a giant golden key whose bow is a generic big-box store
+  tone: strategy
+  metaphor: the family holds the key to the store
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - WHO CONTROLS
+  - WALMART?
+  claim_basis: a question (answer in the film; stake 44.11% per proxy, Apr 10, 2026)
+  scene:
+    palette: {sky0: '#0B1626', sky1: '#1E3452', haze: '#FFD54F', key: '#FFF6D8', accent: '#FFD54F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: storekey, x: 1560, y: 700, s: 0.5}
+    support: []
+    particles: {n: 60, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - '1953 GIFT'
+  - WALMART'S KEY
+  claim_basis: 'gift: 1953 family partnership, each child 20% (Bloomberg 2013 citing the autobiography)'
+  scene:
+    palette: {sky0: '#1A1208', sky1: '#3A2A14', haze: '#FFB74D', key: '#FFF3E0', accent: '#FFD54F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: storekey, x: 520, y: 700, s: 0.42}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
+    vignette: 0.5
+    brand: none

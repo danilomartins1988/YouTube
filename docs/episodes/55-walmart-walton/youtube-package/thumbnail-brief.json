@@ -1,0 +1,334 @@
+{
+  "title": "How One Family Still Controls Walmart",
+  "docs_dir": "docs/episodes/55-walmart-walton",
+  "video": "output/walmart_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "analysis": {
+    "mystery": "How does one family still control a public company worth about a trillion dollars?",
+    "surprising_fact": "Two Walton family entities hold about 44% of Walmart's shares (2026 proxy) and Walmart ranks No. 1 in the 2025 EY / St. Gallen family business index",
+    "subject": "a giant golden key whose bow is a generic big-box store",
+    "tone": "strategy",
+    "metaphor": "the family holds the key to the store"
+  },
+  "slug": "how-one-family-still-controls-walmart",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "WHO CONTROLS",
+        "WALMART?"
+      ],
+      "claim_basis": "a question (answer in the film; stake 44.11% per proxy, Apr 10, 2026)",
+      "scene": {
+        "palette": {
+          "sky0": "#0B1626",
+          "sky1": "#1E3452",
+          "haze": "#FFD54F",
+          "key": "#FFF6D8",
+          "accent": "#FFD54F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "storekey",
+          "x": 1560,
+          "y": 700,
+          "s": 0.5
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "WHO CONTROLS",
+          "x": 90,
+          "y": 526.1,
+          "size": 153.6,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFD54F"
+        },
+        {
+          "text": "WALMART?",
+          "x": 96,
+          "y": 664.1,
+          "size": 120,
+          "width": 614.4,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.57 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 406, 1270, 535), (96, 570, 710, 671)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.080",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 49",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-americas-electricity-bills-are-rising (distance 0.35)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (answer in the film; stake 44.11% per proxy, Apr 10, 2026)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.602,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-americas-electricity-bills-are-rising"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "1953 GIFT",
+        "WALMART'S KEY"
+      ],
+      "claim_basis": "gift: 1953 family partnership, each child 20% (Bloomberg 2013 citing the autobiography)",
+      "scene": {
+        "palette": {
+          "sky0": "#1A1208",
+          "sky1": "#3A2A14",
+          "haze": "#FFB74D",
+          "key": "#FFF3E0",
+          "accent": "#FFD54F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "storekey",
+          "x": 520,
+          "y": 700,
+          "s": 0.42
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFF3E0"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "1953 GIFT",
+          "x": 480.0,
+          "y": 238.2,
+          "size": 131.9,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "WALMART'S KEY",
+          "x": 1440.0,
+          "y": 204.9,
+          "size": 91.3,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFD54F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.58 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 135, 860, 246), (1060, 134, 1820, 210)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "7.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 8.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.070",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 46",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-apple-2026-11 (distance 0.31)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "gift: 1953 family partnership, each child 20% (Bloomberg 2013 citing the autobiography)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.742,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-apple-2026-11"
+      }
+    }
+  ],
+  "default": "A",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-13T12:11:55Z",
+  "master": "output/how-one-family-still-controls-walmart/thumbnails/master_A.png"
+}

@@ -558,6 +558,20 @@ export const SUBJECTS: Record<string, SubjectFn> = {
     {Array.from({length: 7}, (_, k) => <path key={k} d={`M ${-260 + k * 95} -100 L ${-240 + k * 85} 120`} stroke="#05070B" strokeWidth={6} />)}
     <circle cx={-200} cy={250} r={44} fill="#263238" stroke="#05070B" strokeWidth={9} /><circle cx={260} cy={250} r={44} fill="#263238" stroke="#05070B" strokeWidth={9} />
   </g>,
+  /** Ep 55: a giant golden key whose bow is a generic big-box store (no logo, no lettering): one family holds the key. */
+  storekey: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -18})`}>
+    <defs>{metal('skg', '#B8860B', '#FFE08A')}</defs>
+    <circle r={600} fill={P.haze} opacity={0.2} filter="url(#soft)" />
+    <ellipse cx={40} cy={420} rx={560} ry={40} fill="#000" opacity={0.4} filter="url(#soft)" />
+    <rect x={-60} y={-80} width={700} height={130} rx={30} fill="url(#skg)" stroke="#05070B" strokeWidth={12} />
+    {[[440, 50, 90], [560, 50, 130]].map(([x, y, h], k) => <rect key={k} x={x} y={y - 6} width={70} height={h} rx={8} fill="url(#skg)" stroke="#05070B" strokeWidth={12} />)}
+    <rect x={-470} y={-300} width={460} height={480} rx={60} fill="url(#skg)" stroke="#05070B" strokeWidth={14} />
+    <rect x={-420} y={-160} width={360} height={260} fill="#0D1B2A" stroke="#05070B" strokeWidth={10} />
+    <rect x={-420} y={-200} width={360} height={44} fill={P.accent} stroke="#05070B" strokeWidth={10} />
+    {[-380, -300, -180, -100].map((x) => <rect key={x} x={x} y={-110} width={60} height={60} fill="#FFE9A8" stroke="#05070B" strokeWidth={6} opacity={0.9} />)}
+    <rect x={-280} y={-20} width={80} height={120} fill="#FFE9A8" stroke="#05070B" strokeWidth={6} />
+    <path d="M -440 -260 Q -300 -300 -120 -270" stroke="#FFFFFF" strokeWidth={14} opacity={0.35} fill="none" strokeLinecap="round" />
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

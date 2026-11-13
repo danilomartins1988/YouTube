@@ -2117,7 +2117,7 @@ const SETS: Record<string, SetFn> = {
         </g>; })}
       {/* sidewalk, lamp posts, street, cars */}
       <rect x={z.x0} y={f} width={w} height={46} fill={night ? '#8A8478' : '#E3DCCB'} stroke={OL} strokeWidth={4} />
-      {Array.from({length: Math.ceil(w / 600)}, (_, k) => { const lx = z.x0 + 150 + k * 600;
+      {Array.from({length: Math.ceil(w / 600)}, (_, k) => { const lx = z.x0 + k * 600;
         return <g key={'lp' + k}><rect x={lx - 6} y={f - 240} width={12} height={250} fill="#2E3440" stroke={OL} strokeWidth={3} />
           <circle cx={lx} cy={f - 250} r={20} fill={night ? '#FFE08A' : '#FFFDF2'} stroke={OL} strokeWidth={4} /></g>; })}
       <rect x={z.x0} y={f + 46} width={w} height={600} fill={night ? '#4A4E5C' : '#6E7484'} />
