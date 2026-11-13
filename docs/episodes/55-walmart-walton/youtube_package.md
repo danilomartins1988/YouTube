@@ -1,0 +1,49 @@
+# YouTube package: "How One Family Still Controls Walmart" (Episode 55)
+
+Prepared for manual publishing. Nothing has been uploaded. Video length 12:47.
+
+## Title options
+
+1. **How One Family Still Controls Walmart** (recommended)
+2. **How the Waltons Kept Control of Walmart for 70 Years**
+3. **Walmart Lost One Crown. It Still Holds Another**
+
+## Description (1800 chars, YouTube limit 5,000)
+
+```
+In 2026 Walmart lost its 13-year run as America's biggest company by revenue. But it is still number one in the 2025 EY and University of St. Gallen ranking of family businesses, almost twice the size of Volkswagen. How did one family keep control of a company that has been public since 1970? We follow Sam Walton's 1953 family partnership, the 1970 share sale, the two family entities that hold about 44% of Walmart today, the irrevocable proxy that lets one of them vote the whole block, the thin-margin machine that pays them roughly $3.5 billion a year in dividends (our calculation), and the risks ahead: share sales by the family trust, estate planning, succession and shareholder scrutiny.
+
+Every figure is sourced below: Walmart's fiscal 2026 10-K, 2026 and 2024 proxy statements, 10-Q, earnings releases and 8-Ks; Schedule 13D filings and Forms 4 of Walton Enterprises and the Walton Family Holdings Trust; the U.S. Tax Court; EY / University of St. Gallen; Fortune; Bloomberg (2013). Walmart's fiscal year ends January 31. Values marked "our calculation" are our own arithmetic; stake value is at the November 12, 2026 close. Not investment advice. Not affiliated with Walmart or the Walton family.
+
+Chapters
+0:00 The family business
+1:10 One store in Bentonville
+3:08 Going public
+4:30 The family vault
+6:38 The money machine
+9:30 The next generation
+12:12 The lesson
+
+Sources
+Main sources: Walmart Inc. (SEC filing); Walton Enterprises, LLC / Walton Family Holdings Trust (SEC filing); Walton Family Holdings Trust (SEC filings); SEC EDGAR; Walmart Inc.; Bloomberg News; United States Tax Court; EY / University of St. Gallen; Fortune Media; Amazon.com, Inc. (SEC filing); Yahoo Finance (market data).
+
+Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+```
+
+## Chapters
+
+```
+0:00 The family business
+1:10 One store in Bentonville
+3:08 Going public
+4:30 The family vault
+6:38 The money machine
+9:30 The next generation
+12:12 The lesson
+```
+
+## Tags
+
+```
+Walmart, Walton family, Sam Walton, Walton Enterprises, Walton Family Holdings Trust, family business, estate tax, GRAT, Walmart stock, WMT, dividends, Greg Penner, Rob Walton, corporate governance, economics explained, The Hidden Economics
+```

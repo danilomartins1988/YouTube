@@ -1,7 +1,7 @@
 # Episode 55: How One Family Still Controls Walmart (owner request, 2026-11-13)
 
 - Project: `projects/how-one-family-still-controls-walmart`; storyboard generator `tools/gen_walmart_storyboard.py`
-  (45 scenes; lint 0). Narration ≈ 9,500 characters (target ≈ 750 s).
+  (45 scenes; lint 0). Runtime 12:48 (767.8 s), QC 0 errors, no freeze > 5 s, -16.1 LUFS; TTS US$0.29 (re-render 0 paid calls).
 - New engine pieces: sets `fivedime` (1950s small-town square with a variety store; a 1960s discount store rises behind),
   `trustroom` (family vault room; vault shelves thin out as the trust sells), `dccity` (distribution-centre city with
   working docks, conveyor bridge, generic semi-trucks, big-box store); items `pie`, `ballots`, `sapling`; caricature

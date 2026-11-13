@@ -1,4 +1,4 @@
-# YouTube Short: "Walmart Lost One Crown. It Kept a Bigger One" (55-walmart-walton)
+# YouTube Short: "Walmart Lost One Crown. It Still Holds Another" (55-walmart-walton)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/55-walmart-walton_short.mp4` (44 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Walmart Lost One Crown. It Kept a Bigger One #shorts
+Walmart Lost One Crown. It Still Holds Another #shorts
 ```
 
 ## Description
@@ -30,7 +30,7 @@ shorts, economics explained, The Hidden Economics
 
 ```
 WALMART LOST ONE CROWN
-BUT KEPT A BIGGER ONE
+BUT KEPT ANOTHER
 ```
 
 ## Narration in the Short

@@ -1,6 +1,6 @@
 # Research dossier - How One Family Still Controls Walmart
 
-Generated 2026-11-13T12:40:47+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-13T13:48:59+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 

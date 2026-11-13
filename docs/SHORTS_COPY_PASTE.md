@@ -1127,3 +1127,22 @@ Watch the full story: "How Google Actually Makes Money" on The Hidden Economics.
 ```
 Google, Alphabet, Google ads, search auction, traffic acquisition cost, Apple default, US v Google, antitrust, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 55-walmart-walton
+
+**Title**
+```
+Walmart Lost One Crown. It Still Holds Another #shorts
+```
+**Description**
+```
+This year, Walmart lost a crown it had worn for thirteen years. Amazon passed it as America's biggest company by revenue, by less than four billion dollars. But in the latest EY and University of St. Gallen ranking of family-controlled companies, Walmart is number one, almost twice the size of Volkswagen.
+
+Watch the full story: "How One Family Still Controls Walmart" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #walmart #business #economics
+```
+**Tags**
+```
+Walmart, Walton family, family business, Fortune 500, Amazon, Volkswagen, EY family business index, Sam Walton, economics, shorts, economics explained, The Hidden Economics
+```

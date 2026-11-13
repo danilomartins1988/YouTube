@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/how-one-family-still-controls-walmart/documentary/how-one-family-still-controls-walmart--documentary.mp4 (264.4 MB) |
+| File exists | PASS | /home/user/YouTube/output/how-one-family-still-controls-walmart/documentary/how-one-family-still-controls-walmart--documentary.mp4 (266.0 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -22,7 +22,7 @@
 # QC report: how-one-family-still-controls-walmart / documentary (long_16x9)
 
 - Runtime: **767.83 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 264.4 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 266.0 MB
 - Loudness: -16.1 LUFS integrated, true peak -3.9 dBFS
 - Errors: **0**, warnings: **64**
 - Technical QC passed: **True**
