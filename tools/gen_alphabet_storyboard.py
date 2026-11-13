@@ -23,7 +23,7 @@ OUT = Path(__file__).resolve().parents[1] / "projects/how-google-actually-makes-
 Z = lambda s, x0=-1600, x1=4600, **kw: {"set": s, "x0": x0, "x1": x1, **kw}
 CAM = lambda cue, x1=1250, y1=520, z1=1.0, x0=1000, y0=520, z0=1.0: [{"at": 0, "x": x0, "y": y0, "zoom": z0}, {"at": cue, "x": x1, "y": y1, "zoom": z1, "dur": 1.8}]
 HALL = lambda night=False, **kw: {"zones": [Z("auctionhall", night=night, podiumX=0.44, **kw)], "worldW": 2400, **({"night": True} if night else {})}
-ROAD = lambda **kw: {"zones": [Z("tollroad", **kw)], "worldW": 2400}
+ROAD = lambda **kw: {"zones": [Z("tollroad", **{"cityX": 0.58, **kw})], "worldW": 2400}
 BIDS = [("$2.00", "#4FB3F6", 0), ("$1.50", "#FF8A65", 1), ("$1.20", "#7BD389", 2)]
 
 
@@ -46,19 +46,19 @@ stage("s01_open", "h_open", {
     "zones": [Z("court")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 470, "zoom": 1.2}, {"at": C("For a setting"), "x": 1000, "y": 520, "zoom": 1.0, "dur": 1.6},
             {"at": C("That number comes"), "x": 1250, "y": 520, "zoom": 1.0, "dur": 1.6}], "drift": 2,
-    "items": [it("counter", x=1000, y=200, at=0.05, prefix="≈ $", suffix=" BILLION", steps=[[0.05, 0], [1.8, 20]], text="GOOGLE → APPLE, 2022 (COURT ESTIMATE)", scale=1.35),
+    "items": [it("counter", x=1000, y=240, at=0.05, prefix="≈ $", suffix=" BILLION", steps=[[0.05, 0], [1.8, 20]], text="GOOGLE → APPLE, 2022 (COURT ESTIMATE)", scale=1.35),
               it("letters", x=700, y=420, text="NOT A FACTORY", at=C("Not for a factory"), until=C("For a setting"), size=52, color="white"),
               it("letters", x=1300, y=420, text="NOT A COMPANY", at=C("Not for a company"), until=C("For a setting"), size=52, color="white"),
               it("letters", x=1000, y=400, text="FOR A SETTING:", at=C("For a setting"), until=C("That number comes"), size=60, color="gold"),
-              it("searchbar", x=1000, y=520, w=900, at=C("The search box"), typeAt=C("The search box", 0.6), query="the default search box", scale=0.9, until=C("That number comes", 0.6)),
-              it("docs", x=760, y=700, at=C("That number comes"), text="US v. GOOGLE · D.D.C. 2024", scale=0.7, stamp="FINDING 299", stampAt=C("federal judge's ruling")),
+              it("searchbar", x=1000, y=520, w=900, at=C("The search box"), typeAt=C("The search box", 0.6), query="the default search box", scale=0.9, until=C("That number comes")),
+              it("docs", x=640, y=700, at=C("That number comes"), text="US v. GOOGLE · D.D.C. 2024", scale=0.7, stamp="FINDING 299", stampAt=C("federal judge's ruling")),
               it("gavel", x=1500, y=640, hits=[C("federal judge's ruling", 0.2)], scale=1.0)]},
     sources=["mehta"])
 stage("s02_twist", "h_twist", {
     **HALL(), "cam": [{"at": 0, "x": 1050, "y": 470, "zoom": 1.15}, {"at": C("Last year"), "x": 1150, "y": 520, "zoom": 0.95, "dur": 2.0}], "drift": 2,
     "items": [it("searchbar", x=1056, y=150, w=980, at=0.1, typeAt=0.4, query="running shoes", rows=[{"text": "Shoe shop A · fast delivery", "ad": True, "at": C("behind every search")}, {"text": "Shoe shop B · sale today", "ad": True, "at": C("behind every search", 0.4)}], scale=0.85),
               *bidders(at=C("runs an auction"), x0=380),
-              it("person", x=1056, at=C("runs an auction"), pose="talk", suit=True, tie=True, skin=2, hair=4),
+              it("person", x=1056, at=C("runs an auction"), pose="talk", tie=True, color="#28407A", skin=2, hair=4),
               it("counter", x=1700, y=520, at=C("took in"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [{"cue": "Alphabet, Google's parent"}, 0], [{"cue": "By our calculation"}, 402.8]], text="ALPHABET REVENUE, 2025 (10-K)", scale=0.85),
               it("sign", x=1700, y=720, text="≈ $1.1BN A DAY (OUR CALC.)", at=C("a day"), color="#FFE0B2", size=30)]},
     sources=["tenk", "mehta"])
@@ -68,8 +68,8 @@ stage("s03_question", "h_question", {
               it("sign", x=800, y=250, text="WHO GETS PAID?", at=C("Who gets paid"), color="#BBDEFB", size=36),
               it("sign", x=1500, y=250, text="WHERE DOES THE CASH GO?", at=C("And where does"), color="#C8E6C9", size=36)]})
 stage("s04_promise", "h_promise", {
-    "zones": [Z("serverfarm", buildAt=C("why Google now spends"), buildX=0.7)], "worldW": 2400,
-    "cam": [{"at": 0, "x": 900, "y": 470, "zoom": 1.0}, {"at": C("why Google now spends"), "x": 1350, "y": 470, "zoom": 0.95, "dur": 2.4}], "drift": 2,
+    "zones": [Z("serverfarm", buildAt=C("why Google now spends"), buildX=0.5)], "worldW": 2400,
+    "cam": [{"at": 0, "x": 900, "y": 470, "zoom": 1.0}, {"at": C("why Google now spends"), "x": 1100, "y": 470, "zoom": 0.95, "dur": 2.4}], "drift": 2,
     "items": [it("letters", x=1000, y=90, text="BY THE END OF THIS VIDEO", at=0.05, size=50, color="gold"),
               it("sign", x=560, y=170, text="1 · HOW A CLICK IS PRICED", at=C("how the auction"), color="#BBDEFB", size=30),
               it("sign", x=1000, y=300, text="2 · WHO COLLECTS THE TOLLS", at=C("who collects the tolls"), color="#FFE0B2", size=30),
@@ -81,16 +81,16 @@ card("s05_c1", "m1_card", "The Auction", "Behind every search")
 stage("s06_map", "m1_map", {
     "zones": [Z("campus")], "worldW": 2400,
     "cam": CAM(C("And the Other Bets"), x1=1150, y1=500, z1=0.95, y0=440, z0=1.05), "drift": 2,
-    "items": [it("tower", x=560, h=520, w=260, color="#2E6FD8", growAt=C("Google Services")),
+    "items": [it("tower", x=560, h=520, w=260, color="#2E6FD8", text="SERVICES", growAt=C("Google Services")),
               it("sign", x=560, y=170, text="GOOGLE SERVICES · $342.7BN", at=C("Google Services", 0.4), color="#BBDEFB", size=28),
-              it("tower", x=1120, h=110, w=220, color="#22A06B", growAt=C("Google Cloud")),
+              it("tower", x=1120, h=110, w=220, color="#22A06B", text="CLOUD", growAt=C("Google Cloud")),
               it("sign", x=1120, y=560, text="GOOGLE CLOUD · $58.7BN", at=C("Google Cloud", 0.4), color="#C8E6C9", size=28),
-              it("tower", x=1600, h=14, w=160, color="#F2A900", growAt=C("And the Other Bets")),
+              it("tower", x=1600, h=14, w=160, color="#F2A900", text="BETS", growAt=C("And the Other Bets")),
               it("sign", x=1640, y=640, text="OTHER BETS · $1.5BN", at=C("And the Other Bets", 0.4), color="#FFE0B2", size=28),
               it("letters", x=1100, y=90, text="REVENUE 2025 (10-K)", at=0.2, size=50, color="gold")]},
     sources=["tenk"])
 stage("s07_ads", "m1_ads", {
-    "zones": [Z("shop")], "worldW": 2400, "cam": CAM(C("And the biggest piece"), x1=1100, y1=440, z1=1.05, y0=500, z0=0.95), "drift": 2,
+    "zones": [Z("office")], "worldW": 2400, "cam": CAM(C("And the biggest piece"), x1=1100, y1=440, z1=1.05, y0=500, z0=0.95), "drift": 2,
     "items": [it("searchbar", x=1056, y=140, w=960, at=0.1, typeAt=0.3, query="running shoes", scale=0.85,
                  rows=[{"text": "Shoe shop A · fast delivery", "ad": True, "at": C("from the little ads", -0.2), "hi": C("from the little ads", 0.3)},
                        {"text": "Shoe shop B · sale today", "ad": True, "at": C("from the little ads")},
@@ -104,7 +104,7 @@ stage("s08_bids", "m1_bids", {
     **HALL(), "cam": [{"at": 0, "x": 1056, "y": 380, "zoom": 1.15}, {"at": C("Advertisers have already bid"), "x": 980, "y": 520, "zoom": 0.95, "dur": 2.0}], "drift": 2,
     "items": [it("searchbar", x=1056, y=140, w=960, at=0.05, typeAt=C("You type"), query="running shoes", scale=0.85),
               *bidders(at=C("Advertisers have already bid"), x0=360, poses=[[[0, "paddle"]], [[0, "paddle"]], [[0, "paddle"]]]),
-              it("person", x=1056, at=C("Google runs an auction"), pose="talk", suit=True, tie=True, skin=2, hair=4),
+              it("person", x=1056, at=C("Google runs an auction"), pose="talk", tie=True, color="#28407A", skin=2, hair=4),
               it("sign", x=1650, y=420, text="ILLUSTRATIVE BIDS, PER CLICK", at=C("Advertisers have already bid", 0.8), color="#FFFFFF", size=24),
               it("sign", x=1650, y=300, text="AUCTION: A FRACTION OF A SECOND", at=C("in a fraction of a second"), color="#BBDEFB", size=28),
               it("letters", x=1056, y=470, text="HIGHEST BID ≠ WINNER", at=C("does not automatically win"), size=56, color="gold")]},
@@ -113,13 +113,13 @@ stage("s09_quality", "m1_quality", {
     **HALL(), "cam": [{"at": 0, "x": 980, "y": 520, "zoom": 0.95}, {"at": C("So a cheaper ad"), "x": 760, "y": 560, "zoom": 1.1, "dur": 2.0}], "drift": 1,
     "items": [it("letters", x=1056, y=150, text="SCORE = BID × CHANCE OF A CLICK", at=0.3, size=50, color="gold"),
               it("sign", x=1056, y=250, text="CHANCE: A SCORE FROM 0 TO 1 (COURT FINDINGS)", at=C("a score between zero and one"), color="#BBDEFB", size=26),
-              *bidders(at=0.0, x0=360, p2=["$2.00 × 0.05", "$1.50 × 0.20", "$1.20 × 0.10"], p2at=C("multiplies each bid"), win=1, winat=C("So a cheaper ad")),
-              it("person", x=1056, at=0.0, pose="talk", suit=True, tie=True, skin=2, hair=4),
-              it("sign", x=1650, y=420, text="0.10 · 0.30 · 0.12 (ILLUSTRATIVE)", at=C("the predicted chance"), color="#FFFFFF", size=24),
-              it("sign", x=620, y=330, text="CHEAPER BID WINS", at=C("can beat an expensive ad"), color="#C8E6C9", size=30)]},
+              *bidders(at=0.0, x0=250, gap=300, p2=["$2.00 × 0.05", "$1.50 × 0.20", "$1.20 × 0.10"], p2at=C("multiplies each bid"), win=1, winat=C("So a cheaper ad")),
+              it("person", x=1056, at=0.0, pose="talk", tie=True, color="#28407A", skin=2, hair=4),
+              it("sign", x=1056, y=340, text="SCORES 0.10 · 0.30 · 0.12 (ILLUSTRATIVE)", at=C("the predicted chance"), color="#FFFFFF", size=24),
+              it("sign", x=660, y=440, text="CHEAPER BID WINS", at=C("can beat an expensive ad"), color="#C8E6C9", size=30)]},
     sources=["mehta"])
 stage("s10_second", "m1_second", {
-    "zones": [Z("shop")], "worldW": 2400, "cam": CAM(C("The winner pays"), x1=1056, y1=430, z1=1.1, y0=520, z0=0.95), "drift": 1,
+    "zones": [Z("district")], "worldW": 2400, "cam": CAM(C("The winner pays"), x1=1056, y1=430, z1=1.1, y0=520, z0=0.95), "drift": 1,
     "items": [it("searchbar", x=1056, y=140, w=960, at=0.05, typeAt=0.1, query="running shoes", scale=0.85,
                  rows=[{"text": "Winner · bid $1.50", "ad": True, "at": 0.4, "hi": C("The winner pays"), "tag": "PAYS $1.21", "tagAt": C("one cent above")},
                        {"text": "Runner-up · score worth $1.20", "ad": True, "at": 0.8}]),
@@ -135,7 +135,7 @@ stage("s11_knobs", "m1_knobs", {
               it("sign", x=1300, y=260, text="'SQUASHING' RAISES WHAT WINNERS PAY", at=C("names like squashing"), color="#FFE0B2", size=28),
               it("sign", x=1300, y=370, text="PRICES UP · ADVERTISERS STAYED", at=C("without losing advertisers"), color="#FFCDD2", size=30),
               it("sign", x=1300, y=470, text="(GOOGLE STUDIES CITED BY THE COURT)", at=C("cited by the court"), color="#FFFFFF", size=22),
-              it("person", x=1650, at=C("Google's own studies"), pose="read", suit=True, skin=0, hair=1)]},
+              it("person", x=1650, at=C("Google's own studies"), pose="read", tie=True, color="#28407A", skin=0, hair=1)]},
     sources=["mehta"])
 stage("s12_volume", "m1_volume", {
     **ROAD(booths=["PHONES", "BROWSERS", "WEBSITES"]), "cam": CAM(C("In the latest quarter"), x1=1250, y1=470, z1=1.0, x0=900, y0=470), "drift": 2,
@@ -187,7 +187,8 @@ stage("s18_total", "m2_total", {
               it("sign", x=800, y=420, text="APPLE · MOZILLA · ANDROID MAKERS · CARRIERS", at=C("Add Mozilla"), color="#BBDEFB", size=26),
               it("letters", x=1350, y=140, text="'GOOGLE IS A MONOPOLIST'", at=C("Google is a monopolist"), size=52, color="gold"),
               it("sign", x=1500, y=300, text="EXCLUSIVE DEALS HELPED KEEP IT ONE", at=C("these exclusive deals"), color="#FFCDD2", size=28),
-              it("gavel", x=1500, y=640, hits=[C("Google is a monopolist", 0.2)], scale=1.0)]},
+              it("gavel", x=1500, y=640, hits=[C("Google is a monopolist", 0.2)], scale=1.0),
+              it("person", x=420, at=0.4, pose="clipboard", tie=True, color="#455A64", skin=1, hair=0, poses=[[C("Google is a monopolist"), "shock"], [C("these exclusive deals"), "clipboard"]])]},
     sources=["mehta"])
 stage("s19_remedy", "m2_remedy", {
     "zones": [Z("court")], "worldW": 2400,
@@ -197,6 +198,8 @@ stage("s19_remedy", "m2_remedy", {
               it("sign", x=1350, y=250, text="SHARE SOME SEARCH DATA WITH RIVALS", at=C("share some search data"), color="#BBDEFB", size=28),
               it("sign", x=1350, y=350, text="✓ PAYMENTS FOR PLACEMENT STILL ALLOWED", at=C("But it did not ban"), color="#FFE0B2", size=28),
               it("sign", x=1350, y=450, text="'CRIPPLING' HARM TO PARTNERS IF CUT", at=C("could cripple"), color="#FFFFFF", size=26),
+              it("person", x=980, at=0.4, pose="read", tie=True, color="#455A64", skin=2, hair=1),
+              it("person", x=1850, at=C("Both sides have appealed"), pose="clipboard", tie=True, color="#6D4C41", skin=0, hair=4, flip=True),
               it("sign", x=1350, y=550, text="BOTH SIDES APPEALED", at=C("Both sides have appealed"), color="#FFCDD2", size=30)]},
     sources=["remedy", "tenk"])
 stage("s20_network", "m2_network", {
@@ -206,22 +209,22 @@ stage("s20_network", "m2_network", {
               it("browser", x=1150, y=330, at=C("other people's websites"), page="site", url="news-site.example", typeAt=C("other people's websites", 0.3), scale=0.6),
               it("coins", **{"from": [800, 300], "to": [600, 760]}, at=C("hands most of that money"), rate=5, until=C("That network brought in", 2.0)),
               it("person", x=560, at=C("hands most of that money"), pose="cheer", color="#FFC93C", skin=3, hair=0),
-              it("counter", x=1650, y=250, at=C("That network brought in"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [{"cue": "and it is shrinking"}, 29.8]], text="GOOGLE NETWORK, 2025 (10-K)", scale=0.85),
-              it("sign", x=1650, y=440, text="DOWN $567M FROM 2024", at=C("and it is shrinking"), color="#FFCDD2", size=30)]},
+              it("counter", x=1650, y=250, at=C("That network brought in"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [{"cue": "less than the year before"}, 29.8]], text="GOOGLE NETWORK, 2025 (10-K)", scale=0.85),
+              it("sign", x=1650, y=440, text="DOWN $567M FROM 2024", at=C("less than the year before"), color="#FFCDD2", size=30)]},
     sources=["tenk"])
 add("p21_toll", "m2_draw", "engine_draw", {
     "title": "Where an ad dollar goes", "board": BOARD, "draw_start": C("Here is an advertiser's dollar"), "speed": 1400, "push": 0.003,
-    "enter": {"from": 2200, "to": 1720, "at": 0.2, "dur": 1.3},
+    "enter": {"from": -260, "to": 270, "at": 0.2, "dur": 1.3},
     "strokes": [
-        {"d": rect(560, 420, 230, 150), "color": "ink", "width": 6, "kind": "box", "start": C("Here is an advertiser's dollar"), "label": lbl("ADVERTISER $1", 675, 503, 24, "ink")},
-        {"d": arrow((795, 495), (945, 495)), "color": "accent", "width": 5, "kind": "arrow", "start": C("It goes into")},
-        {"d": rect(950, 420, 260, 150), "color": "accent2", "width": 6, "kind": "box", "start": C("It goes into", 0.4), "label": lbl("GOOGLE AUCTION", 1080, 503, 24, "accent2")},
-        {"d": arrow((1080, 575), (1080, 700)), "color": "risk", "width": 5, "kind": "arrow", "start": C("Out of that box")},
-        {"d": rect(960, 705, 240, 110), "color": "risk", "width": 6, "kind": "box", "start": C("goes to the partners"), "label": lbl("PARTNERS ≈ 20¢", 1080, 768, 22, "risk")},
-        {"d": arrow((1215, 495), (1360, 495)), "color": "accent3", "width": 5, "kind": "arrow", "start": C("Google keeps the rest")},
-        {"d": dot(1460, 500), "color": "accent3", "width": 1, "start": C("Google keeps the rest", 0.3), "label": lbl("KEEPS ≈ 80¢", 1470, 505, 26, "accent3")},
+        {"d": rect(560, 470, 230, 150), "color": "ink", "width": 6, "kind": "box", "start": C("Here is an advertiser's dollar"), "label": lbl("ADVERTISER $1", 675, 553, 24, "ink")},
+        {"d": arrow((795, 545), (895, 545)), "color": "accent", "width": 5, "kind": "arrow", "start": C("It goes into")},
+        {"d": rect(900, 470, 260, 150), "color": "accent2", "width": 6, "kind": "box", "start": C("It goes into", 0.4), "label": lbl("GOOGLE AUCTION", 1030, 553, 24, "accent2")},
+        {"d": arrow((1165, 500), (1290, 390)), "color": "risk", "width": 5, "kind": "arrow", "start": C("Out of that box")},
+        {"d": rect(1295, 290, 250, 110), "color": "risk", "width": 6, "kind": "box", "start": C("goes to the partners"), "label": lbl("PARTNERS ≈ 20¢", 1420, 353, 22, "risk")},
+        {"d": arrow((1165, 590), (1290, 690)), "color": "accent3", "width": 5, "kind": "arrow", "start": C("Google keeps the rest")},
+        {"d": rect(1295, 650, 250, 110), "color": "accent3", "width": 6, "kind": "box", "start": C("Google keeps the rest", 0.3), "label": lbl("GOOGLE ≈ 80¢", 1420, 713, 22, "accent3")},
     ],
-    "actions": [{"kind": "point", "at": C("goes to the partners", 0.3), "dur": 1.4, "target": [1080, 760]}],
+    "actions": [{"kind": "point", "at": C("goes to the partners", 0.3), "dur": 1.4, "target": [1420, 330]}],
     "scale": 0.86, "floor": 1040}, sources=["tenk"])
 kinetic("s22_t2", "m2_transition", [("Search pays the bills…", 70, "Search pays the bills", None, False),
                                     ("…but the second audience is watching", 62, "It is watching", "gold", False)])
@@ -229,18 +232,18 @@ kinetic("s22_t2", "m2_transition", [("Search pays the bills…", 70, "Search pay
 # ====================================================================== PART 3: the second screen
 card("s23_c3", "m3_card", "The Second Screen", "YouTube and subscriptions")
 stage("s24_yt", "m3_yt", {
-    "zones": [Z("livingroom", tvX=0.62, adAt=C("before and during videos"), adUntil=C("Those ads brought in", 2.5))], "worldW": 2400,
+    "zones": [Z("livingroom", tvX=0.468, adAt=C("before and during videos"), adUntil=C("Those ads brought in", 2.5))], "worldW": 2400,
     "cam": [{"at": 0, "x": 1300, "y": 450, "zoom": 1.1}, {"at": C("Those ads brought in"), "x": 1150, "y": 500, "zoom": 0.95, "dur": 2.0}], "drift": 2,
-    "items": [it("person", x=380, at=0.2, pose="sit", color="#FF8A65", skin=0, hair=3, poses=[[0, "sit"]]),
-              it("person", x=500, at=0.35, pose="sit", color="#7BD389", skin=2, hair=1, scale=0.75),
+    "items": [it("person", x=290, y=810, at=0.2, pose="sit", color="#FF8A65", skin=0, hair=3),
+              it("person", x=420, y=810, at=0.35, pose="sit", color="#7BD389", skin=2, hair=1, scale=0.75),
               it("counter", x=600, y=200, at=C("Those ads brought in"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [{"cue": "Add subscriptions"}, 40.4]], text="YOUTUBE ADS, 2025 (10-K)", scale=0.85),
               it("sign", x=600, y=380, text="> $60BN WITH SUBSCRIPTIONS (COMPANY)", at=C("Add subscriptions"), color="#FFE0B2", size=26)]},
     sources=["tenk", "q4rel"])
 stage("s25_tv", "m3_tv", {
-    "zones": [Z("livingroom", tvX=0.62, adAt=C("made up over one-third"), adUntil=C("made up over one-third", 5.0))], "worldW": 2400,
+    "zones": [Z("livingroom", tvX=0.468, adAt=C("made up over one-third"), adUntil=C("made up over one-third", 5.0))], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 520, "zoom": 0.95}, {"at": C("the living room"), "x": 1400, "y": 470, "zoom": 1.12, "dur": 2.2}], "drift": 1,
-    "items": [it("person", x=380, at=0.0, pose="sit", color="#FF8A65", skin=0, hair=3),
-              it("person", x=500, at=0.0, pose="sit", color="#7BD389", skin=2, hair=1, scale=0.75),
+    "items": [it("person", x=290, y=810, at=0.0, pose="sit", color="#FF8A65", skin=0, hair=3),
+              it("person", x=420, y=810, at=0.0, pose="sit", color="#7BD389", skin=2, hair=1, scale=0.75),
               it("person", x=700, at=C("people watching on a television"), pose="carry", box="POPCORN", color="#B39DDB", skin=1, hair=4),
               it("letters", x=1490, y=110, text="> 1/3 OF YOUTUBE AD REVENUE", at=C("made up over one-third"), size=48, color="gold"),
               it("sign", x=1490, y=210, text="WATCHED ON A TV · Q3 2026 (EARNINGS CALL)", at=C("in the quarter"), color="#FFFFFF", size=24)]},
@@ -259,7 +262,7 @@ stage("s27_subs", "m3_subs", {
     "zones": [Z("suburb")], "worldW": 2400,
     "cam": CAM(C("Together"), x1=1250, y1=500, z1=1.0, x0=900), "drift": 2,
     "items": [it("home", x=420, at=0.2, scale=0.7), it("home", x=900, at=0.35, scale=0.7, color="#E1F5FE"),
-              it("clock", x=660, y=260, at=C("Subscriptions, platforms"), period=2.5, scale=0.8),
+              it("clock", x=660, y=260, at=C("Subscriptions, platforms"), period=2.5, scale=0.8, text="RENEWS"),
               it("sign", x=1400, y=130, text="PREMIUM · YOUTUBE TV · SUNDAY TICKET", at=C("YouTube Premium and TV"), color="#BBDEFB", size=24),
               it("sign", x=1400, y=220, text="GOOGLE ONE · PLAY APPS · OWN PHONES", at=C("Google One storage"), color="#C8E6C9", size=24),
               it("counter", x=1400, y=380, at=C("Together"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [{"cue": "last year"}, 48.0]], text="SUBSCRIPTIONS, PLATFORMS & DEVICES, 2025", scale=0.85),
@@ -274,14 +277,14 @@ stage("s30_cloud", "m4_cloud", {
     "zones": [Z("serverfarm")], "worldW": 2400,
     "cam": [{"at": 0, "x": 1000, "y": 460, "zoom": 1.05}, {"at": C("In twenty twenty-three"), "x": 1000, "y": 470, "zoom": 1.0, "dur": 1.6}], "drift": 1,
     "items": [it("letters", x=1000, y=90, text="GOOGLE CLOUD: RENTING COMPUTERS", at=0.2, until=C("In twenty twenty-three"), size=50, color="gold"),
-              it("jars", x=1000, y=800, at=C("In twenty twenty-three"), gap=400, title="CLOUD: OPERATING PROFIT PER $1 OF SALES",
+              it("jars", x=1000, y=780, panel=True, at=C("In twenty twenty-three"), gap=400, title="CLOUD: OPERATING PROFIT PER $1 OF SALES",
                  items=[{"label": "2023", "value": 5.2, "color": "#2E6FD8", "at": C("it kept about five cents"), "display": "≈ 5¢"},
                         {"label": "2025", "value": 23.7, "color": "#2E6FD8", "at": C("In twenty twenty-five"), "display": "≈ 24¢"},
                         {"label": "Q3 2026", "value": 36.2, "color": "#22A06B", "at": C("In the latest quarter"), "display": "≈ 36¢"}],
                  note="OUR CALCULATION FROM ALPHABET'S SEGMENT RESULTS (10-K, Q3 2026 RELEASE)")]},
     sources=["tenk", "q3rel"])
 stage("s31_q3", "m4_q3", {
-    "zones": [Z("serverfarm", buildAt=0.4, buildX=0.62)], "worldW": 2400,
+    "zones": [Z("serverfarm", buildAt=0.4, buildX=0.48)], "worldW": 2400,
     "cam": [{"at": 0, "x": 900, "y": 470, "zoom": 1.0}, {"at": C("The company says"), "x": 1250, "y": 440, "zoom": 0.92, "dur": 2.2}], "drift": 2,
     "items": [it("counter", x=640, y=180, at=0.3, prefix="$", suffix="BN", decimals=1, steps=[[0, 15.2], [{"cue": "Cloud revenue rose"}, 15.2], [{"cue": "The company says"}, 30.7]], text="CLOUD REVENUE · Q3 2025 → Q3 2026", scale=1.0),
               it("letters", x=640, y=400, text="+103%", at=C("one hundred and three percent"), size=80, color="gold"),
@@ -305,7 +308,7 @@ stage("s32_race", "m4_race", {
 stage("s33_pichai", "m4_pichai", {
     "zones": [Z("campus")], "worldW": 2400,
     "cam": CAM(C("That is the company's"), x1=1150, y1=480, z1=1.05, y0=500, z0=1.0), "drift": 2,
-    "items": [it("caricature", x=700, at=0.2, who="pichai", pose="talk", label="SUNDAR PICHAI · CEO", labelUntil=C("That is the company's", 1.5), scale=1.05),
+    "items": [it("caricature", x=700, y=820, at=0.2, who="pichai", pose="talk", label="SUNDAR PICHAI · CEO", labelUntil=C("That is the company's", 1.5), scale=1.3),
               it("letters", x=1350, y=140, text="'HALF-TRILLION-DOLLAR RUN RATE'", at=C("half-trillion-dollar"), size=46, color="gold"),
               it("counter", x=1350, y=320, at=C("half-trillion-dollar", 0.5), prefix="≈ $", suffix="BN", steps=[[0, 0], [{"cue": "That is the company's"}, 510]], text="Q3 2026 REVENUE × 4 (OUR CALC.)", scale=0.85),
               it("sign", x=1350, y=500, text="THE COMPANY'S OWN DESCRIPTION", at=C("own description"), color="#FFFFFF", size=26)]},
@@ -336,9 +339,9 @@ kinetic("s36_t4", "m4_transition", [("Enormous profits…", 74, "enormous profit
 # ====================================================================== PART 5: where the cash goes
 card("s37_c5", "m5_card", "Where the Cash Goes", "Following the money out")
 stage("s38_2025", "m5_2025", {
-    "zones": [Z("reservoir", damX=0.78)], "worldW": 2400,
+    "zones": [Z("reservoir", damX=0.55)], "worldW": 2400,
     "cam": [{"at": 0, "x": 960, "y": 500, "zoom": 1.0}], "drift": 1,
-    "items": [it("cashfalls", x=200, y=220, w=1300, h=470, at=0.1, max=180, title="CASH, 2025 ($BN, 10-K)",
+    "items": [it("cashfalls", x=160, y=220, w=1300, h=470, at=0.1, max=180, title="CASH, 2025 ($BN, 10-K)",
                  steps=[{"label": "FROM OPERATIONS", "value": 164.7, "kind": "total", "at": C("Operations brought in"), "display": "$164.7BN", "color": "#2E6FD8"},
                         {"label": "CAPEX", "sub": "data centers, servers", "value": 91.4, "kind": "out", "at": C("went into capital spending"), "display": "−$91.4BN"},
                         {"label": "BUYBACKS", "value": 45.7, "kind": "out", "at": C("bought back shares"), "display": "−$45.7BN", "color": "#F2A900"},
@@ -354,7 +357,7 @@ stage("s39_fcf", "m5_fcf", {
               it("sign", x=760, y=420, text="≈ 3/4 BACK TO SHAREHOLDERS (OUR CALC.)", at=C("roughly three quarters"), color="#FFE0B2", size=28)]},
     sources=["tenk"])
 stage("s40_2026", "m5_2026", {
-    "zones": [Z("reservoir", damX=0.78, dryAt=C("More than the"))], "worldW": 2400,
+    "zones": [Z("reservoir", damX=0.55, dryAt=C("More than the"))], "worldW": 2400,
     "cam": [{"at": 0, "x": 960, "y": 500, "zoom": 1.0}], "drift": 1,
     "items": [it("cashfalls", x=200, y=220, w=900, h=470, at=0.1, max=180, min=-20, title="CASH, JAN–SEP 2026 ($BN, 10-Q)",
                  steps=[{"label": "FROM OPERATIONS", "value": 127.1, "kind": "total", "at": C("In the first nine months"), "display": "$127.1BN", "color": "#2E6FD8"},
@@ -366,16 +369,16 @@ stage("s40_2026", "m5_2026", {
     sources=["tenq3", "call"])
 stage("s41_raise", "m5_raise", {
     "zones": [Z("exchange")], "worldW": 2400,
-    "cam": CAM(C("In nine months"), x1=1250, y1=500, z1=1.0), "drift": 2,
+    "cam": CAM(C("In nine months"), x1=1060, y1=500, z1=1.0, x0=1060, y0=540, z0=1.05), "drift": 1,
     "items": [it("letters", x=1000, y=110, text="FROM HANDING CASH BACK… TO RAISING IT", at=0.3, size=46, color="gold"),
-              it("sign", x=700, y=260, text="+ $42.9BN NEW SHARES", at=C("of new shares"), color="#C8E6C9", size=32),
-              it("sign", x=1250, y=260, text="+ $19.0BN PREFERRED", at=C("of preferred stock"), color="#BBDEFB", size=32),
-              it("sign", x=1800, y=260, text="+ $85.2BN DEBT ISSUED", at=C("of new debt"), color="#FFE0B2", size=32),
-              it("sign", x=1250, y=400, text="JAN–SEP 2026 (10-Q)", at=C("of new debt", 0.5), color="#FFFFFF", size=24)]},
+              it("sign", x=560, y=260, text="+ $42.9BN NEW SHARES", at=C("of new shares"), color="#C8E6C9", size=32),
+              it("sign", x=1060, y=260, text="+ $19.0BN PREFERRED", at=C("of preferred stock"), color="#BBDEFB", size=32),
+              it("sign", x=1560, y=260, text="+ $85.2BN DEBT ISSUED", at=C("of new debt"), color="#FFE0B2", size=32),
+              it("sign", x=1060, y=400, text="JAN–SEP 2026 (10-Q)", at=C("of new debt", 0.5), color="#FFFFFF", size=24)]},
     sources=["tenq3"])
 add("p42_cash", "m5_draw", "engine_draw", {
     "title": "Cash in vs data centers", "board": BOARD, "draw_start": C("Twenty twenty-five"), "speed": 1400, "push": 0.003,
-    "enter": {"from": 2200, "to": 1720, "at": 0.2, "dur": 1.3},
+    "enter": {"from": -260, "to": 270, "at": 0.2, "dur": 1.3},
     "strokes": [
         {"d": "M 600 760 L 1500 760", "color": "ink", "width": 5, "start": C("Let me draw")},
         {"d": "M 640 760 L 640 430 L 800 430 L 800 760 Z", "color": "accent2", "width": 3, "fill": "accent2", "fillOpacity": 0.3, "kind": "bar", "start": C("Cash flows in"), "label": lbl("2025 CASH IN $165BN", 720, 410, 18, "accent2")},
@@ -384,7 +387,7 @@ add("p42_cash", "m5_draw", "engine_draw", {
         {"d": "M 1300 760 L 1300 496 L 1460 496 L 1460 760 Z", "color": "risk", "width": 3, "fill": "risk", "fillOpacity": 0.3, "kind": "bar", "start": C("Data centers take more"), "label": lbl("CAPEX $132BN", 1380, 476, 18, "risk")},
         {"d": arrow((1560, 380), (1470, 470)), "color": "accent3", "width": 5, "kind": "arrow", "start": C("new money comes in"), "label": lbl("+ OUTSIDE MONEY", 1600, 360, 18, "accent3")},
     ],
-    "actions": [{"kind": "point", "at": C("Data centers take more", 0.4), "dur": 1.4, "target": [1380, 560]}],
+    "actions": [{"kind": "point", "at": C("new money comes in", 0.3), "dur": 1.4, "target": [1600, 360]}],
     "scale": 0.86, "floor": 1040}, sources=["tenk", "tenq3"])
 kinetic("s43_t5", "m5_transition", [("A giant bet on AI…", 72, "It is a giant bet", None, False),
                                     ("…which brings us to the threat", 66, "Which brings us", "gold", False)])
@@ -444,7 +447,7 @@ stage("s49_payoff", "payoff", {
               it("sign", x=4200, y=120, text="A SECOND SCREEN + A STEADY DRIP", at=C("YouTube adds"), color="#BBDEFB", size=30),
               it("letters", x=6300, y=120, text="CLOUD: A SECOND ENGINE", at=C("Cloud has turned"), until=C("The lesson"), size=50, color="gold"),
               it("letters", x=6300, y=120, text="THE REAL PRODUCT: A DEFAULT", at=C("It is a default"), size=56, color="gold"),
-              it("sign", x=6300, y=250, text="2026 CAPEX GUIDE > 2× 2025", at=C("more than twice"), color="#FFCDD2", size=32),
+              it("sign", x=6300, y=240, text="2026 CAPEX GUIDE > 2× 2025", at=C("more than twice"), color="#FFCDD2", size=32),
               it("searchbar", x=6300, y=380, w=900, at=C("the next default"), typeAt=C("the next default", 0.3), query="ask anything…", scale=0.8)]},
     sources=["tenk", "call"])
 add("s50_end", "teaser", "end_card", {"words": ["Next time:", "another hidden link of the world economy"], "brand": "The Hidden Economics",

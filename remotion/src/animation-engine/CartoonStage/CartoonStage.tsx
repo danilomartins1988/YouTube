@@ -4853,12 +4853,13 @@ const barrace: ItemFn = (a, {t}, i) => {
 
 /** MARGIN JARS (Ep 54): one glass jar per business showing how many cents of each sales dollar it keeps as operating
  *  profit. `items` [{label, value (cents; negative = loss), color, at, display}]. Coins rain in and the liquid level
- *  rises to value%; a negative jar cracks, turns red and leaks. `title`; `x`,`y` = centre baseline; `gap`. */
+ *  rises to value%; a negative jar cracks, turns red and leaks. `title`; `x`,`y` = centre baseline; `gap`; `panel` backing card. */
 const jars: ItemFn = (a, {t}, i) => {
   const app = pop(t, a.at ?? 0, 0.5);
   if (app <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
   const its: any[] = a.items || [], gap = a.gap ?? 380, x0 = ((a.x as number) ?? 960) - gap * (its.length - 1) / 2, y = (a.y as number) ?? 800, JH = 340, JW = 220, ink = a.dark ? '#FFFFFF' : OL;
   return <g key={'jr' + i} opacity={app}>
+    {a.panel && <rect x={x0 - gap / 2 - 20} y={y - JH - 210} width={gap * its.length + 40} height={JH + 380} rx={30} fill="#FFFFFF" opacity={0.82} stroke={OL} strokeWidth={5} />}
     {a.title && <T x={(a.x as number) ?? 960} y={y - JH - 150} s={38} c={ink}>{a.title}</T>}
     {its.map((it, k) => { const at = it.at ?? (a.at ?? 0) + 0.5 + k * 0.8, u = E.out(clamp((t - at) / 1.6)), neg = it.value < 0, lvl = Math.min(100, Math.abs(it.value)) / 100 * u;
       const cx = x0 + k * gap, c = neg ? '#E5483B' : col(it.color), h = (JH - 40) * (neg ? 0.12 : lvl), shake = neg && u > 0.5 ? 3 * Math.sin(t * 30) * (1 - win(t, at + 1, 1.5)) : 0;

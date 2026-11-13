@@ -31,7 +31,7 @@ scenes:
     items:
     - kind: counter
       x: 1000
-      y: 200
+      y: 240
       at: 0.05
       prefix: ≈ $
       suffix: ' BILLION'
@@ -85,9 +85,8 @@ scenes:
       scale: 0.9
       until:
         cue: That number comes
-        offset: 0.6
     - kind: docs
-      x: 760
+      x: 640
       y: 700
       at:
         cue: That number comes
@@ -184,8 +183,8 @@ scenes:
       at:
         cue: runs an auction
       pose: talk
-      suit: true
       tie: true
+      color: '#28407A'
       skin: 2
       hair: 4
     - kind: counter
@@ -226,6 +225,7 @@ scenes:
     - set: tollroad
       x0: -1600
       x1: 4600
+      cityX: 0.58
       booths:
       - PHONES
       - BROWSERS
@@ -279,7 +279,7 @@ scenes:
       x1: 4600
       buildAt:
         cue: why Google now spends
-      buildX: 0.7
+      buildX: 0.5
     worldW: 2400
     cam:
     - at: 0
@@ -288,7 +288,7 @@ scenes:
       zoom: 1.0
     - at:
         cue: why Google now spends
-      x: 1350
+      x: 1100
       y: 470
       zoom: 0.95
       dur: 2.4
@@ -370,6 +370,7 @@ scenes:
       h: 520
       w: 260
       color: '#2E6FD8'
+      text: SERVICES
       growAt:
         cue: Google Services
     - kind: sign
@@ -386,6 +387,7 @@ scenes:
       h: 110
       w: 220
       color: '#22A06B'
+      text: CLOUD
       growAt:
         cue: Google Cloud
     - kind: sign
@@ -402,6 +404,7 @@ scenes:
       h: 14
       w: 160
       color: '#F2A900'
+      text: BETS
       growAt:
         cue: And the Other Bets
     - kind: sign
@@ -429,7 +432,7 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: shop
+    - set: office
       x0: -1600
       x1: 4600
     worldW: 2400
@@ -592,8 +595,8 @@ scenes:
       at:
         cue: Google runs an auction
       pose: talk
-      suit: true
       tie: true
+      color: '#28407A'
       skin: 2
       hair: 4
     - kind: sign
@@ -665,7 +668,7 @@ scenes:
       color: '#BBDEFB'
       size: 26
     - kind: person
-      x: 360
+      x: 250
       at: 0.0
       pose: paddle
       paddle: $2.00
@@ -676,7 +679,7 @@ scenes:
       paddle2At: &id001
         cue: multiplies each bid
     - kind: person
-      x: 620
+      x: 550
       at: 0.15
       pose: paddle
       paddle: $1.50
@@ -688,7 +691,7 @@ scenes:
       winAt:
         cue: So a cheaper ad
     - kind: person
-      x: 880
+      x: 850
       at: 0.3
       pose: paddle
       paddle: $1.20
@@ -701,21 +704,21 @@ scenes:
       x: 1056
       at: 0.0
       pose: talk
-      suit: true
       tie: true
+      color: '#28407A'
       skin: 2
       hair: 4
     - kind: sign
-      x: 1650
-      y: 420
-      text: 0.10 · 0.30 · 0.12 (ILLUSTRATIVE)
+      x: 1056
+      y: 340
+      text: SCORES 0.10 · 0.30 · 0.12 (ILLUSTRATIVE)
       at:
         cue: the predicted chance
       color: '#FFFFFF'
       size: 24
     - kind: sign
-      x: 620
-      y: 330
+      x: 660
+      y: 440
       text: CHEAPER BID WINS
       at:
         cue: can beat an expensive ad
@@ -730,7 +733,7 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: shop
+    - set: district
       x0: -1600
       x1: 4600
     worldW: 2400
@@ -875,7 +878,8 @@ scenes:
       at:
         cue: Google's own studies
       pose: read
-      suit: true
+      tie: true
+      color: '#28407A'
       skin: 0
       hair: 1
   sources:
@@ -890,6 +894,7 @@ scenes:
     - set: tollroad
       x0: -1600
       x1: 4600
+      cityX: 0.58
       booths:
       - PHONES
       - BROWSERS
@@ -1137,6 +1142,7 @@ scenes:
     - set: tollroad
       x0: -1600
       x1: 4600
+      cityX: 0.58
       booths:
       - BROWSERS
       - PHONE MAKERS
@@ -1201,6 +1207,7 @@ scenes:
     - set: tollroad
       x0: -1600
       x1: 4600
+      cityX: 0.58
       booths:
       - iPHONE · SAFARI
       plazaX: 0.36
@@ -1325,6 +1332,19 @@ scenes:
       - cue: Google is a monopolist
         offset: 0.2
       scale: 1.0
+    - kind: person
+      x: 420
+      at: 0.4
+      pose: clipboard
+      tie: true
+      color: '#455A64'
+      skin: 1
+      hair: 0
+      poses:
+      - - cue: Google is a monopolist
+        - shock
+      - - cue: these exclusive deals
+        - clipboard
   sources:
   - mehta
   assets:
@@ -1392,6 +1412,24 @@ scenes:
         cue: could cripple
       color: '#FFFFFF'
       size: 26
+    - kind: person
+      x: 980
+      at: 0.4
+      pose: read
+      tie: true
+      color: '#455A64'
+      skin: 2
+      hair: 1
+    - kind: person
+      x: 1850
+      at:
+        cue: Both sides have appealed
+      pose: clipboard
+      tie: true
+      color: '#6D4C41'
+      skin: 0
+      hair: 4
+      flip: true
     - kind: sign
       x: 1350
       y: 550
@@ -1478,7 +1516,7 @@ scenes:
       steps:
       - - 0
         - 0
-      - - cue: and it is shrinking
+      - - cue: less than the year before
         - 29.8
       text: GOOGLE NETWORK, 2025 (10-K)
       scale: 0.85
@@ -1487,7 +1525,7 @@ scenes:
       y: 440
       text: DOWN $567M FROM 2024
       at:
-        cue: and it is shrinking
+        cue: less than the year before
       color: '#FFCDD2'
       size: 30
   sources:
@@ -1505,12 +1543,12 @@ scenes:
     speed: 1400
     push: 0.003
     enter:
-      from: 2200
-      to: 1720
+      from: -260
+      to: 270
       at: 0.2
       dur: 1.3
     strokes:
-    - d: M 560 420 L 790 420 L 790 570 L 560 570 Z
+    - d: M 560 470 L 790 470 L 790 620 L 560 620 Z
       color: ink
       width: 6
       kind: box
@@ -1519,17 +1557,17 @@ scenes:
       label:
         text: ADVERTISER $1
         x: 675
-        y: 503
+        y: 553
         size: 24
         color: ink
         anchor: middle
-    - d: M 795 495 Q 870 495 945 495 M 923 505 L 945 495 L 923 485
+    - d: M 795 545 Q 845 545 895 545 M 873 555 L 895 545 L 873 535
       color: accent
       width: 5
       kind: arrow
       start:
         cue: It goes into
-    - d: M 950 420 L 1210 420 L 1210 570 L 950 570 Z
+    - d: M 900 470 L 1160 470 L 1160 620 L 900 620 Z
       color: accent2
       width: 6
       kind: box
@@ -1538,18 +1576,18 @@ scenes:
         offset: 0.4
       label:
         text: GOOGLE AUCTION
-        x: 1080
-        y: 503
+        x: 1030
+        y: 553
         size: 24
         color: accent2
         anchor: middle
-    - d: M 1080 575 Q 1080 638 1080 700 M 1070 678 L 1080 700 L 1090 678
+    - d: M 1165 500 Q 1228 445 1290 390 M 1281 412 L 1290 390 L 1267 396
       color: risk
       width: 5
       kind: arrow
       start:
         cue: Out of that box
-    - d: M 960 705 L 1200 705 L 1200 815 L 960 815 Z
+    - d: M 1295 290 L 1545 290 L 1545 400 L 1295 400 Z
       color: risk
       width: 6
       kind: box
@@ -1557,31 +1595,31 @@ scenes:
         cue: goes to the partners
       label:
         text: PARTNERS ≈ 20¢
-        x: 1080
-        y: 768
+        x: 1420
+        y: 353
         size: 22
         color: risk
         anchor: middle
-    - d: M 1215 495 Q 1288 495 1360 495 M 1338 505 L 1360 495 L 1338 485
+    - d: M 1165 590 Q 1228 640 1290 690 M 1267 685 L 1290 690 L 1280 668
       color: accent3
       width: 5
       kind: arrow
       start:
         cue: Google keeps the rest
-    - d: M 1460 500 L 1460 500
+    - d: M 1295 650 L 1545 650 L 1545 760 L 1295 760 Z
       color: accent3
-      width: 1
+      width: 6
+      kind: box
       start:
         cue: Google keeps the rest
         offset: 0.3
       label:
-        text: KEEPS ≈ 80¢
-        x: 1470
-        y: 505
-        size: 26
+        text: GOOGLE ≈ 80¢
+        x: 1420
+        y: 713
+        size: 22
         color: accent3
         anchor: middle
-      kind: stroke
     actions:
     - kind: point
       at:
@@ -1589,8 +1627,8 @@ scenes:
         offset: 0.3
       dur: 1.4
       target:
-      - 1080
-      - 760
+      - 1420
+      - 330
     scale: 0.86
     floor: 1040
   sources:
@@ -1634,7 +1672,7 @@ scenes:
     - set: livingroom
       x0: -1600
       x1: 4600
-      tvX: 0.62
+      tvX: 0.468
       adAt:
         cue: before and during videos
       adUntil:
@@ -1655,17 +1693,16 @@ scenes:
     drift: 2
     items:
     - kind: person
-      x: 380
+      x: 290
+      y: 810
       at: 0.2
       pose: sit
       color: '#FF8A65'
       skin: 0
       hair: 3
-      poses:
-      - - 0
-        - sit
     - kind: person
-      x: 500
+      x: 420
+      y: 810
       at: 0.35
       pose: sit
       color: '#7BD389'
@@ -1708,7 +1745,7 @@ scenes:
     - set: livingroom
       x0: -1600
       x1: 4600
-      tvX: 0.62
+      tvX: 0.468
       adAt:
         cue: made up over one-third
       adUntil:
@@ -1729,14 +1766,16 @@ scenes:
     drift: 1
     items:
     - kind: person
-      x: 380
+      x: 290
+      y: 810
       at: 0.0
       pose: sit
       color: '#FF8A65'
       skin: 0
       hair: 3
     - kind: person
-      x: 500
+      x: 420
+      y: 810
       at: 0.0
       pose: sit
       color: '#7BD389'
@@ -1889,6 +1928,7 @@ scenes:
         cue: Subscriptions, platforms
       period: 2.5
       scale: 0.8
+      text: RENEWS
     - kind: sign
       x: 1400
       y: 130
@@ -1995,7 +2035,8 @@ scenes:
       color: gold
     - kind: jars
       x: 1000
-      y: 800
+      y: 780
+      panel: true
       at:
         cue: In twenty twenty-three
       gap: 400
@@ -2034,7 +2075,7 @@ scenes:
       x0: -1600
       x1: 4600
       buildAt: 0.4
-      buildX: 0.62
+      buildX: 0.48
     worldW: 2400
     cam:
     - at: 0
@@ -2208,6 +2249,7 @@ scenes:
     items:
     - kind: caricature
       x: 700
+      y: 820
       at: 0.2
       who: pichai
       pose: talk
@@ -2215,7 +2257,7 @@ scenes:
       labelUntil:
         cue: That is the company's
         offset: 1.5
-      scale: 1.05
+      scale: 1.3
     - kind: letters
       x: 1350
       y: 140
@@ -2455,7 +2497,7 @@ scenes:
     - set: reservoir
       x0: -1600
       x1: 4600
-      damX: 0.78
+      damX: 0.55
     worldW: 2400
     cam:
     - at: 0
@@ -2465,7 +2507,7 @@ scenes:
     drift: 1
     items:
     - kind: cashfalls
-      x: 200
+      x: 160
       y: 220
       w: 1300
       h: 470
@@ -2609,7 +2651,7 @@ scenes:
     - set: reservoir
       x0: -1600
       x1: 4600
-      damX: 0.78
+      damX: 0.55
       dryAt:
         cue: More than the
     worldW: 2400
@@ -2689,16 +2731,16 @@ scenes:
     worldW: 2400
     cam:
     - at: 0
-      x: 1000
-      y: 520
-      zoom: 1.0
+      x: 1060
+      y: 540
+      zoom: 1.05
     - at:
         cue: In nine months
-      x: 1250
+      x: 1060
       y: 500
       zoom: 1.0
       dur: 1.8
-    drift: 2
+    drift: 1
     items:
     - kind: letters
       x: 1000
@@ -2708,7 +2750,7 @@ scenes:
       size: 46
       color: gold
     - kind: sign
-      x: 700
+      x: 560
       y: 260
       text: + $42.9BN NEW SHARES
       at:
@@ -2716,7 +2758,7 @@ scenes:
       color: '#C8E6C9'
       size: 32
     - kind: sign
-      x: 1250
+      x: 1060
       y: 260
       text: + $19.0BN PREFERRED
       at:
@@ -2724,7 +2766,7 @@ scenes:
       color: '#BBDEFB'
       size: 32
     - kind: sign
-      x: 1800
+      x: 1560
       y: 260
       text: + $85.2BN DEBT ISSUED
       at:
@@ -2732,7 +2774,7 @@ scenes:
       color: '#FFE0B2'
       size: 32
     - kind: sign
-      x: 1250
+      x: 1060
       y: 400
       text: JAN–SEP 2026 (10-Q)
       at:
@@ -2755,8 +2797,8 @@ scenes:
     speed: 1400
     push: 0.003
     enter:
-      from: 2200
-      to: 1720
+      from: -260
+      to: 270
       at: 0.2
       dur: 1.3
     strokes:
@@ -2842,12 +2884,12 @@ scenes:
     actions:
     - kind: point
       at:
-        cue: Data centers take more
-        offset: 0.4
+        cue: new money comes in
+        offset: 0.3
       dur: 1.4
       target:
-      - 1380
-      - 560
+      - 1600
+      - 360
     scale: 0.86
     floor: 1040
   sources:
@@ -3002,6 +3044,7 @@ scenes:
     - set: tollroad
       x0: -1600
       x1: 4600
+      cityX: 0.58
       booths:
       - PHONES
       - BROWSERS
@@ -3371,7 +3414,7 @@ scenes:
       color: gold
     - kind: sign
       x: 6300
-      y: 250
+      y: 240
       text: 2026 CAPEX GUIDE > 2× 2025
       at:
         cue: more than twice
