@@ -1,0 +1,328 @@
+# Documentary (target 11-13 min). Five-part writing structure kept INTERNAL (never narrated or shown as missions).
+# Arc (owner, 2026-11-13): the auction behind every search -> the toll booths (TAC, Apple default) -> YouTube and
+# subscriptions -> Cloud's turn to profit -> where the cash goes -> the threat (AI answers, courts) -> what it means.
+# Numbers come from sources.yaml via {{placeholders}}. Apple figure attributed to the court ("an estimated").
+# Not a valuation episode: no share price, no multiples, no buy/sell language.
+logline: Google is famous for free search, but its money comes from an auction that runs behind every query, tolls it pays
+  to whoever owns the search box, and a cloud business that has suddenly become a second engine. Now it is spending more than
+  its operations bring in to win the next default.
+title: How Google Actually Makes Money
+segments:
+- id: h_open
+  chapter: The price of a default
+  narration: In twenty twenty-two, Google paid Apple an estimated {{apple}}. Not for a factory. Not for a company. For a setting.
+    The search box that opens when you tap Safari on an iPhone. That number comes from a federal judge's ruling.
+  claims:
+  - apple
+- id: h_twist
+  chapter: The price of a default
+  narration: Why pay that much for a default? Because behind every search box runs an auction, and that auction is Google's
+    money machine. Last year, Alphabet, Google's parent, took in {{rev}}. By our calculation, about {{rev.perday_spoken}}
+    a day.
+  claims:
+  - rev
+- id: h_question
+  chapter: The price of a default
+  narration: So how does Google actually make its money? Who gets paid along the way? And where does all that cash go?
+  claims: []
+  analysis: true
+  source_note: Hook question built from the sourced facts.
+- id: h_promise
+  chapter: The price of a default
+  narration: By the end of this video, you will know how the auction prices a click, who collects the tolls, and why Google
+    now spends more than its operations bring in.
+  claims:
+  - cash26
+  analysis: true
+  source_note: Promise of the episode; the last clause refers to the nine-month 2026 capex vs operating cash (10-Q).
+- id: m1_card
+  chapter: The auction
+  narration: ''
+  claims: []
+- id: m1_map
+  chapter: The auction
+  narration: Start with the map. Google Services, meaning Search, YouTube, Android, Chrome, Play and its own devices, brought
+    in about {{rev.services_spoken}} last year. Google Cloud, about {{rev.cloud_spoken}}. And the Other Bets, like the self-driving
+    company Waymo, about {{rev.bets_spoken}}.
+  claims:
+  - rev
+- id: m1_ads
+  chapter: The auction
+  narration: More than seventy percent of it came from advertising. And the biggest piece by far is Search, at about {{ads}}.
+    More than half of all Alphabet's revenue, from the little ads above your results.
+  claims:
+  - rev
+  - ads
+- id: m1_bids
+  chapter: The auction
+  narration: Here is how it works. You type running shoes. Advertisers have already bid on those words, and Google runs an
+    auction in a fraction of a second. But the highest bid does not automatically win.
+  claims:
+  - auction
+- id: m1_quality
+  chapter: The auction
+  narration: According to the court's findings, Google multiplies each bid by the predicted chance that you will click, a
+    score between zero and one. So a cheaper ad that people want can beat an expensive ad nobody clicks.
+  claims:
+  - auction
+- id: m1_second
+  chapter: The auction
+  narration: And the winner does not pay its own bid. Google's text-ad auction, the judge wrote, is a classic second-price
+    auction. The winner pays {{auction}}. That is the price of your click.
+  claims:
+  - auction
+- id: m1_knobs
+  chapter: The auction
+  narration: There is a twist. The same ruling describes pricing knobs, quiet tweaks to the auction with names like squashing,
+    that raise what winners pay. Google's own studies, cited by the court, showed it could raise prices that way without losing
+    advertisers.
+  claims:
+  - auction
+- id: m1_volume
+  chapter: The auction
+  narration: So the machine has two dials. How many ads get clicked, and the price of each click. Last year, paid clicks rose
+    {{clicks}}, and the average cost per click {{clicks.cpc25_spoken}}. In the latest quarter, clicks rose {{clicks.c26_spoken}},
+    and price {{clicks.cpc26_spoken}}.
+  claims:
+  - clicks
+- id: m1_draw
+  chapter: The auction
+  narration: Let me draw the auction. Here is your search. Here are the bidders, each with a bid. Each bid is multiplied by
+    the chance you click. The top score wins the slot, and pays just enough to beat the runner-up.
+  claims:
+  - auction
+  analysis: true
+  source_note: Simplified diagram of the auction described in the court's findings.
+- id: m1_transition
+  chapter: The auction
+  narration: But an auction needs searchers. And to get them, Google pays tolls.
+  claims: []
+- id: m2_card
+  chapter: The toll booths
+  narration: ''
+  claims: []
+- id: m2_tac
+  chapter: The toll booths
+  narration: Google calls them traffic acquisition costs. Payments to whoever sends it searchers or shows its ads. Browser
+    makers, phone makers, mobile carriers and website owners. Last year they came to {{tac}}. About {{tac.rate_spoken}} of
+    every advertising dollar.
+  claims:
+  - tac
+- id: m2_apple
+  chapter: The toll booths
+  narration: The biggest toll booth sits on the iPhone. The court found that Google pays Apple a share of the ad revenue from
+    searches in Safari, in exchange for being the default. In twenty twenty-two, that share was an estimated {{apple}}. More
+    than all of Google's other revenue-share payments combined.
+  claims:
+  - apple
+- id: m2_total
+  chapter: The toll booths
+  narration: Add Mozilla, the Android phone makers and the big carriers, and Google paid out {{apple.total21_spoken}} in revenue
+    share in twenty twenty-one. The judge ruled that Google is a monopolist, and that these exclusive deals helped keep it
+    one.
+  claims:
+  - apple
+- id: m2_remedy
+  chapter: The toll booths
+  narration: Yet the payments did not stop. In the remedies decision, the court {{remedy}} and ordered Google to share some
+    search data with rivals. But it did not ban paying partners for placement. Cutting the money off, the judge wrote, could
+    cripple some of them. Both sides have appealed.
+  claims:
+  - remedy
+- id: m2_network
+  chapter: The toll booths
+  narration: There is a second toll road, running the other way. Through AdSense, Google places ads on other people's websites
+    and apps, and hands most of that money to the owners. That network brought in {{net}} last year, and it is shrinking.
+  claims:
+  - net
+  - tac
+- id: m2_draw
+  chapter: The toll booths
+  narration: Let me draw the toll road. Here is an advertiser's dollar. It goes into Google's auction. Out of that box, about
+    {{tac.rate_spoken}} goes to the partners who brought the searcher. Google keeps the rest.
+  claims:
+  - tac
+  analysis: true
+  source_note: Diagram of the reported 2025 TAC rate (20.3% of advertising revenue).
+- id: m2_transition
+  chapter: The toll booths
+  narration: Search pays the bills. But Google's second-biggest audience is not typing. It is watching.
+  claims: []
+- id: m3_card
+  chapter: The second screen
+  narration: ''
+  claims: []
+- id: m3_yt
+  chapter: The second screen
+  narration: YouTube sells ads before and during videos, and between Shorts. Those ads brought in {{yt}} last year. Add subscriptions,
+    and Google says YouTube passed {{yt.total_spoken}}.
+  claims:
+  - yt
+- id: m3_tv
+  chapter: The second screen
+  narration: And the screen is moving to the couch. On its latest call, Google said the living room, people watching on a
+    television, made up over one-third of YouTube's ad revenue in the quarter.
+  claims:
+  - yt
+- id: m3_creators
+  chapter: The second screen
+  narration: But YouTube does not make most of what it shows. It shares money with creators and pays media companies, and
+    the annual report names those content costs as a main reason its costs rose.
+  claims:
+  - yt
+- id: m3_subs
+  chapter: The second screen
+  narration: Then there is the line most people forget. Subscriptions, platforms and devices. YouTube Premium and TV, NFL
+    Sunday Ticket, Google One storage, apps sold through Google Play, and Google's own phones. Together, {{subs}} last year.
+    Google counts over {{subs.paid_spoken}} paid subscriptions.
+  claims:
+  - subs
+- id: m3_transition
+  chapter: The second screen
+  narration: Ads and subscriptions are consumer money. The fastest-growing business sells to companies.
+  claims: []
+- id: m4_card
+  chapter: The cloud turns
+  narration: ''
+  claims: []
+- id: m4_cloud
+  chapter: The cloud turns
+  narration: Google Cloud rents out computing power, storage and artificial intelligence to companies. Not long ago, it barely
+    made money. In twenty twenty-three, by our calculation, it kept about {{cloud}} of each dollar as operating profit. In
+    twenty twenty-five, about {{cloud.m25_spoken}}. In the latest quarter, about {{cloud.m26_spoken}}.
+  claims:
+  - cloud
+- id: m4_q3
+  chapter: The cloud turns
+  narration: And it is exploding. In the third quarter of twenty twenty-six, Cloud revenue rose {{q3.cloudg_spoken}}, to {{q3}}.
+    The company says sales of its own AI chips, called TPUs, were a meaningful part of that.
+  claims:
+  - q3
+- id: m4_race
+  chapter: The cloud turns
+  narration: Watch the businesses race. In twenty twenty-three, Search was far ahead, with YouTube, the network, subscriptions
+    and Cloud bunched behind it. Over the last four reported quarters, by our count, Cloud reached {{ttm}}. Second only to
+    Search.
+  claims:
+  - ads
+  - ttm
+- id: m4_pichai
+  chapter: The cloud turns
+  narration: Chief executive Sundar Pichai now says Alphabet is on a half-trillion-dollar annual revenue run rate. That is
+    the company's own description.
+  claims:
+  - q3
+- id: m4_draw
+  chapter: The cloud turns
+  narration: Let me draw what each business keeps from a dollar of sales, in the latest quarter. Google Services keeps about
+    {{q3.svcm_spoken}}. Cloud, about {{cloud.m26_spoken}}. And the Other Bets lost about {{q3.betsop_spoken}}, on just {{q3.bets_spoken}}
+    of revenue.
+  claims:
+  - q3
+  - cloud
+  analysis: true
+  source_note: Segment operating margins, our calculation from the Q3 2026 release.
+- id: m4_bets
+  chapter: The cloud turns
+  narration: Waymo is the biggest of those bets. Alphabet says it has driven more than {{bets.miles_spoken}} fully autonomous
+    miles, in {{bets.cities_spoken}} major American cities. But all the Other Bets together lost {{bets}} last year.
+  claims:
+  - bets
+- id: m4_transition
+  chapter: The cloud turns
+  narration: So the machine throws off enormous profits. Where does that money go?
+  claims: []
+- id: m5_card
+  chapter: Where the cash goes
+  narration: ''
+  claims: []
+- id: m5_2025
+  chapter: Where the cash goes
+  narration: Follow the cash through twenty twenty-five. Operations brought in {{cash}}. About {{cash.capex_spoken}} went
+    into capital spending, mostly data centers and servers. About {{cash.buy_spoken}} bought back shares. And about {{cash.div_spoken}}
+    paid dividends.
+  claims:
+  - cash
+- id: m5_fcf
+  chapter: Where the cash goes
+  narration: What is left after capital spending is free cash flow. By our calculation, about {{cash.fcf_spoken}}, and roughly
+    three quarters of it went straight back to shareholders.
+  claims:
+  - cash
+- id: m5_2026
+  chapter: Where the cash goes
+  narration: Then twenty twenty-six flipped the waterfall. In the first nine months, Alphabet spent {{cash26}} on capital
+    expenditure. More than the {{cash26.ocf_spoken}} its operations brought in. It bought back no shares at all. For the full
+    year, it expects to spend {{cash26.guide_spoken}}.
+  claims:
+  - cash26
+- id: m5_raise
+  chapter: Where the cash goes
+  narration: To pay for it, the company that used to hand cash back started raising it. In nine months, about {{cash26.eq_spoken}}
+    of new shares, {{cash26.pref_spoken}} of preferred stock, and {{cash26.debt_spoken}} of new debt.
+  claims:
+  - cash26
+- id: m5_draw
+  chapter: Where the cash goes
+  narration: Let me draw the two years side by side. Twenty twenty-five. Cash flows in, data centers take a big share, and
+    a large part goes back to shareholders. Twenty twenty-six. Data centers take more than all of it, and new money comes
+    in from outside.
+  claims:
+  - cash
+  - cash26
+  analysis: true
+  source_note: Comparison of the 2025 cash flow statement and the nine-month 2026 cash flows.
+- id: m5_transition
+  chapter: Where the cash goes
+  narration: It is a giant bet that artificial intelligence will pay. Which brings us to the threat.
+  claims: []
+- id: m6_card
+  chapter: The threat
+  narration: ''
+  claims: []
+- id: m6_ai
+  chapter: The threat
+  narration: The threat is the same technology. When an AI simply answers your question, there may be no page of links to
+    sell. On the latest call, Google's chief business officer said fast growth in AI Mode queries had an impact, because of
+    the {{aimode}} there. Google is now scaling ads inside AI answers.
+  claims:
+  - aimode
+- id: m6_queries
+  chapter: The threat
+  narration: So far, the searches keep coming. Google says query growth is the highest in five years, and Search revenue rose
+    {{q3.searchg_spoken}} in the quarter, to {{q3.search_spoken}}.
+  claims:
+  - q3
+- id: m6_courts
+  chapter: The threat
+  narration: Then there are the courts. In a second case, a judge found that Google's tools for website publishers unfairly
+    excluded rivals. In September twenty twenty-six, the court {{legal}} and required changes in conduct instead. Google plans
+    to appeal.
+  claims:
+  - legal
+- id: m6_draw
+  chapter: The threat
+  narration: Let me draw the risk. The old path. A question, a page of links, ads on top. The new path. A question, and one
+    AI answer. The money question is whether ads fit inside that answer as well as they fit above the links.
+  claims:
+  - aimode
+  analysis: true
+  source_note: Editorial framing of the attributed AI Mode monetization comment.
+- id: payoff
+  chapter: The lesson
+  narration: 'So how does Google actually make money? Mostly by auctioning your searches, one click at a time, and paying
+    tolls to whoever puts its search box in front of you. YouTube adds a second screen, subscriptions a steady drip, and Cloud
+    has turned into a second engine. The lesson: the most valuable thing Google owns may not be a product. It is a default.
+    And now Alphabet is spending more than twice last year''s budget to make sure the next default, an AI answer, is its own.'
+  claims:
+  - cash
+  - cash26
+  analysis: true
+  source_note: Conclusion drawn from the sourced parts; 2026 capex guide vs 2025 capex.
+- id: teaser
+  chapter: The lesson
+  narration: Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This
+    is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser (channel rule).

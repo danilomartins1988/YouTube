@@ -880,6 +880,228 @@ const SETS: Record<string, SetFn> = {
   },
   /** A coastal launch site: sky (night = stars), the sea on the horizon, a lattice launch tower with a service arm,
    *  spherical fuel tanks, a concrete pad and, further along, a round landing pad with a painted target ring. */
+  /** AUCTION HALL (Ep 54, original design): a grand daylit auction room. Tall arched windows with moving light shafts,
+   *  swaying chandeliers, panelled wainscot, parquet floor with a red runner, velvet-rope stanchions and a wooden
+   *  auctioneer's lectern (`podiumX`, 0..1 of the zone). The wall is left clear above the lectern for a `searchbar`
+   *  item ("the screen"). `night`: evening lamps. */
+  auctionhall: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, px = z.x0 + w * ((z as any).podiumX ?? 0.5);
+    const wall = night ? '#2F2C40' : '#F4ECDD', panel = night ? '#4A3A2E' : '#B88A5A', n = Math.ceil(w / 640) + 1;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={wall} />
+      <rect x={z.x0} y={f - 1180} width={w} height={60} fill={night ? '#3D3852' : '#E6D7BC'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: n}, (_, k) => { const x = z.x0 + 120 + k * 640;
+        if (Math.abs(x + 110 - px) < 520) return null;
+        return <g key={'aw' + k}>
+          <path d={`M ${x} ${f - 360} L ${x} ${f - 900} Q ${x + 110} ${f - 1040} ${x + 220} ${f - 900} L ${x + 220} ${f - 360} Z`} fill={night ? '#22305A' : '#CFEFFF'} stroke={OL} strokeWidth={6} />
+          <path d={`M ${x + 110} ${f - 1000} L ${x + 110} ${f - 360} M ${x} ${f - 640} L ${x + 220} ${f - 640}`} stroke={OL} strokeWidth={4} />
+          {!night && <path d={`M ${x} ${f - 880} L ${x + 220} ${f - 880} L ${x + 520 + 30 * Math.sin(t * 0.4 + k)} ${f} L ${x + 180 + 30 * Math.sin(t * 0.4 + k)} ${f} Z`} fill="#FFF6C8" opacity={0.18 + 0.05 * Math.sin(t * 0.9 + k)} />}
+          {!night && Array.from({length: 6}, (_, q) => { const ph = (t * 0.08 + q / 6 + rnd(k * 9 + q)) % 1;
+            return <circle key={q} cx={x + 200 + 300 * ph + 20 * Math.sin(t + q)} cy={f - 820 + 760 * ph} r={3} fill="#FFFFFF" opacity={0.6 * (1 - ph)} />; })}
+        </g>; })}
+      {Array.from({length: n}, (_, k) => { const x = z.x0 + 430 + k * 640, sw = 6 * Math.sin(t * 1.1 + k);
+        return <g key={'ch' + k} transform={`translate(${x} ${f - 1120}) rotate(${sw})`}>
+          <path d="M 0 0 L 0 150" stroke="#8D6E3F" strokeWidth={5} />
+          <path d="M -90 170 Q 0 230 90 170" fill="none" stroke="#C9A24A" strokeWidth={8} />
+          {[-90, -45, 0, 45, 90].map((dx) => <g key={dx}><rect x={dx - 6} y={140 + Math.abs(dx) * 0.3} width={12} height={30} fill="#FFFDF0" stroke={OL} strokeWidth={2} />
+            <circle cx={dx} cy={132 + Math.abs(dx) * 0.3} r={9} fill={night ? '#FFE08A' : '#FFF3C4'} opacity={0.6 + 0.4 * Math.sin(t * 6 + dx)} /></g>)}
+        </g>; })}
+      <rect x={z.x0} y={f - 300} width={w} height={300} fill={panel} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 180)}, (_, k) => <rect key={'pn' + k} x={z.x0 + 20 + k * 180} y={f - 270} width={140} height={230} rx={8} fill="none" stroke={night ? '#6B5442' : '#8A6440'} strokeWidth={5} />)}
+      <rect x={z.x0} y={f - 310} width={w} height={20} fill={night ? '#6D5F45' : '#D4B072'} stroke={OL} strokeWidth={3} />
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#5A4030' : '#C9935C'} />
+      {Array.from({length: Math.ceil(w / 120)}, (_, k) => <path key={'pq' + k} d={`M ${z.x0 + k * 120} ${f} L ${z.x0 + k * 120 - 260} ${f + 600}`} stroke={night ? '#4A3426' : '#B07C48'} strokeWidth={6} />)}
+      <path d={`M ${px - 140} ${f} L ${px + 140} ${f} L ${px + 420} ${f + 600} L ${px - 420} ${f + 600} Z`} fill="#B3263A" opacity={0.9} />
+      {[-1, 1].map((d) => <g key={'st' + d}>{[0, 1].map((q) => { const sx = px + d * (380 + q * 300);
+        return <g key={q}><rect x={sx - 8} y={f - 120} width={16} height={120} fill="#D4AF37" stroke={OL} strokeWidth={3} /><circle cx={sx} cy={f - 124} r={14} fill="#FFD54F" stroke={OL} strokeWidth={3} /></g>; })}
+        <path d={`M ${px + d * 380} ${f - 110} Q ${px + d * 530} ${f - 50 + 6 * Math.sin(t * 2)} ${px + d * 680} ${f - 110}`} fill="none" stroke="#8E1B2C" strokeWidth={12} strokeLinecap="round" /></g>)}
+      <g transform={`translate(${px} ${f})`}>
+        <path d="M -110 0 L -90 -230 L 90 -230 L 110 0 Z" fill="#8A5A30" stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+        <rect x={-130} y={-262} width={260} height={36} rx={6} fill="#A86E3A" stroke={OL} strokeWidth={5} />
+        <rect x={-60} y={-180} width={120} height={70} rx={6} fill="#C9A24A" stroke={OL} strokeWidth={4} />
+        <circle cx={0} cy={-145} r={20} fill="none" stroke={OL} strokeWidth={5} /><path d="M 14 -131 L 30 -115" stroke={OL} strokeWidth={6} strokeLinecap="round" />
+        <rect x={60} y={-284} width={50} height={22} rx={4} fill="#5D3A1A" stroke={OL} strokeWidth={3} />
+      </g>
+    </g>;
+  },
+  /** TOLL ROAD (Ep 54, original design): a sunny motorway into a distant search city (generic towers; the tallest is
+   *  topped by a giant magnifying glass, no logo). Little cars, each carrying a "?" query bubble, stream left to right
+   *  through a toll plaza (`plazaX` 0..1, `booths`: owner labels). From `payAt`, coins arc BACK from the city to the
+   *  booths (Google pays the toll). `night` dims it. */
+  tollroad: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, px = z.x0 + w * ((z as any).plazaX ?? 0.42), cityX = z.x0 + w * ((z as any).cityX ?? 0.86);
+    const booths: string[] = (z as any).booths || ['PHONES', 'BROWSERS', 'CARRIERS'], nb = booths.length, bw = 230, pay = (z as any).payAt;
+    const lanes = [f - 120, f - 60];
+    return <g>
+      <g transform={`translate(${cityX} ${f - 170})`} opacity={0.95}>
+        {[-460, -360, -250, -140, 120, 230, 340, 440].map((dx, k) => <rect key={k} x={dx - 40} y={-180 - 140 * rnd(k + 3)} width={80} height={180 + 140 * rnd(k + 3)} fill={night ? '#2B3A5E' : '#A9C8E8'} stroke={OL} strokeWidth={4} />)}
+        <rect x={-70} y={-560} width={140} height={560} fill={night ? '#3A4C78' : '#C3DCF2'} stroke={OL} strokeWidth={5} />
+        {Array.from({length: 14}, (_, k) => <rect key={'cw' + k} x={-50 + (k % 2) * 60} y={-520 + Math.floor(k / 2) * 70} width={40} height={36} rx={4} fill={night && rnd(k) > 0.3 ? '#FFE08A' : '#EAF6FF'} stroke={OL} strokeWidth={2} />)}
+        <g transform={`translate(0 -660) rotate(${8 * Math.sin(t * 0.8)})`}>
+          <circle r={80} fill="#E8F7FF" stroke={OL} strokeWidth={10} opacity={0.95} /><circle r={56} fill="none" stroke="#FFFFFF" strokeWidth={8} opacity={0.6} />
+          <path d="M 56 56 L 120 120" stroke={OL} strokeWidth={26} strokeLinecap="round" /><path d="M 60 60 L 116 116" stroke="#F2A900" strokeWidth={14} strokeLinecap="round" /></g>
+      </g>
+      <rect x={z.x0} y={f - 180} width={w} height={180} fill={night ? '#2E4A2E' : '#8FCB7A'} />
+      <rect x={z.x0} y={f - 150} width={w} height={150} fill={night ? '#3B4352' : '#6B7385'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 120) + 2}, (_, k) => <rect key={'ln' + k} x={z.x0 + ((k * 120 + t * 160) % (w + 240)) - 120} y={f - 92} width={60} height={8} fill="#FFE08A" />)}
+      <g transform={`translate(${px} ${f})`}>
+        <rect x={-nb * bw / 2 - 30} y={-380} width={nb * bw + 60} height={56} rx={10} fill={night ? '#5C6B8A' : '#F2F5F8'} stroke={OL} strokeWidth={5} />
+        <T x={0} y={-342} s={30} c={OL}>{(z as any).plazaLabel || 'TOLL PLAZA'}</T>
+        {booths.map((b, k) => { const bx = -nb * bw / 2 + bw * (k + 0.5), lift = (Math.sin(t * 2.2 + k * 1.7) + 1) / 2;
+          return <g key={'bo' + k} transform={`translate(${bx} 0)`}>
+            <rect x={-12} y={-326} width={24} height={326} fill="#B0BEC5" stroke={OL} strokeWidth={3} />
+            <rect x={-70} y={-200} width={100} height={150} rx={8} fill={night ? '#3D5A80' : '#FFFFFF'} stroke={OL} strokeWidth={5} />
+            <rect x={-56} y={-186} width={72} height={50} rx={4} fill={night ? '#FFE08A' : '#BFE6FF'} stroke={OL} strokeWidth={3} />
+            <g transform={`translate(30 -70) rotate(${-70 * lift})`}><rect x={0} y={-8} width={110} height={16} rx={6} fill="#FFFFFF" stroke={OL} strokeWidth={3} />
+              {[0, 1, 2].map((q) => <rect key={q} x={14 + q * 34} y={-8} width={16} height={16} fill="#E53935" />)}</g>
+            <rect x={-96} y={-262} width={192} height={44} rx={8} fill="#F2A900" stroke={OL} strokeWidth={4} />
+            <T x={0} y={-231} s={b.length > 10 ? 18 : 22} c={OL}>{b}</T>
+          </g>; })}
+      </g>
+      {Array.from({length: 7}, (_, k) => { const sp = 220 + 60 * rnd(k), ph = ((t * sp + k * 520) % (w + 600)), x = z.x0 - 300 + ph, y = lanes[k % 2];
+        const c = ['#FF8A65', '#4FB3F6', '#7BD389', '#FFC93C', '#B39DDB', '#F06292', '#26A69A'][k];
+        return <g key={'car' + k} transform={`translate(${x} ${y})`}>
+          <rect x={-60} y={-46} width={120} height={40} rx={14} fill={c} stroke={OL} strokeWidth={4} />
+          <path d="M -36 -46 L -22 -74 L 26 -74 L 40 -46 Z" fill="#E1F5FE" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+          {[-34, 34].map((wx) => <circle key={wx} cx={wx} cy={-6} r={14} fill="#263238" stroke={OL} strokeWidth={3} />)}
+          <g transform={`translate(0 ${-118 + 4 * Math.sin(t * 4 + k)})`}><circle r={24} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><T x={0} y={11} s={30} c={OL}>?</T></g>
+        </g>; })}
+      {pay !== undefined && t >= pay && Array.from({length: 8}, (_, k) => { const ph = ((t - pay) * 0.55 + k / 8) % 1, sx = cityX - 120, ex = px - nb * bw / 2 + bw * ((k % nb) + 0.5);
+        const x = lerp(sx, ex, ph), y = f - 420 - Math.sin(ph * Math.PI) * 420;
+        return <g key={'pc' + k} transform={`translate(${x} ${y}) scale(${0.8 + 0.2 * Math.sin(t * 8 + k)} 1)`} opacity={ph < 0.9 ? 1 : (1 - ph) * 10}>
+          <circle r={22} fill="#FFC93C" stroke={OL} strokeWidth={4} /><T x={0} y={9} s={24} c={OL}>$</T></g>; })}
+    </g>;
+  },
+  /** LIVING ROOM (Ep 54, original design): a cosy daylit room. Window with a swaying tree, a big TV on a low cabinet
+   *  (`tvX` 0..1) playing a generic cartoon video (rolling hills, bouncing ball, progress bar; no platform marks). From
+   *  `adAt` to `adUntil` an ad plays: yellow "AD" badge, a skip countdown and a yellow progress bar. A sofa faces the TV
+   *  from the left; rug, lamp, plant and popcorn. */
+  livingroom: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, tv = z.x0 + w * ((z as any).tvX ?? 0.6), ad = (z as any).adAt, adU = (z as any).adUntil ?? 1e9;
+    const inAd = ad !== undefined && t >= ad && t < adU, sx = tv - 760;
+    return <g>
+      <rect x={z.x0} y={-2000} width={w} height={2000 + f} fill={night ? '#3A3550' : '#F6E7D0'} />
+      {Array.from({length: Math.ceil(w / 70)}, (_, k) => <rect key={'wp' + k} x={z.x0 + k * 70} y={f - 1200} width={28} height={940} fill={night ? '#423C5A' : '#F0DCC0'} />)}
+      <rect x={z.x0} y={f - 280} width={w} height={20} fill={night ? '#5B4C3E' : '#C9A27A'} stroke={OL} strokeWidth={3} />
+      <g transform={`translate(${tv - 1180} ${f - 880})`}>
+        <rect x={0} y={0} width={340} height={420} rx={10} fill={night ? '#1C2A4A' : '#BFE8FF'} stroke={OL} strokeWidth={6} />
+        {!night && <circle cx={260} cy={80} r={36} fill="#FFE57F" />}
+        <rect x={0} y={300} width={340} height={120} fill={night ? '#22351F' : '#9BD38A'} />
+        <g transform={`translate(110 330) rotate(${3 * Math.sin(t * 1.3)})`}><rect x={-10} y={-120} width={20} height={120} fill="#7A5230" stroke={OL} strokeWidth={3} />
+          <circle cx={0} cy={-150} r={70} fill={night ? '#2E5A2E' : '#5DBB63'} stroke={OL} strokeWidth={4} /></g>
+        <path d="M 170 0 L 170 420 M 0 210 L 340 210" stroke={OL} strokeWidth={6} />
+        <rect x={-20} y={-20} width={70} height={460} fill="#E57373" stroke={OL} strokeWidth={4} /><rect x={290} y={-20} width={70} height={460} fill="#E57373" stroke={OL} strokeWidth={4} />
+      </g>
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#4E3E33' : '#B98B5E'} />
+      <ellipse cx={tv - 380} cy={f + 60} rx={620} ry={70} fill={night ? '#5B3F55' : '#E8A87C'} stroke={OL} strokeWidth={4} />
+      <g transform={`translate(${tv} ${f})`}>
+        <rect x={-430} y={-150} width={860} height={150} rx={10} fill={night ? '#4A3A2E' : '#8D6E4A'} stroke={OL} strokeWidth={5} />
+        {[-300, 0, 300].map((dx) => <rect key={dx} x={dx - 120} y={-130} width={240} height={110} rx={6} fill="none" stroke={OL} strokeWidth={3} opacity={0.6} />)}
+        <rect x={-400} y={-640} width={800} height={470} rx={18} fill="#1A1D24" stroke={OL} strokeWidth={6} />
+        <clipPath id={'tvc' + Math.round(z.x0)}><rect x={-376} y={-616} width={752} height={422} rx={8} /></clipPath>
+        <g clipPath={`url(#tvc${Math.round(z.x0)})`}>
+          {inAd ? <g>
+            <rect x={-376} y={-616} width={752} height={422} fill="#FFF3C4" />
+            <g transform={`translate(0 ${-420 + 10 * Math.sin(t * 5)}) rotate(${10 * Math.sin(t * 3)})`}>
+              <rect x={-90} y={-60} width={180} height={120} rx={20} fill="#FF8A65" stroke={OL} strokeWidth={5} /><T x={0} y={14} s={40} c={OL}>NEW!</T></g>
+            {[0, 1, 2, 3, 4].map((k) => <circle key={k} cx={-300 + k * 150} cy={-240 + 10 * Math.sin(t * 4 + k)} r={14} fill="#F2A900" />)}
+            <rect x={-360} y={-604} width={110} height={52} rx={10} fill="#F2A900" stroke={OL} strokeWidth={4} /><T x={-305} y={-566} s={34} c={OL}>AD</T>
+            <rect x={150} y={-280} width={210} height={60} rx={8} fill="#000000" opacity={0.7} />
+            <T x={255} y={-240} s={26} c="#FFFFFF">{`SKIP IN ${Math.max(1, 5 - Math.floor(t - ad))}`}</T>
+            <rect x={-376} y={-206} width={752 * clamp((t - ad) / 5)} height={12} fill="#F2A900" />
+          </g> : <g>
+            <rect x={-376} y={-616} width={752} height={422} fill="#8FD3FF" />
+            {[0, 1, 2].map((k) => <path key={k} d={`M ${-520 + ((t * 60 + k * 300) % 900)} -194 q 150 -${120 + 40 * k} 300 0 Z`} fill={['#7BD389', '#5DBB63', '#9BD38A'][k]} stroke={OL} strokeWidth={3} />)}
+            <circle cx={-200 + ((t * 120) % 400)} cy={-300 - Math.abs(Math.sin(t * 4)) * 140} r={34} fill="#FF5A5F" stroke={OL} strokeWidth={4} />
+            <rect x={-376} y={-206} width={752} height={12} fill="#FFFFFF" opacity={0.5} /><rect x={-376} y={-206} width={752 * ((t * 0.03) % 1)} height={12} fill="#E53935" />
+          </g>}
+        </g>
+        <rect x={-30} y={-170} width={60} height={20} fill="#2B2E36" />
+      </g>
+      <g transform={`translate(${sx - 300} ${f})`}>
+        <rect x={-60} y={-260} width={50} height={260} rx={20} fill="#5C6BC0" stroke={OL} strokeWidth={5} />
+        <rect x={-60} y={-130} width={380} height={90} rx={24} fill="#7986CB" stroke={OL} strokeWidth={5} />
+        <rect x={290} y={-180} width={60} height={140} rx={24} fill="#5C6BC0" stroke={OL} strokeWidth={5} />
+        <rect x={-40} y={-40} width={20} height={40} fill="#3E2723" /><rect x={300} y={-40} width={20} height={40} fill="#3E2723" />
+      </g>
+      <g transform={`translate(${tv + 560} ${f})`}>
+        <path d="M -10 0 L 10 0 L 4 -380 L -4 -380 Z" fill="#8D6E63" stroke={OL} strokeWidth={3} />
+        <path d="M -80 -380 L 80 -380 L 50 -480 L -50 -480 Z" fill={night ? '#FFE08A' : '#FFF3E0'} stroke={OL} strokeWidth={4} />
+        {night && <circle cx={0} cy={-360} r={140} fill="#FFE08A" opacity={0.2} />}
+        <g transform="translate(160 0)"><path d="M -50 0 L 50 0 L 40 -90 L -40 -90 Z" fill="#D84315" stroke={OL} strokeWidth={4} />
+          {[-40, -15, 15, 40].map((dx, k) => <path key={k} d={`M ${dx * 0.3} -90 Q ${dx} ${-200 - 10 * Math.sin(t * 2 + k)} ${dx * 1.6} -230`} fill="none" stroke="#43A047" strokeWidth={14} strokeLinecap="round" />)}</g>
+      </g>
+    </g>;
+  },
+  /** SERVER FARM (Ep 54, original design): a daytime data-centre campus. Long low halls with louvres and spinning
+   *  rooftop fans, steaming cooling towers, pylons with sagging power lines, a substation, and a crane building a new
+   *  hall whose steel frame rises from `buildAt` (capital spending made visible). */
+  serverfarm: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, bx = z.x0 + w * ((z as any).buildX ?? 0.78), b0 = (z as any).buildAt ?? 1e9, bu = clamp((t - b0) / 6);
+    return <g>
+      <path d={`M ${z.x0} ${f - 260} Q ${z.x0 + w * 0.2} ${f - 420} ${z.x0 + w * 0.4} ${f - 300} Q ${z.x0 + w * 0.65} ${f - 460} ${z.x1} ${f - 280} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill={night ? '#1F3A2C' : '#A8D98F'} stroke={OL} strokeWidth={4} />
+      {Array.from({length: Math.ceil(w / 700)}, (_, k) => { const x = z.x0 + 200 + k * 700;
+        return <g key={'py' + k}><path d={`M ${x} ${f - 60} L ${x + 40} ${f - 520} L ${x + 80} ${f - 60} M ${x + 10} ${f - 200} L ${x + 70} ${f - 200} M ${x + 20} ${f - 360} L ${x + 60} ${f - 360} M ${x - 30} ${f - 460} L ${x + 110} ${f - 460}`} fill="none" stroke="#78909C" strokeWidth={6} />
+          <path d={`M ${x - 30} ${f - 460} Q ${x + 320} ${f - 380} ${x + 670} ${f - 460} M ${x + 110} ${f - 460} Q ${x + 460} ${f - 380} ${x + 810} ${f - 460}`} fill="none" stroke={OL} strokeWidth={2.5} opacity={0.7} /></g>; })}
+      {Array.from({length: Math.ceil(w / 760)}, (_, k) => { const x = z.x0 + 40 + k * 760;
+        if (Math.abs(x + 300 - bx) < 420) return null;
+        return <g key={'dh' + k}>
+          <rect x={x} y={f - 230} width={600} height={230} fill={night ? '#3B4A63' : '#E3E8EF'} stroke={OL} strokeWidth={5} />
+          <rect x={x - 10} y={f - 250} width={620} height={26} fill={night ? '#56657F' : '#B0BEC5'} stroke={OL} strokeWidth={4} />
+          {Array.from({length: 9}, (_, q) => <rect key={q} x={x + 24 + q * 64} y={f - 190} width={40} height={110} fill={night ? '#1E2A3E' : '#90A4AE'} stroke={OL} strokeWidth={2} />)}
+          {Array.from({length: 9}, (_, q) => <circle key={'led' + q} cx={x + 44 + q * 64} cy={f - 60} r={6} fill={Math.sin(t * 5 + q + k) > 0 ? '#4FC3F7' : '#1565C0'} />)}
+          {[0, 1, 2].map((q) => { const fx = x + 120 + q * 180;
+            return <g key={'fn' + q} transform={`translate(${fx} ${f - 275})`}><rect x={-46} y={-26} width={92} height={30} fill="#78909C" stroke={OL} strokeWidth={3} />
+              <g transform={`translate(0 -10) scale(1 0.35) rotate(${t * 400 + q * 40})`}>{[0, 90, 180, 270].map((r) => <path key={r} transform={`rotate(${r})`} d="M 0 0 Q 30 -10 40 -40 Q 10 -30 0 0 Z" fill="#CFD8DC" stroke={OL} strokeWidth={4} />)}</g></g>; })}
+        </g>; })}
+      {Array.from({length: 2}, (_, k) => { const x = z.x0 + w * (0.08 + k * 0.42);
+        return <g key={'ct' + k} transform={`translate(${x} ${f})`}>
+          <path d="M -90 0 Q -60 -160 -70 -300 L 70 -300 Q 60 -160 90 0 Z" fill={night ? '#5A6478' : '#D7DEE5'} stroke={OL} strokeWidth={5} />
+          {Array.from({length: 5}, (_, q) => { const ph = (t * 0.25 + q / 5) % 1;
+            return <circle key={q} cx={20 * Math.sin(ph * 6 + q)} cy={-320 - ph * 360} r={40 + ph * 70} fill="#FFFFFF" opacity={0.55 * (1 - ph)} />; })}
+        </g>; })}
+      {t >= b0 - 0.5 && <g transform={`translate(${bx} ${f})`}>
+        {Array.from({length: 6}, (_, c) => { const h = 300 * clamp(bu * 1.6 - c * 0.1);
+          return <rect key={c} x={-300 + c * 120} y={-h} width={12} height={h} fill="#FF7043" stroke={OL} strokeWidth={3} />; })}
+        {[0, 1, 2].map((r) => bu > 0.3 + r * 0.2 && <rect key={'bm' + r} x={-306} y={-100 - r * 100} width={612} height={12} fill="#FF7043" stroke={OL} strokeWidth={3} />)}
+        <path d="M 360 0 L 360 -620 M 340 0 L 340 -620" stroke="#FFC93C" strokeWidth={10} />
+        {Array.from({length: 10}, (_, k) => <path key={k} d={`M 340 ${-k * 62} L 360 ${-k * 62 - 62}`} stroke="#FFC93C" strokeWidth={5} />)}
+        <g transform={`translate(350 -620) rotate(${-8 + 10 * Math.sin(t * 0.5)})`}>
+          <rect x={-700} y={-16} width={900} height={32} fill="#FFC93C" stroke={OL} strokeWidth={4} />
+          <rect x={120} y={-14} width={80} height={60} fill="#546E7A" stroke={OL} strokeWidth={3} />
+          <path d={`M ${-420 + 80 * Math.sin(t * 0.5)} 16 L ${-420 + 80 * Math.sin(t * 0.5)} ${200 + 40 * Math.sin(t * 0.8)}`} stroke={OL} strokeWidth={4} />
+          <rect x={-480 + 80 * Math.sin(t * 0.5)} y={200 + 40 * Math.sin(t * 0.8)} width={120} height={70} rx={6} fill="#37474F" stroke={OL} strokeWidth={4} />
+          {[0, 1, 2].map((q) => <circle key={q} cx={-450 + q * 30 + 80 * Math.sin(t * 0.5)} cy={240 + 40 * Math.sin(t * 0.8)} r={6} fill={Math.sin(t * 6 + q) > 0 ? '#4FC3F7' : '#7DF29A'} />)}
+        </g>
+      </g>}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#2F3640' : '#8A93A3'} />
+      <rect x={z.x0} y={f} width={w} height={14} fill={night ? '#3E4652' : '#C4CAD4'} />
+    </g>;
+  },
+  /** RESERVOIR (Ep 54, original design): a mountain valley with a concrete dam. The lake behind it stands for cash on
+   *  hand; three spillway gates pour white water into channels below. `dry` (0..1, keyframable via time `dryAt`) lowers
+   *  the lake and thins the falls. Use with the `cashfalls` item for the numbers. */
+  reservoir: (t, z, f) => {
+    const w = z.x1 - z.x0, night = !!z.night, dx = z.x0 + w * ((z as any).damX ?? 0.62), dry = (z as any).dryAt !== undefined ? clamp((t - (z as any).dryAt) / 3) : 0;
+    const lake = f - 520 + 260 * dry;
+    return <g>
+      <path d={`M ${z.x0} ${f - 420} L ${z.x0 + w * 0.15} ${f - 760} L ${z.x0 + w * 0.3} ${f - 520} L ${z.x0 + w * 0.48} ${f - 880} L ${z.x0 + w * 0.66} ${f - 600} L ${z.x0 + w * 0.82} ${f - 840} L ${z.x1} ${f - 500} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill={night ? '#2A3550' : '#9FB7D0'} stroke={OL} strokeWidth={4} />
+      {[0.15, 0.48, 0.82].map((u, k) => <path key={k} d={`M ${z.x0 + w * u - 60} ${f - [760, 880, 840][k] + 60} L ${z.x0 + w * u} ${f - [760, 880, 840][k]} L ${z.x0 + w * u + 60} ${f - [760, 880, 840][k] + 60} Z`} fill="#FFFFFF" />)}
+      <rect x={dx} y={lake} width={z.x1 - dx} height={f - lake} fill={night ? '#1D3D6E' : '#4FB3F6'} />
+      {Array.from({length: 8}, (_, k) => <path key={'lw' + k} d={`M ${dx + 80 + k * 140 + 20 * Math.sin(t + k)} ${lake + 30 + 30 * (k % 3)} q 20 -8 40 0`} stroke="#FFFFFF" strokeWidth={4} fill="none" opacity={0.7} />)}
+      <path d={`M ${dx - 60} ${f} L ${dx - 20} ${f - 600} L ${dx + 40} ${f - 600} L ${dx + 40} ${f} Z`} fill={night ? '#6B7385' : '#D5D9E0'} stroke={OL} strokeWidth={6} />
+      <rect x={dx - 40} y={f - 640} width={100} height={44} fill="#B0BEC5" stroke={OL} strokeWidth={5} />
+      {[0, 1, 2].map((g) => { const gy = f - 560 + g * 150, flow = (1 - dry * 0.85);
+        return <g key={'sg' + g}>
+          <rect x={dx - 46} y={gy} width={60} height={60} rx={6} fill="#78909C" stroke={OL} strokeWidth={4} />
+          {Array.from({length: 4}, (_, q) => { const ph = (t * 1.2 + q / 4 + g * 0.3) % 1;
+            return <path key={q} d={`M ${dx - 40} ${gy + 30} Q ${dx - 140 - 40 * ph} ${gy + 30 + 60 * ph} ${dx - 180 - 60 * ph} ${gy + 140 + 200 * ph}`} fill="none" stroke="#E1F5FE" strokeWidth={18 * flow} strokeLinecap="round" opacity={0.85 * (1 - ph * 0.5)} />; })}
+        </g>; })}
+      <path d={`M ${z.x0} ${f - 40} Q ${z.x0 + w * 0.3} ${f - 70} ${dx - 60} ${f - 40} L ${dx - 60} ${f} L ${z.x0} ${f} Z`} fill={night ? '#1D3D6E' : '#81D4FA'} />
+      {Array.from({length: 10}, (_, k) => <path key={'rv' + k} d={`M ${z.x0 + ((k * 210 - t * 90) % (w + 200) + w + 200) % (w + 200)} ${f - 28} q 20 -8 40 0`} stroke="#FFFFFF" strokeWidth={3} fill="none" opacity={0.7} />)}
+      <rect x={z.x0} y={f} width={w} height={600} fill={night ? '#26302A' : '#7FB069'} />
+    </g>;
+  },
   launchpad: (t, z, f) => {
     const w = z.x1 - z.x0, night = !!z.night, tx = z.x0 + w * ((z as any).towerAt ?? 0.38), lx = z.x0 + w * ((z as any).landAt ?? 0.72);
     return <g>
@@ -1861,12 +2083,14 @@ const person: ItemFn = (a, {t, f}, i) => {
   if (pose === 'mic') { la = 20 + 6 * Math.sin(t * 3 + i); ra = -125 - 8 * Math.sin(t * 5 + i); }
   if (pose === 'camera') { la = 140; ra = -140; }
   if (pose === 'carry') { la = 168; ra = -168; }
+  if (pose === 'paddle') { ra = -168 + 6 * Math.sin(t * 3 + i); }
   if (pose === 'shock') { la = 155 + 12 * Math.sin(t * 11 + i); ra = -155 - 12 * Math.sin(t * 11 + i + 1); }
   const arm = (side: number, ang: number) => { const r = (ang * Math.PI) / 180, sx = side * 26, sy = -140;
     return <path d={`M ${sx} ${sy} L ${sx + Math.sin(r) * 58 * -1 * -1} ${sy + Math.cos(r) * 58}`} stroke={skin} strokeWidth={13} strokeLinecap="round" />; };
   const out = a.until !== undefined ? 1 - win(t, a.until, 0.4) : 1;
   return <g key={'p' + i} opacity={out} transform={`translate(${x} ${y - bob}) scale(${s * fl * app} ${s * app})`}>
-    <path d={`M -14 -80 L ${-14 + 16 * walk} 0 M 14 -80 L ${14 - 16 * walk} 0`} stroke="#2D3E66" strokeWidth={16} strokeLinecap="round" />
+    {pose === 'sit' ? <path d="M -14 -80 L 34 -80 L 34 0 M 14 -80 L 54 -80 L 54 0" stroke="#2D3E66" strokeWidth={16} strokeLinecap="round" strokeLinejoin="round" />
+      : <path d={`M -14 -80 L ${-14 + 16 * walk} 0 M 14 -80 L ${14 - 16 * walk} 0`} stroke="#2D3E66" strokeWidth={16} strokeLinecap="round" />}
     <path d={`M -26 -2 l -10 0 M 26 -2 l 10 0`} stroke={OL} strokeWidth={10} strokeLinecap="round" />
     {arm(-1, la)}
     <rect x={-34} y={-158} width={68} height={86} rx={26} fill={shirt} stroke={OL} strokeWidth={4} />
@@ -1875,6 +2099,13 @@ const person: ItemFn = (a, {t, f}, i) => {
     {arm(1, ra)}
     {(pose === 'read') && <g transform="translate(34 -150) rotate(-8)"><rect x={-4} y={-30} width={64} height={46} fill={K.white} stroke={OL} strokeWidth={3} />
       {[0, 1, 2].map((l) => <path key={l} d={`M 4 ${-20 + l * 12} L 52 ${-20 + l * 12}`} stroke={OL} strokeWidth={2.5} opacity={0.6} />)}</g>}
+    {pose === 'paddle' && (() => { const p2 = a.paddle2 && a.paddle2At !== undefined && t >= a.paddle2At, txt = p2 ? a.paddle2 : (a.paddle || '$1'), win2 = a.winAt !== undefined && t >= a.winAt;
+      return <g transform={`translate(${16 * fl} ${-262 + 6 * Math.sin(t * 3 + i)}) scale(${fl} 1)`}>
+        <path d="M 0 60 L 0 0" stroke="#6D4C41" strokeWidth={8} />
+        <rect x={-Math.max(60, txt.length * 13)} y={-62} width={Math.max(120, txt.length * 26)} height={70} rx={14} fill={win2 ? '#F2A900' : '#FFFFFF'} stroke={OL} strokeWidth={4} />
+        <text x={0} y={-16} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill={OL}>{txt}</text>
+        {win2 && <g transform={`translate(0 -100) scale(${E.outBack(win(t, a.winAt, 0.4))})`}><path d="M -36 0 L -30 -36 L -12 -16 L 0 -44 L 12 -16 L 30 -36 L 36 0 Z" fill="#FFD54F" stroke={OL} strokeWidth={4} strokeLinejoin="round" /></g>}
+      </g>; })()}
     {pose === 'phone' && <rect x={30} y={-210} width={16} height={30} rx={4} fill={OL} />}
     {pose === 'clipboard' && <g transform="translate(30 -168) rotate(-6)"><rect x={-4} y={-34} width={52} height={66} rx={5} fill="#A1887F" stroke={OL} strokeWidth={3} />
       <rect x={2} y={-26} width={40} height={52} fill={K.white} stroke={OL} strokeWidth={2} />{[0, 1, 2].map((l) => <path key={l} d={`M 8 ${-16 + l * 12} L 36 ${-16 + l * 12}`} stroke={OL} strokeWidth={2} opacity={0.6} />)}</g>}
@@ -4315,6 +4546,7 @@ const detective: ItemFn = (a, {t, f}, i) => {
 const CARI: Record<string, any> = {
   huang: {hair: 'swept', hairColor: '#C3C8CF', jacket: '#1B1B1F', shirt: '#26262B', leather: true, skin: '#E6B58C', tie: null, glasses: false},
   jassy: {hair: 'bald', hairColor: '#D9A57E', jacket: '#2E3440', shirt: '#E9EEF3', tie: null, skin: '#E3AE86', glasses: false},
+  pichai: {hair: 'side', hairColor: '#2A2624', jacket: '#2B3A55', shirt: '#D6E6F5', tie: null, skin: '#B98458', glasses: false},
   musk: {hair: 'side', hairColor: '#2B2420', jacket: '#1C1C1E', shirt: '#1C1C1E', tie: null, skin: '#EBC09C', glasses: false},
   trump: {hair: 'swoop', hairColor: '#F2C94C', jacket: '#1F2A44', shirt: '#F4F7FB', tie: '#D32F2F', longTie: true, skin: '#F0BE96', glasses: false},
 };
@@ -4562,9 +4794,136 @@ const scorecard: ItemFn = (a, {t}, i) => {
   </g>;
 };
 
+/** SEARCH BAR (Ep 54, original design, no logo): a giant rounded search box with a magnifier. `query` types itself in
+ *  from `typeAt` (14 chars/s) with a blinking caret. `rows` [{text, ad?, at, hi?, tag?}] drop in underneath as result
+ *  cards; ads carry a gold "SPONSORED" tag, `hi` pulses a card, `tag` pops a price sticker on the right. `w` width. */
+const searchbar: ItemFn = (a, {t}, i) => {
+  const x = kf(a.x, t, 960), y = kf(a.y, t, 200), s = (a.scale ?? 1) * pop(t, a.at ?? 0, 0.5);
+  if (s <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const W = a.w ?? 1000, q: string = a.query || '', ta = a.typeAt ?? (a.at ?? 0) + 0.4, nch = Math.max(0, Math.min(q.length, Math.floor((t - ta) * 14)));
+  const rows: any[] = a.rows || [], out = a.until !== undefined ? 1 - win(t, a.until, 0.4) : 1;
+  return <g key={'sb' + i} opacity={out} transform={`translate(${x} ${y}) scale(${s})`}>
+    <rect x={-W / 2 + 10} y={-36} width={W} height={92} rx={46} fill="#000" opacity={0.15} />
+    <rect x={-W / 2} y={-46} width={W} height={92} rx={46} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
+    <g transform={`translate(${-W / 2 + 56} 0)`}><circle cx={-4} cy={-4} r={18} fill="none" stroke={OL} strokeWidth={6} /><path d="M 9 9 L 24 24" stroke={OL} strokeWidth={7} strokeLinecap="round" /></g>
+    <T x={-W / 2 + 100} y={14} s={40} a="start" w={700} c={OL}>{q.slice(0, nch)}</T>
+    {(nch < q.length || Math.sin(t * 8) > 0) && t >= ta - 0.2 && <rect x={-W / 2 + 104 + nch * 22.5} y={-22} width={5} height={44} fill="#2E6FD8" />}
+    {rows.map((r, k) => { const at = r.at ?? ta + 1 + k * 0.5, u = E.outBack(win(t, at, 0.45));
+      if (u <= 0) return null;
+      const ry = 90 + k * 108, hl = r.hi !== undefined && t >= r.hi ? 1 + 0.02 * Math.sin(t * 7) : 1;
+      return <g key={'r' + k} transform={`translate(0 ${ry + (1 - u) * 40}) scale(${hl})`} opacity={Math.min(1, u)}>
+        <rect x={-W / 2} y={0} width={W} height={92} rx={16} fill={r.ad ? '#FFF8E1' : '#FFFFFF'} stroke={r.hi !== undefined && t >= r.hi ? '#F2A900' : OL} strokeWidth={r.hi !== undefined && t >= r.hi ? 8 : 4} />
+        {r.ad && <g><rect x={-W / 2 + 22} y={16} width={150} height={30} rx={8} fill="#F2A900" stroke={OL} strokeWidth={3} /><T x={-W / 2 + 97} y={38} s={18} c={OL}>SPONSORED</T></g>}
+        <T x={-W / 2 + (r.ad ? 190 : 24)} y={42} s={28} a="start" w={800} c={r.ad ? OL : '#2E6FD8'}>{r.text}</T>
+        <rect x={-W / 2 + 24} y={58} width={W * (r.ad ? 0.5 : 0.62)} height={10} rx={5} fill="#CFD8DC" />
+        {r.tag && t >= (r.tagAt ?? at) && <g transform={`translate(${W / 2 - 110} 46) rotate(${-6 + 3 * Math.sin(t * 3)}) scale(${E.outBack(win(t, r.tagAt ?? at, 0.4))})`}>
+          <rect x={-110} y={-34} width={220} height={68} rx={12} fill={r.tagColor || '#22A06B'} stroke={OL} strokeWidth={5} /><T x={0} y={12} s={30} c="#FFFFFF">{r.tag}</T></g>}
+      </g>; })}
+  </g>;
+};
+
+/** BAR RACE (Ep 54): horizontal bars that re-rank and grow between `periods` [{label, at, values: {key: v}}];
+ *  `series` [{key, label, color}]; `max`; `prefix`/`suffix`/`decimals`; `title`; `note` (e.g. "our calculation").
+ *  The big period label morphs at bottom-right. Area x,y (top-left), w, rowH. `dark` for white text. */
+const barrace: ItemFn = (a, {t}, i) => {
+  const app = pop(t, a.at ?? 0, 0.5);
+  if (app <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const X = (a.x as number) ?? 300, Y = (a.y as number) ?? 220, W = a.w ?? 1200, RH = a.rowH ?? 100, P: any[] = a.periods || [], S: any[] = a.series || [], mx = a.max ?? 100, dark = !!a.dark;
+  let k = 0; while (k < P.length - 1 && t >= P[k + 1].at) k++;
+  const u = k > 0 ? E.inOut(clamp((t - P[k].at) / 1.4)) : 1, prev = P[Math.max(0, k - 1)], cur = P[k];
+  const rank = (pp: any) => { const o = [...S].sort((p1, p2) => (pp.values[p2.key] ?? 0) - (pp.values[p1.key] ?? 0)).map((s2) => s2.key); return (key: string) => o.indexOf(key); };
+  const r0 = rank(prev), r1 = rank(cur), ink = dark ? '#FFFFFF' : OL;
+  const fmt = (v: number) => `${a.prefix ?? '$'}${v.toFixed(a.decimals ?? 0)}${a.suffix ?? 'BN'}`;
+  return <g key={'br' + i} opacity={app}>
+    {a.title && <T x={X} y={Y - 40} s={40} a="start" c={ink}>{a.title}</T>}
+    <rect x={X - 6} y={Y - 10} width={6} height={S.length * RH} fill={ink} opacity={0.7} />
+    {S.map((s2) => { const v = lerp(prev.values[s2.key] ?? 0, cur.values[s2.key] ?? 0, u), ry = Y + lerp(r0(s2.key), r1(s2.key), u) * RH;
+      const L = Math.max(4, (W - 260) * v / mx), c = col(s2.color), grow = clamp((t - (a.at ?? 0)) / 1.2), hi = a.highlight === s2.key && t >= (a.highlightAt ?? 0);
+      return <g key={s2.key} transform={`translate(${X} ${ry})`}>
+        <rect x={0} y={6} width={L * E.out(grow)} height={RH - 24} rx={10} fill={c} stroke={hi ? '#F2A900' : OL} strokeWidth={hi ? 8 : 4} />
+        <T x={18} y={RH / 2 + 4} s={Math.min(30, RH * 0.32)} a="start" c="#FFFFFF" o={L > 260 ? 1 : 0}>{s2.label}</T>
+        <T x={L * E.out(grow) + 16} y={RH / 2 + 4} s={Math.min(34, RH * 0.36)} a="start" c={ink}>{(L > 260 ? '' : s2.label + '  ') + fmt(v)}</T>
+        {hi && <circle cx={L + 220} cy={RH / 2 - 6} r={12 + 4 * Math.sin(t * 6)} fill="#F2A900" opacity={0.8} />}
+      </g>; })}
+    <g transform={`translate(${X + W - 40} ${Y + S.length * RH + 40})`}>
+      <T x={0} y={0} s={64} a="end" c={ink} o={0.25 + 0.75 * (k > 0 ? clamp((t - cur.at) / 0.5) : 1)}>{cur.label}</T></g>
+    {a.note && <T x={X} y={Y + S.length * RH + 30} s={22} a="start" w={700} c={ink} o={0.75}>{a.note}</T>}
+  </g>;
+};
+
+/** MARGIN JARS (Ep 54): one glass jar per business showing how many cents of each sales dollar it keeps as operating
+ *  profit. `items` [{label, value (cents; negative = loss), color, at, display}]. Coins rain in and the liquid level
+ *  rises to value%; a negative jar cracks, turns red and leaks. `title`; `x`,`y` = centre baseline; `gap`. */
+const jars: ItemFn = (a, {t}, i) => {
+  const app = pop(t, a.at ?? 0, 0.5);
+  if (app <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const its: any[] = a.items || [], gap = a.gap ?? 380, x0 = ((a.x as number) ?? 960) - gap * (its.length - 1) / 2, y = (a.y as number) ?? 800, JH = 340, JW = 220, ink = a.dark ? '#FFFFFF' : OL;
+  return <g key={'jr' + i} opacity={app}>
+    {a.title && <T x={(a.x as number) ?? 960} y={y - JH - 150} s={38} c={ink}>{a.title}</T>}
+    {its.map((it, k) => { const at = it.at ?? (a.at ?? 0) + 0.5 + k * 0.8, u = E.out(clamp((t - at) / 1.6)), neg = it.value < 0, lvl = Math.min(100, Math.abs(it.value)) / 100 * u;
+      const cx = x0 + k * gap, c = neg ? '#E5483B' : col(it.color), h = (JH - 40) * (neg ? 0.12 : lvl), shake = neg && u > 0.5 ? 3 * Math.sin(t * 30) * (1 - win(t, at + 1, 1.5)) : 0;
+      if (t < at - 0.4) return <g key={k}><rect x={cx - JW / 2} y={y - JH} width={JW} height={JH} rx={30} fill="#FFFFFF" opacity={0.35} stroke={OL} strokeWidth={5} />
+        <T x={cx} y={y + 50} s={28} c={ink}>{it.label}</T></g>;
+      return <g key={k} transform={`translate(${shake} 0)`}>
+        <rect x={cx - JW / 2} y={y - JH} width={JW} height={JH} rx={30} fill="#FFFFFF" opacity={0.45} />
+        <clipPath id={`jc${i}_${k}`}><rect x={cx - JW / 2 + 6} y={y - JH + 6} width={JW - 12} height={JH - 12} rx={26} /></clipPath>
+        <g clipPath={`url(#jc${i}_${k})`}>
+          <path d={`M ${cx - JW / 2} ${y - h + 8 * Math.sin(t * 3 + k)} Q ${cx} ${y - h - 10 * Math.sin(t * 3 + k)} ${cx + JW / 2} ${y - h + 8 * Math.sin(t * 3 + k)} L ${cx + JW / 2} ${y} L ${cx - JW / 2} ${y} Z`} fill={c} opacity={0.9} />
+          {Array.from({length: 6}, (_, q) => { const ph = (t * 0.8 + q / 6) % 1; return <circle key={q} cx={cx - 70 + q * 28} cy={y - ph * h} r={5} fill="#FFFFFF" opacity={0.5 * (1 - ph)} />; })}
+        </g>
+        {!neg && u < 1 && Array.from({length: 4}, (_, q) => { const ph = ((t - at) * 1.5 + q / 4) % 1;
+          return <g key={'cn' + q} transform={`translate(${cx - 30 + q * 20} ${y - JH - 120 + ph * (JH + 120 - h)})`} opacity={1 - ph}><circle r={16} fill="#FFC93C" stroke={OL} strokeWidth={3} /></g>; })}
+        {neg && u > 0.3 && <g><path d={`M ${cx - 40} ${y - JH + 40} L ${cx - 10} ${y - JH + 120} L ${cx - 50} ${y - JH + 170} L ${cx - 10} ${y - JH + 240}`} fill="none" stroke={OL} strokeWidth={5} />
+          {Array.from({length: 3}, (_, q) => { const ph = (t * 0.9 + q / 3) % 1; return <ellipse key={q} cx={cx + JW / 2 + 10} cy={y - 60 + ph * 70} rx={8} ry={12} fill="#E5483B" opacity={1 - ph} />; })}</g>}
+        <rect x={cx - JW / 2} y={y - JH} width={JW} height={JH} rx={30} fill="none" stroke={OL} strokeWidth={6} />
+        <rect x={cx - JW / 2 - 14} y={y - JH - 34} width={JW + 28} height={40} rx={10} fill="#B0BEC5" stroke={OL} strokeWidth={5} />
+        <path d={`M ${cx - JW / 2 + 26} ${y - JH + 30} L ${cx - JW / 2 + 26} ${y - 40}`} stroke="#FFFFFF" strokeWidth={10} opacity={0.5} strokeLinecap="round" />
+        <g transform={`translate(${cx} ${y - JH - 90}) scale(${E.outBack(win(t, at + 0.8, 0.5))})`}>
+          <rect x={-120} y={-38} width={240} height={68} rx={14} fill={neg ? '#E5483B' : '#FFFFFF'} stroke={OL} strokeWidth={5} />
+          <T x={0} y={10} s={it.display && it.display.length > 9 ? 26 : 34} c={neg ? '#FFFFFF' : OL}>{it.display || `${Math.round(it.value)}¢`}</T></g>
+        <T x={cx} y={y + 50} s={28} c={ink}>{it.label}</T>
+        {it.sub && <T x={cx} y={y + 84} s={20} w={700} c={ink} o={0.75}>{it.sub}</T>}
+      </g>; })}
+    {a.note && <T x={(a.x as number) ?? 960} y={y + 130} s={22} w={700} c={ink} o={0.75}>{a.note}</T>}
+  </g>;
+};
+
+/** CASH FALLS (Ep 54): a waterfall chart drawn as water. `steps` [{label, value, kind: 'total'|'out'|'in', color, at,
+ *  display}]: a total starts at zero; 'out' hangs from the running level downwards, 'in' stacks upwards; a stream of
+ *  water (coins glinting in it) pours from the previous bar's top into the new one as it grows. `max`, `min` (may be < 0),
+ *  area x,y,w,h, `title`, `note`. */
+const cashfalls: ItemFn = (a, {t}, i) => {
+  const app = pop(t, a.at ?? 0, 0.5);
+  if (app <= 0 || (a.until !== undefined && t > a.until + 0.4)) return null;
+  const X = (a.x as number) ?? 260, Y = (a.y as number) ?? 200, W = a.w ?? 1400, H = a.h ?? 560, st: any[] = a.steps || [], mx = a.max ?? 100, mn = Math.min(0, a.min ?? 0);
+  const yv = (v: number) => Y + H - (v - mn) / (mx - mn) * H, gap = W / Math.max(1, st.length), bw = Math.min(200, gap * 0.6), ink = a.dark ? '#FFFFFF' : OL;
+  let lvl = 0; const bars = st.map((s2, k) => { const from = s2.kind === 'total' ? 0 : lvl, to = s2.kind === 'out' ? lvl - s2.value : s2.kind === 'in' ? lvl + s2.value : s2.value; lvl = to; return {from, to, k}; });
+  return <g key={'cf' + i} opacity={app}>
+    {a.title && <T x={X} y={Y - 50} s={40} a="start" c={ink}>{a.title}</T>}
+    <rect x={X - 20} y={yv(0) - 3} width={W + 40} height={6} fill={ink} opacity={0.8} />
+    {st.map((s2, k) => { const at = s2.at ?? (a.at ?? 0) + 0.5 + k * 0.9, u = E.out(clamp((t - at) / 1.2)); if (u <= 0) return null;
+      const b = bars[k], cx = X + gap * (k + 0.5), top = lerp(b.from, b.to, u), y1 = yv(Math.max(b.from, top)), y2 = yv(Math.min(b.from, top));
+      const c = s2.color ? col(s2.color) : s2.kind === 'out' ? '#E5483B' : s2.kind === 'in' ? '#22A06B' : '#2E6FD8';
+      const pouring = k > 0 && u < 1, px = X + gap * (k - 0.5) + bw / 2;
+      return <g key={k}>
+        {k > 0 && <path d={`M ${px} ${yv(b.from)} L ${cx - bw / 2} ${yv(b.from)}`} stroke={ink} strokeWidth={3} strokeDasharray="10 8" opacity={0.6} />}
+        <rect x={cx - bw / 2} y={y1} width={bw} height={Math.max(2, y2 - y1)} rx={10} fill={c} stroke={OL} strokeWidth={5} />
+        <path d={`M ${cx - bw / 2 + 14} ${y1 + 10} L ${cx - bw / 2 + 14} ${y2 - 10}`} stroke="#FFFFFF" strokeWidth={8} opacity={0.35} strokeLinecap="round" />
+        {pouring && Array.from({length: 5}, (_, q) => { const ph = (t * 2 + q / 5) % 1;
+          return <g key={q}><path d={`M ${px} ${yv(b.from)} Q ${cx - bw / 2} ${yv(b.from) - 40} ${cx} ${lerp(yv(b.from), yv(top), ph)}`} fill="none" stroke="#81D4FA" strokeWidth={10} opacity={0.5} strokeLinecap="round" />
+            <circle cx={lerp(px, cx, ph)} cy={lerp(yv(b.from), yv(top), ph) - 30 * Math.sin(ph * Math.PI)} r={9} fill="#FFC93C" stroke={OL} strokeWidth={2} /></g>; })}
+        <g transform={`translate(${cx} ${(s2.kind === 'out' ? y2 + 46 : y1 - 24)}) scale(${E.outBack(win(t, at + 0.6, 0.4))})`}>
+          <T x={0} y={0} s={30} c={s2.kind === 'out' ? '#E5483B' : ink}>{s2.display || ''}</T></g>
+        <T x={cx} y={Y + H + 56} s={24} c={ink}>{s2.label}</T>
+        {s2.sub && <T x={cx} y={Y + H + 86} s={18} w={700} c={ink} o={0.75}>{s2.sub}</T>}
+      </g>; })}
+    {a.note && <T x={X} y={Y + H + 130} s={22} a="start" w={700} c={ink} o={0.75}>{a.note}</T>}
+  </g>;
+};
+
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, freighter, pricedin, riskscale, editionstamp, scorecard};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

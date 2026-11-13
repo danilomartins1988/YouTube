@@ -366,6 +366,22 @@ export const SUBJECTS: Record<string, SubjectFn> = {
     <circle r={160} fill="none" stroke="#8A6414" strokeWidth={8} />
     <text x={0} y={70} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={200} fill="#6B4C0E">{o.symbol || '$'}</text>
   </g>,
+  /** A giant generic search box (no logo): a glowing white pill with a magnifier and a blinking caret, a gold price tag
+   *  hanging from it on a string (`tag`, default "$20B"). The default as the product. */
+  searchbar: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <defs>{metal('sbt', '#B8860B', '#FFE08A')}</defs>
+    <rect x={-560} y={-150} width={1120} height={190} rx={95} fill="#000000" opacity={0.35} transform="translate(18 26)" />
+    <rect x={-560} y={-150} width={1120} height={190} rx={95} fill="#FFFFFF" stroke={P.haze} strokeWidth={10} />
+    <circle cx={-430} cy={-62} r={44} fill="none" stroke="#1B2A44" strokeWidth={16} /><path d="M -398 -30 L -350 18" stroke="#1B2A44" strokeWidth={20} strokeLinecap="round" />
+    <rect x={-300} y={-100} width={12} height={90} fill="#2E6FD8" />
+    {[0, 1, 2].map((k) => <rect key={k} x={-260 + k * 150} y={-66} width={110} height={22} rx={11} fill="#CFD8DC" />)}
+    <path d="M 380 40 L 360 200" stroke="#E8EDF2" strokeWidth={8} />
+    <g transform="translate(350 320) rotate(-10)">
+      <path d="M -190 -110 L 150 -110 L 230 0 L 150 110 L -190 110 Z" fill="url(#sbt)" stroke="#5A410C" strokeWidth={10} strokeLinejoin="round" />
+      <circle cx={150} cy={0} r={22} fill="#1B2A44" />
+      <text x={-30} y={38} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={110} fill="#3B2A06">{o.tag || '$20B'}</text>
+    </g>
+  </g>,
   /** A huge brilliant-cut diamond (side view): crown facets over a pointed pavilion, with star glints. */
   gem: (o, P) => {
     const W = 300, T = 150, CY = -120, GY = -40, PY = 300; // half-width, table half-width, crown top, girdle, culet

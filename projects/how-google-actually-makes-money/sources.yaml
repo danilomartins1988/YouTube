@@ -1,0 +1,218 @@
+# Sources and claims for "How Google Actually Makes Money" (Episode 54).
+# Every claim was read on its primary page on 2026-11-13 (notes: docs/episodes/54-alphabet/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars as reported.
+# RULES: the Apple figure is the court's "estimated $20 billion" for 2022 (worldwide queries), attributed to the court;
+# margins, per-day revenue, free cash flow, TTM sums and shares are OUR calculations (say so); company claims
+# (YouTube > $60bn, 325M paid subscriptions, 150M YouTube Music and Premium incl. trials, Waymo miles and cities,
+# half-trillion run rate, query growth) are attributed; AI Mode monetization is attributed to the Q3 2026 call;
+# capex guide $195-205bn is from the official call transcript. This is NOT a valuation episode: no price, no multiple.
+sources:
+  - id: tenk
+    title: "Alphabet Inc. Form 10-K for fiscal year 2025 (filed Feb 5, 2026): Note 2 revenues, segment note, MD&A (TAC, monetization metrics), cash flows"
+    publisher: Alphabet Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm
+    published: "2026-02-05"
+    accessed: "2026-11-13"
+    credit: "Alphabet 10-K 2025 (SEC)"
+  - id: q4rel
+    title: "Alphabet Q4 and fiscal year 2025 results (8-K Ex. 99.1, Feb 4, 2026)"
+    publisher: Alphabet Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm
+    published: "2026-02-04"
+    accessed: "2026-11-13"
+    credit: "Alphabet Q4 2025 release (SEC)"
+  - id: q1rel
+    title: "Alphabet Q1 2026 results (8-K Ex. 99.1, Apr 29, 2026)"
+    publisher: Alphabet Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm
+    published: "2026-04-29"
+    accessed: "2026-11-11"
+    credit: "Alphabet Q1 2026 release (SEC)"
+  - id: q2rel
+    title: "Alphabet Q2 2026 results (8-K Ex. 99.1, Jul 22, 2026)"
+    publisher: Alphabet Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm
+    published: "2026-07-22"
+    accessed: "2026-11-11"
+    credit: "Alphabet Q2 2026 release (SEC)"
+  - id: q3rel
+    title: "Alphabet Q3 2026 results (8-K Ex. 99.1, Oct 28, 2026)"
+    publisher: Alphabet Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm
+    published: "2026-10-28"
+    accessed: "2026-11-13"
+    credit: "Alphabet Q3 2026 release (SEC)"
+  - id: tenq3
+    title: "Alphabet Form 10-Q for the quarter ended September 30, 2026 (filed Oct 29, 2026): monetization metrics, TAC, cash flows, equity issuance, legal matters"
+    publisher: Alphabet Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm
+    published: "2026-10-29"
+    accessed: "2026-11-13"
+    credit: "Alphabet 10-Q Q3 2026 (SEC)"
+  - id: call
+    title: "Alphabet Q3 2026 earnings call transcript (Oct 28, 2026)"
+    publisher: Alphabet Investor Relations
+    url: https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf
+    published: "2026-10-28"
+    accessed: "2026-11-09"
+    credit: "Alphabet Q3 2026 call"
+  - id: mehta
+    title: "United States v. Google LLC, No. 20-cv-3010 (APM), Memorandum Opinion (D.D.C., Aug 5, 2024), Doc. 1033: findings on revenue share, Apple ISA, the text-ads auction and pricing knobs"
+    publisher: US District Court for the District of Columbia
+    url: https://storage.courtlistener.com/recap/gov.uscourts.dcd.223205/gov.uscourts.dcd.223205.1033.0.pdf
+    published: "2024-08-05"
+    accessed: "2026-11-13"
+    credit: "US v. Google, D.D.C. 2024"
+  - id: remedy
+    title: "United States v. Google LLC, Memorandum Opinion on remedies (D.D.C., Sept 2, 2025), Doc. 1436"
+    publisher: US District Court for the District of Columbia
+    url: https://storage.courtlistener.com/recap/gov.uscourts.dcd.223205/gov.uscourts.dcd.223205.1436.0.pdf
+    published: "2025-09-02"
+    accessed: "2026-11-13"
+    credit: "US v. Google remedies, D.D.C. 2025"
+
+claims:
+  - id: apple
+    text: "Mehta opinion FOF 299: 'In 2022, Google's revenue share payment to Apple was an estimated $20 billion (worldwide queries).' FOF 298: Google pays Apple a percentage of its ad revenue on Safari and Chrome in return for default placement. FOF 299: the 2022 payment 'is more than all of its other revenue share payments combined'. FOF 289: 'In 2021, Google paid out a total of $26.3 billion in revenue share' (Apple, Mozilla, Android OEMs, carriers), 'listed in its financial statements as traffic acquisition costs'. Conclusion: 'Google is a monopolist, and it has acted as one to maintain its monopoly.'"
+    spoken: twenty billion dollars
+    display: "≈ $20bn to Apple in 2022 (court estimate, worldwide queries)"
+    fields: {total21_spoken: twenty-six point three billion dollars}
+    source_ids: [mehta]
+    status: source_located
+    verification_note: Say "an estimated"; attribute to the court; it is a revenue share for default placement, not a flat fee.
+
+  - id: remedy
+    text: "Remedies opinion (Sept 2, 2025): 'Google will be barred from entering or maintaining any exclusive contract relating to the distribution of Google Search, Chrome, Google Assistant, and the Gemini app'; 'Google will not be barred from making payments ... to distribution partners'; 'Cutting off payments from Google almost certainly will impose substantial—in some cases, crippling—downstream harms to distribution partners'; no Chrome divestiture. 10-K: final judgment Dec 2025 also 'requires us to share certain search data with and offer syndication services to certain competitors'; Google appealed Jan 2026, DOJ and states Feb 2026."
+    spoken: barred exclusive contracts
+    display: "Remedies: no exclusive deals; payments allowed; data sharing; both sides appealed"
+    fields: {}
+    source_ids: [remedy, tenk]
+    status: source_located
+
+  - id: auction
+    text: "Mehta opinion FOF 240-242: 'Google's text ads auction is a classic second-price auction, with modifications ... the winner, instead of paying the price of their highest bid, pays one cent above the first runner-up.' 'An auction winner is not determined solely based its bid ... LTV = bid x pCTR – β'; pCTR, the predicted click-through rate, 'is a score between 0 and 1'. FOF 243-252: 'pricing knobs' (squashing, format pricing, rGSP); 'Google strategically has used pricing knobs to raise text ads prices'; studies 'showed that Google could raise prices using squashing without losing advertisers.'"
+    spoken: one cent above the runner-up
+    display: "Second-price auction: winner pays 1¢ above the runner-up (court findings)"
+    fields: {}
+    source_ids: [mehta]
+    status: source_located
+
+  - id: rev
+    text: "10-K Note 2: FY2025 total revenues $402,836M; Google Services $342,721M; Google Cloud $58,705M; Other Bets $1,537M; hedging $(127)M. 'We generated more than 70% of total revenues from online advertising in 2025.' Per day ≈ $1.10bn (OUR calculation: 402,836 / 365)."
+    spoken: four hundred and three billion dollars
+    display: "FY2025 revenue $402.8bn (10-K)"
+    fields: {perday_spoken: one point one billion dollars, services_spoken: three hundred and forty-three billion dollars, cloud_spoken: fifty-nine billion dollars, bets_spoken: one point five billion dollars}
+    source_ids: [tenk]
+    status: source_located
+
+  - id: ads
+    text: "10-K Note 2, FY2025: Google Search & other $224,532M (≈ 56% of revenue, OUR calculation); YouTube ads $40,367M; Google Network $29,792M; Google advertising $294,691M; subscriptions, platforms and devices $48,030M. FY2023: Search 175,033; YouTube 31,510; Network 31,312; Subs 34,688; Cloud 33,088. FY2024: 198,084; 36,147; 30,359; 40,340; 43,229."
+    spoken: two hundred and twenty-five billion dollars
+    display: "Search & other $224.5bn in 2025 (10-K)"
+    fields: {}
+    source_ids: [tenk]
+    status: source_located
+
+  - id: clicks
+    text: "10-K: FY2025 vs FY2024 paid clicks +6%, cost-per-click +7% (Google Search & other); Network impressions −7%. 10-Q: Q3 2026 year over year paid clicks +8%, cost-per-click +4%; Network impressions −14%."
+    spoken: six percent
+    display: "Paid clicks +6%, CPC +7% (2025); +8% / +4% (Q3 2026)"
+    fields: {cpc25_spoken: seven percent, c26_spoken: eight percent, cpc26_spoken: four percent}
+    source_ids: [tenk, tenq3]
+    status: source_located
+
+  - id: tac
+    text: "10-K: TAC $59,926M in 2025 ($54,900M in 2024); 'The TAC rate decreased from 20.7% to 20.3%'; TAC = amounts paid to distribution partners ('browser providers, mobile carriers, original equipment manufacturers, and software developers') and to Google Network partners; 'most of the advertiser revenues from ads served on Google Network properties are paid as TAC to our Google Network partners'. 10-Q: Q3 2026 TAC $16,366M, TAC rate 20.0%."
+    spoken: fifty-nine point nine billion dollars
+    display: "TAC $59.9bn in 2025 = 20.3% of ad revenue (10-K)"
+    fields: {rate_spoken: twenty cents}
+    source_ids: [tenk, tenq3]
+    status: source_located
+
+  - id: net
+    text: "10-K: Google Network revenues $29,792M in 2025, 'decreased $567 million from 2024 to 2025, primarily due to a decrease in AdSense revenues, partially offset by an increase in AdMob revenues'."
+    spoken: twenty-nine point eight billion dollars
+    display: "Network $29.8bn in 2025, down $567M (10-K)"
+    fields: {}
+    source_ids: [tenk]
+    status: source_located
+
+  - id: yt
+    text: "10-K: YouTube ads $40,367M in 2025. Q4 2025 release: 'YouTube revenue across ads and subscriptions exceeded $60 billion for the full year 2025' (company claim). Q3 2026 call (Schindler): 'In Q3, Living Room accounted for over one-third of total YouTube ads revenues.' 10-K: increase in other cost of revenues 'primarily due to increases in content acquisition costs, largely for YouTube, depreciation expense, and other technical infrastructure operations costs'."
+    spoken: forty point four billion dollars
+    display: "YouTube ads $40.4bn (10-K); > $60bn incl. subscriptions (company)"
+    fields: {total_spoken: sixty billion dollars}
+    source_ids: [tenk, q4rel, call]
+    status: source_located
+
+  - id: subs
+    text: "10-K: subscriptions, platforms and devices $48,030M in 2025, growth 'primarily due to ... growth in paid subscriptions across both YouTube services and Google One'. 10-Q: Services revenue includes 'YouTube TV, YouTube Music and Premium, and NFL Sunday Ticket, as well as Google One; the sale of apps and in-app purchases; and consumer devices'. Q4 2025 release (Pichai): 'over 325 million paid subscriptions across consumer services'. Q3 2026 release: 'surpassed 150 million YouTube Music and Premium subscribers globally, including trials'."
+    spoken: forty-eight billion dollars
+    display: "Subscriptions, platforms & devices $48.0bn (10-K)"
+    fields: {paid_spoken: three hundred and twenty-five million, ytp_spoken: one hundred and fifty million}
+    source_ids: [tenk, q4rel, q3rel, tenq3]
+    status: source_located
+
+  - id: cloud
+    text: "10-K segment note: Google Cloud revenue / operating income $33,088M / $1,716M (2023), $43,229M / $6,112M (2024), $58,705M / $13,910M (2025). Q3 2026 release: $30,709M / $11,121M. Operating margins 5.2%, 14.1%, 23.7%, 36.2% (OUR calculation)."
+    spoken: five cents
+    display: "Cloud keeps 5¢ (2023) → 24¢ (2025) → 36¢ (Q3 2026) per $1 (our calc.)"
+    fields: {m25_spoken: twenty-four cents, m26_spoken: thirty-six cents}
+    source_ids: [tenk, q3rel]
+    status: source_located
+
+  - id: q3
+    text: "Q3 2026 release: revenues $127,577M (+25%); Google Search & other $63,350M (+12%); 'Google Cloud delivered record growth as revenues increased 103% to $30.7 billion ... TPU systems sales were also a meaningful contributor'; segment operating income Services $39,157M on $96,302M (40.7%, OUR calc.), Cloud $11,121M on $30,709M (36.2%, OUR calc.); Other Bets revenue $372M, operating loss $(2,047)M. Pichai: 'now on a half-trillion dollar revenue run rate' (company claim; Q3 × 4 ≈ $510bn, OUR calc.); 'our year-over-year query growth rate is the highest it's been in the last five years' (company claim)."
+    spoken: thirty point seven billion dollars
+    display: "Q3 2026: Cloud $30.7bn (+103%); Search $63.4bn (+12%)"
+    fields: {cloudg_spoken: one hundred and three percent, search_spoken: sixty-three point four billion dollars, searchg_spoken: twelve percent, svcm_spoken: forty-one cents, betsop_spoken: two billion dollars, bets_spoken: three hundred and seventy-two million dollars}
+    source_ids: [q3rel]
+    status: source_located
+
+  - id: ttm
+    text: "Sum of the Q4 2025, Q1, Q2 and Q3 2026 releases (OUR calculation): Search & other $250.1bn; Google Cloud $93.2bn; subscriptions, platforms & devices $53.2bn; YouTube ads $43.5bn; Network $29.6bn."
+    spoken: ninety-three billion dollars
+    display: "Last four quarters: Cloud $93.2bn, second only to Search (our calc.)"
+    fields: {}
+    source_ids: [q4rel, q1rel, q2rel, q3rel]
+    status: source_located
+
+  - id: bets
+    text: "10-K: Other Bets revenue $1,537M, operating loss $(7,515)M in 2025; 'Revenues from Other Bets are generated primarily from the sale of autonomous transportation services and internet services.' Q3 2026 call (Pichai): Waymo 'driven more than 300 million fully autonomous miles' and 'operates in 15 major U.S. cities' (company claims)."
+    spoken: seven point five billion dollars
+    display: "Other Bets 2025: $1.5bn revenue, −$7.5bn operating loss (10-K)"
+    fields: {miles_spoken: three hundred million, cities_spoken: fifteen}
+    source_ids: [tenk, call]
+    status: source_located
+
+  - id: cash
+    text: "10-K cash flow statement, 2025: net cash provided by operating activities $164,713M; purchases of property and equipment $(91,447)M; repurchases of stock $(45,709)M; dividend payments $(10,049)M. Free cash flow ≈ $73.3bn (OUR calculation: 164,713 − 91,447). Buybacks + dividends ≈ $55.8bn ≈ 76% of that (OUR calculation)."
+    spoken: one hundred and sixty-five billion dollars
+    display: "2025: operating cash $164.7bn; capex $91.4bn; buybacks $45.7bn; dividends $10.0bn (10-K)"
+    fields: {capex_spoken: ninety-one billion dollars, buy_spoken: forty-six billion dollars, div_spoken: ten billion dollars, fcf_spoken: seventy-three billion dollars}
+    source_ids: [tenk]
+    status: source_located
+
+  - id: cash26
+    text: "10-Q, nine months to Sep 30, 2026: net cash provided by operating activities $127,149M; purchases of property and equipment $(131,953)M; 'In the three and nine months ended September 30, 2026, there were no repurchases'; dividends on preferred and common $(8,167)M; proceeds from issuance of common stock $42,870M; mandatory convertible preferred net $19.0bn; proceeds from issuance of debt $85,222M. Q3 2026 call (CFO): 'our full-year 2026 CapEx guidance range of $195-$205 billion remain unchanged'; 'We continue to expect our CapEx to increase significantly in 2027'."
+    spoken: one hundred and thirty-two billion dollars
+    display: "Jan–Sep 2026: capex $132.0bn > operating cash $127.1bn; no buybacks (10-Q)"
+    fields: {ocf_spoken: one hundred and twenty-seven billion dollars, guide_spoken: one hundred and ninety-five to two hundred and five billion dollars, eq_spoken: forty-three billion dollars, pref_spoken: nineteen billion dollars, debt_spoken: eighty-five billion dollars}
+    source_ids: [tenq3, call]
+    status: source_located
+
+  - id: aimode
+    text: "Q3 2026 call (Philipp Schindler, Chief Business Officer): 'the strong growth in AI Mode queries had an impact because of the lower monetization we were seeing in AI Mode'; 'we're now scaling ads within both AI Overviews and AI Mode to more users and more queries'."
+    spoken: lower monetization
+    display: "AI Mode: 'lower monetization' (Q3 2026 call)"
+    fields: {}
+    source_ids: [call]
+    status: source_located
+
+  - id: legal
+    text: "10-K: ad tech case, April 2025 mixed decision, 'Google's publisher tools unfairly excluded rivals'. 10-Q: in September 2026 the court denied 'the DOJ's request for structural divestitures ... instead ordering certain behavioral remedies'; Google plans to appeal. EU Digital Markets Act: July 2026 fines of €430M (Play) and €460M (Search), $1.0bn charge in Q3 2026, appealed."
+    spoken: declined to order a breakup
+    display: "Ad tech: no breakup, behavioral remedies (Sept 2026); EU DMA fines (10-Q)"
+    fields: {}
+    source_ids: [tenk, tenq3]
+    status: source_located

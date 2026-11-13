@@ -1,0 +1,61 @@
+# Visual direction for how-google-actually-makes-money (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Director's edit (2026-11-13): day scenes and human characters throughout. One world per part: court + auction hall (hook),
+# auction hall + shoe shop (the auction), toll road + court + web (toll booths), living room + studio + suburb (second
+# screen), server farm + studio race + campus (cloud), reservoir + bank hall + exchange (cash), auction hall at night +
+# toll road + court (threat), a four-world pan (lesson). Tone darkens once, when 2026 flips the cash waterfall.
+primary_tone: strategy
+secondary_tones:
+- bright
+- trade
+- crisis
+- reflective
+palette:
+  bg: '#E9EEF3'
+  bg2: '#F6F8FA'
+  ink: '#14202E'
+  muted: '#5A6B7E'
+  land: '#C9D6E3'
+  border: '#40566E'
+  accent: '#E08A00'
+  accent2: '#2F6FD1'
+  accent3: '#23995A'
+  risk: '#D93A3A'
+presenter:
+  demeanor: neutral
+  min_sequences: 4
+chapters:
+- chapter: The price of a default
+  tone: strategy
+- chapter: The auction
+  tone: bright
+- chapter: The toll booths
+  tone: strategy
+- chapter: The second screen
+  tone: bright
+- chapter: The cloud turns
+  tone: trade
+- chapter: Where the cash goes
+  tone: strategy
+- chapter: The threat
+  tone: tech
+- chapter: The lesson
+  tone: reflective
+turning_points:
+- segment: m5_2026
+  cue: flipped the waterfall
+  to: crisis
+  why: capex overtakes operating cash; buybacks stop
+thumbnail:
+  tone: strategy
+  headline:
+  - GOOGLE → APPLE
+  - $20 BILLION
+  idea: a giant generic search box with a $20 billion price tag hanging from it; the
+    default is the product
+requirements:
+- 'No company logos, brand colours as logo, or trademarked art: generic search box,
+  phone, TV and data centres'
+- Sundar Pichai only as a respectful caricature where the narration names him; no
+  other real person drawn (judge and executives unnamed or in text)
+- Apple figure attributed to the court as an estimate; illustrative auction bids labelled
+  ILLUSTRATIVE; our calculations labelled
