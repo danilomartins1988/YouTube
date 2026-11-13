@@ -318,7 +318,7 @@ stage("s38_why", "m5_why", {
     "cam": CAM(C("The trust went from"), x1=1200, y1=500, z1=1.0, x0=1000, y0=480, z0=1.06), "drift": 2,
     "items": [it("docs", x=650, y=720, at=0.1, text="SCHEDULE 13D", scale=0.7, stamp="STATED PURPOSE", stampAt=C("investment, personal")),
               it("sign", x=650, y=330, text="INVESTMENT · PERSONAL · CHARITABLE", at=C("investment, personal", 0.4), color="#FFF8E1", size=26),
-              it("counter", x=1350, y=200, at=C("The trust went from"), prefix="≈ ", suffix="M", steps=[[0, 604], [{"cue": "shares to about"}, 604], [{"cue": "Walton Enterprises' own"}, 500]], text="HOLDINGS TRUST'S SHARES"),
+              it("counter", x=1350, y=200, at=0.4, prefix="≈ ", suffix="M", steps=[[0, 604], [{"cue": "shares to about"}, 604], [{"cue": "Walton Enterprises' own"}, 500]], text="HOLDINGS TRUST'S SHARES"),
               it("sign", x=1350, y=430, text="WALTON ENTERPRISES: ≈ 3.00BN, UNCHANGED", at=C("Walton Enterprises' own"), color="#C8E6C9", size=30)]},
     sources=["d13", "form4", "proxy"])
 stage("s39_grat", "m5_grat", {
@@ -367,10 +367,13 @@ add("p42_trust", "m5_draw", "engine_draw", {
 stage("s43_scrutiny", "m5_scrutiny", {
     "zones": [Z("exchange")], "worldW": 2400,
     "cam": CAM(C("It got about"), x1=1150, y1=500, z1=1.03, x0=1000, y0=500, z0=1.06), "drift": 2,
-    "items": [it("sign", x=1000, y=90, text="2026 SHAREHOLDER PROPOSAL: CUMULATIVE VOTING", at=0.3, color="#FFFFFF", size=30),
-              chart([{"label": "FOR", "value": 0.122, "color": "#2E9E5B", "at": C("votes for"), "display": "0.12BN"},
+    "items": [chart([{"label": "FOR", "value": 0.122, "color": "#2E9E5B", "at": C("votes for"), "display": "0.12BN"},
                      {"label": "AGAINST", "value": 6.39, "color": "#C0392B", "at": C("against", -0.4), "display": "6.39BN"}],
-                    at=C("It got about"), max=7, title="VOTES CAST (8-K, JUNE 2026)", x=420, y=150, w=1100, h=400)]},
+                    at=0.3, max=7, title="2026 PROPOSAL: CUMULATIVE VOTING · VOTES CAST (8-K)", x=420, y=170, w=1100, h=380),
+              it("person", x=380, at=0.4, pose="mic", color="#4FB3F6", skin=1, hair=2),
+              it("person", x=1650, at=0.6, pose="clipboard", color="#FF8A65", skin=0, hair=4, flip=True),
+              it("sign", x=1600, y=420, text="'LIMITS OTHER INVESTORS' SAY'", sub="PROPOSAL TEXT (PROXY 2026)", at=C("concentrated family control"), color="#FFF8E1", size=26),
+              it("docs", x=380, y=640, at=C("a shareholder proposal"), text="SHAREHOLDER PROPOSAL", scale=0.55, stamp="REJECTED", stampAt=C("against", 0.2))]},
     sources=["meet", "proxy"])
 
 # ====================================================================== PAYOFF
@@ -378,11 +381,11 @@ stage("s44_payoff", "payoff", {
     **SQ(discount=0.0), "cam": [{"at": 0, "x": 960, "y": 520, "zoom": 1.1}, {"at": C("With timing"), "x": 960, "y": 380, "zoom": 0.9, "dur": 3.0},
                                 {"at": C("The test now"), "x": 1100, "y": 420, "zoom": 1.0, "dur": 2.0}], "drift": 2,
     "items": [it("sapling", x=1700, at=0.1, growAt=C("With timing"), dur=4.0, scale=0.6),
-              it("letters", x=960, y=-160, text="NOT SPECIAL SHARES. TIMING.", at=C("Not with special shares"), until=C("The test now"), size=52, color="gold"),
-              it("sign", x=700, y=-20, text="GIFT EARLY", at=C("gave the company"), until=C("The test now"), color="#FFE0B2", size=32),
-              it("sign", x=1000, y=60, text="ONE BLOCK", at=C("kept the shares in one block"), until=C("The test now"), color="#BBDEFB", size=32),
-              it("sign", x=1300, y=-20, text="THIN MARGIN × HUGE VOLUME", at=C("thin-margin"), until=C("The test now"), color="#C8E6C9", size=30),
-              it("letters", x=1100, y=40, text="WILL THE BLOCK HOLD?", at=C("The test now"), size=60, color="gold"),
+              it("letters", x=960, y=110, text="NOT SPECIAL SHARES. TIMING.", at=C("Not with special shares"), until=C("The test now"), size=52, color="gold"),
+              it("sign", x=640, y=240, text="GIFT EARLY", at=C("gave the company"), until=C("The test now"), color="#FFE0B2", size=32),
+              it("sign", x=1000, y=240, text="ONE BLOCK", at=C("kept the shares in one block"), until=C("The test now"), color="#BBDEFB", size=32),
+              it("sign", x=1500, y=240, text="THIN MARGIN × HUGE VOLUME", at=C("thin-margin"), until=C("The test now"), color="#C8E6C9", size=30),
+              it("letters", x=1100, y=110, text="WILL THE BLOCK HOLD?", at=C("The test now"), size=60, color="gold"),
               cari("sam", 600, 0.2, pose="wave", scale=0.7)]},
     sources=["bbg", "proxy", "form4"])
 add("s45_end", "teaser", "end_card", {"words": ["Next time:", "another hidden link of the world economy"], "brand": "The Hidden Economics",

@@ -2469,8 +2469,7 @@ scenes:
     - kind: counter
       x: 1350
       y: 200
-      at:
-        cue: The trust went from
+      at: 0.4
       prefix: '≈ '
       suffix: M
       steps:
@@ -2884,18 +2883,11 @@ scenes:
       dur: 1.8
     drift: 2
     items:
-    - kind: sign
-      x: 1000
-      y: 90
-      text: '2026 SHAREHOLDER PROPOSAL: CUMULATIVE VOTING'
-      at: 0.3
-      color: '#FFFFFF'
-      size: 30
     - kind: bigchart
       x: 420
-      y: 150
+      y: 170
       w: 1100
-      h: 400
+      h: 380
       bars:
       - label: FOR
         value: 0.122
@@ -2910,10 +2902,44 @@ scenes:
           cue: against
           offset: -0.4
         display: 6.39BN
-      at:
-        cue: It got about
+      at: 0.3
       max: 7
-      title: VOTES CAST (8-K, JUNE 2026)
+      title: '2026 PROPOSAL: CUMULATIVE VOTING · VOTES CAST (8-K)'
+    - kind: person
+      x: 380
+      at: 0.4
+      pose: mic
+      color: '#4FB3F6'
+      skin: 1
+      hair: 2
+    - kind: person
+      x: 1650
+      at: 0.6
+      pose: clipboard
+      color: '#FF8A65'
+      skin: 0
+      hair: 4
+      flip: true
+    - kind: sign
+      x: 1600
+      y: 420
+      text: '''LIMITS OTHER INVESTORS'' SAY'''
+      sub: PROPOSAL TEXT (PROXY 2026)
+      at:
+        cue: concentrated family control
+      color: '#FFF8E1'
+      size: 26
+    - kind: docs
+      x: 380
+      y: 640
+      at:
+        cue: a shareholder proposal
+      text: SHAREHOLDER PROPOSAL
+      scale: 0.55
+      stamp: REJECTED
+      stampAt:
+        cue: against
+        offset: 0.2
   sources:
   - meet
   - proxy
@@ -2958,7 +2984,7 @@ scenes:
       scale: 0.6
     - kind: letters
       x: 960
-      y: -160
+      y: 110
       text: NOT SPECIAL SHARES. TIMING.
       at:
         cue: Not with special shares
@@ -2967,8 +2993,8 @@ scenes:
       size: 52
       color: gold
     - kind: sign
-      x: 700
-      y: -20
+      x: 640
+      y: 240
       text: GIFT EARLY
       at:
         cue: gave the company
@@ -2978,7 +3004,7 @@ scenes:
       size: 32
     - kind: sign
       x: 1000
-      y: 60
+      y: 240
       text: ONE BLOCK
       at:
         cue: kept the shares in one block
@@ -2987,8 +3013,8 @@ scenes:
       color: '#BBDEFB'
       size: 32
     - kind: sign
-      x: 1300
-      y: -20
+      x: 1500
+      y: 240
       text: THIN MARGIN × HUGE VOLUME
       at:
         cue: thin-margin
@@ -2998,7 +3024,7 @@ scenes:
       size: 30
     - kind: letters
       x: 1100
-      y: 40
+      y: 110
       text: WILL THE BLOCK HOLD?
       at:
         cue: The test now
