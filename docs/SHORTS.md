@@ -62,3 +62,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | byb-tesla-2026-11 | Tesla Is Worth 466 Times Its Profit. Here's What That Assumes | TESLA: 466× / ITS PROFIT | 53 s | `docs/episodes/byb-tesla-2026-11/youtube-short/short_package.md` |
 | 52-nvidia-probe | Nvidia Lost About $428 Billion in Two Days | -$428 BILLION / IN TWO DAYS | 48 s | `docs/episodes/52-nvidia-probe/youtube-short/short_package.md` |
 | 53-nvidia-ceo-crisis | Could Nvidia's Board Push Out Its Founder? | NVIDIA'S CEO / OUT? | 60 s | `docs/episodes/53-nvidia-ceo-crisis/youtube-short/short_package.md` |
+| 54-alphabet | Google Paid Apple an Estimated $20 Billion for a Default | $20 BILLION / FOR A DEFAULT | 50 s | `docs/episodes/54-alphabet/youtube-short/short_package.md` |

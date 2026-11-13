@@ -1,12 +1,12 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos, no real people).
 title: How Google Actually Makes Money
 docs_dir: docs/episodes/54-alphabet
 video: output/alphabet_documentary.mp4
 deliverable: documentary
-status: planned
+status: completed
 analysis:
   mystery: Why would Google pay anyone $20 billion for a setting on a phone?
-  surprising_fact: In 2022 Google's revenue-share payment to Apple was an estimated $20 billion (US v. Google, D.D.C. 2024, finding 299)
+  surprising_fact: In 2022 Google's revenue-share payment to Apple was an estimated
+    $20 billion (US v. Google, D.D.C. 2024, finding 299)
   subject: a generic search box
   tone: strategy
   metaphor: the default search box is a toll booth
@@ -15,15 +15,34 @@ concepts:
   angle: giant number (bignum)
   archetype: bignum
   text:
-  - GOOGLE → APPLE
-  - $20 BILLION
-  claim_basis: 'apple: 2022 revenue share to Apple an estimated $20bn (court finding 299)'
+  - GOOGLE PAYS APPLE
+  - $20B
+  claim_basis: 'apple: 2022 revenue share to Apple an estimated $20bn (court finding
+    299)'
   scene:
-    palette: {sky0: '#06122A', sky1: '#16305C', haze: '#7FC8FF', key: '#E8F6FF', accent: '#FFC21A', ink: '#FFFFFF'}
+    palette:
+      sky0: '#06122A'
+      sky1: '#16305C'
+      haze: '#7FC8FF'
+      key: '#E8F6FF'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
     backdrop: void
-    subject: {kind: searchbar, x: 1500, y: 620, s: 0.8}
+    subject:
+      kind: searchbar
+      x: 1500
+      y: 620
+      s: 0.8
     support: []
-    particles: {n: 60, region: [0, 0, 1920, 1080], size: 3, color: '#FFFFFF'}
+    particles:
+      n: 60
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFFFFF'
     vignette: 0.55
     brand: none
 - id: B
@@ -31,14 +50,36 @@ concepts:
   archetype: split
   text:
   - YOUR SEARCH
-  - SOLD AT AUCTION
+  - AT AUCTION
   claim_basis: 'auction: second-price text-ads auction (court findings 240-242)'
   scene:
-    palette: {sky0: '#0A0614', sky1: '#2A1440', haze: '#FFB74D', key: '#FFF3E0', accent: '#7DF29A', ink: '#FFFFFF'}
+    palette:
+      sky0: '#0A0614'
+      sky1: '#2A1440'
+      haze: '#FFB74D'
+      key: '#FFF3E0'
+      accent: '#7DF29A'
+      ink: '#FFFFFF'
     backdrop: void
-    subject: {kind: searchbar, x: 480, y: 660, s: 0.6}
-    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    subject:
+      kind: searchbar
+      x: 480
+      y: 660
+      s: 0.6
+    after:
+      kind: coin
+      x: 1440
+      y: 640
+      s: 0.6
     support: []
-    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#FFF3E0'
     vignette: 0.5
     brand: none

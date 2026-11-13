@@ -1,0 +1,59 @@
+# YouTube package: "How Google Actually Makes Money" (Ep 54)
+
+Prepared for manual publishing. Nothing has been uploaded. Video length 13:12.
+
+## Title options
+
+1. **How Google Actually Makes Money** (recommended)
+2. **Why Google Pays Apple Billions for a Search Box**
+3. **The Auction Behind Every Google Search**
+
+## Description (3341 chars, YouTube limit 5,000)
+
+```
+In 2022, Google paid Apple an estimated $20 billion, according to a federal court, for one thing: being the default search box in Safari. Why would anyone pay that much for a setting? Because behind every search runs an auction. We follow how that auction prices a click (and what the court found about Google's "pricing knobs"), the tolls Google pays to browsers, phone makers, carriers and websites, how YouTube and subscriptions add a second screen, how Google Cloud went from barely profitable to a second engine, and where the cash goes: data centers, buybacks and dividends, until 2026 flipped the waterfall.
+
+Every figure is sourced below: Alphabet's 2025 10-K, its Q4 2025 and 2026 quarterly earnings releases, the Q3 2026 10-Q and earnings call, and the US v. Google opinions of the US District Court for the District of Columbia (2024 liability ruling, 2025 remedies ruling). Values marked "our calculation" are our own arithmetic; auction bids shown on screen are illustrative. Not investment advice. Not affiliated with Google or Alphabet.
+
+Chapters
+0:00 The price of a default
+0:59 The auction
+3:37 The toll booths
+5:50 The second screen
+7:13 The cloud turns
+9:17 Where the cash goes
+11:06 The threat
+12:27 The lesson
+
+Sources
+- Alphabet Inc. (SEC filing): Alphabet Inc. Form 10-K for fiscal year 2025 (filed Feb 5, 2026): Note 2 revenues, segment note, MD&A (TAC, monetization metrics), cash flows - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm
+- Alphabet Inc. (SEC filing): Alphabet Q4 and fiscal year 2025 results (8-K Ex. 99.1, Feb 4, 2026) - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm
+- Alphabet Inc. (SEC filing): Alphabet Q1 2026 results (8-K Ex. 99.1, Apr 29, 2026) - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm
+- Alphabet Inc. (SEC filing): Alphabet Q2 2026 results (8-K Ex. 99.1, Jul 22, 2026) - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm
+- Alphabet Inc. (SEC filing): Alphabet Q3 2026 results (8-K Ex. 99.1, Oct 28, 2026) - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm
+- Alphabet Inc. (SEC filing): Alphabet Form 10-Q for the quarter ended September 30, 2026 (filed Oct 29, 2026): monetization metrics, TAC, cash flows, equity issuance, legal matters - https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm
+- Alphabet Investor Relations: Alphabet Q3 2026 earnings call transcript (Oct 28, 2026) - https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf
+- US District Court for the District of Columbia: United States v. Google LLC, No. 20-cv-3010 (APM), Memorandum Opinion (D.D.C., Aug 5, 2024), Doc. 1033: findings on revenue share, Apple ISA, the text-ads auction and pricing knobs - https://storage.courtlistener.com/recap/gov.uscourts.dcd.223205/gov.uscourts.dcd.223205.1033.0.pdf
+- US District Court for the District of Columbia: United States v. Google LLC, Memorandum Opinion on remedies (D.D.C., Sept 2, 2025), Doc. 1436 - https://storage.courtlistener.com/recap/gov.uscourts.dcd.223205/gov.uscourts.dcd.223205.1436.0.pdf
+
+Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+```
+
+## Chapters
+
+```
+0:00 The price of a default
+0:59 The auction
+3:37 The toll booths
+5:50 The second screen
+7:13 The cloud turns
+9:17 Where the cash goes
+11:06 The threat
+12:27 The lesson
+```
+
+## Tags
+
+```
+Google, Alphabet, how Google makes money, Google ads, search auction, traffic acquisition cost, Apple default, YouTube ads, Google Cloud, TPU, antitrust, US v Google, economics, The Hidden Economics
+```

@@ -1108,3 +1108,22 @@ Watch the full story: "Nvidia's Founder Might Be Out. Here's What's at Stake" on
 ```
 Nvidia, Jensen Huang, Nvidia CEO, Nvidia board, NVDA, Nvidia stock, CEO succession, key person risk, affair report, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 54-alphabet
+
+**Title**
+```
+Google Paid Apple an Estimated $20 Billion for a Default #shorts
+```
+**Description**
+```
+In twenty twenty-two, Google paid Apple an estimated twenty billion dollars. Not for a factory. Not for a company. For a setting: the default search box on the iPhone. That figure comes from a federal court. Because behind every search runs an auction, and that auction is Google's money machine.
+
+Watch the full story: "How Google Actually Makes Money" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #google #apple #money #economics
+```
+**Tags**
+```
+Google, Alphabet, Google ads, search auction, traffic acquisition cost, Apple default, US v Google, antitrust, economics, shorts, economics explained, The Hidden Economics
+```

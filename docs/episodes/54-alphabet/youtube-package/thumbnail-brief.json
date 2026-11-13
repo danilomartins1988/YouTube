@@ -1,0 +1,334 @@
+{
+  "title": "How Google Actually Makes Money",
+  "docs_dir": "docs/episodes/54-alphabet",
+  "video": "output/alphabet_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "analysis": {
+    "mystery": "Why would Google pay anyone $20 billion for a setting on a phone?",
+    "surprising_fact": "In 2022 Google's revenue-share payment to Apple was an estimated $20 billion (US v. Google, D.D.C. 2024, finding 299)",
+    "subject": "a generic search box",
+    "tone": "strategy",
+    "metaphor": "the default search box is a toll booth"
+  },
+  "slug": "how-google-actually-makes-money",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "GOOGLE PAYS APPLE",
+        "$20B"
+      ],
+      "claim_basis": "apple: 2022 revenue share to Apple an estimated $20bn (court finding 299)",
+      "scene": {
+        "palette": {
+          "sky0": "#06122A",
+          "sky1": "#16305C",
+          "haze": "#7FC8FF",
+          "key": "#E8F6FF",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "searchbar",
+          "x": 1500,
+          "y": 620,
+          "s": 0.8
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "GOOGLE PAYS APPLE",
+          "x": 90,
+          "y": 512.5,
+          "size": 108.5,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "$20B",
+          "x": 96,
+          "y": 650.5,
+          "size": 120,
+          "width": 307.2,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.53 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 428, 1270, 519), (96, 557, 403, 658)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.064",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 64",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest who-actually-gets-the-tariff-refund (distance 0.25)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "apple: 2022 revenue share to Apple an estimated $20bn (court finding 299)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.586,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "who-actually-gets-the-tariff-refund"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split)",
+      "archetype": "split",
+      "text": [
+        "YOUR SEARCH",
+        "AT AUCTION"
+      ],
+      "claim_basis": "auction: second-price text-ads auction (court findings 240-242)",
+      "scene": {
+        "palette": {
+          "sky0": "#0A0614",
+          "sky1": "#2A1440",
+          "haze": "#FFB74D",
+          "key": "#FFF3E0",
+          "accent": "#7DF29A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "searchbar",
+          "x": 480,
+          "y": 660,
+          "s": 0.6
+        },
+        "after": {
+          "kind": "coin",
+          "x": 1440,
+          "y": 640,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFF3E0"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "YOUR SEARCH",
+          "x": 480.0,
+          "y": 218.5,
+          "size": 108.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "AT AUCTION",
+          "x": 1440.0,
+          "y": 227.4,
+          "size": 118.8,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#7DF29A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.55 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(100, 134, 860, 225), (1060, 135, 1820, 235)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 9.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.075",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 81",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": false,
+            "detail": "nearest before-you-buy-apple-2026-11 (distance 0.18)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "auction: second-price text-ads auction (court findings 240-242)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.745,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-apple-2026-11"
+      }
+    }
+  ],
+  "default": "B",
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-13T12:54:16Z",
+  "master": "output/how-google-actually-makes-money/thumbnails/master_B.png"
+}

@@ -1,0 +1,3150 @@
+{
+  "slug": "how-google-actually-makes-money",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_open",
+      "segment": "h_open",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 18.73,
+      "duration_s": 18.73,
+      "visual_objective": "",
+      "narration": "In twenty twenty-two, Google paid Apple an estimated twenty billion dollars. Not for a factory. Not for a company. For a setting. The search box that opens when you tap Safari on an iPhone. That number comes from a federal judge's ruling.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Not for a factory",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.39,
+          "absolute_s": 6.39
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Not for a company",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.05,
+          "absolute_s": 8.05
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "For a setting",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.71,
+          "absolute_s": 9.71
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "For a setting",
+          "label": "items[1].until.cue",
+          "scene_time_s": 9.71,
+          "absolute_s": 9.71
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "For a setting",
+          "label": "items[2].until.cue",
+          "scene_time_s": 9.71,
+          "absolute_s": 9.71
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "For a setting",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.71,
+          "absolute_s": 9.71
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "The search box",
+          "label": "items[4].at.cue",
+          "scene_time_s": 11.07,
+          "absolute_s": 11.07
+        },
+        {
+          "param": "items[4].typeAt.cue",
+          "cue": "The search box",
+          "label": "items[4].typeAt.cue",
+          "scene_time_s": 11.67,
+          "absolute_s": 11.67
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "That number comes",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 15.53,
+          "absolute_s": 15.53
+        },
+        {
+          "param": "items[3].until.cue",
+          "cue": "That number comes",
+          "label": "items[3].until.cue",
+          "scene_time_s": 15.53,
+          "absolute_s": 15.53
+        },
+        {
+          "param": "items[4].until.cue",
+          "cue": "That number comes",
+          "label": "items[4].until.cue",
+          "scene_time_s": 15.53,
+          "absolute_s": 15.53
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "That number comes",
+          "label": "items[5].at.cue",
+          "scene_time_s": 15.53,
+          "absolute_s": 15.53
+        },
+        {
+          "param": "items[5].stampAt.cue",
+          "cue": "federal judge's ruling",
+          "label": "items[5].stampAt.cue",
+          "scene_time_s": 16.87,
+          "absolute_s": 16.87
+        },
+        {
+          "param": "items[6].hits[0].cue",
+          "cue": "federal judge's ruling",
+          "label": "items[6].hits[0].cue",
+          "scene_time_s": 17.07,
+          "absolute_s": 17.07
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_twist",
+      "segment": "h_twist",
+      "type": "engine_cartoon",
+      "start_s": 18.73,
+      "end_s": 39.57,
+      "duration_s": 20.83,
+      "visual_objective": "",
+      "narration": "Why pay that much for a default? Because behind every search box runs an auction, and that auction is Google's money machine. Last year, Alphabet, Google's parent, took in four hundred and three billion dollars. By our calculation, about one point one billion dollars a day.",
+      "keyframes": [
+        {
+          "param": "items[0].rows[0].at.cue",
+          "cue": "behind every search",
+          "label": "items[0].rows[0].at.cue",
+          "scene_time_s": 3.88,
+          "absolute_s": 22.61
+        },
+        {
+          "param": "items[0].rows[1].at.cue",
+          "cue": "behind every search",
+          "label": "items[0].rows[1].at.cue",
+          "scene_time_s": 4.28,
+          "absolute_s": 23.01
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "runs an auction",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.74,
+          "absolute_s": 24.47
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "runs an auction",
+          "label": "items[4].at.cue",
+          "scene_time_s": 5.74,
+          "absolute_s": 24.47
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "runs an auction",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.89,
+          "absolute_s": 24.62
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "runs an auction",
+          "label": "items[3].at.cue",
+          "scene_time_s": 6.04,
+          "absolute_s": 24.77
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Last year",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.77,
+          "absolute_s": 29.5
+        },
+        {
+          "param": "items[5].steps[1][0].cue",
+          "cue": "Alphabet, Google's parent",
+          "label": "items[5].steps[1][0].cue",
+          "scene_time_s": 11.39,
+          "absolute_s": 30.12
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "took in",
+          "label": "items[5].at.cue",
+          "scene_time_s": 13.26,
+          "absolute_s": 31.99
+        },
+        {
+          "param": "items[5].steps[2][0].cue",
+          "cue": "By our calculation",
+          "label": "items[5].steps[2][0].cue",
+          "scene_time_s": 16.18,
+          "absolute_s": 34.91
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "a day",
+          "label": "items[6].at.cue",
+          "scene_time_s": 19.87,
+          "absolute_s": 38.6
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s03_question",
+      "segment": "h_question",
+      "type": "engine_cartoon",
+      "start_s": 39.57,
+      "end_s": 47.67,
+      "duration_s": 8.1,
+      "visual_objective": "",
+      "narration": "So how does Google actually make its money? Who gets paid along the way? And where does all that cash go?",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Who gets paid",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.96,
+          "absolute_s": 43.53
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Who gets paid",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.96,
+          "absolute_s": 43.53
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And where does",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.89,
+          "absolute_s": 45.46
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s04_promise",
+      "segment": "h_promise",
+      "type": "engine_cartoon",
+      "start_s": 47.67,
+      "end_s": 59.0,
+      "duration_s": 11.33,
+      "visual_objective": "",
+      "narration": "By the end of this video, you will know how the auction prices a click, who collects the tolls, and why Google now spends more than its operations bring in.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "how the auction",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.16,
+          "absolute_s": 50.83
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "who collects the tolls",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.45,
+          "absolute_s": 53.12
+        },
+        {
+          "param": "zones[0].buildAt.cue",
+          "cue": "why Google now spends",
+          "label": "zones[0].buildAt.cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 54.9
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "why Google now spends",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 54.9
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "why Google now spends",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 54.9
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenq3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "s05_c1",
+      "segment": "m1_card",
+      "type": "act_title",
+      "start_s": 59.0,
+      "end_s": 64.4,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s06_map",
+      "segment": "m1_map",
+      "type": "engine_cartoon",
+      "start_s": 64.4,
+      "end_s": 87.93,
+      "duration_s": 23.53,
+      "visual_objective": "",
+      "narration": "Start with the map. Google Services, meaning Search, YouTube, Android, Chrome, Play and its own devices, brought in about three hundred and forty-three billion dollars last year. Google Cloud, about fifty-nine billion dollars. And the Other Bets, like the self-driving company Waymo, about one point five billion dollars.",
+      "keyframes": [
+        {
+          "param": "items[0].growAt.cue",
+          "cue": "Google Services",
+          "label": "items[0].growAt.cue",
+          "scene_time_s": 2.13,
+          "absolute_s": 66.53
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Google Services",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.53,
+          "absolute_s": 66.93
+        },
+        {
+          "param": "items[2].growAt.cue",
+          "cue": "Google Cloud",
+          "label": "items[2].growAt.cue",
+          "scene_time_s": 13.12,
+          "absolute_s": 77.52
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Google Cloud",
+          "label": "items[3].at.cue",
+          "scene_time_s": 13.52,
+          "absolute_s": 77.92
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And the Other Bets",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 81.4
+        },
+        {
+          "param": "items[4].growAt.cue",
+          "cue": "And the Other Bets",
+          "label": "items[4].growAt.cue",
+          "scene_time_s": 17.0,
+          "absolute_s": 81.4
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "And the Other Bets",
+          "label": "items[5].at.cue",
+          "scene_time_s": 17.4,
+          "absolute_s": 81.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s07_ads",
+      "segment": "m1_ads",
+      "type": "engine_cartoon",
+      "start_s": 87.93,
+      "end_s": 105.77,
+      "duration_s": 17.83,
+      "visual_objective": "",
+      "narration": "More than seventy percent of it came from advertising. And the biggest piece by far is Search, at about two hundred and twenty-five billion dollars. More than half of all Alphabet's revenue, from the little ads above your results.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "More than seventy percent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 88.28
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And the biggest piece",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.03,
+          "absolute_s": 92.96
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "And the biggest piece",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.03,
+          "absolute_s": 92.96
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "is Search",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 6.85,
+          "absolute_s": 94.78
+        },
+        {
+          "param": "items[2].steps[2][0].cue",
+          "cue": "More than half",
+          "label": "items[2].steps[2][0].cue",
+          "scene_time_s": 11.94,
+          "absolute_s": 99.87
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "More than half",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.94,
+          "absolute_s": 99.87
+        },
+        {
+          "param": "items[0].rows[0].at.cue",
+          "cue": "from the little ads",
+          "label": "items[0].rows[0].at.cue",
+          "scene_time_s": 14.55,
+          "absolute_s": 102.48
+        },
+        {
+          "param": "items[0].rows[1].at.cue",
+          "cue": "from the little ads",
+          "label": "items[0].rows[1].at.cue",
+          "scene_time_s": 14.75,
+          "absolute_s": 102.68
+        },
+        {
+          "param": "items[0].rows[0].hi.cue",
+          "cue": "from the little ads",
+          "label": "items[0].rows[0].hi.cue",
+          "scene_time_s": 15.05,
+          "absolute_s": 102.98
+        },
+        {
+          "param": "items[0].rows[2].at.cue",
+          "cue": "from the little ads",
+          "label": "items[0].rows[2].at.cue",
+          "scene_time_s": 15.15,
+          "absolute_s": 103.08
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s08_bids",
+      "segment": "m1_bids",
+      "type": "engine_cartoon",
+      "start_s": 105.77,
+      "end_s": 120.7,
+      "duration_s": 14.93,
+      "visual_objective": "",
+      "narration": "Here is how it works. You type running shoes. Advertisers have already bid on those words, and Google runs an auction in a fraction of a second. But the highest bid does not automatically win.",
+      "keyframes": [
+        {
+          "param": "items[0].typeAt.cue",
+          "cue": "You type",
+          "label": "items[0].typeAt.cue",
+          "scene_time_s": 2.42,
+          "absolute_s": 108.19
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Advertisers have already bid",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 4.38,
+          "absolute_s": 110.15
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Advertisers have already bid",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.38,
+          "absolute_s": 110.15
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Advertisers have already bid",
+          "label": "items[2].at.cue",
+          "scene_time_s": 4.53,
+          "absolute_s": 110.3
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Advertisers have already bid",
+          "label": "items[3].at.cue",
+          "scene_time_s": 4.68,
+          "absolute_s": 110.45
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Advertisers have already bid",
+          "label": "items[5].at.cue",
+          "scene_time_s": 5.18,
+          "absolute_s": 110.95
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Google runs an auction",
+          "label": "items[4].at.cue",
+          "scene_time_s": 7.37,
+          "absolute_s": 113.14
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "in a fraction of a second",
+          "label": "items[6].at.cue",
+          "scene_time_s": 8.67,
+          "absolute_s": 114.43
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "does not automatically win",
+          "label": "items[7].at.cue",
+          "scene_time_s": 12.42,
+          "absolute_s": 118.19
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s09_quality",
+      "segment": "m1_quality",
+      "type": "engine_cartoon",
+      "start_s": 120.7,
+      "end_s": 136.0,
+      "duration_s": 15.3,
+      "visual_objective": "",
+      "narration": "According to the court's findings, Google multiplies each bid by the predicted chance that you will click, a score between zero and one. So a cheaper ad that people want can beat an expensive ad nobody clicks.",
+      "keyframes": [
+        {
+          "param": "items[2].paddle2At.cue",
+          "cue": "multiplies each bid",
+          "label": "items[2].paddle2At.cue",
+          "scene_time_s": 3.07,
+          "absolute_s": 123.77
+        },
+        {
+          "param": "items[3].paddle2At.cue",
+          "cue": "multiplies each bid",
+          "label": "items[3].paddle2At.cue",
+          "scene_time_s": 3.07,
+          "absolute_s": 123.77
+        },
+        {
+          "param": "items[4].paddle2At.cue",
+          "cue": "multiplies each bid",
+          "label": "items[4].paddle2At.cue",
+          "scene_time_s": 3.07,
+          "absolute_s": 123.77
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "the predicted chance",
+          "label": "items[6].at.cue",
+          "scene_time_s": 4.57,
+          "absolute_s": 125.27
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "a score between zero and one",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.04,
+          "absolute_s": 127.74
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "So a cheaper ad",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.7,
+          "absolute_s": 130.4
+        },
+        {
+          "param": "items[3].winAt.cue",
+          "cue": "So a cheaper ad",
+          "label": "items[3].winAt.cue",
+          "scene_time_s": 9.7,
+          "absolute_s": 130.4
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "can beat an expensive ad",
+          "label": "items[7].at.cue",
+          "scene_time_s": 11.99,
+          "absolute_s": 132.69
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s10_second",
+      "segment": "m1_second",
+      "type": "engine_cartoon",
+      "start_s": 136.0,
+      "end_s": 150.77,
+      "duration_s": 14.77,
+      "visual_objective": "",
+      "narration": "And the winner does not pay its own bid. Google's text-ad auction, the judge wrote, is a classic second-price auction. The winner pays one cent above the runner-up. That is the price of your click.",
+      "keyframes": [
+        {
+          "param": "items[4].at.cue",
+          "cue": "the judge wrote",
+          "label": "items[4].at.cue",
+          "scene_time_s": 5.28,
+          "absolute_s": 141.28
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "a classic second-price",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.46,
+          "absolute_s": 142.46
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The winner pays",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.05,
+          "absolute_s": 145.05
+        },
+        {
+          "param": "items[0].rows[0].hi.cue",
+          "cue": "The winner pays",
+          "label": "items[0].rows[0].hi.cue",
+          "scene_time_s": 9.05,
+          "absolute_s": 145.05
+        },
+        {
+          "param": "items[0].rows[0].tagAt.cue",
+          "cue": "one cent above",
+          "label": "items[0].rows[0].tagAt.cue",
+          "scene_time_s": 9.92,
+          "absolute_s": 145.92
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "one cent above",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.92,
+          "absolute_s": 145.92
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "s11_knobs",
+      "segment": "m1_knobs",
+      "type": "engine_cartoon",
+      "start_s": 150.77,
+      "end_s": 170.0,
+      "duration_s": 19.23,
+      "visual_objective": "",
+      "narration": "There is a twist. The same ruling describes pricing knobs, quiet tweaks to the auction with names like squashing, that raise what winners pay. Google's own studies, cited by the court, showed it could raise prices that way without losing advertisers.",
+      "keyframes": [
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "pricing knobs",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 4.34,
+          "absolute_s": 155.1
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "pricing knobs",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.34,
+          "absolute_s": 155.1
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "names like squashing",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.51,
+          "absolute_s": 158.27
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Google's own studies",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.9,
+          "absolute_s": 162.67
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Google's own studies",
+          "label": "items[5].at.cue",
+          "scene_time_s": 11.9,
+          "absolute_s": 162.67
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "cited by the court",
+          "label": "items[4].at.cue",
+          "scene_time_s": 13.3,
+          "absolute_s": 164.07
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "without losing advertisers",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.83,
+          "absolute_s": 167.6
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s12_volume",
+      "segment": "m1_volume",
+      "type": "engine_cartoon",
+      "start_s": 170.0,
+      "end_s": 190.8,
+      "duration_s": 20.8,
+      "visual_objective": "",
+      "narration": "So the machine has two dials. How many ads get clicked, and the price of each click. Last year, paid clicks rose six percent, and the average cost per click seven percent. In the latest quarter, clicks rose eight percent, and price four percent.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "How many ads get clicked",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.37,
+          "absolute_s": 173.37
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "the price of each click",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.61,
+          "absolute_s": 175.61
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "Last year, paid clicks",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 7.72,
+          "absolute_s": 177.72
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Last year",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.72,
+          "absolute_s": 177.72
+        },
+        {
+          "param": "items[1].steps[2][0].cue",
+          "cue": "and the average cost",
+          "label": "items[1].steps[2][0].cue",
+          "scene_time_s": 10.62,
+          "absolute_s": 180.62
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "and the average cost",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 10.62,
+          "absolute_s": 180.62
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In the latest quarter",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 14.87,
+          "absolute_s": 184.87
+        },
+        {
+          "param": "items[2].steps[2][0].cue",
+          "cue": "In the latest quarter",
+          "label": "items[2].steps[2][0].cue",
+          "scene_time_s": 14.87,
+          "absolute_s": 184.87
+        },
+        {
+          "param": "items[3].until.cue",
+          "cue": "In the latest quarter",
+          "label": "items[3].until.cue",
+          "scene_time_s": 14.87,
+          "absolute_s": 184.87
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "In the latest quarter",
+          "label": "items[4].at.cue",
+          "scene_time_s": 14.87,
+          "absolute_s": 184.87
+        },
+        {
+          "param": "items[1].steps[3][0].cue",
+          "cue": "clicks rose eight",
+          "label": "items[1].steps[3][0].cue",
+          "scene_time_s": 16.97,
+          "absolute_s": 186.97
+        },
+        {
+          "param": "items[2].steps[3][0].cue",
+          "cue": "and price four",
+          "label": "items[2].steps[3][0].cue",
+          "scene_time_s": 18.77,
+          "absolute_s": 188.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "tenq3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "p13_auction",
+      "segment": "m1_draw",
+      "type": "engine_draw",
+      "start_s": 190.8,
+      "end_s": 204.97,
+      "duration_s": 14.17,
+      "visual_objective": "",
+      "narration": "Let me draw the auction. Here is your search. Here are the bidders, each with a bid. Each bid is multiplied by the chance you click. The top score wins the slot, and pays just enough to beat the runner-up.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is your search",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.31,
+          "absolute_s": 193.11
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is your search",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.31,
+          "absolute_s": 193.11
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Here are the bidders",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 3.75,
+          "absolute_s": 194.55
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Here are the bidders",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 4.15,
+          "absolute_s": 194.95
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Here are the bidders",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 4.55,
+          "absolute_s": 195.35
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Each bid is multiplied",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 6.05,
+          "absolute_s": 196.85
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "The top score wins",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 9.21,
+          "absolute_s": 200.01
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "The top score wins",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 9.71,
+          "absolute_s": 200.51
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "and pays just enough",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 10.93,
+          "absolute_s": 201.73
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "and pays just enough",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 11.03,
+          "absolute_s": 201.83
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s14_t1",
+      "segment": "m1_transition",
+      "type": "kinetic_text",
+      "start_s": 204.97,
+      "end_s": 212.67,
+      "duration_s": 7.7,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "But an auction needs searchers. And to get them, Google pays tolls.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "But an auction needs",
+          "label": "An auction needs searchers…",
+          "scene_time_s": 0.35,
+          "absolute_s": 205.32
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Google pays tolls",
+          "label": "…so Google pays tolls",
+          "scene_time_s": 5.76,
+          "absolute_s": 210.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 212.67,
+      "end_s": 217.67,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_c2",
+      "segment": "m2_card",
+      "type": "act_title",
+      "start_s": 217.67,
+      "end_s": 223.07,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_tac",
+      "segment": "m2_tac",
+      "type": "engine_cartoon",
+      "start_s": 223.07,
+      "end_s": 243.57,
+      "duration_s": 20.5,
+      "visual_objective": "",
+      "narration": "Google calls them traffic acquisition costs. Payments to whoever sends it searchers or shows its ads. Browser makers, phone makers, mobile carriers and website owners. Last year they came to fifty-nine point nine billion dollars. About twenty cents of every advertising dollar.",
+      "keyframes": [
+        {
+          "param": "zones[0].payAt.cue",
+          "cue": "Payments to whoever",
+          "label": "zones[0].payAt.cue",
+          "scene_time_s": 3.76,
+          "absolute_s": 226.83
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Last year they came",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.88,
+          "absolute_s": 235.95
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Last year they came",
+          "label": "items[1].at.cue",
+          "scene_time_s": 12.88,
+          "absolute_s": 235.95
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "About twenty cents",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 16.98,
+          "absolute_s": 240.05
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "About twenty cents",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.98,
+          "absolute_s": 240.05
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_apple",
+      "segment": "m2_apple",
+      "type": "engine_cartoon",
+      "start_s": 243.57,
+      "end_s": 264.9,
+      "duration_s": 21.33,
+      "visual_objective": "",
+      "narration": "The biggest toll booth sits on the iPhone. The court found that Google pays Apple a share of the ad revenue from searches in Safari, in exchange for being the default. In twenty twenty-two, that share was an estimated twenty billion dollars. More than all of Google's other revenue-share payments combined.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "a share of the ad revenue",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.0,
+          "absolute_s": 249.57
+        },
+        {
+          "param": "zones[0].payAt.cue",
+          "cue": "in exchange for being the default",
+          "label": "zones[0].payAt.cue",
+          "scene_time_s": 9.28,
+          "absolute_s": 252.85
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In twenty twenty-two",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.9,
+          "absolute_s": 255.47
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "In twenty twenty-two",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.9,
+          "absolute_s": 255.47
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "More than all",
+          "label": "items[3].at.cue",
+          "scene_time_s": 17.14,
+          "absolute_s": 260.71
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "s18_total",
+      "segment": "m2_total",
+      "type": "engine_cartoon",
+      "start_s": 264.9,
+      "end_s": 284.37,
+      "duration_s": 19.47,
+      "visual_objective": "",
+      "narration": "Add Mozilla, the Android phone makers and the big carriers, and Google paid out twenty-six point three billion dollars in revenue share in twenty twenty-one. The judge ruled that Google is a monopolist, and that these exclusive deals helped keep it one.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Add Mozilla",
+          "label": "items[1].at.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 265.25
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "in revenue share",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 8.95,
+          "absolute_s": 273.85
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The judge ruled",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.24,
+          "absolute_s": 277.14
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Google is a monopolist",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.54,
+          "absolute_s": 278.44
+        },
+        {
+          "param": "items[5].poses[0][0].cue",
+          "cue": "Google is a monopolist",
+          "label": "items[5].poses[0][0].cue",
+          "scene_time_s": 13.54,
+          "absolute_s": 278.44
+        },
+        {
+          "param": "items[4].hits[0].cue",
+          "cue": "Google is a monopolist",
+          "label": "items[4].hits[0].cue",
+          "scene_time_s": 13.74,
+          "absolute_s": 278.64
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "these exclusive deals",
+          "label": "items[3].at.cue",
+          "scene_time_s": 16.36,
+          "absolute_s": 281.26
+        },
+        {
+          "param": "items[5].poses[1][0].cue",
+          "cue": "these exclusive deals",
+          "label": "items[5].poses[1][0].cue",
+          "scene_time_s": 16.36,
+          "absolute_s": 281.26
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "mehta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_remedy",
+      "segment": "m2_remedy",
+      "type": "engine_cartoon",
+      "start_s": 284.37,
+      "end_s": 307.13,
+      "duration_s": 22.77,
+      "visual_objective": "",
+      "narration": "Yet the payments did not stop. In the remedies decision, the court barred exclusive contracts and ordered Google to share some search data with rivals. But it did not ban paying partners for placement. Cutting the money off, the judge wrote, could cripple some of them. Both sides have appealed.",
+      "keyframes": [
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "barred exclusive contracts",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 5.87,
+          "absolute_s": 290.24
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "barred exclusive contracts",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.87,
+          "absolute_s": 290.24
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "share some search data",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.16,
+          "absolute_s": 293.53
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But it did not ban",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.15,
+          "absolute_s": 296.52
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "But it did not ban",
+          "label": "items[3].at.cue",
+          "scene_time_s": 12.15,
+          "absolute_s": 296.52
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "could cripple",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.29,
+          "absolute_s": 302.66
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Both sides have appealed",
+          "label": "items[6].at.cue",
+          "scene_time_s": 20.56,
+          "absolute_s": 304.93
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "Both sides have appealed",
+          "label": "items[7].at.cue",
+          "scene_time_s": 20.56,
+          "absolute_s": 304.93
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "remedy",
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_network",
+      "segment": "m2_network",
+      "type": "engine_cartoon",
+      "start_s": 307.13,
+      "end_s": 326.87,
+      "duration_s": 19.73,
+      "visual_objective": "",
+      "narration": "There is a second toll road, running the other way. Through AdSense, Google places ads on other people's websites and apps, and hands most of that money to the owners. That network brought in twenty-nine point eight billion dollars last year, less than the year before.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "other people's websites",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.93,
+          "absolute_s": 314.06
+        },
+        {
+          "param": "items[1].typeAt.cue",
+          "cue": "other people's websites",
+          "label": "items[1].typeAt.cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 314.36
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "hands most of that money",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.63,
+          "absolute_s": 316.76
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "hands most of that money",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.63,
+          "absolute_s": 316.76
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "That network brought in",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.92,
+          "absolute_s": 320.05
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "That network brought in",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.92,
+          "absolute_s": 320.05
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "That network brought in",
+          "label": "items[2].until.cue",
+          "scene_time_s": 14.92,
+          "absolute_s": 322.05
+        },
+        {
+          "param": "items[4].steps[1][0].cue",
+          "cue": "less than the year before",
+          "label": "items[4].steps[1][0].cue",
+          "scene_time_s": 17.57,
+          "absolute_s": 324.7
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "less than the year before",
+          "label": "items[5].at.cue",
+          "scene_time_s": 17.57,
+          "absolute_s": 324.7
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "p21_toll",
+      "segment": "m2_draw",
+      "type": "engine_draw",
+      "start_s": 326.87,
+      "end_s": 341.33,
+      "duration_s": 14.47,
+      "visual_objective": "",
+      "narration": "Let me draw the toll road. Here is an advertiser's dollar. It goes into Google's auction. Out of that box, about twenty cents goes to the partners who brought the searcher. Google keeps the rest.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Here is an advertiser's dollar",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.65,
+          "absolute_s": 329.52
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Here is an advertiser's dollar",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.65,
+          "absolute_s": 329.52
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "It goes into",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.97,
+          "absolute_s": 331.84
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "It goes into",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 5.37,
+          "absolute_s": 332.24
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Out of that box",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 7.32,
+          "absolute_s": 334.19
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "goes to the partners",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 9.59,
+          "absolute_s": 336.46
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "goes to the partners",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 9.89,
+          "absolute_s": 336.76
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "Google keeps the rest",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 12.48,
+          "absolute_s": 339.35
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "Google keeps the rest",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 12.78,
+          "absolute_s": 339.65
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_t2",
+      "segment": "m2_transition",
+      "type": "kinetic_text",
+      "start_s": 341.33,
+      "end_s": 350.17,
+      "duration_s": 8.83,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Search pays the bills. But Google's second-biggest audience is not typing. It is watching.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Search pays the bills",
+          "label": "Search pays the bills…",
+          "scene_time_s": 0.35,
+          "absolute_s": 341.68
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "It is watching",
+          "label": "…but the second audience is watching",
+          "scene_time_s": 6.72,
+          "absolute_s": 348.05
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_c3",
+      "segment": "m3_card",
+      "type": "act_title",
+      "start_s": 350.17,
+      "end_s": 355.57,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_yt",
+      "segment": "m3_yt",
+      "type": "engine_cartoon",
+      "start_s": 355.57,
+      "end_s": 371.2,
+      "duration_s": 15.63,
+      "visual_objective": "",
+      "narration": "YouTube sells ads before and during videos, and between Shorts. Those ads brought in forty point four billion dollars last year. Add subscriptions, and Google says YouTube passed sixty billion dollars.",
+      "keyframes": [
+        {
+          "param": "zones[0].adAt.cue",
+          "cue": "before and during videos",
+          "label": "zones[0].adAt.cue",
+          "scene_time_s": 1.6,
+          "absolute_s": 357.17
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Those ads brought in",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.92,
+          "absolute_s": 361.49
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Those ads brought in",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.92,
+          "absolute_s": 361.49
+        },
+        {
+          "param": "zones[0].adUntil.cue",
+          "cue": "Those ads brought in",
+          "label": "zones[0].adUntil.cue",
+          "scene_time_s": 8.42,
+          "absolute_s": 363.99
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "Add subscriptions",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 10.39,
+          "absolute_s": 365.96
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Add subscriptions",
+          "label": "items[3].at.cue",
+          "scene_time_s": 10.39,
+          "absolute_s": 365.96
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "q4rel"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "s25_tv",
+      "segment": "m3_tv",
+      "type": "engine_cartoon",
+      "start_s": 371.2,
+      "end_s": 384.03,
+      "duration_s": 12.83,
+      "visual_objective": "",
+      "narration": "And the screen is moving to the couch. On its latest call, Google said the living room, people watching on a television, made up over one-third of YouTube's ad revenue in the quarter.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "the living room",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.59,
+          "absolute_s": 376.79
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "people watching on a television",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.57,
+          "absolute_s": 377.77
+        },
+        {
+          "param": "zones[0].adAt.cue",
+          "cue": "made up over one-third",
+          "label": "zones[0].adAt.cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 379.94
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "made up over one-third",
+          "label": "items[3].at.cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 379.94
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "in the quarter",
+          "label": "items[4].at.cue",
+          "scene_time_s": 11.52,
+          "absolute_s": 382.72
+        },
+        {
+          "param": "zones[0].adUntil.cue",
+          "cue": "made up over one-third",
+          "label": "zones[0].adUntil.cue",
+          "scene_time_s": 13.74,
+          "absolute_s": 384.94
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_creators",
+      "segment": "m3_creators",
+      "type": "engine_cartoon",
+      "start_s": 384.03,
+      "end_s": 398.43,
+      "duration_s": 14.4,
+      "visual_objective": "",
+      "narration": "But YouTube does not make most of what it shows. It shares money with creators and pays media companies, and the annual report names those content costs as a main reason its costs rose.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "It shares money with creators",
+          "label": "items[2].at.cue",
+          "scene_time_s": 3.89,
+          "absolute_s": 387.92
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "It shares money",
+          "label": "items[3].at.cue",
+          "scene_time_s": 3.89,
+          "absolute_s": 387.92
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "and pays media companies",
+          "label": "items[4].at.cue",
+          "scene_time_s": 6.12,
+          "absolute_s": 390.16
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "and the annual report",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.32,
+          "absolute_s": 392.36
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "and the annual report",
+          "label": "items[5].at.cue",
+          "scene_time_s": 8.32,
+          "absolute_s": 392.36
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "and the annual report",
+          "label": "items[2].until.cue",
+          "scene_time_s": 9.32,
+          "absolute_s": 393.36
+        },
+        {
+          "param": "items[5].stampAt.cue",
+          "cue": "a main reason",
+          "label": "items[5].stampAt.cue",
+          "scene_time_s": 11.95,
+          "absolute_s": 395.99
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_subs",
+      "segment": "m3_subs",
+      "type": "engine_cartoon",
+      "start_s": 398.43,
+      "end_s": 426.33,
+      "duration_s": 27.9,
+      "visual_objective": "",
+      "narration": "Then there is the line most people forget. Subscriptions, platforms and devices. YouTube Premium and TV, NFL Sunday Ticket, Google One storage, apps sold through Google Play, and Google's own phones. Together, forty-eight billion dollars last year. At the end of last year, Google counted over three hundred and twenty-five million paid subscriptions.",
+      "keyframes": [
+        {
+          "param": "items[2].at.cue",
+          "cue": "Subscriptions, platforms",
+          "label": "items[2].at.cue",
+          "scene_time_s": 3.92,
+          "absolute_s": 402.35
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "YouTube Premium and TV",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.44,
+          "absolute_s": 405.87
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "Google One storage",
+          "label": "items[4].at.cue",
+          "scene_time_s": 10.51,
+          "absolute_s": 408.94
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Together",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 15.57,
+          "absolute_s": 414.0
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Together",
+          "label": "items[5].at.cue",
+          "scene_time_s": 15.57,
+          "absolute_s": 414.0
+        },
+        {
+          "param": "items[5].steps[1][0].cue",
+          "cue": "last year",
+          "label": "items[5].steps[1][0].cue",
+          "scene_time_s": 20.0,
+          "absolute_s": 418.43
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "paid subscriptions",
+          "label": "items[6].at.cue",
+          "scene_time_s": 26.5,
+          "absolute_s": 424.93
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "q4rel"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_t3",
+      "segment": "m3_transition",
+      "type": "kinetic_text",
+      "start_s": 426.33,
+      "end_s": 433.93,
+      "duration_s": 7.6,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "Ads and subscriptions are consumer money. The fastest-growing business sells to companies.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "Ads and subscriptions",
+          "label": "Consumer money…",
+          "scene_time_s": 0.35,
+          "absolute_s": 426.68
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "The fastest-growing business",
+          "label": "…and the business that sells to companies",
+          "scene_time_s": 3.92,
+          "absolute_s": 430.25
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_c4",
+      "segment": "m4_card",
+      "type": "act_title",
+      "start_s": 433.93,
+      "end_s": 439.33,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_cloud",
+      "segment": "m4_cloud",
+      "type": "engine_cartoon",
+      "start_s": 439.33,
+      "end_s": 462.77,
+      "duration_s": 23.43,
+      "visual_objective": "",
+      "narration": "Google Cloud rents out computing power, storage and artificial intelligence to companies. Not long ago, it barely made money. In twenty twenty-three, by our calculation, it kept about five cents of each dollar as operating profit. In twenty twenty-five, about twenty-four cents. In the latest quarter, about thirty-six cents.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In twenty twenty-three",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.17,
+          "absolute_s": 449.5
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "In twenty twenty-three",
+          "label": "items[0].until.cue",
+          "scene_time_s": 10.17,
+          "absolute_s": 449.5
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "In twenty twenty-three",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.17,
+          "absolute_s": 449.5
+        },
+        {
+          "param": "items[1].items[0].at.cue",
+          "cue": "it kept about five cents",
+          "label": "items[1].items[0].at.cue",
+          "scene_time_s": 12.9,
+          "absolute_s": 452.24
+        },
+        {
+          "param": "items[1].items[1].at.cue",
+          "cue": "In twenty twenty-five",
+          "label": "items[1].items[1].at.cue",
+          "scene_time_s": 17.09,
+          "absolute_s": 456.42
+        },
+        {
+          "param": "items[1].items[2].at.cue",
+          "cue": "In the latest quarter",
+          "label": "items[1].items[2].at.cue",
+          "scene_time_s": 20.35,
+          "absolute_s": 459.68
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "q3rel"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_q3",
+      "segment": "m4_q3",
+      "type": "engine_cartoon",
+      "start_s": 462.77,
+      "end_s": 482.2,
+      "duration_s": 19.43,
+      "visual_objective": "",
+      "narration": "And it is exploding. In the third quarter of twenty twenty-six, Cloud revenue rose one hundred and three percent, to thirty point seven billion dollars. The company says sales of its own AI chips, called TPUs, were a meaningful part of that.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "Cloud revenue rose",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 6.68,
+          "absolute_s": 469.45
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "one hundred and three percent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.66,
+          "absolute_s": 470.43
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The company says",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.9,
+          "absolute_s": 475.67
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "The company says",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 12.9,
+          "absolute_s": 475.67
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "sales of its own AI chips",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.12,
+          "absolute_s": 476.88
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "called TPUs",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.03,
+          "absolute_s": 478.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "q3rel"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_race",
+      "segment": "m4_race",
+      "type": "engine_cartoon",
+      "start_s": 482.2,
+      "end_s": 504.3,
+      "duration_s": 22.1,
+      "visual_objective": "",
+      "narration": "Watch the businesses race. In twenty twenty-three, Search was far ahead, with YouTube, the network, subscriptions and Cloud bunched behind it. Over the last four reported quarters, by our count, Cloud reached ninety-three billion dollars. Second only to Search.",
+      "keyframes": [
+        {
+          "param": "items[0].periods[1].at.cue",
+          "cue": "bunched behind it",
+          "label": "items[0].periods[1].at.cue",
+          "scene_time_s": 10.23,
+          "absolute_s": 492.43
+        },
+        {
+          "param": "items[0].periods[2].at.cue",
+          "cue": "Over the last four",
+          "label": "items[0].periods[2].at.cue",
+          "scene_time_s": 12.79,
+          "absolute_s": 494.99
+        },
+        {
+          "param": "items[0].periods[3].at.cue",
+          "cue": "Cloud reached",
+          "label": "items[0].periods[3].at.cue",
+          "scene_time_s": 16.27,
+          "absolute_s": 498.47
+        },
+        {
+          "param": "items[0].highlightAt.cue",
+          "cue": "Second only to Search",
+          "label": "items[0].highlightAt.cue",
+          "scene_time_s": 19.71,
+          "absolute_s": 501.91
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "q4rel",
+        "q1rel",
+        "q2rel",
+        "q3rel"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_pichai",
+      "segment": "m4_pichai",
+      "type": "engine_cartoon",
+      "start_s": 504.3,
+      "end_s": 515.27,
+      "duration_s": 10.97,
+      "visual_objective": "",
+      "narration": "Chief executive Sundar Pichai now says Alphabet is on a half-trillion-dollar annual revenue run rate. That is the company's own description.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "half-trillion-dollar",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.54,
+          "absolute_s": 508.84
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "half-trillion-dollar",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.04,
+          "absolute_s": 509.34
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "That is the company's",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.91,
+          "absolute_s": 512.21
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "That is the company's",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 7.91,
+          "absolute_s": 512.21
+        },
+        {
+          "param": "items[0].labelUntil.cue",
+          "cue": "That is the company's",
+          "label": "items[0].labelUntil.cue",
+          "scene_time_s": 9.41,
+          "absolute_s": 513.71
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "own description",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.44,
+          "absolute_s": 513.73
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "q3rel"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "p34_margins",
+      "segment": "m4_draw",
+      "type": "engine_draw",
+      "start_s": 515.27,
+      "end_s": 533.73,
+      "duration_s": 18.47,
+      "visual_objective": "",
+      "narration": "Let me draw what each business keeps from a dollar of sales, in the latest quarter. Google Services keeps about forty-one cents. Cloud, about thirty-six cents. And the Other Bets lost about two billion dollars, on just three hundred and seventy-two million dollars of revenue.",
+      "keyframes": [
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Let me draw",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 515.62
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "Google Services keeps",
+          "label": "draw_start.cue",
+          "scene_time_s": 5.66,
+          "absolute_s": 520.93
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Google Services keeps",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.66,
+          "absolute_s": 520.93
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "Cloud, about",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 8.81,
+          "absolute_s": 524.08
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "And the Other Bets lost",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.36,
+          "absolute_s": 526.63
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "And the Other Bets lost",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 11.76,
+          "absolute_s": 527.03
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "of revenue",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 17.32,
+          "absolute_s": 532.58
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "q3rel"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "s35_bets",
+      "segment": "m4_bets",
+      "type": "engine_cartoon",
+      "start_s": 533.73,
+      "end_s": 550.83,
+      "duration_s": 17.1,
+      "visual_objective": "",
+      "narration": "Waymo is the biggest of those bets. Alphabet says it has driven more than three hundred million fully autonomous miles, in fifteen major American cities. But all the Other Bets together lost seven point five billion dollars last year.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Alphabet says",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.54,
+          "absolute_s": 537.27
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "fully autonomous",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 6.73,
+          "absolute_s": 540.46
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "major American cities",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.26,
+          "absolute_s": 542.99
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "But all the Other Bets",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.84,
+          "absolute_s": 545.57
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "But all the Other Bets",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.84,
+          "absolute_s": 545.57
+        },
+        {
+          "param": "items[3].steps[1][0].cue",
+          "cue": "lost seven",
+          "label": "items[3].steps[1][0].cue",
+          "scene_time_s": 13.98,
+          "absolute_s": 547.72
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "call",
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_t4",
+      "segment": "m4_transition",
+      "type": "kinetic_text",
+      "start_s": 550.83,
+      "end_s": 557.8,
+      "duration_s": 6.97,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "So the machine throws off enormous profits. Where does that money go?",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "enormous profits",
+          "label": "Enormous profits…",
+          "scene_time_s": 2.3,
+          "absolute_s": 553.14
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Where does that money go",
+          "label": "…where does the money go?",
+          "scene_time_s": 4.69,
+          "absolute_s": 555.52
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_c5",
+      "segment": "m5_card",
+      "type": "act_title",
+      "start_s": 557.8,
+      "end_s": 563.2,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_2025",
+      "segment": "m5_2025",
+      "type": "engine_cartoon",
+      "start_s": 563.2,
+      "end_s": 585.23,
+      "duration_s": 22.03,
+      "visual_objective": "",
+      "narration": "Follow the cash through twenty twenty-five. Operations brought in one hundred and sixty-five billion dollars. About ninety-one billion dollars went into capital spending, mostly data centers and servers. About forty-six billion dollars bought back shares. And about ten billion dollars paid dividends.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[0].at.cue",
+          "cue": "Operations brought in",
+          "label": "items[0].steps[0].at.cue",
+          "scene_time_s": 3.67,
+          "absolute_s": 566.87
+        },
+        {
+          "param": "items[0].steps[1].at.cue",
+          "cue": "went into capital spending",
+          "label": "items[0].steps[1].at.cue",
+          "scene_time_s": 10.09,
+          "absolute_s": 573.29
+        },
+        {
+          "param": "items[0].steps[2].at.cue",
+          "cue": "bought back shares",
+          "label": "items[0].steps[2].at.cue",
+          "scene_time_s": 17.11,
+          "absolute_s": 580.31
+        },
+        {
+          "param": "items[0].steps[3].at.cue",
+          "cue": "paid dividends",
+          "label": "items[0].steps[3].at.cue",
+          "scene_time_s": 20.6,
+          "absolute_s": 583.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "s39_fcf",
+      "segment": "m5_fcf",
+      "type": "engine_cartoon",
+      "start_s": 585.23,
+      "end_s": 599.5,
+      "duration_s": 14.27,
+      "visual_objective": "",
+      "narration": "What is left after capital spending is free cash flow. By our calculation, about seventy-three billion dollars, and roughly three quarters of it went straight back to shareholders.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "free cash flow",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.54,
+          "absolute_s": 588.77
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "By our calculation",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 5.26,
+          "absolute_s": 590.49
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "roughly three quarters",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.0,
+          "absolute_s": 595.23
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "roughly three quarters",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.0,
+          "absolute_s": 595.23
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "roughly three quarters",
+          "label": "items[6].at.cue",
+          "scene_time_s": 10.0,
+          "absolute_s": 595.23
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "went straight back",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.76,
+          "absolute_s": 596.99
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "went straight back",
+          "label": "items[4].at.cue",
+          "scene_time_s": 11.91,
+          "absolute_s": 597.14
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "went straight back",
+          "label": "items[5].at.cue",
+          "scene_time_s": 12.06,
+          "absolute_s": 597.29
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 41,
+      "id": "s40_2026",
+      "segment": "m5_2026",
+      "type": "engine_cartoon",
+      "start_s": 599.5,
+      "end_s": 624.37,
+      "duration_s": 24.87,
+      "visual_objective": "",
+      "narration": "Then twenty twenty-six flipped the waterfall. In the first nine months, Alphabet spent one hundred and thirty-two billion dollars on capital expenditure. More than the one hundred and twenty-seven billion dollars its operations brought in. It bought back no shares at all. For the full year, it expects to spend one hundred and ninety-five to two hundred and five billion dollars.",
+      "keyframes": [
+        {
+          "param": "toneShift.at.cue",
+          "cue": "flipped the waterfall",
+          "label": "toneShift.at.cue",
+          "scene_time_s": 1.78,
+          "absolute_s": 601.28
+        },
+        {
+          "param": "items[0].steps[0].at.cue",
+          "cue": "In the first nine months",
+          "label": "items[0].steps[0].at.cue",
+          "scene_time_s": 4.01,
+          "absolute_s": 603.51
+        },
+        {
+          "param": "items[0].steps[1].at.cue",
+          "cue": "on capital expenditure",
+          "label": "items[0].steps[1].at.cue",
+          "scene_time_s": 8.26,
+          "absolute_s": 607.76
+        },
+        {
+          "param": "zones[0].dryAt.cue",
+          "cue": "More than the",
+          "label": "zones[0].dryAt.cue",
+          "scene_time_s": 10.53,
+          "absolute_s": 610.03
+        },
+        {
+          "param": "items[0].steps[2].at.cue",
+          "cue": "It bought back no shares",
+          "label": "items[0].steps[2].at.cue",
+          "scene_time_s": 15.48,
+          "absolute_s": 614.98
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "It bought back no shares",
+          "label": "items[1].at.cue",
+          "scene_time_s": 15.48,
+          "absolute_s": 614.98
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "For the full year",
+          "label": "items[2].at.cue",
+          "scene_time_s": 18.28,
+          "absolute_s": 617.78
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "it expects to spend",
+          "label": "items[3].at.cue",
+          "scene_time_s": 19.35,
+          "absolute_s": 618.85
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenq3",
+        "call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 42,
+      "id": "s41_raise",
+      "segment": "m5_raise",
+      "type": "engine_cartoon",
+      "start_s": 624.37,
+      "end_s": 640.77,
+      "duration_s": 16.4,
+      "visual_objective": "",
+      "narration": "To pay for it, the company that used to hand cash back started raising it. In nine months, about forty-three billion dollars of new shares, nineteen billion dollars of preferred stock, and eighty-five billion dollars of new debt.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In nine months",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.91,
+          "absolute_s": 630.28
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "of new shares",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.01,
+          "absolute_s": 633.37
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "of preferred stock",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.86,
+          "absolute_s": 636.23
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "of new debt",
+          "label": "items[3].at.cue",
+          "scene_time_s": 15.2,
+          "absolute_s": 639.56
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "of new debt",
+          "label": "items[4].at.cue",
+          "scene_time_s": 15.7,
+          "absolute_s": 640.06
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenq3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 43,
+      "id": "p42_cash",
+      "segment": "m5_draw",
+      "type": "engine_draw",
+      "start_s": 640.77,
+      "end_s": 658.8,
+      "duration_s": 18.03,
+      "visual_objective": "",
+      "narration": "Let me draw the two years side by side. Twenty twenty-five. Cash flows in, data centers take a big share, and a large part goes back to shareholders. Twenty twenty-six. Data centers take more than all of it, and new money comes in from outside.",
+      "keyframes": [
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Let me draw",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 641.12
+        },
+        {
+          "param": "draw_start.cue",
+          "cue": "Twenty twenty-five",
+          "label": "draw_start.cue",
+          "scene_time_s": 3.44,
+          "absolute_s": 644.21
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "Cash flows in",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.0,
+          "absolute_s": 645.77
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "data centers take a big share",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 5.95,
+          "absolute_s": 646.72
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "Twenty twenty-six",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 11.47,
+          "absolute_s": 652.24
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "Data centers take more",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 12.99,
+          "absolute_s": 653.76
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "new money comes in",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 15.57,
+          "absolute_s": 656.33
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "new money comes in",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 15.87,
+          "absolute_s": 656.63
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "tenq3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 44,
+      "id": "s43_t5",
+      "segment": "m5_transition",
+      "type": "kinetic_text",
+      "start_s": 658.8,
+      "end_s": 666.4,
+      "duration_s": 7.6,
+      "visual_objective": "Kinetic typography: lines enter word by word on narration cues",
+      "narration": "It is a giant bet that artificial intelligence will pay. Which brings us to the threat.",
+      "keyframes": [
+        {
+          "param": "lines[0].cue",
+          "cue": "It is a giant bet",
+          "label": "A giant bet on AI…",
+          "scene_time_s": 0.35,
+          "absolute_s": 659.15
+        },
+        {
+          "param": "lines[1].cue",
+          "cue": "Which brings us",
+          "label": "…which brings us to the threat",
+          "scene_time_s": 5.09,
+          "absolute_s": 663.89
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 45,
+      "id": "s44_c6",
+      "segment": "m6_card",
+      "type": "act_title",
+      "start_s": 666.4,
+      "end_s": 671.8,
+      "duration_s": 5.4,
+      "visual_objective": "Chapter card: masked title reveal, gold rule draws",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 46,
+      "id": "s45_ai",
+      "segment": "m6_ai",
+      "type": "engine_cartoon",
+      "start_s": 671.8,
+      "end_s": 694.6,
+      "duration_s": 22.8,
+      "visual_objective": "",
+      "narration": "The threat is the same technology. When an AI simply answers your question, there may be no page of links to sell. On the latest call, Google's chief business officer said fast growth in AI Mode queries had an impact, because of the lower monetization there. Google is now scaling ads inside AI answers.",
+      "keyframes": [
+        {
+          "param": "items[0].rows[0].at.cue",
+          "cue": "simply answers your question",
+          "label": "items[0].rows[0].at.cue",
+          "scene_time_s": 3.92,
+          "absolute_s": 675.72
+        },
+        {
+          "param": "items[0].rows[0].hi.cue",
+          "cue": "simply answers your question",
+          "label": "items[0].rows[0].hi.cue",
+          "scene_time_s": 4.42,
+          "absolute_s": 676.22
+        },
+        {
+          "param": "items[1].poses[1][0].cue",
+          "cue": "there may be no page",
+          "label": "items[1].poses[1][0].cue",
+          "scene_time_s": 5.83,
+          "absolute_s": 677.63
+        },
+        {
+          "param": "items[2].poses[1][0].cue",
+          "cue": "there may be no page",
+          "label": "items[2].poses[1][0].cue",
+          "scene_time_s": 6.04,
+          "absolute_s": 677.83
+        },
+        {
+          "param": "items[3].poses[1][0].cue",
+          "cue": "there may be no page",
+          "label": "items[3].poses[1][0].cue",
+          "scene_time_s": 6.24,
+          "absolute_s": 678.03
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "On the latest call",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.67,
+          "absolute_s": 680.47
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "lower monetization",
+          "label": "items[4].at.cue",
+          "scene_time_s": 15.8,
+          "absolute_s": 687.6
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "lower monetization",
+          "label": "items[5].at.cue",
+          "scene_time_s": 16.2,
+          "absolute_s": 688.0
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Google is now scaling",
+          "label": "items[6].at.cue",
+          "scene_time_s": 18.34,
+          "absolute_s": 690.14
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 47,
+      "id": "s46_queries",
+      "segment": "m6_queries",
+      "type": "engine_cartoon",
+      "start_s": 694.6,
+      "end_s": 708.8,
+      "duration_s": 14.2,
+      "visual_objective": "",
+      "narration": "So far, the searches keep coming. Google says query growth is the highest in five years, and Search revenue rose twelve percent in the quarter, to sixty-three point four billion dollars.",
+      "keyframes": [
+        {
+          "param": "items[0].until.cue",
+          "cue": "Google says query growth",
+          "label": "items[0].until.cue",
+          "scene_time_s": 3.8,
+          "absolute_s": 698.4
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Google says query growth",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.8,
+          "absolute_s": 698.4
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "and Search revenue",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.54,
+          "absolute_s": 702.14
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "and Search revenue",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.54,
+          "absolute_s": 702.14
+        },
+        {
+          "param": "items[2].steps[1][0].cue",
+          "cue": "in the quarter",
+          "label": "items[2].steps[1][0].cue",
+          "scene_time_s": 9.7,
+          "absolute_s": 704.3
+        },
+        {
+          "param": "items[2].steps[2][0].cue",
+          "cue": "sixty-three",
+          "label": "items[2].steps[2][0].cue",
+          "scene_time_s": 11.29,
+          "absolute_s": 705.88
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "q3rel"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 48,
+      "id": "s47_courts",
+      "segment": "m6_courts",
+      "type": "engine_cartoon",
+      "start_s": 708.8,
+      "end_s": 728.2,
+      "duration_s": 19.4,
+      "visual_objective": "",
+      "narration": "Then there are the courts. In a second case, a judge found that Google's tools for website publishers unfairly excluded rivals. In September twenty twenty-six, the court declined to order a breakup and required changes in conduct instead. Google plans to appeal.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "unfairly excluded rivals",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.04,
+          "absolute_s": 715.84
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "In September",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.9,
+          "absolute_s": 718.7
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "declined to order a breakup",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.4,
+          "absolute_s": 721.2
+        },
+        {
+          "param": "items[4].hits[0].cue",
+          "cue": "declined to order a breakup",
+          "label": "items[4].hits[0].cue",
+          "scene_time_s": 12.7,
+          "absolute_s": 721.5
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "required changes in conduct",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.49,
+          "absolute_s": 723.29
+        },
+        {
+          "param": "items[0].stampAt.cue",
+          "cue": "Google plans to appeal",
+          "label": "items[0].stampAt.cue",
+          "scene_time_s": 17.23,
+          "absolute_s": 726.03
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "tenq3"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 49,
+      "id": "p48_risk",
+      "segment": "m6_draw",
+      "type": "engine_draw",
+      "start_s": 728.2,
+      "end_s": 747.33,
+      "duration_s": 19.13,
+      "visual_objective": "",
+      "narration": "Let me draw the risk. The old path. A question, a page of links, ads on top. The new path. A question, and one AI answer. The money question is whether ads fit inside that answer as well as they fit above the links.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "The old path",
+          "label": "draw_start.cue",
+          "scene_time_s": 2.67,
+          "absolute_s": 730.87
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "The old path",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.67,
+          "absolute_s": 730.87
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "a page of links",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 5.31,
+          "absolute_s": 733.51
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "a page of links",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 5.61,
+          "absolute_s": 733.81
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "The new path",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 8.1,
+          "absolute_s": 736.3
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "and one AI answer",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 10.44,
+          "absolute_s": 738.64
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "and one AI answer",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 10.74,
+          "absolute_s": 738.94
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "whether ads fit",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 14.15,
+          "absolute_s": 742.35
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "whether ads fit",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 14.35,
+          "absolute_s": 742.55
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 50,
+      "id": "s49_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 747.33,
+      "end_s": 782.1,
+      "duration_s": 34.77,
+      "visual_objective": "",
+      "narration": "So how does Google actually make money? Mostly by auctioning your searches, one click at a time, and paying tolls to whoever puts its search box in front of you. YouTube adds a second screen, subscriptions a steady drip, and Cloud has turned into a second engine. The lesson: the most valuable thing Google owns may not be a product. It is a default. And now Alphabet plans to spend more than twice last year's budget to make sure the next default, an AI answer, is its own.",
+      "keyframes": [
+        {
+          "param": "items[0].rows[0].at.cue",
+          "cue": "one click at a time",
+          "label": "items[0].rows[0].at.cue",
+          "scene_time_s": 6.37,
+          "absolute_s": 753.7
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "and paying tolls",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.79,
+          "absolute_s": 755.12
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "and paying tolls",
+          "label": "items[4].at.cue",
+          "scene_time_s": 7.79,
+          "absolute_s": 755.12
+        },
+        {
+          "param": "zones[2].adAt.cue",
+          "cue": "YouTube adds",
+          "label": "zones[2].adAt.cue",
+          "scene_time_s": 11.87,
+          "absolute_s": 759.2
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "YouTube adds",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 11.87,
+          "absolute_s": 759.2
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "YouTube adds",
+          "label": "items[5].at.cue",
+          "scene_time_s": 11.87,
+          "absolute_s": 759.2
+        },
+        {
+          "param": "zones[3].buildAt.cue",
+          "cue": "Cloud has turned",
+          "label": "zones[3].buildAt.cue",
+          "scene_time_s": 15.89,
+          "absolute_s": 763.23
+        },
+        {
+          "param": "cam[3].at.cue",
+          "cue": "Cloud has turned",
+          "label": "cam[3].at.cue",
+          "scene_time_s": 15.89,
+          "absolute_s": 763.23
+        },
+        {
+          "param": "items[6].at.cue",
+          "cue": "Cloud has turned",
+          "label": "items[6].at.cue",
+          "scene_time_s": 15.89,
+          "absolute_s": 763.23
+        },
+        {
+          "param": "zones[2].adUntil.cue",
+          "cue": "YouTube adds",
+          "label": "zones[2].adUntil.cue",
+          "scene_time_s": 16.87,
+          "absolute_s": 764.2
+        },
+        {
+          "param": "cam[4].at.cue",
+          "cue": "The lesson",
+          "label": "cam[4].at.cue",
+          "scene_time_s": 19.22,
+          "absolute_s": 766.55
+        },
+        {
+          "param": "items[6].until.cue",
+          "cue": "The lesson",
+          "label": "items[6].until.cue",
+          "scene_time_s": 19.22,
+          "absolute_s": 766.55
+        },
+        {
+          "param": "items[7].at.cue",
+          "cue": "It is a default",
+          "label": "items[7].at.cue",
+          "scene_time_s": 24.02,
+          "absolute_s": 771.35
+        },
+        {
+          "param": "items[8].at.cue",
+          "cue": "more than twice",
+          "label": "items[8].at.cue",
+          "scene_time_s": 28.16,
+          "absolute_s": 775.49
+        },
+        {
+          "param": "items[9].at.cue",
+          "cue": "the next default",
+          "label": "items[9].at.cue",
+          "scene_time_s": 30.84,
+          "absolute_s": 778.17
+        },
+        {
+          "param": "items[9].typeAt.cue",
+          "cue": "the next default",
+          "label": "items[9].typeAt.cue",
+          "scene_time_s": 31.14,
+          "absolute_s": 778.47
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "tenk",
+        "call"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 51,
+      "id": "s50_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 782.1,
+      "end_s": 792.37,
+      "duration_s": 10.27,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time on The Hidden Economics, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 7.57,
+          "absolute_s": 789.67
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}
