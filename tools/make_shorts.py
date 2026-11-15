@@ -91,8 +91,20 @@ SHORTS = {
     "52-nvidia-probe": ("why-nvidia-lost-428-billion-in-two-days", "documentary", "nvidiaprobe_documentary", "-$428 BILLION", "IN TWO DAYS", "Nvidia Lost About $428 Billion in Two Days", "#nvidia #stocks #ai"),
     "50-mf-global": ("mf-global-the-billion-dollars-that-vanished", "documentary", "mfglobal_documentary", "$1.6 BILLION", "VANISHED", "MF Global: $1.6 Billion of Customer Money Vanished", "#finance #wallstreet #farmers"),
     "42-penny": ("why-america-stopped-making-the-penny", "documentary", "penny_documentary", "3.69 CENTS", "TO MAKE 1 CENT", "It Cost 3.69 Cents to Make One Penny", "#penny #money #usa"),
+    "56-black-friday-b": ("how-black-friday-actually-makes-money", "documentary", "blackfriday_documentary_light", "THE BLACK FRIDAY TV", "ISN'T THE SAME TV", "That Black Friday TV Isn't Quite the Same TV", "#blackfriday #tv #shopping"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
+
+# Extra Shorts cut from a later part of an episode: short id -> (episode docs folder, segment names, package folder)
+CUSTOM = {
+    "56-black-friday-b": ("56-black-friday", ["a2_deriv", "a2_deriv2"], "youtube-short-b"),
+}
+
+
+def doc_dirs(ep):
+    if ep in CUSTOM:
+        return CUSTOM[ep][0], CUSTOM[ep][2]
+    return ep, "youtube-short"
 
 
 def run(cmd):
@@ -164,6 +176,8 @@ def captions(segs, path):
 def pick_segments(ep):
     slug, dv = SHORTS[ep][0], SHORTS[ep][1]
     tl = json.loads((ROOT / "output" / slug / dv / "timeline.json").read_text())
+    if ep in CUSTOM:
+        return [x for x in tl if x["scene"]["segment"] in CUSTOM[ep][1]]
     picks, total = [], 0.0
     for x in tl:
         seg, typ = x["scene"]["segment"], x["scene"]["type"]
@@ -187,7 +201,7 @@ def short_copy(ep, narration):
     """Copy-paste text for YouTube: title, description, tags. Every sentence in the description is the episode's own
     narration (already fact-checked) or a neutral pointer to the full episode; no new figures."""
     slug, dv, vname, l1, l2, title, hashtags = SHORTS[ep]
-    pk = ROOT / "docs" / "episodes" / ep / "youtube-package"
+    pk = ROOT / "docs" / "episodes" / doc_dirs(ep)[0] / "youtube-package"
     long_title = (pk / "title.txt").read_text().strip() if (pk / "title.txt").exists() else ""
     if not long_title:
         import yaml
@@ -210,7 +224,7 @@ def short_copy(ep, narration):
 def write_package(ep, dur, n, narration):
     l1, l2, title = SHORTS[ep][3], SHORTS[ep][4], SHORTS[ep][5]
     t, desc, tags = short_copy(ep, narration)
-    pkg = ROOT / "docs" / "episodes" / ep / "youtube-short"
+    pkg = ROOT / "docs" / "episodes" / doc_dirs(ep)[0] / doc_dirs(ep)[1]
     pkg.mkdir(parents=True, exist_ok=True)
     (pkg / "short_package.md").write_text(
         f"# YouTube Short: \"{title}\" ({ep})\n\nPrepared for manual publishing. Nothing has been uploaded. "
@@ -225,18 +239,8 @@ def write_package(ep, dur, n, narration):
 def build(ep):
     slug, dv, vname, l1, l2, title, tags = SHORTS[ep]
     video = ROOT / "output" / f"{vname}.mp4"
-    tl = json.loads((ROOT / "output" / slug / dv / "timeline.json").read_text())
-    picks, total = [], 0.0
-    for x in tl:
-        seg, typ = x["scene"]["segment"], x["scene"]["type"]
-        if typ == "act_title" or seg.endswith("_card"):
-            break
-        if seg == "channel_intro" or typ == "channel_intro":
-            continue
-        if picks and total + x["duration"] > MAX_SECONDS:
-            break
-        picks.append(x)
-        total += x["duration"]
+    picks = pick_segments(ep)
+    total = sum(x["duration"] for x in picks)
     work = ROOT / "output" / "shorts" / ep
     work.mkdir(parents=True, exist_ok=True)
     headline_layer(l1, l2, work / "top.png")
@@ -247,7 +251,8 @@ def build(ep):
         off += x["duration"]
     captions(segs, work / "caps.ass")
     # 1) cut + join the opening segments
-    parts = "".join(f"[0:v]trim={x['start']}:{x['start'] + x['duration']},setpts=PTS-STARTPTS[v{i}];[0:a]atrim={x['start']}:{x['start'] + x['duration']},asetpts=PTS-STARTPTS[a{i}];" for i, x in enumerate(picks))
+    n = len(picks)
+    parts = f"[0:v]scale=1920:1080:flags=lanczos,split={n}" + "".join(f"[s{i}]" for i in range(n)) + ";" + "".join(f"[s{i}]trim={x['start']}:{x['start'] + x['duration']},setpts=PTS-STARTPTS[v{i}];[0:a]atrim={x['start']}:{x['start'] + x['duration']},asetpts=PTS-STARTPTS[a{i}];" for i, x in enumerate(picks))
     cat = "".join(f"[v{i}][a{i}]" for i in range(len(picks))) + f"concat=n={len(picks)}:v=1:a=1[cv][ca]"
     fc = (parts + cat + f";[cv]crop={CROP_W}:1080,scale={W}:{VID_H}:flags=lanczos[sv];color=c=0x0B0F1A:s={W}x{H}:d={total}[bg];[bg][sv]overlay=0:{VID_Y}:shortest=1[b1];"
           f"[b1][1:v]overlay=0:0[b2];[b2]ass={work / 'caps.ass'}[outv];[ca]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[outa]")
@@ -268,7 +273,7 @@ def build(ep):
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", "-movflags", "+faststart", str(out)])
     dur = float(run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(out)]).strip())
     # cover frame + package
-    pkg = ROOT / "docs" / "episodes" / ep / "youtube-short"
+    pkg = ROOT / "docs" / "episodes" / doc_dirs(ep)[0] / doc_dirs(ep)[1]
     pkg.mkdir(parents=True, exist_ok=True)
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", "1.2", "-i", str(out), "-frames:v", "1", str(pkg / "cover.png")])
     narration = " ".join(" ".join(w["word"] for w in (x.get("words") or [])) for x in picks)

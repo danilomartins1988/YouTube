@@ -1165,3 +1165,30 @@ Watch the full story: "How Black Friday Actually Makes Money" on The Hidden Econ
 ```
 Black Friday, Black Friday deals, doorbusters, loss leader, Cyber Monday, holiday shopping, retail, Adobe Analytics, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 56-black-friday-b (second Short: the Black Friday TV)
+
+File: `output/shorts/56-black-friday-b_short.mp4` (44 s)
+
+**Title**
+
+```
+That Black Friday TV Isn't Quite the Same TV #shorts
+```
+
+**Description**
+
+```
+Some deals are built for the day itself. Consumer Reports has described low-priced TVs made specifically for Black Friday, often sold by a single retailer.
+
+Watch the full story: "How Black Friday Actually Makes Money" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #blackfriday #tv #shopping #economics
+```
+
+**Tags**
+
+```
+Black Friday, Black Friday deals, Cyber Monday, doorbusters, loss leader, retail, holiday shopping, Best Buy, Target, Adobe Analytics, shorts, economics explained, The Hidden Economics
+```
+
