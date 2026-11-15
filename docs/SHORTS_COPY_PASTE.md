@@ -1146,3 +1146,22 @@ Watch the full story: "How One Family Still Controls Walmart" on The Hidden Econ
 ```
 Walmart, Walton family, family business, Fortune 500, Amazon, Volkswagen, EY family business index, Sam Walton, economics, shorts, economics explained, The Hidden Economics
 ```
+
+## 56-black-friday
+
+**Title**
+```
+Black Friday Stores Lose Money on Purpose. Here's the Trick #shorts
+```
+**Description**
+```
+Five in the morning, the day after Thanksgiving. The doors open, and the store starts losing money on purpose. And yet last year, Americans spent a record $11.8 billion online on Black Friday alone, according to Adobe. So how does a day built on discounts make money?
+
+Watch the full story: "How Black Friday Actually Makes Money" on The Hidden Economics. Every figure in it is sourced.
+
+#shorts #blackfriday #shopping #economics
+```
+**Tags**
+```
+Black Friday, Black Friday deals, doorbusters, loss leader, Cyber Monday, holiday shopping, retail, Adobe Analytics, economics, shorts, economics explained, The Hidden Economics
+```

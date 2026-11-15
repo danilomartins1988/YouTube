@@ -1,5 +1,8 @@
 # Episode 56: How Black Friday Actually Makes Money (owner request, 2026-11-15)
 
+- Runtime 11:53 (712.9 s), QC 0 errors (41 warnings: 40 claims awaiting human sign-off, 1 caption speed), no freeze > 5 s, no black gaps,
+  -16.1 LUFS; TTS US$0.27 (gpt-4o-mini-tts, voice ash; re-render 0 paid calls). Light copy: `output/blackfriday_documentary_light.mp4`;
+  Short: `output/shorts/56-black-friday_short.mp4` (53 s). Thumbnails: `youtube-package/thumbnail.png` (A, "BLACK FRIDAY'S SECRET"), `thumbnail_v2.png`.
 - Post window: Nov 20-23, 2026 (Black Friday is Nov 27, 2026). Publishing is manual; nothing uploaded.
 - Project: `projects/how-black-friday-actually-makes-money`; storyboard generator `tools/gen_blackfriday_storyboard.py` (43 scenes).
 - Owner direction: feel like an actual episode of a prime-time animated TV sitcom, at genre level only (all characters, names,

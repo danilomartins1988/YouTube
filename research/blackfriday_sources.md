@@ -1,6 +1,6 @@
 # Research dossier - How Black Friday Actually Makes Money
 
-Generated 2026-11-15T03:42:15+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-15T04:20:26+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 

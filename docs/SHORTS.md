@@ -64,3 +64,4 @@ Built by `tools/make_shorts.py` from each episode's own opening hook (same narra
 | 53-nvidia-ceo-crisis | Could Nvidia's Board Push Out Its Founder? | NVIDIA'S CEO / OUT? | 60 s | `docs/episodes/53-nvidia-ceo-crisis/youtube-short/short_package.md` |
 | 54-alphabet | Google Paid Apple an Estimated $20 Billion for a Default | $20 BILLION / FOR A DEFAULT | 50 s | `docs/episodes/54-alphabet/youtube-short/short_package.md` |
 | 55-walmart-walton | Walmart Lost One Crown. It Still Holds Another | WALMART LOST ONE CROWN / BUT KEPT ANOTHER | 44 s | `docs/episodes/55-walmart-walton/youtube-short/short_package.md` |
+| 56-black-friday | Black Friday Stores Lose Money on Purpose. Here's the Trick | STORES LOSE MONEY / ON PURPOSE | 53 s | `docs/episodes/56-black-friday/youtube-short/short_package.md` |
