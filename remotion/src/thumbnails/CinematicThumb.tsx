@@ -572,6 +572,19 @@ export const SUBJECTS: Record<string, SubjectFn> = {
     <rect x={-280} y={-20} width={80} height={120} fill="#FFE9A8" stroke="#05070B" strokeWidth={6} />
     <path d="M -440 -260 Q -300 -300 -120 -270" stroke="#FFFFFF" strokeWidth={14} opacity={0.35} fill="none" strokeLinecap="round" />
   </g>,
+  /** Ep 56: a giant black price tag (Black Friday) on a string, gold rim, a huge % cut-out and a slashed "was" bar; no brands. */
+  bftag: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -14})`}>
+    <defs>{metal('bfg', '#B8860B', '#FFE08A')}</defs>
+    <circle r={620} fill={P.haze} opacity={0.22} filter="url(#soft)" />
+    <path d="M -470 -40 Q -650 -380 -380 -560" fill="none" stroke="#F4EFE4" strokeWidth={14} strokeLinecap="round" />
+    <path d="M -520 0 L -300 -300 L 480 -300 L 480 300 L -300 300 Z" fill="url(#bfg)" stroke="#05070B" strokeWidth={16} strokeLinejoin="round" />
+    <path d="M -470 0 L -280 -255 L 435 -255 L 435 255 L -280 255 Z" fill="#111317" stroke="#05070B" strokeWidth={8} strokeLinejoin="round" />
+    <circle cx={-330} cy={0} r={52} fill={P.sky0} stroke="url(#bfg)" strokeWidth={16} />
+    <g transform="translate(120 10)"><circle cx={-120} cy={-110} r={70} fill="none" stroke={P.accent} strokeWidth={34} />
+      <circle cx={130} cy={120} r={70} fill="none" stroke={P.accent} strokeWidth={34} /><path d="M 150 -180 L -140 190" stroke={P.accent} strokeWidth={40} strokeLinecap="round" /></g>
+    <rect x={-200} y={-215} width={560} height={30} rx={15} fill="#9AA3B5" opacity={0.6} /><path d="M -220 -170 L 380 -235" stroke="#FF2D2D" strokeWidth={18} strokeLinecap="round" />
+    <path d="M -260 -235 Q 60 -280 400 -240" stroke="#FFFFFF" strokeWidth={10} opacity={0.3} fill="none" strokeLinecap="round" />
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

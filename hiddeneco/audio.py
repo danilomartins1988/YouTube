@@ -95,6 +95,8 @@ MOODS = {
     "crisis": {"progression": ("Dm", "Bb", "Gm", "A"), "chord_seconds": 5.0, "pulse": (1.6, 0.35), "drone": 73.42},
     "reflective": {"progression": ("Am", "F", "C", "G"), "chord_seconds": 9.0, "octave": 0.5},
     "spectacle": {"progression": ("Em", "C", "G", "D"), "chord_seconds": 4.0, "pulse": (2.0, 0.25), "shimmer": 0.12},
+    # animated-sitcom bounce (Ep 56): major-key turnaround, short chords, a light bouncy pulse
+    "sitcom": {"progression": ("C", "Am", "F", "G"), "chord_seconds": 3.0, "pulse": (2.4, 0.18), "shimmer": 0.08},
 }
 
 

@@ -1,0 +1,44 @@
+# Thumbnail creative brief. A = bignum (question), B = split. Generic objects only (no logos, no real people).
+title: How Black Friday Actually Makes Money
+docs_dir: docs/episodes/56-black-friday
+video: output/blackfriday_documentary.mp4
+deliverable: documentary
+status: planned
+analysis:
+  mystery: How do stores make money on a day built on discounts?
+  surprising_fact: Black Friday 2025 drew a record $11.8bn of U.S. online spending (Adobe), yet the doorbuster itself can be a loss leader; Best Buy's holiday quarter brought about a third of its fiscal 2026 revenue (our calc.)
+  subject: a giant black price tag with a gold rim and a huge percent sign, on a string
+  tone: sitcom
+  metaphor: the price tag is the trap and the treasure
+concepts:
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - BLACK FRIDAY'S
+  - SECRET
+  claim_basis: a question (answer in the film; doorbusters as loss leaders, attach sales, vendor markdown money, Q4 weight)
+  scene:
+    palette: {sky0: '#0B1626', sky1: '#24124A', haze: '#FFD54F', key: '#FFF6D8', accent: '#FFD54F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: bftag, x: 1500, y: 600, s: 0.62}
+    support: []
+    particles: {n: 60, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split)
+  archetype: split
+  text:
+  - THE DEAL
+  - THAT LOSES
+  claim_basis: 'doorbusters / loss leaders priced at little or no margin (analysis in the film)'
+  scene:
+    palette: {sky0: '#1A0B10', sky1: '#3A1420', haze: '#FF5A5F', key: '#FFF3E0', accent: '#FFD54F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: bftag, x: 520, y: 640, s: 0.5}
+    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
+    vignette: 0.5
+    brand: none

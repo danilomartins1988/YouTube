@@ -1,0 +1,285 @@
+# Sources and claims for "How Black Friday Actually Makes Money" (Episode 56, owner request 2026-11-15).
+# Every claim was read on its primary page on 2026-11-15 (notes: docs/episodes/56-black-friday/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars only.
+# RULES: Adobe figures are Adobe Analytics measurements of U.S. online spending (2025 = results; 2026 = FORECAST, say so);
+# NRF weekend counts are survey estimates (Prosper Insights, 3,099 adults); Best Buy shares of revenue / operating income
+# are OUR calculations from its filings (fiscal year ended Jan 31, 2026: always "fiscal"); the Which? study is UK-only
+# (2023 deals) and is said so; warranty margins are an academic estimate (Abito & Salant) for the market they studied;
+# loss-leader / basket / clearance explanations are analysis, not figures. No brand logos drawn; no real person drawn.
+sources:
+  - id: inq
+    title: "Did Philly cops coin 'Black Friday'? (cites Bonnie Taylor-Blake's report to the American Dialect Society: 1961 Public Relations News; 1966 Earl Apfelbaum)"
+    publisher: The Philadelphia Inquirer
+    url: https://www.inquirer.com/philly/news/breaking/20111125_Black_Friday_started_in_Philly.html
+    published: "2011-11-25"
+    accessed: "2026-11-15"
+    period: "1961-1966 usage"
+    credit: "Philadelphia Inquirer (2011)"
+  - id: hist
+    title: "What's the Real History of Black Friday?"
+    publisher: History.com (A&E Television Networks)
+    url: https://www.history.com/news/black-friday-thanksgiving-origins-history
+    published: "2015-11-23"
+    accessed: "2026-11-15"
+    period: "1950s-1980s"
+    credit: "History.com"
+  - id: adobe_jan
+    title: "Adobe: U.S. Holiday Season Drives Record $257.8 Billion Online (press release PDF, January 7, 2026)"
+    publisher: Adobe (Adobe Analytics)
+    url: https://news.adobe.com/news/downloads/pdfs/2026/01/010726-holiday-shopping-season-2025.pdf
+    published: "2026-01-07"
+    accessed: "2026-11-15"
+    period: "Nov 1 - Dec 31, 2025 (U.S. online)"
+    credit: "Adobe Analytics (Jan 2026)"
+  - id: adobe_cm
+    title: "Adobe: Cyber Monday Hits Record $14.25 Billion in Online Spending with Over $1 Billion Driven by Buy Now Pay Later"
+    publisher: Adobe (Adobe Analytics)
+    url: https://news.adobe.com/news/2025/12/adobe-cyber-monday-hits-record
+    published: "2025-12-02"
+    accessed: "2026-11-15"
+    period: "Cyber Week 2025 (Nov 27 - Dec 1, 2025)"
+    credit: "Adobe Analytics (Dec 2025)"
+  - id: adobe_fc
+    title: "Adobe: U.S. Holiday Shopping Season to Hit Record $275.1 Billion Online, Rising 6.7% YoY (forecast)"
+    publisher: Adobe (Adobe Analytics)
+    url: https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record
+    published: "2026-09-28"
+    accessed: "2026-11-15"
+    period: "Forecast, Nov 1 - Dec 31, 2026"
+    credit: "Adobe forecast (Sep 2026)"
+  - id: nrf_wk
+    title: "Thanksgiving holiday weekend draws a record 203 million shoppers (NRF / Prosper Insights & Analytics survey)"
+    publisher: National Retail Federation
+    url: https://nrf.com/media-center/press-releases/thanksgiving-holiday-weekend-draws-a-record-203-million-shoppers
+    published: "2025-12-02"
+    accessed: "2026-11-15"
+    period: "Thanksgiving Day - Cyber Monday 2025 (survey Nov 26-30, 2025, 3,099 adults)"
+    credit: "NRF / Prosper (Dec 2025)"
+  - id: census
+    title: "Quarterly Retail E-Commerce Sales, 4th Quarter 2025"
+    publisher: U.S. Census Bureau
+    url: https://www2.census.gov/retail/releases/historical/ecomm/25q4.pdf
+    published: "2026-03-10"
+    accessed: "2026-11-15"
+    period: "Q4 2025 (not seasonally adjusted)"
+    credit: "U.S. Census Bureau"
+  - id: bby10k
+    title: "Best Buy Co., Inc. Form 10-K for the fiscal year ended January 31, 2026 (filed March 18, 2026): Seasonality, Inventory Management, Vendor Allowances"
+    publisher: Best Buy Co., Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/764478/000076447826000009/bby-20260131.htm
+    published: "2026-03-18"
+    accessed: "2026-11-15"
+    period: "Fiscal 2026 (Feb 2, 2025 - Jan 31, 2026)"
+    credit: "Best Buy 10-K (SEC)"
+  - id: bbyq4
+    title: "Best Buy Reports Fourth Quarter Results (8-K Exhibit 99, March 3, 2026)"
+    publisher: Best Buy Co., Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/764478/000076447826000005/bby-fy26q4xexx99.htm
+    published: "2026-03-03"
+    accessed: "2026-11-15"
+    period: "Q4 fiscal 2026 (13 weeks ended Jan 31, 2026) and fiscal 2026"
+    credit: "Best Buy Q4 FY26 release (SEC)"
+  - id: tgt10k
+    title: "Target Corporation 2025 Form 10-K (fiscal year ended January 31, 2026): Seasonality, Vendor income, Roundel, human capital"
+    publisher: Target Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/27419/000002741926000016/tgt-20260131.htm
+    published: "2026-03-11"
+    accessed: "2026-11-15"
+    period: "Fiscal 2025 (ended Jan 31, 2026)"
+    credit: "Target 10-K (SEC)"
+  - id: amzn10k
+    title: "Amazon.com, Inc. Form 10-K for the year ended December 31, 2025: net sales by groups of similar products and services"
+    publisher: Amazon.com, Inc. (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm
+    published: "2026-02-06"
+    accessed: "2026-11-15"
+    period: "Calendar 2025"
+    credit: "Amazon 10-K (SEC)"
+  - id: kellogg
+    title: "No, Extended Warranties Are Usually Not Worth It (on Abito & Salant, 'The Effect of Product Misperception on Economic Outcomes: Evidence from the Extended Warranty Market', Review of Economic Studies, 2018)"
+    publisher: Kellogg Insight (Northwestern University)
+    url: https://insight.kellogg.northwestern.edu/article/extended-warranty-worth-it
+    published: "2019-10-03"
+    accessed: "2026-11-15"
+    period: "Study data (U.S. electronics retailer; earlier years)"
+    credit: "Abito & Salant (Rev. Econ. Stud.) via Kellogg Insight"
+  - id: cr
+    title: "Get the Most TV for Your Money (James K. Willcox), on 'derivative' TV models"
+    publisher: Consumer Reports
+    url: https://www.consumerreports.org/tvs/get-the-most-tv-for-your-money
+    published: "2018-09-26"
+    accessed: "2026-11-15"
+    period: "2017-2018 TV models"
+    credit: "Consumer Reports (2018)"
+  - id: fed
+    title: "2023 Interchange Fee Revenue, Covered Issuer Costs, and Covered Issuer and Merchant Fraud Losses Related to Debit Card Transactions (Regulation II data)"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/paymentsystems/files/debitfees_costs_2023.pdf
+    published: "2025-12-01"
+    accessed: "2026-11-15"
+    period: "Calendar 2023 (debit and general-use prepaid)"
+    credit: "Federal Reserve (Reg II data)"
+  - id: cfpb
+    title: "Buy Now, Pay Later: Market trends and consumer impacts (Table 10, aggregated unit margins of five lenders)"
+    publisher: Consumer Financial Protection Bureau
+    url: https://files.consumerfinance.gov/f/documents/cfpb_buy-now-pay-later-market-trends-consumer-impacts_report_2022-09.pdf
+    published: "2022-09-15"
+    accessed: "2026-11-15"
+    period: "2019-2021"
+    credit: "CFPB (2022)"
+  - id: nrf_ret
+    title: "Consumers expected to return nearly $850 billion in merchandise in 2025 (NRF and Happy Returns)"
+    publisher: National Retail Federation
+    url: https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025
+    published: "2025-10-15"
+    accessed: "2026-11-15"
+    period: "2025 (retailer estimates)"
+    credit: "NRF / Happy Returns (Oct 2025)"
+  - id: which
+    title: "Nine in 10 Black Friday 'deals' cheaper or same price at other times of the year, Which? finds"
+    publisher: Which? (UK consumer association)
+    url: https://www.which.co.uk/policy-and-insight/article/nine-in-10-black-friday-deals-cheaper-or-same-price-at-other-times-of-year-which-finds-a4Z2J3u5lTI2
+    published: "2024-11-26"
+    accessed: "2026-11-15"
+    period: "Black Friday 2023 deals (Nov 20 - Dec 1, 2023), eight UK retailers"
+    credit: "Which? (UK, Nov 2024)"
+claims:
+  - id: police
+    text: "Inquirer (2011), citing Bonnie Taylor-Blake's report to the American Dialect Society: a 1961 Public Relations News article said 'in Philadelphia, it became customary for officers to refer to the post-Thanksgiving days as Black Friday and Black Saturday'; the term referred to traffic problems. History.com: Philadelphia police used the term in the 1950s/60s for the chaos the day after Thanksgiving; merchants 'tried unsuccessfully to change it to Big Friday'."
+    spoken: nineteen sixty-one
+    display: "1961: Philadelphia police called it 'Black Friday' (Public Relations News, via Inquirer)"
+    fields: {}
+    source_ids: [inq, hist]
+    status: source_located
+  - id: myth
+    text: "History.com: the 'in the black' explanation is 'officially sanctioned—but inaccurate'; 'Sometime in the late 1980s, however, retailers found a way to reinvent Black Friday' as the day stores went from red to black."
+    spoken: the late nineteen-eighties
+    display: "'In the black' story: late 1980s reinvention (History.com)"
+    fields: {}
+    source_ids: [hist]
+    status: source_located
+  - id: adobe_bf
+    text: "Adobe (Jan 7, 2026): Black Friday 2025 U.S. online spending $11.8 billion, up 9.1% YoY; Thanksgiving $6.4bn; Cyber Monday $14.25bn up 7.1% (biggest e-commerce day of the season and year); Cyber Week (Thanksgiving-Cyber Monday) $44.2bn up 7.7%; season Nov 1-Dec 31 $257.8bn up 6.8%; 56.4% of online transactions on smartphones."
+    spoken: eleven point eight billion dollars
+    display: "Black Friday 2025 online: $11.8bn (+9.1%, Adobe)"
+    fields: {growth_spoken: nine percent, cm_spoken: fourteen point two five billion dollars, cw_spoken: forty-four point two billion dollars, season_spoken: two hundred and fifty-eight billion dollars}
+    source_ids: [adobe_jan, adobe_cm]
+    status: source_located
+  - id: adobe_disc
+    text: "Adobe (Jan 7, 2026): 2025 season discounts peaked at 30.9% off listed price in electronics (30.1% in 2024), toys 29.6%, apparel 25.1%, televisions 24.3%, computers 23.4%."
+    spoken: thirty-one percent
+    display: "Peak discounts off listed price, 2025: electronics 30.9%, toys 29.6%, TVs 24.3% (Adobe)"
+    fields: {toys_spoken: thirty percent, tv_spoken: twenty-four percent}
+    source_ids: [adobe_jan]
+    status: source_located
+    verification_note: Adobe's Sep 2026 forecast quotes the 2025 electronics peak as 30.1%; we use the January 2026 final release (30.9%) and round ("about thirty-one percent").
+  - id: adobe_aff
+    text: "Adobe (Jan 7, 2026): 'affiliates and partners', which includes social media influencers, revenue share 20.4% of the 2025 holiday season, up 15.9% YoY; social media 4.6% share."
+    spoken: about a fifth
+    display: "Affiliates & partners: 20.4% of online holiday revenue (Adobe)"
+    fields: {}
+    source_ids: [adobe_jan]
+    status: source_located
+  - id: adobe26
+    text: "Adobe forecast (Sep 28, 2026): Black Friday 2026 $12.9bn online (up 9.2%), Cyber Monday $15.1bn (up 6.2%), Cyber Week $47.5bn, season $275.1bn (up 6.7%), BNPL $21.3bn."
+    spoken: twelve point nine billion dollars
+    display: "2026 FORECAST: Black Friday $12.9bn online (Adobe)"
+    fields: {}
+    source_ids: [adobe_fc]
+    status: source_located
+    verification_note: Forecast, not a result; labelled FORECAST on screen and in narration.
+  - id: bnpl
+    text: "Adobe (Jan 7, 2026): Buy Now Pay Later contributed $20 billion in online spend in the 2025 season, up 9.8% YoY; Cyber Monday was the biggest BNPL day on record, $1.03bn (up 4.2%)."
+    spoken: twenty billion dollars
+    display: "BNPL, holiday 2025: $20bn online (+9.8%, Adobe)"
+    fields: {cm_spoken: one billion dollars}
+    source_ids: [adobe_jan, adobe_cm]
+    status: source_located
+  - id: nrf
+    text: "NRF (Dec 2, 2025): 'A record 202.9 million consumers shopped during the five-day holiday weekend' (Thanksgiving Day through Cyber Monday); 129.5M in stores, 134.9M online; Black Friday 80.3M in-store and 85.7M online. Survey of 3,099 adults, Nov 26-30, ±1.8 points."
+    spoken: two hundred and three million
+    display: "Thanksgiving-Cyber Monday 2025: 202.9M shoppers (NRF survey)"
+    fields: {bfstore_spoken: eighty million people, bfonline_spoken: eighty-six million}
+    source_ids: [nrf_wk]
+    status: source_located
+  - id: census
+    text: "Census Bureau, Q4 2025: not seasonally adjusted e-commerce $365.2 billion = 18.3% of total retail sales (adjusted: 16.6%); 2025 e-commerce $1,233.7bn = 16.4% of retail."
+    spoken: eighteen point three percent
+    display: "Q4 2025: e-commerce = 18.3% of U.S. retail sales (Census, not seas. adj.)"
+    fields: {}
+    source_ids: [census]
+    status: source_located
+  - id: bby
+    text: "Best Buy fiscal 2026 (ended Jan 31, 2026): revenue $41,691M; Q4 (13 weeks) $13,814M; Q4 gross profit 20.9% vs 22.5% for FY; operating income Q4 $721M vs FY $1,389M (GAAP). Q4 share of revenue 33.1%, of operating income 51.9%, average of Q1-Q3 revenue $9,292M: OUR calculations. 10-K: 'A large proportion of our revenue and earnings is generated in the fiscal fourth quarter, which includes the majority of the holiday shopping season.'"
+    spoken: forty-one point seven billion dollars
+    display: "Best Buy FY2026: Q4 $13.8bn of $41.7bn revenue (≈ 33%, our calc.)"
+    fields: {q4_spoken: thirteen point eight billion dollars, gmq4_spoken: twenty point nine percent, gmfy_spoken: twenty-two point five percent, avg_spoken: nine point three billion dollars}
+    source_ids: [bbyq4, bby10k]
+    status: source_located
+    verification_note: GAAP operating income includes fiscal 2026 impairment and restructuring charges (Q4 restructuring was a $28M credit); share of operating income said only as 'about half'.
+  - id: vendor
+    text: "Best Buy 10-K: inventory management includes 'agreements with vendors relating to reimbursement for the cost of markdowns or sales incentives'; vendor allowances for purchases, sales volumes, advertising and placement reduce cost of sales. Target 10-K: vendor income 'principally earned as a result of volume rebates, promotions, certain advertising activities, and markdown allowances'."
+    spoken: markdown allowances
+    display: "Vendors reimburse markdowns (Best Buy 10-K) · 'markdown allowances' (Target 10-K)"
+    fields: {}
+    source_ids: [bby10k, tgt10k]
+    status: source_located
+  - id: target
+    text: "Target 10-K: 'A larger share of annual net sales are traditionally earned during the fourth quarter because it includes the November and December holiday sales period.' 'Because of the seasonal nature of the retail business, employment levels peak in the holiday season.' Roundel: in-house retail media network selling advertising primarily to merchandise vendors."
+    spoken: the fourth quarter
+    display: "Target: larger share of sales in Q4; staffing peaks in the holidays (10-K)"
+    fields: {}
+    source_ids: [tgt10k]
+    status: source_located
+  - id: warranty
+    text: "Kellogg Insight (2019) on Abito & Salant (Review of Economic Studies, 2018): extended warranties averaged 24 percent of a product's price across electronics; using TV failure rates (5-8%), 'profit margins can be as high as 62 to 73 percent'."
+    spoken: sixty-two to seventy-three percent
+    display: "TV extended warranties: margins up to 62-73% (Abito & Salant, academic estimate)"
+    fields: {avg_spoken: twenty-four percent}
+    source_ids: [kellogg]
+    status: source_located
+    verification_note: Academic estimate for the market and years studied; said as 'as high as'.
+  - id: cr
+    text: "Consumer Reports (2018): 'low-priced TVs made specifically for Black Friday and often available through a single retailer'; 'derivatives' are similar to regular models 'but with different model numbers and often fewer features', e.g. fewer HDMI inputs; a 2017 55-inch derivative CR tested 'was about $170 cheaper than the TV it was based on' and 'performed equally well'; single-retailer sets can't be price-matched."
+    spoken: one hundred and seventy dollars
+    display: "One derivative CR tested: ≈ $170 cheaper, performed equally well (CR 2018)"
+    fields: {}
+    source_ids: [cr]
+    status: source_located
+  - id: fed
+    text: "Federal Reserve (Dec 2025), 2023 data: interchange fees on all debit and general-use prepaid transactions totaled $34.12 billion; 100.7 billion transactions worth $4.7 trillion; average interchange fee for covered (Reg II-capped) transactions $0.24 single-message / $0.22 dual-message; exempt transactions $0.52; network fees $12.95 billion."
+    spoken: thirty-four billion dollars
+    display: "Debit & prepaid interchange, 2023: $34.12bn (Federal Reserve)"
+    fields: {cov_spoken: twenty-two to twenty-four cents, ex_spoken: fifty-two cents, net_spoken: almost thirteen billion dollars}
+    source_ids: [fed]
+    status: source_located
+  - id: cfpb
+    text: "CFPB (2022), Table 10, aggregated unit margins of five BNPL lenders: merchant discount fees 3.39% (2019), 2.91% (2020), 2.49% (2021) of GMV; lenders market 'incremental sales' and higher average order value to merchants."
+    spoken: about two and a half percent
+    display: "BNPL merchant fees ≈ 2.49% of volume, 2021 (CFPB, five lenders)"
+    fields: {}
+    source_ids: [cfpb]
+    status: source_located
+  - id: amzn
+    text: "Amazon 10-K 2025: advertising services net sales $68,635M (2024: $56,214M)."
+    spoken: sixty-eight point six billion dollars
+    display: "Amazon advertising services, 2025: $68.6bn (10-K)"
+    fields: {}
+    source_ids: [amzn10k]
+    status: source_located
+  - id: nrf_ret
+    text: "NRF and Happy Returns (Oct 15, 2025): retailers expect 17% of holiday sales to be returned; 15.8% of annual sales returned in 2025, totaling $849.9 billion; 19.3% of online sales; 9% of all returns fraudulent. Surveys: 358 e-commerce professionals at merchants with >$500M revenue; 2,006 consumers."
+    spoken: seventeen percent
+    display: "Holiday sales expected back: 17% (NRF / Happy Returns, 2025)"
+    fields: {total_spoken: eight hundred and fifty billion dollars, rate_spoken: sixteen percent, online_spoken: nineteen percent, fraud_spoken: nine percent}
+    source_ids: [nrf_ret]
+    status: source_located
+    verification_note: Retailer estimates, not audited data; say 'expected' / 'estimated'.
+  - id: which
+    text: "Which? (UK, Nov 26, 2024): looked at deals on 227 products in the 2023 Black Friday fortnight (Nov 20 - Dec 1) at eight UK retailers; 92% were the same price or cheaper at other times of the year; around four in 10 were cheaper at other times."
+    spoken: Ninety-two percent
+    display: "UK study: 92% of 227 Black Friday 2023 deals same price or cheaper at other times (Which?)"
+    fields: {n_spoken: two hundred and twenty-seven}
+    source_ids: [which]
+    status: source_located
+    verification_note: UK prices and retailers; said as a UK study.

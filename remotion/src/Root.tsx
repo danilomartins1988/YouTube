@@ -6,6 +6,7 @@ import {Composition} from 'remotion';
 import {Documentary} from './Documentary';
 import {Thumbnail} from './Thumbnail';
 import {ToneThumbnail} from './ToneThumbnail';
+import {StagePreview} from './StagePreview';
 import {CinematicThumb} from './thumbnails/CinematicThumb';
 import {PunchThumb} from './thumbnails/PunchThumb';
 import {INTRO_SECONDS, TheHiddenEconomicsIntro} from './brand/TheHiddenEconomicsIntro';
@@ -61,6 +62,16 @@ export const RemotionRoot: React.FC = () => (
     width={1920}
     height={1080}
     durationInFrames={1}
+  />
+  <Composition
+    id="StagePreview"
+    component={StagePreview as unknown as React.FC<Record<string, unknown>>}
+    defaultProps={{scene: {world: 'hills'}, start: 0} as unknown as Record<string, unknown>}
+    fps={30}
+    width={1920}
+    height={1080}
+    durationInFrames={300}
+    calculateMetadata={({props}) => ({durationInFrames: (props as any).times?.length || Math.max(1, Math.round(((props as any).seconds ?? 10) * 30))})}
   />
   <Composition
     id="ToneThumbnail"

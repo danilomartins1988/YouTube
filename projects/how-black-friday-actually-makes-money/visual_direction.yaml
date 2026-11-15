@@ -1,0 +1,58 @@
+# Visual direction for how-black-friday-actually-makes-money (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Director's edit (Ep 56). OWNER DIRECTION: feel like an actual episode of a prime-time animated TV sitcom ("extremely
+# animated, really looking like the TV cartoon"). Genre level only: every character, design, name, title card, caption and
+# sound is original. Craft: cold open gag -> channel intro (the "theme") -> show title card with a joke subtitle -> five
+# acts, each opened by a quick bumper with a changing joke caption (running gag) -> button joke after the end card.
+# Recurring cast (original): GLORIA (frazzled store manager, headset, clipboard), DASH (over-caffeinated deal-hunter,
+# thermos, sneakers), TAGBOT (a deadpan price-tag printer robot on one wheel; its printed tags are the running gag:
+# "WAS $999" anchors that grow every act), BUZZ (delivery drone), LIFT (warehouse forklift with headlight eyes).
+# Bespoke sets (all new in CartoonStage, day scenes): megamall (retro-futurist mega-mall at dawn, 5 a.m.), philly61
+# (1961 downtown traffic jam, sepia), tvfactory (the "derivative" doorbuster factory), quarterhq (calendar tower where Q4
+# is a giant floor), payrails (payment-rails highway with card trucks and toll gantries), bnplride (installment carousel),
+# adarena (ad-auction arena inside a phone), returnsmtn (returns mountain behind the warehouse).
+primary_tone: sitcom
+secondary_tones:
+- history
+palette:
+  bg: '#FFF4DE'
+  bg2: '#FFFBF2'
+  ink: '#1B2433'
+  muted: '#6B7385'
+  land: '#9CCB7A'
+  border: '#2E4A66'
+  accent: '#FFB300'
+  accent2: '#2F6FD1'
+  accent3: '#2E9E5B'
+  risk: '#E53950'
+presenter:
+  demeanor: warm
+  min_sequences: 4
+chapters:
+- chapter: Cold open
+  tone: sitcom
+- chapter: Why it's called Black Friday
+  tone: history
+- chapter: The doorbuster trick
+  tone: sitcom
+- chapter: The quarter that pays for the year
+  tone: sitcom
+- chapter: Everyone takes a cut
+  tone: sitcom
+- chapter: The hangover
+  tone: sitcom
+- chapter: The bill
+  tone: sitcom
+turning_points:
+- segment: a1_turn
+  cue: a real question
+  to: sitcom
+  why: back from the 1961 archive to the present-day show
+thumbnail:
+  tone: sitcom
+  headline: [BLACK FRIDAY'S, SECRET]
+  idea: a giant price tag "WAS $999" with a doorbuster TV bursting through store doors; no logos
+requirements:
+- No store, card network, BNPL, platform or TV-maker logos, names on signage, or trademarked art; stores are generic
+- No character, design, name, catchphrase, ship, location, title text or music borrowed from any existing show
+- Jokes never change a number; our calculations, forecasts and the UK-only study labelled on screen
+- Day scenes, many generic human characters; no real person drawn

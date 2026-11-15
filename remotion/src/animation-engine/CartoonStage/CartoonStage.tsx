@@ -1,6 +1,7 @@
 import React from 'react';
 import {E, clamp, ease, lerp, win} from '../motion';
 import {ToneFilterDef, ToneOverlay, ToneShift, isNeutral, toneAt} from '../tone';
+import {SITCOM_INDOOR, SITCOM_ITEMS, SITCOM_SETS} from './sitcom';
 
 /**
  * CartoonStage: land-based cartoon WORLDS built for a specific story (flat colours, thick outlines, bouncy motion).
@@ -2247,8 +2248,9 @@ const SETS: Record<string, SetFn> = {
         </g>; })}
     </g>;
   },
+  ...(SITCOM_SETS as unknown as Record<string, SetFn>),
 };
-const INDOOR = new Set(['trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set([...SITCOM_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -3887,6 +3889,7 @@ const bigchart: ItemFn = (a, {t}, i) => {
   const X = (a.x as number) ?? 260, Y = (a.y as number) ?? 180, W = a.w ?? 1400, H = a.h ?? 620, bars = a.bars || [], n = Math.max(1, bars.length);
   const mx = a.max ?? Math.max(...bars.map((b: any) => b.value)), mn = Math.min(0, a.min ?? 0), base = Y + H - (H - 40) * (-mn) / (mx - mn), gap = W / n, bw = Math.min(220, gap * 0.62), dark = !!a.dark;
   return <g key={'bc' + i} opacity={app}>
+    {a.panel && <rect x={X - 50} y={Y - 90} width={W + 100} height={H + 150} rx={28} fill={dark ? '#0E1E36' : '#FFFDF6'} opacity={0.93} stroke={OL} strokeWidth={6} />}
     {a.title && <T x={X} y={Y - 30} s={40} c={dark ? '#FFFFFF' : OL} a="start">{a.title}</T>}
     <rect x={X - 20} y={base} width={W + 40} height={6} fill={dark ? '#FFFFFF' : OL} opacity={0.8} />
     {bars.map((b: any, k: number) => {
@@ -5197,7 +5200,7 @@ const sapling: ItemFn = (a, {t, f}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>)};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
@@ -5205,10 +5208,15 @@ export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
   const {t, W = 1920, H = 1080, worldW = 1920, floor = 860, items = [], callouts = []} = p;
   const zones: StageZone[] = p.zones?.length ? p.zones : [{set: p.world || 'hills', x0: -1600, x1: worldW + 1600, night: p.night}];
   const cams = p.cam?.length ? p.cam : [{at: 0, x: 960, y: 540, zoom: 1}];
-  let cx = cams[0].x ?? 960, cy = cams[0].y ?? 540, cz = cams[0].zoom ?? 1;
-  for (const k of cams.slice(1)) { const u = ease(t, k.at, k.dur ?? 2.2, E.inOutQuint); cx = lerp(cx, k.x ?? cx, u); cy = lerp(cy, k.y ?? cy, u); cz = lerp(cz, k.zoom ?? cz, u); }
-  cx += (p.drift ?? 6) * t;
-  cz *= 1 + 0.004 * t;                                                        // gentle push so nothing ever sits still
+  const camAt = (tt: number): [number, number, number] => {
+    let x = cams[0].x ?? 960, y = cams[0].y ?? 540, zz = cams[0].zoom ?? 1;
+    for (const k of cams.slice(1)) { const u = ease(tt, k.at, k.dur ?? 2.2, E.inOutQuint); x = lerp(x, k.x ?? x, u); y = lerp(y, k.y ?? y, u); zz = lerp(zz, k.zoom ?? zz, u); }
+    return [x + (p.drift ?? 6) * tt, y, zz * (1 + 0.004 * tt)];                // gentle push so nothing ever sits still
+  };
+  let [cx, cy, cz] = camAt(t);
+  // whip-pan smear: fast camera moves (e.g. a cam key with dur 0.35) get speed lines and a directional blur
+  const [px0, py0] = camAt(t - 1 / 30), camV = Math.hypot(cx - px0, cy - py0) * 30 * cz, whip = clamp((camV - 900) / 2400);
+  const whipAng = Math.atan2(cy - py0, cx - px0);
   let sx = 0, sy = 0;
   for (const s of p.shake || []) { const u = win(t, s.at, s.dur ?? 1.2); if (u > 0 && u < 1) { const a = (s.amp ?? 14) * (1 - u); sx += Math.sin(t * 61) * a; sy += Math.cos(t * 47) * a; } }
   const camT = `translate(${W / 2 + sx} ${H / 2 + sy}) scale(${cz}) translate(${-cx} ${-cy})`;
@@ -5234,11 +5242,12 @@ export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
   return (
     <svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
       <defs><linearGradient id="stgsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={sky[0]} /><stop offset="100%" stopColor={sky[1]} /></linearGradient>
-        {graded && <ToneFilterDef id="stgtone" s={tn} />}</defs>
+        {graded && <ToneFilterDef id="stgtone" s={tn} />}
+        <filter id="stgwhip" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation={`${(14 * whip * Math.abs(Math.cos(whipAng))).toFixed(1)} ${(14 * whip * Math.abs(Math.sin(whipAng))).toFixed(1)}`} /></filter></defs>
       <rect width={W} height={H} fill={sky[0]} />
       <g transform={camT}>
         <rect x={-4000} y={-3000} width={worldW + 8000} height={3000 + floor} fill="url(#stgsky)" />
-        <g filter={graded ? 'url(#stgtone)' : undefined}>
+        <g filter={whip > 0.15 ? 'url(#stgwhip)' : graded ? 'url(#stgtone)' : undefined}>
         {night ? <g transform={`translate(${cx * 0.9} 0)`}>
           {tn.stars && Array.from({length: 40}, (_, k) => <circle key={k} cx={(rnd(k) - 0.5) * 2600} cy={-200 + rnd(k + 7) * 600} r={2 + 2 * rnd(k + 3)} fill={K.white} opacity={0.5 + 0.5 * Math.sin(t * 3 + k)} />)}
           {tn.sun !== 'none' && <g><circle cx={560} cy={210} r={60} fill="#FFF3B0" stroke={OL} strokeWidth={5} /><circle cx={585} cy={195} r={52} fill={sky[0]} /></g>}</g>
@@ -5262,6 +5271,9 @@ export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
         {callouts.filter((c) => !c.screen).map(calloutNode)}
       </g>
       <ToneOverlay s={tn} t={t} W={W} H={H} id="stgtn" spotX={p.spot?.[0]} spotY={p.spot?.[1]} />
+      {whip > 0.02 && <g opacity={whip} transform={`translate(${W / 2} ${H / 2}) rotate(${(whipAng * 180) / Math.PI})`}>
+        {Array.from({length: 18}, (_, k) => { const yy = (rnd(k * 7 + Math.floor(t * 30)) - 0.5) * H * 1.3, len = 300 + rnd(k + 3) * 700, xx = (rnd(k * 3 + Math.floor(t * 30)) - 0.5) * W;
+          return <rect key={'wh' + k} x={xx - len / 2} y={yy} width={len} height={4 + rnd(k) * 8} rx={4} fill={k % 3 ? '#FFFFFF' : OL} opacity={0.55} />; })}</g>}
       {callouts.filter((c) => c.screen).map((c, i) => calloutNode(c, 100 + i))}
       {ban && bu > 0 && <g transform={`translate(120 96) scale(${bu})`}>
         <rect x={0} y={0} width={Math.max(ban.text.length * 27, (ban.sub || '').length * 13) + 60} height={ban.sub ? 100 : 70} rx={18} fill={K.white} stroke={OL} strokeWidth={5} />
