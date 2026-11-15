@@ -64,8 +64,10 @@ def chart(bars_, at=0.2, **kw):
 
 
 def bumper(id_, seg, num, act, title, caption, color="#E53950", gag=None):
-    items = [TB(1650, 0.9, y=1010, scale=0.9, face="happy", prints=[[1.3, gag]] if gag else [])]
-    stage(id_, seg, {**W1("bumper", num=num, act=act, title=title, caption=caption, color=color), "cam": STILL(), "drift": 0,
+    items = [TB(1650, 0.9, y=1010, scale=0.9, face="happy", prints=[[1.3, gag]] if gag else []),
+             D(xk=[[0.8, -200], [3.6, 2300]], at=0.8, y=1075, scale=0.85, hold="tv", face="dollar", pose="run"),
+             G(xk=[[1.4, -300], [3.9, 1900]], at=1.4, y=1075, scale=0.85, hold="clipboard", face="panic", pose="run")]
+    stage(id_, seg, {**W1("bumper", num=num, act=act, title=title, caption=caption, color=color), "cam": STILL(), "drift": 0, "tone": "sitcom",
                      "min_seconds": 3.9, "items": items}, sfx=[{"kind": "hit", "at": 0.15, "gain": 0.3}, {"kind": "whoosh", "at": 0.05, "gain": 0.25}])
 
 
@@ -73,19 +75,19 @@ def bumper(id_, seg, num, act, title, caption, color="#E53950", gag=None):
 stage("s01_open", "co_open", {
     **W1("megamall", doorsAt=C("The doors open"), clockAt=C("The doors open", -0.6), dawn=0.55, mallX=0.47),
     "cam": cam((0, 1200, 300, 1.0), (C("A crowd has been waiting"), 700, 560, 1.05, 2.4), (C("priced so low"), 1150, 520, 1.25, 1.6),
-               (C("The doors open"), 1050, 500, 1.0, WHIP), (C("starts losing money"), 1300, 560, 1.1, 1.4), (C("On purpose"), 1180, 470, 1.35, WHIP)),
+               (C("The doors open"), 1050, 500, 1.0, WHIP), (C("starts losing money"), 1300, 560, 1.1, 1.4), (C("On purpose"), 1480, 600, 1.6, WHIP)),
     "drift": 3,
-    "items": [it("toonwords", text="5:00 A.M.", x=1200, y=140, at=0.2, until=C("A crowd has been waiting", 1.0), size=90),
+    "items": [it("toonwords", text="THE DAY AFTER THANKSGIVING", x=1200, y=150, at=0.2, until=C("A crowd has been waiting", 1.0), size=60),
               S(1, 300, 0.4, face="worry", scarf="#FFB300"), S(2, 430, 0.5, face="worry", hat="#2F6FD1"), S(4, 560, 0.6, face="dizzy"),
               S(6, 200, 0.7, face="grin"), S(7, 80, 0.8, face="worry"),
               D(740, 0.3, hold="coffee", pose="sip", face="dollar", label="DASH · DEAL HUNTER", labelUntil=C("priced so low"),
                 poses=[[0, "sip"], [C("The doors open"), "stand"]], hops=[C("priced so low", 0.3)],
                 xk=[[0, 740], [C("The doors open"), 740], [C("The doors open", 1.4), 1250]]),
-              G(1180, C("A crowd has been waiting", 1.2), hold="clipboard", pose="key", face="worry", label="GLORIA · STORE MANAGER", labelUntil=C("The doors open"),
+              G(1180, C("A crowd has been waiting", 1.2), hold="clipboard", pose="key", face="worry", label="GLORIA · STORE MANAGER", labelUntil=C("The doors open", -1.8),
                 faces=[[0, "worry"], [C("The doors open"), "panic"], [C("On purpose"), "deadpan"]],
                 poses=[[0, "key"], [C("The doors open", 0.2), "armsup"], [C("On purpose", -0.3), "shrug"]],
                 xk=[[0, 1180], [C("The doors open"), 1180], [C("The doors open", 0.6), 1480]], takes=[C("starts losing money")]),
-              it("bigtag", x=1200, y=200, at=C("priced so low"), until=C("The doors open"), was="TV", now="DOORBUSTER!", scale=0.9),
+              it("bigtag", x=1720, y=260, at=C("priced so low"), until=C("The doors open"), was="TV", now="DOORBUSTER!", scale=0.75),
               TB(1720, 0.6, faces=[[0, "deadpan"], [C("starts losing money"), "alarm"], [C("On purpose"), "deadpan"]],
                  prints=[[C("priced so low", 0.4), "DOORBUSTER!"], [C("On purpose"), "LOSS:\nON PURPOSE"]]),
               it("bubble", text="DOORS IN\n3... 2...", x=1250, y=330, at=C("The doors open", -1.6), until=C("The doors open", -0.1), tail=[1200, 520], size=32),
@@ -104,7 +106,7 @@ stage("s02_hook", "co_hook", {
               G(500, 0.2, face="happy", pose="talk", talk=[[C("Retailers plan"), C("this weekend", 0.6)]], faces=[[0, "happy"], [C("So how does"), "worry"]],
                 poses=[[0, "talk"], [C("So how does"), "shrug"]]),
               D(1700, 0.3, hold="tv", face="grin", faces=[[0, "grin"], [C("So how does"), "shock"]]),
-              it("toonwords", text="HOW?!", x=1150, y=200, at=C("actually make money"), size=130, color="#FFC93C"),
+              it("toonwords", text="HOW?!", x=1150, y=330, at=C("actually make money"), size=130, color="#FFC93C"),
               TB(1980, 0.5, face="deadpan", faces=[[0, "deadpan"], [C("So how does"), "alarm"]])]},
     sources=["adobe_jan"])
 stage("s03_promise", "co_promise", {
@@ -161,10 +163,10 @@ stage("s08_myth", "a1_myth", {
     sources=["hist"])
 stage("s09_turn", "a1_turn", {
     **W1("megamall", doorsAt=0.0, clockAt=0.0, dawn=0.9, mallX=0.5), "tone": "history", "toneShift": {"at": C("a real question"), "to": "sitcom", "dur": 0.6},
-    "cam": cam((0, 1150, 520, 1.15), (C("How does a store"), 1150, 500, 1.0, WHIP)), "drift": 4,
+    "cam": cam((0, 1150, 520, 1.0), (C("How does a store"), 1000, 560, 1.45, WHIP)), "drift": 2,
     "items": [G(950, 0.2, face="worry", pose="shrug", faces=[[0, "worry"], [C("How does a store"), "panic"]], takes=[C("How does a store")]),
               D(1400, 0.3, face="dollar", hold="tv", pose="stand"),
-              it("toonwords", text="SO... HOW?", x=1150, y=170, at=C("How does a store"), size=100)]})
+              it("toonwords", text="SO... HOW?", x=1000, y=330, at=C("How does a store"), size=90)]})
 
 # ====================================================================== ACT 2: the doorbuster trick
 bumper("s10_b2", "a2_card", "2", "ACT TWO", "THE DOORBUSTER TRICK", "Prices may be closer than they appear", color="#E53950", gag="WAS: EVEN\nMORE")
@@ -215,10 +217,10 @@ add("p14_trade", "a2_draw", "engine_draw", {
     "scale": 0.86, "floor": 1040})
 stage("s15_factory", "a2_deriv", {
     **W1("tvfactory", machX=0.47, speed=170),
-    "cam": cam((0, 1100, 600, 1.0), (C("Consumer Reports has described"), 1000, 560, 1.15, 1.6), (C("The industry calls them"), 1300, 600, 1.0, WHIP),
-               (C("fewer HDMI inputs"), 1050, 520, 1.2, 1.2)), "drift": 6,
-    "items": [it("toonwords", text="BUILT FOR THE DAY", x=1050, y=120, at=0.3, until=C("Consumer Reports has described"), size=74),
-              sign("'MADE SPECIFICALLY FOR BLACK FRIDAY' · 'OFTEN … A SINGLE RETAILER'", 1050, 110, C("Consumer Reports has described"), color="#FFF8E1", size=26, sub="CONSUMER REPORTS (2018)"),
+    "cam": cam((0, 1100, 470, 1.1), (C("Consumer Reports has described"), 1050, 450, 1.15, 1.6), (C("The industry calls them"), 1350, 470, 1.1, WHIP),
+               (C("fewer HDMI inputs"), 1250, 500, 1.3, 1.2)), "drift": 6,
+    "items": [it("toonwords", text="BUILT FOR THE DAY", x=1100, y=170, at=0.3, until=C("Consumer Reports has described"), size=74),
+              sign("'MADE SPECIFICALLY FOR BLACK FRIDAY' · 'OFTEN … A SINGLE RETAILER'", 1050, 150, C("Consumer Reports has described"), color="#FFF8E1", size=26, sub="CONSUMER REPORTS (2018)", until=C("The industry calls them", -0.2)),
               it("toonwords", text="DERIVATIVES", x=1300, y=270, at=C("The industry calls them"), size=76, color="#FFFFFF"),
               sign("SIMILAR MODEL · NEW MODEL NUMBER · FEWER FEATURES", 1100, 390, C("different model numbers"), color="#FFE0B2", size=26),
               it("forklift", x=[[0, 2400], [C("The industry calls them"), 1700]], at=0.2, load=["SPECIAL EDITION", "SPECIAL EDITION"], lift=[[0, 0.1], [C("fewer HDMI"), 0.35]], scale=0.9, flip=True, face="happy"),
@@ -226,12 +228,12 @@ stage("s15_factory", "a2_deriv", {
     sources=["cr"])
 stage("s16_compare", "a2_deriv2", {
     **W1("tvfactory", machX=0.2, speed=110),
-    "cam": cam((0, 1050, 520, 1.05), (C("The catch is comparison"), 1150, 520, 1.1, WHIP)), "drift": 4,
+    "cam": cam((0, 1050, 470, 1.1), (C("The catch is comparison"), 1350, 520, 1.3, WHIP)), "drift": 3,
     "items": [it("bigtag", x=700, y=330, at=C("cost about"), was="REGULAR MODEL", now="≈ $170 LESS", sub="ONE DERIVATIVE CR TESTED (2017)", slashAt=C("less than the model", 0.3), nowAt=C("less than the model", 0.5), scale=1.05),
-              sign("PERFORMED JUST AS WELL (CR TEST)", 1450, 210, C("performed just as well"), color="#C8E6C9", size=30),
+              sign("PERFORMED JUST AS WELL (CR TEST)", 1100, 200, C("performed just as well"), color="#C8E6C9", size=30, until=C("The catch is comparison", -0.2)),
               D(1450, C("The catch is comparison", -0.3), hold="phone", face="dizzy", pose="stand", faces=[[0, "worry"], [C("you can't easily"), "dizzy"]]),
               it("bubble", text="SEARCH: ZERO\nOTHER STORES", x=1650, y=400, at=C("you can't easily"), tail=[1500, 560], size=30),
-              sign("ONE STORE ONLY = HARD TO COMPARE", 1100, 110, C("If only one store"), color="#FFCDD2", size=30)]},
+              sign("ONE STORE ONLY = HARD TO COMPARE", 1350, 220, C("If only one store"), color="#FFCDD2", size=30)]},
     sources=["cr"])
 stage("s17_vendor", "a2_vendor", {
     **W1("storefloor", padX=1000, checkX=2500, tvX=-500),
@@ -256,8 +258,8 @@ bumper("s19_b3", "a3_card", "3", "ACT THREE", "THE QUARTER THAT PAYS FOR THE YEA
 stage("s20_quarter", "a3_quarter", {
     **W1("quarterhq", towerX=0.403, growAt=C("it brought in")),
     "cam": cam((0, 1000, 640, 1.05), (C("it brought in"), 1000, 420, 0.82, 1.8), (C("That's about a third"), 1100, 460, 0.9, 1.4)), "drift": 3,
-    "items": [it("calendar", x=1650, y=300, at=C("thirteen weeks"), pages=[[0, "13/52"]], text="WEEKS IN Q4", scale=0.85, until=C("That's about a third")),
-              sign("BEST BUY · FISCAL 2026 (ENDED JAN 31, 2026)", 1000, -10, C("In fiscal"), color="#FFFFFF", size=28),
+    "items": [it("calendar", x=1650, y=300, at=C("thirteen weeks"), pages=[[0, "13/52"]], text="WEEKS IN Q4", scale=0.85, until=C("it brought in", -0.2)),
+              sign("BEST BUY · FISCAL 2026 (ENDED JAN 31, 2026)", 1000, -10, C("In fiscal"), color="#FFFFFF", size=28, until=C("That's about a third", -0.3)),
               it("counter", x=1700, y=430, at=C("it brought in"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [C("it brought in"), 0], [C("of revenue"), 13.8]], text="Q4 REVENUE"),
               sign("OF $41.7BN FOR THE YEAR", 1700, 640, C("for the whole year"), color="#FFF8E1", size=28),
               it("toonwords", text="≈ 1/3 OF THE MONEY", x=1000, y=60, at=C("That's about a third"), size=66),
@@ -295,7 +297,7 @@ stage("s23_crowd", "a3_crowd", {
     "items": [it("stampede", at=0.3, x0=-400, x1=2600, n=21, dur=5.0, scale=0.95, seed=3),
               it("counter", x=1150, y=170, at=C("counted a record"), suffix="M", decimals=1, steps=[[0, 0], [C("counted a record"), 0], [C("shoppers in its survey"), 202.9]], text="SHOPPERS, THANKSGIVING–CYBER MONDAY 2025 (NRF SURVEY)", until=C("On Black Friday itself")),
               chart([{"label": "IN STORES", "value": 80.3, "color": "#E53950", "at": C("shopped in stores", -0.5), "display": "80.3M"},
-                     {"label": "ONLINE", "value": 85.7, "color": "#2F6FD1", "at": C("shopped online", -0.5), "display": "85.7M"}],
+                     {"label": "ONLINE", "value": 85.7, "color": "#2F6FD1", "at": C("shopped in stores", 0.6), "display": "85.7M"}],
                     at=C("On Black Friday itself"), max=100, title="BLACK FRIDAY 2025 SHOPPERS (NRF SURVEY)", x=650, y=160, w=800, h=380),
               G(1950, 0.3, face="panic", pose="armsup", scale=1.25)]},
     sources=["nrf_wk"])
@@ -335,32 +337,32 @@ stage("s26_next", "a3_next", {
 bumper("s27_b4", "a4_card", "4", "ACT FOUR", "EVERYONE TAKES A CUT", "Every swipe comes with a toll booth", color="#7E57C2", gag="WAS: $99,999\nPLUS FEES")
 stage("s28_rails", "a4_cards", {
     **W1("payrails", gates=["INTERCHANGE", "INTERCHANGE"], gateX=620, gateGap=820, bank1X=1050, bank2X=2300),
-    "cam": cam((0, 700, 560, 1.15), (C("The Federal Reserve counted"), 1050, 460, 0.95, 1.8), (C("For smaller"), 1350, 500, 1.05, WHIP)), "drift": 6,
+    "cam": cam((0, 700, 480, 1.3), (C("The Federal Reserve counted"), 1050, 420, 1.1, 1.8), (C("For smaller"), 1450, 470, 1.25, WHIP)), "drift": 6,
     "items": [it("toonwords", text="EVERY SWIPE PAYS A TOLL", x=700, y=170, at=0.2, until=C("The Federal Reserve counted"), size=62),
               it("counter", x=1050, y=120, at=C("The Federal Reserve counted"), prefix="$", suffix="BN", decimals=2, steps=[[0, 0], [C("The Federal Reserve counted"), 0], [C("in twenty twenty-three"), 34.12]], text="DEBIT & PREPAID INTERCHANGE, 2023 (FEDERAL RESERVE)", until=C("For big banks", 1.5)),
-              sign("BIG BANKS (CAPPED): ≈ 22–24¢ PER PURCHASE", 1000, 120, C("is capped"), color="#C8E6C9", size=30),
+              sign("BIG BANKS (CAPPED): ≈ 22–24¢ PER PURCHASE", 1000, 120, C("is capped"), color="#C8E6C9", size=30, until=C("For smaller", -0.2)),
               sign("SMALLER, EXEMPT BANKS: ≈ 52¢", 1500, 260, C("For smaller"), color="#FFE0B2", size=30)]},
     sources=["fed"])
 stage("s29_net", "a4_net", {
     **W1("payrails", gates=["NETWORK FEE", "INTERCHANGE", "NETWORK FEE"], gateX=500, gateGap=700, bank1X=-300, bank2X=1250),
-    "cam": cam((0, 1200, 480, 0.95), (C("And credit cards"), 900, 500, 1.05, WHIP), (C("On a record weekend"), 1150, 460, 0.88, 1.6)), "drift": 6,
+    "cam": cam((0, 1250, 450, 1.1), (C("And credit cards"), 900, 470, 1.25, WHIP), (C("On a record weekend"), 1150, 470, 1.05, 1.6)), "drift": 6,
     "items": [it("counter", x=1250, y=120, at=C("the card networks collected"), prefix="$", suffix="BN", decimals=2, steps=[[0, 0], [C("the card networks collected"), 0], [C("in network fees"), 12.95]], text="NETWORK FEES, DEBIT & PREPAID, 2023 (FED)", until=C("And credit cards")),
-              sign("CREDIT CARDS: NOT UNDER THE DEBIT CAP", 900, 140, C("And credit cards"), color="#FFCDD2", size=32, until=C("On a record weekend", 0.3)),
+              sign("CREDIT CARDS: NOT UNDER THE DEBIT CAP", 900, 200, C("And credit cards"), color="#FFCDD2", size=32, until=C("On a record weekend", 0.3)),
               D([[0, -300], [C("On a record weekend"), -300], [C("toll booth", 1.0), 1700]], C("On a record weekend", -0.4), hold="card", face="dollar", pose="run", scale=1.1),
-              it("toonwords", text="TOLL! TOLL! TOLL!", x=1150, y=150, at=C("every lane"), size=70)]},
+              it("toonwords", text="TOLL! TOLL! TOLL!", x=1150, y=200, at=C("every lane"), size=70)]},
     sources=["fed"])
 stage("s30_bnpl", "a4_bnpl", {
     **W1("bnplride", rideX=0.5, x0=-800, x1=3400, spin=1.1),
-    "cam": cam((0, 1300, 470, 0.95), (C("Adobe says"), 1500, 480, 1.0, 1.6)), "drift": 4,
-    "items": [it("toonwords", text="BUY NOW, PAY LATER", x=1300, y=-20, at=0.3, until=C("Adobe says"), size=70),
+    "cam": cam((0, 1300, 480, 1.1), (C("Adobe says"), 1550, 480, 1.1, 1.6)), "drift": 4,
+    "items": [it("toonwords", text="BUY NOW, PAY LATER", x=1300, y=80, at=0.3, until=C("Adobe says"), size=70),
               sign("$20BN ONLINE · HOLIDAY 2025 (+9.8%)", 2050, 130, C("it drove"), color="#FFF59D", size=32, sub="ADOBE ANALYTICS"),
               sign("CYBER MONDAY: $1.03BN", 2050, 300, C("on Cyber Monday alone"), color="#BBDEFB", size=30),
-              D(450, 0.3, face="love", pose="cheer", hops=[C("Split the price"), C("on Cyber Monday")], scale=1.2),
+              D(720, 0.3, face="love", pose="cheer", hops=[C("Split the price"), C("on Cyber Monday")], scale=1.2),
               S(3, 2450, 0.5, face="grin", hold="bag", scale=1.15)]},
     sources=["adobe_jan", "adobe_cm"])
 stage("s31_fee", "a4_fee", {
     **W1("bnplride", rideX=0.35, x0=-800, x1=3400, boothDX=900, feeAt=C("Often, the merchant")),
-    "cam": cam((0, 900, 470, 0.95), (C("Often, the merchant"), 1500, 520, 1.05, WHIP)), "drift": 3,
+    "cam": cam((0, 900, 470, 1.0), (C("Often, the merchant"), 1350, 600, 1.4, WHIP), (C("merchant fees averaged"), 1550, 500, 1.05, 1.4)), "drift": 3,
     "items": [G([[0, 1000], [C("Often, the merchant"), 1350]], 0.2, face="worry", faces=[[0, "happy"], [C("Often, the merchant"), "panic"]], takes=[C("Often, the merchant")], scale=1.2),
               it("feeflow", **{"from": [1350, 520], "to": [1850, 640]}, at=C("Often, the merchant", 0.5), n=6, lift=120),
               sign("MERCHANT FEES ≈ 2.49% OF VOLUME (2021)", 1500, 160, C("merchant fees averaged"), color="#FFF8E1", size=30, sub="CFPB STUDY OF FIVE BNPL LENDERS"),
@@ -386,14 +388,14 @@ add("p32_flow", "a4_draw", "engine_draw", {
     "scale": 0.86, "floor": 1040}, sources=["fed", "cfpb"])
 stage("s33_ads", "a4_ads", {
     **W1("adarena", phoneX=0.48, winAt=C("Amazon earned"), slots=["SPONSORED", "SPONSORED", "DEAL"]),
-    "cam": cam((0, 1100, 470, 0.9), (C("Amazon earned"), 1200, 450, 0.9, 1.6)), "drift": 3,
+    "cam": cam((0, 1150, 450, 1.0), (C("Amazon earned"), 1050, 450, 1.05, 1.6)), "drift": 2,
     "items": [it("toonwords", text="ADS ON THE STORE'S OWN APP", x=480, y=140, at=C("Retailers now sell ads"), size=40, until=C("Amazon earned")),
               it("counter", x=450, y=330, at=C("Amazon earned"), prefix="$", suffix="BN", decimals=1, steps=[[0, 0], [C("Amazon earned"), 0], [C("from advertising services"), 68.6]], text="AMAZON AD SERVICES, 2025 (10-K)"),
               sign("RETAIL MEDIA: BEST BUY ADS · TARGET'S ROUNDEL", 1376, 950, C("Best Buy and Target"), color="#FFF59D", size=26)]},
     sources=["amzn10k", "tgt10k", "bby10k"])
 stage("s34_aff", "a4_aff", {
     **W1("adarena", phoneX=0.55, winAt=C("the first deal you see"), slots=["SPONSORED", "INFLUENCER PICK", "DEAL"], query="best black friday deal"),
-    "cam": cam((0, 1200, 470, 0.9), (C("On Black Friday"), 1300, 420, 0.95, WHIP)), "drift": 3,
+    "cam": cam((0, 1250, 450, 1.0), (C("On Black Friday"), 1400, 430, 1.0, WHIP)), "drift": 2,
     "items": [it("counter", x=640, y=200, at=C("drove"), suffix="%", decimals=1, steps=[[0, 0], [C("drove"), 0], [C("of online holiday revenue"), 20.4]], text="AFFILIATES & PARTNERS · HOLIDAY 2025 (ADOBE)"),
               S(5, 640, 0.3, hold="phone", pose="talk", face="grin", talk=[[0.5, C("drove")]], label="AN INFLUENCER", scale=1.25),
               it("toonwords", text="PAID TO BE FIRST", x=1810, y=-75, at=C("may be the one"), size=70)]},
@@ -414,11 +416,11 @@ stage("s36_returns", "a5_returns", {
     sources=["nrf_ret"])
 stage("s37_mountain", "a5_mountain", {
     **W1("returnsmtn", mtnX=0.62),
-    "cam": cam((0, 700, 520, 1.0), (C("Online orders"), 1300, 480, 0.95, 1.8), (C("Part of the holiday profit"), 1100, 560, 1.1, WHIP)), "drift": 5,
-    "items": [sign("SHIP BACK", 360, 130, C("shipped back"), color="#BBDEFB", size=30), sign("CHECK", 700, 130, C("checked"), color="#BBDEFB", size=30),
-              sign("REPACK", 980, 130, C("repacked"), color="#BBDEFB", size=30), sign("SELL OFF CHEAP", 1340, 130, C("sold off cheap"), color="#FFCDD2", size=30),
+    "cam": cam((0, 1350, 500, 1.0), (C("Online orders"), 1500, 470, 0.95, 1.8), (C("Part of the holiday profit"), 1100, 600, 1.35, WHIP)), "drift": 4,
+    "items": [sign("SHIP BACK", 760, 130, C("shipped back"), color="#BBDEFB", size=30), sign("CHECK", 1080, 130, C("checked"), color="#BBDEFB", size=30),
+              sign("REPACK", 1360, 130, C("repacked"), color="#BBDEFB", size=30), sign("SELL OFF CHEAP", 1720, 130, C("sold off cheap"), color="#FFCDD2", size=30),
               it("drone", x=[[0, 2400], [C("Online orders"), 1500]], y=[[0, 200], [C("Online orders"), 330]], at=C("Online orders", -0.5), carry="RETURN", scale=1.0, face="squint"),
-              sign("ONLINE: ≈ 19.3% RETURNED (2025 EST.)", 1500, 120, C("of online sales"), color="#FFF59D", size=30),
+              sign("ONLINE: ≈ 19.3% RETURNED (2025 EST.)", 1500, 260, C("of online sales"), color="#FFF59D", size=30),
               G(1100, C("Part of the holiday profit", -0.5), face="panic", pose="armsup", scale=1.25),
               it("feeflow", **{"from": [1100, 560], "to": [300, 900]}, at=C("leaks out the back door"), n=6, color="#FF8A80", sym="-")]},
     sources=["nrf_ret"])
@@ -447,7 +449,7 @@ add("p39_price", "a5_draw", "engine_draw", {
     "scale": 0.86, "floor": 1040})
 stage("s40_adobe", "a5_adobe", {
     **W1("storefloor", padX=1500, checkX=-900, tvX=300),
-    "cam": cam((0, 1000, 500, 1.0), (C("The trick is"), 1200, 520, 1.1, 1.4)), "drift": 4,
+    "cam": cam((0, 1000, 500, 1.0), (C("The trick is"), 1080, 500, 1.05, 1.4)), "drift": 2,
     "items": [chart([{"label": "ELECTRONICS", "value": 30.9, "color": "#2F6FD1", "at": C("off listed prices"), "display": "30.9%"},
                      {"label": "TOYS", "value": 29.6, "color": "#E53950", "at": C("on toys", -0.4), "display": "29.6%"},
                      {"label": "TVs", "value": 24.3, "color": "#7E57C2", "at": C("on toys", 0.4), "display": "24.3%"}],
@@ -459,13 +461,13 @@ stage("s40_adobe", "a5_adobe", {
 # ====================================================================== PAYOFF + TEASER + BUTTON
 stage("s41_payoff", "payoff", {
     **W1("megamall", doorsAt=0.0, clockAt=0.0, dawn=1.0, mallX=0.47, banner="SEE YOU NEXT BLACK FRIDAY"),
-    "cam": cam((0, 1150, 430, 0.82), (C("Not on the doorbuster"), 1150, 500, 1.0, 1.6), (C("And a whole crowd"), 1150, 440, 0.86, 1.8)), "drift": 3,
-    "items": [it("toonwords", text="NOT THE DOORBUSTER. THE VISIT.", x=1150, y=0, at=C("Not on the doorbuster"), until=C("And a whole crowd"), size=48),
+    "cam": cam((0, 1150, 430, 0.82), (C("Not on the doorbuster"), 1150, 450, 0.9, 1.6), (C("And a whole crowd"), 1150, 440, 0.86, 1.8)), "drift": 2,
+    "items": [it("toonwords", text="NOT THE DOORBUSTER. THE VISIT.", x=1150, y=40, at=C("Not on the doorbuster"), until=C("And a whole crowd"), size=48),
               sign("THE CART", 500, 180, C("The cart around"), color="#C8E6C9", size=30),
               sign("THE PLAN", 880, 120, C("the plan at the register"), color="#C8E6C9", size=30),
               sign("SUPPLIER MARKDOWN MONEY", 1300, 180, C("the supplier"), color="#C8E6C9", size=30),
               sign("THE QUARTER THAT CARRIES THE YEAR", 1800, 120, C("the one quarter"), color="#FFF59D", size=28),
-              it("toonwords", text="+ CARDS · LENDERS · AD SELLERS", x=1150, y=0, at=C("And a whole crowd"), size=46, color="#FFFFFF"),
+              it("toonwords", text="+ CARDS · LENDERS · AD SELLERS", x=1150, y=40, at=C("And a whole crowd"), size=46, color="#FFFFFF"),
               G(600, 0.2, face="grin", pose="wave", hold="clipboard", scale=1.25), D(1700, 0.3, face="dollar", hold="tv", scale=1.25, hops=[C("whether your deal")]),
               TB(1100, 0.5, face="happy", scale=1.1), S(2, 300, 0.6, face="grin", hold="bag"), S(5, 2000, 0.7, face="grin", hold="bag"),
               it("drone", x=[[0, -300], [12, 2600]], y=-150, at=0.2, carry="PROFIT?", scale=0.8),

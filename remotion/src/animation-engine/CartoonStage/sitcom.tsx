@@ -697,6 +697,9 @@ export const SITCOM_SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f - 140} width={w} height={40} rx={20} fill="#546E7A" stroke={OL} strokeWidth={5} />
       {Array.from({length: Math.ceil(w / 60)}, (_, k) => { const rx = z.x0 + ((k * 60 + t * speed) % w); return <circle key={'rl' + k} cx={rx} cy={f - 120} r={12} fill="#90A4AE" stroke={OL} strokeWidth={2.5} />; })}
       <rect x={z.x0} y={f - 100} width={w} height={100} fill="#78909C" stroke={OL} strokeWidth={4} />
+      <rect x={z.x0} y={f} width={w} height={800} fill="#C9D3DC" />
+      {Array.from({length: Math.ceil(w / 200)}, (_, k) => <path key={'fl' + k} d={`M ${z.x0 + k * 200} ${f} L ${z.x0 + k * 200 - 120} ${f + 500}`} stroke="#AEB9C4" strokeWidth={4} />)}
+      <path d={`M ${z.x0} ${f + 60} L ${z.x1} ${f + 60}`} stroke="#FFD54F" strokeWidth={14} strokeDasharray="60 40" />
       {/* TVs on the belt: regular -> through machine -> "SPECIAL EDITION" */}
       {Array.from({length: Math.ceil(w / 340) + 1}, (_, k) => { const tx = z.x0 - 340 + ((k * 340 + t * speed) % (w + 340)), done = tx > mx + 120;
         return <g key={'tv' + k} transform={`translate(${tx} ${f - 140})`}>
