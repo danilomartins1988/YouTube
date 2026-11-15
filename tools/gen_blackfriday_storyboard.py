@@ -93,7 +93,7 @@ stage("s01_open", "co_open", {
               it("bubble", text="DOORS IN\n3... 2...", x=1250, y=330, at=C("The doors open", -1.6), until=C("The doors open", -0.1), tail=[1200, 520], size=32),
               it("stampede", at=C("The doors open", 0.3), x0=-300, x1=1500, n=14, dur=2.6, scale=1.0, until=C("On purpose", -0.2)),
               it("drone", x=[[0, 2100], [C("The doors open"), 1500], [C("On purpose"), 700]], y=200, at=0.2, carry="RUSH", scale=0.9)]},
-    sfx=[{"kind": "hit", "at": C("The doors open"), "gain": 0.35}])
+    sfx=[{"kind": "hit", "cue": "The doors open", "gain": 0.35}])
 stage("s02_hook", "co_hook", {
     **W1("megamall", doorsAt=0.0, clockAt=0.0, dawn=0.85, mallX=0.47, banner="RECORD ONLINE BLACK FRIDAY"),
     "cam": cam((0, 1100, 420, 0.92), (C("Retailers plan"), 1200, 520, 1.05, 1.8), (C("So how does"), 1150, 540, 1.25, WHIP)), "drift": 4,
@@ -121,7 +121,7 @@ stage("s03_promise", "co_promise", {
               it("feeflow", **{"from": [1700, 650], "to": [2300, 200]}, at=C("takes a cut", -0.3), n=6),
               D(1300, 0.2, face="dollar", pose="stand", xk=[[0, 1300], [C("the cable that wins"), 1300], [C("the cable that wins", 1.2), 900]]),
               G(1820, 0.3, face="grin", pose="talk", talk=[[C("the quarter"), C("takes a cut", 1.0)]])]},
-    sfx=[{"kind": "whoosh", "at": C("the cable that wins"), "gain": 0.2}])
+    sfx=[{"kind": "whoosh", "cue": "the cable that wins", "gain": 0.2}])
 stage("s04_title", "title_card", {
     **W1("titlecard", subs=[[2.0, "Tonight: “Doors Open at Five, Wallets at Five-Oh-One”"]]), "cam": STILL(), "drift": 0, "min_seconds": 5.8,
     "items": [D(260, 2.4, scale=1.25, face="dollar", pose="cheer", hops=[2.8, 4.2]), G(1680, 2.6, scale=1.25, face="grin", pose="wave", hold="clipboard"),

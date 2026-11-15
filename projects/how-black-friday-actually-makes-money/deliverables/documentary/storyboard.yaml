@@ -236,8 +236,7 @@ scenes:
       scale: 0.9
   sfx:
   - kind: hit
-    at:
-      cue: The doors open
+    cue: The doors open
     gain: 0.35
   assets:
   - font:inter
@@ -510,8 +509,7 @@ scenes:
       scale: 1.35
   sfx:
   - kind: whoosh
-    at:
-      cue: the cable that wins
+    cue: the cable that wins
     gain: 0.2
   assets:
   - font:inter
