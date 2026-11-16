@@ -9,6 +9,7 @@ import {ToneThumbnail} from './ToneThumbnail';
 import {StagePreview} from './StagePreview';
 import {CinematicThumb} from './thumbnails/CinematicThumb';
 import {PunchThumb} from './thumbnails/PunchThumb';
+import {FaceThumb} from './thumbnails/FaceThumb';
 import {INTRO_SECONDS, TheHiddenEconomicsIntro} from './brand/TheHiddenEconomicsIntro';
 import type {Props} from './lib/types';
 import {DEMO_SECONDS, EngineDemo} from './animation-engine/examples/EngineDemo';
@@ -48,6 +49,15 @@ export const RemotionRoot: React.FC = () => (
     id="PunchThumb"
     component={PunchThumb as unknown as React.FC<Record<string, unknown>>}
     defaultProps={{bg: ['#FFE14D', '#FF8A00'], hero: {kind: 'ram', x: 1100, y: 540, s: 1}, text: []} as unknown as Record<string, unknown>}
+    fps={30}
+    width={1920}
+    height={1080}
+    durationInFrames={1}
+  />
+  <Composition
+    id="FaceThumb"
+    component={FaceThumb as unknown as React.FC<Record<string, unknown>>}
+    defaultProps={{bg: ['#3A8DFF', '#0A1F5C'], bust: {who: 'huang', expr: 'point', x: 470, s: 1}, text: []} as unknown as Record<string, unknown>}
     fps={30}
     width={1920}
     height={1080}

@@ -43,3 +43,15 @@ concepts:
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
     vignette: 0.5
     brand: none
+- id: F
+  angle: 'face (sitcom cast, Dash shocked at the sale tag)'
+  archetype: face
+  text:
+  - BLACK FRIDAY
+  - WHO PROFITS?
+  claim_basis: 'a question; answer in the film (loss leaders, attach sales, vendor markdown money)'
+  scene:
+    bg: ['#C05BFF', '#24093F']
+    rays: '#FFD23F'
+    bust: {who: dash, expr: shock, x: 470, s: 0.92}
+    prop: {kind: saletag, x: 1400, y: 760, s: 0.52, rot: -10}

@@ -3,7 +3,11 @@ docs_dir: docs/episodes/54-alphabet
 video: output/alphabet_documentary.mp4
 deliverable: documentary
 status: completed
+default: B   # keep the published default; the face concept is written to thumbnail_face.png
 analysis:
+  public_figure:
+    who: pichai
+    name: Sundar Pichai
   mystery: Why would Google pay anyone $20 billion for a setting on a phone?
   surprising_fact: In 2022 Google's revenue-share payment to Apple was an estimated
     $20 billion (US v. Google, D.D.C. 2024, finding 299)
@@ -83,3 +87,14 @@ concepts:
       color: '#FFF3E0'
     vignette: 0.5
     brand: none
+- id: F
+  angle: face (Sundar Pichai, confident, next to the court's $20B estimate)
+  archetype: face
+  text:
+  - GOOGLE PAYS
+  - APPLE
+  claim_basis: 'apple: 2022 revenue share to Apple an estimated $20bn (US v. Google, D.D.C. 2024, finding 299)'
+  scene:
+    bg: ['#4FA3FF', '#0A1F5C']
+    bust: {who: pichai, expr: smug, x: 470, s: 0.92}
+    prop: {kind: tag, text: $20B, x: 1390, y: 790, s: 0.72, rot: -8}

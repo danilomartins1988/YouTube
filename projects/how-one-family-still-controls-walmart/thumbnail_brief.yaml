@@ -4,7 +4,11 @@ docs_dir: docs/episodes/55-walmart-walton
 video: output/walmart_documentary.mp4
 deliverable: documentary
 status: completed
+default: A   # keep the published default; the face concept is written to thumbnail_face.png
 analysis:
+  public_figure:
+    who: sam
+    name: Sam Walton
   mystery: How does one family still control a public company worth about a trillion dollars?
   surprising_fact: Two Walton family entities hold about 44% of Walmart's shares (2026 proxy) and Walmart ranks No. 1 in the 2025 EY / St. Gallen family business index
   subject: a giant golden key whose bow is a generic big-box store
@@ -42,3 +46,14 @@ concepts:
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
     vignette: 0.5
     brand: none
+- id: F
+  angle: face (founder Sam Walton pointing at the family's stake)
+  archetype: face
+  text:
+  - WHO CONTROLS
+  - WALMART?
+  claim_basis: 'a question; answer: Walton Enterprises + Walton Family Holdings Trust hold 44.11% (2026 proxy)'
+  scene:
+    bg: ['#FFC23A', '#7A1C00']
+    bust: {who: sam, expr: point, x: 470, s: 0.86, cap: true, point: [1250, 850]}
+    prop: {kind: pie, pct: 44, text: 44%, mid: 210, x: 1430, y: 740, s: 0.62}

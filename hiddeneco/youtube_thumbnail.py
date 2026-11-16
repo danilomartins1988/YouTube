@@ -36,6 +36,8 @@ TIMESTAMP = (W - 330, H - 150)                # YouTube's duration badge covers 
 MAX_BYTES = 2 * 1024 * 1024                   # YouTube thumbnail upload limit
 GLYPH = 0.64                                  # average advance of Inter Display Black capitals, in em
 COMPONENT = REPO_ROOT / "remotion" / "src" / "thumbnails" / "CinematicThumb.tsx"
+FACE_COMPONENTS = [REPO_ROOT / "remotion" / "src" / "thumbnails" / "FaceThumb.tsx",
+                   REPO_ROOT / "remotion" / "src" / "animation-engine" / "CartoonStage" / "bust.tsx"]
 LOG = REPO_ROOT / "output" / "thumbnails" / "log.jsonl"
 
 
@@ -94,6 +96,56 @@ def layout_split(lines: list[str], colors: dict) -> list[dict]:
     return out
 
 
+# ------------------------------------------------------------------------------------------------ face archetype
+# Owner request 2026-11-16: whenever a named public figure is central, the default thumbnail is a big respectful cartoon
+# BUST of that person on one side (remotion/src/thumbnails/FaceThumb.tsx + CartoonStage/bust.tsx), <= 4 huge words on
+# the other side and ONE bold prop or sourced number. Presets mirror BUST in bust.tsx (signature traits only).
+FACE_PRESETS = {"huang": "Jensen Huang", "jassy": "Andy Jassy", "pichai": "Sundar Pichai", "musk": "Elon Musk", "sam": "Sam Walton",
+                "rob": "Rob Walton", "penner": "Greg Penner", "steuart": "Steuart Walton", "furner": "John Furner", "trump": "Donald Trump",
+                "gloria": "Gloria (sitcom cast)", "dash": "Dash (sitcom cast)"}
+FACE_EXPRS = ("shock", "smug", "worry", "point", "laugh", "happy", "neutral")
+BUST_EYE_Y, BUST_TOP, BUST_HALF_W = 736, 1000, 250        # local units at scale 1 (eye line, crown with hair, head half-width)
+
+
+def face_geometry(sc: dict) -> dict:
+    """Frame-space geometry of a face concept: bust side, head box, the text zone and the prop default."""
+    b = sc["bust"]
+    s, x, y = float(b.get("s", 0.95)), float(b["x"]), float(b.get("y", H + 10))
+    side = "left" if x < W / 2 else "right"
+    head = (x - BUST_HALF_W * s, y - BUST_TOP * s - (110 * s if b.get("cap") else 0), x + BUST_HALF_W * s, y - 470 * s)
+    zone = (x + 430 * s + 20, W - 70) if side == "left" else (70, x - 430 * s - 20)
+    return {"side": side, "dir": 1 if side == "left" else -1, "head": head, "eye": (x, y - BUST_EYE_Y * s), "zone": zone}
+
+
+def layout_face(lines: list[str], sc: dict, colors: dict, accent_line: int | None = None) -> list[dict]:
+    """Archetype 'face': 1-2 lines, centred in the zone opposite the bust, top of frame; the accent line (default: the
+    last of two) in a red box. Leaves the lower part of the zone for the prop."""
+    g = face_geometry(sc)
+    x0, x1 = g["zone"]
+    zw, cx = x1 - x0, (x0 + x1) / 2
+    acc = (len(lines) - 1 if len(lines) > 1 else None) if accent_line is None else accent_line
+    out, y = [], 70.0
+    for i, l in enumerate(lines):
+        boxed = i == acc
+        size = min(210 if not boxed else 200, (zw - (90 if boxed else 20)) / (max(1, len(l)) * GLYPH))
+        y += size * 0.80 + (26 if boxed else 0) + (8 if i else 0)
+        out.append({"text": l, "x": round(cx, 1), "y": round(y, 1), "size": round(size, 1), "width": round(len(l) * size * GLYPH, 1), "anchor": "middle",
+                    "color": "#FFFFFF" if boxed else colors.get("ink", "#FFFFFF"), "rotate": -3, **({"box": colors.get("box", "#FF1E1E")} if boxed else {})})
+        y += size * 0.24 + (26 if boxed else 0)
+    return out
+
+
+def face_props(c: dict, texts: list[dict], hide_text: bool = False) -> dict:
+    sc = c["scene"]
+    g = face_geometry(sc)
+    bust = {"dir": g["dir"], **sc["bust"]}
+    prop = dict(sc["prop"]) if sc.get("prop") else None
+    if prop and bust.get("expr") == "point" and "point" not in bust:
+        bust["point"] = [prop["x"] - g["dir"] * 120 * prop.get("s", 1), prop["y"] - 40]
+    return {"bg": sc.get("bg", ["#3A8DFF", "#0A1F5C"]), "rays": sc.get("rays", "#FFFFFF"), "bust": bust, "prop": prop, "text": texts,
+            "hideText": hide_text, "brand": sc.get("brand", "none")}
+
+
 def text_boxes(t: list[dict]) -> list[tuple[float, float, float, float]]:
     boxes = []
     for x in t:
@@ -108,11 +160,11 @@ def _browser() -> str | None:
     return rb.browser_executable()
 
 
-def render_still(props: dict, out_png: Path, scale: float = 2.0) -> None:
+def render_still(props: dict, out_png: Path, scale: float = 2.0, composition: str = "CinematicThumb") -> None:
     out_png.parent.mkdir(parents=True, exist_ok=True)
     pj = out_png.with_suffix(".props.json")
     pj.write_text(json.dumps(props))
-    cmd = ["npx", "remotion", "still", "src/index.ts", "CinematicThumb", str(out_png.resolve()), f"--props={pj.resolve()}",
+    cmd = ["npx", "remotion", "still", "src/index.ts", composition, str(out_png.resolve()), f"--props={pj.resolve()}",
            f"--scale={scale}", "--log=error"]
     b = _browser()
     if b:
@@ -206,7 +258,17 @@ def qc(concept: dict, png: Path, notext: Path, texts: list[dict], others: dict[s
     add("uncluttered (edge density <= 0.16)", density <= 0.16, f"{density:.3f}", critical=False)
     # subject contrast: the subject region must differ from the frame average (stands out)
     full = np.asarray(ImageOps.grayscale(Image.open(notext)).resize((192, 108)), dtype=float)
-    sx, sy = int(concept["scene"]["subject"]["x"] / 10), int(concept["scene"]["subject"]["y"] / 10)
+    if concept.get("archetype") == "face":
+        g = face_geometry(concept["scene"])
+        sx, sy = int(g["eye"][0] / 10), int(g["eye"][1] / 10)
+        hx0, hy0, hx1, hy1 = g["head"]
+        clear = all(b[2] < hx0 or b[0] > hx1 or b[3] < hy0 or b[1] > hy1 for b in boxes)
+        add("text clear of the face", clear, f"head box {tuple(round(v) for v in g['head'])}")
+        add("named figure is a preset or traits object (likeness rules)", isinstance(concept["scene"]["bust"].get("who"), dict)
+            or concept["scene"]["bust"].get("who") in FACE_PRESETS or concept["scene"]["bust"].get("who") == "silhouette", str(concept["scene"]["bust"].get("who")))
+        review.append("Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)")
+    else:
+        sx, sy = int(concept["scene"]["subject"]["x"] / 10), int(concept["scene"]["subject"]["y"] / 10)
     patch = full[max(0, sy - 18):sy + 18, max(0, sx - 28):sx + 28]
     sub_c = float(patch.std())
     add("dominant subject has strong internal contrast", sub_c >= 28, f"luma std {sub_c:.0f}", critical=False)
@@ -264,9 +326,10 @@ def package_texts(brief: dict) -> dict:
 
 
 # ------------------------------------------------------------------------------------------------ run
-def _hash(obj) -> str:
+def _hash(obj, face: bool = False) -> str:
     h = hashlib.sha256(json.dumps(obj, sort_keys=True).encode())
-    h.update(COMPONENT.read_bytes())
+    for f in (FACE_COMPONENTS if face else [COMPONENT]):
+        h.update(f.read_bytes())
     return h.hexdigest()[:16]
 
 
@@ -287,7 +350,7 @@ def load_brief(slug: str) -> dict | None:
 
 def concept_props(b: dict, c: dict, hide_text: bool = False) -> tuple[dict, list[dict]]:
     sc = dict(c["scene"])
-    pal = sc["palette"]
+    pal = sc.get("palette") or {"ink": "#FFFFFF", "accent": "#FFD23F"}
     cols = {"ink": pal.get("ink", "#F4EFE4"), "accent": pal["accent"], "box_ink": c.get("box_ink", "#05070B")}
     arch = c.get("archetype", "classic")
     if not c.get("text"):
@@ -296,6 +359,9 @@ def concept_props(b: dict, c: dict, hide_text: bool = False) -> tuple[dict, list
         texts = layout_bignum(c["text"], cols)
     elif arch == "split":
         texts = layout_split(c["text"], cols)
+    elif arch == "face":
+        texts = layout_face(c["text"], sc, {**cols, "ink": pal.get("ink", "#FFFFFF") if pal else "#FFFFFF"}, c.get("accent_line"))
+        return face_props(c, texts, hide_text), texts
     else:
         texts = layout(c["text"], c.get("text_side", "left"), c.get("accent_line"), cols, c.get("text_style", "plain"))
     props = {**sc, "text": texts, "hideText": hide_text, "archetype": arch}
@@ -304,8 +370,36 @@ def concept_props(b: dict, c: dict, hide_text: bool = False) -> tuple[dict, list
     return props, texts
 
 
-def generate(slug: str, others: dict[str, Path] | None = None, force: bool = False) -> dict:
-    """Render both concepts, QC them, pick the default, write the youtube-package folder. Safe to re-run."""
+def is_face(c: dict) -> bool:
+    return c.get("archetype") == "face"
+
+
+def face_file(c: dict) -> str:
+    """package file of a face concept: thumbnail_face.png (or thumbnail_face-<id>.png when a brief has several)."""
+    return c.get("file") or "thumbnail_face.png"
+
+
+def _write_face(pkg: Path, r: dict) -> Path:
+    out = pkg / face_file(r["concept"])
+    out.write_bytes(r["png"].read_bytes())
+    prev = Image.open(r["png"]).convert("RGB")
+    sheet = Image.new("RGB", (640 + 24 + 320, 360), "#0B0D12")
+    sheet.paste(prev.resize((640, 360), Image.LANCZOS), (0, 0))
+    sheet.paste(prev.resize((320, 180), Image.LANCZOS), (664, 90))      # phone size
+    sheet.save(out.with_name(out.stem + "-preview.jpg"), quality=90)
+    (out.with_name(out.stem + "-brief.json")).write_text(json.dumps({**r["concept"], "layout": r["texts"], "qc": r["qc"],
+        "backend": "svg-composite (Remotion FaceThumb + CartoonStage bust, original vector art)", "cost_usd": 0.0,
+        "generated": _dt.datetime.utcnow().isoformat(timespec="seconds") + "Z"}, indent=2, default=str), encoding="utf-8")
+    return out
+
+
+def generate(slug: str, others: dict[str, Path] | None = None, force: bool = False, only: list[str] | None = None) -> dict:
+    """Render the concepts, QC them, pick the default, write the youtube-package folder. Safe to re-run.
+
+    Face concepts (archetype 'face') are also written to youtube-package/thumbnail_face.png (+ -preview.jpg, -brief.json).
+    Default rule: the brief's `default`; else, when `analysis.public_figure` is set, the best QC-passed face concept;
+    else the best design score. `only=[ids]` renders just those concepts and writes their own files (face file or
+    thumbnail-alt-<id>.png) WITHOUT touching thumbnail.png, the default or the package status."""
     b = load_brief(slug)
     if b is None:
         _log(slug=slug, event="no_brief")
@@ -315,14 +409,17 @@ def generate(slug: str, others: dict[str, Path] | None = None, force: bool = Fal
     pkg.mkdir(parents=True, exist_ok=True)
     results = {}
     for c in b["concepts"]:
+        if only and c["id"] not in only:
+            continue
         props, texts = concept_props(b, c)
-        key = _hash({"props": props})
+        comp = "FaceThumb" if is_face(c) else "CinematicThumb"
+        key = _hash({"props": props}, face=is_face(c))
         master, nt = work / f"master_{c['id']}.png", work / f"notext_{c['id']}.png"
         small = work / f"thumb_{c['id']}.png"
         stamp = work / f"{c['id']}.hash"
         if force or not (stamp.exists() and stamp.read_text() == key and master.exists() and nt.exists() and small.exists()):
-            render_still(props, master, 2.0)
-            render_still(concept_props(b, c, hide_text=True)[0], nt, 0.5)
+            render_still(props, master, 2.0, comp)
+            render_still(concept_props(b, c, hide_text=True)[0], nt, 0.5, comp)
             exp = export_1280(master, small)
             stamp.write_text(key)
             _log(slug=slug, event="rendered", concept=c["id"], backend="svg-composite", cost_usd=0.0, **exp)
@@ -330,10 +427,24 @@ def generate(slug: str, others: dict[str, Path] | None = None, force: bool = Fal
     oth = {k: v for k, v in (others or {}).items() if k != slug}
     for cid, r in results.items():
         r["qc"] = qc(r["concept"], r["png"], r["notext"], r["texts"], oth)
+    for cid, r in results.items():
+        if is_face(r["concept"]):
+            r["face_file"] = _write_face(pkg, r)
+            _log(slug=slug, event="face", concept=cid, file=str(r["face_file"].relative_to(REPO_ROOT)), qc_fail=r["qc"]["critical_fail"])
+    if only:
+        for cid, r in results.items():
+            if not is_face(r["concept"]):
+                shutil.copyfile(r["png"], pkg / f"thumbnail-alt-{cid}.png")
+        return {"slug": slug, "only": only, "results": results, "pkg": pkg,
+                "files": {cid: str(r.get("face_file") or pkg / f"thumbnail-alt-{cid}.png") for cid, r in results.items()},
+                "qc": {cid: ("fail" if r["qc"]["critical_fail"] else "pass") for cid, r in results.items()}}
     ok = [cid for cid, r in results.items() if not r["qc"]["critical_fail"]]
     forced = b.get("default")
+    faces = [cid for cid in ok if is_face(results[cid]["concept"])]
     if forced in ok:
         default = forced
+    elif (b.get("analysis") or {}).get("public_figure") and faces:
+        default = max(faces, key=lambda k: results[k]["qc"]["design_score"])
     else:
         default = max(ok, key=lambda k: results[k]["qc"]["design_score"]) if ok else None
     # write package (version an existing different thumbnail first)
@@ -417,11 +528,37 @@ def draft_brief(slug: str, deliverable: str, project: dict, alias: str | None) -
              {"id": "B", "angle": "consequence", "text": text[-1:], "accent_line": 0, "text_side": "right", "claim_basis": "",
               "scene": {"palette": TONE_PALETTE.get(tone, TONE_PALETTE["strategy"]), "backdrop": back, "subject": {"kind": subj, "x": 600, "y": 560, "s": 0.75},
                         "particles": {"n": 50, "region": [0, 60, 1200, 1000], "size": 2}, "brand": "tr"}}]}
+    who = public_figure(project)
+    if who:   # a named public figure is central: the face archetype leads and is the default
+        b["analysis"]["public_figure"] = {"who": who, "name": FACE_PRESETS.get(who, who)}
+        b["concepts"].insert(0, {"id": "F", "angle": "face (named public figure)", "archetype": "face", "text": text[:2], "claim_basis": "",
+                                 "scene": {"bg": ["#3A8DFF", "#0A1F5C"], "bust": {"who": who, "expr": "point", "x": 470, "s": 0.92},
+                                           "prop": {"kind": "number", "text": "?", "x": 1390, "y": 760, "s": 0.8}}})
+        b["default"] = "F"
     f = REPO_ROOT / "projects" / slug / "thumbnail_brief.yaml"
     f.write_text("# DRAFT thumbnail brief (auto). Replace subject/words, add claim_basis, remove `draft: true`.\n" +
                  yaml.safe_dump(b, sort_keys=False, allow_unicode=True, width=140), encoding="utf-8")
     _log(slug=slug, event="draft_brief")
     return f
+
+
+FACE_NAMES = {"huang": ["jensen huang", "huang"], "pichai": ["sundar pichai", "pichai"], "musk": ["elon musk", "musk"],
+              "jassy": ["andy jassy", "jassy"], "sam": ["sam walton"], "trump": ["donald trump", "trump"]}
+
+
+def public_figure(project: dict) -> str | None:
+    """The bust preset of the named public figure central to an episode: `public_figure` in project.yaml (a preset key
+    or {who: ...}), else a preset person's name in the title. None when no named figure is central."""
+    pf = project.get("public_figure")
+    if isinstance(pf, dict):
+        pf = pf.get("who")
+    if pf:
+        return str(pf)
+    title = str(project.get("title", "")).lower()
+    for who, names in FACE_NAMES.items():
+        if any(re.search(rf"\b{re.escape(n)}\b", title) for n in names):
+            return who
+    return None
 
 
 def channel_thumbnails(exclude: str | None = None) -> dict[str, Path]:
