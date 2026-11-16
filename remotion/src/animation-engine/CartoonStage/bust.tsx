@@ -17,9 +17,9 @@ import {E, clamp, lerp, win} from '../motion';
  * mocking a physical feature, nothing implying a crime, no logos. A private person is `who: 'silhouette'`.
  *
  * Local coordinates: origin at the bottom centre of the bust (the torso continues below y=0 and is meant to be cut by
- * the frame edge). Crown of the head at about y=-890 (cap or volume hair up to -980), eyes at y=-690, chin at -495,
- * shoulders at -340, half-width 430. At scale 1 in a 1920x1080 frame with y=1080 the head and shoulders fill ~53% of
- * the frame height.
+ * the frame edge). The head is drawn at y=-890..-495 and scaled 1.22x about the chin, so on screen: crown ~-980 (cap
+ * up to ~-1100), eyes -736, chin -497, shoulders -340, half-width 440. At scale 0.9 in a 1920x1080 frame with the
+ * bottom at y=1090 the head and shoulders fill ~50% of the frame height.
  *
  * Used by: the `face` thumbnail archetype (remotion/src/thumbnails/FaceThumb.tsx), PunchThumb (`hero.kind: 'bust'`)
  * and CartoonStage (item `bust`, animated: blink, breathing, expression timeline, lip-flap).
@@ -43,7 +43,7 @@ export type BustTraits = {
 
 /** presets: keys match CartoonStage CARI (+ sitcom cast). Signature traits only. */
 export const BUST: Record<string, BustTraits> = {
-  huang: {name: 'Jensen Huang', hair: 'swept', hairColor: '#C4C8CE', hairShade: '#7E848D', brows: '#3A3A40', skin: '#E3B48A', iris: '#3A2618',
+  huang: {name: 'Jensen Huang', hair: 'swept', hairColor: '#B2B7BF', hairShade: '#5C626B', brows: '#3A3A40', skin: '#E3B48A', iris: '#3A2618',
     clothes: 'leather', jacket: '#18181C', shirt: '#25252A', age: 0.55, glasses: false},
   jassy: {name: 'Andy Jassy', hair: 'bald', hairColor: '#9A7A62', hairShade: '#6E5442', brows: '#6E5442', skin: '#E3AE86', iris: '#4A3424',
     clothes: 'open', jacket: '#2E3440', shirt: '#E9EEF3', age: 0.45},
@@ -113,6 +113,17 @@ export const Bust: React.FC<BustProps> = (p) => {
   const sil = p.who === 'silhouette';
   const tr: BustTraits = sil ? {hair: 'side', hairColor: '#1A1A22', skin: '#1A1A22', clothes: 'suit', jacket: '#1A1A22', shirt: '#1A1A22'} : {...base, ...(p.traits || {})};
   const id = p.id || 'b';
+  if (sil) {        // a private person: faceless dark shadow, no likeness, never named
+    return <g opacity={0.95}>
+      <path d={TORSO} fill="#16161E" stroke={BOL} strokeWidth={p.outline ?? 9} strokeLinejoin="round" />
+      <path d="M -72 -540 L -76 -380 Q 0 -350 76 -380 L 72 -540 Z" fill="#16161E" />
+      <g transform="translate(0 -480) scale(1.22) translate(0 480)">
+        <path d={HEAD} fill="#16161E" stroke={BOL} strokeWidth={p.outline ?? 9} />
+        <path d="M -170 -700 C -186 -830 -112 -916 -6 -918 C 104 -920 184 -846 170 -704 C 150 -780 90 -820 0 -824 C -90 -820 -150 -780 -170 -700 Z" fill="#0C0C12" />
+        <text x={0} y={-600} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={220} fill="#9AA3B5">?</text>
+      </g>
+    </g>;
+  }
   const ex: Expr = p.expr || 'happy';
   const d = p.dir ?? 1;
   const OLW = p.outline ?? 9;
@@ -217,10 +228,10 @@ export const Bust: React.FC<BustProps> = (p) => {
   const hairFront = (() => {
     switch (tr.hair) {
       case 'swept': return <g>
-        <path d="M -172 -690 C -196 -812 -170 -930 -50 -974 C 60 -1010 190 -960 194 -830 C 196 -770 184 -728 172 -692 C 168 -752 150 -790 118 -812 C 70 -846 -10 -856 -70 -842 C -124 -830 -158 -770 -172 -690 Z"
+        <path d="M -172 -690 C -200 -820 -184 -950 -56 -996 C 62 -1036 200 -980 198 -840 C 198 -776 186 -730 172 -692 C 170 -764 152 -818 112 -846 C 62 -880 -14 -888 -72 -870 C -128 -852 -162 -782 -172 -690 Z"
           fill={hc} stroke={BOL} strokeWidth={OLW} strokeLinejoin="round" />
-        {strands(['M -110 -836 Q -96 -920 -20 -962', 'M -50 -848 Q -20 -930 70 -968', 'M 20 -850 Q 70 -920 150 -930', 'M 90 -830 Q 150 -870 182 -840', 'M -150 -780 Q -164 -860 -110 -920'], hs, 11)}
-        {strands(['M -80 -870 Q -50 -940 20 -966', 'M 0 -880 Q 50 -940 120 -944', 'M 120 -860 Q 160 -880 178 -860'], lite(hc, 0.55), 8, 0.9)}
+        {strands(['M -120 -856 Q -120 -940 -40 -984', 'M -60 -872 Q -40 -956 50 -994', 'M 10 -880 Q 60 -950 140 -962', 'M 80 -862 Q 140 -910 186 -880', 'M -156 -800 Q -176 -880 -130 -940'], hs, 12)}
+        {strands(['M -92 -884 Q -78 -950 -10 -980', 'M -20 -896 Q 20 -960 100 -974', 'M 120 -884 Q 166 -912 186 -900'], lite(hc, 0.6), 8, 0.9)}
       </g>;
       case 'side': return <g>
         <path d="M -170 -700 C -186 -830 -112 -916 -6 -918 C 104 -920 184 -846 170 -704 C 164 -756 150 -788 120 -806 C 80 -830 10 -834 -50 -826 Q -64 -812 -76 -812 C -110 -808 -146 -786 -156 -740 Z"
@@ -310,7 +321,7 @@ export const Bust: React.FC<BustProps> = (p) => {
   })();
   const badge = tr.badge ? <g transform={`translate(${-210 * d} -170) rotate(${-4 * d})`}>
     <rect x={-104} y={-38} width={208} height={76} rx={12} fill="#FFF8E1" stroke={BOL} strokeWidth={OLW * 0.8} />
-    <text x={0} y={16} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={Math.min(46, 190 / (tr.badge.length * 0.64))} fill={BOL}>{tr.badge}</text></g> : null;
+    <text x={0} y={16} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={Math.min(46, 172 / (tr.badge.length * 0.74))} fill={BOL}>{tr.badge}</text></g> : null;
 
   /* ---------- cap (front view, no logo) */
   const cap = tr.cap ? <g>
@@ -464,7 +475,7 @@ export const bustItem = (a: any, {t, f}: {t: number; f: number}, i: number): Rea
   return <g key={'bust' + i} transform={`translate(${x} ${y - breathe}) scale(${s * app})`}>
     <Bust who={a.who} traits={a.traits} expr={expr} dir={a.dir ?? 1} look={a.look} point={pt} rim={a.rim} blink={blink}
       talk={talking && (expr === 'neutral' || expr === 'happy' || expr === 'smug') ? talk : 0} id={`bi${i}`} />
-    {lab && <g transform="translate(0 -1060)">
+    {lab && <g transform="translate(0 -1150)">
       <rect x={-lab.length * 17 - 30} y={-50} width={lab.length * 34 + 60} height={76} rx={38} fill="#FFFFFF" stroke={BOL} strokeWidth={8} />
       <text x={0} y={10} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={44} fill={BOL}>{lab}</text></g>}
   </g>;

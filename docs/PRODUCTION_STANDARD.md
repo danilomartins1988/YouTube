@@ -212,8 +212,8 @@ YOUTUBE PACKAGE READY.
     surge or crash chart…) plus at most one supporting element;
   - 0-4 words.
   
-  It never uses the film's cartoon characters, a smiling sun, clouds or a generic city. No logos, no real flag
-  designs, no likeness of real people, no photographs and no fake "documentary photos".
+  It never uses a smiling sun, clouds or a generic city. No logos, no real flag designs, no photographs and no fake
+  "documentary photos". People appear only through the **face** archetype below (respectful cartoon busts).
 - **Brief first.** Write `projects/<slug>/thumbnail_brief.yaml` once the title and the visual direction are approved:
   - the analysis: mystery, the most surprising verified fact, subject, tone and metaphor;
   - two concepts: A (mystery) and B (consequence);
@@ -256,6 +256,45 @@ YOUTUBE PACKAGE READY.
   Use them to spot repetition before approving.
 - **Never** upload, replace a thumbnail on YouTube, change titles or descriptions, or touch the MP4 without the owner's
   explicit authorisation.
+
+### Face thumbnails (owner request, 2026-11-16)
+
+- **Rule.** When a **named public figure is central** to the episode (the CEO, founder or politician the story is
+  about), the brief gets a `face` concept and it is the **default** thumbnail. Set `analysis.public_figure: {who: <preset>,
+  name: <full name>}` in `thumbnail_brief.yaml` (or `public_figure: <preset>` in `project.yaml`). Draft briefs do this
+  automatically when `project.yaml` names the figure or the title contains a preset person's name
+  (`hiddeneco/youtube_thumbnail.py` `public_figure`). An explicit `default:` in the brief always wins (used to keep an
+  already-published default).
+- **Layout** (`remotion/src/thumbnails/FaceThumb.tsx`, `layout_face`):
+  - the character on one side: a big cartoon **bust** (head and shoulders ≈ 50% of the frame height, anchored on the
+    bottom edge, white sticker outline, rim light), with one clear expression: `shock`, `smug` (confident), `worry`,
+    `point` (arm and hand reach toward the prop), `laugh`, `happy`;
+  - ≤ 4 huge words on the other side, naming the subject (company or person), the last line in a red box;
+  - ONE bold prop or number (`tag`, `pie`, `chip`, `saletag`, `number`, or any CinematicThumb subject). Any number
+    must already be in the episode's package or `FACT_CHECK.md`, and the concept's `claim_basis` says where;
+  - the channel's v2 look: saturated two-tone sunburst, halftone dots, edge vignette, high contrast.
+- **Brief example** (Ep 54):
+  ```yaml
+  - id: F
+    archetype: face
+    text: [GOOGLE PAYS, APPLE]
+    claim_basis: 'apple: 2022 revenue share to Apple an estimated $20bn (US v. Google, D.D.C. 2024, finding 299)'
+    scene:
+      bg: ['#4FA3FF', '#0A1F5C']
+      bust: {who: pichai, expr: smug, x: 470, s: 0.92}       # optional: dir, point [x, y], traits {...}
+      prop: {kind: tag, text: $20B, x: 1390, y: 790, s: 0.72, rot: -8}
+  ```
+- **Render.** `python tools/thumbnails.py face <slug>` renders only the face concepts to
+  `youtube-package/thumbnail_face.png` (+ `-preview.jpg` with the 320x180 phone view, `-brief.json` with layout and QC)
+  without touching `thumbnail.png`. `generate` also writes `thumbnail_face.png` and applies the default rule.
+  Extra QC for faces: text clear of the head, the figure is a preset/traits object; a human checks the likeness.
+- **The bust** (`remotion/src/animation-engine/CartoonStage/bust.tsx`) is also a CartoonStage item (`kind: bust`:
+  `who`, `expr`/`exprs` [[t, expr]], `point`, `talk` windows, `label`) and a PunchThumb hero (`hero.kind: 'bust'`).
+  Presets: `huang` (swept silver hair, black leather jacket over a black tee), `pichai`, `jassy`, `musk`, `sam` (cap,
+  white hair), `rob`, `penner`, `steuart`, `furner`, `trump`, and the sitcom cast `gloria`, `dash`. Traits: `hair`
+  (swept, side, short, swoop, bald, bun, spiky), `hairColor`, `skin`, `iris`, `clothes` (leather, suit, open, shirt, tee,
+  top), `jacket`, `shirt`, `tie`, `cap`, `glasses` (round, rect), `age` (0-1: subtle lines), `beard` (stubble, full).
+  No CEO in the story (e.g. Ep 56)? Use the sitcom cast or the channel presenter, never an invented "executive".
 
 ## 2b. Story details (continued)
 
@@ -343,4 +382,11 @@ YOUTUBE PACKAGE READY.
 - A name label on first appearance. They appear only doing what the narration documents (attributed).
 - Private individuals are never drawn with a likeness: anonymous silhouette (`who: 'silhouette'`), never named if the
   script does not name them.
+- **Likeness guidelines (caricature and bust, thumbnails included):** recognisable ONLY by signature traits: hairstyle
+  and hair colour, signature clothing (e.g. Jensen Huang's black leather jacket, Sam Walton's cap), glasses, skin tone
+  and age. Never photo-trace or work from a single photo; never exaggerate or mock a physical feature (nose, ears,
+  weight, teeth, skin); age lines stay subtle; expressions are reactions to the story's facts, never insults. Nothing
+  that implies a crime, wrongdoing or a statement the person did not make; no logos or brand marks on clothes or props;
+  no real photos. Thumbnail words ≤ 4, name the subject, American English, and any number comes from the package or
+  fact-check. If in doubt, use a silhouette or no person.
 - No depiction implying wrongdoing beyond attributed facts; no romance or sexual content.

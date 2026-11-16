@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {Character} from '../presenter/Presenter';
 import {SUBJECTS} from './CinematicThumb';
+import {Bust} from '../animation-engine/CartoonStage/bust';
 
 /**
  * PunchThumb (v2 thumbnails): loud, high-contrast YouTube covers built to be clicked at phone size.
@@ -38,6 +39,8 @@ const Sticker: React.FC<{children: React.ReactNode; shadow?: number}> = ({childr
 /* ------------------------------------------------------------------------------------------------ heroes */
 type HeroFn = (o: any) => React.ReactNode;
 const HEROES: Record<string, HeroFn> = {
+  /** high-detail cartoon bust (CartoonStage/bust.tsx): `who` preset or traits, `expr`, `dir`; origin = bust bottom centre */
+  bust: (o) => <Bust who={o.who} traits={o.traits} expr={o.expr || 'shock'} dir={o.dir ?? -1} point={o.point} id="pb" outline={10} />,
   /** CEO bust (public-figure caricature, owner decision 2026-11-12): a big flat-cartoon head and shoulders recognisable by
    *  signature traits only. `who`: 'huang' (silver swept hair, black leather jacket over a black tee). `mood`: 'shock' | 'calm'.
    *  `shadow`: true adds a faceless silhouette behind (a private person, never a likeness). */
