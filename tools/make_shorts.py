@@ -96,6 +96,9 @@ SHORTS = {
     "50-mf-global": ("mf-global-the-billion-dollars-that-vanished", "documentary", "mfglobal_documentary", "$1.6 BILLION", "VANISHED", "MF Global: $1.6 Billion of Customer Money Vanished", "#finance #wallstreet #farmers"),
     "42-penny": ("why-america-stopped-making-the-penny", "documentary", "penny_documentary", "3.69 CENTS", "TO MAKE 1 CENT", "It Cost 3.69 Cents to Make One Penny", "#penny #money #usa"),
     "56-black-friday-b": ("how-black-friday-actually-makes-money", "documentary", "blackfriday_documentary_light", "THE BLACK FRIDAY TV", "ISN'T THE SAME TV", "That Black Friday TV Isn't Quite the Same TV", "#blackfriday #tv #shopping"),
+    "61-chinese-cars": ("why-are-chinese-cars-so-cheap", "documentary", "chinesecars_documentary", "A $9,900 EV.", "HOW?", "Why Are Chinese Electric Cars So Cheap?", "#ev #china #cars"),
+    "61-chinese-cars-b": ("why-are-chinese-cars-so-cheap", "documentary", "chinesecars_documentary", "PROFITABLE.", "AND BURNING CASH", "Are Chinese Car Companies Actually Making Money?", "#byd #ev #business"),
+    "61-chinese-cars-c": ("why-are-chinese-cars-so-cheap", "documentary", "chinesecars_documentary", "IT'S NOT JUST", "SUBSIDIES", "China's Biggest EV Advantage Isn't Just Subsidies", "#ev #battery #china"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -103,6 +106,8 @@ SHORTS = {
 CUSTOM = {
     "59-us-debt": ("59-us-debt", ["a2_china", "a2_share"], "youtube-short"),
     "56-black-friday-b": ("56-black-friday", ["a2_deriv", "a2_deriv2"], "youtube-short-b"),
+    "61-chinese-cars-b": ("61-chinese-cars", ["a4_byd", "a4_unwind"], "youtube-short-b"),
+    "61-chinese-cars-c": ("61-chinese-cars", ["a2_turn", "a3_chain", "a3_price"], "youtube-short-c"),
 }
 
 
