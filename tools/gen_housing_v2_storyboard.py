@@ -113,7 +113,7 @@ stage("s01_open", "co_open", {
               it("paddles", raises=[[C("Someone just offered"), "ALL CASH!"], [C("over the asking"), "OVER ASKING!"], [C("over the asking price", 0.5), "WAIVE INSPECTION"]],
                  x0=900, x1=1650, y=330, at=C("Someone just offered", -0.1), until=C("And Maya", -0.2)),
               MAYA([[0, 300], [C("And Maya", -0.6), 300], [C("And Maya"), 700]], 0.4, pose="stand", face="happy", label="MAYA · FIRST-TIME BUYER",
-                   labelUntil=C("just says", 0.5), poses=[[0, "stand"], [C("is holding up"), "armsup"]], faces=[[0, "happy"], [C("offered cash"), "shock"], [C("is holding up"), "worry"]],
+                   labelUntil=C("is holding up", -0.1), poses=[[0, "stand"], [C("is holding up"), "armsup"]], faces=[[0, "happy"], [C("offered cash"), "shock"], [C("is holding up"), "worry"]],
                    takes=[C("offered cash", 0.2)]),
               it("placard", x=700, y=[[0, 420], [C("is holding up"), 400]], at=C("is holding up"), text="PLEASE", size=46, scale=1.0),
               it("savejar", x=300, y=860, at=C("who has saved"), level=[[0, 0.15], [C("who has saved", 1.5), 0.3]], scale=0.6, text="SAVINGS")]},
@@ -131,7 +131,7 @@ stage("s02_hook", "co_hook", {
               MAYA([[0, 450], [C("buying it takes"), 450], [C("simply don't have"), 750]], 0.2, face="happy", hold="box", boxText="PAYCHECK", pose="stand",
                    faces=[[0, "happy"], [C("But the typical existing home"), "worry"], [C("buying it takes"), "panic"]]),
               it("bigtag", x=[[0, 1700], [C("buying it takes"), 1700], [C("simply don't have"), 1150]], y=320, at=C("But the typical existing home", 0.3), was="NEEDED", now="PAYCHECK", scale=0.8),
-              it("toonwords", text="ZOOM!", x=1450, y=420, at=C("buying it takes"), until=C("simply don't have", 1.5), size=110, color="#FFC93C"),
+              it("toonwords", text="ZOOM!", x=1500, y=640, at=C("buying it takes"), until=C("simply don't have", 1.5), size=110, color="#FFC93C"),
               DEE(1900, 0.3, face="dollar", hold="clipboard", pose="stand")]},
     sources=["nar_ehs", "census_inc", "pmms"])
 # promise: a whip-pan tour of the episode's worlds
@@ -145,7 +145,7 @@ stage("s03_promise", "co_promise", {
     "cam": cam((0, 1100, 520, 0.8), (C("Let's follow the money"), 600, 520, 0.85, 1.0), (C("The price that outran"), 600, 480, 0.95, 0.8),
                (C("the rate that rode"), 3250, 470, 0.6, WHIP), (C("the owners who"), 6200, 520, 0.72, WHIP), (C("the homes we never"), 9000, 520, 0.8, WHIP),
                (C("the room where"), 11900, 470, 0.66, WHIP)), "drift": 4,
-    "items": [it("toonwords", text="FOLLOW THE MONEY", x=600, y=150, at=C("Let's follow the money"), until=C("the rate that rode"), size=64),
+    "items": [it("toonwords", text="FOLLOW THE MONEY", x=600, y=150, at=C("Let's follow the money"), until=C("The price that outran", -0.1), size=64),
               sign("1 · THE PRICE", 600, 160, C("The price that outran", 0.3), color="#FFCDD2", size=34, until=C("the rate that rode", 0.5)),
               sign("2 · THE RATE", 3250, 130, C("the rate that rode", 0.2), color="#FFF59D", size=40),
               sign("3 · THE LOCK-IN", 6200, 160, C("the owners who", 0.2), color="#BBDEFB", size=38),
@@ -194,7 +194,7 @@ stage("s08_shrink", "a1_shrink", {
     "cam": cam((0, 1050, 480, 0.95), (C("In March twenty nineteen"), 700, 420, 1.15, 1.4), (C("By March twenty twenty-six"), 1050, 470, 1.0, WHIP), (C("Less than one in four"), 1450, 560, 1.3, 1.2)), "drift": 3,
     "items": [sign("LISTINGS AFFORDABLE AT ≤ $75,000 INCOME", 1050, 60, C("affordable to a household"), color="#FFF8E1", size=30, sub="HARVARD JCHS · MARCH 2019 vs MARCH 2026"),
               MAYA(1950, 0.3, face="worry", pose="stand", faces=[[0, "worry"], [C("just"), "shock"]], takes=[C("just", 0.2)]),
-              it("toonwords", text="< 1 IN 4", x=1450, y=200, at=C("Less than one in four"), size=96, color="#FFC93C")]},
+              it("toonwords", text="< 1 IN 4", x=1450, y=330, at=C("Less than one in four"), size=96, color="#FFC93C")]},
     sources=["jchs"])
 add("p09_ratio", "a1_draw", "engine_draw", {
     "title": "Years of income to buy a home (JCHS)", "board": BOARD, "draw_start": C("Let me draw it"), "speed": 1400, "push": 0.003,
@@ -218,12 +218,13 @@ stage("s11_coaster", "a2_coaster", {
          car=[[0, 0.0], [C("Freddie Mac tracks"), 0.0], [C("record low"), u_at(2021.02)], [C("above seven"), u_at(2022.82)], [C("This October"), u_at(2026.6)],
               [C("climbed back"), u_at(2026.77)], [C("last week"), u_at(2026.86)]],
          reveal=[[0, 0.02], [C("Freddie Mac tracks"), 0.02], [C("every week"), 1.0]],
-         hl=[[C("record low"), 2021.02, "2.65% · RECORD LOW"], [C("above seven"), 2022.82, "ABOVE 7%"], [C("climbed back", 0.3), 2026.77, "7.40% · OCT"], [C("last week", 0.3), 2026.86, "7.11%"]]),
+         hl=[[C("record low"), 2021.02, "2.65% · RECORD LOW"], [C("above seven"), 2022.82, "ABOVE 7%"], [C("last week", 0.3), 2026.86, "7.11% · NOV 12"]]),
     "cam": cam((0, 1350, 460, 0.6), (C("Freddie Mac tracks"), 1350, 470, 0.62, 1.0), (C("every week"), x19 + 300, y19 - 60, 0.9, 1.6),
                (C("record low"), x21, y21 - 80, 1.0, 1.8), (C("above seven"), x22, y22, 0.95, 1.4), (C("This October"), x26, y26 + 40, 1.0, 1.8),
                (C("last week"), x27 - 100, y27 + 60, 1.05, 0.8), (C("still", 0.8), 1500, 470, 0.62, 1.4)), "drift": 2,
     "items": [it("toonwords", text="THE REAL PRICE IS THE LOAN", x=1350, y=40, at=C("so the real price"), until=C("Freddie Mac tracks", 0.6), size=60),
               sign("FREDDIE MAC PMMS · WEEKLY 30-YEAR FIXED AVERAGE", 1350, 40, C("Freddie Mac tracks", 0.7), color="#FFF8E1", size=30, until=C("every week", 2.5)),
+              sign("OCTOBER 2026: BACK UP TO 7.40%", x26 - 250, y26 - 230, C("climbed back", 0.2), color="#FFCDD2", size=30, until=C("last week")),
               MAYA(-150, 0.2, face="worry", pose="stand", faces=[[0, "worry"], [C("climbed back"), "panic"]])]},
     sources=["pmms"], sfx=[{"kind": "whoosh", "cue": "above seven", "gain": 0.25}])
 stage("s12_payment", "a2_payment", {
@@ -244,8 +245,8 @@ add("p13_income", "a2_draw", "engine_draw", {
         {"d": "M 620 820 L 1400 820", "color": "ink", "width": 5, "start": C("Let me draw the income test")},
         {"d": dot(1010, 380), "color": "accent2", "width": 1, "start": C("a quarter"), "label": lbl("RULE: P&I ≤ 25% OF INCOME (NAR METHOD)", 1010, 380, 24, "accent2")},
         {"d": "M 700 820 L 700 460 L 900 460 L 900 820 Z", "color": "risk", "width": 3, "fill": "risk", "fillOpacity": 0.3, "kind": "bar", "start": C("that means earning"), "label": lbl("NEEDED ≈ $107,600", 800, 440, 26, "risk")},
-        {"d": "M 1100 820 L 1100 528 L 1300 528 L 1300 820 Z", "color": "accent3", "width": 3, "fill": "accent3", "fillOpacity": 0.3, "kind": "bar", "start": C("Now the median household"), "label": lbl("MEDIAN HOUSEHOLD $87,460", 1200, 508, 24, "accent3")},
-        {"d": "M 1330 460 L 1360 460 L 1360 528 L 1330 528", "color": "risk", "width": 5, "start": C("one gap"), "label": lbl("GAP ≈ $20K", 1440, 500, 26, "risk")},
+        {"d": "M 1100 820 L 1100 528 L 1300 528 L 1300 820 Z", "color": "accent3", "width": 3, "fill": "accent3", "fillOpacity": 0.3, "kind": "bar", "start": C("Now the median household"), "label": lbl("MEDIAN HOUSEHOLD $87,460", 1180, 508, 21, "accent3")},
+        {"d": "M 1330 460 L 1360 460 L 1360 528 L 1330 528", "color": "risk", "width": 5, "start": C("one gap"), "label": lbl("GAP ≈ $20K", 1470, 470, 26, "risk")},
         {"d": dot(1010, 880), "color": "muted", "width": 1, "start": C("This is our calculation"), "label": lbl("OUR CALCULATION · $2,243/MO × 12 ÷ 25% · CENSUS 2025 INCOME", 1010, 880, 18, "muted")},
     ],
     "actions": [{"kind": "point", "at": C("one gap", 0.2), "dur": 1.5, "target": [1345, 495]}],
@@ -255,13 +256,13 @@ stage("s14_hai", "a2_hai", {
     "cam": cam((0, 1000, 470, 1.0), (C("In October it read"), 1050, 450, 1.05, 1.4), (C("Barely over the line"), 900, 520, 1.25, WHIP)), "drift": 3,
     "items": [it("toonwords", text="AFFORDABILITY INDEX", x=1000, y=90, at=0.2, until=C("equals one"), size=62),
               sign("100 = MEDIAN-INCOME FAMILY JUST QUALIFIES", 1000, 90, C("equals one"), color="#FFF8E1", size=30, sub="NAR · 20% DOWN · P&I ≤ 25% OF INCOME", until=C("In October it read", 0.3)),
-              it("counter", x=1000, y=110, at=C("In October it read"), decimals=1, steps=[[0, 107.3], [C("In October it read"), 107.3], [C("a year earlier", -0.2), 100.7]], text="NAR HOUSING AFFORDABILITY INDEX · OCT 2026 (OCT 2025: 107.3)"),
+              it("counter", x=1000, y=210, at=C("In October it read"), decimals=1, steps=[[0, 107.3], [C("In October it read"), 107.3], [C("a year earlier", -0.2), 100.7]], text="NAR HOUSING AFFORDABILITY INDEX · OCT 2026 (OCT 2025: 107.3)"),
               sign("YOU MUST BE THIS RICH TO RIDE", 1400, 300, C("Barely over the line", -0.6), color="#FFE0B2", size=30),
-              MAYA(900, 0.3, face="worry", pose="stand", faces=[[0, "worry"], [C("Barely over the line"), "grin"], [C("the down payment"), "shock"]], takes=[C("the down payment")]),
+              MAYA(1250, 0.3, face="worry", pose="stand", faces=[[0, "worry"], [C("Barely over the line"), "grin"], [C("the down payment"), "shock"]], takes=[C("the down payment")]),
               it("savejar", x=600, y=860, at=C("only if you have"), level=0.12, scale=0.55, text="DOWN PAYMENT")]},
     sources=["nar_ehs", "nar_hai"])
 stage("s15_harvard", "a2_harvard", {
-    **W1("shrinker", machX=650, houseX=1450, gaugeLabel="INCOME NEEDED", size=[[0, 0.5], [C("up from"), 0.5], [C("five years earlier"), 0.35]],
+    **W1("shrinker", machX=450, houseX=1300, gaugeLabel="INCOME NEEDED", size=[[0, 0.5], [C("up from"), 0.5], [C("five years earlier"), 0.35]],
          gauge=[[0, 0.3], [C("The income needed"), 0.3], [C("at the end of"), 0.85], [C("up from"), 0.85]], gaugeText=[[C("at the end of", -0.3), "$120,800"], [C("up from", 0.5), "WAS $68,700"]],
          zaps=[C("five years earlier", -0.5)]),
     "cam": cam((0, 900, 480, 0.95), (C("The income needed"), 650, 400, 1.25, 1.4), (C("up from"), 1000, 470, 1.0, WHIP), (C("In twenty twenty, only"), 1350, 430, 1.0, 1.4)), "drift": 3,
@@ -411,14 +412,14 @@ add("p30_lots", "a5_draw", "engine_draw", {
 # ====================================================================== THE BASEMENT + PAYOFF + TEASER + BUTTON
 stage("s31_basement", "a6_basement", {
     **W1("basement", bulbX=1000, futonX=1250, stairsX=1900, boxX=540, winX=500, doorAt=C("years old", 0.6)),
-    "cam": cam((0, 1150, 470, 0.95), (C("In the National"), 1100, 440, 1.0, 1.6), (C("And the typical"), 1150, 470, 1.05, 1.4), (C("years old", 0.9), 1250, 560, 1.3, WHIP)), "drift": 3,
+    "cam": cam((0, 1150, 470, 0.95), (C("In the National"), 1100, 440, 1.0, 1.6), (C("And the typical"), 1150, 470, 1.05, 1.4), (C("years old", 0.9), 1450, 470, 1.05, WHIP)), "drift": 3,
     "items": [it("toonwords", text="THE FIRST-TIME BUYER", x=1100, y=110, at=0.3, until=C("In the National"), size=62),
               sign("FIRST-TIME BUYERS: 22% OF PURCHASES", 1100, 100, C("first-timers made up"), color="#FFF59D", size=34, sub="NAR PROFILE OF HOME BUYERS AND SELLERS 2026 · NORM ≈ 40% BEFORE 2008", until=C("And the typical")),
               it("counter", x=1150, y=170, at=C("And the typical"), decimals=0, steps=[[0, 0], [C("And the typical"), 0], [C("years old"), 40]], text="MEDIAN AGE OF A FIRST-TIME BUYER (NAR 2026, RECORD)"),
               MAYA(1200, 0.2, face="deadpan", pose="sit", y=820, faces=[[0, "deadpan"], [C("years old", 0.9), "shock"]], takes=[C("years old", 1.0)]),
               it("savejar", x=360, y=860, at=0.5, level=[[0, 0.35], [C("years old"), 0.45]], scale=0.6, text="DOWN PAYMENT"),
-              REX([[C("years old", 0.7), 2350], [C("years old", 2.1), 2100]], C("years old", 0.6), y=300, face="happy", pose="wave", scale=1.0),
-              it("bubble", text="HAPPY 40th,\nKIDDO!", x=2050, y=80, at=C("years old", 1.5), tail=[2120, 180], size=30)]},
+              REX([[C("years old", 0.7), 2250], [C("years old", 2.1), 2000]], C("years old", 0.6), y=420, face="happy", pose="wave", scale=1.0),
+              it("bubble", text="HAPPY 40th,\nKIDDO!", x=1800, y=150, at=C("years old", 1.5), tail=[2000, 330], size=30)]},
     sources=["nar_profile"])
 stage("s32_payoff", "payoff", {
     "zones": [Z("openhouse", -1600, 2300, houseX=900, signX=300, crowd=0.6, queue=3, signText="STARTER HOME", soldAt=999),
@@ -449,7 +450,7 @@ stage("s34_button", "button", {
               it("toonwords", text="MAYA GOT THE KEYS!", x=1150, y=60, at=0.3, until=2.3, size=60),
               it("toonwords", text="...TO THE BASEMENT.", x=1150, y=90, at=2.6, size=64, color="#FFFFFF"),
               it("placard", x=1600, y=420, at=2.9, text="RENT: $0\nLANDLORD: MOM", size=30),
-              REX(2200, 2.8, y=300, face="grin", pose="wave", scale=0.9)]},
+              REX(1750, 2.8, face="grin", pose="wave", scale=1.0)]},
     sfx=[{"kind": "hit", "at": 2.6, "gain": 0.3}])
 
 write(OUT, "# GENERATED by tools/gen_housing_v2_storyboard.py; edit the generator, not this file.\n"
