@@ -209,8 +209,8 @@ stage("s17_grants", "a2_grants", {
     **W1("evshow", carX=700, carColor="#1E88E5", price="≈ $1.8B", priceSub="BYD GOVERNMENT GRANTS IN 2025 PROFIT (¥12.6B, ANNUAL REPORT)", priceAt=C("BYD's own annual report"), priceX=1150),
     "cam": cam((0, 1000, 470, 0.95), (C("BYD's own annual report"), 1150, 420, 1.0, 1.4)), "drift": 3,
     "items": [VOLTY(200, 0.1, scale=0.7),
-              it("docs", x=1650, y=760, at=C("Kiel Institute"), text="KIEL POLICY BRIEF 173", scale=0.8, stamp="BYD 2022: €2.1B ≈ $2.2B", stampAt=C("for BYD")),
-              it("docs", x=350, y=760, at=C("BYD's own annual report"), text="BYD ANNUAL REPORT 2025", scale=0.8, stamp="GRANTS ¥12.6B", stampAt=C("of grants"))]},
+              it("docs", x=1480, y=760, at=C("Kiel Institute"), text="KIEL POLICY BRIEF 173", scale=0.8, stamp="BYD 2022: €2.1B ≈ $2.2B", stampAt=C("for BYD")),
+              it("docs", x=420, y=760, at=C("BYD's own annual report"), text="BYD ANNUAL REPORT 2025", scale=0.8, stamp="GRANTS ¥12.6B", stampAt=C("of grants"))]},
     sources=["kiel", "g5a", "byd_ar25"])
 add("p18_subsidy", "a2_draw", "engine_draw", {
     "title": "The subsidy experiment (BYD 2025 ratios; our calculation)", "board": BOARD, "draw_start": C("run an experiment"), "speed": 1500, "push": 0.003,
@@ -238,7 +238,7 @@ stage("s20_turn", "a2_turn", {
     **W1("carport", lot=[[0, 0.4], [C("grew almost"), 0.95]], board="CHINESE-MADE EVs SOLD IN EUROPE, 2025: ≈ 940,000 (IEA)"),
     "cam": cam((0, 1000, 480, 1.0), (C("grew almost"), 900, 520, 1.05, 1.2)), "drift": 3,
     "items": [it("toonwords", text="DID THE DUTIES WORK?", x=900, y=120, at=0.1, until=C("grew almost"), size=60),
-              it("counter", x=900, y=200, at=C("grew almost"), prefix="+", suffix="%", steps=[[0, 0], [C("grew almost"), 0], [C("last year"), 50]], text="CHINESE-MADE EV SALES IN EUROPE, 2025 (IEA, ≈)")]},
+              it("counter", x=900, y=200, at=C("grew almost"), prefix="+", suffix="%", steps=[[0, 0], [C("grew almost"), 0], [C("grew almost", 1.6), 50]], text="CHINESE-MADE EV SALES IN EUROPE, 2025 (IEA, ≈)")]},
     sources=["iea_gevo"])
 
 # ====================================================================== PART 3: the machine
@@ -261,7 +261,7 @@ stage("s24_blade", "a3_blade", {
     "cam": cam((0, 860, 520, 1.15), (C("Neither chemistry"), 960, 480, 0.95, 1.4)), "drift": 3,
     "items": [sign("NMC: MORE ENERGY PER POUND", 400, 160, C("Neither chemistry"), color="#E1BEE7", size=26),
               sign("LFP: CHEAPER, NO NICKEL OR COBALT", 1500, 160, C("Neither chemistry", 0.4), color="#C8E6C9", size=26),
-              it("toonwords", text="CHEAP + GOOD ENOUGH", x=960, y=40, at=C("for an affordable car"), size=60, color=GOLD),
+              it("toonwords", text="CHEAP + GOOD ENOUGH", x=960, y=300, at=C("for an affordable car"), size=60, color=GOLD),
               MEI(1700, 0.2, face="grin", pose="talk", talk=[[C("Neither chemistry"), C("good enough wins", 0.5)]])]})
 add("p25_chain", "a3_chain", "engine_draw", {
     "title": "The battery's journey (China's share, 2025)", "board": BOARD, "draw_start": C("Let me draw"), "speed": 1600, "push": 0.003,
@@ -368,12 +368,12 @@ stage("s37_unwind", "a4_unwind", {
     **W1("cashworks", mx=700, labels=["REVENUE", "GROSS PROFIT", "OPERATING PROFIT", "OPERATING CASH", "FREE CASH FLOW"],
          levels={"0": 0.9, "1": 0.5, "2": 0.3, "3": [[0, 0.75], [C("Cash from operations dropped"), 0.75], [C("eight point two billion"), 0.33]], "4": [[0, 0.3], [C("Free cash flow"), -0.3]]},
          negAt=C("minus thirteen"), negText="≈ −$13.6B"),
-    "cam": cam((0, 1000, 600, 1.0), (C("Free cash flow"), 960, 700, 1.1, 1.4)), "drift": 2,
-    "items": [sign("BYD 2025 (ANNUAL REPORT) · OUR CALCULATIONS", 1450, 60, 0.2, color="#FFF8E1", size=24),
-              sign("OWED TO SUPPLIERS: −≈$4.8B", 1500, 180, C("What it owed suppliers"), color="#FFE0B2", size=28),
-              sign("OPERATING CASH: $18.5B (2024) → $8.2B", 1500, 300, C("Cash from operations"), color="#BBDEFB", size=28),
-              sign("FACTORIES & EQUIPMENT: ≈$21.8B", 1500, 420, C("It spent"), color="#FFCDD2", size=28),
-              sign("BORROWINGS: ≈$4.0B → ≈$15.8B", 1500, 540, C("borrowed more"), color="#E1BEE7", size=28),
+    "cam": cam((0, 1000, 560, 1.0), (C("Free cash flow"), 960, 600, 1.04, 1.4)), "drift": 2,
+    "items": [sign("BYD 2025 (ANNUAL REPORT) · OUR CALCULATIONS", 1520, 60, 0.2, color="#FFF8E1", size=24),
+              sign("OWED TO SUPPLIERS: −≈$4.8B", 1400, 180, C("What it owed suppliers"), color="#FFE0B2", size=28),
+              sign("OPERATING CASH: $18.5B (2024) → $8.2B", 1520, 300, C("Cash from operations"), color="#BBDEFB", size=28),
+              sign("FACTORIES & EQUIPMENT: ≈$21.8B", 1520, 420, C("It spent"), color="#FFCDD2", size=28),
+              sign("BORROWINGS: ≈$4.0B → ≈$15.8B", 1520, 540, C("borrowed more"), color="#E1BEE7", size=28),
               it("toonwords", text="PROFITABLE. AND BURNING CASH.", x=1100, y=880, at=C("Profitable, and burning"), size=50, color=RED)]},
     sources=["byd_ar25", "g5a"])
 stage("s38_others", "a4_others", {
@@ -389,9 +389,9 @@ stage("s39_nio", "a4_nio", {
     **W1("gigaline", board="NIO · FY2025 RESULTS", speed=60),
     "cam": cam((0, 960, 480, 1.0), (C("A low price"), 1000, 470, 1.05, 1.2)), "drift": 3,
     "items": [it("counter", x=900, y=170, at=0.2, prefix="−$", suffix="B", decimals=1, steps=[[0, 0], [0.3, 0], [C("last year"), 2.1]], text="NIO NET LOSS, 2025 (≈, ¥14.9B)", until=C("A low price")),
-              sign("Q4 2025: FIRST QUARTERLY OPERATING PROFIT (NON-GAAP)", 900, 380, C("first quarterly"), color="#C8E6C9", size=26),
-              sign("LOW PRICE ≠ LOSS", 600, 200, C("A low price"), color="#FFF59D", size=34),
-              sign("ONE GOOD QUARTER ≠ A LASTING BUSINESS", 1350, 300, C("one good quarter"), color="#FFCDD2", size=30),
+              sign("Q4 2025: FIRST QUARTERLY OPERATING PROFIT (NON-GAAP)", 900, 420, C("first quarterly"), color="#C8E6C9", size=26, until=C("A low price", -0.2)),
+              sign("LOW PRICE ≠ LOSS", 700, 380, C("A low price"), color="#FFF59D", size=34),
+              sign("ONE GOOD QUARTER ≠ A LASTING BUSINESS", 1200, 520, C("one good quarter"), color="#FFCDD2", size=30),
               MORGAN(1700, 0.3, face="worry", hold="clipboard")]},
     sources=["nio_q4", "g5a"])
 
@@ -404,13 +404,13 @@ stage("s41_glut", "a5_glut", {
               it("toonwords", text="TOO MANY CARS", x=700, y=250, at=C("more electric cars"), size=64, color=RED)]},
     sources=["iea_gevo"])
 stage("s42_margin", "a5_margin", {
-    **W1("pricestreet", cuts=[[C("And they did"), 0, "$27,900"], [C("And they did", 0.5), 1, "$26,500"], [C("And they did", 1.0), 2, "$27,000"]], margin=[[0, 0.6], [C("record low"), 0.3], [C("profits down"), 0.18]], gaugeText="INDUSTRY MARGIN"),
-    "cam": cam((0, 1100, 470, 0.95), (C("four point one"), 1450, 400, 1.0, 1.4)), "drift": 3,
+    **W1("pricestreet", cuts=[[C("And they did"), 0, "$27,900"], [C("And they did", 0.5), 1, "$26,500"], [C("And they did", 1.0), 2, "$27,000"]], margin=0.3, gauge=False, sx=220, gap=440),
+    "cam": cam((0, 960, 470, 1.0), (C("four point one"), 1100, 450, 0.98, 1.4)), "drift": 3,
     "items": [MORGAN(300, 0.1, face="worry", hold="clipboard"),
               chart([{"label": "2024", "value": 4.3, "color": BLUE, "at": C("four point one", -0.4), "display": "4.3%"},
                      {"label": "2025", "value": 4.1, "color": "#FF7043", "at": C("four point one"), "display": "4.1%"},
                      {"label": "H1 2026", "value": 3.8, "color": RED, "at": C("three point eight"), "display": "3.8%"}],
-                    at=C("four point one", -0.6), max=5, title="CHINA AUTO MARGIN (NBS)", x=1150, y=60, w=700, h=380)]},
+                    at=C("four point one", -0.6), max=5, title="CHINA AUTO MARGIN (NBS)", x=1280, y=150, w=560, h=380)]},
     sources=["nbs25", "nbs26"])
 add("p43_war", "a5_draw", "engine_draw", {
     "title": "How a price war squeezes (illustrative)", "board": BOARD, "draw_start": C("price war squeezes"), "speed": 1400, "push": 0.003,
@@ -446,7 +446,7 @@ stage("s45_export", "a5_export", {
 stage("s46_walls", "a5_walls", {
     **W1("tariffgate", wallAt=C("America set"), euAt=C("Europe now offers", -0.4), minAt=C("minimum-price deals"), usText="U.S. · 100%",
          usSub="+ CONNECTED-CAR SOFTWARE BAN FROM MY2027", euLines=["10% EU CAR DUTY", "+ 17.0% BYD", "+ 35.3% SAIC"]),
-    "cam": cam((0, 600, 470, 1.0), (C("Europe now offers"), 1350, 470, 0.95, 1.4)), "drift": 3,
+    "cam": cam((0, 600, 470, 1.0), (C("Europe now offers"), 1100, 470, 0.9, 1.4)), "drift": 3,
     "items": [sign("SECTION 301 · SEP 2024 (USTR)", 600, 120, C("America set", 0.4), color="#FFF8E1", size=24),
               car([[0, -300], [C("America set", 0.5), 200]], 0.0, carKind="hatch", color=TEAL, flip=False)]},
     sources=["fr_301_2024", "bis_cv", "eu_pu"])
@@ -464,24 +464,24 @@ stage("s47_abroad", "a5_abroad", {
 # ====================================================================== PART 6: the verdict
 bumper("s48_b6", "a6_card", "6", "THE VERDICT", "All rise. Except the margins.", NAVY, "PRICELESS?")
 VBASE = {**W1("gigaline", board="THE VERDICT", speed=60), "drift": 2}
-stage("s49_eff", "a6_eff", {**VBASE, "cam": cam((0, 960, 500, 1.0), (C("Efficiency"), 700, 480, 1.25, 1.2)),
+stage("s49_eff", "a6_eff", {**VBASE, "cam": cam((0, 960, 520, 1.0), (C("Efficiency"), 960, 500, 1.04, 1.2)),
     "items": [it("suspects", x=960, y=420, at=0.0, scale=0.95, his=[[C("Efficiency"), 0]], stamps=[[C("guilty"), 0, "GUILTY", RED]]),
-              it("toonwords", text="MAIN REASON · STRUCTURAL", x=700, y=80, at=C("the main reason"), size=48)]})
-stage("s50_sub", "a6_sub", {**VBASE, **W1("evshow", carX=900), "cam": cam((0, 900, 480, 1.2),),
+              it("toonwords", text="MAIN REASON · STRUCTURAL", x=960, y=820, at=C("the main reason"), size=48)]})
+stage("s50_sub", "a6_sub", {**VBASE, **W1("evshow", carX=900), "cam": cam((0, 960, 520, 1.0), (C("an accomplice"), 960, 500, 1.04, 2.0)),
     "items": [it("suspects", x=960, y=420, at=-1, scale=0.95, his=[[0, 1]], stamps=[[-1, 0, "GUILTY", RED], [C("an accomplice"), 1, "ACCOMPLICE", "#FF7043"]]),
-              it("toonwords", text="PROFIT > PRICE", x=900, y=80, at=C("matters more to profit"), size=54)]}, sources=["byd_ar25", "csis"])
-stage("s51_fin", "a6_fin", {**VBASE, **W1("cashworks", mx=500), "cam": cam((0, 1200, 480, 1.2),),
+              it("toonwords", text="MATTERS MORE TO PROFIT THAN PRICE", x=960, y=820, at=C("matters more to profit"), size=54)]}, sources=["byd_ar25", "csis"])
+stage("s51_fin", "a6_fin", {**VBASE, **W1("cashworks", mx=500), "cam": cam((0, 960, 520, 1.0), (C("real, and being unwound"), 960, 500, 1.04, 2.0)),
     "items": [it("suspects", x=960, y=420, at=-1, scale=0.95, his=[[0, 2]], stamps=[[-1, 0, "GUILTY", RED], [-1, 1, "ACCOMPLICE", "#FF7043"], [C("real, and being unwound"), 2, "UNWINDING", "#7E57C2"]])]},
     sources=["pledge", "byd_ar25"])
-stage("s52_burn", "a6_burn", {**VBASE, **W1("pricestreet", margin=0.2), "cam": cam((0, 1350, 480, 1.2), (C("And the price war"), 960, 500, 1.0, 1.4)),
+stage("s52_burn", "a6_burn", {**VBASE, **W1("pricestreet", margin=0.2), "cam": cam((0, 960, 520, 1.0), (C("And the price war"), 960, 500, 1.05, 1.4)),
     "items": [it("suspects", x=960, y=420, at=-1, scale=0.95, his=[[0, 3]], stamps=[[-1, 0, "GUILTY", RED], [-1, 1, "ACCOMPLICE", "#FF7043"], [-1, 2, "UNWINDING", "#7E57C2"], [C("depends who"), 3, "SOME", RED]])]},
     sources=["byd_ar25", "nio_q4"])
 stage("s53_payoff", "payoff", {
     **W1("carport", lot=[[0, 0.8], [12, 1.0]], board="CHEAP CARS: HERE TO STAY · CARMAKERS: FEWER"),
     "cam": cam((0, 1000, 470, 0.9), (C("What isn't real yet"), 900, 480, 1.0, 1.6), (C("Expect the cars"), 1000, 470, 0.88, 1.6)), "drift": 2,
-    "items": [it("toonwords", text="THE CHEAP CAR IS REAL", x=1000, y=60, at=C("The cheap Chinese car"), until=C("What isn't real yet"), size=60),
-              it("toonwords", text="THE PROFIT? NOT YET.", x=1000, y=60, at=C("What isn't real yet"), until=C("Expect the cars"), size=60, color=RED),
-              it("toonwords", text="CHEAP CARS. FEWER CARMAKERS.", x=1000, y=60, at=C("Expect the cars"), size=56, color=GOLD),
+    "items": [it("toonwords", text="THE CHEAP CAR IS REAL", x=1000, y=150, at=C("The cheap Chinese car"), until=C("What isn't real yet"), size=60),
+              it("toonwords", text="THE PROFIT? NOT YET.", x=1000, y=150, at=C("What isn't real yet"), until=C("Expect the cars"), size=60, color=RED),
+              it("toonwords", text="CHEAP CARS. FEWER CARMAKERS.", x=1000, y=150, at=C("Expect the cars"), size=56, color=GOLD),
               JUNE(400, 0.2, face="happy", hold="phone"), MEI(800, 0.3, face="happy", hold="clipboard"), MORGAN(1500, 0.4, face="worry", hold="clipboard", faces=[[0, "worry"], [C("Expect the cars"), "smug"]]),
               VOLTY(1150, 0.5, tags=[[0.6, "$81/kWh"]])]})
 add("s54_end", "teaser", "end_card", {"words": ["Next time:", "another hidden link of the world economy"], "brand": "The Hidden Economics",

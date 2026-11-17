@@ -1268,7 +1268,7 @@ scenes:
       at: 0.1
       scale: 0.7
     - kind: docs
-      x: 1650
+      x: 1480
       y: 760
       at:
         cue: Kiel Institute
@@ -1278,7 +1278,7 @@ scenes:
       stampAt:
         cue: for BYD
     - kind: docs
-      x: 350
+      x: 420
       y: 760
       at:
         cue: BYD's own annual report
@@ -1537,7 +1537,8 @@ scenes:
         - 0
       - - cue: grew almost
         - 0
-      - - cue: last year
+      - - cue: grew almost
+          offset: 1.6
         - 50
       text: CHINESE-MADE EV SALES IN EUROPE, 2025 (IEA, ≈)
   sources:
@@ -1778,7 +1779,7 @@ scenes:
     - kind: toonwords
       text: CHEAP + GOOD ENOUGH
       x: 960
-      y: 40
+      y: 300
       at:
         cue: for an affordable car
       size: 60
@@ -2900,26 +2901,26 @@ scenes:
     cam:
     - at: 0
       x: 1000
-      y: 600
+      y: 560
       zoom: 1.0
     - at:
         cue: Free cash flow
       x: 960
-      y: 700
-      zoom: 1.1
+      y: 600
+      zoom: 1.04
       dur: 1.4
     drift: 2
     items:
     - kind: sign
       text: BYD 2025 (ANNUAL REPORT) · OUR CALCULATIONS
-      x: 1450
+      x: 1520
       y: 60
       at: 0.2
       color: '#FFF8E1'
       size: 24
     - kind: sign
       text: 'OWED TO SUPPLIERS: −≈$4.8B'
-      x: 1500
+      x: 1400
       y: 180
       at:
         cue: What it owed suppliers
@@ -2927,7 +2928,7 @@ scenes:
       size: 28
     - kind: sign
       text: 'OPERATING CASH: $18.5B (2024) → $8.2B'
-      x: 1500
+      x: 1520
       y: 300
       at:
         cue: Cash from operations
@@ -2935,7 +2936,7 @@ scenes:
       size: 28
     - kind: sign
       text: 'FACTORIES & EQUIPMENT: ≈$21.8B'
-      x: 1500
+      x: 1520
       y: 420
       at:
         cue: It spent
@@ -2943,7 +2944,7 @@ scenes:
       size: 28
     - kind: sign
       text: 'BORROWINGS: ≈$4.0B → ≈$15.8B'
-      x: 1500
+      x: 1520
       y: 540
       at:
         cue: borrowed more
@@ -3074,23 +3075,26 @@ scenes:
     - kind: sign
       text: 'Q4 2025: FIRST QUARTERLY OPERATING PROFIT (NON-GAAP)'
       x: 900
-      y: 380
+      y: 420
       at:
         cue: first quarterly
       color: '#C8E6C9'
       size: 26
+      until:
+        cue: A low price
+        offset: -0.2
     - kind: sign
       text: LOW PRICE ≠ LOSS
-      x: 600
-      y: 200
+      x: 700
+      y: 380
       at:
         cue: A low price
       color: '#FFF59D'
       size: 34
     - kind: sign
       text: ONE GOOD QUARTER ≠ A LASTING BUSINESS
-      x: 1350
-      y: 300
+      x: 1200
+      y: 520
       at:
         cue: one good quarter
       color: '#FFCDD2'
@@ -3233,25 +3237,21 @@ scenes:
           offset: 1.0
         - 2
         - $27,000
-      margin:
-      - - 0
-        - 0.6
-      - - cue: record low
-        - 0.3
-      - - cue: profits down
-        - 0.18
-      gaugeText: INDUSTRY MARGIN
+      margin: 0.3
+      gauge: false
+      sx: 220
+      gap: 440
     worldW: 2400
     cam:
     - at: 0
-      x: 1100
+      x: 960
       y: 470
-      zoom: 0.95
+      zoom: 1.0
     - at:
         cue: four point one
-      x: 1450
-      y: 400
-      zoom: 1.0
+      x: 1100
+      y: 450
+      zoom: 0.98
       dur: 1.4
     drift: 3
     items:
@@ -3270,9 +3270,9 @@ scenes:
       hold: clipboard
       scale: 1.3
     - kind: bigchart
-      x: 1150
-      y: 60
-      w: 700
+      x: 1280
+      y: 150
+      w: 560
       h: 380
       bars:
       - label: '2024'
@@ -3623,9 +3623,9 @@ scenes:
       zoom: 1.0
     - at:
         cue: Europe now offers
-      x: 1350
+      x: 1100
       y: 470
-      zoom: 0.95
+      zoom: 0.9
       dur: 1.4
     drift: 3
     items:
@@ -3818,13 +3818,13 @@ scenes:
     cam:
     - at: 0
       x: 960
-      y: 500
+      y: 520
       zoom: 1.0
     - at:
         cue: Efficiency
-      x: 700
-      y: 480
-      zoom: 1.25
+      x: 960
+      y: 500
+      zoom: 1.04
       dur: 1.2
     items:
     - kind: suspects
@@ -3842,8 +3842,8 @@ scenes:
         - '#E5484D'
     - kind: toonwords
       text: MAIN REASON · STRUCTURAL
-      x: 700
-      y: 80
+      x: 960
+      y: 820
       at:
         cue: the main reason
       size: 48
@@ -3862,9 +3862,15 @@ scenes:
     drift: 2
     cam:
     - at: 0
-      x: 900
-      y: 480
-      zoom: 1.2
+      x: 960
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: an accomplice
+      x: 960
+      y: 500
+      zoom: 1.04
+      dur: 2.0
     items:
     - kind: suspects
       x: 960
@@ -3884,9 +3890,9 @@ scenes:
         - ACCOMPLICE
         - '#FF7043'
     - kind: toonwords
-      text: PROFIT > PRICE
-      x: 900
-      y: 80
+      text: MATTERS MORE TO PROFIT THAN PRICE
+      x: 960
+      y: 820
       at:
         cue: matters more to profit
       size: 54
@@ -3908,9 +3914,15 @@ scenes:
     drift: 2
     cam:
     - at: 0
-      x: 1200
-      y: 480
-      zoom: 1.2
+      x: 960
+      y: 520
+      zoom: 1.0
+    - at:
+        cue: real, and being unwound
+      x: 960
+      y: 500
+      zoom: 1.04
+      dur: 2.0
     items:
     - kind: suspects
       x: 960
@@ -3951,14 +3963,14 @@ scenes:
     drift: 2
     cam:
     - at: 0
-      x: 1350
-      y: 480
-      zoom: 1.2
+      x: 960
+      y: 520
+      zoom: 1.0
     - at:
         cue: And the price war
       x: 960
       y: 500
-      zoom: 1.0
+      zoom: 1.05
       dur: 1.4
     items:
     - kind: suspects
@@ -4028,7 +4040,7 @@ scenes:
     - kind: toonwords
       text: THE CHEAP CAR IS REAL
       x: 1000
-      y: 60
+      y: 150
       at:
         cue: The cheap Chinese car
       until:
@@ -4037,7 +4049,7 @@ scenes:
     - kind: toonwords
       text: THE PROFIT? NOT YET.
       x: 1000
-      y: 60
+      y: 150
       at:
         cue: What isn't real yet
       until:
@@ -4047,7 +4059,7 @@ scenes:
     - kind: toonwords
       text: CHEAP CARS. FEWER CARMAKERS.
       x: 1000
-      y: 60
+      y: 150
       at:
         cue: Expect the cars
       size: 56
