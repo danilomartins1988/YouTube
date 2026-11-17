@@ -1,0 +1,308 @@
+# Before You Buy: Nvidia, November 2026 edition. Series spec: docs/series/BEFORE_YOU_BUY.md.
+# Investor-level audience (no concept lessons). Every number through {{placeholders}} (sources.yaml) so a quarterly
+# refresh swaps numbers. Our calculations said as ours. Never fair value, cheap/expensive, buy/sell. Disclaimer after the
+# hook. Huang: only what the 8-K says; the board investigation only in the release's words.
+logline: Nvidia just reported revenue up more than a hundred percent, yet the stock closed the day at about sixteen and a
+  half times its profit, after a two-week fall and a CEO change. What does that price assume, what has to go right, and
+  what could go wrong? November 2026 edition.
+title: 'Before You Buy Nvidia Stock, Watch This (Nov 2026)'
+segments:
+- id: h_open
+  chapter: Sixteen times profit
+  narration: Nvidia just reported {{rev}} of revenue in three months. That's more than double a year ago. And at the close
+    on {{cap.date_spoken}}, just before that report came out, the whole company was worth {{cap}}. That's {{cap.price_spoken}}
+    a share, times {{cap.shares_spoken}} shares. By our math, that's {{lenses}} its profit over the last twelve months.
+  claims:
+  - rev
+  - cap
+  - lenses
+- id: h_twist
+  chapter: Sixteen times profit
+  narration: And that price had just fallen {{cap.drop_spoken}} in two weeks, from {{cap.nov4_spoken}} on November fourth.
+    In the middle of those two weeks, on {{ceo}}, the board accepted the resignation of Nvidia's co-founder and C E O,
+    Jensen Huang, after {{ceo.years_spoken}} at the top.
+  claims:
+  - cap
+  - ceo
+- id: h_question
+  chapter: Sixteen times profit
+  narration: So the business is growing faster than ever, yet the multiple is modest. What is that price actually betting on? What has to happen for it to make sense? And what could break the story?
+  claims: []
+  analysis: true
+  source_note: Hook question.
+- id: h_promise
+  chapter: Sixteen times profit
+  narration: In the next few minutes, we open the machine, follow the cash, run the numbers on what's priced in, and finish
+    with the three numbers to watch when Nvidia reports next.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode.
+- id: h_disclaimer
+  chapter: Sixteen times profit
+  narration: Quick note. This isn't financial advice. Everything here comes from Nvidia's own filings and our own math,
+    dated, so you can decide for yourself.
+  claims: []
+  analysis: true
+  source_note: Series disclaimer (required after the hook).
+- id: m1_card
+  chapter: The machine
+  narration: ''
+  claims: []
+- id: m1_machine
+  chapter: The machine
+  narration: First, the machine. Nvidia hasn't filed its full quarterly report yet, so these numbers come from the results it filed with the S E C tonight. Of that {{rev}}, data centers
+    brought in {{rev.dc_spoken}}. That's {{rev.dcshare_spoken}} of everything. The rest, PCs, workstations, cars and
+    robots, now called edge computing, was {{rev.edge_spoken}}.
+  claims:
+  - rev
+- id: m1_split
+  chapter: The machine
+  narration: Inside data centers, there are two pipes. The giant cloud companies bought {{rev.hyper_spoken}}, up {{rev.hyper_yoy_spoken}}
+    in a year. The second pipe is AI clouds, industry and enterprise, the newer rental clouds, companies and governments.
+    It brought in {{rev.aice_spoken}}, up {{rev.aice_yoy_spoken}}. And the new Vera Rubin racks started shipping, in
+    what Nvidia calls the fastest product ramp in its history.
+  claims:
+  - rev
+- id: m1_profit
+  chapter: The machine
+  narration: Now the part that makes this machine unusual. Gross margin was {{margin}}. Operating expenses were only {{margin.opex_spoken}}.
+    So operating income came to {{margin.opinc_spoken}}, {{margin.opm_spoken}} of revenue, by our math. Net income was
+    {{margin.ni_spoken}}, or {{margin.eps_spoken}} a share.
+  claims:
+  - margin
+- id: m1_who
+  chapter: The machine
+  narration: Who pays for all this? By where customers are headquartered, the United States brought in {{geo}} last quarter,
+    Taiwan {{geo.tw_spoken}}, and China {{geo.cn_spoken}}. And it's concentrated. Just three direct customers made up
+    {{conc.c1_spoken}}, {{conc.c23_spoken}}. That's {{conc}} of revenue from three buyers, and Nvidia doesn't name them.
+  claims:
+  - geo
+  - conc
+- id: m1_draw
+  chapter: The machine
+  narration: Let me draw the machine. Here is the data center pipe, {{rev.dcshare_spoken}} of the flow. Here is edge computing,
+    the small one. Both pour into this profit box, and look how little leaks out on the way. About two thirds of every
+    dollar of revenue ends up as operating profit.
+  claims:
+  - rev
+  - margin
+  analysis: true
+  source_note: Our summary of sourced figures.
+- id: m1_transition
+  chapter: The machine
+  narration: A machine this profitable throws off a lot of cash. So where does it go?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m2_card
+  chapter: The cash
+  narration: ''
+  claims: []
+- id: m2_cash
+  chapter: The cash
+  narration: Last quarter, operating cash flow was {{cash.ocf_spoken}}, double the quarter before, partly because of the
+    timing of tax payments. Free cash flow was {{cash}}. Over the last twelve months, by our math, free cash flow was
+    {{lenses.fcf_spoken}}. And spending on buildings and equipment was only {{lenses.capex_spoken}}. Nvidia designs the
+    chips. Other companies build them.
+  claims:
+  - cash
+  - lenses
+- id: m2_returns
+  chapter: The cash
+  narration: Then it hands a lot of it back. Last quarter, Nvidia returned {{cash.returned_spoken}}. {{cash.bb_spoken}}
+    in buybacks, and {{cash.div_spoken}} in dividends. That's {{cash.retshare_spoken}} of the quarter's free cash. The
+    dividend is now {{cash.dps_spoken}} a share every quarter, up from one cent paid in April. And there's {{cash.auth_spoken}}
+    of buyback authorization left, which Nvidia plans to use by the end of next fiscal year. That's {{cash.authshare_spoken}}
+    of the company's market value, our math.
+  claims:
+  - cash
+- id: m2_quality
+  chapter: The cash
+  narration: A footnote on that cash. Customers owe Nvidia {{quality}}. It now takes {{quality.dso_spoken}} on average to
+    get paid, up from {{quality.dsoprior_spoken}}. Nvidia says that's partly extended payment terms on big multi-quarter
+    deals. And inventory jumped to {{quality.inv_spoken}}, from {{quality.invprior_spoken}} three months earlier, to
+    feed the Rubin ramp.
+  claims:
+  - quality
+- id: m2_stakes
+  chapter: The cash
+  narration: One more pile. Nvidia holds stakes in other companies worth {{stakes}}, mostly private A I labs and data center financiers. That makes profit lumpy. Over the first nine months of this year, gains on those stakes added {{quality.eq9_spoken}}
+    before tax. And last quarter, Nvidia wrote down {{stakes.impair_spoken}} of private stakes.
+  claims:
+  - stakes
+  - quality
+- id: m2_draw
+  chapter: The cash
+  narration: Here's one quarter of cash on the board. Here is the free cash flow bar. Here is the buyback bar. Here are
+    the dividends. And this piece is what was left to keep. Most of the cash went straight back to shareholders.
+  claims:
+  - cash
+  analysis: true
+  source_note: Bars from sourced figures; the remainder is our calculation.
+- id: m2_transition
+  chapter: The cash
+  narration: At almost four trillion dollars, what exactly are you paying for?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m3_card
+  chapter: What's priced in
+  narration: ''
+  claims: []
+- id: m3_lenses
+  chapter: What's priced in
+  narration: Here's our math, with every assumption on screen. Three lenses. Price to earnings is {{lenses}}, or {{lenses.pex_spoken}}
+    if you strip out the gains on those stakes. Free cash flow yield is {{lenses.fcfy_spoken}}. Operating cash flow yield
+    is {{lenses.ocfy_spoken}}. Capital spending is only {{lenses.capexshare_spoken}} of operating cash, so free cash
+    flow is a fair base for the gauge.
+  claims:
+  - lenses
+- id: m3_gauge
+  chapter: What's priced in
+  narration: Now the reverse calculation. We ask, how fast does free cash flow have to grow for ten years, and then three
+    percent a year forever, to justify today's price? With an eight percent discount rate, the answer is {{rdcf}}. With
+    ten percent, {{rdcf.high_spoken}} a year. That's our illustration, not a valuation.
+  claims:
+  - rdcf
+- id: m3_zero
+  chapter: What's priced in
+  narration: Flip it around. If free cash flow never grew at all, the same math says the company would be worth {{rdcf.z8_spoken}}
+    at eight percent, or {{rdcf.z10_spoken}} at ten. So {{rdcf.gap_spoken}} of today's price is a bet on growth.
+  claims:
+  - rdcf
+- id: m3_draw
+  chapter: What's priced in
+  narration: Here is what flat cash is worth at ten percent. Here it is at eight. And here is the actual price before the
+    report. That gap is the growth you're paying for in advance.
+  claims:
+  - rdcf
+  - cap
+  analysis: true
+  source_note: Our illustration (bars).
+- id: m3_history
+  chapter: What's priced in
+  narration: And here's the strange part. Revenue just grew {{rev.yoy_spoken}} in a year. Nvidia's own outlook for next
+    quarter is {{guide}}, {{guide.band_spoken}}, {{guide.qoq_spoken}} more than last quarter, with an extra week in it.
+    But the price only asks for five to ten percent a year. So the market isn't paying for today's speed. It's treating
+    this as a peak, and asking whether the cash holds up after the boom.
+  claims:
+  - rev
+  - guide
+  - rdcf
+  analysis: true
+  source_note: Our reading of the gap between company figures and our illustration; no forecast of ours.
+- id: m3_transition
+  chapter: What's priced in
+  narration: So what has to go right?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m4_card
+  chapter: What has to happen
+  narration: ''
+  claims: []
+- id: m4_demand
+  chapter: What has to happen
+  narration: One. The big buyers keep building. The giant clouds alone spent {{rev.hyper_spoken}} with Nvidia last quarter,
+    and three direct customers were more than a third of revenue. If even one of them slows down, it shows up right away.
+  claims:
+  - rev
+  - conc
+- id: m4_margin
+  chapter: What has to happen
+  narration: Two. Margins hold through the new chips. Nvidia's own outlook calls for gross margin {{guide.gm_spoken}} next
+    quarter, down from {{margin}}, as Rubin ramps. A new generation usually starts at lower margins. The question is
+    whether it climbs back.
+  claims:
+  - guide
+  - margin
+- id: m4_paid
+  chapter: What has to happen
+  narration: Three. Customers can pay. Two direct customers account for {{conc.ar1_spoken}} and {{conc.ar2_spoken}} of
+    what Nvidia is owed. And Nvidia now helps some customers finance the build. Its neocloud agreements, up to {{commit.neo_spoken}},
+    take effect only if those clouds find financing. Its guarantees could reach {{commit.guar_spoken}}, mostly up to
+    {{commit.sb_spoken}} of credit support for a giant site in Ohio leased to Open A I. Nvidia says it hasn't paid anything
+    on its guarantees so far.
+  claims:
+  - conc
+  - commit
+- id: m4_supply
+  chapter: What has to happen
+  narration: Four. The supply bet pays off. Nvidia's supply commitments jumped to {{commit}}, from {{commit.prior_spoken}}
+    a quarter earlier, mostly memory, locked in for years. All its commitments together are {{commit.total_spoken}}.
+    By our math, that's {{commit.ratio_spoken}} its revenue over the last twelve months. Great if demand holds. Heavy if
+    it doesn't.
+  claims:
+  - commit
+- id: m4_transition
+  chapter: What has to happen
+  narration: Now the other side of the scale.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: m5_card
+  chapter: Risks and upside
+  narration: ''
+  claims: []
+- id: m5_leadership
+  chapter: Risks and upside
+  narration: Risk one, leadership. The C F O, Colette Kress, is now also interim C E O, and the board is searching for
+    a permanent one, inside and outside the company. Harvey Jones became the first chair of the board. The filing doesn't
+    give a reason for the resignation. And in its results, Nvidia lists the leadership transition, and an ongoing investigation
+    by an independent committee of its board, among its risks, without giving details.
+  claims:
+  - ceo
+- id: m5_china
+  chapter: Risks and upside
+  narration: Risk two, China. Nvidia shipped {{geo.hopper_spoken}} of older Hopper data center chips to China last quarter.
+    But its outlook for next quarter assumes {{china}} data center compute revenue from China. So China is a swing factor
+    outside the forecast, in both directions.
+  claims:
+  - geo
+  - china
+- id: m5_bets
+  chapter: Risks and upside
+  narration: Risk three, the web of bets. Stakes of {{stakes}}, guarantees, financing deals,
+    and customers that are also partners. In a boom, these loops help each other. In a slowdown, they could hit revenue, profit and the balance sheet at once.
+  claims:
+  - stakes
+  - commit
+  analysis: true
+  source_note: Our summary of the disclosed links; no forecast.
+- id: m5_upside
+  chapter: Risks and upside
+  narration: And the upside the price may not include? Nvidia now sells its Vera C P Us on their own. It agreed to buy Hugging
+    Face, the open A I model platform. Edge computing grew {{upside}} in a year, from workstations to robots and cars.
+    And some neocloud deals give Nvidia a share of their revenue. None of that comes with a dollar figure, so we don't
+    put one on it.
+  claims:
+  - upside
+- id: m5_transition
+  chapter: Risks and upside
+  narration: So, what should you watch?
+  claims: []
+- id: payoff
+  chapter: The scorecard
+  narration: Here's the scorecard for the next report, expected around {{watch}}, our estimate. One, revenue against Nvidia's
+    own outlook of {{guide}}, and remember the extra week. Two, gross margin against {{guide.gm_spoken}}. Three, the
+    days it takes to get paid, against {{quality.dso_spoken}}. If those hold, the cash keeps coming, and the price's modest
+    assumption looks easy to meet. If they crack, it means the peak the market already fears has arrived.
+  claims:
+  - watch
+  - guide
+  - quality
+  analysis: true
+  source_note: Scorecard (company figures; next date our estimate).
+- id: payoff2
+  chapter: The scorecard
+  narration: That's Nvidia, November twenty twenty-six edition. We'll update it after every report, with new numbers and
+    the same three questions. What's priced in, what has to happen, and what could go wrong.
+  claims: []
+  analysis: true
+  source_note: Series sign-off.
+- id: teaser
+  chapter: The scorecard
+  narration: Next in the series, another giant of the stock market, opened up the same way. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic teaser.

@@ -1,0 +1,41 @@
+# Thumbnail creative brief. F = face (Huang bust from the approved sample, respectful preset), A = bignum. Generic chip
+# only (no logos). Words <= 4, name Nvidia; no em dashes. Number from sources.yaml (lenses, our calc.).
+title: "Before You Buy Nvidia Stock, Watch This (Nov 2026)"
+docs_dir: docs/episodes/byb-nvidia-2026-11
+video: output/bybnvda_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: Why does a company whose revenue just doubled cost only about 16.5 times its profit?
+  surprising_fact: Nvidia was worth about 16.6 times its last 12 months of net income at the Nov 17, 2026 close, and the price implies only about 5.6% to 10.3% a year of free-cash-flow growth (our calc.)
+  subject: a generic accelerator chip
+  tone: strategy
+  metaphor: the market prices the boom like a peak
+concepts:
+- id: F
+  angle: face (Jensen Huang, pointing at a generic chip)
+  archetype: face
+  text:
+  - BEFORE YOU BUY
+  - NVIDIA
+  claim_basis: 'no figure: series title + company name'
+  scene:
+    bg: ['#8BE04E', '#0B3B12']
+    bust: {who: huang, expr: point, x: 470, s: 0.9}
+    prop: {kind: chip, x: 1400, y: 770, s: 0.5, rot: -8}
+- id: A
+  angle: giant number (bignum)
+  archetype: bignum
+  text:
+  - 'NVIDIA: 16×'
+  - PROFIT
+  claim_basis: 'lenses: market cap $3,747.5bn / TTM net income $226.3bn = 16.6x (our calc., Nov 17, 2026 close)'
+  scene:
+    palette: {sky0: '#04120A', sky1: '#0F3A1C', haze: '#76E04E', key: '#E8FFE0', accent: '#FFE14D', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: chip, x: 1500, y: 600, s: 0.75}
+    support: []
+    particles: {n: 70, region: [0, 0, 1920, 1080], size: 3, color: '#FFFFFF'}
+    vignette: 0.55
+    brand: none
