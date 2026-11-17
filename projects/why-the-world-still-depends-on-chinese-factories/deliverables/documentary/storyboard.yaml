@@ -1712,7 +1712,7 @@ scenes:
       y: 520
       zoom: 1.0
     - at:
-        cue: For the materials
+        cue: For the chemical powders
       x: 1000
       y: 500
       zoom: 1.0
@@ -1739,18 +1739,18 @@ scenes:
           cue: of battery cells
           offset: -0.5
         display: '> 80%'
-      - label: CATHODE MATERIAL
+      - label: CATHODE POWDER
         value: 85
         color: '#E5484D'
         at:
-          cue: of cathode material
+          cue: of the cathode powder
           offset: -0.5
         display: ≈ 85%
-      - label: ANODE MATERIAL
+      - label: ANODE POWDER
         value: 90
         color: '#7E57C2'
         at:
-          cue: of anode material
+          cue: of the anode powder
           offset: -0.5
         display: '> 90%'
       at: 0.2

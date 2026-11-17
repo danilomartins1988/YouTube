@@ -230,11 +230,11 @@ add("p14_cluster", "a2_draw", "engine_draw", {
     "scale": 0.86, "floor": 1040})
 stage("s15_ev", "a2_ev", {
     **W1("megafloor", hi=3, board="BATTERY DAY"),
-    "cam": cam((0, 1000, 520, 1.0), (C("For the materials"), 1000, 500, 1.0, 1.2)), "drift": 3,
+    "cam": cam((0, 1000, 520, 1.0), (C("For the chemical powders"), 1000, 500, 1.0, 1.2)), "drift": 3,
     "items": [chart([{"label": "ELECTRIC CARS", "value": 70, "color": TEAL, "at": C("of the world's electric cars", -0.4), "display": "70–75%"},
                      {"label": "BATTERY CELLS", "value": 80, "color": ORANGE, "at": C("of battery cells", -0.5), "display": "> 80%"},
-                     {"label": "CATHODE MATERIAL", "value": 85, "color": RED, "at": C("of cathode material", -0.5), "display": "≈ 85%"},
-                     {"label": "ANODE MATERIAL", "value": 90, "color": PURPLE, "at": C("of anode material", -0.5), "display": "> 90%"}],
+                     {"label": "CATHODE POWDER", "value": 85, "color": RED, "at": C("of the cathode powder", -0.5), "display": "≈ 85%"},
+                     {"label": "ANODE POWDER", "value": 90, "color": PURPLE, "at": C("of the anode powder", -0.5), "display": "> 90%"}],
                     at=0.2, max=100, title="CHINA'S SHARE OF WORLD PRODUCTION, 2025 (IEA)", x=260, y=210, w=1150, h=500),
               WEI(1750, 0.3, face="happy", pose="point", hold="clipboard", faces=[[0, "happy"], [C("higher still"), "smug"]])]},
     sources=["iea_gevo"])
