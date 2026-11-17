@@ -89,6 +89,7 @@ SHORTS = {
     "byb-meta-2026-11": ("before-you-buy-meta-2026-11", "documentary", "bybmeta_documentary", "META: FREE CASH", "BELOW ZERO", "Meta's Free Cash Flow Just Went Negative. Here's Why", "#meta #stocks #investing"),
     "byb-alphabet-2026-11": ("before-you-buy-alphabet-2026-11", "documentary", "bybgoog_documentary", "ALPHABET: 178×", "ITS FREE CASH", "Alphabet Trades at 178 Times Its Free Cash. Here's Why", "#google #stocks #investing"),
     "byb-amazon-2026-11": ("before-you-buy-amazon-2026-11", "documentary", "bybamzn_documentary", "AMAZON: FREE CASH", "BELOW ZERO", "Amazon's Free Cash Flow Is Negative. Here's the Bet", "#amazon #stocks #investing"),
+    "byb-nvidia-2026-11": ("before-you-buy-nvidia-2026-11", "documentary", "bybnvda_documentary", "NVIDIA: SALES 2×", "PRICE: 16.6× PROFIT", "Nvidia Doubled Its Sales. Why Only 16.6 Times Profit?", "#nvidia #stocks #investing"),
     "byb-tesla-2026-11": ("before-you-buy-tesla-2026-11", "documentary", "bybtsla_documentary", "TESLA: 466×", "ITS PROFIT", "Tesla Is Worth 466 Times Its Profit. Here's What That Assumes", "#tesla #stocks #investing"),
     "byb-apple-2026-11": ("before-you-buy-apple-2026-11", "documentary", "bybapple_documentary", "APPLE: $5 TRILLION", "38× LAST YEAR'S PROFIT", "Apple Is Worth $5 Trillion. Here's What That Price Assumes", "#apple #stocks #investing"),
     "53-nvidia-ceo-crisis": ("nvidia-ceo-crisis-second-report", "documentary", "nvceo_documentary", "NVIDIA'S CEO", "OUT?", "Could Nvidia's Board Push Out Its Founder?", "#nvidia #stocks #ai"),
