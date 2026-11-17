@@ -1,0 +1,349 @@
+{
+  "title": "Why Americans Can No Longer Afford a Home",
+  "docs_dir": "docs/episodes/58-housing-v2",
+  "video": "output/housing_v2_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "default": "F",
+  "analysis": {
+    "mystery": "Why can't a record-high median income buy the median home any more?",
+    "surprising_fact": "Median existing-home price $416,700 (NAR, Oct 2026) vs median household income $87,460 (Census, 2025); income needed at 7.11% about $107,600 (our calc., NAR method)",
+    "subject": "a starter house with a giant price tag",
+    "tone": "sitcom",
+    "metaphor": "the starter home that keeps shrinking out of reach"
+  },
+  "slug": "why-americans-can-no-longer-afford-a-home",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (original character MAYA, a young first-time buyer, shocked at the price tag)",
+      "archetype": "face",
+      "text": [
+        "CAN'T AFFORD",
+        "A HOME"
+      ],
+      "claim_basis": "nar_price: median existing-home price $416,700, October 2026 (NAR, Nov 12, 2026)",
+      "scene": {
+        "bg": [
+          "#FF7A59",
+          "#3A0F2E"
+        ],
+        "rays": "#F5845C",
+        "bust": {
+          "who": {
+            "name": "Maya",
+            "hair": "bun",
+            "hairColor": "#1B1B1B",
+            "hairShade": "#3A3A3A",
+            "brows": "#1B1B1B",
+            "skin": "#B97A4B",
+            "iris": "#3A2618",
+            "clothes": "tee",
+            "jacket": "#26A69A",
+            "shirt": "#26A69A",
+            "glasses": "round",
+            "age": 0
+          },
+          "expr": "shock",
+          "x": 470,
+          "s": 0.92
+        },
+        "prop": {
+          "kind": "tag",
+          "text": "$416,700",
+          "x": 1390,
+          "y": 790,
+          "s": 0.66,
+          "rot": -8
+        }
+      },
+      "layout": [
+        {
+          "text": "CAN'T AFFORD",
+          "x": 1367.8,
+          "y": 168.4,
+          "size": 123.0,
+          "width": 944.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "A HOME",
+          "x": 1367.8,
+          "y": 391.9,
+          "size": 200,
+          "width": 768.0,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.65 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(896, 72, 1840, 176), (984, 236, 1752, 404)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.159",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "{'name': 'Maya', 'hair': 'bun', 'hairColor': '#1B1B1B', 'hairShade': '#3A3A3A', 'brows': '#1B1B1B', 'skin': '#B97A4B', 'iris': '#3A2618', 'clothes': 'tee', 'jacket': '#26A69A', 'shirt': '#26A69A', 'glasses': 'round', 'age': 0}",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 72",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-costco-makes-billions-selling-almost-nothing (distance 0.48)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "nar_price: median existing-home price $416,700, October 2026 (NAR, Nov 12, 2026)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.596,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-costco-makes-billions-selling-almost-nothing"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "giant number (bignum), padlocked starter house",
+      "archetype": "bignum",
+      "text": [
+        "HOMES OUT",
+        "OF REACH"
+      ],
+      "claim_basis": "a statement backed by the film: price-to-income 4.7 (JCHS), NAR affordability index 100.7 (Oct 2026), first-time buyer age 40 (NAR 2026)",
+      "scene": {
+        "palette": {
+          "sky0": "#1B0E2E",
+          "sky1": "#5A1E3A",
+          "haze": "#FFB86B",
+          "key": "#FFF1DC",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "house",
+          "x": 1500,
+          "y": 610,
+          "s": 0.7,
+          "lock": true,
+          "lit": true
+        },
+        "support": [],
+        "particles": {
+          "n": 50,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE0B2"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "HOMES OUT",
+          "x": 90,
+          "y": 541.5,
+          "size": 204.9,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFC21A"
+        },
+        {
+          "text": "OF REACH",
+          "x": 96,
+          "y": 679.5,
+          "size": 120,
+          "width": 614.4,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.51 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 382, 1270, 554), (96, 586, 710, 687)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.085",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 62",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-10-billion-cyberattack-that-froze-maersk (distance 0.38)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a statement backed by the film: price-to-income 4.7 (JCHS), NAR affordability index 100.7 (Oct 2026), first-time buyer age 40 (NAR 2026)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.62,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-10-billion-cyberattack-that-froze-maersk"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-17T10:50:10Z",
+  "master": "output/why-americans-can-no-longer-afford-a-home/thumbnails/master_F.png"
+}
