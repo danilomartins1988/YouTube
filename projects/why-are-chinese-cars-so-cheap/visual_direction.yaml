@@ -1,0 +1,60 @@
+# Visual direction for why-are-chinese-cars-so-cheap (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Director's edit (Ep 61, owner PRIORITY brief). Tone: PREMIUM BUSINESS DOCUMENTARY WITH CARTOON ENERGY (house style of Ep 56):
+# bright day scenes, original characters and sets, but the explanatory sequences carry the film. Structure: cold open (a $9,900
+# EV on a showroom turntable) -> channel intro -> show title card with a typed subtitle -> six parts opened by bumpers (a generic
+# car zooms through; VOLTY the battery cell's price tag drops: the running gag) -> verdict -> end card -> button.
+# Device: THE FOUR SUSPECTS lineup board (efficiency, subsidies, financial engineering, cash burn), stamped at the verdict.
+# Cast (original, toon rig): JUNE (American car shopper), MEI (battery-line engineer: a competent professional, never a stereotype),
+# MORGAN (a Western automaker's finance chief). Real people: Wang Chuanfu (BYD) and Lei Jun (Xiaomi) only, as respectful busts.
+# Bespoke sets (CartoonStage/cars.tsx): evshow, costlab, gigaline, cellplant, chainvalley, cashworks, pricestreet, carport,
+# tariffgate, c61title, c61bumper. Five presenter boards: p10 cost structure, p18 subsidy experiment, p25 battery chain, p35 two
+# carmakers' cash, p43 price-war squeeze.
+primary_tone: sitcom
+secondary_tones:
+- strategy
+- trade
+palette:
+  bg: '#F2F6FA'
+  bg2: '#FFFFFF'
+  ink: '#13223A'
+  muted: '#66738A'
+  land: '#A9D18E'
+  border: '#2B4A66'
+  accent: '#FFB627'
+  accent2: '#1E88E5'
+  accent3: '#2E9E5B'
+  risk: '#E5484D'
+presenter:
+  demeanor: neutral
+  min_sequences: 5
+chapters:
+- chapter: Cold open
+  tone: sitcom
+- chapter: The impossible car
+  tone: sitcom
+- chapter: The subsidy suspect
+  tone: strategy
+- chapter: The machine
+  tone: trade
+- chapter: Follow the cash
+  tone: strategy
+- chapter: The price war
+  tone: sitcom
+- chapter: The verdict
+  tone: sitcom
+turning_points:
+- segment: a4_unwind
+  cue: Free cash flow
+  to: strategy
+  why: the twist (a profitable company with deeply negative free cash flow) gets a held, cooler beat
+thumbnail:
+  tone: sitcom
+  headline: ['$9,900?']
+  idea: an original unbadged EV hatchback under showroom light with a giant gold price tag "$9,900?" (face concept with Wang Chuanfu's bust as the alternative)
+requirements:
+- Every car is a generic original design; no logos, badges or grilles of real brands; models named in text only
+- Every price shows its market and its taxes; every company figure shows its reporting period; our calculations labelled
+- Company-level vs automotive-segment results kept apart; grants vs buyer incentives vs equity financing vs supplier credit kept apart
+- No flags; countries named in text only; no stereotypes, accent jokes or mocking of any country, company or people
+- Real people only as respectful busts with a name label, doing only what the narration documents
+- Jokes never change a number; day scenes, many original human characters

@@ -1,4 +1,5 @@
 import React from 'react';
+import {carShape} from '../animation-engine/CartoonStage/cars';
 import {AbsoluteFill} from 'remotion';
 import {Character} from '../presenter/Presenter';
 
@@ -616,6 +617,19 @@ export const SUBJECTS: Record<string, SubjectFn> = {
     <rect x={-330} y={110} width={660} height={150} rx={26} fill="#D93A49" stroke="#05070B" strokeWidth={12} />
     <text x={0} y={222} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={120} fill="#FFFFFF">{o.text || '$40T'}</text>
     <path d="M 420 -330 L 560 -190 L 420 -190 Z" fill="#EADBB4" stroke="#05070B" strokeWidth={12} strokeLinejoin="round" />
+  </g>,
+  /** Ep 61: an ORIGINAL generic EV (no badge/logo; cars.tsx carShape) under showroom light, glowing cabin screen, a laser scanner
+   *  on the roof and a giant gold price tag `o.text` on a string; `o.color` body colour, `o.carKind` hatch|sedan|suv, `o.tag` false hides it */
+  evhatch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {o.haze !== false && <circle r={640} fill={P.haze} opacity={0.2} filter="url(#soft)" />}
+    <path d="M -520 -760 L -760 330 L 760 330 L 520 -760 Z" fill="#FFF6D8" opacity={0.10} />
+    <ellipse cx={0} cy={330} rx={720} ry={70} fill="#000" opacity={0.45} filter="url(#soft)" />
+    <g transform="translate(0 320) scale(3.1)">{carShape(o.carKind || 'hatch', o.color || '#26C6DA', 20, {lights: true, screen: 1, lidar: o.lidar !== false, t: 1.2})}</g>
+    {o.tag !== false && <g transform={`translate(${o.tagX ?? 230} ${o.tagY ?? -470}) rotate(${o.rot ?? 8})`}>
+      <path d="M -40 -190 Q -10 -120 -60 -60" fill="none" stroke="#F4EFE4" strokeWidth={10} strokeLinecap="round" />
+      <path d="M -330 -10 L -230 -130 L 330 -130 L 330 130 L -230 130 Z" fill={o.tagColor || '#FFC93C'} stroke="#05070B" strokeWidth={14} strokeLinejoin="round" />
+      <circle cx={-250} cy={0} r={28} fill={P.sky0} stroke="#05070B" strokeWidth={8} />
+      <text x={50} y={58} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={(o.text || '').length > 6 ? 150 : 170} fill="#05070B">{o.text || '$9,900?'}</text></g>}
   </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>

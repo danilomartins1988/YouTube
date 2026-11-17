@@ -7,6 +7,7 @@ import {bustItem} from './bust';
 import {FACTORY_INDOOR, FACTORY_ITEMS, FACTORY_SETS} from './factory';
 import {DEBT_INDOOR, DEBT_ITEMS, DEBT_SETS} from './debt';
 import {HOUSING_INDOOR, HOUSING_ITEMS, HOUSING_SETS} from './housing';
+import {CARS_INDOOR, CARS_ITEMS, CARS_SETS} from './cars';
 
 /**
  * CartoonStage: land-based cartoon WORLDS built for a specific story (flat colours, thick outlines, bouncy motion).
@@ -2258,8 +2259,9 @@ const SETS: Record<string, SetFn> = {
   ...(DEBT_SETS as unknown as Record<string, SetFn>),
   ...(CLUB_SETS as unknown as Record<string, SetFn>),
   ...(HOUSING_SETS as unknown as Record<string, SetFn>),
+  ...(CARS_SETS as unknown as Record<string, SetFn>),
 };
-const INDOOR = new Set([...SITCOM_INDOOR, ...FACTORY_INDOOR, ...DEBT_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set([...SITCOM_INDOOR, ...CARS_INDOOR, ...FACTORY_INDOOR, ...DEBT_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -4765,6 +4767,10 @@ const CARI: Record<string, any> = {
   // shirt-sleeves and a simple first-name tag (no logos).
   vachris: {hair: 'side', hairColor: '#B9BEC6', jacket: '#24324F', shirt: '#E9EEF3', tie: null, skin: '#EBC09C', glasses: false},
   sinegal: {hair: 'side', hairColor: '#F2F3F5', jacket: '#8FB3D9', shirt: '#F4F6F8', tie: null, skin: '#EDC4A0', glasses: false, badge: 'JIM'},
+  // Ep 61 (Chinese cars): signature traits only. Wang Chuanfu (BYD founder): short dark side-parted hair, dark suit, white shirt.
+  // Lei Jun (Xiaomi founder): short dark hair, casual dark jacket over a plain dark tee. No logos, no mocked features.
+  wangcf: {hair: 'side', hairColor: '#1F1C1A', jacket: '#1E2633', shirt: '#F4F6F8', tie: null, skin: '#E2B48E', glasses: false},
+  leijun: {hair: 'side', hairColor: '#211D1B', jacket: '#2A2F3A', shirt: '#2A2F3A', tie: null, skin: '#E6B992', glasses: false},
 };
 const caricature: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, f), s0 = (a.scale ?? 1), app = pop(t, a.at ?? 0, 0.5), fl = a.flip ? -1 : 1;
@@ -5216,7 +5222,7 @@ const sapling: ItemFn = (a, {t, f}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(FACTORY_ITEMS as unknown as Record<string, ItemFn>), ...(DEBT_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>)};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(FACTORY_ITEMS as unknown as Record<string, ItemFn>), ...(DEBT_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>), ...(CARS_ITEMS as unknown as Record<string, ItemFn>)};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

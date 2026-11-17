@@ -68,6 +68,11 @@ export const BUST: Record<string, BustTraits> = {
     clothes: 'open', jacket: '#24324F', shirt: '#E9EEF3', age: 0.55},
   sinegal: {name: 'Jim Sinegal', hair: 'side', hairColor: '#F2F3F5', hairShade: '#C4C8CE', brows: '#B8BCC2', skin: '#EDC4A0', iris: '#3E5A6E',
     clothes: 'shirt', jacket: '#8FB3D9', shirt: '#8FB3D9', badge: 'JIM', age: 0.8},
+  // Ep 61 (Chinese cars): founders central to the story; signature traits only (hair, clothes, age), never photo-traced.
+  wangcf: {name: 'Wang Chuanfu', hair: 'side', hairColor: '#1F1C1A', hairShade: '#3A3430', brows: '#1F1C1A', skin: '#E2B48E', iris: '#2A1A10',
+    clothes: 'suit', jacket: '#1E2633', shirt: '#F4F6F8', tie: null, age: 0.45},
+  leijun: {name: 'Lei Jun', hair: 'side', hairColor: '#211D1B', hairShade: '#3C3532', brows: '#211D1B', skin: '#E6B992', iris: '#2A1A10',
+    clothes: 'open', jacket: '#2A2F3A', shirt: '#2A2F3A', age: 0.4},
   // sitcom cast (Episode 56), redrawn as busts: original characters
   gloria: {name: 'Gloria', hair: 'bun', hairColor: '#B5452B', hairShade: '#86301E', brows: '#7A2A1A', skin: '#F2C29A', iris: '#3E6E4A',
     clothes: 'top', jacket: '#D93A3A', shirt: '#FFFFFF', badge: 'MANAGER', headset: true, age: 0.15},

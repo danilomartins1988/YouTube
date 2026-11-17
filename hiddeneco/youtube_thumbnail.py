@@ -103,6 +103,7 @@ def layout_split(lines: list[str], colors: dict) -> list[dict]:
 FACE_PRESETS = {"huang": "Jensen Huang", "jassy": "Andy Jassy", "pichai": "Sundar Pichai", "musk": "Elon Musk", "sam": "Sam Walton",
                 "rob": "Rob Walton", "penner": "Greg Penner", "steuart": "Steuart Walton", "furner": "John Furner", "trump": "Donald Trump",
                 "vachris": "Ron Vachris", "sinegal": "Jim Sinegal",
+                "wangcf": "Wang Chuanfu", "leijun": "Lei Jun",
                 "gloria": "Gloria (sitcom cast)", "dash": "Dash (sitcom cast)"}
 FACE_EXPRS = ("shock", "smug", "worry", "point", "laugh", "happy", "neutral")
 BUST_EYE_Y, BUST_TOP, BUST_HALF_W = 736, 1000, 250        # local units at scale 1 (eye line, crown with hair, head half-width)
