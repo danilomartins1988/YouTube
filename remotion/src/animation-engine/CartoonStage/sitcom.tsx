@@ -52,6 +52,11 @@ type Look = {skin: string; hair: string; hairStyle: number; top: string; pants: 
   hat?: string; scarf?: string; glasses?: boolean; who: string};
 const looks = (a: Item, i: number): Look => {
   if (a.who === 'gloria') return {who: 'gloria', skin: '#F2C29A', hair: '#B5452B', hairStyle: 10, top: '#D93A3A', pants: '#2C3E66', shoes: '#1B1B1B', w: 1, h: 1.08};
+  // Ep 57 club cast (original): BEV membership clerk, HANK bulk-buying dad, PEARL sample lady, SKIP food-court teen
+  if (a.who === 'bev') return {who: 'bev', skin: '#8A5634', hair: '#2B1D16', hairStyle: 4, top: '#7E57C2', pants: '#2C3E66', shoes: '#1B1B1B', w: 1.02, h: 1.04, glasses: true};
+  if (a.who === 'hank') return {who: 'hank', skin: '#F3D7BD', hair: '#8D5524', hairStyle: 2, top: '#C62828', pants: '#34406A', shoes: '#5D4037', w: 1.26, h: 1.02, hat: '#2E7D32'};
+  if (a.who === 'pearl') return {who: 'pearl', skin: '#E0A878', hair: '#ECEFF1', hairStyle: 3, top: '#FFFFFF', pants: '#546E7A', shoes: '#ECEFF1', w: 0.96, h: 0.9};
+  if (a.who === 'skip') return {who: 'skip', skin: '#B97A4B', hair: '#1B1B1B', hairStyle: 1, top: '#E53950', pants: '#263238', shoes: '#ECEFF1', w: 0.88, h: 1.08};
   if (a.who === 'dash') return {who: 'dash', skin: '#C98B5B', hair: '#17B3A3', hairStyle: 11, top: '#FF8A1F', pants: '#34406A', shoes: '#F2F2F2', w: 0.86, h: 1.12, scarf: undefined};
   const v = a.v ?? i;
   return {who: 'shopper', skin: SKIN[(a.skin ?? v * 3) % SKIN.length], hair: HAIR[(a.hair ?? v * 5 + 1) % HAIR.length], hairStyle: (a.hairStyle ?? v * 7) % 6,
@@ -219,6 +224,12 @@ export const toon: ItemFn = (a, {t, f}, i) => {
       case 'tag': return <g transform={`translate(${front.hx + 10} ${front.hy - 8}) rotate(${8 * Math.sin(t * 4)})`}><path d="M -6 0 L 18 -16 L 70 -16 L 70 16 L 18 16 Z" fill="#FFF8E1" stroke={OL} strokeWidth={3.5} strokeLinejoin="round" /><circle cx={8} cy={0} r={4} fill={OL} /><T x={44} y={6} s={14} c="#E53950">{a.tagText || 'SALE'}</T></g>;
       case 'card': return <g transform={`translate(${front.hx + 8} ${front.hy - 6}) rotate(-15)`}><rect x={-6} y={-22} width={64} height={40} rx={6} fill="#2F6FD1" stroke={OL} strokeWidth={3.5} /><rect x={2} y={-12} width={14} height={10} rx={2} fill="#FFC93C" /></g>;
       case 'phone': return <g transform={`translate(${front.hx + 4} ${front.hy - 10})`}><rect x={-10} y={-26} width={22} height={38} rx={5} fill="#263238" stroke={OL} strokeWidth={3} /><rect x={-6} y={-21} width={14} height={26} rx={2} fill="#80DEEA" opacity={0.6 + 0.4 * Math.sin(t * 6)} /></g>;
+      case 'tray': return <g transform={`translate(${front.hx + 30} ${front.hy - 14}) rotate(${4 * Math.sin(t * 3)})`}><ellipse cx={0} cy={0} rx={62} ry={14} fill="#ECEFF1" stroke={OL} strokeWidth={3.5} />
+        {[-36, -12, 12, 36].map((q, k) => <g key={q}><rect x={q - 9} y={-18} width={18} height={14} rx={3} fill={['#FFB74D', '#A1887F', '#FFF176', '#F48FB1'][k]} stroke={OL} strokeWidth={2} /><path d={`M ${q} -18 L ${q + 2} -34`} stroke="#8D6E63" strokeWidth={2.5} /></g>)}</g>;
+      case 'hotdog': return <g transform={`translate(${front.hx + 8} ${front.hy - 12}) rotate(-12)`}><rect x={-38} y={-10} width={76} height={20} rx={10} fill="#F2C179" stroke={OL} strokeWidth={3} /><rect x={-46} y={-14} width={92} height={14} rx={7} fill="#C8553D" stroke={OL} strokeWidth={3} /><path d="M -30 -7 Q -20 -12 -10 -7 Q 0 -2 10 -7 Q 20 -12 30 -7" stroke="#FFD23F" strokeWidth={3.5} fill="none" /></g>;
+      case 'membercard': return <g transform={`translate(${front.hx + 10} ${front.hy - 10}) rotate(-12)`}><rect x={-6} y={-24} width={70} height={44} rx={6} fill="#FFFFFF" stroke={OL} strokeWidth={3.5} /><rect x={-6} y={-24} width={70} height={12} rx={5} fill="#E53950" /><rect x={2} y={-6} width={18} height={20} rx={2} fill="#B0BEC5" /></g>;
+      case 'letter': return <g transform={`translate(${front.hx + 14} ${front.hy - 20}) rotate(6)`}><rect x={-26} y={-36} width={52} height={70} rx={3} fill="#FFFFFF" stroke={OL} strokeWidth={3} />{[0, 1, 2, 3].map((q) => <path key={q} d={`M -18 ${-24 + q * 14} L 18 ${-24 + q * 14}`} stroke="#90A4AE" strokeWidth={2.5} />)}</g>;
+      case 'bigpack': return <g transform={`translate(${hmx + 6} ${hmy - 40})`}><rect x={-60} y={-70} width={120} height={110} rx={8} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><rect x={-60} y={-70} width={120} height={30} rx={8} fill="#4FB3F6" stroke={OL} strokeWidth={3} /><T x={0} y={4} s={fit(String(a.packText || 'x48'), 100, 30)} c="#E53950">{a.packText || 'x48'}</T></g>;
       default: return null;
     }
   })();
@@ -242,6 +253,11 @@ export const toon: ItemFn = (a, {t, f}, i) => {
       {L.who === 'gloria' && <g><path d={`M -8 ${shY - 6} L 0 ${shY + 30} L 8 ${shY - 6}`} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><rect x={6} y={shY + 18} width={40} height={18} rx={3} fill="#FFFFFF" stroke={OL} strokeWidth={2.5} /><T x={26} y={shY + 31} s={9}>MANAGER</T></g>}
       {L.who === 'dash' && <g><path d={`M -22 ${shY + 40} L 22 ${shY + 40}`} stroke="#C7621A" strokeWidth={4} /><rect x={-14} y={shY + 6} width={30} height={16} rx={3} fill="#FFF3B0" stroke={OL} strokeWidth={2.5} /><T x={1} y={shY + 18} s={10}>DEALS</T>
         {[0, 1, 2].map((k) => <rect key={k} x={-30 + k * 22} y={hipY - 4} width={18} height={12} fill="#FFF8E1" stroke={OL} strokeWidth={2} transform={`rotate(${-10 + k * 10} ${-21 + k * 22} ${hipY + 2})`} />)}</g>}
+      {L.who === 'bev' && <g><path d={`M -14 ${shY - 4} L -4 ${shY + 50} M 14 ${shY - 4} L 4 ${shY + 50}`} stroke="#2F6FD1" strokeWidth={4} /><rect x={-20} y={shY + 48} width={40} height={26} rx={4} fill="#FFFFFF" stroke={OL} strokeWidth={2.5} /><rect x={-20} y={shY + 48} width={40} height={8} rx={3} fill="#E53950" />
+        <path d={`M ${-28 * 1.02} ${shY + 4} L -18 ${hipY + 4} M ${28 * 1.02} ${shY + 4} L 18 ${hipY + 4}`} stroke="#5E35B1" strokeWidth={6} /></g>}
+      {L.who === 'hank' && <g opacity={0.55}>{[-20, 0, 20].map((q) => <path key={q} d={`M ${q} ${shY - 6} L ${q} ${hipY + 6}`} stroke="#7F1414" strokeWidth={5} />)}{[0, 1, 2].map((q) => <path key={'h' + q} d={`M ${-34} ${shY + 18 + q * 26} L 34 ${shY + 18 + q * 26}`} stroke="#7F1414" strokeWidth={5} />)}</g>}
+      {L.who === 'pearl' && <g><path d={`M -24 ${shY + 6} L 24 ${shY + 6} L 28 ${hipY + 6} L -28 ${hipY + 6} Z`} fill="#2E9E5B" stroke={OL} strokeWidth={3} /><rect x={-16} y={shY + 20} width={32} height={16} rx={3} fill="#FFFFFF" stroke={OL} strokeWidth={2} /><T x={0} y={shY + 32} s={9}>SAMPLES</T></g>}
+      {L.who === 'skip' && <g><rect x={-14} y={shY + 14} width={30} height={16} rx={3} fill="#FFFFFF" stroke={OL} strokeWidth={2.5} /><T x={1} y={shY + 26} s={10}>SKIP</T></g>}
       {L.scarf && <path d={`M -28 ${shY - 2} Q 0 ${shY + 12} 28 ${shY - 2} L 26 ${shY + 8} Q 0 ${shY + 22} -26 ${shY + 8} Z M 10 ${shY + 12} L 18 ${shY + 44} L 4 ${shY + 44} Z`} fill={L.scarf} stroke={OL} strokeWidth={3} strokeLinejoin="round" />}
       {/* head */}
       <g transform={`rotate(${face === 'shock' ? -4 : pose === 'talk' ? 3 * Math.sin(t * 3 + i) : Math.sin(t * 1.3 + i) * 2} 0 ${headY + 40})`}>
@@ -256,8 +272,10 @@ export const toon: ItemFn = (a, {t, f}, i) => {
         {mouth}
         {(face === 'happy' || face === 'grin') && <g opacity={0.35}><ellipse cx={-28} cy={headY + 20} rx={8} ry={5} fill="#FF6F61" /><ellipse cx={34} cy={headY + 20} rx={7} ry={5} fill="#FF6F61" /></g>}
         {hairFront}
+        {L.who === 'pearl' && <path d={`M -46 ${headY - 10} Q -44 ${headY - 70} 0 ${headY - 70} Q 44 ${headY - 70} 46 ${headY - 10}`} fill="none" stroke="#90A4AE" strokeWidth={3} strokeDasharray="3 6" />}
+        {L.who === 'skip' && <g><path d={`M -48 ${headY - 30} L -30 ${headY - 76} L 30 ${headY - 76} L 48 ${headY - 30} Z`} fill="#FFFFFF" stroke={OL} strokeWidth={4} strokeLinejoin="round" /><path d={`M -44 ${headY - 40} L 44 ${headY - 40}`} stroke="#E53950" strokeWidth={8} /></g>}
         {L.glasses && <g><circle cx={ex1} cy={ey} r={17} fill="none" stroke={OL} strokeWidth={3.5} /><circle cx={ex2} cy={ey} r={17} fill="none" stroke={OL} strokeWidth={3.5} /><path d={`M ${ex1 + 17} ${ey} L ${ex2 - 17} ${ey}`} stroke={OL} strokeWidth={3} /></g>}
-        {L.hat && <g><path d={`M -46 ${headY - 26} Q 0 ${headY - 92} 46 ${headY - 26} Z`} fill={L.hat} stroke={OL} strokeWidth={4} /><rect x={-48} y={headY - 34} width={96} height={16} rx={7} fill="#FFFFFF" stroke={OL} strokeWidth={3.5} /><circle cx={0} cy={headY - 76} r={11} fill="#FFFFFF" stroke={OL} strokeWidth={3.5} /></g>}
+        {L.hat && L.who !== 'skip' && <g><path d={`M -46 ${headY - 26} Q 0 ${headY - 92} 46 ${headY - 26} Z`} fill={L.hat} stroke={OL} strokeWidth={4} /><rect x={-48} y={headY - 34} width={96} height={16} rx={7} fill="#FFFFFF" stroke={OL} strokeWidth={3.5} /><circle cx={0} cy={headY - 76} r={11} fill="#FFFFFF" stroke={OL} strokeWidth={3.5} /></g>}
         {L.who === 'gloria' && <g><path d={`M -48 ${headY - 6} Q -56 ${headY - 50} 0 ${headY - 58} Q 56 ${headY - 50} 48 ${headY - 6}`} fill="none" stroke="#37474F" strokeWidth={5} /><rect x={-56} y={headY - 14} width={14} height={22} rx={5} fill="#37474F" stroke={OL} strokeWidth={3} /><path d={`M -50 ${headY + 8} Q -40 ${headY + 40} -8 ${headY + 34}`} fill="none" stroke="#37474F" strokeWidth={4} /><circle cx={-8} cy={headY + 34} r={5} fill={OL} /></g>}
         {(face === 'panic' || face === 'worry') && [0, 1].map((k) => sweat(t, k + i, 40, headY - 30))}
         {face === 'angry' && [0, 1].map((k) => { const u = (t * 1.4 + k * 0.5) % 1; return <circle key={'st' + k} cx={(k ? 30 : -30) + (k ? 1 : -1) * u * 30} cy={headY - 60 - u * 50} r={10 + u * 14} fill="#FFFFFF" stroke={OL} strokeWidth={3} opacity={1 - u} />; })}

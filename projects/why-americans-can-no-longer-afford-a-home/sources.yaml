@@ -18,6 +18,14 @@ sources:
     accessed: "2026-11-17"
     period: "October 2026"
     credit: "NAR (Nov 2026)"
+  - id: nar_hai
+    title: "Housing Affordability Index: Methodology"
+    publisher: National Association of REALTORS
+    url: https://www.nar.realtor/research-and-statistics/housing-statistics/housing-affordability-index/methodology
+    published: "2026"
+    accessed: "2026-11-17"
+    period: "Method (20% down, 25% qualifying ratio)"
+    credit: "NAR"
   - id: nar_profile
     title: "First-Time Home Buyer Share Inches Up to 22%, Median Age Remains at Record High of 40 (2026 Profile of Home Buyers and Sellers)"
     publisher: National Association of REALTORS
@@ -113,7 +121,7 @@ claims:
     spoken: one hundred point seven
     display: "NAR Housing Affordability Index, Oct 2026: 100.7 (107.3 a year earlier)"
     fields: {prev_spoken: one hundred and seven point three}
-    source_ids: [nar_ehs]
+    source_ids: [nar_ehs, nar_hai]
     status: source_located
     verification_note: Methodology (20% down, 25% qualifying ratio) from NAR's index definition; read in the release and NAR's HAI page.
   - id: census_inc
@@ -136,7 +144,7 @@ claims:
     spoken: about two thousand two hundred and forty dollars
     display: "Same $416,700 home: $1,343/mo at 2.65% vs $2,243/mo at 7.11% (our calc.)"
     fields: {low_spoken: about one thousand three hundred and forty dollars, diff_spoken: about nine hundred dollars, inc_spoken: about one hundred and eight thousand dollars}
-    source_ids: [nar_ehs, pmms, census_inc]
+    source_ids: [nar_ehs, nar_hai, pmms, census_inc]
     status: source_located
     verification_note: Our arithmetic (standard amortization formula); principal and interest only; labelled OUR CALCULATION on screen and in narration.
   - id: income

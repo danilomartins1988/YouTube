@@ -1,0 +1,243 @@
+# Documentary (target 11-13 min), built like an episode of a prime-time animated sitcom: cold open, channel intro
+# (our "theme"), a show title card, five acts with bumpers, a button joke. The five parts stay an INTERNAL structure
+# (never narrated as missions). Numbers come from sources.yaml via {{placeholders}}; years are spoken as words.
+# Rules: the payments and the income needed at today's rate are OUR calculation (said); shortage figures are ESTIMATES
+# (said, as a range, attributed); NAHB = home builders' trade group (said); Berkeley = Greater Los Angeles (said);
+# FHFA = a working-paper estimate (said). MAYA, REX and DEEDEE are fictional cartoon characters, never real people;
+# jokes never change a number.
+logline: A typical American home now costs almost five times a typical income, the mortgage rate that doubled the payment
+  froze the owners who already have cheap loans, a decade of underbuilding left the country millions of homes short, and
+  local rules make the cheapest homes the hardest to build. The first-time buyer is now forty.
+title: Why Americans Can No Longer Afford a Home
+segments:
+- id: co_open
+  chapter: Cold open
+  narration: Saturday morning, an open house in an ordinary suburb. Three bedrooms, one bathroom, a lawn the size of a parking
+    space. Half the town is in the kitchen. Someone just offered more than the asking price, in cash. And Maya, who has been
+    saving since forever, is holding up a sign that just says, please.
+  claims: []
+  analysis: true
+  source_note: Cold-open scene with fictional characters (illustrative, no figures); market figures are sourced in the next segments.
+- id: co_hook
+  chapter: Cold open
+  narration: Here's the whole problem in one breath. The typical existing home in America sold for {{nar_price}} in October.
+    The typical household earned {{census_inc}} last year, a record. And with mortgage rates above seven percent, the paycheck
+    you need to buy that home has run right past the paycheck most people have.
+  claims:
+  - nar_price
+  - census_inc
+  - pmms
+- id: co_promise
+  chapter: Cold open
+  narration: So why can't Americans afford a home anymore? Let's follow the money. The price that outran the paycheck, the rate
+    that rode a rollercoaster, the owners who can't move, the homes we never built, and the room where it's decided.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: title_card
+  chapter: Cold open
+  narration: ''
+  claims: []
+- id: a1_card
+  chapter: The price tag
+  narration: ''
+  claims: []
+- id: a1_ratio
+  chapter: The price tag
+  narration: Start with the simplest test there is. Harvard's Joint Center for Housing Studies divides the price of a typical
+    existing single-family home by the typical household's income. In the nineteen-nineties, a home cost about {{ratio.nineties_spoken}}
+    years of income. By twenty nineteen, {{ratio.y2019_spoken}}. In twenty twenty-two, an all-time high of five. And in twenty
+    twenty-five, still {{ratio}}.
+  claims:
+  - ratio
+- id: a1_income
+  chapter: The price tag
+  narration: It's not that paychecks stood still. The Census Bureau says real median household income reached a record in
+    twenty twenty-five. But prices sprinted. Harvard says home prices nationwide rose {{ratio.rise_spoken}} since twenty twenty.
+    The paycheck jogged. The price tag took the elevator.
+  claims:
+  - census_inc
+  - ratio
+- id: a1_shrink
+  chapter: The price tag
+  narration: And the classic starter home quietly shrank out of reach. In March twenty nineteen, about {{listings.before_spoken}}
+    of homes for sale were affordable to a household earning seventy-five thousand dollars or less. By March twenty twenty-six,
+    just {{listings}}. Less than one in four.
+  claims:
+  - listings
+- id: a1_draw
+  chapter: The price tag
+  narration: Let me draw it. One bar for each period, measured in years of income. The nineties, about three. Twenty nineteen,
+    about four. The twenty twenty-two peak, five. Twenty twenty-five, four point seven. Every extra step is roughly one more
+    year of a whole household's pay.
+  claims:
+  - ratio
+- id: a2_card
+  chapter: The rate rollercoaster
+  narration: ''
+  claims: []
+- id: a2_coaster
+  chapter: The rate rollercoaster
+  narration: Now the part that really hurts. Almost nobody pays cash, so the real price of a home is the loan. Freddie Mac tracks
+    the average thirty-year fixed mortgage rate every week. In January twenty twenty-one it hit a record low of {{pmms.low_spoken}}.
+    Before the end of twenty twenty-two it was above seven. This October it climbed back to {{pmms.oct_spoken}}, and last week
+    it was still {{pmms}}.
+  claims:
+  - pmms
+- id: a2_payment
+  chapter: The rate rollercoaster
+  narration: Here's what that does to one house, by our own calculation. Take October's median price, put twenty percent down,
+    and borrow the rest for thirty years. At {{pmms.low_spoken}}, principal and interest come to {{calc.low_spoken}} a month.
+    At {{pmms}}, {{calc}}. Same house, same kitchen, same tiny lawn. {{calc.diff_spoken}} more, every month, for thirty years.
+  claims:
+  - calc
+  - pmms
+- id: a2_draw
+  chapter: The rate rollercoaster
+  narration: Let me draw the income test. The realtors' rule of thumb says the mortgage payment shouldn't be more than a quarter
+    of your income. At today's payment, that means earning {{calc.inc_spoken}} a year. Now the median household. {{census_inc}}.
+    Two bars, one gap, and that gap is the whole story. This is our calculation, before taxes and insurance.
+  claims:
+  - calc
+  - census_inc
+- id: a2_hai
+  chapter: The rate rollercoaster
+  narration: The National Association of Realtors runs the same test every month. Its Housing Affordability Index equals one
+    hundred when a family on the median income has exactly enough to qualify for the median home, with twenty percent down.
+    In October it read {{hai}}, down from {{hai.prev_spoken}} a year earlier. Barely over the line, and only if you have the
+    down payment.
+  claims:
+  - hai
+- id: a2_harvard
+  chapter: The rate rollercoaster
+  narration: Harvard, adding taxes and insurance, puts the bar even higher. The income needed for the median-priced home was
+    {{income}} at the end of twenty twenty-five, up from {{income.before_spoken}} five years earlier.
+  claims:
+  - income
+- id: a3_card
+  chapter: The great lock-in
+  narration: ''
+  claims: []
+- id: a3_lock
+  chapter: The great lock-in
+  narration: High rates did something stranger, too. They froze the people who already own. Meet Rex, Maya's dad. Rex refinanced
+    when rates were near the bottom. And he is not alone. According to Harvard, {{lockin}} of all outstanding mortgages carried
+    rates below four percent at the end of twenty twenty-five.
+  claims:
+  - lockin
+- id: a3_cage
+  chapter: The great lock-in
+  narration: So if Rex sells, he gives up a cheap loan and takes a new one at more than seven percent. His kids have moved out.
+    The house is too big. And he stays anyway. Economists call it the lock-in effect. The golden handcuffs.
+  claims:
+  - pmms
+- id: a3_fhfa
+  chapter: The great lock-in
+  narration: Economists at the Federal Housing Finance Agency measured it. For every percentage point the market rate sits above
+    a homeowner's own rate, the chance they sell falls by {{fhfa.per_spoken}}. Between mid twenty twenty-two and the end of twenty
+    twenty-three, they estimated lock-in prevented about {{fhfa}} home sales. And by keeping homes off the market, it pushed prices
+    up by {{fhfa.up_spoken}}, more than higher rates pulled them down.
+  claims:
+  - fhfa
+- id: a3_sales
+  chapter: The great lock-in
+  narration: When nobody moves, nothing opens up for the next buyer. Harvard says existing-home sales were stuck at {{lockin.sales_spoken}}
+    in twenty twenty-five, a thirty-year low, two thirds of the pace of twenty twenty-one. And in October, the National Association
+    of Realtors measured an annual pace of just {{nar_price.sales_spoken}}.
+  claims:
+  - lockin
+  - nar_price
+- id: a4_card
+  chapter: The homes we never built
+  narration: ''
+  claims: []
+- id: a4_bust
+  chapter: The homes we never built
+  narration: Then there's the oldest problem of all. Supply. After the housing crash, builders went quiet. By our count of Census
+    data, America completed {{building}} new homes in the two thousands, but only {{building.tens_spoken}} in the twenty-tens.
+    In twenty eleven, just {{building.low_spoken}}, the lowest year since the records began in nineteen sixty-eight.
+  claims:
+  - building
+- id: a4_shortage
+  chapter: The homes we never built
+  narration: So how many homes are missing? Honestly, nobody knows exactly, and the estimates disagree. Harvard says various
+    organizations put the shortage {{shortage}}. The research group Up for Growth estimates {{shortage.ufg_spoken}}. These are
+    estimates built on different assumptions. But nearly all of them point the same way. Not enough.
+  claims:
+  - shortage
+- id: a4_draw
+  chapter: The homes we never built
+  narration: Let me sketch why the estimates differ. Box one is the homes we have. Box two is the homes we'd need, for every
+    new household, plus a healthy number of empty homes so people can actually move. The arrow between them is the gap. Change
+    the assumptions, and the gap stretches or shrinks. It never disappears.
+  claims:
+  - shortage
+- id: a4_cost
+  chapter: The homes we never built
+  narration: And building got more expensive. Harvard says the price of residential construction inputs jumped {{listings.inputs_spoken}}
+    since January twenty twenty. The home builders' own trade group, the NAHB, estimates that regulation makes up {{regulation}}
+    of the price of a new single-family home, about {{regulation.usd_spoken}}. That's the builders' estimate. It's also a clue
+    about where to look next.
+  claims:
+  - listings
+  - regulation
+- id: a5_card
+  chapter: The zoning board
+  narration: ''
+  claims: []
+- id: a5_room
+  chapter: The zoning board
+  narration: Welcome to the most powerful room in American housing. Not a bank. Not Congress. The local zoning board, on a Tuesday
+    night. Zoning decides what may be built on every piece of land. And in much of the country, the answer for homes is simple.
+    One house, on one lot.
+  claims: []
+  analysis: true
+  source_note: Zoning explained (local land-use rules); illustrative meeting with fictional characters; the measured share follows.
+- id: a5_berkeley
+  chapter: The zoning board
+  narration: How much? Researchers at UC Berkeley mapped the Los Angeles region and found that about {{zoning}} of its residential
+    land is reserved for single-family homes only. That's one region, not the whole country. But it shows how much land a single
+    rule can cover.
+  claims:
+  - zoning
+- id: a5_hearing
+  chapter: The zoning board
+  narration: Want to put four apartments where one house stands? You may need a variance, a hearing, and a room full of worried
+    neighbors. Parking rules, height limits, minimum lot sizes. Each rule may make sense on its own. Together, they make the
+    cheapest kinds of homes the hardest to build.
+  claims: []
+  analysis: true
+  source_note: Common land-use rules described qualitatively (no figures); interpretation consistent with the regulation and zoning sources.
+- id: a5_draw
+  chapter: The zoning board
+  narration: Let me draw one lot. One lot, one house, and the buyer pays for all the land. Now the same lot with a duplex. Two
+    homes share the land. A fourplex, four homes. Same street, same lot, the land cost per home cut to a quarter. That's what's
+    at stake on a Tuesday night.
+  claims: []
+  analysis: true
+  source_note: Illustrative arithmetic (land split by number of homes, no prices); labelled ILLUSTRATIVE on screen.
+- id: a6_basement
+  chapter: The basement generation
+  narration: So who pays for all of this? The first-time buyer. In the National Association of Realtors' twenty twenty-six survey
+    of home buyers, first-timers made up just {{firsttime.share_spoken}} of purchases, about half the norm of {{firsttime.norm_spoken}}
+    before two thousand eight. And the typical first-time buyer is now {{firsttime}} years old. Forty.
+  claims:
+  - firsttime
+- id: payoff
+  chapter: The basement generation
+  narration: So why can't Americans afford a home? Not because of one villain. Prices outran paychecks. Rates doubled the payment.
+    Owners with cheap loans stopped selling. Builders spent a decade building too little. And local rules make the cheapest homes
+    the hardest to build. Fix one and you help a little. Fix them together, and the starter home comes back.
+  claims: []
+  analysis: true
+  source_note: Conclusion drawn from the sourced facts above.
+- id: teaser
+  chapter: The basement generation
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: The basement generation
+  narration: ''
+  claims: []

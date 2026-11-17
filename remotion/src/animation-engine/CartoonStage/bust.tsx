@@ -63,6 +63,11 @@ export const BUST: Record<string, BustTraits> = {
     clothes: 'open', jacket: '#2E3440', shirt: '#E9EEF3', age: 0.35},
   trump: {name: 'Donald Trump', hair: 'swoop', hairColor: '#F2C94C', hairShade: '#C99A2E', brows: '#D9B26A', skin: '#F0BE96', iris: '#3E5A6E',
     clothes: 'suit', jacket: '#1F2A44', shirt: '#F4F7FB', tie: '#D32F2F', age: 0.7},
+  // Ep 57 (Costco): signature traits only (hair colour, clothes); a plain first-name tag for Sinegal; no logos.
+  vachris: {name: 'Ron Vachris', hair: 'short', hairColor: '#B9BEC6', hairShade: '#8A9099', brows: '#7E848C', skin: '#EBC09C', iris: '#3E5A6E',
+    clothes: 'open', jacket: '#24324F', shirt: '#E9EEF3', age: 0.55},
+  sinegal: {name: 'Jim Sinegal', hair: 'side', hairColor: '#F2F3F5', hairShade: '#C4C8CE', brows: '#B8BCC2', skin: '#EDC4A0', iris: '#3E5A6E',
+    clothes: 'shirt', jacket: '#8FB3D9', shirt: '#8FB3D9', badge: 'JIM', age: 0.8},
   // sitcom cast (Episode 56), redrawn as busts: original characters
   gloria: {name: 'Gloria', hair: 'bun', hairColor: '#B5452B', hairShade: '#86301E', brows: '#7A2A1A', skin: '#F2C29A', iris: '#3E6E4A',
     clothes: 'top', jacket: '#D93A3A', shirt: '#FFFFFF', badge: 'MANAGER', headset: true, age: 0.15},

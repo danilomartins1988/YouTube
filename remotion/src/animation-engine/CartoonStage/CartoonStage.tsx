@@ -2,7 +2,9 @@ import React from 'react';
 import {E, clamp, ease, lerp, win} from '../motion';
 import {ToneFilterDef, ToneOverlay, ToneShift, isNeutral, toneAt} from '../tone';
 import {SITCOM_INDOOR, SITCOM_ITEMS, SITCOM_SETS} from './sitcom';
+import {CLUB_INDOOR, CLUB_ITEMS, CLUB_SETS} from './costco';
 import {bustItem} from './bust';
+import {HOUSING_INDOOR, HOUSING_ITEMS, HOUSING_SETS} from './housing';
 
 /**
  * CartoonStage: land-based cartoon WORLDS built for a specific story (flat colours, thick outlines, bouncy motion).
@@ -2250,8 +2252,10 @@ const SETS: Record<string, SetFn> = {
     </g>;
   },
   ...(SITCOM_SETS as unknown as Record<string, SetFn>),
+  ...(CLUB_SETS as unknown as Record<string, SetFn>),
+  ...(HOUSING_SETS as unknown as Record<string, SetFn>),
 };
-const INDOOR = new Set([...SITCOM_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set([...SITCOM_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -4753,6 +4757,10 @@ const CARI: Record<string, any> = {
   steuart: {hair: 'swept', hairColor: '#6B4E33', jacket: '#3B4A5E', shirt: '#FFFFFF', tie: null, skin: '#EBC09C', glasses: false},
   furner: {hair: 'side', hairColor: '#4A3B2E', jacket: '#2E3440', shirt: '#E9EEF3', tie: null, skin: '#EBC09C', glasses: false},
   trump: {hair: 'swoop', hairColor: '#F2C94C', jacket: '#1F2A44', shirt: '#F4F7FB', tie: '#D32F2F', longTie: true, skin: '#F0BE96', glasses: false},
+  // Ep 57 (Costco): signature traits only. Vachris: short grey hair, navy blazer, open collar. Sinegal: white hair, plain
+  // shirt-sleeves and a simple first-name tag (no logos).
+  vachris: {hair: 'side', hairColor: '#B9BEC6', jacket: '#24324F', shirt: '#E9EEF3', tie: null, skin: '#EBC09C', glasses: false},
+  sinegal: {hair: 'side', hairColor: '#F2F3F5', jacket: '#8FB3D9', shirt: '#F4F6F8', tie: null, skin: '#EDC4A0', glasses: false, badge: 'JIM'},
 };
 const caricature: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, f), s0 = (a.scale ?? 1), app = pop(t, a.at ?? 0, 0.5), fl = a.flip ? -1 : 1;
@@ -4812,6 +4820,9 @@ const caricature: ItemFn = (a, {t, f}, i) => {
     {!sil && tr.leather && <g><path d="M -18 -228 L -6 -112 M 18 -228 L 6 -112" stroke="#000" strokeWidth={3} /><path d="M 0 -150 L 0 -104" stroke="#9E9E9E" strokeWidth={3} strokeDasharray="4 4" />
       <path d="M -44 -200 Q -30 -180 -40 -150" stroke="#FFFFFF" strokeWidth={5} opacity={0.22} fill="none" strokeLinecap="round" /></g>}
     {!sil && tr.tie && <path d={`M 0 -224 L -9 -196 L 0 ${tr.longTie ? -96 : -140} L 9 -196 Z`} fill={tr.tie} stroke={OL} strokeWidth={3} />}
+    {!sil && tr.badge && <g transform="translate(-28 -176) rotate(-4)"><rect x={-30} y={-15} width={60} height={30} rx={5} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><T x={0} y={7} s={18}>{tr.badge}</T></g>}
+    {!sil && a.hold === 'letter' && <g transform="translate(70 -170) rotate(8)"><rect x={-40} y={-54} width={80} height={104} rx={4} fill="#FFFFFF" stroke={OL} strokeWidth={3.5} />{[0, 1, 2, 3, 4].map((q) => <path key={q} d={`M -28 ${-36 + q * 18} L 28 ${-36 + q * 18}`} stroke="#90A4AE" strokeWidth={3} />)}</g>}
+    {!sil && a.hold === 'hotdog' && <g transform="translate(78 -190) rotate(-14)"><rect x={-46} y={-12} width={92} height={24} rx={12} fill="#F2C179" stroke={OL} strokeWidth={3} /><rect x={-54} y={-16} width={108} height={16} rx={8} fill="#C8553D" stroke={OL} strokeWidth={3} /><path d="M -36 -8 Q -24 -14 -12 -8 Q 0 -2 12 -8 Q 24 -14 36 -8" stroke="#FFD23F" strokeWidth={4} fill="none" /></g>}
     {arm(1, ra)}
     {head}
     {a.label && (a.labelUntil === undefined || t < a.labelUntil) && <g transform="translate(0 52)">
@@ -5201,7 +5212,7 @@ const sapling: ItemFn = (a, {t, f}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>)};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>)};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */
