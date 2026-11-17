@@ -1,6 +1,11 @@
 # Episode 59: Who Actually Owns America's $40 Trillion in Debt? (owner request, 2026-11-17)
 
-- Runtime RUNTIME_TBD, QC QC_TBD. Light copy: `output/usdebt_documentary_light.mp4` (the full master is deleted after the light
+- Runtime 12:50 (770.2 s), QC 0 errors (90 warnings: licence notes on U.S. government datasets, since fixed in sources.yaml; 15 claims
+  awaiting human sign-off; 1 pace and 1 caption-speed note), no freeze > 5 s, no black gaps, -16.2 LUFS; TTS US$0.30
+  (gpt-4o-mini-tts, voice ash). Commercial brief: `COMMERCIAL_BRIEF.md` (score 82/100, honest; title crowded).
+- **Known issue (fix ready, not re-rendered)**: in the CBO scene (≈ 11:38) the meter rolls to "$2,146B" under "CBO PROJECTION
+  (FEB 2026)". That dollar figure is reported by search summaries of CRS but could not be verified on the source page, so the
+  storyboard now keeps the meter at the FY2026 actual ($1,052B). A re-render with cached narration ($0) applies the fix. Light copy: `output/usdebt_documentary_light.mp4` (the full master is deleted after the light
   copy is made). Short: `output/shorts/59-us-debt_short.mp4`. Thumbnails: `youtube-package/thumbnail_face.png` (F, default:
   original taxpayer TED + giant IOU, "WHO OWNS US DEBT?") and the standard cinematic IOU concept (A).
 - Title: the owner's "Who Actually Owns America's $Trillions in Debt?" with the verified figure: Treasury Debt to the Penny
