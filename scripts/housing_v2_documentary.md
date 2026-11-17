@@ -4,14 +4,14 @@ _A typical American home now costs almost five times a typical income, the mortg
 
 ## co_open - Cold open
 
-Saturday morning, an open house in an ordinary suburb. Three bedrooms, one bathroom, a lawn the size of a parking space. Half the town is in the kitchen. Someone just offered more than the asking price, in cash. And Maya, who has been saving since forever, is holding up a sign that just says, please.
+Saturday morning. An open house in an ordinary suburb. Three bedrooms, one bath, a lawn the size of a parking space. Someone just offered cash, over the asking price. And Maya, who has saved for years, is holding up a sign that just says, please.
 
 > Contains editorial interpretation (marked analysis).  
 > Cold-open scene with fictional characters (illustrative, no figures); market figures are sourced in the next segments.  
 
 ## co_hook - Cold open
 
-Here's the whole problem in one breath. The typical existing home in America sold for four hundred and sixteen thousand seven hundred dollars in October. The typical household earned eighty-seven thousand four hundred and sixty dollars last year, a record. And with mortgage rates above seven percent, the paycheck you need to buy that home has run right past the paycheck most people have.
+Here's the strange part. Americans have never earned more. The typical household made a record eighty-seven thousand four hundred and sixty dollars last year, says the Census Bureau. But the typical existing home sold for four hundred and sixteen thousand seven hundred dollars in October. And with mortgage rates above seven percent, buying it takes a paycheck most households simply don't have.
 
 > `nar_price` [source_located] NAR (Nov 12, 2026): 'The median existing-home sales price increased 0.4% to $416,700' in October 2026, from $414,900 one year ago (40th consecutive month of year-over-year gains); existing-home sales fell 5.5% to a seasonally adjusted annual rate of 3.75 million; inventory 1.59 million, a 5.1-month supply; first-time buyers 29% of October sales; cash sales 29%. (sources: nar_ehs)  
 > `census_inc` [source_located] Census (Sep 15, 2026): 'U.S. real median household income was $87,460 in 2025, up 2.6% from the previous year', the highest since tracking began in 1967; higher than in both 2019 and 2024. (sources: census_inc)  
@@ -74,14 +74,14 @@ Now the part that really hurts. Almost nobody pays cash, so the real price of a 
 
 Here's what that does to one house, by our own calculation. Take October's median price, put twenty percent down, and borrow the rest for thirty years. At two point six five percent, principal and interest come to about one thousand three hundred and forty dollars a month. At seven point one one percent, about two thousand two hundred and forty dollars. Same house, same kitchen, same tiny lawn. about nine hundred dollars more, every month, for thirty years.
 
-> `calc` [source_located] OUR calculation, NAR affordability method: price $416,700 (NAR Oct 2026 median), 20% down, loan $333,360, 30-year fixed. Monthly principal and interest: $1,343 at 2.65% (Jan 2021 low), $2,243 at 7.11% (Nov 12, 2026); difference ≈ $900 a month. Income needed at 7.11% so that P&I = 25% of income: $2,243 × 12 / 0.25 ≈ $107,600, vs Census 2025 median household income $87,460 (different income concept from NAR's median family income). Excludes taxes, insurance and mortgage insurance. (sources: nar_ehs, nar_hai, pmms, census_inc)  
+> `calc` [source_located] OUR calculation, NAR affordability method: price $416,700 (NAR Oct 2026 median), 20% down, loan $333,360, 30-year fixed. Monthly principal and interest: $1,343 at 2.65% (Jan 2021 low), $2,243 at 7.11% (Nov 12, 2026); difference ≈ $900 a month. Income needed at 7.11% so that P&I = 25% of income: $2,243 × 12 / 0.25 ≈ $107,600, vs Census 2025 median household income $87,460 (different income concept from NAR's median family income). Gap vs the median household: ≈ $20,100 (our calc.). Excludes taxes, insurance and mortgage insurance. (sources: nar_ehs, nar_hai, pmms, census_inc)  
 > `pmms` [source_located] Freddie Mac PMMS: 30-year fixed average 7.11% for the week of Nov 12, 2026 (7.18% the week before; 6.24% a year earlier). Historical weekly file: series low 2.65% (week of Jan 7, 2021); first week of 2022 3.22%, above 7% by Oct 27, 2022 (7.08%); 2023 peak 7.79% (Oct 26, 2023); 2026 low 5.98% (Feb 26, 2026) and 2026 high 7.40% (Oct 8 and Oct 15, 2026). (sources: pmms)  
 
 ## a2_draw - The rate rollercoaster
 
 Let me draw the income test. The realtors' rule of thumb says the mortgage payment shouldn't be more than a quarter of your income. At today's payment, that means earning about one hundred and eight thousand dollars a year. Now the median household. eighty-seven thousand four hundred and sixty dollars. Two bars, one gap, and that gap is the whole story. This is our calculation, before taxes and insurance.
 
-> `calc` [source_located] OUR calculation, NAR affordability method: price $416,700 (NAR Oct 2026 median), 20% down, loan $333,360, 30-year fixed. Monthly principal and interest: $1,343 at 2.65% (Jan 2021 low), $2,243 at 7.11% (Nov 12, 2026); difference ≈ $900 a month. Income needed at 7.11% so that P&I = 25% of income: $2,243 × 12 / 0.25 ≈ $107,600, vs Census 2025 median household income $87,460 (different income concept from NAR's median family income). Excludes taxes, insurance and mortgage insurance. (sources: nar_ehs, nar_hai, pmms, census_inc)  
+> `calc` [source_located] OUR calculation, NAR affordability method: price $416,700 (NAR Oct 2026 median), 20% down, loan $333,360, 30-year fixed. Monthly principal and interest: $1,343 at 2.65% (Jan 2021 low), $2,243 at 7.11% (Nov 12, 2026); difference ≈ $900 a month. Income needed at 7.11% so that P&I = 25% of income: $2,243 × 12 / 0.25 ≈ $107,600, vs Census 2025 median household income $87,460 (different income concept from NAR's median family income). Gap vs the median household: ≈ $20,100 (our calc.). Excludes taxes, insurance and mortgage insurance. (sources: nar_ehs, nar_hai, pmms, census_inc)  
 > `census_inc` [source_located] Census (Sep 15, 2026): 'U.S. real median household income was $87,460 in 2025, up 2.6% from the previous year', the highest since tracking began in 1967; higher than in both 2019 and 2024. (sources: census_inc)  
 
 ## a2_hai - The rate rollercoaster
@@ -196,8 +196,10 @@ So who pays for all of this? The first-time buyer. In the National Association o
 
 ## payoff - The basement generation
 
-So why can't Americans afford a home? Not because of one villain. Prices outran paychecks. Rates piled hundreds of dollars onto the monthly payment. Owners with cheap loans stopped selling. Builders spent a decade building too little. And local rules make the cheapest homes the hardest to build. Fix one and you help a little. Fix them together, and the starter home comes back.
+So why can't Americans afford a home? Because the math broke in two places at once. The price climbed to almost five years of income. And the rate turned the very same house into about nine hundred dollars more, every month. By our calculation, buying the typical home now takes about one hundred and eight thousand dollars a year, roughly twenty thousand more than the typical household earns. And the things that would close that gap are stuck. Owners with cheap loans won't sell, builders spent a decade building too little, and local rules make the cheapest homes the hardest to build. The starter home didn't just disappear. It was priced out, rated out, and zoned out.
 
+> `calc` [source_located] OUR calculation, NAR affordability method: price $416,700 (NAR Oct 2026 median), 20% down, loan $333,360, 30-year fixed. Monthly principal and interest: $1,343 at 2.65% (Jan 2021 low), $2,243 at 7.11% (Nov 12, 2026); difference ≈ $900 a month. Income needed at 7.11% so that P&I = 25% of income: $2,243 × 12 / 0.25 ≈ $107,600, vs Census 2025 median household income $87,460 (different income concept from NAR's median family income). Gap vs the median household: ≈ $20,100 (our calc.). Excludes taxes, insurance and mortgage insurance. (sources: nar_ehs, nar_hai, pmms, census_inc)  
+> `ratio` [source_located] JCHS (Jun 2026): the median existing single-family price 'hovered near five times the median household income, falling slightly from the all-time high of 5.0 in 2022 to 4.7 in 2025. By comparison, this ratio was 4.1 in 2019 and averaged 3.2 throughout the 1990s.' Press release: 'Home prices have increased 54 percent nationwide since 2020'. (sources: jchs, jchs_pr)  
 > Contains editorial interpretation (marked analysis).  
 > Conclusion drawn from the sourced facts above.  
 

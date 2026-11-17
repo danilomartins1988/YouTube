@@ -97,7 +97,16 @@ starter home, home prices 2026, housing crisis explained, economics explained, T
 Hashtags (3): #housing #realestate #economics
 
 ## 12. Chapter structure (final timestamps after render)
-See `youtube-package/chapters.txt` (generated from the final `timeline.json`).
+From the final `timeline.json` (706.6 s):
+```
+0:00 Cold open
+1:14 The price tag
+2:47 The rate rollercoaster
+5:14 The great lock-in
+7:02 The homes we never built
+8:53 The zoning board
+10:20 The basement generation
+```
 
 ## 13. Shorts (3)
 1. **Built:** "The Typical Home Costs $416,700. The Typical Paycheck Can't Keep Up" — hook: record paychecks vs the median
