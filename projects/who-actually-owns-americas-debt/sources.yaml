@@ -1,0 +1,233 @@
+# Sources and claims for "Who Actually Owns America's $40 Trillion in Debt?" (Episode 59, owner request 2026-11-17).
+# Every figure was read on its primary page or official dataset/API on 2026-11-17 (notes: docs/episodes/59-us-debt/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars only.
+# RULES: Debt to the Penny = daily Treasury total (date every figure); TIC country figures follow CUSTODY, not always the
+# beneficial owner (Treasury's own caveat: say so); Z.1 holder figures are market values for marketable Treasuries held
+# outside the federal government (end of Q2 2026); Fed H.4.1 = face value incl. inflation compensation, Wednesday level;
+# MTS fiscal year 2026 = Oct 1, 2025 - Sep 30, 2026 ("fiscal"); CBO numbers are PROJECTIONS (February 2026 baseline, read
+# via CRS because cbo.gov refused automated access); shares, per-day figures and the rough ownership split are OUR
+# CALCULATIONS (labelled). No flags, no logos, no real people drawn.
+sources:
+  - id: dtp
+    title: "Debt to the Penny (daily total public debt outstanding, debt held by the public, intragovernmental holdings)"
+    publisher: U.S. Department of the Treasury, Bureau of the Fiscal Service (Fiscal Data)
+    url: https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny
+    published: "2026-11-16"
+    accessed: "2026-11-17"
+    period: "Daily, latest record Nov 13, 2026 (series read Sep 1, 2025 - Nov 13, 2026)"
+    kind: dataset
+    credit: "U.S. Treasury, Debt to the Penny"
+    notes: "API: api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny"
+  - id: mspd
+    title: "Monthly Statement of the Public Debt, Summary of Treasury Securities Outstanding (Table I), October 31, 2026"
+    publisher: U.S. Department of the Treasury, Bureau of the Fiscal Service (Fiscal Data)
+    url: https://fiscaldata.treasury.gov/datasets/monthly-statement-public-debt/
+    published: "2026-11"
+    accessed: "2026-11-17"
+    period: "As of Oct 31, 2026"
+    kind: dataset
+    credit: "U.S. Treasury, MSPD"
+    notes: "API: v1/debt/mspd/mspd_table_1"
+  - id: auct
+    title: "Treasury Securities Auctions Data (auction results incl. bidder-class allotments)"
+    publisher: U.S. Department of the Treasury, Bureau of the Fiscal Service (Fiscal Data / TreasuryDirect)
+    url: https://fiscaldata.treasury.gov/datasets/treasury-securities-auctions-data/
+    published: "2026-10"
+    accessed: "2026-11-17"
+    period: "Auctions dated Oct 1, 2025 - Sep 30, 2026; 10-year note auction of Aug 12, 2026"
+    kind: dataset
+    credit: "U.S. Treasury auction results"
+    notes: "API: v1/accounting/od/auctions_query"
+  - id: tic
+    title: "TIC Table 5: Major Foreign Holders of Treasury Securities (holdings at end of period, billions of dollars)"
+    publisher: U.S. Department of the Treasury / Federal Reserve Board (Treasury International Capital system)
+    url: https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.txt
+    published: "2026-10"
+    accessed: "2026-11-17"
+    period: "Aug 2025 - Aug 2026 (latest month: August 2026)"
+    kind: dataset
+    credit: "U.S. Treasury TIC data"
+  - id: tichist
+    title: "Major Foreign Holders of Treasury Securities, historical (mfhhis01)"
+    publisher: U.S. Department of the Treasury (TIC)
+    url: https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/mfhhis01.txt
+    published: "2026"
+    accessed: "2026-11-17"
+    period: "2000 - 2025 (China, Mainland: Nov 2013 peak)"
+    kind: dataset
+    credit: "U.S. Treasury TIC data"
+  - id: z1
+    title: "Financial Accounts of the United States (Z.1), table 'Treasury securities' (instrument F.3.2 levels): holders, 2026:Q2"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/z1/current/html/F3_2_s.htm
+    published: "2026-09-11"
+    accessed: "2026-11-17"
+    period: "End of 2026:Q2 (June 30, 2026); market value for holders"
+    kind: dataset
+    credit: "Federal Reserve, Z.1 Financial Accounts"
+  - id: h41
+    title: "Factors Affecting Reserve Balances (H.4.1), release of November 12, 2026"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/h41/current/h41.htm
+    published: "2026-11-12"
+    accessed: "2026-11-17"
+    period: "Wednesday Nov 11, 2026; change vs Nov 12, 2025"
+    kind: dataset
+    credit: "Federal Reserve, H.4.1"
+  - id: treast
+    title: "Assets: Securities Held Outright: U.S. Treasury Securities, Wednesday level (TREAST), from the H.4.1"
+    publisher: Board of Governors of the Federal Reserve System (series via FRED, Federal Reserve Bank of St. Louis)
+    url: https://fred.stlouisfed.org/series/TREAST
+    published: "2026-11-12"
+    accessed: "2026-11-17"
+    period: "Weekly, 2002 - Nov 11, 2026 (peak Jun 8, 2022)"
+    kind: dataset
+    credit: "Federal Reserve H.4.1 (via FRED)"
+  - id: mts
+    title: "Monthly Treasury Statement, Table 9: Summary of Receipts and Outlays by Function, fiscal year to date through September 30, 2026"
+    publisher: U.S. Department of the Treasury, Bureau of the Fiscal Service (Fiscal Data)
+    url: https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/
+    published: "2026-10"
+    accessed: "2026-11-17"
+    period: "Fiscal year 2026 (Oct 1, 2025 - Sep 30, 2026) and fiscal year 2025"
+    kind: dataset
+    credit: "U.S. Treasury, Monthly Treasury Statement"
+    notes: "API: v1/accounting/mts/mts_table_9, record_date 2026-09-30"
+  - id: avgrate
+    title: "Average Interest Rates on U.S. Treasury Securities"
+    publisher: U.S. Department of the Treasury, Bureau of the Fiscal Service (Fiscal Data)
+    url: https://fiscaldata.treasury.gov/datasets/average-interest-rates-treasury-securities/
+    published: "2026-11"
+    accessed: "2026-11-17"
+    period: "Oct 31, 2021 and Oct 31, 2026"
+    kind: dataset
+    credit: "U.S. Treasury, average interest rates"
+  - id: crs_ss
+    title: "Social Security: Selected Findings of the 2026 Annual Report (CRS In Focus IF13256), based on the 2026 OASDI Trustees Report"
+    publisher: Congressional Research Service
+    url: https://www.everycrsreport.com/files/2026-06-25_IF13256_e1a3332f1a9ae29c3698a1f2e5a5a1d598ec6c57.html
+    published: "2026-06-25"
+    accessed: "2026-11-17"
+    period: "Calendar 2025 actual; projections from the 2026 Trustees Report"
+    credit: "CRS (2026 Trustees Report)"
+    notes: "ssa.gov refused automated access (HTTP 403); CRS reproduces the Trustees' figures."
+  - id: crs_deficit
+    title: "Deficits, Debt, and the Economy: An Introduction (CRS R44383, updated Nov 5, 2026), citing CBO's February 2026 baseline"
+    publisher: Congressional Research Service
+    url: https://www.everycrsreport.com/reports/R44383.html
+    published: "2026-11-05"
+    accessed: "2026-11-17"
+    period: "CBO baseline projections FY2026-FY2036"
+    credit: "CBO (Feb 2026), via CRS"
+    notes: "cbo.gov refused automated access (HTTP 403); figures are CBO's as reported by CRS."
+claims:
+  - id: dtp
+    text: "Debt to the Penny, Nov 13, 2026: total public debt outstanding $40,616,678,827,092.07; debt held by the public $32,825,322,014,326.67; intragovernmental holdings $7,791,356,812,765.40."
+    spoken: forty point six trillion dollars
+    display: "$40.6 trillion total public debt (Nov 13, 2026)"
+    value: 40.62
+    fields: {date_spoken: November thirteenth, public_spoken: thirty-two point eight trillion dollars, intra_spoken: seven point eight trillion dollars}
+    source_ids: [dtp]
+    status: source_located
+  - id: growth
+    text: "Debt to the Penny: total was $38,150,716,416,656.92 on Nov 13, 2025 and $40,616,678,827,092.07 on Nov 13, 2026, an increase of about $2.47 trillion; OUR CALCULATION: about $6.8 billion per day on average. Milestones (first record at or above): $38T on Oct 21, 2025; $39T on Mar 17, 2026; $40T on Aug 18, 2026."
+    spoken: two and a half trillion dollars
+    display: "+$2.47T in 12 months (Nov 13, 2025 to Nov 13, 2026)"
+    fields: {prev_spoken: thirty-eight point two trillion dollars, day_spoken: six point eight billion dollars, milestones_spoken: thirty-eight trillion in October twenty twenty-five, thirty-nine trillion in March, and forty trillion on August eighteenth}
+    source_ids: [dtp]
+    status: source_located
+    verification_note: "Rounded: 2.466T -> 'about two and a half trillion'; per day = 2.466T / 365 (our calculation)."
+  - id: auctions
+    text: "Treasury auction results dated Oct 1, 2025 - Sep 30, 2026: 436 auctions (328 bills, 82 notes, 26 bonds); total accepted about $32.9 trillion (OUR SUM; includes Federal Reserve rollover add-ons; mostly short-term bills that roll over)."
+    spoken: four hundred and thirty-six auctions
+    display: "FY2026: 436 auctions, ≈ $32.9T sold (our sum, incl. Fed rollovers)"
+    fields: {total_spoken: nearly thirty-three trillion dollars}
+    source_ids: [auct]
+    status: source_located
+  - id: tenyear
+    text: "10-year note auction of Aug 12, 2026 (CUSIP 91282CRF0): offering $42.0bn; competitive tenders $106.2bn, accepted $41.8bn; bid-to-cover 2.53; high yield 4.683%; accepted: indirect bidders $32.1bn (76.7% of competitive accepted, our calc.), direct bidders $6.1bn (14.7%), primary dealers $3.6bn (8.6%)."
+    spoken: forty-two billion dollars
+    display: "10-yr note, Aug 12, 2026: $42bn offered · bid-to-cover 2.53"
+    fields: {ind_spoken: about three quarters, dir_spoken: about fifteen percent}
+    source_ids: [auct]
+    status: source_located
+    verification_note: "Indirect bidders bid through a dealer and include foreign central banks among others (not only foreigners); said so."
+  - id: tic
+    text: "TIC Table 5, August 2026 (billions): Japan 1,068.3; United Kingdom 1,009.5; China, Mainland 590.7; Belgium 490.5; Canada 464.6; Cayman Islands 463.0; Luxembourg 448.2; Grand total 9,331.7; of which foreign official 3,755.6. OUR CALCULATION: foreign total = 23.2% of total public debt on Aug 31, 2026 ($40,175.6bn). Treasury note: data are collected from custodians; securities held in overseas custody 'may not be attributed to the actual owners'."
+    spoken: five hundred and ninety-one billion dollars
+    display: "China: $590.7bn (TIC, Aug 2026)"
+    fields: {total_spoken: nine point three trillion dollars, japan_spoken: one point zero seven trillion dollars, uk_spoken: one point zero one trillion dollars, share_spoken: twenty-three percent, official_spoken: three point eight trillion dollars}
+    source_ids: [tic]
+    status: source_located
+  - id: china_peak
+    text: "TIC historical: China, Mainland held $1,316.7bn in November 2013 (its highest month-end in the series); $590.7bn in August 2026 is less than half (our comparison)."
+    spoken: one point three trillion dollars
+    display: "China, Nov 2013: $1,316.7bn (TIC)"
+    fields: {year_spoken: twenty thirteen}
+    source_ids: [tichist, tic]
+    status: source_located
+  - id: china_share
+    text: "OUR CALCULATION: China's TIC holdings in August 2026 ($590.7bn) / total public debt on Aug 31, 2026 ($40,175.6bn) = 1.47%; / debt held by the public ($32,415.0bn) = 1.8%."
+    spoken: about one and a half percent
+    display: "China ≈ 1.5% of total U.S. debt (our calc., Aug 2026)"
+    fields: {cents_spoken: about a penny and a half of every dollar}
+    source_ids: [tic, dtp]
+    status: source_located
+  - id: z1
+    text: "Fed Z.1 (released Sep 11, 2026), Treasury securities held outside the federal government, end of 2026:Q2, billions (holders at market value): total 29,013.6; rest of the world 9,269.2; central bank 4,082.7; money market funds 3,281.6; household sector 2,831.1; mutual funds 1,741.2 + ETFs 807.6 + closed-end 2.0 = 2,550.8; U.S.-chartered depository institutions 1,799.1 + foreign banking offices 140.0 + banks in U.S.-affiliated areas 28.2 + credit unions 73.6 = 2,040.9; state and local governments 1,647.6; pension funds: private 590.2 + state/local 561.6 + federal 23.3 = 1,175.1; insurers: P&C 380.2 + life 229.2 = 609.4 (sums are our calculation)."
+    spoken: three point three trillion dollars
+    display: "Money market funds: $3.28T (Fed Z.1, Q2 2026)"
+    fields: {hh_spoken: two point eight trillion dollars, funds_spoken: two point six trillion dollars, banks_spoken: two trillion dollars, sl_spoken: one point six trillion dollars, pens_spoken: one point two trillion dollars, ins_spoken: about six hundred billion dollars}
+    source_ids: [z1]
+    status: source_located
+  - id: fed
+    text: "H.4.1 (Nov 12, 2026): U.S. Treasury securities held outright, Wednesday Nov 11, 2026: $4,586,607 million; bills $580,660 million (week average bills up $382,036 million vs week ended Nov 12, 2025). TREAST peak: $5,771,393 million on Jun 8, 2022."
+    spoken: four point six trillion dollars
+    display: "Fed Treasury holdings: $4.59T (H.4.1, Nov 11, 2026)"
+    fields: {peak_spoken: five point eight trillion dollars, bills_spoken: three hundred and eighty-two billion dollars}
+    source_ids: [h41, treast]
+    status: source_located
+  - id: split
+    text: "OUR ROUGH SPLIT of the $40.6T total (mixed dates; TIC is August 2026, H.4.1 Nov 11, Debt to the Penny Nov 13): foreign holders ≈ $9.3T (≈23%); Federal Reserve ≈ $4.6T (≈11%); intragovernmental (trust funds) ≈ $7.8T (≈19%); everyone else, mostly U.S. investors ≈ $18.9T (≈47%, residual)."
+    spoken: about a quarter
+    display: "Rough split (our calc.): foreign ≈23% · Fed ≈11% · gov't funds ≈19% · other U.S. ≈47%"
+    fields: {fed_spoken: about a ninth, intra_spoken: almost a fifth, us_spoken: close to half, dom_spoken: roughly three quarters}
+    source_ids: [dtp, tic, h41]
+    status: source_located
+    verification_note: "Residual approach; dates and valuation bases differ (TIC custody-based; H.4.1 face value). Labelled ROUGH, OUR CALCULATION."
+  - id: bills
+    text: "MSPD Oct 31, 2026: marketable debt held by the public $32,129.4bn, of which bills $7,381.3bn (23%, our calc.); notes $16,333.5bn; bonds $5,549.9bn; TIPS $2,156.8bn; FRNs $707.9bn."
+    spoken: almost a quarter
+    display: "Bills: $7.38T of $32.13T marketable (MSPD, Oct 31, 2026)"
+    source_ids: [mspd]
+    status: source_located
+  - id: trust
+    text: "CRS IF13256 (Jun 25, 2026), from the 2026 Trustees Report: combined OASI and DI trust fund reserves $2,721.5bn at start of 2025, $2,561.3bn at end of 2025 (change -$160.2bn; revenue $1,449.3bn, costs $1,609.5bn); 'In 2025, total costs exceeded total revenues'; OASI reserves projected depleted in Q4 2032; combined OASDI in Q3 2034, after which tax revenue covers about 83% of scheduled benefits. OUR CALCULATION: $2,561.3bn / intragovernmental holdings on Dec 31, 2025 ($7,667.3bn) = 33%."
+    spoken: two point five six trillion dollars
+    display: "OASDI trust funds: $2.56T at end of 2025 (Trustees via CRS)"
+    fields: {drop_spoken: one hundred and sixty billion dollars, pay_spoken: eighty-three percent, share_spoken: about a third}
+    source_ids: [crs_ss, dtp]
+    status: source_located
+  - id: mts
+    text: "MTS Table 9, fiscal year 2026 (through Sep 30, 2026): net interest $1,051.8bn (FY2025 $970.4bn); national defense $965.2bn (FY2025 $916.6bn); Medicare $1,072.6bn; Social Security $1,667.1bn; total outlays $7,395.8bn; total receipts $5,403.3bn. OUR CALCULATIONS: net interest = 14.2% of outlays; ≈ $2.9bn per day; deficit ≈ $1.99T."
+    spoken: one point zero five trillion dollars
+    display: "FY2026 net interest: $1.05T vs national defense: $965bn (MTS)"
+    fields: {def_spoken: nine hundred and sixty-five billion dollars, int25_spoken: nine hundred and seventy billion dollars, def25_spoken: nine hundred and seventeen billion dollars, day_spoken: two point nine billion dollars, share_spoken: about fourteen cents of every federal dollar spent}
+    source_ids: [mts]
+    status: source_located
+    verification_note: "'National defense' is budget function 050 in the MTS (includes DoD military and some other defense activities). Net interest is net of interest received (budget function 900)."
+  - id: rates
+    text: "Average interest rate on total marketable Treasury debt: 1.455% on Oct 31, 2021; 3.570% on Oct 31, 2026."
+    spoken: three point five seven percent
+    display: "Avg. rate on marketable debt: 1.46% (Oct 2021) → 3.57% (Oct 2026)"
+    fields: {old_spoken: one point four six percent}
+    source_ids: [avgrate]
+    status: source_located
+  - id: cbo
+    text: "CRS R44383 (Nov 5, 2026): 'in FY2026, net interest payments are projected to be $1.039 trillion, or 3.3% of GDP'; 'CBO projects federal net interest payments of 4.6% of GDP in FY2036', which would eclipse the highest share since FY1940 (3.2% of GDP in FY1991). CBO February 2026 baseline (projection)."
+    spoken: four point six percent
+    display: "CBO projection (Feb 2026): net interest 4.6% of GDP in FY2036"
+    fields: {now_spoken: three point three percent, peak_spoken: three point two percent, peak_year_spoken: nineteen ninety-one}
+    source_ids: [crs_deficit]
+    status: source_located
+    verification_note: "Projection, not a result; said so. CBO's FY2026 projection ($1.039T) differs from the MTS actual ($1.052T): different vintages."

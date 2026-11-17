@@ -1,0 +1,291 @@
+# Documentary (target 11-13 min), built like an episode of a prime-time animated sitcom: cold open, channel intro
+# (our "theme"), a show title card, five acts with bumpers, a button joke. The five parts stay an INTERNAL structure
+# (never narrated as missions). Numbers come from sources.yaml via {{placeholders}}; years are spoken as words.
+# Rules: date every figure; TIC = custody-based (said); shares, per-day figures and the rough split are our calculations
+# (said); CBO = projection (said); fiscal years labelled; jokes never change a number; non-partisan.
+title: "Who Actually Owns America's $40 Trillion in Debt?"
+logline: The U.S. owes more than forty trillion dollars, but China holds only about one and a half percent of it. Most of the
+  IOU is held by Americans, their funds, banks and pensions, by the Federal Reserve, and by the government's own trust funds,
+  while the interest bill now outruns the defense budget.
+segments:
+- id: co_open
+  chapter: Cold open
+  narration: Picture the biggest IOU on Earth. It's signed by the United States government. It's so long that nobody has
+    ever read the whole thing. And every single day, a few more billion dollars get added at the bottom.
+  claims: []
+  analysis: true
+  source_note: Cold-open metaphor (illustrative); the daily growth is sourced in a1_speed.
+- id: co_hook
+  chapter: Cold open
+  narration: On {{dtp.date_spoken}}, the Treasury's own daily count, called Debt to the Penny, stood at {{dtp}}. So who actually
+    holds this IOU? Most people would guess China. Most people would be wrong.
+  claims:
+  - dtp
+- id: co_promise
+  chapter: Cold open
+  narration: Let's open the vault. We'll meet the buyers, the dinner guests, the warehouse that bought trillions, and the filing
+    cabinet full of Social Security's IOUs. Then we'll check the meter.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: title_card
+  chapter: Cold open
+  narration: ''
+  claims: []
+- id: a1_card
+  chapter: The IOU
+  narration: ''
+  claims: []
+- id: a1_split
+  chapter: The IOU
+  narration: First, what is this debt? It's every Treasury security the government has issued and not yet paid back. It comes
+    in two pieces. {{dtp.public_spoken|cap}} is debt held by the public. Bills, notes and bonds that investors bought. The other
+    {{dtp.intra_spoken}} is debt the government owes to itself, to its own trust funds.
+  claims:
+  - dtp
+- id: a1_draw
+  chapter: The IOU
+  narration: Let me draw it. Here's the whole IOU. Now split it. The big box is held by the public. That means anyone outside
+    the federal government, and that includes the Federal Reserve. The smaller box is intragovernmental. Social Security's trust
+    funds hold {{trust.share_spoken}} of it, by our calculation. Hold on to that box. We'll open it later.
+  claims:
+  - trust
+- id: a1_speed
+  chapter: The IOU
+  narration: And it keeps growing. One year earlier, the total was {{growth.prev_spoken}}. That's about {{growth}} added in twelve
+    months, or roughly {{growth.day_spoken}} a day, by our calculation. The counter passed {{growth.milestones_spoken}}.
+  claims:
+  - growth
+- id: a1_auction
+  chapter: The IOU
+  narration: So where does new debt come from? An auction. In fiscal year twenty twenty-six, the Treasury held {{auctions}}, and
+    sold {{auctions.total_spoken}} of securities, by our count. Most of that was short-term bills, paid off and sold again, over
+    and over.
+  claims:
+  - auctions
+- id: a1_bidders
+  chapter: The IOU
+  narration: Take one sale. On August twelfth, the Treasury auctioned {{tenyear}} of ten-year notes, and bids came in for more
+    than twice that. Of what the bidders won, {{tenyear.ind_spoken}} went to indirect bidders, who bid through a dealer. That group
+    includes foreign central banks. Direct bidders took {{tenyear.dir_spoken}}. Big dealer banks took the rest.
+  claims:
+  - tenyear
+- id: a1_bills
+  chapter: The IOU
+  narration: And a lot of that paper is short-dated. At the end of October, Treasury bills, which mature within a year, made up
+    {{bills}} of the marketable debt held by the public, by our calculation. Short paper has to be refinanced quickly. Remember
+    that when we get to the interest bill.
+  claims:
+  - bills
+- id: a1_turn
+  chapter: The IOU
+  narration: The buyers line up every week. But who ends up holding the paper?
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: a2_card
+  chapter: The dinner party
+  narration: ''
+  claims: []
+- id: a2_table
+  chapter: The dinner party
+  narration: Picture every foreign holder at one long dinner table. In August twenty twenty-six, according to the Treasury's
+    international capital data, foreigners held {{tic.total_spoken}} of Treasury securities. The biggest plate at the table isn't
+    China's. It's Japan's, at {{tic.japan_spoken}}. Second, the United Kingdom, at {{tic.uk_spoken}}.
+  claims:
+  - tic
+- id: a2_china
+  chapter: The dinner party
+  narration: China comes third, with {{tic}}. And its plate has been shrinking. Back in {{china_peak.year_spoken}}, China held
+    {{china_peak}}. Today, it holds less than half of that.
+  claims:
+  - tic
+  - china_peak
+- id: a2_share
+  chapter: The dinner party
+  narration: Now compare that with the whole IOU. China's holdings are {{china_share}} of the total debt, by our calculation.
+    {{china_share.cents_spoken|cap}}. All foreign holders together, about {{tic.share_spoken}}. The idea that China owns America
+    simply isn't what the data show.
+  claims:
+  - china_share
+  - tic
+- id: a2_draw
+  chapter: The dinner party
+  narration: Let me chart it. China in twenty thirteen, a tall bar. China today, less than half as tall. Japan today, the largest
+    foreign holder. Now, for scale, the whole debt. All three bars fit in one corner of it.
+  claims:
+  - china_peak
+  - tic
+  - dtp
+- id: a2_custody
+  chapter: The dinner party
+  narration: One caveat. The Treasury itself warns that these numbers follow where securities are held in custody, not always
+    who really owns them. Bonds kept in places like Belgium, Luxembourg or the Cayman Islands may belong to investors from somewhere
+    else. So the guest list is a good map, not a perfect one.
+  claims:
+  - tic
+- id: a2_official
+  chapter: The dinner party
+  narration: About {{tic.official_spoken}} of the foreign total sits with official holders, mostly central banks, which keep
+    Treasuries as reserves. When a country needs safe dollars in a hurry, this is the pantry it opens.
+  claims:
+  - tic
+- id: a3_card
+  chapter: Made in America
+  narration: ''
+  claims: []
+- id: a3_home
+  chapter: Made in America
+  narration: So if roughly three quarters of the debt isn't foreign, who holds it? Mostly, Americans. Here's the Federal Reserve's
+    own breakdown, at the end of June twenty twenty-six, for Treasuries held outside the federal government.
+  claims:
+  - split
+  - z1
+- id: a3_mmf
+  chapter: Made in America
+  narration: Money market funds held {{z1}}. That's where many people park their cash. Households held {{z1.hh_spoken}} directly.
+    Mutual funds and exchange-traded funds, about {{z1.funds_spoken}}.
+  claims:
+  - z1
+- id: a3_banks
+  chapter: Made in America
+  narration: Banks and credit unions held about {{z1.banks_spoken}}. State and local governments, {{z1.sl_spoken}}. Pension funds,
+    {{z1.pens_spoken}}. And insurance companies, {{z1.ins_spoken}}.
+  claims:
+  - z1
+- id: a3_you
+  chapter: Made in America
+  narration: So if you have a retirement plan, a pension, a money market fund or a bank account, there's a decent chance a slice
+    of this IOU is working for you. The interest the government pays doesn't vanish. A lot of it lands in American accounts.
+  claims: []
+  analysis: true
+  source_note: Inference from the Z.1 holder breakdown (domestic funds, banks, pensions, households).
+- id: a3_draw
+  chapter: Made in America
+  narration: Let me draw the loop. You put savings into a fund. The fund lends to the Treasury by buying a bond. The Treasury
+    pays interest back to the fund. And the fund pays you. One person's debt is another person's savings.
+  claims: []
+  analysis: true
+  source_note: Simplified flow diagram (no figures).
+- id: a3_fed
+  chapter: Made in America
+  narration: Then there's the biggest single holder in the country. The Federal Reserve. On November eleventh, the Fed held {{fed}}
+    in Treasury securities, stacked in the warehouse of its balance sheet.
+  claims:
+  - fed
+- id: a3_qt
+  chapter: Made in America
+  narration: That's down from a peak of {{fed.peak_spoken}} in June twenty twenty-two. After the pandemic, the Fed let bonds mature
+    without replacing them all, and the shelves thinned out. But over the past year, its holdings of short-term bills grew by about
+    {{fed.bills_spoken}}.
+  claims:
+  - fed
+- id: a3_turn
+  chapter: Made in America
+  narration: Add it up, roughly. Foreign holders, {{split}}. The Fed, {{split.fed_spoken}}. Other investors, mostly American,
+    {{split.us_spoken}}. And the last big piece? The one the government owes to itself.
+  claims:
+  - split
+- id: a4_card
+  chapter: The IOU to yourself
+  narration: ''
+  claims: []
+- id: a4_cabinet
+  chapter: The IOU to yourself
+  narration: Meet the filing cabinet. For years, Social Security collected more than it paid out in benefits. The surplus was
+    lent to the Treasury, in exchange for special Treasury securities held only inside the government. IOUs, filed in a drawer.
+  claims: []
+  analysis: true
+  source_note: Mechanism (trust fund surpluses invested in intragovernmental Treasury securities), per Debt to the Penny definitions and CRS IF13256.
+- id: a4_reserves
+  chapter: The IOU to yourself
+  narration: At the end of twenty twenty-five, those trust fund reserves held {{trust}}, according to the trustees, as reported
+    by the Congressional Research Service. But in twenty twenty-five, costs beat revenue, and the reserves shrank by {{trust.drop_spoken}}.
+  claims:
+  - trust
+- id: a4_draw
+  chapter: The IOU to yourself
+  narration: Let me draw the round trip. Payroll taxes flow into the trust fund. Any surplus goes to the Treasury, which hands
+    back an IOU. When benefits cost more than taxes bring in, the fund hands the IOU back, and the Treasury pays cash. To find that
+    cash, it borrows from the public.
+  claims: []
+  analysis: true
+  source_note: Simplified flow diagram (no figures).
+- id: a4_shift
+  chapter: The IOU to yourself
+  narration: Notice what happens to the total. Nothing, at first. The IOU just moves from the small box to the big box. Debt the
+    government owed itself becomes debt it owes investors.
+  claims: []
+  analysis: true
+  source_note: Accounting consequence of redeeming intragovernmental holdings with borrowing from the public.
+- id: a4_date
+  chapter: The IOU to yourself
+  narration: And the drawer won't last forever. The trustees project the retirement fund's reserves run out in late twenty thirty-two.
+    Counting the disability fund too, the combined reserves last into twenty thirty-four. After that, incoming taxes would cover
+    about {{trust.pay_spoken}} of scheduled benefits, unless Congress changes the law.
+  claims:
+  - trust
+- id: a5_card
+  chapter: The meter is running
+  narration: ''
+  claims: []
+- id: a5_meter
+  chapter: The meter is running
+  narration: Which brings us to the meter. In fiscal year twenty twenty-six, which ended in September, the government's net interest
+    outlays reached {{mts}}, according to the Monthly Treasury Statement. That's about {{mts.day_spoken}} every day, by our calculation.
+  claims:
+  - mts
+- id: a5_defense
+  chapter: The meter is running
+  narration: Now put national defense on the other side of the scale. Same year, same statement. {{mts.def_spoken|cap}}. Interest
+    outweighed it. And it wasn't a one-off. In fiscal twenty twenty-five, interest was {{mts.int25_spoken}}, and defense, {{mts.def25_spoken}}.
+  claims:
+  - mts
+- id: a5_why
+  chapter: The meter is running
+  narration: Why did the meter speed up? Rates. In October twenty twenty-one, the average interest rate on the government's marketable
+    debt was {{rates.old_spoken}}. By October twenty twenty-six, it was {{rates}}. Cheap old bonds keep maturing, and they get replaced
+    with pricier new ones.
+  claims:
+  - rates
+- id: a5_draw
+  chapter: The meter is running
+  narration: Let me put them side by side. Defense, fiscal twenty twenty-six. Net interest, a bit taller. Medicare, about the same
+    height as interest. Social Security, taller still. Interest is now {{mts.share_spoken}}, by our calculation.
+  claims:
+  - mts
+- id: a5_who
+  chapter: The meter is running
+  narration: And remember who sits on the other end of that meter. The holders we met tonight. Money funds, pensions, banks, households,
+    the Fed, and investors abroad. Every tick of the meter is a payment to somebody.
+  claims: []
+  analysis: true
+  source_note: Links the interest bill back to the holders (Z.1, TIC, H.4.1); no new figures.
+- id: a5_cbo
+  chapter: The meter is running
+  narration: And the Congressional Budget Office expects the meter to keep speeding up. In its February baseline, net interest climbs
+    from {{cbo.now_spoken}} of the economy this year to {{cbo}} by twenty thirty-six. The previous record since nineteen forty was
+    {{cbo.peak_spoken}}, in {{cbo.peak_year_spoken}}. That's a projection, not a result.
+  claims:
+  - cbo
+- id: payoff
+  chapter: The bill
+  narration: So who actually owns America's debt? Not China, at least not much of it. Foreign investors hold about a quarter, and
+    Japan holds more than China. The Fed holds about a ninth. The government owes almost a fifth to itself, mostly to future retirees.
+    And most of the rest belongs to Americans, through money funds, banks, pensions and their own savings. The biggest lender to the
+    United States is the United States. Which means the interest bill isn't only a cost. It's also somebody's income.
+  claims:
+  - split
+  - tic
+  analysis: true
+  source_note: Conclusion drawn from the sourced facts above (rough split = our calculation).
+- id: teaser
+  chapter: The bill
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: The bill
+  narration: ''
+  claims: []

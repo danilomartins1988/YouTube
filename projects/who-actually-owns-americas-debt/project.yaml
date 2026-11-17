@@ -1,0 +1,49 @@
+title: "Who Actually Owns America's $40 Trillion in Debt?"
+slug: who-actually-owns-americas-debt
+language: en
+# Episode 59 (owner request, 2026-11-17: "Pode produzir direto sem precisar aprovar"). Owner title "Who Actually Owns
+# America's $Trillions in Debt?" with the verified figure: Treasury Debt to the Penny $40.62T on Nov 13, 2026 -> "$40 Trillion"
+# (rounded down; the total first passed $40T on Aug 18, 2026). Built like Ep 56: a prime-time animated sitcom episode
+# (genre level only: every character, design, name, title card text and sound is original). Visual direction:
+# visual_direction.yaml. Five-part structure internal only. Money: US dollars only. Fiscal years end Sep 30: say "fiscal".
+renderer: remotion
+remotion_geo: [world]
+style:
+  name: cartoon-day
+  palette:
+    bg: "#F4F1E6"
+    bg2: "#FBF9F1"
+    ink: "#14233A"
+    muted: "#677287"
+    land: "#9CCB7A"
+    border: "#2E4A66"
+    accent: "#F2B63A"
+    accent2: "#2E6BD1"
+    accent3: "#2E9E6B"
+    risk: "#D93A49"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 4
+# TV structure: cold open (hook) -> channel intro (the "theme") -> show title card -> acts.
+intro:
+  after_segment: co_promise
+tts_overrides:
+  openai:
+    voice: ash
+    instructions: >-
+      Voice: the narrator of a smart prime-time animated comedy who is also a sharp economics documentarian. Warm, wry
+      and lively, with a playful twinkle on the jokes and dry deadpan on the punchlines, but always clear and credible on
+      facts. Pacing: brisk in the comic beats, then slow down noticeably and land every number cleanly. Take a short beat
+      before a punchline and after a surprising figure. Natural American English, conversational, never an announcer,
+      never alarmist, never partisan.

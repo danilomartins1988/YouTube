@@ -1,0 +1,58 @@
+# Visual direction for who-actually-owns-americas-debt (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Director's edit (Ep 59). OWNER DIRECTION: as animated as possible, like a prime-time TV cartoon sitcom (genre level only:
+# every character, design, name, title card, caption and sound is original). Craft: cold open in the IOU vault -> channel
+# intro (the "theme") -> show title card with a typed joke subtitle -> five acts, each opened by a bumper with a rotating
+# joke caption -> button joke after the end card. RUNNING GAG: OWEN, an original living IOU note who grows every act
+# ($38T -> $39T -> $40T -> $40.6T -> "+ INTEREST") until, in the button, he no longer fits through the door.
+# Recurring cast (original, generic humans): TED (a worried taxpayer: glasses, green sweater), RUTH (a retiree: grey bun,
+# purple cardigan), the AUCTIONEER (generic Treasury auction clerk), dinner guests labelled only by place cards (no flags,
+# no national stereotypes, every guest polite and dressed alike). No public figure is central: none is drawn.
+# Bespoke sets (new file CartoonStage/debt.tsx, day scenes): iouvault (giant IOU vault with the debt odometer),
+# auctionhouse (Treasury auction hall: podium, paddles, yield board), dinnerparty (global holders' dinner table, plates sized
+# by holdings), mainstreet (holders' street: fund, bank, pension, insurer, city hall, a house), fedwarehouse (the Fed's
+# balance-sheet warehouse: shelves of bond crates that thin out and refill), trustcabinet (Social Security trust fund filing
+# cabinet room), metervsscale (interest meter vs a defense balance scale), plus debttitle (show title card) and debtbumper.
+primary_tone: sitcom
+secondary_tones:
+- strategy
+palette:
+  bg: '#F4F1E6'
+  bg2: '#FBF9F1'
+  ink: '#14233A'
+  muted: '#677287'
+  land: '#9CCB7A'
+  border: '#2E4A66'
+  accent: '#F2B63A'
+  accent2: '#2E6BD1'
+  accent3: '#2E9E6B'
+  risk: '#D93A49'
+presenter:
+  demeanor: warm
+  min_sequences: 4
+chapters:
+- chapter: Cold open
+  tone: sitcom
+- chapter: The IOU
+  tone: sitcom
+- chapter: The dinner party
+  tone: sitcom
+- chapter: Made in America
+  tone: sitcom
+- chapter: The IOU to yourself
+  tone: sitcom
+- chapter: The meter is running
+  tone: sitcom
+- chapter: The bill
+  tone: sitcom
+turning_points: []
+thumbnail:
+  tone: sitcom
+  headline: ['WHO OWNS', 'US DEBT?']
+  idea: an original shocked taxpayer bust beside a giant IOU note reading "$40T"; no flags, no logos, no real people
+requirements:
+- No flags, logos, seals or trademarked art; countries appear only as place cards on a neutral dinner table
+- No character, design, name, catchphrase, location, title text or music borrowed from any existing show
+- No public figure drawn (none is central); private individuals are generic characters
+- Jokes never change a number; our calculations, custody caveat and CBO projections labelled on screen
+- 'Non-partisan (no party, no politician, no blame): the debt is explained, not scored'
+- Day scenes, many generic human characters
