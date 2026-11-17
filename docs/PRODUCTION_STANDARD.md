@@ -9,6 +9,12 @@ reusable standard. `README.md` covers how to run the pipeline; this file covers 
 > after it), ≥3 substantial animated explanatory sequences with the presenter interacting, a specific payoff,
 > library connections and a Commercial Quality Score ≥85/100. Post-publication results go in `docs/ANALYTICS_LOG.md`.
 > Fascinating first, economically insightful second, commercially competitive throughout.
+>
+> **SEO & discovery directive (owner, 2026-11-17, permanent):** every episode also needs `SEO_PACKAGE.md`
+> (template `docs/templates/SEO_PACKAGE.md`, rules `docs/SEO_DIRECTIVE.md`): primary/secondary/long-tail keywords from
+> real YouTube autocomplete (`tools/yt_autocomplete.py`), intent, demand history (qualitative if no Trends data),
+> competitors (public data only), 10 titles, 3 thumbnails, SEO description, tags (≤3 hashtags), chapters, 3 Shorts,
+> evergreen check and the SEO scorecard ≥85. Never invent volumes, metrics, links or sources.
 
 ## 1. Visual language
 
