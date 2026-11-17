@@ -1,0 +1,176 @@
+{
+  "id": "F",
+  "angle": "face (original character TED, a shocked taxpayer, beside a giant IOU)",
+  "archetype": "face",
+  "text": [
+    "WHO OWNS",
+    "US DEBT?"
+  ],
+  "claim_basis": "$40T: Debt to the Penny total public debt $40.62 trillion on Nov 13, 2026 (rounded down; FACT_CHECK.md); words are a question",
+  "scene": {
+    "bg": [
+      "#4FA3FF",
+      "#0A1F5C"
+    ],
+    "rays": "#FFE27A",
+    "bust": {
+      "x": 470,
+      "s": 0.92,
+      "expr": "shock",
+      "who": {
+        "name": "Ted (original character)",
+        "hair": "short",
+        "hairColor": "#4A3424",
+        "hairShade": "#2E2018",
+        "brows": "#3A2618",
+        "skin": "#EBC09C",
+        "iris": "#3E5A6E",
+        "clothes": "shirt",
+        "jacket": "#3E8E5E",
+        "shirt": "#3E8E5E",
+        "glasses": "round",
+        "age": 0.2
+      }
+    },
+    "prop": {
+      "kind": "iou",
+      "x": 1400,
+      "y": 780,
+      "s": 0.5,
+      "rot": -10,
+      "text": "$40T",
+      "haze": false
+    }
+  },
+  "layout": [
+    {
+      "text": "WHO OWNS",
+      "x": 1367.8,
+      "y": 217.6,
+      "size": 184.5,
+      "width": 944.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3
+    },
+    {
+      "text": "US DEBT?",
+      "x": 1367.8,
+      "y": 432.5,
+      "size": 170.8,
+      "width": 874.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3,
+      "box": "#FF1E1E"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.69 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(896, 74, 1840, 229), (931, 299, 1805, 443)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "14.2px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 3.8:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": false,
+        "detail": "0.194",
+        "critical": false
+      },
+      {
+        "check": "text clear of the face",
+        "pass": true,
+        "detail": "head box (240, 170, 700, 658)",
+        "critical": true
+      },
+      {
+        "check": "named figure is a preset or traits object (likeness rules)",
+        "pass": true,
+        "detail": "{'name': 'Ted (original character)', 'hair': 'short', 'hairColor': '#4A3424', 'hairShade': '#2E2018', 'brows': '#3A2618', 'skin': '#EBC09C', 'iris': '#3E5A6E', 'clothes': 'shirt', 'jacket': '#3E8E5E', 'shirt': '#3E8E5E', 'glasses': 'round', 'age': 0.2}",
+        "critical": true
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 71",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest why-americas-airports-make-money-before-you-fly (distance 0.75)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "$40T: Debt to the Penny total public debt $40.62 trillion on Nov 13, 2026 (rounded down; FACT_CHECK.md); words are a question",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.668,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "why-americas-airports-make-money-before-you-fly"
+  },
+  "backend": "svg-composite (Remotion FaceThumb + CartoonStage bust, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-17T10:16:54Z"
+}

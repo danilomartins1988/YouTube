@@ -80,6 +80,7 @@ SHORTS = {
     "54-alphabet": ("how-google-actually-makes-money", "documentary", "alphabet_documentary", "$20 BILLION", "FOR A DEFAULT", "Google Paid Apple an Estimated $20 Billion for a Default", "#google #apple #money"),
     "57-costco-v2": ("how-costco-makes-billions-selling-almost-nothing", "documentary", "costco_v2_documentary", "COSTCO MAKES ALMOST", "NOTHING ON THE GOODS", "Costco Barely Profits on What It Sells. So Where Do the Billions Come From?", "#costco #business #economics"),
     "58-housing-v2": ("why-americans-can-no-longer-afford-a-home", "documentary", "housing_v2_documentary", "A $416,700 HOME", "AN $87,460 PAYCHECK", "The Typical Home Costs $416,700. The Typical Paycheck Can't Keep Up", "#housing #realestate #economics"),
+    "59-us-debt": ("who-actually-owns-americas-debt", "documentary", "usdebt_documentary", "CHINA HOLDS ABOUT", "1.5% OF US DEBT", "China Holds About 1.5% of America's Debt", "#nationaldebt #economics #china"),
     "56-black-friday": ("how-black-friday-actually-makes-money", "documentary", "blackfriday_documentary", "STORES LOSE MONEY", "ON PURPOSE", "Black Friday Stores Lose Money on Purpose. Here's the Trick", "#blackfriday #shopping #economics"),
     "55-walmart-walton": ("how-one-family-still-controls-walmart", "documentary", "walmart_documentary", "WALMART LOST ONE CROWN", "BUT KEPT ANOTHER", "Walmart Lost One Crown. It Still Holds Another", "#walmart #business #economics"),
     "51-spacex": ("how-spacex-actually-makes-money", "documentary", "spacex_documentary", "$1.25 BILLION", "A MONTH, FOR CHIPS", "An AI Company Agreed to Pay SpaceX $1.25 Billion a Month", "#spacex #starlink #ai"),
@@ -99,6 +100,7 @@ SHORTS = {
 
 # Extra Shorts cut from a later part of an episode: short id -> (episode docs folder, segment names, package folder)
 CUSTOM = {
+    "59-us-debt": ("59-us-debt", ["a2_china", "a2_share"], "youtube-short"),
     "56-black-friday-b": ("56-black-friday", ["a2_deriv", "a2_deriv2"], "youtube-short-b"),
 }
 

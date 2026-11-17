@@ -1,0 +1,47 @@
+# Thumbnail creative brief (Ep 59). F = face (original shocked taxpayer TED, no public figure: none is central), A = standard
+# cinematic (a giant IOU). Neutral (owner rule "Sem viés político"): a question, no politician, no party colours, no flags.
+title: "Who Actually Owns America's $40 Trillion in Debt?"
+docs_dir: docs/episodes/59-us-debt
+video: output/usdebt_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: Who actually holds the IOU behind more than $40 trillion of U.S. debt?
+  surprising_fact: China holds about 1.5% of the total (TIC Aug 2026 vs Debt to the Penny, our calc.); most of the debt is held by Americans, their funds, banks and pensions, the Fed and the government's own trust funds
+  subject: a giant cream IOU note with a red "$40T" amount
+  tone: sitcom
+  metaphor: the national debt as one enormous IOU
+  public_figure: null
+concepts:
+- id: F
+  angle: 'face (original character TED, a shocked taxpayer, beside a giant IOU)'
+  archetype: face
+  text:
+  - WHO OWNS
+  - US DEBT?
+  claim_basis: '$40T: Debt to the Penny total public debt $40.62 trillion on Nov 13, 2026 (rounded down; FACT_CHECK.md); words are a question'
+  scene:
+    bg: ['#4FA3FF', '#0A1F5C']
+    rays: '#FFE27A'
+    bust:
+      x: 470
+      s: 0.92
+      expr: shock
+      who: {name: 'Ted (original character)', hair: short, hairColor: '#4A3424', hairShade: '#2E2018', brows: '#3A2618', skin: '#EBC09C', iris: '#3E5A6E', clothes: shirt, jacket: '#3E8E5E', shirt: '#3E8E5E', glasses: round, age: 0.2}
+    prop: {kind: iou, x: 1400, y: 780, s: 0.5, rot: -10, text: '$40T', haze: false}
+- id: A
+  angle: giant IOU (standard cinematic)
+  archetype: bignum
+  text:
+  - WHO OWNS
+  - US DEBT?
+  claim_basis: '$40T: Debt to the Penny total public debt $40.62 trillion on Nov 13, 2026 (rounded down; FACT_CHECK.md); words are a question'
+  scene:
+    palette: {sky0: '#06231A', sky1: '#0E4A34', haze: '#FFE27A', key: '#FFF6D8', accent: '#FFE27A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: iou, x: 1430, y: 560, s: 0.62, rot: -8, text: '$40T'}
+    support: []
+    particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none

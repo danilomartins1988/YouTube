@@ -606,6 +606,17 @@ export const SUBJECTS: Record<string, SubjectFn> = {
     <rect x={-200} y={-215} width={560} height={30} rx={15} fill="#9AA3B5" opacity={0.6} /><path d="M -220 -170 L 380 -235" stroke="#FF2D2D" strokeWidth={18} strokeLinecap="round" />
     <path d="M -260 -235 Q 60 -280 400 -240" stroke="#FFFFFF" strokeWidth={10} opacity={0.3} fill="none" strokeLinecap="round" />
   </g>,
+  /** Ep 59: a giant IOU note (cream paper, green dashed border, big green "IOU", red amount `o.text`), curling corner */
+  iou: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -8})`}>
+    {o.haze !== false && <circle r={640} fill={P.haze} opacity={0.2} filter="url(#soft)" />}
+    <rect x={-560} y={-330} width={1120} height={660} rx={40} fill="#05070B" opacity={0.35} transform="translate(26 30)" />
+    <rect x={-560} y={-330} width={1120} height={660} rx={40} fill="#FFF8E6" stroke="#05070B" strokeWidth={18} />
+    <rect x={-510} y={-280} width={1020} height={560} rx={24} fill="none" stroke="#2E9E6B" strokeWidth={12} strokeDasharray="44 18" />
+    <text x={0} y={40} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={300} fill="#2E9E6B" stroke="#05070B" strokeWidth={14} paintOrder="stroke">IOU</text>
+    <rect x={-330} y={110} width={660} height={150} rx={26} fill="#D93A49" stroke="#05070B" strokeWidth={12} />
+    <text x={0} y={222} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={120} fill="#FFFFFF">{o.text || '$40T'}</text>
+    <path d="M 420 -330 L 560 -190 L 420 -190 Z" fill="#EADBB4" stroke="#05070B" strokeWidth={12} strokeLinejoin="round" />
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}
