@@ -17,15 +17,15 @@ segments:
   - seagull
 - id: co_hook
   chapter: Cold open
-  narration: In China, the newest BYD Seagull starts at {{seagull.yuan_spoken}}. That's {{seagull}}. The average new electric
-    car in America sold for {{kbb_ev}} in October.
+  narration: In China, the newest BYD Seagull starts at {{seagull.yuan_spoken}}. That's {{seagull}}. The average new electric car in
+    America sold for {{kbb_ev}} in October.
   claims:
   - seagull
   - kbb_ev
 - id: co_contra
   chapter: Cold open
-  narration: Meanwhile, Ford's electric car unit lost {{ford}} last year. Is China just better at building cars? Is the government paying?
-    Are the books dressed up? Or is someone burning cash on every car?
+  narration: Ford's electric car unit lost {{ford}} last year. Is China just better at building cars? Is the government paying? Are
+    the books dressed up? Or is someone burning cash on every car?
   claims:
   - ford
 - id: co_promise
@@ -103,7 +103,7 @@ segments:
 - id: a2_hidden
   chapter: The subsidy suspect
   narration: Some support isn't in that count, like cities buying stakes. In twenty twenty, Hefei-led investors put {{nio_hefei}} into
-    NIO's Chinese business. An investment, not a gift. But money a startup might not have found elsewhere.
+    NIO's Chinese business. An investment, not a gift.
   claims:
   - nio_hefei
 - id: a2_grants
@@ -116,8 +116,8 @@ segments:
 - id: a2_draw
   chapter: The subsidy suspect
   narration: So let's run an experiment with BYD's numbers. Its grants were {{byd_grants.rev_spoken}} of revenue. On a twenty thousand
-    dollar car, a sliver, nowhere near enough to halve a price. But they're {{byd_grants.np_spoken}} of its profit, by our calculation.
-    Subsidies can make a company profitable. They can't make a car cheap.
+    dollar car, a sliver. But they're {{byd_grants.np_spoken}} of its profit, by our calculation. Subsidies can make a company profitable.
+    They can't make a car cheap.
   claims:
   - byd_grants
 - id: a2_eu
@@ -192,14 +192,13 @@ segments:
 - id: a3_scale
   chapter: The machine
   narration: 'And scale. China built {{iea_prod.prod_spoken}} electric cars last year, spreading every robot and design across millions.
-    That''s why one new Western factory can''t match it. The cheap battery, the suppliers next door, the experienced engineers: that''s
-    an ecosystem, not a building.'
+    That''s why one new Western factory can''t match it: it''s an ecosystem, not a building.'
   claims:
   - iea_prod
 - id: a3_caution
   chapter: The machine
-  narration: One caution. A giant screen isn't proof of better engineering. Features show up on day one. Safety and reliability show
-    up years later, in independent testing.
+  narration: A giant screen isn't proof of better engineering. Features show up on day one. Safety and reliability show up years later,
+    in independent testing.
   claims: []
   analysis: true
   source_note: Owner brief requirement (visible features vs independently validated performance); no claim about any model's safety.
@@ -209,8 +208,9 @@ segments:
   claims: []
 - id: a4_byd
   chapter: Follow the cash
-  narration: So the cars are cheaper to build. Are the companies making money? BYD is. Last year it earned {{byd_fy.np_spoken}} on revenue
-    of {{byd_fy}}, though profit fell {{byd_fy.chg_spoken}} as prices dropped. Its car business made {{byd_seg}} before tax. That's {{byd_seg.percar_spoken}} a vehicle, by our rough math.
+  narration: Are the companies making money? BYD is. Last year it earned {{byd_fy.np_spoken}} on revenue of {{byd_fy}}, though profit
+    fell {{byd_fy.chg_spoken}} as prices dropped. Its car business made {{byd_seg}} before tax. That's {{byd_seg.percar_spoken}} a vehicle,
+    by our rough math.
   claims:
   - byd_fy
   - byd_seg
@@ -260,8 +260,8 @@ segments:
   claims: []
 - id: a5_glut
   chapter: The price war
-  narration: Now zoom out. Last year China built {{iea_prod.over_spoken}} more electric cars than its own drivers bought. Make more
-    than the market wants, and prices fall.
+  narration: Last year China built {{iea_prod.over_spoken}} more electric cars than its own drivers bought. Make more than the market
+    wants, and prices fall.
   claims:
   - iea_prod
 - id: a5_margin
@@ -285,8 +285,8 @@ segments:
   - failures
 - id: a5_export
   chapter: The price war
-  narration: So carmakers looked abroad. Electric car exports doubled to {{iea_prod.exp_spoken}} in twenty twenty-five, running more than {{iea_prod.inv_spoken}}
-    ahead of overseas sales. Cars shipped faster than they sold.
+  narration: So carmakers looked abroad. Electric car exports doubled to {{iea_prod.exp_spoken}} in twenty twenty-five, running more
+    than {{iea_prod.inv_spoken}} ahead of overseas sales.
   claims:
   - iea_prod
 - id: a5_walls
@@ -328,8 +328,8 @@ segments:
   - byd_cash
 - id: a6_burn
   chapter: The verdict
-  narration: 'Cash burn: depends who. BYD is profitable but spent more cash than it made. NIO lost money for years. And the price war
-    is pushing the weakest out.'
+  narration: 'Cash burn: depends who. BYD is profitable but spent more cash than it made. NIO lost money for years. The price war is
+    pushing the weakest out.'
   claims:
   - byd_cash
   - nio

@@ -44,6 +44,8 @@ intro:
 tts_overrides:
   openai:
     voice: ash
+    # 1.08 pitch-preserving atempo: keeps the 11-13 min runtime (first take ran 747 s of voice)
+    tempo: 1.08
     instructions: >-
       Voice: the narrator of a premium business documentary with a playful edge, like a sharp investigative economics
       host. Confident, curious and warm, with a dry twinkle on the wry lines, always clear and fair on facts. Pacing: brisk and

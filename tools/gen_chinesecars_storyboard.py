@@ -203,7 +203,7 @@ stage("s16_hidden", "a2_hidden", {
     "items": [sign("NOT IN THE COUNT: CHEAP LAND · CHEAP LOANS · CITY STAKES", 1000, 140, 0.3, color="#FFF8E1", size=26, until=C("Hefei-led")),
               it("counter", x=1000, y=170, at=C("Hefei-led"), prefix="≈ $", suffix="B", decimals=1, steps=[[0, 0], [C("Hefei-led"), 0], [C("into NIO's"), 1.0]], text="¥7B FOR A 24.1% STAKE IN NIO CHINA (2020)"),
               sign("EQUITY, NOT A GRANT", 1500, 420, C("An investment"), color="#C8E6C9", size=34),
-              MORGAN(400, 0.3, face="smug", hold="clipboard", pose="clipboard", faces=[[0, "smug"], [C("money a startup"), "worry"]])]},
+              MORGAN(400, 0.3, face="smug", hold="clipboard", pose="clipboard", faces=[[0, "smug"], [C("An investment"), "worry"]])]},
     sources=["csis", "nio_hefei", "h10_2020"])
 stage("s17_grants", "a2_grants", {
     **W1("evshow", carX=700, carColor="#1E88E5", price="≈ $1.8B", priceSub="BYD GOVERNMENT GRANTS IN 2025 PROFIT (¥12.6B, ANNUAL REPORT)", priceAt=C("BYD's own annual report"), priceX=1150),
@@ -306,11 +306,11 @@ stage("s29_xiaomi", "a3_xiaomi", {
     sources=["xiaomi_2021", "xiaomi_ar25"])
 stage("s30_scale", "a3_scale", {
     **W1("gigaline", board="2025: 16 MILLION ELECTRIC CARS MADE IN CHINA (IEA)", speed=320),
-    "cam": cam((0, 900, 480, 0.9), (C("That's why one new"), 1200, 460, 1.05, 1.4), (C("that's an ecosystem"), 1000, 470, 0.95, 1.2)), "drift": 4,
-    "items": [MORGAN([[0, 2300], [C("That's why one new"), 1500]], 0.2, face="worry", hold="clipboard", pose="clipboard", faces=[[0, "worry"], [C("that's an ecosystem"), "shock"]]),
-              sign("THE CHEAP BATTERY", 600, 160, C("The cheap battery"), color="#FFE0B2", size=28),
-              sign("THE SUPPLIERS NEXT DOOR", 1000, 100, C("the suppliers next door"), color="#BBDEFB", size=28),
-              sign("THE EXPERIENCED ENGINEERS", 1400, 160, C("the experienced engineers"), color="#C8E6C9", size=28),
+    "cam": cam((0, 900, 480, 0.9), (C("That's why one new"), 1200, 460, 1.05, 1.4), (C("it's an ecosystem"), 1000, 470, 0.95, 1.2)), "drift": 4,
+    "items": [MORGAN([[0, 2300], [C("That's why one new"), 1500]], 0.2, face="worry", hold="clipboard", pose="clipboard", faces=[[0, "worry"], [C("it's an ecosystem"), "shock"]]),
+              sign("THE CHEAP BATTERY", 600, 160, C("That's why one new"), color="#FFE0B2", size=28),
+              sign("THE SUPPLIERS NEXT DOOR", 1000, 100, C("That's why one new", 0.6), color="#BBDEFB", size=28),
+              sign("THE EXPERIENCED ENGINEERS", 1400, 160, C("That's why one new", 1.2), color="#C8E6C9", size=28),
               it("toonwords", text="AN ECOSYSTEM, NOT A BUILDING", x=1000, y=300, at=C("not a building", -0.5), size=54)]},
     sources=["iea_gevo"])
 stage("s31_caution", "a3_caution", {
@@ -441,7 +441,7 @@ stage("s45_export", "a5_export", {
     "items": [car([[0, 2600], [7, -300]], 0.1, carKind="hatch", color=RED, flip=True),
               it("counter", x=1300, y=170, at=C("exports doubled"), suffix="M+", decimals=1, steps=[[0, 0], [C("exports doubled"), 0], [C("half million"), 2.5]], text="ELECTRIC CAR EXPORTS, 2025 (IEA)", until=C("running more than")),
               sign("EXPORTS > OVERSEAS SALES BY 25%+ (IEA EST.)", 400, 160, C("running more than"), color="#FFCDD2", size=28),
-              it("toonwords", text="SHIPPED FASTER THAN SOLD", x=600, y=330, at=C("Cars shipped faster"), size=54)]},
+              it("toonwords", text="SHIPPED FASTER THAN SOLD", x=600, y=330, at=C("ahead of overseas"), size=54)]},
     sources=["iea_gevo"])
 stage("s46_walls", "a5_walls", {
     **W1("tariffgate", wallAt=C("America set"), euAt=C("Europe now offers", -0.4), minAt=C("minimum-price deals"), usText="U.S. · 100%",
@@ -473,7 +473,7 @@ stage("s50_sub", "a6_sub", {**VBASE, **W1("evshow", carX=900), "cam": cam((0, 96
 stage("s51_fin", "a6_fin", {**VBASE, **W1("cashworks", mx=500), "cam": cam((0, 960, 520, 1.0), (C("real, and being unwound"), 960, 500, 1.04, 2.0)),
     "items": [it("suspects", x=960, y=420, at=-1, scale=0.95, his=[[0, 2]], stamps=[[-1, 0, "GUILTY", RED], [-1, 1, "ACCOMPLICE", "#FF7043"], [C("real, and being unwound"), 2, "UNWINDING", "#7E57C2"]])]},
     sources=["pledge", "byd_ar25"])
-stage("s52_burn", "a6_burn", {**VBASE, **W1("pricestreet", margin=0.2), "cam": cam((0, 960, 520, 1.0), (C("And the price war"), 960, 500, 1.05, 1.4)),
+stage("s52_burn", "a6_burn", {**VBASE, **W1("pricestreet", margin=0.2), "cam": cam((0, 960, 520, 1.0), (C("The price war is"), 960, 500, 1.05, 1.4)),
     "items": [it("suspects", x=960, y=420, at=-1, scale=0.95, his=[[0, 3]], stamps=[[-1, 0, "GUILTY", RED], [-1, 1, "ACCOMPLICE", "#FF7043"], [-1, 2, "UNWINDING", "#7E57C2"], [C("depends who"), 3, "SOME", RED]])]},
     sources=["byd_ar25", "nio_q4"])
 stage("s53_payoff", "payoff", {

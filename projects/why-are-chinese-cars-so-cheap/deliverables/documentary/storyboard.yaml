@@ -1225,7 +1225,7 @@ scenes:
       faces:
       - - 0
         - smug
-      - - cue: money a startup
+      - - cue: An investment
         - worry
       scale: 1.3
   sources:
@@ -2263,7 +2263,7 @@ scenes:
       zoom: 1.05
       dur: 1.4
     - at:
-        cue: that's an ecosystem
+        cue: it's an ecosystem
       x: 1000
       y: 470
       zoom: 0.95
@@ -2291,7 +2291,7 @@ scenes:
       faces:
       - - 0
         - worry
-      - - cue: that's an ecosystem
+      - - cue: it's an ecosystem
         - shock
       scale: 1.3
     - kind: sign
@@ -2299,7 +2299,7 @@ scenes:
       x: 600
       y: 160
       at:
-        cue: The cheap battery
+        cue: That's why one new
       color: '#FFE0B2'
       size: 28
     - kind: sign
@@ -2307,7 +2307,8 @@ scenes:
       x: 1000
       y: 100
       at:
-        cue: the suppliers next door
+        cue: That's why one new
+        offset: 0.6
       color: '#BBDEFB'
       size: 28
     - kind: sign
@@ -2315,7 +2316,8 @@ scenes:
       x: 1400
       y: 160
       at:
-        cue: the experienced engineers
+        cue: That's why one new
+        offset: 1.2
       color: '#C8E6C9'
       size: 28
     - kind: toonwords
@@ -3588,7 +3590,7 @@ scenes:
       x: 600
       y: 330
       at:
-        cue: Cars shipped faster
+        cue: ahead of overseas
       size: 54
   sources:
   - iea_gevo
@@ -3967,7 +3969,7 @@ scenes:
       y: 520
       zoom: 1.0
     - at:
-        cue: And the price war
+        cue: The price war is
       x: 960
       y: 500
       zoom: 1.05
