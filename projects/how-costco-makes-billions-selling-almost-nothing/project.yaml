@@ -1,0 +1,52 @@
+title: "How Costco Makes Billions Selling Almost Nothing"
+slug: how-costco-makes-billions-selling-almost-nothing
+language: en
+# Episode 57 (owner request, 2026-11-17): Costco remade in the current format (supersedes Ep 32, which stays untouched).
+# Owner creative direction: as animated as possible, like a prime-time animated TV sitcom (genre level only: all characters,
+# designs, names, title card text and music are original). Cold open, channel intro as the show's "theme", title card, act
+# bumpers, a running gag (the $1.50 hot-dog price board that nobody manages to change) and a button joke after the end card.
+# Real people: Ron Vachris (CEO) and Jim Sinegal (co-founder) only as respectful caricatures, doing only what the narration
+# documents. Private individuals are silhouettes or generic cast. Five-part structure internal only. Money: US dollars only.
+# Costco's fiscal year ended Aug 30, 2026 ("fiscal twenty twenty-six"): always say fiscal.
+renderer: remotion
+remotion_geo: [world]
+public_figure: vachris
+style:
+  name: cartoon-day
+  palette:
+    bg: "#FFF6E8"
+    bg2: "#FFFCF5"
+    ink: "#1B2433"
+    muted: "#6B7385"
+    land: "#9CCB7A"
+    border: "#2E4A66"
+    accent: "#FF9F1C"
+    accent2: "#2F6FD1"
+    accent3: "#2E9E5B"
+    risk: "#E53950"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 4
+# TV structure: cold open (hook) -> channel intro (the "theme") -> show title card -> acts.
+intro:
+  after_segment: co_promise
+tts_overrides:
+  openai:
+    voice: ash
+    instructions: >-
+      Voice: the narrator of a smart prime-time animated comedy who is also a sharp economics documentarian. Warm, wry
+      and lively, with a playful twinkle on the jokes and dry deadpan on the punchlines, but always clear and credible on
+      facts. Pacing: brisk and energetic in the comic beats, then slow down noticeably and land every number cleanly. Take
+      a short beat before a punchline and after a surprising figure. Natural American English, conversational, never an
+      announcer, never salesy, never sing-song.

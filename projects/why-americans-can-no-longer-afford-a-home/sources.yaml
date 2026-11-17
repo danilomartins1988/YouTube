@@ -1,0 +1,217 @@
+# Sources and claims for "Why Americans Can No Longer Afford a Home" (Episode 58, owner request 2026-11-17; supersedes Ep 31).
+# Ep 31's dossier was the starting point; every figure was re-read on its primary page or data file on 2026-11-17 and updated
+# to the latest release (notes: docs/episodes/58-housing-v2/RESEARCH_NOTES.md). Status stays source_located until a named
+# human reviewer signs off. US dollars only, nominal unless said otherwise.
+# RULES: NAR prices are the median EXISTING-home price (all housing types, October 2026, not seasonally adjusted); the Census
+# income is the 2025 REAL median HOUSEHOLD income; the monthly payments and the income needed at today's rate are OUR
+# calculation (NAR's affordability method: 20% down, 30-year fixed, principal+interest = 25% of income); completions by decade
+# are OUR sums of Census monthly data; shortage numbers are ESTIMATES and always said as a range / attributed; the NAHB
+# regulation share is a home builders' trade-group estimate; the Berkeley zoning share is Greater Los Angeles (region, not
+# city); the FHFA lock-in figures are a working-paper estimate for 2022Q2-2023Q4. No real person is drawn; buyers are
+# generic cartoon characters.
+sources:
+  - id: nar_ehs
+    title: "Existing-Home Sales Decreased 5.5% in October (NAR press release, includes the Housing Affordability Index)"
+    publisher: National Association of REALTORS
+    url: https://www.nar.realtor/newsroom/existing-home-sales-decreased-5-5-percent-october-nar-report
+    published: "2026-11-12"
+    accessed: "2026-11-17"
+    period: "October 2026"
+    credit: "NAR (Nov 2026)"
+  - id: nar_profile
+    title: "First-Time Home Buyer Share Inches Up to 22%, Median Age Remains at Record High of 40 (2026 Profile of Home Buyers and Sellers)"
+    publisher: National Association of REALTORS
+    url: https://www.nar.realtor/newsroom/first-time-home-buyer-share-inches-up-to-22-median-age-remains-at-record-high-of-40
+    published: "2026-11-05"
+    accessed: "2026-11-17"
+    period: "Transactions July 2025 - June 2026 (7,125 primary-residence buyers)"
+    credit: "NAR Profile of Home Buyers and Sellers 2026"
+  - id: pmms
+    title: "Primary Mortgage Market Survey (weekly 30-year fixed-rate average; historical weekly data since 1971)"
+    publisher: Freddie Mac
+    url: https://www.freddiemac.com/pmms
+    published: "2026-11-12"
+    accessed: "2026-11-17"
+    period: "Weekly, 1971 - Nov 12, 2026"
+    credit: "Freddie Mac PMMS"
+  - id: census_inc
+    title: "Median Household Income in 2025 Surpassed Previous Highs Before and After the COVID-19 Pandemic (Income in the United States: 2025, P60-289)"
+    publisher: U.S. Census Bureau
+    url: https://www.census.gov/library/stories/2026/09/median-household-income.html
+    published: "2026-09-15"
+    accessed: "2026-11-17"
+    period: "Calendar 2025 (real dollars)"
+    credit: "U.S. Census Bureau"
+  - id: jchs
+    title: "The State of the Nation's Housing 2026: Key Facts"
+    publisher: Harvard Joint Center for Housing Studies
+    url: https://www.jchs.harvard.edu/sites/default/files/interactive-item/files/Harvard_JCHS_State_Nations_Housing_2026_Key_Facts_0.pdf
+    published: "2026-06-17"
+    accessed: "2026-11-17"
+    period: "1990s - March 2026"
+    credit: "Harvard JCHS"
+  - id: jchs_pr
+    title: "The State of the Nation's Housing 2026 (press release)"
+    publisher: Harvard Joint Center for Housing Studies
+    url: https://www.jchs.harvard.edu/sites/default/files/interactive-item/files/Harvard_JCHS_State_of_the_Nations_Housing_2026_Press_Release.pdf
+    published: "2026-06-17"
+    accessed: "2026-11-17"
+    period: "2020 - 2025"
+    credit: "Harvard JCHS"
+  - id: fhfa
+    title: "Working Paper 24-03: The Lock-In Effect of Rising Mortgage Rates (Batzer, Coste, Doerner, Seiler)"
+    publisher: Federal Housing Finance Agency
+    url: https://www.fhfa.gov/research/papers/wp2403
+    published: "2024-03-18"
+    accessed: "2026-11-17"
+    period: "2022Q2 - 2023Q4"
+    credit: "FHFA working paper (2024)"
+  - id: completions
+    title: "New Privately-Owned Housing Units Completed: Total Units (COMPUTNSA, monthly, thousands)"
+    publisher: U.S. Census Bureau and HUD, via FRED (St. Louis Fed)
+    url: https://fred.stlouisfed.org/series/COMPUTNSA
+    published: "2026-10"
+    accessed: "2026-11-10"
+    period: "1968 - Sep 2026"
+    credit: "Census via FRED"
+  - id: upforgrowth
+    title: "2025 Housing Underproduction Report"
+    publisher: Up for Growth
+    url: https://upforgrowth.org/news_insights/2025-hup/
+    published: "2025-11-24"
+    accessed: "2026-11-17"
+    period: "2022 - 2023"
+    credit: "Up for Growth"
+  - id: nahb
+    title: "Government Regulation in the Price of a New Home: 2026 (Eric Lynch, special study)"
+    publisher: National Association of Home Builders
+    url: https://www.nahb.org/news-and-economics/housing-economics-plus/special-studies/special-studies-pages/government-regulation-in-the-price-of-new-homes-2026
+    published: "2026-06-08"
+    accessed: "2026-11-17"
+    period: "2026 survey"
+    credit: "NAHB (trade group)"
+  - id: berkeley
+    title: "Single-Family Zoning in Greater Los Angeles"
+    publisher: Othering & Belonging Institute, UC Berkeley
+    url: https://belonging.berkeley.edu/single-family-zoning-greater-los-angeles
+    published: "2022-03-02"
+    accessed: "2026-11-17"
+    period: "SCAG region zoning data (2022)"
+    credit: "UC Berkeley OBI"
+
+claims:
+  - id: nar_price
+    text: "NAR (Nov 12, 2026): 'The median existing-home sales price increased 0.4% to $416,700' in October 2026, from $414,900 one year ago (40th consecutive month of year-over-year gains); existing-home sales fell 5.5% to a seasonally adjusted annual rate of 3.75 million; inventory 1.59 million, a 5.1-month supply; first-time buyers 29% of October sales; cash sales 29%."
+    spoken: four hundred and sixteen thousand seven hundred dollars
+    display: "Median existing-home price, Oct 2026: $416,700 (NAR)"
+    fields: {sales_spoken: three point seven five million}
+    source_ids: [nar_ehs]
+    status: source_located
+    verification_note: All housing types, existing homes only; one month (October 2026), not seasonally adjusted.
+  - id: hai
+    text: "NAR (Nov 12, 2026): 'The Housing Affordability Index registered at 100.7, down from 107.3 one year ago.' NAR method: an index of 100 means a family earning the median family income has exactly enough income to qualify for a mortgage on a median-priced existing home, assuming a 20% down payment and principal and interest no more than 25% of income."
+    spoken: one hundred point seven
+    display: "NAR Housing Affordability Index, Oct 2026: 100.7 (107.3 a year earlier)"
+    fields: {prev_spoken: one hundred and seven point three}
+    source_ids: [nar_ehs]
+    status: source_located
+    verification_note: Methodology (20% down, 25% qualifying ratio) from NAR's index definition; read in the release and NAR's HAI page.
+  - id: census_inc
+    text: "Census (Sep 15, 2026): 'U.S. real median household income was $87,460 in 2025, up 2.6% from the previous year', the highest since tracking began in 1967; higher than in both 2019 and 2024."
+    spoken: eighty-seven thousand four hundred and sixty dollars
+    display: "Median household income, 2025: $87,460 (Census, record)"
+    fields: {}
+    source_ids: [census_inc]
+    status: source_located
+  - id: pmms
+    text: "Freddie Mac PMMS: 30-year fixed average 7.11% for the week of Nov 12, 2026 (7.18% the week before; 6.24% a year earlier). Historical weekly file: series low 2.65% (week of Jan 7, 2021); first week of 2022 3.22%, above 7% by Oct 27, 2022 (7.08%); 2023 peak 7.79% (Oct 26, 2023); 2026 low 5.98% (Feb 26, 2026) and 2026 high 7.40% (Oct 8 and Oct 15, 2026)."
+    spoken: seven point one one percent
+    display: "30-year fixed: 7.11% (Freddie Mac, Nov 12, 2026)"
+    fields: {low_spoken: two point six five percent, oct_spoken: seven point four percent, y26low_spoken: just under six percent, peak23_spoken: seven point seven nine percent}
+    source_ids: [pmms]
+    status: source_located
+    verification_note: Read on freddiemac.com/pmms and in the historical weekly data file (historicalweeklydata.xlsx) on 2026-11-17.
+  - id: calc
+    text: "OUR calculation, NAR affordability method: price $416,700 (NAR Oct 2026 median), 20% down, loan $333,360, 30-year fixed. Monthly principal and interest: $1,343 at 2.65% (Jan 2021 low), $2,243 at 7.11% (Nov 12, 2026); difference ≈ $900 a month. Income needed at 7.11% so that P&I = 25% of income: $2,243 × 12 / 0.25 ≈ $107,600, vs Census 2025 median household income $87,460 (different income concept from NAR's median family income). Excludes taxes, insurance and mortgage insurance."
+    spoken: about two thousand two hundred and forty dollars
+    display: "Same $416,700 home: $1,343/mo at 2.65% vs $2,243/mo at 7.11% (our calc.)"
+    fields: {low_spoken: about one thousand three hundred and forty dollars, diff_spoken: about nine hundred dollars, inc_spoken: about one hundred and eight thousand dollars}
+    source_ids: [nar_ehs, pmms, census_inc]
+    status: source_located
+    verification_note: Our arithmetic (standard amortization formula); principal and interest only; labelled OUR CALCULATION on screen and in narration.
+  - id: income
+    text: "JCHS (Jun 2026): 'The income needed to afford payments on the median-priced home was $120,800 at the end of 2025, up from $68,700 five years earlier. The income required exceeded $100,000 in 169 of the nation's 387 metros in 2025, up from 31 markets in 2020.'"
+    spoken: one hundred and twenty thousand eight hundred dollars
+    display: "Income needed (JCHS method), end 2025: $120,800 (was $68,700 in 2020)"
+    fields: {before_spoken: sixty-eight thousand seven hundred dollars, metros_spoken: one hundred and sixty-nine}
+    source_ids: [jchs]
+    status: source_located
+    verification_note: JCHS uses its own assumptions (incl. taxes/insurance), so it is higher than our principal-and-interest calculation; both are said with their method.
+  - id: ratio
+    text: "JCHS (Jun 2026): the median existing single-family price 'hovered near five times the median household income, falling slightly from the all-time high of 5.0 in 2022 to 4.7 in 2025. By comparison, this ratio was 4.1 in 2019 and averaged 3.2 throughout the 1990s.' Press release: 'Home prices have increased 54 percent nationwide since 2020'."
+    spoken: four point seven
+    display: "Home price = 4.7× income, 2025 (JCHS)"
+    fields: {nineties_spoken: three point two, y2019_spoken: four point one, rise_spoken: fifty-four percent}
+    source_ids: [jchs, jchs_pr]
+    status: source_located
+  - id: listings
+    text: "JCHS (Jun 2026): 'just 23 percent of listings in March 2026 were at a price affordable to a household earning $75,000 or less, down from 49 percent of listings in March 2019.' 'The price of combined inputs to residential construction jumped 40 percent since January 2020.'"
+    spoken: twenty-three percent
+    display: "Listings affordable at ≤ $75k income: 49% (Mar 2019) → 23% (Mar 2026), JCHS"
+    fields: {before_spoken: forty-nine percent, inputs_spoken: forty percent}
+    source_ids: [jchs]
+    status: source_located
+  - id: lockin
+    text: "JCHS (Jun 2026): 'With half of all outstanding mortgages carrying rates below 4 percent as of late 2025, many homeowners still face a strong financial disincentive to relocate.' 'Residential mobility fell to a record low of 11.2 percent in 2024.' 'In 2025, existing home sales were unchanged from 2024 at 4.1 million, stuck at a 30-year low that is two-thirds of the 6.1 million sales in 2021.'"
+    spoken: half
+    display: "Half of mortgages below 4% (late 2025, JCHS)"
+    fields: {sales_spoken: four point one million, sales21_spoken: six point one million}
+    source_ids: [jchs]
+    status: source_located
+  - id: fhfa
+    text: "FHFA Working Paper 24-03 (Mar 2024): 'for every percentage point that market mortgage rates exceed the origination interest rate, the probability of sale is decreased by 18.1%. This mortgage rate lock-in led to a 57% reduction in home sales with fixed-rate mortgages in 2023Q4 and prevented 1.33 million sales between 2022Q2 and 2023Q4. The supply reduction increased home prices by 5.7%, outweighing the direct impact of elevated rates, which decreased prices by 3.3%.'"
+    spoken: one point three million
+    display: "Lock-in prevented ≈ 1.33M sales, 2022Q2–2023Q4 (FHFA working paper)"
+    fields: {per_spoken: about eighteen percent, up_spoken: five point seven percent, down_spoken: three point three percent}
+    source_ids: [fhfa]
+    status: source_located
+    verification_note: Working-paper estimate; said as 'economists at the FHFA estimated'.
+  - id: building
+    text: "Census via FRED COMPUTNSA (monthly, thousands), OUR sums: completions ≈ 15.64 million in 2000–2009 and ≈ 9.15 million in 2010–2019; 585,000 in 2011, the lowest calendar year in the series (which starts in 1968); ≈ 1.49 million in 2025."
+    spoken: about fifteen and a half million
+    display: "Completions: 15.6M (2000s) vs 9.2M (2010s), our sums of Census data"
+    fields: {tens_spoken: about nine million, low_spoken: five hundred and eighty-five thousand}
+    source_ids: [completions]
+    status: source_located
+    verification_note: Our calculation from the Census monthly series (data file downloaded 2026-11-10, recomputed 2026-11-17).
+  - id: shortage
+    text: "JCHS (Jun 2026): 'various organizations estimate the shortage to be between 1.2 and 5.5 million units.' Up for Growth (Nov 2025): underproduction 'from 3.85 million homes in 2022 to 3.78 million homes in 2023.' NAHB (Jun 2026): 'NAHB estimates the U.S. has a structural housing deficit of 1.2 million units.'"
+    spoken: between one point two and five point five million homes
+    display: "Shortage ESTIMATES: 1.2M–5.5M homes (range cited by JCHS)"
+    fields: {ufg_spoken: about three point eight million}
+    source_ids: [jchs, upforgrowth, nahb]
+    status: source_located
+    verification_note: Estimates with different methods; always said as a range and attributed, never as one fact.
+  - id: regulation
+    text: "NAHB (Jun 8, 2026): 'regulations imposed by government at all levels account for 26.4% of the final price of a new single-family home built for sale'; 'applied to the current average price ($499,500) of a new home, regulation accounts for $131,734 of the final house price.'"
+    spoken: twenty-six point four percent
+    display: "Regulation ≈ 26.4% of a new home's price, ≈ $131,734 (NAHB estimate)"
+    fields: {usd_spoken: about one hundred and thirty-two thousand dollars}
+    source_ids: [nahb]
+    status: source_located
+    verification_note: A home builders' trade-group estimate (surveys of builders and developers); said as such.
+  - id: zoning
+    text: "UC Berkeley Othering & Belonging Institute (Mar 2022): 'we find that 77.70 percent of residential land in Greater LA is exclusively reserved for single-family housing.'"
+    spoken: seventy-eight percent
+    display: "≈ 78% of residential land: single-family only (Greater Los Angeles, UC Berkeley)"
+    fields: {}
+    source_ids: [berkeley]
+    status: source_located
+    verification_note: Greater Los Angeles (SCAG region), not the city; one region, not the whole country.
+  - id: firsttime
+    text: "NAR 2026 Profile of Home Buyers and Sellers (Nov 5, 2026; transactions July 2025-June 2026): 'The share of first-time home buyers rose slightly to 22% from last year's record low of 21%'; 'still about half the historical norm of 40% seen before 2008'; median first-time buyer age 40, matching the all-time high; repeat buyers 62; first-time median down payment 9%."
+    spoken: forty
+    display: "First-time buyers: 22% of purchases; median age 40 (NAR Profile 2026)"
+    fields: {share_spoken: twenty-two percent, norm_spoken: forty percent, repeat_spoken: sixty-two}
+    source_ids: [nar_profile]
+    status: source_located

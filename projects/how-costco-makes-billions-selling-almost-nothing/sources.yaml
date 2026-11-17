@@ -1,0 +1,188 @@
+# Sources and claims for "How Costco Makes Billions Selling Almost Nothing" (Episode 57, owner request 2026-11-17).
+# Supersedes Ep 32 (how-costco-makes-money-selling-things-cheap, 2026-11-10), whose research was the starting point.
+# Every claim below was re-read on its primary page on 2026-11-17 (SEC EDGAR downloads; notes:
+# docs/episodes/57-costco-v2/RESEARCH_NOTES.md). Status stays source_located until a named human reviewer signs off.
+# US dollars only. Costco's fiscal 2026 = 52 weeks ended Aug 30, 2026 (always "fiscal").
+# RULES: shares of profit are OUR calculation and said as "equal to" (fees have their own costs); markup, the $100 split,
+# inventory turns, Kirkland's share of sales, Executive share of members, fee growth and the dividend-vs-fees comparison are
+# OUR calculations, labelled on screen. The hot dog's "since 1985" is widely reported (CNN), said "reportedly"; the CFO and
+# Sinegal quotes are attributed. Kirkland ≈ $90B is a company statement (2025 letter). No logos or store designs; names in
+# text only; Vachris and Sinegal appear only as respectful caricatures doing what the narration documents.
+sources:
+  - id: tenk
+    title: "Costco Wholesale Corporation Form 10-K, fiscal year ended August 30, 2026 (Business; Membership; MD&A; financial statements; risk factors; executive officers)"
+    publisher: Costco Wholesale Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm
+    published: "2026-10-07"
+    accessed: "2026-11-17"
+    period: "Fiscal 2026 (52 weeks ended Aug 30, 2026)"
+    credit: "Costco 10-K FY2026 (SEC)"
+  - id: results
+    title: "Costco Wholesale Corporation Reports Fourth Quarter and Fiscal Year 2026 Operating Results (8-K Ex. 99.1)"
+    publisher: Costco Wholesale Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm
+    published: "2026-09-24"
+    accessed: "2026-11-17"
+    period: "Q4 and fiscal 2026"
+    credit: "Costco FY2026 results release (SEC)"
+  - id: div8k
+    title: "Costco Wholesale Corporation Declares $30 Special Cash Dividend and Reauthorizes Stock Repurchase Program (8-K Ex. 99.1)"
+    publisher: Costco Wholesale Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983226000134/costex9918-k111026.htm
+    published: "2026-11-10"
+    accessed: "2026-11-17"
+    period: "As of Nov 10, 2026"
+    credit: "Costco 8-K (Nov 2026)"
+  - id: fee2024
+    title: "Costco Wholesale Corporation Reports June Sales Results and Announces Quarterly Cash Dividend and Plans for Membership Fee Increase (8-K Ex. 99.1)"
+    publisher: Costco Wholesale Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983224000036/costex9918-k71024.htm
+    published: "2024-07-10"
+    accessed: "2026-11-17"
+    period: "Fee increase effective Sep 1, 2024"
+    credit: "Costco 8-K (Jul 2024)"
+  - id: tenk2017
+    title: "Costco Wholesale Corporation Form 10-K, fiscal year ended September 3, 2017 (membership fee increase effective June 1, 2017)"
+    publisher: Costco Wholesale Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983217000014/cost10k90317.htm
+    published: "2017-10-18"
+    accessed: "2026-11-17"
+    period: "Fiscal 2017"
+    credit: "Costco 10-K FY2017 (SEC)"
+  - id: tenk2012
+    title: "Costco Wholesale Corporation Form 10-K, fiscal year ended September 2, 2012 (fee increase effective Nov 1, 2011; CEO succession)"
+    publisher: Costco Wholesale Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/909832/000119312512428890/d388097d10k.htm
+    published: "2012-10-19"
+    accessed: "2026-11-17"
+    period: "Fiscal 2012"
+    credit: "Costco 10-K FY2012 (SEC)"
+  - id: proxy2012
+    title: "Costco Wholesale Corporation 2013 Proxy Statement (DEF 14A): director biographies"
+    publisher: Costco Wholesale Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/909832/000119312512501874/d447588ddef14a.htm
+    published: "2012-12-13"
+    accessed: "2026-11-17"
+    period: "As of Dec 2012"
+    credit: "Costco proxy 2012 (SEC)"
+  - id: ars
+    title: "Costco Wholesale Corporation 2025 Annual Report: letter to shareholders (Ron M. Vachris, Dec 4, 2025)"
+    publisher: Costco Wholesale Corporation (SEC filing)
+    url: https://www.sec.gov/Archives/edgar/data/909832/000090983225000157/costannualreport2025.pdf
+    published: "2025-12-04"
+    accessed: "2026-11-17"
+    period: "Fiscal 2025 (ended Aug 31, 2025)"
+    credit: "Costco 2025 Annual Report"
+  - id: cnn_hotdog
+    title: "Costco's $1.50 hot dog price is 'safe,' company's CFO says (CNN, syndicated by ABC7)"
+    publisher: CNN / ABC7 News
+    url: https://abc7news.com/post/costcos-150-hot-dog-price-safe/14895838/
+    published: "2024-05-31"
+    accessed: "2026-11-17"
+    period: "Earnings call of May 30, 2024; Sinegal interview with The Seattle Times, 2009"
+    credit: "CNN (May 2024)"
+claims:
+  - id: fees
+    text: "10-K FY2026 income statement ($M): net sales 297,247; membership fees 5,907 (FY2025 5,323; FY2024 4,828); total revenue 303,154; operating income 11,685; net income 9,226. 'Membership fee revenue increased 11% to $5,907, driven by new member sign-ups, membership fee increases, and upgrades to Executive membership.' 10-K FY2017: membership fees $2,853M. 10-K: 'We account for membership fee revenue on a deferred basis, recognized ratably over the one-year membership period'; balance sheet Aug 30, 2026: deferred membership fees $3,006M. OUR CALCULATION: fees = 50.6% of operating income; FY2026 fees = 2.07x FY2017."
+    spoken: five point nine billion dollars
+    display: "$5.9bn membership fees (fiscal 2026)"
+    fields: {op_spoken: eleven point seven billion dollars, net_spoken: nine point two billion dollars, fy17_spoken: two point nine billion dollars, deferred_spoken: three billion dollars}
+    source_ids: [tenk, tenk2017]
+    status: source_located
+    verification_note: Share of operating income and the FY2017 comparison are our calculations; said "equal to", not "come from".
+  - id: sales
+    text: "Results release (Sep 24, 2026): 'Net sales for the fiscal year increased 10.1 percent, to $297.2 billion, from $269.9 billion last year.' 10-K: merchandise costs 264,279; SG&A 27,190; gross margin percentage 11.09% (FY2025 11.12%); 'these volumes and turnover enable us to operate profitably at significantly lower gross margins (net sales less merchandise costs) than most other retailers.' OUR CALCULATION per $100 of net sales: $88.91 merchandise costs, $11.09 gross margin, $9.15 SG&A, $1.94 left before membership fees; average markup over cost ≈ 12.5%."
+    spoken: two hundred and ninety-seven billion dollars
+    display: "$297.2bn net sales (fiscal 2026, +10.1%)"
+    fields: {gm_spoken: eleven point one percent, growth_spoken: ten percent}
+    source_ids: [results, tenk]
+    status: source_located
+    verification_note: The $100 split and the markup are our calculations (SG&A also covers warehouse costs funded partly by fees; illustrative).
+  - id: members
+    text: "10-K FY2026: paid members 84,100 thousand (FY2025 81,000); household cards 66,300; total cardholders 150,400 thousand. 'Our member renewal rate was 92.3% in the U.S. and Canada and 89.8% worldwide at the end of 2026.' 'Our annual fee for memberships is $65 in the U.S.'"
+    spoken: eighty-four million
+    display: "84.1M paid members · 150.4M cardholders"
+    fields: {cards_spoken: one hundred and fifty million, renew_spoken: ninety-two point three percent, ww_spoken: eighty-nine point eight percent}
+    source_ids: [tenk]
+    status: source_located
+  - id: feehist
+    text: "U.S. Gold Star fee: 10-K FY2012: 'Effective November 1, 2011, for new members ... we increased our annual membership fee by $5 ... to $55'; Executive $100 -> $110. 10-K FY2017: 'Effective June 1, 2017, we increased our annual membership fees in the U.S. and Canada ... by $5 to $60'; Executive $110 -> $120. 8-K Jul 10, 2024: effective Sep 1, 2024, $65; Executive $120 -> $130; max 2% reward $1,000 -> $1,250; 'The fee increases will impact around 52 million memberships, a little over half of which are Executive.' 10-K FY2026: 'The fee income increase accounted for approximately 30% and 40% of membership income growth during 2026 and 2025.' Renewal rates (U.S. & Canada): 89.7% (10-K FY2012), 90% (10-K FY2017), 92.3% (10-K FY2026). 10-K FY2026: 'We expect to continue to increase the sales penetration of our private-label items.'"
+    spoken: fifty-two million
+    display: "U.S. fee: $50 → $55 (2011) → $60 (2017) → $65 (2024)"
+    fields: {}
+    source_ids: [tenk2012, tenk2017, fee2024, tenk]
+    status: source_located
+  - id: exec
+    text: "10-K FY2026: 'Executive members represented 42,300, 38,700, and 35,400 of total paid members in 2026, 2025, and 2024. The penetration of sales to Executive members represented approximately 75.2% of worldwide net sales in 2026.' 'These members earn an Executive reward, generally 2% on qualified purchases, subject to an annual maximum value.' OUR CALCULATION: 42.3 / 84.1 = 50.3% of paid members."
+    spoken: forty-two million
+    display: "42.3M Executive members · ≈ 75% of sales"
+    fields: {share_spoken: seventy-five percent}
+    source_ids: [tenk]
+    status: source_located
+  - id: skus
+    text: "10-K FY2026: 'We carry less than 4,000 active stock keeping units (SKUs) per warehouse in our core warehouse business, significantly less than other broadline retailers.' 'We seek to limit most items to fast-selling models, sizes, and colors.' 'Merchandise is generally stored on racks above the sales floor and displayed on pallets containing large quantities, reducing labor required.' 'Costco operated 939 ... warehouses worldwide at August 30, 2026'. 2025 letter: 'leveraging the benefits of our limited sku count model to dynamically adjust the items we sell'."
+    spoken: four thousand
+    display: "< 4,000 active items per warehouse"
+    fields: {wh_spoken: nine hundred and thirty-nine}
+    source_ids: [tenk, ars]
+    status: source_located
+  - id: whnow
+    text: "8-K Ex. 99.1 (Nov 10, 2026): 'Costco currently operates 945 warehouses, including 653 in the United States and Puerto Rico, 115 in Canada, 43 in Mexico, 37 in Japan, 29 in the United Kingdom, 20 in Korea, 15 in Australia, 14 in Taiwan, seven in China, five in Spain, three in France, two in Sweden, and one each in Iceland, and New Zealand.'"
+    spoken: nine hundred and forty-five
+    display: "945 warehouses (Nov 2026)"
+    fields: {}
+    source_ids: [div8k]
+    status: source_located
+  - id: kirkland
+    text: "2025 Annual Report letter (Ron M. Vachris, Dec 4, 2025): 'Kirkland Signature ... typically offering 15-20% savings compared to the national brand equivalent item ... We celebrated the 30th anniversary of our Kirkland Signature trademark this year, and it continues to enjoy strong growth, now representing approximately $90B of annual revenue globally.' 10-K FY2026: Kirkland Signature products 'generally earn higher margins'; 'We expect to continue to increase the sales penetration of our private-label items.' OUR ROUGH CALCULATION: $90B / FY2025 net sales $269.9B ≈ one third."
+    spoken: about ninety billion dollars
+    display: "Kirkland Signature ≈ $90B a year (company statement)"
+    fields: {}
+    source_ids: [ars, tenk]
+    status: source_located
+    verification_note: Company statement; the one-third share is our rough calculation (different bases), said so.
+  - id: float
+    text: "10-K FY2026: 'We often sell inventory before we are required to pay for it, even while taking advantage of early payment discounts.' Balance sheet Aug 30, 2026 ($M): merchandise inventories 19,324 (Aug 31, 2025: 18,116); accounts payable 22,591. OUR CALCULATION: inventory turns = 264,279 / average inventory 18,720 ≈ 14.1 a year (≈ 26 days); accounts payable = 117% of inventory."
+    spoken: twenty-two point six billion dollars
+    display: "Owed suppliers $22.6bn vs $19.3bn of goods (Aug 30, 2026)"
+    fields: {inv_spoken: nineteen point three billion dollars}
+    source_ids: [tenk]
+    status: source_located
+    verification_note: Turns are our calculation.
+  - id: gas
+    text: "10-K FY2026: 'Warehouse Ancillary (includes gasoline, pharmacy, food court, optical, hearing aids, and tire installation)'; 'Warehouse ancillary operate primarily within, next to or near our warehouses, encouraging more frequent shopping.' 'We operated 774 gas stations at the end of 2026. Our gasoline business represented 11% of total net sales in 2026.'"
+    spoken: seven hundred and seventy-four
+    display: "774 gas stations · gasoline = 11% of net sales (FY2026)"
+    fields: {share_spoken: eleven percent}
+    source_ids: [tenk]
+    status: source_located
+  - id: hotdog
+    text: "CNN (May 31, 2024): CFO Gary Millerchip on the earnings call: 'To clear up some recent media speculation, I also want to confirm the $1.50 hot dog price is safe.' 'The price has remained the same since 1985.' Jim Sinegal, in a 2009 interview with The Seattle Times (as quoted by CNN): 'We're known for that hot dog. That's something you don't mess with.' 10-K FY2026 lists the food court among warehouse ancillary businesses."
+    spoken: a dollar fifty
+    display: "Hot dog + soda: $1.50 (reportedly since 1985)"
+    fields: {}
+    source_ids: [cnn_hotdog, tenk]
+    status: source_located
+    verification_note: Secondary (CNN) reporting of on-the-record statements; 'since 1985' said as 'reportedly'.
+  - id: people
+    text: "Proxy (Dec 2012): 'Mr. Sinegal is a co-founder of the Company and has been a director since its inception.' 10-K FY2012: 'Effective January 1, 2012, Jim Sinegal retired as our Chief Executive Officer'. 10-K FY2026: Costco 'began operations in 1983, in Seattle, Washington'; Ron M. Vachris, President and CEO, previously President and COO from February 2022 to December 2023 (CEO employment agreement effective January 1, 2024). 2025 letter: average U.S. hourly wage 'approximately $32 for hourly employees' in 2025; 10-K FY2026: 355,000 employees; 'Compensation and benefits for employees is our largest expense after the cost of merchandise'."
+    spoken: nineteen eighty-three
+    display: "Founded 1983, Seattle · Vachris CEO since Jan 2024"
+    fields: {wage_spoken: about thirty-two dollars, staff_spoken: three hundred and fifty-five thousand}
+    source_ids: [proxy2012, tenk2012, tenk, ars]
+    status: source_located
+  - id: div
+    text: "8-K Ex. 99.1 (Nov 10, 2026): 'its Board of Directors has declared a special cash dividend of $30 per share ... payable December 4, 2026 ... The total amount of the payment will be approximately $13.3 billion.' OUR CALCULATION: 13.3 / 5.907 = 2.25 times fiscal 2026 membership fees."
+    spoken: thirteen point three billion dollars
+    display: "$30/share special dividend ≈ $13.3bn (Nov 10, 2026)"
+    fields: {}
+    source_ids: [div8k, tenk]
+    status: source_located
+    verification_note: Comparison with fees is our calculation.
+  - id: risk
+    text: "10-K FY2026 risk factors: 'Membership loyalty and growth are essential to our business. The extent to which we achieve growth in our membership base, increase the penetration of Executive membership, and sustain high renewal rates materially influences our profitability.' 'Damage to our brands, reputation, or culture may negatively impact comparable sales, diminish member trust, and reduce renewal rates'."
+    spoken: essential
+    display: "'Membership loyalty and growth are essential to our business' (10-K)"
+    fields: {}
+    source_ids: [tenk]
+    status: source_located

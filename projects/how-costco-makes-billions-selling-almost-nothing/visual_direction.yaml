@@ -1,0 +1,62 @@
+# Visual direction for how-costco-makes-billions-selling-almost-nothing (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Director's edit (Ep 57). OWNER DIRECTION: as animated as possible, in the style of a prime-time animated TV sitcom. Genre
+# level only: every character, design, name, title card, caption and sound is original. Craft: cold open gag (the 10 a.m.
+# rush to the food court) -> channel intro (the "theme") -> show title card with a typed joke subtitle -> five acts, each opened
+# by a bumper with a changing joke caption -> button joke after the end card.
+# RUNNING GAG: the food-court price board says $1.50; in every bumper someone tries to change it (ladder, crane, drone, robot
+# arm, a sticker) and fails; in the button it finally changes... to $1.50.
+# Recurring cast (original): BEV (membership-desk clerk, cardigan, lanyard, reading glasses), HANK (bulk-buying dad, flannel,
+# cap, the giant cart), PEARL (sample-station lady, hairnet, tray of toothpick samples), SKIP (teen in a food-court cap),
+# CARDIE (a walking membership card mascot with a deadpan LED face), LIFT (forklift) and BUZZ (drone) as warehouse extras.
+# Real people (respectful caricatures, signature traits only, name label, doing only what the narration documents): Ron Vachris
+# (CEO; short grey hair, navy blazer, open collar) holding the shareholder letter; Jim Sinegal (co-founder; white hair, glasses,
+# plain shirt and a simple first-name tag) at the food court. Private individuals are generic cast or silhouettes.
+# Bespoke sets (all new, day scenes; costco.tsx): clubfloor (warehouse floor: steel racks to the ceiling, skylights, pallets),
+# memberdesk (membership desk with card printer and queue), foodcourt (counter, menu board, picnic tables, ketchup pumps),
+# housebrand (house-brand factory: conveyor relabelling plain boxes), treasureaisle (spotlit rotating mystery pallet),
+# loadingdock (trucks, invoice clock: sell before paying), gasbar (canopy, pumps, price sign), seattle83 (1983 opening day,
+# sepia), boardroom (cash vault / dividend chute), clubtitle and clubbumper (show title card and act bumpers).
+primary_tone: sitcom
+secondary_tones:
+- history
+palette:
+  bg: '#FFF6E8'
+  bg2: '#FFFCF5'
+  ink: '#1B2433'
+  muted: '#6B7385'
+  land: '#9CCB7A'
+  border: '#2E4A66'
+  accent: '#FF9F1C'
+  accent2: '#2F6FD1'
+  accent3: '#2E9E5B'
+  risk: '#E53950'
+presenter:
+  demeanor: warm
+  min_sequences: 4
+chapters:
+- chapter: Cold open
+  tone: sitcom
+- chapter: The thinnest margin
+  tone: sitcom
+- chapter: The membership desk
+  tone: sitcom
+- chapter: The treasure hunt
+  tone: sitcom
+- chapter: The dollar-fifty hot dog
+  tone: sitcom
+- chapter: Who pays the bill
+  tone: sitcom
+turning_points:
+- segment: a1_size
+  cue: Net sales grew
+  to: sitcom
+  why: back from the 1983 sepia flashback to the present-day show
+thumbnail:
+  tone: sitcom
+  headline: [COSTCO'S, REAL PRODUCT]
+  idea: a giant membership card glowing like a gold ticket, a $1.50 hot dog orbiting it; no logos
+requirements:
+- No Costco logo, store design, typeface or trademarked art; names appear in plain text only; the card is a generic member card
+- No character, design, name, catchphrase, location, title text or music borrowed from any existing show
+- Jokes never change a number; our calculations, company statements and the reported hot-dog date labelled on screen
+- Day scenes, many generic human characters; real people only as respectful caricatures (Vachris, Sinegal) with a name label

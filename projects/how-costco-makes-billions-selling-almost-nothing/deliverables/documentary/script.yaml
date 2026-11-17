@@ -1,0 +1,286 @@
+# Documentary (target 11-13 min), built like an episode of a prime-time animated sitcom: cold open, channel intro (our
+# "theme"), a show title card, five acts with bumpers, a running gag (the $1.50 hot-dog price board nobody manages to change),
+# a button joke after the end card. The five parts stay an INTERNAL structure (never narrated as missions).
+# Numbers come from sources.yaml via {{placeholders}}; years are spoken as words. Our calculations are said as such; Costco's
+# fiscal year ended Aug 30, 2026 (said "fiscal"). Jokes never change a number.
+logline: Costco sells almost at cost. The profit hides in a plastic card renewed by nine in ten members, a short list of
+  products sold in enormous volume, a house brand, a dollar-fifty hot dog that keeps people coming back, and the suppliers' money
+  it holds before it pays them.
+title: How Costco Makes Billions Selling Almost Nothing
+segments:
+- id: co_open
+  chapter: Cold open
+  narration: Ten in the morning. A giant box with no windows, concrete floors and steel racks up to the ceiling. The doors open,
+    and half the crowd walks right past the televisions, to the back corner, for a hot dog and a soda. Price? {{hotdog}}.
+    Reportedly, the same price since nineteen eighty-five.
+  claims:
+  - hotdog
+- id: co_hook
+  chapter: Cold open
+  narration: And yet this is one of the most profitable retailers in America. In its last fiscal year, Costco sold {{sales}}
+    worth of goods and earned {{fees.net_spoken}}. But on the goods themselves, it makes almost nothing. So where do the billions
+    come from?
+  claims:
+  - sales
+  - fees
+- id: co_promise
+  chapter: Cold open
+  narration: Let's follow the money. The thinnest margin in the building, a plastic card, a very short shopping list, a very
+    cheap hot dog, and the money Costco holds before it pays anyone.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: title_card
+  chapter: Cold open
+  narration: ''
+  claims: []
+- id: a1_card
+  chapter: The thinnest margin
+  narration: ''
+  claims: []
+- id: a1_size
+  chapter: The thinnest margin
+  narration: Start with the size. Costco began operations in Seattle in {{people}}. By the end of fiscal twenty
+    twenty-six, it ran {{skus.wh_spoken}} warehouses, and today it has {{whnow}}, from Iceland to New Zealand. Net sales grew
+    about {{sales.growth_spoken}} in a single year.
+  claims:
+  - people
+  - skus
+  - whnow
+  - sales
+- id: a1_margin
+  chapter: The thinnest margin
+  narration: Now look at what it keeps. Gross margin, what's left after paying for the goods, was {{sales.gm_spoken}} of sales.
+    By our calculation, the average item sells for only about twelve and a half percent more than it cost. Costco's own annual
+    report says it operates at significantly lower gross margins than most other retailers.
+  claims:
+  - sales
+- id: a1_draw
+  chapter: The thinnest margin
+  narration: Let me draw one hundred dollars at the register. About eighty-nine dollars goes straight back to the suppliers. That
+    leaves about eleven. Around nine of those pay for the warehouses, the workers and the trucks. What's left from selling the
+    goods, by our calculation, is about two dollars. Two dollars, out of a hundred.
+  claims:
+  - sales
+  analysis: true
+  source_note: Split of $100 of net sales from the fiscal 2026 income statement (our calculation, rounded).
+- id: a1_fees
+  chapter: The thinnest margin
+  narration: Then there's the other line on the income statement. Membership fees. {{fees}} in a single year. That's equal to
+    about half of Costco's operating income of {{fees.op_spoken}}. Fees have their own costs, so they aren't pure profit. But
+    they arrive before you've bought a single thing.
+  claims:
+  - fees
+- id: a1_turn
+  chapter: The thinnest margin
+  narration: So the store floor is almost a break-even machine. The real business sits at a little desk by the front door.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: a2_card
+  chapter: The membership desk
+  narration: ''
+  claims: []
+- id: a2_members
+  chapter: The membership desk
+  narration: To shop here, you need a card. At the end of fiscal twenty twenty-six, Costco had {{members}} paid members, and
+    about {{members.cards_spoken}} cardholders once the extra household cards are counted. In the United States, the basic card costs sixty-five dollars a year, and
+    it comes with a free second card for someone in your household.
+  claims:
+  - members
+- id: a2_renew
+  chapter: The membership desk
+  narration: And they come back. The renewal rate was {{members.renew_spoken}} in the United States and Canada, and {{members.ww_spoken}}
+    worldwide. That's a fee you pay every year, before you buy anything. And more than nine out of ten people pay it again.
+  claims:
+  - members
+- id: a2_hist
+  chapter: The membership desk
+  narration: Let me chart the price of that card in the United States. Fifty dollars, until late twenty eleven. Then fifty-five.
+    In twenty seventeen, sixty. And in September twenty twenty-four, sixty-five. A small step, every six or seven years. And each time, renewal rates stayed around nine in ten.
+  claims:
+  - feehist
+- id: a2_raise
+  chapter: The membership desk
+  narration: That last increase touched around {{feehist}} memberships. The Executive card went from one hundred and twenty
+    to one hundred and thirty dollars. And Costco says the higher fee explained only about thirty percent of the growth in membership
+    income in fiscal twenty twenty-six. The rest came from new members and upgrades.
+  claims:
+  - feehist
+- id: a2_deferred
+  chapter: The membership desk
+  narration: And here's a quiet detail. Costco doesn't count your fee as income on the day you pay it. It spreads it over the twelve
+    months of your membership. So at the end of fiscal twenty twenty-six, members had already handed over about {{fees.deferred_spoken}}
+    that Costco hadn't even counted yet. Next year's income, sitting in the bank.
+  claims:
+  - fees
+- id: a2_exec
+  chapter: The membership desk
+  narration: Those upgrades matter. Executive members pay double, and earn about two percent back on what they buy, up to a yearly
+    cap. There are about {{exec}} of them. By our calculation, that's about half of all paid members. And they account for about
+    {{exec.share_spoken}} of Costco's sales.
+  claims:
+  - exec
+- id: a2_loop
+  chapter: The membership desk
+  narration: See the trick? The fee makes you come back to get your money's worth. The reward makes you spend more when you do.
+    In fiscal twenty seventeen, membership fees were {{fees.fy17_spoken}}. Last fiscal year, {{fees}}. More than double.
+  claims:
+  - fees
+  analysis: true
+  source_note: Commentary on the fee and the Executive reward; the doubling is our calculation (5,907 / 2,853).
+- id: a3_card
+  chapter: The treasure hunt
+  narration: ''
+  claims: []
+- id: a3_skus
+  chapter: The treasure hunt
+  narration: Next, the shelves. Costco says it carries fewer than {{skus}} active items per warehouse, significantly fewer than
+    other big retailers. Not twenty kinds of ketchup. One or two, in giant packs, still sitting on the pallet.
+  claims:
+  - skus
+  analysis: true
+  source_note: Item count from the 10-K; the ketchup line is an illustration, not a figure.
+- id: a3_volume
+  chapter: The treasure hunt
+  narration: A short list means every item sells in enormous volume. Enormous volume means bargaining power with the companies
+    that make the goods. And the goods arrive on pallets, stored on racks above the floor, which Costco says reduces the labor
+    needed.
+  claims:
+  - skus
+- id: a3_treasure
+  chapter: The treasure hunt
+  narration: The list also keeps moving. Costco says it adjusts the items it sells to focus on the most productive ones. Shoppers
+    call it the treasure hunt. If you see it, you'd better buy it, because next week it might be gone.
+  claims:
+  - skus
+  analysis: true
+  source_note: Rotation from the 2025 letter; "treasure hunt" is the shoppers' nickname (commentary).
+- id: a3_kirk
+  chapter: The treasure hunt
+  narration: And then there's the house brand. In his latest letter to shareholders, chief executive Ron Vachris wrote that Kirkland
+    Signature now brings in {{kirkland}} a year worldwide, typically saving members fifteen to twenty percent compared with the
+    national brand.
+  claims:
+  - kirkland
+- id: a3_kirk2
+  chapter: The treasure hunt
+  narration: By our rough calculation, that's about a third of Costco's sales. And according to its annual report, these products
+    generally earn Costco higher margins. The cheaper box for you is the better deal for Costco. And Costco says it expects to keep
+    increasing the share of its sales that comes from its own label.
+  claims:
+  - kirkland
+- id: a3_draw
+  chapter: The treasure hunt
+  narration: Let me draw the squeeze. Here's a typical supermarket. A long list, each item selling a little. Here's Costco. A short
+    list, each item selling a lot. Big volume per item means a strong hand with the supplier. The house brand is a second lever.
+    Both push the price down.
+  claims:
+  - skus
+  analysis: true
+  source_note: Schematic diagram (illustrative, not to scale).
+- id: a4_card
+  chapter: The dollar-fifty hot dog
+  narration: ''
+  claims: []
+- id: a4_dog
+  chapter: The dollar-fifty hot dog
+  narration: Now, the food court. When rumors spread in twenty twenty-four that the hot dog combo might finally go up, Costco's
+    finance chief told analysts, quote, the dollar-fifty hot dog price is safe.
+  claims:
+  - hotdog
+- id: a4_sinegal
+  chapter: The dollar-fifty hot dog
+  narration: Co-founder Jim Sinegal, who ran the company until twenty twelve, put it simply in a newspaper interview, as quoted
+    by CNN. We're known for that hot dog. That's something you don't mess with.
+  claims:
+  - hotdog
+  - people
+- id: a4_why
+  chapter: The dollar-fifty hot dog
+  narration: Why protect it? Because the food court isn't really a restaurant. Costco groups it with gas, pharmacy and optical
+    as warehouse ancillary businesses, which, it says, encourage more frequent shopping. A cheap lunch is a reason to come in. The pharmacy, the optical counter and the tire
+    shop do the same job. And every visit passes the pallets.
+  claims:
+  - gas
+- id: a4_gas
+  chapter: The dollar-fifty hot dog
+  narration: Gas works the same way, at a bigger scale. Costco ran {{gas}} gas stations at the end of fiscal twenty twenty-six,
+    and gasoline was {{gas.share_spoken}} of its net sales. Fill up the tank, and while you're here...
+  claims:
+  - gas
+- id: a4_float
+  chapter: The dollar-fifty hot dog
+  narration: Then there's the cash. In Costco's own words, it often sells inventory before it is required to pay for it, even while
+    taking advantage of early payment discounts.
+  claims:
+  - float
+- id: a4_balance
+  chapter: The dollar-fifty hot dog
+  narration: At the end of fiscal twenty twenty-six, it held {{float.inv_spoken}} of merchandise. And it owed its suppliers {{float}}.
+    It owed more than everything on its shelves was worth. That's the quiet superpower of a store
+    where nothing sits still.
+  claims:
+  - float
+- id: a4_draw
+  chapter: The dollar-fifty hot dog
+  narration: Let me draw the clock. Day zero, a pallet arrives. By our calculation, Costco's inventory turns over about fourteen
+    times a year, so a typical item is gone in less than a month. The member pays at the register. Only later does the supplier's
+    bill come due. In between, that money works for Costco.
+  claims:
+  - float
+  analysis: true
+  source_note: Cash-cycle timeline (illustrative); turns are our calculation.
+- id: a5_card
+  chapter: Who pays the bill
+  narration: ''
+  claims: []
+- id: a5_people
+  chapter: Who pays the bill
+  narration: So who pays for all those low prices? Not the workers, Costco argues. Its letter put the average U.S. hourly wage
+    at {{people.wage_spoken}} in twenty twenty-five, and its annual report calls pay its largest expense after the goods themselves. It employed about {{people.staff_spoken}} people worldwide
+    at the end of fiscal twenty twenty-six.
+  claims:
+  - people
+- id: a5_div
+  chapter: Who pays the bill
+  narration: And the shareholders? On November tenth, twenty twenty-six, Costco declared a special dividend of thirty dollars
+    a share. About {{div}} in total. By our calculation, that's more than two years of membership fees, paid out in one go.
+  claims:
+  - div
+- id: a5_risk
+  chapter: Who pays the bill
+  narration: But the whole machine rests on one promise. Costco's own annual report says membership loyalty and growth are {{risk}}
+    to its business, and that damage to its reputation could reduce renewal rates. If the savings ever stop beating the fee, the
+    card stops making sense.
+  claims:
+  - risk
+- id: a5_draw
+  chapter: Who pays the bill
+  narration: Let me put the machine together. Low prices bring members in. Members pay fees, equal to about half the operating
+    profit. A short list sells in huge volume, which keeps prices low. Fast sales let Costco hold its suppliers' money. And the
+    hot dog keeps you coming back. Every part feeds the next.
+  claims:
+  - fees
+  - skus
+  - float
+  analysis: true
+  source_note: Summary diagram of the sourced parts.
+- id: payoff
+  chapter: Who pays the bill
+  narration: So how does Costco make billions selling almost nothing? It barely profits on the goods at all. It sells access. The
+    low prices are the product, and the card is the business. The store is the bait. The fee is the catch. And the dollar-fifty
+    hot dog? That's the reminder, every single visit, that the deal is still on.
+  claims: []
+  analysis: true
+  source_note: Conclusion drawn from the sourced facts above.
+- id: teaser
+  chapter: Who pays the bill
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: Who pays the bill
+  narration: ''
+  claims: []
