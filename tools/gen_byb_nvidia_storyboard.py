@@ -306,8 +306,8 @@ stage("s37_scale", "m5_upside", {
 kinetic("s38_t5", "m5_transition", [("So, what should you watch?", 76, "what should you watch", "gold", False)])
 
 # ====================================================================== PAYOFF
-board("p39_watch", "payoff", "3 numbers to watch (next report)", C("One, revenue"), [
-    {"d": rect(1320, 440, 250, 140), "color": "accent", "width": 6, "kind": "box", "start": C("One, revenue"), "label": lbl("NEXT REPORT", 1445, 518, 22, "accent")},
+board("p39_watch", "payoff", "3 numbers to watch (next report)", 0.5, [
+    {"d": rect(1320, 440, 250, 140), "color": "accent", "width": 6, "kind": "box", "start": 0.5, "label": lbl("NEXT REPORT", 1445, 518, 22, "accent")},
     {"d": rect(700, 300, 440, 110), "color": "accent2", "width": 5, "kind": "box", "start": C("One, revenue"), "label": lbl("Q4 REVENUE", 920, 362, 20, "accent2")},
     {"d": "M 720 428 L 1120 428", "color": "ink", "width": 1, "start": C("One, revenue", 0.3), "label": lbl("VS $130BN ± 3% (EXTRA WEEK)", 920, 450, 14, "ink")},
     {"d": arrow((1150, 355), (1310, 462), 0.08), "color": "accent2", "width": 5, "kind": "arrow", "start": C("One, revenue", 0.6)},

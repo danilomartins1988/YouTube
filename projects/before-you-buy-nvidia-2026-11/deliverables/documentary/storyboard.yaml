@@ -2342,8 +2342,7 @@ scenes:
   params:
     title: 3 numbers to watch (next report)
     board: *id003
-    draw_start:
-      cue: One, revenue
+    draw_start: 0.5
     speed: 1400
     push: 0.003
     enter:
@@ -2356,8 +2355,7 @@ scenes:
       color: accent
       width: 6
       kind: box
-      start:
-        cue: One, revenue
+      start: 0.5
       label:
         text: NEXT REPORT
         x: 1445

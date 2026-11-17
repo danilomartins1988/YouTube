@@ -1,0 +1,332 @@
+{
+  "title": "Before You Buy Nvidia Stock, Watch This (Nov 2026)",
+  "docs_dir": "docs/episodes/byb-nvidia-2026-11",
+  "video": "output/bybnvda_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "F",
+  "analysis": {
+    "mystery": "Why does a company whose revenue just doubled cost only about 16.5 times its profit?",
+    "surprising_fact": "Nvidia was worth about 16.6 times its last 12 months of net income at the Nov 17, 2026 close, and the price implies only about 5.6% to 10.3% a year of free-cash-flow growth (our calc.)",
+    "subject": "a generic accelerator chip",
+    "tone": "strategy",
+    "metaphor": "the market prices the boom like a peak"
+  },
+  "slug": "before-you-buy-nvidia-2026-11",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (Jensen Huang, pointing at a generic chip)",
+      "archetype": "face",
+      "text": [
+        "BEFORE YOU BUY",
+        "NVIDIA"
+      ],
+      "claim_basis": "no figure: series title + company name",
+      "scene": {
+        "bg": [
+          "#8BE04E",
+          "#0B3B12"
+        ],
+        "bust": {
+          "who": "huang",
+          "expr": "point",
+          "x": 470,
+          "s": 0.9
+        },
+        "prop": {
+          "kind": "chip",
+          "x": 1400,
+          "y": 770,
+          "s": 0.5,
+          "rot": -8
+        }
+      },
+      "layout": [
+        {
+          "text": "BEFORE YOU BUY",
+          "x": 1363.5,
+          "y": 155.1,
+          "size": 106.4,
+          "width": 953.0,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "NVIDIA",
+          "x": 1363.5,
+          "y": 374.6,
+          "size": 200,
+          "width": 768.0,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.71 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(887, 72, 1840, 161), (980, 219, 1748, 387)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.4:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": false,
+            "detail": "0.186",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (245, 190, 695, 667)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "huang",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 59",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-americans-can-no-longer-afford-a-home (distance 0.81)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "no figure: series title + company name",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.556,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-americans-can-no-longer-afford-a-home"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "giant number (bignum)",
+      "archetype": "bignum",
+      "text": [
+        "NVIDIA: 16.6\u00d7",
+        "PROFIT"
+      ],
+      "claim_basis": "lenses: market cap $3,747.5bn / TTM net income $226.3bn = 16.6x (our calc., Nov 17, 2026 close)",
+      "scene": {
+        "palette": {
+          "sky0": "#04120A",
+          "sky1": "#0F3A1C",
+          "haze": "#76E04E",
+          "key": "#E8FFE0",
+          "accent": "#FFE14D",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 1500,
+          "y": 600,
+          "s": 0.75
+        },
+        "support": [],
+        "particles": {
+          "n": 70,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "NVIDIA: 16.6\u00d7",
+          "x": 90,
+          "y": 522.5,
+          "size": 141.8,
+          "width": 1180.0,
+          "anchor": "start",
+          "color": "#FFE14D"
+        },
+        {
+          "text": "PROFIT",
+          "x": 96,
+          "y": 660.5,
+          "size": 120,
+          "width": 460.8,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.48 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 412, 1270, 531), (96, 567, 557, 668)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.4:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.071",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 39",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-alphabet-2026-11 (distance 0.56)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "lenses: market cap $3,747.5bn / TTM net income $226.3bn = 16.6x (our calc., Nov 17, 2026 close)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.669,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-alphabet-2026-11"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-17T23:24:44Z",
+  "master": "output/before-you-buy-nvidia-2026-11/thumbnails/master_F.png"
+}
