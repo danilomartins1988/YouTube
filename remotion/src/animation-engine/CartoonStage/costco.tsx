@@ -110,7 +110,7 @@ export const cardie: ItemFn = (a, {t, f}, i) => {
     : [-34, 34].map((c) => bl ? <path key={c} d={`M ${c - 14} -156 L ${c + 14} -156`} stroke={led} strokeWidth={7} strokeLinecap="round" /> : <rect key={c} x={c - 14} y={-164} width={28} height={12} rx={4} fill={led} />);
   const says: any[] = (a.say || []).filter((sy: any) => t >= Number(sy[0]) && t <= Number(sy[1]));
   const lab: string | null = a.label && t < (a.labelUntil ?? at + 4) ? String(a.label) : null;
-  return <g key={'cd' + i} transform={`translate(${x} ${y - hy}) scale(${s * fl} ${s})`}>
+  return <g key={'cd' + i} transform={`translate(${x} ${y - hy}) scale(${s} ${s})`}>
     <ellipse cx={0} cy={4 + hy} rx={90} ry={12} fill={OL} opacity={0.18} />
     {[-1, 1].map((sd) => { const la = sd * legA; return <g key={'lg' + sd}><path d={`M ${sd * 34} -40 L ${sd * 34 + Math.sin((la * Math.PI) / 180) * 40} 0`} stroke={OL} strokeWidth={10} strokeLinecap="round" />
       <ellipse cx={sd * 34 + Math.sin((la * Math.PI) / 180) * 40 + 10} cy={-4} rx={20} ry={10} fill="#E53950" stroke={OL} strokeWidth={4} /></g>; })}
@@ -127,10 +127,10 @@ export const cardie: ItemFn = (a, {t, f}, i) => {
       {[-1, 1].map((sd) => <path key={'ar' + sd} d={`M ${sd * 110} -140 Q ${sd * 150} ${-120 + Math.sin(t * 4 + sd + i) * 16} ${sd * 156} ${-90 + Math.sin(t * 4 + sd + i) * 20}`} stroke={OL} strokeWidth={10} fill="none" strokeLinecap="round" />)}
     </g>
     {says.map((sy, k) => { const txt = String(sy[2]), u = E.outBack(win(t, Number(sy[0]), 0.3)), w = Math.max(...txt.split('\n').map((l) => l.length)) * 20 + 50, h = txt.split('\n').length * 36 + 26;
-      return <g key={'sy' + k} transform={`translate(${fl * 0 + 120} -300) scale(${u * fl} ${u})`}><path d="M -40 30 L -90 90 L -10 30 Z" fill="#FFFFFF" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
+      return <g key={'sy' + k} transform={`translate(${fl * 120} -300) scale(${u} ${u})`}><path d="M -40 30 L -90 90 L -10 30 Z" fill="#FFFFFF" stroke={OL} strokeWidth={4} strokeLinejoin="round" />
         <rect x={-w / 2} y={-h / 2} width={w} height={h} rx={18} fill="#FFFFFF" stroke={OL} strokeWidth={4} />
         {txt.split('\n').map((l, q) => <T key={q} x={0} y={-h / 2 + 40 + q * 36} s={30}>{l}</T>)}</g>; })}
-    {lab && <g transform={`translate(0 -270) scale(${fl} 1)`}><rect x={-lab.length * 9 - 18} y={-26} width={lab.length * 18 + 36} height={40} rx={20} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><T x={0} y={2} s={22}>{lab}</T></g>}
+    {lab && <g transform={`translate(0 -270)`}><rect x={-lab.length * 9 - 18} y={-26} width={lab.length * 18 + 36} height={40} rx={20} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><T x={0} y={2} s={22}>{lab}</T></g>}
   </g>;
 };
 
