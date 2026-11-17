@@ -1,0 +1,3471 @@
+{
+  "slug": "why-are-chinese-cars-so-cheap",
+  "deliverable": "documentary",
+  "scenes": [
+    {
+      "index": 1,
+      "id": "s01_open",
+      "segment": "co_open",
+      "type": "engine_cartoon",
+      "start_s": 0.0,
+      "end_s": 13.6,
+      "duration_s": 13.6,
+      "visual_objective": "",
+      "narration": "Picture a brand-new electric car. A big touchscreen. A laser scanner on the roof for driver assistance. A battery its maker says charges from ten to seventy percent in five minutes. Now, the price.",
+      "keyframes": [
+        {
+          "param": "zones[0].screenAt.cue",
+          "cue": "big touchscreen",
+          "label": "zones[0].screenAt.cue",
+          "scene_time_s": 3.17,
+          "absolute_s": 3.17
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "A big touchscreen",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 3.17,
+          "absolute_s": 3.17
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "big touchscreen",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.47,
+          "absolute_s": 3.47
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "big touchscreen",
+          "label": "items[0].until.cue",
+          "scene_time_s": 3.47,
+          "absolute_s": 3.47
+        },
+        {
+          "param": "zones[0].scanAt.cue",
+          "cue": "laser scanner",
+          "label": "zones[0].scanAt.cue",
+          "scene_time_s": 5.03,
+          "absolute_s": 5.03
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "laser scanner",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 5.03,
+          "absolute_s": 5.03
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "laser scanner",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.33,
+          "absolute_s": 5.33
+        },
+        {
+          "param": "zones[0].chargeAt.cue",
+          "cue": "charges from ten",
+          "label": "zones[0].chargeAt.cue",
+          "scene_time_s": 9.21,
+          "absolute_s": 9.21
+        },
+        {
+          "param": "cam[3].at.cue",
+          "cue": "charges from ten",
+          "label": "cam[3].at.cue",
+          "scene_time_s": 9.21,
+          "absolute_s": 9.21
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "charges from ten",
+          "label": "items[1].until.cue",
+          "scene_time_s": 9.21,
+          "absolute_s": 9.21
+        },
+        {
+          "param": "cam[4].at.cue",
+          "cue": "Now, the price",
+          "label": "cam[4].at.cue",
+          "scene_time_s": 11.93,
+          "absolute_s": 11.93
+        },
+        {
+          "param": "items[2].faces[1][0].cue",
+          "cue": "Now, the price",
+          "label": "items[2].faces[1][0].cue",
+          "scene_time_s": 11.93,
+          "absolute_s": 11.93
+        },
+        {
+          "param": "items[2].takes[0].cue",
+          "cue": "Now, the price",
+          "label": "items[2].takes[0].cue",
+          "scene_time_s": 12.23,
+          "absolute_s": 12.23
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "seagull"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 2,
+      "id": "s02_hook",
+      "segment": "co_hook",
+      "type": "engine_cartoon",
+      "start_s": 13.6,
+      "end_s": 26.73,
+      "duration_s": 13.13,
+      "visual_objective": "",
+      "narration": "In China, the newest BYD Seagull lists at about nine thousand nine hundred dollars. The average new electric car in America sold for fifty-six thousand two hundred dollars in October.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "lists at",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.77,
+          "absolute_s": 16.37
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "lists at",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 2.97,
+          "absolute_s": 16.57
+        },
+        {
+          "param": "zones[0].priceAt.cue",
+          "cue": "about nine thousand",
+          "label": "zones[0].priceAt.cue",
+          "scene_time_s": 3.5,
+          "absolute_s": 17.1
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "about nine thousand",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.5,
+          "absolute_s": 17.1
+        },
+        {
+          "param": "items[1].takes[0].cue",
+          "cue": "about nine thousand",
+          "label": "items[1].takes[0].cue",
+          "scene_time_s": 3.7,
+          "absolute_s": 17.3
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "nine hundred dollars",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 4.82,
+          "absolute_s": 18.42
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "nine hundred dollars",
+          "label": "items[0].until.cue",
+          "scene_time_s": 5.42,
+          "absolute_s": 19.02
+        },
+        {
+          "param": "zones[0].rivalAt.cue",
+          "cue": "The average new electric car",
+          "label": "zones[0].rivalAt.cue",
+          "scene_time_s": 6.93,
+          "absolute_s": 20.53
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "The average new electric car",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 6.93,
+          "absolute_s": 20.53
+        },
+        {
+          "param": "items[1].faces[1][0].cue",
+          "cue": "The average new electric car",
+          "label": "items[1].faces[1][0].cue",
+          "scene_time_s": 6.93,
+          "absolute_s": 20.53
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "in October",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.87,
+          "absolute_s": 25.47
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "seagull",
+        "cnevpost_seagull",
+        "h10",
+        "kbb"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 3,
+      "id": "s03_contra",
+      "segment": "co_contra",
+      "type": "engine_cartoon",
+      "start_s": 26.73,
+      "end_s": 40.2,
+      "duration_s": 13.47,
+      "visual_objective": "",
+      "narration": "Ford's electric car unit lost four point eight billion dollars last year. Is China just better at building cars? Is the government paying? Are the books dressed up? Or is someone burning cash on every car?",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "lost",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.1,
+          "absolute_s": 28.84
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "lost",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 2.1,
+          "absolute_s": 28.84
+        },
+        {
+          "param": "items[1].takes[0].cue",
+          "cue": "lost",
+          "label": "items[1].takes[0].cue",
+          "scene_time_s": 2.5,
+          "absolute_s": 29.24
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "billion dollars last year",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 3.11,
+          "absolute_s": 29.84
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Is China just better",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.02,
+          "absolute_s": 31.75
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Is China just better",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.22,
+          "absolute_s": 31.95
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "Is China just better",
+          "label": "items[0].until.cue",
+          "scene_time_s": 5.22,
+          "absolute_s": 31.95
+        },
+        {
+          "param": "items[1].labelUntil.cue",
+          "cue": "Is China just better",
+          "label": "items[1].labelUntil.cue",
+          "scene_time_s": 5.22,
+          "absolute_s": 31.95
+        },
+        {
+          "param": "items[2].his[0][0].cue",
+          "cue": "Is China just better",
+          "label": "items[2].his[0][0].cue",
+          "scene_time_s": 5.22,
+          "absolute_s": 31.95
+        },
+        {
+          "param": "items[2].his[1][0].cue",
+          "cue": "Is the government paying",
+          "label": "items[2].his[1][0].cue",
+          "scene_time_s": 7.61,
+          "absolute_s": 34.34
+        },
+        {
+          "param": "items[2].his[2][0].cue",
+          "cue": "Are the books",
+          "label": "items[2].his[2][0].cue",
+          "scene_time_s": 9.0,
+          "absolute_s": 35.73
+        },
+        {
+          "param": "items[2].his[3][0].cue",
+          "cue": "burning cash",
+          "label": "items[2].his[3][0].cue",
+          "scene_time_s": 11.42,
+          "absolute_s": 38.16
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "ford"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 4,
+      "id": "s04_promise",
+      "segment": "co_promise",
+      "type": "engine_cartoon",
+      "start_s": 40.2,
+      "end_s": 51.73,
+      "duration_s": 11.53,
+      "visual_objective": "",
+      "narration": "Four suspects. To find the culprit, we'll take the car apart, follow the battery, read the cash flow, and step into a price war that's hurting its own winners.",
+      "keyframes": [
+        {
+          "param": "items[0].until.cue",
+          "cue": "To find the culprit",
+          "label": "items[0].until.cue",
+          "scene_time_s": 2.81,
+          "absolute_s": 43.01
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "take the car apart",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.87,
+          "absolute_s": 44.07
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "take the car apart",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.87,
+          "absolute_s": 44.07
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "follow the battery",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.2,
+          "absolute_s": 45.4
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "follow the battery",
+          "label": "items[5].at.cue",
+          "scene_time_s": 5.2,
+          "absolute_s": 45.4
+        },
+        {
+          "param": "items[5].hops[0].cue",
+          "cue": "follow the battery",
+          "label": "items[5].hops[0].cue",
+          "scene_time_s": 5.5,
+          "absolute_s": 45.7
+        },
+        {
+          "param": "items[5].tags[0][0].cue",
+          "cue": "follow the battery",
+          "label": "items[5].tags[0][0].cue",
+          "scene_time_s": 5.6,
+          "absolute_s": 45.8
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "read the cash flow",
+          "label": "items[3].at.cue",
+          "scene_time_s": 6.76,
+          "absolute_s": 46.97
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "price war",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 9.0,
+          "absolute_s": 49.2
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "price war",
+          "label": "items[4].at.cue",
+          "scene_time_s": 9.0,
+          "absolute_s": 49.2
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 5,
+      "id": "intro",
+      "segment": "channel_intro",
+      "type": "channel_intro",
+      "start_s": 51.73,
+      "end_s": 56.73,
+      "duration_s": 5.0,
+      "visual_objective": "Channel intro (5 s)",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "audio:intro_signature",
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 6,
+      "id": "s05_title",
+      "segment": "title_card",
+      "type": "engine_cartoon",
+      "start_s": 56.73,
+      "end_s": 62.33,
+      "duration_s": 5.6,
+      "visual_objective": "",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 7,
+      "id": "s06_b1",
+      "segment": "a1_card",
+      "type": "engine_cartoon",
+      "start_s": 62.33,
+      "end_s": 66.13,
+      "duration_s": 3.8,
+      "visual_objective": "",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 8,
+      "id": "s07_fair",
+      "segment": "a1_fair",
+      "type": "engine_cartoon",
+      "start_s": 66.13,
+      "end_s": 84.3,
+      "duration_s": 18.17,
+      "visual_objective": "",
+      "narration": "First, a fair warning. The Seagull is a small city car, and Chinese buyers add a five percent purchase tax this year. Its European cousin, the Dolphin Surf, lists in Germany at about twenty-six thousand dollars, under different taxes and tariffs.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "small city car",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.98,
+          "absolute_s": 70.12
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "small city car",
+          "label": "items[0].until.cue",
+          "scene_time_s": 3.98,
+          "absolute_s": 70.12
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "small city car",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.98,
+          "absolute_s": 70.12
+        },
+        {
+          "param": "zones[0].rivalAt.cue",
+          "cue": "Its European cousin",
+          "label": "zones[0].rivalAt.cue",
+          "scene_time_s": 9.49,
+          "absolute_s": 75.62
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Its European cousin",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 9.69,
+          "absolute_s": 75.82
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "Its European cousin",
+          "label": "items[1].until.cue",
+          "scene_time_s": 9.69,
+          "absolute_s": 75.82
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "different taxes",
+          "label": "items[2].at.cue",
+          "scene_time_s": 15.97,
+          "absolute_s": 82.11
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nevtax",
+        "seagull",
+        "h10",
+        "eu_cvd"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 9,
+      "id": "s08_real",
+      "segment": "a1_real",
+      "type": "engine_cartoon",
+      "start_s": 84.3,
+      "end_s": 100.5,
+      "duration_s": 16.2,
+      "visual_objective": "",
+      "narration": "But adjust for all that, and something real remains. In twenty twenty-five, the IEA found nearly seventy percent of battery electric cars sold in China were cheaper than comparable gasoline cars. Before incentives.",
+      "keyframes": [
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "something real remains",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 2.48,
+          "absolute_s": 86.78
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "nearly seventy percent",
+          "label": "items[0].at.cue",
+          "scene_time_s": 6.79,
+          "absolute_s": 91.09
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "nearly seventy percent",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.09,
+          "absolute_s": 91.39
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "nearly seventy percent",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 7.09,
+          "absolute_s": 91.39
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "were cheaper",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 11.23,
+          "absolute_s": 95.53
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Before incentives",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.48,
+          "absolute_s": 98.78
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 10,
+      "id": "s09_scale",
+      "segment": "a1_scale",
+      "type": "engine_cartoon",
+      "start_s": 100.5,
+      "end_s": 113.17,
+      "duration_s": 12.67,
+      "visual_objective": "",
+      "narration": "China now builds nearly three out of every four electric cars on Earth. BYD alone sold about four point six million vehicles last year, and more fully electric cars than Tesla.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "BYD alone",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.41,
+          "absolute_s": 105.91
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "BYD alone",
+          "label": "items[0].at.cue",
+          "scene_time_s": 5.41,
+          "absolute_s": 105.91
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "BYD alone",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 5.41,
+          "absolute_s": 105.91
+        },
+        {
+          "param": "items[3].labelUntil.cue",
+          "cue": "BYD alone",
+          "label": "items[3].labelUntil.cue",
+          "scene_time_s": 5.41,
+          "absolute_s": 105.91
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "million vehicles",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 7.59,
+          "absolute_s": 108.09
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "more fully electric",
+          "label": "items[1].at.cue",
+          "scene_time_s": 9.74,
+          "absolute_s": 110.24
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "more fully electric",
+          "label": "items[2].at.cue",
+          "scene_time_s": 10.54,
+          "absolute_s": 111.04
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo",
+        "byd_sales",
+        "byd_ar25",
+        "vw"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 11,
+      "id": "p10_cost",
+      "segment": "a1_draw",
+      "type": "engine_draw",
+      "start_s": 113.17,
+      "end_s": 129.77,
+      "duration_s": 16.6,
+      "visual_objective": "",
+      "narration": "Let me draw where a car's money goes. A hypothetical twenty-five thousand dollar electric car, not any company's numbers. The biggest part: the battery. At Bloomberg NEF's average pack price last year, sixty kilowatt-hours costs about five thousand nine hundred dollars.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Let me draw",
+          "label": "draw_start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 113.52
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Let me draw",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 113.52
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "where a car's money",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 1.39,
+          "absolute_s": 114.56
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "where a car's money",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 1.69,
+          "absolute_s": 114.86
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "A hypothetical",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 2.98,
+          "absolute_s": 116.15
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "The biggest part",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 8.51,
+          "absolute_s": 121.68
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "The biggest part",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 8.81,
+          "absolute_s": 121.98
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "average pack price",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 10.55,
+          "absolute_s": 123.72
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "average pack price",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 10.85,
+          "absolute_s": 124.02
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "five thousand nine hundred",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 127.48
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "bnef"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 12,
+      "id": "s11_slices",
+      "segment": "a1_slices",
+      "type": "engine_cartoon",
+      "start_s": 129.77,
+      "end_s": 145.3,
+      "duration_s": 15.53,
+      "visual_objective": "",
+      "narration": "Then the motor and electronics. Screens, chips and software. Body, steel and glass. Labor and the factory. Shipping and the dealer. Taxes. And at the bottom, the slice the company keeps. It's thin.",
+      "keyframes": [
+        {
+          "param": "zones[0].slices[1][0].cue",
+          "cue": "motor and electronics",
+          "label": "zones[0].slices[1][0].cue",
+          "scene_time_s": 0.73,
+          "absolute_s": 130.5
+        },
+        {
+          "param": "zones[0].slices[2][0].cue",
+          "cue": "Screens, chips",
+          "label": "zones[0].slices[2][0].cue",
+          "scene_time_s": 2.45,
+          "absolute_s": 132.22
+        },
+        {
+          "param": "zones[0].slices[3][0].cue",
+          "cue": "Body, steel",
+          "label": "zones[0].slices[3][0].cue",
+          "scene_time_s": 4.88,
+          "absolute_s": 134.65
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "Body, steel",
+          "label": "items[0].until.cue",
+          "scene_time_s": 4.88,
+          "absolute_s": 134.65
+        },
+        {
+          "param": "zones[0].slices[4][0].cue",
+          "cue": "Labor and the factory",
+          "label": "zones[0].slices[4][0].cue",
+          "scene_time_s": 6.84,
+          "absolute_s": 136.61
+        },
+        {
+          "param": "zones[0].slices[5][0].cue",
+          "cue": "Shipping and the dealer",
+          "label": "zones[0].slices[5][0].cue",
+          "scene_time_s": 8.41,
+          "absolute_s": 138.18
+        },
+        {
+          "param": "zones[0].slices[6][0].cue",
+          "cue": "Taxes",
+          "label": "zones[0].slices[6][0].cue",
+          "scene_time_s": 9.96,
+          "absolute_s": 139.73
+        },
+        {
+          "param": "zones[0].slices[7][0].cue",
+          "cue": "the slice the company keeps",
+          "label": "zones[0].slices[7][0].cue",
+          "scene_time_s": 12.25,
+          "absolute_s": 142.02
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "the slice the company keeps",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 12.25,
+          "absolute_s": 142.02
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "It's thin",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 144.08
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "It's thin",
+          "label": "items[1].at.cue",
+          "scene_time_s": 14.31,
+          "absolute_s": 144.08
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "bnef"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 13,
+      "id": "s12_turn",
+      "segment": "a1_turn",
+      "type": "engine_cartoon",
+      "start_s": 145.3,
+      "end_s": 151.9,
+      "duration_s": 6.6,
+      "visual_objective": "",
+      "narration": "So who's making those slices cheaper? The first suspect everyone names: the government.",
+      "keyframes": [
+        {
+          "param": "items[0].his[1][0].cue",
+          "cue": "The first suspect",
+          "label": "items[0].his[1][0].cue",
+          "scene_time_s": 3.05,
+          "absolute_s": 148.35
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "the government",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.25,
+          "absolute_s": 150.55
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 14,
+      "id": "s13_b2",
+      "segment": "a2_card",
+      "type": "engine_cartoon",
+      "start_s": 151.9,
+      "end_s": 155.7,
+      "duration_s": 3.8,
+      "visual_objective": "",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 15,
+      "id": "s14_csis",
+      "segment": "a2_csis",
+      "type": "engine_cartoon",
+      "start_s": 155.7,
+      "end_s": 168.13,
+      "duration_s": 12.43,
+      "visual_objective": "",
+      "narration": "There's evidence. The Center for Strategic and International Studies estimates Beijing spent about two hundred and thirty-one billion dollars backing electric cars from twenty oh-nine to twenty twenty-three.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Beijing spent",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 5.46,
+          "absolute_s": 161.16
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "Beijing spent",
+          "label": "items[0].until.cue",
+          "scene_time_s": 5.46,
+          "absolute_s": 161.16
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Beijing spent",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.46,
+          "absolute_s": 161.16
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "Beijing spent",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 5.46,
+          "absolute_s": 161.16
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Beijing spent",
+          "label": "items[2].at.cue",
+          "scene_time_s": 5.46,
+          "absolute_s": 161.16
+        },
+        {
+          "param": "items[1].steps[2][0].cue",
+          "cue": "backing electric cars",
+          "label": "items[1].steps[2][0].cue",
+          "scene_time_s": 8.49,
+          "absolute_s": 164.19
+        },
+        {
+          "param": "items[2].until.cue",
+          "cue": "twenty twenty-three",
+          "label": "items[2].until.cue",
+          "scene_time_s": 10.91,
+          "absolute_s": 166.61
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "csis"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 16,
+      "id": "s15_where",
+      "segment": "a2_where",
+      "type": "engine_cartoon",
+      "start_s": 168.13,
+      "end_s": 182.0,
+      "duration_s": 13.87,
+      "visual_objective": "",
+      "narration": "But most of it went to buyers, not carmakers: purchase rebates and a break on the ten percent car tax. And it shrank, to just under four thousand eight hundred dollars per car by twenty twenty-three.",
+      "keyframes": [
+        {
+          "param": "zones[0].priceAt.cue",
+          "cue": "most of it went to buyers",
+          "label": "zones[0].priceAt.cue",
+          "scene_time_s": 0.6,
+          "absolute_s": 168.74
+        },
+        {
+          "param": "items[0].x[1][0].cue",
+          "cue": "most of it went",
+          "label": "items[0].x[1][0].cue",
+          "scene_time_s": 0.6,
+          "absolute_s": 168.74
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "And it shrank",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.75,
+          "absolute_s": 175.88
+        },
+        {
+          "param": "items[1].bars[0].at.cue",
+          "cue": "And it shrank",
+          "label": "items[1].bars[0].at.cue",
+          "scene_time_s": 7.95,
+          "absolute_s": 176.08
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "And it shrank",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.15,
+          "absolute_s": 176.28
+        },
+        {
+          "param": "items[0].faces[1][0].cue",
+          "cue": "And it shrank",
+          "label": "items[0].faces[1][0].cue",
+          "scene_time_s": 8.15,
+          "absolute_s": 176.28
+        },
+        {
+          "param": "items[1].bars[1].at.cue",
+          "cue": "per car by",
+          "label": "items[1].bars[1].at.cue",
+          "scene_time_s": 11.62,
+          "absolute_s": 179.75
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "csis"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 17,
+      "id": "s16_hidden",
+      "segment": "a2_hidden",
+      "type": "engine_cartoon",
+      "start_s": 182.0,
+      "end_s": 195.83,
+      "duration_s": 13.83,
+      "visual_objective": "",
+      "narration": "Some support isn't in that count, like cities buying stakes. In twenty twenty, Hefei-led investors put about one billion dollars into NIO's Chinese business. An investment, not a gift.",
+      "keyframes": [
+        {
+          "param": "items[0].until.cue",
+          "cue": "Hefei-led",
+          "label": "items[0].until.cue",
+          "scene_time_s": 6.27,
+          "absolute_s": 188.27
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Hefei-led",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.27,
+          "absolute_s": 188.27
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "Hefei-led",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 6.27,
+          "absolute_s": 188.27
+        },
+        {
+          "param": "items[1].steps[2][0].cue",
+          "cue": "into NIO's",
+          "label": "items[1].steps[2][0].cue",
+          "scene_time_s": 9.23,
+          "absolute_s": 191.24
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "An investment",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 11.42,
+          "absolute_s": 193.42
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "An investment",
+          "label": "items[2].at.cue",
+          "scene_time_s": 11.42,
+          "absolute_s": 193.42
+        },
+        {
+          "param": "items[3].faces[1][0].cue",
+          "cue": "An investment",
+          "label": "items[3].faces[1][0].cue",
+          "scene_time_s": 11.42,
+          "absolute_s": 193.42
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "csis",
+        "nio_hefei",
+        "h10_2020"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 18,
+      "id": "s17_grants",
+      "segment": "a2_grants",
+      "type": "engine_cartoon",
+      "start_s": 195.83,
+      "end_s": 211.77,
+      "duration_s": 15.93,
+      "visual_objective": "",
+      "narration": "Carmakers get direct grants too. The Kiel Institute estimated about two point two billion dollars for BYD in twenty twenty-two. BYD's own annual report counts about one point eight billion dollars of grants in its twenty twenty-five profit.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "Kiel Institute",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.35,
+          "absolute_s": 199.18
+        },
+        {
+          "param": "items[1].stampAt.cue",
+          "cue": "for BYD",
+          "label": "items[1].stampAt.cue",
+          "scene_time_s": 6.76,
+          "absolute_s": 202.6
+        },
+        {
+          "param": "zones[0].priceAt.cue",
+          "cue": "BYD's own annual report",
+          "label": "zones[0].priceAt.cue",
+          "scene_time_s": 9.07,
+          "absolute_s": 204.9
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "BYD's own annual report",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.07,
+          "absolute_s": 204.9
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "BYD's own annual report",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.07,
+          "absolute_s": 204.9
+        },
+        {
+          "param": "items[2].stampAt.cue",
+          "cue": "of grants",
+          "label": "items[2].stampAt.cue",
+          "scene_time_s": 12.84,
+          "absolute_s": 208.67
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "kiel",
+        "g5a",
+        "byd_ar25"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 19,
+      "id": "p18_subsidy",
+      "segment": "a2_draw",
+      "type": "engine_draw",
+      "start_s": 211.77,
+      "end_s": 231.9,
+      "duration_s": 20.13,
+      "visual_objective": "",
+      "narration": "So let's run an experiment with BYD's numbers. Its grants were about one point six percent of revenue. On a twenty thousand dollar car, a sliver. But they're about two-fifths of its profit, by our calculation. Subsidies can make a company profitable. They can't make a car cheap.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "run an experiment",
+          "label": "draw_start.cue",
+          "scene_time_s": 0.98,
+          "absolute_s": 212.74
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "run an experiment",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.98,
+          "absolute_s": 212.74
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "On a twenty thousand",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 8.28,
+          "absolute_s": 220.05
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "a sliver",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 10.09,
+          "absolute_s": 221.86
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "a sliver",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 10.29,
+          "absolute_s": 222.06
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "a sliver",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 10.39,
+          "absolute_s": 222.16
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "But they're",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 11.24,
+          "absolute_s": 223.01
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "two-fifths",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 11.99,
+          "absolute_s": 223.76
+        },
+        {
+          "param": "actions[1].at.cue",
+          "cue": "two-fifths",
+          "label": "actions[1].at.cue",
+          "scene_time_s": 12.39,
+          "absolute_s": 224.16
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "by our calculation",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 13.29,
+          "absolute_s": 225.06
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "They can't make a car cheap",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 18.03,
+          "absolute_s": 229.8
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "byd_ar25"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 20,
+      "id": "s19_eu",
+      "segment": "a2_eu",
+      "type": "engine_cartoon",
+      "start_s": 231.9,
+      "end_s": 250.2,
+      "duration_s": 18.3,
+      "visual_objective": "",
+      "narration": "Europe judged the support unfair. Since late twenty twenty-four, Chinese-made electric cars pay extra duties on top of its ten percent tariff: seventeen percent more for BYD, thirty-five point three for SAIC. China disputes the findings.",
+      "keyframes": [
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "seventeen percent more",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 11.43,
+          "absolute_s": 243.33
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "China disputes",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 16.11,
+          "absolute_s": 248.01
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "China disputes",
+          "label": "items[1].at.cue",
+          "scene_time_s": 16.11,
+          "absolute_s": 248.01
+        },
+        {
+          "param": "items[2].x[2][0].cue",
+          "cue": "China disputes",
+          "label": "items[2].x[2][0].cue",
+          "scene_time_s": 16.11,
+          "absolute_s": 248.01
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "eu_cvd"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 21,
+      "id": "s20_turn",
+      "segment": "a2_turn",
+      "type": "engine_cartoon",
+      "start_s": 250.2,
+      "end_s": 261.33,
+      "duration_s": 11.13,
+      "visual_objective": "",
+      "narration": "If subsidies were the whole story, those duties would have closed the gap. Instead, sales of Chinese-made electric cars in Europe grew almost fifty percent last year.",
+      "keyframes": [
+        {
+          "param": "zones[0].lot[1][0].cue",
+          "cue": "grew almost",
+          "label": "zones[0].lot[1][0].cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 258.94
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "grew almost",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 258.94
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "grew almost",
+          "label": "items[0].until.cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 258.94
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "grew almost",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 258.94
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "grew almost",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 8.74,
+          "absolute_s": 258.94
+        },
+        {
+          "param": "items[1].steps[2][0].cue",
+          "cue": "grew almost",
+          "label": "items[1].steps[2][0].cue",
+          "scene_time_s": 10.34,
+          "absolute_s": 260.54
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 22,
+      "id": "s21_b3",
+      "segment": "a3_card",
+      "type": "engine_cartoon",
+      "start_s": 261.33,
+      "end_s": 265.13,
+      "duration_s": 3.8,
+      "visual_objective": "",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 23,
+      "id": "s22_battery",
+      "segment": "a3_battery",
+      "type": "engine_cartoon",
+      "start_s": 265.13,
+      "end_s": 279.4,
+      "duration_s": 14.27,
+      "visual_objective": "",
+      "narration": "So start with who builds them. Wang Chuanfu, trained in metallurgical chemistry, founded BYD in nineteen ninety-five as a battery company. It still makes its own, and the battery is a car's priciest part.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "founded BYD",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.77,
+          "absolute_s": 270.91
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "It still makes its own",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.92,
+          "absolute_s": 275.05
+        },
+        {
+          "param": "items[0].exprs[1][0].cue",
+          "cue": "It still makes",
+          "label": "items[0].exprs[1][0].cue",
+          "scene_time_s": 9.92,
+          "absolute_s": 275.05
+        },
+        {
+          "param": "items[2].poses[1][0].cue",
+          "cue": "battery is a car's",
+          "label": "items[2].poses[1][0].cue",
+          "scene_time_s": 11.84,
+          "absolute_s": 276.97
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "byd_ar25"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 24,
+      "id": "s23_lfp",
+      "segment": "a3_lfp",
+      "type": "engine_cartoon",
+      "start_s": 279.4,
+      "end_s": 298.2,
+      "duration_s": 18.8,
+      "visual_objective": "",
+      "narration": "Chinese makers bet early on lithium iron phosphate, or L F P. It holds less energy per pound than nickel-rich batteries, but needs no nickel or cobalt. Last year, L F P packs averaged eighty-one dollars per kilowatt-hour. Nickel packs, one hundred and twenty-eight dollars.",
+      "keyframes": [
+        {
+          "param": "zones[0].jarsAt.cue",
+          "cue": "lithium iron phosphate",
+          "label": "zones[0].jarsAt.cue",
+          "scene_time_s": 2.29,
+          "absolute_s": 281.69
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "lithium iron phosphate",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 2.29,
+          "absolute_s": 281.69
+        },
+        {
+          "param": "items[1].x[1][0].cue",
+          "cue": "needs no nickel",
+          "label": "items[1].x[1][0].cue",
+          "scene_time_s": 9.08,
+          "absolute_s": 288.48
+        },
+        {
+          "param": "zones[0].tagsAt.cue",
+          "cue": "packs averaged",
+          "label": "zones[0].tagsAt.cue",
+          "scene_time_s": 12.42,
+          "absolute_s": 291.82
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "packs averaged",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 12.42,
+          "absolute_s": 291.82
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "packs averaged",
+          "label": "items[0].at.cue",
+          "scene_time_s": 12.42,
+          "absolute_s": 291.82
+        },
+        {
+          "param": "items[1].tags[0][0].cue",
+          "cue": "packs averaged",
+          "label": "items[1].tags[0][0].cue",
+          "scene_time_s": 12.42,
+          "absolute_s": 291.82
+        },
+        {
+          "param": "items[1].hops[0].cue",
+          "cue": "packs averaged",
+          "label": "items[1].hops[0].cue",
+          "scene_time_s": 12.62,
+          "absolute_s": 292.02
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "bnef"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 25,
+      "id": "s24_blade",
+      "segment": "a3_blade",
+      "type": "engine_cartoon",
+      "start_s": 298.2,
+      "end_s": 311.9,
+      "duration_s": 13.7,
+      "visual_objective": "",
+      "narration": "BYD's Blade battery packs long, flat cells straight in, skipping a layer of parts. Neither chemistry wins at everything. But for an affordable car, cheap and good enough wins.",
+      "keyframes": [
+        {
+          "param": "zones[0].fill[1][0].cue",
+          "cue": "skipping a layer",
+          "label": "zones[0].fill[1][0].cue",
+          "scene_time_s": 4.49,
+          "absolute_s": 302.69
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Neither chemistry",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 305.28
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "Neither chemistry",
+          "label": "items[0].at.cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 305.28
+        },
+        {
+          "param": "items[3].talk[0][0].cue",
+          "cue": "Neither chemistry",
+          "label": "items[3].talk[0][0].cue",
+          "scene_time_s": 7.08,
+          "absolute_s": 305.28
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Neither chemistry",
+          "label": "items[1].at.cue",
+          "scene_time_s": 7.48,
+          "absolute_s": 305.68
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "for an affordable car",
+          "label": "items[2].at.cue",
+          "scene_time_s": 9.78,
+          "absolute_s": 307.98
+        },
+        {
+          "param": "items[3].talk[0][1].cue",
+          "cue": "good enough wins",
+          "label": "items[3].talk[0][1].cue",
+          "scene_time_s": 12.71,
+          "absolute_s": 310.91
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 26,
+      "id": "p25_chain",
+      "segment": "a3_chain",
+      "type": "engine_draw",
+      "start_s": 311.9,
+      "end_s": 336.2,
+      "duration_s": 24.3,
+      "visual_objective": "",
+      "narration": "Let me draw the battery's journey. Minerals are mined, refined, turned into powders, made into cells, packed, and put in a car. Now let me shade China's share: about eighty-five percent of the cathode powder, more than ninety percent of the anode powder, more than eighty percent of the cells. And two companies, CATL and BYD, supplied more than half of the world's car batteries.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Let me draw",
+          "label": "draw_start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 312.25
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Minerals are mined",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 2.73,
+          "absolute_s": 314.63
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "refined",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 4.1,
+          "absolute_s": 316.0
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "refined",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 4.3,
+          "absolute_s": 316.2
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "turned into powders",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 4.88,
+          "absolute_s": 316.78
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "turned into powders",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 5.08,
+          "absolute_s": 316.98
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "made into cells",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 6.25,
+          "absolute_s": 318.15
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "made into cells",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 6.45,
+          "absolute_s": 318.35
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "packed",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 7.23,
+          "absolute_s": 319.13
+        },
+        {
+          "param": "strokes[9].start.cue",
+          "cue": "packed",
+          "label": "strokes[9].start.cue",
+          "scene_time_s": 7.43,
+          "absolute_s": 319.33
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "put in a car",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 8.0,
+          "absolute_s": 319.9
+        },
+        {
+          "param": "strokes[10].start.cue",
+          "cue": "put in a car",
+          "label": "strokes[10].start.cue",
+          "scene_time_s": 8.2,
+          "absolute_s": 320.1
+        },
+        {
+          "param": "strokes[15].start.cue",
+          "cue": "shade China's share",
+          "label": "strokes[15].start.cue",
+          "scene_time_s": 10.34,
+          "absolute_s": 322.24
+        },
+        {
+          "param": "strokes[11].start.cue",
+          "cue": "eighty-five percent",
+          "label": "strokes[11].start.cue",
+          "scene_time_s": 11.87,
+          "absolute_s": 323.77
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "eighty-five percent",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 11.97,
+          "absolute_s": 323.87
+        },
+        {
+          "param": "strokes[12].start.cue",
+          "cue": "ninety percent",
+          "label": "strokes[12].start.cue",
+          "scene_time_s": 14.82,
+          "absolute_s": 326.72
+        },
+        {
+          "param": "strokes[13].start.cue",
+          "cue": "more than eighty percent of the cells",
+          "label": "strokes[13].start.cue",
+          "scene_time_s": 17.35,
+          "absolute_s": 329.25
+        },
+        {
+          "param": "strokes[14].start.cue",
+          "cue": "CATL and BYD",
+          "label": "strokes[14].start.cue",
+          "scene_time_s": 20.74,
+          "absolute_s": 332.64
+        },
+        {
+          "param": "actions[1].at.cue",
+          "cue": "CATL and BYD",
+          "label": "actions[1].at.cue",
+          "scene_time_s": 20.94,
+          "absolute_s": 332.84
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo",
+        "sne"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 27,
+      "id": "s26_price",
+      "segment": "a3_price",
+      "type": "engine_cartoon",
+      "start_s": 336.2,
+      "end_s": 346.2,
+      "duration_s": 10.0,
+      "visual_objective": "",
+      "narration": "The result: in twenty twenty-five, battery packs in China cost thirty percent less than in North America, and thirty-five percent less than in Europe.",
+      "keyframes": [
+        {
+          "param": "zones[0].shades[0][0].cue",
+          "cue": "thirty percent less",
+          "label": "zones[0].shades[0][0].cue",
+          "scene_time_s": 4.41,
+          "absolute_s": 340.61
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "thirty percent less",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 4.41,
+          "absolute_s": 340.61
+        },
+        {
+          "param": "items[0].tags[0][0].cue",
+          "cue": "thirty percent less",
+          "label": "items[0].tags[0][0].cue",
+          "scene_time_s": 4.41,
+          "absolute_s": 340.61
+        },
+        {
+          "param": "zones[0].shades[1][0].cue",
+          "cue": "thirty-five percent less",
+          "label": "zones[0].shades[1][0].cue",
+          "scene_time_s": 7.37,
+          "absolute_s": 343.57
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 28,
+      "id": "s27_cluster",
+      "segment": "a3_cluster",
+      "type": "engine_cartoon",
+      "start_s": 346.2,
+      "end_s": 358.47,
+      "duration_s": 12.27,
+      "visual_objective": "",
+      "narration": "And motors, chips and seats come from supplier clusters a short drive away, the ones from our film on Chinese factories. A problem gets fixed with a truck, not a container ship.",
+      "keyframes": [
+        {
+          "param": "items[3].at.cue",
+          "cue": "our film",
+          "label": "items[3].at.cue",
+          "scene_time_s": 6.12,
+          "absolute_s": 352.32
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A problem gets fixed",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.68,
+          "absolute_s": 354.88
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "A problem gets fixed",
+          "label": "items[4].at.cue",
+          "scene_time_s": 8.68,
+          "absolute_s": 354.88
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 29,
+      "id": "s28_speed",
+      "segment": "a3_speed",
+      "type": "engine_cartoon",
+      "start_s": 358.47,
+      "end_s": 368.6,
+      "duration_s": 10.13,
+      "visual_objective": "",
+      "narration": "Then speed. AlixPartners estimated Chinese electric carmakers develop a new model in about twenty months, about half the time of traditional automakers.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "about twenty months",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 6.06,
+          "absolute_s": 364.53
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "about half the time",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 7.12,
+          "absolute_s": 365.59
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "alix"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 30,
+      "id": "s29_xiaomi",
+      "segment": "a3_xiaomi",
+      "type": "engine_cartoon",
+      "start_s": 368.6,
+      "end_s": 381.83,
+      "duration_s": 13.23,
+      "visual_objective": "",
+      "narration": "Speed even lets outsiders in. Phone maker Xiaomi launched its car business in twenty twenty-one, with founder Lei Jun in charge. Last year it delivered four hundred and eleven thousand cars.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "launched its car business",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.34,
+          "absolute_s": 372.94
+        },
+        {
+          "param": "zones[0].priceAt.cue",
+          "cue": "Last year it delivered",
+          "label": "zones[0].priceAt.cue",
+          "scene_time_s": 9.47,
+          "absolute_s": 378.07
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "xiaomi_2021",
+        "xiaomi_ar25"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 31,
+      "id": "s30_scale",
+      "segment": "a3_scale",
+      "type": "engine_cartoon",
+      "start_s": 381.83,
+      "end_s": 396.07,
+      "duration_s": 14.23,
+      "visual_objective": "",
+      "narration": "And scale. China built sixteen million electric cars last year, spreading every robot and design across millions. That's why one new Western factory can't match it: it's an ecosystem, not a building.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "That's why one new",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.36,
+          "absolute_s": 390.19
+        },
+        {
+          "param": "items[0].x[1][0].cue",
+          "cue": "That's why one new",
+          "label": "items[0].x[1][0].cue",
+          "scene_time_s": 8.36,
+          "absolute_s": 390.19
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "That's why one new",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.36,
+          "absolute_s": 390.19
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "That's why one new",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.96,
+          "absolute_s": 390.79
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "That's why one new",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.56,
+          "absolute_s": 391.39
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "it's an ecosystem",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 11.3,
+          "absolute_s": 393.14
+        },
+        {
+          "param": "items[0].faces[1][0].cue",
+          "cue": "it's an ecosystem",
+          "label": "items[0].faces[1][0].cue",
+          "scene_time_s": 11.3,
+          "absolute_s": 393.14
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "not a building",
+          "label": "items[4].at.cue",
+          "scene_time_s": 12.35,
+          "absolute_s": 394.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 32,
+      "id": "s31_caution",
+      "segment": "a3_caution",
+      "type": "engine_cartoon",
+      "start_s": 396.07,
+      "end_s": 406.97,
+      "duration_s": 10.9,
+      "visual_objective": "",
+      "narration": "A giant screen isn't proof of better engineering. Features show up on day one. Safety and reliability show up years later, in independent testing.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Features show up",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 3.92,
+          "absolute_s": 399.99
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Features show up",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.92,
+          "absolute_s": 399.99
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Safety and reliability",
+          "label": "items[2].at.cue",
+          "scene_time_s": 6.02,
+          "absolute_s": 402.09
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 33,
+      "id": "s32_b4",
+      "segment": "a4_card",
+      "type": "engine_cartoon",
+      "start_s": 406.97,
+      "end_s": 410.77,
+      "duration_s": 3.8,
+      "visual_objective": "",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 34,
+      "id": "s33_byd",
+      "segment": "a4_byd",
+      "type": "engine_cartoon",
+      "start_s": 410.77,
+      "end_s": 433.23,
+      "duration_s": 22.47,
+      "visual_objective": "",
+      "narration": "Are the companies making money? BYD is. Last year it earned about four and a half billion dollars on revenue of about one hundred and twelve billion dollars, though profit fell nineteen percent as prices dropped. Its car business made about four billion dollars before tax. That's roughly eight hundred and sixty dollars a vehicle, by our rough math.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "BYD is",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.43,
+          "absolute_s": 413.2
+        },
+        {
+          "param": "items[1].bars[1].at.cue",
+          "cue": "it earned",
+          "label": "items[1].bars[1].at.cue",
+          "scene_time_s": 4.32,
+          "absolute_s": 415.08
+        },
+        {
+          "param": "items[1].bars[0].at.cue",
+          "cue": "on revenue",
+          "label": "items[1].bars[0].at.cue",
+          "scene_time_s": 6.95,
+          "absolute_s": 417.72
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Its car business",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.62,
+          "absolute_s": 424.39
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Its car business",
+          "label": "items[2].at.cue",
+          "scene_time_s": 13.62,
+          "absolute_s": 424.39
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "Its car business",
+          "label": "items[1].until.cue",
+          "scene_time_s": 14.62,
+          "absolute_s": 425.39
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "a vehicle",
+          "label": "items[3].at.cue",
+          "scene_time_s": 19.34,
+          "absolute_s": 430.11
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "by our rough math",
+          "label": "items[4].at.cue",
+          "scene_time_s": 21.05,
+          "absolute_s": 431.81
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "byd_ar25",
+        "g5a"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 35,
+      "id": "s34_machine",
+      "segment": "a4_machine",
+      "type": "engine_cartoon",
+      "start_s": 433.23,
+      "end_s": 455.43,
+      "duration_s": 22.2,
+      "visual_objective": "",
+      "narration": "But profit isn't cash. Here's the machine. Revenue pours in. Subtract parts and workers: gross profit. Subtract research and marketing: operating profit. Then timing, when customers pay and when suppliers get paid. Subtract new factories, and you're left with free cash flow.",
+      "keyframes": [
+        {
+          "param": "zones[0].stages[0][0].cue",
+          "cue": "Revenue pours in",
+          "label": "zones[0].stages[0][0].cue",
+          "scene_time_s": 4.37,
+          "absolute_s": 437.6
+        },
+        {
+          "param": "items[1].poses[1][0].cue",
+          "cue": "Revenue pours in",
+          "label": "items[1].poses[1][0].cue",
+          "scene_time_s": 4.37,
+          "absolute_s": 437.6
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "Revenue pours in",
+          "label": "items[0].until.cue",
+          "scene_time_s": 5.37,
+          "absolute_s": 438.6
+        },
+        {
+          "param": "zones[0].stages[1][0].cue",
+          "cue": "gross profit",
+          "label": "zones[0].stages[1][0].cue",
+          "scene_time_s": 8.12,
+          "absolute_s": 441.35
+        },
+        {
+          "param": "items[1].labelUntil.cue",
+          "cue": "gross profit",
+          "label": "items[1].labelUntil.cue",
+          "scene_time_s": 8.12,
+          "absolute_s": 441.35
+        },
+        {
+          "param": "zones[0].stages[2][0].cue",
+          "cue": "operating profit",
+          "label": "zones[0].stages[2][0].cue",
+          "scene_time_s": 11.48,
+          "absolute_s": 444.71
+        },
+        {
+          "param": "zones[0].stages[3][0].cue",
+          "cue": "Then timing",
+          "label": "zones[0].stages[3][0].cue",
+          "scene_time_s": 13.46,
+          "absolute_s": 446.69
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Then timing",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.46,
+          "absolute_s": 446.69
+        },
+        {
+          "param": "zones[0].levels.3[1][0].cue",
+          "cue": "when suppliers get paid",
+          "label": "zones[0].levels.3[1][0].cue",
+          "scene_time_s": 16.05,
+          "absolute_s": 449.28
+        },
+        {
+          "param": "zones[0].stages[4][0].cue",
+          "cue": "free cash flow",
+          "label": "zones[0].stages[4][0].cue",
+          "scene_time_s": 20.88,
+          "absolute_s": 454.12
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "free cash flow",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 20.88,
+          "absolute_s": 454.12
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 36,
+      "id": "p35_two",
+      "segment": "a4_draw",
+      "type": "engine_draw",
+      "start_s": 455.43,
+      "end_s": 471.83,
+      "duration_s": 16.4,
+      "visual_objective": "",
+      "narration": "Take two hypothetical carmakers with the same profit. A pays suppliers in two months. B takes six, sitting on its suppliers' money, interest free. On paper, identical. In the bank, B looks richer. Until it has to pay up.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "Take two hypothetical",
+          "label": "draw_start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 455.78
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "Take two hypothetical",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 455.78
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "same profit",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 2.82,
+          "absolute_s": 458.26
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "same profit",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 3.22,
+          "absolute_s": 458.66
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "two months",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 5.32,
+          "absolute_s": 460.76
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "takes six",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 6.51,
+          "absolute_s": 461.95
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "interest free",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 9.14,
+          "absolute_s": 464.57
+        },
+        {
+          "param": "strokes[9].start.cue",
+          "cue": "On paper",
+          "label": "strokes[9].start.cue",
+          "scene_time_s": 10.51,
+          "absolute_s": 465.94
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "In the bank",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 12.39,
+          "absolute_s": 467.82
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "B looks richer",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 13.27,
+          "absolute_s": 468.7
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "B looks richer",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 13.47,
+          "absolute_s": 468.9
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "Until it has to pay up",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 14.5,
+          "absolute_s": 469.93
+        },
+        {
+          "param": "actions[1].at.cue",
+          "cue": "Until it has to pay up",
+          "label": "actions[1].at.cue",
+          "scene_time_s": 14.8,
+          "absolute_s": 470.23
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 37,
+      "id": "s36_pledge",
+      "segment": "a4_pledge",
+      "type": "engine_cartoon",
+      "start_s": 471.83,
+      "end_s": 485.6,
+      "duration_s": 13.77,
+      "visual_objective": "",
+      "narration": "In China, that wasn't hypothetical. In June twenty twenty-five, after suppliers complained, seventeen major carmakers, BYD among them, promised to pay within sixty days.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "seventeen",
+          "label": "items[0].at.cue",
+          "scene_time_s": 7.29,
+          "absolute_s": 479.12
+        },
+        {
+          "param": "items[0].steps[1][0].cue",
+          "cue": "seventeen",
+          "label": "items[0].steps[1][0].cue",
+          "scene_time_s": 7.29,
+          "absolute_s": 479.12
+        },
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "major carmakers",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 8.04,
+          "absolute_s": 479.87
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "promised to pay",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 10.75,
+          "absolute_s": 482.58
+        },
+        {
+          "param": "items[3].x[1][0].cue",
+          "cue": "promised to pay",
+          "label": "items[3].x[1][0].cue",
+          "scene_time_s": 10.75,
+          "absolute_s": 482.58
+        },
+        {
+          "param": "items[4].x[1][0].cue",
+          "cue": "promised to pay",
+          "label": "items[4].x[1][0].cue",
+          "scene_time_s": 10.75,
+          "absolute_s": 482.58
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "within sixty days",
+          "label": "items[1].at.cue",
+          "scene_time_s": 11.5,
+          "absolute_s": 483.33
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pledge",
+        "pledge_mii"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 38,
+      "id": "s37_unwind",
+      "segment": "a4_unwind",
+      "type": "engine_cartoon",
+      "start_s": 485.6,
+      "end_s": 513.3,
+      "duration_s": 27.7,
+      "visual_objective": "",
+      "narration": "Watch BYD's cash. What it owed suppliers fell by about four point eight billion dollars. Cash from operations dropped from about eighteen and a half billion dollars to about eight point two billion dollars. It spent about twenty-two billion dollars on factories and equipment, and borrowed more. Free cash flow, by our calculation: minus thirteen point six billion dollars. Profitable, and burning cash.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "What it owed suppliers",
+          "label": "items[1].at.cue",
+          "scene_time_s": 1.04,
+          "absolute_s": 486.64
+        },
+        {
+          "param": "zones[0].levels.3[1][0].cue",
+          "cue": "Cash from operations dropped",
+          "label": "zones[0].levels.3[1][0].cue",
+          "scene_time_s": 7.28,
+          "absolute_s": 492.88
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Cash from operations",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.28,
+          "absolute_s": 492.88
+        },
+        {
+          "param": "zones[0].levels.3[2][0].cue",
+          "cue": "eight point two billion",
+          "label": "zones[0].levels.3[2][0].cue",
+          "scene_time_s": 12.06,
+          "absolute_s": 497.66
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "It spent",
+          "label": "items[3].at.cue",
+          "scene_time_s": 14.18,
+          "absolute_s": 499.78
+        },
+        {
+          "param": "items[4].at.cue",
+          "cue": "borrowed more",
+          "label": "items[4].at.cue",
+          "scene_time_s": 18.35,
+          "absolute_s": 503.95
+        },
+        {
+          "param": "zones[0].levels.4[1][0].cue",
+          "cue": "Free cash flow",
+          "label": "zones[0].levels.4[1][0].cue",
+          "scene_time_s": 19.77,
+          "absolute_s": 505.37
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Free cash flow",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 19.77,
+          "absolute_s": 505.37
+        },
+        {
+          "param": "toneShift.at.cue",
+          "cue": "Free cash flow",
+          "label": "toneShift.at.cue",
+          "scene_time_s": 19.77,
+          "absolute_s": 505.37
+        },
+        {
+          "param": "zones[0].negAt.cue",
+          "cue": "minus thirteen",
+          "label": "zones[0].negAt.cue",
+          "scene_time_s": 22.3,
+          "absolute_s": 507.9
+        },
+        {
+          "param": "items[5].at.cue",
+          "cue": "Profitable, and burning",
+          "label": "items[5].at.cue",
+          "scene_time_s": 25.16,
+          "absolute_s": 510.76
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "byd_ar25",
+        "g5a"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 39,
+      "id": "s38_others",
+      "segment": "a4_others",
+      "type": "engine_cartoon",
+      "start_s": 513.3,
+      "end_s": 532.0,
+      "duration_s": 18.7,
+      "visual_objective": "",
+      "narration": "Xiaomi's car business lost eight hundred and sixty million dollars in twenty twenty-four, then made its first operating profit last year, about one hundred and twenty-five million dollars. But its average car sold for about thirty-five thousand dollars. Not every Chinese car is cheap.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "in twenty twenty-four",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 4.09,
+          "absolute_s": 517.39
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "first operating profit",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 6.26,
+          "absolute_s": 519.56
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "first operating profit",
+          "label": "items[1].at.cue",
+          "scene_time_s": 6.26,
+          "absolute_s": 519.56
+        },
+        {
+          "param": "zones[0].priceAt.cue",
+          "cue": "its average car",
+          "label": "zones[0].priceAt.cue",
+          "scene_time_s": 12.35,
+          "absolute_s": 525.65
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Not every Chinese car",
+          "label": "items[2].at.cue",
+          "scene_time_s": 16.33,
+          "absolute_s": 529.63
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "xiaomi_ar25",
+        "xiaomi_24",
+        "g5a"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 40,
+      "id": "s39_nio",
+      "segment": "a4_nio",
+      "type": "engine_cartoon",
+      "start_s": 532.0,
+      "end_s": 546.5,
+      "duration_s": 14.5,
+      "visual_objective": "",
+      "narration": "NIO lost about two point one billion dollars last year, after years of losses, then posted its first quarterly operating profit. A low price isn't a loss. And one good quarter isn't a lasting business.",
+      "keyframes": [
+        {
+          "param": "items[0].steps[2][0].cue",
+          "cue": "last year",
+          "label": "items[0].steps[2][0].cue",
+          "scene_time_s": 2.82,
+          "absolute_s": 534.82
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "first quarterly",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.92,
+          "absolute_s": 537.92
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "A low price",
+          "label": "items[1].until.cue",
+          "scene_time_s": 8.72,
+          "absolute_s": 540.72
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "A low price",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.92,
+          "absolute_s": 540.92
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "A low price",
+          "label": "items[0].until.cue",
+          "scene_time_s": 8.92,
+          "absolute_s": 540.92
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "A low price",
+          "label": "items[2].at.cue",
+          "scene_time_s": 8.92,
+          "absolute_s": 540.92
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "one good quarter",
+          "label": "items[3].at.cue",
+          "scene_time_s": 11.43,
+          "absolute_s": 543.43
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nio_q4",
+        "g5a"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 41,
+      "id": "s40_b5",
+      "segment": "a5_card",
+      "type": "engine_cartoon",
+      "start_s": 546.5,
+      "end_s": 550.3,
+      "duration_s": 3.8,
+      "visual_objective": "",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 42,
+      "id": "s41_glut",
+      "segment": "a5_glut",
+      "type": "engine_cartoon",
+      "start_s": 550.3,
+      "end_s": 559.6,
+      "duration_s": 9.3,
+      "visual_objective": "",
+      "narration": "Last year China built twenty percent more electric cars than its own drivers bought. Make more than the market wants, and prices fall.",
+      "keyframes": [
+        {
+          "param": "zones[0].lot[1][0].cue",
+          "cue": "more electric cars",
+          "label": "zones[0].lot[1][0].cue",
+          "scene_time_s": 2.63,
+          "absolute_s": 552.93
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "more electric cars",
+          "label": "items[1].at.cue",
+          "scene_time_s": 2.63,
+          "absolute_s": 552.93
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "prices fall",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 8.09,
+          "absolute_s": 558.39
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 43,
+      "id": "s42_margin",
+      "segment": "a5_margin",
+      "type": "engine_cartoon",
+      "start_s": 559.6,
+      "end_s": 575.73,
+      "duration_s": 16.13,
+      "visual_objective": "",
+      "narration": "And they did. China's auto industry kept just four point one percent of sales as profit in twenty twenty-five, a record low. In the first half of this year, three point eight percent, with profits down twenty percent.",
+      "keyframes": [
+        {
+          "param": "zones[0].cuts[0][0].cue",
+          "cue": "And they did",
+          "label": "zones[0].cuts[0][0].cue",
+          "scene_time_s": 0.35,
+          "absolute_s": 559.95
+        },
+        {
+          "param": "zones[0].cuts[1][0].cue",
+          "cue": "And they did",
+          "label": "zones[0].cuts[1][0].cue",
+          "scene_time_s": 0.85,
+          "absolute_s": 560.45
+        },
+        {
+          "param": "zones[0].cuts[2][0].cue",
+          "cue": "And they did",
+          "label": "zones[0].cuts[2][0].cue",
+          "scene_time_s": 1.35,
+          "absolute_s": 560.95
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "four point one",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.55,
+          "absolute_s": 563.15
+        },
+        {
+          "param": "items[1].bars[0].at.cue",
+          "cue": "four point one",
+          "label": "items[1].bars[0].at.cue",
+          "scene_time_s": 3.75,
+          "absolute_s": 563.35
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "four point one",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 4.15,
+          "absolute_s": 563.75
+        },
+        {
+          "param": "items[1].bars[1].at.cue",
+          "cue": "four point one",
+          "label": "items[1].bars[1].at.cue",
+          "scene_time_s": 4.15,
+          "absolute_s": 563.75
+        },
+        {
+          "param": "items[1].bars[2].at.cue",
+          "cue": "three point eight",
+          "label": "items[1].bars[2].at.cue",
+          "scene_time_s": 12.23,
+          "absolute_s": 571.83
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "nbs25",
+        "nbs26"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 44,
+      "id": "p43_war",
+      "segment": "a5_draw",
+      "type": "engine_draw",
+      "start_s": 575.73,
+      "end_s": 592.83,
+      "duration_s": 17.1,
+      "visual_objective": "",
+      "narration": "Here's how a price war squeezes. This line is the price. This one, the cost. The gap is the margin. One company cuts. Rivals follow. Costs fall too, but slower. The gap shrinks. The strongest survive on thin margins. The weakest can't.",
+      "keyframes": [
+        {
+          "param": "draw_start.cue",
+          "cue": "price war squeezes",
+          "label": "draw_start.cue",
+          "scene_time_s": 1.45,
+          "absolute_s": 577.18
+        },
+        {
+          "param": "strokes[0].start.cue",
+          "cue": "price war squeezes",
+          "label": "strokes[0].start.cue",
+          "scene_time_s": 1.45,
+          "absolute_s": 577.18
+        },
+        {
+          "param": "strokes[1].start.cue",
+          "cue": "This line is the price",
+          "label": "strokes[1].start.cue",
+          "scene_time_s": 3.02,
+          "absolute_s": 578.75
+        },
+        {
+          "param": "strokes[2].start.cue",
+          "cue": "This one, the cost",
+          "label": "strokes[2].start.cue",
+          "scene_time_s": 4.8,
+          "absolute_s": 580.53
+        },
+        {
+          "param": "strokes[3].start.cue",
+          "cue": "The gap is the margin",
+          "label": "strokes[3].start.cue",
+          "scene_time_s": 5.49,
+          "absolute_s": 581.22
+        },
+        {
+          "param": "strokes[4].start.cue",
+          "cue": "One company cuts",
+          "label": "strokes[4].start.cue",
+          "scene_time_s": 6.59,
+          "absolute_s": 582.32
+        },
+        {
+          "param": "strokes[5].start.cue",
+          "cue": "Rivals follow",
+          "label": "strokes[5].start.cue",
+          "scene_time_s": 8.23,
+          "absolute_s": 583.96
+        },
+        {
+          "param": "strokes[8].start.cue",
+          "cue": "Costs fall too",
+          "label": "strokes[8].start.cue",
+          "scene_time_s": 9.65,
+          "absolute_s": 585.38
+        },
+        {
+          "param": "strokes[6].start.cue",
+          "cue": "The gap shrinks",
+          "label": "strokes[6].start.cue",
+          "scene_time_s": 10.87,
+          "absolute_s": 586.6
+        },
+        {
+          "param": "actions[0].at.cue",
+          "cue": "The gap shrinks",
+          "label": "actions[0].at.cue",
+          "scene_time_s": 11.07,
+          "absolute_s": 586.8
+        },
+        {
+          "param": "strokes[7].start.cue",
+          "cue": "The strongest",
+          "label": "strokes[7].start.cue",
+          "scene_time_s": 13.16,
+          "absolute_s": 588.89
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 45,
+      "id": "s44_fail",
+      "segment": "a5_fail",
+      "type": "engine_cartoon",
+      "start_s": 592.83,
+      "end_s": 606.87,
+      "duration_s": 14.03,
+      "visual_objective": "",
+      "narration": "Some couldn't. WM Motor went into bankruptcy restructuring in twenty twenty-three. Hozon, maker of Neta cars, followed in twenty twenty-five. Price wars help buyers. They bury weaker companies.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "WM Motor",
+          "label": "items[0].at.cue",
+          "scene_time_s": 1.66,
+          "absolute_s": 594.49
+        },
+        {
+          "param": "zones[0].cuts[0][0].cue",
+          "cue": "Hozon",
+          "label": "zones[0].cuts[0][0].cue",
+          "scene_time_s": 5.94,
+          "absolute_s": 598.77
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "Hozon",
+          "label": "items[1].at.cue",
+          "scene_time_s": 5.94,
+          "absolute_s": 598.77
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Price wars help buyers",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.09,
+          "absolute_s": 602.92
+        },
+        {
+          "param": "items[2].x[1][0].cue",
+          "cue": "Price wars help buyers",
+          "label": "items[2].x[1][0].cue",
+          "scene_time_s": 10.09,
+          "absolute_s": 602.92
+        },
+        {
+          "param": "items[2].faces[1][0].cue",
+          "cue": "They bury",
+          "label": "items[2].faces[1][0].cue",
+          "scene_time_s": 11.78,
+          "absolute_s": 604.61
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "wm",
+        "neta"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 46,
+      "id": "s45_export",
+      "segment": "a5_export",
+      "type": "engine_cartoon",
+      "start_s": 606.87,
+      "end_s": 618.33,
+      "duration_s": 11.47,
+      "visual_objective": "",
+      "narration": "So carmakers looked abroad. Electric car exports doubled to more than two and a half million in twenty twenty-five, running more than twenty-five percent ahead of overseas sales.",
+      "keyframes": [
+        {
+          "param": "items[1].at.cue",
+          "cue": "exports doubled",
+          "label": "items[1].at.cue",
+          "scene_time_s": 3.49,
+          "absolute_s": 610.36
+        },
+        {
+          "param": "items[1].steps[1][0].cue",
+          "cue": "exports doubled",
+          "label": "items[1].steps[1][0].cue",
+          "scene_time_s": 3.49,
+          "absolute_s": 610.36
+        },
+        {
+          "param": "items[1].steps[2][0].cue",
+          "cue": "half million",
+          "label": "items[1].steps[2][0].cue",
+          "scene_time_s": 5.52,
+          "absolute_s": 612.39
+        },
+        {
+          "param": "zones[0].lot[1][0].cue",
+          "cue": "running more than",
+          "label": "zones[0].lot[1][0].cue",
+          "scene_time_s": 7.53,
+          "absolute_s": 614.39
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "running more than",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.53,
+          "absolute_s": 614.39
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "running more than",
+          "label": "items[1].until.cue",
+          "scene_time_s": 7.53,
+          "absolute_s": 614.39
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "running more than",
+          "label": "items[2].at.cue",
+          "scene_time_s": 7.53,
+          "absolute_s": 614.39
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "ahead of overseas",
+          "label": "items[3].at.cue",
+          "scene_time_s": 9.35,
+          "absolute_s": 616.22
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 47,
+      "id": "s46_walls",
+      "segment": "a5_walls",
+      "type": "engine_cartoon",
+      "start_s": 618.33,
+      "end_s": 635.93,
+      "duration_s": 17.6,
+      "visual_objective": "",
+      "narration": "And walls went up. America set a one hundred percent tariff on Chinese electric cars in twenty twenty-four, and bans Chinese connected-car software from twenty twenty-seven models. Europe now offers minimum-price deals instead of duties.",
+      "keyframes": [
+        {
+          "param": "zones[0].wallAt.cue",
+          "cue": "America set",
+          "label": "zones[0].wallAt.cue",
+          "scene_time_s": 2.51,
+          "absolute_s": 620.84
+        },
+        {
+          "param": "items[0].at.cue",
+          "cue": "America set",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.91,
+          "absolute_s": 621.24
+        },
+        {
+          "param": "items[1].x[1][0].cue",
+          "cue": "America set",
+          "label": "items[1].x[1][0].cue",
+          "scene_time_s": 3.01,
+          "absolute_s": 621.34
+        },
+        {
+          "param": "zones[0].euAt.cue",
+          "cue": "Europe now offers",
+          "label": "zones[0].euAt.cue",
+          "scene_time_s": 12.99,
+          "absolute_s": 631.32
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Europe now offers",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 13.39,
+          "absolute_s": 631.72
+        },
+        {
+          "param": "zones[0].minAt.cue",
+          "cue": "minimum-price deals",
+          "label": "zones[0].minAt.cue",
+          "scene_time_s": 14.63,
+          "absolute_s": 632.96
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "fr_301_2024",
+        "bis_cv",
+        "eu_pu"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 48,
+      "id": "s47_abroad",
+      "segment": "a5_abroad",
+      "type": "engine_cartoon",
+      "start_s": 635.93,
+      "end_s": 650.03,
+      "duration_s": 14.1,
+      "visual_objective": "",
+      "narration": "So Chinese makers build abroad, about one point seven million cars a year of capacity so far. Every government faces the trade-off: tariffs protect jobs, and keep cheaper cars from drivers.",
+      "keyframes": [
+        {
+          "param": "items[0].bars[0].at.cue",
+          "cue": "cars a year",
+          "label": "items[0].bars[0].at.cue",
+          "scene_time_s": 4.46,
+          "absolute_s": 640.39
+        },
+        {
+          "param": "items[0].bars[1].at.cue",
+          "cue": "so far",
+          "label": "items[0].bars[1].at.cue",
+          "scene_time_s": 6.4,
+          "absolute_s": 642.34
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Every government",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 7.65,
+          "absolute_s": 643.58
+        },
+        {
+          "param": "items[3].at.cue",
+          "cue": "Every government",
+          "label": "items[3].at.cue",
+          "scene_time_s": 7.65,
+          "absolute_s": 643.58
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "Every government",
+          "label": "items[0].until.cue",
+          "scene_time_s": 8.15,
+          "absolute_s": 644.08
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "tariffs protect jobs",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.44,
+          "absolute_s": 646.37
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "keep cheaper cars",
+          "label": "items[2].at.cue",
+          "scene_time_s": 12.01,
+          "absolute_s": 647.95
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "iea_gevo"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 49,
+      "id": "s48_b6",
+      "segment": "a6_card",
+      "type": "engine_cartoon",
+      "start_s": 650.03,
+      "end_s": 653.83,
+      "duration_s": 3.8,
+      "visual_objective": "",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 50,
+      "id": "s49_eff",
+      "segment": "a6_eff",
+      "type": "engine_cartoon",
+      "start_s": 653.83,
+      "end_s": 666.07,
+      "duration_s": 12.23,
+      "visual_objective": "",
+      "narration": "So, our four suspects. Efficiency: guilty, and the main reason. Cheap batteries, suppliers next door, fast engineering and huge scale are structural.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "Efficiency",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 2.96,
+          "absolute_s": 656.79
+        },
+        {
+          "param": "items[0].his[0][0].cue",
+          "cue": "Efficiency",
+          "label": "items[0].his[0][0].cue",
+          "scene_time_s": 2.96,
+          "absolute_s": 656.79
+        },
+        {
+          "param": "items[0].stamps[0][0].cue",
+          "cue": "guilty",
+          "label": "items[0].stamps[0][0].cue",
+          "scene_time_s": 3.95,
+          "absolute_s": 657.79
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "the main reason",
+          "label": "items[1].at.cue",
+          "scene_time_s": 4.7,
+          "absolute_s": 658.53
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 51,
+      "id": "s50_sub",
+      "segment": "a6_sub",
+      "type": "engine_cartoon",
+      "start_s": 666.07,
+      "end_s": 676.87,
+      "duration_s": 10.8,
+      "visual_objective": "",
+      "narration": "Subsidies: an accomplice. Years of support, mostly to buyers, built the industry. Today it matters more to profit than to price.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "an accomplice",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 1.48,
+          "absolute_s": 667.54
+        },
+        {
+          "param": "items[0].stamps[1][0].cue",
+          "cue": "an accomplice",
+          "label": "items[0].stamps[1][0].cue",
+          "scene_time_s": 1.48,
+          "absolute_s": 667.54
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "matters more to profit",
+          "label": "items[1].at.cue",
+          "scene_time_s": 8.0,
+          "absolute_s": 674.06
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "byd_ar25",
+        "csis"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 52,
+      "id": "s51_fin",
+      "segment": "a6_fin",
+      "type": "engine_cartoon",
+      "start_s": 676.87,
+      "end_s": 683.73,
+      "duration_s": 6.87,
+      "visual_objective": "",
+      "narration": "Financial engineering: real, and being unwound. Paying suppliers late was a cheap loan.",
+      "keyframes": [
+        {
+          "param": "cam[1].at.cue",
+          "cue": "real, and being unwound",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 2.21,
+          "absolute_s": 679.07
+        },
+        {
+          "param": "items[0].stamps[2][0].cue",
+          "cue": "real, and being unwound",
+          "label": "items[0].stamps[2][0].cue",
+          "scene_time_s": 2.21,
+          "absolute_s": 679.07
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "pledge",
+        "byd_ar25"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 53,
+      "id": "s52_burn",
+      "segment": "a6_burn",
+      "type": "engine_cartoon",
+      "start_s": 683.73,
+      "end_s": 695.9,
+      "duration_s": 12.17,
+      "visual_objective": "",
+      "narration": "Cash burn: depends who. BYD is profitable but spent more cash than it made. NIO lost money for years. The price war is pushing the weakest out.",
+      "keyframes": [
+        {
+          "param": "items[0].stamps[3][0].cue",
+          "cue": "depends who",
+          "label": "items[0].stamps[3][0].cue",
+          "scene_time_s": 1.44,
+          "absolute_s": 685.17
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "The price war is",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 9.45,
+          "absolute_s": 693.18
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [
+        "byd_ar25",
+        "nio_q4"
+      ],
+      "transition_out": "scan"
+    },
+    {
+      "index": 54,
+      "id": "s53_payoff",
+      "segment": "payoff",
+      "type": "engine_cartoon",
+      "start_s": 695.9,
+      "end_s": 714.9,
+      "duration_s": 19.0,
+      "visual_objective": "",
+      "narration": "So here's the answer. The cheap Chinese car is real. It comes from a machine the West can't copy with one factory, or block forever with one tariff. What isn't real yet is the profit behind every one. Expect the cars to stay cheap. And expect fewer companies making them.",
+      "keyframes": [
+        {
+          "param": "items[0].at.cue",
+          "cue": "The cheap Chinese car",
+          "label": "items[0].at.cue",
+          "scene_time_s": 2.17,
+          "absolute_s": 698.07
+        },
+        {
+          "param": "cam[1].at.cue",
+          "cue": "What isn't real yet",
+          "label": "cam[1].at.cue",
+          "scene_time_s": 10.94,
+          "absolute_s": 706.84
+        },
+        {
+          "param": "items[0].until.cue",
+          "cue": "What isn't real yet",
+          "label": "items[0].until.cue",
+          "scene_time_s": 10.94,
+          "absolute_s": 706.84
+        },
+        {
+          "param": "items[1].at.cue",
+          "cue": "What isn't real yet",
+          "label": "items[1].at.cue",
+          "scene_time_s": 10.94,
+          "absolute_s": 706.84
+        },
+        {
+          "param": "cam[2].at.cue",
+          "cue": "Expect the cars",
+          "label": "cam[2].at.cue",
+          "scene_time_s": 14.4,
+          "absolute_s": 710.3
+        },
+        {
+          "param": "items[1].until.cue",
+          "cue": "Expect the cars",
+          "label": "items[1].until.cue",
+          "scene_time_s": 14.4,
+          "absolute_s": 710.3
+        },
+        {
+          "param": "items[2].at.cue",
+          "cue": "Expect the cars",
+          "label": "items[2].at.cue",
+          "scene_time_s": 14.4,
+          "absolute_s": 710.3
+        },
+        {
+          "param": "items[5].faces[1][0].cue",
+          "cue": "Expect the cars",
+          "label": "items[5].faces[1][0].cue",
+          "scene_time_s": 14.4,
+          "absolute_s": 710.3
+        }
+      ],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 55,
+      "id": "s54_end",
+      "segment": "teaser",
+      "type": "end_card",
+      "start_s": 714.9,
+      "end_s": 723.43,
+      "duration_s": 8.53,
+      "visual_objective": "Closing words land; brand line draws",
+      "narration": "Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
+      "keyframes": [
+        {
+          "param": "brand_cue.cue",
+          "cue": "This is The Hidden Economics",
+          "label": "brand_cue.cue",
+          "scene_time_s": 5.91,
+          "absolute_s": 720.81
+        },
+        {
+          "param": "brand_cue",
+          "cue": {
+            "cue": "This is The Hidden Economics"
+          },
+          "label": "brand_cue",
+          "scene_time_s": null,
+          "absolute_s": null
+        }
+      ],
+      "unresolved_cues": [
+        {
+          "cue": "This is The Hidden Economics"
+        }
+      ],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "scan"
+    },
+    {
+      "index": 56,
+      "id": "s55_button",
+      "segment": "button",
+      "type": "engine_cartoon",
+      "start_s": 723.43,
+      "end_s": 728.63,
+      "duration_s": 5.2,
+      "visual_objective": "",
+      "narration": "",
+      "keyframes": [],
+      "unresolved_cues": [],
+      "assets": [
+        "font:inter"
+      ],
+      "sources": [],
+      "transition_out": "end"
+    }
+  ]
+}

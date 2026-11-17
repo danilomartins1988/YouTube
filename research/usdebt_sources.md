@@ -1,6 +1,6 @@
 # Research dossier - Who Actually Owns America's $40 Trillion in Debt?
 
-Generated 2026-11-17T10:45:38+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-17T15:00:59+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 

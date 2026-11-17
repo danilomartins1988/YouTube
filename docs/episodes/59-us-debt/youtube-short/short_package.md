@@ -23,7 +23,7 @@ Watch the full story: "Who Actually Owns America's $40 Trillion in Debt?" on The
 ## Tags
 
 ```
-shorts, economics explained, The Hidden Economics
+national debt, US debt, who owns US debt, Treasury bonds, Treasury securities, China US debt, Japan US debt, Federal Reserve, Social Security trust fund, interest on the debt, shorts, economics explained, The Hidden Economics
 ```
 
 ## On-screen hook

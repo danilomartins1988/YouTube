@@ -2,7 +2,7 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/who-actually-owns-americas-debt/documentary/who-actually-owns-americas-debt--documentary.mp4 (378.4 MB) |
+| File exists | PASS | /home/user/YouTube/output/who-actually-owns-americas-debt/documentary/who-actually-owns-americas-debt--documentary.mp4 (378.7 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
@@ -22,9 +22,9 @@
 # QC report: who-actually-owns-americas-debt / documentary (long_16x9)
 
 - Runtime: **770.17 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 378.4 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 378.7 MB
 - Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
-- Errors: **0**, warnings: **90**
+- Errors: **0**, warnings: **50**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
@@ -79,46 +79,6 @@
 - [WARNING] (sources) Number word 'twenty' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'quarter' outside a placeholder - confirm it is not an unsourced statistic.
 - [WARNING] (sources) Number word 'two' outside a placeholder - confirm it is not an unsourced statistic.
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset auct has no licence recorded
-- [WARNING] (licensing) Dataset auct has no licence recorded
-- [WARNING] (licensing) Dataset mspd has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset tichist has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset tichist has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset z1 has no licence recorded
-- [WARNING] (licensing) Dataset z1 has no licence recorded
-- [WARNING] (licensing) Dataset z1 has no licence recorded
-- [WARNING] (licensing) Dataset h41 has no licence recorded
-- [WARNING] (licensing) Dataset h41 has no licence recorded
-- [WARNING] (licensing) Dataset treast has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset h41 has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset mts has no licence recorded
-- [WARNING] (licensing) Dataset mts has no licence recorded
-- [WARNING] (licensing) Dataset avgrate has no licence recorded
-- [WARNING] (licensing) Dataset mts has no licence recorded
-- [WARNING] (licensing) Dataset z1 has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset h41 has no licence recorded
-- [WARNING] (licensing) Dataset dtp has no licence recorded
-- [WARNING] (licensing) Dataset tic has no licence recorded
-- [WARNING] (licensing) Dataset h41 has no licence recorded
-- [WARNING] (licensing) Dataset z1 has no licence recorded
 - [WARNING] (distinctiveness) Scene sequence 91% similar to 'how-black-friday-actually-makes-money/documentary'
 
 ## Publish blockers - claims needing human verification
