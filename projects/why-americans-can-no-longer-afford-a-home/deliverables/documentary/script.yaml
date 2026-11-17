@@ -111,7 +111,8 @@ segments:
 - id: a2_harvard
   chapter: The rate rollercoaster
   narration: Harvard, adding taxes and insurance, puts the bar even higher. The income needed for the median-priced home was
-    {{income}} at the end of twenty twenty-five, up from {{income.before_spoken}} five years earlier.
+    {{income}} at the end of twenty twenty-five, up from {{income.before_spoken}} five years earlier. In twenty twenty, only
+    thirty-one metro areas required more than a hundred thousand dollars a year. By twenty twenty-five, {{income.metros_spoken}} did.
   claims:
   - income
 - id: a3_card
@@ -141,7 +142,8 @@ segments:
   - fhfa
 - id: a3_sales
   chapter: The great lock-in
-  narration: When nobody moves, nothing opens up for the next buyer. Harvard says existing-home sales were stuck at {{lockin.sales_spoken}}
+  narration: When nobody moves, nothing opens up for the next buyer. The share of Americans who moved in a year fell to a record
+    low of eleven point two percent in twenty twenty-four. Harvard says existing-home sales were stuck at {{lockin.sales_spoken}}
     in twenty twenty-five, a thirty-year low, two thirds of the pace of twenty twenty-one. And in October, the National Association
     of Realtors measured an annual pace of just {{nar_price.sales_spoken}}.
   claims:

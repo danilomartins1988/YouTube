@@ -1,0 +1,60 @@
+# Thumbnail creative brief (Ep 57). F = face (default: the CEO is named in the film and on screen), A = bignum (standard),
+# B = split (standard). Generic member card and hot dog only (no Costco logo, card design or store branding). Words <= 4,
+# every concept names Costco. Ep 32's thumbnails (ccard / ledgers) stay untouched; these are new designs.
+title: How Costco Makes Billions Selling Almost Nothing
+docs_dir: docs/episodes/57-costco-v2
+video: output/costco_v2_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: How does a store that sells almost at cost make billions?
+  surprising_fact: 'Costco keeps about $2 of every $100 of goods it sells (our calculation, FY2026 10-K), yet collected $5.9bn of membership fees, equal to about half of operating income; the $1.50 hot dog is protected'
+  subject: a $1.50 hot dog combo in front of a generic member card
+  tone: sitcom
+  metaphor: the store is the bait, the card is the business, the hot dog is the reminder
+  public_figure: {who: vachris, name: Ron Vachris}
+concepts:
+- id: F
+  angle: 'face (CEO Ron Vachris, confident, next to the $1.50 hot dog)'
+  archetype: face
+  text:
+  - COSTCO'S
+  - REAL PRODUCT
+  claim_basis: 'a question (answer in the film: the membership); $1.50 hot-dog price: CNN May 2024 quoting the CFO (FACT_CHECK.md)'
+  scene:
+    bg: ['#FF5A4E', '#4A0A10']
+    rays: '#FFD23F'
+    bust: {who: vachris, expr: happy, x: 470, s: 0.92}
+    prop: {kind: hotdog, x: 1380, y: 780, s: 0.56, rot: -8}
+- id: A
+  angle: giant hot dog + member card (bignum, standard)
+  archetype: bignum
+  text:
+  - COSTCO'S
+  - $1.50 SECRET
+  claim_basis: 'hotdog: $1.50 hot dog + soda, "safe" (CFO, May 2024, via CNN); the secret = membership fees ($5.9bn FY2026, 10-K)'
+  scene:
+    palette: {sky0: '#160606', sky1: '#4A1010', haze: '#FFB74D', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: hotdog, x: 1470, y: 600, s: 0.78, card: true, rot: -6}
+    support: []
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#FFE0B2'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: before/after (split, standard)
+  archetype: split
+  text:
+  - COSTCO
+  - SELLS ACCESS
+  claim_basis: 'sales: ≈ $2 left per $100 of goods (our calculation, 10-K FY2026); fees: $5.9bn, ≈ half of operating income (10-K; our calculation)'
+  scene:
+    palette: {sky0: '#06121F', sky1: '#12304A', haze: '#80D8FF', key: '#E1F5FE', accent: '#FF5A4E', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: hotdog, x: 500, y: 650, s: 0.5, rot: -6}
+    after: {kind: ccard, x: 1440, y: 620, s: 0.62, rot: 10, c1: '#1565C0', c2: '#0A1F3A', coins: true}
+    support: []
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E1F5FE'}
+    vignette: 0.5
+    brand: none

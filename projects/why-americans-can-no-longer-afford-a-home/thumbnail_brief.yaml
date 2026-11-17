@@ -1,0 +1,47 @@
+# Thumbnail creative brief (Ep 58). F = face (original sitcom character MAYA, shocked at a price tag; default),
+# A = standard bignum cover (padlocked house). No logos, no real people; any number is in FACT_CHECK.md.
+title: Why Americans Can No Longer Afford a Home
+docs_dir: docs/episodes/58-housing-v2
+video: output/housing_v2_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: Why can't a record-high median income buy the median home any more?
+  surprising_fact: 'Median existing-home price $416,700 (NAR, Oct 2026) vs median household income $87,460 (Census, 2025); income needed at 7.11% about $107,600 (our calc., NAR method)'
+  subject: a starter house with a giant price tag
+  tone: sitcom
+  metaphor: the starter home that keeps shrinking out of reach
+concepts:
+- id: F
+  angle: 'face (original character MAYA, a young first-time buyer, shocked at the price tag)'
+  archetype: face
+  text:
+  - CAN'T AFFORD
+  - A HOME
+  claim_basis: 'nar_price: median existing-home price $416,700, October 2026 (NAR, Nov 12, 2026)'
+  scene:
+    bg: ['#FF7A59', '#3A0F2E']
+    rays: '#FFD23F'
+    bust:
+      who: {name: Maya, hair: bun, hairColor: '#1B1B1B', hairShade: '#3A3A3A', brows: '#1B1B1B', skin: '#B97A4B', iris: '#3A2618',
+            clothes: tee, jacket: '#26A69A', shirt: '#26A69A', glasses: round, age: 0}
+      expr: shock
+      x: 470
+      s: 0.92
+    prop: {kind: tag, text: '$416,700', x: 1390, y: 790, s: 0.72, rot: -8}
+- id: A
+  angle: giant number (bignum), padlocked starter house
+  archetype: bignum
+  text:
+  - HOMES OUT
+  - OF REACH
+  claim_basis: 'a statement backed by the film: price-to-income 4.7 (JCHS), NAR affordability index 100.7 (Oct 2026), first-time buyer age 40 (NAR 2026)'
+  scene:
+    palette: {sky0: '#1B0E2E', sky1: '#5A1E3A', haze: '#FFB86B', key: '#FFF1DC', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: house, x: 1500, y: 610, s: 0.7, lock: true, lit: true}
+    support: []
+    particles: {n: 50, region: [900, 0, 1920, 1080], size: 3, color: '#FFE0B2'}
+    vignette: 0.55
+    brand: none

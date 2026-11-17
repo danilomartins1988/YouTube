@@ -1,0 +1,54 @@
+# Visual direction for why-americans-can-no-longer-afford-a-home (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Director's edit (Ep 58). OWNER DIRECTION: feel like an actual episode of a prime-time animated TV sitcom, at genre level
+# only: every character, design, name, title card, caption and sound is original. Craft: cold open gag (a Saturday open house
+# with a bidding war) -> channel intro (the "theme") -> show title card "STARTER HOME" with a typed joke subtitle -> five
+# acts, each opened by a bumper whose STARTER HOME keeps shrinking (bungalow -> shed -> doghouse -> birdhouse -> mailbox: the
+# running gag) while Maya runs at it and DeeDee beats her to it with a SOLD sign -> the basement -> button joke after the end card.
+# Recurring cast (original, fictional): MAYA (first-time buyer, teal top, glasses), REX (her dad, refinanced near the bottom,
+# locked in), DEEDEE (realtor, pink blazer, clipboard). Generic buyers and neighbours only; no real person drawn.
+# Bespoke day sets (CartoonStage/housing.tsx): openhouse, ratecoaster (track = Freddie Mac weekly 30-yr rate, supplied data),
+# lockstreet, shrinker (SHRINK-O-MATIC), emptylot, zoningboard, basement.
+primary_tone: sitcom
+secondary_tones:
+- strategy
+palette:
+  bg: '#FFF4DE'
+  bg2: '#FFFBF2'
+  ink: '#1B2433'
+  muted: '#6B7385'
+  land: '#9CCB7A'
+  border: '#2E4A66'
+  accent: '#FFB300'
+  accent2: '#2F6FD1'
+  accent3: '#2E9E5B'
+  risk: '#E53950'
+presenter:
+  demeanor: warm
+  min_sequences: 4
+chapters:
+- chapter: Cold open
+  tone: sitcom
+- chapter: The price tag
+  tone: sitcom
+- chapter: The rate rollercoaster
+  tone: sitcom
+- chapter: The great lock-in
+  tone: sitcom
+- chapter: The homes we never built
+  tone: sitcom
+- chapter: The zoning board
+  tone: sitcom
+- chapter: The basement generation
+  tone: sitcom
+turning_points: []
+thumbnail:
+  tone: sitcom
+  headline: ['WHO CAN AFFORD', 'A HOME?']
+  idea: a shocked young buyer bust next to a giant house price tag; no logos, no real people
+requirements:
+- No brokerage, lender, listing-site or builder logos, names on signage, or trademarked art; houses and towns are generic
+- No character, design, name, catchphrase, location, title text or music borrowed from any existing show
+- Jokes never change a number; our calculations (payments, income needed), estimates (shortage, NAHB, FHFA) and the one-region
+  zoning figure (Greater LA) are labelled on screen
+- Day scenes, many generic human characters; fictional cast only; no real person drawn
+- Charts use supplied data only (the rollercoaster track is the Freddie Mac weekly series, sampled)

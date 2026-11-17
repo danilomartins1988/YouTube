@@ -1,0 +1,161 @@
+{
+  "id": "F",
+  "angle": "face (CEO Ron Vachris, confident, next to the $1.50 hot dog)",
+  "archetype": "face",
+  "text": [
+    "COSTCO'S",
+    "REAL PRODUCT"
+  ],
+  "claim_basis": "a question (answer in the film: the membership); $1.50 hot-dog price: CNN May 2024 quoting the CFO (FACT_CHECK.md)",
+  "scene": {
+    "bg": [
+      "#FF5A4E",
+      "#4A0A10"
+    ],
+    "rays": "#FFD23F",
+    "bust": {
+      "who": "vachris",
+      "expr": "happy",
+      "x": 470,
+      "s": 0.92
+    },
+    "prop": {
+      "kind": "hotdog",
+      "x": 1380,
+      "y": 780,
+      "s": 0.56,
+      "rot": -8
+    }
+  },
+  "layout": [
+    {
+      "text": "COSTCO'S",
+      "x": 1367.8,
+      "y": 217.6,
+      "size": 184.5,
+      "width": 944.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3
+    },
+    {
+      "text": "REAL PRODUCT",
+      "x": 1367.8,
+      "y": 386.9,
+      "size": 113.9,
+      "width": 874.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3,
+      "box": "#FF1E1E"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.71 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "3 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(896, 74, 1840, 229), (931, 298, 1805, 394)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "9.5px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 3.8:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": false,
+        "detail": "0.178",
+        "critical": false
+      },
+      {
+        "check": "text clear of the face",
+        "pass": true,
+        "detail": "head box (240, 170, 700, 658)",
+        "critical": true
+      },
+      {
+        "check": "named figure is a preset or traits object (likeness rules)",
+        "pass": true,
+        "detail": "vachris",
+        "critical": true
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 57",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest how-big-tech-really-makes-money-from-ai (distance 0.72)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (answer in the film: the membership); $1.50 hot-dog price: CNN May 2024 quoting the CFO (FACT_CHECK.md)",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.582,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "how-big-tech-really-makes-money-from-ai"
+  },
+  "backend": "svg-composite (Remotion FaceThumb + CartoonStage bust, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-17T10:10:57Z"
+}

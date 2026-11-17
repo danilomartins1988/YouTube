@@ -433,6 +433,27 @@ export const SUBJECTS: Record<string, SubjectFn> = {
     {Array.from({length: 14}, (_, k) => <ellipse key={k} cx={-180 + rnd(k) * 360} cy={-170 + rnd(k + 4) * 130} rx={13} ry={7} transform={`rotate(${rnd(k + 7) * 60 - 30})`} fill="#FFF5E1" stroke="#3A2414" strokeWidth={2} />)}
     {[0, 1, 2].map((q) => <path key={q} d={`M ${-90 + q * 90} ${-260 - q * 10} q 22 -30 0 -60 q -22 -30 0 -60`} fill="none" stroke="#FFFFFF" strokeWidth={12} strokeLinecap="round" opacity={0.5} />)}
   </g>,
+  /** Ep 57: a hot dog + soda combo with a swinging price tag (`price`, default $1.50); `card` adds a generic member card behind it. */
+  hotdog: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s}) rotate(${o.rot ?? -8})`}>
+    <circle r={470} fill={P.key} opacity={0.22} filter="url(#soft)" />
+    <ellipse cx={0} cy={250} rx={380} ry={40} fill="#000" opacity={0.4} filter="url(#soft)" />
+    {o.card && <g transform="translate(120 -150) rotate(14)"><rect x={-260} y={-160} width={520} height={320} rx={34} fill="#FFFFFF" stroke="#2A1A12" strokeWidth={10} />
+      <rect x={-260} y={-160} width={520} height={80} rx={34} fill="#C62828" stroke="#2A1A12" strokeWidth={10} /><rect x={-250} y={-110} width={500} height={30} fill="#C62828" />
+      <text x={0} y={-104} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={46} fill="#FFFFFF" letterSpacing={8}>MEMBER</text>
+      <rect x={-220} y={-40} width={130} height={150} rx={12} fill="#CFD8DC" stroke="#2A1A12" strokeWidth={5} /><rect x={-60} y={0} width={240} height={18} rx={9} fill="#B0BEC5" /><rect x={-60} y={40} width={180} height={18} rx={9} fill="#B0BEC5" /></g>}
+    <g transform="translate(300 40)"><path d="M -80 -170 L 80 -170 L 62 140 L -62 140 Z" fill="#FFFFFF" stroke="#2A1A12" strokeWidth={9} strokeLinejoin="round" />
+      <path d="M -76 -100 L 76 -100 L 70 20 L -70 20 Z" fill="#E53950" /><path d="M -92 -194 L 92 -194 L 88 -168 L -88 -168 Z" fill="#ECEFF1" stroke="#2A1A12" strokeWidth={8} />
+      <path d="M 24 -194 L 54 -320 L 84 -320" stroke="#FFC21A" strokeWidth={18} fill="none" strokeLinecap="round" /></g>
+    <g transform="translate(-120 80)"><path d="M -260 -10 Q -260 -90 -195 -90 L 195 -90 Q 260 -90 260 -10 Q 260 60 195 60 L -195 60 Q -260 60 -260 -10 Z" fill="#F2C179" stroke="#2A1A12" strokeWidth={9} />
+      <path d="M -300 -50 Q -306 -112 -246 -114 L 246 -114 Q 306 -112 300 -50 Q 294 -12 246 -14 L -246 -14 Q -294 -12 -300 -50 Z" fill="#C8553D" stroke="#2A1A12" strokeWidth={9} />
+      <path d={`M -220 -66 ${Array.from({length: 9}, (_, k) => `Q ${-196 + k * 52} ${-92 + (k % 2 ? 30 : -30) * 0.9} ${-170 + k * 52} -66`).join(' ')}`} fill="none" stroke="#FFD23F" strokeWidth={16} strokeLinecap="round" />
+      <path d="M -230 -100 Q -120 -128 40 -112" fill="none" stroke="#FFFFFF" strokeWidth={14} strokeLinecap="round" opacity={0.35} />
+      {[0, 1, 2].map((q) => <path key={q} d={`M ${-140 + q * 120} ${-150 - q * 10} q 22 -30 0 -60 q -22 -30 0 -60`} fill="none" stroke="#FFFFFF" strokeWidth={12} strokeLinecap="round" opacity={0.5} />)}</g>
+    {o.price !== false && <g transform="translate(-150 -270) rotate(-10)"><path d="M 0 -80 L 0 -40" stroke="#2A1A12" strokeWidth={6} />
+      <path d="M -190 0 L -150 -44 L 190 -44 L 190 110 L -150 110 L -190 66 Z" fill="#FFFDF4" stroke="#2A1A12" strokeWidth={9} strokeLinejoin="round" />
+      <circle cx={-152} cy={33} r={12} fill="#2A1A12" />
+      <text x={20} y={78} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={118} fill="#E53950">{o.price || '$1.50'}</text></g>}
+  </g>,
   /** A big black oil drum with steel hoops and a drop mark; `money` sends banknotes flying away from it. */
   oilbarrel: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     <defs>{metal('ob', '#1B1F26', '#3A424F')}</defs>

@@ -173,7 +173,7 @@ stage("s06_ratio", "a1_ratio", {
                  steps=[[0, 0], [C("In the nineteen-nineties"), 0], [C("years of income"), 3.2], [C("By twenty nineteen", 0.6), 4.1], [C("an all-time high of five"), 5.0], [C("still"), 4.7]],
                  text="YEARS OF INCOME TO BUY A HOME (JCHS)"),
               MAYA(520, 0.3, hold="box", boxText="1 YEAR PAY", pose="stand", face="happy", faces=[[0, "happy"], [C("By twenty nineteen"), "worry"], [C("an all-time high"), "panic"]], takes=[C("an all-time high")]),
-              it("bigtag", x=1380, y=[[0, 560], [C("By twenty nineteen"), 500], [C("an all-time high"), 420]], at=C("divides the price", 0.5), was="HOME", now="PRICE", scale=[[0, 0.7], [C("an all-time high"), 1.0]]),
+              it("bigtag", x=1380, y=[[0, 560], [C("By twenty nineteen"), 500], [C("an all-time high"), 420]], at=C("divides the price", 0.5), was="HOME", now="PRICE", scale=0.9),
               DEE(1950, 0.4, face="dollar", hold="clipboard", hops=[C("an all-time high", 0.3)])]},
     sources=["jchs"])
 stage("s07_income", "a1_income", {
@@ -233,7 +233,7 @@ stage("s12_payment", "a2_payment", {
               it("bigtag", x=650, y=300, at=C("At two point six five"), was="AT 2.65%", now="$1,343/MO", nowAt=C("principal and interest"), scale=0.95),
               it("bigtag", x=1350, y=300, at=C("At seven point one one"), was="AT 7.11%", now="$2,243/MO", nowAt=C("At seven point one one", 1.0), scale=0.95),
               it("toonwords", text="+$900 A MONTH", x=1000, y=560, at=C("more, every month", -0.6), size=84, color="#FF5A5F"),
-              MAYA(350, 0.3, face="worry", pose="stand", faces=[[0, "happy"], [C("At seven point one one", 1.0), "shock"], [C("for thirty years"), "dizzy"]], takes=[C("At seven point one one", 1.0)]),
+              MAYA(350, 0.3, face="worry", pose="stand", faces=[[0, "happy"], [C("At seven point one one", 1.0), "shock"], [C("every month", 0.8), "dizzy"]], takes=[C("At seven point one one", 1.0)]),
               DEE(1850, 0.3, face="grin", pose="talk", hold="clipboard", talk=[[C("Same house"), C("tiny lawn", 0.3)]]),
               it("bubble", text="SAME TINY\nLAWN!", x=2000, y=420, at=C("same tiny lawn"), until=C("more, every month"), tail=[1880, 600], size=30)]},
     sources=["nar_ehs", "pmms"])
@@ -264,9 +264,12 @@ stage("s15_harvard", "a2_harvard", {
     **W1("shrinker", machX=650, houseX=1450, gaugeLabel="INCOME NEEDED", size=[[0, 0.5], [C("up from"), 0.5], [C("five years earlier"), 0.35]],
          gauge=[[0, 0.3], [C("The income needed"), 0.3], [C("at the end of"), 0.85], [C("up from"), 0.85]], gaugeText=[[C("at the end of", -0.3), "$120,800"], [C("up from", 0.5), "WAS $68,700"]],
          zaps=[C("five years earlier", -0.5)]),
-    "cam": cam((0, 900, 480, 0.95), (C("The income needed"), 650, 400, 1.25, 1.4), (C("up from"), 1000, 470, 1.0, WHIP)), "drift": 3,
+    "cam": cam((0, 900, 480, 0.95), (C("The income needed"), 650, 400, 1.25, 1.4), (C("up from"), 1000, 470, 1.0, WHIP), (C("In twenty twenty, only"), 1350, 430, 1.0, 1.4)), "drift": 3,
     "items": [sign("HARVARD JCHS · INCLUDES TAXES & INSURANCE · END OF 2025 vs 2020", 1050, 60, C("adding taxes"), color="#FFF8E1", size=26),
-              MAYA(1950, 0.3, face="shock", pose="armsup", faces=[[0, "worry"], [C("at the end of"), "shock"]])]},
+              MAYA(1950, 0.3, face="shock", pose="armsup", faces=[[0, "worry"], [C("at the end of"), "shock"]]),
+              chart([{"label": "2020", "value": 31, "color": "#2E9E5B", "at": C("thirty-one metro"), "display": "31"},
+                     {"label": "2025", "value": 169, "color": "#E53950", "at": C("did", -0.4), "display": "169"}],
+                    at=C("In twenty twenty, only", -0.2), max=200, title="METROS NEEDING > $100K INCOME (OF 387, JCHS)", x=1080, y=150, w=760, h=420)]},
     sources=["jchs"])
 
 # ====================================================================== ACT 3: the great lock-in
@@ -306,7 +309,9 @@ stage("s20_sales", "a3_sales", {
     **W1("openhouse", houseX=1250, signX=650, crowd=0.0, queue=0),
     "cam": cam((0, 1100, 480, 0.95), (C("Harvard says"), 1100, 450, 0.95, 1.4), (C("And in October"), 1000, 470, 1.05, WHIP)), "drift": 4,
     "items": [DEE(950, 0.2, face="worry", pose="wave", hold="clipboard", faces=[[0, "worry"], [C("And in October"), "deadpan"]]),
-              it("bubble", text="ANYONE?", x=1180, y=320, at=0.4, until=C("Harvard says"), tail=[1000, 560], size=40),
+              it("bubble", text="ANYONE?", x=1180, y=320, at=0.4, until=C("The share of Americans"), tail=[1000, 560], size=40),
+              it("counter", x=1500, y=200, at=C("The share of Americans"), suffix="%", decimals=1, steps=[[0, 0], [C("The share of Americans"), 0], [C("low of"), 11.2]],
+                 text="AMERICANS WHO MOVED IN A YEAR · 2024 · RECORD LOW (JCHS)", until=C("Harvard says", -0.2)),
               chart([{"label": "2021", "value": 6.1, "color": "#2E9E5B", "at": C("two thirds of the pace", 0.2), "display": "6.1M"},
                      {"label": "2025", "value": 4.1, "color": "#E53950", "at": C("were stuck at"), "display": "4.1M"}],
                     at=C("Harvard says"), max=7, title="EXISTING-HOME SALES (HARVARD JCHS)", x=1300, y=150, w=700, h=420, until=C("And in October", 0.8)),
@@ -405,15 +410,15 @@ add("p30_lots", "a5_draw", "engine_draw", {
 
 # ====================================================================== THE BASEMENT + PAYOFF + TEASER + BUTTON
 stage("s31_basement", "a6_basement", {
-    **W1("basement", bulbX=1000, futonX=1250, stairsX=1900, boxX=540, winX=500, doorAt=C("Forty", -0.3)),
-    "cam": cam((0, 1150, 470, 0.95), (C("In the National"), 1100, 440, 1.0, 1.6), (C("And the typical"), 1150, 470, 1.05, 1.4), (C("Forty"), 1250, 560, 1.3, WHIP)), "drift": 3,
+    **W1("basement", bulbX=1000, futonX=1250, stairsX=1900, boxX=540, winX=500, doorAt=C("years old", 0.6)),
+    "cam": cam((0, 1150, 470, 0.95), (C("In the National"), 1100, 440, 1.0, 1.6), (C("And the typical"), 1150, 470, 1.05, 1.4), (C("years old", 0.9), 1250, 560, 1.3, WHIP)), "drift": 3,
     "items": [it("toonwords", text="THE FIRST-TIME BUYER", x=1100, y=110, at=0.3, until=C("In the National"), size=62),
               sign("FIRST-TIME BUYERS: 22% OF PURCHASES", 1100, 100, C("first-timers made up"), color="#FFF59D", size=34, sub="NAR PROFILE OF HOME BUYERS AND SELLERS 2026 · NORM ≈ 40% BEFORE 2008", until=C("And the typical")),
               it("counter", x=1150, y=170, at=C("And the typical"), decimals=0, steps=[[0, 0], [C("And the typical"), 0], [C("years old"), 40]], text="MEDIAN AGE OF A FIRST-TIME BUYER (NAR 2026, RECORD)"),
-              MAYA(1200, 0.2, face="deadpan", pose="sit", y=820, faces=[[0, "deadpan"], [C("Forty"), "shock"]], takes=[C("Forty", 0.1)]),
+              MAYA(1200, 0.2, face="deadpan", pose="sit", y=820, faces=[[0, "deadpan"], [C("years old", 0.9), "shock"]], takes=[C("years old", 1.0)]),
               it("savejar", x=360, y=860, at=0.5, level=[[0, 0.35], [C("years old"), 0.45]], scale=0.6, text="DOWN PAYMENT"),
-              REX([[C("Forty", -0.2), 2350], [C("Forty", 1.2), 2100]], C("Forty", -0.3), y=300, face="happy", pose="wave", scale=1.0),
-              it("bubble", text="HAPPY 40th,\nKIDDO!", x=2050, y=80, at=C("Forty", 0.6), tail=[2120, 180], size=30)]},
+              REX([[C("years old", 0.7), 2350], [C("years old", 2.1), 2100]], C("years old", 0.6), y=300, face="happy", pose="wave", scale=1.0),
+              it("bubble", text="HAPPY 40th,\nKIDDO!", x=2050, y=80, at=C("years old", 1.5), tail=[2120, 180], size=30)]},
     sources=["nar_profile"])
 stage("s32_payoff", "payoff", {
     "zones": [Z("openhouse", -1600, 2300, houseX=900, signX=300, crowd=0.6, queue=3, signText="STARTER HOME", soldAt=999),
