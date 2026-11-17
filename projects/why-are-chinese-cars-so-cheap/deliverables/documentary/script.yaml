@@ -1,0 +1,393 @@
+# Documentary (target 11-13 min). Premium animated business documentary with cartoon energy (house style of Ep 56):
+# cold open (the hook) -> channel intro -> show title card -> six acts with bumpers -> payoff -> end card -> button.
+# The "four suspects" (efficiency, subsidies, financial engineering, cash burn) are the narrative device; the six-act structure
+# stays internal (never narrated as acts/missions). Numbers come from sources.yaml via {{placeholders}}; years are words.
+# Rules: market + taxes stated for every price; company-level vs segment results separated; grants vs buyer incentives vs equity
+# financing vs supplier credit separated; our calculations said "by our calculation"; EU findings attributed (China disputes).
+logline: China's cheap electric cars are mostly the product of an industrial machine (LFP batteries made in-house or next door,
+  clustered suppliers, fast engineering, scale) that years of buyer-focused subsidies helped build; the unsustainable part is the
+  price war, which is squeezing profits and cash so hard that the cars will stay cheap while the number of carmakers shrinks.
+title: Why Are Chinese Cars So Cheap — And So Advanced?
+segments:
+- id: co_open
+  chapter: Cold open
+  narration: Picture a brand-new electric car. A big touchscreen. Driver assistance, with a laser scanner on the roof. A battery
+    its maker says can charge from ten to seventy percent in about five minutes. Now look at the price.
+  claims:
+  - seagull
+- id: co_hook
+  chapter: Cold open
+  narration: In China, the newest version of BYD's little Seagull starts at {{seagull.yuan_spoken}}. That's {{seagull}}. In America,
+    the average new electric car sold for {{kbb_ev}} in October, according to Kelley Blue Book.
+  claims:
+  - seagull
+  - kbb_ev
+- id: co_contra
+  chapter: Cold open
+  narration: Meanwhile, Ford's electric car division lost {{ford}} last year. So what's going on? Is China simply better at building
+    cars? Is the government paying? Is somebody playing games with the books? Or are these companies quietly burning cash on every
+    car they sell?
+  claims:
+  - ford
+- id: co_promise
+  chapter: Cold open
+  narration: Four suspects. To find out which one did it, we'll take the car apart, follow the battery, read the cash flow statements,
+    and step into a price war that's hurting the very companies winning it.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule); the four suspects are the owner's four hypotheses (efficiency, subsidies, financial engineering, cash burn).
+- id: title_card
+  chapter: Cold open
+  narration: ''
+  claims: []
+- id: a1_card
+  chapter: The impossible car
+  narration: ''
+  claims: []
+- id: a1_fair
+  chapter: The impossible car
+  narration: First, a fair warning. That comparison isn't apples to apples. The Seagull is a small city car, and in China, buyers
+    also pay a {{nevtax}} purchase tax on electric cars this year. A European version, sold as the Dolphin Surf, lists in Germany
+    at {{surf_de.eur_spoken}}, {{surf_de}}, with different taxes, tariffs, shipping and safety rules.
+  claims:
+  - nevtax
+  - surf_de
+- id: a1_real
+  chapter: The impossible car
+  narration: But even after you adjust for all that, something real is going on. The International Energy Agency found that in
+    twenty twenty-five, {{iea_cheaper}} of battery electric cars sold in China were already cheaper than comparable gasoline cars.
+    Before any government incentive.
+  claims:
+  - iea_cheaper
+- id: a1_scale
+  chapter: The impossible car
+  narration: And China now builds {{iea_prod}} electric cars on Earth. BYD alone sold {{byd_vol}} vehicles in twenty twenty-five,
+    and more fully electric cars than Tesla.
+  claims:
+  - iea_prod
+  - byd_vol
+- id: a1_west
+  chapter: The impossible car
+  narration: For Western carmakers, that's alarming. Volkswagen, Europe's biggest automaker, earned an operating margin of just
+    {{vw}} last year. They're not losing to a cheap copy. They're being beaten on cost and on features at the same time.
+  claims:
+  - vw
+- id: a1_draw
+  chapter: The impossible car
+  narration: Let me draw where the money in a car actually goes. This is a hypothetical twenty-five thousand dollar electric car,
+    not any company's real numbers. The biggest single part is the battery. At the average price Bloomberg NEF found for electric
+    car packs last year, a sixty kilowatt-hour battery costs {{bnef}}. Nearly a quarter of the car.
+  claims:
+  - bnef
+- id: a1_slices
+  chapter: The impossible car
+  narration: Then come the motor and power electronics. The screens, chips and software. The body, the steel and the glass. Labor
+    and the factory. Shipping and the dealer. Taxes. And at the very bottom, the slice the company keeps. It's thin.
+  claims: []
+  analysis: true
+  source_note: Illustrative cost allocation (no company's data), labelled ILLUSTRATIVE on screen; only the battery slice is calculated (BNEF).
+- id: a1_turn
+  chapter: The impossible car
+  narration: So which of these slices is China making cheaper? And who's paying for it? The first suspect everyone names is the
+    government.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: a2_card
+  chapter: The subsidy suspect
+  narration: ''
+  claims: []
+- id: a2_csis
+  chapter: The subsidy suspect
+  narration: And there's real evidence against it. The Center for Strategic and International Studies estimates that Beijing spent
+    {{csis}} supporting its electric car industry from twenty oh-nine to twenty twenty-three.
+  claims:
+  - csis
+- id: a2_where
+  chapter: The subsidy suspect
+  narration: But look at where most of that money went. Not straight to the carmakers. Mostly to buyers, through purchase rebates
+    and an exemption from the ten percent tax on new cars. And it was shrinking. By twenty twenty-three, it worked out to {{csis.percar_spoken}}
+    per car sold.
+  claims:
+  - csis
+- id: a2_hidden
+  chapter: The subsidy suspect
+  narration: That estimate leaves things out. Cheap land, cheap power, cheap loans, and city governments buying stakes. In twenty
+    twenty, investors led by the city of Hefei agreed to put {{nio_hefei.yuan_spoken}}, {{nio_hefei}}, into NIO's main Chinese business.
+    That's not a gift. It's an investment. But it's money a struggling startup might not have found anywhere else.
+  claims:
+  - csis
+  - nio_hefei
+- id: a2_grants
+  chapter: The subsidy suspect
+  narration: Carmakers get direct grants too. Germany's Kiel Institute estimated that BYD received {{kiel}} in direct subsidies in
+    twenty twenty-two. BYD's own annual report shows government grants worth {{byd_grants}} counted in its profit for twenty twenty-five.
+  claims:
+  - kiel
+  - byd_grants
+- id: a2_draw
+  chapter: The subsidy suspect
+  narration: So let's run an experiment, using BYD's own numbers. Those grants were {{byd_grants.rev_spoken}} of its revenue. On
+    a twenty thousand dollar car, that's a sliver. Nowhere near enough to explain a car that costs half as much. Now compare the
+    grants with profit. They're worth {{byd_grants.np_spoken}} of BYD's net profit, by our calculation. Subsidies can make a company
+    profitable. On their own, they can't make a car cheap.
+  claims:
+  - byd_grants
+- id: a2_eu
+  chapter: The subsidy suspect
+  narration: Europe weighed the same evidence and decided the support was unfair. Since October twenty twenty-four, it has charged
+    extra duties on Chinese-made electric cars, on top of its ten percent tariff. {{eu_cvd}} for BYD. {{eu_cvd.geely_spoken}} for Geely.
+    {{eu_cvd.saic_spoken}} for SAIC. China disputes those findings.
+  claims:
+  - eu_cvd
+- id: a2_turn
+  chapter: The subsidy suspect
+  narration: But if subsidies were the whole story, those duties should have closed the gap. They didn't. In twenty twenty-five,
+    sales of Chinese-made electric cars in Europe grew by {{iea_prod.eu_spoken}}. So what else is going on?
+  claims:
+  - iea_prod
+- id: a3_card
+  chapter: The machine
+  narration: ''
+  claims: []
+- id: a3_battery
+  chapter: The machine
+  narration: Start with who's building them. BYD was founded in {{byd_founded}} by Wang Chuanfu, an engineer trained in metallurgical
+    chemistry, and it started as a battery company. It still makes its own batteries. That matters, because the battery is the
+    most expensive part of an electric car.
+  claims:
+  - byd_founded
+- id: a3_lfp
+  chapter: The machine
+  narration: Chinese makers bet early on a chemistry called lithium iron phosphate, or L F P. It stores less energy for its weight
+    than the nickel-rich batteries many Western cars used. But it needs no nickel and no cobalt. Last year, Bloomberg NEF found L
+    F P packs averaged {{bnef.lfp_spoken}} per kilowatt-hour, against {{bnef.nmc_spoken}} for nickel-based packs.
+  claims:
+  - bnef
+- id: a3_blade
+  chapter: The machine
+  narration: BYD's version is the Blade battery. Long, flat cells packed straight into the battery, skipping the usual middle layer
+    of modules. Fewer parts. More room for cells. Neither chemistry is better at everything. But for a cheap car, cheap and good
+    enough wins.
+  claims: []
+  analysis: true
+  source_note: Cell-to-pack design (BYD Blade) explained qualitatively; no figures. "Neither chemistry is better at everything" per owner brief (LFP vs NMC trade-offs).
+- id: a3_chain
+  chapter: The machine
+  narration: Let me draw the battery's journey. Minerals are mined around the world. Then refined. Turned into the powders for the
+    two ends of every cell. Made into cells. Packed. Put in a car. Now let me shade what China makes. {{iea_batt.cam_spoken}} of the
+    world's cathode powder. {{iea_batt.aam_spoken}} of the anode powder. {{iea_batt.cells_spoken}} of all battery cells. And just two
+    companies, CATL and BYD, supplied {{sne}} of the world's electric car batteries last year.
+  claims:
+  - iea_batt
+  - sne
+- id: a3_price
+  chapter: The machine
+  narration: Put that whole chain in one country, and you get this. In twenty twenty-five, the IEA found battery packs in China were
+    {{iea_batt}} cheaper than in North America, and {{iea_batt.eu_spoken}} cheaper than in Europe.
+  claims:
+  - iea_batt
+- id: a3_cluster
+  chapter: The machine
+  narration: And it isn't only batteries. Motors, chips, seats and screens are made a short drive from the assembly plants. We showed
+    how those supplier clusters work in our film on why the world still depends on Chinese factories. For carmakers, it means a
+    problem can be fixed with a phone call and a truck, not a container ship.
+  claims: []
+  analysis: true
+  source_note: Library connection to Ep 60 (supplier clusters); qualitative.
+- id: a3_speed
+  chapter: The machine
+  narration: Then there's speed. The consulting firm AlixPartners estimated that Chinese electric carmakers develop a new model in
+    {{alix}}. Roughly half the time traditional automakers take. Faster cycles mean newer features sooner, and costs that fall
+    with every generation.
+  claims:
+  - alix
+- id: a3_xiaomi
+  chapter: The machine
+  narration: Speed even lets outsiders in. Xiaomi, a phone maker, announced its car business in twenty twenty-one, with its founder
+    Lei Jun leading it. In twenty twenty-five, it delivered {{xiaomi.deliv_spoken}} cars.
+  claims:
+  - xiaomi
+- id: a3_scale
+  chapter: The machine
+  narration: And then there's scale. China built {{iea_prod.prod_spoken}} electric cars in twenty twenty-five. When you build millions,
+    the cost of every robot, every tool and every design gets spread across far more cars.
+  claims:
+  - iea_prod
+- id: a3_copy
+  chapter: The machine
+  narration: That's why a Western carmaker can't just build one new factory and match this. The factory is the easy part. The cheap
+    battery, the suppliers next door, the engineers who've already done it a dozen times. That's an ecosystem, and it took years
+    to grow.
+  claims: []
+  analysis: true
+  source_note: Analysis drawn from the sourced facts in this act.
+- id: a3_caution
+  chapter: The machine
+  narration: One caution. A giant screen and a long feature list aren't proof of better engineering. Safety and reliability have
+    to be tested independently, car by car. Features show up on day one. Quality shows up years later.
+  claims: []
+  analysis: true
+  source_note: Owner brief requirement (visible features vs independently validated performance); no claim about any model's safety.
+- id: a4_card
+  chapter: Follow the cash
+  narration: ''
+  claims: []
+- id: a4_split
+  chapter: Follow the cash
+  narration: So the cars really are cheaper to build. But are the companies actually making money? This is where the story splits.
+  claims: []
+  analysis: true
+  source_note: Transition.
+- id: a4_byd
+  chapter: Follow the cash
+  narration: BYD is profitable. In twenty twenty-five, it earned {{byd_fy.np_spoken}} on revenue of {{byd_fy}}. But profit fell {{byd_fy.chg_spoken}}
+    as prices fell. Its car business made {{byd_seg}} before tax. Spread over four point six million vehicles, that's {{byd_seg.percar_spoken}}
+    a car, by our rough calculation.
+  claims:
+  - byd_fy
+  - byd_seg
+- id: a4_machine
+  chapter: Follow the cash
+  narration: But profit isn't cash. Here's the machine. Revenue pours in. Pay for parts and workers, and what's left is gross profit.
+    Pay for research, marketing and offices, and you get operating profit. Then comes the cash. It depends on timing, when customers
+    pay you and when you pay suppliers. Finally, subtract the money spent on new factories and machines. What's left is free cash flow.
+  claims: []
+  analysis: true
+  source_note: Definitions (revenue, gross profit, operating profit, operating cash flow, capital spending, free cash flow); no figures.
+- id: a4_draw
+  chapter: Follow the cash
+  narration: Let me compare two hypothetical carmakers with exactly the same profit. Company A pays its suppliers in two months.
+    Company B takes six. Company B is sitting on its suppliers' money, interest free. On paper, they look identical. In the bank,
+    B looks much richer. Until it has to pay up.
+  claims: []
+  analysis: true
+  source_note: Hypothetical comparison, labelled HYPOTHETICAL on screen; no real company's data.
+- id: a4_pledge
+  chapter: Follow the cash
+  narration: In China, that wasn't hypothetical. In June twenty twenty-five, after complaints about slow payments, {{pledge}} major
+    Chinese carmakers, BYD among them, promised to pay suppliers within sixty days.
+  claims:
+  - pledge
+- id: a4_unwind
+  chapter: Follow the cash
+  narration: Now watch BYD's cash. Over the year, the bills it owed suppliers shrank by {{byd_cash.pay_spoken}}. Cash from operations
+    fell from {{byd_cash.ocf24_spoken}} to {{byd_cash.ocf25_spoken}}. Meanwhile, it spent {{byd_cash.capex_spoken}} on factories, equipment
+    and other long-term assets, and borrowed more. By our calculation, free cash flow was about minus {{byd_cash}}. A profitable company,
+    spending far more cash than it brought in.
+  claims:
+  - byd_cash
+- id: a4_others
+  chapter: Follow the cash
+  narration: Others are on different paths. Xiaomi's car business lost about {{xiaomi.loss_spoken}} in twenty twenty-four, then made
+    its first operating profit in twenty twenty-five, {{xiaomi}}. But its average car sold for about {{xiaomi.asp_spoken}}. Not every
+    Chinese car is cheap. Geely grew its core profit to {{geely}}.
+  claims:
+  - xiaomi
+  - geely
+- id: a4_nio
+  chapter: Follow the cash
+  narration: And NIO shows what it costs to get there. It lost {{nio}} in twenty twenty-five, after years of losses, before posting
+    its first quarterly operating profit at the end of the year. A low price isn't the same as losing money. And a profitable quarter
+    isn't the same as a lasting business.
+  claims:
+  - nio
+- id: a5_card
+  chapter: The price war
+  narration: ''
+  claims: []
+- id: a5_glut
+  chapter: The price war
+  narration: Now zoom out. In twenty twenty-five, China built {{iea_prod.over_spoken}} more electric cars than its own drivers bought,
+    the IEA says. When factories make more than the market wants, prices fall.
+  claims:
+  - iea_prod
+- id: a5_margin
+  chapter: The price war
+  narration: And they did. Across China's whole auto industry, profit was only {{nbs}} of sales in twenty twenty-five, a record low.
+    In the first half of twenty twenty-six, it slipped to {{nbs.h1_spoken}}, with profits down {{nbs.drop_spoken}}.
+  claims:
+  - nbs
+- id: a5_draw
+  chapter: The price war
+  narration: Here's how a price war squeezes. This line is the price. This one is the cost. The gap between them is the margin. One
+    company cuts its price. Its rivals follow. Costs fall too, but slower. The gap shrinks. The strongest can live on a thin margin.
+    The weakest can't.
+  claims: []
+  analysis: true
+  source_note: Illustrative margin-compression diagram (no real data), labelled ILLUSTRATIVE.
+- id: a5_fail
+  chapter: The price war
+  narration: Some couldn't. WM Motor went into bankruptcy restructuring in twenty twenty-three. Hozon, the maker of Neta cars, followed
+    in {{failures}}. Consumers win a price war. Weaker companies don't.
+  claims:
+  - failures
+- id: a5_export
+  chapter: The price war
+  narration: So Chinese carmakers looked abroad. Their electric car exports doubled to {{iea_prod.exp_spoken}} in twenty twenty-five.
+    In fact, the IEA estimates exports ran more than {{iea_prod.inv_spoken}} ahead of actual overseas sales. Cars were shipped faster
+    than they were sold.
+  claims:
+  - iea_prod
+- id: a5_walls
+  chapter: The price war
+  narration: And the walls went up. America put a {{us301}} tariff on Chinese electric cars in twenty twenty-four, and a rule blocking
+    Chinese connected-car software starts with twenty twenty-seven models. Europe chose duties, and since January twenty twenty-six,
+    it has offered minimum-price deals instead.
+  claims:
+  - us301
+  - eu_cvd
+- id: a5_abroad
+  chapter: The price war
+  narration: Chinese carmakers answer by building abroad. Their overseas factories could make {{iea_overseas}} cars a year in twenty
+    twenty-five, against {{iea_overseas.home_spoken}} at home. That's the trade-off every government faces. Tariffs protect factory
+    jobs and supply chains. They also keep cheaper cars away from drivers.
+  claims:
+  - iea_overseas
+- id: a6_card
+  chapter: The verdict
+  narration: ''
+  claims: []
+- id: a6_eff
+  chapter: The verdict
+  narration: So, back to our four suspects. Manufacturing efficiency. Guilty, and the main reason. Cheap L F P batteries, suppliers
+    next door, fast engineering and enormous scale are structural. They won't disappear.
+  claims: []
+  analysis: true
+  source_note: Verdict synthesised from Acts 2-3.
+- id: a6_sub
+  chapter: The verdict
+  narration: Subsidies. An accomplice. Years of support, mostly paid to buyers, helped build the industry. Today, BYD's grants are
+    small next to the price of a car, but big next to its profit.
+  claims:
+  - byd_grants
+- id: a6_fin
+  chapter: The verdict
+  narration: Financial engineering. Real, and fading. Paying suppliers late was a cheap loan. The sixty-day pledge is unwinding it.
+  claims:
+  - pledge
+- id: a6_burn
+  chapter: The verdict
+  narration: Cash burn. It depends who you ask about. BYD earns a profit, but spent more cash than it made last year. NIO lost money
+    for years. And the price war is pushing the weakest out.
+  claims:
+  - byd_cash
+  - nio
+- id: payoff
+  chapter: The verdict
+  narration: So here's the answer. The cheap Chinese car is real. It comes from a machine the West can't copy with one factory, or
+    block forever with one tariff. What isn't real yet is the profit behind every one of them. Expect the cars to stay cheap. And
+    expect fewer companies to be making them.
+  claims: []
+  analysis: true
+  source_note: Conclusion drawn from the sourced facts above (no new figures).
+- id: teaser
+  chapter: The verdict
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: The verdict
+  narration: ''
+  claims: []

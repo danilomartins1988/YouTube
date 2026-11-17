@@ -1,0 +1,499 @@
+# Sources and claims for "Why Are Chinese Cars So Cheap — And So Advanced?" (Episode 61, owner priority brief 2026-11-17).
+# Every claim was read on its primary page or filing on 2026-11-17 (notes: docs/episodes/61-chinese-cars/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars only.
+# RULES: yuan converted at the Fed G.5A annual average of the reporting year (2025: 7.1875 CNY/USD; 2024: 7.1957; 2020: 6.9042
+# = mean of daily H.10 noon rates) and current prices at the Fed H.10 rate of Nov 13, 2026 (6.6710 CNY/USD; 1.1034 USD/EUR),
+# all marked ≈. Company-level vs automotive-segment results are kept apart; subsidies (grants) vs consumer incentives vs
+# financing (equity, loans, supplier credit) are kept apart; every reporting period is dated. OUR CALCULATIONS are labelled.
+# EU countervailing duties are the Commission's findings; China disputes them (said). No brand logos drawn; cars are generic.
+sources:
+  - id: seagull
+    title: "Updates and price cuts: what's new with the BYD Seagull (2nd-generation Seagull, China guide prices; Dolphin Surf in Germany)"
+    publisher: electrive.com
+    url: https://electrive.com/2026/10/21/updates-and-price-cuts-whats-new-with-the-byd-seagull
+    published: "2026-10-21"
+    accessed: "2026-11-17"
+    period: "Launch Oct 20, 2026 (China); German list price as of Oct 2026"
+    credit: "electrive (Oct 2026)"
+  - id: cnevpost_seagull
+    title: "BYD launches second-gen Seagull (five variants, 65,900-99,900 yuan)"
+    publisher: CnEVPost
+    url: https://cnevpost.com/2026/10/20/byd-launches-second-gen-seagull/
+    published: "2026-10-20"
+    accessed: "2026-11-17"
+    period: "Oct 2026"
+    credit: "CnEVPost (Oct 2026)"
+  - id: h10
+    title: "Foreign Exchange Rates H.10 (weekly), release of November 16, 2026 (CNY 6.6710 per USD and USD 1.1034 per EUR on Nov 13, 2026)"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/h10/current/default.htm
+    published: "2026-11-16"
+    accessed: "2026-11-17"
+    period: "Nov 13, 2026"
+    credit: "Federal Reserve H.10"
+  - id: g5a
+    title: "Foreign Exchange Rates G.5A (annual averages), release of January 5, 2026 (CNY 7.1875 in 2025, 7.1957 in 2024; EUR 1.1306 in 2025, 1.0534 in 2022)"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/g5a/current/default.htm
+    published: "2026-01-05"
+    accessed: "2026-11-17"
+    period: "2022-2025 annual averages"
+    credit: "Federal Reserve G.5A"
+  - id: h10_2020
+    title: "Historical rates for the China yuan, 2020 (H.10 daily noon buying rates; 2020 mean 6.9042, our calculation)"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/h10/hist/dat00_ch.htm
+    published: "2021"
+    accessed: "2026-11-17"
+    period: "2020"
+    credit: "Federal Reserve H.10 history"
+  - id: kbb
+    title: "Kelley Blue Book Average Transaction Price report, October 2026 (new-vehicle ATP $51,109; EV ATP $56,220)"
+    publisher: Cox Automotive / Kelley Blue Book
+    url: https://www.coxautoinc.com/insights/oct-2026-atp-report/
+    published: "2026-11-10"
+    accessed: "2026-11-17"
+    period: "October 2026 (U.S.)"
+    credit: "Kelley Blue Book (Nov 2026)"
+  - id: ford
+    title: "Ford reports net loss of $8.2B on record revenue of $187.3B in 2025 (Model e full-year EBIT loss $4.8B)"
+    publisher: DBusiness (reporting Ford Motor Co. Q4/FY2025 results)
+    url: https://www.dbusiness.com/daily-news/ford-reports-net-loss-of-8-2b-on-record-revenue-of-187-3b-in-2025/
+    published: "2026-02-11"
+    accessed: "2026-11-17"
+    period: "Calendar 2025"
+    credit: "Ford FY2025 results (via DBusiness)"
+  - id: vw
+    title: "Volkswagen Group Annual Report 2025: results of operations (operating result €8.9bn, operating margin 2.8%)"
+    publisher: Volkswagen AG
+    url: https://annualreport2025.volkswagen-group.com/group-management-report/results-of-operations-financial-position-and-net-assets/results-of-operations.html
+    published: "2026-03-10"
+    accessed: "2026-11-17"
+    period: "Fiscal 2025 (calendar)"
+    credit: "Volkswagen Group AR 2025"
+  - id: iea_gevo
+    title: "Global EV Outlook 2026"
+    publisher: International Energy Agency
+    url: https://www.iea.org/reports/global-ev-outlook-2026
+    published: "2026-05"
+    accessed: "2026-11-17"
+    period: "2025 data (Q1 2026 where stated)"
+    license: CC BY 4.0
+    credit: "IEA Global EV Outlook 2026"
+    notes: "Full PDF read from the copy hosted by the Clean Energy Ministerial (https://www.cleanenergyministerial.org/content/uploads/2026/05/globalevoutlook2026.pdf, 295 pages, IEA CC BY 4.0 footer); same copy as Ep 60."
+  - id: byd_ar25
+    title: "BYD Company Limited Annual Report 2025 (HKEX filing)"
+    publisher: BYD Company Limited (HKEX)
+    url: https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0327/2026032703008.pdf
+    published: "2026-03-27"
+    accessed: "2026-11-17"
+    period: "Year ended Dec 31, 2025 (with 2024 comparatives)"
+    credit: "BYD Annual Report 2025"
+  - id: byd_q3
+    title: "BYD's third-quarter profit growth slows, falling short of forecasts (Q3 2026: revenue 221.5bn yuan, net profit 10bn yuan)"
+    publisher: The Standard (Hong Kong)
+    url: https://www.thestandard.com.hk/finance/article/346920/BYDs-third-quarter-profit-growth-slows-falling-short-of-forecasts
+    published: "2026-10-29"
+    accessed: "2026-11-17"
+    period: "Q3 2026 (Jul-Sep)"
+    credit: "The Standard (Oct 2026)"
+  - id: byd_sales
+    title: "BYD delivers 4.6 million vehicles in 2025, likely overtakes Tesla"
+    publisher: Yahoo Finance
+    url: https://finance.yahoo.com/news/byd-delivers-4-6-million-111833735.html
+    published: "2026-01-02"
+    accessed: "2026-11-17"
+    period: "Calendar 2025"
+    credit: "BYD sales report (via Yahoo Finance)"
+  - id: xiaomi_ar25
+    title: "Xiaomi Corporation annual results announcement for the year ended December 31, 2025 (HKEX)"
+    publisher: Xiaomi Corporation (HKEX)
+    url: https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0324/2026032400608.pdf
+    published: "2026-03-24"
+    accessed: "2026-11-17"
+    period: "Year ended Dec 31, 2025"
+    credit: "Xiaomi 2025 annual results"
+  - id: xiaomi_24
+    title: "Xiaomi reports record annual performance with revenue reaching RMB365.9 billion in 2024 (smart EV and other new initiatives: adjusted net loss RMB6.2bn)"
+    publisher: Romania Insider (Xiaomi release)
+    url: https://cdn.romania-insider.com/business/xiaomi-reports-record-annual-performance-revenue-reaching-rmb-3659-billion-2024
+    published: "2025-03-18"
+    accessed: "2026-11-17"
+    period: "Year ended Dec 31, 2024"
+    credit: "Xiaomi 2024 results"
+  - id: xiaomi_2021
+    title: "Xiaomi to invest $10 billion in new electric vehicle unit over 10 years (HKEX announcement, Mar 30, 2021)"
+    publisher: Caixin Global
+    url: https://www.caixinglobal.com/2021-03-31/xiaomi-joins-electric-car-race-with-10-billion-investment-plan-101682769.html
+    published: "2021-03-31"
+    accessed: "2026-11-17"
+    period: "Mar 2021"
+    credit: "Caixin (Mar 2021)"
+  - id: nio_q4
+    title: "NIO Inc. Reports Unaudited Fourth Quarter and Full Year 2025 Financial Results"
+    publisher: NIO Inc. (SGX filing)
+    url: https://links.sgx.com/1.0.0/corporate-announcements/1G1H3JXABHM2HON4/877990_NIO%20Inc.%20Reports%20Unaudited%20Fourth%20Quarter%20and%20Full%20Year%202025%20Financial%20Results.pdf
+    published: "2026-03-10"
+    accessed: "2026-11-17"
+    period: "Q4 2025 and FY2025"
+    credit: "NIO FY2025 results"
+  - id: nio_hefei
+    title: "NIO announces entry into definitive agreements for investments in NIO China (RMB7 billion from Hefei-led strategic investors)"
+    publisher: NIO Inc.
+    url: https://ir.nio.com/node/7336/pdf
+    published: "2020-04-29"
+    accessed: "2026-11-17"
+    period: "Apr 2020"
+    credit: "NIO (Apr 2020)"
+  - id: geely
+    title: "Geely Automobile Holdings announced annual results for the year ended 31 December 2025 (press release)"
+    publisher: Geely Automobile Holdings Limited
+    url: https://www.geelyauto.com.hk/wp-content/uploads/2026/03/e_20260318_Press-Release_Geely_2025-Annual-Results.pdf
+    published: "2026-03-18"
+    accessed: "2026-11-17"
+    period: "Year ended Dec 31, 2025"
+    credit: "Geely Auto 2025 results"
+  - id: csis
+    title: "The Chinese EV Dilemma: Subsidized Yet Striking (Scott Kennedy)"
+    publisher: Center for Strategic and International Studies
+    url: https://www.csis.org/blogs/trustee-china-hand/chinese-ev-dilemma-subsidized-yet-striking
+    published: "2024-06-20"
+    accessed: "2026-11-17"
+    period: "2009-2023"
+    credit: "CSIS (Jun 2024)"
+  - id: kiel
+    title: "Foul Play? On the Scale and Scope of Industrial Subsidies in China (Kiel Policy Brief 173; Bickenbach, Dohse, Langhammer, Liu)"
+    publisher: Kiel Institute for the World Economy
+    url: https://www.ifw-kiel.de/publications/foul-play-on-the-scale-and-scope-of-industrial-subsidies-in-china-32738
+    published: "2024-04"
+    accessed: "2026-11-17"
+    period: "2020-2022"
+    credit: "Kiel Institute (Apr 2024)"
+  - id: eu_cvd
+    title: "EU Commission imposes countervailing duties on imports of battery electric vehicles (BEVs) from China (Implementing Regulation (EU) 2024/2754)"
+    publisher: European Commission (Access2Markets)
+    url: https://trade.ec.europa.eu/access-to-markets/en/news/eu-commission-imposes-countervailing-duties-imports-battery-electric-vehicles-bevs-china
+    published: "2024-10-29"
+    accessed: "2026-11-17"
+    period: "Definitive duties from Oct 30, 2024 (5 years)"
+    credit: "European Commission (Oct 2024)"
+  - id: eu_pu
+    title: "China, EU reach breakthrough on EV tariffs: Commission guidance on price undertakings (Jan 12, 2026)"
+    publisher: Caixin Global
+    url: https://www.caixinglobal.com/2026-01-13/china-eu-reach-breakthrough-to-end-ev-tariffs-102403228.html
+    published: "2026-01-13"
+    accessed: "2026-11-17"
+    period: "Jan 2026"
+    credit: "Caixin (Jan 2026)"
+  - id: fr_301_2024
+    title: "Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer, IP and Innovation (Four-Year Review), 89 FR 76581"
+    publisher: Office of the U.S. Trade Representative (Federal Register)
+    url: https://www.federalregister.gov/documents/2024/09/18/2024-21217/notice-of-modification-chinas-acts-policies-and-practices-related-to-technology-transfer
+    published: "2024-09-18"
+    accessed: "2026-11-17"
+    period: "Effective Sep 27, 2024"
+    credit: "USTR, 89 FR 76581 (2024)"
+  - id: bis_cv
+    title: "Commerce finalizes rule to secure connected vehicle supply chains from foreign adversary threats"
+    publisher: U.S. Department of Commerce, Bureau of Industry and Security
+    url: https://www.bis.gov/press-release/commerce-finalizes-rule-secure-connected-vehicle-supply-chains-foreign-adversary-threats
+    published: "2025-01-14"
+    accessed: "2026-11-17"
+    period: "Software prohibitions from Model Year 2027; hardware from MY2030"
+    credit: "BIS (Jan 2025)"
+  - id: bnef
+    title: "Lithium-ion battery pack prices fall to $108 per kilowatt-hour despite rising metal prices (BloombergNEF 2025 survey)"
+    publisher: BloombergNEF
+    url: https://about.bnef.com/insights/clean-transport/lithium-ion-battery-pack-prices-fall-to-108-per-kilowatt-hour-despite-rising-metal-prices-bloombergnef/
+    published: "2025-12-09"
+    accessed: "2026-11-17"
+    period: "2025 survey (real 2025 USD)"
+    credit: "BloombergNEF (Dec 2025)"
+  - id: sne
+    title: "Global EV battery market share in 2025: CATL 39.2%, BYD 16.4% (SNE Research data)"
+    publisher: CnEVPost
+    url: https://cnevpost.com/2026/02/04/global-ev-battery-market-share-2025/
+    published: "2026-02-04"
+    accessed: "2026-11-17"
+    period: "Calendar 2025 (installations)"
+    credit: "SNE Research (via CnEVPost)"
+  - id: alix
+    title: "2024 AlixPartners Global Automotive Outlook (Chinese EV development about 20 months vs about 40 for legacy makers)"
+    publisher: AlixPartners
+    url: https://alixpartners.com/newsroom/2024-alixpartners-global-automotive-outlook
+    published: "2024-06-26"
+    accessed: "2026-11-17"
+    period: "2024 outlook"
+    credit: "AlixPartners (2024)"
+  - id: pledge
+    title: "BYD, GAC and other Chinese carmakers vow to pay suppliers within 60 days; MIIT backs commitment by 17 major automakers"
+    publisher: Yicai Global
+    url: https://www2.yicaiglobal.com/news/byd-gac-eight-other-chinese-automakers-vow-to-shorten-payment-terms-to-suppliers
+    published: "2025-06-11"
+    accessed: "2026-11-17"
+    period: "Jun 2025"
+    credit: "Yicai (Jun 2025)"
+  - id: pledge_mii
+    title: "China strengthens auto supply chain: auto giants unite on 60-day payment policy backed by MIIT (17 automakers)"
+    publisher: CarNewsChina
+    url: https://carnewschina.com/2025/06/12/china-strengthens-auto-supply-chain-auto-giants-unite-on-60-day-payment-policy-backed-by-miit
+    published: "2025-06-12"
+    accessed: "2026-11-17"
+    period: "Jun 2025"
+    credit: "CarNewsChina (Jun 2025)"
+  - id: nbs25
+    title: "China auto industry posts record revenue in 2025 with margins at 4.1% (NBS data)"
+    publisher: CarNewsChina
+    url: https://carnewschina.com/2026/01/27/china-auto-industry-posts-660b-usd-profit-in-2025-with-34-78m-vehicles-margins-at-4-1/
+    published: "2026-01-27"
+    accessed: "2026-11-17"
+    period: "Calendar 2025"
+    credit: "NBS (via CarNewsChina)"
+  - id: nbs26
+    title: "China auto industry profit margin drops to 3.8% in H1 2026; profit down 20% YoY (data from National Bureau of Statistics)"
+    publisher: Gasgoo
+    url: https://autonews.gasgoo.com/articles/market-industry/china-auto-industry-profit-margin-drops-to-38-in-h1-2026-profit-down-20-yoy-2082122015128387585
+    published: "2026-07-28"
+    accessed: "2026-11-17"
+    period: "Jan-Jun 2026"
+    credit: "NBS (via Gasgoo)"
+  - id: neta
+    title: "Chinese EV maker Hozon Auto goes into bankruptcy review (Neta brand)"
+    publisher: Yicai Global
+    url: https://www2.yicaiglobal.com/news/chinas-hozon-auto-enters-bankruptcy
+    published: "2025-06-16"
+    accessed: "2026-11-17"
+    period: "Jun 2025"
+    credit: "Yicai (Jun 2025)"
+  - id: wm
+    title: "It's survival of the fittest in China's brutal electric car market (WM Motor filed for bankruptcy reorganization in October 2023)"
+    publisher: City News Service (Shanghai)
+    url: https://www.citynewsservice.cn/articles/its-survival-of-the-fittest-in-chinas-brutal-electric-car-market-bmeblz4m
+    published: "2025"
+    accessed: "2026-11-17"
+    period: "Oct 2023"
+    credit: "City News Service"
+  - id: nevtax
+    title: "China to reduce tax exemption for NEV purchases in 2026 (50% reduction: 5% rate, reduction capped at 15,000 yuan, 2026-2027)"
+    publisher: SteelOrbis (reporting MOF/STA/MIIT joint notice)
+    url: https://www.steelorbis.com/steel-news/latest-news/purchase-of-nevs-to-implement-50-percent-reduction-in-taxation-since-jan-1-2026-1426630.htm
+    published: "2025"
+    accessed: "2026-11-17"
+    period: "Jan 1, 2026 - Dec 31, 2027"
+    credit: "MOF/STA/MIIT notice (via SteelOrbis)"
+claims:
+  - id: seagull
+    text: "electrive (2026-10-21) and CnEVPost (2026-10-20): the second-generation BYD Seagull launched in China on Oct 20, 2026 with guide prices from 65,900 yuan (Vitality) to 99,900 yuan; up to 39.2 kWh Blade battery with 'Flash-Charging' 10-70% in five minutes (company claim); LiDAR optional with advanced driver assistance; 85-95 kW rear motor; 4.21 m long. 65,900 yuan / 6.6710 (H.10, Nov 13, 2026) = $9,879 ≈ $9,900 (our conversion). China list prices include 13% VAT; in 2026 NEV buyers pay a 5% purchase tax (half rate)."
+    spoken: about nine thousand nine hundred dollars
+    display: "BYD Seagull (2nd gen), China, Oct 2026: from ¥65,900 ≈ $9,900 (incl. VAT; before 5% NEV purchase tax)"
+    fields: {yuan_spoken: sixty-five thousand nine hundred yuan}
+    source_ids: [seagull, cnevpost_seagull, h10, nevtax]
+    status: source_located
+    verification_note: "Price conversion is ours (H.10). Specs and charging time are company figures reported by electrive/CnEVPost."
+  - id: kbb_ev
+    text: "Kelley Blue Book (Cox Automotive), October 2026: average transaction price of a new EV in the U.S. $56,220; all new vehicles $51,109 (record)."
+    spoken: fifty-six thousand two hundred dollars
+    display: "U.S. average new-EV transaction price, Oct 2026: $56,220 (Kelley Blue Book)"
+    fields: {all_spoken: fifty-one thousand one hundred dollars}
+    source_ids: [kbb]
+    status: source_located
+  - id: ford
+    text: "Ford FY2025 (released Feb 2026): 'Ford Model e reported a full-year EBIT loss of $4.8 billion, a $0.3 billion improvement compared to 2024'; company net loss $8.2bn on revenue $187.3bn (special items incl. a $10.7bn Model e impairment/EV program cancellation charge)."
+    spoken: four point eight billion dollars
+    display: "Ford Model e (EV unit), 2025: EBIT loss $4.8B"
+    fields: {}
+    source_ids: [ford]
+    status: source_located
+  - id: vw
+    text: "Volkswagen Group 2025: operating result €8.9bn, 53% below 2024; operating margin 2.8% (4.6% excluding special items, including U.S. tariffs)."
+    spoken: two point eight percent
+    display: "Volkswagen Group operating margin, 2025: 2.8% (reported)"
+    fields: {}
+    source_ids: [vw]
+    status: source_located
+  - id: surf_de
+    text: "electrive (2026-10-21): 'In Germany, the current version [Dolphin Surf] costs 23,490 euros in the base Active trim'; promotional price with manufacturer discounts €14,190. €23,490 x 1.1034 (H.10, Nov 13, 2026) = $25,919 ≈ $25,900 (our conversion). German price includes 19% VAT; imports from China pay the EU's 10% car duty plus BYD's 17.0% countervailing duty."
+    spoken: about twenty-six thousand dollars
+    display: "Dolphin Surf (European version), Germany list, Oct 2026: €23,490 ≈ $25,900 (incl. 19% VAT, before discounts)"
+    fields: {eur_spoken: twenty-three thousand four hundred and ninety euros}
+    source_ids: [seagull, h10, eu_cvd]
+    status: source_located
+    verification_note: "Different generation/spec than the 2nd-gen Chinese Seagull; shown only as a same-family market comparison with taxes named."
+  - id: iea_cheaper
+    text: "IEA GEVO 2026: 'in 2025, even before government incentives, nearly 70% of BEVs sold in China were already cheaper than their ICE equivalents, up from around 50% in 2021'; 'small electric cars are around 60% cheaper than the average small ICE car in China'."
+    spoken: nearly seventy percent
+    display: "China, 2025: ~70% of battery-electric cars sold were cheaper than ICE equivalents, before incentives (IEA)"
+    fields: {}
+    source_ids: [iea_gevo]
+    status: source_located
+  - id: iea_prod
+    text: "IEA GEVO 2026: 'Nearly 22 million electric cars were produced globally in 2025'; China 'capturing nearly 75%' of production; 'China's 2025 production of 16 million electric cars outstripped domestic demand by 20%, pushing Chinese electric car exports to double to a record high of more than 2.5 million'; exports 'estimated to have exceeded overseas sales by more than 25%'; in Europe 'sales of Chinese-made electric cars grew almost 50% from 2024 levels to reach about 940 000 in 2025'."
+    spoken: nearly three out of every four
+    display: "2025: China made ~75% of the world's electric cars: 16M of ~22M (IEA)"
+    fields: {prod_spoken: sixteen million, over_spoken: twenty percent, exp_spoken: more than two and a half million, inv_spoken: twenty-five percent, eu_spoken: almost fifty percent}
+    source_ids: [iea_gevo]
+    status: source_located
+  - id: iea_overseas
+    text: "IEA GEVO 2026: 'In 2025, dual internal combustion engine (ICE)-EV overseas manufacturing capacity owned by Chinese firms was estimated at about 1.7 million cars per year, compared to a capacity of 29 million in China.'"
+    spoken: about one point seven million
+    display: "Chinese carmakers' overseas plant capacity, 2025: ~1.7M cars/yr vs 29M in China (IEA)"
+    fields: {home_spoken: twenty-nine million}
+    source_ids: [iea_gevo]
+    status: source_located
+  - id: iea_batt
+    text: "IEA GEVO 2026 Ch.5: 'In 2025, battery pack prices in China were 30% lower than in North America, and 35% lower than in Europe'; 'In 2025, LFP batteries accounted for over 55% of EV batteries deployed globally'; Ch.7: 'In 2025, China accounted for 70% of electric car production and over 80% of battery cell production, as well as about 85% of global production of cathode active material (CAM) and more than 90% of production of anode active material (AAM)'."
+    spoken: thirty percent
+    display: "2025: battery packs in China 30% cheaper than North America, 35% than Europe (IEA)"
+    fields: {eu_spoken: thirty-five percent, cells_spoken: more than eighty percent, cam_spoken: about eighty-five percent, aam_spoken: more than ninety percent, lfp_spoken: more than half}
+    source_ids: [iea_gevo]
+    status: source_located
+  - id: byd_vol
+    text: "BYD 2025 sales about 4.6 million vehicles (+7.7%); battery-electric about 2.26 million vs Tesla 1.636 million deliveries. BYD AR 2025: 'historically topped the global pure electric vehicle market in terms of sales volume'; vehicle exports exceeded one million units (+1.4x)."
+    spoken: about four point six million
+    display: "BYD, 2025: ~4.6M vehicles; #1 in battery-electric cars worldwide (BYD)"
+    fields: {}
+    source_ids: [byd_sales, byd_ar25]
+    status: source_located
+  - id: bnef
+    text: "BNEF (Dec 9, 2025): global average pack price $108/kWh in 2025 (-8%); China average $84/kWh; BEV packs averaged $99/kWh; LFP packs averaged $81/kWh vs NMC $128/kWh. OUR CALCULATION: 60 kWh x $99/kWh = $5,940 ≈ $5,900 for a hypothetical 60 kWh BEV pack at the 2025 global BEV average."
+    spoken: about five thousand nine hundred dollars
+    display: "60 kWh x $99/kWh (BNEF 2025 BEV pack average) ≈ $5,900 (our calculation)"
+    fields: {lfp_spoken: eighty-one dollars, nmc_spoken: one hundred and twenty-eight dollars}
+    source_ids: [bnef]
+    status: source_located
+  - id: csis
+    text: "CSIS (Kennedy, Jun 2024): 'From 2009 to 2023, we calculate that Chinese government support cumulatively totaled $230.9 billion'; categories: buyer rebates, the 10% sales tax exemption, infrastructure funding, R&D programs for EV makers, government procurement; 'The buyer's rebate and sales tax exemption have accounted for the vast majority of support'; 'the average support per vehicle has fallen from $13,860 in 2018 to just under $4,800 in 2023'; 'subsidies as a percentage of total sales ... from over 40% in the early years to only 11.4% in 2023'. Excludes local rebates, low-cost land, electricity and credit, municipal/provincial equity investment (e.g., NIO), and supply-chain subsidies; 'very few Chinese EV producers and battery makers are profitable'."
+    spoken: about two hundred and thirty-one billion dollars
+    display: "Chinese government support for EVs, 2009–2023: ≈ $230.9B (CSIS estimate)"
+    fields: {percar_spoken: just under four thousand eight hundred dollars, early_spoken: thirteen thousand eight hundred and sixty dollars}
+    source_ids: [csis]
+    status: source_located
+    verification_note: "An estimate by a think tank; CSIS calls it conservative and lists what it excludes (said on screen)."
+  - id: nio_hefei
+    text: "NIO (Apr 29, 2020): strategic investors led by Hefei City Construction and Investment Holding, with CMG-SDIC Capital and Anhui Provincial Emerging Industry Investment, agreed to invest RMB7 billion in NIO China (24.1% stake). RMB7bn / 6.9042 (2020 H.10 mean, our calc) ≈ $1.0bn."
+    spoken: about one billion dollars
+    display: "2020: Hefei-led investors put ¥7B (≈ $1.0B) into NIO China for a 24.1% stake (equity, not a grant)"
+    fields: {yuan_spoken: seven billion yuan}
+    source_ids: [nio_hefei, h10_2020]
+    status: source_located
+  - id: kiel
+    text: "Kiel Policy Brief 173 (Apr 2024): BYD's direct government subsidies rose from about €220 million in 2020 to €2.1 billion in 2022 (from 1.1% to 3.5% of revenue). €2.1bn x 1.0534 (G.5A 2022) ≈ $2.2bn (our conversion)."
+    spoken: about two point two billion dollars
+    display: "BYD direct subsidies, 2022: €2.1B ≈ $2.2B (Kiel Institute estimate)"
+    fields: {}
+    source_ids: [kiel, g5a]
+    status: source_located
+  - id: byd_grants
+    text: "BYD AR 2025, Note IX.2 'Government grants included in profit or loss': 2025 total RMB 12,633,625 thousand (2024: 10,659,878): asset-related in other income 9,967,765; income-related in other income 2,500,608; write-down of financial expenses 165,252. Revenue 2025 RMB 803,964,958 thousand; profit attributable to owners RMB 32,619,022 thousand. OUR CALCULATIONS: 12.63bn / 7.1875 ≈ $1.76bn; 12.63 / 803.96 = 1.57% of revenue; 12.63 / 32.62 = 38.7% of net profit attributable (grants are pre-tax, profit is after tax: an order-of-magnitude comparison)."
+    spoken: about one point eight billion dollars
+    display: "BYD government grants booked in 2025 profit: ¥12.6B ≈ $1.8B (Annual Report 2025)"
+    fields: {rev_spoken: about one point six percent, np_spoken: about two-fifths, yuan_spoken: twelve point six billion yuan}
+    source_ids: [byd_ar25, g5a]
+    status: source_located
+  - id: eu_cvd
+    text: "European Commission: definitive countervailing duties under Implementing Regulation (EU) 2024/2754, applicable from Oct 30, 2024 for five years, on top of the 10% EU car import duty: BYD 17.0%, Geely 18.8%, SAIC 35.3%, Tesla (Shanghai) 7.8%, other cooperating 20.7%. China contested the measures (WTO dispute). Jan 12, 2026: Commission guidance lets exporters offer minimum prices (price undertakings) instead of duties."
+    spoken: seventeen percent
+    display: "EU duties on China-made EVs (from Oct 30, 2024), on top of 10%: BYD 17.0% · Geely 18.8% · SAIC 35.3% (EU findings; China disputes)"
+    fields: {geely_spoken: eighteen point eight, saic_spoken: thirty-five point three}
+    source_ids: [eu_cvd, eu_pu]
+    status: source_located
+  - id: us301
+    text: "89 FR 76581 (Sep 18, 2024): Section 301 rate on electric vehicles from China increased to 100% in 2024 (effective Sep 27, 2024). BIS (Jan 14, 2025): connected-vehicle rule; software prohibitions take effect for Model Year 2027, hardware for MY2030; sales by manufacturers with a sufficient PRC nexus prohibited from MY2027."
+    spoken: one hundred percent
+    display: "U.S.: 100% Section 301 tariff on Chinese EVs (Sep 2024); connected-car software rule from model year 2027 (BIS)"
+    fields: {}
+    source_ids: [fr_301_2024, bis_cv]
+    status: source_located
+  - id: byd_founded
+    text: "BYD AR 2025 (directors' profiles): Wang Chuan-fu, aged 60, graduated in Metallurgy Physical Chemistry (1987, 1990); 'In February 1995, he incorporated Shenzhen BYD Battery Company Limited ... (became BYD Company Limited on 11 June 2002)'; Chairman and President. AR 2025 MD&A: 2nd Generation Blade Battery and FLASH charging: '5 minutes to charge from 10% to 70%' (company claim)."
+    spoken: nineteen ninety-five
+    display: "BYD: founded Feb 1995 as BYD Battery by Wang Chuanfu (BYD Annual Report 2025)"
+    fields: {}
+    source_ids: [byd_ar25]
+    status: source_located
+  - id: sne
+    text: "SNE Research via CnEVPost (Feb 2026): 2025 global EV battery installations 1,187 GWh; CATL 464.7 GWh (39.2%), BYD 194.8 GWh (16.4%); together 55.6%."
+    spoken: more than half
+    display: "EV battery installations, 2025: CATL 39.2% + BYD 16.4% = 55.6% (SNE Research)"
+    fields: {}
+    source_ids: [sne]
+    status: source_located
+  - id: alix
+    text: "AlixPartners 2024 Global Automotive Outlook: Chinese EV makers develop a new model in about 20 months, roughly half the ~40 months of traditional automakers; Chinese-brand NEV models on sale averaged 1.6 years old vs 5.4 for foreign brands."
+    spoken: about twenty months
+    display: "Development time for a new model: ~20 months (Chinese EV makers) vs ~40 (traditional) (AlixPartners, 2024)"
+    fields: {}
+    source_ids: [alix]
+    status: source_located
+    verification_note: "Consultancy estimate; methodology not public in full."
+  - id: xiaomi
+    text: "Xiaomi 2025 results: smart EV, AI and other new initiatives segment revenue RMB106.1bn (smart EV RMB103.3bn); gross margin 24.3%; 'achieved positive income from operations for the first time, of RMB0.9 billion' (gross profit minus operating expenses); deliveries 411,082 (2024: 136,854); smart EV ASP RMB251,171 per unit. 2024: segment adjusted net loss RMB6.2bn. OUR CONVERSIONS: 0.9bn/7.1875 ≈ $125M; 6.2bn/7.1957 ≈ $860M; 251,171/7.1875 ≈ $34,900. Mar 30, 2021: Xiaomi announced a wholly owned smart EV subsidiary led by Lei Jun, initial investment RMB10bn, $10bn over ten years."
+    spoken: about one hundred and twenty-five million dollars
+    display: "Xiaomi EV segment, 2025: first operating profit ≈ $125M (¥0.9B); 411,082 cars delivered (Xiaomi)"
+    fields: {loss_spoken: eight hundred and sixty million dollars, deliv_spoken: four hundred and eleven thousand, asp_spoken: thirty-five thousand dollars}
+    source_ids: [xiaomi_ar25, xiaomi_24, xiaomi_2021, g5a]
+    status: source_located
+    verification_note: "Segment = 'Smart EV, AI and other new initiatives' (EV is ~97% of its revenue); 2024 figure is an adjusted net loss (different measure from 2025 operating income: said 'a loss')."
+  - id: byd_fy
+    text: "BYD AR 2025: revenue RMB803,964,958 thousand (+3.46%); gross profit 142,659,797 (margin ≈17.74% vs 19.44%); profit attributable to owners RMB32,619,022 thousand (-18.97%, first decline since 2021 per the five-year table); 'mainly attributable to the change of product structure'. OUR CONVERSIONS: revenue ≈ $111.9bn; profit ≈ $4.5bn. Q3 2026 (The Standard): revenue 221.5bn yuan (+13.6%), net profit 10bn yuan (+28%)."
+    spoken: about one hundred and twelve billion dollars
+    display: "BYD 2025: revenue ≈ $111.9B, net profit ≈ $4.5B (−19%), gross margin 17.7% (Annual Report 2025)"
+    fields: {np_spoken: about four and a half billion dollars, chg_spoken: nineteen percent}
+    source_ids: [byd_ar25, byd_q3, g5a]
+    status: source_located
+  - id: byd_seg
+    text: "BYD AR 2025 segment note (XVI.1): 'Automobiles and related products and other products' segment 2025: revenue RMB652,481,997 thousand (incl. inter-segment), total (adjusted pre-tax) profit RMB28,417,336 thousand, capital expenditure RMB134,491,587 thousand. Segment includes power batteries, PV products and rail transit. OUR CALCULATIONS: 28.42bn / 7.1875 ≈ $3.95bn; 28.42bn / ~4.6M vehicles ≈ RMB6,180 ≈ $860 per vehicle (rough: the segment also sells batteries, solar and rail)."
+    spoken: about four billion dollars
+    display: "BYD auto segment pre-tax profit, 2025: ¥28.4B ≈ $4.0B → ≈ $860 per vehicle (our rough calculation)"
+    fields: {percar_spoken: roughly eight hundred and sixty dollars}
+    source_ids: [byd_ar25, g5a]
+    status: source_located
+  - id: byd_cash
+    text: "BYD AR 2025: net cash flow from operating activities RMB59,135,544 thousand (2024: 133,453,873), 'mainly attributable to the increase in the cash paid for purchase of goods and receipt of services'; cash paid for purchase and construction of fixed assets, intangible assets and other long-term assets RMB156,807,853 thousand (2024: 97,359,768); trade payables 186,742,375 (2024: 241,643,424); bills payables 22,463,883 (2024: 2,383,996); total borrowings incl. bonds ≈ RMB113,435m (2024: ≈28,584m). OUR CALCULATIONS: free cash flow (OCF − capex) = −RMB97.67bn ≈ −$13.6bn (2024: +RMB36.1bn); trade+bills payables fell RMB34.8bn ≈ $4.8bn; OCF ≈ $18.5bn (2024, at 7.1957) → ≈ $8.2bn (2025); capex ≈ $21.8bn; borrowings ≈ $4.0bn → ≈ $15.8bn; year-end trade+bills payables ≈ 142 days of cost of sales (2024) vs ≈ 115 (2025)."
+    spoken: thirteen point six billion dollars
+    display: "BYD free cash flow, 2025: OCF ¥59.1B − capex ¥156.8B ≈ −¥97.7B ≈ −$13.6B (our calculation)"
+    fields: {ocf24_spoken: about eighteen and a half billion dollars, ocf25_spoken: about eight point two billion dollars, capex_spoken: about twenty-two billion dollars, pay_spoken: about four point eight billion dollars}
+    source_ids: [byd_ar25, g5a]
+    status: source_located
+  - id: pledge
+    text: "Jun 2025: after complaints over long payment times, 17 major Chinese automakers (incl. BYD, Geely, Dongfeng, GAC, GWM, Seres, Xiaomi) pledged to pay suppliers within 60 days; MIIT backed the commitment. Revised SME payment regulations took effect Jun 1, 2025 (large firms must pay SMEs within 60 days of delivery). CAAM survey (Feb 2026) reported all 17 calculate terms from delivery/acceptance within 60 days."
+    spoken: seventeen
+    display: "June 2025: 17 Chinese carmakers pledge to pay suppliers within 60 days (Yicai; MIIT)"
+    fields: {}
+    source_ids: [pledge, pledge_mii]
+    status: source_located
+  - id: nio
+    text: "NIO FY2025: total revenues RMB87,487.5m (+33.1%); net loss RMB14,942.6m (US$2,136.8m at NIO's rate), -33.3% YoY; Q4 2025 net profit RMB282.7m; 'non-GAAP operating profit of RMB1,251.3 million for the first time on a quarterly basis in the fourth quarter of 2025'; deliveries 326,028. OUR CONVERSION at G.5A 2025: 14.94bn / 7.1875 ≈ $2.1bn."
+    spoken: about two point one billion dollars
+    display: "NIO net loss, 2025: ¥14.9B ≈ $2.1B; Q4 2025: first quarterly operating profit (NIO, non-GAAP)"
+    fields: {}
+    source_ids: [nio_q4, g5a]
+    status: source_located
+  - id: geely
+    text: "Geely Automobile Holdings 2025: revenue RMB345.2bn (+25%); core profit attributable RMB14.41bn (+36%); 3,024,567 vehicles (+39%). OUR CONVERSION: 14.41 / 7.1875 ≈ $2.0bn."
+    spoken: about two billion dollars
+    display: "Geely Auto 2025: 3.02M vehicles; core profit ≈ $2.0B (+36%) (Geely)"
+    fields: {}
+    source_ids: [geely, g5a]
+    status: source_located
+  - id: nbs
+    text: "NBS: China auto manufacturing sales profit margin 4.1% in 2025 (4.3% in 2024), described as the lowest on record; revenue ≈ 11.2 trillion yuan, profit ≈ 461bn yuan (+0.6%). H1 2026 (NBS via Gasgoo, Jul 28, 2026): revenue +1.8% to 5.19 trillion yuan, profit -20% to 195.4bn yuan, margin 3.8%."
+    spoken: four point one percent
+    display: "China auto industry profit margin: 4.3% (2024) → 4.1% (2025) → 3.8% (H1 2026); profit −20% (NBS)"
+    fields: {h1_spoken: three point eight percent, drop_spoken: twenty percent}
+    source_ids: [nbs25, nbs26]
+    status: source_located
+  - id: failures
+    text: "WM Motor filed for bankruptcy reorganization in October 2023 (City News Service). Hozon New Energy (Neta brand) entered bankruptcy review/reorganization proceedings in June 2025 (Yicai, Jun 16, 2025; court acceptance reported Jun 2025)."
+    spoken: twenty twenty-five
+    display: "WM Motor: bankruptcy reorganization (Oct 2023) · Hozon/Neta: bankruptcy proceedings (Jun 2025)"
+    fields: {}
+    source_ids: [wm, neta]
+    status: source_located
+  - id: nevtax
+    text: "MOF/STA/MIIT: for Jan 1, 2026 - Dec 31, 2027, NEV purchase tax is halved: effective 5% rate, reduction capped at 15,000 yuan per vehicle (full exemption up to 30,000 yuan in 2024-2025)."
+    spoken: five percent
+    display: "China NEV purchase tax 2026–27: 5% (half rate)"
+    fields: {}
+    source_ids: [nevtax]
+    status: source_located
