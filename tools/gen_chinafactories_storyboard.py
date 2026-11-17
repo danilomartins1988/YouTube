@@ -191,7 +191,7 @@ stage("s11_wage", "a1_wage", {
     "items": [chart([{"label": "CHINA · PRODUCTION WORKER", "value": 11.2, "color": RED, "at": C("A production worker"), "display": "≈ $11.2K / YR"},
                      {"label": "U.S. · PRODUCTION WORKER", "value": 60.4, "color": TEAL, "at": C("An American factory"), "display": "≈ $29 / HR (≈ $60K)"}],
                     at=0.2, max=65, title="ROUGH PAY COMPARISON, 2025", x=300, y=220, w=860, h=470, until=C("If wages were the whole", 0.5)),
-              sign("NBS ¥80,739 AT FED 2025 RATE · BLS · OUR CALCULATION", 730, 830, C("at the Federal Reserve"), color="#FFFFFF", size=20, until=C("If wages were the whole", 0.5)),
+              sign("NBS 2025 WAGE CONVERTED AT FED 2025 AVG. RATE · BLS · OUR CALCULATION", 730, 830, C("average exchange rate"), color="#FFFFFF", size=20, until=C("If wages were the whole", 0.5)),
               sign("CHINESE PAY STILL RISING: +6.4% (PRIVATE, 2025)", 1600, 200, C("keeps rising"), color="#FFCDD2", size=26),
               it("toonwords", text="WAGES AREN'T THE WHOLE STORY", x=1200, y=200, at=C("If wages were the whole"), size=54),
               MEL(1650, 0.3, face="worry", pose="shrug", faces=[[0, "worry"], [C("Cheaper, clearly"), "smug"], [C("Many of them didn't"), "shock"]], takes=[C("Many of them didn't")])]},
