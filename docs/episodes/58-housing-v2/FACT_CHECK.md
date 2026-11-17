@@ -6,7 +6,7 @@
 | Median household income $87,460 in 2025, a record (real) | Census, Sep 15, 2026 | source_located (latest) |
 | 30-year fixed 7.11% (Nov 12, 2026); 7.40% in October; record low 2.65% (Jan 7, 2021); above 7% by late 2022 | Freddie Mac PMMS + weekly file | source_located (latest) |
 | Coaster track = weekly 30-yr rate since 2019 (sampled) | Freddie Mac PMMS weekly file | data supplied, no illustrative values |
-| $1,343 vs $2,243 a month (≈ $900 more); ≈ $107,600 income needed | NAR price + PMMS + NAR method | OUR CALCULATION, said and labelled |
+| $1,343 vs $2,243 a month (≈ $900 more); ≈ $107,600 income needed; ≈ $20K more than the median household (payoff) | NAR price + PMMS + NAR method | OUR CALCULATION, said and labelled |
 | NAR Housing Affordability Index 100.7 (Oct 2026) vs 107.3 a year earlier; 100 = median family just qualifies, 20% down | NAR release + HAI methodology | source_located (latest) |
 | Income needed $120,800 (end 2025) vs $68,700 (2020); 31 → 169 metros above $100k | Harvard JCHS Key Facts 2026 | source_located |
 | Price = 3.2 / 4.1 / 5.0 / 4.7 years of income (1990s / 2019 / 2022 / 2025); prices +54% since 2020 | Harvard JCHS Key Facts + press release | source_located |
