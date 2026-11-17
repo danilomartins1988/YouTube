@@ -355,7 +355,7 @@ MONTHS = [("JAN", 21.06), ("FEB", 18.96), ("MAR", 20.86), ("APR", 19.79), ("MAY"
 stage("s27_back", "a3_back", {
     **W1("tariffwall", wallX=1100, rows=[{"at": 0.0, "label": "2026", "h": 50}], leftLabel="FACTORY", rightLabel="U.S. STORE"),
     "cam": cam((0, 1000, 520, 1.0), (C("Month by month"), 1000, 470, 0.95, 1.4)), "drift": 3,
-    "items": [chart([{"label": m, "value": v, "color": TEAL if k else RED, "at": (C("Month by month", 0.3 + k * 0.35) if k else C("Month by month")), "display": f"${v:.1f}B"} for k, (m, v) in enumerate(MONTHS)],
+    "items": [chart([{"label": m, "value": v, "color": TEAL if k else RED, "at": (0.6 + k * 0.6 if k < 3 else C("Month by month", (k - 3) * 0.4)), "display": f"${v:.1f}B"} for k, (m, v) in enumerate(MONTHS)],
                     at=0.2, max=35, title="U.S. IMPORTS FROM CHINA, MONTHLY, 2026 (CENSUS, NOT SEAS. ADJ.)", x=200, y=170, w=1500, h=470),
               sign("JAN–SEP 2026: −11.5% VS 2025 · OUR CALCULATION", 960, 820, C("were down about"), color="#FFF8E1", size=26),
               *[it("homebox", x=[[0, 2700 + k * 170], [C("Month by month"), 2700 + k * 170], [C("in September"), 1400 + k * 170]], at=0.2, label="MADE IN CHINA",
