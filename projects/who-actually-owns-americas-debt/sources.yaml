@@ -16,6 +16,7 @@ sources:
     accessed: "2026-11-17"
     period: "Daily, latest record Nov 13, 2026 (series read Sep 1, 2025 - Nov 13, 2026)"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "U.S. Treasury, Debt to the Penny"
     notes: "API: api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny"
   - id: mspd
@@ -26,6 +27,7 @@ sources:
     accessed: "2026-11-17"
     period: "As of Oct 31, 2026"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "U.S. Treasury, MSPD"
     notes: "API: v1/debt/mspd/mspd_table_1"
   - id: auct
@@ -36,6 +38,7 @@ sources:
     accessed: "2026-11-17"
     period: "Auctions dated Oct 1, 2025 - Sep 30, 2026; 10-year note auction of Aug 12, 2026"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "U.S. Treasury auction results"
     notes: "API: v1/accounting/od/auctions_query"
   - id: tic
@@ -46,6 +49,7 @@ sources:
     accessed: "2026-11-17"
     period: "Aug 2025 - Aug 2026 (latest month: August 2026)"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "U.S. Treasury TIC data"
   - id: tichist
     title: "Major Foreign Holders of Treasury Securities, historical (mfhhis01)"
@@ -55,6 +59,7 @@ sources:
     accessed: "2026-11-17"
     period: "2000 - 2025 (China, Mainland: Nov 2013 peak)"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "U.S. Treasury TIC data"
   - id: z1
     title: "Financial Accounts of the United States (Z.1), table 'Treasury securities' (instrument F.3.2 levels): holders, 2026:Q2"
@@ -64,6 +69,7 @@ sources:
     accessed: "2026-11-17"
     period: "End of 2026:Q2 (June 30, 2026); market value for holders"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "Federal Reserve, Z.1 Financial Accounts"
   - id: h41
     title: "Factors Affecting Reserve Balances (H.4.1), release of November 12, 2026"
@@ -73,6 +79,7 @@ sources:
     accessed: "2026-11-17"
     period: "Wednesday Nov 11, 2026; change vs Nov 12, 2025"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "Federal Reserve, H.4.1"
   - id: treast
     title: "Assets: Securities Held Outright: U.S. Treasury Securities, Wednesday level (TREAST), from the H.4.1"
@@ -82,6 +89,7 @@ sources:
     accessed: "2026-11-17"
     period: "Weekly, 2002 - Nov 11, 2026 (peak Jun 8, 2022)"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "Federal Reserve H.4.1 (via FRED)"
   - id: mts
     title: "Monthly Treasury Statement, Table 9: Summary of Receipts and Outlays by Function, fiscal year to date through September 30, 2026"
@@ -91,6 +99,7 @@ sources:
     accessed: "2026-11-17"
     period: "Fiscal year 2026 (Oct 1, 2025 - Sep 30, 2026) and fiscal year 2025"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "U.S. Treasury, Monthly Treasury Statement"
     notes: "API: v1/accounting/mts/mts_table_9, record_date 2026-09-30"
   - id: avgrate
@@ -101,6 +110,7 @@ sources:
     accessed: "2026-11-17"
     period: "Oct 31, 2021 and Oct 31, 2026"
     kind: dataset
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     credit: "U.S. Treasury, average interest rates"
   - id: crs_ss
     title: "Social Security: Selected Findings of the 2026 Annual Report (CRS In Focus IF13256), based on the 2026 OASDI Trustees Report"
@@ -110,6 +120,7 @@ sources:
     accessed: "2026-11-17"
     period: "Calendar 2025 actual; projections from the 2026 Trustees Report"
     credit: "CRS (2026 Trustees Report)"
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     notes: "ssa.gov refused automated access (HTTP 403); CRS reproduces the Trustees' figures."
   - id: crs_deficit
     title: "Deficits, Debt, and the Economy: An Introduction (CRS R44383, updated Nov 5, 2026), citing CBO's February 2026 baseline"
@@ -119,6 +130,7 @@ sources:
     accessed: "2026-11-17"
     period: "CBO baseline projections FY2026-FY2036"
     credit: "CBO (Feb 2026), via CRS"
+    license: "Public domain (U.S. Government work, 17 U.S.C. 105)"
     notes: "cbo.gov refused automated access (HTTP 403); figures are CBO's as reported by CRS."
 claims:
   - id: dtp

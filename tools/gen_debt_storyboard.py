@@ -258,7 +258,7 @@ stage("s18_custody", "a2_custody", {
     "cam": cam((0, 2000, 480, 1.0), (C("Bonds kept in places"), 1500, 560, 1.0, 1.6), (C("So the guest list"), 1200, 420, 0.85, 1.4)), "drift": 3,
     "items": [*diners({3: "smug", 4: "smug", 5: "smug"}),
               table([0.1] * 6),
-              it("docs", x=2150, y=860, at=C("One caveat"), text="TIC TABLE 5 · NOTES", scale=0.7, stamp="CUSTODY", stampAt=C("held in custody")),
+              it("docs", x=2420, y=900, at=C("One caveat"), text="TIC TABLE 5 · NOTES", scale=0.6, stamp="CUSTODY", stampAt=C("held in custody")),
               sign("BELGIUM · LUXEMBOURG · CAYMAN IS.: CUSTODY CENTERS", 1500, 140, C("Bonds kept in places"), color="#FFF8E1", size=26),
               it("toonwords", text="A GOOD MAP, NOT A PERFECT ONE", x=1200, y=260, at=C("So the guest list"), size=54)]},
     sources=["tic"])
@@ -455,7 +455,7 @@ stage("s40_who", "a5_who", {
               TED(1000, 0.2, face="happy", y=900), RUTH(1400, 0.3, face="grin", y=900, hops=[C("Every tick", 0.5)])]},
     sources=["z1", "tic", "h41"])
 stage("s41_cbo", "a5_cbo", {
-    **W1("meterscale", meter=[[0, 1052], [C("climbs from"), 1052], [C("by twenty thirty-six"), 2146]], meterLabel="CBO PROJECTION (FEB 2026)", flagAt=0.1, flagText="PROJECTED"),
+    **W1("meterscale", meter=[[0, 1052]], meterLabel="FY2026 ACTUAL (MTS)", flagAt=0.1, flagText="RUNNING"),
     "cam": cam((0, 640, 360, 1.0), (C("In its February baseline"), 1200, 420, 0.8, 1.4), (C("That's a projection"), 1300, 480, 0.9, 1.2)), "drift": 4,
     "items": [chart([{"label": "FY1991 HIGH", "value": 3.2, "color": "#677287", "at": C("The previous high"), "display": "3.2%"},
                      {"label": "FY2026", "value": 3.3, "color": "#F2B63A", "at": C("climbs from"), "display": "3.3%"},

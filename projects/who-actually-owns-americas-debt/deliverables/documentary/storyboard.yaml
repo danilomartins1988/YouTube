@@ -2172,12 +2172,12 @@ scenes:
       - 120
       - 2280
     - kind: docs
-      x: 2150
-      y: 860
+      x: 2420
+      y: 900
       at:
         cue: One caveat
       text: TIC TABLE 5 · NOTES
-      scale: 0.7
+      scale: 0.6
       stamp: CUSTODY
       stampAt:
         cue: held in custody
@@ -4475,13 +4475,9 @@ scenes:
       meter:
       - - 0
         - 1052
-      - - cue: climbs from
-        - 1052
-      - - cue: by twenty thirty-six
-        - 2146
-      meterLabel: CBO PROJECTION (FEB 2026)
+      meterLabel: FY2026 ACTUAL (MTS)
       flagAt: 0.1
-      flagText: PROJECTED
+      flagText: RUNNING
     worldW: 2400
     cam:
     - at: 0
