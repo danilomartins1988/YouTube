@@ -57,7 +57,7 @@ Let me draw one hundred dollars at the register. About eighty-nine dollars goes 
 
 ## a1_fees - The thinnest margin
 
-Then there's the other line on the income statement. Membership fees. five point nine billion dollars in a single year. That's equal to about half of Costco's operating income of eleven point seven billion dollars. Fees have their own costs, so they aren't pure profit. But they arrive before you've bought a single thing.
+Then there's the other line on the income statement. Membership fees. five point nine billion dollars in a single year. That's equal to about half of Costco's operating income, the profit from running the business before interest and taxes, which was eleven point seven billion dollars. Fees have their own costs, so they aren't pure profit. But they arrive before you've bought a single thing.
 
 > `fees` [source_located] 10-K FY2026 income statement ($M): net sales 297,247; membership fees 5,907 (FY2025 5,323; FY2024 4,828); total revenue 303,154; operating income 11,685; net income 9,226. 'Membership fee revenue increased 11% to $5,907, driven by new member sign-ups, membership fee increases, and upgrades to Executive membership.' 10-K FY2017: membership fees $2,853M. 10-K: 'We account for membership fee revenue on a deferred basis, recognized ratably over the one-year membership period'; balance sheet Aug 30, 2026: deferred membership fees $3,006M. OUR CALCULATION: fees = 50.6% of operating income; FY2026 fees = 2.07x FY2017. (sources: tenk, tenk2017)  
 
@@ -184,7 +184,7 @@ Co-founder Jim Sinegal, who was chief executive until the start of twenty twelve
 
 ## a4_why - The dollar-fifty hot dog
 
-Why protect it? Because the food court isn't really a restaurant. Costco groups it with gas, pharmacy and optical as warehouse ancillary businesses, which, it says, encourage more frequent shopping. A cheap lunch is a reason to come in. The pharmacy, the optical counter and the tire shop do the same job. And every visit passes the pallets.
+Why protect it? Because the food court isn't really a restaurant. Costco's annual report groups it with gas, pharmacy and optical, as side businesses that, it says, encourage more frequent shopping. A cheap lunch is a reason to come in. The pharmacy, the optical counter and the tire shop do the same job. And every visit passes the pallets.
 
 > `gas` [source_located] 10-K FY2026: 'Warehouse Ancillary (includes gasoline, pharmacy, food court, optical, hearing aids, and tire installation)'; 'Warehouse ancillary operate primarily within, next to or near our warehouses, encouraging more frequent shopping.' 'We operated 774 gas stations at the end of 2026. Our gasoline business represented 11% of total net sales in 2026.' (sources: tenk)  
 
