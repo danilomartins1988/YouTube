@@ -912,14 +912,14 @@ scenes:
     - kind: toonwords
       text: WHERE DOES NEW DEBT COME FROM?
       x: 1200
-      y: 200
+      y: 40
       at: 0.2
       until:
         cue: An auction
       size: 56
     - kind: toon
       who: shopper
-      x: 870
+      x: 880
       at: 0.2
       v: 8
       color: '#2E4A66'
@@ -936,12 +936,12 @@ scenes:
       talk:
       - - cue: An auction
         - cue: by our count
-      y: 640
-      scale: 1.1
+      scale: 1.25
     - kind: gavel
-      x: 1050
-      y: 600
+      x: 1240
+      y: 585
       at: 0.2
+      scale: 0.8
       hits:
       - cue: An auction
         offset: 0.3
@@ -1037,7 +1037,7 @@ scenes:
         offset: 0.5
     - kind: toon
       who: shopper
-      x: 870
+      x: 880
       at: 0.2
       v: 8
       color: '#2E4A66'
@@ -1048,17 +1048,17 @@ scenes:
       glasses: false
       pose: point
       face: happy
-      y: 640
-      scale: 1.1
+      scale: 1.25
       faces:
       - - 0
         - happy
       - - cue: more than twice
         - grin
     - kind: gavel
-      x: 1050
-      y: 600
+      x: 1240
+      y: 585
       at: 0.2
+      scale: 0.8
       hits:
       - cue: Big dealer banks
         offset: 0.8
@@ -1342,7 +1342,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: grin
       scale: 1.15
@@ -1354,7 +1354,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1366,7 +1366,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: worry
       scale: 1.15
@@ -1378,7 +1378,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1390,7 +1390,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1402,7 +1402,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1511,7 +1511,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1523,7 +1523,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1535,7 +1535,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: worry
       scale: 1.15
@@ -1547,7 +1547,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1559,7 +1559,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1571,7 +1571,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1694,7 +1694,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1706,7 +1706,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1718,7 +1718,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1730,7 +1730,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1742,7 +1742,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -1754,7 +1754,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2032,7 +2032,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2044,7 +2044,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2056,7 +2056,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2068,7 +2068,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: smug
       scale: 1.15
@@ -2080,7 +2080,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: smug
       scale: 1.15
@@ -2092,7 +2092,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: smug
       scale: 1.15
@@ -2197,7 +2197,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2209,7 +2209,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2221,7 +2221,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2233,7 +2233,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2245,7 +2245,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -2257,7 +2257,7 @@ scenes:
       color: '#2E4A66'
       hat: ''
       scarf: '#F2B63A'
-      y: 720
+      y: 830
       pose: sit
       face: happy
       scale: 1.15
@@ -4042,7 +4042,7 @@ scenes:
       sub: MONTHLY TREASURY STATEMENT · BUDGET FUNCTIONS
     - kind: toon
       who: shopper
-      x: 2400
+      x: 2180
       at: 0.2
       v: 3
       glasses: true
@@ -4571,7 +4571,9 @@ scenes:
       x: 1200
       y: 380
       r: 200
-      at: 0.2
+      at:
+        cue: Foreign investors
+        offset: -0.4
       total: 100
       title: WHO HOLDS THE $40.6T (ROUGH, OUR CALC.)
       until:

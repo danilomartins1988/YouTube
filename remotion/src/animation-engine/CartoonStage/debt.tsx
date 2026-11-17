@@ -564,13 +564,13 @@ const feast: ItemFn = (a, {t, f}, i) => {
       <rect x={-8} y={-90} width={16} height={90} fill="#FFFDF4" stroke={OL} strokeWidth={3} /><ellipse cx={0} cy={-100} rx={8 + Math.sin(t * 11 + k)} ry={16} fill="#FFD54F" opacity={0.9} /></g>; })}
     {guests.map((g, k) => { const gat = g.at ?? at, u = E.outBack(win(t, gat, 0.5)); let v = g.value ?? 0;
       if (a.shrink && a.shrink.idx === k) v = lerp(v, a.shrink.to ?? v * 0.5, E.inOut(win(t, a.shrink.at ?? 0, 1.4)));
-      const n = Math.max(1, Math.round((v / vmax) * 9)), gx = g.x ?? x0 + 150 + k * 300;
+      const n = Math.max(1, Math.round((v / vmax) * 10)), gx = (g.x ?? x0 + 150 + k * 300) + (a.plateDX ?? 70);
       return <g key={k} transform={`translate(${gx} ${y - 66})`}>
         <ellipse cx={0} cy={0} rx={100} ry={22} fill="#F5F5F5" stroke={OL} strokeWidth={4} />
         <ellipse cx={0} cy={-2} rx={70} ry={14} fill="#E0E0E0" />
-        {u > 0 && Array.from({length: n}, (_, q) => <g key={q} transform={`translate(${(rnd(k * 5 + q) - 0.5) * 8} ${-10 - q * 18 * u})`}><rect x={-56} y={-14} width={112} height={18} rx={6} fill={q % 2 ? '#FFF3D1' : '#F2D9A0'} stroke={OL} strokeWidth={3} />
+        {u > 0 && Array.from({length: n}, (_, q) => <g key={q} transform={`translate(${(rnd(k * 5 + q) - 0.5) * 8} ${-10 - q * 11 * u})`}><rect x={-50} y={-12} width={100} height={14} rx={6} fill={q % 2 ? '#FFF3D1' : '#F2D9A0'} stroke={OL} strokeWidth={3} />
           <path d="M -40 -6 L 40 -6" stroke={GOLD} strokeWidth={3} /></g>)}
-        {u > 0 && <g transform={`translate(0 ${-26 - n * 18 * u}) scale(${u})`}><path d="M -6 0 L 0 -26 L 6 0" fill={GOLD} stroke={OL} strokeWidth={2} /></g>}
+        {u > 0 && <g transform={`translate(0 ${-24 - n * 11 * u}) scale(${u})`}><path d="M -6 0 L 0 -26 L 6 0" fill={GOLD} stroke={OL} strokeWidth={2} /></g>}
         <g transform={`translate(0 120) scale(${pop(t, gat - 0.2, 0.4)})`}><path d="M -110 -34 L 110 -34 L 96 34 L -96 34 Z" fill="#FFFDF4" stroke={OL} strokeWidth={4} />
           <T x={0} y={g.display ? -4 : 10} s={fit(g.label || '', 190, 28)} c={NAVY}>{g.label}</T>
           {g.display && <T x={0} y={24} s={fit(g.display, 190, 22)} c={g.color || RED}>{g.display}</T>}</g>

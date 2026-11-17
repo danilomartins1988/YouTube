@@ -57,7 +57,7 @@ def AUCT(x=None, at=0.0, **kw):
 
 def GUEST(v, x, **kw):
     kw.setdefault("scale", 1.15)
-    return toon("shopper", x, kw.pop("at", 0.1), v=v, color=NAVY, hat="", scarf="#F2B63A", y=720, pose="sit", **kw)
+    return toon("shopper", x, kw.pop("at", 0.1), v=v, color=NAVY, hat="", scarf="#F2B63A", y=830, pose="sit", **kw)
 
 
 def OWEN(x, at=0.0, **kw):
@@ -162,17 +162,17 @@ stage("s08_speed", "a1_speed", {
 stage("s09_auction", "a1_auction", {
     **W1("auctionhouse", bidsAt=C("An auction"), soldAt=C("by our count", -0.3), board={"title": "FISCAL YEAR 2026 · ALL AUCTIONS", "rows": [[C("the Treasury held"), "436 AUCTIONS"], [C("and sold"), "≈ $32.9T SOLD (OUR SUM)"], [C("Most of that"), "MOSTLY SHORT-TERM BILLS"]]}),
     "cam": cam((0, 1200, 560, 0.9), (C("An auction"), 1200, 620, 1.0, WHIP), (C("In fiscal year"), 1200, 380, 1.1, 1.6), (C("Most of that"), 1200, 520, 0.95, 1.4)), "drift": 4,
-    "items": [it("toonwords", text="WHERE DOES NEW DEBT COME FROM?", x=1200, y=200, at=0.2, until=C("An auction"), size=56),
-              AUCT(870, 0.2, pose="talk", face="grin", label="THE AUCTIONEER", labelUntil=C("In fiscal year"), talk=[[C("An auction"), C("by our count")]], y=640, scale=1.1),
-              it("gavel", x=1050, y=600, at=0.2, hits=[C("An auction", 0.3), C("by our count", -0.3)]),
+    "items": [it("toonwords", text="WHERE DOES NEW DEBT COME FROM?", x=1200, y=40, at=0.2, until=C("An auction"), size=56),
+              AUCT(880, 0.2, pose="talk", face="grin", label="THE AUCTIONEER", labelUntil=C("In fiscal year"), talk=[[C("An auction"), C("by our count")]], scale=1.25),
+              it("gavel", x=1240, y=585, at=0.2, scale=0.8, hits=[C("An auction", 0.3), C("by our count", -0.3)]),
               it("feeflow", **{"from": [1200, 900], "to": [2000, 300]}, at=C("paid off and sold again"), n=8, sym="↻", color="#FFE27A")]},
     sources=["auct"], sfx=[{"kind": "hit", "cue": "An auction", "gain": 0.3}])
 stage("s10_bidders", "a1_bidders", {
     **W1("auctionhouse", bidsAt=C("bids came in"), soldAt=C("Big dealer banks", 0.8), soldText="WON!", board={"title": "10-YEAR NOTE · AUG 12, 2026", "rows": [[C("the Treasury auctioned"), "OFFERED: $42BN"], [C("more than twice"), "BIDS: 2.53x (BID-TO-COVER)"], [C("indirect bidders"), "INDIRECT ≈ 77% (OUR CALC.)"], [C("Direct bidders"), "DIRECT ≈ 15% · DEALERS ≈ 9%"]]}),
     "cam": cam((0, 1200, 380, 1.1), (C("bids came in"), 1200, 650, 0.95, 1.4), (C("indirect bidders"), 1200, 380, 1.1, 1.4), (C("That group"), 900, 700, 1.15, 1.2), (C("Big dealer banks"), 1200, 520, 0.95, 1.2)), "drift": 4,
     "items": [sign("INDIRECT: BIDS VIA A DEALER (INCL. FOREIGN CENTRAL BANKS)", 800, 860, C("That group"), color="#BBDEFB", size=26, until=C("Big dealer banks", 0.5)),
-              AUCT(870, 0.2, pose="point", face="happy", y=640, scale=1.1, faces=[[0, "happy"], [C("more than twice"), "grin"]]),
-              it("gavel", x=1050, y=600, at=0.2, hits=[C("Big dealer banks", 0.8)])]},
+              AUCT(880, 0.2, pose="point", face="happy", scale=1.25, faces=[[0, "happy"], [C("more than twice"), "grin"]]),
+              it("gavel", x=1240, y=585, at=0.2, scale=0.8, hits=[C("Big dealer banks", 0.8)])]},
     sources=["auct"])
 stage("s11_bills", "a1_bills", {
     **W1("auctionhouse", board={"title": "MARKETABLE DEBT HELD BY THE PUBLIC · OCT 31", "rows": [[C("Treasury bills"), "BILLS: $7.38T OF $32.13T"], [C("made up"), "≈ 23% (OUR CALC.)"], [C("Short paper"), "SHORT PAPER = QUICK REFI"]]}, bidsAt=C("Short paper")),
@@ -416,7 +416,7 @@ stage("s37_defense", "a5_defense", {
     "cam": cam((0, 1500, 380, 0.95), (C("Interest outweighed it"), 1700, 420, 1.05, WHIP), (C("In fiscal twenty twenty-five"), 1300, 440, 0.85, 1.4)), "drift": 4,
     "items": [it("toonwords", text="INTEREST > DEFENSE", x=1700, y=-60, at=C("Interest outweighed it", 0.3), size=70, color="#D93A49"),
               sign("FY2025: INTEREST $970BN · DEFENSE $917BN", 1300, 980, C("In fiscal twenty twenty-five"), color="#FFF59D", size=30, sub="MONTHLY TREASURY STATEMENT · BUDGET FUNCTIONS"),
-              TED(2400, 0.2, face="worry", faces=[[0, "worry"], [C("Interest outweighed it"), "shock"]], takes=[C("Interest outweighed it")])]},
+              TED(2180, 0.2, face="worry", faces=[[0, "worry"], [C("Interest outweighed it"), "shock"]], takes=[C("Interest outweighed it")])]},
     sources=["mts"], sfx=[{"kind": "hit", "cue": "Interest outweighed it", "gain": 0.35}])
 stage("s38_why", "a5_why", {
     **W1("meterscale", meter=[[0, 1052]], meterLabel="NET INTEREST · FY2026", flagAt=0.1, left={"label": "DEFENSE", "sub": "$965BN", "at": 0}, right={"label": "NET INTEREST", "sub": "$1,052BN", "at": 0}, tipAt=0, tip=0.32),
@@ -467,7 +467,7 @@ stage("s41_cbo", "a5_cbo", {
 stage("s42_payoff", "payoff", {
     **W1("mainstreet", shops=SHOPS, pops=[0.1] * 7),
     "cam": cam((0, 1200, 420, 0.75), (C("The biggest lender"), 1200, 480, 0.8, 1.6), (C("So every dollar"), 1200, 520, 0.85, 1.4)), "drift": 3,
-    "items": [it("pie", x=1200, y=380, r=200, at=0.2, total=100, title="WHO HOLDS THE $40.6T (ROUGH, OUR CALC.)", until=C("The biggest lender"),
+    "items": [it("pie", x=1200, y=380, r=200, at=C("Foreign investors", -0.4), total=100, title="WHO HOLDS THE $40.6T (ROUGH, OUR CALC.)", until=C("The biggest lender"),
                  slices=[{"v": 23, "color": "#2E6BD1", "label": "FOREIGN", "at": C("Foreign investors")}, {"v": 11, "color": "#7E57C2", "label": "FED", "at": C("The Fed holds")},
                          {"v": 19, "color": "#F2B63A", "label": "GOV'T", "at": C("The government owes")}, {"v": 47, "color": "#2E9E6B", "label": "MOSTLY U.S.", "at": C("And most of the rest")}]),
               it("toonwords", text="THE BIGGEST LENDER TO THE U.S. IS THE U.S.", x=1200, y=250, at=C("The biggest lender"), size=52, until=C("So every dollar", 0.3)),
