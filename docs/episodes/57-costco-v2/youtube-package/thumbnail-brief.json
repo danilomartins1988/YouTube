@@ -1,0 +1,503 @@
+{
+  "title": "How Costco Makes Billions Selling Almost Nothing",
+  "docs_dir": "docs/episodes/57-costco-v2",
+  "video": "output/costco_v2_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "F",
+  "analysis": {
+    "mystery": "How does a store that sells almost at cost make billions?",
+    "surprising_fact": "Costco keeps about $2 of every $100 of goods it sells (our calculation, FY2026 10-K), yet collected $5.9bn of membership fees, equal to about half of operating income; the $1.50 hot dog is protected",
+    "subject": "a $1.50 hot dog combo in front of a generic member card",
+    "tone": "sitcom",
+    "metaphor": "the store is the bait, the card is the business, the hot dog is the reminder",
+    "public_figure": {
+      "who": "vachris",
+      "name": "Ron Vachris"
+    }
+  },
+  "slug": "how-costco-makes-billions-selling-almost-nothing",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (CEO Ron Vachris, confident, next to the $1.50 hot dog)",
+      "archetype": "face",
+      "text": [
+        "COSTCO'S",
+        "REAL PRODUCT"
+      ],
+      "claim_basis": "a question (answer in the film: the membership); $1.50 hot-dog price: CNN May 2024 quoting the CFO (FACT_CHECK.md)",
+      "scene": {
+        "bg": [
+          "#FF5A4E",
+          "#4A0A10"
+        ],
+        "rays": "#FFD23F",
+        "bust": {
+          "who": "vachris",
+          "expr": "happy",
+          "x": 470,
+          "s": 0.92
+        },
+        "prop": {
+          "kind": "hotdog",
+          "x": 1380,
+          "y": 780,
+          "s": 0.56,
+          "rot": -8
+        }
+      },
+      "layout": [
+        {
+          "text": "COSTCO'S",
+          "x": 1367.8,
+          "y": 217.6,
+          "size": 184.5,
+          "width": 944.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "REAL PRODUCT",
+          "x": 1367.8,
+          "y": 386.9,
+          "size": 113.9,
+          "width": 874.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.71 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(896, 74, 1840, 229), (931, 298, 1805, 394)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": false,
+            "detail": "0.178",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "vachris",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 57",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-the-world-still-depends-on-chinese-factories (distance 0.59)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (answer in the film: the membership); $1.50 hot-dog price: CNN May 2024 quoting the CFO (FACT_CHECK.md)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.582,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-the-world-still-depends-on-chinese-factories"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "giant hot dog + member card (bignum, standard)",
+      "archetype": "bignum",
+      "text": [
+        "COSTCO'S",
+        "$1.50 SECRET"
+      ],
+      "claim_basis": "hotdog: $1.50 hot dog + soda, \"safe\" (CFO, May 2024, via CNN); the secret = membership fees ($5.9bn FY2026, 10-K)",
+      "scene": {
+        "palette": {
+          "sky0": "#160606",
+          "sky1": "#4A1010",
+          "haze": "#FFB74D",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "hotdog",
+          "x": 1540,
+          "y": 620,
+          "s": 0.66,
+          "card": true,
+          "rot": -6
+        },
+        "support": [],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE0B2"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "COSTCO'S",
+          "x": 90,
+          "y": 549.1,
+          "size": 230.5,
+          "width": 1180,
+          "anchor": "start",
+          "color": "#FFD23F"
+        },
+        {
+          "text": "$1.50 SECRET",
+          "x": 96,
+          "y": 687.1,
+          "size": 120,
+          "width": 921.6,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.56 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 369, 1270, 563), (96, 594, 1018, 694)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.099",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 54",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": false,
+            "detail": "nearest why-the-post-office-keeps-losing-billions (distance 0.17)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "hotdog: $1.50 hot dog + soda, \"safe\" (CFO, May 2024, via CNN); the secret = membership fees ($5.9bn FY2026, 10-K)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.58,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-the-post-office-keeps-losing-billions"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "before/after (split, standard)",
+      "archetype": "split",
+      "text": [
+        "COSTCO",
+        "SELLS ACCESS"
+      ],
+      "claim_basis": "sales: \u2248 $2 left per $100 of goods (our calculation, 10-K FY2026); fees: $5.9bn, \u2248 half of operating income (10-K; our calculation)",
+      "scene": {
+        "palette": {
+          "sky0": "#06121F",
+          "sky1": "#12304A",
+          "haze": "#80D8FF",
+          "key": "#E1F5FE",
+          "accent": "#FF5A4E",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "hotdog",
+          "x": 500,
+          "y": 650,
+          "s": 0.5,
+          "rot": -6
+        },
+        "after": {
+          "kind": "ccard",
+          "x": 1440,
+          "y": 620,
+          "s": 0.62,
+          "rot": 10,
+          "c1": "#1565C0",
+          "c2": "#0A1F3A",
+          "coins": true
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#E1F5FE"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "COSTCO",
+          "x": 480.0,
+          "y": 253.0,
+          "size": 150,
+          "width": 576.0,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "SELLS ACCESS",
+          "x": 1440.0,
+          "y": 211.1,
+          "size": 99.0,
+          "width": 760,
+          "anchor": "middle",
+          "color": "#FF5A4E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.62 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(192, 136, 768, 262), (1060, 134, 1820, 217)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "8.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.076",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 46",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-banks-still-make-billions-from-overdrafts (distance 0.38)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "sales: \u2248 $2 left per $100 of goods (our calculation, 10-K FY2026); fees: $5.9bn, \u2248 half of operating income (10-K; our calculation)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.602,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-banks-still-make-billions-from-overdrafts"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-17T10:26:04Z",
+  "master": "output/how-costco-makes-billions-selling-almost-nothing/thumbnails/master_F.png"
+}

@@ -1,0 +1,178 @@
+{
+  "id": "F",
+  "angle": "face (original character MEL, a surprised shopper, pointing at a gold tag)",
+  "archetype": "face",
+  "text": [
+    "MADE IN CHINA.",
+    "STILL."
+  ],
+  "claim_basis": "27%: China 27.4% of world manufacturing value added, 2025 (World Bank WDI NV.IND.MANF.CD; our calculation; FACT_CHECK.md)",
+  "scene": {
+    "bg": [
+      "#FF9F1C",
+      "#7A2E0E"
+    ],
+    "rays": "#FFE27A",
+    "bust": {
+      "x": 470,
+      "s": 0.92,
+      "expr": "shock",
+      "point": [
+        1330,
+        790
+      ],
+      "who": {
+        "name": "Mel (original character)",
+        "hair": "bun",
+        "hairColor": "#3E2723",
+        "hairShade": "#2A1A16",
+        "brows": "#2A1A16",
+        "skin": "#B97A4B",
+        "iris": "#4E342E",
+        "clothes": "tee",
+        "shirt": "#FF8A65",
+        "jacket": "#FF8A65",
+        "age": 0.15
+      }
+    },
+    "prop": {
+      "kind": "tag",
+      "text": "27%",
+      "x": 1440,
+      "y": 790,
+      "s": 0.58,
+      "rot": -8
+    }
+  },
+  "layout": [
+    {
+      "text": "MADE IN CHINA.",
+      "x": 1367.8,
+      "y": 154.3,
+      "size": 105.4,
+      "width": 944.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3
+    },
+    {
+      "text": "STILL.",
+      "x": 1367.8,
+      "y": 373.6,
+      "size": 200,
+      "width": 768.0,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3,
+      "box": "#FF1E1E"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.65 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(896, 72, 1840, 161), (984, 218, 1752, 386)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "8.8px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 3.6:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.159",
+        "critical": false
+      },
+      {
+        "check": "text clear of the face",
+        "pass": true,
+        "detail": "head box (240, 170, 700, 658)",
+        "critical": true
+      },
+      {
+        "check": "named figure is a preset or traits object (likeness rules)",
+        "pass": true,
+        "detail": "{'name': 'Mel (original character)', 'hair': 'bun', 'hairColor': '#3E2723', 'hairShade': '#2A1A16', 'brows': '#2A1A16', 'skin': '#B97A4B', 'iris': '#4E342E', 'clothes': 'tee', 'shirt': '#FF8A65', 'jacket': '#FF8A65', 'age': 0.15}",
+        "critical": true
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 71",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest how-costco-makes-billions-selling-almost-nothing (distance 0.59)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "27%: China 27.4% of world manufacturing value added, 2025 (World Bank WDI NV.IND.MANF.CD; our calculation; FACT_CHECK.md)",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.564,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "how-costco-makes-billions-selling-almost-nothing"
+  },
+  "backend": "svg-composite (Remotion FaceThumb + CartoonStage bust, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-17T10:25:35Z"
+}

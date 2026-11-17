@@ -110,7 +110,7 @@ const worker = (x: number, y: number, s: number, k: number, t: number, walk = 0)
 export const FACTORY_SETS: Record<string, SetFn> = {
   /** the EVERYTHING FACTORY floor */
   megafloor: (t, z, f) => {
-    const w = z.x1 - z.x0, lines: string[] = z.lines || ['TOASTERS', 'CHARGERS', 'SNEAKERS', 'BATTERIES', 'SOLAR PANELS'], sp = z.speed ?? 140, hi = z.hi;
+    const w = z.x1 - z.x0, lines: string[] = z.lines || ['TOASTERS', 'CHARGERS', 'SNEAKERS', 'BATTERIES', 'SOLAR PANELS'], sp = z.speed ?? 140, hi0 = z.hiAt ? pick(z.hiAt, t, z.hi) : z.hi, hi = hi0 === null ? undefined : hi0;
     const board: string = z.board || 'TODAY: EVERYTHING';
     return <g>
       <rect x={z.x0} y={-2500} width={w} height={2500 + f} fill="#E8EEF2" />
@@ -293,7 +293,7 @@ export const FACTORY_SETS: Record<string, SetFn> = {
 
   /** SOLAR PANEL line: five stages, parts morph along the belt */
   solarline: (t, z, f) => {
-    const w = z.x1 - z.x0, st: string[] = z.stagesTxt || ['POLYSILICON', 'INGOT', 'WAFER', 'CELL', 'MODULE'], x0 = z.lineX ?? 0, gap = z.gap ?? 480, sp = z.speed ?? 110, hi = z.hi;
+    const w = z.x1 - z.x0, st: string[] = z.stagesTxt || ['POLYSILICON', 'INGOT', 'WAFER', 'CELL', 'MODULE'], x0 = z.lineX ?? 0, gap = z.gap ?? 480, sp = z.speed ?? 110, hi0 = z.hiAt ? pick(z.hiAt, t, z.hi) : z.hi, hi = hi0 === null ? undefined : hi0;
     const glyph = (k: number) => {
       switch (k) {
         case 0: return <g>{[0, 1, 2, 3].map((q) => <path key={q} d={`M ${-26 + q * 16} 10 L ${-20 + q * 16} -14 L ${-8 + q * 16} -18 L ${-2 + q * 16} 8 Z`} fill="#B0BEC5" stroke={OL} strokeWidth={2.5} />)}</g>;
@@ -345,9 +345,9 @@ export const FACTORY_SETS: Record<string, SetFn> = {
       const drop = E.outBack(win(t, at, 0.5)), y = yTop - h;
       const gone = fall > 0;
       rowNodes.push(<g key={'rw' + k} transform={`translate(${wx + (gone ? fall * 380 : 0)} ${y - (1 - drop) * 400 + (gone ? fall * fall * 600 : 0)}) rotate(${gone ? fall * 50 : jig(t, at + 0.5, 20, 7) * 2})`} opacity={gone ? 1 - fall : 1}>
-        <rect x={-170} y={0} width={340} height={h} rx={6} fill={r.color || '#C76B4A'} stroke={OL} strokeWidth={4} />
-        {Array.from({length: 4}, (_, q) => <path key={q} d={`M ${-170 + q * 85 + (k % 2) * 42} 0 L ${-170 + q * 85 + (k % 2) * 42} ${h}`} stroke={OL} strokeWidth={2} opacity={0.45} />)}
-        <T x={0} y={h / 2 + 10} s={fit(String(r.label || ''), 320, Math.min(30, h * 0.5))} c="#FFFFFF" st={OL} sw={4}>{r.label}</T>
+        <rect x={-260} y={0} width={520} height={h} rx={6} fill={r.color || '#C76B4A'} stroke={OL} strokeWidth={4} />
+        {Array.from({length: 6}, (_, q) => <path key={q} d={`M ${-260 + q * 87 + (k % 2) * 43} 0 L ${-260 + q * 87 + (k % 2) * 43} ${h}`} stroke={OL} strokeWidth={2} opacity={0.35} />)}
+        <T x={0} y={h / 2 + 11} s={fit(String(r.label || ''), 500, Math.min(34, h * 0.62))} c="#FFFFFF" st={OL} sw={5}>{r.label}</T>
       </g>);
       if (!gone) yTop = y;
     });
@@ -371,11 +371,11 @@ export const FACTORY_SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={18} fill="#8BBF6E" stroke={OL} strokeWidth={4} />
       {/* conveyor of parcels from factory to store through the wall's gate */}
       <rect x={wx - 520} y={f - 34} width={1040} height={20} fill="#455A64" stroke={OL} strokeWidth={3} />
-      {Array.from({length: 6}, (_, k) => { const u = ((t * 0.16 + k / 6) % 1), px = wx - 520 + u * 1040, near = Math.abs(px - wx) < 190, hop = near ? Math.sin(((px - wx + 190) / 380) * Math.PI) * Math.min(300, (f - yTop) + 40) : 0;
+      {Array.from({length: 6}, (_, k) => { const u = ((t * 0.16 + k / 6) % 1), px = wx - 520 + u * 1040, near = Math.abs(px - wx) < 280, hop = near ? Math.sin(((px - wx + 280) / 560) * Math.PI) * Math.min(300, (f - yTop) + 40) : 0;
         return <g key={'pc' + k} transform={`translate(${px} ${f - 60 - hop})`}>{cbox(64, 46, 'GOODS')}</g>; })}
       {rowNodes}
       {/* the toll gate kiosk at the wall foot */}
-      <g transform={`translate(${wx - 230} ${f})`}><rect x={-46} y={-130} width={92} height={130} rx={8} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><rect x={-36} y={-112} width={72} height={40} rx={4} fill="#9FD3F0" stroke={OL} strokeWidth={3} /><T x={0} y={-30} s={18}>TARIFF</T></g>
+      <g transform={`translate(${wx - 330} ${f})`}><rect x={-46} y={-130} width={92} height={130} rx={8} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><rect x={-36} y={-112} width={72} height={40} rx={4} fill="#9FD3F0" stroke={OL} strokeWidth={3} /><T x={0} y={-30} s={18}>TARIFF</T></g>
     </g>;
   },
 

@@ -1,0 +1,48 @@
+# Thumbnail creative brief (Ep 60). F = face (original shopper MEL, surprised, pointing at a gold tag; no public figure is central,
+# no national-stereotype caricature), A = standard cinematic (a pile of parcels). Words name the subject; ≤ 4 words.
+title: "Why the World Still Depends on Chinese Factories"
+docs_dir: docs/episodes/60-china-factories
+video: output/chinafactories_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: After years of tariffs, why does so much still say "Made in China"?
+  surprising_fact: China made about 27% of the world's manufacturing value added in 2025 (World Bank WDI, our calc.), while U.S. imports from China fell 29% in 2025 (WTO/Census)
+  subject: a gold price tag reading 27% beside a surprised shopper
+  tone: sitcom
+  metaphor: the label you keep finding on everything
+  public_figure: null
+concepts:
+- id: F
+  angle: 'face (original character MEL, a surprised shopper, pointing at a gold tag)'
+  archetype: face
+  text:
+  - MADE IN CHINA.
+  - STILL.
+  claim_basis: '27%: China 27.4% of world manufacturing value added, 2025 (World Bank WDI NV.IND.MANF.CD; our calculation; FACT_CHECK.md)'
+  scene:
+    bg: ['#FF9F1C', '#7A2E0E']
+    rays: '#FFE27A'
+    bust:
+      x: 470
+      s: 0.92
+      expr: shock
+      point: [1330, 790]
+      who: {name: 'Mel (original character)', hair: bun, hairColor: '#3E2723', hairShade: '#2A1A16', brows: '#2A1A16', skin: '#B97A4B', iris: '#4E342E', clothes: tee, shirt: '#FF8A65', jacket: '#FF8A65', age: 0.15}
+    prop: {kind: tag, text: '27%', x: 1440, y: 790, s: 0.58, rot: -8}
+- id: A
+  angle: a mountain of parcels (standard cinematic)
+  archetype: bignum
+  text:
+  - MADE IN CHINA.
+  - STILL.
+  claim_basis: 'a statement backed by: China 27.4% of world manufacturing value added, 2025 (World Bank WDI; our calculation)'
+  scene:
+    palette: {sky0: '#0B2A33', sky1: '#0F5E6E', haze: '#FFD23F', key: '#FFF6D8', accent: '#FF9F1C', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: parcels, x: 1560, y: 640, s: 0.62}
+    support: []
+    particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none

@@ -1,0 +1,351 @@
+{
+  "title": "Why the World Still Depends on Chinese Factories",
+  "docs_dir": "docs/episodes/60-china-factories",
+  "video": "output/chinafactories_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "F",
+  "analysis": {
+    "mystery": "After years of tariffs, why does so much still say \"Made in China\"?",
+    "surprising_fact": "China made about 27% of the world's manufacturing value added in 2025 (World Bank WDI, our calc.), while U.S. imports from China fell 29% in 2025 (WTO/Census)",
+    "subject": "a gold price tag reading 27% beside a surprised shopper",
+    "tone": "sitcom",
+    "metaphor": "the label you keep finding on everything",
+    "public_figure": null
+  },
+  "slug": "why-the-world-still-depends-on-chinese-factories",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (original character MEL, a surprised shopper, pointing at a gold tag)",
+      "archetype": "face",
+      "text": [
+        "MADE IN CHINA.",
+        "STILL."
+      ],
+      "claim_basis": "27%: China 27.4% of world manufacturing value added, 2025 (World Bank WDI NV.IND.MANF.CD; our calculation; FACT_CHECK.md)",
+      "scene": {
+        "bg": [
+          "#FF9F1C",
+          "#7A2E0E"
+        ],
+        "rays": "#FFE27A",
+        "bust": {
+          "x": 470,
+          "s": 0.92,
+          "expr": "shock",
+          "point": [
+            1330,
+            790
+          ],
+          "who": {
+            "name": "Mel (original character)",
+            "hair": "bun",
+            "hairColor": "#3E2723",
+            "hairShade": "#2A1A16",
+            "brows": "#2A1A16",
+            "skin": "#B97A4B",
+            "iris": "#4E342E",
+            "clothes": "tee",
+            "shirt": "#FF8A65",
+            "jacket": "#FF8A65",
+            "age": 0.15
+          }
+        },
+        "prop": {
+          "kind": "tag",
+          "text": "27%",
+          "x": 1440,
+          "y": 790,
+          "s": 0.58,
+          "rot": -8
+        }
+      },
+      "layout": [
+        {
+          "text": "MADE IN CHINA.",
+          "x": 1367.8,
+          "y": 154.3,
+          "size": 105.4,
+          "width": 944.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "STILL.",
+          "x": 1367.8,
+          "y": 373.6,
+          "size": 200,
+          "width": 768.0,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.65 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(896, 72, 1840, 161), (984, 218, 1752, 386)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "8.8px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.159",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "{'name': 'Mel (original character)', 'hair': 'bun', 'hairColor': '#3E2723', 'hairShade': '#2A1A16', 'brows': '#2A1A16', 'skin': '#B97A4B', 'iris': '#4E342E', 'clothes': 'tee', 'shirt': '#FF8A65', 'jacket': '#FF8A65', 'age': 0.15}",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 71",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-costco-makes-billions-selling-almost-nothing (distance 0.59)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "27%: China 27.4% of world manufacturing value added, 2025 (World Bank WDI NV.IND.MANF.CD; our calculation; FACT_CHECK.md)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.564,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-costco-makes-billions-selling-almost-nothing"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "a mountain of parcels (standard cinematic)",
+      "archetype": "bignum",
+      "text": [
+        "MADE IN CHINA.",
+        "STILL."
+      ],
+      "claim_basis": "a statement backed by: China 27.4% of world manufacturing value added, 2025 (World Bank WDI; our calculation)",
+      "scene": {
+        "palette": {
+          "sky0": "#0B2A33",
+          "sky1": "#0F5E6E",
+          "haze": "#FFD23F",
+          "key": "#FFF6D8",
+          "accent": "#FF9F1C",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "parcels",
+          "x": 1430,
+          "y": 600,
+          "s": 0.6
+        },
+        "support": [],
+        "particles": {
+          "n": 50,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "MADE IN CHINA.",
+          "x": 90,
+          "y": 519.5,
+          "size": 131.7,
+          "width": 1180.0,
+          "anchor": "start",
+          "color": "#FF9F1C"
+        },
+        {
+          "text": "STILL.",
+          "x": 96,
+          "y": 657.5,
+          "size": 120,
+          "width": 460.8,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 417, 1270, 527), (96, 564, 557, 665)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.074",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 28",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-three-banks-nearly-destroyed-an-entire-country (distance 0.66)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a statement backed by: China 27.4% of world manufacturing value added, 2025 (World Bank WDI; our calculation)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.549,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-three-banks-nearly-destroyed-an-entire-country"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-17T10:25:35Z",
+  "master": "output/why-the-world-still-depends-on-chinese-factories/thumbnails/master_F.png"
+}
