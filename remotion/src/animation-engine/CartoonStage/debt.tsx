@@ -36,6 +36,8 @@ const kf = (v: KF | undefined, t: number, d = 0): number => {
 const pick = <V,>(tl: any, t: number, d: V): V => { let v = d; if (Array.isArray(tl)) for (const [pt, pv] of tl) if (t >= Number(pt)) v = pv; return v; };
 const jig = (t: number, at: number, k = 14, d = 5) => (t < at ? 0 : Math.exp(-d * (t - at)) * Math.sin(k * (t - at)));
 const pop = (t: number, at = 0, d = 0.45) => (t < at ? 0 : E.outBack(win(t, at, d)));
+/** a position param: > 1 = absolute world x; 0..1 = fraction of the zone width */
+const PX = (z: Z, v: any, def: number) => (v === undefined ? def : Number(v) > 1 ? Number(v) : z.x0 + (z.x1 - z.x0) * Number(v));
 const fit = (txt: string, w: number, s: number) => Math.min(s, (w / Math.max(1, txt.length)) / 0.62);
 const T: React.FC<{x: number; y: number; s: number; c?: string; w?: number; a?: 'middle' | 'start' | 'end'; children: React.ReactNode; o?: number; ls?: number; st?: string; sw?: number}> =
   ({x, y, s, c = OL, w = 900, a = 'middle', children, o, ls, st, sw}) =>
@@ -88,7 +90,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
    *  stacks; an IOU printing press on the right feeding notes onto a conveyor; the DEBT ODOMETER on the back wall (odo:
    *  [[t, trillions]], decimals odoDec; label odoLabel). doorX/pressX are fractions of the zone width. */
   iouvault: (t, z, f) => {
-    const w = z.x1 - z.x0, dx = z.x0 + w * (z.doorX ?? 0.42), px = z.x0 + w * (z.pressX ?? 0.78);
+    const w = z.x1 - z.x0, dx = PX(z, z.doorX, 760), px = PX(z, z.pressX, 2050);
     const open = z.openAt !== undefined ? E.inOutBack(win(t, z.openAt, 1.1)) : (z.open ?? 1);
     const odo = kf(z.odo, t, 40.6), dec = z.odoDec ?? 1, str = '$' + odo.toFixed(dec) + 'T';
     return <g>
@@ -96,11 +98,11 @@ export const DEBT_SETS: Record<string, SetFn> = {
       {Array.from({length: Math.ceil(w / 240) + 1}, (_, k) => <g key={'pl' + k}><rect x={z.x0 + k * 240} y={-400} width={236} height={f + 400} fill={k % 2 ? '#AEBACB' : '#B5C1D1'} stroke="#8E9BB0" strokeWidth={3} />
         {Array.from({length: 9}, (_, r) => <circle key={r} cx={z.x0 + k * 240 + 14} cy={-360 + r * 140} r={6} fill="#8E9BB0" />)}</g>)}
       {/* skylights with god rays */}
-      {[0.18, 0.5, 0.82].map((p, k) => { const sx = z.x0 + w * p; return <g key={'sk' + k}>
+      {[200, 1200, 2200].map((p, k) => { const sx = p; return <g key={'sk' + k}>
         <path d={`M ${sx - 90} -60 L ${sx + 90} -60 L ${sx + 260} ${f} L ${sx - 260} ${f} Z`} fill="#FFF6D0" opacity={0.18 + 0.05 * Math.sin(t * 1.5 + k)} />
         <rect x={sx - 110} y={-90} width={220} height={40} rx={8} fill="#CFEFFF" stroke={OL} strokeWidth={5} /></g>; })}
       {/* odometer */}
-      <g transform={`translate(${z.x0 + w * (z.odoX ?? 0.5)} ${z.odoY ?? 150}) scale(${z.odoS ?? 1})`}>
+      <g transform={`translate(${PX(z, z.odoX, 1200)} ${z.odoY ?? 150}) scale(${z.odoS ?? 1})`}>
         <rect x={-420} y={-130} width={840} height={52} rx={12} fill={RED} stroke={OL} strokeWidth={5} />
         <T x={0} y={-92} s={30} c="#FFFFFF" ls={3}>{z.odoLabel || 'TOTAL PUBLIC DEBT'}</T>
         {odometer(str, t)}
@@ -151,7 +153,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
    *  (board: {title, rows: [[t, text]]}); three tiers of generic bidders (silhouette heads) whose paddles rise at bidsAt
    *  (colour-coded INDIRECT / DIRECT / DEALER); a SOLD! burst at soldAt. */
   auctionhouse: (t, z, f) => {
-    const w = z.x1 - z.x0, pod = z.x0 + w * (z.podX ?? 0.5), bids = z.bidsAt, sold = z.soldAt;
+    const w = z.x1 - z.x0, pod = PX(z, z.podX, 1200), bids = z.bidsAt, sold = z.soldAt;
     const rows: [number, string][] = (z.board?.rows || []).map((r: any) => [Number(r[0]), String(r[1])]);
     return <g>
       <rect x={z.x0} y={-2500} width={w} height={2500 + f} fill="#F3EBDA" />
@@ -185,7 +187,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={20} fill="#8B5A3C" stroke={OL} strokeWidth={4} />
       {[0, 1, 2].map((r) => <g key={'tier' + r}>{Array.from({length: Math.ceil(w / 150)}, (_, k) => {
         const bx = z.x0 + 60 + k * 150 + (r % 2) * 75; if (Math.abs(bx - pod) < 260 && r === 0) return null;
-        const by = f + 120 + r * 120, cls = (k + r) % 5 < 3 ? 0 : (k + r) % 5 === 3 ? 1 : 2;
+        const by = f + 30 + r * 105, cls = (k + r) % 5 < 3 ? 0 : (k + r) % 5 === 3 ? 1 : 2;
         const pc = [BLUE, GREEN, RED][cls], up = bids !== undefined ? E.outBack(win(t, bids + rnd(k * 7 + r) * 1.4, 0.35)) : 0;
         const wave = up > 0 ? Math.sin(t * 9 + k) * 8 : 0;
         return <g key={k} transform={`translate(${bx} ${by})`}>
@@ -204,14 +206,14 @@ export const DEBT_SETS: Record<string, SetFn> = {
   /** HOLDERS' DINING ROOM (day): wallpaper, three tall windows, a swinging chandelier, a sideboard with a stack of IOUs,
    *  a SEATING CHART easel (chart: text). The table is the `feast` item (so seated guests sit behind it). */
   dinnerparty: (t, z, f) => {
-    const w = z.x1 - z.x0, cx = z.x0 + w * (z.chX ?? 0.5);
+    const w = z.x1 - z.x0, cx = PX(z, z.chX, 1200);
     return <g>
       <rect x={z.x0} y={-2500} width={w} height={2500 + f} fill="#E8DCC4" />
       {Array.from({length: Math.ceil(w / 80)}, (_, k) => <rect key={'wp' + k} x={z.x0 + k * 80} y={-400} width={40} height={f + 400} fill="#DFD0B3" />)}
       <rect x={z.x0} y={f - 260} width={w} height={260} fill="#9C6B4E" stroke={OL} strokeWidth={5} />
       {Array.from({length: Math.ceil(w / 200)}, (_, k) => <rect key={'wc' + k} x={z.x0 + 20 + k * 200} y={f - 230} width={160} height={200} rx={8} fill="none" stroke="#7E5239" strokeWidth={4} />)}
-      {[0.16, 0.5, 0.84].map((p, k) => windowPane(z.x0 + w * p - 130, f - 820, 260, 460, t, k))}
-      {[0.16, 0.84].map((p, k) => <g key={'cur' + k}>{[-1, 1].map((sd) => <path key={sd} d={`M ${z.x0 + w * p + sd * 150} ${f - 840} Q ${z.x0 + w * p + sd * (170 + 8 * Math.sin(t + k))} ${f - 600} ${z.x0 + w * p + sd * 150} ${f - 340} L ${z.x0 + w * p + sd * 120} ${f - 340} Q ${z.x0 + w * p + sd * 140} ${f - 600} ${z.x0 + w * p + sd * 120} ${f - 840} Z`} fill={RED} stroke={OL} strokeWidth={4} />)}</g>)}
+      {[150, 1200, 2250].map((p, k) => windowPane(p - 130, f - 820, 260, 460, t, k))}
+      {[150 / w - z.x0 / w, 2250 / w - z.x0 / w].map((p, k) => <g key={'cur' + k}>{[-1, 1].map((sd) => <path key={sd} d={`M ${z.x0 + w * p + sd * 150} ${f - 840} Q ${z.x0 + w * p + sd * (170 + 8 * Math.sin(t + k))} ${f - 600} ${z.x0 + w * p + sd * 150} ${f - 340} L ${z.x0 + w * p + sd * 120} ${f - 340} Q ${z.x0 + w * p + sd * 140} ${f - 600} ${z.x0 + w * p + sd * 120} ${f - 840} Z`} fill={RED} stroke={OL} strokeWidth={4} />)}</g>)}
       {/* chandelier */}
       <g transform={`translate(${cx} -120) rotate(${Math.sin(t * 1.4) * 3})`}>
         <path d="M 0 -400 L 0 120" stroke={OL} strokeWidth={6} />
@@ -221,7 +223,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
           <ellipse cx={bx} cy={82 + Math.abs(bx) * -0.1 + (k === 2 ? 70 : 0)} rx={9} ry={14} fill="#FFD54F" opacity={0.7 + 0.3 * Math.sin(t * 9 + k)} /></g>)}
       </g>
       {/* seating chart easel */}
-      {z.chart && <g transform={`translate(${z.x0 + w * (z.easelX ?? 0.9)} ${f}) rotate(2)`}>
+      {z.chart && <g transform={`translate(${PX(z, z.easelX, 2350)} ${f}) rotate(2)`}>
         <path d="M -90 0 L -30 -420 M 90 0 L 30 -420 M 0 -420 L 0 0" stroke="#7E5239" strokeWidth={10} strokeLinecap="round" />
         <rect x={-150} y={-560} width={300} height={260} rx={8} fill="#FFFDF4" stroke={OL} strokeWidth={6} />
         <T x={0} y={-510} s={30} c={NAVY}>SEATING CHART</T>
@@ -239,7 +241,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
     const w = z.x1 - z.x0;
     const shops: [string, string][] = z.shops || [['MONEY MARKET FUND', '#4FB3F6'], ['HOUSEHOLDS', '#FFB74D'], ['MUTUAL FUND', '#9575CD'], ['BANK', '#7BD389'], ['CITY HALL', '#E0E0E0'], ['PENSION FUND', '#F06292'], ['INSURANCE CO.', '#4DB6AC']];
     const pops: number[] = z.pops || [];
-    const gap = z.gap ?? 420, start = z.x0 + (z.startX ?? 200);
+    const gap = z.gap ?? 420, start = PX(z, z.startX, 1200 - ((shops.length - 1) * gap) / 2);
     return <g>
       <rect x={z.x0} y={-2500} width={w} height={2500 + f} fill="#8EC9F2" />
       <rect x={z.x0} y={f - 900} width={w} height={500} fill="#B7DEF7" opacity={0.6} />
@@ -279,12 +281,12 @@ export const DEBT_SETS: Record<string, SetFn> = {
    *  are (crates pop in/out from the top as it changes); a big HOLDINGS gauge (gauge: [[t, trillions]], max gaugeMax);
    *  `billsAt`: small yellow BILL crates ride a floor conveyor; roll-up doors with daylight. */
   fedwarehouse: (t, z, f) => {
-    const w = z.x1 - z.x0, lvl = clamp(kf(z.level, t, 0.8)), bays = z.bays ?? 5, bw = 300, rowsN = 5, start = z.x0 + (z.shelfX ?? 160);
+    const w = z.x1 - z.x0, lvl = clamp(kf(z.level, t, 0.8)), bays = z.bays ?? 5, bw = 300, rowsN = 5, start = PX(z, z.shelfX, 1200 - (bays * (bw + 40)) / 2);
     const g = kf(z.gauge, t, 4.6), gmax = z.gaugeMax ?? 6;
     return <g>
       <rect x={z.x0} y={-2500} width={w} height={2500 + f} fill="#D5DCE5" />
       {Array.from({length: Math.ceil(w / 300)}, (_, k) => <path key={'tr' + k} d={`M ${z.x0 + k * 300} -300 L ${z.x0 + k * 300 + 150} -150 L ${z.x0 + k * 300 + 300} -300`} stroke="#AAB6C5" strokeWidth={10} fill="none" />)}
-      {[0.08, 0.92].map((p, k) => { const dx = z.x0 + w * p; return <g key={'dr' + k}><rect x={dx - 150} y={f - 420} width={300} height={420} fill="#BFE6FF" stroke={OL} strokeWidth={6} />
+      {[start - 300, start + bays * (bw + 40) + 260].map((dx0, k) => { const dx = dx0; return <g key={'dr' + k}><rect x={dx - 150} y={f - 420} width={300} height={420} fill="#BFE6FF" stroke={OL} strokeWidth={6} />
         <rect x={dx - 150} y={f - 420} width={300} height={140} fill="#9AA7B8" stroke={OL} strokeWidth={5} />{[0, 1, 2, 3].map((q) => <path key={q} d={`M ${dx - 150} ${f - 400 + q * 32} L ${dx + 150} ${f - 400 + q * 32}`} stroke={OL} strokeWidth={2} opacity={0.5} />)}</g>; })}
       {/* shelving bays */}
       {Array.from({length: bays}, (_, b) => { const bx = start + b * (bw + 40); return <g key={'bay' + b}>
@@ -300,7 +302,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
       <rect x={start - 20} y={f - 790} width={bays * (bw + 40)} height={64} rx={12} fill={NAVY} stroke={OL} strokeWidth={5} />
       <T x={start - 20 + (bays * (bw + 40)) / 2} y={f - 745} s={36} c="#FFE27A" ls={3}>{z.banner || 'FEDERAL RESERVE · BALANCE SHEET'}</T>
       {/* gauge */}
-      {z.gauge !== undefined && <g transform={`translate(${z.x0 + w * (z.gaugeX ?? 0.86)} ${z.gaugeY ?? 200})`}>
+      {z.gauge !== undefined && <g transform={`translate(${PX(z, z.gaugeX, start + bays * (bw + 40) + 240)} ${z.gaugeY ?? 200})`}>
         <circle r={170} fill="#FFFDF4" stroke={OL} strokeWidth={8} />
         {Array.from({length: 13}, (_, k) => { const an = Math.PI * (0.75 + k * 0.125); return <path key={k} d={`M ${Math.cos(an) * 140} ${Math.sin(an) * 140} L ${Math.cos(an) * 160} ${Math.sin(an) * 160}`} stroke={OL} strokeWidth={k % 2 ? 3 : 6} />; })}
         <path d={`M ${Math.cos(Math.PI * 0.75) * 120} ${Math.sin(Math.PI * 0.75) * 120} A 120 120 0 1 1 ${Math.cos(Math.PI * 2.25) * 120} ${Math.sin(Math.PI * 2.25) * 120}`} fill="none" stroke={GREEN} strokeWidth={14} opacity={0.4} />
@@ -324,15 +326,15 @@ export const DEBT_SETS: Record<string, SetFn> = {
    *  show IOU folders; `fill` [[t, 0..1]] = how full the open drawer is (folders vanish as it empties); a pneumatic tube
    *  from the cabinet to a "TREASURY" hatch with IOU capsules flying at tubeAt; a wall clock; a desk plant. */
   trustcabinet: (t, z, f) => {
-    const w = z.x1 - z.x0, cx = z.x0 + w * (z.cabX ?? 0.45), open = z.openAt !== undefined ? E.outBack(win(t, z.openAt, 0.7)) : (z.open ?? 0);
+    const w = z.x1 - z.x0, cx = PX(z, z.cabX, 1000), open = z.openAt !== undefined ? E.outBack(win(t, z.openAt, 0.7)) : (z.open ?? 0);
     const fill = clamp(kf(z.fill, t, 1)), nF = 14;
     return <g>
       <rect x={z.x0} y={-2500} width={w} height={2500 + f} fill="#DCE8E2" />
       {Array.from({length: Math.ceil(w / 120)}, (_, k) => <path key={'ws' + k} d={`M ${z.x0 + k * 120} -400 L ${z.x0 + k * 120} ${f}`} stroke="#CDDCD5" strokeWidth={10} />)}
-      {windowPane(z.x0 + w * 0.08, f - 760, 300, 420, t, 1)}
-      {windowPane(z.x0 + w * 0.82, f - 760, 300, 420, t, 2)}
+      {windowPane(cx - 900, f - 760, 300, 420, t, 1)}
+      {windowPane(cx + 640, f - 900, 260, 360, t, 2)}
       {/* wall clock */}
-      <g transform={`translate(${z.x0 + w * (z.clockX ?? 0.72)} ${f - 720})`}><circle r={70} fill="#FFFDF4" stroke={OL} strokeWidth={7} />
+      <g transform={`translate(${PX(z, z.clockX, cx + 470)} ${f - 720})`}><circle r={70} fill="#FFFDF4" stroke={OL} strokeWidth={7} />
         <path d={`M 0 0 L ${Math.cos(t * 2) * 50} ${Math.sin(t * 2) * 50}`} stroke={OL} strokeWidth={6} strokeLinecap="round" /><path d={`M 0 0 L ${Math.cos(t * 0.2) * 32} ${Math.sin(t * 0.2) * 32}`} stroke={RED} strokeWidth={8} strokeLinecap="round" /></g>
       {/* the cabinet */}
       <g transform={`translate(${cx} ${f})`}>
@@ -358,11 +360,11 @@ export const DEBT_SETS: Record<string, SetFn> = {
       </g>
       {/* pneumatic tube */}
       {z.tubeAt !== undefined && <g>
-        <path d={`M ${cx + 260} ${f - 700} Q ${cx + 600} ${f - 980} ${z.x0 + w * 0.9} ${f - 300}`} fill="none" stroke="#B0BEC5" strokeWidth={56} opacity={0.8} />
-        <path d={`M ${cx + 260} ${f - 700} Q ${cx + 600} ${f - 980} ${z.x0 + w * 0.9} ${f - 300}`} fill="none" stroke={OL} strokeWidth={6} strokeDasharray="1 0" opacity={0.25} />
-        <g transform={`translate(${z.x0 + w * 0.9} ${f - 300})`}><rect x={-110} y={-20} width={220} height={240} rx={14} fill={NAVY} stroke={OL} strokeWidth={6} /><T x={0} y={40} s={30} c="#FFE27A">TREASURY</T>
+        <path d={`M ${cx + 260} ${f - 700} Q ${cx + 600} ${f - 980} ${(cx + 1050)} ${f - 300}`} fill="none" stroke="#B0BEC5" strokeWidth={56} opacity={0.8} />
+        <path d={`M ${cx + 260} ${f - 700} Q ${cx + 600} ${f - 980} ${(cx + 1050)} ${f - 300}`} fill="none" stroke={OL} strokeWidth={6} strokeDasharray="1 0" opacity={0.25} />
+        <g transform={`translate(${(cx + 1050)} ${f - 300})`}><rect x={-110} y={-20} width={220} height={240} rx={14} fill={NAVY} stroke={OL} strokeWidth={6} /><T x={0} y={40} s={30} c="#FFE27A">TREASURY</T>
           <rect x={-60} y={80} width={120} height={60} rx={8} fill="#2B3E63" stroke={OL} strokeWidth={4} /></g>
-        {t >= z.tubeAt && Array.from({length: 4}, (_, k) => { const u = ((t - z.tubeAt) * 0.6 + k / 4) % 1, p0x = cx + 260, p0y = f - 700, c1x = cx + 600, c1y = f - 980, p2x = z.x0 + w * 0.9, p2y = f - 300;
+        {t >= z.tubeAt && Array.from({length: 4}, (_, k) => { const u = ((t - z.tubeAt) * 0.6 + k / 4) % 1, p0x = cx + 260, p0y = f - 700, c1x = cx + 600, c1y = f - 980, p2x = (cx + 1050), p2y = f - 300;
           const qx = (1 - u) * (1 - u) * p0x + 2 * (1 - u) * u * c1x + u * u * p2x, qy = (1 - u) * (1 - u) * p0y + 2 * (1 - u) * u * c1y + u * u * p2y;
           return <g key={k} transform={`translate(${qx} ${qy}) rotate(${u * 160 - 40})`}>{note(70, 38, 'IOU', PAPER, k)}</g>; })}
       </g>}
@@ -370,7 +372,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
       <rect x={z.x0} y={f} width={w} height={700} fill="#B9A587" />
       {Array.from({length: Math.ceil(w / 110)}, (_, k) => <path key={'fl' + k} d={`M ${z.x0 + k * 110} ${f} L ${z.x0 + k * 110} ${f + 700}`} stroke="#A8957A" strokeWidth={3} />)}
       <rect x={z.x0} y={f} width={w} height={16} fill="#8E7B60" stroke={OL} strokeWidth={4} />
-      <g transform={`translate(${z.x0 + w * 0.16} ${f})`}><rect x={-160} y={-200} width={320} height={30} rx={6} fill="#A56E4A" stroke={OL} strokeWidth={5} />
+      <g transform={`translate(${cx - 640} ${f})`}><rect x={-160} y={-200} width={320} height={30} rx={6} fill="#A56E4A" stroke={OL} strokeWidth={5} />
         {[-140, 120].map((lx) => <rect key={lx} x={lx} y={-170} width={20} height={170} fill="#8B5A3C" stroke={OL} strokeWidth={4} />)}
         <g transform="translate(110 -200)"><rect x={-26} y={-50} width={52} height={50} rx={6} fill={RED} stroke={OL} strokeWidth={4} />
           {[-1, 0, 1].map((q) => <ellipse key={q} cx={q * 16} cy={-80 + Math.abs(q) * 10} rx={12} ry={30} fill="#5DBB63" stroke={OL} strokeWidth={3} transform={`rotate(${q * 25 + Math.sin(t * 2 + q) * 4} ${q * 16} -50)`} />)}</g>
@@ -382,7 +384,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
    *  label meterLabel) with spinning wheels and a flag that pops at flagAt; right, a balance scale (scaleX) with two pans
    *  (left/right: {label, sub, at}) that tips toward the heavier pan at tipAt (tip: -1..1). */
   meterscale: (t, z, f) => {
-    const w = z.x1 - z.x0, mx = z.x0 + w * (z.meterX ?? 0.25), sx = z.x0 + w * (z.scaleX ?? 0.68);
+    const w = z.x1 - z.x0, mx = PX(z, z.meterX, 640), sx = PX(z, z.scaleX, 1700);
     const mv = kf(z.meter, t, 0), mtxt = '$' + Math.round(mv).toLocaleString('en-US') + (z.meterUnit ?? 'B');
     const tip = z.tipAt !== undefined ? (z.tip ?? 0.25) * E.outBack(win(t, z.tipAt, 1.0)) + jig(t, z.tipAt + 0.9, 10, 3) * 0.03 : 0;
     const L = z.left, R = z.right, ang = tip * 18, arm = 360;
@@ -483,7 +485,7 @@ export const DEBT_SETS: Record<string, SetFn> = {
         <g transform={`translate(210 ${slam - 10})`}><rect x={-110} y={-170} width={220} height={60} rx={10} fill={RED} stroke={OL} strokeWidth={6} />
           <rect x={-30} y={-300} width={60} height={140} rx={10} fill="#8B5A3C" stroke={OL} strokeWidth={6} /><ellipse cx={0} cy={-310} rx={70} ry={34} fill="#A56E4A" stroke={OL} strokeWidth={6} /></g>
       </g>
-      <g transform={`translate(960 ${790 - (1 - E.outBack(win(t, 0.8, 0.5))) * 500})`}><T x={6} y={10} s={fit(title, 1600, 92)} c={OL}>{title}</T><T x={0} y={0} s={fit(title, 1600, 92)} c="#FFFFFF" st={OL} sw={9}>{title}</T></g>
+      <g opacity={t < 0.8 ? 0 : 1} transform={`translate(960 ${790 - (1 - E.outBack(win(t, 0.8, 0.5))) * 500})`}><T x={6} y={10} s={fit(title, 1600, 92)} c={OL}>{title}</T><T x={0} y={0} s={fit(title, 1600, 92)} c="#FFFFFF" st={OL} sw={9}>{title}</T></g>
       {cap && t > 1.2 && <g transform="translate(960 900)"><rect x={-640} y={-40} width={1280} height={70} rx={35} fill={NAVY} opacity={0.85} />
         <T x={0} y={8} s={fit(cap, 1200, 36)} c="#FFE27A" w={800}>{cap.slice(0, Math.floor((t - 1.2) * 34))}</T></g>}
     </g>;
@@ -558,7 +560,7 @@ const feast: ItemFn = (a, {t, f}, i) => {
     <rect x={x0} y={y - 70} width={x1 - x0} height={170} rx={10} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
     <path d={`M ${x0} ${y - 70} L ${x1} ${y - 70}`} stroke="#E6E1D6" strokeWidth={14} />
     {Array.from({length: Math.ceil((x1 - x0) / 60)}, (_, k) => <path key={'sc' + k} d={`M ${x0 + k * 60 + 30} ${y + 100} q 15 14 30 0`} fill="none" stroke="#D9D2C2" strokeWidth={4} />)}
-    {[0.25, 0.5, 0.75].map((p, k) => { const cx = x0 + (x1 - x0) * p; return <g key={'cd' + k} transform={`translate(${cx} ${y - 70})`}>
+    {(a.candles || [0.25, 0.5, 0.75]).map((p: number, k: number) => { const cx = p > 1 ? p : x0 + (x1 - x0) * p; if (guests.some((g) => Math.abs((g.x ?? 0) - cx) < 110)) return null; return <g key={'cd' + k} transform={`translate(${cx} ${y - 70})`}>
       <rect x={-8} y={-90} width={16} height={90} fill="#FFFDF4" stroke={OL} strokeWidth={3} /><ellipse cx={0} cy={-100} rx={8 + Math.sin(t * 11 + k)} ry={16} fill="#FFD54F" opacity={0.9} /></g>; })}
     {guests.map((g, k) => { const gat = g.at ?? at, u = E.outBack(win(t, gat, 0.5)); let v = g.value ?? 0;
       if (a.shrink && a.shrink.idx === k) v = lerp(v, a.shrink.to ?? v * 0.5, E.inOut(win(t, a.shrink.at ?? 0, 1.4)));
