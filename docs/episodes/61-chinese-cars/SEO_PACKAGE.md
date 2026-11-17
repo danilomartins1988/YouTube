@@ -5,6 +5,13 @@ collected: 2026-11-17T17:35:40Z (YouTube autocomplete) and 2026-11-17T17:36:32Z 
 YouTube autocomplete = real suggestions, no volumes; Google Trends = not available (the demand assessment below is
 **qualitative**); no YouTube Analytics or vidIQ. Facts are those of `FACT_CHECK.md`; no new figures were added.
 
+> **Published while this package was being written.** At 2026-11-17T17:43Z the public YouTube search page and YouTube
+> oEmbed show this film live on the channel (https://www.youtube.com/watch?v=HZ5XDwsZZ3Q, "3 min ago", 12:09) with the
+> title **"Why Are Chinese Cars So Cheap "** — the part after the em dash ("— And So Advanced?") is missing and there is
+> a trailing space. **Suggestion only, owner decides:** restore the full title from `youtube-package/title.txt`
+> (*Why Are Chinese Cars So Cheap — And So Advanced?*), or at minimum remove the trailing space. The description and tag
+> changes below are likewise suggestions for the live video. Nothing was changed on YouTube.
+
 ## 1. Primary keyword
 **why are chinese cars so cheap** (exact YouTube autocomplete suggestion, US/en; it is also the film's central question).
 
