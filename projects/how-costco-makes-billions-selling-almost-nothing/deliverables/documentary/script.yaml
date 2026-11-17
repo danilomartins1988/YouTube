@@ -67,7 +67,8 @@ segments:
 - id: a1_fees
   chapter: The thinnest margin
   narration: Then there's the other line on the income statement. Membership fees. {{fees}} in a single year. That's equal to
-    about half of Costco's operating income of {{fees.op_spoken}}. Fees have their own costs, so they aren't pure profit. But
+    about half of Costco's operating income, the profit from running the business before interest and taxes, which was
+    {{fees.op_spoken}}. Fees have their own costs, so they aren't pure profit. But
     they arrive before you've bought a single thing.
   claims:
   - fees
@@ -198,8 +199,8 @@ segments:
   - people
 - id: a4_why
   chapter: The dollar-fifty hot dog
-  narration: Why protect it? Because the food court isn't really a restaurant. Costco groups it with gas, pharmacy and optical
-    as warehouse ancillary businesses, which, it says, encourage more frequent shopping. A cheap lunch is a reason to come in. The pharmacy, the optical counter and the tire
+  narration: Why protect it? Because the food court isn't really a restaurant. Costco's annual report groups it with gas, pharmacy
+    and optical, as side businesses that, it says, encourage more frequent shopping. A cheap lunch is a reason to come in. The pharmacy, the optical counter and the tire
     shop do the same job. And every visit passes the pallets.
   claims:
   - gas

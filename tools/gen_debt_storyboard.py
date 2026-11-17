@@ -91,17 +91,19 @@ stage("s01_open", "co_open", {
                    labelUntil=C("And every single day"), scale=1.1),
               TED(380, 0.4, face="worry", label="TED · TAXPAYER", labelUntil=C("It's so long"), faces=[[0, "worry"], [C("nobody has ever read"), "shock"]],
                   takes=[C("nobody has ever read")], hold="clipboard"),
-              it("ioustack", x=1500, at=C("And every single day"), rate=7, n=14, label="+ A FEW BILLION A DAY", scale=0.9),
-              sign("ILLUSTRATION · FIGURES FOLLOW", 1200, 1000, C("And every single day"), color="#FFF8E1", size=24)]},
+              it("ioustack", x=1500, at=C("And every single day"), rate=7, n=14, label="+ ≈ $6.8BN A DAY (AVG.)", scale=0.9),
+              sign("AVERAGE, NOV 2025–NOV 2026 · OUR CALC. FROM DEBT TO THE PENNY", 1200, 1000, C("on average"), color="#FFF8E1", size=24)]},
     sfx=[{"kind": "whoosh", "cue": "It's so long", "gain": 0.3}])
 stage("s02_hook", "co_hook", {
     **W1("iouvault", open=1, odo=[[0, 38.2], [C("Debt to the Penny"), 38.2], [C("stood at"), 40.6]], odoLabel="DEBT TO THE PENNY · NOV 13, 2026", doorX=760, pressX=2050),
-    "cam": cam((0, 1200, 260, 1.25), (C("So who actually holds"), 1000, 470, 0.95, 1.6), (C("Most people would guess"), 1250, 520, 1.1, 1.4), (C("Most people would be wrong"), 1250, 500, 1.35, WHIP)), "drift": 3,
+    "cam": cam((0, 1200, 260, 1.25), (C("So who actually holds"), 1000, 470, 0.95, 1.6), (C("Most people would guess"), 1250, 520, 1.1, 1.4), (C("Most people would be wrong"), 1250, 500, 1.35, WHIP), (C("China holds"), 1250, 400, 1.05, 0.8), (C("So who holds the rest"), 1200, 420, 0.95, 1.0)), "drift": 3,
     "items": [OWEN(1250, 0.2, amount="$40.6T", face="grin", faces=[[0, "grin"], [C("Most people would be wrong"), "smug"]], scale=1.1, hops=[C("stood at", 0.8)]),
-              TED(600, 0.3, face="shock", faces=[[0, "shock"], [C("Most people would guess"), "worry"], [C("Most people would be wrong"), "shock"]], takes=[C("stood at", 0.4)]),
+              TED(600, 0.3, face="shock", faces=[[0, "shock"], [C("Most people would guess"), "worry"], [C("Most people would be wrong"), "shock"], [C("So who holds the rest"), "worry"]], takes=[C("stood at", 0.4), C("China holds", 0.3)]),
               it("bubble", text="CHINA?", x=800, y=320, at=C("Most people would guess", 0.3), until=C("Most people would be wrong", -0.1), tail=[640, 520], size=44),
-              it("toonwords", text="WRONG!", x=1250, y=260, at=C("Most people would be wrong", 0.6), size=120, color="#D93A49")]},
-    sources=["dtp"], sfx=[{"kind": "hit", "cue": "Most people would be wrong", "gain": 0.3}])
+              it("toonwords", text="WRONG!", x=1250, y=260, at=C("Most people would be wrong", 0.6), until=C("China holds"), size=120, color="#D93A49"),
+              sign("CHINA ≈ 1.5¢ OF EVERY $1", 1250, 230, C("China holds"), color="#FFF59D", size=44, sub="TIC AUG 2026 VS TOTAL DEBT · OUR CALC."),
+              it("toonwords", text="WHO HOLDS THE REST?", x=1250, y=60, at=C("So who holds the rest"), size=80, color="#FFFFFF")]},
+    sources=["dtp", "tic"], sfx=[{"kind": "hit", "cue": "Most people would be wrong", "gain": 0.3}])
 stage("s03_promise", "co_promise", {
     **W1("iouvault", open=1, odo=[[0, 40.6]], doorX=760, pressX=2050),
     "cam": cam((0, 900, 520, 1.0), (C("the dinner guests"), 1200, 520, 1.0, 1.2), (C("Then we'll check"), 1450, 520, 1.05, 1.2)), "drift": 6,

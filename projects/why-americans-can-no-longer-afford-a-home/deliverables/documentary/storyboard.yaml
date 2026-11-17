@@ -14,8 +14,8 @@ scenes:
       crowd: 1.0
       queue: 8
       soldAt:
-        cue: in cash
-        offset: 0.2
+        cue: over the asking price
+        offset: 0.3
     worldW: 2400
     cam:
     - at: 0
@@ -27,25 +27,19 @@ scenes:
       x: 1250
       y: 430
       zoom: 1.25
-      dur: 1.6
+      dur: 1.4
     - at:
         cue: a lawn the size
       x: 1350
       y: 600
       zoom: 1.15
-      dur: 1.4
-    - at:
-        cue: Half the town
-      x: 1250
-      y: 420
-      zoom: 1.3
-      dur: 0.35
+      dur: 1.2
     - at:
         cue: Someone just offered
       x: 1100
-      y: 470
+      y: 450
       zoom: 0.95
-      dur: 1.2
+      dur: 0.35
     - at:
         cue: And Maya
       x: 700
@@ -67,7 +61,7 @@ scenes:
       at: 0.2
       until:
         cue: Three bedrooms
-        offset: 0.6
+        offset: 0.4
       size: 60
     - kind: sign
       text: 3 BED · 1 BATH
@@ -78,7 +72,7 @@ scenes:
       color: '#FFF8E1'
       size: 34
       until:
-        cue: Half the town
+        cue: Someone just offered
     - kind: bubble
       text: IT'S... COZY!
       x: 1650
@@ -86,7 +80,7 @@ scenes:
       at:
         cue: a lawn the size
       until:
-        cue: Half the town
+        cue: Someone just offered
       tail:
       - 1700
       - 600
@@ -108,7 +102,7 @@ scenes:
       face: grin
       label: DEEDEE · REALTOR
       labelUntil:
-        cue: Half the town
+        cue: Someone just offered
       talk:
       - - cue: Three bedrooms
         - cue: parking space
@@ -116,20 +110,21 @@ scenes:
       faces:
       - - 0
         - grin
-      - - cue: in cash
+      - - cue: offered cash
         - dollar
       hops:
-      - cue: in cash
+      - cue: offered cash
         offset: 0.3
       scale: 1.3
     - kind: paddles
       raises:
       - - cue: Someone just offered
-        - OVER ASKING!
-      - - cue: more than the asking
-        - WAIVE INSPECTION
-      - - cue: in cash
         - ALL CASH!
+      - - cue: over the asking
+        - OVER ASKING!
+      - - cue: over the asking price
+          offset: 0.5
+        - WAIVE INSPECTION
       x0: 900
       x1: 1650
       y: 330
@@ -148,9 +143,7 @@ scenes:
         - 300
       - - cue: And Maya
         - 700
-      at:
-        cue: Half the town
-        offset: 0.5
+      at: 0.4
       who: shopper
       v: 10
       skin: 2
@@ -161,7 +154,7 @@ scenes:
       hat: ''
       scarf: ''
       pose: stand
-      face: worry
+      face: happy
       label: MAYA · FIRST-TIME BUYER
       labelUntil:
         cue: just says
@@ -174,12 +167,12 @@ scenes:
       faces:
       - - 0
         - happy
-      - - cue: in cash
+      - - cue: offered cash
         - shock
       - - cue: is holding up
         - worry
       takes:
-      - cue: in cash
+      - cue: offered cash
         offset: 0.2
       scale: 1.3
     - kind: placard
@@ -198,18 +191,18 @@ scenes:
       x: 300
       y: 860
       at:
-        cue: saving since forever
+        cue: who has saved
       level:
       - - 0
         - 0.15
-      - - cue: saving since forever
+      - - cue: who has saved
           offset: 1.5
         - 0.3
       scale: 0.6
       text: SAVINGS
   sfx:
   - kind: hit
-    cue: in cash
+    cue: offered cash
     gain: 0.35
   assets:
   - font:inter
@@ -238,58 +231,75 @@ scenes:
       x: 1150
       y: 450
       zoom: 1.0
-      dur: 1.6
+      dur: 1.4
+    - at:
+        cue: But the typical existing home
+      x: 1150
+      y: 440
+      zoom: 1.0
+      dur: 0.35
     - at:
         cue: And with mortgage rates
       x: 1150
       y: 470
       zoom: 1.05
-      dur: 1.6
+      dur: 1.4
     - at:
-        cue: has run right past
+        cue: buying it takes
       x: 1150
       y: 480
       zoom: 1.25
       dur: 0.35
     drift: 4
     items:
-    - kind: counter
+    - kind: toonwords
+      text: RECORD PAYCHECKS...
       x: 1150
-      y: 180
+      y: 120
       at:
-        cue: The typical existing home
-      prefix: $
-      decimals: 0
-      steps:
-      - - 0
-        - 0
-      - - cue: The typical existing home
-        - 0
-      - - cue: in October
-          offset: -0.3
-        - 416700
-      text: MEDIAN EXISTING-HOME PRICE, OCT 2026 (NAR)
+        cue: Americans have never earned more
       until:
         cue: The typical household
-        offset: 1.2
+        offset: 0.6
+      size: 64
     - kind: counter
       x: 1150
       y: 180
       at:
         cue: The typical household
-        offset: 1.3
+        offset: 0.7
       prefix: $
       decimals: 0
       steps:
       - - 0
         - 0
       - - cue: The typical household
-          offset: 1.3
+          offset: 0.7
         - 0
       - - cue: a record
-          offset: -0.2
         - 87460
-      text: MEDIAN HOUSEHOLD INCOME, 2025 (CENSUS)
+      text: MEDIAN HOUSEHOLD INCOME, 2025 · A RECORD (CENSUS)
+      until:
+        cue: But the typical existing home
+        offset: 0.2
+    - kind: counter
+      x: 1150
+      y: 180
+      at:
+        cue: But the typical existing home
+        offset: 0.3
+      prefix: $
+      decimals: 0
+      steps:
+      - - 0
+        - 0
+      - - cue: But the typical existing home
+          offset: 0.3
+        - 0
+      - - cue: in October
+          offset: -0.3
+        - 416700
+      text: MEDIAN EXISTING-HOME PRICE, OCT 2026 (NAR)
       until:
         cue: And with mortgage rates
         offset: 0.6
@@ -303,16 +313,15 @@ scenes:
       color: '#FFCDD2'
       size: 32
       until:
-        cue: has run right past
-        offset: 1.5
+        cue: simply don't have
+        offset: 1.0
     - kind: toon
       x:
       - - 0
         - 450
-      - - cue: has run right past
+      - - cue: buying it takes
         - 450
-      - - cue: the paycheck most
-          offset: 0.5
+      - - cue: simply don't have
         - 750
       at: 0.2
       who: shopper
@@ -324,27 +333,30 @@ scenes:
       glasses: true
       hat: ''
       scarf: ''
-      face: worry
+      face: happy
       hold: box
       boxText: PAYCHECK
       pose: stand
       faces:
       - - 0
+        - happy
+      - - cue: But the typical existing home
         - worry
-      - - cue: has run right past
+      - - cue: buying it takes
         - panic
       scale: 1.3
     - kind: bigtag
       x:
       - - 0
         - 1700
-      - - cue: has run right past
+      - - cue: buying it takes
         - 1700
-      - - cue: the paycheck most
+      - - cue: simply don't have
         - 1150
       y: 320
       at:
-        cue: the paycheck you need
+        cue: But the typical existing home
+        offset: 0.3
       was: NEEDED
       now: PAYCHECK
       scale: 0.8
@@ -353,9 +365,9 @@ scenes:
       x: 1450
       y: 420
       at:
-        cue: has run right past
+        cue: buying it takes
       until:
-        cue: the paycheck most
+        cue: simply don't have
         offset: 1.5
       size: 110
       color: '#FFC93C'
@@ -4379,10 +4391,10 @@ scenes:
       build:
       - - 0
         - 0.2
-      - - cue: Fix them together
+      - - cue: priced out
         - 0.2
-      - - cue: comes back
-        - 1.0
+      - - cue: zoned out
+        - 0.9
       sign: COMING SOON
     worldW: 5400
     cam:
@@ -4391,76 +4403,102 @@ scenes:
       y: 450
       zoom: 0.82
     - at:
-        cue: Prices outran
+        cue: The price climbed
       x: 900
-      y: 450
+      y: 430
+      zoom: 0.9
+      dur: 1.4
+    - at:
+        cue: By our calculation
+      x: 1100
+      y: 440
       zoom: 0.85
       dur: 1.4
     - at:
-        cue: Builders spent
-      x: 3600
+        cue: And the things
+      x: 2700
       y: 470
-      zoom: 0.85
+      zoom: 0.72
       dur: 0.35
     - at:
-        cue: Fix one
-      x: 3300
-      y: 460
-      zoom: 0.8
-      dur: 1.4
-    - at:
-        cue: comes back
-      x: 3700
+        cue: It was priced out
+      x: 3600
       y: 470
-      zoom: 1.0
+      zoom: 0.9
       dur: 1.6
     drift: 2
     items:
     - kind: toonwords
-      text: NOT ONE VILLAIN
+      text: THE MATH BROKE TWICE
       x: 1100
       y: 90
       at:
-        cue: Not because of one villain
+        cue: Because the math broke
       until:
-        cue: Prices outran
-      size: 70
+        cue: The price climbed
+      size: 66
     - kind: sign
-      text: PRICES > PAYCHECKS
-      x: 500
-      y: 130
+      text: PRICE ≈ 4.7 YEARS OF INCOME (JCHS)
+      x: 600
+      y: 120
       at:
-        cue: Prices outran
+        cue: The price climbed
       color: '#FFCDD2'
       size: 30
     - kind: sign
-      text: RATES → +$ EVERY MONTH
-      x: 1100
-      y: 60
+      text: 'SAME HOUSE: ≈ +$900 A MONTH (OUR CALC.)'
+      x: 1300
+      y: 200
       at:
-        cue: Rates piled
+        cue: And the rate turned
       color: '#FFF59D'
       size: 30
+    - kind: incomebars
+      x: 1100
+      y: 760
+      at:
+        cue: By our calculation
+      max: 120
+      h: 360
+      gapAt:
+        cue: roughly twenty thousand
+      gapText: ≈ $20K
+      bars:
+      - value: 107.6
+        display: $108K
+        label: NEEDED (OUR CALC.)
+        color: '#E53950'
+        at:
+          cue: takes about
+      - value: 87.46
+        display: $87K
+        label: MEDIAN HOUSEHOLD
+        color: '#4FB3F6'
+        at:
+          cue: than the typical household
+      until:
+        cue: And the things
+        offset: 0.5
     - kind: sign
       text: OWNERS LOCKED IN
-      x: 1600
-      y: 160
+      x: 2900
+      y: 130
       at:
         cue: Owners with cheap loans
       color: '#BBDEFB'
       size: 30
     - kind: sign
       text: A DECADE OF UNDERBUILDING
-      x: 3300
-      y: 120
+      x: 3500
+      y: 60
       at:
-        cue: Builders spent
+        cue: builders spent
       color: '#C8E6C9'
       size: 30
     - kind: sign
       text: RULES vs CHEAP HOMES
-      x: 3900
-      y: 200
+      x: 4100
+      y: 130
       at:
         cue: local rules
       color: '#E1BEE7'
@@ -4468,10 +4506,10 @@ scenes:
     - kind: toon
       x:
       - - 0
-        - 1400
-      - - cue: Fix them together
+        - 1550
+      - - cue: And the things
         - 1900
-      - - cue: comes back
+      - - cue: It was priced out
         - 3300
       at: 0.3
       who: shopper
@@ -4488,11 +4526,8 @@ scenes:
       faces:
       - - 0
         - worry
-      - - cue: comes back
-        - love
-      hops:
-      - cue: comes back
-        offset: 0.4
+      - - cue: zoned out
+        - deadpan
       scale: 1.3
     - kind: toon
       x: 2900
@@ -4511,11 +4546,11 @@ scenes:
       faces:
       - - 0
         - smug
-      - - cue: comes back
-        - happy
+      - - cue: Owners with cheap loans
+        - worry
       scale: 1.25
     - kind: toon
-      x: 4300
+      x: 4400
       at: 0.5
       who: shopper
       v: 3
@@ -4531,13 +4566,17 @@ scenes:
       hold: clipboard
       scale: 1.3
     - kind: toonwords
-      text: THE STARTER HOME, BACK?
+      text: PRICED OUT · RATED OUT · ZONED OUT
       x: 3700
-      y: 80
+      y: 250
       at:
-        cue: comes back
-        offset: -0.3
-      size: 58
+        cue: It was priced out
+      size: 50
+  sources:
+  - jchs
+  - nar_ehs
+  - pmms
+  - census_inc
   assets:
   - font:inter
 - id: s33_end

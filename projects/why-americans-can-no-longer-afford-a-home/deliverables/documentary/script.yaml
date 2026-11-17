@@ -12,17 +12,13 @@ title: Why Americans Can No Longer Afford a Home
 segments:
 - id: co_open
   chapter: Cold open
-  narration: Saturday morning, an open house in an ordinary suburb. Three bedrooms, one bathroom, a lawn the size of a parking
-    space. Half the town is in the kitchen. Someone just offered more than the asking price, in cash. And Maya, who has been
-    saving since forever, is holding up a sign that just says, please.
+  narration: Saturday morning. An open house in an ordinary suburb. Three bedrooms, one bath, a lawn the size of a parking space. Someone just offered cash, over the asking price. And Maya, who has saved for years, is holding up a sign that just says, please.
   claims: []
   analysis: true
   source_note: Cold-open scene with fictional characters (illustrative, no figures); market figures are sourced in the next segments.
 - id: co_hook
   chapter: Cold open
-  narration: Here's the whole problem in one breath. The typical existing home in America sold for {{nar_price}} in October.
-    The typical household earned {{census_inc}} last year, a record. And with mortgage rates above seven percent, the paycheck
-    you need to buy that home has run right past the paycheck most people have.
+  narration: Here's the strange part. Americans have never earned more. The typical household made a record {{census_inc}} last year, says the Census Bureau. But the typical existing home sold for {{nar_price}} in October. And with mortgage rates above seven percent, buying it takes a paycheck most households simply don't have.
   claims:
   - nar_price
   - census_inc
@@ -227,10 +223,10 @@ segments:
   - firsttime
 - id: payoff
   chapter: The basement generation
-  narration: So why can't Americans afford a home? Not because of one villain. Prices outran paychecks. Rates piled hundreds of dollars
-    onto the monthly payment. Owners with cheap loans stopped selling. Builders spent a decade building too little. And local rules make the cheapest homes
-    the hardest to build. Fix one and you help a little. Fix them together, and the starter home comes back.
-  claims: []
+  narration: So why can't Americans afford a home? Because the math broke in two places at once. The price climbed to almost five years of income. And the rate turned the very same house into about nine hundred dollars more, every month. By our calculation, buying the typical home now takes about one hundred and eight thousand dollars a year, roughly twenty thousand more than the typical household earns. And the things that would close that gap are stuck. Owners with cheap loans won't sell, builders spent a decade building too little, and local rules make the cheapest homes the hardest to build. The starter home didn't just disappear. It was priced out, rated out, and zoned out.
+  claims:
+  - calc
+  - ratio
   analysis: true
   source_note: Conclusion drawn from the sourced facts above.
 - id: teaser

@@ -114,14 +114,14 @@ scenes:
         cue: And every single day
       rate: 7
       n: 14
-      label: + A FEW BILLION A DAY
+      label: + ≈ $6.8BN A DAY (AVG.)
       scale: 0.9
     - kind: sign
-      text: ILLUSTRATION · FIGURES FOLLOW
+      text: AVERAGE, NOV 2025–NOV 2026 · OUR CALC. FROM DEBT TO THE PENNY
       x: 1200
       y: 1000
       at:
-        cue: And every single day
+        cue: on average
       color: '#FFF8E1'
       size: 24
   sfx:
@@ -173,6 +173,18 @@ scenes:
       y: 500
       zoom: 1.35
       dur: 0.35
+    - at:
+        cue: China holds
+      x: 1250
+      y: 400
+      zoom: 1.05
+      dur: 0.8
+    - at:
+        cue: So who holds the rest
+      x: 1200
+      y: 420
+      zoom: 0.95
+      dur: 1.0
     drift: 3
     items:
     - kind: owen
@@ -208,9 +220,13 @@ scenes:
         - worry
       - - cue: Most people would be wrong
         - shock
+      - - cue: So who holds the rest
+        - worry
       takes:
       - cue: stood at
         offset: 0.4
+      - cue: China holds
+        offset: 0.3
       scale: 1.35
     - kind: bubble
       text: CHINA?
@@ -233,14 +249,34 @@ scenes:
       at:
         cue: Most people would be wrong
         offset: 0.6
+      until:
+        cue: China holds
       size: 120
       color: '#D93A49'
+    - kind: sign
+      text: CHINA ≈ 1.5¢ OF EVERY $1
+      x: 1250
+      y: 230
+      at:
+        cue: China holds
+      color: '#FFF59D'
+      size: 44
+      sub: TIC AUG 2026 VS TOTAL DEBT · OUR CALC.
+    - kind: toonwords
+      text: WHO HOLDS THE REST?
+      x: 1250
+      y: 60
+      at:
+        cue: So who holds the rest
+      size: 80
+      color: '#FFFFFF'
   sfx:
   - kind: hit
     cue: Most people would be wrong
     gain: 0.3
   sources:
   - dtp
+  - tic
   assets:
   - font:inter
 - id: s03_promise

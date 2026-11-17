@@ -11,16 +11,18 @@ segments:
 - id: co_open
   chapter: Cold open
   narration: Picture the biggest IOU on Earth. It's signed by the United States government. It's so long that nobody has
-    ever read the whole thing. And every single day, a few more billion dollars get added at the bottom.
-  claims: []
-  analysis: true
-  source_note: Cold-open metaphor (illustrative); the daily growth is sourced in a1_speed.
+    ever read the whole thing. And every single day, on average, about {{growth.day_spoken}} more gets added at the bottom.
+  claims:
+  - growth
+  source_note: Cold-open metaphor (illustrative IOU); the daily growth is our calculation from Debt to the Penny.
 - id: co_hook
   chapter: Cold open
   narration: On {{dtp.date_spoken}}, the Treasury's own daily count, called Debt to the Penny, stood at {{dtp}}. So who actually
-    holds this IOU? Most people would guess China. Most people would be wrong.
+    holds this IOU? Most people would guess China. Most people would be wrong. China holds {{china_share.cents_spoken}}. So who
+    holds the rest?
   claims:
   - dtp
+  - china_share
 - id: co_promise
   chapter: Cold open
   narration: Let's open the vault. We'll meet the buyers, the dinner guests, the warehouse that bought trillions, and the filing
@@ -232,7 +234,7 @@ segments:
 - id: a5_meter
   chapter: The meter is running
   narration: Which brings us to the meter. In fiscal year twenty twenty-six, which ended in September, the government's net interest
-    outlays reached {{mts}}, according to the Monthly Treasury Statement. That's about {{mts.day_spoken}} every day, by our calculation.
+    bill, what it pays in interest minus what it collects, reached {{mts}}, according to the Monthly Treasury Statement. That's about {{mts.day_spoken}} every day, by our calculation.
   claims:
   - mts
 - id: a5_defense

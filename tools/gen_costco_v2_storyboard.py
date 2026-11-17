@@ -349,10 +349,10 @@ stage("s28_sinegal", "a4_sinegal", {
     sources=["cnn_hotdog", "proxy2012", "tenk2012"])
 stage("s29_why", "a4_why", {
     **W1("gasbar", gasX=1150, carsAt=C("A cheap lunch", -1.0), canopy="MEMBER FUEL", signText="GAS", signSub="MEMBERS ONLY"),
-    "cam": cam((0, 1150, 470, 1.0), (C("Costco groups it"), 600, 400, 1.0, 1.6), (C("A cheap lunch"), 1100, 480, 0.95, 1.4), (C("And every visit"), 1150, 500, 1.1, WHIP)), "drift": 3,
-    "items": [it("combo", x=1150, y=280, at=0.2, price="$1.50", scale=0.6, until=C("Costco groups it", -0.1), face="smug"),
-              it("toonwords", text="NOT A RESTAURANT", x=1150, y=120, at=C("isn't really a restaurant"), size=70, until=C("Costco groups it", -0.1)),
-              sign("'WAREHOUSE ANCILLARY' · 'ENCOURAGING MORE FREQUENT SHOPPING' (10-K)", 1150, 110, C("Costco groups it"), color="#FFF8E1", size=24, until=C("A cheap lunch", -0.1)),
+    "cam": cam((0, 1150, 470, 1.0), (C("groups it with gas"), 600, 400, 1.0, 1.6), (C("A cheap lunch"), 1100, 480, 0.95, 1.4), (C("And every visit"), 1150, 500, 1.1, WHIP)), "drift": 3,
+    "items": [it("combo", x=1150, y=280, at=0.2, price="$1.50", scale=0.6, until=C("groups it with gas", -0.1), face="smug"),
+              it("toonwords", text="NOT A RESTAURANT", x=1150, y=120, at=C("isn't really a restaurant"), size=70, until=C("groups it with gas", -0.1)),
+              sign("10-K: 'WAREHOUSE ANCILLARY' · 'ENCOURAGING MORE FREQUENT SHOPPING'", 1150, 110, C("groups it with gas"), color="#FFF8E1", size=24, until=C("A cheap lunch", -0.1)),
               it("toonwords", text="A REASON TO VISIT", x=1150, y=140, at=C("A cheap lunch"), size=70, until=C("And every visit", -0.1)),
               it("toonwords", text="...PAST THE PALLETS", x=1150, y=140, at=C("And every visit"), size=70, color="#FFFFFF"),
               HANK([[0, -300], [C("A cheap lunch"), 300], [C("And every visit"), 800]], C("A cheap lunch", -0.8), face="happy", hold="hotdog")]},

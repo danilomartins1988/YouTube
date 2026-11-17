@@ -3038,7 +3038,7 @@ scenes:
       y: 470
       zoom: 1.0
     - at:
-        cue: Costco groups it
+        cue: groups it with gas
       x: 600
       y: 400
       zoom: 1.0
@@ -3064,7 +3064,7 @@ scenes:
       price: $1.50
       scale: 0.6
       until:
-        cue: Costco groups it
+        cue: groups it with gas
         offset: -0.1
       face: smug
     - kind: toonwords
@@ -3075,14 +3075,14 @@ scenes:
         cue: isn't really a restaurant
       size: 70
       until:
-        cue: Costco groups it
+        cue: groups it with gas
         offset: -0.1
     - kind: sign
-      text: '''WAREHOUSE ANCILLARY'' · ''ENCOURAGING MORE FREQUENT SHOPPING'' (10-K)'
+      text: '10-K: ''WAREHOUSE ANCILLARY'' · ''ENCOURAGING MORE FREQUENT SHOPPING'''
       x: 1150
       y: 110
       at:
-        cue: Costco groups it
+        cue: groups it with gas
       color: '#FFF8E1'
       size: 24
       until:
