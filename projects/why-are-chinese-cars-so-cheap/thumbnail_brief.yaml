@@ -25,7 +25,7 @@ concepts:
   scene:
     palette: {sky0: '#07142A', sky1: '#0F3A66', haze: '#4FC3F7', key: '#FFF6D8', accent: '#FFC93C', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: evhatch, x: 1500, y: 560, s: 0.52, color: '#26C6DA', tag: false}
+    subject: {kind: evhatch, x: 1480, y: 600, s: 0.6, color: '#26C6DA', tag: false, lidar: false}
     support: []
     particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDE9FF'}
     vignette: 0.55
@@ -40,7 +40,7 @@ concepts:
   scene:
     palette: {sky0: '#0B1626', sky1: '#1A2E4A', haze: '#FFC93C', key: '#FFF6D8', accent: '#FF5A5F', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: evhatch, x: 500, y: 640, s: 0.36, color: '#26C6DA', tag: false}
+    subject: {kind: evhatch, x: 500, y: 640, s: 0.36, color: '#26C6DA', tag: false, lidar: false}
     after: {kind: evhatch, x: 1430, y: 640, s: 0.36, color: '#78909C', carKind: sedan, lidar: false, tag: false}
     support: []
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFF3E0'}
@@ -52,11 +52,11 @@ concepts:
   text:
   - WHO PAYS
   - FOR IT?
-  claim_basis: a question (answer in the film: mostly efficiency; subsidies mainly paid buyers; BYD grants ≈1.6% of revenue but ≈2/5 of profit; BYD 2025 free cash flow ≈ −$13.6B, our calculation)
+  claim_basis: 'a question (answer in the film - mostly efficiency; subsidies mainly paid buyers; BYD grants ≈1.6% of revenue but ≈2/5 of profit; BYD 2025 free cash flow ≈ −$13.6B, our calculation)'
   scene:
     palette: {sky0: '#1A0B10', sky1: '#3A1420', haze: '#FF5A5F', key: '#FFF3E0', accent: '#FFC93C', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: evhatch, x: 1450, y: 600, s: 0.48, color: '#FFB627', text: '$ ?', tagColor: '#FF5A5F'}
+    subject: {kind: evhatch, x: 1450, y: 640, s: 0.5, color: '#7E57C2', text: '$ ?', tagColor: '#FF5A5F', lidar: false}
     support: []
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
     vignette: 0.55
@@ -72,4 +72,4 @@ concepts:
     bg: ['#3A8DFF', '#0A1F5C']
     rays: '#FFE27A'
     bust: {who: wangcf, expr: point, x: 470, s: 0.92, point: [1330, 790]}
-    prop: {kind: tag, text: '$9,900', x: 1440, y: 790, s: 0.58, rot: -8}
+    prop: {kind: evhatch, x: 1450, y: 800, s: 0.36, color: '#26C6DA', tag: false, haze: false, lidar: false}

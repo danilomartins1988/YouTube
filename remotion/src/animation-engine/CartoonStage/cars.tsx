@@ -82,8 +82,8 @@ export const carShape = (kind: string, color: string, spin = 0, opt: {lights?: b
     <path d={`M ${p.wx[0] - 70} -54 L ${p.wx[1] + 70} -54`} stroke="#FFFFFF" strokeWidth={4} opacity={0.35} />
     <path d={p.w1} fill={sc > 0 ? '#1B3A5C' : '#BFE3FF'} stroke={OL} strokeWidth={5} strokeLinejoin="round" />
     <path d={p.w2} fill={sc > 0 ? '#1B3A5C' : '#BFE3FF'} stroke={OL} strokeWidth={5} strokeLinejoin="round" />
-    {sc > 0 && <g opacity={sc}><rect x={-30} y={kind === 'suv' ? -150 : -128} width={66} height={22} rx={4} fill="#4FC3F7" stroke="#FFFFFF" strokeWidth={2} />
-      {[0, 1, 2].map((q) => <rect key={q} x={-24 + q * 20} y={(kind === 'suv' ? -144 : -122)} width={14} height={10 * (0.4 + 0.6 * Math.abs(Math.sin(tt * 2 + q)))} fill="#FFFFFF" opacity={0.8} />)}</g>}
+    {sc > 0 && <g opacity={sc}><path d={`M -60 ${kind === 'suv' ? -122 : -104} L 70 ${kind === 'suv' ? -122 : -104}`} stroke="#4FC3F7" strokeWidth={5} strokeLinecap="round" opacity={0.9} />
+      <rect x={-8} y={kind === 'suv' ? -138 : -118} width={40} height={12} rx={3} fill="#4FC3F7" opacity={0.55 + 0.25 * Math.sin(tt * 2)} /></g>}
     <path d={`M ${kind === 'suv' ? -14 : 12} ${kind === 'suv' ? -118 : -100} L ${kind === 'suv' ? -14 : 12} -24`} stroke={OL} strokeWidth={3} opacity={0.5} />
     {/* door handle, slim light bars (no grille) */}
     <rect x={kind === 'suv' ? 20 : 36} y={kind === 'suv' ? -96 : -84} width={26} height={6} rx={3} fill={OL} opacity={0.55} />

@@ -1,0 +1,670 @@
+{
+  "title": "Why Are Chinese Cars So Cheap \u2014 And So Advanced?",
+  "docs_dir": "docs/episodes/61-chinese-cars",
+  "video": "output/chinesecars_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "A",
+  "analysis": {
+    "mystery": "How can a high-tech EV sell for about $9,900 in China while the average new EV in the US sells for $56,220 and Ford's EV unit loses billions?",
+    "surprising_fact": "BYD's 2nd-gen Seagull lists from \u00a565,900 \u2248 $9,900 in China (Oct 2026, incl. VAT); US average new-EV transaction price $56,220 (KBB, Oct 2026)",
+    "subject": "an original, unbadged EV hatchback under showroom light, glowing cabin screen, a giant gold price tag",
+    "tone": "sitcom",
+    "metaphor": "the impossible price tag",
+    "public_figure": {
+      "who": "wangcf",
+      "name": "Wang Chuanfu"
+    }
+  },
+  "slug": "why-are-chinese-cars-so-cheap",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "price vs technology (giant number + the car)",
+      "archetype": "bignum",
+      "text": [
+        "$9,900?",
+        "CHINESE EV"
+      ],
+      "claim_basis": "$9,900: BYD Seagull 2nd gen base price \u00a565,900 (China, Oct 20, 2026; incl. 13% VAT) at Fed H.10 6.6710 (Nov 13, 2026) = $9,879 (FACT_CHECK.md, claim seagull)",
+      "scene": {
+        "palette": {
+          "sky0": "#07142A",
+          "sky1": "#0F3A66",
+          "haze": "#4FC3F7",
+          "key": "#FFF6D8",
+          "accent": "#FFC93C",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "evhatch",
+          "x": 1480,
+          "y": 600,
+          "s": 0.6,
+          "color": "#26C6DA",
+          "tag": false,
+          "lidar": false
+        },
+        "support": [],
+        "particles": {
+          "n": 50,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#BDE9FF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "$9,900?",
+          "x": 90,
+          "y": 559.0,
+          "size": 263.4,
+          "width": 1180.0,
+          "anchor": "start",
+          "color": "#FFC93C"
+        },
+        {
+          "text": "CHINESE EV",
+          "x": 96,
+          "y": 697.0,
+          "size": 120,
+          "width": 768.0,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.56 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 354, 1270, 575), (96, 603, 864, 704)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.092",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 41",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-microsoft-2026-11 (distance 0.30)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "$9,900: BYD Seagull 2nd gen base price \u00a565,900 (China, Oct 20, 2026; incl. 13% VAT) at Fed H.10 6.6710 (Nov 13, 2026) = $9,879 (FACT_CHECK.m",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.577,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-microsoft-2026-11"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "China vs the West (split, two original cars)",
+      "archetype": "split",
+      "text": [
+        "$9.9K",
+        "$56K"
+      ],
+      "claim_basis": "left: BYD Seagull 2nd gen China list \u2248 $9,900 (Oct 2026); right: US average new-EV transaction price $56,220 (KBB, Oct 2026). Different markets and specs: the film says so (FACT_CHECK.md)",
+      "scene": {
+        "palette": {
+          "sky0": "#0B1626",
+          "sky1": "#1A2E4A",
+          "haze": "#FFC93C",
+          "key": "#FFF6D8",
+          "accent": "#FF5A5F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "evhatch",
+          "x": 500,
+          "y": 640,
+          "s": 0.36,
+          "color": "#26C6DA",
+          "tag": false,
+          "lidar": false
+        },
+        "after": {
+          "kind": "evhatch",
+          "x": 1430,
+          "y": 640,
+          "s": 0.36,
+          "color": "#78909C",
+          "carKind": "sedan",
+          "lidar": false,
+          "tag": false
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFF3E0"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "$9.9K",
+          "x": 480.0,
+          "y": 253.0,
+          "size": 150,
+          "width": 480.0,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "$56K",
+          "x": 1440.0,
+          "y": 253.0,
+          "size": 150,
+          "width": 384.0,
+          "anchor": "middle",
+          "color": "#FF5A5F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.58 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(240, 136, 720, 262), (1248, 136, 1632, 262)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "12.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.070",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 35",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-google-actually-makes-money (distance 0.46)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "left: BYD Seagull 2nd gen China list \u2248 $9,900 (Oct 2026); right: US average new-EV transaction price $56,220 (KBB, Oct 2026). Different mark",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.672,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-google-actually-makes-money"
+      }
+    },
+    {
+      "id": "C",
+      "angle": "the hidden money (the car with a question-mark tag)",
+      "archetype": "classic",
+      "text": [
+        "WHO PAYS",
+        "FOR IT?"
+      ],
+      "claim_basis": "a question (answer in the film - mostly efficiency; subsidies mainly paid buyers; BYD grants \u22481.6% of revenue but \u22482/5 of profit; BYD 2025 free cash flow \u2248 \u2212$13.6B, our calculation)",
+      "scene": {
+        "palette": {
+          "sky0": "#1A0B10",
+          "sky1": "#3A1420",
+          "haze": "#FF5A5F",
+          "key": "#FFF3E0",
+          "accent": "#FFC93C",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "evhatch",
+          "x": 1450,
+          "y": 640,
+          "s": 0.5,
+          "color": "#7E57C2",
+          "text": "$ ?",
+          "tagColor": "#FF5A5F",
+          "lidar": false
+        },
+        "support": [],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "WHO PAYS",
+          "x": 90,
+          "y": 515.0,
+          "size": 156.2,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "FOR IT?",
+          "x": 90,
+          "y": 677.5,
+          "size": 156.2,
+          "width": 700.0,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 393, 890, 524), (90, 556, 790, 687)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 10.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.070",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 32",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-tesla-2026-11 (distance 0.31)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (answer in the film - mostly efficiency; subsidies mainly paid buyers; BYD grants \u22481.6% of revenue but \u22482/5 of profit; BYD 2025 f",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.814,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-tesla-2026-11"
+      }
+    },
+    {
+      "id": "F",
+      "angle": "face (BYD founder Wang Chuanfu, respectful bust, pointing at the price tag)",
+      "archetype": "face",
+      "text": [
+        "BYD'S",
+        "$9,900 EV"
+      ],
+      "claim_basis": "$9,900: BYD Seagull 2nd gen base price \u00a565,900 (China, Oct 2026, incl. VAT) \u2248 $9,879 at H.10 (FACT_CHECK.md, claim seagull); Wang Chuanfu founded BYD (AR 2025)",
+      "scene": {
+        "bg": [
+          "#3A8DFF",
+          "#0A1F5C"
+        ],
+        "rays": "#FFE27A",
+        "bust": {
+          "who": "wangcf",
+          "expr": "point",
+          "x": 470,
+          "s": 0.92,
+          "point": [
+            1330,
+            790
+          ]
+        },
+        "prop": {
+          "kind": "evhatch",
+          "x": 1450,
+          "y": 800,
+          "s": 0.36,
+          "color": "#26C6DA",
+          "tag": false,
+          "haze": false,
+          "lidar": false
+        }
+      },
+      "layout": [
+        {
+          "text": "BYD'S",
+          "x": 1367.8,
+          "y": 238.0,
+          "size": 210,
+          "width": 672.0,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "$9,900 EV",
+          "x": 1367.8,
+          "y": 443.8,
+          "size": 151.8,
+          "width": 874.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.69 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(1032, 74, 1704, 251), (931, 325, 1805, 453)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "12.7px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": false,
+            "detail": "0.175",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "wangcf",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 68",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest mf-global-the-billion-dollars-that-vanished (distance 0.75)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "$9,900: BYD Seagull 2nd gen base price \u00a565,900 (China, Oct 2026, incl. VAT) \u2248 $9,879 at H.10 (FACT_CHECK.md, claim seagull); Wang Chuanfu fo",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.644,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "mf-global-the-billion-dollars-that-vanished"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-17T11:28:07Z",
+  "master": "output/why-are-chinese-cars-so-cheap/thumbnails/master_A.png"
+}
