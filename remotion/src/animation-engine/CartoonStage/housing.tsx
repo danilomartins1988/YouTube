@@ -121,7 +121,7 @@ export const HOUSING_SETS: Record<string, SetFn> = {
         <rect x={-150} y={-230} width={300} height={110} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
         <rect x={-150} y={-230} width={300} height={36} rx={12} fill="#2F6FD1" stroke={OL} strokeWidth={6} />
         <T x={0} y={-203} s={22} c="#FFFFFF" ls={3}>WELCOME</T>
-        <T x={0} y={-140} s={46}>{z.signText || 'OPEN HOUSE'}</T>
+        <T x={0} y={-142} s={fit(z.signText || 'OPEN HOUSE', 270, 44)}>{z.signText || 'OPEN HOUSE'}</T>
         {sold > 0 && <g transform={`rotate(-14 0 -170) scale(${sold})`}><rect x={-140} y={-210} width={280} height={74} rx={10} fill="#E53950" stroke={OL} strokeWidth={5} />
           <T x={0} y={-157} s={50} c="#FFFFFF">{z.soldText || 'SOLD!'}</T></g>}
       </g>
@@ -167,7 +167,7 @@ export const HOUSING_SETS: Record<string, SetFn> = {
       {Array.from({length: Math.floor(Y1 - Y0) + 1}, (_, k) => { const yr = Y0 + k, x = gx0 + (k / (Y1 - Y0)) * (gx1 - gx0); return <g key={'yr' + k} transform={`translate(${x} ${f + 70})`}>
         <rect x={-52} y={-26} width={104} height={44} rx={8} fill="#2F6FD1" stroke={OL} strokeWidth={3.5} /><T x={0} y={8} s={26} c="#FFFFFF">{yr}</T></g>; })}
       {/* supports */}
-      {P.slice(0, nShow).map((p, k) => k % 2 === 0 && <g key={'sp' + k}><path d={`M ${p[0]} ${p[1] + 12} L ${p[0] - 18} ${f} M ${p[0]} ${p[1] + 12} L ${p[0] + 18} ${f}`} stroke="#C62828" strokeWidth={6} opacity={0.75} />
+      {P.slice(0, nShow).map((p, k) => k % 5 === 0 && <g key={'sp' + k}><path d={`M ${p[0]} ${p[1] + 12} L ${p[0] - 18} ${f} M ${p[0]} ${p[1] + 12} L ${p[0] + 18} ${f}`} stroke="#C62828" strokeWidth={6} opacity={0.75} />
         <path d={`M ${p[0] - 14} ${(p[1] + f) / 2} L ${p[0] + 14} ${(p[1] + f) / 2 + 30}`} stroke="#C62828" strokeWidth={4} opacity={0.6} /></g>)}
       {/* track: double rail with ties */}
       <path d={d} fill="none" stroke={OL} strokeWidth={22} strokeLinejoin="round" strokeLinecap="round" />
@@ -253,7 +253,7 @@ export const HOUSING_SETS: Record<string, SetFn> = {
         <g transform="translate(-60 -250)"><circle r={120} fill="#FFFDE7" stroke={OL} strokeWidth={6} />
           <path d="M -100 0 A 100 100 0 0 1 100 0" fill="none" stroke="#E53950" strokeWidth={16} /><path d="M -100 0 A 100 100 0 0 1 -30 -95" fill="none" stroke="#7BD389" strokeWidth={16} />
           <g transform={`rotate(${-90 + g * 180 + Math.sin(t * 30) * 1.5})`}><path d="M -6 0 L 0 -96 L 6 0 Z" fill={OL} /></g><circle r={12} fill={OL} />
-          <T x={0} y={50} s={20}>{z.gaugeLabel || 'AFFORDABLE LISTINGS'}</T>
+          <T x={0} y={48} s={fit(z.gaugeLabel || 'AFFORDABLE LISTINGS', 190, 20)}>{z.gaugeLabel || 'AFFORDABLE LISTINGS'}</T>
           {gtxt && <T x={0} y={90} s={40} c="#C62828">{String(gtxt[1])}</T>}</g>
         {[[-200, -80, '#E53950'], [-140, -80, '#FFC93C'], [-80, -80, '#4FB3F6'], [20, -80, '#7BD389']].map(([bx, by, c], k) => <circle key={'bt' + k} cx={Number(bx)} cy={Number(by)} r={20} fill={String(c)} stroke={OL} strokeWidth={4} opacity={Math.sin(t * 6 + k) > 0 ? 1 : 0.55} />)}
         {/* ray dish */}
@@ -330,6 +330,8 @@ export const HOUSING_SETS: Record<string, SetFn> = {
     return <g>
       <rect x={z.x0} y={-2500} width={z.x1 - z.x0} height={2500 + f} fill="#E8DCC4" />
       <rect x={z.x0} y={f - 380} width={z.x1 - z.x0} height={380} fill="#A1755A" />
+      <rect x={z.x0} y={f} width={z.x1 - z.x0} height={900} fill="#7B3F3F" />
+      {Array.from({length: Math.ceil((z.x1 - z.x0) / 90)}, (_, k) => <path key={'cp' + k} d={`M ${z.x0 + k * 90} ${f} L ${z.x0 + k * 90 - 200} ${f + 900}`} stroke="#6A3434" strokeWidth={6} />)}
       {Array.from({length: Math.ceil((z.x1 - z.x0) / 140)}, (_, k) => <rect key={'wp' + k} x={z.x0 + k * 140 + 10} y={f - 360} width={120} height={150} rx={6} fill="none" stroke="#7A543C" strokeWidth={4} />)}
       <rect x={z.x0} y={f - 390} width={z.x1 - z.x0} height={16} fill="#7A543C" stroke={OL} strokeWidth={3} />
       {/* civic banner (generic, no real seal) */}
@@ -463,7 +465,7 @@ const minihome: ItemFn = (a, {t, f}, i) => {
   const sign = a.sign ?? 'STARTER HOME';
   return <g key={'mh' + i} transform={`translate(${x} ${y}) scale(${s * (1 + wob)} ${s * (1 - wob)})`}>
     <ellipse cx={0} cy={6} rx={170} ry={14} fill={OL} opacity={0.15} />{body}
-    {sign && <g transform={`translate(${a.signDX ?? 0} ${a.signDY ?? -380}) rotate(${Math.sin(t * 2 + i) * 3})`}><rect x={-fit(sign, 400, 34) * sign.length * 0.33 - 24} y={-32} width={fit(sign, 400, 34) * sign.length * 0.66 + 48} height={56} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={5} />
+    {sign && <g transform={`translate(${a.signDX ?? 0} ${a.signDY ?? ({house: -380, shed: -300, dog: -250, bird: -380, mailbox: -270} as Record<string, number>)[ty] ?? -380}) rotate(${Math.sin(t * 2 + i) * 3})`}><rect x={-fit(sign, 400, 34) * sign.length * 0.33 - 24} y={-32} width={fit(sign, 400, 34) * sign.length * 0.66 + 48} height={56} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={5} />
       <T x={0} y={8} s={fit(sign, 400, 34)} c="#2E7D32">{sign}</T></g>}
   </g>;
 };

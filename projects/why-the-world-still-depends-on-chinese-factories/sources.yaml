@@ -1,0 +1,317 @@
+# Sources and claims for "Why the World Still Depends on Chinese Factories" (Episode 60, owner request 2026-11-17).
+# Every claim was read on its primary page or document on 2026-11-17 (notes: docs/episodes/60-china-factories/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars only (yuan converted at the Federal Reserve
+# G.5A 2025 annual average, 7.1875 CNY per USD, marked "≈").
+# RULES (evergreen): every figure that will change is dated on screen and in narration (year or "as of" date).
+# Shares of U.S. imports, the share of world manufacturing value added, the wage conversion, the port ratio and the YTD change are
+# OUR CALCULATIONS from the cited tables and are labelled so. IEA solar figures are from a 2022 report (said). Tariff history only
+# as written in USTR / Federal Register / CRS / Supreme Court documents. Respectful and neutral toward China and its people.
+sources:
+  - id: wdi_mva
+    title: "World Development Indicators: Manufacturing, value added (current US$), NV.IND.MANF.CD (China, World, 2004-2025; API)"
+    publisher: World Bank
+    url: https://api.worldbank.org/v2/country/CHN;WLD/indicator/NV.IND.MANF.CD?format=json&date=2004:2025
+    published: "2026-11-11"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "World Bank WDI (Nov 2026)"
+    notes: "Database last updated 2026-11-11. China 2025 $4,822.7bn; World 2025 $17,601.1bn; China 2024 $4,652.7bn / World $16,622.5bn; China 2004 $625.2bn / World $7,343.7bn. The World aggregate includes World Bank estimates for economies without recent data (e.g. the US series ends in 2021)."
+  - id: wto_gtos
+    title: "Global Trade Outlook and Statistics, March 2026 (Appendix Table 1: Leading exporters and importers in world merchandise trade, 2025; box on China's export growth; trade fragmentation section)"
+    publisher: World Trade Organization
+    url: https://www.wto.org/english/res_e/booksp_e/gtos0326_e.pdf
+    published: "2026-03"
+    accessed: "2026-11-17"
+    credit: "WTO (Mar 2026)"
+  - id: census_cn
+    title: "U.S. Trade in Goods with China (monthly and annual, 1985-2026; data through September 2026)"
+    publisher: U.S. Census Bureau
+    url: https://www.census.gov/foreign-trade/balance/c5700.html
+    published: "2026-11 (latest monthly release on the page; data through Sep 2026)"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "U.S. Census Bureau"
+  - id: census_world
+    title: "U.S. Trade in Goods with World, Seasonally Adjusted (annual totals; data through September 2026)"
+    publisher: U.S. Census Bureau
+    url: https://www.census.gov/foreign-trade/balance/c0004.html
+    published: "2026-11 (data through Sep 2026)"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "U.S. Census Bureau"
+    notes: "World totals are seasonally adjusted; country pages are not. For 2024 the SA total ($3,263.9bn) and the NSA total in Census 'Top Trading Partners, December 2024' ($3,267.4bn) differ by 0.1%."
+  - id: census_partners
+    title: "U.S. Trade in Goods with Vietnam (c5520), Mexico (c2010), India (c5330), Taiwan (c5830); Top Trading Partners December 2017 and December 2024"
+    publisher: U.S. Census Bureau
+    url: https://www.census.gov/foreign-trade/balance/c5520.html
+    published: "2026-11 (data through Sep 2026)"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "U.S. Census Bureau"
+    notes: "Also read: https://www.census.gov/foreign-trade/balance/c2010.html, c5330.html, c5830.html; https://www.census.gov/foreign-trade/statistics/highlights/top/top1712yr.html and top2412yr.html."
+  - id: nbs_emp
+    title: "China Statistical Yearbook 2025, Table 4-2: Number of Employed Persons at Year-end by Three Strata of Industry"
+    publisher: National Bureau of Statistics of China
+    url: https://www.stats.gov.cn/sj/ndsj/2025/html/E04-02.jpg
+    published: "2025"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "NBS China Statistical Yearbook 2025"
+  - id: nbs_wage
+    title: "2025年城镇单位就业人员年平均工资情况 (Average annual wages of employed persons in urban units, 2025)"
+    publisher: National Bureau of Statistics of China
+    url: https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html
+    published: "2026-05-15"
+    accessed: "2026-11-17"
+    credit: "NBS China (May 2026)"
+  - id: fed_g5a
+    title: "Foreign Exchange Rates G.5A (annual averages), release of January 5, 2026: China yuan 7.1875 per USD in 2025"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/g5a/current/default.htm
+    published: "2026-01-05"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "Federal Reserve G.5A"
+  - id: bls_ces
+    title: "Current Employment Statistics: Average hourly earnings of production and nonsupervisory employees, manufacturing (CES3000000008), 2025 monthly (via FRED)"
+    publisher: U.S. Bureau of Labor Statistics
+    url: https://fred.stlouisfed.org/series/CES3000000008
+    published: "2026"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "BLS CES (via FRED)"
+    notes: "Series CES3000000008, seasonally adjusted; 2025 monthly values $28.55 (Jan) to $29.51 (Dec); average of the 12 months $29.05 (our calculation)."
+  - id: iea_gevo
+    title: "Global EV Outlook 2026: Growing sales amid an energy crisis (Executive summary; Chapter 5 batteries; Chapter 7 supply chains)"
+    publisher: International Energy Agency
+    url: https://www.iea.org/reports/global-ev-outlook-2026
+    published: "2026-05"
+    accessed: "2026-11-17"
+    license: CC BY 4.0
+    credit: "IEA Global EV Outlook 2026"
+    notes: "iea.org blocks automated access; the full report PDF was read from the copy hosted by the Clean Energy Ministerial (https://www.cleanenergyministerial.org/content/uploads/2026/05/globalevoutlook2026.pdf, 295 pages, IEA CC BY 4.0 footer)."
+  - id: iea_gcmo
+    title: "Global Critical Minerals Outlook 2026 (rare earth elements section; export controls table)"
+    publisher: International Energy Agency
+    url: https://www.iea.org/reports/global-critical-minerals-outlook-2026
+    published: "2026"
+    accessed: "2026-11-17"
+    license: CC BY 4.0
+    credit: "IEA Global Critical Minerals Outlook 2026"
+    notes: "iea.org and the IEA blob link blocked automated access; the report text was read from a full copy of the PDF (IEA CC BY 4.0 footer on every page). A human reviewer should re-check the two rare-earth sentences on iea.org before publishing."
+  - id: iea_pv
+    title: "Special Report on Solar PV Global Supply Chains"
+    publisher: International Energy Agency
+    url: https://iea.blob.core.windows.net/assets/d2ee601d-6b1a-4cd2-a0e8-db02dc64332c/SpecialReportonSolarPVGlobalSupplyChains.pdf
+    published: "2022-07"
+    accessed: "2026-11-17"
+    license: CC BY 4.0
+    credit: "IEA (2022)"
+  - id: sipg
+    title: "上海国际港务（集团）股份有限公司 2025年年度报告摘要 (Shanghai International Port (Group) Co., Ltd., 2025 annual report summary)"
+    publisher: Shanghai International Port (Group) Co., Ltd. (port operator; SSE 600018)
+    url: https://stockmc.xueqiu.com/202603/600018_20260401_M5CH.pdf
+    published: "2026-04-01"
+    accessed: "2026-11-17"
+    credit: "SIPG 2025 annual report"
+    notes: "Mirror of the company's SSE filing (also printed in Shanghai Securities News, 2026-04-01)."
+  - id: pola
+    title: "Port of Los Angeles: Historical TEU Statistics, 2025"
+    publisher: Port of Los Angeles (port authority)
+    url: https://www.portoflosangeles.org/business/statistics/container-statistics/historical-teu-statistics-2025
+    published: "2026-01"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "Port of Los Angeles"
+  - id: fr_301_2018
+    title: "USTR Section 301 notices: 83 FR 28710 (June 20, 2018), 83 FR 40823 (Aug 16, 2018), 83 FR 47974 (Sept 21, 2018), 84 FR 43304 (Aug 20, 2019), 84 FR 45821 (Aug 30, 2019), 85 FR 3741 (Jan 22, 2020)"
+    publisher: Office of the U.S. Trade Representative (Federal Register)
+    url: https://www.federalregister.gov/documents/2018/09/21/2018-20610/notice-of-modification-of-section-301-action-chinas-acts-policies-and-practices-related-to
+    published: "2018-2020"
+    accessed: "2026-11-17"
+    credit: "USTR / Federal Register"
+    notes: "Abstracts read via the Federal Register API; also 83 FR 33608 (July 17, 2018: '$34 billion, effective July 6, 2018'), 84 FR 38717 ('Effective September 24, 2018 ... approximately $200 billion'; 'subsequent modification in May 2019'), 84 FR 49600 ('Effective August 23, 2018 ... approximately $16 billion')."
+  - id: fr_301_2024
+    title: "Notice of Modification: China's Acts, Policies and Practices Related to Technology Transfer, Intellectual Property and Innovation (Four-Year Review), 89 FR 76581"
+    publisher: Office of the U.S. Trade Representative (Federal Register)
+    url: https://www.federalregister.gov/documents/2024/09/18/2024-21217/notice-of-modification-chinas-acts-policies-and-practices-related-to-technology-transfer
+    published: "2024-09-18"
+    accessed: "2026-11-17"
+    credit: "USTR, 89 FR 76581 (2024)"
+  - id: fr_ieepa
+    title: "Executive orders on duties on products of China: 90 FR 9121 (Feb 7, 2025), 90 FR 11463 (Mar 7, 2025), 90 FR 15509 (Apr 14, 2025), 90 FR 21831 (May 21, 2025), 90 FR 50725 (Nov 7, 2025)"
+    publisher: Executive Office of the President (Federal Register)
+    url: https://www.govinfo.gov/content/pkg/FR-2025-04-14/html/2025-06378.htm
+    published: "2025"
+    accessed: "2026-11-17"
+    credit: "Federal Register (2025)"
+  - id: scotus
+    title: "Learning Resources, Inc. v. Trump, No. 24-1287 (decided with Trump v. V.O.S. Selections, No. 25-250), slip opinion"
+    publisher: Supreme Court of the United States
+    url: https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf
+    published: "2026-02-20"
+    accessed: "2026-11-17"
+    credit: "U.S. Supreme Court (Feb 2026)"
+    notes: "Holding as quoted in our Episode 41 research notes (read 2026-11-10) and in CRS R49481."
+  - id: crs_2026
+    title: "Active Presidential Tariff Actions in 2026: Fact Sheet (R49481), current as of September 30, 2026"
+    publisher: Congressional Research Service
+    url: https://www.congress.gov/crs_external_products/R/PDF/R49481/R49481.1.pdf
+    published: "2026-10-08"
+    accessed: "2026-11-17"
+    credit: "CRS R49481 (Oct 2026)"
+  - id: fr_301_2026
+    title: "Notice of Actions in Section 301 Investigations ... Failure of Each Economy to Impose and Effectively Enforce a Prohibition on the Importation of Goods Produced with Forced Labor, 91 FR 47318"
+    publisher: Office of the U.S. Trade Representative (Federal Register)
+    url: https://www.govinfo.gov/content/pkg/FR-2026-07-28/html/2026-15181.htm
+    published: "2026-07-28"
+    accessed: "2026-11-17"
+    credit: "USTR, 91 FR 47318 (Jul 2026)"
+  - id: fed_feds
+    title: "The Slow Climb: How Tariffs Gradually Raised Retail Prices in 2025 (FEDS Notes; Hacıoğlu-Hoke, Malladi, Feler)"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/econres/notes/feds-notes/the-slow-climb-how-tariffs-gradually-raised-retail-prices-in-2025-20260305.html
+    published: "2026-03-05"
+    accessed: "2026-11-17"
+    credit: "Federal Reserve FEDS Notes (Mar 2026)"
+claims:
+  - id: fed_pass
+    text: "FEDS Notes (Mar 5, 2026): pass-through of tariffs to retail prices 'has been at least 30% for goods imported from China' (April-December 2025), a conservative estimate; tariffs are paid by the importer of record at the border."
+    spoken: thirty percent
+    display: "Tariff pass-through to retail prices, Chinese goods, Apr-Dec 2025: at least 30% (Fed economists' estimate)"
+    fields: {}
+    source_ids: [fed_feds]
+    status: source_located
+    verification_note: "Estimate by Federal Reserve Board economists (FEDS Notes reflect the authors' views)."
+  - id: mva
+    text: "World Bank WDI (updated 2026-11-11): China manufacturing value added $4,822.7bn in 2025, World $17,601.1bn -> 27.4% (our calculation); 2024 28.0%; 2004: $625.2bn of $7,343.7bn -> 8.5% (our calculation). Current US$."
+    spoken: about twenty-seven percent
+    display: "China: 27.4% of world manufacturing value added, 2025 (World Bank WDI; our calculation)"
+    fields: {t25_spoken: four point eight trillion dollars, y04_spoken: about eight and a half percent}
+    source_ids: [wdi_mva]
+    status: source_located
+    verification_note: "World aggregate includes World Bank estimates; share is our calculation; current dollars (exchange-rate effects)."
+  - id: wto
+    text: "WTO GTOS March 2026, Appendix Table 1: China merchandise exports 2025 $3,772bn, 14.4% of world, rank 1 (US $2,185bn, 8.3%). Text: China's exports rose 5.5% to US$3.77 trillion; trade balance rose from US$993bn in 2024 to US$1.19 trillion in 2025. 'US imports from China declined by 29%'."
+    spoken: three point seven seven trillion dollars
+    display: "China goods exports 2025: $3.77T, 14.4% of world (WTO)"
+    fields: {share_spoken: fourteen percent, surplus_spoken: one point one nine trillion dollars, usdrop_spoken: twenty-nine percent}
+    source_ids: [wto_gtos]
+    status: source_located
+  - id: wto_in
+    text: "WTO GTOS March 2026: China's exports to ASEAN rose 13.4% in 2025; 'its increase in exports to the rest of Asia also reflects intermediate inputs trade, with final demand coming from other parts of the world.' US imported significantly more from India, Indonesia, the Philippines, Chinese Taipei, Thailand and Viet Nam."
+    spoken: thirteen percent
+    display: "China's exports to ASEAN +13.4% in 2025 (WTO)"
+    fields: {}
+    source_ids: [wto_gtos]
+    status: source_located
+  - id: nbs_emp
+    text: "NBS China Statistical Yearbook 2025, Table 4-2: employed persons in secondary industry (industry and construction) 21,275 (10,000 persons) at end-2024, of 73,439 total."
+    spoken: about two hundred and thirteen million people
+    display: "213M employed in industry & construction, end-2024 (NBS)"
+    fields: {}
+    source_ids: [nbs_emp]
+    status: source_located
+  - id: nbs_wage
+    text: "NBS (May 15, 2026): 2025 average annual wage, 'production and related personnel' in enterprises above designated size: 80,739 yuan; manufacturing, private urban units 76,055 yuan (+6.4%), non-private urban units 113,594 yuan (+5.2%). At 7.1875 yuan/USD (Fed G.5A 2025): ≈ $11,200; ≈ $10,600; ≈ $15,800 (our conversion)."
+    spoken: about eighty-one thousand yuan
+    display: "Production workers, larger firms, 2025: ¥80,739 ≈ $11,200 (NBS; Fed rate; our conversion)"
+    fields: {usd_spoken: roughly eleven thousand two hundred dollars, growth_spoken: six percent}
+    source_ids: [nbs_wage, fed_g5a]
+    status: source_located
+  - id: bls_wage
+    text: "BLS CES3000000008: average hourly earnings of production and nonsupervisory employees, manufacturing, 2025 monthly average $29.05 (our average); x 40 h x 52 weeks ≈ $60,400 (our calculation, illustrative full-time year)."
+    spoken: about twenty-nine dollars an hour
+    display: "U.S. factory production workers, 2025: ≈ $29/hour (BLS)"
+    fields: {yr_spoken: about sixty thousand dollars}
+    source_ids: [bls_ces]
+    status: source_located
+    verification_note: "Different definitions (annual wage vs hourly earnings); comparison labelled rough, our calculation."
+  - id: ieaev
+    text: "IEA GEVO 2026: 'China remains the world's largest EV manufacturing hub, accounting for nearly 75% of electric cars produced in 2025'; Ch.7: 'In 2025, China accounted for 70% of electric car production and over 80% of battery cell production, as well as about 85% of global production of cathode active material (CAM) and more than 90% of production of anode active material (AAM)'; 'a tightly clustered supply chain, all the way from critical mineral refining and component production to battery and EV manufacturing'; 'In 2025, battery pack prices in China were 30% lower than in North America, and 35% lower than in Europe'."
+    spoken: about seventy percent
+    display: "China, 2025: ~70-75% of electric cars, >80% of battery cells (IEA)"
+    fields: {cells_spoken: more than eighty percent, cam_spoken: about eighty-five percent, aam_spoken: more than ninety percent, pack_spoken: thirty percent}
+    source_ids: [iea_gevo]
+    status: source_located
+    verification_note: "The IEA gives 70% (Ch.7) and 'nearly 75%' (executive summary); narration says 'about seventy percent' and the screen shows the range."
+  - id: ieaev_shift
+    text: "IEA GEVO 2026 executive summary: 'Imports to the United States fell slightly in 2025, with the largest share coming from Mexico'; 'Despite lithium-ion battery manufacturing capacity growing faster in the European Union and the United States than in China last year, China is set to remain the largest producer of batteries'; 'More than half of electric cars sold in Southeast Asia in 2025 were by Chinese brands, while one-third came from a Vietnamese manufacturer.'"
+    spoken: one-third
+    display: "EV imports to the U.S., 2025: largest share from Mexico (IEA)"
+    fields: {}
+    source_ids: [iea_gevo]
+    status: source_located
+  - id: ieapv
+    text: "IEA Special Report on Solar PV Global Supply Chains (July 2022): 'China's share in all the manufacturing stages of solar panels (such as polysilicon, ingots, wafers, cells and modules) exceeds 80%'; 'home to the world's 10 top suppliers of solar PV manufacturing equipment'; 'Costs in China are 10% lower than in India, 20% lower than in the United States, and 35% lower than in Europe.'"
+    spoken: eighty percent
+    display: "Solar PV: China >80% of every manufacturing stage (IEA, 2022)"
+    fields: {us_spoken: twenty percent}
+    source_ids: [iea_pv]
+    status: source_located
+    verification_note: "2022 report; dated in narration and on screen."
+  - id: ieare
+    text: "IEA GCMO 2026 (magnet rare earths): 'For refining, China's share dropped from 90% to 85% between 2024 and 2025, with the majority of the lost share being claimed by the United States and the rest by Malaysia'; China's share of mined supply of magnet rare earths around 60% in 2025; 'On 4 April 2025, the Chinese government introduced export controls on seven heavy rare earth elements.'"
+    spoken: eighty-five percent
+    display: "Magnet rare earth refining: China 85% in 2025, 90% in 2024 (IEA)"
+    fields: {y24_spoken: ninety percent, mined_spoken: about sixty percent}
+    source_ids: [iea_gcmo]
+    status: source_located
+  - id: port
+    text: "SIPG 2025 annual report summary: 母港集装箱吞吐量完成5506.3万标准箱 (55.063M TEU), +6.9%, 16th straight year world No.1. Port of Los Angeles: calendar year 2025 total 10,239,318.40 TEUs. Ratio ≈ 5.4 (our calculation)."
+    spoken: fifty-five million
+    display: "Shanghai 2025: 55.1M TEU (SIPG) vs Los Angeles: 10.2M TEU (POLA)"
+    fields: {la_spoken: about ten million, ratio_spoken: more than five times}
+    source_ids: [sipg, pola]
+    status: source_located
+  - id: ustr18
+    text: "USTR Section 301: additional 25% duty on products of China with annual trade value of approximately $34 billion, effective July 6, 2018; 25% on approximately $16 billion, effective August 23, 2018; 10% on approximately $200 billion effective September 24, 2018, raised to 25% in May 2019; 10% on the '$300 billion action' (Aug 2019), raised to 15% (Aug 30, 2019 notice), reduced from 15% to 7.5% (85 FR 3741, Jan 22, 2020)."
+    spoken: twenty-five percent
+    display: "2018: 25% on ≈ $34B, then ≈ $16B; 10% on ≈ $200B (25% from May 2019) (USTR)"
+    fields: {l1_spoken: thirty-four billion dollars, l2_spoken: sixteen billion dollars, l3_spoken: two hundred billion dollars, l3rate_spoken: ten percent}
+    source_ids: [fr_301_2018]
+    status: source_located
+  - id: ustr24
+    text: "89 FR 76581 (Sept 18, 2024), four-year review: electric vehicles increase rate to 100% in 2024; solar cells (whether or not assembled into modules) 50% in 2024; semiconductors 50% in 2025; lithium-ion EV batteries 25% in 2024; permanent magnets and natural graphite 25% in 2026."
+    spoken: one hundred percent
+    display: "2024 review: EVs 100%, solar cells 50%, chips 50% (2025) (USTR)"
+    fields: {solar_spoken: fifty percent, chips_spoken: fifty percent}
+    source_ids: [fr_301_2024]
+    status: source_located
+  - id: ieepa
+    text: "EO amendment (90 FR 15509, Apr 14, 2025): heading 9903.01.63 amended by deleting '84%' and inserting '125%' (reciprocal tariff on products of the PRC, effective April 10, 2025); 90 FR 21831 (May 21, 2025) reduced it to 10% ('from 120 percent to 54 percent' for low-value postal items); fentanyl-related IEEPA duty on China raised from 10% to 20% (Mar 2025) and reduced to 10% effective November 10, 2025 (90 FR 50725)."
+    spoken: one hundred and twenty-five percent
+    display: "April 2025: 'reciprocal' tariff on China reached 125%, cut to 10% in May (Federal Register)"
+    fields: {}
+    source_ids: [fr_ieepa]
+    status: source_located
+  - id: scotus26
+    text: "Supreme Court, Feb 20, 2026, 6-3: 'IEEPA does not authorize the President to impose tariffs.' CRS R49481: a global 10% Section 122 tariff followed (Feb 24 - July 24, 2026); from July 24, 2026 Section 301 'forced labor' tariffs of 10%-12.5% on 60 economies."
+    spoken: twenty twenty-six
+    display: "Feb 20, 2026: Supreme Court: IEEPA does not authorize tariffs (6-3)"
+    fields: {}
+    source_ids: [scotus, crs_2026]
+    status: source_located
+  - id: s301_26
+    text: "91 FR 47318 (July 28, 2026), effective 12:01 a.m. July 24, 2026: 'the Trade Representative has determined to impose 12.5 percent tariffs on products of China, except as provided in Annex I and Annex II, Part A'; Vietnam 12.5%; India 10%; Mexico 10% (CRS: exemptions for certain products and USMCA-compliant imports)."
+    spoken: twelve and a half percent
+    display: "Since July 24, 2026: 12.5% Section 301 tariff on China; Vietnam 12.5%; Mexico 10% (USTR)"
+    fields: {vn_spoken: twelve and a half percent, mx_spoken: ten percent}
+    source_ids: [fr_301_2026, crs_2026]
+    status: source_located
+    verification_note: "As of the video date (Nov 2026); tariff rates change: dated on screen."
+  - id: census_cn
+    text: "Census c5700: U.S. imports of goods from China $538.5bn (2018, peak), $440.3bn (2024), $308.7bn (2025, -29.9% our calc.); Jan-Sep 2026 $215.0bn vs $242.9bn Jan-Sep 2025 (-11.5%, our calc.); monthly Feb 2026 $19.0bn, Sep 2026 $31.5bn (not seasonally adjusted)."
+    spoken: about three hundred and nine billion dollars
+    display: "U.S. goods imports from China: $538.5B (2018) → $440.3B (2024) → $308.7B (2025) (Census)"
+    fields: {peak_spoken: about five hundred and thirty-nine billion dollars, y24_spoken: about four hundred and forty billion dollars, ytd_chg_spoken: eleven percent, feb_spoken: about nineteen billion dollars, sep_spoken: about thirty-one and a half billion dollars}
+    source_ids: [census_cn]
+    status: source_located
+  - id: shares
+    text: "Our calculation, Census country tables / world total: share of U.S. goods imports. China 21.6% (2017), 13.4% (2024), 9.0% (2025), 7.7% (Jan-Sep 2026); Vietnam 2.0%, 4.2%, 5.7%, 7.4%; Mexico 13.4%, 15.5%, 15.6%, 17.3%; Taiwan 1.8%, 3.6%, 5.9%, 7.7%; India 2.1%, 2.7%, 3.0%, 2.8%. 2017 and 2024 shares as printed by Census 'Top Trading Partners'."
+    spoken: about one-fifth
+    display: "Share of U.S. goods imports, 2017 → Jan-Sep 2026 (Census; our calculation)"
+    fields: {cn17_spoken: about a fifth, cn26_spoken: less than eight percent, vn17_spoken: two percent, vn26_spoken: more than seven percent, mx17_spoken: thirteen percent, mx26_spoken: seventeen percent, tw17_spoken: under two percent, tw26_spoken: almost eight percent, in26_spoken: three percent}
+    source_ids: [census_cn, census_world, census_partners]
+    status: source_located
+    verification_note: "2025 and 2026 shares use the seasonally adjusted world total with not-seasonally-adjusted country data (0.1% difference in 2024); labelled our calculation."

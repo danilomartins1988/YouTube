@@ -1,0 +1,255 @@
+logline: China makes about a quarter of the world's manufactured goods not because of one cheap wage but because of a neighborhood
+  of suppliers, refiners, ports and practiced engineers. Tariffs since 2018 moved the last step of assembly toward Vietnam, Mexico
+  and Taiwan; the deeper layers move far more slowly.
+title: Why the World Still Depends on Chinese Factories
+segments:
+- id: co_open
+  chapter: Cold open
+  narration: One Tuesday morning, a toaster dies. Its owner, Mel, flips it over and finds three words. Made in China. So she
+    sets out to buy a new one that isn't. The kettle. The lamp. The charger in her pocket. The same three words, again and again.
+  claims: []
+  analysis: true
+  source_note: Cold-open gag with a fictional character (Mel); no figures.
+- id: co_hook
+  chapter: Cold open
+  narration: Since twenty eighteen, the United States has raised tariffs on Chinese goods again and again. Last year, American
+    imports from China fell to {{census_cn}}, down from {{census_cn.y24_spoken}} the year before. And yet China still makes {{mva}}
+    of everything the world manufactures. So why is it so hard to leave?
+  claims:
+  - census_cn
+  - mva
+- id: co_promise
+  chapter: Cold open
+  narration: The answer isn't just cheap labor. Let's walk the factory floor, the street of suppliers, the port, the refinery,
+    and one factory that tried to move away.
+  claims: []
+  analysis: true
+  source_note: Promise of the episode (hook rule).
+- id: title_card
+  chapter: Cold open
+  narration: ''
+  claims: []
+- id: a1_card
+  chapter: The everything factory
+  narration: ''
+  claims: []
+- id: a1_floor
+  chapter: The everything factory
+  narration: Picture a factory floor that makes almost everything. Toasters on one line, phone chargers on the next, then sneakers,
+    batteries and solar panels. That floor is a cartoon, of course. The numbers behind it are not.
+  claims: []
+  analysis: true
+  source_note: Illustrative set (no figures).
+- id: a1_scale
+  chapter: The everything factory
+  narration: Start with size. Manufacturing value added is what factories add on top of the parts and materials they buy. By
+    World Bank data, China's factories added about {{mva.t25_spoken}} in twenty twenty-five. That's {{mva}} of the world total,
+    by our calculation. Back in twenty oh-four, it was {{mva.y04_spoken}}.
+  claims:
+  - mva
+- id: a1_draw
+  chapter: The everything factory
+  narration: Let me draw that. Here's all the world's factory output in twenty oh-four. China's slice is about one dollar in twelve.
+    Now twenty twenty-five. The whole bar is bigger, and China's slice is more than one dollar in four.
+  claims:
+  - mva
+- id: a1_exports
+  chapter: The everything factory
+  narration: And it sells that output everywhere. The World Trade Organization says China exported {{wto}} of goods in twenty
+    twenty-five, more than any other country, about {{wto.share_spoken}} of the world total. It sold so much more than it bought
+    that its goods surplus reached {{wto.surplus_spoken}}.
+  claims:
+  - wto
+- id: a1_workers
+  chapter: The everything factory
+  narration: It has the people, too. China's statistics bureau counted {{nbs_emp}} working in industry and construction at the end
+    of twenty twenty-four. That count includes builders, not just factory hands. But it gives you the scale.
+  claims:
+  - nbs_emp
+- id: a1_wage
+  chapter: The everything factory
+  narration: Are they still cheap? A production worker at a larger Chinese company earned {{nbs_wage.usd_spoken}} in twenty twenty-five,
+    at the Federal Reserve's average exchange rate. An American factory production worker earned {{bls_wage}}. Cheaper, clearly.
+    But Chinese factory pay keeps rising, up about {{nbs_wage.growth_spoken}} last year at private firms. If wages were the whole
+    story, factories would simply chase the lowest pay on the map. Many of them didn't.
+  claims:
+  - nbs_wage
+  - bls_wage
+- id: a2_card
+  chapter: Everything is down the street
+  narration: ''
+  claims: []
+- id: a2_street
+  chapter: Everything is down the street
+  narration: Here's what holds them. Picture a street where every part is a few minutes away. Screws on one corner. Cables on
+    the next. Molds, motors, glass, batteries, circuit boards. An engineer changes a design in the morning and holds a new sample
+    by the afternoon. Economists call this a supplier cluster. It's speed you can't put in a container.
+  claims: []
+  analysis: true
+  source_note: Illustration of a supplier cluster (analysis; no figures).
+- id: a2_draw
+  chapter: Everything is down the street
+  narration: Let me draw why that matters. Box one is the final assembler. Around it, dozens of suppliers. When they're close,
+    a missing part is a phone call and a short ride. Move the assembler far away, and every arrow becomes a container, a customs
+    form and weeks at sea.
+  claims: []
+  analysis: true
+  source_note: Simplified cluster diagram (analysis, no figures).
+- id: a2_ev
+  chapter: Everything is down the street
+  narration: The deepest clusters are in the newest industries. The International Energy Agency says China made {{ieaev}} of
+    the world's electric cars in twenty twenty-five, and {{ieaev.cells_spoken}} of battery cells. For the materials inside those
+    cells, it's higher still. {{ieaev.cam_spoken}} of cathode material. {{ieaev.aam_spoken}} of anode material.
+  claims:
+  - ieaev
+- id: a2_ev2
+  chapter: Everything is down the street
+  narration: The agency calls it a tightly clustered supply chain, from refining minerals to building the car. And it shows up
+    in the price. In twenty twenty-five, battery packs in China were {{ieaev.pack_spoken}} cheaper than in North America.
+  claims:
+  - ieaev
+- id: a2_solar
+  chapter: Everything is down the street
+  narration: Solar panels tell the same story. In a twenty twenty-two report, the IEA found that China's share of every manufacturing
+    stage, from polysilicon to wafers, cells and modules, was above {{ieapv}}. The ten biggest makers of the machines that make
+    the panels were Chinese. And making panels there cost {{ieapv.us_spoken}} less than in the United States.
+  claims:
+  - ieapv
+- id: a2_rare
+  chapter: Everything is down the street
+  narration: Then there's a step most people never see. Rare earth elements go into the magnets inside electric motors and wind
+    turbines. Digging them up is only the start. They have to be separated and refined. For magnet rare earths, the IEA puts China's
+    share of refining at {{ieare}} in twenty twenty-five, down from {{ieare.y24_spoken}} a year earlier. And in April twenty
+    twenty-five, China put export controls on seven of them.
+  claims:
+  - ieare
+- id: a2_port
+  chapter: Everything is down the street
+  narration: When it's all built, it has to leave. In twenty twenty-five, the port of Shanghai handled {{port}} containers, counted
+    in twenty-foot units. The port of Los Angeles handled {{port.la_spoken}}. That's {{port.ratio_spoken}} as many through one
+    Chinese port, by our calculation.
+  claims:
+  - port
+- id: a2_people
+  chapter: Everything is down the street
+  narration: Add highways, power plants, and a deep bench of tooling engineers, line managers and technicians who have launched
+    products many times, and you get the real advantage. Not one cheap factory. A whole neighborhood that works together, fast.
+  claims: []
+  analysis: true
+  source_note: Synthesis of the cluster, port and supply-chain evidence above (analysis).
+- id: a3_card
+  chapter: The tariff wall
+  narration: ''
+  claims: []
+- id: a3_2018
+  chapter: The tariff wall
+  narration: Washington's answer was tariffs. In twenty eighteen, the U.S. Trade Representative put a {{ustr18}} tariff on about
+    {{ustr18.l1_spoken}} of Chinese goods a year, then on {{ustr18.l2_spoken}} more. In September, a {{ustr18.l3rate_spoken}}
+    tariff hit about {{ustr18.l3_spoken}}, raised to {{ustr18}} the next spring. Another round followed in twenty nineteen, and
+    part of it was cut in half under a trade deal in early twenty twenty.
+  claims:
+  - ustr18
+- id: a3_2024
+  chapter: The tariff wall
+  narration: In twenty twenty-four, a review raised tariffs on strategic products. {{ustr24}} on Chinese electric cars. {{ustr24.solar_spoken}}
+    on solar cells. And {{ustr24.chips_spoken}} on semiconductors from twenty twenty-five.
+  claims:
+  - ustr24
+- id: a3_2025
+  chapter: The tariff wall
+  narration: Then, in twenty twenty-five, new tariffs under an emergency-powers law were stacked on top. In April, the so-called
+    reciprocal tariff on Chinese goods reached {{ieepa}}, before it was cut back in May. In February twenty twenty-six, the Supreme
+    Court ruled that the law does not authorize tariffs at all. Other laws took over. Since July twenty twenty-six, Chinese goods
+    have faced a {{s301_26}} tariff under one of them.
+  claims:
+  - ieepa
+  - scotus26
+  - s301_26
+- id: a3_who
+  chapter: The tariff wall
+  narration: Remember who pays. A tariff is collected at the border from the American company that imports the goods. Some of
+    it reaches shoppers. Federal Reserve economists estimated that at least {{fed_pass}} of the tariff cost on Chinese imports had shown
+    up in retail prices by the end of twenty twenty-five. The rest was absorbed somewhere along the way.
+  claims:
+  - fed_pass
+- id: a3_effect
+  chapter: The tariff wall
+  narration: Did it work? Partly. U.S. imports from China peaked at {{census_cn.peak_spoken}} in twenty eighteen. In twenty twenty-five,
+    they fell by {{wto.usdrop_spoken}} in a single year, to {{census_cn}}.
+  claims:
+  - census_cn
+  - wto
+- id: a3_back
+  chapter: The tariff wall
+  narration: But watch the boxes. In the first nine months of twenty twenty-six, imports from China were down about {{census_cn.ytd_chg_spoken}}
+    from a year earlier. Month by month, though, they climbed again, from {{census_cn.feb_spoken}} in February to {{census_cn.sep_spoken}}
+    in September.
+  claims:
+  - census_cn
+- id: a4_card
+  chapter: China plus one
+  narration: ''
+  claims: []
+- id: a4_plus1
+  chapter: China plus one
+  narration: So many companies tried a different plan. Keep China, and add one more country. Factory people call it China plus
+    one. And America's import data shows where the orders went.
+  claims: []
+  analysis: true
+  source_note: Definition of the 'China plus one' strategy (common business term); data follows.
+- id: a4_draw
+  chapter: China plus one
+  narration: Let me chart America's import shares, from Census data, by our calculation. In twenty seventeen, China supplied {{shares.cn17_spoken}}
+    of U.S. goods imports. In the first nine months of twenty twenty-six, {{shares.cn26_spoken}}. Vietnam went from {{shares.vn17_spoken}}
+    to {{shares.vn26_spoken}}. Taiwan, from {{shares.tw17_spoken}} to {{shares.tw26_spoken}}. Mexico, from {{shares.mx17_spoken}}
+    to {{shares.mx26_spoken}}. India grew too, but slowly, to about {{shares.in26_spoken}}.
+  claims:
+  - shares
+- id: a4_parts
+  chapter: China plus one
+  narration: But follow the parts. In twenty twenty-five, China's exports to Southeast Asia rose {{wto_in}}. The WTO notes that
+    part of that growth is parts and materials for products whose buyers live somewhere else. A new factory can move the final
+    assembly, while many of its parts still come from the old neighborhood.
+  claims:
+  - wto_in
+- id: a4_move
+  chapter: China plus one
+  narration: Moving the deeper layers is slow. A new plant needs suppliers that don't exist there yet, roads and ports that can
+    handle the volume, steady power, and people trained to run the line. Until all of that arrives, the boxes keep coming back.
+  claims: []
+  analysis: true
+  source_note: Why relocation is slow (analysis built on the IEA/WTO evidence; no figures).
+- id: a4_where
+  chapter: China plus one
+  narration: Still, it is happening. The IEA says the largest share of America's electric car imports in twenty twenty-five came
+    from Mexico. Battery factory capacity grew faster in Europe and the United States than in China. And in Southeast Asia, {{ieaev_shift}}
+    of electric cars sold came from a Vietnamese carmaker.
+  claims:
+  - ieaev_shift
+- id: a4_risk
+  chapter: China plus one
+  narration: The new places face tariffs, too. Since July twenty twenty-six, Vietnam's rate under that same action is {{s301_26.vn_spoken}},
+    the same as China's. Mexico's is {{s301_26.mx_spoken}}, with exemptions for goods that follow the North American trade agreement.
+  claims:
+  - s301_26
+- id: payoff
+  chapter: Why it's hard to leave
+  narration: So why does the world still depend on Chinese factories? Not because of one cheap wage. Because of a neighborhood.
+    Suppliers down the street, refiners for the hidden materials, ports that never sleep, and engineers who have done it before.
+    Tariffs can move the last step. Rebuilding the whole neighborhood takes far longer. That's why, even after years of trade war,
+    more than a quarter of the world's manufacturing still happens in one country. The next factory may well open in Vietnam,
+    Mexico or India. Its parts list is the hard part to move.
+  claims:
+  - mva
+  analysis: true
+  source_note: Conclusion drawn from the sourced facts above.
+- id: teaser
+  chapter: Why it's hard to leave
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: Why it's hard to leave
+  narration: ''
+  claims: []

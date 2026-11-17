@@ -228,8 +228,8 @@ export const CLUB_SETS: Record<string, SetFn> = {
       {concrete(z, f)}
       {Array.from({length: Math.ceil(w / 480)}, (_, k) => { const px = z.x0 + k * 480 + 240; return gap(px) ? null : pallet(px, f + 6, k + 3, t, 0.85, 1, z.palletLabels ? z.palletLabels[k % z.palletLabels.length] : undefined); })}
       {smp !== undefined && <g transform={`translate(${smp} ${f})`}><rect x={-120} y={-150} width={240} height={150} fill="#FFFFFF" stroke={OL} strokeWidth={5} />
-        <path d="M -140 -170 L 140 -170 L 120 -150 L -120 -150 Z" fill="#7BD389" stroke={OL} strokeWidth={4} /><rect x={-150} y={-330} width={300} height={70} rx={12} fill="#FFC93C" stroke={OL} strokeWidth={4} /><T x={0} y={-284} s={34}>FREE SAMPLES</T>
-        <path d="M -140 -260 L -140 -170 M 140 -260 L 140 -170" stroke={OL} strokeWidth={5} />
+        <path d="M -140 -170 L 140 -170 L 120 -150 L -120 -150 Z" fill="#7BD389" stroke={OL} strokeWidth={4} /><rect x={-150} y={-430} width={300} height={70} rx={12} fill="#FFC93C" stroke={OL} strokeWidth={4} /><T x={0} y={-384} s={34}>FREE SAMPLES</T>
+        <path d="M -140 -360 L -140 -170 M 140 -360 L 140 -170" stroke={OL} strokeWidth={5} />
         {Array.from({length: 6}, (_, k) => <g key={k}><circle cx={-90 + k * 36} cy={-176} r={13} fill={['#FFB74D', '#A1887F', '#FFF176'][k % 3]} stroke={OL} strokeWidth={3} /><path d={`M ${-90 + k * 36} -176 L ${-86 + k * 36} -206`} stroke="#8D6E63" strokeWidth={3} /></g>)}</g>}
       {reg !== undefined && <g transform={`translate(${reg} ${f})`}>
         <rect x={-380} y={-130} width={600} height={130} fill="#ECEFF1" stroke={OL} strokeWidth={5} /><rect x={-380} y={-150} width={600} height={26} rx={6} fill="#546E7A" stroke={OL} strokeWidth={4} />
@@ -425,12 +425,12 @@ export const CLUB_SETS: Record<string, SetFn> = {
         <rect x={dx + k * 520 - 60} y={f - 520} width={120} height={36} rx={6} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><T x={dx + k * 520} y={f - 494} s={22}>DOCK {k + 2}</T></g>)}
       <rect x={z.x0} y={f - 110} width={w} height={110} fill="#90A4AE" stroke={OL} strokeWidth={5} />
       {/* day strip */}
-      {z.dayFrom !== undefined && <g transform={`translate(${dx} ${f - 880})`}><rect x={-760} y={-50} width={1520} height={100} rx={20} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
+      {z.dayFrom !== undefined && <g transform={`translate(${dx} ${f - 770})`}><rect x={-760} y={-50} width={1520} height={100} rx={20} fill="#FFFFFF" stroke={OL} strokeWidth={6} />
         {Array.from({length: 31}, (_, k) => <g key={k}><path d={`M ${-700 + k * 46.6} -10 L ${-700 + k * 46.6} ${k % 5 ? 10 : 24}`} stroke={OL} strokeWidth={3} />{k % 10 === 0 && <T x={-700 + k * 46.6} y={-18} s={22}>{`DAY ${k}`}</T>}</g>)}
         <rect x={-700} y={14} width={day * 46.6} height={18} rx={9} fill="#2E9E5B" />
         <g transform={`translate(${-700 + day * 46.6} 0)`}><path d="M 0 -60 L -18 -86 L 18 -86 Z" fill="#E53950" stroke={OL} strokeWidth={3} /></g>
-        {sold && <g transform={`translate(${-700 + 26 * 46.6} 70) scale(${pop(t, z.soldAt, 0.4)}) rotate(-8)`}><rect x={-120} y={-30} width={240} height={60} rx={10} fill="#2E9E5B" stroke={OL} strokeWidth={4} /><T x={0} y={12} s={28} c="#FFFFFF">{z.soldText || 'SOLD BY ≈ DAY 26'}</T></g>}
-        {bill && <g transform={`translate(${-700 + 30 * 46.6} 70) scale(${pop(t, z.billAt, 0.4)}) rotate(6)`}><rect x={-110} y={-30} width={220} height={60} rx={10} fill="#E53950" stroke={OL} strokeWidth={4} /><T x={0} y={12} s={28} c="#FFFFFF">{z.billText || 'BILL DUE'}</T></g>}
+        {sold && <g transform={`translate(${-700 + 22 * 46.6} 80) scale(${pop(t, z.soldAt, 0.4)}) rotate(-8)`}><rect x={-120} y={-30} width={240} height={60} rx={10} fill="#2E9E5B" stroke={OL} strokeWidth={4} /><T x={0} y={12} s={28} c="#FFFFFF">{z.soldText || 'SOLD BY ≈ DAY 26'}</T></g>}
+        {bill && <g transform={`translate(${-700 + 29 * 46.6} 150) scale(${pop(t, z.billAt, 0.4)}) rotate(6)`}><rect x={-110} y={-30} width={220} height={60} rx={10} fill="#E53950" stroke={OL} strokeWidth={4} /><T x={0} y={12} s={28} c="#FFFFFF">{z.billText || 'BILL DUE'}</T></g>}
       </g>}
       {/* truck */}
       <g transform={`translate(${lerp(dx + 1700, dx + 360, tu)} ${f + 120})`}>
@@ -579,7 +579,7 @@ export const CLUB_SETS: Record<string, SetFn> = {
       <g transform={`translate(${-2600 + 2600 * wipe} 0)`}>{Array.from({length: 24}, (_, k) => <rect key={k} x={k * 180 - 400} y={-200} width={150} height={1500} fill={k % 2 ? '#D9A866' : '#C99A5B'} opacity={0.9} />)}
         {Array.from({length: 24}, (_, k) => <path key={'g' + k} d={`M ${k * 180 - 390} 0 Q ${k * 180 - 330} 540 ${k * 180 - 380} 1080`} stroke="#A9783F" strokeWidth={4} fill="none" opacity={0.6} />)}</g>
       {/* forklift + crate with the act number */}
-      <g transform={`translate(${lerp(-500, 470, crate)} 760)`}>
+      <g transform={`translate(${lerp(-500, 420, crate)} 930)`}>
         <rect x={-200} y={-90} width={260} height={90} rx={10} fill="#FFB300" stroke={OL} strokeWidth={7} /><rect x={-170} y={-200} width={150} height={110} fill="none" stroke="#37474F" strokeWidth={12} />
         {[-150, 20].map((wx) => <circle key={wx} cx={wx} cy={10} r={34} fill="#263238" stroke={OL} strokeWidth={5} />)}
         <rect x={60} y={-380} width={18} height={380} fill="#546E7A" stroke={OL} strokeWidth={4} /><path d="M 78 -30 L 260 -30" stroke="#37474F" strokeWidth={14} />
