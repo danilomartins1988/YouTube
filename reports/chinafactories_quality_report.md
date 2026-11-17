@@ -2,12 +2,12 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/why-the-world-still-depends-on-chinese-factories/documentary/why-the-world-still-depends-on-chinese-factories--documentary.mp4 (323.3 MB) |
+| File exists | PASS | /home/user/YouTube/output/why-the-world-still-depends-on-chinese-factories/documentary/why-the-world-still-depends-on-chinese-factories--documentary.mp4 (311.5 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
 | Duration 11-13:20 min (channel standard 660-800 s) | PASS | 712.93 s (11:52) |
-| English narration | FAIL | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 1 |
+| English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
 | Caption/voice sync | PASS | 359 cues; median cue-start offset 0.04 s, p90 0.39 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
@@ -22,10 +22,10 @@
 # QC report: why-the-world-still-depends-on-chinese-factories / documentary (long_16x9)
 
 - Runtime: **712.93 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 323.3 MB
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 311.5 MB
 - Loudness: -16.1 LUFS integrated, true peak -4.0 dBFS
-- Errors: **1**, warnings: **87**
-- Technical QC passed: **False**
+- Errors: **0**, warnings: **87**
+- Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
 ## Issues
@@ -114,10 +114,9 @@
 - [WARNING] (licensing) Dataset census_world has no licence recorded
 - [WARNING] (licensing) Dataset census_partners has no licence recorded
 - [WARNING] (licensing) Dataset wdi_mva has no licence recorded
-- [WARNING] (distinctiveness) Scene sequence 81% similar to 'how-black-friday-actually-makes-money/documentary'
-- [WARNING] (distinctiveness) Scene sequence 89% similar to 'why-americans-can-no-longer-afford-a-home/documentary'
-- [WARNING] (distinctiveness) Scene sequence 94% similar to 'how-costco-makes-billions-selling-almost-nothing/documentary'
-- [ERROR] (currency) Scene s11_wage: non-USD amount in on-screen text ('¥'); convert to US dollars with a cited official exchange rate
+- [WARNING] (distinctiveness) Scene sequence 82% similar to 'how-black-friday-actually-makes-money/documentary'
+- [WARNING] (distinctiveness) Scene sequence 90% similar to 'why-americans-can-no-longer-afford-a-home/documentary'
+- [WARNING] (distinctiveness) Scene sequence 95% similar to 'how-costco-makes-billions-selling-almost-nothing/documentary'
 
 ## Publish blockers - claims needing human verification
 

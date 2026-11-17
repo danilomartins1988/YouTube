@@ -1,0 +1,66 @@
+# YouTube package: "Why the World Still Depends on Chinese Factories" (Episode 60)
+
+Prepared for manual publishing. Nothing has been uploaded. Video length 11:53.
+
+## Title options
+
+1. **Why the World Still Depends on Chinese Factories** (recommended, owner's title)
+2. **Why Is Everything Still Made in China?**
+3. **Why Is Everything Made in China? (It's Not Cheap Labor)**
+
+## Description (2944 chars)
+
+```
+Why is everything still made in China? Since 2018 the United States has raised tariffs on Chinese goods again and again, and in 2025 American imports from China fell 29%. Yet China still makes about 27% of all the manufacturing value in the world (World Bank data, 2025, our calculation). In this animated documentary we walk the factory floor, the street where every part is a few minutes away, the port of Shanghai, a rare-earth refinery and a factory that tried to move, to explain the real reason the world depends on Chinese factories: not one cheap wage, but a whole supply neighborhood. We follow the tariff record from 2018 to 2026, see where the orders went under "China plus one" (Vietnam, Taiwan, Mexico, India), and why the parts list is the hardest thing to move.
+
+Questions this video answers
+• Why is almost everything made in China?
+• Is it just cheap labor?
+• What is a supplier cluster, and why does it matter?
+• How much of the world's EVs, batteries, solar panels and rare-earth refining comes from China?
+• Did the tariffs work? Where did the factories go?
+• Who actually pays a tariff?
+
+Chapters
+0:00 Why is everything still made in China?
+1:09 The everything factory
+3:23 Everything is down the street (supplier clusters, EVs, solar, rare earths)
+6:26 The tariff wall, 2018–2026
+8:51 China plus one: Vietnam, Taiwan, Mexico, India
+11:00 Why it's so hard to leave
+
+Related on The Hidden Economics
+• The Small Island the Whole World Economy Depends On
+• The Chemicals Nobody Talks About That Decide Who Makes Chips
+• India's Chip Plants Don't Make Chips. That's the Plan
+• Who Actually Gets the $166 Billion Tariff Refund?
+
+Sources
+World Bank World Development Indicators (manufacturing value added); World Trade Organization, Global Trade Outlook and Statistics (March 2026); U.S. Census Bureau, U.S. trade in goods by country (data through September 2026); National Bureau of Statistics of China (employment, wages); Federal Reserve (G.5A exchange rates; FEDS Notes on tariff pass-through); U.S. Bureau of Labor Statistics; International Energy Agency (Global EV Outlook 2026, Global Critical Minerals Outlook 2026, Solar PV Global Supply Chains 2022); Shanghai International Port Group (2025 annual report); Port of Los Angeles; USTR and the Federal Register (Section 301 notices 2018–2026); executive orders in the Federal Register (2025); U.S. Supreme Court (Learning Resources v. Trump, Feb 20, 2026); Congressional Research Service (R49481). Values marked "our calculation" are our own arithmetic. Tariff rates are as of November 2026 and change often. Yuan converted to US dollars at the Federal Reserve's 2025 average rate.
+
+The characters (Mel, Wei, Kip) are fictional and original. No logos, no real people. Not financial advice.
+
+The Hidden Economics: animated documentaries about the money, business and power behind everyday things. Narration: AI voice. Animation: original.
+
+#china #manufacturing #economics
+```
+
+## Chapters
+
+```
+0:00 Why is everything still made in China?
+1:09 The everything factory
+3:23 Everything is down the street (supplier clusters, EVs, solar, rare earths)
+6:26 The tariff wall, 2018–2026
+8:51 China plus one: Vietnam, Taiwan, Mexico, India
+11:00 Why it's so hard to leave
+```
+
+## Tags
+
+```
+why is everything made in china, made in china, china manufacturing, chinese factories, china supply chain, china plus one, china plus one strategy, tariffs on china, us china trade, china manufacturing ecosystem, supplier clusters, rare earth refining, rare earth magnets, ev batteries china, solar panels china, vietnam manufacturing, mexico nearshoring, reshoring, global supply chains, economics explained, The Hidden Economics
+```
+
+End screen: suggest "The Small Island the Whole World Economy Depends On" (Ep 07) and "The Chemicals Nobody Talks About That Decide Who Makes Chips" (Ep 18).
+Review after publishing: CTR vs channel baseline, first-30-second retention (cold open), retention at 6:26 (tariff act), Browse vs Search share.
