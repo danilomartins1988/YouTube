@@ -130,18 +130,19 @@ export const FACTORY_SETS: Record<string, SetFn> = {
         return <g transform={`translate(${gx} ${f - 640})`}><rect x={-60} y={-10} width={120} height={40} rx={6} fill={ORANGE} stroke={OL} strokeWidth={4} />
           <path d={`M -20 30 L -20 ${30 + drop} M 20 30 L 20 ${30 + drop}`} stroke={OL} strokeWidth={4} /><g transform={`translate(0 ${60 + drop})`}>{cbox(110, 70, 'PARTS')}</g></g>; })()}
       {/* five product lines at three depths */}
-      {lines.map((ln, k) => { const ly = f - 470 + k * 95, sc = 0.7 + k * 0.08, on = hi === undefined || hi === k;
+      {lines.map((ln, k) => { const ly = f - 540 + k * 108, sc = 1.0 + k * 0.14, on = hi === undefined || hi === k;
         return <g key={'ln' + k} opacity={on ? 1 : 0.55}>
           <rect x={z.x0} y={ly} width={w} height={26} fill="#455A64" stroke={OL} strokeWidth={4} />
           {Array.from({length: Math.ceil(w / 60)}, (_, q) => <circle key={q} cx={z.x0 + q * 60 + ((t * sp * (k % 2 ? -1 : 1)) % 60 + 60) % 60} cy={ly + 13} r={6} fill="#90A4AE" />)}
-          {Array.from({length: Math.ceil(w / 260)}, (_, q) => { const px = z.x0 + (((q * 260 + t * sp * (k % 2 ? -1 : 1)) % w) + w) % w;
+          {Array.from({length: Math.ceil(w / 200)}, (_, q) => { const px = z.x0 + (((q * 200 + t * sp * (k % 2 ? -1 : 1)) % w) + w) % w;
             return <g key={'p' + q} transform={`translate(${px} ${ly - 30 * sc}) scale(${sc})`}>{product(k === 4 ? 4 : k, t, q)}</g>; })}
           <g transform={`translate(${(z.signX ?? 200) + k * 40} ${ly - 70 * sc}) scale(${on && hi !== undefined ? 1 + 0.06 * Math.sin(t * 6) : 1})`}>
             <rect x={-110} y={-26} width={220} height={40} rx={10} fill={on && hi !== undefined ? YEL : '#FFFFFF'} stroke={OL} strokeWidth={3.5} />
             <T x={0} y={4} s={fit(`LINE ${k + 1} · ${ln}`, 200, 20)}>{`LINE ${k + 1} · ${ln}`}</T></g>
         </g>; })}
-      {/* robot arms along the front line */}
-      {Array.from({length: Math.ceil(w / 700)}, (_, k) => <g key={'ra' + k} transform={`translate(${z.x0 + 350 + k * 700} ${f - 20})`}>{robotArm(t, k, 0.9, k % 2 ? TEAL : ORANGE)}</g>)}
+      {/* robot arms and workers along the front line */}
+      {Array.from({length: Math.ceil(w / 700)}, (_, k) => <g key={'ra' + k} transform={`translate(${z.x0 + 350 + k * 700} ${f - 10})`}>{robotArm(t, k, 1.25, k % 2 ? TEAL : ORANGE)}</g>)}
+      {Array.from({length: Math.ceil(w / 700)}, (_, k) => worker(z.x0 + 650 + k * 700 + Math.sin(t * 0.7 + k) * 30, f - 4, 1.15, k, t, 0))}
       {/* floor */}
       <rect x={z.x0} y={f} width={w} height={700} fill="#CFD8DC" />
       <rect x={z.x0} y={f + 40} width={w} height={14} fill={YEL} opacity={0.9} />
@@ -421,6 +422,49 @@ export const FACTORY_SETS: Record<string, SetFn> = {
     </g>;
   },
 
+  /** MEL'S KITCHEN (day): window, cabinets, a counter of appliances; `tags` [[t, idx]] pop a little origin tag on appliance idx */
+  kitchen: (t, z, f) => {
+    const w = z.x1 - z.x0, cx = z.counterX ?? 300, tagTxt: string = z.tagText || 'MADE IN CHINA', top = f - 250;
+    const tags: [number, number][] = (z.tags || []).map((p: any) => [Number(p[0]), Number(p[1])]);
+    const tagAt = (k: number) => { const m = tags.find((p) => p[1] === k); return m ? m[0] : undefined; };
+    const app = (k: number, x: number, node: React.ReactNode) => { const ta = tagAt(k);
+      return <g key={'ap' + k} transform={`translate(${x} ${top})`}>{node}
+        {ta !== undefined && t >= ta && <g transform={`translate(0 -${k === 1 ? 300 : 190}) scale(${pop(t, ta, 0.4)}) rotate(${-6 + 3 * Math.sin(t * 3 + k)})`}>
+          <path d="M 0 40 L 0 70" stroke={OL} strokeWidth={3} /><rect x={-92} y={-4} width={184} height={44} rx={8} fill="#FFFFFF" stroke={OL} strokeWidth={3.5} /><T x={0} y={26} s={20} c={RED}>{tagTxt}</T></g>}</g>; };
+    return <g>
+      <rect x={z.x0} y={-2500} width={w} height={2500 + f} fill="#FFF2D6" />
+      {Array.from({length: Math.ceil(w / 90)}, (_, k) => <rect key={'wp' + k} x={z.x0 + k * 90} y={-2500} width={45} height={2500 + f} fill="#FBE6BE" opacity={0.6} />)}
+      {/* window */}
+      <g transform={`translate(${z.windowX ?? 1250} ${f - 640})`}><rect x={-230} y={-150} width={460} height={300} rx={10} fill="#9ED9F7" stroke={OL} strokeWidth={6} />
+        <circle cx={120} cy={-70} r={40} fill="#FFE27A" stroke={OL} strokeWidth={4} />
+        <path d="M -230 90 Q -120 20 0 80 Q 120 30 230 90 L 230 150 L -230 150 Z" fill="#A9D18E" stroke={OL} strokeWidth={4} />
+        <g transform={`translate(-120 60) rotate(${Math.sin(t * 1.3) * 3})`}><path d="M 0 0 L 0 -60" stroke="#8A5428" strokeWidth={10} /><circle cx={0} cy={-90} r={46} fill="#6CBF66" stroke={OL} strokeWidth={4} /></g>
+        <path d="M 0 -150 L 0 150 M -230 0 L 230 0" stroke={OL} strokeWidth={6} />
+        <path d={`M -250 -170 Q -150 ${-120 + 6 * Math.sin(t)} -60 -170 Z M 250 -170 Q 150 ${-120 + 6 * Math.sin(t + 1)} 60 -170 Z`} fill="#E5484D" stroke={OL} strokeWidth={4} /></g>
+      {/* upper cabinets */}
+      {Array.from({length: 4}, (_, k) => <g key={'uc' + k}><rect x={cx - 380 + k * 190} y={f - 820} width={180} height={220} rx={10} fill="#7FC8C0" stroke={OL} strokeWidth={5} /><circle cx={cx - 380 + k * 190 + 150} cy={f - 700} r={8} fill={OL} /></g>)}
+      {/* counter */}
+      <rect x={cx - 420} y={top} width={1500} height={250} fill="#5FA8A0" stroke={OL} strokeWidth={6} />
+      <rect x={cx - 440} y={top - 22} width={1540} height={30} rx={8} fill="#F4F1E6" stroke={OL} strokeWidth={5} />
+      {Array.from({length: 6}, (_, k) => <g key={'dr' + k}><rect x={cx - 400 + k * 245} y={top + 30} width={225} height={190} rx={10} fill="#73BDB4" stroke={OL} strokeWidth={4} /><rect x={cx - 320 + k * 245} y={top + 60} width={70} height={12} rx={6} fill={OL} /></g>)}
+      {/* appliances: 0 kettle, 1 lamp, 2 mixer, 3 phone + charger */}
+      {app(0, cx - 280, <g><path d="M -60 -10 L -50 -130 Q 0 -160 50 -130 L 60 -10 Z" fill="#E5484D" stroke={OL} strokeWidth={5} /><path d="M 50 -110 Q 100 -100 70 -40" stroke={OL} strokeWidth={8} fill="none" /><path d="M -50 -100 L -90 -130" stroke={OL} strokeWidth={10} strokeLinecap="round" />
+        {[0, 1].map((q) => { const u = (t * 0.7 + q / 2) % 1; return <circle key={q} cx={-96 - u * 20} cy={-140 - u * 70} r={10 + u * 14} fill="#FFFFFF" stroke={OL} strokeWidth={3} opacity={1 - u} />; })}</g>)}
+      {app(1, cx - 40, <g><path d="M -10 -10 L -10 -200 M 10 -10 L 10 -200" stroke={OL} strokeWidth={6} /><rect x={-40} y={-16} width={80} height={16} rx={6} fill="#5C6BC0" stroke={OL} strokeWidth={4} /><path d="M -70 -200 L 70 -200 L 40 -280 L -40 -280 Z" fill="#FFD23F" stroke={OL} strokeWidth={5} />
+        <path d="M -70 -200 L -120 -20 L 120 -20 L 70 -200 Z" fill="#FFF6B0" opacity={0.25 + 0.05 * Math.sin(t * 4)} /></g>)}
+      {app(2, cx + 220, <g><rect x={-60} y={-40} width={120} height={40} rx={8} fill="#ECEFF1" stroke={OL} strokeWidth={4} /><path d="M -40 -40 L -40 -150 L 50 -150 L 60 -110 L 0 -110" fill="#26A69A" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+        <g transform={`translate(0 -80) rotate(${t * 600})`}><path d="M -16 0 L 16 0 M 0 -16 L 0 16" stroke={OL} strokeWidth={4} /></g><path d="M -50 -60 Q 0 -10 50 -60" fill="#CFD8DC" stroke={OL} strokeWidth={4} /></g>)}
+      {app(3, cx + 470, <g><rect x={-26} y={-90} width={52} height={86} rx={8} fill="#263238" stroke={OL} strokeWidth={4} /><rect x={-20} y={-82} width={40} height={64} rx={4} fill="#80DEEA" opacity={0.8} /><path d="M 0 -4 Q 30 20 80 -6" stroke="#FFFFFF" strokeWidth={6} fill="none" /><path d="M 0 -4 Q 30 20 80 -6" stroke={OL} strokeWidth={2} fill="none" /><rect x={74} y={-30} width={40} height={36} rx={6} fill="#FFFFFF" stroke={OL} strokeWidth={4} /></g>)}
+      {/* fridge */}
+      <g transform={`translate(${cx + 1250} ${f})`}><rect x={-140} y={-560} width={280} height={560} rx={20} fill="#ECEFF1" stroke={OL} strokeWidth={6} /><path d="M -140 -360 L 140 -360" stroke={OL} strokeWidth={5} /><rect x={100} y={-520} width={14} height={120} rx={7} fill={OL} /><rect x={100} y={-320} width={14} height={160} rx={7} fill={OL} />
+        <rect x={-90} y={-520} width={80} height={60} rx={4} fill="#FFFFFF" stroke={OL} strokeWidth={3} transform="rotate(-6)" /><circle cx={-50} cy={-470} r={14} fill="#FFD23F" stroke={OL} strokeWidth={3} /></g>
+      {/* floor */}
+      <rect x={z.x0} y={f} width={w} height={700} fill="#E9D8B6" />
+      {Array.from({length: Math.ceil(w / 120)}, (_, k) => <rect key={'ft' + k} x={z.x0 + k * 120} y={f + (k % 2) * 60} width={60} height={60} fill="#D9C39A" opacity={0.7} />)}
+      <rect x={z.x0} y={f} width={w} height={14} fill="#CDB487" stroke={OL} strokeWidth={4} />
+    </g>;
+  },
+
   /** SHOW TITLE CARD (screen-filling, static camera) */
   fctitle: (t, z, f) => {
     const cx = 960, cy = 470, lines: string[] = z.lines || ['STILL MADE', 'IN CHINA'], sub: string = z.sub || 'WHY THE WORLD STILL DEPENDS ON CHINESE FACTORIES';
@@ -437,12 +481,15 @@ export const FACTORY_SETS: Record<string, SetFn> = {
         <circle r={330} fill="none" stroke="#FFFFFF" strokeWidth={8} strokeDasharray="4 22" /></g>
       <g transform={`translate(${cx} ${cy - 250}) scale(${pop(t, 0.3, 0.5)})`}><rect x={-360} y={-36} width={720} height={60} rx={30} fill="#FFFFFF" stroke={OL} strokeWidth={6} /><T x={0} y={8} s={26} ls={3}>{z.kicker || 'THE HIDDEN ECONOMICS PRESENTS'}</T></g>
       {/* letters ride in on little crates and drop */}
-      {lines.map((word, wi) => <g key={wi} transform={`translate(${cx} ${cy - 60 + wi * 160})`}>{word.split('').map((ch, k) => {
-        const st = 0.45 + wi * 0.4 + k * 0.05, u = E.outBack(win(t, st, 0.45)), cw = Math.min(104, 1500 / Math.max(1, word.length)), x = (k - (word.length - 1) / 2) * cw;
+      {lines.map((word, wi) => { const adv = (c: string) => (c === 'I' ? 0.48 : c === ' ' ? 0.5 : c === 'L' || c === 'T' || c === '.' ? 0.78 : c === 'M' || c === 'W' ? 1.18 : 1);
+        const tot = word.split('').reduce((q, c) => q + adv(c), 0), cw = Math.min(104, 1500 / Math.max(1, tot));
+        const xs: number[] = []; let acc = 0; word.split('').forEach((c) => { xs.push((acc + adv(c) / 2 - tot / 2) * cw); acc += adv(c); });
+        return <g key={wi} transform={`translate(${cx} ${cy - 60 + wi * 160})`}>{word.split('').map((ch, k) => {
+        const st = 0.45 + wi * 0.4 + k * 0.05, u = E.outBack(win(t, st, 0.45)), x = xs[k];
         const sq = 1 + 0.25 * jig(t, st + 0.3, 20, 8), wob = Math.sin(t * 4 + k * 0.7 + wi) * 5;
         if (ch === ' ') return null;
         return <g key={k} transform={`translate(${x + (1 - u) * 900} ${wob}) scale(${(2 - sq)} ${sq}) rotate(${Math.sin(t * 3 + k) * 3})`}>
-          <T x={8} y={12} s={150} c={OL}>{ch}</T><T x={0} y={0} s={150} c={wi ? '#FFFFFF' : '#FFD23F'} st={OL} sw={14}>{ch}</T></g>; })}</g>)}
+          <T x={8} y={12} s={150} c={OL}>{ch}</T><T x={0} y={0} s={150} c={wi ? '#FFFFFF' : '#FFD23F'} st={OL} sw={14}>{ch}</T></g>; })}</g>; })}
       <g transform={`translate(${cx} ${cy + 300}) scale(${pop(t, 1.6, 0.45)}) rotate(${-2 + Math.sin(t * 2) * 1.5})`}>
         <path d="M -560 -42 L 560 -42 L 530 0 L 560 42 L -560 42 L -530 0 Z" fill="#FFFFFF" stroke={OL} strokeWidth={7} strokeLinejoin="round" /><T x={0} y={14} s={fit(sub, 1040, 38)} c="#0F5E6E">{sub}</T></g>
       {/* conveyor along the bottom with crates */}
@@ -484,13 +531,15 @@ const gizmo: ItemFn = (a, {t, f}, i) => {
   const parts: [number, string][] = (a.parts || []).map((p: any) => [Number(p[0]), String(p[1])]);
   const has = (k: number) => parts.length > k && t >= parts[k][0];
   const pp = (k: number) => (parts.length > k ? pop(t, parts[k][0], 0.4) : 0);
-  const face: string = pick(a.faces, t, a.face || 'happy'), bl = ((t + i) % 3.1) < 0.12;
+  const face: string = pick(a.faces, t, a.face || 'happy'), bl = ((t + i) % 3.1) < 0.12 || face === 'dead';
   const toast = a.toastAt !== undefined ? E.outBack(win(t, a.toastAt, 0.5)) * (1 - win(t, a.toastAt + 1.6, 0.8) * 0.6) : 0;
   const shake = a.toastAt !== undefined && t > a.toastAt - 0.6 && t < a.toastAt ? Math.sin(t * 60) * 4 : 0;
   // the last part added flashes its label
   const last = parts.filter((p) => t >= p[0]).pop();
   return <g key={'gz' + i} transform={`translate(${x + shake} ${y}) scale(${s})`}>
     <ellipse cx={0} cy={4} rx={150} ry={14} fill={OL} opacity={0.18} />
+    {a.smokeAt !== undefined && t >= a.smokeAt && Array.from({length: 4}, (_, q) => { const u = ((t - a.smokeAt) * 0.6 + q / 4) % 1;
+      return <circle key={'sm' + q} cx={-40 + q * 26 + Math.sin(t * 2 + q) * 20} cy={-220 - u * 260} r={20 + u * 40} fill="#78909C" stroke={OL} strokeWidth={3} opacity={0.85 * (1 - u)} />; })}
     {/* toast slices */}
     {toast > 0 && [-40, 40].map((q) => <g key={q} transform={`translate(${q} ${-200 - 160 * toast})`}><rect x={-34} y={-50} width={68} height={70} rx={20} fill="#E3A857" stroke={OL} strokeWidth={4} /><rect x={-26} y={-42} width={52} height={54} rx={14} fill="#F7D79A" /></g>)}
     {/* body (part 0) */}
@@ -555,4 +604,4 @@ const stackbox: ItemFn = (a, {t, f}, i) => {
 };
 
 export const FACTORY_ITEMS: Record<string, ItemFn> = {gizmo, homebox, stackbox};
-export const FACTORY_INDOOR = ['megafloor', 'refinery', 'solarline', 'fctitle', 'fcbumper'];
+export const FACTORY_INDOOR = ['kitchen', 'megafloor', 'refinery', 'solarline', 'fctitle', 'fcbumper'];
