@@ -93,13 +93,13 @@ stage("s01_open", "co_open", {
               JUNE(-300, 0.3, xk=[[0, -300], [C("A big touchscreen"), 380]], face="happy", hold="phone", faces=[[0, "happy"], [C("Now, the price"), "shock"]], takes=[C("Now, the price", 0.3)])]},
     sources=["seagull"], sfx=[{"kind": "whoosh", "cue": "Now, the price", "gain": 0.25}])
 stage("s02_hook", "co_hook", {
-    **W1("evshow", carX=900, lidar=True, price="$9,900", priceSub="SEAGULL (2ND GEN) · CHINA LIST ¥65,900 · OCT 2026 · INCL. VAT", priceAt=C("That's about nine"),
+    **W1("evshow", carX=900, lidar=True, price="$9,900", priceSub="SEAGULL (2ND GEN) · CHINA LIST · OCT 2026 · INCL. VAT", priceAt=C("about nine thousand"),
          rivalAt=C("The average new electric car"), rivalX=1800, rivalPrice="$56,220", rivalSub="AVERAGE NEW EV SOLD · U.S. · OCT 2026 (KBB)"),
-    "cam": cam((0, 900, 420, 1.0), (C("That's about nine"), 900, 380, 1.05, 1.0), (C("The average new electric car"), 1300, 480, 0.82, 1.6)), "drift": 3,
-    "items": [it("counter", x=900, y=140, at=C("starts at", -0.2), prefix="¥", decimals=0, steps=[[0, 0], [C("starts at"), 0], [C("nine hundred yuan"), 65900]], text="CHINA LIST PRICE · OCT 2026", until=C("That's about nine", 0.3)),
-              JUNE(300, 0.0, face="shock", hold="phone", faces=[[0, "shock"], [C("The average new electric car"), "worry"]], takes=[C("That's about nine", 0.2)]),
+    "cam": cam((0, 900, 420, 1.0), (C("about nine thousand"), 900, 380, 1.05, 1.0), (C("The average new electric car"), 1300, 480, 0.82, 1.6)), "drift": 3,
+    "items": [it("counter", x=900, y=140, at=C("lists at", -0.2), prefix="$", decimals=0, steps=[[0, 0], [C("lists at"), 0], [C("nine hundred dollars"), 9900]], text="CHINA LIST PRICE · OCT 2026 (≈, FED H.10 RATE)", until=C("nine hundred dollars", 0.6)),
+              JUNE(300, 0.0, face="shock", hold="phone", faces=[[0, "shock"], [C("The average new electric car"), "worry"]], takes=[C("about nine thousand", 0.2)]),
               it("toonwords", text="SAME KIND OF CAR?", x=1300, y=60, at=C("in October"), size=48)]},
-    sources=["seagull", "cnevpost_seagull", "h10", "kbb"], sfx=[{"kind": "hit", "cue": "That's about nine", "gain": 0.35}])
+    sources=["seagull", "cnevpost_seagull", "h10", "kbb"], sfx=[{"kind": "hit", "cue": "about nine thousand", "gain": 0.35}])
 stage("s03_contra", "co_contra", {
     **W1("gigaline", board="MEANWHILE, IN THE WEST", speed=60),
     "cam": cam((0, 1000, 500, 1.0), (C("Is China just better"), 1100, 420, 0.95, 1.4)), "drift": 4,
@@ -127,7 +127,7 @@ stage("s05_title", "title_card", {
 bumper("s06_b1", "a1_card", "1", "THE IMPOSSIBLE CAR", "Batteries included. Explanations extra.", BLUE, "$108/kWh")
 stage("s07_fair", "a1_fair", {
     **W1("evshow", carX=700, price="$9,900", priceSub="CHINA · INCL. 13% VAT · + 5% NEV PURCHASE TAX (2026)", priceAt=0.0, priceX=700,
-         rivalAt=C("Its European cousin", -0.2), rivalX=1650, rivalPrice="$25,900", rivalSub="DOLPHIN SURF · GERMANY LIST €23,490 · INCL. 19% VAT"),
+         rivalAt=C("Its European cousin", -0.2), rivalX=1650, rivalPrice="$25,900", rivalSub="DOLPHIN SURF · GERMANY LIST · INCL. 19% VAT"),
     "cam": cam((0, 900, 500, 1.1), (C("small city car"), 700, 520, 1.2, 1.2), (C("Its European cousin"), 1200, 470, 0.88, 1.6)), "drift": 3,
     "items": [it("toonwords", text="FAIR WARNING", x=900, y=120, at=0.1, until=C("small city car"), size=80),
               sign("SMALL CITY CAR · 4.2 M LONG", 700, 640, C("small city car"), color="#FFF8E1", size=26, until=C("Its European cousin")),
@@ -135,7 +135,7 @@ stage("s07_fair", "a1_fair", {
               JUNE(250, 0.2, face="worry", hold="phone", pose="talk", talk=[[0.3, 1.8]])]},
     sources=["nevtax", "seagull", "h10", "eu_cvd"])
 stage("s08_real", "a1_real", {
-    **W1("pricestreet", start=["¥ EV", "¥ EV", "¥ GAS"], names=["EV", "EV", "GASOLINE"], margin=0.5, gauge=False),
+    **W1("pricestreet", start=["EV", "EV", "GAS"], names=["EV", "EV", "GASOLINE"], margin=0.5, gauge=False),
     "cam": cam((0, 900, 420, 0.95), (C("nearly seventy percent"), 950, 460, 1.0, 1.4)), "drift": 3,
     "items": [it("counter", x=1700, y=220, at=C("nearly seventy percent", -0.3), suffix="%", steps=[[0, 0], [C("nearly seventy percent"), 0], [C("were cheaper"), 70]], text="CHINA 2025: EVs CHEAPER THAN GAS EQUIVALENT (IEA)"),
               sign("BEFORE ANY INCENTIVE", 1700, 470, C("Before incentives"), color="#C8E6C9", size=32),
@@ -201,16 +201,16 @@ stage("s16_hidden", "a2_hidden", {
     **W1("gigaline", board="2020 · HEFEI-LED INVESTORS → NIO CHINA", speed=80),
     "cam": cam((0, 1000, 470, 1.0), (C("An investment"), 1100, 450, 1.1, 1.2)), "drift": 4,
     "items": [sign("NOT IN THE COUNT: CHEAP LAND · CHEAP LOANS · CITY STAKES", 1000, 140, 0.3, color="#FFF8E1", size=26, until=C("Hefei-led")),
-              it("counter", x=1000, y=170, at=C("Hefei-led"), prefix="≈ $", suffix="B", decimals=1, steps=[[0, 0], [C("Hefei-led"), 0], [C("into NIO's"), 1.0]], text="¥7B FOR A 24.1% STAKE IN NIO CHINA (2020)"),
+              it("counter", x=1000, y=170, at=C("Hefei-led"), prefix="≈ $", suffix="B", decimals=1, steps=[[0, 0], [C("Hefei-led"), 0], [C("into NIO's"), 1.0]], text="FOR A 24.1% STAKE IN NIO CHINA (2020)"),
               sign("EQUITY, NOT A GRANT", 1500, 420, C("An investment"), color="#C8E6C9", size=34),
               MORGAN(400, 0.3, face="smug", hold="clipboard", pose="clipboard", faces=[[0, "smug"], [C("An investment"), "worry"]])]},
     sources=["csis", "nio_hefei", "h10_2020"])
 stage("s17_grants", "a2_grants", {
-    **W1("evshow", carX=700, carColor="#1E88E5", price="≈ $1.8B", priceSub="BYD GOVERNMENT GRANTS IN 2025 PROFIT (¥12.6B, ANNUAL REPORT)", priceAt=C("BYD's own annual report"), priceX=1150),
+    **W1("evshow", carX=700, carColor="#1E88E5", price="≈ $1.8B", priceSub="BYD GOVERNMENT GRANTS IN 2025 PROFIT (ANNUAL REPORT)", priceAt=C("BYD's own annual report"), priceX=1150),
     "cam": cam((0, 1000, 470, 0.95), (C("BYD's own annual report"), 1150, 420, 1.0, 1.4)), "drift": 3,
     "items": [VOLTY(200, 0.1, scale=0.7),
-              it("docs", x=1480, y=760, at=C("Kiel Institute"), text="KIEL POLICY BRIEF 173", scale=0.8, stamp="BYD 2022: €2.1B ≈ $2.2B", stampAt=C("for BYD")),
-              it("docs", x=420, y=760, at=C("BYD's own annual report"), text="BYD ANNUAL REPORT 2025", scale=0.8, stamp="GRANTS ¥12.6B", stampAt=C("of grants"))]},
+              it("docs", x=1480, y=760, at=C("Kiel Institute"), text="KIEL POLICY BRIEF 173", scale=0.8, stamp="BYD 2022: ≈ $2.2B", stampAt=C("for BYD")),
+              it("docs", x=420, y=760, at=C("BYD's own annual report"), text="BYD ANNUAL REPORT 2025", scale=0.8, stamp="GRANTS ≈ $1.8B", stampAt=C("of grants"))]},
     sources=["kiel", "g5a", "byd_ar25"])
 add("p18_subsidy", "a2_draw", "engine_draw", {
     "title": "The subsidy experiment (BYD 2025 ratios; our calculation)", "board": BOARD, "draw_start": C("run an experiment"), "speed": 1500, "push": 0.003,
@@ -222,7 +222,7 @@ add("p18_subsidy", "a2_draw", "engine_draw", {
         {"d": arrow((930, 800), (930, 845)), "color": "risk", "width": 4, "kind": "arrow", "start": C("a sliver", 0.3)},
         {"d": "M 1140 860 L 1140 560 L 1300 560 L 1300 860 Z", "color": "accent3", "width": 3, "fill": "accent3", "fillOpacity": 0.3, "kind": "bar", "start": C("But they're"), "label": lbl("NET PROFIT", 1220, 540, 22, "accent3")},
         {"d": "M 1320 860 L 1320 744 L 1460 744 L 1460 860 Z", "color": "risk", "width": 3, "fill": "risk", "fillOpacity": 0.8, "kind": "bar", "start": C("two-fifths"), "label": lbl("GRANTS ≈ 2/5", 1390, 724, 22, "risk")},
-        {"d": dot(1040, 930), "color": "muted", "width": 1, "start": C("by our calculation"), "label": lbl("BYD AR 2025: GRANTS ¥12.6B · REVENUE ¥804B · NET PROFIT ¥32.6B (GRANTS PRE-TAX)", 1040, 930, 18, "muted")},
+        {"d": dot(1040, 930), "color": "muted", "width": 1, "start": C("by our calculation"), "label": lbl("BYD AR 2025: GRANTS ≈$1.8B · REVENUE ≈$112B · NET PROFIT ≈$4.5B (GRANTS PRE-TAX)", 1040, 930, 18, "muted")},
         {"d": dot(1040, 330), "color": "ink", "width": 1, "start": C("They can't make a car cheap"), "label": lbl("PROFITABLE? YES. CHEAP? NO.", 1040, 330, 30, "ink")},
     ],
     "actions": [{"kind": "point", "at": C("a sliver", 0.2), "dur": 1.4, "target": [930, 850]}, {"kind": "react", "at": C("two-fifths", 0.4)}],
@@ -388,7 +388,7 @@ stage("s38_others", "a4_others", {
 stage("s39_nio", "a4_nio", {
     **W1("gigaline", board="NIO · FY2025 RESULTS", speed=60),
     "cam": cam((0, 960, 480, 1.0), (C("A low price"), 1000, 470, 1.05, 1.2)), "drift": 3,
-    "items": [it("counter", x=900, y=170, at=0.2, prefix="−$", suffix="B", decimals=1, steps=[[0, 0], [0.3, 0], [C("last year"), 2.1]], text="NIO NET LOSS, 2025 (≈, ¥14.9B)", until=C("A low price")),
+    "items": [it("counter", x=900, y=170, at=0.2, prefix="−$", suffix="B", decimals=1, steps=[[0, 0], [0.3, 0], [C("last year"), 2.1]], text="NIO NET LOSS, 2025 (≈)", until=C("A low price")),
               sign("Q4 2025: FIRST QUARTERLY OPERATING PROFIT (NON-GAAP)", 900, 420, C("first quarterly"), color="#C8E6C9", size=26, until=C("A low price", -0.2)),
               sign("LOW PRICE ≠ LOSS", 700, 380, C("A low price"), color="#FFF59D", size=34),
               sign("ONE GOOD QUARTER ≠ A LASTING BUSINESS", 1200, 520, C("one good quarter"), color="#FFCDD2", size=30),

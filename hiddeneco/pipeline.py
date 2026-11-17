@@ -3,6 +3,7 @@ Each stage writes inspectable files under output/<slug>/<deliverable>/."""
 from __future__ import annotations
 
 import json
+import os
 import time
 
 import yaml
@@ -138,8 +139,14 @@ def build_deliverable(paths: ProjectPaths, d, project: dict, tts_name: str | Non
             props = remotion_bridge.build_props(timed, project["style"], credits, fmt, fps,
                                                 project.get("remotion_geo", []))
             silent = paths.out_sub("work") / "remotion_video.mp4"
-            remotion_bridge.render_video(props, paths.out_sub("work"), silent,
-                                         concurrency=int(vcfg.get("remotion_concurrency", 4)))
+            prev = paths.out_sub("work") / "remotion_props.json"
+            # opt-in: HIDDENECO_REUSE_RENDER=1 skips Remotion when the picture exists and its props are byte-identical
+            if (os.environ.get("HIDDENECO_REUSE_RENDER") == "1" and silent.exists() and prev.exists()
+                    and prev.read_text(encoding="utf-8") == json.dumps(props)):
+                log("remotion.reused", out=str(silent))
+            else:
+                remotion_bridge.render_video(props, paths.out_sub("work"), silent,
+                                             concurrency=int(vcfg.get("remotion_concurrency", 4)))
         with step("render.assemble", deliverable=deliverable.id):
             mix, _voice = assemble.build_audio_track(timed, paths.out_sub("audio"), deliverable, fmt, rate)
             remotion_bridge.mux(silent, mix, paths.final_video)

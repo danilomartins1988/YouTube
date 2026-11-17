@@ -114,9 +114,9 @@ scenes:
       carX: 900
       lidar: true
       price: $9,900
-      priceSub: SEAGULL (2ND GEN) · CHINA LIST ¥65,900 · OCT 2026 · INCL. VAT
+      priceSub: SEAGULL (2ND GEN) · CHINA LIST · OCT 2026 · INCL. VAT
       priceAt:
-        cue: That's about nine
+        cue: about nine thousand
       rivalAt:
         cue: The average new electric car
       rivalX: 1800
@@ -129,7 +129,7 @@ scenes:
       y: 420
       zoom: 1.0
     - at:
-        cue: That's about nine
+        cue: about nine thousand
       x: 900
       y: 380
       zoom: 1.05
@@ -146,21 +146,21 @@ scenes:
       x: 900
       y: 140
       at:
-        cue: starts at
+        cue: lists at
         offset: -0.2
-      prefix: ¥
+      prefix: $
       decimals: 0
       steps:
       - - 0
         - 0
-      - - cue: starts at
+      - - cue: lists at
         - 0
-      - - cue: nine hundred yuan
-        - 65900
-      text: CHINA LIST PRICE · OCT 2026
+      - - cue: nine hundred dollars
+        - 9900
+      text: CHINA LIST PRICE · OCT 2026 (≈, FED H.10 RATE)
       until:
-        cue: That's about nine
-        offset: 0.3
+        cue: nine hundred dollars
+        offset: 0.6
     - kind: toon
       x: 300
       at: 0.0
@@ -180,7 +180,7 @@ scenes:
       - - cue: The average new electric car
         - worry
       takes:
-      - cue: That's about nine
+      - cue: about nine thousand
         offset: 0.2
       scale: 1.3
     - kind: toonwords
@@ -192,7 +192,7 @@ scenes:
       size: 48
   sfx:
   - kind: hit
-    cue: That's about nine
+    cue: about nine thousand
     gain: 0.35
   sources:
   - seagull
@@ -490,7 +490,7 @@ scenes:
         offset: -0.2
       rivalX: 1650
       rivalPrice: $25,900
-      rivalSub: DOLPHIN SURF · GERMANY LIST €23,490 · INCL. 19% VAT
+      rivalSub: DOLPHIN SURF · GERMANY LIST · INCL. 19% VAT
     worldW: 2400
     cam:
     - at: 0
@@ -571,9 +571,9 @@ scenes:
       x0: -1600
       x1: 4600
       start:
-      - ¥ EV
-      - ¥ EV
-      - ¥ GAS
+      - EV
+      - EV
+      - GAS
       names:
       - EV
       - EV
@@ -1199,7 +1199,7 @@ scenes:
         - 0
       - - cue: into NIO's
         - 1.0
-      text: ¥7B FOR A 24.1% STAKE IN NIO CHINA (2020)
+      text: FOR A 24.1% STAKE IN NIO CHINA (2020)
     - kind: sign
       text: EQUITY, NOT A GRANT
       x: 1500
@@ -1245,7 +1245,7 @@ scenes:
       carX: 700
       carColor: '#1E88E5'
       price: ≈ $1.8B
-      priceSub: BYD GOVERNMENT GRANTS IN 2025 PROFIT (¥12.6B, ANNUAL REPORT)
+      priceSub: BYD GOVERNMENT GRANTS IN 2025 PROFIT (ANNUAL REPORT)
       priceAt:
         cue: BYD's own annual report
       priceX: 1150
@@ -1274,7 +1274,7 @@ scenes:
         cue: Kiel Institute
       text: KIEL POLICY BRIEF 173
       scale: 0.8
-      stamp: 'BYD 2022: €2.1B ≈ $2.2B'
+      stamp: 'BYD 2022: ≈ $2.2B'
       stampAt:
         cue: for BYD
     - kind: docs
@@ -1284,7 +1284,7 @@ scenes:
         cue: BYD's own annual report
       text: BYD ANNUAL REPORT 2025
       scale: 0.8
-      stamp: GRANTS ¥12.6B
+      stamp: GRANTS ≈ $1.8B
       stampAt:
         cue: of grants
   sources:
@@ -1388,7 +1388,7 @@ scenes:
       start:
         cue: by our calculation
       label:
-        text: 'BYD AR 2025: GRANTS ¥12.6B · REVENUE ¥804B · NET PROFIT ¥32.6B (GRANTS PRE-TAX)'
+        text: 'BYD AR 2025: GRANTS ≈$1.8B · REVENUE ≈$112B · NET PROFIT ≈$4.5B (GRANTS PRE-TAX)'
         x: 1040
         y: 930
         size: 18
@@ -3071,7 +3071,7 @@ scenes:
         - 0
       - - cue: last year
         - 2.1
-      text: NIO NET LOSS, 2025 (≈, ¥14.9B)
+      text: NIO NET LOSS, 2025 (≈)
       until:
         cue: A low price
     - kind: sign

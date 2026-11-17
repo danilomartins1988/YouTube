@@ -155,10 +155,27 @@ def mood_bed(seconds: float, moods: list[tuple[float, float, str]], rate: int = 
     return out
 
 
+def _boxcar_same(x: np.ndarray, w: int) -> np.ndarray:
+    """Moving average with a w-sample box, aligned like np.convolve(x, ones(w)/w, mode="same"), in O(N) via a cumulative
+    sum (the direct convolution is O(N*w) and took hours for a 12-minute film on a loaded machine)."""
+    x = np.asarray(x, dtype=np.float64)
+    n = len(x)
+    if w <= 1 or n == 0:
+        return x.copy()
+    if w > n:                                # tiny inputs: keep numpy's exact behaviour
+        return np.convolve(x, np.ones(w) / w, mode="same")
+    c = np.concatenate(([0.0], np.cumsum(x)))
+    full_len = n + w - 1                     # 'full' output index k sums x[k-w+1 .. k]
+    start = (full_len - n) // 2              # numpy's 'same' takes the centred slice of 'full'
+    k = np.arange(start, start + n)
+    hi = np.minimum(k, n - 1) + 1
+    lo = np.maximum(k - w + 1, 0)
+    return (c[hi] - c[lo]) / w
+
+
 def envelope(x: np.ndarray, rate: int = RATE, window: float = 0.25) -> np.ndarray:
     w = max(1, int(window * rate))
-    kernel = np.ones(w) / w
-    return np.convolve(np.abs(x), kernel, mode="same")
+    return _boxcar_same(np.abs(x), w)
 
 
 def mix(voice: np.ndarray, events: list[tuple[float, str, float]], music: bool, rate: int = RATE,
@@ -176,7 +193,7 @@ def mix(voice: np.ndarray, events: list[tuple[float, str, float]], music: bool, 
                 s0, s1 = int(max(0.0, sec - 0.3) * rate), int((sec + 5.3) * rate)
                 ramp = np.ones(len(gain))
                 ramp[s0:s1] = 0.0
-                gain = gain * np.convolve(ramp, np.ones(int(0.3 * rate)) / int(0.3 * rate), mode="same")
+                gain = gain * _boxcar_same(ramp, int(0.3 * rate))
         out[: len(bed)] += bed * gain[: len(bed)]
     for i, (sec, kind, g) in enumerate(events):
         clip = sfx(kind, rate, seed=i) * g
