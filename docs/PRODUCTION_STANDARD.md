@@ -3,6 +3,13 @@
 Every episode is an original animated economic documentary, not a narrated slideshow. This file is the
 reusable standard. `README.md` covers how to run the pipeline; this file covers what a finished episode must be.
 
+> **Commercial directive (owner, 2026-11-17, permanent):** every episode must pass `docs/COMMERCIAL_DIRECTIVE.md`
+> before scripting: a `COMMERCIAL_BRIEF.md` in the episode docs folder (template `docs/templates/COMMERCIAL_BRIEF.md`)
+> with demand evidence, ≥5 titles, ≥3 thumbnail concepts, the human question, the 30-second hook (channel intro
+> after it), ≥3 substantial animated explanatory sequences with the presenter interacting, a specific payoff,
+> library connections and a Commercial Quality Score ≥85/100. Post-publication results go in `docs/ANALYTICS_LOG.md`.
+> Fascinating first, economically insightful second, commercially competitive throughout.
+
 ## 1. Visual language
 
 - **Animated explanation first.** Motion graphics carry the argument: objects move between places, charts
