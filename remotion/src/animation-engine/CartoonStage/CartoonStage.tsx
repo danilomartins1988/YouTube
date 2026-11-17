@@ -4,6 +4,7 @@ import {ToneFilterDef, ToneOverlay, ToneShift, isNeutral, toneAt} from '../tone'
 import {SITCOM_INDOOR, SITCOM_ITEMS, SITCOM_SETS} from './sitcom';
 import {CLUB_INDOOR, CLUB_ITEMS, CLUB_SETS} from './costco';
 import {bustItem} from './bust';
+import {DEBT_INDOOR, DEBT_ITEMS, DEBT_SETS} from './debt';
 import {HOUSING_INDOOR, HOUSING_ITEMS, HOUSING_SETS} from './housing';
 
 /**
@@ -2252,10 +2253,11 @@ const SETS: Record<string, SetFn> = {
     </g>;
   },
   ...(SITCOM_SETS as unknown as Record<string, SetFn>),
+  ...(DEBT_SETS as unknown as Record<string, SetFn>),
   ...(CLUB_SETS as unknown as Record<string, SetFn>),
   ...(HOUSING_SETS as unknown as Record<string, SetFn>),
 };
-const INDOOR = new Set([...SITCOM_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set([...SITCOM_INDOOR, ...DEBT_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -5212,7 +5214,7 @@ const sapling: ItemFn = (a, {t, f}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>)};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(DEBT_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>)};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

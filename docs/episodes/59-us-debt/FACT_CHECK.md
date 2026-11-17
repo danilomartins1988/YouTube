@@ -6,6 +6,15 @@ claims: `projects/who-actually-owns-americas-debt/sources.yaml`). Status `source
 Sight gags (OWEN the IOU's growing note, the bumper captions, "+ INTEREST") are clearly comic and carry no factual claim; the
 amounts printed on OWEN are the sourced Debt to the Penny milestones.
 
+## Neutrality rule (owner, 2026-11-17: "Sem viés político" = no political bias)
+- No party, president, administration or member of Congress is named, blamed or credited; no politician is drawn (no caricatures).
+- No editorial adjectives or partisan framing; the debt's growth is shown only as sourced daily totals (no cause is attributed
+  to any administration). Interest is explained only by the sourced average rate on marketable debt.
+- Whether the debt is a problem is NOT judged: the film reports CBO's projection (labelled as a projection) and the accounting
+  fact that interest is both a cost to taxpayers and income to holders. "Unless Congress changes the law" is a neutral
+  statement of how scheduled benefits can change.
+- Countries appear only as place cards (no flags, no national stereotypes); title and thumbnail are neutral questions.
+
 ## Title
 - Owner title: "Who Actually Owns America's $Trillions in Debt?" -> **"Who Actually Owns America's $40 Trillion in Debt?"**
 - Basis: Debt to the Penny total public debt outstanding **$40,616,678,827,092.07 on Nov 13, 2026** (latest record when read).
