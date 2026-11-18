@@ -8,7 +8,7 @@ scenes:
     zones:
     - set: svcreek
       x0: -1600
-      x1: 3000
+      x1: 2600
       rush:
       - - 0
         - 0
@@ -20,7 +20,7 @@ scenes:
         cue: Most of them find mud
         offset: 1.0
     - set: svstore
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       era: '1849'
@@ -476,7 +476,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -544,7 +544,7 @@ scenes:
         - 0
       title: NUGGET'S PASSPORT, MAPPED
     - set: svstore
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       era: today
@@ -890,7 +890,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -951,7 +951,7 @@ scenes:
       - - 1.8
         - 1
     - set: svfoundry
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       queue:
@@ -983,13 +983,13 @@ scenes:
       dur: 1.4
     - at:
         cue: Hattie watches the line
-      x: 3600
+      x: 3850
       y: 560
       zoom: 1.0
       dur: 1.4
     - at:
         cue: Is this the only shop
-      x: 3700
+      x: 3880
       y: 580
       zoom: 1.15
       dur: 1.2
@@ -1171,8 +1171,8 @@ scenes:
       color: green
       until: &id004
         cue: Last year
-    - text: OUR CONVERSION · NT$3.81T AT FED 2025 AVG
-      x: 316.0
+    - text: OUR CONVERSION · FED 2025 AVERAGE RATE
+      x: 298.0
       y: 50
       at: *id004
       size: 20
@@ -1464,7 +1464,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -1525,7 +1525,7 @@ scenes:
       - - 1.8
         - 2
     - set: svpolder
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       crate:
@@ -1772,7 +1772,7 @@ scenes:
     zones:
     - set: svpolder
       x0: -1600
-      x1: 3000
+      x1: 2600
       crate: 1
       planes:
       - - 0
@@ -1784,7 +1784,7 @@ scenes:
         - 1.2
       plaque: EXPORT LICENCE REQUIRED
     - set: svmap
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       stamps:
@@ -1810,9 +1810,9 @@ scenes:
       zoom: 0.95
     - at:
         cue: Governments decide
-      x: 1700
+      x: 1450
       y: 460
-      zoom: 0.9
+      zoom: 0.95
       dur: 1.4
     - at:
         cue: biggest market
@@ -1936,7 +1936,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -1997,7 +1997,7 @@ scenes:
       - - 1.8
         - 3
     - set: svmemory
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       layers:
@@ -2404,7 +2404,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -2465,7 +2465,7 @@ scenes:
       - - 1.8
         - 4
     - set: svlab
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       bottles:
@@ -2748,7 +2748,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -2809,7 +2809,7 @@ scenes:
       - - 1.8
         - 5
     - set: svdesert
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       solar:
@@ -2951,7 +2951,7 @@ scenes:
     zones:
     - set: svdesert
       x0: -1600
-      x1: 3000
+      x1: 2600
       solar: 1
       vault: 1
       cash: 1
@@ -2959,7 +2959,7 @@ scenes:
       t0: -5
       plaque: MGX (GENERIC BUILDING)
     - set: svmap
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       stamps:
@@ -2992,9 +2992,9 @@ scenes:
       zoom: 0.95
     - at:
         cue: one of the founding backers
-      x: 2000
+      x: 1450
       y: 460
-      zoom: 0.95
+      zoom: 1.0
       dur: 1.4
     - at:
         cue: a plan announced
@@ -3177,7 +3177,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -3238,7 +3238,7 @@ scenes:
       - - 1.8
         - 6
     - set: svmine
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       variant: andes
@@ -3360,7 +3360,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -3421,7 +3421,7 @@ scenes:
       - - 1.8
         - 7
     - set: svmine
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       variant: outback
@@ -4143,7 +4143,7 @@ scenes:
     zones:
     - set: svmap
       x0: -1600
-      x1: 3000
+      x1: 2600
       stamps:
       - x: 330
         y: 330
@@ -4200,7 +4200,7 @@ scenes:
         - 7
       title: THE SHOVEL SELLERS OF AI
     - set: svstore
-      x0: 3000
+      x0: 2600
       x1: 7200
       ox: 3400
       era: today

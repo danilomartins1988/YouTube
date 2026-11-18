@@ -183,7 +183,7 @@ const RAW: Record<string, SetFn> = {
     const bx = st.length > 1 ? (r >= segs ? st[st.length - 1].x : lerp(st[Math.max(0, ki)].x, st[Math.max(0, ki) + 1].x, E.inOut(clamp(fr)))) : 0;
     const by = st.length > 1 ? (r >= segs ? st[st.length - 1].y : lerp(st[Math.max(0, ki)].y, st[Math.max(0, ki) + 1].y, E.inOut(clamp(fr)))) : 0;
     return <g>
-      <rect x={-200} y={-200} width={2400} height={1500} fill="#8A5A2B" />
+      <rect x={z.x0} y={-2500} width={z.x1 - z.x0} height={5000} fill="#8A5A2B" />
       <g transform={`rotate(${-1 + 0.3 * Math.sin(t * 0.7)} 960 540)`}>
         <path d="M 60 60 L 1860 50 Q 1880 300 1850 540 Q 1880 800 1860 1030 L 70 1040 Q 40 800 60 540 Q 30 300 60 60 Z" fill="#F6E7C1" stroke={OL} strokeWidth={8} />
         {Array.from({length: 30}, (_, k) => <circle key={'sp' + k} cx={100 + rnd(k) * 1720} cy={100 + rnd(k + 40) * 880} r={6 + rnd(k + 9) * 18} fill="#E9D3A0" opacity={0.6} />)}
@@ -281,7 +281,7 @@ const RAW: Record<string, SetFn> = {
       {Array.from({length: 10}, (_, k) => { const h = 200 + rnd(k + 60) * 220, x = z.x0 + 260 + k * 190; return x > 900 && x < 1500 ? null : <g key={'ap' + k}><rect x={x} y={f - h} width={110} height={h} fill={k % 2 ? '#E3E8EF' : '#D3DCE6'} stroke={OL} strokeWidth={4} />
         {Array.from({length: Math.floor(h / 50)}, (_, r) => <rect key={r} x={x + 18} y={f - h + 20 + r * 50} width={74} height={18} fill="#BFE6F7" stroke={OL} strokeWidth={2} />)}</g>; })}
       {ground(z, f, '#B9D98F', '#97BF6E')}
-      {z.plaque && plaque(1200, 150, z.plaque, '#FFFFFF', 24)}
+      {z.plaque && plaque(1200, 270, z.plaque, '#FFFFFF', 24)}
       <g transform={`translate(1200 ${f})`}>
         <rect x={-260} y={-60} width={520} height={60} rx={8} fill="#37474F" stroke={OL} strokeWidth={6} />
         {Array.from({length: 12}, (_, k) => <path key={'pn' + k} d={`M ${-240 + k * 44} 0 L ${-240 + k * 44} 14`} stroke={OL} strokeWidth={5} />)}
@@ -303,7 +303,12 @@ const RAW: Record<string, SetFn> = {
     const nb = Math.floor(kf(z.bottles, t, 0)), out = kf(z.out, t, 0);
     return <g>
       <rect x={z.x0} y={-2500} width={z.x1 - z.x0} height={2500 + f} fill="#F3F6FA" />
-      <rect x={-200} y={f - 40} width={2400} height={40} fill="#DDE3EA" stroke={OL} strokeWidth={4} />
+      <rect x={z.x0} y={120} width={z.x1 - z.x0} height={30} fill="#C5D3E3" />
+      <rect x={z.x0} y={f - 180} width={z.x1 - z.x0} height={180} fill="#E3E9F0" />
+      <rect x={z.x0} y={f - 40} width={z.x1 - z.x0} height={40} fill="#DDE3EA" stroke={OL} strokeWidth={4} />
+      <rect x={z.x0} y={f} width={z.x1 - z.x0} height={700} fill="#CBD5DF" />
+      {Array.from({length: 40}, (_, k) => <path key={'tl' + k} d={`M ${z.x0 + k * 160} ${f} L ${z.x0 + k * 160 - 80} ${f + 300}`} stroke="#B5C1CD" strokeWidth={4} />)}
+      {[0, 1, 2, 3].map((k) => <g key={'lp' + k} transform={`translate(${200 + k * 520} 150)`}><path d="M 0 0 L 0 60" stroke={OL} strokeWidth={4} /><path d="M -60 60 L 60 60 L 40 100 L -40 100 Z" fill="#FFF3B0" stroke={OL} strokeWidth={4} /></g>)}
       <rect x={1560} y={160} width={420} height={300} fill="#BFE6F7" stroke={OL} strokeWidth={7} />{cloud(1700 + ((t * 10) % 140), 260, 0.6, 1)}
       <path d="M 1770 160 L 1770 460 M 1560 310 L 1980 310" stroke={OL} strokeWidth={5} />
       {/* shelves */}
@@ -363,6 +368,8 @@ const RAW: Record<string, SetFn> = {
       {!out && <g><path d={peaks(z.x0, z.x1, 640, 380, 420, 81)} fill="#8E8FA8" stroke={OL} strokeWidth={4} />
         {Array.from({length: 12}, (_, k) => { const x = z.x0 + 210 + k * 420; return <path key={'sn' + k} d={`M ${x - 60} ${420 + rnd(k) * 60} L ${x} ${340 + rnd(k + 3) * 40} L ${x + 60} ${420 + rnd(k) * 60} Z`} fill="#FFFFFF" stroke={OL} strokeWidth={3} />; })}</g>}
       {out && <path d={ridge(z.x0, z.x1, 760, 80, 600, 91)} fill="#D98A5A" stroke={OL} strokeWidth={4} />}
+      {!out && <path d={ridge(z.x0, z.x1, 790, 130, 380, 95)} fill="#B49A7E" stroke={OL} strokeWidth={4} />}
+      {!out && Array.from({length: 10}, (_, k) => <g key={'cx' + k} transform={`translate(${z.x0 + 300 + k * 470} ${760 - rnd(k + 5) * 50})`}><path d="M 0 0 L 0 -50 M -14 -30 L 0 -36 M 14 -20 L 0 -26" stroke="#5E7D4E" strokeWidth={7} strokeLinecap="round" /></g>)}
       {ground(z, f, rock, rock2)}
       {/* terraced pit */}
       <g transform={`translate(900 ${f + 40})`}>{Array.from({length: 5}, (_, k) => <ellipse key={'tp' + k} cx={0} cy={k * 22} rx={560 - k * 100} ry={120 - k * 20} fill={k % 2 ? rock2 : rock} stroke={OL} strokeWidth={4} />)}
@@ -411,8 +418,8 @@ const RAW: Record<string, SetFn> = {
       <rect x={-200} y={-200} width={2400} height={1500} fill="#FFF1D2" />
       {Array.from({length: 20}, (_, k) => <path key={'ray' + k} transform={`translate(1500 900) rotate(${k * 18 + t * 4})`} d="M 0 0 L -70 -1500 L 70 -1500 Z" fill={k % 2 ? '#FBE0B0' : '#FFF1D2'} />)}
       <path d={ridge(-200, 2200, 930, 90, 260, 5)} fill="#D7BE8E" stroke={OL} strokeWidth={4} />
-      {shovelG(1500, 980, 1.5, dig, 'ttl', true, true, t)}
-      {Array.from({length: 6}, (_, k) => { const u = ((t * 0.6 + k / 6) % 1); return coin(1500 + (k - 2.5) * 50 * u * 4, 900 - Math.sin(u * Math.PI) * 300, 1, 'tc' + k, t); })}
+      {shovelG(1700, 1000, 1.7, dig, 'ttl', true, true, t)}
+      {Array.from({length: 6}, (_, k) => { const u = ((t * 0.6 + k / 6) % 1); return coin(1700 + (k - 2.5) * 50 * u * 4, 900 - Math.sin(u * Math.PI) * 300, 1, 'tc' + k, t); })}
       {lines.map((ln, k) => { const n = Math.floor(clamp((t - 0.4 - k * 0.55) / 0.5) * ln.length);
         return <T key={k} x={720} y={260 + k * 140} s={fit(ln, 1300, k === lines.length - 1 ? 120 : 96)} c={k === lines.length - 1 ? GOLD : NAVY} st="#FFFFFF" sw={14}>{ln.slice(0, n)}</T>; })}
       <T x={720} y={720} s={30} c={NAVY} ls={6}>THE HIDDEN ECONOMICS</T>

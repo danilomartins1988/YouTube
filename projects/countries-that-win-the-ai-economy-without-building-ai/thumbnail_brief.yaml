@@ -1,0 +1,65 @@
+# Thumbnail creative brief (Ep 68). Owner standing rules: at most 4 words naming the subject (AI's shovel sellers), face layout with
+# an ORIGINAL character (HATTIE, the film's fictional store owner), mobile-legible, no statistics shown, no logos, no flags, no real people.
+title: "The Countries That Could Win the AI Economy Without Building AI"
+docs_dir: docs/episodes/68-picks-shovels
+video: output/shovels_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: Can a country get rich from AI without ever building a chatbot?
+  surprising_fact: In the Gold Rush, the man known as California's richest never mined; he sold the supplies
+  subject: a shopkeeper holding a golden shovel whose blade is an AI chip
+  tone: trade
+  metaphor: picks and shovels of the AI gold rush
+  public_figure: null
+concepts:
+- id: F
+  angle: "face (original character HATTIE, the film's fictional store owner, shocked; a golden shovel whose blade is an AI chip)"
+  archetype: face
+  text:
+  - "AI'S SHOVEL"
+  - SELLERS
+  claim_basis: "metaphor answered in the film (countries selling chips, machines, memory, money and metal to the AI rush); Hattie is fictional; no number shown"
+  scene:
+    bg: ['#FFC23F', '#2A1A0E']
+    rays: '#FFE08A'
+    bust:
+      who: {name: Hattie, hair: bun, hairColor: '#E8C26A', hairShade: '#C9A04A', brows: '#8A6A2B', skin: '#F3D2B3', iris: '#3A2618',
+            clothes: tee, jacket: '#E5483B', shirt: '#E5483B', glasses: round, age: 0.3}
+      expr: shock
+      x: 470
+      s: 0.92
+    prop: {kind: chipshovel, x: 1420, y: 820, s: 0.62, rot: 14}
+- id: A
+  angle: the gold-rush store sells chips
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - AI GOLD RUSH
+  - SELL SHOVELS
+  claim_basis: 'metaphor (no number shown)'
+  scene:
+    palette: {sky0: '#2A1A0E', sky1: '#6B3E12', haze: '#FFB23F', key: '#FFF3E0', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: chip, x: 960, y: 640, s: 0.85}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE0B8'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: the island that sells the shovels
+  archetype: classic
+  text_side: left
+  accent_line: 1
+  text:
+  - WINNING AI
+  - WITHOUT AI
+  claim_basis: 'Taiwan, the Netherlands, Korea, Japan, the Gulf, Chile and Australia profit from AI supply (film); no number shown'
+  scene:
+    palette: {sky0: '#10203F', sky1: '#1E4A7A', haze: '#59C3FF', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: chipisland, x: 1250, y: 600, s: 0.85}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#D8F0FF'}
+    vignette: 0.55
+    brand: none

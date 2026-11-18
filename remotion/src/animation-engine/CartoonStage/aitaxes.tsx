@@ -239,8 +239,8 @@ const RAW: Record<string, SetFn> = {
           <path d="M 0 0 L -120 160 M 0 0 L 120 160" stroke={OL} strokeWidth={4} /><path d="M -150 160 Q 0 250 150 160 Z" fill={c as string} stroke={OL} strokeWidth={6} />
           <T x={0} y={205} s={26} c="#FFFFFF">{lab}</T></g>)}
       </g>
-      {pro && card(560, 400 + ly, pro, GREEN, proAt, 'GOOD REASON')}
-      {con && card(1360, 400 + ry, con, RED, conAt, 'THE CATCH')}
+      {pro && card(640, 400 + ly, pro, GREEN, proAt, 'GOOD REASON')}
+      {con && card(1280, 400 + ry, con, RED, conAt, 'THE CATCH')}
       <rect x={z.x0} y={f + 40} width={z.x1 - z.x0} height={700} fill="#C9A15B" /><rect x={z.x0} y={f + 40} width={z.x1 - z.x0} height={12} fill="#A07C3E" stroke={OL} strokeWidth={4} />
     </g>;
   },

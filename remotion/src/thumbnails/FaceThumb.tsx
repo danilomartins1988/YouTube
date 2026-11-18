@@ -51,6 +51,16 @@ const PROPS: Record<string, (o: any) => React.ReactNode> = {
       {[[-330, -420, 1], [330, -440, -1], [0, -560, 1]].map(([x, y, f], k) => <path key={k} transform={`translate(${x} ${y}) scale(${f} 1)`} d="M 10 -60 L -26 6 L -2 6 L -14 60 L 28 -10 L 4 -10 Z" fill="#FFD23F" stroke={OL} strokeWidth={8} strokeLinejoin="round" />)}
       {t && <text x={0} y={-75 + fs * 0.36} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={fs} fill={OL}>{t}</text>}
     </g>; },
+  /** a golden shovel whose blade is a glowing AI chip, sparkles (Ep 68) */
+  chipshovel: (o) => <g>
+    <rect x={-34} y={-620} width={68} height={560} rx={30} fill="#E8A317" stroke={OL} strokeWidth={16} />
+    <path d="M -130 -660 L 130 -660 L 130 -600 L -130 -600 Z" fill="#FFD45C" stroke={OL} strokeWidth={14} />
+    <path d="M -230 -80 L 230 -80 L 220 220 Q 0 420 -220 220 Z" fill="#FFD45C" stroke={OL} strokeWidth={18} strokeLinejoin="round" />
+    <rect x={-140} y={-30} width={280} height={240} rx={26} fill="#263238" stroke={OL} strokeWidth={12} />
+    {[-90, -30, 30, 90].map((x) => <path key={x} d={`M ${x} -30 L ${x} -70 M ${x} 210 L ${x} 250`} stroke={OL} strokeWidth={14} />)}
+    <rect x={-80} y={20} width={160} height={140} rx={16} fill="#29C5F6" opacity={0.9} />
+    {[[-300, -300], [300, -420], [280, 120]].map(([x, y], k) => <path key={k} transform={`translate(${x} ${y}) scale(2.2)`} d="M 0 -30 l 8 22 l 22 8 l -22 8 l -8 22 l -8 -22 l -22 -8 l 22 -8 Z" fill="#FFFFFF" stroke={OL} strokeWidth={5} />)}
+  </g>,
   /** a gold price tag on a string with a big label (e.g. a sourced figure) */
   tag: (o) => { const t = String(o.text ?? ''), fs = fitSize(t, 600, 230);
     return <g>

@@ -141,7 +141,7 @@ scenes:
     - kind: toonwords
       text: THE PARTY IS FOR THE ROBOTS
       x: 4500
-      y: 220
+      y: 260
       at:
         cue: For the robots
       size: 56
@@ -150,7 +150,7 @@ scenes:
     - kind: toonwords
       text: NO PAYCHECK → NO INCOME TAX
       x: 4300
-      y: 220
+      y: 280
       at:
         cue: never get a paycheck
       size: 56
@@ -840,12 +840,12 @@ scenes:
       - cue: almost nine out of every ten
         offset: 0.5
     - kind: toonwords
-      text: ≈ 9 OF EVERY 10 FEDERAL TAX DOLLARS COME FROM PEOPLE
+      text: '≈ 9 IN 10 FEDERAL TAX DOLLARS: FROM PEOPLE'
       x: 960
-      y: 210
+      y: 230
       at:
         cue: almost nine out of every ten
-      size: 32
+      size: 39
     callouts:
     - text: STORY
       x: 100.0
@@ -914,18 +914,18 @@ scenes:
     drift: 2
     items:
     - kind: toonwords
-      text: 'COMPANIES: ≈ 7¢ OF EVERY FEDERAL TAX $1'
+      text: 'COMPANIES: ≈ 7¢ OF EVERY TAX $1'
       x: 700
-      y: 220
+      y: 300
       at:
         cue: Corporate income tax
-      size: 42
+      size: 46
       until:
         cue: Rivet itself pays nothing
     - kind: toonwords
       text: 'RIVET ITSELF: $0'
       x: 760
-      y: 220
+      y: 330
       at:
         cue: Rivet itself pays nothing
       size: 60
@@ -1616,12 +1616,12 @@ scenes:
     drift: 2
     items:
     - kind: toonwords
-      text: '2017: BILL GATES: TAX A ROBOT ''AT A SIMILAR LEVEL'' TO A WORKER'
-      x: 900
-      y: 200
+      text: '2017: TAX ROBOTS ''AT A SIMILAR LEVEL''?'
+      x: 800
+      y: 230
       at:
         cue: The idea got famous
-      size: 26
+      size: 36
     - kind: toon
       x: 700
       at: 0.0
@@ -1837,7 +1837,7 @@ scenes:
     - kind: toonwords
       text: '2017: EUROPEAN PARLIAMENT SAYS NO'
       x: 960
-      y: 1000
+      y: 930
       at:
         cue: Europe's lawmakers
       size: 44
@@ -2827,12 +2827,12 @@ scenes:
       until:
         cue: Instead, after a year
     - kind: toonwords
-      text: 'YEAR 1: MORE IN FULL-TIME JOBS THAN THE COMPARISON GROUP'
+      text: 'YEAR 1: MORE FULL-TIME JOBS'
       x: 960
       y: 220
       at:
         cue: Instead, after a year
-      size: 29
+      size: 38
     - kind: toon
       x: 1500
       at:

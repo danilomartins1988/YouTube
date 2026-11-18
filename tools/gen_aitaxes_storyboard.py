@@ -105,8 +105,8 @@ stage("s01_hook", "co_hook", {
     "items": [ROSA([[0, -200], [1.6, 700]], 0.0, face="happy", pose="wave", faces=[[0, "happy"]], label="ROSA · MAYOR OF PINEWICK (FICTIONAL)", labelUntil=C("This morning")),
               ROSA(OX + 520, C("This morning"), face="happy", pose="stand", faces=[[0, "happy"], [C("Not for the workers"), "squint"], [C("never get a paycheck"), "shock"], [C("Rosa looks at"), "worry"]]),
               RIV([[0, OX + 2300], [C("For the robots"), OX + 2300], [C("For the robots", 2.0), OX + 1100]], 0.0, face="happy", carry="box"),
-              words("THE PARTY IS FOR THE ROBOTS", OX + 1100, 220, C("For the robots"), size=56, until=C("never get a paycheck")),
-              words("NO PAYCHECK → NO INCOME TAX", OX + 900, 220, C("never get a paycheck"), size=56, until=C("If robots do the work")),
+              words("THE PARTY IS FOR THE ROBOTS", OX + 1100, 260, C("For the robots"), size=56, until=C("never get a paycheck")),
+              words("NO PAYCHECK → NO INCOME TAX", OX + 900, 280, C("never get a paycheck"), size=56, until=C("If robots do the work")),
               words("IF ROBOTS DO THE WORK, WHO PAYS THE TAXES?", OX + 960, 210, C("If robots do the work"), size=50),
               tag((0, "STORY · FICTIONAL CAST"), (C("never pay income tax"), "MECHANISM"))]},
     sfx=[{"kind": "whoosh", "cue": "This morning", "gain": 0.3}, {"kind": "hit", "cue": "If robots do the work", "gain": 0.3}])
@@ -164,14 +164,14 @@ stage("s08_big", "c2_big", {
     **W1("txpipes", big=[[0, 0.7], [C("almost nine out of every ten"), 1.0]], thin=0.15, level=0.8),
     "cam": cam((0, 960, 540, 0.9), (C("almost nine out of every ten"), 600, 480, 1.1, 1.4), (C("through their income taxes"), 900, 520, 0.95, 1.4)), "drift": 2,
     "items": [STUB(1240, 0.0, y=1000, scale=0.7, face="happy", hops=[C("almost nine out of every ten", 0.5)]),
-              words("≈ 9 OF EVERY 10 FEDERAL TAX DOLLARS COME FROM PEOPLE", 960, 210, C("almost nine out of every ten"), size=44),
+              words("≈ 9 IN 10 FEDERAL TAX DOLLARS: FROM PEOPLE", 960, 230, C("almost nine out of every ten"), size=44),
               tag((0, "STORY"), (C("In America"), "OUR CALC · TREASURY FY2026"))]},
     sources=["mts_fy26", "cbo_mbr26"], sfx=[{"kind": "hit", "cue": "almost nine out of every ten", "gain": 0.3}])
 stage("s09_corp", "c2_corp", {
     **W1("txpipes", big=1, thin=[[0, 0.15], [C("Corporate income tax"), 0.2]], level=0.8),
     "cam": cam((0, 960, 540, 0.9), (C("Corporate income tax"), 500, 640, 1.2, 1.2), (C("Rivet's company pays that"), 700, 620, 1.05, 1.2), (C("Rivet looks"), 760, 640, 1.2, 1.0)), "drift": 2,
-    "items": [words("COMPANIES: ≈ 7¢ OF EVERY FEDERAL TAX $1", 700, 220, C("Corporate income tax"), size=46, until=C("Rivet itself pays nothing")),
-              words("RIVET ITSELF: $0", 760, 220, C("Rivet itself pays nothing"), size=60),
+    "items": [words("COMPANIES: ≈ 7¢ OF EVERY TAX $1", 700, 300, C("Corporate income tax"), size=46, until=C("Rivet itself pays nothing")),
+              words("RIVET ITSELF: $0", 760, 330, C("Rivet itself pays nothing"), size=60),
               RIV([[0, -300], [C("Rivet's company pays that"), -300], [C("Rivet's company pays that", 1.6), 720]], 0.0, y=1040, scale=0.6, face="happy", faces=[[0, "happy"], [C("Rivet looks"), "worry"]]),
               tag((0, "OUR CALC · TREASURY FY2026"))]},
     sources=["mts_fy26"])
@@ -232,7 +232,7 @@ stage("s16_fair", "c3_fair", {
 stage("s17_robot", "c3_robot", {
     **W1("txfair", lit=[[0, 0]]),
     "cam": cam((0, 700, 560, 1.0), (C("Tax the robots"), 420, 540, 1.2, 1.2), (C("The idea got famous"), 700, 520, 1.0, 1.4), (C("Rivet takes one step"), 900, 600, 1.15, 1.0)), "drift": 2,
-    "items": [words("2017: BILL GATES: TAX A ROBOT 'AT A SIMILAR LEVEL' TO A WORKER", 900, 200, C("The idea got famous"), size=36),
+    "items": [words("2017: TAX ROBOTS 'AT A SIMILAR LEVEL'?", 800, 230, C("The idea got famous"), size=36),
               ROSA(700, 0.0, face="squint", pose="stand"),
               RIV([[0, 980], [C("Rivet takes one step"), 980], [C("Rivet takes one step", 0.6), 1180]], 0.0, face="happy", faces=[[0, "happy"], [C("Rivet takes one step"), "worry"]]),
               tag((0, "PROPOSAL"), (C("The idea got famous"), "QUOTE · QUARTZ INTERVIEW (FEB 2017)"))]},
@@ -259,7 +259,7 @@ def scale(id_, seg, title, pro, con, catch_face="worry", extra=(), sources=()):
 
 scale("s19_robot_scale", "c3_robot_scale", "BOOTH 1: TAX THE ROBOTS", "MONEY KEEPS COMING IN; WORKERS GET TIME", "WHAT COUNTS AS A ROBOT? FIRMS MAY BUY FEWER",
       extra=(RIV(1740, 0.0, y=1040, scale=0.6, face="happy", faces=[[0, "happy"], [C("What exactly counts"), "wow"], [C("Europe's lawmakers"), "happy"]]),
-             words("2017: EUROPEAN PARLIAMENT SAYS NO", 960, 1000, C("Europe's lawmakers"), size=44)), sources=["gates_qz17", "itif26"])
+             words("2017: EUROPEAN PARLIAMENT SAYS NO", 960, 930, C("Europe's lawmakers"), size=44)), sources=["gates_qz17", "itif26"])
 stage("s20_profit", "c3_profit", {
     **W1("txfair", lit=[[0, 1]]),
     "cam": cam((0, 700, 560, 1.0), (C("Tax the owners"), 700, 540, 1.2, 1.2), (C("In Who Gets Rich"), 960, 540, 0.9, 1.4)), "drift": 2,
@@ -323,7 +323,7 @@ stage("s30_stockton", "c4_stockton", {
     "cam": cam((0, 960, 540, 0.9), (C("a small group of residents"), 700, 540, 1.1, 1.6), (C("Plenty of critics"), 1100, 540, 1.0, 1.2), (C("Instead, after a year"), 960, 540, 0.9, 1.4)), "drift": 2,
     "items": [words("$500 A MONTH. NO STRINGS.", 900, 220, C("a small group of residents"), size=60, until=C("Plenty of critics")),
               words("CRITICS: 'THEY'LL STOP WORKING'", 960, 220, C("Plenty of critics"), size=52, until=C("Instead, after a year")),
-              words("YEAR 1: MORE IN FULL-TIME JOBS THAN THE COMPARISON GROUP", 960, 220, C("Instead, after a year"), size=38),
+              words("YEAR 1: MORE FULL-TIME JOBS", 960, 220, C("Instead, after a year"), size=38),
               LOCAL(1500, C("Instead, after a year"), v=5, color=TEAL, face="grin", pose="cheer"),
               tag((0, "FACT · SEED (2019-21)"), (C("Instead, after a year"), "FINDING · SEED YEAR 1 (PRELIMINARY)"))]},
     sources=["seed21"], sfx=[{"kind": "hit", "cue": "Instead, after a year", "gain": 0.25}])

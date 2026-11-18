@@ -28,7 +28,7 @@ OUT = ROOT / f"projects/{SLUG}/deliverables/documentary/storyboard.yaml"
 OX = 3400  # offset for a second zone
 Z = lambda s, x0=-1600, x1=4600, **kw: {"set": s, "x0": x0, "x1": x1, **kw}
 W1 = lambda s, **kw: {"zones": [Z(s, **kw)], "worldW": 2400}
-W2 = lambda a, b, ka=None, kb=None: {"zones": [Z(a, x0=-1600, x1=3000, **(ka or {})), Z(b, x0=3000, x1=7200, ox=OX, **(kb or {}))], "worldW": 2400}
+W2 = lambda a, b, ka=None, kb=None: {"zones": [Z(a, x0=-1600, x1=2600, **(ka or {})), Z(b, x0=2600, x1=7200, ox=OX, **(kb or {}))], "worldW": 2400}
 STILL = lambda: [{"at": 0, "x": 960, "y": 540, "zoom": 1.0}]
 cam = lambda *keys: [{"at": k[0], "x": k[1], "y": k[2], "zoom": k[3], **({"dur": k[4]} if len(k) > 4 else {})} for k in keys]
 WHIP = 0.35
@@ -198,7 +198,7 @@ bumper("s07_b2", "c2_card", "CHAPTER TWO", "The island and the machine", "Stamps
 stage("s08_taiwan", "c2_taiwan", {
     **W2("svmap", "svfoundry", maphop(0, 1, 0.2, 7), {"queue": [[0, 0], [C("Hattie watches the line"), 0], [C("all waiting at the same"), 6]], "wafers": 1, "plaque": "FOUNDRY (GENERIC)"}),
     "cam": cam((0, 960, 540, 1.0), (C("Nugget was born here"), OX + 1000, 500, 0.85, WHIP), (C("Its design came from America"), OX + 1500, 520, 1.0, 1.4),
-               (C("Hattie watches the line"), OX + 200, 560, 1.0, 1.4), (C("Is this the only shop"), OX + 300, 580, 1.15, 1.2)), "drift": 3,
+               (C("Hattie watches the line"), OX + 450, 560, 1.0, 1.4), (C("Is this the only shop"), OX + 480, 580, 1.15, 1.2)), "drift": 3,
     "items": [words("DESIGNED IN AMERICA. BUILT HERE.", OX + 1300, 210, C("Its design came from America"), size=48, until=C("Hattie watches the line")),
               HAT(OX + 520, C("Nugget was born here"), face="wow" if False else "squint", pose="stand", faces=[[0, "squint"], [C("Is this the only shop"), "shock"]]),
               NUG(OX + 700, C("Nugget was born here"), face="happy", faces=[[0, "happy"], [C("Pretty much"), "grin"]], talk=[[C("Pretty much"), C("Pretty much", 1.0)]]),
@@ -212,7 +212,7 @@ stage("s09_tsmc", "c2_tsmc", {
               words("EVERY NEW AI MODEL NEEDS MORE", 1100, 210, C("every new AI model"), size=52),
               it("svcoin", x=1700, y=600, at=C("the most in its history"), n=12),
               HAT(420, 0.0, face="shock", pose="stand", faces=[[0, "happy"], [C("the most in its history"), "shock"]]),
-              tag((0, "FACT · TSMC 2025 REVENUE"), (C("Last year"), "OUR CONVERSION · NT$3.81T AT FED 2025 AVG"))]},
+              tag((0, "FACT · TSMC 2025 REVENUE"), (C("Last year"), "OUR CONVERSION · FED 2025 AVERAGE RATE"))]},
     sources=["tsmc_dec25", "fed_g5a"], sfx=[{"kind": "hit", "cue": "Last year", "gain": 0.3}])
 stage("s10_customer", "c2_customer", {
     **W1("svmap", stamps=[{"x": 380, "y": 330, "label": "USA", "sub": "CUSTOMER #1", "c": BLUE, "at": C("America became")},
@@ -265,7 +265,7 @@ stage("s14_asml", "c2_asml", {
 stage("s15_nlcatch", "c2_nlcatch", {
     **W2("svpolder", "svmap", {"crate": 1, "planes": [[0, 0], [C("Governments decide"), 0], [C("Governments decide", 2.0), 1.2]], "plaque": "EXPORT LICENCE REQUIRED"},
          {"stamps": [{"x": 1450, "y": 360, "label": "CHINA", "sub": "BIGGEST MARKET", "c": PURPLE, "at": C("biggest market")}, {**ST["nl"], "at": 0}], "title": "WHERE MAY THE MACHINE GO?"}),
-    "cam": cam((0, 1240, 520, 0.95), (C("Governments decide"), 1700, 460, 0.9, 1.4), (C("biggest market"), OX + 1200, 420, 1.05, WHIP), (C("We took the machine apart"), OX + 960, 540, 0.95, 1.4)), "drift": 2,
+    "cam": cam((0, 1240, 520, 0.95), (C("Governments decide"), 1450, 460, 0.95, 1.4), (C("biggest market"), OX + 1200, 420, 1.05, WHIP), (C("We took the machine apart"), OX + 960, 540, 0.95, 1.4)), "drift": 2,
     "items": [words("GOVERNMENTS DECIDE WHERE IT GOES", 1300, 200, C("Governments decide"), size=50, until=C("biggest market")),
               words("CHINA: NO MOST-ADVANCED MACHINES", OX + 1200, 980, C("biggest market"), size=46, until=C("We took the machine apart")),
               words("LIBRARY: THE MACHINE EVERY ADVANCED CHIP DEPENDS ON", OX + 960, 980, C("We took the machine apart"), size=36),
@@ -346,7 +346,7 @@ stage("s24_mgx", "c4_mgx", {
     **W2("svdesert", "svmap", {"solar": 1, "vault": 1, "cash": 1, "halls": 3, "t0": -5, "plaque": "MGX (GENERIC BUILDING)"},
          {"stamps": [{"x": 380, "y": 330, "label": "USA", "sub": "STARGATE (PLAN)", "c": PURPLE, "at": C("a plan announced")}, {**ST["gulf"], "at": 0}],
           "route": [[0, 0], [C("a plan announced"), 0], [C("on AI data centers"), 1]], "title": "GULF MONEY, AMERICAN DATA CENTERS"}),
-    "cam": cam((0, 700, 520, 0.95), (C("one of the founding backers"), 2000, 460, 0.95, 1.4), (C("a plan announced"), OX + 900, 520, 0.95, WHIP)), "drift": 2,
+    "cam": cam((0, 700, 520, 0.95), (C("one of the founding backers"), 1450, 460, 1.0, 1.4), (C("a plan announced"), OX + 900, 520, 0.95, WHIP)), "drift": 2,
     "items": [words("A FOUNDING BACKER OF STARGATE", 1200, 200, C("one of the founding backers"), size=50, until=C("a plan announced")),
               words("PLAN: UP TO $500 BILLION", OX + 960, 980, C("a plan announced"), size=56),
               tag((0, "FACT · OPENAI (JAN 2025)"), (C("a plan announced"), "PLAN · OPENAI ANNOUNCEMENT"))]},
