@@ -127,6 +127,9 @@ SHORTS = {
     "70-canada-ai": ("why-canada-could-win-the-ai-boom", "documentary", "canadaai_documentary", "CANADA IS CRASHING?", "THE AI TWIST", "Is Canada Losing the AI Boom, or Winning It?", "#canada #ai #economy"),
     "70-canada-ai-b": ("why-canada-could-win-the-ai-boom", "documentary", "canadaai_documentary", "WHY AI DATA CENTERS", "WANT CANADA'S COLD", "Why AI Data Centers Want Canada's Cold", "#canada #ai #datacenter"),
     "70-canada-ai-c": ("why-canada-could-win-the-ai-boom", "documentary", "canadaai_documentary", "MODERN AI GREW UP", "IN CANADA", "Where Modern AI Grew Up: Canada", "#canada #ai #deeplearning"),
+    "71-brazil-ai": ("could-brazil-become-the-worlds-factory-for-robots", "documentary", "brazilai_documentary", "YOUR NEXT ROBOT:", "MADE IN BRAZIL?", "Could Your Next Robot Be Made in Brazil?", "#brazil #robots #economy"),
+    "71-brazil-ai-b": ("could-brazil-become-the-worlds-factory-for-robots", "documentary", "brazilai_documentary", "THE METAL BRAZIL", "ALMOST OWNS", "The Metal Brazil Almost Owns", "#brazil #niobium #mining"),
+    "71-brazil-ai-c": ("could-brazil-become-the-worlds-factory-for-robots", "documentary", "brazilai_documentary", "THE BACKPACK", "HOLDING BRAZIL BACK", "The Backpack Holding Brazil Back", "#brazil #economy #business"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -163,6 +166,9 @@ CUSTOM = {
     "70-canada-ai": ("70-canada-ai", ["co_hook"], "youtube-short"),
     "70-canada-ai-b": ("70-canada-ai", ["c3_cool", "c3_claim", "c3_heat"], "youtube-short-b"),
     "70-canada-ai-c": ("70-canada-ai", ["c5_hinton", "c5_bengio", "c5_strategy"], "youtube-short-c"),
+    "71-brazil-ai": ("71-brazil-ai", ["co_hook"], "youtube-short"),
+    "71-brazil-ai-b": ("71-brazil-ai", ["c2_niobium", "c2_magnets"], "youtube-short-b"),
+    "71-brazil-ai-c": ("71-brazil-ai", ["c3_credit", "c3_total"], "youtube-short-c"),
 }
 
 
