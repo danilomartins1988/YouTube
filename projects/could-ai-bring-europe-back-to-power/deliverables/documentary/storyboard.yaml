@@ -370,7 +370,7 @@ scenes:
       w: 1370
       h: 800
     draw_start:
-      cue: It found
+      cue: found that the size gap
     speed: 1500
     push: 0.003
     enter:
@@ -383,7 +383,7 @@ scenes:
       color: ink
       width: 5
       start:
-        cue: It found
+        cue: found that the size gap
       kind: stroke
     - d: M 700 820 L 700 700 L 860 700 L 860 820 Z
       color: accent
@@ -472,7 +472,7 @@ scenes:
       color: muted
       width: 1
       start:
-        cue: It found
+        cue: found that the size gap
       label:
         text: 'EU vs U.S. GDP AT CONSTANT 2015 PRICES · PER-PERSON GAP AT PPP · SOURCE: DRAGHI REPORT, PART A (SEP 2024)'
         x: 1050
@@ -727,7 +727,7 @@ scenes:
       x: 420
       y: 200
       at:
-        cue: A continent with enormous
+        cue: Enormous wealth
       color: '#C8E6C9'
       size: 32
     - kind: sign
@@ -743,7 +743,7 @@ scenes:
       x: 1500
       y: 200
       at:
-        cue: and famous companies
+        cue: famous companies
       color: '#E1D5FF'
       size: 32
     - kind: toonwords
@@ -788,7 +788,7 @@ scenes:
       tags:
       - - 0
         - FACT
-      - - cue: What comes next
+      - - cue: Now, a hypothesis
         - HYPOTHESIS
   assets:
   - font:inter
@@ -1045,7 +1045,7 @@ scenes:
       color: muted
       width: 1
       start:
-        cue: And expensive labor
+        cue: Expensive labor makes
       label:
         text: EXPENSIVE LABOR MAKES LABOR-HEAVY GROWTH HARDER
         x: 1030
@@ -1103,7 +1103,7 @@ scenes:
       zoom: 1.1
       dur: 1.2
     - at:
-        cue: And a different question
+        cue: and a different question
       x: 960
       y: 500
       zoom: 0.95
@@ -1118,7 +1118,7 @@ scenes:
         cue: What if technology
       size: 56
       until:
-        cue: And a different question
+        cue: and a different question
     - kind: sign
       text: A SHRINKING WORKFORCE ≠ A DEATH SENTENCE
       x: 1100
@@ -1128,13 +1128,13 @@ scenes:
       color: '#C8E6C9'
       size: 30
       until:
-        cue: And a different question
+        cue: and a different question
     - kind: toonwords
       text: WHO OWNS THE MACHINES?
       x: 960
       y: 150
       at:
-        cue: And a different question
+        cue: and a different question
       size: 60
       color: '#FFFFFF'
     - kind: epitag
@@ -1438,20 +1438,20 @@ scenes:
         color: '#1F8A8C'
         display: '240'
         at:
-          cue: and the EU as a whole
+          cue: The EU,
       - label: CHINA
         v: 193
         color: '#D9483B'
         display: '193'
         at:
-          cue: and the EU as a whole
+          cue: The EU,
           offset: 0.6
       - label: WORLD
         v: 152
         color: '#8E9AAF'
         display: '152'
         at:
-          cue: against a world average
+          cue: The world average
       foot: 'IFR ROBOT DENSITY RELEASE, NOV 12 2026 (DATA YEAR 2025) · EUROPE INSTALLATIONS 2025: 73,054, −14% (IFR WORLD ROBOTICS 2026)'
     worldW: 2400
     cam:
@@ -1713,7 +1713,7 @@ scenes:
       zoom: 0.95
       dur: 1.2
     - at:
-        cue: Europe happens to own
+        cue: Europe owns quite
       x: 960
       y: 500
       zoom: 1.1
@@ -1739,23 +1739,23 @@ scenes:
       color: '#FFE0B2'
       size: 28
       until:
-        cue: Europe happens to own
+        cue: Europe owns quite
     - kind: sign
       text: OWNING THE TECH → MAY MATTER MORE
       x: 960
       y: 230
       at:
-        cue: And the advantage
+        cue: and owning the technology
       color: '#E1D5FF'
       size: 30
       until:
-        cue: Europe happens to own
+        cue: Europe owns quite
     - kind: toonwords
       text: EUROPE OWNS A LOT OF IT
       x: 960
       y: 150
       at:
-        cue: Europe happens to own
+        cue: Europe owns quite
       size: 56
       color: '#FFFFFF'
     - kind: toon
@@ -1786,7 +1786,7 @@ scenes:
       tags:
       - - 0
         - MECHANISM
-      - - cue: may grow
+      - - cue: may matter more
         - CONJECTURE
   assets:
   - font:inter
@@ -1973,7 +1973,7 @@ scenes:
       x: 960
       y: 230
       at:
-        cue: on research and development
+        cue: on research.
       color: '#C8E6C9'
       size: 28
     - kind: epitag
@@ -2046,13 +2046,13 @@ scenes:
       width: 4
       kind: arrow
       start:
-        cue: Clinical trials
+        cue: Trials prove
     - d: M 1000 420 L 1170 420 L 1170 510 L 1000 510 Z
       color: accent
       width: 6
       kind: box
       start:
-        cue: Clinical trials
+        cue: Trials prove
       label:
         text: TRIALS
         x: 1085
@@ -2150,8 +2150,8 @@ scenes:
       - 0.4
       - 0.7
       - cue: It is buying
-      - cue: wherever the pens
-      - cue: wherever the pens
+      - cue: decades of science
+      - cue: decades of science
         offset: 0.4
       valueAt:
         cue: But what it really sells
@@ -2259,7 +2259,7 @@ scenes:
       y: 540
       zoom: 1.15
     - at:
-        cue: But be realistic
+        cue: But getting a medicine
       x: 960
       y: 520
       zoom: 0.85
@@ -2281,13 +2281,13 @@ scenes:
       color: '#E1D5FF'
       size: 22
       until:
-        cue: But be realistic
+        cue: But getting a medicine
     - kind: sign
       text: 'LAB → PHARMACY: 12-13 YEARS ON AVERAGE (EFPIA)'
       x: 960
       y: 120
       at:
-        cue: Getting a medicine
+        cue: But getting a medicine
       color: '#FFE0B2'
       size: 30
       until:
@@ -2646,7 +2646,7 @@ scenes:
       x1: 4600
       fx: 200
       twinAt:
-        cue: including digital twins
+        cue: digital twins
       shipAt:
         cue: When the world automates
       dests:
@@ -2688,7 +2688,7 @@ scenes:
       x: 700
       y: 210
       at:
-        cue: It sells the controllers
+        cue: sells factories the controllers
       color: '#BBDEFB'
       size: 28
       until:
@@ -2779,12 +2779,12 @@ scenes:
         y: 620
       - label: FUSELAGE · SITE B
         at:
-          cue: from suppliers
+          cue: Thousands of parts
         x: 960
         y: 680
       - label: ENGINES · SUPPLIER C
         at:
-          cue: in many countries
+          cue: from many countries
         x: 1660
         y: 620
     worldW: 2400
@@ -2800,7 +2800,7 @@ scenes:
       zoom: 0.9
       dur: 1.2
     - at:
-        cue: That's exactly the kind
+        cue: Exactly where better
       x: 960
       y: 460
       zoom: 1.1
@@ -2851,13 +2851,13 @@ scenes:
         cue: Its real product
       size: 50
       until:
-        cue: That's exactly the kind
+        cue: Exactly where better
     - kind: sign
       text: WHERE BETTER SOFTWARE + AUTOMATION COULD PAY OFF
       x: 960
       y: 120
       at:
-        cue: That's exactly the kind
+        cue: Exactly where better
       color: '#E1D5FF'
       size: 30
     - kind: epitag
@@ -2867,7 +2867,7 @@ scenes:
       tags:
       - - 0
         - FACT
-      - - cue: That's exactly the kind
+      - - cue: Exactly where better
         - CONJECTURE
   sources:
   - airbus_fy25
@@ -2919,7 +2919,7 @@ scenes:
       x: 960
       y: 200
       at:
-        cue: Now, none of this
+        cue: None of this means
       size: 50
       until:
         cue: Its robot installations
@@ -3268,7 +3268,7 @@ scenes:
         - E KEEPS
       - - cue: costs fall to fifty
         - FACTORY COSTS
-      - - cue: still earns its five percent
+      - - cue: It still earns
         - FACTORY FEE
       - - cue: share jumps
         - E KEEPS
@@ -3383,13 +3383,13 @@ scenes:
       y: 520
       zoom: 0.9
     - at:
-        cue: Competitors also automate
+        cue: Rivals automate too
       x: 1450
       y: 520
       zoom: 1.1
       dur: 1.2
     - at:
-        cue: Second, simply registering
+        cue: And simply registering
       x: 470
       y: 520
       zoom: 1.15
@@ -3405,23 +3405,23 @@ scenes:
       color: '#FFE0B2'
       size: 28
       until:
-        cue: Competitors also automate
+        cue: Rivals automate too
     - kind: sign
       text: RIVALS AUTOMATE TOO → PRICES MAY FALL
       x: 1450
       y: 170
       at:
-        cue: Competitors also automate
+        cue: Rivals automate too
       color: '#FFCDD2'
       size: 28
       until:
-        cue: Second, simply registering
+        cue: And simply registering
     - kind: sign
       text: 'CATCH 2: A PATENT REGISTERED SOMEWHERE ≠ PROFIT THERE'
       x: 600
       y: 170
       at:
-        cue: Second, simply registering
+        cue: And simply registering
       color: '#FFF59D'
       size: 28
       until:
@@ -3513,17 +3513,17 @@ scenes:
       factors:
       - label: ENERGY
         at:
-          cue: Energy.
+          cue: energy, the cost
         color: '#FFF59D'
       - label: COST OF MONEY
         at:
           cue: The cost of money
       - label: LOGISTICS
         at:
-          cue: Logistics.
+          cue: logistics, stability
       - label: STABILITY
         at:
-          cue: Stability.
+          cue: stability, and the taxes
       - label: TAXES & CHARGES
         at:
           cue: And the taxes and charges
@@ -3568,7 +3568,7 @@ scenes:
       zoom: 0.9
       dur: 1.4
     - at:
-        cue: And even then
+        cue: And the profit from
       x: 960
       y: 520
       zoom: 0.95
@@ -3602,13 +3602,13 @@ scenes:
       color: '#FFCDD2'
       size: 22
       until:
-        cue: And Brazil is phasing
+        cue: Brazil is phasing
     - kind: sign
       text: NEW DUAL VAT, PHASED IN 2026-2033 (EC 132/2023)
       x: 1100
       y: 180
       at:
-        cue: And Brazil is phasing
+        cue: Brazil is phasing
       color: '#FFF59D'
       size: 28
       until:
@@ -3622,13 +3622,13 @@ scenes:
       size: 44
       color: '#FFFFFF'
       until:
-        cue: And even then
+        cue: And the profit from
     - kind: sign
       text: THE TECH PROFIT CAN STILL FLOW TO ITS OWNER
       x: 960
       y: 180
       at:
-        cue: And even then
+        cue: And the profit from
       color: '#E1D5FF'
       size: 32
     - kind: epitag
@@ -3703,11 +3703,11 @@ scenes:
       - label: LAW & COURTS
         icon: hq
         at:
-          cue: Strong legal systems
+          cue: Strong courts
       - label: RESEARCH LABS
         icon: lab
         at:
-          cue: universities and research labs
+          cue: research labs
       - label: SINGLE MARKET
         icon: cash
         at:
@@ -3715,7 +3715,7 @@ scenes:
       - label: INDUSTRIAL CLUSTERS
         icon: hq
         at:
-          cue: deep industrial clusters
+          cue: industrial clusters
       - label: LIVABLE CITIES
         icon: people
         at:
@@ -3771,7 +3771,7 @@ scenes:
       - label: WEALTHY RESIDENTS
         icon: people
         at:
-          cue: Attracting wealthy residents
+          cue: Wealthy residents
       - label: INVESTMENT
         icon: cash
         at:
@@ -3797,7 +3797,7 @@ scenes:
       x: 960
       y: 110
       at:
-        cue: is not the same
+        cue: are not the same
       color: '#FFE0B2'
       size: 34
       until:
@@ -3810,16 +3810,6 @@ scenes:
         cue: A head office
       color: '#FFE0B2'
       size: 34
-      until:
-        cue: And a research lab
-    - kind: sign
-      text: RESEARCH LAB ≠ AUTOMATICALLY TAXABLE PROFIT
-      x: 960
-      y: 110
-      at:
-        cue: And a research lab
-      color: '#FFE0B2'
-      size: 30
       until:
         cue: Only real activity
     - kind: toonwords
@@ -3867,7 +3857,7 @@ scenes:
         y: 170
       - label: SKILL SHORTAGES
         at:
-          cue: Shortages of the skilled
+          cue: Shortages of skilled
         x: 1180
         y: 170
       - label: 'BUDGETS: NOT AUTOMATIC'
@@ -3882,7 +3872,7 @@ scenes:
       y: 520
       zoom: 0.95
     - at:
-        cue: Whether they help
+        cue: That depends on
       x: 960
       y: 520
       zoom: 1.05
@@ -3894,7 +3884,7 @@ scenes:
       x: 960
       y: 390
       at:
-        cue: Whether they help
+        cue: That depends on
       color: '#FFFFFF'
       size: 30
     - kind: toon
@@ -4160,7 +4150,7 @@ scenes:
       zoom: 0.95
       dur: 1.8
     - at:
-        cue: The facts say
+        cue: Europe has the assets
       x: 1700
       y: 520
       zoom: 0.75
@@ -4203,7 +4193,7 @@ scenes:
       size: 46
       color: '#FFFFFF'
       until:
-        cue: The facts say
+        cue: Europe has the assets
     - kind: sign
       text: A PLAUSIBLE PATH, NOT A PROMISE
       x: 2600
@@ -4213,13 +4203,13 @@ scenes:
       color: '#E1D5FF'
       size: 32
       until:
-        cue: The facts say
+        cue: Europe has the assets
     - kind: toonwords
       text: 'THE ASSETS: YES · THE CHOICES: NOT YET MADE'
       x: 1700
       y: 150
       at:
-        cue: The facts say
+        cue: Europe has the assets
       size: 46
       color: '#FFFFFF'
     - kind: toon
@@ -4257,7 +4247,7 @@ scenes:
       tags:
       - - 0
         - VERDICT · HYPOTHESIS
-      - - cue: The facts say
+      - - cue: Europe has the assets
         - FACT + SCENARIO
   assets:
   - font:inter

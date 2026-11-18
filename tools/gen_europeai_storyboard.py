@@ -106,10 +106,10 @@ stage("s03_size", "a1_size", {
               tag((0, "FACT"))]},
     sources=["imf_weo"])
 add("p04_gap", "a1_gap", "engine_draw", {
-    "title": "EU vs U.S.: the size gap (Draghi report, 2024)", "board": BOARD, "draw_start": C("It found"), "speed": 1500, "push": 0.003,
+    "title": "EU vs U.S.: the size gap (Draghi report, 2024)", "board": BOARD, "draw_start": C("found that the size gap"), "speed": 1500, "push": 0.003,
     "enter": {"from": -260, "to": 270, "at": 0.2, "dur": 1.3},
     "strokes": [
-        {"d": "M 620 820 L 1480 820", "color": "ink", "width": 5, "start": C("It found")},
+        {"d": "M 620 820 L 1480 820", "color": "ink", "width": 5, "start": C("found that the size gap")},
         {"d": "M 700 820 L 700 700 L 860 700 L 860 820 Z", "color": "accent", "width": 3, "fill": "accent", "fillOpacity": 0.5, "kind": "bar", "start": C("grew from"), "label": lbl("GAP 2002 · ≈15%", 780, 682, 22, "accent")},
         {"d": "M 920 820 L 920 580 L 1080 580 L 1080 820 Z", "color": "risk", "width": 3, "fill": "risk", "fillOpacity": 0.7, "kind": "bar", "start": C("thirty percent"), "label": lbl("GAP 2023 · 30%", 1000, 562, 22, "risk")},
         {"d": arrow((800, 660), (990, 540), -0.25), "color": "risk", "width": 5, "kind": "arrow", "start": C("thirty percent", 0.4)},
@@ -117,7 +117,7 @@ add("p04_gap", "a1_gap", "engine_draw", {
         {"d": dot(1310, 610), "color": "ink", "width": 1, "start": C("of the gap in income"), "label": lbl("IN INCOME PER PERSON", 1310, 610, 18, "ink")},
         {"d": rect(1160, 680, 300, 80), "color": "risk", "width": 5, "kind": "box", "start": C("Lower productivity"), "label": lbl("= LOWER PRODUCTIVITY", 1310, 728, 22, "risk")},
         {"d": arrow((1310, 640), (1310, 676), 0.0), "color": "ink", "width": 4, "kind": "arrow", "start": C("Lower productivity", -0.3)},
-        {"d": dot(1050, 875), "color": "muted", "width": 1, "start": C("It found"), "label": lbl("EU vs U.S. GDP AT CONSTANT 2015 PRICES · PER-PERSON GAP AT PPP · SOURCE: DRAGHI REPORT, PART A (SEP 2024)", 1050, 875, 15, "muted")},
+        {"d": dot(1050, 875), "color": "muted", "width": 1, "start": C("found that the size gap"), "label": lbl("EU vs U.S. GDP AT CONSTANT 2015 PRICES · PER-PERSON GAP AT PPP · SOURCE: DRAGHI REPORT, PART A (SEP 2024)", 1050, 875, 15, "muted")},
     ],
     "actions": [{"kind": "point", "at": C("thirty percent", 0.2), "dur": 1.4, "target": [1000, 620]}, {"kind": "point", "at": C("Lower productivity", 0.1), "dur": 1.4, "target": [1310, 720]}],
     "scale": 0.86, "floor": 1040}, sources=["draghi_a"])
@@ -145,13 +145,13 @@ stage("s06_squeeze", "a1_squeeze", {
 stage("s07_paradox", "a1_paradox", {
     **W1("eurocity", era=0.35, smoke=0.4),
     "cam": cam((0, 960, 540, 0.9), (C("Those are the facts"), 960, 520, 1.05, WHIP)), "drift": 4,
-    "items": [sign("ENORMOUS WEALTH", 420, 200, C("A continent with enormous"), color="#C8E6C9", size=32),
+    "items": [sign("ENORMOUS WEALTH", 420, 200, C("Enormous wealth"), color="#C8E6C9", size=32),
               sign("WORLD-CLASS UNIVERSITIES", 960, 140, C("world-class universities"), color="#BBDEFB", size=32),
-              sign("FAMOUS COMPANIES", 1500, 200, C("and famous companies"), color="#E1D5FF", size=32),
+              sign("FAMOUS COMPANIES", 1500, 200, C("famous companies"), color="#E1D5FF", size=32),
               words("...AND SERIOUS QUESTIONS", 960, 290, C("and serious questions"), size=50, until=C("Those are the facts")),
               words("FACTS → NOW, A HYPOTHESIS", 960, 300, C("Those are the facts"), size=52, color="#FFFFFF"),
               NORA(560, 0.3, face="happy", pose="clipboard", hold="clipboard", label="NORA · RESEARCHER", labelUntil=C("and serious questions")),
-              tag((0, "FACT"), (C("What comes next"), "HYPOTHESIS"))]})
+              tag((0, "FACT"), (C("Now, a hypothesis"), "HYPOTHESIS"))]})
 
 # ====================================================================== ACT 2: the old formula
 bumper("s08_b2", "a2_card", "2", "ACT TWO", "THE OLD FORMULA", "Workers + machines = stuff. Simple. Until now.", ORANGE)
@@ -175,16 +175,16 @@ add("p10_formula", "a2_draw", "engine_draw", {
         {"d": rect(1200, 470, 260, 110), "color": "accent3", "width": 6, "kind": "box", "start": C("times what each"), "label": lbl("PER WORKER", 1330, 535, 28, "accent3")},
         {"d": arrow((1010, 600), (1010, 740), 0.0), "color": "risk", "width": 6, "kind": "arrow", "start": C("starts falling"), "label": lbl("FALLING (EU)", 1010, 780, 24, "risk")},
         {"d": arrow((1330, 740), (1330, 600), 0.0), "color": "accent3", "width": 6, "kind": "arrow", "start": C("Each worker has to produce more"), "label": lbl("MUST RISE", 1330, 780, 24, "accent3")},
-        {"d": dot(1030, 860), "color": "muted", "width": 1, "start": C("And expensive labor"), "label": lbl("EXPENSIVE LABOR MAKES LABOR-HEAVY GROWTH HARDER", 1030, 860, 20, "muted")},
+        {"d": dot(1030, 860), "color": "muted", "width": 1, "start": C("Expensive labor makes"), "label": lbl("EXPENSIVE LABOR MAKES LABOR-HEAVY GROWTH HARDER", 1030, 860, 20, "muted")},
     ],
     "actions": [{"kind": "point", "at": C("starts falling", 0.1), "dur": 1.4, "target": [1010, 700]}, {"kind": "point", "at": C("Each worker has to produce more", 0.2), "dur": 1.4, "target": [1330, 680]}],
     "scale": 0.86, "floor": 1040})
 stage("s11_question", "a2_question", {
     **W1("smartfab", arms=3, armX=500, armGap=480, scanX=1800, techs=1, techX=300, carts=1),
-    "cam": cam((0, 960, 540, 1.0), (C("Then a shrinking workforce"), 1100, 520, 1.1, 1.2), (C("And a different question"), 960, 500, 0.95, WHIP)), "drift": 4,
-    "items": [words("FAR MORE, WITH FAR FEWER?", 960, 140, C("What if technology"), size=56, until=C("And a different question")),
-              sign("A SHRINKING WORKFORCE ≠ A DEATH SENTENCE", 1100, 230, C("Then a shrinking workforce"), color="#C8E6C9", size=30, until=C("And a different question")),
-              words("WHO OWNS THE MACHINES?", 960, 150, C("And a different question"), size=60, color="#FFFFFF"),
+    "cam": cam((0, 960, 540, 1.0), (C("Then a shrinking workforce"), 1100, 520, 1.1, 1.2), (C("and a different question"), 960, 500, 0.95, WHIP)), "drift": 4,
+    "items": [words("FAR MORE, WITH FAR FEWER?", 960, 140, C("What if technology"), size=56, until=C("and a different question")),
+              sign("A SHRINKING WORKFORCE ≠ A DEATH SENTENCE", 1100, 230, C("Then a shrinking workforce"), color="#C8E6C9", size=30, until=C("and a different question")),
+              words("WHO OWNS THE MACHINES?", 960, 150, C("and a different question"), size=60, color="#FFFFFF"),
               tag((0, "HYPOTHESIS"))]})
 
 # ====================================================================== ACT 3: when machines do the work
@@ -214,9 +214,9 @@ stage("s15_robots", "a3_robots", {
     **W1("triad", title="ROBOTS PER 10,000 FACTORY WORKERS, 2025 (IFR)", scale=1.05, gap=330, bars=[
         {"label": "GERMANY", "v": 469, "color": GOLD, "display": "469", "at": C("Germany runs")},
         {"label": "U.S.", "v": 323, "color": BLUE, "display": "323", "at": C("Germany runs", 0.6)},
-        {"label": "EU", "v": 240, "color": TEAL, "display": "240", "at": C("and the EU as a whole")},
-        {"label": "CHINA", "v": 193, "color": RED, "display": "193", "at": C("and the EU as a whole", 0.6)},
-        {"label": "WORLD", "v": 152, "color": "#8E9AAF", "display": "152", "at": C("against a world average")}],
+        {"label": "EU", "v": 240, "color": TEAL, "display": "240", "at": C("The EU,")},
+        {"label": "CHINA", "v": 193, "color": RED, "display": "193", "at": C("The EU,", 0.6)},
+        {"label": "WORLD", "v": 152, "color": "#8E9AAF", "display": "152", "at": C("The world average")}],
         foot="IFR ROBOT DENSITY RELEASE, NOV 12 2026 (DATA YEAR 2025) · EUROPE INSTALLATIONS 2025: 73,054, −14% (IFR WORLD ROBOTICS 2026)"),
     "cam": cam((0, 960, 520, 1.0), (C("Germany runs"), 960, 540, 0.92, 1.4)), "drift": 2,
     "items": [it("counter", x=960, y=220, at=0.3, suffix=" ROBOTS INSTALLED IN EUROPE, 2025", decimals=0, steps=[[0, 0], [C("Factories in Europe installed"), 0], [C("new industrial robots"), 73054]],
@@ -243,13 +243,13 @@ add("p16_bill", "a3_bill", "engine_draw", {
     "scale": 0.86, "floor": 1040})
 stage("s17_people", "a3_people", {
     **W1("smartfab", arms=3, armX=900, armGap=440, scanX=500, carts=1, techs=3, techX=300, techGap=650, hi="arms"),
-    "cam": cam((0, 960, 560, 1.0), (C("But if fewer hands"), 960, 520, 0.95, 1.2), (C("Europe happens to own"), 960, 500, 1.1, WHIP)), "drift": 4,
+    "cam": cam((0, 960, 560, 1.0), (C("But if fewer hands"), 960, 520, 0.95, 1.2), (C("Europe owns quite"), 960, 500, 1.1, WHIP)), "drift": 4,
     "items": [sign("DESIGN · SOFTWARE · MAINTENANCE", 960, 150, C("Someone designs"), color="#C8E6C9", size=32, until=C("But if fewer hands")),
-              sign("FEWER HANDS PER PRODUCT → CHEAP-LABOR EDGE SHRINKS", 960, 150, C("But if fewer hands"), color="#FFE0B2", size=28, until=C("Europe happens to own")),
-              sign("OWNING THE TECH → MAY MATTER MORE", 960, 230, C("And the advantage"), color="#E1D5FF", size=30, until=C("Europe happens to own")),
-              words("EUROPE OWNS A LOT OF IT", 960, 150, C("Europe happens to own"), size=56, color="#FFFFFF"),
+              sign("FEWER HANDS PER PRODUCT → CHEAP-LABOR EDGE SHRINKS", 960, 150, C("But if fewer hands"), color="#FFE0B2", size=28, until=C("Europe owns quite")),
+              sign("OWNING THE TECH → MAY MATTER MORE", 960, 230, C("and owning the technology"), color="#E1D5FF", size=30, until=C("Europe owns quite")),
+              words("EUROPE OWNS A LOT OF IT", 960, 150, C("Europe owns quite"), size=56, color="#FFFFFF"),
               NORA([[C("Starting with medicine"), 2200], [C("Starting with medicine", 0.9), 1500]], C("Starting with medicine", -0.3), face="happy", pose="wave"),
-              tag((0, "MECHANISM"), (C("may grow"), "CONJECTURE"))]})
+              tag((0, "MECHANISM"), (C("may matter more"), "CONJECTURE"))]})
 
 # ====================================================================== ACT 4: pharma, Europe's hidden advantage
 bumper("s18_b4", "a4_card", "4", "ACT FOUR", "PHARMA: EUROPE'S HIDDEN ADVANTAGE", "The world's medicine cabinet has a European accent.", GREEN)
@@ -268,7 +268,7 @@ stage("s20_six", "a4_six", {
     "cam": cam((0, 960, 560, 0.9), (C("Together"), 960, 520, 0.95, 1.2)), "drift": 2,
     "items": [it("counter", x=960, y=120, at=C("Together"), prefix="≈ $", suffix="BN REVENUE · 2025", decimals=0, steps=[[0, 0], [C("Together"), 0], [C("last year"), 327]],
                  text="SIX COMPANIES · ANNUAL REPORTS · ECB 2025 AVG RATES · OUR CONVERSION & SUM"),
-              sign("R&D ≈ $67BN (OUR SUM; DEFINITIONS DIFFER)", 960, 230, C("on research and development"), color="#C8E6C9", size=28),
+              sign("R&D ≈ $67BN (OUR SUM; DEFINITIONS DIFFER)", 960, 230, C("on research."), color="#C8E6C9", size=28),
               tag((0, "FACT"))]},
     sources=["roche_fy25", "novartis_fy25", "az_fy25", "gsk_fy25", "sanofi_fy25", "novo_ar25", "ecb_2025_avg"])
 add("p21_chain", "a4_chain", "engine_draw", {
@@ -278,8 +278,8 @@ add("p21_chain", "a4_chain", "engine_draw", {
         {"d": rect(560, 420, 170, 90), "color": "accent", "width": 6, "kind": "box", "start": C("Research finds"), "label": lbl("RESEARCH", 645, 474, 22, "accent")},
         {"d": arrow((735, 465), (775, 465), 0.0), "color": "ink", "width": 4, "kind": "arrow", "start": C("Patents protect")},
         {"d": rect(780, 420, 170, 90), "color": "accent", "width": 6, "kind": "box", "start": C("Patents protect"), "label": lbl("PATENTS", 865, 474, 22, "accent")},
-        {"d": arrow((955, 465), (995, 465), 0.0), "color": "ink", "width": 4, "kind": "arrow", "start": C("Clinical trials")},
-        {"d": rect(1000, 420, 170, 90), "color": "accent", "width": 6, "kind": "box", "start": C("Clinical trials"), "label": lbl("TRIALS", 1085, 474, 22, "accent")},
+        {"d": arrow((955, 465), (995, 465), 0.0), "color": "ink", "width": 4, "kind": "arrow", "start": C("Trials prove")},
+        {"d": rect(1000, 420, 170, 90), "color": "accent", "width": 6, "kind": "box", "start": C("Trials prove"), "label": lbl("TRIALS", 1085, 474, 22, "accent")},
         {"d": arrow((1175, 465), (1215, 465), 0.0), "color": "ink", "width": 4, "kind": "arrow", "start": C("Then factories make it")},
         {"d": rect(1220, 420, 170, 90), "color": "accent2", "width": 6, "kind": "box", "start": C("Then factories make it"), "label": lbl("FACTORY", 1305, 474, 22, "accent2")},
         {"d": arrow((1305, 515), (1305, 585), 0.0), "color": "ink", "width": 4, "kind": "arrow", "start": C("and distributors ship")},
@@ -290,7 +290,7 @@ add("p21_chain", "a4_chain", "engine_draw", {
     "actions": [{"kind": "point", "at": C("Most of the value", 0.2), "dur": 1.6, "target": [860, 600]}],
     "scale": 0.86, "floor": 1040})
 stage("s22_novo", "a4_novo", {
-    **W1("pharmachain", stepAt=[0.1, 0.4, 0.7, C("It is buying"), C("wherever the pens"), C("wherever the pens", 0.4)], valueAt=C("But what it really sells"), flowAt=C("decades of science"),
+    **W1("pharmachain", stepAt=[0.1, 0.4, 0.7, C("It is buying"), C("decades of science"), C("decades of science", 0.4)], valueAt=C("But what it really sells"), flowAt=C("decades of science"),
          flowText="THE SCIENCE IS WHAT IT REALLY SELLS"),
     "cam": cam((0, 700, 540, 0.95), (C("It is buying"), 1300, 520, 1.0, 1.4), (C("But what it really sells"), 960, 520, 0.85, 1.4)), "drift": 3,
     "items": [sign("NOVO NORDISK · BAGSVÆRD, DENMARK (EU)", 700, 140, 0.3, color="#FFFFFF", size=30, until=C("Last year")),
@@ -301,9 +301,9 @@ stage("s22_novo", "a4_novo", {
     sources=["novo_ar25", "ecb_2025_avg"])
 stage("s23_ai", "a4_ai", {
     **W1("pharmachain", stepAt=[0.1, 0.3, 0.5, 0.7, 0.9, 1.1], valueAt=None, names=["RESEARCH", "PATENTS", "TRIALS", "FACTORY", "SHIPPING", "PHARMACIES"]),
-    "cam": cam((0, 400, 540, 1.15), (C("But be realistic"), 960, 520, 0.85, 1.4), (C("AI may help"), 400, 520, 1.15, 1.2)), "drift": 3,
-    "items": [sign("ASTRAZENECA BOUGHT MODELLA AI (Q4 2025) TO EMBED AI MODELS IN CANCER R&D · COMPANY STATEMENT", 700, 120, C("AstraZeneca bought"), color="#E1D5FF", size=22, until=C("But be realistic")),
-              sign("LAB → PHARMACY: 12-13 YEARS ON AVERAGE (EFPIA)", 960, 120, C("Getting a medicine"), color="#FFE0B2", size=30, until=C("AI may help")),
+    "cam": cam((0, 400, 540, 1.15), (C("But getting a medicine"), 960, 520, 0.85, 1.4), (C("AI may help"), 400, 520, 1.15, 1.2)), "drift": 3,
+    "items": [sign("ASTRAZENECA BOUGHT MODELLA AI (Q4 2025) TO EMBED AI MODELS IN CANCER R&D · COMPANY STATEMENT", 700, 120, C("AstraZeneca bought"), color="#E1D5FF", size=22, until=C("But getting a medicine")),
+              sign("LAB → PHARMACY: 12-13 YEARS ON AVERAGE (EFPIA)", 960, 120, C("But getting a medicine"), color="#FFE0B2", size=30, until=C("AI may help")),
               sign("1-2 OF EVERY 10,000 SUBSTANCES MAKE IT", 960, 200, C("substances make it"), color="#FFCDD2", size=30, until=C("AI may help")),
               words("AI: BETTER BETS, NOT GUARANTEES", 400, 140, C("AI may help"), size=50, color="#FFFFFF"),
               NORA(250, C("Could AI speed"), face="worry", pose="clipboard", hold="clipboard", faces=[[0, "worry"], [C("AI may help"), "happy"]]),
@@ -340,10 +340,10 @@ stage("s27_web", "a5_web", {
               tag((0, "FACT"), (C("Every time someone"), "MECHANISM"))]},
     sources=["asml_ar25"])
 stage("s28_siemens", "a5_siemens", {
-    **W1("twinfab", fx=200, twinAt=C("including digital twins"), shipAt=C("When the world automates"), dests=["FACTORY · ASIA", "FACTORY · AMERICAS", "FACTORY · EUROPE", "FACTORY · AFRICA"]),
+    **W1("twinfab", fx=200, twinAt=C("digital twins"), shipAt=C("When the world automates"), dests=["FACTORY · ASIA", "FACTORY · AMERICAS", "FACTORY · EUROPE", "FACTORY · AFRICA"]),
     "cam": cam((0, 700, 540, 1.0), (C("In its fiscal year"), 960, 500, 0.95, 1.4), (C("When the world automates"), 1200, 520, 0.85, 1.4)), "drift": 3,
     "items": [sign("SIEMENS · MUNICH, GERMANY (EU)", 700, 130, 0.3, color="#FFFFFF", size=30, until=C("In its fiscal year")),
-              sign("CONTROLLERS · AUTOMATION · SOFTWARE", 700, 210, C("It sells the controllers"), color="#BBDEFB", size=28, until=C("In its fiscal year")),
+              sign("CONTROLLERS · AUTOMATION · SOFTWARE", 700, 210, C("sells factories the controllers"), color="#BBDEFB", size=28, until=C("In its fiscal year")),
               it("counter", x=1400, y=150, at=C("In its fiscal year"), prefix="≈ $", suffix="BN REVENUE · FY2026", decimals=1, steps=[[0, 0], [C("In its fiscal year"), 0], [C("it brought in"), 96.9]],
                  text="SIEMENS FY TO SEP 30, 2026 · ECB DAILY AVG 1.1616 · OUR CONVERSION", until=C("When the world automates")),
               sign("FACTORY SOFTWARE ≈ $8.4BN, +13%", 1400, 300, C("factory software"), color="#C8E6C9", size=28, until=C("When the world automates")),
@@ -353,15 +353,15 @@ stage("s28_siemens", "a5_siemens", {
     sources=["siemens_fy26", "ecb_daily"])
 stage("s29_airbus", "a5_airbus", {
     **W1("jetyard", join=[[0, 0.0], [C("Its real product"), 0.0], [C("engineered and certified"), 1.0]], joinDone=C("engineered and certified", 0.6),
-         sups=[{"label": "WINGS · SITE A", "at": C("Thousands of parts"), "x": 260, "y": 620}, {"label": "FUSELAGE · SITE B", "at": C("from suppliers"), "x": 960, "y": 680},
-               {"label": "ENGINES · SUPPLIER C", "at": C("in many countries"), "x": 1660, "y": 620}]),
-    "cam": cam((0, 960, 520, 0.95), (C("Its real product"), 960, 560, 0.9, 1.2), (C("That's exactly the kind"), 960, 460, 1.1, 1.2)), "drift": 3,
+         sups=[{"label": "WINGS · SITE A", "at": C("Thousands of parts"), "x": 260, "y": 620}, {"label": "FUSELAGE · SITE B", "at": C("Thousands of parts"), "x": 960, "y": 680},
+               {"label": "ENGINES · SUPPLIER C", "at": C("from many countries"), "x": 1660, "y": 620}]),
+    "cam": cam((0, 960, 520, 0.95), (C("Its real product"), 960, 560, 0.9, 1.2), (C("Exactly where better"), 960, 460, 1.1, 1.2)), "drift": 3,
     "items": [sign("AIRBUS · REGISTERED IN LEIDEN (NL) · RUN FROM NEAR TOULOUSE (FR)", 960, 110, 0.3, color="#FFFFFF", size=26, until=C("Last year")),
               it("counter", x=600, y=150, at=C("Last year"), suffix=" JETS DELIVERED · 2025", decimals=0, steps=[[0, 0], [C("Last year"), 0], [C("commercial jets"), 793]], text="AIRBUS FY2025 RESULTS", until=C("Its real product")),
               sign("BACKLOG: 8,754 AIRCRAFT", 1350, 150, C("more on order"), color="#BBDEFB", size=30, until=C("Its real product")),
-              words("THE REAL PRODUCT: COORDINATION", 960, 120, C("Its real product"), size=50, until=C("That's exactly the kind")),
-              sign("WHERE BETTER SOFTWARE + AUTOMATION COULD PAY OFF", 960, 120, C("That's exactly the kind"), color="#E1D5FF", size=30),
-              tag((0, "FACT"), (C("That's exactly the kind"), "CONJECTURE"))]},
+              words("THE REAL PRODUCT: COORDINATION", 960, 120, C("Its real product"), size=50, until=C("Exactly where better")),
+              sign("WHERE BETTER SOFTWARE + AUTOMATION COULD PAY OFF", 960, 120, C("Exactly where better"), color="#E1D5FF", size=30),
+              tag((0, "FACT"), (C("Exactly where better"), "CONJECTURE"))]},
     sources=["airbus_fy25", "airbus_agm26"])
 stage("s30_limits", "a5_limits", {
     **W1("triad", title="A REALITY CHECK", scale=0.0016, bars=[
@@ -369,7 +369,7 @@ stage("s30_limits", "a5_limits", {
         {"label": "EUROPE ROBOTS 2025", "v": 73054, "color": GOLD, "display": "73,054 (−14%)", "at": C("Its robot installations", 0.5)}], gap=520,
         foot="INDUSTRIAL ROBOTS INSTALLED IN 2025 (IFR WORLD ROBOTICS 2026)"),
     "cam": cam((0, 960, 540, 0.95), (C("But it does own"), 960, 520, 1.05, 1.2)), "drift": 2,
-    "items": [words("EUROPE DOESN'T DOMINATE EVERYTHING", 960, 200, C("Now, none of this"), size=50, until=C("Its robot installations")),
+    "items": [words("EUROPE DOESN'T DOMINATE EVERYTHING", 960, 200, C("None of this means"), size=50, until=C("Its robot installations")),
               sign("CLOUD & CONSUMER TECH: MOSTLY AMERICAN", 1500, 280, C("and its cloud"), color="#BBDEFB", size=26, until=C("But it does own")),
               words("BUT IT OWNS CAPABILITIES THAT MAY GAIN VALUE", 960, 200, C("But it does own"), size=44, color="#FFFFFF"),
               tag((0, "FACT"), (C("But it does own"), "CONJECTURE"))]},
@@ -408,7 +408,7 @@ B4 = lambda fc, fee, ec, keep, at=None: [{"label": "FACTORY COSTS", "v": fc, "co
                                          {"label": "E KEEPS", "v": keep, "color": GOLD, **({"at": at} if at is not None else {})}]
 stage("s34_numbers", "a6_numbers", {
     **W1("profitlab", colX=760, gap=560, hiAt=[[0, None], [C("earns a steady fee"), "FACTORY FEE"], [C("and keeps seventeen"), "E KEEPS"], [C("costs fall to fifty"), "FACTORY COSTS"],
-                                                  [C("still earns its five percent"), "FACTORY FEE"], [C("share jumps"), "E KEEPS"]],
+                                                  [C("It still earns"), "FACTORY FEE"], [C("share jumps"), "E KEEPS"]],
          cols=[{"name": "BEFORE AUTOMATION", "sub": "PER $100 OF SALES", "at": C("A contract factory"),
                 "blocks": [{"label": "FACTORY COSTS", "v": 60, "color": "#7E8DA3", "at": C("spends sixty dollars")}, {"label": "FACTORY FEE", "v": 3, "color": TEAL, "at": C("so three dollars")},
                            {"label": "E's R&D + SALES", "v": 20, "color": BLUE, "at": C("sales costs of twenty")}, {"label": "E KEEPS", "v": 17, "color": GOLD, "at": C("and keeps seventeen")}]},
@@ -421,10 +421,10 @@ stage("s34_numbers", "a6_numbers", {
     "items": [tag((0, "ILLUSTRATIVE · MADE-UP NUMBERS"))]})
 stage("s35_catch", "a6_catch", {
     **W1("ownmap", hqX=470, fX=1450, licAt=0.1, prodAt=0.2, feeAt=0.3, saleAt=0.4, glowAt=C("The real work"), hyp=True, hypAt=0, hypText="HYPOTHETICAL COMPANY E"),
-    "cam": cam((0, 960, 520, 0.9), (C("Competitors also automate"), 1450, 520, 1.1, 1.2), (C("Second, simply registering"), 470, 520, 1.15, 1.4)), "drift": 3,
-    "items": [sign("CATCH 1: ONLY IF E DOES THE WORK · AND IF PRICES HOLD", 960, 170, C("Two catches"), color="#FFE0B2", size=28, until=C("Competitors also automate")),
-              sign("RIVALS AUTOMATE TOO → PRICES MAY FALL", 1450, 170, C("Competitors also automate"), color="#FFCDD2", size=28, until=C("Second, simply registering")),
-              sign("CATCH 2: A PATENT REGISTERED SOMEWHERE ≠ PROFIT THERE", 600, 170, C("Second, simply registering"), color="#FFF59D", size=28, until=C("The real work")),
+    "cam": cam((0, 960, 520, 0.9), (C("Rivals automate too"), 1450, 520, 1.1, 1.2), (C("And simply registering"), 470, 520, 1.15, 1.4)), "drift": 3,
+    "items": [sign("CATCH 1: ONLY IF E DOES THE WORK · AND IF PRICES HOLD", 960, 170, C("Two catches"), color="#FFE0B2", size=28, until=C("Rivals automate too")),
+              sign("RIVALS AUTOMATE TOO → PRICES MAY FALL", 1450, 170, C("Rivals automate too"), color="#FFCDD2", size=28, until=C("And simply registering")),
+              sign("CATCH 2: A PATENT REGISTERED SOMEWHERE ≠ PROFIT THERE", 600, 170, C("And simply registering"), color="#FFF59D", size=28, until=C("The real work")),
               words("REAL WORK · REAL PEOPLE · REAL DECISIONS", 600, 170, C("The real work"), size=46, color="#FFFFFF"),
               tag((0, "MECHANISM"))]})
 stage("s36_question", "a6_question", {
@@ -436,48 +436,47 @@ stage("s36_question", "a6_question", {
 
 stage("s36b_energy", "a6_energy", {
     **W1("cleanpower", plantText="AUTOMATED PLANT · ENERGY-RICH COUNTRY (SCENARIO)", billX=1640, billScale=5.5,
-         factors=[{"label": "ENERGY", "at": C("Energy."), "color": "#FFF59D"}, {"label": "COST OF MONEY", "at": C("The cost of money")},
-                  {"label": "LOGISTICS", "at": C("Logistics.")}, {"label": "STABILITY", "at": C("Stability.")},
+         factors=[{"label": "ENERGY", "at": C("energy, the cost"), "color": "#FFF59D"}, {"label": "COST OF MONEY", "at": C("The cost of money")},
+                  {"label": "LOGISTICS", "at": C("logistics, stability")}, {"label": "STABILITY", "at": C("stability, and the taxes")},
                   {"label": "TAXES & CHARGES", "at": C("And the taxes and charges"), "color": "#FFCDD2"}], facX=260, facGap=350, facY=80,
          bill=[{"label": "ENERGY + GRID", "v": 55, "color": BLUE, "at": C("But one industry study")},
                {"label": "TAXES + CHARGES ≈45%", "v": 45, "color": RED, "at": C("taxes and sector charges took")}],
          billText="BRAZIL POWER COMPANIES' REVENUE, 2024"),
     "cam": cam((0, 960, 540, 0.95), (C("Take Brazil"), 500, 560, 1.1, 1.4), (C("But one industry study"), 1500, 540, 1.05, 1.4),
-               (C("So in this scenario"), 960, 540, 0.9, 1.4), (C("And even then"), 960, 520, 0.95, 1.2)), "drift": 3,
+               (C("So in this scenario"), 960, 540, 0.9, 1.4), (C("And the profit from"), 960, 520, 0.95, 1.2)), "drift": 3,
     "items": [words("ROBOTS ↑ → LABOR MATTERS LESS → OTHER COSTS MATTER MORE", 960, 180, 0.3, size=34, until=C("Take Brazil")),
               sign("BRAZIL 2025: 86.8% OF ELECTRICITY FROM RENEWABLES (EPE)", 560, 180, C("of its electricity"), color="#C8E6C9", size=28, until=C("But one industry study")),
-              sign("TAXES + SECTOR CHARGES ≈ 44.8% OF POWER COMPANIES' GROSS REVENUE, 2024 (PWC / ACENDE BRASIL)", 1100, 180, C("taxes and sector charges took"), color="#FFCDD2", size=22, until=C("And Brazil is phasing")),
-              sign("NEW DUAL VAT, PHASED IN 2026-2033 (EC 132/2023)", 1100, 180, C("And Brazil is phasing"), color="#FFF59D", size=28, until=C("So in this scenario")),
-              words("CHEAP POWER + COMPETITIVE COSTS TO PRODUCE?", 960, 180, C("So in this scenario"), size=44, color="#FFFFFF", until=C("And even then")),
-              sign("THE TECH PROFIT CAN STILL FLOW TO ITS OWNER", 960, 180, C("And even then"), color="#E1D5FF", size=32),
+              sign("TAXES + SECTOR CHARGES ≈ 44.8% OF POWER COMPANIES' GROSS REVENUE, 2024 (PWC / ACENDE BRASIL)", 1100, 180, C("taxes and sector charges took"), color="#FFCDD2", size=22, until=C("Brazil is phasing")),
+              sign("NEW DUAL VAT, PHASED IN 2026-2033 (EC 132/2023)", 1100, 180, C("Brazil is phasing"), color="#FFF59D", size=28, until=C("So in this scenario")),
+              words("CHEAP POWER + COMPETITIVE COSTS TO PRODUCE?", 960, 180, C("So in this scenario"), size=44, color="#FFFFFF", until=C("And the profit from")),
+              sign("THE TECH PROFIT CAN STILL FLOW TO ITS OWNER", 960, 180, C("And the profit from"), color="#E1D5FF", size=32),
               tag((0, "MECHANISM"), (C("Take Brazil"), "FACT"), (C("So in this scenario"), "SCENARIO"))]},
     sources=["epe_ben26", "pwc_acende25", "br_reform"])
 
 # ====================================================================== ACT 7: a magnet for capital
 bumper("s37_b7", "a7_card", "7", "ACT SEVEN", "A MAGNET FOR CAPITAL", "What pulls money and talent in, and what it costs.", TEAL)
 stage("s38_magnet", "a7_magnet", {
-    **W1("magnet", pulls=[{"label": "LAW & COURTS", "icon": "hq", "at": C("Strong legal systems")}, {"label": "RESEARCH LABS", "icon": "lab", "at": C("universities and research labs")},
-                          {"label": "SINGLE MARKET", "icon": "cash", "at": C("a huge single market")}, {"label": "INDUSTRIAL CLUSTERS", "icon": "hq", "at": C("deep industrial clusters")},
+    **W1("magnet", pulls=[{"label": "LAW & COURTS", "icon": "hq", "at": C("Strong courts")}, {"label": "RESEARCH LABS", "icon": "lab", "at": C("research labs")},
+                          {"label": "SINGLE MARKET", "icon": "cash", "at": C("a huge single market")}, {"label": "INDUSTRIAL CLUSTERS", "icon": "hq", "at": C("industrial clusters")},
                           {"label": "LIVABLE CITIES", "icon": "people", "at": C("and cities people")}]),
     "cam": cam((0, 960, 520, 0.95), (C("That can attract"), 960, 560, 1.05, 1.2)), "drift": 3,
     "items": [words("EUROPE'S PULL", 960, 120, 0.3, size=56, until=C("That can attract")),
               sign("ENGINEERS · ENTREPRENEURS · INVESTORS · HEADQUARTERS", 960, 120, C("That can attract"), color="#C8E6C9", size=30),
               tag((0, "MECHANISM"))]})
 stage("s39_kinds", "a7_kinds", {
-    **W1("magnet", pulls=[{"label": "WEALTHY RESIDENTS", "icon": "people", "at": C("Attracting wealthy residents")}, {"label": "INVESTMENT", "icon": "cash", "at": C("productive investment")},
+    **W1("magnet", pulls=[{"label": "WEALTHY RESIDENTS", "icon": "people", "at": C("Wealthy residents")}, {"label": "INVESTMENT", "icon": "cash", "at": C("productive investment")},
                           {"label": "HEAD OFFICE", "icon": "hq", "at": C("A head office")}, {"label": "RESEARCH LAB", "icon": "lab", "at": C("is not a research lab")}]),
     "cam": cam((0, 960, 540, 0.95)), "drift": 3,
-    "items": [sign("RESIDENTS ≠ INVESTMENT", 960, 110, C("is not the same"), color="#FFE0B2", size=34, until=C("A head office")),
-              sign("HEAD OFFICE ≠ RESEARCH LAB", 960, 110, C("A head office"), color="#FFE0B2", size=34, until=C("And a research lab")),
-              sign("RESEARCH LAB ≠ AUTOMATICALLY TAXABLE PROFIT", 960, 110, C("And a research lab"), color="#FFE0B2", size=30, until=C("Only real activity")),
+    "items": [sign("RESIDENTS ≠ INVESTMENT", 960, 110, C("are not the same"), color="#FFE0B2", size=34, until=C("A head office")),
+              sign("HEAD OFFICE ≠ RESEARCH LAB", 960, 110, C("A head office"), color="#FFE0B2", size=34, until=C("Only real activity")),
               words("ONLY REAL ACTIVITY BUILDS REAL GROWTH", 960, 120, C("Only real activity"), size=48, color="#FFFFFF"),
               tag((0, "MECHANISM"))]})
 stage("s40_risks", "a7_risks", {
     **W1("magnet", pulls=[{"label": "NEWCOMERS", "icon": "people", "at": 0.1}, {"label": "CAPITAL", "icon": "cash", "at": 0.2}],
          risks=[{"label": "PRICIER HOUSING", "at": C("Pricier housing"), "x": 330, "y": 170}, {"label": "WIDER INEQUALITY", "at": C("Wider inequality"), "x": 760, "y": 170},
-                {"label": "SKILL SHORTAGES", "at": C("Shortages of the skilled"), "x": 1180, "y": 170}, {"label": "BUDGETS: NOT AUTOMATIC", "at": C("Rich newcomers"), "x": 1600, "y": 170}]),
-    "cam": cam((0, 960, 520, 0.95), (C("Whether they help"), 960, 520, 1.05, 1.2)), "drift": 3,
-    "items": [sign("DEPENDS ON WHAT THEY DO AND HOW THEY'RE TAXED", 960, 390, C("Whether they help"), color="#FFFFFF", size=30),
+                {"label": "SKILL SHORTAGES", "at": C("Shortages of skilled"), "x": 1180, "y": 170}, {"label": "BUDGETS: NOT AUTOMATIC", "at": C("Rich newcomers"), "x": 1600, "y": 170}]),
+    "cam": cam((0, 960, 520, 0.95), (C("That depends on"), 960, 520, 1.05, 1.2)), "drift": 3,
+    "items": [sign("DEPENDS ON WHAT THEY DO AND HOW THEY'RE TAXED", 960, 390, C("That depends on"), color="#FFFFFF", size=30),
               THEO(1700, 0.3, face="worry", pose="shrug"),
               tag((0, "MECHANISM"))]})
 
@@ -500,15 +499,15 @@ add("p42_conditions", "a8_conditions", "engine_draw", {
 stage("s43_verdict", "a8_verdict", {
     "zones": [Z("smartfab", x0=-1600, x1=1600, arms=3, armX=-300, armGap=420, scanX=900, maintX=-600, carts=1, techs=1, techX=200),
               Z("eurocity", x0=1600, x1=5000, era=1.0, smoke=0.0)], "worldW": 3400,
-    "cam": cam((0, 600, 540, 1.0), (C("That race is China's"), 600, 520, 1.05, 1.2), (C("But as the owner"), 2600, 520, 0.95, 1.8), (C("The facts say"), 1700, 520, 0.75, 1.6)), "drift": 2,
+    "cam": cam((0, 600, 540, 1.0), (C("That race is China's"), 600, 520, 1.05, 1.2), (C("But as the owner"), 2600, 520, 0.95, 1.8), (C("Europe has the assets"), 1700, 520, 0.75, 1.6)), "drift": 2,
     "items": [words("COULD AI BRING EUROPE BACK TO POWER?", 600, 150, 0.3, size=44, until=C("Not by winning")),
               words("NOT BY OUT-BUILDING CHINA", 600, 150, C("Not by winning"), size=50, until=C("But as the owner")),
               sign("NOT A COPY OF SILICON VALLEY", 600, 240, C("And not as a copy"), color="#FFCDD2", size=30, until=C("But as the owner")),
-              words("OWNER · DEVELOPER · FINANCIER · LICENSOR", 2600, 150, C("But as the owner"), size=46, color="#FFFFFF", until=C("The facts say")),
-              sign("A PLAUSIBLE PATH, NOT A PROMISE", 2600, 240, C("That's a plausible path"), color="#E1D5FF", size=32, until=C("The facts say")),
-              words("THE ASSETS: YES · THE CHOICES: NOT YET MADE", 1700, 150, C("The facts say"), size=46, color="#FFFFFF"),
+              words("OWNER · DEVELOPER · FINANCIER · LICENSOR", 2600, 150, C("But as the owner"), size=46, color="#FFFFFF", until=C("Europe has the assets")),
+              sign("A PLAUSIBLE PATH, NOT A PROMISE", 2600, 240, C("That's a plausible path"), color="#E1D5FF", size=32, until=C("Europe has the assets")),
+              words("THE ASSETS: YES · THE CHOICES: NOT YET MADE", 1700, 150, C("Europe has the assets"), size=46, color="#FFFFFF"),
               NORA(2400, 0.3, face="happy", pose="point"), THEO(2800, 0.3, face="happy", pose="stand"),
-              tag((0, "VERDICT · HYPOTHESIS"), (C("The facts say"), "FACT + SCENARIO"))]})
+              tag((0, "VERDICT · HYPOTHESIS"), (C("Europe has the assets"), "FACT + SCENARIO"))]})
 stage("s44_close", "a8_close", {
     **W1("eurocity", era=[[0, 0.0], [C("In a world run"), 0.0], [C("who owns the technology"), 1.0]], smoke=[[0, 1.0], [C("who owns the technology"), 0.2]],
          hyp=True, hypAt=C("And that could give"), hypText="SCENARIO · A POSSIBLE PATH, NOT A FORECAST"),
