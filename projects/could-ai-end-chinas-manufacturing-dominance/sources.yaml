@@ -1,0 +1,242 @@
+# Sources and claims for "Could AI Make American Factories Cheaper Than China's?" (Episode 62; arc Episode 2; owner request
+# 2026-11-18). Arc Episode 1 = Ep 60 "Why the World Still Depends on Chinese Factories" (its verified figures reused where still
+# current: World Bank MVA share, BLS and NBS wages, IEA rare-earth refining).
+# Every NEW claim was read on its primary page or document on 2026-11-18 (notes: docs/episodes/62-ai-manufacturing/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars only.
+# RULES: IFR World Robotics 2026 (Sep 24, 2026; data year 2025) is the primary source for installations; the IFR density release of
+# Nov 12, 2026 (data year 2025) for robot density (units: robots per 10,000 manufacturing employees). Cross-edition density
+# comparisons for China are NOT made (the IFR changed China's employment base). Ratios, shares and the 1979-2026 comparison are
+# OUR CALCULATIONS and are labelled so. The $100 three-factory experiment is an ILLUSTRATIVE MODEL with no real cost data; it is
+# labelled on screen and has no claim. Industrial vs humanoid robots, conventional automation vs AI, demo vs deployment are kept
+# apart. No company is said to run a fully autonomous factory.
+sources:
+  - id: ifr_wr26
+    title: "World Robotics 2026 Industrial Robots: Executive Summary (installations 2015-2025, operational stock, customer industries, technology trends incl. AI maturity and humanoids)"
+    publisher: International Federation of Robotics (IFR Statistical Department, VDMA Services)
+    url: https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Industrial_Robots.pdf
+    published: "2026-09-24"
+    accessed: "2026-11-18"
+    credit: "IFR World Robotics 2026"
+    notes: "2025: 603,307 units installed (+11%); stock 5,079,078 (+9%); China 354,226 (+20%); US 38,428 (+12%); Asia 457,315; Europe 73,054 (-14%); Americas 57,044. 'Machine vision for detection and robot guidance is already established and industry-grade. Predictive maintenance, process optimization and AI-based inspection are also increasingly used in industry. General-purpose Physical AI systems and learning from simulation and experience, are not yet industry-grade.' 'Most humanoids remain prototypes or pilot-stage technologies rather than industrial-grade products. At the current stage of technology, industrial robots are economically superior for industrial production tasks.' Chinese domestic suppliers' share 'around 30% from 2019 to 2021'."
+  - id: ifr_pr_global
+    title: "Five Million Robots now Operate in Factories Globally (World Robotics 2026 press release)"
+    publisher: International Federation of Robotics
+    url: https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally
+    published: "2026-09-24"
+    accessed: "2026-11-18"
+    credit: "IFR (Sep 2026)"
+    notes: "2025 installations: China 354,000 (59%); US almost 38,500 (+12%, now 2nd); Japan 36,219 (-19%); Republic of Korea 30,000 (-1%); Germany fewer than 25,000; India almost 10,500."
+  - id: ifr_pr_china
+    title: "China Installs 59 Percent of World's Industrial Robots (World Robotics 2026 press release, China)"
+    publisher: International Federation of Robotics
+    url: https://ifr.org/downloads/press_docs/EN-2026-SEP-24-IFR_Press_Release_WR-CHINA.pdf
+    published: "2026-09-24"
+    accessed: "2026-11-18"
+    credit: "IFR (Sep 2026)"
+    notes: "Domestic suppliers +15% in 2025, 55% of installations; 'Since 2024, more than half of the Chinese installations have been from Chinese brands.' 'The economy is suffering from a labor shortage due to demographic change.' 15th Five-Year Plan (2026-2030) 'aims to focus its AI research on physical applications' (IFR President quote)."
+  - id: ifr_density
+    title: "Robot Density Highest in South Korea, Singapore and Germany (press release; data year 2025)"
+    publisher: International Federation of Robotics
+    url: https://ifr.org/ifr-press-releases/news/robot-density-highest-in-south-korea-singapore-and-germany
+    published: "2026-11-12"
+    accessed: "2026-11-18"
+    credit: "IFR (Nov 2026)"
+    notes: "Robots per 10,000 manufacturing employees, 2025: Republic of Korea 1,066; Singapore 873; Germany 469; Japan 452; United States 323 (8th); China 193 (19th; 'based on employment data of the National Economic Census'; +147% 2020-2025); EU 240; world average 152."
+  - id: ifr_japan
+    title: "Japan's Car Industry has Highest Robot Installations in Five Years (press release)"
+    publisher: International Federation of Robotics
+    url: https://ifr.org/ifr-press-releases/news/japans-car-industry-has-highest-robot-installations-in-five-years
+    published: "2025-07-15"
+    accessed: "2026-11-18"
+    credit: "IFR (Jul 2025)"
+    notes: "'Japan is the world's predominant robot manufacturing country representing 38% of global robot production' (IFR President, preliminary data). No newer production-share figure located."
+  - id: census_asm21
+    title: "Annual Survey of Manufactures: 2021 (Manufacturing value of shipments and cost of materials by subsector) and 'Manufacturing in America' infographic (2021 ASM)"
+    publisher: U.S. Census Bureau
+    url: https://census.gov/content/dam/Census/library/publications/2023/econ/Annual%20Survey%20of%20Manufactures%202021.pdf
+    published: "2023"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "U.S. Census Bureau, 2021 ASM"
+    notes: "Value of shipments $6.1T (21 subsectors sum $6,079.6bn); cost of materials (21 subsectors) $3,340.8bn -> 55% (our calculation). Annual payroll $785.2bn, 11.7M employees (Census 'Manufacturing in America' infographic, https://www.census.gov/content/dam/Census/library/visualizations/2023/econ/manufacturing-in-america.pdf) -> 12.9% of shipments (our calculation). Payroll = wages and salaries of all employees, before benefits. The ASM was discontinued after survey year 2021 (now AIES), so 2021 is the latest edition with this layout."
+  - id: fred_manemp
+    title: "All Employees, Manufacturing (MANEMP), BLS Current Employment Statistics, monthly, seasonally adjusted (via FRED)"
+    publisher: U.S. Bureau of Labor Statistics
+    url: https://fred.stlouisfed.org/series/MANEMP
+    published: "2026-11"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "BLS CES (via FRED)"
+    notes: "Peak 19,553 thousand in June 1979; October 2026 12,681 thousand (-35%, our calculation)."
+  - id: fred_ipman
+    title: "Industrial Production: Manufacturing (NAICS) (IPMAN), index 2017=100, Federal Reserve G.17 (via FRED)"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://fred.stlouisfed.org/series/IPMAN
+    published: "2026-11"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Federal Reserve G.17 (via FRED)"
+    notes: "June 1979 47.61; October 2026 99.72 -> x2.09 (our calculation). Series peak 106.61 (Dec 2007)."
+  - id: nvidia_foxconn
+    title: "Foxconn Trains Robots, Streamlines Assembly With NVIDIA AI and Omniverse (NVIDIA blog)"
+    publisher: NVIDIA
+    url: https://blogs.nvidia.com/blog/foxconn-digital-twin-ai/
+    published: "2024-06-02"
+    accessed: "2026-11-18"
+    credit: "NVIDIA (Jun 2024)"
+    notes: "'It's the digital twin of a new factory in Guadalajara, hub of Mexico's electronics industry.' 'Foxconn's engineers are defining processes and training robots in this virtual environment'. Company statement; a plan/tooling example, not evidence of an autonomous factory."
+  - id: ar_jpe
+    title: "Robots and Jobs: Evidence from US Labor Markets (Journal of Political Economy 128(6): 2188-2244)"
+    publisher: Daron Acemoglu and Pascual Restrepo (University of Chicago Press)
+    url: https://www.journals.uchicago.edu/doi/10.1086/705716
+    published: "2020-06"
+    accessed: "2026-11-18"
+    credit: "Acemoglu & Restrepo, JPE 2020"
+    notes: "US commuting zones 1990-2007: one more robot per thousand workers reduces the employment-to-population ratio by 0.2 percentage points and wages by 0.42% (abstract; MIT DSpace record https://dspace.mit.edu/handle/1721.1/130324)."
+  # ---- reused from Episode 60 (arc Episode 1), still current
+  - id: wdi_mva
+    title: "World Development Indicators: Manufacturing, value added (current US$), NV.IND.MANF.CD (China, World, 2004-2025; API)"
+    publisher: World Bank
+    url: https://api.worldbank.org/v2/country/CHN;WLD/indicator/NV.IND.MANF.CD?format=json&date=2004:2025
+    published: "2026-11-11"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "World Bank WDI (Nov 2026)"
+    notes: "Reused from Ep 60. China 2025 $4,822.7bn; World 2025 $17,601.1bn -> 27.4% (our calculation)."
+  - id: bls_ces
+    title: "Current Employment Statistics: Average hourly earnings of production and nonsupervisory employees, manufacturing (CES3000000008), 2025 monthly (via FRED)"
+    publisher: U.S. Bureau of Labor Statistics
+    url: https://fred.stlouisfed.org/series/CES3000000008
+    published: "2026"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "BLS CES (via FRED)"
+    notes: "Reused from Ep 60. 2025 average of the 12 months $29.05 (our calculation)."
+  - id: nbs_wage
+    title: "2025年城镇单位就业人员年平均工资情况 (Average annual wages of employed persons in urban units, 2025)"
+    publisher: National Bureau of Statistics of China
+    url: https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html
+    published: "2026-05-15"
+    accessed: "2026-11-17"
+    credit: "NBS China (May 2026)"
+  - id: fed_g5a
+    title: "Foreign Exchange Rates G.5A (annual averages), release of January 5, 2026: China yuan 7.1875 per USD in 2025"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/g5a/current/default.htm
+    published: "2026-01-05"
+    accessed: "2026-11-17"
+    kind: dataset
+    credit: "Federal Reserve G.5A"
+  - id: iea_gcmo
+    title: "Global Critical Minerals Outlook 2026 (rare earth elements section)"
+    publisher: International Energy Agency
+    url: https://www.iea.org/reports/global-critical-minerals-outlook-2026
+    published: "2026"
+    accessed: "2026-11-17"
+    license: CC BY 4.0
+    credit: "IEA Global Critical Minerals Outlook 2026"
+    notes: "Reused from Ep 60 (read from a full PDF copy; re-check on iea.org before publishing)."
+claims:
+  - id: ifr_inst
+    text: "IFR World Robotics 2026: 603,307 industrial robots installed worldwide in 2025 (+11%, record); China 354,226 (+20%), 59% of the world; US 38,428 (+12%). China/US = 9.2 (our calculation)."
+    spoken: about three hundred and fifty-four thousand
+    display: "Industrial robots installed in 2025: China 354,226 · U.S. 38,428 · world 603,307 (IFR World Robotics 2026)"
+    fields: {share_spoken: fifty-nine percent, us_spoken: thirty-eight thousand, world_spoken: more than six hundred thousand, ratio_spoken: roughly nine}
+    source_ids: [ifr_wr26, ifr_pr_global]
+    status: source_located
+  - id: ifr_countries
+    text: "IFR press release Sep 24, 2026: 2025 installations Japan 36,219 (-19%); Republic of Korea 30,000 (-1%); Germany fewer than 25,000; the US 'now the second-largest market'. Operational stock 5,079,078 (2025)."
+    spoken: about thirty-six thousand
+    display: "2025 installations: Japan 36,219 · Korea ≈30,000 · Germany <25,000 (IFR)"
+    fields: {kr_spoken: about thirty thousand, de_spoken: under twenty-five thousand, stock_spoken: five million}
+    source_ids: [ifr_pr_global, ifr_wr26]
+    status: source_located
+  - id: ifr_dom
+    text: "IFR (Sep 24, 2026): Chinese domestic suppliers' installations +15% in 2025, 55% of China's installations; share around 30% in 2019-2021 (WR 2026 executive summary); more than half since 2024."
+    spoken: fifty-five percent
+    display: "Chinese brands: 55% of China's robot installations, 2025 (≈30% in 2019-21) (IFR)"
+    fields: {old_spoken: around thirty percent}
+    source_ids: [ifr_pr_china, ifr_wr26]
+    status: source_located
+  - id: ifr_density
+    text: "IFR (Nov 12, 2026), robots per 10,000 manufacturing employees, 2025: Korea 1,066; Singapore 873; Germany 469; Japan 452; US 323 (8th); China 193 (19th; National Economic Census employment base; +147% 2020-2025); world 152."
+    spoken: one thousand and sixty-six
+    display: "Robots per 10,000 factory workers, 2025: Korea 1,066 · U.S. 323 · China 193 · world 152 (IFR)"
+    fields: {us_spoken: three hundred and twenty-three, cn_spoken: one hundred and ninety-three, growth_spoken: about a hundred and fifty percent, world_spoken: one hundred and fifty-two}
+    source_ids: [ifr_density]
+    status: source_located
+    verification_note: "China's density uses a new employment base (IFR); not compared with older editions."
+  - id: ifr_ai
+    text: "IFR WR 2026 executive summary: machine vision for detection and robot guidance 'already established and industry-grade'; predictive maintenance, process optimization and AI-based inspection 'increasingly used'; general-purpose physical AI 'not yet industry-grade'; 'Most humanoids remain prototypes or pilot-stage technologies'; 'industrial robots are economically superior for industrial production tasks'."
+    spoken: industry-grade
+    display: "Machine vision: industry-grade · Predictive maintenance, AI inspection: increasingly used · General-purpose physical AI: not yet (IFR 2026)"
+    fields: {}
+    source_ids: [ifr_wr26]
+    status: source_located
+  - id: ifr_cn_plan
+    text: "IFR China release (Sep 24, 2026): labor shortage due to demographic change makes robotic automation a preferred solution; China's 15th Five-Year Plan (2026-2030) robotics strategy emphasises self-reliance and 'aims to focus its AI research on physical applications'."
+    spoken: fifteenth
+    display: "China: labor shortage from demographic change; 15th Five-Year Plan (2026-30) aims AI at physical applications (IFR)"
+    fields: {}
+    source_ids: [ifr_pr_china]
+    status: source_located
+  - id: ifr_jp
+    text: "IFR (Jul 15, 2025): 'Japan is the world's predominant robot manufacturing country representing 38% of global robot production'."
+    spoken: thirty-eight percent
+    display: "Japan: 38% of global industrial robot production (IFR, Jul 2025, preliminary 2024 data)"
+    fields: {}
+    source_ids: [ifr_japan]
+    status: source_located
+  - id: asm
+    text: "Census 2021 ASM: shipments $6.1T; cost of materials $3.34T (sum of subsectors) -> 55% (our calculation); annual payroll $785.2bn -> about 13% of shipments (our calculation; all employees, wages and salaries before benefits)."
+    spoken: about thirteen cents
+    display: "U.S. factories, 2021: payroll ≈ 13¢, materials ≈ 55¢ per $1 of shipments (Census ASM; our calculation)"
+    fields: {mat_spoken: about fifty-five cents}
+    source_ids: [census_asm21]
+    status: source_located
+    verification_note: "2021 is the last ASM year; payroll excludes benefits; shares are our calculation."
+  - id: us_output
+    text: "Fed G.17 IPMAN: June 1979 47.61 -> Oct 2026 99.72 (x2.09, our calculation); BLS MANEMP: June 1979 19.553M -> Oct 2026 12.681M (-35%, our calculation)."
+    spoken: about nineteen and a half million
+    display: "Since June 1979: U.S. factory output ≈ ×2.1; factory jobs 19.6M → 12.7M (Fed G.17, BLS; our calculation)"
+    fields: {now_spoken: about twelve point seven million, x_spoken: roughly doubled}
+    source_ids: [fred_ipman, fred_manemp]
+    status: source_located
+  - id: foxconn_twin
+    text: "NVIDIA blog (Jun 2, 2024): Foxconn's digital twin of a new factory in Guadalajara, Mexico; engineers define processes and train robots in the virtual environment."
+    spoken: Guadalajara
+    display: "Foxconn: digital twin of a new Guadalajara factory, robots trained in simulation (NVIDIA, Jun 2024)"
+    fields: {}
+    source_ids: [nvidia_foxconn]
+    status: source_located
+    verification_note: "Company statement about a plan and its tools; not evidence of a lights-out factory."
+  - id: ar_jobs
+    text: "Acemoglu & Restrepo (JPE 2020): one more robot per thousand workers reduced the employment-to-population ratio by 0.2 percentage points and wages by 0.42% (US commuting zones, 1990-2007)."
+    spoken: two-tenths of a percentage point
+    display: "+1 robot per 1,000 workers: employment ratio −0.2 pp, wages −0.42% (US, 1990-2007; Acemoglu & Restrepo 2020)"
+    fields: {wage_spoken: about four-tenths of a percent}
+    source_ids: [ar_jpe]
+    status: source_located
+  # ---- reused from Episode 60
+  - id: mva
+    text: "World Bank WDI (updated 2026-11-11): China manufacturing value added $4,822.7bn in 2025, World $17,601.1bn -> 27.4% (our calculation). Current US$."
+    spoken: about twenty-seven percent
+    display: "China: 27.4% of world manufacturing value added, 2025 (World Bank WDI; our calculation)"
+    fields: {}
+    source_ids: [wdi_mva]
+    status: source_located
+  - id: wages
+    text: "BLS CES3000000008: US manufacturing production workers ≈ $29.05/hour (2025 average, our calculation). NBS (May 2026): 2025 average annual wage of production and related personnel in enterprises above designated size 80,739 yuan ≈ $11,200 at 7.1875 yuan/USD (Fed G.5A; our conversion). Ratio per hour is a rough comparison (different definitions, hours unknown): roughly a fifth (our calculation)."
+    spoken: about twenty-nine dollars an hour
+    display: "U.S. ≈ $29/hour (BLS) · China ≈ $11,200/year (NBS; Fed rate; our conversion), 2025"
+    fields: {cn_spoken: about eleven thousand dollars}
+    source_ids: [bls_ces, nbs_wage, fed_g5a]
+    status: source_located
+    verification_note: "Different definitions; comparison labelled rough, our calculation."
+  - id: ieare
+    text: "IEA GCMO 2026: China's share of magnet rare earth refining 85% in 2025 (90% in 2024)."
+    spoken: eighty-five percent
+    display: "Magnet rare earth refining: China 85% in 2025 (IEA)"
+    fields: {}
+    source_ids: [iea_gcmo]
+    status: source_located

@@ -1,0 +1,53 @@
+title: "Could AI Make American Factories Cheaper Than China's?"
+slug: could-ai-end-chinas-manufacturing-dominance
+language: en
+# Episode 62 (owner brief 2026-11-18: docs/episodes/62-ai-manufacturing/PRODUCTION_PROMPT.md). Arc Episode 2; Episode 1 = Ep 60
+# "Why the World Still Depends on Chinese Factories" (same fictional cast Mel, Wei, Kip; same toaster; new robotics sets).
+# Title upgraded by the coordinator (2026-11-18): primary "Could AI Make American Factories Cheaper Than China's?", backup
+# "Could AI End China's Manufacturing Dominance?" (slug kept). Seven acts internal only. US dollars only.
+# Owner standing direction: prime-time TV cartoon energy (retro-futurist sci-fi comedy at GENRE level only; every character,
+# robot, set and caption is original), human characters, day scenes. Bespoke kit: CartoonStage/automation.tsx.
+# The $100 three-factory experiment is an ILLUSTRATIVE MODEL (labelled on screen). Industrial vs humanoid robots, conventional
+# automation vs AI, demo vs deployment are kept apart. No company shown running a fully autonomous factory. No logos, no flags,
+# no national stereotypes. No public figure is central (economists are named in narration only, not drawn).
+renderer: remotion
+remotion_geo: [world]
+style:
+  name: cartoon-day
+  palette:
+    bg: "#EEF4FA"
+    bg2: "#FFFFFF"
+    ink: "#12203A"
+    muted: "#62708A"
+    land: "#A9D18E"
+    border: "#26466A"
+    accent: "#FFB627"
+    accent2: "#00A6C8"
+    accent3: "#2E9E5B"
+    risk: "#E5484D"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 5
+# Structure: cold open (hook) -> channel intro -> show title card -> acts.
+intro:
+  after_segment: co_hook
+tts_overrides:
+  openai:
+    voice: ash
+    tempo: 1.05
+    instructions: >-
+      Voice: the narrator of a smart prime-time animated show who is also a sharp economics investigator. Curious, warm and
+      energetic, with a dry twinkle on the comic lines, always clear, fair and credible on facts. Pacing: brisk overall, then
+      slow down slightly to land every number cleanly; a short beat after a surprising figure and before each verdict.
+      Natural American English, conversational, never an announcer, never salesy, never sing-song, never mocking any country.

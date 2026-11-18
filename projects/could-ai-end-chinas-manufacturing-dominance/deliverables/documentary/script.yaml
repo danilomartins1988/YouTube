@@ -1,0 +1,287 @@
+logline: Robots and AI could shrink the labor part of a factory's bill, the part where China had its biggest head start. An
+  illustrative three-factory experiment shows an automated American plant can come within a few dollars of China, and which
+  switches flip the winner. Then the twist - China installs most of the world's robots - and a verdict built from the evidence.
+title: Could AI Make American Factories Cheaper Than China's?
+segments:
+- id: co_hook
+  chapter: The factory that changes everything
+  narration: Picture a factory in Ohio on a Sunday afternoon. The parking lot is almost empty. Inside, robot arms are still working.
+    Cameras check every part. Software decides what to build next. Now imagine what comes out the door costs about the same as
+    the same product made in China. That factory is hypothetical. But almost every piece of it already exists somewhere. So could
+    AI make American factories cheaper than China's? And if it did, would America actually win?
+  claims: []
+  analysis: true
+  source_note: Hypothetical scenario (labelled HYPOTHETICAL on screen); capabilities described are the IFR's industry-grade list.
+- id: title_card
+  chapter: The factory that changes everything
+  narration: ''
+  claims: []
+- id: a1_stakes
+  chapter: The factory that changes everything
+  narration: For forty years, the rule was simple. Put the factory where the work is cheapest. But a robot doesn't care about wages.
+    If machines do more of the work, that old rule starts to wobble. And the stakes are bigger than jobs. Prices, supply chains,
+    and which country makes the things everybody needs.
+  claims: []
+  analysis: true
+  source_note: Framing of the central question (no figures).
+- id: a1_output
+  chapter: The factory that changes everything
+  narration: America has already seen a preview. Since the summer of nineteen seventy-nine, American factory output has {{us_output.x_spoken}},
+    by our calculation from Federal Reserve data. Over the same years, factory jobs fell from {{us_output}} to {{us_output.now_spoken}}.
+    More stuff, far fewer people. Automation is a big part of that story.
+  claims:
+  - us_output
+- id: a2_card
+  chapter: The old formula
+  narration: ''
+  claims: []
+- id: a2_formula
+  chapter: The old formula
+  narration: In our last episode, Why the World Still Depends on Chinese Factories, we found that China's edge was never just cheap
+    labor. Here's the short version. China makes {{mva}} of the world's manufactured value. It has suppliers down the street, giant
+    ports, steady power, and engineers who have done it all before.
+  claims:
+  - mva
+- id: a2_wage
+  chapter: The old formula
+  narration: But labor still mattered. In twenty twenty-five, an American factory production worker earned {{wages}}. A production
+    worker at a larger Chinese company earned {{wages.cn_spoken}} for the whole year. By our rough math, that's around a fifth
+    of the American pay.
+  claims:
+  - wages
+- id: a2_question
+  chapter: The old formula
+  narration: So if robots shrink the labor part of the bill, does China's oldest head start shrink too? To find out, we need to
+    know what AI can really do on a factory floor today.
+  claims: []
+  analysis: true
+  source_note: Transition (no figures).
+- id: a3_card
+  chapter: When labor matters less
+  narration: ''
+  claims: []
+- id: a3_vision
+  chapter: When labor matters less
+  narration: Start with what's proven. Cameras running AI software inspect parts faster than a human eye, and guide robot arms to
+    grab things that aren't perfectly lined up. The International Federation of Robotics, the industry's statistics body, calls
+    machine vision {{ifr_ai}}.
+  claims:
+  - ifr_ai
+- id: a3_maint
+  chapter: When labor matters less
+  narration: Next, predictive maintenance. Sensors listen to a motor, and software flags it before it breaks. Then smart scheduling,
+    which reshuffles the line when an order changes, and self-driving carts that move parts across the floor. The federation says
+    maintenance prediction and AI inspection are increasingly used in industry.
+  claims:
+  - ifr_ai
+- id: a3_twin
+  chapter: When labor matters less
+  narration: Then there are digital twins, a full virtual copy of a factory where engineers test a production line before they
+    build it. The electronics giant Foxconn says it built one with NVIDIA software for a new plant in {{foxconn_twin}}, Mexico,
+    to plan the line and train its robots in simulation first.
+  claims:
+  - foxconn_twin
+- id: a3_draw
+  chapter: When labor matters less
+  narration: Let me sort all this. Proven, the robot arms that weld, paint and pick, plus machine vision. Growing, predictive maintenance,
+    AI inspection and smart scheduling. Not yet, general-purpose robots that learn any job by watching. The federation says that
+    kind of physical AI isn't industry-grade yet.
+  claims:
+  - ifr_ai
+- id: a3_humanoid
+  chapter: When labor matters less
+  narration: And the humanoid robots from viral videos? The federation says most are still prototypes or pilot projects, and that
+    for factory work today, ordinary industrial robots are economically superior. The robot that matters isn't the one that dances.
+    It's the arm bolted to the floor.
+  claims:
+  - ifr_ai
+- id: a3_bill
+  chapter: When labor matters less
+  narration: So what happens to the bill when that arm takes over? Census data for American factories in twenty twenty-one show
+    that for every dollar of goods shipped, {{asm.mat_spoken}} went to materials and parts. Wages and salaries for every employee,
+    from the line to the front office, came to {{asm}}. That's our calculation.
+  claims:
+  - asm
+- id: a3_pull
+  chapter: When labor matters less
+  narration: Watch what happens when I pull labor out. Even if every paycheck vanished, the materials, the machines, the energy and
+    the building would still be there. And the robots that replace the paychecks have a bill of their own. Automation shrinks one
+    slice. It doesn't make the factory free.
+  claims: []
+  analysis: true
+  source_note: Mechanism diagram built on the Census shares above; no new figures.
+- id: a4_card
+  chapter: The hundred-dollar experiment
+  narration: ''
+  claims: []
+- id: a4_setup
+  chapter: The hundred-dollar experiment
+  narration: So let's run an experiment. One product that costs a hundred dollars to make in a regular Chinese factory and ship
+    to an American warehouse. Let's say a smart toaster. Our numbers are illustrative, a simple model, not any real company's costs.
+    What matters is how they move.
+  claims: []
+  analysis: true
+  source_note: ILLUSTRATIVE MODEL (our assumptions, no real cost data), labelled on screen; see FACT_CHECK.md.
+- id: a4_f1
+  chapter: The hundred-dollar experiment
+  narration: Factory one, a conventional factory in China. Materials and parts, sixty-one dollars. Labor, eleven. Machines, energy,
+    upkeep and defects, thirteen. Shipping across the Pacific, six. And an import tariff, which we set at roughly ten percent, nine
+    dollars. Total, one hundred.
+  claims: []
+  analysis: true
+  source_note: ILLUSTRATIVE MODEL. Tariff is an assumption (real rates change and vary by product).
+- id: a4_f2
+  chapter: The hundred-dollar experiment
+  narration: Factory two, a highly automated factory in Ohio. Robots cut labor hours by three-quarters, but American pay is higher,
+    so labor comes to thirteen. Robots, software and cameras cost a lot up front, so machines jump to fourteen and upkeep to four.
+    Defects fall. No ocean and no tariff on the toaster. But many parts still come from Asia, so materials rise to sixty-four.
+    Total, about one hundred and two.
+  claims: []
+  analysis: true
+  source_note: ILLUSTRATIVE MODEL (64 materials, 13 labor, 14 machines, 3 energy, 4 upkeep, 2 defects, 2 shipping = 102).
+- id: a4_tie
+  chapter: The hundred-dollar experiment
+  narration: Almost a tie. That's the headline. In a model like this, automation can bring an American factory within a few dollars
+    of China. Now watch what moves the winner.
+  claims: []
+  analysis: true
+  source_note: ILLUSTRATIVE MODEL result.
+- id: a4_flip
+  chapter: The hundred-dollar experiment
+  narration: Raise the tariff to twenty-five percent, and factory one jumps to about one hundred and twelve. Ohio wins. Now let
+    the Ohio robots sit idle half the time because orders are weak. The machine cost of every toaster doubles, and Ohio climbs
+    to about one hundred and sixteen. China wins again. Tariffs, utilization, imported parts, the price of the robots. Those are
+    the switches.
+  claims: []
+  analysis: true
+  source_note: ILLUSTRATIVE MODEL sensitivity (25% tariff on 85 = 21; idle half the time doubles machines 14 -> 28).
+- id: a4_f3
+  chapter: The hundred-dollar experiment
+  narration: But we forgot someone. Factory three, an automated factory in China. Same idea, lower wages, suppliers down the street,
+    and Chinese-made robots that we assume cost less. Labor drops to three. Machines, eleven. Materials, fifty-nine. Shipping and
+    tariff, fourteen. Total, about ninety-five.
+  claims: []
+  analysis: true
+  source_note: ILLUSTRATIVE MODEL (59 materials, 3 labor, 11 machines, 3 energy, 3 upkeep, 2 defects, 6 shipping, 8 tariff = 95).
+- id: a4_result
+  chapter: The hundred-dollar experiment
+  narration: In our base case, the automated Chinese factory wins. Ohio only comes out ahead when tariffs are high and its robots
+    stay busy. So automation doesn't automatically favor America. It favors whoever automates best, at scale. Which raises the
+    real question. Is China actually automating?
+  claims: []
+  analysis: true
+  source_note: ILLUSTRATIVE MODEL result (at a 25% tariff, factory three = 107 vs Ohio 102; at 0%, 87 vs 102).
+- id: a5_card
+  chapter: China has robots too
+  narration: ''
+  claims: []
+- id: a5_reveal
+  chapter: China has robots too
+  narration: It is. In twenty twenty-five, factories in China installed {{ifr_inst}} industrial robots. That's {{ifr_inst.share_spoken}}
+    of every industrial robot installed on Earth that year. The United States installed about {{ifr_inst.us_spoken}}. By our
+    calculation, that's {{ifr_inst.ratio_spoken}} robots in China for every one in America. In a single year.
+  claims:
+  - ifr_inst
+- id: a5_chart
+  chapter: China has robots too
+  narration: Let me chart it. China, three hundred fifty-four thousand. The United States, about thirty-eight thousand, now the
+    second-biggest market. Japan, {{ifr_countries}}. South Korea, {{ifr_countries.kr_spoken}}. Germany, {{ifr_countries.de_spoken}}.
+    Worldwide, {{ifr_inst.world_spoken}}, a record, according to the federation's World Robotics report.
+  claims:
+  - ifr_inst
+  - ifr_countries
+- id: a5_brands
+  chapter: China has robots too
+  narration: Second surprise. More and more of those robots are Chinese-made. Chinese brands supplied {{ifr_dom}} of China's new
+    robots in twenty twenty-five. A few years earlier, it was {{ifr_dom.old_spoken}}.
+  claims:
+  - ifr_dom
+- id: a5_density
+  chapter: China has robots too
+  narration: Now the twist inside the twist. Per worker, China is not the most automated country. The federation counts robots per
+    ten thousand factory employees. South Korea, {{ifr_density}}. The United States, {{ifr_density.us_spoken}}. China, {{ifr_density.cn_spoken}},
+    because it has so many factory workers. And its density rose {{ifr_density.growth_spoken}} in five years.
+  claims:
+  - ifr_density
+- id: a5_why
+  chapter: China has robots too
+  narration: So China has huge room left to automate, and reasons to. The federation points to a labor shortage from an aging population,
+    and China's {{ifr_cn_plan}} five-year plan aims AI research at physical uses like robots. Robots don't cancel China's advantages.
+    Plugged into its supplier network, they may multiply them.
+  claims:
+  - ifr_cn_plan
+- id: a6_card
+  chapter: Who captures the money?
+  narration: ''
+  claims: []
+- id: a6_supply
+  chapter: Who captures the money?
+  narration: And here's the problem for our Ohio factory. It can be brand new and still depend on the world. Robot arms, precision
+    gears, sensors, chips, and the rare-earth magnets inside powerful motors. Build the factory at home, and you may still buy
+    its brain and its muscles from abroad.
+  claims: []
+  analysis: true
+  source_note: Supply-chain mechanism (no figures).
+- id: a6_who
+  chapter: Who captures the money?
+  narration: Those players live in different countries. Japan makes about {{ifr_jp}} of the world's industrial robots, says the
+    federation. Germany and Switzerland are home to big automation suppliers. America leads in AI software and chip design. Taiwan
+    and South Korea make many of the chips. And China does {{ieare}} of the refining for magnet rare earths.
+  claims:
+  - ifr_jp
+  - ieare
+- id: a6_draw
+  chapter: Who captures the money?
+  narration: Let me draw where the money from one robot-built toaster could go. Materials and parts. The robot maker. Chips and
+    sensors. AI software. Energy. Logistics. And whatever is left, for the factory owner. These splits are illustrative, but the
+    lesson isn't. The country with the factory may not capture most of the value.
+  claims: []
+  analysis: true
+  source_note: Illustrative value-chain diagram (no measured allocations), labelled ILLUSTRATIVE.
+- id: a7_card
+  chapter: The verdict
+  narration: ''
+  claims: []
+- id: a7_where
+  chapter: The verdict
+  narration: So, could AI make American factories cheaper than China's? For some products, yes. The likeliest are heavy or bulky
+    goods that are costly to ship, products built from many repeated precision steps, and things a country can't risk running
+    out of, like chips, batteries and medical supplies.
+  claims: []
+  analysis: true
+  source_note: Analysis built on the experiment's switches (shipping, utilization, tariffs) and the IFR maturity list.
+- id: a7_jobs
+  chapter: The verdict
+  narration: But the factory that comes back may not bring the old jobs back. Economists Daron Acemoglu and Pascual Restrepo found
+    that in American local job markets from nineteen ninety to two thousand seven, each extra robot per thousand workers cut the
+    share of people employed by {{ar_jobs}} and wages by {{ar_jobs.wage_spoken}}. The new jobs are different. Technicians, programmers,
+    maintenance crews.
+  claims:
+  - ar_jobs
+- id: a7_china
+  chapter: The verdict
+  narration: And China keeps its suppliers, its ports, its scale, and now the biggest fleet of new robots, most of them homemade.
+    What could stop the comeback? Robots sitting idle when demand is weak, missing parts suppliers, expensive money, and trade rules
+    that change every few years.
+  claims: []
+  analysis: true
+  source_note: Summary of earlier evidence (IFR installations, Ep 60 cluster) and the experiment's switches.
+- id: a7_verdict
+  chapter: The verdict
+  narration: So here's our verdict. AI doesn't end China's manufacturing dominance. It changes the test. For forty years the question
+    was who has the cheapest workers. Now it's who can combine intelligent machines, reliable energy, patient capital and a complete
+    supply chain. America can win back competitiveness, product by product, without winning back the same jobs. And China can
+    automate too. The future of making things won't belong to the cheapest labor. It'll belong to the best system.
+  claims: []
+  analysis: true
+  source_note: Verdict derived from the experiment, the IFR data and the value-chain section; no prediction or date.
+- id: teaser
+  chapter: The verdict
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: The verdict
+  narration: ''
+  claims: []
