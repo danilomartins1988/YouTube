@@ -94,3 +94,31 @@ Ep 60 (arc Episode 1, named in narration and description by title only); Ep 61 (
 recognizable face or brand (by design: no public figure is central, and Ep 60 already used Mel's face), which caps title/
 thumbnail at 17; (3) Act 3 (3:00-5:15) is necessarily explanatory. What would close it: owner-supplied Trends or vidIQ data
 confirming demand, and a YouTube thumbnail test of C vs A after publication.
+
+## 10. Revision: story over statistics (owner directive `docs/STORY_OVER_STATS.md`, 2026-11-18)
+The first two renders (784.6 s, then a tempo/layout pass) used a data-dense script (≈ 70 number words by
+`tools/count_numbers.py`). Rewritten before the final render:
+- **One protagonist, one journey:** Mel (Ep 60's shopper, who could not buy a toaster not made in China) decides to build her
+  own toaster factory in Ohio. Kip is her consultant, Wei (Ep 60's line engineer) her friend and rival in China, TORQ her robot,
+  a banker the skeptic. The economics is what happens to her plan; the verdict is her choice.
+- **Number budget:** 14 spoken numbers by `count_numbers.py` (budget 10-15), never more than one per scene. Hero numbers: the
+  $100 toaster, "just two dollars more", "about five dollars under", "roughly nine robots for every American one", "about 13
+  cents of every dollar", "about five times the pay", "about a quarter", "more than half", "half the time", "forty years".
+- **Comparisons instead of percentages:** "more new robots than the rest of the world combined", "about a quarter of everything
+  manufactured", "America has more robots per worker", "Japan builds more robots than anyone".
+- **On screen:** at most three labelled values at a time; experiment blocks show labels only (totals stay), knobs read
+  SOME/HIGH and ALWAYS/HALF THE TIME, the robot race has three towers, the density board three bars, the scoreboard has
+  winners and no numbers. All exact figures moved to `FACT_CHECK.md` and the description.
+
+### Re-score after the revision (honest)
+| Criterion | Weight | Before | After | Why |
+|---|---:|---:|---:|---|
+| Audience demand and broad appeal | 20 | 18 | 18 | unchanged |
+| Title and thumbnail potential | 20 | 17 | 17 | unchanged |
+| Narrative curiosity and emotional stakes | 20 | 18 | 19 | a protagonist with a decision to make; continuity with Ep 60 |
+| Retention potential | 15 | 13 | 14 | fewer data beats, a twist or complication every 60-90 s |
+| Original economic insight | 10 | 9 | 9 | unchanged |
+| Evergreen potential | 10 | 9 | 9 | unchanged |
+| Visual storytelling opportunities | 5 | 5 | 5 | |
+| **Total** | **100** | **89** | **91** | |
+The remaining weak points are demand evidence (no Trends data) and a thumbnail without a recognizable face; see §9.

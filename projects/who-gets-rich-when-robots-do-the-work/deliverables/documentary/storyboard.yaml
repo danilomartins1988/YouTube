@@ -11,65 +11,91 @@ scenes:
       x1: 4600
       robots:
       - - 0
-        - 1
-      - - cue: They don't take a salary
-        - 3
+        - 0
+      - - cue: the robots arrived
+        - 2
+      - - cue: They don't take vacations
+        - 4
       - - cue: They never ask
         - 6
       workers:
       - - 0
-        - 3
+        - 4
       - - cue: They never ask
         - 1
       flowAt:
-        cue: So when that warehouse
+        cue: And the warehouse is making
       flowTo: tower
     worldW: 2400
     cam:
     - at: 0
-      x: 450
-      y: 560
-      zoom: 1.15
+      x: 0
+      y: 600
+      zoom: 1.2
     - at:
-        cue: They don't take a salary
+        cue: the robots arrived
       x: 450
       y: 600
-      zoom: 1.3
+      zoom: 1.25
       dur: 1.2
     - at:
-        cue: So when that warehouse
+        cue: And the warehouse is making
       x: 700
       y: 520
       zoom: 0.95
       dur: 1.4
     - at:
-        cue: In America
-      x: 400
+        cue: So Dana has a question
+      x: 0
+      y: 580
+      zoom: 1.15
+      dur: 1.2
+    - at:
+        cue: Here's a clue
+      x: 500
       y: 520
       zoom: 0.9
       dur: 1.2
     - at:
-        cue: And most American stock
-      x: 1000
-      y: 480
-      zoom: 1.0
-      dur: 1.2
-    - at:
         cue: So the real question
-      x: 500
-      y: 520
+      x: 300
+      y: 540
       zoom: 0.85
       dur: 1.6
     drift: 3
     items:
-    - kind: toonwords
-      text: ROBOTS DO THE WORK
-      x: 450
-      y: 150
-      at: 0.1
-      until:
-        cue: They don't take a salary
-      size: 64
+    - kind: toon
+      x: -80
+      at: 0.0
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: happy
+      pose: clipboard
+      hold: clipboard
+      label: DANA · WAREHOUSE SHIFT LEAD
+      labelUntil:
+        cue: the robots arrived
+      poses:
+      - - cue: So Dana has a question
+        - shrug
+      - - cue: It may be
+        - point
+      faces:
+      - - 0
+        - happy
+      - - cue: the robots arrived
+        - shock
+      - - cue: So Dana has a question
+        - worry
+      - - cue: It may be
+        - smug
+      scale: 1.25
     - kind: sign
       text: NO SALARY
       x: 250
@@ -79,7 +105,7 @@ scenes:
       color: '#FFE0B2'
       size: 34
       until:
-        cue: So when that warehouse
+        cue: And the warehouse is making
     - kind: sign
       text: NO VACATIONS
       x: 520
@@ -89,7 +115,7 @@ scenes:
       color: '#C8E6C9'
       size: 34
       until:
-        cue: So when that warehouse
+        cue: And the warehouse is making
     - kind: sign
       text: NO RAISES
       x: 780
@@ -99,49 +125,31 @@ scenes:
       color: '#BBDEFB'
       size: 34
       until:
-        cue: So when that warehouse
-    - kind: toonwords
-      text: WHO GETS THE MONEY?
-      x: 700
-      y: 150
+        cue: And the warehouse is making
+    - kind: bubble
+      text: IF THE ROBOTS DO THE WORK... WHO GETS THE MONEY?
+      x: 200
+      y: 280
       at:
-        cue: So when that warehouse
-      size: 60
+        cue: If the robots do the work
       until:
         cue: Here's a clue
-    - kind: sign
-      text: 'WORKERS'' SHARE OF BUSINESS OUTPUT: LOWEST ON RECORD'
-      x: 400
+      tail:
+      - 0
+      - 560
+      size: 26
+    - kind: toonwords
+      text: 'WORKERS'' SHARE: LOWEST ON RECORD'
+      x: 500
       y: 150
       at:
         cue: In America
-      color: '#FFCDD2'
-      size: 30
-      until:
-        cue: And most American stock
-    - kind: sign
-      text: BLS LABOR SHARE INDEX · DATA SINCE 1947
-      x: 400
-      y: 220
-      at:
-        cue: Those records go back
-      color: '#FFFFFF'
-      size: 24
-      until:
-        cue: And most American stock
-    - kind: sign
-      text: 'MOST U.S. STOCK: A SMALL GROUP (FED)'
-      x: 1050
-      y: 150
-      at:
-        cue: And most American stock
-      color: '#FFF59D'
-      size: 30
+      size: 50
       until:
         cue: So the real question
     - kind: toonwords
       text: WILL I KEEP MY JOB?
-      x: 500
+      x: 300
       y: 150
       at:
         cue: So the real question
@@ -150,54 +158,21 @@ scenes:
         cue: It may be
     - kind: toonwords
       text: DO I OWN ANY OF THE MACHINES?
-      x: 500
+      x: 300
       y: 150
       at:
         cue: It may be
       size: 54
       color: '#FFFFFF'
-    - kind: toon
-      x:
-      - - cue: So the real question
-          offset: -0.4
-        - -700
-      - - cue: So the real question
-          offset: 0.8
-        - -200
-      at:
-        cue: So the real question
-        offset: -0.6
-      who: shopper
-      v: 2
-      skin: 2
-      hair: 1
-      hairStyle: 1
-      color: '#1F8A8C'
-      glasses: false
-      scarf: '#F2B33D'
-      face: worry
-      pose: walk
-      poses:
-      - - cue: So the real question
-          offset: 0.8
-        - shrug
-      - - cue: It may be
-        - point
-      faces:
-      - - 0
-        - worry
-      - - cue: It may be
-        - shock
-      scale: 1.25
     - kind: rrtag
       at: 0.0
       x: 36
       y: 36
       tags:
       - - 0
-        - THE SITUATION
+        - MEET DANA · FICTIONAL
       - - cue: In America
-        - FACT
+        - FACT · BLS
       - - cue: So the real question
         - QUESTION
   sfx:
@@ -206,7 +181,6 @@ scenes:
     gain: 0.3
   sources:
   - bls_ls
-  - fed_dfa
   assets:
   - font:inter
 - id: s02_title
@@ -277,8 +251,8 @@ scenes:
       dur: 1.2
     - at:
         cue: Now let's follow
-      x: 1000
-      y: 500
+      x: 300
+      y: 520
       zoom: 1.0
       dur: 0.35
     drift: 4
@@ -304,7 +278,7 @@ scenes:
         cue: Now let's follow
     - kind: toonwords
       text: 'NOW: FOLLOW THE MONEY'
-      x: 1000
+      x: 300
       y: 160
       at:
         cue: Now let's follow
@@ -320,6 +294,22 @@ scenes:
       carry: coin
       scale: 1.1
       y: 1000
+    - kind: toon
+      x: 0
+      at:
+        cue: Now let's follow
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: happy
+      pose: point
+      y: 1000
+      scale: 1.25
     - kind: rrtag
       at: 0.0
       x: 36
@@ -333,14 +323,14 @@ scenes:
   segment: a1_draw
   type: engine_draw
   params:
-    title: '$100 of U.S. income: who gets what?'
+    title: One $100 bill = everything America earns
     board: &id002
       x: 470
       y: 230
       w: 1370
       h: 800
     draw_start:
-      cue: Take a hundred dollars
+      cue: Picture a hundred-dollar bill
     speed: 1600
     push: 0.003
     enter:
@@ -349,151 +339,79 @@ scenes:
       at: 0.2
       dur: 1.3
     strokes:
-    - d: M 620 820 L 1480 820
+    - d: M 640 420 L 1200 420 L 1200 660 L 640 660 Z
+      color: accent3
+      width: 6
+      kind: box
+      start:
+        cue: Picture a hundred-dollar bill
+      label:
+        text: $100
+        x: 920
+        y: 560
+        size: 90
+        color: accent3
+        anchor: middle
+    - d: M 800 420 L 800 660
       color: ink
       width: 5
       start:
-        cue: Take a hundred dollars
+        cue: A slice goes to the people
       kind: stroke
-    - d: M 700 820 L 700 586 L 880 586 L 880 820 Z
+    - d: M 860 420 L 860 660
+      color: ink
+      width: 5
+      start:
+        cue: A slice goes to the owners
+      kind: stroke
+    - d: M 720 665 Q 710 722 700 780 M 693 757 L 700 780 L 714 760
       color: accent2
-      width: 3
-      fill: accent2
-      fillOpacity: 0.55
-      kind: bar
+      width: 6
+      kind: arrow
       start:
-        cue: Part goes to the people
+        cue: A slice goes to the people
       label:
-        text: PAY $58.40
-        x: 790
-        y: 710
-        size: 24
-        color: ink
+        text: PAY
+        x: 700
+        y: 820
+        size: 34
+        color: accent2
         anchor: middle
-    - d: M 700 586 L 700 568 L 880 568 L 880 586 Z
+    - d: M 830 665 Q 865 722 900 780 M 880 767 L 900 780 L 898 756
       color: accent
-      width: 3
-      fill: accent
-      fillOpacity: 0.8
-      kind: bar
+      width: 6
+      kind: arrow
       start:
-        cue: Part goes to the owners
+        cue: A slice goes to the owners
       label:
-        text: PROFITS $4.50
-        x: 1000
-        y: 580
-        size: 18
-        color: ink
+        text: PROFIT
+        x: 920
+        y: 820
+        size: 34
+        color: accent
         anchor: middle
-    - d: M 700 568 L 700 420 L 880 420 L 880 568 Z
+    - d: M 1030 665 Q 1090 722 1150 780 M 1127 773 L 1150 780 L 1142 758
       color: muted
-      width: 3
-      fill: muted
-      fillOpacity: 0.3
-      kind: bar
+      width: 6
+      kind: arrow
       start:
         cue: The rest covers
       label:
         text: EVERYTHING ELSE
-        x: 790
-        y: 500
-        size: 18
-        color: ink
+        x: 1170
+        y: 820
+        size: 26
+        color: muted
         anchor: middle
-    - d: M 790 860 L 790 860
-      color: ink
-      width: 1
-      start:
-        cue: In nineteen seventy
-      label:
-        text: '1970'
-        x: 790
-        y: 868
-        size: 30
-        color: ink
-        anchor: middle
-      kind: stroke
-    - d: M 1140 820 L 1140 616 L 1320 616 L 1320 820 Z
-      color: accent2
-      width: 3
-      fill: accent2
-      fillOpacity: 0.55
-      kind: bar
-      start:
-        cue: Last year
-      label:
-        text: PAY $50.90
-        x: 1230
-        y: 725
-        size: 24
-        color: ink
-        anchor: middle
-    - d: M 1140 616 L 1140 579 L 1320 579 L 1320 616 Z
-      color: accent
-      width: 3
-      fill: accent
-      fillOpacity: 0.8
-      kind: bar
-      start:
-        cue: Meanwhile
-      label:
-        text: $9.30
-        x: 1230
-        y: 605
-        size: 20
-        color: ink
-        anchor: middle
-    - d: M 1140 579 L 1140 420 L 1320 420 L 1320 579 Z
-      color: muted
-      width: 3
-      fill: muted
-      fillOpacity: 0.3
-      kind: bar
-      start:
-        cue: Last year
-        offset: 0.6
-      label:
-        text: EVERYTHING ELSE
-        x: 1230
-        y: 505
-        size: 18
-        color: ink
-        anchor: middle
-    - d: M 1230 860 L 1230 860
-      color: ink
-      width: 1
-      start:
-        cue: Last year
-      label:
-        text: '2025'
-        x: 1230
-        y: 868
-        size: 30
-        color: ink
-        anchor: middle
-      kind: stroke
-    - d: M 900 576 Q 1020 528 1130 596 M 1106 594 L 1130 596 L 1117 576
-      color: risk
-      width: 5
-      kind: arrow
-      start:
-        cue: roughly doubled
-      label:
-        text: PROFITS ≈ ×2
-        x: 1015
-        y: 520
-        size: 24
-        color: risk
-        anchor: middle
-    - d: M 1050 905 L 1050 905
+    - d: M 1060 900 L 1060 900
       color: muted
       width: 1
       start:
-        cue: Take a hundred dollars
+        cue: Picture a hundred-dollar bill
       label:
-        text: 'SHARES OF U.S. GROSS DOMESTIC INCOME · PROFITS = DOMESTIC CORPORATE PROFITS AFTER TAX · SOURCE: BEA VIA FRED'
-        x: 1050
-        y: 905
+        text: U.S. GROSS DOMESTIC INCOME AS $100 · SLICES NOT TO SCALE HERE · BEA
+        x: 1060
+        y: 900
         size: 15
         color: muted
         anchor: middle
@@ -501,19 +419,19 @@ scenes:
     actions:
     - kind: point
       at:
-        cue: workers' pay took
+        cue: A slice goes to the people
         offset: 0.2
       dur: 1.4
       target:
-      - 790
-      - 700
+      - 720
+      - 600
     - kind: point
       at:
-        cue: roughly doubled
+        cue: A slice goes to the owners
         offset: 0.2
       dur: 1.4
       target:
-      - 1230
+      - 830
       - 600
     scale: 0.86
     floor: 1040
@@ -521,8 +439,73 @@ scenes:
   - bea_gdi
   assets:
   - font:inter
-- id: s05_splitter
-  segment: a1_scale
+- id: s05_then
+  segment: a1_then
+  type: engine_cartoon
+  params:
+    zones:
+    - set: splitter
+      x0: -1600
+      x1: 4600
+      pay: 58.4
+      profit: 4.5
+      other: 37.1
+      year:
+      - - 0
+        - 1970s
+      hiAt:
+      - - 0
+        - ''
+      - - cue: workers got
+        - pay
+      hideProfit: true
+      note: 'BEA (VIA FRED): SHARES OF U.S. GROSS DOMESTIC INCOME, 1970 vs 2025 · ''EVERYTHING ELSE'' = DEPRECIATION, TAXES, INTEREST, RENT, SELF-EMPLOYED INCOME'
+      hideOther: true
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 960
+      y: 520
+      zoom: 0.92
+    - at:
+        cue: workers got
+      x: 440
+      y: 560
+      zoom: 1.15
+      dur: 1.2
+    drift: 2
+    items:
+    - kind: toon
+      x: 1700
+      at: 0.2
+      who: shopper
+      v: 1
+      skin: 2
+      hair: 4
+      hairStyle: 2
+      color: '#1B2333'
+      glasses: false
+      scarf: '#F2B33D'
+      face: happy
+      pose: wave
+      y: 1000
+      scale: 0.9
+      label: DANA'S DAD, 1970s
+      labelUntil:
+        cue: workers got
+    - kind: rrtag
+      at: 0.0
+      x: 36
+      y: 36
+      tags:
+      - - 0
+        - FACT · BEA, 1970
+  sources:
+  - bea_gdi
+  assets:
+  - font:inter
+- id: s06_now
+  segment: a1_now
   type: engine_cartoon
   params:
     zones:
@@ -532,90 +515,163 @@ scenes:
       pay:
       - - 0
         - 58.4
-      - - cue: Seven and a half
+      - - cue: Today
         - 58.4
-      - - cue: sounds small
-          offset: 0.4
+      - - cue: they get
+          offset: 0.6
         - 50.9
       profit:
       - - 0
         - 4.5
-      - - cue: Seven and a half
+      - - cue: And the owners' slice
         - 4.5
-      - - cue: sounds small
-          offset: 0.4
+      - - cue: roughly doubled
         - 9.3
-      other:
-      - - 0
-        - 37.1
-      - - cue: Seven and a half
-        - 37.1
-      - - cue: sounds small
-          offset: 0.4
-        - 39.8
+      other: 39.8
       year:
       - - 0
-        - '1970'
-      - - cue: sounds small
+        - 1970s
+      - - cue: Today
         - '2025'
       hiAt:
       - - 0
-        - ''
-      - - cue: Seven and a half
         - pay
-      - - cue: our rough math
-        - ''
-      note: 'BEA (VIA FRED): SHARES OF GROSS DOMESTIC INCOME, 1970 vs 2025 · ''EVERYTHING ELSE'' = DEPRECIATION, TAXES, INTEREST, RENT, SELF-EMPLOYED INCOME, ETC.'
+      - - cue: And the owners' slice
+        - profit
+      hideProfit: true
+      note: 'BEA (VIA FRED): SHARES OF U.S. GROSS DOMESTIC INCOME, 1970 vs 2025 · ''EVERYTHING ELSE'' = DEPRECIATION, TAXES, INTEREST, RENT, SELF-EMPLOYED INCOME'
+      hideOther: true
     worldW: 2400
     cam:
     - at: 0
-      x: 960
-      y: 520
-      zoom: 0.92
+      x: 440
+      y: 560
+      zoom: 1.15
     - at:
-        cue: On an economy
+        cue: And the owners' slice
       x: 960
-      y: 470
-      zoom: 1.05
-      dur: 1.2
-    - at:
-        cue: That's not money
-      x: 960
-      y: 540
-      zoom: 0.9
+      y: 560
+      zoom: 1.15
       dur: 1.2
     drift: 2
     items:
-    - kind: counter
+    - kind: toonwords
+      text: 'PROFITS: ROUGHLY DOUBLED'
       x: 960
-      y: 640
+      y: 180
+      at:
+        cue: roughly doubled
+      size: 54
+      color: '#FFFFFF'
+    - kind: toon
+      x: 1700
+      at: 0.2
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: shock
+      pose: shrug
+      y: 1000
+      scale: 0.9
+    - kind: rrtag
+      at: 0.0
+      x: 36
+      y: 36
+      tags:
+      - - 0
+        - FACT · BEA, 2025
+  sources:
+  - bea_gdi
+  assets:
+  - font:inter
+- id: s07_scale
+  segment: a1_scale
+  type: engine_cartoon
+  params:
+    zones:
+    - set: robotown
+      x0: -1600
+      x1: 4600
+      robots: 6
+      workers: 1
+      flowAt:
+        cue: But this bill stands
+      flowTo: tower
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 450
+      y: 560
+      zoom: 1.0
+    - at:
+        cue: By our rough math
+      x: 600
+      y: 500
+      zoom: 0.85
+      dur: 1.4
+    - at:
+        cue: Not stolen
+      x: 450
+      y: 540
+      zoom: 0.95
+      dur: 1.0
+    drift: 3
+    items:
+    - kind: bubble
+      text: A FEW BUCKS? WHO CARES?
+      x: 0
+      y: 300
+      at: 0.2
+      until:
+        cue: But this bill stands
+      tail:
+      - 0
+      - 560
+      size: 28
+    - kind: toon
+      x: 0
+      at: 0.0
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: smug
+      pose: shrug
+      y: 1000
+      scale: 1.25
+    - kind: counter
+      x: 600
+      y: 160
       at: &id001
-        cue: our rough math
-      prefix: ≈ $
+        cue: By our rough math
+      prefix: '> $'
       suffix: ' TRILLION A YEAR'
-      decimals: 1
+      decimals: 0
       steps:
       - - 0
         - 0
       - - *id001
         - 0
       - - cue: a year
-        - 2.3
-      text: 'OUR ROUGH MATH: 7.5 POINTS × $30.9T GDI (2025)'
-    - kind: sign
+        - 2
+      text: 'OUR ROUGH MATH: THE GAP × 2025 U.S. INCOME (BEA)'
+    - kind: toonwords
       text: NOT STOLEN. THE SPLIT MOVED.
-      x: 960
+      x: 450
       y: 300
       at:
-        cue: That's not money
-      color: '#FFF59D'
-      size: 34
-    - kind: bolt
-      x: 1650
-      at: 0.3
-      carry: coin
-      scale: 0.9
-      y: 900
+        cue: Not stolen
+      size: 46
+      color: '#FFFFFF'
     - kind: rrtag
       at: 0.0
       x: 36
@@ -623,17 +679,17 @@ scenes:
       tags:
       - - 0
         - FACT
-      - - cue: our rough math
+      - - cue: By our rough math
         - OUR MATH
   sources:
   - bea_gdi
   assets:
   - font:inter
-- id: p06_index
+- id: p08_index
   segment: a1_index
   type: engine_draw
   params:
-    title: Workers' share of U.S. business output (BLS index, 2017=100)
+    title: Workers' share of U.S. business output (BLS)
     board: *id002
     draw_start:
       cue: The Labor Department
@@ -651,42 +707,16 @@ scenes:
       start:
         cue: The Labor Department
       kind: stroke
-    - d: M 600 470 L 600 470
-      color: muted
-      width: 1
-      start:
-        cue: The Labor Department
-      label:
-        text: '115'
-        x: 600
-        y: 478
-        size: 18
-        color: muted
-        anchor: end
-      kind: stroke
-    - d: M 600 770 L 600 770
-      color: muted
-      width: 1
-      start:
-        cue: The Labor Department
-      label:
-        text: '95'
-        x: 600
-        y: 778
-        size: 18
-        color: muted
-        anchor: end
-      kind: stroke
     - d: M 640 485 L 760 474 L 900 502 L 1080 505
       color: accent2
       width: 7
       start:
-        cue: From nineteen forty-seven
+        cue: For decades after the war
       label:
-        text: A NARROW BAND, 1947-2000
+        text: BARELY BUDGED
         x: 860
         y: 450
-        size: 22
+        size: 24
         color: accent2
         anchor: middle
       kind: stroke
@@ -694,69 +724,30 @@ scenes:
       color: risk
       width: 7
       start:
-        cue: Since then it has slid
+        cue: Then it started to slide
       kind: stroke
     - d: M 1470 761 L 1470 761
       color: risk
       width: 1
       start:
-        cue: in the latest data
+        cue: Today it's the lowest
       label:
-        text: 93.7 · Q3 2026 · LOWEST SINCE 1947
-        x: 1330
+        text: '2026: LOWEST ON RECORD'
+        x: 1300
         y: 800
-        size: 20
-        color: risk
-        anchor: middle
-      kind: stroke
-    - d: M 760 474 L 760 474
-      color: ink
-      width: 1
-      start:
-        cue: below its
-      label:
-        text: PEAK 117.1 (1960)
-        x: 760
-        y: 440
-        size: 20
-        color: ink
-        anchor: middle
-      kind: stroke
-    - d: M 800 480 Q 1093 693 1450 750 M 1427 757 L 1450 750 L 1430 736
-      color: risk
-      width: 4
-      kind: arrow
-      start:
-        cue: twenty percent
-      label:
-        text: ≈ −20% (OUR CALC.)
-        x: 1180
-        y: 600
         size: 24
         color: risk
         anchor: middle
-    - d: M 1060 870 L 1060 870
-      color: muted
-      width: 1
-      start:
-        cue: The Labor Department
-      label:
-        text: 'POINTS: 1947 Q1 116.0 · 1960 Q4 117.1 · 1980 112.1 · 2000 111.6 · 2010 99.5 · 2019 100.0 · 2026 Q3 93.7 (ANNUAL AVG. WHERE NO QUARTER) · BLS PRS85006173'
-        x: 1060
-        y: 870
-        size: 13
-        color: muted
-        anchor: middle
       kind: stroke
-    - d: M 1060 900 L 1060 900
+    - d: M 1060 880 L 1060 880
       color: muted
       width: 1
       start:
         cue: The Labor Department
       label:
-        text: 1947 · 1960 · 1980 · 2000 · 2010 · 2019 · 2026 (NOT TO SCALE IN TIME)
+        text: BLS NONFARM BUSINESS LABOR SHARE, 1947-2026 · SHAPE TRACED FROM SELECTED POINTS (SEE FACT CHECK)
         x: 1060
-        y: 900
+        y: 880
         size: 14
         color: muted
         anchor: middle
@@ -764,7 +755,7 @@ scenes:
     actions:
     - kind: point
       at:
-        cue: Since then it has slid
+        cue: Then it started to slide
         offset: 0.2
       dur: 1.4
       target:
@@ -772,7 +763,7 @@ scenes:
       - 683
     - kind: point
       at:
-        cue: twenty percent
+        cue: Today it's the lowest
         offset: 0.2
       dur: 1.4
       target:
@@ -784,7 +775,7 @@ scenes:
   - bls_ls
   assets:
   - font:inter
-- id: s07_why
+- id: s09_why
   segment: a1_why
   type: engine_cartoon
   params:
@@ -840,7 +831,7 @@ scenes:
         cue: Global trade
       size: 70
     - kind: sign
-      text: 'SUSPECT 1: GLOBAL TRADE'
+      text: 'SUSPECT: GLOBAL TRADE'
       x: 150
       y: 150
       at:
@@ -848,9 +839,9 @@ scenes:
       color: '#FFE0B2'
       size: 28
       until:
-        cue: But here's what robots add
+        cue: But here's what a robot adds
     - kind: sign
-      text: 'SUSPECT 2: SUPERSTAR COMPANIES'
+      text: 'SUSPECT: SUPERSTAR COMPANIES'
       x: 520
       y: 220
       at:
@@ -858,9 +849,9 @@ scenes:
       color: '#E1D5FF'
       size: 28
       until:
-        cue: But here's what robots add
+        cue: But here's what a robot adds
     - kind: sign
-      text: 'SUSPECT 3: AUTOMATION'
+      text: 'SUSPECT: AUTOMATION'
       x: 900
       y: 150
       at:
@@ -868,7 +859,7 @@ scenes:
       color: '#BBDEFB'
       size: 28
       until:
-        cue: But here's what robots add
+        cue: But here's what a robot adds
     - kind: toonwords
       text: A ROBOT IS CAPITAL
       x: 450
@@ -886,6 +877,13 @@ scenes:
         cue: the money that paid
       color: '#FFF59D'
       size: 34
+    - kind: bolt
+      x: 300
+      at:
+        cue: A robot is capital
+      carry: box
+      scale: 1.1
+      y: 1000
     - kind: rrtag
       at: 0.0
       x: 36
@@ -893,14 +891,14 @@ scenes:
       tags:
       - - 0
         - DEBATED CAUSES
-      - - cue: But here's what robots add
+      - - cue: But here's what a robot adds
         - MECHANISM
   sources:
   - autor_superstar
   - ar_framework
   assets:
   - font:inter
-- id: s08_b2
+- id: s10_b2
   segment: a2_card
   type: engine_cartoon
   params:
@@ -930,7 +928,7 @@ scenes:
     gain: 0.3
   assets:
   - font:inter
-- id: s09_own
+- id: s11_own
   segment: a2_own
   type: engine_cartoon
   params:
@@ -939,31 +937,25 @@ scenes:
       x0: -1600
       x1: 4600
       groups:
-      - label: BOTTOM 50
+      - label: BOTTOM HALF
         n: 40
         v: 0.6
         at: 999
         color: '#8E9AAF'
-        display: $0.60
-      - label: NEXT 40
+        display: < $1
+      - label: NEXT 40%
         n: 30
         v: 11.4
         at: 999
         color: '#1F8A8C'
-        display: $11.40
-      - label: NEXT 9
-        n: 9
-        v: 37.2
-        at: 999
-        color: '#2A6FDB'
-        display: $37.20
-      - label: TOP 1
-        n: 1
-        v: 50.9
+        display: ''
+      - label: RICHEST 10%
+        n: 10
+        v: 88.1
         at: 999
         color: '#F2B33D'
-        display: $50.90
-      foot: FED DISTRIBUTIONAL FINANCIAL ACCOUNTS, Q2 2026 · HOUSEHOLDS BY WEALTH · CORPORATE EQUITIES & MUTUAL FUND SHARES (EXCL. PENSIONS)
+        display: ≈ $88
+      foot: 'FED DISTRIBUTIONAL FINANCIAL ACCOUNTS, Q2 2026 · HOUSEHOLDS BY WEALTH · STOCKS & STOCK FUNDS (EXCL. PENSIONS) · EXACT: 0.6 / 11.4 / 88.1 OF EVERY $100'
     worldW: 2400
     cam:
     - at: 0
@@ -971,43 +963,63 @@ scenes:
       y: 520
       zoom: 0.85
     - at:
-        cue: Let's line up
+        cue: So let's line up
       x: 300
       y: 600
       zoom: 1.1
       dur: 1.4
     - at:
-        cue: and hand out
+        cue: and share out
       x: 760
       y: 480
       zoom: 0.8
       dur: 1.6
     drift: 3
     items:
-    - kind: toonwords
-      text: WHO OWNS THE COMPANIES?
-      x: 760
-      y: 150
+    - kind: bubble
+      text: SO... WHO OWNS THE ROBOTS?
+      x: 900
+      y: 300
       at: 0.2
       until:
-        cue: Let's line up
-      size: 56
+        cue: So let's line up
+      tail:
+      - 1100
+      - 700
+      size: 30
+    - kind: toon
+      x: 1100
+      at: 0.0
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: worry
+      pose: shrug
+      y: 1000
+      until:
+        cue: So let's line up
+      scale: 1.25
     - kind: sign
-      text: 100 HOUSEHOLDS · LEAST WEALTHY → MOST
+      text: EVERY HOUSEHOLD · LEAST WEALTHY → MOST
       x: 300
       y: 160
       at:
-        cue: Let's line up
+        cue: So let's line up
       color: '#FFFFFF'
       size: 30
       until:
-        cue: and hand out
+        cue: and share out
     - kind: toonwords
       text: $100 OF STOCK TO SHARE OUT
       x: 760
       y: 130
       at:
-        cue: and hand out
+        cue: and share out
       size: 54
       color: '#FFFFFF'
     - kind: rrtag
@@ -1016,12 +1028,12 @@ scenes:
       y: 36
       tags:
       - - 0
-        - ILLUSTRATIVE SETUP
+        - THE SETUP
   sources:
   - fed_dfa
   assets:
   - font:inter
-- id: s10_split
+- id: s12_split
   segment: a2_split
   type: engine_cartoon
   params:
@@ -1030,95 +1042,50 @@ scenes:
       x0: -1600
       x1: 4600
       groups:
-      - label: BOTTOM 50
+      - label: BOTTOM HALF
         n: 40
         v: 0.6
         at:
-          cue: The bottom fifty
+          cue: The whole bottom half
         color: '#8E9AAF'
-        display: $0.60
-      - label: NEXT 40
+        display: < $1
+      - label: NEXT 40%
         n: 30
         v: 11.4
-        at:
-          cue: The next forty
+        at: 999
         color: '#1F8A8C'
-        display: $11.40
-      - label: NEXT 9
-        n: 9
-        v: 37.2
-        at:
-          cue: The next nine
-        color: '#2A6FDB'
-        display: $37.20
-      - label: TOP 1
-        n: 1
-        v: 50.9
-        at:
-          cue: And the single richest
+        display: ''
+      - label: RICHEST 10%
+        n: 10
+        v: 88.1
+        at: 999
         color: '#F2B33D'
-        display: $50.90
-      foot: FED DISTRIBUTIONAL FINANCIAL ACCOUNTS, Q2 2026 · HOUSEHOLDS BY WEALTH · CORPORATE EQUITIES & MUTUAL FUND SHARES (EXCL. PENSIONS)
+        display: ≈ $88
+      foot: 'FED DISTRIBUTIONAL FINANCIAL ACCOUNTS, Q2 2026 · HOUSEHOLDS BY WEALTH · STOCKS & STOCK FUNDS (EXCL. PENSIONS) · EXACT: 0.6 / 11.4 / 88.1 OF EVERY $100'
     worldW: 2400
     cam:
     - at: 0
-      x: 200
+      x: 300
       y: 640
       zoom: 1.15
     - at:
-        cue: The next forty
-      x: 700
-      y: 560
-      zoom: 1.05
+        cue: all together
+      x: 200
+      y: 620
+      zoom: 1.25
       dur: 1.2
-    - at:
-        cue: The next nine
-      x: 1250
-      y: 480
-      zoom: 1.05
-      dur: 1.2
-    - at:
-        cue: And the single richest
-      x: 1700
-      y: 380
-      zoom: 1.0
-      dur: 1.2
-    - at:
-        cue: Put together
-      x: 900
-      y: 480
-      zoom: 0.78
-      dur: 1.6
     drift: 2
     items:
     - kind: bubble
-      text: SIXTY CENTS. FOR ALL OF US.
-      x: 200
+      text: LESS THAN A DOLLAR. FOR ALL OF US?!
+      x: 250
       y: 330
       at:
-        cue: Together.
-      until:
-        cue: The next forty
+        cue: gets less
       tail:
-      - 200
-      - 640
+      - 150
+      - 700
       size: 28
-    - kind: counter
-      x: 900
-      y: 150
-      at: &id003
-        cue: Put together
-      prefix: ''
-      suffix: '% OF THE STOCK'
-      decimals: 1
-      steps:
-      - - 0
-        - 0
-      - - *id003
-        - 0
-      - - cue: of these stocks
-        - 88.1
-      text: TOP 10% OF HOUSEHOLDS · FED DFA, Q2 2026
     - kind: toon
       x: -150
       at: 0.2
@@ -1133,10 +1100,7 @@ scenes:
       old: true
       face: shock
       pose: shrug
-      label: MILO · RETIRED BUS DRIVER
-      labelUntil:
-        cue: The next forty
-      y: 980
+      y: 1000
       scale: 1.2
     - kind: rrtag
       at: 0.0
@@ -1144,13 +1108,13 @@ scenes:
       y: 36
       tags:
       - - 0
-        - FACT
+        - FACT · FED
   sources:
   - fed_dfa
   assets:
   - font:inter
-- id: s11_pension
-  segment: a2_pension
+- id: s13_top
+  segment: a2_top
   type: engine_cartoon
   params:
     zones:
@@ -1158,95 +1122,148 @@ scenes:
       x0: -1600
       x1: 4600
       groups:
-      - label: BOTTOM 50
+      - label: BOTTOM HALF
         n: 40
-        v: 4.8
-        at:
-          cue: Those are spread
+        v: 0.6
+        at: 0
         color: '#8E9AAF'
-        display: 4.8%
-      - label: NEXT 40
+        display: < $1
+      - label: NEXT 40%
         n: 30
-        v: 39.7
-        at:
-          cue: Those are spread
-          offset: 0.5
-        color: '#1F8A8C'
-        display: 39.7%
-      - label: NEXT 9
-        n: 9
-        v: 44.1
-        at:
-          cue: The top ten percent
-        color: '#2A6FDB'
-        display: 44.1%
-      - label: TOP 1
-        n: 1
         v: 11.4
+        at: 0.2
+        color: '#1F8A8C'
+        display: ''
+      - label: RICHEST 10%
+        n: 10
+        v: 88.1
         at:
-          cue: The top ten percent
-          offset: 0.4
+          cue: And the richest tenth
         color: '#F2B33D'
-        display: 11.4%
-      foot: FED DFA, Q2 2026 · DEFINED-CONTRIBUTION PENSION ENTITLEMENTS (401(k)-TYPE) · SHARES BY WEALTH GROUP
+        display: ≈ $88
+      foot: 'FED DISTRIBUTIONAL FINANCIAL ACCOUNTS, Q2 2026 · HOUSEHOLDS BY WEALTH · STOCKS & STOCK FUNDS (EXCL. PENSIONS) · EXACT: 0.6 / 11.4 / 88.1 OF EVERY $100'
     worldW: 2400
     cam:
     - at: 0
-      x: 760
-      y: 520
-      zoom: 0.8
+      x: 700
+      y: 560
+      zoom: 0.9
     - at:
-        cue: The top ten percent
-      x: 1300
+        cue: And the richest tenth
+      x: 1250
       y: 460
-      zoom: 0.95
+      zoom: 1.0
       dur: 1.2
     - at:
-        cue: The bottom half
-      x: 300
-      y: 600
-      zoom: 1.05
+        cue: Nearly the whole pile
+      x: 800
+      y: 500
+      zoom: 0.8
       dur: 1.2
     drift: 2
     items:
     - kind: toonwords
-      text: 401(k)-TYPE ACCOUNTS
-      x: 760
-      y: 140
-      at: 0.2
-      size: 52
-      until:
-        cue: The top ten percent
-    - kind: sign
-      text: 'TOP 10%: ≈55%'
-      x: 1300
-      y: 140
+      text: NEARLY THE WHOLE PILE
+      x: 800
+      y: 120
       at:
-        cue: The top ten percent
-      color: '#FFF59D'
-      size: 36
-      until:
-        cue: The bottom half
-    - kind: sign
-      text: 'BOTTOM 50%: 4.8%'
-      x: 300
-      y: 180
-      at:
-        cue: The bottom half
-      color: '#FFCDD2'
-      size: 36
+        cue: Nearly the whole pile
+      size: 58
+      color: '#FFFFFF'
     - kind: rrtag
       at: 0.0
       x: 36
       y: 36
       tags:
       - - 0
-        - FACT
+        - FACT · FED
   sources:
   - fed_dfa
   assets:
   - font:inter
-- id: s12_flip
+- id: s14_pension
+  segment: a2_pension
+  type: engine_cartoon
+  params:
+    zones:
+    - set: doorways
+      x0: -1600
+      x1: 4600
+      doors:
+      - label: MILO'S 401(k)
+        sub: SPREAD WIDER THAN STOCKS
+        at:
+          cue: Accounts like his
+        color: '#2A6FDB'
+      bannerText: FED DFA, Q2 2026 · BOTTOM HALF HOLDS ≈5% OF 401(k)-TYPE ACCOUNTS
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 500
+      y: 560
+      zoom: 1.1
+    - at:
+        cue: But even there
+      x: 700
+      y: 520
+      zoom: 0.95
+      dur: 1.2
+    drift: 2
+    items:
+    - kind: toon
+      x: 800
+      at: 0.0
+      who: shopper
+      v: 3
+      skin: 3
+      hair: 0
+      hairStyle: 0
+      color: '#E07A2F'
+      glasses: true
+      scarf: '#1B2333'
+      old: true
+      face: happy
+      pose: wave
+      y: 1000
+      label: MILO · RETIRED BUS DRIVER
+      labelUntil:
+        cue: Accounts like his
+      scale: 1.2
+    - kind: toon
+      x: 1100
+      at: 0.3
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: happy
+      pose: stand
+      y: 1000
+      scale: 1.25
+    - kind: sign
+      text: 'POORER HOUSEHOLDS: ONLY A SLIVER'
+      x: 900
+      y: 300
+      at:
+        cue: But even there
+      color: '#FFCDD2'
+      size: 34
+    - kind: rrtag
+      at: 0.0
+      x: 36
+      y: 36
+      tags:
+      - - 0
+        - FACT · FED
+  sources:
+  - fed_dfa
+  assets:
+  - font:inter
+- id: s15_flip
   segment: a2_flip
   type: engine_cartoon
   params:
@@ -1257,7 +1274,7 @@ scenes:
       robots: 5
       workers: 2
       flowAt:
-        cue: If AI and robots move
+        cue: If robots move money
       flowTo: tower
       towerLabel: SHAREHOLDERS
     worldW: 2400
@@ -1267,7 +1284,7 @@ scenes:
       y: 540
       zoom: 0.9
     - at:
-        cue: For most of history
+        cue: For generations
       x: 0
       y: 600
       zoom: 1.15
@@ -1285,16 +1302,16 @@ scenes:
       x: 600
       y: 150
       at:
-        cue: If AI and robots move
+        cue: If robots move money
       size: 50
       until:
-        cue: For most of history
+        cue: For generations
     - kind: sign
       text: 'THE OLD WAY UP: A BETTER JOB'
       x: 0
       y: 170
       at:
-        cue: For most of history
+        cue: For generations
       color: '#BBDEFB'
       size: 32
       until:
@@ -1321,14 +1338,12 @@ scenes:
       face: worry
       pose: clipboard
       hold: clipboard
-      label: DANA · WAREHOUSE SHIFT LEAD
-      labelUntil:
-        cue: For most of history
       faces:
       - - 0
         - worry
       - - cue: When machines do more
         - smug
+      y: 1000
       scale: 1.25
     - kind: rrtag
       at: 0.0
@@ -1341,7 +1356,7 @@ scenes:
         - A POSSIBILITY, NOT A FORECAST
   assets:
   - font:inter
-- id: s13_b3
+- id: s16_b3
   segment: a3_card
   type: engine_cartoon
   params:
@@ -1371,7 +1386,7 @@ scenes:
     gain: 0.3
   assets:
   - font:inter
-- id: s14_capex
+- id: s17_capex
   segment: a3_capex
   type: engine_cartoon
   params:
@@ -1382,25 +1397,21 @@ scenes:
       camps:
       - name: AMAZON
         v: 210.7
-        display: $210.7B
         at:
-          cue: Amazon spent
+          cue: Amazon
       - name: ALPHABET
         v: 159.8
-        display: $159.8B
         at:
-          cue: Alphabet,
+          cue: Alphabet
       - name: MICROSOFT
         v: 135.9
-        display: $135.9B
         at:
-          cue: Microsoft,
+          cue: Microsoft
       - name: META
         v: 108.0
-        display: $108.0B
         at:
-          cue: Meta,
-      foot: CAPITAL SPENDING, 12 MONTHS TO SEP 30, 2026 · COMPANY FILINGS · AMAZON NET OF PROCEEDS · MICROSOFT CASH · META INCL. FINANCE LEASES · GENERIC BUILDINGS, NO LOGOS
+          cue: and Meta
+      foot: CAPITAL SPENDING, 12 MONTHS TO SEP 30, 2026 · COMPANY FILINGS · ≈ $614B BY OUR SUM · GENERIC BUILDINGS, NO LOGOS
     worldW: 2400
     cam:
     - at: 0
@@ -1408,31 +1419,13 @@ scenes:
       y: 520
       zoom: 1.1
     - at:
-        cue: Amazon spent
-      x: 0
-      y: 480
-      zoom: 1.0
-      dur: 1.2
-    - at:
-        cue: Alphabet,
+        cue: Amazon
       x: 500
       y: 480
-      zoom: 1.0
-      dur: 1.0
+      zoom: 0.85
+      dur: 1.4
     - at:
-        cue: Microsoft,
-      x: 1000
-      y: 480
-      zoom: 1.0
-      dur: 1.0
-    - at:
-        cue: Meta,
-      x: 1300
-      y: 480
-      zoom: 1.0
-      dur: 1.0
-    - at:
-        cue: Together
+        cue: spent
       x: 760
       y: 470
       zoom: 0.72
@@ -1440,30 +1433,30 @@ scenes:
     drift: 2
     items:
     - kind: toonwords
-      text: DATA CENTERS
+      text: DATA CENTERS FOR AI
       x: 900
       y: 150
       at:
         cue: Data centers
       size: 64
       until:
-        cue: Amazon spent
+        cue: spent
     - kind: counter
       x: 760
       y: 100
-      at: &id004
-        cue: Together
-      prefix: ≈ $
-      suffix: B IN ONE YEAR
+      at: &id003
+        cue: spent
+      prefix: '> $'
+      suffix: ' BILLION'
       decimals: 0
       steps:
       - - 0
         - 0
-      - - *id004
+      - - *id003
         - 0
-      - - cue: in a single year
-        - 614
-      text: OUR SUM · DEFINITIONS DIFFER SLIGHTLY
+      - - cue: on buildings
+        - 600
+      text: 4 COMPANIES · ONE YEAR · OUR SUM
     - kind: rrtag
       at: 0.0
       x: 36
@@ -1471,7 +1464,7 @@ scenes:
       tags:
       - - 0
         - FACT
-      - - cue: Together
+      - - cue: spent
         - OUR SUM
   sources:
   - byb_amzn
@@ -1480,7 +1473,7 @@ scenes:
   - byb_meta
   assets:
   - font:inter
-- id: s15_nvidia
+- id: s18_nvidia
   segment: a3_nvidia
   type: engine_cartoon
   params:
@@ -1491,31 +1484,27 @@ scenes:
       camps:
       - name: AMAZON
         v: 210.7
-        display: $210.7B
         at: 0
       - name: ALPHABET
         v: 159.8
-        display: $159.8B
         at: 0
       - name: MICROSOFT
         v: 135.9
-        display: $135.9B
         at: 0
       - name: META
         v: 108.0
-        display: $108.0B
         at: 0
       chipAt: 0.3
       chipX: 1900
       margin:
       - - 0
         - 0
-      - - cue: and kept
+      - - cue: Nvidia kept
         - 0
-      - - cue: of every dollar
+      - - cue: as profit
         - 0.564
-      marginText: ≈ 56¢ OF EVERY $1 KEPT AS PROFIT
-      foot: 'NVIDIA, QUARTER ENDED OCT 25, 2026: REVENUE $115.8B · NET INCOME $65.3B · 56% IS OUR CALC. · GENERIC CHIP, NO LOGO'
+      marginText: MOST OF EVERY $1 OF SALES = PROFIT
+      foot: 'NVIDIA, QUARTER TO OCT 25, 2026: NET INCOME $65.3B ON REVENUE $115.8B ≈ 56% (OUR CALC.) · GENERIC CHIP, NO LOGO'
     worldW: 2400
     cam:
     - at: 0
@@ -1531,7 +1520,7 @@ scenes:
     drift: 2
     items:
     - kind: bubble
-      text: NVIDIA (THE CHIP SELLER)
+      text: THE CHIP SELLER
       x: 1600
       y: 180
       at:
@@ -1541,39 +1530,7 @@ scenes:
       tail:
       - 1850
       - 450
-      size: 28
-    - kind: counter
-      x: 1500
-      y: 140
-      at: &id005
-        cue: In its latest quarter
-      prefix: $
-      suffix: B
-      decimals: 1
-      steps:
-      - - 0
-        - 0
-      - - *id005
-        - 0
-      - - cue: in revenue
-        - 115.8
-      text: REVENUE, ONE QUARTER
-    - kind: counter
-      x: 2200
-      y: 140
-      at: &id006
-        cue: and kept
-      prefix: $
-      suffix: B
-      decimals: 1
-      steps:
-      - - 0
-        - 0
-      - - *id006
-        - 0
-      - - cue: as profit
-        - 65.3
-      text: NET PROFIT, SAME QUARTER
+      size: 30
     - kind: bolt
       x:
       - - 0
@@ -1589,14 +1546,12 @@ scenes:
       y: 36
       tags:
       - - 0
-        - FACT
-      - - cue: That's about
-        - OUR CALC.
+        - FACT · COMPANY FILING
   sources:
   - byb_nvda
   assets:
   - font:inter
-- id: p16_loop
+- id: p19_loop
   segment: a3_loop
   type: engine_draw
   params:
@@ -1695,26 +1650,13 @@ scenes:
       kind: arrow
       start:
         cue: of both
-    - d: M 1350 560 L 1350 560
-      color: muted
-      width: 1
-      start:
-        cue: A business pays
-      label:
-        text: INSTEAD OF HIRING
-        x: 1400
-        y: 470
-        size: 22
-        color: muted
-        anchor: start
-      kind: stroke
     - d: M 1060 870 L 1060 870
       color: muted
       width: 1
       start:
         cue: A business pays
       label:
-        text: A MECHANISM, NOT A MEASURED FLOW · NO FIGURES
+        text: A MECHANISM, NOT A MEASURED FLOW
         x: 1060
         y: 870
         size: 16
@@ -1734,7 +1676,7 @@ scenes:
     floor: 1040
   assets:
   - font:inter
-- id: s17_missing
+- id: s20_missing
   segment: a3_missing
   type: engine_cartoon
   params:
@@ -1784,7 +1726,7 @@ scenes:
         - MECHANISM
   assets:
   - font:inter
-- id: s18_risk
+- id: s21_risk
   segment: a3_risk
   type: engine_cartoon
   params:
@@ -1795,19 +1737,15 @@ scenes:
       camps:
       - name: AMAZON
         v: 210.7
-        display: $210.7B
         at: 0
       - name: ALPHABET
         v: 159.8
-        display: $159.8B
         at: 0
       - name: MICROSOFT
         v: 135.9
-        display: $135.9B
         at: 0
       - name: META
         v: 108.0
-        display: $108.0B
         at: 0
       foot: 'AMAZON: FREE CASH FLOW, 12 MONTHS TO SEP 30, 2026 = ''AN OUTFLOW OF $42.4 BILLION'' (COMPANY RELEASE)'
     worldW: 2400
@@ -1817,7 +1755,7 @@ scenes:
       y: 500
       zoom: 0.75
     - at:
-        cue: Over those same
+        cue: Over the past year
       x: 0
       y: 500
       zoom: 1.0
@@ -1837,13 +1775,13 @@ scenes:
       at: 0.2
       size: 56
       until:
-        cue: Over those same
+        cue: Over the past year
     - kind: sign
-      text: 'AMAZON FREE CASH FLOW: −$42.4B (12 MONTHS)'
+      text: 'AMAZON: MORE CASH OUT THAN IN (PAST YEAR)'
       x: 0
       y: 140
       at:
-        cue: Over those same
+        cue: Over the past year
       color: '#FFCDD2'
       size: 32
       until:
@@ -1863,7 +1801,7 @@ scenes:
       moods:
       - - 0
         - happy
-      - - cue: Over those same
+      - - cue: Over the past year
         - sad
       scale: 1.1
       y: 1000
@@ -1878,7 +1816,7 @@ scenes:
   - byb_amzn
   assets:
   - font:inter
-- id: s19_b4
+- id: s22_b4
   segment: a4_card
   type: engine_cartoon
   params:
@@ -1908,7 +1846,7 @@ scenes:
     gain: 0.3
   assets:
   - font:inter
-- id: s20_find
+- id: s23_find
   segment: a4_find
   type: engine_cartoon
   params:
@@ -1917,11 +1855,11 @@ scenes:
       x0: -1600
       x1: 4600
       cards:
-      - text: 'SUPPORT AGENTS + AI: +14% ISSUES/HOUR'
-        sub: +34% FOR NOVICES · 5,179 AGENTS · BRYNJOLFSSON, LI & RAYMOND (NBER)
+      - text: 'AI ASSISTANT: MORE PROBLEMS SOLVED PER HOUR'
+        sub: NEWEST AGENTS GAINED MOST · BRYNJOLFSSON, LI & RAYMOND (NBER)
         kind: finding
         at:
-          cue: an AI assistant raised
+          cue: they solved
     worldW: 2400
     cam:
     - at: 0
@@ -1929,7 +1867,7 @@ scenes:
       y: 480
       zoom: 0.85
     - at:
-        cue: First, findings
+        cue: First, a finding
       x: 500
       y: 420
       zoom: 1.1
@@ -1943,7 +1881,7 @@ scenes:
       at: 0.2
       size: 52
       until:
-        cue: First, findings
+        cue: First, a finding
     - kind: toon
       x: -60
       at: 0.3
@@ -1967,13 +1905,13 @@ scenes:
       tags:
       - - 0
         - SORTING THE EVIDENCE
-      - - cue: First, findings
+      - - cue: First, a finding
         - FINDING
   sources:
   - bryn
   assets:
   - font:inter
-- id: s21_denmark
+- id: s24_denmark
   segment: a4_denmark
   type: engine_cartoon
   params:
@@ -1982,15 +1920,15 @@ scenes:
       x0: -1600
       x1: 4600
       cards:
-      - text: 'SUPPORT AGENTS + AI: +14% ISSUES/HOUR'
-        sub: +34% FOR NOVICES · 5,179 AGENTS · BRYNJOLFSSON, LI & RAYMOND (NBER)
+      - text: 'AI ASSISTANT: MORE PROBLEMS SOLVED PER HOUR'
+        sub: NEWEST AGENTS GAINED MOST · BRYNJOLFSSON, LI & RAYMOND (NBER)
         kind: finding
         at: 0
       - text: 'DENMARK: NO MEASURABLE EFFECT ON PAY OR HOURS'
-        sub: EFFECTS > 2% RULED OUT, 2 YEARS AFTER CHATGPT · HUMLUM & VESTERGAARD (NBER)
+        sub: HUMLUM & VESTERGAARD (NBER) · PAYROLL RECORDS
         kind: finding
         at:
-          cue: they found
+          cue: they've found
     worldW: 2400
     cam:
     - at: 0
@@ -1998,7 +1936,7 @@ scenes:
       y: 470
       zoom: 1.0
     - at:
-        cue: they found
+        cue: they've found
       x: 500
       y: 520
       zoom: 1.1
@@ -2022,7 +1960,7 @@ scenes:
   - humlum
   assets:
   - font:inter
-- id: s22_young
+- id: s25_young
   segment: a4_young
   type: engine_cartoon
   params:
@@ -2031,19 +1969,19 @@ scenes:
       x0: -1600
       x1: 4600
       cards:
-      - text: 'SUPPORT AGENTS + AI: +14% ISSUES/HOUR'
-        sub: +34% FOR NOVICES · 5,179 AGENTS · BRYNJOLFSSON, LI & RAYMOND (NBER)
+      - text: 'AI ASSISTANT: MORE PROBLEMS SOLVED PER HOUR'
+        sub: NEWEST AGENTS GAINED MOST · BRYNJOLFSSON, LI & RAYMOND (NBER)
         kind: finding
         at: 0
       - text: 'DENMARK: NO MEASURABLE EFFECT ON PAY OR HOURS'
-        sub: EFFECTS > 2% RULED OUT, 2 YEARS AFTER CHATGPT · HUMLUM & VESTERGAARD (NBER)
+        sub: HUMLUM & VESTERGAARD (NBER) · PAYROLL RECORDS
         kind: finding
         at: 0
-      - text: 'AGES 22-25, AI-EXPOSED JOBS: −19% vs PEERS'
-        sub: DESCRIPTIVE, NOT CAUSAL · ADP DATA TO JUNE 2026 · BRYNJOLFSSON, CHANDAR & CHEN
+      - text: 'YOUNGEST WORKERS, AI-EXPOSED JOBS: ALMOST 1/5 FEWER'
+        sub: DESCRIPTIVE, NOT CAUSAL · BRYNJOLFSSON, CHANDAR & CHEN (STANFORD)
         kind: descriptive
         at:
-          cue: Young workers
+          cue: Among the youngest
     worldW: 2400
     cam:
     - at: 0
@@ -2057,7 +1995,7 @@ scenes:
       zoom: 1.1
       dur: 1.2
     - at:
-        cue: The authors call
+        cue: The researchers call
       x: 800
       y: 520
       zoom: 0.9
@@ -2065,13 +2003,13 @@ scenes:
     drift: 2
     items:
     - kind: sign
-      text: EARLY WARNING, NOT PROOF OF CAUSE
+      text: EARLY WARNING, NOT PROOF
       x: 1400
       y: 300
       at:
-        cue: The authors call
+        cue: The researchers call
       color: '#B2EBF2'
-      size: 32
+      size: 34
     - kind: toon
       x: 1700
       at: 0.2
@@ -2099,7 +2037,7 @@ scenes:
   - canaries
   assets:
   - font:inter
-- id: s23_robots
+- id: s26_robots
   segment: a4_robots
   type: engine_cartoon
   params:
@@ -2111,10 +2049,10 @@ scenes:
       workers:
       - - 0
         - 4
-      - - cue: cut the share
+      - - cue: saw fewer jobs
         - 2
-      whLabel: FACTORY · 1990-2007
-      homesLabel: LOCAL JOB MARKET
+      whLabel: FACTORY TOWN
+      homesLabel: LOCAL JOBS
     worldW: 2400
     cam:
     - at: 0
@@ -2122,13 +2060,13 @@ scenes:
       y: 560
       zoom: 1.0
     - at:
-        cue: Between nineteen ninety
+        cue: Economists found
       x: 300
       y: 560
       zoom: 0.95
       dur: 1.2
     - at:
-        cue: cut the share
+        cue: saw fewer jobs
       x: 0
       y: 600
       zoom: 1.1
@@ -2136,43 +2074,27 @@ scenes:
     drift: 3
     items:
     - kind: toonwords
-      text: 'FACTORY ROBOTS: OLDER, CLEARER EVIDENCE'
+      text: 'FACTORY ROBOTS: A LONGER RECORD'
       x: 450
       y: 140
       at: 0.2
-      size: 44
+      size: 48
       until:
-        cue: Between nineteen ninety
+        cue: Economists found
     - kind: sign
-      text: +1 ROBOT PER 1,000 WORKERS (U.S., 1990-2007)
+      text: MORE ROBOTS → FEWER JOBS, SLIGHTLY LOWER PAY
       x: 300
       y: 150
       at:
-        cue: Between nineteen ninety
-      color: '#BBDEFB'
+        cue: saw fewer jobs
+      color: '#FFCDD2'
       size: 30
     - kind: sign
-      text: 'EMPLOYMENT RATE: −0.18 TO −0.34 POINTS'
-      x: 0
+      text: ACEMOGLU & RESTREPO · U.S. 1990-2007
+      x: 300
       y: 230
       at:
-        cue: cut the share
-      color: '#FFCDD2'
-      size: 30
-    - kind: sign
-      text: 'WAGES: −0.25% TO −0.5%'
-      x: 0
-      y: 300
-      at:
-        cue: and wages by
-      color: '#FFCDD2'
-      size: 30
-    - kind: sign
-      text: ACEMOGLU & RESTREPO (NBER / JPE)
-      x: 300
-      y: 380
-      at:
-        cue: cut the share
+        cue: saw fewer jobs
       color: '#FFFFFF'
       size: 22
     - kind: rrtag
@@ -2186,7 +2108,7 @@ scenes:
   - ar_robots
   assets:
   - font:inter
-- id: s24_forecast
+- id: s27_forecast
   segment: a4_forecast
   type: engine_cartoon
   params:
@@ -2195,23 +2117,23 @@ scenes:
       x0: -1600
       x1: 4600
       cards:
-      - text: 'SUPPORT AGENTS + AI: +14% ISSUES/HOUR'
-        sub: +34% FOR NOVICES · 5,179 AGENTS · BRYNJOLFSSON, LI & RAYMOND (NBER)
+      - text: 'AI ASSISTANT: MORE PROBLEMS SOLVED PER HOUR'
+        sub: NEWEST AGENTS GAINED MOST · BRYNJOLFSSON, LI & RAYMOND (NBER)
         kind: finding
         at: 0
       - text: 'DENMARK: NO MEASURABLE EFFECT ON PAY OR HOURS'
-        sub: EFFECTS > 2% RULED OUT, 2 YEARS AFTER CHATGPT · HUMLUM & VESTERGAARD (NBER)
+        sub: HUMLUM & VESTERGAARD (NBER) · PAYROLL RECORDS
         kind: finding
         at: 0
-      - text: 'AGES 22-25, AI-EXPOSED JOBS: −19% vs PEERS'
-        sub: DESCRIPTIVE, NOT CAUSAL · ADP DATA TO JUNE 2026 · BRYNJOLFSSON, CHANDAR & CHEN
+      - text: 'YOUNGEST WORKERS, AI-EXPOSED JOBS: ALMOST 1/5 FEWER'
+        sub: DESCRIPTIVE, NOT CAUSAL · BRYNJOLFSSON, CHANDAR & CHEN (STANFORD)
         kind: descriptive
         at: 0
-      - text: 'AI: ≤ +0.66% PRODUCTIVITY IN 10 YEARS'
-        sub: AND A WIDER CAPITAL-LABOR INCOME GAP · ACEMOGLU (NBER, 2024) · A MODEL
+      - text: 'AI: ONLY A SMALL PRODUCTIVITY LIFT IN 10 YEARS'
+        sub: AND A WIDER CAPITAL-LABOR GAP · ACEMOGLU (NBER) · A MODEL
         kind: forecast
         at:
-          cue: estimates AI
+          cue: predicts AI
     worldW: 2400
     cam:
     - at: 0
@@ -2219,7 +2141,7 @@ scenes:
       y: 480
       zoom: 0.85
     - at:
-        cue: estimates AI
+        cue: predicts AI
       x: 1420
       y: 420
       zoom: 1.1
@@ -2258,7 +2180,7 @@ scenes:
   - acemoglu
   assets:
   - font:inter
-- id: s25_b5
+- id: s28_b5
   segment: a5_card
   type: engine_cartoon
   params:
@@ -2288,7 +2210,7 @@ scenes:
     gain: 0.3
   assets:
   - font:inter
-- id: s26_britain
+- id: s29_britain
   segment: a5_britain
   type: engine_cartoon
   params:
@@ -2299,7 +2221,7 @@ scenes:
       prog:
       - - 0
         - 0.0
-      - - cue: Steam engines
+      - - cue: Machines multiplied
         - 0.05
       - - cue: Workers' pay
         - 0.5
@@ -2311,7 +2233,7 @@ scenes:
       y: 640
       zoom: 1.1
     - at:
-        cue: Steam engines
+        cue: Machines multiplied
       x: 960
       y: 520
       zoom: 0.92
@@ -2325,7 +2247,7 @@ scenes:
       at: 0.2
       size: 56
       until:
-        cue: Steam engines
+        cue: Machines multiplied
     - kind: sign
       text: 'FACTORY OWNERS: RICH'
       x: 600
@@ -2349,13 +2271,13 @@ scenes:
       tags:
       - - 0
         - HISTORY
-      - - cue: Steam engines
+      - - cue: Machines multiplied
         - ILLUSTRATIVE SHAPE
   sources:
   - allen
   assets:
   - font:inter
-- id: p27_engels
+- id: p30_engels
   segment: a5_draw
   type: engine_draw
   params:
@@ -2381,7 +2303,7 @@ scenes:
       color: accent2
       width: 7
       start:
-        cue: output per worker kept climbing
+        cue: Output per worker
       label:
         text: OUTPUT PER WORKER
         x: 1300
@@ -2394,7 +2316,7 @@ scenes:
       color: accent
       width: 7
       start:
-        cue: while real wages stagnated
+        cue: Real wages stayed flat
       label:
         text: REAL WAGE
         x: 870
@@ -2407,7 +2329,7 @@ scenes:
       color: accent
       width: 7
       start:
-        cue: while real wages stagnated
+        cue: Real wages stayed flat
         offset: 1.2
       kind: stroke
     - d: M 760 560 L 1090 560 L 1090 770 L 760 770 Z
@@ -2427,7 +2349,8 @@ scenes:
       color: risk
       width: 1
       start:
-        cue: and profits took
+        cue: The profit rate doubled
+        offset: 0.6
       label:
         text: PROFIT SHARE ↑
         x: 925
@@ -2491,7 +2414,7 @@ scenes:
     actions:
     - kind: point
       at:
-        cue: while real wages stagnated
+        cue: Real wages stayed flat
         offset: 0.2
       dur: 1.4
       target:
@@ -2511,7 +2434,7 @@ scenes:
   - allen
   assets:
   - font:inter
-- id: s28_end
+- id: s31_end
   segment: a5_end
   type: engine_cartoon
   params:
@@ -2522,13 +2445,13 @@ scenes:
       prog:
       - - 0
         - 0.55
-      - - cue: real wages began
+      - - cue: wages finally began
         - 0.6
-      - - cue: and the shares stabilized
+      - - cue: The pause ended
         - 1.0
       pauseAt: 0.0
       catchAt:
-        cue: real wages began
+        cue: wages finally began
     worldW: 2400
     cam:
     - at: 0
@@ -2577,7 +2500,7 @@ scenes:
   - allen
   assets:
   - font:inter
-- id: s29_b6
+- id: s32_b6
   segment: a6_card
   type: engine_cartoon
   params:
@@ -2607,7 +2530,7 @@ scenes:
     gain: 0.3
   assets:
   - font:inter
-- id: s30_newjobs
+- id: s33_newjobs
   segment: a6_newjobs
   type: engine_cartoon
   params:
@@ -2633,7 +2556,7 @@ scenes:
       fresh:
       - text: SOFTWARE DEVELOPER
         at:
-          cue: Economists led by
+          cue: A team led by
         slot: 1
         up: 0
       - text: WIND TURBINE TECH
@@ -2646,7 +2569,7 @@ scenes:
         slot: 5
       - text: AI TRAINER
         at:
-          cue: new kinds of work
+          cue: New kinds of work
         slot: 2
     worldW: 2400
     cam:
@@ -2675,7 +2598,7 @@ scenes:
       at: 0.2
       size: 60
       until:
-        cue: Economists led by
+        cue: A team led by
     - kind: sign
       text: 'MOST JOBS TODAY: SPECIALTIES THAT DIDN''T EXIST IN 1940 (AUTOR ET AL.)'
       x: 900
@@ -2703,7 +2626,7 @@ scenes:
   - autor_newwork
   assets:
   - font:inter
-- id: s31_wages
+- id: s34_wages
   segment: a6_wages
   type: engine_cartoon
   params:
@@ -2721,7 +2644,7 @@ scenes:
       y: 560
       zoom: 1.05
     - at:
-        cue: Even the economists
+        cue: Like Dana
       x: 300
       y: 540
       zoom: 0.95
@@ -2735,33 +2658,33 @@ scenes:
       at: 0.2
       size: 50
       until:
-        cue: Cheaper production
+        cue: When things get cheaper
     - kind: sign
       text: CHEAPER → PEOPLE BUY MORE
       x: 300
       y: 150
       at:
-        cue: Cheaper production
+        cue: When things get cheaper
       color: '#BBDEFB'
       size: 32
       until:
-        cue: Even the economists
+        cue: Like Dana
     - kind: sign
       text: AI-SAVVY WORKERS → MORE VALUABLE
       x: 650
       y: 230
       at:
-        cue: and workers who use
+        cue: And workers who use
       color: '#C8E6C9'
       size: 30
       until:
-        cue: Even the economists
+        cue: Like Dana
     - kind: toonwords
-      text: 'NEW TASKS: WORKERS'' STRONGEST ALLY'
+      text: 'LIKE DANA: NOW RUNS THE ROBOT FLEET'
       x: 300
       y: 150
       at:
-        cue: Even the economists
+        cue: Like Dana
       size: 46
       color: '#FFFFFF'
     - kind: toon
@@ -2781,7 +2704,7 @@ scenes:
       y: 1000
       label: DANA · NOW RUNS THE ROBOT FLEET
       labelUntil:
-        cue: Even the economists
+        cue: Like Dana
       scale: 1.25
     - kind: rrtag
       at: 0.0
@@ -2795,7 +2718,7 @@ scenes:
   - bryn
   assets:
   - font:inter
-- id: s32_degree
+- id: s35_degree
   segment: a6_degree
   type: engine_cartoon
   params:
@@ -2812,13 +2735,13 @@ scenes:
         color: '#2A6FDB'
         display: $1,752
         at:
-          cue: earned a typical
+          cue: typically earns
       - label: HIGH SCHOOL ONLY
         v: 993
         color: '#8E9AAF'
         display: $993
         at:
-          cue: versus
+          cue: than a high school
       foot: BLS CURRENT POPULATION SURVEY VIA FRED (LEU0252918500Q, LEU0252917300Q) · NOT SEASONALLY ADJUSTED
     worldW: 2400
     cam:
@@ -2827,7 +2750,7 @@ scenes:
       y: 520
       zoom: 0.95
     - at:
-        cue: versus
+        cue: than a high school
       x: 960
       y: 500
       zoom: 1.0
@@ -2841,7 +2764,7 @@ scenes:
       at: 0.2
       size: 56
       until:
-        cue: This summer
+        cue: A full-time worker
     - kind: rrtag
       at: 0.0
       x: 36
@@ -2853,7 +2776,7 @@ scenes:
   - bls_edu
   assets:
   - font:inter
-- id: s33_policy
+- id: s36_policy
   segment: a6_policy
   type: engine_cartoon
   params:
@@ -2892,13 +2815,13 @@ scenes:
       at: 0.2
       size: 48
       until:
-        cue: Some propose
+        cue: Some want
     - kind: sign
       text: SPREAD OWNERSHIP (EMPLOYEE STOCK, KIDS' ACCOUNTS, PUBLIC FUNDS)
       x: 450
       y: 140
       at:
-        cue: Some propose
+        cue: Some want
       color: '#C8E6C9'
       size: 24
     - kind: sign
@@ -2942,7 +2865,7 @@ scenes:
         - OPTIONS, NOT ENDORSEMENTS
   assets:
   - font:inter
-- id: s34_b7
+- id: s37_b7
   segment: a7_card
   type: engine_cartoon
   params:
@@ -2972,7 +2895,7 @@ scenes:
     gain: 0.3
   assets:
   - font:inter
-- id: s35_now
+- id: s38_now
   segment: a7_now
   type: engine_cartoon
   params:
@@ -3000,45 +2923,30 @@ scenes:
       y: 480
       zoom: 0.85
     - at:
-        cue: Here's where Americans
+        cue: Most American families
       x: 960
       y: 500
       zoom: 0.9
       dur: 1.2
     drift: 2
     items:
-    - kind: counter
+    - kind: toonwords
+      text: MOST FAMILIES OWN SOME STOCK
       x: 960
       y: 300
-      at: &id007
-        cue: In the Federal Reserve's
-      prefix: ''
-      suffix: '%'
-      decimals: 0
-      steps:
-      - - 0
-        - 0
-      - - *id007
-        - 0
-      - - cue: owned some stock
-        - 56
-      text: FAMILIES OWNING ANY STOCK, 2025 (FED SCF)
-    - kind: sign
-      text: 'BOTTOM HALF BY INCOME: 31%'
-      x: 560
-      y: 420
       at:
-        cue: bottom half by income
+        cue: Most American families
+      size: 50
+      until:
+        cue: But among lower-income
+    - kind: sign
+      text: 'LOWER-INCOME FAMILIES: FEWER THAN 1 IN 3'
+      x: 960
+      y: 300
+      at:
+        cue: But among lower-income
       color: '#FFCDD2'
-      size: 32
-    - kind: sign
-      text: 'TOP 10% BY INCOME: 97%'
-      x: 1360
-      y: 420
-      at:
-        cue: In the top tenth
-      color: '#C8E6C9'
-      size: 32
+      size: 36
     - kind: toon
       x: 200
       at: 0.2
@@ -3062,13 +2970,13 @@ scenes:
       tags:
       - - 0
         - EDUCATION, NOT ADVICE
-      - - cue: Here's where Americans
+      - - cue: Most American families
         - FACT
   sources:
   - scf25
   assets:
   - font:inter
-- id: p36_doors
+- id: p39_doors
   segment: a7_doors
   type: engine_draw
   params:
@@ -3089,7 +2997,7 @@ scenes:
       width: 6
       kind: box
       start:
-        cue: The most common one
+        cue: The most common
       label:
         text: 401(k) / IRA
         x: 710
@@ -3101,9 +3009,9 @@ scenes:
       color: ink
       width: 1
       start:
-        cue: Today,
+        cue: The most common
       label:
-        text: 54.9% OF FAMILIES
+        text: MOST COMMON
         x: 710
         y: 600
         size: 22
@@ -3155,10 +3063,10 @@ scenes:
       start:
         cue: Employee stock ownership plans
       label:
-        text: 'ESOPs: 15.1M PEOPLE'
+        text: 'ESOPs: MILLIONS'
         x: 1310
         y: 600
-        size: 20
+        size: 22
         color: ink
         anchor: middle
       kind: stroke
@@ -3199,7 +3107,7 @@ scenes:
   - nceo
   assets:
   - font:inter
-- id: s37_risk
+- id: s40_risk
   segment: a7_risk
   type: engine_cartoon
   params:
@@ -3276,7 +3184,7 @@ scenes:
         - EDUCATION, NOT ADVICE
   assets:
   - font:inter
-- id: s38_b8
+- id: s41_b8
   segment: a8_card
   type: engine_cartoon
   params:
@@ -3306,7 +3214,7 @@ scenes:
     gain: 0.3
   assets:
   - font:inter
-- id: s39_verdict
+- id: s42_verdict
   segment: a8_verdict
   type: engine_cartoon
   params:
@@ -3315,31 +3223,25 @@ scenes:
       x0: -1600
       x1: 4600
       groups:
-      - label: BOTTOM 50
+      - label: BOTTOM HALF
         n: 40
         v: 0.6
         at: 0.2
         color: '#8E9AAF'
-        display: $0.60
-      - label: NEXT 40
+        display: < $1
+      - label: NEXT 40%
         n: 30
         v: 11.4
         at: 0.4
         color: '#1F8A8C'
-        display: $11.40
-      - label: NEXT 9
-        n: 9
-        v: 37.2
+        display: ''
+      - label: RICHEST 10%
+        n: 10
+        v: 88.1
         at: 0.6
-        color: '#2A6FDB'
-        display: $37.20
-      - label: TOP 1
-        n: 1
-        v: 50.9
-        at: 0.8
         color: '#F2B33D'
-        display: $50.90
-      foot: FED DISTRIBUTIONAL FINANCIAL ACCOUNTS, Q2 2026 · HOUSEHOLDS BY WEALTH · CORPORATE EQUITIES & MUTUAL FUND SHARES (EXCL. PENSIONS)
+        display: ≈ $88
+      foot: 'FED DISTRIBUTIONAL FINANCIAL ACCOUNTS, Q2 2026 · HOUSEHOLDS BY WEALTH · STOCKS & STOCK FUNDS (EXCL. PENSIONS) · EXACT: 0.6 / 11.4 / 88.1 OF EVERY $100'
     worldW: 2400
     cam:
     - at: 0
@@ -3353,7 +3255,7 @@ scenes:
       zoom: 1.0
       dur: 1.4
     - at:
-        cue: In America
+        cue: And in America
       x: 1100
       y: 480
       zoom: 0.85
@@ -3377,13 +3279,13 @@ scenes:
       size: 60
       color: '#FFFFFF'
       until:
-        cue: In America
+        cue: And in America
     - kind: sign
-      text: 'TOP 10%: ALMOST $9 OF EVERY $10 OF STOCK'
+      text: 'RICHEST 10%: NEARLY THE WHOLE PILE'
       x: 1100
       y: 130
       at:
-        cue: In America
+        cue: And in America
       color: '#FFF59D'
       size: 32
     - kind: rrtag
@@ -3393,13 +3295,13 @@ scenes:
       tags:
       - - 0
         - VERDICT
-      - - cue: In America
+      - - cue: And in America
         - FACT
   sources:
   - fed_dfa
   assets:
   - font:inter
-- id: s40_but
+- id: s43_but
   segment: a8_but
   type: engine_cartoon
   params:
@@ -3460,7 +3362,7 @@ scenes:
       until:
         cue: More than half
     - kind: sign
-      text: 56% OF FAMILIES OWN SOME STOCK (FED SCF 2025)
+      text: MORE THAN HALF OF FAMILIES OWN SOME STOCK (FED SCF 2025)
       x: 450
       y: 150
       at:
@@ -3513,7 +3415,7 @@ scenes:
   - scf25
   assets:
   - font:inter
-- id: s41_close
+- id: s44_close
   segment: a8_close
   type: engine_cartoon
   params:
@@ -3532,7 +3434,7 @@ scenes:
       y: 560
       zoom: 1.15
     - at:
-        cue: In the age of AI
+        cue: Dana's question now
       x: 500
       y: 520
       zoom: 0.95
@@ -3552,14 +3454,14 @@ scenes:
       at: 0.3
       size: 50
       until:
-        cue: In the age of AI
+        cue: Dana's question now
     - kind: toonwords
-      text: '...AND'
+      text: '...AND A SECOND PART'
       x: 500
       y: 150
       at:
-        cue: In the age of AI
-      size: 56
+        cue: Dana's question now
+      size: 52
       until:
         cue: What do you own
     - kind: toonwords
@@ -3592,7 +3494,7 @@ scenes:
       y: 1000
   assets:
   - font:inter
-- id: s42_end
+- id: s45_end
   segment: teaser
   type: end_card
   params:
@@ -3605,7 +3507,7 @@ scenes:
       cue: This is The Hidden Economics
   assets:
   - font:inter
-- id: s43_button
+- id: s46_button
   segment: button
   type: engine_cartoon
   params:

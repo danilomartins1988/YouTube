@@ -381,10 +381,10 @@ stage("s27_trend", "c6_trend", {
     **W1("gaugeroom", lo=15, hi=20, dec=1, gaugeX=760, needle=[[0, 15], [C("Nationally"), 16.5], [C("is expected to climb"), 18.7]],
          marks=[{"v": 16.5, "label": "2024", "at": C("Nationally")}, {"v": 18.7, "label": "2027 FORECAST", "at": C("is expected to climb"), "color": PURPLE}]),
     "cam": cam((0, 960, 540, 0.95), (C("Nationally"), 900, 540, 1.06, 1.2), (C("Rising"), 960, 540, 0.95, 1.2)), "drift": 2,
-    "items": [words("WILL IT EXPLODE?", 1500, 300, 0.2, size=56, until=C("is expected to climb")),
-              words("≈ +13% IN 3 YEARS", 1500, 300, C("is expected to climb"), size=58, color=PURPLE, until=C("Rising")),
-              words("RISING. NOT EXPLODING.", 1450, 300, C("Rising"), size=52),
-              sign("U.S. AVERAGE HOME PRICE PER kWh · EIA FORECAST (NOV 2026) · OUR CALC", 1450, 420, 0.6, color="#FFFFFF", size=20),
+    "items": [words("WILL IT EXPLODE?", 1380, 300, 0.2, size=56, until=C("is expected to climb")),
+              words("≈ +13% IN 3 YEARS", 1380, 300, C("is expected to climb"), size=58, color=PURPLE, until=C("Rising")),
+              words("RISING. NOT EXPLODING.", 1380, 300, C("Rising"), size=46),
+              sign("U.S. HOME PRICE PER kWh · EIA FORECAST, NOV 2026", 1380, 420, 0.6, color="#FFFFFF", size=20),
               tag((0, "FORECAST · EIA"))]},
     sources=["steo_nov26"])
 stage("s28_dials", "c6_dials", {

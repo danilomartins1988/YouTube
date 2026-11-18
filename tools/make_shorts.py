@@ -106,6 +106,9 @@ SHORTS = {
     "63-europe-ai": ("could-ai-bring-europe-back-to-power", "documentary", "europeai_documentary", "EUROPE IS AGING.", "CAN ROBOTS FIX IT?", "Could AI Save Europe's Economy?", "#europe #economy #ai"),
     "63-europe-ai-b": ("could-ai-bring-europe-back-to-power", "documentary", "europeai_documentary", "ONLY ONE COMPANY", "MAKES THIS MACHINE", "Why Europe Still Controls Critical Technology", "#europe #asml #chips"),
     "63-europe-ai-c": ("could-ai-bring-europe-back-to-power", "documentary", "europeai_documentary", "ROBOTS DO THE WORK.", "WHO GETS RICH?", "Who Gets Rich When Robots Do the Work?", "#ai #robots #economy"),
+    "64-robots-rich": ("who-gets-rich-when-robots-do-the-work", "documentary", "robotsrich_documentary", "$100 OF STOCK.", "WHO GETS IT?", "Who Actually Owns the Stock Market?", "#stocks #ai #economy"),
+    "64-robots-rich-b": ("who-gets-rich-when-robots-do-the-work", "documentary", "robotsrich_documentary", "$600 BILLION.", "WHO GETS PAID?", "The Biggest Building Spree in History Is for AI", "#ai #nvidia #datacenters"),
+    "64-robots-rich-c": ("who-gets-rich-when-robots-do-the-work", "documentary", "robotsrich_documentary", "WAGES STALLED.", "FOR DECADES.", "When Machines Made Owners Rich and Wages Stalled", "#history #robots #economy"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -121,6 +124,9 @@ CUSTOM = {
     "63-europe-ai": ("63-europe-ai", ["a1_age", "a2_draw", "a2_question"], "youtube-short"),
     "63-europe-ai-b": ("63-europe-ai", ["a5_asml", "a5_web"], "youtube-short-b"),
     "63-europe-ai-c": ("63-europe-ai", ["a6_company", "a6_numbers"], "youtube-short-c"),
+    "64-robots-rich": ("64-robots-rich", ["a2_own", "a2_split", "a2_top", "a2_flip"], "youtube-short"),
+    "64-robots-rich-b": ("64-robots-rich", ["a3_capex", "a3_nvidia", "a3_loop"], "youtube-short-b"),
+    "64-robots-rich-c": ("64-robots-rich", ["a5_britain", "a5_draw", "a5_end"], "youtube-short-c"),
 }
 
 
