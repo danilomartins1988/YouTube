@@ -1,0 +1,53 @@
+# Research dossier - Will AI Make Japan Rich Again?
+
+Generated 2026-11-18T16:21:08+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+
+## Sources
+
+| id | Publisher | Title | Published | Accessed | Type | URL |
+|---|---|---|---|---|---|---|
+| `stat_pop24` | Statistics Bureau of Japan (Ministry of Internal Affairs and Communications) | Population Estimates (October 1, 2024) | 2025-04-14 | 2026-11-18 | dataset | https://www.stat.go.jp/english/data/jinsui/2024np/index.html |
+| `stat_cen2000` | Statistics Bureau of Japan | 2000 Population Census, basic complete tabulation (age structure) | 2001-10-31 | 2026-11-18 | primary | https://www.stat.go.jp/english/data/kokusei/2000/kihon1/00/03.html |
+| `ipss23` | National Institute of Population and Social Security Research (IPSS) | Population Projections for Japan (2023 revision): 2021 to 2070, Summary of Results | 2023-04-26 | 2026-11-18 | primary | https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2023/pp2023e_Summary.pdf |
+| `tmg_pop` | Tokyo Metropolitan Government | Tokyo Metropolitan Government population estimate (November 1, 2025) | 2025-11-27 | 2026-11-18 | primary | https://www.metro.tokyo.lg.jp/information/press/2025/11/2025112707 |
+| `mic_elderly26` | Statistics Bureau of Japan | Statistical Topics: Japan's elderly from the viewpoint of statistics (Respect for the Aged Day, Sept 2026) | 2026-09-20 | 2026-11-18 | primary | https://www.stat.go.jp/english/data/topics/index.html |
+| `mhlw_jobs` | Ministry of Health, Labour and Welfare (via JILPT main labour statistics) | General Employment Placement Situation (Ippan Shokugyo Shokai Jokyo), September 2026, compiled by JILPT | 2026-10-30 | 2026-11-18 | dataset | https://www.jil.go.jp/kokunai/statistics/shuyo/0208.html |
+| `mhlw_care` | Ministry of Health, Labour and Welfare | Required number of long-term care workers based on the 9th Long-Term Care Insurance Plans | 2024-07-12 | 2026-11-18 | primary | https://www.mhlw.go.jp/stf/newpage_41379.html |
+| `mlit_wp24` | Ministry of Land, Infrastructure, Transport and Tourism (MLIT) | White Paper on Land, Infrastructure, Transport and Tourism in Japan 2024: logistics (the 2024 problem) | 2024-06-01 | 2026-11-18 | primary | https://www.mlit.go.jp/hakusyo/mlit/r05/hakusho/r06/html/n2522c01.html |
+| `ifr_wr25` | International Federation of Robotics | World Robotics 2025 Industrial Robots: Foreword (key figures for 2024) | 2025-09-25 | 2026-11-18 | primary | https://ifr.org/img/worldrobotics/Foreword_WR_2025_Industrial_Robots.pdf |
+| `ifr_japan25` | International Federation of Robotics | Japan's car industry has highest robot installations in five years (IFR preliminary results) | 2025-07-15 | 2026-11-18 | primary | https://ifr.org/news/japans-car-industry-has-highest-robot-installations-in-five-years/ |
+| `kawasaki_hist` | Kawasaki Heavy Industries | History of Robot Division | 2024-01-01 | 2026-11-18 | primary | https://global.kawasaki.com/en/corp/profile/division/robot/history.html |
+| `fanuc_fy25` | FANUC Corporation | Financial Results for the Fiscal Year Ended March 31, 2026 (Japanese standards, English translation) | 2026-04-24 | 2026-11-18 | primary | https://www.fanuc.co.jp/en/ir/announce/pdf/2026/financialresult202603_e.pdf |
+| `yaskawa_fy25` | YASKAWA Electric Corporation | Financial Results for Fiscal 2025 (March 1, 2025 to February 28, 2026) | 2026-04-10 | 2026-11-18 | primary | https://www.yaskawa-global.com/wp-content/uploads/2026/04/20260410_haifu_en.pdf |
+| `tx_ghost` | Telexistence Inc. | Telexistence: TX SCARA in FamilyMart (Nov 2021) and expansion of the beverage shelf-stocking service with 'TX Ghost' (Sept 2025) | 2025-09-26 | 2026-11-18 | primary | https://tx-inc.com/?p=12519 |
+| `tx_astra` | Telexistence Inc. / Seven-Eleven Japan | Seven-Eleven Japan and Telexistence Partner to Pioneer Humanoid Robots with Generative AI | 2025-09-29 | 2026-11-18 | primary | https://tx-inc.com/?p=12542 |
+| `asimo_jt` | The Japan Times | Honda's Asimo robot retires (Japan Times, Mar 28, 2022) | 2022-03-28 | 2026-11-18 | primary | https://www.japantimes.co.jp/news/2022/03/28/business/corporate-business/honda-asimo-robot-retires |
+| `nh_robots` | Yong Suk Lee, Toshiaki Iizuka and Karen Eggleston (NBER) | Robots and Labor in Nursing Homes (NBER Working Paper 33116; Labour Economics 2025) | 2024-11-01 | 2026-11-18 | primary | https://www.nber.org/papers/w33116 |
+| `fed_g5a` | Board of Governors of the Federal Reserve System | Foreign Exchange Rates (G.5A, annual): Japan, yen per U.S. dollar | 2026-01-05 | 2026-11-18 | dataset | https://www.federalreserve.gov/releases/g5a/current/default.htm |
+| `imf_fd` | International Monetary Fund | Japan's Debt Beyond the Headlines (Finance & Development, September 2026) | 2026-09-01 | 2026-11-18 | primary | https://www.imf.org/en/publications/fandd/issues/2026/09/japans-debt-beyond-the-headlines-anand |
+| `jpc_prod25` | Japan Productivity Center (based on OECD data) | International Comparison of Labor Productivity 2025 (Rodo seisansei no kokusai hikaku 2025) | 2025-12-19 | 2026-11-18 | primary | https://kyodonewsprwire.jp/prwfile/release/M106914/202512191380/_prw_PA1fl_D6ogRP65.pdf |
+| `cao_gdp` | Cabinet Office, Government of Japan (ESRI) | Quarterly Estimates of GDP, July-September 2026 (First Preliminary), calendar-year growth table | 2026-11-16 | 2026-11-18 | dataset | https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/2026/qe263/gdemenuea.html |
+| `fv_wealth` | Jesús Fernández-Villaverde, Gustavo Ventura and Wen Yao (NBER) | The Wealth of Working Nations (NBER Working Paper 31914; European Economic Review 2025) | 2023-11-01 | 2026-11-18 | primary | https://www.nber.org/papers/w31914 |
+
+## Claims
+
+| id | Claim | On screen | Reference period | Status | Sources | Note |
+|---|---|---|---|---|---|---|
+| `ifr_prod` | IFR (Jul 2025): Japan is 'the world's predominant robot manufacturing country representing 38% of global robot production'. | Japan makes ≈ 38% of the world's industrial robots · IFR (2024 production) | - | **source_located** | ifr_japan25 |  |
+| `oldest` | Japan's 65+ share 29.6% (Sept 2026), highest among countries with 40 million+ people; 29.3% on Oct 1, 2024. | Age 65+: 29.6% of Japan (Sept 2026) · highest among big countries · Statistics Bureau | - | **source_located** | mic_elderly26, stat_pop24 |  |
+| `wa_drop` | OUR CALCULATION: working-age (15-64) population 87.26m at the 1995 census peak (IPSS) minus 73.728m on Oct 1, 2024 (Statistics Bureau) = 13.53m fewer; Tokyo has about 14.3m residents (TMG, Nov 2025). | Working-age Japan: 87.3M (1995 peak) → 73.7M (2024) · ≈ −13.5M · OUR CALC | - | **data_derived** | ipss23, stat_pop24, stat_cen2000, tmg_pop | Peak per IPSS citing the 1995 census; 2024 per Statistics Bureau estimate; difference is ours. |
+| `wa_2070` | IPSS 2023 medium-fertility projection: working-age population 45.35m in 2070 = 52% of the 1995 peak of 87.26m (OUR CALCULATION). A PROJECTION. | 2070 PROJECTION: ≈ 45M working-age · about half the 1995 peak · IPSS | - | **source_located** | ipss23 |  |
+| `jobs_ratio` | MHLW: active job openings-to-applicants ratio 1.19 (Sept 2026, seasonally adjusted); 1.22 average in 2025. | 1.19 job openings per applicant (Sept 2026) · MHLW | - | **source_located** | mhlw_jobs |  |
+| `care_need` | MHLW (Jul 2024): about 2.72 million care workers needed by FY2040, about 570,000 more than in FY2022 (prefecture estimates). | +≈570,000 care workers needed by FY2040 · MHLW ESTIMATE | - | **source_located** | mhlw_care |  |
+| `truck_gap` | MLIT White Paper 2024: without measures, a 34% shortfall in trucking capacity in FY2030 (14% in FY2024); driver overtime cap from April 2024. | FY2030: 34% of cargo capacity short IF NOTHING CHANGES · MLIT ESTIMATE | - | **source_located** | mlit_wp24 |  |
+| `kawasaki69` | Kawasaki: 1968 license with Unimation (US); 1969 started production of the first industrial robot in Japan. | 1969: Japan's first home-built industrial robot · Kawasaki | - | **source_located** | kawasaki_hist |  |
+| `fanuc_abroad` | OUR CALCULATION from FANUC's FY ended Mar 2026 results: ¥747.0bn of ¥857.8bn net sales (87.1%) to customers outside Japan; robot division ¥378.6bn (≈ $2.53bn), sales in Japan decreased, China up significantly. | FANUC: ≈ 87% of sales outside Japan (FY to Mar 2026) · OUR CALC | - | **data_derived** | fanuc_fy25, fed_g5a |  |
+| `density_x` | IFR WR 2025: robot density 2024 Korea 1,220 vs Japan 446 per 10,000 manufacturing employees; OUR CALCULATION 2.7x; Japan 4th... listed after Singapore 818, China 567, Germany 449. | Robots per 10,000 factory workers (2024): Korea 1,220 · Japan 446 · IFR | - | **source_located** | ifr_wr25 |  |
+| `tx_drinks` | Telexistence (company claim): one robot restocks about 1,000 beverages a day; remote operator takes over on failures. | ≈ 1,000 drinks a day per robot · COMPANY CLAIM · Telexistence | - | **source_located** | tx_ghost |  |
+| `astra_year` | Seven-Eleven Japan and Telexistence target in-store deployment of the 'Astra' humanoid in 2029 (a plan). | Humanoid in stores: TARGET 2029 · A PLAN, NOT A PRODUCT | - | **source_located** | tx_astra |  |
+| `yen_drop` | Fed G.5A: 106.78 yen per dollar (2020 avg) vs 149.57 (2025 avg); OUR CALCULATION: the yen lost 28.6% of its dollar value. | ¥ per $: 107 (2020) → 150 (2025) · yen ≈ −29% vs $ · Fed / OUR CALC | - | **data_derived** | fed_g5a |  |
+| `jp_debt` | IMF F&D (Sept 2026): gross public debt about 207% of GDP, highest among advanced economies; net debt 89-186% depending on the assets counted. | Gross public debt ≈ 207% of GDP · net 89-186% · IMF | - | **source_located** | imf_fd |  |
+| `jpc_rank` | Japan Productivity Center (Dec 2025, OECD data): Japan's 2024 output per hour worked $60.1 PPP, 28th of 38 OECD countries. | Output per hour (2024): Japan 28th of 38 OECD countries · JPC | - | **source_located** | jpc_prod25 |  |
+| `fv_japan` | Fernández-Villaverde, Ventura & Yao: 1998-2019 GDP per working-age adult +31.9% in Japan vs +29.5% in the US. | GDP per working-age adult 1998-2019: Japan +31.9% · US +29.5% · NBER | - | **source_located** | fv_wealth |  |
+| `gdp25` | Cabinet Office: real GDP +1.2% in 2025, +0.1% in 2024. | Real GDP 2025: +1.2% · 2024: +0.1% · Cabinet Office | - | **source_located** | cao_gdp |  |
+| `care_study` | Lee, Iizuka & Eggleston: robot adoption in Japanese nursing homes accompanied by more employment and retention and more 'human touch' care. | Nursing homes with robots: more staff kept, more 'human touch' · NBER FINDING | - | **source_located** | nh_robots |  |
