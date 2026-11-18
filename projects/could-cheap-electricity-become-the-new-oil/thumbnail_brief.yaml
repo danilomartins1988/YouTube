@@ -1,0 +1,65 @@
+# Thumbnail creative brief (Ep 67). Owner standing rules: at most 4 words naming power, face layout with an ORIGINAL character
+# (NIA, the film's fictional site scout), mobile-legible, no statistics shown, no logos, no flags, no real people.
+title: "Could Cheap Electricity Become the New Oil?"
+docs_dir: docs/episodes/67-power-new-oil
+video: output/powernewoil_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: If AI needs a city's worth of electricity, will cheap power make some places rich the way oil did?
+  surprising_fact: Iceland built its first giant dam mainly to power an aluminum smelter; data centers are following the same plug
+  subject: a site scout hugging a giant electric plug drawn like an oil barrel
+  tone: strategy
+  metaphor: the plug is the new oil barrel
+  public_figure: null
+concepts:
+- id: F
+  angle: "face (original character NIA, the film's fictional site scout, shocked; a giant plug drawn like an oil barrel)"
+  archetype: face
+  text:
+  - "POWER:"
+  - THE NEW OIL?
+  claim_basis: "a question (answered in the film: yes for siting, but power can't be shipped); Nia is fictional; no number shown"
+  scene:
+    bg: ['#FFB23F', '#13284A']
+    rays: '#FFD27A'
+    bust:
+      who: {name: Nia, hair: bun, hairColor: '#2B1A12', hairShade: '#4A3020', brows: '#2B1A12', skin: '#8D5A3B', iris: '#2A1A10',
+            clothes: tee, jacket: '#1F8A8C', shirt: '#1F8A8C', glasses: null, age: 0}
+      expr: shock
+      x: 470
+      s: 0.92
+    prop: {kind: plug, text: '', x: 1400, y: 720, s: 0.62, rot: 10}
+- id: A
+  angle: the oil barrel becomes a plug
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - CHEAP POWER
+  - NEW OIL?
+  claim_basis: 'a question (no number shown)'
+  scene:
+    palette: {sky0: '#0F2140', sky1: '#24508C', haze: '#FFB23F', key: '#FFF3E0', accent: '#FFC21A', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: oilbarrel, x: 960, y: 640, s: 0.85}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE0B8'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: AI campuses follow the plug
+  archetype: classic
+  text_side: left
+  accent_line: 1
+  text:
+  - AI FOLLOWS
+  - CHEAP POWER
+  claim_basis: 'data centers sited for hydropower and cool air (Narvik, Quebec), solar and gas (Gulf, Texas); no number shown'
+  scene:
+    palette: {sky0: '#10203F', sky1: '#1E4A7A', haze: '#59C3FF', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: campus, x: 1250, y: 600, s: 0.85}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#D8F0FF'}
+    vignette: 0.55
+    brand: none

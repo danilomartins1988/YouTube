@@ -40,6 +40,17 @@ const fitSize = (txt: string, w: number, cap: number) => Math.min(cap, w / (Math
 
 /* ------------------------------------------------------------------------------------------------ props */
 const PROPS: Record<string, (o: any) => React.ReactNode> = {
+  /** a giant electric plug drawn like an oil barrel (Ep 67), cable curling off, sparks; optional o.text on the barrel band */
+  plug: (o) => { const t = String(o.text ?? ''), fs = fitSize(t, 380, 120);
+    return <g>
+      <path d="M -260 260 Q -520 300 -560 80" fill="none" stroke={OL} strokeWidth={34} strokeLinecap="round" />
+      <rect x={-260} y={-300} width={520} height={600} rx={70} fill="#2F3B52" stroke={OL} strokeWidth={18} />
+      <rect x={-260} y={-120} width={520} height={90} fill="#F5B700" stroke={OL} strokeWidth={12} />
+      <rect x={-260} y={60} width={520} height={40} fill="#4A5874" stroke={OL} strokeWidth={10} />
+      <path d="M -120 -300 L -120 -470 M 120 -300 L 120 -470" stroke="#D7DEE8" strokeWidth={60} strokeLinecap="round" />
+      {[[-330, -420, 1], [330, -440, -1], [0, -560, 1]].map(([x, y, f], k) => <path key={k} transform={`translate(${x} ${y}) scale(${f} 1)`} d="M 10 -60 L -26 6 L -2 6 L -14 60 L 28 -10 L 4 -10 Z" fill="#FFD23F" stroke={OL} strokeWidth={8} strokeLinejoin="round" />)}
+      {t && <text x={0} y={-75 + fs * 0.36} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={fs} fill={OL}>{t}</text>}
+    </g>; },
   /** a gold price tag on a string with a big label (e.g. a sourced figure) */
   tag: (o) => { const t = String(o.text ?? ''), fs = fitSize(t, 600, 230);
     return <g>
