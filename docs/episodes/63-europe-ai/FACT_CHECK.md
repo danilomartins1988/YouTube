@@ -6,42 +6,46 @@ Status: AI fact check complete; **a named human reviewer must still sign off** (
 Legend: **F** = fact, **M** = mechanism, **S** = scenario, **C** = conjecture, **I** = illustrative model. The on-screen pill (epitag)
 shows the same label in every scene that carries a number.
 
-| Segment | Statement in the film | Label | Verified against | Result |
+**Story-over-stats revision (owner directive 2026-11-18, `docs/STORY_OVER_STATS.md`).** The film follows THEO, a fictional engineer in a
+fictional European factory town, and his sister NORA, a fictional drug researcher. Fictional details (Theo's town, his great-grandfather,
+the break-room whiteboard, Nora's rents) are story devices, not claims. Spoken figures were cut to **8** (at most 1 per scene); every other
+verified figure moved to this file and the description.
+
+### Spoken figures (8)
+| Segment | Spoken | Exact value and scope | Source | Label |
 |---|---|---|---|---|
-| co_hook | EU companies pay 2-3x US electricity prices | F | Draghi report Part A (2024) | OK (EU, 2024) |
-| co_hook | Europe builds the only machines that print the most advanced chips | F | ASML 20-F 2025 (sole EUV supplier) | OK |
-| a1_size | 2025 GDP: US ~$31T, EU ~$21T, China ~$19.5T | F | IMF WEO DataMapper (2025 est.) | OK (EU-27; estimates) |
-| a1_gap | EU-US gap at constant prices ~15% (2002) to 30% (2023); ~70% of per-person gap = productivity | F | Draghi report Part A | OK |
-| a1_age | 22% of EU population 65+ (1 Jan 2025) | F | Eurostat | OK (22.0%) |
-| a1_age | EU workforce shrinks by close to 2 million a year by 2040; 3:1 to 2:1 | F (official projection) | Draghi report | OK |
-| a1_squeeze | gas 4-5x; 4 of top 50 tech companies European; ~30% of unicorns moved HQ abroad, mostly US | F | Draghi report | OK |
-| a3_factory/a3_proven | machine vision industry-grade; maintenance/inspection increasingly used; general-purpose robots not yet | F | IFR WR 2026 executive summary | OK |
-| a3_robots | Europe installed ~73,000 robots in 2025, down 14%; density Germany 469, EU 240, world 152 | F | IFR WR 2026; IFR density release Nov 2026 | OK (Europe vs EU kept apart) |
-| a3_bill | automation shifts cost from labor to machines/software | M (illustrative board, no shares) | economic mechanism | Labelled ILLUSTRATIVE |
-| a3_people | owning technology may matter more | C | - | Labelled CONJECTURE |
-| a4_surplus | EU sold ~$250bn more pharma products than it bought in 2025; US ~44% of exports | F | Eurostat COMEXT via EFPIA 2026 | OK (EU-27; SITC 54; our conversion) |
-| a4_six | HQs: Basel x2 (CH), Cambridge and London (UK), Paris (FR), outside Copenhagen (DK); CH and UK not in EU; revenue >$320bn, R&D ~$67bn | F | six FY2025 reports | OK (sum and conversions ours) |
-| a4_chain | most value sits in research, patents and proof | M | value-chain mechanism | No measured split claimed |
-| a4_novo | Novo Nordisk sales ~$47bn, R&D almost $8bn; expanding factories | F | Annual Report 2025 | OK |
-| a4_ai | AstraZeneca bought Modella AI for cancer R&D; 12-13 years; 1-2 in 10,000 | F | AZ results; EFPIA | OK. AI claim kept modest: "may help", "doesn't guarantee a single approval" |
-| a5_asml | ASML sales ~$37bn, profit almost $11bn, makes no chips | F | ASML Q4/FY2025 6-K | OK |
-| a5_web | ~5,100 suppliers; machines go to chip fabs in Asia and America | F/M | ASML 20-F 2025 | OK |
-| a5_siemens | FY2026 revenue ~$97bn; factory software +13%; Busch quote | F | Siemens release 12 Nov 2026 | OK (FY to 30 Sep 2026; FY-average ECB rate) |
-| a5_airbus | 793 jets 2025; 8,754 backlog; registered NL, run near Toulouse | F | Airbus FY2025 release; AGM notice 2026 | OK |
-| a5_airbus | coordination is where software and automation could pay off | C | - | Labelled CONJECTURE |
-| a6_old/a6_question | ownership may matter more than operating | Hypothesis | - | Labelled HYPOTHESIS |
-| a6_company | Company E | I | - | HYPOTHETICAL banner, no real firm |
-| a6_numbers | 60 -> 50 cost, 5% fee (3 -> 2.50), E keeps 17 -> 27.50 | I | arithmetic checked: 100-63-20=17; 100-52.5-20=27.5 | Labelled ILLUSTRATIVE MODEL · MADE-UP NUMBERS |
-| a6_catch | registering a patent somewhere doesn't move the profit; the real work must be there | F (rule summary) | OECD TPG 2022 Ch. VI | OK, see below |
-| a6_energy | Brazil 2025: ~87% of electricity renewable | F | EPE BEN 2026 summary | OK (86.8%; owner suggested 88-90%, 2024 was 88.2%) |
-| a6_energy | taxes and sector charges ~45% of power companies' 2024 billing | F (industry study) | PwC / Instituto Acende Brasil 2025 | OK (44.8% of gross operating revenue, 44-company sample); attributed as "one industry study" |
-| a6_energy | new VAT phased in through 2033, partly to stop taxes stacking up at each step | F | Agência Senado on EC 132/2023 | OK; framed as aim |
-| a6_energy | an energy-rich country would need competitive costs to produce | S | - | Labelled SCENARIO; no policy recommendation |
-| a7_* | pull factors, distinctions, risks | M/qualitative | - | No figures claimed |
-| a8_* | verdict, conditions | Hypothesis/S | - | "A plausible path, not a promise" |
+| a1_size | EU economy "about twenty-one trillion dollars a year, a little bigger than China's" | EU-27 GDP 2025 $21.3T vs China $19.6T (US $30.9T), current USD, IMF estimates | IMF WEO DataMapper | F |
+| a1_age | "just two workers for every retiree" (soon) | ratio of working to retired people expected to fall from ~3:1 to 2:1 (EU, by 2040) | Draghi report Part A | F (official projection) |
+| a1_squeeze | "two to three times what American companies pay for electricity" | EU companies' electricity prices 2-3x US (gas 4-5x), 2024 | Draghi report Part A | F |
+| a4_surplus | EU sold "about two hundred and fifty billion dollars more medicine than it bought"; biggest customer the US | EU-27 SITC 54 trade balance 2025 EUR 220,463m = $249bn (our conversion); US 43.8% of exports | Eurostat COMEXT via EFPIA 2026 | F |
+| a4_novo | Novo Nordisk spends "almost eight billion dollars a year on research" | R&D DKK 52,039m = $7.9bn (2025; our conversion) | Novo Nordisk Annual Report 2025 | F |
+| a5_asml | ASML "kept almost eleven billion dollars in profit" | net income EUR 9.6bn = $10.8bn (2025; our conversion) | ASML FY2025 6-K | F |
+| a6_numbers | Company E's share "grows by more than half" | illustrative: 17 -> 27.50 (+62%) | arithmetic of the made-up model | I |
+| a6_energy | "almost half" of what Brazil's power companies bill goes to taxes and charges | 44.8% of gross operating revenue, 2024, 44-company sample (~2/3 of market) | PwC / Instituto Acende Brasil (2025) | F (industry study, attributed) |
+
+### Unnumbered statements (verified)
+| Segment | Statement | Basis | Label |
+|---|---|---|---|
+| co_hook | parts for machines the world needs; medicines sold around the world | fictional town; EU pharma exports (EFPIA) | story / F |
+| a1_gap | gap with America widening for years; most of it comes down to productivity | Draghi: 15% (2002) -> 30% (2023) at 2015 prices; ~70% of per-capita PPP gap = productivity | F |
+| a1_squeeze | promising startups often move to America to raise money | Draghi: close to 30% of unicorns founded in Europe 2008-2021 relocated HQ abroad, mostly US | F |
+| a3_factory/a3_proven | machine vision industry-grade; robots that learn any job not ready | IFR WR 2026 | F |
+| a3_robots | Germany has more robots per factory worker than America and far more than the world average | IFR density 2025: 469 vs 323 vs 152 | F |
+| a3_bill / a4_chain | money flows to owners of machines, software, know-how; value sits in ideas, patents, proof | mechanism (illustrative boards, no measured split) | M |
+| a3_people | owning technology may matter more | - | C |
+| a4_six | Roche, Novartis (Switzerland); AstraZeneca, GSK (Britain); Sanofi (France); Novo Nordisk (Denmark); CH and UK in Europe, not EU | company reports | F |
+| a4_ai | AstraZeneca bought Modella AI for cancer R&D; a new medicine takes more than a decade; for every success thousands fail; AI may help, no guarantee | AZ FY2025 results; EFPIA: 12-13 years, 1-2 in 10,000 | F / C |
+| a5_web | thousands of suppliers; machines to fabs in Asia and America | ASML 20-F: ~5,100 suppliers | F |
+| a5_siemens | Siemens sells controllers, automation, software, digital twins; CEO: industrial AI an exceptional growth opportunity | Siemens FY2026 release (revenue $96.9bn, software $8.4bn +13%: description only) | F |
+| a5_airbus | run from near Toulouse; coordination; years of orders waiting | backlog 8,754 vs 793 deliveries in 2025 (≈11 years at that pace, our calculation); registered in Leiden | F |
+| a5_limits | China installs far more robots; cloud and consumer tech mostly American | IFR: China 354,226 vs Europe 73,054 (2025); Draghi tech share | F |
+| a6_catch | registering a patent somewhere doesn't move the profit; the real work must be there | OECD TPG 2022 Ch. VI | F (rule summary) |
+| a6_energy | Brazil gets most of its electricity from renewables; overhauling its sales taxes | EPE BEN 2026: 86.8% (2025); EC 132/2023 dual VAT 2026-2033 | F |
+| a6_energy | a country with cheap power would still need competitive costs to produce; profit could come home to Europe | - | S |
+| a8_* | verdict and conditions | - | hypothesis / S |
 
 ## Transfer pricing and tax: legal-sensitivity review
-The narration contains one tax sentence (a6_catch) and one sentence in the Brazil beat; the coordinator's instruction (2026-11-18) cut
+The narration contains one tax sentence (a6_catch) and one clause in the Brazil beat; the coordinator's instruction (2026-11-18) cut
 corporate-tax, patent-box and Pillar Two explanations from the film.
 - **Arm's length / DEMPE.** The illustration assumes a European principal that *genuinely* performs and controls the development,
   enhancement, maintenance, protection and exploitation (DEMPE) of the intangibles and controls the economically significant risks, and
@@ -50,7 +54,7 @@ corporate-tax, patent-box and Pillar Two explanations from the film.
   risks actually controlled. The film says this in plain words ("only holds if the European company really does the work"; "simply
   registering a patent somewhere doesn't move the profit").
 - **The arithmetic.** With the same markup and the same functional profile, a lower eligible cost base lowers the routine manufacturer's
-  absolute profit (3.00 -> 2.50) and, if sales prices hold, raises the residual (17 -> 27.50). The film adds that competitors also
+  absolute profit (3.00 -> 2.50; on screen only) and, if sales prices hold, raises the residual (17 -> 27.50). The film adds that competitors also
   automate and prices may fall. No tax outcome is computed or implied; the numbers are operating-profit allocations in a made-up model.
 - **No profit-shifting suggestion.** The film never says IP should be registered anywhere, never names a low-tax country, and never implies
   that every European country has low taxes (corporate tax rates vary widely across Europe; not discussed on screen).

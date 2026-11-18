@@ -51,12 +51,12 @@ thumbnail shows only the comeback question, so the pair reads as contrarian, not
 "Everyone says Europe is falling behind. Could the robots and AI that seem to threaten it actually help it come back, and who would get
 rich if they did?"
 
-## 30-second hook (as narrated)
-"Everyone says Europe is falling behind. Its people are getting older. Its companies pay two to three times what American companies pay for
-electricity. America leads the digital economy, China has become the world's factory, and most of the giant tech companies are based
-somewhere else. But Europe still builds the only machines that can print the most advanced chips, and it invents medicines sold all over
-the world. So here's a question almost nobody is asking. What if the technology that seems to threaten Europe could be the thing that
-brings it back?" Then the channel intro.
+## 30-second hook (as narrated, story-over-stats version)
+"Meet Theo. He's an engineer in an old factory town in Europe, and everyone keeps telling him the same thing. Europe is falling behind.
+America has the tech giants. China has the factories. Europe has aging towns, pricey energy and a lot of nostalgia. But Theo's town still
+makes parts for machines the whole world needs, and his sister Nora works on medicines sold around the world. So here's the question Theo is
+about to chase. What if the technology that seems to threaten Europe could bring it back?" Then the channel intro. (The decline belief is
+voiced in the first ~8 s, then flipped.)
 
 ## Animated explanatory sequences (presenter builds six boards; ten bespoke animated worlds)
 1 Europe between two giants (triad + gap board). 2 The aging workforce (balance of workers vs retirees). 3 The automated factory (vision,
@@ -82,18 +82,32 @@ Ep 62 "Could AI Make American Factories Cheaper Than China's?" (same automation 
 Cheap, And So Advanced?", Ep 08 "The $250 Million Machine Every Advanced Chip Depends On" (ASML), Ep 15 "The Stamp That Could Break ASML's Monopoly", Ep 01 "The Hidden
 Formula Behind Switzerland's Wealth".
 
-## Commercial Quality Score (honest; editorial decision aid, not a performance claim)
+## Story-over-stats revision (owner directive 2026-11-18, `docs/STORY_OVER_STATS.md`)
+- **Before:** a data-led script with ~60 spoken figures (several scenes carried 3-5), a 22% counter, multi-bar charts and stacked percentages.
+- **After:** one protagonist and journey. THEO, an engineer in an aging European factory town, hears "Europe is falling behind" and chases
+  a hunch; his sister NORA (a drug researcher) shows him pharma, ASML and the value of owning ideas; he sketches "Company E" (his own firm's
+  future), runs the money experiment, weighs a partner plant in energy-rich Brazil, and ends running the robots (button gag).
+- **Spoken figures: 8** (EU economy ~$21T; two workers per retiree; electricity two to three times US; ~$250bn pharma surplus; Novo ~$8bn
+  R&D; ASML ~$11bn profit; Company E's share up by more than half; Brazil taxes and charges almost half). Never more than one per scene.
+  `tools/count_numbers.py` over-counts (it reads "twenty-one trillion" as several words); the honest spoken count is 8.
+- **On screen:** one big number per scene (counters show one value; charts at most 3 labelled values; the Company E columns show only
+  "E KEEPS" in dollars). All detail moved to `FACT_CHECK.md` and the description.
+- Comparisons replace percentages ("a little bigger than China's", "more robots per worker than America", "for every success, thousands
+  fail", "more than a decade").
+
+## Commercial Quality Score (honest re-score after the story-over-stats rewrite; decision aid, not a performance claim)
 | Criterion | Weight | Score | Note |
 |---|---:|---:|---|
 | Audience demand and broad appeal | 20 | 18 | Large "Europe falling behind" demand in autocomplete and 1M+ competitor views |
 | Title and thumbnail potential | 20 | 17 | Contrarian hybrid title matches search; thumbnail reversal is clear but abstract (no face, no product) |
-| Narrative curiosity and emotional stakes | 20 | 18 | Belief stated then flipped in 10 s; "who gets rich when robots work" stakes |
-| Retention potential | 15 | 13 | Discovery every ~45-60 s; Act 7 (capital magnet) is the softest stretch |
-| Original economic insight | 10 | 9 | Owning vs operating with numbers, plus the energy-location twist |
-| Evergreen potential | 10 | 9 | Mechanism-led; figures dated |
-| Visual storytelling opportunities | 5 | 5 | Eleven bespoke worlds, six presenter boards |
-| **Total** | **100** | **89** | Coordinator pre-score 85; target 90 |
+| Narrative curiosity and emotional stakes | 20 | 19 | A protagonist with something to lose (his town); belief stated then flipped in 8 s |
+| Retention potential | 15 | 14 | A story beat every scene; far fewer numbers; Act 7 still the softest stretch |
+| Original economic insight | 10 | 9 | Owning vs operating, plus the energy-location twist |
+| Evergreen potential | 10 | 9 | Mechanism-led; figures dated in the description |
+| Visual storytelling opportunities | 5 | 5 | Fifteen bespoke sets, six presenter boards, two recurring characters |
+| **Total** | **100** | **91** | Previous 89 (data-led cut); coordinator pre-score 85; target 90 |
 
-**Remaining gap to 90 (recorded honestly):** the thumbnail relies on an abstract reversing line rather than a recognizable object, and Act 7
-has no number or company to anchor it. Neither was inflated away. Mitigations: test B/C in YouTube's thumbnail test; publish Short C
-("Who Gets Rich When Robots Do the Work?") before the long film.
+**Remaining gap (recorded honestly):** the thumbnail is abstract (a reversing line over a skyline, no face or recognizable product), and
+the title is 60 characters, so mobile may truncate after "AI Could...". Mitigations: A/B/C thumbnail test; publish Short C ("Who Gets Rich
+When Robots Do the Work?") first. Note: Ep 64 uses the same phrase as its long-form title; keep the Short's title or rename it if Ep 64
+publishes first, to avoid two identical titles.
