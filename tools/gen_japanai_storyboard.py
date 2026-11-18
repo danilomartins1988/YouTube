@@ -231,12 +231,12 @@ stage("s15_fanuc", "c3_fanuc", {
               tag((0, "FACT · FANUC (FY TO MAR 2026)"), (C("of FANUC's sales"), "OUR CALC · FANUC SALES BY REGION"), (C("Its robot sales in China"), "FACT · FANUC ROBOT DIVISION"))]},
     sources=["fanuc_fy25"])
 stage("s16_density", "c3_density", {
-    **W1("jdensity", rows=[{"label": "S. KOREA", "n": 12.2, "at": C("South Korea has"), "color": BLUE}, {"label": "JAPAN", "n": 4.5, "at": C("Count robots"), "color": ORANGE}]),
+    **W1("jdensity", rows=[{"label": "S. KOREA", "n": 10.7, "at": C("South Korea has"), "color": BLUE}, {"label": "JAPAN", "n": 4.5, "at": C("Count robots"), "color": ORANGE}]),
     "cam": cam((0, 960, 540, 1.0), (C("South Korea has"), 960, 520, 0.98, 1.4), (C("The robot superpower"), 960, 540, 1.02, 1.4)), "drift": 1,
-    "items": [words("≈ 3× AS MANY ROBOTS PER WORKER", 960, 120, C("as many as Japan"), size=48, color=BLUE, until=C("The robot superpower")),
+    "items": [words("MORE THAN 2× AS MANY ROBOTS PER WORKER", 960, 120, C("as many as Japan"), size=48, color=BLUE, until=C("The robot superpower")),
               words("THE ROBOT MAKER ISN'T THE MOST ROBOTIC", 960, 120, C("The robot superpower"), size=44, color=ORANGE),
-              tag((0, "FACT · IFR WORLD ROBOTICS 2025 (2024 DATA)"), (C("as many as Japan"), "OUR CALC · 1,220 vs 446 PER 10,000"))]},
-    sources=["ifr_wr25"])
+              tag((0, "FACT · IFR (NOV 2026, 2025 DATA)"), (C("as many as Japan"), "OUR CALC · 1,066 vs 452 PER 10,000"))]},
+    sources=["ifr_density26"])
 board("p17_draw", "c3_draw", "Why a shortage sells robots (mechanism)", "Let me draw it", [
     {"d": rect(620, 300, 260, 110), "color": "risk", "width": 6, "kind": "box", "start": C("Fewer workers"), "label": lbl("FEWER WORKERS", 750, 368, 26, "risk")},
     {"d": arrow((880, 355), (960, 355), 0.0), "color": "ink", "width": 5, "kind": "arrow", "start": C("so wages rise")},

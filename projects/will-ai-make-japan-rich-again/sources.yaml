@@ -88,6 +88,14 @@ sources:
     accessed: "2026-11-18"
     credit: "IFR (Jul 2025)"
     notes: "'Japan is the world's predominant robot manufacturing country representing 38% of global robot production,' said Takayuki Ito, IFR President. Japanese car industry installed about 13,000 robots in 2024 (+11%)."
+  - id: ifr_density26
+    title: "Robot Density Highest in South Korea, Singapore and Germany (press release; data year 2025)"
+    publisher: International Federation of Robotics
+    url: https://ifr.org/ifr-press-releases/news/robot-density-highest-in-south-korea-singapore-and-germany
+    published: "2026-11-12"
+    accessed: "2026-11-18"
+    credit: "IFR (Nov 2026)"
+    notes: "Robots per 10,000 manufacturing employees, 2025: Korea 1,066; Singapore 873; Germany 469; Japan 452 ('Japan with 452 units ranks in 4th position'); United States 323; China 193 (new employment base); world average 152. Same figures as Ep 62."
   - id: kawasaki_hist
     title: "History of Robot Division"
     publisher: Kawasaki Heavy Industries
@@ -244,10 +252,10 @@ claims:
     source_ids: [fanuc_fy25, fed_g5a]
     status: data_derived
   - id: density_x
-    text: "IFR WR 2025: robot density 2024 Korea 1,220 vs Japan 446 per 10,000 manufacturing employees; OUR CALCULATION 2.7x; Japan 4th... listed after Singapore 818, China 567, Germany 449."
-    spoken: nearly three times
-    display: "Robots per 10,000 factory workers (2024): Korea 1,220 · Japan 446 · IFR"
-    source_ids: [ifr_wr25]
+    text: "IFR (Nov 12, 2026; 2025 data): robot density Korea 1,066 vs Japan 452 per 10,000 manufacturing employees; OUR CALCULATION 2.36x; Singapore 873 and Germany 469 also ahead of Japan (4th); China 193 on a new employment base."
+    spoken: more than twice
+    display: "Robots per 10,000 factory workers (2025): Korea 1,066 · Japan 452 · IFR"
+    source_ids: [ifr_density26]
     status: source_located
   - id: tx_drinks
     text: "Telexistence (company claim): one robot restocks about 1,000 beverages a day; remote operator takes over on failures."

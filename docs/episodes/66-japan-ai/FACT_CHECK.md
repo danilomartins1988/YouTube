@@ -17,7 +17,7 @@ ten" and "nine of every ten" and one false "and a").
 | 8 | "nineteen sixty-nine", first industrial robot made in Japan, American license | 1968 Unimation license, 1969 production | Kawasaki history | verified (company) |
 | 9 | "predominant robot manufacturing country" | IFR president's quote | IFR | verified |
 | 10 | "nearly nine of every ten dollars of FANUC's sales came from customers outside Japan"; China robot sales up, Japan down | ¥747.0bn / ¥857.8bn = 87.1%; robot division ¥378.6bn ≈ $2.53bn | FANUC FY to Mar 2026 | our calc / verified |
-| 11 | "South Korea has nearly three times as many" robots per factory worker; China and Germany ahead | 1,220 vs 446 per 10,000 (2.7×); China 567, Germany 449 | IFR WR 2025 | verified / our calc |
+| 11 | "South Korea has more than twice as many" robots per factory worker; Singapore and Germany ahead | 1,066 vs 452 per 10,000 (2.36×), 2025; Singapore 873, Germany 469 | IFR density release, Nov 12, 2026 | verified / our calc |
 | 12 | "about a thousand drinks a day" | ≈1,000 beverages/day per robot | Telexistence | company claim |
 | 13 | ASIMO "retired without ever getting a real job" | shows ended Mar 2022; never commercialized | Japan Times | verified (press) |
 | 14 | humanoid "in stores by twenty twenty-nine" | Astra target 2029 | Telexistence / Seven-Eleven Japan | plan |
@@ -32,3 +32,8 @@ ten" and "nine of every ten" and one false "and a").
 
 Fiction labels: Hiro, Aoi, Kobo, Hiro's mother and Hoshimachi are fictional (labelled STORY on screen). Industrial robots (deployed) and
 humanoids (demo/plan) are labelled apart. No logos; companies appear only as generic buildings or plain text.
+
+**Note on robot density (row 11):** the first render used IFR World Robotics 2025 (2024 data: Korea 1,220, Japan 446, China 567). It was
+replaced with IFR's latest density release of Nov 12, 2026 (2025 data: Korea 1,066, Singapore 873, Germany 469, Japan 452, US 323, China
+193, world 152), the same release Ep 62 uses, so both films show the same numbers. China's figure fell because the IFR moved China to a new
+employment base (National Economic Census); China is therefore no longer said to be ahead of Japan.

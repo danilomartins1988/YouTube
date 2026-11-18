@@ -1494,7 +1494,7 @@ scenes:
       x1: 4600
       rows:
       - label: S. KOREA
-        n: 12.2
+        n: 10.7
         at:
           cue: South Korea has
         color: '#2F6FD1'
@@ -1524,7 +1524,7 @@ scenes:
     drift: 1
     items:
     - kind: toonwords
-      text: ≈ 3× AS MANY ROBOTS PER WORKER
+      text: MORE THAN 2× AS MANY ROBOTS PER WORKER
       x: 960
       y: 200
       at:
@@ -1542,8 +1542,8 @@ scenes:
       size: 44
       color: '#F08A24'
     callouts:
-    - text: FACT · IFR WORLD ROBOTICS 2025 (2024 DATA)
-      x: 322.0
+    - text: FACT · IFR (NOV 2026, 2025 DATA)
+      x: 262.0
       y: 50
       at: 0
       size: 20
@@ -1551,7 +1551,7 @@ scenes:
       color: green
       until: &id007
         cue: as many as Japan
-    - text: OUR CALC · 1,220 vs 446 PER 10,000
+    - text: OUR CALC · 1,066 vs 452 PER 10,000
       x: 274.0
       y: 50
       at: *id007
@@ -1559,7 +1559,7 @@ scenes:
       screen: true
       color: gold
   sources:
-  - ifr_wr25
+  - ifr_density26
   assets:
   - font:inter
 - id: p17_draw

@@ -17,7 +17,8 @@ Productivity Center PDF, Cabinet Office CSV).
 - MHLW (Jul 2024): +570,000 care workers needed by FY2040 vs FY2022.
 
 ## Robots
-- IFR WR 2025 (2024 data): installs 542,076; stock 4.66M; density Korea 1,220, Singapore 818, China 567, Germany 449, Japan 446.
+- IFR density release Nov 12, 2026 (2025 data, used in the film, same as Ep 62): Korea 1,066, Singapore 873, Germany 469, Japan 452, US 323, China 193 (new base), world 152.
+- IFR WR 2025 (2024 data, superseded for density): installs 542,076; stock 4.66M; density Korea 1,220, Singapore 818, China 567, Germany 449, Japan 446.
 - IFR (Jul 2025): Japan "38% of global robot production".
 - Kawasaki: 1969 first industrial robot produced in Japan (Unimation license 1968).
 - FANUC FY to Mar 2026: sales ¥857.8bn (≈$5.74bn); robots ¥378.6bn (≈$2.53bn), Japan robot sales down, China up; Japan customers
