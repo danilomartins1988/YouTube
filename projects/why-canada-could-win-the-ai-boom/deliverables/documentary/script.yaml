@@ -1,0 +1,282 @@
+# Story over statistics (docs/STORY_OVER_STATS.md): one protagonist (MAYA, a fictional AI researcher in Montreal) with WHIRR (a fictional
+# walking data center) and her dad LUC (fictional); at most one spoken figure per segment; exact figures in FACT_CHECK.md and the
+# description. Neutral tone, no stereotypes; real people (Geoffrey Hinton, Yoshua Bengio) are named in narration only, never drawn.
+# Ep 67's Quebec figures are reused unchanged (hq_boston, hq_cd); Ep 67 is linked by title only.
+logline: 'Maya, a fictional young AI researcher in Montreal, weighs a job offer from California while Whirr, a fictional overheating data center, flees
+  the desert for the north. Following them through hydro dams, cold air, mines and labs, the film tests the belief that Canada''s economy is crashing against
+  the assets the AI boom wants (clean power, a natural fridge, critical minerals and research talent) and the obstacles (tariffs and US dependence, startups
+  and talent moving south, slow mines, and power that now has to be built). The answer: Canada has the whole shopping list, but it only wins if it builds.'
+title: Why Canada Could Be the Biggest Winner of the AI Boom
+segments:
+- id: co_hook
+  chapter: Two moves, opposite directions
+  narration: Meet Maya. She trains artificial intelligence in a lab in Montreal, and this morning her phone won't stop buzzing. Headline after headline
+    says the same thing. Canada's economy is crashing. Then a message from California. A big AI lab wants her. Bigger paycheck, bigger computers, more sunshine.
+    Pack your bags, it says. Meanwhile, far to the south, in the desert, somebody else is packing too. This is Whirr. Whirr is a data center, and Whirr
+    is overheating. Its fans are screaming, its power bill keeps climbing, and it needs a new home. Maya is thinking of moving south. Whirr is thinking
+    of moving north. One of them has read the map wrong. So which is it? Is Canada losing the AI boom, or could it be the biggest winner of all?
+  claims: []
+  analysis: true
+  source_note: Hook; Maya and Whirr are fictional. The 'crash' headlines are the common belief the film tests.
+- id: title_card
+  chapter: Two moves, opposite directions
+  narration: ''
+  claims: []
+- id: c1_card
+  chapter: Is Canada really crashing?
+  narration: ''
+  claims: []
+- id: c1_crash
+  chapter: Is Canada really crashing?
+  narration: To be fair, the bad news is real. Back {{gdp_shrank}}, American tariffs hit Canadian cars and machinery, exports fell, and the economy actually
+    shrank. Maya's uncle sells car parts. He stopped smiling at the news. The headlines did the math. Crash.
+  claims:
+  - gdp_shrank
+- id: c1_rebound
+  chapter: Is Canada really crashing?
+  narration: But crashes don't usually bounce. This year the economy {{boc_rebound}}, and the Bank of Canada expects more growth ahead, even if new tariffs
+    slow things down this winter. That's a forecast, not a promise. Still, it's not the picture on Maya's phone.
+  claims:
+  - boc_rebound
+- id: c1_list
+  chapter: Is Canada really crashing?
+  narration: And while everyone stared at the headlines, something else was happening. The AI boom went shopping. And its shopping list looks a lot like
+    a map of Canada.
+  claims: []
+  analysis: true
+  source_note: Framing (our analysis).
+- id: c1_draw
+  chapter: Is Canada really crashing?
+  narration: 'Let me draw what an AI factory needs. Start with a plug: huge amounts of electricity, all day and all night. Then a fridge: every chip turns
+    power into heat, and the heat has to go somewhere. Then a mine: chips, cables and batteries are made of metal. And finally, a brain: people who know
+    how to build the models. Most countries are strong in a couple of these. Very few have the whole list.'
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); illustrative, not to scale.
+- id: c2_card
+  chapter: The power
+  narration: ''
+  claims: []
+- id: c2_dam
+  chapter: The power
+  narration: Whirr heads north first, following the power lines. They lead out of the mountains and down the rivers, to dams the size of small towns. Of
+    all its electricity, Canada makes {{hydro_share}} from falling water. Whirr has never seen anything like it.
+  claims:
+  - hydro_share
+- id: c2_rank
+  chapter: The power
+  narration: That makes Canada {{hydro_rank}} hydropower maker on the planet. Whirr does a little dance. Clean, steady, and already built.
+  claims:
+  - hydro_rank
+- id: c2_quebec
+  chapter: The power
+  narration: In Quebec, the power is famous for being cheap. A big factory there pays {{hq_boston}} of what the same factory would pay in Boston. We told
+    that story in Could Cheap Electricity Become the New Oil? Whirr starts unpacking.
+  claims:
+  - hq_boston
+- id: c2_twist
+  chapter: The power
+  narration: Then comes the twist. Hydro-Québec says its days of surplus power are over. Big new users now need the government's permission, and the price
+    it has proposed for data centers is {{hq_cd}} what big industry pays today. It's still a proposal, still under review. Whirr stops unpacking.
+  claims:
+  - hq_cd
+- id: c2_bc
+  chapter: The power
+  narration: Next door, in British Columbia, the province stopped handing out power on a first-come, first-served basis. AI and data center projects now
+    have to {{bc_compete}} for a limited slice, like a talent show, judged on what they give back to the province.
+  claims:
+  - bc_compete
+- id: c2_lesson
+  chapter: The power
+  narration: So Whirr learns the first lesson of the north. Canada has the power. But the cheap, easy power is already spoken for. The next power has to
+    be built, and dams and power lines take years.
+  claims: []
+  analysis: true
+  source_note: Synthesis (our analysis) of the Quebec and BC sources.
+- id: c3_card
+  chapter: The cold
+  narration: ''
+  claims: []
+- id: c3_cool
+  chapter: The cold
+  narration: Still, the north has one gift nobody has to build. Whirr steps outside, and for the first time in ages, its fans slow down. In the desert,
+    a data center spends a fortune on air conditioning. Up here, the cold air does a lot of that work for free. Whirr sighs. Ahhh.
+  claims: []
+  analysis: true
+  source_note: Mechanism (cold outside air reduces cooling energy); illustrative.
+- id: c3_claim
+  chapter: The cold
+  narration: One Quebec operator says it can cool its servers with outside air {{free_cool}}. That's its own claim, and it depends on how a building is
+    designed. But the idea is simple. The cold is a giant, natural fridge.
+  claims:
+  - free_cool
+- id: c3_heat
+  chapter: The cold
+  narration: And the heat that comes out of the servers doesn't have to be wasted. In Kamloops, British Columbia, the phone company Bell plans an AI data
+    center at a university that will pipe its leftover heat into the campus buildings. The servers keep the students warm.
+  claims: []
+  analysis: true
+  source_note: Company plan (Bell AI Fabric announcement).
+- id: c3_money
+  chapter: The cold
+  narration: The giants have noticed. Microsoft has announced plans worth {{msft_19b}} in Canada over a few years, mostly for cloud and AI data centers.
+    That's a company plan, not money already spent. But it's a big bet on the north.
+  claims:
+  - msft_19b
+- id: c3_draw
+  chapter: The cold
+  narration: 'Let me draw why the cold is worth money. Here''s a server. Power goes in, and almost all of it comes out as heat. In a hot place, you pay
+    twice: once to run the chip, and again to pump the heat away. In a cold place, the outside air carries much of the heat off almost for free. And if
+    you''re lucky, a neighbor wants that heat. Same chip, smaller bill.'
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); illustrative, not to scale.
+- id: c3_whirr
+  chapter: The cold
+  narration: Whirr makes up its mind. Cold air, clean power, and neighbors who want it. It starts looking for a lot.
+  claims: []
+  analysis: true
+  source_note: Story beat (fictional cast).
+- id: c4_card
+  chapter: The metals
+  narration: ''
+  claims: []
+- id: c4_dad
+  chapter: The metals
+  narration: Meanwhile, Maya goes home for the weekend, to Sudbury, Ontario, where her dad, Luc, works at a nickel mine. He has heard about California.
+    You know what's inside those AI computers? he asks. Rocks. Our rocks.
+  claims: []
+  analysis: true
+  source_note: Story beat (fictional family; Sudbury is a real nickel-mining region).
+- id: c4_list
+  chapter: The metals
+  narration: He's not wrong. Copper for the wires. Nickel, lithium and graphite for the batteries. Uranium for the nuclear plants that could power the data
+    centers. Canada's government keeps an official list of minerals the modern economy can't do without. There are {{crit34}} on it, and Canada mines many
+    of them.
+  claims:
+  - crit34
+- id: c4_uranium
+  chapter: The metals
+  narration: In uranium, Canada is the world's {{uranium2}} producer. Luc grins. Rocks, he says again.
+  claims:
+  - uranium2
+- id: c4_slow
+  chapter: The metals
+  narration: But here's the catch with rocks. They're slow. Around the world, a big new mine has taken {{mine16}}, on average, to go from discovery to the
+    first truckload of ore. By then, Maya's AI models would be ancient history.
+  claims:
+  - mine16
+- id: c4_fix
+  chapter: The metals
+  narration: Ottawa has set up a Major Projects Office to speed up approvals. One copper and zinc mine in Saskatchewan was referred to it and started producing
+    less than a year later, although it was already mostly built. Fast for a mine. Whether that becomes normal is the real test.
+  claims: []
+  analysis: true
+  source_note: 'Major Projects Office project page (McIlvenna Bay: referred Sept 2025, first copper concentrate June 2026, ~88% built in Jan 2026).'
+- id: c5_card
+  chapter: The brains
+  narration: ''
+  claims: []
+- id: c5_lab
+  chapter: The brains
+  narration: Back in Montreal, Maya walks into her lab, and you can see why California wants her. Some of the big ideas behind today's AI grew up right
+    here, in Canadian universities, when most of the world had given up on them.
+  claims: []
+  analysis: true
+  source_note: History of deep learning in Canadian universities (Nobel, Mila, Vector sources).
+- id: c5_hinton
+  chapter: The brains
+  narration: In Toronto, Geoffrey Hinton spent decades on artificial neural networks, when much of the field thought they were a dead end. In {{hinton_nobel}},
+    that work helped earn him the Nobel Prize in Physics.
+  claims:
+  - hinton_nobel
+- id: c5_bengio
+  chapter: The brains
+  narration: In Montreal, Yoshua Bengio founded the lab that grew into Mila, which describes itself as the world's largest academic research center for
+    deep learning. Maya's lab is just down the street.
+  claims: []
+  analysis: true
+  source_note: Mila's own description (mila.quebec).
+- id: c5_strategy
+  chapter: The brains
+  narration: Canada was also {{first_strategy}} in the world to launch a national AI strategy. And now it's paying to build a giant AI supercomputer of
+    its own, owned in Canada.
+  claims:
+  - first_strategy
+- id: c5_leak
+  chapter: The brains
+  narration: So where's the problem? Follow Maya's classmates. Most science and tech graduates do stay in Canada, Statistics Canada finds. But the stars
+    get the biggest offers, and many of those come from American companies with deeper pockets. Promising Canadian startups often find their biggest buyers,
+    and their biggest checks, south of the border. Maya's phone buzzes. The recruiter again. Decided yet? Not yet.
+  claims: []
+  analysis: true
+  source_note: Statistics Canada STEM retention study (most stay); outflow of top talent and startups to the US is widely reported (qualitative).
+- id: c5_draw
+  chapter: The brains
+  narration: 'Let me draw Canada''s talent pipeline. Students go in here, at the universities. They come out as researchers, and then as founders. But look
+    at this pipe. There''s a leak, and it points south: higher pay, bigger computers, bigger funding. Canada doesn''t need to stop the water. It needs to
+    give it reasons to stay: computers to work on at home, and companies big enough to grow up here.'
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); illustrative, not to scale.
+- id: c6_card
+  chapter: The catch
+  narration: ''
+  claims: []
+- id: c6_tariffs
+  chapter: The catch
+  narration: Which brings us to the biggest catch of all. Canada's best customer is also its biggest risk. Of every dollar of goods Canada sells abroad,
+    {{us_exports}} go to the United States. When Washington adds tariffs, Canada feels it first.
+  claims:
+  - us_exports
+- id: c6_cables
+  chapter: The catch
+  narration: AI could change that list. Electricity turned into computing doesn't ride on trucks. It travels through cables. That could be a new kind of
+    export, but only if Canada builds the data centers, and only if someone at home owns the companies that use them.
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis).
+- id: c6_score
+  chapter: The catch
+  narration: 'So here''s the scorecard. Power: plenty, but the cheap part is taken, and new dams and lines take years. Cold: free. Metals: in the ground,
+    but slow to dig up. Brains: world class, but tempted south. And next door, a giant neighbor that can slow everything down with a tariff.'
+  claims: []
+  analysis: true
+  source_note: Synthesis (our analysis) of the sourced chapters.
+- id: c7_card
+  chapter: Maya's decision
+  narration: ''
+  claims: []
+- id: c7_answer
+  chapter: Maya's decision
+  narration: 'So, could Canada be the biggest winner of the AI boom? It has something rare: the whole shopping list, in one country. Power, cold, metals
+    and brains. Most countries would trade a lot for that. But having the list isn''t the same as winning. Canada wins only if it builds: power lines, mines,
+    data centers, and companies that grow up at home instead of moving away.'
+  claims: []
+  analysis: true
+  source_note: Verdict (our analysis).
+- id: c7_crash
+  chapter: Maya's decision
+  narration: And that crash everyone talks about? It's real for some industries, like the car parts hit by tariffs. But the AI boom is betting on a different
+    Canada. The one behind the dams, under the snow, and inside the labs.
+  claims: []
+  analysis: true
+  source_note: Verdict (our analysis).
+- id: c7_maya
+  chapter: Maya's decision
+  narration: Back in Montreal, Maya opens the California offer one more time. Then she looks out the window. Across the street, a new building is going
+    up, and a friendly data center waves at her. It's Whirr. I moved in, it says. Your turn. Maya types her answer. Ask me again next year. For now, I'm
+    staying.
+  claims: []
+  analysis: true
+  source_note: Story close (fictional).
+- id: teaser
+  chapter: Maya's decision
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: Maya's decision
+  narration: ''
+  claims: []
