@@ -109,6 +109,9 @@ SHORTS = {
     "64-robots-rich": ("who-gets-rich-when-robots-do-the-work", "documentary", "robotsrich_documentary", "$100 OF STOCK.", "WHO GETS IT?", "Who Actually Owns the Stock Market?", "#stocks #ai #economy"),
     "64-robots-rich-b": ("who-gets-rich-when-robots-do-the-work", "documentary", "robotsrich_documentary", "$600 BILLION.", "WHO GETS PAID?", "The Biggest Building Spree in History Is for AI", "#ai #nvidia #datacenters"),
     "64-robots-rich-c": ("who-gets-rich-when-robots-do-the-work", "documentary", "robotsrich_documentary", "WAGES STALLED.", "FOR DECADES.", "When Machines Made Owners Rich and Wages Stalled", "#history #robots #economy"),
+    "65-ai-power-bill": ("why-ai-could-make-your-electricity-bill-explode", "documentary", "aipowerbill_documentary", "AI'S POWER BILL.", "WHO PAYS?", "Who Really Pays for AI's Electricity?", "#ai #electricbill #datacenters"),
+    "65-ai-power-bill-b": ("why-ai-could-make-your-electricity-bill-explode", "documentary", "aipowerbill_documentary", "THE POWER AUCTION", "HIT THE CAP", "Why AI Is Driving Up the Price of Power Plants", "#ai #electricity #energy"),
+    "65-ai-power-bill-c": ("why-ai-could-make-your-electricity-bill-explode", "documentary", "aipowerbill_documentary", "ONE CLAUSE", "VS AI'S POWER BILL", "The One Clause That Protects Your Power Bill From AI", "#ai #electricbill #utilities"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -127,6 +130,9 @@ CUSTOM = {
     "64-robots-rich": ("64-robots-rich", ["a2_own", "a2_split", "a2_top", "a2_flip"], "youtube-short"),
     "64-robots-rich-b": ("64-robots-rich", ["a3_capex", "a3_nvidia", "a3_loop"], "youtube-short-b"),
     "64-robots-rich-c": ("64-robots-rich", ["a5_britain", "a5_draw", "a5_end"], "youtube-short-c"),
+    "65-ai-power-bill": ("65-ai-power-bill", ["co_hook", "c2_eleven"], "youtube-short"),
+    "65-ai-power-bill-b": ("65-ai-power-bill", ["c3_tickets", "c3_auction", "c3_short"], "youtube-short-b"),
+    "65-ai-power-bill-c": ("65-ai-power-bill", ["c5_why", "c5_ohio"], "youtube-short-c"),
 }
 
 
