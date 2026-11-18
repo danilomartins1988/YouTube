@@ -1,0 +1,12 @@
+id: documentary
+format: long_16x9
+title: "Could AI Bring Europe Back to Power?"
+# Owner brief: 12-14 min, ideally ~13 (overrides the usual 660-800 s cap).
+target_seconds: {min: 720, max: 840}
+captions: {burn_in: false, sidecar: true}
+audio: {music: true, sfx: true}
+platforms: []
+output_alias: output/europeai_documentary.mp4
+# YouTube package and thumbnail: docs/episodes/63-europe-ai/youtube-package (automatic stage).
+thumbnails: []
+metadata: false

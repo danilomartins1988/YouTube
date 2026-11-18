@@ -1,0 +1,53 @@
+title: "Could AI Bring Europe Back to Power?"
+slug: could-ai-bring-europe-back-to-power
+language: en
+# Episode 63 (owner brief 2026-11-18: docs/episodes/63-europe-ai/PRODUCTION_PROMPT.md). Subtitle: "The Economic Comeback Nobody
+# Expected". Thesis framed as a HYPOTHESIS, never a prediction. Eight acts internal; chapters on screen. US dollars only
+# (EUR/DKK/CHF/GBP converted at the ECB 2025 average reference rates; Siemens FY2026 at the ECB daily-rate average Oct 2025-Sep
+# 2026; every conversion labelled "our conversion"). Coordinator instruction 2026-11-18: tax kept to one sentence in narration;
+# the owning-vs-operating mechanism is told as economics (illustrative cost-plus numbers); OECD / DEMPE / Pillar Two caveats
+# live in FACT_CHECK.md and the description sources.
+# Owner standing direction: prime-time TV-cartoon energy at GENRE level only, original cast and sets, human characters, day
+# scenes; for this film a premium-documentary tone carried by the explanatory animations. Bespoke kit:
+# remotion/src/animation-engine/CartoonStage/europe.tsx. No public figure drawn (Draghi, Busch named in narration only).
+# No company logos or traced product designs (generic original machines, jets, labs).
+renderer: remotion
+remotion_geo: [world]
+style:
+  name: cartoon-day
+  palette:
+    bg: "#EEF3F8"
+    bg2: "#FFFFFF"
+    ink: "#13213B"
+    muted: "#5E6B85"
+    land: "#A9D18E"
+    border: "#23406A"
+    accent: "#F2B33D"
+    accent2: "#2A6FDB"
+    accent3: "#2E9E6B"
+    risk: "#D9483B"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 6
+intro:
+  after_segment: co_hook
+tts_overrides:
+  openai:
+    voice: ash
+    tempo: 1.05
+    instructions: >-
+      Voice: the narrator of a premium American documentary about money and power, warm, curious and quietly confident, with a
+      light touch of wit. Clear, fair and credible on facts. Pacing: brisk but unhurried; slow slightly to land every number; a
+      short beat after a surprising figure and before each verdict. Natural American English, conversational, never an
+      announcer, never salesy, never sing-song, never mocking any country.
