@@ -100,6 +100,9 @@ SHORTS = {
     "61-chinese-cars": ("why-are-chinese-cars-so-cheap", "documentary", "chinesecars_documentary", "A $9,900 EV.", "HOW?", "Why Are Chinese Electric Cars So Cheap?", "#ev #china #cars"),
     "61-chinese-cars-b": ("why-are-chinese-cars-so-cheap", "documentary", "chinesecars_documentary", "PROFITABLE.", "AND BURNING CASH", "Are Chinese Car Companies Actually Making Money?", "#byd #ev #business"),
     "61-chinese-cars-c": ("why-are-chinese-cars-so-cheap", "documentary", "chinesecars_documentary", "IT'S NOT JUST", "SUBSIDIES", "China's Biggest EV Advantage Isn't Just Subsidies", "#ev #battery #china"),
+    "62-ai-manufacturing": ("could-ai-end-chinas-manufacturing-dominance", "documentary", "aimfg_documentary", "A $100 TOASTER.", "CAN OHIO ROBOTS MATCH CHINA?", "Can AI Make America Cheaper Than China?", "#ai #manufacturing #china"),
+    "62-ai-manufacturing-b": ("could-ai-end-chinas-manufacturing-dominance", "documentary", "aimfg_documentary", "IS CHINA AUTOMATING?", "59% OF NEW ROBOTS", "China Already Has More Factory Robots Than You Think", "#robots #china #factory"),
+    "62-ai-manufacturing-c": ("could-ai-end-chinas-manufacturing-dominance", "documentary", "aimfg_documentary", "FACTORIES COME BACK.", "DO THE JOBS?", "Who Wins When Robots Replace Factory Workers?", "#robots #jobs #ai"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -109,6 +112,9 @@ CUSTOM = {
     "56-black-friday-b": ("56-black-friday", ["a2_deriv", "a2_deriv2"], "youtube-short-b"),
     "61-chinese-cars-b": ("61-chinese-cars", ["a4_byd", "a4_unwind"], "youtube-short-b"),
     "61-chinese-cars-c": ("61-chinese-cars", ["a2_turn", "a3_chain", "a3_price"], "youtube-short-c"),
+    "62-ai-manufacturing": ("62-ai-manufacturing", ["a4_f2", "a4_tie"], "youtube-short"),
+    "62-ai-manufacturing-b": ("62-ai-manufacturing", ["a5_reveal", "a5_density"], "youtube-short-b"),
+    "62-ai-manufacturing-c": ("62-ai-manufacturing", ["a7_where", "a7_jobs"], "youtube-short-c"),
 }
 
 
