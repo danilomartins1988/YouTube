@@ -124,6 +124,9 @@ SHORTS = {
     "69-ai-taxes": ("if-ai-replaces-workers-who-pays-the-taxes", "documentary", "aitaxes_documentary", "ROBOTS GET NO PAYCHECK.", "WHO PAYS THE TAXES?", "If Robots Don't Get Paid, Who Pays the Taxes?", "#ai #robots #taxes"),
     "69-ai-taxes-b": ("if-ai-replaces-workers-who-pays-the-taxes", "documentary", "aitaxes_documentary", "WASHINGTON'S MONEY", "COMES FROM PAYCHECKS", "Where Washington's Tax Money Really Comes From", "#taxes #economy #ai"),
     "69-ai-taxes-c": ("if-ai-replaces-workers-who-pays-the-taxes", "documentary", "aitaxes_documentary", "FREE MONTHLY CASH.", "DID PEOPLE QUIT?", "What Happened When People Got Free Monthly Cash", "#basicincome #ubi #ai"),
+    "70-canada-ai": ("why-canada-could-win-the-ai-boom", "documentary", "canadaai_documentary", "CANADA IS CRASHING?", "THE AI TWIST", "Is Canada Losing the AI Boom, or Winning It?", "#canada #ai #economy"),
+    "70-canada-ai-b": ("why-canada-could-win-the-ai-boom", "documentary", "canadaai_documentary", "WHY AI DATA CENTERS", "WANT CANADA'S COLD", "Why AI Data Centers Want Canada's Cold", "#canada #ai #datacenter"),
+    "70-canada-ai-c": ("why-canada-could-win-the-ai-boom", "documentary", "canadaai_documentary", "MODERN AI GREW UP", "IN CANADA", "Where Modern AI Grew Up: Canada", "#canada #ai #deeplearning"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -157,6 +160,9 @@ CUSTOM = {
     "69-ai-taxes": ("69-ai-taxes", ["co_hook"], "youtube-short"),
     "69-ai-taxes-b": ("69-ai-taxes", ["c2_big", "c2_corp", "c2_world"], "youtube-short-b"),
     "69-ai-taxes-c": ("69-ai-taxes", ["c4_stockton", "c4_or", "c4_or2"], "youtube-short-c"),
+    "70-canada-ai": ("70-canada-ai", ["co_hook"], "youtube-short"),
+    "70-canada-ai-b": ("70-canada-ai", ["c3_cool", "c3_claim", "c3_heat"], "youtube-short-b"),
+    "70-canada-ai-c": ("70-canada-ai", ["c5_hinton", "c5_bengio", "c5_strategy"], "youtube-short-c"),
 }
 
 

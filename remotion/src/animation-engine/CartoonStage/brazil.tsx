@@ -162,9 +162,9 @@ const RAW: Record<string, SetFn> = {
       {/* solar rows */}
       {Array.from({length: 5}, (_, k) => <g key={'so' + k} transform={`translate(${160 + k * 170} ${f - 40})`}><path d="M -60 0 L -40 -50 L 60 -50 L 40 0 Z" fill="#2F5DA8" stroke={OL} strokeWidth={4} /><path d="M -10 -50 L -20 0 M 20 -50 L 10 0" stroke="#9EC5FF" strokeWidth={3} /></g>)}
       {/* pylons to plant */}
-      {[0, 1, 2].map((k) => <path key={'py' + k} d={`M ${1460 + k * 160} ${f} L ${1490 + k * 160} ${f - 260} L ${1520 + k * 160} ${f} M ${1468 + k * 160} ${f - 220} L ${1512 + k * 160} ${f - 220}`} stroke={OL} strokeWidth={6} fill="none" />)}
-      {flow > 0.02 && flowLine(`M 1300 ${f - 300} Q 1500 ${f - 330} 1650 ${f - 260} T 1900 ${f - 240}`, 14 * flow, GOLD, t, 'pw')}
-      <g transform={`translate(1960 ${f})`}><rect x={-120} y={-200} width={240} height={200} fill="#E4E9F0" stroke={OL} strokeWidth={5} /><path d="M -130 -200 L -60 -250 L 10 -200 L 80 -250 L 130 -200" fill="#C5CDD8" stroke={OL} strokeWidth={4} />
+      {[0, 1, 2].map((k) => <path key={'py' + k} d={`M ${1400 + k * 110} ${f} L ${1430 + k * 110} ${f - 260} L ${1460 + k * 110} ${f} M ${1408 + k * 110} ${f - 220} L ${1452 + k * 110} ${f - 220}`} stroke={OL} strokeWidth={6} fill="none" />)}
+      {flow > 0.02 && flowLine(`M 1300 ${f - 300} Q 1450 ${f - 330} 1580 ${f - 260} T 1700 ${f - 240}`, 14 * flow, GOLD, t, 'pw')}
+      <g transform={`translate(1780 ${f})`}><rect x={-120} y={-200} width={240} height={200} fill="#E4E9F0" stroke={OL} strokeWidth={5} /><path d="M -130 -200 L -60 -250 L 10 -200 L 80 -250 L 130 -200" fill="#C5CDD8" stroke={OL} strokeWidth={4} />
         {plaque(0, -280, 'ROBOT PLANT?', GOLD, 20)}</g>
       {z.plaque && plaque(960, 330, z.plaque, '#FFFFFF', 26)}
       {ground(z, f, '#9ED07F', '#7DB85F')}
@@ -256,10 +256,10 @@ const RAW: Record<string, SetFn> = {
       <rect x={z.x0} y={-2500} width={z.x1 - z.x0} height={4000} fill="#F2EBDD" />
       {Array.from({length: 8}, (_, k) => <rect key={'wn' + k} x={z.x0 + 100 + k * 460} y={90} width={220} height={240} rx={14} fill="#BFE6F7" stroke={OL} strokeWidth={5} />)}
       <g transform="translate(1600 210)"><circle r={80} fill="#FFFFFF" stroke={OL} strokeWidth={6} /><path d={`M 0 0 L ${50 * Math.sin(t * rush * 2)} ${-50 * Math.cos(t * rush * 2)} M 0 0 L ${34 * Math.sin(t * rush * 0.2)} ${-34 * Math.cos(t * rush * 0.2)}`} stroke={OL} strokeWidth={6} strokeLinecap="round" /></g>
-      <g transform="translate(960 360)"><rect x={-360} y={-50} width={720} height={90} rx={12} fill={NAVY} stroke={OL} strokeWidth={5} /><T x={0} y={14} s={fit(sign, 680, 44)} c={GOLD}>{sign}</T></g>
       {/* paper towers */}
       {[0, 1, 2, 3, 4].map((q) => { const h = 40 + stack * (160 + q * 70) * (0.7 + 0.3 * rnd(q)), x = 340 + q * 320;
         return <g key={'pt' + q} transform={`translate(${x} ${f - 240}) rotate(${Math.sin(t * 2 + q) * stack * 2})`}>{Array.from({length: Math.max(1, Math.floor(h / 16))}, (_, r) => <rect key={r} x={-80 + (rnd(q * 9 + r) - 0.5) * 14} y={-r * 16 - 16} width={160} height={14} fill={r % 5 === 4 ? '#FFE9A8' : PAPER} stroke={OL} strokeWidth={2} />)}</g>; })}
+      <g transform="translate(960 180)"><rect x={-360} y={-50} width={720} height={90} rx={12} fill={NAVY} stroke={OL} strokeWidth={5} /><T x={0} y={14} s={fit(sign, 680, 44)} c={GOLD}>{sign}</T></g>
       <rect x={z.x0} y={f - 240} width={z.x1 - z.x0} height={240} fill="#B07A4A" stroke={OL} strokeWidth={6} />
       {Array.from({length: 12}, (_, k) => <rect key={'pn' + k} x={z.x0 + 40 + k * 340} y={f - 200} width={280} height={160} rx={8} fill="#C48A57" stroke={OL} strokeWidth={4} />)}
       {/* stamp */}
@@ -339,7 +339,7 @@ const RAW: Record<string, SetFn> = {
         <path d="M -40 -40 L 60 -140 L 110 -140 L 60 -40 Z M -200 -50 L -240 -130 L -200 -130 L -150 -50 Z" fill={TEAL} stroke={OL} strokeWidth={4} />{[0, 1, 2, 3, 4, 5].map((q) => <circle key={q} cx={-140 + q * 50} cy={-26} r={8} fill="#BFE6F7" stroke={OL} strokeWidth={2} />)}</g>
       <g transform="translate(1500 300)"><rect x={-230} y={-90} width={460} height={180} rx={10} fill={NAVY} stroke={OL} strokeWidth={5} /><T x={0} y={-30} s={26} c={GOLD}>DEPARTURES</T><T x={0} y={30} s={fit(z.board || 'BOARDING', 420, 32)} c="#FFFFFF">{z.board || 'BOARDING'}</T></g>
       <g transform={`translate(420 ${f})`}><rect x={-160} y={-200} width={320} height={200} fill="#8A6236" stroke={OL} strokeWidth={5} /><path d="M -180 -260 L 180 -260 L 150 -200 L -150 -200 Z" fill={GREEN} stroke={OL} strokeWidth={5} /><T x={0} y={-218} s={24} c="#FFFFFF">CAFÉ</T>
-        {[0, 1, 2].map((q) => <g key={q} transform={`translate(${-80 + q * 80} -210)`}><rect x={-18} y={-40} width={36} height={40} rx={6} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><path d={`M -6 -50 q 6 -${10 + 4 * Math.sin(t * 3 + q)} 0 -24`} stroke="#B0BEC5" strokeWidth={3} fill="none" /></g>)}</g>
+        {[0, 1, 2].map((q) => <g key={q} transform={`translate(${-80 + q * 80} -100)`}><rect x={-18} y={-40} width={36} height={40} rx={6} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><path d={`M -6 -50 q 6 -${10 + 4 * Math.sin(t * 3 + q)} 0 -24`} stroke="#B0BEC5" strokeWidth={3} fill="none" /></g>)}</g>
       <rect x={z.x0} y={f} width={z.x1 - z.x0} height={700} fill="#C9CED6" />{Array.from({length: 20}, (_, k) => <path key={'tl' + k} d={`M ${z.x0 + k * 200} ${f} l 0 700`} stroke="#B3BAC4" strokeWidth={4} />)}
     </g>;
   },
@@ -351,10 +351,10 @@ const RAW: Record<string, SetFn> = {
       <rect x={-200} y={-200} width={2400} height={1500} fill="#E9F6EC" />
       {Array.from({length: 20}, (_, k) => <path key={'ray' + k} transform={`translate(960 1000) rotate(${k * 18 + t * 4})`} d="M 0 0 L -70 -1500 L 70 -1500 Z" fill={k % 2 ? '#D4EEDB' : '#FFF6D2'} />)}
       {hills({set: '', x0: -200, x1: 2200}, 1000, '#4FB360', 4, 200)}
-      <circle cx={1600} cy={260} r={90} fill={GOLD} stroke={OL} strokeWidth={6} />
+      <circle cx={1780} cy={700} r={80} fill={GOLD} stroke={OL} strokeWidth={6} />
       {turbine(260, 1000, 0.9, t, 1)}{turbine(420, 1000, 0.7, t, 2)}
-      <g transform="translate(960 960)">{arm(0, 0, 1.4, t * 0.5, 3)}</g>
-      <g transform={`translate(1500 ${lerp(700, 960, E.outBack(win(t, 1.6, 0.6)))})`}>{minibot(0, 0, 2.2, 'tb')}</g>
+      <g transform="translate(700 1000)">{arm(0, 0, 0.9, t * 0.5, 3)}</g>
+      <g transform={`translate(1250 ${lerp(760, 990, E.outBack(win(t, 1.6, 0.6)))})`}>{minibot(0, 0, 2.0, 'tb')}</g>
       {lines.map((ln, k) => { const n = Math.floor(clamp((t - 0.4 - k * 0.55) / 0.5) * ln.length);
         return <T key={k} x={960} y={190 + k * 135} s={fit(ln, 1500, k === lines.length - 1 ? 130 : 100)} c={k === lines.length - 1 ? GREEN : NAVY} st="#FFFFFF" sw={14}>{ln.slice(0, n)}</T>; })}
       <T x={960} y={620} s={30} c={NAVY} ls={6}>THE HIDDEN ECONOMICS</T>
