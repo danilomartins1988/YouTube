@@ -88,9 +88,9 @@ explicitly illustrative, so policy changes do not date the film.
 | Browse and Suggested audience appeal | 20 | 18 | 18 | AI + China + jobs |
 | Title and thumbnail potential | 20 | 15 | 17 | concrete title; mobile-first C with two factories |
 | Evergreen demand | 15 | 13 | 13 | |
-| Narrative and retention potential | 15 | 14 | 14 | midpoint twist, flipping experiment |
+| Narrative and retention potential | 15 | 14 | 15 | protagonist (Mel builds a factory), midpoint twist, flipping experiment; story-over-stats rewrite |
 | Competitive differentiation | 10 | 9 | 9 | evidence vs "dark factory" hype |
-| **Total** | **100** | **84** | **87** | |
+| **Total** | **100** | **84** | **88** | |
 
 **Gap to 90 (not padded):** search demand cannot be scored higher without Trends or vidIQ volume data; title/thumbnail lacks a
 recognizable face or brand (no public figure is central). Closing it needs owner-supplied demand data and a post-publication

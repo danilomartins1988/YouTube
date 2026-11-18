@@ -1,5 +1,14 @@
 # Ep 62 fact check: Could AI Make American Factories Cheaper Than China's?
 
+Story-over-stats revision (2026-11-18): the narration now says each figure as a rounded comparison (14 spoken numbers by
+`tools/count_numbers.py`, at most one per scene). How each spoken line maps to the exact figure below:
+"about twice as much ... millions fewer workers" = output ×2.09, jobs 19.6M → 12.7M; "about a quarter" = 27.4%; "about five
+times the pay per hour" = $29.05/h vs ≈ $11,200/yr (≈ $5-6/h at 2,000-2,300 h; rough, our calculation); "about 13 cents" =
+12.9%; "more new robots than the rest of the world combined" = 59%; "roughly nine for every American one" = 354,226 / 38,428;
+"America has more robots per worker; South Korea several times more than both" = 323 vs 193; 1,066; "more than half" = 55%;
+"Japan builds more robots than anyone" = 38% of production; "China refines most of the rare earths" = 85%; "the more robots
+arrived, the fewer people employed and the lower wages" = Acemoglu & Restrepo (−0.2 pp, −0.42% per robot per 1,000 workers).
+
 | Claim (as narrated / on screen) | Source | Status |
 |---|---|---|
 | 603,307 industrial robots installed worldwide in 2025 (+11%, record); stock 5,079,078 | IFR World Robotics 2026, Executive Summary (Sep 24, 2026) | source_located |
