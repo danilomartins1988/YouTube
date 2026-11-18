@@ -130,10 +130,10 @@ stage("s03_town", "c1_town", {
 board("p04_draw", "c1_draw", "The shrinking workforce (working-age population, ages 15-64)", "Let me draw what happened", [
     {"d": "M 640 860 L 1560 860", "color": "ink", "width": 5, "start": C("Let me draw what happened")},
     {"d": "M 720 860 L 720 330 L 940 330 L 940 860 Z", "color": "accent2", "width": 3, "fill": "accent2", "fillOpacity": 0.6, "kind": "bar", "start": C("This bar is everyone"), "label": lbl("1995 PEAK · 87.3M", 830, 312, 26, "accent2")},
-    {"d": "M 1080 860 L 1080 410 L 1300 410 L 1300 860 Z", "color": "accent2", "width": 3, "fill": "accent2", "fillOpacity": 0.35, "kind": "bar", "start": C("This bar is today"), "label": lbl("2024 · 73.7M", 1190, 392, 26, "accent2")},
+    {"d": "M 1080 860 L 1080 410 L 1300 410 L 1300 860 Z", "color": "accent2", "width": 3, "fill": "accent2", "fillOpacity": 0.35, "kind": "bar", "start": C("This bar is today"), "label": lbl("2024 · 73.7M", 1190, 480, 26, "ink")},
     {"d": "M 1080 330 L 1300 330 L 1300 410 L 1080 410 Z", "color": "risk", "width": 5, "kind": "box", "start": C("Japan has lost"), "label": lbl("−13.5M", 1190, 380, 30, "risk")},
-    {"d": rect(1340, 250, 260, 110), "color": "risk", "width": 6, "kind": "box", "start": C("all of Tokyo"), "label": lbl("≈ ALL OF TOKYO", 1470, 318, 28, "risk")},
-    {"d": arrow((1340, 330), (1305, 365), 0.2), "color": "risk", "width": 5, "kind": "arrow", "start": C("all of Tokyo", 0.4)},
+    {"d": rect(1360, 520, 260, 110), "color": "risk", "width": 6, "kind": "box", "start": C("all of Tokyo"), "label": lbl("≈ ALL OF TOKYO", 1490, 588, 28, "risk")},
+    {"d": arrow((1400, 520), (1305, 380), 0.2), "color": "risk", "width": 5, "kind": "arrow", "start": C("all of Tokyo", 0.4)},
     {"d": dot(1100, 920), "color": "muted", "width": 1, "start": C("Let me draw what happened"), "label": lbl("IPSS (1995 CENSUS PEAK 87.26M) · STATISTICS BUREAU (OCT 2024: 73.73M) · DIFFERENCE = OUR CALC · TOKYO ≈ 14.3M (TMG)", 1100, 920, 15, "muted")},
 ], [{"kind": "point", "at": C("This bar is today", 0.4), "dur": 1.4, "target": [1190, 500]}, {"kind": "point", "at": C("Japan has lost", 0.6), "dur": 1.6, "target": [1190, 370]},
     {"kind": "react", "at": C("That's the size of the hole")}], sources=["ipss23", "stat_pop24", "tmg_pop"])
@@ -306,12 +306,12 @@ board("p23_draw", "c4_draw", "Who gets paid for Kobo? (our framework)", "Let me 
     {"d": dot(1130, 455), "color": "risk", "width": 1, "start": C("Much of that is written"), "label": lbl("MUCH OF IT: US + CHINA", 1130, 462, 20, "risk")},
     {"d": rect(1340, 300, 300, 130), "color": "accent3", "width": 7, "kind": "box", "start": C("And finally, the user"), "label": lbl("THE USER", 1490, 375, 32, "accent3")},
     {"d": dot(1490, 455), "color": "accent3", "width": 1, "start": C("the small business"), "label": lbl("SMALL FIRMS", 1490, 462, 22, "accent3")},
-    {"d": rect(960, 640, 280, 110), "color": "ink", "width": 6, "kind": "box", "start": C("more and more of the money"), "label": lbl("$ VALUE", 1100, 708, 32, "ink")},
-    {"d": arrow((1100, 640), (1140, 480), -0.1), "color": "accent3", "width": 6, "kind": "arrow", "start": C("flows to the brain")},
-    {"d": arrow((1180, 640), (1460, 480), -0.15), "color": "accent3", "width": 6, "kind": "arrow", "start": C("and to the user")},
+    {"d": rect(1360, 640, 280, 110), "color": "ink", "width": 6, "kind": "box", "start": C("more and more of the money"), "label": lbl("$ VALUE", 1500, 708, 32, "ink")},
+    {"d": arrow((1420, 640), (1180, 480), 0.1), "color": "accent3", "width": 6, "kind": "arrow", "start": C("flows to the brain")},
+    {"d": arrow((1520, 640), (1500, 480), -0.1), "color": "accent3", "width": 6, "kind": "arrow", "start": C("and to the user")},
     {"d": rect(560, 780, 420, 80), "color": "accent", "width": 5, "kind": "box", "start": C("Japan owns the arm"), "label": lbl("JAPAN OWNS THE ARM", 770, 832, 28, "accent")},
     {"d": dot(1300, 905), "color": "muted", "width": 1, "start": C("Let me draw it"), "label": lbl("FRAMEWORK · OUR ANALYSIS · NO FIGURES", 1300, 905, 16, "muted")},
-], [{"kind": "point", "at": C("Second, the brain", 0.4), "dur": 1.4, "target": [1130, 365]}, {"kind": "point", "at": C("flows to the brain", 0.2), "dur": 1.6, "target": [1100, 695]},
+], [{"kind": "point", "at": C("Second, the brain", 0.4), "dur": 1.4, "target": [1130, 365]}, {"kind": "point", "at": C("flows to the brain", 0.2), "dur": 1.6, "target": [1500, 695]},
     {"kind": "react", "at": C("Japan owns the arm")}], enter_left=True)
 
 # ====================================================================== CHAPTER 5: the catch
@@ -406,7 +406,7 @@ stage("s35_button", "button", {
     "items": [HIRO(900, 0.0, face="grin", pose="stand", scale=1.15),
               bub("DOES KOBO WANT TEA?", 900, 280, 0.5, until=2.8, tail=[900, 520], size=30),
               AOI(560, 0.3, face="happy", pose="point", scale=1.1),
-              bub("IT ONLY DRINKS ELECTRICITY.", 600, 300, 2.9, tail=[560, 540], size=28),
+              bub("IT ONLY DRINKS ELECTRICITY.", 640, 420, 2.9, tail=[560, 560], size=28),
               it("kobo", x=[[0, 2300], [2.0, 1300]], y=1010, at=1.4, scale=0.7, face="happy", wave=[3.4, 4.6])]},
     sfx=[{"kind": "hit", "at": 3.0, "gain": 0.3}])
 
@@ -418,6 +418,29 @@ for _sc in cartoon_kit.scenes:
             _k["zoom"] = max(0.85, min(_k["zoom"], 1.15))
             _k["y"] = max(480, min(600, _k["y"]))
         _sc["params"]["drift"] = min(_sc["params"].get("drift", 3), 2)
+
+TAGCOL = {"FACT": "green", "ESTIMATE": "gold", "PROJECTION": "gold", "OUR": "gold", "COMPANY": "gold", "PLAN": "gold", "FINDING": "green"}
+for _sc in cartoon_kit.scenes:
+    if _sc["type"] != "engine_cartoon":
+        continue
+    P = _sc["params"]
+    for _k in P.get("cam", []):
+        _k["zoom"] = min(_k["zoom"], 1.25)
+        _k["y"] = max(470, min(570, _k["y"]))
+    keep, calls = [], P.setdefault("callouts", [])
+    for _it in P.get("items", []):
+        if _it.get("kind") == "jtag":
+            tl = _it["tags"]
+            for j, (t0, txt) in enumerate(tl):
+                c = {"text": txt, "x": 40 + (len(txt) * 20 * 0.6 + 60) / 2, "y": 50, "at": t0, "size": 20, "screen": True, "color": TAGCOL.get(txt.split(" ")[0], "white")}
+                if j + 1 < len(tl):
+                    c["until"] = tl[j + 1][0]
+                calls.append(c)
+            continue
+        if _it.get("kind") in ("toonwords", "sign", "bubble") and isinstance(_it.get("y"), (int, float)) and _it["y"] < 200:
+            _it["y"] = 200
+        keep.append(_it)
+    P["items"] = keep
 
 write(OUT, "# GENERATED by tools/gen_japanai_storyboard.py; edit the generator, not this file.\n"
            "# Episode 66 storyboard (Will AI Make Japan Rich Again?): bespoke worlds in CartoonStage/japan.tsx.\n")
