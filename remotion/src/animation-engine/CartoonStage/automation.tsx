@@ -268,7 +268,7 @@ export const AUTOMATION_SETS: Record<string, SetFn> = {
           {win_ && <g transform={`translate(0 ${base - acc - 140}) scale(${pop(t, z.judgeAt, 0.5)})`}><path d="M -50 20 L -60 -30 L -25 -5 L 0 -45 L 25 -5 L 60 -30 L 50 20 Z" fill={YEL} stroke={OL} strokeWidth={4} strokeLinejoin="round" /><T x={0} y={50} s={22} c={GREEN}>CHEAPEST</T></g>}
         </g>; })}
       {/* knobs */}
-      {(z.knobs || []).map((kb: any, k: number) => { if (t < (kb.at ?? 0)) return null; const v = kf(kb.v, t, 0), mx = kb.max ?? 100, an = -130 + 260 * clamp(v / mx), kx = z.knobX ?? 1740, ky = f - 600 + k * 240;
+      {(z.knobs || []).map((kb: any, k: number) => { if (t < (kb.at ?? 0)) return null; const v = kf(kb.v, t, 0), mx = kb.max ?? 100, an = -130 + 260 * clamp(v / mx), kx = z.knobX ?? 1690, ky = f - 600 + k * 240;
         return <g key={'kb' + k} transform={`translate(${kx} ${ky}) scale(${pop(t, kb.at ?? 0)})`}>
           <rect x={-120} y={-100} width={240} height={200} rx={20} fill="#263238" stroke={OL} strokeWidth={5} />
           <path d="M -70 30 A 80 80 0 1 1 70 30" stroke="#455A64" strokeWidth={14} fill="none" strokeLinecap="round" />

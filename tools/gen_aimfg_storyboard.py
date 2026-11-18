@@ -65,7 +65,7 @@ def words(text, x, y, at, **kw):
 
 def bumper(id_, seg, num, act, title, caption, color, torq_face="happy"):
     stage(id_, seg, {**W1("aibumper", num=num, act=act, title=title, caption=caption, color=color), "cam": STILL(), "drift": 0, "tone": "sitcom",
-                     "min_seconds": 4.4, "items": [TORQ([[0, -300], [0.9, 560]], 0.3, y=1010, scale=0.75, stampAt=1.0, face=torq_face, faces=[[0, torq_face], [1.05, "smug"]])]},
+                     "min_seconds": 4.0, "items": [TORQ([[0, -300], [0.9, 560]], 0.3, y=1010, scale=0.75, stampAt=1.0, face=torq_face, faces=[[0, torq_face], [1.05, "smug"]])]},
           sfx=[{"kind": "whoosh", "at": 0.05, "gain": 0.25}, {"kind": "hit", "at": 1.05, "gain": 0.3}])
 
 
@@ -96,10 +96,10 @@ KNOBS = lambda tar=10, busy=100, at=0.0: [{"label": "TARIFF", "v": tar, "at": at
 
 # ====================================================================== ACT 1: the factory that changes everything (hook)
 stage("s01_hook", "co_hook", {
-    **W1("ohiobot", variant="us", hyp=True, hypAt=0, hypX=960, hypY=70, arms=5, armX=-200, armGap=520, scanX=1560, schedX=760,
+    **W1("ohiobot", variant="us", hyp=True, hypAt=0, hypX=960, hypY=70, arms=5, armX=-200, armGap=520, scanX=1560, schedX=1250,
          hiAt=[[0, None], [C("Cameras check"), "vision"], [C("Software decides"), "sched"], [C("Now imagine"), None]]),
     "cam": cam((0, 700, 560, 1.15), (C("Inside, robot arms"), 900, 520, 1.0, 1.4), (C("Cameras check"), 1500, 480, 1.25, 1.0),
-               (C("Software decides"), 800, 300, 1.25, 1.0), (C("Now imagine"), 960, 520, 0.9, 1.4), (C("That factory is hypothetical"), 960, 500, 1.0, WHIP),
+               (C("Software decides"), 1250, 300, 1.25, 1.0), (C("Now imagine"), 960, 520, 0.9, 1.4), (C("That factory is hypothetical"), 960, 500, 1.0, WHIP),
                (C("So could"), 960, 460, 0.85, 1.4)), "drift": 4,
     "items": [words("OHIO · SUNDAY AFTERNOON", 700, 200, 0.2, until=C("Inside, robot arms"), size=58),
               it("pricemeter", x=960, y=380, at=C("costs about the same"), until=C("That factory is hypothetical"), tilt=[[0, 0.6], [C("costs about the same", 0.4), 0.0]], scale=0.75,
@@ -112,7 +112,7 @@ stage("s01_hook", "co_hook", {
     sfx=[{"kind": "hit", "cue": "That factory is hypothetical", "gain": 0.3}])
 stage("s02_title", "title_card", {
     **W1("aititle", lines=["CHEAPER THAN", "CHINA?"], sub="COULD AI MAKE AMERICAN FACTORIES CHEAPER THAN CHINA'S?",
-         subs=[[2.2, "Tonight: “The Robot Who Wanted Legs” · Part 2 of the factory story"]]), "cam": STILL(), "drift": 0, "min_seconds": 5.8,
+         subs=[[2.2, "Tonight: “The Robot Who Wanted Legs” · Part 2 of the factory story"]]), "cam": STILL(), "drift": 0, "min_seconds": 5.4,
     "items": [TORQ(300, 2.4, y=1060, scale=0.8, legs=True, legsFallAt=4.4, faces=[[0, "happy"], [4.4, "shock"]]), MEL(1700, 2.6, scale=1.1, face="happy", pose="wave", y=1080)]},
     sfx=[{"kind": "hit", "at": 0.5, "gain": 0.35}, {"kind": "hit", "at": 4.5, "gain": 0.25}])
 stage("s03_stakes", "a1_stakes", {
@@ -166,7 +166,7 @@ stage("s07_wage", "a2_wage", {
               WEI(1550, 0.3, face="happy", pose="stand", hold="clipboard")]},
     sources=["bls_ces", "nbs_wage", "fed_g5a"])
 stage("s08_question", "a2_question", {
-    **W1("megafloor", board="LABOR: CHINA'S OLDEST HEAD START", boardX=1000, hi=None),
+    **W1("megafloor", board="LABOR: CHINA'S OLDEST HEAD START", boardX=-1400, hi=None),
     "cam": cam((0, 900, 520, 1.0), (C("does China's oldest"), 1000, 500, 1.15, WHIP), (C("To find out"), 1300, 520, 0.95, 1.4)), "drift": 4,
     "items": [TORQ([[0, -300], [1.4, 800]], 0.0, faces=[[0, "happy"], [C("does China's oldest"), "smug"]]),
               it("homebox", x=[[0, 1000], [C("shrink the labor"), 1000], [C("does China's oldest"), 1000]], at=0.2, label="LABOR", face="worry", scale=1.0),
@@ -237,7 +237,7 @@ stage("s14_humanoid", "a3_humanoid", {
               words("THE ARM BOLTED TO THE FLOOR", 1600, 140, C("It's the arm"), size=54, color="#FFFFFF")]},
     sources=["ifr_wr26"], sfx=[{"kind": "hit", "cue": "isn't the one that dances", "gain": 0.3}])
 stage("s15_bill", "a3_bill", {
-    **W1("billbox", title="WHERE $1 OF U.S. FACTORY SALES WENT · 2021", slices=[[C("went to materials", -0.6), "MATERIALS & PARTS ≈ 55¢", 55, TEAL],
+    **W1("billbox", title="WHERE $1 OF U.S. FACTORY SALES WENT · 2021", slices=[[0.4, "MATERIALS & PARTS ≈ 55¢", 55, TEAL],
                                                                                  [C("Wages and salaries"), "PAYROLL ≈ 13¢", 13, ORANGE],
                                                                                  [C("That's our calculation", -0.2), "EVERYTHING ELSE ≈ 32¢", 32, PURPLE]],
          note="CENSUS 2021 ANNUAL SURVEY OF MANUFACTURES · SHARES ARE OUR CALCULATION · PAYROLL = ALL EMPLOYEES, BEFORE BENEFITS", noteAt=C("for American factories")),
@@ -497,7 +497,7 @@ add("s41_end", "teaser", "end_card", {"words": ["Next time:", "another hidden li
     "teaser": "Every figure in this film is sourced in the description", "brand_cue": {"cue": "This is The Hidden Economics"}})
 stage("s42_button", "button", {
     **W1("ohiobot", variant="us", arms=3, armX=1400, armGap=420, scanX=2600, schedX=-800, carts=1),
-    "cam": cam((0, 900, 560, 1.2), (3.2, 960, 560, 1.35, WHIP)), "drift": 0, "min_seconds": 6.0,
+    "cam": cam((0, 900, 560, 1.2), (3.2, 960, 560, 1.35, WHIP)), "drift": 0, "min_seconds": 5.6,
     "items": [it("gizmo", x=700, y=760, at=0.0, scale=0.55, face="happy", toastAt=1.2, parts=[[0, p] for p in ["BODY", "SLOTS", "COIL", "LEVER", "KNOB", "PLUG", "FEET"]],
                  stamp="MADE IN OHIO* (*PARTS: EVERYWHERE)", stampAt=2.2, stampX=0, stampY=60),
               MEL(450, 0.0, face="grin", pose="cheer", hops=[1.4], scale=1.2),
