@@ -163,8 +163,7 @@ stage("s08_trucks", "c2_trucks", {
     **W1("jroad", trucks=[[0, 6], [C("But fewer drivers"), 6], [C("move fewer boxes"), 3], [C("short of trucks"), 2]], capAt=C("Japan capped"),
          left=[[0, 0.0], [C("move fewer boxes"), 0.0], [C("short of trucks"), 0.34]]),
     "cam": cam((0, 500, 560, 1.0), (C("Japan capped"), 1500, 420, 1.05, 1.4), (C("But fewer drivers"), 600, 600, 0.95, 1.4), (C("short of trucks"), 1500, 620, 1.0, 1.4)), "drift": 3,
-    "items": [it("kobo", x=-300, at=99, scale=0.1),
-              words("GOOD FOR THE DRIVERS", 1500, 150, C("Good for the drivers"), size=48, color=GREEN, until=C("But fewer drivers")),
+    "items": [words("GOOD FOR THE DRIVERS", 1500, 150, C("Good for the drivers"), size=48, color=GREEN, until=C("But fewer drivers")),
               words("FEWER DRIVERS × FEWER HOURS", 700, 150, C("But fewer drivers"), size=48, until=C("The government warns")),
               words("≈ 1/3 OF CARGO WITHOUT A TRUCK", 1500, 150, C("short of trucks"), size=54, color=RED),
               sign("FY2030 · IF NOTHING CHANGES", 1500, 240, C("short of trucks", 0.6), color="#FFE0B2", size=24),
@@ -303,7 +302,7 @@ stage("s22_hiro", "c4_hiro", {
 board("p23_draw", "c4_draw", "Who gets paid for Kobo? (our framework)", "Let me draw it", [
     {"d": rect(620, 300, 300, 130), "color": "accent", "width": 7, "kind": "box", "start": C("First, the arm"), "label": lbl("THE ARM", 770, 375, 32, "accent")},
     {"d": dot(770, 455), "color": "accent", "width": 1, "start": C("Japan is superb"), "label": lbl("JAPAN: SUPERB", 770, 462, 22, "accent")},
-    {"d": rect(980, 300, 300, 130), "color": "accent4" if False else "risk", "width": 7, "kind": "box", "start": C("Second, the brain"), "label": lbl("THE BRAIN (AI)", 1130, 375, 30, "risk")},
+    {"d": rect(980, 300, 300, 130), "color": "risk", "width": 7, "kind": "box", "start": C("Second, the brain"), "label": lbl("THE BRAIN (AI)", 1130, 375, 30, "risk")},
     {"d": dot(1130, 455), "color": "risk", "width": 1, "start": C("Much of that is written"), "label": lbl("MUCH OF IT: US + CHINA", 1130, 462, 20, "risk")},
     {"d": rect(1340, 300, 300, 130), "color": "accent3", "width": 7, "kind": "box", "start": C("And finally, the user"), "label": lbl("THE USER", 1490, 375, 32, "accent3")},
     {"d": dot(1490, 455), "color": "accent3", "width": 1, "start": C("the small business"), "label": lbl("SMALL FIRMS", 1490, 462, 22, "accent3")},

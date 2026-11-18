@@ -113,8 +113,8 @@ stage("s03_link", "a1_link", {
               tag((0, "OUR SERIES"))]})
 board("p04_split", "a1_draw", "One $100 bill = everything America earns", C("Picture a hundred-dollar bill"), [
     {"d": rect(640, 420, 560, 240), "color": "accent3", "width": 6, "kind": "box", "start": C("Picture a hundred-dollar bill"), "label": lbl("$100", 920, 560, 90, "accent3")},
-    {"d": "M 800 420 L 800 660", "color": "ink", "width": 5, "start": C("A slice goes to the people")},
-    {"d": "M 860 420 L 860 660", "color": "ink", "width": 5, "start": C("A slice goes to the owners")},
+    {"d": "M 640 660 L 640 420 L 800 420 L 800 660 Z", "color": "accent2", "width": 4, "fill": "accent2", "fillOpacity": 0.45, "kind": "bar", "start": C("A slice goes to the people")},
+    {"d": "M 800 660 L 800 420 L 860 420 L 860 660 Z", "color": "accent", "width": 4, "fill": "accent", "fillOpacity": 0.7, "kind": "bar", "start": C("A slice goes to the owners")},
     {"d": arrow((720, 665), (700, 780), 0.0), "color": "accent2", "width": 6, "kind": "arrow", "start": C("A slice goes to the people"), "label": lbl("PAY", 700, 820, 34, "accent2")},
     {"d": arrow((830, 665), (900, 780), 0.0), "color": "accent", "width": 6, "kind": "arrow", "start": C("A slice goes to the owners"), "label": lbl("PROFIT", 920, 820, 34, "accent")},
     {"d": arrow((1030, 665), (1150, 780), 0.0), "color": "muted", "width": 6, "kind": "arrow", "start": C("The rest covers"), "label": lbl("EVERYTHING ELSE", 1170, 820, 26, "muted")},
@@ -167,6 +167,14 @@ stage("s09_why", "a1_why", {
               tag((0, "DEBATED CAUSES"), (C("But here's what a robot adds"), "MECHANISM"))]},
     sources=["autor_superstar", "ar_framework"])
 
+stage("s09b_dana", "a1_dana", {
+    **W1("robotown", robots=[[0, 3], [C("The robots took"), 6]], workers=[[0, 3], [C("It just stopped hiring"), 1]], flowAt=C("It went somewhere"), flowTo="tower"),
+    "cam": cam((0, 0, 600, 1.2), (C("The robots took"), 450, 560, 1.0, 1.2), (C("It went somewhere"), 800, 500, 0.9, 1.4)), "drift": 3,
+    "items": [DANA(-60, 0.0, face="worry", pose="clipboard", hold="clipboard", y=1000, poses=[[C("It went somewhere"), "point"]]),
+              it("bubble", text="NOBODY GOT FIRED. WE JUST STOPPED HIRING.", x=100, y=280, at=0.4, until=C("The robots took"), tail=[-60, 560], size=26),
+              sign("NIGHT SHIFT: NOW ROBOTS", 450, 160, C("The robots took"), color="#BBDEFB", size=32, until=C("It went somewhere")),
+              words("THE MONEY WENT SOMEWHERE", 800, 150, C("It went somewhere"), size=52, color="#FFFFFF"),
+              tag((0, "DANA'S STORY · FICTIONAL"))]})
 # ====================================================================== ACT 2: who owns the machines?
 bumper("s10_b2", "a2_card", "2", "WHO OWNS THE MACHINES?", "Hint: not the machines.", BLUE)
 GROUPS = lambda at=(0, 0, 0), disp=("< $1", "", "≈ $88"): [
@@ -247,6 +255,13 @@ stage("s20_missing", "a3_missing", {
     "cam": cam((0, 960, 500, 0.85), (C("The worker whose task"), 1350, 560, 1.0, 1.2), (C("Unless that worker"), 1150, 540, 0.9, 1.2)), "drift": 2,
     "items": [words("WHO'S MISSING?", 960, 120, 0.2, size=58, until=C("The worker whose task")),
               tag((0, "MECHANISM"))]})
+stage("s20b_dana", "a3_dana", {
+    **W1("moneyloop", loopAt=0.0, outAt=0.0, doorAt=C("Yet")),
+    "cam": cam((0, 1350, 560, 1.0), (C("Every step of that chain"), 960, 500, 0.85, 1.4), (C("Yet"), 1150, 540, 0.95, WHIP)), "drift": 2,
+    "items": [DANA(1750, 0.0, face="worry", pose="shrug", y=1000, faces=[[0, "worry"], [C("Yet"), "smug"]]),
+              words("EVERY STEP HAS OWNERS", 960, 120, C("Every step of that chain"), size=54, until=C("Yet")),
+              words("...YET", 1150, 120, C("Yet"), size=70, color="#FFFFFF"),
+              tag((0, "DANA'S STORY · MECHANISM"))]})
 stage("s21_risk", "a3_risk", {
     **W1("dcfield", camps=CAMPS([0, 0, 0, 0]), foot="AMAZON: FREE CASH FLOW, 12 MONTHS TO SEP 30, 2026 = 'AN OUTFLOW OF $42.4 BILLION' (COMPANY RELEASE)"),
     "cam": cam((0, 760, 500, 0.75), (C("Over the past year"), 0, 500, 1.0, 1.2), (C("Owners get the upside"), 760, 500, 0.8, 1.4)), "drift": 2,
@@ -329,6 +344,14 @@ stage("s31_end", "a5_end", {
               tag((0, "HISTORY · ILLUSTRATIVE SHAPE"))]},
     sources=["allen"])
 
+stage("s31b_today", "a5_today", {
+    **W1("millyard", prog=1.0, pauseAt=0.0, catchAt=0.0),
+    "cam": cam((0, 960, 420, 1.0), (C("What history does show"), 960, 560, 0.85, 1.4)), "drift": 2,
+    "items": [words("A NEW ENGELS' PAUSE?", 960, 640, 0.2, size=56, until=C("Workers' share")),
+              sign("TODAY: WORKERS' SHARE AT A RECORD LOW (BLS)", 960, 640, C("Workers' share"), color="#FFCDD2", size=30, until=C("What history does show")),
+              sign("NEITHER THE PAUSE NOR THE CATCH-UP IS AUTOMATIC", 960, 640, C("What history does show"), color="#FFF59D", size=30),
+              tag((0, "OPEN QUESTION"), (C("Workers' share"), "FACT · BLS"))]},
+    sources=["bls_ls", "allen"])
 # ====================================================================== ACT 6: the case against the doom story
 bumper("s32_b6", "a6_card", "6", "THE CASE AGAINST THE DOOM STORY", "Four reasons for hope, fairly stated.", GREEN)
 stage("s33_newjobs", "a6_newjobs", {
@@ -403,6 +426,13 @@ stage("s40_risk", "a7_risk", {
               words("YOU SHARE THE BAD YEARS TOO", 960, 820, C("Owning a slice"), size=46, color="#FFFFFF"),
               tag((0, "EDUCATION, NOT ADVICE"))]})
 
+stage("s40b_dana", "a7_dana", {
+    **W1("doorways", doors=DOORS([C("Her employer offers"), 999, 999])),
+    "cam": cam((0, 700, 560, 1.05), (C("But it's the moment"), 960, 520, 0.85, 1.4)), "drift": 2,
+    "items": [DANA(700, 0.0, face="happy", pose="clipboard", hold="clipboard", y=1000, faces=[[0, "worry"], [C("But it's the moment"), "happy"]]),
+              sign("HER DECISION, NOT ADVICE", 960, 300, C("That's her decision"), color="#FFFFFF", size=32, until=C("But it's the moment")),
+              words("BOTH SIDES OF THE LOOP", 960, 300, C("But it's the moment"), size=54, color="#FFFFFF"),
+              tag((0, "DANA'S STORY · FICTIONAL"), (C("That's her decision"), "EDUCATION, NOT ADVICE"))]})
 # ====================================================================== ACT 8: who gets rich?
 bumper("s41_b8", "a8_card", "8", "WHO GETS RICH?", "The answer, and the fine print.", GOLD)
 stage("s42_verdict", "a8_verdict", {

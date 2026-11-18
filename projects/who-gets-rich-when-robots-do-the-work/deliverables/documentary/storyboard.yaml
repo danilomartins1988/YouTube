@@ -352,18 +352,22 @@ scenes:
         size: 90
         color: accent3
         anchor: middle
-    - d: M 800 420 L 800 660
-      color: ink
-      width: 5
+    - d: M 640 660 L 640 420 L 800 420 L 800 660 Z
+      color: accent2
+      width: 4
+      fill: accent2
+      fillOpacity: 0.45
+      kind: bar
       start:
         cue: A slice goes to the people
-      kind: stroke
-    - d: M 860 420 L 860 660
-      color: ink
-      width: 5
+    - d: M 800 660 L 800 420 L 860 420 L 860 660 Z
+      color: accent
+      width: 4
+      fill: accent
+      fillOpacity: 0.7
+      kind: bar
       start:
         cue: A slice goes to the owners
-      kind: stroke
     - d: M 720 665 Q 710 722 700 780 M 693 757 L 700 780 L 714 760
       color: accent2
       width: 6
@@ -896,6 +900,104 @@ scenes:
   sources:
   - autor_superstar
   - ar_framework
+  assets:
+  - font:inter
+- id: s09b_dana
+  segment: a1_dana
+  type: engine_cartoon
+  params:
+    zones:
+    - set: robotown
+      x0: -1600
+      x1: 4600
+      robots:
+      - - 0
+        - 3
+      - - cue: The robots took
+        - 6
+      workers:
+      - - 0
+        - 3
+      - - cue: It just stopped hiring
+        - 1
+      flowAt:
+        cue: It went somewhere
+      flowTo: tower
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 0
+      y: 600
+      zoom: 1.2
+    - at:
+        cue: The robots took
+      x: 450
+      y: 560
+      zoom: 1.0
+      dur: 1.2
+    - at:
+        cue: It went somewhere
+      x: 800
+      y: 500
+      zoom: 0.9
+      dur: 1.4
+    drift: 3
+    items:
+    - kind: toon
+      x: -60
+      at: 0.0
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: worry
+      pose: clipboard
+      hold: clipboard
+      y: 1000
+      poses:
+      - - cue: It went somewhere
+        - point
+      scale: 1.25
+    - kind: bubble
+      text: NOBODY GOT FIRED. WE JUST STOPPED HIRING.
+      x: 100
+      y: 280
+      at: 0.4
+      until:
+        cue: The robots took
+      tail:
+      - -60
+      - 560
+      size: 26
+    - kind: sign
+      text: 'NIGHT SHIFT: NOW ROBOTS'
+      x: 450
+      y: 160
+      at:
+        cue: The robots took
+      color: '#BBDEFB'
+      size: 32
+      until:
+        cue: It went somewhere
+    - kind: toonwords
+      text: THE MONEY WENT SOMEWHERE
+      x: 800
+      y: 150
+      at:
+        cue: It went somewhere
+      size: 52
+      color: '#FFFFFF'
+    - kind: rrtag
+      at: 0.0
+      x: 36
+      y: 36
+      tags:
+      - - 0
+        - DANA'S STORY · FICTIONAL
   assets:
   - font:inter
 - id: s10_b2
@@ -1726,6 +1828,84 @@ scenes:
         - MECHANISM
   assets:
   - font:inter
+- id: s20b_dana
+  segment: a3_dana
+  type: engine_cartoon
+  params:
+    zones:
+    - set: moneyloop
+      x0: -1600
+      x1: 4600
+      loopAt: 0.0
+      outAt: 0.0
+      doorAt:
+        cue: Yet
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 1350
+      y: 560
+      zoom: 1.0
+    - at:
+        cue: Every step of that chain
+      x: 960
+      y: 500
+      zoom: 0.85
+      dur: 1.4
+    - at:
+        cue: Yet
+      x: 1150
+      y: 540
+      zoom: 0.95
+      dur: 0.35
+    drift: 2
+    items:
+    - kind: toon
+      x: 1750
+      at: 0.0
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: worry
+      pose: shrug
+      y: 1000
+      faces:
+      - - 0
+        - worry
+      - - cue: Yet
+        - smug
+      scale: 1.25
+    - kind: toonwords
+      text: EVERY STEP HAS OWNERS
+      x: 960
+      y: 120
+      at:
+        cue: Every step of that chain
+      size: 54
+      until:
+        cue: Yet
+    - kind: toonwords
+      text: '...YET'
+      x: 1150
+      y: 120
+      at:
+        cue: Yet
+      size: 70
+      color: '#FFFFFF'
+    - kind: rrtag
+      at: 0.0
+      x: 36
+      y: 36
+      tags:
+      - - 0
+        - DANA'S STORY · MECHANISM
+  assets:
+  - font:inter
 - id: s21_risk
   segment: a3_risk
   type: engine_cartoon
@@ -2500,6 +2680,71 @@ scenes:
   - allen
   assets:
   - font:inter
+- id: s31b_today
+  segment: a5_today
+  type: engine_cartoon
+  params:
+    zones:
+    - set: millyard
+      x0: -1600
+      x1: 4600
+      prog: 1.0
+      pauseAt: 0.0
+      catchAt: 0.0
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 960
+      y: 420
+      zoom: 1.0
+    - at:
+        cue: What history does show
+      x: 960
+      y: 560
+      zoom: 0.85
+      dur: 1.4
+    drift: 2
+    items:
+    - kind: toonwords
+      text: A NEW ENGELS' PAUSE?
+      x: 960
+      y: 640
+      at: 0.2
+      size: 56
+      until:
+        cue: Workers' share
+    - kind: sign
+      text: 'TODAY: WORKERS'' SHARE AT A RECORD LOW (BLS)'
+      x: 960
+      y: 640
+      at:
+        cue: Workers' share
+      color: '#FFCDD2'
+      size: 30
+      until:
+        cue: What history does show
+    - kind: sign
+      text: NEITHER THE PAUSE NOR THE CATCH-UP IS AUTOMATIC
+      x: 960
+      y: 640
+      at:
+        cue: What history does show
+      color: '#FFF59D'
+      size: 30
+    - kind: rrtag
+      at: 0.0
+      x: 36
+      y: 36
+      tags:
+      - - 0
+        - OPEN QUESTION
+      - - cue: Workers' share
+        - FACT · BLS
+  sources:
+  - bls_ls
+  - allen
+  assets:
+  - font:inter
 - id: s32_b6
   segment: a6_card
   type: engine_cartoon
@@ -3181,6 +3426,92 @@ scenes:
       y: 36
       tags:
       - - 0
+        - EDUCATION, NOT ADVICE
+  assets:
+  - font:inter
+- id: s40b_dana
+  segment: a7_dana
+  type: engine_cartoon
+  params:
+    zones:
+    - set: doorways
+      x0: -1600
+      x1: 4600
+      doors:
+      - label: 401(k) / IRA
+        sub: RETIREMENT ACCOUNT
+        at:
+          cue: Her employer offers
+        color: '#2A6FDB'
+      - label: INDEX FUND
+        sub: SLICES OF MANY COMPANIES
+        at: 999
+        color: '#2E9E6B'
+      - label: EMPLOYEE STOCK
+        sub: ESOPs AND STOCK PLANS
+        at: 999
+        color: '#E07A2F'
+    worldW: 2400
+    cam:
+    - at: 0
+      x: 700
+      y: 560
+      zoom: 1.05
+    - at:
+        cue: But it's the moment
+      x: 960
+      y: 520
+      zoom: 0.85
+      dur: 1.4
+    drift: 2
+    items:
+    - kind: toon
+      x: 700
+      at: 0.0
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 1
+      hairStyle: 1
+      color: '#1F8A8C'
+      glasses: false
+      scarf: '#F2B33D'
+      face: happy
+      pose: clipboard
+      hold: clipboard
+      y: 1000
+      faces:
+      - - 0
+        - worry
+      - - cue: But it's the moment
+        - happy
+      scale: 1.25
+    - kind: sign
+      text: HER DECISION, NOT ADVICE
+      x: 960
+      y: 300
+      at:
+        cue: That's her decision
+      color: '#FFFFFF'
+      size: 32
+      until:
+        cue: But it's the moment
+    - kind: toonwords
+      text: BOTH SIDES OF THE LOOP
+      x: 960
+      y: 300
+      at:
+        cue: But it's the moment
+      size: 54
+      color: '#FFFFFF'
+    - kind: rrtag
+      at: 0.0
+      x: 36
+      y: 36
+      tags:
+      - - 0
+        - DANA'S STORY · FICTIONAL
+      - - cue: That's her decision
         - EDUCATION, NOT ADVICE
   assets:
   - font:inter
