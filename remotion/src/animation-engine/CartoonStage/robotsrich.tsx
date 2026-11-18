@@ -151,7 +151,7 @@ const jar = (x: number, y: number, w: number, h: number, lvl: number, c: string,
   {Array.from({length: Math.floor(((h - 16) * clamp(lvl)) / 26)}, (_, q) => <path key={q} d={`M ${x - w / 2 + 16} ${y - 20 - q * 26} L ${x + w / 2 - 16} ${y - 20 - q * 26}`} stroke="#FFFFFF" strokeWidth={3} opacity={0.35} />)}
   <rect x={x - w / 2 - 10} y={y - h - 14} width={w + 20} height={22} rx={8} fill="#E9EEF4" stroke={OL} strokeWidth={4} />
   <T x={x} y={y + 50} s={fit(label, w + 80, 34)}>{label}</T>
-  <g transform={`translate(${x} ${y - h - 60})`}><rect x={-100} y={-30} width={200} height={50} rx={14} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><T x={0} y={6} s={fit(val, 180, 32)} c={c === GREY ? OL : c}>{val}</T></g>
+  {val && <g transform={`translate(${x} ${y - h - 60})`}><rect x={-100} y={-30} width={200} height={50} rx={14} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><T x={0} y={6} s={fit(val, 180, 32)} c={c === GREY ? OL : c}>{val}</T></g>}
 </g>;
 
 export const ROBOTSRICH_SETS: Record<string, SetFn> = {
@@ -206,9 +206,9 @@ export const ROBOTSRICH_SETS: Record<string, SetFn> = {
       {[[-1, BLUE], [0, GOLD], [1, GREY]].map(([d, c], q) => <path key={'ci' + q} d={`M ${cx + Number(d) * 60} 470 Q ${cx + Number(d) * 200} 560 ${cx + Number(d) * 520} 600`} stroke={String(c)} strokeWidth={34} fill="none" strokeLinecap="round" />)}
       {run && [-1, 0, 1].map((d) => Array.from({length: 3}, (_, k) => { const u = ((t * 1.1 + k / 3 + d * 0.17) % 1), x = cx + d * 60 + (d * 460) * u, y = 470 + 130 * u - 40 * Math.sin(u * Math.PI);
         return coin(x, y, 0.7, 'cu' + d + k, t * 5 + k); }))}
-      {jar(cx - 520, f + 40, 220, 300, pay / 70, BLUE, z.payLabel || 'PAY', `$${pay.toFixed(2)}`, hot === 'pay')}
-      {jar(cx, f + 40, 220, 300, prof / 70, GOLD, z.profitLabel || 'PROFITS AFTER TAX', `$${prof.toFixed(2)}`, hot === 'profit')}
-      {jar(cx + 520, f + 40, 220, 300, oth / 70, GREY, z.otherLabel || 'EVERYTHING ELSE', `$${oth.toFixed(2)}`, hot === 'other')}
+      {jar(cx - 520, f + 40, 220, 300, pay / 70, BLUE, z.payLabel || 'PAY', `$${pay.toFixed(0)}`, hot === 'pay')}
+      {jar(cx, f + 40, 220, 300, prof / 70, GOLD, z.profitLabel || 'PROFITS AFTER TAX', z.hideProfit ? '' : `$${prof.toFixed(0)}`, hot === 'profit')}
+      {jar(cx + 520, f + 40, 220, 300, oth / 70, GREY, z.otherLabel || 'EVERYTHING ELSE', z.hideOther ? '' : `$${oth.toFixed(0)}`, hot === 'other')}
       {yr && <g transform={`translate(${cx - 520} 160) rotate(-4)`}><circle r={86} fill={RED} stroke={OL} strokeWidth={6} /><T x={0} y={18} s={fit(yr, 150, 52)} c="#FFFFFF">{yr}</T></g>}
       {z.note && <T x={cx} y={f + 160} s={fit(z.note, 1700, 22)} c="#4A5870" w={700}>{z.note}</T>}
     </g>;
@@ -230,7 +230,7 @@ export const ROBOTSRICH_SETS: Record<string, SetFn> = {
           {Array.from({length: n}, (_, q) => house(x + (q % cols) * (w / cols) + (k === 3 ? 60 : 20), baseY - Math.floor(q / cols) * 22 + 4, hs * (k === 3 ? 1 : 0.6), q + k, ['#F1D9B5', '#E8C7A0', '#F5E6CC', '#DCE8F5'][q % 4]))}
           <g transform={`translate(${x + w / 2} ${baseY - (k === 3 ? 230 : k === 2 ? 150 : 140)})`}>
             {Array.from({length: ns}, (_, q) => cert((q % 4) * 26 - 39, -Math.floor(q / 4) * 14, 0.7, 'sc' + k + q))}
-            {on && <g transform={`translate(0 ${top - 60}) scale(${pop(t, g.at ?? 0)})`}>
+            {on && g.display && <g transform={`translate(0 ${top - 60}) scale(${pop(t, g.at ?? 0)})`}>
               <rect x={-120} y={-34} width={240} height={60} rx={14} fill={g.color || BLUE} stroke={OL} strokeWidth={4} /><T x={0} y={6} s={30} c="#FFFFFF">{g.display || ''}</T></g>}
           </g>
           <T x={x + w / 2} y={f + 80} s={fit(g.label || '', w + 140, 30)}>{g.label || ''}</T>
@@ -254,8 +254,8 @@ export const ROBOTSRICH_SETS: Record<string, SetFn> = {
           {plaque(x + 180, f + 60, c.name || '', '#FFFFFF', 26)}
           {t >= at && <g><rect x={x + 130} y={f - 280 - gh} width={100} height={gh} rx={8} fill={GOLD} stroke={OL} strokeWidth={4} />
             {Array.from({length: Math.floor(gh / 26)}, (_, q) => coin(x + 180, f - 296 - q * 26, 0.75, 'g' + k + q, t * 2 + q))}
-            <g transform={`translate(${x + 180} ${f - 320 - gh}) scale(${pop(t, at + 1.2)})`}><rect x={-100} y={-30} width={200} height={50} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={4} />
-              <T x={0} y={6} s={fit(c.display || '', 180, 30)}>{c.display || ''}</T></g></g>}
+            {c.display && <g transform={`translate(${x + 180} ${f - 320 - gh}) scale(${pop(t, at + 1.2)})`}><rect x={-100} y={-30} width={200} height={50} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={4} />
+              <T x={0} y={6} s={fit(c.display || '', 180, 30)}>{c.display || ''}</T></g>}</g>}
         </g>; })}
       {ca !== undefined && t >= ca && <g transform={`translate(${z.chipX ?? 1900} ${f}) scale(${pop(t, ca)})`}>
         <rect x={-180} y={-260} width={360} height={260} rx={10} fill="#7357C9" stroke={OL} strokeWidth={6} />

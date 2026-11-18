@@ -259,7 +259,7 @@ export const AUTOMATION_SETS: Record<string, SetFn> = {
           {(c.blocks || []).map((b: any, q: number) => { const bv = kf(b.v, t, 0), h = bv * sc, y = base - acc - h; acc += h; if (bv <= 0.05) return null;
             const sAt = b.at ?? ((c.at ?? 0) + q * 0.18); if (t < sAt) return null; const d = 1 - E.outBack(win(t, sAt, 0.45));
             return <g key={q} transform={`translate(0 ${-260 * d})`}><rect x={-bw / 2} y={y} width={bw} height={Math.max(2, h - 2)} rx={6} fill={b.color || TEAL} stroke={OL} strokeWidth={3} />
-              {h > 20 && <T x={0} y={y + h / 2 + Math.min(16, h * 0.35) * 0.36} s={Math.min(18, h * 0.6)} c="#FFFFFF" st={OL} sw={4}>{`${b.label} ${Math.round(bv)}`}</T>}</g>; })}
+              {h > 20 && <T x={0} y={y + h / 2 + Math.min(16, h * 0.35) * 0.36} s={Math.min(18, h * 0.6)} c="#FFFFFF" st={OL} sw={4}>{z.plain ? b.label : `${b.label} ${Math.round(bv)}`}</T>}</g>; })}
           {/* nameplate and total */}
           <rect x={-150} y={base + 22} width={300} height={70} rx={12} fill={c.color || '#FFFFFF'} stroke={OL} strokeWidth={4} />
           <T x={0} y={base + 52} s={fit(c.name, 280, 24)} c="#FFFFFF" st={OL} sw={4}>{c.name}</T>
@@ -275,7 +275,7 @@ export const AUTOMATION_SETS: Record<string, SetFn> = {
           <circle cx={0} cy={0} r={46} fill={CHROME} stroke={OL} strokeWidth={4} />
           <path d={`M 0 0 L ${Math.sin((an * Math.PI) / 180) * 40} ${-Math.cos((an * Math.PI) / 180) * 40}`} stroke={RED} strokeWidth={8} strokeLinecap="round" />
           <T x={0} y={-62} s={fit(kb.label, 210, 20)} c={CY}>{kb.label}</T>
-          <T x={0} y={84} s={28} c="#FFFFFF">{`${Math.round(v)}${kb.unit ?? '%'}`}</T></g>; })}
+          <T x={0} y={84} s={28} c="#FFFFFF">{kb.show ? pick(kb.show, t, '') : `${Math.round(v)}${kb.unit ?? '%'}`}</T></g>; })}
     </g>;
   },
 

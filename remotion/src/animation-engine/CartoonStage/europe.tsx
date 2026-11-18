@@ -532,7 +532,7 @@ export const EUROPE_SETS: Record<string, SetFn> = {
           {(c.blocks || []).map((b: any, q: number) => { const bv = kf(b.v, t, 0), h = bv * sc, y = base - acc - h; acc += h; if (bv <= 0.05) return null;
             const sAt = b.at ?? ((c.at ?? 0) + q * 0.25); if (t < sAt) return null; const d = 1 - E.outBack(win(t, sAt, 0.45)), hot = hiL && b.label === hiL;
             return <g key={q} transform={`translate(0 ${-200 * d})`}><rect x={-bw / 2} y={y} width={bw} height={Math.max(2, h - 2)} rx={6} fill={b.color || BLUE} stroke={hot ? GOLD : OL} strokeWidth={hot ? 7 : 3} />
-              {h > 22 && <T x={0} y={y + h / 2 + 7} s={Math.min(22, h * 0.55)} c="#FFFFFF" st={OL} sw={4}>{`${b.label} $${Number.isInteger(bv) || Math.abs(bv - Math.round(bv)) < 0.02 ? Math.round(bv) : bv.toFixed(2)}`}</T>}</g>; })}
+              {h > 22 && <T x={0} y={y + h / 2 + 7} s={Math.min(22, h * 0.55)} c="#FFFFFF" st={OL} sw={4}>{z.vals === false && !b.show ? b.label : `${b.label} $${Number.isInteger(bv) || Math.abs(bv - Math.round(bv)) < 0.02 ? Math.round(bv) : bv.toFixed(2)}`}</T>}</g>; })}
           <rect x={-170} y={base + 20} width={340} height={70} rx={12} fill={c.color || NAVY} stroke={OL} strokeWidth={4} />
           <T x={0} y={base + 52} s={fit(c.name, 320, 26)} c="#FFFFFF">{c.name}</T>{c.sub && <T x={0} y={base + 80} s={fit(c.sub, 320, 16)} c="#FFFFFF">{c.sub}</T>}
         </g>; })}

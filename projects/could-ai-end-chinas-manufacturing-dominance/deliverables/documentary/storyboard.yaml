@@ -22,11 +22,11 @@ scenes:
       hiAt:
       - - 0
         - null
-      - - cue: Cameras check
+      - - cue: Cameras checking
         - vision
-      - - cue: Software decides
+      - - cue: Software deciding
         - sched
-      - - cue: Now imagine
+      - - cue: And a price
         - null
     worldW: 2400
     cam:
@@ -35,31 +35,31 @@ scenes:
       y: 560
       zoom: 1.15
     - at:
-        cue: Inside, robot arms
+        cue: Robot arms working
       x: 900
       y: 520
       zoom: 1.0
       dur: 1.4
     - at:
-        cue: Cameras check
+        cue: Cameras checking
       x: 1500
       y: 480
       zoom: 1.25
       dur: 1.0
     - at:
-        cue: Software decides
+        cue: Software deciding
       x: 1250
       y: 300
       zoom: 1.25
       dur: 1.0
     - at:
-        cue: Now imagine
+        cue: And a price
       x: 960
       y: 520
       zoom: 0.9
       dur: 1.4
     - at:
-        cue: That factory is hypothetical
+        cue: That factory doesn't exist
       x: 960
       y: 500
       zoom: 1.0
@@ -73,38 +73,83 @@ scenes:
     drift: 4
     items:
     - kind: toonwords
-      text: OHIO · SUNDAY AFTERNOON
-      x: 700
+      text: 'MEL''S DREAM: A TOASTER FACTORY IN OHIO'
+      x: 760
       y: 200
-      at: 0.2
+      at:
+        cue: Picture her factory
       until:
-        cue: Inside, robot arms
-      size: 58
+        cue: Robot arms working
+      size: 50
+    - kind: toon
+      x:
+      - - 0
+        - 300
+      - - cue: So now she wants
+        - 600
+      at: 0.1
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      label: MEL · FROM EPISODE 1
+      labelUntil:
+        cue: Picture her factory
+      faces:
+      - - 0
+        - worry
+      - - cue: So now she wants
+        - smug
+      - - cue: That factory doesn't exist
+        - shock
+      hold: phone
+      until:
+        cue: So could
+      scale: 1.3
+    - kind: bubble
+      text: 'FINE. I''LL MAKE
+
+        MY OWN TOASTER.'
+      x: 750
+      y: 330
+      at:
+        cue: So now she wants
+      until:
+        cue: Picture her factory
+        offset: 0.5
+      tail:
+      - 620
+      - 560
+      size: 30
     - kind: pricemeter
       x: 960
       y: 380
       at:
-        cue: costs about the same
+        cue: And a price
       until:
-        cue: That factory is hypothetical
+        cue: That factory doesn't exist
       tilt:
       - - 0
         - 0.6
-      - - cue: costs about the same
-          offset: 0.4
+      - - cue: matches China's
+          offset: 0.2
         - 0.0
       scale: 0.75
       left: OHIO
       right: CHINA
     - kind: torq
       x:
-      - - cue: That factory is hypothetical
+      - - cue: That factory doesn't exist
         - 2300
       - - cue: But almost every piece
           offset: 0.4
         - 1250
       at:
-        cue: That factory is hypothetical
+        cue: That factory doesn't exist
       faces:
       - - 0
         - happy
@@ -152,7 +197,7 @@ scenes:
       scale: 1.3
   sfx:
   - kind: hit
-    cue: That factory is hypothetical
+    cue: That factory doesn't exist
     gain: 0.3
   assets:
   - font:inter
@@ -265,7 +310,7 @@ scenes:
     drift: 4
     items:
     - kind: toonwords
-      text: 'RULE #1: GO WHERE WORK IS CHEAPEST'
+      text: 'THE OLD RULE: BUILD WHERE WORK IS CHEAPEST'
       x: 960
       y: 160
       at: 0.3
@@ -273,19 +318,16 @@ scenes:
         cue: But a robot
       size: 52
     - kind: toon
-      x: 500
+      x: 450
       at: 0.2
       who: shopper
-      v: 3
-      skin: 4
-      hair: 3
-      hairStyle: 2
-      color: '#5C6BC0'
-      glasses: false
-      scarf: '#E5484D'
-      pose: point
+      v: 0
+      color: '#455A64'
+      scale: 1.3
+      pose: clipboard
+      hold: clipboard
       face: smug
-      label: KIP · RELOCATION CONSULTANT
+      label: MEL'S BANKER
       labelUntil:
         cue: But a robot
       faces:
@@ -295,6 +337,24 @@ scenes:
         - worry
       takes:
       - cue: starts to wobble
+    - kind: toon
+      x: 1500
+      at: 0.2
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      face: happy
+      pose: point
+      faces:
+      - - 0
+        - worry
+      - - cue: doesn't care about wages
+        - grin
       scale: 1.3
     - kind: torq
       x:
@@ -345,11 +405,11 @@ scenes:
       color: '#FFE0B2'
       size: 34
     - kind: sign
-      text: SUPPLY CHAINS
+      text: JOBS
       x: 1100
       y: 260
       at:
-        cue: supply chains
+        cue: jobs, and which
       color: '#C8E6C9'
       size: 34
     - kind: sign
@@ -373,7 +433,7 @@ scenes:
       w: 1370
       h: 800
     draw_start:
-      cue: America has already
+      cue: And America has already
     speed: 1500
     push: 0.003
     enter:
@@ -386,7 +446,7 @@ scenes:
       color: ink
       width: 5
       start:
-        cue: America has already
+        cue: And America has already
       kind: stroke
     - d: M 700 820 L 700 667 L 840 667 L 840 820 Z
       color: accent2
@@ -395,9 +455,9 @@ scenes:
       fillOpacity: 0.3
       kind: bar
       start:
-        cue: Since the summer
+        cue: Today, American factories
       label:
-        text: OUTPUT 1979 · 47.6
+        text: OUTPUT, LATE '70s
         x: 770
         y: 650
         size: 20
@@ -410,12 +470,12 @@ scenes:
       fillOpacity: 0.75
       kind: bar
       start:
-        cue: roughly doubled
+        cue: about twice as much
       label:
-        text: 2026 · 99.7 (×2.1)
+        text: 'TODAY: ×2'
         x: 930
         y: 482
-        size: 20
+        size: 26
         color: accent2
         anchor: middle
     - d: M 1120 820 L 1120 508 L 1260 508 L 1260 820 Z
@@ -425,9 +485,9 @@ scenes:
       fillOpacity: 0.3
       kind: bar
       start:
-        cue: factory jobs fell
+        cue: with millions fewer
       label:
-        text: JOBS 1979 · 19.6M
+        text: JOBS, LATE '70s
         x: 1190
         y: 490
         size: 20
@@ -440,12 +500,13 @@ scenes:
       fillOpacity: 0.75
       kind: bar
       start:
-        cue: to about twelve point seven
+        cue: with millions fewer
+        offset: 0.8
       label:
-        text: OCT 2026 · 12.7M
+        text: 'TODAY: ⅓ FEWER'
         x: 1350
         y: 600
-        size: 20
+        size: 24
         color: risk
         anchor: middle
     - d: M 930 440 Q 1159 418 1340 560 M 1317 555 L 1340 560 L 1329 538
@@ -465,9 +526,9 @@ scenes:
       color: muted
       width: 1
       start:
-        cue: by our calculation
+        cue: Automation is
       label:
-        text: 'OUTPUT: FED G.17 INDEX (2017=100) · JOBS: BLS · RATIOS OUR CALCULATION'
+        text: FED G.17 OUTPUT INDEX · BLS JOBS · JUNE 1979 VS OCT 2026 · OUR CALCULATION
         x: 1050
         y: 875
         size: 16
@@ -555,13 +616,13 @@ scenes:
       y: 480
       zoom: 1.05
     - at:
-        cue: Here's the short version
+        cue: Wei's answer
       x: 1050
       y: 520
       zoom: 0.95
       dur: 1.4
     - at:
-        cue: It has suppliers
+        cue: with suppliers
       x: 1200
       y: 520
       zoom: 1.0
@@ -569,34 +630,34 @@ scenes:
     drift: 5
     items:
     - kind: sign
-      text: 'LAST TIME: “WHY THE WORLD STILL DEPENDS ON CHINESE FACTORIES”'
+      text: 'EPISODE 1: “WHY THE WORLD STILL DEPENDS ON CHINESE FACTORIES”'
       x: 1000
       y: 120
       at:
-        cue: In our last episode
+        cue: from our last episode
       color: '#FFFFFF'
       size: 28
       until:
-        cue: Here's the short version
+        cue: Wei's answer
     - kind: toonwords
-      text: ≈ 27% OF WORLD MANUFACTURING (2025)
+      text: ABOUT 1 IN 4 OF EVERYTHING MANUFACTURED
       x: 1000
       y: 120
       at:
         cue: China makes
       size: 50
       until:
-        cue: It has suppliers
+        cue: with suppliers
     - kind: sign
-      text: WORLD BANK WDI · OUR CALCULATION
+      text: WORLD BANK DATA, 2025 · OUR CALCULATION
       x: 1000
       y: 220
       at:
-        cue: of the world's manufactured
+        cue: of everything the world
       color: '#FFF8E1'
       size: 22
       until:
-        cue: It has suppliers
+        cue: with suppliers
     - kind: sign
       text: SUPPLIERS
       x: 600
@@ -626,7 +687,7 @@ scenes:
       x: 1700
       y: 140
       at:
-        cue: engineers who have
+        cue: engineers who've
       color: '#FFE0B2'
       size: 32
     - kind: toon
@@ -642,14 +703,29 @@ scenes:
       scarf: '#FFFFFF'
       pose: wave
       face: happy
-      label: WEI · LINE ENGINEER
+      label: WEI · LINE ENGINEER (EPISODE 1)
       labelUntil:
-        cue: Here's the short version
+        cue: Wei's answer
       poses:
       - - 0
         - wave
-      - - cue: It has suppliers
+      - - cue: with suppliers
         - point
+      scale: 1.3
+    - kind: toon
+      x: 300
+      at: 0.2
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      face: happy
+      pose: stand
+      hold: phone
       scale: 1.3
     - kind: gizmo
       x: 600
@@ -694,59 +770,66 @@ scenes:
       y: 540
       zoom: 1.0
     - at:
-        cue: A production
-      x: 1000
-      y: 520
-      zoom: 1.05
-      dur: 1.2
-    - at:
-        cue: By our rough math
+        cue: five times
       x: 960
       y: 500
       zoom: 1.15
       dur: 0.35
+    - at:
+        cue: That gap
+      x: 1000
+      y: 520
+      zoom: 1.0
+      dur: 1.2
     drift: 3
     items:
-    - kind: counter
-      x: 600
-      y: 170
-      at:
-        cue: an American factory
-      prefix: $
-      suffix: ' / HOUR'
-      decimals: 0
-      steps:
-      - - 0
-        - 0
-      - - cue: an American factory
-        - 0
-      - - cue: earned about
-        - 29
-      text: U.S. PRODUCTION WORKER, 2025 (BLS)
-    - kind: counter
-      x: 1350
-      y: 170
-      at:
-        cue: A production worker at
-      prefix: $
-      suffix: ' / YEAR'
-      decimals: 0
-      steps:
-      - - 0
-        - 0
-      - - cue: A production worker at
-        - 0
-      - - cue: for the whole year
-        - 11200
-      text: CHINA, LARGER FIRMS, 2025 (NBS; FED RATE; OUR CONVERSION)
     - kind: toonwords
-      text: 'PER HOUR: ROUGHLY 1/5 (ROUGH, OUR CALCULATION)'
+      text: ≈ 5× THE PAY PER HOUR
       x: 960
-      y: 360
+      y: 170
       at:
-        cue: By our rough math
-      size: 44
+        cue: five times
+      size: 70
       color: '#FFFFFF'
+      until:
+        cue: That gap
+        offset: 1.5
+    - kind: sign
+      text: U.S. PRODUCTION WORKERS (BLS) VS LARGER CHINESE FIRMS (NBS), 2025 · ROUGH, OUR CALCULATION
+      x: 960
+      y: 300
+      at:
+        cue: five times
+        offset: 0.4
+      color: '#FFF8E1'
+      size: 20
+    - kind: gizmo
+      x: 960
+      y: 760
+      at:
+        cue: That gap
+      scale: 0.5
+      face: worry
+      parts:
+      - - 0
+        - BODY
+      - - 0
+        - SLOTS
+      - - 0
+        - COIL
+      - - 0
+        - LEVER
+      - - 0
+        - KNOB
+      - - 0
+        - PLUG
+      - - 0
+        - FEET
+      stamp: MADE IN CHINA
+      stampAt:
+        cue: made in China
+        offset: -0.2
+      stampY: 60
     - kind: toon
       x: 450
       at: 0.3
@@ -764,10 +847,13 @@ scenes:
       faces:
       - - 0
         - happy
-      - - cue: By our rough math
+      - - cue: five times
         - shock
+      - - cue: That gap
+        - worry
       takes:
-      - cue: By our rough math
+      - cue: five times
+        offset: 0.2
       scale: 1.3
     - kind: toon
       x: 1550
@@ -814,7 +900,7 @@ scenes:
       zoom: 1.15
       dur: 0.35
     - at:
-        cue: To find out
+        cue: First, she needs
       x: 1300
       y: 520
       zoom: 0.95
@@ -851,18 +937,37 @@ scenes:
       x: 960
       y: 160
       at:
-        cue: So if robots
+        cue: If robots shrink
       size: 48
       until:
-        cue: To find out
+        cue: First, she needs
     - kind: toonwords
       text: WHAT CAN AI REALLY DO ON A FACTORY FLOOR?
       x: 1300
       y: 160
       at:
-        cue: To find out
+        cue: First, she needs
       size: 48
       color: '#FFFFFF'
+    - kind: toon
+      x: 1600
+      at: 0.3
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      face: worry
+      pose: shrug
+      faces:
+      - - 0
+        - worry
+      - - cue: First, she needs
+        - smug
+      scale: 1.3
   assets:
   - font:inter
 - id: s09_b3
@@ -986,6 +1091,42 @@ scenes:
         cue: calls machine vision
       color: '#FFF59D'
       size: 30
+    - kind: toon
+      x: 700
+      at: 0.2
+      who: shopper
+      v: 3
+      skin: 4
+      hair: 3
+      hairStyle: 2
+      color: '#5C6BC0'
+      glasses: false
+      scarf: '#E5484D'
+      face: smug
+      pose: point
+      label: KIP · MEL'S CONSULTANT
+      labelUntil:
+        cue: Cameras running AI
+      scale: 1.3
+    - kind: toon
+      x: 1150
+      at: 0.3
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      face: happy
+      pose: stand
+      faces:
+      - - 0
+        - happy
+      - - cue: guide robot arms
+        - grin
+      scale: 1.3
   sources:
   - ifr_wr26
   assets:
@@ -1013,9 +1154,9 @@ scenes:
       hiAt:
       - - 0
         - maint
-      - - cue: Then smart scheduling
+      - - cue: Smart scheduling
         - sched
-      - - cue: self-driving carts
+      - - cue: Self-driving carts
         - carts
       - - cue: The federation says
         - null
@@ -1026,13 +1167,13 @@ scenes:
       y: 600
       zoom: 1.3
     - at:
-        cue: Then smart scheduling
+        cue: Smart scheduling
       x: 1400
       y: 300
       zoom: 1.2
       dur: 1.4
     - at:
-        cue: self-driving carts
+        cue: Self-driving carts
       x: 1000
       y: 760
       zoom: 1.05
@@ -1051,7 +1192,7 @@ scenes:
       y: 120
       at: 0.3
       until:
-        cue: Then smart scheduling
+        cue: Smart scheduling
       size: 52
     - kind: bubble
       text: 'THAT MOTOR SOUNDS
@@ -1062,7 +1203,7 @@ scenes:
       at:
         cue: flags it
       until:
-        cue: Then smart scheduling
+        cue: Smart scheduling
       tail:
       - 650
       - 700
@@ -1072,16 +1213,16 @@ scenes:
       x: 1400
       y: 600
       at:
-        cue: Then smart scheduling
+        cue: Smart scheduling
       size: 48
       until:
-        cue: self-driving carts
+        cue: Self-driving carts
     - kind: toonwords
       text: SELF-DRIVING CARTS
       x: 1000
       y: 520
       at:
-        cue: self-driving carts
+        cue: Self-driving carts
       size: 48
       until:
         cue: The federation says
@@ -1096,21 +1237,18 @@ scenes:
     - kind: toon
       x: 1650
       at:
-        cue: Then smart scheduling
+        cue: Smart scheduling
       who: shopper
-      v: 1
-      skin: 0
-      hair: 1
-      hairStyle: 4
-      color: '#1F7A8C'
-      glasses: true
-      scarf: '#FFFFFF'
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
       face: happy
       pose: point
-      hold: clipboard
-      label: WEI · VISITING ENGINEER
-      labelUntil:
-        cue: self-driving carts
+      hold: phone
       scale: 1.3
   sources:
   - ifr_wr26
@@ -1131,7 +1269,7 @@ scenes:
       scanX: 1700
       schedX: -600
       twinAt:
-        cue: a full virtual copy
+        cue: a virtual copy
       twinX: 900
     worldW: 2400
     cam:
@@ -1140,7 +1278,7 @@ scenes:
       y: 560
       zoom: 1.0
     - at:
-        cue: a full virtual copy
+        cue: a virtual copy
       x: 900
       y: 380
       zoom: 0.9
@@ -1159,7 +1297,7 @@ scenes:
       y: 110
       at: 0.3
       until:
-        cue: a full virtual copy
+        cue: a virtual copy
       size: 60
     - kind: sign
       text: TEST THE LINE BEFORE YOU BUILD IT
@@ -1197,10 +1335,28 @@ scenes:
       faces:
       - - 0
         - happy
-      - - cue: a full virtual copy
+      - - cue: a virtual copy
+        - smug
+      scale: 1.3
+    - kind: toon
+      x: 1200
+      at: 0.3
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      face: happy
+      faces:
+      - - 0
+        - happy
+      - - cue: a virtual copy
         - shock
       takes:
-      - cue: a full virtual copy
+      - cue: a virtual copy
         offset: 0.3
       scale: 1.3
   sources:
@@ -1485,6 +1641,25 @@ scenes:
       until:
         cue: The federation says
       size: 56
+    - kind: toon
+      x: 1700
+      at: 0.2
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      face: happy
+      pose: point
+      faces:
+      - - 0
+        - grin
+      - - cue: most are still prototypes
+        - worry
+      scale: 1.3
     - kind: sign
       text: 'MOST HUMANOIDS: PROTOTYPES OR PILOTS (IFR 2026)'
       x: 760
@@ -1496,11 +1671,11 @@ scenes:
       until:
         cue: It's the arm
     - kind: sign
-      text: 'TODAY: INDUSTRIAL ROBOTS ARE ECONOMICALLY SUPERIOR (IFR)'
+      text: 'TODAY: INDUSTRIAL ROBOTS ARE THE BETTER DEAL (IFR)'
       x: 1300
       y: 240
       at:
-        cue: economically superior
+        cue: the better deal
       color: '#C8E6C9'
       size: 26
     - kind: torq
@@ -1551,21 +1726,21 @@ scenes:
       title: WHERE $1 OF U.S. FACTORY SALES WENT · 2021
       slices:
       - - 0.4
-        - MATERIALS & PARTS ≈ 55¢
+        - 'MATERIALS & PARTS: THE BIGGEST BITE'
         - 55
         - '#1F7A8C'
-      - - cue: Wages and salaries
+      - - cue: go to wages
         - PAYROLL ≈ 13¢
         - 13
         - '#FF9F1C'
-      - - cue: That's our calculation
-          offset: -0.2
-        - EVERYTHING ELSE ≈ 32¢
+      - - cue: Materials and parts
+          offset: -0.4
+        - EVERYTHING ELSE
         - 32
         - '#7E57C2'
       note: CENSUS 2021 ANNUAL SURVEY OF MANUFACTURES · SHARES ARE OUR CALCULATION · PAYROLL = ALL EMPLOYEES, BEFORE BENEFITS
       noteAt:
-        cue: for American factories
+        cue: In American factories
     worldW: 2400
     cam:
     - at: 0
@@ -1573,13 +1748,13 @@ scenes:
       y: 520
       zoom: 1.05
     - at:
-        cue: Wages and salaries
+        cue: go to wages
       x: 960
       y: 560
       zoom: 1.15
       dur: 1.2
     - at:
-        cue: That's our calculation
+        cue: Materials and parts
       x: 960
       y: 520
       zoom: 1.0
@@ -1602,18 +1777,18 @@ scenes:
       faces:
       - - 0
         - happy
-      - - cue: came to
+      - - cue: go to wages
         - shock
       takes:
-      - cue: came to
+      - cue: go to wages
         offset: 0.5
       scale: 1.3
     - kind: bubble
-      text: ONLY 13 CENTS?!
+      text: THAT'S IT?!
       x: 1550
       y: 300
       at:
-        cue: came to
+        cue: go to wages
         offset: 0.6
       tail:
       - 1500
@@ -1625,7 +1800,7 @@ scenes:
       faces:
       - - 0
         - happy
-      - - cue: Wages and salaries
+      - - cue: go to wages
         - worry
       scale: 0.9
   sources:
@@ -1661,7 +1836,7 @@ scenes:
         cue: Watch what happens
         offset: 0.4
       label:
-        text: MATERIALS 55¢
+        text: MATERIALS
         x: 920
         y: 710
         size: 24
@@ -1689,7 +1864,7 @@ scenes:
         cue: Watch what happens
         offset: 1.0
       label:
-        text: EVERYTHING ELSE 32¢
+        text: EVERYTHING ELSE
         x: 920
         y: 455
         size: 22
@@ -1753,7 +1928,7 @@ scenes:
       width: 5
       kind: box
       start:
-        cue: have a bill of their own
+        cue: send a bill of their own
       label:
         text: 'ROBOTS + SOFTWARE: A NEW BILL'
         x: 1340
@@ -1767,7 +1942,7 @@ scenes:
       start:
         cue: Automation shrinks
       label:
-        text: CENSUS ASM 2021 · OUR CALCULATION · NEW BILL SIZE NOT MEASURED
+        text: CENSUS 2021 SURVEY OF MANUFACTURES · OUR CALCULATION · SIZES SCHEMATIC
         x: 920
         y: 860
         size: 16
@@ -1846,6 +2021,7 @@ scenes:
       x0: -1600
       x1: 4600
       cols: []
+      plain: true
     worldW: 2400
     cam:
     - at: 0
@@ -1853,13 +2029,13 @@ scenes:
       y: 540
       zoom: 1.0
     - at:
-        cue: Let's say a smart toaster
+        cue: Her toaster costs
       x: 900
       y: 600
       zoom: 1.25
       dur: 1.2
     - at:
-        cue: Our numbers are illustrative
+        cue: Our model is illustrative
       x: 960
       y: 520
       zoom: 1.0
@@ -1892,19 +2068,19 @@ scenes:
         cue: ship to an American
       stampY: 60
     - kind: toonwords
-      text: THE $100 TOASTER EXPERIMENT
+      text: MEL'S $100 TOASTER EXPERIMENT
       x: 960
       y: 140
       at: 0.3
       until:
-        cue: Our numbers are illustrative
+        cue: Our model is illustrative
       size: 60
     - kind: toonwords
       text: A SIMPLE MODEL · NOT ANY COMPANY'S COSTS
       x: 960
       y: 140
       at:
-        cue: Our numbers are illustrative
+        cue: Our model is illustrative
       size: 48
       color: '#FFFFFF'
     - kind: toon
@@ -1923,24 +2099,24 @@ scenes:
       faces:
       - - 0
         - happy
-      - - cue: smart toaster
+      - - cue: Her toaster costs
         - grin
       hops:
-      - cue: smart toaster
+      - cue: Her toaster costs
         offset: 0.3
       scale: 1.3
     - kind: toon
       x: 450
       at: 0.5
       who: shopper
-      v: 1
-      skin: 0
-      hair: 1
-      hairStyle: 4
-      color: '#1F7A8C'
-      glasses: true
-      scarf: '#FFFFFF'
-      face: happy
+      v: 3
+      skin: 4
+      hair: 3
+      hairStyle: 2
+      color: '#5C6BC0'
+      glasses: false
+      scarf: '#E5484D'
+      face: smug
       pose: clipboard
       hold: clipboard
       scale: 1.3
@@ -1962,60 +2138,58 @@ scenes:
     - set: toastlab
       x0: -1600
       x1: 4600
+      plain: true
       cols:
       - name: 1 · CHINA, CONVENTIONAL
         sub: TODAY'S WAY
-        at:
-          cue: Factory one
+        at: 0.2
         color: '#E5484D'
         blocks:
         - label: MATERIALS
           v: 61
           color: '#1F7A8C'
           at:
-            cue: Materials and parts
+            cue: suppliers next door
         - label: LABOR
           v: 11
           color: '#FF9F1C'
           at:
-            cue: Labor, eleven
+            cue: Cheap labor
         - label: MACHINES
           v: 5
           color: '#7E57C2'
-          at:
-            cue: Machines, energy
+          at: 0.4
         - label: ENERGY
           v: 3
           color: '#F2C14E'
-          at:
-            cue: Machines, energy
-            offset: 0.3
+          at: 0.6
         - label: UPKEEP
           v: 2
           color: '#26A69A'
-          at:
-            cue: upkeep
+          at: 0.8
         - label: DEFECTS
           v: 3
           color: '#E57373'
-          at:
-            cue: and defects
+          at: 1.0
         - label: SHIPPING
           v: 6
           color: '#5C6BC0'
           at:
-            cue: Shipping across
+            cue: an ocean to cross
         - label: TARIFF
           v: 9
           color: '#E5484D'
           at:
-            cue: nine
+            cue: and a tariff
       knobs:
       - label: TARIFF
         v: 10
         at:
-          cue: import tariff
+          cue: and a tariff
         max: 30
+        show:
+        - - 0
+          - SOME
     worldW: 2400
     cam:
     - at: 0
@@ -2023,13 +2197,13 @@ scenes:
       y: 540
       zoom: 1.1
     - at:
-        cue: Shipping across
+        cue: an ocean to cross
       x: 800
       y: 480
       zoom: 1.05
       dur: 1.2
     - at:
-        cue: Total, one hundred
+        cue: That's Mel's benchmark
       x: 960
       y: 520
       zoom: 1.0
@@ -2040,27 +2214,37 @@ scenes:
       x: 1250
       at: 0.3
       who: shopper
-      v: 1
-      skin: 0
-      hair: 1
-      hairStyle: 4
-      color: '#1F7A8C'
-      glasses: true
-      scarf: '#FFFFFF'
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
       face: happy
       pose: point
-      label: WEI · CONVENTIONAL LINE
+      label: MEL · RUNNING THE NUMBERS
       labelUntil:
-        cue: Labor, eleven
+        cue: an ocean to cross
       scale: 1.3
+    - kind: sign
+      text: BENCHMARK
+      x: 600
+      y: 300
+      at:
+        cue: That's Mel's benchmark
+      color: '#FFF59D'
+      size: 34
     - kind: sign
       text: 'TARIFF: OUR ASSUMPTION (REAL RATES VARY AND CHANGE)'
       x: 1300
       y: 300
       at:
-        cue: which we set
+        cue: and a tariff
       color: '#FFE0B2'
       size: 24
+      until:
+        cue: That's Mel's benchmark
   assets:
   - font:inter
 - id: s20_f2
@@ -2071,6 +2255,7 @@ scenes:
     - set: toastlab
       x0: -1600
       x1: 4600
+      plain: true
       cols:
       - name: 1 · CHINA, CONVENTIONAL
         sub: TODAY'S WAY
@@ -2104,44 +2289,46 @@ scenes:
       - name: 2 · OHIO, AUTOMATED
         sub: HYPOTHETICAL
         at:
-          cue: Factory two
+          cue: Next, Kip's dream
         color: '#00A6C8'
         blocks:
         - label: MATERIALS
           v:
           - - 0
             - 61
-          - - cue: so materials rise
+          - - cue: many parts still come
             - 64
           color: '#1F7A8C'
           at:
-            cue: Factory two
+            cue: Next, Kip's dream
         - label: LABOR
           v: 13
           color: '#FF9F1C'
           at:
-            cue: labor comes to
+            cue: but American pay
         - label: MACHINES
           v: 14
           color: '#7E57C2'
           at:
-            cue: machines jump
+            cue: add a big bill
         - label: ENERGY
           v: 3
           color: '#F2C14E'
           at:
-            cue: machines jump
+            cue: add a big bill
             offset: 0.3
         - label: UPKEEP
           v: 4
           color: '#26A69A'
           at:
-            cue: upkeep to four
+            cue: add a big bill
+            offset: 0.6
         - label: DEFECTS
           v: 2
           color: '#E57373'
           at:
-            cue: Defects fall
+            cue: add a big bill
+            offset: 0.9
         - label: SHIPPING
           v: 2
           color: '#5C6BC0'
@@ -2152,9 +2339,15 @@ scenes:
         v: 10
         at: 0.0
         max: 30
+        show:
+        - - 0
+          - SOME
       - label: ROBOTS BUSY
         v: 100
         at: 0.0
+        show:
+        - - 0
+          - ALWAYS
     worldW: 2400
     cam:
     - at: 0
@@ -2168,13 +2361,13 @@ scenes:
       zoom: 1.1
       dur: 1.2
     - at:
-        cue: But many parts
+        cue: but many parts
       x: 900
       y: 600
       zoom: 1.1
       dur: 1.2
     - at:
-        cue: Total, about one hundred and two
+        cue: The total
       x: 960
       y: 520
       zoom: 1.0
@@ -2200,15 +2393,15 @@ scenes:
       faces:
       - - 0
         - smug
-      - - cue: But many parts
+      - - cue: but many parts
         - worry
       scale: 1.3
     - kind: sign
-      text: ¾ FEWER LABOR HOURS · HIGHER PAY
+      text: MOST LABOR HOURS GONE · HIGHER PAY
       x: 900
       y: 260
       at:
-        cue: Robots cut labor hours
+        cue: Robots cut most
       color: '#FFE0B2'
       size: 24
       until:
@@ -2218,9 +2411,27 @@ scenes:
       x: 900
       y: 260
       at:
-        cue: But many parts
+        cue: but many parts
       color: '#FFCDD2'
       size: 26
+    - kind: toon
+      x: 300
+      at: 0.3
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      face: happy
+      faces:
+      - - 0
+        - happy
+      - - cue: The total
+        - shock
+      scale: 1.3
   assets:
   - font:inter
 - id: s21_tie
@@ -2231,6 +2442,7 @@ scenes:
     - set: toastlab
       x0: -1600
       x1: 4600
+      plain: true
       cols:
       - name: 1 · CHINA, CONVENTIONAL
         sub: TODAY'S WAY
@@ -2292,9 +2504,15 @@ scenes:
         v: 10
         at: 0.0
         max: 30
+        show:
+        - - 0
+          - SOME
       - label: ROBOTS BUSY
         v: 100
         at: 0.0
+        show:
+        - - 0
+          - ALWAYS
     worldW: 2400
     cam:
     - at: 0
@@ -2310,11 +2528,11 @@ scenes:
     drift: 3
     items:
     - kind: toonwords
-      text: ≈ $100 vs ≈ $102 · ALMOST A TIE
+      text: ALMOST A TIE
       x: 760
       y: 120
       at: 0.2
-      size: 54
+      size: 70
     - kind: toon
       x: 1500
       at: 0.2
@@ -2383,9 +2601,9 @@ scenes:
             - 9
           - - cue: Raise the tariff
             - 9
-          - - cue: factory one jumps
+          - - cue: gets pricier
             - 21
-          - - cue: Now let the Ohio
+          - - cue: Now let Ohio's
             - 9
           color: '#E5484D'
       - name: 2 · OHIO, AUTOMATED
@@ -2403,11 +2621,11 @@ scenes:
           v:
           - - 0
             - 14
-          - - cue: The machine cost
+          - - cue: The cost of the machines
             - 14
-          - - cue: Ohio climbs
+          - - cue: doubles
             - 28
-          - - cue: Tariffs, utilization
+          - - cue: Tariffs, busy robots
             - 14
           color: '#7E57C2'
         - label: ENERGY
@@ -2423,6 +2641,7 @@ scenes:
           v: 2
           color: '#5C6BC0'
       judgeAt: 0.3
+      plain: true
       knobs:
       - label: TARIFF
         v:
@@ -2430,23 +2649,37 @@ scenes:
           - 10
         - - cue: Raise the tariff
           - 10
-        - - cue: factory one jumps
+        - - cue: gets pricier
           - 25
-        - - cue: Now let the Ohio
+        - - cue: Now let Ohio's
           - 10
         at: 0
         max: 30
+        show:
+        - - 0
+          - SOME
+        - - cue: gets pricier
+          - HIGH
+        - - cue: Now let Ohio's
+          - SOME
       - label: ROBOTS BUSY
         v:
         - - 0
           - 100
         - - cue: sit idle
           - 100
-        - - cue: Ohio climbs
+        - - cue: doubles
           - 50
-        - - cue: Tariffs, utilization
+        - - cue: Tariffs, busy robots
           - 100
         at: 0
+        show:
+        - - 0
+          - ALWAYS
+        - - cue: sit idle
+          - HALF THE TIME
+        - - cue: Tariffs, busy robots
+          - ALWAYS
     worldW: 2400
     cam:
     - at: 0
@@ -2492,7 +2725,7 @@ scenes:
       at:
         cue: Ohio wins
       until:
-        cue: Now let the Ohio
+        cue: Now let Ohio's
       size: 64
       color: '#FFFFFF'
     - kind: toonwords
@@ -2502,27 +2735,27 @@ scenes:
       at:
         cue: China wins again
       until:
-        cue: Tariffs, utilization
+        cue: Tariffs, busy robots
       size: 64
       color: '#FFFFFF'
     - kind: toonwords
-      text: 'THE SWITCHES: TARIFFS · UTILIZATION · PARTS · ROBOT PRICES'
+      text: 'THE SWITCHES: TARIFFS · BUSY ROBOTS · PARTS · ROBOT PRICES'
       x: 960
       y: 110
       at:
-        cue: Tariffs, utilization
+        cue: Tariffs, busy robots
       size: 40
     - kind: toon
       x: 1500
       at: 0.2
       who: shopper
-      v: 3
-      skin: 4
-      hair: 3
-      hairStyle: 2
-      color: '#5C6BC0'
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
       glasses: false
-      scarf: '#E5484D'
+      scarf: '#FFD23F'
       face: happy
       pose: stand
       faces:
@@ -2556,6 +2789,7 @@ scenes:
     - set: toastlab
       x0: -1600
       x1: 4600
+      plain: true
       cols:
       - name: 1 · CHINA, CONVENTIONAL
         sub: TODAY'S WAY
@@ -2615,63 +2849,69 @@ scenes:
       - name: 3 · CHINA, AUTOMATED
         sub: HYPOTHETICAL
         at:
-          cue: Factory three
+          cue: The same robots
         color: '#2E9E5B'
         blocks:
         - label: MATERIALS
           v: 59
           color: '#1F7A8C'
           at:
-            cue: Materials, fifty-nine
+            cue: suppliers down the street
         - label: LABOR
           v: 3
           color: '#FF9F1C'
           at:
-            cue: Labor drops
+            cue: Lower wages
         - label: MACHINES
           v: 11
           color: '#7E57C2'
           at:
-            cue: Machines, eleven
+            cue: Chinese-made robots
         - label: ENERGY
           v: 3
           color: '#F2C14E'
           at:
-            cue: Machines, eleven
+            cue: Chinese-made robots
             offset: 0.3
         - label: UPKEEP
           v: 3
           color: '#26A69A'
           at:
-            cue: Machines, eleven
+            cue: Chinese-made robots
             offset: 0.6
         - label: DEFECTS
           v: 2
           color: '#E57373'
           at:
-            cue: Machines, eleven
+            cue: Chinese-made robots
             offset: 0.9
         - label: SHIPPING
           v: 6
           color: '#5C6BC0'
           at:
-            cue: Shipping and tariff
+            cue: that we assume
         - label: TARIFF
           v: 8
           color: '#E5484D'
           at:
-            cue: Shipping and tariff
+            cue: that we assume
             offset: 0.4
       knobs:
       - label: TARIFF
         v: 10
         at: 0.0
         max: 30
+        show:
+        - - 0
+          - SOME
       - label: ROBOTS BUSY
         v: 100
         at: 0.0
+        show:
+        - - 0
+          - ALWAYS
       judgeAt:
-        cue: Total, about ninety-five
+        cue: five dollars under
         offset: 0.3
     worldW: 2400
     cam:
@@ -2680,13 +2920,13 @@ scenes:
       y: 520
       zoom: 1.0
     - at:
-        cue: Factory three
+        cue: The same robots
       x: 1300
       y: 520
       zoom: 1.05
       dur: 1.2
     - at:
-        cue: Total, about ninety-five
+        cue: five dollars under
       x: 960
       y: 520
       zoom: 0.95
@@ -2697,20 +2937,19 @@ scenes:
       x:
       - - 0
         - 1900
-      - - cue: But we forgot someone
+      - - cue: Then Wei calls back
         - 1500
       at: 0.0
       faces:
       - - 0
         - shock
-      - - cue: Factory three
+      - - cue: The same robots
         - worry
       scale: 0.9
     - kind: toon
       x: 1600
       at:
-        cue: Factory three
-        offset: 0.3
+        cue: Then Wei calls back
       who: shopper
       v: 1
       skin: 0
@@ -2721,9 +2960,10 @@ scenes:
       scarf: '#FFFFFF'
       face: happy
       pose: point
-      label: WEI · AUTOMATED LINE
+      hold: phone
+      label: WEI · CALLING FROM CHINA
       labelUntil:
-        cue: Labor drops
+        cue: Lower wages
       scale: 1.3
     - kind: sign
       text: 'CHINESE-MADE ROBOTS COST LESS: OUR ASSUMPTION'
@@ -2734,10 +2974,10 @@ scenes:
       color: '#FFE0B2'
       size: 24
       until:
-        cue: Total, about ninety-five
+        cue: five dollars under
   sfx:
   - kind: hit
-    cue: Total, about ninety-five
+    cue: five dollars under
     gain: 0.3
   assets:
   - font:inter
@@ -2745,7 +2985,7 @@ scenes:
   segment: a4_result
   type: engine_draw
   params:
-    title: Who wins when? (illustrative model, $ per toaster)
+    title: Who wins when? (illustrative model)
     board: *id001
     draw_start:
       cue: In our base case
@@ -2757,146 +2997,106 @@ scenes:
       at: 0.2
       dur: 1.3
     strokes:
-    - d: M 600 440 L 1480 440
-      color: ink
-      width: 4
-      start:
-        cue: In our base case
-      label:
-        text: SCENARIO        CHINA · OHIO · CHINA AUTO   WINNER
-        x: 1040
-        y: 420
-        size: 20
-        color: muted
-        anchor: middle
-      kind: stroke
-    - d: M 640 500 L 640 500
+    - d: M 700 500 L 700 500
       color: ink
       width: 1
       start:
         cue: In our base case
       label:
-        text: BASE (≈10% TARIFF)   100 · 102 · 95
-        x: 640
+        text: BASE CASE
+        x: 700
         y: 500
-        size: 24
+        size: 28
         color: ink
         anchor: start
       kind: stroke
-    - d: M 1290 470 L 1470 470 L 1470 514 L 1290 514 Z
+    - d: M 1180 465 L 1460 465 L 1460 519 L 1180 519 Z
       color: accent3
-      width: 4
+      width: 5
       kind: box
       start:
-        cue: the automated Chinese factory wins
+        cue: Wei's automated factory wins
       label:
-        text: CHINA AUTO
-        x: 1380
+        text: WEI (CHINA, ROBOTS)
+        x: 1320
         y: 500
-        size: 20
+        size: 22
         color: accent3
         anchor: middle
-    - d: M 640 580 L 640 580
+    - d: M 700 600 L 700 600
       color: ink
       width: 1
       start:
         cue: Ohio only comes out ahead
       label:
-        text: 25% TARIFF, BUSY ROBOTS   112 · 102 · 107
-        x: 640
-        y: 580
-        size: 24
+        text: HIGH TARIFF + BUSY ROBOTS
+        x: 700
+        y: 600
+        size: 28
         color: ink
         anchor: start
       kind: stroke
-    - d: M 1290 550 L 1470 550 L 1470 594 L 1290 594 Z
+    - d: M 1180 565 L 1460 565 L 1460 619 L 1180 619 Z
       color: accent2
-      width: 4
+      width: 5
       kind: box
       start:
-        cue: tariffs are high
+        cue: and its robots stay busy
       label:
         text: OHIO
-        x: 1380
-        y: 580
-        size: 20
+        x: 1320
+        y: 600
+        size: 24
         color: accent2
         anchor: middle
-    - d: M 640 660 L 640 660
+    - d: M 700 700 L 700 700
       color: ink
       width: 1
       start:
-        cue: and its robots stay busy
+        cue: doesn't automatically favor
       label:
-        text: ROBOTS IDLE HALF THE TIME   OHIO → 116
-        x: 640
-        y: 660
-        size: 24
+        text: IDLE ROBOTS OR LOW TARIFF
+        x: 700
+        y: 700
+        size: 28
         color: ink
         anchor: start
       kind: stroke
-    - d: M 1290 630 L 1470 630 L 1470 674 L 1290 674 Z
+    - d: M 1180 665 L 1460 665 L 1460 719 L 1180 719 Z
       color: risk
-      width: 4
+      width: 5
       kind: box
       start:
-        cue: and its robots stay busy
-        offset: 0.5
+        cue: doesn't automatically favor
+        offset: 0.6
       label:
         text: NOT OHIO
-        x: 1380
-        y: 660
-        size: 20
+        x: 1320
+        y: 700
+        size: 24
         color: risk
         anchor: middle
-    - d: M 640 740 L 640 740
-      color: ink
-      width: 1
-      start:
-        cue: doesn't automatically favor
-      label:
-        text: NO TARIFF   91 · 102 · 87
-        x: 640
-        y: 740
-        size: 24
-        color: ink
-        anchor: start
-      kind: stroke
-    - d: M 1290 710 L 1470 710 L 1470 754 L 1290 754 Z
-      color: accent3
-      width: 4
-      kind: box
-      start:
-        cue: doesn't automatically favor
-        offset: 0.5
-      label:
-        text: CHINA AUTO
-        x: 1380
-        y: 740
-        size: 20
-        color: accent3
-        anchor: middle
-    - d: M 620 800 L 1480 800
+    - d: M 660 780 L 1480 780
       color: accent
       width: 6
       start:
         cue: It favors whoever
       label:
         text: AUTOMATION FAVORS WHOEVER AUTOMATES BEST, AT SCALE
-        x: 1050
-        y: 840
-        size: 22
+        x: 1070
+        y: 830
+        size: 24
         color: accent
         anchor: middle
       kind: stroke
-    - d: M 1050 880 L 1050 880
+    - d: M 1070 880 L 1070 880
       color: muted
       width: 1
       start:
         cue: Which raises
       label:
-        text: ILLUSTRATIVE MODEL · OUR ASSUMPTIONS · NOT REAL COMPANY COSTS
-        x: 1050
+        text: ILLUSTRATIVE MODEL · OUR ASSUMPTIONS · FULL TABLE IN THE DESCRIPTION
+        x: 1070
         y: 880
         size: 16
         color: muted
@@ -2909,7 +3109,7 @@ scenes:
         offset: 0.0
       dur: 1.4
       target:
-      - 1380
+      - 1320
       - 500
     scale: 0.86
     floor: 1040
@@ -2985,13 +3185,13 @@ scenes:
       y: 600
       zoom: 1.4
     - at:
-        cue: In twenty twenty-five
+        cue: Last year
       x: 960
       y: 520
       zoom: 0.85
       dur: 2.0
     - at:
-        cue: The United States installed
+        cue: Compared with America
       x: 960
       y: 520
       zoom: 0.9
@@ -3010,58 +3210,45 @@ scenes:
       y: 160
       at: 0.1
       until:
-        cue: In twenty twenty-five
+        cue: Last year
       size: 90
       color: '#FFFFFF'
-    - kind: counter
-      x: 960
-      y: 140
-      at:
-        cue: factories in China installed
-      suffix: ' ROBOTS'
-      decimals: 0
-      until:
-        cue: In a single year
-        offset: -0.3
-      steps:
-      - - 0
-        - 0
-      - - cue: factories in China installed
-        - 0
-      - - cue: industrial robots
-        - 354226
-      text: INSTALLED IN CHINA, 2025 (IFR WORLD ROBOTICS 2026)
-    - kind: sign
-      text: 59% OF THE WORLD'S NEW INDUSTRIAL ROBOTS
-      x: 960
-      y: 330
-      at:
-        cue: of every industrial robot
-      color: '#FFF59D'
-      size: 32
-      until:
-        cue: In a single year
-        offset: -0.3
-    - kind: sign
-      text: 'U.S.: 38,428'
-      x: 1500
-      y: 430
-      at:
-        cue: The United States installed
-      color: '#BBDEFB'
-      size: 30
-      until:
-        cue: In a single year
-        offset: -0.3
     - kind: toonwords
-      text: ≈ 9 TO 1 · IN ONE YEAR (OUR CALCULATION)
+      text: MORE NEW ROBOTS THAN THE REST OF THE WORLD COMBINED
       x: 960
-      y: 180
+      y: 160
       at:
-        cue: In a single year
-        offset: -0.3
-      size: 58
+        cue: than the rest of the world
+      size: 46
+      until:
+        cue: Compared with America
+    - kind: sign
+      text: IFR WORLD ROBOTICS 2026 · INSTALLATIONS IN 2025
+      x: 960
+      y: 270
+      at:
+        cue: than the rest of the world
+        offset: 0.5
+      color: '#FFF59D'
+      size: 24
+      until:
+        cue: Compared with America
+    - kind: toonwords
+      text: ≈ 9 TO 1 VS AMERICA
+      x: 960
+      y: 170
+      at:
+        cue: Compared with America
+      size: 70
       color: '#FFFFFF'
+    - kind: sign
+      text: OUR CALCULATION FROM IFR DATA
+      x: 960
+      y: 290
+      at:
+        cue: robots for every
+      color: '#FFF8E1'
+      size: 22
     - kind: toon
       x: 600
       at: 0.3
@@ -3077,16 +3264,33 @@ scenes:
       pose: wave
       label: WEI · HER LINE, NOW AUTOMATED
       labelUntil:
-        cue: The United States installed
+        cue: Compared with America
+      scale: 1.3
+    - kind: toon
+      x: 1700
+      at:
+        cue: Compared with America
+      who: shopper
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
+      glasses: false
+      scarf: '#FFD23F'
+      face: shock
+      pose: armsup
+      hops:
+      - cue: In a single year
       scale: 1.3
     - kind: torq
       x:
       - - 0
         - 2400
-      - - cue: The United States installed
-        - 1500
+      - - cue: than the rest of the world
+        - 1400
       at:
-        cue: of every industrial robot
+        cue: than the rest of the world
       faces:
       - - 0
         - shock
@@ -3112,42 +3316,30 @@ scenes:
     - set: robotrace
       x0: -1600
       x1: 4600
-      title: INDUSTRIAL ROBOTS INSTALLED IN 2025 · UNITS · IFR WORLD ROBOTICS 2026
+      title: INDUSTRIAL ROBOTS INSTALLED IN 2025 · IFR WORLD ROBOTICS 2026
       max: 354
       h: 520
-      gap: 300
+      gap: 420
       rows:
       - name: CHINA
         value: 354.2
         at:
-          cue: China, three hundred
-        display: 354,226
+          cue: China's tower
+        display: ≈ 354,000
         color: '#E5484D'
-      - name: U.S.
+      - name: 'U.S. (NOW #2)'
         value: 38.4
         at:
-          cue: The United States, about
-        display: '38,428 · NOW #2'
+          cue: America, now
+        display: ≈ 38,000
         color: '#00A6C8'
-      - name: JAPAN
-        value: 36.2
+      - name: REST OF WORLD
+        value: 210.7
         at:
-          cue: Japan,
-        display: 36,219
+          cue: And worldwide
+        display: ≈ 211,000
         color: '#7E57C2'
-      - name: S. KOREA
-        value: 30
-        at:
-          cue: South Korea
-        display: ≈ 30,000
-        color: '#2E9E5B'
-      - name: GERMANY
-        value: 24
-        at:
-          cue: Germany
-        display: < 25,000
-        color: '#FF9F1C'
-      foot: 'WORLD 2025: 603,307 · A RECORD'
+      foot: WORLD TOTAL A RECORD · REST OF WORLD = OUR CALCULATION
     worldW: 2400
     cam:
     - at: 0
@@ -3155,19 +3347,19 @@ scenes:
       y: 540
       zoom: 1.0
     - at:
-        cue: China, three hundred
-      x: 500
+        cue: China's tower
+      x: 700
       y: 520
       zoom: 1.15
       dur: 1.0
     - at:
-        cue: The United States, about
+        cue: America, now
       x: 960
       y: 560
       zoom: 1.05
       dur: 1.2
     - at:
-        cue: Worldwide
+        cue: And worldwide
       x: 960
       y: 540
       zoom: 0.95
@@ -3190,12 +3382,12 @@ scenes:
       faces:
       - - 0
         - worry
-      - - cue: China, three hundred
+      - - cue: China's tower
         - shock
-      - - cue: now the
+      - - cue: America, now
         - happy
       hops:
-      - cue: now the
+      - cue: America, now
       scale: 1.3
   sources:
   - ifr_wr26
@@ -3215,17 +3407,17 @@ scenes:
       h: 520
       gap: 520
       rows:
-      - name: 2019–2021
+      - name: A FEW YEARS AGO
         value: 30
         at:
-          cue: A few years earlier
+          cue: A few years ago
         display: ≈ 30%
         color: '#90A4AE'
-      - name: '2025'
+      - name: LAST YEAR
         value: 55
         at:
-          cue: Chinese brands supplied
-        display: 55%
+          cue: Now Chinese brands
+        display: MORE THAN HALF
         color: '#E5484D'
       hi: 1
     worldW: 2400
@@ -3235,7 +3427,7 @@ scenes:
       y: 540
       zoom: 1.05
     - at:
-        cue: A few years earlier
+        cue: A few years ago
       x: 960
       y: 520
       zoom: 1.0
@@ -3248,7 +3440,7 @@ scenes:
       y: 110
       at: 0.2
       until:
-        cue: Chinese brands supplied
+        cue: A few years ago
       size: 54
     - kind: toon
       x: 1650
@@ -3272,7 +3464,7 @@ scenes:
       faces:
       - - 0
         - worry
-      - - cue: A few years earlier
+      - - cue: Now Chinese brands
         - shock
       scale: 0.9
   sources:
@@ -3296,13 +3488,44 @@ scenes:
       at: 0.2
       dur: 1.3
     strokes:
-    - d: M 620 820 L 1480 820
+    - d: M 660 820 L 1440 820
       color: ink
       width: 5
       start:
-        cue: The federation counts
+        cue: Per factory worker
       kind: stroke
-    - d: M 680 820 L 680 500 L 820 500 L 820 820 Z
+    - d: M 960 820 L 960 723 L 1120 723 L 1120 820 Z
+      color: accent2
+      width: 3
+      fill: accent2
+      fillOpacity: 0.6
+      kind: bar
+      start:
+        cue: America has more robots
+      label:
+        text: U.S. 323
+        x: 1040
+        y: 705
+        size: 22
+        color: accent2
+        anchor: middle
+    - d: M 1200 820 L 1200 762 L 1360 762 L 1360 820 Z
+      color: risk
+      width: 3
+      fill: risk
+      fillOpacity: 0.7
+      kind: bar
+      start:
+        cue: Per factory worker
+        offset: 0.6
+      label:
+        text: CHINA 193
+        x: 1280
+        y: 744
+        size: 22
+        color: risk
+        anchor: middle
+    - d: M 720 820 L 720 500 L 880 500 L 880 820 Z
       color: accent3
       width: 3
       fill: accent3
@@ -3312,86 +3535,41 @@ scenes:
         cue: South Korea
       label:
         text: S. KOREA 1,066
-        x: 750
+        x: 800
         y: 482
-        size: 20
+        size: 22
         color: accent3
         anchor: middle
-    - d: M 880 820 L 880 723 L 1020 723 L 1020 820 Z
-      color: accent2
-      width: 3
-      fill: accent2
-      fillOpacity: 0.6
-      kind: bar
-      start:
-        cue: The United States,
-      label:
-        text: U.S. 323
-        x: 950
-        y: 705
-        size: 20
-        color: accent2
-        anchor: middle
-    - d: M 1080 820 L 1080 762 L 1220 762 L 1220 820 Z
-      color: risk
-      width: 3
-      fill: risk
-      fillOpacity: 0.7
-      kind: bar
-      start:
-        cue: one hundred and ninety-three
-      label:
-        text: CHINA 193
-        x: 1150
-        y: 744
-        size: 20
-        color: risk
-        anchor: middle
-    - d: M 1280 820 L 1280 774 L 1420 774 L 1420 820 Z
-      color: muted
-      width: 3
-      fill: muted
-      fillOpacity: 0.4
-      kind: bar
-      start:
-        cue: because it has so many
-      label:
-        text: WORLD 152
-        x: 1350
-        y: 756
-        size: 20
-        color: muted
-        anchor: middle
-    - d: M 1150 600 L 1150 600
+    - d: M 1280 600 L 1280 600
       color: risk
       width: 1
       start:
-        cue: because it has so many
+        cue: spread thin
       label:
-        text: SO MANY WORKERS → LOW PER-WORKER COUNT
-        x: 1150
+        text: SO MANY WORKERS → SPREAD THIN
+        x: 1200
         y: 600
-        size: 20
+        size: 22
         color: risk
         anchor: middle
       kind: stroke
-    - d: M 1150 640 Q 1150 685 1150 730 M 1140 708 L 1150 730 L 1160 708
+    - d: M 1280 630 Q 1280 680 1280 730 M 1270 708 L 1280 730 L 1290 708
       color: risk
       width: 5
       kind: arrow
       start:
-        cue: because it has so many
+        cue: spread thin
         offset: 0.5
-    - d: M 1150 560 L 1150 560
+    - d: M 1200 550 L 1200 550
       color: accent
       width: 1
       start:
-        cue: its density rose
+        cue: That's room to grow
       label:
-        text: 'CHINA: +147% IN 2020–2025'
-        x: 1150
-        y: 560
-        size: 24
+        text: ROOM TO GROW
+        x: 1200
+        y: 550
+        size: 30
         color: accent
         anchor: middle
       kind: stroke
@@ -3399,9 +3577,9 @@ scenes:
       color: muted
       width: 1
       start:
-        cue: its density rose
+        cue: That's room to grow
       label:
-        text: 'CHINA: NATIONAL ECONOMIC CENSUS EMPLOYMENT BASE (IFR) · BAR HEIGHTS TO SCALE'
+        text: CHINA ON A NATIONAL ECONOMIC CENSUS EMPLOYMENT BASE (IFR) · BARS TO SCALE
         x: 1050
         y: 870
         size: 15
@@ -3411,16 +3589,16 @@ scenes:
     actions:
     - kind: point
       at:
-        cue: one hundred and ninety-three
-        offset: 0.3
+        cue: spread thin
+        offset: 0.2
       dur: 1.4
       target:
-      - 1150
+      - 1280
       - 780
     - kind: react
       at:
-        cue: its density rose
-        offset: 0.4
+        cue: That's room to grow
+        offset: 0.2
       dur: 1.0
     scale: 0.86
     floor: 1040
@@ -3490,7 +3668,7 @@ scenes:
       until:
         cue: Robots don't cancel
     - kind: sign
-      text: '15TH FIVE-YEAR PLAN (2026–30): AI → PHYSICAL USES (IFR)'
+      text: 'NEW FIVE-YEAR PLAN: AI FOR PHYSICAL USES LIKE ROBOTS (IFR)'
       x: 1300
       y: 230
       at:
@@ -3662,20 +3840,20 @@ scenes:
       x: 1250
       at: 0.3
       who: shopper
-      v: 3
-      skin: 4
-      hair: 3
-      hairStyle: 2
-      color: '#5C6BC0'
+      v: 2
+      skin: 2
+      hair: 0
+      hairStyle: 3
+      color: '#FF8A65'
       glasses: false
-      scarf: '#E5484D'
+      scarf: '#FFD23F'
       scale: 0.9
       y: 800
       face: worry
       pose: shrug
       faces:
       - - 0
-        - smug
+        - happy
       - - cue: still depend
         - worry
       - - cue: from abroad
@@ -3692,9 +3870,9 @@ scenes:
       x1: 4600
       srcs:
       - label: ROBOTS
-        from: 'JAPAN: 38% OF OUTPUT (IFR)'
+        from: 'JAPAN: #1 ROBOT MAKER (IFR)'
         at:
-          cue: Japan makes
+          cue: Japan builds
         x: 230
         y: 260
         color: '#7E57C2'
@@ -3720,9 +3898,9 @@ scenes:
         y: 700
         color: '#2E9E5B'
       - label: RARE EARTHS
-        from: 'CHINA: 85% OF REFINING'
+        from: 'CHINA: MOST REFINING (IEA)'
         at:
-          cue: And China does
+          cue: And China refines
         x: 960
         y: 210
         color: '#E5484D'
@@ -3753,13 +3931,13 @@ scenes:
       zoom: 1.2
       dur: 1.2
     - at:
-        cue: And China does
+        cue: And China refines
       x: 960
       y: 400
       zoom: 1.15
       dur: 1.2
     - at:
-        cue: magnet rare earths
+        cue: behind those magnets
       x: 960
       y: 540
       zoom: 1.0
@@ -3771,7 +3949,7 @@ scenes:
       x: 960
       y: 1010
       at:
-        cue: magnet rare earths
+        cue: behind those magnets
       color: '#FFFFFF'
       size: 22
   sources:
@@ -3783,7 +3961,7 @@ scenes:
   segment: a6_draw
   type: engine_draw
   params:
-    title: Where the money from one robot-built toaster could go (illustrative)
+    title: Where the money from Mel's toaster could go (illustrative)
     board: *id001
     draw_start:
       cue: Let me draw
@@ -4221,6 +4399,8 @@ scenes:
         cue: can't risk
       color: '#FFF59D'
       size: 28
+      until:
+        cue: A toaster is light
     - kind: toon
       x: 1500
       at: 0.3
@@ -4237,7 +4417,24 @@ scenes:
       hops:
       - cue: For some products
         offset: 0.2
+      faces:
+      - - 0
+        - happy
+      - - cue: A toaster is light
+        - worry
       scale: 1.3
+    - kind: bubble
+      text: '...AND MY TOASTER
+
+        IS LIGHT. HMM.'
+      x: 1500
+      y: 420
+      at:
+        cue: A toaster is light
+      tail:
+      - 1500
+      - 600
+      size: 28
   assets:
   - font:inter
 - id: s38_jobs
@@ -4285,13 +4482,13 @@ scenes:
         cue: Economists
       size: 46
     - kind: sign
-      text: +1 ROBOT PER 1,000 WORKERS → EMPLOYMENT RATIO −0.2 PTS · WAGES −0.42%
+      text: MORE ROBOTS → FEWER PEOPLE EMPLOYED, LOWER WAGES
       x: 960
       y: 120
       at:
-        cue: each extra robot
+        cue: the more robots arrived
       color: '#FFF59D'
-      size: 26
+      size: 30
       sub: U.S. LOCAL JOB MARKETS, 1990–2007 · ACEMOGLU & RESTREPO, JPE 2020
     - kind: sign
       text: 'NEW JOBS: TECHNICIANS · PROGRAMMERS · MAINTENANCE CREWS'
@@ -4468,7 +4665,7 @@ scenes:
       y: 520
       zoom: 0.7
     - at:
-        cue: For forty years
+        cue: For decades
       x: 600
       y: 520
       zoom: 1.0
@@ -4492,7 +4689,7 @@ scenes:
       zoom: 1.1
       dur: 1.2
     - at:
-        cue: The future of making
+        cue: Mel's choice won't
       x: 1600
       y: 520
       zoom: 0.7
@@ -4505,14 +4702,14 @@ scenes:
       y: 120
       at: 0.3
       until:
-        cue: For forty years
+        cue: For decades
       size: 50
     - kind: toonwords
       text: 'OLD TEST: CHEAPEST WORKERS'
       x: 600
       y: 140
       at:
-        cue: For forty years
+        cue: For decades
       until:
         cue: Now it's who
       size: 50
@@ -4545,7 +4742,7 @@ scenes:
       color: '#BBDEFB'
       size: 28
       until:
-        cue: The future of making
+        cue: Mel's choice won't
     - kind: sign
       text: 'CHINA: CAN AUTOMATE TOO'
       x: 600
@@ -4555,13 +4752,13 @@ scenes:
       color: '#FFCDD2'
       size: 32
       until:
-        cue: The future of making
+        cue: Mel's choice won't
     - kind: toonwords
       text: NOT THE CHEAPEST LABOR. THE BEST SYSTEM.
       x: 1600
       y: 120
       at:
-        cue: The future of making
+        cue: Mel's choice won't
       size: 58
       color: '#FFFFFF'
     - kind: toon
@@ -4606,13 +4803,13 @@ scenes:
       face: happy
       pose: cheer
       hops:
-      - cue: The future of making
+      - cue: Mel's choice won't
         offset: 1.0
       scale: 1.3
     - kind: torq
       x: 1600
       at:
-        cue: The future of making
+        cue: Mel's choice won't
       faces:
       - - 0
         - happy
