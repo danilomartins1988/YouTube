@@ -168,6 +168,7 @@ const RAW: Record<string, SetFn> = {
     return <g>
       <rect x={z.x0} y={-2500} width={z.x1 - z.x0} height={4000} fill="#EAF4FB" />
       {Array.from({length: 24}, (_, k) => <path key={'gr' + k} d={`M ${z.x0 + k * 200} -200 L ${z.x0 + k * 200} 1300`} stroke="#D5E6F2" strokeWidth={3} />)}
+      <g transform="translate(96 150) scale(0.9)">
       {/* big tap: people */}
       <g transform="translate(250 380)"><rect x={-150} y={-90} width={300} height={170} rx={14} fill={PAPER} stroke={OL} strokeWidth={6} /><path d="M -120 -40 L 120 -40 M -120 0 L 80 0 M -120 40 L 100 40" stroke="#B0BEC5" strokeWidth={8} />
         <T x={0} y={-110} s={fit(z.bigLabel || 'PEOPLE: INCOME + PAYCHECK TAXES', 420, 28)} c={BLUE}>{z.bigLabel || 'PEOPLE: INCOME + PAYCHECK TAXES'}</T></g>
@@ -188,6 +189,7 @@ const RAW: Record<string, SetFn> = {
         {flowD(0.32 * out, `M 1180 ${560 + k * 60} Q 1350 ${y} 1500 ${y}`, WATER, 'o' + k)}
         <g transform={`translate(1650 ${Number(y) + 40})`}><rect x={-120} y={-110} width={240} height={120} fill="#FFFFFF" stroke={OL} strokeWidth={5} /><path d="M -140 -110 L 0 -170 L 140 -110 Z" fill={c as string} stroke={OL} strokeWidth={5} strokeLinejoin="round" />
           <T x={0} y={-36} s={fit(lab as string, 220, 28)} c={NAVY}>{lab}</T></g></g>)}
+      </g>
     </g>;
   },
 
@@ -248,7 +250,7 @@ const RAW: Record<string, SetFn> = {
     const fill = kf(z.fill, t, 1), lv = [0.46, 0.55, 0.5, 0.42, 0.58, 0.49];
     return <g>
       <rect x={z.x0} y={-2500} width={z.x1 - z.x0} height={4000} fill="#F3EEFF" />
-      <T x={960} y={170} s={44} c={NAVY}>{z.title || 'TAX JARS OF RICH DEMOCRACIES'}</T>
+      {z.title && <T x={960} y={170} s={44} c={NAVY}>{z.title}</T>}
       {lv.map((l, k) => { const x = 260 + k * 280, h = 400, y0 = 760, u = clamp(fill * 1.3 - k * 0.06);
         return <g key={'jr' + k} transform={`translate(${x} 0)`}>
           <rect x={-100} y={y0 - h} width={200} height={h} rx={30} fill="#FFFFFF" stroke={OL} strokeWidth={6} />

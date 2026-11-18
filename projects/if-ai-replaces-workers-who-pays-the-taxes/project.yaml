@@ -1,0 +1,51 @@
+title: "If AI Replaces Workers, Who Pays the Taxes?"
+slug: if-ai-replaces-workers-who-pays-the-taxes
+language: en
+# Episode 69 (series docs/series/AI_WINNERS_LOSERS.md #7). Owner: "Pode produzir direto sem precisar aprovar".
+# Flip: government budgets rest on taxing work (income and payroll taxes); robots earn no paycheck. If AI shrinks work, the bill must move
+# (robot taxes, taxing owners/profits, consumption taxes, AI dividends, basic income). Neutral: one good reason and one catch per idea.
+# Owner preference: keep tax explanations simple and short ("não fique muito em explicar impostos"): no jargon, a few plain sentences per idea.
+# Overlaps: Ep 48 (Alaska), Ep 59 (US debt) and Ep 64 (robots and owners) linked by title only.
+# Owner standing direction: prime-time TV-cartoon energy at GENRE level only; original cast (ROSA, mayor of fictional PINEWICK; STUB, the walking
+# pay stub; RIVET, the warehouse robot) and sets, human characters, day scenes. Bespoke kit: remotion/src/animation-engine/CartoonStage/aitaxes.tsx.
+# No public figure drawn (Bill Gates is quoted in narration only); no politicians as characters; no logos, no flags. USD only.
+renderer: remotion
+style:
+  name: cartoon-day
+  palette:
+    bg: "#F4F7F2"
+    bg2: "#FFFFFF"
+    ink: "#1A2238"
+    muted: "#5E6B85"
+    land: "#A6D08A"
+    border: "#23407A"
+    accent: "#F5B700"
+    accent2: "#1E88E5"
+    accent3: "#2E9E6B"
+    risk: "#E5483B"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 3
+intro:
+  after_segment: co_hook
+tts_overrides:
+  openai:
+    voice: ash
+    tempo: 1.0
+    instructions: >-
+      Voice: the narrator of a premium American documentary about money and power, warm, curious and quietly confident, with a
+      light touch of wit and real affection for the characters. Clear, fair and strictly neutral on politics. Pacing: brisk but
+      unhurried; slow slightly to land every number; a short beat after a surprising figure and before each verdict. Natural
+      American English, conversational, never an announcer, never salesy. Read the short character lines with a little playful
+      character. Pronounce names simply: Rosa (ROH-zah), Pinewick (PINE-wick), Rivet (RIV-it), Stockton (STOCK-tun).

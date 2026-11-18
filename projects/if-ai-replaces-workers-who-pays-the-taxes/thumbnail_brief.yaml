@@ -1,0 +1,65 @@
+# Thumbnail creative brief (Ep 69). Owner standing rules: at most 4 words naming the subject (ROBOTS / TAXES / AI), mobile-legible, no
+# statistics shown, face layout with an ORIGINAL character (ROSA, the film's fictional mayor), no logos, no flags, no real people.
+title: "If AI Replaces Workers, Who Pays the Taxes?"
+docs_dir: docs/episodes/69-ai-taxes
+video: output/aitaxes_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: If robots never get a paycheck, they never pay income tax; so who pays for schools, roads and Social Security?
+  surprising_fact: Almost nine of every ten federal tax dollars come from people's income and paycheck taxes (Treasury MTS FY2026, our calc)
+  subject: a shocked mayor holding up a giant price-tag style tax tag, robots in the background
+  tone: strategy
+  metaphor: the robot with empty pockets
+  public_figure: null
+concepts:
+- id: F
+  angle: "face (original character ROSA, the film's fictional mayor, shocked; a giant tag reading TAX?)"
+  archetype: face
+  text:
+  - "ROBOTS PAY"
+  - NO TAXES?
+  claim_basis: "a question (answered in the film: robots earn no wages, so no income or payroll tax; who pays instead is undecided); Rosa is fictional; no number shown"
+  scene:
+    bg: ['#3FA9F5', '#13284A']
+    rays: '#9ED8FF'
+    bust:
+      who: {name: Rosa, hair: bun, hairColor: '#3A2418', hairShade: '#5A3A28', brows: '#3A2418', skin: '#C68642', iris: '#2A1A10',
+            clothes: suit, jacket: '#C0392B', shirt: '#FFFFFF', glasses: null, age: 0}
+      expr: shock
+      x: 470
+      s: 0.92
+    prop: {kind: tag, text: 'TAX?', x: 1400, y: 720, s: 0.6, rot: -8}
+- id: A
+  angle: the robot hauls the money, who pays the tax?
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - WHO TAXES
+  - THE ROBOTS?
+  claim_basis: 'a question (no number shown)'
+  scene:
+    palette: {sky0: '#0D2A4A', sky1: '#1F5C99', haze: '#FFC93C', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: robothaul, x: 980, y: 720, s: 0.74, worker: false}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: no jobs, no taxes?
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - NO JOBS,
+  - NO TAXES?
+  claim_basis: 'a question (the film: income and payroll taxes rest on work; a what-if, not a forecast)'
+  scene:
+    palette: {sky0: '#1A1035', sky1: '#3B2A6E', haze: '#7FA8FF', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: robothaul, x: 980, y: 720, s: 0.74}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none

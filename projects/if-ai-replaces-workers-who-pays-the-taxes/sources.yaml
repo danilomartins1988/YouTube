@@ -1,0 +1,251 @@
+# Sources and claims for "If AI Replaces Workers, Who Pays the Taxes?" (Episode 69; series docs/series/AI_WINNERS_LOSERS.md #7).
+# Read on 2026-11-18 on the primary page or document; where the primary host blocked automated access (403), the note says how the figure
+# was confirmed (notes: docs/episodes/69-ai-taxes/RESEARCH_NOTES.md). Status stays source_located until a named human reviewer signs off.
+# US dollars only. OUR CALCULATION is labelled wherever we derive a number; projections are labelled PROJECTION.
+# Overlaps: Ep 48 (Alaska dividend), Ep 59 (US debt) and Ep 64 (robots and owners) are linked by title only; the shared Social Security
+# figures (2034, about 83%) match Ep 59's FACT_CHECK (2026 Trustees Report); Ep 48's dividend amounts are not repeated.
+sources:
+  - id: mts_fy26
+    title: "Monthly Treasury Statement, Table 4: Receipts of the United States Government (fiscal year to date, September 30, 2026)"
+    publisher: U.S. Department of the Treasury, Bureau of the Fiscal Service (Fiscal Data API, mts_table_4)
+    url: https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/receipts-of-the-u-s-government
+    published: "2026-10"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "U.S. Treasury, Monthly Treasury Statement (FY2026)"
+    notes: "FY2026 net receipts: total $5,403.3bn; individual income taxes $2,845.5bn; social insurance and retirement receipts (mostly payroll taxes) $1,811.8bn; corporation income taxes $381.4bn; off-budget (Social Security payroll taxes) $1,341.5bn. FY2025: total $5,234.6bn, individual $2,656.0bn, social insurance $1,748.3bn, corporate $452.1bn. Read via api.fiscaldata.treasury.gov (record_date 2026-09-30)."
+  - id: cbo_mbr26
+    title: "Monthly Budget Review: Summary for Fiscal Year 2026"
+    publisher: Congressional Budget Office
+    url: https://www.cbo.gov/publication/61986
+    published: "2026-11"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "CBO, Monthly Budget Review (Nov 2026)"
+    notes: "FY2026 deficit $2.0 trillion, up $217bn (12%) from FY2025; individual income taxes the largest source of revenue; corporate receipts fell (larger deductions for certain investments under the July 2025 law). cbo.gov returned 403 to automated fetch; read via search excerpts of the CBO page and corroborated by the Treasury MTS figures above."
+  - id: ssa_tr26
+    title: "2026 Annual Report of the Board of Trustees of the Federal OASI and DI Trust Funds (summary)"
+    publisher: Social Security Administration, Board of Trustees
+    url: https://www.ssa.gov/OACT/TRSUM/index.html
+    published: "2026-06-09"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Social Security Trustees Report 2026"
+    notes: "Combined OASI and DI reserves projected depleted in the third quarter of 2034 (unchanged from 2025); then about 83% of scheduled benefits payable (81% in the 2025 report); OASI alone Q4 2032 (78% payable). 75-year actuarial deficit 4.42% of taxable payroll. ssa.gov returned 403 to automated fetch; confirmed in the American Academy of Actuaries 2026 one-pager (PDF, read) and SSA press coverage. Same figures as Ep 59 FACT_CHECK (CRS IF13256)."
+  - id: aaa_tr26
+    title: "Social Security 2026 Trustees Report one-pager"
+    publisher: American Academy of Actuaries
+    url: https://actuary.org/wp-content/uploads/2026/07/Trustees_Report_One-Pager_Placemat_2026.pdf
+    published: "2026-07"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "American Academy of Actuaries"
+    notes: "Combined trust funds last until Q3 2034; if no change, only 83% of scheduled benefits payable; OASI depleted Q4 2032; actuarial deficit 3.82% -> 4.42% of taxable payroll."
+  - id: oecd_rs25
+    title: "Revenue Statistics 2025: Tax revenue trends 1965-2024"
+    publisher: OECD
+    url: https://www.oecd.org/en/publications/revenue-statistics-2025_3a264267-en.html
+    published: "2025-12"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "OECD, Revenue Statistics 2025"
+    notes: "OECD (unweighted) average 2023 tax structure: social security contributions 25.5% of total tax revenue (largest category); personal income tax 23.7%; VAT 20.5%; personal + corporate income taxes 36.4% (so corporate ≈ 12.7%, OUR CALCULATION). Tax-to-GDP 34.1% in 2024 (preliminary, a record). oecd.org returned 403 to automated fetch; SSC share and 36.4% read in OECD page excerpts; PIT and VAT shares via Accounting Times (Dec 2025) citing the report."
+  - id: acctimes25
+    title: "Labour taxes leading a boost in OECD revenues: report"
+    publisher: Accounting Times (Australia)
+    url: https://www.accountingtimes.com.au/tax/labour-taxes-leading-a-boost-in-oecd-revenues-report-funds
+    published: "2025-12"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Accounting Times, citing OECD Revenue Statistics 2025"
+    notes: "OECD average 2023: personal income tax 23.7% of total tax revenue; VAT 20.5%; tax-to-GDP 33.7% (2023), 34.1% (2024)."
+  - id: oecd_vat
+    title: "Consumption Tax Trends (VAT/GST in OECD member countries)"
+    publisher: OECD
+    url: https://www.oecd.org/en/topics/sub-issues/consumption-tax-trends.html
+    published: "2024"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "OECD, Consumption Tax Trends"
+    notes: "The United States is the only OECD member country without a national value added tax (sales taxes are levied by states and localities)."
+  - id: gates_qz17
+    title: "The robot that takes your job should pay taxes, says Bill Gates (Quartz interview), as reported"
+    publisher: Quartz (interview, Feb 17, 2017); reported by Fortune (Feb 18, 2017) and the World Economic Forum
+    url: https://fortune.com/2017/02/18/bill-gates-robot-taxes-automation/
+    published: "2017-02-18"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Quartz interview (2017), via Fortune"
+    notes: "Gates: a human worker doing $50,000 of work has that income taxed (income tax, Social Security tax); 'If a robot comes in to do the same thing, you'd think that we'd tax the robot at a similar level.' Coverage notes the European Parliament rejected a robot-tax proposal on Feb 16, 2017."
+  - id: korea17
+    title: "Korea takes first step to introduce 'robot tax'"
+    publisher: The Korea Times
+    url: https://www.koreatimes.co.kr/business/tech-science/20170807/korea-takes-first-step-to-introduce-robot-tax
+    published: "2017-08-07"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "The Korea Times (2017)"
+    notes: "The 2017 tax revision plan reduced the tax credit (deduction) for corporate investment in automation equipment, then 3-7% depending on firm size, by up to 2 percentage points; not a tax on robots but described as 'a similar kind of policy'. Exact post-cut rates differ between later accounts (Korea Times 2025 opinion; ITIF 2026), so only the direction is spoken."
+  - id: itif26
+    title: "Industries impacted by quasi robot tax: South Korea reduced industrial robot installations"
+    publisher: ITIF (Information Technology and Innovation Foundation; advocacy think tank)
+    url: https://itif.org/publications/2026/02/09/industries-impacted-by-quasi-robot-tax-south-korea-reduced-industrial-robot-installations/
+    published: "2026-02-09"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "ITIF, citing Hotmann et al. (2025)"
+    notes: "Citing a 2025 study: after the credit cut, Korean industries reduced robot installations by about 28% relative to Japanese counterparts, with a statistically insignificant effect on employment. Not spoken; context for the 'buy fewer machines' catch (labelled one study)."
+  - id: oecd_beps
+    title: "Base erosion and profit shifting (BEPS)"
+    publisher: OECD
+    url: https://www.oecd.org/en/topics/base-erosion-and-profit-shifting-beps.html
+    published: "n.d."
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "OECD BEPS"
+    notes: "Profit shifting: multinationals can shift profits to low or no-tax locations; the OECD/G20 framework includes a 15% global minimum tax (Pillar Two). Mechanism only; no figures spoken."
+  - id: cbo_vat
+    title: "Options for Reducing the Deficit: Impose a 5 Percent Value-Added Tax"
+    publisher: Congressional Budget Office
+    url: https://www.cbo.gov/budget-options/54820
+    published: "2018-12"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "CBO, Options for Reducing the Deficit"
+    notes: "CBO: a VAT would likely be regressive (relative to current income) because lower-income families spend a larger portion of what they earn; the effect depends on prices. Page read via search excerpt (cbo.gov 403). Penn Wharton Budget Model (2019) reaches the same conclusion. Mechanism only."
+  - id: pfd_div
+    title: "Permanent Fund Dividend Division: summary of dividend amounts"
+    publisher: State of Alaska, Department of Revenue, PFD Division
+    url: https://pfd.alaska.gov/Division-Info/Summary-of-Applications-and-Payments
+    published: "2026"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Alaska PFD Division"
+    notes: "Annual dividend paid to eligible residents from the Alaska Permanent Fund (oil-revenue fund, first dividend 1982); 2025: 618,863 paid of 738,737 residents. The 2016 veto that cut the dividend and the yearly fight over its size are documented in Ep 48's FACT_CHECK. No amounts spoken here."
+  - id: or_nber
+    title: "The Employment Effects of a Guaranteed Income: Experimental Evidence from Two U.S. States (NBER w32719, revised Sept 2025)"
+    publisher: Vivalt, Rhodes, Bartik, Broockman, Krause, Miller (NBER; OpenResearch)
+    url: https://www.nber.org/papers/w32719
+    published: "2025-09"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Vivalt et al., NBER w32719 (OpenResearch)"
+    notes: "1,000 low-income people randomized to $1,000/month unconditionally for three years; 2,000 controls got $50/month (Illinois and Texas). Transfer cut individual income excluding transfers by about $1,800/year vs control; labor force participation -3.9 points; work hours down 1-2 hours/week (partners similar); greatest time increase in leisure; no impact on job quality; spending up, led by non-durables; well-being higher in year 1 then reverts. Abstract read in the revised PDF (the July 2024 version said about $1,500/year, -2.0 points, 1.3-1.4 hours)."
+  - id: seed21
+    title: "Guaranteed Income Increases Employment, Improves Financial and Physical Health (SEED first-year results)"
+    publisher: Stockton Economic Empowerment Demonstration (SEED); independent evaluation by West and Castro Baker
+    url: https://www.stocktondemonstration.org/press-landing/guaranteed-income-increases-employment-improves-financial-and-physical-health
+    published: "2021-03-03"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "SEED (Stockton, CA) preliminary analysis, 2021"
+    notes: "125 Stockton residents received $500/month for 24 months (from Feb 2019), no strings attached. First year (Feb 2019-Feb 2020): full-time employment among recipients rose from 28% to 40%, vs 32% to 37% in the control group; lower anxiety and depression. Preliminary analysis; small sample."
+claims:
+  - id: fed_people
+    text: "FY2026 federal receipts: individual income taxes $2,845.5bn + social insurance and retirement receipts $1,811.8bn = $4,657.3bn of $5,403.3bn = 86.2% (OUR CALCULATION, Treasury MTS). Caveat: individual income tax also falls on investment income, not only wages."
+    spoken: almost nine out of every ten dollars
+    display: "FY2026: ≈ 86% of federal receipts from individual income + payroll taxes · OUR CALC (Treasury MTS)"
+    source_ids: [mts_fy26, cbo_mbr26]
+    status: data_derived
+  - id: fed_corp
+    text: "FY2026 corporation income taxes $381.4bn of $5,403.3bn total receipts = 7.1% (OUR CALCULATION, Treasury MTS); down from $452.1bn in FY2025 (8.6%)."
+    spoken: about seven cents of every federal tax dollar
+    display: "FY2026: corporate income tax ≈ 7¢ of every federal tax dollar · OUR CALC (Treasury MTS)"
+    source_ids: [mts_fy26, cbo_mbr26]
+    status: data_derived
+  - id: ss_2034
+    text: "2026 Trustees Report: combined OASI and DI trust fund reserves projected depleted in Q3 2034 (a PROJECTION under intermediate assumptions)."
+    spoken: is projected to run dry in 2034
+    display: "PROJECTION: Social Security reserve runs dry in 2034 · 2026 Trustees Report"
+    source_ids: [ssa_tr26, aaa_tr26]
+    status: source_located
+  - id: ss_payable
+    text: "After depletion, continuing income would cover about 83% of scheduled benefits (combined funds), unless Congress acts."
+    spoken: only part of every check
+    display: "Then ≈ 83% of scheduled benefits payable (unless Congress acts) · Trustees 2026"
+    source_ids: [ssa_tr26, aaa_tr26]
+    status: source_located
+  - id: oecd_half
+    text: "OECD average 2023: personal income tax 23.7% + social security contributions 25.5% = 49.2% of total tax revenue (OUR CALCULATION; payroll taxes add a little more)."
+    spoken: about half of all tax money
+    display: "Rich democracies: ≈ half of taxes from personal income + social security contributions · OECD (2023)"
+    source_ids: [oecd_rs25, acctimes25]
+    status: data_derived
+  - id: fed_deficit
+    text: "FY2026 federal deficit $2.0 trillion (CBO)."
+    spoken: spends more than it collects
+    display: "FY2026 deficit ≈ $2.0 trillion · CBO"
+    source_ids: [cbo_mbr26]
+    status: source_located
+  - id: gates17
+    text: "Feb 2017 Quartz interview: Bill Gates said that if a robot does the work of a taxed human worker, 'you'd think that we'd tax the robot at a similar level.'"
+    spoken: in 2017
+    display: "2017: Bill Gates floats taxing robots 'at a similar level' · Quartz interview"
+    source_ids: [gates_qz17]
+    status: source_located
+  - id: korea17
+    text: "South Korea's 2017 tax revision plan reduced the tax credit for investment in automation equipment (by up to 2 points from 3-7%); widely called the first 'robot tax', though no tax was levied on robots."
+    spoken: trimmed a tax break
+    display: "2017: South Korea trims its automation tax credit ('robot tax' nickname) · Korea Times"
+    source_ids: [korea17]
+    status: source_located
+  - id: eu_reject
+    text: "On Feb 16, 2017 the European Parliament rejected the proposal for a robot tax in its civil-law rules on robotics resolution."
+    spoken: turned it down
+    display: "Feb 2017: European Parliament rejects a robot tax · Fortune/Quartz"
+    source_ids: [gates_qz17]
+    status: source_located
+  - id: profit_shift
+    text: "Multinational companies can shift profits to low-tax jurisdictions (OECD BEPS); the 15% global minimum tax aims to limit this."
+    spoken: book its profits in a country with lower taxes
+    display: "Profit shifting to low-tax countries · OECD BEPS"
+    source_ids: [oecd_beps]
+    status: source_located
+  - id: us_novat
+    text: "The US is the only OECD member without a national VAT; VAT averages about a fifth of OECD tax revenue (20.5%, 2023)."
+    spoken: the only one in the club without one
+    display: "US: the only OECD country with no national VAT · OECD"
+    source_ids: [oecd_vat, acctimes25]
+    status: source_located
+  - id: regressive
+    text: "Consumption taxes take a larger share of lower-income households' income because they spend a larger share of what they earn (CBO)."
+    spoken: a bigger bite out of their budget
+    display: "Shopping taxes weigh more on lower-income budgets · CBO"
+    source_ids: [cbo_vat]
+    status: source_located
+  - id: ak_pfd
+    text: "Alaska pays an annual Permanent Fund Dividend to nearly every resident (618,863 paid in 2025 of a 738,737 population) from an oil-revenue investment fund."
+    spoken: nearly every resident
+    display: "Alaska: a yearly dividend from an oil fund · PFD Division (see Ep 48)"
+    source_ids: [pfd_div]
+    status: source_located
+  - id: ak_fight
+    text: "The dividend's size is set each year by the legislature and governor and has been cut (2016 veto) amid budget fights (Ep 48 FACT_CHECK)."
+    spoken: the size of the check becomes a political fight
+    display: "The size of the check: a yearly political fight · see Ep 48"
+    source_ids: [pfd_div]
+    status: source_located
+  - id: seed500
+    text: "SEED: 125 Stockton residents received $500 a month for 24 months, no strings attached (from Feb 2019)."
+    spoken: $500 a month
+    display: "Stockton SEED: $500 a month, no strings · SEED (2019-21)"
+    source_ids: [seed21]
+    status: source_located
+  - id: seed_ft
+    text: "SEED first year: recipients' full-time employment 28% -> 40% vs control 32% -> 37% (preliminary)."
+    spoken: more of them had full-time jobs than in a comparison group
+    display: "Year 1 full-time work: recipients 28% → 40% · comparison 32% → 37% · SEED (preliminary)"
+    source_ids: [seed21]
+    status: source_located
+  - id: or_design
+    text: "OpenResearch study: 1,000 low-income people got $1,000/month for three years; 2,000 controls got $50/month (randomized)."
+    spoken: a thousand dollars a month
+    display: "OpenResearch: $1,000 a month for 3 years vs $50 · NBER w32719"
+    source_ids: [or_nber]
+    status: source_located
+  - id: or_result
+    text: "Recipients worked 1-2 fewer hours a week; labor force participation -3.9 points; earned income about $1,800/yr lower; no impact on job quality; spending up; well-being gain in year 1 faded (NBER w32719 rev. Sept 2025)."
+    spoken: about an hour or two a week
+    display: "Result: 1-2 fewer work hours a week · no better jobs · NBER w32719 (rev. 2025)"
+    source_ids: [or_nber]
+    status: source_located

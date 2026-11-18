@@ -190,7 +190,6 @@ const RAW: Record<string, SetFn> = {
         {Array.from({length: 22}, (_, k) => <path key={'wv' + k} d={`M ${120 + (k * 190) % 1700} ${130 + ((k * 137) % 820)} q 14 -8 28 0 q 14 8 28 0`} stroke="#9DC3D6" strokeWidth={3} fill="none" />)}
         {LAND.map((p, k) => <path key={'ld' + k} d={p} fill="#CFE3A8" stroke="#6B5A3A" strokeWidth={5} />)}
         <g transform="translate(1720 900)"><circle r={60} fill="none" stroke="#6B5A3A" strokeWidth={4} /><path d="M 0 -70 L 12 0 L 0 70 L -12 0 Z" fill={RED} stroke={OL} strokeWidth={3} transform={`rotate(${8 * Math.sin(t)})`} /><T x={0} y={-80} s={24} c="#6B5A3A">N</T></g>
-        {st.length > 1 && <path d={d} stroke={RED} strokeWidth={8} fill="none" strokeDasharray="20 16" pathLength={1000} strokeDashoffset={0} opacity={0.25} />}
         {st.length > 1 && <path d={d} stroke={RED} strokeWidth={8} fill="none" pathLength={1000} strokeDasharray={`${u * 1000} 1000`} />}
         {st.map((s, k) => { const p = pop(t, s.at ?? 0, 0.35); if (p <= 0) return null; const hh = hi === k ? 1 + 0.12 * Math.sin(t * 10) : 1, land = jig(t, s.at ?? 0, 22, 7);
           return <g key={'st' + k} transform={`translate(${s.x} ${s.y}) rotate(${-8 + (k % 3) * 6}) scale(${p * hh * (1 - 0.15 * land)})`}>
