@@ -13,7 +13,7 @@ Nvidia Doubled Its Sales. Why Only 16.6 Times Profit? #shorts
 ## Description
 
 ```
-Nvidia just reported one hundred and fifteen point eight billion dollars of revenue in three months.
+Nvidia just reported $115.8 billion of revenue in three months, more than double a year ago. At the Nov 17, 2026 close, just before the report, it was worth about 16.6 times its last twelve months of profit (our calculation from Nvidia's 8-K and the closing price). Not financial advice.
 
 Watch the full story: "Before You Buy Nvidia Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
 

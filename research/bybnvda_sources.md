@@ -1,6 +1,6 @@
 # Research dossier - Before You Buy Nvidia Stock, Watch This (Nov 2026)
 
-Generated 2026-11-17T22:47:11+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-17T23:31:39+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 

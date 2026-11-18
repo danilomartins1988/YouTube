@@ -24,7 +24,7 @@
 - Runtime: **730.93 s**
 - Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 273.3 MB
 - Loudness: -16.0 LUFS integrated, true peak -3.8 dBFS
-- Errors: **0**, warnings: **86**
+- Errors: **0**, warnings: **85**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
 
@@ -115,7 +115,6 @@
 - [WARNING] (distinctiveness) Scene sequence 94% similar to 'before-you-buy-alphabet-2026-11/documentary'
 - [WARNING] (distinctiveness) Scene sequence 85% similar to 'the-2-billion-that-never-existed/documentary'
 - [WARNING] (distinctiveness) Scene sequence 95% similar to 'before-you-buy-microsoft-2026-11/documentary'
-- [WARNING] (render) Picture static for >4 s from 677.63s (pacing?)
 
 ## Publish blockers - claims needing human verification
 

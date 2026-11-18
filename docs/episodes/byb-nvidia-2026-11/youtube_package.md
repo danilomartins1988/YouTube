@@ -1,0 +1,58 @@
+# YouTube package: "Before You Buy Nvidia Stock, Watch This (Nov 2026)" (Before You Buy, Nvidia, Nov 2026)
+
+Prepared for manual publishing. Nothing has been uploaded. Video length 12:10.
+
+## Title options
+
+1. **Before You Buy Nvidia Stock, Watch This (Nov 2026)** (recommended)
+2. **Is Nvidia Stock Priced Like a Peak? (Nov 2026)**
+3. **Nvidia Stock: What Has to Go Right Now**
+
+## Description (3266 chars, YouTube limit 5,000)
+
+```
+Nvidia stock, before you buy: Nvidia just reported $115.8 billion of quarterly revenue, more than double a year ago, yet at the November 17, 2026 close (just before the report) the company was worth about $3.75 trillion, about 16.6 times its last twelve months of profit by our calculation. So what is that price actually betting on? In this edition of Before You Buy, we open Nvidia's money machine (data center and edge computing), follow the cash into buybacks, dividends and stakes in other companies, run three lenses and a simple reverse calculation to see what growth today's price assumes, then weigh what has to go right (big buyers, margins through the Rubin ramp, customers that pay, a $390 billion supply bet), what could go wrong (a CEO transition, China, a web of guarantees and investments), and the upside Nvidia itself points to. We finish with the three numbers to watch at the next report.
+
+Data as of the November 17, 2026 close (before the Q3 FY2027 report) · latest report: Q3 FY2027 (quarter ended October 25, 2026). The Q3 10-Q was not yet filed; Q3 figures come from Nvidia's 8-K of November 17, 2026. This video is updated every quarter.
+Every figure comes from Nvidia's SEC filings (8-K earnings release, CFO commentary and supplemental information, the November 12, 2026 8-K, the fiscal 2026 10-K) plus the closing price; ratios and the reverse calculation are our own calculations (illustration, assumptions on screen). For educational purposes only. Not financial, investment or tax advice. Not affiliated with NVIDIA Corporation.
+
+#nvidia #stocks #investing
+
+Chapters
+0:00 Sixteen times profit
+1:26 The machine
+3:47 The cash
+6:03 What's priced in
+7:56 What has to happen
+9:40 Risks and upside
+11:16 The scorecard
+
+Sources
+- NVIDIA Corporation (SEC filing; same text on nvidianews.nvidia.com): NVIDIA Announces Financial Results for Third Quarter Fiscal 2027 (Form 8-K Exhibit 99.1, Nov 17, 2026) - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm
+- NVIDIA Corporation (SEC filing): CFO Commentary on Third Quarter Fiscal 2027 Results (Form 8-K Exhibit 99.2, Nov 17, 2026) - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27cfocommentary.htm
+- NVIDIA Corporation (SEC filing): Supplemental Financial Information, quarter ended Oct 25, 2026 (Form 8-K Exhibit 99.3, Nov 17, 2026) - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/supplementalfinancialinfor.htm
+- NVIDIA Corporation (SEC filing): Form 8-K, Item 5.02, and Exhibit 99.1 'NVIDIA Announces CEO Transition' (filed Nov 12, 2026) - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm
+- NVIDIA Corporation (SEC filing): NVIDIA Q4 and fiscal 2026 results (Form 8-K Exhibit 99.1, Feb 25, 2026) - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm
+- NVIDIA Corporation (SEC filing): NVIDIA Form 10-K for fiscal 2026 (year ended January 25, 2026) - https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm
+- Yahoo Finance: NVDA daily closing prices, Nov 4 and Nov 17, 2026 (data vendor) - https://finance.yahoo.com/quote/NVDA/history/
+
+Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+```
+
+## Chapters
+
+```
+0:00 Sixteen times profit
+1:26 The machine
+3:47 The cash
+6:03 What's priced in
+7:56 What has to happen
+9:40 Risks and upside
+11:16 The scorecard
+```
+
+## Tags
+
+```
+Nvidia stock, NVDA, before you buy, Nvidia earnings, Nvidia Q3 earnings, Nvidia valuation, should you buy Nvidia stock, data center, AI chips, stock analysis, Nasdaq, The Hidden Economics
+```
