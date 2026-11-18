@@ -1,0 +1,50 @@
+# Research dossier - Why Canada Could Be the Biggest Winner of the AI Boom
+
+Generated 2026-11-18T21:42:51+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+
+## Sources
+
+| id | Publisher | Title | Published | Accessed | Type | URL |
+|---|---|---|---|---|---|---|
+| `cer_can` | Canada Energy Regulator | Provincial and Territorial Energy Profiles: Canada | 2025 | 2026-11-18 | primary | https://www.cer-rec.gc.ca/en/data-analysis/energy-markets/provincial-territorial-energy-profiles/provincial-territorial-energy-profiles-canada.html |
+| `hq_cmp25` | Hydro-Québec | Comparison of Electricity Prices in Major North American Cities, rates in effect April 1, 2025 | 2025 | 2026-11-18 | dataset | https://pannes.hydroquebec.com/data/documents-donnees/pdf/comparaison-prix-2025-en.pdf |
+| `hq_rcd26` | Hydro-Québec, filed with the Régie de l'énergie du Québec | Demande du Distributeur relative à la fixation des tarifs CD et CB (R-4333-2026) and proposed text of Rate CD (HQD-2, Document 1.3) | 2026-02-19 | 2026-11-18 | primary | https://www.regie-energie.qc.ca/fr/participants/dossiers/R-4333-2026/doc/R-4333-2026-B-0002-Dem-Dem-2026_02_19.pdf |
+| `blg_qc26` | Borden Ladner Gervais (BLG) | Data centre regulation in Québec: from honeyed promise to iron control | 2026-07-08 | 2026-11-18 | secondary | https://www.blg.com/en/insights/2026/07/data-centre-regulation-in-quebec-from-honeyed-promise-to-iron-control |
+| `bc_iaf` | Government of British Columbia, Ministry of Energy and Climate Solutions | Industrial Electricity Allocation Framework | 2026 | 2026-11-18 | primary | https://www2.gov.bc.ca/gov/content/industry/electricity-alternative-energy/electricity/industrial-electricity-allocation-framework |
+| `bc_news26` | Government of British Columbia (news release 2026ECS0005-000095) | Province, BC Hydro launching competitive process for clean power in high-demand sectors | 2026-01-29 | 2026-11-18 | primary | https://news.gov.bc.ca/releases/2026ECS0005-000095 |
+| `qscale22` | Sustainable Biz Canada | QScale building 96MW eco-friendly data centre in Lévis, Que. | 2022-03-11 | 2026-11-18 | secondary | https://sustainablebiz.ca/qscale-building-96mw-eco-friendly-data-centre-in-levis-que |
+| `msft_ca25` | Microsoft On the Issues (company blog) | Microsoft Deepens Its Commitment to Canada with Landmark $19B AI Investment | 2025-12-09 | 2026-11-18 | primary | https://blogs.microsoft.com/on-the-issues/2025/12/09/microsoft-deepens-its-commitment-to-canada-with-landmark-19b-ai-investment/ |
+| `bell_aif25` | Bell Canada (company announcement) | Increasing sovereign AI capacity: introducing Bell AI Fabric | 2025-05-28 | 2026-11-18 | primary | https://explore.business.bell.ca/en-articles/increasing-sovereign-ai-capacity-introducing-bell-ai-fabric |
+| `nrcan_cml24` | Natural Resources Canada (news release) | Government of Canada Releases Updated Critical Minerals List | 2024-06-10 | 2026-11-18 | primary | https://www.canada.ca/en/natural-resources-canada/news/2024/06/government-of-canada-releases-updated-critical-minerals-list.html |
+| `nrcan_mpo26` | Privy Council Office, Major Projects Office | McIlvenna Bay (Major Projects Office project page) | 2026 | 2026-11-18 | primary | https://www.canada.ca/en/privy-council/major-projects-office/projects/national/mcilvenna.html |
+| `iea_crit21` | International Energy Agency | The Role of Critical Minerals in Clean Energy Transitions: Reliable supply of minerals | 2021-05 | 2026-11-18 | primary | https://www.iea.org/reports/the-role-of-critical-minerals-in-clean-energy-transitions/reliable-supply-of-minerals |
+| `nobel24` | Nobel Prize Outreach | The Nobel Prize in Physics 2024 | 2024-10-08 | 2026-11-18 | primary | https://www.nobelprize.org/prizes/physics/2024/summary/ |
+| `vector` | Vector Institute | About Vector Institute | 2026 | 2026-11-18 | primary | https://vectorinstitute.ai/about/ |
+| `mila` | Mila, Quebec Artificial Intelligence Institute | About Mila | 2026 | 2026-11-18 | primary | https://mila.quebec/en/mila |
+| `cifar` | CIFAR | Pan-Canadian Artificial Intelligence Strategy | 2026 | 2026-11-18 | primary | https://cifar.ca/ai/ |
+| `ised_scip26` | Innovation, Science and Economic Development Canada (news release) | Canada launches national initiative to build large-scale AI supercomputing capacity | 2026-04-15 | 2026-11-18 | primary | https://www.canada.ca/en/innovation-science-economic-development/news/2026/04/canada-launches-national-initiative-to-build-large-scale-ai-supercomputing-capacity.html |
+| `statcan_stem25` | Statistics Canada, Economic and Social Reports 5(7) | Retention of science, technology, engineering, mathematics and computer science graduates in Canada (Choi and Hou) | 2025-07-23 | 2026-11-18 | primary | https://www150.statcan.gc.ca/n1/pub/36-28-0001/2025007/article/00004-eng.htm |
+| `statcan_gdp25` | Statistics Canada, The Daily | Gross domestic product, income and expenditure, second quarter 2025 | 2025-08-29 | 2026-11-18 | dataset | https://www150.statcan.gc.ca/n1/daily-quotidien/250829/dq250829a-eng.htm |
+| `statcan_trade26` | Statistics Canada, The Daily | Canadian international merchandise trade, December 2025 (annual review) | 2026-02-19 | 2026-11-18 | dataset | https://www150.statcan.gc.ca/n1/daily-quotidien/260219/dq260219a-eng.htm |
+| `boc_os26` | Bank of Canada | Monetary Policy Report press conference opening statement (October 28, 2026) | 2026-10-28 | 2026-11-18 | primary | https://bankofcanada.ca/2026/10/opening-statement-2026-10-28 |
+| `fed_g5a` | Board of Governors of the Federal Reserve System | Foreign Exchange Rates (Annual), G.5A | 2026-01-05 | 2026-11-18 | dataset | https://www.federalreserve.gov/releases/g5a/current/default.htm |
+
+## Claims
+
+| id | Claim | On screen | Reference period | Status | Sources | Note |
+|---|---|---|---|---|---|---|
+| `gdp_shrank` | StatCan: real GDP declined 0.4% in Q2 2025 (after +0.5% in Q1), driven by a drop in goods exports as US tariffs slowed trade. | Q2 2025: the economy shrank, exports fell under US tariffs · Statistics Canada | - | **source_located** | statcan_gdp25 |  |
+| `boc_rebound` | Bank of Canada (Oct 28, 2026): Q2 2026 GDP growth 3.3% (annualized), about 2% indicated for Q3; growth expected to slow in Q4 under new US tariffs, then pick up in 2027 (FORECAST); unemployment around 6.5%. | 2026: growing again; slower Q4 as new tariffs bite · Bank of Canada (FORECAST) | - | **source_located** | boc_os26 |  |
+| `hydro_share` | CER: about 60% of Canada's electricity is generated from hydro. | ≈ 6 in 10 kWh from hydro · Canada Energy Regulator | - | **source_located** | cer_can |  |
+| `hydro_rank` | CER: in 2023 Canada was the third-largest generator of hydroelectricity in the world. | 2023: world's no. 3 hydro generator · Canada Energy Regulator | - | **source_located** | cer_can |  |
+| `hq_boston` | Same as Ep 67: Hydro-Québec 2025 comparison (rates of Apr 1, 2025, excl. taxes): a 50 MW industrial customer's bill indexed Montréal 100 vs Boston 445 (22%); Montréal ≈ 5.52 CAD cents/kWh ≈ 3.95 US cents (OUR CALC at 1.3973). | Big factory's power bill: Montréal 100 vs Boston 445 · Hydro-Québec 2025 (interested party) | - | **source_located** | hq_cmp25, fed_g5a |  |
+| `hq_cd` | Same as Ep 67: PROPOSED Rate CD (Hydro-Québec, R-4333-2026): $32.704/kW + 8.710 cents/kWh; at an 85% load factor OUR CALCULATION ≈ 14.0 CAD cents/kWh (≈ 10.0 US cents) vs 5.52 cents today (≈ 2.5x). BLG: 'roughly double'. Not approved; ministerial authorization needed for loads of 5 MW or more. | PROPOSED data-center rate ≈ 2.5× today's big-industry price · OUR CALC (Hydro-Québec filing) | - | **data_derived** | hq_rcd26, blg_qc26, hq_cmp25, fed_g5a |  |
+| `bc_compete` | BC: AI and data-centre projects of 10 MW or more must compete for power; first two-year call targets up to 400 MW for AI and data centres (opened Jan 30, 2026). | B.C.: up to 400 MW for AI + data centers, first 2 years · BC government | - | **source_located** | bc_news26, bc_iaf |  |
+| `free_cool` | QScale (company claim, 2022): cooling at its Lévis site is free up to 80% of the year thanks to Quebec's colder climate. | Free cooling up to 80% of the year · QScale (COMPANY CLAIM) | - | **source_located** | qscale22 |  |
+| `msft_19b` | Microsoft: C$19bn in Canada 2023-2027 (C$7.5bn+ in the next two years) ≈ US$13.6bn (OUR CALC at 1.3973). Company PLAN. | ≈ US$13.6B in Canada, 2023-27 · Microsoft (PLAN; C$19B, OUR CALC) | - | **data_derived** | msft_ca25, fed_g5a |  |
+| `crit34` | NRCan: Canada's critical minerals list has 34 minerals (June 2024 update), including nickel, copper, uranium, lithium and graphite. | 34 critical minerals on Canada's list · NRCan (2024) | - | **source_located** | nrcan_cml24 |  |
+| `uranium2` | CER: Canada is the world's second-largest uranium producer (about 15% of world output in 2022). | World's no. 2 uranium producer (2022) · Canada Energy Regulator | - | **source_located** | cer_can |  |
+| `mine16` | IEA (2021): major mines that came online 2010-2019 took on average over 16 years from discovery to first production (global sample). | Discovery → first production: 16+ years on average (world, 2010-19) · IEA FINDING | - | **source_located** | iea_crit21 |  |
+| `hinton_nobel` | Nobel Prize in Physics 2024 to John Hopfield and Geoffrey Hinton (University of Toronto) for foundational work enabling machine learning with artificial neural networks. | 2024 Nobel Prize in Physics · NobelPrize.org | - | **source_located** | nobel24, vector |  |
+| `first_strategy` | CIFAR: the Pan-Canadian AI Strategy, launched 2017, was the first national AI strategy in the world. | 2017: world's first national AI strategy · CIFAR | - | **source_located** | cifar |  |
+| `us_exports` | StatCan: share of Canada's merchandise exports going to the US was 75.9% in 2024 and 71.7% in 2025. | 2025: ≈ 72% of goods exports went to the US (2024: 76%) · Statistics Canada | - | **source_located** | statcan_trade26 |  |
