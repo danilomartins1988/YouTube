@@ -1,0 +1,358 @@
+# Sources and claims for "Could Cheap Electricity Become the New Oil?" (Episode 67; series docs/series/AI_WINNERS_LOSERS.md #1).
+# Every claim below was read on 2026-11-18 on its primary page or document, or (where the primary page blocked automated access, noted
+# per source) via named coverage of it (notes: docs/episodes/67-power-new-oil/RESEARCH_NOTES.md). Status stays source_located until a
+# named human reviewer signs off. US dollars only: CAD converted at the Federal Reserve G.5A 2025 annual average, 1.3973 CAD per USD
+# (release of Jan 5, 2026), shown as "≈". OUR CALCULATION is labelled wherever we derive a number. Forecasts are FORECAST, company
+# plans are PLAN, proposals are PROPOSED.
+# Overlap rule: Ep 65 "Why AI Could Make Your Electricity Bill Explode" (US household bills, PJM) and Ep 04 "Why Norway Is So Rich"
+# (the oil fund) are linked by title only and none of their figures are repeated.
+sources:
+  - id: iea_eai25
+    title: "AI is set to drive surging electricity demand from data centres while offering the potential to transform how the energy sector works (Energy and AI press release)"
+    publisher: International Energy Agency (IEA)
+    url: https://www.iea.org/news/ai-is-set-to-drive-surging-electricity-demand-from-data-centres-while-offering-the-potential-to-transform-how-the-energy-sector-works
+    published: "2025-04-10"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "IEA, Energy and AI (2025)"
+    notes: "Base case: global data-centre electricity use more than doubles to around 945 TWh by 2030 (from about 415 TWh in 2024), 'slightly more than Japan's total electricity consumption today'; AI-optimised data centres more than quadruple. iea.org returned 403 to automated fetch; figures confirmed in DatacenterDynamics and the International Institute of Refrigeration reports of the release. A FORECAST."
+  - id: iea_eu_dc
+    title: "Overcoming energy constraints is key to delivering on Europe's data centre goals (commentary)"
+    publisher: International Energy Agency (IEA)
+    url: https://www.iea.org/commentaries/overcoming-energy-constraints-is-key-to-delivering-on-europe-s-data-centre-goals
+    published: "2025"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "IEA commentary"
+    notes: "Grid connection wait times for data centres in Europe range from two to ten years depending on the country; in the main hubs (Frankfurt, London, Amsterdam, Paris, Dublin) queues average seven to ten years. Page blocked automated fetch (403); read via search excerpts of the IEA page. Narration says 'as long as a decade'."
+  - id: eia_res
+    title: "How much electricity does an American home use? (FAQ)"
+    publisher: U.S. Energy Information Administration
+    url: https://www.eia.gov/tools/faqs/faq.php?id=97&t=3
+    published: "2023-10-12"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "EIA"
+    notes: "Average annual electricity purchased by a U.S. residential customer: 10,791 kWh in 2022."
+  - id: iai_int
+    title: "Primary Aluminium Smelting Energy Intensity (statistics series)"
+    publisher: International Aluminium Institute (IAI), via Statista
+    url: https://international-aluminium.org/statistics/primary-aluminium-smelting-energy-intensity/
+    published: "2024"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "International Aluminium Institute"
+    notes: "World average smelting (AC) energy intensity about 14,114 kWh per tonne of primary aluminium in 2021 (Statista citing IAI; the IAI page lists the series but did not render the table). Geoscience Australia gives 14,000-16,000 kWh/t."
+  - id: lv_burfell
+    title: "Búrfell Power Station"
+    publisher: Landsvirkjun
+    url: https://www.landsvirkjun.com/powerstations/burfell
+    published: "n.d."
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Landsvirkjun"
+    notes: "Landsvirkjun was established in 1965 and built the Búrfell hydropower station, on line in 1969; Búrfell was built mainly to supply the ISAL aluminium smelter at Straumsvík (agreement with Alusuisse signed 1966, ratified by the Althing)."
+  - id: lv_cust
+    title: "Our customers"
+    publisher: Landsvirkjun (Iceland's national power company)
+    url: https://www.landsvirkjun.com/customers
+    published: "n.d."
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Landsvirkjun"
+    notes: "'approximately 85% of its generated energy' is sold to power-intensive industries (aluminium smelters, ferrosilicon, data centres); about 15% to the wholesale market and the TSO."
+  - id: lv_fs24
+    title: "Landsvirkjun's Financial Statements 2024"
+    publisher: Landsvirkjun (GlobeNewswire release)
+    url: https://www.streetinsider.com/Press+Releases/Landsvirkjun%E2%80%98s+Financial+Statements+2024/24383281.html
+    published: "2025-02"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Landsvirkjun"
+    notes: "Results weakened by 'historically poor water conditions, leading to a decrease in power sales'. (A December 2024 Landsvirkjun statement that data-centre sales were cut to a third of the 2022 level is reported only second-hand and is NOT used.)"
+  - id: nrcan_al
+    title: "Aluminum facts"
+    publisher: Natural Resources Canada
+    url: https://www.nrcan.gc.ca/aluminum-facts/20510
+    published: "2023"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Natural Resources Canada"
+    notes: "10 primary aluminum smelters in Canada, nine in Quebec and one in Kitimat, BC; no bauxite is mined in Canada; primary production about 3.0 Mt (2022)."
+  - id: hq_cmp25
+    title: "Comparison of Electricity Prices in Major North American Cities, rates in effect April 1, 2025"
+    publisher: Hydro-Québec
+    url: https://pannes.hydroquebec.com/data/documents-donnees/pdf/comparaison-prix-2025-en.pdf
+    published: "2025"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Hydro-Québec (2025 comparison)"
+    notes: "Large-power customer (50,000 kW, 30.6 GWh/month, 85% load factor), monthly bill excluding taxes, index Hydro-Québec = 100: Winnipeg 92, Vancouver 122, Houston 234, New York 414, San Francisco 432, Boston 445. Montréal average price 5.52 CAD cents/kWh at that level. Produced by an interested party (Hydro-Québec); methodology and exchange rate (C$1 = US$0.6970, Apr 1, 2025) stated in the PDF."
+  - id: hq_rcd26
+    title: "Demande du Distributeur relative à la fixation des tarifs CD et CB (R-4333-2026) and proposed text of Rate CD (HQD-2, Document 1.3)"
+    publisher: Hydro-Québec, filed with the Régie de l'énergie du Québec
+    url: https://www.regie-energie.qc.ca/fr/participants/dossiers/R-4333-2026/doc/R-4333-2026-B-0002-Dem-Dem-2026_02_19.pdf
+    published: "2026-02-19"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Hydro-Québec filing R-4333-2026"
+    notes: "Request cites 'la fin des surplus d'électricité' and the 'arrivée massive de clientèles énergivores'; proposes a new data-centre class and Rate CD for authorized demand of 5,000 kW or more. Proposed Rate CD text (filed 2026-06-29, R-4333-2026-B-0053): $32.704 per kW of billing demand plus 8.710 cents per kWh (plus 17.42 cents for over-ramp consumption). PROPOSED, not approved; Régie decision pending."
+  - id: blg_qc26
+    title: "Data centre regulation in Québec: from honeyed promise to iron control"
+    publisher: Borden Ladner Gervais (BLG)
+    url: https://www.blg.com/en/insights/2026/07/data-centre-regulation-in-quebec-from-honeyed-promise-to-iron-control
+    published: "2026-07-08"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "BLG"
+    notes: "Ministerial authorization required for loads of 5 MW or more (introduced 2023; applied to data-centre supply since 2025); proposed Rate CD averages about 13 cents/kWh, 'roughly double the current large-power rate'; requested effective date Nov 1, 2026; Régie hearing fall 2026."
+  - id: lesoleil26
+    title: "La facture d'électricité pourrait s'alourdir pour les centres de données"
+    publisher: Le Soleil
+    url: https://www.lesoleil.com/affaires/2026/10/08/la-facture-delectricite-pourrait-salourdir-pour-les-centres-de-donnees-ZAQR5AA2EREULC3UVEZX7SSCHI/
+    published: "2026-10-08"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Le Soleil"
+    notes: "Reports the proposal would double the rates data centres currently pay as large consumers; the Régie is examining it."
+  - id: ef_no
+    title: "Electricity production (Energy Facts Norway)"
+    publisher: Norwegian Ministry of Energy
+    url: https://energifaktanorge.no/en/norsk-energiforsyning/kraftproduksjon/
+    published: "2025-10-02"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Norwegian Ministry of Energy"
+    notes: "Hydropower is 'approximately 88 percent of Norway's total normal annual electricity production'; normal annual production about 157 TWh."
+  - id: openai_no25
+    title: "OpenAI to launch AI data center in Norway, its first in Europe (Stargate Norway announcement)"
+    publisher: TechCrunch, reporting OpenAI's announcement
+    url: https://www.techcrunch.com/2025/07/31/openai-to-launch-ai-data-center-in-norway-its-first-in-europe
+    published: "2025-07-31"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "OpenAI announcement (Jul 2025)"
+    notes: "Stargate Norway in Narvik with Nscale and Aker (50/50 JV): 230 MW initially, 290 MW expansion planned; Narvik chosen for renewable hydropower, cool temperatures and industrial base. openai.com returned 403; read via TechCrunch and Techzine."
+  - id: nscale_no26
+    title: "Nscale announces expanded deal with Microsoft in Norway"
+    publisher: Nscale
+    url: https://www.nscale.com/press-releases/nscale-microsoft-norway
+    published: "2026-04-14"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Nscale (Apr 2026)"
+    notes: "More than 30,000 NVIDIA Rubin GPUs added for Microsoft at the 230 MW Narvik campus, deployment planned in 2027; project solely managed by Nscale after the Aker Nscale JV roll-up. Bloomberg reported OpenAI did not conclude a capacity deal there and the Stargate Norway branding was dropped."
+  - id: crusoe_abilene
+    title: "Crusoe's Abilene data center officially live, serving Oracle and OpenAI's Stargate"
+    publisher: DatacenterDynamics, reporting Crusoe
+    url: https://www.datacenterdynamics.com/en/news/crusoes-abilene-data-center-officially-live-serving-oracle-and-openais-stargate/
+    published: "2025-09"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Crusoe (Sept 2025)"
+    notes: "First two buildings of the planned 1.2 GW Abilene, Texas campus operating, used by Oracle for OpenAI, 200 MW+ of IT capacity; in March 2026 Oracle and OpenAI dropped plans to expand beyond the committed 1.2 GW (Tom's Hardware / Epoch AI)."
+  - id: ercot_ll26
+    title: "ERCOT large load interconnection status (presentation to the Texas Senate, Jul 29, 2026)"
+    publisher: ERCOT, via Texas Tribune / Data Center Frontier coverage
+    url: https://www.texastribune.org/2026/06/17/texas-ercot-data-center-energy-grid/
+    published: "2026-07-29"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "ERCOT (via coverage)"
+    notes: "About 474 GW of large loads seeking interconnection, roughly 90% data centers (Jul 2026); 63 GW at end-2024; requests are not forecasts of what will be built. Shown on screen only as 'requests'; ERCOT's own document not opened."
+  - id: acwa_shuaibah
+    title: "Saudi solar plant locks in new record low price for power: 1.04c/kWh (Shuaibah, 600 MW)"
+    publisher: RenewEconomy, reporting the Saudi Power Procurement Company award
+    url: https://reneweconomy.com.au/saudi-solar-plant-locks-in-new-record-low-price-for-power-1-04c-kwh/
+    published: "2021-04"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Saudi PPA award (2021)"
+    notes: "600 MW Shuaibah PV (ACWA Power-led consortium) at 1.04 US cents/kWh, a long-term contract price for daytime solar output. Abu Dhabi's 2 GW Al Dhafra was awarded at 1.35 US cents/kWh in 2020 (ADPower, via PV Tech)."
+  - id: g42_uae
+    title: "Stargate UAE: first phase of 200 MW to complete by 2026"
+    publisher: Gulf News, reporting G42
+    url: https://gulfnews.com/business/markets/stargate-uae-first-phase-of-200mw-to-complete-by-2026-1.500310364
+    published: "2025-10"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "G42 / OpenAI (May 2025)"
+    notes: "UAE-US AI Campus in Abu Dhabi planned for up to 5 GW; Stargate UAE is its first 1 GW cluster (G42 with OpenAI, Oracle, NVIDIA, Cisco, SoftBank); first 200 MW expected in 2026. A PLAN."
+  - id: epe_ben25
+    title: "Balanço Energético Nacional 2025 (base year 2024)"
+    publisher: Empresa de Pesquisa Energética (EPE)
+    url: https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/balanco-energetico-nacional-2025
+    published: "2025-06-30"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "EPE, BEN 2025"
+    notes: "Renewables 88.2% of Brazil's electricity supply in 2024; wind and solar about 24%. Read via pv magazine and eixos reports of the EPE release."
+  - id: acende24
+    title: "Carga de tributos e encargos do setor elétrico brasileiro (base year 2024), PwC and Instituto Acende Brasil"
+    publisher: PwC Brasil / Instituto Acende Brasil, reported by Sindifisco-MS
+    url: https://www.sindifisco-ms.org.br/?p=55962
+    published: "2025-12-10"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "PwC / Instituto Acende Brasil"
+    notes: "Taxes and sector charges took 44.8% of the electricity sector's gross revenue in 2024 (46.2% in 2023, 48.1% in 2022). The PwC PDF did not download (HTML wrapper); the figure was read in the cited report of the study."
+  - id: tiktok_ce
+    title: "TikTok confirma primeiro data center na América Latina (Pecém, Ceará)"
+    publisher: eixos / Forbes Brasil, reporting TikTok
+    url: https://eixos.com.br/energia-eletrica/tiktok-confirma-primeiro-data-center-na-america-latina-com-investimento-superior-a-r-200-bi/
+    published: "2025-12-03"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "TikTok (Dec 2025)"
+    notes: "TikTok confirmed its first Latin American data center at the Pecém complex in Ceará, built by Omnia with power from new Casa dos Ventos wind farms; first phase expected 2027. Investment figures differ by source and are not used."
+  - id: redata26
+    title: "Brazil signs Redata tax regime into law (Law 15,504/2026)"
+    publisher: W.Media / PwC Brasil Tax Intelligence
+    url: https://w.media/brazil-signs-redata-tax-regime-into-law-to-stoke-data-center-investment/
+    published: "2026-09-15"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Law 15,504/2026"
+    notes: "Special tax regime for data centers (from provisional measure MP 1,318/2025) enacted Sept 15, 2026; beneficiaries must meet their power demand with renewable or low-emission supply."
+  - id: cso_ie24
+    title: "Data Centres Metered Electricity Consumption 2024"
+    publisher: Central Statistics Office (CSO), Ireland
+    url: https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/
+    published: "2025-06-10"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "CSO Ireland"
+    notes: "Data centres used 22% of all metered electricity in 2024, more than urban dwellings (18%)."
+  - id: cru_ie25
+    title: "Large Energy Users Connection Policy decision (CRU/2025236)"
+    publisher: Commission for Regulation of Utilities (CRU), Ireland, reported by The Irish Times
+    url: https://www.irishtimes.com/business/2025/12/12/new-data-centres-must-generate-and-supply-electricity-to-wider-market-regulator-rules/
+    published: "2025-12-12"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "CRU Ireland (Dec 2025)"
+    notes: "New data centres must bring on-site or nearby generation/storage matching their import capacity and supply the wider market; EirGrid had said in 2022 new Dublin-area connections were unlikely before 2028."
+  - id: no_crypto25
+    title: "Norway plans temporary ban on power-intensive cryptocurrency mining"
+    publisher: Reuters, via CP24 / The Star
+    url: https://www.cp24.com/news/world/2025/06/20/norway-plans-temporary-ban-on-power-intensive-cryptocurrency-mining
+    published: "2025-06-20"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Government of Norway (Jun 2025)"
+    notes: "Government said it would explore a temporary ban on new proof-of-work crypto-mining data centres to 'free up power, network capacity and area for other purposes'. Narration says 'moved to block'; final status not verified."
+  - id: tx_sb6
+    title: "Texas law gives grid operator power to disconnect data centers during crisis (Senate Bill 6)"
+    publisher: Utility Dive
+    url: https://www.utilitydive.com/news/texas-law-gives-grid-operator-power-to-disconnect-data-centers-during-crisis/751587/
+    published: "2025-06"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Texas SB 6 (2025)"
+    notes: "SB 6 (signed June 2025) covers loads of 75 MW or more: in grid emergencies ERCOT may direct them to deploy backup generation or curtail; disclosure of backup generation; interconnection cost sharing and study fees."
+  - id: fed_g5a
+    title: "Foreign Exchange Rates (Annual), G.5A"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/g5a/current/default.htm
+    published: "2026-01-05"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Federal Reserve G.5A"
+    notes: "2025 annual averages: 1.3973 Canadian dollars per USD; 5.5891 Brazilian reais per USD."
+claims:
+  - id: iea_japan
+    text: "IEA Energy and AI (Apr 2025) base case: data-centre electricity use roughly doubles to about 945 TWh by 2030 (415 TWh in 2024), slightly more than Japan's total consumption today. A FORECAST."
+    spoken: about as much electricity as all of Japan uses today
+    display: "2030 FORECAST: data centers ≈ 945 TWh ≈ all of Japan today · IEA"
+    source_ids: [iea_eai25]
+    status: source_located
+  - id: al_home
+    text: "OUR CALCULATION: about 14,000 kWh to smelt one tonne of aluminium (IAI world average ~14,114 kWh/t, 2021) vs 10,791 kWh bought by an average US home in 2022 (EIA) = about 1.3 years of a home's electricity per tonne."
+    spoken: more than a year
+    display: "1 ton of aluminum ≈ 14,000 kWh ≈ 1.3 years of a US home · OUR CALC (IAI, EIA)"
+    source_ids: [iai_int, eia_res]
+    status: data_derived
+  - id: iceland60s
+    text: "Landsvirkjun, founded 1965, built the Búrfell hydro station (on line 1969) mainly to supply the ISAL aluminium smelter at Straumsvík."
+    spoken: the nineteen sixties
+    display: "1960s: Búrfell dam built mainly to power Iceland's first smelter · Landsvirkjun"
+    source_ids: [lv_burfell]
+    status: source_located
+  - id: lv_share
+    text: "Landsvirkjun sells approximately 85% of its generated energy to power-intensive industries."
+    spoken: most of its power
+    display: "≈ 85% of Landsvirkjun's energy → heavy industry · Landsvirkjun"
+    source_ids: [lv_cust]
+    status: source_located
+  - id: qc_smelters
+    text: "NRCan: 10 primary aluminum smelters in Canada, nine in Quebec; no bauxite mined in Canada."
+    spoken: almost all of them in Quebec
+    display: "9 of Canada's 10 smelters are in Quebec · no bauxite mined in Canada · NRCan"
+    source_ids: [nrcan_al]
+    status: source_located
+  - id: hq_boston
+    text: "Hydro-Québec 2025 comparison (rates of Apr 1, 2025, excl. taxes): a 50 MW industrial customer's bill indexed Montréal 100 vs Boston 445 (22%); Montréal ≈ 5.52 CAD cents/kWh ≈ 3.95 US cents (OUR CALC at Fed 2025 average 1.3973)."
+    spoken: less than a quarter
+    display: "Big factory's power bill: Montréal 100 vs Boston 445 · Hydro-Québec 2025 (interested party)"
+    source_ids: [hq_cmp25, fed_g5a]
+    status: source_located
+  - id: hq_cd
+    text: "PROPOSED Rate CD (Hydro-Québec, R-4333-2026): $32.704/kW + 8.710 cents/kWh; at an 85% load factor OUR CALCULATION ≈ 14.0 CAD cents/kWh (≈ 10.0 US cents) vs 5.52 cents for a large-power customer today (≈ 2.5x). BLG: about 13 cents, 'roughly double'; Le Soleil: would double. Not approved."
+    spoken: more than double
+    display: "PROPOSED data-center rate ≈ 2.5× today's big-industry price · OUR CALC (Hydro-Québec filing)"
+    source_ids: [hq_rcd26, blg_qc26, lesoleil26, hq_cmp25, fed_g5a]
+    status: data_derived
+  - id: abilene25
+    text: "Crusoe: first two buildings of the 1.2 GW Abilene, Texas campus live in Sept 2025, used by Oracle for OpenAI."
+    spoken: twenty twenty-five
+    display: "Abilene, Texas: first AI halls live in 2025 · Crusoe"
+    source_ids: [crusoe_abilene]
+    status: source_located
+  - id: penny
+    text: "Saudi Arabia's 600 MW Shuaibah solar plant was awarded at 1.04 US cents/kWh (2021); Abu Dhabi's Al Dhafra at 1.35 cents (2020). Long-term daytime solar contract prices, not round-the-clock power."
+    spoken: about a penny
+    display: "Solar contract ≈ 1.04¢/kWh (Saudi Arabia, 2021) · daytime only"
+    source_ids: [acwa_shuaibah]
+    status: source_located
+  - id: br_half
+    text: "PwC / Instituto Acende Brasil: taxes and sector charges took 44.8% of the Brazilian electricity sector's gross revenue in 2024."
+    spoken: nearly half
+    display: "Taxes + charges ≈ 45% of Brazil's power revenue (2024) · PwC / Acende Brasil"
+    source_ids: [acende24]
+    status: source_located
+  - id: br_renew
+    text: "EPE BEN 2025: renewables supplied 88.2% of Brazil's electricity in 2024."
+    spoken: mostly renewable
+    display: "Brazil's power: 88% renewable (2024) · EPE"
+    source_ids: [epe_ben25]
+    status: source_located
+  - id: eu_wait
+    text: "IEA: in Europe grid-connection waits for data centres range from two to ten years by country; seven to ten years on average in the main hubs."
+    spoken: as long as a decade
+    display: "Grid-connection waits in Europe: 2-10 years · IEA"
+    source_ids: [iea_eu_dc]
+    status: source_located
+  - id: ie_fifth
+    text: "CSO: data centres used 22% of Ireland's metered electricity in 2024, more than urban dwellings (18%)."
+    spoken: more than a fifth
+    display: "Ireland 2024: data centers 22% of metered power · urban homes 18% · CSO"
+    source_ids: [cso_ie24]
+    status: source_located
+  - id: no_hydro
+    text: "Hydropower ≈ 88% of Norway's normal annual electricity production (Ministry of Energy)."
+    spoken: nearly all
+    display: "Norway: ≈ 88% of power from hydro (normal year) · Ministry of Energy"
+    source_ids: [ef_no]
+    status: source_located
+  - id: ercot_q
+    text: "ERCOT tracked about 474 GW of large-load interconnection requests in July 2026, about 90% data centers (via coverage); requests, not forecasts."
+    spoken: requests that dwarf everything Texas uses today
+    display: "Texas: ≈ 474 GW of big-load REQUESTS (Jul 2026) · ERCOT via coverage"
+    source_ids: [ercot_ll26]
+    status: source_located
+  - id: uae_plan
+    text: "UAE-US AI Campus, Abu Dhabi: planned up to 5 GW; Stargate UAE 1 GW first cluster; first 200 MW expected in 2026. A PLAN."
+    spoken: planned to grow to the size of several big power plants
+    display: "PLAN: Abu Dhabi AI campus up to 5 GW · G42 / OpenAI"
+    source_ids: [g42_uae]
+    status: source_located

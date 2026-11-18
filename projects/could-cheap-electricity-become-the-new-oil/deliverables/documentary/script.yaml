@@ -1,0 +1,265 @@
+logline: Nia, a fictional site scout, is hired to find a home for a giant AI campus, with one rule from her boss, look for the plug,
+  not the workers. Following her from pin to pin, from an old aluminum smelter town to Norway, Iceland, Quebec, Texas, the Gulf and
+  Brazil, the film asks whether cheap electricity is becoming the new oil, and finds that it is, with one big difference, power can't be
+  shipped, so the winners are the places that can plug you in fast and keep the plug on.
+title: Could Cheap Electricity Become the New Oil?
+# Story over statistics (docs/STORY_OVER_STATS.md): one protagonist (NIA, fictional) and CUBBY (the walking scale model of the campus);
+# 11 spoken figures, at most one per segment; all exact figures in FACT_CHECK.md and the description. Forecasts labelled FORECAST,
+# plans PLAN, the Quebec rate PROPOSED.
+segments:
+- id: co_hook
+  chapter: Follow the plug
+  narration: Meet Nia. She's a site scout, and her new job sounds simple. An AI company wants to build a giant data center campus, and Nia
+    has to find it a home. Her boss gives her one rule. Don't look for workers. Look for the plug. This place will drink as much power as a
+    whole city, every hour of every day. A century ago, companies went hunting for oil. Now Nia is hunting for cheap electricity. So could
+    cheap electricity become the new oil?
+  claims: []
+  analysis: true
+  source_note: Hook; Nia, Cubby and the client are fictional.
+- id: title_card
+  chapter: Follow the plug
+  narration: ''
+  claims: []
+- id: c1_cubby
+  chapter: Follow the plug
+  narration: To keep her company, the team gave Nia a scale model of the campus. They call it Cubby. Cubby is a building that turns electricity
+    into answers, and into heat. Once it's built, it needs surprisingly few people. What it needs is power, huge amounts of it, all day and
+    all night, for years.
+  claims: []
+  analysis: true
+  source_note: Story beat (fictional characters); data centers' round-the-clock load per IEA Energy and AI.
+- id: c1_list
+  chapter: Follow the plug
+  narration: Nia's boss texts her a checklist. Cheap power. Lots of it. Ready soon. Cool enough. Close enough to the customers. And a government
+    that says yes. Nia looks at the list, then at Cubby. That's not a building site, she says. That's a treasure map.
+  claims: []
+  analysis: true
+  source_note: Story beat; the checklist mirrors the siting factors in IEA Energy and AI (power, grid connection, cooling, latency, policy).
+- id: c1_demand
+  chapter: Follow the plug
+  narration: And Cubby has a lot of siblings. The International Energy Agency projects that by the end of this decade, the world's data centers
+    could use about as much electricity as all of Japan uses today. That's a whole new industrial country, appearing on the map, and it
+    has to plug in somewhere.
+  claims:
+  - iea_japan
+  source_note: IEA Energy and AI (Apr 2025) base case 945 TWh in 2030, slightly more than Japan today (a FORECAST).
+- id: c1_oil
+  chapter: Follow the plug
+  narration: We've seen a map redrawn like this before. In the twentieth century, oil decided where whole cities boomed, which ports got busy, and
+    which countries got rich. Refineries rose beside the wells, and tankers carried the rest of the world's share. Nia wonders whether
+    electricity is about to redraw that map.
+  claims: []
+  analysis: true
+  source_note: Historical framing (our analysis); no figures.
+- id: c1_draw
+  chapter: Follow the plug
+  narration: Let me draw why the plug matters so much. Here's oil. It's easy to move. Pump it into a tanker, and it crosses an ocean. Now here's
+    electricity. To move it far, you need giant power lines that take years to build, and you lose some along the way. Nobody ships a
+    waterfall. So when the energy can't come to the factory, the factory goes to the energy.
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); no figures.
+- id: c2_card
+  chapter: The metal made of electricity
+  narration: ''
+  claims: []
+- id: c2_smelt
+  chapter: The metal made of electricity
+  narration: And this has happened before. Meet aluminum, the metal in your soda can. You can't just dig it up. You have to tear it out of its
+    ore with a massive electric current. Making a single ton takes about as much electricity as an American home uses in more than a year.
+    That's why people call aluminum solid electricity.
+  claims:
+  - al_home
+  source_note: IAI world average ~14,114 kWh/t (2021) vs EIA 10,791 kWh per home (2022); comparison is OUR CALCULATION.
+- id: c2_iceland
+  chapter: The metal made of electricity
+  narration: So the smelters went hunting for cheap power, exactly like Nia. In the nineteen sixties, Iceland built its first giant dam mainly
+    to power its first aluminum smelter. Electricity in, metal out, ships to the world. Iceland's national power company still sells most of
+    its power to heavy industry.
+  claims:
+  - iceland60s
+  - lv_share
+  source_note: Landsvirkjun (founded 1965; Búrfell on line 1969, built mainly for the ISAL smelter); ~85% of its energy to power-intensive industry.
+- id: c2_quebec
+  chapter: The metal made of electricity
+  narration: Or take Canada. It doesn't mine any of the ore aluminum comes from. Yet it's one of the world's big aluminum makers, with almost all
+    of its smelters in Quebec, beside giant hydro dams. The ore sails in. The metal sails out. In a way, Quebec exports its rivers, one ingot
+    at a time.
+  claims:
+  - qc_smelters
+  source_note: NRCan aluminum facts (10 smelters, 9 in Quebec; no bauxite mined in Canada).
+- id: c2_twist
+  chapter: The metal made of electricity
+  narration: Now here's the twist. A data center is a smelter for the digital age. Electricity goes in. Answers come out. And answers are even
+    easier to ship than metal. They travel down a fiber cable, almost at the speed of light. So Nia starts where the smelters went first.
+  claims: []
+  analysis: true
+  source_note: Analogy (our analysis).
+- id: c3_card
+  chapter: Pin by pin
+  narration: ''
+  claims: []
+- id: c3_map
+  chapter: Pin by pin
+  narration: So Nia pins up a map of the cheapest, cleanest, biggest power on Earth, and books a lot of flights. Six pins. One suitcase. And one
+    very excited scale model in the seat beside her.
+  claims: []
+  analysis: true
+  source_note: Story beat; 'six pins' is a story device, not a statistic.
+- id: c3_norway
+  chapter: Pin by pin
+  narration: First pin, northern Norway. Nearly all of Norway's electricity comes from falling water, and the far north has more of it than it
+    can use. In the port town of Narvik, a new AI campus was announced as Stargate Norway, picked for hydropower and cool air. Since then, the
+    tenant changed, and Microsoft became the big customer. The plug stayed the same. Norway's oil fortune is the story we told in Why Norway
+    Is So Rich. This is its other energy.
+  claims:
+  - no_hydro
+  source_note: Ministry of Energy (≈88% hydro, normal year); OpenAI/Nscale/Aker Jul 2025; Nscale-Microsoft Apr 2026; Ep 04 linked by title only.
+- id: c3_iceland
+  chapter: Pin by pin
+  narration: Second pin, Iceland. Power from rivers and from the heat under the ground, and cold air that cools servers almost for free. Data
+    centers came here years ago. But Nia hears a warning. When the reservoirs ran low, Iceland's big power company had to sell less power.
+    Cheap doesn't mean endless.
+  claims: []
+  analysis: true
+  source_note: Landsvirkjun 2024 financial statements ('historically poor water conditions, leading to a decrease in power sales').
+- id: c3_quebec
+  chapter: Pin by pin
+  narration: Third pin, Quebec. Nia checks the price. Here, a giant factory pays less than a quarter of what the same factory would pay in
+    Boston. Cubby is thrilled.
+  claims:
+  - hq_boston
+  source_note: Hydro-Québec 2025 comparison, large-power customer index Montréal 100 vs Boston 445 (excluding taxes; Hydro-Québec is an interested party).
+- id: c3_quebec2
+  chapter: Pin by pin
+  narration: Then the catch. Hydro-Québec now says its days of surplus power are over. Big new users need the government's permission to plug
+    in. And it has proposed a new rate just for data centers, more than double what big industry pays today. The cheapest plug in North
+    America is starting to act like an oil producer. It wants a bigger share of the prize.
+  claims:
+  - hq_cd
+  source_note: Hydro-Québec filing R-4333-2026 (end of surpluses; Rate CD PROPOSED); 5 MW authorization (BLG); ratio is OUR CALCULATION.
+- id: c3_texas
+  chapter: Pin by pin
+  narration: Fourth pin, Texas. Cheap natural gas, huge wind and solar farms, and a grid famous for plugging new customers in fast. In Abilene,
+    the first giant Stargate halls switched on in twenty twenty-five. Now everyone wants in, so many that the grid operator is sorting
+    through requests that dwarf everything Texas uses today. What all this means for household bills is the story of Why AI Could Make Your
+    Electricity Bill Explode.
+  claims:
+  - abilene25
+  - ercot_q
+  source_note: Crusoe (Sept 2025); ERCOT large-load requests (Jul 2026, via coverage); Ep 65 linked by title only.
+- id: c3_gulf
+  chapter: Pin by pin
+  narration: Fifth pin, the Gulf. Sunshine nearly every day, cheap gas, and money to spend. Saudi Arabia signed solar contracts at about a penny
+    per kilowatt hour, among the cheapest ever. And Abu Dhabi is building an AI campus planned to grow to the size of several big power
+    plants. The countries that sold the world oil now want to sell it computing.
+  claims:
+  - penny
+  - uae_plan
+  source_note: Shuaibah PV 1.04 US cents/kWh (2021; daytime solar contract); UAE-US AI Campus up to 5 GW (a PLAN).
+- id: c3_gulf2
+  chapter: Pin by pin
+  narration: But Nia sweats through the catch. The sun sets every evening, and a data center never sleeps, so the desert campuses still lean on
+    gas at night. And cooling hot chips in desert heat burns extra power. Cheap sunshine is a head start, not a free ride.
+  claims: []
+  analysis: true
+  source_note: Analysis (solar is daytime-only; cooling load in hot climates); no figures.
+- id: c3_brazil
+  chapter: Pin by pin
+  narration: Sixth pin, Brazil. Its electricity is mostly renewable, from rivers, wind and sun, and TikTok has confirmed a data center in Ceará,
+    fed by new wind farms. But Nia finds a catch on the bill. Nearly half of what Brazil's power companies collect goes to taxes and charges.
+    The power is cheap to make and expensive to buy. Brazil has just passed a special tax deal to win data centers anyway.
+  claims:
+  - br_half
+  - br_renew
+  source_note: EPE BEN 2025 (88% renewable); TikTok (Dec 2025); PwC/Acende Brasil 44.8% of sector revenue (2024); Law 15,504/2026 (Redata).
+- id: c4_card
+  chapter: The catch
+  narration: ''
+  claims: []
+- id: c4_draw
+  chapter: The catch
+  narration: Let me draw what Nia actually learned. The price on the map is only the first block. Stack on top of it the wires to bring the power
+    in, then the taxes and charges, then the cooling, then the distance to the people using the answers. And under all of it, the hardest one
+    to see, the wait. A cheap power plant behind a full grid is like an oil field with no pipeline.
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); no figures.
+- id: c4_queue
+  chapter: The catch
+  narration: And the wait can be the biggest cost of all. The IEA found that in parts of Europe, a data center can wait as long as a decade for a
+    grid connection. Building the data center itself is much faster than that. Cubby can be ready long before the plug is.
+  claims:
+  - eu_wait
+  source_note: IEA commentary on Europe (2-10 years by country; 7-10 in main hubs).
+- id: c4_ireland
+  chapter: The catch
+  narration: Ireland shows what happens when the plugs win too fast. Data centers there now use more than a fifth of all the metered electricity
+    in the country, more than all the homes in its cities. Around Dublin, the grid got so tight that new data centers now have to bring their
+    own power.
+  claims:
+  - ie_fifth
+  source_note: CSO (22% vs urban dwellings 18%, 2024); CRU decision Dec 2025 (on-site generation or storage).
+- id: c4_heat
+  chapter: The catch
+  narration: Then there's heat and distance. Chips run hot, and cooling them takes water or even more power, which is why the cold north looks so
+    good. But distance matters too. Training a giant AI model can happen far away. Answering your question happens best close to you. So the
+    far north wins one kind of job, and the big cities keep another.
+  claims: []
+  analysis: true
+  source_note: Analysis (training vs inference siting); no figures.
+- id: c4_politics
+  chapter: The catch
+  narration: And then, politics. When power is cheap, voters notice who gets it. Norway moved to block new crypto mines. Quebec decides who
+    plugs in. Ireland makes newcomers bring their own power. Texas passed a law letting the grid tell giant users to cut back in an
+    emergency. Cheap electricity, it turns out, is a resource governments guard, just like oil.
+  claims: []
+  analysis: true
+  source_note: Norway proposal (Jun 2025); Quebec 5 MW authorization; CRU Ireland (Dec 2025).
+- id: c5_card
+  chapter: Is power the new oil?
+  narration: ''
+  claims: []
+- id: c5_draw
+  chapter: Is power the new oil?
+  narration: Let me draw the big difference. Oil made one world market. A barrel costs roughly the same wherever you buy it, plus shipping. So
+    oil money flowed to whoever owned the wells. Electricity makes lots of little local markets, each one stuck behind its own wires. So the
+    prize doesn't go to whoever has the most energy. It goes to whoever can deliver it fast, in huge blocks, and keep it on.
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); no figures.
+- id: c5_verdict
+  chapter: Is power the new oil?
+  narration: So, could cheap electricity become the new oil? In one way, yes. Just like oil a century ago, it's deciding where the next giant
+    industries land, and countries are already competing for them with dams, solar fields and tax deals. But in another way, no. Oil could be
+    shipped to anyone. Electricity has to be used close to where it's made. So the new oil isn't just cheap power. It's cheap power you can
+    plug into now, and that a country is willing to share.
+  claims: []
+  analysis: true
+  source_note: Verdict (our analysis).
+- id: c5_winners
+  chapter: Is power the new oil?
+  narration: So who's winning right now? The cold hydro north, for the giant training halls. Texas and the Gulf, for speed and scale. Quebec, if
+    you can get its permission. Brazil, if it can make its power bill lighter. And the losers? Places with cheap power and a grid that can't
+    take one more plug.
+  claims: []
+  analysis: true
+  source_note: Verdict (our analysis) drawn from the pins above; no new figures.
+- id: c5_nia
+  chapter: Is power the new oil?
+  narration: Nia files her report. Not one pin, but a pattern. The giant training halls go where power is cheap and cold air is free. The
+    answering machines stay near the cities. And the winners are the places that build wires as fast as data centers. Cubby finally gets
+    its plug. And Nia gets her next assignment. Find the plug for the robot factories.
+  claims: []
+  analysis: true
+  source_note: Story close (fictional).
+- id: teaser
+  chapter: Is power the new oil?
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: Is power the new oil?
+  narration: ''
+  claims: []
