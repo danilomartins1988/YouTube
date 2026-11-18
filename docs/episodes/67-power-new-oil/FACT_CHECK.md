@@ -29,3 +29,6 @@ status unverified, wording kept to "moved to"); "Texas passed a law letting the 
 On screen only (labelled): ≈88% hydro (Norway), 9 of 10 smelters (Quebec), Montréal 100 vs Boston 445, ≈2.5× PROPOSED, 1¢/kWh
 (daytime contract), PLAN up to 5 GW (Abu Dhabi), 22% vs 18% (Ireland), 2-10 year waits (IEA).
 Currency: USD only; CAD at Fed G.5A 2025 average (1.3973). No logos, no flags, no real person drawn.
+
+
+Cross-episode note (coordinator, 2026-11-18): Ep 63 cites EPE 2025 (86.8% renewable); this film's on-screen tag shows the 2024 value (88%), correctly dated. Both are true; the description now gives both years.
