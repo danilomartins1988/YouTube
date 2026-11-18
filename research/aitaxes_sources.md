@@ -1,0 +1,46 @@
+# Research dossier - If AI Replaces Workers, Who Pays the Taxes?
+
+Generated 2026-11-18T18:46:38+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+
+## Sources
+
+| id | Publisher | Title | Published | Accessed | Type | URL |
+|---|---|---|---|---|---|---|
+| `mts_fy26` | U.S. Department of the Treasury, Bureau of the Fiscal Service (Fiscal Data API, mts_table_4) | Monthly Treasury Statement, Table 4: Receipts of the United States Government (fiscal year to date, September 30, 2026) | 2026-10 | 2026-11-18 | dataset | https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/receipts-of-the-u-s-government |
+| `cbo_mbr26` | Congressional Budget Office | Monthly Budget Review: Summary for Fiscal Year 2026 | 2026-11 | 2026-11-18 | primary | https://www.cbo.gov/publication/61986 |
+| `ssa_tr26` | Social Security Administration, Board of Trustees | 2026 Annual Report of the Board of Trustees of the Federal OASI and DI Trust Funds (summary) | 2026-06-09 | 2026-11-18 | primary | https://www.ssa.gov/OACT/TRSUM/index.html |
+| `aaa_tr26` | American Academy of Actuaries | Social Security 2026 Trustees Report one-pager | 2026-07 | 2026-11-18 | secondary | https://actuary.org/wp-content/uploads/2026/07/Trustees_Report_One-Pager_Placemat_2026.pdf |
+| `oecd_rs25` | OECD | Revenue Statistics 2025: Tax revenue trends 1965-2024 | 2025-12 | 2026-11-18 | dataset | https://www.oecd.org/en/publications/revenue-statistics-2025_3a264267-en.html |
+| `acctimes25` | Accounting Times (Australia) | Labour taxes leading a boost in OECD revenues: report | 2025-12 | 2026-11-18 | secondary | https://www.accountingtimes.com.au/tax/labour-taxes-leading-a-boost-in-oecd-revenues-report-funds |
+| `oecd_vat` | OECD | Consumption Tax Trends (VAT/GST in OECD member countries) | 2024 | 2026-11-18 | secondary | https://www.oecd.org/en/topics/sub-issues/consumption-tax-trends.html |
+| `gates_qz17` | Quartz (interview, Feb 17, 2017); reported by Fortune (Feb 18, 2017) and the World Economic Forum | The robot that takes your job should pay taxes, says Bill Gates (Quartz interview), as reported | 2017-02-18 | 2026-11-18 | secondary | https://fortune.com/2017/02/18/bill-gates-robot-taxes-automation/ |
+| `korea17` | The Korea Times | Korea takes first step to introduce 'robot tax' | 2017-08-07 | 2026-11-18 | secondary | https://www.koreatimes.co.kr/business/tech-science/20170807/korea-takes-first-step-to-introduce-robot-tax |
+| `itif26` | ITIF (Information Technology and Innovation Foundation; advocacy think tank) | Industries impacted by quasi robot tax: South Korea reduced industrial robot installations | 2026-02-09 | 2026-11-18 | secondary | https://itif.org/publications/2026/02/09/industries-impacted-by-quasi-robot-tax-south-korea-reduced-industrial-robot-installations/ |
+| `oecd_beps` | OECD | Base erosion and profit shifting (BEPS) | n.d. | 2026-11-18 | secondary | https://www.oecd.org/en/topics/base-erosion-and-profit-shifting-beps.html |
+| `cbo_vat` | Congressional Budget Office | Options for Reducing the Deficit: Impose a 5 Percent Value-Added Tax | 2018-12 | 2026-11-18 | secondary | https://www.cbo.gov/budget-options/54820 |
+| `pfd_div` | State of Alaska, Department of Revenue, PFD Division | Permanent Fund Dividend Division: summary of dividend amounts | 2026 | 2026-11-18 | primary | https://pfd.alaska.gov/Division-Info/Summary-of-Applications-and-Payments |
+| `or_nber` | Vivalt, Rhodes, Bartik, Broockman, Krause, Miller (NBER; OpenResearch) | The Employment Effects of a Guaranteed Income: Experimental Evidence from Two U.S. States (NBER w32719, revised Sept 2025) | 2025-09 | 2026-11-18 | primary | https://www.nber.org/papers/w32719 |
+| `seed21` | Stockton Economic Empowerment Demonstration (SEED); independent evaluation by West and Castro Baker | Guaranteed Income Increases Employment, Improves Financial and Physical Health (SEED first-year results) | 2021-03-03 | 2026-11-18 | primary | https://www.stocktondemonstration.org/press-landing/guaranteed-income-increases-employment-improves-financial-and-physical-health |
+
+## Claims
+
+| id | Claim | On screen | Reference period | Status | Sources | Note |
+|---|---|---|---|---|---|---|
+| `fed_people` | FY2026 federal receipts: individual income taxes $2,845.5bn + social insurance and retirement receipts $1,811.8bn = $4,657.3bn of $5,403.3bn = 86.2% (OUR CALCULATION, Treasury MTS). Caveat: individual income tax also falls on investment income, not only wages. | FY2026: ≈ 86% of federal receipts from individual income + payroll taxes · OUR CALC (Treasury MTS) | - | **data_derived** | mts_fy26, cbo_mbr26 |  |
+| `fed_corp` | FY2026 corporation income taxes $381.4bn of $5,403.3bn total receipts = 7.1% (OUR CALCULATION, Treasury MTS); down from $452.1bn in FY2025 (8.6%). | FY2026: corporate income tax ≈ 7¢ of every federal tax dollar · OUR CALC (Treasury MTS) | - | **data_derived** | mts_fy26, cbo_mbr26 |  |
+| `ss_2034` | 2026 Trustees Report: combined OASI and DI trust fund reserves projected depleted in Q3 2034 (a PROJECTION under intermediate assumptions). | PROJECTION: Social Security reserve runs dry in 2034 · 2026 Trustees Report | - | **source_located** | ssa_tr26, aaa_tr26 |  |
+| `ss_payable` | After depletion, continuing income would cover about 83% of scheduled benefits (combined funds), unless Congress acts. | Then ≈ 83% of scheduled benefits payable (unless Congress acts) · Trustees 2026 | - | **source_located** | ssa_tr26, aaa_tr26 |  |
+| `oecd_half` | OECD average 2023: personal income tax 23.7% + social security contributions 25.5% = 49.2% of total tax revenue (OUR CALCULATION; payroll taxes add a little more). | Rich democracies: ≈ half of taxes from personal income + social security contributions · OECD (2023) | - | **data_derived** | oecd_rs25, acctimes25 |  |
+| `fed_deficit` | FY2026 federal deficit $2.0 trillion (CBO). | FY2026 deficit ≈ $2.0 trillion · CBO | - | **source_located** | cbo_mbr26 |  |
+| `gates17` | Feb 2017 Quartz interview: Bill Gates said that if a robot does the work of a taxed human worker, 'you'd think that we'd tax the robot at a similar level.' | 2017: Bill Gates floats taxing robots 'at a similar level' · Quartz interview | - | **source_located** | gates_qz17 |  |
+| `korea17` | South Korea's 2017 tax revision plan reduced the tax credit for investment in automation equipment (by up to 2 points from 3-7%); widely called the first 'robot tax', though no tax was levied on robots. | 2017: South Korea trims its automation tax credit ('robot tax' nickname) · Korea Times | - | **source_located** | korea17 |  |
+| `eu_reject` | On Feb 16, 2017 the European Parliament rejected the proposal for a robot tax in its civil-law rules on robotics resolution. | Feb 2017: European Parliament rejects a robot tax · Fortune/Quartz | - | **source_located** | gates_qz17 |  |
+| `profit_shift` | Multinational companies can shift profits to low-tax jurisdictions (OECD BEPS); the 15% global minimum tax aims to limit this. | Profit shifting to low-tax countries · OECD BEPS | - | **source_located** | oecd_beps |  |
+| `us_novat` | The US is the only OECD member without a national VAT; VAT averages about a fifth of OECD tax revenue (20.5%, 2023). | US: the only OECD country with no national VAT · OECD | - | **source_located** | oecd_vat, acctimes25 |  |
+| `regressive` | Consumption taxes take a larger share of lower-income households' income because they spend a larger share of what they earn (CBO). | Shopping taxes weigh more on lower-income budgets · CBO | - | **source_located** | cbo_vat |  |
+| `ak_pfd` | Alaska pays an annual Permanent Fund Dividend to nearly every resident (618,863 paid in 2025 of a 738,737 population) from an oil-revenue investment fund. | Alaska: a yearly dividend from an oil fund · PFD Division (see Ep 48) | - | **source_located** | pfd_div |  |
+| `ak_fight` | The dividend's size is set each year by the legislature and governor and has been cut (2016 veto) amid budget fights (Ep 48 FACT_CHECK). | The size of the check: a yearly political fight · see Ep 48 | - | **source_located** | pfd_div |  |
+| `seed500` | SEED: 125 Stockton residents received $500 a month for 24 months, no strings attached (from Feb 2019). | Stockton SEED: $500 a month, no strings · SEED (2019-21) | - | **source_located** | seed21 |  |
+| `seed_ft` | SEED first year: recipients' full-time employment 28% -> 40% vs control 32% -> 37% (preliminary). | Year 1 full-time work: recipients 28% → 40% · comparison 32% → 37% · SEED (preliminary) | - | **source_located** | seed21 |  |
+| `or_design` | OpenResearch study: 1,000 low-income people got $1,000/month for three years; 2,000 controls got $50/month (randomized). | OpenResearch: $1,000 a month for 3 years vs $50 · NBER w32719 | - | **source_located** | or_nber |  |
+| `or_result` | Recipients worked 1-2 fewer hours a week; labor force participation -3.9 points; earned income about $1,800/yr lower; no impact on job quality; spending up; well-being gain in year 1 faded (NBER w32719 rev. Sept 2025). | Result: 1-2 fewer work hours a week · no better jobs · NBER w32719 (rev. 2025) | - | **source_located** | or_nber |  |

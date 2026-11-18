@@ -1,0 +1,502 @@
+{
+  "title": "The Countries That Could Win the AI Economy Without Building AI",
+  "docs_dir": "docs/episodes/68-picks-shovels",
+  "video": "output/shovels_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "F",
+  "analysis": {
+    "mystery": "Can a country get rich from AI without ever building a chatbot?",
+    "surprising_fact": "In the Gold Rush, the man known as California's richest never mined; he sold the supplies",
+    "subject": "a shopkeeper holding a golden shovel whose blade is an AI chip",
+    "tone": "trade",
+    "metaphor": "picks and shovels of the AI gold rush",
+    "public_figure": null
+  },
+  "slug": "countries-that-win-the-ai-economy-without-building-ai",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (original character HATTIE, the film's fictional store owner, shocked; a golden shovel whose blade is an AI chip)",
+      "archetype": "face",
+      "text": [
+        "AI'S SHOVEL",
+        "SELLERS"
+      ],
+      "claim_basis": "metaphor answered in the film (countries selling chips, machines, memory, money and metal to the AI rush); Hattie is fictional; no number shown",
+      "scene": {
+        "bg": [
+          "#FFC23F",
+          "#2A1A0E"
+        ],
+        "rays": "#FFE08A",
+        "bust": {
+          "who": {
+            "name": "Hattie",
+            "hair": "bun",
+            "hairColor": "#E8C26A",
+            "hairShade": "#C9A04A",
+            "brows": "#8A6A2B",
+            "skin": "#F3D2B3",
+            "iris": "#3A2618",
+            "clothes": "tee",
+            "jacket": "#E5483B",
+            "shirt": "#E5483B",
+            "glasses": "round",
+            "age": 0.3
+          },
+          "expr": "shock",
+          "x": 470,
+          "s": 0.92
+        },
+        "prop": {
+          "kind": "chipshovel",
+          "x": 1420,
+          "y": 820,
+          "s": 0.62,
+          "rot": 14
+        }
+      },
+      "layout": [
+        {
+          "text": "AI'S SHOVEL",
+          "x": 1367.8,
+          "y": 177.3,
+          "size": 134.1,
+          "width": 944.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "SELLERS",
+          "x": 1367.8,
+          "y": 399.7,
+          "size": 195.2,
+          "width": 874.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.67 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(896, 73, 1840, 185), (931, 247, 1805, 411)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "11.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": false,
+            "detail": "0.178",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "{'name': 'Hattie', 'hair': 'bun', 'hairColor': '#E8C26A', 'hairShade': '#C9A04A', 'brows': '#8A6A2B', 'skin': '#F3D2B3', 'iris': '#3A2618', 'clothes': 'tee', 'jacket': '#E5483B', 'shirt': '#E5483B', 'glasses': 'round', 'age': 0.3}",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 67",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-the-world-still-depends-on-chinese-factories (distance 0.48)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "metaphor answered in the film (countries selling chips, machines, memory, money and metal to the AI rush); Hattie is fictional; no number sh",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.611,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-the-world-still-depends-on-chinese-factories"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "the gold-rush store sells chips",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "AI GOLD RUSH",
+        "SELL SHOVELS"
+      ],
+      "claim_basis": "metaphor (no number shown)",
+      "scene": {
+        "palette": {
+          "sky0": "#2A1A0E",
+          "sky1": "#6B3E12",
+          "haze": "#FFB23F",
+          "key": "#FFF3E0",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 960,
+          "y": 640,
+          "s": 0.85
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE0B8"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "AI GOLD RUSH",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 1218.5,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "SELL SHOVELS",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 1218.5,
+          "anchor": "middle",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": false,
+            "detail": "5 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(351, 156, 1569, 290), (351, 321, 1569, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.3:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.111",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 37",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-amazon-2026-11 (distance 0.42)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "metaphor (no number shown)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.612,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-amazon-2026-11"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "the island that sells the shovels",
+      "archetype": "classic",
+      "text_side": "left",
+      "accent_line": 1,
+      "text": [
+        "WINNING AI",
+        "WITHOUT AI"
+      ],
+      "claim_basis": "Taiwan, the Netherlands, Korea, Japan, the Gulf, Chile and Australia profit from AI supply (film); no number shown",
+      "scene": {
+        "palette": {
+          "sky0": "#10203F",
+          "sky1": "#1E4A7A",
+          "haze": "#59C3FF",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chipisland",
+          "x": 1250,
+          "y": 600,
+          "s": 0.85
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#D8F0FF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "WINNING AI",
+          "x": 90,
+          "y": 520.0,
+          "size": 125.0,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "WITHOUT AI",
+          "x": 90,
+          "y": 650.0,
+          "size": 125.0,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.54 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 422, 890, 528), (90, 552, 890, 658)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.065",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 58",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-microsoft-2026-11 (distance 0.28)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "Taiwan, the Netherlands, Korea, Japan, the Gulf, Chile and Australia profit from AI supply (film); no number shown",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.632,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-microsoft-2026-11"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T19:55:39Z",
+  "master": "output/countries-that-win-the-ai-economy-without-building-ai/thumbnails/master_F.png"
+}
