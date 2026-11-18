@@ -115,9 +115,9 @@ SHORTS = {
     "66-japan-ai": ("will-ai-make-japan-rich-again", "documentary", "japanai_documentary", "JAPAN IS OUT OF WORKERS.", "CAN ROBOTS HELP?", "Can Robots Fix Japan's Worker Shortage?", "#japan #robots #economy"),
     "66-japan-ai-b": ("will-ai-make-japan-rich-again", "documentary", "japanai_documentary", "JAPAN BUILDS THE ROBOTS.", "THE WORLD BUYS THEM", "Japan Builds the World's Robots. Who Uses Them?", "#japan #robots #manufacturing"),
     "66-japan-ai-c": ("will-ai-make-japan-rich-again", "documentary", "japanai_documentary", "ARMS,", "NOT ANDROIDS", "The Robots Really Working in Japan Aren't Humanoids", "#japan #robots #ai"),
-    "67-power-new-oil": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary", "AI IS HUNTING", "FOR CHEAP POWER", "Why AI Follows the Plug, Not the Workers", "#ai #electricity #datacenters"),
-    "67-power-new-oil-b": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary", "THE METAL MADE", "OF ELECTRICITY", "The Metal Made of Electricity, and Why AI Copies It", "#aluminum #electricity #energy"),
-    "67-power-new-oil-c": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary", "THE CHEAPEST PLUG", "WANTS A BIGGER CUT", "The Cheapest Power in North America Is Getting Pricier for AI", "#quebec #electricity #ai"),
+    "67-power-new-oil": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary_light", "AI IS HUNTING", "FOR CHEAP POWER", "Why AI Follows the Plug, Not the Workers", "#ai #electricity #datacenters"),
+    "67-power-new-oil-b": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary_light", "THE METAL MADE", "OF ELECTRICITY", "The Metal Made of Electricity, and Why AI Copies It", "#aluminum #electricity #energy"),
+    "67-power-new-oil-c": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary_light", "THE CHEAPEST PLUG", "WANTS A BIGGER CUT", "The Cheapest Power in North America Is Getting Pricier for AI", "#quebec #electricity #ai"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -142,7 +142,7 @@ CUSTOM = {
     "66-japan-ai": ("66-japan-ai", ["co_hook", "c1_draw"], "youtube-short"),
     "66-japan-ai-b": ("66-japan-ai", ["c3_fanuc", "c3_density"], "youtube-short-b"),
     "66-japan-ai-c": ("66-japan-ai", ["c4_konbini", "c4_humanoid"], "youtube-short-c"),
-    "67-power-new-oil": ("67-power-new-oil", ["co_hook", "c1_draw"], "youtube-short"),
+    "67-power-new-oil": ("67-power-new-oil", ["co_hook"], "youtube-short"),
     "67-power-new-oil-b": ("67-power-new-oil", ["c2_smelt", "c2_iceland"], "youtube-short-b"),
     "67-power-new-oil-c": ("67-power-new-oil", ["c3_quebec", "c3_quebec2"], "youtube-short-c"),
 }

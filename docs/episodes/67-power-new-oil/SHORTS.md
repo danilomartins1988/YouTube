@@ -4,7 +4,7 @@ Registered in `SHORTS` and `CUSTOM` (segments cut from the final timeline; verti
 
 | Short | Package folder | Segments | Headline | Hashtags |
 |---|---|---|---|---|
-| 1 "Why AI Follows the Plug, Not the Workers" | `youtube-short/` | co_hook, c1_draw | AI IS HUNTING / FOR CHEAP POWER | #ai #electricity #datacenters |
+| 1 "Why AI Follows the Plug, Not the Workers" | `youtube-short/` | co_hook | AI IS HUNTING / FOR CHEAP POWER | #ai #electricity #datacenters |
 | 2 "The Metal Made of Electricity, and Why AI Copies It" | `youtube-short-b/` | c2_smelt, c2_iceland | THE METAL MADE / OF ELECTRICITY | #aluminum #electricity #energy |
 | 3 "The Cheapest Power in North America Is Getting Pricier for AI" | `youtube-short-c/` | c3_quebec, c3_quebec2 | THE CHEAPEST PLUG / WANTS A BIGGER CUT | #quebec #electricity #ai |
 
