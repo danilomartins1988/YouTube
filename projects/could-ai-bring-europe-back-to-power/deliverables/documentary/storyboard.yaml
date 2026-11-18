@@ -12,7 +12,7 @@ scenes:
       era:
       - - 0
         - 0.0
-      - - cue: Yet Europe still builds
+      - - cue: But Europe still builds
         - 0.0
       - - cue: What if the technology
           offset: 0.3
@@ -27,21 +27,15 @@ scenes:
     worldW: 2400
     cam:
     - at: 0
-      x: 420
-      y: 540
-      zoom: 1.25
-    - at:
-        cue: Today, America
-      x: 960
-      y: 500
-      zoom: 0.95
-      dur: 1.4
-    - at:
-        cue: And Europe?
       x: 700
+      y: 540
+      zoom: 1.1
+    - at:
+        cue: Its people are getting older
+      x: 600
       y: 520
-      zoom: 1.15
-      dur: 0.35
+      zoom: 1.2
+      dur: 1.2
     - at:
         cue: Its companies pay
       x: 300
@@ -49,11 +43,17 @@ scenes:
       zoom: 1.2
       dur: 1.2
     - at:
-        cue: Yet Europe still builds
+        cue: America leads
+      x: 960
+      y: 500
+      zoom: 0.95
+      dur: 1.4
+    - at:
+        cue: But Europe still builds
       x: 1300
       y: 520
       zoom: 1.0
-      dur: 1.4
+      dur: 0.35
     - at:
         cue: What if the technology
       x: 960
@@ -63,42 +63,24 @@ scenes:
     drift: 3
     items:
     - kind: toonwords
-      text: EUROPE BUILT THE INDUSTRIAL WORLD
-      x: 420
-      y: 170
-      at: 0.2
-      until:
-        cue: Today, America
-      size: 50
-    - kind: sign
-      text: 'U.S.: THE DIGITAL ECONOMY'
-      x: 700
-      y: 180
-      at:
-        cue: Today, America
-      color: '#BBDEFB'
-      size: 34
-      until:
-        cue: And Europe?
-    - kind: sign
-      text: 'CHINA: THE WORLD''S FACTORY'
-      x: 1250
-      y: 260
-      at:
-        cue: and China has
-      color: '#FFCDD2'
-      size: 34
-      until:
-        cue: And Europe?
-    - kind: toonwords
-      text: AND EUROPE?
+      text: “EUROPE IS FALLING BEHIND.”
       x: 700
       y: 170
-      at:
-        cue: And Europe?
+      at: 0.1
+      until:
+        cue: Its people are getting older
       size: 64
+    - kind: bubble
+      text: EVERYONE SAYS SO.
+      x: 1300
+      y: 330
+      at: 0.6
       until:
-        cue: Its companies pay
+        cue: Its people are getting older
+      tail:
+      - 1150
+      - 600
+      size: 30
     - kind: sign
       text: OLDER
       x: 520
@@ -108,7 +90,7 @@ scenes:
       color: '#E1E5EC'
       size: 34
       until:
-        cue: Yet Europe still builds
+        cue: But Europe still builds
     - kind: sign
       text: 'ELECTRICITY: 2-3× U.S. PRICES (DRAGHI REPORT, 2024)'
       x: 300
@@ -118,23 +100,52 @@ scenes:
       color: '#FFE0B2'
       size: 28
       until:
-        cue: Yet Europe still builds
+        cue: But Europe still builds
     - kind: sign
-      text: 'BIG TECH HQs: MOSTLY ELSEWHERE'
-      x: 300
+      text: 'U.S.: THE DIGITAL ECONOMY'
+      x: 700
+      y: 180
+      at:
+        cue: America leads
+      color: '#BBDEFB'
+      size: 34
+      until:
+        cue: But Europe still builds
+    - kind: sign
+      text: 'CHINA: THE WORLD''S FACTORY'
+      x: 1250
       y: 260
       at:
-        cue: And most of the giant
+        cue: China has become
+      color: '#FFCDD2'
+      size: 34
+      until:
+        cue: But Europe still builds
+    - kind: sign
+      text: 'BIG TECH HQs: MOSTLY ELSEWHERE'
+      x: 960
+      y: 340
+      at:
+        cue: and most of the giant
       color: '#FFF59D'
       size: 28
       until:
-        cue: Yet Europe still builds
+        cue: But Europe still builds
+    - kind: toonwords
+      text: BUT...
+      x: 1300
+      y: 120
+      at:
+        cue: But Europe still builds
+      size: 60
+      until:
+        cue: So here's a question
     - kind: sign
       text: ONLY MAKER OF EUV CHIP-PRINTING MACHINES
       x: 1300
-      y: 170
+      y: 190
       at:
-        cue: Yet Europe still builds
+        cue: But Europe still builds
       color: '#E1D5FF'
       size: 30
       until:
@@ -142,7 +153,7 @@ scenes:
     - kind: sign
       text: MEDICINES SOLD WORLDWIDE
       x: 1300
-      y: 250
+      y: 270
       at:
         cue: and it invents medicines
       color: '#C8E6C9'
@@ -189,12 +200,14 @@ scenes:
       y: 36
       tags:
       - - 0
+        - THE COMMON VIEW
+      - - cue: Its companies pay
         - FACT
       - - cue: So here's a question
         - HYPOTHESIS
   sfx:
   - kind: hit
-    cue: What if the technology
+    cue: But Europe still builds
     gain: 0.3
   sources:
   - draghi_a
@@ -534,7 +547,7 @@ scenes:
     drift: 3
     items:
     - kind: counter
-      x: 360
+      x: 560
       y: 210
       at:
         cue: At the start of last year
@@ -651,7 +664,7 @@ scenes:
         cue: And in tech
     - kind: sign
       text: 'EUROPE''S BILLION-DOLLAR STARTUPS 2008-21: ≈30% MOVED HQ ABROAD, MOSTLY U.S.'
-      x: 960
+      x: 1250
       y: 120
       at:
         cue: Close to
@@ -2870,7 +2883,7 @@ scenes:
       x0: -1600
       x1: 4600
       title: A REALITY CHECK
-      scale: 0.004
+      scale: 0.0016
       bars:
       - label: CHINA ROBOTS 2025
         v: 354226

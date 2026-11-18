@@ -70,24 +70,25 @@ def bumper(id_, seg, num, act, title, caption, color):
 
 # ====================================================================== ACT 1: a continent in a squeeze
 stage("s01_hook", "co_hook", {
-    **W1("eurocity", era=[[0, 0.0], [C("Yet Europe still builds"), 0.0], [C("What if the technology", 0.3), 1.0]], hyp=True, hypAt=C("What if the technology", 1.2),
+    **W1("eurocity", era=[[0, 0.0], [C("But Europe still builds"), 0.0], [C("What if the technology", 0.3), 1.0]], hyp=True, hypAt=C("What if the technology", 1.2),
          hypText="A HYPOTHESIS TO TEST · NOT A FORECAST", hypX=960, hypY=80),
-    "cam": cam((0, 420, 540, 1.25), (C("Today, America"), 960, 500, 0.95, 1.4), (C("And Europe?"), 700, 520, 1.15, WHIP), (C("Its companies pay"), 300, 520, 1.2, 1.2),
-               (C("Yet Europe still builds"), 1300, 520, 1.0, 1.4), (C("What if the technology"), 960, 520, 0.85, 1.6)), "drift": 3,
-    "items": [words("EUROPE BUILT THE INDUSTRIAL WORLD", 420, 170, 0.2, until=C("Today, America"), size=50),
-              sign("U.S.: THE DIGITAL ECONOMY", 700, 180, C("Today, America"), color="#BBDEFB", size=34, until=C("And Europe?")),
-              sign("CHINA: THE WORLD'S FACTORY", 1250, 260, C("and China has"), color="#FFCDD2", size=34, until=C("And Europe?")),
-              words("AND EUROPE?", 700, 170, C("And Europe?"), size=64, until=C("Its companies pay")),
-              sign("OLDER", 520, 300, C("Its people are getting older"), color="#E1E5EC", size=34, until=C("Yet Europe still builds")),
-              sign("ELECTRICITY: 2-3× U.S. PRICES (DRAGHI REPORT, 2024)", 300, 180, C("Its companies pay"), color="#FFE0B2", size=28, until=C("Yet Europe still builds")),
-              sign("BIG TECH HQs: MOSTLY ELSEWHERE", 300, 260, C("And most of the giant"), color="#FFF59D", size=28, until=C("Yet Europe still builds")),
-              sign("ONLY MAKER OF EUV CHIP-PRINTING MACHINES", 1300, 170, C("Yet Europe still builds"), color="#E1D5FF", size=30, until=C("So here's a question")),
-              sign("MEDICINES SOLD WORLDWIDE", 1300, 250, C("and it invents medicines"), color="#C8E6C9", size=30, until=C("So here's a question")),
+    "cam": cam((0, 700, 540, 1.1), (C("Its people are getting older"), 600, 520, 1.2, 1.2), (C("Its companies pay"), 300, 520, 1.2, 1.2),
+               (C("America leads"), 960, 500, 0.95, 1.4), (C("But Europe still builds"), 1300, 520, 1.0, WHIP), (C("What if the technology"), 960, 520, 0.85, 1.6)), "drift": 3,
+    "items": [words("“EUROPE IS FALLING BEHIND.”", 700, 170, 0.1, until=C("Its people are getting older"), size=64),
+              it("bubble", text="EVERYONE SAYS SO.", x=1300, y=330, at=0.6, until=C("Its people are getting older"), tail=[1150, 600], size=30),
+              sign("OLDER", 520, 300, C("Its people are getting older"), color="#E1E5EC", size=34, until=C("But Europe still builds")),
+              sign("ELECTRICITY: 2-3× U.S. PRICES (DRAGHI REPORT, 2024)", 300, 180, C("Its companies pay"), color="#FFE0B2", size=28, until=C("But Europe still builds")),
+              sign("U.S.: THE DIGITAL ECONOMY", 700, 180, C("America leads"), color="#BBDEFB", size=34, until=C("But Europe still builds")),
+              sign("CHINA: THE WORLD'S FACTORY", 1250, 260, C("China has become"), color="#FFCDD2", size=34, until=C("But Europe still builds")),
+              sign("BIG TECH HQs: MOSTLY ELSEWHERE", 960, 340, C("and most of the giant"), color="#FFF59D", size=28, until=C("But Europe still builds")),
+              words("BUT...", 1300, 120, C("But Europe still builds"), size=60, until=C("So here's a question")),
+              sign("ONLY MAKER OF EUV CHIP-PRINTING MACHINES", 1300, 190, C("But Europe still builds"), color="#E1D5FF", size=30, until=C("So here's a question")),
+              sign("MEDICINES SOLD WORLDWIDE", 1300, 270, C("and it invents medicines"), color="#C8E6C9", size=30, until=C("So here's a question")),
               words("WHAT IF AI BRINGS EUROPE BACK?", 960, 190, C("What if the technology"), size=54, color="#FFFFFF"),
               NORA([[C("So here's a question"), -200], [C("So here's a question", 1.0), 760]], C("So here's a question", -0.2), face="happy", pose="point",
                    faces=[[0, "happy"], [C("What if the technology"), "shock"]]),
-              tag((0, "FACT"), (C("So here's a question"), "HYPOTHESIS"))]},
-    sources=["draghi_a", "asml_ar25"], sfx=[{"kind": "hit", "cue": "What if the technology", "gain": 0.3}])
+              tag((0, "THE COMMON VIEW"), (C("Its companies pay"), "FACT"), (C("So here's a question"), "HYPOTHESIS"))]},
+    sources=["draghi_a", "asml_ar25"], sfx=[{"kind": "hit", "cue": "But Europe still builds", "gain": 0.3}])
 stage("s02_title", "title_card", {
     **W1("eutitle", lines=["COULD AI BRING", "EUROPE BACK", "TO POWER?"], sub="THE ECONOMIC COMEBACK NOBODY EXPECTED"), "cam": STILL(), "drift": 0, "min_seconds": 5.8,
     "items": [THEO(320, 2.6, scale=1.0, face="happy", pose="wave", y=1080), NORA(1640, 2.8, scale=1.0, face="happy", pose="wave", y=1080)]},
@@ -124,7 +125,7 @@ stage("s05_age", "a1_age", {
     **W1("agewave", workers=[[0, 3.0], [C("and the balance will move"), 3.0], [C("and the balance will move", 3.5), 2.0]],
          years=[[0, "EU · 1 JANUARY 2025"], [C("Draghi's report projects"), "EU · PROJECTION TO 2040"]], glassX=1760),
     "cam": cam((0, 960, 520, 0.95), (C("Draghi's report projects"), 960, 500, 1.0, 1.2), (C("and the balance will move"), 960, 480, 1.08, 1.4)), "drift": 3,
-    "items": [it("counter", x=360, y=210, at=C("At the start of last year"), suffix="% AGED 65+", decimals=1, steps=[[0, 0], [C("At the start of last year"), 0], [C("or older"), 22.0]],
+    "items": [it("counter", x=560, y=210, at=C("At the start of last year"), suffix="% AGED 65+", decimals=1, steps=[[0, 0], [C("At the start of last year"), 0], [C("or older"), 22.0]],
                  text="EU POPULATION, 1 JAN 2025 (EUROSTAT)"),
               sign("WORKFORCE: −≈2 MILLION A YEAR BY 2040 (DRAGHI REPORT)", 960, 290, C("will shrink by close to"), color="#FFE0B2", size=28),
               sign("WORKERS PER RETIREE: 3 → 2", 1500, 210, C("and the balance will move"), color="#FFCDD2", size=32),
@@ -137,7 +138,7 @@ stage("s06_squeeze", "a1_squeeze", {
     "cam": cam((0, 960, 520, 1.0), (C("And in tech"), 1200, 500, 1.05, 1.2), (C("Close to"), 1300, 480, 1.1, 1.0)), "drift": 3,
     "items": [words("THE SQUEEZE", 960, 120, 0.2, until=C("And in tech"), size=60),
               sign("EU COMPANIES vs U.S. COMPANIES · DRAGHI REPORT 2024", 760, 210, C("EU companies pay"), color="#FFF8E1", size=24, until=C("And in tech")),
-              sign("EUROPE'S BILLION-DOLLAR STARTUPS 2008-21: ≈30% MOVED HQ ABROAD, MOSTLY U.S.", 960, 120, C("Close to"), color="#FFF59D", size=26),
+              sign("EUROPE'S BILLION-DOLLAR STARTUPS 2008-21: ≈30% MOVED HQ ABROAD, MOSTLY U.S.", 1250, 120, C("Close to"), color="#FFF59D", size=26),
               THEO(260, 0.2, face="worry", pose="shrug", label="THEO · FACTORY ENGINEER", labelUntil=C("And in tech")),
               tag((0, "FACT"))]},
     sources=["draghi_a"])
@@ -363,7 +364,7 @@ stage("s29_airbus", "a5_airbus", {
               tag((0, "FACT"), (C("That's exactly the kind"), "CONJECTURE"))]},
     sources=["airbus_fy25", "airbus_agm26"])
 stage("s30_limits", "a5_limits", {
-    **W1("triad", title="A REALITY CHECK", scale=0.004, bars=[
+    **W1("triad", title="A REALITY CHECK", scale=0.0016, bars=[
         {"label": "CHINA ROBOTS 2025", "v": 354226, "color": RED, "display": "354,226", "at": C("Its robot installations")},
         {"label": "EUROPE ROBOTS 2025", "v": 73054, "color": GOLD, "display": "73,054 (−14%)", "at": C("Its robot installations", 0.5)}], gap=520,
         foot="INDUSTRIAL ROBOTS INSTALLED IN 2025 (IFR WORLD ROBOTICS 2026)"),

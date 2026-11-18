@@ -8,6 +8,7 @@ import {E, clamp, lerp, win} from '../motion';
  * squash and stretch). Everything ORIGINAL: no logos, flags, seals, brand names or traced product designs; companies appear only
  * as generic buildings or machines with a city name on a plaque. No real person is drawn.
  * Sets:
+ *  - cleanpower: dam, wind and solar feeding an automated plant; `bill` blocks stack a power-bill column; `factors` chips.
  *  - eurocity: an original river city by day. Old brick works with chimneys (smoke `smoke` 0..1), a stone old town with a clock
  *    tower, a bridge, and new glass labs, a robot factory and wind turbines that rise with `era` (KF 0..1). `hyp` shows a
  *    SCENARIO banner (`hypText`).
@@ -402,7 +403,7 @@ export const EUROPE_SETS: Record<string, SetFn> = {
         {ground(z, f, '#CFC5B2', '#BBAF98')}
         {rope > 0 && (() => { const eu = tw.map((o, k) => ({o, k})).filter((p) => p.o.eu); if (!eu.length) return null; const xa = x0 + eu[0].k * gap - 140, xb = x0 + eu[eu.length - 1].k * gap + 140;
           return <g opacity={rope}><rect x={xa} y={f - 640} width={(xb - xa) * rope} height={640} rx={30} fill="#2A6FDB" opacity={0.1} stroke={BLUE} strokeWidth={6} strokeDasharray="20 12" />
-            {plaque((xa + xb) / 2, f - 670, z.ropeText || 'EU MEMBERS', BLUE, 28, '#FFFFFF')}</g>; })()}
+            {plaque((xa + xb) / 2, f + 60, z.ropeText || 'EU MEMBERS', BLUE, 26, '#FFFFFF')}</g>; })()}
         {tw.map((o, k) => { const x = x0 + k * gap, at = o.at ?? 0; if (t < at) return null; const h = 380 + (k % 3) * 70, g = E.outBack(win(t, at, 0.6));
           return <g key={'tw' + k} transform={`translate(${x} ${f - 40}) scale(1 ${g})`}>
             <rect x={-100} y={-h} width={200} height={h} rx={10} fill={['#DDEFFB', '#E8E2F7', '#E2F4EA', '#FCEBD9', '#E6ECF5', '#F7E1E1'][k % 6]} stroke={OL} strokeWidth={5} />

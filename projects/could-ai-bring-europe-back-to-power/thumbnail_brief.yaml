@@ -17,7 +17,7 @@ analysis:
   public_figure: null
 concepts:
 - id: A
-  angle: the comeback question over Europe's skyline (old industry on the left, advanced AI tech on the right)
+  angle: the comeback question over Europe's skyline (old industry left, AI tech right) with a falling red line that turns up into a gold arrow (a shape, no data)
   archetype: classic
   text_side: top
   accent_line: 0
@@ -27,7 +27,7 @@ concepts:
   scene:
     palette: {sky0: '#0B1F3F', sky1: '#1E4E8C', haze: '#FFC93C', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: eurocity, x: 960, y: 700, s: 0.62}
+    subject: {kind: eurocity, x: 960, y: 770, s: 0.58, reversal: true}
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
     vignette: 0.5
     brand: none

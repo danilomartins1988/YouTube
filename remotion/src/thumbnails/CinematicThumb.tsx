@@ -694,6 +694,13 @@ robofactory: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     <rect x={-780} y={300} width={1560} height={50} fill="#3E7FB8" stroke="#05070B" strokeWidth={10} />
     {o.label && <g transform="translate(0 -470)"><rect x={-220} y={-56} width={440} height={96} rx={16} fill="#FFFFFF" stroke="#05070B" strokeWidth={10} />
       <text x={0} y={20} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={68} fill="#05070B">{o.label}</text></g>}
+    {o.reversal && <g>
+      <path d="M -760 -640 L -420 -520 L -120 -380" fill="none" stroke="#05070B" strokeWidth={70} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M -760 -640 L -420 -520 L -120 -380" fill="none" stroke="#E5484D" strokeWidth={44} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M -120 -380 Q 200 -420 600 -760" fill="none" stroke="#05070B" strokeWidth={76} strokeLinecap="round" />
+      <path d="M -120 -380 Q 200 -420 600 -760" fill="none" stroke={P.accent} strokeWidth={50} strokeLinecap="round" filter="url(#glow)" />
+      <path d="M 520 -840 L 720 -840 L 680 -640 Z" fill={P.accent} stroke="#05070B" strokeWidth={14} strokeLinejoin="round" transform="rotate(8 620 -760)" />
+      <circle cx={-120} cy={-380} r={40} fill="#FFFFFF" stroke="#05070B" strokeWidth={12} /></g>}
   </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
