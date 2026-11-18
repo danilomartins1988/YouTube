@@ -631,6 +631,49 @@ export const SUBJECTS: Record<string, SubjectFn> = {
       <circle cx={-250} cy={0} r={28} fill={P.sky0} stroke="#05070B" strokeWidth={8} />
       <text x={50} y={58} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={(o.text || '').length > 6 ? 150 : 170} fill="#05070B">{o.text || '$9,900?'}</text></g>}
   </g>,
+  /** Ep 62: an ORIGINAL automated American plant (red brick, tall lit windows, a big orange six-axis robot arm in front, a
+   *  rooftop sign `o.label`); no logos, no flags */
+robofactory: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {o.haze !== false && <circle r={620} fill={P.haze} opacity={0.18} filter="url(#soft)" />}
+    <ellipse cx={0} cy={330} rx={620} ry={50} fill="#000" opacity={0.45} filter="url(#soft)" />
+    <path d="M -520 330 L -520 -120 L -360 -220 L -360 -120 L -200 -220 L -200 -120 L -40 -220 L -40 -120 L 520 -120 L 520 330 Z" fill="#B4553F" stroke="#05070B" strokeWidth={14} strokeLinejoin="round" />
+    {[-460, -300, -140, 20, 180, 340].map((x) => <rect key={x} x={x} y={-60} width={110} height={170} rx={8} fill="#FFE9A8" stroke="#05070B" strokeWidth={8} />)}
+    <rect x={-300} y={170} width={600} height={160} fill="#2B3440" stroke="#05070B" strokeWidth={10} />
+    {[0, 1, 2, 3].map((k) => <path key={k} d={`M -300 ${200 + k * 34} L 300 ${200 + k * 34}`} stroke="#4A5868" strokeWidth={6} />)}
+    {o.label && <g transform="translate(240 -190)"><rect x={-170} y={-50} width={340} height={90} rx={14} fill="#FFFFFF" stroke="#05070B" strokeWidth={10} />
+      <text x={0} y={20} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={66} fill="#05070B">{o.label}</text></g>}
+    <g transform="translate(-420 330)">
+      <path d="M -90 0 L -60 -70 L 60 -70 L 90 0 Z" fill="#37474F" stroke="#05070B" strokeWidth={12} strokeLinejoin="round" />
+      <path d="M 0 -110 L 150 -420 L 430 -330" fill="none" stroke="#05070B" strokeWidth={96} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M 0 -110 L 150 -420 L 430 -330" fill="none" stroke={o.armColor || '#FF9F1C'} strokeWidth={70} strokeLinecap="round" strokeLinejoin="round" />
+      <rect x={-60} y={-160} width={120} height={100} rx={40} fill={o.armColor || '#FF9F1C'} stroke="#05070B" strokeWidth={12} />
+      {[[0, -110], [150, -420]].map(([x, y], k) => <g key={k}><circle cx={x} cy={y} r={44} fill="#FFFFFF" stroke="#05070B" strokeWidth={12} /><circle cx={x} cy={y} r={18} fill="#00C2E8" /></g>)}
+      <path d="M 430 -330 L 500 -280 M 430 -330 L 470 -400" stroke="#05070B" strokeWidth={26} strokeLinecap="round" />
+      <circle cx={500} cy={-300} r={30} fill="#FFF6D8" opacity={0.9} filter="url(#glow)" />
+    </g>
+  </g>,
+  /** Ep 62: an ORIGINAL generic megafactory (long white sawtooth halls, glowing windows, cranes, container stacks; sign `o.label`) */
+  megafactory: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {o.haze !== false && <circle r={620} fill={P.haze} opacity={0.16} filter="url(#soft)" />}
+    <ellipse cx={0} cy={330} rx={640} ry={50} fill="#000" opacity={0.45} filter="url(#soft)" />
+    {[-1, 0, 1].map((r) => <g key={r} transform={`translate(${r * 60} ${-r * 70 - 40}) scale(${1 - Math.abs(r) * 0.08})`} opacity={r === 1 ? 0.7 : 1}>
+      <path d={`M -560 330 L -560 0 ${Array.from({length: 7}, (_, k) => `L ${-560 + k * 160 + 120} -100 L ${-560 + k * 160 + 160} 0`).join(' ')} L 560 330 Z`} fill={r ? '#C9D3DD' : '#ECEFF3'} stroke="#05070B" strokeWidth={12} strokeLinejoin="round" />
+      {Array.from({length: 12}, (_, k) => <rect key={k} x={-520 + k * 88} y={60} width={60} height={70} rx={6} fill="#FFD27A" stroke="#05070B" strokeWidth={6} />)}
+    </g>)}
+    {[[-470, 250], [-360, 250], [380, 250], [490, 250], [-415, 190], [435, 190]].map(([x, y], k) => <rect key={k} x={x - 50} y={y} width={100} height={56} rx={6} fill={['#E5484D', '#1F7A8C', '#FF9F1C', '#2E9E5B', '#5C6BC0', '#F2C14E'][k]} stroke="#05070B" strokeWidth={8} />)}
+    {o.label && <g transform="translate(0 -230)"><rect x={-190} y={-50} width={380} height={90} rx={14} fill="#FFFFFF" stroke="#05070B" strokeWidth={10} />
+      <text x={0} y={20} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={66} fill="#05070B">{o.label}</text></g>}
+    {[-200, 200].map((x) => <g key={x} transform={`translate(${x} 160)`}><path d="M -50 0 L 0 -150 L 50 0 Z" fill="none" stroke="#00C2E8" strokeWidth={22} strokeLinejoin="round" /><circle cx={0} cy={-150} r={22} fill="#FFFFFF" stroke="#05070B" strokeWidth={8} /></g>)}
+  </g>,
+  /** Ep 62: an illustrative COST METER (a gauge with a big question mark and no numbers); `o.tilt` -1..1 needle */
+  costmeter: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    <path d="M -300 0 A 300 300 0 0 1 300 0 Z" fill="#FFFFFF" stroke="#05070B" strokeWidth={16} />
+    <path d="M -255 0 A 255 255 0 0 1 -90 -238" stroke="#2E9E5B" strokeWidth={46} fill="none" /><path d="M -80 -242 A 255 255 0 0 1 80 -242" stroke="#FFD23F" strokeWidth={46} fill="none" /><path d="M 90 -238 A 255 255 0 0 1 255 0" stroke="#E5484D" strokeWidth={46} fill="none" />
+    <path d={`M 0 0 L ${Math.sin((o.tilt ?? 0.1) * 1.2) * 230} ${-Math.cos((o.tilt ?? 0.1) * 1.2) * 230}`} stroke="#05070B" strokeWidth={22} strokeLinecap="round" /><circle r={36} fill="#05070B" />
+    <text x={0} y={-90} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={120} fill="#05070B">?</text>
+    <rect x={-320} y={0} width={640} height={50} rx={10} fill="#05070B" />
+    <text x={0} y={36} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={30} fill="#FFFFFF" letterSpacing={4}>{o.note || 'COST?'}</text>
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

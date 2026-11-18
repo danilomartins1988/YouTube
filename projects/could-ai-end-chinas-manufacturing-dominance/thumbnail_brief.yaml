@@ -1,0 +1,73 @@
+# Thumbnail creative brief (Ep 62, arc Episode 2). Default C (coordinator decision 2026-11-18: mobile-first cost question),
+# A = USA vs China split with a robot ("CHINA'S END?"), B = the robot revolution ("AI FACTORIES COMING BACK?": the owner's
+# standing rule says the words must name CHINA or AI, so "AI" was added to the brief's "FACTORIES COMING BACK?").
+# Generic ORIGINAL factories and robots only: no logos, no flags, no national symbols; countries named only as text on signs.
+# No numbers anywhere (the experiment is illustrative). Distinct from Ep 60 (Mel's face + 27% tag; parcels): no face, no tag.
+title: "Could AI Make American Factories Cheaper Than China's?"
+docs_dir: docs/episodes/62-ai-manufacturing
+video: output/aimfg_documentary.mp4
+deliverable: documentary
+status: planned
+default: C
+analysis:
+  mystery: If robots do the work, does China's cheap-labor head start disappear?
+  surprising_fact: China installed 354,226 of the world's 603,307 new industrial robots in 2025 (59%; IFR World Robotics 2026), about 9 for every 1 in the US (our calculation)
+  subject: two original factories, an American robot plant and a Chinese megafactory, with an illustrative cost meter between them
+  tone: sitcom
+  metaphor: the cost race between two factories
+  public_figure: null
+concepts:
+- id: C
+  angle: the cost reversal (two factories and a question-mark cost meter; no figures)
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - CHEAPER THAN
+  - CHINA?
+  claim_basis: 'a question (answered in the film: for some products, in an illustrative model; no cost figure shown)'
+  scene:
+    palette: {sky0: '#0B2546', sky1: '#1B4F86', haze: '#FFC93C', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: robofactory, x: 470, y: 690, s: 0.62, label: 'USA'}
+    support:
+    - {kind: megafactory, x: 1450, y: 690, s: 0.62, label: 'CHINA'}
+    - {kind: costmeter, x: 960, y: 1010, s: 0.62, tilt: 0.05, note: 'COST?'}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.5
+    brand: none
+- id: A
+  angle: USA vs China split (megafactory left, US robot plant right, a question; not a prediction)
+  archetype: classic
+  text_side: top
+  accent_line: 0
+  text:
+  - CHINA'S END?
+  claim_basis: 'a question (the film concludes AI does not end China''s dominance; it changes the test)'
+  scene:
+    palette: {sky0: '#1A0B10', sky1: '#3A1420', haze: '#FF5A5F', key: '#FFF3E0', accent: '#FF5A5F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: megafactory, x: 520, y: 700, s: 0.6, label: 'CHINA'}
+    support:
+    - {kind: robofactory, x: 1420, y: 700, s: 0.6, label: 'USA', armColor: '#00C2E8'}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none
+- id: B
+  angle: the robot revolution (a big robot arm in a US plant, Chinese megafactory behind)
+  archetype: classic
+  text_side: left
+  accent_line: 1
+  text:
+  - AI FACTORIES
+  - COMING BACK?
+  claim_basis: 'a question (answered in the film: competitiveness can return product by product, not the same jobs)'
+  scene:
+    palette: {sky0: '#07142A', sky1: '#0F3A66', haze: '#4FC3F7', key: '#FFF6D8', accent: '#FFC93C', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: robofactory, x: 1420, y: 640, s: 0.72, label: 'USA'}
+    support:
+    - {kind: megafactory, x: 1560, y: 380, s: 0.42, label: 'CHINA', opacity: 0.55}
+    particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDE9FF'}
+    vignette: 0.55
+    brand: none
