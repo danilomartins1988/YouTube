@@ -215,7 +215,7 @@ export const POWERBILL_SETS: Record<string, SetFn> = {
           <rect x={-170} y={-50} width={340} height={100} rx={14} fill="none" stroke={RED} strokeWidth={10} /><T x={0} y={16} s={fit(stamp, 300, 46)} c={RED}>{stamp}</T></g>}
       </g>
       {/* coffee mug and pen */}
-      <g transform={`translate(${bx + 470} ${by + 20})`}><rect x={-50} y={-110} width={100} height={110} rx={14} fill={BLUE} stroke={OL} strokeWidth={5} />
+      <g transform={`translate(${bx - 470} ${by + 20})`}><rect x={-50} y={-110} width={100} height={110} rx={14} fill={BLUE} stroke={OL} strokeWidth={5} />
         <path d="M 50 -90 Q 90 -60 50 -30" stroke={OL} strokeWidth={8} fill="none" />
         {[0, 1].map((q) => { const u = (t * 0.6 + q / 2) % 1; return <path key={q} d={`M ${-14 + q * 28} ${-130 - u * 80} q 12 -16 0 -32`} stroke="#FFFFFF" strokeWidth={6} fill="none" opacity={1 - u} />; })}</g>
     </g>;
@@ -283,7 +283,7 @@ export const POWERBILL_SETS: Record<string, SetFn> = {
       {ground(z, f, '#9CCB86', '#86B872')}
       {/* odometer */}
       {cost && <g transform={`translate(${z.costX ?? 640} 150)`}><rect x={-330} y={-70} width={660} height={150} rx={20} fill={NAVY} stroke={OL} strokeWidth={6} />
-        <T x={0} y={-30} s={22} c="#BFD3FF" ls={2}>{z.costTitle || 'PLANNED SPENDING'}</T><T x={0} y={50} s={fit(cost, 600, 60)} c={GOLD}>{cost}</T></g>}
+        <T x={0} y={-30} s={fit(z.costTitle || 'PLANNED SPENDING', 600, 22)} c="#BFD3FF">{z.costTitle || 'PLANNED SPENDING'}</T><T x={0} y={50} s={fit(cost, 600, 60)} c={GOLD}>{cost}</T></g>}
       {/* buckets */}
       {split.length > 0 && <g>{who.map((o, k) => { const s = split.find((q) => q.who === o.n); const v = s ? clamp(kf(s.v, t, 0)) : 0, x = (z.bucketX ?? 1150) + k * 190, hi = z.hi === o.n;
         return <g key={'bk' + k}>
