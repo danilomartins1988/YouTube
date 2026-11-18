@@ -674,6 +674,27 @@ robofactory: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     <rect x={-320} y={0} width={640} height={50} rx={10} fill="#05070B" />
     <text x={0} y={36} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={30} fill="#FFFFFF" letterSpacing={4}>{o.note || 'COST?'}</text>
   </g>,
+  /** Ep 63: an ORIGINAL European river skyline, old to new left to right (brick works with chimneys, stone spires and a clock
+   *  tower, glass labs with a glowing robot arm, wind turbines); `o.label` optional plaque; no landmarks traced, no flags */
+  eurocity: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {o.haze !== false && <circle r={660} fill={P.haze} opacity={0.2} filter="url(#soft)" />}
+    <ellipse cx={0} cy={330} rx={760} ry={50} fill="#000" opacity={0.45} filter="url(#soft)" />
+    <path d="M -760 330 L -760 80 L -560 80 L -560 330 Z" fill="#8E4A36" stroke="#05070B" strokeWidth={12} />
+    {[-720, -640].map((x) => <g key={x}><rect x={x} y={-120} width={44} height={210} fill="#A4553E" stroke="#05070B" strokeWidth={10} /><circle cx={x + 40} cy={-170} r={46} fill="#9EA7B3" opacity={0.6} /></g>)}
+    {[-520, -430, -340].map((x, k) => <path key={x} d={`M ${x} 330 L ${x} ${-20 - k * 40} L ${x + 40} ${-160 - k * 50} L ${x + 80} ${-20 - k * 40} L ${x + 80} 330 Z`} fill="#E8D3AE" stroke="#05070B" strokeWidth={10} strokeLinejoin="round" />)}
+    <rect x={-240} y={-260} width={110} height={590} fill="#EADBC0" stroke="#05070B" strokeWidth={12} /><path d="M -256 -260 L -185 -400 L -114 -260 Z" fill="#3E5A86" stroke="#05070B" strokeWidth={12} strokeLinejoin="round" />
+    <circle cx={-185} cy={-180} r={36} fill="#FFFFFF" stroke="#05070B" strokeWidth={8} />
+    {[[-90, -330, 200], [130, -200, 170], [320, -120, 150]].map(([x, y, w], k) => <g key={k}><rect x={x} y={y} width={w} height={330 - y} rx={10} fill="#BFE6F7" stroke="#05070B" strokeWidth={12} />
+      {Array.from({length: Math.floor((330 - y) / 70)}, (_, r) => <rect key={r} x={x + 20} y={y + 24 + r * 70} width={w - 40} height={30} fill={P.accent} opacity={0.55} />)}</g>)}
+    {[560, 690].map((x, k) => <g key={x} transform={`translate(${x} 330)`}><path d="M -10 0 L -6 -420 L 6 -420 L 10 0 Z" fill="#FFFFFF" stroke="#05070B" strokeWidth={8} />
+      <g transform={`translate(0 -420) rotate(${k * 40 + 15})`}>{[0, 120, 240].map((r) => <path key={r} transform={`rotate(${r})`} d="M 0 0 L -16 -26 L 0 -200 L 16 -26 Z" fill="#FFFFFF" stroke="#05070B" strokeWidth={7} />)}<circle r={14} fill="#05070B" /></g></g>)}
+    <g transform="translate(220 -200)"><path d="M 0 0 L 90 -150 L 230 -90" fill="none" stroke="#05070B" strokeWidth={60} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M 0 0 L 90 -150 L 230 -90" fill="none" stroke={o.armColor || '#F2B33D'} strokeWidth={40} strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx={90} cy={-150} r={26} fill="#FFFFFF" stroke="#05070B" strokeWidth={8} /><circle cx={230} cy={-90} r={30} fill="#FFF6D8" filter="url(#glow)" /></g>
+    <rect x={-780} y={300} width={1560} height={50} fill="#3E7FB8" stroke="#05070B" strokeWidth={10} />
+    {o.label && <g transform="translate(0 -470)"><rect x={-220} y={-56} width={440} height={96} rx={16} fill="#FFFFFF" stroke="#05070B" strokeWidth={10} />
+      <text x={0} y={20} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={68} fill="#05070B">{o.label}</text></g>}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

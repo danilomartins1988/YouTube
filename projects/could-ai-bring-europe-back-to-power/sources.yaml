@@ -185,6 +185,32 @@ sources:
     accessed: "2026-11-18"
     credit: "Directive (EU) 2022/2523"
     notes: "15% minimum effective rate; groups with consolidated revenue of at least EUR 750m; transposition by 31 Dec 2023; IIR for fiscal years from 31 Dec 2023, UTPR from 31 Dec 2024. Reference for FACT_CHECK and the description only."
+  - id: epe_ben26
+    title: "Brazilian Energy Balance 2026, Summary Report (base year 2025)"
+    publisher: EPE (Empresa de Pesquisa Energetica, Brazil's energy research agency) / Ministry of Mines and Energy
+    url: https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-975/topico-847/BEN_S%C3%ADntese_2026_EN.pdf
+    published: "2026-07"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "EPE, Brazilian Energy Balance 2026"
+    notes: "'The share of renewables in the electricity matrix was 86.8% in 2025.' (2024: 88.2%, BEN 2025.) Renewables 49.4% of total energy supply."
+  - id: pwc_acende25
+    title: "Estudo sobre a carga de tributos e encargos do setor eletrico brasileiro (ano-calendario 2024)"
+    publisher: PwC Brasil and Instituto Acende Brasil
+    url: https://www.pwc.com.br/pt/estudos/setores-atividades/energia/2025/PwC-Acende-Brasil-2025.pdf
+    published: "2025"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "PwC / Instituto Acende Brasil (2025)"
+    notes: "Sample of 44 generation, transmission and distribution companies (~2/3 of the market): in 2024 taxes (30%) and sector charges (14.8%) = 44.8% of gross operating revenue from selling electricity to final consumers."
+  - id: br_reform
+    title: "Novos tributos comecam a ser testados em 2026 e transicao vai ate 2033 (Constitutional Amendment 132/2023: CBS and IBS dual VAT replacing PIS, Cofins, IPI, ICMS and ISS)"
+    publisher: Agencia Senado (Federal Senate of Brazil)
+    url: https://www12.senado.leg.br/noticias/materias/2024/12/16/novos-tributos-comecam-a-ser-testados-em-2026-e-transicao-vai-ate-2033
+    published: "2024-12-16"
+    accessed: "2026-11-18"
+    credit: "Agencia Senado"
+    notes: "EC 132/2023 (promulgated 20 Dec 2023) creates a dual VAT (federal CBS, state/municipal IBS) with test collection in 2026 and transition to 2033; the old consumption taxes are phased out."
 claims:
   - id: gdp
     text: "IMF WEO (DataMapper, read 2026-11-18): GDP at current prices, 2025 estimates: United States $30.9T; European Union $21.3T; China $19.6T."
@@ -311,4 +337,25 @@ claims:
     display: "Airbus 2025: 793 jets delivered · backlog 8,754 · revenue ≈ $82.9bn (Airbus; our conversion)"
     fields: {backlog_spoken: eight thousand seven hundred and fifty-four, rev_spoken: about eighty-three billion dollars}
     source_ids: [airbus_fy25, airbus_agm26, ecb_2025_avg]
+    status: source_located
+  - id: br_power
+    text: "EPE Brazilian Energy Balance 2026: renewables were 86.8% of Brazil's electricity matrix in 2025 (88.2% in 2024)."
+    spoken: about eighty-seven percent
+    display: "Brazil 2025: 86.8% of electricity from renewables (EPE, BEN 2026)"
+    fields: {year_spoken: twenty twenty-five}
+    source_ids: [epe_ben26]
+    status: source_located
+  - id: br_charges
+    text: "PwC / Instituto Acende Brasil: in 2024 taxes (30%) and sector charges (14.8%) were 44.8% of the gross operating revenue of a sample of 44 Brazilian power companies (about two-thirds of the market)."
+    spoken: about forty-five percent
+    display: "Brazil 2024: taxes + sector charges ≈ 44.8% of power companies' gross revenue (PwC / Acende Brasil study)"
+    fields: {year_spoken: twenty twenty-four}
+    source_ids: [pwc_acende25]
+    status: source_located
+  - id: br_vat
+    text: "Brazil's Constitutional Amendment 132/2023 creates a dual VAT (CBS and IBS) replacing five consumption taxes, tested from 2026 with the transition running to 2033 (Agencia Senado)."
+    spoken: twenty thirty-three
+    display: "Brazil: new dual VAT (CBS + IBS), phased in 2026-2033 (EC 132/2023)"
+    fields: {}
+    source_ids: [br_reform]
     status: source_located

@@ -574,6 +574,38 @@ export const EUROPE_SETS: Record<string, SetFn> = {
     </g>;
   },
 
+  /** energy-rich location: dam, wind and solar power an automated plant; a power-bill column stacks `bill` blocks */
+  cleanpower: (t, z, f) => {
+    const w = z.x1 - z.x0, bill: any[] = z.bill || [], fac: any[] = z.factors || [], bx = z.billX ?? 1640, sc = z.billScale ?? 5;
+    let acc = 0;
+    return <g>
+      {sky(z, f, '#8FD3F4', '#EEF9FF', 'cpsky' + Math.round(z.x0))}
+      {[0, 1, 2].map((k) => cloud(((k * 800 + t * 10) % (w + 600)) + z.x0 - 300, 120 + (k % 2) * 60, 0.8, k))}
+      <path d={`M ${z.x0} ${f - 260} Q ${z.x0 + 500} ${f - 420} 700 ${f - 280} T 1500 ${f - 300} L ${z.x1} ${f - 260} L ${z.x1} ${f} L ${z.x0} ${f} Z`} fill="#8CC48A" />
+      {/* hydro dam with falling water */}
+      <path d={`M 40 ${f} L 90 ${f - 330} L 330 ${f - 330} L 380 ${f} Z`} fill="#C9CFD8" stroke={OL} strokeWidth={5} strokeLinejoin="round" />
+      <rect x={z.x0} y={f - 330} width={90 - z.x0} height={330} fill="#5FA8D8" />
+      {[0, 1, 2].map((q) => <path key={q} d={`M ${150 + q * 60} ${f - 250} L ${150 + q * 60} ${f}`} stroke="#DDF1FF" strokeWidth={14} strokeDasharray="30 20" strokeDashoffset={-t * 160} />)}
+      {[0, 1].map((k) => turbine(480 + k * 150, f, 0.85, t, k))}
+      {[0, 1, 2].map((k) => <g key={'sl' + k} transform={`translate(${380 + k * 110} ${f - 20}) skewX(-20)`}><rect x={0} y={-50} width={90} height={50} fill="#2A4F8F" stroke={OL} strokeWidth={3} /><path d="M 30 -50 L 30 0 M 60 -50 L 60 0 M 0 -25 L 90 -25" stroke="#8FB8F0" strokeWidth={2} /></g>)}
+      {/* power line to the plant */}
+      <path d={`M 340 ${f - 330} Q 620 ${f - 420} 900 ${f - 300}`} stroke={OL} strokeWidth={4} fill="none" />
+      {Array.from({length: 5}, (_, k) => { const u = ((t * 0.6 + k / 5) % 1); return <circle key={'el' + k} cx={lerp(340, 900, u)} cy={f - 330 - Math.sin(u * Math.PI) * 70 + u * 30} r={8} fill={GOLD} stroke={OL} strokeWidth={2} />; })}
+      {works(860, f, 520, 230, '#E9EEF4', 80)}
+      <g transform={`translate(1000 ${f - 30})`}>{arm(t, 1, 0.55, GOLD)}</g><g transform={`translate(1220 ${f - 30})`}>{arm(t, 4, 0.55, BLUE)}</g>
+      {z.plantText && plaque(1120, f + 70, z.plantText, NAVY, 24, '#FFFFFF')}
+      {ground(z, f, '#8CC48A', '#76AE74')}
+      {/* bill column */}
+      {bill.length > 0 && <g><rect x={bx - 140} y={f - 40} width={280} height={30} rx={6} fill="#8D9BB0" stroke={OL} strokeWidth={4} />
+        {bill.map((b, k) => { if (t < (b.at ?? 0)) return null; const h = b.v * sc * E.out(win(t, b.at ?? 0, 0.6)), y = f - 40 - acc - h; acc += h;
+          return <g key={'bl' + k}><rect x={bx - 110} y={y} width={220} height={Math.max(2, h - 2)} rx={6} fill={b.color || BLUE} stroke={OL} strokeWidth={3} />
+            {h > 26 && <T x={bx} y={y + h / 2 + 8} s={Math.min(22, h * 0.5)} c="#FFFFFF" st={OL} sw={4}>{b.label}</T>}</g>; })}
+        {plaque(bx, f + 60, z.billText || 'A FACTORY POWER BILL', GOLD, 22)}</g>}
+      {fac.map((o, k) => t >= (o.at ?? 0) ? <g key={'fc' + k} transform={`translate(${(z.facX ?? 260) + k * (z.facGap ?? 300)} ${z.facY ?? 90}) scale(${pop(t, o.at ?? 0)})`}>
+        <rect x={-130} y={-30} width={260} height={52} rx={26} fill={o.color || '#FFFFFF'} stroke={OL} strokeWidth={4} /><T x={0} y={6} s={fit(o.label, 240, 24)}>{o.label}</T></g> : null)}
+    </g>;
+  },
+
   /** show title card: a drafting pen writes the title over a skyline */
   eutitle: (t, z, f) => {
     const lines: string[] = z.lines || ['EUROPE', 'BACK TO POWER?'], sub = pick(z.subs, t, z.sub || '');

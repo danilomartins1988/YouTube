@@ -1,0 +1,70 @@
+# Thumbnail creative brief (Ep 63). Default A (the comeback question on Europe's old-to-new skyline). Owner standing rules: at most
+# 4 words, the subject EUROPE named, mobile-legible, no statistics (none misleading because none are shown). ORIGINAL generic
+# subjects only: no logos, no flags, no landmarks traced, no national symbols; countries named only as text on signs.
+# B adds "EUROPE" to the brief's "THE AI WINNER?" and C to "RICH AGAIN?" so every concept names the subject (owner rule).
+title: "Could AI Bring Europe Back to Power?"
+docs_dir: docs/episodes/63-europe-ai
+video: output/europeai_documentary.mp4
+deliverable: documentary
+status: planned
+default: A
+analysis:
+  mystery: Could the technology that seems to threaten Europe bring it back?
+  surprising_fact: The EU sold about $249bn more medicines than it bought in 2025 (Eurostat via EFPIA; our conversion)
+  subject: an original European skyline running from old brick works to glass labs, a robot arm and wind turbines
+  tone: strategy
+  metaphor: the old industrial continent rebuilding itself around owned technology
+  public_figure: null
+concepts:
+- id: A
+  angle: the comeback question over Europe's skyline (old industry on the left, advanced AI tech on the right)
+  archetype: classic
+  text_side: top
+  accent_line: 0
+  text:
+  - EUROPE'S COMEBACK?
+  claim_basis: 'a question (the film answers: a plausible path under conditions, not a promise)'
+  scene:
+    palette: {sky0: '#0B1F3F', sky1: '#1E4E8C', haze: '#FFC93C', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: eurocity, x: 960, y: 700, s: 0.62}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: Europe between American AI tech and Chinese factories
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - EUROPE:
+  - THE AI WINNER?
+  claim_basis: 'a question (the film: not by out-building China nor copying Silicon Valley; possibly as owner and licensor)'
+  scene:
+    palette: {sky0: '#100F24', sky1: '#2B2A5A', haze: '#7FA8FF', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: eurocity, x: 960, y: 760, s: 0.5}
+    support:
+    - {kind: robofactory, x: 300, y: 780, s: 0.42, label: 'USA', armColor: '#00C2E8', opacity: 0.8}
+    - {kind: megafactory, x: 1640, y: 780, s: 0.42, label: 'CHINA', opacity: 0.8}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none
+- id: C
+  angle: a futuristic European economy (advanced industry, pharma research, automation)
+  archetype: classic
+  text_side: left
+  accent_line: 1
+  text:
+  - EUROPE
+  - RICH AGAIN?
+  claim_basis: 'a question (the film: Europe is already rich; the question is whether it can capture more value from automation)'
+  scene:
+    palette: {sky0: '#06241F', sky1: '#0F4A40', haze: '#5EE6B0', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: eurocity, x: 1300, y: 700, s: 0.55}
+    support:
+    - {kind: flask, x: 1700, y: 380, s: 0.32}
+    particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDF5DE'}
+    vignette: 0.55
+    brand: none
