@@ -1,0 +1,298 @@
+# Sources and claims for "Why Canada Could Be the Biggest Winner of the AI Boom" (Episode 70; series docs/series/AI_WINNERS_LOSERS.md #8).
+# Read on 2026-11-18 on the primary page or document; where the primary host blocked automated access (NRCan returned an outage page,
+# some canada.ca pages reset the connection), the note says how the figure was confirmed (docs/episodes/70-canada-ai/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars only: CAD converted at the Federal Reserve G.5A 2025 annual
+# average, 1.3973 CAD per USD (release of Jan 5, 2026), the same rate Ep 67 uses; shown as "≈". OUR CALCULATION is labelled; forecasts
+# are FORECAST, company plans PLAN, proposals PROPOSED, company statements CLAIM.
+# Overlap rule: Ep 67 "Could Cheap Electricity Become the New Oil?" already tells Quebec's power story; this film reuses its two Quebec
+# figures unchanged (hq_boston "less than a quarter", hq_cd "more than double", 5 MW authorization) and links it by title only.
+sources:
+  - id: cer_can
+    title: "Provincial and Territorial Energy Profiles: Canada"
+    publisher: Canada Energy Regulator
+    url: https://www.cer-rec.gc.ca/en/data-analysis/energy-markets/provincial-territorial-energy-profiles/provincial-territorial-energy-profiles-canada.html
+    published: "2025"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Canada Energy Regulator"
+    notes: "'More than half of the electricity in Canada (60%) is generated from hydroelectricity.' 'In 2023, Canada was the third largest generator of hydroelectricity in the world.' Manitoba, Quebec, BC and Newfoundland and Labrador typically generate over 85% from hydro. 'Canada is the world's second largest producer of uranium, accounting for roughly 15% of global production in 2022'; about 85% of output exported."
+  - id: hq_cmp25
+    title: "Comparison of Electricity Prices in Major North American Cities, rates in effect April 1, 2025"
+    publisher: Hydro-Québec
+    url: https://pannes.hydroquebec.com/data/documents-donnees/pdf/comparaison-prix-2025-en.pdf
+    published: "2025"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Hydro-Québec (2025 comparison)"
+    notes: "Large-power customer (50,000 kW, 30.6 GWh/month, 85% load factor), monthly bill excluding taxes, index Hydro-Québec = 100: Winnipeg 92, Vancouver 122, Houston 234, New York 414, San Francisco 432, Boston 445. Montréal average price 5.52 CAD cents/kWh at that level. Produced by an interested party (Hydro-Québec); methodology and exchange rate (C$1 = US$0.6970, Apr 1, 2025) stated in the PDF."
+  - id: hq_rcd26
+    title: "Demande du Distributeur relative à la fixation des tarifs CD et CB (R-4333-2026) and proposed text of Rate CD (HQD-2, Document 1.3)"
+    publisher: Hydro-Québec, filed with the Régie de l'énergie du Québec
+    url: https://www.regie-energie.qc.ca/fr/participants/dossiers/R-4333-2026/doc/R-4333-2026-B-0002-Dem-Dem-2026_02_19.pdf
+    published: "2026-02-19"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Hydro-Québec filing R-4333-2026"
+    notes: "Request cites 'la fin des surplus d'électricité' and the 'arrivée massive de clientèles énergivores'; proposes a new data-centre class and Rate CD for authorized demand of 5,000 kW or more. Proposed Rate CD text (filed 2026-06-29, R-4333-2026-B-0053): $32.704 per kW of billing demand plus 8.710 cents per kWh (plus 17.42 cents for over-ramp consumption). PROPOSED, not approved; Régie decision pending."
+  - id: blg_qc26
+    title: "Data centre regulation in Québec: from honeyed promise to iron control"
+    publisher: Borden Ladner Gervais (BLG)
+    url: https://www.blg.com/en/insights/2026/07/data-centre-regulation-in-quebec-from-honeyed-promise-to-iron-control
+    published: "2026-07-08"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "BLG"
+    notes: "Ministerial authorization required for loads of 5 MW or more (introduced 2023; applied to data-centre supply since 2025); proposed Rate CD averages about 13 cents/kWh, 'roughly double the current large-power rate'; requested effective date Nov 1, 2026; Régie hearing fall 2026."
+  - id: bc_iaf
+    title: "Industrial Electricity Allocation Framework"
+    publisher: Government of British Columbia, Ministry of Energy and Climate Solutions
+    url: https://www2.gov.bc.ca/gov/content/industry/electricity-alternative-energy/electricity/industrial-electricity-allocation-framework
+    published: "2026"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Government of British Columbia"
+    notes: "Under the Framework (enabled by Bill 31) BC Hydro must use a competitive selection process to assess AI, data centre and hydrogen-for-export projects of 10 MW or larger; 'the scale and timing of potential electricity service requests from these emerging industries will challenge BC Hydro's ability to supply all the requested loads'. Two-year call: 300 MW for AI, 100 MW for data centres (framework page)."
+  - id: bc_news26
+    title: "Province, BC Hydro launching competitive process for clean power in high-demand sectors"
+    publisher: Government of British Columbia (news release 2026ECS0005-000095)
+    url: https://news.gov.bc.ca/releases/2026ECS0005-000095
+    published: "2026-01-29"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "BC government news release"
+    notes: "Competitive process for AI and data centres opens Jan. 30, 2026; successful applicants expected to be notified in September 2026; 'allocation targets include as much as 400 megawatts for AI and data centres' for the first two years. Outcome of the call not verified."
+  - id: qscale22
+    title: "QScale building 96MW eco-friendly data centre in Lévis, Que."
+    publisher: Sustainable Biz Canada
+    url: https://sustainablebiz.ca/qscale-building-96mw-eco-friendly-data-centre-in-levis-que
+    published: "2022-03-11"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Sustainable Biz Canada (QScale claim)"
+    notes: "'The cooling itself will be free up to 80 per cent of the year, the company claims, due to the province's colder climate.' A COMPANY CLAIM, not independently verified; depends on design, humidity and server density."
+  - id: msft_ca25
+    title: "Microsoft Deepens Its Commitment to Canada with Landmark $19B AI Investment"
+    publisher: Microsoft On the Issues (company blog)
+    url: https://blogs.microsoft.com/on-the-issues/2025/12/09/microsoft-deepens-its-commitment-to-canada-with-landmark-19b-ai-investment/
+    published: "2025-12-09"
+    accessed: "2026-11-18"
+    kind: company
+    credit: "Microsoft (company announcement)"
+    notes: "C$19 billion between 2023 and 2027, including more than C$7.5 billion in the next two years; new capacity begins coming online in the second half of 2026. ≈ US$13.6bn and ≈ US$5.4bn at 1.3973 (OUR CALCULATION). A company PLAN/commitment, not audited spending."
+  - id: bell_aif25
+    title: "Increasing sovereign AI capacity: introducing Bell AI Fabric"
+    publisher: Bell Canada (company announcement)
+    url: https://explore.business.bell.ca/en-articles/increasing-sovereign-ai-capacity-introducing-bell-ai-fabric
+    published: "2025-05-28"
+    accessed: "2026-11-18"
+    kind: company
+    credit: "Bell (company announcement)"
+    notes: "A data-centre supercluster in British Columbia that 'will aim to provide upwards of 500 MW of hydro-electric powered AI compute capacity across six facilities'; Kamloops site at Thompson Rivers University planned to reuse waste heat for campus buildings. PLAN."
+  - id: nrcan_cml24
+    title: "Government of Canada Releases Updated Critical Minerals List"
+    publisher: Natural Resources Canada (news release)
+    url: https://www.canada.ca/en/natural-resources-canada/news/2024/06/government-of-canada-releases-updated-critical-minerals-list.html
+    published: "2024-06-10"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Natural Resources Canada"
+    notes: "34 critical minerals: retains all 31 from the 2021 list and adds high-purity iron, phosphorus and silicon metal. The 2021 list includes nickel, copper, uranium, lithium and graphite (NRCan list; confirmed via the 2021 list and secondary coverage, nrcan.gc.ca returned an outage page)."
+  - id: nrcan_mpo26
+    title: "McIlvenna Bay (Major Projects Office project page)"
+    publisher: Privy Council Office, Major Projects Office
+    url: https://www.canada.ca/en/privy-council/major-projects-office/projects/national/mcilvenna.html
+    published: "2026"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Major Projects Office"
+    notes: "Copper-zinc mine in Saskatchewan referred to the MPO Sept 11, 2025; first copper concentrate June 2026; ramping up Sept 2026. The MPO 'coordinates across federal departments and supports timely regulatory processes'. Its two-year federal approval target (Building Canada Act, 2025) is reported by secondary sources (Northern Miner) and not spoken."
+  - id: iea_crit21
+    title: "The Role of Critical Minerals in Clean Energy Transitions: Reliable supply of minerals"
+    publisher: International Energy Agency
+    url: https://www.iea.org/reports/the-role-of-critical-minerals-in-clean-energy-transitions/reliable-supply-of-minerals
+    published: "2021-05"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "IEA (2021)"
+    notes: "Major mines that came online 2010-2019 took on average over 16 years from discovery to first production (exploration and feasibility more than 12 years, construction 4-5 years); global sample, varies by mineral and location. A FINDING, not Canada-specific."
+  - id: nobel24
+    title: "The Nobel Prize in Physics 2024"
+    publisher: Nobel Prize Outreach
+    url: https://www.nobelprize.org/prizes/physics/2024/summary/
+    published: "2024-10-08"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "NobelPrize.org"
+    notes: "Awarded jointly to John J. Hopfield and Geoffrey Hinton 'for foundational discoveries and inventions that enable machine learning with artificial neural networks'. Hinton: University of Toronto (also co-founder and chief scientific adviser of Vector, per Vector)."
+  - id: vector
+    title: "About Vector Institute"
+    publisher: Vector Institute
+    url: https://vectorinstitute.ai/about/
+    published: "2026"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Vector Institute"
+    notes: "Co-founded with Geoffrey Hinton and fellow University of Toronto faculty; launched March 2017 with C$135 million from Canadian governments and 40+ industry partners (as described on its site)."
+  - id: mila
+    title: "About Mila"
+    publisher: Mila, Quebec Artificial Intelligence Institute
+    url: https://mila.quebec/en/mila
+    published: "2026"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Mila"
+    notes: "'Founded by Professor Yoshua Bengio, Mila is now the world's largest academic research center for deep learning'; 'the largest concentration of deep learning academic researchers globally'; Bengio founded the lab in 1993 (as described on its site; self-description)."
+  - id: cifar
+    title: "Pan-Canadian Artificial Intelligence Strategy"
+    publisher: CIFAR
+    url: https://cifar.ca/ai/
+    published: "2026"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "CIFAR"
+    notes: "'Launched in 2017 as the first national AI strategy in the world', supporting recruitment and retention of top researchers."
+  - id: ised_scip26
+    title: "Canada launches national initiative to build large-scale AI supercomputing capacity"
+    publisher: Innovation, Science and Economic Development Canada (news release)
+    url: https://www.canada.ca/en/innovation-science-economic-development/news/2026/04/canada-launches-national-initiative-to-build-large-scale-ai-supercomputing-capacity.html
+    published: "2026-04-15"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "ISED"
+    notes: "Call for applications for the AI Sovereign Compute Infrastructure Program (Canadian Sovereign AI Compute Strategy): a large-scale, AI-optimized, Canadian-owned high-performance computing system; refers to investments in Budgets 2024 and 2025 (the Budget 2024 package, C$2 billion for the compute strategy ≈ US$1.4bn, OUR CALC, is from OECD.AI's summary; not spoken). Minister Evan Solomon: 'Canada is already at the forefront of artificial intelligence.'"
+  - id: statcan_stem25
+    title: "Retention of science, technology, engineering, mathematics and computer science graduates in Canada (Choi and Hou)"
+    publisher: Statistics Canada, Economic and Social Reports 5(7)
+    url: https://www150.statcan.gc.ca/n1/pub/36-28-0001/2025007/article/00004-eng.htm
+    published: "2025-07-23"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Statistics Canada"
+    notes: "Retention of STEM graduates in Canada improved over the past decade for both Canadian and international students; international graduates still leave at higher rates; emigration is hard to measure. Used only for the nuance 'most graduates stay'; no figure spoken."
+  - id: statcan_gdp25
+    title: "Gross domestic product, income and expenditure, second quarter 2025"
+    publisher: Statistics Canada, The Daily
+    url: https://www150.statcan.gc.ca/n1/daily-quotidien/250829/dq250829a-eng.htm
+    published: "2025-08-29"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Statistics Canada"
+    notes: "'Real gross domestic product (GDP) declined 0.4% in the second quarter of 2025, following a 0.5% gain in the first quarter. The contraction in the second quarter was driven by significant declines in the export of goods' (as US tariffs slowed trade); passenger-car and light-truck exports plummeted."
+  - id: statcan_trade26
+    title: "Canadian international merchandise trade, December 2025 (annual review)"
+    publisher: Statistics Canada, The Daily
+    url: https://www150.statcan.gc.ca/n1/daily-quotidien/260219/dq260219a-eng.htm
+    published: "2026-02-19"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Statistics Canada"
+    notes: "'The proportion of Canada's merchandise exports to the United States fell from 75.9% in 2024 to 71.7% in 2025'; exports to other countries rose."
+  - id: boc_os26
+    title: "Monetary Policy Report press conference opening statement (October 28, 2026)"
+    publisher: Bank of Canada
+    url: https://bankofcanada.ca/2026/10/opening-statement-2026-10-28
+    published: "2026-10-28"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Bank of Canada"
+    notes: "'GDP growth was 3.3% in the second quarter, and recent indicators point to growth of about 2% in the third quarter'; unemployment 'around 6½% for several months'; growth likely to slow in Q4 as new US tariffs weigh, then pick up in 2027 (FORECAST). MPR Oct 2026: about 1% growth in 2026, about 2% in 2027-28 (FORECAST)."
+  - id: fed_g5a
+    title: "Foreign Exchange Rates (Annual), G.5A"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/g5a/current/default.htm
+    published: "2026-01-05"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Federal Reserve G.5A"
+    notes: "2025 annual average: 1.3973 Canadian dollars per USD (same rate as Ep 67)."
+claims:
+  - id: gdp_shrank
+    text: "StatCan: real GDP declined 0.4% in Q2 2025 (after +0.5% in Q1), driven by a drop in goods exports as US tariffs slowed trade."
+    spoken: in the spring of twenty twenty-five
+    display: "Q2 2025: the economy shrank, exports fell under US tariffs · Statistics Canada"
+    source_ids: [statcan_gdp25]
+    status: source_located
+  - id: boc_rebound
+    text: "Bank of Canada (Oct 28, 2026): Q2 2026 GDP growth 3.3% (annualized), about 2% indicated for Q3; growth expected to slow in Q4 under new US tariffs, then pick up in 2027 (FORECAST); unemployment around 6.5%."
+    spoken: grew again
+    display: "2026: growing again; slower Q4 as new tariffs bite · Bank of Canada (FORECAST)"
+    source_ids: [boc_os26]
+    status: source_located
+  - id: hydro_share
+    text: "CER: about 60% of Canada's electricity is generated from hydro."
+    spoken: about six of every ten
+    display: "≈ 6 in 10 kWh from hydro · Canada Energy Regulator"
+    source_ids: [cer_can]
+    status: source_located
+  - id: hydro_rank
+    text: "CER: in 2023 Canada was the third-largest generator of hydroelectricity in the world."
+    spoken: the third-biggest
+    display: "2023: world's no. 3 hydro generator · Canada Energy Regulator"
+    source_ids: [cer_can]
+    status: source_located
+  - id: hq_boston
+    text: "Same as Ep 67: Hydro-Québec 2025 comparison (rates of Apr 1, 2025, excl. taxes): a 50 MW industrial customer's bill indexed Montréal 100 vs Boston 445 (22%); Montréal ≈ 5.52 CAD cents/kWh ≈ 3.95 US cents (OUR CALC at 1.3973)."
+    spoken: less than a quarter
+    display: "Big factory's power bill: Montréal 100 vs Boston 445 · Hydro-Québec 2025 (interested party)"
+    source_ids: [hq_cmp25, fed_g5a]
+    status: source_located
+  - id: hq_cd
+    text: "Same as Ep 67: PROPOSED Rate CD (Hydro-Québec, R-4333-2026): $32.704/kW + 8.710 cents/kWh; at an 85% load factor OUR CALCULATION ≈ 14.0 CAD cents/kWh (≈ 10.0 US cents) vs 5.52 cents today (≈ 2.5x). BLG: 'roughly double'. Not approved; ministerial authorization needed for loads of 5 MW or more."
+    spoken: more than double
+    display: "PROPOSED data-center rate ≈ 2.5× today's big-industry price · OUR CALC (Hydro-Québec filing)"
+    source_ids: [hq_rcd26, blg_qc26, hq_cmp25, fed_g5a]
+    status: data_derived
+  - id: bc_compete
+    text: "BC: AI and data-centre projects of 10 MW or more must compete for power; first two-year call targets up to 400 MW for AI and data centres (opened Jan 30, 2026)."
+    spoken: compete
+    display: "B.C.: up to 400 MW for AI + data centers, first 2 years · BC government"
+    source_ids: [bc_news26, bc_iaf]
+    status: source_located
+  - id: free_cool
+    text: "QScale (company claim, 2022): cooling at its Lévis site is free up to 80% of the year thanks to Quebec's colder climate."
+    spoken: up to four days out of five
+    display: "Free cooling up to 80% of the year · QScale (COMPANY CLAIM)"
+    source_ids: [qscale22]
+    status: source_located
+  - id: msft_19b
+    text: "Microsoft: C$19bn in Canada 2023-2027 (C$7.5bn+ in the next two years) ≈ US$13.6bn (OUR CALC at 1.3973). Company PLAN."
+    spoken: almost fourteen billion US dollars
+    display: "≈ US$13.6B in Canada, 2023-27 · Microsoft (PLAN; C$19B, OUR CALC)"
+    source_ids: [msft_ca25, fed_g5a]
+    status: data_derived
+  - id: crit34
+    text: "NRCan: Canada's critical minerals list has 34 minerals (June 2024 update), including nickel, copper, uranium, lithium and graphite."
+    spoken: thirty-four
+    display: "34 critical minerals on Canada's list · NRCan (2024)"
+    source_ids: [nrcan_cml24]
+    status: source_located
+  - id: uranium2
+    text: "CER: Canada is the world's second-largest uranium producer (about 15% of world output in 2022)."
+    spoken: second-biggest
+    display: "World's no. 2 uranium producer (2022) · Canada Energy Regulator"
+    source_ids: [cer_can]
+    status: source_located
+  - id: mine16
+    text: "IEA (2021): major mines that came online 2010-2019 took on average over 16 years from discovery to first production (global sample)."
+    spoken: more than sixteen years
+    display: "Discovery → first production: 16+ years on average (world, 2010-19) · IEA FINDING"
+    source_ids: [iea_crit21]
+    status: source_located
+  - id: hinton_nobel
+    text: "Nobel Prize in Physics 2024 to John Hopfield and Geoffrey Hinton (University of Toronto) for foundational work enabling machine learning with artificial neural networks."
+    spoken: twenty twenty-four
+    display: "2024 Nobel Prize in Physics · NobelPrize.org"
+    source_ids: [nobel24, vector]
+    status: source_located
+  - id: first_strategy
+    text: "CIFAR: the Pan-Canadian AI Strategy, launched 2017, was the first national AI strategy in the world."
+    spoken: the first country
+    display: "2017: world's first national AI strategy · CIFAR"
+    source_ids: [cifar]
+    status: source_located
+  - id: us_exports
+    text: "StatCan: share of Canada's merchandise exports going to the US was 75.9% in 2024 and 71.7% in 2025."
+    spoken: nearly three of every four dollars
+    display: "2025: ≈ 72% of goods exports went to the US (2024: 76%) · Statistics Canada"
+    source_ids: [statcan_trade26]
+    status: source_located
