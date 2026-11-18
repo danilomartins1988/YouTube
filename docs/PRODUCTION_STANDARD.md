@@ -3,6 +3,10 @@
 Every episode is an original animated economic documentary, not a narrated slideshow. This file is the
 reusable standard. `README.md` covers how to run the pipeline; this file covers what a finished episode must be.
 
+> **Story over statistics (owner, 2026-11-18, permanent, overrides number-heavy habits):** follow
+> `docs/STORY_OVER_STATS.md`: one protagonist and journey per film, 8–12 spoken numbers per film, ≤1 per scene,
+> comparisons instead of percentages, scenes as story beats; full figures go to the description and FACT_CHECK.
+>
 > **Commercial directive (owner, 2026-11-17, permanent):** every episode must pass `docs/COMMERCIAL_DIRECTIVE.md`
 > before scripting: a `COMMERCIAL_BRIEF.md` in the episode docs folder (template `docs/templates/COMMERCIAL_BRIEF.md`)
 > with demand evidence, ≥5 titles, ≥3 thumbnail concepts, the human question, the 30-second hook (channel intro

@@ -702,6 +702,49 @@ robofactory: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
       <path d="M 520 -840 L 720 -840 L 680 -640 Z" fill={P.accent} stroke="#05070B" strokeWidth={14} strokeLinejoin="round" transform="rotate(8 620 -760)" />
       <circle cx={-120} cy={-380} r={40} fill="#FFFFFF" stroke="#05070B" strokeWidth={12} /></g>}
   </g>,
+  /** Ep 64: ORIGINAL cast: BOLT, a friendly boxy warehouse robot, hauls a giant gold coin on a dolly toward a figure in a suit holding a
+   *  SHARE certificate; a small worker in a hi-vis vest watches (`o.worker` false hides). No real person, no logos. */
+  robothaul: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
+    {o.haze !== false && <circle r={640} fill={P.haze} opacity={0.18} filter="url(#soft)" />}
+    <ellipse cx={0} cy={330} rx={760} ry={50} fill="#000" opacity={0.45} filter="url(#soft)" />
+    <g transform="translate(-380 330)">
+      <rect x={-150} y={-60} width={300} height={60} rx={30} fill="#4A5A70" stroke="#05070B" strokeWidth={12} />
+      {[-90, 0, 90].map((x) => <circle key={x} cx={x} cy={-30} r={22} fill="#2B3440" stroke="#05070B" strokeWidth={6} />)}
+      <rect x={-130} y={-360} width={260} height={300} rx={46} fill="#E9EEF4" stroke="#05070B" strokeWidth={14} />
+      <rect x={-92} y={-320} width={184} height={130} rx={36} fill="#13314F" stroke="#05070B" strokeWidth={10} />
+      <circle cx={-38} cy={-262} r={18} fill="#5EE6FF" /><circle cx={38} cy={-262} r={18} fill="#5EE6FF" />
+      <path d="M -36 -220 Q 0 -196 36 -220" stroke="#5EE6FF" strokeWidth={10} fill="none" strokeLinecap="round" />
+      <path d="M 0 -360 L 0 -420" stroke="#05070B" strokeWidth={12} /><circle cx={0} cy={-432} r={22} fill="#E5484D" stroke="#05070B" strokeWidth={8} />
+      <path d="M 130 -250 L 300 -190" stroke="#05070B" strokeWidth={30} strokeLinecap="round" />
+    </g>
+    <g transform="translate(60 330)">
+      <rect x={-40} y={-30} width={300} height={30} rx={10} fill="#8B5E3C" stroke="#05070B" strokeWidth={10} />
+      {[0, 220].map((x) => <circle key={x} cx={x} cy={8} r={26} fill="#2B3440" stroke="#05070B" strokeWidth={8} />)}
+      <circle cx={110} cy={-200} r={170} fill={P.accent} stroke="#05070B" strokeWidth={16} filter="url(#glow)" />
+      <circle cx={110} cy={-200} r={128} fill="none" stroke="#05070B" strokeWidth={8} opacity={0.5} />
+      <text x={110} y={-140} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={180} fill="#05070B">$</text>
+    </g>
+    <g transform="translate(560 330)">
+      <path d="M -26 0 L -26 -150 M 26 0 L 26 -150" stroke="#1E2A3A" strokeWidth={40} strokeLinecap="round" />
+      <rect x={-75} y={-370} width={150} height={230} rx={44} fill="#2B3A5C" stroke="#05070B" strokeWidth={12} />
+      <path d="M 0 -360 L -20 -300 L 0 -180 L 20 -300 Z" fill={P.accent} stroke="#05070B" strokeWidth={6} />
+      <circle cx={0} cy={-440} r={66} fill="#E0A878" stroke="#05070B" strokeWidth={12} />
+      <path d="M -60 -460 Q 0 -540 60 -460 Q 30 -490 -60 -460 Z" fill="#2D2018" stroke="#05070B" strokeWidth={8} />
+      <circle cx={-22} cy={-440} r={8} fill="#05070B" /><circle cx={22} cy={-440} r={8} fill="#05070B" /><path d="M -24 -404 Q 0 -388 24 -404" stroke="#05070B" strokeWidth={7} fill="none" />
+      <g transform="translate(-170 -300) rotate(-10)"><rect x={-110} y={-70} width={220} height={140} rx={8} fill="#FFF6D8" stroke="#05070B" strokeWidth={10} />
+        <rect x={-90} y={-50} width={180} height={100} fill="none" stroke="#2E9E5B" strokeWidth={6} />
+        <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={46} fill="#2E9E5B">SHARE</text></g>
+      <path d="M -70 -320 L -150 -290" stroke="#05070B" strokeWidth={26} strokeLinecap="round" />
+    </g>
+    {o.worker !== false && <g transform="translate(-720 330) scale(0.8)">
+      <path d="M -20 0 L -20 -120 M 20 0 L 20 -120" stroke="#2B3A50" strokeWidth={30} strokeLinecap="round" />
+      <rect x={-60} y={-300} width={120} height={190} rx={36} fill="#1F7A8C" stroke="#05070B" strokeWidth={12} />
+      <path d="M -40 -290 L -14 -120 M 40 -290 L 14 -120" stroke="#FFE14D" strokeWidth={16} />
+      <circle cx={0} cy={-360} r={56} fill="#B97A4B" stroke="#05070B" strokeWidth={12} />
+      <path d="M -60 -366 Q 0 -460 60 -366 Z" fill="#F2B33D" stroke="#05070B" strokeWidth={10} />
+      <circle cx={-18} cy={-356} r={7} fill="#05070B" /><circle cx={18} cy={-356} r={7} fill="#05070B" /><path d="M -20 -320 Q 0 -332 20 -320" stroke="#05070B" strokeWidth={6} fill="none" />
+    </g>}
+  </g>,
   /** A row of numbers glitching (cyber) */
   glitch: (o, P) => <g transform={`translate(${o.x} ${o.y}) scale(${o.s})`}>
     {Array.from({length: 18}, (_, k) => <rect key={k} x={-700 + rnd(k) * 1200} y={-400 + k * 46} width={100 + rnd(k + 3) * 500} height={18} fill={k % 3 ? P.accent : '#FF2D55'} opacity={0.5} />)}

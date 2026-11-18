@@ -10,6 +10,8 @@ import {HOUSING_INDOOR, HOUSING_ITEMS, HOUSING_SETS} from './housing';
 import {CARS_INDOOR, CARS_ITEMS, CARS_SETS} from './cars';
 import {AUTOMATION_INDOOR, AUTOMATION_ITEMS, AUTOMATION_SETS} from './automation';
 import {EUROPE_INDOOR, EUROPE_ITEMS, EUROPE_SETS} from './europe';
+import {ROBOTSRICH_INDOOR, ROBOTSRICH_ITEMS, ROBOTSRICH_SETS} from './robotsrich';
+import {POWERBILL_INDOOR, POWERBILL_ITEMS, POWERBILL_SETS} from './powerbill';
 
 /**
  * CartoonStage: land-based cartoon WORLDS built for a specific story (flat colours, thick outlines, bouncy motion).
@@ -2264,8 +2266,10 @@ const SETS: Record<string, SetFn> = {
   ...(CARS_SETS as unknown as Record<string, SetFn>),
   ...(AUTOMATION_SETS as unknown as Record<string, SetFn>),
   ...(EUROPE_SETS as unknown as Record<string, SetFn>),
+  ...(ROBOTSRICH_SETS as unknown as Record<string, SetFn>),
+  ...(POWERBILL_SETS as unknown as Record<string, SetFn>),
 };
-const INDOOR = new Set([...SITCOM_INDOOR, ...CARS_INDOOR, ...AUTOMATION_INDOOR, ...EUROPE_INDOOR, ...FACTORY_INDOOR, ...DEBT_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set([...POWERBILL_INDOOR, ...SITCOM_INDOOR, ...CARS_INDOOR, ...AUTOMATION_INDOOR, ...EUROPE_INDOOR, ...ROBOTSRICH_INDOOR, ...FACTORY_INDOOR, ...DEBT_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -5226,7 +5230,7 @@ const sapling: ItemFn = (a, {t, f}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(FACTORY_ITEMS as unknown as Record<string, ItemFn>), ...(DEBT_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>), ...(CARS_ITEMS as unknown as Record<string, ItemFn>), ...(AUTOMATION_ITEMS as unknown as Record<string, ItemFn>), ...(EUROPE_ITEMS as unknown as Record<string, ItemFn>)};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(FACTORY_ITEMS as unknown as Record<string, ItemFn>), ...(DEBT_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>), ...(CARS_ITEMS as unknown as Record<string, ItemFn>), ...(AUTOMATION_ITEMS as unknown as Record<string, ItemFn>), ...(EUROPE_ITEMS as unknown as Record<string, ItemFn>), ...(POWERBILL_ITEMS as unknown as Record<string, ItemFn>), ...(ROBOTSRICH_ITEMS as unknown as Record<string, ItemFn>)};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

@@ -1,0 +1,274 @@
+title: Who Gets Rich When Robots Do the Work?
+segments:
+- id: co_hook
+  chapter: Robots do the work
+  narration: Picture a warehouse where robots do most of the lifting. They don't take a salary. They don't take vacations. They never ask for
+    a raise. So when that warehouse makes money, who gets it? Here's a clue. In America, the share of business output paid to workers has just
+    hit {{labor_share}}. Those records go back to {{labor_share.start_spoken}}. And most American stock, the piece of paper that says you own
+    the robots, belongs to a small group. So the real question about AI may not be, will I keep my job? It may be, do I own any of the machines?
+  claims:
+  - labor_share
+  - equities
+  source_note: Hook (relatable situation, contradiction, reason to stay); labor share (bls_ls); stock concentration (fed_dfa).
+- id: title_card
+  chapter: Robots do the work
+  narration: ''
+  claims: []
+- id: a1_link
+  chapter: Follow the hundred dollars
+  narration: In Could AI Make American Factories Cheaper Than China's, and in Could AI Bring Europe Back to Power, we followed the robots. Now
+    let's follow the money.
+  claims: []
+  analysis: true
+  source_note: Library link to Ep 62 and Ep 63 by title; no figures.
+- id: a1_draw
+  chapter: Follow the hundred dollars
+  narration: Let me draw it. Take a hundred dollars of income produced in America. Part goes to the people who do the work, as pay and benefits.
+    Part goes to the owners, as profit. The rest covers machines wearing out, taxes, interest, rent, and what the self-employed earn. In {{gdi.then_year_spoken}},
+    workers' pay took {{gdi.then_spoken}} of every hundred. Last year, {{gdi}}. Meanwhile, corporate profits after tax roughly doubled their slice,
+    from about {{gdi.profit_then_spoken}} to {{gdi.profit_now_spoken}}.
+  claims:
+  - gdi
+- id: a1_scale
+  chapter: Follow the hundred dollars
+  narration: Seven and a half dollars out of every hundred sounds small. It isn't. On an economy of about thirty-one trillion dollars, our rough
+    math puts it at about {{shift}} a year. That's not money anyone stole. It's how the split moved.
+  claims:
+  - shift
+- id: a1_index
+  chapter: Follow the hundred dollars
+  narration: The Labor Department tracks the same idea for private businesses. From nineteen forty-seven to two thousand, workers' share moved
+    in a fairly narrow band. Since then it has slid, and in the latest data it sits about {{labor_share.drop_spoken}} below its {{labor_share.peak_year_spoken}}
+    peak.
+  claims:
+  - labor_share
+- id: a1_why
+  chapter: Follow the hundred dollars
+  narration: Why? Economists still argue about the causes. Global trade, a few superstar companies, and automation all get blamed. Robots are
+    one suspect, not the only one. But here's what robots add. A robot is capital. When a machine does a task a person used to do, the money that
+    paid that person now pays whoever owns the machine.
+  claims: []
+  analysis: true
+  source_note: Causes uncertain (autor_superstar); automation lowers the labor share mechanism (ar_framework). Qualitative.
+- id: a2_card
+  chapter: Who owns the machines?
+  narration: ''
+  claims: []
+- id: a2_own
+  chapter: Who owns the machines?
+  narration: So who owns the machines? Mostly, whoever owns the companies. In other words, stocks. Let's line up a hundred American households,
+    from the least wealthy to the most, and hand out a hundred dollars' worth of the stocks and stock funds they own.
+  claims: []
+  analysis: true
+  source_note: Setup for the DFA split (illustrative 100 households = percentiles).
+- id: a2_split
+  chapter: Who owns the machines?
+  narration: The bottom fifty households get {{equities.bottom_spoken}}. Together. The next forty get {{equities.next40_spoken}}. The next nine,
+    {{equities.next9_spoken}}. And the single richest household, {{equities.top1_spoken}}. Put together, the top ten percent hold {{equities}}
+    of these stocks, according to the Federal Reserve.
+  claims:
+  - equities
+- id: a2_pension
+  chapter: Who owns the machines?
+  narration: What about retirement accounts, like a four-oh-one-k? Those are spread wider, but still not evenly. The top ten percent hold about
+    {{dc.top10_spoken}} of them. The bottom half, under {{dc}}.
+  claims:
+  - dc
+- id: a2_flip
+  chapter: Who owns the machines?
+  narration: Now connect the dots. If AI and robots move money from paychecks to profits, that money flows up this ladder, to whoever holds the
+    shares. For most of history, getting ahead meant a better job. When machines do more of the work, owning a piece of them could matter as much
+    as the job itself.
+  claims: []
+  analysis: true
+  source_note: Thesis framed as a mechanism and a possibility, not a forecast.
+- id: a3_card
+  chapter: The new factories
+  narration: ''
+  claims: []
+- id: a3_capex
+  chapter: The new factories
+  narration: And the biggest machines of all are being built right now. Data centers. In the twelve months to September, Amazon spent about {{capex.amzn_spoken}}
+    on buildings and equipment. Alphabet, {{capex.goog_spoken}}. Microsoft, {{capex.msft_spoken}}. Meta, {{capex.meta_spoken}}. Together, about
+    {{capex}} in a single year, by our sum.
+  claims:
+  - capex
+- id: a3_nvidia
+  chapter: The new factories
+  narration: A lot of that money lands at the company selling the chips. In its latest quarter, Nvidia booked {{nvda.rev_spoken}} in revenue,
+    and kept {{nvda}} of it as profit. That's about fifty-six cents of every dollar.
+  claims:
+  - nvda
+- id: a3_loop
+  chapter: The new factories
+  narration: Let me draw the loop. A business pays for AI instead of hiring. That money goes to a cloud company. The cloud company buys chips
+    and builds data centers. Profits flow to the shareholders of both.
+  claims: []
+  analysis: true
+  source_note: Mechanism drawn by the presenter; no figures.
+- id: a3_missing
+  chapter: The new factories
+  narration: Now notice who's missing from the loop. The worker whose task was automated. Unless that worker also owns shares.
+  claims: []
+  analysis: true
+  source_note: Mechanism; no figures.
+- id: a3_risk
+  chapter: The new factories
+  narration: But this is a bet, not a guarantee. Some of this spending may never pay back. Over those same twelve months, Amazon's free cash flow
+    was {{amzn_fcf}}. Owners get the upside. Owners also carry the risk.
+  claims:
+  - amzn_fcf
+- id: a4_card
+  chapter: What the evidence says
+  narration: ''
+  claims: []
+- id: a4_find
+  chapter: What the evidence says
+  narration: So is AI already moving money from workers to owners? Let's separate what's been measured from what's been predicted. First, findings.
+    In a study of {{bryn.agents_spoken}} customer-support agents, an AI assistant raised the number of issues resolved per hour by {{bryn}} on
+    average, and by {{bryn.novice_spoken}} for newer, less experienced workers.
+  claims:
+  - bryn
+- id: a4_denmark
+  chapter: What the evidence says
+  narration: But in Denmark, researchers linked chatbot use to official payroll records. Two years after ChatGPT arrived, they found no measurable
+    effect on earnings or hours. Effects bigger than {{humlum}} were ruled out.
+  claims:
+  - humlum
+- id: a4_young
+  chapter: What the evidence says
+  narration: In America, Stanford researchers using payroll data found something to watch. Young workers, twenty-two to twenty-five, in the jobs
+    most exposed to AI, are now employed at levels {{canaries}} below where they'd be had they kept pace with less exposed peers. Experienced
+    workers show no such gap. The authors call it an early warning, not proof of cause.
+  claims:
+  - canaries
+- id: a4_robots
+  chapter: What the evidence says
+  narration: For factory robots, the evidence is older and clearer. Between nineteen ninety and two thousand seven, each extra robot per thousand
+    workers in an American local job market cut the share of people employed by about {{robots}}, and wages by {{robots.wage_spoken}}.
+  claims:
+  - robots
+- id: a4_forecast
+  chapter: What the evidence says
+  narration: Then there are forecasts. MIT economist Daron Acemoglu estimates AI will add no more than {{acemoglu}} to total productivity over
+    ten years, and predicts it will widen the gap between income from capital and income from work. That's a model, not a measurement. Forecasts
+    differ widely.
+  claims:
+  - acemoglu
+- id: a5_card
+  chapter: We've been here before
+  narration: ''
+  claims: []
+- id: a5_britain
+  chapter: We've been here before
+  narration: This has happened before. Britain, the early eighteen hundreds. Steam engines and spinning machines multiplied what each worker could
+    make. Factory owners got rich. Workers' pay barely moved.
+  claims: []
+  analysis: true
+  source_note: Setup; sourced in a5_draw (allen).
+- id: a5_draw
+  chapter: We've been here before
+  narration: Economic historian Robert Allen measured it. Let me draw his story. In the first half of the eighteen hundreds, output per worker
+    kept climbing, while real wages stagnated. The profit rate doubled, and profits took a bigger share of national income. Historians call it
+    Engels' pause, after Friedrich Engels, who described Manchester's factory workers in eighteen forty-five.
+  claims: []
+  analysis: true
+  source_note: 'Allen (2009) abstract (allen): real wage stagnated while output per worker expanded; profit rate doubled; profit share rose. Engels
+    1845.'
+- id: a5_end
+  chapter: We've been here before
+  narration: Then, after the middle of the century, real wages began to rise in line with productivity, and the shares stabilized. The pause ended.
+    But it lasted decades. For the workers who lived through it, eventually came too late.
+  claims: []
+  analysis: true
+  source_note: 'Allen (2009): after mid-century real wages grew in line with productivity; factor shares stabilized.'
+- id: a6_card
+  chapter: The case against the doom story
+  narration: ''
+  claims: []
+- id: a6_newjobs
+  chapter: The case against the doom story
+  narration: Now, the other side. First, new jobs. Economists led by David Autor found that {{newwork}} Americans today work in job specialties
+    that didn't even exist in nineteen forty. Machines take over tasks, and new kinds of work keep appearing.
+  claims:
+  - newwork
+- id: a6_wages
+  chapter: The case against the doom story
+  narration: Second, productivity can lift pay. Cheaper production means people buy more, and workers who use AI well can become more valuable.
+    Even the economists most worried about automation say new tasks are workers' strongest ally.
+  claims: []
+  analysis: true
+  source_note: Productivity and new-task effects (ar_framework); support-agent finding (bryn). Qualitative.
+- id: a6_degree
+  chapter: The case against the doom story
+  narration: Third, skills still pay. This summer, full-time workers with at least a bachelor's degree earned a typical {{degree}} a week, versus
+    {{degree.hs_spoken}} for high school graduates.
+  claims:
+  - degree
+- id: a6_policy
+  chapter: The case against the doom story
+  narration: And fourth, policy can change the split. Some propose spreading ownership wider, through employee ownership, accounts for children,
+    or public funds like Alaska's oil dividend, which we covered in another film. Others prefer training, or changing how work and capital are
+    taxed. Others say markets will adjust. Each has trade-offs. This film takes no side.
+  claims: []
+  analysis: true
+  source_note: Neutral list of policy options (no advocacy); Ep 48 Alaska referenced by subject only.
+- id: a7_card
+  chapter: What can you actually own?
+  narration: ''
+  claims: []
+- id: a7_now
+  chapter: What can you actually own?
+  narration: So what can an ordinary person actually own? Quick note. This is education, not investment advice. We're not telling anyone what
+    to buy. Here's where Americans stand. In the Federal Reserve's newest survey, {{scf}} of families owned some stock, directly or through retirement
+    accounts. But among families in the bottom half by income, it was {{scf.bottom_spoken}}. In the top tenth, {{scf.top_spoken}}.
+  claims:
+  - scf
+- id: a7_doors
+  chapter: What can you actually own?
+  narration: Let me draw the doors. The most common one is a workplace retirement account, like a four-oh-one-k. Today, {{retire}} of families
+    have some kind of retirement account. Inside, many people hold index funds, which own small slices of hundreds of companies at once. Some
+    employers offer stock plans. Employee stock ownership plans alone cover about {{esop}} people.
+  claims:
+  - retire
+  - esop
+- id: a7_risk
+  chapter: What can you actually own?
+  narration: But owning isn't free money. Stock prices can fall hard and take years to recover. Fees eat returns. And betting your savings on
+    your own employer, or on one hot company, stacks risk on risk. Owning a slice of the machines means sharing their bad years too.
+  claims: []
+  analysis: true
+  source_note: General risk education; no figures, no recommendation.
+- id: a8_card
+  chapter: Who gets rich?
+  narration: ''
+  claims: []
+- id: a8_verdict
+  chapter: Who gets rich?
+  narration: So, who gets rich when robots do the work? On the evidence so far, mostly the people who own them. The shareholders of the companies
+    that build, sell and run the machines. In America, that's a group where the top ten percent hold almost nine of every ten dollars of stock.
+  claims:
+  - equities
+- id: a8_but
+  chapter: Who gets rich?
+  narration: But it doesn't have to stay that narrow. History says pay can catch up, after a delay. New jobs do appear. And ownership isn't a
+    closed club. More than half of American families already own some stock, even if most own very little.
+  claims:
+  - scf
+- id: a8_close
+  chapter: Who gets rich?
+  narration: For two centuries, the big money question was, what do you do for a living? In the age of AI, a second question may matter just as
+    much. What do you own?
+  claims: []
+  analysis: true
+  source_note: Closing line; no figures.
+- id: teaser
+  chapter: Who gets rich?
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: Who gets rich?
+  narration: ''
+  claims: []

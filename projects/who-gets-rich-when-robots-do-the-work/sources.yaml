@@ -1,0 +1,304 @@
+# Sources and claims for "Who Gets Rich When Robots Do the Work?" (Episode 64; series plan docs/series/AI_WINNERS_LOSERS.md).
+# Every claim was read on its primary page, dataset or filing on 2026-11-18 (notes: docs/episodes/64-robots-rich/RESEARCH_NOTES.md).
+# Status stays source_located until a named human reviewer signs off. US dollars only.
+# FINDINGS vs FORECASTS: research claims are tagged on screen FINDING (measured), FORECAST (model/projection) or DESCRIPTIVE (not causal).
+# Company figures reuse the verified figures of our "Before You Buy" episodes (Nov 2026; FACT_CHECK.md in docs/episodes/byb-*),
+# which are still the latest filed quarter (calendar Q3 2026; Nvidia fiscal Q3 2027) on 2026-11-18.
+# Ownership section is EDUCATION, NOT INVESTMENT ADVICE: no product, fund or stock is recommended.
+sources:
+  - id: bls_ls
+    title: "Nonfarm Business Sector: Labor Share for All Workers, index 2017=100 (BLS Labor Productivity and Costs, series PRS85006173), quarterly 1947 Q1 to 2026 Q3"
+    publisher: U.S. Bureau of Labor Statistics (via FRED, Federal Reserve Bank of St. Louis)
+    url: https://fred.stlouisfed.org/series/PRS85006173
+    published: "2026-11"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "BLS Labor Productivity and Costs (FRED PRS85006173)"
+    notes: "CSV read 2026-11-18: 2026 Q3 = 93.729, the lowest value of the series (1947 Q1-2026 Q3); peak 117.123 in 1960 Q4; 1947-2000 range 106.75-117.12; 2000 average 111.6. 93.729/117.123 = -20.0% (our calculation). Latest quarters are preliminary and revised."
+  - id: bea_gdi
+    title: "Shares of gross domestic income: Compensation of employees, paid (A4002E1A156NBEA); Corporate profits after tax with IVA and CCAdj, domestic industries (W273RE1A156NBEA); Gross domestic income (GDI), annual"
+    publisher: U.S. Bureau of Economic Analysis (via FRED)
+    url: https://fred.stlouisfed.org/series/A4002E1A156NBEA
+    published: "2026-09"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "BEA national accounts (FRED A4002E1A156NBEA, W273RE1A156NBEA, GDI)"
+    notes: "Compensation share of GDI: 1970 58.4% (series peak), 1980 57.7%, 2000 56.6%, 2025 50.9%. After-tax domestic corporate profits share of GDI: 1970 4.5%, 1980 4.0%, 2000 4.3%, 2025 9.3% (2021 peak 9.4%). GDI 2025 (annual average of quarterly SAAR) $30.9T. Our arithmetic: (58.4-50.9)=7.5 points x $30.9T = about $2.3T a year (illustrative, not a claim of money lost)."
+  - id: autor_superstar
+    title: "The Fall of the Labor Share and the Rise of Superstar Firms (NBER Working Paper 23396; Quarterly Journal of Economics 2020)"
+    publisher: NBER (Autor, Dorn, Katz, Patterson, Van Reenen)
+    url: https://www.nber.org/papers/w23396
+    published: "2017-05"
+    accessed: "2026-11-18"
+    credit: "Autor et al., NBER w23396"
+    notes: "'The fall of labor's share of GDP in the United States ... is well documented but its causes remain uncertain'; superstar-firm interpretation."
+  - id: ar_framework
+    title: "Artificial Intelligence, Automation and Work (NBER Working Paper 24196)"
+    publisher: NBER (Daron Acemoglu, Pascual Restrepo)
+    url: https://www.nber.org/papers/w24196
+    published: "2018-01"
+    accessed: "2026-11-18"
+    credit: "Acemoglu & Restrepo, NBER w24196"
+    notes: "Displacement vs productivity effect; 'Even when they are strong, automation increases output per worker more than wages and reduce[s] the share of labor in national income. The more powerful countervailing force against automation is the creation of new [tasks]'."
+  - id: fed_dfa
+    title: "Distributional Financial Accounts of the United States: net worth shares and levels by wealth percentile, 2026 Q2"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/z1/dataviz/dfa/
+    published: "2026-09"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Federal Reserve, Distributional Financial Accounts"
+    notes: "Download dfa-networth-shares.csv / -levels.csv read 2026-11-18. 2026 Q2 shares of 'Corporate equities and mutual fund shares' (household holdings, excluding pension entitlements): top 0.1% 25.0, remaining top 1% 25.9, next 9% 37.2, next 40% 11.4, bottom 50% 0.6. Top 10% = 88.1, top 1% = 50.9 (our sums). Levels ($ million): total 64,640,170 = $64.6T (our sum); bottom 50% $374bn. DC pension entitlements: top 0.1% 1.3, remaining 1% 10.1, next 9% 44.1, next 40% 39.7, bottom 50% 4.8 (top 10% = 55.5, our sum). 1989 Q3 top 10% equities = 81.6 (our sum)."
+  - id: scf25
+    title: "Changes in U.S. Family Finances from 2022 to 2025: Evidence from the Survey of Consumer Finances (Federal Reserve Bulletin)"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/publications/files/scf26.pdf
+    published: "2026-10"
+    accessed: "2026-11-18"
+    credit: "Federal Reserve, Survey of Consumer Finances 2025"
+    notes: "'The 2025 survey showed a slight decline in stock ownership to 56 percent from 58 percent in 2022 ... 31 percent of families in the bottom half of the distribution held stock, compared with 77 percent of families in the upper-middle group and 97 percent of families in the top decile' (usual income). Retirement accounts 'held by 54.9 percent of families in 2025'; conditional median $106,000. Direct stock ownership 19% of families."
+  - id: nceo
+    title: "Employee Ownership by the Numbers (updated January 2026; DOL Form 5500 data for plan year 2023)"
+    publisher: National Center for Employee Ownership
+    url: https://www.nceo.org/research/employee-ownership-by-the-numbers
+    published: "2026-01"
+    accessed: "2026-11-18"
+    credit: "NCEO"
+    notes: "6,609 plans identified as ESOPs, total assets over $2 trillion; 'ESOPs cover 15.1 million participants, of whom over 10.9 million are active participants'."
+  - id: byb_amzn
+    title: "Amazon Q3 2026 earnings release (8-K Ex. 99.1, Oct 29, 2026) and Form 10-Q for Q3 2026 (verified in our Before You Buy: Amazon episode)"
+    publisher: Amazon.com, Inc. (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm
+    published: "2026-10-29"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Amazon Q3 2026 release / 10-Q"
+    notes: "Trailing twelve months to Sep 30, 2026: purchases of property and equipment net of proceeds and incentives $210.7bn; operating cash flow $168.3bn; free cash flow 'an outflow of $42.4 billion'. 2026 cash capex about $220bn (company outlook)."
+  - id: byb_goog
+    title: "Alphabet Q3 2026 earnings release (8-K Ex. 99.1, Oct 28, 2026) and Form 10-Q (verified in our Before You Buy: Alphabet episode)"
+    publisher: Alphabet Inc. (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm
+    published: "2026-10-28"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Alphabet Q3 2026 release / 10-Q"
+    notes: "TTM to Sep 30, 2026: capital expenditures $159.8bn; operating cash flow $179.6bn (capex = 89% of OCF, our calc)."
+  - id: byb_msft
+    title: "Microsoft Form 10-Q for Q1 FY2027 (quarter ended Sep 30, 2026), Form 10-K FY2026 and recast 8-K (verified in our Before You Buy: Microsoft episode)"
+    publisher: Microsoft Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm
+    published: "2026-10-28"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Microsoft 10-Q Q1 FY2027"
+    notes: "TTM to Sep 30, 2026: cash capex (additions to property and equipment) $135.9bn = 39% of revenue; net income $142.6bn (our TTM sums)."
+  - id: byb_meta
+    title: "Meta Platforms Q3 2026 results (8-K Ex. 99.1, Oct 21, 2026) and Form 10-Q (verified in our Before You Buy: Meta episode)"
+    publisher: Meta Platforms, Inc. (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm
+    published: "2026-10-21"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Meta Q3 2026 release / 10-Q"
+    notes: "TTM to Sep 30, 2026: capital expenditures including principal payments on finance leases $108.0bn (about 45% of revenue); 2026 capex outlook $135-145bn."
+  - id: byb_nvda
+    title: "NVIDIA financial results for Q3 fiscal 2027 (8-K Ex. 99.1 and 99.2, Nov 17, 2026; quarter ended Oct 25, 2026) (verified in our Before You Buy: Nvidia episode)"
+    publisher: NVIDIA Corporation (SEC EDGAR)
+    url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm
+    published: "2026-11-17"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "NVIDIA Q3 FY2027 release"
+    notes: "Revenue $115.8bn (+103% y/y); GAAP gross margin 74.8%; net income $65.3bn = 56.4% of revenue (our calc)."
+  - id: bryn
+    title: "Generative AI at Work (NBER Working Paper 31161; Quarterly Journal of Economics 2025)"
+    publisher: NBER (Erik Brynjolfsson, Danielle Li, Lindsey R. Raymond)
+    url: https://www.nber.org/papers/w31161
+    published: "2023-04"
+    accessed: "2026-11-18"
+    credit: "Brynjolfsson, Li & Raymond, NBER w31161"
+    notes: "5,179 customer support agents; 'increases productivity, as measured by issues resolved per hour, by 14% on average, including a 34% improvement for novice and low-skilled workers but with minimal impact on experienced and highly skilled workers'."
+  - id: humlum
+    title: "Large Language Models, Small Labor Market Effects (NBER Working Paper 33777, revised March 2026)"
+    publisher: NBER (Anders Humlum, Emilie Vestergaard)
+    url: https://www.nber.org/papers/w33777
+    published: "2025-05"
+    accessed: "2026-11-18"
+    credit: "Humlum & Vestergaard, NBER w33777"
+    notes: "Denmark, adoption surveys linked to administrative records: 'precise null effects on earnings and recorded hours ... ruling out effects larger than 2% two years after the launch of ChatGPT'."
+  - id: canaries
+    title: "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (working paper, revised Aug 12, 2026)"
+    publisher: Stanford Digital Economy Lab (Erik Brynjolfsson, Bharat Chandar, Ruyu Chen)
+    url: https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/
+    published: "2026-08-12"
+    accessed: "2026-11-18"
+    credit: "Brynjolfsson, Chandar & Chen, Stanford Digital Economy Lab"
+    notes: "ADP payroll data through June 2026: 'no evidence of widespread, economy-wide job displacement. However, employment of young workers (ages 22-25) in AI-exposed occupations now stands 19% below where it would be had it kept pace with that of their less-exposed peers; experienced workers show no comparable gap'; 'early, descriptive indicators ... rather than causal estimates'; adjustment through employment rather than base compensation."
+  - id: ar_robots
+    title: "Robots and Jobs: Evidence from US Labor Markets (NBER Working Paper 23285; Journal of Political Economy 2020)"
+    publisher: NBER (Daron Acemoglu, Pascual Restrepo)
+    url: https://www.nber.org/papers/w23285
+    published: "2017-03"
+    accessed: "2026-11-18"
+    credit: "Acemoglu & Restrepo, NBER w23285"
+    notes: "Industrial robots 1990-2007, US commuting zones: 'one more robot per thousand workers reduces the employment to population ratio by about 0.18-0.34 percentage points and wages by 0.25-0.5 percent'."
+  - id: acemoglu
+    title: "The Simple Macroeconomics of AI (NBER Working Paper 32487)"
+    publisher: NBER (Daron Acemoglu)
+    url: https://www.nber.org/papers/w32487
+    published: "2024-05"
+    accessed: "2026-11-18"
+    credit: "Acemoglu, NBER w32487"
+    notes: "Forecast: 'no more than a 0.66% increase in total factor productivity (TFP) over 10 years' (possibly less than 0.53%); 'AI is predicted to widen the gap between capital and labor income'."
+  - id: allen
+    title: "Engels' pause: Technical change, capital accumulation, and inequality in the British industrial revolution (Explorations in Economic History 46(4): 418-435)"
+    publisher: Robert C. Allen (Elsevier; abstract via RePEc/IDEAS)
+    url: https://ideas.repec.org/a/eee/exehis/v46y2009i4p418-435.html
+    published: "2009-10"
+    accessed: "2026-11-18"
+    credit: "Robert C. Allen (2009)"
+    notes: "British economy 1760-1913: 'In the first half of the 19th century, the real wage stagnated while output per worker expanded. The profit rate doubled and the share of profits in national income expanded at the expense of labour and land. After the middle of the 19th century, real wages began to grow in line with productivity, and the profit rate and factor shares stabilized.' Engels' The Condition of the Working Class in England: 1845."
+  - id: autor_newwork
+    title: "New Frontiers: The Origins and Content of New Work, 1940-2018 (NBER Working Paper 30389; Quarterly Journal of Economics 2024)"
+    publisher: NBER (David Autor, Caroline Chin, Anna Salomons, Bryan Seegmiller)
+    url: https://www.nber.org/papers/w30389
+    published: "2022-08"
+    accessed: "2026-11-18"
+    credit: "Autor, Chin, Salomons & Seegmiller, NBER w30389"
+    notes: "'the majority of current employment is in new job specialties introduced after 1940'."
+  - id: bls_edu
+    title: "Median usual weekly earnings of full-time wage and salary workers 25 and over: bachelor's degree and higher (LEU0252918500Q) vs high school graduates, no college (LEU0252917300Q), 2026 Q3"
+    publisher: U.S. Bureau of Labor Statistics, Current Population Survey (via FRED)
+    url: https://fred.stlouisfed.org/series/LEU0252918500Q
+    published: "2026-10"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "BLS CPS (FRED LEU0252918500Q, LEU0252917300Q)"
+    notes: "2026 Q3: bachelor's and higher $1,752 a week; high school, no college $993 (not seasonally adjusted). Ratio 1.76 (our calc)."
+claims:
+  - id: labor_share
+    text: "BLS (PRS85006173): the nonfarm business labor share index (2017=100) was 93.7 in 2026 Q3, the lowest value since the series begins in 1947; peak 117.1 in 1960 Q4; about 20% below the peak (our calculation)."
+    spoken: its lowest level on record
+    display: "Workers' share of nonfarm business output: index 93.7 in Q3 2026, lowest since 1947 (BLS; 2017=100; preliminary)"
+    fields: {start_spoken: nineteen forty-seven, drop_spoken: twenty percent, peak_year_spoken: nineteen sixty}
+    source_ids: [bls_ls]
+    status: source_located
+  - id: gdi
+    text: "BEA (FRED): compensation of employees was 58.4% of gross domestic income in 1970 and 50.9% in 2025; domestic corporate profits after tax were 4.5% in 1970 and 9.3% in 2025."
+    spoken: about fifty-one dollars
+    display: "Per $100 of U.S. gross domestic income: pay $58.40 (1970) → $50.90 (2025); profits after tax $4.50 → $9.30 (BEA)"
+    fields: {then_spoken: about fifty-eight dollars, then_year_spoken: nineteen seventy, profit_then_spoken: four dollars fifty, profit_now_spoken: nine dollars thirty}
+    source_ids: [bea_gdi]
+    status: source_located
+  - id: shift
+    text: "Our arithmetic: the 7.5-point fall in the compensation share (1970 to 2025) applied to 2025 GDI of about $30.9 trillion equals about $2.3 trillion a year. Illustrative; not a claim of money lost."
+    spoken: two point three trillion dollars
+    display: "7.5 points × $30.9T GDI (2025) ≈ $2.3T a year (our rough math; BEA data)"
+    fields: {}
+    source_ids: [bea_gdi]
+    status: source_located
+  - id: equities
+    text: "Federal Reserve DFA, 2026 Q2: the top 10% of households by wealth held 88.1% of household corporate equities and mutual fund shares (top 1% 50.9%; next 9% 37.2%; next 40% 11.4%; bottom 50% 0.6%)."
+    spoken: about eighty-eight percent
+    display: "Who holds U.S. households' stocks & mutual funds (Q2 2026): top 1% 50.9% · next 9% 37.2% · next 40% 11.4% · bottom 50% 0.6% (Fed DFA)"
+    fields: {bottom_spoken: sixty cents, next40_spoken: eleven dollars and forty cents, next9_spoken: thirty-seven dollars twenty, top1_spoken: about fifty-one dollars}
+    source_ids: [fed_dfa]
+    status: source_located
+  - id: dc
+    text: "Federal Reserve DFA, 2026 Q2: of defined-contribution pension entitlements (401(k)-type), the top 10% held 55.5% and the bottom 50% held 4.8%."
+    spoken: five percent
+    display: "401(k)-type accounts (Q2 2026): top 10% hold 55.5% · bottom 50% hold 4.8% (Fed DFA)"
+    fields: {top10_spoken: fifty-five percent}
+    source_ids: [fed_dfa]
+    status: source_located
+  - id: capex
+    text: "Trailing twelve months to Sep 30, 2026 (company filings; verified in our Before You Buy episodes): Amazon $210.7bn (net), Alphabet $159.8bn, Microsoft $135.9bn (cash), Meta $108.0bn (incl. finance leases); about $614bn combined (our sum; definitions differ slightly)."
+    spoken: six hundred and fourteen billion dollars
+    display: "Capex, 12 months to Sep 2026: Amazon $210.7B · Alphabet $159.8B · Microsoft $135.9B · Meta $108.0B ≈ $614B (our sum)"
+    fields: {amzn_spoken: two hundred and eleven billion dollars, goog_spoken: one hundred and sixty billion, msft_spoken: one hundred and thirty-six billion, meta_spoken: one hundred and eight billion}
+    source_ids: [byb_amzn, byb_goog, byb_msft, byb_meta]
+    status: source_located
+  - id: nvda
+    text: "NVIDIA Q3 FY2027 (quarter ended Oct 25, 2026): revenue $115.8bn; net income $65.3bn = about 56% of revenue (our calculation); gross margin 74.8%."
+    spoken: sixty-five billion
+    display: "Nvidia, quarter to Oct 25, 2026: revenue $115.8B · net income $65.3B ≈ 56¢ per $1 (our calc)"
+    fields: {rev_spoken: almost one hundred and sixteen billion dollars}
+    source_ids: [byb_nvda]
+    status: source_located
+  - id: amzn_fcf
+    text: "Amazon Q3 2026 release: free cash flow for the trailing twelve months was 'an outflow of $42.4 billion'."
+    spoken: minus forty-two billion dollars
+    display: "Amazon free cash flow, 12 months to Sep 2026: −$42.4B (company release)"
+    fields: {}
+    source_ids: [byb_amzn]
+    status: source_located
+  - id: bryn
+    text: "Brynjolfsson, Li & Raymond (NBER w31161): AI assistance raised issues resolved per hour by 14% on average among 5,179 support agents, 34% for novice and low-skilled workers, minimal for experienced workers."
+    spoken: fourteen percent
+    display: "AI assistant, 5,179 support agents: +14% issues/hour on average, +34% for novices (Brynjolfsson, Li & Raymond)"
+    fields: {agents_spoken: about five thousand, novice_spoken: thirty-four percent}
+    source_ids: [bryn]
+    status: source_located
+  - id: humlum
+    text: "Humlum & Vestergaard (NBER w33777, rev. 2026): in Denmark, precise null effects of AI chatbots on earnings and recorded hours, ruling out effects larger than 2% two years after ChatGPT's launch."
+    spoken: two percent
+    display: "Denmark, AI chatbots: no measurable effect on earnings or hours; effects > 2% ruled out (Humlum & Vestergaard)"
+    fields: {}
+    source_ids: [humlum]
+    status: source_located
+  - id: canaries
+    text: "Brynjolfsson, Chandar & Chen (Stanford, rev. Aug 2026): employment of workers aged 22-25 in AI-exposed occupations stands 19% below where it would be had it kept pace with less-exposed peers; no comparable gap for experienced workers; descriptive, not causal."
+    spoken: nineteen percent
+    display: "Ages 22-25 in AI-exposed jobs: employment 19% below less-exposed peers' path (ADP data to June 2026; descriptive, not causal)"
+    fields: {}
+    source_ids: [canaries]
+    status: source_located
+  - id: robots
+    text: "Acemoglu & Restrepo (NBER w23285): 1990-2007, one more robot per thousand workers reduced the employment-to-population ratio by about 0.18-0.34 percentage points and wages by 0.25-0.5 percent."
+    spoken: a fifth to a third of a percentage point
+    display: "+1 robot per 1,000 workers (U.S., 1990-2007): employment ratio −0.18 to −0.34 pts · wages −0.25% to −0.5% (Acemoglu & Restrepo)"
+    fields: {wage_spoken: a quarter to a half of a percent}
+    source_ids: [ar_robots]
+    status: source_located
+  - id: acemoglu
+    text: "Acemoglu (NBER w32487), a forecast: AI adds no more than 0.66% to total factor productivity over 10 years (possibly under 0.53%); AI predicted to widen the gap between capital and labor income."
+    spoken: about two-thirds of one percent
+    display: "FORECAST: AI adds ≤ 0.66% to total productivity over 10 years; widens capital-labor income gap (Acemoglu, 2024)"
+    fields: {}
+    source_ids: [acemoglu]
+    status: source_located
+  - id: newwork
+    text: "Autor, Chin, Salomons & Seegmiller (NBER w30389): the majority of current employment is in new job specialties introduced after 1940."
+    spoken: most
+    display: "Most of today's U.S. jobs are in job specialties that didn't exist in 1940 (Autor et al.)"
+    fields: {}
+    source_ids: [autor_newwork]
+    status: source_located
+  - id: degree
+    text: "BLS CPS (FRED), 2026 Q3: median usual weekly earnings, full-time workers 25+: bachelor's degree and higher $1,752; high school graduates, no college $993."
+    spoken: one thousand seven hundred fifty-two dollars
+    display: "Median weekly pay, full-time, 25+, Q3 2026: bachelor's+ $1,752 · high school $993 (BLS)"
+    fields: {hs_spoken: nine hundred ninety-three dollars}
+    source_ids: [bls_edu]
+    status: source_located
+  - id: scf
+    text: "Federal Reserve SCF 2025: 56% of families held stock directly or indirectly; 31% in the bottom half by usual income, 97% in the top decile; retirement accounts held by 54.9% of families."
+    spoken: fifty-six percent
+    display: "Families owning any stock, 2025: 56% · bottom half by income 31% · top 10% 97% (Fed SCF)"
+    fields: {bottom_spoken: thirty-one percent, top_spoken: ninety-seven percent}
+    source_ids: [scf25]
+    status: source_located
+  - id: retire
+    text: "Federal Reserve SCF 2025: retirement accounts (IRAs, 401(k), 403(b), thrift accounts) were held by 54.9% of families."
+    spoken: about fifty-five percent
+    display: "Families with a retirement account, 2025: 54.9% (Fed SCF)"
+    fields: {}
+    source_ids: [scf25]
+    status: source_located
+  - id: esop
+    text: "NCEO (Jan 2026; plan year 2023): ESOPs cover 15.1 million participants (10.9 million active) in 6,609 plans."
+    spoken: fifteen million
+    display: "Employee stock ownership plans: 6,609 plans · 15.1 million participants (NCEO, 2023 data)"
+    fields: {}
+    source_ids: [nceo]
+    status: source_located
