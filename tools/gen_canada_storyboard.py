@@ -141,7 +141,7 @@ stage("s05_rebound", "c1_rebound", {
     sources=["boc_os26"])
 stage("s06_list", "c1_list", {
     **W1("camap", ticks=[[0, 0], [C("its shopping list"), 0], [C("looks a lot like a map of Canada"), 4]], route=[[0, 0], [C("The AI boom went shopping"), 1]],
-         pins=[{"x": 700, "y": 520, "label": "MONTREAL", "at": C("looks a lot like a map of Canada")}, {"x": 560, "y": 560, "label": "TORONTO", "at": C("looks a lot like a map of Canada", 0.4)}]),
+         pins=[{"x": 900, "y": 570, "label": "MONTREAL", "at": C("looks a lot like a map of Canada")}, {"x": 790, "y": 610, "label": "TORONTO", "at": C("looks a lot like a map of Canada", 0.4)}]),
     "cam": cam((0, 960, 540, 0.9), (C("The AI boom went shopping"), 1500, 540, 1.1, 1.4), (C("looks a lot like a map of Canada"), 960, 540, 0.9, 1.4)), "drift": 2,
     "items": [WH([[0, 400], [C("The AI boom went shopping", 2.0), 700]], 0.0, y=980, scale=0.45, face="wow", carry="suitcase"),
               tag((0, "ANALYSIS"))]})
@@ -277,7 +277,7 @@ stage("s23_dad", "c4_dad", {
     "cam": cam((0, 1000, 520, 0.9), (C("her dad, Luc"), 800, 580, 1.1, 1.2), (C("You know what's inside"), 760, 560, 1.15, 1.0), (C("Rocks. Our rocks"), 700, 560, 1.2, 0.8)), "drift": 2,
     "items": [MAYA([[0, -200], [1.8, 560]], 0.0, face="happy", pose="walk", poses=[[1.8, "stand"]], hold="bag", faces=[[0, "happy"], [C("Rocks. Our rocks"), "grin"]]),
               LUC(860, 0.0, face="happy", pose="wave", poses=[[1.0, "stand"], [C("Rocks. Our rocks"), "point"]], faces=[[0, "happy"], [C("He has heard"), "squint"], [C("Rocks. Our rocks"), "smug"]],
-                  label="LUC · MAYA'S DAD, A MINER (FICTIONAL)", labelUntil=C("He has heard")),
+                  label="LUC · MAYA'S DAD, A MINER (FICTIONAL)", labelUntil=C("You know what's inside")),
               bub("YOU KNOW WHAT'S INSIDE THOSE AI COMPUTERS?", 860, 300, C("You know what's inside"), until=C("Rocks. Our rocks"), tail=[860, 560], size=26),
               bub("ROCKS. OUR ROCKS.", 860, 320, C("Rocks. Our rocks"), tail=[860, 560], size=34),
               tag((0, "STORY · FICTIONAL FAMILY"))]})
@@ -328,8 +328,8 @@ stage("s30_hinton", "c5_hinton", {
               tag((0, "FACT · NOBELPRIZE.ORG (U. OF TORONTO)"))]},
     sources=["nobel24", "vector"])
 stage("s31_bengio", "c5_bengio", {
-    **W1("camap", showList=False, pins=[{"x": 700, "y": 520, "label": "MONTREAL · MILA", "at": C("In Montreal, Yoshua Bengio"), "c": "#7357C9"},
-                                        {"x": 560, "y": 560, "label": "TORONTO · VECTOR", "at": 0.4, "c": "#1E88E5"}]),
+    **W1("camap", showList=False, pins=[{"x": 900, "y": 570, "label": "MONTREAL · MILA", "at": C("In Montreal, Yoshua Bengio"), "c": "#7357C9"},
+                                        {"x": 790, "y": 610, "label": "TORONTO · VECTOR", "at": 0.4, "c": "#1E88E5"}]),
     "cam": cam((0, 900, 540, 0.95), (C("In Montreal, Yoshua Bengio"), 820, 520, 1.15, 1.4), (C("Maya's lab is just down"), 760, 560, 1.2, 1.2)), "drift": 2,
     "items": [words("'THE WORLD'S LARGEST ACADEMIC DEEP-LEARNING CENTER'", 960, 210, C("which describes itself"), size=42, until=C("Maya's lab is just down")),
               words("(ITS OWN DESCRIPTION)", 960, 290, C("which describes itself"), size=34, until=C("Maya's lab is just down")),
@@ -398,8 +398,8 @@ stage("s38_score", "c6_score", {
 # ====================================================================== CHAPTER 7: Maya's decision
 bumper("s39_b7", "c7_card", "CHAPTER SEVEN", "Maya's decision", "So, could Canada win?", GOLD)
 stage("s40_answer", "c7_answer", {
-    **W1("camap", ticks=4, pins=[{"x": 700, "y": 520, "label": "MONTREAL", "at": 0.2}, {"x": 560, "y": 560, "label": "TORONTO", "at": 0.4},
-                                 {"x": 610, "y": 470, "label": "SUDBURY", "at": 0.6}, {"x": 220, "y": 470, "label": "KAMLOOPS", "at": 0.8}]),
+    **W1("camap", ticks=4, pins=[{"x": 900, "y": 570, "label": "MONTREAL", "at": 0.2}, {"x": 790, "y": 610, "label": "TORONTO", "at": 0.4},
+                                 {"x": 760, "y": 530, "label": "SUDBURY", "at": 0.6}, {"x": 250, "y": 540, "label": "KAMLOOPS", "at": 0.8}]),
     "cam": cam((0, 960, 540, 0.9), (C("the whole shopping list"), 1500, 520, 1.05, 1.4), (C("having the list isn't the same as winning"), 960, 540, 0.9, 1.4)), "drift": 2,
     "items": [words("THE WHOLE LIST. NOW BUILD IT.", 900, 210, C("Canada wins only if it builds"), size=56),
               tag((0, "VERDICT · ANALYSIS"))]})
@@ -421,7 +421,7 @@ stage("s42_maya", "c7_maya", {
               tag((0, "STORY · FICTIONAL"))]},
     sfx=[{"kind": "whoosh", "cue": "a friendly data center waves", "gain": 0.25}, {"kind": "hit", "cue": "For now, I'm staying", "gain": 0.3}])
 stage("s43_teaser", "teaser", {
-    **W1("camap", showList=False, route=1, pins=[{"x": 700, "y": 520, "label": "MONTREAL", "at": 0.2}]),
+    **W1("camap", showList=False, route=1, pins=[{"x": 900, "y": 570, "label": "MONTREAL", "at": 0.2}]),
     "cam": cam((0, 900, 540, 0.95), (3.0, 960, 540, 0.85, 3.0)), "drift": 2,
     "items": [WH([[0, 2200], [3.0, 1500]], 0.0, scale=0.6, face="happy", scarf=0.0, hops=[3.4]),
               words("NEXT: ANOTHER HIDDEN LINK", 960, 210, C("Next time"), size=56)]})
@@ -431,6 +431,18 @@ stage("s44_button", "button", {
               MAYA([[0, -200], [2.2, 700]], 0.6, face="grin", pose="walk", poses=[[2.2, "wave"]], scale=1.0),
               bub("SO... ABOUT THAT HEAT?", 1000, 300, 2.6, tail=[1000, 560], size=30)]},
     sfx=[{"kind": "hit", "at": 2.6, "gain": 0.3}])
+
+
+# ---- keep every toonwords caption on screen: drawn in screen space (`hud`, CartoonStage), centred, sized to fit the frame
+for _sc in cartoon_kit.scenes:
+    if _sc["type"] != "engine_cartoon":
+        continue
+    for _it in _sc["params"].get("items", []):
+        if _it.get("kind") == "toonwords":
+            _it["hud"] = True
+            _it["x"] = 960
+            _it["y"] = max(210, _it.get("y", 210))
+            _it["size"] = min(_it.get("size", 56), int(1650 / (0.66 * max(1, len(_it["text"])))))
 
 TIGHT = {"careceipt"}
 for _sc in cartoon_kit.scenes:

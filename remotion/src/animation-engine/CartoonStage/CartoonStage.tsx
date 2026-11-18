@@ -5307,8 +5307,8 @@ export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
             <g clipPath={`url(#zc${k})`}>{fn(t, z, floor)}</g>
             {k > 0 && <rect x={z.x0 - 8} y={-3000} width={16} height={6000} fill={OL} opacity={INDOOR.has(z.set) || INDOOR.has(zones[k - 1].set) ? 1 : 0} />}
           </g>; })}
-        {render(items.filter((a) => BACK.has(a.kind)), 0)}
-        {render(items.filter((a) => !BACK.has(a.kind)), 500)}
+        {render(items.filter((a) => BACK.has(a.kind) && !a.hud), 0)}
+        {render(items.filter((a) => !BACK.has(a.kind) && !a.hud), 500)}
         </g>
         {callouts.filter((c) => !c.screen).map(calloutNode)}
       </g>
@@ -5316,6 +5316,7 @@ export const CartoonStage: React.FC<CartoonStageProps> = (p) => {
       {whip > 0.02 && <g opacity={whip} transform={`translate(${W / 2} ${H / 2}) rotate(${(whipAng * 180) / Math.PI})`}>
         {Array.from({length: 18}, (_, k) => { const yy = (rnd(k * 7 + Math.floor(t * 30)) - 0.5) * H * 1.3, len = 300 + rnd(k + 3) * 700, xx = (rnd(k * 3 + Math.floor(t * 30)) - 0.5) * W;
           return <rect key={'wh' + k} x={xx - len / 2} y={yy} width={len} height={4 + rnd(k) * 8} rx={4} fill={k % 3 ? '#FFFFFF' : OL} opacity={0.55} />; })}</g>}
+      {render(items.filter((a) => a.hud), 900) /* `hud: true` items are drawn in screen space, outside the camera (Ep 70) */}
       {callouts.filter((c) => c.screen).map((c, i) => calloutNode(c, 100 + i))}
       {ban && bu > 0 && <g transform={`translate(120 96) scale(${bu})`}>
         <rect x={0} y={0} width={Math.max(ban.text.length * 27, (ban.sub || '').length * 13) + 60} height={ban.sub ? 100 : 70} rx={18} fill={K.white} stroke={OL} strokeWidth={5} />

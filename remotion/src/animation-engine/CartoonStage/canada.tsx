@@ -134,8 +134,9 @@ const RAW: Record<string, SetFn> = {
         <rect x={-50} y={-366} width={100} height={14} rx={7} fill="#3A4560" />
         {feed && [0, 1, 2].map((q) => { const u = clamp((t - feedAt) * 3 - q * 0.5); return <g key={q} transform={`translate(0 ${-250 + q * 170 + (1 - u) * 60})`} opacity={u}>
           <rect x={-150} y={-66} width={300} height={140} rx={14} fill={q === 0 ? '#FFE3E0' : '#F1F4F8'} stroke={OL} strokeWidth={3} /><rect x={-130} y={-50} width={70} height={70} rx={10} fill={q === 0 ? RED : ROCK} />
-          <T x={-50} y={-18} s={fit(feed, 190, 20)} a="start" c={q === 0 ? RED : NAVY}>{q === 0 ? feed : q === 1 ? 'ECONOMY IN TROUBLE?' : 'TARIFF NEWS'}</T>
-          <rect x={-50} y={0} width={180} height={10} rx={5} fill="#C5CDD8" /><rect x={-50} y={22} width={130} height={10} rx={5} fill="#C5CDD8" /></g>; })}
+          {(() => { const tx = q === 0 ? feed : q === 1 ? 'ECONOMY IN TROUBLE?' : 'TARIFF NEWS AGAIN'; const ws = tx.split(' '), h = Math.ceil(ws.length / 2), l1 = ws.slice(0, h).join(' '), l2 = ws.slice(h).join(' ');
+            const fs = Math.min(30, fit(l1.length > l2.length ? l1 : l2, 200, 30)); return <g><T x={-50} y={-14} s={fs} a="start" c={q === 0 ? RED : NAVY}>{l1}</T><T x={-50} y={-14 + fs * 1.15} s={fs} a="start" c={q === 0 ? RED : NAVY}>{l2}</T></g>; })()}
+          <rect x={-50} y={44} width={150} height={10} rx={5} fill="#C5CDD8" /></g>; })}
         {off > 0 && <g transform={`translate(0 ${120 - 20 * Math.sin(t * 4)}) scale(${off})`}><rect x={-160} y={-90} width={320} height={190} rx={18} fill={GOLD} stroke={OL} strokeWidth={6} />
           <circle cx={-100} cy={-30} r={34} fill="#FFDD55" stroke={OL} strokeWidth={4} />{Array.from({length: 8}, (_, q) => <path key={q} d={`M ${-100 + 44 * Math.cos(q * 0.785 + t)} ${-30 + 44 * Math.sin(q * 0.785 + t)} L ${-100 + 58 * Math.cos(q * 0.785 + t)} ${-30 + 58 * Math.sin(q * 0.785 + t)}`} stroke={OL} strokeWidth={4} />)}
           <T x={40} y={-30} s={30} c={NAVY}>OFFER!</T><T x={0} y={50} s={fit(z.offerText || 'CALIFORNIA AI LAB', 290, 26)} c={NAVY}>{z.offerText || 'CALIFORNIA AI LAB'}</T></g>}
@@ -208,11 +209,11 @@ const RAW: Record<string, SetFn> = {
       {Array.from({length: 26}, (_, k) => <path key={'wv' + k} d={`M ${z.x0 + (k % 6) * 400 + 40 * Math.sin(t + k)} ${100 + Math.floor(k / 6) * 240} q 30 -16 60 0 t 60 0`} stroke="#9FCCEA" strokeWidth={4} fill="none" />)}
       <g transform="translate(60 60)">
         <path d={land} fill="#BFE3A0" stroke={OL} strokeWidth={7} strokeLinejoin="round" />
-        <path d="M 820 150 Q 880 300 860 380 Q 800 420 760 360 Q 760 260 820 150 Z" fill="#CFE8F7" stroke={OL} strokeWidth={5} />
-        {Array.from({length: 7}, (_, q) => <path key={'mt' + q} d={`M ${200 + q * 40} ${600 - q * 50} l 30 -60 l 30 60 Z`} fill="#E6EEF5" stroke={OL} strokeWidth={3} />)}
+        <path d="M 780 160 Q 860 200 880 290 Q 870 360 800 350 Q 740 330 760 250 Q 760 200 780 160 Z" fill="#CFE8F7" stroke={OL} strokeWidth={5} />
+        {Array.from({length: 6}, (_, q) => <path key={'mt' + q} d={`M ${170 + q * 36} ${620 - q * 52} l 34 -64 l 34 64 Z`} fill="#E6EEF5" stroke={OL} strokeWidth={3} />)}
         <path d="M 160 640 L 1000 640" stroke={OL} strokeWidth={5} strokeDasharray="20 14" /><T x={580} y={690} s={24} c="#5E6B85">THE U.S. BORDER (SIMPLIFIED)</T>
-        <T x={620} y={420} s={64} c="#5C8A45" ls={10}>CANADA</T>
-        {route > 0 && <path d={`M 360 980 Q 420 800 ${lerp(360, 700, route)} ${lerp(980, 560, route)}`} stroke={RED} strokeWidth={7} strokeDasharray="18 14" strokeDashoffset={-t * 60} fill="none" />}
+        <T x={560} y={330} s={64} c="#5C8A45" ls={10}>CANADA</T>
+        {route > 0 && <path d={`M 360 980 Q 420 800 ${lerp(360, 860, route)} ${lerp(980, 600, route)}`} stroke={RED} strokeWidth={7} strokeDasharray="18 14" strokeDashoffset={-t * 60} fill="none" />}
         {route > 0 && <T x={360} y={1020} s={24} c={RED}>THE DESERT</T>}
         {pins.map((p, k) => { const u = pop(t, p.at ?? 0, 0.5); if (u <= 0) return null; return <g key={'pin' + k} transform={`translate(${p.x} ${p.y}) scale(${u})`}>
           <path d="M 0 0 C -30 -40 -30 -70 0 -70 C 30 -70 30 -40 0 0 Z" fill={p.c || RED} stroke={OL} strokeWidth={4} /><circle cy={-48} r={10} fill="#FFFFFF" />{plaque(0, -100, p.label, '#FFFFFF', 20)}</g>; })}
@@ -376,11 +377,11 @@ const RAW: Record<string, SetFn> = {
         {Array.from({length: 9}, (_, r) => <g key={r}><rect x={-56} y={-440 + r * 48} width={112} height={36} rx={4} fill="#263238" /><circle cx={-40} cy={-422 + r * 48} r={5} fill={(Math.floor(t * 4 + r + q) % 3) ? CY : GREEN} /></g>)}</g>)}
       {/* monitor */}
       {scr && <g transform="translate(560 660)"><rect x={-220} y={-130} width={440} height={240} rx={14} fill={NAVY} stroke={OL} strokeWidth={6} /><T x={0} y={8} s={fit(scr, 400, 40)} c={GOLD}>{scr}</T><path d="M -30 110 L -50 170 L 50 170 L 30 110" fill="#90A4AE" stroke={OL} strokeWidth={4} /></g>}
-      {/* supercomputer tower assembling */}
-      {sup > 0.01 && <g transform={`translate(1180 ${f})`}>{Array.from({length: 6}, (_, r) => { const u = clamp(sup * 6 - r); if (u <= 0) return null;
-        return <g key={r} transform={`translate(0 ${-r * 80 - 80 - (1 - E.outBack(u)) * 300})`} opacity={clamp(u * 3)}><rect x={-160} y={0} width={320} height={74} rx={10} fill={r % 2 ? '#455A64' : '#37474F'} stroke={OL} strokeWidth={5} />
-          {[0, 1, 2, 3, 4, 5].map((q) => <circle key={q} cx={-120 + q * 48} cy={37} r={7} fill={(Math.floor(t * 5 + q + r) % 2) ? CY : GOLD} />)}</g>; })}
-        {sup > 0.98 && plaque(0, -580, z.superText || 'OWNED IN CANADA', GOLD, 26)}</g>}
+      {/* supercomputer: a row of racks dropping in under the whiteboard */}
+      {sup > 0.01 && <g transform={`translate(1100 ${f})`}>{Array.from({length: 6}, (_, r) => { const u = clamp(sup * 6 - r); if (u <= 0) return null;
+        return <g key={r} transform={`translate(${-300 + r * 120} ${-(1 - E.outBack(u)) * 400})`} opacity={clamp(u * 3)}><rect x={-54} y={-250} width={108} height={250} rx={10} fill={r % 2 ? '#455A64' : '#37474F'} stroke={OL} strokeWidth={5} />
+          {[0, 1, 2, 3, 4, 5].map((q) => <g key={q}><rect x={-42} y={-236 + q * 38} width={84} height={26} rx={4} fill="#263238" /><circle cx={-28} cy={-223 + q * 38} r={6} fill={(Math.floor(t * 5 + q + r) % 2) ? CY : GOLD} /></g>)}</g>; })}
+        {sup > 0.98 && plaque(0, -280, z.superText || 'OWNED IN CANADA', GOLD, 26)}</g>}
       <rect x={z.x0} y={f} width={z.x1 - z.x0} height={700} fill="#B0BEC5" /><rect x={z.x0} y={f} width={z.x1 - z.x0} height={12} fill="#90A4AE" stroke={OL} strokeWidth={4} />
     </g>;
   },

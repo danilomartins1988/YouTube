@@ -161,29 +161,32 @@ scenes:
       scale: 0.85
     - kind: toonwords
       text: THE CRASH?
-      x: 1500
+      x: 960
       y: 210
       at:
         cue: Canada's economy is crashing
       size: 64
       until:
         cue: Then a message from California
+      hud: true
     - kind: toonwords
       text: ONE MOVES SOUTH. ONE MOVES NORTH.
-      x: 4360
+      x: 960
       y: 230
       at:
         cue: Whirr is thinking of moving north
       size: 50
       until:
         cue: So which is it
+      hud: true
     - kind: toonwords
       text: IS CANADA LOSING THE AI BOOM, OR WINNING IT?
-      x: 4360
+      x: 960
       y: 230
       at:
         cue: So which is it
       size: 37
+      hud: true
     callouts:
     - text: STORY · FICTIONAL CAST
       x: 202.0
@@ -376,6 +379,7 @@ scenes:
       size: 53
       until:
         cue: Maya's uncle sells car parts
+      hud: true
     callouts:
     - text: FACT · STATISTICS CANADA (Q2 2025)
       x: 274.0
@@ -464,20 +468,22 @@ scenes:
       scale: 1.2
     - kind: toonwords
       text: '2026: GROWING AGAIN'
-      x: 1100
+      x: 960
       y: 210
       at:
         cue: This year the economy
       size: 60
       until:
         cue: That's a forecast
+      hud: true
     - kind: toonwords
       text: A FORECAST, NOT A PROMISE
-      x: 1100
+      x: 960
       y: 210
       at:
         cue: That's a forecast
       size: 54
+      hud: true
     callouts:
     - text: FACT · BANK OF CANADA (OCT 2026)
       x: 262.0
@@ -520,13 +526,13 @@ scenes:
       - - cue: The AI boom went shopping
         - 1
       pins:
-      - x: 700
-        y: 520
+      - x: 900
+        y: 570
         label: MONTREAL
         at:
           cue: looks a lot like a map of Canada
-      - x: 560
-        y: 560
+      - x: 790
+        y: 610
         label: TORONTO
         at:
           cue: looks a lot like a map of Canada
@@ -874,6 +880,7 @@ scenes:
       at:
         cue: Of all its electricity
       size: 52
+      hud: true
     callouts:
     - text: STORY
       x: 100.0
@@ -951,6 +958,7 @@ scenes:
       size: 46
       until:
         cue: Whirr does a little dance
+      hud: true
     - kind: toonwords
       text: CLEAN. STEADY. ALREADY BUILT.
       x: 960
@@ -958,6 +966,7 @@ scenes:
       at:
         cue: Whirr does a little dance
       size: 56
+      hud: true
     callouts:
     - text: FACT · CANADA ENERGY REGULATOR
       x: 250.0
@@ -1040,6 +1049,7 @@ scenes:
       size: 45
       until:
         cue: We told that story
+      hud: true
     - kind: toonwords
       text: 'SEE: COULD CHEAP ELECTRICITY BECOME THE NEW OIL?'
       x: 960
@@ -1047,6 +1057,7 @@ scenes:
       at:
         cue: We told that story
       size: 34
+      hud: true
     callouts:
     - text: FACT · HYDRO-QUÉBEC 2025 (INTERESTED PARTY)
       x: 328.0
@@ -1148,11 +1159,12 @@ scenes:
       scale: 0.85
     - kind: toonwords
       text: 'DATA-CENTER RATE: MORE THAN DOUBLE (PROPOSED)'
-      x: 1100
+      x: 960
       y: 210
       at:
         cue: proposed for data centers
       size: 37
+      hud: true
     callouts:
     - text: FACT · HYDRO-QUÉBEC FILING
       x: 226.0
@@ -1246,6 +1258,7 @@ scenes:
       size: 50
       until:
         cue: like a talent show
+      hud: true
     - kind: toonwords
       text: UP TO 400 MW · FIRST 2 YEARS
       x: 960
@@ -1253,6 +1266,7 @@ scenes:
       at:
         cue: like a talent show
       size: 56
+      hud: true
     callouts:
     - text: FACT · B.C. GOVERNMENT (JAN 2026)
       x: 268.0
@@ -1324,6 +1338,7 @@ scenes:
       size: 56
       until:
         cue: The next power has to be built
+      hud: true
     - kind: toonwords
       text: THE NEXT POWER HAS TO BE BUILT
       x: 960
@@ -1331,6 +1346,7 @@ scenes:
       at:
         cue: The next power has to be built
       size: 55
+      hud: true
     callouts:
     - text: ANALYSIS
       x: 118.0
@@ -1488,6 +1504,7 @@ scenes:
       at:
         cue: Up here
       size: 58
+      hud: true
     callouts:
     - text: MECHANISM
       x: 124.0
@@ -1551,6 +1568,7 @@ scenes:
       size: 49
       until:
         cue: The cold is a giant
+      hud: true
     - kind: toonwords
       text: A GIANT, NATURAL FRIDGE
       x: 960
@@ -1558,6 +1576,7 @@ scenes:
       at:
         cue: The cold is a giant
       size: 60
+      hud: true
     callouts:
     - text: CLAIM · QSCALE (COMPANY, 2022)
       x: 250.0
@@ -1663,11 +1682,12 @@ scenes:
       scale: 0.9
     - kind: toonwords
       text: LEFTOVER HEAT → CAMPUS
-      x: 1200
+      x: 960
       y: 210
       at:
         cue: pipe its leftover heat
       size: 58
+      hud: true
     callouts:
     - text: PLAN · BELL (KAMLOOPS, B.C.)
       x: 238.0
@@ -1734,6 +1754,7 @@ scenes:
       size: 60
       until:
         cue: That's a company plan
+      hud: true
     - kind: toonwords
       text: A PLAN, NOT MONEY ALREADY SPENT
       x: 960
@@ -1741,6 +1762,7 @@ scenes:
       at:
         cue: That's a company plan
       size: 53
+      hud: true
     callouts:
     - text: PLAN · MICROSOFT (C$19B, 2023-27; OUR CALC)
       x: 328.0
@@ -1968,6 +1990,7 @@ scenes:
       at:
         cue: Cold air, clean power
       size: 49
+      hud: true
     callouts:
     - text: STORY
       x: 100.0
@@ -2114,7 +2137,7 @@ scenes:
         - smug
       label: LUC · MAYA'S DAD, A MINER (FICTIONAL)
       labelUntil:
-        cue: He has heard
+        cue: You know what's inside
       scale: 1.25
     - kind: bubble
       text: YOU KNOW WHAT'S INSIDE THOSE AI COMPUTERS?
@@ -2207,6 +2230,7 @@ scenes:
       at:
         cue: an official list
       size: 45
+      hud: true
     callouts:
     - text: FACT · NATURAL RESOURCES CANADA (2024)
       x: 298.0
@@ -2267,6 +2291,7 @@ scenes:
       at:
         cue: In uranium, Canada is
       size: 45
+      hud: true
     - kind: bubble
       text: ROCKS!
       x: 1400
@@ -2349,11 +2374,12 @@ scenes:
       scale: 1.2
     - kind: toonwords
       text: '16+ YEARS: DISCOVERY → FIRST ORE'
-      x: 900
+      x: 960
       y: 210
       at:
         cue: Around the world
       size: 52
+      hud: true
     callouts:
     - text: FINDING · IEA (WORLD AVERAGE, 2010-19)
       x: 298.0
@@ -2433,6 +2459,7 @@ scenes:
       size: 45
       until:
         cue: Whether that becomes normal
+      hud: true
     - kind: toonwords
       text: 'THE TEST: WILL FAST BECOME NORMAL?'
       x: 960
@@ -2440,6 +2467,7 @@ scenes:
       at:
         cue: Whether that becomes normal
       size: 49
+      hud: true
     callouts:
     - text: FACT · MAJOR PROJECTS OFFICE (SASKATCHEWAN MINE)
       x: 358.0
@@ -2560,6 +2588,7 @@ scenes:
       at:
         cue: in Canadian universities
       size: 52
+      hud: true
     callouts:
     - text: STORY
       x: 100.0
@@ -2625,11 +2654,12 @@ scenes:
       scale: 1.2
     - kind: toonwords
       text: 2024 NOBEL PRIZE IN PHYSICS
-      x: 1200
+      x: 960
       y: 230
       at:
         cue: that work helped earn him
       size: 56
+      hud: true
     callouts:
     - text: FACT · NOBELPRIZE.ORG (U. OF TORONTO)
       x: 292.0
@@ -2653,14 +2683,14 @@ scenes:
       x1: 4600
       showList: false
       pins:
-      - x: 700
-        y: 520
+      - x: 900
+        y: 570
         label: MONTREAL · MILA
         at:
           cue: In Montreal, Yoshua Bengio
         c: '#7357C9'
-      - x: 560
-        y: 560
+      - x: 790
+        y: 610
         label: TORONTO · VECTOR
         at: 0.4
         c: '#1E88E5'
@@ -2693,6 +2723,7 @@ scenes:
       size: 32
       until:
         cue: Maya's lab is just down
+      hud: true
     - kind: toonwords
       text: (ITS OWN DESCRIPTION)
       x: 960
@@ -2702,6 +2733,7 @@ scenes:
       size: 34
       until:
         cue: Maya's lab is just down
+      hud: true
     - kind: toon
       x: 1500
       at:
@@ -2789,6 +2821,7 @@ scenes:
       size: 41
       until:
         cue: And now it's paying to build
+      hud: true
     - kind: toonwords
       text: A SUPERCOMPUTER OF ITS OWN
       x: 960
@@ -2796,6 +2829,7 @@ scenes:
       at:
         cue: And now it's paying to build
       size: 56
+      hud: true
     callouts:
     - text: FACT · CIFAR
       x: 142.0
@@ -2974,6 +3008,7 @@ scenes:
       size: 58
       until:
         cue: But the stars get the biggest offers
+      hud: true
     - kind: toonwords
       text: THE STARS GET THE BIGGEST OFFERS
       x: 960
@@ -2983,6 +3018,7 @@ scenes:
       size: 52
       until:
         cue: Maya's phone buzzes
+      hud: true
     - kind: bubble
       text: NOT YET.
       x: 4200
@@ -3223,6 +3259,7 @@ scenes:
       size: 43
       until:
         cue: When Washington adds tariffs
+      hud: true
     - kind: toonwords
       text: CANADA FEELS IT FIRST
       x: 960
@@ -3230,6 +3267,7 @@ scenes:
       at:
         cue: When Washington adds tariffs
       size: 60
+      hud: true
     callouts:
     - text: 'FACT · STATISTICS CANADA (2025: ≈72%; 2024: ≈76%)'
       x: 364.0
@@ -3299,6 +3337,7 @@ scenes:
       size: 58
       until:
         cue: but only if Canada builds
+      hud: true
     - kind: toonwords
       text: ONLY IF CANADA BUILDS IT
       x: 960
@@ -3306,6 +3345,7 @@ scenes:
       at:
         cue: but only if Canada builds
       size: 58
+      hud: true
     callouts:
     - text: ANALYSIS
       x: 118.0
@@ -3453,20 +3493,20 @@ scenes:
       x1: 4600
       ticks: 4
       pins:
-      - x: 700
-        y: 520
+      - x: 900
+        y: 570
         label: MONTREAL
         at: 0.2
-      - x: 560
-        y: 560
+      - x: 790
+        y: 610
         label: TORONTO
         at: 0.4
-      - x: 610
-        y: 470
+      - x: 760
+        y: 530
         label: SUDBURY
         at: 0.6
-      - x: 220
-        y: 470
+      - x: 250
+        y: 540
         label: KAMLOOPS
         at: 0.8
     worldW: 2400
@@ -3491,11 +3531,12 @@ scenes:
     items:
     - kind: toonwords
       text: THE WHOLE LIST. NOW BUILD IT.
-      x: 900
+      x: 960
       y: 210
       at:
         cue: Canada wins only if it builds
       size: 56
+      hud: true
     callouts:
     - text: VERDICT · ANALYSIS
       x: 178.0
@@ -3563,6 +3604,7 @@ scenes:
       at:
         cue: betting on a different Canada
       size: 43
+      hud: true
     callouts:
     - text: VERDICT · ANALYSIS
       x: 178.0
@@ -3717,8 +3759,8 @@ scenes:
       showList: false
       route: 1
       pins:
-      - x: 700
-        y: 520
+      - x: 900
+        y: 570
         label: MONTREAL
         at: 0.2
     worldW: 2400
@@ -3753,6 +3795,7 @@ scenes:
       at:
         cue: Next time
       size: 56
+      hud: true
     callouts: []
   assets:
   - font:inter
