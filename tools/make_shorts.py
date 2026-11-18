@@ -118,6 +118,12 @@ SHORTS = {
     "67-power-new-oil": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary_light", "AI IS HUNTING", "FOR CHEAP POWER", "Why AI Follows the Plug, Not the Workers", "#ai #electricity #datacenters"),
     "67-power-new-oil-b": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary_light", "THE METAL MADE", "OF ELECTRICITY", "The Metal Made of Electricity, and Why AI Copies It", "#aluminum #electricity #energy"),
     "67-power-new-oil-c": ("could-cheap-electricity-become-the-new-oil", "documentary", "powernewoil_documentary_light", "THE CHEAPEST PLUG", "WANTS A BIGGER CUT", "The Cheapest Power in North America Is Getting Pricier for AI", "#quebec #electricity #ai"),
+    "68-picks-shovels": ("countries-that-win-the-ai-economy-without-building-ai", "documentary", "shovels_documentary", "IN A GOLD RUSH,", "SELL THE SHOVELS", "In a Gold Rush, Sell the Shovels. AI Is No Different", "#ai #goldrush #economics"),
+    "68-picks-shovels-b": ("countries-that-win-the-ai-economy-without-building-ai", "documentary", "shovels_documentary", "ONLY ONE SHOP", "SELLS THIS MACHINE", "The Machine Only One Company on Earth Can Build", "#asml #semiconductors #ai"),
+    "68-picks-shovels-c": ("countries-that-win-the-ai-economy-without-building-ai", "documentary", "shovels_documentary", "PANCAKE MEMORY", "BEAT SAMSUNG", "The Pancake Memory That Made a Chipmaker Out-Earn Samsung", "#hbm #memory #ai"),
+    "69-ai-taxes": ("if-ai-replaces-workers-who-pays-the-taxes", "documentary", "aitaxes_documentary", "ROBOTS GET NO PAYCHECK.", "WHO PAYS THE TAXES?", "If Robots Don't Get Paid, Who Pays the Taxes?", "#ai #robots #taxes"),
+    "69-ai-taxes-b": ("if-ai-replaces-workers-who-pays-the-taxes", "documentary", "aitaxes_documentary", "WASHINGTON'S MONEY", "COMES FROM PAYCHECKS", "Where Washington's Tax Money Really Comes From", "#taxes #economy #ai"),
+    "69-ai-taxes-c": ("if-ai-replaces-workers-who-pays-the-taxes", "documentary", "aitaxes_documentary", "FREE MONTHLY CASH.", "DID PEOPLE QUIT?", "What Happened When People Got Free Monthly Cash", "#basicincome #ubi #ai"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -145,6 +151,12 @@ CUSTOM = {
     "67-power-new-oil": ("67-power-new-oil", ["co_hook"], "youtube-short"),
     "67-power-new-oil-b": ("67-power-new-oil", ["c2_smelt", "c2_iceland"], "youtube-short-b"),
     "67-power-new-oil-c": ("67-power-new-oil", ["c3_quebec", "c3_quebec2"], "youtube-short-c"),
+    "68-picks-shovels": ("68-picks-shovels", ["co_hook", "c1_brannan"], "youtube-short"),
+    "68-picks-shovels-b": ("68-picks-shovels", ["c2_nl", "c2_asml"], "youtube-short-b"),
+    "68-picks-shovels-c": ("68-picks-shovels", ["c3_korea", "c3_draw"], "youtube-short-c"),
+    "69-ai-taxes": ("69-ai-taxes", ["co_hook"], "youtube-short"),
+    "69-ai-taxes-b": ("69-ai-taxes", ["c2_big", "c2_corp", "c2_world"], "youtube-short-b"),
+    "69-ai-taxes-c": ("69-ai-taxes", ["c4_stockton", "c4_or", "c4_or2"], "youtube-short-c"),
 }
 
 
