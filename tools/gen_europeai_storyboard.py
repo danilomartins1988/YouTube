@@ -308,7 +308,7 @@ stage("s26_asml", "a5_asml", {
     "items": [sign("THE ONLY COMPANY THAT MAKES THESE MACHINES", 960, 130, C("is the only company"), color="#E1D5FF", size=32, until=C("Last year")),
               it("counter", x=960, y=180, at=C("Last year it kept"), prefix="≈ $", suffix="BN PROFIT · 2025", decimals=1, steps=[[0, 0], [C("Last year it kept"), 0], [C("in profit"), 10.8]],
                  text="ASML FY2025 NET INCOME · ECB 2025 AVG RATE · OUR CONVERSION"),
-              words("ZERO CHIPS MADE", 960, 330, C("doesn't make a single chip"), size=58, color="#FFFFFF"),
+              words("ZERO CHIPS MADE", 960, 990, C("doesn't make a single chip"), size=58, color="#FFFFFF"),
               NORA(260, 0.2, face="happy", pose="point", scale=1.0), THEO(1660, 0.2, face="shock", pose="armsup", scale=1.0),
               tag((0, "FACT"))]},
     sources=["asml_fy25", "asml_ar25", "ecb_2025_avg"])
