@@ -104,7 +104,7 @@ stage("s01_hook", "co_hook", {
     "items": [HIRO([[0, -200], [1.6, 240]], 0.0, face="happy", pose="stand", faces=[[0, "happy"], [C("Help wanted"), "worry"], [C("Nobody calls"), "deadpan"]],
                    label="HIRO · WORKSHOP OWNER (FICTIONAL)", labelUntil=C("For a long time now")),
               bub("TINY PARTS. BIG MACHINES.", 330, 300, C("parts that end up"), until=C("For a long time now"), tail=[260, 520], size=28),
-              bub("...ANYONE?", 300, 330, C("Nobody calls"), until=C("His whole country"), tail=[260, 540], size=34),
+              bub("...ANYONE?", 560, 250, C("Nobody calls"), until=C("His whole country"), tail=[300, 520], size=34),
               words("A WHOLE COUNTRY SHORT OF WORKERS", 900, 150, C("His whole country"), size=50, until=C("And yet")),
               words("≈ 4 IN 10 OF THE WORLD'S ROBOTS", OX + 1300, 150, C("industrial robots"), size=58, until=C("So could")),
               words("PROBLEM → ADVANTAGE?", OX + 1000, 160, C("So could"), size=62),

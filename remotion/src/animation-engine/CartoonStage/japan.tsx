@@ -332,6 +332,8 @@ const RAW: Record<string, SetFn> = {
         <rect x={-190} y={-60} width={380} height={110} rx={10} fill={BLUE} stroke={OL} strokeWidth={5} />
         <circle cx={-130} cy={-5} r={36} fill="#FFFFFF" stroke={OL} strokeWidth={4} /><path d={`M -130 -5 L -130 -30 M -130 -5 L ${-130 + 18 * Math.sin(t)} 8`} stroke={OL} strokeWidth={4} />
         <T x={40} y={-10} s={26} c="#FFFFFF">OVERTIME CAP</T><T x={40} y={28} s={22} c="#FFFFFF">FOR TRUCK DRIVERS</T></g>}
+      <rect x={z.x0} y={f - 40} width={z.x1 - z.x0} height={400} fill="#9AA0A8" />
+      {Array.from({length: 20}, (_, k) => <rect key={'yl' + k} x={z.x0 + k * 300} y={f + 290} width={150} height={10} fill="#FFFFFF" />)}
       {/* warehouse */}
       <rect x={-100} y={f - 400} width={1250} height={400} fill="#E4E8EE" stroke={OL} strokeWidth={5} />
       <path d={`M -130 ${f - 400} L 1180 ${f - 400} L 1120 ${f - 450} L -70 ${f - 450} Z`} fill="#8E9AAF" stroke={OL} strokeWidth={4} />
