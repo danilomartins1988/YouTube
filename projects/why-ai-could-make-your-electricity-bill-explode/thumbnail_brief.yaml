@@ -1,0 +1,69 @@
+# Thumbnail creative brief (Ep 65). Default A. Owner standing rules: at most 4 words, the subject (AI + the bill) named,
+# mobile-legible, no statistics shown. ORIGINAL generic subjects only (isometric AI campus, house, surge line): no logos, no
+# real buildings, no people. Distinct from Ep 35 (which used a meter + big number).
+title: "Why AI Could Make Your Electricity Bill Explode"
+docs_dir: docs/episodes/65-ai-power-bill
+video: output/aipowerbill_documentary.mp4
+deliverable: documentary
+status: planned
+default: A
+analysis:
+  mystery: Who really pays for the AI boom's electricity, the tech giants or households?
+  surprising_fact: The PJM Market Monitor estimates almost half of recent capacity costs came from data center load (monitor estimate)
+  subject: a glowing isometric AI data-center campus with a red surge line rising over it
+  tone: strategy
+  metaphor: the AI campus plugged into the same grid as your home
+  public_figure: null
+concepts:
+- id: A
+  angle: AI campus vs your bill (conflict)
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - AI VS
+  - YOUR BILL
+  claim_basis: 'a question of who pays (the film: households could pay part where rules spread costs; no number shown)'
+  scene:
+    palette: {sky0: '#0B1F3F', sky1: '#1E4E8C', haze: '#FFC93C', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: campus, x: 960, y: 760, s: 0.62}
+    particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: the bill shock (consequence)
+  archetype: classic
+  text_side: left
+  accent_line: 1
+  text:
+  - AI'S POWER
+  - BILL
+  claim_basis: 'a question (the film: who pays the AI power bill)'
+  scene:
+    palette: {sky0: '#1A0F24', sky1: '#4A1F3A', haze: '#FF7A59', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: campus, x: 1300, y: 720, s: 0.55}
+    support:
+    - {kind: house, x: 360, y: 820, s: 0.35}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFD8C8'}
+    vignette: 0.55
+    brand: none
+- id: C
+  angle: who pays for AI
+  archetype: classic
+  text_side: top
+  accent_line: 0
+  text:
+  - WHO PAYS
+  - FOR AI?
+  claim_basis: 'a question (answered in the film: decided by contracts, supply and cost allocation)'
+  scene:
+    palette: {sky0: '#06241F', sky1: '#0F4A40', haze: '#5EE6B0', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: campus, x: 960, y: 780, s: 0.58}
+    support:
+    - {kind: surge, x: 960, y: 520, s: 0.5, nocar: true}
+    particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDF5DE'}
+    vignette: 0.55
+    brand: none

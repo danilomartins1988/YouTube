@@ -1,0 +1,65 @@
+# Thumbnail creative brief (Ep 64). Owner standing rules: at most 4 words naming the subject (ROBOTS), mobile-legible, no statistics.
+# No public figure is central, so no face layout: ORIGINAL characters only (BOLT the robot, a figure in a suit with a SHARE certificate,
+# a warehouse worker). No logos, no real people.
+title: "Who Gets Rich When Robots Do the Work?"
+docs_dir: docs/episodes/64-robots-rich
+video: output/robotsrich_documentary.mp4
+deliverable: documentary
+status: planned
+default: A
+analysis:
+  mystery: If robots do the work, who gets the money?
+  surprising_fact: The richest 10% of U.S. households hold about 88% of household stocks and stock funds (Fed DFA, Q2 2026)
+  subject: an original friendly robot hauling a giant gold coin toward a figure in a suit holding a SHARE certificate, a worker watching
+  tone: sitcom
+  metaphor: the robot works, the shareholder collects
+  public_figure: null
+concepts:
+- id: A
+  angle: the robot hauls the coin to the shareholder while the worker watches
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - "ROBOTS:"
+  - WHO GETS RICH?
+  claim_basis: 'a question (the film: mostly the owners of the machines, on the evidence so far)'
+  scene:
+    palette: {sky0: '#0D2A4A', sky1: '#1F5C99', haze: '#FFC93C', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: robothaul, x: 980, y: 700, s: 0.78}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: the owner, not the worker
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - ROBOTS WORK.
+  - OWNERS WIN?
+  claim_basis: 'a question (the film: owners gain most so far; pay can catch up after a delay; counterpoints shown)'
+  scene:
+    palette: {sky0: '#1A1035', sky1: '#3B2A6E', haze: '#7FA8FF', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: robothaul, x: 980, y: 720, s: 0.74, worker: false}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none
+- id: C
+  angle: the question to the viewer
+  archetype: classic
+  text_side: left
+  accent_line: 1
+  text:
+  - OWN THE
+  - ROBOTS?
+  claim_basis: 'a question (education, not advice: the film shows common ways people own shares, with risks)'
+  scene:
+    palette: {sky0: '#06241F', sky1: '#0F4A40', haze: '#5EE6B0', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: robothaul, x: 1240, y: 700, s: 0.66}
+    particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDF5DE'}
+    vignette: 0.55
+    brand: none
