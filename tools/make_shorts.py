@@ -103,6 +103,9 @@ SHORTS = {
     "62-ai-manufacturing": ("could-ai-end-chinas-manufacturing-dominance", "documentary", "aimfg_documentary", "A $100 TOASTER.", "CAN OHIO ROBOTS MATCH CHINA?", "Can AI Make America Cheaper Than China?", "#ai #manufacturing #china"),
     "62-ai-manufacturing-b": ("could-ai-end-chinas-manufacturing-dominance", "documentary", "aimfg_documentary", "IS CHINA AUTOMATING?", "59% OF NEW ROBOTS", "China Already Has More Factory Robots Than You Think", "#robots #china #factory"),
     "62-ai-manufacturing-c": ("could-ai-end-chinas-manufacturing-dominance", "documentary", "aimfg_documentary", "FACTORIES COME BACK.", "DO THE JOBS?", "Who Wins When Robots Replace Factory Workers?", "#robots #jobs #ai"),
+    "63-europe-ai": ("could-ai-bring-europe-back-to-power", "documentary", "europeai_documentary", "EUROPE IS AGING.", "CAN ROBOTS FIX IT?", "Could AI Save Europe's Economy?", "#europe #economy #ai"),
+    "63-europe-ai-b": ("could-ai-bring-europe-back-to-power", "documentary", "europeai_documentary", "ONLY ONE COMPANY", "MAKES THIS MACHINE", "Why Europe Still Controls Critical Technology", "#europe #asml #chips"),
+    "63-europe-ai-c": ("could-ai-bring-europe-back-to-power", "documentary", "europeai_documentary", "ROBOTS DO THE WORK.", "WHO GETS RICH?", "Who Gets Rich When Robots Do the Work?", "#ai #robots #economy"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -115,6 +118,9 @@ CUSTOM = {
     "62-ai-manufacturing": ("62-ai-manufacturing", ["a4_f2", "a4_tie"], "youtube-short"),
     "62-ai-manufacturing-b": ("62-ai-manufacturing", ["a5_reveal", "a5_density"], "youtube-short-b"),
     "62-ai-manufacturing-c": ("62-ai-manufacturing", ["a7_where", "a7_jobs"], "youtube-short-c"),
+    "63-europe-ai": ("63-europe-ai", ["a1_age", "a2_draw", "a2_question"], "youtube-short"),
+    "63-europe-ai-b": ("63-europe-ai", ["a5_asml", "a5_web"], "youtube-short-b"),
+    "63-europe-ai-c": ("63-europe-ai", ["a6_company", "a6_numbers"], "youtube-short-c"),
 }
 
 
