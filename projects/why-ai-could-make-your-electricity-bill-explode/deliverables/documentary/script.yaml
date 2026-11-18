@@ -1,0 +1,248 @@
+logline: AI data centers are plugging into the same grid as American homes. Following one household's $150 bill through the newest
+  PJM auction, the Market Monitor's data-center estimates, utilities' building plans and the new large-load tariffs in Ohio and Virginia,
+  the film asks who really pays for the AI boom's electricity, and finds the answer is decided less by physics than by rate cases.
+title: Why AI Could Make Your Electricity Bill Explode
+segments:
+- id: co_hook
+  chapter: The power-hungry boom
+  narration: This is an ordinary electric bill. About {{scc_bill.bill_spoken}} a month for a typical home in Virginia. Now look at
+    the neighbors. In Northern Virginia, data centers already buy {{dom_share}} of all the power the local utility sells. Every AI answer
+    and every generated image runs on buildings like these, and they never sleep. This summer, the grid that serves {{bra2829.people_spoken}}
+    Americans bought its future power at the highest price the rules allow, and still came up short. Its own watchdog estimates that
+    {{imm_dc}} of that bill came from data centers. So who really pays for the AI boom? The tech giants... or you?
+  claims:
+  - scc_bill
+  - dom_share
+  - bra2829
+  - imm_dc
+  analysis: true
+  source_note: Hook; $150 = OUR CALCULATION from the SCC's typical-bill figures; Dominion 10-K data-center share; PJM and Market Monitor (Jul 2026).
+- id: title_card
+  chapter: The power-hungry boom
+  narration: ''
+  claims: []
+- id: c1_machines
+  chapter: The power-hungry boom
+  narration: To see why, start with what AI actually eats. A data center is a warehouse full of computer chips, and chips turn electricity
+    into answers, and heat. Researchers at Lawrence Berkeley National Laboratory measured it for the Department of Energy. American data
+    centers used {{dc_twh.then_spoken}} terawatt-hours in {{dc_twh.then_year_spoken}}, and {{dc_twh}} by {{dc_twh.year_spoken}}. Their
+    forecast for {{dc_twh.fyear_spoken}} is somewhere between {{dc_twh.lo_spoken}} and {{dc_twh.hi_spoken}}. That's a forecast, and a
+    wide one, because nobody knows how fast AI will grow.
+  claims:
+  - dc_twh
+- id: c1_draw
+  chapter: The power-hungry boom
+  narration: Let me make that concrete. An average American home uses about {{dc_homes.avg_spoken}} kilowatt-hours a month. Divide,
+    and in twenty twenty-three, data centers used as much electricity as {{dc_homes}} homes. At the top of the forecast, {{dc_homes.hi_spoken}}.
+    That's our arithmetic, not theirs, but it shows the scale. AI isn't one more appliance. It's like a new country of homes plugging
+    into the same wires.
+  claims:
+  - dc_homes
+  analysis: true
+  source_note: OUR CALCULATION (labelled on the board) from DOE/LBNL totals and EIA average residential use.
+- id: c1_forecast
+  chapter: The power-hungry boom
+  narration: Grid operators see it too. PJM runs the grid across thirteen states, from Illinois to New Jersey to Virginia. In twenty twenty-one,
+    it expected its summer peak to grow {{pjm_peak.old_spoken}} a year. Its newest forecast says {{pjm_peak.rate_spoken}} a year, reaching
+    {{pjm_peak}} by {{pjm_peak.year_spoken}}, mainly because of data centers. In Texas, the utility AEP says it has signed letters of
+    agreement for {{aep_tx}} of new load by twenty thirty. Again, these are forecasts. Some of these projects will never be built. And
+    that turns out to matter a lot.
+  claims:
+  - pjm_peak
+  - aep_tx
+- id: c2_card
+  chapter: Follow the $150 bill
+  narration: ''
+  claims: []
+- id: c2_bill
+  chapter: Follow the $150 bill
+  narration: So let's follow one bill. Say {{scc_bill.bill_spoken}} for a thousand kilowatt-hours, roughly what a typical home pays
+    in Virginia. Where does the money go? The biggest piece pays for the energy itself. A slice pays for capacity, power plants paid to
+    promise they'll be there on the hottest afternoon. Another slice pays for transmission, the big high-voltage lines. The rest pays
+    for distribution, the poles and wires on your street, plus taxes and fees. Data centers can push on every one of those slices.
+  claims:
+  - scc_bill
+  analysis: true
+  source_note: Bill components (mechanism); slice sizes on the board are ILLUSTRATIVE and labelled so.
+- id: c2_energy
+  chapter: Follow the $150 bill
+  narration: Start upstream, with the wholesale price utilities pay before power reaches you. PJM's independent market monitor tracks
+    every piece. In the first half of twenty twenty-six, the all-in wholesale cost came to {{imm_cost.total_spoken}} per megawatt-hour,
+    up about {{imm_cost.rise_spoken}} from a year earlier. A brutal winter storm explains part of that. But the capacity piece alone
+    {{imm_cost.cap_spoken}}.
+  claims:
+  - imm_cost
+- id: c2_eleven
+  chapter: Follow the $150 bill
+  narration: Then the monitor asked a sharper question. What would that cost have been without data centers? Its estimate is {{imm_cost}}
+    less per megawatt-hour. Now, a thousand kilowatt-hours is exactly one megawatt-hour. So if every cent were passed straight through,
+    that's {{bill_calc}} on a typical bill. It isn't always passed through in full, and utilities hedge. But the order of magnitude isn't
+    pennies.
+  claims:
+  - imm_cost
+  - bill_calc
+  analysis: true
+  source_note: Market Monitor estimate (attributed); $11/month = OUR ILLUSTRATION, upper bound if fully passed through.
+- id: c2_link
+  chapter: Follow the $150 bill
+  narration: How that capacity auction works, and why its price first jumped, is the story we told in Why America's Electricity Bills
+    Are Rising. Here's what happened next.
+  claims: []
+  analysis: true
+  source_note: Library link to Ep 35 by title.
+- id: c3_card
+  chapter: The auction at the cap
+  narration: ''
+  claims: []
+- id: c3_auction
+  chapter: The auction at the cap
+  narration: Every year, PJM pays power plants to promise they'll be available a few years ahead. For the delivery year that started in
+    twenty twenty-four, that promise cost {{bra2829.old_spoken}} per megawatt per day. This July, for the year starting in twenty twenty-eight,
+    it cleared at {{bra2829}}. That's the maximum, a cap PJM set with the governors of its {{bra2829.states_spoken}} states to stop it
+    going even higher. The total, about {{bra2829.total_spoken}}.
+  claims:
+  - bra2829
+- id: c3_short
+  chapter: The auction at the cap
+  narration: And even at the cap, it wasn't enough. The auction came up {{bra2829.short_spoken}} short of what PJM says it needs to keep
+    the lights reliably on. The last two auctions are the first in PJM's history in which the whole grid fell short. Only {{bra2829.new_spoken}}
+    megawatts of new plants and upgrades cleared. Demand is arriving faster than steel and concrete.
+  claims:
+  - bra2829
+- id: c3_monitor
+  chapter: The auction at the cap
+  narration: So how much of that is AI? The market monitor estimates that {{imm_dc}}, about {{imm_dc.share_spoken}} of this auction's
+    cost, came from data center load. Over the last four auctions, {{imm_dc.four_spoken}}. Almost half. In the forecasts those auctions
+    used, data center demand grew from {{imm_dc.mw_then_spoken}} megawatts to {{imm_dc.mw_now_spoken}}. And capacity costs are shared
+    by everyone who uses power at the peak. Including you.
+  claims:
+  - imm_dc
+- id: c3_fix
+  chapter: The auction at the cap
+  narration: The monitor's proposed fix is blunt. Take data centers out of the shared auction, and make them buy their own capacity.
+    PJM is trying other routes, like letting big new users connect if they agree to cut back when the grid is stressed. None of it has
+    settled the real question yet. Who pays?
+  claims: []
+  analysis: true
+  source_note: Market Monitor position (Jul 2026) and PJM's listed actions (Jul 14, 2026 release); no figures.
+- id: c4_card
+  chapter: Who pays for the wires
+  narration: ''
+  claims: []
+- id: c4_capex
+  chapter: Who pays for the wires
+  narration: Now the wires. Utilities are planning a building spree. In its latest annual report, Dominion Energy plans {{capex}} of
+    spending from twenty twenty-six through twenty thirty. AEP plans {{capex.aep_spoken}} over the same years. Both point to growing
+    large loads, above all data centers.
+  claims:
+  - capex
+- id: c4_rate
+  chapter: Who pays for the wires
+  narration: Here's the part most people never see. Let me draw it. A regulated utility earns a return on what it builds. In Virginia,
+    regulators just set Dominion's allowed return on equity at {{scc_roe}}. Build more, and the base that return is earned on grows.
+    Then the cost is split among customer classes. Homes, shops, factories, data centers. How it's split is a choice, made with formulas,
+    like each group's share of the peak.
+  claims:
+  - scc_roe
+  analysis: true
+  source_note: Cost-of-service mechanism (covered in Ep 35; drawn briefly); ROE from the SCC order.
+- id: c4_study
+  chapter: Who pays for the wires
+  narration: And Virginia's own numbers show why that choice matters. In Dominion's latest rate case, a cost study looked at the customers
+    who would form the new data-center class. On transmission, they earned the utility a return of just {{scc_ror}}. Other large customers,
+    {{scc_ror.other_spoken}}. In plain English, under the old formulas, the biggest users were paying relatively little for the big lines.
+    The commission says it will examine that split next.
+  claims:
+  - scc_ror
+- id: c4_bill
+  chapter: Who pays for the wires
+  narration: Meanwhile, the same order raised base rates. A typical home pays about {{scc_bill}} more a month in twenty twenty-six. That's
+    about {{scc_bill.pct_spoken}}. Not all of it is data centers. It covers storms, aging equipment, everything. But it shows where a
+    building boom lands. On the monthly bill.
+  claims:
+  - scc_bill
+- id: c5_card
+  chapter: The fightback
+  narration: ''
+  claims: []
+- id: c5_ohio
+  chapter: The fightback
+  narration: Regulators are pushing back. In Ohio, after AEP paused new data center agreements around Columbus, regulators adopted a special
+    tariff in July twenty twenty-five. New data centers of twenty-five megawatts or more must pay for at least {{aep_ohio}} of the capacity
+    they reserve, whether they use it or not, for up to {{aep_ohio.years_spoken}}. Walk away early, and there's an exit fee.
+  claims:
+  - aep_ohio
+- id: c5_gs5
+  chapter: The fightback
+  narration: Virginia followed. From twenty twenty-seven, customers above {{gs5.mw_spoken}} get their own rate class, with {{gs5}}
+    contracts. They pay for at least {{gs5.min_spoken}} of the wires they reserve and {{gs5.gen_spoken}} of the generation. Dominion says
+    the goal is to stop one class subsidizing another, and to avoid stranded costs.
+  claims:
+  - gs5
+- id: c5_why
+  chapter: The fightback
+  narration: Why does that clause matter so much? Picture a utility building a line for a data center that never shows up, or that shuts
+    down when the AI boom cools. Without a contract, that line stays in everyone's rates for decades. With a minimum bill, the data center
+    pays either way. That one clause may decide more about your future bill than any chip.
+  claims: []
+  analysis: true
+  source_note: Stranded-cost mechanism, drawn by the presenter (illustrative, no figures).
+- id: c5_deals
+  chapter: The fightback
+  narration: And the tech giants aren't just sitting at the hearing. They're signing their own power deals. Microsoft agreed to buy power
+    for twenty years from a restarted nuclear reactor, the former Three Mile Island Unit One, {{deals}}. Meta signed for {{deals.meta_spoken}}
+    megawatts from a nuclear plant in Illinois, a deal the plant's owner says keeps it running without ratepayer support. Amazon contracted
+    {{deals.amzn_spoken}} megawatts of nuclear power in Pennsylvania through {{deals.amzn_year_spoken}}. Some deals add new power to the
+    grid. Others reserve power that already exists.
+  claims:
+  - deals
+  analysis: true
+  source_note: Deals as disclosed by Constellation and Talen (via APPA); new-vs-existing distinction is our characterization (Crane = restart; Clinton and Susquehanna = existing plants).
+- id: c5_counter
+  chapter: The fightback
+  narration: There's an even stronger counterpoint. A Berkeley Lab study found that in recent years, load growth has {{lbnl_load}}. More
+    customers share the fixed cost of the grid, so each kilowatt-hour can get cheaper, though it's unclear if that will hold. And new supply
+    is coming. The EIA expects about {{steo_supply}} of new solar and {{steo_supply.wind_spoken}} gigawatts of wind this year and next.
+    Even PJM trimmed its near-term forecast after checking data center requests more carefully.
+  claims:
+  - lbnl_load
+  - steo_supply
+  - pjm_peak
+- id: c6_card
+  chapter: Will your bill explode?
+  narration: ''
+  claims: []
+- id: c6_trend
+  chapter: Will your bill explode?
+  narration: So, will AI make your bill explode? Here's the national picture from the EIA. The average home paid {{steo_res}} a kilowatt-hour
+    in twenty twenty-four. {{steo_res.y25_spoken}} cents in twenty twenty-five. The forecast is {{steo_res.y26_spoken}} this year and
+    {{steo_res.y27_spoken}} next. That's {{steo_res.pct_spoken}} in three years, by our math. Rising, but nationally, not exploding.
+  claims:
+  - steo_res
+- id: c6_dials
+  chapter: Will your bill explode?
+  narration: But averages hide the hot spots. Where data centers cluster and the grid runs short, the capacity and wire slices are the
+    ones that can jump. Whether they land on you comes down to three dials. One, do big new users sign minimum-bill contracts, so they carry
+    their own grid costs? Two, does new supply arrive as fast as new demand? Three, how do regulators split the cost of shared lines? Turn
+    all three one way, and growth can spread costs thinner. Turn them the other way, and households help pay for the AI boom.
+  claims: []
+  analysis: true
+  source_note: Verdict framework drawn on the board; each dial maps to sourced facts (tariffs, PJM shortfall and supply, SCC cost study).
+- id: c6_close
+  chapter: Will your bill explode?
+  narration: The AI boom's power bill is real. It's measured in billions of dollars and in gigawatts. But who pays it isn't decided by
+    physics. It's decided in auction rules and rate cases, in rooms most people never watch. And that may be the most useful thing to know
+    about your next electric bill.
+  claims: []
+  analysis: true
+  source_note: Closing insight (payoff); no new figures.
+- id: teaser
+  chapter: Will your bill explode?
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: Will your bill explode?
+  narration: ''
+  claims: []
