@@ -1,0 +1,502 @@
+{
+  "title": "Why AI Could Make Your Electricity Bill Explode",
+  "docs_dir": "docs/episodes/65-ai-power-bill",
+  "video": "output/aipowerbill_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "default": "B",
+  "analysis": {
+    "mystery": "Who really pays for the AI boom's electricity, the tech giants or households?",
+    "surprising_fact": "The PJM Market Monitor estimates almost half of recent capacity costs came from data center load (monitor estimate)",
+    "subject": "a glowing isometric AI data-center campus with a red surge line rising over it",
+    "tone": "strategy",
+    "metaphor": "the AI campus plugged into the same grid as your home",
+    "public_figure": null
+  },
+  "slug": "why-ai-could-make-your-electricity-bill-explode",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "AI campus vs your bill (conflict)",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "AI VS",
+        "YOUR BILL"
+      ],
+      "claim_basis": "a question of who pays (the film: households could pay part where rules spread costs; no number shown)",
+      "scene": {
+        "palette": {
+          "sky0": "#0B1F3F",
+          "sky1": "#1E4E8C",
+          "haze": "#FFC93C",
+          "key": "#FFF6D8",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "campus",
+          "x": 960,
+          "y": 600,
+          "s": 0.95
+        },
+        "particles": {
+          "n": 50,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "AI VS",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 507.7,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "YOUR BILL",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 913.8,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.63 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(706, 156, 1214, 290), (503, 321, 1417, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.102",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 50",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest who-actually-gets-the-tariff-refund (distance 0.46)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question of who pays (the film: households could pay part where rules spread costs; no number shown)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.626,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "who-actually-gets-the-tariff-refund"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "the bill shock (consequence)",
+      "archetype": "classic",
+      "text_side": "left",
+      "accent_line": 1,
+      "text": [
+        "AI'S POWER",
+        "BILL"
+      ],
+      "claim_basis": "a question (the film: who pays the AI power bill)",
+      "scene": {
+        "palette": {
+          "sky0": "#1A0F24",
+          "sky1": "#4A1F3A",
+          "haze": "#FF7A59",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "campus",
+          "x": 1250,
+          "y": 580,
+          "s": 0.85
+        },
+        "support": [
+          {
+            "kind": "house",
+            "x": 420,
+            "y": 860,
+            "s": 0.6
+          }
+        ],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD8C8"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "AI'S POWER",
+          "x": 90,
+          "y": 520.0,
+          "size": 125.0,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "BILL",
+          "x": 90,
+          "y": 650.0,
+          "size": 125.0,
+          "width": 320.0,
+          "anchor": "start",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.60 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 422, 890, 528), (90, 552, 410, 658)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.4px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 6.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.096",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 49",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-tesla-2026-11 (distance 0.43)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (the film: who pays the AI power bill)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.719,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-tesla-2026-11"
+      }
+    },
+    {
+      "id": "C",
+      "angle": "who pays for AI",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 0,
+      "text": [
+        "WHO PAYS",
+        "FOR AI?"
+      ],
+      "claim_basis": "a question (answered in the film: decided by contracts, supply and cost allocation)",
+      "scene": {
+        "palette": {
+          "sky0": "#06241F",
+          "sky1": "#0F4A40",
+          "haze": "#5EE6B0",
+          "key": "#FFF6D8",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "campus",
+          "x": 960,
+          "y": 620,
+          "s": 0.9
+        },
+        "support": [
+          {
+            "kind": "surge",
+            "x": 960,
+            "y": 520,
+            "s": 0.5,
+            "nocar": true
+          }
+        ],
+        "particles": {
+          "n": 50,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#BDF5DE"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "WHO PAYS",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 812.3,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        },
+        {
+          "text": "FOR AI?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 710.8,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.63 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(554, 156, 1366, 290), (605, 321, 1315, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.100",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 49",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest alaska-the-state-that-pays-you-to-live-there (distance 0.80)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (answered in the film: decided by contracts, supply and cost allocation)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.691,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "alaska-the-state-that-pays-you-to-live-there"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T12:43:17Z",
+  "master": "output/why-ai-could-make-your-electricity-bill-explode/thumbnails/master_B.png"
+}

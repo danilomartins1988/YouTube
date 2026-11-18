@@ -1,12 +1,12 @@
-# Thumbnail creative brief (Ep 65). Default A. Owner standing rules: at most 4 words, the subject (AI + the bill) named,
+# Thumbnail creative brief (Ep 65). Default B (house vs AI campus: the film's conflict in one picture; design score picked it over A). Owner standing rules: at most 4 words, the subject (AI + the bill) named,
 # mobile-legible, no statistics shown. ORIGINAL generic subjects only (isometric AI campus, house, surge line): no logos, no
 # real buildings, no people. Distinct from Ep 35 (which used a meter + big number).
 title: "Why AI Could Make Your Electricity Bill Explode"
 docs_dir: docs/episodes/65-ai-power-bill
 video: output/aipowerbill_documentary.mp4
 deliverable: documentary
-status: planned
-default: A
+status: completed
+default: B
 analysis:
   mystery: Who really pays for the AI boom's electricity, the tech giants or households?
   surprising_fact: The PJM Market Monitor estimates almost half of recent capacity costs came from data center load (monitor estimate)
@@ -27,7 +27,7 @@ concepts:
   scene:
     palette: {sky0: '#0B1F3F', sky1: '#1E4E8C', haze: '#FFC93C', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: campus, x: 960, y: 760, s: 0.62}
+    subject: {kind: campus, x: 960, y: 600, s: 0.95}
     particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
     vignette: 0.5
     brand: none
@@ -43,9 +43,9 @@ concepts:
   scene:
     palette: {sky0: '#1A0F24', sky1: '#4A1F3A', haze: '#FF7A59', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: campus, x: 1300, y: 720, s: 0.55}
+    subject: {kind: campus, x: 1250, y: 580, s: 0.85}
     support:
-    - {kind: house, x: 360, y: 820, s: 0.35}
+    - {kind: house, x: 420, y: 860, s: 0.6}
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFD8C8'}
     vignette: 0.55
     brand: none
@@ -61,7 +61,7 @@ concepts:
   scene:
     palette: {sky0: '#06241F', sky1: '#0F4A40', haze: '#5EE6B0', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
     backdrop: void
-    subject: {kind: campus, x: 960, y: 780, s: 0.58}
+    subject: {kind: campus, x: 960, y: 620, s: 0.9}
     support:
     - {kind: surge, x: 960, y: 520, s: 0.5, nocar: true}
     particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDF5DE'}

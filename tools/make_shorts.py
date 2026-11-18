@@ -131,7 +131,7 @@ CUSTOM = {
     "64-robots-rich-b": ("64-robots-rich", ["a3_capex", "a3_nvidia", "a3_loop"], "youtube-short-b"),
     "64-robots-rich-c": ("64-robots-rich", ["a5_britain", "a5_draw", "a5_end"], "youtube-short-c"),
     "65-ai-power-bill": ("65-ai-power-bill", ["co_hook", "c2_eleven"], "youtube-short"),
-    "65-ai-power-bill-b": ("65-ai-power-bill", ["c3_tickets", "c3_auction", "c3_short"], "youtube-short-b"),
+    "65-ai-power-bill-b": ("65-ai-power-bill", ["c3_auction", "c3_short"], "youtube-short-b"),
     "65-ai-power-bill-c": ("65-ai-power-bill", ["c5_why", "c5_ohio"], "youtube-short-c"),
 }
 
