@@ -37,7 +37,7 @@ concepts:
   text_side: top
   accent_line: 1
   text:
-  - EUROPE:
+  - 'EUROPE:'
   - THE AI WINNER?
   claim_basis: 'a question (the film: not by out-building China nor copying Silicon Valley; possibly as owner and licensor)'
   scene:
@@ -51,7 +51,7 @@ concepts:
     vignette: 0.55
     brand: none
 - id: C
-  angle: a futuristic European economy (advanced industry, pharma research, automation)
+  angle: a futuristic European economy (advanced industry, labs, automation, clean power)
   archetype: classic
   text_side: left
   accent_line: 1
@@ -63,8 +63,6 @@ concepts:
     palette: {sky0: '#06241F', sky1: '#0F4A40', haze: '#5EE6B0', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
     backdrop: void
     subject: {kind: eurocity, x: 1300, y: 700, s: 0.55}
-    support:
-    - {kind: flask, x: 1700, y: 380, s: 0.32}
     particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDF5DE'}
     vignette: 0.55
     brand: none

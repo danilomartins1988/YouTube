@@ -1,0 +1,495 @@
+{
+  "title": "Could AI Bring Europe Back to Power?",
+  "docs_dir": "docs/episodes/63-europe-ai",
+  "video": "output/europeai_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "A",
+  "analysis": {
+    "mystery": "Could the technology that seems to threaten Europe bring it back?",
+    "surprising_fact": "The EU sold about $249bn more medicines than it bought in 2025 (Eurostat via EFPIA; our conversion)",
+    "subject": "an original European skyline running from old brick works to glass labs, a robot arm and wind turbines",
+    "tone": "strategy",
+    "metaphor": "the old industrial continent rebuilding itself around owned technology",
+    "public_figure": null
+  },
+  "slug": "could-ai-bring-europe-back-to-power",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "the comeback question over Europe's skyline (old industry left, AI tech right) with a falling red line that turns up into a gold arrow (a shape, no data)",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 0,
+      "text": [
+        "EUROPE'S COMEBACK?"
+      ],
+      "claim_basis": "a question (the film answers: a plausible path under conditions, not a promise)",
+      "scene": {
+        "palette": {
+          "sky0": "#0B1F3F",
+          "sky1": "#1E4E8C",
+          "haze": "#FFC93C",
+          "key": "#FFF6D8",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "eurocity",
+          "x": 960,
+          "y": 770,
+          "s": 0.58,
+          "reversal": true
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "EUROPE'S COMEBACK?",
+          "x": 960.0,
+          "y": 261.0,
+          "size": 135.4,
+          "width": 1560,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.59 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "2 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(180, 155, 1740, 269)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "11.3px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.125",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 60",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest could-ai-end-chinas-manufacturing-dominance (distance 0.38)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (the film answers: a plausible path under conditions, not a promise)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.699,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "could-ai-end-chinas-manufacturing-dominance"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "Europe between American AI tech and Chinese factories",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "EUROPE:",
+        "THE AI WINNER?"
+      ],
+      "claim_basis": "a question (the film: not by out-building China nor copying Silicon Valley; possibly as owner and licensor)",
+      "scene": {
+        "palette": {
+          "sky0": "#100F24",
+          "sky1": "#2B2A5A",
+          "haze": "#7FA8FF",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "eurocity",
+          "x": 960,
+          "y": 760,
+          "s": 0.5
+        },
+        "support": [
+          {
+            "kind": "robofactory",
+            "x": 300,
+            "y": 780,
+            "s": 0.42,
+            "label": "USA",
+            "armColor": "#00C2E8",
+            "opacity": 0.8
+          },
+          {
+            "kind": "megafactory",
+            "x": 1640,
+            "y": 780,
+            "s": 0.42,
+            "label": "CHINA",
+            "opacity": 0.8
+          }
+        ],
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "EUROPE:",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 710.8,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "THE AI WINNER?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 1421.5,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.59 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(605, 156, 1315, 290), (249, 321, 1671, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.156",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 61",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-one-flooded-factory-ran-america-short-of-iv-fluids (distance 0.35)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (the film: not by out-building China nor copying Silicon Valley; possibly as owner and licensor)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.685,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-one-flooded-factory-ran-america-short-of-iv-fluids"
+      }
+    },
+    {
+      "id": "C",
+      "angle": "a futuristic European economy (advanced industry, labs, automation, clean power)",
+      "archetype": "classic",
+      "text_side": "left",
+      "accent_line": 1,
+      "text": [
+        "EUROPE",
+        "RICH AGAIN?"
+      ],
+      "claim_basis": "a question (the film: Europe is already rich; the question is whether it can capture more value from automation)",
+      "scene": {
+        "palette": {
+          "sky0": "#06241F",
+          "sky1": "#0F4A40",
+          "haze": "#5EE6B0",
+          "key": "#FFF6D8",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "eurocity",
+          "x": 1300,
+          "y": 700,
+          "s": 0.55
+        },
+        "particles": {
+          "n": 50,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#BDF5DE"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "EUROPE",
+          "x": 90,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 436.4,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "RICH AGAIN?",
+          "x": 90,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.53 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 433, 526, 529), (90, 551, 890, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.088",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 58",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest alaska-the-state-that-pays-you-to-live-there (distance 0.79)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (the film: Europe is already rich; the question is whether it can capture more value from automation)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.653,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "alaska-the-state-that-pays-you-to-live-there"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T13:03:11Z",
+  "master": "output/could-ai-bring-europe-back-to-power/thumbnails/master_A.png"
+}
