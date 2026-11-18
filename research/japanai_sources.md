@@ -1,6 +1,6 @@
 # Research dossier - Will AI Make Japan Rich Again?
 
-Generated 2026-11-18T16:21:08+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
+Generated 2026-11-18T17:13:39+00:00. Status ladder: data_derived and human_verified are publishable; source_located means located by web research, not yet read in full by a named reviewer. Reference period = the year/date the statistic describes.
 
 ## Sources
 
@@ -16,6 +16,7 @@ Generated 2026-11-18T16:21:08+00:00. Status ladder: data_derived and human_verif
 | `mlit_wp24` | Ministry of Land, Infrastructure, Transport and Tourism (MLIT) | White Paper on Land, Infrastructure, Transport and Tourism in Japan 2024: logistics (the 2024 problem) | 2024-06-01 | 2026-11-18 | primary | https://www.mlit.go.jp/hakusyo/mlit/r05/hakusho/r06/html/n2522c01.html |
 | `ifr_wr25` | International Federation of Robotics | World Robotics 2025 Industrial Robots: Foreword (key figures for 2024) | 2025-09-25 | 2026-11-18 | primary | https://ifr.org/img/worldrobotics/Foreword_WR_2025_Industrial_Robots.pdf |
 | `ifr_japan25` | International Federation of Robotics | Japan's car industry has highest robot installations in five years (IFR preliminary results) | 2025-07-15 | 2026-11-18 | primary | https://ifr.org/news/japans-car-industry-has-highest-robot-installations-in-five-years/ |
+| `ifr_density26` | International Federation of Robotics | Robot Density Highest in South Korea, Singapore and Germany (press release; data year 2025) | 2026-11-12 | 2026-11-18 | primary | https://ifr.org/ifr-press-releases/news/robot-density-highest-in-south-korea-singapore-and-germany |
 | `kawasaki_hist` | Kawasaki Heavy Industries | History of Robot Division | 2024-01-01 | 2026-11-18 | primary | https://global.kawasaki.com/en/corp/profile/division/robot/history.html |
 | `fanuc_fy25` | FANUC Corporation | Financial Results for the Fiscal Year Ended March 31, 2026 (Japanese standards, English translation) | 2026-04-24 | 2026-11-18 | primary | https://www.fanuc.co.jp/en/ir/announce/pdf/2026/financialresult202603_e.pdf |
 | `yaskawa_fy25` | YASKAWA Electric Corporation | Financial Results for Fiscal 2025 (March 1, 2025 to February 28, 2026) | 2026-04-10 | 2026-11-18 | primary | https://www.yaskawa-global.com/wp-content/uploads/2026/04/20260410_haifu_en.pdf |
@@ -42,7 +43,7 @@ Generated 2026-11-18T16:21:08+00:00. Status ladder: data_derived and human_verif
 | `truck_gap` | MLIT White Paper 2024: without measures, a 34% shortfall in trucking capacity in FY2030 (14% in FY2024); driver overtime cap from April 2024. | FY2030: 34% of cargo capacity short IF NOTHING CHANGES · MLIT ESTIMATE | - | **source_located** | mlit_wp24 |  |
 | `kawasaki69` | Kawasaki: 1968 license with Unimation (US); 1969 started production of the first industrial robot in Japan. | 1969: Japan's first home-built industrial robot · Kawasaki | - | **source_located** | kawasaki_hist |  |
 | `fanuc_abroad` | OUR CALCULATION from FANUC's FY ended Mar 2026 results: ¥747.0bn of ¥857.8bn net sales (87.1%) to customers outside Japan; robot division ¥378.6bn (≈ $2.53bn), sales in Japan decreased, China up significantly. | FANUC: ≈ 87% of sales outside Japan (FY to Mar 2026) · OUR CALC | - | **data_derived** | fanuc_fy25, fed_g5a |  |
-| `density_x` | IFR WR 2025: robot density 2024 Korea 1,220 vs Japan 446 per 10,000 manufacturing employees; OUR CALCULATION 2.7x; Japan 4th... listed after Singapore 818, China 567, Germany 449. | Robots per 10,000 factory workers (2024): Korea 1,220 · Japan 446 · IFR | - | **source_located** | ifr_wr25 |  |
+| `density_x` | IFR (Nov 12, 2026; 2025 data): robot density Korea 1,066 vs Japan 452 per 10,000 manufacturing employees; OUR CALCULATION 2.36x; Singapore 873 and Germany 469 also ahead of Japan (4th); China 193 on a new employment base. | Robots per 10,000 factory workers (2025): Korea 1,066 · Japan 452 · IFR | - | **source_located** | ifr_density26 |  |
 | `tx_drinks` | Telexistence (company claim): one robot restocks about 1,000 beverages a day; remote operator takes over on failures. | ≈ 1,000 drinks a day per robot · COMPANY CLAIM · Telexistence | - | **source_located** | tx_ghost |  |
 | `astra_year` | Seven-Eleven Japan and Telexistence target in-store deployment of the 'Astra' humanoid in 2029 (a plan). | Humanoid in stores: TARGET 2029 · A PLAN, NOT A PRODUCT | - | **source_located** | tx_astra |  |
 | `yen_drop` | Fed G.5A: 106.78 yen per dollar (2020 avg) vs 149.57 (2025 avg); OUR CALCULATION: the yen lost 28.6% of its dollar value. | ¥ per $: 107 (2020) → 150 (2025) · yen ≈ −29% vs $ · Fed / OUR CALC | - | **data_derived** | fed_g5a |  |

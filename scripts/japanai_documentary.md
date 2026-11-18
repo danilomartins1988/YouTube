@@ -105,10 +105,10 @@ But here's the strange part. Look at where the robots go. In its latest fiscal y
 
 ## c3_density - The robot superpower
 
-So who actually uses the most robots? Count robots per factory worker, and South Korea has nearly three times as many as Japan. China and Germany are ahead of Japan too. The robot superpower is not the most robotic country.
+So who actually uses the most robots? Count robots per factory worker, and South Korea has more than twice as many as Japan. Singapore and Germany are ahead of Japan too. The robot superpower is not the most robotic country.
 
-> `density_x` [source_located] IFR WR 2025: robot density 2024 Korea 1,220 vs Japan 446 per 10,000 manufacturing employees; OUR CALCULATION 2.7x; Japan 4th... listed after Singapore 818, China 567, Germany 449. (sources: ifr_wr25)  
-> IFR World Robotics 2025 robot density 2024 (Korea 1,220; Japan 446); ratio OUR CALCULATION.  
+> `density_x` [source_located] IFR (Nov 12, 2026; 2025 data): robot density Korea 1,066 vs Japan 452 per 10,000 manufacturing employees; OUR CALCULATION 2.36x; Singapore 873 and Germany 469 also ahead of Japan (4th); China 193 on a new employment base. (sources: ifr_density26)  
+> IFR density release Nov 12, 2026 (2025 data; Korea 1,066; Japan 452); ratio OUR CALCULATION.  
 
 ## c3_draw - The robot superpower
 

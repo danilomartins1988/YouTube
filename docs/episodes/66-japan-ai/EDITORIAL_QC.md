@@ -5,7 +5,7 @@
   of ~31 s (p17, p23; above the 10-25 s target, kept: each teaches a full mechanism); 4 dataset-licence notes (public government data);
   3 scene-sequence similarity notes (shared pipeline structure; all sets are new in CartoonStage/japan.tsx)). The first build failed QC on
   the word "yen" (USD-only rule): narration and screen text were reworded ("Japan's currency", "sales dollars"), re-rendered, 0 errors.
-- **Technical:** 1920x1080, 702.0 s (660-800 target), -16.2 LUFS, no black gaps, no frozen picture > 5 s, licensed assets only.
+- **Technical:** 1920x1080, 703.1 s (660-800 target), -16.2 LUFS, no black gaps, no frozen picture > 5 s, licensed assets only.
 - **Story over statistics:** one protagonist (Hiro) and journey (empty stool → Kobo → parts ship on time); 14 spoken figures, at most one per
   scene (counter: 15, see FACT_CHECK.md); one big number on screen at a time; full figures in the description and FACT_CHECK.md.
 - **Accuracy:** projections labelled PROJECTION (IPSS 2070), estimates ESTIMATE (MLIT, MHLW), company figures COMPANY CLAIM (Telexistence),

@@ -3,7 +3,7 @@
 > **Owner, set the title in YouTube Studio in a desktop browser.** The usual upload path truncates titles at 30 characters; the title
 > "Will AI Make Japan Rich Again?" is 30 characters (no em dash). Paste it from `youtube-package/title.txt`.
 
-- Runtime 11:42 (702.0 s), QC 0 errors (18 warnings, see EDITORIAL_QC.md), no freeze > 5 s, no black gaps, −16.2 LUFS. Narration US$0.28
+- Runtime 11:43 (703.1 s), QC 0 errors (18 warnings, see EDITORIAL_QC.md), no freeze > 5 s, no black gaps, −16.2 LUFS. Narration US$0.29
   (gpt-4o-mini-tts, voice ash; 8,710 characters plus a 595-character re-take after the USD wording fix). Commercial score 90; SEO score 89.
 - Light copy: `output/japanai_documentary_light.mp4` (master deleted). Shorts: `output/shorts/66-japan-ai_short.mp4`,
   `66-japan-ai-b_short.mp4`, `66-japan-ai-c_short.mp4` (SHORTS.md).

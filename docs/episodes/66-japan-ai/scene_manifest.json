@@ -1519,73 +1519,73 @@
       "segment": "c3_density",
       "type": "engine_cartoon",
       "start_s": 292.23,
-      "end_s": 308.03,
-      "duration_s": 15.8,
+      "end_s": 309.13,
+      "duration_s": 16.9,
       "visual_objective": "",
-      "narration": "So who actually uses the most robots? Count robots per factory worker, and South Korea has nearly three times as many as Japan. China and Germany are ahead of Japan too. The robot superpower is not the most robotic country.",
+      "narration": "So who actually uses the most robots? Count robots per factory worker, and South Korea has more than twice as many as Japan. Singapore and Germany are ahead of Japan too. The robot superpower is not the most robotic country.",
       "keyframes": [
         {
           "param": "zones[0].rows[1].at.cue",
           "cue": "Count robots",
           "label": "zones[0].rows[1].at.cue",
-          "scene_time_s": 3.68,
-          "absolute_s": 295.91
+          "scene_time_s": 3.43,
+          "absolute_s": 295.66
         },
         {
           "param": "zones[0].rows[0].at.cue",
           "cue": "South Korea has",
           "label": "zones[0].rows[0].at.cue",
-          "scene_time_s": 5.85,
-          "absolute_s": 298.08
+          "scene_time_s": 5.89,
+          "absolute_s": 298.12
         },
         {
           "param": "cam[1].at.cue",
           "cue": "South Korea has",
           "label": "cam[1].at.cue",
-          "scene_time_s": 5.85,
-          "absolute_s": 298.08
+          "scene_time_s": 5.89,
+          "absolute_s": 298.12
         },
         {
           "param": "items[0].at.cue",
           "cue": "as many as Japan",
           "label": "items[0].at.cue",
-          "scene_time_s": 7.64,
-          "absolute_s": 299.87
+          "scene_time_s": 7.47,
+          "absolute_s": 299.7
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "as many as Japan",
           "label": "callouts[0].until.cue",
-          "scene_time_s": 7.64,
-          "absolute_s": 299.87
+          "scene_time_s": 7.47,
+          "absolute_s": 299.7
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "as many as Japan",
           "label": "callouts[1].at.cue",
-          "scene_time_s": 7.64,
-          "absolute_s": 299.87
+          "scene_time_s": 7.47,
+          "absolute_s": 299.7
         },
         {
           "param": "cam[2].at.cue",
           "cue": "The robot superpower",
           "label": "cam[2].at.cue",
-          "scene_time_s": 12.22,
-          "absolute_s": 304.45
+          "scene_time_s": 12.67,
+          "absolute_s": 304.9
         },
         {
           "param": "items[0].until.cue",
           "cue": "The robot superpower",
           "label": "items[0].until.cue",
-          "scene_time_s": 12.22,
-          "absolute_s": 304.45
+          "scene_time_s": 12.67,
+          "absolute_s": 304.9
         },
         {
           "param": "items[1].at.cue",
           "cue": "The robot superpower",
           "label": "items[1].at.cue",
-          "scene_time_s": 12.22,
-          "absolute_s": 304.45
+          "scene_time_s": 12.67,
+          "absolute_s": 304.9
         }
       ],
       "unresolved_cues": [],
@@ -1593,7 +1593,7 @@
         "font:inter"
       ],
       "sources": [
-        "ifr_wr25"
+        "ifr_density26"
       ],
       "transition_out": "scan"
     },
@@ -1602,8 +1602,8 @@
       "id": "p17_draw",
       "segment": "c3_draw",
       "type": "engine_draw",
-      "start_s": 308.03,
-      "end_s": 339.73,
+      "start_s": 309.13,
+      "end_s": 340.83,
       "duration_s": 31.7,
       "visual_objective": "",
       "narration": "Why would a shortage be good news for robots? Let me draw it. Fewer workers means employers compete for them, so wages rise. Higher wages make a robot look cheap by comparison. So companies buy robots, and every remaining worker produces more. That last box is the whole game. Output per worker. A country can shrink and still get richer per person, if each pair of hands does more.",
@@ -1613,91 +1613,91 @@
           "cue": "Let me draw it",
           "label": "draw_start.cue",
           "scene_time_s": 4.04,
-          "absolute_s": 312.07
+          "absolute_s": 313.17
         },
         {
           "param": "strokes[8].start.cue",
           "cue": "Let me draw it",
           "label": "strokes[8].start.cue",
           "scene_time_s": 4.04,
-          "absolute_s": 312.07
+          "absolute_s": 313.17
         },
         {
           "param": "strokes[0].start.cue",
           "cue": "Fewer workers",
           "label": "strokes[0].start.cue",
           "scene_time_s": 5.64,
-          "absolute_s": 313.67
+          "absolute_s": 314.77
         },
         {
           "param": "strokes[1].start.cue",
           "cue": "so wages rise",
           "label": "strokes[1].start.cue",
           "scene_time_s": 8.91,
-          "absolute_s": 316.94
+          "absolute_s": 318.04
         },
         {
           "param": "strokes[2].start.cue",
           "cue": "so wages rise",
           "label": "strokes[2].start.cue",
           "scene_time_s": 8.91,
-          "absolute_s": 316.94
+          "absolute_s": 318.04
         },
         {
           "param": "strokes[3].start.cue",
           "cue": "Higher wages",
           "label": "strokes[3].start.cue",
           "scene_time_s": 10.68,
-          "absolute_s": 318.71
+          "absolute_s": 319.81
         },
         {
           "param": "strokes[4].start.cue",
           "cue": "Higher wages",
           "label": "strokes[4].start.cue",
           "scene_time_s": 10.68,
-          "absolute_s": 318.71
+          "absolute_s": 319.81
         },
         {
           "param": "actions[0].at.cue",
           "cue": "Higher wages",
           "label": "actions[0].at.cue",
           "scene_time_s": 11.08,
-          "absolute_s": 319.11
+          "absolute_s": 320.21
         },
         {
           "param": "strokes[5].start.cue",
           "cue": "So companies buy robots",
           "label": "strokes[5].start.cue",
           "scene_time_s": 14.6,
-          "absolute_s": 322.63
+          "absolute_s": 323.73
         },
         {
           "param": "strokes[6].start.cue",
           "cue": "every remaining worker",
           "label": "strokes[6].start.cue",
           "scene_time_s": 16.66,
-          "absolute_s": 324.69
+          "absolute_s": 325.79
         },
         {
           "param": "actions[1].at.cue",
           "cue": "That last box",
           "label": "actions[1].at.cue",
           "scene_time_s": 20.49,
-          "absolute_s": 328.52
+          "absolute_s": 329.62
         },
         {
           "param": "actions[2].at.cue",
           "cue": "Output per worker",
           "label": "actions[2].at.cue",
           "scene_time_s": 23.32,
-          "absolute_s": 331.35
+          "absolute_s": 332.45
         },
         {
           "param": "strokes[7].start.cue",
           "cue": "A country can shrink",
           "label": "strokes[7].start.cue",
           "scene_time_s": 25.11,
-          "absolute_s": 333.14
+          "absolute_s": 334.24
         }
       ],
       "unresolved_cues": [],
@@ -1712,8 +1712,8 @@
       "id": "s18_b4",
       "segment": "c4_card",
       "type": "engine_cartoon",
-      "start_s": 339.73,
-      "end_s": 343.93,
+      "start_s": 340.83,
+      "end_s": 345.03,
       "duration_s": 4.2,
       "visual_objective": "",
       "narration": "",
@@ -1730,8 +1730,8 @@
       "id": "s19_konbini",
       "segment": "c4_konbini",
       "type": "engine_cartoon",
-      "start_s": 343.93,
-      "end_s": 371.43,
+      "start_s": 345.03,
+      "end_s": 372.53,
       "duration_s": 27.5,
       "visual_objective": "",
       "narration": "Step behind the drink fridge in a Tokyo convenience store, and you may find a robot arm sliding cold bottles onto the shelves. Its maker, a startup called Telexistence, says one arm can restock about a thousand drinks a day. When it fumbles a bottle, a person somewhere else puts on a headset and finishes the job remotely. That's not a demo. That's a deployment.",
@@ -1741,140 +1741,140 @@
           "cue": "you may find",
           "label": "zones[0].cut[1][0].cue",
           "scene_time_s": 4.34,
-          "absolute_s": 348.28
+          "absolute_s": 349.38
         },
         {
           "param": "cam[1].at.cue",
           "cue": "you may find",
           "label": "cam[1].at.cue",
           "scene_time_s": 4.34,
-          "absolute_s": 348.28
+          "absolute_s": 349.38
         },
         {
           "param": "zones[0].cut[2][0].cue",
           "cue": "sliding cold bottles",
           "label": "zones[0].cut[2][0].cue",
           "scene_time_s": 6.1,
-          "absolute_s": 350.03
+          "absolute_s": 351.13
         },
         {
           "param": "zones[0].stock[1][0].cue",
           "cue": "sliding cold bottles",
           "label": "zones[0].stock[1][0].cue",
           "scene_time_s": 6.1,
-          "absolute_s": 350.03
+          "absolute_s": 351.13
         },
         {
           "param": "cam[2].at.cue",
           "cue": "Its maker",
           "label": "cam[2].at.cue",
           "scene_time_s": 9.47,
-          "absolute_s": 353.4
+          "absolute_s": 354.5
         },
         {
           "param": "items[0].at.cue",
           "cue": "restock about",
           "label": "items[0].at.cue",
           "scene_time_s": 13.77,
-          "absolute_s": 357.71
+          "absolute_s": 358.81
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "restock about",
           "label": "callouts[0].until.cue",
           "scene_time_s": 13.77,
-          "absolute_s": 357.71
+          "absolute_s": 358.81
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "restock about",
           "label": "callouts[1].at.cue",
           "scene_time_s": 13.77,
-          "absolute_s": 357.71
+          "absolute_s": 358.81
         },
         {
           "param": "zones[0].stock[2][0].cue",
           "cue": "When it fumbles",
           "label": "zones[0].stock[2][0].cue",
           "scene_time_s": 17.12,
-          "absolute_s": 361.05
+          "absolute_s": 362.15
         },
         {
           "param": "zones[0].fumbleAt.cue",
           "cue": "When it fumbles",
           "label": "zones[0].fumbleAt.cue",
           "scene_time_s": 17.12,
-          "absolute_s": 361.05
+          "absolute_s": 362.15
         },
         {
           "param": "cam[3].at.cue",
           "cue": "When it fumbles",
           "label": "cam[3].at.cue",
           "scene_time_s": 17.12,
-          "absolute_s": 361.05
+          "absolute_s": 362.15
         },
         {
           "param": "items[0].until.cue",
           "cue": "When it fumbles",
           "label": "items[0].until.cue",
           "scene_time_s": 17.12,
-          "absolute_s": 361.05
+          "absolute_s": 362.15
         },
         {
           "param": "items[1].at.cue",
           "cue": "When it fumbles",
           "label": "items[1].at.cue",
           "scene_time_s": 17.12,
-          "absolute_s": 361.05
+          "absolute_s": 362.15
         },
         {
           "param": "zones[0].vrAt.cue",
           "cue": "puts on a headset",
           "label": "zones[0].vrAt.cue",
           "scene_time_s": 20.08,
-          "absolute_s": 364.01
+          "absolute_s": 365.11
         },
         {
           "param": "cam[4].at.cue",
           "cue": "puts on a headset",
           "label": "cam[4].at.cue",
           "scene_time_s": 20.08,
-          "absolute_s": 364.01
+          "absolute_s": 365.11
         },
         {
           "param": "items[1].until.cue",
           "cue": "puts on a headset",
           "label": "items[1].until.cue",
           "scene_time_s": 20.08,
-          "absolute_s": 364.01
+          "absolute_s": 365.11
         },
         {
           "param": "zones[0].stock[3][0].cue",
           "cue": "finishes the job",
           "label": "zones[0].stock[3][0].cue",
           "scene_time_s": 21.27,
-          "absolute_s": 365.21
+          "absolute_s": 366.31
         },
         {
           "param": "zones[0].stock[4][0].cue",
           "cue": "That's a deployment",
           "label": "zones[0].stock[4][0].cue",
           "scene_time_s": 25.47,
-          "absolute_s": 369.4
+          "absolute_s": 370.5
         },
         {
           "param": "cam[5].at.cue",
           "cue": "That's a deployment",
           "label": "cam[5].at.cue",
           "scene_time_s": 25.47,
-          "absolute_s": 369.4
+          "absolute_s": 370.5
         },
         {
           "param": "items[2].at.cue",
           "cue": "That's a deployment",
           "label": "items[2].at.cue",
           "scene_time_s": 25.47,
-          "absolute_s": 369.4
+          "absolute_s": 370.5
         }
       ],
       "unresolved_cues": [],
@@ -1891,8 +1891,8 @@
       "id": "s20_humanoid",
       "segment": "c4_humanoid",
       "type": "engine_cartoon",
-      "start_s": 371.43,
-      "end_s": 402.7,
+      "start_s": 372.53,
+      "end_s": 403.8,
       "duration_s": 31.27,
       "visual_objective": "",
       "narration": "Now compare that with the robots in the headlines. Japan's most famous walking humanoid, Honda's ASIMO, charmed crowds for years and retired without ever getting a real job. Today, Seven-Eleven Japan and Telexistence are developing a humanoid helper, with a target of putting it in stores by twenty twenty-nine. That's a plan, not a product. In Japan, the robots doing the work right now are arms, not androids.",
@@ -1902,119 +1902,119 @@
           "cue": "Japan's most famous",
           "label": "zones[0].caseAt.cue",
           "scene_time_s": 4.31,
-          "absolute_s": 375.74
+          "absolute_s": 376.84
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Japan's most famous",
           "label": "cam[1].at.cue",
           "scene_time_s": 4.31,
-          "absolute_s": 375.74
+          "absolute_s": 376.84
         },
         {
           "param": "items[0].until.cue",
           "cue": "Japan's most famous",
           "label": "items[0].until.cue",
           "scene_time_s": 4.31,
-          "absolute_s": 375.74
+          "absolute_s": 376.84
         },
         {
           "param": "items[1].at.cue",
           "cue": "charmed crowds",
           "label": "items[1].at.cue",
           "scene_time_s": 8.46,
-          "absolute_s": 379.89
+          "absolute_s": 380.99
         },
         {
           "param": "zones[0].protoAt.cue",
           "cue": "developing a humanoid",
           "label": "zones[0].protoAt.cue",
           "scene_time_s": 17.38,
-          "absolute_s": 388.81
+          "absolute_s": 389.91
         },
         {
           "param": "cam[2].at.cue",
           "cue": "developing a humanoid",
           "label": "cam[2].at.cue",
           "scene_time_s": 17.38,
-          "absolute_s": 388.81
+          "absolute_s": 389.91
         },
         {
           "param": "items[1].until.cue",
           "cue": "developing a humanoid",
           "label": "items[1].until.cue",
           "scene_time_s": 17.38,
-          "absolute_s": 388.81
+          "absolute_s": 389.91
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "developing a humanoid",
           "label": "callouts[0].until.cue",
           "scene_time_s": 17.38,
-          "absolute_s": 388.81
+          "absolute_s": 389.91
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "developing a humanoid",
           "label": "callouts[1].at.cue",
           "scene_time_s": 17.38,
-          "absolute_s": 388.81
+          "absolute_s": 389.91
         },
         {
           "param": "items[2].at.cue",
           "cue": "putting it in stores",
           "label": "items[2].at.cue",
           "scene_time_s": 21.14,
-          "absolute_s": 392.58
+          "absolute_s": 393.68
         },
         {
           "param": "cam[3].at.cue",
           "cue": "That's a plan",
           "label": "cam[3].at.cue",
           "scene_time_s": 24.31,
-          "absolute_s": 395.74
+          "absolute_s": 396.84
         },
         {
           "param": "zones[0].workAt.cue",
           "cue": "the robots doing the work",
           "label": "zones[0].workAt.cue",
           "scene_time_s": 26.93,
-          "absolute_s": 398.36
+          "absolute_s": 399.46
         },
         {
           "param": "cam[4].at.cue",
           "cue": "the robots doing the work",
           "label": "cam[4].at.cue",
           "scene_time_s": 26.93,
-          "absolute_s": 398.36
+          "absolute_s": 399.46
         },
         {
           "param": "items[2].until.cue",
           "cue": "the robots doing the work",
           "label": "items[2].until.cue",
           "scene_time_s": 26.93,
-          "absolute_s": 398.36
+          "absolute_s": 399.46
         },
         {
           "param": "items[3].at.cue",
           "cue": "the robots doing the work",
           "label": "items[3].at.cue",
           "scene_time_s": 26.93,
-          "absolute_s": 398.36
+          "absolute_s": 399.46
         },
         {
           "param": "callouts[1].until.cue",
           "cue": "the robots doing the work",
           "label": "callouts[1].until.cue",
           "scene_time_s": 26.93,
-          "absolute_s": 398.36
+          "absolute_s": 399.46
         },
         {
           "param": "callouts[2].at.cue",
           "cue": "the robots doing the work",
           "label": "callouts[2].at.cue",
           "scene_time_s": 26.93,
-          "absolute_s": 398.36
+          "absolute_s": 399.46
         }
       ],
       "unresolved_cues": [],
@@ -2032,8 +2032,8 @@
       "id": "s21_care",
       "segment": "c4_care",
       "type": "engine_cartoon",
-      "start_s": 402.7,
-      "end_s": 429.63,
+      "start_s": 403.8,
+      "end_s": 430.73,
       "duration_s": 26.93,
       "visual_objective": "",
       "narration": "Back at the care home, the helpers are quieter. Sensors under the mattress that tell night staff who is awake. Machines that help lift residents out of bed. Economists who studied Japanese nursing homes found something surprising. Homes that adopted robots ended up with more staff, not fewer, and caregivers spent more of their time on what the researchers call human touch.",
@@ -2043,126 +2043,126 @@
           "cue": "Sensors under",
           "label": "zones[0].sensors[1][0].cue",
           "scene_time_s": 4.5,
-          "absolute_s": 407.2
+          "absolute_s": 408.3
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Sensors under",
           "label": "cam[1].at.cue",
           "scene_time_s": 4.5,
-          "absolute_s": 407.2
+          "absolute_s": 408.3
         },
         {
           "param": "items[2].at.cue",
           "cue": "Sensors under",
           "label": "items[2].at.cue",
           "scene_time_s": 4.5,
-          "absolute_s": 407.2
+          "absolute_s": 408.3
         },
         {
           "param": "zones[0].lift[1][0].cue",
           "cue": "Machines that help",
           "label": "zones[0].lift[1][0].cue",
           "scene_time_s": 8.56,
-          "absolute_s": 411.26
+          "absolute_s": 412.36
         },
         {
           "param": "cam[2].at.cue",
           "cue": "Machines that help",
           "label": "cam[2].at.cue",
           "scene_time_s": 8.56,
-          "absolute_s": 411.26
+          "absolute_s": 412.36
         },
         {
           "param": "zones[0].lift[2][0].cue",
           "cue": "out of bed",
           "label": "zones[0].lift[2][0].cue",
           "scene_time_s": 10.43,
-          "absolute_s": 413.13
+          "absolute_s": 414.23
         },
         {
           "param": "cam[3].at.cue",
           "cue": "Economists who studied",
           "label": "cam[3].at.cue",
           "scene_time_s": 11.88,
-          "absolute_s": 414.58
+          "absolute_s": 415.68
         },
         {
           "param": "items[2].until.cue",
           "cue": "Economists who studied",
           "label": "items[2].until.cue",
           "scene_time_s": 11.88,
-          "absolute_s": 414.58
+          "absolute_s": 415.68
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "Economists who studied",
           "label": "callouts[0].until.cue",
           "scene_time_s": 11.88,
-          "absolute_s": 414.58
+          "absolute_s": 415.68
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "Economists who studied",
           "label": "callouts[1].at.cue",
           "scene_time_s": 11.88,
-          "absolute_s": 414.58
+          "absolute_s": 415.68
         },
         {
           "param": "items[1].x[1][0].cue",
           "cue": "Homes that adopted",
           "label": "items[1].x[1][0].cue",
           "scene_time_s": 17.05,
-          "absolute_s": 419.75
+          "absolute_s": 420.85
         },
         {
           "param": "items[3].at.cue",
           "cue": "more staff, not fewer",
           "label": "items[3].at.cue",
           "scene_time_s": 19.95,
-          "absolute_s": 422.65
+          "absolute_s": 423.75
         },
         {
           "param": "cam[4].at.cue",
           "cue": "human touch",
           "label": "cam[4].at.cue",
           "scene_time_s": 25.72,
-          "absolute_s": 428.42
+          "absolute_s": 429.52
         },
         {
           "param": "items[1].x[2][0].cue",
           "cue": "human touch",
           "label": "items[1].x[2][0].cue",
           "scene_time_s": 25.72,
-          "absolute_s": 428.42
+          "absolute_s": 429.52
         },
         {
           "param": "items[1].faces[1][0].cue",
           "cue": "human touch",
           "label": "items[1].faces[1][0].cue",
           "scene_time_s": 25.72,
-          "absolute_s": 428.42
+          "absolute_s": 429.52
         },
         {
           "param": "items[3].until.cue",
           "cue": "human touch",
           "label": "items[3].until.cue",
           "scene_time_s": 25.72,
-          "absolute_s": 428.42
+          "absolute_s": 429.52
         },
         {
           "param": "items[4].at.cue",
           "cue": "human touch",
           "label": "items[4].at.cue",
           "scene_time_s": 25.72,
-          "absolute_s": 428.42
+          "absolute_s": 429.52
         },
         {
           "param": "items[5].at.cue",
           "cue": "human touch",
           "label": "items[5].at.cue",
           "scene_time_s": 26.02,
-          "absolute_s": 428.72
+          "absolute_s": 429.82
         }
       ],
       "unresolved_cues": [],
@@ -2179,8 +2179,8 @@
       "id": "s22_hiro",
       "segment": "c4_hiro",
       "type": "engine_cartoon",
-      "start_s": 429.63,
-      "end_s": 458.93,
+      "start_s": 430.73,
+      "end_s": 460.03,
       "duration_s": 29.3,
       "visual_objective": "",
       "narration": "Which brings us back to Hiro. One weekend, Aoi comes home with a plan. Not a humanoid. A small collaborative robot arm, the kind built to work safely beside people. They name it Kobo, from the Japanese word for workshop. Aoi writes the program. Kobo loads the lathe, again and again, while Hiro does the part only he can do, checking every piece with a lifetime of experience.",
@@ -2190,217 +2190,217 @@
           "cue": "Aoi comes home",
           "label": "zones[0].stoolHi[1].cue",
           "scene_time_s": 3.94,
-          "absolute_s": 433.58
+          "absolute_s": 434.68
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Aoi comes home",
           "label": "cam[1].at.cue",
           "scene_time_s": 3.94,
-          "absolute_s": 433.58
+          "absolute_s": 434.68
         },
         {
           "param": "items[1].at.cue",
           "cue": "Aoi comes home",
           "label": "items[1].at.cue",
           "scene_time_s": 3.94,
-          "absolute_s": 433.58
+          "absolute_s": 434.68
         },
         {
           "param": "items[2].at.cue",
           "cue": "with a plan",
           "label": "items[2].at.cue",
           "scene_time_s": 4.86,
-          "absolute_s": 434.5
+          "absolute_s": 435.6
         },
         {
           "param": "items[1].x[1][0].cue",
           "cue": "Aoi comes home",
           "label": "items[1].x[1][0].cue",
           "scene_time_s": 5.14,
-          "absolute_s": 434.78
+          "absolute_s": 435.88
         },
         {
           "param": "items[0].faces[1][0].cue",
           "cue": "Not a humanoid",
           "label": "items[0].faces[1][0].cue",
           "scene_time_s": 6.07,
-          "absolute_s": 435.7
+          "absolute_s": 436.8
         },
         {
           "param": "items[0].takes[0].cue",
           "cue": "Not a humanoid",
           "label": "items[0].takes[0].cue",
           "scene_time_s": 6.07,
-          "absolute_s": 435.7
+          "absolute_s": 436.8
         },
         {
           "param": "items[3].at.cue",
           "cue": "Not a humanoid",
           "label": "items[3].at.cue",
           "scene_time_s": 6.07,
-          "absolute_s": 435.7
+          "absolute_s": 436.8
         },
         {
           "param": "zones[0].arm[1][0].cue",
           "cue": "A small collaborative",
           "label": "zones[0].arm[1][0].cue",
           "scene_time_s": 7.44,
-          "absolute_s": 437.07
+          "absolute_s": 438.17
         },
         {
           "param": "cam[2].at.cue",
           "cue": "A small collaborative",
           "label": "cam[2].at.cue",
           "scene_time_s": 7.44,
-          "absolute_s": 437.07
+          "absolute_s": 438.17
         },
         {
           "param": "items[2].until.cue",
           "cue": "A small collaborative",
           "label": "items[2].until.cue",
           "scene_time_s": 7.44,
-          "absolute_s": 437.07
+          "absolute_s": 438.17
         },
         {
           "param": "zones[0].arm[2][0].cue",
           "cue": "built to work safely",
           "label": "zones[0].arm[2][0].cue",
           "scene_time_s": 10.43,
-          "absolute_s": 440.06
+          "absolute_s": 441.16
         },
         {
           "param": "items[5].at.cue",
           "cue": "built to work safely",
           "label": "items[5].at.cue",
           "scene_time_s": 10.43,
-          "absolute_s": 440.06
+          "absolute_s": 441.16
         },
         {
           "param": "items[0].faces[2][0].cue",
           "cue": "They name it Kobo",
           "label": "items[0].faces[2][0].cue",
           "scene_time_s": 13.45,
-          "absolute_s": 443.08
+          "absolute_s": 444.18
         },
         {
           "param": "items[3].until.cue",
           "cue": "They name it Kobo",
           "label": "items[3].until.cue",
           "scene_time_s": 13.45,
-          "absolute_s": 443.08
+          "absolute_s": 444.18
         },
         {
           "param": "items[4].at.cue",
           "cue": "They name it Kobo",
           "label": "items[4].at.cue",
           "scene_time_s": 13.45,
-          "absolute_s": 443.08
+          "absolute_s": 444.18
         },
         {
           "param": "items[5].until.cue",
           "cue": "They name it Kobo",
           "label": "items[5].until.cue",
           "scene_time_s": 13.45,
-          "absolute_s": 443.08
+          "absolute_s": 444.18
         },
         {
           "param": "zones[0].codeAt.cue",
           "cue": "Aoi writes the program",
           "label": "zones[0].codeAt.cue",
           "scene_time_s": 17.58,
-          "absolute_s": 447.21
+          "absolute_s": 448.31
         },
         {
           "param": "cam[3].at.cue",
           "cue": "Aoi writes the program",
           "label": "cam[3].at.cue",
           "scene_time_s": 17.58,
-          "absolute_s": 447.21
+          "absolute_s": 448.31
         },
         {
           "param": "items[1].poses[1][0].cue",
           "cue": "Aoi writes the program",
           "label": "items[1].poses[1][0].cue",
           "scene_time_s": 17.58,
-          "absolute_s": 447.21
+          "absolute_s": 448.31
         },
         {
           "param": "items[4].until.cue",
           "cue": "Aoi writes the program",
           "label": "items[4].until.cue",
           "scene_time_s": 17.58,
-          "absolute_s": 447.21
+          "absolute_s": 448.31
         },
         {
           "param": "zones[0].cycle[1][0].cue",
           "cue": "Kobo loads the lathe",
           "label": "zones[0].cycle[1][0].cue",
           "scene_time_s": 19.65,
-          "absolute_s": 449.28
+          "absolute_s": 450.38
         },
         {
           "param": "cam[4].at.cue",
           "cue": "Kobo loads the lathe",
           "label": "cam[4].at.cue",
           "scene_time_s": 19.65,
-          "absolute_s": 449.28
+          "absolute_s": 450.38
         },
         {
           "param": "items[1].poses[2][0].cue",
           "cue": "Kobo loads the lathe",
           "label": "items[1].poses[2][0].cue",
           "scene_time_s": 19.65,
-          "absolute_s": 449.28
+          "absolute_s": 450.38
         },
         {
           "param": "zones[0].cycle[2][0].cue",
           "cue": "again and again",
           "label": "zones[0].cycle[2][0].cue",
           "scene_time_s": 21.01,
-          "absolute_s": 450.64
+          "absolute_s": 451.74
         },
         {
           "param": "zones[0].run[1][0].cue",
           "cue": "again and again",
           "label": "zones[0].run[1][0].cue",
           "scene_time_s": 21.01,
-          "absolute_s": 450.64
+          "absolute_s": 451.74
         },
         {
           "param": "zones[0].parts[1][0].cue",
           "cue": "while Hiro does",
           "label": "zones[0].parts[1][0].cue",
           "scene_time_s": 22.37,
-          "absolute_s": 452.0
+          "absolute_s": 453.1
         },
         {
           "param": "items[6].at.cue",
           "cue": "while Hiro does",
           "label": "items[6].at.cue",
           "scene_time_s": 22.37,
-          "absolute_s": 452.0
+          "absolute_s": 453.1
         },
         {
           "param": "cam[5].at.cue",
           "cue": "checking every piece",
           "label": "cam[5].at.cue",
           "scene_time_s": 25.35,
-          "absolute_s": 454.98
+          "absolute_s": 456.08
         },
         {
           "param": "items[0].faces[3][0].cue",
           "cue": "checking every piece",
           "label": "items[0].faces[3][0].cue",
           "scene_time_s": 25.35,
-          "absolute_s": 454.98
+          "absolute_s": 456.08
         },
         {
           "param": "items[0].poses[1][0].cue",
           "cue": "checking every piece",
           "label": "items[0].poses[1][0].cue",
           "scene_time_s": 25.35,
-          "absolute_s": 454.98
+          "absolute_s": 456.08
         }
       ],
       "unresolved_cues": [],
@@ -2415,8 +2415,8 @@
       "id": "p23_draw",
       "segment": "c4_draw",
       "type": "engine_draw",
-      "start_s": 458.93,
-      "end_s": 489.73,
+      "start_s": 460.03,
+      "end_s": 490.83,
       "duration_s": 30.8,
       "visual_objective": "",
       "narration": "But who gets paid for Kobo? Let me draw it. First, the arm, the hardware. Japan is superb at this. Second, the brain, the AI software that lets a robot see and learn. Much of that is written in America and China. And finally, the user, the small business that puts the robot to work. In an AI economy, more and more of the money flows to the brain and to the user. Japan owns the arm.",
@@ -2426,105 +2426,105 @@
           "cue": "Let me draw it",
           "label": "draw_start.cue",
           "scene_time_s": 2.96,
-          "absolute_s": 461.89
+          "absolute_s": 462.99
         },
         {
           "param": "strokes[10].start.cue",
           "cue": "Let me draw it",
           "label": "strokes[10].start.cue",
           "scene_time_s": 2.96,
-          "absolute_s": 461.89
+          "absolute_s": 462.99
         },
         {
           "param": "strokes[0].start.cue",
           "cue": "First, the arm",
           "label": "strokes[0].start.cue",
           "scene_time_s": 4.45,
-          "absolute_s": 463.38
+          "absolute_s": 464.48
         },
         {
           "param": "strokes[1].start.cue",
           "cue": "Japan is superb",
           "label": "strokes[1].start.cue",
           "scene_time_s": 7.07,
-          "absolute_s": 466.0
+          "absolute_s": 467.1
         },
         {
           "param": "strokes[2].start.cue",
           "cue": "Second, the brain",
           "label": "strokes[2].start.cue",
           "scene_time_s": 9.17,
-          "absolute_s": 468.1
+          "absolute_s": 469.2
         },
         {
           "param": "actions[0].at.cue",
           "cue": "Second, the brain",
           "label": "actions[0].at.cue",
           "scene_time_s": 9.57,
-          "absolute_s": 468.5
+          "absolute_s": 469.6
         },
         {
           "param": "strokes[3].start.cue",
           "cue": "Much of that is written",
           "label": "strokes[3].start.cue",
           "scene_time_s": 14.8,
-          "absolute_s": 473.73
+          "absolute_s": 474.83
         },
         {
           "param": "strokes[4].start.cue",
           "cue": "And finally, the user",
           "label": "strokes[4].start.cue",
           "scene_time_s": 17.99,
-          "absolute_s": 476.92
+          "absolute_s": 478.02
         },
         {
           "param": "strokes[5].start.cue",
           "cue": "the small business",
           "label": "strokes[5].start.cue",
           "scene_time_s": 19.85,
-          "absolute_s": 478.79
+          "absolute_s": 479.89
         },
         {
           "param": "strokes[6].start.cue",
           "cue": "more and more of the money",
           "label": "strokes[6].start.cue",
           "scene_time_s": 24.7,
-          "absolute_s": 483.63
+          "absolute_s": 484.73
         },
         {
           "param": "strokes[7].start.cue",
           "cue": "flows to the brain",
           "label": "strokes[7].start.cue",
           "scene_time_s": 26.08,
-          "absolute_s": 485.02
+          "absolute_s": 486.12
         },
         {
           "param": "actions[1].at.cue",
           "cue": "flows to the brain",
           "label": "actions[1].at.cue",
           "scene_time_s": 26.28,
-          "absolute_s": 485.22
+          "absolute_s": 486.32
         },
         {
           "param": "strokes[8].start.cue",
           "cue": "and to the user",
           "label": "strokes[8].start.cue",
           "scene_time_s": 26.87,
-          "absolute_s": 485.81
+          "absolute_s": 486.91
         },
         {
           "param": "strokes[9].start.cue",
           "cue": "Japan owns the arm",
           "label": "strokes[9].start.cue",
           "scene_time_s": 28.46,
-          "absolute_s": 487.39
+          "absolute_s": 488.49
         },
         {
           "param": "actions[2].at.cue",
           "cue": "Japan owns the arm",
           "label": "actions[2].at.cue",
           "scene_time_s": 28.46,
-          "absolute_s": 487.39
+          "absolute_s": 488.49
         }
       ],
       "unresolved_cues": [],
@@ -2539,8 +2539,8 @@
       "id": "s24_b5",
       "segment": "c5_card",
       "type": "engine_cartoon",
-      "start_s": 489.73,
-      "end_s": 493.93,
+      "start_s": 490.83,
+      "end_s": 495.03,
       "duration_s": 4.2,
       "visual_objective": "",
       "narration": "",
@@ -2557,8 +2557,8 @@
       "id": "s25_yen",
       "segment": "c5_yen",
       "type": "engine_cartoon",
-      "start_s": 493.93,
-      "end_s": 516.73,
+      "start_s": 495.03,
+      "end_s": 517.83,
       "duration_s": 22.8,
       "visual_objective": "",
       "narration": "Now the catches. First, the currency. Since the pandemic, Japan's money has lost more than a quarter of its value against the dollar. That makes Japanese robots cheap for foreign buyers, which helps FANUC. But it makes every imported chip, every barrel of fuel and every software subscription more expensive for Hiro.",
@@ -2568,98 +2568,98 @@
           "cue": "money has lost",
           "label": "zones[0].shrink[1][0].cue",
           "scene_time_s": 5.01,
-          "absolute_s": 498.94
+          "absolute_s": 500.04
         },
         {
           "param": "cam[1].at.cue",
           "cue": "money has lost",
           "label": "cam[1].at.cue",
           "scene_time_s": 5.01,
-          "absolute_s": 498.94
+          "absolute_s": 500.04
         },
         {
           "param": "zones[0].shrink[2][0].cue",
           "cue": "of its value",
           "label": "zones[0].shrink[2][0].cue",
           "scene_time_s": 7.31,
-          "absolute_s": 501.25
+          "absolute_s": 502.35
         },
         {
           "param": "items[0].at.cue",
           "cue": "of its value",
           "label": "items[0].at.cue",
           "scene_time_s": 7.31,
-          "absolute_s": 501.25
+          "absolute_s": 502.35
         },
         {
           "param": "zones[0].outAt.cue",
           "cue": "cheap for foreign buyers",
           "label": "zones[0].outAt.cue",
           "scene_time_s": 11.87,
-          "absolute_s": 505.81
+          "absolute_s": 506.91
         },
         {
           "param": "cam[2].at.cue",
           "cue": "cheap for foreign buyers",
           "label": "cam[2].at.cue",
           "scene_time_s": 11.87,
-          "absolute_s": 505.81
+          "absolute_s": 506.91
         },
         {
           "param": "items[0].until.cue",
           "cue": "cheap for foreign buyers",
           "label": "items[0].until.cue",
           "scene_time_s": 11.87,
-          "absolute_s": 505.81
+          "absolute_s": 506.91
         },
         {
           "param": "items[1].at.cue",
           "cue": "which helps FANUC",
           "label": "items[1].at.cue",
           "scene_time_s": 13.32,
-          "absolute_s": 507.25
+          "absolute_s": 508.35
         },
         {
           "param": "zones[0].inAt.cue",
           "cue": "every imported chip",
           "label": "zones[0].inAt.cue",
           "scene_time_s": 15.86,
-          "absolute_s": 509.79
+          "absolute_s": 510.89
         },
         {
           "param": "cam[3].at.cue",
           "cue": "every imported chip",
           "label": "cam[3].at.cue",
           "scene_time_s": 15.86,
-          "absolute_s": 509.79
+          "absolute_s": 510.89
         },
         {
           "param": "items[1].until.cue",
           "cue": "every imported chip",
           "label": "items[1].until.cue",
           "scene_time_s": 15.86,
-          "absolute_s": 509.79
+          "absolute_s": 510.89
         },
         {
           "param": "items[3].at.cue",
           "cue": "every imported chip",
           "label": "items[3].at.cue",
           "scene_time_s": 15.86,
-          "absolute_s": 509.79
+          "absolute_s": 510.89
         },
         {
           "param": "items[2].at.cue",
           "cue": "more expensive for Hiro",
           "label": "items[2].at.cue",
           "scene_time_s": 20.85,
-          "absolute_s": 514.78
+          "absolute_s": 515.88
         },
         {
           "param": "items[3].takes[0].cue",
           "cue": "more expensive for Hiro",
           "label": "items[3].takes[0].cue",
           "scene_time_s": 20.85,
-          "absolute_s": 514.78
+          "absolute_s": 515.88
         }
       ],
       "unresolved_cues": [],
@@ -2676,8 +2676,8 @@
       "id": "s26_software",
       "segment": "c5_software",
       "type": "engine_cartoon",
-      "start_s": 516.73,
-      "end_s": 540.13,
+      "start_s": 517.83,
+      "end_s": 541.23,
       "duration_s": 23.4,
       "visual_objective": "",
       "narration": "Second, software. Japan builds superb machines, but the economy around them hasn't kept up. Measured by output per hour worked, Japan sits in the bottom third of the rich-country club. And remember FANUC's robot sales at home? They fell. The robots are being made here. They just aren't spreading fast enough here.",
@@ -2687,77 +2687,77 @@
           "cue": "Second, software",
           "label": "zones[0].tilt[1][0].cue",
           "scene_time_s": 0.35,
-          "absolute_s": 517.08
+          "absolute_s": 518.18
         },
         {
           "param": "zones[0].weights[1].at.cue",
           "cue": "Second, software",
           "label": "zones[0].weights[1].at.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 517.08
+          "absolute_s": 518.18
         },
         {
           "param": "zones[0].tilt[2][0].cue",
           "cue": "hasn't kept up",
           "label": "zones[0].tilt[2][0].cue",
           "scene_time_s": 6.76,
-          "absolute_s": 523.49
+          "absolute_s": 524.59
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Measured by output",
           "label": "cam[1].at.cue",
           "scene_time_s": 8.35,
-          "absolute_s": 525.08
+          "absolute_s": 526.18
         },
         {
           "param": "items[0].at.cue",
           "cue": "the bottom third",
           "label": "items[0].at.cue",
           "scene_time_s": 11.66,
-          "absolute_s": 528.4
+          "absolute_s": 529.5
         },
         {
           "param": "cam[2].at.cue",
           "cue": "And remember FANUC's",
           "label": "cam[2].at.cue",
           "scene_time_s": 14.65,
-          "absolute_s": 531.38
+          "absolute_s": 532.48
         },
         {
           "param": "items[0].until.cue",
           "cue": "And remember FANUC's",
           "label": "items[0].until.cue",
           "scene_time_s": 14.65,
-          "absolute_s": 531.38
+          "absolute_s": 532.48
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "And remember FANUC's",
           "label": "callouts[0].until.cue",
           "scene_time_s": 14.65,
-          "absolute_s": 531.38
+          "absolute_s": 532.48
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "And remember FANUC's",
           "label": "callouts[1].at.cue",
           "scene_time_s": 14.65,
-          "absolute_s": 531.38
+          "absolute_s": 532.48
         },
         {
           "param": "items[1].at.cue",
           "cue": "They fell",
           "label": "items[1].at.cue",
           "scene_time_s": 17.35,
-          "absolute_s": 534.08
+          "absolute_s": 535.18
         },
         {
           "param": "items[2].at.cue",
           "cue": "The robots are being made here",
           "label": "items[2].at.cue",
           "scene_time_s": 18.61,
-          "absolute_s": 535.34
+          "absolute_s": 536.44
         }
       ],
       "unresolved_cues": [],
@@ -2775,8 +2775,8 @@
       "id": "s27_debt",
       "segment": "c5_debt",
       "type": "engine_cartoon",
-      "start_s": 540.13,
-      "end_s": 564.87,
+      "start_s": 541.23,
+      "end_s": 565.97,
       "duration_s": 24.73,
       "visual_objective": "",
       "narration": "And then there is debt. The IMF says Japan's government owes about twice the size of its entire economy, the highest of any advanced country. The government also owns large financial assets, so the net picture is less extreme. But as more people retire, more money goes to pensions and health care, and there's less room for everything else.",
@@ -2786,91 +2786,91 @@
           "cue": "owes about",
           "label": "zones[0].tilt[1][0].cue",
           "scene_time_s": 4.33,
-          "absolute_s": 544.47
+          "absolute_s": 545.57
         },
         {
           "param": "zones[0].weights[2].at.cue",
           "cue": "owes about",
           "label": "zones[0].weights[2].at.cue",
           "scene_time_s": 4.33,
-          "absolute_s": 544.47
+          "absolute_s": 545.57
         },
         {
           "param": "cam[1].at.cue",
           "cue": "owes about",
           "label": "cam[1].at.cue",
           "scene_time_s": 4.33,
-          "absolute_s": 544.47
+          "absolute_s": 545.57
         },
         {
           "param": "items[0].at.cue",
           "cue": "owes about",
           "label": "items[0].at.cue",
           "scene_time_s": 4.33,
-          "absolute_s": 544.47
+          "absolute_s": 545.57
         },
         {
           "param": "zones[0].tilt[2][0].cue",
           "cue": "the highest of any",
           "label": "zones[0].tilt[2][0].cue",
           "scene_time_s": 7.9,
-          "absolute_s": 548.04
+          "absolute_s": 549.14
         },
         {
           "param": "cam[2].at.cue",
           "cue": "The government also owns",
           "label": "cam[2].at.cue",
           "scene_time_s": 11.05,
-          "absolute_s": 551.18
+          "absolute_s": 552.28
         },
         {
           "param": "items[0].until.cue",
           "cue": "The government also owns",
           "label": "items[0].until.cue",
           "scene_time_s": 11.05,
-          "absolute_s": 551.18
+          "absolute_s": 552.28
         },
         {
           "param": "zones[0].tilt[3][0].cue",
           "cue": "the net picture",
           "label": "zones[0].tilt[3][0].cue",
           "scene_time_s": 14.63,
-          "absolute_s": 554.76
+          "absolute_s": 555.86
         },
         {
           "param": "items[1].at.cue",
           "cue": "the net picture",
           "label": "items[1].at.cue",
           "scene_time_s": 14.63,
-          "absolute_s": 554.76
+          "absolute_s": 555.86
         },
         {
           "param": "zones[0].tilt[4][0].cue",
           "cue": "But as more people retire",
           "label": "zones[0].tilt[4][0].cue",
           "scene_time_s": 16.95,
-          "absolute_s": 557.08
+          "absolute_s": 558.18
         },
         {
           "param": "cam[3].at.cue",
           "cue": "But as more people retire",
           "label": "cam[3].at.cue",
           "scene_time_s": 16.95,
-          "absolute_s": 557.08
+          "absolute_s": 558.18
         },
         {
           "param": "items[1].until.cue",
           "cue": "But as more people retire",
           "label": "items[1].until.cue",
           "scene_time_s": 16.95,
-          "absolute_s": 557.08
+          "absolute_s": 558.18
         },
         {
           "param": "items[2].at.cue",
           "cue": "But as more people retire",
           "label": "items[2].at.cue",
           "scene_time_s": 16.95,
-          "absolute_s": 557.08
+          "absolute_s": 558.18
         }
       ],
       "unresolved_cues": [],
@@ -2887,8 +2887,8 @@
       "id": "s28_slow",
       "segment": "c5_slow",
       "type": "engine_cartoon",
-      "start_s": 564.87,
-      "end_s": 581.63,
+      "start_s": 565.97,
+      "end_s": 582.73,
       "duration_s": 16.77,
       "visual_objective": "",
       "narration": "Add it all up, and you can see why so many videos call Japan a slow-motion collapse. Last year, its whole economy grew barely more than one percent. And yet, that headline may be measuring the wrong thing.",
@@ -2898,98 +2898,98 @@
           "cue": "so many videos",
           "label": "items[0].at.cue",
           "scene_time_s": 3.12,
-          "absolute_s": 567.99
+          "absolute_s": 569.09
         },
         {
           "param": "items[1].at.cue",
           "cue": "a slow-motion collapse",
           "label": "items[1].at.cue",
           "scene_time_s": 5.37,
-          "absolute_s": 570.23
+          "absolute_s": 571.33
         },
         {
           "param": "cam[1].at.cue",
           "cue": "Last year",
           "label": "cam[1].at.cue",
           "scene_time_s": 7.54,
-          "absolute_s": 572.41
+          "absolute_s": 573.51
         },
         {
           "param": "items[0].until.cue",
           "cue": "Last year",
           "label": "items[0].until.cue",
           "scene_time_s": 7.54,
-          "absolute_s": 572.41
+          "absolute_s": 573.51
         },
         {
           "param": "items[1].until.cue",
           "cue": "Last year",
           "label": "items[1].until.cue",
           "scene_time_s": 7.54,
-          "absolute_s": 572.41
+          "absolute_s": 573.51
         },
         {
           "param": "items[2].at.cue",
           "cue": "its whole economy grew",
           "label": "items[2].at.cue",
           "scene_time_s": 8.23,
-          "absolute_s": 573.1
+          "absolute_s": 574.2
         },
         {
           "param": "callouts[0].until.cue",
           "cue": "its whole economy grew",
           "label": "callouts[0].until.cue",
           "scene_time_s": 8.23,
-          "absolute_s": 573.1
+          "absolute_s": 574.2
         },
         {
           "param": "callouts[1].at.cue",
           "cue": "its whole economy grew",
           "label": "callouts[1].at.cue",
           "scene_time_s": 8.23,
-          "absolute_s": 573.1
+          "absolute_s": 574.2
         },
         {
           "param": "cam[2].at.cue",
           "cue": "And yet",
           "label": "cam[2].at.cue",
           "scene_time_s": 12.54,
-          "absolute_s": 577.41
+          "absolute_s": 578.51
         },
         {
           "param": "items[2].until.cue",
           "cue": "And yet",
           "label": "items[2].until.cue",
           "scene_time_s": 12.54,
-          "absolute_s": 577.41
+          "absolute_s": 578.51
         },
         {
           "param": "items[3].x[0][0].cue",
           "cue": "And yet",
           "label": "items[3].x[0][0].cue",
           "scene_time_s": 12.54,
-          "absolute_s": 577.41
+          "absolute_s": 578.51
         },
         {
           "param": "items[3].at.cue",
           "cue": "And yet",
           "label": "items[3].at.cue",
           "scene_time_s": 12.54,
-          "absolute_s": 577.41
+          "absolute_s": 578.51
         },
         {
           "param": "items[3].x[1][0].cue",
           "cue": "And yet",
           "label": "items[3].x[1][0].cue",
           "scene_time_s": 13.94,
-          "absolute_s": 578.81
+          "absolute_s": 579.91
         },
         {
           "param": "items[4].at.cue",
           "cue": "measuring the wrong thing",
           "label": "items[4].at.cue",
           "scene_time_s": 14.65,
-          "absolute_s": 579.52
+          "absolute_s": 580.62
         }
       ],
       "unresolved_cues": [],
@@ -3006,8 +3006,8 @@
       "id": "s29_b6",
       "segment": "c6_card",
       "type": "engine_cartoon",
-      "start_s": 581.63,
-      "end_s": 585.83,
+      "start_s": 582.73,
+      "end_s": 586.93,
       "duration_s": 4.2,
       "visual_objective": "",
       "narration": "",
@@ -3024,8 +3024,8 @@
       "id": "s30_twist",
       "segment": "c6_twist",
       "type": "engine_cartoon",
-      "start_s": 585.83,
-      "end_s": 606.03,
+      "start_s": 586.93,
+      "end_s": 607.13,
       "duration_s": 20.2,
       "visual_objective": "",
       "narration": "Economists led by Jesús Fernández-Villaverde of the University of Pennsylvania asked a different question. Not how fast Japan grew per citizen, but per working-age adult. Their answer? From the late nineties until the pandemic, Japan grew slightly faster than America.",
@@ -3035,56 +3035,56 @@
           "cue": "asked a different question",
           "label": "items[0].at.cue",
           "scene_time_s": 5.5,
-          "absolute_s": 591.34
+          "absolute_s": 592.44
         },
         {
           "param": "zones[0].board[1][0].cue",
           "cue": "but per working-age adult",
           "label": "zones[0].board[1][0].cue",
           "scene_time_s": 10.79,
-          "absolute_s": 596.62
+          "absolute_s": 597.72
         },
         {
           "param": "cam[1].at.cue",
           "cue": "but per working-age adult",
           "label": "cam[1].at.cue",
           "scene_time_s": 10.79,
-          "absolute_s": 596.62
+          "absolute_s": 597.72
         },
         {
           "param": "zones[0].board[2][0].cue",
           "cue": "Their answer",
           "label": "zones[0].board[2][0].cue",
           "scene_time_s": 13.21,
-          "absolute_s": 599.04
+          "absolute_s": 600.14
         },
         {
           "param": "cam[2].at.cue",
           "cue": "Their answer",
           "label": "cam[2].at.cue",
           "scene_time_s": 13.21,
-          "absolute_s": 599.04
+          "absolute_s": 600.14
         },
         {
           "param": "items[0].until.cue",
           "cue": "Their answer",
           "label": "items[0].until.cue",
           "scene_time_s": 13.21,
-          "absolute_s": 599.04
+          "absolute_s": 600.14
         },
         {
           "param": "items[1].at.cue",
           "cue": "slightly faster than America",
           "label": "items[1].at.cue",
           "scene_time_s": 17.83,
-          "absolute_s": 603.66
+          "absolute_s": 604.76
         },
         {
           "param": "items[2].at.cue",
           "cue": "slightly faster than America",
           "label": "items[2].at.cue",
           "scene_time_s": 18.23,
-          "absolute_s": 604.06
+          "absolute_s": 605.16
         }
       ],
       "unresolved_cues": [],
@@ -3101,8 +3101,8 @@
       "id": "p31_draw",
       "segment": "c6_draw",
       "type": "engine_draw",
-      "start_s": 606.03,
-      "end_s": 629.67,
+      "start_s": 607.13,
+      "end_s": 630.77,
       "duration_s": 23.63,
       "visual_objective": "",
       "narration": "Let me draw it. Japan's total economy looks flat, because the number of workers keeps falling. But divide by the people who actually work, and the line climbs, right alongside America's. Japan's problem was never lazy workers. It was fewer of them. And fewer hands is exactly the problem robots are built to solve.",
@@ -3112,70 +3112,70 @@
           "cue": "Let me draw it",
           "label": "draw_start.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 606.38
+          "absolute_s": 607.48
         },
         {
           "param": "strokes[0].start.cue",
           "cue": "Let me draw it",
           "label": "strokes[0].start.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 606.38
+          "absolute_s": 607.48
         },
         {
           "param": "strokes[6].start.cue",
           "cue": "Let me draw it",
           "label": "strokes[6].start.cue",
           "scene_time_s": 0.35,
-          "absolute_s": 606.38
+          "absolute_s": 607.48
         },
         {
           "param": "strokes[1].start.cue",
           "cue": "Japan's total economy looks flat",
           "label": "strokes[1].start.cue",
           "scene_time_s": 2.22,
-          "absolute_s": 608.25
+          "absolute_s": 609.35
         },
         {
           "param": "strokes[3].start.cue",
           "cue": "the line climbs",
           "label": "strokes[3].start.cue",
           "scene_time_s": 10.77,
-          "absolute_s": 616.8
+          "absolute_s": 617.9
         },
         {
           "param": "actions[0].at.cue",
           "cue": "the line climbs",
           "label": "actions[0].at.cue",
           "scene_time_s": 11.17,
-          "absolute_s": 617.2
+          "absolute_s": 618.3
         },
         {
           "param": "strokes[2].start.cue",
           "cue": "right alongside America's",
           "label": "strokes[2].start.cue",
           "scene_time_s": 11.63,
-          "absolute_s": 617.66
+          "absolute_s": 618.76
         },
         {
           "param": "strokes[4].start.cue",
           "cue": "It was fewer of them",
           "label": "strokes[4].start.cue",
           "scene_time_s": 17.22,
-          "absolute_s": 623.25
+          "absolute_s": 624.35
         },
         {
           "param": "actions[1].at.cue",
           "cue": "It was fewer of them",
           "label": "actions[1].at.cue",
           "scene_time_s": 17.22,
-          "absolute_s": 623.25
+          "absolute_s": 624.35
         },
         {
           "param": "strokes[5].start.cue",
           "cue": "exactly the problem robots",
           "label": "strokes[5].start.cue",
           "scene_time_s": 20.27,
-          "absolute_s": 626.31
+          "absolute_s": 627.41
         }
       ],
       "unresolved_cues": [],
@@ -3192,8 +3192,8 @@
       "id": "s32_verdict",
       "segment": "c6_verdict",
       "type": "engine_cartoon",
-      "start_s": 629.67,
-      "end_s": 663.2,
+      "start_s": 630.77,
+      "end_s": 664.3,
       "duration_s": 33.53,
       "visual_objective": "",
       "narration": "So, will AI make Japan rich again? Not the way it was in the bubble, when Tokyo land was said to be worth more than entire countries. That boom was built on debt and land prices. This one, if it comes, would be built on output per pair of hands. Robots and AI can let a shrinking Japan keep getting richer per person. But only if small firms like Hiro's actually use them, Japan writes more of the brains and not just the arms, and the debt doesn't crowd everything else out.",
@@ -3203,119 +3203,119 @@
           "cue": "Not the way it was",
           "label": "items[0].at.cue",
           "scene_time_s": 4.0,
-          "absolute_s": 633.67
+          "absolute_s": 634.77
         },
         {
           "param": "items[1].at.cue",
           "cue": "in the bubble",
           "label": "items[1].at.cue",
           "scene_time_s": 5.09,
-          "absolute_s": 634.76
+          "absolute_s": 635.86
         },
         {
           "param": "cam[1].at.cue",
           "cue": "That boom was built",
           "label": "cam[1].at.cue",
           "scene_time_s": 10.16,
-          "absolute_s": 639.83
+          "absolute_s": 640.93
         },
         {
           "param": "zones[0].tilt[1][0].cue",
           "cue": "would be built on output",
           "label": "zones[0].tilt[1][0].cue",
           "scene_time_s": 15.31,
-          "absolute_s": 644.98
+          "absolute_s": 646.08
         },
         {
           "param": "items[0].until.cue",
           "cue": "would be built on output",
           "label": "items[0].until.cue",
           "scene_time_s": 15.31,
-          "absolute_s": 644.98
+          "absolute_s": 646.08
         },
         {
           "param": "items[1].until.cue",
           "cue": "would be built on output",
           "label": "items[1].until.cue",
           "scene_time_s": 15.31,
-          "absolute_s": 644.98
+          "absolute_s": 646.08
         },
         {
           "param": "items[2].at.cue",
           "cue": "would be built on output",
           "label": "items[2].at.cue",
           "scene_time_s": 15.31,
-          "absolute_s": 644.98
+          "absolute_s": 646.08
         },
         {
           "param": "zones[0].tilt[2][0].cue",
           "cue": "keep getting richer",
           "label": "zones[0].tilt[2][0].cue",
           "scene_time_s": 20.68,
-          "absolute_s": 650.35
+          "absolute_s": 651.45
         },
         {
           "param": "cam[2].at.cue",
           "cue": "keep getting richer",
           "label": "cam[2].at.cue",
           "scene_time_s": 20.68,
-          "absolute_s": 650.35
+          "absolute_s": 651.45
         },
         {
           "param": "zones[0].tilt[3][0].cue",
           "cue": "But only if",
           "label": "zones[0].tilt[3][0].cue",
           "scene_time_s": 23.26,
-          "absolute_s": 652.93
+          "absolute_s": 654.03
         },
         {
           "param": "cam[3].at.cue",
           "cue": "But only if",
           "label": "cam[3].at.cue",
           "scene_time_s": 23.26,
-          "absolute_s": 652.93
+          "absolute_s": 654.03
         },
         {
           "param": "items[2].until.cue",
           "cue": "But only if",
           "label": "items[2].until.cue",
           "scene_time_s": 23.26,
-          "absolute_s": 652.93
+          "absolute_s": 654.03
         },
         {
           "param": "items[3].at.cue",
           "cue": "small firms like Hiro's",
           "label": "items[3].at.cue",
           "scene_time_s": 24.24,
-          "absolute_s": 653.91
+          "absolute_s": 655.01
         },
         {
           "param": "items[3].until.cue",
           "cue": "Japan writes more",
           "label": "items[3].until.cue",
           "scene_time_s": 26.91,
-          "absolute_s": 656.58
+          "absolute_s": 657.68
         },
         {
           "param": "items[4].at.cue",
           "cue": "Japan writes more",
           "label": "items[4].at.cue",
           "scene_time_s": 26.91,
-          "absolute_s": 656.58
+          "absolute_s": 657.68
         },
         {
           "param": "items[4].until.cue",
           "cue": "the debt doesn't",
           "label": "items[4].until.cue",
           "scene_time_s": 30.57,
-          "absolute_s": 660.23
+          "absolute_s": 661.33
         },
         {
           "param": "items[5].at.cue",
           "cue": "the debt doesn't",
           "label": "items[5].at.cue",
           "scene_time_s": 30.57,
-          "absolute_s": 660.23
+          "absolute_s": 661.33
         }
       ],
       "unresolved_cues": [],
@@ -3334,8 +3334,8 @@
       "id": "s33_hiro",
       "segment": "c6_hiro",
       "type": "engine_cartoon",
-      "start_s": 663.2,
-      "end_s": 686.03,
+      "start_s": 664.3,
+      "end_s": 687.13,
       "duration_s": 22.83,
       "visual_objective": "",
       "narration": "In Hoshimachi, the help-wanted sign is still in the window. Hiro still wants an apprentice. But now the parts ship on time, and Aoi comes home to teach Kobo something new. Japan's biggest problem isn't going away. What's changing is what a workshop with too few hands can do.",
@@ -3345,105 +3345,105 @@
           "cue": "Hiro still wants",
           "label": "cam[1].at.cue",
           "scene_time_s": 5.21,
-          "absolute_s": 668.41
+          "absolute_s": 669.51
         },
         {
           "param": "items[0].faces[1][0].cue",
           "cue": "Hiro still wants",
           "label": "items[0].faces[1][0].cue",
           "scene_time_s": 5.21,
-          "absolute_s": 668.41
+          "absolute_s": 669.51
         },
         {
           "param": "items[1].at.cue",
           "cue": "Hiro still wants",
           "label": "items[1].at.cue",
           "scene_time_s": 5.21,
-          "absolute_s": 668.41
+          "absolute_s": 669.51
         },
         {
           "param": "zones[0].truckX[1][0].cue",
           "cue": "But now the parts",
           "label": "zones[0].truckX[1][0].cue",
           "scene_time_s": 7.78,
-          "absolute_s": 670.98
+          "absolute_s": 672.08
         },
         {
           "param": "cam[2].at.cue",
           "cue": "But now the parts",
           "label": "cam[2].at.cue",
           "scene_time_s": 7.78,
-          "absolute_s": 670.98
+          "absolute_s": 672.08
         },
         {
           "param": "items[1].until.cue",
           "cue": "But now the parts",
           "label": "items[1].until.cue",
           "scene_time_s": 7.78,
-          "absolute_s": 670.98
+          "absolute_s": 672.08
         },
         {
           "param": "zones[0].truckX[2][0].cue",
           "cue": "ship on time",
           "label": "zones[0].truckX[2][0].cue",
           "scene_time_s": 8.89,
-          "absolute_s": 672.09
+          "absolute_s": 673.19
         },
         {
           "param": "cam[3].at.cue",
           "cue": "and Aoi comes home",
           "label": "cam[3].at.cue",
           "scene_time_s": 9.96,
-          "absolute_s": 673.17
+          "absolute_s": 674.26
         },
         {
           "param": "items[2].at.cue",
           "cue": "and Aoi comes home",
           "label": "items[2].at.cue",
           "scene_time_s": 9.96,
-          "absolute_s": 673.17
+          "absolute_s": 674.26
         },
         {
           "param": "items[3].at.cue",
           "cue": "and Aoi comes home",
           "label": "items[3].at.cue",
           "scene_time_s": 9.96,
-          "absolute_s": 673.17
+          "absolute_s": 674.26
         },
         {
           "param": "cam[4].at.cue",
           "cue": "Japan's biggest problem",
           "label": "cam[4].at.cue",
           "scene_time_s": 14.53,
-          "absolute_s": 677.73
+          "absolute_s": 678.83
         },
         {
           "param": "items[4].at.cue",
           "cue": "Japan's biggest problem",
           "label": "items[4].at.cue",
           "scene_time_s": 14.53,
-          "absolute_s": 677.73
+          "absolute_s": 678.83
         },
         {
           "param": "cam[5].at.cue",
           "cue": "What's changing",
           "label": "cam[5].at.cue",
           "scene_time_s": 18.05,
-          "absolute_s": 681.25
+          "absolute_s": 682.35
         },
         {
           "param": "items[4].until.cue",
           "cue": "What's changing",
           "label": "items[4].until.cue",
           "scene_time_s": 18.05,
-          "absolute_s": 681.25
+          "absolute_s": 682.35
         },
         {
           "param": "items[5].at.cue",
           "cue": "What's changing",
           "label": "items[5].at.cue",
           "scene_time_s": 18.05,
-          "absolute_s": 681.25
+          "absolute_s": 682.35
         }
       ],
       "unresolved_cues": [],
@@ -3458,8 +3458,8 @@
       "id": "s34_end",
       "segment": "teaser",
       "type": "end_card",
-      "start_s": 686.03,
-      "end_s": 696.03,
+      "start_s": 687.13,
+      "end_s": 697.13,
       "duration_s": 10.0,
       "visual_objective": "Closing words land; brand line draws",
       "narration": "Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.",
@@ -3469,7 +3469,7 @@
           "cue": "This is The Hidden Economics",
           "label": "brand_cue.cue",
           "scene_time_s": 6.88,
-          "absolute_s": 692.91
+          "absolute_s": 694.01
         },
         {
           "param": "brand_cue",
@@ -3497,8 +3497,8 @@
       "id": "s35_button",
       "segment": "button",
       "type": "engine_cartoon",
-      "start_s": 696.03,
-      "end_s": 702.03,
+      "start_s": 697.13,
+      "end_s": 703.13,
       "duration_s": 6.0,
       "visual_objective": "",
       "narration": "",

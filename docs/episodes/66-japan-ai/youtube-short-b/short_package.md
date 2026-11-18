@@ -1,6 +1,6 @@
 # YouTube Short: "Japan Builds the World's Robots. Who Uses Them?" (66-japan-ai-b)
 
-Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/66-japan-ai-b_short.mp4` (42 s, 1080x1920, captions burned in). Not committed (MP4).
+Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/66-japan-ai-b_short.mp4` (43 s, 1080x1920, captions burned in). Not committed (MP4).
 
 Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segments, same audio and sources as the full episode; no new figures).
 
@@ -35,7 +35,7 @@ THE WORLD BUYS THEM
 
 ## Narration in the Short
 
-> But here's the strange part. Look at where the robots go. In its latest fiscal year, nearly nine of every ten dollars of FANUC's sales came from customers outside Japan. Its robot sales in China jumped. Its robot sales at home fell. Japan builds the robots. The world buys them. So who actually uses the most robots? Count robots per factory worker, and South Korea has nearly three times as many as Japan. China and Germany are ahead of Japan too. The robot superpower is not the most robotic country.
+> But here's the strange part. Look at where the robots go. In its latest fiscal year, nearly nine of every ten dollars of FANUC's sales came from customers outside Japan. Its robot sales in China jumped. Its robot sales at home fell. Japan builds the robots. The world buys them. So who actually uses the most robots? Count robots per factory worker, and South Korea has more than twice as many as Japan. Singapore and Germany are ahead of Japan too. The robot superpower is not the most robotic country.
 
 ## Publishing note
 

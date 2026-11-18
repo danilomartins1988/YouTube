@@ -2,18 +2,18 @@
 
 | Check | Result | Detail |
 |---|---|---|
-| File exists | PASS | /home/user/YouTube/output/will-ai-make-japan-rich-again/documentary/will-ai-make-japan-rich-again--documentary.mp4 (207.7 MB) |
+| File exists | PASS | /home/user/YouTube/output/will-ai-make-japan-rich-again/documentary/will-ai-make-japan-rich-again--documentary.mp4 (208.1 MB) |
 | Resolution 1920x1080 | PASS | 1920x1080 |
 | H.264 video | PASS | h264 High, yuv420p, 30/1 fps |
 | AAC audio | PASS | aac 48000 Hz, 2 ch |
-| Duration 11-13:20 min (channel standard 660-800 s) | PASS | 702.03 s (11:42) |
+| Duration 11-13:20 min (channel standard 660-800 s) | PASS | 703.13 s (11:43) |
 | English narration | PASS | OpenAI gpt-4o-mini-tts 'ash', English script; QC errors: 0 |
-| Caption/voice sync | PASS | 341 cues; median cue-start offset 0.03 s, p90 0.36 s; 100% of speech captioned |
+| Caption/voice sync | PASS | 341 cues; median cue-start offset 0.03 s, p90 0.35 s; 100% of speech captioned |
 | No black gaps (>1 s) | PASS | none |
 | No frozen picture (>5 s) | PASS | none |
 | Licensed assets only | PASS | every scene asset is on the licence allowlist (assets/manifest.yaml) |
 
-- Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
+- Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
 - Scenes: 36; types: channel_intro x1, end_card x1, engine_cartoon x30, engine_draw x4
 - Average scene length: 19.5 s; act cards are music-only.
 
@@ -21,9 +21,9 @@
 
 # QC report: will-ai-make-japan-rich-again / documentary (long_16x9)
 
-- Runtime: **702.03 s**
-- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 207.7 MB
-- Loudness: -16.2 LUFS integrated, true peak -4.1 dBFS
+- Runtime: **703.13 s**
+- Video: 1920x1080 @ 30/1 h264, audio aac 48000 Hz, 208.1 MB
+- Loudness: -16.2 LUFS integrated, true peak -4.0 dBFS
 - Errors: **0**, warnings: **18**
 - Technical QC passed: **True**
 - Publishable (no unverified claims): **False**
@@ -57,7 +57,7 @@
   
 - `care_study` (source_located): Lee, Iizuka & Eggleston: robot adoption in Japanese nursing homes accompanied by more employment and retention and more 'human touch' care.  
   
-- `density_x` (source_located): IFR WR 2025: robot density 2024 Korea 1,220 vs Japan 446 per 10,000 manufacturing employees; OUR CALCULATION 2.7x; Japan 4th... listed after Singapore 818, China 567, Germany 449.  
+- `density_x` (source_located): IFR (Nov 12, 2026; 2025 data): robot density Korea 1,066 vs Japan 452 per 10,000 manufacturing employees; OUR CALCULATION 2.36x; Singapore 873 and Germany 469 also ahead of Japan (4th); China 193 on a new employment base.  
   
 - `fv_japan` (source_located): Fernández-Villaverde, Ventura & Yao: 1998-2019 GDP per working-age adult +31.9% in Japan vs +29.5% in the US.  
   

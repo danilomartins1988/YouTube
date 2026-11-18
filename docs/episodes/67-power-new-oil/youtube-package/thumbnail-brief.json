@@ -1,0 +1,503 @@
+{
+  "title": "Could Cheap Electricity Become the New Oil?",
+  "docs_dir": "docs/episodes/67-power-new-oil",
+  "video": "output/powernewoil_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "F",
+  "analysis": {
+    "mystery": "If AI needs a city's worth of electricity, will cheap power make some places rich the way oil did?",
+    "surprising_fact": "Iceland built its first giant dam mainly to power an aluminum smelter; data centers are following the same plug",
+    "subject": "a site scout hugging a giant electric plug drawn like an oil barrel",
+    "tone": "strategy",
+    "metaphor": "the plug is the new oil barrel",
+    "public_figure": null
+  },
+  "slug": "could-cheap-electricity-become-the-new-oil",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (original character NIA, the film's fictional site scout, shocked; a giant plug drawn like an oil barrel)",
+      "archetype": "face",
+      "text": [
+        "POWER:",
+        "THE NEW OIL?"
+      ],
+      "claim_basis": "a question (answered in the film: yes for siting, but power can't be shipped); Nia is fictional; no number shown",
+      "scene": {
+        "bg": [
+          "#FFB23F",
+          "#13284A"
+        ],
+        "rays": "#FFD27A",
+        "bust": {
+          "who": {
+            "name": "Nia",
+            "hair": "bun",
+            "hairColor": "#2B1A12",
+            "hairShade": "#4A3020",
+            "brows": "#2B1A12",
+            "skin": "#8D5A3B",
+            "iris": "#2A1A10",
+            "clothes": "tee",
+            "jacket": "#1F8A8C",
+            "shirt": "#1F8A8C",
+            "glasses": null,
+            "age": 0
+          },
+          "expr": "shock",
+          "x": 470,
+          "s": 0.92
+        },
+        "prop": {
+          "kind": "plug",
+          "text": "",
+          "x": 1400,
+          "y": 720,
+          "s": 0.62,
+          "rot": 10
+        }
+      },
+      "layout": [
+        {
+          "text": "POWER:",
+          "x": 1367.8,
+          "y": 238.0,
+          "size": 210,
+          "width": 806.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "THE NEW OIL?",
+          "x": 1367.8,
+          "y": 413.5,
+          "size": 113.9,
+          "width": 874.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.64 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(965, 74, 1771, 251), (931, 325, 1805, 420)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": false,
+            "detail": "0.161",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "{'name': 'Nia', 'hair': 'bun', 'hairColor': '#2B1A12', 'hairShade': '#4A3020', 'brows': '#2B1A12', 'skin': '#8D5A3B', 'iris': '#2A1A10', 'clothes': 'tee', 'jacket': '#1F8A8C', 'shirt': '#1F8A8C', 'glasses': None, 'age': 0}",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 75",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-americas-airports-make-money-before-you-fly (distance 0.68)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (answered in the film: yes for siting, but power can't be shipped); Nia is fictional; no number shown",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.588,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-americas-airports-make-money-before-you-fly"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "the oil barrel becomes a plug",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "CHEAP POWER",
+        "NEW OIL?"
+      ],
+      "claim_basis": "a question (no number shown)",
+      "scene": {
+        "palette": {
+          "sky0": "#0F2140",
+          "sky1": "#24508C",
+          "haze": "#FFB23F",
+          "key": "#FFF3E0",
+          "accent": "#FFC21A",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "oilbarrel",
+          "x": 960,
+          "y": 640,
+          "s": 0.85
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE0B8"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "CHEAP POWER",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 1116.9,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "NEW OIL?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 812.3,
+          "anchor": "middle",
+          "color": "#FFC21A"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.55 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(402, 156, 1518, 290), (554, 321, 1366, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.086",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 45",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hamburger-that-became-a-symbol-of-the-cold-wars-end (distance 0.32)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (no number shown)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.593,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hamburger-that-became-a-symbol-of-the-cold-wars-end"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "AI campuses follow the plug",
+      "archetype": "classic",
+      "text_side": "left",
+      "accent_line": 1,
+      "text": [
+        "AI FOLLOWS",
+        "CHEAP POWER"
+      ],
+      "claim_basis": "data centers sited for hydropower and cool air (Narvik, Quebec), solar and gas (Gulf, Texas); no number shown",
+      "scene": {
+        "palette": {
+          "sky0": "#10203F",
+          "sky1": "#1E4A7A",
+          "haze": "#59C3FF",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "campus",
+          "x": 1250,
+          "y": 600,
+          "s": 0.85
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#D8F0FF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "AI FOLLOWS",
+          "x": 90,
+          "y": 521.8,
+          "size": 113.6,
+          "width": 727.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "CHEAP POWER",
+          "x": 90,
+          "y": 640.0,
+          "size": 113.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.61 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 433, 817, 529), (90, 551, 890, 647)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.0:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.091",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 48",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest before-you-buy-microsoft-2026-11 (distance 0.29)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "data centers sited for hydropower and cool air (Narvik, Quebec), solar and gas (Gulf, Texas); no number shown",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.575,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "before-you-buy-microsoft-2026-11"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T18:14:05Z",
+  "master": "output/could-cheap-electricity-become-the-new-oil/thumbnails/master_F.png"
+}
