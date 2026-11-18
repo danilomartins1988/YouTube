@@ -7,7 +7,7 @@ more commercial, fewer numbers, more narrative." This overrides any habit of lis
 1. **One protagonist, one journey.** Every film follows a character or a concrete situation (a shopper, a factory
    manager, a family, a company founder, an object like one phone or one $100 bill) from the cold open to the payoff.
    The economics is what happens to them.
-2. **Number budget:** at most **8–12 spoken numbers in the whole film**, and **never more than one number per scene**.
+2. **Number budget:** at most **10–15 spoken numbers in the whole film** (old films ran 70–100), and **never more than one number per scene**.
    Pick the 3–4 numbers that carry the story ("hero numbers") and repeat/visualize them instead of adding new ones.
 3. **Prefer images and comparisons to statistics.** "Enough to buy every NFL team twice" beats "$148.6 billion".
    "One in every four" beats "24.7%". Round honestly ("almost half", "about $40 trillion"); keep exact values in
