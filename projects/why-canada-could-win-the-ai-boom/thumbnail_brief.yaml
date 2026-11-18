@@ -1,0 +1,65 @@
+# Thumbnail creative brief (Ep 70). Owner standing rules: at most 4 words and they NAME CANADA, mobile-legible, no statistics shown,
+# face layout with an ORIGINAL character (MAYA, the film's fictional researcher), no logos, no flags, no maple leaves, no real people.
+title: "Why Canada Could Be the Biggest Winner of the AI Boom"
+docs_dir: docs/episodes/70-canada-ai
+video: output/canadaai_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: Everyone says Canada's economy is crashing; yet the AI boom wants exactly what Canada has (power, cold, metals, brains)
+  surprising_fact: About six of every ten kilowatt hours in Canada come from falling water (CER), and the cold cools servers for free much of the year
+  subject: an excited young researcher beside a glowing AI chip, a snowy blue background
+  tone: strategy
+  metaphor: the AI boom's shopping list
+  public_figure: null
+concepts:
+- id: F
+  angle: "face (original character MAYA, the film's fictional AI researcher, shocked and delighted; a glowing chip)"
+  archetype: face
+  text:
+  - CANADA
+  - WINS AI?
+  claim_basis: "a question (answered in the film: Canada has the whole list but only wins if it builds); Maya is fictional; no number shown"
+  scene:
+    bg: ['#3FA9F5', '#0F2A52']
+    rays: '#BFE6FF'
+    bust:
+      who: {name: Maya, hair: bun, hairColor: '#1B1B1B', hairShade: '#3A2A2A', brows: '#1B1B1B', skin: '#E0A878', iris: '#3A2418',
+            clothes: tee, jacket: '#7357C9', shirt: '#7357C9', glasses: round, age: 0}
+      expr: shock
+      x: 470
+      s: 0.92
+    prop: {kind: chip, x: 1400, y: 730, s: 0.62, rot: -8}
+- id: A
+  angle: a snowy AI campus glowing in the north
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - CANADA'S
+  - AI JACKPOT?
+  claim_basis: 'a question (no number shown)'
+  scene:
+    palette: {sky0: '#0D2A4A', sky1: '#2A6CB0', haze: '#BFE6FF', key: '#FFFFFF', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: campus, x: 980, y: 720, s: 0.8}
+    particles: {n: 60, region: [0, 0, 1920, 1080], size: 4, color: '#FFFFFF'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: not crashing, winning?
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - CANADA ISN'T
+  - CRASHING?
+  claim_basis: 'a question (the film: the 2025 dip was real, 2026 growth resumed per the Bank of Canada; the AI assets are the twist)'
+  scene:
+    palette: {sky0: '#1A1035', sky1: '#2F4F9E', haze: '#9ED8FF', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: chip, x: 980, y: 720, s: 0.8}
+    particles: {n: 60, region: [0, 0, 1920, 1080], size: 4, color: '#FFFFFF'}
+    vignette: 0.55
+    brand: none

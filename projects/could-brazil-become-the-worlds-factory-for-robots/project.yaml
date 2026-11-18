@@ -1,0 +1,54 @@
+title: "Could Brazil Become the World's Factory for Robots?"
+slug: could-brazil-become-the-worlds-factory-for-robots
+language: en
+# Episode 71 (series docs/series/AI_WINNERS_LOSERS.md #4, the last). Owner: "Pode produzir direto sem precisar aprovar".
+# Flip (owner's thesis): in robotized factories labor weighs less, so cheap clean power, metals and a big market weigh more; Brazil has
+# all of them, but the cost of producing (taxes piled on taxes, trucks, expensive loans, paperwork: the "Custo Brasil") holds it back;
+# the 2023 consumption-tax reform (EC 132/2023, dual VAT phased in 2026-2033) aims to lighten it. One argument for, the obstacles; neutral.
+# Owner preference: keep tax explanations simple and short ("nao fique muito em explicar impostos"): no tax mechanics, story terms only.
+# Overlaps: Ep 63 "Could AI Bring Europe Back to Power?" (Brazil beat) and Ep 67 "Could Cheap Electricity Become the New Oil?" (Brazil's
+# power, taxes and charges, Redata, TikTok Ceara) linked by title only; shared figure identical (EPE 2025, 86.8%). Ep 68 linked on minerals.
+# Owner standing direction: prime-time TV-cartoon energy at GENRE level only; original cast (GUS, a fictional robot-company factory scout;
+# BIA, a fictional engineer from Minas Gerais; the COST BACKPACK) and sets, human characters, day scenes, a bespoke Brazilian world drawn
+# respectfully (CartoonStage/brazil.tsx). No public figure drawn; no politicians; companies named in narration only; no logos, no flags.
+# USD only: BRL at the Fed G.5A 2025 average (5.5891 per USD, same release as Ep 67), labelled.
+renderer: remotion
+style:
+  name: cartoon-day
+  palette:
+    bg: "#F4F7F2"
+    bg2: "#FFFFFF"
+    ink: "#1A2238"
+    muted: "#5E6B85"
+    land: "#A6D08A"
+    border: "#23407A"
+    accent: "#F5B700"
+    accent2: "#1E88E5"
+    accent3: "#2E9E6B"
+    risk: "#E5483B"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 3
+intro:
+  after_segment: co_hook
+tts_overrides:
+  openai:
+    voice: ash
+    tempo: 1.0
+    instructions: >-
+      Voice: the narrator of a premium American documentary about money and power, warm, curious and quietly confident, with a
+      light touch of wit and real affection for the characters. Clear, fair and strictly neutral on politics. Pacing: brisk but
+      unhurried; slow slightly to land every number; a short beat after a surprising figure and before each verdict. Natural
+      American English, conversational, never an announcer, never salesy. Read the short character lines with a little playful
+      character. Pronounce names simply: Gus (GUSS), Bia (BEE-ah), Minas Gerais (MEE-nas zheh-RICE), Araxá (ah-rah-SHAH), Jequitinhonha (zheh-kee-cheen-YOH-nyah), Bahia (bah-EE-ah), Camaçari (kah-mah-sah-REE), niobium (nye-OH-bee-um), Custo Brasil (KOOS-too brah-ZEEW).

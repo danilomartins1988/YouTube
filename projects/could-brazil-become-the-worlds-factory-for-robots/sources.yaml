@@ -1,0 +1,241 @@
+# Sources and claims for "Could Brazil Become the World's Factory for Robots?" (Episode 71; series docs/series/AI_WINNERS_LOSERS.md #4).
+# Read on 2026-11-18 on the primary page, dataset or document; where the primary host blocked automated access the note says how the figure
+# was confirmed (docs/episodes/71-brazil-ai/RESEARCH_NOTES.md). Status stays source_located / data_derived until a named human reviewer signs
+# off. US dollars only: BRL at the Federal Reserve G.5A 2025 annual average, 5.5891 BRL per USD (Jan 5, 2026 release; the same rate as Ep 67),
+# shown as "≈". OUR CALCULATION is labelled; industry studies are labelled INDUSTRY STUDY; plans and announcements are labelled.
+# Overlaps: Ep 63 and Ep 67 linked by title only; the shared figure (EPE BEN 2026: 86.8% renewable electricity in 2025) is identical.
+sources:
+  - id: epe_ben26
+    title: "Brazilian Energy Balance 2026, Summary Report (base year 2025)"
+    publisher: EPE (Empresa de Pesquisa Energetica) / Ministry of Mines and Energy
+    url: https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-975/topico-847/BEN_S%C3%ADntese_2026_EN.pdf
+    published: "2026-07"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "EPE, Brazilian Energy Balance 2026"
+    notes: "'The share of renewables in the electricity matrix was 86.8% in 2025.' (2024: 88.2%, BEN 2025.) Same source and value as Ep 63 (and the 2025 value given in Ep 67's description)."
+  - id: usgs_nb26
+    title: "Niobium (Columbium), Mineral Commodity Summaries 2026"
+    publisher: U.S. Geological Survey
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-niobium.pdf
+    published: "2026-01"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "USGS, Mineral Commodity Summaries 2026"
+    notes: "Mine production 2025e: Brazil 104,000 t of 112,000 t world (rounded); 'Brazil continued to be the world's leading niobium producer, accounting for approximately 93% of global production, followed by Canada with 5%.' Reserves: Brazil 14,000,000 t of >21,000,000 t."
+  - id: usgs_fe26
+    title: "Iron Ore, Mineral Commodity Summaries 2026"
+    publisher: U.S. Geological Survey
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-iron-ore.pdf
+    published: "2026-01"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "USGS, Mineral Commodity Summaries 2026"
+    notes: "Usable ore 2025e (thousand t): Australia 980,000; Brazil 420,000; India 310,000; China 290,000; world 2,600,000. Brazil is the second-largest producer (iron content 260,000 vs Australia 600,000). Brazil supplied 58% of US iron ore imports (2021-24)."
+  - id: usgs_ree26
+    title: "Rare Earths, Mineral Commodity Summaries 2026"
+    publisher: U.S. Geological Survey
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf
+    published: "2026-01"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "USGS, Mineral Commodity Summaries 2026"
+    notes: "Reserves (REO): China 44,000,000 t; Brazil 11,000,000 t (second); Australia 6,300,000 t; world >75,000,000 t. Mine production 2025: Brazil 2,000 t (560 t in 2024) vs China 270,000 t of 390,000 t world."
+  - id: usgs_li26
+    title: "Lithium, Mineral Commodity Summaries 2026"
+    publisher: U.S. Geological Survey
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf
+    published: "2026-01"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "USGS, Mineral Commodity Summaries 2026"
+    notes: "Brazil mine production 12,000 t lithium content in 2025 (10,200 t in 2024), one mineral operation; reserves 540,000 t. Narration says only that lithium is already mined and shipped from Minas Gerais (Jequitinhonha Valley); no figure spoken."
+  - id: cbmm
+    title: "About CBMM"
+    publisher: CBMM (Companhia Brasileira de Metalurgia e Mineracao); share estimates from Fastmarkets and Geopolitical Monitor
+    url: https://cbmm.com/Partner-with-CBMM/Our-Company/About-CBMM
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "CBMM (company); Fastmarkets"
+    notes: "CBMM, at Araxa (Minas Gerais), describes itself as the world's leading niobium producer; independent estimates put its share at roughly 77-80% of world supply (Fastmarkets: more than 80%). Narration: 'most of it comes from a single mine in my state'."
+  - id: usda_soy
+    title: "Oilseeds: World Markets and Trade"
+    publisher: USDA Foreign Agricultural Service
+    url: https://apps.fas.usda.gov/psdonline/circulars/oilseeds.pdf
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "USDA FAS"
+    notes: "Brazil is the world's largest soybean exporter (2025/26 exports forecast around 112-113 Mt, more than double the United States). Narration: 'the world's biggest exporter of soybeans'; no figure spoken."
+  - id: ibge_pop25
+    title: "Estimativas da Populacao 2025 (1 July 2025)"
+    publisher: IBGE
+    url: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html
+    published: "2025-08-28"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "IBGE, population estimates 2025"
+    notes: "Estimated population 213,421,037 on July 1, 2025 (213.4 million)."
+  - id: ibge_cnt
+    title: "Contas Nacionais Trimestrais, Table 1846 (values at current prices), 2025 Q1-Q4"
+    publisher: IBGE (SIDRA)
+    url: https://sidra.ibge.gov.br/tabela/1846
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "IBGE, Quarterly National Accounts"
+    notes: "Sum of 2025 quarters (R$ million): manufacturing (industrias de transformacao) 1,499,618; value added at basic prices 10,951,982; GDP 12,738,566. OUR CALCULATION: manufacturing = 11.8% of GDP (13.7% of value added); 1996: 13.1% of GDP (14.9% of VA). The CNI (industry confederation) reports manufacturing hit 11.3% of GDP in 2018, the lowest since 1947, on IBGE data. Read via apisidra.ibge.gov.br."
+  - id: cnt_plan26
+    title: "Plano CNT de Transporte e Logistica 2026"
+    publisher: CNT (Confederacao Nacional do Transporte), reported by Mundo Logistica
+    url: https://mundologistica.com.br/noticias/cnt-plano-infraestrutura-transporte
+    published: "2026-07-30"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "CNT transport plan 2026 (industry study)"
+    notes: "'O transporte rodoviario responde por 65,8% da matriz brasileira' of freight (vs about 43% in the US, per CNT). INDUSTRY STUDY."
+  - id: wb_lpi23
+    title: "Logistics Performance Index 2023 (international scorecard)"
+    publisher: World Bank
+    url: https://lpi.worldbank.org/international/global
+    published: "2023-04"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "World Bank LPI 2023"
+    notes: "Brazil overall LPI score 3.2, rank 51 (of 139). Latest edition. Description only."
+  - id: bcb_selic
+    title: "Taxa Selic meta (SGS series 432) and Copom decision of Nov 4, 2026"
+    publisher: Banco Central do Brasil
+    url: https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/3?formato=json
+    published: "2026-11-04"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Banco Central do Brasil"
+    notes: "Selic target 13.75% a year (SGS 432, read 2026-11-18); the Copom held it at 13.75% on Nov 4, 2026, after five consecutive cuts from 15% (press reports of the decision)."
+  - id: mbc_custo
+    title: "Custo Brasil: R$ 1,7 trilhao por ano (Movimento Brasil Competitivo with the Ministry of Development, Industry and Trade; FGV update)"
+    publisher: MBC / MDIC, reported by Exame; cited by CNI
+    url: https://exame.com/brasil/custo-brasil-chega-a-r-17-trilhao-diz-novo-estudo-do-mbc-e-mdic
+    published: "2023-05"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "MBC / MDIC study (2023), cited by CNI"
+    notes: "Extra cost for companies producing in Brazil compared with the OECD average: R$1.7 trillion a year, about 19.5% of GDP (first estimate 2019: R$1.5 trillion, 22%). OUR CONVERSION: 1.7 trillion / 5.5891 = about US$304 billion. An INDUSTRY ESTIMATE (business group with the ministry), not an official statistic. MDIC/MBC (Nov 2024): six initiatives could cut it by up to R$530 billion in ten years."
+  - id: wb_db20
+    title: "Doing Business 2020, Paying Taxes: South America fact sheet"
+    publisher: World Bank
+    url: https://czech.doingbusiness.org/content/dam/doingBusiness/pdf/db2020/SouthAmerica_PT2020_FS.pdf
+    published: "2019-10"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "World Bank / PwC, Doing Business 2020 (discontinued series)"
+    notes: "Time to comply with taxes in Brazil: 1,501 hours a year (calendar 2018), 'the highest time to comply globally'; world average 234 hours. The Doing Business series was discontinued in 2021; narration calls it 'the World Bank's last worldwide comparison'."
+  - id: br_reform
+    title: "Emenda Constitucional 132/2023 and Lei Complementar 214/2025 (consumption-tax reform)"
+    publisher: Presidencia da Republica (Planalto); summaries by Agencia Senado and PwC Brasil
+    url: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm
+    published: "2023-12-20"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "EC 132/2023; LC 214/2025"
+    notes: "Dual VAT: CBS (federal) and IBS (states and municipalities), non-cumulative with broad credits, replacing PIS, Cofins, IPI (mostly), ICMS and ISS. Test year 2026 (CBS 0.9%, IBS 0.1%), CBS in full and PIS/Cofins extinguished 2027, ICMS/ISS phased down 2029-2032, extinguished 2033. planalto.gov.br refused automated access (empty reply / redirect); text read via Agencia Senado (as in Ep 63) and PwC Tax Intelligence ed. 43 (Jan 2025)."
+  - id: byd_ba
+    title: "BYD inicia producao na fabrica de Camacari (Bahia), antiga fabrica da Ford"
+    publisher: Olhar Digital / Diario de Pernambuco / Autodata
+    url: https://olhardigital.com.br/2025/06/30/carros-e-tecnologia/fabrica-da-byd-no-brasil-comeca-a-operar-nesta-semana-veja-o-que-sera-produzido/
+    published: "2025-06-30"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "BYD (company announcements)"
+    notes: "Ford idled its Camacari plant in January 2021 when it stopped making cars in Brazil; BYD took over the site (groundbreaking Oct 2023) and started production on July 1, 2025 (first kits, SKD), with an inauguration in Oct 2025 and more local stages planned from 2026. Investment amounts differ by source and are not used."
+  - id: redata26
+    title: "Brazil signs Redata tax regime into law (Law 15,504/2026)"
+    publisher: W.Media / PwC Brasil Tax Intelligence
+    url: https://w.media/brazil-signs-redata-tax-regime-into-law-to-stoke-data-center-investment/
+    published: "2026-09-15"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Law 15,504/2026"
+    notes: "Special tax regime for data centers (from MP 1,318/2025) enacted Sept 15, 2026; beneficiaries must meet their power demand with renewable or low-emission supply. Same source as Ep 67; mentioned in one sentence with a link to Ep 67, no figures."
+  - id: ifr_cn
+    title: "World Robotics 2025 (press release: record installations; China the largest market)"
+    publisher: International Federation of Robotics (IFR)
+    url: https://ifr.org/news/
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "IFR World Robotics"
+    notes: "China is the world's largest market for industrial robots, installing more than half of all new robots worldwide (IFR). Narration: 'China already installs more factory robots than any other country'; no figure spoken."
+  - id: fed_g5a
+    title: "Foreign Exchange Rates (Annual), G.5A"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/g5a/current/default.htm
+    published: "2026-01-05"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Federal Reserve G.5A"
+    notes: "2025 annual average: 5.5891 Brazilian reais per USD (same release as Ep 67)."
+claims:
+  - id: br_renew
+    text: "EPE Brazilian Energy Balance 2026: renewables were 86.8% of Brazil's electricity matrix in 2025 (88.2% in 2024)."
+    spoken: almost nine out of every ten
+    display: "Brazil 2025: 86.8% of electricity from renewables · EPE"
+    source_ids: [epe_ben26]
+    status: source_located
+  - id: br_iron
+    text: "USGS MCS 2026: Brazil is the world's second-largest iron ore producer (420 Mt usable ore in 2025e, after Australia's 980 Mt)."
+    spoken: the second-biggest producer
+    display: "Iron ore 2025e: #2 producer after Australia · USGS"
+    source_ids: [usgs_fe26]
+    status: source_located
+  - id: br_nb
+    text: "USGS MCS 2026: Brazil accounts for approximately 93% of global niobium production (104,000 t of 112,000 t, 2025e)."
+    spoken: more than nine out of every ten
+    display: "Niobium: Brazil ≈ 93% of world output · USGS 2026"
+    source_ids: [usgs_nb26, cbmm]
+    status: source_located
+  - id: br_ree
+    text: "USGS MCS 2026: Brazil holds the world's second-largest rare-earth reserves (11 Mt REO vs China 44 Mt), but mined only about 2,000 t in 2025 vs China's 270,000 t."
+    spoken: the second-largest
+    display: "Rare-earth reserves: #2 after China · mined today: tiny · USGS"
+    source_ids: [usgs_ree26]
+    status: source_located
+  - id: br_pop
+    text: "IBGE: Brazil's estimated population was 213.4 million on July 1, 2025."
+    spoken: more than two hundred million people
+    display: "Brazil 2025: ≈ 213 million people · IBGE"
+    source_ids: [ibge_pop25]
+    status: source_located
+  - id: br_mfg
+    text: "OUR CALCULATION from IBGE quarterly national accounts: manufacturing was 11.8% of Brazil's GDP in 2025 (R$1.50tn of R$12.74tn), down from 13.1% in 1996 (start of the series); CNI reports 11.3% in 2018 as the lowest since 1947."
+    spoken: about one-eighth
+    display: "Factories ≈ 1/8 of Brazil's GDP (2025) · OUR CALC, IBGE"
+    source_ids: [ibge_cnt]
+    status: data_derived
+  - id: br_road
+    text: "CNT Transport and Logistics Plan 2026 (industry study): road transport carries 65.8% of Brazil's freight."
+    spoken: about two of every three tons
+    display: "≈ 2 of 3 tons of freight go by truck · CNT 2026 (industry study)"
+    source_ids: [cnt_plan26]
+    status: source_located
+  - id: br_selic
+    text: "Banco Central do Brasil: Selic target rate 13.75% a year (held on Nov 4, 2026)."
+    spoken: almost fourteen percent
+    display: "Brazil's central bank rate: 13.75% (Nov 2026) · BCB"
+    source_ids: [bcb_selic]
+    status: source_located
+  - id: br_custo
+    text: "MBC / MDIC study (2023, FGV update), cited by CNI: producing in Brazil costs companies R$1.7 trillion a year more than the OECD average (about 19.5% of GDP); OUR CONVERSION at 5.5891 BRL/USD = about US$304 billion. An industry estimate."
+    spoken: about three hundred billion dollars a year
+    display: "'Custo Brasil' ≈ R$1.7 tn ≈ US$304 bn a year · MBC/MDIC INDUSTRY ESTIMATE"
+    source_ids: [mbc_custo, fed_g5a]
+    status: data_derived
+  - id: br_vat
+    text: "EC 132/2023 and LC 214/2025: the dual VAT (CBS + IBS) is tested from 2026 and the old consumption taxes (ICMS, ISS) are fully extinguished in 2033."
+    spoken: twenty thirty-three
+    display: "New dual VAT: test 2026 · old taxes gone 2033 · EC 132/2023"
+    source_ids: [br_reform]
+    status: source_located
+  - id: br_byd
+    text: "Ford idled its Camacari (Bahia) plant in January 2021; BYD took over the site and began producing cars there on July 1, 2025."
+    spoken: twenty twenty-five
+    display: "Camaçari: Ford left 2021 · BYD started 2025 · company announcements"
+    source_ids: [byd_ba]
+    status: source_located
