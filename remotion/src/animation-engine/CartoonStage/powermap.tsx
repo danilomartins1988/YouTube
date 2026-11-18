@@ -104,7 +104,7 @@ const dam = (x: number, y: number, s: number, t: number, level = 1, k: any = 0) 
   {level > 0.15 && Array.from({length: 6}, (_, q) => { const u = ((t * 1.6 + q / 6) % 1); return <path key={'sp' + q} d={`M ${60 + q * 6} ${-120 + u * 110} q 10 8 0 16`} stroke="#FFFFFF" strokeWidth={5} fill="none" opacity={1 - u} />; })}
   <rect x={140} y={-80} width={120} height={80} fill="#EDE7DB" stroke={OL} strokeWidth={5} />{bolt(200, -40, 0.4, GOLD, 'db' + k)}
 </g>;
-const ship = (x: number, y: number, s: number, k: any, cargo: 'oil' | 'ore' | 'ingot', t: number) => <g key={'sh' + k} transform={`translate(${x} ${y + 4 * Math.sin(t * 2 + (k as number || 0))}) scale(${s})`}>
+const ship = (x: number, y: number, s: number, k: any, cargo: 'oil' | 'ore' | 'ingot', t: number) => <g key={'sh' + k} transform={`translate(${x} ${y + 4 * Math.sin(t * 2 + String(k).length)}) scale(${s})`}>
   <path d="M -260 -40 L 260 -40 L 210 40 L -230 40 Z" fill={cargo === 'oil' ? '#7A2E2E' : cargo === 'ore' ? '#3E5A7A' : '#2E6B5A'} stroke={OL} strokeWidth={6} strokeLinejoin="round" />
   <rect x={150} y={-120} width={80} height={80} fill="#FFFFFF" stroke={OL} strokeWidth={5} /><rect x={165} y={-106} width={50} height={20} fill="#BFE6F7" stroke={OL} strokeWidth={3} />
   {cargo === 'oil' && [0, 1, 2].map((q) => <ellipse key={q} cx={-170 + q * 110} cy={-46} rx={46} ry={14} fill="#9E9E9E" stroke={OL} strokeWidth={4} />)}
@@ -196,16 +196,16 @@ const RAW: Record<string, SetFn> = {
       {sky(z, f, '#8ED0F4', '#F2FAFF', 'pmosk')}
       {[0, 1, 2].map((k) => cloud(((k * 700 + t * 14) % 2600) - 300, 120 + (k % 2) * 50, 0.8, k))}
       {sea(z, f, t)}
-      <g opacity={dimL}>
+      <g>
         <rect x={z.x0} y={f - 180} width={700 - z.x0} height={180} fill="#D9C79F" stroke={OL} strokeWidth={4} />
         {[[-200, 0], [60, 1], [300, 2]].map(([x, k]) => pumpjack(x, f - 180, 0.9, t, k, pump))}
         {[0, 1, 2].map((q) => <g key={'tk' + q} transform={`translate(${440 + q * 90} ${f - 180})`}><rect x={-40} y={-110} width={80} height={110} fill="#E7E2D8" stroke={OL} strokeWidth={4} /><ellipse cx={0} cy={-110} rx={40} ry={12} fill="#CFC8BB" stroke={OL} strokeWidth={4} /></g>)}
         {ship(lerp(560, 2600, sh), f + 60, 0.7, 'tk', 'oil', t)}
         {plaque(260, 160, z.oilText || 'OIL: SHIPS ANYWHERE', '#FFFFFF', 26)}
       </g>
-      <g opacity={dimR}>
-        <path d={ridge(1180, 2400, f - 120, 360, 260, 4)} fill="#7FA6C4" stroke={OL} strokeWidth={4} />
-        <rect x={1260} y={f - 160} width={1300} height={160} fill="#9CCB86" stroke={OL} strokeWidth={4} />
+      <g>
+        <path d={ridge(1300, 2400, f - 120, 360, 260, 4)} fill="#7FA6C4" stroke={OL} strokeWidth={4} />
+        <rect x={1260} y={f - 160} width={1300} height={700} fill="#9CCB86" stroke={OL} strokeWidth={4} />
         {dam(1700, f - 160, 0.7, t, 1, 'od')}
         {[1520, 1360].map((x, k) => pylon(x, f - 160, 0.6, 'op' + k))}
         <path d={`M 1600 ${f - 330} Q 1440 ${f - 300} 1360 ${f - 330} Q ${(1360 + wx) / 2} ${f - 290} ${wx} ${f - 250}`} stroke={OL} strokeWidth={4} fill="none" />
@@ -215,6 +215,8 @@ const RAW: Record<string, SetFn> = {
         {stop && stamp(1080, f - 430, z.stopText || "CAN'T SHIP A WATERFALL", RED, 34, 'st', pop(t, z.stopAt, 0.4))}
         {plaque(1780, 160, z.powerText || 'POWER: STAYS NEAR THE DAM', '#FFFFFF', 26)}
       </g>
+      {dimL < 1 && <rect x={z.x0} y={-2500} width={1100 - z.x0} height={4000} fill="#FFFFFF" opacity={0.55} />}
+      {dimR < 1 && <rect x={1100} y={-2500} width={z.x1 - 1100} height={4000} fill="#FFFFFF" opacity={0.55} />}
     </g>;
   },
 
@@ -268,7 +270,7 @@ const RAW: Record<string, SetFn> = {
         return <path key={'ar' + q} d={`M ${lerp(1900, 1240, u)} ${y} l -50 0 l 14 -12 M ${lerp(1900, 1240, u) - 50} ${y} l 14 12`} stroke={BLUE} strokeWidth={6} fill="none" opacity={air * (1 - Math.abs(u - 0.5) * 1.6)} strokeLinecap="round" />; })}
       {z.snow && Array.from({length: 40}, (_, q) => <circle key={'sf' + q} cx={z.x0 + ((rnd(q) * (z.x1 - z.x0) + t * 20 * rnd(q + 3)) % (z.x1 - z.x0))} cy={((rnd(q + 7) * 900 + t * 60 * (0.6 + rnd(q))) % 900)} r={3 + rnd(q + 1) * 3} fill="#FFFFFF" opacity={0.85} />)}
       {ten && <g transform={`translate(1500 ${f - 260}) scale(${pop(t, tAt, 0.4)})`}>{plaque(0, 0, ten, '#FFFFFF', 22)}</g>}
-      {z.plaque && plaque(z.plaqueX ?? 420, 160, z.plaque, NAVY, 28, '#FFFFFF')}
+      {z.plaque && plaque(z.plaqueX ?? 420, f + 110, z.plaque, NAVY, 28, '#FFFFFF')}
     </g>;
   },
 
@@ -279,7 +281,7 @@ const RAW: Record<string, SetFn> = {
     const top = night > 0 ? `rgb(${lerp(255, 30, night) | 0},${lerp(200, 40, night) | 0},${lerp(130, 90, night) | 0})` : (v === 'gulf' ? '#FFC97A' : '#8ED0F4');
     return <g>
       {sky(z, f, top, night > 0.5 ? '#3A3F6B' : v === 'gulf' ? '#FFF3D6' : '#F4FBFF', 'pmusk' + v + Math.round(night * 10))}
-      <g transform={`translate(1600 ${lerp(180, 760, night)})`}><circle r={90} fill="#FFD54F" stroke={OL} strokeWidth={5} />
+      <g transform={`translate(${v === 'gulf' ? 1650 : 260} ${lerp(140, 760, night)})`}><circle r={90} fill="#FFD54F" stroke={OL} strokeWidth={5} />
         {Array.from({length: 12}, (_, k) => <path key={k} transform={`rotate(${k * 30 + t * 12})`} d="M 0 -110 L 0 -150" stroke="#FFB300" strokeWidth={8} strokeLinecap="round" />)}</g>
       {night > 0.6 && Array.from({length: 30}, (_, q) => <circle key={'st' + q} cx={z.x0 + rnd(q) * (z.x1 - z.x0)} cy={rnd(q + 5) * 500} r={2.5} fill="#FFFFFF" opacity={night} />)}
       {v === 'gulf' ? <g>{sea({...z, x0: z.x0, x1: 60}, f + 10, t, '#3FB1C9')}<path d={`M 60 ${f} Q 500 ${f - 90} 900 ${f - 20} Q 1400 ${f - 110} 1900 ${f - 30} Q 2400 ${f - 90} ${z.x1} ${f} L ${z.x1} ${f + 700} L 60 ${f + 700} Z`} fill="#E8C88A" stroke={OL} strokeWidth={4} /></g>
@@ -297,7 +299,7 @@ const RAW: Record<string, SetFn> = {
         return <g key={'sh' + k} transform={`translate(0 ${(1 - E.outBack(u)) * 60})`} opacity={u}>{hall(800 + k * 240, f, 210, 's' + k, t)}
           {night > 0.5 && <rect x={810 + k * 240} y={f - 140} width={190} height={20} fill="#FFE08A" opacity={0.6} />}</g>; })}
       {heat > 0 && Array.from({length: 8}, (_, q) => { const u = (t * 0.5 + q / 8) % 1; return <path key={'hs' + q} d={`M ${850 + q * 140} ${f - 200 - u * 140} q 12 -14 0 -28 q -12 -14 0 -28`} stroke={RED} strokeWidth={4} fill="none" opacity={heat * (1 - u)} />; })}
-      {z.plaque && plaque(z.plaqueX ?? 1200, 160, z.plaque, NAVY, 28, '#FFFFFF')}
+      {z.plaque && plaque(z.plaqueX ?? 1200, f + 110, z.plaque, NAVY, 28, '#FFFFFF')}
     </g>;
   },
 
@@ -321,7 +323,7 @@ const RAW: Record<string, SetFn> = {
         {stack.map((b, k) => { const u = clamp((t - (b.at ?? 0)) / 0.5); if (u <= 0) return null; const h = (b.v ?? 0.2) * 520 * E.outBack(u), y0 = acc; acc += h;
           return <g key={k}><rect x={-180} y={-20 - y0 - h} width={360} height={h} fill={b.color || BLUE} stroke={OL} strokeWidth={4} />
             {h > 30 && <T x={0} y={-20 - y0 - h / 2 + 10} s={fit(b.label || '', 330, 26)} c="#FFFFFF" st={OL} sw={4}>{b.label}</T>}</g>; })}
-        {tax && stamp(0, -330, tax, RED, 34, 'tx', pop(t, taxAt, 0.4))}</g>
+        {tax && stamp(0, -740, tax, RED, 34, 'tx', pop(t, taxAt, 0.4))}</g>
     </g>;
   },
 
