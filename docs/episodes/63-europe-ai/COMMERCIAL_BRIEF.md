@@ -79,8 +79,8 @@ scales companies at home, eases capital, cuts energy costs, adopts AI and wins t
 
 ## Library connections
 Ep 62 "Could AI Make American Factories Cheaper Than China's?" (same automation logic from the US side), Ep 61 "Why Are Chinese Cars So
-Cheap?", Ep 08 "The Machine Only One Company on Earth Can Build" (ASML), Ep 15 "The Stamp That Could Break ASML's Monopoly", Ep 01 "Why
-Switzerland Is So Rich".
+Cheap, And So Advanced?", Ep 08 "The $250 Million Machine Every Advanced Chip Depends On" (ASML), Ep 15 "The Stamp That Could Break ASML's Monopoly", Ep 01 "The Hidden
+Formula Behind Switzerland's Wealth".
 
 ## Commercial Quality Score (honest; editorial decision aid, not a performance claim)
 | Criterion | Weight | Score | Note |
