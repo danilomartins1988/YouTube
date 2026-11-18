@@ -112,6 +112,9 @@ SHORTS = {
     "65-ai-power-bill": ("why-ai-could-make-your-electricity-bill-explode", "documentary", "aipowerbill_documentary", "AI'S POWER BILL.", "WHO PAYS?", "Who Really Pays for AI's Electricity?", "#ai #electricbill #datacenters"),
     "65-ai-power-bill-b": ("why-ai-could-make-your-electricity-bill-explode", "documentary", "aipowerbill_documentary", "THE POWER AUCTION", "HIT THE CAP", "Why AI Is Driving Up the Price of Power Plants", "#ai #electricity #energy"),
     "65-ai-power-bill-c": ("why-ai-could-make-your-electricity-bill-explode", "documentary", "aipowerbill_documentary", "ONE CLAUSE", "VS AI'S POWER BILL", "The One Clause That Protects Your Power Bill From AI", "#ai #electricbill #utilities"),
+    "66-japan-ai": ("will-ai-make-japan-rich-again", "documentary", "japanai_documentary", "JAPAN IS OUT OF WORKERS.", "CAN ROBOTS HELP?", "Can Robots Fix Japan's Worker Shortage?", "#japan #robots #economy"),
+    "66-japan-ai-b": ("will-ai-make-japan-rich-again", "documentary", "japanai_documentary", "JAPAN BUILDS THE ROBOTS.", "THE WORLD BUYS THEM", "Japan Builds the World's Robots. Who Uses Them?", "#japan #robots #manufacturing"),
+    "66-japan-ai-c": ("will-ai-make-japan-rich-again", "documentary", "japanai_documentary", "ARMS,", "NOT ANDROIDS", "The Robots Really Working in Japan Aren't Humanoids", "#japan #robots #ai"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -133,6 +136,9 @@ CUSTOM = {
     "65-ai-power-bill": ("65-ai-power-bill", ["co_hook", "c2_eleven"], "youtube-short"),
     "65-ai-power-bill-b": ("65-ai-power-bill", ["c3_auction", "c3_short"], "youtube-short-b"),
     "65-ai-power-bill-c": ("65-ai-power-bill", ["c5_why", "c5_ohio"], "youtube-short-c"),
+    "66-japan-ai": ("66-japan-ai", ["co_hook", "c1_draw"], "youtube-short"),
+    "66-japan-ai-b": ("66-japan-ai", ["c3_fanuc", "c3_density"], "youtube-short-b"),
+    "66-japan-ai-c": ("66-japan-ai", ["c4_konbini", "c4_humanoid"], "youtube-short-c"),
 }
 
 

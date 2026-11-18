@@ -1,0 +1,65 @@
+# Thumbnail creative brief (Ep 66). Owner standing rules: at most 4 words naming Japan, face layout with an ORIGINAL character
+# (HIRO, the film's fictional workshop owner), mobile-legible, no statistics shown, no logos, no flags, no real people.
+title: "Will AI Make Japan Rich Again?"
+docs_dir: docs/episodes/66-japan-ai
+video: output/japanai_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: Can the oldest big country turn its shortage of workers into an advantage with robots and AI?
+  surprising_fact: Japan makes about 38% of the world's industrial robots (IFR) yet sells most of them abroad
+  subject: an elderly workshop owner next to a help-wanted sign
+  tone: trade
+  metaphor: the help-wanted sign that a robot answers
+  public_figure: null
+concepts:
+- id: F
+  angle: "face (original character HIRO, the film's fictional workshop owner, shocked; a HELP WANTED tag)"
+  archetype: face
+  text:
+  - CAN ROBOTS
+  - SAVE JAPAN?
+  claim_basis: "a question (answered in the film: robots can raise output per worker if small firms adopt them); Hiro is fictional"
+  scene:
+    bg: ['#FF8A3D', '#2A1240']
+    rays: '#FFB070'
+    bust:
+      who: {name: Hiro, hair: short, hairColor: '#C9CED6', hairShade: '#8E959F', brows: '#8E959F', skin: '#F3D7BD', iris: '#3A2618',
+            clothes: shirt, jacket: '#2E3F7F', shirt: '#E8ECF2', glasses: round, age: 0.7}
+      expr: shock
+      x: 470
+      s: 0.92
+    prop: {kind: tag, text: 'HELP WANTED', x: 1390, y: 790, s: 0.66, rot: -8}
+- id: A
+  angle: the robot superpower
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - JAPAN'S
+  - ROBOT BET
+  claim_basis: 'a question of whether robots can offset the shrinking workforce (no number shown)'
+  scene:
+    palette: {sky0: '#10203F', sky1: '#24508C', haze: '#FF9A4A', key: '#FFF3E0', accent: '#FFB23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: megafactory, x: 960, y: 620, s: 0.9}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE0B8'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: out of workers (consequence)
+  archetype: classic
+  text_side: left
+  accent_line: 1
+  text:
+  - JAPAN'S
+  - MISSING WORKERS
+  claim_basis: 'working-age population down about 13.5 million since 1995 (IPSS / Statistics Bureau, FACT_CHECK.md); no number shown'
+  scene:
+    palette: {sky0: '#1B1030', sky1: '#4A2040', haze: '#FF7A59', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: parcels, x: 1300, y: 640, s: 0.85}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFD8C8'}
+    vignette: 0.55
+    brand: none
