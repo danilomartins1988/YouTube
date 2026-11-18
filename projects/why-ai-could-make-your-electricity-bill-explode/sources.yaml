@@ -146,10 +146,10 @@ claims:
     status: data_derived
     verification_note: Our calculation; average home = EIA 2024 residential average 863 kWh/month.
   - id: pjm_peak
-    text: "PJM 2026 Long-Term Load Forecast (Jan 14, 2026): summer peak forecast ~222,000 MW in 2036 (2025 actual: over 161,000 MW); 3.6%/yr over ten years vs 0.3%/yr in the 2021 forecast; data centers the main driver; near-term 2027 peak trimmed 3,735 MW."
+    text: "PJM 2026 Long-Term Load Forecast (Jan 14, 2026): summer peak forecast ~222,000 MW in 2036 (2025 actual: over 161,000 MW); 3.6%/yr over ten years vs 0.3%/yr in the 2021 forecast (OUR CALCULATION: 12 times the growth rate); data centers the main driver; near-term 2027 peak trimmed 3,735 MW."
     spoken: about two hundred and twenty-two thousand megawatts
     display: "PJM summer peak: 161 GW (2025 actual) → ≈ 222 GW (2036 FORECAST) · 3.6%/yr vs 0.3%/yr in the 2021 forecast"
-    fields: {now_spoken: a hundred and sixty-one thousand, rate_spoken: three point six percent, old_spoken: zero point three percent, year_spoken: twenty thirty-six}
+    fields: {x_spoken: about twelve times, now_spoken: a hundred and sixty-one thousand, rate_spoken: three point six percent, old_spoken: zero point three percent, year_spoken: twenty thirty-six}
     source_ids: [pjm_lf26]
     status: source_located
   - id: dom_share
@@ -180,25 +180,25 @@ claims:
     status: data_derived
     verification_note: Illustrative upper-bound arithmetic, labelled on screen and in narration.
   - id: bra2829
-    text: "PJM 2028/29 BRA (Jul 14, 2026): cleared at the FERC-approved cap $325/MW-day (2.5% below $333.44 in 2027/28); cleared supply x price = $16.4 billion; 6,831 MW short of the reliability requirement; grid serves more than 67 million people in 13 states and DC; first auctions in PJM history (this and 2027/28) in which the whole RTO fell short; 525 MW UCAP new generation and uprates cleared. 2024/25 RTO price: $28.92/MW-day."
+    text: "PJM 2028/29 BRA (Jul 14, 2026): cleared at the FERC-approved cap $325/MW-day (2.5% below $333.44 in 2027/28); cleared supply x price = $16.4 billion; 6,831 MW short of the reliability requirement; grid serves more than 67 million people in 13 states and DC; first auctions in PJM history (this and 2027/28) in which the whole RTO fell short; 525 MW UCAP new generation and uprates cleared. 2024/25 RTO price: $28.92/MW-day (OUR CALCULATION: $325 / $28.92 = 11.2 times)."
     spoken: three hundred and twenty-five dollars
     display: "PJM capacity price: $28.92 (2024/25) → $325/MW-day (2028/29, AT THE CAP) · $16.4B · 6,831 MW SHORT"
-    fields: {people_spoken: sixty-seven million, states_spoken: thirteen, old_spoken: under thirty dollars, total_spoken: sixteen point four billion dollars, short_spoken: six thousand eight hundred and thirty-one megawatts, new_spoken: five hundred and twenty-five}
+    fields: {times_spoken: more than eleven times, people_spoken: sixty-seven million, states_spoken: thirteen, old_spoken: under thirty dollars, total_spoken: sixteen point four billion dollars, short_spoken: six thousand eight hundred and thirty-one megawatts, new_spoken: five hundred and twenty-five}
     source_ids: [pjm_bra2829, pjm_bra2425]
     status: source_located
   - id: imm_dc
     text: "PJM Market Monitor (Jul 28, 2026): of the $16.4B 2028/29 capacity charges, $6.3B (38.2%) resulted from data center load; over the last four auctions $29.4B (46.2%). Data center load in the forecast: 7,927 MW (2025/26) -> 21,470 MW (2028/29). Monitor's estimates."
     spoken: six point three billion dollars
     display: "Market Monitor estimate: $6.3B of $16.4B (38%) from data center load · 4 auctions: $29.4B (46%)"
-    fields: {share_spoken: thirty-eight percent, four_spoken: twenty-nine point four billion dollars, four_share_spoken: forty-six percent, mw_then_spoken: about eight thousand, mw_now_spoken: about twenty-one and a half thousand}
+    fields: {half_spoken: almost half, share_spoken: thirty-eight percent, four_spoken: twenty-nine point four billion dollars, four_share_spoken: forty-six percent, mw_then_spoken: about eight thousand, mw_now_spoken: about twenty-one and a half thousand}
     source_ids: [imm_0728]
     status: source_located
     verification_note: Monitor's own estimates, attributed.
   - id: capex
-    text: "2025 Forms 10-K: Dominion Energy planned capital expenditures 2026-2030 total $65.7 billion; AEP forecasts $12.2 billion in 2026 plus $59.7 billion for 2027-2030 (OUR SUM: $71.9 billion, 2026-2030)."
+    text: "2025 Forms 10-K: Dominion Energy planned capital expenditures 2026-2030 total $65.7 billion; AEP forecasts $12.2 billion in 2026 plus $59.7 billion for 2027-2030 (OUR SUM: $71.9 billion, 2026-2030). OUR SUM of both: $137.6 billion."
     spoken: sixty-five point seven billion dollars
     display: "Planned spending 2026-2030: Dominion $65.7B · AEP ≈ $71.9B (OUR SUM of $12.2B + $59.7B) · 2025 10-Ks"
-    fields: {aep_spoken: almost seventy-two billion}
+    fields: {aep_spoken: almost seventy-two billion, sum_spoken: more than a hundred and thirty billion dollars}
     source_ids: [dom_10k25, aep_10k25]
     status: source_located
   - id: scc_roe
@@ -208,10 +208,10 @@ claims:
     source_ids: [scc_dom]
     status: source_located
   - id: scc_ror
-    text: "Virginia SCC final order PUR-2025-00058: the class cost-of-service study shows customers that will form GS-5 (large, mostly data centers) earned a per-books return of 3.01% on the transmission function vs 22.41% for remaining GS-4 customers (6.28% vs 20.75% overall); the commission will examine transmission cost allocation in the next proceeding."
+    text: "Virginia SCC final order PUR-2025-00058: the class cost-of-service study shows customers that will form GS-5 (large, mostly data centers) earned a per-books return of 3.01% on the transmission function vs 22.41% for remaining GS-4 customers (6.28% vs 20.75% overall); the commission will examine transmission cost allocation in the next proceeding. OUR CALCULATION: 3.01 / 22.41 = 0.13, about one-seventh."
     spoken: about three percent
     display: "Return earned on transmission (Dominion study, 2024): future GS-5 class 3.01% vs other big customers 22.41%"
-    fields: {other_spoken: about twenty-two percent}
+    fields: {other_spoken: about twenty-two percent, frac_spoken: about a seventh of}
     source_ids: [scc_dom]
     status: source_located
   - id: scc_bill

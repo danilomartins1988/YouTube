@@ -1,17 +1,15 @@
-logline: Europe is aging, pays more for energy and has few tech giants. But if AI and robots make labor matter less, what matters more
-  is who owns the technology, the patents and the machines. Through Europe's drugmakers, ASML, Siemens and Airbus, the film tests a
-  hypothesis - that automation could hand Europe a different way back into the global race - and names the conditions it needs.
+logline: 'Theo, an engineer in an aging European factory town, keeps hearing that Europe is falling behind. Following him and his sister
+  Nora, the film tests a hypothesis: if AI and robots make labor matter less, owning the technology matters more, and Europe owns a
+  lot of it.'
 title: Could AI Bring Europe Back to Power?
 segments:
 - id: co_hook
   chapter: A continent in a squeeze
-  narration: Everyone says Europe is falling behind. Its people are getting older. Its companies pay {{energy}} what American companies
-    pay for electricity. America leads the digital economy, China has become the world's factory, and most of the giant tech companies
-    are based somewhere else. But Europe still builds the only machines that can print the most advanced chips, and it invents medicines
-    sold all over the world. So here's a question almost nobody is asking. What if the technology that seems to threaten Europe could
-    bring it back?
-  claims:
-  - energy
+  narration: Meet Theo. He's an engineer in an old factory town in Europe, and everyone keeps telling him the same thing. Europe is
+    falling behind. America has the tech giants. China has the factories. Europe has aging towns, pricey energy and a lot of nostalgia.
+    But Theo's town still makes parts for machines the whole world needs, and his sister Nora works on medicines sold around the world.
+    So here's the question Theo is about to chase. What if the technology that seems to threaten Europe could bring it back?
+  claims: []
   analysis: true
   source_note: Hook framing (states the common belief, then flips it); ASML sole EUV supplier (asml_ar25); energy ratio (draghi_a).
 - id: title_card
@@ -20,39 +18,33 @@ segments:
   claims: []
 - id: a1_size
   chapter: A continent in a squeeze
-  narration: First, a reality check, because Europe is not poor. By the IMF's estimates for {{gdp.year_spoken}}, the European Union
-    produced {{gdp.eu_spoken}} dollars of output. China, {{gdp.cn_spoken}}. The United States, {{gdp}}. Europe is a giant. It's just
-    a giant that has been slipping.
+  narration: Start with what Theo sees from his window. Europe is not poor. By the IMF's count, the European Union's economy is worth
+    {{gdp.eu_spoken}} dollars a year, a little bigger than China's. It's a giant. It's just a giant that keeps slipping.
   claims:
   - gdp
 - id: a1_gap
   chapter: A continent in a squeeze
-  narration: A twenty twenty-four report for the European Commission by Mario Draghi found that the size gap between the EU and US economies
-    grew from {{draghi_gap.then_spoken}} in {{draghi_gap.then_year_spoken}} to {{draghi_gap}} by {{draghi_gap.now_year_spoken}}. And
-    about {{draghi_gap.prod_spoken}} of the gap in income per person comes from one thing. Lower productivity.
+  narration: Slipping how? A report for the European Commission, led by the former central banker Mario Draghi, found the gap between
+    Europe and America has been widening for years. And most of it comes down to a single thing. European workers simply produce less
+    in the same amount of time.
   claims:
   - draghi_gap
 - id: a1_age
   chapter: A continent in a squeeze
-  narration: Now add age. At the start of last year, {{eu_age}} of everyone in the EU was {{eu_age.age_spoken}} or older, according
-    to Eurostat. Draghi's report projects that by {{workforce.year_spoken}}, the EU's workforce will shrink by close to {{workforce}}
-    every single year, and the balance will move {{workforce.ratio_spoken}}.
+  narration: Theo sees it on his own shop floor. The veterans are retiring, and fewer young people walk in. Draghi's report warns that
+    Europe will soon have just {{workforce.ratio_spoken}} for every retiree.
   claims:
-  - eu_age
   - workforce
 - id: a1_squeeze
   chapter: A continent in a squeeze
-  narration: Then the costs. EU companies pay {{energy}} as much for electricity as American firms, and {{energy.gas_spoken}} as much
-    for natural gas. And in tech, only {{tech50}} of the world's top {{tech50.of_spoken}} tech companies are European. Close to {{unicorns}}
-    of Europe's billion-dollar startups moved their headquarters abroad, mostly to America.
+  narration: Then there's the power bill. European companies pay {{energy}} what American companies pay for electricity. And when Europe
+    grows a promising tech startup, it often packs up and moves to America to raise money. Theo's boss has a word for all of this. Squeezed.
   claims:
   - energy
-  - tech50
-  - unicorns
 - id: a1_paradox
   chapter: A continent in a squeeze
-  narration: So here's the contradiction. Enormous wealth, world-class universities, famous companies, and serious questions about the
-    future. Those are the facts. Now, a hypothesis.
+  narration: So that's the paradox. A rich continent with world-class universities and famous companies, and a future everyone is worried
+    about. Those are the facts. Now comes Theo's hunch.
   claims: []
   analysis: true
   source_note: Framing; marks the switch from facts to hypothesis (FACT / HYPOTHESIS chips on screen).
@@ -62,23 +54,22 @@ segments:
   claims: []
 - id: a2_formula
   chapter: The old formula
-  narration: For two centuries, the recipe for growth was simple. Workers, plus capital, makes output. More people, more machines, more
-    stuff. Europe's industrial revolution ran on it.
+  narration: The old recipe for growth was simple. More workers plus more machines makes more stuff. Europe's industrial revolution
+    ran on it. Theo's great-grandfather worked in this very factory, shoulder to shoulder with hundreds of others.
   claims: []
   analysis: true
   source_note: Textbook mechanism (labor and capital as inputs); no figures.
 - id: a2_draw
   chapter: The old formula
-  narration: Let me draw the problem. Output equals the number of workers, times what each worker produces. If the number of workers
-    starts falling, and in Europe it's about to, there's only one way to keep growing. Each worker has to produce more. Expensive labor
-    makes that even harder.
+  narration: Let me draw Theo's problem. Output equals the number of workers, times what each worker produces. If the number of workers
+    starts falling, and in Europe it's about to, there's just a single way to keep growing. Each worker has to produce more.
   claims: []
   analysis: true
   source_note: Mechanism (growth accounting identity), drawn by the presenter; workforce decline sourced in a1_age.
 - id: a2_question
   chapter: The old formula
-  narration: So here's the question. What if technology let companies produce far more with far fewer workers? Then a shrinking workforce
-    stops being a death sentence, and a different question matters more.
+  narration: So Theo asks the obvious question. What if technology let his factory make far more with far fewer people? Then a shrinking
+    workforce stops being a death sentence. And a different question starts to matter.
   claims: []
   analysis: true
   source_note: Transition to the hypothesis (no figures).
@@ -88,36 +79,37 @@ segments:
   claims: []
 - id: a3_factory
   chapter: When machines do the work
-  narration: Walk into a modern automated factory. Cameras running AI software check every part, and guide robot arms. The International
-    Federation of Robotics calls that machine vision {{ifr_ai}}. Sensors warn before a motor fails. Self-driving carts move parts. And
-    engineers test the line in a digital twin before building it.
+  narration: Theo visits a modern automated plant. Cameras running AI check every part and guide robot arms. The industry's robot federation
+    calls that kind of machine vision {{ifr_ai}}. Sensors warn before a motor fails. Self-driving carts move parts. And engineers test
+    the whole line in a digital twin before building it.
   claims:
   - ifr_ai
 - id: a3_proven
   chapter: When machines do the work
-  narration: But careful with the hype. The federation says general-purpose robots that can learn any job are not yet industry-grade.
-    So this isn't a factory with no people. It's a factory where each person does far more.
-  claims:
-  - ifr_ai
+  narration: But the tour guide is honest. Robots that can learn any job are not ready yet. So this isn't a factory with no people.
+    It's a factory where each person does far more. Theo likes the sound of that.
+  claims: []
+  analysis: true
+  source_note: Story beat (no figures); facts in FACT_CHECK.md.
 - id: a3_robots
   chapter: When machines do the work
-  narration: Factories in Europe installed {{ifr_europe}} new industrial robots last year, down {{ifr_europe.drop_spoken}}. Germany
-    runs {{ifr_europe.de_spoken}} robots for every {{ifr_europe.unit_spoken}} factory workers. The EU, {{ifr_europe.eu_spoken}}. The
-    world average, {{ifr_europe.world_spoken}}.
-  claims:
-  - ifr_europe
+  narration: And Europe isn't starting from scratch. Germany already runs more robots per factory worker than America does, and far
+    more than the world average.
+  claims: []
+  analysis: true
+  source_note: Story beat (no figures); facts in FACT_CHECK.md.
 - id: a3_bill
   chapter: When machines do the work
-  narration: Picture a factory's costs as a stack. Automation shrinks the labor slice. But the machines, the software and the know-how
-    behind them become a bigger part of the bill. So the money starts flowing to whoever owns those things. That's not a forecast. It's
-    how the arithmetic moves.
+  narration: Here's the mechanism that changes Theo's thinking. Picture a factory's costs as a stack. Automation shrinks the labor slice.
+    But the machines, the software and the know-how behind them become a bigger part of the bill. So the money starts flowing to whoever
+    owns those things.
   claims: []
   analysis: true
   source_note: Mechanism, illustrative cost stack (no measured shares), labelled ILLUSTRATIVE on the board.
 - id: a3_people
   chapter: When machines do the work
-  narration: Human work doesn't disappear. Someone designs the robots, writes the software, fixes the line. But if fewer hands are needed
-    per product, cheap labor matters less, and owning the technology may matter more. Europe owns quite a lot of it. Starting with medicine.
+  narration: Workers don't vanish. Someone designs the robots, writes the code, fixes the line. But if fewer hands are needed, cheap
+    labor matters less, and owning the technology may matter more. And Europe already owns a lot of it. Nora works in the clearest example.
   claims: []
   analysis: true
   source_note: Conjecture (labelled), built on the a3_bill mechanism.
@@ -127,45 +119,43 @@ segments:
   claims: []
 - id: a4_surplus
   chapter: 'Pharma: Europe''s hidden advantage'
-  narration: Here's a number that surprises most Americans. In twenty twenty-five, the EU sold {{pharma_surplus}} more medicines to
-    the world than it bought, by our conversion of Eurostat data. Its biggest customer? The United States, with about {{pharma_surplus.us_spoken}}
-    of those exports.
+  narration: Medicine. Here's a number that surprises most Americans. Last year the EU sold the world {{pharma_surplus}} more medicine
+    than it bought. Its biggest customer? The United States.
   claims:
   - pharma_surplus
 - id: a4_six
   chapter: 'Pharma: Europe''s hidden advantage'
-  narration: Look at the names. Roche and Novartis in Basel, Switzerland. AstraZeneca in Cambridge and GSK in London. Sanofi in Paris.
-    Novo Nordisk outside Copenhagen. Switzerland and the UK are in Europe, but not in the EU. Together, these six brought in {{pharma_six}}
-    last year, and spent {{pharma_six.rd_spoken}} on research.
-  claims:
-  - pharma_six
+  narration: Nora walks Theo past the giants. Roche and Novartis in Switzerland. AstraZeneca and GSK in Britain. Sanofi in France. Novo
+    Nordisk in Denmark. Switzerland and Britain are in Europe, but not in the EU. Each of them sells medicine all over the world.
+  claims: []
+  analysis: true
+  source_note: Story beat (no figures); facts in FACT_CHECK.md.
 - id: a4_chain
   chapter: 'Pharma: Europe''s hidden advantage'
-  narration: So where does the money in a medicine come from? Let me draw the chain. Research finds a molecule. Patents protect it.
-    Trials prove it works. Then factories make it, and distributors ship it worldwide. Most of the value sits at the start. In the ideas,
+  narration: So where does the money in a medicine come from? Let me draw it. Research finds a molecule. Patents protect it. Trials
+    prove it works. Then factories make it, and trucks and planes ship it worldwide. Most of the value sits at the start. In the ideas,
     the patents and the proof.
   claims: []
   analysis: true
   source_note: Mechanism (value chain), drawn by the presenter; no allocation figures.
 - id: a4_novo
   chapter: 'Pharma: Europe''s hidden advantage'
-  narration: Take Novo Nordisk, the Danish maker of diabetes and obesity drugs. Last year it sold {{novo}} worth of medicine, and spent
-    {{novo.rd_spoken}} on research. It is buying and expanding factories. But what it really sells is decades of science that only it
-    controls.
+  narration: Nora's favorite example is Novo Nordisk, the Danish maker of diabetes and obesity drugs. It spends {{novo.rd_spoken}} a
+    year on research. It's expanding its factories too. But what it really sells is decades of science that only it controls.
   claims:
   - novo
 - id: a4_ai
   chapter: 'Pharma: Europe''s hidden advantage'
-  narration: Could AI speed that science up? AstraZeneca bought a company called {{az_ai}} to build AI models into its cancer research.
-    But getting a medicine from lab to pharmacy takes {{drug_odds}} on average, and only {{drug_odds.odds_spoken}} substances make it.
-    AI may help pick better bets. It doesn't guarantee a single approval.
+  narration: Can AI speed that science up? Nora is cautious. AstraZeneca bought a company called {{az_ai}} to build AI into its cancer
+    research. But a new medicine still takes more than a decade, and for every success, thousands of candidates fail. AI may help pick
+    better bets. It doesn't guarantee a single approval.
   claims:
   - az_ai
   - drug_odds
 - id: a4_reveal
   chapter: 'Pharma: Europe''s hidden advantage'
-  narration: And here's the revelation. A company doesn't have to perform every manufacturing step at home to capture a lot of the value.
-    What it has to do is own, and keep improving, the thing everyone else needs.
+  narration: And that's Theo's first big lesson. You don't have to make everything at home to capture the value. You have to own, and
+    keep improving, the thing everyone else needs.
   claims: []
   analysis: true
   source_note: Conclusion of Act 4 (mechanism; no figures).
@@ -175,36 +165,36 @@ segments:
   claims: []
 - id: a5_asml
   chapter: The machines behind the machines
-  narration: Same story in chips. ASML, in the Dutch town of Veldhoven, is the only company that makes the extreme ultraviolet machines
-    used to print the world's most advanced chips. Last year it sold {{asml}} worth of equipment and kept {{asml.ni_spoken}} as profit.
-    It doesn't make a single chip.
+  narration: Then Nora shows him the most extreme case. ASML, in the Dutch town of Veldhoven, is the only company that makes the machines
+    used to print the world's most advanced chips. Last year it kept {{asml.ni_spoken}} in profit. And it doesn't make a single chip.
   claims:
   - asml
 - id: a5_web
   chapter: The machines behind the machines
-  narration: About {{asml.sup_spoken}} suppliers feed in lenses, lasers and parts. Out go machines to chip factories in Asia and America.
-    Every time someone, anywhere, builds a factory for AI chips, part of the bill lands in the Netherlands.
+  narration: It sits in the middle of a web. Thousands of suppliers feed in lenses, lasers and parts. Out go machines to chip factories
+    in Asia and America. Every time anyone builds a factory for AI chips, part of the bill lands in the Netherlands.
   claims:
   - asml
 - id: a5_siemens
   chapter: The machines behind the machines
-  narration: Siemens, from Munich, sells factories the controllers, automation, software and digital twins. In its fiscal year to September,
-    it brought in {{siemens}}, and its factory software grew {{siemens.growth_spoken}}. Its chief executive calls industrial AI an exceptional
-    growth opportunity. When the world automates, someone sells the automation.
+  narration: Theo recognizes the next example. Siemens, from Munich, sells factories their controllers, automation and software, including
+    digital twins. Its chief executive calls industrial AI an exceptional growth opportunity. When the world automates, somebody sells
+    the automation.
   claims:
   - siemens
 - id: a5_airbus
   chapter: The machines behind the machines
-  narration: Then there's Airbus, registered in the Netherlands and run from near Toulouse. Last year it delivered {{airbus}} commercial
-    jets, with {{airbus.backlog_spoken}} more on order. Its real product is coordination. Thousands of parts from many countries, engineered
-    and certified to fit. Exactly where better software and automation could pay off.
+  narration: And then there's Airbus, run from near Toulouse in France. Its real product is coordination. Thousands of parts from many
+    countries, engineered and certified to fit together, with years of orders already waiting. That's exactly where smarter software
+    and automation could pay off.
   claims:
   - airbus
 - id: a5_limits
   chapter: The machines behind the machines
-  narration: None of this means Europe dominates everything. Its robot installations fell, and its cloud and consumer tech are mostly
-    American. But it does own capabilities that could gain value as production gets more automated.
-  claims: []
+  narration: Theo stays skeptical. Europe doesn't dominate everything. China installs far more robots, and most cloud and consumer tech
+    is American. But Europe owns capabilities that could gain value as production gets more automated.
+  claims:
+  - ifr_europe
   analysis: true
   source_note: Balance note; robot decline sourced in a3_robots (ifr_europe); tech position sourced in a1_squeeze (draghi_a).
 - id: a6_card
@@ -213,25 +203,24 @@ segments:
   claims: []
 - id: a6_old
   chapter: Owning vs. operating
-  narration: For decades, countries competed to host factories and their jobs. But in a more automated economy, the factory floor may
-    employ fewer people. And the question shifts from who operates the machines to who owns them.
+  narration: Which brings Theo to the big idea. For decades, towns like his competed to host factories and their jobs. In a more automated
+    world, the factory floor may employ fewer people. And the question shifts from who operates the machines to who owns them.
   claims: []
   analysis: true
   source_note: Hypothesis (labelled), no figures.
 - id: a6_company
   chapter: Owning vs. operating
-  narration: Imagine a made-up European company. Let's call it Company E. Its scientists and engineers in Europe develop the technology.
-    It owns the patents and the software, and its people make the key decisions and carry the big risks. It licenses that know-how worldwide,
-    and has partner factories in several countries make the product.
+  narration: So Theo sketches his own company's future. Call it Company E. Its engineers in Europe develop the technology. It owns the
+    patents and the software, makes the key decisions and carries the big risks. Partner factories in other countries make the product
+    under license.
   claims: []
   analysis: true
   source_note: HYPOTHETICAL company (labelled on screen); no real firm implied.
 - id: a6_numbers
   chapter: Owning vs. operating
-  narration: Now some made-up numbers, per hundred dollars of sales. A contract factory abroad spends sixty dollars making the product
-    and earns a steady fee, a five percent markup, so three dollars. Company E pays its own research and sales costs of twenty, and
-    keeps seventeen. Then the factory automates, and its costs fall to fifty. It still earns its five percent, now two dollars fifty.
-    Company E's share jumps to twenty-seven dollars fifty.
+  narration: Now watch the money, with made-up numbers on screen. The partner factory earns a small, steady fee on top of its costs.
+    Company E keeps what's left. Then the factory automates, and its costs fall. Its fee shrinks a little, because it's charged on lower
+    costs. And Company E's share of each sale grows by more than half.
   claims: []
   analysis: true
   source_note: 'ILLUSTRATIVE MODEL (our assumptions; labelled on screen). Per $100 of sales. Before: factory costs 60, markup 5% = 3,
@@ -239,26 +228,26 @@ segments:
     = 27.50; group 30. Assumes sales prices hold and Company E genuinely performs and controls the development and risks.'
 - id: a6_catch
   chapter: Owning vs. operating
-  narration: Two catches. This only works if the European company really does the work, and if prices hold, though rivals automate too.
-    And simply registering a patent somewhere doesn't move the profit. The real work, people and decisions have to be there too.
+  narration: But there are catches. This only works if Company E really does the work, and if prices hold, while rivals automate too.
+    And simply registering a patent somewhere doesn't move the profit. The real work, the people and the decisions have to be there.
   claims: []
   analysis: true
   source_note: Caveats. Tax sentence consistent with OECD TPG 2022 Chapter VI (legal ownership alone does not confer the right to retain
     returns; DEMPE functions and control of risk) - see FACT_CHECK.md (sources oecd_tpg, eu_pillar2, not narrated).
 - id: a6_question
   chapter: Owning vs. operating
-  narration: So the real question isn't whether Europe can win back the assembly line. It's whether it can attract and keep the companies,
-    the scientists, the capital and the ideas that capture value from automated production everywhere.
+  narration: So the question for Europe isn't whether it can win back the assembly line. It's whether it can attract and keep the companies,
+    the scientists, the money and the ideas that profit from automated production everywhere.
   claims: []
   analysis: true
   source_note: Restates the hypothesis (no figures).
 - id: a6_energy
   chapter: Owning vs. operating
-  narration: 'Now a twist. If robots make labor matter less, other costs matter more: energy, the cost of money, logistics, stability,
-    and the taxes and charges on producing. Take Brazil. In {{br_power.year_spoken}}, {{br_power}} of its electricity came from renewables.
-    But one industry study found taxes and sector charges took {{br_charges}} of what its power companies billed. Brazil is phasing
-    in a new value-added tax through {{br_vat}}. So in this scenario, an energy-rich country would need competitive costs to produce,
-    charges and taxes included. And the profit from the technology could still flow to its owner. Possibly a European one.'
+  narration: Then Theo's boss throws in a twist. If robots make labor matter less, other costs matter more. Energy. Money. Logistics.
+    Stability. And the taxes on producing. Brazil, for example, gets most of its electricity from renewables. Yet an industry study
+    found that {{br_charges}} of what its power companies bill goes to taxes and charges, and the country is now overhauling its sales
+    taxes. So a country with cheap power would still need competitive costs to produce. And even if Company E's partner plant ends up
+    in Brazil, the profit from the technology could still come home to Europe.
   claims:
   - br_power
   - br_charges
@@ -272,21 +261,21 @@ segments:
   claims: []
 - id: a7_magnet
   chapter: A magnet for capital
-  narration: Europe has real pull. Strong courts, research labs, a huge single market, industrial clusters, and cities people want to
-    live in. That can attract engineers, entrepreneurs, investors and headquarters.
+  narration: Can Europe pull in the people and the money that kind of company needs? It has real pull. Strong courts, research labs,
+    a huge single market, industrial clusters, and cities people want to live in.
   claims: []
   analysis: true
   source_note: Qualitative strengths (no rankings or figures claimed).
 - id: a7_kinds
   chapter: A magnet for capital
-  narration: But careful. Wealthy residents are not the same as productive investment. A head office is not a research lab. Only real
-    activity builds real growth.
+  narration: But Nora warns him. Wealthy residents are not the same as productive investment. A head office is not a research lab. Only
+    real activity builds real growth.
   claims: []
   analysis: true
   source_note: Distinction requested by the brief; mechanism, no figures.
 - id: a7_risks
   chapter: A magnet for capital
-  narration: And inflows bring problems. Pricier housing. Wider inequality. Shortages of skilled workers. And rich newcomers don't automatically
+  narration: And newcomers bring problems. Pricier housing. Wider inequality. Shortages of skilled workers. Rich arrivals don't automatically
     pay for pensions and hospitals. That depends on what they do and how they're taxed.
   claims: []
   analysis: true
@@ -297,25 +286,25 @@ segments:
   claims: []
 - id: a8_conditions
   chapter: Could Europe come back?
-  narration: So what would a comeback take? Let me list it. Turn research into companies that can grow big without leaving. Make capital
-    easier to raise. Bring down energy costs. Actually adopt AI in everyday factories and offices. And compete hard for talent. Miss
-    these, and the automated economy's profits flow elsewhere.
+  narration: So what would a comeback take, for Theo's town and for Europe? Let me list it. Let companies grow big without leaving.
+    Make money easier to raise. Bring down energy costs. Actually use AI in everyday factories and offices. And compete hard for talent.
+    Miss these, and the profits flow elsewhere.
   claims: []
   analysis: true
   source_note: Conditions drawn from the brief and the Draghi report themes (scale-ups, capital, energy, adoption, skills); no figures.
 - id: a8_verdict
   chapter: Could Europe come back?
-  narration: So, could AI bring Europe back to power? Not by winning the race to build the most factories. That race is China's. And
-    not as a copy of Silicon Valley. But as the owner, developer, financier and licensor of technology the whole world runs on. That's
-    a plausible path, not a promise. Europe has the assets. The rest depends on choices it hasn't made yet.
+  narration: So, could AI bring Europe back to power? Not by building the most factories. That race is China's. And not by copying Silicon
+    Valley. But as the owner, developer, financier and licensor of technology the whole world runs on. It's a plausible path, not a
+    promise. Europe has the assets. The rest depends on choices it hasn't made yet.
   claims: []
   analysis: true
   source_note: Verdict (hypothesis plus conditions); no prediction or date.
 - id: a8_close
   chapter: Could Europe come back?
   narration: For generations, economic power meant factories and workers. In a world run more and more by machines, the question may
-    change. Not just who makes the products, but who owns the technology, the machines and the ideas behind them. And that could give
-    Europe a very different way back into the race.
+    change. Not just who makes the products, but who owns the technology, the machines and the ideas behind them. And for Theo's old
+    factory town, that could be a very different way back into the race.
   claims: []
   analysis: true
   source_note: Closing line (owner direction, rewritten).
