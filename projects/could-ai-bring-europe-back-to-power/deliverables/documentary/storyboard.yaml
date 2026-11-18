@@ -547,8 +547,8 @@ scenes:
     drift: 3
     items:
     - kind: counter
-      x: 560
-      y: 210
+      x: 420
+      y: 260
       at:
         cue: At the start of last year
       suffix: '% AGED 65+'
@@ -564,7 +564,7 @@ scenes:
     - kind: sign
       text: 'WORKFORCE: −≈2 MILLION A YEAR BY 2040 (DRAGHI REPORT)'
       x: 960
-      y: 290
+      y: 990
       at:
         cue: will shrink by close to
       color: '#FFE0B2'
@@ -2617,7 +2617,7 @@ scenes:
       size: 26
     - kind: sign
       text: A FACTORY BOOM ANYWHERE → ORDERS IN THE NETHERLANDS
-      x: 960
+      x: 1320
       y: 90
       at:
         cue: part of the bill
@@ -2883,7 +2883,7 @@ scenes:
       x0: -1600
       x1: 4600
       title: A REALITY CHECK
-      scale: 0.0016
+      scale: 0.0013
       bars:
       - label: CHINA ROBOTS 2025
         v: 354226
@@ -3528,9 +3528,9 @@ scenes:
         at:
           cue: And the taxes and charges
         color: '#FFCDD2'
-      facX: 260
-      facGap: 350
-      facY: 80
+      facX: 300
+      facGap: 330
+      facY: 150
       bill:
       - label: ENERGY + GRID
         v: 55
@@ -3578,7 +3578,7 @@ scenes:
     - kind: toonwords
       text: ROBOTS ↑ → LABOR MATTERS LESS → OTHER COSTS MATTER MORE
       x: 960
-      y: 180
+      y: 270
       at: 0.3
       size: 34
       until:
@@ -3586,7 +3586,7 @@ scenes:
     - kind: sign
       text: 'BRAZIL 2025: 86.8% OF ELECTRICITY FROM RENEWABLES (EPE)'
       x: 560
-      y: 180
+      y: 270
       at:
         cue: of its electricity
       color: '#C8E6C9'
@@ -3596,7 +3596,7 @@ scenes:
     - kind: sign
       text: TAXES + SECTOR CHARGES ≈ 44.8% OF POWER COMPANIES' GROSS REVENUE, 2024 (PWC / ACENDE BRASIL)
       x: 1100
-      y: 180
+      y: 270
       at:
         cue: taxes and sector charges took
       color: '#FFCDD2'
@@ -3606,7 +3606,7 @@ scenes:
     - kind: sign
       text: NEW DUAL VAT, PHASED IN 2026-2033 (EC 132/2023)
       x: 1100
-      y: 180
+      y: 270
       at:
         cue: Brazil is phasing
       color: '#FFF59D'
@@ -3616,7 +3616,7 @@ scenes:
     - kind: toonwords
       text: CHEAP POWER + COMPETITIVE COSTS TO PRODUCE?
       x: 960
-      y: 180
+      y: 270
       at:
         cue: So in this scenario
       size: 44
@@ -3626,7 +3626,7 @@ scenes:
     - kind: sign
       text: THE TECH PROFIT CAN STILL FLOW TO ITS OWNER
       x: 960
-      y: 180
+      y: 270
       at:
         cue: And the profit from
       color: '#E1D5FF'

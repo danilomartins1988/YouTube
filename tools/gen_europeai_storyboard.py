@@ -125,9 +125,9 @@ stage("s05_age", "a1_age", {
     **W1("agewave", workers=[[0, 3.0], [C("and the balance will move"), 3.0], [C("and the balance will move", 3.5), 2.0]],
          years=[[0, "EU · 1 JANUARY 2025"], [C("Draghi's report projects"), "EU · PROJECTION TO 2040"]], glassX=1760),
     "cam": cam((0, 960, 520, 0.95), (C("Draghi's report projects"), 960, 500, 1.0, 1.2), (C("and the balance will move"), 960, 480, 1.08, 1.4)), "drift": 3,
-    "items": [it("counter", x=560, y=210, at=C("At the start of last year"), suffix="% AGED 65+", decimals=1, steps=[[0, 0], [C("At the start of last year"), 0], [C("or older"), 22.0]],
+    "items": [it("counter", x=420, y=260, at=C("At the start of last year"), suffix="% AGED 65+", decimals=1, steps=[[0, 0], [C("At the start of last year"), 0], [C("or older"), 22.0]],
                  text="EU POPULATION, 1 JAN 2025 (EUROSTAT)"),
-              sign("WORKFORCE: −≈2 MILLION A YEAR BY 2040 (DRAGHI REPORT)", 960, 290, C("will shrink by close to"), color="#FFE0B2", size=28),
+              sign("WORKFORCE: −≈2 MILLION A YEAR BY 2040 (DRAGHI REPORT)", 960, 990, C("will shrink by close to"), color="#FFE0B2", size=28),
               sign("WORKERS PER RETIREE: 3 → 2", 1500, 210, C("and the balance will move"), color="#FFCDD2", size=32),
               tag((0, "FACT"), (C("Draghi's report projects"), "FACT · OFFICIAL PROJECTION"))]},
     sources=["eurostat_age", "draghi_a"])
@@ -336,7 +336,7 @@ stage("s27_web", "a5_web", {
                {"label": "AI-CHIP FAB · ANYWHERE", "at": C("Every time someone"), "x": 1700, "y": 640}]),
     "cam": cam((0, 700, 520, 1.0), (C("Out go machines"), 1250, 520, 1.0, 1.4), (C("Every time someone"), 960, 520, 0.85, 1.4)), "drift": 2,
     "items": [sign("≈5,100 SUPPLIERS (ASML 2025 ANNUAL REPORT)", 400, 90, C("About"), color="#FFF59D", size=26),
-              sign("A FACTORY BOOM ANYWHERE → ORDERS IN THE NETHERLANDS", 960, 90, C("part of the bill"), color="#C8E6C9", size=28),
+              sign("A FACTORY BOOM ANYWHERE → ORDERS IN THE NETHERLANDS", 1320, 90, C("part of the bill"), color="#C8E6C9", size=28),
               tag((0, "FACT"), (C("Every time someone"), "MECHANISM"))]},
     sources=["asml_ar25"])
 stage("s28_siemens", "a5_siemens", {
@@ -364,7 +364,7 @@ stage("s29_airbus", "a5_airbus", {
               tag((0, "FACT"), (C("Exactly where better"), "CONJECTURE"))]},
     sources=["airbus_fy25", "airbus_agm26"])
 stage("s30_limits", "a5_limits", {
-    **W1("triad", title="A REALITY CHECK", scale=0.0016, bars=[
+    **W1("triad", title="A REALITY CHECK", scale=0.0013, bars=[
         {"label": "CHINA ROBOTS 2025", "v": 354226, "color": RED, "display": "354,226", "at": C("Its robot installations")},
         {"label": "EUROPE ROBOTS 2025", "v": 73054, "color": GOLD, "display": "73,054 (−14%)", "at": C("Its robot installations", 0.5)}], gap=520,
         foot="INDUSTRIAL ROBOTS INSTALLED IN 2025 (IFR WORLD ROBOTICS 2026)"),
@@ -438,18 +438,18 @@ stage("s36b_energy", "a6_energy", {
     **W1("cleanpower", plantText="AUTOMATED PLANT · ENERGY-RICH COUNTRY (SCENARIO)", billX=1640, billScale=5.5,
          factors=[{"label": "ENERGY", "at": C("energy, the cost"), "color": "#FFF59D"}, {"label": "COST OF MONEY", "at": C("The cost of money")},
                   {"label": "LOGISTICS", "at": C("logistics, stability")}, {"label": "STABILITY", "at": C("stability, and the taxes")},
-                  {"label": "TAXES & CHARGES", "at": C("And the taxes and charges"), "color": "#FFCDD2"}], facX=260, facGap=350, facY=80,
+                  {"label": "TAXES & CHARGES", "at": C("And the taxes and charges"), "color": "#FFCDD2"}], facX=300, facGap=330, facY=150,
          bill=[{"label": "ENERGY + GRID", "v": 55, "color": BLUE, "at": C("But one industry study")},
                {"label": "TAXES + CHARGES ≈45%", "v": 45, "color": RED, "at": C("taxes and sector charges took")}],
          billText="BRAZIL POWER COMPANIES' REVENUE, 2024"),
     "cam": cam((0, 960, 540, 0.95), (C("Take Brazil"), 500, 560, 1.1, 1.4), (C("But one industry study"), 1500, 540, 1.05, 1.4),
                (C("So in this scenario"), 960, 540, 0.9, 1.4), (C("And the profit from"), 960, 520, 0.95, 1.2)), "drift": 3,
-    "items": [words("ROBOTS ↑ → LABOR MATTERS LESS → OTHER COSTS MATTER MORE", 960, 180, 0.3, size=34, until=C("Take Brazil")),
-              sign("BRAZIL 2025: 86.8% OF ELECTRICITY FROM RENEWABLES (EPE)", 560, 180, C("of its electricity"), color="#C8E6C9", size=28, until=C("But one industry study")),
-              sign("TAXES + SECTOR CHARGES ≈ 44.8% OF POWER COMPANIES' GROSS REVENUE, 2024 (PWC / ACENDE BRASIL)", 1100, 180, C("taxes and sector charges took"), color="#FFCDD2", size=22, until=C("Brazil is phasing")),
-              sign("NEW DUAL VAT, PHASED IN 2026-2033 (EC 132/2023)", 1100, 180, C("Brazil is phasing"), color="#FFF59D", size=28, until=C("So in this scenario")),
-              words("CHEAP POWER + COMPETITIVE COSTS TO PRODUCE?", 960, 180, C("So in this scenario"), size=44, color="#FFFFFF", until=C("And the profit from")),
-              sign("THE TECH PROFIT CAN STILL FLOW TO ITS OWNER", 960, 180, C("And the profit from"), color="#E1D5FF", size=32),
+    "items": [words("ROBOTS ↑ → LABOR MATTERS LESS → OTHER COSTS MATTER MORE", 960, 270, 0.3, size=34, until=C("Take Brazil")),
+              sign("BRAZIL 2025: 86.8% OF ELECTRICITY FROM RENEWABLES (EPE)", 560, 270, C("of its electricity"), color="#C8E6C9", size=28, until=C("But one industry study")),
+              sign("TAXES + SECTOR CHARGES ≈ 44.8% OF POWER COMPANIES' GROSS REVENUE, 2024 (PWC / ACENDE BRASIL)", 1100, 270, C("taxes and sector charges took"), color="#FFCDD2", size=22, until=C("Brazil is phasing")),
+              sign("NEW DUAL VAT, PHASED IN 2026-2033 (EC 132/2023)", 1100, 270, C("Brazil is phasing"), color="#FFF59D", size=28, until=C("So in this scenario")),
+              words("CHEAP POWER + COMPETITIVE COSTS TO PRODUCE?", 960, 270, C("So in this scenario"), size=44, color="#FFFFFF", until=C("And the profit from")),
+              sign("THE TECH PROFIT CAN STILL FLOW TO ITS OWNER", 960, 270, C("And the profit from"), color="#E1D5FF", size=32),
               tag((0, "MECHANISM"), (C("Take Brazil"), "FACT"), (C("So in this scenario"), "SCENARIO"))]},
     sources=["epe_ben26", "pwc_acende25", "br_reform"])
 
