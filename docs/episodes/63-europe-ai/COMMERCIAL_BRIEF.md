@@ -19,10 +19,16 @@ Per `docs/COMMERCIAL_DIRECTIVE.md`. Owner brief: `PRODUCTION_PROMPT.md` (2026-11
 - **Reach:** broad (economics, tech, investing, geopolitics audiences).
 
 ## Titles (11 evaluated; full scoring in `SEO_PACKAGE.md`)
-1. Is Europe Falling Behind? AI Could Change That (**selected**: matches the most common search framing, delivers the twist)
-2. Could AI Bring Europe Back to Power? (owner's working title; backup 1; kept as the in-film show title)
-3. Is Europe Declining? AI Could Flip the Script (backup 2)
-4. Everyone Says Europe Is Falling Behind. AI Could Change That (60 chars; long on mobile)
+Owner/coordinator decision space (2026-11-18): the hybrid vs the pure comeback title. Decline content is very crowded, so the decline belief
+is only the entry point (search match + first 10 s); title, thumbnail and story sell the contrarian AI comeback.
+1. **Everyone Says Europe Is Falling Behind. AI Could Change That** (**selected**). Evidence: "is europe falling behind" and "why is europe
+   falling behind" are live autocomplete completions; the title quotes the belief as something to overturn ("Everyone says...") and its
+   second sentence is the comeback, so it does not read as another decline video. It is word-for-word the film's first line (alignment
+   rule §10). Risk: 60 characters; on mobile the end may truncate after "AI Could...", which still carries the twist.
+2. Could AI Bring Europe Back to Power? (backup 1; pure comeback; kept as the in-film show title). No autocomplete evidence for "back to
+   power"; "europe ai" demand is tiny (only "europe ai race").
+3. Is Europe Falling Behind? AI Could Change That (backup 2; 46 chars; shorter, but a question that opens like a decline video)
+4. Is Europe Declining? AI Could Flip the Script
 5. Could AI Make Europe Rich Again? (Europe is already rich; slightly misleading)
 6. Europe's Unexpected AI Comeback (asserts a comeback; overclaims)
 7. Why AI Could Change Europe's Economic Future
@@ -38,8 +44,8 @@ No title uses an em dash. The owner's upload path truncates titles at 30 charact
 - **B "EUROPE: THE AI WINNER?"**: Europe between an American robot plant (USA) and a Chinese megafactory (CHINA).
 - **C "EUROPE RICH AGAIN?"**: futuristic European economy with a pharma flask.
 All at most 4 words and name EUROPE; no logos, flags or statistics.
-**Chosen combination:** title 1 + thumbnail A. The title states the belief, the thumbnail asks the reversal question: complementary, not
-repetitive, and readable on mobile.
+**Chosen combination:** title 1 + thumbnail A "EUROPE'S COMEBACK?" with the reversing line. The title states the belief and flips it; the
+thumbnail shows only the comeback question, so the pair reads as contrarian, not as decline content. Complementary and mobile-legible.
 
 ## The human question
 "Everyone says Europe is falling behind. Could the robots and AI that seem to threaten it actually help it come back, and who would get
@@ -79,11 +85,15 @@ Switzerland Is So Rich".
 ## Commercial Quality Score (honest; editorial decision aid, not a performance claim)
 | Criterion | Weight | Score | Note |
 |---|---:|---:|---|
-| Audience demand and broad appeal | 20 | 18 | Large "Europe decline" demand in autocomplete and 1M+ competitor views |
-| Title and thumbnail potential | 20 | 17 | Hybrid title meets search; thumbnail reversal is clear but abstract |
-| Narrative curiosity and emotional stakes | 20 | 17 | Strong flip; stakes are economic rather than personal |
-| Retention potential | 15 | 13 | Discovery every ~45-60 s; Act 7 is the softest stretch |
-| Original economic insight | 10 | 9 | Owning vs operating, with numbers, is genuinely distinctive |
+| Audience demand and broad appeal | 20 | 18 | Large "Europe falling behind" demand in autocomplete and 1M+ competitor views |
+| Title and thumbnail potential | 20 | 17 | Contrarian hybrid title matches search; thumbnail reversal is clear but abstract (no face, no product) |
+| Narrative curiosity and emotional stakes | 20 | 18 | Belief stated then flipped in 10 s; "who gets rich when robots work" stakes |
+| Retention potential | 15 | 13 | Discovery every ~45-60 s; Act 7 (capital magnet) is the softest stretch |
+| Original economic insight | 10 | 9 | Owning vs operating with numbers, plus the energy-location twist |
 | Evergreen potential | 10 | 9 | Mechanism-led; figures dated |
-| Visual storytelling opportunities | 5 | 5 | Ten bespoke worlds, six boards |
-| **Total** | **100** | **88** | Coordinator pre-score 85; raised by the hook flip and the hybrid title |
+| Visual storytelling opportunities | 5 | 5 | Eleven bespoke worlds, six presenter boards |
+| **Total** | **100** | **89** | Coordinator pre-score 85; target 90 |
+
+**Remaining gap to 90 (recorded honestly):** the thumbnail relies on an abstract reversing line rather than a recognizable object, and Act 7
+has no number or company to anchor it. Neither was inflated away. Mitigations: test B/C in YouTube's thumbnail test; publish Short C
+("Who Gets Rich When Robots Do the Work?") before the long film.
