@@ -15,6 +15,23 @@ analysis:
   metaphor: the AI campus plugged into the same grid as your home
   public_figure: null
 concepts:
+- id: F
+  angle: "face (original character MAYA, the film's Virginia homeowner, shocked at her power bill)"
+  archetype: face
+  text:
+  - AI'S POWER
+  - BILL
+  claim_basis: "a question of who pays (no statistic shown); Maya is the film's fictional protagonist"
+  scene:
+    bg: ['#FFB23F', '#3A0F2E']
+    rays: '#F5A35C'
+    bust:
+      who: {name: Maya, hair: bun, hairColor: '#1B1B1B', hairShade: '#3A3A3A', brows: '#1B1B1B', skin: '#B97A4B', iris: '#3A2618',
+            clothes: tee, jacket: '#5C6BC0', shirt: '#5C6BC0', glasses: round, age: 0}
+      expr: shock
+      x: 470
+      s: 0.92
+    prop: {kind: tag, text: 'BILL DUE', x: 1390, y: 790, s: 0.66, rot: -8}
 - id: A
   angle: AI campus vs your bill (conflict)
   archetype: classic
