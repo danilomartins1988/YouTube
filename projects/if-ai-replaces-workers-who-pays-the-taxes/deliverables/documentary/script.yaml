@@ -1,0 +1,264 @@
+# Story over statistics (docs/STORY_OVER_STATS.md): one protagonist (ROSA, fictional mayor of fictional Pinewick) with STUB (the walking pay stub)
+# and RIVET (the robot); at most one spoken figure per segment; exact figures in FACT_CHECK.md and the description. Neutral: one good reason and
+# one catch per proposal, no side taken; no politician as a character. SCENARIO framing (c1_whatif): job losses from AI are not a forecast.
+logline: 'Rosa, the mayor of a fictional small town, watches its biggest employer hand the work to robots that never get a paycheck. Following the last
+  pay stub from the warehouse, she discovers that almost all of Washington''s money comes from people''s income and paychecks, then tours an idea fair of
+  fixes (robot taxes, taxing owners, taxing shopping, AI dividends and basic-income pilots), weighing one good reason and one catch for each. The answer:
+  nobody has decided yet; every fix just moves the bill onto different shoulders.'
+title: If AI Replaces Workers, Who Pays the Taxes?
+segments:
+- id: co_hook
+  chapter: The robot with no paycheck
+  narration: Meet Rosa. She's the mayor of Pinewick, a small town with one big employer, the warehouse on the hill. This morning, the warehouse is throwing
+    a party. Not for the workers. For the robots. They lift faster. They never get tired. They never take a sick day. And there's one more thing robots
+    never do. They never get a paycheck. Which means they never pay income tax. Rosa looks at the shiny new machines and asks the question nobody at the
+    party wants to hear. If robots do the work, who pays the taxes?
+  claims: []
+  analysis: true
+  source_note: Hook; Rosa, Pinewick, Rivet and Stub are fictional. Robots earn no wages, so they pay no income or payroll tax (mechanism).
+- id: title_card
+  chapter: The robot with no paycheck
+  narration: ''
+  claims: []
+- id: c1_rivet
+  chapter: The robot with no paycheck
+  narration: Meet Rivet, the warehouse's newest robot. Rivet is friendly, polite, and very, very good at boxes. Rosa asks Rivet a simple question. Where
+    does your paycheck go? Rivet checks. I don't have a paycheck, it says. I don't even have pockets.
+  claims: []
+  analysis: true
+  source_note: Story beat (fictional).
+- id: c1_stub
+  chapter: The robot with no paycheck
+  narration: Then Rosa meets someone else. This is Stub. Stub is a pay stub, the last one ever printed for a forklift driver named Ray, before his job went
+    to the robots. Stub has something to show the mayor. Every paycheck, he says, carries a little piece of the town. Follow me.
+  claims: []
+  analysis: true
+  source_note: Story beat (fictional).
+- id: c1_whatif
+  chapter: The robot with no paycheck
+  narration: Now, to be clear, Pinewick is a what if. Across America, people are still working, and paychecks are still arriving every Friday. Nobody knows
+    how many jobs AI will really take. But if it takes a lot of them, the problem starts right here, in the little slip of paper in Rosa's hand.
+  claims: []
+  analysis: true
+  source_note: 'Framing: a SCENARIO, not a forecast; no figures.'
+- id: c2_card
+  chapter: Follow the paycheck
+  narration: ''
+  claims: []
+- id: c2_split
+  chapter: Follow the paycheck
+  narration: So Rosa follows Stub. Every payday, before Ray ever saw his money, some of it was already gone. In most states, a slice went to the state capital,
+    to help pay for schools and roads. A slice went to Washington as income tax. And another slice went to Social Security, the check that Ray's parents
+    get every month.
+  claims: []
+  analysis: true
+  source_note: 'Mechanism: withholding of state income tax (most states), federal income tax and FICA payroll tax. No figures.'
+- id: c2_big
+  chapter: Follow the paycheck
+  narration: Then Stub shows Rosa the big picture. In America, almost nine out of every ten dollars the federal government collects come from people, through
+    their income taxes and the taxes taken out of their paychecks.
+  claims:
+  - fed_people
+- id: c2_corp
+  chapter: Follow the paycheck
+  narration: And companies? Corporate income tax brought in only about seven cents of every federal tax dollar in the year that just ended. Rivet's company
+    pays that. Rivet itself pays nothing. Rivet looks a little embarrassed.
+  claims:
+  - fed_corp
+- id: c2_draw
+  chapter: Follow the paycheck
+  narration: Let me draw why this matters. Here's the government's money tank. Most of the water pours in from one big tap, people's paychecks. A thin tap
+    drips in from company profits. Now watch what happens if robots take over the work. The big tap shrinks. The thin tap might grow, if profits grow. But
+    the whole tank was built around the big one.
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); illustrative, not to scale.
+- id: c2_ss
+  chapter: Follow the paycheck
+  narration: Social Security would feel it first. It's paid for mainly by one tax, the payroll tax, a tax on wages. No wages, no payroll tax. And it's already
+    under strain. Its trustees project that its reserve fund runs dry in 2034.
+  claims:
+  - ss_2034
+- id: c2_ss2
+  chapter: Follow the paycheck
+  narration: After that, the money still coming in from paychecks would cover only part of every check, unless Congress changes the law. Stub does the math
+    on his fingers, and he doesn't have many fingers.
+  claims:
+  - ss_payable
+- id: c2_world
+  chapter: Follow the paycheck
+  narration: Is America unusual? Not really. Across the world's rich democracies, about half of all tax money comes from taxes on work and personal income.
+    Everywhere you look, the system leans on the paycheck.
+  claims:
+  - oecd_half
+- id: c2_debt
+  chapter: Follow the paycheck
+  narration: And Washington already spends more than it collects, a story we told in Who Actually Owns America's Debt. Rosa doesn't need the details. She
+    gets the picture. If the biggest tap slows down, the hole only gets deeper.
+  claims:
+  - fed_deficit
+- id: c3_card
+  chapter: The idea fair
+  narration: ''
+  claims: []
+- id: c3_fair
+  chapter: The idea fair
+  narration: So Rosa goes looking for answers, and she finds a whole fair of them. Economists, think tanks and governments have proposed all kinds of fixes,
+    and every booth promises to keep the money flowing. Stub gives her one rule. For every idea, find one good reason, and one catch.
+  claims: []
+  analysis: true
+  source_note: Story beat; the booths summarize proposals in the public debate.
+- id: c3_robot
+  chapter: The idea fair
+  narration: Booth one. Tax the robots. The idea got famous in 2017, when Bill Gates said that if a robot does a worker's job, maybe the robot should be
+    taxed at a similar level. Rivet takes one step backward.
+  claims:
+  - gates17
+- id: c3_korea
+  chapter: The idea fair
+  narration: That same year, South Korea tried something close. It didn't put a tax on robots. Instead, it trimmed a tax break for companies that buy automation
+    machines. Headlines called it the first robot tax anyway.
+  claims:
+  - korea17
+- id: c3_robot_scale
+  chapter: The idea fair
+  narration: The good reason? It keeps money coming in as jobs go, and it slows things down so workers have time to adjust. The catch? What exactly counts
+    as a robot? A dishwasher? A piece of software? And tax machines too hard, and companies may just buy fewer of them, or build somewhere else. Europe's
+    lawmakers looked at a robot tax and turned it down.
+  claims:
+  - eu_reject
+- id: c3_profit
+  chapter: The idea fair
+  narration: Booth two. Tax the owners. If robots make companies more profitable, tax those profits, or the money their shareholders make, a little more.
+    In Who Gets Rich When Robots Do the Work, we saw that the gains from machines tend to flow to whoever owns them.
+  claims: []
+  analysis: true
+  source_note: Proposal summary; Ep 64 linked by title (its figures not repeated).
+- id: c3_profit_scale
+  chapter: The idea fair
+  narration: The good reason? It follows the money to wherever the robots send it. The catch? Profits can travel. A big company can book its profits in
+    a country with lower taxes far more easily than Ray could move his job.
+  claims:
+  - profit_shift
+- id: c3_shop
+  chapter: The idea fair
+  narration: Booth three. Tax the shopping. Robots don't earn anything, but somebody buys what they make. Most rich countries already collect a big national
+    sales tax, called a value added tax. America is the only one in the club without one.
+  claims:
+  - us_novat
+- id: c3_shop_scale
+  chapter: The idea fair
+  narration: The good reason? It's hard to dodge. Everyone who buys things pays, wherever the robot happens to live. The catch? Families with less money
+    spend almost everything they earn, so a shopping tax takes a bigger bite out of their budget than out of a rich family's.
+  claims:
+  - regressive
+- id: c3_draw
+  chapter: The idea fair
+  narration: Let me draw what all three booths have in common. Today, the tax bill sits mostly on workers. A robot tax slides it over to whoever buys the
+    machines. A profit tax slides it to the owners. A shopping tax slides it to the shoppers. Nobody makes the bill disappear. Each idea just decides whose
+    shoulders it lands on.
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); no figures.
+- id: c4_card
+  chapter: Send everyone a check?
+  narration: ''
+  claims: []
+- id: c4_dividend
+  chapter: Send everyone a check?
+  narration: Then Rosa reaches the strangest booth of all. It isn't a new tax. It's a dividend. The idea is simple. If robots and AI make the country richer,
+    share a slice of that wealth with every citizen, the way a company pays its shareholders.
+  claims: []
+  analysis: true
+  source_note: Proposal summary (citizen or AI dividend).
+- id: c4_alaska
+  chapter: Send everyone a check?
+  narration: One state already does something like this, with oil. Every year, Alaska sends a check to nearly every resident, paid out of a giant investment
+    fund built on oil money. We told that story in Alaska, The State That Pays You to Live There. Rosa wonders. Could a country build a fund like that out
+    of robots?
+  claims:
+  - ak_pfd
+- id: c4_div_scale
+  chapter: Send everyone a check?
+  narration: The good reason? Everyone shares in the gains, even people who don't own a single share of stock. The catch? Alaska's fund was filled with
+    oil the state already owned. To fill a robot fund, a government would first have to own part of the robots, or tax them. And when money gets tight,
+    the size of the check becomes a political fight.
+  claims:
+  - ak_fight
+- id: c4_ubi
+  chapter: Send everyone a check?
+  narration: Some people go one step further. Just give everyone a basic income, no strings attached. So Rosa asks, has anyone actually tried? Yes. And
+    the results surprised both sides.
+  claims: []
+  analysis: true
+  source_note: Transition; no figures.
+- id: c4_stockton
+  chapter: Send everyone a check?
+  narration: In Stockton, California, a pilot sent a small group of residents $500 a month, no strings attached. Plenty of critics expected people to stop
+    working. Instead, after a year, more of them had full-time jobs than in a comparison group that got nothing.
+  claims:
+  - seed500
+  - seed_ft
+- id: c4_or
+  chapter: Send everyone a check?
+  narration: Then came a much bigger, carefully controlled study, run by a research group called OpenResearch. It sent low-income people a thousand dollars
+    a month, for years, and compared them with people who got almost nothing.
+  claims:
+  - or_design
+- id: c4_or2
+  chapter: Send everyone a check?
+  narration: This time, people worked a little less, on average about an hour or two a week. They spent more on everyday needs, and they had more choices.
+    But the money didn't lead to better jobs, and the happiness boost faded. So, a cushion, not a cure.
+  claims:
+  - or_result
+- id: c4_ubi_scale
+  chapter: Send everyone a check?
+  narration: The good reason? A floor that nobody falls through, even if work disappears. The catch? Paying everyone is enormously expensive, and that money
+    has to come from somewhere. Which brings Rosa right back to her first question.
+  claims: []
+  analysis: true
+  source_note: Pro/con summary; no figures.
+- id: c5_card
+  chapter: So who pays?
+  narration: ''
+  claims: []
+- id: c5_draw
+  chapter: So who pays?
+  narration: Let me draw the whole puzzle on one page. On the left, the things we'll still need. Schools, roads, checks for retirees. On the right, the
+    places where AI's wealth will pile up. Profits, shopping, and the robots themselves. Every proposal is just a different pipe from the right side to
+    the left. The real question isn't whether to build a pipe. It's which one, and who's standing under it.
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); no figures.
+- id: c5_verdict
+  chapter: So who pays?
+  narration: So, if AI replaces workers, who pays the taxes? The honest answer is, nobody has decided yet. Today, it's mostly workers. If work shrinks,
+    the bill has to move, to profits, to shopping, to the owners of the robots, or to some mix of them. Every option has a good reason and a catch. And
+    in the end, the choice isn't really about robots. It's about which people carry the bill.
+  claims: []
+  analysis: true
+  source_note: Verdict (our analysis); neutral, no side taken.
+- id: c5_clock
+  chapter: So who pays?
+  narration: And there's a clock ticking. Social Security's reserve is projected to run dry in 2034, long before robots could take most of the jobs, if
+    they ever do. So this debate may well arrive before the robots do.
+  claims:
+  - ss_2034
+- id: c5_rosa
+  chapter: So who pays?
+  narration: Back in Pinewick, Rosa calls a town meeting. She brings Stub, and she brings Rivet. Here's what we'll still need, she says. And here's who
+    could pay for it. Let's decide together, while the paychecks are still flowing. Rivet raises a hand. Do I get a vote? Not yet, says Rosa. But you might
+    get a bill.
+  claims: []
+  analysis: true
+  source_note: Story close (fictional).
+- id: teaser
+  chapter: So who pays?
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: So who pays?
+  narration: ''
+  claims: []

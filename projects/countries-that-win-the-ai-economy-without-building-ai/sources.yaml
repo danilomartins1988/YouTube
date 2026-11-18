@@ -1,0 +1,318 @@
+# Sources and claims for "The Countries That Could Win the AI Economy Without Building AI" (Episode 68; series
+# docs/series/AI_WINNERS_LOSERS.md #6). Read on 2026-11-18 on the primary page or document, or (where the primary page blocked automated
+# access, noted per source) via named coverage of it (notes: docs/episodes/68-picks-shovels/RESEARCH_NOTES.md). Status stays
+# source_located until a named human reviewer signs off. US dollars only: TWD and KRW converted at the Federal Reserve G.5A 2025 annual
+# averages (31.1663 TWD and 1,421.3963 KRW per USD; release of Jan 5, 2026), EUR at the ECB 2025 average 1.13 (same as Ep 08), shown as
+# "≈". OUR CALCULATION is labelled wherever we derive a number. Forecasts are FORECAST, announced plans are PLAN.
+# Cross-episode consistency: ASML price ($250m, Reuters Jan 2026) and 2025 sales as in Ep 08 FACT_CHECK; Taiwan 2025 exports
+# (US$640.75bn, MOF) as in Ep 07 v2 FACT_CHECK; Ep 14 memory figures not repeated.
+sources:
+  - id: pbs_brannan
+    title: "Samuel Brannan (The Gold Rush, American Experience)"
+    publisher: PBS / WGBH American Experience
+    url: https://www.pbs.org/wgbh/americanexperience/features/goldrush-samuel-brannan
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "PBS American Experience"
+    notes: "'His store made enormous profits by selling as much as $5,000 ... in goods per day to miners'; 'During the 1850s and 1860s Brannan was known as the richest man in California'; he never mined for gold himself; 'forced to transform his immense paper fortune into cash in 1870'; 'His empire collapsed'; died poor."
+  - id: tsmc_dec25
+    title: "TSMC December 2025 Revenue Report"
+    publisher: TSMC (press release; also SEC Form 6-K)
+    url: https://pr.tsmc.com/english/news/3278
+    published: "2026-01-09"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "TSMC"
+    notes: "'Revenue for January through December 2025 totaled NT$3,809.05 billion', up 31.6% from 2024 (6-K table: NT$3,809,054 million). OUR CONVERSION at 31.1663 TWD/USD ≈ US$122.2bn; TSMC's 4Q25 materials put full-year USD revenue at about US$122.4bn. Narration: 'about a hundred and twenty billion dollars ... the most in its history'."
+  - id: tsmc_6k
+    title: "TSMC Form 6-K, monthly revenue January 2026 filing (FY2025 table)"
+    publisher: U.S. SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1046179/000104617926000005/tsm-revenue20260109.htm
+    published: "2026-01-09"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "TSMC via SEC"
+    notes: "Full-year 2025 revenue NT$3,809,054 million."
+  - id: fed_g5a
+    title: "Foreign Exchange Rates (Annual), G.5A release"
+    publisher: Board of Governors of the Federal Reserve System
+    url: https://www.federalreserve.gov/releases/g5a/current/default.htm
+    published: "2026-01-05"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "Federal Reserve G.5A"
+    notes: "2025 averages: 31.1663 TWD per USD; 1,421.3963 KRW per USD; 149.5686 JPY per USD; 1.1306 USD per EUR; 0.6450 USD per AUD."
+  - id: mof_tw25
+    title: "Taiwan's 2025 exports hit record high; US becomes top export market for first time in 26 years (Ministry of Finance data)"
+    publisher: Focus Taiwan (CNA), reporting Ministry of Finance (MOF) trade statistics; AmCham Taiwan Macroeconomic Brief Feb 2026
+    url: https://focustaiwan.tw/business/202601090021
+    published: "2026-01-09"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Taiwan Ministry of Finance via CNA"
+    notes: "2025 exports up 34.9% to US$640.75bn (previous record US$479.4bn in 2022); US 30.9% of exports at US$198.27bn, Taiwan's biggest export market for the first time in 26 years; China and Hong Kong US$170.48bn; ICT/audio-video products and electronic components ≈ 74% of exports. Same total as Ep 07 v2 FACT_CHECK."
+  - id: dgbas_aug26
+    title: "Taiwan raises 2026 GDP growth forecast to 11.05%, a 39-year high (DGBAS release of Aug 14, 2026)"
+    publisher: Focus Taiwan (CNA), reporting the Directorate-General of Budget, Accounting and Statistics (DGBAS)
+    url: https://focustaiwan.tw/business/202608140022
+    published: "2026-08-14"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "DGBAS via CNA"
+    notes: "2026 real GDP growth forecast raised to 11.05% (from 9.64% in May), citing AI demand; if realized, the fastest since 1987 (12.75%). 2025 growth revised to 8.76% (May 2026 release). A FORECAST."
+  - id: asml_ar25
+    title: "ASML 2025 Annual Report (Form 20-F) and Q4 2025 results"
+    publisher: ASML Holding N.V. (SEC filings)
+    url: https://www.asml.com/en/investors/annual-report
+    published: "2026-02"
+    accessed: "2026-11-06"
+    kind: primary
+    credit: "ASML"
+    notes: "Read for Ep 08 (docs/episodes/08-asml/FACT_CHECK.md): 2025 net sales €32.7bn (≈ $37.0bn at the ECB 2025 average 1.13); ASML is the only supplier of EUV lithography systems; China 29.1% of 2025 system sales (36.1% in 2024), still the largest region; Taiwan 25.5%, South Korea 25.0%."
+  - id: reuters_asml
+    title: "Explainer: The $250 million ASML 'printer' behind Nvidia's chips"
+    publisher: Reuters (via Yahoo Finance)
+    url: https://finance.yahoo.com/news/explainer-250-million-asml-printer-050227041.html
+    published: "2026-01-28"
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "Reuters"
+    notes: "About $250 million per EUV machine; about the size of a school bus; shipped in pieces on cargo planes; no rival can make it; Same source as Ep 08."
+  - id: euv_licence
+    title: "U.S. government pressured Dutch officials against giving Chinese access to 7nm EUV technology (EUV licence expired June 2019, not renewed)"
+    publisher: Tom's Hardware (reporting Reuters, 6 January 2020), as in Ep 08
+    url: https://www.tomshardware.com/news/us-government-stops-chinese-from-7nm-tech
+    published: "2020-01"
+    accessed: "2026-11-06"
+    kind: secondary
+    credit: "Reuters via Tom's Hardware"
+    notes: "The Dutch export licence for an EUV system to China expired in June 2019 and was not renewed; no EUV system has shipped to China (Ep 08 FACT_CHECK)."
+  - id: skh_fy25
+    title: "SK hynix Announces FY25 Financial Results"
+    publisher: SK hynix Newsroom
+    url: https://news.skhynix.com/sk-hynix-announces-fy25-financial-results/
+    published: "2026-01-28"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "SK hynix"
+    notes: "'97.1467 trillion won in revenue', '47.2063 trillion won in operating profit', '42.9479 trillion won in net profit'; 'HBM revenue more than doubled year-on-year'. OUR CONVERSION at 1,421.3963 KRW/USD: operating profit ≈ US$33.2bn."
+  - id: skh_fy24
+    title: "SK hynix 2024 results: record operating profit 23.4673 trillion won, after a 7.7303 trillion won operating loss in 2023"
+    publisher: Asia Economy / Korea Times, reporting the SK hynix release of Jan 23, 2025
+    url: https://cm.asiae.co.kr/en/article/2025012311133296155
+    published: "2025-01-23"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "SK hynix via Asia Economy"
+    notes: "2024 operating profit KRW 23.4673tn (record, above 2018's 20.8437tn), turning from a KRW 7.7303tn operating loss in 2023; operating margin 35% (2023: -24%)."
+  - id: sec_fy25
+    title: "Samsung Electronics Announces Fourth Quarter and FY 2025 Results"
+    publisher: "Samsung Newsroom (read via coverage: Bloomingbit, Blocks and Files; the newsroom timed out)"
+    url: https://news.samsung.com/global/samsung-electronics-announces-fourth-quarter-and-fy-2025-results
+    published: "2026-01-29"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Samsung Electronics"
+    notes: "FY2025 operating profit about KRW 43.6tn on revenue about KRW 333.6tn; reports note it was the first year SK hynix's annual operating profit (47.2tn) exceeded all of Samsung Electronics'."
+  - id: cp_hbm
+    title: "Global HBM market share, Q3 2025 (Counterpoint Research), as reported by Korea Times"
+    publisher: The Korea Times
+    url: https://www.koreatimes.co.kr/business/tech-science/20260128/sk-hynix-posts-record-2025-profit-driven-by-ai-memory-boom
+    published: "2026-01-28"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "Counterpoint Research via Korea Times"
+    notes: "SK hynix global HBM market share 57% in Q3 2025 (Counterpoint). Narration: 'the leader is SK hynix'."
+  - id: motie_25
+    title: "Korea's exports hit all-time high of $709.7 bil. in 2025 (Ministry of Trade, Industry and Energy data)"
+    publisher: The Korea Times (Yonhap), reporting MOTIE
+    url: https://www.koreatimes.co.kr/economy/20260101/koreas-exports-hit-all-time-high-of-7097-bil-in-2025
+    published: "2026-01-01"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "MOTIE via Yonhap"
+    notes: "2025 exports $709.7bn (record); semiconductor exports $173.4bn, up about 22%, a record; exports excluding chips fell about 1%."
+  - id: tel_fy26
+    title: "Tokyo Electron, consolidated financial results for the fiscal year ended March 31, 2026"
+    publisher: "Tokyo Electron (IR library; PDF blocked automated download, figures via earnings-call summary coverage)"
+    url: https://www.tel.com/ir/library/report/index.html
+    published: "2026-05"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "Tokyo Electron"
+    notes: "Net sales about ¥2,443.5bn (record, +0.5%), operating income ¥624.9bn (-10.4%). Not spoken; narration names Tokyo Electron's tools (coat, etch, clean) only."
+  - id: ihs_resist
+    title: "Japan adds to global trade tensions with export curb against S. Korea (IHS Technology)"
+    publisher: TelecomTV (IHS Markit press release), as in Ep 18 FACT_CHECK
+    url: https://www.telecomtv.com/content/patents-and-ipr/impacts-of-japan-s-export-curb-against-south-korea-35763
+    published: "2019-07-14"
+    accessed: "2026-11-08"
+    kind: secondary
+    credit: "IHS Markit"
+    notes: "Japan makes about 90% of fluorinated polyimide and resist (2019 estimate). Narration: 'Japanese companies make most of them' (light-sensitive coatings). Dated estimate, labelled 2019 on screen."
+  - id: openai_stargate
+    title: "Announcing The Stargate Project"
+    publisher: "OpenAI (page blocked automated fetch; wording confirmed in DatacenterDynamics, Network World and S&P Global reports)"
+    url: https://openai.com/index/announcing-the-stargate-project/
+    published: "2025-01-21"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "OpenAI"
+    notes: "'intends to invest $500 billion over the next four years building new AI infrastructure for OpenAI in the United States'; '$100 billion immediately'; 'The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX'. A PLAN."
+  - id: g42_stargate_uae
+    title: "G42, OpenAI, Oracle, NVIDIA, SoftBank Group and Cisco launch Stargate UAE (1 GW cluster in the 5 GW UAE-US AI Campus)"
+    publisher: The National (reporting the May 22, 2025 announcement)
+    url: https://www.thenationalnews.com/future/technology/2025/05/22/abu-dhabis-g42-teams-up-with-big-tech-companies-to-build-stargate-uae
+    published: "2025-05-22"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "G42 announcement via The National"
+    notes: "Stargate UAE: a 1-gigawatt compute cluster in the planned 5 GW UAE-US AI Campus in Abu Dhabi; first 200 MW phase due in 2026; power from nuclear, solar and gas. PLANS."
+  - id: pif_humain
+    title: "PIF launches HUMAIN to drive AI (May 2025) and HUMAIN data-centre plans"
+    publisher: "Semafor, RCR Wireless, DatacenterDynamics (reporting the PIF launch and CEO statements)"
+    url: https://www.semafor.com/article/08/27/2025/pifs-ai-unit-has-already-sold-out-its-data-center-capacity
+    published: "2025-08-27"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "PIF / HUMAIN via Semafor"
+    notes: "HUMAIN launched by the Public Investment Fund in May 2025; target 1.9 GW of data-centre capacity by 2030 and 6.6 GW by 2034 (CEO, PLAN). Not spoken."
+  - id: usgs_cu26
+    title: "Copper, Mineral Commodity Summaries 2026"
+    publisher: U.S. Geological Survey
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-copper.pdf
+    published: "2026-02"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "USGS MCS 2026"
+    notes: "World mine production 2025e: Chile 5,300 kt of 23,000 kt world total (rounded) = 23%, OUR CALC; Congo (Kinshasa) 3,200; Peru 2,700. Narration: 'almost one in every four tons'."
+  - id: usgs_li26
+    title: "Lithium, Mineral Commodity Summaries 2026"
+    publisher: U.S. Geological Survey
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf
+    published: "2026-02"
+    accessed: "2026-11-18"
+    kind: dataset
+    credit: "USGS MCS 2026"
+    notes: "World mine production 2025e (lithium content): Australia 92,000 t of 290,000 t world (rounded) = 32%, OUR CALC; Chile 56,000 t; China 62,000 t. Narration: 'about a third'."
+  - id: iea_gcmo25
+    title: "Global Critical Minerals Outlook 2025 (executive summary; outlook for key minerals)"
+    publisher: International Energy Agency (IEA)
+    url: https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary
+    published: "2025-05-21"
+    accessed: "2026-11-18"
+    kind: primary
+    credit: "IEA, Global Critical Minerals Outlook 2025"
+    notes: "'Copper and lithium are major exceptions where expected mined supply from announced projects falls short of projected demand in 2035, with implied deficits of 30% for copper and 40% for lithium in the STEPS.' iea.org returned 403 to automated fetch; wording read via search excerpts of the IEA page and Mining Weekly / EcoWatch coverage. A FORECAST."
+  - id: iea_gcmo26
+    title: "Global Critical Minerals Outlook 2026 (released July 2026)"
+    publisher: International Energy Agency (IEA), via Mining.com / Global Mining Review coverage
+    url: https://www.iea.org/reports/global-critical-minerals-outlook-2026
+    published: "2026-07-16"
+    accessed: "2026-11-18"
+    kind: secondary
+    credit: "IEA, Global Critical Minerals Outlook 2026"
+    notes: "Coverage: copper supply outlook has 'worsened considerably' over the past year (sulphuric acid constraints, project delays). The 2026 copper gap percentage could not be read (403); the film uses the 2025 edition's 30% and says the newer edition is gloomier."
+claims:
+  - id: brannan
+    text: "PBS American Experience: Sam Brannan's stores sold supplies to miners; during the 1850s and 1860s he was known as the richest man in California; he never mined for gold."
+    spoken: became known as the richest man in California. He never mined for gold
+    display: "Sam Brannan: 'the richest man in California', never mined · PBS American Experience"
+    source_ids: [pbs_brannan]
+    status: source_located
+  - id: tsmc_rev
+    text: "TSMC 2025 revenue NT$3,809.05bn, +31.6%, a record; ≈ US$122bn at 31.1663 TWD/USD (OUR CONVERSION)."
+    spoken: about a hundred and twenty billion dollars of chips, the most in its history
+    display: "2025 sales ≈ $122B (NT$3.81T) · record · TSMC · OUR CONVERSION"
+    source_ids: [tsmc_dec25, tsmc_6k, fed_g5a]
+    status: data_derived
+  - id: tw_us
+    text: "Taiwan 2025 exports US$640.75bn (+34.9%, record); the US took 30.9% (US$198.27bn), Taiwan's biggest market for the first time in 26 years; ICT products and electronic components ≈ 74% of exports (MOF)."
+    spoken: for the first time in twenty-six years, America became Taiwan's biggest customer
+    display: "USA = Taiwan's #1 customer, first time in 26 years · MOF 2025"
+    source_ids: [mof_tw25]
+    status: source_located
+  - id: tw_gdp
+    text: "DGBAS (Aug 14, 2026) forecasts 2026 GDP growth of 11.05%, the fastest since 1987 (12.75%) if realized. FORECAST."
+    spoken: grow faster this year than at any time since nineteen eighty-seven
+    display: "2026 FORECAST: fastest growth since 1987 · DGBAS"
+    source_ids: [dgbas_aug26]
+    status: source_located
+  - id: asml_only
+    text: "ASML is the only company that makes EUV lithography machines; each is about the size of a bus and ships in pieces on cargo planes."
+    spoken: a machine that only one company on Earth can build
+    display: "Only maker of EUV machines · ASML 20-F · Reuters"
+    source_ids: [asml_ar25, reuters_asml]
+    status: source_located
+  - id: asml_price
+    text: "Reuters (Jan 2026): an ASML EUV machine costs about $250 million."
+    spoken: about two hundred and fifty million dollars
+    display: "≈ $250M per machine · Reuters (Jan 2026)"
+    source_ids: [reuters_asml]
+    status: source_located
+  - id: asml_china
+    text: "China was ASML's largest region in 2025 (29.1% of system sales); EUV exports to China have not been licensed by the Dutch government."
+    spoken: ASML's biggest market, China, has never been allowed the most advanced ones
+    display: "China: biggest market, no EUV licence · ASML 20-F · Reuters"
+    source_ids: [asml_ar25, euv_licence]
+    status: source_located
+  - id: hbm_lead
+    text: "SK hynix HBM revenue more than doubled in 2025 (company); 57% global HBM share in Q3 2025 (Counterpoint)."
+    spoken: the leader is SK hynix
+    display: "HBM leader: SK hynix ≈ 57% (Q3 2025) · Counterpoint"
+    source_ids: [skh_fy25, cp_hbm]
+    status: source_located
+  - id: skh_profit
+    text: "SK hynix operating result: 2023 loss KRW 7.7303tn; 2024 record profit KRW 23.4673tn; 2025 KRW 47.2063tn ≈ US$33.2bn (OUR CONVERSION), above Samsung Electronics' FY2025 operating profit of about KRW 43.6tn."
+    spoken: about thirty-three billion dollars
+    display: "2025 operating profit ≈ $33B · SK hynix · OUR CONVERSION"
+    source_ids: [skh_fy25, skh_fy24, sec_fy25, fed_g5a]
+    status: data_derived
+  - id: kr_chips
+    text: "South Korea 2025 semiconductor exports $173.4bn, a record (MOTIE)."
+    spoken: about a hundred and seventy billion dollars
+    display: "2025 chip exports ≈ $173B · record · MOTIE"
+    source_ids: [motie_25]
+    status: source_located
+  - id: jp_resist
+    text: "Japan makes about 90% of fluorinated polyimide and resist (IHS Markit, 2019); Tokyo Electron is a leading maker of coat/develop, etch and cleaning tools (record net sales FY ended Mar 2026)."
+    spoken: Japanese companies make most of them
+    display: "Most chip resists made in Japan (2019 est.) · IHS Markit"
+    source_ids: [ihs_resist, tel_fy26]
+    status: source_located
+  - id: stargate
+    text: "Stargate: up to $500bn over four years on US AI infrastructure; initial equity funders SoftBank, OpenAI, Oracle and MGX (OpenAI, Jan 21, 2025). PLAN."
+    spoken: a plan announced to spend up to five hundred billion dollars
+    display: "PLAN: up to $500B · MGX a founding backer · OpenAI (Jan 2025)"
+    source_ids: [openai_stargate]
+    status: source_located
+  - id: gulf_campus
+    text: "Stargate UAE 1 GW cluster in a planned 5 GW UAE-US AI Campus (May 2025); PIF launched HUMAIN in May 2025. PLANS."
+    spoken: building giant AI campuses in the desert
+    display: "PLAN: 5 GW AI campus, Abu Dhabi · HUMAIN (PIF), Saudi Arabia"
+    source_ids: [g42_stargate_uae, pif_humain]
+    status: source_located
+  - id: chile_cu
+    text: "USGS MCS 2026: Chile mined 5,300 kt of copper in 2025 (est.) of 23,000 kt world = 23% (OUR CALC)."
+    spoken: almost one in every four tons of copper on Earth
+    display: "Chile ≈ 1 in 4 tons of mined copper (2025e) · USGS"
+    source_ids: [usgs_cu26]
+    status: data_derived
+  - id: aus_li
+    text: "USGS MCS 2026: Australia 92,000 t of lithium of 290,000 t world in 2025 (est.) = 32% (OUR CALC)."
+    spoken: about a third of the world's lithium
+    display: "Australia ≈ 1/3 of mined lithium (2025e) · USGS"
+    source_ids: [usgs_li26]
+    status: data_derived
+  - id: iea_cu
+    text: "IEA GCMO 2025, STEPS: implied copper supply deficit of 30% vs demand in 2035 from existing and announced mines; GCMO 2026 coverage says the copper supply outlook worsened considerably. FORECAST."
+    spoken: could fall about a third short of demand by the middle of the next decade
+    display: "FORECAST: planned copper mines ≈ 30% short by 2035 · IEA"
+    source_ids: [iea_gcmo25, iea_gcmo26]
+    status: source_located
+  - id: brannan_end
+    text: "PBS American Experience: Brannan was forced to turn his paper fortune into cash in 1870, his empire collapsed and he died poor."
+    spoken: his empire collapsed, and he died poor
+    display: "Brannan's empire collapsed; he died poor · PBS"
+    source_ids: [pbs_brannan]
+    status: source_located

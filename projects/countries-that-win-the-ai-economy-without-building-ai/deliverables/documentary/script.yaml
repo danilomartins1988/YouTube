@@ -1,0 +1,273 @@
+logline: Hattie, a fictional gold-country hardware-store owner, opens a package and finds Nugget, a talking AI chip with a passport full of
+  stamps. Following the stamps from Taiwan to the Netherlands, South Korea, Japan, the Gulf, Chile and Australia, she meets the
+  nations selling the shovels of the AI gold rush, and learns the old lesson of 1849, that shovel sellers can ride a rush down as well as
+  up, and that the shovel that lasts is the one nobody else can make.
+title: The Countries That Could Win the AI Economy Without Building AI
+# Story over statistics (docs/STORY_OVER_STATS.md): one protagonist (HATTIE, fictional) and NUGGET (a talking AI chip, fictional);
+# 11 spoken figures, at most one per segment; all exact figures in FACT_CHECK.md and the description. Forecasts labelled FORECAST,
+# plans PLAN, conversions OUR CALC.
+segments:
+- id: co_hook
+  chapter: Sell the shovels
+  narration: California, eighteen forty-nine. Gold! Crowds of dreamers rush into the hills with their pans. Most of them find mud. But down
+    in town, one storekeeper is having the best year of her life. She doesn't dig. She sells the shovels. Today there's a new gold rush,
+    and it's called AI. Everyone is watching the companies that build the chatbots. But some countries are getting rich the old way, by
+    selling the shovels. So which countries could win the AI economy without building AI at all?
+  claims: []
+  analysis: true
+  source_note: Hook; the storekeeper, Hattie and Nugget are fictional. The gold-rush shovel-seller pattern is documented by PBS American Experience (Sam Brannan).
+- id: title_card
+  chapter: Sell the shovels
+  narration: ''
+  claims: []
+- id: c1_brannan
+  chapter: Sell the shovels
+  narration: That storekeeper is make-believe, but the pattern is real. In the actual Gold Rush, a merchant named Sam Brannan became known as
+    the richest man in California. He never mined for gold. His stores sold the miners what they needed, at whatever price the rush would
+    pay.
+  claims:
+  - brannan
+  source_note: PBS American Experience, "Samuel Brannan" (the store, the richest man in California, never mined).
+- id: c1_hattie
+  chapter: Sell the shovels
+  narration: Meet Hattie. Her family has run the same hardware store in gold country for generations, and the old rule is still painted
+    above the door. In a rush, sell shovels. One sleepy morning, a package lands on her counter. Inside is a tiny AI chip, the kind that
+    runs a chatbot. And it talks. Hi, it says. I'm Nugget. I've been everywhere.
+  claims: []
+  analysis: true
+  source_note: Story beat (fictional characters).
+- id: c1_passport
+  chapter: Sell the shovels
+  narration: Nugget has a passport, and it's packed with stamps. Hattie flips through it. This little chip was printed on an island, with a
+    machine from a flat green country, and memory from across the sea. Its tools and chemicals came from somewhere else again, its money
+    from the desert, and its metal from the mountains. Every stamp is a shovel shop. Hattie grabs her hat. Let's go meet the shopkeepers.
+  claims: []
+  analysis: true
+  source_note: Story beat; the supply chain (foundry, lithography, HBM, tools and materials, capital, metals) is described in the company annual reports cited below.
+- id: c1_draw
+  chapter: Sell the shovels
+  narration: Let me draw why the shovel sellers matter. At the top, someone builds a chatbot and sells answers. To do that, they rent a data
+    center. The data center buys chips. The chip factory buys machines, memory and chemicals. And all of it needs power, money and metal.
+    Every dollar spent at the top rolls downhill, through the shovel shops. And here's the trick. The shops at the top have rivals
+    everywhere. Some shops near the bottom have almost none.
+  claims: []
+  analysis: true
+  source_note: Mechanism (our analysis); no figures.
+- id: c2_card
+  chapter: The island and the machine
+  narration: ''
+  claims: []
+- id: c2_taiwan
+  chapter: The island and the machine
+  narration: First stamp, Taiwan. Nugget was born here, in a chip factory called a foundry. Its design came from America, but almost nobody
+    else on Earth can actually build it this small. Hattie watches the line outside. The biggest names in tech, all waiting at the same
+    counter. Excuse me, she asks. Is this the only shop? Pretty much, says Nugget.
+  claims: []
+  analysis: true
+  source_note: TSMC's leadership in advanced foundry manufacturing (library Ep 07, TrendForce foundry ranking); story dialogue fictional.
+- id: c2_tsmc
+  chapter: The island and the machine
+  narration: The shop is called TSMC. Last year, it sold about a hundred and twenty billion dollars of chips, the most in its history. And
+    every new AI model needs more of them.
+  claims:
+  - tsmc_rev
+  source_note: TSMC December 2025 revenue report (Jan 9, 2026) NT$3,809.05bn for 2025; OUR CONVERSION at the Fed 2025 average.
+- id: c2_customer
+  chapter: The island and the machine
+  narration: The whole island feels it. Taiwan's exports smashed their record, and for the first time in twenty-six years, America became
+    Taiwan's biggest customer, ahead of China and Hong Kong. Its biggest shipments? Servers and chips for the AI rush.
+  claims:
+  - tw_us
+  source_note: Taiwan Ministry of Finance 2025 trade data via Focus Taiwan / AmCham Taiwan.
+- id: c2_growth
+  chapter: The island and the machine
+  narration: The government's statistics office now forecasts that Taiwan's economy will grow faster this year than at any time since
+    nineteen eighty-seven. Hattie stares. All that, from selling shovels?
+  claims:
+  - tw_gdp
+  source_note: DGBAS forecast of Aug 14, 2026 (2026 real GDP growth 11.05%, fastest since 1987). A FORECAST.
+- id: c2_risk
+  chapter: The island and the machine
+  narration: Being the only shop in town is powerful. It's also a little nerve-racking, for the island and for every customer in the line. We
+    told that story in The Small Island the Whole World Economy Depends On.
+  claims: []
+  analysis: true
+  source_note: Library callback (Ep 07); no new figures.
+- id: c2_nl
+  chapter: The island and the machine
+  narration: Second stamp, the Netherlands. A flat, green country with one very unusual shop. Nugget's tiniest lines were printed with light,
+    by a machine that only one company on Earth can build, ASML. Each machine is about the size of a bus, and it travels in pieces,
+    packed into cargo planes.
+  claims:
+  - asml_only
+  source_note: ASML 2025 annual report (sole supplier of EUV lithography); Reuters explainer (Jan 2026) and Intel newsroom on size and shipping (library Ep 08).
+- id: c2_asml
+  chapter: The island and the machine
+  narration: One of these machines costs about two hundred and fifty million dollars. And if you want the most advanced chips, there is no
+    second shop to try. Hattie whispers. Now that's a shovel.
+  claims:
+  - asml_price
+  source_note: Reuters explainer (Jan 28, 2026), same source as Ep 08.
+- id: c2_nlcatch
+  chapter: The island and the machine
+  narration: But even the only shop doesn't get to choose all its customers. Governments decide where these machines may go, and ASML's
+    biggest market, China, has never been allowed the most advanced ones. We took the machine apart in The Machine Every Advanced Chip
+    Depends On.
+  claims:
+  - asml_china
+  source_note: ASML 2025 annual report (China the largest region by sales); Dutch export licensing (library Ep 08).
+- id: c3_card
+  chapter: The memory and the materials
+  narration: ''
+  claims: []
+- id: c3_korea
+  chapter: The memory and the materials
+  narration: Third stamp, South Korea. Nugget's brain is fast, but forgetful. It needs a special memory stacked right beside it, layer on
+    layer, like a tower of pancakes. It's called HBM. Only a handful of companies can make it, and the leader is SK hynix. I'm hungry,
+    says Nugget. You're a chip, says Hattie.
+  claims:
+  - hbm_lead
+  source_note: SK hynix FY2025 results (HBM revenue more than doubled); Counterpoint Research HBM share, Q3 2025.
+- id: c3_draw
+  chapter: The memory and the materials
+  narration: Let me draw what the AI rush did to that one company. Not long ago, SK hynix was losing money. Memory prices had crashed. Then
+    the rush arrived. The next year, a record. The year after that, its operating profit roughly doubled again, to about thirty-three
+    billion dollars. For the first time, it out-earned all of Samsung.
+  claims:
+  - skh_profit
+  source_note: SK hynix 2023 loss, 2024 record, 2025 profit (company releases); Samsung FY2025 results; OUR CONVERSION at the Fed 2025 average.
+- id: c3_exports
+  chapter: The memory and the materials
+  narration: And the whole country rode along. South Korea's chip exports set a new record of about a hundred and seventy billion dollars.
+    Hattie whistles. That's a lot of pancakes.
+  claims:
+  - kr_chips
+  source_note: Korea Ministry of Trade, Industry and Energy (MOTIE) 2025 trade data via Korea Times / Yonhap.
+- id: c3_japan
+  chapter: The memory and the materials
+  narration: Fourth stamp, Japan. No famous chatbot here either. But look closer. The machines that coat, etch and clean each wafer, from
+    companies like Tokyo Electron. The ultra-pure chemicals and the light-sensitive coatings that chip factories everywhere depend on.
+    Japanese companies make most of them.
+  claims:
+  - jp_resist
+  source_note: Tokyo Electron FY2026 results (record net sales); Japan's share of photoresist per IHS Markit (2019), as in Ep 18.
+- id: c3_quiet
+  chapter: The memory and the materials
+  narration: Japan's shovel shops rarely make headlines. They make the parts nobody can skip. Quiet, steady, and very hard to copy. We
+    opened that cabinet in The Chemicals Nobody Talks About That Decide Who Makes Chips, and Japan's robot bet in Will AI Make Japan Rich
+    Again?
+  claims: []
+  analysis: true
+  source_note: Library callbacks (Ep 18, Ep 66); no new figures.
+- id: c4_card
+  chapter: Money and metal
+  narration: ''
+  claims: []
+- id: c4_gulf
+  chapter: Money and metal
+  narration: Fifth stamp, the Gulf. Here the shovel isn't a machine. It's money, and sunshine. Funds built on oil money are now pouring it
+    into AI. Hattie peeks inside a vault. It's not gold, says Nugget. It's better. It's patient.
+  claims: []
+  analysis: true
+  source_note: Story beat; sovereign investment vehicles (MGX, PIF/HUMAIN) per their official announcements below.
+- id: c4_mgx
+  chapter: Money and metal
+  narration: An Abu Dhabi investment company called MGX is one of the founding backers of Stargate, a plan announced to spend up to five
+    hundred billion dollars on AI data centers in America.
+  claims:
+  - stargate
+  source_note: OpenAI, "Announcing The Stargate Project" (Jan 21, 2025). A PLAN, not money spent.
+- id: c4_campus
+  chapter: Money and metal
+  narration: And at home, the region is building giant AI campuses in the desert, powered by cheap sunshine and gas. Saudi Arabia's
+    sovereign fund launched an AI company of its own, called HUMAIN. The bet is simple. If you can't make the shovels, own a piece of every
+    shop. We followed the power side in Could Cheap Electricity Become the New Oil?
+  claims:
+  - gulf_campus
+  source_note: G42 / Stargate UAE announcement (May 2025, 1 GW cluster in a 5 GW campus); PIF launch of HUMAIN (May 2025). PLANS.
+- id: c4_chile
+  chapter: Money and metal
+  narration: Sixth stamp, the mountains of Chile. Giant trucks haul copper ore up out of the pit. Copper is the wire inside every data center,
+    every power line and every chip package. And Chile mines almost one in every four tons of copper on Earth.
+  claims:
+  - chile_cu
+  source_note: USGS Mineral Commodity Summaries 2026, copper (Chile 5,300 kt of 23,000 kt world mine production, 2025 estimates).
+- id: c4_aus
+  chapter: Money and metal
+  narration: Across the ocean, Australia digs up about a third of the world's lithium, the metal in the batteries that back up power grids,
+    phones and electric cars.
+  claims:
+  - aus_li
+  source_note: USGS Mineral Commodity Summaries 2026, lithium (Australia 92,000 t of 290,000 t, 2025 estimates).
+- id: c4_gap
+  chapter: Money and metal
+  narration: Here's the twist. The International Energy Agency forecasts that the copper mines already planned could fall about a third short
+    of demand by the middle of the next decade. A shortage sounds like a jackpot for Chile.
+  claims:
+  - iea_cu
+  source_note: IEA Global Critical Minerals Outlook 2025 (STEPS implied copper gap ~30% by 2035); the 2026 edition says the outlook worsened. A FORECAST.
+- id: c4_price
+  chapter: Money and metal
+  narration: But a mine can't charge whatever it likes. Copper is sold at one world price. When the rush runs hot, every mine wins. When it
+    cools, the price falls for everyone at once. Nugget gulps. So metal is a shovel anyone can sell.
+  claims: []
+  analysis: true
+  source_note: Analysis (commodity pricing); no figures.
+- id: c5_card
+  chapter: When the rush ends
+  narration: ''
+  claims: []
+- id: c5_brannan
+  chapter: When the rush ends
+  narration: Back to the Gold Rush. What happened to Sam Brannan? Years later, his empire collapsed, and he died poor. The shovel seller had
+    ridden the rush all the way up, and all the way down.
+  claims:
+  - brannan_end
+  source_note: PBS American Experience, "Samuel Brannan" (empire collapsed; died poor).
+- id: c5_crash
+  chapter: When the rush ends
+  narration: It happens with chips too. Remember SK hynix losing money? That was a memory crash, when buyers paused and prices fell off a
+    cliff. We told that story in The Three Companies That Decide How Much Your Memory Costs.
+  claims: []
+  analysis: true
+  source_note: Library callback (Ep 14); 2023 loss as in c3_draw.
+- id: c5_draw
+  chapter: When the rush ends
+  narration: So which shovels last? Let me draw it. On one side, the shovels anyone can sell. Metal, money, power. Their price rises and falls
+    with the rush. On the other side, the shovels nobody else can make. The foundry, the machine, the most advanced memory. Those shops get
+    to set their own price. The safest shovel isn't the biggest one. It's the one with no second shop.
+  claims: []
+  analysis: true
+  source_note: Analysis (our framework); no figures.
+- id: c5_score
+  chapter: When the rush ends
+  narration: Hattie writes up her scorecard. Taiwan and the Netherlands, winning, as long as nobody builds a second shop and politics stays
+    calm. South Korea, winning big, on a rollercoaster. Japan, steady and hard to replace. The Gulf, buying a seat at every table. Chile
+    and Australia, rich in the good years, exposed in the bad ones.
+  claims: []
+  analysis: true
+  source_note: Verdict (our analysis) drawn from the stamps above; no new figures.
+- id: c5_verdict
+  chapter: When the rush ends
+  narration: So can a country win the AI economy without building AI? Yes. Some already are. But the winners aren't the ones who dig the
+    most. They're the ones who own a shovel nobody can copy, and keep inventing the next one before the rush moves on.
+  claims: []
+  analysis: true
+  source_note: Verdict (our analysis).
+- id: c5_hattie
+  chapter: When the rush ends
+  narration: Back home, Hattie repaints the sign above her door. Nugget hops onto the counter. So what do we sell now? Hattie smiles. Whatever
+    they can't get anywhere else.
+  claims: []
+  analysis: true
+  source_note: Story close (fictional).
+- id: teaser
+  chapter: When the rush ends
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: When the rush ends
+  narration: ''
+  claims: []
