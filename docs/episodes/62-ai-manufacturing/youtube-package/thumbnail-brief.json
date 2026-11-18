@@ -3,7 +3,7 @@
   "docs_dir": "docs/episodes/62-ai-manufacturing",
   "video": "output/aimfg_documentary.mp4",
   "deliverable": "documentary",
-  "status": "planned",
+  "status": "completed",
   "default": "C",
   "analysis": {
     "mystery": "If robots do the work, does China's cheap-labor head start disappear?",
@@ -165,7 +165,7 @@
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-are-chinese-cars-so-cheap (distance 0.58)",
+            "detail": "nearest could-ai-bring-europe-back-to-power (distance 0.38)",
             "critical": false
           },
           {
@@ -176,7 +176,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.636,
+        "design_score": 0.599,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -184,7 +184,7 @@
           "Not misleading / not clickbait (human)",
           "Spelling of the words on the image (human)"
         ],
-        "nearest": "why-are-chinese-cars-so-cheap"
+        "nearest": "could-ai-bring-europe-back-to-power"
       }
     },
     {
@@ -510,6 +510,6 @@
   ],
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-18T12:54:40Z",
+  "generated": "2026-11-18T13:12:30Z",
   "master": "output/could-ai-end-chinas-manufacturing-dominance/thumbnails/master_C.png"
 }

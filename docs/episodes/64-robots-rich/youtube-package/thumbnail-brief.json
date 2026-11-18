@@ -1,0 +1,486 @@
+{
+  "title": "Who Gets Rich When Robots Do the Work?",
+  "docs_dir": "docs/episodes/64-robots-rich",
+  "video": "output/robotsrich_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "C",
+  "analysis": {
+    "mystery": "If robots do the work, who gets the money?",
+    "surprising_fact": "The richest 10% of U.S. households hold about 88% of household stocks and stock funds (Fed DFA, Q2 2026)",
+    "subject": "an original friendly robot hauling a giant gold coin toward a figure in a suit holding a SHARE certificate, a worker watching",
+    "tone": "sitcom",
+    "metaphor": "the robot works, the shareholder collects",
+    "public_figure": null
+  },
+  "slug": "who-gets-rich-when-robots-do-the-work",
+  "concepts": [
+    {
+      "id": "A",
+      "angle": "the robot hauls the coin to the shareholder while the worker watches",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "ROBOTS:",
+        "WHO GETS RICH?"
+      ],
+      "claim_basis": "a question (the film: mostly the owners of the machines, on the evidence so far)",
+      "scene": {
+        "palette": {
+          "sky0": "#0D2A4A",
+          "sky1": "#1F5C99",
+          "haze": "#FFC93C",
+          "key": "#FFF6D8",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "robothaul",
+          "x": 980,
+          "y": 700,
+          "s": 0.78
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "ROBOTS:",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 710.8,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "WHO GETS RICH?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 1421.5,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.64 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(605, 156, 1315, 290), (249, 321, 1671, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.129",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 52",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest could-ai-bring-europe-back-to-power (distance 0.40)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (the film: mostly the owners of the machines, on the evidence so far)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.584,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "could-ai-bring-europe-back-to-power"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "the owner, not the worker",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "ROBOTS WORK.",
+        "OWNERS WIN?"
+      ],
+      "claim_basis": "a question (the film: owners gain most so far; pay can catch up after a delay; counterpoints shown)",
+      "scene": {
+        "palette": {
+          "sky0": "#1A1035",
+          "sky1": "#3B2A6E",
+          "haze": "#7FA8FF",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "robothaul",
+          "x": 980,
+          "y": 720,
+          "s": 0.74,
+          "worker": false
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "ROBOTS WORK.",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 1218.5,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "OWNERS WIN?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 1116.9,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.62 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(351, 156, 1569, 290), (402, 321, 1518, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.119",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 51",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hamburger-that-became-a-symbol-of-the-cold-wars-end (distance 0.53)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (the film: owners gain most so far; pay can catch up after a delay; counterpoints shown)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.682,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hamburger-that-became-a-symbol-of-the-cold-wars-end"
+      }
+    },
+    {
+      "id": "C",
+      "angle": "the question to the viewer",
+      "archetype": "classic",
+      "text_side": "left",
+      "accent_line": 1,
+      "text": [
+        "OWN THE",
+        "ROBOTS?"
+      ],
+      "claim_basis": "a question (education, not advice: the film shows common ways people own shares, with risks)",
+      "scene": {
+        "palette": {
+          "sky0": "#06241F",
+          "sky1": "#0F4A40",
+          "haze": "#5EE6B0",
+          "key": "#FFF6D8",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "robothaul",
+          "x": 1240,
+          "y": 700,
+          "s": 0.66
+        },
+        "particles": {
+          "n": 50,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#BDF5DE"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "OWN THE",
+          "x": 90,
+          "y": 511.4,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "ROBOTS?",
+          "x": 90,
+          "y": 697.1,
+          "size": 178.6,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.57 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 372, 890, 522), (90, 558, 890, 708)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.9:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.095",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 50",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest who-actually-gets-the-tariff-refund (distance 0.78)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (education, not advice: the film shows common ways people own shares, with risks)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.714,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "who-actually-gets-the-tariff-refund"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T13:46:42Z",
+  "master": "output/who-gets-rich-when-robots-do-the-work/thumbnails/master_C.png"
+}
