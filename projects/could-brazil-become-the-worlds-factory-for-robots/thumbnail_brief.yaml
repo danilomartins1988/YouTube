@@ -1,0 +1,66 @@
+# Thumbnail creative brief (Ep 71). Owner standing rules: at most 4 words naming BRAZIL, mobile-legible, no statistics shown, face layout
+# with an ORIGINAL character (BIA, the film's fictional engineer from Minas Gerais), no logos, no flags, no real people, no stereotypes.
+# US-viewer hook: "the country that could build your next robot".
+title: "Could Brazil Become the World's Factory for Robots?"
+docs_dir: docs/episodes/71-brazil-ai
+video: output/brazilai_documentary.mp4
+deliverable: documentary
+status: planned
+default: F
+analysis:
+  mystery: If robots do the work, does the next big factory go to the country with the cheapest clean power and metals, and is that Brazil?
+  surprising_fact: Brazil mines about nine of every ten tons of the world's niobium and most of its power is renewable, yet factories shrink to about an eighth of its economy
+  subject: a delighted engineer beside a robot made in Brazil, a tag reading MADE IN BRAZIL?
+  tone: strategy
+  metaphor: the cost backpack
+  public_figure: null
+concepts:
+- id: F
+  angle: "face (original character BIA, the film's fictional engineer, delighted; a giant tag reading MADE IN BRAZIL?)"
+  archetype: face
+  text:
+  - "BRAZIL BUILDS"
+  - YOUR ROBOT?
+  claim_basis: "a question (answered in the film: it could, if the cost of producing falls); Bia is fictional; no number shown"
+  scene:
+    bg: ['#2E9E6B', '#13284A']
+    rays: '#9FE3B8'
+    bust:
+      who: {name: Bia, hair: bun, hairColor: '#2B1A12', hairShade: '#4A3020', brows: '#2B1A12', skin: '#A86B45', iris: '#2A1A10',
+            clothes: tee, jacket: '#1F8A8C', shirt: '#1F8A8C', glasses: null, age: 0}
+      expr: point
+      x: 470
+      s: 0.92
+    prop: {kind: tag, text: 'BRAZIL?', x: 1400, y: 720, s: 0.6, rot: -8}
+- id: A
+  angle: the robot factory, made in Brazil?
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - BRAZIL'S ROBOT
+  - FACTORY?
+  claim_basis: 'a question (no number shown)'
+  scene:
+    palette: {sky0: '#0E2A2A', sky1: '#1F6B4A', haze: '#FFD23F', key: '#FFF6D8', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: megafactory, x: 960, y: 700, s: 0.7}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.5
+    brand: none
+- id: B
+  angle: robots made in Brazil?
+  archetype: classic
+  text_side: top
+  accent_line: 1
+  text:
+  - MADE IN
+  - BRAZIL?
+  claim_basis: 'a question (the film: Brazil has the ingredients; the cost of producing decides)'
+  scene:
+    palette: {sky0: '#102A1E', sky1: '#2E7D4F', haze: '#FFC93C', key: '#FFF3E0', accent: '#FFD23F', ink: '#FFFFFF'}
+    backdrop: void
+    subject: {kind: robothaul, x: 980, y: 720, s: 0.74}
+    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
+    vignette: 0.55
+    brand: none

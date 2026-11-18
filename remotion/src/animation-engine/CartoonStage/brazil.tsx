@@ -388,7 +388,7 @@ export const BRAZIL_SETS: Record<string, SetFn> = Object.fromEntries(Object.entr
 /** costpack: the cost backpack. Bricks drop in (`drops` [[t, label]]) and can be pulled out (`pulls` [t...]). */
 const costpack: ItemFn = (a, {t, f}, i) => {
   const at = a.at ?? 0; if (t < at || (a.until !== undefined && t > a.until + 0.3)) return null;
-  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = (a.scale ?? 1) * pop(t, at, 0.4) * (a.until !== undefined && t > a.until ? 1 - clamp((t - a.until) / 0.3) : 1);
+  const x = kf(a.x, t, 960), y = kf(a.y, t, f), s = kf(a.scale, t, 1) * pop(t, at, 0.4) * (a.until !== undefined && t > a.until ? 1 - clamp((t - a.until) / 0.3) : 1);
   const drops: [number, string][] = a.drops || [], pulls: number[] = a.pulls || [], base: string[] = a.base || [];
   const inBag: {label: string; t0: number}[] = base.map((l) => ({label: l, t0: -99}));
   for (const [dt, lab] of drops) if (t >= dt) inBag.push({label: lab, t0: dt});
