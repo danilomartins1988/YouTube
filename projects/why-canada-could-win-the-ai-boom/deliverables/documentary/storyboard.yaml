@@ -1831,33 +1831,37 @@ scenes:
         color: risk
         anchor: middle
       kind: stroke
-    - d: M 880 380 L 1280 380 L 1280 550 L 880 550 Z
+    - d: M 880 400 L 1280 400 L 1280 520 L 880 520 Z
       color: risk
-      width: 6
+      width: 5
       start:
         cue: you pay twice
-      kind: box
+      kind: bar
+      fill: risk
+      fillOpacity: 0.35
       label:
         text: 'HOT PLACE: PAY TWICE'
         x: 1080
-        y: 475
-        size: 32
+        y: 380
+        size: 30
         color: risk
         anchor: middle
-    - d: M 880 600 L 1280 600 L 1280 770 L 880 770 Z
+    - d: M 880 620 L 1110 620 L 1110 740 L 880 740 Z
       color: accent2
-      width: 6
+      width: 5
       start:
         cue: In a cold place
-      kind: box
+      kind: bar
+      fill: accent2
+      fillOpacity: 0.35
       label:
-        text: 'COLD PLACE: AIR DOES IT'
-        x: 1080
-        y: 695
-        size: 30
+        text: 'COLD PLACE: SMALLER BILL'
+        x: 1000
+        y: 600
+        size: 28
         color: accent2
         anchor: middle
-    - d: M 1290 690 Q 1385 652 1480 690 M 1456 692 L 1480 690 L 1464 672
+    - d: M 1120 680 Q 1300 608 1480 680 M 1456 682 L 1480 680 L 1464 662
       color: accent2
       width: 6
       start:
@@ -1865,7 +1869,7 @@ scenes:
       kind: arrow
       label:
         text: COLD AIR
-        x: 1390
+        x: 1300
         y: 650
         size: 24
         color: accent2
@@ -1902,7 +1906,7 @@ scenes:
       start:
         cue: Let me draw why the cold is worth money
       label:
-        text: MECHANISM · ILLUSTRATIVE (NOT TO SCALE)
+        text: MECHANISM · ILLUSTRATIVE BARS (NOT TO SCALE)
         x: 1150
         y: 980
         size: 16

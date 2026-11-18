@@ -1,0 +1,503 @@
+{
+  "title": "Could Brazil Become the World's Factory for Robots?",
+  "docs_dir": "docs/episodes/71-brazil-ai",
+  "video": "output/brazilai_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "F",
+  "analysis": {
+    "mystery": "If robots do the work, does the next big factory go to the country with the cheapest clean power and metals, and is that Brazil?",
+    "surprising_fact": "Brazil mines about nine of every ten tons of the world's niobium and most of its power is renewable, yet factories shrink to about an eighth of its economy",
+    "subject": "a delighted engineer beside a robot made in Brazil, a tag reading MADE IN BRAZIL?",
+    "tone": "strategy",
+    "metaphor": "the cost backpack",
+    "public_figure": null
+  },
+  "slug": "could-brazil-become-the-worlds-factory-for-robots",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (original character BIA, the film's fictional engineer, delighted; a giant tag reading MADE IN BRAZIL?)",
+      "archetype": "face",
+      "text": [
+        "BRAZIL BUILDS",
+        "YOUR ROBOT?"
+      ],
+      "claim_basis": "a question (answered in the film: it could, if the cost of producing falls); Bia is fictional; no number shown",
+      "scene": {
+        "bg": [
+          "#2E9E6B",
+          "#13284A"
+        ],
+        "rays": "#9FE3B8",
+        "bust": {
+          "who": {
+            "name": "Bia",
+            "hair": "bun",
+            "hairColor": "#2B1A12",
+            "hairShade": "#4A3020",
+            "brows": "#2B1A12",
+            "skin": "#A86B45",
+            "iris": "#2A1A10",
+            "clothes": "tee",
+            "jacket": "#1F8A8C",
+            "shirt": "#1F8A8C",
+            "glasses": null,
+            "age": 0
+          },
+          "expr": "point",
+          "x": 470,
+          "s": 0.92
+        },
+        "prop": {
+          "kind": "tag",
+          "text": "BRAZIL?",
+          "x": 1400,
+          "y": 720,
+          "s": 0.6,
+          "rot": -8
+        }
+      },
+      "layout": [
+        {
+          "text": "BRAZIL BUILDS",
+          "x": 1367.8,
+          "y": 160.8,
+          "size": 113.5,
+          "width": 944.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "YOUR ROBOT?",
+          "x": 1367.8,
+          "y": 321.4,
+          "size": 124.2,
+          "width": 874.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.66 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(896, 72, 1840, 168), (931, 225, 1805, 329)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "9.5px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": false,
+            "detail": "0.169",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "{'name': 'Bia', 'hair': 'bun', 'hairColor': '#2B1A12', 'hairShade': '#4A3020', 'brows': '#2B1A12', 'skin': '#A86B45', 'iris': '#2A1A10', 'clothes': 'tee', 'jacket': '#1F8A8C', 'shirt': '#1F8A8C', 'glasses': None, 'age': 0}",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 63",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest could-ai-end-chinas-manufacturing-dominance (distance 0.58)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (answered in the film: it could, if the cost of producing falls); Bia is fictional; no number shown",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.587,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "could-ai-end-chinas-manufacturing-dominance"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "the robot factory, made in Brazil?",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "BRAZIL'S ROBOT",
+        "FACTORY?"
+      ],
+      "claim_basis": "a question (no number shown)",
+      "scene": {
+        "palette": {
+          "sky0": "#0E2A2A",
+          "sky1": "#1F6B4A",
+          "haze": "#FFD23F",
+          "key": "#FFF6D8",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "megafactory",
+          "x": 960,
+          "y": 700,
+          "s": 0.7
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "BRAZIL'S ROBOT",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 1421.5,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "FACTORY?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 812.3,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.58 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(249, 156, 1671, 290), (554, 321, 1366, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.5:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.144",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 40",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest could-ai-bring-europe-back-to-power (distance 0.63)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (no number shown)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.575,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "could-ai-bring-europe-back-to-power"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "robots made in Brazil?",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "MADE IN",
+        "BRAZIL?"
+      ],
+      "claim_basis": "a question (the film: Brazil has the ingredients; the cost of producing decides)",
+      "scene": {
+        "palette": {
+          "sky0": "#102A1E",
+          "sky1": "#2E7D4F",
+          "haze": "#FFC93C",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "robothaul",
+          "x": 980,
+          "y": 720,
+          "s": 0.74
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE9A8"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "MADE IN",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 710.8,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "BRAZIL?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 710.8,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.59 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(605, 156, 1315, 290), (605, 321, 1315, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.3:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.104",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 51",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest who-gets-rich-when-robots-do-the-work (distance 0.58)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (the film: Brazil has the ingredients; the cost of producing decides)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.627,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "who-gets-rich-when-robots-do-the-work"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T21:36:56Z",
+  "master": "output/could-brazil-become-the-worlds-factory-for-robots/thumbnails/master_F.png"
+}

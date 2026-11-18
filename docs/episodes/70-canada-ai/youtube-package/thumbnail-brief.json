@@ -1,0 +1,502 @@
+{
+  "title": "Why Canada Could Be the Biggest Winner of the AI Boom",
+  "docs_dir": "docs/episodes/70-canada-ai",
+  "video": "output/canadaai_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "F",
+  "analysis": {
+    "mystery": "Everyone says Canada's economy is crashing; yet the AI boom wants exactly what Canada has (power, cold, metals, brains)",
+    "surprising_fact": "About six of every ten kilowatt hours in Canada come from falling water (CER), and the cold cools servers for free much of the year",
+    "subject": "an excited young researcher beside a glowing AI chip, a snowy blue background",
+    "tone": "strategy",
+    "metaphor": "the AI boom's shopping list",
+    "public_figure": null
+  },
+  "slug": "why-canada-could-win-the-ai-boom",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (original character MAYA, the film's fictional AI researcher, shocked and delighted; a glowing chip)",
+      "archetype": "face",
+      "text": [
+        "CANADA",
+        "WINS AI?"
+      ],
+      "claim_basis": "a question (answered in the film: Canada has the whole list but only wins if it builds); Maya is fictional; no number shown",
+      "scene": {
+        "bg": [
+          "#3FA9F5",
+          "#0F2A52"
+        ],
+        "rays": "#BFE6FF",
+        "bust": {
+          "who": {
+            "name": "Maya",
+            "hair": "bun",
+            "hairColor": "#1B1B1B",
+            "hairShade": "#3A2A2A",
+            "brows": "#1B1B1B",
+            "skin": "#E0A878",
+            "iris": "#3A2418",
+            "clothes": "tee",
+            "jacket": "#7357C9",
+            "shirt": "#7357C9",
+            "glasses": "round",
+            "age": 0
+          },
+          "expr": "shock",
+          "x": 470,
+          "s": 0.92
+        },
+        "prop": {
+          "kind": "chip",
+          "x": 1400,
+          "y": 730,
+          "s": 0.62,
+          "rot": -8
+        }
+      },
+      "layout": [
+        {
+          "text": "CANADA",
+          "x": 1367.8,
+          "y": 238.0,
+          "size": 210,
+          "width": 806.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "WINS AI?",
+          "x": 1367.8,
+          "y": 459.0,
+          "size": 170.8,
+          "width": 874.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.68 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(965, 74, 1771, 251), (931, 326, 1805, 469)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": false,
+            "detail": "0.173",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "{'name': 'Maya', 'hair': 'bun', 'hairColor': '#1B1B1B', 'hairShade': '#3A2A2A', 'brows': '#1B1B1B', 'skin': '#E0A878', 'iris': '#3A2418', 'clothes': 'tee', 'jacket': '#7357C9', 'shirt': '#7357C9', 'glasses': 'round', 'age': 0}",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 73",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest if-ai-replaces-workers-who-pays-the-taxes (distance 0.36)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (answered in the film: Canada has the whole list but only wins if it builds); Maya is fictional; no number shown",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.627,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "if-ai-replaces-workers-who-pays-the-taxes"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "a snowy AI campus glowing in the north",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "CANADA'S",
+        "AI JACKPOT?"
+      ],
+      "claim_basis": "a question (no number shown)",
+      "scene": {
+        "palette": {
+          "sky0": "#0D2A4A",
+          "sky1": "#2A6CB0",
+          "haze": "#BFE6FF",
+          "key": "#FFFFFF",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "campus",
+          "x": 980,
+          "y": 720,
+          "s": 0.8
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "CANADA'S",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 812.3,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "AI JACKPOT?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 1116.9,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.65 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(554, 156, 1366, 290), (402, 321, 1518, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.6:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.112",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 47",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-are-chinese-cars-so-cheap (distance 0.37)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (no number shown)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.586,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-are-chinese-cars-so-cheap"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "not crashing, winning?",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "CANADA ISN'T",
+        "CRASHING?"
+      ],
+      "claim_basis": "a question (the film: the 2025 dip was real, 2026 growth resumed per the Bank of Canada; the AI assets are the twist)",
+      "scene": {
+        "palette": {
+          "sky0": "#1A1035",
+          "sky1": "#2F4F9E",
+          "haze": "#9ED8FF",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "chip",
+          "x": 980,
+          "y": 720,
+          "s": 0.8
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFFFFF"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "CANADA ISN'T",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 1218.5,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "CRASHING?",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 913.8,
+          "anchor": "middle",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.55 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(351, 156, 1569, 290), (503, 321, 1417, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.3:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.105",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 41",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest alaska-the-state-that-pays-you-to-live-there (distance 0.38)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (the film: the 2025 dip was real, 2026 growth resumed per the Bank of Canada; the AI assets are the twist)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.613,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "alaska-the-state-that-pays-you-to-live-there"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T21:39:16Z",
+  "master": "output/why-canada-could-win-the-ai-boom/thumbnails/master_F.png"
+}

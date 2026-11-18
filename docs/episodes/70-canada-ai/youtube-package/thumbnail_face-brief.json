@@ -1,0 +1,174 @@
+{
+  "id": "F",
+  "angle": "face (original character MAYA, the film's fictional AI researcher, shocked and delighted; a glowing chip)",
+  "archetype": "face",
+  "text": [
+    "CANADA",
+    "WINS AI?"
+  ],
+  "claim_basis": "a question (answered in the film: Canada has the whole list but only wins if it builds); Maya is fictional; no number shown",
+  "scene": {
+    "bg": [
+      "#3FA9F5",
+      "#0F2A52"
+    ],
+    "rays": "#BFE6FF",
+    "bust": {
+      "who": {
+        "name": "Maya",
+        "hair": "bun",
+        "hairColor": "#1B1B1B",
+        "hairShade": "#3A2A2A",
+        "brows": "#1B1B1B",
+        "skin": "#E0A878",
+        "iris": "#3A2418",
+        "clothes": "tee",
+        "jacket": "#7357C9",
+        "shirt": "#7357C9",
+        "glasses": "round",
+        "age": 0
+      },
+      "expr": "shock",
+      "x": 470,
+      "s": 0.92
+    },
+    "prop": {
+      "kind": "chip",
+      "x": 1400,
+      "y": 730,
+      "s": 0.62,
+      "rot": -8
+    }
+  },
+  "layout": [
+    {
+      "text": "CANADA",
+      "x": 1367.8,
+      "y": 238.0,
+      "size": 210,
+      "width": 806.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3
+    },
+    {
+      "text": "WINS AI?",
+      "x": 1367.8,
+      "y": 459.0,
+      "size": 170.8,
+      "width": 874.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3,
+      "box": "#FF1E1E"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.68 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "3 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(965, 74, 1771, 251), (931, 326, 1805, 469)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "14.2px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 3.8:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": false,
+        "detail": "0.173",
+        "critical": false
+      },
+      {
+        "check": "text clear of the face",
+        "pass": true,
+        "detail": "head box (240, 170, 700, 658)",
+        "critical": true
+      },
+      {
+        "check": "named figure is a preset or traits object (likeness rules)",
+        "pass": true,
+        "detail": "{'name': 'Maya', 'hair': 'bun', 'hairColor': '#1B1B1B', 'hairShade': '#3A2A2A', 'brows': '#1B1B1B', 'skin': '#E0A878', 'iris': '#3A2418', 'clothes': 'tee', 'jacket': '#7357C9', 'shirt': '#7357C9', 'glasses': 'round', 'age': 0}",
+        "critical": true
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 73",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest if-ai-replaces-workers-who-pays-the-taxes (distance 0.36)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (answered in the film: Canada has the whole list but only wins if it builds); Maya is fictional; no number shown",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.627,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "if-ai-replaces-workers-who-pays-the-taxes"
+  },
+  "backend": "svg-composite (Remotion FaceThumb + CartoonStage bust, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T21:39:16Z"
+}

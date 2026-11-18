@@ -254,12 +254,12 @@ board("p20_draw", "c3_draw", "Why the cold is worth money", "Let me draw why the
     S(rect(560, 420, 220, 320), "ink", C("Here's a server"), width=6, kind="box", label=lbl("A SERVER", 670, 400, 32, "ink")),
     S(arrow((470, 580), (550, 580)), "accent", C("Power goes in"), width=6, kind="arrow", label=lbl("POWER IN", 500, 540, 24, "accent")),
     S("M 640 410 q 20 -30 0 -60 q -20 -30 0 -60 M 700 410 q 20 -30 0 -60 q -20 -30 0 -60", "risk", C("comes out as heat"), width=7, label=lbl("HEAT", 670, 270, 30, "risk")),
-    S(rect(880, 380, 400, 170), "risk", C("you pay twice"), width=6, kind="box", label=lbl("HOT PLACE: PAY TWICE", 1080, 475, 32, "risk")),
-    S(rect(880, 600, 400, 170), "accent2", C("In a cold place"), width=6, kind="box", label=lbl("COLD PLACE: AIR DOES IT", 1080, 695, 30, "accent2")),
-    S(arrow((1290, 690), (1480, 690), -0.2), "accent2", C("carries much of the heat off"), width=6, kind="arrow", label=lbl("COLD AIR", 1390, 650, 24, "accent2")),
+    S(rect(880, 400, 400, 120), "risk", C("you pay twice"), width=5, kind="bar", fill="risk", fillOpacity=0.35, label=lbl("HOT PLACE: PAY TWICE", 1080, 380, 30, "risk")),
+    S(rect(880, 620, 230, 120), "accent2", C("In a cold place"), width=5, kind="bar", fill="accent2", fillOpacity=0.35, label=lbl("COLD PLACE: SMALLER BILL", 1000, 600, 28, "accent2")),
+    S(arrow((1120, 680), (1480, 680), -0.2), "accent2", C("carries much of the heat off"), width=6, kind="arrow", label=lbl("COLD AIR", 1300, 650, 24, "accent2")),
     S(rect(1500, 560, 260, 220), "accent3", C("a neighbor wants that heat"), width=6, kind="box", label=lbl("NEIGHBOR GETS HEAT", 1630, 680, 24, "accent3")),
     S("M 600 880 L 1700 880", "ink", C("Same chip, smaller bill"), width=6, label=lbl("SAME CHIP, SMALLER BILL", 1150, 860, 40, "ink")),
-    S(dot(1150, 980), "muted", C("Let me draw why the cold is worth money"), width=1, label=lbl("MECHANISM · ILLUSTRATIVE (NOT TO SCALE)", 1150, 980, 16, "muted")),
+    S(dot(1150, 980), "muted", C("Let me draw why the cold is worth money"), width=1, label=lbl("MECHANISM · ILLUSTRATIVE BARS (NOT TO SCALE)", 1150, 980, 16, "muted")),
 ], [{"kind": "point", "at": C("you pay twice", 0.3), "dur": 1.4, "target": [1080, 465]}, {"kind": "point", "at": C("a neighbor wants that heat", 0.3), "dur": 1.4, "target": [1630, 670]},
     {"kind": "react", "at": C("Same chip, smaller bill", 0.3)}])
 stage("s21_whirr", "c3_whirr", {
