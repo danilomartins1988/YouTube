@@ -224,7 +224,7 @@ stage("s15_fanuc", "c3_fanuc", {
     "cam": cam((0, 1000, 520, 0.9), (C("Look at where the robots go"), 2100, 520, 1.0, 1.4), (C("of FANUC's sales"), 2200, 500, 0.9, 1.4),
                (C("Its robot sales in China"), 2100, 540, 1.05, 1.2), (C("Japan builds the robots"), 1500, 520, 0.85, 1.4)), "drift": 2,
     "items": [words("WHERE DO THE ROBOTS GO?", 2100, 150, C("Look at where the robots go"), size=52, until=C("of FANUC's sales")),
-              words("≈ 9 IN 10 YEN FROM ABROAD", 2200, 150, C("of FANUC's sales"), size=58, color=BLUE, until=C("Its robot sales in China")),
+              words("≈ 9 IN 10 SALES DOLLARS FROM ABROAD", 2200, 150, C("of FANUC's sales"), size=58, color=BLUE, until=C("Its robot sales in China")),
               sign("CHINA ↑", 2050, 250, C("Its robot sales in China"), color="#C8E6C9", size=34),
               sign("JAPAN ↓", 2620, 330, C("Its robot sales at home"), color="#FFCDD2", size=34),
               words("JAPAN BUILDS. THE WORLD BUYS.", 1500, 150, C("Japan builds the robots"), size=56),
@@ -315,18 +315,18 @@ board("p23_draw", "c4_draw", "Who gets paid for Kobo? (our framework)", "Let me 
     {"kind": "react", "at": C("Japan owns the arm")}], enter_left=True)
 
 # ====================================================================== CHAPTER 5: the catch
-bumper("s24_b5", "c5_card", "CHAPTER FIVE", "THE CATCH", "A weak yen, slow software, a mountain of debt.", PURPLE)
+bumper("s24_b5", "c5_card", "CHAPTER FIVE", "THE CATCH", "A weak currency, slow software, a mountain of debt.", PURPLE)
 stage("s25_yen", "c5_yen", {
-    **W1("jyen", shrink=[[0, 0.0], [C("it has lost"), 0.0], [C("of its value"), 1.0]], outAt=C("cheap for foreign buyers"), inAt=C("every imported chip")),
-    "cam": cam((0, 960, 520, 0.95), (C("it has lost"), 760, 480, 1.08, 1.4), (C("cheap for foreign buyers"), 1300, 600, 0.95, 1.4), (C("every imported chip"), 900, 620, 0.95, 1.4)), "drift": 2,
-    "items": [words("YEN ≈ −29% VS THE DOLLAR (2020 → 2025)", 960, 120, C("of its value"), size=46, color=RED, until=C("cheap for foreign buyers")),
+    **W1("jyen", shrink=[[0, 0.0], [C("money has lost"), 0.0], [C("of its value"), 1.0]], outAt=C("cheap for foreign buyers"), inAt=C("every imported chip")),
+    "cam": cam((0, 960, 520, 0.95), (C("money has lost"), 760, 480, 1.08, 1.4), (C("cheap for foreign buyers"), 1300, 600, 0.95, 1.4), (C("every imported chip"), 900, 620, 0.95, 1.4)), "drift": 2,
+    "items": [words("JAPAN'S CURRENCY ≈ −29% VS THE DOLLAR (2020 → 2025)", 960, 120, C("of its value"), size=46, color=RED, until=C("cheap for foreign buyers")),
               words("GOOD FOR FANUC", 1300, 120, C("which helps FANUC"), size=56, color=GREEN, until=C("every imported chip")),
               words("PRICIER FOR HIRO", 900, 120, C("more expensive for Hiro"), size=56, color=RED),
               HIRO(1750, C("every imported chip"), face="worry", pose="shrug", scale=1.0, takes=[C("more expensive for Hiro")]),
               tag((0, "OUR CALC · FED G.5A ANNUAL AVERAGES"))]},
     sources=["fed_g5a"])
 stage("s26_software", "c5_software", {
-    **W1("jscale", tilt=[[0, 0.0], [C("Second, software"), 0.0], [C("hasn't kept up"), 0.35]], weights=[{"label": "WEAK YEN", "at": 0.2, "color": "#8D6E63"}, {"label": "SLOW SOFTWARE", "at": C("Second, software"), "color": BLUE}]),
+    **W1("jscale", tilt=[[0, 0.0], [C("Second, software"), 0.0], [C("hasn't kept up"), 0.35]], weights=[{"label": "WEAK CURRENCY", "at": 0.2, "color": "#8D6E63"}, {"label": "SLOW SOFTWARE", "at": C("Second, software"), "color": BLUE}]),
     "cam": cam((0, 960, 540, 0.95), (C("Measured by output"), 1300, 520, 1.05, 1.4), (C("And remember FANUC's"), 960, 540, 0.92, 1.4)), "drift": 1,
     "items": [words("OUTPUT PER HOUR: 28TH OF 38", 960, 120, C("the bottom third"), size=52, color=RED, until=C("And remember FANUC's")),
               sign("FANUC ROBOT SALES IN JAPAN: DOWN", 960, 210, C("They fell"), color="#FFCDD2", size=28),
@@ -335,7 +335,7 @@ stage("s26_software", "c5_software", {
     sources=["jpc_prod25", "fanuc_fy25"])
 stage("s27_debt", "c5_debt", {
     **W1("jscale", tilt=[[0, 0.35], [C("owes about"), 0.35], [C("the highest of any"), 0.95], [C("the net picture"), 0.65], [C("But as more people retire"), 0.8]],
-         weights=[{"label": "WEAK YEN", "at": 0.0, "color": "#8D6E63"}, {"label": "SLOW SOFTWARE", "at": 0.0, "color": BLUE}, {"label": "DEBT", "at": C("owes about"), "color": RED, "big": True}]),
+         weights=[{"label": "WEAK CURRENCY", "at": 0.0, "color": "#8D6E63"}, {"label": "SLOW SOFTWARE", "at": 0.0, "color": BLUE}, {"label": "DEBT", "at": C("owes about"), "color": RED, "big": True}]),
     "cam": cam((0, 960, 540, 0.95), (C("owes about"), 1350, 560, 1.05, 1.2), (C("The government also owns"), 960, 540, 0.95, 1.4), (C("But as more people retire"), 1250, 560, 1.02, 1.4)), "drift": 1,
     "items": [words("GROSS DEBT ≈ 2× THE ECONOMY", 960, 120, C("owes about"), size=54, color=RED, until=C("The government also owns")),
               sign("NET OF ITS ASSETS: LOWER", 960, 120, C("the net picture"), color="#C8E6C9", size=32, until=C("But as more people retire")),
@@ -374,7 +374,7 @@ board("p31_draw", "c6_draw", "Per citizen vs per worker (illustrative shape of t
 ], [{"kind": "point", "at": C("the line climbs", 0.4), "dur": 1.6, "target": [1380, 420]}, {"kind": "react", "at": C("It was fewer of them")}], enter_left=False, sources=["fv_wealth"])
 stage("s32_verdict", "c6_verdict", {
     **W1("jscale", tilt=[[0, 0.6], [C("would be built on output"), 0.6], [C("keep getting richer"), -0.2], [C("But only if"), 0.1]],
-         weights=[{"label": "WEAK YEN", "at": 0.0, "color": "#8D6E63"}, {"label": "SLOW SOFTWARE", "at": 0.0, "color": BLUE}, {"label": "DEBT", "at": 0.0, "color": RED, "big": True}],
+         weights=[{"label": "WEAK CURRENCY", "at": 0.0, "color": "#8D6E63"}, {"label": "SLOW SOFTWARE", "at": 0.0, "color": BLUE}, {"label": "DEBT", "at": 0.0, "color": RED, "big": True}],
          leftText="OUTPUT PER HAND"),
     "cam": cam((0, 960, 520, 0.92), (C("That boom was built"), 960, 540, 1.0, 1.2), (C("keep getting richer"), 600, 560, 1.05, 1.4), (C("But only if"), 960, 520, 0.9, 1.4)), "drift": 1,
     "items": [words("NOT A NEW BUBBLE", 960, 120, C("Not the way it was"), size=60, until=C("would be built on output")),

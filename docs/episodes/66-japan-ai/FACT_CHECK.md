@@ -16,13 +16,13 @@ ten" and "nine of every ten" and one false "and a").
 | 7 | "hundreds of thousands more caregivers" (screen +≈570,000 by 2040) | 2.72M needed FY2040 vs 2.15M FY2022 | MHLW Jul 2024 | estimate |
 | 8 | "nineteen sixty-nine", first industrial robot made in Japan, American license | 1968 Unimation license, 1969 production | Kawasaki history | verified (company) |
 | 9 | "predominant robot manufacturing country" | IFR president's quote | IFR | verified |
-| 10 | "nearly nine of every ten yen of FANUC's sales came from customers outside Japan"; China robot sales up, Japan down | ¥747.0bn / ¥857.8bn = 87.1%; robot division ¥378.6bn ≈ $2.53bn | FANUC FY to Mar 2026 | our calc / verified |
+| 10 | "nearly nine of every ten dollars of FANUC's sales came from customers outside Japan"; China robot sales up, Japan down | ¥747.0bn / ¥857.8bn = 87.1%; robot division ¥378.6bn ≈ $2.53bn | FANUC FY to Mar 2026 | our calc / verified |
 | 11 | "South Korea has nearly three times as many" robots per factory worker; China and Germany ahead | 1,220 vs 446 per 10,000 (2.7×); China 567, Germany 449 | IFR WR 2025 | verified / our calc |
 | 12 | "about a thousand drinks a day" | ≈1,000 beverages/day per robot | Telexistence | company claim |
 | 13 | ASIMO "retired without ever getting a real job" | shows ended Mar 2022; never commercialized | Japan Times | verified (press) |
 | 14 | humanoid "in stores by twenty twenty-nine" | Astra target 2029 | Telexistence / Seven-Eleven Japan | plan |
 | 15 | nursing homes with robots: "more staff, not fewer", more "human touch" | NBER w33116 abstract | Lee, Iizuka & Eggleston | research finding |
-| 16 | "lost more than a quarter of its value against the dollar" since the pandemic | 106.78 (2020) → 149.57 (2025) ¥/$; −28.6% | Fed G.5A | our calc |
+| 16 | "Japan's money has lost more than a quarter of its value against the dollar" since the pandemic | 106.78 (2020) → 149.57 (2025) ¥/$; −28.6% | Fed G.5A | our calc |
 | 17 | "the bottom third of the rich-country club" (screen 28th of 38) | $60.1/hour PPP, 28th of 38 OECD (2024) | Japan Productivity Center | verified |
 | 18 | FANUC robot sales at home "fell" | "sales in Japan decreased" | FANUC | verified |
 | 19 | government owes "about twice the size of its entire economy", highest of any advanced country; large assets | gross ≈207%; net 89–186% | IMF F&D Sept 2026 | verified |

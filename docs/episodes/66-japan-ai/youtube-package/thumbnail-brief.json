@@ -1,0 +1,503 @@
+{
+  "title": "Will AI Make Japan Rich Again?",
+  "docs_dir": "docs/episodes/66-japan-ai",
+  "video": "output/japanai_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "planned",
+  "default": "F",
+  "analysis": {
+    "mystery": "Can the oldest big country turn its shortage of workers into an advantage with robots and AI?",
+    "surprising_fact": "Japan makes about 38% of the world's industrial robots (IFR) yet sells most of them abroad",
+    "subject": "an elderly workshop owner next to a help-wanted sign",
+    "tone": "trade",
+    "metaphor": "the help-wanted sign that a robot answers",
+    "public_figure": null
+  },
+  "slug": "will-ai-make-japan-rich-again",
+  "concepts": [
+    {
+      "id": "F",
+      "angle": "face (original character HIRO, the film's fictional workshop owner, shocked; a HELP WANTED tag)",
+      "archetype": "face",
+      "text": [
+        "CAN ROBOTS",
+        "SAVE JAPAN?"
+      ],
+      "claim_basis": "a question (answered in the film: robots can raise output per worker if small firms adopt them); Hiro is fictional",
+      "scene": {
+        "bg": [
+          "#FF8A3D",
+          "#2A1240"
+        ],
+        "rays": "#FFB070",
+        "bust": {
+          "who": {
+            "name": "Hiro",
+            "hair": "short",
+            "hairColor": "#C9CED6",
+            "hairShade": "#8E959F",
+            "brows": "#8E959F",
+            "skin": "#F3D7BD",
+            "iris": "#3A2618",
+            "clothes": "shirt",
+            "jacket": "#2E3F7F",
+            "shirt": "#E8ECF2",
+            "glasses": "round",
+            "age": 0.7
+          },
+          "expr": "shock",
+          "x": 470,
+          "s": 0.92
+        },
+        "prop": {
+          "kind": "tag",
+          "text": "HELP WANTED",
+          "x": 1390,
+          "y": 790,
+          "s": 0.66,
+          "rot": -8
+        }
+      },
+      "layout": [
+        {
+          "text": "CAN ROBOTS",
+          "x": 1367.8,
+          "y": 188.1,
+          "size": 147.6,
+          "width": 944.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3
+        },
+        {
+          "text": "SAVE JAPAN?",
+          "x": 1367.8,
+          "y": 356.8,
+          "size": 124.2,
+          "width": 874.4,
+          "anchor": "middle",
+          "color": "#FFFFFF",
+          "rotate": -3,
+          "box": "#FF1E1E"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.70 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(896, 73, 1840, 197), (931, 260, 1805, 364)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.3px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 3.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": false,
+            "detail": "0.177",
+            "critical": false
+          },
+          {
+            "check": "text clear of the face",
+            "pass": true,
+            "detail": "head box (240, 170, 700, 658)",
+            "critical": true
+          },
+          {
+            "check": "named figure is a preset or traits object (likeness rules)",
+            "pass": true,
+            "detail": "{'name': 'Hiro', 'hair': 'short', 'hairColor': '#C9CED6', 'hairShade': '#8E959F', 'brows': '#8E959F', 'skin': '#F3D7BD', 'iris': '#3A2618', 'clothes': 'shirt', 'jacket': '#2E3F7F', 'shirt': '#E8ECF2', 'glasses': 'round', 'age': 0.7}",
+            "critical": true
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 66",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest how-costco-makes-billions-selling-almost-nothing (distance 0.32)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question (answered in the film: robots can raise output per worker if small firms adopt them); Hiro is fictional",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.548,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "how-costco-makes-billions-selling-almost-nothing"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "the robot superpower",
+      "archetype": "classic",
+      "text_side": "top",
+      "accent_line": 1,
+      "text": [
+        "JAPAN'S",
+        "ROBOT BET"
+      ],
+      "claim_basis": "a question of whether robots can offset the shrinking workforce (no number shown)",
+      "scene": {
+        "palette": {
+          "sky0": "#10203F",
+          "sky1": "#24508C",
+          "haze": "#FF9A4A",
+          "key": "#FFF3E0",
+          "accent": "#FFB23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "megafactory",
+          "x": 960,
+          "y": 620,
+          "s": 0.9
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFE0B8"
+        },
+        "vignette": 0.5,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "JAPAN'S",
+          "x": 960.0,
+          "y": 280.1,
+          "size": 158.7,
+          "width": 710.8,
+          "anchor": "middle",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "ROBOT BET",
+          "x": 960.0,
+          "y": 445.1,
+          "size": 158.7,
+          "width": 913.8,
+          "anchor": "middle",
+          "color": "#FFB23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.57 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(605, 156, 1315, 290), (503, 321, 1417, 455)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": false,
+            "detail": "worst 2.2:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.148",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 42",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hamburger-that-became-a-symbol-of-the-cold-wars-end (distance 0.40)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a question of whether robots can offset the shrinking workforce (no number shown)",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.535,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hamburger-that-became-a-symbol-of-the-cold-wars-end"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "out of workers (consequence)",
+      "archetype": "classic",
+      "text_side": "left",
+      "accent_line": 1,
+      "text": [
+        "JAPAN'S",
+        "MISSING WORKERS"
+      ],
+      "claim_basis": "working-age population down about 13.5 million since 1995 (IPSS / Statistics Bureau, FACT_CHECK.md); no number shown",
+      "scene": {
+        "palette": {
+          "sky0": "#1B1030",
+          "sky1": "#4A2040",
+          "haze": "#FF7A59",
+          "key": "#FFF3E0",
+          "accent": "#FFD23F",
+          "ink": "#FFFFFF"
+        },
+        "backdrop": "void",
+        "subject": {
+          "kind": "parcels",
+          "x": 1300,
+          "y": 640,
+          "s": 0.85
+        },
+        "particles": {
+          "n": 40,
+          "region": [
+            0,
+            0,
+            1920,
+            1080
+          ],
+          "size": 3,
+          "color": "#FFD8C8"
+        },
+        "vignette": 0.55,
+        "brand": "none"
+      },
+      "layout": [
+        {
+          "text": "JAPAN'S",
+          "x": 90,
+          "y": 526.7,
+          "size": 83.3,
+          "width": 373.3,
+          "anchor": "start",
+          "color": "#FFFFFF"
+        },
+        {
+          "text": "MISSING WORKERS",
+          "x": 90,
+          "y": 613.3,
+          "size": 83.3,
+          "width": 800,
+          "anchor": "start",
+          "color": "#FFD23F"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.52 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(90, 462, 463, 532), (90, 548, 890, 618)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": false,
+            "detail": "6.9px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 5.8:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.060",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 38",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-ai-could-make-your-electricity-bill-explode (distance 0.26)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "working-age population down about 13.5 million since 1995 (IPSS / Statistics Bureau, FACT_CHECK.md); no number shown",
+            "critical": true
+          }
+        ],
+        "critical_fail": true,
+        "design_score": 0.614,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-ai-could-make-your-electricity-bill-explode"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T16:12:05Z",
+  "master": "output/will-ai-make-japan-rich-again/thumbnails/master_F.png"
+}

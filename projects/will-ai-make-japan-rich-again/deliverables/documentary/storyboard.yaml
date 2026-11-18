@@ -1422,7 +1422,7 @@ scenes:
       until:
         cue: of FANUC's sales
     - kind: toonwords
-      text: ≈ 9 IN 10 YEN FROM ABROAD
+      text: ≈ 9 IN 10 SALES DOLLARS FROM ABROAD
       x: 2200
       y: 200
       at:
@@ -2496,7 +2496,7 @@ scenes:
       x1: 4600
       act: CHAPTER FIVE
       title: THE CATCH
-      caption: A weak yen, slow software, a mountain of debt.
+      caption: A weak currency, slow software, a mountain of debt.
       color: '#7357C9'
     worldW: 2400
     cam:
@@ -2541,7 +2541,7 @@ scenes:
       shrink:
       - - 0
         - 0.0
-      - - cue: it has lost
+      - - cue: money has lost
         - 0.0
       - - cue: of its value
         - 1.0
@@ -2556,7 +2556,7 @@ scenes:
       y: 520
       zoom: 0.95
     - at:
-        cue: it has lost
+        cue: money has lost
       x: 760
       y: 480
       zoom: 1.08
@@ -2576,7 +2576,7 @@ scenes:
     drift: 2
     items:
     - kind: toonwords
-      text: YEN ≈ −29% VS THE DOLLAR (2020 → 2025)
+      text: JAPAN'S CURRENCY ≈ −29% VS THE DOLLAR (2020 → 2025)
       x: 960
       y: 200
       at:
@@ -2647,7 +2647,7 @@ scenes:
       - - cue: hasn't kept up
         - 0.35
       weights:
-      - label: WEAK YEN
+      - label: WEAK CURRENCY
         at: 0.2
         color: '#8D6E63'
       - label: SLOW SOFTWARE
@@ -2741,7 +2741,7 @@ scenes:
       - - cue: But as more people retire
         - 0.8
       weights:
-      - label: WEAK YEN
+      - label: WEAK CURRENCY
         at: 0.0
         color: '#8D6E63'
       - label: SLOW SOFTWARE
@@ -3170,7 +3170,7 @@ scenes:
       - - cue: But only if
         - 0.1
       weights:
-      - label: WEAK YEN
+      - label: WEAK CURRENCY
         at: 0.0
         color: '#8D6E63'
       - label: SLOW SOFTWARE

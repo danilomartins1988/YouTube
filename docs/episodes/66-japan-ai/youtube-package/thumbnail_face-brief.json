@@ -1,0 +1,175 @@
+{
+  "id": "F",
+  "angle": "face (original character HIRO, the film's fictional workshop owner, shocked; a HELP WANTED tag)",
+  "archetype": "face",
+  "text": [
+    "CAN ROBOTS",
+    "SAVE JAPAN?"
+  ],
+  "claim_basis": "a question (answered in the film: robots can raise output per worker if small firms adopt them); Hiro is fictional",
+  "scene": {
+    "bg": [
+      "#FF8A3D",
+      "#2A1240"
+    ],
+    "rays": "#FFB070",
+    "bust": {
+      "who": {
+        "name": "Hiro",
+        "hair": "short",
+        "hairColor": "#C9CED6",
+        "hairShade": "#8E959F",
+        "brows": "#8E959F",
+        "skin": "#F3D7BD",
+        "iris": "#3A2618",
+        "clothes": "shirt",
+        "jacket": "#2E3F7F",
+        "shirt": "#E8ECF2",
+        "glasses": "round",
+        "age": 0.7
+      },
+      "expr": "shock",
+      "x": 470,
+      "s": 0.92
+    },
+    "prop": {
+      "kind": "tag",
+      "text": "HELP WANTED",
+      "x": 1390,
+      "y": 790,
+      "s": 0.66,
+      "rot": -8
+    }
+  },
+  "layout": [
+    {
+      "text": "CAN ROBOTS",
+      "x": 1367.8,
+      "y": 188.1,
+      "size": 147.6,
+      "width": 944.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3
+    },
+    {
+      "text": "SAVE JAPAN?",
+      "x": 1367.8,
+      "y": 356.8,
+      "size": 124.2,
+      "width": 874.4,
+      "anchor": "middle",
+      "color": "#FFFFFF",
+      "rotate": -3,
+      "box": "#FF1E1E"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.70 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(896, 73, 1840, 197), (931, 260, 1805, 364)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "10.3px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 3.8:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": false,
+        "detail": "0.177",
+        "critical": false
+      },
+      {
+        "check": "text clear of the face",
+        "pass": true,
+        "detail": "head box (240, 170, 700, 658)",
+        "critical": true
+      },
+      {
+        "check": "named figure is a preset or traits object (likeness rules)",
+        "pass": true,
+        "detail": "{'name': 'Hiro', 'hair': 'short', 'hairColor': '#C9CED6', 'hairShade': '#8E959F', 'brows': '#8E959F', 'skin': '#F3D7BD', 'iris': '#3A2618', 'clothes': 'shirt', 'jacket': '#2E3F7F', 'shirt': '#E8ECF2', 'glasses': 'round', 'age': 0.7}",
+        "critical": true
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 66",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest how-costco-makes-billions-selling-almost-nothing (distance 0.32)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (answered in the film: robots can raise output per worker if small firms adopt them); Hiro is fictional",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.548,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)",
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "how-costco-makes-billions-selling-almost-nothing"
+  },
+  "backend": "svg-composite (Remotion FaceThumb + CartoonStage bust, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-18T16:12:05Z"
+}
