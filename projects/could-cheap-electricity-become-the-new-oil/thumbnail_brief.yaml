@@ -63,3 +63,27 @@ concepts:
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#D8F0FF'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): an oil barrel charged with lightning in front of a live pylon'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [THE NEW, 'OIL?']
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'a question (the film: cheap power as the new strategic resource); no number'
+  scene:
+    backdrop: {kind: rays, c0: '#3FB4FF', c1: '#16307A', c2: '#040616', ray: '#BFE8FF'}
+    light: {x: 1450, y: 520, r: 700, color: '#5FC8FF'}
+    support:
+    - {kind: pylon, x: 1600, y: 560, s: 0.95}
+    hero: {kind: barrel, x: 1380, y: 640, s: 0.8}
+    bolts:
+    - {x1: 1600, y1: -40, x2: 1440, y2: 420, color: '#7FE0FF', w: 8, seed: 5}
+    - {x1: 1900, y1: 200, x2: 1560, y2: 520, color: '#FFD23F', w: 6, seed: 11}
+    sparks:
+    - {x: 1440, y: 420, n: 30, len: 180, color: '#FFE27A', spread: 360}
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#BFE8FF'

@@ -13,6 +13,8 @@ Pipeline: ... RENDER -> VIDEO QC -> THUMBNAIL GENERATION -> THUMBNAIL QC -> YOUT
   description.txt, tags.txt, chapters.txt, video.txt, PACKAGE_STATUS.json. 3840x2160 masters stay in
   output/<slug>/thumbnails/ (not committed). An existing different thumbnail.png is moved to versions/, never deleted.
 - Idempotent: a concept is re-rendered only when its spec (or the renderer source) changed, or with force=True.
+- Owner model (2026-11-19, docs/thumbnails/OWNER_STYLE.md): archetype `poster` (remotion/src/thumbnails/PosterThumb.tsx)
+  is the default concept of new briefs; an owner-made youtube-package/thumbnail_owner.jpg always wins as the default.
 """
 from __future__ import annotations
 
@@ -38,6 +40,9 @@ GLYPH = 0.64                                  # average advance of Inter Display
 COMPONENT = REPO_ROOT / "remotion" / "src" / "thumbnails" / "CinematicThumb.tsx"
 FACE_COMPONENTS = [REPO_ROOT / "remotion" / "src" / "thumbnails" / "FaceThumb.tsx",
                    REPO_ROOT / "remotion" / "src" / "animation-engine" / "CartoonStage" / "bust.tsx"]
+POSTER_COMPONENTS = [REPO_ROOT / "remotion" / "src" / "thumbnails" / "PosterThumb.tsx", COMPONENT]
+POSTER_FONT = Path("/usr/share/fonts/opentype/inter/InterDisplay-BlackItalic.otf")
+BANNERS = {"red": ("#E3201B", "#FFFFFF"), "yellow": ("#FFD400", "#05070B")}   # banner colour, text colour
 LOG = REPO_ROOT / "output" / "thumbnails" / "log.jsonl"
 
 
@@ -148,6 +153,53 @@ def face_props(c: dict, texts: list[dict], hide_text: bool = False) -> dict:
             "hideText": hide_text, "brand": sc.get("brand", "none")}
 
 
+# ------------------------------------------------------------------------------------------------ poster archetype
+# Owner model 2026-11-19: cinematic backdrop, one big glowing hero on the right, 2-3 huge Black Italic words on the left,
+# one line on a rough red/yellow brush banner (remotion/src/thumbnails/PosterThumb.tsx).
+_EM: dict[str, float] = {}
+
+
+def _em(text: str) -> float:
+    """Advance width of `text` in em, measured with the real Inter Display Black Italic font."""
+    if text not in _EM:
+        try:
+            from PIL import ImageFont
+            _EM[text] = ImageFont.truetype(str(POSTER_FONT), 200).getlength(text) / 200
+        except OSError:
+            _EM[text] = len(text) * 0.66
+    return _EM[text]
+
+
+def layout_poster(lines: list[str], accent_line: int | None = None, banner: str = "red", zone: tuple[float, float] = (70, 1120),
+                  cy: float = 520, rotate: float = -4, cap: float = 270) -> list[dict]:
+    """1-3 lines in the left zone; the accent line (default: the last) sits on a brush banner. Sizes fill the zone
+    width; a short line may grow up to 1.3x the smallest. Widths are exact (textLength) so QC knows every box."""
+    x0, x1 = zone
+    zw = x1 - x0
+    acc = (len(lines) - 1) if accent_line is None else accent_line
+    col, ink = BANNERS.get(banner, BANNERS["red"])
+    sizes = [min(cap, zw / (_em(l) + (0.5 if i == acc else 0.04))) for i, l in enumerate(lines)]
+    lo = min(sizes)
+    sizes = [min(v, lo * 1.3) for v in sizes]
+    pitch = [v * (1.22 if i == acc else 1.0) for i, v in enumerate(sizes)]
+    y = cy - sum(pitch) / 2
+    out = []
+    for i, (l, v) in enumerate(zip(lines, sizes)):
+        boxed = i == acc
+        y += v * (0.90 if boxed else 0.80)
+        t = {"text": l, "x": round(x0 + (v * 0.22 if boxed else 0), 1), "y": round(y, 1), "size": round(v, 1), "width": round(_em(l) * v, 1),
+             "anchor": "start", "color": ink if boxed else "#FFFFFF", "outline": "#05070B", "rotate": rotate}
+        if boxed:
+            t.update({"banner": col, "box": col})
+        out.append(t)
+        y += v * (0.32 if boxed else 0.20)
+    return out
+
+
+def is_poster(c: dict) -> bool:
+    return c.get("archetype") == "poster"
+
+
 def text_boxes(t: list[dict]) -> list[tuple[float, float, float, float]]:
     boxes = []
     for x in t:
@@ -250,7 +302,7 @@ def qc(concept: dict, png: Path, notext: Path, texts: list[dict], others: dict[s
         if region.size == 0:
             continue
         fill = _lum(_hex(t.get("box") or t["color"])) if not t.get("box") else _lum(_hex(t["color"]))
-        base = _lum(_hex(t["box"])) if t.get("box") else float(np.percentile(region, 75))
+        base = _lum(_hex(t["box"])) if t.get("box") else _lum(_hex(t["outline"])) if t.get("outline") else float(np.percentile(region, 75))
         worst = min(worst, contrast(fill, base))
     add("text contrast >= 3:1 against its background", worst >= 3.0 or not texts, f"worst {worst:.1f}:1 (dark outline adds more)")
     # clutter: edge density at thumbnail scale
@@ -269,6 +321,19 @@ def qc(concept: dict, png: Path, notext: Path, texts: list[dict], others: dict[s
         add("named figure is a preset or traits object (likeness rules)", isinstance(concept["scene"]["bust"].get("who"), dict)
             or concept["scene"]["bust"].get("who") in FACE_PRESETS or concept["scene"]["bust"].get("who") == "silhouette", str(concept["scene"]["bust"].get("who")))
         review.append("Likeness is respectful: signature traits only, no mocked features, nothing implying a crime (human)")
+    elif is_poster(concept):
+        hero = concept["scene"]["hero"]
+        sx, sy = int(min(1900, max(0, hero["x"])) / 10), int(min(1070, max(0, hero["y"])) / 10)
+        phone = min((t["size"] for t in texts), default=999) * 320 / W * 0.72
+        add("poster: legible at 320x180 (cap height >= 10 px)", phone >= 10 or not texts, f"{phone:.1f}px caps at 320 px wide")
+        right = max((b[2] for b in boxes), default=0)
+        add("poster: words stay in the left ~60% (hero owns the right)", right <= W * 0.62, f"text right edge {right:.0f}px", critical=False)
+        hsv = np.asarray(Image.open(notext).convert("HSV").resize((192, 108)), dtype=float)
+        lit = hsv[..., 2] > 60
+        sat = float((hsv[..., 1][lit] / 255).mean()) if lit.any() else 0.0
+        add("poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)", sat >= 0.45, f"{sat:.2f}", critical=False)
+        rhs = np.asarray(ImageOps.grayscale(Image.open(notext)).resize((192, 108)), dtype=float)
+        add("poster: the hero side is the brightest (light behind the hero)", rhs[:, 96:].mean() >= rhs[:, :96].mean(), f"right {rhs[:, 96:].mean():.0f} vs left {rhs[:, :96].mean():.0f}", critical=False)
     else:
         sx, sy = int(concept["scene"]["subject"]["x"] / 10), int(concept["scene"]["subject"]["y"] / 10)
     patch = full[max(0, sy - 18):sy + 18, max(0, sx - 28):sx + 28]
@@ -328,9 +393,9 @@ def package_texts(brief: dict) -> dict:
 
 
 # ------------------------------------------------------------------------------------------------ run
-def _hash(obj, face: bool = False) -> str:
+def _hash(obj, face: bool = False, comps: list[Path] | None = None) -> str:
     h = hashlib.sha256(json.dumps(obj, sort_keys=True).encode())
-    for f in (FACE_COMPONENTS if face else [COMPONENT]):
+    for f in (comps or (FACE_COMPONENTS if face else [COMPONENT])):
         h.update(f.read_bytes())
     return h.hexdigest()[:16]
 
@@ -364,6 +429,9 @@ def concept_props(b: dict, c: dict, hide_text: bool = False) -> tuple[dict, list
     elif arch == "face":
         texts = layout_face(c["text"], sc, {**cols, "ink": pal.get("ink", "#FFFFFF") if pal else "#FFFFFF"}, c.get("accent_line"))
         return face_props(c, texts, hide_text), texts
+    elif arch == "poster":
+        texts = layout_poster(c["text"], c.get("accent_line"), c.get("banner", "red"), cy=c.get("text_y", 520), rotate=c.get("rotate", -4))
+        return {**sc, "text": texts, "hideText": hide_text}, texts
     else:
         texts = layout(c["text"], c.get("text_side", "left"), c.get("accent_line"), cols, c.get("text_style", "plain"))
     props = {**sc, "text": texts, "hideText": hide_text, "archetype": arch}
@@ -377,8 +445,21 @@ def is_face(c: dict) -> bool:
 
 
 def face_file(c: dict) -> str:
-    """package file of a face concept: thumbnail_face.png (or thumbnail_face-<id>.png when a brief has several)."""
-    return c.get("file") or "thumbnail_face.png"
+    """package file of a face/poster concept: thumbnail_face.png / thumbnail_poster.png (or the concept's `file`)."""
+    return c.get("file") or ("thumbnail_poster.png" if is_poster(c) else "thumbnail_face.png")
+
+
+def named(c: dict) -> bool:
+    """face and poster concepts are always also written to their own package file"""
+    return is_face(c) or is_poster(c)
+
+
+def component(c: dict) -> tuple[str, list[Path] | None]:
+    if is_face(c):
+        return "FaceThumb", FACE_COMPONENTS
+    if is_poster(c):
+        return "PosterThumb", POSTER_COMPONENTS
+    return "CinematicThumb", None
 
 
 def _write_face(pkg: Path, r: dict) -> Path:
@@ -390,7 +471,7 @@ def _write_face(pkg: Path, r: dict) -> Path:
     sheet.paste(prev.resize((320, 180), Image.LANCZOS), (664, 90))      # phone size
     sheet.save(out.with_name(out.stem + "-preview.jpg"), quality=90)
     (out.with_name(out.stem + "-brief.json")).write_text(json.dumps({**r["concept"], "layout": r["texts"], "qc": r["qc"],
-        "backend": "svg-composite (Remotion FaceThumb + CartoonStage bust, original vector art)", "cost_usd": 0.0,
+        "backend": "svg-composite (Remotion " + ("PosterThumb" if is_poster(r["concept"]) else "FaceThumb + CartoonStage bust") + ", original vector art)", "cost_usd": 0.0,
         "generated": _dt.datetime.utcnow().isoformat(timespec="seconds") + "Z"}, indent=2, default=str), encoding="utf-8")
     return out
 
@@ -414,8 +495,8 @@ def generate(slug: str, others: dict[str, Path] | None = None, force: bool = Fal
         if only and c["id"] not in only:
             continue
         props, texts = concept_props(b, c)
-        comp = "FaceThumb" if is_face(c) else "CinematicThumb"
-        key = _hash({"props": props}, face=is_face(c))
+        comp, comps = component(c)
+        key = _hash({"props": props}, comps=comps)
         master, nt = work / f"master_{c['id']}.png", work / f"notext_{c['id']}.png"
         small = work / f"thumb_{c['id']}.png"
         stamp = work / f"{c['id']}.hash"
@@ -430,12 +511,12 @@ def generate(slug: str, others: dict[str, Path] | None = None, force: bool = Fal
     for cid, r in results.items():
         r["qc"] = qc(r["concept"], r["png"], r["notext"], r["texts"], oth)
     for cid, r in results.items():
-        if is_face(r["concept"]):
+        if named(r["concept"]):
             r["face_file"] = _write_face(pkg, r)
             _log(slug=slug, event="face", concept=cid, file=str(r["face_file"].relative_to(REPO_ROOT)), qc_fail=r["qc"]["critical_fail"])
     if only:
         for cid, r in results.items():
-            if not is_face(r["concept"]):
+            if not named(r["concept"]):
                 shutil.copyfile(r["png"], pkg / f"thumbnail-alt-{cid}.png")
         return {"slug": slug, "only": only, "results": results, "pkg": pkg,
                 "files": {cid: str(r.get("face_file") or pkg / f"thumbnail-alt-{cid}.png") for cid, r in results.items()},
@@ -449,10 +530,19 @@ def generate(slug: str, others: dict[str, Path] | None = None, force: bool = Fal
         default = max(faces, key=lambda k: results[k]["qc"]["design_score"])
     else:
         default = max(ok, key=lambda k: results[k]["qc"]["design_score"]) if ok else None
+    owner = pkg / "thumbnail_owner.jpg"
+    if owner.exists():                        # an owner-made thumbnail always takes precedence as the default
+        default = "owner"
     # write package (version an existing different thumbnail first)
     out = pkg / "thumbnail.png"
     if default:
-        newb = results[default]["png"].read_bytes()
+        if default == "owner":
+            import io
+            buf = io.BytesIO()
+            Image.open(owner).convert("RGB").resize((1280, 720), Image.LANCZOS).save(buf, "PNG", optimize=True)
+            newb = buf.getvalue()
+        else:
+            newb = results[default]["png"].read_bytes()
         if out.exists() and out.read_bytes() != newb:
             vdir = pkg / "versions"
             vdir.mkdir(exist_ok=True)
@@ -460,7 +550,7 @@ def generate(slug: str, others: dict[str, Path] | None = None, force: bool = Fal
             shutil.move(str(out), str(vdir / f"thumbnail-{ts}.png"))
             _log(slug=slug, event="versioned", file=f"versions/thumbnail-{ts}.png")
         out.write_bytes(newb)
-        prev = Image.open(results[default]["png"]).convert("RGB")
+        prev = Image.open(owner if default == "owner" else results[default]["png"]).convert("RGB")
         sheet = Image.new("RGB", (640 + 24 + 160, 360), "#0B0D12")
         sheet.paste(prev.resize((640, 360), Image.LANCZOS), (0, 0))
         sheet.paste(prev.resize((160, 90), Image.LANCZOS), (664, 135))   # what a phone shows
@@ -483,7 +573,7 @@ def generate(slug: str, others: dict[str, Path] | None = None, force: bool = Fal
     brief_json["concepts"] = [{**r["concept"], "layout": r["texts"], "qc": r["qc"]} for r in results.values()]
     brief_json.update({"default": default, "backend": "svg-composite (Remotion, original vector art)", "cost_usd": 0.0,
                        "generated": _dt.datetime.utcnow().isoformat(timespec="seconds") + "Z",
-                       "master": str(results[default]["master"].relative_to(REPO_ROOT)) if default else None})
+                       "master": str(results[default]["master"].relative_to(REPO_ROOT)) if default in results else None})
     (pkg / "thumbnail-brief.json").write_text(json.dumps(brief_json, indent=2, default=str), encoding="utf-8")
     ready = (bool(default) and not texts.get("missing") and video.exists() and b.get("status", "completed") == "completed"
              and not b.get("draft"))
@@ -510,6 +600,11 @@ TONE_PALETTE = {
 }
 
 
+TONE_POSTER = {  # first poster scene per tone (backdrop, hero); the director replaces it in the brief
+    "thriller": ("ocean", "bonds"), "crisis": ("rays", "arrow"), "strategy": ("map", "wafer"), "trade": ("map", "ship"),
+    "tech": ("map", "wafer"), "history": ("skyline", "bonds"), "reflective": ("coast", "house"), "bright": ("rays", "cash")}
+
+
 def draft_brief(slug: str, deliverable: str, project: dict, alias: str | None) -> Path:
     """Write a DRAFT brief for a new episode (tone from its visual direction plan). A draft never makes a package
     'ready': the director must replace the subject and words, set claim_basis, and delete `draft: true`."""
@@ -520,10 +615,16 @@ def draft_brief(slug: str, deliverable: str, project: dict, alias: str | None) -
     words = re.sub(r"[^A-Za-z0-9$ ]", "", project.get("title", slug)).upper().split()
     text = [" ".join(words[:2]), " ".join(words[2:4])] if len(words) > 2 else [" ".join(words)]
     docs = REPO_ROOT / "docs" / "episodes" / slug
+    pb, ph = TONE_POSTER.get(tone, ("map", "wafer"))
     b = {"title": project.get("title", slug), "docs_dir": str(docs.relative_to(REPO_ROOT)), "video": alias or "", "deliverable": deliverable,
-         "status": "completed", "draft": True,
+         "status": "completed", "draft": True, "default": "P",
          "analysis": {"mystery": "TODO", "surprising_fact": "TODO (a verified claim id)", "subject": subj, "tone": tone, "metaphor": "TODO"},
          "concepts": [
+             {"id": "P", "angle": "poster (owner model, default)", "archetype": "poster", "text": text[:2], "accent_line": len(text[:2]) - 1,
+              "banner": "red", "claim_basis": "",
+              "scene": {"backdrop": {"kind": pb, "arcs": [["ny", "london"], ["london", "shanghai"]] if pb == "map" else []},
+                        "hero": {"kind": ph, "x": 1440, "y": 560, "s": 0.85}, "light": {"color": "#FFB238"},
+                        "particles": {"n": 60, "region": [900, 0, 1920, 1080], "size": 4}}},
              {"id": "A", "angle": "mystery", "text": text, "accent_line": len(text) - 1, "text_side": "left", "claim_basis": "",
               "scene": {"palette": TONE_PALETTE.get(tone, TONE_PALETTE["strategy"]), "backdrop": back, "subject": {"kind": subj, "x": 1340, "y": 560, "s": 0.8},
                         "particles": {"n": 50, "region": [700, 60, 1900, 1000], "size": 2}, "brand": "tl"}},
@@ -531,12 +632,11 @@ def draft_brief(slug: str, deliverable: str, project: dict, alias: str | None) -
               "scene": {"palette": TONE_PALETTE.get(tone, TONE_PALETTE["strategy"]), "backdrop": back, "subject": {"kind": subj, "x": 600, "y": 560, "s": 0.75},
                         "particles": {"n": 50, "region": [0, 60, 1200, 1000], "size": 2}, "brand": "tr"}}]}
     who = public_figure(project)
-    if who:   # a named public figure is central: the face archetype leads and is the default
+    if who:   # a named public figure is central: the face archetype is the first alternative (poster stays default)
         b["analysis"]["public_figure"] = {"who": who, "name": FACE_PRESETS.get(who, who)}
-        b["concepts"].insert(0, {"id": "F", "angle": "face (named public figure)", "archetype": "face", "text": text[:2], "claim_basis": "",
+        b["concepts"].insert(1, {"id": "F", "angle": "face (named public figure)", "archetype": "face", "text": text[:2], "claim_basis": "",
                                  "scene": {"bg": ["#3A8DFF", "#0A1F5C"], "bust": {"who": who, "expr": "point", "x": 470, "s": 0.92},
                                            "prop": {"kind": "number", "text": "?", "x": 1390, "y": 760, "s": 0.8}}})
-        b["default"] = "F"
     f = REPO_ROOT / "projects" / slug / "thumbnail_brief.yaml"
     f.write_text("# DRAFT thumbnail brief (auto). Replace subject/words, add claim_basis, remove `draft: true`.\n" +
                  yaml.safe_dump(b, sort_keys=False, allow_unicode=True, width=140), encoding="utf-8")

@@ -73,3 +73,24 @@ concepts:
     rays: '#FFE27A'
     bust: {who: wangcf, expr: point, x: 470, s: 0.92, point: [1330, 790]}
     prop: {kind: evhatch, x: 1450, y: 800, s: 0.36, color: '#26C6DA', tag: false, haze: false, lidar: false}
+- id: P
+  angle: 'poster (owner model 2026-11-19): a glossy new EV with a price tag and a red falling arrow'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [WHY SO, 'CHEAP?']
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'a question (the film: scale, batteries, supply chains and subsidies); no number'
+  scene:
+    backdrop: {kind: skyline, base: 820}
+    light: {x: 1400, y: 650, r: 700, color: '#FF7A4A'}
+    support:
+    - {kind: flag, code: cn, x: 1500, y: 90, s: 0.95, h: 260, poleH: 700}
+    hero: {kind: car, x: 1400, y: 800, s: 0.92}
+    front:
+    - {kind: pricetag, x: 1620, y: 450, s: 0.85, r: 18}
+    particles:
+      n: 50
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFD0B0'

@@ -63,3 +63,27 @@ concepts:
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFD8C8'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): a friendly robot before Mount Fuji and a huge red rising sun, Japan''s flag'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [CAN ROBOTS, 'SAVE JAPAN?']
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: robots and AI against a shrinking workforce); no number'
+  scene:
+    backdrop:
+      kind: skyline
+      base: 900
+      fuji: 1250
+      sun: [1480, 430, 300]
+      maxH: 220
+    light: {x: 1480, y: 430, r: 640, color: '#FF6A5A'}
+    hero: {kind: robot, x: 1470, y: 740, s: 0.62}
+    support:
+    - {kind: flag, code: jp, x: 1760, y: 160, s: 0.7, h: 240, poleH: 900}
+    particles:
+      n: 50
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFD0C0'

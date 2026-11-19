@@ -63,3 +63,22 @@ concepts:
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): the robot that took the job holds the tax bill; coins fall away'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [WHO PAYS, 'THE TAXES?']
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: payroll taxes and what replaces them); no number'
+  scene:
+    backdrop: {kind: rays, c0: '#9A6AFF', c1: '#2A1A7A', c2: '#070418', ray: '#D8C8FF'}
+    light: {x: 1440, y: 560, r: 700, color: '#FFB238'}
+    hero: {kind: robot, x: 1430, y: 700, s: 0.72, hold: tax}
+    front:
+    - {kind: coins, x: 1760, y: 1000, s: 0.5, n: 9}
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFE3A0'

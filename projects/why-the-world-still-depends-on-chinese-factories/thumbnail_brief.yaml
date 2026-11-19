@@ -46,3 +46,39 @@ concepts:
     particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): the laden container ship under the Chinese flag, arcs from China to the world'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [STILL MADE, 'IN CHINA?']
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: the world still depends on Chinese factories); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: 30
+      lat: 28
+      k: 5.6
+      arcs:
+      - [shenzhen, la]
+      - [shanghai, london]
+      - [shenzhen, saopaulo]
+      - [shanghai, ny]
+      highlight:
+      - at: [105, 34]
+        r: 140
+        color: '#FF5A3A'
+    light: {x: 1450, y: 520, r: 700, color: '#FFB238'}
+    hero:
+      kind: ship
+      x: 1430
+      y: 790
+      s: 0.95
+      flags: [cn]
+      flagS: 0.85
+    particles:
+      n: 50
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFE3A0'

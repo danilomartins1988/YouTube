@@ -63,3 +63,36 @@ concepts:
     particles: {n: 60, region: [0, 0, 1920, 1080], size: 4, color: '#FFFFFF'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): Canada''s flag over a glowing data center, arcs from Canadian cities on a night map'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [CANADA, 'WINS AI?']
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: power, cold climate and talent as advantages); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: -118
+      lat: 50
+      k: 9
+      density: 2
+      arcs:
+      - [vancouver, toronto]
+      - [toronto, london]
+      - [montreal, paris]
+      - [calgary, sf]
+      highlight:
+      - at: [-100, 58]
+        r: 220
+        color: '#FF5A4A'
+    light: {x: 1480, y: 520, r: 700, color: '#FFB238'}
+    support:
+    - {kind: flag, code: ca, x: 1250, y: 110, s: 1.0, h: 280, poleH: 900}
+    hero: {kind: datacenter, x: 1530, y: 720, s: 0.66}
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFFFFF'

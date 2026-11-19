@@ -71,3 +71,25 @@ concepts:
     particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDE9FF'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): an AI-driven robot arm welding in a glowing factory, the Chinese flag behind'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [CHEAPER THAN, 'CHINA?']
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: can automation undercut low-cost labour); no number'
+  scene:
+    backdrop: {kind: factory, glowX: 1400}
+    light: {x: 1500, y: 600, r: 680, color: '#FF8A2A'}
+    rim: {warm: '#FFB238', cool: '#3FB4FF'}
+    support:
+    - {kind: flag, code: cn, x: 1250, y: 110, s: 1.0, h: 300, poleH: 900}
+    hero: {kind: arm, x: 1460, y: 560, s: 0.85}
+    sparks:
+    - {x: 1783, y: 860, n: 40, len: 240, color: '#FFD27A', spread: 200, angle: -100}
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFC27A'

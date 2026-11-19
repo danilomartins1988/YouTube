@@ -63,3 +63,35 @@ concepts:
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#D8F0FF'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): a golden shovel with a chip for a blade, gold arcs to the countries that sell the tools'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [AI'S SHOVEL, SELLERS]
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'framing (the film: the countries that win by supplying the AI build-out); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: 20
+      lat: 25
+      arcColor: '#FFC24A'
+      arcs:
+      - [taipei, sf]
+      - [seoul, frankfurt]
+      - [amsterdam, taipei]
+      - [tokyo, la]
+      - [singapore, dubai]
+    light: {x: 1480, y: 520, r: 680, color: '#FFC24A'}
+    hero: {kind: shovel, x: 1480, y: 600, s: 0.8}
+    front:
+    - {kind: coins, x: 1500, y: 980, s: 0.8, n: 14}
+    sparks:
+    - {x: 1300, y: 250, n: 16, len: 110, color: '#FFF3A8', spread: 360}
+    - {x: 1780, y: 560, n: 16, len: 110, color: '#FFF3A8', spread: 360}
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFE3A0'

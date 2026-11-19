@@ -45,3 +45,31 @@ concepts:
     particles: {n: 50, region: [900, 0, 1920, 1080], size: 3, color: '#FFE0B2'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): the house floats up on a rising red arrow, out of reach'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [CAN'T AFFORD, 'A HOME?']
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: prices and rates outran incomes); no number'
+  scene:
+    backdrop:
+      kind: coast
+      horizon: 700
+      sunX: 1450
+      palms:
+      - [1200, 980, 0.8, 1]
+      - [1830, 960, 0.95, -1]
+      mountX: 1000
+    light: {x: 1450, y: 560, r: 700, color: '#FFB238'}
+    hero: {kind: house, x: 1420, y: 560, s: 0.66}
+    front:
+    - {kind: arrow, x: 1500, y: 620, s: 0.9, color: '#FF3A2A', noBars: true}
+    sparks:
+    - {x: 1878, y: 278, n: 22, len: 150, color: '#FFD27A', spread: 360}
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 5
+      color: '#FFE3A0'

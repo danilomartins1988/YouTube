@@ -66,3 +66,22 @@ concepts:
     particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDF5DE'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): the EU flag rising on a glowing gold arrow over a dusk skyline of domes and spires'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [EUROPE'S, 'COMEBACK?']
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'a question (the film: can AI restore European growth); no number'
+  scene:
+    backdrop: {kind: skyline, base: 860, spires: true, maxH: 300}
+    light: {x: 1460, y: 450, r: 700, color: '#FFC24A'}
+    hero: {kind: flag, code: eu, x: 1180, y: 150, s: 1.0, h: 420, poleH: 1000}
+    front:
+    - {kind: arrow, x: 1500, y: 700, s: 0.95}
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFE3A0'

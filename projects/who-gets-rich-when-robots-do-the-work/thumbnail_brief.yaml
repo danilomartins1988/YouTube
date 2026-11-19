@@ -63,3 +63,37 @@ concepts:
     particles: {n: 50, region: [0, 0, 1920, 1080], size: 3, color: '#BDF5DE'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): cash pours out of the robot that does the work, towards someone out of frame'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [WHO GETS, 'RICH?']
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'a question (the film: mostly the owners of the machines, on the evidence so far); no number'
+  scene:
+    backdrop: {kind: rays, c0: '#FFC24A', c1: '#C2410C', c2: '#1A0610', ray: '#FFE7A8'}
+    hero: {kind: robot, x: 1480, y: 700, s: 0.74, chest: open}
+    light: {x: 1480, y: 600, r: 700, color: '#FFB238'}
+    flows:
+    - p:
+      - [1450, 700]
+      - [1050, 380]
+      - [1300, -80]
+      kind: cash
+      n: 8
+    - p:
+      - [1500, 710]
+      - [1800, 600]
+      - [1990, 330]
+      kind: cash
+      n: 6
+    front:
+    - {kind: coins, x: 1520, y: 1020, s: 0.85, n: 16}
+    sparks:
+    - {x: 1480, y: 700, n: 30, len: 200, color: '#FFE27A', spread: 300}
+    particles:
+      n: 70
+      region: [900, 0, 1920, 1080]
+      size: 5
+      color: '#FFE3A0'

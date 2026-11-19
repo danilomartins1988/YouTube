@@ -64,3 +64,31 @@ concepts:
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#FFE9A8'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): a robot arm at work on a sunset coast with a sugarloaf peak, Brazil''s flag'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [BRAZIL'S, 'ROBOT FACTORY?']
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'a question (the film: can Brazil build the robots); no number'
+  scene:
+    backdrop:
+      kind: coast
+      horizon: 700
+      sunX: 1250
+      mount: false
+      sugarloaf: 1080
+      palms:
+      - [1850, 980, 0.9, -1]
+    light: {x: 1470, y: 560, r: 700, color: '#FFB238'}
+    support:
+    - {kind: flag, code: br, x: 1240, y: 120, s: 1.0, h: 280, poleH: 900}
+    hero: {kind: arm, x: 1480, y: 580, s: 0.8}
+    sparks:
+    - {x: 1784, y: 862, n: 36, len: 220, color: '#FFD27A', spread: 200, angle: -100}
+    particles:
+      n: 50
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#FFE3A0'

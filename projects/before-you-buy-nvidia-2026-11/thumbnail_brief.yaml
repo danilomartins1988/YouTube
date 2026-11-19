@@ -39,3 +39,31 @@ concepts:
     particles: {n: 70, region: [0, 0, 1920, 1080], size: 3, color: '#FFFFFF'}
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): a glowing chip on its wafer with a rising arrow, the AI chip trade'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [BEFORE YOU, BUY NVIDIA]
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'framing (education, not advice: the film sets out the bull and bear case); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: 10
+      lat: 22
+      arcColor: '#7DFF6A'
+      arcs:
+      - [sf, taipei]
+      - [taipei, amsterdam]
+      - [sf, london]
+    light: {x: 1450, y: 520, r: 700, color: '#7DFF6A'}
+    rim: {warm: '#9DFF7A', cool: '#3FB4FF'}
+    support:
+    - {kind: arrow, x: 1500, y: 300, s: 0.75, color: '#7DFF6A'}
+    hero: {kind: wafer, x: 1440, y: 620, s: 0.78, die0: '#B8FF8A', die1: '#16A34A', die2: '#0B5A2A'}
+    particles:
+      n: 60
+      region: [900, 0, 1920, 1080]
+      size: 4
+      color: '#CFFFC0'

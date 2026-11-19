@@ -58,3 +58,25 @@ concepts:
     particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E1F5FE'}
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19): the glowing membership card, not the cart, is the treasure'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [COSTCO'S, 'REAL SECRET?']
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: membership fees, not mark-ups, are the profit engine); no number'
+  scene:
+    backdrop: {kind: rays, c0: '#5FC8FF', c1: '#1A3A9C', c2: '#050818', ray: '#BFE8FF'}
+    light: {x: 1420, y: 500, r: 680, color: '#FFC24A'}
+    support:
+    - {kind: cart, x: 1500, y: 820, s: 0.62}
+    hero: {kind: card, x: 1420, y: 420, s: 0.78, r: -14}
+    sparks:
+    - {x: 1100, y: 250, n: 16, len: 120, color: '#FFF3A8', spread: 360}
+    - {x: 1760, y: 600, n: 16, len: 100, color: '#FFF3A8', spread: 360}
+    particles:
+      n: 70
+      region: [900, 0, 1920, 1080]
+      size: 5
+      color: '#FFE3A0'

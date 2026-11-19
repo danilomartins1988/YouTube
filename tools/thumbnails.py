@@ -4,6 +4,8 @@
   python tools/thumbnails.py generate <slug>|all [--force]
   python tools/thumbnails.py face <slug> [--force]  # only the 'face' concepts -> youtube-package/thumbnail_face.png
                                                    # (keeps thumbnail.png, the default and the package status untouched)
+  python tools/thumbnails.py poster <slug> [--force] # only the 'poster' concepts -> youtube-package/thumbnail_poster.png
+                                                   # (owner model 2026-11-19; same rules as `face`)
   python tools/thumbnails.py contact              # docs/thumbnails/contact_sheet.jpg (all defaults with titles)
   python tools/thumbnails.py report               # docs/thumbnails/REPORT.md
   python tools/thumbnails.py all [--force]        # inventory -> generate all -> contact -> report
@@ -180,7 +182,7 @@ def report() -> Path:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["inventory", "generate", "face", "contact", "report", "all"])
+    ap.add_argument("cmd", choices=["inventory", "generate", "face", "poster", "contact", "report", "all"])
     ap.add_argument("target", nargs="?", default="all")
     ap.add_argument("--force", action="store_true")
     a = ap.parse_args()
@@ -188,11 +190,11 @@ def main() -> None:
         print(len(inventory()), "deliverables")
     elif a.cmd == "generate":
         generate(a.target, a.force)
-    elif a.cmd == "face":
+    elif a.cmd in ("face", "poster"):
         b = yt.load_brief(a.target)
-        ids = [c["id"] for c in (b or {}).get("concepts", []) if yt.is_face(c)]
+        ids = [c["id"] for c in (b or {}).get("concepts", []) if c.get("archetype") == a.cmd]
         if not ids:
-            sys.exit(f"{a.target}: no concept with archetype 'face' in the brief")
+            sys.exit(f"{a.target}: no concept with archetype '{a.cmd}' in the brief")
         others = {o: ROOT / yt.load_brief(o)["docs_dir"] / "youtube-package" / "thumbnail.png" for o in briefs() if o != a.target}
         r = yt.generate(a.target, others=others, force=a.force, only=ids)
         for cid, f in r["files"].items():
