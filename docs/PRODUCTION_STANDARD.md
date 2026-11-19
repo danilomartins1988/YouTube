@@ -3,6 +3,10 @@
 Every episode is an original animated economic documentary, not a narrated slideshow. This file is the
 reusable standard. `README.md` covers how to run the pipeline; this file covers what a finished episode must be.
 
+> **Thumbnail model (owner, 2026-11-19, permanent):** follow `docs/thumbnails/OWNER_STYLE.md` (cinematic scene, big
+> hero object on the right, 2–3 huge italic words left with a red/yellow brush banner, tension cue). Default concept =
+> `poster`; owner-made thumbnails (`thumbnail_owner.jpg`) always take precedence.
+>
 > **Story over statistics (owner, 2026-11-18, permanent, overrides number-heavy habits):** follow
 > `docs/STORY_OVER_STATS.md`: one protagonist and journey per film, 10–15 spoken numbers per film, ≤1 per scene,
 > comparisons instead of percentages, scenes as story beats; full figures go to the description and FACT_CHECK.
