@@ -1,0 +1,221 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19): the laden container ship under the Chinese flag, arcs from China to the world",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "STILL MADE",
+    "IN CHINA?"
+  ],
+  "accent_line": 1,
+  "banner": "red",
+  "claim_basis": "a question (the film: the world still depends on Chinese factories); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "map",
+      "lon": 30,
+      "lat": 28,
+      "k": 5.6,
+      "arcs": [
+        [
+          "shenzhen",
+          "la"
+        ],
+        [
+          "shanghai",
+          "london"
+        ],
+        [
+          "shenzhen",
+          "saopaulo"
+        ],
+        [
+          "shanghai",
+          "ny"
+        ]
+      ],
+      "highlight": [
+        {
+          "at": [
+            105,
+            34
+          ],
+          "r": 140,
+          "color": "#FF5A3A"
+        }
+      ]
+    },
+    "light": {
+      "x": 1450,
+      "y": 520,
+      "r": 700,
+      "color": "#FFB238"
+    },
+    "hero": {
+      "kind": "ship",
+      "x": 1430,
+      "y": 790,
+      "s": 0.95,
+      "flags": [
+        "cn"
+      ],
+      "flagS": 0.85
+    },
+    "particles": {
+      "n": 50,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFE3A0"
+    }
+  },
+  "layout": [
+    {
+      "text": "STILL MADE",
+      "x": 70,
+      "y": 455.7,
+      "size": 174.2,
+      "width": 1043.0,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "IN CHINA?",
+      "x": 112.0,
+      "y": 662.5,
+      "size": 191.1,
+      "width": 954.4,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#E3201B",
+      "box": "#E3201B"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.69 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 320, 1113, 466), (112, 513, 1066, 674)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "14.5px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 4.7:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.130",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "20.9px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1113px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.61",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 102 vs left 39",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 58",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest why-americas-airports-make-money-before-you-fly (distance 0.55)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (the film: the world still depends on Chinese factories); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.73,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "why-americas-airports-make-money-before-you-fly"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-19T01:41:46Z"
+}

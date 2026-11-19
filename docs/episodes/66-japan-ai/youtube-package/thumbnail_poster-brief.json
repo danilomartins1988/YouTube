@@ -1,0 +1,205 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19): a friendly robot before Mount Fuji and a huge red rising sun, Japan's flag",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "CAN ROBOTS",
+    "SAVE JAPAN?"
+  ],
+  "accent_line": 1,
+  "banner": "red",
+  "claim_basis": "a question (the film: robots and AI against a shrinking workforce); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "skyline",
+      "base": 900,
+      "fuji": 1250,
+      "sun": [
+        1480,
+        430,
+        300
+      ],
+      "maxH": 220
+    },
+    "light": {
+      "x": 1480,
+      "y": 430,
+      "r": 640,
+      "color": "#FF6A5A"
+    },
+    "hero": {
+      "kind": "robot",
+      "x": 1470,
+      "y": 740,
+      "s": 0.62
+    },
+    "support": [
+      {
+        "kind": "flag",
+        "code": "jp",
+        "x": 1760,
+        "y": 160,
+        "s": 0.7,
+        "h": 240,
+        "poleH": 900
+      }
+    ],
+    "particles": {
+      "n": 50,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFD0C0"
+    }
+  },
+  "layout": [
+    {
+      "text": "CAN ROBOTS",
+      "x": 70,
+      "y": 480.8,
+      "size": 160.5,
+      "width": 1043.6,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "SAVE JAPAN?",
+      "x": 101.5,
+      "y": 641.8,
+      "size": 143.2,
+      "width": 978.4,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#E3201B",
+      "box": "#E3201B"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.64 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 356, 1114, 490), (102, 530, 1080, 650)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "11.9px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 4.7:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.110",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "17.2px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1114px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.57",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 109 vs left 29",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 70",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest why-norway-is-so-rich (distance 0.74)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (the film: robots and AI against a shrinking workforce); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.715,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "why-norway-is-so-rich"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-19T01:43:34Z"
+}

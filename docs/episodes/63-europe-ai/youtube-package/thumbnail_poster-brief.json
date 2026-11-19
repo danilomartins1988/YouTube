@@ -1,0 +1,200 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19): the EU flag rising on a glowing gold arrow over a dusk skyline of domes and spires",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "EUROPE'S",
+    "COMEBACK?"
+  ],
+  "accent_line": 1,
+  "banner": "yellow",
+  "claim_basis": "a question (the film: can AI restore European growth); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "skyline",
+      "base": 860,
+      "spires": true,
+      "maxH": 300
+    },
+    "light": {
+      "x": 1460,
+      "y": 450,
+      "r": 700,
+      "color": "#FFC24A"
+    },
+    "hero": {
+      "kind": "flag",
+      "code": "eu",
+      "x": 1180,
+      "y": 150,
+      "s": 1.0,
+      "h": 420,
+      "poleH": 1000
+    },
+    "front": [
+      {
+        "kind": "arrow",
+        "x": 1500,
+        "y": 700,
+        "s": 0.95
+      }
+    ],
+    "particles": {
+      "n": 60,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFE3A0"
+    }
+  },
+  "layout": [
+    {
+      "text": "EUROPE'S",
+      "x": 70,
+      "y": 486.9,
+      "size": 195.7,
+      "width": 976.7,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "COMEBACK?",
+      "x": 103.1,
+      "y": 661.5,
+      "size": 150.6,
+      "width": 974.7,
+      "anchor": "start",
+      "color": "#05070B",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#FFD400",
+      "box": "#FFD400"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.64 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "2 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 334, 1047, 499), (103, 544, 1078, 671)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "12.6px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 14.1:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.119",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "18.1px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1078px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.61",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 94 vs left 28",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 36",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest why-americas-airports-make-money-before-you-fly (distance 0.61)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (the film: can AI restore European growth); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.822,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "why-americas-airports-make-money-before-you-fly"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-19T01:42:40Z"
+}

@@ -1,0 +1,248 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19): cash pours out of the robot that does the work, towards someone out of frame",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "WHO GETS",
+    "RICH?"
+  ],
+  "accent_line": 1,
+  "banner": "yellow",
+  "claim_basis": "a question (the film: mostly the owners of the machines, on the evidence so far); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "rays",
+      "c0": "#FFC24A",
+      "c1": "#C2410C",
+      "c2": "#1A0610",
+      "ray": "#FFE7A8"
+    },
+    "hero": {
+      "kind": "robot",
+      "x": 1480,
+      "y": 700,
+      "s": 0.74,
+      "chest": "open"
+    },
+    "light": {
+      "x": 1480,
+      "y": 600,
+      "r": 700,
+      "color": "#FFB238"
+    },
+    "flows": [
+      {
+        "p": [
+          [
+            1450,
+            700
+          ],
+          [
+            1050,
+            380
+          ],
+          [
+            1300,
+            -80
+          ]
+        ],
+        "kind": "cash",
+        "n": 8
+      },
+      {
+        "p": [
+          [
+            1500,
+            710
+          ],
+          [
+            1800,
+            600
+          ],
+          [
+            1990,
+            330
+          ]
+        ],
+        "kind": "cash",
+        "n": 6
+      }
+    ],
+    "front": [
+      {
+        "kind": "coins",
+        "x": 1520,
+        "y": 1020,
+        "s": 0.85,
+        "n": 16
+      }
+    ],
+    "sparks": [
+      {
+        "x": 1480,
+        "y": 700,
+        "n": 30,
+        "len": 200,
+        "color": "#FFE27A",
+        "spread": 300
+      }
+    ],
+    "particles": {
+      "n": 70,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 5,
+      "color": "#FFE3A0"
+    }
+  },
+  "layout": [
+    {
+      "text": "WHO GETS",
+      "x": 70,
+      "y": 425.0,
+      "size": 192.8,
+      "width": 1042.3,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "RICH?",
+      "x": 125.1,
+      "y": 689.1,
+      "size": 250.6,
+      "width": 755.6,
+      "anchor": "start",
+      "color": "#05070B",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#FFD400",
+      "box": "#FFD400"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.69 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "3 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 275, 1112, 437), (125, 494, 881, 704)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "16.1px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 14.1:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.139",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "23.1px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1112px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.83",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 150 vs left 57",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 38",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest why-the-world-still-depends-on-chinese-factories (distance 0.46)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (the film: mostly the owners of the machines, on the evidence so far); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.821,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "why-the-world-still-depends-on-chinese-factories"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-19T01:42:59Z"
+}
