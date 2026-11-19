@@ -3,6 +3,9 @@
 Every episode is an original animated economic documentary, not a narrated slideshow. This file is the
 reusable standard. `README.md` covers how to run the pipeline; this file covers what a finished episode must be.
 
+> **Smaller files (owner, 2026-11-19):** the upload copy `*_light.mp4` is encoded 1280×720 H.264 `-preset slow -crf 32
+> -tune animation`, AAC 80k (about 28% smaller than before, visually identical on our animation). Set in post.sh.
+>
 > **Thumbnail model (owner, 2026-11-19, permanent):** follow `docs/thumbnails/OWNER_STYLE.md` (cinematic scene, big
 > hero object on the right, 2–3 huge italic words left with a red/yellow brush banner, tension cue). Default concept =
 > `poster`; owner-made thumbnails (`thumbnail_owner.jpg`) always take precedence.
