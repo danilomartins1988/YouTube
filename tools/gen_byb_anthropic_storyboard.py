@@ -72,9 +72,10 @@ stage("s01_open", "h_open", {
 stage("s02_day", "h_day", {
     "zones": [Z("exchange")], "worldW": 2400,
     "cam": cam((0, 960, 520, 1.0), (C("slid back"), 1060, 540, 1.05, 1.6), (C("Maya has a rule"), 900, 560, 1.0, 1.2)), "drift": 2,
-    "items": [it("stockelevator", x=1450, y=150, at=0.2, floors=["OPEN $111.50", "CLOSE $97.17", "OFFER $83.00"], stops=[{"cue": "and closed at"}], scale=0.85),
+    "items": [it("stockelevator", x=1450, y=150, at=0.2, floors=["$111.50", "$97.17", "$83.00"], stops=[{"cue": "and closed at"}], scale=0.85),
               it("letters", x=650, y=160, text="DAY ONE: A ROLLER COASTER", at=0.2, size=50, color="gold", until=C("Everyone on her feed")),
               it("sign", x=650, y=320, text="CLOSE NOV 19, 2026: $97.17 · CNBC, THE NATIONAL", at=C("and closed at"), color=AMBER, size=24),
+              it("sign", x=650, y=540, text="OPEN $111.50 · CLOSE $97.17 · OFFER $83.00", at=C("opened far above"), color=BLUE, size=24),
               it("sign", x=650, y=430, text="LATEST CLOSE WHEN THIS FILM WAS MADE", at=C("and closed at"), color=CREAM, size=22),
               it("letters", x=650, y=160, text="READ THE LABEL FIRST", at=C("Never buy something"), size=56, color="gold"),
               MAYA(520, 0.0, pose="stand", faces=[[0, "shock"], [C("slid back"), "worry"], [C("Maya has a rule"), "smug"]])]},
@@ -97,7 +98,7 @@ stage("s04_disc", "h_disclaimer", {
               it("sign", x=1000, y=400, text="ANTHROPIC'S PROSPECTUS + FILINGS + NAMED PRESS + OUR MATH", at=C("Everything here comes from"), color=BLUE, size=26),
               it("sign", x=1000, y=510, text="DISCLOSURE: AI TOOLS INCL. CLAUDE ARE USED BY THIS CHANNEL", at=C("Our channel uses"), color=AMBER, size=26),
               it("sign", x=1000, y=620, text="ANTHROPIC DID NOT SPONSOR OR REVIEW THIS VIDEO", at=C("didn't sponsor or review"), color=CREAM, size=26),
-              stamp(1000, 760, at=C("Everything here comes from"), scale=0.9),
+              stamp(1560, 880, at=C("Everything here comes from"), scale=0.6),
               ANT(450, 880, at=0.3, mood="cool", hop=16), buddy(1600, 880, at=0.5, mood="happy", color="#5CC8FF", label="FILINGS", hop=20)]},
     sources=["ant_424b4"])
 
@@ -115,24 +116,24 @@ stage("s06_classes", "c1_classes", {
                         {"cls": "E", "who": "EMPLOYEES\n(NOT FOUNDERS)", "money": "NONE", "votes": "LIMITED MATTERS", "meter": 0.1, "color": "#E5483B", "at": C("special classes", 0.8)}])]},
     sources=["ant_424b4"], sfx=[{"kind": "whoosh", "cue": "special classes", "gain": 0.25}])
 stage("s07_votes", "c1_votes", {
-    "zones": [Z("auctionhall")], "worldW": 2400,
+    "zones": [Z("studio", night=True)], "worldW": 1920, "night": True,
     "cam": cam((0, 960, 520, 1.0), (C("A single Class T share"), 1000, 500, 1.04, 1.6), (C("a Class A buyer"), 960, 540, 1.0, 1.2)), "drift": 1,
     "items": [it("letters", x=960, y=120, text="WHO HOLDS THE VOTES?", at=0.2, size=56, color="gold"),
-              it("govtower", x=1020, y=800, at=0.2, scale=0.95, seats=9, trust=5, trustAt=C("picks most of the board"),
+              it("govtower", x=960, y=820, at=0.2, scale=0.82, seats=9, trust=5, trustAt=C("picks most of the board"),
                  founder=[[0, 0], [{"cue": "carries"}, 0], [{"cue": "of the votes"}, 0.501]], founderText="CLASS F: 50.1%",
-                 ballotAt=C("a Class A buyer"), bx=560, labels={"trust": "MOST OF THE BOARD: PICKED BY THE TRUST (CLASS T)", "founder": "FOUNDER VOTE", "ballot": "CLASS A: 1 VOTE EACH"}),
+                 ballotAt=C("a Class A buyer"), bx=680, labels={"trust": "MOST OF THE BOARD: PICKED BY THE TRUST (CLASS T)", "founder": "FOUNDER VOTE", "ballot": "CLASS A: 1 VOTE EACH"}),
               it("sign", x=960, y=260, text="BIG DECISIONS: ALREADY SPOKEN FOR", at=C("But the big decisions"), color=PINK, size=32)]},
     sources=["ant_424b4"], sfx=[{"kind": "hit", "cue": "of the votes", "gain": 0.3}])
 stage("s08_float", "c1_float", {
-    "zones": [Z("exchange")], "worldW": 2400,
-    "cam": cam((0, 960, 520, 1.0), (C("But that block"), 960, 500, 1.06, 1.6), (C("most of them can't"), 960, 540, 1.0, 1.2)), "drift": 1,
+    "zones": [Z("office")], "worldW": 2400,
+    "cam": cam((0, 960, 520, 1.0), (C("But that block"), 960, 500, 1.04, 1.6), (C("most of them can't"), 960, 540, 1.0, 1.2)), "drift": 1,
     "items": [it("letters", x=960, y=110, text="HOW MANY SHARES REALLY EXIST?", at=0.2, size=52, color="gold"),
-              it("shares", x=960, y=470, at=0.2, scale=0.82,
+              it("shares", x=960, y=420, at=0.2, scale=0.95,
                  groups=[{"n": 7, "at": C("into public hands"), "color": "#FFD45C", "label": "FLOAT ≈ 7%", "step": 0.08},
                          {"n": 43, "at": C("early investors"), "color": "#5CC8FF", "label": "CLASS N 43%", "step": 0.02},
                          {"n": 50, "at": C("partners and employees"), "color": "#FFFFFF", "label": "OTHER A 50%", "step": 0.02}]),
-              it("sign", x=960, y=850, text="0.98BN SOLD OF 13.22BN OUTSTANDING (OUR CALC, 424B4)", at=C("But that block"), color=AMBER, size=26),
-              it("sign", x=960, y=960, text="MOST ARE LOCKED UP FOR NOW", at=C("most of them can't"), color=PINK, size=30),
+              it("sign", x=960, y=870, text="0.98BN SOLD OF 13.22BN OUTSTANDING (OUR CALC, 424B4)", at=C("But that block"), color=AMBER, size=26),
+              it("sign", x=960, y=975, text="MOST ARE LOCKED UP FOR NOW", at=C("most of them can't"), color=PINK, size=30),
               MAYA(1720, 0.0, pose="stand", faces=[[0, "happy"], [C("But that block"), "shock"]], scale=1.0)]},
     sources=["ant_424b4", "ant_fwp"])
 board("p09_dilution", "c1_draw", "Outstanding vs fully diluted (424B4)", C("Outstanding shares are"), [
@@ -228,7 +229,7 @@ stage("s19_gate", "c3_gate", {
               it("calendar", x=960, y=470, at=0.3, scale=1.2, color="#E5483B", pages=[[0, "?", "2027"], [C("at the very latest"), "MAY 17", "2027"]]),
               it("sign", x=960, y=760, text="OR EARLIER: 2 TRADING DAYS AFTER THE JAN-MAR RESULTS", at=C("right after the results"), color=AMBER, size=26),
               it("sign", x=960, y=860, text="DAY 180 AFTER THE PROSPECTUS (NOV 18, 2026) · 424B4", at=C("at the very latest"), color=CREAM, size=22),
-              MAYA(560, 0.0, pose="stand", faces=[[0, "squint"], [C("at the very latest"), "shock"]], scale=1.0)]},
+              MAYA(330, 0.0, pose="stand", faces=[[0, "squint"], [C("at the very latest"), "shock"]], scale=1.0)]},
     sources=["ant_424b4"], sfx=[{"kind": "hit", "cue": "at the very latest", "gain": 0.35}])
 stage("s20_size", "c3_size", {
     "zones": [Z("studio", night=True)], "worldW": 1920, "night": True,
@@ -297,7 +298,7 @@ stage("s26_cost", "c4_cost", {
               ANT(1750, 880, at=0.3, mood="worry", moods=[[C("So far this year"), "happy"], [C("If it climbs back"), "worry"]], hop=14)]},
     sources=["ant_424b4"])
 stage("s27_cash", "c4_cash", {
-    "zones": [Z("bankhall")], "worldW": 2400,
+    "zones": [Z("studio", night=True)], "worldW": 1920, "night": True,
     "cam": cam((0, 960, 520, 1.0), (C("On the other side"), 1000, 520, 1.04, 1.4)), "drift": 2,
     "items": [it("letters", x=960, y=110, text="THE PROMISES VS THE CASH", at=0.2, size=56, color="gold"),
               it("counter", x=620, y=290, at=C("has signed up to spend"), prefix="≈ $", suffix="BN", decimals=0, steps=[[0, 0], [{"cue": "on computing and data centers"}, 900.9]], text="COMMITMENTS TO 2045 (424B4)"),
@@ -354,10 +355,10 @@ stage("s32_customers", "c5_customers", {
                  slices=[{"v": 12, "color": "#FF5C7A", "label": "A 12%", "at": C("Last year")}, {"v": 12, "color": "#FFB547", "label": "B 12%", "at": C("Last year", 0.3)},
                          {"v": 76, "color": "#5CC8FF", "label": "ALL OTHERS", "at": C("Last year", 0.6)}]),
               it("pie", x=1060, y=520, r=170, at=C("So far this year"), title="JAN-SEP 2026",
-                 slices=[{"v": 100, "color": "#7DFF8A", "label": "NO ONE ≥ 10%", "at": C("So far this year")}]),
+                 slices=[{"v": 50, "color": "#7DFF8A", "label": "NO ONE\n≥ 10%", "at": C("So far this year")}, {"v": 50, "color": "#7DFF8A", "at": C("So far this year")}]),
               it("sign", x=820, y=820, text="A HEALTHIER SPREAD", at=C("a healthier spread"), color=GREEN, size=30),
-              it("sign", x=1450, y=820, text="VIA CLOUD MARKETPLACES: 44% OF SALES", at=C("But a big share"), color=PINK, size=24),
-              MAYA(1620, 0.0, pose="stand", faces=[[0, "squint"], [C("a healthier spread"), "happy"], [C("But a big share"), "worry"]], scale=1.0)]},
+              it("sign", x=1300, y=900, text="VIA CLOUD MARKETPLACES: 44% OF SALES", at=C("But a big share"), color=PINK, size=24),
+              MAYA(1790, 0.0, pose="stand", faces=[[0, "squint"], [C("a healthier spread"), "happy"], [C("But a big share"), "worry"]], scale=1.0)]},
     sources=["ant_424b4"])
 
 # ====================================================================== 6: new-IPO weather

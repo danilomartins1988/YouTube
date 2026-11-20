@@ -206,7 +206,8 @@ const govtower: ItemFn = (a, {t}, i) => {
       <rect x={-90} y={-220} width={180} height={300} rx={18} fill="#FFFFFF" stroke={OL} strokeWidth={5} />
       <rect x={-60} y={-190 + 240 * (1 - fm)} width={120} height={240 * fm} rx={10} fill={BLUE} />
       <path d="M -70 -70 L 70 -70" stroke={RED} strokeWidth={4} strokeDasharray="10 8" />
-      <T x={0} y={120} s={24}>{L.founder || 'FOUNDER VOTE'}</T>
+      <rect x={-130} y={92} width={260} height={a.founderText ? 76 : 42} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={4} />
+      <T x={0} y={122} s={24}>{L.founder || 'FOUNDER VOTE'}</T>
       {a.founderText && <T x={0} y={154} s={22} w={700}>{a.founderText}</T>}</g>}
     {/* class A ballot box */}
     {t >= bal && <g transform={`translate(${a.bx ?? 720} -40) scale(${E.outBack(win(t, bal, 0.4))})`}>
@@ -214,7 +215,8 @@ const govtower: ItemFn = (a, {t}, i) => {
       <rect x={-50} y={-86} width={100} height={14} rx={6} fill={OL} />
       {Array.from({length: 3}, (_, q) => { const u = (t * 0.7 + q / 3) % 1; return <g key={q} transform={`translate(${-20 + q * 20} ${-200 + u * 120}) rotate(${q * 12 - 12})`} opacity={1 - u}>
         <rect x={-24} y={-16} width={48} height={32} rx={4} fill="#FFFFFF" stroke={OL} strokeWidth={3} /><path d="M -10 0 L -2 8 L 12 -8" fill="none" stroke={GREEN} strokeWidth={4} /></g>; })}
-      <T x={0} y={110} s={24}>{L.ballot || 'CLASS A: 1 VOTE EACH'}</T></g>}
+      <rect x={-150} y={82} width={300} height={42} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={4} />
+      <T x={0} y={112} s={24}>{L.ballot || 'CLASS A: 1 VOTE EACH'}</T></g>}
   </g>;
 };
 

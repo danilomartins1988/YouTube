@@ -147,9 +147,9 @@ scenes:
       y: 150
       at: 0.2
       floors:
-      - OPEN $111.50
-      - CLOSE $97.17
-      - OFFER $83.00
+      - $111.50
+      - $97.17
+      - $83.00
       stops:
       - cue: and closed at
       scale: 0.85
@@ -169,6 +169,14 @@ scenes:
       at:
         cue: and closed at
       color: '#FFE0B2'
+      size: 24
+    - kind: sign
+      x: 650
+      y: 540
+      text: OPEN $111.50 · CLOSE $97.17 · OFFER $83.00
+      at:
+        cue: opened far above
+      color: '#BBDEFB'
       size: 24
     - kind: sign
       x: 650
@@ -395,13 +403,13 @@ scenes:
       color: '#F5F5F5'
       size: 26
     - kind: editionstamp
-      x: 1000
-      y: 760
+      x: 1560
+      y: 880
       at:
         cue: Everything here comes from
       text: DATA AS OF NOV 19, 2026 CLOSE
       sub: FIRST TRADING DAY · 424B4 (NOV 18, 2026)
-      scale: 0.9
+      scale: 0.6
     - kind: chipbuddy
       x: 450
       y: 880
@@ -550,10 +558,12 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: auctionhall
+    - set: studio
       x0: -1600
       x1: 4600
-    worldW: 2400
+      night: true
+    worldW: 1920
+    night: true
     cam:
     - at: 0
       x: 960
@@ -581,10 +591,10 @@ scenes:
       size: 56
       color: gold
     - kind: govtower
-      x: 1020
-      y: 800
+      x: 960
+      y: 820
       at: 0.2
-      scale: 0.95
+      scale: 0.82
       seats: 9
       trust: 5
       trustAt:
@@ -599,7 +609,7 @@ scenes:
       founderText: 'CLASS F: 50.1%'
       ballotAt:
         cue: a Class A buyer
-      bx: 560
+      bx: 680
       labels:
         trust: 'MOST OF THE BOARD: PICKED BY THE TRUST (CLASS T)'
         founder: FOUNDER VOTE
@@ -625,7 +635,7 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: exchange
+    - set: office
       x0: -1600
       x1: 4600
     worldW: 2400
@@ -638,7 +648,7 @@ scenes:
         cue: But that block
       x: 960
       y: 500
-      zoom: 1.06
+      zoom: 1.04
       dur: 1.6
     - at:
         cue: most of them can't
@@ -657,9 +667,9 @@ scenes:
       color: gold
     - kind: shares
       x: 960
-      y: 470
+      y: 420
       at: 0.2
-      scale: 0.82
+      scale: 0.95
       groups:
       - n: 7
         at:
@@ -681,7 +691,7 @@ scenes:
         step: 0.02
     - kind: sign
       x: 960
-      y: 850
+      y: 870
       text: 0.98BN SOLD OF 13.22BN OUTSTANDING (OUR CALC, 424B4)
       at:
         cue: But that block
@@ -689,7 +699,7 @@ scenes:
       size: 26
     - kind: sign
       x: 960
-      y: 960
+      y: 975
       text: MOST ARE LOCKED UP FOR NOW
       at:
         cue: most of them can't
@@ -1593,7 +1603,7 @@ scenes:
       color: '#F5F5F5'
       size: 22
     - kind: toon
-      x: 560
+      x: 330
       at: 0.0
       who: shopper
       v: 8
@@ -2174,10 +2184,12 @@ scenes:
   type: engine_cartoon
   params:
     zones:
-    - set: bankhall
+    - set: studio
       x0: -1600
       x1: 4600
-    worldW: 2400
+      night: true
+    worldW: 1920
+    night: true
     cam:
     - at: 0
       x: 960
@@ -2677,9 +2689,15 @@ scenes:
         cue: So far this year
       title: JAN-SEP 2026
       slices:
-      - v: 100
+      - v: 50
         color: '#7DFF8A'
-        label: NO ONE ≥ 10%
+        label: 'NO ONE
+
+          ≥ 10%'
+        at:
+          cue: So far this year
+      - v: 50
+        color: '#7DFF8A'
         at:
           cue: So far this year
     - kind: sign
@@ -2691,15 +2709,15 @@ scenes:
       color: '#C8E6C9'
       size: 30
     - kind: sign
-      x: 1450
-      y: 820
+      x: 1300
+      y: 900
       text: 'VIA CLOUD MARKETPLACES: 44% OF SALES'
       at:
         cue: But a big share
       color: '#FFCDD2'
       size: 24
     - kind: toon
-      x: 1620
+      x: 1790
       at: 0.0
       who: shopper
       v: 8

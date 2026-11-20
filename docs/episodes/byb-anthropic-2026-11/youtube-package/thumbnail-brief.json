@@ -1,0 +1,630 @@
+{
+  "title": "Anthropic Stock Before You Buy: 7 Things to Check (Nov 2026)",
+  "docs_dir": "docs/episodes/byb-anthropic-2026-11",
+  "video": "output/bybant_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "default": "P",
+  "analysis": {
+    "mystery": "What exactly does a buyer of ANT own, at what price, and when can insiders sell?",
+    "surprising_fact": "up to 3.0bn shares can unlock on May 17, 2027 or earlier (424B4); ANT trades at about 36 times trailing sales vs about 10 for Nvidia and Microsoft (our calc, Nov 19, 2026 closes)",
+    "subject": "a golden ANT ticker board, a padlock with a date tag, a buyer's clipboard",
+    "tone": "strategy",
+    "metaphor": "a checklist before the buy button",
+    "public_figure": null
+  },
+  "slug": "before-you-buy-anthropic-2026-11",
+  "concepts": [
+    {
+      "id": "P",
+      "angle": "poster (series look): golden ANT ticker board over a glowing night map, a clipboard checklist in front (the buyer's checklist)",
+      "archetype": "poster",
+      "file": "thumbnail_poster.png",
+      "text": [
+        "BEFORE YOU",
+        "BUY ANTHROPIC"
+      ],
+      "accent_line": 1,
+      "banner": "yellow",
+      "claim_basis": "framing (series title + company name; education, not advice); no number",
+      "scene": {
+        "backdrop": {
+          "kind": "map",
+          "lon": -40,
+          "lat": 30,
+          "arcColor": "#FFB547",
+          "arcs": [
+            [
+              "sf",
+              "london"
+            ],
+            [
+              "sf",
+              "taipei"
+            ],
+            [
+              "london",
+              "amsterdam"
+            ]
+          ]
+        },
+        "light": {
+          "x": 1450,
+          "y": 480,
+          "r": 720,
+          "color": "#FFB238",
+          "rays": true
+        },
+        "rim": {
+          "warm": "#FFD27A",
+          "cool": "#5CC8FF"
+        },
+        "hero": {
+          "kind": "tickerboard",
+          "text": "ANT",
+          "x": 1440,
+          "y": 400,
+          "s": 0.72
+        },
+        "front": [
+          {
+            "kind": "clipboard",
+            "x": 1600,
+            "y": 830,
+            "s": 0.36,
+            "title": "CHECK",
+            "rows": 4,
+            "done": 3,
+            "r": 10
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFE3A0"
+        }
+      },
+      "layout": [
+        {
+          "text": "BEFORE YOU",
+          "x": 70,
+          "y": 493.5,
+          "size": 156.4,
+          "width": 976.4,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4
+        },
+        {
+          "text": "BUY ANTHROPIC",
+          "x": 96.5,
+          "y": 633.1,
+          "size": 120.3,
+          "width": 989.9,
+          "anchor": "start",
+          "color": "#05070B",
+          "outline": "#05070B",
+          "rotate": -4,
+          "banner": "#FFD400",
+          "box": "#FFD400"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.67 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(70, 372, 1046, 503), (96, 539, 1086, 640)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "10.0px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 14.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.120",
+            "critical": false
+          },
+          {
+            "check": "poster: legible at 320x180 (cap height >= 10 px)",
+            "pass": true,
+            "detail": "14.4px caps at 320 px wide",
+            "critical": true
+          },
+          {
+            "check": "poster: words stay in the left ~60% (hero owns the right)",
+            "pass": true,
+            "detail": "text right edge 1086px",
+            "critical": false
+          },
+          {
+            "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+            "pass": true,
+            "detail": "0.56",
+            "critical": false
+          },
+          {
+            "check": "poster: the hero side is the brightest (light behind the hero)",
+            "pass": true,
+            "detail": "right 90 vs left 32",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 79",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest the-hidden-business-behind-your-credit-card (distance 0.48)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "framing (series title + company name; education, not advice); no number",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.809,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "the-hidden-business-behind-your-credit-card"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "poster: a giant golden padlock on a chain with a MAY 17 date tag, the shackle about to spring (the lock-up gate)",
+      "archetype": "poster",
+      "file": "thumbnail_poster_A.png",
+      "text": [
+        "THE BIG",
+        "UNLOCK"
+      ],
+      "accent_line": 1,
+      "banner": "red",
+      "claim_basis": "lock_may: up to 3.0bn shares eligible on the earlier of two trading days after the Mar-2027-quarter release and May 17, 2027 (180th day after the Nov 18, 2026 prospectus; 424B4)",
+      "scene": {
+        "backdrop": {
+          "kind": "skyline",
+          "base": 880,
+          "maxH": 380,
+          "sun": [
+            1500,
+            800,
+            220
+          ],
+          "sunColor": "#FF7A3A"
+        },
+        "light": {
+          "x": 1440,
+          "y": 520,
+          "r": 740,
+          "color": "#FFB238",
+          "rays": true
+        },
+        "hero": {
+          "kind": "padlock",
+          "text": "MAY 17",
+          "x": 1400,
+          "y": 560,
+          "s": 0.78
+        },
+        "particles": {
+          "n": 50,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFE3A0"
+        }
+      },
+      "layout": [
+        {
+          "text": "THE BIG",
+          "x": 70,
+          "y": 464.4,
+          "size": 268.6,
+          "width": 1039.3,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4
+        },
+        {
+          "text": "UNLOCK",
+          "x": 119.1,
+          "y": 719.0,
+          "size": 223.2,
+          "width": 938.4,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4,
+          "banner": "#E3201B",
+          "box": "#E3201B"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.60 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(70, 255, 1109, 481), (119, 545, 1058, 732)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "18.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.111",
+            "critical": false
+          },
+          {
+            "check": "poster: legible at 320x180 (cap height >= 10 px)",
+            "pass": true,
+            "detail": "26.8px caps at 320 px wide",
+            "critical": true
+          },
+          {
+            "check": "poster: words stay in the left ~60% (hero owns the right)",
+            "pass": true,
+            "detail": "text right edge 1109px",
+            "critical": false
+          },
+          {
+            "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+            "pass": true,
+            "detail": "0.55",
+            "critical": false
+          },
+          {
+            "check": "poster: the hero side is the brightest (light behind the hero)",
+            "pass": true,
+            "detail": "right 106 vs left 28",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 42",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest anthropics-1-5-trillion-ipo (distance 0.39)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "lock_may: up to 3.0bn shares eligible on the earlier of two trading days after the Mar-2027-quarter release and May 17, 2027 (180th day afte",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.688,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "anthropics-1-5-trillion-ipo"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "poster: the buyer's clipboard (most boxes ticked, one open) in front of the ANT ticker board, deep night rays",
+      "archetype": "poster",
+      "file": "thumbnail_poster_B.png",
+      "text": [
+        "7 THINGS",
+        "TO CHECK"
+      ],
+      "accent_line": 1,
+      "banner": "yellow",
+      "claim_basis": "7 = the number of checklist questions in the film (not a statistic)",
+      "scene": {
+        "backdrop": {
+          "kind": "rays"
+        },
+        "light": {
+          "x": 1440,
+          "y": 540,
+          "r": 760,
+          "color": "#FFC24A",
+          "rays": true
+        },
+        "support": [
+          {
+            "kind": "tickerboard",
+            "text": "ANT",
+            "x": 1560,
+            "y": 260,
+            "s": 0.42
+          }
+        ],
+        "hero": {
+          "kind": "clipboard",
+          "x": 1380,
+          "y": 620,
+          "s": 0.72,
+          "title": "ANT",
+          "rows": 5,
+          "done": 4
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFE3A0"
+        }
+      },
+      "layout": [
+        {
+          "text": "7 THINGS",
+          "x": 70,
+          "y": 473.9,
+          "size": 226.6,
+          "width": 1040.9,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4
+        },
+        {
+          "text": "TO CHECK",
+          "x": 111.2,
+          "y": 687.6,
+          "size": 187.1,
+          "width": 956.5,
+          "anchor": "start",
+          "color": "#05070B",
+          "outline": "#05070B",
+          "rotate": -4,
+          "banner": "#FFD400",
+          "box": "#FFD400"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.60 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(70, 297, 1111, 487), (111, 542, 1068, 699)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "15.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 14.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.128",
+            "critical": false
+          },
+          {
+            "check": "poster: legible at 320x180 (cap height >= 10 px)",
+            "pass": true,
+            "detail": "22.5px caps at 320 px wide",
+            "critical": true
+          },
+          {
+            "check": "poster: words stay in the left ~60% (hero owns the right)",
+            "pass": true,
+            "detail": "text right edge 1111px",
+            "critical": false
+          },
+          {
+            "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+            "pass": true,
+            "detail": "0.75",
+            "critical": false
+          },
+          {
+            "check": "poster: the hero side is the brightest (light behind the hero)",
+            "pass": true,
+            "detail": "right 151 vs left 57",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 37",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest will-ai-make-japan-rich-again (distance 0.46)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "7 = the number of checklist questions in the film (not a statistic)",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.83,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "will-ai-make-japan-rich-again"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-20T16:24:06Z",
+  "master": "output/before-you-buy-anthropic-2026-11/thumbnails/master_P.png"
+}

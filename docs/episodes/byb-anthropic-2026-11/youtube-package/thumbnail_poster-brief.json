@@ -1,0 +1,221 @@
+{
+  "id": "P",
+  "angle": "poster (series look): golden ANT ticker board over a glowing night map, a clipboard checklist in front (the buyer's checklist)",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "BEFORE YOU",
+    "BUY ANTHROPIC"
+  ],
+  "accent_line": 1,
+  "banner": "yellow",
+  "claim_basis": "framing (series title + company name; education, not advice); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "map",
+      "lon": -40,
+      "lat": 30,
+      "arcColor": "#FFB547",
+      "arcs": [
+        [
+          "sf",
+          "london"
+        ],
+        [
+          "sf",
+          "taipei"
+        ],
+        [
+          "london",
+          "amsterdam"
+        ]
+      ]
+    },
+    "light": {
+      "x": 1450,
+      "y": 480,
+      "r": 720,
+      "color": "#FFB238",
+      "rays": true
+    },
+    "rim": {
+      "warm": "#FFD27A",
+      "cool": "#5CC8FF"
+    },
+    "hero": {
+      "kind": "tickerboard",
+      "text": "ANT",
+      "x": 1440,
+      "y": 400,
+      "s": 0.72
+    },
+    "front": [
+      {
+        "kind": "clipboard",
+        "x": 1600,
+        "y": 830,
+        "s": 0.36,
+        "title": "CHECK",
+        "rows": 4,
+        "done": 3,
+        "r": 10
+      }
+    ],
+    "particles": {
+      "n": 60,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFE3A0"
+    }
+  },
+  "layout": [
+    {
+      "text": "BEFORE YOU",
+      "x": 70,
+      "y": 493.5,
+      "size": 156.4,
+      "width": 976.4,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "BUY ANTHROPIC",
+      "x": 96.5,
+      "y": 633.1,
+      "size": 120.3,
+      "width": 989.9,
+      "anchor": "start",
+      "color": "#05070B",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#FFD400",
+      "box": "#FFD400"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.67 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 372, 1046, 503), (96, 539, 1086, 640)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "10.0px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 14.1:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.120",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "14.4px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1086px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.56",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 90 vs left 32",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 79",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest the-hidden-business-behind-your-credit-card (distance 0.48)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "framing (series title + company name; education, not advice); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.809,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "the-hidden-business-behind-your-credit-card"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-20T16:24:05Z"
+}
