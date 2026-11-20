@@ -17,6 +17,7 @@ import {POWERMAP_INDOOR, POWERMAP_ITEMS, POWERMAP_SETS} from './powermap';
 import {SHOVELS_INDOOR, SHOVELS_ITEMS, SHOVELS_SETS} from './shovels';
 import {AITAXES_INDOOR, AITAXES_ITEMS, AITAXES_SETS} from './aitaxes';
 import {BRAZIL_INDOOR, BRAZIL_ITEMS, BRAZIL_SETS} from './brazil';
+import {ANTIPO_INDOOR, ANTIPO_ITEMS, ANTIPO_SETS} from './antipo';
 import {CANADA_INDOOR, CANADA_ITEMS, CANADA_SETS} from './canada';
 
 /**
@@ -2279,9 +2280,10 @@ const SETS: Record<string, SetFn> = {
   ...(SHOVELS_SETS as unknown as Record<string, SetFn>),
   ...(AITAXES_SETS as unknown as Record<string, SetFn>),
   ...(BRAZIL_SETS as unknown as Record<string, SetFn>),
+  ...(ANTIPO_SETS as unknown as Record<string, SetFn>),
   ...(CANADA_SETS as unknown as Record<string, SetFn>),
 };
-const INDOOR = new Set([...BRAZIL_INDOOR, ...SHOVELS_INDOOR, ...CANADA_INDOOR, ...AITAXES_INDOOR, ...POWERMAP_INDOOR, ...JAPAN_INDOOR, ...POWERBILL_INDOOR, ...SITCOM_INDOOR, ...CARS_INDOOR, ...AUTOMATION_INDOOR, ...EUROPE_INDOOR, ...ROBOTSRICH_INDOOR, ...FACTORY_INDOOR, ...DEBT_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
+const INDOOR = new Set([...ANTIPO_INDOOR, ...BRAZIL_INDOOR, ...SHOVELS_INDOOR, ...CANADA_INDOOR, ...AITAXES_INDOOR, ...POWERMAP_INDOOR, ...JAPAN_INDOOR, ...POWERBILL_INDOOR, ...SITCOM_INDOOR, ...CARS_INDOOR, ...AUTOMATION_INDOOR, ...EUROPE_INDOOR, ...ROBOTSRICH_INDOOR, ...FACTORY_INDOOR, ...DEBT_INDOOR, ...HOUSING_INDOOR, ...CLUB_INDOOR, 'trustroom', 'parliament', 'shop', 'pitlane', 'den', 'cabin', 'saloon', 'web', 'exchange', 'newsroom', 'vault', 'court', 'office', 'fab', 'carplant', 'datacenter']);
 
 /* =============================================================================================== ITEMS */
 type Ctx = {t: number; f: number};
@@ -4791,6 +4793,10 @@ const CARI: Record<string, any> = {
   // Lei Jun (Xiaomi founder): short dark hair, casual dark jacket over a plain dark tee. No logos, no mocked features.
   wangcf: {hair: 'side', hairColor: '#1F1C1A', jacket: '#1E2633', shirt: '#F4F6F8', tie: null, skin: '#E2B48E', glasses: false},
   leijun: {hair: 'side', hairColor: '#211D1B', jacket: '#2A2F3A', shirt: '#2A2F3A', tie: null, skin: '#E6B992', glasses: false},
+  // Ep 72 (Anthropic IPO): signature traits only. Dario Amodei: dark curly hair, glasses, casual dark blazer over an open collar.
+  // Daniela Amodei: long dark-brown hair, plain blazer. Respectful, no exaggerated features, no logos.
+  dario: {hair: 'curly', hairColor: '#2B2320', jacket: '#33405A', shirt: '#E9EEF3', tie: null, skin: '#EBC09C', glasses: true},
+  daniela: {hair: 'long', hairColor: '#4A3226', jacket: '#5B5F86', shirt: '#F4F6F8', tie: null, skin: '#EDC4A0', glasses: false},
 };
 const caricature: ItemFn = (a, {t, f}, i) => {
   const x = kf(a.x, t, 960), y = kf(a.y, t, f), s0 = (a.scale ?? 1), app = pop(t, a.at ?? 0, 0.5), fl = a.flip ? -1 : 1;
@@ -4819,6 +4825,8 @@ const caricature: ItemFn = (a, {t, f}, i) => {
     swept: 'M -53 -290 Q -60 -336 -8 -344 Q 46 -348 57 -306 Q 59 -292 53 -288 Q 44 -318 6 -322 Q -32 -322 -53 -290 Z',
     side: 'M -52 -280 Q -56 -340 0 -340 Q 56 -340 52 -280 Q 40 -312 -10 -314 Q -40 -312 -52 -280 Z',
     bald: 'M -48 -300 Q 0 -320 48 -300',
+    curly: 'M -56 -282 Q -70 -300 -56 -318 Q -60 -344 -34 -346 Q -22 -366 2 -354 Q 24 -368 40 -348 Q 66 -346 60 -320 Q 72 -300 56 -282 Q 50 -306 30 -310 Q 0 -322 -30 -310 Q -50 -306 -56 -282 Z',
+    long: 'M -58 -200 Q -72 -260 -60 -310 Q -44 -350 0 -350 Q 44 -350 60 -310 Q 72 -260 58 -200 Q 50 -214 46 -236 Q 50 -290 30 -312 Q 0 -326 -30 -312 Q -50 -290 -46 -236 Q -50 -214 -58 -200 Z',
   };
   const head = <g>
     <ellipse cx={0} cy={-282} rx={54} ry={60} fill={skin} stroke={sil ? 'none' : OL} strokeWidth={4} />
@@ -5242,7 +5250,7 @@ const sapling: ItemFn = (a, {t, f}, i) => {
 
 const ITEMS: Record<string, ItemFn> = {person, dog, tower, building, board, chart, paper, press, docs, contract, coins, vaultdoor, piggy, magnifier,
   plane, sign, gavel, calendar, storm, chair, desk, terminal, letters, arrow: bigArrow, ticker, burst,
-  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(FACTORY_ITEMS as unknown as Record<string, ItemFn>), ...(DEBT_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>), ...(CARS_ITEMS as unknown as Record<string, ItemFn>), ...(AUTOMATION_ITEMS as unknown as Record<string, ItemFn>), ...(EUROPE_ITEMS as unknown as Record<string, ItemFn>), ...(POWERBILL_ITEMS as unknown as Record<string, ItemFn>), ...(JAPAN_ITEMS as unknown as Record<string, ItemFn>), ...(POWERMAP_ITEMS as unknown as Record<string, ItemFn>), ...(SHOVELS_ITEMS as unknown as Record<string, ItemFn>), ...(AITAXES_ITEMS as unknown as Record<string, ItemFn>), ...(BRAZIL_ITEMS as unknown as Record<string, ItemFn>), ...(CANADA_ITEMS as unknown as Record<string, ItemFn>), ...(ROBOTSRICH_ITEMS as unknown as Record<string, ItemFn>)};
+  wafer, litho, pod, arm, conveyor, device, domino, crane, stack, browser, counter, clock, ship, passport, tinsource, mirrors, bus, barrier, rig, racecar, watch, shares, ramstick, pricetag, hbm, imprint, beamsrc, megafab, satellite, osat, vessel, bigphone, pcgrid, wireform, bankisle, balance, gem, tradescreen, burger, restaurant, queue, oiltank, barrel, bigchart, pinboard, isodc, medbill, pills, creditcard, tollbooth, home, zonemap, cart, pallet, diploma, gradcaps, sedan, meter, bumper, van, flowscreens, netmesh, eggcarton, bars, bigcoin, statement, ivbag, yesno, bigcheck, bench, glassbox, rocket, constellation, chipbuddy, stockelevator, detective, emptychair, caricature, bust: bustItem as unknown as ItemFn, freighter, pricedin, riskscale, editionstamp, scorecard, searchbar, barrace, jars, cashfalls, pie, ballots, sapling, ...(SITCOM_ITEMS as unknown as Record<string, ItemFn>), ...(FACTORY_ITEMS as unknown as Record<string, ItemFn>), ...(DEBT_ITEMS as unknown as Record<string, ItemFn>), ...(CLUB_ITEMS as unknown as Record<string, ItemFn>), ...(HOUSING_ITEMS as unknown as Record<string, ItemFn>), ...(CARS_ITEMS as unknown as Record<string, ItemFn>), ...(AUTOMATION_ITEMS as unknown as Record<string, ItemFn>), ...(EUROPE_ITEMS as unknown as Record<string, ItemFn>), ...(POWERBILL_ITEMS as unknown as Record<string, ItemFn>), ...(JAPAN_ITEMS as unknown as Record<string, ItemFn>), ...(POWERMAP_ITEMS as unknown as Record<string, ItemFn>), ...(SHOVELS_ITEMS as unknown as Record<string, ItemFn>), ...(AITAXES_ITEMS as unknown as Record<string, ItemFn>), ...(BRAZIL_ITEMS as unknown as Record<string, ItemFn>), ...(ANTIPO_ITEMS as unknown as Record<string, ItemFn>), ...(CANADA_ITEMS as unknown as Record<string, ItemFn>), ...(ROBOTSRICH_ITEMS as unknown as Record<string, ItemFn>)};
 const BACK = new Set(['restaurant', 'rig', 'tower', 'building', 'board', 'chart', 'vaultdoor', 'desk', 'press', 'chair', 'calendar', 'storm', 'ticker', 'litho', 'imprint', 'megafab', 'crane', 'arm', 'shares']);
 
 /* =============================================================================================== STAGE */

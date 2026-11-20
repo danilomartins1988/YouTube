@@ -1,0 +1,58 @@
+# Visual direction for anthropics-1-5-trillion-ipo (APPLIED by the pipeline; see hiddeneco/visual_direction.py).
+# Ep 72. Day scenes, bespoke worlds in CartoonStage/antipo.tsx. Palette meanings: GOLD = the share and money in, BLUE = money out to suppliers,
+# GREEN = cash actually earned / paper gains, RED = risk and promises, PURPLE = cloud resale. Neutral, never promotional, never alarmist.
+primary_tone: strategy
+secondary_tones:
+- sitcom
+- thriller
+palette:
+  bg: '#F5F6FA'
+  bg2: '#FFFFFF'
+  ink: '#1A2238'
+  muted: '#5E6B85'
+  land: '#A6D08A'
+  border: '#23407A'
+  accent: '#E8A317'
+  accent2: '#2F6FDB'
+  accent3: '#2E9E6B'
+  risk: '#E5483B'
+presenter:
+  demeanor: neutral
+  min_sequences: 4
+chapters:
+- chapter: The trillion-dollar question
+  tone: sitcom
+- chapter: How it got so valuable
+  tone: strategy
+- chapter: The cost of building intelligence
+  tone: strategy
+- chapter: Partners on every side
+  tone: strategy
+- chapter: Who got rich?
+  tone: strategy
+- chapter: Is it worth the price?
+  tone: strategy
+- chapter: The bigger question
+  tone: strategy
+turning_points:
+- segment: c4_critics
+  cue: Circular financing
+  to: thriller
+  why: the criticism gets its own spotlight (full weight, attributed)
+- segment: c6_bear
+  cue: growth slows
+  to: crisis
+  why: the dark road; storm only on that road
+thumbnail:
+  tone: strategy
+  headline:
+  - $1.5T, WORTH IT?
+  idea: a giant golden ANT ticker board on a Wall Street night skyline, a rising gold chart that bends into a warning sign
+requirements:
+- 'No company logos: the company is shown by its ticker ANT and plain-text plaques; companies named in narration'
+- 'NEUTRAL: Anthropic makes the AI model used in this production; bull case, bear case and circular-financing criticism with equal weight; filings and named
+  press only; not investment advice'
+- Every number on screen carries a claim pill (FACT / OUR CALC / REPORTED / OPINION / HYPOTHETICAL / ANALYSIS / STORY)
+- Public figures (Dario and Daniela Amodei, Andy Jassy, Sundar Pichai) only as respectful caricatures with name tags; private people as silhouettes; June
+  is fictional
+- Day scenes, human characters, bespoke worlds (CartoonStage/antipo.tsx); USD only
