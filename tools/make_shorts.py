@@ -140,6 +140,9 @@ SHORTS = {
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
+# Per-Short crop width override (default CROP_W): a wider centre crop keeps edge labels in frame (picture height adapts).
+CROPS = {"byb-anthropic-2026-11-b": 1800, "byb-anthropic-2026-11-c": 1800}
+
 # Extra Shorts cut from a later part of an episode: short id -> (episode docs folder, segment names, package folder)
 CUSTOM = {
     "59-us-debt": ("59-us-debt", ["a2_china", "a2_share"], "youtube-short"),
@@ -339,7 +342,10 @@ def build(ep):
     n = len(picks)
     parts = f"[0:v]scale=1920:1080:flags=lanczos,split={n}" + "".join(f"[s{i}]" for i in range(n)) + ";" + "".join(f"[s{i}]trim={x['start']}:{x['start'] + x['duration']},setpts=PTS-STARTPTS[v{i}];[0:a]atrim={x['start']}:{x['start'] + x['duration']},asetpts=PTS-STARTPTS[a{i}];" for i, x in enumerate(picks))
     cat = "".join(f"[v{i}][a{i}]" for i in range(len(picks))) + f"concat=n={len(picks)}:v=1:a=1[cv][ca]"
-    fc = (parts + cat + f";[cv]crop={CROP_W}:1080,scale={W}:{VID_H}:flags=lanczos[sv];color=c=0x0B0F1A:s={W}x{H}:d={total}[bg];[bg][sv]overlay=0:{VID_Y}:shortest=1[b1];"
+    cw = CROPS.get(ep, CROP_W)
+    vh = int(round(1080 * W / cw / 2) * 2)
+    vy = VID_Y + (VID_H - vh) // 2
+    fc = (parts + cat + f";[cv]crop={cw}:1080,scale={W}:{vh}:flags=lanczos[sv];color=c=0x0B0F1A:s={W}x{H}:d={total}[bg];[bg][sv]overlay=0:{vy}:shortest=1[b1];"
           f"[b1][1:v]overlay=0:0[b2];[b2]ass={work / 'caps.ass'}[outv];[ca]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[outa]")
     body = work / "body.mp4"
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(video), "-loop", "1", "-i", str(work / "top.png"),

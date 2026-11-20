@@ -40,6 +40,15 @@ auction podium (white plaques, studio set, layout inside the Short crop); share 
 "promises vs cash" headline over the bank columns (studio set). Signature sheets: `sheet_s03_list`, `sheet_s06_classes`, `sheet_s18_waves`,
 `sheet_s34_fb`, `sheet_s43_bear`.
 
+Known minor issue (accepted, not re-rendered): in the disclaimer scene the edition stamp sits partly behind the "FILINGS" mascot for its last
+seconds; the same stamp is fully visible in the price scene (s13) and at the end (s44).
+
+## Shorts and thumbnails
+Three Shorts cut from the master before it was deleted; each checked frame by frame in the vertical crop. B (class cards) and C (presenter
+board) clipped edge labels in the default 1520-px crop, so they were recut with a 1800-px crop (`CROPS` in `tools/make_shorts.py`); A fits the
+default crop. Shorts descriptions add "Not investment advice" and the data date. Thumbnails: three poster concepts, QC pass (scores 0.81 /
+0.69 / 0.83); padlock tag and ticker board moved after review so no text touches the art or leaves the frame.
+
 Warnings (accepted): 11 "number word 'one'/'twice'/'third'" notes (not statistics: "one vote", "matters twice", "Third," in a list); 4 pace
 notes (h_maya, c7_meaning, c8_bull, c8_bear at 188-204 wpm; alloy's natural pace); caption reading-speed and short-caption notes.
 Claims awaiting human verification: 7 (status source_located until a named reviewer signs off).

@@ -45,9 +45,9 @@
     "hero": {
       "kind": "tickerboard",
       "text": "ANT",
-      "x": 1440,
-      "y": 400,
-      "s": 0.72
+      "x": 1500,
+      "y": 380,
+      "s": 0.66
     },
     "front": [
       {
@@ -116,7 +116,7 @@
       {
         "check": "file size < 2 MB",
         "pass": true,
-        "detail": "0.67 MB",
+        "detail": "0.68 MB",
         "critical": true
       },
       {
@@ -158,7 +158,7 @@
       {
         "check": "uncluttered (edge density <= 0.16)",
         "pass": true,
-        "detail": "0.120",
+        "detail": "0.123",
         "critical": false
       },
       {
@@ -176,25 +176,25 @@
       {
         "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
         "pass": true,
-        "detail": "0.56",
+        "detail": "0.55",
         "critical": false
       },
       {
         "check": "poster: the hero side is the brightest (light behind the hero)",
         "pass": true,
-        "detail": "right 90 vs left 32",
+        "detail": "right 93 vs left 32",
         "critical": false
       },
       {
         "check": "dominant subject has strong internal contrast",
         "pass": true,
-        "detail": "luma std 79",
+        "detail": "luma std 75",
         "critical": false
       },
       {
         "check": "distinct from other channel thumbnails",
         "pass": true,
-        "detail": "nearest the-hidden-business-behind-your-credit-card (distance 0.48)",
+        "detail": "nearest the-hidden-business-behind-your-credit-card (distance 0.49)",
         "critical": false
       },
       {
@@ -205,7 +205,7 @@
       }
     ],
     "critical_fail": false,
-    "design_score": 0.809,
+    "design_score": 0.81,
     "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
     "needs_human_review": [
       "Subject recognisable at a glance (human)",
@@ -217,5 +217,5 @@
   },
   "backend": "svg-composite (Remotion PosterThumb, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-20T17:00:58Z"
+  "generated": "2026-11-20T17:11:43Z"
 }

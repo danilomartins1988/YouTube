@@ -604,7 +604,7 @@ const HEROES: Record<string, HeroFn> = {
     <g transform="translate(0 -40) rotate(-10)"><path d="M -170 -60 L -170 -250 A 170 170 0 0 1 170 -250 L 170 -150" stroke={`url(#${id}c)`} strokeWidth={70} fill="none" strokeLinecap="round" /></g>
     <rect x={-290} y={-120} width={580} height={470} rx={60} fill={`url(#${id}g)`} stroke={OL} strokeWidth={14} />
     <circle cx={0} cy={60} r={62} fill={OL} /><rect x={-24} y={70} width={48} height={140} rx={20} fill={OL} />
-    {o.text && <g transform="translate(300 260) rotate(14)"><path d="M -40 -20 L 0 -90" stroke="#FFFFFF" strokeWidth={8} />
+    {o.text && <g transform="translate(90 330) rotate(10)"><path d="M -40 -20 L 0 -90" stroke="#FFFFFF" strokeWidth={8} />
       <rect x={-40} y={-30} width={420} height={170} rx={24} fill="#FFFFFF" stroke={OL} strokeWidth={10} />
       <text x={170} y={82} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={96} fill="#C9302C">{o.text}</text></g>}
   </g>,

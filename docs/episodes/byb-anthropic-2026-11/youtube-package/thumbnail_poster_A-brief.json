@@ -32,9 +32,9 @@
     "hero": {
       "kind": "padlock",
       "text": "MAY 17",
-      "x": 1400,
-      "y": 560,
-      "s": 0.78
+      "x": 1480,
+      "y": 540,
+      "s": 0.72
     },
     "particles": {
       "n": 50,
@@ -133,7 +133,7 @@
       {
         "check": "uncluttered (edge density <= 0.16)",
         "pass": true,
-        "detail": "0.111",
+        "detail": "0.110",
         "critical": false
       },
       {
@@ -151,25 +151,25 @@
       {
         "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
         "pass": true,
-        "detail": "0.55",
+        "detail": "0.54",
         "critical": false
       },
       {
         "check": "poster: the hero side is the brightest (light behind the hero)",
         "pass": true,
-        "detail": "right 106 vs left 28",
+        "detail": "right 101 vs left 28",
         "critical": false
       },
       {
         "check": "dominant subject has strong internal contrast",
         "pass": true,
-        "detail": "luma std 42",
+        "detail": "luma std 41",
         "critical": false
       },
       {
         "check": "distinct from other channel thumbnails",
         "pass": true,
-        "detail": "nearest anthropics-1-5-trillion-ipo (distance 0.39)",
+        "detail": "nearest anthropics-1-5-trillion-ipo (distance 0.40)",
         "critical": false
       },
       {
@@ -180,7 +180,7 @@
       }
     ],
     "critical_fail": false,
-    "design_score": 0.688,
+    "design_score": 0.69,
     "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
     "needs_human_review": [
       "Subject recognisable at a glance (human)",
@@ -192,5 +192,5 @@
   },
   "backend": "svg-composite (Remotion PosterThumb, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-20T17:00:58Z"
+  "generated": "2026-11-20T17:11:43Z"
 }

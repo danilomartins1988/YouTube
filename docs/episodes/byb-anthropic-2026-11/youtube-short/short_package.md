@@ -15,6 +15,8 @@ Anthropic Stock: Big Unlock by May 17, 2027 #shorts
 ```
 Next question. When can insiders sell?
 
+Not investment advice. Data as of the Nov 19, 2026 close; sources in the full video.
+
 Watch the full story: "Anthropic Stock Before You Buy: 7 Things to Check (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #anthropic #stocks #ipo #economics
