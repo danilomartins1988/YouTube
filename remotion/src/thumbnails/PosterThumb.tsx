@@ -561,6 +561,42 @@ const HEROES: Record<string, HeroFn> = {
   taxdoc: (o) => <g transform={`rotate(${o.r ?? 8})`}><rect x={-260} y={-340} width={520} height={680} rx={14} fill="#FFFDF5" stroke={OL} strokeWidth={10} />
     <rect x={-260} y={-340} width={520} height={150} fill="#C9302C" /><text x={0} y={-230} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={110} fill="#FFFFFF">TAX</text>
     {[0, 1, 2, 3, 4, 5].map((l) => <rect key={l} x={-200} y={-140 + l * 70} width={l === 5 ? 200 : 400} height={22} fill="#B8C0CC" />)}</g>,
+  /** Ep 72: a stylized ticker board (no logo): the ticker on golden flip tiles, a price row and a glowing screen frame */
+  tickerboard: (o, id) => <g>
+    <defs>{lin(`${id}g`, [[0, '#FFF0A8'], [0.5, '#FFC928'], [1, '#C98A00']], 0, 1)}{lin(`${id}s`, [[0, '#13254A'], [1, '#060C1C']])}</defs>
+    <rect x={-470} y={-300} width={940} height={600} rx={46} fill={`url(#${id}s)`} stroke="#FFD45C" strokeWidth={14} />
+    {(o.text ?? 'ANT').split('').map((ch: string, k: number, a: string[]) => <g key={k} transform={`translate(${(k - (a.length - 1) / 2) * 270} -50)`}>
+      <rect x={-120} y={-170} width={240} height={300} rx={22} fill={`url(#${id}g)`} stroke={OL} strokeWidth={10} />
+      <path d="M -120 -20 L 120 -20" stroke="#7A5200" strokeWidth={8} />
+      <text x={0} y={90} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={250} fill={OL}>{ch}</text></g>)}
+    {o.price && <text x={0} y={250} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontStyle="italic" fontSize={92} fill="#7CF29C">{o.price}</text>}
+  </g>,
+  /** Ep 72: a rising gold chart line that bends over into a red warning sign (tension cue) */
+  warnchart: (o, id) => <g>
+    <path d="M -520 300 L -300 160 L -160 210 L 60 -40 L 220 -150" stroke="#FFC24A" strokeWidth={46} fill="none" strokeLinecap="round" strokeLinejoin="round" filter="url(#pglow)" />
+    <path d="M -520 300 L -300 160 L -160 210 L 60 -40 L 220 -150" stroke="#FFFFFF" strokeWidth={12} fill="none" strokeLinecap="round" strokeLinejoin="round" opacity={0.8} />
+    <g transform="translate(330 -260)"><polygon points="0,-190 200,150 -200,150" fill="#E3201B" stroke="#FFFFFF" strokeWidth={16} strokeLinejoin="round" filter="url(#pglow)" />
+      <rect x={-22} y={-90} width={44} height={150} rx={18} fill="#FFFFFF" /><circle cx={0} cy={105} r={26} fill="#FFFFFF" /></g>
+  </g>,
+  /** Ep 72: a giant soap bubble with a golden share ticket inside and a pin closing in */
+  bubble: (o, id) => <g>
+    <defs>{rad(`${id}b`, [[0, '#FFFFFF', 0.05], [0.7, '#9FD8FF', 0.18], [0.92, '#E8B4FF', 0.55], [1, '#FFFFFF', 0.9]], 0.45, 0.42, 0.55)}{lin(`${id}g`, [[0, '#FFF0A8'], [0.5, '#FFC928'], [1, '#D99A00']], 1, 1)}</defs>
+    <g transform="rotate(-8)"><path d="M -230 -130 L 230 -130 Q 230 -95 262 -78 L 262 78 Q 230 95 230 130 L -230 130 Q -230 95 -262 78 L -262 -78 Q -230 -95 -230 -130 Z" fill={`url(#${id}g)`} stroke={OL} strokeWidth={12} strokeLinejoin="round" />
+      <text x={0} y={60} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={150} fill={OL}>{o.text ?? 'ANT'}</text></g>
+    <circle r={430} fill={`url(#${id}b)`} stroke="#FFFFFF" strokeWidth={8} opacity={0.95} />
+    <path d="M -250 -260 Q -120 -360 40 -360" stroke="#FFFFFF" strokeWidth={26} fill="none" strokeLinecap="round" opacity={0.85} />
+    {o.pin !== false && <g transform="translate(470 -360) rotate(-35)"><rect x={-10} y={-10} width={300} height={20} rx={8} fill="#D7DEE6" stroke={OL} strokeWidth={6} />
+      <path d="M -10 -10 L -60 0 L -10 10 Z" fill="#D7DEE6" stroke={OL} strokeWidth={5} /><circle cx={300} cy={0} r={52} fill="#E3201B" stroke={OL} strokeWidth={8} /></g>}
+  </g>,
+  /** Ep 72: the money loop: two curved arrows chasing each other around a golden coin */
+  loop: (o, id) => <g>
+    <path d="M -380 -60 A 380 300 0 0 1 300 -200" stroke="#FFC24A" strokeWidth={70} fill="none" strokeLinecap="round" filter="url(#pglow)" />
+    <polygon points="380,-250 230,-300 290,-120" fill="#FFC24A" stroke="#FFFFFF" strokeWidth={8} strokeLinejoin="round" />
+    <path d="M 380 60 A 380 300 0 0 1 -300 200" stroke="#4FB3FF" strokeWidth={70} fill="none" strokeLinecap="round" filter="url(#pglow)" />
+    <polygon points="-380,250 -230,300 -290,120" fill="#4FB3FF" stroke="#FFFFFF" strokeWidth={8} strokeLinejoin="round" />
+    <circle r={170} fill="#FFC928" stroke={OL} strokeWidth={14} /><circle r={128} fill="none" stroke="#7A5200" strokeWidth={8} />
+    <text x={0} y={62} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={190} fill={OL}>$</text>
+  </g>,
 };
 
 const HeroNode: React.FC<{o: Obj; i: number; fx: boolean}> = ({o, i, fx}) => {

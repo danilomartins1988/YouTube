@@ -1,0 +1,59 @@
+# Thumbnail creative brief (Ep 72). Owner brief: Anthropic logo centre, huge gold "$1.5 TRILLION", Wall Street background, a rising chart that
+# turns into a warning sign, text "$1.5T — WORTH IT?". Channel rules applied: NO LOGOS (the logo is replaced by a stylized ticker board
+# reading ANT; the owner may add the official logo by hand, see README), no em dash in text (comma instead), at most 4 words, poster archetype
+# (docs/thumbnails/OWNER_STYLE.md). No real person on any concept (neutrality and likeness rules). Every number from FACT_CHECK.md.
+title: "Anthropic's $1.5 Trillion IPO: The AI Gold Rush or the Next Bubble?"
+docs_dir: docs/episodes/72-anthropic-ipo
+video: output/anthropicipo_documentary.mp4
+deliverable: documentary
+status: completed
+default: P
+analysis:
+  mystery: Did Wall Street buy the next great technology company, or pay an extraordinary price for a future that has not happened yet?
+  surprising_fact: about $1.5 trillion fully diluted at the $83 offer price, for a company founded in 2021 that committed about $900 billion to future compute
+  subject: a golden ticker board reading ANT on a dusk Wall Street skyline, a rising chart that bends into a warning sign
+  tone: strategy
+  metaphor: one share at a fork in the road
+  public_figure: null
+concepts:
+- id: P
+  angle: 'poster (owner model): golden ANT ticker board over a dusk Wall Street skyline; a rising gold chart that ends in a red warning sign'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: ['$1.5T,', 'WORTH IT?']
+  accent_line: 1
+  banner: yellow
+  claim_basis: '$1.5T = fully diluted market value at the $83 offer price (CNBC, Nov 18, 2026; FACT_CHECK.md claim ipo_fdv); WORTH IT? = the question the film answers'
+  scene:
+    backdrop: {kind: skyline, base: 860, maxH: 420, sun: [1500, 760, 240], sunColor: '#FF7A3A'}
+    light: {x: 1450, y: 470, r: 760, color: '#FFB238', rays: true}
+    hero: {kind: tickerboard, text: ANT, price: '$97.17', x: 1440, y: 430, s: 0.62}
+    front:
+    - {kind: warnchart, x: 1400, y: 840, s: 0.62}
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 4, color: '#FFE3A0'}
+- id: A
+  angle: 'poster: the money loop: a gold arrow and a blue arrow chasing each other around a coin, over a glowing night map'
+  archetype: poster
+  file: thumbnail_poster_A.png
+  text: ['THE AI', 'MONEY LOOP']
+  accent_line: 1
+  banner: red
+  claim_basis: 'a description of chapter four (investors who are also suppliers and sellers; the circular-financing criticism, attributed); no number'
+  scene:
+    backdrop: {kind: map}
+    light: {x: 1450, y: 540, r: 700, color: '#4FB3FF'}
+    hero: {kind: loop, x: 1450, y: 540, s: 0.95}
+    particles: {n: 50, region: [900, 0, 1920, 1080], size: 4, color: '#BFE6FF'}
+- id: B
+  angle: 'poster: a golden ANT share ticket inside a giant soap bubble, a pin closing in'
+  archetype: poster
+  file: thumbnail_poster_B.png
+  text: ['GOLD RUSH', 'OR BUBBLE?']
+  accent_line: 1
+  banner: red
+  claim_basis: 'the title question; the film answers it (neither label fits by definition; the price assumes very long growth); no number'
+  scene:
+    backdrop: {kind: rays}
+    light: {x: 1440, y: 540, r: 760, color: '#FFC24A', rays: true}
+    hero: {kind: bubble, text: ANT, x: 1440, y: 560, s: 0.92}
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 4, color: '#FFE3A0'}
