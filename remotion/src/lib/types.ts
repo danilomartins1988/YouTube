@@ -41,5 +41,7 @@ export type Props = {
   scenes: SceneSpec[];
   /** game HUD: mission names and objectives (scene.params.mission = 1..N; N+1 = all complete) */
   hud?: {missions: string[]; objectives?: string[]};
+  /** call-to-action overlays (docs/CTA_STANDARD.md): the SUBSCRIBE/LIKE widget in a lower corner from `at` seconds for 4 s */
+  cta?: {at: number; corner?: 'left' | 'right'; like?: boolean}[];
   geo?: Record<string, {view: [number, number, number, number]; paths: Record<string, string>; labels?: Record<string, [number, number]>}>;
 };

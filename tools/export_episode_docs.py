@@ -44,6 +44,7 @@ DESCRIBE = {
     "domino": "Hypothetical disruption: a red wave leaves the source node and each connected industry turns red, shakes and tips; impact tags and a real precedent panel",
     "presenter": "Animated presenter walks to the board and draws (marker tip on the path), writes, builds charts, draws maps, pins, carries objects and points",
     "channel_intro": "The channel's 5-second cinematic intro",
+    "cta_card": "Narrated call to action: animated SUBSCRIBE / LIKE card (docs/CTA_STANDARD.md)",
     "landscape": "Competitive matrix: a cursor selects each dimension and cells type in; then options slide onto a conceptual flexibility-vs-specialisation axis",
 }
 

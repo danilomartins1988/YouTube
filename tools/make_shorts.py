@@ -271,7 +271,7 @@ def pick_segments(ep):
         seg, typ = x["scene"]["segment"], x["scene"]["type"]
         if typ == "act_title" or seg.endswith("_card"):
             break
-        if seg == "channel_intro" or typ == "channel_intro":
+        if seg in ("channel_intro", "cta_subscribe", "cta_like") or typ in ("channel_intro", "cta_card"):
             continue
         if picks and total + x["duration"] > MAX_SECONDS:
             break

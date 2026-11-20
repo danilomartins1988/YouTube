@@ -17,11 +17,11 @@ Every figure is sourced: Costco's fiscal 2026 Form 10-K (52 weeks ended Aug 30, 
 
 Chapters
 0:00 Cold open
-1:07 The thinnest margin
-2:57 The membership desk
-5:32 The treasure hunt
-7:31 The dollar-fifty hot dog
-9:47 Who pays the bill
+1:15 The thinnest margin
+3:05 The membership desk
+5:40 The treasure hunt
+7:39 The dollar-fifty hot dog
+9:55 Who pays the bill
 
 Sources
 Costco Wholesale Corporation (SEC filings: Form 10-K FY2026, FY2017, FY2012; 8-Ks of Sep 24, 2026, Nov 10, 2026 and Jul 10, 2024; 2012 proxy; 2025 Annual Report); CNN (via ABC7, May 31, 2024).
@@ -33,11 +33,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 0:00 Cold open
-1:07 The thinnest margin
-2:57 The membership desk
-5:32 The treasure hunt
-7:31 The dollar-fifty hot dog
-9:47 Who pays the bill
+1:15 The thinnest margin
+3:05 The membership desk
+5:40 The treasure hunt
+7:39 The dollar-fifty hot dog
+9:55 Who pays the bill
 ```
 
 ## Tags

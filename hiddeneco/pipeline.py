@@ -73,6 +73,11 @@ def prepare(paths: ProjectPaths, d):
         if draw.get("intro") is not None:              # a deliverable may override the project setting
             proj = {**proj, "intro": draw["intro"] if isinstance(draw["intro"], dict) else {"enabled": bool(draw["intro"])}}
         sc, sb, intro_after = insert_intro(proj, sc, sb, render=lambda x: script_mod.render_text(x, d))
+        # narrated call to action (docs/CTA_STANDARD.md): subscribe ask right before the intro, like ask before the end card
+        from hiddeneco.cta import insert_cta
+        sc, sb, cta_added = insert_cta(proj, sc, sb)
+        if cta_added:
+            log("cta.inserted", segments=cta_added)
         # adaptive visual tone: the story's visual direction plan sets tone / tone shifts / presenter demeanour
         from hiddeneco import visual_direction as vdir
         toned = vdir.apply(vdir.load(paths.project_dir, paths.deliverable_dir), sc, sb)

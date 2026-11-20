@@ -3,6 +3,7 @@ import {NewsCover, NewsShort} from './brand/NewsShort';
 import {ChannelAvatar, ChannelBanner, ChannelWatermark} from './brand/ChannelArt';
 import React from 'react';
 import {Composition} from 'remotion';
+import {CTA_H, CTA_SECONDS, CTA_W, CTACard, SubscribeCTA} from './brand/SubscribeCTA';
 import {Documentary} from './Documentary';
 import {Thumbnail} from './Thumbnail';
 import {ToneThumbnail} from './ToneThumbnail';
@@ -102,6 +103,12 @@ export const RemotionRoot: React.FC = () => (
     height={1080}
     durationInFrames={1}
   />
+  {/* channel call to action (docs/CTA_STANDARD.md): transparent overlay asset + full-frame narrated card */}
+  <Composition id="SubscribeCTA" component={SubscribeCTA as unknown as React.FC<Record<string, unknown>>} defaultProps={{like: true}}
+    fps={30} width={CTA_W} height={CTA_H} durationInFrames={CTA_SECONDS * 30} />
+  <Composition id="CTACard" component={CTACard as unknown as React.FC<Record<string, unknown>>} defaultProps={{kind: 'subscribe', seconds: 5}}
+    fps={30} width={1920} height={1080} durationInFrames={150}
+    calculateMetadata={({props}) => ({durationInFrames: Math.max(30, Math.round(Number((props as any).seconds ?? 5) * 30))})} />
   <Composition
     id="Intro"
     component={TheHiddenEconomicsIntro}

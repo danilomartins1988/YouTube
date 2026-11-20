@@ -13,6 +13,7 @@ import {Isometric} from './scenes/Isometric';
 import {Circuit, RaceTrack} from './scenes/RaceScenes';
 import {Whiteboard} from './scenes/Whiteboard';
 import {IntroArt} from './brand/TheHiddenEconomicsIntro';
+import {CTACardArt, CTAOverlayLayer} from './brand/SubscribeCTA';
 import {PresenterScene} from './presenter/Presenter';
 import {AINetwork, CpuGpu, Domino, Landscape, Stack, StackedColumns, SupplyChain, TimelineNetwork} from './scenes/TechScenes';
 
@@ -22,15 +23,18 @@ export const SCENES: Record<string, React.FC> = {
   oil_platform: OilPlatform, map: MapScene, fund_flow: FundFlow, isometric: Isometric,
   race_track: RaceTrack, circuit: Circuit, whiteboard: Whiteboard,
   channel_intro: () => { const {t, W, H} = useCtx(); return <IntroArt t={t} W={W} H={H} />; },
+  // narrated call to action (docs/CTA_STANDARD.md), inserted by hiddeneco/cta.py right before the channel intro
+  cta_card: () => { const {t, W, H, scene} = useCtx(); const p = scene.params || {};
+    return <CTACardArt t={t} dur={scene.duration} W={W} H={H} kind={p.kind} top={p.top} bottom={p.bottom} />; },
   presenter: PresenterScene,
   ai_network: AINetwork, cpu_gpu: CpuGpu, stack: Stack, supply_chain: SupplyChain, stacked_columns: StackedColumns, landscape: Landscape,
   timeline_network: TimelineNetwork, domino: Domino,
   ...ENGINE_SCENES,
 };
 // Scene types that paint their own full-frame background.
-const OWN_BG = new Set(['oil_platform', 'map', 'race_track', 'whiteboard', 'supply_chain', 'channel_intro', 'engine_draw', 'engine_map', 'engine_cartoon']);
+const OWN_BG = new Set(['cta_card', 'oil_platform', 'map', 'race_track', 'whiteboard', 'supply_chain', 'channel_intro', 'engine_draw', 'engine_map', 'engine_cartoon']);
 // Scene types that are self-contained (no chrome, no scene fades or wipes): the channel intro.
-const BARE = new Set(['channel_intro']);
+const BARE = new Set(['channel_intro', 'cta_card']);
 
 const SceneView: React.FC<{scene: SceneSpec; props: Props}> = ({scene, props}) => {
   const frame = useCurrentFrame();
@@ -77,6 +81,7 @@ export const Documentary: React.FC<Props> = (props) => {
           from += dur;
           return el;
         })}
+        {props.cta && props.cta.length > 0 && <CTAOverlayLayer cues={props.cta} />}
       </AbsoluteFill>
     </GeoCtx.Provider>
   );

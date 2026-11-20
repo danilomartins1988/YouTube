@@ -43,10 +43,21 @@ def build_props(timed: list[TimedScene], style: dict, credits: dict[str, list[st
             "credits": credits.get(ts.scene.id, []), "chapter": ts.scene.params.get("chapter", ""),
         })
     geo = {name: json.loads((GEO_DIR / f"remotion_{name}.json").read_text()) for name in geo_layers}
+    # optional corner SUBSCRIBE / LIKE overlay on any scene (docs/CTA_STANDARD.md): params.cta_overlay = {cue: "...",
+    # corner: left|right} (or a bare cue string); shown for 4 s from the cue
+    cta = []
+    from hiddeneco import timing
+    for ts in timed:
+        o = ts.scene.params.get("cta_overlay")
+        if o:
+            o = {"cue": o} if isinstance(o, str) else dict(o)
+            at = timing.cue_time(ts.words, o["cue"]) if o.get("cue") else float(o.get("at", 0.0))
+            if at is not None:
+                cta.append({"at": round(ts.start + at, 3), "corner": o.get("corner", "right"), "like": o.get("like", True)})
     return {"fps": fps, "width": fmt["width"], "height": fmt["height"], "palette": style["palette"], "fonts": fonts,
             "brand": "The Hidden Economics", "scenes": scenes, "geo": geo,
             "transition": style.get("transition", "fade"), "background": style.get("background", "grid"),
-            **({"hud": style["hud"]} if style.get("hud") else {})}
+            **({"hud": style["hud"]} if style.get("hud") else {}), **({"cta": cta} if cta else {})}
 
 
 def ensure_installed() -> None:

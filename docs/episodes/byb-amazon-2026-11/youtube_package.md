@@ -19,11 +19,11 @@ Every figure comes from Amazon's 10-Q, 10-K and earnings releases on SEC EDGAR, 
 Chapters
 0:00 Three trillion
 1:24 The machine
-3:51 The cash
-6:18 What's priced in
-8:09 What has to happen
-9:30 Risks and upside
-11:31 The scorecard
+3:59 The cash
+6:26 What's priced in
+8:17 What has to happen
+9:38 Risks and upside
+11:39 The scorecard
 
 Sources
 - Amazon.com, Inc. (SEC filing): Amazon Form 10-Q for Q3 2026 (quarter ended September 30, 2026) - https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm
@@ -38,11 +38,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Three trillion
 1:24 The machine
-3:51 The cash
-6:18 What's priced in
-8:09 What has to happen
-9:30 Risks and upside
-11:31 The scorecard
+3:59 The cash
+6:26 What's priced in
+8:17 What has to happen
+9:38 Risks and upside
+11:39 The scorecard
 ```
 
 ## Tags
