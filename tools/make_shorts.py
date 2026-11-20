@@ -134,6 +134,9 @@ SHORTS = {
     "72-anthropic-ipo-b": ("anthropics-1-5-trillion-ipo", "documentary", "anthropicipo_documentary", "AMAZON INVESTS.", "THEN GETS PAID", "Amazon Invests in Anthropic, Then Anthropic Pays Amazon", "#anthropic #amazon #ai"),
     "72-anthropic-ipo-c": ("anthropics-1-5-trillion-ipo", "documentary", "anthropicipo_documentary", "THE $1.5 TRILLION", "QUESTION", "The $1.5 Trillion Question Nobody Can Answer", "#anthropic #aibubble #stocks"),
     "72-anthropic-ipo-d": ("anthropics-1-5-trillion-ipo", "documentary", "anthropicipo_documentary_light", "WHO REALLY GOT RICH", "FROM THE BIGGEST IPO?", "Who Really Got Rich From Anthropic's IPO?", "#anthropic #ipo #stocks"),
+    "byb-anthropic-2026-11": ("before-you-buy-anthropic-2026-11", "documentary", "bybant_documentary", "MAY 17, 2027:", "THE BIG UNLOCK", "Anthropic Stock: Big Unlock by May 17, 2027", "#anthropic #stocks #ipo"),
+    "byb-anthropic-2026-11-b": ("before-you-buy-anthropic-2026-11", "documentary", "bybant_documentary", "YOUR ANT SHARE:", "WHO HAS THE VOTES?", "Anthropic Stock: Who Votes?", "#anthropic #stocks #investing"),
+    "byb-anthropic-2026-11-c": ("before-you-buy-anthropic-2026-11", "documentary", "bybant_documentary", "ANTHROPIC'S FIRST", "REPORT CARD", "Anthropic's First Report Card: 4 Things to Watch", "#anthropic #earnings #stocks"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -177,6 +180,9 @@ CUSTOM = {
     "72-anthropic-ipo-b": ("72-anthropic-ipo", ["c4_amazon", "c4_loop"], "youtube-short-b"),
     "72-anthropic-ipo-c": ("72-anthropic-ipo", ["c6_multiple", "c6_need", "c6_roads"], "youtube-short-c"),
     "72-anthropic-ipo-d": ("72-anthropic-ipo", ["c5_vc", "c5_staff", "c5_lock"], "youtube-short-d"),
+    "byb-anthropic-2026-11": ("byb-anthropic-2026-11", ["c3_waves", "c3_gate", "c3_size"], "youtube-short"),
+    "byb-anthropic-2026-11-b": ("byb-anthropic-2026-11", ["c1_classes", "c1_votes"], "youtube-short-b"),
+    "byb-anthropic-2026-11-c": ("byb-anthropic-2026-11", ["c4_draw", "c4_cost"], "youtube-short-c"),
 }
 
 
