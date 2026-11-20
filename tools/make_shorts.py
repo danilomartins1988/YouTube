@@ -133,6 +133,7 @@ SHORTS = {
     "72-anthropic-ipo": ("anthropics-1-5-trillion-ipo", "documentary", "anthropicipo_documentary", "THE BIGGEST IPO", "ON RECORD", "Anthropic Just Pulled Off the Biggest IPO Ever", "#anthropic #ipo #stocks"),
     "72-anthropic-ipo-b": ("anthropics-1-5-trillion-ipo", "documentary", "anthropicipo_documentary", "AMAZON INVESTS.", "THEN GETS PAID", "Amazon Invests in Anthropic, Then Anthropic Pays Amazon", "#anthropic #amazon #ai"),
     "72-anthropic-ipo-c": ("anthropics-1-5-trillion-ipo", "documentary", "anthropicipo_documentary", "THE $1.5 TRILLION", "QUESTION", "The $1.5 Trillion Question Nobody Can Answer", "#anthropic #aibubble #stocks"),
+    "72-anthropic-ipo-d": ("anthropics-1-5-trillion-ipo", "documentary", "anthropicipo_documentary_light", "WHO REALLY GOT RICH", "FROM THE BIGGEST IPO?", "Who Really Got Rich From Anthropic's IPO?", "#anthropic #ipo #stocks"),
     "21-citibank": ("the-bank-that-accidentally-sent-900-million", "documentary", "citibank_documentary", "A BANK SENT $900M", "BY MISTAKE", "The Bank That Accidentally Sent $900 Million", "#citibank #banking #finance"),
 }
 
@@ -175,6 +176,7 @@ CUSTOM = {
     "72-anthropic-ipo": ("72-anthropic-ipo", ["c1_day", "c1_raise"], "youtube-short"),
     "72-anthropic-ipo-b": ("72-anthropic-ipo", ["c4_amazon", "c4_loop"], "youtube-short-b"),
     "72-anthropic-ipo-c": ("72-anthropic-ipo", ["c6_multiple", "c6_need", "c6_roads"], "youtube-short-c"),
+    "72-anthropic-ipo-d": ("72-anthropic-ipo", ["c5_vc", "c5_staff", "c5_lock"], "youtube-short-d"),
 }
 
 
