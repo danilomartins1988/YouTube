@@ -1,0 +1,186 @@
+{
+  "id": "A",
+  "angle": "poster: the money loop: a gold arrow and a blue arrow chasing each other around a coin, over a glowing night map",
+  "archetype": "poster",
+  "file": "thumbnail_poster_A.png",
+  "text": [
+    "THE AI",
+    "MONEY LOOP"
+  ],
+  "accent_line": 1,
+  "banner": "red",
+  "claim_basis": "a description of chapter four (investors who are also suppliers and sellers; the circular-financing criticism, attributed); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "map"
+    },
+    "light": {
+      "x": 1450,
+      "y": 540,
+      "r": 700,
+      "color": "#4FB3FF"
+    },
+    "hero": {
+      "kind": "loop",
+      "x": 1450,
+      "y": 540,
+      "s": 0.95
+    },
+    "particles": {
+      "n": 50,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#BFE6FF"
+    }
+  },
+  "layout": [
+    {
+      "text": "THE AI",
+      "x": 70,
+      "y": 487.7,
+      "size": 191.1,
+      "width": 619.7,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "MONEY LOOP",
+      "x": 102.3,
+      "y": 658.2,
+      "size": 147.0,
+      "width": 976.5,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#E3201B",
+      "box": "#E3201B"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.72 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 339, 690, 499), (102, 544, 1079, 667)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "12.2px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 4.7:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.092",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "17.6px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1079px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.82",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 99 vs left 31",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 43",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest who-actually-gets-the-tariff-refund (distance 0.39)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a description of chapter four (investors who are also suppliers and sellers; the circular-financing criticism, attributed); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.674,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "who-actually-gets-the-tariff-refund"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-20T11:43:07Z"
+}

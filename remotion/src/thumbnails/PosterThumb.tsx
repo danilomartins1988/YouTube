@@ -585,7 +585,7 @@ const HEROES: Record<string, HeroFn> = {
       <text x={0} y={60} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={150} fill={OL}>{o.text ?? 'ANT'}</text></g>
     <circle r={430} fill={`url(#${id}b)`} stroke="#FFFFFF" strokeWidth={8} opacity={0.95} />
     <path d="M -250 -260 Q -120 -360 40 -360" stroke="#FFFFFF" strokeWidth={26} fill="none" strokeLinecap="round" opacity={0.85} />
-    {o.pin !== false && <g transform="translate(470 -360) rotate(-35)"><rect x={-10} y={-10} width={300} height={20} rx={8} fill="#D7DEE6" stroke={OL} strokeWidth={6} />
+    {o.pin !== false && <g transform="translate(330 -400) rotate(-40)"><rect x={-10} y={-10} width={300} height={20} rx={8} fill="#D7DEE6" stroke={OL} strokeWidth={6} />
       <path d="M -10 -10 L -60 0 L -10 10 Z" fill="#D7DEE6" stroke={OL} strokeWidth={5} /><circle cx={300} cy={0} r={52} fill="#E3201B" stroke={OL} strokeWidth={8} /></g>}
   </g>,
   /** Ep 72: the money loop: two curved arrows chasing each other around a golden coin */

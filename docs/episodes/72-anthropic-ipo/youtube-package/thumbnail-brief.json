@@ -1,0 +1,593 @@
+{
+  "title": "Anthropic's $1.5 Trillion IPO: The AI Gold Rush or the Next Bubble?",
+  "docs_dir": "docs/episodes/72-anthropic-ipo",
+  "video": "output/anthropicipo_documentary.mp4",
+  "deliverable": "documentary",
+  "status": "completed",
+  "default": "P",
+  "analysis": {
+    "mystery": "Did Wall Street buy the next great technology company, or pay an extraordinary price for a future that has not happened yet?",
+    "surprising_fact": "about $1.5 trillion fully diluted at the $83 offer price, for a company founded in 2021 that committed about $900 billion to future compute",
+    "subject": "a golden ticker board reading ANT on a dusk Wall Street skyline, a rising chart that bends into a warning sign",
+    "tone": "strategy",
+    "metaphor": "one share at a fork in the road",
+    "public_figure": null
+  },
+  "slug": "anthropics-1-5-trillion-ipo",
+  "concepts": [
+    {
+      "id": "P",
+      "angle": "poster (owner model): golden ANT ticker board over a dusk Wall Street skyline; a rising gold chart that ends in a red warning sign",
+      "archetype": "poster",
+      "file": "thumbnail_poster.png",
+      "text": [
+        "$1.5T,",
+        "WORTH IT?"
+      ],
+      "accent_line": 1,
+      "banner": "yellow",
+      "claim_basis": "$1.5T = fully diluted market value at the $83 offer price (CNBC, Nov 18, 2026; FACT_CHECK.md claim ipo_fdv); WORTH IT? = the question the film answers",
+      "scene": {
+        "backdrop": {
+          "kind": "skyline",
+          "base": 860,
+          "maxH": 420,
+          "sun": [
+            1500,
+            760,
+            240
+          ],
+          "sunColor": "#FF7A3A"
+        },
+        "light": {
+          "x": 1450,
+          "y": 470,
+          "r": 760,
+          "color": "#FFB238",
+          "rays": true
+        },
+        "hero": {
+          "kind": "tickerboard",
+          "text": "ANT",
+          "price": "$97.17",
+          "x": 1440,
+          "y": 430,
+          "s": 0.62
+        },
+        "front": [
+          {
+            "kind": "warnchart",
+            "x": 1400,
+            "y": 840,
+            "s": 0.62
+          }
+        ],
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFE3A0"
+        }
+      },
+      "layout": [
+        {
+          "text": "$1.5T,",
+          "x": 70,
+          "y": 481.5,
+          "size": 227.6,
+          "width": 653.5,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4
+        },
+        {
+          "text": "WORTH IT?",
+          "x": 108.5,
+          "y": 684.6,
+          "size": 175.1,
+          "width": 962.4,
+          "anchor": "start",
+          "color": "#05070B",
+          "outline": "#05070B",
+          "rotate": -4,
+          "banner": "#FFD400",
+          "box": "#FFD400"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.63 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "3 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(70, 304, 724, 495), (108, 548, 1071, 695)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "14.6px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 14.1:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.119",
+            "critical": false
+          },
+          {
+            "check": "poster: legible at 320x180 (cap height >= 10 px)",
+            "pass": true,
+            "detail": "21.0px caps at 320 px wide",
+            "critical": true
+          },
+          {
+            "check": "poster: words stay in the left ~60% (hero owns the right)",
+            "pass": true,
+            "detail": "text right edge 1071px",
+            "critical": false
+          },
+          {
+            "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+            "pass": true,
+            "detail": "0.55",
+            "critical": false
+          },
+          {
+            "check": "poster: the hero side is the brightest (light behind the hero)",
+            "pass": true,
+            "detail": "right 81 vs left 27",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 70",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest why-norway-is-so-rich (distance 0.47)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "$1.5T = fully diluted market value at the $83 offer price (CNBC, Nov 18, 2026; FACT_CHECK.md claim ipo_fdv); WORTH IT? = the question the fi",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.878,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "why-norway-is-so-rich"
+      }
+    },
+    {
+      "id": "A",
+      "angle": "poster: the money loop: a gold arrow and a blue arrow chasing each other around a coin, over a glowing night map",
+      "archetype": "poster",
+      "file": "thumbnail_poster_A.png",
+      "text": [
+        "THE AI",
+        "MONEY LOOP"
+      ],
+      "accent_line": 1,
+      "banner": "red",
+      "claim_basis": "a description of chapter four (investors who are also suppliers and sellers; the circular-financing criticism, attributed); no number",
+      "scene": {
+        "backdrop": {
+          "kind": "map"
+        },
+        "light": {
+          "x": 1450,
+          "y": 540,
+          "r": 700,
+          "color": "#4FB3FF"
+        },
+        "hero": {
+          "kind": "loop",
+          "x": 1450,
+          "y": 540,
+          "s": 0.95
+        },
+        "particles": {
+          "n": 50,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#BFE6FF"
+        }
+      },
+      "layout": [
+        {
+          "text": "THE AI",
+          "x": 70,
+          "y": 487.7,
+          "size": 191.1,
+          "width": 619.7,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4
+        },
+        {
+          "text": "MONEY LOOP",
+          "x": 102.3,
+          "y": 658.2,
+          "size": 147.0,
+          "width": 976.5,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4,
+          "banner": "#E3201B",
+          "box": "#E3201B"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.72 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(70, 339, 690, 499), (102, 544, 1079, 667)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "12.2px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.092",
+            "critical": false
+          },
+          {
+            "check": "poster: legible at 320x180 (cap height >= 10 px)",
+            "pass": true,
+            "detail": "17.6px caps at 320 px wide",
+            "critical": true
+          },
+          {
+            "check": "poster: words stay in the left ~60% (hero owns the right)",
+            "pass": true,
+            "detail": "text right edge 1079px",
+            "critical": false
+          },
+          {
+            "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+            "pass": true,
+            "detail": "0.82",
+            "critical": false
+          },
+          {
+            "check": "poster: the hero side is the brightest (light behind the hero)",
+            "pass": true,
+            "detail": "right 99 vs left 31",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 43",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest who-actually-gets-the-tariff-refund (distance 0.39)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "a description of chapter four (investors who are also suppliers and sellers; the circular-financing criticism, attributed); no number",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.674,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "who-actually-gets-the-tariff-refund"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "poster: a golden ANT share ticket inside a giant soap bubble, a pin closing in",
+      "archetype": "poster",
+      "file": "thumbnail_poster_B.png",
+      "text": [
+        "GOLD RUSH",
+        "OR BUBBLE?"
+      ],
+      "accent_line": 1,
+      "banner": "red",
+      "claim_basis": "the title question; the film answers it (neither label fits by definition; the price assumes very long growth); no number",
+      "scene": {
+        "backdrop": {
+          "kind": "rays"
+        },
+        "light": {
+          "x": 1440,
+          "y": 540,
+          "r": 760,
+          "color": "#FFC24A",
+          "rays": true
+        },
+        "hero": {
+          "kind": "bubble",
+          "text": "ANT",
+          "x": 1440,
+          "y": 560,
+          "s": 0.92
+        },
+        "particles": {
+          "n": 60,
+          "region": [
+            900,
+            0,
+            1920,
+            1080
+          ],
+          "size": 4,
+          "color": "#FFE3A0"
+        }
+      },
+      "layout": [
+        {
+          "text": "GOLD RUSH",
+          "x": 70,
+          "y": 476.9,
+          "size": 181.7,
+          "width": 1042.7,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4
+        },
+        {
+          "text": "OR BUBBLE?",
+          "x": 105.2,
+          "y": 657.2,
+          "size": 160.1,
+          "width": 970.0,
+          "anchor": "start",
+          "color": "#FFFFFF",
+          "outline": "#05070B",
+          "rotate": -4,
+          "banner": "#E3201B",
+          "box": "#E3201B"
+        }
+      ],
+      "qc": {
+        "checks": [
+          {
+            "check": "dimensions 1280x720 (16:9)",
+            "pass": true,
+            "detail": "(1280, 720)",
+            "critical": true
+          },
+          {
+            "check": "RGB image",
+            "pass": true,
+            "detail": "RGB",
+            "critical": true
+          },
+          {
+            "check": "file size < 2 MB",
+            "pass": true,
+            "detail": "0.69 MB",
+            "critical": true
+          },
+          {
+            "check": "valid PNG",
+            "pass": true,
+            "detail": "verified",
+            "critical": true
+          },
+          {
+            "check": "0-4 words",
+            "pass": true,
+            "detail": "4 words",
+            "critical": false
+          },
+          {
+            "check": "no clipped text (inside safe margins)",
+            "pass": true,
+            "detail": "[(70, 335, 1113, 488), (105, 532, 1075, 667)]",
+            "critical": true
+          },
+          {
+            "check": "text clear of the duration badge (bottom-right)",
+            "pass": true,
+            "detail": "bottom-right 330x150 kept free",
+            "critical": true
+          },
+          {
+            "check": "legible at 160 px wide (cap height >= 6 px)",
+            "pass": true,
+            "detail": "13.3px font at 160px wide",
+            "critical": true
+          },
+          {
+            "check": "text contrast >= 3:1 against its background",
+            "pass": true,
+            "detail": "worst 4.7:1 (dark outline adds more)",
+            "critical": true
+          },
+          {
+            "check": "uncluttered (edge density <= 0.16)",
+            "pass": true,
+            "detail": "0.105",
+            "critical": false
+          },
+          {
+            "check": "poster: legible at 320x180 (cap height >= 10 px)",
+            "pass": true,
+            "detail": "19.2px caps at 320 px wide",
+            "critical": true
+          },
+          {
+            "check": "poster: words stay in the left ~60% (hero owns the right)",
+            "pass": true,
+            "detail": "text right edge 1113px",
+            "critical": false
+          },
+          {
+            "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+            "pass": true,
+            "detail": "0.78",
+            "critical": false
+          },
+          {
+            "check": "poster: the hero side is the brightest (light behind the hero)",
+            "pass": true,
+            "detail": "right 153 vs left 57",
+            "critical": false
+          },
+          {
+            "check": "dominant subject has strong internal contrast",
+            "pass": true,
+            "detail": "luma std 36",
+            "critical": false
+          },
+          {
+            "check": "distinct from other channel thumbnails",
+            "pass": true,
+            "detail": "nearest will-ai-make-japan-rich-again (distance 0.46)",
+            "critical": false
+          },
+          {
+            "check": "text rests on a verified claim or makes no factual claim",
+            "pass": true,
+            "detail": "the title question; the film answers it (neither label fits by definition; the price assumes very long growth); no number",
+            "critical": true
+          }
+        ],
+        "critical_fail": false,
+        "design_score": 0.692,
+        "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+        "needs_human_review": [
+          "Subject recognisable at a glance (human)",
+          "Tone matches the documentary (human)",
+          "Not misleading / not clickbait (human)",
+          "Spelling of the words on the image (human)"
+        ],
+        "nearest": "will-ai-make-japan-rich-again"
+      }
+    }
+  ],
+  "backend": "svg-composite (Remotion, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-20T11:43:07Z",
+  "master": "output/anthropics-1-5-trillion-ipo/thumbnails/master_P.png"
+}

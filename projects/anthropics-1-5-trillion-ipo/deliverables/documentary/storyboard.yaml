@@ -154,7 +154,7 @@ scenes:
     - kind: toonwords
       text: BARELY OLD ENOUGH FOR KINDERGARTEN
       x: 960
-      y: 230
+      y: 118
       at:
         cue: barely old enough
       size: 49
@@ -164,27 +164,27 @@ scenes:
     - kind: toonwords
       text: NO CHIP FACTORIES
       x: 960
-      y: 230
+      y: 118
       at:
         cue: It doesn't make chips
-      size: 60
+      size: 50
       until:
         cue: It doesn't own a giant cloud
       hud: true
     - kind: toonwords
       text: NO GIANT CLOUD OF ITS OWN
       x: 960
-      y: 230
+      y: 118
       at:
         cue: It doesn't own a giant cloud
-      size: 56
+      size: 50
       until:
         cue: And its biggest partners
       hud: true
     - kind: toonwords
       text: PARTNERS = SHAREHOLDERS = SUPPLIERS = RIVALS
       x: 960
-      y: 250
+      y: 118
       at:
         cue: And its biggest partners
       size: 37
@@ -194,10 +194,10 @@ scenes:
     - kind: toonwords
       text: WHAT DID JUNE JUST BUY?
       x: 960
-      y: 230
+      y: 118
       at:
         cue: So what exactly did June
-      size: 62
+      size: 50
       hud: true
     callouts:
     - text: STORY · JUNE IS FICTIONAL
@@ -1974,12 +1974,12 @@ scenes:
     - at: 0
       x: 760
       y: 560
-      zoom: 1.15
+      zoom: 1.0
     - at:
         cue: It has invested billions
       x: 860
-      y: 520
-      zoom: 1.05
+      y: 540
+      zoom: 1.0
       dur: 1.2
     - at:
         cue: Anthropic has promised to spend
@@ -1997,7 +1997,7 @@ scenes:
         cue: and builds AI models
       x: 760
       y: 560
-      zoom: 1.1
+      zoom: 1.0
       dur: 1.0
     drift: 2
     items:
@@ -2005,7 +2005,7 @@ scenes:
       who: jassy
       x: 300
       at: 0.3
-      y: 1040
+      y: 985
       scale: 0.95
       pose: stand
       label: ANDY JASSY · AMAZON CEO
@@ -2017,17 +2017,17 @@ scenes:
     - kind: toonwords
       text: 'AMAZON: INVESTOR'
       x: 960
-      y: 200
+      y: 118
       at:
         cue: It has invested billions
-      size: 54
+      size: 50
       until:
         cue: Its cloud rents
       hud: true
     - kind: toonwords
       text: 'AMAZON: LANDLORD FOR COMPUTE'
       x: 960
-      y: 200
+      y: 118
       at:
         cue: Its cloud rents
       size: 50
@@ -2037,7 +2037,7 @@ scenes:
     - kind: toonwords
       text: ≥ $110 BILLION PROMISED TO AMAZON, 2026-2036
       x: 960
-      y: 200
+      y: 118
       at:
         cue: Anthropic has promised to spend
       size: 37
@@ -2047,20 +2047,20 @@ scenes:
     - kind: toonwords
       text: 'AMAZON: SELLER OF CLAUDE'
       x: 960
-      y: 200
+      y: 118
       at:
         cue: Amazon also sells Claude
-      size: 52
+      size: 50
       until:
         cue: and builds AI models
       hud: true
     - kind: toonwords
       text: 'AMAZON: RIVAL TOO'
       x: 960
-      y: 200
+      y: 118
       at:
         cue: and builds AI models
-      size: 56
+      size: 50
       hud: true
     callouts:
     - text: FACT · AMAZON 10-Q Q3 2026
@@ -2169,12 +2169,12 @@ scenes:
     - at: 0
       x: 900
       y: 540
-      zoom: 1.05
+      zoom: 1.0
     - at:
         cue: Anthropic sends cash back
       x: 900
       y: 600
-      zoom: 1.05
+      zoom: 1.0
       dur: 1.0
     - at:
         cue: When Amazon sells Claude
@@ -2185,8 +2185,8 @@ scenes:
     - at:
         cue: And when Anthropic's value rises
       x: 760
-      y: 420
-      zoom: 1.05
+      y: 540
+      zoom: 1.0
       dur: 1.0
     - at:
         cue: Google runs a similar loop
@@ -2201,7 +2201,7 @@ scenes:
       x: 1840
       at:
         cue: Google runs a similar loop
-      y: 1040
+      y: 985
       scale: 0.9
       pose: stand
       flip: true
@@ -2212,26 +2212,26 @@ scenes:
     - kind: toonwords
       text: THE MONEY LOOP
       x: 960
-      y: 180
+      y: 118
       at: 0.3
-      size: 60
+      size: 50
       until:
         cue: Amazon sends cash to Anthropic
       hud: true
     - kind: toonwords
       text: 1 · INVESTMENT IN
       x: 960
-      y: 180
+      y: 118
       at:
         cue: Amazon sends cash to Anthropic
-      size: 56
+      size: 50
       until:
         cue: Anthropic sends cash back
       hud: true
     - kind: toonwords
       text: 2 · COMPUTE BILLS OUT = AMAZON SALES
       x: 960
-      y: 180
+      y: 118
       at:
         cue: Anthropic sends cash back
       size: 46
@@ -2241,7 +2241,7 @@ scenes:
     - kind: toonwords
       text: 3 · CLAUDE SOLD VIA THE CLOUD, MINUS A CUT
       x: 960
-      y: 180
+      y: 118
       at:
         cue: When Amazon sells Claude
       size: 39
@@ -2251,7 +2251,7 @@ scenes:
     - kind: toonwords
       text: 4 · THE STAKE GROWS, ON PAPER
       x: 960
-      y: 180
+      y: 118
       at:
         cue: And when Anthropic's value rises
       size: 50
@@ -2261,10 +2261,10 @@ scenes:
     - kind: toonwords
       text: 'GOOGLE: A SIMILAR LOOP'
       x: 960
-      y: 180
+      y: 118
       at:
         cue: Google runs a similar loop
-      size: 54
+      size: 50
       hud: true
     callouts:
     - text: MECHANISM · FROM FILINGS (424B4, AMAZON 10-Q)
@@ -2470,7 +2470,7 @@ scenes:
         cue: most of Claude's paying customers
       x: 500
       y: 600
-      zoom: 1.1
+      zoom: 1.0
       dur: 1.2
     - at:
         cue: Suppliers lending to customers
@@ -2481,7 +2481,7 @@ scenes:
     - at:
         cue: So the real question
       x: 960
-      y: 520
+      y: 540
       zoom: 1.0
       dur: 1.0
     drift: 2
@@ -2489,17 +2489,17 @@ scenes:
     - kind: toonwords
       text: THE CASH IS REAL
       x: 960
-      y: 180
+      y: 118
       at:
         cue: The cash is real
-      size: 58
+      size: 50
       until:
         cue: most of Claude's paying customers
       hud: true
     - kind: toonwords
       text: MOSTLY ORDINARY BUSINESSES PAY
       x: 960
-      y: 180
+      y: 118
       at:
         cue: most of Claude's paying customers
       size: 50
@@ -2509,7 +2509,7 @@ scenes:
     - kind: toonwords
       text: 'GROSS COUNTING: A STANDARD CHOICE'
       x: 960
-      y: 180
+      y: 118
       at:
         cue: Counting cloud sales in full
       size: 48
@@ -2519,7 +2519,7 @@ scenes:
     - kind: toonwords
       text: CARMAKERS LEND TO CAR BUYERS
       x: 960
-      y: 180
+      y: 118
       at:
         cue: Suppliers lending to customers
       size: 50
@@ -2529,17 +2529,17 @@ scenes:
     - kind: toonwords
       text: ALL IN THE FILING
       x: 960
-      y: 180
+      y: 118
       at:
         cue: And it's all disclosed
-      size: 58
+      size: 50
       until:
         cue: So the real question
       hud: true
     - kind: toonwords
       text: HOW MUCH GROWTH SURVIVES A SLOWER LOOP?
       x: 960
-      y: 180
+      y: 118
       at:
         cue: So the real question
       size: 42
@@ -2860,36 +2860,36 @@ scenes:
     cam:
     - at: 0
       x: 760
-      y: 520
-      zoom: 1.1
+      y: 540
+      zoom: 1.0
     - at:
         cue: before the IPO it was already carrying
       x: 600
-      y: 440
-      zoom: 1.2
+      y: 540
+      zoom: 1.0
       dur: 1.2
     - at:
         cue: But a paper gain
       x: 760
-      y: 520
-      zoom: 1.05
+      y: 540
+      zoom: 1.0
       dur: 1.0
     drift: 2
     items:
     - kind: toonwords
       text: AMAZON PUT IN ≈ $18 BILLION
       x: 960
-      y: 180
+      y: 118
       at:
         cue: Amazon bought its stake
-      size: 54
+      size: 50
       until:
         cue: before the IPO it was already carrying
       hud: true
     - kind: toonwords
       text: CARRIED AT ≈ $239 BILLION (SEP 30)
       x: 960
-      y: 180
+      y: 118
       at:
         cue: before the IPO it was already carrying
       size: 49
@@ -2899,10 +2899,10 @@ scenes:
     - kind: toonwords
       text: PAPER, UNTIL IT'S SOLD
       x: 960
-      y: 180
+      y: 118
       at:
         cue: But a paper gain
-      size: 58
+      size: 50
       hud: true
     callouts:
     - text: FACT · AMAZON 10-Q Q3 2026
@@ -3178,7 +3178,7 @@ scenes:
     - kind: toonwords
       text: 'EARLY BACKERS: ≈ $0.26 A SHARE'
       x: 960
-      y: 230
+      y: 118
       at:
         cue: The earliest backers paid
       size: 50
@@ -3188,20 +3188,20 @@ scenes:
     - kind: toonwords
       text: 'JUNE: $83 A SHARE'
       x: 960
-      y: 230
+      y: 118
       at:
         cue: June paid full price
-      size: 60
+      size: 50
       until:
         cue: Same share
       hud: true
     - kind: toonwords
       text: SAME SHARE. DIFFERENT BET.
       x: 960
-      y: 230
+      y: 118
       at:
         cue: Same share
-      size: 58
+      size: 50
       hud: true
     callouts:
     - text: STORY · JUNE IS FICTIONAL
@@ -3987,7 +3987,7 @@ scenes:
     - kind: toonwords
       text: IMPORTANT ≠ PROFITABLE INVESTMENT
       x: 960
-      y: 230
+      y: 118
       at:
         cue: But importance and investment returns
       size: 50
@@ -3997,7 +3997,7 @@ scenes:
     - kind: toonwords
       text: HOW MUCH FUTURE IS ALREADY IN THE PRICE?
       x: 960
-      y: 230
+      y: 118
       at:
         cue: The question isn't whether
       size: 41

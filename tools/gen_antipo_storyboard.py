@@ -458,6 +458,7 @@ stage("s43_button", "button", {
 
 # camera clamps + claim-pill conversion (same conventions as earlier generators)
 TIGHT = {"ajcase", "ajvault", "ajsupply"}
+HIGHWORDS = {"ajkitchen", "ajloop"}   # sets whose top half is busy: punchline words sit higher, camera stays wide
 for _sc in cartoon_kit.scenes:
     _z = _sc["params"].get("zones") or []
     if _sc["type"] == "engine_cartoon" and len(_z) == 1 and _z[0]["set"] in TIGHT:
@@ -472,9 +473,13 @@ for _sc in cartoon_kit.scenes:
     if _sc["type"] != "engine_cartoon":
         continue
     P = _sc["params"]
+    _sets = {z["set"] for z in P.get("zones") or []}
     for _k in P.get("cam", []):
         _k["zoom"] = min(_k["zoom"], 1.3)
         _k["y"] = max(380, min(700, _k["y"]))
+        if "ajloop" in _sets:
+            _k["zoom"] = min(_k["zoom"], 1.0)
+            _k["y"] = max(540, _k["y"])
     keep, calls = [], P.setdefault("callouts", [])
     for _it in P.get("items", []):
         if _it.get("kind") == "pmtag":
@@ -492,6 +497,11 @@ for _sc in cartoon_kit.scenes:
                 _it["x"] -= OX
         if _it.get("kind") in ("toonwords", "sign", "bubble") and isinstance(_it.get("y"), (int, float)) and _it["y"] < 180:
             _it["y"] = 180
+        if _it.get("kind") == "toonwords" and _sets & HIGHWORDS:
+            _it["y"] = 118
+            _it["size"] = min(_it["size"], 50)
+        if _it.get("kind") == "caricature" and "ajloop" in _sets:
+            _it["y"] = 985
         keep.append(_it)
     P["items"] = keep
 

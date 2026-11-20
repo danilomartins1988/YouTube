@@ -27,9 +27,9 @@ concepts:
   scene:
     backdrop: {kind: skyline, base: 860, maxH: 420, sun: [1500, 760, 240], sunColor: '#FF7A3A'}
     light: {x: 1450, y: 470, r: 760, color: '#FFB238', rays: true}
-    hero: {kind: tickerboard, text: ANT, price: '$97.17', x: 1440, y: 430, s: 0.62}
+    hero: {kind: tickerboard, text: ANT, x: 1460, y: 400, s: 0.78}
     front:
-    - {kind: warnchart, x: 1400, y: 840, s: 0.62}
+    - {kind: warnchart, x: 1430, y: 820, s: 0.72}
     particles: {n: 60, region: [900, 0, 1920, 1080], size: 4, color: '#FFE3A0'}
 - id: A
   angle: 'poster: the money loop: a gold arrow and a blue arrow chasing each other around a coin, over a glowing night map'
