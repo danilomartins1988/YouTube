@@ -1,0 +1,69 @@
+# Thumbnail creative brief (Before You Buy: Anthropic, Nov 2026). Poster archetype (docs/thumbnails/OWNER_STYLE.md), BYB series look
+# (same "BEFORE YOU / BUY <COMPANY>" yellow-banner line as the Nvidia poster). NO LOGOS: the company is shown by a stylized ANT ticker
+# board. No real person on any concept (neutrality and likeness rules). Words <= 4, no em dash; every date/number from FACT_CHECK.md.
+title: "Anthropic Stock Before You Buy: 7 Things to Check (Nov 2026)"
+docs_dir: docs/episodes/byb-anthropic-2026-11
+video: output/bybant_documentary.mp4
+deliverable: documentary
+status: completed
+default: P
+analysis:
+  mystery: What exactly does a buyer of ANT own, at what price, and when can insiders sell?
+  surprising_fact: up to 3.0bn shares can unlock on May 17, 2027 or earlier (424B4); ANT trades at about 36 times trailing sales vs about 10 for Nvidia and Microsoft (our calc, Nov 19, 2026 closes)
+  subject: a golden ANT ticker board, a padlock with a date tag, a buyer's clipboard
+  tone: strategy
+  metaphor: a checklist before the buy button
+  public_figure: null
+concepts:
+- id: P
+  angle: 'poster (series look): golden ANT ticker board over a glowing night map, a clipboard checklist in front (the buyer''s checklist)'
+  archetype: poster
+  file: thumbnail_poster.png
+  text: [BEFORE YOU, BUY ANTHROPIC]
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'framing (series title + company name; education, not advice); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: -40
+      lat: 30
+      arcColor: '#FFB547'
+      arcs:
+      - [sf, london]
+      - [sf, taipei]
+      - [london, amsterdam]
+    light: {x: 1450, y: 480, r: 720, color: '#FFB238', rays: true}
+    rim: {warm: '#FFD27A', cool: '#5CC8FF'}
+    hero: {kind: tickerboard, text: ANT, x: 1440, y: 400, s: 0.72}
+    front:
+    - {kind: clipboard, x: 1600, y: 830, s: 0.36, title: CHECK, rows: 4, done: 3, r: 10}
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 4, color: '#FFE3A0'}
+- id: A
+  angle: 'poster: a giant golden padlock on a chain with a MAY 17 date tag, the shackle about to spring (the lock-up gate)'
+  archetype: poster
+  file: thumbnail_poster_A.png
+  text: [THE BIG, UNLOCK]
+  accent_line: 1
+  banner: red
+  claim_basis: 'lock_may: up to 3.0bn shares eligible on the earlier of two trading days after the Mar-2027-quarter release and May 17, 2027 (180th day after the Nov 18, 2026 prospectus; 424B4)'
+  scene:
+    backdrop: {kind: skyline, base: 880, maxH: 380, sun: [1500, 800, 220], sunColor: '#FF7A3A'}
+    light: {x: 1440, y: 520, r: 740, color: '#FFB238', rays: true}
+    hero: {kind: padlock, text: MAY 17, x: 1400, y: 560, s: 0.78}
+    particles: {n: 50, region: [900, 0, 1920, 1080], size: 4, color: '#FFE3A0'}
+- id: B
+  angle: 'poster: the buyer''s clipboard (most boxes ticked, one open) in front of the ANT ticker board, deep night rays'
+  archetype: poster
+  file: thumbnail_poster_B.png
+  text: [7 THINGS, TO CHECK]
+  accent_line: 1
+  banner: yellow
+  claim_basis: '7 = the number of checklist questions in the film (not a statistic)'
+  scene:
+    backdrop: {kind: rays}
+    light: {x: 1440, y: 540, r: 760, color: '#FFC24A', rays: true}
+    support:
+    - {kind: tickerboard, text: ANT, x: 1560, y: 260, s: 0.42}
+    hero: {kind: clipboard, x: 1380, y: 620, s: 0.72, title: ANT, rows: 5, done: 4}
+    particles: {n: 60, region: [900, 0, 1920, 1080], size: 4, color: '#FFE3A0'}

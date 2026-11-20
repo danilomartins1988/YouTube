@@ -1,0 +1,231 @@
+# Sources and claims for "Anthropic Stock Before You Buy: 7 Things to Check (Nov 2026)" (series Before You Buy, ANT, 2026-11 edition).
+# Read 2026-11-20. Primary: Anthropic's final prospectus (424B4, filed 2026-11-19; "Prospectus dated November 18, 2026"), the pricing FWP,
+# Amazon's Q3 2026 10-Q; peer figures from the peers' own SEC filings (as compiled in docs/series/research/*_2026-11.md); closing prices from
+# Yahoo Finance (data vendor). Past IPOs: offer prices and lock-up dates from named press (Reuters/AP via CS Monitor and Business Standard;
+# Bloomberg via BNN Bloomberg; CNBC), daily closes from Yahoo Finance. Shared source entries are copied from Ep 72's sources.yaml.
+# NEUTRALITY: Anthropic makes the AI model used in this production; filings and named press only; OUR CALCULATION labelled; not advice.
+# QUARTERLY REFRESH: update the closes, the multiples and the lock-up status; claims stay source_located until a named reviewer signs off.
+sources:
+  - id: ant_424b4
+    title: "Anthropic, PBC: Prospectus (Form 424B4), 980,000,000 shares of Class A common stock"
+    publisher: Anthropic, PBC via SEC EDGAR (CIK 0002130357, File No. 333-299633)
+    url: https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm
+    published: "2026-11-19"
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "Anthropic, PBC, final prospectus (SEC Form 424B4)"
+    notes: >-
+      The Offering: 956,351,354 Class A shares offered by the company + 23,648,646 by selling stockholders (the seven co-founders,
+      3,378,378 each); underwriters' option 147,000,000 (100% primary). Concurrent private placement: $26.0bn of Class N at the IPO
+      price (Google 120,481,927 sh ≈ $10.0bn; NVIDIA 120,481,927 ≈ $10.0bn; AMD 30,120,481 ≈ $2.5bn; Broadcom, Micron, Microsoft
+      12,048,192 each ≈ $1.0bn; TSMC 6,024,096 ≈ $0.5bn); not locked up but restricted securities. Outstanding after offering + placement:
+      13,219,642,276 shares (7,583,103,996 Class A + 5,636,538,278 Class N + Class T and F single shares), incl. 846,840,960 Class N
+      shares of the Initial Public Benefit Issuance (legally outstanding, not for accounting). Excluded: 1,774,342,693 options (wtd avg
+      exercise $2.91), 1,026,660,010 unvested RSUs, 47,041,287 RSUs granted after Sep 30, 2026 plan reserves; Amazon Notes beyond the
+      cap. Net proceeds to the company ≈ $104.8bn (IPO primary + placement). Lock-up: up to 180 days; co-founders and holders of >0.5%
+      of fully diluted shares up to 365 days; up to 10% of lock-up shares of non-founder directors, officers, employees may be sold from
+      the first trading day; ≈3.7bn shares may become eligible before 180 days. Voting: Class F (Founder LLC) = 50.1% of votes.
+      Financials: revenue 2023 $41m, 2024 $386m, 2025 $4,585m; 9M 2025 $2,545m; 9M 2026 $33,242m (Q3 2026 $17.0bn). Compute and
+      infrastructure expense 2025 $7,326m, 9M 2026 $18,808m. Operating loss 2025 $(8,060)m; 9M 2026 $(1,260)m; Q3 2026 $(567)m
+      (incl. $5.0bn short-term compute and $2.0bn non-cash donation-matching charges). Net loss 2025 $(41,965)m; 9M 2026 $(104,039)m,
+      incl. $(94,324)m change in fair value of convertible notes, derivative liabilities and SAFEs. Net cash from operating activities
+      9M 2026 +$6,569m (9M 2025 −$2,024m); purchases of property and equipment $925m and prepayments for leased assets $1,955m.
+      Cash and equivalents $95.6bn + short-term investments $36.3bn (Sep 30, 2026); total indebtedness $6.2bn (Amazon Notes).
+      Run-Rate Revenue ≈ $81bn at Oct 31, 2026 (up $10bn from Sep 30). Consumption-based revenue 79% of 9M 2026 revenue,
+      subscriptions 21%. Revenue through CSP marketplaces 47% (2025), 44% (9M 2026); recognised on a gross basis (company is principal).
+      Commitments: purchase commitments and leases ≈ $900.9bn aggregate (≈$451.6bn before end-2030; rest 2031-2045; ≈$70.7bn due in the
+      12 months after Sep 30, 2026). Microsoft ≥$47.2bn (Nov 2026-Jun 2033); Google ≥≈$121.3bn (Apr 2026-Jul 2033) plus est. $125-150bn
+      TPU compute not in the table; Amazon ≥$110.0bn (May 2026-Apr 2036) "regardless of actual usage"; SpaceXAI up to $120.5bn into 2029;
+      AMD >$20bn expected; Nscale up to ≈$44.6bn; Lambda ≈$41.3bn. Ownership after offering: Amazon 1,936,452,353 Class N (14.6% of
+      outstanding capital stock; 23.6% if Amazon Notes fully converted without the cap); Google 1,774,959,745 Class N (13.4%).
+      Series A preferred original issue price $2.57 (post 10-for-1 split of Sep 17, 2026; preferred converts at ≈10 common each).
+      Risk factor: reliance on a limited number of CSPs and suppliers "some of which have strategic and investment relationships with us
+      and are our customers, creates complex dynamics that could give rise to conflicts of interest". Founded January 2021; co-founders
+      Dario Amodei (CEO; previously VP of Research at OpenAI) and Daniela Amodei (President, Chair) and five others; public benefit
+      corporation; co-founders pledged 80% of personal equity to philanthropy; Public Benefit Issuances of up to 2% more shares each time
+      the price rises 50% above the prior milestone.
+  - id: ant_fwp
+    title: "Anthropic, PBC: Issuer Free Writing Prospectus (pricing term sheet)"
+    publisher: Anthropic, PBC via SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm
+    published: "2026-11-18"
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "Anthropic, PBC, pricing FWP"
+    notes: "Size (excluding option) $81,340,000,000; price to public $83.00; base shares by Anthropic 956,351,354, by selling stockholders 23,648,646; option up to 147,000,000 (100% primary); concurrent private placement $26.0bn of Class N (313,253,007 shares) at the price to public; price to underwriters $82.43878; pricing date Nov 18, trade date Nov 19, settlement Nov 20, 2026; Nasdaq Global Select Market, symbol ANT; lead bookrunners Goldman Sachs and Morgan Stanley."
+  - id: amzn_10q
+    title: "Amazon.com, Inc. Form 10-Q for the quarter ended September 30, 2026"
+    publisher: Amazon.com, Inc. via SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm
+    published: "2026-10-30"
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "Amazon.com, Inc., Q3 2026 Form 10-Q"
+    notes: >-
+      "From Q3 2023 to Q4 2025, we invested $8.0 billion in convertible notes from Anthropic"; "In Q2 2026, we invested $5.0 billion in
+      Anthropic Series G nonvoting preferred stock"; nine months 2026: "$10.0 billion in Anthropic nonvoting preferred stock". Sep 30,
+      2026 carrying amounts: nonvoting preferred ≈ $92.5bn; convertible notes fair value ≈ $146.2bn (unrealized gain in AOCI $140.3bn).
+      Upward adjustments to the preferred of $62.8bn in 9M 2026 recorded in other income; $15.2bn net discrete tax expense mostly from
+      those adjustments. AWS commitment: "In Q2 2026, AWS and Anthropic announced an expansion of the strategic collaboration and
+      existing multi-year commitment by more than $100.0 billion over 10.0 years". A financing facility up to $20.0bn. 12% ownership cap
+      on the notes. Our sum: ≈$18bn invested; ≈$238.7bn carried at Sep 30, 2026 (before the IPO).
+  - id: cnbc_price
+    title: "Anthropic IPO raises over $81 billion in largest offering on record, topping SpaceX"
+    publisher: CNBC
+    url: https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html
+    published: "2026-11-18"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "CNBC"
+    notes: "Priced at $83, above the $70-$78 range; about 980 million shares (upsized from 825 million); $81.3bn raised; 'Anthropic's fully diluted market cap sits at around $1.5 trillion'; group incl. Google, Microsoft, Nvidia, AMD to invest $26bn at the IPO price; Amazon and Google stakes valued at over $100bn each."
+  - id: cnbc_live
+    title: "Anthropic IPO live updates: ANT stock price and Nasdaq debut"
+    publisher: CNBC
+    url: https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html
+    published: "2026-11-19"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "CNBC"
+    notes: "Opened at $111.50 (fully diluted market cap 'nearly $2.01 trillion' at the open); closed at $97.17, up 17%, fully diluted 'roughly $1.8 trillion'; more than 846 million shares traded; retail got about 15% of the offering; over 400 employees expected to be worth $100 million or more; average employee worth over $40 million (reported)."
+  - id: national
+    title: "Anthropic shares close 17% above IPO price after volatile Nasdaq debut"
+    publisher: The National (Abu Dhabi)
+    url: https://www.thenationalnews.com/business/markets/2026/11/20/anthropic-share-price-today-ant-listing/
+    published: "2026-11-20"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "The National"
+    notes: "Closed at $97.17 on the Nasdaq debut; about $1.75 trillion fully diluted or about $1.27 trillion on shares currently outstanding; $26bn private placement lifts total to $107.3bn, the largest on record (SpaceX $86bn in June)."
+
+  - id: px
+    title: "Daily closing prices, Nov 19, 2026: ANT $97.17, NVDA $145.97, MSFT $498.30, GOOGL $272.66, META $596.22 (data vendor)"
+    publisher: Yahoo Finance (chart data)
+    url: https://finance.yahoo.com/quote/ANT/history/
+    published: "2026-11-19"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "Yahoo Finance closes (Nov 19, 2026)"
+    notes: "Fetched 2026-11-20 15:30 UTC: the Nov 20 session was still open (intraday, not used). Nov 19 closes: ANT 97.17 (first day; matches CNBC/The National), NVDA 145.97, MSFT 498.30, GOOGL 272.66, META 596.22."
+  - id: peers
+    title: "Peer revenue and share counts from the peers' SEC filings (Nvidia Q3 FY2027 8-K and FY2026 8-K; Microsoft Q1 FY2027 10-Q; Alphabet Q3 2026 10-Q and releases; Meta Q3 2026 10-Q and releases)"
+    publisher: NVIDIA, Microsoft, Alphabet, Meta via SEC EDGAR (compiled in docs/series/research/*_2026-11.md)
+    url: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm
+    published: "2026-11-17"
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "Peer SEC filings (Before You Buy research files)"
+    notes: "TTM revenue: Nvidia $361.8bn (Q4 FY26 + 9M FY27); Microsoft $346,445m (Q2 FY26-Q1 FY27); Alphabet $471,097m (Q4 2025-Q3 2026); Meta $241,606m (Q4 2025-Q3 2026). Shares: Nvidia 24,106m (Q3 weighted basic); Microsoft 7,426,194,552 (10-Q cover); Alphabet 12,294m (A+B+C, 10-Q cover; GOOGL price applied to all classes, approximation); Meta 2,556,241,253 (A+B, 10-Q cover). Other URLs: https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm ; https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm"
+  - id: fb_lock
+    title: "Facebook shares hit new low as lock-up period expires (AP)"
+    publisher: The Christian Science Monitor (Associated Press)
+    url: https://www.csmonitor.com/Business/Latest-News-Wires/2012/0816/Facebook-shares-hit-new-low-as-lock-up-period-expires
+    published: "2012-08-16"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "AP via CS Monitor"
+    notes: "Facebook's first lock-up expired Aug 16, 2012 (about 271 million shares); the stock hit a new low, closing at $19.87, against the $38 IPO price of May 18, 2012. Also Reuters via Business Standard: https://www.business-standard.com/article/international/facebook-falls-as-lockup-comes-to-an-end-112081600146_1.html"
+  - id: fb_px
+    title: "META (formerly FB) daily closes, May 18, 2012 - May 17, 2013 (data vendor)"
+    publisher: Yahoo Finance (chart data)
+    url: https://finance.yahoo.com/quote/META/history/
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "Yahoo Finance"
+    notes: "IPO price $38.00 (May 17, 2012 pricing). Day-one close $38.23; lowest close $17.73 (Sep 4, 2012) ≈ 47% of the offer price (our calc); close May 17, 2013 $26.25 (≈ 31% below the offer, our calc); Dec 31, 2012 $26.62."
+  - id: arm_ipo
+    title: "Arm soars after expansion into new markets buoys forecast (Bloomberg)"
+    publisher: BNN Bloomberg (Bloomberg News)
+    url: https://www.bnnbloomberg.ca/arm-soars-after-expansion-into-new-markets-buoys-forecast-1.2032199
+    published: "2024-02-08"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "Bloomberg via BNN Bloomberg"
+    notes: "Arm shares surged 48% on Feb 8, 2024 after the quarterly report; IPO price $51 (September 2023). Also CNBC: https://www.cnbc.com/2024/02/07/arm-earnings-report-q3-2024-.html"
+  - id: arm_px
+    title: "ARM daily closes, Sep 14, 2023 - Sep 13, 2024 (data vendor)"
+    publisher: Yahoo Finance (chart data)
+    url: https://finance.yahoo.com/quote/ARM/history/
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "Yahoo Finance"
+    notes: "Offer $51.00; day-one open $56.10, close $63.59 (Sep 14, 2023); lowest close $47.87 (Oct 20, 2023, below the offer); Feb 7, 2024 $77.01 → Feb 8, 2024 $113.89 (+47.9%, our calc); Sep 13, 2024 $147.37."
+
+claims:
+  - id: ipo_price
+    text: "Anthropic priced its IPO at $83.00 per Class A share on Nov 18, 2026 (424B4; pricing FWP; CNBC)."
+    spoken: eighty-three dollars
+    display: "Offer price: $83.00 · 424B4"
+    source_ids: [ant_424b4, ant_fwp, cnbc_price]
+    status: source_located
+  - id: close_px
+    text: "ANT opened at $111.50 on Nov 19, 2026 and closed its first day at $97.17 (CNBC, The National; Yahoo Finance). Latest close available when the film was locked on 2026-11-20 (the Nov 20 session had not closed)."
+    spoken: about ninety-seven dollars
+    display: "Close Nov 19, 2026: $97.17 · open $111.50"
+    source_ids: [cnbc_live, national, px]
+    status: source_located
+  - id: votes
+    text: "The single Class F share, held by the Founder LLC (the seven co-founders), carries 50.1% of the total voting power on matters submitted to stockholders generally, including the election of non-Class T directors; Class F has no economic rights (424B4)."
+    spoken: just over half
+    display: "Class F (Founder LLC): 50.1% of votes · 424B4"
+    source_ids: [ant_424b4]
+    status: source_located
+  - id: float
+    text: "980,000,000 Class A shares were sold in the IPO, out of 13,219,642,276 shares outstanding after the offering and the concurrent private placement (7,583,103,996 Class A + 5,636,538,278 Class N + one Class T + one Class F share) = 7.4% (our calc, 424B4)."
+    spoken: fewer than one in ten
+    display: "IPO shares 0.98bn of 13.22bn outstanding = 7.4% (our calc, 424B4)"
+    source_ids: [ant_424b4, ant_fwp]
+    status: data_derived
+  - id: fd
+    text: "Excluded from the 13.22bn outstanding (424B4): 1,774,342,693 options (wtd avg exercise $2.91), 1,026,660,010 unvested RSUs, 47,041,287 RSUs granted after Sep 30, the Amazon Notes balance above the ownership cap (converts quarterly up to the cap), plan reserves. Our build-up: ≈17.6-17.8bn fully diluted (Ep 72 research); press figures imply ≈18.0bn ($1.5tn ÷ $83, CNBC). 17.7 ÷ 13.22 ≈ 1.34 = about a third more (our calc)."
+    spoken: about a third more
+    display: "Fully diluted ≈ 17.6-18bn vs 13.22bn outstanding (our calc; 424B4, CNBC)"
+    source_ids: [ant_424b4, cnbc_price]
+    status: data_derived
+  - id: ps_ant
+    text: "OUR CALC: 13,219,642,276 shares × $97.17 (Nov 19, 2026 close) ≈ $1,284.6bn ÷ trailing-twelve-month revenue $35,282m (2025 $4,585m − 9M 2025 $2,545m + 9M 2026 $33,242m, 424B4) ≈ 36.4x. Fully diluted (≈$1.75tn, The National) ≈ 49.6x. On the Oct 31 run rate (≈$81bn, 424B4): ≈15.9x outstanding, ≈21.6x fully diluted. Market value (equity), not enterprise value: cash and short-term investments ≈$132bn on Sep 30 before ≈$104.8bn of net proceeds; debt $6.2bn."
+    spoken: about thirty-six times
+    display: "ANT: ≈ 36× trailing sales (our calc, Nov 19 close, shares outstanding)"
+    source_ids: [ant_424b4, px, national]
+    status: data_derived
+  - id: ps_megas
+    text: "OUR CALC at the Nov 19, 2026 closes: Nvidia $145.97 × 24,106m = $3,518.8bn ÷ TTM revenue $361.8bn ≈ 9.7x; Microsoft $498.30 × 7,426.2m = $3,700.5bn ÷ $346.4bn ≈ 10.7x; Alphabet $272.66 × 12,294m ≈ $3,352bn ÷ $471.1bn ≈ 7.1x; Meta $596.22 × 2,556.2m ≈ $1,524bn ÷ $241.6bn ≈ 6.3x."
+    spoken: about ten times
+    display: "NVDA ≈ 9.7× · MSFT ≈ 10.7× trailing sales (our calc, Nov 19 closes)"
+    source_ids: [peers, px]
+    status: data_derived
+  - id: lock_may
+    text: "Shares Eligible for Future Sale (424B4): up to 3.0bn Class A and Class N shares become eligible on the earlier of (x) the second full trading day after the release of results for the quarter ending Mar 31, 2027 and (y) immediately after the close on the 180th day after the date of the prospectus (Nov 18, 2026) = May 17, 2027 (our date calc; a Monday)."
+    spoken: May seventeenth
+    display: "180th day: May 17, 2027, or earlier after the March-quarter report (424B4)"
+    source_ids: [ant_424b4]
+    status: data_derived
+  - id: lock_big
+    text: "Up to 2.7bn Class A + 336m Class N = up to 3.0bn shares at the 180-day / Q1-release step, the largest single step in the 424B4 release table (earlier steps: up to 315m on Nov 19, 2026; 303m on Dec 15, 2026 and Jan 5, 2027; 353m on Jan 19 and Feb 2, 2027; 1.7bn two trading days after the FY2026 release, then 480m on the 13th, 27th, 41st, 55th and 69th days after it; later: 447m ×4 after the Q1 release, 558m at the Q2 release and 502m ×5 after it; up to 1.9bn at the earlier of the Q3 2027 release or Nov 18, 2027)."
+    spoken: up to three billion shares
+    display: "Up to 3.0bn shares at the 180-day step (424B4)"
+    source_ids: [ant_424b4]
+    status: source_located
+  - id: compute
+    text: "Compute and infrastructure expense ÷ revenue: 2025 $7,326m ÷ $4,585m ≈ $1.60; 9M 2026 $18,808m ÷ $33,242m ≈ $0.57 (our calc, 424B4)."
+    spoken: about fifty-seven cents
+    display: "Compute per $1 of sales: ≈ $1.60 (2025) → ≈ $0.57 (Jan-Sep 2026) · our calc, 424B4"
+    source_ids: [ant_424b4]
+    status: data_derived
+  - id: commit
+    text: "Purchase commitments and leases, including short-term and not-yet-commenced leases, as of and after Sep 30, 2026: ≈$900.9bn aggregate (≈$70.7bn due in the 12 months after Sep 30, 2026; ≈$451.6bn before end-2030; the rest mostly 2031-2045) (424B4)."
+    spoken: about nine hundred billion dollars
+    display: "Commitments ≈ $900.9bn to 2045 · ≈ $70.7bn due within 12 months (424B4)"
+    source_ids: [ant_424b4]
+    status: source_located
+  - id: fb
+    text: "Facebook priced at $38 (May 2012); its lowest close in the first year was $17.73 on Sep 4, 2012 (≈47% of the offer, our calc); the first lock-up expired Aug 16, 2012 and the stock closed at a new low of $19.87 that day (AP); one year after the IPO it closed at $26.25 (May 17, 2013)."
+    spoken: about half
+    display: "Facebook 2012: $38 offer → $17.73 low close (Sep 4) · AP, Yahoo Finance"
+    source_ids: [fb_lock, fb_px]
+    status: source_located
+  - id: arm
+    text: "Arm priced at $51 (Sep 2023), closed day one at $63.59, closed below the offer at $47.87 on Oct 20, 2023, then rose 48% on Feb 8, 2024 after its quarterly report ($77.01 → $113.89) (Bloomberg; Yahoo Finance)."
+    spoken: nearly half
+    display: "Arm 2023-24: $51 offer → $47.87 (Oct 20) → +48% in a day (Feb 8, 2024)"
+    source_ids: [arm_ipo, arm_px]
+    status: source_located

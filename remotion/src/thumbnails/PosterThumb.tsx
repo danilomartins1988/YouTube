@@ -597,6 +597,29 @@ const HEROES: Record<string, HeroFn> = {
     <circle r={170} fill="#FFC928" stroke={OL} strokeWidth={14} /><circle r={128} fill="none" stroke="#7A5200" strokeWidth={8} />
     <text x={0} y={62} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={190} fill={OL}>$</text>
   </g>,
+  /** BYB Anthropic: a giant golden padlock on a chain, a hanging date tag (`text`), the shackle about to spring (tension cue) */
+  padlock: (o, id) => <g>
+    <defs>{lin(`${id}g`, [[0, '#FFF0A8'], [0.5, '#FFC928'], [1, '#B97A00']], 1, 1)}{lin(`${id}c`, [[0, '#E9EEF5'], [1, '#7D8899']], 0, 1)}</defs>
+    {Array.from({length: 7}, (_, k) => <ellipse key={k} cx={-560 + k * 70} cy={-330 + k * 22} rx={44} ry={26} fill="none" stroke={`url(#${id}c)`} strokeWidth={18} transform={`rotate(${k % 2 ? 70 : 10} ${-560 + k * 70} ${-330 + k * 22})`} />)}
+    <g transform="translate(0 -40) rotate(-10)"><path d="M -170 -60 L -170 -250 A 170 170 0 0 1 170 -250 L 170 -150" stroke={`url(#${id}c)`} strokeWidth={70} fill="none" strokeLinecap="round" /></g>
+    <rect x={-290} y={-120} width={580} height={470} rx={60} fill={`url(#${id}g)`} stroke={OL} strokeWidth={14} />
+    <circle cx={0} cy={60} r={62} fill={OL} /><rect x={-24} y={70} width={48} height={140} rx={20} fill={OL} />
+    {o.text && <g transform="translate(300 260) rotate(14)"><path d="M -40 -20 L 0 -90" stroke="#FFFFFF" strokeWidth={8} />
+      <rect x={-40} y={-30} width={420} height={170} rx={24} fill="#FFFFFF" stroke={OL} strokeWidth={10} />
+      <text x={170} y={82} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={96} fill="#C9302C">{o.text}</text></g>}
+  </g>,
+  /** BYB Anthropic: a clipboard checklist with green ticks and one open box (the buyer's checklist) */
+  clipboard: (o, id) => <g transform={`rotate(${o.r ?? 6})`}>
+    <defs>{lin(`${id}w`, [[0, '#C98B4F'], [1, '#8A5A2B']], 0, 1)}</defs>
+    <rect x={-330} y={-420} width={660} height={860} rx={40} fill={`url(#${id}w)`} stroke={OL} strokeWidth={14} />
+    <rect x={-280} y={-340} width={560} height={740} rx={16} fill="#FFFDF5" stroke={OL} strokeWidth={8} />
+    <rect x={-130} y={-460} width={260} height={110} rx={24} fill="#C5CED8" stroke={OL} strokeWidth={10} />
+    {o.title && <text x={0} y={-250} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={84} fill={OL}>{o.title}</text>}
+    {Array.from({length: o.rows ?? 5}, (_, k) => { const y = -150 + k * 115, done = k < (o.done ?? 4);
+      return <g key={k}><rect x={-230} y={y - 40} width={80} height={80} rx={12} fill="#FFFFFF" stroke={OL} strokeWidth={8} />
+        {done && <path d={`M -220 ${y} L -192 ${y + 30} L -140 ${y - 40}`} stroke="#1FA34A" strokeWidth={22} fill="none" strokeLinecap="round" strokeLinejoin="round" />}
+        <rect x={-120} y={y - 14} width={k % 2 ? 300 : 340} height={28} rx={12} fill="#B8C0CC" /></g>; })}
+  </g>,
 };
 
 const HeroNode: React.FC<{o: Obj; i: number; fx: boolean}> = ({o, i, fx}) => {

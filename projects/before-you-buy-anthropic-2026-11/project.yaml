@@ -1,0 +1,55 @@
+title: "Anthropic Stock Before You Buy: 7 Things to Check (Nov 2026)"
+slug: before-you-buy-anthropic-2026-11
+language: en
+series: before-you-buy
+edition: "2026-11"
+# Series "Before You Buy" (docs/series/BEFORE_YOU_BUY.md), Anthropic (Nasdaq: ANT), November 2026 edition. Not a numbered channel
+# episode. A practical buyer's checklist, NOT a repeat of Ep 72 (the IPO documentary): share classes and votes, share count and
+# dilution, the price-to-sales multiple vs megacaps, the lock-up calendar, the first report as a public company, partner and customer
+# concentration, first-year IPO volatility (Facebook 2012, Arm 2023), governance (PBC + Long-Term Benefit Trust), and what would change
+# the picture. DATA AS OF the Nov 19, 2026 close (the first trading day; the Nov 20 session had not closed when the film was locked).
+# NEUTRALITY (critical): Anthropic makes the AI model used in this production. Filings (424B4, FWP, Amazon 10-Q, peer filings) and
+# named press only; no insider framing; risks and positives with equal weight; never buy/sell, no price target; not investment advice.
+# Story over statistics: protagonist MAYA (fictional would-be buyer with a clipboard); 13 spoken figures, at most one per segment.
+# No logos (ticker ANT); no real people drawn. USD only. Runtime 11-13 min (series spec).
+renderer: remotion
+remotion_geo: [world]
+style:
+  name: cartoon-day
+  palette:
+    bg: "#1C1430"
+    bg2: "#2A1F45"
+    ink: "#F6F2FF"
+    muted: "#B9AEDB"
+    land: "#2B2350"
+    border: "#FFB547"
+    accent: "#FFB547"
+    accent2: "#5CC8FF"
+    accent3: "#7DFF8A"
+    risk: "#FF5C7A"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 4
+intro:
+  after_segment: h_maya
+# Series voice (owner chose "alloy" 2026-11-11); the channel default (ash) is unchanged.
+tts_overrides:
+  openai:
+    voice: alloy
+    instructions: >-
+      Voice: a young creator in their mid-twenties explaining something to a friend who is about to buy a stock. Natural, human,
+      warm and a little playful, but strictly neutral and fair: never promotional, never alarmist, no hype; risks and positives get the
+      same calm weight. Pacing: relaxed and unhurried; take a real breath at commas and full stops, and slow down on numbers and dates
+      so they land. Not an announcer, not salesy. Pronounce: Anthropic (an-THROP-ik), Claude (KLAWD), Nasdaq (NAZ-dak), A-N-T as
+      three letters, A M D as letters, Nvidia (en-VID-ee-ah), Maya (MY-ah).
