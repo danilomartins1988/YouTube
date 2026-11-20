@@ -1,0 +1,54 @@
+title: "Anthropic's $1.5 Trillion IPO: The AI Gold Rush or the Next Bubble?"
+slug: anthropics-1-5-trillion-ipo
+language: en
+# Episode 72 (owner brief docs/episodes/72-anthropic-ipo/PRODUCTION_PROMPT.md, received 2026-11-20). Runtime 12-14 min (owner override).
+# Central question: did investors buy the next great technology company, or pay an extraordinary price for a future that has not
+# happened yet? NEUTRALITY (critical): Anthropic makes the AI model used in this production. The film uses only SEC filings
+# (S-1/A, 424B4, pricing FWP; Amazon and Alphabet 10-Qs) and named press reports; no insider framing; the bear case and the
+# "circular financing" criticism get full weight; no investment advice.
+# Story over statistics: one protagonist, JUNE (a fictional nurse from Ohio who gets ONE SHARE at the $83 offer price) and the share
+# itself (a golden ticket); 14 spoken figures, at most one per segment; every other figure on screen with a claim pill or in the
+# description. Public figures (Dario and Daniela Amodei, Andy Jassy, Sundar Pichai) only as respectful caricatures with name tags,
+# doing only what the narration documents. No logos (the ticker ANT is used instead). Day scenes, bespoke worlds
+# (CartoonStage/antipo.tsx). USD only (all source figures are in USD).
+renderer: remotion
+style:
+  name: cartoon-day
+  palette:
+    bg: "#F5F6FA"
+    bg2: "#FFFFFF"
+    ink: "#1A2238"
+    muted: "#5E6B85"
+    land: "#A6D08A"
+    border: "#23407A"
+    accent: "#E8A317"
+    accent2: "#2F6FDB"
+    accent3: "#2E9E6B"
+    risk: "#E5483B"
+  fonts:
+    display: InterDisplay-Bold
+    heading: InterDisplay-SemiBold
+    body: Inter-Regular
+    body_bold: Inter-SemiBold
+  web_fonts:
+    display: "Inter Display, Inter, sans-serif"
+    body: "Inter, sans-serif"
+  transition: scan
+  background: grid
+  motifs: [chapter-tags]
+budget:
+  max_paid_usd: 1.00
+presenter_min: 4
+intro:
+  after_segment: co_hook
+tts_overrides:
+  openai:
+    voice: ash
+    tempo: 1.0
+    instructions: >-
+      Voice: the narrator of a premium American documentary about money and power: curious, clear and quietly confident, with a light
+      touch of wit and warmth for the main character, June. Strictly neutral and fair: never promotional, never alarmist, no hype; give
+      the optimists and the critics the same calm weight. Pacing: brisk but unhurried; slow slightly to land every number; a short beat
+      after a surprising figure and before each verdict. Natural American English, conversational, never an announcer, never salesy.
+      Pronounce: Anthropic (an-THROP-ik), Amodei (ah-moh-DAY), Dario (DAH-ree-oh), Daniela (dah-nee-EL-ah), Claude (KLAWD),
+      Nasdaq (NAZ-dak), A-N-T as three letters, TSMC as letters, AMD as letters, Nvidia (en-VID-ee-ah), Micron (MY-kron).

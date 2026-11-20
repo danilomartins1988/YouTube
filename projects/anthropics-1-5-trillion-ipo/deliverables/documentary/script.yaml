@@ -1,0 +1,297 @@
+logline: 'June, a fictional nurse from Ohio, gets one share of Anthropic at the $83 offer price. Following that single share, the film asks what Wall Street
+  actually bought: three different valuations of the same company, a revenue rocket and five different scoreboards, a cost of building intelligence that
+  fell from more than a dollar per dollar of sales to just over half, a stack of compute promises worth about $900 billion, partners who are investors,
+  suppliers, distributors and rivals at once (and the circular-financing criticism, in full), who got rich on paper and who can actually sell, and what
+  the price assumes on the bright, middle and dark roads. The answer: a share of one of the fastest-growing companies ever measured, attached to giant promises,
+  at a price that assumes the growth lasts a very long time. Importance and investment returns are two different things. Not investment advice.'
+title: 'Anthropic''s $1.5 Trillion IPO: The AI Gold Rush or the Next Bubble?'
+segments:
+- id: co_hook
+  chapter: The trillion-dollar question
+  narration: On a Thursday in November, June, a nurse from Ohio, got what she'd asked her brokerage app for. One share of the most talked-about company
+    on Wall Street, at the offer price of {{ipo_price}}. By lunchtime, it was worth a lot more. By the closing bell, a bit less. But here's what puzzled
+    her. The company behind that share is barely old enough for kindergarten. It doesn't make chips. It doesn't own a giant cloud. And its biggest partners
+    are also its shareholders, its suppliers and its rivals. So what exactly did June just buy?
+  claims:
+  - ipo_price
+  analysis: true
+  source_note: Hook. June is fictional (a retail buyer at the offer price; retail got about 15% of the offering, CNBC). Founded January 2021 (424B4).
+- id: title_card
+  chapter: The trillion-dollar question
+  narration: ''
+  claims: []
+- id: c1_card
+  chapter: The trillion-dollar question
+  narration: ''
+  claims: []
+- id: c1_day
+  chapter: The trillion-dollar question
+  narration: Here's how the day went. The shares went to the first buyers the night before, at June's price. When trading opened on the Nasdaq, under the
+    ticker A, N, T, buyers rushed in and the price leapt. Then the excitement cooled, and early buyers took quick profits. By the close, one share was worth
+    {{close_px}}. Still a gain for June. Just a smaller one.
+  claims:
+  - close_px
+- id: c1_three
+  chapter: The trillion-dollar question
+  narration: Now, the headline number. You'll see this company valued at several prices, and they can all be right. Let me draw why. Share price times the
+    shares that exist today gives one number. Add every share that could exist soon, from employee options, stock awards and notes that turn into stock,
+    and you get a bigger one, called fully diluted. At June's price, fully diluted, Wall Street called it {{ipo_fdv}}. Same company. Different counting.
+  claims:
+  - ipo_fdv
+- id: c1_raise
+  chapter: The trillion-dollar question
+  narration: The sale itself was the biggest stock offering on record, {{ipo_raise}}. And almost all of that money went to the company, as new shares, not
+    to insiders cashing out. The co-founders each sold only a sliver. Then, right after the sale, a group of chip and cloud giants agreed to buy even more
+    stock, at the same price. Remember that group.
+  claims:
+  - ipo_raise
+- id: c2_card
+  chapter: How it got so valuable
+  narration: ''
+  claims: []
+- id: c2_origin
+  chapter: How it got so valuable
+  narration: 'Rewind to the beginning. A group of researchers left OpenAI, the company behind ChatGPT, to start their own lab. Among them, a brother and
+    sister: Dario Amodei, who became chief executive, and Daniela Amodei, president. They made Anthropic a public benefit corporation, allowed to weigh
+    its mission alongside profit. Their product was an AI assistant called Claude.'
+  claims: []
+  source_note: '424B4: founded January 2021; Dario Amodei CEO (previously VP of Research at OpenAI), Daniela Amodei President; public benefit corporation;
+    Claude launched publicly in Q1 2023.'
+- id: c2_claude
+  chapter: How it got so valuable
+  narration: At first, Claude was one chatbot among many. Then it found its niche. Programmers used it to write code, and companies plugged it into their
+    own products. And most of the money doesn't come from monthly subscriptions. It comes from usage. Businesses pay for the work Claude does, a little
+    like an electricity bill.
+  claims: []
+  source_note: '424B4: consumption-based revenue 79% and subscriptions 21% of 9M 2026 revenue; Claude Code, the coding agent. No figure spoken.'
+- id: c2_rocket
+  chapter: How it got so valuable
+  narration: And that bill grew at a speed Wall Street had rarely seen. When Claude first went on sale, revenue was tiny. So far this year, through September,
+    Anthropic booked {{rev_9m26}} in sales. That's the rocket the whole price is strapped to.
+  claims:
+  - rev_9m26
+- id: c2_score
+  chapter: How it got so valuable
+  narration: But growth is only one scoreboard. Let me draw the others. Revenue is what customers paid. The run rate is this month's pace, stretched over
+    a year. Operating profit is what's left after running the business. Net profit counts everything else, and this year it shows a giant loss, mostly accounting
+    on notes that turn into stock. And cash flow, the money that actually came in, turned positive.
+  claims: []
+  analysis: true
+  source_note: '424B4: run-rate revenue ≈ $81bn (Oct 31, 2026); operating loss $1.26bn and net loss $104.0bn in 9M 2026, incl. $94.3bn fair-value changes;
+    operating cash flow +$6.6bn. No figure spoken (shown on screen).'
+- id: c3_card
+  chapter: The cost of building intelligence
+  narration: ''
+  claims: []
+- id: c3_hall
+  chapter: The cost of building intelligence
+  narration: So where does the money go? Follow June's share into a data center. Every answer Claude writes runs on rooms full of specialized chips that
+    need power, cooling and buildings. Training a new model costs a fortune. Running it costs money every time someone asks a question. That's called inference,
+    and it grows with every customer.
+  claims: []
+  analysis: true
+  source_note: Mechanism (training vs inference); 424B4 describes compute and infrastructure as the largest expense. No figure spoken.
+- id: c3_dollar
+  chapter: The cost of building intelligence
+  narration: Here's the key ratio. Last year, for every dollar of sales, Anthropic spent {{cmp25}} on computing and infrastructure. It was selling dollars
+    that cost more than a dollar to make.
+  claims:
+  - cmp25
+- id: c3_better
+  chapter: The cost of building intelligence
+  narration: This year, the picture flipped. For every dollar of sales, computing cost {{cmp26}}. Bigger customers, more efficient models, better chip deals.
+    That's the chart the optimists point to.
+  claims:
+  - cmp26
+- id: c3_commit
+  chapter: The cost of building intelligence
+  narration: And here's the chart the skeptics point to. To keep growing, Anthropic has signed contracts for future computing power, data centers and chips,
+    worth {{commit}}, stretching over years, some over decades. That's not money already spent. But much of it is promised, whether the customers show up
+    or not.
+  claims:
+  - commit
+- id: c3_words
+  chapter: The cost of building intelligence
+  narration: Let me separate some words that get mixed up. A commitment is a promise to buy later. Spending is cash going out. Debt is borrowed money that
+    must be repaid. An expense hits profit as the service gets used. Anthropic's giant number is mostly the first kind, and its actual debt is small next
+    to its cash pile. The risk isn't a loan. It's the promise.
+  claims: []
+  analysis: true
+  source_note: '424B4: indebtedness $6.2bn (Amazon Notes, expected to settle in shares) vs cash $95.6bn + short-term investments $36.3bn (Sep 30, 2026).
+    No figure spoken.'
+- id: c3_question
+  chapter: The cost of building intelligence
+  narration: So the bet comes down to one question. Can Anthropic earn more from every dollar of computing than it costs, while those bills come due? If
+    demand keeps climbing, the promises will look cheap. If it stalls, they'll look enormous.
+  claims: []
+  analysis: true
+  source_note: Analysis; no figure.
+- id: c4_card
+  chapter: Partners on every side
+  narration: ''
+  claims: []
+- id: c4_amazon
+  chapter: Partners on every side
+  narration: Now meet the strangest relationship in this story. Amazon. It has invested billions in Anthropic since its early days. Its cloud rents Anthropic
+    much of its computing power, and Anthropic has promised to spend {{amzn_commit}} there over the next decade. Amazon also sells Claude to its cloud customers,
+    and builds AI models of its own.
+  claims:
+  - amzn_commit
+- id: c4_loop
+  chapter: Partners on every side
+  narration: Watch the money move. Amazon sends cash to Anthropic as an investment. Anthropic sends cash back to Amazon to pay for computing, and Amazon
+    books that as sales. When Amazon sells Claude to its customers, it keeps a cut. And when Anthropic's value rises, the stake on Amazon's books rises
+    too. Google runs a similar loop, as investor, cloud supplier and rival.
+  claims: []
+  analysis: true
+  source_note: 'Mechanism drawn from filings: Amazon 10-Q (investments, upward adjustments, AWS commitment); 424B4 (CSP marketplaces, gross revenue, partner
+    fees as expense; Google hosting commitment ≥$121.3bn; Google Series H $10bn). No figure spoken.'
+- id: c4_critics
+  chapter: Partners on every side
+  narration: 'Critics have a name for this. Circular financing. Their worry: when the same money travels around a loop, demand can look stronger than it
+    is, and everyone in the loop looks healthier because of the others. A rival has argued that the way Anthropic counts cloud sales makes its revenue look
+    bigger. Some warn the risk lands on ordinary investors, like June. And Anthropic''s own filing warns these ties could create conflicts of interest.'
+  claims: []
+  analysis: true
+  source_note: 'Criticism, attributed: Reuters (circular relationship), Axios (reported revenue-accounting dispute), Tech Policy Press (opinion), 424B4
+    risk factor (conflicts of interest).'
+- id: c4_defense
+  chapter: Partners on every side
+  narration: The other side has a case too. The cash is real, and most of Claude's paying customers are ordinary businesses. Counting cloud sales in full
+    is a standard accounting choice, and both rivals say they follow the rules. Suppliers lending to customers is an old idea. Carmakers do it every day.
+    And it's all disclosed. So the real question is how much growth would survive if the loop slowed down.
+  claims: []
+  analysis: true
+  source_note: '424B4: gross basis because the company is principal; >11,900 customers with ≥$100k TTM revenue; CSP marketplaces 44% of 9M 2026 revenue
+    (so most revenue is direct). Axios: both companies say they follow standard accounting. Analysis, no figure.'
+- id: c4_twist
+  chapter: Partners on every side
+  narration: And here's the twist. Remember the group that bought extra stock after the IPO? Google, Nvidia, AMD, Broadcom, Micron, Microsoft and the chipmaker
+    TSMC. Most of them are, directly or indirectly, part of the supply chain Anthropic runs on. The investors are often the suppliers, and part of what
+    they put in can come back as sales.
+  claims: []
+  analysis: true
+  source_note: 424B4 concurrent private placement ($26.0bn, seven buyers) and compute arrangements (Google, Microsoft, Broadcom, AMD, NVIDIA GPUs via providers).
+    The last sentence is our analysis.
+- id: c5_card
+  chapter: Who got rich?
+  narration: ''
+  claims: []
+- id: c5_vc
+  chapter: Who got rich?
+  narration: So who got rich? Let's play detective with a hypothetical early investor. In Anthropic's first funding round, investors paid what works out
+    today to {{seriesa}} a share. A small bet back then is now worth hundreds of times more. On paper.
+  claims:
+  - seriesa
+  analysis: true
+  source_note: Hypothetical investor (labelled on screen); price from the 424B4, our calculation.
+- id: c5_giants
+  chapter: Who got rich?
+  narration: The biggest paper winners are the giants. Amazon bought its stake in pieces over several years, and before the IPO it was already carrying
+    it at many times what it paid, with much of that gain flowing into its reported profits. But a paper gain isn't cash until the shares are sold.
+  claims: []
+  source_note: 'Amazon 10-Q: ≈$18bn invested (our sum); ≈$238.7bn carried on Sep 30, 2026 (our sum of preferred $92.5bn and notes $146.2bn); $62.8bn upward
+    adjustments in other income in 9M 2026. Shown on screen, not spoken.'
+- id: c5_staff
+  chapter: Who got rich?
+  narration: Then there are the employees, many paid partly in stock options, the right to buy shares at an old, low price. Reports say {{staff400}} of
+    them are now worth a fortune. On paper.
+  claims:
+  - staff400
+- id: c5_lock
+  chapter: Who got rich?
+  narration: And on paper is the key phrase. Most insiders can't sell yet. A lockup keeps most of their shares off the market for about {{lockup}}, up to
+    a year for the co-founders and biggest holders. When the locks open, a wave of sellers can arrive at once.
+  claims:
+  - lockup
+- id: c5_june
+  chapter: Who got rich?
+  narration: And June? Her share has no lockup. But notice the difference. The earliest backers paid pocket change, years ago, when nobody knew if this
+    would work. June paid full price, on the day the story was most exciting. Same share. Very different bet.
+  claims: []
+  analysis: true
+  source_note: Story beat; no figure.
+- id: c6_card
+  chapter: Is it worth the price?
+  narration: ''
+  claims: []
+- id: c6_multiple
+  chapter: Is it worth the price?
+  narration: So, is it worth it? One simple test. Compare the company's value at the first close with the pace of its sales. The stock is priced at {{mult}}
+    its yearly sales pace. Not its profits. Its sales.
+  claims:
+  - mult
+- id: c6_need
+  chapter: Is it worth the price?
+  narration: Let me draw what that price assumes. Picture Anthropic years from now, when growth slows, as it does for every big company. For today's price
+    to look sensible then, it would need profits on the scale of the most profitable companies on Earth, year after year. Not impossible. Just a lot to
+    assume on day one.
+  claims: []
+  analysis: true
+  source_note: Hypothetical, our calculation shown on screen (e.g. ≈$70bn a year of net profit at 25 times earnings for ≈$1.75tn). Not a forecast.
+- id: c6_roads
+  chapter: Is it worth the price?
+  narration: Picture June's share at a fork in the road. Several roads lead away from here, and nobody knows the odds of any of them.
+  claims: []
+  analysis: true
+  source_note: Scenarios are illustrative; no probabilities.
+- id: c6_bull
+  chapter: Is it worth the price?
+  narration: On the bright road, AI becomes as basic as electricity. Anthropic keeps winning big customers, its computing costs keep falling, and those
+    huge contracts turn out to be bargains. On that road, today's price could one day look cheap.
+  claims: []
+  analysis: true
+  source_note: Bull scenario (illustrative, not a forecast).
+- id: c6_base
+  chapter: Is it worth the price?
+  narration: On the middle road, AI keeps growing, but competition squeezes prices. Anthropic becomes a big, healthy company, and the stock does fine, slowly,
+    because so much of the good news was paid for up front.
+  claims: []
+  analysis: true
+  source_note: Base scenario (illustrative, not a forecast).
+- id: c6_bear
+  chapter: Is it worth the price?
+  narration: And on the dark road, growth slows, cheaper models catch up, and the bills keep arriving anyway. Profits stay thin, the company needs more
+    money, and every new share it sells makes June's slice smaller.
+  claims: []
+  analysis: true
+  source_note: 'Bear scenario (illustrative). Dilution mechanics from the 424B4: options, RSUs, Amazon Notes, NPAs (up to $77.0bn of further convertible
+    notes), Public Benefit Issuances.'
+- id: c7_card
+  chapter: The bigger question
+  narration: ''
+  claims: []
+- id: c7_shovels
+  chapter: The bigger question
+  narration: Step back, and there's a pattern older than AI. In a gold rush, the steadiest money is often made selling shovels. Here, the shovel sellers
+    are the chipmakers and the clouds. They get paid as long as the building goes on, whether or not any AI lab turns a big profit. Some get paid twice,
+    as investors and as suppliers.
+  claims: []
+  analysis: true
+  source_note: Analysis; library link to Ep 68 by title in the description.
+- id: c7_answer
+  chapter: The bigger question
+  narration: So, what did Wall Street buy? A share of one of the fastest-growing companies ever measured, with real customers and real cash. Attached to
+    a giant stack of promises, and to partners on every side of the table. That doesn't make it a bubble, or a sure thing. It's a bet on how long the growth
+    lasts, at a price that assumes it lasts a very long time.
+  claims: []
+  analysis: true
+  source_note: Verdict (our analysis); neutral; not investment advice.
+- id: c7_close
+  chapter: The bigger question
+  narration: Anthropic may become one of the most important companies of the next decade. But importance and investment returns are two different things.
+    June hasn't decided what to do with her share. The question isn't whether AI will change the world. It's how much of that future has already been priced
+    into a single stock.
+  claims: []
+  analysis: true
+  source_note: Close (owner's suggested line). June is fictional.
+- id: teaser
+  chapter: The bigger question
+  narration: Next time, we follow the money behind another hidden link of the world economy. This is The Hidden Economics.
+  claims: []
+  analysis: true
+  source_note: Generic closing teaser (channel rule).
+- id: button
+  chapter: The bigger question
+  narration: ''
+  claims: []

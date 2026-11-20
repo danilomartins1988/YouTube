@@ -1,0 +1,249 @@
+# Sources and claims for "Anthropic's $1.5 Trillion IPO: The AI Gold Rush or the Next Bubble?" (Episode 72).
+# Read on 2026-11-20. Primary documents first: Anthropic's final prospectus (424B4, filed 2026-11-19), the pricing free writing
+# prospectus (FWP, 2026-11-18/19) and the S-1 history on SEC EDGAR; Amazon's Q3 2026 10-Q; Alphabet's Q3 2026 10-Q (which does not
+# name Anthropic). Market data (open, high, close, first-day valuations) from named press reports (CNBC, The National, Forbes,
+# TechRepublic, Fast Company); exchange data were not reachable programmatically. NEUTRALITY: Anthropic makes the AI model used in this
+# production; the film uses only these public documents and reports, no insider information. OUR CALCULATION is labelled;
+# REPORTED marks press reports; HYPOTHETICAL marks the illustrative investor. Status stays source_located / data_derived until a named
+# human reviewer signs off. All figures are in US dollars.
+sources:
+  - id: ant_424b4
+    title: "Anthropic, PBC: Prospectus (Form 424B4), 980,000,000 shares of Class A common stock"
+    publisher: Anthropic, PBC via SEC EDGAR (CIK 0002130357, File No. 333-299633)
+    url: https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm
+    published: "2026-11-19"
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "Anthropic, PBC, final prospectus (SEC Form 424B4)"
+    notes: >-
+      The Offering: 956,351,354 Class A shares offered by the company + 23,648,646 by selling stockholders (the seven co-founders,
+      3,378,378 each); underwriters' option 147,000,000 (100% primary). Concurrent private placement: $26.0bn of Class N at the IPO
+      price (Google 120,481,927 sh ≈ $10.0bn; NVIDIA 120,481,927 ≈ $10.0bn; AMD 30,120,481 ≈ $2.5bn; Broadcom, Micron, Microsoft
+      12,048,192 each ≈ $1.0bn; TSMC 6,024,096 ≈ $0.5bn); not locked up but restricted securities. Outstanding after offering + placement:
+      13,219,642,276 shares (7,583,103,996 Class A + 5,636,538,278 Class N + Class T and F single shares), incl. 846,840,960 Class N
+      shares of the Initial Public Benefit Issuance (legally outstanding, not for accounting). Excluded: 1,774,342,693 options (wtd avg
+      exercise $2.91), 1,026,660,010 unvested RSUs, 47,041,287 RSUs granted after Sep 30, 2026 plan reserves; Amazon Notes beyond the
+      cap. Net proceeds to the company ≈ $104.8bn (IPO primary + placement). Lock-up: up to 180 days; co-founders and holders of >0.5%
+      of fully diluted shares up to 365 days; up to 10% of lock-up shares of non-founder directors, officers, employees may be sold from
+      the first trading day; ≈3.7bn shares may become eligible before 180 days. Voting: Class F (Founder LLC) = 50.1% of votes.
+      Financials: revenue 2023 $41m, 2024 $386m, 2025 $4,585m; 9M 2025 $2,545m; 9M 2026 $33,242m (Q3 2026 $17.0bn). Compute and
+      infrastructure expense 2025 $7,326m, 9M 2026 $18,808m. Operating loss 2025 $(8,060)m; 9M 2026 $(1,260)m; Q3 2026 $(567)m
+      (incl. $5.0bn short-term compute and $2.0bn non-cash donation-matching charges). Net loss 2025 $(41,965)m; 9M 2026 $(104,039)m,
+      incl. $(94,324)m change in fair value of convertible notes, derivative liabilities and SAFEs. Net cash from operating activities
+      9M 2026 +$6,569m (9M 2025 −$2,024m); purchases of property and equipment $925m and prepayments for leased assets $1,955m.
+      Cash and equivalents $95.6bn + short-term investments $36.3bn (Sep 30, 2026); total indebtedness $6.2bn (Amazon Notes).
+      Run-Rate Revenue ≈ $81bn at Oct 31, 2026 (up $10bn from Sep 30). Consumption-based revenue 79% of 9M 2026 revenue,
+      subscriptions 21%. Revenue through CSP marketplaces 47% (2025), 44% (9M 2026); recognised on a gross basis (company is principal).
+      Commitments: purchase commitments and leases ≈ $900.9bn aggregate (≈$451.6bn before end-2030; rest 2031-2045; ≈$70.7bn due in the
+      12 months after Sep 30, 2026). Microsoft ≥$47.2bn (Nov 2026-Jun 2033); Google ≥≈$121.3bn (Apr 2026-Jul 2033) plus est. $125-150bn
+      TPU compute not in the table; Amazon ≥$110.0bn (May 2026-Apr 2036) "regardless of actual usage"; SpaceXAI up to $120.5bn into 2029;
+      AMD >$20bn expected; Nscale up to ≈$44.6bn; Lambda ≈$41.3bn. Ownership after offering: Amazon 1,936,452,353 Class N (14.6% of
+      outstanding capital stock; 23.6% if Amazon Notes fully converted without the cap); Google 1,774,959,745 Class N (13.4%).
+      Series A preferred original issue price $2.57 (post 10-for-1 split of Sep 17, 2026; preferred converts at ≈10 common each).
+      Risk factor: reliance on a limited number of CSPs and suppliers "some of which have strategic and investment relationships with us
+      and are our customers, creates complex dynamics that could give rise to conflicts of interest". Founded January 2021; co-founders
+      Dario Amodei (CEO; previously VP of Research at OpenAI) and Daniela Amodei (President, Chair) and five others; public benefit
+      corporation; co-founders pledged 80% of personal equity to philanthropy; Public Benefit Issuances of up to 2% more shares each time
+      the price rises 50% above the prior milestone.
+  - id: ant_fwp
+    title: "Anthropic, PBC: Issuer Free Writing Prospectus (pricing term sheet)"
+    publisher: Anthropic, PBC via SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/2130357/000162828026074937/anthropicpbc-fwppricing.htm
+    published: "2026-11-18"
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "Anthropic, PBC, pricing FWP"
+    notes: "Size (excluding option) $81,340,000,000; price to public $83.00; base shares by Anthropic 956,351,354, by selling stockholders 23,648,646; option up to 147,000,000 (100% primary); concurrent private placement $26.0bn of Class N (313,253,007 shares) at the price to public; price to underwriters $82.43878; pricing date Nov 18, trade date Nov 19, settlement Nov 20, 2026; Nasdaq Global Select Market, symbol ANT; lead bookrunners Goldman Sachs and Morgan Stanley."
+  - id: ant_edgar
+    title: "Anthropic, PBC: filing index (DRS Jun 1, 2026; S-1 Oct 26, 2026; S-1/A Nov 2, Nov 10, Nov 17; 424B4 Nov 19)"
+    publisher: SEC EDGAR
+    url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002130357
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "SEC EDGAR"
+    notes: "Confidential draft (DRS) June 1, 2026; public S-1 Oct 26, 2026; amendments Nov 2, 10, 17; effective Nov 18; final prospectus 424B4 Nov 19, 2026."
+  - id: amzn_10q
+    title: "Amazon.com, Inc. Form 10-Q for the quarter ended September 30, 2026"
+    publisher: Amazon.com, Inc. via SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm
+    published: "2026-10-30"
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "Amazon.com, Inc., Q3 2026 Form 10-Q"
+    notes: >-
+      "From Q3 2023 to Q4 2025, we invested $8.0 billion in convertible notes from Anthropic"; "In Q2 2026, we invested $5.0 billion in
+      Anthropic Series G nonvoting preferred stock"; nine months 2026: "$10.0 billion in Anthropic nonvoting preferred stock". Sep 30,
+      2026 carrying amounts: nonvoting preferred ≈ $92.5bn; convertible notes fair value ≈ $146.2bn (unrealized gain in AOCI $140.3bn).
+      Upward adjustments to the preferred of $62.8bn in 9M 2026 recorded in other income; $15.2bn net discrete tax expense mostly from
+      those adjustments. AWS commitment: "In Q2 2026, AWS and Anthropic announced an expansion of the strategic collaboration and
+      existing multi-year commitment by more than $100.0 billion over 10.0 years". A financing facility up to $20.0bn. 12% ownership cap
+      on the notes. Our sum: ≈$18bn invested; ≈$238.7bn carried at Sep 30, 2026 (before the IPO).
+  - id: goog_10q
+    title: "Alphabet Inc. Form 10-Q for the quarter ended September 30, 2026"
+    publisher: Alphabet Inc. via SEC EDGAR
+    url: https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm
+    published: "2026-10-29"
+    accessed: "2026-11-20"
+    kind: primary
+    credit: "Alphabet Inc., Q3 2026 Form 10-Q"
+    notes: "Does not name Anthropic. Non-marketable equity securities (measurement alternative) carried at $128.2bn on Sep 30, 2026. Google's Anthropic investments are taken from Anthropic's prospectus (Series H $10.0bn, May 2026; Google 2026 NPA up to $30.0bn; private placement $10.0bn)."
+  - id: cnbc_price
+    title: "Anthropic IPO raises over $81 billion in largest offering on record, topping SpaceX"
+    publisher: CNBC
+    url: https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html
+    published: "2026-11-18"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "CNBC"
+    notes: "Priced at $83, above the $70-$78 range; about 980 million shares (upsized from 825 million); $81.3bn raised; 'Anthropic's fully diluted market cap sits at around $1.5 trillion'; group incl. Google, Microsoft, Nvidia, AMD to invest $26bn at the IPO price; Amazon and Google stakes valued at over $100bn each."
+  - id: cnbc_range
+    title: "Anthropic sets IPO price range"
+    publisher: CNBC
+    url: https://www.cnbc.com/2026/11/16/anthropic-ipo-date-price-range.html
+    published: "2026-11-16"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "CNBC"
+    notes: "825 million shares at $70-$78; 'valuation of $1.405 trillion' at the range; retail up to 20% of the offering."
+  - id: cnbc_live
+    title: "Anthropic IPO live updates: ANT stock price and Nasdaq debut"
+    publisher: CNBC
+    url: https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html
+    published: "2026-11-19"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "CNBC"
+    notes: "Opened at $111.50 (fully diluted market cap 'nearly $2.01 trillion' at the open); closed at $97.17, up 17%, fully diluted 'roughly $1.8 trillion'; more than 846 million shares traded; retail got about 15% of the offering; over 400 employees expected to be worth $100 million or more; average employee worth over $40 million (reported)."
+  - id: national
+    title: "Anthropic shares close 17% above IPO price after volatile Nasdaq debut"
+    publisher: The National (Abu Dhabi)
+    url: https://www.thenationalnews.com/business/markets/2026/11/20/anthropic-share-price-today-ant-listing/
+    published: "2026-11-20"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "The National"
+    notes: "Closed at $97.17 on the Nasdaq debut; about $1.75 trillion fully diluted or about $1.27 trillion on shares currently outstanding; $26bn private placement lifts total to $107.3bn, the largest on record (SpaceX $86bn in June)."
+  - id: forbes_live
+    title: "Anthropic IPO Live Updates: Shares Close Up 17%"
+    publisher: Forbes (Fiona Riley)
+    url: https://www.forbes.com/sites/fionariley/2026/11/19/anthropic-ipo-live-shares-pop-34-to-open-at-11150/
+    published: "2026-11-19"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "Forbes"
+    notes: "Opened at $111.50 just before noon ET; up as much as $115.10; closed at $97.17 (Forbes page blocked automated reading; values confirmed via search excerpts and CNBC/The National)."
+  - id: techrep
+    title: "Anthropic IPO: Claude Maker Opens at $111.50 in Record Nasdaq Debut"
+    publisher: TechRepublic
+    url: https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/
+    published: "2026-11-19"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "TechRepublic"
+    notes: "Open $111.50; first trade at 11:48 a.m. ET (reported)."
+  - id: axios_rev
+    title: "OpenAI annualized revenue $20 billion less than previously reported (revenue accounting, Anthropic vs OpenAI)"
+    publisher: Axios
+    url: https://axios.com/2026/10/08/openai-50-billion-arr-anthropic-revenue-accounting
+    published: "2026-10-08"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "Axios (reported)"
+    notes: "Reported: Anthropic books the full value of sales through cloud partners and records the partner's cut as an expense; OpenAI books only its share; OpenAI's revenue chief reportedly argued Anthropic's run rate was overstated by this method; both companies say they follow standard accounting. Axios blocked automated reading; summary confirmed via search excerpts (also OfficeChai, AI Weekly). The gross-basis policy itself is primary (424B4)."
+  - id: tpp
+    title: "The SEC should block Anthropic's IPO to protect the public (opinion)"
+    publisher: Tech Policy Press
+    url: https://techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "Tech Policy Press (opinion)"
+    notes: "Critics' view, presented as opinion: ordinary investors could be 'left holding the bag' when the bills come due."
+  - id: reuters_dep
+    title: "Anthropic IPO prospectus lays bare deep dependence on Big Tech partners (Reuters, via Khaleej Times / The Star)"
+    publisher: Reuters
+    url: https://www.khaleejtimes.com/business/anthropic-ipo-prospectus-lays-bare-deep-dependence-on-big-tech-partners
+    published: "2026-09-30"
+    accessed: "2026-11-20"
+    kind: secondary
+    credit: "Reuters"
+    notes: "Describes an increasingly circular financial relationship: Amazon and Google invested tens of billions while Anthropic committed to buy enormous computing capacity from them (based on the confidential filing; the public 424B4 figures are used in the film)."
+
+claims:
+  - id: ipo_price
+    text: "Anthropic priced its IPO at $83.00 per Class A share on Nov 18, 2026, above the $70-$78 range (424B4; pricing FWP; CNBC)."
+    spoken: eighty-three dollars
+    display: "Offer price: $83.00 · 424B4"
+    source_ids: [ant_424b4, ant_fwp, cnbc_price]
+    status: source_located
+  - id: close_px
+    text: "ANT opened at $111.50 on Nov 19, 2026 (intraday high $115.10, reported) and closed its first day at $97.17, up about 17% (CNBC, Forbes, The National). Latest close available on 2026-11-20."
+    spoken: about ninety-seven dollars
+    display: "Close Nov 19, 2026: $97.17 · open $111.50 · CNBC, Forbes"
+    source_ids: [cnbc_live, forbes_live, national, techrep]
+    status: source_located
+  - id: ipo_fdv
+    text: "At the $83 offer price the fully diluted market value was about $1.5 trillion (CNBC); at the $97.17 close about $1.75-$1.8 trillion fully diluted (The National, CNBC) or about $1.27 trillion on shares outstanding (The National). OUR CHECK from the 424B4: 13.22bn shares outstanding after the offering × $97.17 ≈ $1.28tn; ≈17.6-17.8bn shares counting options, RSUs, full conversion of the Amazon Notes and the underwriters' option ≈ $1.46-1.48tn at $83 and ≈ $1.71-1.73tn at $97.17; press figures use slightly broader counts."
+    spoken: about one and a half trillion dollars
+    display: "Fully diluted at $83: ≈ $1.5 trillion · CNBC"
+    source_ids: [cnbc_price, national, cnbc_live, ant_424b4]
+    status: source_located
+  - id: ipo_raise
+    text: "The IPO raised $81.34bn (980,000,000 shares at $83; 956,351,354 new shares from the company, 23,648,646 sold by the seven co-founders); a concurrent $26.0bn private placement brought the total to ≈$107.3bn, the largest on record (FWP, 424B4, The National)."
+    spoken: about eighty-one billion dollars
+    display: "IPO proceeds: $81.3 billion · 97.6% new shares · FWP"
+    source_ids: [ant_fwp, ant_424b4, national]
+    status: source_located
+  - id: rev_9m26
+    text: "Anthropic's revenue was $33.2bn in the nine months ended Sep 30, 2026, up from $2.5bn a year earlier; 2023 revenue was $41m (424B4)."
+    spoken: thirty-three billion dollars
+    display: "Revenue Jan-Sep 2026: $33.2 billion · 424B4"
+    source_ids: [ant_424b4]
+    status: source_located
+  - id: cmp25
+    text: "OUR CALCULATION from the 424B4: 2025 compute and infrastructure expense $7,326m ÷ revenue $4,585m ≈ $1.60 per dollar of revenue."
+    spoken: about a dollar sixty
+    display: "2025: compute ≈ $1.60 per $1 of sales · OUR CALC, 424B4"
+    source_ids: [ant_424b4]
+    status: data_derived
+  - id: cmp26
+    text: "OUR CALCULATION from the 424B4: 9M 2026 compute and infrastructure expense $18,808m ÷ revenue $33,242m ≈ $0.57 per dollar of revenue."
+    spoken: about fifty-seven cents
+    display: "Jan-Sep 2026: compute ≈ $0.57 per $1 · OUR CALC, 424B4"
+    source_ids: [ant_424b4]
+    status: data_derived
+  - id: commit
+    text: "As of and after Sep 30, 2026 Anthropic had purchase commitments and leases (incl. short-term and not-yet-commenced leases) with aggregate committed spend of ≈$900.9bn, ≈$451.6bn before end-2030, the rest mostly 2031-2045; ≈$70.7bn due within 12 months (424B4)."
+    spoken: about nine hundred billion dollars
+    display: "Compute commitments: ≈ $900.9 billion, to 2045 · 424B4"
+    source_ids: [ant_424b4]
+    status: source_located
+  - id: amzn_commit
+    text: "In April 2026 Anthropic committed to spend at least $110.0bn with Amazon between May 2026 and April 2036, regardless of actual usage (424B4); Amazon's 10-Q describes the expansion as more than $100.0bn over 10 years."
+    spoken: at least a hundred and ten billion dollars
+    display: "Committed to Amazon: ≥ $110 billion, 2026-2036 · 424B4"
+    source_ids: [ant_424b4, amzn_10q]
+    status: source_located
+  - id: seriesa
+    text: "OUR CALCULATION: the Series A preferred original issue price was $2.57 per share after the 10-for-1 split (424B4), and each preferred converts into about ten common shares, ≈ $0.26 per common share; at $97.17 that is ≈ 378 times (paper value, before fees, dilution adjustments or taxes)."
+    spoken: about a quarter
+    display: "Series A ≈ $0.26 a share · OUR CALC, 424B4"
+    source_ids: [ant_424b4]
+    status: data_derived
+  - id: staff400
+    text: "REPORTED: over 400 Anthropic employees are expected to be worth $100 million or more, and the average employee over $40 million (CNBC, Nov 19, 2026); employees and other holders had 1,774,342,693 options outstanding at a weighted-average exercise price of $2.91 (424B4)."
+    spoken: more than four hundred
+    display: "400+ employees ≥ $100M on paper · REPORTED, CNBC"
+    source_ids: [cnbc_live, ant_424b4]
+    status: source_located
+  - id: lockup
+    text: "Lock-up and market standoff agreements cover ≈15.5bn shares for up to 180 days, up to 365 days for co-founders and holders of more than 0.5% of fully diluted shares; up to 10% of lock-up securities of non-founder directors, officers, employees and consultants may be sold from the first trading day (424B4)."
+    spoken: six months
+    display: "Lock-up: 180 days (365 for co-founders, big holders) · 424B4"
+    source_ids: [ant_424b4]
+    status: source_located
+  - id: mult
+    text: "OUR CALCULATION: fully diluted value at the first close (≈$1.75tn, The National) ÷ run-rate revenue at Oct 31, 2026 (≈$81bn, 424B4) ≈ 21.6x; at the $1.5tn offer valuation ≈ 18.5x. Equity value, not enterprise value; the company held ≈$132bn of cash and short-term investments on Sep 30 before ≈$104.8bn of net proceeds."
+    spoken: about twenty times
+    display: "Value ÷ sales pace ≈ 20x · OUR CALC (equity value ÷ run rate)"
+    source_ids: [national, ant_424b4]
+    status: data_derived
