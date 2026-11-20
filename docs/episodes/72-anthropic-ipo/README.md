@@ -13,7 +13,15 @@
 > of wrongdoing, and is not investment advice. The description carries a "not investment advice" line and a short production disclosure
 > (remove the disclosure if you prefer; it is factual). See `EDITORIAL_QC.md`.
 
-- STATUS_LINE
+- Runtime 13:41 (821.2 s, target 720-840), QC 0 errors (27 warnings, see `EDITORIAL_QC.md`), no freeze ≥ 5 s, no black gaps, -16.2 LUFS.
+  Narration US$0.30 (gpt-4o-mini-tts, voice ash, 10,115 characters; the fix re-render reused the cache). Commercial score 89; SEO score 87.
+- Light copy: `output/anthropicipo_documentary_light.mp4` (1280x720). **The 1920x1080 master was deleted** after the light copy and the Shorts
+  were cut (only ≈4 GB of disk free); rebuild it at no TTS cost with `OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m hiddeneco build
+  anthropics-1-5-trillion-ipo -d documentary --tts openai --allow-paid` (narration is cached; ≈45 min render).
+- Shorts (`SHORTS.md`): `output/shorts/72-anthropic-ipo_short.mp4` (53 s), `72-anthropic-ipo-b_short.mp4` (59 s), `72-anthropic-ipo-c_short.mp4` (51 s).
+- Thumbnails (`youtube-package/`): default P `thumbnail.png` = `thumbnail_poster.png` "$1.5T, WORTH IT?"; A `thumbnail_poster_A.png` "THE AI /
+  MONEY LOOP"; B `thumbnail_poster_B.png` "GOLD RUSH / OR BUBBLE?"; contact sheet `thumbnail_contact_sheet.jpg`. Package: `title.txt`,
+  `description.txt` (4,821 characters), `chapters.txt`, `tags.txt`; 3 hashtags.
 - Story: JUNE, a fictional nurse from Ohio, gets ONE SHARE at the $83 offer price; the share (a golden ticket with a face) is followed
   through the first day, the business, the compute bills, the money loop, who got rich, and the fork in the road. 14 spoken figures (≤1 per
   segment); all other figures on screen with claim pills and in the description.

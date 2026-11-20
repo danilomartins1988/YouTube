@@ -49,17 +49,16 @@
         "hero": {
           "kind": "tickerboard",
           "text": "ANT",
-          "price": "$97.17",
-          "x": 1440,
-          "y": 430,
-          "s": 0.62
+          "x": 1460,
+          "y": 400,
+          "s": 0.78
         },
         "front": [
           {
             "kind": "warnchart",
-            "x": 1400,
-            "y": 840,
-            "s": 0.62
+            "x": 1430,
+            "y": 820,
+            "s": 0.72
           }
         ],
         "particles": {
@@ -117,7 +116,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.63 MB",
+            "detail": "0.62 MB",
             "critical": true
           },
           {
@@ -159,7 +158,7 @@
           {
             "check": "uncluttered (edge density <= 0.16)",
             "pass": true,
-            "detail": "0.119",
+            "detail": "0.126",
             "critical": false
           },
           {
@@ -177,7 +176,7 @@
           {
             "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
             "pass": true,
-            "detail": "0.55",
+            "detail": "0.59",
             "critical": false
           },
           {
@@ -189,13 +188,13 @@
           {
             "check": "dominant subject has strong internal contrast",
             "pass": true,
-            "detail": "luma std 70",
+            "detail": "luma std 80",
             "critical": false
           },
           {
             "check": "distinct from other channel thumbnails",
             "pass": true,
-            "detail": "nearest why-norway-is-so-rich (distance 0.47)",
+            "detail": "nearest why-norway-is-so-rich (distance 0.46)",
             "critical": false
           },
           {
@@ -206,7 +205,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.878,
+        "design_score": 0.871,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -485,7 +484,7 @@
           {
             "check": "file size < 2 MB",
             "pass": true,
-            "detail": "0.69 MB",
+            "detail": "0.70 MB",
             "critical": true
           },
           {
@@ -574,7 +573,7 @@
           }
         ],
         "critical_fail": false,
-        "design_score": 0.692,
+        "design_score": 0.693,
         "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
         "needs_human_review": [
           "Subject recognisable at a glance (human)",
@@ -588,6 +587,6 @@
   ],
   "backend": "svg-composite (Remotion, original vector art)",
   "cost_usd": 0.0,
-  "generated": "2026-11-20T11:43:07Z",
+  "generated": "2026-11-20T12:28:58Z",
   "master": "output/anthropics-1-5-trillion-ipo/thumbnails/master_P.png"
 }
