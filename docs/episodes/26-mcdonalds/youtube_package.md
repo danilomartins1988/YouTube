@@ -17,12 +17,12 @@ All amounts are in US dollars as published. 1990 Soviet prices are not converted
 
 Chapters
 0:00 A line in the snow
-0:47 Fourteen years
-2:46 Building a food chain
-4:34 Opening day
-6:42 Thirty years
-8:19 Leaving
-10:35 The lesson
+0:55 Fourteen years
+2:54 Building a food chain
+4:42 Opening day
+6:50 Thirty years
+8:27 Leaving
+10:43 The lesson
 
 Sources
 - CBC Archives: When a Canadian brought McDonald's fast food to Moscow - https://www.cbc.ca/archives/first-mcdonalds-moscow-1990-1.4980247
@@ -42,12 +42,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 0:00 A line in the snow
-0:47 Fourteen years
-2:46 Building a food chain
-4:34 Opening day
-6:42 Thirty years
-8:19 Leaving
-10:35 The lesson
+0:55 Fourteen years
+2:54 Building a food chain
+4:42 Opening day
+6:50 Thirty years
+8:27 Leaving
+10:43 The lesson
 ```
 
 ## Tags

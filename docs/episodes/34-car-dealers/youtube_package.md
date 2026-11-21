@@ -18,11 +18,11 @@ Every figure is sourced below. The profit mix is from one public dealer group (A
 Chapters
 0:00 Two thousand five hundred dollars
 0:54 The showroom
-3:33 The finance office
-6:08 The service bay
-7:50 The dealer's shield
-9:15 The buyer's bill
-10:44 The lesson
+3:41 The finance office
+6:16 The service bay
+7:58 The dealer's shield
+9:23 The buyer's bill
+10:52 The lesson
 
 Sources
 - National Automobile Dealers Association: NADA Data 2025: Annual Financial Profile of America's Franchised New-Car Dealerships - https://www.nada.org/media/4695/download
@@ -46,11 +46,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Two thousand five hundred dollars
 0:54 The showroom
-3:33 The finance office
-6:08 The service bay
-7:50 The dealer's shield
-9:15 The buyer's bill
-10:44 The lesson
+3:41 The finance office
+6:16 The service bay
+7:58 The dealer's shield
+9:23 The buyer's bill
+10:52 The lesson
 ```
 
 ## Tags

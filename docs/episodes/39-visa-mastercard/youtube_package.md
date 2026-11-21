@@ -18,11 +18,11 @@ Every figure is sourced below, mostly from Visa and Mastercard SEC filings, the 
 Chapters
 0:00 Three hundred and fifty-five billion
 0:44 The bank club
-3:13 The club goes public
-4:57 The moat
-7:08 The rules
-9:31 The gate on trial
-11:46 The lesson
+3:21 The club goes public
+5:05 The moat
+7:16 The rules
+9:39 The gate on trial
+11:54 The lesson
 
 Sources
 Main sources: Visa Inc. (SEC EDGAR); Mastercard (SEC EDGAR); Federal Reserve History; Visa; MasterCard (SEC EDGAR); Visa Inc.; Supreme Court of the United States; U.S. Department of Justice, Office of the Solicitor General; Board of Governors of the Federal Reserve System; U.S. Department of Justice, Antitrust Division; Office of U.S. Senator Dick Durbin; European Parliament and Council (UK legislation archive of the adopted text).
@@ -35,11 +35,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Three hundred and fifty-five billion
 0:44 The bank club
-3:13 The club goes public
-4:57 The moat
-7:08 The rules
-9:31 The gate on trial
-11:46 The lesson
+3:21 The club goes public
+5:05 The moat
+7:16 The rules
+9:39 The gate on trial
+11:54 The lesson
 ```
 
 ## Tags

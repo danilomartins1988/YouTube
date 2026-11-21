@@ -18,11 +18,11 @@ Every figure is sourced below. Industry-funded sources are labeled as such; our 
 Chapters
 0:00 Twenty-two point six percent
 0:50 The bill
-2:58 The car itself
-4:58 The crashes
-6:48 The courts and the states
-8:49 The insurers' books
-10:52 The lesson
+3:06 The car itself
+5:06 The crashes
+6:56 The courts and the states
+8:57 The insurers' books
+11:00 The lesson
 
 Sources
 - U.S. Bureau of Labor Statistics: CPI-U Table 2 (Sep 2026) and series CUUR0000SETE, SA0, SETD, SETA02, SETA01 - https://www.bls.gov/news.release/cpi.t02.htm
@@ -46,11 +46,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Twenty-two point six percent
 0:50 The bill
-2:58 The car itself
-4:58 The crashes
-6:48 The courts and the states
-8:49 The insurers' books
-10:52 The lesson
+3:06 The car itself
+5:06 The crashes
+6:56 The courts and the states
+8:57 The insurers' books
+11:00 The lesson
 ```
 
 ## Tags

@@ -17,12 +17,12 @@ All amounts are in US dollars as published by the sources.
 
 Chapters
 0:00 Four words
-0:40 The cartel
-3:30 A diamond is forever
-5:55 Cracks
-7:41 Diamonds from a machine
-9:31 For sale
-10:50 The lesson
+0:48 The cartel
+3:38 A diamond is forever
+6:03 Cracks
+7:49 Diamonds from a machine
+9:39 For sale
+10:58 The lesson
 
 Sources
 - GIA (Gemological Institute of America): Rough Diamond Auctions: Changes in Pricing and Distribution (Gems & Gemology, Winter 2014) - https://www.gia.edu/gems-gemology/winter-2014-rough-diamond-auctions-changes-pricing-distribution
@@ -42,12 +42,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 0:00 Four words
-0:40 The cartel
-3:30 A diamond is forever
-5:55 Cracks
-7:41 Diamonds from a machine
-9:31 For sale
-10:50 The lesson
+0:48 The cartel
+3:38 A diamond is forever
+6:03 Cracks
+7:49 Diamonds from a machine
+9:39 For sale
+10:58 The lesson
 ```
 
 ## Tags

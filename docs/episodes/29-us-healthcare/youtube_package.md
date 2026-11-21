@@ -18,11 +18,11 @@ All amounts are in US dollars. International comparisons use the OECD basis repo
 Chapters
 0:00 Twenty-eight thousand dollars
 0:45 The bill
-3:15 Less care, higher prices
-5:00 Price one: the hospital
-7:02 Price two: the pharmacy
-8:39 Price three: the paperwork
-10:28 The lesson
+3:23 Less care, higher prices
+5:08 Price one: the hospital
+7:10 Price two: the pharmacy
+8:47 Price three: the paperwork
+10:36 The lesson
 
 Sources
 - Centers for Medicare & Medicaid Services: NHE Fact Sheet (National Health Expenditure data) - https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/nhe-fact-sheet
@@ -43,11 +43,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Twenty-eight thousand dollars
 0:45 The bill
-3:15 Less care, higher prices
-5:00 Price one: the hospital
-7:02 Price two: the pharmacy
-8:39 Price three: the paperwork
-10:28 The lesson
+3:23 Less care, higher prices
+5:08 Price one: the hospital
+7:10 Price two: the pharmacy
+8:47 Price three: the paperwork
+10:36 The lesson
 ```
 
 ## Tags

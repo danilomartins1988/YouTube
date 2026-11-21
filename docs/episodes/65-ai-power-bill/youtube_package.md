@@ -15,12 +15,12 @@ Are AI data centers raising your electric bill? Meet Maya, a homeowner in Northe
 
 Chapters
 0:00 Maya's bill and the new neighbors
-0:44 What AI data centers eat
-2:34 Follow the $150 bill
-4:01 The auction at the cap
-5:49 Who pays for the wires
-7:52 The fightback
-10:27 Will your bill explode?
+0:52 What AI data centers eat
+2:42 Follow the $150 bill
+4:09 The auction at the cap
+5:57 Who pays for the wires
+8:00 The fightback
+10:35 Will your bill explode?
 
 Related episodes from The Hidden Economics: "Why America's Electricity Bills Are Rising" · "How Big Tech Really Makes Money From AI"
 
@@ -52,6 +52,8 @@ Sources
 - EIA Electric Sales, Revenue, and Average Price 2024: https://www.eia.gov/electricity/sales_revenue_price/
 
 The Hidden Economics: animated documentaries about the money behind everyday things. Every figure is sourced; forecasts and our own calculations are labelled. This video is for education, not financial or political advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 
 #AI #ElectricBill #DataCenters
 ```

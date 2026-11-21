@@ -17,12 +17,12 @@ All amounts are in US dollars as published by the sources.
 
 Chapters
 0:00 The billion-dollar bet
-0:33 Quick bites
-2:46 The worst launch date
-4:53 The free trial
-6:51 The money
-8:36 The end
-10:18 The lesson
+0:41 Quick bites
+2:54 The worst launch date
+5:01 The free trial
+6:59 The money
+8:44 The end
+10:26 The lesson
 
 Sources
 - Variety: Jeffrey Katzenberg's 'NewTV' startup closes $1 billion, all major studios among investors - https://variety.com/2018/digital/news/newtv-jeffrey-katzenberg-meg-whitman-1-billion-funding-1202897529/
@@ -46,12 +46,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 0:00 The billion-dollar bet
-0:33 Quick bites
-2:46 The worst launch date
-4:53 The free trial
-6:51 The money
-8:36 The end
-10:18 The lesson
+0:41 Quick bites
+2:54 The worst launch date
+5:01 The free trial
+6:59 The money
+8:44 The end
+10:26 The lesson
 ```
 
 ## Tags

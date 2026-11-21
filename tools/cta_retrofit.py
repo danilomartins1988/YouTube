@@ -160,16 +160,40 @@ def build_clip(voice: str, force: bool = False) -> Path:
 
 
 # ------------------------------------------------------------------------------------------------ corner choice
-def busy(light: Path, at: float, corner: str) -> float:
-    """Edge density of the 506x174 lower-corner box over the 4 s window (higher = more on-screen detail)."""
+def busy(light: Path, at: float, corner: str, lift: int = 24) -> float:
+    """Clutter score of the 506x174 lower-corner box over the 4 s window: edge density, plus a heavy penalty for
+    caption pills (the older films' yellow lower-third captions) so the overlay never sits on a caption."""
     x = 24 if corner == "left" else 1280 - 506 - 24
     vals = []
-    for k in (0.3, 1.5, 2.7, 3.8):
+    for k in (0.2, 1.3, 2.4, 3.5, 4.1):
         raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{at + k:.2f}", "-i", str(light), "-frames:v", "1",
-                              "-vf", f"crop=506:174:{x}:{720 - 174 - 24},format=gray", "-f", "rawvideo", "-"], capture_output=True).stdout
-        a = np.frombuffer(raw, dtype=np.uint8).reshape(174, 506).astype(np.float32)
-        vals.append(float(np.abs(np.diff(a, axis=1)).mean() + np.abs(np.diff(a, axis=0)).mean()))
-    return float(np.mean(vals))
+                              "-vf", f"crop=546:194:{max(0, x - 20)}:{720 - 174 - lift - 10},format=rgb24", "-f", "rawvideo", "-"], capture_output=True).stdout
+        if len(raw) < 546 * 194 * 3:
+            continue
+        a = np.frombuffer(raw, dtype=np.uint8).reshape(194, 546, 3).astype(np.float32)
+        g = a.mean(axis=2)
+        edge = float(np.abs(np.diff(g, axis=1)).mean() + np.abs(np.diff(g, axis=0)).mean())
+        r, gg, b = a[..., 0], a[..., 1], a[..., 2]
+        lum = g
+        pill = float(((r > 190) & (gg > 150) & (b < 120)).mean()          # yellow caption pills
+                     + ((lum > 215)).mean()                               # white caption pills / bright text
+                     + ((r > 190) & (gg < 120) & (b < 120)).mean())       # red caption pills
+        vals.append(edge + 300 * pill)
+    return float(np.mean(vals)) if vals else 1e9
+
+
+def place_end_overlay(light: Path, old: float) -> tuple[float, str, int, float]:
+    """(seconds before the end in the ORIGINAL film, corner, lift in px from the bottom, score): the cleanest lower
+    corner and moment around 25 s before the end (tries 22-41 s); lifted above the caption band (lift 110) only when
+    a caption pill fills both bottom corners."""
+    best = None
+    for off in (25.0, 22.0, 29.0, 33.0, 37.0, 41.0):
+        for corner in ("right", "left"):
+            for lift, pen in ((24, 0.0), (110, 1.5)):
+                sc = busy(light, old - off, corner, lift) + 0.1 * abs(off - 25.0) + pen   # prefer ~25 s before the end
+                if best is None or sc < best[3] - 0.5:
+                    best = (off, corner, lift, sc)
+    return best
 
 
 # ------------------------------------------------------------------------------------------------ docs
@@ -271,9 +295,8 @@ def retrofit(name: str) -> dict:
         return {"name": name, "skipped": "already spliced (duration = timeline + clip)", "docs": changed}
     if abs(old - info["total"]) > 0.15:
         raise SystemExit(f"{name}: light {old:.2f}s does not match its timeline {info['total']:.2f}s")
-    E_old = old - END_OFFSET - D            # overlay time in the ORIGINAL film's clock (for the corner choice)
-    corner = min(("right", "left"), key=lambda c: busy(light, E_old, c))
-    E = old + D - END_OFFSET
+    off, corner, lift, score = place_end_overlay(light, old)
+    E = old + D - off
     x = "24" if corner == "left" else "W-w-24"
     SCRATCH.mkdir(parents=True, exist_ok=True)
     tmp = SCRATCH / f"{name}_cta_tmp.mp4"
@@ -283,7 +306,7 @@ def retrofit(name: str) -> dict:
           f"[1:v]fps=30,format=yuv420p,setsar=1[vc];[1:a]aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,"
           f"afade=t=in:d=0.08,afade=t=out:st={D - FADE:.4f}:d={FADE}[ac];"
           f"[va][aa][vc][ac][vb][ab]concat=n=3:v=1:a=1[cv][ca];"
-          f"[2:v]setpts=PTS+{E:.4f}/TB[ov];[cv][ov]overlay={x}:H-h-24:eof_action=pass,scale=1280:720[outv]")
+          f"[2:v]setpts=PTS+{E:.4f}/TB[ov];[cv][ov]overlay={x}:H-h-{lift}:eof_action=pass,scale=1280:720[outv]")
     sh(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(light), "-i", str(clip), "-c:v", "libvpx-vp9", "-i", str(OVERLAY),
         "-filter_complex", fc, "-map", "[outv]", "-map", "[ca]", "-c:v", "libx264", "-preset", "slow", "-crf", "32", "-tune", "animation",
         "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "80k", "-movflags", "+faststart", str(tmp)])
@@ -294,7 +317,7 @@ def retrofit(name: str) -> dict:
     os.replace(tmp, light)
     changed = retrofit_docs(info, T, D, T + LEAD, T + D - TAIL + 0.1)
     rec = {"slug": info["slug"], "voice": info["voice"], "cta_at": round(T, 3), "clip_s": D, "old_s": round(old, 3), "new_s": round(new, 3),
-           "end_overlay_at": round(E, 2), "corner": corner, "size_mb": round(light.stat().st_size / 1e6, 1), "docs": changed}
+           "end_overlay_at": round(E, 2), "end_offset_s": off, "corner": corner, "lift": lift, "clutter": round(score, 1), "size_mb": round(light.stat().st_size / 1e6, 1), "docs": changed}
     log(name, "done", **rec)
     return rec
 

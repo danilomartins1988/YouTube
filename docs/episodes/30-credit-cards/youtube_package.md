@@ -18,11 +18,11 @@ All amounts are in US dollars. Swipe-fee totals are estimates cited by CRS; Visa
 Chapters
 0:00 One hundred and sixty billion dollars
 0:40 The two-second swipe
-2:30 The toll road
-4:15 The interest machine
-6:41 Who pays for your rewards
-9:01 The fees
-10:44 The lesson
+2:38 The toll road
+4:23 The interest machine
+6:49 Who pays for your rewards
+9:09 The fees
+10:52 The lesson
 
 Sources
 Main sources: Federal Reserve Bank of New York; Federal Reserve Board; Consumer Financial Protection Bureau; Consumer Financial Protection Bureau (blog); Congressional Research Service; Visa / SEC EDGAR; Federal Reserve Bank of New York (Liberty Street Economics); American Express / SEC EDGAR; Mastercard / SEC EDGAR.
@@ -35,11 +35,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 One hundred and sixty billion dollars
 0:40 The two-second swipe
-2:30 The toll road
-4:15 The interest machine
-6:41 Who pays for your rewards
-9:01 The fees
-10:44 The lesson
+2:38 The toll road
+4:23 The interest machine
+6:49 Who pays for your rewards
+9:09 The fees
+10:52 The lesson
 ```
 
 ## Tags

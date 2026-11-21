@@ -21,12 +21,12 @@ Every figure is dated and sourced below. Values marked "our calculation" are our
 
 Chapters
 0:00 Cold open
-1:02 The IOU
-3:34 The dinner party
-5:43 Made in America
-8:02 The IOU to yourself
-9:47 The meter is running
-11:58 The bill
+1:10 The IOU
+3:42 The dinner party
+5:51 Made in America
+8:10 The IOU to yourself
+9:55 The meter is running
+12:06 The bill
 
 Sources
 U.S. Treasury, Bureau of the Fiscal Service: Debt to the Penny (Nov 13, 2026), Monthly Statement of the Public Debt (Oct 31, 2026), Treasury auction results, Average Interest Rates, Monthly Treasury Statement (fiscal year 2026)
@@ -41,12 +41,12 @@ Narration: AI voice. Animation: original.
 
 ```
 0:00 Cold open
-1:02 The IOU
-3:34 The dinner party
-5:43 Made in America
-8:02 The IOU to yourself
-9:47 The meter is running
-11:58 The bill
+1:10 The IOU
+3:42 The dinner party
+5:51 Made in America
+8:10 The IOU to yourself
+9:55 The meter is running
+12:06 The bill
 ```
 
 ## Tags

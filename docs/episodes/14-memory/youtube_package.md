@@ -17,12 +17,12 @@ All amounts are in US dollars as published by the sources (TrendForce contract p
 
 Chapters
 0:00 The price on the shelf
-0:43 The shelf
-2:42 Three companies
-4:23 The customer who pays more
-7:02 The challenger
-8:38 Boom and bust
-10:37 The lesson
+0:51 The shelf
+2:50 Three companies
+4:31 The customer who pays more
+7:10 The challenger
+8:46 Boom and bust
+10:45 The lesson
 
 Sources
 - TrendForce: DRAM Industry Revenue Rises 59.5% QoQ in 2Q26 as Supply Expansion Continues to Lag Demand Growth - https://www.trendforce.com/presscenter/news/20260907-13219.html
@@ -45,12 +45,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 0:00 The price on the shelf
-0:43 The shelf
-2:42 Three companies
-4:23 The customer who pays more
-7:02 The challenger
-8:38 Boom and bust
-10:37 The lesson
+0:51 The shelf
+2:50 Three companies
+4:31 The customer who pays more
+7:10 The challenger
+8:46 Boom and bust
+10:45 The lesson
 ```
 
 ## Tags

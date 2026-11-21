@@ -17,12 +17,12 @@ All amounts are in US dollars; amounts published in pounds were converted at the
 
 Chapters
 0:00 The night nickel went crazy
-0:45 A market that never sleeps
-2:44 The squeeze
-5:29 Tearing up the trades
-7:17 The court
-8:58 The verdict
-10:18 The lesson
+0:53 A market that never sleeps
+2:52 The squeeze
+5:37 Tearing up the trades
+7:25 The court
+9:06 The verdict
+10:26 The lesson
 
 Sources
 - UK Financial Conduct Authority: Final Notice: The London Metal Exchange (19 March 2025) - https://www.fca.org.uk/publication/final-notices/london-metal-exchange-2025.pdf
@@ -37,12 +37,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 0:00 The night nickel went crazy
-0:45 A market that never sleeps
-2:44 The squeeze
-5:29 Tearing up the trades
-7:17 The court
-8:58 The verdict
-10:18 The lesson
+0:53 A market that never sleeps
+2:52 The squeeze
+5:37 Tearing up the trades
+7:25 The court
+9:06 The verdict
+10:26 The lesson
 ```
 
 ## Tags

@@ -18,11 +18,11 @@ Every figure is sourced below, mostly from Amazon's own SEC filings. FTC claims 
 Chapters
 0:00 One hundred and two billion dollars
 0:55 The fee
-3:29 The flywheel
-5:38 The hidden engines
-7:47 The Iliad
-9:25 The membership economy
-10:35 The lesson
+3:37 The flywheel
+5:46 The hidden engines
+7:55 The Iliad
+9:33 The membership economy
+10:43 The lesson
 
 Sources
 - Amazon / SEC EDGAR: Amazon.com, Inc. Form 10-K, fiscal year 2025 - https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm
@@ -42,11 +42,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 One hundred and two billion dollars
 0:55 The fee
-3:29 The flywheel
-5:38 The hidden engines
-7:47 The Iliad
-9:25 The membership economy
-10:35 The lesson
+3:37 The flywheel
+5:46 The hidden engines
+7:55 The Iliad
+9:33 The membership economy
+10:43 The lesson
 ```
 
 ## Tags
