@@ -1,4 +1,4 @@
-# Episode 28: How Big Tech Really Makes Money From AI (top-10 #11)
+# Episode 28: How Big Tech Makes Money on AI: Rent, Ads and Lock-In (top-10 #11)
 
 - Project: `projects/how-big-tech-really-makes-money-from-ai`; storyboard generator `tools/gen_bigtech_storyboard.py` (39 scenes).
 - First episode built on the new rules in `docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md`:

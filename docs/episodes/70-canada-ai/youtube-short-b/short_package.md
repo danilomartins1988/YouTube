@@ -1,4 +1,4 @@
-# YouTube Short: "Why AI Data Centers Want Canada's Cold" (70-canada-ai-b)
+# YouTube Short: "Why AI Wants Canada's Cold" (70-canada-ai-b)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/70-canada-ai-b_short.mp4` (55 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-Why AI Data Centers Want Canada's Cold #shorts
+Why AI Wants Canada's Cold #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Why AI Data Centers Want Canada's Cold #shorts
 ```
 Still, the north has one gift nobody has to build. Whirr steps outside, and for the first time in ages, its fans slow down.
 
-Watch the full story: "Why Canada Could Be the Biggest Winner of the AI Boom" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Canada Could Win the AI Boom. Here's Why" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

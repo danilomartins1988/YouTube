@@ -1,4 +1,4 @@
-# YouTube Short: "What Happened When People Got Free Monthly Cash" (69-ai-taxes-c)
+# YouTube Short: "When People Got Free Cash" (69-ai-taxes-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/69-ai-taxes-c_short.mp4` (54 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-What Happened When People Got Free Monthly Cash #shorts
+When People Got Free Cash #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ What Happened When People Got Free Monthly Cash #shorts
 ```
 In Stockton, California, a pilot sent a small group of residents $500 a month, no strings attached.
 
-Watch the full story: "If AI Replaces Workers, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "If AI Takes the Jobs, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

@@ -1,4 +1,4 @@
-# Episode 29: Why Americans Pay So Much for Healthcare (US batch #01)
+# Episode 29: Why Is Healthcare So Expensive in America? (US batch #01)
 
 - Project: `projects/why-americans-pay-so-much-for-healthcare`; storyboard generator `tools/gen_healthcare_storyboard.py` (37 scenes).
 - New rules applied (see `docs/ANALYSIS_HOOKS_THUMBS_VISUALS.md`):

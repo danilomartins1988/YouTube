@@ -5,8 +5,8 @@ Registered in `SHORTS` and `CUSTOM` (segments cut from the full-resolution maste
 
 | Short | Package folder | Segments | Headline | Hashtags |
 |---|---|---|---|---|
-| 1 "Could Your Next Robot Be Made in Brazil?" | `youtube-short/` | co_hook | YOUR NEXT ROBOT: / MADE IN BRAZIL? | #brazil #robots #economy |
+| 1 "Robots Made in Brazil?" | `youtube-short/` | co_hook | YOUR NEXT ROBOT: / MADE IN BRAZIL? | #brazil #robots #economy |
 | 2 "The Metal Brazil Almost Owns" | `youtube-short-b/` | c2_niobium, c2_magnets | THE METAL BRAZIL / ALMOST OWNS | #brazil #niobium #mining |
-| 3 "The Backpack Holding Brazil Back" | `youtube-short-c/` | c3_credit, c3_total | THE BACKPACK / HOLDING BRAZIL BACK | #brazil #economy #business |
+| 3 "Brazil's Heavy Backpack" | `youtube-short-c/` | c3_credit, c3_total | THE BACKPACK / HOLDING BRAZIL BACK | #brazil #economy #business |
 
-Descriptions point to the full film by title ("Could Brazil Become the World's Factory for Robots?"); no unverified URLs.
+Descriptions point to the full film by title ("Could Brazil Build the Robots? Brazil's Economy in the AI Age"); no unverified URLs.

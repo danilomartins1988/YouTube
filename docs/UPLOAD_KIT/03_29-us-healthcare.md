@@ -1,4 +1,4 @@
-# 03. Why Americans Pay So Much for Healthcare
+# 03. Why Is Healthcare So Expensive in America?
 
 Episode folder: `docs/episodes/29-us-healthcare/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/29-us-healthcare/`. Upload as **Private** (or sch
 ## Title
 
 ```
-Why Americans Pay So Much for Healthcare
+Why Is Healthcare So Expensive in America?
 ```
 
 Other title options: Americans Get Less Care and Pay Twice as Much. Here's Why · The 3 Prices That Make US Healthcare So Expensive
@@ -78,7 +78,7 @@ Why US Health Insurance Costs $28,303 a Year #shorts
 ```
 Twenty-eight thousand dollars. That is what health insurance for the average American family with a job-based plan now costs in a single year.
 
-Watch the full story: "Why Americans Pay So Much for Healthcare" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Is Healthcare So Expensive in America?" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #healthcare #insurance #usa #economics
 ```

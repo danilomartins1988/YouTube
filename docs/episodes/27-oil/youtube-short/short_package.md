@@ -1,4 +1,4 @@
-# YouTube Short: "Sellers Paid People to Take Their Oil" (27-oil)
+# YouTube Short: "When Oil Sellers Paid Buyers" (27-oil)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/27-oil_short.mp4` (46 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Sellers Paid People to Take Their Oil #shorts
+When Oil Sellers Paid Buyers #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Sellers Paid People to Take Their Oil #shorts
 ```
 What would you do if someone offered you a barrel of oil, and paid you to take it? On April twentieth, twenty twenty, that is exactly what happened.
 
-Watch the full story: "The Day Oil Was Worth Less Than Nothing" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Negative Oil Prices Explained: The Day Oil Was Worth Less Than Nothing" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #oil #markets #wti #economics
 ```

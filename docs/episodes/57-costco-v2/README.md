@@ -1,4 +1,4 @@
-# Episode 57: How Costco Makes Billions Selling Almost Nothing (owner request, 2026-11-17)
+# Episode 57: How Costco Really Makes Money Selling Almost Nothing (owner request, 2026-11-17)
 
 - Supersedes Ep 32 ("How Costco Makes Money Selling Things Cheap", left untouched). Runtime 12:01 (721.0 s), QC 0 errors
   (73 warnings: number-word reminders and 14 claims awaiting human sign-off), no freeze > 5 s, no black gaps, -16.1 LUFS.

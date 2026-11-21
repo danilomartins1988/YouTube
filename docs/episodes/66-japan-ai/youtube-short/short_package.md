@@ -1,4 +1,4 @@
-# YouTube Short: "Can Robots Fix Japan's Worker Shortage?" (66-japan-ai)
+# YouTube Short: "Can Robots Save Japan?" (66-japan-ai)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/66-japan-ai_short.mp4` (70 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Can Robots Fix Japan's Worker Shortage? #shorts
+Can Robots Save Japan? #shorts
 ```
 
 ## Description

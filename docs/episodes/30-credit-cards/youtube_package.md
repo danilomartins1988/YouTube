@@ -1,10 +1,10 @@
-# YouTube package: "The Hidden Business Behind Your Credit Card" (Episode 30)
+# YouTube package: "How Credit Cards Make Money on Every Swipe" (Episode 30)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:23.
 
 ## Title options
 
-1. **The Hidden Business Behind Your Credit Card** (recommended)
+1. **How Credit Cards Make Money on Every Swipe** (recommended)
 2. **Who Really Pays for Your Credit Card Rewards?**
 3. **$160 Billion in Card Interest: How the Credit Card Business Really Works**
 
@@ -28,6 +28,8 @@ Sources
 Main sources: Federal Reserve Bank of New York; Federal Reserve Board; Consumer Financial Protection Bureau; Consumer Financial Protection Bureau (blog); Congressional Research Service; Visa / SEC EDGAR; Federal Reserve Bank of New York (Liberty Street Economics); American Express / SEC EDGAR; Mastercard / SEC EDGAR.
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -46,4 +48,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 credit card, credit cards explained, credit card interest, APR, swipe fees, interchange fees, Visa, Mastercard, credit card rewards, cash back, late fees, CFPB, personal finance, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Do you pay your card in full, or has interest ever caught you?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

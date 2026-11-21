@@ -1,4 +1,4 @@
-# YouTube Short: "College Sports Just Got a $20.5 Million Payroll" (49-college-sports)
+# YouTube Short: "College Athletes Now Get Paid" (49-college-sports)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/49-college-sports_short.mp4` (54 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-College Sports Just Got a $20.5 Million Payroll #shorts
+College Athletes Now Get Paid #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ College Sports Just Got a $20.5 Million Payroll #shorts
 ```
 Twenty point five million dollars. That is how much each big college athletic department was allowed to pay its own athletes directly, in the school year that started in twenty twenty-five.
 
-Watch the full story: "College Sports Just Got a $20.5 Million Payroll" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "College Athletes Now Get Paid" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #collegesports #ncaa #money #economics
 ```

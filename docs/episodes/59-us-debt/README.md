@@ -1,4 +1,4 @@
-# Episode 59: Who Actually Owns America's $40 Trillion in Debt? (owner request, 2026-11-17)
+# Episode 59: Who Owns America's Debt? It's Not Who You Think (owner request, 2026-11-17)
 
 - Runtime 12:50 (770.2 s), QC 0 errors (90 warnings: licence notes on U.S. government datasets, since fixed in sources.yaml; 15 claims
   awaiting human sign-off; 1 pace and 1 caption-speed note), no freeze > 5 s, no black gaps, -16.2 LUFS; TTS US$0.30

@@ -1,10 +1,10 @@
-# YouTube package: "Before You Buy Amazon Stock, Watch This (Nov 2026)" (Before You Buy · Amazon · Nov 2026)
+# YouTube package: "Amazon Stock, Before You Buy: What's Priced In (Nov 2026)" (Before You Buy · Amazon · Nov 2026)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 12:26.
 
 ## Title options
 
-1. **Before You Buy Amazon Stock, Watch This (Nov 2026)** (recommended)
+1. **Amazon Stock, Before You Buy: What's Priced In (Nov 2026)** (recommended)
 2. **Amazon's Free Cash Flow Is Negative. Here's What the Price Assumes (Nov 2026)**
 3. **What's Priced Into Amazon Stock? The $578 Billion AWS Bet (Nov 2026)**
 
@@ -31,6 +31,8 @@ Sources
 - Yahoo Finance; Amazon.com, Inc.: AMZN closing price, Nov 10, 2026 (data vendor); share count from the 10-Q cover (Oct 21, 2026); depreciation from SEC XBRL - https://finance.yahoo.com/quote/AMZN/history/
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -49,4 +51,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 Amazon stock, AMZN, before you buy, AWS, AI capex, free cash flow, valuation, stock analysis, Nasdaq, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Do you think Amazon's data center spending pays off, or is it too much?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

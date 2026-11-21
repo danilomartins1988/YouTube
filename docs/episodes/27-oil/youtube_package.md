@@ -1,10 +1,10 @@
-# YouTube package: "The Day Oil Was Worth Less Than Nothing" (Episode 27)
+# YouTube package: "Negative Oil Prices Explained: The Day Oil Was Worth Less Than Nothing" (Episode 27)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:17.
 
 ## Title options
 
-1. **The Day Oil Was Worth Less Than Nothing** (recommended)
+1. **Negative Oil Prices Explained: The Day Oil Was Worth Less Than Nothing** (recommended)
 2. **Minus $37.63: The Day Sellers Paid People to Take Their Oil**
 3. **How Oil Fell Below Zero in 20 Minutes**
 
@@ -32,6 +32,8 @@ Sources
 - Congressional Research Service: Crude Oil Futures Prices Turn Negative (Insight IN11354) - https://www.congress.gov/crs_external_products/IN/PDF/IN11354/IN11354.1.pdf
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -50,4 +52,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 oil, negative oil price, WTI, crude oil futures, Cushing, April 2020, storage, contango, CFTC, OPEC, markets, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Would you have taken the oil if someone paid you to?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

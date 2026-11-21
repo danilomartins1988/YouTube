@@ -1,4 +1,4 @@
-# YouTube Short: "The Pancake Memory That Made a Chipmaker Out-Earn Samsung" (68-picks-shovels-c)
+# YouTube Short: "Pancake Memory Beat Samsung" (68-picks-shovels-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/68-picks-shovels-c_short.mp4` (53 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-The Pancake Memory That Made a Chipmaker Out-Earn Samsung #shorts
+Pancake Memory Beat Samsung #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ The Pancake Memory That Made a Chipmaker Out-Earn Samsung #shorts
 ```
 Third stamp, South Korea. Nugget's brain is fast, but forgetful.
 
-Watch the full story: "The Countries That Could Win the AI Economy Without Building AI" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "AI Economy Winners: Countries That Don't Build AI" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

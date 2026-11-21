@@ -1,4 +1,4 @@
-# 20. Why America's Electricity Bills Are Rising
+# 20. Why Electric Bills Keep Rising in America
 
 Episode folder: `docs/episodes/35-electricity/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/35-electricity/`. Upload as **Private** (or sched
 ## Title
 
 ```
-Why America's Electricity Bills Are Rising
+Why Electric Bills Keep Rising in America
 ```
 
 Other title options: Why Your Electric Bill Keeps Going Up · The Grid Price That Jumped 9x in One Auction
@@ -82,7 +82,7 @@ Why Your Electric Bill Keeps Going Up #shorts
 ```
 Twenty-eight dollars and ninety-two cents. Then two hundred and sixty-nine dollars and ninety-two cents.
 
-Watch the full story: "Why America's Electricity Bills Are Rising" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Electric Bills Keep Rising in America" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #electricity #energy #usa #economics
 ```

@@ -1,10 +1,10 @@
-# YouTube package: "How One Company Made Diamonds a Symbol of Love" (Episode 24)
+# YouTube package: "De Beers: How One Company Made Diamonds a Symbol of Love" (Episode 24)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:31.
 
 ## Title options
 
-1. **How One Company Made Diamonds a Symbol of Love** (recommended)
+1. **De Beers: How One Company Made Diamonds a Symbol of Love** (recommended)
 2. **A Diamond Is Forever: The Four Words That Built a Cartel**
 3. **The Diamond King Is for Sale: How De Beers Lost Its Shine**
 
@@ -36,6 +36,8 @@ Sources
 - National Jeweler: Lightbox to Go Dark by Summer, De Beers Says - https://nationaljeweler.com/articles/13908-lightbox-to-go-dark-by-summer-de-beers-says
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -54,4 +56,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 De Beers, diamonds, A Diamond Is Forever, cartel, advertising, Anglo American, lab-grown diamonds, Lightbox, engagement ring, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Would you buy a natural diamond, a lab-grown one, or neither?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

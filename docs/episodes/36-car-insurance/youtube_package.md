@@ -1,10 +1,10 @@
-# YouTube package: "Why Your Car Insurance Got So Expensive" (Episode 36)
+# YouTube package: "Car Insurance Is So Expensive. Here's Why" (Episode 36)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:27.
 
 ## Title options
 
-1. **Why Your Car Insurance Got So Expensive** (recommended)
+1. **Car Insurance Is So Expensive. Here's Why** (recommended)
 2. **Car Insurance Jumped 22.6% in One Year. Here's Why**
 3. **From Losses to Record Profits: The Car Insurance Cycle**
 
@@ -39,6 +39,8 @@ Sources
 - Progressive / SEC EDGAR: The Progressive Corporation Annual Reports FY2023 and FY2025; Form 10-Q Q3 2026 - https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080661
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -57,4 +59,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 car insurance, auto insurance, insurance rates, why is car insurance so expensive, insurance premiums, Progressive, Allstate, car repair costs, uninsured drivers, Florida insurance, economics explained, The Hidden Economics, US economy
+```
+
+## Pinned comment
+
+```
+How much did your car insurance go up at your last renewal?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

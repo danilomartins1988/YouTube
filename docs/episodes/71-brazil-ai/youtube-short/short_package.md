@@ -1,4 +1,4 @@
-# YouTube Short: "Could Your Next Robot Be Made in Brazil?" (71-brazil-ai)
+# YouTube Short: "Robots Made in Brazil?" (71-brazil-ai)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/71-brazil-ai_short.mp4` (38 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (1 narrated segme
 ## Title
 
 ```
-Could Your Next Robot Be Made in Brazil? #shorts
+Robots Made in Brazil? #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Could Your Next Robot Be Made in Brazil? #shorts
 ```
 Somewhere in America, a robot company is planning a giant new factory, a place where robots build robots.
 
-Watch the full story: "Could Brazil Become the World's Factory for Robots?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Could Brazil Build the Robots? Brazil's Economy in the AI Age" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

@@ -1,4 +1,4 @@
-# YouTube Short: "A $35 Fee for a $24 Purchase: How Overdrafts Still Pay" (46-overdrafts)
+# YouTube Short: "A $35 Fee on a $24 Purchase" (46-overdrafts)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/46-overdrafts_short.mp4` (55 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-A $35 Fee for a $24 Purchase: How Overdrafts Still Pay #shorts
+A $35 Fee on a $24 Purchase #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ A $35 Fee for a $24 Purchase: How Overdrafts Still Pay #shorts
 ```
 Thirty-five dollars. That is the typical overdraft fee at America's largest banks, according to the Consumer Financial Protection Bureau.
 
-Watch the full story: "Why Banks Still Make Billions From Overdrafts" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Overdraft Fees Explained: Why Banks Still Make Billions" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #banking #overdraft #money #economics
 ```

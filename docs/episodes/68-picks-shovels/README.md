@@ -1,7 +1,7 @@
-# Episode 68: The Countries That Could Win the AI Economy Without Building AI (series "Who Wins and Who Loses in the AI Economy" #6)
+# Episode 68: AI Economy Winners: Countries That Don't Build AI (series "Who Wins and Who Loses in the AI Economy" #6)
 
 > **Owner, set the title in YouTube Studio in a desktop browser.** The usual upload path truncates titles at 30 characters; the title
-> "The Countries That Could Win the AI Economy Without Building AI" is 63 characters (no em dash). Paste it from `youtube-package/title.txt`.
+> "AI Economy Winners: Countries That Don't Build AI" is 63 characters (no em dash). Paste it from `youtube-package/title.txt`.
 
 - Runtime 11:30 (690.0 s), QC 0 errors (53 warnings: 13 claims awaiting human sign-off, 34 number-word notes, 6 caption-speed, 1
   presenter-length note (p06 34 s), 4 dataset licence notes, 7 scene-sequence similarity), no freeze > 5 s, no black gaps, -16.1 LUFS.

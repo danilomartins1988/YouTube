@@ -1,10 +1,10 @@
-# YouTube package: "Why America's Electricity Bills Are Rising" (Episode 35)
+# YouTube package: "Why Electric Bills Keep Rising in America" (Episode 35)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:26.
 
 ## Title options
 
-1. **Why America's Electricity Bills Are Rising** (recommended)
+1. **Why Electric Bills Keep Rising in America** (recommended)
 2. **Why Your Electric Bill Keeps Going Up**
 3. **The Grid Price That Jumped 9x in One Auction**
 
@@ -40,6 +40,8 @@ Sources
 - Public Utility Commission of Texas: Substantive Rule §25.231, Cost of Service - https://ftp.puc.texas.gov/public/puct-info/agency/rulesnlaws/subrules/electric/25.231/25.231.pdf
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -58,4 +60,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 electricity bills, electric bill, power prices, utility rates, data centers, AI electricity, PJM, power grid, natural gas, energy prices, economics explained, The Hidden Economics, US economy
+```
+
+## Pinned comment
+
+```
+How much has your electric bill changed in the last few years?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

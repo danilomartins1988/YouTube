@@ -1,10 +1,10 @@
-# YouTube package: "The Business Behind America's Student Debt" (Episode 33)
+# YouTube package: "Student Debt Crisis Explained: The Business Behind America's Loans" (Episode 33)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:44.
 
 ## Title options
 
-1. **The Business Behind America's Student Debt** (recommended)
+1. **Student Debt Crisis Explained: The Business Behind America's Loans** (recommended)
 2. **Americans Owe $1.65 Trillion in Student Loans. Who Profits?**
 3. **Who Really Makes Money From Student Loans**
 
@@ -39,6 +39,8 @@ Sources
 - U.S. Department of Education, Federal Student Aid: Federal Update (March 2026) and Dear Colleague Letter GEN-25-04 (One Big Beautiful Bill Act) - https://fsapartners.ed.gov/sites/default/files/attachments/2026-03/Federal%20Update.pdf
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -57,4 +59,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 student loans, student debt, student loan crisis, college tuition, student loan servicers, Nelnet, student loan default, SAVE plan, Grad PLUS, cost of college, economics explained, The Hidden Economics, US economy
+```
+
+## Pinned comment
+
+```
+Was college worth the loans for you or someone you know?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

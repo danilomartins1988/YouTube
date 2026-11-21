@@ -1,4 +1,4 @@
-# YouTube Short: "US Airports Made $6.9 Billion From Parking in One Year" (38-airports)
+# YouTube Short: "Airport Parking: $6.9 Billion" (38-airports)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/38-airports_short.mp4` (50 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-US Airports Made $6.9 Billion From Parking in One Year #shorts
+Airport Parking: $6.9 Billion #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ US Airports Made $6.9 Billion From Parking in One Year #shorts
 ```
 Six point nine billion dollars. That is how much America's airports earned in a single year from parking and ground transportation.
 
-Watch the full story: "Why America's Airports Make Money Before You Fly" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Airports Make Money Before You Even Fly" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #airports #travel #usa #economics
 ```

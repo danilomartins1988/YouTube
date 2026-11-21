@@ -1,4 +1,4 @@
-# Episode 64: Who Gets Rich When Robots Do the Work?
+# Episode 64: AI Taking Jobs: Who Gets Rich When Robots Do the Work?
 
 - Runtime 11:17 (676.8 s), QC 0 errors (37 warnings: 17 claims awaiting human sign-off, caption speed, pace, number-word notices),
   no freeze > 5 s, no black gaps, -16.1 LUFS. TTS US$0.27 total (gpt-4o-mini-tts, voice ash, tempo 1.08; two builds, the second

@@ -15,7 +15,7 @@ The Metal Brazil Almost Owns #shorts
 ```
 Then Bia hands Gus a tiny jar of gray powder. This is niobium.
 
-Watch the full story: "Could Brazil Become the World's Factory for Robots?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Could Brazil Build the Robots? Brazil's Economy in the AI Age" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

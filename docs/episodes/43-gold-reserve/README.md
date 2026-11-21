@@ -1,4 +1,4 @@
-# Episode 43: America's $1 Trillion of Gold Is Booked at $11 Billion (new topics N3)
+# Episode 43: Fort Knox and America's Gold: Why It's Booked at $42 an Ounce (new topics N3)
 
 - Project: `projects/americas-trillion-dollar-gold-booked-at-11-billion`; storyboard generator `tools/gen_gold_storyboard.py` (40 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `depository` set (granite bullion depository, guard box, fences, hills; night = floodlit), `bars` item (gold-bar pyramid with price tag). Presenter arm v2.

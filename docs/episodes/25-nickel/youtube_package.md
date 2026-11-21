@@ -1,10 +1,10 @@
-# YouTube package: "The Metal Trade That Broke a Billion-Dollar Market" (Episode 25)
+# YouTube package: "The Nickel Short Squeeze That Broke the London Metal Exchange" (Episode 25)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:03.
 
 ## Title options
 
-1. **The Metal Trade That Broke a Billion-Dollar Market** (recommended)
+1. **The Nickel Short Squeeze That Broke the London Metal Exchange** (recommended)
 2. **The Night Nickel Hit $100,000 and the Market Erased It**
 3. **$13 Billion of Trades Erased Overnight: The Nickel Crisis**
 
@@ -31,6 +31,8 @@ Sources
 - Federal Reserve via FRED: U.S. Dollars to U.K. Pound Sterling Spot Exchange Rate (DEXUSUK, H.10) - https://fred.stlouisfed.org/series/DEXUSUK
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -49,4 +51,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 nickel, London Metal Exchange, LME, short squeeze, Tsingshan, margin calls, commodities, Elliott, FCA, markets, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Was the exchange right to cancel the trades that day?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

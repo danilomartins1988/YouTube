@@ -1,4 +1,4 @@
-# Episode 62: Could AI Make American Factories Cheaper Than China's? (arc Episode 2; owner brief 2026-11-18)
+# Episode 62: Can AI Beat China's Factories? The Real Math of AI Manufacturing (arc Episode 2; owner brief 2026-11-18)
 
 Episode 1 of the arc: Ep 60 "Why the World Still Depends on Chinese Factories" (`docs/episodes/60-china-factories`).
 
@@ -16,7 +16,7 @@ Episode 1 of the arc: Ep 60 "Why the World Still Depends on Chinese Factories" (
 - **Thumbnails** (`youtube-package/`): default **C** "CHEAPER THAN / CHINA?" (`thumbnail.png`; two original factories and a
   question-mark cost meter), alternates `thumbnail-alt-A.png` "CHINA'S END?" and `thumbnail-alt-B.png` "AI FACTORIES / COMING
   BACK?". No logos, no flags, no numbers; distinct from Ep 60.
-- **Title:** "Could AI Make American Factories Cheaper Than China's?" (`youtube-package/title.txt`; backup "Could AI End
+- **Title:** "Can AI Beat China's Factories? The Real Math of AI Manufacturing" (`youtube-package/title.txt`; backup "Could AI End
   China's Manufacturing Dominance?"). **The owner's upload path truncates titles at 30 characters: set the full title in YouTube
   Studio in a desktop browser.**
 - **Docs:** `COMMERCIAL_BRIEF.md` (89 → 91 after the rewrite), `SEO_PACKAGE.md` (84 pre-score → 88; gap to 90 documented),

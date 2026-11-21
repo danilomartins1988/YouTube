@@ -1,4 +1,4 @@
-# YouTube Short: "Can AI Make America Cheaper Than China?" (62-ai-manufacturing)
+# YouTube Short: "Can AI Beat Made in China?" (62-ai-manufacturing)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/62-ai-manufacturing_short.mp4` (36 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Can AI Make America Cheaper Than China? #shorts
+Can AI Beat Made in China? #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Can AI Make America Cheaper Than China? #shorts
 ```
 Next, Kip's dream, a highly automated plant in Ohio. Robots cut most of the labor hours, but American pay is higher.
 
-Watch the full story: "Could AI Make American Factories Cheaper Than China's?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Can AI Beat China's Factories? The Real Math of AI Manufacturing" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

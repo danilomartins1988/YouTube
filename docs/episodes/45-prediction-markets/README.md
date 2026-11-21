@@ -1,4 +1,4 @@
-# Episode 45: How Prediction Markets Make Money Off Your Hunches (new topics N5)
+# Episode 45: Prediction Markets Explained: How They Make Money Off Your Hunches (new topics N5)
 
 - Project: `projects/how-prediction-markets-make-money-off-your-hunches`; storyboard generator `tools/gen_predmkt_storyboard.py` (40 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `stadium` set (generic stands, floodlights, scoreboard `label`, no team names) and `yesno` item (event-contract ticket, YES/NO split at the price, settles to the winner). Presenter arm v2.

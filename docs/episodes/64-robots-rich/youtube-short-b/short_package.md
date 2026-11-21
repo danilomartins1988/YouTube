@@ -1,4 +1,4 @@
-# YouTube Short: "The Biggest Building Spree in History Is for AI" (64-robots-rich-b)
+# YouTube Short: "AI's Giant Building Spree" (64-robots-rich-b)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/64-robots-rich-b_short.mp4` (44 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-The Biggest Building Spree in History Is for AI #shorts
+AI's Giant Building Spree #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ The Biggest Building Spree in History Is for AI #shorts
 ```
 And right now, the biggest machines in history are going up. Data centers for AI.
 
-Watch the full story: "Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "AI Taking Jobs: Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

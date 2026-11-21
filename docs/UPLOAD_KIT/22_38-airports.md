@@ -1,4 +1,4 @@
-# 22. Why America's Airports Make Money Before You Fly
+# 22. How Airports Make Money Before You Even Fly
 
 Episode folder: `docs/episodes/38-airports/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/38-airports/`. Upload as **Private** (or schedule
 ## Title
 
 ```
-Why America's Airports Make Money Before You Fly
+How Airports Make Money Before You Even Fly
 ```
 
 Other title options: US Airports Made $6.9 Billion From Parking. More Than Landing Fees · Your Airport Is a Landlord, a Garage and a Mall
@@ -79,7 +79,7 @@ US Airports Made $6.9 Billion From Parking in One Year #shorts
 ```
 Six point nine billion dollars. That is how much America's airports earned in a single year from parking and ground transportation.
 
-Watch the full story: "Why America's Airports Make Money Before You Fly" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Airports Make Money Before You Even Fly" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #airports #travel #usa #economics
 ```

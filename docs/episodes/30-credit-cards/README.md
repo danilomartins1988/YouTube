@@ -1,4 +1,4 @@
-# Episode 30: The Hidden Business Behind Your Credit Card (US batch #02)
+# Episode 30: How Credit Cards Make Money on Every Swipe (US batch #02)
 
 - Project: `projects/the-hidden-business-behind-your-credit-card`; storyboard generator `tools/gen_creditcard_storyboard.py` (40 scenes; lint 0 findings).
 - New engine pieces: `creditcard` item (generic card, tap with contactless waves), `tollbooth` item (the network toll); thumbnail subject `ccard`.

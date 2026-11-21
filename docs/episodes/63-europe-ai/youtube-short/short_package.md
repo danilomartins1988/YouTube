@@ -1,4 +1,4 @@
-# YouTube Short: "Could AI Save Europe's Economy?" (63-europe-ai)
+# YouTube Short: "Could AI Save Europe?" (63-europe-ai)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/63-europe-ai_short.mp4` (49 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-Could AI Save Europe's Economy? #shorts
+Could AI Save Europe? #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Could AI Save Europe's Economy? #shorts
 ```
 Theo sees it on his own shop floor. The veterans are retiring, and fewer young people walk in.
 
-Watch the full story: "Everyone Says Europe Is Falling Behind. AI Could Change That" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Is Europe Falling Behind? How AI Could Bring It Back" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

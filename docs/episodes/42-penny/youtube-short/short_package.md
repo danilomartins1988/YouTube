@@ -1,4 +1,4 @@
-# YouTube Short: "It Cost 3.69 Cents to Make One Penny" (42-penny)
+# YouTube Short: "Each Penny Cost 3.69 Cents" (42-penny)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/42-penny_short.mp4` (45 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-It Cost 3.69 Cents to Make One Penny #shorts
+Each Penny Cost 3.69 Cents #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ It Cost 3.69 Cents to Make One Penny #shorts
 ```
 Three point six nine cents. That is what it cost the United States Mint to make a single one-cent coin, in its twenty twenty-four fiscal year.
 
-Watch the full story: "Why America Stopped Making the Penny" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Did the US Stop Making Pennies? What Happens at the Register Now" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #penny #money #usa #economics
 ```

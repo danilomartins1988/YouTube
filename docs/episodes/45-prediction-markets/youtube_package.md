@@ -1,10 +1,10 @@
-# YouTube package: "How Prediction Markets Make Money Off Your Hunches" (Episode 45)
+# YouTube package: "Prediction Markets Explained: How They Make Money Off Your Hunches" (Episode 45)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:31.
 
 ## Title options
 
-1. **How Prediction Markets Make Money Off Your Hunches** (recommended)
+1. **Prediction Markets Explained: How They Make Money Off Your Hunches** (recommended)
 2. **You're Not Betting Against Kalshi. So Who Pays?**
 3. **The $25 Billion-a-Month Business of Betting on Everything**
 
@@ -33,6 +33,8 @@ Sources
 - Pew Research Center (third-party analysis): Pew Research Center analysis of The Block data on prediction market volume (July 2026) - https://www.pewresearch.org/
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -51,4 +53,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 prediction markets, Kalshi, Polymarket, event contracts, sports betting, CFTC, market makers, gambling, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Are prediction markets finance or gambling? Where do you stand?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

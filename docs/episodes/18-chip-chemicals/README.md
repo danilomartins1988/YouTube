@@ -1,4 +1,4 @@
-# Episode 18: The Chemicals Nobody Talks About That Decide Who Makes Chips (chip series C5)
+# Episode 18: The Chip Supply Chain's Secret: Chemicals Nobody Talks About (chip series C5)
 
 - Project: `projects/the-chemicals-that-decide-who-makes-chips` (sources, script, visual direction, thumbnail brief)
 - Storyboard generator: `tools/gen_chip_chemicals_storyboard.py` (38 scenes; presenter: the cheap ingredient with the machine's power, did Korea break free, three kinds of chokepoints)

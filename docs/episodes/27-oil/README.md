@@ -1,4 +1,4 @@
-# Episode 27: The Day Oil Was Worth Less Than Nothing (WTI below zero, 20 April 2020; top-10 #10)
+# Episode 27: Negative Oil Prices Explained: The Day Oil Was Worth Less Than Nothing (WTI below zero, 20 April 2020; top-10 #10)
 
 - Project: `projects/the-day-oil-was-worth-less-than-nothing` (sources, script, visual direction, thumbnail brief)
 - Storyboard generator: `tools/gen_oil_storyboard.py` (39 scenes; presenter: where the extra oil goes, sell or take the oil, the price of a tank, that Monday)

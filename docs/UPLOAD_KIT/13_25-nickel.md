@@ -1,4 +1,4 @@
-# 13. The Metal Trade That Broke a Billion-Dollar Market
+# 13. The Nickel Short Squeeze That Broke the London Metal Exchange
 
 Episode folder: `docs/episodes/25-nickel/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/25-nickel/`. Upload as **Private** (or schedule);
 ## Title
 
 ```
-The Metal Trade That Broke a Billion-Dollar Market
+The Nickel Short Squeeze That Broke the London Metal Exchange
 ```
 
 Other title options: The Night Nickel Hit $100,000 and the Market Erased It · $13 Billion of Trades Erased Overnight: The Nickel Crisis
@@ -73,7 +73,7 @@ The Night $13 Billion of Trades Were Erased #shorts
 ```
 What happens when the price of a metal doubles in a single morning, and the market where it trades decides that none of it happened?
 
-Watch the full story: "The Metal Trade That Broke a Billion-Dollar Market" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "The Nickel Short Squeeze That Broke the London Metal Exchange" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #nickel #lme #markets #economics
 ```

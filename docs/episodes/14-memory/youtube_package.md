@@ -1,10 +1,10 @@
-# YouTube package: "The Three Companies That Decide How Much Your Memory Costs" (Episode 14)
+# YouTube package: "Why Is RAM So Expensive? Three Companies Decide Your Memory Price" (Episode 14)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:25.
 
 ## Title options
 
-1. **The Three Companies That Decide How Much Your Memory Costs** (recommended)
+1. **Why Is RAM So Expensive? Three Companies Decide Your Memory Price** (recommended)
 2. **Why AI Made Your Computer's Memory Five Times More Expensive**
 3. **Samsung, SK hynix, Micron: The Memory Shortage Explained**
 
@@ -39,6 +39,8 @@ Sources
 - The Motley Fool: The worst may be over for Micron, but pandemic-era profits aren't coming back - https://www.fool.com/investing/2023/04/13/the-worst-may-be-over-for-micron-but-pandemic-era
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -57,4 +59,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 DRAM, memory prices, RAM shortage, AI, HBM, Samsung, SK hynix, Micron, CXMT, semiconductors, chip shortage, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Have you noticed RAM or SSD prices jumping when you upgrade?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

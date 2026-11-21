@@ -1,10 +1,10 @@
-# YouTube package: "College Sports Just Got a $20.5 Million Payroll" (Episode 49)
+# YouTube package: "College Athletes Getting Paid: How the New Payroll Works" (Episode 49)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:16.
 
 ## Title options
 
-1. **College Sports Just Got a $20.5 Million Payroll** (recommended)
+1. **College Athletes Getting Paid: How the New Payroll Works** (recommended)
 2. **Colleges Can Now Pay Athletes $20.5 Million a Year**
 3. **Who Pays for College Athletes' New Paychecks?**
 
@@ -32,6 +32,8 @@ Sources
 - U.S. Court of Appeals (3d Cir.); U.S. Senate Commerce Committee; The White House: Johnson v. NCAA (3d Cir., Jul 11, 2024); Senate passage of the Protect College Sports Act (Sep 28, 2026); Executive Order 14400 (Apr 3, 2026) - https://www2.ca3.uscourts.gov/opinarch/221223p.pdf
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -50,4 +52,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 college sports, NCAA, House settlement, revenue sharing, NIL, college football, Title IX, athletes, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Should college athletes be paid like employees?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

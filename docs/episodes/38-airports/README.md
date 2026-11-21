@@ -1,4 +1,4 @@
-# Episode 38: Why America's Airports Make Money Before You Fly (US batch #12)
+# Episode 38: How Airports Make Money Before You Even Fly (US batch #12)
 
 - Project: `projects/why-americas-airports-make-money-before-you-fly`; storyboard generator `tools/gen_airports_storyboard.py` (36 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `terminal` set (concourse, jets, gate signs, seats), `parkingdeck` set (three-deck garage, booth, $/day sign).

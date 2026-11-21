@@ -1,4 +1,4 @@
-# YouTube Short: "Nvidia Doubled Its Sales. Why Only 16.6 Times Profit?" (byb-nvidia-2026-11)
+# YouTube Short: "Nvidia Stock: Why the Low P/E?" (byb-nvidia-2026-11)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/byb-nvidia-2026-11_short.mp4` (53 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Nvidia Doubled Its Sales. Why Only 16.6 Times Profit? #shorts
+Nvidia Stock: Why the Low P/E? #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Nvidia Doubled Its Sales. Why Only 16.6 Times Profit? #shorts
 ```
 Nvidia just reported $115.8 billion of revenue in three months, more than double a year ago. At the Nov 17, 2026 close, just before the report, it was worth about 16.6 times its last twelve months of profit (our calculation from Nvidia's 8-K and the closing price). Not financial advice.
 
-Watch the full story: "Before You Buy Nvidia Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Nvidia Stock, Before You Buy: What's Priced In (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

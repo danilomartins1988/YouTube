@@ -1,10 +1,10 @@
-# YouTube package: "The Hamburger That Became a Symbol of the Cold War's End" (Episode 26)
+# YouTube package: "McDonald's in the Soviet Union: How a Burger Became a Cold War Symbol" (Episode 26)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:18.
 
 ## Title options
 
-1. **The Hamburger That Became a Symbol of the Cold War's End** (recommended)
+1. **McDonald's in the Soviet Union: How a Burger Became a Cold War Symbol** (recommended)
 2. **Why Moscow Queued From 4 A.M. for a Hamburger**
 3. **14 Years to Open, One War to Close: McDonald's in Russia**
 
@@ -36,6 +36,8 @@ Sources
 - Associated Press via PBS NewsHour: Russian-owned successor of McDonald's opens in Moscow (AP) - https://www.pbs.org/newshour/world/russian-owned-successor-of-mcdonalds-opens-in-moscow
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -54,4 +56,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 McDonald's, Moscow, Soviet Union, Cold War, perestroika, Pushkin Square, joint venture, supply chain, Russia, Vkusno i tochka, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Would you have waited in that line in Moscow?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

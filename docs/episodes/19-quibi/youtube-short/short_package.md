@@ -1,4 +1,4 @@
-# YouTube Short: "The $1.75 Billion App That Lasted Six Months" (19-quibi)
+# YouTube Short: "Quibi Lasted Six Months" (19-quibi)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/19-quibi_short.mp4` (31 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-The $1.75 Billion App That Lasted Six Months #shorts
+Quibi Lasted Six Months #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ The $1.75 Billion App That Lasted Six Months #shorts
 ```
 How do you raise almost two billion dollars, hire the biggest stars in Hollywood, and still shut down six months after launch?
 
-Watch the full story: "The $1.75 Billion Streaming App That Lasted Six Months" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "What Happened to Quibi? Inside a $1.75 Billion Flop" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #quibi #streaming #business #economics
 ```

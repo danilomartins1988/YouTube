@@ -1,10 +1,10 @@
-# YouTube package: "Why America Stopped Making the Penny" (Episode 42)
+# YouTube package: "Did the US Stop Making Pennies? What Happens at the Register Now" (Episode 42)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:13.
 
 ## Title options
 
-1. **Why America Stopped Making the Penny** (recommended)
+1. **Did the US Stop Making Pennies? What Happens at the Register Now** (recommended)
 2. **Every Penny Cost 3.69 Cents to Make. Now It's Gone**
 3. **What Killing the Penny Really Costs You**
 
@@ -13,7 +13,7 @@ Prepared for manual publishing. Nothing has been uploaded. Video length 11:13.
 ```
 In November 2025, the U.S. Mint struck its last penny for circulation, ending 232 years of production (St. Louis Fed). In fiscal 2024, each one cost 3.69 cents to make, and the Mint spent $85.3 million above face value just on pennies (U.S. Mint 2024 Annual Report). So why did it take so long to stop, and what happens at the register now? We follow the cost of every coin, the 1982 switch from copper to zinc, the Treasury's rounding guidance, the states and bills trying to write the rules, what economists estimate rounding really costs shoppers, and what happened when Canada did the same thing in 2012.
 
-Every figure is sourced below: the U.S. Mint 2024 Annual Report, Mint and Treasury releases, the Federal Reserve, the St. Louis and Richmond Feds, Washington SHB 2334, and Congress.gov bill status. The Common Cents Act was not law as of August 2026. Rounding costs are Richmond Fed estimates; the Canada figure is our own conversion to U.S. dollars.
+Every figure is sourced below: the U.S. Mint 2024 Annual Report, Mint and Treasury releases, the Federal Reserve, the St. Louis and Richmond Feds, Washington SHB 2334, and Congress.gov bill status. The House and the Senate each passed a version of the Common Cents Act in 2026; we found no record of it becoming law as of November 21, 2026 (check congress.gov for the latest). Rounding costs are Richmond Fed estimates; the Canada figure is our own conversion to U.S. dollars.
 
 Chapters
 0:00 Three point six nine cents
@@ -37,6 +37,8 @@ Sources
 - Government of Canada: Budget 2012 (penny); Minister of Finance strikes last penny; one month until penny transition date - https://www.canada.ca/en/news/archive/2012/05/minister-finance-strikes-last-penny-enter-circulation-canada.html
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -55,4 +57,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 penny, U.S. Mint, coins, cost of money, rounding, zinc, Treasury, cash, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Do you still use pennies, or do you round up and move on?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

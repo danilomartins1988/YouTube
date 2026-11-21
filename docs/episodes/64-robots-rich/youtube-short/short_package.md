@@ -1,4 +1,4 @@
-# YouTube Short: "Who Actually Owns the Stock Market?" (64-robots-rich)
+# YouTube Short: "Who Owns the Stock Market?" (64-robots-rich)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/64-robots-rich_short.mp4` (52 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Who Actually Owns the Stock Market? #shorts
+Who Owns the Stock Market? #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Who Actually Owns the Stock Market? #shorts
 ```
 So Dana asks the obvious question. Who owns the machines?
 
-Watch the full story: "Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "AI Taking Jobs: Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

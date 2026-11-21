@@ -1,4 +1,4 @@
-# YouTube Short: "Americans Owe $1.65 Trillion in Student Loans" (33-student-debt)
+# YouTube Short: "Student Loans: $1.65 Trillion" (33-student-debt)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/33-student-debt_short.mp4` (55 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Americans Owe $1.65 Trillion in Student Loans #shorts
+Student Loans: $1.65 Trillion #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Americans Owe $1.65 Trillion in Student Loans #shorts
 ```
 One point six five trillion dollars. That is how much Americans owe on student loans, more than they owe on all their credit cards combined.
 
-Watch the full story: "The Business Behind America's Student Debt" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Student Debt Crisis Explained: The Business Behind America's Loans" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #studentloans #college #usa #economics
 ```

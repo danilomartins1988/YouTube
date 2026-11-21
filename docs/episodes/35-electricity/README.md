@@ -1,4 +1,4 @@
-# Episode 35: Why America's Electricity Bills Are Rising (US batch #08)
+# Episode 35: Why Electric Bills Keep Rising in America (US batch #08)
 
 - Project: `projects/why-americas-electricity-bills-are-rising`; storyboard generator `tools/gen_power_storyboard.py` (37 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `powergrid` set (towers, lines, substation, poles), `meter` item (home meter with readout); `bigchart` gained negative bars (`min`); thumbnail subject `meter`.

@@ -1,4 +1,4 @@
-# YouTube Short: "The Robots Really Working in Japan Aren't Humanoids" (66-japan-ai-c)
+# YouTube Short: "Japan's Real Robot Workforce" (66-japan-ai-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/66-japan-ai-c_short.mp4` (61 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-The Robots Really Working in Japan Aren't Humanoids #shorts
+Japan's Real Robot Workforce #shorts
 ```
 
 ## Description

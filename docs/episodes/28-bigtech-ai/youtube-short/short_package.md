@@ -1,4 +1,4 @@
-# YouTube Short: "Big Tech Spent $200 Billion in 3 Months. Here's Why" (28-bigtech-ai)
+# YouTube Short: "Big Tech's $200 Billion AI Bet" (28-bigtech-ai)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/28-bigtech-ai_short.mp4` (49 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Big Tech Spent $200 Billion in 3 Months. Here's Why #shorts
+Big Tech's $200 Billion AI Bet #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Big Tech Spent $200 Billion in 3 Months. Here's Why #shorts
 ```
 Two hundred billion dollars. That is roughly what four companies spent on buildings and machines in just three months.
 
-Watch the full story: "How Big Tech Really Makes Money From AI" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Big Tech Makes Money on AI: Rent, Ads and Lock-In" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #ai #bigtech #economics
 ```

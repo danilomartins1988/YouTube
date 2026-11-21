@@ -1,4 +1,4 @@
-# YouTube Short: "The One Clause That Protects Your Power Bill From AI" (65-ai-power-bill-c)
+# YouTube Short: "The Clause Guarding Your Bill" (65-ai-power-bill-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/65-ai-power-bill-c_short.mp4` (50 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-The One Clause That Protects Your Power Bill From AI #shorts
+The Clause Guarding Your Bill #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ The One Clause That Protects Your Power Bill From AI #shorts
 ```
 But regulators are pushing back. In Ohio, after the local utility paused new data center deals around Columbus, a new rule arrived.
 
-Watch the full story: "Why AI Could Make Your Electricity Bill Explode" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "AI Data Centers and Your Bill: Why Your Power Bill Could Explode" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

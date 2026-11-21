@@ -1,4 +1,4 @@
-# Episode 34: How Car Dealerships Really Make Money (US batch #07)
+# Episode 34: How Car Dealerships Make Money (It's Not the Car) (US batch #07)
 
 - Project: `projects/how-car-dealerships-really-make-money`; storyboard generator `tools/gen_dealers_storyboard.py` (38 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `dealership` set (generic lot + showroom + service door), `garage` set (service bay with lifts), `sedan` item (generic car, sticker, lift, SOLD); thumbnail subject `sedan`.

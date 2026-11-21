@@ -4,9 +4,9 @@ Registered in `SHORTS` and `CUSTOM` (segments cut from the final timeline; each 
 
 | Short | Package folder | Segments | Headline | Hashtags |
 |---|---|---|---|---|
-| 1 "Could AI Save Europe's Economy?" | `youtube-short/` | a1_age, a2_draw, a2_question | EUROPE IS AGING. / CAN ROBOTS FIX IT? | #europe #economy #ai |
-| 2 "Why Europe Still Controls Critical Technology" | `youtube-short-b/` | a5_asml, a5_web | ONLY ONE COMPANY / MAKES THIS MACHINE | #europe #asml #chips |
-| 3 "Who Gets Rich When Robots Do the Work?" | `youtube-short-c/` | a6_company, a6_numbers | ROBOTS DO THE WORK. / WHO GETS RICH? | #ai #robots #economy |
+| 1 "Could AI Save Europe?" | `youtube-short/` | a1_age, a2_draw, a2_question | EUROPE IS AGING. / CAN ROBOTS FIX IT? | #europe #economy #ai |
+| 2 "Europe's Hidden Tech Power" | `youtube-short-b/` | a5_asml, a5_web | ONLY ONE COMPANY / MAKES THIS MACHINE | #europe #asml #chips |
+| 3 "When Robots Work, Who Profits?" | `youtube-short-c/` | a6_company, a6_numbers | ROBOTS DO THE WORK. / WHO GETS RICH? | #ai #robots #economy |
 
 - **Short 1** opens on Theo's shop floor (veterans retiring, "just two workers for every retiree" soon, per the Draghi report), the presenter
   draws output = workers x output per worker, and ends on Theo's question: what if technology let his factory make far more with far fewer
@@ -17,4 +17,4 @@ Registered in `SHORTS` and `CUSTOM` (segments cut from the final timeline; each 
   owns patents and software, makes the key decisions, carries the risks; partner factories abroad make the product), then the money
   experiment: when the partner factory automates, its small fee shrinks a little and Company E's share grows by more than half ($17 to
   $27.50 on screen). Labelled ILLUSTRATIVE · MADE-UP NUMBERS throughout. Note: Ep 64 uses the same phrase as its long-form title.
-- Descriptions point to the full film by title ("Everyone Says Europe Is Falling Behind. AI Could Change That"); no unverified URLs.
+- Descriptions point to the full film by title ("Is Europe Falling Behind? How AI Could Bring It Back"); no unverified URLs.

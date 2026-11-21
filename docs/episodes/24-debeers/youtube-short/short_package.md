@@ -1,4 +1,4 @@
-# YouTube Short: "How Four Words Made Diamonds Mean Love" (24-debeers)
+# YouTube Short: "Four Words That Sold Diamonds" (24-debeers)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/24-debeers_short.mp4` (38 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-How Four Words Made Diamonds Mean Love #shorts
+Four Words That Sold Diamonds #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ How Four Words Made Diamonds Mean Love #shorts
 ```
 Why does a promise of love come with a small, clear stone? And who decided that it should?
 
-Watch the full story: "How One Company Made Diamonds a Symbol of Love" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "De Beers: How One Company Made Diamonds a Symbol of Love" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #diamonds #debeers #marketing #economics
 ```

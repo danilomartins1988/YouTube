@@ -1,4 +1,4 @@
-# Episode 14: The Three Companies That Decide How Much Your Memory Costs
+# Episode 14: Why Is RAM So Expensive? Three Companies Decide Your Memory Price
 
 Status: **scripted, fact-checked by AI before writing, visual direction and storyboard done; queued for narration and
 render.** Not published. A named human reviewer should sign off the claims (`FACT_CHECK.md`).

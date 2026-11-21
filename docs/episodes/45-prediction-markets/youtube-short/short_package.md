@@ -1,4 +1,4 @@
-# YouTube Short: "Prediction Markets Traded $25 Billion in One Month" (45-prediction-markets)
+# YouTube Short: "Prediction Markets: $25B Month" (45-prediction-markets)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/45-prediction-markets_short.mp4` (50 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Prediction Markets Traded $25 Billion in One Month #shorts
+Prediction Markets: $25B Month #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Prediction Markets Traded $25 Billion in One Month #shorts
 ```
 Twenty-five billion dollars. That is how much was traded on event contracts in America in March twenty twenty-six, according to the federal regulator.
 
-Watch the full story: "How Prediction Markets Make Money Off Your Hunches" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Prediction Markets Explained: How They Make Money Off Your Hunches" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #predictionmarkets #finance #sports #economics
 ```

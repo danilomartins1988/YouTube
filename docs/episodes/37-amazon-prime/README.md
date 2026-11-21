@@ -1,4 +1,4 @@
-# Episode 37: The Hidden Economics of Amazon Prime (US batch #11)
+# Episode 37: How Amazon Prime Really Works, and Why It Pays Off (US batch #11)
 
 - Project: `projects/the-hidden-economics-of-amazon-prime`; storyboard generator `tools/gen_prime_storyboard.py` (37 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `sortcenter` set (parcel sort center), `van` item (generic delivery van), `flowscreens` item (multi-step phone flow vs one-click); thumbnail subject `parcels`.

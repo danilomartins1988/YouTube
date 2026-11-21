@@ -1,10 +1,10 @@
-# YouTube package: "The Chemicals Nobody Talks About That Decide Who Makes Chips" (Episode 18)
+# YouTube package: "The Chip Supply Chain's Secret: Chemicals Nobody Talks About" (Episode 18)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:58.
 
 ## Title options
 
-1. **The Chemicals Nobody Talks About That Decide Who Makes Chips** (recommended)
+1. **The Chip Supply Chain's Secret: Chemicals Nobody Talks About** (recommended)
 2. **The Bottle That Could Stop Every Chip Factory**
 3. **Japan's 90% Grip on the Chemical Inside Every Advanced Chip**
 
@@ -36,6 +36,8 @@ Sources
 - Evertiq: China suspends ban on gallium and germanium exports to the US - https://evertiq.com/news/2025-11-10-china-suspends-ban-on-gallium-and-germanium-exports-to-the-us
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -54,4 +56,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 photoresist, semiconductors, chips, JSR, Tokyo Ohka Kogyo, Shin-Etsu, neon, gallium, export controls, supply chain, chokepoints, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Did you know chips depend on chemicals made by so few companies?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

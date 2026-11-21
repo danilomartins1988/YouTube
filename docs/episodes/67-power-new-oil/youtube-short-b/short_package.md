@@ -15,7 +15,7 @@ The Metal Made of Electricity, and Why AI Copies It #shorts
 ```
 And this has happened before. Meet aluminum, the metal in your soda can.
 
-Watch the full story: "Could Cheap Electricity Become the New Oil?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Cheap Electricity, the New Oil? Where AI Data Centers Will Go" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

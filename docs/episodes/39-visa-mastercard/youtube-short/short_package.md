@@ -1,4 +1,4 @@
-# YouTube Short: "How Two Bank Clubs Became Visa and Mastercard" (39-visa-mastercard)
+# YouTube Short: "How Visa and Mastercard Began" (39-visa-mastercard)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/39-visa-mastercard_short.mp4` (47 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-How Two Bank Clubs Became Visa and Mastercard #shorts
+How Visa and Mastercard Began #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ How Two Bank Clubs Became Visa and Mastercard #shorts
 ```
 Three hundred and fifty-five billion. That is how many payments carried Visa's name in a single year.
 
-Watch the full story: "How Visa and Mastercard Became Financial Gatekeepers" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Visa and Mastercard Explained: The Toll on Every Card Swipe" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #visa #mastercard #finance #economics
 ```

@@ -1,4 +1,4 @@
-# YouTube Short: "Amazon Spent $102.7 Billion on Shipping in One Year" (37-amazon-prime)
+# YouTube Short: "Amazon's $102.7B Shipping Bill" (37-amazon-prime)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/37-amazon-prime_short.mp4` (58 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Amazon Spent $102.7 Billion on Shipping in One Year #shorts
+Amazon's $102.7B Shipping Bill #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Amazon Spent $102.7 Billion on Shipping in One Year #shorts
 ```
 One hundred and two point seven billion dollars. That is what Amazon spent on shipping in a single year, twenty twenty-five.
 
-Watch the full story: "The Hidden Economics of Amazon Prime" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Amazon Prime Really Works, and Why It Pays Off" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #amazon #amazonprime #business #economics
 ```

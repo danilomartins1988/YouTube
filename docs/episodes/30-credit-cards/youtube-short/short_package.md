@@ -1,4 +1,4 @@
-# YouTube Short: "Americans Paid $160 Billion in Card Interest in One Year" (30-credit-cards)
+# YouTube Short: "$160 Billion in Card Interest" (30-credit-cards)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/30-credit-cards_short.mp4` (43 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Americans Paid $160 Billion in Card Interest in One Year #shorts
+$160 Billion in Card Interest #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Americans Paid $160 Billion in Card Interest in One Year #shorts
 ```
 One hundred and sixty billion dollars. That is how much interest Americans were charged on their credit cards in a single year.
 
-Watch the full story: "The Hidden Business Behind Your Credit Card" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Credit Cards Make Money on Every Swipe" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #creditcard #personalfinance #usa #economics
 ```

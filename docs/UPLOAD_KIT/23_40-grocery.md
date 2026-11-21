@@ -1,4 +1,4 @@
-# 23. The Hidden Business Behind America's Grocery Prices
+# 23. Why Are Groceries So Expensive? The Business Behind Your Bill
 
 Episode folder: `docs/episodes/40-grocery/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/40-grocery/`. Upload as **Private** (or schedule)
 ## Title
 
 ```
-The Hidden Business Behind America's Grocery Prices
+Why Are Groceries So Expensive? The Business Behind Your Bill
 ```
 
 Other title options: Only 11.8 Cents of Your Food Dollar Reaches the Farm. Here's Where the Rest Goes · Who Really Profits From Your Grocery Bill?
@@ -70,7 +70,7 @@ Only 11.8 Cents of Your Food Dollar Reaches the Farm #shorts
 ```
 Eleven point eight cents. Out of every dollar Americans spend on food, that is all that ends up with the farm that grew it.
 
-Watch the full story: "The Hidden Business Behind America's Grocery Prices" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Are Groceries So Expensive? The Business Behind Your Bill" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #groceries #food #usa #economics
 ```

@@ -1,4 +1,4 @@
-# Episode 40: The Hidden Business Behind America's Grocery Prices (US batch #20)
+# Episode 40: Why Are Groceries So Expensive? The Business Behind Your Bill (US batch #20)
 
 - Project: `projects/the-hidden-business-behind-americas-grocery-prices`; storyboard generator `tools/gen_grocery_storyboard.py` (40 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `supermarket` set (aisle signs, shelves, checkout lanes, produce bins), `ranch` set (cattle, fence, packing plant), `eggcarton` item (carton with changing price); thumbnail subject `cart`.

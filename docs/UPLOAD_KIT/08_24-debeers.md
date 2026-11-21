@@ -1,4 +1,4 @@
-# 08. How One Company Made Diamonds a Symbol of Love
+# 08. De Beers: How One Company Made Diamonds a Symbol of Love
 
 Episode folder: `docs/episodes/24-debeers/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/24-debeers/`. Upload as **Private** (or schedule)
 ## Title
 
 ```
-How One Company Made Diamonds a Symbol of Love
+De Beers: How One Company Made Diamonds a Symbol of Love
 ```
 
 Other title options: A Diamond Is Forever: The Four Words That Built a Cartel · The Diamond King Is for Sale: How De Beers Lost Its Shine
@@ -78,7 +78,7 @@ How Four Words Made Diamonds Mean Love #shorts
 ```
 Why does a promise of love come with a small, clear stone? And who decided that it should?
 
-Watch the full story: "How One Company Made Diamonds a Symbol of Love" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "De Beers: How One Company Made Diamonds a Symbol of Love" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #diamonds #debeers #marketing #economics
 ```

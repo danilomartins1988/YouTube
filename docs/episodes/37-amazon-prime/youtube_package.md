@@ -1,10 +1,10 @@
-# YouTube package: "The Hidden Economics of Amazon Prime" (Episode 37)
+# YouTube package: "How Amazon Prime Really Works, and Why It Pays Off" (Episode 37)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:11.
 
 ## Title options
 
-1. **The Hidden Economics of Amazon Prime** (recommended)
+1. **How Amazon Prime Really Works, and Why It Pays Off** (recommended)
 2. **Amazon Spends $102.7 Billion on Shipping. Here's Why Prime Still Wins**
 3. **Prime Isn't the Product. You Are.**
 
@@ -35,6 +35,8 @@ Sources
 - Amazon: Amazon Prime Day 2025 Delivers Record Sales and Savings in Expanded Four-Day Shopping Event - https://press.aboutamazon.com/2025/7/amazon-prime-day-2025-delivers-record-sales-and-savings-in-expanded-four-day-shopping-event
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -53,4 +55,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 Amazon Prime, Amazon, how Amazon makes money, Prime membership, AWS, Amazon advertising, FTC Amazon, Prime Day, subscription economy, business explained, economics explained, The Hidden Economics, US economy
+```
+
+## Pinned comment
+
+```
+Do you keep Prime for the shipping, the video, or out of habit?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

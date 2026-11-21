@@ -1,10 +1,10 @@
-# YouTube package: "The Hidden Business Behind America's Grocery Prices" (Episode 40)
+# YouTube package: "Why Are Groceries So Expensive? The Business Behind Your Bill" (Episode 40)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:25.
 
 ## Title options
 
-1. **The Hidden Business Behind America's Grocery Prices** (recommended)
+1. **Why Are Groceries So Expensive? The Business Behind Your Bill** (recommended)
 2. **Only 11.8 Cents of Your Food Dollar Reaches the Farm. Here's Where the Rest Goes**
 3. **Who Really Profits From Your Grocery Bill?**
 
@@ -28,6 +28,8 @@ Sources
 Main sources: USDA Economic Research Service; U.S. Bureau of Labor Statistics; The Kroger Co. (SEC EDGAR); Albertsons Companies (SEC EDGAR); Walmart Inc. (SEC EDGAR); FMI – The Food Industry Association (trade group); Federal Trade Commission (staff report); Federal Trade Commission; USDA Economic Research Service (Amber Waves); Federal Trade Commission (staff study); U.S. Bureau of Labor Statistics (Beyond the Numbers); Private Label Manufacturers Association (trade group; Circana data).
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -46,4 +48,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 grocery prices,food prices,inflation,egg prices,beef prices,supermarket profits,Kroger,Albertsons,Walmart,FTC,shrinkflation,food dollar,USDA,economics,business,hidden economics,documentary
+```
+
+## Pinned comment
+
+```
+Which grocery item's price surprised you most this year?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

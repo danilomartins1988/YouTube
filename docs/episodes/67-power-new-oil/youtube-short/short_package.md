@@ -1,4 +1,4 @@
-# YouTube Short: "Why AI Follows the Plug, Not the Workers" (67-power-new-oil)
+# YouTube Short: "Why AI Follows the Plug" (67-power-new-oil)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/67-power-new-oil_short.mp4` (38 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (1 narrated segme
 ## Title
 
 ```
-Why AI Follows the Plug, Not the Workers #shorts
+Why AI Follows the Plug #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Why AI Follows the Plug, Not the Workers #shorts
 ```
 Meet Nia. She's a site scout, and her new job sounds simple.
 
-Watch the full story: "Could Cheap Electricity Become the New Oil?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Cheap Electricity, the New Oil? Where AI Data Centers Will Go" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

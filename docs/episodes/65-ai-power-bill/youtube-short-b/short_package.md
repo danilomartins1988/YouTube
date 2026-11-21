@@ -1,4 +1,4 @@
-# YouTube Short: "Why AI Is Driving Up the Price of Power Plants" (65-ai-power-bill-b)
+# YouTube Short: "AI Made Power Plants Pricier" (65-ai-power-bill-b)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/65-ai-power-bill-b_short.mp4` (44 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Why AI Is Driving Up the Price of Power Plants #shorts
+AI Made Power Plants Pricier #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Why AI Is Driving Up the Price of Power Plants #shorts
 ```
 Every year, PJM holds an auction, paying power plants to promise they'll be there when the grid needs them most.
 
-Watch the full story: "Why AI Could Make Your Electricity Bill Explode" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "AI Data Centers and Your Bill: Why Your Power Bill Could Explode" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

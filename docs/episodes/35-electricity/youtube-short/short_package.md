@@ -1,4 +1,4 @@
-# YouTube Short: "Why Your Electric Bill Keeps Going Up" (35-electricity)
+# YouTube Short: "Electric Bills Going Up? Why" (35-electricity)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/35-electricity_short.mp4` (57 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Why Your Electric Bill Keeps Going Up #shorts
+Electric Bills Going Up? Why #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Why Your Electric Bill Keeps Going Up #shorts
 ```
 Twenty-eight dollars and ninety-two cents. Then two hundred and sixty-nine dollars and ninety-two cents.
 
-Watch the full story: "Why America's Electricity Bills Are Rising" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Electric Bills Keep Rising in America" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #electricity #energy #usa #economics
 ```

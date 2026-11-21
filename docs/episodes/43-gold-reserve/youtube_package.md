@@ -1,10 +1,10 @@
-# YouTube package: "America's $1 Trillion of Gold Is Booked at $11 Billion" (Episode 43)
+# YouTube package: "Fort Knox and America's Gold: Why It's Booked at $42 an Ounce" (Episode 43)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:33.
 
 ## Title options
 
-1. **America's $1 Trillion of Gold Is Booked at $11 Billion** (recommended)
+1. **Fort Knox and America's Gold: Why It's Booked at $42 an Ounce** (recommended)
 2. **Why America's Gold Is Still Priced at $42 an Ounce**
 3. **The $11 Billion Price Tag on a Trillion Dollars of Gold**
 
@@ -14,6 +14,8 @@ Prepared for manual publishing. Nothing has been uploaded. Video length 11:33.
 The United States holds about 261.5 million troy ounces of gold, roughly 8,100 tonnes by our calculation, and the Treasury's own books value it at about $11.04 billion (Treasury Fiscal Data). At the market price of September 30, 2025, the same gold was worth about $1 trillion, roughly 90 times its book value (our calculation from the LBMA price used by the Treasury's Inspector General). Why does a price set by law in 1973, $42.22 an ounce, still sit on the nation's balance sheet? We look at where the bars are (Fort Knox, West Point, Denver and the New York Fed), how the price was written into law from 1934 to 1973, the gold certificates that link the metal to the Federal Reserve, who audits the vaults and how, the proposals to revalue or re-audit the gold, and how America's pile compares with other central banks that keep buying.
 
 Every figure is sourced below: Treasury Fiscal Data, 31 U.S.C. 5117 and the 1972/1973 Par Value Modification Acts, Federal Reserve History and H.4.1, CRS, Treasury OIG audits, GAO and the World Gold Council (IMF data). Tonnage, vault shares and ratios are our own calculations. Bills mentioned are proposals, not law. Not financial advice; not affiliated with any government agency.
+
+Gold has moved since that date: at about $3,600 an ounce (spot, mid-November 2026; Fortune and Yahoo Finance), the same 261.5 million ounces would be worth roughly $940 billion (our calculation).
 
 Chapters
 0:00 Eleven billion dollars
@@ -36,6 +38,8 @@ Sources
 - World Gold Council: Central bank gold statistics (data to Aug 31, 2026; IMF data) - https://www.gold.org/download/file/21213/CB_Blog_Post_Oct26.pdf
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -54,4 +58,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 gold reserves, Fort Knox, US Treasury, gold price, Federal Reserve, gold certificates, central banks, economics, finance, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Should the government revalue its gold, or leave the old price on the books?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

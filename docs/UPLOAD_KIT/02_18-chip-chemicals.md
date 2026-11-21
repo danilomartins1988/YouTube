@@ -1,4 +1,4 @@
-# 02. The Chemicals Nobody Talks About That Decide Who Makes Chips
+# 02. The Chip Supply Chain's Secret: Chemicals Nobody Talks About
 
 Episode folder: `docs/episodes/18-chip-chemicals/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/18-chip-chemicals/`. Upload as **Private** (or sc
 ## Title
 
 ```
-The Chemicals Nobody Talks About That Decide Who Makes Chips
+The Chip Supply Chain's Secret: Chemicals Nobody Talks About
 ```
 
 Other title options: The Bottle That Could Stop Every Chip Factory · Japan's 90% Grip on the Chemical Inside Every Advanced Chip

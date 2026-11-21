@@ -1,4 +1,4 @@
-# 16. How Car Dealerships Really Make Money
+# 16. How Car Dealerships Make Money (It's Not the Car)
 
 Episode folder: `docs/episodes/34-car-dealers/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/34-car-dealers/`. Upload as **Private** (or sched
 ## Title
 
 ```
-How Car Dealerships Really Make Money
+How Car Dealerships Make Money (It's Not the Car)
 ```
 
 Other title options: Car Dealers Make More in the Finance Office Than on Your Car · The Car Is the Bait: How Dealerships Really Profit
@@ -81,7 +81,7 @@ Car Dealers Make More in the Finance Office Than on the Car #shorts
 ```
 Two thousand five hundred and sixty-four dollars. That is the average gross profit AutoNation, one of America's largest dealership groups, made on each new car it sold in twenty twenty-five.
 
-Watch the full story: "How Car Dealerships Really Make Money" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Car Dealerships Make Money (It's Not the Car)" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #cars #carbuying #usa #economics
 ```

@@ -1,10 +1,10 @@
-# YouTube package: "Before You Buy Nvidia Stock, Watch This (Nov 2026)" (Before You Buy, Nvidia, Nov 2026)
+# YouTube package: "Nvidia Stock, Before You Buy: What's Priced In (Nov 2026)" (Before You Buy, Nvidia, Nov 2026)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 12:10.
 
 ## Title options
 
-1. **Before You Buy Nvidia Stock, Watch This (Nov 2026)** (recommended)
+1. **Nvidia Stock, Before You Buy: What's Priced In (Nov 2026)** (recommended)
 2. **Is Nvidia Stock Priced Like a Peak? (Nov 2026)**
 3. **Nvidia Stock: What Has to Go Right Now**
 
@@ -37,6 +37,8 @@ Sources
 - Yahoo Finance: NVDA daily closing prices, Nov 4 and Nov 17, 2026 (data vendor) - https://finance.yahoo.com/quote/NVDA/history/
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -55,4 +57,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 Nvidia stock, NVDA, before you buy, Nvidia earnings, Nvidia Q3 earnings, Nvidia valuation, should you buy Nvidia stock, data center, AI chips, stock analysis, Nasdaq, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Which of the three numbers will you watch first in Nvidia's next report?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

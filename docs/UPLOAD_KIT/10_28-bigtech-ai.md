@@ -1,4 +1,4 @@
-# 10. How Big Tech Really Makes Money From AI
+# 10. How Big Tech Makes Money on AI: Rent, Ads and Lock-In
 
 Episode folder: `docs/episodes/28-bigtech-ai/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/28-bigtech-ai/`. Upload as **Private** (or schedu
 ## Title
 
 ```
-How Big Tech Really Makes Money From AI
+How Big Tech Makes Money on AI: Rent, Ads and Lock-In
 ```
 
 Other title options: Big Tech Spent $200 Billion in 3 Months on AI. Here's How It Comes Back · The $700 Billion AI Bet: Where the Money Really Comes From
@@ -80,7 +80,7 @@ Big Tech Spent $200 Billion in 3 Months. Here's Why #shorts
 ```
 Two hundred billion dollars. That is roughly what four companies spent on buildings and machines in just three months.
 
-Watch the full story: "How Big Tech Really Makes Money From AI" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Big Tech Makes Money on AI: Rent, Ads and Lock-In" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #ai #bigtech #economics
 ```

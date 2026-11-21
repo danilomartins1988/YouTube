@@ -1,4 +1,4 @@
-# YouTube Short: "Where Washington's Tax Money Really Comes From" (69-ai-taxes-b)
+# YouTube Short: "Where US Tax Money Comes From" (69-ai-taxes-b)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/69-ai-taxes-b_short.mp4` (51 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-Where Washington's Tax Money Really Comes From #shorts
+Where US Tax Money Comes From #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Where Washington's Tax Money Really Comes From #shorts
 ```
 Then Stub shows Rosa the big picture. In America, almost nine out of every ten dollars the federal government collects come from people, through their income taxes and the taxes taken out of their paychecks.
 
-Watch the full story: "If AI Replaces Workers, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "If AI Takes the Jobs, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

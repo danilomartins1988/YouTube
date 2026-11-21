@@ -1,4 +1,4 @@
-# YouTube Short: "America's Gold Is Booked at Just $11 Billion" (43-gold-reserve)
+# YouTube Short: "US Gold, Booked at $11 Billion" (43-gold-reserve)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/43-gold-reserve_short.mp4` (50 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-America's Gold Is Booked at Just $11 Billion #shorts
+US Gold, Booked at $11 Billion #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ America's Gold Is Booked at Just $11 Billion #shorts
 ```
 Eleven billion dollars. That is what the United States government says its gold is worth, on its own official books.
 
-Watch the full story: "America's $1 Trillion of Gold Is Booked at $11 Billion" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Fort Knox and America's Gold: Why It's Booked at $42 an Ounce" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #gold #fortknox #usa #economics
 ```

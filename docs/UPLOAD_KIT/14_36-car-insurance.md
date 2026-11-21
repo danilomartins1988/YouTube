@@ -1,4 +1,4 @@
-# 14. Why Your Car Insurance Got So Expensive
+# 14. Car Insurance Is So Expensive. Here's Why
 
 Episode folder: `docs/episodes/36-car-insurance/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/36-car-insurance/`. Upload as **Private** (or sch
 ## Title
 
 ```
-Why Your Car Insurance Got So Expensive
+Car Insurance Is So Expensive. Here's Why
 ```
 
 Other title options: Car Insurance Jumped 22.6% in One Year. Here's Why · From Losses to Record Profits: The Car Insurance Cycle
@@ -81,7 +81,7 @@ Car Insurance Jumped 22.6% in One Year. Here's Why #shorts
 ```
 Twenty-two point six percent. That is how much the price of car insurance in America rose in a single year, by April twenty twenty-four.
 
-Watch the full story: "Why Your Car Insurance Got So Expensive" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Car Insurance Is So Expensive. Here's Why" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #carinsurance #insurance #usa #economics
 ```

@@ -1,4 +1,4 @@
-# 09. The Hidden Economics of Amazon Prime
+# 09. How Amazon Prime Really Works, and Why It Pays Off
 
 Episode folder: `docs/episodes/37-amazon-prime/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/37-amazon-prime/`. Upload as **Private** (or sche
 ## Title
 
 ```
-The Hidden Economics of Amazon Prime
+How Amazon Prime Really Works, and Why It Pays Off
 ```
 
 Other title options: Amazon Spends $102.7 Billion on Shipping. Here's Why Prime Still Wins · Prime Isn't the Product. You Are.
@@ -77,7 +77,7 @@ Amazon Spent $102.7 Billion on Shipping in One Year #shorts
 ```
 One hundred and two point seven billion dollars. That is what Amazon spent on shipping in a single year, twenty twenty-five.
 
-Watch the full story: "The Hidden Economics of Amazon Prime" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Amazon Prime Really Works, and Why It Pays Off" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #amazon #amazonprime #business #economics
 ```

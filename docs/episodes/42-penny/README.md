@@ -1,4 +1,4 @@
-# Episode 42: Why America Stopped Making the Penny (new topics N2)
+# Episode 42: Did the US Stop Making Pennies? What Happens at the Register Now (new topics N2)
 
 - Project: `projects/why-america-stopped-making-the-penny`; storyboard generator `tools/gen_penny_storyboard.py` (40 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `mintfloor` set (coin presses, conveyor of coins, bins), `bigcoin` item (generic giant coin with cost tag; spins). Presenter arm v2.

@@ -1,10 +1,10 @@
-# YouTube package: "Why America's Airports Make Money Before You Fly" (Episode 38)
+# YouTube package: "How Airports Make Money Before You Even Fly" (Episode 38)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:08.
 
 ## Title options
 
-1. **Why America's Airports Make Money Before You Fly** (recommended)
+1. **How Airports Make Money Before You Even Fly** (recommended)
 2. **US Airports Made $6.9 Billion From Parking. More Than Landing Fees**
 3. **Your Airport Is a Landlord, a Garage and a Mall**
 
@@ -37,6 +37,8 @@ Sources
 - Airports Council International – North America: Modern Airports for a Stronger America (2025 Infrastructure Needs Study) - https://airportscouncil.org/wp-content/uploads/2025/03/2025-Infrastructure-Needs-Study.pdf
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -55,4 +57,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 airports,airport economics,airport parking,passenger facility charge,FAA,air travel,airline fees,TSA,LAX,travel costs,economics,business,hidden economics,documentary
+```
+
+## Pinned comment
+
+```
+What's the most you've paid for airport parking or a bottle of water?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

@@ -119,7 +119,7 @@ Taiwan, why Taiwan matters, Taiwan economy, TSMC, TSMC explained, semiconductors
 
 **Title**
 ```
-The Machine Only One Company on Earth Can Build #shorts
+Only One Company Builds This #shorts
 ```
 **Description**
 ```
@@ -239,7 +239,7 @@ Three Companies Decide What Your Memory Costs #shorts
 ```
 What if the price of one tiny part inside your computer jumped more than five times in a single year, and almost nobody outside the industry noticed why?
 
-Watch the full story: "The Three Companies That Decide How Much Your Memory Costs" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Is RAM So Expensive? Three Companies Decide Your Memory Price" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #chips #memory #economics
 ```
@@ -315,7 +315,7 @@ The Chemicals That Decide Who Makes Chips #shorts
 ```
 What if the most advanced chip factory on Earth could be stopped, not by a broken machine, but by a missing bottle of liquid?
 
-Watch the full story: "The Chemicals Nobody Talks About That Decide Who Makes Chips" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "The Chip Supply Chain's Secret: Chemicals Nobody Talks About" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #chips #chemicals #economics
 ```
@@ -328,13 +328,15 @@ photoresist, semiconductors, chips, JSR, Tokyo Ohka Kogyo, Shin-Etsu, neon, gall
 
 **Title**
 ```
-The $1.75 Billion App That Lasted Six Months #shorts
+Quibi Lasted Six Months #shorts
 ```
 **Description**
 ```
 How do you raise almost two billion dollars, hire the biggest stars in Hollywood, and still shut down six months after launch?
 
-Watch the full story: "The $1.75 Billion Streaming App That Lasted Six Months" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "What Happened to Quibi? Inside a $1.75 Billion Flop" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #quibi #streaming #business #economics
 ```
@@ -423,13 +425,15 @@ Japan, Tokyo, bubble economy, 1980s, land prices, Imperial Palace, Nikkei, Plaza
 
 **Title**
 ```
-How Four Words Made Diamonds Mean Love #shorts
+Four Words That Sold Diamonds #shorts
 ```
 **Description**
 ```
 Why does a promise of love come with a small, clear stone? And who decided that it should?
 
-Watch the full story: "How One Company Made Diamonds a Symbol of Love" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "De Beers: How One Company Made Diamonds a Symbol of Love" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #diamonds #debeers #marketing #economics
 ```
@@ -442,13 +446,15 @@ De Beers, diamonds, A Diamond Is Forever, cartel, advertising, Anglo American, l
 
 **Title**
 ```
-The Night $13 Billion of Trades Were Erased #shorts
+$13 Billion of Trades, Erased #shorts
 ```
 **Description**
 ```
 What happens when the price of a metal doubles in a single morning, and the market where it trades decides that none of it happened?
 
-Watch the full story: "The Metal Trade That Broke a Billion-Dollar Market" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "The Nickel Short Squeeze That Broke the London Metal Exchange" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #nickel #lme #markets #economics
 ```
@@ -461,13 +467,15 @@ nickel, London Metal Exchange, LME, short squeeze, Tsingshan, margin calls, comm
 
 **Title**
 ```
-Why Moscow Queued From 4 A.M. for a Hamburger #shorts
+Moscow Queued for a Hamburger #shorts
 ```
 **Description**
 ```
 Why would thousands of people stand in the snow before dawn, in the capital of the Soviet Union, just to buy a hamburger?
 
-Watch the full story: "The Hamburger That Became a Symbol of the Cold War's End" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "McDonald's in the Soviet Union: How a Burger Became a Cold War Symbol" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #mcdonalds #moscow #coldwar #economics
 ```
@@ -480,13 +488,15 @@ McDonald's, Moscow, Soviet Union, Cold War, perestroika, Pushkin Square, joint v
 
 **Title**
 ```
-Sellers Paid People to Take Their Oil #shorts
+When Oil Sellers Paid Buyers #shorts
 ```
 **Description**
 ```
 What would you do if someone offered you a barrel of oil, and paid you to take it? On April twentieth, twenty twenty, that is exactly what happened.
 
-Watch the full story: "The Day Oil Was Worth Less Than Nothing" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Negative Oil Prices Explained: The Day Oil Was Worth Less Than Nothing" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #oil #markets #wti #economics
 ```
@@ -499,13 +509,15 @@ oil, negative oil price, WTI, crude oil futures, Cushing, April 2020, storage, c
 
 **Title**
 ```
-Big Tech Spent $200 Billion in 3 Months. Here's Why #shorts
+Big Tech's $200 Billion AI Bet #shorts
 ```
 **Description**
 ```
 Two hundred billion dollars. That is roughly what four companies spent on buildings and machines in just three months.
 
-Watch the full story: "How Big Tech Really Makes Money From AI" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Big Tech Makes Money on AI: Rent, Ads and Lock-In" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #ai #bigtech #economics
 ```
@@ -518,13 +530,15 @@ AI, artificial intelligence, Big Tech, Microsoft, Alphabet, Google, Amazon, AWS,
 
 **Title**
 ```
-Why US Health Insurance Costs $28,303 a Year #shorts
+A $28,303-a-Year Health Plan #shorts
 ```
 **Description**
 ```
 Twenty-eight thousand dollars. That is what health insurance for the average American family with a job-based plan now costs in a single year.
 
-Watch the full story: "Why Americans Pay So Much for Healthcare" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Is Healthcare So Expensive in America?" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #healthcare #insurance #usa #economics
 ```
@@ -537,13 +551,15 @@ healthcare, US healthcare costs, health insurance, Medicare, hospital prices, dr
 
 **Title**
 ```
-Americans Paid $160 Billion in Card Interest in One Year #shorts
+$160 Billion in Card Interest #shorts
 ```
 **Description**
 ```
 One hundred and sixty billion dollars. That is how much interest Americans were charged on their credit cards in a single year.
 
-Watch the full story: "The Hidden Business Behind Your Credit Card" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Credit Cards Make Money on Every Swipe" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #creditcard #personalfinance #usa #economics
 ```
@@ -594,13 +610,15 @@ Costco, how Costco makes money, Costco membership, Costco business model, Kirkla
 
 **Title**
 ```
-Americans Owe $1.65 Trillion in Student Loans #shorts
+Student Loans: $1.65 Trillion #shorts
 ```
 **Description**
 ```
 One point six five trillion dollars. That is how much Americans owe on student loans, more than they owe on all their credit cards combined.
 
-Watch the full story: "The Business Behind America's Student Debt" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Student Debt Crisis Explained: The Business Behind America's Loans" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #studentloans #college #usa #economics
 ```
@@ -613,13 +631,15 @@ student loans, student debt, student loan crisis, college tuition, student loan 
 
 **Title**
 ```
-Car Dealers Make More in the Finance Office Than on the Car #shorts
+Car Dealers' Real Profit Room #shorts
 ```
 **Description**
 ```
 Two thousand five hundred and sixty-four dollars. That is the average gross profit AutoNation, one of America's largest dealership groups, made on each new car it sold in twenty twenty-five.
 
-Watch the full story: "How Car Dealerships Really Make Money" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Car Dealerships Make Money (It's Not the Car)" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #cars #carbuying #usa #economics
 ```
@@ -632,13 +652,15 @@ car dealership, how car dealers make money, car buying tips, F&I, dealer markup,
 
 **Title**
 ```
-Why Your Electric Bill Keeps Going Up #shorts
+Electric Bills Going Up? Why #shorts
 ```
 **Description**
 ```
 Twenty-eight dollars and ninety-two cents. Then two hundred and sixty-nine dollars and ninety-two cents.
 
-Watch the full story: "Why America's Electricity Bills Are Rising" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Electric Bills Keep Rising in America" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #electricity #energy #usa #economics
 ```
@@ -651,13 +673,15 @@ electricity bills, electric bill, power prices, utility rates, data centers, AI 
 
 **Title**
 ```
-Car Insurance Jumped 22.6% in One Year. Here's Why #shorts
+Why Car Insurance Jumped 22.6% #shorts
 ```
 **Description**
 ```
 Twenty-two point six percent. That is how much the price of car insurance in America rose in a single year, by April twenty twenty-four.
 
-Watch the full story: "Why Your Car Insurance Got So Expensive" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Car Insurance Is So Expensive. Here's Why" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #carinsurance #insurance #usa #economics
 ```
@@ -670,13 +694,15 @@ car insurance, auto insurance, insurance rates, why is car insurance so expensiv
 
 **Title**
 ```
-Amazon Spent $102.7 Billion on Shipping in One Year #shorts
+Amazon's $102.7B Shipping Bill #shorts
 ```
 **Description**
 ```
 One hundred and two point seven billion dollars. That is what Amazon spent on shipping in a single year, twenty twenty-five.
 
-Watch the full story: "The Hidden Economics of Amazon Prime" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Amazon Prime Really Works, and Why It Pays Off" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #amazon #amazonprime #business #economics
 ```
@@ -689,13 +715,15 @@ Amazon Prime, Amazon, how Amazon makes money, Prime membership, AWS, Amazon adve
 
 **Title**
 ```
-US Airports Made $6.9 Billion From Parking in One Year #shorts
+Airport Parking: $6.9 Billion #shorts
 ```
 **Description**
 ```
 Six point nine billion dollars. That is how much America's airports earned in a single year from parking and ground transportation.
 
-Watch the full story: "Why America's Airports Make Money Before You Fly" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Airports Make Money Before You Even Fly" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #airports #travel #usa #economics
 ```
@@ -708,13 +736,15 @@ airports, airport economics, airport parking, passenger facility charge, FAA, ai
 
 **Title**
 ```
-Only 11.8 Cents of Your Food Dollar Reaches the Farm #shorts
+Only 11.8¢ Reaches the Farm #shorts
 ```
 **Description**
 ```
 Eleven point eight cents. Out of every dollar Americans spend on food, that is all that ends up with the farm that grew it.
 
-Watch the full story: "The Hidden Business Behind America's Grocery Prices" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Are Groceries So Expensive? The Business Behind Your Bill" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #groceries #food #usa #economics
 ```
@@ -727,13 +757,15 @@ grocery prices, food prices, inflation, egg prices, supermarket profits, food do
 
 **Title**
 ```
-How Two Bank Clubs Became Visa and Mastercard #shorts
+How Visa and Mastercard Began #shorts
 ```
 **Description**
 ```
 Three hundred and fifty-five billion. That is how many payments carried Visa's name in a single year.
 
-Watch the full story: "How Visa and Mastercard Became Financial Gatekeepers" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Visa and Mastercard Explained: The Toll on Every Card Swipe" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #visa #mastercard #finance #economics
 ```
@@ -746,13 +778,15 @@ Visa, Mastercard, credit cards, debit cards, payment networks, network effects, 
 
 **Title**
 ```
-America's Gold Is Booked at Just $11 Billion #shorts
+US Gold, Booked at $11 Billion #shorts
 ```
 **Description**
 ```
 Eleven billion dollars. That is what the US Treasury's own books say its gold is worth. At market prices it was about one trillion.
 
-Watch the full story: "America's $1 Trillion of Gold Is Booked at $11 Billion" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Fort Knox and America's Gold: Why It's Booked at $42 an Ounce" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #gold #fortknox #economics
 ```
@@ -765,13 +799,15 @@ gold, Fort Knox, gold reserves, US Treasury, gold price, Federal Reserve, centra
 
 **Title**
 ```
-A $35 Fee for a $24 Purchase: How Overdrafts Still Pay #shorts
+A $35 Fee on a $24 Purchase #shorts
 ```
 **Description**
 ```
 Thirty-five dollars. That is the typical overdraft fee at America's largest banks. And banks over $1 billion in assets still collected $5.83 billion in these fees in 2023 (CFPB).
 
-Watch the full story: "Why Banks Still Make Billions From Overdrafts" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Overdraft Fees Explained: Why Banks Still Make Billions" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #banking #overdraft #money
 ```
@@ -841,13 +877,15 @@ Alaska, Permanent Fund Dividend, PFD, universal basic income, oil money, state b
 
 **Title**
 ```
-It Cost 3.69 Cents to Make One Penny #shorts
+Each Penny Cost 3.69 Cents #shorts
 ```
 **Description**
 ```
 Three point six nine cents. That is what it cost the United States Mint to make a single one-cent coin, in its twenty twenty-four fiscal year.
 
-Watch the full story: "Why America Stopped Making the Penny" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Did the US Stop Making Pennies? What Happens at the Register Now" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #penny #money #usa #economics
 ```
@@ -860,13 +898,15 @@ penny, U.S. Mint, coins, cost of money, rounding, zinc, Treasury, cash, economic
 
 **Title**
 ```
-MF Global: $1.6 Billion of Customer Money Vanished #shorts
+MF Global's Vanished $1.6B #shorts
 ```
 **Description**
 ```
 One point six billion dollars. That is how much customer money was missing when the brokerage firm MF Global collapsed in October twenty eleven, according to the trustee who took over the firm.
 
-Watch the full story: "MF Global: The $1.6 Billion That Vanished" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "MF Global: Where Did the Money Go? The $1.6 Billion That Vanished" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #finance #wallstreet #farmers #economics
 ```
@@ -898,13 +938,15 @@ tariffs, tariff refund, Supreme Court, IEEPA, importers, prices, Costco, FedEx, 
 
 **Title**
 ```
-Prediction Markets Traded $25 Billion in One Month #shorts
+Prediction Markets: $25B Month #shorts
 ```
 **Description**
 ```
 Twenty-five billion dollars. That is how much was traded on event contracts in America in March twenty twenty-six, according to the federal regulator.
 
-Watch the full story: "How Prediction Markets Make Money Off Your Hunches" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Prediction Markets Explained: How They Make Money Off Your Hunches" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #predictionmarkets #finance #sports #economics
 ```
@@ -917,13 +959,15 @@ prediction markets, Kalshi, Polymarket, event contracts, sports betting, CFTC, m
 
 **Title**
 ```
-College Sports Just Got a $20.5 Million Payroll #shorts
+College Athletes Now Get Paid #shorts
 ```
 **Description**
 ```
 Twenty point five million dollars. That is how much each big college athletic department was allowed to pay its own athletes directly, in the school year that started in twenty twenty-five.
 
-Watch the full story: "College Sports Just Got a $20.5 Million Payroll" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "College Athletes Getting Paid: How the New Payroll Works" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #collegesports #ncaa #money #economics
 ```
@@ -1035,14 +1079,16 @@ Alphabet stock, Google stock, GOOGL, before you buy, Google Cloud, AI capex, You
 
 **Title**
 ```
-Amazon's Free Cash Flow Is Negative. Here's the Bet #shorts
+Amazon's Big Data Center Bet #shorts
 ```
 **Description**
 ```
 Amazon is worth about two point nine three trillion dollars. That's two hundred and seventy dollars and eighty-seven cents a share at the close on November tenth, twenty twenty-six, times about ten point eight billion shares.
 
-Watch the full story: "Before You Buy Amazon Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Amazon Stock, Before You Buy: What's Priced In (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
 Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #amazon #stocks #investing #economics
 ```

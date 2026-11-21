@@ -1,4 +1,4 @@
-# YouTube Short: "Who Really Pays for AI's Electricity?" (65-ai-power-bill)
+# YouTube Short: "Who Pays for AI's Electricity?" (65-ai-power-bill)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/65-ai-power-bill_short.mp4` (59 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Who Really Pays for AI's Electricity? #shorts
+Who Pays for AI's Electricity? #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Who Really Pays for AI's Electricity? #shorts
 ```
 Meet Maya. She lives in Northern Virginia, and this is her electric bill.
 
-Watch the full story: "Why AI Could Make Your Electricity Bill Explode" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "AI Data Centers and Your Bill: Why Your Power Bill Could Explode" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

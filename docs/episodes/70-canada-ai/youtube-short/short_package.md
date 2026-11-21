@@ -15,7 +15,7 @@ Is Canada Losing the AI Boom, or Winning It? #shorts
 ```
 Meet Maya. She trains artificial intelligence in a lab in Montreal, and this morning her phone won't stop buzzing.
 
-Watch the full story: "Why Canada Could Be the Biggest Winner of the AI Boom" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Canada Could Win the AI Boom. Here's Why" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

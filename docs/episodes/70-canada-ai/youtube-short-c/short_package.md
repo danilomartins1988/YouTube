@@ -1,4 +1,4 @@
-# YouTube Short: "Where Modern AI Grew Up: Canada" (70-canada-ai-c)
+# YouTube Short: "Modern AI Grew Up in Canada" (70-canada-ai-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/70-canada-ai-c_short.mp4` (44 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-Where Modern AI Grew Up: Canada #shorts
+Modern AI Grew Up in Canada #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Where Modern AI Grew Up: Canada #shorts
 ```
 In Toronto, Geoffrey Hinton spent decades on artificial neural networks, when much of the field thought they were a dead end.
 
-Watch the full story: "Why Canada Could Be the Biggest Winner of the AI Boom" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Canada Could Win the AI Boom. Here's Why" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

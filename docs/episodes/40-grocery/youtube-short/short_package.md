@@ -1,4 +1,4 @@
-# YouTube Short: "Only 11.8 Cents of Your Food Dollar Reaches the Farm" (40-grocery)
+# YouTube Short: "Only 11.8¢ Reaches the Farm" (40-grocery)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/40-grocery_short.mp4` (45 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Only 11.8 Cents of Your Food Dollar Reaches the Farm #shorts
+Only 11.8¢ Reaches the Farm #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Only 11.8 Cents of Your Food Dollar Reaches the Farm #shorts
 ```
 Eleven point eight cents. Out of every dollar Americans spend on food, that is all that ends up with the farm that grew it.
 
-Watch the full story: "The Hidden Business Behind America's Grocery Prices" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Are Groceries So Expensive? The Business Behind Your Bill" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #groceries #food #usa #economics
 ```

@@ -1,4 +1,4 @@
-# Episode 26: The Hamburger That Became a Symbol of the Cold War's End (McDonald's in Moscow, 1990-2022; top-10 #9)
+# Episode 26: McDonald's in the Soviet Union: How a Burger Became a Cold War Symbol (McDonald's in Moscow, 1990-2022; top-10 #9)
 
 - Project: `projects/the-hamburger-that-became-a-symbol-of-the-cold-wars-end` (sources, script, visual direction, thumbnail brief)
 - Storyboard generator: `tools/gen_mcdonalds_storyboard.py` (40 scenes; presenter: the joint venture, the supply chain, opening day plan vs reality, 1990 vs 2022, what leaving cost)

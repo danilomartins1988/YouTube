@@ -1,7 +1,7 @@
-# Episode 71: Could Brazil Become the World's Factory for Robots? (series "Who Wins and Who Loses in the AI Economy" #4, the last)
+# Episode 71: Could Brazil Build the Robots? Brazil's Economy in the AI Age (series "Who Wins and Who Loses in the AI Economy" #4, the last)
 
 > **Owner, set the title in YouTube Studio in a desktop browser.** The usual upload path truncates titles at 30 characters; the title
-> "Could Brazil Become the World's Factory for Robots?" is 51 characters (no em dash). Paste it from `youtube-package/title.txt`.
+> "Could Brazil Build the Robots? Brazil's Economy in the AI Age" is 51 characters (no em dash). Paste it from `youtube-package/title.txt`.
 
 - Runtime 11:24 (684.2 s), QC 0 errors (19 warnings, see `EDITORIAL_QC.md`), no freeze > 5 s, no black gaps, -16.2 LUFS. Narration
   US$0.25 (gpt-4o-mini-tts, voice ash, 8,356 characters). Commercial score 90 (honest; pre-score 82); SEO score 87.

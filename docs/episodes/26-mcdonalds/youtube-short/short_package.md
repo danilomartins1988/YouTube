@@ -1,4 +1,4 @@
-# YouTube Short: "Why Moscow Queued From 4 A.M. for a Hamburger" (26-mcdonalds)
+# YouTube Short: "Moscow Queued for a Hamburger" (26-mcdonalds)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/26-mcdonalds_short.mp4` (45 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Why Moscow Queued From 4 A.M. for a Hamburger #shorts
+Moscow Queued for a Hamburger #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Why Moscow Queued From 4 A.M. for a Hamburger #shorts
 ```
 Why would thousands of people stand in the snow before dawn, in the capital of the Soviet Union, just to buy a hamburger?
 
-Watch the full story: "The Hamburger That Became a Symbol of the Cold War's End" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "McDonald's in the Soviet Union: How a Burger Became a Cold War Symbol" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #mcdonalds #moscow #coldwar #economics
 ```

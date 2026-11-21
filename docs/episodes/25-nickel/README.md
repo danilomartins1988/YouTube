@@ -1,4 +1,4 @@
-# Episode 25: The Metal Trade That Broke a Billion-Dollar Market (LME nickel, March 2022; top-10 #8)
+# Episode 25: The Nickel Short Squeeze That Broke the London Metal Exchange (LME nickel, March 2022; top-10 #8)
 
 - Project: `projects/the-metal-trade-that-broke-a-billion-dollar-market` (sources, script, visual direction, thumbnail brief)
 - Storyboard generator: `tools/gen_nickel_storyboard.py` (36 scenes; presenter: how a short works, the morning of March 8, the exchange's dilemma)

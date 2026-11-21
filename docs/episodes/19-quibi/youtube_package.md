@@ -1,10 +1,10 @@
-# YouTube package: "The $1.75 Billion Streaming App That Lasted Six Months" (Episode 19)
+# YouTube package: "What Happened to Quibi? Inside a $1.75 Billion Flop" (Episode 19)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:01.
 
 ## Title options
 
-1. **The $1.75 Billion Streaming App That Lasted Six Months** (recommended)
+1. **What Happened to Quibi? Inside a $1.75 Billion Flop** (recommended)
 2. **Why Quibi Failed: Hollywood's $1.75 Billion Mistake**
 3. **How Quibi Raised $1.75 Billion and Shut Down in Six Months**
 
@@ -40,6 +40,8 @@ Sources
 - The Verge: Roku acquires Quibi's content library - https://www.theverge.com/2021/1/8/22220426/quibi-roku-channel-acquisition-content
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -58,4 +60,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 Quibi, streaming, Jeffrey Katzenberg, Meg Whitman, startup failure, Hollywood, mobile video, business failure, venture capital, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Did you ever watch a Quibi show? What do you think went wrong?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

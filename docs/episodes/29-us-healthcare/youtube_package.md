@@ -1,10 +1,10 @@
-# YouTube package: "Why Americans Pay So Much for Healthcare" (Episode 29)
+# YouTube package: "Why Is Healthcare So Expensive in America?" (Episode 29)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:03.
 
 ## Title options
 
-1. **Why Americans Pay So Much for Healthcare** (recommended)
+1. **Why Is Healthcare So Expensive in America?** (recommended)
 2. **Americans Get Less Care and Pay Twice as Much. Here's Why**
 3. **The 3 Prices That Make US Healthcare So Expensive**
 
@@ -36,6 +36,8 @@ Sources
 - KFF: KFF Employer Health Benefits Survey 2026 (news release) - https://www.kff.org/other-health/workers-now-pay-7471-on-average-annually-for-family-health-coverage-up-9-or-621-from-2025-benchmark-employer-health-benefits-survey-finds/
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -54,4 +56,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 healthcare, US healthcare costs, health insurance, Medicare, hospital prices, drug prices, prescription drugs, RAND, KFF, CMS, health spending, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+What's the most surprising medical bill you've ever seen?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

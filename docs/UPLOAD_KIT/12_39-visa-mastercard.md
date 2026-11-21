@@ -1,4 +1,4 @@
-# 12. How Visa and Mastercard Became Financial Gatekeepers
+# 12. Visa and Mastercard Explained: The Toll on Every Card Swipe
 
 Episode folder: `docs/episodes/39-visa-mastercard/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/39-visa-mastercard/`. Upload as **Private** (or s
 ## Title
 
 ```
-How Visa and Mastercard Became Financial Gatekeepers
+Visa and Mastercard Explained: The Toll on Every Card Swipe
 ```
 
 Other title options: Visa Started as a Club of Banks. Now It Handles 355 Billion Payments a Year · The Gate Every Card Payment Has to Pass Through
@@ -70,7 +70,7 @@ How Two Bank Clubs Became Visa and Mastercard #shorts
 ```
 Three hundred and fifty-five billion. That is how many payments carried Visa's name in a single year.
 
-Watch the full story: "How Visa and Mastercard Became Financial Gatekeepers" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Visa and Mastercard Explained: The Toll on Every Card Swipe" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #visa #mastercard #finance #economics
 ```

@@ -1,4 +1,4 @@
-# Episode 39: How Visa and Mastercard Became Financial Gatekeepers (US batch #18)
+# Episode 39: Visa and Mastercard Explained: The Toll on Every Card Swipe (US batch #18)
 
 - Project: `projects/how-visa-and-mastercard-became-financial-gatekeepers`; storyboard generator `tools/gen_visamc_storyboard.py` (41 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `bankhall` set (1950s bank hall: columns, brass teller windows, clock, banner), `netmesh` item (growing two-sided network of cards and stores).

@@ -1,4 +1,4 @@
-# 17. The Hamburger That Became a Symbol of the Cold War's End
+# 17. McDonald's in the Soviet Union: How a Burger Became a Cold War Symbol
 
 Episode folder: `docs/episodes/26-mcdonalds/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/26-mcdonalds/`. Upload as **Private** (or schedul
 ## Title
 
 ```
-The Hamburger That Became a Symbol of the Cold War's End
+McDonald's in the Soviet Union: How a Burger Became a Cold War Symbol
 ```
 
 Other title options: Why Moscow Queued From 4 A.M. for a Hamburger · 14 Years to Open, One War to Close: McDonald's in Russia
@@ -78,7 +78,7 @@ Why Moscow Queued From 4 A.M. for a Hamburger #shorts
 ```
 Why would thousands of people stand in the snow before dawn, in the capital of the Soviet Union, just to buy a hamburger?
 
-Watch the full story: "The Hamburger That Became a Symbol of the Cold War's End" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "McDonald's in the Soviet Union: How a Burger Became a Cold War Symbol" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #mcdonalds #moscow #coldwar #economics
 ```

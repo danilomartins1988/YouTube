@@ -15,7 +15,7 @@ If Robots Don't Get Paid, Who Pays the Taxes? #shorts
 ```
 Meet Rosa. She's the mayor of Pinewick, a small town with one big employer, the warehouse on the hill.
 
-Watch the full story: "If AI Replaces Workers, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "If AI Takes the Jobs, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

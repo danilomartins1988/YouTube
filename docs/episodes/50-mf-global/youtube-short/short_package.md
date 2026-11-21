@@ -1,4 +1,4 @@
-# YouTube Short: "MF Global: $1.6 Billion of Customer Money Vanished" (50-mf-global)
+# YouTube Short: "MF Global's Vanished $1.6B" (50-mf-global)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/50-mf-global_short.mp4` (55 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-MF Global: $1.6 Billion of Customer Money Vanished #shorts
+MF Global's Vanished $1.6B #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ MF Global: $1.6 Billion of Customer Money Vanished #shorts
 ```
 One point six billion dollars. That is how much customer money was missing when the brokerage firm MF Global collapsed in October twenty eleven, according to the trustee who took over the firm.
 
-Watch the full story: "MF Global: The $1.6 Billion That Vanished" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "MF Global: Where Did the Money Go? The $1.6 Billion That Vanished" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #finance #wallstreet #farmers #economics
 ```

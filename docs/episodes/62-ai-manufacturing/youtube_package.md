@@ -1,4 +1,4 @@
-# YouTube package: "Could AI Make American Factories Cheaper Than China's?" (Episode 62, arc Episode 2)
+# YouTube package: "Can AI Beat China's Factories? The Real Math of AI Manufacturing" (Episode 62, arc Episode 2)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:45 (704.9 s).
 **Title note:** the owner's upload path truncates titles at 30 characters. Set the full title manually in YouTube Studio
@@ -6,7 +6,7 @@ Prepared for manual publishing. Nothing has been uploaded. Video length 11:45 (7
 
 ## Title options
 
-1. **Could AI Make American Factories Cheaper Than China's?** (recommended)
+1. **Can AI Beat China's Factories? The Real Math of AI Manufacturing** (recommended)
 2. **Could AI End China's Manufacturing Dominance?**
 3. **Can America Take Back Its Factories With AI?**
 4. **China Already Has More Factory Robots Than You Think**
@@ -38,23 +38,13 @@ The numbers behind the story (exact figures, dated)
 - US factory production workers ≈ $29/hour vs ≈ $11,200/year at larger Chinese firms, 2025: roughly five times per hour (BLS, NBS at the Fed's 2025 rate; rough, our calculation). China ≈ 27% of world manufacturing value added, 2025 (World Bank; our calculation). Japan ≈ 38% of world robot production (IFR, Jul 2025). China 85% of magnet rare-earth refining, 2025 (IEA).
 - The $100 experiment is an ILLUSTRATIVE MODEL with our assumptions, not any company's costs. Totals per toaster delivered to a US warehouse: China conventional 100, Ohio automated 102, China automated 95. Tariff at 25%: 112 / 102 / 107 (Ohio wins). Ohio robots idle half the time: Ohio 116. No tariff: 91 / 102 / 87.
 
-Sources
-- IFR World Robotics 2026, Executive Summary (Sep 24, 2026): https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Industrial_Robots.pdf
-- IFR press release, Sep 24, 2026: https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally
-- IFR China release, Sep 24, 2026: https://ifr.org/downloads/press_docs/EN-2026-SEP-24-IFR_Press_Release_WR-CHINA.pdf
-- IFR robot density release, Nov 12, 2026: https://ifr.org/ifr-press-releases/news/robot-density-highest-in-south-korea-singapore-and-germany
-- IFR, Jul 15, 2025: https://ifr.org/ifr-press-releases/news/japans-car-industry-has-highest-robot-installations-in-five-years
-- U.S. Census Bureau, 2021 Annual Survey of Manufactures: https://census.gov/content/dam/Census/library/publications/2023/econ/Annual%20Survey%20of%20Manufactures%202021.pdf
-- Federal Reserve G.17 (IPMAN) and BLS (MANEMP, CES3000000008) via FRED: https://fred.stlouisfed.org/series/IPMAN
-- NBS China, 2025 average wages (May 15, 2026): https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html
-- World Bank WDI, manufacturing value added: https://data.worldbank.org/indicator/NV.IND.MANF.CD
-- IEA Global Critical Minerals Outlook 2026: https://www.iea.org/reports/global-critical-minerals-outlook-2026
-- NVIDIA blog, Foxconn digital twin (Jun 2024): https://blogs.nvidia.com/blog/foxconn-digital-twin-ai/
-- Acemoglu & Restrepo, "Robots and Jobs", Journal of Political Economy (2020): https://www.journals.uchicago.edu/doi/10.1086/705716
+Sources: the full, linked source list is in the pinned comment.
 
 Characters (Mel, Wei, Kip, TORQ), factories and robots are original and generic: no company logos, no flags. Economists are named, not drawn. The Ohio factory is hypothetical. Not affiliated with any company. Not financial advice.
 
 The Hidden Economics: animated documentaries about money, business and power.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 
 #AI #Manufacturing #China
 ```
@@ -82,3 +72,25 @@ ai manufacturing, us vs china manufacturing, robots china factory, robots china 
   written here because it is not verified).
 - Shorts: publish "China Already Has More Factory Robots Than You Think" before the film (see `SHORTS.md`).
 - Review after publishing: 48 h, 7, 30, 90, 180 days in `docs/ANALYTICS_LOG.md` (CTR C vs A thumbnail test).
+
+## Pinned comment
+
+```
+Would you pay a little more for a product made by robots in America?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
+
+Sources
+- IFR World Robotics 2026, Executive Summary (Sep 24, 2026): https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Industrial_Robots.pdf
+- IFR press release, Sep 24, 2026: https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally
+- IFR China release, Sep 24, 2026: https://ifr.org/downloads/press_docs/EN-2026-SEP-24-IFR_Press_Release_WR-CHINA.pdf
+- IFR robot density release, Nov 12, 2026: https://ifr.org/ifr-press-releases/news/robot-density-highest-in-south-korea-singapore-and-germany
+- IFR, Jul 15, 2025: https://ifr.org/ifr-press-releases/news/japans-car-industry-has-highest-robot-installations-in-five-years
+- U.S. Census Bureau, 2021 Annual Survey of Manufactures: https://census.gov/content/dam/Census/library/publications/2023/econ/Annual%20Survey%20of%20Manufactures%202021.pdf
+- Federal Reserve G.17 (IPMAN) and BLS (MANEMP, CES3000000008) via FRED: https://fred.stlouisfed.org/series/IPMAN
+- NBS China, 2025 average wages (May 15, 2026): https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html
+- World Bank WDI, manufacturing value added: https://data.worldbank.org/indicator/NV.IND.MANF.CD
+- IEA Global Critical Minerals Outlook 2026: https://www.iea.org/reports/global-critical-minerals-outlook-2026
+- NVIDIA blog, Foxconn digital twin (Jun 2024): https://blogs.nvidia.com/blog/foxconn-digital-twin-ai/
+- Acemoglu & Restrepo, "Robots and Jobs", Journal of Political Economy (2020): https://www.journals.uchicago.edu/doi/10.1086/705716
+```

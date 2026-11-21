@@ -1,4 +1,4 @@
-# YouTube Short: "Why US Health Insurance Costs $28,303 a Year" (29-us-healthcare)
+# YouTube Short: "A $28,303-a-Year Health Plan" (29-us-healthcare)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/29-us-healthcare_short.mp4` (48 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Why US Health Insurance Costs $28,303 a Year #shorts
+A $28,303-a-Year Health Plan #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Why US Health Insurance Costs $28,303 a Year #shorts
 ```
 Twenty-eight thousand dollars. That is what health insurance for the average American family with a job-based plan now costs in a single year.
 
-Watch the full story: "Why Americans Pay So Much for Healthcare" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Is Healthcare So Expensive in America?" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #healthcare #insurance #usa #economics
 ```

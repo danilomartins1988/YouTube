@@ -1,4 +1,4 @@
-# YouTube Short: "Costco Barely Profits on What It Sells. So Where Do the Billions Come From?" (57-costco-v2)
+# YouTube Short: "Costco's Real Profit Machine" (57-costco-v2)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/57-costco-v2_short.mp4` (59 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-Costco Barely Profits on What It Sells. So Where Do the Billions Come From? #shorts
+Costco's Real Profit Machine #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Costco Barely Profits on What It Sells. So Where Do the Billions Come From? #sho
 ```
 Ten in the morning. A giant box with no windows, concrete floors and steel racks up to the ceiling.
 
-Watch the full story: "How Costco Makes Billions Selling Almost Nothing" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Costco Really Makes Money Selling Almost Nothing" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

@@ -83,7 +83,7 @@ The Chemicals That Decide Who Makes Chips #shorts
 ```
 What if the most advanced chip factory on Earth could be stopped, not by a broken machine, but by a missing bottle of liquid?
 
-Watch the full story: "The Chemicals Nobody Talks About That Decide Who Makes Chips" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "The Chip Supply Chain's Secret: Chemicals Nobody Talks About" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #chips #chemicals #economics
 ```
@@ -109,7 +109,7 @@ Three Companies Decide What Your Memory Costs #shorts
 ```
 What if the price of one tiny part inside your computer jumped more than five times in a single year, and almost nobody outside the industry noticed why?
 
-Watch the full story: "The Three Companies That Decide How Much Your Memory Costs" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Why Is RAM So Expensive? Three Companies Decide Your Memory Price" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #chips #memory #economics
 ```

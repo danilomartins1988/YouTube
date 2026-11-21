@@ -1,4 +1,4 @@
-# 06. The $1.75 Billion Streaming App That Lasted Six Months
+# 06. What Happened to Quibi? Inside a $1.75 Billion Flop
 
 Episode folder: `docs/episodes/19-quibi/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/19-quibi/`. Upload as **Private** (or schedule); 
 ## Title
 
 ```
-The $1.75 Billion Streaming App That Lasted Six Months
+What Happened to Quibi? Inside a $1.75 Billion Flop
 ```
 
 Other title options: Why Quibi Failed: Hollywood's $1.75 Billion Mistake · How Quibi Raised $1.75 Billion and Shut Down in Six Months
@@ -82,7 +82,7 @@ The $1.75 Billion App That Lasted Six Months #shorts
 ```
 How do you raise almost two billion dollars, hire the biggest stars in Hollywood, and still shut down six months after launch?
 
-Watch the full story: "The $1.75 Billion Streaming App That Lasted Six Months" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "What Happened to Quibi? Inside a $1.75 Billion Flop" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #quibi #streaming #business #economics
 ```

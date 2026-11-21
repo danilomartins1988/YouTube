@@ -1,4 +1,4 @@
-# YouTube Short: "Who Wins When Robots Replace Factory Workers?" (62-ai-manufacturing-c)
+# YouTube Short: "Robot Factories: Who Wins?" (62-ai-manufacturing-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/62-ai-manufacturing-c_short.mp4` (51 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Who Wins When Robots Replace Factory Workers? #shorts
+Robot Factories: Who Wins? #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Who Wins When Robots Replace Factory Workers? #shorts
 ```
 So, could AI make American factories cheaper than China's? For some products, yes.
 
-Watch the full story: "Could AI Make American Factories Cheaper Than China's?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Can AI Beat China's Factories? The Real Math of AI Manufacturing" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

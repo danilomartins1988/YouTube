@@ -1,4 +1,4 @@
-# YouTube Short: "Car Dealers Make More in the Finance Office Than on the Car" (34-car-dealers)
+# YouTube Short: "Car Dealers' Real Profit Room" (34-car-dealers)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/34-car-dealers_short.mp4` (57 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Car Dealers Make More in the Finance Office Than on the Car #shorts
+Car Dealers' Real Profit Room #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Car Dealers Make More in the Finance Office Than on the Car #shorts
 ```
 Two thousand five hundred and sixty-four dollars. That is the average gross profit AutoNation, one of America's largest dealership groups, made on each new car it sold in twenty twenty-five.
 
-Watch the full story: "How Car Dealerships Really Make Money" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Car Dealerships Make Money (It's Not the Car)" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #cars #carbuying #usa #economics
 ```

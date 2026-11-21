@@ -1,4 +1,4 @@
-# 18. The Business Behind America's Student Debt
+# 18. Student Debt Crisis Explained: The Business Behind America's Loans
 
 Episode folder: `docs/episodes/33-student-debt/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/33-student-debt/`. Upload as **Private** (or sche
 ## Title
 
 ```
-The Business Behind America's Student Debt
+Student Debt Crisis Explained: The Business Behind America's Loans
 ```
 
 Other title options: Americans Owe $1.65 Trillion in Student Loans. Who Profits? · Who Really Makes Money From Student Loans
@@ -81,7 +81,7 @@ Americans Owe $1.65 Trillion in Student Loans #shorts
 ```
 One point six five trillion dollars. That is how much Americans owe on student loans, more than they owe on all their credit cards combined.
 
-Watch the full story: "The Business Behind America's Student Debt" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Student Debt Crisis Explained: The Business Behind America's Loans" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #studentloans #college #usa #economics
 ```

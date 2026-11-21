@@ -1,4 +1,4 @@
-# YouTube Short: "Car Insurance Jumped 22.6% in One Year. Here's Why" (36-car-insurance)
+# YouTube Short: "Why Car Insurance Jumped 22.6%" (36-car-insurance)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/36-car-insurance_short.mp4` (53 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (4 narrated segme
 ## Title
 
 ```
-Car Insurance Jumped 22.6% in One Year. Here's Why #shorts
+Why Car Insurance Jumped 22.6% #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ Car Insurance Jumped 22.6% in One Year. Here's Why #shorts
 ```
 Twenty-two point six percent. That is how much the price of car insurance in America rose in a single year, by April twenty twenty-four.
 
-Watch the full story: "Why Your Car Insurance Got So Expensive" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Car Insurance Is So Expensive. Here's Why" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #carinsurance #insurance #usa #economics
 ```

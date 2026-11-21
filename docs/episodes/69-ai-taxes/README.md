@@ -1,7 +1,7 @@
-# Episode 69: If AI Replaces Workers, Who Pays the Taxes? (series "Who Wins and Who Loses in the AI Economy" #7)
+# Episode 69: If AI Takes the Jobs, Who Pays the Taxes? (series "Who Wins and Who Loses in the AI Economy" #7)
 
 > **Owner, set the title in YouTube Studio in a desktop browser.** The usual upload path truncates titles at 30 characters; the title
-> "If AI Replaces Workers, Who Pays the Taxes?" is 43 characters (no em dash). Paste it from `youtube-package/title.txt`.
+> "If AI Takes the Jobs, Who Pays the Taxes?" is 43 characters (no em dash). Paste it from `youtube-package/title.txt`.
 
 - Runtime 11:54 (713.9 s), QC 0 errors (30 warnings, see `EDITORIAL_QC.md`), no freeze > 5 s, no black gaps, -16.2 LUFS. Narration
   US$0.27 (gpt-4o-mini-tts, voice ash, 8,890 characters). Commercial score 91 (honest); SEO score 88.

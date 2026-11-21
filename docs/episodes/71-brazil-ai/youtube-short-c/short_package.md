@@ -1,4 +1,4 @@
-# YouTube Short: "The Backpack Holding Brazil Back" (71-brazil-ai-c)
+# YouTube Short: "Brazil's Heavy Backpack" (71-brazil-ai-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/71-brazil-ai-c_short.mp4` (57 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-The Backpack Holding Brazil Back #shorts
+Brazil's Heavy Backpack #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ The Backpack Holding Brazil Back #shorts
 ```
 And finally, the bank. To build a factory, you borrow.
 
-Watch the full story: "Could Brazil Become the World's Factory for Robots?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Could Brazil Build the Robots? Brazil's Economy in the AI Age" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

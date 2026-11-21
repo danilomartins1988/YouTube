@@ -1,4 +1,4 @@
-# YouTube Short: "The Cheapest Power in North America Is Getting Pricier for AI" (67-power-new-oil-c)
+# YouTube Short: "Quebec's Cheap Power vs AI" (67-power-new-oil-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/67-power-new-oil-c_short.mp4` (39 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-The Cheapest Power in North America Is Getting Pricier for AI #shorts
+Quebec's Cheap Power vs AI #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ The Cheapest Power in North America Is Getting Pricier for AI #shorts
 ```
 Third pin, Quebec. Nia checks the price.
 
-Watch the full story: "Could Cheap Electricity Become the New Oil?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Cheap Electricity, the New Oil? Where AI Data Centers Will Go" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

@@ -1,4 +1,4 @@
-# YouTube Short: "Why Europe Still Controls Critical Technology" (63-europe-ai-b)
+# YouTube Short: "Europe's Hidden Tech Power" (63-europe-ai-b)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/63-europe-ai-b_short.mp4` (42 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Why Europe Still Controls Critical Technology #shorts
+Europe's Hidden Tech Power #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Why Europe Still Controls Critical Technology #shorts
 ```
 Then Nora shows him the most extreme case. ASML, in the Dutch town of Veldhoven, is the only company that makes the machines used to print the world's most advanced chips.
 
-Watch the full story: "Everyone Says Europe Is Falling Behind. AI Could Change That" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Is Europe Falling Behind? How AI Could Bring It Back" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

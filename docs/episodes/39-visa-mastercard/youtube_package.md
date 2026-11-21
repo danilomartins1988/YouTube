@@ -1,10 +1,10 @@
-# YouTube package: "How Visa and Mastercard Became Financial Gatekeepers" (Episode 39)
+# YouTube package: "Visa and Mastercard Explained: The Toll on Every Card Swipe" (Episode 39)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 12:29.
 
 ## Title options
 
-1. **How Visa and Mastercard Became Financial Gatekeepers** (recommended)
+1. **Visa and Mastercard Explained: The Toll on Every Card Swipe** (recommended)
 2. **Visa Started as a Club of Banks. Now It Handles 355 Billion Payments a Year**
 3. **The Gate Every Card Payment Has to Pass Through**
 
@@ -28,6 +28,8 @@ Sources
 Main sources: Visa Inc. (SEC EDGAR); Mastercard (SEC EDGAR); Federal Reserve History; Visa; MasterCard (SEC EDGAR); Visa Inc.; Supreme Court of the United States; U.S. Department of Justice, Office of the Solicitor General; Board of Governors of the Federal Reserve System; U.S. Department of Justice, Antitrust Division; Office of U.S. Senator Dick Durbin; European Parliament and Council (UK legislation archive of the adopted text).
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -46,4 +48,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 Visa,Mastercard,credit cards,debit cards,payment networks,network effects,antitrust,DOJ v Visa,Durbin Amendment,swipe fees,BankAmericard,fintech,economics,business,hidden economics,documentary
+```
+
+## Pinned comment
+
+```
+Should stores be allowed to charge you extra for paying by card?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

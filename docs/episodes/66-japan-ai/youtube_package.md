@@ -23,7 +23,7 @@ Chapters
 8:18 The catch: currency, software, debt
 9:50 Will AI make Japan rich again?
 
-Related episodes from The Hidden Economics: "When Tokyo's Land Was Worth More Than Entire Countries" · "Could AI End China's Manufacturing Dominance?" · "Could AI Bring Europe Back to Power?" · "Who Gets Rich When Robots Do the Work?"
+Related episodes from The Hidden Economics: "When Tokyo's Land Was Worth More Than Entire Countries" · "Could AI End China's Manufacturing Dominance?" · "Could AI Bring Europe Back to Power?" · "AI Taking Jobs: Who Gets Rich When Robots Do the Work?"
 
 Key figures (exact values; the film rounds them; JPY converted at the Federal Reserve G.5A 2025 average, 149.57 yen per dollar)
 - Working-age population (15-64): 87.26M at the 1995 census peak (IPSS) vs 73.73M on Oct 1, 2024 (Statistics Bureau): -13.5M, our calculation. Tokyo: about 14.3M residents (TMG, Nov 2025).
@@ -66,3 +66,11 @@ Default F (face: Hiro, CAN ROBOTS / SAVE JAPAN?, `youtube-package/thumbnail_face
 ## End screen and analytics
 
 End screen: "Who Gets Rich When Robots Do the Work?". Review at 48 h / 7 / 30 / 90 / 180 days against the channel baseline (docs/ANALYTICS_LOG.md); no reach promised.
+
+## Pinned comment
+
+```
+Would you trust a robot to run a small workshop like Hiro's?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
+```

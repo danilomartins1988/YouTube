@@ -1,4 +1,4 @@
-# Episode 49: College Sports Just Got a $20.5 Million Payroll (new topics N9)
+# Episode 49: College Athletes Getting Paid: How the New Payroll Works (new topics N9)
 
 - Project: `projects/college-sports-just-got-a-20-million-payroll`; storyboard generator `tools/gen_college_storyboard.py` (38 scenes; lint 0; strict cues 0 missing).
 - New engine piece: `bench` item (team bench with numbered generic jerseys; `cutAt` empties the end seats). Reuses the new `stadium` set. Presenter arm v2.

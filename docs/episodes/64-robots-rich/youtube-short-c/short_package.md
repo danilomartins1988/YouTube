@@ -1,4 +1,4 @@
-# YouTube Short: "When Machines Made Owners Rich and Wages Stalled" (64-robots-rich-c)
+# YouTube Short: "When Machines Made Owners Rich" (64-robots-rich-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/64-robots-rich-c_short.mp4` (48 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-When Machines Made Owners Rich and Wages Stalled #shorts
+When Machines Made Owners Rich #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ When Machines Made Owners Rich and Wages Stalled #shorts
 ```
 And this has happened before. Britain, the age of steam.
 
-Watch the full story: "Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "AI Taking Jobs: Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

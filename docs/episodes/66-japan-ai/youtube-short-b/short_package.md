@@ -1,4 +1,4 @@
-# YouTube Short: "Japan Builds the World's Robots. Who Uses Them?" (66-japan-ai-b)
+# YouTube Short: "Who Uses Japan's Robots?" (66-japan-ai-b)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/66-japan-ai-b_short.mp4` (43 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Japan Builds the World's Robots. Who Uses Them? #shorts
+Who Uses Japan's Robots? #shorts
 ```
 
 ## Description

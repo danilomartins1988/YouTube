@@ -1,7 +1,7 @@
-# Episode 65: Why AI Could Make Your Electricity Bill Explode (series "Who Wins and Who Loses in the AI Economy" #5)
+# Episode 65: AI Data Centers and Your Bill: Why Your Power Bill Could Explode (series "Who Wins and Who Loses in the AI Economy" #5)
 
 > **Owner, set the title in YouTube Studio in a desktop browser.** The usual upload path truncates titles at 30 characters; the title
-> "Why AI Could Make Your Electricity Bill Explode" is 47 characters (no em dash). Paste it from `youtube-package/title.txt`.
+> "AI Data Centers and Your Bill: Why Your Power Bill Could Explode" is 47 characters (no em dash). Paste it from `youtube-package/title.txt`.
 
 - Runtime 12:21 (741.0 s), QC 0 errors (29 warnings: 14 claims awaiting human sign-off, number-word notes, 5 caption-speed, 2 pace, 5
   scene-sequence similarity, 5 dataset licence notes), no freeze > 5 s, no black gaps, −16.2 LUFS. Narration US$0.28 (gpt-4o-mini-tts,

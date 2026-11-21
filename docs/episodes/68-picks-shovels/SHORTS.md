@@ -4,8 +4,8 @@ Registered in `SHORTS` and `CUSTOM` (segments cut from the final timeline; verti
 
 | Short | Package folder | Segments | Headline | Hashtags |
 |---|---|---|---|---|
-| 1 "In a Gold Rush, Sell the Shovels. AI Is No Different" | `youtube-short/` | co_hook, c1_brannan | IN A GOLD RUSH, / SELL THE SHOVELS | #ai #goldrush #economics |
-| 2 "The Machine Only One Company on Earth Can Build" | `youtube-short-b/` | c2_nl, c2_asml | ONLY ONE SHOP / SELLS THIS MACHINE | #asml #semiconductors #ai |
-| 3 "The Pancake Memory That Made a Chipmaker Out-Earn Samsung" | `youtube-short-c/` | c3_korea, c3_draw | PANCAKE MEMORY / BEAT SAMSUNG | #hbm #memory #ai |
+| 1 "AI Gold Rush? Sell the Shovels" | `youtube-short/` | co_hook, c1_brannan | IN A GOLD RUSH, / SELL THE SHOVELS | #ai #goldrush #economics |
+| 2 "Only One Company Builds This" | `youtube-short-b/` | c2_nl, c2_asml | ONLY ONE SHOP / SELLS THIS MACHINE | #asml #semiconductors #ai |
+| 3 "Pancake Memory Beat Samsung" | `youtube-short-c/` | c3_korea, c3_draw | PANCAKE MEMORY / BEAT SAMSUNG | #hbm #memory #ai |
 
-Descriptions point to the full film by title ("The Countries That Could Win the AI Economy Without Building AI"); no unverified URLs.
+Descriptions point to the full film by title ("AI Economy Winners: Countries That Don't Build AI"); no unverified URLs.

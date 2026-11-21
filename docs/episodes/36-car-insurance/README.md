@@ -1,4 +1,4 @@
-# Episode 36: Why Your Car Insurance Got So Expensive (US batch #10)
+# Episode 36: Car Insurance Is So Expensive. Here's Why (US batch #10)
 
 - Title changed from the batch's working title ("Why Your Car Insurance Keeps Getting More Expensive") for accuracy: BLS shows prices −5.0% y/y in Sep 2026 after the 2022–2024 surge; the film says so.
 - Project: `projects/why-your-car-insurance-got-so-expensive`; storyboard generator `tools/gen_autoins_storyboard.py` (39 scenes; lint 0; strict cues 0 missing).

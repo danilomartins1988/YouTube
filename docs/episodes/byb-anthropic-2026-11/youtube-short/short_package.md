@@ -1,4 +1,4 @@
-# YouTube Short: "Anthropic Stock: Big Unlock by May 17, 2027" (byb-anthropic-2026-11)
+# YouTube Short: "Anthropic Stock: Unlock Dates" (byb-anthropic-2026-11)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/byb-anthropic-2026-11_short.mp4` (44 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-Anthropic Stock: Big Unlock by May 17, 2027 #shorts
+Anthropic Stock: Unlock Dates #shorts
 ```
 
 ## Description

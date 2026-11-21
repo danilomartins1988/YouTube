@@ -1,10 +1,10 @@
-# YouTube package: "MF Global: The $1.6 Billion That Vanished" (Episode 50)
+# YouTube package: "MF Global: Where Did the Money Go? The $1.6 Billion That Vanished" (Episode 50)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:17.
 
 ## Title options
 
-1. **MF Global: The $1.6 Billion That Vanished** (recommended)
+1. **MF Global: Where Did the Money Go? The $1.6 Billion That Vanished** (recommended)
 2. **How $1.6 Billion of Customer Money Disappeared in a Week**
 3. **The Wall Street Collapse That Took Farmers' Money**
 
@@ -32,6 +32,8 @@ Sources
 - U.S. Senate; FINRA: Senate Agriculture Committee hearing, S. Hrg. 112-504 (Dec 13, 2011); FINRA testimony (Dec 8, 2011) - https://www.finra.org/media-center/speeches-testimony/testimony-committee-agriculture
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -50,4 +52,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 MF Global, Jon Corzine, customer money, segregated funds, bankruptcy, futures, CFTC, Wall Street, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+How long would you wait to get your own money back?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

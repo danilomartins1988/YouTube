@@ -1,4 +1,4 @@
-# 11. The Hidden Business Behind Your Credit Card
+# 11. How Credit Cards Make Money on Every Swipe
 
 Episode folder: `docs/episodes/30-credit-cards/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/30-credit-cards/`. Upload as **Private** (or sche
 ## Title
 
 ```
-The Hidden Business Behind Your Credit Card
+How Credit Cards Make Money on Every Swipe
 ```
 
 Other title options: Who Really Pays for Your Credit Card Rewards? · $160 Billion in Card Interest: How the Credit Card Business Really Works
@@ -70,7 +70,7 @@ Americans Paid $160 Billion in Card Interest in One Year #shorts
 ```
 One hundred and sixty billion dollars. That is how much interest Americans were charged on their credit cards in a single year.
 
-Watch the full story: "The Hidden Business Behind Your Credit Card" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "How Credit Cards Make Money on Every Swipe" on The Hidden Economics. Every figure in it is sourced.
 
 #shorts #creditcard #personalfinance #usa #economics
 ```

@@ -1,10 +1,10 @@
-# YouTube package: "Why AI Could Make Your Electricity Bill Explode" (Episode 65)
+# YouTube package: "AI Data Centers and Your Bill: Why Your Power Bill Could Explode" (Episode 65)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 12:21 (light copy: output/aipowerbill_documentary_light.mp4). Set the title in YouTube Studio in a desktop browser (the upload path truncates titles at 30 characters).
 
 ## Title options
 
-1. **Why AI Could Make Your Electricity Bill Explode** (recommended)
+1. **AI Data Centers and Your Bill: Why Your Power Bill Could Explode** (recommended)
 2. **Who Really Pays for AI's Electricity?**
 3. **Big Tech's Power Bill Could Land on You**
 
@@ -22,7 +22,7 @@ Chapters
 8:00 The fightback
 10:35 Will your bill explode?
 
-Related episodes from The Hidden Economics: "Why America's Electricity Bills Are Rising" · "How Big Tech Really Makes Money From AI"
+Related episodes from The Hidden Economics: "Why Electric Bills Keep Rising in America" · "How Big Tech Makes Money on AI: Rent, Ads and Lock-In"
 
 Key figures (exact values; the film rounds them)
 - Data centers: 176 TWh (2023); DOE/LBNL forecast 325-580 TWh by 2028. ~17 million homes = our calculation (EIA average use).
@@ -62,4 +62,12 @@ Subscribe to The Hidden Economics for a new animated documentary about the money
 
 ```
 ai data centers electric bills, data centers and electric bills, why is my electric bill so high, data center electricity bill, ai energy demand, ai electricity demand, data center energy consumption, electricity prices, electric bill, power bill, PJM capacity auction, capacity market, utility rates, rate case, Dominion Energy, AEP, Virginia data centers, Ohio data center tariff, nuclear power deals, Microsoft Three Mile Island, Meta nuclear, Amazon nuclear, grid, transmission lines, The Hidden Economics, economics explained
+```
+
+## Pinned comment
+
+```
+Has your electric bill gone up this year? Tell us where you live.
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

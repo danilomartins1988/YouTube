@@ -1,4 +1,4 @@
-# YouTube Short: "The Night $13 Billion of Trades Were Erased" (25-nickel)
+# YouTube Short: "$13 Billion of Trades, Erased" (25-nickel)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/25-nickel_short.mp4` (43 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-The Night $13 Billion of Trades Were Erased #shorts
+$13 Billion of Trades, Erased #shorts
 ```
 
 ## Description
@@ -15,7 +15,9 @@ The Night $13 Billion of Trades Were Erased #shorts
 ```
 What happens when the price of a metal doubles in a single morning, and the market where it trades decides that none of it happened?
 
-Watch the full story: "The Metal Trade That Broke a Billion-Dollar Market" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "The Nickel Short Squeeze That Broke the London Metal Exchange" on The Hidden Economics. Every figure in it is sourced.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #nickel #lme #markets #economics
 ```

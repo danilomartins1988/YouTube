@@ -1,4 +1,4 @@
-# 01. The Three Companies That Decide How Much Your Memory Costs
+# 01. Why Is RAM So Expensive? Three Companies Decide Your Memory Price
 
 Episode folder: `docs/episodes/14-memory/`. Upload as **Private** (or schedule); the owner sets it public.
 
@@ -11,7 +11,7 @@ Episode folder: `docs/episodes/14-memory/`. Upload as **Private** (or schedule);
 ## Title
 
 ```
-The Three Companies That Decide How Much Your Memory Costs
+Why Is RAM So Expensive? Three Companies Decide Your Memory Price
 ```
 
 Other title options: Why AI Made Your Computer's Memory Five Times More Expensive · Samsung, SK hynix, Micron: The Memory Shortage Explained

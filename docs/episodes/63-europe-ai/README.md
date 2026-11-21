@@ -1,4 +1,4 @@
-# Episode 63: Everyone Says Europe Is Falling Behind. AI Could Change That (show title: Could AI Bring Europe Back to Power?)
+# Episode 63: Is Europe Falling Behind? How AI Could Bring It Back (show title: Could AI Bring Europe Back to Power?)
 
 Owner brief 2026-11-18 (`PRODUCTION_PROMPT.md`), with coordinator additions the same day: tax kept to one sentence, owner's Brazil
 energy beat, decline-search hook, and the permanent story-over-stats directive (`docs/STORY_OVER_STATS.md`).

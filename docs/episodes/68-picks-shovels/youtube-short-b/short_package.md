@@ -1,4 +1,4 @@
-# YouTube Short: "The Machine Only One Company on Earth Can Build" (68-picks-shovels-b)
+# YouTube Short: "Only One Company Builds This" (68-picks-shovels-b)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/68-picks-shovels-b_short.mp4` (39 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-The Machine Only One Company on Earth Can Build #shorts
+Only One Company Builds This #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ The Machine Only One Company on Earth Can Build #shorts
 ```
 Second stamp, the Netherlands. A flat, green country with one very unusual shop.
 
-Watch the full story: "The Countries That Could Win the AI Economy Without Building AI" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "AI Economy Winners: Countries That Don't Build AI" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

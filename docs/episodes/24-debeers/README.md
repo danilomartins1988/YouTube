@@ -1,4 +1,4 @@
-# Episode 24: How One Company Made Diamonds a Symbol of Love (De Beers; top-10 #7, also batch US_AUDIENCE_BATCH_001 #15)
+# Episode 24: De Beers: How One Company Made Diamonds a Symbol of Love (De Beers; top-10 #7, also batch US_AUDIENCE_BATCH_001 #15)
 
 - Project: `projects/how-one-company-made-diamonds-a-symbol-of-love` (sources, script, visual direction, thumbnail brief)
 - Storyboard generator: `tools/gen_debeers_storyboard.py` (38 scenes; presenter: how the cartel worked, the two halves of the machine, the price of the story)

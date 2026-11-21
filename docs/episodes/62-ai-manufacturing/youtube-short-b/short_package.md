@@ -1,4 +1,4 @@
-# YouTube Short: "China Already Has More Factory Robots Than You Think" (62-ai-manufacturing-b)
+# YouTube Short: "China Buys Most Factory Robots" (62-ai-manufacturing-b)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/62-ai-manufacturing-b_short.mp4` (37 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-China Already Has More Factory Robots Than You Think #shorts
+China Buys Most Factory Robots #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ China Already Has More Factory Robots Than You Think #shorts
 ```
 It is. Last year, factories in China installed more industrial robots than the rest of the world combined.
 
-Watch the full story: "Could AI Make American Factories Cheaper Than China's?" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Can AI Beat China's Factories? The Real Math of AI Manufacturing" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

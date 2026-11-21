@@ -1,7 +1,7 @@
-# Episode 70: Why Canada Could Be the Biggest Winner of the AI Boom (series "Who Wins and Who Loses in the AI Economy" #8)
+# Episode 70: Canada Could Win the AI Boom. Here's Why (series "Who Wins and Who Loses in the AI Economy" #8)
 
 > **Owner, set the title in YouTube Studio in a desktop browser.** The usual upload path truncates titles at 30 characters; the title
-> "Why Canada Could Be the Biggest Winner of the AI Boom" is 53 characters (no em dash). Paste it from `youtube-package/title.txt`.
+> "Canada Could Win the AI Boom. Here's Why" is 53 characters (no em dash). Paste it from `youtube-package/title.txt`.
 
 - Runtime 12:10 (730.5 s), QC 0 errors (23 warnings, see `EDITORIAL_QC.md`), no freeze > 5 s, no black gaps, -16.2 LUFS. Narration
   ≈ US$0.28 (gpt-4o-mini-tts, voice ash). Commercial score 91 (honest); SEO score 87.

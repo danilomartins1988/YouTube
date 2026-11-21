@@ -1,4 +1,4 @@
-# Episode 46: Why Banks Still Make Billions From Overdrafts (new topics N6)
+# Episode 46: Overdraft Fees Explained: Why Banks Still Make Billions (new topics N6)
 
 - Project: `projects/why-banks-still-make-billions-from-overdrafts`; storyboard generator `tools/gen_overdraft_storyboard.py` (41 scenes; lint 0; strict cues 0 missing).
 - New engine piece: `statement` item (generic bank-app statement, running balance turns red below zero, fee rows flash). Worlds: shop (corner store), bank hall, studio, office, exchange, parliament. Presenter arm v2.

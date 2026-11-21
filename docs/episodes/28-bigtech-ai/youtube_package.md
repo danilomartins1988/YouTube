@@ -1,10 +1,10 @@
-# YouTube package: "How Big Tech Really Makes Money From AI" (Episode 28)
+# YouTube package: "How Big Tech Makes Money on AI: Rent, Ads and Lock-In" (Episode 28)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:13.
 
 ## Title options
 
-1. **How Big Tech Really Makes Money From AI** (recommended)
+1. **How Big Tech Makes Money on AI: Rent, Ads and Lock-In** (recommended)
 2. **Big Tech Spent $200 Billion in 3 Months on AI. Here's How It Comes Back**
 3. **The $700 Billion AI Bet: Where the Money Really Comes From**
 
@@ -38,6 +38,8 @@ Sources
 - Meta Investor Relations: Meta Q3 2026 earnings call transcript - https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -56,4 +58,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 AI, artificial intelligence, Big Tech, Microsoft, Alphabet, Google, Amazon, AWS, Meta, Azure, Google Cloud, data centers, capex, cloud computing, AI bubble, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Which of the three AI money machines do you think pays off first?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

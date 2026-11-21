@@ -1,7 +1,7 @@
-# Episode 67: Could Cheap Electricity Become the New Oil? (series "Who Wins and Who Loses in the AI Economy" #1)
+# Episode 67: Cheap Electricity, the New Oil? Where AI Data Centers Will Go (series "Who Wins and Who Loses in the AI Economy" #1)
 
 > **Owner, set the title in YouTube Studio in a desktop browser.** The usual upload path truncates titles at 30 characters; the title
-> "Could Cheap Electricity Become the New Oil?" is 43 characters (no em dash). Paste it from `youtube-package/title.txt`.
+> "Cheap Electricity, the New Oil? Where AI Data Centers Will Go" is 43 characters (no em dash). Paste it from `youtube-package/title.txt`.
 
 - Runtime 12:16 (736.2 s), QC 0 errors (30 warnings: 14 claims awaiting human sign-off, number-word notes, 2 caption-speed, 7 dataset
   licence notes, 5 scene-sequence similarity), no freeze > 5 s, no black gaps, -16.2 LUFS. Narration US$0.27 (gpt-4o-mini-tts, voice

@@ -1,10 +1,10 @@
-# YouTube package: "Why Banks Still Make Billions From Overdrafts" (Episode 46)
+# YouTube package: "Overdraft Fees Explained: Why Banks Still Make Billions" (Episode 46)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:51.
 
 ## Title options
 
-1. **Why Banks Still Make Billions From Overdrafts** (recommended)
+1. **Overdraft Fees Explained: Why Banks Still Make Billions** (recommended)
 2. **A $35 Fee for a $24 Purchase: The Overdraft Business**
 3. **The $5 Overdraft Cap That Congress Erased**
 
@@ -35,6 +35,8 @@ Sources
 - Third-party analyses of FFIEC call reports; Wells Fargo: Bates White (Aug 11, 2025); Consumer Federation of America (Apr 7, 2025); NCLC 'The $12 Billion Overdraft Trap' (Jun 2026); Wells Fargo 2024 and 2025 annual reports - https://consumerfed.org/curious-how-much-banks-make-from-overdraft-fees-we-have-the-data/
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -53,4 +55,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 overdraft fees, banks, NSF fees, CFPB, checking account, bank fees, Congressional Review Act, personal finance, economics, The Hidden Economics
+```
+
+## Pinned comment
+
+```
+Have you ever paid an overdraft fee bigger than what you bought?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

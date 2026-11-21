@@ -1,4 +1,4 @@
-# YouTube Short: "Who Gets Rich When Robots Do the Work?" (63-europe-ai-c)
+# YouTube Short: "When Robots Work, Who Profits?" (63-europe-ai-c)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/63-europe-ai-c_short.mp4` (45 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (2 narrated segme
 ## Title
 
 ```
-Who Gets Rich When Robots Do the Work? #shorts
+When Robots Work, Who Profits? #shorts
 ```
 
 ## Description
@@ -15,7 +15,7 @@ Who Gets Rich When Robots Do the Work? #shorts
 ```
 So Theo sketches his own company's future. Call it Company E.
 
-Watch the full story: "Everyone Says Europe Is Falling Behind. AI Could Change That" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Is Europe Falling Behind? How AI Could Bring It Back" on The Hidden Economics. Every figure in it is sourced.
 
 Follow The Hidden Economics for more of the hidden money behind the headlines.
 

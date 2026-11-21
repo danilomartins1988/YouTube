@@ -1,10 +1,10 @@
-# YouTube package: "How Car Dealerships Really Make Money" (Episode 34)
+# YouTube package: "How Car Dealerships Make Money (It's Not the Car)" (Episode 34)
 
 Prepared for manual publishing. Nothing has been uploaded. Video length 11:19.
 
 ## Title options
 
-1. **How Car Dealerships Really Make Money** (recommended)
+1. **How Car Dealerships Make Money (It's Not the Car)** (recommended)
 2. **Car Dealers Make More in the Finance Office Than on Your Car**
 3. **The Car Is the Bait: How Dealerships Really Profit**
 
@@ -39,6 +39,8 @@ Sources
 - Federal Trade Commission (staff): Direct-to-consumer auto sales: It's not just about Tesla (Competition Matters blog) - https://www.ftc.gov/enforcement/competition-matters/2015/05/direct-consumer-auto-sales-its-not-just-about-tesla
 
 Narration: AI voice. Animation: original. Nothing in this video is financial advice.
+
+Subscribe to The Hidden Economics for a new animated documentary about the money behind the headlines. It's free, and it really helps the channel.
 ```
 
 ## Chapters
@@ -57,4 +59,12 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 
 ```
 car dealership, how car dealers make money, car buying tips, F&I, dealer markup, auto loan, extended warranty, car prices, AutoNation, franchise laws, economics explained, The Hidden Economics, US economy
+```
+
+## Pinned comment
+
+```
+What's the biggest add-on a dealer ever tried to sell you?
+
+If this one surprised you, tap like and subscribe: it helps more people find the channel.
 ```

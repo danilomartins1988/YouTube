@@ -1,4 +1,4 @@
-# Episode 50: MF Global: The $1.6 Billion That Vanished (new topics N10)
+# Episode 50: MF Global: Where Did the Money Go? The $1.6 Billion That Vanished (new topics N10)
 
 - Project: `projects/mf-global-the-billion-dollars-that-vanished`; storyboard generator `tools/gen_mfglobal_storyboard.py` (39 scenes; lint 0; strict cues 0 missing).
 - New engine piece: `glassbox` item (segregated customer money in a glass box; `crackAt`, `drainAt`, `watchAt` camera). Presenter arm v2.

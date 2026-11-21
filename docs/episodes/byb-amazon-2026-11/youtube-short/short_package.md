@@ -1,4 +1,4 @@
-# YouTube Short: "Amazon's Free Cash Flow Is Negative. Here's the Bet" (byb-amazon-2026-11)
+# YouTube Short: "Amazon's Big Data Center Bet" (byb-amazon-2026-11)
 
 Prepared for manual publishing. Nothing has been uploaded. File: `output/shorts/byb-amazon-2026-11_short.mp4` (54 s, 1080x1920, captions burned in). Not committed (MP4).
 
@@ -7,7 +7,7 @@ Built by `tools/make_shorts.py` from the episode's own opening (3 narrated segme
 ## Title
 
 ```
-Amazon's Free Cash Flow Is Negative. Here's the Bet #shorts
+Amazon's Big Data Center Bet #shorts
 ```
 
 ## Description
@@ -15,8 +15,10 @@ Amazon's Free Cash Flow Is Negative. Here's the Bet #shorts
 ```
 Amazon is worth about two point nine three trillion dollars. That's two hundred and seventy dollars and eighty-seven cents a share at the close on November tenth, twenty twenty-six, times about ten point eight billion shares.
 
-Watch the full story: "Before You Buy Amazon Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
+Watch the full story: "Amazon Stock, Before You Buy: What's Priced In (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
 Data as of Nov 10, 2026. For educational purposes only. Not financial advice.
+
+Follow The Hidden Economics for more of the hidden money behind the headlines.
 
 #shorts #amazon #stocks #investing #economics
 ```

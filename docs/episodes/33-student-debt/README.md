@@ -1,4 +1,4 @@
-# Episode 33: The Business Behind America's Student Debt (US batch #06)
+# Episode 33: Student Debt Crisis Explained: The Business Behind America's Loans (US batch #06)
 
 - Project: `projects/the-business-behind-americas-student-debt`; storyboard generator `tools/gen_studentdebt_storyboard.py` (38 scenes; lint 0; strict cues 0 missing).
 - New engine pieces: `campus` set (generic college quad), `diploma` item (unrolls into a balance), `gradcaps` item (tossed caps); thumbnail subject `gradcap`.
