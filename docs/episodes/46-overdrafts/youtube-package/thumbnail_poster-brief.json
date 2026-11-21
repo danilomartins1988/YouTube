@@ -1,0 +1,211 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19; review 2026-11-21): a $35 fee tag swinging over a falling arrow and coins",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "OVERDRAFT",
+    "FEES?"
+  ],
+  "accent_line": 1,
+  "banner": "red",
+  "claim_basis": "the $35 fee is the film example (FACT_CHECK.md); a question",
+  "scene": {
+    "backdrop": {
+      "kind": "rays",
+      "c0": "#FF5A5A",
+      "c1": "#3A0A1A",
+      "c2": "#050818",
+      "ray": "#FFC8C8"
+    },
+    "light": {
+      "x": 1450,
+      "y": 540,
+      "r": 680,
+      "color": "#FF6A5A"
+    },
+    "support": [
+      {
+        "kind": "arrow",
+        "x": 1500,
+        "y": 620,
+        "s": 0.6,
+        "dir": "down",
+        "color": "#FF3A2A"
+      }
+    ],
+    "hero": {
+      "kind": "pricetag",
+      "x": 1450,
+      "y": 520,
+      "s": 0.7,
+      "r": 14,
+      "text": "$35"
+    },
+    "front": [
+      {
+        "kind": "coins",
+        "x": 1650,
+        "y": 950,
+        "s": 0.45,
+        "n": 8
+      }
+    ],
+    "particles": {
+      "n": 60,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFE3A0"
+    }
+  },
+  "layout": [
+    {
+      "text": "OVERDRAFT",
+      "x": 70,
+      "y": 436.3,
+      "size": 169.9,
+      "width": 1043.2,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "FEES?",
+      "x": 118.6,
+      "y": 669.0,
+      "size": 220.8,
+      "width": 696.3,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#E3201B",
+      "box": "#E3201B"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.66 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "2 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 304, 1113, 446), (119, 497, 815, 682)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "14.2px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 4.7:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.102",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "20.4px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1113px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.71",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 95 vs left 24",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 33",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest why-your-car-insurance-got-so-expensive (distance 0.58)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "the $35 fee is the film example (FACT_CHECK.md); a question",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.715,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "why-your-car-insurance-got-so-expensive"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-21T14:17:10Z"
+}

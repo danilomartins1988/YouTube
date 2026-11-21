@@ -1,13 +1,12 @@
-# Thumbnail creative brief. A = bignum, B = split.
-title: "How Credit Cards Make Money on Every Swipe"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: How Credit Cards Make Money on Every Swipe
 docs_dir: docs/episodes/30-credit-cards
 video: output/creditcard_documentary.mp4
 deliverable: documentary
 status: completed
 analysis:
   mystery: Who really makes money from your credit card?
-  surprising_fact: $160bn card interest in 2024 (CFPB); swipe fees ~$160bn in 2022
-    (estimate cited by CRS)
+  surprising_fact: $160bn card interest in 2024 (CFPB); swipe fees ~$160bn in 2022 (estimate cited by CRS)
   subject: a credit card
   tone: bright
   metaphor: a toll on every payment
@@ -53,8 +52,7 @@ concepts:
   text:
   - YOU PAY $100
   - STORE GETS $97
-  claim_basis: 'swipe: CRS worked example, $100 purchase with 3% fee → merchant receives
-    $97'
+  claim_basis: 'swipe: CRS worked example, $100 purchase with 3% fee → merchant receives $97'
   scene:
     palette:
       sky0: '#06121A'
@@ -92,3 +90,48 @@ concepts:
       color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a golden credit card with coins spilling: who pays for the points'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - WHO PAYS
+  - YOUR POINTS?
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: swipe fees and interest fund rewards); no number'
+  scene:
+    backdrop:
+      kind: rays
+      c0: '#FF8A3D'
+      c1: '#4A1240'
+      c2: '#050818'
+      ray: '#FFD0A0'
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FFC24A'
+    hero:
+      kind: card
+      x: 1440
+      y: 500
+      s: 0.8
+      r: -14
+      label: CREDIT
+    front:
+    - kind: coins
+      x: 1650
+      y: 940
+      s: 0.5
+      n: 9
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE3A0'
+default: P

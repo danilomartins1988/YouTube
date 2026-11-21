@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic graduation cap only (no real logos or campuses).
-title: "Student Debt Crisis Explained: The Business Behind America's Loans"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: 'Student Debt Crisis Explained: The Business Behind America''s Loans'
 docs_dir: docs/episodes/33-student-debt
 video: output/studentdebt_documentary.mp4
 deliverable: documentary
@@ -93,3 +93,52 @@ concepts:
       color: '#E8F5E9'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a graduation cap on top of stacked cash with a rising red arrow'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - THE LOAN
+  - BUSINESS
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'framing (the film: who lends, services and collects student loans); no number'
+  scene:
+    backdrop:
+      kind: rays
+      c0: '#5FA8FF'
+      c1: '#1A2A6A'
+      c2: '#050818'
+      ray: '#CFE8FF'
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FFC24A'
+    support:
+    - kind: cash
+      x: 1460
+      y: 820
+      s: 0.5
+    hero:
+      kind: gradcap
+      x: 1460
+      y: 480
+      s: 0.72
+    front:
+    - kind: arrow
+      x: 1720
+      y: 760
+      s: 0.4
+      color: '#FF3A2A'
+      noBars: true
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE3A0'
+default: P

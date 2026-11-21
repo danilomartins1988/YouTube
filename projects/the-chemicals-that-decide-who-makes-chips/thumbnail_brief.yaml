@@ -1,12 +1,12 @@
-# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
-title: "The Chip Supply Chain's Secret: Chemicals Nobody Talks About"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: 'The Chip Supply Chain''s Secret: Chemicals Nobody Talks About'
 docs_dir: docs/episodes/18-chip-chemicals
 video: output/chip_chemicals_documentary.mp4
 deliverable: documentary
 status: completed
 analysis:
   mystery: A missing bottle of liquid could stop the most advanced chip factory
-  surprising_fact: 'Three Japanese firms hold ≈ 90% of EUV resist (QYResearch); China ≈ 99% of raw gallium (USGS)'
+  surprising_fact: Three Japanese firms hold ≈ 90% of EUV resist (QYResearch); China ≈ 99% of raw gallium (USGS)
   subject: an amber bottle of photoresist
   tone: thriller
   metaphor: the bottle nobody else knows how to fill
@@ -42,7 +42,11 @@ concepts:
       rot: 0
     particles:
       n: 70
-      region: [800, 0, 1920, 1080]
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
       size: 3
       color: '#FFE0A0'
     vignette: 0.6
@@ -78,9 +82,68 @@ concepts:
       rot: 0
     particles:
       n: 60
-      region: [800, 0, 1920, 1080]
+      region:
+      - 800
+      - 0
+      - 1920
+      - 1080
       size: 3
       color: '#FFD1CC'
     vignette: 0.55
     brand: tl
-default: A
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a purple-glowing chip on its wafer, chemical supply arcs from Japan'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - THE HIDDEN
+  - CHIP SECRET
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'framing (the film: a few chemical makers, many in Japan, decide who can make chips); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: 60
+      lat: 25
+      arcColor: '#C07BFF'
+      arcs:
+      - - tokyo
+        - taipei
+      - - tokyo
+        - seoul
+      - - tokyo
+        - sf
+      - - tokyo
+        - amsterdam
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#C07BFF'
+    support:
+    - kind: flag
+      code: jp
+      x: 1760
+      y: 150
+      s: 0.6
+      h: 220
+      poleH: 800
+    hero:
+      kind: wafer
+      x: 1440
+      y: 640
+      s: 0.76
+      die0: '#F0B8FF'
+      die1: '#8A3CFF'
+      die2: '#3A0A7A'
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#E8D0FF'
+default: P

@@ -1,5 +1,5 @@
-# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
-title: "Why Is RAM So Expensive? Three Companies Decide Your Memory Price"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: Why Is RAM So Expensive? Three Companies Decide Your Memory Price
 docs_dir: docs/episodes/14-memory
 video: output/memory_documentary.mp4
 deliverable: documentary
@@ -93,4 +93,55 @@ concepts:
       color: '#BFE3FF'
     vignette: 0.55
     brand: tl
-default: A
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a memory chip on its wafer with a red price arrow shooting up'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - RAM PRICES
+  - EXPLODED?
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: contract prices rose about fivefold in a year; three makers); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: 40
+      lat: 25
+      arcColor: '#5FE3FF'
+      arcs:
+      - - seoul
+        - sf
+      - - seoul
+        - taipei
+      - - seoul
+        - shanghai
+      - - sf
+        - tokyo
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#5FE3FF'
+    support:
+    - kind: arrow
+      x: 1520
+      y: 300
+      s: 0.72
+      color: '#FF3A2A'
+      noBars: true
+    hero:
+      kind: wafer
+      x: 1440
+      y: 640
+      s: 0.76
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#CFEFFF'
+default: P

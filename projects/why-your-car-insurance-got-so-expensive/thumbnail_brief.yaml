@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic sedan only (no insurer logos).
-title: "Car Insurance Is So Expensive. Here's Why"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: Car Insurance Is So Expensive. Here's Why
 docs_dir: docs/episodes/36-car-insurance
 video: output/autoins_documentary.mp4
 deliverable: documentary
@@ -93,3 +93,45 @@ concepts:
       color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a car under a price tag that keeps jumping'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - INSURANCE
+  - SHOCK?
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: repair costs and claims pushed premiums up); no number'
+  scene:
+    backdrop:
+      kind: skyline
+      base: 900
+      maxH: 240
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FF6A3A'
+    support:
+    - kind: pricetag
+      x: 1560
+      y: 300
+      s: 0.55
+      r: 16
+      text: $$$
+    hero:
+      kind: car
+      x: 1460
+      y: 720
+      s: 0.72
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE3A0'
+default: P

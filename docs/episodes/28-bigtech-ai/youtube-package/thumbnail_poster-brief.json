@@ -1,0 +1,215 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19; review 2026-11-21): a glowing AI data center with cash pouring out",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "AI MONEY",
+    "MACHINE?"
+  ],
+  "accent_line": 1,
+  "banner": "yellow",
+  "claim_basis": "a question (the film: rent the machines, sell ads, lock in customers); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "map",
+      "lon": 10,
+      "lat": 25,
+      "arcColor": "#3FB4FF",
+      "arcs": [
+        [
+          "sf",
+          "dc"
+        ],
+        [
+          "dc",
+          "london"
+        ],
+        [
+          "sf",
+          "tokyo"
+        ],
+        [
+          "dc",
+          "frankfurt"
+        ]
+      ]
+    },
+    "light": {
+      "x": 1450,
+      "y": 540,
+      "r": 680,
+      "color": "#3FB4FF"
+    },
+    "hero": {
+      "kind": "datacenter",
+      "x": 1480,
+      "y": 600,
+      "s": 0.8
+    },
+    "front": [
+      {
+        "kind": "cash",
+        "x": 1650,
+        "y": 930,
+        "s": 0.4
+      }
+    ],
+    "particles": {
+      "n": 60,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#BFE8FF"
+    }
+  },
+  "layout": [
+    {
+      "text": "AI MONEY",
+      "x": 70,
+      "y": 473.2,
+      "size": 208.3,
+      "width": 1041.7,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "MACHINE?",
+      "x": 109.4,
+      "y": 676.1,
+      "size": 179.2,
+      "width": 960.4,
+      "anchor": "start",
+      "color": "#05070B",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#FFD400",
+      "box": "#FFD400"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.63 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "3 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 311, 1112, 486), (109, 536, 1070, 687)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "14.9px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 14.1:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.132",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "21.5px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1112px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.81",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 70 vs left 33",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": false,
+        "detail": "luma std 24",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest who-actually-gets-the-tariff-refund (distance 0.41)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (the film: rent the machines, sell ads, lock in customers); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.79,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "who-actually-gets-the-tariff-refund"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-21T14:12:11Z"
+}

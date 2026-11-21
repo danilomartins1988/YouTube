@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic cars only (no airport or airline logos).
-title: "How Airports Make Money Before You Even Fly"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: How Airports Make Money Before You Even Fly
 docs_dir: docs/episodes/38-airports
 video: output/airports_documentary.mp4
 deliverable: documentary
@@ -90,3 +90,45 @@ concepts:
       color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): an airliner climbing over a glowing price tag (parking, shops, fees)'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - PAY BEFORE
+  - YOU FLY?
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'a question (the film: parking, rents and fees fund airports); no number'
+  scene:
+    backdrop:
+      kind: skyline
+      base: 900
+      maxH: 240
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#5FC8FF'
+    hero:
+      kind: plane
+      x: 1450
+      y: 480
+      s: 0.72
+    front:
+    - kind: pricetag
+      x: 1640
+      y: 860
+      s: 0.5
+      r: -12
+      text: $$$
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#CFEFFF'
+default: P

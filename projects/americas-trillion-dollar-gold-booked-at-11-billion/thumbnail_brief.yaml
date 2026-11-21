@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic gold bars only (no seals or logos).
-title: "Fort Knox and America's Gold: Why It's Booked at $42 an Ounce"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: 'Fort Knox and America''s Gold: Why It''s Booked at $42 an Ounce'
 docs_dir: docs/episodes/43-gold-reserve
 video: output/gold_documentary.mp4
 deliverable: documentary
@@ -50,7 +50,7 @@ concepts:
   text:
   - 'BOOKS: $11B'
   - 'MARKET: $1T'
-  claim_basis: 'book vs market value (Treasury; OIG price Sept 30, 2025; our calc)'
+  claim_basis: book vs market value (Treasury; OIG price Sept 30, 2025; our calc)
   scene:
     palette:
       sky0: '#06121A'
@@ -86,3 +86,54 @@ concepts:
       color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a pyramid of gold bars behind a vault padlock tagged with the legal price'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - BOOKED AT
+  - $42?
+  accent_line: 1
+  banner: yellow
+  claim_basis: the statutory book price, $42.2222 per troy ounce (31 U.S.C. 5117; FACT_CHECK.md)
+  scene:
+    backdrop:
+      kind: rays
+      c0: '#FFC21A'
+      c1: '#4A2A00'
+      c2: '#050818'
+      ray: '#FFF0A0'
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FFC24A'
+    support:
+    - kind: flag
+      code: us
+      x: 1760
+      y: 150
+      s: 0.6
+      h: 220
+      poleH: 800
+    hero:
+      kind: goldbars
+      x: 1460
+      y: 520
+      s: 1.0
+    front:
+    - kind: padlock
+      x: 1700
+      y: 820
+      s: 0.42
+      text: $42.22
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE3A0'
+default: P

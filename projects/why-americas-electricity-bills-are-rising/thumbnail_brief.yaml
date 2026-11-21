@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic meter only (no utility logos).
-title: "Why Electric Bills Keep Rising in America"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: Why Electric Bills Keep Rising in America
 docs_dir: docs/episodes/35-electricity
 video: output/power_documentary.mp4
 deliverable: documentary
@@ -85,3 +85,44 @@ concepts:
       color: '#E8F5E9'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a power pylon crackling over a small house at dusk'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - WHY BILLS
+  - KEEP RISING?
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: grid, fuel and demand costs); no number'
+  scene:
+    backdrop:
+      kind: skyline
+      base: 900
+      maxH: 240
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FFB238'
+    hero:
+      kind: pylon
+      x: 1500
+      y: 560
+      s: 0.7
+      line: '#FFD27A'
+    front:
+    - kind: house
+      x: 1200
+      y: 930
+      s: 0.38
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE3A0'
+default: P

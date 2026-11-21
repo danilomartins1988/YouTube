@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic cart and groceries only (no store or brand logos).
-title: "Why Are Groceries So Expensive? The Business Behind Your Bill"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: Why Are Groceries So Expensive? The Business Behind Your Bill
 docs_dir: docs/episodes/40-grocery
 video: output/grocery_documentary.mp4
 deliverable: documentary
@@ -50,7 +50,7 @@ concepts:
   text:
   - 'FARM: 11.8¢'
   - 'STORE: 13.8¢'
-  claim_basis: 'farm + retail shares of the 2024 food dollar (USDA ERS)'
+  claim_basis: farm + retail shares of the 2024 food dollar (USDA ERS)
   scene:
     palette:
       sky0: '#06121A'
@@ -86,3 +86,47 @@ concepts:
       color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a heaped cart with a price tag flying up'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - YOUR FOOD
+  - DOLLAR?
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: where each food dollar goes); no number'
+  scene:
+    backdrop:
+      kind: rays
+      c0: '#7AE06A'
+      c1: '#0A3A1A'
+      c2: '#050818'
+      ray: '#D0FFC8'
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FFC24A'
+    support:
+    - kind: pricetag
+      x: 1560
+      y: 280
+      s: 0.5
+      r: 18
+      text: $$$
+    hero:
+      kind: cart
+      x: 1440
+      y: 640
+      s: 0.7
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE3A0'
+default: P

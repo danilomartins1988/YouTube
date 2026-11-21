@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic card only (no bank logos).
-title: "Overdraft Fees Explained: Why Banks Still Make Billions"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: 'Overdraft Fees Explained: Why Banks Still Make Billions'
 docs_dir: docs/episodes/46-overdrafts
 video: output/overdraft_documentary.mp4
 deliverable: documentary
@@ -19,11 +19,29 @@ concepts:
   - OVERDRAFT FEES
   claim_basis: 'revenue: $5.83bn overdraft/NSF revenue in 2023, banks over $1bn (CFPB)'
   scene:
-    palette: {sky0: '#0A0E1A', sky1: '#1E2A4A', haze: '#90CAF9', key: '#E3F2FD', accent: '#FFC21A', ink: '#FFFFFF'}
+    palette:
+      sky0: '#0A0E1A'
+      sky1: '#1E2A4A'
+      haze: '#90CAF9'
+      key: '#E3F2FD'
+      accent: '#FFC21A'
+      ink: '#FFFFFF'
     backdrop: void
-    subject: {kind: ccard, x: 1480, y: 560, s: 0.75}
+    subject:
+      kind: ccard
+      x: 1480
+      y: 560
+      s: 0.75
     support: []
-    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
     vignette: 0.55
     brand: none
 - id: B
@@ -32,13 +50,87 @@ concepts:
   text:
   - 'BUY: $24'
   - 'FEE: $35'
-  claim_basis: 'median overdraft-triggering debit purchase $24 vs median fee $35 (CFPB)'
+  claim_basis: median overdraft-triggering debit purchase $24 vs median fee $35 (CFPB)
   scene:
-    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
     backdrop: void
-    subject: {kind: ccard, x: 480, y: 650, s: 0.6}
-    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    subject:
+      kind: ccard
+      x: 480
+      y: 650
+      s: 0.6
+    after:
+      kind: coin
+      x: 1440
+      y: 640
+      s: 0.6
     support: []
-    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a $35 fee tag swinging over a falling arrow and coins'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - OVERDRAFT
+  - FEES?
+  accent_line: 1
+  banner: red
+  claim_basis: the $35 fee is the film example (FACT_CHECK.md); a question
+  scene:
+    backdrop:
+      kind: rays
+      c0: '#FF5A5A'
+      c1: '#3A0A1A'
+      c2: '#050818'
+      ray: '#FFC8C8'
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FF6A5A'
+    support:
+    - kind: arrow
+      x: 1500
+      y: 620
+      s: 0.6
+      dir: down
+      color: '#FF3A2A'
+    hero:
+      kind: pricetag
+      x: 1450
+      y: 520
+      s: 0.7
+      r: 14
+      text: $35
+    front:
+    - kind: coins
+      x: 1650
+      y: 950
+      s: 0.45
+      n: 8
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE3A0'
+default: P

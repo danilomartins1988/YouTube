@@ -1,0 +1,209 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19; review 2026-11-21): a glowing medical cross with a price tag about to jump",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "HEALTHCARE",
+    "WHY SO PRICEY?"
+  ],
+  "accent_line": 1,
+  "banner": "red",
+  "claim_basis": "a question (the film: prices, not visits, drive US spending); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "skyline",
+      "base": 900,
+      "maxH": 240
+    },
+    "light": {
+      "x": 1450,
+      "y": 540,
+      "r": 680,
+      "color": "#FF6A5A"
+    },
+    "support": [
+      {
+        "kind": "flag",
+        "code": "us",
+        "x": 1240,
+        "y": 150,
+        "s": 0.8,
+        "h": 260,
+        "poleH": 900
+      }
+    ],
+    "hero": {
+      "kind": "medcross",
+      "x": 1480,
+      "y": 560,
+      "s": 0.7
+    },
+    "front": [
+      {
+        "kind": "pricetag",
+        "x": 1700,
+        "y": 860,
+        "s": 0.55,
+        "r": -14,
+        "text": "$$$"
+      }
+    ],
+    "particles": {
+      "n": 60,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFD0C0"
+    }
+  },
+  "layout": [
+    {
+      "text": "HEALTHCARE",
+      "x": 70,
+      "y": 494.6,
+      "size": 150.2,
+      "width": 1014.5,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "WHY SO PRICEY?",
+      "x": 95.4,
+      "y": 628.6,
+      "size": 115.5,
+      "width": 992.2,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#E3201B",
+      "box": "#E3201B"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.66 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 377, 1084, 504), (95, 539, 1088, 636)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "9.6px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 4.7:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.135",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "13.9px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1088px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.61",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 97 vs left 30",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": true,
+        "detail": "luma std 66",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest anthropics-1-5-trillion-ipo (distance 0.55)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (the film: prices, not visits, drive US spending); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.65,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "anthropics-1-5-trillion-ipo"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-21T14:11:46Z"
+}

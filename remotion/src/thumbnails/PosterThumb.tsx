@@ -597,6 +597,83 @@ const HEROES: Record<string, HeroFn> = {
     <circle r={170} fill="#FFC928" stroke={OL} strokeWidth={14} /><circle r={128} fill="none" stroke="#7A5200" strokeWidth={8} />
     <text x={0} y={62} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={190} fill={OL}>$</text>
   </g>,
+  /** review 2026-11-21: a brilliant-cut diamond with facets and a glint */
+  diamond: (o, id) => <g>
+    <defs>{lin(`${id}d`, [[0, '#FFFFFF'], [0.45, '#BDF3FF'], [1, '#3F8CFF']], 1, 1)}</defs>
+    <polygon points="-420,-120 -230,-320 230,-320 420,-120 0,380" fill={`url(#${id}d)`} stroke="#FFFFFF" strokeWidth={12} strokeLinejoin="round" filter="url(#pglow)" />
+    <path d="M -420 -120 L 420 -120 M -230 -320 L -120 -120 L 0 -320 L 120 -120 L 230 -320 M -120 -120 L 0 380 L 120 -120 M -420 -120 L -200 40 L 0 380 L 200 40 L 420 -120" stroke="#1A4A8A" strokeOpacity={0.5} strokeWidth={6} fill="none" strokeLinejoin="round" />
+    <polygon points="0,-320 120,-120 -120,-120" fill="#FFFFFF" opacity={0.55} /><polygon points="-230,-320 -120,-120 -420,-120" fill="#FFFFFF" opacity={0.3} />
+    <path d="M 250 -380 L 270 -300 L 350 -280 L 270 -260 L 250 -180 L 230 -260 L 150 -280 L 230 -300 Z" fill="#FFFFFF" filter="url(#pglow)" />
+  </g>,
+  /** review 2026-11-21: a big hamburger (generic, no brand) */
+  burger: (o, id) => <g>
+    <defs>{lin(`${id}b`, [[0, '#FFD89A'], [0.6, '#E8962E'], [1, '#9A5212']], 0, 1)}</defs>
+    <path d="M -430 130 L 430 130 Q 430 280 0 280 Q -430 280 -430 130 Z" fill={`url(#${id}b)`} stroke={OL} strokeWidth={10} />
+    <rect x={-450} y={20} width={900} height={120} rx={56} fill="#6A3414" stroke={OL} strokeWidth={10} />
+    <polygon points="-440,0 440,0 420,40 330,110 270,40 150,120 90,40 -440,40" fill="#FFC21A" stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+    <path d="M -460 -20 Q -400 40 -320 0 Q -240 50 -160 0 Q -80 50 0 0 Q 80 50 160 0 Q 240 50 320 0 Q 400 40 460 -20 L 460 10 L -460 10 Z" fill="#5BC236" stroke={OL} strokeWidth={8} />
+    <path d="M -430 -20 Q -430 -380 0 -380 Q 430 -380 430 -20 Z" fill={`url(#${id}b)`} stroke={OL} strokeWidth={10} />
+    {[[-200, -250], [-60, -300], [90, -270], [220, -210], [-280, -150], [0, -190], [150, -150]].map(([x, y], k) => <ellipse key={k} cx={x} cy={y} rx={22} ry={11} transform={`rotate(${k * 25 - 40} ${x} ${y})`} fill="#FFF6DA" />)}
+    <path d="M -300 -300 Q -150 -370 40 -360" stroke="#FFFFFF" strokeWidth={18} opacity={0.45} fill="none" strokeLinecap="round" />
+  </g>,
+  /** review 2026-11-21: an airliner climbing (generic livery) */
+  plane: (o, id) => <g transform={`rotate(${o.r ?? -14})`}>
+    <defs>{lin(`${id}f`, [[0, '#FFFFFF'], [1, '#AEB8C6']], 0, 1)}</defs>
+    <path d="M -40 30 L -300 330 L -170 330 L 170 40 Z" fill="#C8D0DC" stroke={OL} strokeWidth={8} strokeLinejoin="round" />
+    <path d="M -430 -60 L -560 -320 L -450 -320 L -280 -70 Z" fill={o.color ?? '#2D6FD1'} stroke={OL} strokeWidth={8} strokeLinejoin="round" />
+    <path d="M -580 0 Q -580 -75 -470 -85 L 430 -85 Q 570 -75 620 0 Q 570 70 430 80 L -470 80 Q -580 70 -580 0 Z" fill={`url(#${id}f)`} stroke={OL} strokeWidth={8} />
+    <path d="M -560 30 L 600 30" stroke={o.color ?? '#2D6FD1'} strokeWidth={16} />
+    {Array.from({length: 14}, (_, k) => <rect key={k} x={-380 + k * 56} y={-45} width={26} height={30} rx={10} fill="#1A2A44" />)}
+    <path d="M 480 -55 Q 560 -45 590 -10 L 500 -10 Z" fill="#1A2A44" />
+    <path d="M -60 -60 L -200 -230 L -120 -230 L 60 -60 Z" fill="#AEB8C6" stroke={OL} strokeWidth={6} />
+    <ellipse cx={-30} cy={160} rx={90} ry={40} fill="#7C8798" stroke={OL} strokeWidth={6} transform="rotate(-40 -30 160)" />
+  </g>,
+  /** review 2026-11-21: a pyramid of bullion bars (gold by default; `metal: silver` for nickel and other metals) */
+  goldbars: (o, id) => { const s = o.metal === 'silver' ? ['#FFFFFF', '#B8C2CE', '#5A6474', '#3A4250'] : ['#FFF3A8', '#FFC21A', '#B07800', '#7A5200'];
+    return <g>
+      <defs>{lin(`${id}g`, [[0, s[0]], [0.5, s[1]], [1, s[2]]], 1, 1)}</defs>
+      {[[-270, 230], [0, 230], [270, 230], [-135, 100], [135, 100], [0, -30]].map(([x, y], k) => <g key={k} transform={`translate(${x} ${y})`}>
+        <polygon points="-110,-65 110,-65 140,65 -140,65" fill={`url(#${id}g)`} stroke={s[3]} strokeWidth={7} strokeLinejoin="round" />
+        <polygon points="-110,-65 110,-65 98,-45 -98,-45" fill="#FFFFFF" opacity={0.55} />
+        <rect x={-50} y={-15} width={100} height={36} rx={6} fill="none" stroke={s[3]} strokeWidth={4} opacity={0.6} /></g>)}
+    </g>; },
+  /** review 2026-11-21: a giant copper one-cent coin (generic, no portrait) */
+  penny: (o, id) => <g>
+    <defs>{lin(`${id}c`, [[0, '#FFD6A8'], [0.5, '#C8692A'], [1, '#6A2E0A']], 1, 1)}</defs>
+    <circle cx={26} cy={36} r={400} fill="#2A1204" />
+    <circle r={400} fill={`url(#${id}c)`} stroke="#5A2406" strokeWidth={14} />
+    <circle r={335} fill="none" stroke="#FFD6A8" strokeOpacity={0.55} strokeWidth={8} />
+    <text y={100} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={300} fill="#5A2406">1¢</text>
+    <path d="M -250 -230 Q -80 -350 120 -330" stroke="#FFFFFF" strokeWidth={20} opacity={0.5} fill="none" strokeLinecap="round" />
+  </g>,
+  /** review 2026-11-21: a medical cross badge */
+  medcross: (o) => <g><circle r={340} fill="#FFFFFF" stroke={OL} strokeWidth={14} filter="url(#pglow)" />
+    <path d="M -95 -260 H 95 V -95 H 260 V 95 H 95 V 260 H -95 V 95 H -260 V -95 H -95 Z" fill="#E3201B" stroke={OL} strokeWidth={10} strokeLinejoin="round" /></g>,
+  /** review 2026-11-21: a phone with a play button and a crack (a failed streaming app, no logo) */
+  phone: (o, id) => <g transform={`rotate(${o.r ?? 10})`}>
+    <defs>{lin(`${id}s`, [[0, '#FF5FA2'], [0.5, '#7B5CFF'], [1, '#21D4FD']], 1, 1)}</defs>
+    <rect x={-240} y={-430} width={480} height={860} rx={64} fill="#11141A" stroke="#E6EBF2" strokeWidth={12} />
+    <rect x={-205} y={-380} width={410} height={760} rx={34} fill={`url(#${id}s)`} />
+    <circle r={120} fill="#FFFFFF" opacity={0.25} /><polygon points="-50,-90 -50,90 100,0" fill="#FFFFFF" stroke={OL} strokeWidth={6} strokeLinejoin="round" />
+    {o.crack !== false && <path d="M 130 -380 L 40 -210 L 120 -130 L 0 40 L 80 130 L -50 380 M 40 -210 L -80 -160 M 0 40 L -120 70" stroke="#FFFFFF" strokeWidth={9} fill="none" strokeLinejoin="round" />}
+  </g>,
+  /** review 2026-11-21: a graduation cap with a gold tassel */
+  gradcap: (o) => <g>
+    <path d="M -300 0 L -300 190 Q 0 320 300 190 L 300 0 L 0 120 Z" fill="#11141A" stroke="#E6EBF2" strokeWidth={10} strokeLinejoin="round" />
+    <polygon points="0,-260 540,-60 0,140 -540,-60" fill="#1E2430" stroke="#E6EBF2" strokeWidth={10} strokeLinejoin="round" />
+    <circle cx={0} cy={-60} r={26} fill="#FFC21A" />
+    <path d="M 0 -60 L 430 50 L 430 270" stroke="#FFC21A" strokeWidth={16} fill="none" strokeLinecap="round" />
+    <path d="M 400 270 L 460 270 L 480 380 L 380 380 Z" fill="#FFC21A" stroke="#7A5200" strokeWidth={5} />
+  </g>,
+  /** review 2026-11-21: an American football */
+  football: (o, id) => <g transform={`rotate(${o.r ?? -30})`}>
+    <defs>{lin(`${id}l`, [[0, '#C8743A'], [0.5, '#8A3E14'], [1, '#4A1E06']], 0, 1)}</defs>
+    <path d="M -480 0 Q 0 -330 480 0 Q 0 330 -480 0 Z" fill={`url(#${id}l)`} stroke={OL} strokeWidth={12} />
+    <path d="M -300 -120 Q -340 0 -300 120 M 300 -120 Q 340 0 300 120" stroke="#FFFFFF" strokeWidth={14} fill="none" />
+    <path d="M -150 0 L 150 0" stroke="#FFFFFF" strokeWidth={14} strokeLinecap="round" />
+    {Array.from({length: 6}, (_, k) => <path key={k} d={`M ${-110 + k * 44} -32 L ${-110 + k * 44} 32`} stroke="#FFFFFF" strokeWidth={12} strokeLinecap="round" />)}
+    <path d="M -280 -150 Q 0 -260 280 -150" stroke="#FFFFFF" strokeWidth={10} opacity={0.3} fill="none" />
+  </g>,
   /** BYB Anthropic: a giant golden padlock on a chain, a hanging date tag (`text`), the shackle about to spring (tension cue) */
   padlock: (o, id) => <g>
     <defs>{lin(`${id}g`, [[0, '#FFF0A8'], [0.5, '#FFC928'], [1, '#B97A00']], 1, 1)}{lin(`${id}c`, [[0, '#E9EEF5'], [1, '#7D8899']], 0, 1)}</defs>

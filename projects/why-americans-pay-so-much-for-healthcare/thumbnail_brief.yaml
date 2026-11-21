@@ -1,13 +1,12 @@
-# Thumbnail creative brief. A = split (before/after), B = bignum.
-title: "Why Is Healthcare So Expensive in America?"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: Why Is Healthcare So Expensive in America?
 docs_dir: docs/episodes/29-us-healthcare
 video: output/healthcare_documentary.mp4
 deliverable: documentary
 status: completed
 analysis:
   mystery: Americans use less care but pay far more
-  surprising_fact: $14,775 per person vs $7,860 in peer countries (Peterson-KFF, OECD
-    basis); family premium $28,303 (KFF 2026)
+  surprising_fact: $14,775 per person vs $7,860 in peer countries (Peterson-KFF, OECD basis); family premium $28,303 (KFF 2026)
   subject: a medical bill
   tone: bright
   metaphor: same care, different price
@@ -96,3 +95,53 @@ concepts:
       color: '#FFD9CF'
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a glowing medical cross with a price tag about to jump'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - HEALTHCARE
+  - WHY SO PRICEY?
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: prices, not visits, drive US spending); no number'
+  scene:
+    backdrop:
+      kind: skyline
+      base: 900
+      maxH: 240
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FF6A5A'
+    support:
+    - kind: flag
+      code: us
+      x: 1240
+      y: 150
+      s: 0.8
+      h: 260
+      poleH: 900
+    hero:
+      kind: medcross
+      x: 1480
+      y: 560
+      s: 0.7
+    front:
+    - kind: pricetag
+      x: 1700
+      y: 860
+      s: 0.55
+      r: -14
+      text: $$$
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFD0C0'
+default: P

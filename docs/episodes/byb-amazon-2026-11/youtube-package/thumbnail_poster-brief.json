@@ -1,0 +1,217 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19; review 2026-11-21): a glowing data center (the capital-spending bet) with a rising arrow",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "BEFORE YOU",
+    "BUY AMAZON"
+  ],
+  "accent_line": 1,
+  "banner": "yellow",
+  "claim_basis": "framing (education, not advice); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "map",
+      "lon": 10,
+      "lat": 25,
+      "arcColor": "#FFB238",
+      "arcs": [
+        [
+          "sf",
+          "dc"
+        ],
+        [
+          "dc",
+          "frankfurt"
+        ],
+        [
+          "dc",
+          "tokyo"
+        ],
+        [
+          "sf",
+          "sydney"
+        ]
+      ]
+    },
+    "light": {
+      "x": 1450,
+      "y": 540,
+      "r": 680,
+      "color": "#FFB238"
+    },
+    "support": [
+      {
+        "kind": "arrow",
+        "x": 1500,
+        "y": 300,
+        "s": 0.7,
+        "color": "#FFC24A"
+      }
+    ],
+    "hero": {
+      "kind": "datacenter",
+      "x": 1480,
+      "y": 640,
+      "s": 0.8,
+      "glow": "#FFB238"
+    },
+    "particles": {
+      "n": 60,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFE3A0"
+    }
+  },
+  "layout": [
+    {
+      "text": "BEFORE YOU",
+      "x": 70,
+      "y": 483.0,
+      "size": 167.1,
+      "width": 1043.3,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "BUY AMAZON",
+      "x": 101.4,
+      "y": 644.9,
+      "size": 142.8,
+      "width": 978.6,
+      "anchor": "start",
+      "color": "#05070B",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#FFD400",
+      "box": "#FFD400"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.66 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 353, 1113, 493), (101, 534, 1080, 653)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "11.9px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 14.1:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.129",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "17.1px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1113px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.63",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 77 vs left 34",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": false,
+        "detail": "luma std 24",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest before-you-buy-anthropic-2026-11 (distance 0.30)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "framing (education, not advice); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.721,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "before-you-buy-anthropic-2026-11"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-21T14:08:21Z"
+}

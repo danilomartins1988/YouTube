@@ -1,0 +1,200 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19; review 2026-11-21): a giant glowing diamond with a warm glint",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "WHY DIAMONDS",
+    "MEAN LOVE?"
+  ],
+  "accent_line": 1,
+  "banner": "red",
+  "claim_basis": "a question (the film: marketing, not rarity alone, tied diamonds to love); no number",
+  "scene": {
+    "backdrop": {
+      "kind": "rays",
+      "c0": "#FF7AB8",
+      "c1": "#3A0A4A",
+      "c2": "#050818",
+      "ray": "#FFD0E8"
+    },
+    "light": {
+      "x": 1450,
+      "y": 540,
+      "r": 680,
+      "color": "#9FD8FF"
+    },
+    "hero": {
+      "kind": "diamond",
+      "x": 1450,
+      "y": 560,
+      "s": 0.82
+    },
+    "particles": {
+      "n": 60,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFE0F0"
+    },
+    "sparks": [
+      {
+        "x": 1600,
+        "y": 260,
+        "n": 18,
+        "len": 130,
+        "color": "#FFFFFF",
+        "spread": 360
+      }
+    ]
+  },
+  "layout": [
+    {
+      "text": "WHY DIAMONDS",
+      "x": 70,
+      "y": 466.1,
+      "size": 126.8,
+      "width": 1044.9,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "MEAN LOVE?",
+      "x": 103.2,
+      "y": 627.1,
+      "size": 150.8,
+      "width": 974.6,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#E3201B",
+      "box": "#E3201B"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.67 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "4 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 367, 1115, 474), (103, 509, 1078, 636)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "10.6px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 4.7:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.103",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "15.2px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1115px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.55",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 122 vs left 29",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": false,
+        "detail": "luma std 24",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest how-prediction-markets-make-money-off-your-hunches (distance 0.60)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "a question (the film: marketing, not rarity alone, tied diamonds to love); no number",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.638,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "how-prediction-markets-make-money-off-your-hunches"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-21T14:10:38Z"
+}

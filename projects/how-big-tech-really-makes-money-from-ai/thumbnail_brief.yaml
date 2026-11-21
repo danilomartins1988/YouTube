@@ -1,14 +1,12 @@
-# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). New archetypes: A = bignum, B = presenter.
-title: "How Big Tech Makes Money on AI: Rent, Ads and Lock-In"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: 'How Big Tech Makes Money on AI: Rent, Ads and Lock-In'
 docs_dir: docs/episodes/28-bigtech-ai
 video: output/bigtech_documentary.mp4
 deliverable: documentary
 status: completed
 analysis:
-  mystery: 'Four companies spent ~$200bn in one quarter on AI data centers: how does
-    it come back?'
-  surprising_fact: Latest-quarter capex ≈ $203bn (computed from company filings);
-    2026 plans ≈ $720–740bn (computed)
+  mystery: 'Four companies spent ~$200bn in one quarter on AI data centers: how does it come back?'
+  surprising_fact: Latest-quarter capex ≈ $203bn (computed from company filings); 2026 plans ≈ $720–740bn (computed)
   subject: a data-center campus
   tone: thriller
   metaphor: a bet that must pay back
@@ -20,8 +18,7 @@ concepts:
   - $200BN
   - IN 3 MONTHS
   accent_line: 0
-  claim_basis: 'capex_q: ≈ $202.9bn latest-quarter capex of the four (computed from
-    filings)'
+  claim_basis: 'capex_q: ≈ $202.9bn latest-quarter capex of the four (computed from filings)'
   scene:
     palette:
       sky0: '#05080E'
@@ -88,3 +85,53 @@ concepts:
       color: '#FFD9CF'
     vignette: 0.55
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a glowing AI data center with cash pouring out'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - AI MONEY
+  - MACHINE?
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'a question (the film: rent the machines, sell ads, lock in customers); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: 10
+      lat: 25
+      arcColor: '#3FB4FF'
+      arcs:
+      - - sf
+        - dc
+      - - dc
+        - london
+      - - sf
+        - tokyo
+      - - dc
+        - frankfurt
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#3FB4FF'
+    hero:
+      kind: datacenter
+      x: 1480
+      y: 600
+      s: 0.8
+    front:
+    - kind: cash
+      x: 1650
+      y: 930
+      s: 0.4
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#BFE8FF'
+default: P

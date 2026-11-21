@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic objects only (no logos).
-title: "Prediction Markets Explained: How They Make Money Off Your Hunches"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: 'Prediction Markets Explained: How They Make Money Off Your Hunches'
 docs_dir: docs/episodes/45-prediction-markets
 video: output/predmkt_documentary.mp4
 deliverable: documentary
@@ -19,26 +19,112 @@ concepts:
   - IN BETS
   claim_basis: 'size: $25bn of event contracts in March 2026 (CFTC proposed rule)'
   scene:
-    palette: {sky0: '#160A1E', sky1: '#3A1450', haze: '#CE93D8', key: '#F3E5F5', accent: '#69F0AE', ink: '#FFFFFF'}
+    palette:
+      sky0: '#160A1E'
+      sky1: '#3A1450'
+      haze: '#CE93D8'
+      key: '#F3E5F5'
+      accent: '#69F0AE'
+      ink: '#FFFFFF'
     backdrop: void
-    subject: {kind: surge, x: 1480, y: 560, s: 0.75, nocar: true}
+    subject:
+      kind: surge
+      x: 1480
+      y: 560
+      s: 0.75
+      nocar: true
     support: []
-    particles: {n: 60, region: [900, 0, 1920, 1080], size: 3, color: '#E3F2FD'}
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E3F2FD'
     vignette: 0.55
     brand: none
 - id: B
   angle: before/after (split)
   archetype: split
   text:
-  - 'YOU BET'
-  - 'THEY WIN'
+  - YOU BET
+  - THEY WIN
   claim_basis: 'Kalshi: fee on every trade; trades against other members (help center)'
   scene:
-    palette: {sky0: '#06121A', sky1: '#123040', haze: '#80CBC4', key: '#E0F7FA', accent: '#FF5A4E', ink: '#FFFFFF'}
+    palette:
+      sky0: '#06121A'
+      sky1: '#123040'
+      haze: '#80CBC4'
+      key: '#E0F7FA'
+      accent: '#FF5A4E'
+      ink: '#FFFFFF'
     backdrop: void
-    subject: {kind: surge, x: 480, y: 650, s: 0.6, nocar: true}
-    after: {kind: coin, x: 1440, y: 640, s: 0.6}
+    subject:
+      kind: surge
+      x: 480
+      y: 650
+      s: 0.6
+      nocar: true
+    after:
+      kind: coin
+      x: 1440
+      y: 640
+      s: 0.6
     support: []
-    particles: {n: 40, region: [0, 0, 1920, 1080], size: 3, color: '#E0F7FA'}
+    particles:
+      n: 40
+      region:
+      - 0
+      - 0
+      - 1920
+      - 1080
+      size: 3
+      color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a glowing YES ticker board with coins: a market for hunches'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - BET OR
+  - TRADE?
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: courts disagree whether these are finance or gambling); no number'
+  scene:
+    backdrop:
+      kind: rays
+      c0: '#5FE3FF'
+      c1: '#1A1A6A'
+      c2: '#050818'
+      ray: '#CFF4FF'
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#7CF29C'
+    hero:
+      kind: tickerboard
+      x: 1540
+      y: 560
+      s: 0.7
+      text: 'YES'
+    front:
+    - kind: coins
+      x: 1650
+      y: 940
+      s: 0.45
+      n: 8
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#CFFFE0'
+default: P

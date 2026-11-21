@@ -1,5 +1,5 @@
-# Thumbnail creative brief (hiddeneco/youtube_thumbnail.py). Concept A = mystery, B = consequence.
-title: "De Beers: How One Company Made Diamonds a Symbol of Love"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: 'De Beers: How One Company Made Diamonds a Symbol of Love'
 docs_dir: docs/episodes/24-debeers
 video: output/debeers_documentary.mp4
 deliverable: documentary
@@ -83,4 +83,47 @@ concepts:
       color: '#FFD1CC'
     vignette: 0.55
     brand: tl
-default: A
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a giant glowing diamond with a warm glint'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - WHY DIAMONDS
+  - MEAN LOVE?
+  accent_line: 1
+  banner: red
+  claim_basis: 'a question (the film: marketing, not rarity alone, tied diamonds to love); no number'
+  scene:
+    backdrop:
+      kind: rays
+      c0: '#FF7AB8'
+      c1: '#3A0A4A'
+      c2: '#050818'
+      ray: '#FFD0E8'
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#9FD8FF'
+    hero:
+      kind: diamond
+      x: 1450
+      y: 560
+      s: 0.82
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE0F0'
+    sparks:
+    - x: 1600
+      y: 260
+      n: 18
+      len: 130
+      color: '#FFFFFF'
+      spread: 360
+default: P

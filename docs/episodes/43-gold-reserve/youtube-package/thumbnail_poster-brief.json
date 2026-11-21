@@ -1,0 +1,210 @@
+{
+  "id": "P",
+  "angle": "poster (owner model 2026-11-19; review 2026-11-21): a pyramid of gold bars behind a vault padlock tagged with the legal price",
+  "archetype": "poster",
+  "file": "thumbnail_poster.png",
+  "text": [
+    "BOOKED AT",
+    "$42?"
+  ],
+  "accent_line": 1,
+  "banner": "yellow",
+  "claim_basis": "the statutory book price, $42.2222 per troy ounce (31 U.S.C. 5117; FACT_CHECK.md)",
+  "scene": {
+    "backdrop": {
+      "kind": "rays",
+      "c0": "#FFC21A",
+      "c1": "#4A2A00",
+      "c2": "#050818",
+      "ray": "#FFF0A0"
+    },
+    "light": {
+      "x": 1450,
+      "y": 540,
+      "r": 680,
+      "color": "#FFC24A"
+    },
+    "support": [
+      {
+        "kind": "flag",
+        "code": "us",
+        "x": 1760,
+        "y": 150,
+        "s": 0.6,
+        "h": 220,
+        "poleH": 800
+      }
+    ],
+    "hero": {
+      "kind": "goldbars",
+      "x": 1460,
+      "y": 520,
+      "s": 1.0
+    },
+    "front": [
+      {
+        "kind": "padlock",
+        "x": 1700,
+        "y": 820,
+        "s": 0.42,
+        "text": "$42.22"
+      }
+    ],
+    "particles": {
+      "n": 60,
+      "region": [
+        900,
+        0,
+        1920,
+        1080
+      ],
+      "size": 4,
+      "color": "#FFE3A0"
+    }
+  },
+  "layout": [
+    {
+      "text": "BOOKED AT",
+      "x": 70,
+      "y": 430.1,
+      "size": 182.3,
+      "width": 1042.7,
+      "anchor": "start",
+      "color": "#FFFFFF",
+      "outline": "#05070B",
+      "rotate": -4
+    },
+    {
+      "text": "$42?",
+      "x": 122.1,
+      "y": 679.9,
+      "size": 237.0,
+      "width": 618.4,
+      "anchor": "start",
+      "color": "#05070B",
+      "outline": "#05070B",
+      "rotate": -4,
+      "banner": "#FFD400",
+      "box": "#FFD400"
+    }
+  ],
+  "qc": {
+    "checks": [
+      {
+        "check": "dimensions 1280x720 (16:9)",
+        "pass": true,
+        "detail": "(1280, 720)",
+        "critical": true
+      },
+      {
+        "check": "RGB image",
+        "pass": true,
+        "detail": "RGB",
+        "critical": true
+      },
+      {
+        "check": "file size < 2 MB",
+        "pass": true,
+        "detail": "0.62 MB",
+        "critical": true
+      },
+      {
+        "check": "valid PNG",
+        "pass": true,
+        "detail": "verified",
+        "critical": true
+      },
+      {
+        "check": "0-4 words",
+        "pass": true,
+        "detail": "3 words",
+        "critical": false
+      },
+      {
+        "check": "no clipped text (inside safe margins)",
+        "pass": true,
+        "detail": "[(70, 288, 1113, 441), (122, 495, 740, 694)]",
+        "critical": true
+      },
+      {
+        "check": "text clear of the duration badge (bottom-right)",
+        "pass": true,
+        "detail": "bottom-right 330x150 kept free",
+        "critical": true
+      },
+      {
+        "check": "legible at 160 px wide (cap height >= 6 px)",
+        "pass": true,
+        "detail": "15.2px font at 160px wide",
+        "critical": true
+      },
+      {
+        "check": "text contrast >= 3:1 against its background",
+        "pass": true,
+        "detail": "worst 14.1:1 (dark outline adds more)",
+        "critical": true
+      },
+      {
+        "check": "uncluttered (edge density <= 0.16)",
+        "pass": true,
+        "detail": "0.103",
+        "critical": false
+      },
+      {
+        "check": "poster: legible at 320x180 (cap height >= 10 px)",
+        "pass": true,
+        "detail": "21.9px caps at 320 px wide",
+        "critical": true
+      },
+      {
+        "check": "poster: words stay in the left ~60% (hero owns the right)",
+        "pass": true,
+        "detail": "text right edge 1113px",
+        "critical": false
+      },
+      {
+        "check": "poster: vivid, saturated scene (mean saturation of lit pixels >= 0.45)",
+        "pass": true,
+        "detail": "0.89",
+        "critical": false
+      },
+      {
+        "check": "poster: the hero side is the brightest (light behind the hero)",
+        "pass": true,
+        "detail": "right 129 vs left 35",
+        "critical": false
+      },
+      {
+        "check": "dominant subject has strong internal contrast",
+        "pass": false,
+        "detail": "luma std 17",
+        "critical": false
+      },
+      {
+        "check": "distinct from other channel thumbnails",
+        "pass": true,
+        "detail": "nearest the-chemicals-that-decide-who-makes-chips (distance 0.42)",
+        "critical": false
+      },
+      {
+        "check": "text rests on a verified claim or makes no factual claim",
+        "pass": true,
+        "detail": "the statutory book price, $42.2222 per troy ounce (31 U.S.C. 5117; FACT_CHECK.md)",
+        "critical": true
+      }
+    ],
+    "critical_fail": false,
+    "design_score": 0.808,
+    "score_note": "internal design score (contrast, legibility, clutter, distinctness); it does not predict YouTube CTR",
+    "needs_human_review": [
+      "Subject recognisable at a glance (human)",
+      "Tone matches the documentary (human)",
+      "Not misleading / not clickbait (human)",
+      "Spelling of the words on the image (human)"
+    ],
+    "nearest": "the-chemicals-that-decide-who-makes-chips"
+  },
+  "backend": "svg-composite (Remotion PosterThumb, original vector art)",
+  "cost_usd": 0.0,
+  "generated": "2026-11-21T14:18:33Z"
+}

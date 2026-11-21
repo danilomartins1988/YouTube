@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic coins only (no real coin designs).
-title: "Did the US Stop Making Pennies? What Happens at the Register Now"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: Did the US Stop Making Pennies? What Happens at the Register Now
 docs_dir: docs/episodes/42-penny
 video: output/penny_documentary.mp4
 deliverable: documentary
@@ -50,7 +50,7 @@ concepts:
   text:
   - 'WORTH: 1¢'
   - 'COST: 3.69¢'
-  claim_basis: 'face value vs FY2024 unit cost (U.S. Mint)'
+  claim_basis: face value vs FY2024 unit cost (U.S. Mint)
   scene:
     palette:
       sky0: '#06121A'
@@ -86,3 +86,48 @@ concepts:
       color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a giant copper one-cent coin glowing, about to roll away'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - BYE BYE
+  - PENNY?
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'a question (the film: the Mint struck its last circulating penny in Nov 2025); no number beyond the coin face'
+  scene:
+    backdrop:
+      kind: rays
+      c0: '#FF9A4A'
+      c1: '#4A1A06'
+      c2: '#050818'
+      ray: '#FFD8B0'
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FF9A4A'
+    support:
+    - kind: flag
+      code: us
+      x: 1760
+      y: 150
+      s: 0.6
+      h: 220
+      poleH: 800
+    hero:
+      kind: penny
+      x: 1460
+      y: 560
+      s: 0.72
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFD8B0'
+default: P

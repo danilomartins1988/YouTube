@@ -1,5 +1,5 @@
-# Thumbnail creative brief. A = bignum, B = split. Generic blank cards only (no Visa/Mastercard logos or card designs).
-title: "Visa and Mastercard Explained: The Toll on Every Card Swipe"
+# Thumbnail creative brief (review 2026-11-21: poster concept P added per docs/thumbnails/OWNER_STYLE.md)
+title: 'Visa and Mastercard Explained: The Toll on Every Card Swipe'
 docs_dir: docs/episodes/39-visa-mastercard
 video: output/visamc_documentary.mp4
 deliverable: documentary
@@ -68,7 +68,7 @@ concepts:
       y: 650
       s: 0.6
       heading: MEMBER BANKS
-      amount: '≈ 14,000'
+      amount: ≈ 14,000
       magnifier: false
       rot: -4
     after:
@@ -89,3 +89,52 @@ concepts:
       color: '#E0F7FA'
     vignette: 0.5
     brand: none
+- id: P
+  angle: 'poster (owner model 2026-11-19; review 2026-11-21): a card in front of a glowing payment network over the world map'
+  archetype: poster
+  file: thumbnail_poster.png
+  text:
+  - THE SWIPE
+  - TOLL
+  accent_line: 1
+  banner: yellow
+  claim_basis: 'framing (the film: network and interchange fees on each swipe); no number'
+  scene:
+    backdrop:
+      kind: map
+      lon: 10
+      lat: 25
+      arcColor: '#FFC24A'
+      arcs:
+      - - ny
+        - london
+      - - ny
+        - tokyo
+      - - sf
+        - sydney
+      - - london
+        - dubai
+      - - ny
+        - saopaulo
+    light:
+      x: 1450
+      y: 540
+      r: 680
+      color: '#FFC24A'
+    hero:
+      kind: card
+      x: 1450
+      y: 560
+      s: 0.8
+      r: 10
+      label: CARD
+    particles:
+      n: 60
+      region:
+      - 900
+      - 0
+      - 1920
+      - 1080
+      size: 4
+      color: '#FFE3A0'
+default: P
