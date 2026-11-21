@@ -34,3 +34,11 @@ Competitors: public titles only; no private metrics inferred.
 14. **Evergreen:** 6 months high, 12 high, 24 medium-high (policy rate and reform stage date; the mechanism will not).
 15. **SEO & commercial scorecard:** search 16/20 · browse/suggested 17/20 · title/thumbnail 18/20 · evergreen 13/15 · narrative 14/15 ·
     differentiation 9/10 = **87/100** (editorial estimate, not a probability).
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Could Brazil Become the World's Factory for Robots?" → "Could Brazil Build the Robots? Brazil's Economy in the AI Age" (no em dash; first 30 characters "Could Brazil Build the Robots?" read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Could Your Next Robot Be Made in Brazil?" → "Robots Made in Brazil?"; youtube-short-c: "The Backpack Holding Brazil Back" → "Brazil's Heavy Backpack".
+- Description: 19 source lines moved to pinned comment; subscribe line added (now 3938 bytes).
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

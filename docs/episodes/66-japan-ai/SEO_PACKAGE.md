@@ -34,3 +34,10 @@ a **qualitative** assessment. Competitors: public titles from a web search only;
 14. **Evergreen:** 6 months high, 12 high, 24 medium-high (dated figures: FY to Mar 2026, IFR 2024 data, IPSS 2023 projection).
 15. **SEO & commercial scorecard:** search 17/20 · browse/suggested 18/20 · title/thumbnail 18/20 · evergreen 14/15 · narrative 13/15 ·
     differentiation 9/10 = **89/100** (editorial estimate, not a probability).
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title kept: "Will AI Make Japan Rich Again?" (passes the 30-character and no-dash checks).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Can Robots Fix Japan's Worker Shortage?" → "Can Robots Save Japan?"; youtube-short-b: "Japan Builds the World's Robots. Who Uses Them?" → "Who Uses Japan's Robots?"; youtube-short-c: "The Robots Really Working in Japan Aren't Humanoids" → "Japan's Real Robot Workforce".
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

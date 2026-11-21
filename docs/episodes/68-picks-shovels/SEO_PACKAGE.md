@@ -38,3 +38,11 @@ is a **qualitative** assessment. Competitors: public titles from web search only
 14. **Evergreen:** 6 months high, 12 high, 24 medium-high (yearly figures date; the mechanism does not).
 15. **SEO & commercial scorecard:** search 16/20 · browse/suggested 18/20 · title/thumbnail 18/20 · evergreen 13/15 · narrative 14/15 ·
     differentiation 9/10 = **88/100** (editorial estimate, not a probability).
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "The Countries That Could Win the AI Economy Without Building AI" → "AI Economy Winners: Countries That Don't Build AI" (no em dash; first 30 characters "AI Economy Winners: Countries " read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "In a Gold Rush, Sell the Shovels. AI Is No Different" → "AI Gold Rush? Sell the Shovels"; youtube-short-b: "The Machine Only One Company on Earth Can Build" → "Only One Company Builds This"; youtube-short-c: "The Pancake Memory That Made a Chipmaker Out-Earn Samsung" → "Pancake Memory Beat Samsung".
+- Description: 14 source lines moved to pinned comment; subscribe line added (now 3459 bytes).
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

@@ -102,3 +102,10 @@ mechanism (owning vs operating) stays valid; figures would need a refresh card.
 | Competitive differentiation | 10 | 10 |
 | **Total** | **100** | **88** |
 Remaining gap to 90: an abstract thumbnail (no face or recognizable product) and a 60-character title that may truncate on mobile.
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Everyone Says Europe Is Falling Behind. AI Could Change That" → "Is Europe Falling Behind? How AI Could Bring It Back" (no em dash; first 30 characters "Is Europe Falling Behind? How " read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Could AI Save Europe's Economy?" → "Could AI Save Europe?"; youtube-short-b: "Why Europe Still Controls Critical Technology" → "Europe's Hidden Tech Power"; youtube-short-c: "Who Gets Rich When Robots Do the Work?" → "When Robots Work, Who Profits?".
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

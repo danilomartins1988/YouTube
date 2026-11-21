@@ -91,3 +91,10 @@ See SHORTS.md.
 | Narrative and retention potential | 15 | 13 | protagonist and reveals |
 | Competitive differentiation | 10 | 9 | newest primary data + both sides |
 | **Total** | 100 | **88** | target ≥ 85 |
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Why AI Could Make Your Electricity Bill Explode" → "AI Data Centers and Your Bill: Why Your Power Bill Could Explode" (no em dash; first 30 characters "AI Data Centers and Your Bill:" read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Who Really Pays for AI's Electricity?" → "Who Pays for AI's Electricity?"; youtube-short-b: "Why AI Is Driving Up the Price of Power Plants" → "AI Made Power Plants Pricier"; youtube-short-c: "The One Clause That Protects Your Power Bill From AI" → "The Clause Guarding Your Bill".
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

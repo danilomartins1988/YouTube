@@ -78,3 +78,10 @@ labor share and ownership concentration are structural; the film labels every da
 | Narrative and retention potential | 15 | 13 |
 | Competitive differentiation | 10 | 9 |
 | **Total** | **100** | **90** |
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Who Gets Rich When Robots Do the Work?" → "AI Taking Jobs: Who Gets Rich When Robots Do the Work?" (no em dash; first 30 characters "AI Taking Jobs: Who Gets Rich " read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Who Actually Owns the Stock Market?" → "Who Owns the Stock Market?"; youtube-short-b: "The Biggest Building Spree in History Is for AI" → "AI's Giant Building Spree"; youtube-short-c: "When Machines Made Owners Rich and Wages Stalled" → "When Machines Made Owners Rich".
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

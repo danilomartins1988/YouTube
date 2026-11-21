@@ -38,3 +38,11 @@ demand history is a **qualitative** assessment. Competitors: public titles from 
 14. **Evergreen:** 6 months high, 12 medium-high, 24 medium (tenants and the Quebec rate decision will date; mechanism will not).
 15. **SEO & commercial scorecard:** search 16/20 · browse/suggested 18/20 · title/thumbnail 18/20 · evergreen 12/15 · narrative 14/15 ·
     differentiation 9/10 = **87/100** (editorial estimate, not a probability).
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Could Cheap Electricity Become the New Oil?" → "Cheap Electricity, the New Oil? Where AI Data Centers Will Go" (no em dash; first 30 characters "Cheap Electricity, the New Oil" read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Why AI Follows the Plug, Not the Workers" → "Why AI Follows the Plug"; youtube-short-c: "The Cheapest Power in North America Is Getting Pricier for AI" → "Quebec's Cheap Power vs AI".
+- Description: 25 source lines moved to pinned comment; subscribe line added (now 4057 bytes).
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

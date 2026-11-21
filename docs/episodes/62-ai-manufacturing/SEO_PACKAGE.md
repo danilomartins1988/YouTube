@@ -95,3 +95,11 @@ explicitly illustrative, so policy changes do not date the film.
 **Gap to 90 (not padded):** search demand cannot be scored higher without Trends or vidIQ volume data; title/thumbnail lacks a
 recognizable face or brand (no public figure is central). Closing it needs owner-supplied demand data and a post-publication
 thumbnail test (C vs A), not a higher number on paper.
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Could AI Make American Factories Cheaper Than China's?" → "Can AI Beat China's Factories? The Real Math of AI Manufacturing" (no em dash; first 30 characters "Can AI Beat China's Factories?" read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Can AI Make America Cheaper Than China?" → "Can AI Beat Made in China?"; youtube-short-b: "China Already Has More Factory Robots Than You Think" → "China Buys Most Factory Robots"; youtube-short-c: "Who Wins When Robots Replace Factory Workers?" → "Robot Factories: Who Wins?".
+- Description: 12 source lines moved to pinned comment; subscribe line added (now 3633 bytes).
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

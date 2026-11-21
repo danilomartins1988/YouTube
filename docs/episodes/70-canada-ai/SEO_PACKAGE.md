@@ -34,3 +34,11 @@ titles only; no private metrics inferred.
 14. **Evergreen:** 6 months high, 12 high, 24 medium (rates, tariffs and the B.C. call date; the assets will not).
 15. **SEO & commercial scorecard:** search 18/20 · browse/suggested 17/20 · title/thumbnail 17/20 · evergreen 12/15 · narrative 14/15 ·
     differentiation 9/10 = **87/100** (editorial estimate, not a probability).
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Why Canada Could Be the Biggest Winner of the AI Boom" → "Canada Could Win the AI Boom. Here's Why" (no em dash; first 30 characters "Canada Could Win the AI Boom. " read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short-b: "Why AI Data Centers Want Canada's Cold" → "Why AI Wants Canada's Cold"; youtube-short-c: "Where Modern AI Grew Up: Canada" → "Modern AI Grew Up in Canada".
+- Description: 12 source lines moved to pinned comment; subscribe line added (now 4578 bytes).
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

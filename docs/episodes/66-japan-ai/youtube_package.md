@@ -23,7 +23,7 @@ Chapters
 8:18 The catch: currency, software, debt
 9:50 Will AI make Japan rich again?
 
-Related episodes from The Hidden Economics: "When Tokyo's Land Was Worth More Than Entire Countries" · "Could AI End China's Manufacturing Dominance?" · "Could AI Bring Europe Back to Power?" · "AI Taking Jobs: Who Gets Rich When Robots Do the Work?"
+Related episodes from The Hidden Economics: "When Tokyo's Land Was Worth More Than Entire Countries" · "Can AI Beat China's Factories? The Real Math of AI Manufacturing" · "Is Europe Falling Behind? How AI Could Bring It Back" · "AI Taking Jobs: Who Gets Rich When Robots Do the Work?"
 
 Key figures (exact values; the film rounds them; JPY converted at the Federal Reserve G.5A 2025 average, 149.57 yen per dollar)
 - Working-age population (15-64): 87.26M at the 1995 census peak (IPSS) vs 73.73M on Oct 1, 2024 (Statistics Bureau): -13.5M, our calculation. Tokyo: about 14.3M residents (TMG, Nov 2025).

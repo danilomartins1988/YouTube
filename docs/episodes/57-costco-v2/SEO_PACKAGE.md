@@ -188,3 +188,10 @@ Concepts 2–3 reuse the episode's fact-checked narration only (cut with `tools/
 | Narrative and retention potential | 15 | 13 | Sitcom format, five acts, drawn explainers |
 | Competitive differentiation | 10 | 7 | FY2026 data, float and deferred fees; crowded field incl. CNBC's 4.9M-view video |
 | **Total** | 100 | **87** | target ≥ 85 (editorial estimate) |
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "How Costco Makes Billions Selling Almost Nothing" → "How Costco Really Makes Money Selling Almost Nothing" (no em dash; first 30 characters "How Costco Really Makes Money " read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Costco Barely Profits on What It Sells. So Where Do the Billions Come From?" → "Costco's Real Profit Machine".
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

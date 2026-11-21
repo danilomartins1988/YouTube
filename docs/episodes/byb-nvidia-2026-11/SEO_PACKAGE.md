@@ -91,3 +91,10 @@ From the final timeline: `youtube-package/chapters.txt`.
 | Narrative and retention potential | 15 | 12 | contradiction hook, boards |
 | Competitive differentiation | 10 | 9 | filings-only reverse calculation |
 | **Total** | 100 | **83** | below 85: accepted because the format is owner-approved and refreshed quarterly; improve with title #4 as an A/B test if offered |
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Before You Buy Nvidia Stock, Watch This (Nov 2026)" → "Nvidia Stock, Before You Buy: What's Priced In (Nov 2026)" (no em dash; first 30 characters "Nvidia Stock, Before You Buy: " read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Nvidia Doubled Its Sales. Why Only 16.6 Times Profit?" → "Nvidia Stock: Why the Low P/E?".
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

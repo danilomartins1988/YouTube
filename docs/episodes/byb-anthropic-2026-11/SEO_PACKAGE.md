@@ -68,3 +68,11 @@ each quarter per the series rule. Figures are dated on screen.
 | Narrative and retention potential | 15 | 13 |
 | Competitive differentiation | 10 | 9 |
 | **Total** | **100** | **85** |
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title kept: "Anthropic Stock Before You Buy: 7 Things to Check (Nov 2026)" (passes the 30-character and no-dash checks).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Short titles (30-character rule, duplicates): youtube-short: "Anthropic Stock: Big Unlock by May 17, 2027" → "Anthropic Stock: Unlock Dates".
+- Description: 9 source lines moved to pinned comment; subscribe line added (now 4113 bytes).
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).

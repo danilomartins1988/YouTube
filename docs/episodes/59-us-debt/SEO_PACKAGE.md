@@ -193,3 +193,9 @@ Concepts 2–3 reuse the episode's fact-checked narration only; no new figures.
 | Narrative and retention potential | 15 | 13 | IOU journey, dinner party, meter; 12:50 runtime |
 | Competitive differentiation | 10 | 8 | Custody caveat, Z.1 domestic holders, trust-fund loop, FY2026 interest vs defense |
 | **Total** | 100 | **86** | target ≥ 85 (editorial estimate) |
+
+## Update 2026-11-21 (review of unposted films, docs/REVIEW_UNPOSTED_2026-11-21.md)
+
+- Title: "Who Actually Owns America's $40 Trillion in Debt?" → "Who Owns America's Debt? It's Not Who You Think" (no em dash; first 30 characters "Who Owns America's Debt? It's " read on their own; led by real autocomplete terms, `autocomplete` evidence as above or in docs/REVIEW_UNPOSTED_2026-11-21.md).
+- Default thumbnail: `thumbnail.png` is now the P poster (owner model); the previous default is kept as `thumbnail_previous.png`.
+- Pinned comment: `youtube-package/pinned_comment.md` (episode question + like/subscribe line).
