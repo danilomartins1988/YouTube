@@ -1,5 +1,7 @@
 # Call to action standard: subscribe and like (owner, 2026-11-20, permanent)
 
+**Status: approved by the owner on 2026-11-21** ("Aprovada a vinheta pedindo seguidores"). The narrated subscribe card before the channel intro is now the channel standard for every new film.
+
 The owner's request: "We need to start having a call for the viewer to subscribe to the channel and hit like."
 Before this date no film, Short or package asked for it. From now on every film does, in the ways below, and the build
 does it for you.
