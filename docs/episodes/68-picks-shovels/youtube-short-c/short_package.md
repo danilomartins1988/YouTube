@@ -17,6 +17,8 @@ Third stamp, South Korea. Nugget's brain is fast, but forgetful.
 
 Watch the full story: "The Countries That Could Win the AI Economy Without Building AI" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #hbm #memory #ai #economics
 ```
 

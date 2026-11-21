@@ -18,11 +18,11 @@ Every figure is sourced below: the College Sports Commission, the House v. NCAA 
 Chapters
 0:00 Twenty point five million
 0:51 The settlement
-3:01 Year one
-5:17 Fewer seats
-7:24 The referee
-9:02 Students or employees
-10:28 The lesson
+3:09 Year one
+5:25 Fewer seats
+7:32 The referee
+9:10 Students or employees
+10:36 The lesson
 
 Sources
 - U.S. District Court, Northern District of California: In re College Athlete NIL Litigation (House v. NCAA), No. 4:20-cv-03919-CW, Order granting final approval (Dkt 978, Jun 6, 2025) - https://swimswam.com/wp-content/uploads/2025/06/Grant-House-vs-NCAA-Order-Granting-Final-Approval-to-Settlement.pdf
@@ -39,11 +39,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Twenty point five million
 0:51 The settlement
-3:01 Year one
-5:17 Fewer seats
-7:24 The referee
-9:02 Students or employees
-10:28 The lesson
+3:09 Year one
+5:25 Fewer seats
+7:32 The referee
+9:10 Students or employees
+10:36 The lesson
 ```
 
 ## Tags

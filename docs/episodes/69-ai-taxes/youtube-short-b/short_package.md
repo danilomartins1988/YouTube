@@ -17,6 +17,8 @@ Then Stub shows Rosa the big picture. In America, almost nine out of every ten d
 
 Watch the full story: "If AI Replaces Workers, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #taxes #economy #ai #economics
 ```
 

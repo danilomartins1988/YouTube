@@ -17,6 +17,8 @@ Ten in the morning. A giant box with no windows, concrete floors and steel racks
 
 Watch the full story: "How Costco Makes Billions Selling Almost Nothing" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #costco #business #economics
 ```
 

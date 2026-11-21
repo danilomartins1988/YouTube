@@ -17,6 +17,8 @@ Then Nora shows him the most extreme case. ASML, in the Dutch town of Veldhoven,
 
 Watch the full story: "Everyone Says Europe Is Falling Behind. AI Could Change That" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #europe #asml #chips #economics
 ```
 

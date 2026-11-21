@@ -17,6 +17,8 @@ But here's the strange part. Look at where the robots go.
 
 Watch the full story: "Will AI Make Japan Rich Again?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #japan #robots #manufacturing #economics
 ```
 

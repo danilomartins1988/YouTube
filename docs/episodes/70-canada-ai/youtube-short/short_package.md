@@ -17,6 +17,8 @@ Meet Maya. She trains artificial intelligence in a lab in Montreal, and this mor
 
 Watch the full story: "Why Canada Could Be the Biggest Winner of the AI Boom" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #canada #ai #economy #economics
 ```
 

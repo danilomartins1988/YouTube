@@ -17,6 +17,8 @@ So Dana asks the obvious question. Who owns the machines?
 
 Watch the full story: "Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #stocks #ai #economy #economics
 ```
 

@@ -17,6 +17,8 @@ One Tuesday morning, a toaster dies. Its owner, Mel, flips it over and finds thr
 
 Watch the full story: "Why the World Still Depends on Chinese Factories" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #china #manufacturing #economics
 ```
 

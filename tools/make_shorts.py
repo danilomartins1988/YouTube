@@ -3,7 +3,8 @@
 The Short reuses the episode's already-narrated, fact-checked opening segments (everything before the first act card,
 skipping the channel intro), cut from the final MP4 with the timings in timeline.json. Layout, inside the 9:16 safe
 zone (top 250, bottom 480, right 140): a big two-line hook headline on top, the 16:9 picture in the middle, burned-in
-word captions (from the timeline's word timings) below, and a 2.5 s end card pointing to the full episode.
+word captions (from the timeline's word timings) below, and a 2.5 s end card pointing to the full episode, with
+"FOLLOW FOR MORE" and the animated SUBSCRIBE / LIKE widget (docs/CTA_STANDARD.md).
 No new narration, no new figures: every word and number comes from the published episode.
 
 Run: python tools/make_shorts.py [episode-id ...]   (default: every entry in SHORTS)
@@ -17,6 +18,9 @@ import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from hiddeneco.cta import SHORT_FOLLOW_LINE  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 FONT_B = "/usr/share/fonts/opentype/inter/InterDisplay-ExtraBold.otf"
@@ -228,12 +232,25 @@ def headline_layer(l1, l2, path, end=False):
     fb = ImageFont.truetype(FONT_M, 34)
     d.text((cx, 262), "THE HIDDEN ECONOMICS", font=fb, fill=(170, 180, 200), anchor="ma")
     if end:
-        fe = ImageFont.truetype(FONT_B, 66)
-        d.rounded_rectangle([90, 820, W - 150, 1160], radius=36, fill=(255, 255, 255))
-        d.text((cx, 880), "FULL STORY", font=fe, fill=(12, 12, 12), anchor="ma")
-        d.text((cx, 970), "ON THE CHANNEL", font=fe, fill=(12, 12, 12), anchor="ma")
-        d.text((cx, 1070), "every figure sourced", font=ImageFont.truetype(FONT_M, 40), fill=(90, 90, 90), anchor="ma")
+        end_box(d)
     im.save(path)
+
+
+END_BOX = (90, 820, W - 150, 1420)       # end card box; the animated SUBSCRIBE / LIKE widget plays in its lower part
+CTA_WIDGET = ROOT / "assets" / "brand" / "cta" / "subscribe_cta_1080.webm"   # tools/render_cta_assets.py
+CTA_XY = (150, 1150)                     # top-left of the 720x246 widget (docs/CTA_STANDARD.md)
+
+
+def end_box(d):
+    """'FULL STORY ON THE CHANNEL' + 'FOLLOW FOR MORE' (docs/CTA_STANDARD.md); the widget is overlaid by build()."""
+    cx = 60 + (W - 60 - 140) / 2
+    fe = ImageFont.truetype(FONT_B, 66)
+    d.rounded_rectangle(list(END_BOX), radius=36, fill=(255, 255, 255))
+    d.text((cx, 870), "FULL STORY", font=fe, fill=(12, 12, 12), anchor="ma")
+    d.text((cx, 955), "ON THE CHANNEL", font=fe, fill=(12, 12, 12), anchor="ma")
+    d.text((cx, 1045), "every figure sourced", font=ImageFont.truetype(FONT_M, 38), fill=(90, 90, 90), anchor="ma")
+    d.rounded_rectangle([cx - 250, 1098, cx + 250, 1102], radius=2, fill=(220, 220, 220))
+    d.text((cx, 1112), "FOLLOW FOR MORE", font=ImageFont.truetype(FONT_B, 50), fill=(229, 38, 43), anchor="ma")
 
 
 def ass_time(t):
@@ -305,6 +322,7 @@ def short_copy(ep, narration):
     full_title = f"{title} #shorts"
     desc = (f"{lead}\n\n"
             f"Watch the full story: \"{long_title}\" on The Hidden Economics. Every figure in it is sourced.\n\n"
+            f"{SHORT_FOLLOW_LINE}\n\n"
             f"#shorts {' '.join(hs)} #economics")
     return full_title, desc, ", ".join(tags)
 
@@ -354,8 +372,9 @@ def build(ep):
     # 2) end card (2.5 s) with the last frame of the picture underneath
     endc = work / "end.mp4"
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-sseof", "-0.1", "-i", str(body), "-loop", "1", "-i", str(work / "end.png"),
-         "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
-         "-filter_complex", "[0:v]trim=end_frame=1,loop=loop=-1:size=1,setpts=N/30/TB,boxblur=8[b];[b][1:v]overlay=0:0[v]",
+         "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo", "-ss", "0.9", "-c:v", "libvpx-vp9", "-i", str(CTA_WIDGET),
+         "-filter_complex", "[0:v]trim=end_frame=1,loop=loop=-1:size=1,setpts=N/30/TB,boxblur=8[b];[b][1:v]overlay=0:0[e];"
+                            f"[3:v]scale=720:246[w];[e][w]overlay={CTA_XY[0]}:{CTA_XY[1]}:eof_action=pass[v]",
          "-map", "[v]", "-map", "2:a", "-t", "2.5", "-r", "30", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
          "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", str(endc)])
     out = ROOT / "output" / "shorts" / f"{ep}_short.mp4"

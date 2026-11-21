@@ -17,6 +17,8 @@ Some deals are built for the day itself. Consumer Reports has described low-pric
 
 Watch the full story: "How Black Friday Actually Makes Money" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #blackfriday #tv #shopping #economics
 ```
 

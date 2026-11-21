@@ -17,6 +17,8 @@ China comes third, with five hundred and ninety-one billion dollars. And its pla
 
 Watch the full story: "Who Actually Owns America's $40 Trillion in Debt?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #nationaldebt #china #economics
 ```
 

@@ -83,13 +83,16 @@ def build(deliverable: Deliverable, meta: dict, script: Script, dossier: Dossier
         desc = [meta.get("description_intro", script.logline), ""]
         if not note:
             desc += ["Chapters", *chap, ""]
-        tail = ["", "Credits & licences", *cred, "",
+        from hiddeneco.cta import DESCRIPTION_LINE, PINNED_LINE
+        tail = ["", DESCRIPTION_LINE, "", "Credits & licences", *cred, "",
                 "Some statements are the channel's interpretation; these are marked in the script notes.", "",
                 " ".join(meta.get("hashtags", []))]
         text, overflow = fit_description(desc, src, tail)
         if overflow:   # full list goes in a pinned comment (YouTube comments allow 10,000 characters)
-            (out_dir / "pinned_comment.md").write_text("Sources (full list)\n" + "\n".join(src) + "\n",
+            (out_dir / "pinned_comment.md").write_text(PINNED_LINE + "\n\nSources (full list)\n" + "\n".join(src) + "\n",
                                                         encoding="utf-8")
+        else:            # the pinned comment still carries the like / subscribe ask (docs/CTA_STANDARD.md)
+            (out_dir / "pinned_comment.md").write_text(PINNED_LINE + "\n", encoding="utf-8")
         md += ["## Title options", ""] + [f"{i}. {t} ({len(t)} chars)" for i, t in enumerate(titles, 1)]
         md += ["", f"## Description ({len(text)} chars)", "", "```", text, "```", ""]
         if note:

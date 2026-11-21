@@ -18,11 +18,11 @@ Every figure is sourced below. Our own calculations are said as such in the film
 Chapters
 0:00 One point six five trillion dollars
 0:52 The price of a degree
-3:28 The biggest lender
-5:42 The middlemen
-7:51 When the pause ended
-9:51 The new rules
-11:09 The lesson
+3:36 The biggest lender
+5:50 The middlemen
+7:59 When the pause ended
+9:59 The new rules
+11:17 The lesson
 
 Sources
 - Federal Reserve Bank of New York: Quarterly Report on Household Debt and Credit, 2026:Q2 (report and data workbook) - https://www.newyorkfed.org/medialibrary/interactives/householdcredit/data/pdf/HHDC_2026Q2.pdf
@@ -46,11 +46,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 One point six five trillion dollars
 0:52 The price of a degree
-3:28 The biggest lender
-5:42 The middlemen
-7:51 When the pause ended
-9:51 The new rules
-11:09 The lesson
+3:36 The biggest lender
+5:50 The middlemen
+7:59 When the pause ended
+9:59 The new rules
+11:17 The lesson
 ```
 
 ## Tags

@@ -17,6 +17,8 @@ Then Bia hands Gus a tiny jar of gray powder. This is niobium.
 
 Watch the full story: "Could Brazil Become the World's Factory for Robots?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #brazil #niobium #mining #economics
 ```
 

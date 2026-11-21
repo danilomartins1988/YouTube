@@ -18,11 +18,11 @@ Every figure is sourced below: the House Financial Services Committee staff repo
 Chapters
 0:00 One point six billion
 0:52 The firm
-2:54 The bet
-5:00 The last week
-6:41 The missing money
-8:12 The aftermath
-10:20 The lesson
+3:02 The bet
+5:08 The last week
+6:49 The missing money
+8:20 The aftermath
+10:28 The lesson
 
 Sources
 - U.S. House of Representatives: House Financial Services Committee, Oversight & Investigations staff report on MF Global (Nov 15, 2012) - https://financialservices.house.gov/uploadedfiles/256882456288524.pdf
@@ -39,11 +39,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 One point six billion
 0:52 The firm
-2:54 The bet
-5:00 The last week
-6:41 The missing money
-8:12 The aftermath
-10:20 The lesson
+3:02 The bet
+5:08 The last week
+6:49 The missing money
+8:20 The aftermath
+10:28 The lesson
 ```
 
 ## Tags

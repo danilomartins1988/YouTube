@@ -18,11 +18,11 @@ Every figure is sourced below: USDA ERS, the Bureau of Labor Statistics, company
 Chapters
 0:00 Eleven point eight cents
 0:42 The food dollar
-2:45 The price shock
-5:05 The penny business
-6:49 The profit debate
-8:46 Fewer, bigger players
-10:42 The lesson
+2:53 The price shock
+5:13 The penny business
+6:57 The profit debate
+8:54 Fewer, bigger players
+10:50 The lesson
 
 Sources
 Main sources: USDA Economic Research Service; U.S. Bureau of Labor Statistics; The Kroger Co. (SEC EDGAR); Albertsons Companies (SEC EDGAR); Walmart Inc. (SEC EDGAR); FMI – The Food Industry Association (trade group); Federal Trade Commission (staff report); Federal Trade Commission; USDA Economic Research Service (Amber Waves); Federal Trade Commission (staff study); U.S. Bureau of Labor Statistics (Beyond the Numbers); Private Label Manufacturers Association (trade group; Circana data).
@@ -35,11 +35,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Eleven point eight cents
 0:42 The food dollar
-2:45 The price shock
-5:05 The penny business
-6:49 The profit debate
-8:46 Fewer, bigger players
-10:42 The lesson
+2:53 The price shock
+5:13 The penny business
+6:57 The profit debate
+8:54 Fewer, bigger players
+10:50 The lesson
 ```
 
 ## Tags

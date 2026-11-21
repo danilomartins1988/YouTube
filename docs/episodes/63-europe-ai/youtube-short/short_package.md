@@ -17,6 +17,8 @@ Theo sees it on his own shop floor. The veterans are retiring, and fewer young p
 
 Watch the full story: "Everyone Says Europe Is Falling Behind. AI Could Change That" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #europe #economy #ai #economics
 ```
 

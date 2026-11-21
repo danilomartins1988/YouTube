@@ -17,6 +17,8 @@ And this has happened before. Britain, the age of steam.
 
 Watch the full story: "Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #history #robots #economy #economics
 ```
 

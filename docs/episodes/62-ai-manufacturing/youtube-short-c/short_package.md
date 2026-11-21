@@ -17,6 +17,8 @@ So, could AI make American factories cheaper than China's? For some products, ye
 
 Watch the full story: "Could AI Make American Factories Cheaper Than China's?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #robots #jobs #ai #economics
 ```
 

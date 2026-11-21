@@ -17,6 +17,8 @@ Every year, PJM holds an auction, paying power plants to promise they'll be ther
 
 Watch the full story: "Why AI Could Make Your Electricity Bill Explode" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #ai #electricity #energy #economics
 ```
 

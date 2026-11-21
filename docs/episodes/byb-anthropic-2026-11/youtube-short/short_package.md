@@ -19,6 +19,8 @@ Not investment advice. Data as of the Nov 19, 2026 close; sources in the full vi
 
 Watch the full story: "Anthropic Stock Before You Buy: 7 Things to Check (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #anthropic #stocks #ipo #economics
 ```
 

@@ -17,6 +17,8 @@ In Stockton, California, a pilot sent a small group of residents $500 a month, n
 
 Watch the full story: "If AI Replaces Workers, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #basicincome #ubi #ai #economics
 ```
 

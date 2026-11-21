@@ -17,6 +17,8 @@ And right now, the biggest machines in history are going up. Data centers for AI
 
 Watch the full story: "Who Gets Rich When Robots Do the Work?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #ai #nvidia #datacenters #economics
 ```
 

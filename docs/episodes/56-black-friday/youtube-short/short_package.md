@@ -17,6 +17,8 @@ Five in the morning, the day after Thanksgiving. A crowd has been waiting outsid
 
 Watch the full story: "How Black Friday Actually Makes Money" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #blackfriday #shopping #economics
 ```
 

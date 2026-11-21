@@ -17,6 +17,8 @@ Saturday morning. An open house in an ordinary suburb.
 
 Watch the full story: "Why Americans Can No Longer Afford a Home" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #housing #realestate #economics
 ```
 

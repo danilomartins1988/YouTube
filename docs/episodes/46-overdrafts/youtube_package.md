@@ -18,11 +18,11 @@ Every figure is sourced below: CFPB data and reports, the Federal Reserve (Regul
 Chapters
 0:00 Thirty-five dollars
 0:52 The fee
-2:49 Who pays
-4:56 The retreat
-7:10 The rule that vanished
-9:04 Still billions
-11:11 The lesson
+2:57 Who pays
+5:04 The retreat
+7:18 The rule that vanished
+9:12 Still billions
+11:19 The lesson
 
 Sources
 - Consumer Financial Protection Bureau: Data Spotlight: Overdraft/NSF revenue in 2023 down more than 50% versus pre-pandemic levels - https://www.consumerfinance.gov/data-research/research-reports/data-spotlight-overdraft-nsf-revenue-in-2023-down-more-than-50-versus-pre-pandemic-levels-saving-consumers-over-6-billion-annually/
@@ -42,11 +42,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Thirty-five dollars
 0:52 The fee
-2:49 Who pays
-4:56 The retreat
-7:10 The rule that vanished
-9:04 Still billions
-11:11 The lesson
+2:57 Who pays
+5:04 The retreat
+7:18 The rule that vanished
+9:12 Still billions
+11:19 The lesson
 ```
 
 ## Tags

@@ -17,6 +17,8 @@ And finally, the bank. To build a factory, you borrow.
 
 Watch the full story: "Could Brazil Become the World's Factory for Robots?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #brazil #economy #business #economics
 ```
 

@@ -17,6 +17,8 @@ So Theo sketches his own company's future. Call it Company E.
 
 Watch the full story: "Everyone Says Europe Is Falling Behind. AI Could Change That" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #ai #robots #economy #economics
 ```
 

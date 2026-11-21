@@ -17,6 +17,8 @@ Step behind the drink fridge in a Tokyo convenience store, and you may find a ro
 
 Watch the full story: "Will AI Make Japan Rich Again?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #japan #robots #ai #economics
 ```
 

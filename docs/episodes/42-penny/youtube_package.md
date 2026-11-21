@@ -18,11 +18,11 @@ Every figure is sourced below: the U.S. Mint 2024 Annual Report, Mint and Treasu
 Chapters
 0:00 Three point six nine cents
 0:42 The coin that costs too much
-3:03 The last penny
-5:18 The rounding
-7:35 Before and elsewhere
-8:59 The nickel problem
-10:42 The lesson
+3:11 The last penny
+5:26 The rounding
+7:43 Before and elsewhere
+9:07 The nickel problem
+10:50 The lesson
 
 Sources
 - United States Mint (FRASER archive copy): United States Mint 2024 Annual Report - https://fraser.stlouisfed.org/docs/publications/usmint/usmint_2024-Annual-Report.pdf
@@ -44,11 +44,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Three point six nine cents
 0:42 The coin that costs too much
-3:03 The last penny
-5:18 The rounding
-7:35 Before and elsewhere
-8:59 The nickel problem
-10:42 The lesson
+3:11 The last penny
+5:26 The rounding
+7:43 Before and elsewhere
+9:07 The nickel problem
+10:50 The lesson
 ```
 
 ## Tags

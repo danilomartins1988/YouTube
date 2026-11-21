@@ -17,6 +17,8 @@ Are the companies making money? BYD is.
 
 Watch the full story: "Why Are Chinese Cars So Cheap — And So Advanced?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #byd #ev #business #economics
 ```
 

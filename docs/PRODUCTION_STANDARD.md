@@ -3,6 +3,11 @@
 Every episode is an original animated economic documentary, not a narrated slideshow. This file is the
 reusable standard. `README.md` covers how to run the pipeline; this file covers what a finished episode must be.
 
+> **Subscribe + like call to action (owner, 2026-11-20, permanent):** follow `docs/CTA_STANDARD.md`. Every long film has
+> a narrated SUBSCRIBE ask with the animated SUBSCRIBE / LIKE card right BEFORE the channel intro, and a narrated like +
+> comment ask before the teaser / end card; both are inserted automatically by the build (`hiddeneco/cta.py`).
+> Shorts end on "FOLLOW FOR MORE" with the animated widget; descriptions and the pinned comment carry the subscribe line.
+>
 > **Smaller files (owner, 2026-11-19):** the upload copy `*_light.mp4` is encoded 1280×720 H.264 `-preset slow -crf 32
 > -tune animation`, AAC 80k (about 28% smaller than before, visually identical on our animation). Set in post.sh.
 >

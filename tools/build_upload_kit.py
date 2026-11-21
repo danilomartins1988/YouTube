@@ -79,7 +79,8 @@ def main() -> None:
               "## Settings in YouTube Studio\n",
               "- Audience: **No, it's not made for kids**\n- Category: **Education**\n- Video language: **English**\n"
               "- Captions: upload the `.srt` above (Subtitles → Upload file → With timing)\n"
-              "- End screen: add *Best for viewer* video + *Subscribe*\n- Visibility: **Private**, publish when you want\n"]
+              "- End screen: add *Best for viewer* video + *Subscribe*\n"
+              "- Pinned comment: post the pinned-comment text from docs/CTA_STANDARD.md (like + subscribe + the episode question) and pin it\n- Visibility: **Private**, publish when you want\n"]
         if sh:
             md += ["---\n", "## Short for this episode (upload after the long video is public)\n",
                    f"- File: `{sh['file']}`\n", "**Title**\n", code(sh["title"]), "**Description**\n", code(sh["description"]),

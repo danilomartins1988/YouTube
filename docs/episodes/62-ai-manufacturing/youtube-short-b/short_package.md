@@ -17,6 +17,8 @@ It is. Last year, factories in China installed more industrial robots than the r
 
 Watch the full story: "Could AI Make American Factories Cheaper Than China's?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #robots #china #factory #economics
 ```
 

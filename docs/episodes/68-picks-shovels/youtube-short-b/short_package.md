@@ -17,6 +17,8 @@ Second stamp, the Netherlands. A flat, green country with one very unusual shop.
 
 Watch the full story: "The Countries That Could Win the AI Economy Without Building AI" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #asml #semiconductors #ai #economics
 ```
 

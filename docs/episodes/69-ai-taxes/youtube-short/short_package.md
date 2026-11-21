@@ -17,6 +17,8 @@ Meet Rosa. She's the mayor of Pinewick, a small town with one big employer, the 
 
 Watch the full story: "If AI Replaces Workers, Who Pays the Taxes?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #ai #robots #taxes #economics
 ```
 

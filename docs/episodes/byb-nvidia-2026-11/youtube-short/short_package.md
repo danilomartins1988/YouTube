@@ -17,6 +17,8 @@ Nvidia just reported $115.8 billion of revenue in three months, more than double
 
 Watch the full story: "Before You Buy Nvidia Stock, Watch This (Nov 2026)" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #nvidia #stocks #investing #economics
 ```
 

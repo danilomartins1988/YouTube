@@ -17,6 +17,8 @@ So who got rich? Let's play detective with a hypothetical early investor.
 
 Watch the full story: "Anthropic's $1.5 Trillion IPO: The AI Gold Rush or the Next Bubble?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #anthropic #ipo #stocks #economics
 ```
 

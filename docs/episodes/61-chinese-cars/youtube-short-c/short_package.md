@@ -17,6 +17,8 @@ If subsidies were the whole story, those duties would have closed the gap. Inste
 
 Watch the full story: "Why Are Chinese Cars So Cheap — And So Advanced?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #ev #battery #china #economics
 ```
 

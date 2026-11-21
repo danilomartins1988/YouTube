@@ -18,11 +18,11 @@ Every figure is sourced below, mostly from FAA, GAO, TSA, BTS and airport financ
 Chapters
 0:00 Six point nine billion dollars
 0:47 Who owns the airport
-2:41 The ticket
-4:59 The landlord
-6:53 The car
-8:38 The terminal
-10:22 The lesson
+2:49 The ticket
+5:07 The landlord
+7:01 The car
+8:46 The terminal
+10:30 The lesson
 
 Sources
 - Federal Aviation Administration: Certification Activity Tracking System (CATS), Form 127, all airports, FY2025 and FY2024 - https://cats.airports.faa.gov/reports/form-127-all-airports
@@ -44,11 +44,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Six point nine billion dollars
 0:47 Who owns the airport
-2:41 The ticket
-4:59 The landlord
-6:53 The car
-8:38 The terminal
-10:22 The lesson
+2:49 The ticket
+5:07 The landlord
+7:01 The car
+8:46 The terminal
+10:30 The lesson
 ```
 
 ## Tags

@@ -18,11 +18,11 @@ Every figure is sourced below. 2026 EIA data are preliminary; our own calculatio
 Chapters
 0:00 Twenty-eight dollars to two hundred and seventy
 0:54 The bill
-3:19 The wires
-5:07 The fuel paradox
-6:46 The data center rush
-9:15 The utility deal
-10:51 The lesson
+3:27 The wires
+5:15 The fuel paradox
+6:54 The data center rush
+9:23 The utility deal
+10:59 The lesson
 
 Sources
 - U.S. Energy Information Administration: Electric Power Monthly, Tables 5.3 and 5.6.B (August 2026 data) - https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_3
@@ -47,11 +47,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Twenty-eight dollars to two hundred and seventy
 0:54 The bill
-3:19 The wires
-5:07 The fuel paradox
-6:46 The data center rush
-9:15 The utility deal
-10:51 The lesson
+3:27 The wires
+5:15 The fuel paradox
+6:54 The data center rush
+9:23 The utility deal
+10:59 The lesson
 ```
 
 ## Tags

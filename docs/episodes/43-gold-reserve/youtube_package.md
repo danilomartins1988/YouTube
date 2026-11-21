@@ -18,11 +18,11 @@ Every figure is sourced below: Treasury Fiscal Data, 31 U.S.C. 5117 and the 1972
 Chapters
 0:00 Eleven billion dollars
 0:47 The pile
-3:22 The price tag
-5:09 The paper gold
-6:39 Who checks the vault
-8:37 Rewriting the price
-10:55 The lesson
+3:30 The price tag
+5:17 The paper gold
+6:47 Who checks the vault
+8:45 Rewriting the price
+11:03 The lesson
 
 Sources
 - U.S. Treasury, Fiscal Data: Status Report of U.S. Government Gold Reserve (as of Oct 31, 2026) - https://fiscaldata.treasury.gov/datasets/status-report-government-gold-reserve/
@@ -43,11 +43,11 @@ Narration: AI voice. Animation: original. Nothing in this video is financial adv
 ```
 0:00 Eleven billion dollars
 0:47 The pile
-3:22 The price tag
-5:09 The paper gold
-6:39 Who checks the vault
-8:37 Rewriting the price
-10:55 The lesson
+3:30 The price tag
+5:17 The paper gold
+6:47 Who checks the vault
+8:45 Rewriting the price
+11:03 The lesson
 ```
 
 ## Tags

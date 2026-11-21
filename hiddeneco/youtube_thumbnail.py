@@ -388,6 +388,12 @@ def package_texts(brief: dict) -> dict:
     desc = _section(md, "Description") or ""
     tags = _section(md, "Tags") or _section(md, "Keywords / tags") or ""
     chapters = "\n".join(l for l in desc.splitlines() if re.match(r"^\d{1,2}:\d{2}\s", l))
+    from hiddeneco.cta import DESCRIPTION_LINE    # every description carries the subscribe line (docs/CTA_STANDARD.md)
+    if desc and "subscribe" not in desc.lower():
+        ls = desc.rstrip().split("\n")
+        k = len(ls) - 1 if ls[-1].lstrip().startswith("#") else len(ls)
+        cand = "\n".join(ls[:k] + ["", DESCRIPTION_LINE, ""] + ls[k:]).replace("\n\n\n", "\n\n")
+        desc = cand if len(cand) <= 5000 else desc
     return {"title": brief["title"], "description": desc, "tags": tags.replace("\n", " ").strip(), "chapters": chapters,
             "source": str(src.relative_to(REPO_ROOT))}
 

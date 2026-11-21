@@ -17,6 +17,8 @@ And this has happened before. Meet aluminum, the metal in your soda can.
 
 Watch the full story: "Could Cheap Electricity Become the New Oil?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #aluminum #electricity #energy #economics
 ```
 

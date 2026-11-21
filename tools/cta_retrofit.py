@@ -322,9 +322,46 @@ def retrofit(name: str) -> dict:
     return rec
 
 
+# ------------------------------------------------------------------------------------------------ Shorts
+def retrofit_short(path: Path) -> dict:
+    """Replace the Short's 2.5 s end card (its own GOP at the end, see tools/make_shorts.py) with the new one:
+    the same box plus FOLLOW FOR MORE and the animated SUBSCRIBE / LIKE widget. The body is stream-copied."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    import make_shorts as ms
+    from PIL import Image, ImageDraw
+    SCRATCH.mkdir(parents=True, exist_ok=True)
+    patch = SCRATCH / "short_end_patch.png"
+    if not patch.exists():
+        im = Image.new("RGBA", (ms.W, ms.H), (0, 0, 0, 0))
+        ms.end_box(ImageDraw.Draw(im))
+        im.save(patch)
+    old = duration(path)
+    keys = [float(x.strip(",")) for x in sh(["ffprobe", "-v", "error", "-select_streams", "v", "-skip_frame", "nokey", "-show_entries",
+                                               "frame=pts_time", "-of", "csv=p=0", str(path)]).split() if x.strip(",")]
+    k = max(keys)
+    if not 2.3 < old - k < 2.7:
+        raise SystemExit(f"{path.name}: last keyframe {k:.2f} is not the end card start (duration {old:.2f})")
+    body, end, lst, tmp = (SCRATCH / f"_sb.mp4", SCRATCH / f"_se.mp4", SCRATCH / "_sl.txt", SCRATCH / f"_{path.name}")
+    sh(["ffmpeg", "-y", "-loglevel", "error", "-i", str(path), "-t", f"{k - 0.001:.3f}", "-c", "copy", str(body)])
+    sh(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{k:.3f}", "-i", str(path), "-loop", "1", "-i", str(patch),
+        "-ss", "0.9", "-c:v", "libvpx-vp9", "-i", str(ROOT / "assets" / "brand" / "cta" / "subscribe_cta_1080.webm"),
+        "-filter_complex", f"[1:v]format=rgba,fade=t=in:d=0.15:alpha=1[p];[0:v][p]overlay=0:0:shortest=1[e];[2:v]scale=720:246[w];"
+                           f"[e][w]overlay={ms.CTA_XY[0]}:{ms.CTA_XY[1]}:eof_action=pass[v]",
+        "-map", "[v]", "-map", "0:a", "-t", f"{old - k:.3f}", "-r", "30", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+        "-pix_fmt", "yuv420p", "-c:a", "copy", str(end)])
+    lst.write_text(f"file '{body}'\nfile '{end}'\n")
+    sh(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", "-movflags", "+faststart", str(tmp)])
+    new = duration(tmp)
+    if abs(new - old) > 0.1:
+        raise SystemExit(f"{path.name}: duration {new:.3f} != {old:.3f}")
+    os.replace(tmp, path)
+    log(path.name, "short_done", end_card_at=round(k, 3), old_s=round(old, 3), new_s=round(new, 3))
+    return {"short": path.name, "end_card_at": round(k, 2), "dur": round(new, 2)}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["clip", "run", "status", "list"])
+    ap.add_argument("cmd", choices=["clip", "run", "status", "list", "shorts"])
     ap.add_argument("names", nargs="*")
     ap.add_argument("--next", type=int, default=0)
     ap.add_argument("--force", action="store_true")
@@ -336,6 +373,12 @@ def main() -> None:
     if a.cmd == "list":
         for n in UNPOSTED:
             print(n, film_info(n)["slug"])
+        return
+    if a.cmd == "shorts":   # names = Short files (output/shorts/<ep>_short.mp4); skips ones already logged
+        seen = {json.loads(x)["name"] for x in LOG.read_text().splitlines() if '"short_done"' in x} if LOG.exists() else set()
+        for n in a.names:
+            p = ROOT / "output" / "shorts" / (n if n.endswith(".mp4") else f"{n}_short.mp4")
+            print(f"{p.name}: already done (log)" if p.name in seen and not a.force else json.dumps(retrofit_short(p)))
         return
     done = done_names()
     if a.cmd == "status":

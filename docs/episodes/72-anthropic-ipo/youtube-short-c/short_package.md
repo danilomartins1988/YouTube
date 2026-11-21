@@ -17,6 +17,8 @@ At its first close, Anthropic was priced at about twenty times its yearly sales 
 
 Watch the full story: "Anthropic's $1.5 Trillion IPO: The AI Gold Rush or the Next Bubble?" on The Hidden Economics. Every figure in it is sourced. Not investment advice.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #anthropic #aibubble #stocks #economics
 ```
 

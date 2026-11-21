@@ -17,6 +17,8 @@ Meet Maya. She lives in Northern Virginia, and this is her electric bill.
 
 Watch the full story: "Why AI Could Make Your Electricity Bill Explode" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #ai #electricbill #datacenters #economics
 ```
 

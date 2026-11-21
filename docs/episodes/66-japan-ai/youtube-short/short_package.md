@@ -17,6 +17,8 @@ Meet Hiro. He makes small, precise metal parts in a workshop in a mountain town 
 
 Watch the full story: "Will AI Make Japan Rich Again?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #japan #robots #economy #economics
 ```
 

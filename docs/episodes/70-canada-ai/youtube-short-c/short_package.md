@@ -17,6 +17,8 @@ In Toronto, Geoffrey Hinton spent decades on artificial neural networks, when mu
 
 Watch the full story: "Why Canada Could Be the Biggest Winner of the AI Boom" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #canada #ai #deeplearning #economics
 ```
 

@@ -17,6 +17,8 @@ Third pin, Quebec. Nia checks the price.
 
 Watch the full story: "Could Cheap Electricity Become the New Oil?" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #quebec #electricity #ai #economics
 ```
 

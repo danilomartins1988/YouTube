@@ -17,6 +17,8 @@ But regulators are pushing back. In Ohio, after the local utility paused new dat
 
 Watch the full story: "Why AI Could Make Your Electricity Bill Explode" on The Hidden Economics. Every figure in it is sourced.
 
+Follow The Hidden Economics for more of the hidden money behind the headlines.
+
 #shorts #ai #electricbill #utilities #economics
 ```
 
