@@ -44,6 +44,7 @@ def _retint(obj_filter, rgb, name, **kw):
 def build_milo():
     arm = build_dog('milo')
     s = DOGS['milo']['scale']
+    arm.scale = (1, 1, 1); reset_pose(arm); bpy.context.view_layer.update()  # build extras in base (unscaled) coords
     # remove the bandana triangle + dots, add a purple collar (torus) on the neck
     for o in [o for o in bpy.data.objects if o.name.startswith('milo_bandana') or o.name.startswith('milo_dot')]:
         bpy.data.objects.remove(o, do_unlink=True)
@@ -74,6 +75,7 @@ def build_milo():
             w.data.materials.append(mat('whisker', (0.97, 0.96, 0.93), rough=0.4))
             w.parent = arm; w.parent_type = 'BONE'; w.parent_bone = 'head'
             w.matrix_parent_inverse = (arm.matrix_world @ arm.pose.bones['head'].matrix).inverted()
+    arm.scale = (s, s, s); bpy.context.view_layer.update()
     return arm
 
 _orig_build = cp_chars.build

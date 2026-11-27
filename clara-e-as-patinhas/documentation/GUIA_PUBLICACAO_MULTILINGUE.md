@@ -1,5 +1,7 @@
 # Guia de publicação multilíngue (YouTube) — v1, 2026-11-27
 
+> **Decisão do proprietário (2026-11-27):** "o vídeo principal precisa ser feito em português e os outros idiomas serão carregados por áudio." A **faixa original é pt-BR**; inglês e espanhol entram como faixas de áudio adicionais. (Substitui a preferência do Aditivo 03 por inglês como original; continua configurável em `clara-kids-studios/config/languages.json`.)
+
 **Importante:** não temos acesso ao canal do proprietário. Tudo abaixo vem da documentação pública do YouTube consultada em 2026-11-27 e **deve ser validado pelo proprietário no YouTube Studio**. Nada foi publicado.
 
 ## O que a documentação oficial diz (consultada em 2026-11-27)
@@ -10,19 +12,19 @@
 
 ## Passo a passo previsto no Studio (12 passos — validar)
 1. Confirmar que o canal está marcado/configurado como "feito para crianças" e que o recurso de áudio multilíngue aparece (Configurações → Padrões de upload / Recursos avançados).
-2. Enviar o vídeo com a **faixa original em inglês** (`exports/` → versão en-US).
-3. Definir idioma do vídeo = inglês; público = feito para crianças.
-4. Título, descrição e tags em inglês (`metadata/en-US`).
-5. Miniatura principal (universal sem texto ou a EN).
-6. Em **Idiomas** (Legendas/Traduções), adicionar **português (Brasil)** e **espanhol (América Latina)**.
+2. Enviar o vídeo principal com a **faixa original em português** (MP4 principal, áudio pt-BR).
+3. Definir idioma do vídeo = português (Brasil); público = feito para crianças.
+4. Título, descrição e tags em português (`metadata/pilot/pt-BR.md`).
+5. Miniatura principal: a PT (ou a universal sem texto).
+6. Em **Idiomas** (Legendas/Traduções), adicionar **inglês** e **espanhol (América Latina)**.
 7. Para cada idioma: **adicionar faixa de áudio** e enviar o arquivo correspondente (mesma duração exata do vídeo).
 8. Para cada idioma: título e descrição traduzidos (metadados localizados).
 9. Se disponível, miniatura por idioma.
-10. Conferir se não existe dublagem automática para PT/ES (apagar, se houver).
+10. Conferir se não existe dublagem automática para EN/ES (apagar, se houver).
 11. Publicar como **privado/não listado** primeiro e ouvir cada faixa no player (troca de idioma pelo menu de áudio).
 12. Só então publicar (decisão do proprietário).
 
 ## Contingências
-- **A. Começar com um idioma** (en-US ou pt-BR) e adicionar as faixas quando o recurso aparecer (vídeos existentes aceitam faixas novas, segundo a ajuda).
+- **A. Começar só com o português** e adicionar as faixas quando o recurso aparecer (vídeos existentes aceitam faixas novas, segundo a ajuda).
 - **B. Esperar o recurso** ser liberado para o canal.
 - **C. Canais separados por idioma** — só com autorização do proprietário (vídeos completos por idioma já podem ser exportados, porque o áudio de cada idioma tem a duração exata).

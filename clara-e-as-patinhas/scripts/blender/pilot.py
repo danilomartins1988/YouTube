@@ -23,7 +23,8 @@ BPM = TM['bpm']; BEAT = 60.0 / BPM; BAR = 4 * BEAT
 SEC = [(s['name'], s['start_ms'] / 1000, s['end_ms'] / 1000) for s in TM['sections']]
 DUR = TM['duration_ms'] / 1000; END_T = DUR + 1.0
 CAST = ('clara', 'ayra', 'pandora', 'tifa', 'milo')
-POS = {'clara': (0.0, 0.25), 'ayra': (-0.78, 0.0), 'pandora': (-0.4, -0.32), 'tifa': (0.38, -0.32), 'milo': (0.78, 0.0)}
+POS = {'clara': (0.0, 0.62), 'ayra': (-0.78, 0.0), 'pandora': (-0.4, -0.32), 'tifa': (0.38, -0.32), 'milo': (0.78, 0.0)}
+TEST = bool(os.environ.get('PILOT_TEST'))  # 'all five' animation test (Aditivo 01 sec. 41): every character does its move in chorus 1
 VERSE_OF = {'ayra': 'ayra', 'pandora': 'pandora', 'toby': 'tifa', 'milo': 'milo'}
 BASE_SCALE = {}; BASE_Z = {}
 
@@ -89,9 +90,11 @@ def pose(name, arm, t):
             hop(A, arm, seg(bl, 2.8, 3.6), height=0.05)
         elif name == 'clara' and lb in (0, 1, 3):
             clap(A, arm, (bl % 1.0) * 0.6) if bl > 3.0 else None
-    elif sname in ('ayra', 'pandora', 'toby', 'milo'):
-        star = VERSE_OF[sname]; evs = events(s0, t)
-        if name == star:
+    elif sname in ('ayra', 'pandora', 'toby', 'milo') or (TEST and sname.startswith('chorus')):
+        star = name if (TEST and sname.startswith('chorus')) else VERSE_OF[sname]; evs = events(s0, t)
+        if TEST and name == 'clara':
+            clap(A, arm, (bl % 1.0)); star = None
+        elif name == star:
             if name == 'ayra':
                 k = pulse(t, evs); mouth = 0.95 * k; A.rot('head', -14 * k, 0, 0); A.rot('neck', -8 * k, 0, 0)
                 u = hop_amount(t, evs, 0.3)
@@ -113,7 +116,7 @@ def pose(name, arm, t):
             if line == 4:  # "balanca o rabinho / wag your little tail / mueve la colita"
                 tail_wag(A, arm, t, freq=4.0, amp=40)
             expr = 'happy'
-        else:
+        elif star is not None:
             # watchers: look toward the star, little bounces on the beat
             if dog:
                 if line == 4: tail_wag(A, arm, t, freq=4.0, amp=40)
@@ -160,14 +163,15 @@ def pose(name, arm, t):
 
 
 def update(scene, depsgraph=None):
-    t = (scene.frame_current - 1) / FPS
+    tc = (scene.frame_current - 1) / FPS                       # whole frame: picks the camera shot (no blur smear across cuts)
+    t = (scene.frame_current - 1 + scene.frame_subframe) / FPS  # sub-frame time: real motion blur on the characters
     for name in CAST:
         arm = bpy.data.objects[name]; reset_pose(arm)
         spin = pose(name, arm, t)
         x, y = POS[name]
         arm.location = (x, y, BASE_Z[name])
         arm.rotation_euler = (0, 0, math.radians(spin))
-    camera(scene, t)
+    camera(scene, t, tc)
     for k in range(5):
         b = bpy.data.objects.get(f'butterfly_{k}')
         if b:
@@ -178,15 +182,15 @@ def update(scene, depsgraph=None):
                 if pv: pv.rotation_euler = (0, s * math.radians(55) * math.sin(2 * math.pi * 9 * t + k), 0)
 
 
-WIDE = ((0.0, -3.5, 1.05), (0.0, 0.0, 0.32), 30)
+WIDE = ((0.0, -2.55, 0.82), (0.0, 0.12, 0.34), 30)
 def shot_for(sname, t, s0, s1):
     if sname == 'intro':
         u = ease(seg(t, s0, s1)); p0, p1 = Vector((0.0, -5.0, 1.8)), Vector(WIDE[0])
         return p0.lerp(p1, u), Vector(WIDE[1]), 30
     if sname in ('ayra', 'pandora', 'toby', 'milo'):
         n = VERSE_OF[sname]; x, y = POS[n]; u = seg(t, s0, s1)
-        tg = Vector((x * 0.85, y, 0.2)); pos = Vector((x * 0.7 + 0.25 * (u - 0.5), y - 1.75, 0.55))
-        return pos, tg, 38
+        tg = Vector((x * 0.85, y + 0.15, 0.3)); pos = Vector((x * 0.7 + 0.2 * (u - 0.5), y - 1.95, 0.6))
+        return pos, tg, 33
     if sname == 'clara':
         u = seg(t, s0, s1)
         return Vector((0.15 * (u - 0.5), -2.2, 0.75)), Vector((0, 0.1, 0.42)), 34
@@ -196,8 +200,10 @@ def shot_for(sname, t, s0, s1):
     return Vector(WIDE[0]) + Vector((0.35 * math.sin(math.pi * (u - 0.5)), 0.2 * u, 0)), Vector(WIDE[1]), WIDE[2]
 
 
-def camera(scene, t):
-    sname, s0, s1 = section(t)
+def camera(scene, t, tc=None):
+    sname, s0, s1 = section(tc if tc is not None else t)
+    if tc is not None and section(t)[0] != sname:
+        t = tc
     pos, tg, lens = shot_for(sname, t, s0, s1)
     cam = scene.camera; cam.location = pos; cam.data.lens = lens
     cam.rotation_euler = (tg - pos).to_track_quat('-Z', 'Y').to_euler()
@@ -213,6 +219,8 @@ def setup(pct=100):
     for n in CAST:
         o = bpy.data.objects[n]; BASE_SCALE[n] = o.scale[0]
         x, y = POS[n]; BASE_Z[n] = max(ground_h(x, y), 0.0)
+    if os.environ.get('PILOT_NOMB'):  # re-render of camera-cut frames: no motion blur (avoids smear across the cut)
+        sc.eevee.use_motion_blur = False
     if os.environ.get('PILOT_FAST'):
         e = sc.eevee; e.taa_render_samples = 1; e.use_motion_blur = False; e.use_soft_shadows = False; e.use_gtao = False
         e.use_bloom = False; sc.camera.data.dof.use_dof = False; sc.use_nodes = False
@@ -232,6 +240,6 @@ if __name__ == '__main__':
     elif args[0] == 'render':
         s0, s1, outdir = int(args[1]), int(args[2]), args[3]
         setup(int(os.environ.get('PILOT_PCT', '100'))); sc = bpy.context.scene; os.makedirs(outdir, exist_ok=True)
-        sc.frame_start = s0; sc.frame_end = s1; sc.render.use_overwrite = False; sc.render.use_placeholder = True
+        sc.frame_start = s0; sc.frame_end = s1; sc.render.use_overwrite = bool(os.environ.get('PILOT_NOMB')); sc.render.use_placeholder = False
         sc.render.filepath = os.path.join(outdir, 'f#####')
         bpy.ops.render.render(animation=True)

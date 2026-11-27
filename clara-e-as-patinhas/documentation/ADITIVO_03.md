@@ -12,3 +12,6 @@
 - **Pastas** (§18): layout `clara-kids-studios/` implementado dentro de `clara-e-as-patinhas/` (o diretório não é movido) — ver `documentation/ESTRUTURA_PASTAS.md`.
 - **Custos** por item (§20) incluindo custo marginal de um idioma novo (`reports/CUSTOS_PILOTO_MULTILINGUE.md`).
 - **Vídeo:** 1920×1080, 16:9, **30 fps**.
+
+
+> **Correção do proprietário (2026-11-27):** "o vídeo principal precisa ser feito em português e os outros idiomas serão carregados por áudio." → faixa original **pt-BR**; EN e ES como faixas adicionais (exportações completas EN/ES só como contingência). Metadados principais em PT; EN/ES como metadados traduzidos.
