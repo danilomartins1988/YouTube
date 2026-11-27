@@ -62,11 +62,12 @@ def build_props():
     # 2) big toy bucket (sky blue, white rim stripe, yellow handle) - Pandora inside
     bx, by = SPOT['bucket']; z0 = ground_h(bx, by)
     bk = mat('ep2_bucket', (0.33, 0.66, 0.97), rough=0.3, coat=0.6); inner = mat('ep2_bucket_in', (0.20, 0.45, 0.80), rough=0.5)
-    open_bucket('ep2_bucket', (bx, by, z0 + 0.105), 0.135, 0.17, 0.21, bk, inner, C)
-    cylinder('ep2_bucket_band', (bx, by, z0 + 0.175), 0.168, 0.025, mat('ep2_white', (0.98, 0.98, 0.96), rough=0.35, coat=0.4), segs=40, collection=C).scale = (1, 1, 1)
+    open_bucket('ep2_bucket', (bx, by, z0 + 0.12), 0.19, 0.22, 0.24, bk, inner, C)
+    curve_tube('ep2_bucket_band', [(bx + 0.223 * math.cos(a), by + 0.223 * math.sin(a), z0 + 0.235) for a in [2 * math.pi * k / 24 for k in range(25)]],
+               0.012, mat('ep2_white', (0.98, 0.98, 0.96), rough=0.35, coat=0.4), C)
     hm = mat('ep2_handle', (1.0, 0.80, 0.15), rough=0.35, coat=0.5)
-    curve_tube('ep2_bucket_handle', [(bx - 0.17, by, z0 + 0.19), (bx - 0.12, by + 0.05, z0 + 0.30), (bx, by + 0.08, z0 + 0.34),
-                                     (bx + 0.12, by + 0.05, z0 + 0.30), (bx + 0.17, by, z0 + 0.19)], 0.008, hm, C)
+    curve_tube('ep2_bucket_handle', [(bx - 0.22, by, z0 + 0.22), (bx - 0.19, by + 0.14, z0 + 0.25), (bx, by + 0.24, z0 + 0.27),
+                                     (bx + 0.19, by + 0.14, z0 + 0.25), (bx + 0.22, by, z0 + 0.22)], 0.008, hm, C)
     # 3) straw sun hat with a yellow ribbon, tilted over Tifa
     tx, ty = SPOT['hat']; z0 = ground_h(tx, ty)
     sm = straw_mat(); rib = mat('ep2_ribbon', (1.0, 0.78, 0.12), rough=0.4, sheen=0.5)
@@ -75,8 +76,6 @@ def build_props():
     crown = ellipsoid('ep2_hat_crown', (0, 0, 0.0), (0.14, 0.14, 0.12), m=sm, segs=32, rings=16, collection=C,
                       cut=lambda d: d.z < -0.05); crown.parent = hat
     band = cylinder('ep2_hat_band', (0, 0, 0.03), 0.142, 0.035, rib, segs=40, collection=C); band.parent = hat
-    for s in (1, -1):
-        ellipsoid(f'ep2_hat_bow_{s}', (0.15 * s * 0.3 + 0.1, -0.1, 0.05), (0.045, 0.015, 0.03), (0, 0, 30 * s), rib, collection=C).parent = hat
     return C
 
 
@@ -188,7 +187,7 @@ def pose_all(spec):
         expr, extra = spec.get(n, ('happy', None))
         if extra:
             extra(A, arm)
-        A.apply(arm); face(arm, expr, blink=0.0)
+        face(arm, expr, blink=0.0, A=A); A.apply(arm)
 
 
 def clara_search(A, arm):
@@ -200,8 +199,9 @@ def clara_search(A, arm):
 def clara_peek_hide(A, arm):
     # hands over the face (peekaboo)
     for s, x in (('L', 1), ('R', -1)):
-        A.rot(f'upperarm_{s}', -95, 0, -32 * x); A.rot(f'forearm_{s}', -82, 0, -58 * x)
-    A.rot('head', 8, 0, 0); A.rot('chest', 4, 0, 0)
+        A.rot(f'upperarm_{s}', -158, 0, -14 * x); A.rot(f'forearm_{s}', -30, 0, -100 * x)
+        A.scale(f'upperarm_{s}', 1.12); A.scale(f'forearm_{s}', 1.22)  # cartoon stretch so the hands reach the eyes
+    A.rot('head', 10, 0, 0); A.rot('chest', 10, 0, 0)
 
 
 def clara_achou(A, arm):
@@ -215,17 +215,17 @@ def ayra_peek(A, arm):
 
 
 def pandora_bucket(A, arm):
-    sit(A, arm, 1.0); A.rot('head', 35, 0, 0)
+    sit(A, arm, 0.6); A.rot('head', 30, 0, 0)
 
 
 def tifa_hat(A, arm):
-    A.loc('root', 0, 0, -0.075); A.rot('head', 4, 0, 0); A.rot('neck', -10, 0, 0)
+    A.loc('root', 0, 0, -0.17); A.rot('head', -6, 0, 0)
 
 
 def shot(name):
     fx, fy = SPOT['flower']; bx, by = SPOT['bucket']; tx, ty = SPOT['hat']
     if name in ('wide', 'flower', 'bucket', 'hat'):
-        put('ayra', fx + 0.17, fy + 0.3, 15); put('pandora', bx, by + 0.02, 0, -0.05); put('tifa', tx, ty - 0.02, 0, 0.0)
+        put('ayra', fx + 0.19, fy + 0.3, 15, -0.03); put('pandora', bx, by + 0.03, 180, -0.02); put('tifa', tx, ty + 0.05, 0, 0.0)
         put('clara', 0.0, -0.55, 175 if name == 'wide' else {'flower': 140, 'bucket': 180, 'hat': 215}[name])
         pose_all({'clara': ('curious', clara_search), 'ayra': ('happy', ayra_peek), 'pandora': ('happy', pandora_bucket), 'tifa': ('happy', tifa_hat)})
     if name == 'wide':
