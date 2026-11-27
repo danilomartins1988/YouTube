@@ -52,3 +52,8 @@
 - Não publicar nem enviar nada. Não chamar serviços pagos. Nunca expor chaves.
 - Registrar a origem e a licença de todo asset (`licensing/REGISTRO.md`) e os custos (`reports/CUSTOS.md`; gasto externo até agora: US$ 0).
 - Mídia grande vai para `output/` ou `rendering/` e fica no git-ignore.
+
+
+## Regra adicional do proprietário (2026-11-27)
+
+"Evite citar os nomes dos personagens nos vídeos." Letras, falas, letreiros, títulos, descrições, tags e thumbnails não citam os nomes das personagens. Elas são identificadas pelo visual (a menina de macacão amarelo, a cachorrinha de bandana azul, a branquinha de laço rosa, a pequenina de bandana verde). Os nomes continuam apenas nos arquivos internos de produção.

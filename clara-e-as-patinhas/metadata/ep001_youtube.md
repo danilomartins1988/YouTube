@@ -1,29 +1,26 @@
 # Episódio 001: metadados para o YouTube (rascunho, NÃO publicado)
 
+> Regra do proprietário (2026-11-27): não citar os nomes das personagens nos vídeos nem nos textos públicos (título, descrição, tags, thumbnail).
+
 ## Título (opções)
 1. **A Dança das Patinhas 🐾 | Clara e as Patinhas | Música Infantil para Dançar**
 2. Clara e as Patinhas — A Dança das Patinhas (Patinha pra frente, patinha pra trás!)
 3. A Dança das Patinhas | Música infantil com cachorrinhos | Clara e as Patinhas
 
 ## Descrição (pt-BR, para pais e responsáveis)
-Vamos dançar com a Clara e suas três cachorrinhas: a Ayra, a Pandora e a Tifa! 🐾
+Vamos dançar com uma menina e suas três cachorrinhas! 🐾
 
 "A Dança das Patinhas" é uma música alegre para crianças pequenas (1 a 5 anos) cantarem e dançarem junto: patinha pra frente, patinha pra trás, uma voltinha e muitas palmas! A coreografia é simples e repetitiva, pensada para os pequenos imitarem em casa.
 
 Nesta música a criança brinca com:
 • movimentos de frente e trás, giro, palmas e pisadas;
 • contagem: um, dois, três;
-• os nomes e as cores das amiguinhas;
+• as cores das amiguinhas;
 • o refrão que se repete, para aprender a cantar junto.
 
 👨‍👩‍👧 Dica para os pais: dancem juntos! Façam os movimentos do refrão com a criança e brinquem de "patinha pra frente, patinha pra trás" fora da tela também.
 
-🎵 Letra:
-Clara chamou as amiguinhas,
-Vieram correndo três cachorrinhas!
-Ayra, Pandora e Tifa também,
-Vamos dançar, vem, vem, vem!
-
+🎵 Refrão:
 Patinha pra frente,
 Patinha pra trás,
 Dá uma voltinha,
@@ -32,7 +29,6 @@ Au, au, au, vamos brincar,
 Au, au, au, vamos cantar!
 Bate palma, bate o pé,
 Dança junto como quiser!
-(letra completa em music/lyrics/a-danca-das-patinhas.md)
 
 Clara e as Patinhas — Pequenas patinhas, grandes aventuras!
 
