@@ -197,16 +197,15 @@ def clara_search(A, arm):
 
 
 def clara_peek_hide(A, arm):
-    # hands over the face (peekaboo)
+    # holds the straw sun hat in front of her face (the rigid chibi rig cannot reach the eyes with the hands)
     for s, x in (('L', 1), ('R', -1)):
-        A.rot(f'upperarm_{s}', -158, 0, -14 * x); A.rot(f'forearm_{s}', -30, 0, -100 * x)
-        A.scale(f'upperarm_{s}', 1.12); A.scale(f'forearm_{s}', 1.22)  # cartoon stretch so the hands reach the eyes
-    A.rot('head', 10, 0, 0); A.rot('chest', 10, 0, 0)
+        A.rot(f'upperarm_{s}', -88, 0, -22 * x); A.rot(f'forearm_{s}', -35, 0, -30 * x)
+    A.rot('head', 6, 0, 0)
 
 
 def clara_achou(A, arm):
     for s, x in (('L', 1), ('R', -1)):
-        A.rot(f'upperarm_{s}', -40, -95 * x, 0); A.rot(f'forearm_{s}', 0, -20 * x, 0)
+        A.rot(f'upperarm_{s}', -15, -105 * x, 0); A.rot(f'forearm_{s}', 0, -25 * x, 0)
     A.rot('head', -6, 0, 0)
 
 
@@ -239,8 +238,13 @@ def shot(name):
     elif name in ('finale_hide', 'finale_achou'):
         put('clara', 0.0, 0.0, 0); put('ayra', 0.55, 0.15, -20); put('pandora', -0.5, 0.15, 20); put('tifa', 0.32, -0.3, -10)
         cf = clara_peek_hide if name == 'finale_hide' else clara_achou
+        hat = bpy.data.objects['ep2_hat']
+        if name == 'finale_hide':
+            hat.location = (0.0, -0.33, 0.80); hat.rotation_euler = (math.radians(88), 0, 0)
+        else:
+            hat.location = (0.0, 0.02, 0.97); hat.rotation_euler = (math.radians(-8), math.radians(10), 0)  # ACHOU: hat lands on her head
         pose_all({'clara': ('happy', cf), 'ayra': ('curious', None), 'pandora': ('curious', None), 'tifa': ('surprised', None)})
-        aim((0.05, -1.75, 0.68), (0.0, 0.0, 0.62), 50)
+        aim((0.05, -2.3, 0.7), (0.0, 0.0, 0.62), 40)
 
 
 if __name__ == '__main__':
@@ -253,5 +257,7 @@ if __name__ == '__main__':
         bpy.app.handlers.frame_change_pre.clear()
         shot(sname); level(lv, pct)
         sc = bpy.context.scene; sc.render.filepath = out
-        t0 = time.time(); bpy.ops.render.render(write_still=True)
-        print(f'RENDER_TIME {sname} {lv} {time.time() - t0:.1f}s')
+        t0 = time.time(); bpy.ops.render.render(write_still=True); t1 = time.time()
+        if os.environ.get('EP2_WARM'):  # second render = steady-state time per frame (shaders already compiled)
+            sc.frame_set(sc.frame_current + 1); bpy.ops.render.render(write_still=True)
+        print(f'RENDER_TIME {sname} {lv} first {t1 - t0:.1f}s warm {time.time() - t1:.1f}s')
