@@ -1,0 +1,2770 @@
+{
+ "titulo": "A Dança das Patinhas",
+ "serie": "Clara e as Patinhas",
+ "episodio": "001",
+ "bpm": 115,
+ "compasso": "4/4",
+ "tonalidade": "Ré maior (D)",
+ "segundos_por_beat": 0.52174,
+ "segundos_por_compasso": 2.08696,
+ "total_compassos": 79,
+ "duracao_musical_s": 164.87,
+ "duracao_com_cauda_s": 166.37,
+ "gancho_principal": "Assinatura (0:00-0:04) usa o mesmo contorno do refrão \"Pa-ti-nha pra fren-te\" (Lá-Fá#-Lá-Si-Ré); o gancho completo toca no xilofone em 0:04-0:08.",
+ "assinatura_marca": {
+  "compassos": 2,
+  "notas_midi": [
+   69,
+   66,
+   69,
+   71,
+   74,
+   69,
+   71,
+   73,
+   74,
+   81
+  ],
+  "descricao": "Lá4 Fá#4 Lá4 Si4 | Ré5 — Lá4 | Si4 Dó#5 Ré5 — Lá5 (xilofone + glockenspiel) + 2 latidinhos; reutilizável como vinheta de abertura/fechamento."
+ },
+ "latidos_s": [
+  2.87,
+  3.13,
+  42.261,
+  42.522,
+  44.348,
+  75.652,
+  75.913,
+  77.739,
+  161.478,
+  161.739
+ ],
+ "notas_formato": "nota = número MIDI (60 = Dó4); inicio_beat = beat absoluto desde o início (0-based); dur em beats.",
+ "secoes": [
+  {
+   "nome": "assinatura",
+   "tipo": "sting",
+   "compasso_inicio": 1,
+   "compassos": 2,
+   "inicio_s": 0.0,
+   "fim_s": 4.174,
+   "linhas": [
+    {
+     "texto": "(instrumental: assinatura da marca, xilofone + sinos, 2 latidinhos)",
+     "notas": [
+      {
+       "nota": 69,
+       "inicio_beat": 0,
+       "dur": 0.5
+      },
+      {
+       "nota": 66,
+       "inicio_beat": 0.5,
+       "dur": 0.5
+      },
+      {
+       "nota": 69,
+       "inicio_beat": 1,
+       "dur": 0.5
+      },
+      {
+       "nota": 71,
+       "inicio_beat": 1.5,
+       "dur": 0.5
+      },
+      {
+       "nota": 74,
+       "inicio_beat": 2,
+       "dur": 1
+      },
+      {
+       "nota": 69,
+       "inicio_beat": 3,
+       "dur": 0.5
+      },
+      {
+       "nota": 71,
+       "inicio_beat": 4,
+       "dur": 0.5
+      },
+      {
+       "nota": 73,
+       "inicio_beat": 4.5,
+       "dur": 0.5
+      },
+      {
+       "nota": 74,
+       "inicio_beat": 5,
+       "dur": 1.5
+      },
+      {
+       "nota": 81,
+       "inicio_beat": 6.5,
+       "dur": 1.5
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    2,
+    5,
+    5.5,
+    6
+   ]
+  },
+  {
+   "nome": "intro_instrumental",
+   "tipo": "hook",
+   "compasso_inicio": 3,
+   "compassos": 2,
+   "inicio_s": 4.174,
+   "fim_s": 8.348,
+   "linhas": [
+    {
+     "texto": "(instrumental: gancho do refrao \"Patinha pra frente / pra tras\" no xilofone)"
+    }
+   ],
+   "acentos": []
+  },
+  {
+   "nome": "intro",
+   "tipo": "verse",
+   "compasso_inicio": 5,
+   "compassos": 8,
+   "inicio_s": 8.348,
+   "fim_s": 25.043,
+   "linhas": [
+    {
+     "texto": "Clara chamou as amiguinhas,",
+     "inicio_s": 8.348,
+     "notas": [
+      {
+       "silaba": "CLA",
+       "nota": 62,
+       "inicio_beat": 16.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ra",
+       "nota": 64,
+       "inicio_beat": 16.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "cha",
+       "nota": 66,
+       "inicio_beat": 17.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MOU",
+       "nota": 66,
+       "inicio_beat": 17.5,
+       "dur": 1.0
+      },
+      {
+       "silaba": "as",
+       "nota": 67,
+       "inicio_beat": 18.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "a",
+       "nota": 69,
+       "inicio_beat": 19.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mi",
+       "nota": 69,
+       "inicio_beat": 19.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "GUI",
+       "nota": 71,
+       "inicio_beat": 20.0,
+       "dur": 1.5
+      },
+      {
+       "silaba": "nhas",
+       "nota": 67,
+       "inicio_beat": 21.5,
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "texto": "Vieram correndo três cachorrinhas!",
+     "inicio_s": 12.522,
+     "notas": [
+      {
+       "silaba": "VIE",
+       "nota": 69,
+       "inicio_beat": 24.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ram",
+       "nota": 69,
+       "inicio_beat": 24.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "cor",
+       "nota": 69,
+       "inicio_beat": 25.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "REN",
+       "nota": 69,
+       "inicio_beat": 25.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "do",
+       "nota": 69,
+       "inicio_beat": 26.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TRÊS",
+       "nota": 69,
+       "inicio_beat": 26.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ca",
+       "nota": 64,
+       "inicio_beat": 27.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "chor",
+       "nota": 66,
+       "inicio_beat": 27.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "RI",
+       "nota": 69,
+       "inicio_beat": 28.0,
+       "dur": 1.5
+      },
+      {
+       "silaba": "nhas",
+       "nota": 66,
+       "inicio_beat": 29.5,
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "texto": "Ayra, Pandora e Tifa também,",
+     "inicio_s": 16.696,
+     "notas": [
+      {
+       "silaba": "AI",
+       "nota": 67,
+       "inicio_beat": 32.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ra",
+       "nota": 69,
+       "inicio_beat": 32.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pan",
+       "nota": 67,
+       "inicio_beat": 33.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DO",
+       "nota": 71,
+       "inicio_beat": 33.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ra_e",
+       "nota": 71,
+       "inicio_beat": 34.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 71,
+       "inicio_beat": 34.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "fa",
+       "nota": 71,
+       "inicio_beat": 35.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "tam",
+       "nota": 71,
+       "inicio_beat": 35.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "BÉM",
+       "nota": 74,
+       "inicio_beat": 36.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Vamos dançar, vem, vem, vem!",
+     "inicio_s": 20.87,
+     "notas": [
+      {
+       "silaba": "VA",
+       "nota": 71,
+       "inicio_beat": 40.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mos",
+       "nota": 71,
+       "inicio_beat": 40.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "dan",
+       "nota": 71,
+       "inicio_beat": 41.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ÇAR",
+       "nota": 67,
+       "inicio_beat": 41.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VEM",
+       "nota": 67,
+       "inicio_beat": 42.0,
+       "dur": 1.0
+      },
+      {
+       "silaba": "VEM",
+       "nota": 67,
+       "inicio_beat": 43.0,
+       "dur": 1.0
+      },
+      {
+       "silaba": "VEM",
+       "nota": 64,
+       "inicio_beat": 44.0,
+       "dur": 3.0
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    20,
+    28,
+    36,
+    44
+   ]
+  },
+  {
+   "nome": "refrao_1",
+   "tipo": "chorus",
+   "compasso_inicio": 13,
+   "compassos": 8,
+   "inicio_s": 25.043,
+   "fim_s": 41.739,
+   "linhas": [
+    {
+     "texto": "Patinha pra frente,",
+     "inicio_s": 25.043,
+     "notas": [
+      {
+       "silaba": "Pa",
+       "nota": 69,
+       "inicio_beat": 48,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ti",
+       "nota": 69,
+       "inicio_beat": 48.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 71,
+       "inicio_beat": 49.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 69,
+       "inicio_beat": 49.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "FREN",
+       "nota": 74,
+       "inicio_beat": 50.0,
+       "dur": 1
+      },
+      {
+       "silaba": "te",
+       "nota": 69,
+       "inicio_beat": 51.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "Patinha pra trás,",
+     "inicio_s": 27.13,
+     "notas": [
+      {
+       "silaba": "Pa",
+       "nota": 67,
+       "inicio_beat": 52.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ti",
+       "nota": 67,
+       "inicio_beat": 52.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 69,
+       "inicio_beat": 53.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 67,
+       "inicio_beat": 53.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TRÁS",
+       "nota": 64,
+       "inicio_beat": 54.0,
+       "dur": 2
+      }
+     ]
+    },
+    {
+     "texto": "Dá uma voltinha,",
+     "inicio_s": 29.217,
+     "notas": [
+      {
+       "silaba": "DÁ",
+       "nota": 66,
+       "inicio_beat": 56.0,
+       "dur": 1
+      },
+      {
+       "silaba": "u",
+       "nota": 67,
+       "inicio_beat": 57.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ma",
+       "nota": 69,
+       "inicio_beat": 57.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "vol",
+       "nota": 71,
+       "inicio_beat": 58.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 73,
+       "inicio_beat": 58.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 74,
+       "inicio_beat": 59.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "E dança muito mais!",
+     "inicio_s": 31.304,
+     "notas": [
+      {
+       "silaba": "E",
+       "nota": 69,
+       "inicio_beat": 60.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DAN",
+       "nota": 71,
+       "inicio_beat": 60.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ça",
+       "nota": 69,
+       "inicio_beat": 61.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MUI",
+       "nota": 66,
+       "inicio_beat": 61.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "to",
+       "nota": 64,
+       "inicio_beat": 62.0,
+       "dur": 1
+      },
+      {
+       "silaba": "MAIS",
+       "nota": 62,
+       "inicio_beat": 63.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "Au, au, au, vamos brincar,",
+     "inicio_s": 33.391,
+     "notas": [
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 64.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 64.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 65.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VA",
+       "nota": 69,
+       "inicio_beat": 66.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mos",
+       "nota": 71,
+       "inicio_beat": 66.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "brin",
+       "nota": 73,
+       "inicio_beat": 67.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CAR",
+       "nota": 74,
+       "inicio_beat": 67.5,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "texto": "Au, au, au, vamos cantar!",
+     "inicio_s": 35.478,
+     "notas": [
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 68.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 68.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 69.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VA",
+       "nota": 69,
+       "inicio_beat": 70.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mos",
+       "nota": 67,
+       "inicio_beat": 70.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "can",
+       "nota": 66,
+       "inicio_beat": 71.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TAR",
+       "nota": 64,
+       "inicio_beat": 71.5,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "texto": "Bate palma, bate o pé,",
+     "inicio_s": 37.565,
+     "notas": [
+      {
+       "silaba": "BA",
+       "nota": 66,
+       "inicio_beat": 72.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "te",
+       "nota": 66,
+       "inicio_beat": 72.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "PAL",
+       "nota": 69,
+       "inicio_beat": 73.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ma",
+       "nota": 66,
+       "inicio_beat": 73.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "BA",
+       "nota": 67,
+       "inicio_beat": 74.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "te_o",
+       "nota": 67,
+       "inicio_beat": 74.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "PÉ",
+       "nota": 71,
+       "inicio_beat": 75.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "Dança junto como quiser!",
+     "inicio_s": 39.652,
+     "notas": [
+      {
+       "silaba": "DAN",
+       "nota": 69,
+       "inicio_beat": 76.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ça",
+       "nota": 69,
+       "inicio_beat": 76.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "JUN",
+       "nota": 71,
+       "inicio_beat": 77.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "to",
+       "nota": 69,
+       "inicio_beat": 77.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CO",
+       "nota": 67,
+       "inicio_beat": 78.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mo",
+       "nota": 66,
+       "inicio_beat": 78.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "qui",
+       "nota": 64,
+       "inicio_beat": 79.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "SER",
+       "nota": 62,
+       "inicio_beat": 79.5,
+       "dur": 0.5
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    48,
+    52,
+    56,
+    60,
+    64,
+    68,
+    72,
+    76
+   ],
+   "coreografia": {
+    "Patinha pra frente": "Clara pe a frente / cachorrinhas levantam pata dianteira",
+    "Patinha pra tras": "passinho para tras",
+    "Da uma voltinha": "giro pequeno",
+    "Bate palma, bate o pe": "palmas nos tempos 2 e 4 / pisada no \"pe\""
+   }
+  },
+  {
+   "nome": "pausa_danca_1",
+   "tipo": "break",
+   "compasso_inicio": 21,
+   "compassos": 2,
+   "inicio_s": 41.739,
+   "fim_s": 45.913,
+   "linhas": [
+    {
+     "texto": "(instrumental: palmas + latidinhos ritmicos, danca livre)"
+    }
+   ],
+   "acentos": []
+  },
+  {
+   "nome": "verso_ayra",
+   "tipo": "verse",
+   "compasso_inicio": 23,
+   "compassos": 8,
+   "inicio_s": 45.913,
+   "fim_s": 62.609,
+   "linhas": [
+    {
+     "texto": "Ayra corre pelo jardim,",
+     "inicio_s": 45.913,
+     "notas": [
+      {
+       "silaba": "AI",
+       "nota": 62,
+       "inicio_beat": 88.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ra",
+       "nota": 64,
+       "inicio_beat": 88.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "COR",
+       "nota": 66,
+       "inicio_beat": 89.0,
+       "dur": 1.0
+      },
+      {
+       "silaba": "re",
+       "nota": 66,
+       "inicio_beat": 90.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pe",
+       "nota": 67,
+       "inicio_beat": 90.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "lo",
+       "nota": 69,
+       "inicio_beat": 91.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "jar",
+       "nota": 69,
+       "inicio_beat": 91.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DIM",
+       "nota": 71,
+       "inicio_beat": 92.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Mexe o rabinho e olha pra mim!",
+     "inicio_s": 50.087,
+     "notas": [
+      {
+       "silaba": "ME",
+       "nota": 69,
+       "inicio_beat": 96.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "xe_o",
+       "nota": 69,
+       "inicio_beat": 96.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ra",
+       "nota": 69,
+       "inicio_beat": 97.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "BI",
+       "nota": 69,
+       "inicio_beat": 97.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nho_e",
+       "nota": 69,
+       "inicio_beat": 98.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "O",
+       "nota": 69,
+       "inicio_beat": 98.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "lha",
+       "nota": 64,
+       "inicio_beat": 99.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 66,
+       "inicio_beat": 99.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MIM",
+       "nota": 69,
+       "inicio_beat": 100.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Pula pra cá, pula pra lá,",
+     "inicio_s": 54.261,
+     "notas": [
+      {
+       "silaba": "PU",
+       "nota": 67,
+       "inicio_beat": 104.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "la",
+       "nota": 69,
+       "inicio_beat": 104.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 67,
+       "inicio_beat": 105.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CÁ",
+       "nota": 71,
+       "inicio_beat": 105.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "PU",
+       "nota": 71,
+       "inicio_beat": 106.0,
+       "dur": 1.0
+      },
+      {
+       "silaba": "la",
+       "nota": 71,
+       "inicio_beat": 107.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 71,
+       "inicio_beat": 107.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "LÁ",
+       "nota": 74,
+       "inicio_beat": 108.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Que cachorrinha gosta de brincar!",
+     "inicio_s": 58.174,
+     "notas": [
+      {
+       "silaba": "que",
+       "nota": 71,
+       "inicio_beat": 111.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ca",
+       "nota": 71,
+       "inicio_beat": 112.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "chor",
+       "nota": 71,
+       "inicio_beat": 112.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "RI",
+       "nota": 71,
+       "inicio_beat": 113.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 69,
+       "inicio_beat": 113.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "GOS",
+       "nota": 67,
+       "inicio_beat": 114.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ta",
+       "nota": 67,
+       "inicio_beat": 114.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "de",
+       "nota": 67,
+       "inicio_beat": 115.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "brin",
+       "nota": 66,
+       "inicio_beat": 115.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CAR",
+       "nota": 64,
+       "inicio_beat": 116.0,
+       "dur": 3.0
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    92,
+    100,
+    108,
+    116
+   ]
+  },
+  {
+   "nome": "refrao_2_curto",
+   "tipo": "chorus",
+   "compasso_inicio": 31,
+   "compassos": 6,
+   "inicio_s": 62.609,
+   "fim_s": 75.13,
+   "linhas": [
+    {
+     "texto": "Patinha pra frente,",
+     "inicio_s": 62.609,
+     "notas": [
+      {
+       "silaba": "Pa",
+       "nota": 69,
+       "inicio_beat": 120,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ti",
+       "nota": 69,
+       "inicio_beat": 120.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 71,
+       "inicio_beat": 121.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 69,
+       "inicio_beat": 121.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "FREN",
+       "nota": 74,
+       "inicio_beat": 122.0,
+       "dur": 1
+      },
+      {
+       "silaba": "te",
+       "nota": 69,
+       "inicio_beat": 123.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "Patinha pra trás,",
+     "inicio_s": 64.696,
+     "notas": [
+      {
+       "silaba": "Pa",
+       "nota": 67,
+       "inicio_beat": 124.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ti",
+       "nota": 67,
+       "inicio_beat": 124.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 69,
+       "inicio_beat": 125.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 67,
+       "inicio_beat": 125.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TRÁS",
+       "nota": 64,
+       "inicio_beat": 126.0,
+       "dur": 2
+      }
+     ]
+    },
+    {
+     "texto": "Dá uma voltinha,",
+     "inicio_s": 66.783,
+     "notas": [
+      {
+       "silaba": "DÁ",
+       "nota": 66,
+       "inicio_beat": 128.0,
+       "dur": 1
+      },
+      {
+       "silaba": "u",
+       "nota": 67,
+       "inicio_beat": 129.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ma",
+       "nota": 69,
+       "inicio_beat": 129.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "vol",
+       "nota": 71,
+       "inicio_beat": 130.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 73,
+       "inicio_beat": 130.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 74,
+       "inicio_beat": 131.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "E dança muito mais!",
+     "inicio_s": 68.87,
+     "notas": [
+      {
+       "silaba": "E",
+       "nota": 69,
+       "inicio_beat": 132.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DAN",
+       "nota": 71,
+       "inicio_beat": 132.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ça",
+       "nota": 69,
+       "inicio_beat": 133.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MUI",
+       "nota": 66,
+       "inicio_beat": 133.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "to",
+       "nota": 64,
+       "inicio_beat": 134.0,
+       "dur": 1
+      },
+      {
+       "silaba": "MAIS",
+       "nota": 62,
+       "inicio_beat": 135.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "Au, au, au, vamos brincar,",
+     "inicio_s": 70.957,
+     "notas": [
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 136.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 136.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 137.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VA",
+       "nota": 69,
+       "inicio_beat": 138.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mos",
+       "nota": 71,
+       "inicio_beat": 138.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "brin",
+       "nota": 73,
+       "inicio_beat": 139.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CAR",
+       "nota": 74,
+       "inicio_beat": 139.5,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "texto": "Au, au, au, vamos cantar!",
+     "inicio_s": 73.043,
+     "notas": [
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 140.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 140.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 141.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VA",
+       "nota": 69,
+       "inicio_beat": 142.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mos",
+       "nota": 67,
+       "inicio_beat": 142.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "can",
+       "nota": 66,
+       "inicio_beat": 143.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TAR",
+       "nota": 64,
+       "inicio_beat": 143.5,
+       "dur": 0.5
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    120,
+    124,
+    128,
+    132,
+    136,
+    140
+   ],
+   "coreografia": {
+    "Patinha pra frente": "Clara pe a frente / cachorrinhas levantam pata dianteira",
+    "Patinha pra tras": "passinho para tras",
+    "Da uma voltinha": "giro pequeno",
+    "Bate palma, bate o pe": "palmas nos tempos 2 e 4 / pisada no \"pe\""
+   }
+  },
+  {
+   "nome": "pausa_danca_2",
+   "tipo": "break",
+   "compasso_inicio": 37,
+   "compassos": 2,
+   "inicio_s": 75.13,
+   "fim_s": 79.304,
+   "linhas": [
+    {
+     "texto": "(instrumental: palmas + latidinhos ritmicos, danca livre)"
+    }
+   ],
+   "acentos": []
+  },
+  {
+   "nome": "verso_pandora",
+   "tipo": "verse",
+   "compasso_inicio": 39,
+   "compassos": 8,
+   "inicio_s": 79.304,
+   "fim_s": 96.0,
+   "linhas": [
+    {
+     "texto": "Pandora branquinha, fofinha demais,",
+     "inicio_s": 78.783,
+     "notas": [
+      {
+       "silaba": "pan",
+       "nota": 62,
+       "inicio_beat": 151.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DO",
+       "nota": 62,
+       "inicio_beat": 151.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ra",
+       "nota": 66,
+       "inicio_beat": 152.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "bran",
+       "nota": 64,
+       "inicio_beat": 152.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "QUI",
+       "nota": 66,
+       "inicio_beat": 153.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 66,
+       "inicio_beat": 153.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "fo",
+       "nota": 66,
+       "inicio_beat": 154.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "FI",
+       "nota": 66,
+       "inicio_beat": 154.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 69,
+       "inicio_beat": 155.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "de",
+       "nota": 69,
+       "inicio_beat": 155.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MAIS",
+       "nota": 71,
+       "inicio_beat": 156.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Dá uma voltinha e pede mais!",
+     "inicio_s": 83.478,
+     "notas": [
+      {
+       "silaba": "DÁ",
+       "nota": 69,
+       "inicio_beat": 160.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "u",
+       "nota": 69,
+       "inicio_beat": 160.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ma",
+       "nota": 69,
+       "inicio_beat": 161.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "vol",
+       "nota": 69,
+       "inicio_beat": 161.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 69,
+       "inicio_beat": 162.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha_e",
+       "nota": 67,
+       "inicio_beat": 162.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "PE",
+       "nota": 64,
+       "inicio_beat": 163.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "de",
+       "nota": 66,
+       "inicio_beat": 163.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MAIS",
+       "nota": 69,
+       "inicio_beat": 164.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Mexe as patinhas, começa a girar,",
+     "inicio_s": 87.391,
+     "notas": [
+      {
+       "silaba": "ME",
+       "nota": 67,
+       "inicio_beat": 167.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "xe_as",
+       "nota": 67,
+       "inicio_beat": 168.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pa",
+       "nota": 69,
+       "inicio_beat": 168.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 67,
+       "inicio_beat": 169.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nhas",
+       "nota": 69,
+       "inicio_beat": 169.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "co",
+       "nota": 71,
+       "inicio_beat": 170.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ME",
+       "nota": 71,
+       "inicio_beat": 170.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ça_a",
+       "nota": 71,
+       "inicio_beat": 171.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "gi",
+       "nota": 71,
+       "inicio_beat": 171.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "RAR",
+       "nota": 74,
+       "inicio_beat": 172.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Com a Clara ela vai dançar!",
+     "inicio_s": 91.826,
+     "notas": [
+      {
+       "silaba": "com_a",
+       "nota": 71,
+       "inicio_beat": 176.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CLA",
+       "nota": 71,
+       "inicio_beat": 176.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ra",
+       "nota": 71,
+       "inicio_beat": 177.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "E",
+       "nota": 67,
+       "inicio_beat": 177.5,
+       "dur": 1.0
+      },
+      {
+       "silaba": "la",
+       "nota": 69,
+       "inicio_beat": 178.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "vai",
+       "nota": 67,
+       "inicio_beat": 179.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "dan",
+       "nota": 66,
+       "inicio_beat": 179.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ÇAR",
+       "nota": 64,
+       "inicio_beat": 180.0,
+       "dur": 3.0
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    156,
+    164,
+    172,
+    180
+   ]
+  },
+  {
+   "nome": "verso_tifa",
+   "tipo": "verse",
+   "compasso_inicio": 47,
+   "compassos": 8,
+   "inicio_s": 96.0,
+   "fim_s": 112.696,
+   "linhas": [
+    {
+     "texto": "Tifa pequena, cheia de energia,",
+     "inicio_s": 95.739,
+     "notas": [
+      {
+       "silaba": "TI",
+       "nota": 62,
+       "inicio_beat": 183.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "fa",
+       "nota": 62,
+       "inicio_beat": 184.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pe",
+       "nota": 64,
+       "inicio_beat": 184.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "QUE",
+       "nota": 66,
+       "inicio_beat": 185.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "na",
+       "nota": 66,
+       "inicio_beat": 185.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CHEI",
+       "nota": 66,
+       "inicio_beat": 186.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "a",
+       "nota": 67,
+       "inicio_beat": 186.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "de_e",
+       "nota": 69,
+       "inicio_beat": 187.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ner",
+       "nota": 69,
+       "inicio_beat": 187.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "GI",
+       "nota": 71,
+       "inicio_beat": 188.0,
+       "dur": 1.5
+      },
+      {
+       "silaba": "a",
+       "nota": 67,
+       "inicio_beat": 189.5,
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "texto": "Faz todo mundo sorrir de alegria!",
+     "inicio_s": 99.913,
+     "notas": [
+      {
+       "silaba": "FAZ",
+       "nota": 69,
+       "inicio_beat": 191.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "to",
+       "nota": 69,
+       "inicio_beat": 192.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "do",
+       "nota": 69,
+       "inicio_beat": 192.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MUN",
+       "nota": 69,
+       "inicio_beat": 193.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "do",
+       "nota": 69,
+       "inicio_beat": 193.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "sor",
+       "nota": 69,
+       "inicio_beat": 194.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "RIR",
+       "nota": 69,
+       "inicio_beat": 194.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "de_a",
+       "nota": 64,
+       "inicio_beat": 195.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "le",
+       "nota": 66,
+       "inicio_beat": 195.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "GRI",
+       "nota": 69,
+       "inicio_beat": 196.0,
+       "dur": 1.5
+      },
+      {
+       "silaba": "a",
+       "nota": 66,
+       "inicio_beat": 197.5,
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "texto": "Dá um pulinho: um, dois, três,",
+     "inicio_s": 104.348,
+     "notas": [
+      {
+       "silaba": "DÁ",
+       "nota": 67,
+       "inicio_beat": 200.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "um",
+       "nota": 69,
+       "inicio_beat": 200.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pu",
+       "nota": 67,
+       "inicio_beat": 201.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "LI",
+       "nota": 71,
+       "inicio_beat": 201.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nho",
+       "nota": 71,
+       "inicio_beat": 202.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "UM",
+       "nota": 71,
+       "inicio_beat": 202.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DOIS",
+       "nota": 71,
+       "inicio_beat": 203.0,
+       "dur": 1.0
+      },
+      {
+       "silaba": "TRÊS",
+       "nota": 74,
+       "inicio_beat": 204.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Vamos dançar mais uma vez!",
+     "inicio_s": 108.522,
+     "notas": [
+      {
+       "silaba": "VA",
+       "nota": 71,
+       "inicio_beat": 208.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mos",
+       "nota": 71,
+       "inicio_beat": 208.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "dan",
+       "nota": 71,
+       "inicio_beat": 209.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ÇAR",
+       "nota": 67,
+       "inicio_beat": 209.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mais",
+       "nota": 67,
+       "inicio_beat": 210.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "U",
+       "nota": 67,
+       "inicio_beat": 210.5,
+       "dur": 1.0
+      },
+      {
+       "silaba": "ma",
+       "nota": 66,
+       "inicio_beat": 211.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VEZ",
+       "nota": 64,
+       "inicio_beat": 212.0,
+       "dur": 3.0
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    188,
+    196,
+    204,
+    212
+   ]
+  },
+  {
+   "nome": "ponte",
+   "tipo": "verse",
+   "compasso_inicio": 55,
+   "compassos": 8,
+   "inicio_s": 112.696,
+   "fim_s": 129.391,
+   "linhas": [
+    {
+     "texto": "Uma patinha, duas patinhas,",
+     "inicio_s": 112.696,
+     "notas": [
+      {
+       "silaba": "U",
+       "nota": 66,
+       "inicio_beat": 216.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ma",
+       "nota": 66,
+       "inicio_beat": 216.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pa",
+       "nota": 66,
+       "inicio_beat": 217.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 66,
+       "inicio_beat": 217.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 66,
+       "inicio_beat": 218.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DU",
+       "nota": 66,
+       "inicio_beat": 218.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "as",
+       "nota": 71,
+       "inicio_beat": 219.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pa",
+       "nota": 69,
+       "inicio_beat": 219.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 71,
+       "inicio_beat": 220.0,
+       "dur": 1.5
+      },
+      {
+       "silaba": "nhas",
+       "nota": 67,
+       "inicio_beat": 221.5,
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "texto": "Três cachorrinhas fazendo festinha!",
+     "inicio_s": 116.609,
+     "notas": [
+      {
+       "silaba": "TRÊS",
+       "nota": 67,
+       "inicio_beat": 223.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ca",
+       "nota": 67,
+       "inicio_beat": 224.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "chor",
+       "nota": 69,
+       "inicio_beat": 224.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "RI",
+       "nota": 67,
+       "inicio_beat": 225.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nhas",
+       "nota": 69,
+       "inicio_beat": 225.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "fa",
+       "nota": 71,
+       "inicio_beat": 226.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ZEN",
+       "nota": 71,
+       "inicio_beat": 226.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "do",
+       "nota": 71,
+       "inicio_beat": 227.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "fes",
+       "nota": 71,
+       "inicio_beat": 227.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 73,
+       "inicio_beat": 228.0,
+       "dur": 1.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 69,
+       "inicio_beat": 229.5,
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "texto": "Uma voltinha, um salto no ar,",
+     "inicio_s": 120.783,
+     "notas": [
+      {
+       "silaba": "U",
+       "nota": 71,
+       "inicio_beat": 231.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ma",
+       "nota": 71,
+       "inicio_beat": 232.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "vol",
+       "nota": 71,
+       "inicio_beat": 232.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 71,
+       "inicio_beat": 233.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 71,
+       "inicio_beat": 233.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "um",
+       "nota": 71,
+       "inicio_beat": 234.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "SAL",
+       "nota": 71,
+       "inicio_beat": 234.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "to",
+       "nota": 71,
+       "inicio_beat": 235.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "no",
+       "nota": 73,
+       "inicio_beat": 235.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AR",
+       "nota": 74,
+       "inicio_beat": 236.0,
+       "dur": 3.0
+      }
+     ]
+    },
+    {
+     "texto": "Todo mundo pronto pra dançar!",
+     "inicio_s": 125.217,
+     "notas": [
+      {
+       "silaba": "TO",
+       "nota": 71,
+       "inicio_beat": 240.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "do",
+       "nota": 71,
+       "inicio_beat": 240.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MUN",
+       "nota": 71,
+       "inicio_beat": 241.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "do",
+       "nota": 73,
+       "inicio_beat": 241.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "PRON",
+       "nota": 71,
+       "inicio_beat": 242.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "to",
+       "nota": 73,
+       "inicio_beat": 242.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 76,
+       "inicio_beat": 243.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "dan",
+       "nota": 74,
+       "inicio_beat": 243.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ÇAR",
+       "nota": 76,
+       "inicio_beat": 244.0,
+       "dur": 3.0
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    220,
+    228,
+    236,
+    244
+   ]
+  },
+  {
+   "nome": "refrao_final",
+   "tipo": "final",
+   "compasso_inicio": 63,
+   "compassos": 10,
+   "inicio_s": 129.391,
+   "fim_s": 150.261,
+   "linhas": [
+    {
+     "texto": "Patinha pra frente,",
+     "inicio_s": 129.391,
+     "notas": [
+      {
+       "silaba": "Pa",
+       "nota": 69,
+       "inicio_beat": 248,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ti",
+       "nota": 69,
+       "inicio_beat": 248.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 71,
+       "inicio_beat": 249.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 69,
+       "inicio_beat": 249.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "FREN",
+       "nota": 74,
+       "inicio_beat": 250.0,
+       "dur": 1
+      },
+      {
+       "silaba": "te",
+       "nota": 69,
+       "inicio_beat": 251.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "Patinha pra trás,",
+     "inicio_s": 131.478,
+     "notas": [
+      {
+       "silaba": "Pa",
+       "nota": 67,
+       "inicio_beat": 252.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ti",
+       "nota": 67,
+       "inicio_beat": 252.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 69,
+       "inicio_beat": 253.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pra",
+       "nota": 67,
+       "inicio_beat": 253.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TRÁS",
+       "nota": 64,
+       "inicio_beat": 254.0,
+       "dur": 2
+      }
+     ]
+    },
+    {
+     "texto": "Dá uma voltinha,",
+     "inicio_s": 133.565,
+     "notas": [
+      {
+       "silaba": "DÁ",
+       "nota": 66,
+       "inicio_beat": 256.0,
+       "dur": 1
+      },
+      {
+       "silaba": "u",
+       "nota": 67,
+       "inicio_beat": 257.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ma",
+       "nota": 69,
+       "inicio_beat": 257.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "vol",
+       "nota": 71,
+       "inicio_beat": 258.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 73,
+       "inicio_beat": 258.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nha",
+       "nota": 74,
+       "inicio_beat": 259.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "E dança muito mais!",
+     "inicio_s": 135.652,
+     "notas": [
+      {
+       "silaba": "E",
+       "nota": 69,
+       "inicio_beat": 260.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DAN",
+       "nota": 71,
+       "inicio_beat": 260.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ça",
+       "nota": 69,
+       "inicio_beat": 261.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MUI",
+       "nota": 66,
+       "inicio_beat": 261.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "to",
+       "nota": 64,
+       "inicio_beat": 262.0,
+       "dur": 1
+      },
+      {
+       "silaba": "MAIS",
+       "nota": 62,
+       "inicio_beat": 263.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "Au, au, au, vamos brincar,",
+     "inicio_s": 137.739,
+     "notas": [
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 264.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 264.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 74,
+       "inicio_beat": 265.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VA",
+       "nota": 69,
+       "inicio_beat": 266.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mos",
+       "nota": 71,
+       "inicio_beat": 266.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "brin",
+       "nota": 73,
+       "inicio_beat": 267.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CAR",
+       "nota": 74,
+       "inicio_beat": 267.5,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "texto": "Au, au, au, vamos cantar!",
+     "inicio_s": 139.826,
+     "notas": [
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 268.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 268.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "AU",
+       "nota": 71,
+       "inicio_beat": 269.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VA",
+       "nota": 69,
+       "inicio_beat": 270.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "mos",
+       "nota": 67,
+       "inicio_beat": 270.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "can",
+       "nota": 66,
+       "inicio_beat": 271.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TAR",
+       "nota": 64,
+       "inicio_beat": 271.5,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "texto": "Com os amigos é tão bom viver,",
+     "inicio_s": 141.913,
+     "notas": [
+      {
+       "silaba": "com_os",
+       "nota": 66,
+       "inicio_beat": 272.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "a",
+       "nota": 67,
+       "inicio_beat": 272.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "MI",
+       "nota": 69,
+       "inicio_beat": 273.0,
+       "dur": 1
+      },
+      {
+       "silaba": "gos",
+       "nota": 66,
+       "inicio_beat": 274.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "É",
+       "nota": 69,
+       "inicio_beat": 274.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "tão",
+       "nota": 71,
+       "inicio_beat": 275.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "BOM",
+       "nota": 74,
+       "inicio_beat": 275.5,
+       "dur": 1.5
+      },
+      {
+       "silaba": "vi",
+       "nota": 73,
+       "inicio_beat": 277.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "VER",
+       "nota": 71,
+       "inicio_beat": 277.5,
+       "dur": 2.5
+      }
+     ]
+    },
+    {
+     "texto": "Dançando juntos, eu e você!",
+     "inicio_s": 146.087,
+     "notas": [
+      {
+       "silaba": "dan",
+       "nota": 69,
+       "inicio_beat": 280.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ÇAN",
+       "nota": 71,
+       "inicio_beat": 280.5,
+       "dur": 1
+      },
+      {
+       "silaba": "do",
+       "nota": 69,
+       "inicio_beat": 281.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "JUN",
+       "nota": 74,
+       "inicio_beat": 282.0,
+       "dur": 1
+      },
+      {
+       "silaba": "tos",
+       "nota": 71,
+       "inicio_beat": 283.0,
+       "dur": 1
+      },
+      {
+       "silaba": "EU_e",
+       "nota": 69,
+       "inicio_beat": 284.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "vo",
+       "nota": 64,
+       "inicio_beat": 284.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CÊ",
+       "nota": 62,
+       "inicio_beat": 285.0,
+       "dur": 3
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    248,
+    252,
+    256,
+    260,
+    264,
+    268,
+    272,
+    276,
+    280,
+    284
+   ],
+   "coreografia": {
+    "Patinha pra frente": "Clara pe a frente / cachorrinhas levantam pata dianteira",
+    "Patinha pra tras": "passinho para tras",
+    "Da uma voltinha": "giro pequeno",
+    "Bate palma, bate o pe": "palmas nos tempos 2 e 4 / pisada no \"pe\""
+   }
+  },
+  {
+   "nome": "final",
+   "tipo": "ending",
+   "compasso_inicio": 73,
+   "compassos": 4,
+   "inicio_s": 150.261,
+   "fim_s": 158.609,
+   "linhas": [
+    {
+     "texto": "Clara e as Patinhas,",
+     "inicio_s": 150.261,
+     "notas": [
+      {
+       "silaba": "CLA",
+       "nota": 69,
+       "inicio_beat": 288,
+       "dur": 0.5
+      },
+      {
+       "silaba": "ra_e_as",
+       "nota": 66,
+       "inicio_beat": 288.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "pa",
+       "nota": 69,
+       "inicio_beat": 289.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "TI",
+       "nota": 71,
+       "inicio_beat": 289.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "nhas",
+       "nota": 74,
+       "inicio_beat": 290.0,
+       "dur": 2
+      }
+     ]
+    },
+    {
+     "texto": "Que alegria!",
+     "inicio_s": 152.348,
+     "notas": [
+      {
+       "silaba": "que_a",
+       "nota": 71,
+       "inicio_beat": 292.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "le",
+       "nota": 73,
+       "inicio_beat": 293.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "GRI",
+       "nota": 74,
+       "inicio_beat": 293.5,
+       "dur": 1
+      },
+      {
+       "silaba": "a",
+       "nota": 71,
+       "inicio_beat": 294.5,
+       "dur": 1.5
+      }
+     ]
+    },
+    {
+     "texto": "Juntos brincando,",
+     "inicio_s": 154.435,
+     "notas": [
+      {
+       "silaba": "JUN",
+       "nota": 71,
+       "inicio_beat": 296.0,
+       "dur": 1
+      },
+      {
+       "silaba": "tos",
+       "nota": 69,
+       "inicio_beat": 297.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "brin",
+       "nota": 67,
+       "inicio_beat": 297.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "CAN",
+       "nota": 66,
+       "inicio_beat": 298.0,
+       "dur": 1
+      },
+      {
+       "silaba": "do",
+       "nota": 64,
+       "inicio_beat": 299.0,
+       "dur": 1
+      }
+     ]
+    },
+    {
+     "texto": "Todo dia!",
+     "inicio_s": 156.522,
+     "notas": [
+      {
+       "silaba": "TO",
+       "nota": 64,
+       "inicio_beat": 300.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "do",
+       "nota": 66,
+       "inicio_beat": 301.0,
+       "dur": 0.5
+      },
+      {
+       "silaba": "DI",
+       "nota": 69,
+       "inicio_beat": 301.5,
+       "dur": 0.5
+      },
+      {
+       "silaba": "a",
+       "nota": 74,
+       "inicio_beat": 302.0,
+       "dur": 2
+      }
+     ]
+    }
+   ],
+   "acentos": []
+  },
+  {
+   "nome": "assinatura_final",
+   "tipo": "sting",
+   "compasso_inicio": 77,
+   "compassos": 2,
+   "inicio_s": 158.609,
+   "fim_s": 162.783,
+   "linhas": [
+    {
+     "texto": "(instrumental: assinatura da marca, xilofone + sinos, 2 latidinhos)",
+     "notas": [
+      {
+       "nota": 69,
+       "inicio_beat": 0,
+       "dur": 0.5
+      },
+      {
+       "nota": 66,
+       "inicio_beat": 0.5,
+       "dur": 0.5
+      },
+      {
+       "nota": 69,
+       "inicio_beat": 1,
+       "dur": 0.5
+      },
+      {
+       "nota": 71,
+       "inicio_beat": 1.5,
+       "dur": 0.5
+      },
+      {
+       "nota": 74,
+       "inicio_beat": 2,
+       "dur": 1
+      },
+      {
+       "nota": 69,
+       "inicio_beat": 3,
+       "dur": 0.5
+      },
+      {
+       "nota": 71,
+       "inicio_beat": 4,
+       "dur": 0.5
+      },
+      {
+       "nota": 73,
+       "inicio_beat": 4.5,
+       "dur": 0.5
+      },
+      {
+       "nota": 74,
+       "inicio_beat": 5,
+       "dur": 1.5
+      },
+      {
+       "nota": 81,
+       "inicio_beat": 6.5,
+       "dur": 1.5
+      }
+     ]
+    }
+   ],
+   "acentos": [
+    306,
+    309,
+    309.5,
+    310
+   ]
+  },
+  {
+   "nome": "ressonancia",
+   "tipo": "ringout",
+   "compasso_inicio": 79,
+   "compassos": 1,
+   "inicio_s": 162.783,
+   "fim_s": 164.87,
+   "linhas": [
+    {
+     "texto": "(acorde final em Re maior)"
+    }
+   ],
+   "acentos": []
+  }
+ ]
+}
