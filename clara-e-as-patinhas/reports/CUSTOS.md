@@ -38,3 +38,4 @@ _Sem lançamentos: a geração Eleven Music foi bloqueada pela camada de permiss
 | Montagem e codificação (1080p, light, teste) | ≈12 min |
 
 **Gasto externo total até agora: US$ 0,00.**
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração v1, 165 s | ~2473 créditos (estimado) | ~US$ 0.41 (preço de lista API; débito real no plano do proprietário) |
