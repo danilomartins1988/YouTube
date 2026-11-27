@@ -108,3 +108,32 @@ Mantidos sem mudança, porque já funcionam bem em métrica e rima: o refrão in
 - **Ayra** = "ÁI-ra"; **Tifa** = "TÍ-fa"; **Pandora** = "Pan-DÓ-ra".
 - "Au, au, au" é cantado como latido alegre, curto e rítmico, na mesma nota.
 - "Bate palma" leva uma palma real no tempo 2 e outra no 4. "Bate o pé" leva uma pisada.
+
+---
+
+## Versão cantada final (Eleven Music v1 + intro refeita por inpainting; master `music/masters/danca_das_patinhas_final.wav`)
+
+Conferida com o Whisper (`whisper-1`, pt, carimbos por palavra, **sem** prompt de letra): `music/analysis/whisper_noprompt.json`.
+A letra cantada é **igual à letra acima**, com uma diferença:
+
+- **Pausa de dança 2 (~1:15):** a voz canta mais uma linha, **"Au, au, au, vamos brincar!"**, depois do refrão curto.
+
+Os tempos reais de cada linha e palavra estão em `music/compositions/timeline_final.json`:
+
+| Tempo | Linha |
+|---|---|
+| 0:07,5 | Clara chamou as amiguinhas, / Vieram correndo três cachorrinhas! |
+| 0:16,6 | Ayra, Pandora e Tifa também, / Vamos dançar, vem, vem, vem! |
+| 0:25,0 | Refrão (8 linhas) |
+| 1:15,1 | *(pausa)* Au, au, au, vamos brincar! |
+| 0:45,1 | Verso da Ayra |
+| 1:02,3 | Refrão curto (6 linhas) |
+| 1:19,4 | Verso da Pandora |
+| 1:35,7 | Verso da Tifa ("um, dois, três" em 1:46,7 / 1:47,2 / 1:48,2) |
+| 1:52,7 | Ponte |
+| 2:09,0 | Refrão final |
+| 2:30,0 | Clara e as Patinhas, / Que alegria! / Juntos brincando, / Todo dia! |
+
+Notas de pronúncia observadas:
+- "Ayra" foi transcrito como "Aira", que é a pronúncia pretendida ("ÁI-ra").
+- "Clara e as Patinhas" sai como "Clare as patinhas", uma elisão natural no canto.
