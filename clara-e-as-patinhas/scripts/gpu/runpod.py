@@ -1,8 +1,9 @@
 """Rent a RunPod GPU pod, render there, bring results back, shut it down.
 The RunPod API key is NEVER in this repo or sandbox: the session's network proxy injects it
-for rest.runpod.io (we send 'Authorization: Bearer dummy').
+for api.runpod.io (we send 'Authorization: Bearer dummy'). rest.runpod.io is not reachable from
+this environment, so everything goes through the GraphQL API.
 
-  python scripts/gpu/runpod.py create [--gpu "NVIDIA GeForce RTX 4090"] [--cloud SECURE|COMMUNITY]
+  python scripts/gpu/runpod.py create [--gpu "NVIDIA GeForce RTX 4090"] [--cloud COMMUNITY|SECURE]
   python scripts/gpu/runpod.py status
   python scripts/gpu/runpod.py push <local_path> <remote_rel>      # upload one file
   python scripts/gpu/runpod.py run "<shell cmd>"                   # start a job on the pod
@@ -13,7 +14,7 @@ State (pod id, render token) lives in the scratchpad, not in git.
 """
 import base64, json, os, secrets, sys, time, requests
 
-API = 'https://rest.runpod.io/v1'
+API = 'https://api.runpod.io/graphql'
 HDR = {'Authorization': 'Bearer dummy', 'Content-Type': 'application/json'}
 STATE = os.environ.get('GPU_STATE', '/tmp/claude-0/-home-user-YouTube/d850b732-f9ee-5afb-a405-beaa03bb820f/scratchpad/gpu_pod.json')
 BLENDER_URL = 'https://download.blender.org/release/Blender4.0/blender-4.0.2-linux-x64.tar.xz'
@@ -26,7 +27,13 @@ def save(s):
 def pod_url(s): return f"https://{s['pod_id']}-8000.proxy.runpod.net"
 def ph(s): return {'X-Token': s['token']}
 
-def create(gpu='NVIDIA GeForce RTX 4090', cloud='SECURE'):
+def gql(query, variables=None):
+    r = requests.post(API, headers=HDR, json={'query': query, 'variables': variables or {}}, timeout=60)
+    d = r.json()
+    if r.status_code != 200 or d.get('errors'): sys.exit(f'RunPod API error {r.status_code}: {str(d)[:600]}')
+    return d['data']
+
+def create(gpu='NVIDIA GeForce RTX 4090', cloud='COMMUNITY'):
     s = load()
     if s.get('pod_id'): sys.exit(f"pod already exists: {s['pod_id']} (terminate first)")
     token = secrets.token_hex(24)
@@ -36,26 +43,26 @@ def create(gpu='NVIDIA GeForce RTX 4090', cloud='SECURE'):
         'apt-get install -y -qq python3 curl xz-utils ffmpeg libxi6 libxrender1 libxkbcommon0 libsm6 libgl1 libegl1 libxxf86vm1 libxfixes3 >/dev/null; '
         f'mkdir -p /opt /workspace/job; curl -sL {BLENDER_URL} | tar -xJ -C /opt; ln -sf /opt/blender-4.0.2-linux-x64/blender /usr/local/bin/blender; '
         f'echo {server} | base64 -d > /opt/pod_server.py; exec python3 /opt/pod_server.py')
-    body = {
-        'name': 'kids-render', 'imageName': 'nvidia/cuda:12.2.2-runtime-ubuntu22.04',
-        'gpuTypeIds': [gpu], 'gpuCount': 1, 'cloudType': cloud,
-        'containerDiskInGb': 30, 'volumeInGb': 0, 'ports': ['8000/http'],
-        'env': {'RENDER_TOKEN': token, 'NVIDIA_DRIVER_CAPABILITIES': 'all'},
-        'dockerStartCmd': ['bash', '-c', boot],
-    }
-    r = requests.post(f'{API}/pods', headers=HDR, json=body, timeout=60)
-    print(r.status_code, r.text[:800]); r.raise_for_status()
-    pod = r.json(); save({'pod_id': pod['id'], 'token': token, 'created': time.time(), 'gpu': gpu})
+    docker_args = "bash -c 'echo " + base64.b64encode(boot.encode()).decode() + " | base64 -d | bash'"
+    q = """mutation($i: PodFindAndDeployOnDemandInput) { podFindAndDeployOnDemand(input: $i) { id costPerHr desiredStatus } }"""
+    inp = {'cloudType': cloud, 'gpuCount': 1, 'gpuTypeId': gpu, 'name': 'kids-render',
+           'imageName': 'nvidia/cuda:12.2.2-runtime-ubuntu22.04', 'containerDiskInGb': 30, 'volumeInGb': 0,
+           'ports': '8000/http', 'dockerArgs': docker_args,
+           'env': [{'key': 'RENDER_TOKEN', 'value': token}, {'key': 'NVIDIA_DRIVER_CAPABILITIES', 'value': 'all'}]}
+    pod = gql(q, {'i': inp})['podFindAndDeployOnDemand']
+    save({'pod_id': pod['id'], 'token': token, 'created': time.time(), 'gpu': gpu, 'cost_per_hr': pod.get('costPerHr')})
     print('pod', pod['id'], 'cost/h', pod.get('costPerHr'))
 
 def status():
-    s = load(); r = requests.get(f"{API}/pods/{s['pod_id']}", headers=HDR, timeout=60)
-    d = r.json(); print(json.dumps({k: d.get(k) for k in ('id', 'desiredStatus', 'costPerHr', 'gpu', 'machine')}, default=str)[:800])
+    s = load()
+    d = gql("""query($i: PodFilter) { pod(input: $i) { id desiredStatus costPerHr runtime { uptimeInSeconds } } }""", {'i': {'podId': s['pod_id']}})
+    print(json.dumps(d['pod']))
     try:
         print('server:', requests.get(pod_url(s) + '/ping', headers=ph(s), timeout=20).text)
     except Exception as e:
         print('server not up yet:', e)
-    print(f"running for {(time.time() - s['created']) / 3600:.2f} h")
+    h = (time.time() - s['created']) / 3600
+    print(f"running for {h:.2f} h, ~US$ {h * (s.get('cost_per_hr') or 0):.2f}")
 
 def push(local, remote):
     s = load()
@@ -82,12 +89,13 @@ def pull(remote, local):
     print('saved', local, os.path.getsize(local))
 
 def stop():
-    s = load(); print(requests.post(f"{API}/pods/{s['pod_id']}/stop", headers=HDR, timeout=60).text)
+    s = load(); print(gql("""mutation($i: PodStopInput!) { podStop(input: $i) { id desiredStatus } }""", {'i': {'podId': s['pod_id']}}))
 
 def terminate():
-    s = load(); r = requests.delete(f"{API}/pods/{s['pod_id']}", headers=HDR, timeout=60)
-    print(r.status_code, r.text); 
-    if r.ok: print(f"terminated after {(time.time() - s['created']) / 3600:.2f} h"); os.remove(STATE)
+    s = load()
+    gql("""mutation($i: PodTerminateInput!) { podTerminate(input: $i) }""", {'i': {'podId': s['pod_id']}})
+    h = (time.time() - s['created']) / 3600
+    print(f"terminated after {h:.2f} h, ~US$ {h * (s.get('cost_per_hr') or 0):.2f}"); os.remove(STATE)
 
 if __name__ == '__main__':
     a = sys.argv[1:]; c = a[0]
