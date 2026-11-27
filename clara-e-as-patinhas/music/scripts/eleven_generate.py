@@ -19,7 +19,7 @@ import requests
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 API = 'https://api.elevenlabs.io/v1/music'
 # best first; fall back only if the server rejects the format (4xx => nothing generated)
-FORMATS = ['pcm_48000', 'pcm_44100', 'mp3_48000_320', 'mp3_48000_192']
+FORMATS = ['pcm_48000', 'pcm_44100', 'mp3_48000_320', 'mp3_48000_192', 'mp3_44100_128']  # Starter: HQ downloads 'No' -> may fall back to 128k
 PRICE_PER_MIN_USD = 0.15   # https://elevenlabs.io/pricing/api ("$0.15 per minute")
 CREDITS_PER_MIN = 900      # https://elevenlabs.io/pricing ("uses about 900 per minute")
 SAFE_HEADERS = ('song-id', 'x-song-id', 'request-id', 'x-request-id', 'content-type', 'content-length',

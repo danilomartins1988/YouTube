@@ -17,6 +17,11 @@ Preços de referência (consultados em 2026-11-27):
 - Música de ~2:45 (164,9 s): **~2.473 créditos ≈ US$ 0,41**. Com uma nova tentativa: **~4.946 créditos ≈ US$ 0,82**.
 - OpenAI Whisper (`whisper-1`): US$ 0,006 por minuto (https://openai.com/api/pricing/). Uma música de 2:45 custa ≈ US$ 0,017.
 
+## Conta ElevenLabs (informada pelo proprietário)
+- Plano visível: **€5/mês (Starter)**, pago e com assinatura própria. O proprietário diz ter um plano superior e ~**150.000 créditos** disponíveis. Não dá para verificar pela API porque a chave não tem `user_read`.
+- A assinatura é custo fixo do proprietário e não entra como gasto deste projeto. Abaixo ficam só os créditos consumidos.
+- Limite do Starter (https://elevenlabs.io/music-terms, Exhibit A): **17 min de geração por mês**.
+
 ## Log de gastos
 
 | Data | Serviço | O que | Créditos | US$ |

@@ -7,7 +7,7 @@ O proprietário autorizou (pelo coordenador) **1 geração + no máximo 1 nova t
 - `POST https://api.elevenlabs.io/v1/music` (Compose music)
   Doc: https://elevenlabs.io/docs/api-reference/music/compose
 - Autenticação: header `xi-api-key`. Neste ambiente, o proxy de rede injeta a chave para `api.elevenlabs.io`; o script manda um valor fictício e nunca imprime headers.
-- Query `output_format`: o script tenta, em ordem, `pcm_48000` → `pcm_44100` → `mp3_48000_320` → `mp3_48000_192`. Só passa para o próximo formato se o servidor recusar o anterior (4xx sobre formato ou plano), e nesse caso nada é gerado. Valores permitidos segundo a referência da API (o padrão `auto` escolhe `mp3_48000_192` para os modelos v2).
+- Query `output_format`: o script tenta, em ordem, `pcm_48000` → `pcm_44100` → `mp3_48000_320` → `mp3_48000_192` → `mp3_44100_128` (o Starter lista "High-Quality Downloads: No", então é provável que caia em 128 kbps). Só passa para o próximo formato se o servidor recusar o anterior (4xx sobre formato ou plano), e nesse caso nada é gerado. Valores permitidos segundo a referência da API (o padrão `auto` escolhe `mp3_48000_192` para os modelos v2).
 - O header de resposta traz o `song_id`, usado em inpainting e Audio Reference. O script salva os headers não sensíveis em `music/masters/*.response.json`.
 - Outros endpoints oficiais: `POST /v1/music/plan` cria um plano a partir de um prompt e **não gasta créditos** (https://elevenlabs.io/docs/api-reference/music/create-composition-plan). `POST /v1/music/detailed` devolve o áudio junto com os metadados.
 - **Stems:** existe o endpoint oficial `POST /v1/music/stem-separation` (multipart com `file`, opcional `stem_variation_id`), que devolve um ZIP de stems (https://elevenlabs.io/docs/api-reference/music/separate-stems). **O custo não está publicado na página de preços**, então **não está autorizado** e não foi usado. O instrumental separado também pode sair de uma segunda geração do mesmo plano com `negative_styles: ["vocals"]`, mas isso conta como geração extra, também não autorizada.
@@ -88,3 +88,18 @@ Depois de gerar:
 3. Montar `music/compositions/timeline_final.json` a partir do áudio real.
 4. Re-sincronizar a animação com o novo timeline.
 5. Exportar o MP3 de escuta.
+
+## Conta ElevenLabs (informada pelo proprietário)
+- O painel mostra o plano pago de **€5/mês (Starter)**. O proprietário diz ter assinado um plano superior e ter **~150.000 créditos** disponíveis. São dados **informados pelo proprietário**; a API não os confirma porque a chave não tem `user_read`.
+- Linha do **Starter** na tabela de direitos comerciais (Exhibit A, https://elevenlabs.io/music-terms):
+  - "For Individual Use Only"
+  - limite de geração de **17 min/mês** e de download de 30 min/mês
+  - **Music Streaming Distribution: "Prohibited"**
+  - Media Rights: "All online and offline commercial use permitted, except film, TV, radio, and Studio Games"
+  - High-Quality Downloads: "No"
+  - API Access: "Yes"
+- Interpretação (não é parecer jurídico):
+  - "Media Rights" (§4.8(d)) inclui "the right to synchronize Output in timed relation to audiovisual content", então **sincronizar a música num vídeo** cabe no uso comercial do Starter.
+  - "Music Streaming Distribution" (§4.8(g)) é "making Output available on a music streaming platform", ou seja, **publicar a faixa de áudio** no Spotify, Apple Music ou YouTube Music. Isso o Starter **proíbe**; exige Creator ou superior.
+  - Os termos não dizem explicitamente se um vídeo no YouTube conta como "TV". **Confirme com a ElevenLabs antes de monetizar**, e prefira o plano Creator se a faixa também for para plataformas de streaming de música.
+- Com ~150k créditos, as 2 gerações autorizadas (~4.946 créditos) cabem com folga. **Mas, se o plano for mesmo Starter, o limite de 17 min/mês de geração vale.** Cada geração de 2:45 consome ~2,75 min desse limite.
