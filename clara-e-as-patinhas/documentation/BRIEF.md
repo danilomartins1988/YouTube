@@ -59,3 +59,5 @@
 "Evite citar os nomes dos personagens nos vídeos." Letras, falas, letreiros, títulos, descrições, tags e thumbnails não citam os nomes das personagens. Elas são identificadas pelo visual (a menina de macacão amarelo, a cachorrinha de bandana azul, a branquinha de laço rosa, a pequenina de bandana verde). Os nomes continuam apenas nos arquivos internos de produção.
 
 Exceção decidida pelo proprietário (2026-11-27): o piloto "A Dança das Patinhas" fica como está, com os nomes cantados. A regra vale do episódio 2 em diante.
+
+Nome do canal e da série (proprietário, 2026-11-27): "Clara e as Patinhas" é só o nome deste episódio piloto. Os próximos episódios terão nomes de acordo com o tema, e o nome do canal ainda será definido pelo proprietário. Até lá, nenhum texto novo usa "Clara e as Patinhas" como marca.
