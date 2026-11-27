@@ -7,6 +7,7 @@ import numpy as np
 from mathutils import Vector, Matrix, Euler, Quaternion
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+LOD = float(os.environ.get('CP_LOD', '1.0'))  # geometry density factor (episode renders use < 1)
 
 
 def srgb_to_lin(c):
@@ -151,6 +152,7 @@ def _new_bm():
 
 
 def bm_sphere(segs=32, rings=16):
+    segs = max(8, int(round(segs * LOD))); rings = max(4, int(round(rings * LOD)))
     bm = _new_bm()
     bmesh.ops.create_uvsphere(bm, u_segments=segs, v_segments=rings, radius=1.0, calc_uvs=True)
     return bm

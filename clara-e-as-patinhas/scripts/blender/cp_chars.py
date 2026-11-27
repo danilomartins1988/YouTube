@@ -175,25 +175,32 @@ def neutral_clara(arm):
 LID_OPEN = -105
 
 
-def face(arm, expr='happy', blink=0.0, mouth_open=None):
-    """Set facial pose for any character (bones present are used)."""
+def face(arm, expr='happy', blink=0.0, mouth_open=None, A=None):
+    """Set facial pose for any character (bones present are used). With an accumulator A, add into it."""
+    def P(b, rot=(0, 0, 0), loc=(0, 0, 0), scale=None):
+        if A is None:
+            pose(arm, b, rot=rot, loc=loc, scale=scale)
+        else:
+            A.rot(b, *rot); A.loc(b, *loc)
+            if scale is not None:
+                A.scale(b, scale)
     pb = arm.pose.bones
     lid = {'happy': LID_OPEN, 'curious': LID_OPEN, 'surprised': LID_OPEN, 'focused': 8,
            'affectionate': 28}.get(expr, LID_OPEN)
     lid = lid + (100 - lid) * blink if blink else lid
     for s in ('L', 'R'):
         if f'lid_{s}' in pb:
-            pose(arm, f'lid_{s}', rot=(lid, 0, 0))
+            P(f'lid_{s}', rot=(lid, 0, 0))
     if 'brow_L' in pb:
         for s, x in (('L', 1), ('R', -1)):
             if expr == 'surprised':
-                pose(arm, f'brow_{s}', loc=(0, 0, 0.014))
+                P(f'brow_{s}', loc=(0, 0, 0.014))
             elif expr == 'curious':
-                pose(arm, f'brow_{s}', loc=(0, 0, 0.012 if s == 'L' else 0.0), rot=(0, (-10 if s == 'L' else 0) * x, 0))
+                P(f'brow_{s}', loc=(0, 0, 0.012 if s == 'L' else 0.0), rot=(0, (-10 if s == 'L' else 0) * x, 0))
             elif expr == 'focused':
-                pose(arm, f'brow_{s}', loc=(0, 0, -0.006), rot=(0, 14 * x, 0))
+                P(f'brow_{s}', loc=(0, 0, -0.006), rot=(0, 14 * x, 0))
             elif expr == 'affectionate':
-                pose(arm, f'brow_{s}', loc=(0, 0, 0.004), rot=(0, -8 * x, 0))
+                P(f'brow_{s}', loc=(0, 0, 0.004), rot=(0, -8 * x, 0))
     if 'mouth_smile' in pb:
         mo = {'happy': 'open', 'curious': 'o', 'surprised': 'o', 'focused': 'smile', 'affectionate': 'smile'}[expr]
         if mouth_open is not None:
@@ -201,32 +208,32 @@ def face(arm, expr='happy', blink=0.0, mouth_open=None):
         for k in ('smile', 'open', 'o'):
             s = 1.0 if k == mo else 0.0
             if k == 'open' and mo == 'open' and mouth_open is not None:
-                pose(arm, 'mouth_open', scale=(1.0, 1.0, 0.35 + 0.75 * mouth_open))
+                P('mouth_open', scale=(1.0, 1.0, 0.35 + 0.75 * mouth_open))
             elif k == 'o' and expr == 'surprised' and mo == 'o':
-                pose(arm, 'mouth_o', scale=1.3)
+                P('mouth_o', scale=1.3)
             elif k == 'smile' and expr == 'focused':
-                pose(arm, 'mouth_smile', scale=(0.6, 1, 0.5))
+                P('mouth_smile', scale=(0.6, 1, 0.5))
             else:
-                pose(arm, f'mouth_{k}', scale=s if s else 0.0001)
+                P(f'mouth_{k}', scale=s if s else 0.0001)
     if 'jaw' in pb:  # dogs
         jo = {'happy': 0.6, 'curious': 0.0, 'surprised': 0.8, 'focused': 0.0, 'affectionate': 0.3}[expr]
         if mouth_open is not None:
             jo = mouth_open
-        pose(arm, 'jaw', rot=(-22 * jo, 0, 0))
-        pose(arm, 'tongue', scale=max(0.0001, min(1, jo * 1.6)))
+        P('jaw', rot=(-22 * jo, 0, 0))
+        P('tongue', scale=max(0.0001, min(1, jo * 1.6)))
     if 'ear_L' in pb:
         e = {'happy': 0, 'curious': 1, 'surprised': 2, 'focused': 0, 'affectionate': 3}[expr]
         for s, x in (('L', 1), ('R', -1)):
             if e == 1:
-                pose(arm, f'ear_{s}', rot=(-15 if s == 'L' else 10, 0, 0))
+                P(f'ear_{s}', rot=(-15 if s == 'L' else 10, 0, 0))
             elif e == 2:
-                pose(arm, f'ear_{s}', rot=(-12, -10 * x, 0))
+                P(f'ear_{s}', rot=(-12, -10 * x, 0))
             elif e == 3:
-                pose(arm, f'ear_{s}', rot=(25, 18 * x, 0))
+                P(f'ear_{s}', rot=(25, 18 * x, 0))
     if 'head' in pb:
         tilt = {'happy': (0, 0, 0), 'curious': (0, 14, 0), 'surprised': (-8, 0, 0), 'focused': (6, 0, 0),
                 'affectionate': (4, -10, 0)}[expr]
-        pose(arm, 'head', rot=tilt)
+        P('head', rot=tilt)
 
 
 def surf_y(x, z, y0=-2.0, skip_bones=()):
@@ -536,7 +543,7 @@ def build_dog(name):
         bm_ = mat(f'{name}_bandana', PAL[cfg['acc']], rough=0.6, sheen=0.4)
         zc = bz + bh * 0.55
         yc = min([v for v in (surf_y(0, zc, skip_bones=('head', 'jaw', 'tongue')), surf_y(0, zc - 0.03, skip_bones=('head', 'jaw', 'tongue'))) if v is not None] or [-bl])
-        tri = tri_cloth(f'{name}_bandana', yc - 0.006, zc + 0.012, bw * 0.95, bh * 1.0, bm_, C, bend=3.0)
+        tri = tri_cloth(f'{name}_bandana', yc - 0.006, zc + 0.012, bw * 0.8, bh * 0.85, bm_, C, bend=3.0)
         B(tri, 'neck')
         for k in range(4):
             ang = (k - 1.5) * 0.5
