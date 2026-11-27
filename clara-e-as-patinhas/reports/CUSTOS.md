@@ -49,3 +49,4 @@ _Atualização: o proprietário/coordenador fez a geração Eleven Music fora de
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração v2 (voz consistente; melodia mudou, descartada) | ~2473 créditos (estimado) | ~US$ 0.41 |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | inpainting: v1 mantida, só o verso da Ayra regerado (16,7 s gerados + 148 s referenciados) | não informado pela API; estimativa ≤ 2473 créditos | ≤ US$ 0.41 |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | inpainting: v1 mantida, só a introdução (0:08–0:25) regerada | não informado pela API; estimativa ≤ 2473 créditos | ≤ US$ 0.41 |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração cade_achou v1, 125 s | ~1872 créditos (estimado) | ~US$ 0.31 (preço de lista API; débito real no plano do proprietário) |

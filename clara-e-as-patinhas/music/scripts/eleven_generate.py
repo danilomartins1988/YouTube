@@ -92,7 +92,7 @@ def main():
     json.dump(meta, open(base + '.response.json', 'w'), indent=1)
     print('saved', path, len(data), 'bytes; format', fmt)
     print('response headers (safe subset):', meta['headers'])
-    line = (f"| {datetime.date.today()} | ElevenLabs Eleven Music (music_v2_5) | 1 geração {a.tag}, {total_ms/1000:.0f} s | "
+    line = (f"| {datetime.date.today()} | ElevenLabs Eleven Music (music_v2_5) | 1 geração {a.name} {a.tag}, {total_ms/1000:.0f} s | "
             f"~{est_min*CREDITS_PER_MIN:.0f} créditos (estimado) | ~US$ {est_min*PRICE_PER_MIN_USD:.2f} (preço de lista API; "
             f"débito real no plano do proprietário) |\n")
     with open(f'{ROOT}/reports/CUSTOS.md', 'a', encoding='utf-8') as f:

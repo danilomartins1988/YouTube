@@ -1,0 +1,454 @@
+{
+ "_meta": {
+  "projeto": "ep. 002 - Cadê? Achou!",
+  "modelo": "music_v2_5",
+  "endpoint": "POST https://api.elevenlabs.io/v1/music",
+  "duracao_total_ms": 124800,
+  "bpm": 100,
+  "compasso_ms": 2400,
+  "tonalidade": "D major",
+  "secoes": [
+   {
+    "tag": "Intro",
+    "compassos": 2,
+    "inicio_s": 0.0
+   },
+   {
+    "tag": "Chorus",
+    "compassos": 8,
+    "inicio_s": 4.8
+   },
+   {
+    "tag": "Verse 1",
+    "compassos": 6,
+    "inicio_s": 24.0
+   },
+   {
+    "tag": "Short Chorus",
+    "compassos": 4,
+    "inicio_s": 38.4
+   },
+   {
+    "tag": "Verse 2",
+    "compassos": 6,
+    "inicio_s": 48.0
+   },
+   {
+    "tag": "Short Chorus",
+    "compassos": 4,
+    "inicio_s": 62.4
+   },
+   {
+    "tag": "Verse 3",
+    "compassos": 6,
+    "inicio_s": 72.0
+   },
+   {
+    "tag": "Bridge",
+    "compassos": 6,
+    "inicio_s": 86.4
+   },
+   {
+    "tag": "Final Verse",
+    "compassos": 6,
+    "inicio_s": 100.8
+   },
+   {
+    "tag": "Outro",
+    "compassos": 4,
+    "inicio_s": 115.2
+   }
+  ],
+  "nota": "Sem nomes de personagens (regra do proprietário). Campos com _ não são enviados."
+ },
+ "model_id": "music_v2_5",
+ "composition_plan": {
+  "chunks": [
+   {
+    "text": "[Intro]\n{gentle xylophone and ukulele intro}\n{two small soft cute dog barks}",
+    "duration_ms": 4800,
+    "positive_styles": [
+     "gentle Brazilian children's song for babies and toddlers, peekaboo hide-and-seek game song",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese",
+     "small soft group of backing voices answering 'Achou!' and 'au, au!'",
+     "ukulele fingerpicking and soft strumming",
+     "xylophone and marimba melodies",
+     "soft glockenspiel bells",
+     "light percussion: shaker, soft hand claps, soft kick",
+     "acoustic upright bass",
+     "100 BPM",
+     "D major",
+     "4/4",
+     "bright, warm, tender, playful, preschool-friendly",
+     "clean modern production, studio quality, clear intelligible lyrics, lead vocal upfront in the mix",
+     "instrumental intro",
+     "xylophone plays the 'cadê, cadê' melody",
+     "two small soft dog barks at the end"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix",
+     "vocals",
+     "lyrics",
+     "singing"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Chorus]\nCadê, cadê, cadê você?\nCadê, cadê, quem vai aparecer?\nTem alguém escondidinho no jardim,\nVem procurar bem juntinho de mim!",
+    "duration_ms": 19200,
+    "positive_styles": [
+     "simple catchy sing-along chorus",
+     "call and answer feel",
+     "tender and curious",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Verse 1]\nAtrás da flor, quem será?\nUma orelhinha, olha lá!\nBandana azul...\n{short suspense pause: music drops to a soft shaker and a tiny rising glockenspiel}\nACHOU!\n(Au, au!)",
+    "duration_ms": 14400,
+    "positive_styles": [
+     "curious whispery verse building to a joyful reveal",
+     "backing voices shout a happy 'Achou!' with the lead",
+     "backing voices answer 'au, au!'",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Short Chorus]\nCadê, cadê, cadê você?\nCadê, cadê, quem vai aparecer?",
+    "duration_ms": 9600,
+    "positive_styles": [
+     "short sing-along chorus",
+     "soft claps",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Verse 2]\nDentro do balde, quem será?\nUm rabinho branco, olha lá!\nLaço cor-de-rosa...\n{short suspense pause: music drops to a soft shaker and a tiny rising glockenspiel}\nACHOU!\n(Au, au!)",
+    "duration_ms": 14400,
+    "positive_styles": [
+     "curious whispery verse building to a joyful reveal",
+     "sparkly bells",
+     "backing voices shout a happy 'Achou!' with the lead",
+     "backing voices answer 'au, au!'",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Short Chorus]\nCadê, cadê, cadê você?\nCadê, cadê, quem vai aparecer?",
+    "duration_ms": 9600,
+    "positive_styles": [
+     "short sing-along chorus",
+     "soft claps",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Verse 3]\nEmbaixo do chapéu, quem será?\nUm narizinho, olha lá!\nBandana verde...\n{short suspense pause: music drops to a soft shaker and a tiny rising glockenspiel}\nACHOU!\n(Au, au!)",
+    "duration_ms": 14400,
+    "positive_styles": [
+     "curious whispery verse building to a joyful reveal",
+     "playful staccato marimba",
+     "backing voices shout a happy 'Achou!' with the lead",
+     "backing voices answer 'au, au!'",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Bridge]\nE a menina? Cadê? Cadê?\nTapou o rostinho, quem vai ver?\n{short suspense pause: music drops to a soft shaker and a tiny rising glockenspiel}\nACHOU!",
+    "duration_ms": 14400,
+    "positive_styles": [
+     "tender bridge",
+     "softer arrangement",
+     "anticipation",
+     "big happy 'Achou!' with backing voices",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Final Verse]\nE você? Cadê você?\nTapa o rostinho, deixa eu ver...\n{short suspense pause: music drops to a soft shaker and a tiny rising glockenspiel}\nACHOU!",
+    "duration_ms": 14400,
+    "positive_styles": [
+     "intimate, singing directly to the little listener",
+     "softest suspense",
+     "biggest joyful 'Achou!' with backing voices",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   },
+   {
+    "text": "[Outro]\nAchou, achou, que alegria!\nBrincar de esconder todo dia!\n{soft final D major chord, two small soft dog barks}",
+    "duration_ms": 9600,
+    "positive_styles": [
+     "happy ending tag",
+     "slower final line",
+     "warm",
+     "final chord rings out",
+     "100 BPM",
+     "D major",
+     "the same warm young adult female lead singer throughout the whole song, identical voice, timbre and vocal register in every section, sweet and clear, natural Brazilian Portuguese"
+    ],
+    "negative_styles": [
+     "electric guitar distortion",
+     "heavy drums",
+     "EDM drops",
+     "autotune",
+     "aggressive vocals",
+     "rap",
+     "sad",
+     "dark",
+     "minor key",
+     "scary",
+     "explicit content",
+     "male lead vocal",
+     "European Portuguese accent",
+     "Spanish accent",
+     "different singer",
+     "voice change between sections",
+     "child lead voice",
+     "high-pitched chipmunk vocal",
+     "pitched-up vocal",
+     "falsetto",
+     "reverb wash",
+     "muddy mix"
+    ],
+    "context_adherence": "high"
+   }
+  ]
+ }
+}
