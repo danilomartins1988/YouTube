@@ -80,7 +80,7 @@ def wait(jid, every=30):
         j = requests.get(pod_url(s) + '/job', params={'id': jid}, headers=ph(s), timeout=60).json()
         print(j['log_tail'][-600:], flush=True)
         if j['done']: print('rc', j['rc']); return
-        time.sleep(every)
+        time.sleep(int(every))
 
 def pull(remote, local):
     s = load(); r = requests.get(pod_url(s) + '/file', params={'path': remote}, headers=ph(s), timeout=1200, stream=True)
