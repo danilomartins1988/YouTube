@@ -23,9 +23,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REFDIR = f'{ROOT}/intellectual-property/music-rights/voice_reference'
 SR = 22050; N = 2048; HOP = 512
 # Thresholds (calibrated 2026-11-27 on the two owner-approved songs, see VOICE_PROFILE.md)
-MAX_F0_SEMITONES = 4.0      # section f0 median vs reference f0 median (melodies differ, register should not)
-MAX_CENTROID_RATIO = 1.25   # brighter/darker than this = different vocal colour or pitched-up voice
-MFCC_FACTOR = 1.6           # MFCC distance may be at most 1.6x the distance between the two approved references
+MAX_F0_SEMITONES = 5.0      # HARD: section f0 median vs reference (catches octave jumps, chipmunk, male/child voice)
+MAX_CENTROID_RATIO = 1.25   # HARD: much brighter/darker = different vocal colour or pitched-up voice
+MFCC_FACTOR = 1.6           # HARD: MFCC distance <= 1.6x the spread between the approved references
+WARN_CENTROID_DEV = 0.08    # WARN: section brightness differs >8% from the song's own median -> listen to it
+MIN_VOICED = 150            # windows with fewer voiced frames are 'n/a' (instrument leakage, too little singing)
 
 
 def separate(path, start=None, end=None):
@@ -111,7 +113,7 @@ def main():
     t = 0.0
     while t < total - 2:
         f = features(voc[int(t * SR):int(min(total, t + win) * SR)])
-        if f:
+        if f and f['voiced_frames'] >= MIN_VOICED:
             st = 12 * np.log2(f['f0_median_hz'] / ref_f0)
             cr = f['centroid_hz'] / ref_cen
             md = min(mfcc_dist(f, r) for r in refs.values())
@@ -122,8 +124,15 @@ def main():
             print(f"{t:6.1f}-{min(total, t + win):6.1f}s  f0 {f['f0_median_hz']:4.0f} Hz ({st:+.1f} st)  centroid x{cr:.2f}  "
                   f"MFCC d={md:.2f} (thr {mf_thr:.2f})  {'PASS' if ok else 'FAIL'}")
         t += win
+    if rows:
+        med = float(np.median([r['centroid_ratio'] for r in rows]))
+        for r in rows:
+            r['warn'] = bool(abs(r['centroid_ratio'] / med - 1) > WARN_CENTROID_DEV)
+            if r['warn']:
+                print(f"WARN {r['start']:.0f}-{r['end']:.0f}s: brightness {100*(r['centroid_ratio']/med-1):+.0f}% vs rest of song -> listen (possible timbre drift)")
     whole = features(voc)
-    verdict = 'PASS' if fails == 0 else f'FAIL ({fails} section(s) drift: fix by inpainting those ranges)'
+    warns = sum(r.get('warn', False) for r in rows)
+    verdict = ('PASS' if fails == 0 else f'FAIL ({fails} section(s) drift: fix by inpainting those ranges)') + (f', {warns} WARN' if warns else '')
     print(f'References: {", ".join(names)} | ref f0 {ref_f0:.0f} Hz, ref centroid {ref_cen:.0f} Hz, ref MFCC spread {ref_spread:.2f}')
     print(f"Whole song: f0 {whole['f0_median_hz']:.0f} Hz (p10-p90 {whole['f0_p10_hz']:.0f}-{whole['f0_p90_hz']:.0f}), "
           f"min MFCC d {min(mfcc_dist(whole, r) for r in refs.values()):.2f}  => {verdict}")

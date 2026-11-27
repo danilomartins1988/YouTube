@@ -59,3 +59,11 @@ _Atualização: o proprietário/coordenador fez a geração Eleven Music fora de
 
 **Total do ep. 002 até o ponto de parada: ≈ US$ 0,33** (orçamento: ≤ US$ 1,50). Usada 1 de 3 gerações completas; nenhum inpainting. Nenhuma chamada de stems.
 Computação local do ep. 002 até agora: ≈ 40 min de CPU (stills de teste e medição dos níveis de qualidade).
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_chorus A, 23 s | ~341 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_chorus B, 23 s | ~341 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_chorus C, 23 s | ~341 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_chorus D, 23 s | ~341 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_chorus E, 23 s | ~341 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata pt_v1, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata pt_v2, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata pt_v3, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |

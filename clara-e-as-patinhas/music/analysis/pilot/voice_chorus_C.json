@@ -1,0 +1,32 @@
+{
+ "audio": "music/masters/pata_chorus_C.wav",
+ "references": [
+  "ep001_danca_chorus",
+  "ep001_danca_verse",
+  "ep002_cade_chorus"
+ ],
+ "mfcc_threshold": 41.250567491853985,
+ "sections": [
+  {
+   "start": 0.0,
+   "end": 11.35,
+   "f0": 338,
+   "semitones_vs_ref": -0.3,
+   "centroid_ratio": 0.73,
+   "mfcc_dist": 36.17,
+   "pass": false,
+   "warn": false
+  },
+  {
+   "start": 11.35,
+   "end": 22.7,
+   "f0": 349,
+   "semitones_vs_ref": 0.2,
+   "centroid_ratio": 0.72,
+   "mfcc_dist": 36.31,
+   "pass": false,
+   "warn": false
+  }
+ ],
+ "verdict": "FAIL (2 section(s) drift: fix by inpainting those ranges)"
+}

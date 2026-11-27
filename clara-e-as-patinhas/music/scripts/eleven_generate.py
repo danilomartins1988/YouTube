@@ -46,7 +46,7 @@ def main():
 
     raw = json.load(open(a.plan, encoding='utf-8'))
     body = strip_meta(raw)
-    total_ms = sum(c['duration_ms'] for c in body['composition_plan']['chunks'])
+    total_ms = sum(c.get('duration_ms') or (c['range']['end_ms'] - c['range']['start_ms']) for c in body['composition_plan']['chunks'])  # inpainting refs have a range
     est_min = total_ms / 60000
     print(f'Plan: {len(body["composition_plan"]["chunks"])} chunks, {total_ms/1000:.1f} s, model {body.get("model_id")}')
     print(f'Estimated cost: ~{est_min*CREDITS_PER_MIN:.0f} credits (~US$ {est_min*PRICE_PER_MIN_USD:.2f} at API list price)')
