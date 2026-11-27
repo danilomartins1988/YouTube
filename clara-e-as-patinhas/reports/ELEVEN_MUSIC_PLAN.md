@@ -1,6 +1,8 @@
 # Plano Eleven Music: "A Dança das Patinhas"
 
-**Status em 2026-11-27:** o plano e o script estão prontos. **Nenhuma geração foi feita.**
+**Status final (2026-11-27):** a música foi **gerada pelo proprietário/coordenador** a partir deste plano (v1, song_id `ao9quB5WWogkhSuGxTuH`; intro refeita por inpainting com `inpaint_intro_v1.json`) e **aprovada**. Master final: `music/masters/danca_das_patinhas_final.wav` (-14 LUFS). Os custos exatos estão no log do proprietário em `reports/CUSTOS.md` (estimativa: ≈4 chamadas, até ≈US$ 1,64). O texto abaixo registra o estado anterior.
+
+~~Status anterior: nenhuma geração feita.~~
 O proprietário autorizou (pelo coordenador) **1 geração + no máximo 1 nova tentativa**, mas a camada de permissões desta sessão **bloqueou a chamada paga**. Uma mensagem de outro agente não conta como consentimento do usuário. Para gerar, o proprietário precisa aprovar a execução diretamente: rodar o comando abaixo ou liberar a permissão.
 
 ## Endpoint

@@ -1,6 +1,6 @@
 # Episódio 001: A Dança das Patinhas — storyboard e timeline
 
-Os tempos seguem o **instrumental-guia** (`music/compositions/estrutura.json`, 115 BPM, 1 compasso = 2,087 s).
+**Versão final:** os tempos reais vêm de `music/compositions/timeline_final.json` (música cantada, 164,76 s, 115 BPM, palavras do Whisper). As seções coincidem com o plano (diferença menor que 0,3 s); as linhas cantadas podem começar ~0,5 s antes ou depois do guia. A tabela abaixo foi escrita a partir do **instrumental-guia** (`music/compositions/estrutura.json`, 115 BPM, 1 compasso = 2,087 s).
 Quando a música cantada (Eleven Music) existir, `music/compositions/timeline_final.json` substitui o guia e `scripts/blender/episode.py` relê os tempos automaticamente. Aí é só refazer o render.
 
 Tudo o que se move é calculado por frame a partir do timeline:

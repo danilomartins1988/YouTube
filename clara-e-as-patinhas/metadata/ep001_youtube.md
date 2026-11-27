@@ -32,7 +32,7 @@ Dança junto como quiser!
 
 Clara e as Patinhas — Pequenas patinhas, grandes aventuras!
 
-Animação 3D e música originais. [Se a versão final usar vozes geradas por IA (Eleven Music), declare isso e marque "conteúdo alterado ou sintético" no YouTube Studio quando aplicável.]
+Animação 3D original. Música original com voz gerada por IA (ElevenLabs Eleven Music).
 
 ## Palavras-chave / tags
 música infantil, musica infantil para dançar, clara e as patinhas, dança das patinhas, cachorrinhos, música de cachorrinho, desenho infantil, animação infantil 3D, canções infantis, música para bebês, música para crianças de 1 a 5 anos, coreografia infantil, border collie, lulu da pomerânia, yorkshire, au au au, patinha pra frente
@@ -46,4 +46,4 @@ música infantil, musica infantil para dançar, clara e as patinhas, dança das 
 - Idioma: Português (Brasil). Legendas pt-BR a partir da letra.
 - **Divulgação de IA:** se a música cantada for gerada pelo Eleven Music, marcar "conteúdo alterado ou sintético", conforme as regras do YouTube e os Music Terms da ElevenLabs (§4.4).
 - Thumbnail: `thumbnails/ep001_thumbnail.png` (1280×720).
-- Não publicar antes da revisão do proprietário. A versão atual usa o **instrumental-guia, sem voz**.
+- Não publicar antes da revisão do proprietário. A versão atual usa a **música cantada final** (Eleven Music). Confirme os direitos do plano ElevenLabs (veja `licensing/REGISTRO.md`) e marque "conteúdo alterado ou sintético" no YouTube Studio.
