@@ -106,8 +106,22 @@ def light_rig():
         bpy.data.objects.remove(old, do_unlink=True)  # ep1 small toy bucket: avoid two buckets
 
 
+def toby_topete():
+    """Yorkshire (rig 'tifa', now Toby, MALE): short golden forelock tuft instead of any feminine cue (Aditivo 01).
+    Added only in the ep. 002 scene copy; assets/characters/ stay untouched."""
+    from cp_chars import DOGS
+    arm = bpy.data.objects['tifa']; reset_pose(arm); bpy.context.view_layer.update()
+    hx, hy, hz = DOGS['tifa']['head_pos']; hr = DOGS['tifa']['head_r']
+    m = mat('toby_topete', (0.78, 0.52, 0.22), rough=0.7, sheen=0.6)
+    C = arm.users_collection[0]
+    for k, (dx, dy, rx, ry) in enumerate([(0.0, -0.02, -25, 0), (0.022, 0.0, -10, 22), (-0.022, 0.0, -10, -22), (0.0, 0.025, 5, 0)]):
+        loc = arm.matrix_world @ Vector((hx + dx, hy + dy, hz + hr[2] * 0.93))
+        o = ellipsoid(f'tifa_topete_{k}', loc, (0.009, 0.008, 0.02), (rx, ry, 0), m, segs=12, rings=8, collection=C)
+        bind(o, arm, 'head')
+
+
 def build():
-    paw_emblems(); build_props(); light_rig()
+    paw_emblems(); build_props(); light_rig(); toby_topete()
     out = os.path.join(ROOTP, 'rendering', 'ep002.blend')
     bpy.ops.wm.save_as_mainfile(filepath=out, compress=True, copy=True)
     print('SAVED', out)
