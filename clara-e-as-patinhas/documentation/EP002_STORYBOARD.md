@@ -7,7 +7,7 @@
 - Música: `music/masters/cade_achou_final.wav` (2:04,8, 99,9 BPM, compasso de 2,4 s). Letra: `music/lyrics/cade-achou.md`.
 - Cena: `scripts/blender/ep2_scene.py` cria `rendering/ep002.blend` a partir do jardim do ep. 001. O `ep001.blend` nunca é salvo por esse script.
 - Stills de teste: `reports/ep002_stills/` (folha de contato: `contact_sheet.jpg`).
-- **Status:** a música está pronta e esperando a aprovação do proprietário. **O render completo não começou.**
+- **Status:** música aprovada; episódio renderizado (ver `reports/QC_EP002.md`).
 
 ## 1. Mudanças no cenário em relação ao ep. 001
 | Item | O que muda | Por quê |

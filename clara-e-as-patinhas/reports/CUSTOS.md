@@ -78,3 +78,7 @@ Computação local do ep. 002 até agora: ≈ 40 min de CPU (stills de teste e m
 ### Piloto "Pata Pata Patatá" (Aditivo 01/02/03) — 2026-11-27
 Linhas automáticas acima ("pata_chorus", "pata_pata_patata"). Resumo e faixa mín./máx. em `reports/CUSTOS_PILOTO_MULTILINGUE.md`: **≈ US$ 1,73–3,35** nesta etapa (orçamento do proprietário: US$ 10). Whisper ≈ US$ 0,07. RunPod: US$ 0 (não usado). Demucs: CPU local.
 | 2026-11-27 | RunPod (RTX 4090 Secure, US$ 0,89/h) | Teste de personagens com IA: SDXL (referências) + TRELLIS (imagem→3D), 0,30 h, pod encerrado | — | ~US$ 0,27 |
+| 2026-11-27 | RunPod (RTX 4090 Community, US$ 0,34/h) | Pod `hh6mm30w3sfvl6`: smoke test, teste de movimento de 10 s, render completo do ep. 002 (3.019 frames em 16,7 min, 16 instâncias EEVEE em paralelo), encodes. Terminado; `myself.pods` vazio depois | n/a | **0,70 h ≈ US$ 0,24** |
+
+**Ep. 002 total: ≈ US$ 0,57** (música ≈ 0,31 + Whisper ≈ 0,02 + GPU ≈ 0,24).
+Observação: neste host da RunPod o CUDA falhou (`cuInit` 999), então o Cycles na GPU não rodou. O EEVEE rodou pelo EGL/software nos 144 núcleos do host: ~4 s/frame por instância, 16 em paralelo, ≈ 3 frames/s no total.
