@@ -50,3 +50,12 @@ _Atualização: o proprietário/coordenador fez a geração Eleven Music fora de
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | inpainting: v1 mantida, só o verso da Ayra regerado (16,7 s gerados + 148 s referenciados) | não informado pela API; estimativa ≤ 2473 créditos | ≤ US$ 0.41 |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | inpainting: v1 mantida, só a introdução (0:08–0:25) regerada | não informado pela API; estimativa ≤ 2473 créditos | ≤ US$ 0.41 |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração cade_achou v1, 125 s | ~1872 créditos (estimado) | ~US$ 0.31 (preço de lista API; débito real no plano do proprietário) |
+
+### Episódio 002 "Cadê? Achou!" (2026-11-27)
+| Data | Serviço | O que | Créditos | US$ |
+|---|---|---|---|---|
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração completa `cade_achou v1`, 124,8 s, song_id `qF8M4uoLJDxZImEDIrIZ` (linha automática acima) | ~1.872 (estimado) | ~US$ 0,31 |
+| 2026-11-27 | OpenAI Whisper (`whisper-1`) | 1 transcrição completa (2,08 min) + 8 trechos curtos de conferência (~1,2 min) | n/a | ≈ 3,3 min × US$ 0,006 ≈ **US$ 0,02** |
+
+**Total do ep. 002 até o ponto de parada: ≈ US$ 0,33** (orçamento: ≤ US$ 1,50). Usada 1 de 3 gerações completas; nenhum inpainting. Nenhuma chamada de stems.
+Computação local do ep. 002 até agora: ≈ 40 min de CPU (stills de teste e medição dos níveis de qualidade).

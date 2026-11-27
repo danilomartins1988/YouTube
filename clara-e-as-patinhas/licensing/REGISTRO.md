@@ -48,3 +48,10 @@ Os logos, a paleta, o ícone e a thumbnail foram desenhados por código (`script
 - Nenhuma publicação nem upload.
 - Gasto externo: veja `reports/CUSTOS.md` (US$ 0 até agora; a geração Eleven Music está bloqueada).
 - Transcrição com OpenAI Whisper (`whisper-1`): usada só para verificar a letra e marcar o tempo das palavras. Nada foi publicado.
+
+## Episódio 002 "Cadê? Achou!" (2026-11-27)
+| Asset | Origem | Licença |
+|---|---|---|
+| Letra "Cadê? Achou!" | Escrita nesta sessão a partir do rascunho do proprietário (`music/lyrics/cade-achou.md`). Original: só o formato genérico de pergunta e resposta "cadê?/achou!" é comum ao gênero. Nenhum verso, melodia ou tema de outra canção (incluindo "Sopa", da Palavra Cantada, e as canções conhecidas de "cadê/achou") | Do proprietário |
+| Música cantada | Eleven Music `music_v2_5`, song_id `qF8M4uoLJDxZImEDIrIZ`, plano `music/compositions/cade_achou_plan.json`, **sem** conditioning/referência de áudio. O prompt não cita artistas nem títulos. Master: `music/masters/cade_achou_final.wav` (-14 LUFS) | Mesmos termos e ressalvas de plano descritos acima |
+| Flor gigante, balde, chapéu de palha, patinhas nas casinhas | `scripts/blender/ep2_scene.py` (procedural) | Original |

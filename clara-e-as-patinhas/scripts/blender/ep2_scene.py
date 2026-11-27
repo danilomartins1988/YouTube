@@ -5,7 +5,8 @@
 
 Ep. 002 changes to the set: name labels on the dog houses removed (owner rule: no names on screen) and replaced by
 paw emblems; new hiding props: giant flower, big toy bucket, straw sun hat.
-LEVELS: L0 = ep. 001 settings; L1 = native 1080p + key/rim/fill + AgX + grade + DOF; L2 = L1 + 32 samples, contact
+LEVELS: L0 = ep. 001 settings; L1 = native 1080p + key/rim/fill + Standard view + compositor grade/vignette + DOF;
+L1M = L1 + motion blur, contact shadows, 2048 cube shadows (no SSR); L2 = L1 + 32 samples, contact
 shadows, SSR, motion blur, larger shadow maps; L3 = L2 + 64 samples + particle hair on the dogs."""
 import bpy, sys, os, math, time, bmesh
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -120,7 +121,7 @@ def level(lv, pct=100):
         sc.render.resolution_x, sc.render.resolution_y = 1280, 720; e.taa_render_samples = 8
         return
     sc.render.resolution_x, sc.render.resolution_y = 1920, 1080; sc.render.resolution_percentage = pct
-    e.taa_render_samples = {'L1': 16, 'L2': 32, 'L3': 64}[lv]
+    e.taa_render_samples = {'L1': 16, 'L1M': 16, 'L2': 32, 'L3': 64}[lv]
     # light: softer warm key, warm rim from behind, cool sky fill from the camera side
     key.energy = 3.3; key.angle = math.radians(14); key.color = (1.0, 0.93, 0.82)
     rim.energy = 2.0; fill.energy = 90
@@ -144,8 +145,8 @@ def level(lv, pct=100):
     nt.links.new(rl.outputs['Image'], cb.inputs['Image']); nt.links.new(ell.outputs['Mask'], bl.inputs['Image'])
     nt.links.new(bl.outputs['Image'], mr.inputs['Value'])
     nt.links.new(cb.outputs['Image'], mx.inputs[1]); nt.links.new(mr.outputs['Value'], mx.inputs[2]); nt.links.new(mx.outputs['Image'], comp.inputs['Image'])
-    if lv in ('L2', 'L3'):
-        e.use_ssr = True; e.use_ssr_halfres = True
+    if lv in ('L1M', 'L2', 'L3'):
+        e.use_ssr = lv != 'L1M'; e.use_ssr_halfres = True
         e.use_motion_blur = True; e.motion_blur_shutter = 0.5; e.motion_blur_steps = 1
         e.shadow_cube_size = '2048'
         for l in (key, rim):
@@ -218,13 +219,13 @@ def pandora_bucket(A, arm):
 
 
 def tifa_hat(A, arm):
-    A.loc('root', 0, 0, -0.17); A.rot('head', -6, 0, 0)
+    A.loc('root', 0, 0, -0.2); A.rot('head', -14, 0, 0)
 
 
 def shot(name):
     fx, fy = SPOT['flower']; bx, by = SPOT['bucket']; tx, ty = SPOT['hat']
     if name in ('wide', 'flower', 'bucket', 'hat'):
-        put('ayra', fx + 0.19, fy + 0.3, 15, -0.03); put('pandora', bx, by + 0.03, 180, -0.02); put('tifa', tx, ty + 0.05, 0, 0.0)
+        put('ayra', fx + 0.19, fy + 0.3, 15, -0.03); put('pandora', bx, by + 0.03, 180, 0.07); put('tifa', tx, ty + 0.025, 0, 0.0)
         put('clara', 0.0, -0.55, 175 if name == 'wide' else {'flower': 140, 'bucket': 180, 'hat': 215}[name])
         pose_all({'clara': ('curious', clara_search), 'ayra': ('happy', ayra_peek), 'pandora': ('happy', pandora_bucket), 'tifa': ('happy', tifa_hat)})
     if name == 'wide':
