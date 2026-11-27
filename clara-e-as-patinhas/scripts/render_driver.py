@@ -21,6 +21,16 @@ def seg_range(k):
     return k * SEG + 1, min((k + 1) * SEG, a.end)
 
 
+def png_ok(p):
+    try:
+        from PIL import Image
+        with Image.open(p) as im:
+            im.load()
+        return True
+    except Exception:
+        return False
+
+
 def encode_done():
     for k in KS:
         s0, s1 = seg_range(k)
@@ -29,6 +39,12 @@ def encode_done():
             continue
         need = [f'{FR}/f{f:05d}.png' for f in range(s0, s1 + 1)]
         if all(os.path.exists(p) and os.path.getsize(p) > 10000 for p in need):
+            bad = [p for p in need if not png_ok(p)]
+            if bad:
+                for p in bad:
+                    os.remove(p)
+                print('REMOVED CORRUPT', bad, flush=True)
+                continue
             r = subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(FPS), '-start_number', str(s0),
                                 '-i', f'{FR}/f%05d.png', '-frames:v', str(s1 - s0 + 1), '-c:v', 'libx264', '-preset', 'medium',
                                 '-crf', '16', '-pix_fmt', 'yuv420p', out + '.tmp.mp4'])
