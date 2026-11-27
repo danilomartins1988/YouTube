@@ -13,6 +13,7 @@ from cp_lib import *
 from cp_motion import *
 from cp_chars import face
 
+T_ABS = 0.0
 ROOTP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FPS = 24
 TL_PATH = os.path.join(ROOTP, 'music', 'compositions', 'timeline_final.json')
@@ -20,6 +21,34 @@ if not os.path.exists(TL_PATH):
     TL_PATH = os.path.join(ROOTP, 'music', 'compositions', 'estrutura.json')
 TL = json.load(open(TL_PATH, encoding='utf-8'))
 BPM = TL['bpm']; BEAT = 60.0 / BPM; BAR = 4 * BEAT
+import bisect
+_B = TL.get('beats_s') or [k * BEAT for k in range(int(TL['duracao_musical_s'] / BEAT) + 8)]
+_D = TL.get('downbeats_s') or _B[::4]
+_MOUTH = TL.get('mouth'); _MFPS = TL.get('mouth_fps', 24)
+CUES = TL.get('cues', {})
+
+
+def beatpos(t):
+    """Continuous beat index on the real beat grid (extrapolated at the ends)."""
+    i = bisect.bisect_right(_B, t) - 1
+    if i < 0:
+        return (t - _B[0]) / BEAT
+    if i >= len(_B) - 1:
+        return len(_B) - 1 + (t - _B[-1]) / BEAT
+    return i + (t - _B[i]) / (_B[i + 1] - _B[i])
+
+
+def TB(t):
+    """Time remapped so that TB(t) * BPM / 60 == beat position (feeds sway/groove helpers)."""
+    return beatpos(t) * BEAT
+
+
+def bar_beat(t):
+    """Beat position inside the current bar (0..4) using the real downbeats."""
+    j = bisect.bisect_right(_D, t + 1e-6) - 1
+    if j < 0:
+        return (beatpos(t) % 4)
+    return min(3.999, beatpos(t) - _B.index(_D[j]) if _D[j] in _B else beatpos(t) % 4)
 SEC = {s['nome']: (s['inicio_s'], s['fim_s']) for s in TL['secoes']}
 END_T = TL.get('duracao_com_cauda_s', TL['duracao_musical_s'] + 1.5) + 1.0
 NOTES = []  # (t0, t1, syllable)
@@ -131,8 +160,9 @@ def plan_cameras():
     # Tifa (low, funny)
     a, b = S['verso_tifa']; L = line_times('verso_tifa') + [b]
     shot(L[0], L[2], (0.6, -2.6, 0.32), (1.4, -2.4, 0.3), 'tifa', 'tifa', 30)
-    shot(L[2], L[3], (1.62, -1.6, 0.2), (1.6, -1.48, 0.2), (1.35, -0.45, 0.16), (1.35, -0.45, 0.18), 45)
-    shot(L[3], L[4], (0.7, -3.0, 0.55), (0.7, -2.6, 0.5), (0.7, -0.2, 0.3), (0.7, -0.2, 0.3), 30)
+    L3 = max(L[3], ((TL.get('cues') or {}).get('tifa_contagem') or {}).get('tres', 0) + 0.55)
+    shot(L[2], L3, (1.62, -1.6, 0.2), (1.6, -1.48, 0.2), (1.35, -0.45, 0.16), (1.35, -0.45, 0.18), 45)
+    shot(L3, L[4], (0.7, -3.0, 0.55), (0.7, -2.6, 0.5), (0.7, -0.2, 0.3), (0.7, -0.2, 0.3), 30)
     # Bridge reveal (crane up)
     a, b = S['ponte']; m = a + 4 * BAR
     shot(a, m, (2.6, -4.2, 0.25), (3.0, -6.2, 1.6), (4.3, -1.2, 0.45), (5.0, -1.2, 0.5), 28)
@@ -148,27 +178,43 @@ def plan_cameras():
 
 
 # ======================================================================= choreography
-def chorus_moves(A, name, arm, tc, final=False):
-    """Chorus choreography on lyric cues. tc = time since chorus start. Returns extra heading (deg)."""
-    bar = int(tc // BAR); u = (tc % BAR) / BAR; bb = (tc % BAR) / BEAT  # beat inside bar
+def chorus_moves(A, name, arm, tc, final=False, sec=None):
+    """Chorus choreography on the real lyric lines of section `sec` (word timings). tc unused except fallback."""
+    t = T_ABS
+    starts = line_times(sec) if sec else []
+    idx = -1
+    for k, st in enumerate(starts):
+        if t >= st - 0.12:
+            idx = k
+    if idx >= 0:
+        nxt = starts[idx + 1] if idx + 1 < len(starts) else SEC[sec][1]
+        u = seg(t, starts[idx] - 0.12, nxt - 0.12)
+        lb = (t - starts[idx]) / BEAT  # beats since the line started
+    else:
+        u = 0.0; lb = 0.0
+    bb = bar_beat(t)
+    bar = idx if idx >= 0 else -1
     dog = name != 'clara'
     head = 0.0
-    if final and bar >= 6:  # 2-bar lines: "Com os amigos..." / "Dançando juntos..."
-        k = bar - 6; v = ((tc - 6 * BAR) % (2 * BAR)) / (2 * BAR)
+    if bar < 0:
+        sway(A, arm, TB(T_ABS), BPM, 0.8)
+        return head
+    if final and bar >= 6:  # "Com os amigos..." / "Dançando juntos..."
+        k = 0 if bar == 6 else 2; v = u
         if k < 2:
-            sway(A, arm, tc, BPM, 1.6)
+            sway(A, arm, TB(T_ABS), BPM, 1.6)
             if not dog:
-                arms_up(A, arm, 0.55 + 0.25 * math.sin(math.pi * tc / BEAT))
+                arms_up(A, arm, 0.55 + 0.25 * math.sin(math.pi * beatpos(T_ABS)))
         else:
             if k == 2:
                 head = spin_angle(min(1, v * 2))
-            sway(A, arm, tc, BPM, 1.2)
+            sway(A, arm, TB(T_ABS), BPM, 1.2)
             if not dog:
                 arms_up(A, arm, bump(min(1, v * 1.2)))
             else:
                 hop(A, arm, (v * 2) % 1.0, 0.05)
         return head
-    line = bar % 8
+    line = bar
     if line == 0:  # Patinha pra frente
         if dog:
             paw_lift(A, arm, u, 'L')
@@ -181,22 +227,22 @@ def chorus_moves(A, name, arm, tc, final=False):
             clara_step(A, arm, u, 'R', back=True)
     elif line == 2:  # Dá uma voltinha
         head = spin_angle(min(1, u * 1.15))
-        sway(A, arm, tc, BPM, 0.6)
+        sway(A, arm, TB(T_ABS), BPM, 0.6)
     elif line == 3:  # E dança muito mais
-        sway(A, arm, tc, BPM, 1.5)
+        sway(A, arm, TB(T_ABS), BPM, 1.5)
         if not dog:
             arms_up(A, arm, bump(u))
     elif line in (4, 5):  # Au au au...
         if dog:
-            if bb < 1.5:
-                hop(A, arm, (bb % 0.5) / 0.5, 0.045)
+            if lb < 1.5:
+                hop(A, arm, (lb % 0.5) / 0.5, 0.045)
             else:
-                sway(A, arm, tc, BPM, 1.0)
+                sway(A, arm, TB(T_ABS), BPM, 1.0)
         else:
-            if bb < 1.5:
-                clap(A, arm, ((bb + 0.25) % 0.5) / 0.5)
+            if lb < 1.5:
+                clap(A, arm, ((lb + 0.25) % 0.5) / 0.5)
             else:
-                sway(A, arm, tc, BPM, 1.0)
+                sway(A, arm, TB(T_ABS), BPM, 1.0)
     elif line == 6:  # Bate palma, bate o pé
         if dog:
             paw_lift(A, arm, (bb % 2) / 2, 'L' if bb < 2 else 'R')
@@ -207,27 +253,33 @@ def chorus_moves(A, name, arm, tc, final=False):
             if 2.4 < bb < 3.1:
                 A.rot('thigh_R', -22 * bump((bb - 2.4) / 0.7), 0, 0)
     else:  # Dança junto como quiser
-        sway(A, arm, tc, BPM, 1.8)
+        sway(A, arm, TB(T_ABS), BPM, 1.8)
         if not dog:
-            A.rot('upperarm_L', 0, -60 * abs(math.sin(math.pi * tc / BEAT)), 0)
-            A.rot('upperarm_R', 0, 60 * abs(math.sin(math.pi * tc / (BEAT))), 0)
+            A.rot('upperarm_L', 0, -60 * abs(math.sin(math.pi * beatpos(T_ABS))), 0)
+            A.rot('upperarm_R', 0, 60 * abs(math.sin(math.pi * beatpos(T_ABS))), 0)
     return head
 
 
 def break_moves(A, name, arm, tb):
-    bb = tb / BEAT
+    bb = bar_beat(T_ABS)
     if name == 'clara':
         ph = ((bb % 2) - 0.75) / 0.5
         clap(A, arm, ph) if 0 <= ph <= 1 else clap_pose(A, arm, 1.0)
-        sway(A, arm, tb, BPM, 1.0)
+        sway(A, arm, TB(T_ABS), BPM, 1.0)
     else:
         off = {'ayra': 0.0, 'pandora': 0.5, 'tifa': 1.0}[name]
-        hop(A, arm, ((bb + off) % 2) / 2, 0.06)
+        hop(A, arm, ((beatpos(T_ABS) + off) % 2) / 2, 0.06)
     return 0.0
 
 
 def mouth_open_at(t, who='clara'):
-    """Envelope from vocal note timings (melody guide or Whisper-aligned real vocal)."""
+    """Real song: vocal-band amplitude envelope gated by Whisper word timings (timeline 'mouth').
+    Dogs only open on the 'AU' words. Guide fallback: envelope from melody notes."""
+    if _MOUTH is not None:
+        if who != 'clara':
+            return max([0.9 * (1 - seg(t, b - 0.05, b + 0.05)) * seg(t, a - 0.03, a + 0.05) for a, b in AU if a - 0.1 < t < b + 0.1] or [0.0])
+        i = int(round(t * _MFPS))
+        return float(_MOUTH[i]) if 0 <= i < len(_MOUTH) else 0.0
     best = 0.0
     for a, b, syl, sec in NOTES:
         if a - 0.1 > t:
@@ -264,6 +316,8 @@ def travel(A, name, arm, t, t0, t1, p0, p1, run=False):
 
 
 def choreo(name, arm, t):
+    global T_ABS
+    T_ABS = t
     A = Acc(); dog = name != 'clara'
     breathe(A, arm, t)
     if dog:
@@ -293,11 +347,11 @@ def choreo(name, arm, t):
             if t > L[2] + delay * 0.5 - 0.15:
                 heading = 0
                 # named: little hop when the name is sung
-                nt = {'ayra': L[2], 'pandora': L[2] + 1.0 * BEAT, 'tifa': L[2] + 2.5 * BEAT}[name]
+                nt = (CUES.get('nomes_intro') or {}).get(name) or {'ayra': L[2], 'pandora': L[2] + 1.0 * BEAT, 'tifa': L[2] + 2.5 * BEAT}[name]
                 if nt - 0.05 < t < nt + 0.5:
                     hop(A, arm, (t - nt + 0.05) / 0.55, 0.08); expr = 'happy'
             if t > L[3]:
-                sway(A, arm, t, BPM, 1.0)
+                sway(A, arm, TB(T_ABS), BPM, 1.0)
         else:
             heading = mix(25, 0, seg(t, L[1], L[1] + 0.6))
             if t < L[2]:
@@ -306,9 +360,9 @@ def choreo(name, arm, t):
                 A.rot('head', 0, 0, -10)  # looks at the dogs
                 expr = 'happy'
             else:
-                wave(A, arm, t, 'R', 0.9); wave(A, arm, t + 0.2, 'L', 0.9); sway(A, arm, t, BPM, 0.8)
+                wave(A, arm, t, 'R', 0.9); wave(A, arm, t + 0.2, 'L', 0.9); sway(A, arm, TB(T_ABS), BPM, 0.8)
     elif t < S['pausa_danca_1'][0]:
-        heading = chorus_moves(A, name, arm, t - S['refrao_1'][0])
+        heading = chorus_moves(A, name, arm, t - S['refrao_1'][0], sec='refrao_1')
     elif t < S['verso_ayra'][0]:
         heading = break_moves(A, name, arm, t - S['pausa_danca_1'][0])
     elif t < S['refrao_2_curto'][0]:
@@ -340,14 +394,14 @@ def choreo(name, arm, t):
                 if 0 < u < 1:
                     walk(A, arm, u * 4, amp=0.6)
         else:
-            sway(A, arm, t, BPM, 0.7)
+            sway(A, arm, TB(T_ABS), BPM, 0.7)
             if name == 'clara':
-                bb = (t - S['verso_ayra'][0]) / BEAT
+                bb = bar_beat(t)
                 ph = ((bb % 2) - 0.75) / 0.5
                 clap(A, arm, ph) if 0 <= ph <= 1 else clap_pose(A, arm, 1.0)
                 A.rot('head', 0, 0, -12 * math.sin(0.8 * t))
     elif t < S['pausa_danca_2'][0]:
-        heading = chorus_moves(A, name, arm, t - S['refrao_2_curto'][0])
+        heading = chorus_moves(A, name, arm, t - S['refrao_2_curto'][0], sec='refrao_2_curto')
     elif t < S['verso_pandora'][0]:
         heading = break_moves(A, name, arm, t - S['pausa_danca_2'][0])
     elif t < S['verso_tifa'][0]:  # meadow
@@ -355,7 +409,7 @@ def choreo(name, arm, t):
         x, y = MEADOW[name]
         if name == 'pandora':
             if t < L[1]:
-                expr = 'affectionate'; sway(A, arm, t, BPM, 0.8); heading = 40
+                expr = 'affectionate'; sway(A, arm, TB(T_ABS), BPM, 0.8); heading = 40
             elif t < L[2]:
                 u = seg(t, L[1], L[1] + 2 * BEAT); heading = spin_angle(u) - 15
                 if t > L[1] + 2 * BEAT:
@@ -369,19 +423,20 @@ def choreo(name, arm, t):
             else:
                 u = seg(t, L[3], L[3] + 1.0)
                 x, y = lerp2(MEADOW['pandora'], (-3.65, -1.35), ease(u))
-                heading = spin_angle(seg(t, L[3] + 4 * BEAT, L[3] + 7 * BEAT)); sway(A, arm, t, BPM, 1.0)
+                heading = spin_angle(seg(t, L[3] + 4 * BEAT, L[3] + 7 * BEAT)); sway(A, arm, TB(T_ABS), BPM, 1.0)
         elif name == 'clara':
-            heading = 25; sway(A, arm, t, BPM, 0.6)
+            heading = 25; sway(A, arm, TB(T_ABS), BPM, 0.6)
             if t > L[3]:
                 heading = mix(25, 0, seg(t, L[3], L[3] + 0.5)) + spin_angle(seg(t, L[3] + 4 * BEAT, L[3] + 7 * BEAT))
                 arms_up(A, arm, 0.5 * bump(seg(t, L[3], L[4])))
             elif t > L[1]:
-                ph = ((((t - L[1]) / BEAT) % 2) - 0.75) / 0.5
+                ph = ((bar_beat(t) % 2) - 0.75) / 0.5
                 clap(A, arm, ph) if 0 <= ph <= 1 else clap_pose(A, arm, 0.8)
         else:
             sit(A, arm, 1.0); heading = 30
     elif t < S['ponte'][0]:  # Tifa on the lawn
         L = line_times('verso_tifa') + [S['ponte'][0]]
+        L[3] = max(L[3], (CUES.get('tifa_contagem') or {}).get('tres', 0) + 0.55)
         if name == 'tifa':
             if t < L[1]:  # zoomies
                 u = seg(t, L[0], L[1]); ang = 2 * math.pi * 2 * ease(u)
@@ -397,10 +452,10 @@ def choreo(name, arm, t):
                 u = seg(t, L[1], L[1] + 2 * BEAT)
                 hop(A, arm, u, 0.12); heading = spin_angle(u)
                 if t > L[1] + 2 * BEAT:
-                    sway(A, arm, t, BPM, 1.4)
+                    sway(A, arm, TB(T_ABS), BPM, 1.4)
             elif t < L[3]:  # "Dá um pulinho: um, dois, três" -> 3 hops on the counted syllables
                 x, y = TIFA_SPOT
-                hops = [a for a, b, syl, sec in NOTES if sec == 'verso_tifa' and syl.upper() in ('UM', 'DOIS', 'TRÊS') and a >= L[2]]
+                hops = [v for v in (CUES.get('tifa_contagem') or {}).values() if v] or [a for a, b, syl, sec in NOTES if sec == 'verso_tifa' and syl.upper() in ('UM', 'DOIS', 'TRÊS') and a >= L[2]]
                 for h0 in hops:
                     if h0 - 0.12 < t < h0 + 0.33:
                         hop(A, arm, (t - h0 + 0.12) / 0.45, 0.1 + 0.03 * hops.index(h0))
@@ -413,7 +468,7 @@ def choreo(name, arm, t):
                     sit(A, arm, 1.0); A.rot('head', 0, 18 * math.sin(2 * math.pi * 1.5 * t), 14 * math.sin(2 * math.pi * 0.75 * t))
                     expr = 'surprised' if t < L[3] + 5 * BEAT else 'happy'
         else:
-            sway(A, arm, t, BPM, 0.6)
+            sway(A, arm, TB(T_ABS), BPM, 0.6)
             if name == 'clara':
                 expr = 'surprised' if L[3] + 3 * BEAT < t < L[3] + 5 * BEAT else 'happy'
                 A.rot('head', 0, 0, -18)
@@ -436,7 +491,7 @@ def choreo(name, arm, t):
                 if name != 'clara':
                     hop(A, arm, ((t - t1) / BEAT) % 1.0, 0.05)
                 else:
-                    ph = ((((t - L[1]) / BEAT) % 2) - 0.75) / 0.5
+                    ph = ((bar_beat(t) % 2) - 0.75) / 0.5
                     clap(A, arm, ph) if 0 <= ph <= 1 else clap_pose(A, arm, 1.0)
             elif t < L[3]:
                 bb = (t - L[2]) / BEAT
@@ -445,11 +500,11 @@ def choreo(name, arm, t):
                 else:
                     hop(A, arm, min(1, (bb - 2) / 2), 0.1)
             else:
-                sway(A, arm, t, BPM, 1.0)
+                sway(A, arm, TB(T_ABS), BPM, 1.0)
                 if name == 'clara':
                     arms_up(A, arm, bump(seg(t, L[3], L[4])) * 0.9)
     elif t < S['final'][0]:
-        heading = chorus_moves(A, name, arm, t - S['refrao_final'][0], final=True)
+        heading = chorus_moves(A, name, arm, t - S['refrao_final'][0], final=True, sec='refrao_final')
     else:  # ending: hug, wave, logo
         L = line_times('final') + [S['assinatura_final'][0]]
         hugpos = {'clara': (0.0, 0.0), 'ayra': (0.38, -0.3), 'pandora': (-0.36, -0.3), 'tifa': (0.06, -0.42)}
@@ -458,7 +513,7 @@ def choreo(name, arm, t):
             if t > L[0] + 1.6:
                 heading = {'ayra': 200, 'pandora': 160, 'tifa': 180}[name] if t < S['assinatura_final'][0] else 0
                 if t > S['assinatura_final'][0]:
-                    sway(A, arm, t, BPM, 0.8)
+                    sway(A, arm, TB(T_ABS), BPM, 0.8)
                 else:
                     expr = 'affectionate'
         else:
