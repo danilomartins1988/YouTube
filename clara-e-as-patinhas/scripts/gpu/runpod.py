@@ -33,20 +33,21 @@ def gql(query, variables=None):
     if r.status_code != 200 or d.get('errors'): sys.exit(f'RunPod API error {r.status_code}: {str(d)[:600]}')
     return d['data']
 
-def create(gpu='NVIDIA GeForce RTX 4090', cloud='COMMUNITY'):
+def create(gpu='NVIDIA GeForce RTX 4090', cloud='COMMUNITY', image='nvidia/cuda:12.2.2-runtime-ubuntu22.04', disk=30, blender=True):
     s = load()
     if s.get('pod_id'): sys.exit(f"pod already exists: {s['pod_id']} (terminate first)")
     token = secrets.token_hex(24)
     server = base64.b64encode(open(os.path.join(os.path.dirname(__file__), 'pod_server.py'), 'rb').read()).decode()
     boot = (
         'set -e; export DEBIAN_FRONTEND=noninteractive; apt-get update -qq; '
-        'apt-get install -y -qq python3 curl xz-utils ffmpeg libxi6 libxrender1 libxkbcommon0 libsm6 libgl1 libegl1 libxxf86vm1 libxfixes3 >/dev/null; '
-        f'mkdir -p /opt /workspace/job; curl -sL {BLENDER_URL} | tar -xJ -C /opt; ln -sf /opt/blender-4.0.2-linux-x64/blender /usr/local/bin/blender; '
+        'apt-get install -y -qq python3 curl xz-utils ffmpeg git libxi6 libxrender1 libxkbcommon0 libsm6 libgl1 libegl1 libxxf86vm1 libxfixes3 >/dev/null; '
+        + (f'mkdir -p /opt /workspace/job; curl -sL {BLENDER_URL} | tar -xJ -C /opt; ln -sf /opt/blender-4.0.2-linux-x64/blender /usr/local/bin/blender; '
+           if blender else 'mkdir -p /opt /workspace/job; ') +
         f'echo {server} | base64 -d > /opt/pod_server.py; exec python3 /opt/pod_server.py')
     docker_args = "bash -c 'echo " + base64.b64encode(boot.encode()).decode() + " | base64 -d | bash'"
     q = """mutation($i: PodFindAndDeployOnDemandInput) { podFindAndDeployOnDemand(input: $i) { id costPerHr desiredStatus } }"""
     inp = {'cloudType': cloud, 'gpuCount': 1, 'gpuTypeId': gpu, 'name': 'kids-render',
-           'imageName': 'nvidia/cuda:12.2.2-runtime-ubuntu22.04', 'containerDiskInGb': 30, 'volumeInGb': 0,
+           'imageName': image, 'containerDiskInGb': disk, 'volumeInGb': 0,
            'ports': '8000/http', 'dockerArgs': docker_args,
            'env': [{'key': 'RENDER_TOKEN', 'value': token}, {'key': 'NVIDIA_DRIVER_CAPABILITIES', 'value': 'all'}]}
     pod = gql(q, {'i': inp})['podFindAndDeployOnDemand']
@@ -103,6 +104,9 @@ if __name__ == '__main__':
         kw = {}
         if '--gpu' in a: kw['gpu'] = a[a.index('--gpu') + 1]
         if '--cloud' in a: kw['cloud'] = a[a.index('--cloud') + 1]
+        if '--image' in a: kw['image'] = a[a.index('--image') + 1]
+        if '--disk' in a: kw['disk'] = int(a[a.index('--disk') + 1])
+        if '--no-blender' in a: kw['blender'] = False
         create(**kw)
     else:
         {'status': status, 'push': push, 'run': run, 'wait': wait, 'pull': pull, 'stop': stop, 'terminate': terminate}[c](*a[1:])
