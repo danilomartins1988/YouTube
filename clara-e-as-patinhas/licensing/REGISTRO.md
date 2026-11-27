@@ -18,7 +18,7 @@ Atualizado em 2026-11-27. Nada aqui foi baixado de bancos de modelos, imagens ou
 | Melodia, harmonia, assinatura de marca e arranjo-guia | Compostos nesta sessão (`scripts/compose.py`). Não copiam nenhuma música existente | Original, do proprietário |
 | Instrumental-guia (áudio) | MIDI próprio renderizado com FluidSynth (LGPL-2.1) e o soundfont **FluidR3_GM** | O FluidR3_GM (Frank Wen) é distribuído no Debian/Ubuntu pelo pacote `fluid-soundfont-gm` sob **licença MIT** ("I hereby release Fluid under the MIT license", em `/usr/share/doc/fluid-soundfont-gm/copyright`); o áudio resultante pode ser usado comercialmente |
 | Latidinhos do guia | Sintetizados em numpy (`scripts/render_guide.py`), sem amostras gravadas | Original |
-| **Música cantada (Eleven Music)** | **NÃO GERADA**: a chamada paga foi bloqueada pela camada de permissões da sessão. O plano está pronto em `music/compositions/eleven_music_plan.json` | Veja abaixo |
+| **Música cantada (Eleven Music)** | Gerada pelo proprietário/coordenador: Eleven Music `music_v1`, song_id `ao9quB5WWogkhSuGxTuH`, a partir de `eleven_music_plan.json`. Intro (8,348–25,043 s) refeita por inpainting (`inpaint_intro_v1.json`). Master final normalizado a -14 LUFS: `music/masters/danca_das_patinhas_final.wav`. **Não há instrumental/stems separados** (stems seriam um recurso pago a mais, não usado) | Veja abaixo (plano Starter) |
 
 ### ElevenLabs Eleven Music (quando for gerado)
 - Termos: https://elevenlabs.io/music-terms (atualizado em 09/10/2026). Preços: https://elevenlabs.io/pricing e https://elevenlabs.io/pricing/api.
@@ -47,4 +47,4 @@ Os logos, a paleta, o ícone e a thumbnail foram desenhados por código (`script
 ## Serviços externos
 - Nenhuma publicação nem upload.
 - Gasto externo: veja `reports/CUSTOS.md` (US$ 0 até agora; a geração Eleven Music está bloqueada).
-- Transcrição com Whisper: não executada, porque não há voz gerada para transcrever.
+- Transcrição com OpenAI Whisper (`whisper-1`): usada só para verificar a letra e marcar o tempo das palavras. Nada foi publicado.

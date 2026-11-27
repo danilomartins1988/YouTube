@@ -27,7 +27,11 @@ Preços de referência (consultados em 2026-11-27):
 | Data | Serviço | O que | Créditos | US$ |
 |---|---|---|---|---|
 
-_Sem lançamentos: a geração Eleven Music foi bloqueada pela camada de permissões da sessão e **nenhum crédito foi gasto**. Whisper não foi usado._
+_Atualização: o proprietário/coordenador fez a geração Eleven Music fora desta sub-sessão. Os valores exatos estão nas linhas que ele registrou acima. Resumo estimado: **≈4 chamadas** (v1, v2 e 2 inpaints: `inpaint_ayra_v1`, `inpaint_intro_v1`) **≈ até US$ 1,64** (≈ 4 × 2,75 min × US$ 0,15/min, pelo preço de lista da API). Não houve chamada de stems._
+
+| Data | Serviço | O que | Créditos | US$ |
+|---|---|---|---|---|
+| 2026-11-27 | OpenAI Whisper (`whisper-1`) | 2 transcrições do master final de 2:44,8 (sem prompt e com prompt) | n/a | ≈ 2 × 2,75 min × US$ 0,006 ≈ **US$ 0,033** |
 
 ## Computação local (sem custo externo)
 | Tarefa | Tempo de CPU (4 núcleos, sem GPU) |
@@ -37,7 +41,9 @@ _Sem lançamentos: a geração Eleven Music foi bloqueada pela camada de permiss
 | Testes, diagnósticos e stills de validação | ≈1 h |
 | Montagem e codificação (1080p, light, teste) | ≈12 min |
 
-**Gasto externo total até agora: US$ 0,00.**
+**Gasto externo estimado: ≈ US$ 1,64 (Eleven Music, teto estimado; os valores exatos estão no log do proprietário) + ≈ US$ 0,03 (Whisper) ≈ US$ 1,67.** A assinatura ElevenLabs é custo fixo do proprietário.
+
+| Re-render com a música real (3.978 frames) | ≈6 h de CPU |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração v1, 165 s | ~2473 créditos (estimado) | ~US$ 0.41 (preço de lista API; débito real no plano do proprietário) |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração v2, 165 s | ~2473 créditos (estimado) | ~US$ 0.41 (preço de lista API; débito real no plano do proprietário) |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração v2 (voz consistente; melodia mudou, descartada) | ~2473 créditos (estimado) | ~US$ 0.41 |
