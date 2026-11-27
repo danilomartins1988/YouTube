@@ -52,20 +52,20 @@ NUMBER = (
     "Você é uma apresentadora de programa infantil brasileiro. Diga o número com alegria e orgulho, "
     "como quem comemora junto com as crianças que acertaram a contagem. Natural, claro, sorrindo. Não cante.")
 
-INTRO = "Oi, criançada! Hoje a gente vai contar os bichinhos. Vamos cantar juntos? Bate palma!"
+INTRO = "Oi, criançada! Vamos contar os bichinhos? Canta junto e bate palma!"
 OUTRO = "Tchau, tchau, bichinhos! Até a próxima!"
 # (n, animal key, question, sound imitation, spoken number)
 NUMBERS = [
-    (1, "duck", "Olha quem chegou: um patinho! Como ele faz?", "Quá, quá, quá!", "Um!"),
-    (2, "cat", "Dois gatinhos! E o gatinho, como faz?", "Miau! Miau!", "Dois!"),
+    (1, "duck", "Um patinho! Como ele faz?", "Quá, quá, quá!", "Um!"),
+    (2, "cat", "Dois gatinhos! Como eles fazem?", "Miau!", "Dois!"),
     (3, "dog", "Três cachorrinhos! Como eles fazem?", "Au, au, au!", "Três!"),
-    (4, "cow", "Olha só: quatro vaquinhas! Como a vaca faz?", "Muuuuu!", "Quatro!"),
-    (5, "sheep", "Cinco ovelhinhas! Como elas fazem?", "Mééé! Mééé!", "Cinco!"),
-    (6, "chick", "Quem vem lá? Seis pintinhos! Como eles fazem?", "Piu, piu, piu!", "Seis!"),
-    (7, "pig", "Sete porquinhos! Como o porquinho faz?", "Oinc, oinc!", "Sete!"),
-    (8, "frog", "Oito sapinhos no lago! Como o sapo faz?", "Croac, croac!", "Oito!"),
-    (9, "bee", "Nove abelhinhas! Como a abelha faz?", "Zum, zum, zum!", "Nove!"),
-    (10, "monkey", "E agora... dez macaquinhos! Como eles fazem?", "Uh, uh, ah, ah!", "Dez!"),
+    (4, "cow", "Quatro vaquinhas! Como a vaca faz?", "Muuuu!", "Quatro!"),
+    (5, "sheep", "Cinco ovelhinhas! E elas, como fazem?", "Méé, méé!", "Cinco!"),
+    (6, "chick", "Seis pintinhos! Como eles fazem?", "Piu, piu, piu!", "Seis!"),
+    (7, "pig", "Sete porquinhos! Como eles fazem?", "Oinc, oinc!", "Sete!"),
+    (8, "frog", "Oito sapinhos! Como o sapo faz?", "Croac, croac!", "Oito!"),
+    (9, "bee", "Nove abelhinhas! Como elas fazem?", "Zum, zum, zum!", "Nove!"),
+    (10, "monkey", "Dez macaquinhos! Como eles fazem?", "Uh, uh, ah!", "Dez!"),
 ]
 TAGS = {5: "Cinco amigos! Que legal!", 10: "Dez amigos no quintal! Muito bem!"}
 NUMBER_WORDS = S.NUMBER_WORDS
@@ -147,16 +147,18 @@ def layout() -> dict:
             _, dq = clip(q, NARRATOR)
             _, ds = clip(snd, ANIMAL)
             _, dn = clip(num, NUMBER)
-            qb = bars_for(dq, 0.3, 2)
-            sb = bars_for(ds, 0.5)
             u0 = bar
             q_at = u0 * BAR + 0.12
-            ans = (u0 + qb) * BAR                      # 1 bar: the music "answers" the question
-            s_at = (u0 + qb + 1) * BAR + 0.05          # animal sound (music thinned)
-            r_bar = u0 + qb + 1 + sb                   # number reveal bar
-            r_at = r_bar * BAR + 0.08
-            unit = {"name": f"n{n}", "kind": "number", "bar": u0, "bars": qb + 1 + sb + 1, "q_bars": qb, "s_bars": sb,
-                    "number": n}
+            s_beat = math.ceil((q_at + dq + 0.4) / BEAT)      # ~one beat of music after the question
+            s_at = s_beat * BEAT + 0.05
+            r_beat = math.ceil((s_at + ds + 0.3) / BEAT)        # number right after the sound
+            r_at = r_beat * BEAT + 0.05
+            end_beat = math.ceil((r_at + dn + 0.5) / BEAT)
+            nb = math.ceil(end_beat / 4) - u0
+            ans = (s_beat - 1) * BEAT
+            r_bar = u0 + nb - 1
+            unit = {"name": f"n{n}", "kind": "number", "bar": u0, "bars": nb, "number": n,
+                    "q_beat": u0 * 4, "s_beat": s_beat, "r_beat": r_beat}
             segs.append(unit)
             common = {"section": name, "number": n, "animal": animal, "number_word": NUMBER_WORDS[n]}
             speak(q, NARRATOR, q_at, "number", **common, phase="question", answer_at=round(ans, 3),
@@ -164,7 +166,7 @@ def layout() -> dict:
                   sound=snd)
             speak(snd, ANIMAL, s_at, "sound", **common, phase="sound")
             speak(num, NUMBER, r_at, "reveal", **common, phase="reveal")
-            bar = r_bar + 1
+            bar = u0 + nb
             if n in TAGS:
                 _, dt = clip(TAGS[n], NARRATOR)
                 tb = bars_for(dt, 0.3, 2)
@@ -179,7 +181,7 @@ def layout() -> dict:
     verse("verse2", NUMBERS[5:])
     chorus("chorus3", [0, 1, 2, 3])
     _, d = clip(OUTRO, NARRATOR)
-    nb = bars_for(d, 0.4, 2) + 1
+    nb = bars_for(d, 0.9, 2)  # the final chord rings under the goodbye's last words
     segs.append({"name": "outro", "kind": "outro", "bar": bar, "bars": nb})
     speak(OUTRO, NARRATOR, bar * BAR + 0.1, "outro", section="outro")
     bar += nb
@@ -195,9 +197,15 @@ def chords_for(seg: dict) -> list[str]:
         prog = {0: ["C", "C"], 1: ["F", "G"], 2: ["C", "F"], 3: ["G", "C"]}
         return sum((prog[i] for i in seg["lines"]), [])
     if k == "number":
-        q = (["C", "F"] * 4)[: seg["q_bars"]]
-        return q + ["G"] + ["Am", "G", "F"][: seg["s_bars"] - 1][::-1] + (["G"] if seg["s_bars"] > 1 else []) + ["C"] \
-            if seg["s_bars"] > 1 else q + ["G", "G", "C"]
+        nb = seg["bars"]
+        sb = seg["s_beat"] // 4 - seg["bar"]
+        ch = (["C", "F"] * 8)[:nb]
+        if 0 < sb < nb - 1:
+            ch[sb] = "G"
+        if nb >= 2:
+            ch[-2] = "G" if sb >= nb - 2 else ch[-2]
+        ch[-1] = "C"
+        return ch
     if k == "tag":
         return (["F"] * (seg["bars"] - 1)) + ["G"]
     if k == "outro":
@@ -218,6 +226,9 @@ def build_events(L: dict) -> list[tuple]:
             continue
         chords = chords_for(seg)
         assert len(chords) == seg["bars"], (seg, chords)
+        if seg["kind"] == "number":
+            number_unit(seg, chords, note)
+            continue
         for k, ch in enumerate(chords):
             bar = seg["bar"] + k
             b0 = bar * 4
@@ -314,6 +325,56 @@ def build_events(L: dict) -> list[tuple]:
                 if b0 + bt < (seg["bar"] + seg["bars"]) * 4 - 4:
                     note(b0 - 4 + bt, ln, LEAD, p + 12, 80) if seg["bars"] > 2 else None
     return [e for e in ev if e[3] > 0]
+
+
+def number_unit(seg: dict, chords: list[str], note) -> None:
+    """Beat-level arrangement of one counting unit: bed under the question, a one-beat xylophone call,
+    music steps back for the animal sound, then a full groove + glockenspiel ding for the number."""
+    b_start, s_b, r_b = seg["bar"] * 4, seg["s_beat"], seg["r_beat"]
+    b_end = (seg["bar"] + seg["bars"]) * 4
+    for b in range(b_start, b_end):
+        ch = chords[b // 4 - seg["bar"]]
+        root, triad = S.CHORDS[ch]
+        voicing = sorted([p + 7 if i == 0 else p for i, p in enumerate(sorted(triad))]) + [sorted(triad)[0] + 12]
+        pos = b % 4
+        if b < s_b - 1:                       # bed under the question
+            if pos == 0:
+                note(b, 1.8, BASS, root, 70)
+                note(b, 0.2, DRUM, KICK, 50)
+                for p in triad:
+                    note(b, 3.9 if b + 4 <= s_b - 1 else max(0.5, s_b - 1 - b), PAD, p - 12, 30)
+            if pos == 2:
+                note(b, 1.8 if b + 2 <= s_b - 1 else 0.9, BASS, root + 7, 60)
+            if pos in (0, 2):
+                for i, p in enumerate(voicing):
+                    note(b + i * 0.025, 0.6, UKE, p, 60 - 4 * i)
+            note(b, 0.1, DRUM, SHAKER, 30)
+        elif b == s_b - 1:                    # the beat of music: xylophone "how does it go?" call
+            note(b, 0.45, LEAD, 79, 92)
+            note(b + 0.5, 0.45, LEAD, 76, 86)
+            note(b, 0.9, BASS, root, 66)
+            note(b, 0.2, DRUM, KICK, 60)
+        elif b < r_b:                         # animal sound: held chord only
+            if b == s_b:
+                for p in triad:
+                    note(b, max(0.5, r_b - b - 0.1), PAD, p - 12, 30)
+                note(b, max(0.5, r_b - b - 0.1), BASS, root, 50)
+        else:                                 # number reveal: full groove
+            if b == r_b:
+                scale = [84, 86, 88, 89, 91, 93, 95, 96, 98, 100]
+                note(b, 2, GLOCK, scale[seg["number"] - 1], 92)
+                note(b, 1.5, DRUM, SPLASH, 38)
+                for j, p in enumerate([72, 76, 79, 84]):
+                    if b + 1 + j * 0.25 < b_end - 0.2:
+                        note(b + 1 + j * 0.25, 0.35, LEAD, p, 80)
+            note(b, 0.9, BASS, root if pos % 2 == 0 else root + 7, 84)
+            note(b, 0.2, DRUM, KICK if pos % 2 == 0 else SNARE, 82 if pos % 2 == 0 else 58)
+            note(b, 0.1, DRUM, CHH, 54)
+            note(b + 0.5, 0.1, DRUM, CHH, 42)
+            for i, p in enumerate(voicing):
+                note(b + i * 0.025, 0.45, UKE, p, 72 - 4 * i)
+                if pos % 2:
+                    note(b + 0.5 + i * 0.02, 0.4, UKE, voicing[-1 - i], 54)
 
 
 def render_music(L: dict) -> Path:
@@ -420,8 +481,15 @@ def mix(L: dict) -> dict:
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-af",
                     "alimiter=limit=0.80:attack=3:release=60:level=disabled,aresample=48000", "-c:a", "pcm_s16le",
                     str(final)], check=True)
-    tmp.unlink()
     y, sr = sf.read(final)
+    lu = pyln.Meter(sr).integrated_loudness(y)
+    if abs(lu + 16.0) > 0.15:  # the limiter shaved a little: re-gain and limit once more
+        sf.write(tmp, (out * 10 ** ((-16.0 - lu) / 20)).astype(np.float32), SR, subtype="FLOAT")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-af",
+                        "alimiter=limit=0.84:attack=3:release=60:level=disabled,aresample=48000", "-c:a", "pcm_s16le",
+                        str(final)], check=True)
+        y, sr = sf.read(final)
+    tmp.unlink()
     w = int(0.1 * sr)
     rms = np.sqrt((y[: len(y) // w * w].mean(axis=1).reshape(-1, w) ** 2).mean(axis=1))
     quiet = 20 * np.log10(rms + 1e-9) < -45

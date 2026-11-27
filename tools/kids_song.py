@@ -11,7 +11,7 @@ from __future__ import annotations
 
 TITLE = "Vamos Contar os Bichinhos!"
 SLUG = "kids_test01"
-BPM = 112
+BPM = 118
 KEY = "C major (Dó maior)"
 BEAT = 60.0 / BPM
 BAR = 4 * BEAT
