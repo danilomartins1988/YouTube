@@ -125,7 +125,7 @@ def level(lv, pct=100):
     key.energy = 3.3; key.angle = math.radians(14); key.color = (1.0, 0.93, 0.82)
     rim.energy = 2.0; fill.energy = 90
     w = sc.world.node_tree.nodes.get('Background')
-    sc.view_settings.view_transform = os.environ.get('EP2_VT', 'AgX'); sc.view_settings.look = os.environ.get('EP2_LOOK', 'AgX - Punchy'); sc.view_settings.exposure = float(os.environ.get('EP2_EXP', '0.0'))
+    sc.view_settings.view_transform = os.environ.get('EP2_VT', 'Standard'); sc.view_settings.look = os.environ.get('EP2_LOOK', 'None'); sc.view_settings.exposure = float(os.environ.get('EP2_EXP', '0.0'))
     e.use_gtao = True; e.gtao_distance = 0.6; e.gtao_factor = 1.2
     e.use_soft_shadows = True; e.shadow_cascade_size = '4096'; e.shadow_cube_size = '1024'
     e.use_bloom = True; e.bloom_intensity = 0.03; e.bloom_threshold = 1.0; e.bloom_radius = 5.5
