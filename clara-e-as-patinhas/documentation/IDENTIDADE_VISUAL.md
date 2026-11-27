@@ -1,14 +1,16 @@
 # Guia de identidade visual — Clara e as Patinhas
 
 **Slogan:** "Pequenas patinhas, grandes aventuras!"
-**Tom:** alegre, acolhedor, simples e seguro para crianças de 1 a 5 anos. Cores vivas, formas redondas, sem nada pontiagudo nem assustador.
+**Tom:** alegre, acolhedor, simples e seguro para crianças de 1 a 3 anos (secundário 3 a 5). Cores vivas, formas redondas, sem nada pontiagudo nem assustador.
 
 ## Paleta (`assets/branding/paleta.png`)
 | Cor | HEX | Uso |
 |---|---|---|
 | Amarelo-sol | `#FFC81A` | Macacão da Clara, palavra "Clara" no logo, títulos |
 | Azul-céu | `#5CB0F5` | "e as Patinhas", céu, bandana da Ayra (variação `#2E7AF2`) |
-| Verde natural | `#6CB848` | Gramado, árvores, bandana da Tifa |
+| Verde natural | `#6CB848` | Gramado, árvores, bandana do Toby |
+| Roxo-lavanda | `#8E5CC8` | Coleira do Milo, cor de identidade do Milo (novo, aditivo 01) |
+| Laranja-gato | `#F08A2C` | Pelagem do Milo (listras `#C9601C`, creme `#F7E3C0`) |
 | Rosa suave | `#FA8CB4` | Laço da Pandora, tênis, patinhas decorativas |
 | Branco | `#FFFFFF` | Contornos internos, camiseta, telhado das casinhas |
 | Madeira quente | `#B27542` | Ponte, balanço, varanda |
@@ -40,7 +42,25 @@ Elementos de identidade que **nunca mudam**:
 - **Clara:** macacão amarelo, camiseta branca, cabelo castanho na altura dos ombros com franja lateral e presilha de flor amarela.
 - **Ayra:** padrão merle fixo na textura, olhos azul-claros, bandana azul.
 - **Pandora:** branca e fofa, laço rosa.
-- **Tifa:** castanho-dourado com dorso cinza-aço, bandana verde, a menor.
+- **Toby (macho):** castanho-dourado no rosto e patas, dorso cinza-escuro, bandana verde. Substitui "Tifa" (ep. 001).
+- **Milo (macho):** gato laranja rajado, barriga e focinho creme, olhos verdes, nariz rosado, coleira roxa.
+
+### Cor, símbolo e instrumento de cada personagem (aditivo 01)
+| Personagem | Cor | Símbolo | Instrumento |
+|---|---|---|---|
+| Clara | amarelo | estrela | ukulele |
+| Ayra | azul | bússola | tambor suave |
+| Pandora | rosa | coração | xilofone |
+| Toby | verde | raio | trompete suave |
+| Milo | roxo | lua | pizzicato de violino |
+
+Assets canônicos (congelados e versionados): `assets/characters/canon/` — regra na Bíblia dos Personagens (`intellectual-property/character-bible/BIBLIA_PERSONAGENS.md`). Os arquivos antigos em `assets/characters/<nome>/` são a versão do ep. 001.
 
 ## Som da marca
-Assinatura de 2 compassos (Lá-Fá#-Lá-Si | Ré — Lá | Si-Dó#-Ré — Lá), em xilofone e glockenspiel com dois latidinhos. Abre e fecha todos os episódios (`music/compositions/estrutura.json` → `assinatura_marca`).
+**Nova assinatura proposta (aditivo 01):** "Pata, pata, patatá!" — ver `intellectual-property/music-rights/MUSIC_IDENTITY.md`.
+
+Assinatura antiga do ep. 001 (arquivada): 2 compassos (Lá-Fá#-Lá-Si | Ré — Lá | Si-Dó#-Ré — Lá), em xilofone e glockenspiel com dois latidinhos. Usada no ep. 001 (`music/compositions/estrutura.json` → `assinatura_marca`).
+
+
+## Marcas internacionais (provisórias)
+Clara & Paws (EN), Clara y sus Patitas (ES), estúdio Clara Kids Studios. Logos EN/ES ainda não criados; a arquitetura multilíngue está em `intellectual-property/source-files/MULTILINGUE.md`.

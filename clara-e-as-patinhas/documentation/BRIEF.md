@@ -1,63 +1,68 @@
-# Clara e as Patinhas — Brief (resumo fiel)
+# Clara e as Patinhas — Brief vigente
 
-> Resumo do brief do proprietário tal como chegou a esta sessão, com as atualizações posteriores dele.
+> Fonte principal desde 2026-11-27: **`documentation/ADITIVO_01.md`** (Aditivo Estratégico nº 01, texto integral).
+> O aditivo substitui tudo o que for conflitante no brief original. Este arquivo resume o que vale hoje.
 > Projeto **independente** de The Hidden Economics (sem arquivos compartilhados).
 
-## Marca
-- **Nome:** Clara e as Patinhas
-- **Slogan:** "Pequenas patinhas, grandes aventuras!"
-- **Idioma:** português do Brasil
-- **Público:** crianças de 1 a 5 anos
-- **Formato:** videoclipes musicais animados de 2 a 3 min
-- **Ambição de qualidade:** "série infantil 3D premium e cinematográfica"
+## Decisões do proprietário em 2026-11-27 (ao aprovar o aditivo)
+1. **Yorkshire = Toby, macho.** Substitui "Tifa" (fêmea), nome usado no ep. 001.
+2. **Os nomes são cantados** e usados em títulos, miniaturas e metadados. A regra anterior do mesmo dia ("não citar os nomes das personagens nos vídeos") fica **revogada**.
+3. **"Clara e as Patinhas" é a marca principal** (e não só o nome do piloto, como foi dito antes no mesmo dia). Nomes de canal PT/EN/ES do aditivo, todos provisórios.
+4. "A Dança das Patinhas" (ep. 001, pronto) e "Cadê? Achou!" (só música) ficam **arquivadas no catálogo** (`documentation/CATALOGO.md`), sem apagar arquivos.
+5. Orçamento externo do novo piloto: **até US$ 10** (ElevenLabs Eleven Music + RunPod GPU). Registro em `reports/CUSTOS.md`.
+6. **"Precisamos manter a voz e os personagens ao longo dos episódios."** Voz travada em `intellectual-property/music-rights/VOICE_PROFILE.md` (com verificação automática); personagens congelados como assets canônicos versionados (`assets/characters/canon/`, regra na Bíblia dos Personagens).
 
-## Personagens
-> **Atualização do proprietário:** as três cachorrinhas foram renomeadas e são todas **fêmeas** ("cachorrinha", "pequena" etc.):
-> Theo → **Ayra**, Luna → **Pandora**, Toby → **Tifa**. Raças, visual, acessórios e personalidades continuam iguais.
-
-| Personagem | Descrição |
+## Marca (provisória até pesquisa jurídica, ver `intellectual-property/originality-reports/`)
+| Item | Nome |
 |---|---|
-| **Clara** | Menina de ~4 anos. Pele clara, cabelo castanho liso e brilhante na altura dos ombros, franja lateral delicada, olhos castanhos grandes, bochechas rosadas, rosto redondo e nariz pequeno. Usa **macacão amarelo** (o principal elemento de identidade), camiseta branca de manga curta, tênis coloridos e um pequeno acessório de cabelo. |
-| **Ayra** | Border Collie Red Merle. Base castanho-avermelhada com manchas merle em marrom, bege e branco, peito branco, orelhas semieretas, olhos azul-claros, cauda longa e fofa e **bandana azul**. O desenho das manchas fica fixo na textura e nunca muda. |
-| **Pandora** | Lulu da Pomerânia branca, muito fofa e arredondada, mas com anatomia clara: focinho, orelhinhas triangulares, olhos escuros, nariz preto, patas curtas e cauda em pluma enrolada sobre as costas. Usa **laço rosa**. |
-| **Tifa** | Yorkshire Terrier. Rosto e patas castanho-dourados, dorso cinza-aço escuro, orelhas pequenas e eretas, olhos escuros, corpo compacto e **bandana verde**. É a menor e a mais engraçada. |
+| Marca principal | **Clara e as Patinhas** |
+| Slogan | Pequenas patinhas, grandes aventuras! |
+| Canal BR | Clara e as Patinhas – Músicas Infantis |
+| Marca EN | Clara & Paws (canal: Clara & Paws – Kids Songs) |
+| Marca ES | Clara y sus Patitas (canal: Clara y sus Patitas – Canciones Infantiles) |
+| Estúdio | Clara Kids Studios |
 
-**Escala:** Clara é a mais alta. Ayra chega mais ou menos ao joelho da Clara, Pandora é bem menor que Ayra e Tifa é um pouco menor que Pandora. As cachorrinhas são quadrúpedes e só fazem movimentos de dança curtos e estilizados.
+## Público
+- **Prioritário:** 1 a 3 anos. Músicas também para bebês a partir de ~6 meses, ouvidas com os pais (inclusive sem tela).
+- **Secundário:** 3 a 5 anos.
+- Vocabulário mínimo, repetição, previsibilidade, imitação, sons de animais, gestos simples, interação com os pais. Sem histórias complexas.
 
-## Música — "A Dança das Patinhas" (ep. 001)
-- Melodia **original**, 110–120 BPM, tom maior, 4/4, gancho principal nos primeiros 5 s, refrão memorável e uma **assinatura de marca** original de 2 a 4 compassos que possa ser reutilizada nos próximos episódios. Não copiar nenhuma música existente. Duração de 2:30 a 3:00.
-- Estrutura: Intro → Refrão → Verso da cachorrinha 1 → Refrão curto (6 primeiras linhas) → Verso 2 → Verso 3 → Ponte → Refrão final → Final. A letra final está em `music/lyrics/a-danca-das-patinhas.md`; a letra original era do proprietário e só recebeu ajustes de métrica, rima e gênero.
-- **Vozes:** voz feminina jovem e calorosa, pronúncia natural do pt-BR e backing vocals leves. O proprietário **recusou TTS falado** como substituto do canto e **autorizou a API Eleven Music (ElevenLabs)** para vozes cantadas reais. A chave ainda não está disponível.
-- **Instrumentação:** violão/ukulele, piano, xilofone/marimba, palmas, percussão leve, baixo acústico, sininhos suaves e latidinhos rítmicos discretos.
+## Elenco fixo (5 personagens — especificação completa em `intellectual-property/character-bible/BIBLIA_PERSONAGENS.md`)
+| Personagem | Espécie / gênero | Cor | Símbolo | Instrumento | Movimento | Som |
+|---|---|---|---|---|---|---|
+| **Clara** | menina, ~4 anos | amarelo | estrela | ukulele | palmas e giro | canta |
+| **Ayra** | Border Collie red merle, fêmea | azul | bússola | tambor suave | saltinhos e corridas | au, au, au |
+| **Pandora** | Lulu da Pomerânia branca, fêmea | rosa | coração | xilofone | pulinhos e giros | au, au (delicado) |
+| **Toby** | Yorkshire Terrier, macho | verde | raio | trompete suave | passos rápidos e giros engraçados | latidinhos ritmados |
+| **Milo** | gato laranja rajado, macho | roxo | lua | pizzicato de violino | saltos felinos, brincar com a cauda | miau, miau, miau |
 
-## Visual / 3D
-- Personagens estilizados, fofos, arredondados e com aparência premium, construídos no Blender e salvos como assets reutilizáveis.
-- **Rig:** cabeça, orelhas, cauda, patas, braços, boca e pálpebras da Clara (piscar). **Ações:** respirar parada, piscar, abanar a cauda, mexer a orelha, andar/correr, pulinho, giro e bater palmas (Clara).
-- **Pelagem:** aproximação procedural adequada a renderização em CPU.
-- **Model sheets:** frente, lado, costas, 3/4, 5 expressões (feliz, curiosa, surpresa, concentrada, carinhosa), pose de dança, paleta e proporções. Mais uma imagem do grupo.
-- **Cenário:** jardim com grama verde macia, colinas arredondadas, árvores de copa fofa, flores coloridas, borboletas, laguinho, ponte de madeira, caminho de pedras, balanço, brinquedos coloridos, casinhas de cachorro, céu azul com nuvens suaves e colinas ao longe. Casa da Clara com paredes claras, telhado de terracota, janelas grandes, varandinha e vasos de flores.
-- **Paleta:** amarelo-sol, azul-céu, verde natural, rosa suave, branco, madeira quente e terracota.
-- **Luz:** sol suave com preenchimento do céu, sombras suaves e brilho nos olhos.
-- **Coreografia do refrão:** "Patinha pra frente" = Clara põe um pé à frente e as cachorrinhas levantam uma pata dianteira; "pra trás" = passinho para trás; "voltinha" = giro pequeno; palmas no tempo; caudas abanando, orelhas mexendo, piscadas e respiração.
+Todos os cinco aparecem no piloto. Nada de nome, aparência, personalidade ou acessório muda sem autorização.
 
-## Etapas (escopo desta fase: 1, 2 até a composição, 3, 4, 6 e 7)
-1. Diagnóstico técnico (`reports/DIAGNOSTICO.md`).
-2. Composição: letra, melodia, estrutura, instrumental-guia e plano para o Eleven Music. **As vozes ficam bloqueadas até a chave existir.**
-3. Personagens 3D, rigs, ações e model sheets.
-4. Cenário.
-6. Teste animado de 10 a 15 s, 1920×1080 a 30 fps, sincronizado com o instrumental-guia, com medição do tempo de render e estimativa para o episódio inteiro.
-7. Autoavaliação honesta (`reports/TESTE_3D.md`).
+## Música (resumo — guias em `intellectual-property/music-rights/`)
+- Simplicidade extrema e repetição dentro da música (regra 80/20: 80% familiar, 20% novidade).
+- 2 a 3 min, intro ≤ 3 s, gancho imediato, refrão 5 a 8 vezes, frases de 2 a 6 palavras, melodia de 3 a 5 notas principais.
+- Cantada de verdade (nunca narração), voz feminina acolhedora, pt-BR natural, sem voz estridente, sem clonagem de vozes reais.
+- Assinatura sonora proposta: "Pata, pata, patatá!" (ver `MUSIC_IDENTITY.md` e o relatório de originalidade).
 
-## Regras
-- Não publicar nem enviar nada. Não chamar serviços pagos. Nunca expor chaves.
-- Registrar a origem e a licença de todo asset (`licensing/REGISTRO.md`) e os custos (`reports/CUSTOS.md`; gasto externo até agora: US$ 0).
-- Mídia grande vai para `output/` ou `rendering/` e fica no git-ignore.
+## Piloto revisado
+- **Título artístico:** Pata Pata Patatá (provisório). **Título comercial:** A Dança das Patinhas – Música Infantil dos Cachorrinhos e do Gatinho (provisório).
+- ~2:30, Jardim Mágico das Patinhas, os 5 personagens. Letra em `music/lyrics/pata-pata-patata.md`.
+- Ordem: 3 propostas de refrão → música completa → aprovação do proprietário → teste de animação de 10 a 15 s com os 5 → render completo.
 
+## Visual
+- Qualidade cinematográfica premium (meta aspiracional 95/100 na matriz do §39). Câmera estável, sem cortes rápidos, flashes ou excesso de estímulo.
+- Jardim Mágico das Patinhas: `documentation/JARDIM_MAGICO.md`.
+- Miniaturas: 1 ou 2 personagens em destaque, fundo limpo, poucas palavras.
 
-## Regra adicional do proprietário (2026-11-27)
+## Regras permanentes
+- Não publicar nem enviar nada. Não fazer pagamentos, depósitos ou registros sem autorização.
+- Nunca expor chaves.
+- Não copiar músicas, letras, personagens, cenários ou arranjos existentes; marcas de mercado só como referência estratégica.
+- Não inventar resultados de pesquisa; ausência de resultados não é garantia jurídica.
+- Não atribuir autoria humana fictícia a material gerado por IA (`intellectual-property/authorship/`).
+- Mídia grande fica no git-ignore.
 
-"Evite citar os nomes dos personagens nos vídeos." Letras, falas, letreiros, títulos, descrições, tags e thumbnails não citam os nomes das personagens. Elas são identificadas pelo visual (a menina de macacão amarelo, a cachorrinha de bandana azul, a branquinha de laço rosa, a pequenina de bandana verde). Os nomes continuam apenas nos arquivos internos de produção.
-
-Exceção decidida pelo proprietário (2026-11-27): o piloto "A Dança das Patinhas" fica como está, com os nomes cantados. A regra vale do episódio 2 em diante.
-
-Nome do canal e da série (proprietário, 2026-11-27): "Clara e as Patinhas" é só o nome deste episódio piloto. Os próximos episódios terão nomes de acordo com o tema, e o nome do canal ainda será definido pelo proprietário. Até lá, nenhum texto novo usa "Clara e as Patinhas" como marca.
+## Histórico (substituído)
+- Brief original: elenco Clara + Theo/Luna/Toby (cachorrinhos), público 1–5 anos, música "A Dança das Patinhas" 110–120 BPM.
+- 2026-11-2x: proprietário renomeou para Ayra/Pandora/Tifa, todas fêmeas (usado no ep. 001).
+- 2026-11-27 (manhã): regra "sem nomes nos vídeos" e "Clara e as Patinhas só no piloto" — ambas revogadas pelo aditivo no mesmo dia.
