@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from mathutils import Vector, Euler
 from cp_lib import *
 from cp_motion import *
+from cp_chars import face
 
 ROOTP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FPS = 24
