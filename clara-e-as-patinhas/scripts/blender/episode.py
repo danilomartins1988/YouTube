@@ -39,9 +39,10 @@ def line_times(sec):
     return []
 
 
+TIFA_SPOT = (1.35, -0.45)
 HOME = {'clara': (0.0, 0.0), 'pandora': (-0.58, 0.02), 'ayra': (0.6, 0.04), 'tifa': (1.02, 0.14)}
 DOGHOUSE = {'ayra': (3.0, 5.0), 'pandora': (4.4, 5.0), 'tifa': (5.8, 5.0)}
-MEADOW = {'clara': (-4.0, -1.0), 'pandora': (-3.45, -1.15), 'ayra': (-4.75, -0.7), 'tifa': (-4.95, -1.15)}
+MEADOW = {'clara': (-4.4, -0.35), 'pandora': (-3.45, -1.15), 'ayra': (-4.75, -0.7), 'tifa': (-4.95, -1.15)}
 POND_X, POND_Y = 5.2, -1.2
 BR_L = 2.6 * 2.0 / 2.0 * 1.25
 BRIDGE = {'clara': (5.2, -1.2), 'ayra': (4.62, -1.15), 'pandora': (5.75, -1.15), 'tifa': (4.15, -1.12)}
@@ -111,27 +112,27 @@ def plan_cameras():
     L = line_times('intro') + [S['intro'][1]]
     shot(L[0], L[1], (0.0, -2.2, 0.85), (0.1, -1.9, 0.8), (0.0, 0, 0.72), (0.0, 0, 0.72), 40)
     shot(L[1], L[2], (-1.6, -4.2, 1.5), (-0.5, -4.6, 1.4), (2.0, 2.4, 0.3), (1.0, 0.6, 0.3), 28)
-    shot(L[2], L[3], (0.0, -1.7, 0.42), (0.9, -1.6, 0.38), (0.1, 0.0, 0.25), (0.95, 0.1, 0.22), 35)
+    shot(L[2], L[3], (0.05, -2.5, 0.36), (0.25, -2.3, 0.34), (0.05, 0.0, 0.2), (0.25, 0.0, 0.2), 30)
     shot(L[3], L[4], (0.3, -3.3, 0.9), (0.3, -3.0, 0.8), (0.3, 0, 0.42), (0.3, 0, 0.42), 35)
     # chorus 1 + break
     a, b = S['refrao_1']; m = a + 4 * BAR
     shot(a, m, (0.25, -3.0, 0.62), (0.25, -2.6, 0.6), (0.25, 0, 0.38), (0.25, 0, 0.38), 35)
     shot(m, b, (-2.2, -2.2, 0.9), (2.0, -2.5, 0.8), (0.2, 0, 0.35), (0.2, 0, 0.35), 32)
-    a, b = S['pausa_danca_1']; shot(a, b, (1.4, -1.5, 0.28), (-0.6, -1.7, 0.3), (0.3, 0.1, 0.25), (0.2, 0.1, 0.25), 28)
+    a, b = S['pausa_danca_1']; shot(a, b, (1.9, -2.3, 0.32), (-1.0, -2.5, 0.34), (0.3, 0.1, 0.3), (0.2, 0.1, 0.3), 28)
     # Ayra verse (tracking) + chorus 2 + break
     a, b = S['verso_ayra']; shot(a, b, (0.0, -3.6, 1.0), (0.0, -3.6, 1.0), 'ayra', 'ayra', 30)
     a, b = S['refrao_2_curto']; shot(a, b, (2.4, -2.4, 0.7), (-2.0, -2.6, 0.75), (0.25, 0, 0.38), (0.25, 0, 0.38), 32)
     a, b = S['pausa_danca_2']; shot(a, b, (0.3, -2.0, 0.25), (0.3, -1.7, 0.3), (0.3, 0.1, 0.22), (0.3, 0.1, 0.25), 26)
     # Pandora meadow
     a, b = S['verso_pandora']; L = line_times('verso_pandora') + [b]
-    shot(L[0], L[1], (-3.3, -2.15, 0.32), (-3.15, -1.95, 0.3), (-3.45, -1.15, 0.22), (-3.45, -1.15, 0.2), 45)
+    shot(L[0], L[1], (-2.95, -2.2, 0.34), (-2.9, -2.0, 0.32), (-3.45, -1.15, 0.2), (-3.45, -1.15, 0.2), 42)
     shot(L[1], L[3], (-2.4, -3.6, 0.8), (-5.6, -3.4, 0.9), (-3.8, -1.1, 0.35), (-3.8, -1.1, 0.35), 30)
     shot(L[3], L[4], (-3.75, -2.9, 0.75), (-3.75, -2.5, 0.65), (-3.75, -1.1, 0.45), (-3.75, -1.1, 0.45), 35)
     # Tifa (low, funny)
     a, b = S['verso_tifa']; L = line_times('verso_tifa') + [b]
     shot(L[0], L[2], (0.6, -2.6, 0.32), (1.4, -2.4, 0.3), 'tifa', 'tifa', 30)
-    shot(L[2], L[3], (1.0, -1.2, 0.16), (1.0, -1.1, 0.16), (1.02, 0.14, 0.18), (1.02, 0.14, 0.2), 32)
-    shot(L[3], L[4], (0.4, -2.8, 0.55), (0.4, -2.4, 0.5), (0.45, 0.05, 0.3), (0.45, 0.05, 0.3), 30)
+    shot(L[2], L[3], (1.62, -1.6, 0.2), (1.6, -1.48, 0.2), (1.35, -0.45, 0.16), (1.35, -0.45, 0.18), 45)
+    shot(L[3], L[4], (0.7, -3.0, 0.55), (0.7, -2.6, 0.5), (0.7, -0.2, 0.3), (0.7, -0.2, 0.3), 30)
     # Bridge reveal (crane up)
     a, b = S['ponte']; m = a + 4 * BAR
     shot(a, m, (2.6, -4.2, 0.25), (3.0, -6.2, 1.6), (4.3, -1.2, 0.45), (5.0, -1.2, 0.5), 28)
@@ -141,7 +142,7 @@ def plan_cameras():
     shot(a, m, (0.3, -3.6, 1.5), (0.3, -2.8, 0.7), (0.25, 0, 0.35), (0.25, 0, 0.38), 32)
     shot(m, b, (-2.6, -1.8, 0.8), (2.6, -1.9, 1.1), (0.25, 0, 0.35), (0.25, 0, 0.4), 30)
     # ending
-    a, b = S['final']; shot(a, b, (0.1, -2.0, 0.6), (0.1, -1.7, 0.55), (0.1, 0, 0.4), (0.1, 0, 0.42), 38)
+    a, b = S['final']; shot(a, b, (1.5, -1.7, 0.62), (1.25, -1.5, 0.55), (0.0, -0.2, 0.36), (0.0, -0.2, 0.38), 34)
     a = S['assinatura_final'][0]
     shot(a, END_T + 1, (0.2, -2.4, 0.7), (0.4, -7.5, 2.6), (0.15, 0, 0.45), (0.0, 2.0, 0.8), 34)
 
@@ -354,7 +355,7 @@ def choreo(name, arm, t):
         x, y = MEADOW[name]
         if name == 'pandora':
             if t < L[1]:
-                expr = 'affectionate'; sway(A, arm, t, BPM, 0.8); heading = -15
+                expr = 'affectionate'; sway(A, arm, t, BPM, 0.8); heading = 40
             elif t < L[2]:
                 u = seg(t, L[1], L[1] + 2 * BEAT); heading = spin_angle(u) - 15
                 if t > L[1] + 2 * BEAT:
@@ -388,21 +389,24 @@ def choreo(name, arm, t):
                 x = cx + 0.32 * math.cos(ang) - 0.23 * 0; y = cy + 0.32 * math.sin(ang)
                 x = mix(HOME['tifa'][0], x, min(1, u * 6)); y = mix(HOME['tifa'][1], y, min(1, u * 6))
                 if u > 0.9:
-                    x, y = lerp2((x, y), HOME['tifa'], (u - 0.9) / 0.1)
+                    x, y = lerp2((x, y), TIFA_SPOT, (u - 0.9) / 0.1)
                 walk(A, arm, u * 2 * 2 * math.pi * 0.32 / STRIDE['tifa'] / 1.4, run=True, amp=1.2)
                 heading = math.degrees(ang) + 180
             elif t < L[2]:  # hop + spin, everyone laughs
+                x, y = TIFA_SPOT
                 u = seg(t, L[1], L[1] + 2 * BEAT)
                 hop(A, arm, u, 0.12); heading = spin_angle(u)
                 if t > L[1] + 2 * BEAT:
                     sway(A, arm, t, BPM, 1.4)
             elif t < L[3]:  # "Dá um pulinho: um, dois, três" -> 3 hops on the counted syllables
+                x, y = TIFA_SPOT
                 hops = [a for a, b, syl, sec in NOTES if sec == 'verso_tifa' and syl.upper() in ('UM', 'DOIS', 'TRÊS') and a >= L[2]]
                 for h0 in hops:
                     if h0 - 0.12 < t < h0 + 0.33:
                         hop(A, arm, (t - h0 + 0.12) / 0.45, 0.1 + 0.03 * hops.index(h0))
                 expr = 'focused' if t < (hops[0] if hops else L[2]) else 'happy'
             else:  # tries a big spin, gets dizzy and plops down (funny)
+                x, y = TIFA_SPOT
                 u = seg(t, L[3], L[3] + 3 * BEAT)
                 heading = spin_angle(u) * 2
                 if t > L[3] + 3 * BEAT:
@@ -460,7 +464,8 @@ def choreo(name, arm, t):
         else:
             k = bump(seg(t, L[1] - 0.3, S['assinatura_final'][0] + 0.2))
             if L[1] - 0.3 < t < S['assinatura_final'][0]:
-                hug_pose(A, arm, min(1, 2.2 * k)); expr = 'affectionate'
+                hug_pose(A, arm, min(1, 2.2 * k)); expr = 'affectionate' if mouth_open_at(t) < 0.05 else 'happy'
+                A.rot('head', 0, 0, 25 * min(1, 2 * k))
                 A.rot('thigh_L', -25 * min(1, 2 * k), 0, 0); A.rot('thigh_R', -25 * min(1, 2 * k), 0, 0)
                 A.rot('shin_L', 40 * min(1, 2 * k), 0, 0); A.rot('shin_R', 40 * min(1, 2 * k), 0, 0)
                 A.loc('root', 0, 0, -0.05 * min(1, 2 * k))
@@ -551,12 +556,7 @@ if __name__ == '__main__':
             s0, s1 = int(args[1]), int(args[2])
             outdir = args[3] if len(args) > 3 else os.path.join(ROOTP, 'rendering', 'frames')
             os.makedirs(outdir, exist_ok=True)
-            import time
-            for f in range(s0, s1 + 1):
-                p = os.path.join(outdir, f'f{f:05d}.png')
-                if os.path.exists(p):
-                    continue
-                t0 = time.time()
-                sc.frame_set(f); sc.render.filepath = p
-                bpy.ops.render.render(write_still=True)
-                print(f'FRAME {f} {time.time() - t0:.2f}s', flush=True)
+            sc.frame_start = s0; sc.frame_end = s1
+            sc.render.use_overwrite = False; sc.render.use_placeholder = False
+            sc.render.filepath = os.path.join(outdir, 'f#####')
+            bpy.ops.render.render(animation=True)

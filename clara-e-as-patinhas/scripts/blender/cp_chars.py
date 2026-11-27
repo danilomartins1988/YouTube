@@ -185,8 +185,8 @@ def face(arm, expr='happy', blink=0.0, mouth_open=None, A=None):
             if scale is not None:
                 A.scale(b, scale)
     pb = arm.pose.bones
-    lid = {'happy': LID_OPEN, 'curious': LID_OPEN, 'surprised': LID_OPEN, 'focused': 8,
-           'affectionate': 28}.get(expr, LID_OPEN)
+    lid = {'happy': LID_OPEN, 'curious': LID_OPEN, 'surprised': LID_OPEN, 'focused': -8,
+           'affectionate': -40}.get(expr, LID_OPEN)
     lid = lid + (100 - lid) * blink if blink else lid
     for s in ('L', 'R'):
         if f'lid_{s}' in pb:

@@ -197,14 +197,14 @@ def pond_bridge(C):
     for k in range(nplank):
         u = k / (nplank - 1) * 2 - 1
         x = POND_C.x + u * L_ / 2; z = 0.42 * (1 - u * u) + 0.06
-        ang = math.degrees(math.atan(-0.84 * u / (L_ / 2) * 1.0))
-        box(f'plank_{k}', (x, POND_C.y, z), (L_ / nplank * 0.92, 0.9, 0.05), wood if k % 2 else wood2, bevel=0.01, collection=C, rot=(0, ang, 0))
+        ang = -math.degrees(math.atan(-0.84 * u / (L_ / 2)))
+        box(f'plank_{k}', (x, POND_C.y, z), (L_ / nplank * 1.12 / math.cos(math.radians(ang)), 0.9, 0.05), wood if k % 2 else wood2, bevel=0.01, collection=C, rot=(0, ang, 0))
     for sy in (-0.47, 0.47):
-        pts = [(POND_C.x + (k / 8 * 2 - 1) * L_ / 2, POND_C.y + sy, 0.42 * (1 - (k / 8 * 2 - 1) ** 2) + 0.42) for k in range(9)]
+        pts = [(POND_C.x + (k / 8 * 2 - 1) * L_ / 2, POND_C.y + sy, 0.42 * (1 - (k / 8 * 2 - 1) ** 2) + 0.34) for k in range(9)]
         tube_along(f'rail_{sy}', pts, [0.035] * 9, wood2, segs=10, collection=C)
         for k in range(0, 9, 2):
             p = pts[k]
-            capsule(f'rpost_{sy}_{k}', (p[0], p[1], p[2] - 0.38), (p[0], p[1], p[2]), 0.035, 0.035, wood2, segs=10, rings=4, sub=0, collection=C)
+            capsule(f'rpost_{sy}_{k}', (p[0], p[1], p[2] - 0.3), (p[0], p[1], p[2]), 0.035, 0.035, wood2, segs=10, rings=4, sub=0, collection=C)
 
 
 def stone_path(C):
