@@ -67,3 +67,10 @@ Computação local do ep. 002 até agora: ≈ 40 min de CPU (stills de teste e m
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata pt_v1, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata pt_v2, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata pt_v3, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_chorus en, 23 s | ~349 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_chorus es, 23 s | ~349 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata en_v1, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata es_v1, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata es_v2, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata es_v3, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata es_v4, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |

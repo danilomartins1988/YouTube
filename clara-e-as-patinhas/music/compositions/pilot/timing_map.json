@@ -1,0 +1,858 @@
+{
+ "song": "Pata Pata Patatá",
+ "duration_ms": 144558,
+ "fps": 30,
+ "bpm": 94.85,
+ "bar_ms": 2526,
+ "note": "Section boundaries are identical in all languages (same chunk durations; EN/ES vocals verified within ~12 ms of the PT beat grid). Word cues come from Whisper and can be off by ~0.1-0.3 s; ES words for the Ayra/Toby/Clara verses are from v1 (re-sung in v4 at the same positions).",
+ "sections": [
+  {
+   "name": "intro",
+   "start_ms": 0,
+   "end_ms": 3000,
+   "start_frame_30fps": 0
+  },
+  {
+   "name": "chorus_1",
+   "start_ms": 3000,
+   "end_ms": 13121,
+   "start_frame_30fps": 90
+  },
+  {
+   "name": "ayra",
+   "start_ms": 13121,
+   "end_ms": 28277,
+   "start_frame_30fps": 394
+  },
+  {
+   "name": "chorus_2",
+   "start_ms": 28277,
+   "end_ms": 38398,
+   "start_frame_30fps": 848
+  },
+  {
+   "name": "pandora",
+   "start_ms": 38398,
+   "end_ms": 53554,
+   "start_frame_30fps": 1152
+  },
+  {
+   "name": "chorus_3",
+   "start_ms": 53554,
+   "end_ms": 63675,
+   "start_frame_30fps": 1607
+  },
+  {
+   "name": "toby",
+   "start_ms": 63675,
+   "end_ms": 78831,
+   "start_frame_30fps": 1910
+  },
+  {
+   "name": "chorus_4",
+   "start_ms": 78831,
+   "end_ms": 88952,
+   "start_frame_30fps": 2365
+  },
+  {
+   "name": "milo",
+   "start_ms": 88952,
+   "end_ms": 104108,
+   "start_frame_30fps": 2669
+  },
+  {
+   "name": "clara",
+   "start_ms": 104108,
+   "end_ms": 119264,
+   "start_frame_30fps": 3123
+  },
+  {
+   "name": "chorus_final_x2",
+   "start_ms": 119264,
+   "end_ms": 139506,
+   "start_frame_30fps": 3578
+  },
+  {
+   "name": "outro",
+   "start_ms": 139506,
+   "end_ms": 144558,
+   "start_frame_30fps": 4185
+  }
+ ],
+ "languages": {
+  "pt": {
+   "words_source": "whisper_pt_v3.json",
+   "n_words": 174,
+   "choreo_cues": [
+    {
+     "cue": "clara_clap",
+     "t": 8.44
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 14.44
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 14.8
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 16.4
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 17.32
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 17.58
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 19.22
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 20.02
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 20.02
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 21.92
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 22.56
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 23.86
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 25.44
+    },
+    {
+     "cue": "tails_wag",
+     "t": 26.94
+    },
+    {
+     "cue": "clara_clap",
+     "t": 33.68
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 39.96
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 40.68
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 41.86
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 41.86
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 43.1
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 44.4
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 44.4
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 45.66
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 46.96
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 48.9
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 49.54
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 50.36
+    },
+    {
+     "cue": "tails_wag",
+     "t": 52.02
+    },
+    {
+     "cue": "clara_clap",
+     "t": 58.98
+    },
+    {
+     "cue": "toby_spin",
+     "t": 65.22
+    },
+    {
+     "cue": "toby_spin",
+     "t": 66.2
+    },
+    {
+     "cue": "toby_spin",
+     "t": 68.38
+    },
+    {
+     "cue": "toby_spin",
+     "t": 68.38
+    },
+    {
+     "cue": "toby_spin",
+     "t": 69.68
+    },
+    {
+     "cue": "toby_spin",
+     "t": 70.68
+    },
+    {
+     "cue": "toby_spin",
+     "t": 70.88
+    },
+    {
+     "cue": "toby_spin",
+     "t": 72.32
+    },
+    {
+     "cue": "toby_spin",
+     "t": 73.08
+    },
+    {
+     "cue": "toby_spin",
+     "t": 74.18
+    },
+    {
+     "cue": "toby_spin",
+     "t": 74.78
+    },
+    {
+     "cue": "toby_spin",
+     "t": 75.94
+    },
+    {
+     "cue": "tails_wag",
+     "t": 77.5
+    },
+    {
+     "cue": "clara_clap",
+     "t": 84.24
+    },
+    {
+     "cue": "milo_meow",
+     "t": 90.72
+    },
+    {
+     "cue": "milo_meow",
+     "t": 91.22
+    },
+    {
+     "cue": "milo_meow",
+     "t": 91.72
+    },
+    {
+     "cue": "milo_meow",
+     "t": 91.96
+    },
+    {
+     "cue": "milo_meow",
+     "t": 92.38
+    },
+    {
+     "cue": "milo_meow",
+     "t": 93.06
+    },
+    {
+     "cue": "milo_meow",
+     "t": 93.36
+    },
+    {
+     "cue": "milo_meow",
+     "t": 94.06
+    },
+    {
+     "cue": "milo_meow",
+     "t": 94.82
+    },
+    {
+     "cue": "milo_meow",
+     "t": 97.06
+    },
+    {
+     "cue": "milo_meow",
+     "t": 97.56
+    },
+    {
+     "cue": "milo_meow",
+     "t": 98.0
+    },
+    {
+     "cue": "tails_wag",
+     "t": 100.54
+    },
+    {
+     "cue": "clara_clap",
+     "t": 110.18
+    },
+    {
+     "cue": "clara_clap",
+     "t": 111.1
+    },
+    {
+     "cue": "clara_clap",
+     "t": 111.48
+    },
+    {
+     "cue": "clara_clap",
+     "t": 112.3
+    },
+    {
+     "cue": "clara_clap",
+     "t": 112.76
+    },
+    {
+     "cue": "clara_clap",
+     "t": 115.26
+    },
+    {
+     "cue": "clara_clap",
+     "t": 116.6
+    },
+    {
+     "cue": "clara_clap",
+     "t": 124.74
+    },
+    {
+     "cue": "clara_clap",
+     "t": 134.82
+    }
+   ]
+  },
+  "en": {
+   "words_source": "whisper_en_v1.json",
+   "n_words": 267,
+   "choreo_cues": [
+    {
+     "cue": "clara_clap",
+     "t": 7.8
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 14.38
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 14.8
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 15.22
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 15.56
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 16.0
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 16.36
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 19.38
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 19.88
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 20.3
+    },
+    {
+     "cue": "tails_wag",
+     "t": 22.58
+    },
+    {
+     "cue": "clara_clap",
+     "t": 33.06
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 40.36
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 40.94
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 42.36
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 42.86
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 42.86
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 43.7
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 44.12
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 44.8
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 46.34
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 46.92
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 47.6
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 48.94
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 49.96
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 51.02
+    },
+    {
+     "cue": "tails_wag",
+     "t": 52.92
+    },
+    {
+     "cue": "clara_clap",
+     "t": 58.32
+    },
+    {
+     "cue": "toby_spin",
+     "t": 64.22
+    },
+    {
+     "cue": "toby_spin",
+     "t": 64.92
+    },
+    {
+     "cue": "toby_spin",
+     "t": 65.42
+    },
+    {
+     "cue": "toby_spin",
+     "t": 65.96
+    },
+    {
+     "cue": "toby_spin",
+     "t": 66.58
+    },
+    {
+     "cue": "toby_spin",
+     "t": 67.28
+    },
+    {
+     "cue": "toby_spin",
+     "t": 67.96
+    },
+    {
+     "cue": "toby_spin",
+     "t": 68.76
+    },
+    {
+     "cue": "toby_spin",
+     "t": 69.68
+    },
+    {
+     "cue": "toby_spin",
+     "t": 70.3
+    },
+    {
+     "cue": "toby_spin",
+     "t": 71.62
+    },
+    {
+     "cue": "toby_spin",
+     "t": 73.56
+    },
+    {
+     "cue": "toby_spin",
+     "t": 73.76
+    },
+    {
+     "cue": "toby_spin",
+     "t": 75.04
+    },
+    {
+     "cue": "tails_wag",
+     "t": 76.26
+    },
+    {
+     "cue": "clara_clap",
+     "t": 83.58
+    },
+    {
+     "cue": "milo_meow",
+     "t": 90.16
+    },
+    {
+     "cue": "milo_meow",
+     "t": 91.34
+    },
+    {
+     "cue": "milo_meow",
+     "t": 91.74
+    },
+    {
+     "cue": "milo_meow",
+     "t": 92.48
+    },
+    {
+     "cue": "milo_meow",
+     "t": 92.48
+    },
+    {
+     "cue": "milo_meow",
+     "t": 93.28
+    },
+    {
+     "cue": "milo_meow",
+     "t": 93.78
+    },
+    {
+     "cue": "milo_meow",
+     "t": 94.98
+    },
+    {
+     "cue": "milo_meow",
+     "t": 95.34
+    },
+    {
+     "cue": "milo_meow",
+     "t": 96.82
+    },
+    {
+     "cue": "milo_meow",
+     "t": 97.74
+    },
+    {
+     "cue": "milo_meow",
+     "t": 98.72
+    },
+    {
+     "cue": "milo_meow",
+     "t": 99.42
+    },
+    {
+     "cue": "milo_meow",
+     "t": 100.06
+    },
+    {
+     "cue": "milo_meow",
+     "t": 101.1
+    },
+    {
+     "cue": "milo_meow",
+     "t": 101.1
+    },
+    {
+     "cue": "milo_meow",
+     "t": 101.1
+    },
+    {
+     "cue": "milo_meow",
+     "t": 101.1
+    },
+    {
+     "cue": "milo_meow",
+     "t": 101.14
+    },
+    {
+     "cue": "milo_meow",
+     "t": 101.14
+    },
+    {
+     "cue": "milo_meow",
+     "t": 101.14
+    },
+    {
+     "cue": "tails_wag",
+     "t": 103.08
+    },
+    {
+     "cue": "clara_clap",
+     "t": 107.14
+    },
+    {
+     "cue": "clara_clap",
+     "t": 108.18
+    },
+    {
+     "cue": "clara_clap",
+     "t": 108.82
+    },
+    {
+     "cue": "clara_clap",
+     "t": 108.82
+    },
+    {
+     "cue": "clara_clap",
+     "t": 110.38
+    },
+    {
+     "cue": "clara_clap",
+     "t": 110.8
+    },
+    {
+     "cue": "clara_clap",
+     "t": 114.66
+    },
+    {
+     "cue": "clara_clap",
+     "t": 115.84
+    },
+    {
+     "cue": "clara_clap",
+     "t": 117.72
+    },
+    {
+     "cue": "clara_clap",
+     "t": 117.72
+    },
+    {
+     "cue": "clara_clap",
+     "t": 117.72
+    },
+    {
+     "cue": "clara_clap",
+     "t": 117.72
+    },
+    {
+     "cue": "clara_clap",
+     "t": 117.72
+    },
+    {
+     "cue": "clara_clap",
+     "t": 117.72
+    },
+    {
+     "cue": "clara_clap",
+     "t": 124.08
+    },
+    {
+     "cue": "clara_clap",
+     "t": 134.18
+    }
+   ]
+  },
+  "es": {
+   "words_source": "whisper_es_v1.json",
+   "n_words": 154,
+   "choreo_cues": [
+    {
+     "cue": "ayra_bark",
+     "t": 14.36
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 15.1
+    },
+    {
+     "cue": "ayra_bark",
+     "t": 16.2
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 39.56
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 40.6
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 41.8
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 42.86
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 44.5
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 45.7
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 46.62
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 47.2
+    },
+    {
+     "cue": "pandora_hop",
+     "t": 48.26
+    },
+    {
+     "cue": "tails_wag",
+     "t": 52.0
+    },
+    {
+     "cue": "toby_spin",
+     "t": 64.7
+    },
+    {
+     "cue": "toby_spin",
+     "t": 65.56
+    },
+    {
+     "cue": "toby_spin",
+     "t": 66.76
+    },
+    {
+     "cue": "toby_spin",
+     "t": 66.76
+    },
+    {
+     "cue": "toby_spin",
+     "t": 67.4
+    },
+    {
+     "cue": "toby_spin",
+     "t": 68.4
+    },
+    {
+     "cue": "toby_spin",
+     "t": 69.8
+    },
+    {
+     "cue": "toby_spin",
+     "t": 71.54
+    },
+    {
+     "cue": "toby_spin",
+     "t": 71.54
+    },
+    {
+     "cue": "toby_spin",
+     "t": 72.94
+    },
+    {
+     "cue": "toby_spin",
+     "t": 73.72
+    },
+    {
+     "cue": "toby_spin",
+     "t": 74.4
+    },
+    {
+     "cue": "tails_wag",
+     "t": 77.24
+    },
+    {
+     "cue": "milo_meow",
+     "t": 90.12
+    },
+    {
+     "cue": "milo_meow",
+     "t": 91.1
+    },
+    {
+     "cue": "milo_meow",
+     "t": 91.68
+    },
+    {
+     "cue": "milo_meow",
+     "t": 92.76
+    },
+    {
+     "cue": "milo_meow",
+     "t": 92.82
+    },
+    {
+     "cue": "milo_meow",
+     "t": 93.64
+    },
+    {
+     "cue": "milo_meow",
+     "t": 94.3
+    },
+    {
+     "cue": "milo_meow",
+     "t": 94.62
+    },
+    {
+     "cue": "milo_meow",
+     "t": 95.62
+    },
+    {
+     "cue": "milo_meow",
+     "t": 96.7
+    },
+    {
+     "cue": "milo_meow",
+     "t": 96.88
+    },
+    {
+     "cue": "milo_meow",
+     "t": 97.7
+    },
+    {
+     "cue": "milo_meow",
+     "t": 98.74
+    },
+    {
+     "cue": "milo_meow",
+     "t": 99.34
+    },
+    {
+     "cue": "milo_meow",
+     "t": 100.64
+    },
+    {
+     "cue": "tails_wag",
+     "t": 102.54
+    }
+   ]
+  }
+ }
+}

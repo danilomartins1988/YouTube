@@ -77,3 +77,54 @@ if 'full_pt' in sys.argv[1:]:
     json.dump(plan, open(f'{OUT}/full_pt.json', 'w'), ensure_ascii=False, indent=1)
     tot = sum(c.get('duration_ms') or (c['range']['end_ms'] - c['range']['start_ms']) for c in chunks)
     print('full_pt total ms', tot, 'chunks', len(chunks))
+
+# ---------------- EN / ES versions: same timing map as PT (identical chunk durations) ----------------
+PT_ID = 'YhjxHmub4l7sgwSLJEcY'   # PT v3 (Toby fixed) - the instrumental intro 0-3000 ms is shared by reference
+VB = 6 * BAR                     # verse chunk 15156 ms, as in PT
+LANG = {
+ 'en': {'voice': ("the same warm young adult female lead singer throughout the whole song, identical voice, timbre and register in every "
+                  "section, sweet and clear, natural American English"),
+        'neg_accent': ['British accent', 'Brazilian accent', 'Spanish accent'],
+        'chorus': "Paw paw, paw paw, paw hooray!\nPaw paw, paw paw, paw hooray!\nClap your hands and stomp your feet!\nPaw paw, paw paw, paw hooray!",
+        'verses': [('Ayra', ['Ayra goes woof, woof, woof!', 'Woof, woof, woof!', 'Woof, woof, woof!', 'Ayra goes woof, woof, woof!', 'Wag your little tail!']),
+                   ('Pandora', ['Pandora jumps, jump, jump, jump!', 'Jump, jump, jump!', 'Jump, jump, jump!', 'Pandora jumps, jump, jump, jump!', 'Wag your little tail!']),
+                   ('Toby', ['Toby spins, spin, spin, spin!', 'Spin, spin, spin!', 'Spin, spin, spin!', 'Toby spins, spin, spin, spin!', 'Wag your little tail!']),
+                   ('Milo', ['Milo says meow, meow, meow!', 'Meow, meow, meow!', 'Meow, meow, meow!', 'Milo says meow, meow, meow!', 'And he wags his tail!']),
+                   ('Clara', ['Clara claps her hands, clap, clap!', 'Clap, clap, clap!', 'Clara claps her hands, clap, clap!', 'Everybody dance!'])],
+        'outro': 'Paw paw... paw hooray!'},
+ 'es': {'voice': ("the same warm young adult female lead singer throughout the whole song, identical voice, timbre and register in every "
+                  "section, sweet and clear, natural neutral Latin American Spanish"),
+        'neg_accent': ['Castilian Spain accent', 'Brazilian Portuguese', 'English'],
+        'chorus': "¡Pata, pata, patatá!\n¡Pata, pata, patatá!\n¡Aplaude y zapatea!\n¡Pata, pata, patatá!",
+        'verses': [('Ayra', ['¡Ayra hace guau, guau, guau!', '¡Guau, guau, guau!', '¡Guau, guau, guau!', '¡Ayra hace guau, guau, guau!', '¡Mueve la colita!']),
+                   ('Pandora', ['¡Pandora salta, salta, salta!', '¡Salta, salta, salta!', '¡Salta, salta, salta!', '¡Pandora salta, salta, salta!', '¡Mueve la colita!']),
+                   ('Toby', ['¡Toby gira, gira, gira!', '¡Gira, gira, gira!', '¡Gira, gira, gira!', '¡Toby gira, gira, gira!', '¡Mueve la colita!']),
+                   ('Milo', ['¡Milo hace miau, miau, miau!', '¡Miau, miau, miau!', '¡Miau, miau, miau!', '¡Milo hace miau, miau, miau!', '¡Y mueve la colita!']),
+                   ('Clara', ['¡Clara aplaude, palma, palma!', '¡Palma, palma, palma!', '¡Clara aplaude, palma, palma!', '¡Vamos a bailar!'])],
+        'outro': '¡Pata, pata... patatá!'},
+}
+INSTR = {'Ayra': ['a soft hand drum joins for this verse'], 'Pandora': ['a gentle xylophone plays little fills in this verse'],
+         'Toby': ['a soft muted trumpet plays little fills in this verse'], 'Milo': ['pizzicato violin plays little fills in this verse'],
+         'Clara': ['ukulele strums join the accordion', 'hand claps', 'ends with two bars of instrumental dance groove, accordion and claps']}
+def lchunk(L, text, ms, extra):
+    pos = STYLE + extra + ['same tempo and key as the surrounding song', 'warm young adult female lead singer, same voice, timbre and register as the rest of the song', L['voice']]
+    neg = [n for n in NEG if 'accent' not in n] + L['neg_accent'] + ['European Portuguese accent']
+    return {'text': text, 'duration_ms': ms, 'positive_styles': pos, 'negative_styles': neg, 'context_adherence': 'high'}
+for lg in [x[7:] for x in sys.argv[1:] if x.startswith('chorus_')]:
+    L = LANG[lg]
+    plan = {'_meta': {'what': f'{lg} chorus x2 on the PT intro'}, 'model_id': 'music_v2_5', 'composition_plan': {'chunks': [
+        {'song_id': PT_ID, 'range': {'start_ms': 0, 'end_ms': 3000}},
+        lchunk(L, '[Chorus]\n' + L['chorus'] + '\n' + L['chorus'], 2 * CH, ['simple catchy sing-along chorus', 'very simple melody on four notes, same melody as a Brazilian xote chorus', 'soft backing vocals echo the last word', 'hand claps'])]}}
+    json.dump(plan, open(f'{OUT}/chorus_{lg}.json', 'w'), ensure_ascii=False, indent=1); print('wrote chorus', lg)
+for arg in [x for x in sys.argv[1:] if x.startswith('full_') and x != 'full_pt']:
+    lg, cid = arg[5:].split(':')
+    L = LANG[lg]
+    def r(a, b, sid=cid): return {'song_id': sid, 'range': {'start_ms': a, 'end_ms': b}}
+    V = {n: lchunk(L, f'[Verse: {n}]\n' + '\n'.join(ls), VB, ['verse sung on the same few notes and melody family as the chorus'] + INSTR[n] +
+                   ([] if n == 'Clara' else ['one bar of accordion at the end of the verse'])) for n, ls in L['verses']}
+    chunks = [r(0, 3000, PT_ID), r(3000, 3000 + CH), V['Ayra'], r(3000 + CH, 3000 + 2 * CH), V['Pandora'], r(3000, 3000 + CH), V['Toby'],
+              r(3000 + CH, 3000 + 2 * CH), V['Milo'], V['Clara'], r(3000, 3000 + 2 * CH),
+              lchunk(L, '[Outro]\n' + L['outro'], 2 * BAR, ['gentle ending', 'final accordion chord', 'a small happy dog bark and a soft kitten meow at the very end'])]
+    tot = sum(c.get('duration_ms') or (c['range']['end_ms'] - c['range']['start_ms']) for c in chunks)
+    plan = {'_meta': {'what': f'full {lg}, same timing map as PT', 'chorus_song_id': cid, 'total_ms': tot}, 'model_id': 'music_v2_5', 'composition_plan': {'chunks': chunks}}
+    json.dump(plan, open(f'{OUT}/full_{lg}.json', 'w'), ensure_ascii=False, indent=1); print('wrote full', lg, tot)
