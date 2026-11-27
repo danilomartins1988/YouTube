@@ -82,3 +82,4 @@ Linhas automáticas acima ("pata_chorus", "pata_pata_patata"). Resumo e faixa m�
 
 **Ep. 002 total: ≈ US$ 0,57** (música ≈ 0,31 + Whisper ≈ 0,02 + GPU ≈ 0,24).
 Observação: neste host da RunPod o CUDA falhou (`cuInit` 999), então o Cycles na GPU não rodou. O EEVEE rodou pelo EGL/software nos 144 núcleos do host: ~4 s/frame por instância, 16 em paralelo, ≈ 3 frames/s no total.
+| 2026-11-27 | RunPod (RTX 4090 Secure, US$ 0,89/h) | Piloto "Pata Pata Patatá": teste 5 personagens + render completo universal (4.367 quadros, 30 fps) + encodes PT/EN/ES, 0,75 h, pod encerrado | — | ~US$ 0,67 |
