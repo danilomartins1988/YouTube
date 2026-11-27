@@ -74,3 +74,6 @@ Computação local do ep. 002 até agora: ≈ 40 min de CPU (stills de teste e m
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata es_v2, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata es_v3, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
 | 2026-11-27 | ElevenLabs Eleven Music (music_v2_5) | 1 geração pata_pata_patata es_v4, 145 s | ~2168 créditos (estimado) | ~US$ 0.36 (preço de lista API; débito real no plano do proprietário) |
+
+### Piloto "Pata Pata Patatá" (Aditivo 01/02/03) — 2026-11-27
+Linhas automáticas acima ("pata_chorus", "pata_pata_patata"). Resumo e faixa mín./máx. em `reports/CUSTOS_PILOTO_MULTILINGUE.md`: **≈ US$ 1,73–3,35** nesta etapa (orçamento do proprietário: US$ 10). Whisper ≈ US$ 0,07. RunPod: US$ 0 (não usado). Demucs: CPU local.
