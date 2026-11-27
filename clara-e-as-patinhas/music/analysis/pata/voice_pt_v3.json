@@ -1,0 +1,142 @@
+{
+ "audio": "music/masters/pata_pata_patata_pt_v3.wav",
+ "references": [
+  "ep001_danca_chorus",
+  "ep001_danca_verse",
+  "ep002_cade_chorus"
+ ],
+ "mfcc_threshold": 41.250567491853985,
+ "sections": [
+  {
+   "start": 0.0,
+   "end": 10.0,
+   "f0": 330,
+   "semitones_vs_ref": -0.7,
+   "centroid_ratio": 0.82,
+   "mfcc_dist": 26.07,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 10.0,
+   "end": 20.0,
+   "f0": 295,
+   "semitones_vs_ref": -2.7,
+   "centroid_ratio": 0.82,
+   "mfcc_dist": 36.09,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 20.0,
+   "end": 30.0,
+   "f0": 328,
+   "semitones_vs_ref": -0.9,
+   "centroid_ratio": 0.81,
+   "mfcc_dist": 35.72,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 30.0,
+   "end": 40.0,
+   "f0": 294,
+   "semitones_vs_ref": -2.7,
+   "centroid_ratio": 0.83,
+   "mfcc_dist": 26.84,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 40.0,
+   "end": 50.0,
+   "f0": 295,
+   "semitones_vs_ref": -2.7,
+   "centroid_ratio": 0.77,
+   "mfcc_dist": 38.4,
+   "pass": false,
+   "warn": false
+  },
+  {
+   "start": 50.0,
+   "end": 60.0,
+   "f0": 293,
+   "semitones_vs_ref": -2.8,
+   "centroid_ratio": 0.82,
+   "mfcc_dist": 29.62,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 60.0,
+   "end": 70.0,
+   "f0": 296,
+   "semitones_vs_ref": -2.6,
+   "centroid_ratio": 0.84,
+   "mfcc_dist": 12.61,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 70.0,
+   "end": 80.0,
+   "f0": 295,
+   "semitones_vs_ref": -2.7,
+   "centroid_ratio": 0.83,
+   "mfcc_dist": 17.12,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 80.0,
+   "end": 90.0,
+   "f0": 294,
+   "semitones_vs_ref": -2.7,
+   "centroid_ratio": 0.83,
+   "mfcc_dist": 26.06,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 90.0,
+   "end": 100.0,
+   "f0": 293,
+   "semitones_vs_ref": -2.8,
+   "centroid_ratio": 0.88,
+   "mfcc_dist": 26.54,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 110.0,
+   "end": 120.0,
+   "f0": 328,
+   "semitones_vs_ref": -0.8,
+   "centroid_ratio": 0.82,
+   "mfcc_dist": 32.73,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 120.0,
+   "end": 130.0,
+   "f0": 328,
+   "semitones_vs_ref": -0.8,
+   "centroid_ratio": 0.81,
+   "mfcc_dist": 27.02,
+   "pass": true,
+   "warn": false
+  },
+  {
+   "start": 130.0,
+   "end": 140.0,
+   "f0": 296,
+   "semitones_vs_ref": -2.6,
+   "centroid_ratio": 0.84,
+   "mfcc_dist": 24.8,
+   "pass": true,
+   "warn": false
+  }
+ ],
+ "verdict": "FAIL (1 section(s) drift: fix by inpainting those ranges)"
+}
