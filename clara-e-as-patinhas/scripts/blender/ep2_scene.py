@@ -123,9 +123,9 @@ def level(lv, pct=100):
     e.taa_render_samples = {'L1': 16, 'L2': 32, 'L3': 64}[lv]
     # light: softer warm key, warm rim from behind, cool sky fill from the camera side
     key.energy = 3.3; key.angle = math.radians(14); key.color = (1.0, 0.93, 0.82)
-    rim.energy = 2.2; fill.energy = 260
+    rim.energy = 2.0; fill.energy = 90
     w = sc.world.node_tree.nodes.get('Background')
-    sc.view_settings.view_transform = 'AgX'; sc.view_settings.look = 'AgX - Medium High Contrast'; sc.view_settings.exposure = 0.35
+    sc.view_settings.view_transform = os.environ.get('EP2_VT', 'AgX'); sc.view_settings.look = os.environ.get('EP2_LOOK', 'AgX - Punchy'); sc.view_settings.exposure = float(os.environ.get('EP2_EXP', '0.0'))
     e.use_gtao = True; e.gtao_distance = 0.6; e.gtao_factor = 1.2
     e.use_soft_shadows = True; e.shadow_cascade_size = '4096'; e.shadow_cube_size = '1024'
     e.use_bloom = True; e.bloom_intensity = 0.03; e.bloom_threshold = 1.0; e.bloom_radius = 5.5
@@ -228,7 +228,7 @@ def shot(name):
         put('clara', 0.0, -0.55, 175 if name == 'wide' else {'flower': 140, 'bucket': 180, 'hat': 215}[name])
         pose_all({'clara': ('curious', clara_search), 'ayra': ('happy', ayra_peek), 'pandora': ('happy', pandora_bucket), 'tifa': ('happy', tifa_hat)})
     if name == 'wide':
-        aim((0.3, -3.6, 1.05), (0.0, 0.5, 0.3), 32)
+        aim((0.3, -3.6, 1.05), (0.0, 0.5, 0.3), 32); bpy.data.objects['ep2_focus'].location = (0.0, -0.55, 0.5)
     elif name == 'flower':
         aim((fx - 0.3, fy - 1.45, 0.45), (fx + 0.06, fy, 0.32), 42)
     elif name == 'bucket':
