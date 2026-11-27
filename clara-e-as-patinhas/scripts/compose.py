@@ -121,31 +121,57 @@ def is_stressed(s):
     return core.upper() == core and any(c.isalpha() for c in core)
 
 
+SCALE_LIST = sorted(p for p in range(40, 100) if p % 12 in SCALE_PC)
+
+
+def step(p, k):
+    i = min(range(len(SCALE_LIST)), key=lambda j: abs(SCALE_LIST[j] - p))
+    return SCALE_LIST[max(0, min(len(SCALE_LIST) - 1, i + k))]
+
+
 def gen_line(sylstr, tpl, chords2):
+    """Place syllables on an 8th grid so stressed syllables land on beats when there is room;
+    final stressed syllable lands on the downbeat of bar 2 and is held. Pitch follows the line's
+    contour template with a small neighbour-note zig-zag; stressed notes snap to chord tones."""
     syl = sylstr.split()
     last = max(i for i, s in enumerate(syl) if is_stressed(s))
     pre, fin, trail = syl[:last], syl[last], syl[last + 1:]
-    durs = [.5] * len(pre)
-    for i in reversed(range(len(pre))):  # upgrade stressed syllables to quarters while it fits in one bar
-        if is_stressed(pre[i]) and sum(durs) + .5 <= 4.0:
-            durs[i] = 1.0
-    start = 4.0 - sum(durs)  # may be negative -> pickup into previous bar's rest
+    n = len(pre)
+    slots = 8  # eighths available in bar 1
+    pickup = max(0, n - slots)
+    pos = -pickup
+    starts = []
+    for i, s in enumerate(pre):
+        remaining = n - i  # syllables still to place including this
+        slack = (slots - pos) - remaining
+        if is_stressed(s) and pos % 2 == 1 and slack >= 1 and pos >= 0:
+            pos += 1  # delay stressed syllable onto the beat (previous note lengthened)
+        starts.append(pos)
+        pos += 1
+    # if there's leftover room at the start, shift everything later only up to the first beat structure
+    # durations: until next start (last pre-syllable until 8)
+    durs = [(starts[i + 1] if i + 1 < n else slots) - starts[i] for i in range(n)]
+    # if line starts late (lots of slack), stretch: double durations of stressed notes from the front
     p0, p1, pf, pt = (N[x] for x in tpl)
     out = []
-    t = start
-    for i, (s, d) in enumerate(zip(pre, durs)):
-        frac = i / max(1, len(pre) - 1)
-        p = round(p0 + (p1 - p0) * frac)
+    for i, s in enumerate(pre):
+        t = starts[i] / 2.0
+        frac = i / max(1, n - 1)
+        base = round(p0 + (p1 - p0) * frac)
         chord = chords2[0] if t < 4.0 else chords2[1]
-        p = snap(p, set(CHORDS[chord])) if (is_stressed(s) or abs(t - round(t)) < 1e-6) else snap(p, SCALE_PC)
-        out.append((s, p, d, t))
-        t += d
+        if is_stressed(s) or starts[i] % 2 == 0 and durs[i] > 1:
+            p = snap(base, set(CHORDS[chord]))
+        else:
+            p = snap(base, SCALE_PC)
+            if i % 2 == 1 and i < n - 1:
+                p = step(p, -1 if (p1 >= p0) else 1)
+        out.append((s, p, durs[i] / 2.0, t))
     if trail:
         out.append((fin, pf, 1.5, 4.0))
         tt = 5.5
         for j, s in enumerate(trail):
             d = 1.5 if j == len(trail) - 1 else .5
-            out.append((s, pt if j == len(trail) - 1 else snap((pf + pt) // 2, SCALE_PC), d, tt))
+            out.append((s, pt if j == len(trail) - 1 else step(pf, -1), d, tt))
             tt += d
     else:
         out.append((fin, pf, 3.0, 4.0))
