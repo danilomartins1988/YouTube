@@ -26,3 +26,15 @@ Preços de referência (consultados em 2026-11-27):
 
 | Data | Serviço | O que | Créditos | US$ |
 |---|---|---|---|---|
+
+_Sem lançamentos: a geração Eleven Music foi bloqueada pela camada de permissões da sessão e **nenhum crédito foi gasto**. Whisper não foi usado._
+
+## Computação local (sem custo externo)
+| Tarefa | Tempo de CPU (4 núcleos, sem GPU) |
+|---|---|
+| Render do episódio (4.016 frames, EEVEE 720p, 8 amostras) | ≈6 h (≈43 lotes de 9,5 min), mais ≈20 min para refazer o segmento 14 |
+| Model sheets + grupo + proporções | ≈14 min |
+| Testes, diagnósticos e stills de validação | ≈1 h |
+| Montagem e codificação (1080p, light, teste) | ≈12 min |
+
+**Gasto externo total até agora: US$ 0,00.**

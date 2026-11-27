@@ -36,7 +36,8 @@ def header(d, W, name, sub):
 
 def crop_char(p):
     im = Image.open(p).convert('RGB')
-    return im
+    W, H = im.size  # characters are centred; crop the central 62% for a tighter framing
+    return im.crop((int(W * 0.19), int(H * 0.17), int(W * 0.81), int(H * 0.93)))
 
 
 def main():
@@ -67,7 +68,7 @@ def main():
         # pose
         W = 700 * 2 + 80; H = 130 + 900
         sh = Image.new('RGB', (W, H), 'white'); d = ImageDraw.Draw(sh); header(d, W, name, 'Pose de dança + proporção no grupo')
-        sh.paste(Image.open(f'{RAW}/{n}_pose.png').convert('RGB').resize((700, 856)), (40, 150))
+        sh.paste(crop_char(f'{RAW}/{n}_pose.png').resize((700, 856)), (40, 150))
         lu = Image.open(f'{RAW}/lineup.png').convert('RGB'); lu = lu.resize((700, int(700 * lu.height / lu.width)))
         sh.paste(lu, (740, 150 + (856 - lu.height) // 2)); d.text((1090, 160), 'escala (orto)', font=f(30, 6), fill=(90, 90, 90), anchor='ma')
         sh.save(f'{out}/sheet_pose.png')
