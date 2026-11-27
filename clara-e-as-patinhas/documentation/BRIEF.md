@@ -12,6 +12,12 @@
 5. Orçamento externo do novo piloto: **até US$ 10** (ElevenLabs Eleven Music + RunPod GPU). Registro em `reports/CUSTOS.md`.
 6. **"Precisamos manter a voz e os personagens ao longo dos episódios."** Voz travada em `intellectual-property/music-rights/VOICE_PROFILE.md` (com verificação automática); personagens congelados como assets canônicos versionados (`assets/characters/canon/`, regra na Bíblia dos Personagens).
 
+## Aditivos 02 e 03 (2026-11-27)
+- **Aditivo 03 (vigente):** um canal global "Clara & Paws – Kids Songs"; um vídeo por música com **faixas de áudio multilíngues**; **inglês é a faixa original**, pt-BR e es-LATAM são faixas extras; uma animação universal (lip-sync estilizado), mesma duração e mapa de tempos em todos os idiomas; 1920×1080 a 30 fps. Ver `ADITIVO_03.md`, `GUIA_PUBLICACAO_MULTILINGUE.md`, `intellectual-property/source-files/MULTILINGUE.md`.
+- Aditivo 02 (substituído onde conflita): três vídeos/canais separados. Ver `ADITIVO_02.md`.
+- Estilo do piloto: **forró/xote** (sanfona); estilo da casa aprovado.
+- Personagens avançados: teste com IA open source (RunPod autorizado) — `reports/PERSONAGENS_ROTA.md`.
+
 ## Marca (provisória até pesquisa jurídica, ver `intellectual-property/originality-reports/`)
 | Item | Nome |
 |---|---|
