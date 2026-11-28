@@ -97,3 +97,23 @@ Observação: neste host da RunPod o CUDA falhou (`cuInit` 999), então o Cycles
 
 ### Lote 1 (Fase 2) — propostas de refrão, 2026-11-28
 Linhas automáticas de geração em `music/masters/lote1/*` (11 tomadas, ~245 s): **≈ 3.670 créditos ≈ US$ 0,61** (preço de lista) + Whisper ≈ US$ 0,03. Teto da etapa US$ 1,50. Resumo: `reports/LOTE1_REFRAOS.md`.
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full pt_v1, 129 s | ~1939 créditos (estimado) | ~US$ 0.32 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full pt_v1, 123 s | ~1845 créditos (estimado) | ~US$ 0.31 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full pt_v1, 161 s | ~2411 créditos (estimado) | ~US$ 0.40 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus en, 13 s | ~189 créditos (estimado) | ~US$ 0.03 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus es, 13 s | ~189 créditos (estimado) | ~US$ 0.03 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus en_ref, 13 s | ~197 créditos (estimado) | ~US$ 0.03 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus en_noref, 10 s | ~152 créditos (estimado) | ~US$ 0.03 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus es, 13 s | ~197 créditos (estimado) | ~US$ 0.03 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus en, 17 s | ~251 créditos (estimado) | ~US$ 0.04 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus es, 17 s | ~251 créditos (estimado) | ~US$ 0.04 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full en_v1, 129 s | ~1939 créditos (estimado) | ~US$ 0.32 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full es_v1, 129 s | ~1939 créditos (estimado) | ~US$ 0.32 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full en_v1, 123 s | ~1845 créditos (estimado) | ~US$ 0.31 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full es_v1, 123 s | ~1845 créditos (estimado) | ~US$ 0.31 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full en_v1, 161 s | ~2411 créditos (estimado) | ~US$ 0.40 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full es_v1, 161 s | ~2411 créditos (estimado) | ~US$ 0.40 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração full es_v2, 161 s | ~2411 créditos (estimado) | ~US$ 0.40 (preço de lista API; débito real no plano do proprietário) |
+
+### Lote 1 — músicas completas PT/EN/ES (Au Au Ayra, Miau Miau Milo, Naná Patinhas), 2026-11-28
+17 gerações (3 PT completas, 6 refrões EN/ES + 2 tomadas de teste, 6 EN/ES completas, 1 inpainting ES): **≈ US$ 3,72 (preço de lista, ~25.000 créditos)**; teto US$ 4,00. Nota: o inpainting foi contado como música inteira (pior caso). Whisper ≈ US$ 0,10. Detalhes: `reports/LOTE1_REFRAOS.md`.

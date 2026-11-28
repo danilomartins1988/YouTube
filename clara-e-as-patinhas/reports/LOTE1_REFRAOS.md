@@ -26,3 +26,21 @@ Medições: voz isolada com Demucs; "voz" = comparação com a voz da casa ("Cad
 
 ## Custo desta etapa
 11 tomadas de 19–27 s (≈ 245 s) ≈ **3.670 créditos ≈ US$ 0,61** + Whisper ≈ US$ 0,03. Teto da etapa: US$ 1,50.
+
+---
+# Músicas completas (2026-11-28) — Au Au Ayra (refrão B), Miau Miau Milo (refrão A), Naná Patinhas (refrão A)
+Pandora (A vs C) e Toby (gancho/título) **em espera**, como pedido.
+
+Arquivos em cada pasta: `musica_completa_PT.mp3` (faixa original), `musica_completa_EN.mp3`, `musica_completa_ES.mp3`, `instrumental.mp3`, e `youtube_studio_audio/<música>_audio_{pt,en,es}.wav` (48 kHz/24 bits, duração da música + 1 s = duração prevista do vídeo).
+
+| Música | Duração | Estrutura | PT | EN | ES |
+|---|---|---|---|---|---|
+| Au Au Ayra (xote, 95 BPM) | 2:09 | intro 3 s · refrão · verso ×2 linhas · refrão · verso · refrão · verso · break instrumental · refrão ×2 · final | letras ✓; voz −0,9 a +2,0 st, MFCC 16–35 ✓ | letras ✓ (Whisper ouve "Ara/Aira"); voz ✓ (−2,9 a +0,3 st) | letras ✓; voz um pouco mais grave (−1,7 a −4,6 st) |
+| Miau Miau Milo (pizzicato, 100 BPM) | 2:03 | igual | letras ✓; voz ✓ (−0,6 a −2,9 st) | letras ✓; voz ✓ | letras ✓; voz ✓ |
+| Naná Patinhas (ninar, 70 BPM) | 2:41 | sem break; refrão 5× | letras ✓; voz ✓ (MFCC 15 nos refrões = muito fiel) | letras ✓; voz −2,9 a −4,5 st | letras ✓ após correção dos versos 1–2 (inpainting); **voz ~4,5 st mais grave em toda a faixa ES** (dentro do limite de 5) |
+
+- **Mesmo instrumental nos 3 idiomas:** as vozes EN/ES foram separadas (Demucs) e mixadas sobre o instrumental PT. Alinhamento medido: atraso mediano 0–12 ms (máx. 81 ms em uma janela da Ayra ES); harmonia (croma) 0,91–0,98.
+- **Masters:** −14,0 LUFS, pico −1,4/−1,5 dBTP, 48 kHz/24 bits, nos 9 arquivos.
+- **Títulos EN provisórios:** "Milo the Kitty Says Meow" (em vez de "Meow Meow Milo", que já existe).
+- **Pontos para ouvir:** Ayra ES (voz mais grave nos versos), Naná EN/ES (registro mais grave que o PT), break instrumental da Ayra (tem latidinhos).
+- **Custo desta etapa (preço de lista):** ≈ US$ 3,72 (~25.000 créditos) para PT+EN+ES das 3 músicas, incluindo 2 tomadas de teste (diagnóstico de um bloqueio "copyrighted_material_detected" causado pela frase de estilo "same melody as the original…", removida) e 1 inpainting (Naná ES). Teto: US$ 4,00.

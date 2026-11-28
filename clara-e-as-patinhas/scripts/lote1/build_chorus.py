@@ -31,18 +31,19 @@ VAR_LULL = {
  'B': ["gentle four-note melody that rises softly and falls back home, like a sigh", "piano answers each line softly"],
  'C': ["very simple two-bar phrase repeated, descending to the home note", "ukulele arpeggios answer each line"],
 }
-slug = sys.argv[1]; s = SONGS[slug]; bpm = s['bpm']; bar = round(4 * 60000 / bpm)
-lull = slug == 'nana-patinhas'
-bars = 8 if lull else 9
-neg = NEG + (["drums", "percussion", "loud", "bright", "fast tempo"] if lull else ["fast tempo"])
-ch = '\n'.join(s['pt']['chorus'])
-for k in (sys.argv[2:] or ['A', 'B']):
-    pos = ARR[slug] + (VAR_LULL if lull else VAR)[k] + [f"{bpm} BPM", "C major", "4/4", "happy major key" if not lull else "warm major key",
-          "music for babies and toddlers", "vocal upfront and clear, clear diction, clean modern children's music production, studio quality",
-          "very short instrumental intro, the vocal starts within two seconds", "simple catchy sing-along chorus", VOICE]
-    plan = {'_meta': {'song': s['title'], 'what': f'chorus proposal {k}', 'bpm': bpm, 'key': 'C major'}, 'model_id': 'music_v2_5',
-            'composition_plan': {'chunks': [{'text': '[Intro: short pickup]\n[Chorus]\n' + ch + '\n' + ch, 'duration_ms': bars * bar,
-                                             'positive_styles': pos, 'negative_styles': neg, 'context_adherence': 'high'}]}}
-    os.makedirs(f'{ROOT}/music/compositions/lote1/{slug}', exist_ok=True)
-    json.dump(plan, open(f'{ROOT}/music/compositions/lote1/{slug}/chorus_{k}.json', 'w'), ensure_ascii=False, indent=1)
-    print(slug, k, bars * bar, 'ms')
+if __name__ == '__main__':
+    slug = sys.argv[1]; s = SONGS[slug]; bpm = s['bpm']; bar = round(4 * 60000 / bpm)
+    lull = slug == 'nana-patinhas'
+    bars = 8 if lull else 9
+    neg = NEG + (["drums", "percussion", "loud", "bright", "fast tempo"] if lull else ["fast tempo"])
+    ch = '\n'.join(s['pt']['chorus'])
+    for k in (sys.argv[2:] or ['A', 'B']):
+        pos = ARR[slug] + (VAR_LULL if lull else VAR)[k] + [f"{bpm} BPM", "C major", "4/4", "happy major key" if not lull else "warm major key",
+              "music for babies and toddlers", "vocal upfront and clear, clear diction, clean modern children's music production, studio quality",
+              "very short instrumental intro, the vocal starts within two seconds", "simple catchy sing-along chorus", VOICE]
+        plan = {'_meta': {'song': s['title'], 'what': f'chorus proposal {k}', 'bpm': bpm, 'key': 'C major'}, 'model_id': 'music_v2_5',
+                'composition_plan': {'chunks': [{'text': '[Intro: short pickup]\n[Chorus]\n' + ch + '\n' + ch, 'duration_ms': bars * bar,
+                                                 'positive_styles': pos, 'negative_styles': neg, 'context_adherence': 'high'}]}}
+        os.makedirs(f'{ROOT}/music/compositions/lote1/{slug}', exist_ok=True)
+        json.dump(plan, open(f'{ROOT}/music/compositions/lote1/{slug}/chorus_{k}.json', 'w'), ensure_ascii=False, indent=1)
+        print(slug, k, bars * bar, 'ms')
