@@ -45,3 +45,18 @@ O proprietário escolheu **forró pé-de-serra / xote** como estilo da casa. Est
 
 ## Ferramentas e amostras
 Nenhum sample de terceiros foi usado. Toda a música vem do Eleven Music (ElevenLabs) sob a conta do proprietário — ver `../licensing/RELATORIO_LICENCIAMENTO.md`.
+
+
+---
+## Lote 1 (Fase 2) — títulos e ganchos, pesquisa de 2026-11-28
+Fontes: YouTube (1ª página, BR), Apple Music (API pública BR/US/MX). Brutos: `raw/2026-11-28_search_{BR,US,MX}_lote1.json`. Spotify/INPI não consultados.
+| Título / gancho | Achado | Risco |
+|---|---|---|
+| Toby Gira Girou / "Gira, gira, girou" | samba "Quando a Gira Girou" (Zeca Pagodinho, Péricles, Diogo Nogueira, Revelação); "gira" também tem sentido religioso | **médio** — recomendo trocar gancho/título |
+| Meow Meow Milo (EN) | vídeo infantil "Meow Meow Milo!" (YouTube) e canal "Milo Cartoon" ("Miau Miau, Meu Gatinho!") | **médio** — trocar título EN |
+| Miau Miau Milo (PT/ES) | muitas "Miau Miau" genéricas (Chivaditos, "Miau Miau" Tiempo Mágico) | baixo (expressão comum) |
+| Salta, salta (ES) | "Salta, Salta Sem Parar" (Canal Panda Portugal) | baixo |
+| Pula Pula Pandora / "Pula, pula, pula" | várias "Pula Pula" (Aline Barros, Peti & Poá…) — expressão comum; nenhuma "Pula Pula Pandora" | baixo |
+| Au Au Ayra / Woof Woof Ayra / Guau Guau Ayra | só homônimos ("Ayra Starr", cantora) e "Woof Woof Doggy" genérico | baixo |
+| Naná Patinhas / Nana Patitas / Nana Little Paws | nenhum conflito direto | baixo |
+Ausência de resultado não é garantia jurídica.

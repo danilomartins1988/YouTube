@@ -1,0 +1,32 @@
+{
+ "audio": "music/masters/lote1/au-au-ayra/chorus_A.wav",
+ "references": [
+  "ep001_danca_chorus",
+  "ep001_danca_verse",
+  "ep002_cade_chorus"
+ ],
+ "mfcc_threshold": 41.250567491853985,
+ "sections": [
+  {
+   "start": 0.0,
+   "end": 11.36,
+   "f0": 329,
+   "semitones_vs_ref": -0.8,
+   "centroid_ratio": 0.78,
+   "mfcc_dist": 28.81,
+   "pass": false,
+   "warn": false
+  },
+  {
+   "start": 11.36,
+   "end": 22.72,
+   "f0": 328,
+   "semitones_vs_ref": -0.8,
+   "centroid_ratio": 0.8,
+   "mfcc_dist": 26.49,
+   "pass": false,
+   "warn": false
+  }
+ ],
+ "verdict": "FAIL (2 section(s) drift: fix by inpainting those ranges)"
+}

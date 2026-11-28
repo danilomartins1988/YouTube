@@ -83,3 +83,17 @@ Linhas automáticas acima ("pata_chorus", "pata_pata_patata"). Resumo e faixa m�
 **Ep. 002 total: ≈ US$ 0,57** (música ≈ 0,31 + Whisper ≈ 0,02 + GPU ≈ 0,24).
 Observação: neste host da RunPod o CUDA falhou (`cuInit` 999), então o Cycles na GPU não rodou. O EEVEE rodou pelo EGL/software nos 144 núcleos do host: ~4 s/frame por instância, 16 em paralelo, ≈ 3 frames/s no total.
 | 2026-11-27 | RunPod (RTX 4090 Secure, US$ 0,89/h) | Piloto "Pata Pata Patatá": teste 5 personagens + render completo universal (4.367 quadros, 30 fps) + encodes PT/EN/ES, 0,75 h, pod encerrado | — | ~US$ 0,67 |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus A, 23 s | ~341 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus B, 23 s | ~341 créditos (estimado) | ~US$ 0.06 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus A, 22 s | ~324 créditos (estimado) | ~US$ 0.05 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus B, 22 s | ~324 créditos (estimado) | ~US$ 0.05 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus A, 19 s | ~289 créditos (estimado) | ~US$ 0.05 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus B, 19 s | ~289 créditos (estimado) | ~US$ 0.05 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus A, 22 s | ~324 créditos (estimado) | ~US$ 0.05 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus B, 22 s | ~324 créditos (estimado) | ~US$ 0.05 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus A, 27 s | ~411 créditos (estimado) | ~US$ 0.07 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus B, 27 s | ~411 créditos (estimado) | ~US$ 0.07 (preço de lista API; débito real no plano do proprietário) |
+| 2026-11-28 | ElevenLabs Eleven Music (music_v2_5) | 1 geração chorus C, 19 s | ~289 créditos (estimado) | ~US$ 0.05 (preço de lista API; débito real no plano do proprietário) |
+
+### Lote 1 (Fase 2) — propostas de refrão, 2026-11-28
+Linhas automáticas de geração em `music/masters/lote1/*` (11 tomadas, ~245 s): **≈ 3.670 créditos ≈ US$ 0,61** (preço de lista) + Whisper ≈ US$ 0,03. Teto da etapa US$ 1,50. Resumo: `reports/LOTE1_REFRAOS.md`.

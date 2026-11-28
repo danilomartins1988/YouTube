@@ -3,7 +3,7 @@
  - YouTube public search results page (first page, titles + channels, parsed from ytInitialData)
 Writes raw JSON to intellectual-property/originality-reports/raw/<date>_search.json.
 No result != legal clearance."""
-import json, re, sys, time, urllib.parse, datetime, requests
+import json, os, re, sys, time, urllib.parse, datetime, requests
 ROOT = __file__.rsplit('/scripts/', 1)[0]
 TERMS = [l.strip() for l in open(sys.argv[1], encoding='utf-8') if l.strip()]
 COUNTRY = sys.argv[2] if len(sys.argv) > 2 else 'BR'
@@ -38,7 +38,7 @@ def youtube(t):
         return f'ERROR: {e}'
 
 day = datetime.date.today().isoformat()
-OUT = f'{ROOT}/intellectual-property/originality-reports/raw/{day}_search_{COUNTRY}.json'
+OUT = f'{ROOT}/intellectual-property/originality-reports/raw/{day}_search_{COUNTRY}{os.environ.get("TAG","")}.json'
 res = {}
 def save():
     json.dump({'date': day, 'note': 'raw first-page results; not legal clearance', 'results': res},

@@ -1,0 +1,32 @@
+{
+ "audio": "music/masters/lote1/pula-pula-pandora/chorus_C.wav",
+ "references": [
+  "ep001_danca_chorus",
+  "ep001_danca_verse",
+  "ep002_cade_chorus"
+ ],
+ "mfcc_threshold": 41.250567491853985,
+ "sections": [
+  {
+   "start": 0.0,
+   "end": 9.64,
+   "f0": 264,
+   "semitones_vs_ref": -4.6,
+   "centroid_ratio": 0.77,
+   "mfcc_dist": 33.53,
+   "pass": false,
+   "warn": false
+  },
+  {
+   "start": 9.64,
+   "end": 19.28,
+   "f0": 293,
+   "semitones_vs_ref": -2.8,
+   "centroid_ratio": 0.76,
+   "mfcc_dist": 31.91,
+   "pass": false,
+   "warn": false
+  }
+ ],
+ "verdict": "FAIL (2 section(s) drift: fix by inpainting those ranges)"
+}

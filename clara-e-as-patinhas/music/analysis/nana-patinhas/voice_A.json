@@ -1,0 +1,32 @@
+{
+ "audio": "music/masters/lote1/nana-patinhas/chorus_A.wav",
+ "references": [
+  "ep001_danca_chorus",
+  "ep001_danca_verse",
+  "ep002_cade_chorus"
+ ],
+ "mfcc_threshold": 41.250567491853985,
+ "sections": [
+  {
+   "start": 0.0,
+   "end": 13.72,
+   "f0": 330,
+   "semitones_vs_ref": -0.7,
+   "centroid_ratio": 0.74,
+   "mfcc_dist": 14.52,
+   "pass": false,
+   "warn": false
+  },
+  {
+   "start": 13.72,
+   "end": 27.44,
+   "f0": 330,
+   "semitones_vs_ref": -0.7,
+   "centroid_ratio": 0.72,
+   "mfcc_dist": 13.28,
+   "pass": false,
+   "warn": false
+  }
+ ],
+ "verdict": "FAIL (2 section(s) drift: fix by inpainting those ranges)"
+}
