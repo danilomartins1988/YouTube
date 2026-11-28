@@ -5,7 +5,7 @@
 |---|---|---|
 | **Vídeo principal (faixa original pt-BR)**, 1920×1080, 30 fps | `output/pata_pata_patata_pt_1080p.mp4` (197 MB, H.264 CRF 16, AAC 256k) | pronto |
 | Versões leves 1280×720 (PT, EN, ES) | scratchpad `pilot/pata_pata_patata_{pt,en,es}_light.mp4` (~11,7 MB cada) | prontas |
-| Exportações completas EN/ES 1080p (contingência) | renderizadas no pod e **não baixadas** (falta de disco). Recriar em segundos, sem re-render: `ffmpeg -i output/pata_pata_patata_pt_1080p.mp4 -i <audio_en.wav> -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k pata_pata_patata_en_1080p.mp4` | sob demanda |
+| Exportações completas EN/ES 1080p (contingência) | geradas localmente em 2026-11-28 em `output/pata_pata_patata_{en,es}_1080p.mp4`. Recriar em segundos, sem re-render: `ffmpeg -i output/pata_pata_patata_pt_1080p.mp4 -i <audio_en.wav> -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k pata_pata_patata_en_1080p.mp4` | sob demanda |
 | Faixas de áudio para o YouTube Studio (EN, ES; e PT) | scratchpad `pilot/youtube_studio_audio/pata_pata_patata_audio_{pt,en,es}.wav` — WAV 48 kHz/24 bits, **145,567 s = duração exata do vídeo** (música 144,56 s + 1 s de silêncio final) | prontas |
 | Instrumental | `music/masters/pata_pata_patata_instrumental.{wav,mp3}` | pronto |
 | Miniaturas | `thumbnails/pilot/thumb_pt-BR.jpg` (principal), `thumb_en-US.jpg`, `thumb_es-LATAM.jpg`, `thumb_universal_notext.jpg` | prontas (1280×720) |

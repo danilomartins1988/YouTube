@@ -72,3 +72,6 @@ Todos os cinco aparecem no piloto. Nada de nome, aparência, personalidade ou ac
 - Brief original: elenco Clara + Theo/Luna/Toby (cachorrinhos), público 1–5 anos, música "A Dança das Patinhas" 110–120 BPM.
 - 2026-11-2x: proprietário renomeou para Ayra/Pandora/Tifa, todas fêmeas (usado no ep. 001).
 - 2026-11-27 (manhã): regra "sem nomes nos vídeos" e "Clara e as Patinhas só no piloto" — ambas revogadas pelo aditivo no mesmo dia.
+
+## Decisão do proprietário (2026-11-28): prioridade é a música
+"Vamos mandar o render como está. O custo por enquanto é muito alto para o ganho. A qualidade precisa ser na música." O piloto "Pata Pata Patatá" segue com o render atual; testes de Cycles/IA de vídeo e artista 3D ficam adiados. O esforço de qualidade concentra-se em composição, canto e mixagem.
